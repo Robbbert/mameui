@@ -1,0 +1,232 @@
+0.158
+-------
+
+
+MAMETesters Bugs Fixed
+----------------------
+- 01214: [Graphics] (dec0.c) bouldash, bouldashj: Fadeout/Fadein on 
+  screen is the wrong speed slightly off (Angelo Salese)
+- 05507: [Misc.] (model2.c) zerogun, zerogunj, zerogunaj, zeroguna: 
+  AddressSanitizer: global-buffer-overflow (David Haywood)
+- 05828: [Gameplay] (punchout.c) spnchout,spnchouta,spnchoutj: Game 
+  automatically resets at KO Time Best 3/Hit Average screen during attract mode. (hap)
+- 05790: [Known Issues/To-Do's] (senjyo.c) All sets in senjyo.c: 
+  m_int_delay_kludge removal. (Angelo Salese)
+- 05816: [Crash/Freeze] (bfm_sc2.c) Several bfm_sc2.c sets: 
+  [debug] Assertion (Osso)
+- 05812: [Crash/Freeze] (maygay1bsw.c) m1bankrl, m1bankrl2p, m1bankrlp 
+  / m4nod - mpu4.c: FATALERROR: Missing some required objects, unable to proceed (Osso)
+- 05811: [Crash/Freeze] (maygay1bsw.c) Many sets in maygay1bsw.c: Crash after OK (Osso)
+- 05763: [Interface] SDL-based builds (Windows only): If a path does not 
+  exist, a file is not written.
+- 02515: [Crash/Freeze] (zn.c) nbajamex: Hangs at black screen
+
+Source Changes
+--------------
+-m68k: implement FTRAP instruction, add "68020 with FPU" CPU type.
+ [R. Belmont]
+
+-MCU simulation has been fixed
+ [Chris Hard, Adrian Smethurst, Philip Campbell]
+
+-winprefix: support some C99 extensions in older MSVC [Peter Ferrie]
+
+-Make cross-compilation easier [Ramiro Polla]
+
+-luaengine: add HUD-like capabilities [Luca Bruno]
+
+-Added irq ack mechanism in Senjyo HW and removed long standing hack
+ from the driver [Angelo Salese]
+
+-SDL: Driver accel (draw13.c) now supports "-filter", i.e. bilinear
+ filtering. [Couriersud]
+
+-ui: Added "Reset" option to DipSwitch and ConfSettings menu, as well
+ as to the File Manager, for consistency with other menus where an hard
+ reset is of help [Fabio Priuli] 
+
+-ui: Fixed DipLocation drawing so that it remains on screen also when 
+ highlighting switches without locations [Fabio Priuli]
+
+-Fix bug in work_osd.c causing discrete sound to crash.
+ [Tafoid, Haze, Couriersud]
+
+-Move definition of -DOSD_WINDOWS, -DOSD_SDL and -DOSD_MINI into
+ $(OSD).mak. Added sanity check to makefile. [Couriersud]
+
+-zn: implement (incomplete?) ROM banking in nbajamex, shows some
+ graphics now [Peter Ferrie]
+
+-ui: start displaying the device tag close to input names for the
+ dynamical inputs which use PORT_DEVICE, so to avoid some weird quirks
+ in the input menus when slot devices are modified. [Fabio Priuli]
+
+-Converted png2bcd tool to python [Andrew Gardner]
+
+-luaengine: expose device state entries [Luca Bruno]
+
+-ui: added "[Internal]" string to slot options that are not
+ user-configurable and fixed some internal options displayed as
+ "scrollable". [Fabio Priuli]
+
+-ui: simplified Image Information code and made it fully display for
+ systems with many image devices. [Fabio Priuli]
+
+-Redumped ROM and made Eleven Beat to surpass "Joystick Type Error"
+ message. Crashes at kick off though [brizzo, Zoinkity, Angelo Salese]
+
+-chdman: added -s/--size parameter for "createhd" to create blank
+ harddisk based on size and sector size [Oliver Stöneberg]
+
+-ui: added barebone menu for device-specific options. click on any slot
+ device option to see whether it is currently mounted or not, and which
+ additional options depend on the selected value. [Fabio Priuli]
+
+-ui: fixed bug where slot options set via internal UI did not properly
+ create their sub-options. [Fabio Priuli]
+
+-Partial netlist sound implementation for Mario Bros. Luigi sound is
+ missing. By default, the previous discrete.h based sound is compiled.
+ Those curious can change OLD_SOUND to 0 in mario.h. [Couriersud]
+
+-naomi.c: redumped vstrik3c, both existing and new dumps were BAD, made
+ one good-looking from them [ANY, MetalliC]
+
+-naomi.c: redumped vstrik3c, both existing and new dumps were BAD, made
+ one good-looking from them [ANY, MetalliC]
+
+-twinkle.c: the 68000 & SPU board now process commands, some sound f/x
+ play now.  [R. Belmont]
+
+-ui: stop the game selector reporting systems with no roms as missing
+ files. [Fabio Priuli]
+
+-ui: when launching systems with mandatory carts, either from command
+ line or from the game selector, prompt the user with the file manager
+ menu so that he can mount a game where needed, instead of killing
+ emulation with an error. [Fabio Priuli]
+
+-Updates to SEGA 315-5881 encryption / compression device emulation
+  [Andreas Naive, Metallic, David Haywood, ANY] 
+ * update algorithm based on based on findings from Virtua Striker 2 '98
+ * correctly hooked up chip in ST-V, Model 2 and Model 3 drivers
+ * added support for multiple blocks in encrypted streams
+ * added support for different height/widths of compressed data steams
+ * found keys for many games allowing for per-game simulations to be removed
+   and fixing badly decompressed graphics in several games
+ * found some correlation between keys and Sega part numbers
+
+    - For ST-V :
+    - Final Fight Revenge boots and is playable
+    - Elandoree has correct textures, more playable
+    - Astra Super Stars no longer relies on a fake ROM from the Saturn
+      release
+    - Tecmo World Cup '98 has correct Tecmo logo / Title screen
+    - Steep Slope Sliders, Radiant Silvergun no longer use custom protection
+      simulations (end result is the same)
+
+    - For Model 2:
+    - Zero Gunner, Pilot Kids and Dynamite Cop no longer use custom protection
+      simulations (end result is the same)
+
+    - For Model 3:
+    - Dirt Devils, Magical Truck Adventure, Virtual On 2 and Machineguns
+      correctly decrypts 2D graphics
+    - Daytona USA 2 correctly decrypts encrypted code block, no longer
+      requires ROM patches to avoid it
+       * key for Daytona USA 2 Power Edition cannot be found with current
+         understanding of the algorithm
+    - Star Wars Trilogy, Spikeout, Fighting Vipers 2, Emergency Call
+      Ambulance, and The Ocean Hunter no longer use custom protection
+      simulation (end result is the same)
+    - Virtua Striker 2 '98 / '99 (Model 3) no longer hang at kickoff
+      (previous simulation was wrong?)
+ 
+    - For Hikaru:
+    - Star Wars Arcade Racer now has a key (315-5881 is not hooked up
+      in the driver because it does not get far enough in MAME)
+
+-updates to the Sega 315-5838 / 317-0029 compression device [David Haywood]
+ * Documented 315-5838 as the Decathlete protection chip
+ * Identified 317-0029 (Dead of Alive) as another version of the same thing
+   based on information from Guru
+ * Split 'decathlt' handling from stv.c and made into a device, moved the
+   'doa' simulation from model2.c in there too (preliminary, preparation
+   to merge code)
+ * No functional improvements at this time, just refactoring.
+
+-ui: improved File Manager so that attempts to launch softlist entries
+ without having the necessary files don't kill emulation but simply
+ display a message to the user. [Fabio Priuli]
+
+-*nix: Bump version and date in man pages. [Wallyweek]
+
+-hikaru.c: added protection key for sgnascar [MetalliC]
+
+-ui: fixed bug where software items that shall create new image devices
+ (e.g., passthru carts) or new slot options, failed to do so when
+ loaded through the File Manager in the internal UI. [Fabio Priuli]
+
+-Fixed non-terrain colors in Top Landing (also fixed out-of-bounds
+ palette crash bug in it) [Angelo Salese]
+
+-Emergency Call Ambulance, Daytona USA 2, L.A. Machineguns, Magical
+ Truck Adventure, Virtual On 2 protection keys [Metallic]
+
+-SDL keeps adding SDL_HINTs with every patch release. [qmc2]
+
+-nbajamex: Implemented ROM banking, game coins up and is playable.
+ [R. Belmont, Peter Ferrie]
+
+-core: Add per-game parameters [O. Galibert]
+
+ Per-game parameters are (tag, value) pairs that follow the same tag
+ structure than everything else.  They're added within a ROM section
+ with ROM_PARAMETER(tag, value).  You look them up through the device
+ method parameter(tag) which returns the string, or "" if not present. 
+
+-i386: sse opcodes improvements [Samuele Zannoli]
+ * add opcodes MOVHLPS MOVLHPS
+ * safer implementation of PACKUSWB PACKSSDW SHUFPS UNPCKLPS UNPCKHPS
+ * The safer implementation is needed in cases where the source and
+   destination registers are the same.
+
+-Solaris 11 build support. [Couriersud]
+
+-replace 'discof' dump with a new one [f205v]
+
+-added preliminary emulation of video screen on Caveman (Exidy
+ Pinball) [David Haywood]
+
+-updated funkball.c to use intelfsh.c for Flash Rom handling, making
+ use of bankdev to provide a virtual space in which they map
+  [David Haywood]
+
+New games added or promoted from NOT_WORKING status
+---------------------------------------------------
+Star Trek (Sidam, Head On hardware) [Piero Andreini, PaTrYcK]
+Endless Riches [Brian Troha]
+Pop'n Music 3 (ver JA-A) [R. Belmont]
+Come Back Toto [system11, David Haywood]
+NBA Jam Extreme [R. Belmont, Peter Ferrie]
+Final Fight Revenge [Metallic]
+Player's Edge Plus (PS0366) Double Diamond Deluxe Slots [BrianT]
+Player's Edge Plus (PS0372) Double Diamond Deluxe Slots [BrianT]
+Player's Edge Plus (PS0373) Double Diamond Deluxe Slots [BrianT]
+
+New clones added
+----------------
+Over Drive (set 2) [ShouTime, The Dumping Union]
+Over Drive (set 3) [ShouTime, The Dumping Union]
+Dungeons & Dragons: Shadow over Mystara (Asia 960208) [ArcadeHacker]
+Black Widow (prototype) [Mariusz Wojcieszek]
+Player's Edge Plus (PP0038) Standard Draw Poker [BrianT]
+Player's Edge Plus (PP0116) Standard Draw Poker (Mirage) [BrianT]
+Adventure Quiz Capcom World 2 (Japan 920611, B-Board 90629B-3, no
+  battery) [manimani]
+
+New games marked as GAME_NOT_WORKING
+------------------------------------
+Shakatto Tambourine (Rev B) (GDS-0002B) [rtw, ShouTime]
+Space Train [f205v]
+Missile-X [TTL]  [Andrew Welburn]
