@@ -248,10 +248,11 @@ static struct ComboBoxVideo
 	const char*		m_pData;
 } g_ComboBoxVideo[] =
 {
+	{ TEXT("Auto"),                 "auto"    },
 	{ TEXT("GDI"),                  "gdi"     },
 	{ TEXT("DirectDraw"),           "ddraw"   },
 	{ TEXT("Direct3D"),             "d3d"     },
-	{ TEXT("Auto"),					"auto"	  },
+	{ TEXT("BGFX"),                 "bgfx"    },
 };
 #define NUMVIDEO ARRAY_LENGTH(g_ComboBoxVideo)
 
