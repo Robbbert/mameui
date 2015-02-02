@@ -309,6 +309,7 @@ OSDOBJS = \
 	$(OSDOBJ)/modules/debugger/none.o \
 	$(OSDOBJ)/modules/netdev/pcap.o \
 	$(OSDOBJ)/modules/netdev/taptun.o \
+	$(OSDOBJ)/modules/netdev/none.o \
 
 ifndef DONT_USE_NETWORK
 DEFS +=	-DSDLMAME_NET_PCAP
