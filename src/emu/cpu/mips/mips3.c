@@ -2447,6 +2447,33 @@ inline void mips3_device::set_cop2_creg(int idx, UINT64 val)
 	m_core->ccr[2][idx] = val;
 }
 
+inline void mips3_device::handle_integer_divide_by_zero(UINT32 op)
+{
+	HIVAL64 = (INT32)RSVAL32;
+	if (m_flavor == MIPS3_TYPE_VR4300)
+	{
+		if (RSVAL32 >= 0)
+		{
+			LOVAL64 = (INT32)0x7fffffff;
+		}
+		else
+		{
+			LOVAL64 = (INT32)0x80000001;
+		}
+	}
+	else
+	{
+		if (RSVAL32 >= 0)
+		{
+			LOVAL64 = -1;
+		}
+		else
+		{
+			LOVAL64 = 1;
+		}
+	}
+}
+
 inline void mips3_device::handle_cop2(UINT32 op)
 {
 	if (!(SR & SR_COP2))
@@ -2616,6 +2643,10 @@ void mips3_device::execute_run()
 							LOVAL64 = (INT32)((INT32)RSVAL32 / (INT32)RTVAL32);
 							HIVAL64 = (INT32)((INT32)RSVAL32 % (INT32)RTVAL32);
 						}
+						else
+						{
+							handle_integer_divide_by_zero(op);
+						}
 						m_core->icount -= 35;
 						break;
 					case 0x1b:  /* DIVU */
@@ -2623,6 +2654,10 @@ void mips3_device::execute_run()
 						{
 							LOVAL64 = (INT32)(RSVAL32 / RTVAL32);
 							HIVAL64 = (INT32)(RSVAL32 % RTVAL32);
+						}
+						else
+						{
+							handle_integer_divide_by_zero(op);
 						}
 						m_core->icount -= 35;
 						break;
