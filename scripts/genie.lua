@@ -5,21 +5,6 @@ local MAME_BUILD_DIR = (MAME_DIR .. "build/")
 local naclToolchain = ""
 
 
-function includeosd()
-	includedirs {
-		MAME_DIR .. "src/osd",
-	}
-	if _OPTIONS["osd"]=="windows" then
-		includedirs {
-			MAME_DIR .. "src/osd/windows",
-		}
-	else
-		includedirs {
-			MAME_DIR .. "src/osd/sdl",
-		}
-	end
-end
-
 function str_to_version (str)
 	local val = 0
 	if (str == nil or str == '') then
@@ -47,11 +32,6 @@ newoption {
 newoption {
 	trigger = "osd",
 	description = "Choose target OSD",
-	allowed = {
-		{ "osdmini",   "mini dummy OSD"         },
-		{ "sdl",       "SDL"			        },
-		{ "windows",   "Windows"                },
-	},
 }
 
 newoption {
@@ -159,12 +139,31 @@ newoption {
 	description = "Force DRC C backend.",
 } 
 
+newoption {
+	trigger = "NOWERROR",
+	description = "NOWERROR",
+} 
+
+newoption {
+	trigger = "USE_BGFX",
+	description = "Use of BGFX.",
+	allowed = {
+		{ "0",   "Disabled" 	},
+		{ "1",   "Enabled"      },
+	}
+} 
+
 
 local os_version = str_to_version(_OPTIONS["os_version"])
+
 USE_BGFX = 1
 if (_OPTIONS["targetos"]=="macosx" and  os_version < 100700) then
 	USE_BGFX = 0
 end
+if(_OPTIONS["USE_BGFX"]~=nil) then
+	USE_BGFX = tonumber(_OPTIONS["USE_BGFX"])
+end
+
 GEN_DIR = MAME_BUILD_DIR .. "generated/"
 
 if (_OPTIONS["target"] == nil) then return false end
@@ -197,8 +196,14 @@ end
 	configuration { "vs*" }
 	flags {
 		"ExtraWarnings",
+	}
+	if _OPTIONS["NOWERROR"]==nil then
+	flags{
 		"FatalWarnings",
 	}
+	end
+	
+	
 	configuration { "Debug", "vs*" }
 		flags {
 			"Symbols",
@@ -221,7 +226,7 @@ if (not os.isfile(path.join("target", _OPTIONS["target"],_OPTIONS["subtarget"] .
 	error("File definition for TARGET=" .. _OPTIONS["target"] .. " SUBTARGET=" .. _OPTIONS["subtarget"] .. " does not exist")
 end
 dofile (path.join("target", _OPTIONS["target"],_OPTIONS["subtarget"] .. ".lua"))
-	
+
 configuration { "gmake" }
 	flags {
 		"SingleOutputDir",
@@ -268,14 +273,12 @@ configuration { }
 dofile ("toolchain.lua")
 
 
-if _OPTIONS["osd"]=="windows" then
-	forcedincludes {
-		MAME_DIR .. "src/osd/windows/winprefix.h"
+if _OPTIONS["targetos"]=="windows" then
+configuration { "x64" }
+	defines {
+		"X64_WINDOWS_ABI",
 	}
-elseif _OPTIONS["osd"]=="sdl" then
-	forcedincludes {
-		MAME_DIR .. "src/osd/sdl/sdlprefix.h"
-	}
+configuration { }
 end
 
 -- Avoid error when invoking genie --help.
@@ -448,11 +451,11 @@ end
 	}
 
 	-- add the error warning flag
-	--ifndef NOWERROR
+if _OPTIONS["NOWERROR"]==nil then
 	buildoptions {
 		"-Werror",
 	}
-
+end
 
 -- if we are optimizing, include optimization options
 --ifneq ($(),0)
@@ -540,7 +543,11 @@ end
 				"-Wno-dynamic-class-memaccess",
 				"-Wno-self-assign-field",
 			}
-			
+			if (version >= 30200) then
+				buildoptions {
+					"-Wno-unused-value",
+				}
+			end	
 			if (version >= 30400) then
 				buildoptions {
 					"-Wno-inline-new-delete",
@@ -555,6 +562,11 @@ end
 				}
 			end
 		else
+			if (version == 40201) then
+				buildoptions {
+					"-Wno-cast-align"
+				}
+			end 
 			if (version >= 40400) then
 				buildoptions {
 					"-Wno-unused-result",
@@ -582,12 +594,12 @@ end
 
 local subdir
 if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then
-	subdir = _OPTIONS["target"]
+	subdir = _OPTIONS["osd"] .. "/" .. _OPTIONS["target"]
 else
-	subdir = _OPTIONS["target"] .. _OPTIONS["subtarget"] 
+	subdir = _OPTIONS["osd"] .. "/" .. _OPTIONS["target"] .. _OPTIONS["subtarget"] 
 end	
 
-if not toolchain(MAME_BUILD_DIR, subdir) then
+if not toolchain(_OPTIONS["osd"], MAME_BUILD_DIR, subdir) then
 	return -- no action specified
 end
 	
@@ -677,20 +689,16 @@ configuration { "mingw*" }
 			"-static-libstdc++",
 			"-municode",
 		}
-		if _OPTIONS["osd"]=="sdl" then
-			linkoptions {
-				"-Wl,--allow-multiple-definition",
-				"-static"
-			}
-			links {
-				"opengl32",
-				"SDL2",
-				"Imm32",
-				"version",
-				"ole32",
-				"oleaut32",
-			}
-		end
+if _OPTIONS["osd"]=="sdl" then
+		links {
+			"opengl32",
+			"SDL2",
+			"Imm32",
+			"version",
+			"ole32",
+			"oleaut32",
+		}
+end
 		links {
 			"user32",
 			"gdi32",
@@ -792,6 +800,40 @@ configuration { "vs*" }
 			"/wd4371",
 			"/wd4548",
 		}
+if _OPTIONS["vs"]=="intel-15" then
+		buildoptions {
+			"/Qwd9", 
+			"/Qwd82",
+			"/Qwd111",
+			"/Qwd128",
+			"/Qwd177",
+			"/Qwd181",
+			"/Qwd185",
+			"/Qwd280",
+			"/Qwd344",
+			"/Qwd411",
+			"/Qwd869",
+			"/Qwd2545",
+			"/Qwd2553",
+			"/Qwd2557", 
+			"/Qwd3280", 
+
+			"/Qwd170",
+			"/Qwd188",
+
+			"/Qwd63", 
+			"/Qwd177",
+			"/Qwd186",
+			"/Qwd488",
+			"/Qwd1478",
+			"/Qwd1879",
+			"/Qwd3291",
+			"/Qwd1195",
+			"/Qwd1786",
+			"/Qwd592", -- For lua, false positive?
+		}
+end
+
 		linkoptions {
 			"/ignore:4221", -- LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
 		}
@@ -811,13 +853,19 @@ configuration { "x64", "vs*" }
 
 configuration { }
 
+
 group "libs"
+
+if (not os.isfile(path.join("src", "osd",  _OPTIONS["osd"] .. ".lua"))) then
+	error("Unsupported value '" .. _OPTIONS["osd"] .. "' for OSD")
+end
+dofile(path.join("src", "osd", _OPTIONS["osd"] .. ".lua"))
+
 dofile(path.join("src", "3rdparty.lua"))
 dofile(path.join("src", "lib.lua"))
 
 group "core"
 
-dofile(path.join("src", "osd.lua"))
 dofile(path.join("src", "emu.lua"))
 emuProject(_OPTIONS["target"],_OPTIONS["subtarget"])
 
