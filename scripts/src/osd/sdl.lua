@@ -1,15 +1,32 @@
-function includeosd()
-	includedirs {
-		MAME_DIR .. "src/osd",
-		MAME_DIR .. "src/osd/sdl",
-	}
+function maintargetosdoptions(_target)
+	if _OPTIONS["targetos"]=="windows" then
+		linkoptions{
+			"-L$(shell qmake -query QT_INSTALL_LIBS)",
+		}
+
+		links {
+			"qtmain",
+			"QtGui4",
+			"QtCore4",
+		}
+	end
+
+	if _OPTIONS["targetos"]=="linux" then
+		links {
+			'QtGui',
+			'QtCore',
+		}
+
+		linkoptions {
+			'$(shell pkg-config --libs QtGui)',
+		}
+	end
+
+	configuration { "mingw*" or "vs*" }
+		targetprefix "sdl"
+
+	configuration { }
 end
-
-
-forcedincludes {
-	MAME_DIR .. "src/osd/sdl/sdlprefix.h"
-}
-
 
 configuration { "mingw*" }
 		linkoptions {
@@ -56,6 +73,7 @@ project ("osd_" .. _OPTIONS["osd"])
 	if _OPTIONS["targetos"]=="macosx" then
 		files {
 			--MAME_DIR .. "src/osd/sdl/SDLMain_tmpl.m",
+			MAME_DIR .. "src/osd/modules/debugger/debugosx.m",
 			MAME_DIR .. "src/osd/modules/debugger/osx/breakpointsview.m",
 			MAME_DIR .. "src/osd/modules/debugger/osx/consoleview.m",
 			MAME_DIR .. "src/osd/modules/debugger/osx/debugcommandhistory.m",
@@ -107,7 +125,7 @@ project ("osd_" .. _OPTIONS["osd"])
 			MAME_DIR .. "src/osd/modules/debugger/qt/breakpointswindow.c",
 			MAME_DIR .. "src/osd/modules/debugger/qt/deviceswindow.c",
 			MAME_DIR .. "src/osd/modules/debugger/qt/deviceinformationwindow.c",
-			
+
 			GEN_DIR  .. "osd/modules/debugger/qt/debuggerview.moc.c",
 			GEN_DIR  .. "osd/modules/debugger/qt/windowqt.moc.c",
 			GEN_DIR  .. "osd/modules/debugger/qt/logwindow.moc.c",
@@ -184,22 +202,13 @@ project ("ocore_" .. _OPTIONS["osd"])
 	end
 
 	files {
-		MAME_DIR .. "src/osd/modules/osdmodule.c",
-	}
-
-	if _OPTIONS["targetos"]=="macosx" then
-		files {
-			MAME_DIR .. "src/osd/sdl/osxutils.m",
-		}
-	end
-
-	files {
-		MAME_DIR .. "src/osd/sdl/strconv.c",
+		MAME_DIR .. "src/osd/strconv.c",
 		MAME_DIR .. "src/osd/sdl/sdldir.c",
 		MAME_DIR .. "src/osd/sdl/sdlfile.c",
 		MAME_DIR .. "src/osd/sdl/sdlptty_" .. BASE_TARGETOS ..".c",
 		MAME_DIR .. "src/osd/sdl/sdlsocket.c",
 		MAME_DIR .. "src/osd/sdl/sdlos_" .. SDLOS_TARGETOS .. ".c",
+		MAME_DIR .. "src/osd/modules/osdmodule.c",
 		MAME_DIR .. "src/osd/modules/lib/osdlib_" .. SDLOS_TARGETOS .. ".c",
 		MAME_DIR .. "src/osd/modules/sync/sync_" .. SYNC_IMPLEMENTATION .. ".c",
 		--ifdef NOASM

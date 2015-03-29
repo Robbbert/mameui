@@ -12,6 +12,12 @@
 
 	premake.fields =
 	{
+		aftercompilefile =
+		{
+			kind  = "string",
+			scope = "config",
+		},
+
 		archivesplit_size =
 		{
 			kind  = "string",
@@ -383,7 +389,8 @@
 
 				local allowed_options = {
 					ForceCPP = 1,
-					ArchiveSplit = 1
+					ArchiveSplit = 1,
+					NoDependency = 1,
 				}
 
 				local lowervalue = value:lower()

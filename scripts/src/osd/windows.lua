@@ -1,14 +1,16 @@
-function includeosd()
-	includedirs {
-		MAME_DIR .. "src/osd",
-		MAME_DIR .. "src/osd/windows",
-	}
+function maintargetosdoptions(_target)
+	local rcfile = MAME_DIR .. "src/" .. _target .. "/osd/windows/" .. _target ..".rc"
+
+	if os.isfile(rcfile) then
+		files {
+			rcfile,
+		}
+	else
+		files {
+			MAME_DIR .. "src/osd/windows/mame.rc",
+		}
+	end
 end
-
-
-forcedincludes {
-	MAME_DIR .. "src/osd/windows/winprefix.h"
-}
 
 
 project ("osd_" .. _OPTIONS["osd"])
@@ -116,23 +118,9 @@ project ("ocore_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/lib/util",
 	}
 
-	--if _OPTIONS["targetos"]=="linux" then
-	--	BASE_TARGETOS = "unix"
-	--	SDLOS_TARGETOS = "unix"
-	--	SYNC_IMPLEMENTATION = "tc"
-	--end
-
-	--if _OPTIONS["targetos"]=="windows" then
-		BASE_TARGETOS = "win32"
-		SDLOS_TARGETOS = "win32"
-		SYNC_IMPLEMENTATION = "windows"
-	--end
-
-	--if _OPTIONS["targetos"]=="macosx" then
-	--	BASE_TARGETOS = "unix"
-	--	SDLOS_TARGETOS = "macosx"
-	--	SYNC_IMPLEMENTATION = "ntc"
-	--end
+	BASE_TARGETOS = "win32"
+	SDLOS_TARGETOS = "win32"
+	SYNC_IMPLEMENTATION = "windows"
 
 	includedirs {
 		MAME_DIR .. "src/osd/windows",
@@ -140,9 +128,8 @@ project ("ocore_" .. _OPTIONS["osd"])
 	}
 
 	files {
-		MAME_DIR .. "src/osd/modules/osdmodule.c",
+		MAME_DIR .. "src/osd/strconv.c",
 		MAME_DIR .. "src/osd/windows/main.c",
-		MAME_DIR .. "src/osd/windows/strconv.c",
 		MAME_DIR .. "src/osd/windows/windir.c",
 		MAME_DIR .. "src/osd/windows/winfile.c",
 		MAME_DIR .. "src/osd/modules/sync/sync_windows.c",
@@ -150,7 +137,8 @@ project ("ocore_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/osd/windows/winutil.c",
 		MAME_DIR .. "src/osd/windows/winclip.c",
 		MAME_DIR .. "src/osd/windows/winsocket.c",
+		MAME_DIR .. "src/osd/windows/winptty.c",
+		MAME_DIR .. "src/osd/modules/osdmodule.c",
 		MAME_DIR .. "src/osd/modules/sync/work_osd.c",
 		MAME_DIR .. "src/osd/modules/lib/osdlib_win32.c",
-		MAME_DIR .. "src/osd/windows/winptty.c",
 	}

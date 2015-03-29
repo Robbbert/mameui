@@ -18,6 +18,29 @@ function str_to_version (str)
     return val
 end
 
+function findfunction(x)
+  assert(type(x) == "string")
+  local f=_G
+  for v in x:gmatch("[^%.]+") do
+    if type(f) ~= "table" then
+       return nil, "looking for '"..v.."' expected table, not "..type(f)
+    end
+    f=f[v]
+  end
+  if type(f) == "function" then
+    return f
+  else
+    return nil, "expected function, not "..type(f)
+  end
+end
+
+function includeosd()
+	includedirs {
+		MAME_DIR .. "src/osd",
+	}
+end
+
+
 CPUS = {}
 SOUNDS  = {}
 MACHINES  = {}
@@ -209,6 +232,9 @@ end
 			"Symbols",
 		}	
 	configuration {}
+	
+--aftercompilefile ("\t$(SILENT) gawk -f ../../../../../scripts/depfilter.awk $(@:%.o=%.d) > $(@:%.o=%.dep)\n\t$(SILENT) mv $(@:%.o=%.dep) $(@:%.o=%.d)")
+	
 	
 msgcompile ("Compiling $(subst ../,,$<)...")
 
@@ -599,7 +625,7 @@ else
 	subdir = _OPTIONS["osd"] .. "/" .. _OPTIONS["target"] .. _OPTIONS["subtarget"] 
 end	
 
-if not toolchain(_OPTIONS["osd"], MAME_BUILD_DIR, subdir) then
+if not toolchain(MAME_BUILD_DIR, subdir) then
 	return -- no action specified
 end
 	
@@ -870,7 +896,8 @@ dofile(path.join("src", "emu.lua"))
 emuProject(_OPTIONS["target"],_OPTIONS["subtarget"])
 
 group "drivers"
-createProjects(_OPTIONS["target"],_OPTIONS["subtarget"])
+findfunction("createProjects_" .. _OPTIONS["target"] .. "_" .. _OPTIONS["subtarget"])(_OPTIONS["target"], _OPTIONS["subtarget"])
+
 group "emulator"
 dofile(path.join("src", "main.lua"))
 if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then
