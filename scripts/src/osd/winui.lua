@@ -1,6 +1,10 @@
 function maintargetosdoptions(_target)
 	kind "WindowedApp"
 
+	linkoptions {
+		"-municode",
+	}
+
 	local rcfile = MAME_DIR .. "src/" .. _target .. "/osd/winui/" .. _target .."ui.rc"
 
 	if os.isfile(rcfile) then

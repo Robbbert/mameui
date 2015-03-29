@@ -13,4 +13,5 @@ defines {
 	"DIRECTINPUT_VERSION=0x0800",
 	"SDLMAME_NET_PCAP",
 	--"WIN95_MULTIMON"
+	"main=utf8_main",
 }
