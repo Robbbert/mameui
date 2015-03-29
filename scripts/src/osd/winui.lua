@@ -1,9 +1,11 @@
 function maintargetosdoptions(_target)
+	kind "WindowedApp"
+
 	linkoptions {
 		"-municode",
 	}
 
-	local rcfile = MAME_DIR .. "src/" .. _target .. "/osd/windows/" .. _target ..".rc"
+	local rcfile = MAME_DIR .. "src/" .. _target .. "/osd/winui/" .. _target .."ui.rc"
 
 	if os.isfile(rcfile) then
 		files {
@@ -11,9 +13,19 @@ function maintargetosdoptions(_target)
 		}
 	else
 		files {
-			MAME_DIR .. "src/osd/windows/mame.rc",
+			MAME_DIR .. "src/osd/winui/mameui.rc",
 		}
 	end
+
+	targetprefix "ui"
+
+	configuration { "mingw*" }
+			linkoptions {
+				"-lmingw32",
+				"-Wl,--allow-multiple-definition",
+			}
+
+	configuration { }
 end
 
 
@@ -29,7 +41,7 @@ project ("osd_" .. _OPTIONS["osd"])
 		"ForceCPP",
 	}
 
-	dofile("windows_cfg.lua")
+	dofile("winui_cfg.lua")
 	
 	defines {
 		"DIRECTINPUT_VERSION=0x0800",
@@ -100,8 +112,35 @@ project ("osd_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/osd/modules/sound/direct_sound.c",
 		MAME_DIR .. "src/osd/modules/sound/sdl_sound.c",
 		MAME_DIR .. "src/osd/modules/sound/none.c",
+		MAME_DIR .. "src/osd/winui/win_options.c",
+		MAME_DIR .. "src/osd/winui/mui_util.c",
+		MAME_DIR .. "src/osd/winui/directinput.c",
+		MAME_DIR .. "src/osd/winui/dijoystick.c",
+		MAME_DIR .. "src/osd/winui/directdraw.c",
+		MAME_DIR .. "src/osd/winui/directories.c",
+		MAME_DIR .. "src/osd/winui/mui_audit.c",
+		MAME_DIR .. "src/osd/winui/columnedit.c",
+		MAME_DIR .. "src/osd/winui/screenshot.c",
+		MAME_DIR .. "src/osd/winui/treeview.c",
+		MAME_DIR .. "src/osd/winui/splitters.c",
+		MAME_DIR .. "src/osd/winui/bitmask.c",
+		MAME_DIR .. "src/osd/winui/datamap.c",
+		MAME_DIR .. "src/osd/winui/dxdecode.c",
+		MAME_DIR .. "src/osd/winui/picker.c",
+		MAME_DIR .. "src/osd/winui/properties.c",
+		MAME_DIR .. "src/osd/winui/tabview.c",
+		MAME_DIR .. "src/osd/winui/help.c",
+		MAME_DIR .. "src/osd/winui/history.c",
+		MAME_DIR .. "src/osd/winui/dialogs.c",
+		MAME_DIR .. "src/osd/winui/mui_opts.c",
+		MAME_DIR .. "src/osd/winui/layout.c",
+		MAME_DIR .. "src/osd/winui/datafile.c",
+		MAME_DIR .. "src/osd/winui/dirwatch.c",
+		MAME_DIR .. "src/osd/winui/winui.c",
+		MAME_DIR .. "src/osd/winui/helpids.c",
+		MAME_DIR .. "src/osd/winui/mui_main.c",
 	}
-	
+
 project ("ocore_" .. _OPTIONS["osd"])
 	uuid (os.uuid("ocore_" .. _OPTIONS["osd"]))
 	kind "StaticLib"
@@ -133,7 +172,6 @@ project ("ocore_" .. _OPTIONS["osd"])
 
 	files {
 		MAME_DIR .. "src/osd/strconv.c",
-		MAME_DIR .. "src/osd/windows/main.c",
 		MAME_DIR .. "src/osd/windows/windir.c",
 		MAME_DIR .. "src/osd/windows/winfile.c",
 		MAME_DIR .. "src/osd/modules/sync/sync_windows.c",

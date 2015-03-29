@@ -61,14 +61,19 @@ newoption {
 	trigger = "targetos",
 	description = "Choose target OS",
 	allowed = {
-		{ "android",   "Android"          		},
-		{ "asmjs",     "Emscripten/asm.js"      },
-		{ "freebsd",   "FreeBSD"                },
-		{ "linux",     "Linux"   				},
-		{ "ios",       "iOS"              		},
-		{ "nacl",      "Native Client"          },
-		{ "macosx",    "OSX"                    },
-		{ "windows",   "Windows"                },
+		{ "android-arm",   "Android - ARM"          },
+		{ "android-mips",  "Android - MIPS"         },
+		{ "android-x86",   "Android - x86"          },
+		{ "asmjs",         "Emscripten/asm.js"      },
+		{ "freebsd",       "FreeBSD"                },
+		{ "nacl",          "Native Client"          },
+		{ "nacl-arm",      "Native Client - ARM"    },
+		{ "pnacl",         "Native Client - PNaCl"  },
+		{ "linux",     	   "Linux"   				},
+		{ "ios",           "iOS"              		},
+		{ "macosx",        "OSX"                    },
+		{ "windows",       "Windows"                },
+
 	},
 }
 
@@ -704,16 +709,15 @@ configuration { "osx*" }
 			"SDL2.framework",
 			"pthread",
 		}
+		buildoptions {
+			"-F/Library/Frameworks/",
+		}
 
 
 configuration { "mingw*" }
-		defines {
-			"main=utf8_main",
-		}
 		linkoptions {
 			"-static-libgcc",
 			"-static-libstdc++",
-			"-municode",
 		}
 if _OPTIONS["osd"]=="sdl" then
 		links {
@@ -740,9 +744,6 @@ end
 		}
 
 configuration { "vs*" }
-		defines {
-			"main=utf8_main",
-		}
 		defines {
 			"XML_STATIC",
 			"WIN32",
