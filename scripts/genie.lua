@@ -237,6 +237,7 @@ end
 		"StaticRuntime",
 		"Unicode",
 		"NoPCH",
+		"IgnoreLDFlags",
 	}
 	
 	configuration { "vs*" }
@@ -738,6 +739,9 @@ configuration { "osx*" }
 		}
 		linkoptions {
 			"-F/Library/Frameworks/",
+		}
+		flags {
+			"Symbols",
 		}
 
 

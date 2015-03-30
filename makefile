@@ -351,10 +351,9 @@ SCRIPTS = scripts/genie.lua \
 	scripts/src/bus.lua \
 	scripts/src/netlist.lua \
 	scripts/toolchain.lua \
-	scripts/target/$(TARGET)/$(SUBTARGET).lua
-ifneq (,$(wildcard src/osd/$(OSD)/$(OSD).mak))
-SCRIPTS+= src/osd/$(OSD)/$(OSD).mak
-endif
+	scripts/target/$(TARGET)/$(SUBTARGET).lua \
+	$(wildcard src/osd/$(OSD)/$(OSD).mak) \
+	$(wildcard src/$(TARGET)/$(SUBTARGET).mak)
 ifdef REGENIE
 SCRIPTS+= regenie
 endif
@@ -442,7 +441,7 @@ regenie:
 # gmake-mingw64-gcc
 #-------------------------------------------------
 
-$(PROJECTDIR)/gmake-mingw64-gcc/Makefile: makefile $(SCRIPTS)
+$(PROJECTDIR)/gmake-mingw64-gcc/Makefile: makefile $(SCRIPTS) $(GENIE)
 ifndef MINGW64
 	$(error MINGW64 is not set)
 endif
@@ -459,7 +458,7 @@ windows_x64: generate $(PROJECTDIR)/gmake-mingw64-gcc/Makefile
 .PHONY: windows
 windows: windows_x86
 
-$(PROJECTDIR)/gmake-mingw32-gcc/Makefile: makefile $(SCRIPTS)
+$(PROJECTDIR)/gmake-mingw32-gcc/Makefile: makefile $(SCRIPTS) $(GENIE)
 ifndef MINGW32
 	$(error MINGW32 is not set)
 endif
@@ -473,7 +472,7 @@ windows_x86: generate $(PROJECTDIR)/gmake-mingw32-gcc/Makefile
 # gmake-mingw-clang
 #-------------------------------------------------
 
-$(PROJECTDIR)/gmake-mingw-clang/Makefile: makefile $(SCRIPTS)
+$(PROJECTDIR)/gmake-mingw-clang/Makefile: makefile $(SCRIPTS) $(GENIE)
 ifndef CLANG
 	$(error CLANG is not set)
 endif
@@ -599,7 +598,7 @@ endif
 # gmake-linux
 #-------------------------------------------------
 
-$(PROJECTDIR)/gmake-linux/Makefile: makefile $(SCRIPTS)
+$(PROJECTDIR)/gmake-linux/Makefile: makefile $(SCRIPTS) $(GENIE)
 	$(SILENT) $(GENIE) $(PARAMS) --gcc=linux-gcc --gcc_version=$(GCC_VERSION) gmake
 
 .PHONY: linux_x64
@@ -617,7 +616,7 @@ linux_x86: generate $(PROJECTDIR)/gmake-linux/Makefile
 # gmake-linux-clang
 #-------------------------------------------------
 
-$(PROJECTDIR)/gmake-linux-clang/Makefile: makefile $(SCRIPTS)
+$(PROJECTDIR)/gmake-linux-clang/Makefile: makefile $(SCRIPTS) $(GENIE)
 	$(SILENT) $(GENIE) $(PARAMS) --gcc=linux-clang --gcc_version=$(CLANG_VERSION) gmake
 
 .PHONY: linux_x64_clang
@@ -632,7 +631,7 @@ linux_x86_clang: generate $(PROJECTDIR)/gmake-linux-clang/Makefile
 # gmake-osx
 #-------------------------------------------------
 
-$(PROJECTDIR)/gmake-osx/Makefile: makefile $(SCRIPTS)
+$(PROJECTDIR)/gmake-osx/Makefile: makefile $(SCRIPTS) $(GENIE)
 	$(SILENT) $(GENIE) $(PARAMS) --gcc=osx --os_version=$(DARWIN_VERSION) --gcc_version=$(GCC_VERSION) gmake
 
 .PHONY: macosx_x64
@@ -650,7 +649,7 @@ macosx_x86: generate $(PROJECTDIR)/gmake-osx/Makefile
 # gmake-osx-clang
 #-------------------------------------------------
 
-$(PROJECTDIR)/gmake-osx-clang/Makefile: makefile $(SCRIPTS)
+$(PROJECTDIR)/gmake-osx-clang/Makefile: makefile $(SCRIPTS) $(GENIE)
 	$(SILENT) $(GENIE) $(PARAMS) --gcc=osx-clang --os_version=$(DARWIN_VERSION) --gcc_version=$(CLANG_VERSION) gmake
 
 .PHONY: macosx_x64_clang
@@ -677,10 +676,8 @@ GEN_FOLDERS :=  \
 	$(GENDIR) \
 	$(GENDIR)/$(TARGET)/$(SUBTARGET) \
 	$(GENDIR)/emu/layout/ \
-	$(GENDIR)/mame/layout/ \
-	$(GENDIR)/mess/layout/ \
+	$(GENDIR)/$(TARGET)/layout/ \
 	$(GENDIR)/mess/drivers/ \
-	$(GENDIR)/ldplayer/layout/ \
 	$(GENDIR)/emu/cpu/arcompact/ \
 	$(GENDIR)/emu/cpu/h8/ \
 	$(GENDIR)/emu/cpu/mcs96/ \
@@ -721,6 +718,10 @@ endif
 
 ifneq (,$(wildcard src/osd/$(OSD)/$(OSD).mak))
 include src/osd/$(OSD)/$(OSD).mak
+endif
+
+ifneq (,$(wildcard src/$(TARGET)/$(SUBTARGET).mak))
+include src/$(TARGET)/$(SUBTARGET).mak
 endif
 
 $(GEN_FOLDERS):
