@@ -21,13 +21,12 @@
 #include "pool.h"
 #include "screenshot.h"
 
-
+#define MAMENAME "MAME"
 #ifdef PTR64
-#define MAMEUINAME	"MAMEUI64"
+#define MAMEUINAME MAMENAME "UI64"
 #else
-#define MAMEUINAME	"MAMEUI32"
+#define MAMEUINAME MAMENAME "UI32"
 #endif
-#define MAMENAME		"MAME"
 
 #define SEARCH_PROMPT ""
 
