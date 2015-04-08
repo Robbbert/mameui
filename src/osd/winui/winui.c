@@ -2404,7 +2404,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 			switch(HIWORD(wParam))
 			{
 				case 0:
-					MameUIVerifyRomSet(nGameIndex);
+					MameUIVerifyRomSet(nGameIndex, 0);
 					break;
 				case 1:
 					MameUIVerifySampleSet(nGameIndex);
@@ -2534,7 +2534,7 @@ static BOOL FolderCheck(void)
 		nGameIndex  = lvi.lParam;
 		if (GetRomAuditResults(nGameIndex) == UNKNOWN)
 		{
-			MameUIVerifyRomSet(nGameIndex);
+			MameUIVerifyRomSet(nGameIndex, 0);
 			changed = TRUE;
 		}
 
@@ -2588,7 +2588,7 @@ static BOOL GameCheck(void)
 
 	if (GetRomAuditResults(game_index) == UNKNOWN)
 	{
-		MameUIVerifyRomSet(game_index);
+		MameUIVerifyRomSet(game_index, 0);
 		changed = TRUE;
 	}
 
