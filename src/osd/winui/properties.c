@@ -253,9 +253,7 @@ static struct ComboBoxVideo
 	{ TEXT("DirectDraw"),           "ddraw"   },
 	{ TEXT("Direct3D"),             "d3d"     },
 //	{ TEXT("BGFX"),                 "bgfx"    },
-#if (USE_OPENGL)
 	{ TEXT("OpenGL"),               "opengl"  },
-#endif
 };
 #define NUMVIDEO ARRAY_LENGTH(g_ComboBoxVideo)
 
