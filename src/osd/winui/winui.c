@@ -4718,6 +4718,10 @@ static const TCHAR *GamePicker_GetItemString(HWND hwndPicker, int nItem, int nCo
 			utf8_s = DriverIsVertical(nItem) ? "Vertical" : "Horizontal";
 			break;
 
+		//case COLUMN_ROMS:
+		//	utf8_s = GetAuditString(GetRomAuditResults(nItem));
+		//	break;
+
 		case COLUMN_SAMPLES:
 			/* Samples */
 			if (DriverUsesSamples(nItem))
@@ -5195,8 +5199,8 @@ static int GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_
 		break;
 
 	case COLUMN_PLAYED:
-	   value = GetPlayCount(index1) - GetPlayCount(index2);
-	   break;
+		value = GetPlayCount(index1) - GetPlayCount(index2);
+		break;
 
 	case COLUMN_MANUFACTURER:
 		value = core_stricmp(driver_list::driver(index1).manufacturer, driver_list::driver(index2).manufacturer);
