@@ -11,7 +11,7 @@ MAMEUI has an inbuilt front-end allowing you to choose a system from a list.
 How to compile?
 ===============
 
-You can only build MAMEUI on a Windows computer. It won't compile on Unix.
+You can only build MAMEUI on a Windows computer. It won't compile on Unix. More info at docs/compile.zip/compile.doc
 
 ```
 make TARGET=mame OSD=winui
