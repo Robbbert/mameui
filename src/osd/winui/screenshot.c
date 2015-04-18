@@ -192,14 +192,14 @@ static file_error OpenDIBFile(const char *dir_name, const char *zip_name, const 
 	*file = NULL;
 
 	// look for the raw file
-	astring fname (dir_name, PATH_SEPARATOR, filename);
+	astring fname (dir_name); fname.cat(PATH_SEPARATOR); fname.cat(filename);
 	filerr = core_fopen(fname, OPEN_FLAG_READ, file);
 
 	// did the raw file not exist?
 	if (filerr != FILERR_NONE)
 	{
 		// look into zip file
-		astring fname (dir_name, PATH_SEPARATOR, zip_name, ".zip");
+		astring fname (dir_name); fname.cat(PATH_SEPARATOR); fname.cat(zip_name); fname.cat(".zip");
 		ziperr = zip_file_open(fname, &zip);
 		if (ziperr == ZIPERR_NONE)
 		{
@@ -271,31 +271,31 @@ BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pic_type)
 	}
 	//Add handling for the displaying of all the different supported snapshot patterntypes
 	//%g
-	astring fname (filename, ".png");
+	astring fname (filename); fname.cat(".png");
 	filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
 
 	if (filerr != FILERR_NONE) 
 	{
 		//%g/%i
-		astring fname (filename, PATH_SEPARATOR, "0000.png");
+		astring fname (filename); fname.cat(PATH_SEPARATOR); fname.cat("0000.png");
 		filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
 	}
 	if (filerr != FILERR_NONE) 
 	{
 		//%g%i
-		astring fname (filename, "0000.png");
+		astring fname (filename); fname.cat("0000.png");
 		filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
 	}
 	if (filerr != FILERR_NONE) 
 	{
 		//%g/%g
-		astring fname (filename, PATH_SEPARATOR, filename, ".png");
+		astring fname (filename); fname.cat(PATH_SEPARATOR); fname.cat(filename); fname.cat(".png");
 		filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
 	}
 	if (filerr != FILERR_NONE) 
 	{
 		//%g/%g%i
-		astring fname (filename, PATH_SEPARATOR, filename, "0000.png");
+		astring fname (filename); fname.cat(PATH_SEPARATOR); fname.cat(filename); fname.cat("0000.png");
 		filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
 	}
 	if (filerr == FILERR_NONE) 

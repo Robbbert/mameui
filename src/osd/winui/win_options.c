@@ -685,6 +685,7 @@ void options::append_entry(options::entry &newentry)
 	m_entrylist.append(newentry);
 
 	// if we have names, add them to the map
+	astring tempstr;
 	for (int name = 0; name < ARRAY_LENGTH(newentry.m_name); name++)
 		if (newentry.name(name) != NULL)
 		{
@@ -692,7 +693,7 @@ void options::append_entry(options::entry &newentry)
 
 			// for boolean options add a "no" variant as well
 			if (newentry.type() == OPTION_BOOLEAN)
-				m_entrymap.add(astring("no", newentry.name(name)), &newentry);
+				m_entrymap.add(tempstr.cpy("no").cat(newentry.m_name[name]), &newentry);
 		}
 }
 

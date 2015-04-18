@@ -2507,7 +2507,7 @@ void LoadFolderFlags(void)
 				ptr++;
 			}
 
-			astring option_name (folder_name, "_filters");
+			astring option_name (folder_name); option_name.cat("_filters");
 			// create entry
 			entries[0].name = option_name;
 			opts.add_entries(entries);
@@ -2540,7 +2540,7 @@ void LoadFolderFlags(void)
 				}
 				ptr++;
 			}
-			astring option_name (folder_name, "_filters" );
+			astring option_name (folder_name); option_name.cat("_filters");
 			// get entry and decode it
 			value = opts.value(option_name);
 
@@ -2593,7 +2593,7 @@ static void AddFolderFlags(winui_options &opts)
 				ptr++;
 			}
 
-			astring option_name (folder_name, "_filters" );
+			astring option_name (folder_name); option_name.cat("_filters");
 
 			// create entry
 			entries[0].name = option_name;
@@ -2679,7 +2679,7 @@ BOOL IsGlobalOption(const char *option_name)
 static void ui_parse_ini_file(windows_options &opts, const char *name)
 {
 	/* open the file; if we fail, that's ok */
-	astring fname (GetIniDir(), PATH_SEPARATOR, name, ".ini");
+	astring fname (GetIniDir()); fname.cat(PATH_SEPARATOR); fname.cat(name); fname.cat(".ini");
 	LoadSettingsFile(opts, fname);
 	SetDirectories(opts);
 }
@@ -2753,7 +2753,7 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 
 		// then parse "<sourcefile>.ini"
 		core_filename_extract_base(basename, driver->source_file, TRUE);
-		astring srcname ("source", PATH_SEPARATOR, basename);
+		astring srcname ("source"); srcname.cat(PATH_SEPARATOR); srcname.cat(basename);
 		ui_parse_ini_file(opts, srcname);
 
 		if (opt_type == OPTIONS_SOURCE)
@@ -2835,7 +2835,7 @@ void save_options(OPTIONS_TYPE opt_type, windows_options &opts, int game_num)
 		{
 			// determine the <sourcefile>
 			core_filename_extract_base(basename, driver->source_file, TRUE);
-			astring srcname ("source", PATH_SEPARATOR, basename);
+			astring srcname ("source"); srcname.cat(PATH_SEPARATOR); srcname.cat(basename);
 			filename.cpy(srcname);
 		}
 		else
@@ -2844,7 +2844,7 @@ void save_options(OPTIONS_TYPE opt_type, windows_options &opts, int game_num)
 	}
 	if (filename)
 	{
-		astring filepath (GetIniDir(), PATH_SEPARATOR, filename, ".ini");
+		astring filepath (GetIniDir()); filepath.cat(PATH_SEPARATOR); filepath.cat(filename); filepath.cat(".ini");
 		SetDirectories(opts);
 		SaveSettingsFile(opts, baseopts, filepath);
 	}
@@ -2860,19 +2860,19 @@ static void remove_all_source_options(void) {
      * Easiest to just open the ini/source folder if it exists,
      * then remove all the files in it that end in ini.
      */
-	astring pathname (GetIniDir(), PATH_SEPARATOR, "source");
-	astring match (pathname, PATH_SEPARATOR, "*.ini");
+	astring pathname (GetIniDir()); pathname.cat(PATH_SEPARATOR); pathname.cat("source");
+	astring match (pathname); match.cat(PATH_SEPARATOR); match.cat("*.ini");
 	if ((hFindFile = win_find_first_file_utf8(match, &findFileData)) != INVALID_HANDLE_VALUE)
 	{
 		utf8_filename = utf8_from_tstring(findFileData.cFileName);
-		astring match (pathname, PATH_SEPARATOR, utf8_filename );
+		astring match (pathname); match.cat(PATH_SEPARATOR); match.cat(utf8_filename);
 		osd_free(utf8_filename);
 		osd_rmfile(match);
 
 		while (0 != FindNextFile(hFindFile, &findFileData))
 		{
 			utf8_filename = utf8_from_tstring(findFileData.cFileName);
-			astring match (pathname, PATH_SEPARATOR, utf8_filename );
+			astring match (pathname); match.cat(PATH_SEPARATOR); match.cat(utf8_filename);
 			osd_free(utf8_filename);
 			osd_rmfile(match);
 		}
