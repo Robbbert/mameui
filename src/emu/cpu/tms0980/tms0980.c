@@ -146,7 +146,7 @@ const device_type TMS1370 = &device_creator<tms1370_cpu_device>; // almost same 
 // TMS1400 follows the TMS1100, it doubles the ROM size again (4 chapters of 16 pages), and adds a 3-level callstack
 // - rotate the view and mirror the OR-mask to get the proper layout of the mpla, the default is identical to tms1100
 // - the opla size is increased from 20 to 32 terms
-const device_type TMS1400 = &device_creator<tms1400_cpu_device>; // 28-pin DIP, 11 R pins
+const device_type TMS1400 = &device_creator<tms1400_cpu_device>; // 28-pin DIP, 11 R pins (TMS1400CR is same, but with TMS1100 pinout)
 const device_type TMS1470 = &device_creator<tms1470_cpu_device>; // almost same as tms1400, just supports higher voltage
 
 // TMS0980
@@ -392,12 +392,12 @@ offs_t tms0980_cpu_device::disasm_disassemble(char *buffer, offs_t pc, const UIN
 	return CPU_DISASSEMBLE_NAME(tms0980)(this, buffer, pc, oprom, opram, options);
 }
 
-void tms1xxx_cpu_device::state_string_export(const device_state_entry &entry, astring &str)
+void tms1xxx_cpu_device::state_string_export(const device_state_entry &entry, std::string &str)
 {
 	switch (entry.index())
 	{
 		case STATE_GENPC:
-			str.printf("%03X", m_rom_address << ((m_byte_bits > 8) ? 1 : 0));
+			strprintf(str, "%03X", m_rom_address << ((m_byte_bits > 8) ? 1 : 0));
 			break;
 	}
 }

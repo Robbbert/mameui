@@ -150,8 +150,8 @@ public:
 
 	// owned object helpers
 	device_t *first_subdevice() const { return m_subdevice_list.first(); }
-	std::string &subtag(std::string &dest, const char *tag) const;
-	std::string &siblingtag(std::string &dest, const char *tag) const { return (this != NULL && m_owner != NULL) ? m_owner->subtag(dest, tag) : dest.assign(tag); }
+	std::string subtag(const char *tag) const;
+	std::string siblingtag(const char *tag) const { return (this != NULL && m_owner != NULL) ? m_owner->subtag(tag) : std::string(tag); }
 	memory_region *memregion(const char *tag) const;
 	memory_share *memshare(const char *tag) const;
 	memory_bank *membank(const char *tag) const;
@@ -166,7 +166,7 @@ public:
 	static void static_set_clock(device_t &device, UINT32 clock);
 	static void static_set_static_config(device_t &device, const void *config) { device.m_static_config = config; }
 	static void static_set_input_default(device_t &device, const input_device_default *config) { device.m_input_defaults = config; }
-	static void static_set_default_bios_tag(device_t &device, const char *tag) { astring default_bios_tag(tag); device.m_default_bios_tag = default_bios_tag; }
+	static void static_set_default_bios_tag(device_t &device, const char *tag) { std::string default_bios_tag(tag); device.m_default_bios_tag = default_bios_tag; }
 
 	// state helpers
 	void config_complete();

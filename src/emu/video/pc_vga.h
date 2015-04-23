@@ -65,11 +65,9 @@ protected:
 	void gc_reg_write(UINT8 index,UINT8 data);
 	virtual UINT16 offset();
 	inline UINT8 vga_latch_write(int offs, UINT8 data);
-private:
 	inline UINT8 rotate_right(UINT8 val);
 	inline UINT8 vga_logical_op(UINT8 data, UINT8 plane, UINT8 mask);
 
-protected:
 	struct
 	{
 		read8_delegate read_dipswitch;
@@ -237,7 +235,7 @@ public:
 	ibm8514a_device(const machine_config &mconfig, device_type type, const char *name, const char *tag, device_t *owner, UINT32 clock, const char *shortname, const char *source);
 	ibm8514a_device(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock);
 
-	void set_vga(const char* tag) { m_vga_tag.cpy(tag); }
+	void set_vga(const char* tag) { m_vga_tag.assign(tag); }
 	void set_vga_owner() { m_vga = dynamic_cast<vga_device*>(owner()); }
 
 	void enabled();
@@ -343,7 +341,7 @@ protected:
 	virtual void device_start();
 	virtual void device_config_complete();
 	vga_device* m_vga;  // for pass-through
-	astring m_vga_tag;  // pass-through device tag
+	std::string m_vga_tag;  // pass-through device tag
 private:
 	void ibm8514_draw_vector(UINT8 len, UINT8 dir, bool draw);
 	void ibm8514_wait_draw_ssv();
@@ -651,7 +649,6 @@ protected:
 	UINT8 gc_mode_ext;
 	UINT8 gc_bank_0;
 	UINT8 gc_bank_1;
-	UINT8 gc_blt_status;
 	bool gc_locked;
 	UINT8 m_lock_reg;
 	
@@ -665,10 +662,27 @@ protected:
 	UINT16 m_cursor_addr;
 	UINT8 m_cursor_attr;
 	struct { UINT8 red, green, blue; } m_ext_palette[16];  // extra palette, colour 0 is cursor background, colour 15 is cursor foreground, colour 2 is overscan border colour
+
+	// BitBLT engine
+	UINT8 m_blt_status;
+	UINT8 m_blt_rop;
+	UINT8 m_blt_mode;
+	UINT32 m_blt_source;
+	UINT32 m_blt_dest;
+	UINT16 m_blt_source_pitch;
+	UINT16 m_blt_dest_pitch;
+	UINT16 m_blt_height;
+	UINT16 m_blt_width;
+	UINT16 m_blt_source_current;
+	UINT16 m_blt_dest_current;
 	
 	UINT8 m_scratchpad1;
 	UINT8 m_scratchpad2;
 	UINT8 m_scratchpad3;
+	UINT8 m_vclk_num[4];
+	UINT8 m_vclk_denom[4];
+	
+	inline UINT8 cirrus_vga_latch_write(int offs, UINT8 data);
 private:
 	void cirrus_define_video_mode();
 	UINT8 cirrus_seq_reg_read(UINT8 index);
@@ -677,6 +691,9 @@ private:
 	void cirrus_gc_reg_write(UINT8 index, UINT8 data);
 	UINT8 cirrus_crtc_reg_read(UINT8 index);
 	void cirrus_crtc_reg_write(UINT8 index, UINT8 data);
+	
+	void start_bitblt();
+	void copy_pixel();
 };
 
 class cirrus_gd5430_device :  public cirrus_gd5428_device
