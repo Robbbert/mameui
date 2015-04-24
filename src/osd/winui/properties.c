@@ -1805,7 +1805,6 @@ static BOOL RotateReadControl(datamap *map, HWND dialog, HWND control, windows_o
 		opts->set_value(OPTION_ROTATE,	selected_index != 3, OPTION_PRIORITY_CMDLINE,error_string);
 		opts->set_value(OPTION_AUTOROR,	selected_index == 4, OPTION_PRIORITY_CMDLINE,error_string);
 		opts->set_value(OPTION_AUTOROL,	selected_index == 5, OPTION_PRIORITY_CMDLINE,error_string);
-		assert(error_string.empty());
 		return TRUE;
 	}
 
@@ -1850,7 +1849,6 @@ static BOOL ScreenReadControl(datamap *map, HWND dialog, HWND control, windows_o
 	snprintf(screen_option_name, ARRAY_LENGTH(screen_option_name), "screen%d", selected_screen);
 	op_val = utf8_from_tstring(screen_option_value);
 	opts->set_value(screen_option_name, op_val, OPTION_PRIORITY_CMDLINE,error_string);
-	assert(error_string.empty());
 	osd_free(op_val);
 	return FALSE;
 }
@@ -1961,7 +1959,6 @@ static BOOL DefaultInputReadControl(datamap *map, HWND dialog, HWND control, win
 	input_option_value = (TCHAR*) ComboBox_GetItemData(control, input_option_index);
 	op_val = utf8_from_tstring(input_option_value);
 	opts->set_value(OPTION_CTRLR, input_option_index ? op_val : "", OPTION_PRIORITY_CMDLINE,error_string);
-	assert(error_string.empty());
 	osd_free(op_val);
 	return FALSE;
 }
@@ -2086,7 +2083,6 @@ static BOOL ResolutionReadControl(datamap *map, HWND dialog, HWND control, windo
 			snprintf(option_value, ARRAY_LENGTH(option_value), "auto");
 		}
 		opts->set_value(option_name, option_value, OPTION_PRIORITY_CMDLINE,error_string);
-		assert(error_string.empty());
 	}
 	return FALSE;
 }
@@ -2205,7 +2201,6 @@ static void ResetDataMap(HWND hWnd)
 	{
 		std::string error_string;
 		pCurrentOpts.set_value(screen_option, "auto", OPTION_PRIORITY_CMDLINE,error_string);
-		assert(error_string.empty());
 	}
 }
 
@@ -2813,7 +2808,6 @@ static BOOL SelectEffect(HWND hWnd)
 			HWND control = GetDlgItem(hWnd, IDC_EFFECT);
 			std::string error_string;
 			pCurrentOpts.set_value(OPTION_EFFECT, buff, OPTION_PRIORITY_CMDLINE,error_string);
-			assert(error_string.empty());
 			win_set_window_text_utf8(control, buff);
 			// datamap_populate_control(properties_datamap, hWnd, pCurrentOpts, IDC_EFFECT);
 			changed = TRUE;
@@ -2832,7 +2826,6 @@ static BOOL ResetEffect(HWND hWnd)
 		HWND control = GetDlgItem(hWnd, IDC_EFFECT);
 		std::string error_string;
 		pCurrentOpts.set_value(OPTION_EFFECT, new_value, OPTION_PRIORITY_CMDLINE,error_string);
-		assert(error_string.empty());
 		win_set_window_text_utf8(control, new_value);
 		// datamap_populate_control(properties_datamap, hWnd, pCurrentOpts, IDC_EFFECT);
 		changed = TRUE;
@@ -2870,7 +2863,6 @@ static BOOL ResetJoystickMap(HWND hWnd)
 		HWND control = GetDlgItem(hWnd, IDC_JOYSTICKMAP);
 		std::string error_string;
 		pCurrentOpts.set_value(OPTION_JOYSTICK_MAP, new_value, OPTION_PRIORITY_CMDLINE,error_string);
-		assert(error_string.empty());
 		win_set_window_text_utf8(control, new_value);
 		changed = TRUE;
 	}
@@ -2890,7 +2882,6 @@ static BOOL SelectDebugscript(HWND hWnd)
 			HWND control = GetDlgItem(hWnd, IDC_DEBUGSCRIPT);
 			std::string error_string;
 			pCurrentOpts.set_value(OPTION_DEBUGSCRIPT, filename, OPTION_PRIORITY_CMDLINE,error_string);
-			assert(error_string.empty());
 			win_set_window_text_utf8(control, filename);
 			changed = TRUE;
 		}
@@ -2908,7 +2899,6 @@ static BOOL ResetDebugscript(HWND hWnd)
 		HWND control = GetDlgItem(hWnd, IDC_DEBUGSCRIPT);
 		std::string error_string;
 		pCurrentOpts.set_value(OPTION_DEBUGSCRIPT, new_value, OPTION_PRIORITY_CMDLINE,error_string);
-		assert(error_string.empty());
 		win_set_window_text_utf8(control, new_value);
 		changed = TRUE;
 	}
