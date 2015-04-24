@@ -895,7 +895,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	DWORD dwExitCode = 0;
 	int i;
 	windows_options mame_opts;
-	astring error_string;
+	std::string error_string;
 	// set up MAME options
 //  mame_opts = mame_options_init(mame_win_options);
 

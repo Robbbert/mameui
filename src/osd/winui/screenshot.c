@@ -192,15 +192,16 @@ static file_error OpenDIBFile(const char *dir_name, const char *zip_name, const 
 	*file = NULL;
 
 	// look for the raw file
-	astring fname (dir_name); fname.cat(PATH_SEPARATOR); fname.cat(filename);
-	filerr = core_fopen(fname, OPEN_FLAG_READ, file);
+	std::string fname = std::string(dir_name).append(PATH_SEPARATOR).append(filename);
+	filerr = core_fopen(fname.c_str(), OPEN_FLAG_READ, file);
 
 	// did the raw file not exist?
 	if (filerr != FILERR_NONE)
 	{
 		// look into zip file
-		astring fname (dir_name); fname.cat(PATH_SEPARATOR); fname.cat(zip_name); fname.cat(".zip");
-		ziperr = zip_file_open(fname, &zip);
+		std::string fname = std::string(dir_name).append(PATH_SEPARATOR).append(zip_name).append(".zip");
+		ziperr = zip_file_open(fname.c_str(), &zip);
+		
 		if (ziperr == ZIPERR_NONE)
 		{
 			zip_header = zip_file_seek_file(zip, filename);
@@ -271,32 +272,32 @@ BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pic_type)
 	}
 	//Add handling for the displaying of all the different supported snapshot patterntypes
 	//%g
-	astring fname (filename); fname.cat(".png");
-	filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
+	std::string fname = std::string(filename).append(".png");
+	filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 
 	if (filerr != FILERR_NONE) 
 	{
 		//%g/%i
-		astring fname (filename); fname.cat(PATH_SEPARATOR); fname.cat("0000.png");
-		filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
+		std::string fname = std::string(filename).append(PATH_SEPARATOR).append("0000.png");
+		filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 	}
 	if (filerr != FILERR_NONE) 
 	{
 		//%g%i
-		astring fname (filename); fname.cat("0000.png");
-		filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
+		std::string fname = std::string(filename).append("0000.png");
+		filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 	}
 	if (filerr != FILERR_NONE) 
 	{
 		//%g/%g
-		astring fname (filename); fname.cat(PATH_SEPARATOR); fname.cat(filename); fname.cat(".png");
-		filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
+		std::string fname = std::string(filename).append(PATH_SEPARATOR).append(filename).append(".png");
+		filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 	}
 	if (filerr != FILERR_NONE) 
 	{
 		//%g/%g%i
-		astring fname (filename); fname.cat(PATH_SEPARATOR); fname.cat(filename); fname.cat("0000.png");
-		filerr = OpenDIBFile(dir_name, zip_name, fname, &file, &buffer);
+		std::string fname = std::string(filename).append(PATH_SEPARATOR).append(filename).append("0000.png");
+		filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 	}
 	if (filerr == FILERR_NONE) 
 	{
