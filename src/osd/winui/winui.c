@@ -4016,7 +4016,14 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		return TRUE;
 
 	case ID_FILE_AUDIT:
-		AuditDialog(hMain);
+		AuditDialog(hMain, 1);
+		ResetWhichGamesInFolders();
+		ResetListView();
+		SetFocus(hwndList);
+		return TRUE;
+
+	case ID_FILE_AUDIT_X:
+		AuditDialog(hMain, 2);
 		ResetWhichGamesInFolders();
 		ResetListView();
 		SetFocus(hwndList);
