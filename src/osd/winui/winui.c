@@ -279,7 +279,7 @@ static void             UpdateStatusBar(void);
 static BOOL             TreeViewNotify(NMHDR *nm);
 
 static void             ResetBackground(char *szFile);
-static void				RandomSelectBackground(void);
+static void             RandomSelectBackground(void);
 static void             LoadBackgroundBitmap(void);
 static void             PaintBackgroundImage(HWND hWnd, HRGN hRgn, int x, int y);
 
@@ -289,12 +289,12 @@ static int              GamePicker_Compare(HWND hwndPicker, int index1, int inde
 static void             DisableSelection(void);
 static void             EnableSelection(int nGame);
 
-static HICON			GetSelectedPickItemIcon(void);
+static HICON            GetSelectedPickItemIcon(void);
 static void             SetRandomPickItem(void);
-static void				PickColor(COLORREF *cDefault);
+static void             PickColor(COLORREF *cDefault);
 
 static LPTREEFOLDER     GetSelectedFolder(void);
-static HICON			GetSelectedFolderIcon(void);
+static HICON            GetSelectedFolderIcon(void);
 
 static LRESULT CALLBACK HistoryWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 static LRESULT CALLBACK PictureFrameWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
@@ -305,7 +305,7 @@ static void             MamePlayBackGame(void);
 static void             MamePlayRecordWave(void);
 static void             MamePlayRecordMNG(void);
 static void             MamePlayRecordAVI(void);
-static void				MameLoadState(void);
+static void             MameLoadState(void);
 static void             MamePlayGameWithOptions(int nGame, const play_options *playopts);
 static BOOL             GameCheck(void);
 static BOOL             FolderCheck(void);
@@ -328,8 +328,8 @@ static void             InitBodyContextMenu(HMENU hBodyContextMenu);
 static void             ToggleShowFolder(int folder);
 static BOOL             HandleTreeContextMenu( HWND hWnd, WPARAM wParam, LPARAM lParam);
 static BOOL             HandleScreenShotContextMenu( HWND hWnd, WPARAM wParam, LPARAM lParam);
-static void				GamePicker_OnHeaderContextMenu(POINT pt, int nColumn);
-static void				GamePicker_OnBodyContextMenu(POINT pt);
+static void             GamePicker_OnHeaderContextMenu(POINT pt, int nColumn);
+static void             GamePicker_OnBodyContextMenu(POINT pt);
 
 static void             InitListView(void);
 /* Re/initialize the ListView header columns */
@@ -934,6 +934,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	// Time the game run.
 	time(&start);
 	windows_osd_interface osd(mame_opts);
+	// output errors to message boxes
 	mameui_output_error winerror;
 	osd_output::push(&winerror);
 	osd.register_options();
@@ -2234,14 +2235,14 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 
 			/* hide window to prevent orphan empty rectangles on the taskbar */
 			/* ShowWindow(hWnd,SW_HIDE); */
-            DestroyWindow( hWnd );
+			DestroyWindow( hWnd );
 
 			/* PostQuitMessage(0); */
 			break;
 		}
 
 	case WM_DESTROY:
-        PostQuitMessage(0);
+		PostQuitMessage(0);
 		return 0;
 
 	case WM_LBUTTONDOWN:
@@ -2277,11 +2278,11 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 	}
 
 	case WM_LBUTTONUP:
-	    if (g_listview_dragging)
-		    ButtonUpListViewDrag(MAKEPOINTS(lParam));
+		if (g_listview_dragging)
+			ButtonUpListViewDrag(MAKEPOINTS(lParam));
 		else
-		   /* for splitters */
-		   OnLButtonUp(hWnd, (UINT)wParam, MAKEPOINTS(lParam));
+			/* for splitters */
+			OnLButtonUp(hWnd, (UINT)wParam, MAKEPOINTS(lParam));
 		break;
 
 	case WM_NOTIFY:
@@ -4121,7 +4122,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 		/*
-          Switches to fullscreen mode. No check mark handeling
+          Switches to fullscreen mode. No check mark handling
           for this item cause in fullscreen mode the menu won't
           be visible anyways.
         */
@@ -4448,14 +4449,14 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		{
 			OPENFILENAME OpenFileName;
 			static TCHAR szFile[MAX_PATH] = TEXT("\0");
-			TCHAR*       t_bgdir = tstring_from_utf8(GetBgDir());
+			TCHAR* t_bgdir = tstring_from_utf8(GetBgDir());
 			if( !t_bgdir )
 				return FALSE;
 
 			OpenFileName.lStructSize       = sizeof(OPENFILENAME);
 			OpenFileName.hwndOwner         = hMain;
 			OpenFileName.hInstance         = 0;
-			OpenFileName.lpstrFilter       = TEXT("Image Files (*.png, *.bmp)\0*.PNG;*.BMP\0");
+			OpenFileName.lpstrFilter       = TEXT("Image Files (*.png)\0*.PNG\0");
 			OpenFileName.lpstrCustomFilter = NULL;
 			OpenFileName.nMaxCustFilter    = 0;
 			OpenFileName.nFilterIndex      = 1;
@@ -4478,7 +4479,11 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				utf8_szFile = utf8_from_tstring(szFile);
 				if( !utf8_szFile )
 					return FALSE;
-				ResetBackground(utf8_szFile);
+
+				// Make this file as the new default
+				SetBgDir(utf8_szFile);
+
+				// Display new background
 				LoadBackgroundBitmap();
 				InvalidateRect(hMain, NULL, TRUE);
 				osd_free(t_bgdir);
@@ -4647,7 +4652,6 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 static void LoadBackgroundBitmap()
 {
 	HGLOBAL hDIBbg;
-	char*	pFileName = 0;
 
 	if (hBackground)
 	{
@@ -4661,19 +4665,16 @@ static void LoadBackgroundBitmap()
 		hPALbg = 0;
 	}
 
-	/* Pick images based on number of colors avaliable. */
-	if (GetDepth(hwndList) <= 8)
-	{
-		pFileName = (char *)"bkgnd16";
-		/*nResource = IDB_BKGROUND16;*/
-	}
-	else
-	{
-		pFileName = (char *)"bkground";
-		/*nResource = IDB_BKGROUND;*/
-	}
+	const char* pPath = GetBgDir(); // get full path of bitmap
 
-	if (LoadDIB(pFileName, &hDIBbg, &hPALbg, BACKGROUND))
+	char drive[_MAX_DRIVE];
+	char dir[_MAX_DIR];
+	char fname[_MAX_FNAME];
+	char ext[_MAX_EXT];
+
+	_splitpath(pPath, drive, dir, fname, ext);
+
+	if (LoadDIB(fname, &hDIBbg, &hPALbg, BACKGROUND))
 	{
 		HDC hDC = GetDC(hwndList);
 		hBackground = DIBToDDB(hDC, hDIBbg, &bmDesc);

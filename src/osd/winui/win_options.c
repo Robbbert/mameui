@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "win_options.h"
-#include "corestr.h"
-#include <string>
 
 
 //**************************************************************************
@@ -68,20 +66,22 @@ options::entry::entry(const char *name, const char *description, UINT32 flags, c
 	{
 		// first extract any range
 		std::string namestr(name);
-		int lparen = namestr.find_first_of('(',0);
-		int dash = namestr.find_first_of('-',lparen + 1);
-		int rparen = namestr.find_first_of(')',dash + 1);
+		int lparen = namestr.find('(');
+		int dash = namestr.find(lparen + 1, '-');
+		int rparen = namestr.find(dash + 1, ')');
 		if (lparen != -1 && dash != -1 && rparen != -1)
 		{
-			strtrimspace(m_minimum.assign(namestr.substr(lparen + 1, dash - (lparen + 1))));
-			strtrimspace(m_maximum.assign(namestr.substr(dash + 1, rparen - (dash + 1))));
+			m_minimum.assign(namestr.substr(lparen + 1, dash - (lparen + 1)));
+			strtrimspace(m_minimum);
+			m_maximum.assign(namestr.substr(dash + 1, rparen - (dash + 1)));
+			strtrimspace(m_maximum);
 			namestr.erase(lparen, rparen + 1 - lparen);
 		}
 
 		// then chop up any semicolon-separated names
 		int semi;
 		int nameindex = 0;
-		while ((semi = namestr.find_first_of(';')) != -1 && nameindex < ARRAY_LENGTH(m_name))
+		while ((semi = namestr.find(';')) != -1 && nameindex < ARRAY_LENGTH(m_name))
 		{
 			m_name[nameindex++].assign(namestr.substr(0, semi));
 			namestr.erase(0, semi + 1);
@@ -368,7 +368,7 @@ bool options::parse_command_line(int argc, char **argv, int priority, std::strin
 			// can only have one command
 			if (!m_command.empty())
 			{
-				strcatprintf(error_string,"Error: multiple commands specified -%s and %s\n", m_command.c_str(), curarg);
+				strcatprintf(error_string, "Error: multiple commands specified -%s and %s\n", m_command.c_str(), curarg);
 				return false;
 			}
 			m_command = curentry->name();
@@ -426,7 +426,7 @@ bool options::parse_ini_file(core_file &inifile, int priority, int ignore_priori
 		// if we hit the end early, print a warning and continue
 		if (*temp == 0)
 		{
-			strcatprintf(error_string,"Warning: invalid line in INI: %s", buffer);
+			strcatprintf(error_string, "Warning: invalid line in INI: %s", buffer);
 			continue;
 		}
 
@@ -519,7 +519,7 @@ const char *options::output_ini(std::string &buffer, const options *diff)
 					if (last_header != NULL)
 					{
 						if (num_valid_headers++)
-							strcatprintf(buffer,"\n");
+							strcatprintf(buffer, "\n");
 						strcatprintf(buffer, "#\n# %s\n#\n", last_header);
 						last_header = NULL;
 					}
@@ -528,9 +528,9 @@ const char *options::output_ini(std::string &buffer, const options *diff)
 					if (!is_unadorned)
 					{
 						if (strchr(value, ' ') != NULL)
-							strcatprintf(buffer,"%-25s \"%s\"\n", name, value);
+							strcatprintf(buffer, "%-25s \"%s\"\n", name, value);
 						else
-							strcatprintf(buffer,"%-25s %s\n", name, value);
+							strcatprintf(buffer, "%-25s %s\n", name, value);
 					}
 				}
 			}
@@ -554,11 +554,11 @@ const char *options::output_help(std::string &buffer)
 	{
 		// header: just print
 		if (curentry->is_header())
-			strcatprintf(buffer,"\n#\n# %s\n#\n", curentry->description());
+			strcatprintf(buffer, "\n#\n# %s\n#\n", curentry->description());
 
 		// otherwise, output entries for all non-deprecated items
 		else if (curentry->description() != NULL)
-			strcatprintf(buffer,"-%-20s%s\n", curentry->name(), curentry->description());
+			strcatprintf(buffer, "-%-20s%s\n", curentry->name(), curentry->description());
 	}
 	return buffer.c_str();
 }
@@ -638,7 +638,7 @@ bool options::set_value(const char *name, const char *value, int priority, std::
 bool options::set_value(const char *name, int value, int priority, std::string &error_string)
 {
 	std::string tempstr;
-	strprintf(tempstr,"%d", value);
+	strprintf(tempstr, "%d", value);
 	return set_value(name, tempstr.c_str(), priority, error_string);
 }
 
@@ -740,9 +740,8 @@ bool options::validate_and_set_data(options::entry &curentry, const char *newdat
 	std::string data(newdata);
 	strtrimspace(data);
 
-
 	// trim quotes
-	if (data.find_first_of('"') == 0 && data.find_last_of('"') == data.length() - 1)
+	if (data.find('"') == 0 && data.find_last_of('"') == data.length() - 1)
 	{
 		data.erase(0, 1);
 		data.erase(data.length() - 1, 1);
