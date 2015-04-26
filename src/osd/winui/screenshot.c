@@ -9,6 +9,9 @@
   By continuing to use, modify or distribute this file you indicate
   that you have read the license and understand and accept it fully.
 
+  This handles the display of all images: background picture, snaps, cabinets,
+  etc.  The only image type supported is 'png'.
+
  ***************************************************************************/
 
 /***************************************************************************
@@ -29,12 +32,11 @@
 // MAME/MAMEUI headers
 #include "emu.h"
 #include "png.h"
-#include "osdcore.h"
 #include "unzip.h"
 #include "mui_opts.h"
 #include "mui_util.h"
 #include "winui.h"
-
+#include "drivenum.h"
 
 /***************************************************************************
     function prototypes
@@ -101,9 +103,7 @@ BOOL LoadScreenShot(int nGame, int nType)
 
 	/* MSH 20071029 - If driver is broken and no images exists, look for nonworking.png */
 	if (!loaded && DriverIsBroken(nGame))
-	{
 		loaded = LoadDIB("nonworking", &m_hDIB, &m_hPal, nType);
-	}
 
 	if (loaded)
 	{
@@ -180,6 +180,20 @@ static const zip_file_header *zip_file_seek_file(zip_file *zip, const char *file
 	return header;
 }
 
+static file_error OpenBkgroundFile(const char *filename, core_file **file)
+{
+	file_error filerr;
+
+	// clear out result
+	*file = NULL;
+
+	// look for the raw file
+	std::string fname (filename);
+	filerr = core_fopen(fname.c_str(), OPEN_FLAG_READ, file);
+
+	return filerr;
+}
+
 static file_error OpenDIBFile(const char *dir_name, const char *zip_name, const char *filename,
 	core_file **file, void **buffer)
 {
@@ -192,20 +206,27 @@ static file_error OpenDIBFile(const char *dir_name, const char *zip_name, const 
 	*file = NULL;
 
 	// look for the raw file
-	std::string fname = std::string(dir_name).append(PATH_SEPARATOR).append(filename);
+	std::string fname = std::string(dir_name) + PATH_SEPARATOR + std::string(filename) + ".png";
 	filerr = core_fopen(fname.c_str(), OPEN_FLAG_READ, file);
 
 	// did the raw file not exist?
 	if (filerr != FILERR_NONE)
 	{
 		// look into zip file
-		std::string fname = std::string(dir_name).append(PATH_SEPARATOR).append(zip_name).append(".zip");
+		fname = std::string(dir_name) + PATH_SEPARATOR + std::string(filename) + ".zip";
 		ziperr = zip_file_open(fname.c_str(), &zip);
-		
+		// zip not found, try generic zip name
+		if (ziperr != ZIPERR_NONE)
+		{
+			fname = std::string(dir_name) + PATH_SEPARATOR + std::string(zip_name) + ".zip";
+			ziperr = zip_file_open(fname.c_str(), &zip);
+		}
+		// if found, look for 'game.png' inside the zipfile
 		if (ziperr == ZIPERR_NONE)
 		{
-			zip_header = zip_file_seek_file(zip, filename);
-			if (zip_header != NULL)
+			fname = std::string(filename) + ".png";
+			zip_header = zip_file_seek_file(zip, fname.c_str());
+			if (zip_header)
 			{
 				*buffer = malloc(zip_header->uncompressed_length);
 				ziperr = zip_file_decompress(zip, *buffer, zip_header->uncompressed_length);
@@ -228,8 +249,17 @@ BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pic_type)
 	const char *dir_name;
 	const char *zip_name;
 	void *buffer = NULL;
-	if (pPal != NULL ) {
+	std::string fname;
+
+	if (pPal)
 		DeletePalette(pPal);
+
+	if (pic_type == BACKGROUND)
+	{
+		dir_name = GetBgDir();
+		filerr = OpenBkgroundFile(dir_name, &file);
+		zip_name = "bkground";
+		goto done;
 	}
 
 	switch (pic_type)
@@ -258,67 +288,64 @@ BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pic_type)
 			dir_name = GetControlPanelDir();
 			zip_name = "cpanel";
 			break;
-        case TAB_PCB :
+		case TAB_PCB:
 			dir_name = GetPcbDir();
-		    zip_name = "pcb";
-			break;
-		case BACKGROUND:
-			dir_name = GetBgDir();
-			zip_name = "bkground";
+			zip_name = "pcb";
 			break;
 		default :
 			// in case a non-image tab gets here, which can happen
 			return FALSE;
 	}
-	//Add handling for the displaying of all the different supported snapshot patterntypes
-	//%g
-	std::string fname = std::string(filename).append(".png");
+	//Add handling for the displaying of all the different supported snapshot pattern types
+	//%g ( snaps/game.png )
+	fname = std::string(filename);
 	filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 
-	if (filerr != FILERR_NONE) 
+	if (filerr != FILERR_NONE)
 	{
-		//%g/%i
-		std::string fname = std::string(filename).append(PATH_SEPARATOR).append("0000.png");
+		//%g%i ( snaps/game0000.png )
+		fname = std::string(filename) + "0000";
 		filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 	}
-	if (filerr != FILERR_NONE) 
+	if (filerr != FILERR_NONE)
 	{
-		//%g%i
-		std::string fname = std::string(filename).append("0000.png");
+		//%g/%i ( snaps/game/0000.png )
+		fname = std::string(filename) + PATH_SEPARATOR + "0000";
 		filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 	}
-	if (filerr != FILERR_NONE) 
+	if (filerr != FILERR_NONE)
 	{
-		//%g/%g
-		std::string fname = std::string(filename).append(PATH_SEPARATOR).append(filename).append(".png");
+		//%g/%g ( snaps/game/game.png )
+		fname = std::string(filename) + PATH_SEPARATOR + std::string(filename);
 		filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 	}
-	if (filerr != FILERR_NONE) 
+	if (filerr != FILERR_NONE)
 	{
-		//%g/%g%i
-		std::string fname = std::string(filename).append(PATH_SEPARATOR).append(filename).append("0000.png");
+		//%g/%g%/%i ( snaps/game/game/0000.png )
+		fname = std::string(filename) + PATH_SEPARATOR + std::string(filename) + PATH_SEPARATOR + "0000";
 		filerr = OpenDIBFile(dir_name, zip_name, fname.c_str(), &file, &buffer);
 	}
-	if (filerr == FILERR_NONE) 
+
+done:
+	if (filerr == FILERR_NONE)
 	{
 		success = png_read_bitmap_gui(file, phDIB, pPal);
 		core_fclose(file);
 	}
 	// free the buffer if we have to
-	if (buffer != NULL) 
-	{
+	if (buffer != NULL)
 		free(buffer);
-	}
+
 	return success;
 }
 
 HBITMAP DIBToDDB(HDC hDC, HANDLE hDIB, LPMYBITMAPINFO desc)
 {
 	LPBITMAPINFOHEADER	lpbi;
-	HBITMAP 			hBM;
-	int 				nColors;
+	HBITMAP 		hBM;
+	int 			nColors;
 	BITMAPINFO *		bmInfo = (LPBITMAPINFO)hDIB;
-	LPVOID				lpDIBBits;
+	LPVOID			lpDIBBits;
 
 	if (hDIB == NULL)
 		return NULL;
@@ -341,12 +368,12 @@ HBITMAP DIBToDDB(HDC hDC, HANDLE hDIB, LPMYBITMAPINFO desc)
 		desc->bmColors = (nColors <= 256) ? nColors : 0;
 	}
 
-	hBM = CreateDIBitmap(hDC,					  /* handle to device context */
-						(LPBITMAPINFOHEADER)lpbi, /* pointer to bitmap info header  */
-						(LONG)CBM_INIT, 		  /* initialization flag */
-						lpDIBBits,				  /* pointer to initialization data  */
-						(LPBITMAPINFO)lpbi, 	  /* pointer to bitmap info */
-						DIB_RGB_COLORS);		  /* color-data usage  */
+	hBM = CreateDIBitmap(hDC,	  /* handle to device context */
+		(LPBITMAPINFOHEADER)lpbi, /* pointer to bitmap info header  */
+		(LONG)CBM_INIT, 	  /* initialization flag */
+		lpDIBBits,		  /* pointer to initialization data  */
+		(LPBITMAPINFO)lpbi, 	  /* pointer to bitmap info */
+		DIB_RGB_COLORS);	  /* color-data usage  */
 
 	return hBM;
 }
@@ -368,29 +395,28 @@ static void store_pixels(UINT8 *buf, int len)
 
 BOOL AllocatePNG(png_info *p, HGLOBAL *phDIB, HPALETTE *pPal)
 {
-	int 				dibSize;
-	HGLOBAL 			hDIB;
+	int 			dibSize;
+	HGLOBAL 		hDIB;
 	BITMAPINFOHEADER	bi;
 	LPBITMAPINFOHEADER	lpbi;
 	LPBITMAPINFO		bmInfo;
-	LPVOID				lpDIBBits = 0;
-	int 				lineWidth = 0;
-	int 				nColors = 0;
-	RGBQUAD*			pRgb;
+	LPVOID			lpDIBBits = 0;
+	int 			lineWidth = 0;
+	int 			nColors = 0;
+	RGBQUAD*		pRgb;
 	copy_size = 0;
 	pixel_ptr = 0;
-	row 	  = p->height - 1;
+	row       = p->height - 1;
 	lineWidth = p->width;
 
 	if (p->color_type != 2 && p->num_palette <= 256)
 		nColors =  p->num_palette;
 
-	bi.biSize			= sizeof(BITMAPINFOHEADER);
-	bi.biWidth			= p->width;
+	bi.biSize		= sizeof(BITMAPINFOHEADER);
+	bi.biWidth		= p->width;
 	bi.biHeight 		= p->height;
 	bi.biPlanes 		= 1;
 	bi.biBitCount		= (p->color_type == 3) ? 8 : 24; /* bit_depth; */
-
 	bi.biCompression	= BI_RGB;
 	bi.biSizeImage		= 0;
 	bi.biXPelsPerMeter	= 0;
@@ -404,9 +430,7 @@ BOOL AllocatePNG(png_info *p, HGLOBAL *phDIB, HPALETTE *pPal)
 	hDIB = GlobalAlloc(GMEM_FIXED, bi.biSize + (nColors * sizeof(RGBQUAD)) + dibSize);
 
 	if (!hDIB)
-	{
 		return FALSE;
-	}
 
 	lpbi = (LPBITMAPINFOHEADER)hDIB;
 	memcpy(lpbi, &bi, sizeof(BITMAPINFOHEADER));
