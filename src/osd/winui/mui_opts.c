@@ -109,7 +109,7 @@ static void remove_all_source_options(void);
     Internal defines
  ***************************************************************************/
 
-#define UI_INI_FILENAME					"MAMEUI.ini"
+#define UI_INI_FILENAME					MAMENAME "UI.ini"
 #define CORE_INI_FILENAME				"DIRECTORIES.ini"
 #define GAMEINFO_INI_FILENAME				"GAMEINFO.ini"
 
