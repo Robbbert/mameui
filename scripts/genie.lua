@@ -338,7 +338,7 @@ GEN_DIR = MAME_BUILD_DIR .. "generated/"
 if (_OPTIONS["target"] == nil) then return false end
 if (_OPTIONS["subtarget"] == nil) then return false end
 
---if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then
+--if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then -- MAMEUI
 	solution (_OPTIONS["target"])
 --else
 --	if (_OPTIONS["subtarget"]=="mess") then
@@ -1118,7 +1118,7 @@ findfunction("createProjects_" .. _OPTIONS["target"] .. "_" .. _OPTIONS["subtarg
 
 group "emulator"
 dofile(path.join("src", "main.lua"))
---if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then
+--if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then -- MAMEUI
 	startproject (_OPTIONS["target"])
 --else
 --	if (_OPTIONS["subtarget"]=="mess") then

@@ -2,7 +2,7 @@
 -- copyright-holders:MAMEdev Team
 
 function mainProject(_target, _subtarget)
---	if (_target == _subtarget) then
+--	if (_target == _subtarget) then -- MAMEUI
 		project (_target)
 --	else
 --		if (_subtarget=="mess") then
@@ -146,7 +146,8 @@ function mainProject(_target, _subtarget)
 		}
 
 	end
-	local rctarget = _subtarget
+--	local rctarget = _subtarget -- MAMEUI
+	local rctarget = _target
 
 	if _OPTIONS["targetos"]=="windows" and (not override_resources) then
 		local rcfile = MAME_DIR .. "src/" .. _target .. "/osd/".._OPTIONS["osd"].."/"  .. _subtarget .. "/" .. rctarget ..".rc"
@@ -186,7 +187,7 @@ function mainProject(_target, _subtarget)
 	}
 	
 	configuration { "mingw*" }
-		custombuildtask {	
+		custombuildtask {
 			{ MAME_DIR .. "src/version.c" ,  GEN_DIR  .. "/resource/" .. rctarget .. "vers.rc",    {  MAME_DIR .. "src/build/verinfo.py" }, {"@echo Emitting " .. rctarget .. "vers.rc" .. "...",    PYTHON .. " $(1)  -r -b " .. rctarget .. " $(<) > $(@)" }},
 		}	
 	
