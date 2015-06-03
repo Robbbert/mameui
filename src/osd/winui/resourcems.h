@@ -1,3 +1,5 @@
+// For licensing and usage information, read docs/winui_license.txt
+//****************************************************************************
 #ifndef RESOURCEMS_H
 #define RESOURCEMS_H
 
