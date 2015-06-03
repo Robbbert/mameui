@@ -2,15 +2,15 @@
 -- copyright-holders:MAMEdev Team
 
 function mainProject(_target, _subtarget)
---	if (_target == _subtarget) then -- MAMEUI
+	if (_target == _subtarget) then
 		project (_target)
---	else
---		if (_subtarget=="mess") then
---			project (_subtarget)
---		else
---			project (_target .. _subtarget)
---		end
---	end	
+	else
+		if (_subtarget=="mess") then
+			project (_subtarget)
+		else
+			project (_target .. _subtarget)
+		end
+	end	
 	uuid (os.uuid(_target .."_" .. _subtarget))
 	kind "ConsoleApp"
 

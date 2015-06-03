@@ -358,15 +358,15 @@ GEN_DIR = MAME_BUILD_DIR .. "generated/"
 if (_OPTIONS["target"] == nil) then return false end
 if (_OPTIONS["subtarget"] == nil) then return false end
 
---if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then -- MAMEUI
+if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then
 	solution (_OPTIONS["target"])
---else
---	if (_OPTIONS["subtarget"]=="mess") then
---		solution (_OPTIONS["subtarget"])
---	else
---		solution (_OPTIONS["target"] .. _OPTIONS["subtarget"])
---	end	
---end
+else
+	if (_OPTIONS["subtarget"]=="mess") then
+		solution (_OPTIONS["subtarget"])
+	else
+		solution (_OPTIONS["target"] .. _OPTIONS["subtarget"])
+	end	
+end
 
 configurations {
 	"Debug",
@@ -1173,15 +1173,15 @@ findfunction("createProjects_" .. _OPTIONS["target"] .. "_" .. _OPTIONS["subtarg
 
 group "emulator"
 dofile(path.join("src", "main.lua"))
---if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then -- MAMEUI
+if (_OPTIONS["target"] == _OPTIONS["subtarget"]) then
 	startproject (_OPTIONS["target"])
---else
---	if (_OPTIONS["subtarget"]=="mess") then
---		startproject (_OPTIONS["subtarget"])
---	else
---		startproject (_OPTIONS["target"] .. _OPTIONS["subtarget"])
---	end
---end
+else
+	if (_OPTIONS["subtarget"]=="mess") then
+		startproject (_OPTIONS["subtarget"])
+	else
+		startproject (_OPTIONS["target"] .. _OPTIONS["subtarget"])
+	end
+end
 mainProject(_OPTIONS["target"],_OPTIONS["subtarget"])
 
 if (_OPTIONS["STRIP_SYMBOLS"]=="1") then
