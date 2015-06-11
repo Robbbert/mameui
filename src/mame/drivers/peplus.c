@@ -1446,6 +1446,7 @@ ROM_START( pepk1024 ) /* Normal (non-plus) board : Aces and Faces 4 of a Kind Bo
 PayTable   Js+  2PR  3K   STR  FL  FH  4K  4K  SF  RF  (Bonus)
 --------------------------------------------------------------
   ????      1    2    3    4    5   8  25  50  50 250    800
+  % Range: 95.3-97.3%  Optimum: 99.3%  Hit Frequency: 45.5%
      Programs Available: PK1024
 */
 	ROM_REGION( 0x10000, "maincpu", 0 )
@@ -1616,10 +1617,16 @@ ROM_END
 
 ROM_START( pepp0021 ) /* Normal board : Standard Draw Poker (PP0021) */
 /*
-REQUIRES Progressive link which is not currently supported
+PayTable   Js+  2PR  3K   STR  FL  FH  4K  SF  RF  (Bonus)
+----------------------------------------------------------
+   BA       1    2    3    4    5   8  25  50 250    800
+  % Range: 93.8-95.8%  Optimum: 97.8%  Hit Frequency: 45.3%
+     Programs Available: PP0021
+	 
+NOTE: REQUIRES Progressive link which is not currently supported
 */
 	ROM_REGION( 0x10000, "maincpu", 0 )
-	ROM_LOAD( "pp0021_723-703.u68",   0x00000, 0x10000, CRC(58f2a68b) SHA1(72c0a29016b17f7e308a9e9b2d724771b5e26560) ) /* Game Version: 723, Library Version: 703*/
+	ROM_LOAD( "pp0021_723-703.u68",   0x00000, 0x10000, CRC(58f2a68b) SHA1(72c0a29016b17f7e308a9e9b2d724771b5e26560) ) /* Game Version: 723, Library Version: 703 */
 	
 	ROM_REGION( 0x020000, "gfx1", 0 )
 	ROM_LOAD( "mro-cg740.u72",   0x00000, 0x8000, CRC(72667f6c) SHA1(89843f472cc0329317cfc643c63bdfd11234b194) )
@@ -7195,7 +7202,7 @@ ROM_START( pex0489p ) /* Superboard : Double Down Stud Deuces Wild Poker (X00048
                                                   w/D      w/oD
 PayTable   Ks+  2P   3K   STR  FL  FH  4K  SF  5K  RF  4D   RF  (Bonus)
 -----------------------------------------------------------------------
-  ????      1    1    2    3    4   5   6  12  15 100 400  1000   2000
+  ????      1    1    2    3    4   5   6  12  15 100 400 1000   2000
   % Range: 91.3-93.3%  Optimum: 95.3%  Hit Frequency: 45.3%
      Programs Available: PP0489, X000489P
 */
@@ -9921,7 +9928,7 @@ Double Bonus Poker   P323A     99.10%
 */
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "xmp00020.u67",   0x00000, 0x10000, CRC(0f6d0706) SHA1(fccf6c93daab0694d1e35e7cdd6bae303a3fddd9) )
-	/* Known to be found with XMP00003, XMP00006 or XMP00024 programs */
+	/* Also known to be found with XMP00003, XMP00006 or XMP00024 programs */
 
 	ROM_REGION( 0x10000, "user1", 0 )
 	ROM_LOAD( "xm00006p.u66",   0x00000, 0x10000, CRC(b464ee79) SHA1(8768e52c66881c8f327055124ff31bcad79fd027) ) /*  03/08/96   @ IGT  NV  */
@@ -9999,11 +10006,11 @@ Combined average payout percent: 98.47%
 
 Game Type           PayTable   Payout
 -------------------------------------
-Aces & Faces         ?????     99.20%
+Aces & Faces         ?????     99.30%
 Bonus Poker Deluxe   P200A     98.50%
 Deuces Wild Poker    P62A      98.90%
 Jacks or Better      BB        97.80%
-Double Aces & Faces  ?????     99.30%
+Double Aces & Faces  ?????     99.20%
 */
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "xmp00002.u67",   0x00000, 0x10000, CRC(d5624ac8) SHA1(6b778b0e7ddb81123c6038920b3447e05a0556b2) ) /*  09/07/95   @ IGT  L95-2183  - Linkable Progressive */
@@ -10713,7 +10720,7 @@ GAMEL(1995, pexm002p,  pexm001p, peplus,  peplus_poker, peplus_state, peplussb, 
 GAMEL(1995, pexm003p,  pexm001p, peplus,  peplus_poker, peplus_state, peplussb, ROT0,  "IGT - International Game Technology", "Player's Edge Plus (XM00003P+XMP00024) Multi-Poker",        0, layout_pe_poker )
 GAMEL(1995, pexm004p,  0,        peplus,  peplus_poker, peplus_state, peplussb, ROT0,  "IGT - International Game Technology", "Player's Edge Plus (XM00004P+XMP00002) Multi-Poker",        0, layout_pe_poker )
 GAMEL(1995, pexm005p,  0,        peplus,  peplus_poker, peplus_state, peplussb, ROT0,  "IGT - International Game Technology", "Player's Edge Plus (XM00005P+XMP00004) Multi-Poker",        0, layout_pe_poker )
-GAMEL(1995, pexm006p,  pexm001p, peplus,  peplus_poker, peplus_state, peplussb, ROT0,  "IGT - International Game Technology", "Player's Edge Plus (XM00006P+XMP00006) Multi-Poker",        0, layout_pe_poker )
+GAMEL(1995, pexm006p,  pexm001p, peplus,  peplus_poker, peplus_state, peplussb, ROT0,  "IGT - International Game Technology", "Player's Edge Plus (XM00006P+XMP00020) Multi-Poker",        0, layout_pe_poker )
 GAMEL(1995, pexm007p,  0,        peplus,  peplus_poker, peplus_state, peplussb, ROT0,  "IGT - International Game Technology", "Player's Edge Plus (XM00007P+XMP00006) Multi-Poker",        0, layout_pe_poker )
 GAMEL(1995, pexm008p,  0,        peplus,  peplus_poker, peplus_state, peplussb, ROT0,  "IGT - International Game Technology", "Player's Edge Plus (XM00008P+XMP00006) Multi-Poker",        0, layout_pe_poker )
 GAMEL(1995, pexm009p,  0,        peplus,  peplus_poker, peplus_state, peplussb, ROT0,  "IGT - International Game Technology", "Player's Edge Plus (XM00009P+XMP00002) Multi-Poker",        GAME_IMPERFECT_GRAPHICS, layout_pe_poker ) /* Needs unknown CG2??? graphics roms for correct MENU game banners */
