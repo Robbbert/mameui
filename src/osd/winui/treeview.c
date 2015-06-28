@@ -2408,9 +2408,10 @@ BOOL TrySaveExtraFolder(LPTREEFOLDER lpFolder)
 
 	   for (i=0;i<driver_list::total();i++)
 	   {
-		   if (TestBit(folder_data->m_lpGameBits, i))
+		   int driver_index = GetIndexFromSortedIndex(i);
+		   if (TestBit(folder_data->m_lpGameBits,driver_index))
 		   {
-			   fprintf(fp,"%s\n", driver_list::driver(i).name);
+			   fprintf(fp,"%s\n",driver_list::driver(driver_index).name);
 		   }
 	   }
 
@@ -2426,9 +2427,10 @@ BOOL TrySaveExtraFolder(LPTREEFOLDER lpFolder)
 
 			   for (i=0;i<driver_list::total();i++)
 			   {
-				   if (TestBit(folder_data->m_lpGameBits, i))
+				   int driver_index = GetIndexFromSortedIndex(i);
+				   if (TestBit(folder_data->m_lpGameBits,driver_index))
 				   {
-					   fprintf(fp,"%s\n", driver_list::driver(i).name);
+					   fprintf(fp,"%s\n",driver_list::driver(driver_index).name);
 				   }
 			   }
 		   }
