@@ -39,11 +39,12 @@
 // MAME/MAMEUI headers
 #include "emu.h"
 #include "emuopts.h"
-#include "osdcore.h"
 #include "unzip.h"
 #include "winutf8.h"
 #include "strconv.h"
 #include "window.h"
+#include "../osdcore.h"
+#include "zippath.h"
 
 #include "resource.h"
 #include "resource.hm"
@@ -268,8 +269,6 @@ static void             UpdateStatusBar(void);
 //static BOOL             PickerHitTest(HWND hWnd);
 static BOOL             TreeViewNotify(NMHDR *nm);
 
-static void             ResetBackground(char *szFile);
-static void             RandomSelectBackground(void);
 static void             LoadBackgroundBitmap(void);
 static void             PaintBackgroundImage(HWND hWnd, HRGN hRgn, int x, int y);
 
@@ -785,7 +784,6 @@ TCHAR last_directory[MAX_PATH];
 /* system-wide window message sent out with an ATOM of the current game name
    each time it changes */
 static UINT g_mame32_message = 0;
-static BOOL g_bDoBroadcast   = FALSE;
 
 static BOOL use_gui_romloading = FALSE;
 
@@ -808,23 +806,23 @@ static MYBITMAPINFO     bmDesc;
 /* List view Column text */
 extern const LPCTSTR column_names[COLUMN_MAX] =
 {
-#ifdef MESS
-	TEXT("System"),
-#else
-	TEXT("Game"),
-#endif
-	TEXT("Screen"),
-	//TEXT("ROMs"),
-	TEXT("Samples"),
+	TEXT("Machine"),
+	TEXT("Source"),
 	TEXT("Directory"),
 	TEXT("Type"),
-	TEXT("Trackball"),
-	TEXT("Played"),
+	TEXT("Screen"),
 	TEXT("Manufacturer"),
 	TEXT("Year"),
+	TEXT("Played"),
+	TEXT("Play Time"),
 	TEXT("Clone Of"),
-	TEXT("Source"),
-	TEXT("Play Time")
+	TEXT("Trackball"),
+#ifdef SHOW_COLUMN_SAMPLES
+	TEXT("Samples"),
+#endif
+#ifdef SHOW_COLUMN_ROMS
+	TEXT("ROMs"),
+#endif
 };
 
 /***************************************************************************
@@ -866,6 +864,20 @@ public:
 			chain_output(channel, msg, args);
 	}
 };
+
+#if 0
+static std::wstring s2ws(const std::string& s)
+{
+	int len;
+	int slength = (int)s.length() + 1;
+	len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0); 
+	wchar_t* buf = new wchar_t[len];
+	MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
+	std::wstring r(buf);
+	delete[] buf;
+	return r;
+}
+#endif
 
 /***************************************************************************
     External functions
@@ -1502,6 +1514,7 @@ int GetMinimumScreenShotWindowWidth(void)
 	return bmp.bmWidth + 6; // 6 is for a little breathing room
 }
 
+
 int GetParentIndex(const game_driver *driver)
 {
 	return GetGameNameIndex(driver->parent);
@@ -1529,68 +1542,6 @@ int GetGameNameIndex(const char *name)
     Internal functions
  ***************************************************************************/
 
-static void ResetBackground(char *szFile)
-{
-	char szDestFile[MAX_PATH];
-
-	/* The MAME core load the .png file first, so we only need replace this file */
-	sprintf(szDestFile, "%s\\bkground.png", GetBgDir());
-	win_set_file_attributes_utf8(szDestFile, FILE_ATTRIBUTE_NORMAL);
-	win_copy_file_utf8(szFile, szDestFile, FALSE);
-}
-
-static void RandomSelectBackground(void)
-{
-	struct _finddata_t c_file;
-	long hFile;
-	char szFile[MAX_PATH];
-	int count=0;
-	const char *szDir=GetBgDir();
-	char *buf=(char *)malloc(_MAX_FNAME * MAX_BGFILES);
-
-	if (buf == NULL)
-		return;
-
-	sprintf(szFile, "%s\\*.bmp", szDir);
-	hFile = _findfirst(szFile, &c_file);
-	if (hFile != -1L)
-	{
-		int Done = 0;
-		while (!Done && count < MAX_BGFILES)
-		{
-			memcpy(buf + count * _MAX_FNAME, c_file.name, _MAX_FNAME);
-			count++;
-			Done = _findnext(hFile, &c_file);
-		}
-		_findclose(hFile);
-	}
-	sprintf(szFile, "%s\\*.png", szDir);
-	hFile = _findfirst(szFile, &c_file);
-	if (hFile != -1L)
-	{
-		int Done = 0;
-		while (!Done && count < MAX_BGFILES)
-		{
-			memcpy(buf + count * _MAX_FNAME, c_file.name, _MAX_FNAME);
-			count++;
-			Done = _findnext(hFile, &c_file);
-		}
-		_findclose(hFile);
-	}
-
-	if (count)
-	{
-#ifdef rand
-#undef rand
-#endif
-
-		srand( (unsigned)time( NULL ) );
-		sprintf(szFile, "%s\\%s", szDir, buf + (rand() % count) * _MAX_FNAME);
-		ResetBackground(szFile);
-	}
-
-	free(buf);
-}
 
 static void SetMainTitle(void)
 {
@@ -1671,7 +1622,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	}
 
 	g_mame32_message = RegisterWindowMessage(TEXT("MAME32"));
-	g_bDoBroadcast = GetBroadcast();
 
 	HelpInit();
 
@@ -1824,9 +1774,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		return FALSE;
 	}
 
-	if (GetRandomBackground())
-		RandomSelectBackground();
-
 	LoadBackgroundBitmap();
 
 	dprintf("about to init tree\n");
@@ -1943,8 +1890,8 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	if (validity_failed)
 	{
-		win_message_box_utf8(hMain, MAMENAME " has failed its validity checks.  The GUI will "
-			"still work, but emulations will fail to execute", MAMENAME, MB_OK);
+		win_message_box_utf8(hMain, MAMEUINAME " has failed its validity checks.  The GUI will "
+			"still work, but emulations will fail to execute", MAMEUINAME, MB_OK | MB_ICONERROR);
 	}
 
 	return TRUE;
@@ -1953,15 +1900,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 static void Win32UI_exit()
 {
-
-
-    if (g_bDoBroadcast == TRUE)
-    {
-        ATOM a = GlobalAddAtom(TEXT(""));
-        SendMessage(HWND_BROADCAST, g_mame32_message, a, a);
-        GlobalDeleteAtom(a);
-    }
-
 	if (g_pJoyGUI != NULL)
 		g_pJoyGUI->exit();
 
@@ -2398,8 +2336,7 @@ static BOOL PumpMessage()
 	{
 		BOOL absorbed_key = FALSE;
 		if (GetKeyGUI())
-			absorbed_key = HandleKeyboardGUIMessage(msg.hwnd, msg.message,
-													msg.wParam, msg.lParam);
+			absorbed_key = HandleKeyboardGUIMessage(msg.hwnd, msg.message, msg.wParam, msg.lParam);
 		else
 			absorbed_key = TranslateAccelerator(hMain, hAccel, &msg);
 
@@ -3907,10 +3844,10 @@ static void PickCloneColor(void)
 
 static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 {
-	int i;
+	int i = 0;
 	LPTREEFOLDER folder;
 	char* utf8_szFile;
-	BOOL res;
+	BOOL res = 0;
 
 	switch (id)
 	{
@@ -4114,17 +4051,15 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	/* ListView Context Menu */
 	case ID_CONTEXT_ADD_CUSTOM:
 	{
-	    int  nResult;
-
-		nResult = DialogBoxParam(GetModuleHandle(NULL),MAKEINTRESOURCE(IDD_CUSTOM_FILE),
-								 hMain,AddCustomFileDialogProc,Picker_GetSelectedItem(hwndList));
+		DialogBoxParam(GetModuleHandle(NULL),MAKEINTRESOURCE(IDD_CUSTOM_FILE),
+			hMain,AddCustomFileDialogProc,Picker_GetSelectedItem(hwndList));
 		SetFocus(hwndList);
 		break;
 	}
 
 	case ID_CONTEXT_REMOVE_CUSTOM:
 	{
-	    RemoveCurrentGameCustomFolder();
+		RemoveCurrentGameCustomFolder();
 		break;
 	}
 
@@ -4211,7 +4146,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	case ID_CUSTOMIZE_FIELDS:
 		if (DialogBox(GetModuleHandle(NULL),
 			MAKEINTRESOURCE(IDD_COLUMNS), hMain, ColumnDialogProc) == TRUE)
-			ResetColumnDisplay(FALSE);
+			ResetColumnDisplay(TRUE);
 		SetFocus(hwndList);
 		return TRUE;
 
@@ -4248,17 +4183,10 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		{
 			OPTIONS_TYPE curOptType = OPTIONS_SOURCE;
 			folder = GetSelectedFolder();
-			if(folder->m_nFolderId == FOLDER_VECTOR) {
+			if(folder->m_nFolderId == FOLDER_VECTOR)
 				curOptType = OPTIONS_VECTOR;
-			}
-			else if(folder->m_nFolderId == FOLDER_HORIZONTAL) {
-				curOptType = OPTIONS_HORIZONTAL;
-			}
-			else if(folder->m_nFolderId == FOLDER_VERTICAL) {
-				curOptType = OPTIONS_VERTICAL;
-			}
+
 			InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), curOptType, folder->m_nFolderId, Picker_GetSelectedItem(hwndList));
-			//SaveFolderOptions(folder->m_nFolderId, Picker_GetSelectedItem(hwndList) );
 		}
 		/* Just in case the toggle MMX on/off */
 		UpdateStatusBar();
@@ -4269,7 +4197,6 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		{
 			folder = GetFolderByName(FOLDER_SOURCE, GetDriverFilename(Picker_GetSelectedItem(hwndList)) );
 			InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), (folder->m_nFolderId == FOLDER_VECTOR) ? OPTIONS_VECTOR : OPTIONS_SOURCE , folder->m_nFolderId, Picker_GetSelectedItem(hwndList));
-			//SaveFolderOptions(folder->m_nFolderId, Picker_GetSelectedItem(hwndList) );
 		}
 		/* Just in case the toggle MMX on/off */
 		UpdateStatusBar();
@@ -4280,7 +4207,6 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		{
 			folder = GetFolderByID( FOLDER_VECTOR );
 			InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_VECTOR, folder->m_nFolderId, Picker_GetSelectedItem(hwndList));
-			//SaveFolderOptions(folder->m_nFolderId, Picker_GetSelectedItem(hwndList) );
 		}
 		/* Just in case the toggle MMX on/off */
 		UpdateStatusBar();
@@ -4313,27 +4239,22 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		if (!oldControl)
 		{
 			InitDefaultPropertyPage(hInst, hwnd);
-			//SaveDefaultOptions();
 		}
 		SetFocus(hwndList);
 		return TRUE;
 
 	case ID_OPTIONS_DIR:
 		{
-			int  nResult;
-			BOOL bUpdateRoms;
-			BOOL bUpdateSamples;
-
-			nResult = DialogBox(GetModuleHandle(NULL),
-								MAKEINTRESOURCE(IDD_DIRECTORIES),
-								hMain,
-								DirectoriesDialogProc);
+			int nResult = DialogBox(GetModuleHandle(NULL),
+					MAKEINTRESOURCE(IDD_DIRECTORIES),
+					hMain,
+					DirectoriesDialogProc);
 
 			SaveDefaultOptions();
 			SaveOptions();
 
-			bUpdateRoms    = ((nResult & DIRDLG_ROMS)	 == DIRDLG_ROMS)	? TRUE : FALSE;
-			bUpdateSamples = ((nResult & DIRDLG_SAMPLES) == DIRDLG_SAMPLES) ? TRUE : FALSE;
+			BOOL bUpdateRoms    = ((nResult & DIRDLG_ROMS) == DIRDLG_ROMS) ? TRUE : FALSE;
+			BOOL bUpdateSamples = ((nResult & DIRDLG_SAMPLES) == DIRDLG_SAMPLES) ? TRUE : FALSE;
 
 			if (s_pWatcher)
 			{
@@ -4352,15 +4273,16 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		return TRUE;
 
 	case ID_OPTIONS_RESET_DEFAULTS:
-		if (DialogBox(GetModuleHandle(NULL),
-					  MAKEINTRESOURCE(IDD_RESET), hMain, ResetDialogProc) == TRUE)
-        {
+		if (DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_RESET), hMain, ResetDialogProc) == TRUE)
+		{
 			// these may have been changed
 			SaveDefaultOptions();
 			SaveOptions();
 			DestroyWindow(hwnd);
 			PostQuitMessage(0);
-		} else {
+		}
+		else
+		{
 			ResetListView();
 			SetFocus(hwndList);
 		}
@@ -4381,35 +4303,47 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 	case ID_OPTIONS_BG:
 		{
-			OPENFILENAME OpenFileName;
+			// More c++ stupidity with strings
+			// Get the path from the existing filename; if no filename go to root
+			TCHAR* t_bgdir = TEXT(".");
+			const char *s = GetBgDir();
+			std::string as;
+			zippath_parent(as, s);
+			size_t t1 = as.length()-1;
+			if (as[t1] == '\\') as[t1]='\0';
+			t1 = as.find(':');
+			if (t1 > 0)
+				t_bgdir = tstring_from_utf8(as.c_str());
+
+			OPENFILENAME OFN;
 			static TCHAR szFile[MAX_PATH] = TEXT("\0");
-			TCHAR* t_bgdir = tstring_from_utf8(GetBgDir());
 			if( !t_bgdir )
 				return FALSE;
 
-			OpenFileName.lStructSize       = sizeof(OPENFILENAME);
-			OpenFileName.hwndOwner         = hMain;
-			OpenFileName.hInstance         = 0;
-			OpenFileName.lpstrFilter       = TEXT("Image Files (*.png)\0*.PNG\0");
-			OpenFileName.lpstrCustomFilter = NULL;
-			OpenFileName.nMaxCustFilter    = 0;
-			OpenFileName.nFilterIndex      = 1;
-			OpenFileName.lpstrFile         = szFile;
-			OpenFileName.nMaxFile          = sizeof(szFile);
-			OpenFileName.lpstrFileTitle    = NULL;
-			OpenFileName.nMaxFileTitle     = 0;
-			OpenFileName.lpstrInitialDir   = t_bgdir;
-			OpenFileName.lpstrTitle        = TEXT("Select a Background Image");
-			OpenFileName.nFileOffset       = 0;
-			OpenFileName.nFileExtension    = 0;
-			OpenFileName.lpstrDefExt       = NULL;
-			OpenFileName.lCustData         = 0;
-			OpenFileName.lpfnHook		   = NULL;
-			OpenFileName.lpTemplateName    = NULL;
-			OpenFileName.Flags             = OFN_NOCHANGEDIR | OFN_SHOWHELP | OFN_EXPLORER;
+			OFN.lStructSize       = sizeof(OPENFILENAME);
+			OFN.hwndOwner         = hMain;
+			OFN.hInstance         = 0;
+			OFN.lpstrFilter       = TEXT("Image Files (*.png)\0*.PNG\0");
+			OFN.lpstrCustomFilter = NULL;
+			OFN.nMaxCustFilter    = 0;
+			OFN.nFilterIndex      = 1;
+			OFN.lpstrFile         = szFile;
+			OFN.nMaxFile          = sizeof(szFile);
+			OFN.lpstrFileTitle    = NULL;
+			OFN.nMaxFileTitle     = 0;
+			OFN.lpstrInitialDir   = t_bgdir;
+			OFN.lpstrTitle        = TEXT("Select a Background Image");
+			OFN.nFileOffset       = 0;
+			OFN.nFileExtension    = 0;
+			OFN.lpstrDefExt       = NULL;
+			OFN.lCustData         = 0;
+			OFN.lpfnHook          = NULL;
+			OFN.lpTemplateName    = NULL;
+			OFN.Flags             = OFN_NOCHANGEDIR | OFN_SHOWHELP | OFN_EXPLORER;
 
-			if (GetOpenFileName(&OpenFileName))
+			if (GetOpenFileName(&OFN))
 			{
+				osd_free(t_bgdir);
 				utf8_szFile = utf8_from_tstring(szFile);
 				if( !utf8_szFile )
 					return FALSE;
@@ -4420,7 +4354,6 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				// Display new background
 				LoadBackgroundBitmap();
 				InvalidateRect(hMain, NULL, TRUE);
-				osd_free(t_bgdir);
 				osd_free(utf8_szFile);
 				return TRUE;
 			}
@@ -4644,18 +4577,20 @@ static const TCHAR *GamePicker_GetItemString(HWND hwndPicker, int nItem, int nCo
 			utf8_s = DriverIsVertical(nItem) ? "Vertical" : "Horizontal";
 			break;
 
-		//case COLUMN_ROMS:
-		//	utf8_s = GetAuditString(GetRomAuditResults(nItem));
-		//	break;
-
+#ifdef SHOW_COLUMN_ROMS
+		case COLUMN_ROMS:
+			utf8_s = GetAuditString(GetRomAuditResults(nItem));
+			break;
+#endif
+#ifdef SHOW_COLUMN_SAMPLES
 		case COLUMN_SAMPLES:
 			/* Samples */
 			if (DriverUsesSamples(nItem))
-				s = TEXT("Yes");
+				utf8_s = GetAuditString(GetSampleAuditResults(nItem));
 			else
-				s = TEXT("No");
+				s = TEXT("-");
 			break;
-
+#endif
 		case COLUMN_DIRECTORY:
 			/* Driver name (directory) */
 			utf8_s = driver_list::driver(nItem).name;
@@ -4734,20 +4669,6 @@ static void GamePicker_LeavingItem(HWND hwndPicker, int nItem)
 
 static void GamePicker_EnteringItem(HWND hwndPicker, int nItem)
 {
-	TCHAR* t_description;
-	ATOM a;
-	// printf("entering %s\n",driver_list::driver(nItem).name);
-	if (g_bDoBroadcast == TRUE)
-	{
-		t_description = tstring_from_utf8(driver_list::driver(nItem).description);
-		if( !t_description )
-			return;
-		a = GlobalAddAtom(t_description);
-		SendMessage(HWND_BROADCAST, g_mame32_message, a, a);
-		GlobalDeleteAtom(a);
-		osd_free(t_description);
-	}
-
 	EnableSelection(nItem);
 }
 
@@ -4760,7 +4681,7 @@ static int GamePicker_FindItemParent(HWND hwndPicker, int nItem)
 static void InitListView()
 {
 	LVBKIMAGE bki;
-	TCHAR path[MAX_PATH];
+	//TCHAR path[MAX_PATH];
 	TCHAR* t_bgdir;
 	BOOL res;
 
@@ -4807,9 +4728,9 @@ static void InitListView()
 	t_bgdir = tstring_from_utf8(GetBgDir());
 	if( !t_bgdir )
 		return;
-	_stprintf(path, TEXT("%s\\bkground.png"), t_bgdir);
+
 	bki.ulFlags = LVBKIF_SOURCE_URL | LVBKIF_STYLE_TILE;
-	bki.pszImage = path;
+	bki.pszImage = t_bgdir;
 	if( hBackground )
 		res = ListView_SetBkImage(hwndList, &bki);
 
@@ -5067,6 +4988,7 @@ static int GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_
 		nTemp2 = DriverIsVertical(index2) ? 1 : 0;
 		value = nTemp1 - nTemp2;
 		break;
+#ifdef SHOW_COLUMN_SAMPLES
 	case COLUMN_SAMPLES:
 		nTemp1 = -1;
 		if (DriverUsesSamples(index1))
@@ -5099,7 +5021,7 @@ static int GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_
 		}
 		value = nTemp2 - nTemp1;
 		break;
-
+#endif
 	case COLUMN_DIRECTORY:
 		value = core_stricmp(driver_list::driver(index1).name, driver_list::driver(index2).name);
 		break;
@@ -5161,11 +5083,6 @@ static int GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_
 	{
 		value = GamePicker_Compare(hwndPicker, index1, index2, COLUMN_GAMES);
 	}
-#ifdef DEBUG
-	if ((strcmp(driver_list::driver(index1).name,"1941") == 0 && strcmp(driver_list::driver(index2).name,"1942") == 0) ||
-		(strcmp(driver_list::driver(index1).name,"1942") == 0 && strcmp(driver_list::driver(index2).name,"1941") == 0))
-		dprintf("result: %i\n",value);
-#endif
 
 	return value;
 }
@@ -5227,10 +5144,10 @@ BOOL CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype)
 	switch (filetype)
 	{
 	case FILETYPE_INPUT_FILES :
-		of.lpstrFilter   = TEXT(MAMENAME) TEXT(" input files (*.inp,*.zip)\0*.inp;*.zip\0All files (*.*)\0*.*\0");
+		of.lpstrFilter   = TEXT("input files (*.inp,*.zip)\0*.inp;*.zip\0All files (*.*)\0*.*\0");
 		break;
 	case FILETYPE_SAVESTATE_FILES :
-		of.lpstrFilter   = TEXT(MAMENAME) TEXT(" savestate files (*.sta)\0*.sta;\0All files (*.*)\0*.*\0");
+		of.lpstrFilter   = TEXT("savestate files (*.sta)\0*.sta;\0All files (*.*)\0*.*\0");
 		break;
 	case FILETYPE_WAVE_FILES :
 		of.lpstrFilter   = TEXT("sounds (*.wav)\0*.wav;\0All files (*.*)\0*.*\0");
@@ -5292,7 +5209,7 @@ BOOL CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype)
 		of.lpstrInitialDir = t_snapdir;
 	}
 	else {
-		of.lpstrInitialDir = last_directory;
+		of.lpstrInitialDir = TEXT(".");
 	}
 	of.lpstrTitle        = NULL;
 	of.Flags             = OFN_EXPLORER | OFN_NOCHANGEDIR | OFN_PATHMUSTEXIST | OFN_HIDEREADONLY;
@@ -6579,15 +6496,15 @@ void UpdateListView(void)
 
 	if( (GetViewMode() == VIEW_GROUPED) || (GetViewMode() == VIEW_DETAILS ) )
 		res = ListView_RedrawItems(hwndList,ListView_GetTopIndex(hwndList),
-							 ListView_GetTopIndex(hwndList)+ ListView_GetCountPerPage(hwndList) );
+			ListView_GetTopIndex(hwndList)+ ListView_GetCountPerPage(hwndList) );
 }
 
 static void CalculateBestScreenShotRect(HWND hWnd, RECT *pRect, BOOL restrict_height)
 {
-	int 	destX, destY;
-	int 	destW, destH;
-	int		nBorder;
-	RECT	rect;
+	int destX, destY;
+	int destW, destH;
+	int nBorder;
+	RECT rect;
 	/* for scaling */
 	int x, y;
 	int rWidth, rHeight;
@@ -6654,9 +6571,9 @@ static void CalculateBestScreenShotRect(HWND hWnd, RECT *pRect, BOOL restrict_he
 	{
 		if (GetStretchScreenShotLarger())
 		{
-			rect.right	-= 10;
+			rect.right -= 10;
 			rect.bottom -= 10;
-			rWidth	-= 10;
+			rWidth -= 10;
 			rHeight -= 10;
 			bReduce = TRUE;
 			// Try to scale it properly
@@ -6701,17 +6618,17 @@ static void CalculateBestScreenShotRect(HWND hWnd, RECT *pRect, BOOL restrict_he
 	}
 	nBorder = GetScreenshotBorderSize();
 	if( destX > nBorder+1)
-		pRect->left   = destX - nBorder;
+		pRect->left = destX - nBorder;
 	else
-		pRect->left   = 2;
+		pRect->left = 2;
 	if( destY > nBorder+1)
-		pRect->top	  = destY - nBorder;
+		pRect->top = destY - nBorder;
 	else
-		pRect->top	  = 2;
+		pRect->top = 2;
 	if( rWidth >= destX + destW + nBorder)
-		pRect->right  = destX + destW + nBorder;
+		pRect->right = destX + destW + nBorder;
 	else
-		pRect->right  = rWidth - pRect->left;
+		pRect->right = rWidth - pRect->left;
 	if( rHeight >= destY + destH + nBorder)
 		pRect->bottom = destY + destH + nBorder;
 	else

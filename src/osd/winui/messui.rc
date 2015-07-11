@@ -940,7 +940,7 @@ EXSTYLE WS_EX_CONTEXTHELP
 CAPTION "Interface Options"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX        "Game Selection",IDC_STATIC,6,4,189,208
+    GROUPBOX        "Game Selection",IDC_STATIC,6,4,189,194
     CONTROL         "&Search for new games on start",IDC_START_GAME_CHECK,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,16,111,10,0,
                     HIDC_START_GAME_CHECK

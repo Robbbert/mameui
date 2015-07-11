@@ -25,6 +25,7 @@
 #include "winui.h"
 #include "mui_util.h"
 #include "mui_opts.h"
+#include "drivenum.h"
 
 #include <shlwapi.h>
 #include <vector>
