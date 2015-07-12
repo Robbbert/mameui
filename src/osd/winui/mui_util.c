@@ -57,6 +57,7 @@ struct DriversInfo
 	bool usesMouse;
 	bool supportsSaveState;
 	bool isVertical;
+	bool isArcade;
 };
 
 static std::vector<DriversInfo>	drivers_info;
@@ -75,6 +76,7 @@ enum
 	DRIVER_CACHE_LIGHTGUN	= 0x0800,
 	DRIVER_CACHE_VECTOR		= 0x1000,
 	DRIVER_CACHE_MOUSE		= 0x2000,
+	DRIVER_CACHE_ARCADE		= 0x4000,
 };
 
 /***************************************************************************
@@ -378,6 +380,7 @@ static void SetDriversInfo(void)
 		if (gameinfo->usesTrackball)	cache += DRIVER_CACHE_TRACKBALL;
 		if (gameinfo->usesLightGun)		cache += DRIVER_CACHE_LIGHTGUN;
 		if (gameinfo->usesMouse)		cache += DRIVER_CACHE_MOUSE;
+		if (gameinfo->isArcade)		cache += DRIVER_CACHE_ARCADE;
 
 		SetDriverCache(ndriver, cache);
 	}
@@ -401,6 +404,7 @@ static void InitDriversInfo(void)
 		gameinfo->isClone = (GetParentRomSetIndex(gamedrv) != -1);
 		gameinfo->isBroken = ((gamedrv->flags & GAME_NOT_WORKING) != 0);
 		gameinfo->supportsSaveState = ((gamedrv->flags & GAME_SUPPORTS_SAVE) != 0);
+		gameinfo->isArcade = (gamedrv->flags & GAME_TYPE_ARCADE) ? 1 : 0;
 		gameinfo->isHarddisk = FALSE;
 		gameinfo->isVertical = (gamedrv->flags & ORIENTATION_SWAP_XY) ? TRUE : FALSE;
 		device_iterator deviter(config.root_device());
@@ -509,6 +513,7 @@ static int InitDriversCache(void)
 		gameinfo->usesTrackball     = ((cache & DRIVER_CACHE_TRACKBALL) != 0);
 		gameinfo->usesLightGun      = ((cache & DRIVER_CACHE_LIGHTGUN)  != 0);
 		gameinfo->usesMouse         = ((cache & DRIVER_CACHE_MOUSE)     != 0);
+		gameinfo->isArcade          = ((cache & DRIVER_CACHE_ARCADE)    != 0);
 	}
 
 	return 0;
@@ -548,18 +553,26 @@ BOOL DriverIsHarddisk(int driver_index)
 
 BOOL DriverIsBios(int driver_index)
 {
-	BOOL bBios = FALSE;
-	if( !( (driver_list::driver(driver_index).flags & GAME_IS_BIOS_ROOT ) == 0)   )
-		bBios = TRUE;
-	return bBios;
+	BOOL b = FALSE;
+	if( driver_list::driver(driver_index).flags & GAME_IS_BIOS_ROOT )
+		b = TRUE;
+	return b;
 }
 
 BOOL DriverIsMechanical(int driver_index)
 {
-	BOOL bMechanical = FALSE;
-	if( !( (driver_list::driver(driver_index).flags & GAME_MECHANICAL ) == 0)   )
-		bMechanical = TRUE;
-	return bMechanical;
+	BOOL b = FALSE;
+	if( driver_list::driver(driver_index).flags & GAME_MECHANICAL )
+		b = TRUE;
+	return b;
+}
+
+BOOL DriverIsArcade(int driver_index)
+{
+	BOOL b = FALSE;
+	if( driver_list::driver(driver_index).flags & GAME_TYPE_ARCADE )
+		b = TRUE;
+	return b;
 }
 
 BOOL DriverHasOptionalBIOS(int driver_index)

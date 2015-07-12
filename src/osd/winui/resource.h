@@ -197,6 +197,8 @@
 #define IDC_FILTER_ORIGINALS            1115
 #define IDC_FILTER_WORKING              1116
 #define IDC_FILTER_AVAILABLE            1117
+#define IDC_FILTER_ARCADE               1118
+#define IDC_FILTER_MESS                 1119
 #define IDC_START_GAME_CHECK            1120
 #define IDC_VOLUME                      1121
 #define IDC_VOLUMEDISP                  1122
@@ -210,7 +212,7 @@
 #define IDC_LANGUAGEEDIT                1132
 #define IDC_FILTER_EDIT                 1133
 #define IDC_ABOUT                       1134
-#define IDC_SOUNDTEXT					1135
+#define IDC_SOUNDTEXT                   1135
 #define IDC_SOUND_MODE                  1136
 #define IDC_WAITVSYNC                   1137
 #define IDC_HWSTRETCH                   1138
