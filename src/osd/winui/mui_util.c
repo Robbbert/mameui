@@ -303,28 +303,9 @@ char * ConvertToWindowsNewlines(const char *source)
 const char * GetDriverFilename(int nIndex)
 {
 	static char tmp[40];
-	const char *ptmp;
-
-	const char *s = driver_list::driver(nIndex).source_file;
-
-	tmp[0] = '\0';
-
-	ptmp = strrchr(s, '\\');
-	if (ptmp == NULL) {
-		ptmp = strrchr(s, '/');
-	}
-	else {
-		const char *ptmp2;
-		ptmp2 = strrchr(ptmp, '/');
-		if (ptmp2 != NULL) {
-			ptmp = ptmp2;
-		}
-	}
-	if (ptmp == NULL)
-		return s;
-
-	ptmp++;
-	strcpy(tmp,ptmp);
+	std::string driver;
+	core_filename_extract_base(driver, driver_list::driver(nIndex).source_file, TRUE);
+	sprintf(tmp, "%s.c", driver.c_str());
 	return tmp;
 }
 
