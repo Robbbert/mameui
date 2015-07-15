@@ -8,7 +8,7 @@
 ***************************************************************************/
 
 // standard windows headers
-define WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <windowsx.h>
 
@@ -724,7 +724,7 @@ BOOL BrowseForDirectory(HWND hwnd, LPCTSTR pStartDir, TCHAR* pResult)
 	LPITEMIDLIST pItemIDList = NULL;
 	TCHAR buf[MAX_PATH];
 
-	Info.hwndOwner = hWnd;
+	Info.hwndOwner = hwnd;
 	Info.pidlRoot = NULL;
 	Info.pszDisplayName = buf;
 	Info.lpszTitle = TEXT("Select a directory:");
