@@ -294,7 +294,7 @@ char * ConvertToWindowsNewlines(const char *source)
 }
 
 /* Lop off path and extension from a source file name
- * This assumes their is a pathname passed to the function
+ * This assumes there is a pathname passed to the function
  * like src\drivers\blah.c
  */
 const char * GetDriverFilename(int nIndex)

@@ -64,10 +64,10 @@ public:
 	const char *c_str() const { return m_str.c_str(); }
 
 private:
-	std::string		m_str;
-	const char *	m_base;
-	const char *	m_cur;
-	int				m_index;
+	std::string  m_str;
+	const char * m_base;
+	const char * m_cur;
+	int          m_index;
 };
 
 class game_options
@@ -181,9 +181,7 @@ public:
 				}
 			}
 			else
-			{
 				break;
-			}
 		}
 	}
 
@@ -219,27 +217,25 @@ public:
 		emu_file file(OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
 		filerr = file.open(filename);
 		if (filerr == FILERR_NONE)
-		{
 			file.puts(inistring.c_str());
-		}
 
 		return filerr;
 	}
 
 private:
-	win_options		m_info;
-	int				m_total;
+	win_options m_info;
+	int         m_total;
 
 	struct driver_options
 	{
-		int	rom;
-		int	sample;
-		int	cache;
-		int	play_count;
-		int	play_time;
+		int rom;
+		int sample;
+		int cache;
+		int play_count;
+		int play_time;
 	};
 
-	std::vector<driver_options>	m_list;
+	std::vector<driver_options> m_list;
 };
 
 #endif //  __GAME_OPTS_H__

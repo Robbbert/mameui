@@ -1,6 +1,5 @@
 // For licensing and usage information, read docs/winui_license.txt
 //****************************************************************************
-
 /* bitmask.c - Bitmask support routines - MSH 11/19/1998 */
 
 // standard windows headers
