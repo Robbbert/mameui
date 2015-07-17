@@ -136,6 +136,11 @@ typedef enum
 	F_MECHANICAL    = 0x00000400,
 	F_ARCADE        = 0x00000800,
 	F_MESS          = 0x00001000,
+#ifdef MESS
+	F_COMPUTER      = 0x00002000,
+	F_CONSOLE       = 0x00004000,
+	F_MODIFIED      = 0x00008000,
+#endif
 	F_MASK          = 0x0000FFFF,
 	F_INIEDIT       = 0x00010000, // There is an .ini that can be edited. MSH 20070811
 	F_CUSTOM        = 0x01000000  // for current .ini custom folders
