@@ -2,48 +2,48 @@
 // copyright-holders:Dirk Best
 /***************************************************************************
 
-    "Monkey Magic" © 1979 Nintendo
+    "Monkey Magic" ?? 1979 Nintendo
 
 
-	Dumping info provided by Andrew Welburn:
+    Dumping info provided by Andrew Welburn:
 
-	TZF-MP  - Main Board
-	TZF-SOU - Sound Board
+    TZF-MP  - Main Board
+    TZF-SOU - Sound Board
 
-	#	device	Label	PCB		filename
-	-------------------------------------------
-	4	i2708	1AI*	2A		1AI.2A
-	5	i2708	2AI*	3A		2AI.3A
-	6	i2708	3AI*	4A		3AI.4A
-	7	i2708	4AI*	4/5A	4AI.45A
-	8	i2708	5AI*	5A		5AI.5A
+    #   device  Label   PCB     filename
+    -------------------------------------------
+    4   i2708   1AI*    2A      1AI.2A
+    5   i2708   2AI*    3A      2AI.3A
+    6   i2708   3AI*    4A      3AI.4A
+    7   i2708   4AI*    4/5A    4AI.45A
+    8   i2708   5AI*    5A      5AI.5A
 
-	22	H7641	6H		6HI		6H.6HI
-	23	?? **	7H		7HI		7H.7HI
-	24	H7641	6J		6JK		6J.6JK
-	25	H7641	6H***	7JK
+    22  H7641   6H      6HI     6H.6HI
+    23  ?? **   7H      7HI     7H.7HI
+    24  H7641   6J      6JK     6J.6JK
+    25  H7641   6H***   7JK
 
-	* Note that there is a Kana character 'I' in romaji on the end of the labels, not an I.
+    * Note that there is a Kana character 'I' in romaji on the end of the labels, not an I.
 
-	** Note this device was plastic and not ceramic, but it was dumped as a Harris 7641 as
-	it is logical that its compatible with the 7641. I can see the other devices all have
-	similar/same Harris markings in the bottom left of the IC obscured by the labels.
+    ** Note this device was plastic and not ceramic, but it was dumped as a Harris 7641 as
+    it is logical that its compatible with the 7641. I can see the other devices all have
+    similar/same Harris markings in the bottom left of the IC obscured by the labels.
 
-	*** Note that the label for the 7643 PROM at IC25 was almost scraped off, but by its position
-	in the sequence, it has to be 6H. I removed a little more of the label in order to
-	work out what the inking was on it below, turned out to be 'D-2'. the prom at IC22 also
-	looks like it has an inked number under the paper label, just peeking through on one side.
-	Without removing the paper labels entirely, these markings wont be fully known, but were
-	covered for some reason.
+    *** Note that the label for the 7643 PROM at IC25 was almost scraped off, but by its position
+    in the sequence, it has to be 6H. I removed a little more of the label in order to
+    work out what the inking was on it below, turned out to be 'D-2'. the prom at IC22 also
+    looks like it has an inked number under the paper label, just peeking through on one side.
+    Without removing the paper labels entirely, these markings wont be fully known, but were
+    covered for some reason.
 
-	SPECS:
+    SPECS:
 
-	- CPU is an NEC D8085A
-	- Crystal is marked 6.1440, but this looks to have been replaced.
-	- X1/X2 clock frequency measured at pins 1 + 2 is 6.14330 mhz
-	- Test point with stable readings is :
-	- TP4 (HS) = 15.9982 khz (Horizontal sync)
-	- TP5 (VS) = 60.5992 hz  (Vertical Sync)
+    - CPU is an NEC D8085A
+    - Crystal is marked 6.1440, but this looks to have been replaced.
+    - X1/X2 clock frequency measured at pins 1 + 2 is 6.14330 mhz
+    - Test point with stable readings is :
+    - TP4 (HS) = 15.9982 khz (Horizontal sync)
+    - TP5 (VS) = 60.5992 hz  (Vertical Sync)
 
 ***************************************************************************/
 
@@ -69,12 +69,13 @@ public:
 		: driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
 		m_screen(*this, "screen"),
+		m_palette(*this, "palette"),
 		m_vram(*this, "vram"),
 		m_tiles(*this, "tiles"),
 		m_colors(*this, "colors"),
 		m_ball_x(0x00),
 		m_ball_y(0x00),
-		m_color(0)
+		m_color(0x00)
 	{}
 
 	DECLARE_READ8_MEMBER(vblank_r);
@@ -91,16 +92,14 @@ protected:
 private:
 	required_device<cpu_device> m_maincpu;
 	required_device<screen_device> m_screen;
+	required_device<palette_device> m_palette;
 	required_shared_ptr<UINT8> m_vram;
 	required_region_ptr<UINT8> m_tiles;
 	required_region_ptr<UINT8> m_colors;
 
-	static const rgb_t m_palette[];
-
 	UINT8 m_ball_x;
 	UINT8 m_ball_y;
-
-	int m_color;
+	UINT8 m_color;
 };
 
 
@@ -157,10 +156,10 @@ static INPUT_PORTS_START( mmagic )
 	PORT_BIT(0x10, IP_ACTIVE_LOW, IPT_UNUSED)
 	PORT_BIT(0x20, IP_ACTIVE_LOW, IPT_UNUSED)
 	PORT_BIT(0x40, IP_ACTIVE_LOW, IPT_UNUSED)
-	PORT_BIT(0x80, IP_ACTIVE_LOW, IPT_OTHER) PORT_NAME("Debug?")	// debug? checked once at startup
+	PORT_BIT(0x80, IP_ACTIVE_LOW, IPT_OTHER) PORT_NAME("Debug?") // checked once at startup
 
 	PORT_START("paddle")
-	PORT_BIT(0xff, 0x80, IPT_PADDLE) PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(30) PORT_KEYDELTA(30) PORT_CENTERDELTA(0)
+	PORT_BIT(0xff, 0x80, IPT_PADDLE) PORT_MINMAX(0x00, 0xff) PORT_SENSITIVITY(30) PORT_KEYDELTA(30) PORT_CENTERDELTA(0)
 INPUT_PORTS_END
 
 
@@ -216,15 +215,15 @@ UINT32 mmagic_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, 
 			{
 				UINT8 gfx = m_tiles[(code << 4) + tx];
 
-				bitmap.pix32(y * 12 + tx, x * 8 + 0) = BIT(gfx, 4) ? rgb_t::black : m_palette[color];
-				bitmap.pix32(y * 12 + tx, x * 8 + 1) = BIT(gfx, 5) ? rgb_t::black : m_palette[color];
-				bitmap.pix32(y * 12 + tx, x * 8 + 2) = BIT(gfx, 6) ? rgb_t::black : m_palette[color];
-				bitmap.pix32(y * 12 + tx, x * 8 + 3) = BIT(gfx, 7) ? rgb_t::black : m_palette[color];
+				bitmap.pix32(y * 12 + tx, x * 8 + 0) = BIT(gfx, 4) ? rgb_t::black : m_palette->pen_color(color);
+				bitmap.pix32(y * 12 + tx, x * 8 + 1) = BIT(gfx, 5) ? rgb_t::black : m_palette->pen_color(color);
+				bitmap.pix32(y * 12 + tx, x * 8 + 2) = BIT(gfx, 6) ? rgb_t::black : m_palette->pen_color(color);
+				bitmap.pix32(y * 12 + tx, x * 8 + 3) = BIT(gfx, 7) ? rgb_t::black : m_palette->pen_color(color);
 
-				bitmap.pix32(y * 12 + tx, x * 8 + 4) = BIT(gfx, 0) ? rgb_t::black : m_palette[color];
-				bitmap.pix32(y * 12 + tx, x * 8 + 5) = BIT(gfx, 1) ? rgb_t::black : m_palette[color];
-				bitmap.pix32(y * 12 + tx, x * 8 + 6) = BIT(gfx, 2) ? rgb_t::black : m_palette[color];
-				bitmap.pix32(y * 12 + tx, x * 8 + 7) = BIT(gfx, 3) ? rgb_t::black : m_palette[color];
+				bitmap.pix32(y * 12 + tx, x * 8 + 4) = BIT(gfx, 0) ? rgb_t::black : m_palette->pen_color(color);
+				bitmap.pix32(y * 12 + tx, x * 8 + 5) = BIT(gfx, 1) ? rgb_t::black : m_palette->pen_color(color);
+				bitmap.pix32(y * 12 + tx, x * 8 + 6) = BIT(gfx, 2) ? rgb_t::black : m_palette->pen_color(color);
+				bitmap.pix32(y * 12 + tx, x * 8 + 7) = BIT(gfx, 3) ? rgb_t::black : m_palette->pen_color(color);
 			}
 		}
 	}
@@ -239,23 +238,6 @@ UINT32 mmagic_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, 
 
 	return 0;
 }
-
-
-//**************************************************************************
-//  PALETTE
-//**************************************************************************
-
-const rgb_t mmagic_state::m_palette[] =
-{
-	rgb_t(0x00, 0x00, 0x00),
-	rgb_t(0xff, 0x00, 0x00),
-	rgb_t(0x00, 0xff, 0x00),
-	rgb_t(0xff, 0xff, 0x00),
-	rgb_t(0x00, 0x00, 0xff),
-	rgb_t(0xff, 0x00, 0xff),
-	rgb_t(0x00, 0xff, 0xff),
-	rgb_t(0xff, 0xff, 0xff)
-};
 
 
 //**************************************************************************
@@ -288,7 +270,7 @@ void mmagic_state::machine_start()
 
 static MACHINE_CONFIG_START( mmagic, mmagic_state )
 	// basic machine hardware
-	MCFG_CPU_ADD("maincpu", I8085A, XTAL_6_144MHz)	// NEC D8085A
+	MCFG_CPU_ADD("maincpu", I8085A, XTAL_6_144MHz)  // NEC D8085A
 	MCFG_CPU_PROGRAM_MAP(mmagic_mem)
 	MCFG_CPU_IO_MAP(mmagic_io)
 
@@ -296,6 +278,8 @@ static MACHINE_CONFIG_START( mmagic, mmagic_state )
 	MCFG_SCREEN_ADD("screen", RASTER)
 	MCFG_SCREEN_RAW_PARAMS(XTAL_6_144MHz, 384, 0, 256, 264, 0, 192)
 	MCFG_SCREEN_UPDATE_DRIVER(mmagic_state, screen_update)
+
+	MCFG_PALETTE_ADD_3BIT_RGB("palette")
 
 	// sound hardware
 	// TODO: SN76477 + discrete sound

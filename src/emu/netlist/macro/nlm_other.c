@@ -1,18 +1,18 @@
 
-#include "nlm_ttl74xx.h"
+#include "nlm_other.h"
 
 #include "devices/nld_truthtable.h"
 #include "devices/nld_system.h"
 
 /*
- *   DM7416: Hex Inverting Buffers with
- *           High Voltage Open-Collector Outputs
+ *   MC14584B: Hex Schmitt Trigger
+ *             ON Semiconductor
  *
  *          +--------------+
  *       A1 |1     ++    14| VCC
  *       Y1 |2           13| A6
  *       A2 |3           12| Y6
- *       Y2 |4    7416   11| A5
+ *       Y2 |4  MC14584B 11| A5
  *       A3 |5           10| Y5
  *       Y3 |6            9| A4
  *      GND |7            8| Y4
@@ -20,13 +20,13 @@
  *
  */
 
-NETLIST_START(TTL_7416_DIP)
-	TTL_7416_GATE(s1)
-	TTL_7416_GATE(s2)
-	TTL_7416_GATE(s3)
-	TTL_7416_GATE(s4)
-	TTL_7416_GATE(s5)
-	TTL_7416_GATE(s6)
+NETLIST_START(MC14584B_DIP)
+	MC14584B_GATE(s1)
+	MC14584B_GATE(s2)
+	MC14584B_GATE(s3)
+	MC14584B_GATE(s4)
+	MC14584B_GATE(s5)
+	MC14584B_GATE(s6)
 
 	DUMMY_INPUT(GND)
 	DUMMY_INPUT(VCC)
@@ -43,14 +43,13 @@ NETLIST_START(TTL_7416_DIP)
 	)
 NETLIST_END()
 
-NETLIST_START(TTL74XX_lib)
-	TRUTHTABLE_START(TTL_7416_GATE, 1, 1, 0, "")
+NETLIST_START(otheric_lib)
+	TRUTHTABLE_START(MC14584B_GATE, 1, 1, 0, "")
 		TT_HEAD(" A | Q ")
-		TT_LINE(" 0 | 1 |15")
-		TT_LINE(" 1 | 0 |23")
-		/* Open Collector */
-		TT_FAMILY("74XXOC")
+		TT_LINE(" 0 | 1 |100")
+		TT_LINE(" 1 | 0 |100")
+		TT_FAMILY("FAMILY(IVL=2.1 IVH=2.7 OVL=0.05 OVH=4.95 ORL=10.0 ORH=10.0)")
 	TRUTHTABLE_END()
 
-	LOCAL_LIB_ENTRY(TTL_7416_DIP)
+	LOCAL_LIB_ENTRY(MC14584B_DIP)
 NETLIST_END()
