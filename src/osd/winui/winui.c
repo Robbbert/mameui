@@ -971,7 +971,10 @@ int MameUIMain(HINSTANCE    hInstance,
 		{
 			utf8_argv[i] = utf8_from_tstring(__targv[i]);
 			if (utf8_argv[i] == NULL)
+			{
+				free(utf8_argv);
 				return 999;
+			}
 		}
 
 		/* run utf8_main */
@@ -1546,7 +1549,7 @@ static void SetMainTitle(void)
 	char version[50];
 	char buffer[100];
 
-	sscanf(build_version,"%s",version);
+	sscanf(build_version,"%49s",version);
 	snprintf(buffer, ARRAY_LENGTH(buffer), "%s %s", MAMEUINAME, GetVersionString());
 	win_set_window_text_utf8(hMain,buffer);
 }
@@ -4007,11 +4010,8 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				break;
 			case EN_CHANGE:
 				//put search routine here first, add a 200ms timer later.
-				if ((!_stricmp(buf, SEARCH_PROMPT) && !_stricmp(g_SearchText, "")) ||
-				    (!_stricmp(g_SearchText, SEARCH_PROMPT) && !_stricmp(buf, "")))
-				{
+				if ((!_stricmp(buf, SEARCH_PROMPT) && !_stricmp(g_SearchText, "")))
 					strcpy(g_SearchText, buf);
-				}
 				else
 				{
 					strcpy(g_SearchText, buf);
