@@ -9,7 +9,7 @@
 #undef wmain
 #define main mame_main
 #define wmain mame_main
-#include "windows/main.c"
+#include "windows/main.cpp"
 #undef main
 #undef wmain
 
