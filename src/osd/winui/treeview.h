@@ -81,6 +81,7 @@ void CreateResolutionFolders(int parent_index);
 
 #define MAX_EXTRA_FOLDERS 256
 #define MAX_EXTRA_SUBFOLDERS 256
+#define SHOW_UNAVAILABLE_FOLDER
 
 /* TreeView structures */
 enum
