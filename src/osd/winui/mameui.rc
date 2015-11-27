@@ -1,5 +1,6 @@
 // Microsoft Visual C++ generated resource script.
 //
+#include "newuires.h"
 #include "resource.h"
 
 // Generated Help ID header file
@@ -19,7 +20,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Englisch (USA) resources
+// English (USA) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 #ifdef _WIN32
@@ -226,7 +227,86 @@ BEGIN
     END
 END
 
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
 
+IDR_RUNTIME_MENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Load State...",              ID_FILE_LOADSTATE_NEWUI, GRAYED
+        MENUITEM "&Save State",                 ID_FILE_SAVESTATE, GRAYED
+        MENUITEM "S&ave State As...",           ID_FILE_SAVESTATE_AS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Save Sc&reenshot",            ID_FILE_SAVESCREENSHOT
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide Menubar",               ID_FILE_TOGGLEMENUBAR
+        MENUITEM "&Full Screen\tAlt+Enter",     ID_FILE_FULLSCREEN
+        MENUITEM "Partial Keyboard Emulation",  ID_FILE_UIACTIVE
+        MENUITEM "Show Tab Menu",               ID_FILE_OLDUI
+        MENUITEM "&Debugger...",                ID_FILE_DEBUGGER
+        MENUITEM "Show P&rofiler",              ID_FILE_PROFILER, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_FILE_EXIT_NEWUI
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Paste",                       ID_EDIT_PASTE
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Pause",                      ID_OPTIONS_PAUSE, GRAYED
+        MENUITEM "Soft &Reset",                 ID_OPTIONS_SOFTRESET
+        MENUITEM "Ha&rd Reset",                 ID_OPTIONS_HARDRESET
+        MENUITEM SEPARATOR
+        POPUP "&Keyboard"
+        BEGIN
+            MENUITEM "Emulated",                    ID_KEYBOARD_EMULATED
+            MENUITEM "Natural",                     ID_KEYBOARD_NATURAL
+            MENUITEM SEPARATOR
+            MENUITEM "Customise Emulated Keyboard...",     ID_KEYBOARD_CUSTOMIZE
+        END
+        MENUITEM "&Joysticks",                  ID_OPTIONS_JOYSTICKS, GRAYED
+        POPUP "&Video"
+        BEGIN
+		    MENUITEM SEPARATOR
+		    MENUITEM "Rotate 0 degrees",        ID_VIDEO_ROTATE_0
+		    MENUITEM "Rotate 90 degrees",       ID_VIDEO_ROTATE_90
+		    MENUITEM "Rotate 180 degrees",      ID_VIDEO_ROTATE_180
+		    MENUITEM "Rotate 270 degrees",      ID_VIDEO_ROTATE_270
+        END
+        MENUITEM "&Configuration...",           ID_OPTIONS_CONFIGURATION
+        MENUITEM "&DIP Switches...",            ID_OPTIONS_DIPSWITCHES
+        MENUITEM "&Miscellaneous Inputs...",    ID_OPTIONS_MISCINPUT
+        MENUITEM "&Analog Controls...",         ID_OPTIONS_ANALOGCONTROLS
+        MENUITEM SEPARATOR
+        POPUP "&Frameskip"
+        BEGIN
+            MENUITEM "Auto",                        ID_FRAMESKIP_AUTO
+        END
+        POPUP "Maximum &Speed"
+        BEGIN
+            MENUITEM "50%",                         ID_THROTTLE_50
+            MENUITEM "100%",                        ID_THROTTLE_100
+            MENUITEM "200%",                        ID_THROTTLE_200
+            MENUITEM "500%",                        ID_THROTTLE_500
+            MENUITEM "1000%",                       ID_THROTTLE_1000
+            MENUITEM "Unlimited",                   ID_THROTTLE_UNTHROTTLED
+        END
+        MENUITEM "Show &FPS",                   ID_OPTIONS_TOGGLEFPS
+    END
+    POPUP "&Media"
+    BEGIN
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "About This System...",        ID_HELP_ABOUTSYSTEM
+        MENUITEM "&About MAME...",              ID_HELP_ABOUT_NEWUI
+    END
+END
 
 
 #ifdef APSTUDIO_INVOKED
@@ -237,7 +317,8 @@ END
 
 1 TEXTINCLUDE MOVEABLE PURE
 BEGIN
-    "resource.h\0"
+    "resource.h\\r\n"
+    "newuires.h\0"
 END
 
 2 TEXTINCLUDE MOVEABLE PURE
@@ -578,6 +659,9 @@ BEGIN
     GROUPBOX        "Direct3D",IDC_STATIC,113,128,102,57
     CONTROL         "Use Bilinear filtering",IDC_D3D_FILTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,138,85,10,0,HIDC_D3D_FILTER
 
+//    GROUPBOX        "Version",IDC_STATIC,119,150,90,28
+//    COMBOBOX        IDC_D3D_VERSION,125,160,78,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0,HIDC_D3D_VERSION
+
     GROUPBOX        "DirectDraw",IDC_STATIC,113,187,102,26
     CONTROL         "Stretch using hardware",IDC_HWSTRETCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,197,85,10,0,HIDC_HWSTRETCH
 
@@ -593,21 +677,23 @@ BEGIN
     ICON            IDI_SOUNDTAB,IDC_STATIC,20,10,20,20
     LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,52,9,161,25,SS_NOPREFIX
 
-    CONTROL         "Use samples",IDC_SAMPLES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,40,55,10,0,HIDC_SAMPLES
+    GROUPBOX        "",IDC_STATIC,4,40,211,155
 
-    GROUPBOX        "Sound mode",IDC_SOUNDTEXT,4,53,100,28
-    COMBOBOX        IDC_SOUND_MODE,10,63,88,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0
+    GROUPBOX        "Soundmode",IDC_STATIC,60,50,100,28
+    COMBOBOX        IDC_SOUND_MODE,66,60,88,50,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,0,HIDC_VIDEO_MODE
 
-    GROUPBOX        "Sample rate",IDC_RATETEXT,4,84,100,28
-    COMBOBOX        IDC_SAMPLERATE,10,94,88,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0,HIDC_SAMPLERATE
+    CONTROL         "Use samples",IDC_SAMPLES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,60,84,55,10,0,HIDC_SAMPLES
 
-    GROUPBOX        "Volume attenuation",IDC_STATIC,4,115,100,28
-    CONTROL         "Slider1",IDC_VOLUME,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,127,68,10,0,HIDC_VOLUME
-    RTEXT           "0dB",IDC_VOLUMEDISP,76,125,20,10,SS_CENTERIMAGE
+    GROUPBOX        "Sample rate",IDC_RATETEXT,60,96,100,28
+    COMBOBOX        IDC_SAMPLERATE,66,106,88,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0,HIDC_SAMPLERATE
 
-    GROUPBOX        "Audio latency",IDC_AUDIO_LATENCY_TEXT,4,146,100,28
-    CONTROL         "Slider1",IDC_AUDIO_LATENCY,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,158,68,10,0,HIDC_AUDIO_LATENCY
-    RTEXT           "1/5",IDC_AUDIO_LATENCY_DISP,76,156,20,10,SS_CENTERIMAGE
+    GROUPBOX        "Volume attenuation",IDC_VOLUMETEXT,60,127,100,28
+    CONTROL         "Slider1",IDC_VOLUME,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,66,139,68,10,0,HIDC_VOLUME
+    RTEXT           "0dB",IDC_VOLUMEDISP,132,138,20,11,SS_CENTERIMAGE
+
+    GROUPBOX        "Audio latency",IDC_AUDIO_LATENCY_TEXT,60,158,100,28
+    CONTROL         "Slider1",IDC_AUDIO_LATENCY,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,66,170,68,10,0,HIDC_AUDIO_LATENCY
+    RTEXT           "1/5",IDC_AUDIO_LATENCY_DISP,132,169,20,11,SS_CENTERIMAGE
 
     PUSHBUTTON      "Reset",IDC_PROP_RESET,4,222,97,14,0,0,HIDC_PROP_RESET
     PUSHBUTTON      "Restore Default Settings",IDC_USE_DEFAULT,118,222,97,14,0,0,HIDC_USE_DEFAULT
@@ -804,6 +890,8 @@ BEGIN
     PUSHBUTTON      "Reset",IDC_PROP_RESET,4,222,97,14,0,0,HIDC_PROP_RESET
     PUSHBUTTON      "Restore Default Settings",IDC_USE_DEFAULT,118,222,97,14,
                     0,0,HIDC_USE_DEFAULT
+    CONTROL         "Show Menu",IDC_SHOW_MENU,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,119,160,86,10,0
 END
 
 IDD_PROP_VECTOR DIALOGEX 0, 0, 220, 240
@@ -839,10 +927,8 @@ CLASS "MainClass"
 FONT 8, "Verdana"
 BEGIN
     CONTROL         "",IDC_DIVIDER,"Static",SS_ETCHEDHORZ,0,5,304,1
-    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS |
-                    TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS |
-                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER |
-                    WS_TABSTOP,5,28,48,172
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS |
+                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | WS_TABSTOP,5,28,48,172
     CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE |
                     LVS_SHAREIMAGELISTS | LVS_OWNERDRAWFIXED | WS_BORDER | WS_TABSTOP,65,28,42,172
     GROUPBOX        "",IDC_SPLITTER,55,28,8,172,BS_NOTIFY | NOT WS_VISIBLE

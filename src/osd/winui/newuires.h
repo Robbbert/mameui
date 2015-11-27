@@ -44,6 +44,7 @@
 #define ID_HELP_ABOUTSYSTEM             3140
 #define ID_FILE_OLDUI                   3141
 #define ID_FILE_UIACTIVE                3142
+#define IDC_SHOW_MENU                   3143
 #define IDI_ICON_CART                   3200
 #define IDI_ICON_HARD                   3201
 #define IDI_ICON_CASS                   3202
@@ -57,7 +58,7 @@
 //
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        3143
+#define _APS_NEXT_RESOURCE_VALUE        3144
 #define _APS_NEXT_COMMAND_VALUE         40008
 #define _APS_NEXT_CONTROL_VALUE         3306
 #define _APS_NEXT_SYMED_VALUE           101
