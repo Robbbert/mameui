@@ -30,6 +30,7 @@ function maintargetosdoptions(_target,_subtarget)
 
 -- needs same resources as messui, because dropdown menus are in mameui.rc
 	override_resources = true;
+	rctarget = _subtarget;
 	local rcfile = MAME_DIR .. "src/osd/winui/" .. _subtarget .. ".rc"
 	local uifile = MAME_DIR .. "src/osd/winui/" .. _subtarget .. "ui.rc"
 

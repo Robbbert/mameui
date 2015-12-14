@@ -174,7 +174,8 @@ end
 	}
 	
 	override_resources = false;
-	
+	rctarget = _subtarget;
+
 	maintargetosdoptions(_target,_subtarget)
 
 	includedirs {
@@ -207,7 +208,6 @@ end
 		}
 
 	end
-	local rctarget = _subtarget
 
 	if _OPTIONS["targetos"]=="windows" and (not override_resources) then
 		local rcfile = MAME_DIR .. "src/" .. _target .. "/osd/".._OPTIONS["osd"].."/"  .. _subtarget .. "/" .. rctarget ..".rc"

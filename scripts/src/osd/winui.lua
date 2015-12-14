@@ -53,6 +53,7 @@ function maintargetosdoptions(_target,_subtarget)
 -- Local file gives correct icon in mame instance inside of mameui
 -- Local file must #include mameui.rc
 	override_resources = true;
+	rctarget = _target;
 	local rcfile = MAME_DIR .. "src/osd/winui/" .. _target .. ".rc"
 	local uifile = MAME_DIR .. "src/osd/winui/" .. _target .. "ui.rc"
 
