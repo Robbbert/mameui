@@ -710,7 +710,7 @@ int load_driver_mameinfo(const game_driver *drv, char *buffer, int bufsize, int 
 		for (const char *samplename = sampiter.first(); samplename; samplename = sampiter.next())
 		{
 			// filter out duplicates
-			if (already_printed.insert(samplename).second)
+			if (!already_printed.insert(samplename).second)
 				continue;
 
 			// output the sample name
