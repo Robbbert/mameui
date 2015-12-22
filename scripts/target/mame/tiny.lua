@@ -43,6 +43,7 @@ SOUNDS["HC55516"] = true
 SOUNDS["YM3812"] = true
 SOUNDS["CEM3394"] = true
 SOUNDS["VOTRAX"] = true
+SOUNDS["VLM5030"] = true
 
 --------------------------------------------------
 -- specify available video cores
