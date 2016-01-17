@@ -470,7 +470,7 @@ media_auditor::summary media_auditor::winui_summarize(const char *name, std::str
 					if (shared_device == NULL)
 						strcatprintf(*output, "NOT FOUND\n");
 					else
-						strcatprintf(*output, "NOT FOUND (%s)\n", shared_device->shortname());
+						strcatprintf(*output, "NOT FOUND (%s)\n", shared_device->shortname().c_str());
 				}
 				break;
 
