@@ -152,7 +152,7 @@ public:
 	// owned object helpers
 	device_t *first_subdevice() const { return m_subdevice_list.first(); }
 	std::string subtag(const char *tag) const;
-	std::string siblingtag(const char *tag) const { return (this != nullptr && m_owner != nullptr) ? m_owner->subtag(tag) : std::string(tag); }
+	std::string siblingtag(const char *tag) const { return (m_owner != nullptr) ? m_owner->subtag(tag) : std::string(tag); }
 	memory_region *memregion(const char *tag) const;
 	memory_share *memshare(const char *tag) const;
 	memory_bank *membank(const char *tag) const;
@@ -590,10 +590,6 @@ private:
 
 inline device_t *device_t::subdevice(const char *tag) const
 {
-	// safety first
-	if (this == nullptr)
-		return nullptr;
-
 	// empty string or NULL means this device
 	if (tag == nullptr || *tag == 0)
 		return const_cast<device_t *>(this);
@@ -611,10 +607,6 @@ inline device_t *device_t::subdevice(const char *tag) const
 
 inline device_t *device_t::siblingdevice(const char *tag) const
 {
-	// safety first
-	if (this == nullptr)
-		return nullptr;
-
 	// empty string or NULL means this device
 	if (tag == nullptr || *tag == 0)
 		return const_cast<device_t *>(this);
