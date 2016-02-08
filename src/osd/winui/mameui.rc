@@ -838,10 +838,6 @@ BEGIN
                     WS_TABSTOP,10,40,86,10,0,HIDC_CHEAT
     CONTROL         "Sleep when possible",IDC_SLEEP,"Button",BS_AUTOCHECKBOX |
                     WS_TABSTOP,10,52,86,10,0,HIDC_SLEEP
-
-    CONTROL         "Skip game info",IDC_SKIP_GAME_INFO,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,10,64,96,10,0,
-                    HIDC_SKIP_GAME_INFO
     CONTROL         "Save game state on exit",IDC_ENABLE_AUTOSAVE,"Button",
                     BS_AUTOCHECKBOX | WS_TABSTOP,10,76,96,10,0,
                     HIDC_ENABLE_AUTOSAVE
