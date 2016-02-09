@@ -1064,14 +1064,14 @@ ROM_START( ngalsumr )
 	ROM_LOAD( "10.3v", 0x04000, 0x02000, CRC(31211088) SHA1(960b781c420602be3de66565a030cf5ebdcc2ffb) )
 
 	ROM_REGION( 0x2000, "subrom", 0 )
-	ROM_LOAD( "7.3p",  0x0000, 0x02000, BAD_DUMP CRC(20c55a25) SHA1(9dc88cb6c016b594264f7272d4fd5f30567e7c5d) ) // either encrypted or bit-rotted.
+	ROM_LOAD( "7.3p",  0x0000, 0x02000, CRC(20c55a25) SHA1(9dc88cb6c016b594264f7272d4fd5f30567e7c5d) )
 
 	ROM_REGION( 0xc000, "samples", 0 )
 	ROM_LOAD( "1s.ic7", 0x00000, 0x04000, CRC(47ad8a0f) SHA1(e3b1e13f0a5c613bd205338683bef8d005b54830) )
 	ROM_LOAD( "2s.ic6", 0x04000, 0x04000, CRC(ca2a735f) SHA1(5980525a67fb0ffbfa04b82d805eee2463236ce3) )
 	ROM_LOAD( "3s.ic5", 0x08000, 0x04000, CRC(5cf15267) SHA1(72e4b2aa59a50af6b1b25d5279b3b125bfe06d86) )
 
-	ROM_REGION( 0x20000, "gfx", 0 )
+	ROM_REGION( 0x20000, "gfx", ROMREGION_ERASEFF )
 	ROM_LOAD( "1.3a",  0x00000, 0x04000, CRC(9626f812) SHA1(ca7162811a0ba05dfaa2aa8cc93a2e898b326e9e) )
 	ROM_LOAD( "2.3c",  0x04000, 0x04000, CRC(0d59cf7a) SHA1(600bc70d29853fb936f8adaef048d925cbae0ce9) )
 	ROM_LOAD( "3.3d",  0x08000, 0x04000, CRC(2fb2ec0b) SHA1(2f1735e33906783b8c0b283455a2a079431e6f11) )
@@ -1094,17 +1094,30 @@ DRIVER_INIT_MEMBER(nightgal_state,royalqn)
 
 DRIVER_INIT_MEMBER(nightgal_state,ngalsumr)
 {
-	//UINT8 *ROM = memregion("subrom")->base();
+#if 0
+	UINT8 *ROM = memregion("subrom")->base();
+
+//	ROM[0x165a] = 0x02; // illegal
+//	ROM[0x165b] = 0x02; // sts xx xx xx
+//	ROM[0x165c] = 0x02; 
+//	ROM[0x165d] = 0x02; 
+//	ROM[0x165e] = 0x02; // sts xx xx xx
+//	ROM[0x165f] = 0x02;
+//	ROM[0x1660] = 0x02;
+//	ROM[0x1661] = 0x02; // sts xx xx xx
+	ROM[0x1662] = 0x20;
+//	ROM[0x1663] = 0x02;
 
 	/* patch blantantly wrong ROM checks */
-	//ROM[0xd6ce] = 0x02;
-	//ROM[0xd6cf] = 0x02;
+	ROM[0x16ce] = 0x02;
+	ROM[0x16cf] = 0x02;
 	// adcx $05 converted to 0x04 for debug purposes
 	//ROM[0x1782] = 0x04;
 	//ROM[0xd655] = 0x20;
 	//ROM[0xd3f9] = 0x02;
 	//ROM[0xd3fa] = 0x02;
 	//ROM[0xd3a0] = 0x02;
+#endif
 }
 
 /* Type 1 HW */
@@ -1116,4 +1129,4 @@ GAME( 1984, royalqn,  0,        royalqn, sexygal, nightgal_state, royalqn, ROT0,
 GAME( 1985, sexygal,  0,        sexygal, sexygal, driver_device,  0,       ROT0, "Nichibutsu",   "Sexy Gal (Japan 850501 SXG 1-00)", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_SUPPORTS_SAVE )
 GAME( 1985, sweetgal, sexygal,  sexygal, sexygal, driver_device,  0,       ROT0, "Nichibutsu",   "Sweet Gal (Japan 850510 SWG 1-02)", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_SUPPORTS_SAVE )
 /* Type 3 HW */
-GAME( 1985, ngalsumr, 0,        ngalsumr,sexygal, nightgal_state,  ngalsumr,ROT0, "Nichibutsu",   "Night Gal Summer", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_SUPPORTS_SAVE )
+GAME( 1985, ngalsumr, 0,        ngalsumr,sexygal, nightgal_state,  ngalsumr,ROT0, "Nichibutsu",   "Night Gal Summer (Japan 850702 NGS 0-01)", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_SUPPORTS_SAVE )
