@@ -232,7 +232,7 @@ static struct ComboBoxVideo
 {
 	{ TEXT("Auto"),                 "auto"    },
 	{ TEXT("GDI"),                  "gdi"     },
-	{ TEXT("DirectDraw"),           "ddraw"   },
+//	{ TEXT("DirectDraw"),           "ddraw"   }, // removed 20160217
 	{ TEXT("Direct3D"),             "d3d"     },
 	{ TEXT("BGFX"),                 "bgfx"    },
 	{ TEXT("OpenGL"),               "opengl"  },
@@ -1570,7 +1570,7 @@ static void SetPropEnabledControls(HWND hWnd)
 	// auto is a reserved word
 	bool autov = (core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "auto")==0);
 	bool d3d = (core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "d3d")==0) | autov;
-	bool ddraw = (core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "ddraw")==0) | autov;
+	bool ddraw = 0;//(core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "ddraw")==0) | autov;
 	//bool gdi = (core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "gdi")==0) | autov;
 
 	in_window = pCurrentOpts.bool_value(OSDOPTION_WINDOW);
