@@ -1101,7 +1101,7 @@ void video_manager::recompute_speed(const attotime &emutime)
 	}
 
 	// if we're past the "time-to-execute" requested, signal an exit
-	if (m_seconds_to_run != 0 && emutime.seconds() >= m_seconds_to_run)
+	if (m_seconds_to_run > 1 && emutime.seconds() >= m_seconds_to_run)
 	{
 		screen_device *screen = machine().first_screen();
 		if (screen != nullptr)
