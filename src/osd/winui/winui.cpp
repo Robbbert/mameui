@@ -5255,11 +5255,10 @@ static void MamePlayBackGame()
 		}
 
 		// check for game name embedded in .inp header
-		int i;
 		inp_header header;
 
 		/* read the header and verify that it is a modern version; if not, print an error */
-		if (header.read(pPlayBack))
+		if (!header.read(pPlayBack))
 		{
 			MameMessageBox("Input file is corrupt or invalid (missing header)");
 			return;
@@ -5271,9 +5270,10 @@ static void MamePlayBackGame()
 		}
 
 		std::string const sysname = header.get_sysname();
-		for (i = 0; i < driver_list::total(); i++) // find game and play it
+		for (int i = 0; i < driver_list::total(); i++) // find game and play it
 		{
-			if (memcmp(driver_list::driver(i).name, sysname.c_str(), strlen(driver_list::driver(i).name + 1)) != 0)
+			if (driver_list::driver(i).name == sysname)
+			//if (memcmp(driver_list::driver(i).name, sysname.c_str(), strlen(driver_list::driver(i).name + 1)) != 0)
 			{
 				nGame = i;
 				break;
