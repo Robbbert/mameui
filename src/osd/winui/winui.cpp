@@ -1141,9 +1141,9 @@ HICON LoadIconFromFile(const char *iconname)
 	char tmpIcoName[MAX_PATH];
 	const char* sDirName = GetImgDir();
 	PBYTE bufferPtr;
-	zip_error ziperr;
-	zip_file *zip;
-	const zip_file_header *entry;
+	zip_file::error ziperr;
+	zip_file::ptr zip;
+	const zip_file::file_header *entry;
 
 	sprintf(tmpStr, "%s/%s.ico", GetIconsDir(), iconname);
 	if (stat(tmpStr, &file_stat) != 0
@@ -1156,10 +1156,10 @@ HICON LoadIconFromFile(const char *iconname)
 			sprintf(tmpStr, "%s/icons.zip", GetIconsDir());
 			sprintf(tmpIcoName, "%s.ico", iconname);
 
-			ziperr = zip_file_open(tmpStr, &zip);
-			if (ziperr == ZIPERR_NONE)
+			ziperr = zip_file::open(tmpStr, zip);
+			if (ziperr == zip_file::error::NONE)
 			{
-				entry = zip_file_first_file(zip);
+				entry = zip->first_file();
 				while(!hIcon && entry)
 				{
 					if (!core_stricmp(entry->filename, tmpIcoName))
@@ -1167,17 +1167,17 @@ HICON LoadIconFromFile(const char *iconname)
 						bufferPtr = (PBYTE)malloc(entry->uncompressed_length);
 						if (bufferPtr)
 						{
-							ziperr = zip_file_decompress(zip, bufferPtr, entry->uncompressed_length);
-							if (ziperr == ZIPERR_NONE)
+							ziperr = zip->decompress(bufferPtr, entry->uncompressed_length);
+							if (ziperr == zip_file::error::NONE)
 							{
 								hIcon = FormatICOInMemoryToHICON(bufferPtr, entry->uncompressed_length);
 							}
 							free(bufferPtr);
 						}
 					}
-					entry = zip_file_next_file(zip);
+					entry = zip->next_file();
 				}
-				zip_file_close(zip);
+				zip.reset();
 			}
 		}
 	}
@@ -5229,7 +5229,7 @@ static void MamePlayBackGame()
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_INPUT_FILES))
 	{
-		file_error fileerr;
+		osd_file::error fileerr;
 		char drive[_MAX_DRIVE];
 		char dir[_MAX_DIR];
 		char bare_fname[_MAX_FNAME];
@@ -5248,7 +5248,7 @@ static void MamePlayBackGame()
 
 		emu_file pPlayBack(MameUIGlobal().input_directory(), OPEN_FLAG_READ);
 		fileerr = pPlayBack.open(fname);
-		if (fileerr != FILERR_NONE)
+		if (fileerr != osd_file::error::NONE)
 		{
 			MameMessageBox("Could not open '%s' as a valid input file.", filename);
 			return;
@@ -5256,29 +5256,24 @@ static void MamePlayBackGame()
 
 		// check for game name embedded in .inp header
 		int i;
-		inp_header ihdr;
+		inp_header header;
 
 		/* read the header and verify that it is a modern version; if not, print an error */
-		if (pPlayBack.read(&ihdr, sizeof(inp_header)) != sizeof(inp_header))
+		if (header.read(pPlayBack))
 		{
 			MameMessageBox("Input file is corrupt or invalid (missing header)");
 			return;
 		}
-
-		if (memcmp("MAMEINP\0", ihdr.header, 8) != 0)
+		if ((!header.check_magic()) || (header.get_majversion() != inp_header::MAJVERSION))
 		{
 			MameMessageBox("Input file invalid or in an older, unsupported format");
 			return;
 		}
-		if (ihdr.majversion != INP_HEADER_MAJVERSION)
-		{
-			MameMessageBox("Input file format version mismatch");
-			return;
-		}
 
+		std::string const sysname = header.get_sysname();
 		for (i = 0; i < driver_list::total(); i++) // find game and play it
 		{
-			if (strcmp(driver_list::driver(i).name, ihdr.gamename) == 0)
+			if (memcmp(driver_list::driver(i).name, sysname.c_str(), strlen(driver_list::driver(i).name + 1)) != 0)
 			{
 				nGame = i;
 				break;
@@ -5348,8 +5343,8 @@ static void MameLoadState()
 		}
 #endif // MESS
 		emu_file pSaveState(MameUIGlobal().state_directory(), OPEN_FLAG_READ);
-		file_error fileerr = pSaveState.open(state_fname);
-		if (fileerr != FILERR_NONE)
+		osd_file::error fileerr = pSaveState.open(state_fname);
+		if (fileerr != osd_file::error::NONE)
 		{
 			MameMessageBox("Could not open '%s' as a valid savestate file.", filename);
 			return;
