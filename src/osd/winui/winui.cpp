@@ -5218,12 +5218,10 @@ static void CLIB_DECL ATTR_PRINTF(1,2) MameMessageBox(const char *fmt, ...)
 
 static void MamePlayBackGame()
 {
-	int nGame;
 	char filename[MAX_PATH];
-
 	*filename = 0;
 
-	nGame = Picker_GetSelectedItem(hwndList);
+	int nGame = Picker_GetSelectedItem(hwndList);
 	if (nGame != -1)
 		strcpy(filename, driver_list::driver(nGame).name);
 
@@ -5234,7 +5232,6 @@ static void MamePlayBackGame()
 		char dir[_MAX_DIR];
 		char bare_fname[_MAX_FNAME];
 		char ext[_MAX_EXT];
-
 		char path[MAX_PATH];
 		char fname[MAX_PATH];
 		play_options playopts;
@@ -5270,15 +5267,21 @@ static void MamePlayBackGame()
 		}
 
 		std::string const sysname = header.get_sysname();
+		nGame = -1;
 		for (int i = 0; i < driver_list::total(); i++) // find game and play it
 		{
 			if (driver_list::driver(i).name == sysname)
-			//if (memcmp(driver_list::driver(i).name, sysname.c_str(), strlen(driver_list::driver(i).name + 1)) != 0)
 			{
 				nGame = i;
 				break;
 			}
 		}
+		if (nGame == -1)
+		{
+			MameMessageBox("Game \"%s\" cannot be found", sysname.c_str());
+			return;
+		}
+
 		memset(&playopts, 0, sizeof(playopts));
 		playopts.playback = fname;
 		MamePlayGameWithOptions(nGame, &playopts);
