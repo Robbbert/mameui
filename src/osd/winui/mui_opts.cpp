@@ -1326,6 +1326,28 @@ void SetPcbDir(const char *path)
 	settings.set_value(MUIOPTION_PCB_DIRECTORY, path, OPTION_PRIORITY_CMDLINE,error_string);
 }
 
+const char* GetPluginsDir(void)
+{
+	return global.value(OPTION_PLUGINSPATH);
+}
+
+void SetPluginsDir(const char* path)
+{
+	std::string error_string;
+	global.set_value(OPTION_PLUGINSPATH, path, OPTION_PRIORITY_CMDLINE,error_string);
+}
+
+const char* GetLangDir(void)
+{
+	return global.value(OPTION_LANGUAGEPATH);
+}
+
+void SetLangDir(const char* path)
+{
+	std::string error_string;
+	global.set_value(OPTION_LANGUAGEPATH, path, OPTION_PRIORITY_CMDLINE,error_string);
+}
+
 const char * GetDiffDir(void)
 {
 	return global.value(OPTION_DIFF_DIRECTORY);

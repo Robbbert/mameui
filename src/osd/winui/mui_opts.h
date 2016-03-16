@@ -281,6 +281,12 @@ void SetControlPanelDir(const char *path);
 const char * GetPcbDir(void);
 void SetPcbDir(const char *path);
 
+const char* GetPluginsDir(void);
+void SetPluginsDir(const char* path);
+
+const char* GetLangDir(void);
+void SetLangDir(const char* path);
+
 const char* GetDiffDir(void);
 void SetDiffDir(const char* path);
 
