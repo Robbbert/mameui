@@ -19,9 +19,6 @@
 #define DIRLIST_NEWENTRYTEXT "<               >"
 
 #include "mui_opts.h"
-#ifdef MESS
-#include "optionsms.h"
-#endif
 
 typedef struct
 {
