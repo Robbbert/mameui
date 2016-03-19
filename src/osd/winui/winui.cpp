@@ -1142,12 +1142,10 @@ HICON LoadIconFromFile(const char *iconname)
 	PBYTE bufferPtr;
 	util::archive_file::error ziperr;
 	util::archive_file::ptr zip;
-	//const util::archive_file::file_header *entry;
 	int res = 0;
 
 	sprintf(tmpStr, "%s/%s.ico", GetIconsDir(), iconname);
-	if (stat(tmpStr, &file_stat) != 0
-	|| (hIcon = win_extract_icon_utf8(hInst, tmpStr, 0)) == 0)
+	if (stat(tmpStr, &file_stat) != 0 || (hIcon = win_extract_icon_utf8(hInst, tmpStr, 0)) == 0)
 	{
 		sprintf(tmpStr, "%s/%s.ico", sDirName, iconname);
 		if (stat(tmpStr, &file_stat) != 0
@@ -1159,25 +1157,19 @@ HICON LoadIconFromFile(const char *iconname)
 			ziperr = util::archive_file::open_zip(tmpStr, zip);
 			if (ziperr == util::archive_file::error::NONE)
 			{
-				//entry = zip->first_file();
 				res = zip->search(tmpIcoName);
 				if (res >= 0)
-		//		while(!hIcon && entry)
 				{
-		//			if (!core_stricmp(entry->filename, tmpIcoName))
-		//			{
-						bufferPtr = (PBYTE)malloc(zip->current_uncompressed_length());
-						if (bufferPtr)
+					bufferPtr = (PBYTE)malloc(zip->current_uncompressed_length());
+					if (bufferPtr)
+					{
+						ziperr = zip->decompress(bufferPtr, zip->current_uncompressed_length());
+						if (ziperr == util::archive_file::error::NONE)
 						{
-							ziperr = zip->decompress(bufferPtr, zip->current_uncompressed_length());
-							if (ziperr == util::archive_file::error::NONE)
-							{
-								hIcon = FormatICOInMemoryToHICON(bufferPtr, zip->current_uncompressed_length());
-							}
-							free(bufferPtr);
+							hIcon = FormatICOInMemoryToHICON(bufferPtr, zip->current_uncompressed_length());
 						}
-		//			}
-		//			entry = zip->next_file();
+						free(bufferPtr);
+					}
 				}
 				zip.reset();
 			}
