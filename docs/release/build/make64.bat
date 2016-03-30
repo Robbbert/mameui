@@ -4,9 +4,10 @@ set minpath=%MINGW64%\bin
 set oldpath=%Path%
 set Path=%minpath%;%oldpath%
 echo.|time
-%MINGW64%\bin\make PTR64=1 OSD=winui NO_SYMBOLS=1 %1 %2 %3 %4
+%MINGW64%\bin\make PTR64=1 OSD=winui SYMBOLS=0 NO_SYMBOLS=1 %1 %2 %3 %4
 echo.|time
 set Path=%oldpath%
 set oldpath=
+if exist mameui64.exe %minpath%\strip -s mameui64.exe
 set minpath=
 

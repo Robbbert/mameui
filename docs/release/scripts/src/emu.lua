@@ -25,22 +25,19 @@ includedirs {
 	MAME_DIR .. "src/devices", -- till deps are fixed
 	MAME_DIR .. "src/lib",
 	MAME_DIR .. "src/lib/util",
+	MAME_DIR .. "3rdparty/rapidjson/include",
 	MAME_DIR .. "3rdparty",
 	GEN_DIR  .. "emu",
 	GEN_DIR  .. "emu/layout",
 }
-if _OPTIONS["with-bundled-expat"] then
-	includedirs {
-		MAME_DIR .. "3rdparty/expat/lib",
-	}
-end
-if _OPTIONS["with-bundled-lua"] then
-	includedirs {
-		MAME_DIR .. "3rdparty/lua/src",
-	}
-end
 
-if (_OPTIONS["targetos"] == "windows") then
+includedirs {
+	ext_includedir("expat"),
+	ext_includedir("lua"),
+	ext_includedir("flac"),
+}
+
+if (_OPTIONS["targetos"] == "windows" and _OPTIONS["osd"] ~= "osdmini") then
 	defines {
 		"UI_WINDOWS",
 	}
@@ -87,6 +84,7 @@ files {
 	MAME_DIR .. "src/emu/devfind.h",
 	MAME_DIR .. "src/emu/device.cpp",
 	MAME_DIR .. "src/emu/device.h",
+	MAME_DIR .. "src/emu/device.ipp",
 	MAME_DIR .. "src/emu/didisasm.cpp",
 	MAME_DIR .. "src/emu/didisasm.h",
 	MAME_DIR .. "src/emu/diexec.cpp",
@@ -157,6 +155,7 @@ files {
 	MAME_DIR .. "src/emu/mame.h",
 	MAME_DIR .. "src/emu/machine.cpp",
 	MAME_DIR .. "src/emu/machine.h",
+	MAME_DIR .. "src/emu/machine.ipp",
 	MAME_DIR .. "src/emu/mconfig.cpp",
 	MAME_DIR .. "src/emu/mconfig.h",
 	MAME_DIR .. "src/emu/memarray.cpp",
@@ -167,6 +166,8 @@ files {
 	MAME_DIR .. "src/emu/network.h",
 	MAME_DIR .. "src/emu/parameters.cpp",
 	MAME_DIR .. "src/emu/parameters.h",
+	MAME_DIR .. "src/emu/pluginopts.cpp",
+	MAME_DIR .. "src/emu/pluginopts.h",
 	MAME_DIR .. "src/emu/output.cpp",
 	MAME_DIR .. "src/emu/output.h",
 	MAME_DIR .. "src/emu/render.cpp",
@@ -279,7 +280,7 @@ files {
 	MAME_DIR .. "src/emu/ui/starimg.h",
 	MAME_DIR .. "src/emu/ui/toolbar.h",
 	MAME_DIR .. "src/emu/ui/utils.cpp",
-	MAME_DIR .. "src/emu/ui/utils.h",	
+	MAME_DIR .. "src/emu/ui/utils.h",
 	MAME_DIR .. "src/emu/validity.cpp",
 	MAME_DIR .. "src/emu/validity.h",
 	MAME_DIR .. "src/emu/video.cpp",
@@ -411,8 +412,11 @@ dependency {
 }
 
 custombuildtask {
-	{ MAME_DIR .. "src/emu/uismall.png"         , GEN_DIR .. "emu/uismall.fh",  {  MAME_DIR.. "scripts/build/png2bdc.py",  MAME_DIR .. "scripts/build/file2str.py" }, {"@echo Converting uismall.png...", PYTHON .. " $(1) $(<) temp.bdc",     PYTHON .. " $(2) temp.bdc $(@) font_uismall UINT8" }},
-	{ MAME_DIR .. "src/emu/ui/uicmd14.png"      , GEN_DIR .. "emu/ui/uicmd14.fh",  {  MAME_DIR.. "scripts/build/png2bdc.py",  MAME_DIR .. "scripts/build/file2str.py" }, {"@echo Converting uicmd14.png...", PYTHON .. " $(1) $(<) temp_cmd.bdc", PYTHON .. " $(2) temp_cmd.bdc $(@) font_uicmd14 UINT8" }},
+	{ MAME_DIR .. "scripts/font/NotoSans-Bold.bdc", GEN_DIR .. "emu/uismall.fh",     {  MAME_DIR .. "scripts/build/file2str.py" }, {"@echo Converting NotoSans-Bold.bdc...", PYTHON .. " $(1) $(<) $(@) font_uismall UINT8" }},
+}
+
+custombuildtask {
+	{ MAME_DIR .. "src/emu/ui/uicmd14.png"        , GEN_DIR .. "emu/ui/uicmd14.fh",  {  MAME_DIR.. "scripts/build/png2bdc.py",  MAME_DIR .. "scripts/build/file2str.py" }, {"@echo Converting uicmd14.png...", PYTHON .. " $(1) $(<) temp_cmd.bdc", PYTHON .. " $(2) temp_cmd.bdc $(@) font_uicmd14 UINT8" }},
 
 	layoutbuildtask("emu/layout", "dualhovu"),
 	layoutbuildtask("emu/layout", "dualhsxs"),

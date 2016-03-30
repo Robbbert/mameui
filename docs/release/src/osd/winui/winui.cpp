@@ -852,7 +852,7 @@ public:
 			char buffer[1024];
 
 			// if we are in fullscreen mode, go to windowed mode
-			if ((video_config.windowed == 0) && (win_window_list != NULL))
+			if ((video_config.windowed == 0) && (win_window_list ))
 				winwindow_toggle_full_screen();
 
 			vsnprintf(buffer, ARRAY_LENGTH(buffer), msg, args);printf("%s\n",buffer);
@@ -863,7 +863,6 @@ public:
 	}
 };
 
-#if 0
 static std::wstring s2ws(const std::string& s)
 {
 	int len;
@@ -875,7 +874,7 @@ static std::wstring s2ws(const std::string& s)
 	delete[] buf;
 	return r;
 }
-#endif
+
 
 /***************************************************************************
     External functions
@@ -898,19 +897,19 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	mame_opts.set_system_name(driver_list::driver(nGameIndex).name);
 
 	// set any specified play options
-	if (playopts != NULL)
+	if (playopts)
 	{
-		if (playopts->record != NULL)
+		if (playopts->record)
 			mame_opts.set_value(OPTION_RECORD, playopts->record, OPTION_PRIORITY_CMDLINE,error_string);
-		if (playopts->playback != NULL)
+		if (playopts->playback)
 			mame_opts.set_value(OPTION_PLAYBACK, playopts->playback, OPTION_PRIORITY_CMDLINE,error_string);
-		if (playopts->state != NULL)
+		if (playopts->state)
 			mame_opts.set_value(OPTION_STATE, playopts->state, OPTION_PRIORITY_CMDLINE,error_string);
-		if (playopts->wavwrite != NULL)
+		if (playopts->wavwrite)
 			mame_opts.set_value(OPTION_WAVWRITE, playopts->wavwrite, OPTION_PRIORITY_CMDLINE,error_string);
-		if (playopts->mngwrite != NULL)
+		if (playopts->mngwrite)
 			mame_opts.set_value(OPTION_MNGWRITE, playopts->mngwrite, OPTION_PRIORITY_CMDLINE,error_string);
-		if (playopts->aviwrite != NULL)
+		if (playopts->aviwrite)
 			mame_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE,error_string);
 	}
 
@@ -1141,13 +1140,12 @@ HICON LoadIconFromFile(const char *iconname)
 	char tmpIcoName[MAX_PATH];
 	const char* sDirName = GetImgDir();
 	PBYTE bufferPtr;
-	zip_error ziperr;
-	zip_file *zip;
-	const zip_file_header *entry;
+	util::archive_file::error ziperr;
+	util::archive_file::ptr zip;
+	int res = 0;
 
 	sprintf(tmpStr, "%s/%s.ico", GetIconsDir(), iconname);
-	if (stat(tmpStr, &file_stat) != 0
-	|| (hIcon = win_extract_icon_utf8(hInst, tmpStr, 0)) == 0)
+	if (stat(tmpStr, &file_stat) != 0 || (hIcon = win_extract_icon_utf8(hInst, tmpStr, 0)) == 0)
 	{
 		sprintf(tmpStr, "%s/%s.ico", sDirName, iconname);
 		if (stat(tmpStr, &file_stat) != 0
@@ -1156,28 +1154,24 @@ HICON LoadIconFromFile(const char *iconname)
 			sprintf(tmpStr, "%s/icons.zip", GetIconsDir());
 			sprintf(tmpIcoName, "%s.ico", iconname);
 
-			ziperr = zip_file_open(tmpStr, &zip);
-			if (ziperr == ZIPERR_NONE)
+			ziperr = util::archive_file::open_zip(tmpStr, zip);
+			if (ziperr == util::archive_file::error::NONE)
 			{
-				entry = zip_file_first_file(zip);
-				while(!hIcon && entry)
+				res = zip->search(tmpIcoName, false);
+				if (res >= 0)
 				{
-					if (!core_stricmp(entry->filename, tmpIcoName))
+					bufferPtr = (PBYTE)malloc(zip->current_uncompressed_length());
+					if (bufferPtr)
 					{
-						bufferPtr = (PBYTE)malloc(entry->uncompressed_length);
-						if (bufferPtr)
+						ziperr = zip->decompress(bufferPtr, zip->current_uncompressed_length());
+						if (ziperr == util::archive_file::error::NONE)
 						{
-							ziperr = zip_file_decompress(zip, bufferPtr, entry->uncompressed_length);
-							if (ziperr == ZIPERR_NONE)
-							{
-								hIcon = FormatICOInMemoryToHICON(bufferPtr, entry->uncompressed_length);
-							}
-							free(bufferPtr);
+							hIcon = FormatICOInMemoryToHICON(bufferPtr, zip->current_uncompressed_length());
 						}
+						free(bufferPtr);
 					}
-					entry = zip_file_next_file(zip);
 				}
-				zip_file_close(zip);
+				zip.reset();
 			}
 		}
 	}
@@ -1781,12 +1775,12 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		LOGFONT logfont;
 
 		GetListFont(&logfont);
-		if (hFont != NULL) {
+		if (hFont ) {
 			//Clenaup old Font, otherwise we have a GDI handle leak
 			DeleteFont(hFont);
 		}
 		hFont = CreateFontIndirect(&logfont);
-		if (hFont != NULL)
+		if (hFont )
 			SetAllWindowsFont(hMain, &main_resize, hFont, FALSE);
 	}
 
@@ -2545,7 +2539,7 @@ static void SetAllWindowsFont(HWND hParent, const Resize *r, HFONT hTheFont, BOO
 			SetWindowFont(hControl, hTheFont, bRedraw);
 		}
 		/* Take care of subcontrols, if appropriate */
-		if (r->items[i].subwindow != NULL)
+		if (r->items[i].subwindow )
 			SetAllWindowsFont(hControl, (const Resize*)r->items[i].subwindow, hTheFont, bRedraw);
 
 	}
@@ -2628,7 +2622,7 @@ static void ResizeWindow(HWND hParent, Resize *r)
 				   (rect.bottom - rect.top), TRUE);
 
 		/* Take care of subcontrols, if appropriate */
-		if (ri->subwindow != NULL)
+		if (ri->subwindow )
 			ResizeWindow(hControl, (Resize*)ri->subwindow);
 
 		cmkindex++;
@@ -3064,7 +3058,7 @@ static void PaintBackgroundImage(HWND hWnd, HRGN hRgn, int x, int y)
 	if (hPAL == NULL)
 		hPAL = CreateHalftonePalette(hDC);
 
-	if (GetDeviceCaps(htempDC, RASTERCAPS) & RC_PALETTE && hPAL != NULL)
+	if (GetDeviceCaps(htempDC, RASTERCAPS) & RC_PALETTE && hPAL)
 	{
 		SelectPalette(htempDC, hPAL, FALSE);
 		RealizePalette(htempDC);
@@ -3733,10 +3727,10 @@ static void PickFont(void)
 		return;
 
 	SetListFont(&font);
-	if (hFont != NULL)
+	if (hFont)
 		DeleteFont(hFont);
 	hFont = CreateFontIndirect(&font);
-	if (hFont != NULL)
+	if (hFont)
 	{
 		COLORREF textColor = cf.rgbColors;
 
@@ -4239,8 +4233,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		return TRUE;
 
 	case ID_OPTIONS_INTERFACE:
-		DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_INTERFACE_OPTIONS),
-				  hMain, InterfaceDialogProc);
+		DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_INTERFACE_OPTIONS), hMain, InterfaceDialogProc);
 		SaveOptions();
 
 		KillTimer(hMain, SCREENSHOT_TIMER);
@@ -4258,7 +4251,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 			TCHAR* t_bgdir = TEXT(".");
 			const char *s = GetBgDir();
 			std::string as;
-			zippath_parent(as, s);
+			util::zippath_parent(as, s);
 			size_t t1 = as.length()-1;
 			if (as[t1] == '\\') as[t1]='\0';
 			t1 = as.find(':');
@@ -4333,8 +4326,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		}
 #endif
 	case ID_HELP_ABOUT:
-		DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_ABOUT),
-				  hMain, AboutDialogProc);
+		DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_ABOUT), hMain, AboutDialogProc);
 		SetFocus(hwndList);
 		return TRUE;
 
@@ -4454,10 +4446,23 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		{
 			if (g_helpInfo[i].nMenuItem == id)
 			{
-				if (g_helpInfo[i].bIsHtmlHelp)
-					HelpFunction(hMain, g_helpInfo[i].lpFile, HH_DISPLAY_TOPIC, 0);
+				printf("%X: %ls\n",g_helpInfo[i].bIsHtmlHelp, g_helpInfo[i].lpFile);
+				if (i == 1) // get current whatsnew.txt from mamedev.org
+				{
+					std::string version = std::string(build_version); // turn version string into std
+					version.erase(1,1); // take out the decimal point
+					version.erase(4, std::string::npos); // take out the date
+					std::string url = "http://mamedev.org/releases/whatsnew_" + version + ".txt"; // construct url
+					std::wstring stemp = s2ws(url); // convert to wide string (yeah, typical c++ mess)
+					LPCWSTR result = stemp.c_str(); // then convert to const wchar_t*
+					ShellExecute(hMain, TEXT("open"), result, TEXT(""), NULL, SW_SHOWNORMAL); // show web page
+				}
 				else
-					DisplayTextFile(hMain, g_helpInfo[i].lpFile);
+				if (g_helpInfo[i].bIsHtmlHelp)
+//					HelpFunction(hMain, g_helpInfo[i].lpFile, HH_DISPLAY_TOPIC, 0);
+					ShellExecute(hMain, TEXT("open"), g_helpInfo[i].lpFile, TEXT(""), NULL, SW_SHOWNORMAL);
+//				else
+//					DisplayTextFile(hMain, g_helpInfo[i].lpFile);
 				return FALSE;
 			}
 		}
@@ -4771,7 +4776,7 @@ static void ReloadIcons(void)
 	ImageList_RemoveAll(hSmall);
 	ImageList_RemoveAll(hLarge);
 
-	if (icon_index != NULL)
+	if (icon_index)
 	{
 		for (i=0;i<driver_list::total();i++)
 			icon_index[i] = 0; // these are indices into hSmall
@@ -5076,7 +5081,7 @@ BOOL CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype)
 
 	// convert the filename to UTF-8 and copy into buffer
 	t_filename = tstring_from_utf8(filename);
-	if (t_filename != NULL)
+	if (t_filename)
 	{
 		_sntprintf(t_filename_buffer, ARRAY_LENGTH(t_filename_buffer), TEXT("%s"), t_filename);
 		osd_free(t_filename);
@@ -5175,7 +5180,7 @@ BOOL CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype)
 	}
 
 	utf8_filename = utf8_from_tstring(t_filename_buffer);
-	if (utf8_filename != NULL)
+	if (utf8_filename)
 	{
 		snprintf(filename, MAX_PATH, "%s", utf8_filename);
 		osd_free(utf8_filename);
@@ -5218,23 +5223,20 @@ static void CLIB_DECL ATTR_PRINTF(1,2) MameMessageBox(const char *fmt, ...)
 
 static void MamePlayBackGame()
 {
-	int nGame;
 	char filename[MAX_PATH];
-
 	*filename = 0;
 
-	nGame = Picker_GetSelectedItem(hwndList);
+	int nGame = Picker_GetSelectedItem(hwndList);
 	if (nGame != -1)
 		strcpy(filename, driver_list::driver(nGame).name);
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_INPUT_FILES))
 	{
-		file_error fileerr;
+		osd_file::error fileerr;
 		char drive[_MAX_DRIVE];
 		char dir[_MAX_DIR];
 		char bare_fname[_MAX_FNAME];
 		char ext[_MAX_EXT];
-
 		char path[MAX_PATH];
 		char fname[MAX_PATH];
 		play_options playopts;
@@ -5248,42 +5250,43 @@ static void MamePlayBackGame()
 
 		emu_file pPlayBack(MameUIGlobal().input_directory(), OPEN_FLAG_READ);
 		fileerr = pPlayBack.open(fname);
-		if (fileerr != FILERR_NONE)
+		if (fileerr != osd_file::error::NONE)
 		{
 			MameMessageBox("Could not open '%s' as a valid input file.", filename);
 			return;
 		}
 
 		// check for game name embedded in .inp header
-		int i;
-		inp_header ihdr;
+		inp_header header;
 
 		/* read the header and verify that it is a modern version; if not, print an error */
-		if (pPlayBack.read(&ihdr, sizeof(inp_header)) != sizeof(inp_header))
+		if (!header.read(pPlayBack))
 		{
 			MameMessageBox("Input file is corrupt or invalid (missing header)");
 			return;
 		}
-
-		if (memcmp("MAMEINP\0", ihdr.header, 8) != 0)
+		if ((!header.check_magic()) || (header.get_majversion() != inp_header::MAJVERSION))
 		{
 			MameMessageBox("Input file invalid or in an older, unsupported format");
 			return;
 		}
-		if (ihdr.majversion != INP_HEADER_MAJVERSION)
-		{
-			MameMessageBox("Input file format version mismatch");
-			return;
-		}
 
-		for (i = 0; i < driver_list::total(); i++) // find game and play it
+		std::string const sysname = header.get_sysname();
+		nGame = -1;
+		for (int i = 0; i < driver_list::total(); i++) // find game and play it
 		{
-			if (strcmp(driver_list::driver(i).name, ihdr.gamename) == 0)
+			if (driver_list::driver(i).name == sysname)
 			{
 				nGame = i;
 				break;
 			}
 		}
+		if (nGame == -1)
+		{
+			MameMessageBox("Game \"%s\" cannot be found", sysname.c_str());
+			return;
+		}
+
 		memset(&playopts, 0, sizeof(playopts));
 		playopts.playback = fname;
 		MamePlayGameWithOptions(nGame, &playopts);
@@ -5348,8 +5351,8 @@ static void MameLoadState()
 		}
 #endif // MESS
 		emu_file pSaveState(MameUIGlobal().state_directory(), OPEN_FLAG_READ);
-		file_error fileerr = pSaveState.open(state_fname);
-		if (fileerr != FILERR_NONE)
+		osd_file::error fileerr = pSaveState.open(state_fname);
+		if (fileerr != osd_file::error::NONE)
 		{
 			MameMessageBox("Could not open '%s' as a valid savestate file.", filename);
 			return;
@@ -5504,7 +5507,7 @@ static void MamePlayGameWithOptions(int nGame, const play_options *playopts)
 	DWORD dwExitCode;
 	BOOL res;
 
-	if (g_pJoyGUI != NULL)
+	if (g_pJoyGUI)
 		KillTimer(hMain, JOYGUI_TIMER);
 	if (GetCycleScreenshot() > 0)
 		KillTimer(hMain, SCREENSHOT_TIMER);
@@ -5533,7 +5536,7 @@ static void MamePlayGameWithOptions(int nGame, const play_options *playopts)
 	ShowWindow(hMain, SW_SHOW);
 	SetFocus(hwndList);
 
-	if (g_pJoyGUI != NULL)
+	if (g_pJoyGUI)
 		SetTimer(hMain, JOYGUI_TIMER, JOYGUI_MS, NULL);
 	if (GetCycleScreenshot() > 0)
 		SetTimer(hMain, SCREENSHOT_TIMER, GetCycleScreenshot()*1000, NULL); //scale to seconds
@@ -5548,7 +5551,7 @@ static void ToggleScreenShot(void)
 	UpdateScreenShot();
 
 	/* Redraw list view */
-	if (hBackground != NULL && showScreenShot)
+	if (hBackground && showScreenShot)
 		InvalidateRect(hwndList, NULL, FALSE);
 }
 
@@ -5894,7 +5897,7 @@ void InitTreeContextMenu(HMENU hTreeMenu)
 
 	hMenu = mii.hSubMenu;
 
-	for (i=0;g_folderData[i].m_lpTitle != NULL;i++)
+	for (i=0;g_folderData[i].m_lpTitle;i++)
 	{
 		TCHAR* t_title = tstring_from_utf8(g_folderData[i].m_lpTitle);
 		if( !t_title )
@@ -6276,7 +6279,7 @@ static void MouseMoveListViewDrag(POINTS p)
 	if (htiTarget != prev_drag_drop_target)
 	{
 		ImageList_DragShowNolock(FALSE);
-		if (htiTarget != NULL)
+		if (htiTarget)
 			res = TreeView_SelectDropTarget(hTreeView,htiTarget);
 		else
 			res = TreeView_SelectDropTarget(hTreeView,NULL);
@@ -6360,7 +6363,7 @@ static LPTREEFOLDER GetSelectedFolder(void)
 	BOOL res;
 
 	htree = TreeView_GetSelection(hTreeView);
-	if(htree != NULL)
+	if(htree)
 	{
 		tvi.hItem = htree;
 		tvi.mask = TVIF_PARAM;
@@ -6379,7 +6382,7 @@ static HICON GetSelectedFolderIcon(void)
 	BOOL res;
 
 	htree = TreeView_GetSelection(hTreeView);
-	if (htree != NULL)
+	if (htree)
 	{
 		tvi.hItem = htree;
 		tvi.mask = TVIF_PARAM;

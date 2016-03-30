@@ -2,7 +2,7 @@
 // copyright-holders:Aaron Giles
 /***************************************************************************
 
-    video.c
+    video.cpp
 
     Core MAME video routines.
 
@@ -267,28 +267,28 @@ void video_manager::frame_update(bool debug)
 
 std::string video_manager::speed_text()
 {
-	std::string str;
+	std::ostringstream str;
 
 	// if we're paused, just display Paused
 	bool paused = machine().paused();
 	if (paused)
-		str.append("paused");
+		str << "paused";
 
 	// if we're fast forwarding, just display Fast-forward
 	else if (m_fastforward)
-		str.append("fast ");
+		str << "fast ";
 
 	// if we're auto frameskipping, display that plus the level
 	else if (effective_autoframeskip())
-		strcatprintf(str, "auto%2d/%d", effective_frameskip(), MAX_FRAMESKIP);
+		util::stream_format(str, "auto%2d/%d", effective_frameskip(), MAX_FRAMESKIP);
 
 	// otherwise, just display the frameskip plus the level
 	else
-		strcatprintf(str, "skip %d/%d", effective_frameskip(), MAX_FRAMESKIP);
+		util::stream_format(str, "skip %d/%d", effective_frameskip(), MAX_FRAMESKIP);
 
 	// append the speed for all cases except paused
 	if (!paused)
-		strcatprintf(str, "%4d%%", (int)(100 * m_speed_percent + 0.5));
+		util::stream_format(str, "%4d%%", (int)(100 * m_speed_percent + 0.5));
 
 	// display the number of partial updates as well
 	int partials = 0;
@@ -296,9 +296,9 @@ std::string video_manager::speed_text()
 	for (screen_device *screen = iter.first(); screen != nullptr; screen = iter.next())
 		partials += screen->partial_updates();
 	if (partials > 1)
-		strcatprintf(str, "\n%d partial updates", partials);
+		util::stream_format(str, "\n%d partial updates", partials);
 
-	return str;
+	return str.str();
 }
 
 
@@ -350,8 +350,8 @@ void video_manager::save_active_screen_snapshots()
 			if (machine().render().is_live(*screen))
 			{
 				emu_file file(machine().options().snapshot_directory(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-				file_error filerr = open_next(file, "png");
-				if (filerr == FILERR_NONE)
+				osd_file::error filerr = open_next(file, "png");
+				if (filerr == osd_file::error::NONE)
 					save_snapshot(screen, file);
 			}
 	}
@@ -360,8 +360,8 @@ void video_manager::save_active_screen_snapshots()
 	else
 	{
 		emu_file file(machine().options().snapshot_directory(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-		file_error filerr = open_next(file, "png");
-		if (filerr == FILERR_NONE)
+		osd_file::error filerr = open_next(file, "png");
+		if (filerr == osd_file::error::NONE)
 			save_snapshot(nullptr, file);
 	}
 }
@@ -381,44 +381,27 @@ void video_manager::save_input_timecode()
 	m_timecode_write = true;
 }
 
-std::string &video_manager::timecode_text(std::string &str) {
-	str.clear();
-	str += " ";
-
-	if (!m_timecode_text.empty()) {
-		str += m_timecode_text + " ";
-	}
-
+std::string &video_manager::timecode_text(std::string &str)
+{
 	attotime elapsed_time = machine().time() - m_timecode_start;
-	std::string elapsed_time_str;
-	strcatprintf(elapsed_time_str, "%02d:%02d",
-		(elapsed_time.m_seconds / 60) % 60,
-		elapsed_time.m_seconds % 60);
-	str += elapsed_time_str;
-
-	bool paused = machine().paused();
-	if (paused) {
-		str.append(" [paused]");
-	}
-
-	str += " ";
-
+	str = string_format(" %s%s%02d:%02d %s",
+			m_timecode_text,
+			m_timecode_text.empty() ? "" : " ",
+			(elapsed_time.m_seconds / 60) % 60,
+			elapsed_time.m_seconds % 60,
+			machine().paused() ? "[paused] " : "");
 	return str;
 }
 
-std::string &video_manager::timecode_total_text(std::string &str) {
-	str.clear();
-	str += " TOTAL ";
-
+std::string &video_manager::timecode_total_text(std::string &str)
+{
 	attotime elapsed_time = m_timecode_total;
 	if (machine().ui().show_timecode_counter()) {
 		elapsed_time += machine().time() - m_timecode_start;
 	}
-	std::string elapsed_time_str;
-	strcatprintf(elapsed_time_str, "%02d:%02d",
-		(elapsed_time.m_seconds / 60) % 60,
-		elapsed_time.m_seconds % 60);
-	str += elapsed_time_str + " ";
+	str = string_format("TOTAL %02d:%02d ",
+			(elapsed_time.m_seconds / 60) % 60,
+			elapsed_time.m_seconds % 60);
 	return str;
 }
 
@@ -445,7 +428,7 @@ void video_manager::begin_recording(const char *name, movie_format format)
 
 		// build up information about this new movie
 		screen_device *screen = machine().first_screen();
-		avi_movie_info info;
+		avi_file::movie_info info;
 		info.video_format = 0;
 		info.video_timescale = 1000 * ((screen != nullptr) ? ATTOSECONDS_TO_HZ(screen->frame_period().attoseconds()) : screen_device::DEFAULT_FRAME_RATE);
 		info.video_sampletime = 1000;
@@ -463,7 +446,7 @@ void video_manager::begin_recording(const char *name, movie_format format)
 		info.audio_samplerate = machine().sample_rate();
 
 		// create a new temporary movie file
-		file_error filerr;
+		osd_file::error filerr;
 		std::string fullpath;
 		{
 			emu_file tempfile(machine().options().snapshot_directory(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
@@ -473,20 +456,20 @@ void video_manager::begin_recording(const char *name, movie_format format)
 				filerr = open_next(tempfile, "avi");
 
 			// if we succeeded, make a copy of the name and create the real file over top
-			if (filerr == FILERR_NONE)
+			if (filerr == osd_file::error::NONE)
 				fullpath = tempfile.fullpath();
 		}
 
-		if (filerr == FILERR_NONE)
+		if (filerr == osd_file::error::NONE)
 		{
 			// compute the frame time
 			m_avi_frame_period = attotime::from_seconds(1000) / info.video_timescale;
 
 			// create the file and free the string
-			avi_error avierr = avi_create(fullpath.c_str(), &info, &m_avi_file);
-			if (avierr != AVIERR_NONE)
+			avi_file::error avierr = avi_file::create(fullpath, info, m_avi_file);
+			if (avierr != avi_file::error::NONE)
 			{
-				osd_printf_error("Error creating AVI: %s\n", avi_error_string(avierr));
+				osd_printf_error("Error creating AVI: %s\n", avi_file::error_string(avierr));
 				return end_recording(format);
 			}
 		}
@@ -504,13 +487,13 @@ void video_manager::begin_recording(const char *name, movie_format format)
 
 		// create a new movie file and start recording
 		m_mng_file = std::make_unique<emu_file>(machine().options().snapshot_directory(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-		file_error filerr;
+		osd_file::error filerr;
 		if (name != nullptr)
 			filerr = m_mng_file->open(name);
 		else
 			filerr = open_next(*m_mng_file, "mng");
 
-		if (filerr == FILERR_NONE)
+		if (filerr == osd_file::error::NONE)
 		{
 			// start the capture
 			screen_device *screen = machine().first_screen();
@@ -527,7 +510,7 @@ void video_manager::begin_recording(const char *name, movie_format format)
 		}
 		else
 		{
-			osd_printf_error("Error creating MNG, file_error=%d\n", filerr);
+			osd_printf_error("Error creating MNG, osd_file::error=%d\n", int(filerr));
 			m_mng_file.reset();
 		}
 	}
@@ -543,10 +526,9 @@ void video_manager::end_recording(movie_format format)
 	if (format == MF_AVI)
 	{
 		// close the file if it exists
-		if (m_avi_file != nullptr)
+		if (m_avi_file)
 		{
-			avi_close(m_avi_file);
-			m_avi_file = nullptr;
+			m_avi_file.reset();
 
 			// reset the state
 			m_avi_frame = 0;
@@ -580,10 +562,10 @@ void video_manager::add_sound_to_recording(const INT16 *sound, int numsamples)
 		g_profiler.start(PROFILER_MOVIE_REC);
 
 		// write the next frame
-		avi_error avierr = avi_append_sound_samples(m_avi_file, 0, sound + 0, numsamples, 1);
-		if (avierr == AVIERR_NONE)
-			avierr = avi_append_sound_samples(m_avi_file, 1, sound + 1, numsamples, 1);
-		if (avierr != AVIERR_NONE)
+		avi_file::error avierr = m_avi_file->append_sound_samples(0, sound + 0, numsamples, 1);
+		if (avierr == avi_file::error::NONE)
+			avierr = m_avi_file->append_sound_samples(1, sound + 1, numsamples, 1);
+		if (avierr != avi_file::error::NONE)
 			end_recording(MF_AVI);
 
 		g_profiler.stop();
@@ -1101,15 +1083,15 @@ void video_manager::recompute_speed(const attotime &emutime)
 	}
 
 	// if we're past the "time-to-execute" requested, signal an exit
-	if (m_seconds_to_run > 1 && emutime.seconds() >= m_seconds_to_run)
+	if (m_seconds_to_run != 0 && emutime.seconds() >= m_seconds_to_run)
 	{
 		screen_device *screen = machine().first_screen();
 		if (screen != nullptr)
 		{
 			// create a final screenshot
 			emu_file file(machine().options().snapshot_directory(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-			file_error filerr = file.open(machine().basename(), PATH_SEPARATOR "final.png");
-			if (filerr == FILERR_NONE)
+			osd_file::error filerr = file.open(machine().basename(), PATH_SEPARATOR "final.png");
+			if (filerr == osd_file::error::NONE)
 				save_snapshot(screen, file);
 		}
 		//printf("Scheduled exit at %f\n", emutime.as_double());
@@ -1167,7 +1149,7 @@ void video_manager::create_snapshot_bitmap(screen_device *screen)
 //  scheme
 //-------------------------------------------------
 
-file_error video_manager::open_next(emu_file &file, const char *extension)
+osd_file::error video_manager::open_next(emu_file &file, const char *extension)
 {
 	UINT32 origflags = file.openflags();
 
@@ -1269,18 +1251,16 @@ file_error video_manager::open_next(emu_file &file, const char *extension)
 	else
 	{
 		// try until we succeed
-		std::string seqtext;
 		file.set_openflags(OPEN_FLAG_READ);
 		for (int seq = 0; ; seq++)
 		{
 			// build up the filename
 			fname.assign(snapstr);
-			strprintf(seqtext, "%04d", seq);
-			strreplace(fname, "%i", seqtext.c_str());
+			strreplace(fname, "%i", string_format("%04d", seq).c_str());
 
 			// try to open the file; stop when we fail
-			file_error filerr = file.open(fname.c_str());
-			if (filerr != FILERR_NONE)
+			osd_file::error filerr = file.open(fname.c_str());
+			if (filerr != osd_file::error::NONE)
 				break;
 		}
 	}
@@ -1315,8 +1295,8 @@ void video_manager::record_frame()
 		while (m_avi_next_frame_time <= curtime)
 		{
 			// write the next frame
-			avi_error avierr = avi_append_video_frame(m_avi_file, m_snap_bitmap);
-			if (avierr != AVIERR_NONE)
+			avi_file::error avierr = m_avi_file->append_video_frame(m_snap_bitmap);
+			if (avierr != avi_file::error::NONE)
 			{
 				g_profiler.stop();
 				end_recording(MF_AVI);
