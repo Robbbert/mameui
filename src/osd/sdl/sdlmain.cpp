@@ -44,6 +44,7 @@
 #include "video.h"
 #include "osdsdl.h"
 #include "modules/lib/osdlib.h"
+#include "modules/diagnostics/diagnostics_module.h"
 
 // we override SDL's normal startup on Win32
 // please see sdlprefix.h as well
@@ -195,6 +196,9 @@ int main(int argc, char *argv[])
 	// disable I/O buffering
 	setvbuf(stdout, (char *) NULL, _IONBF, 0);
 	setvbuf(stderr, (char *) NULL, _IONBF, 0);
+
+	// Initialize crash diagnostics
+	diagnostics_module::get_instance()->init_crash_diagnostics();
 
 #if defined(SDLMAME_ANDROID)
 	/* Enable standard application logging */
