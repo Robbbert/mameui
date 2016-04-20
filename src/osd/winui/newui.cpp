@@ -1533,13 +1533,9 @@ static void seqselect_settext(HWND editwnd)
 static void seqselect_start_read_from_main_thread(void *param)
 {
 	seqselect_info *stuff;
-	HWND editwnd;
-	win_window_info fake_window_info(*Machine);
-	win_window_info *old_window_list;
-	int pause_count;
 
 	// get the basics
-	editwnd = (HWND) param;
+	HWND editwnd = (HWND) param;
 	stuff = get_seqselect_info(editwnd);
 
 	// are we currently polling?  if so bail out
@@ -1551,18 +1547,12 @@ static void seqselect_start_read_from_main_thread(void *param)
 
 	// the Win32 OSD code thinks that we are paused, we need to temporarily
 	// unpause ourselves or else we will block
-	pause_count = 0;
+	int pause_count = 0;
 	while(Machine->paused() && !winwindow_ui_is_paused(*Machine))
 	{
 		winwindow_ui_pause_from_main_thread(*Machine, FALSE);
 		pause_count++;
 	}
-
-	// butt ugly hack so that we accept focus
-	old_window_list = win_window_list;
-	memset(&fake_window_info, 0, sizeof(fake_window_info));
-	fake_window_info.m_hwnd = GetFocus();
-	win_window_list = &fake_window_info;
 
 	// start the polling
 	(*Machine).input().seq_poll_start(stuff->is_analog ? ITEM_CLASS_ABSOLUTE : ITEM_CLASS_SWITCH, NULL);
@@ -1576,9 +1566,6 @@ static void seqselect_start_read_from_main_thread(void *param)
 			seqselect_settext(editwnd);
 		}
 	}
-
-	// clean up after hack
-	win_window_list = old_window_list;
 
 	// we are no longer polling
 	stuff->poll_state = SEQSELECT_STATE_NOT_POLLING;
@@ -3388,7 +3375,7 @@ static void win_toggle_menubar(void)
 		RECT before_rect = { 100, 100, 200, 200 };
 		RECT after_rect = { 100, 100, 200, 200 };
 
-		hwnd = window->m_hwnd;
+		hwnd = window->platform_window<HWND>();
 
 		// get current menu
 		menu = GetMenu(hwnd);
