@@ -1,5 +1,6 @@
 // For licensing and usage information, read docs/winui_license.txt
 //****************************************************************************
+// MASTER
 //============================================================
 //
 //  newui.c - This is the NEWUI Windows dropdown menu system
@@ -3295,31 +3296,30 @@ static void prepare_menus(HWND wnd)
 
 	int cnt = 0;
 	// then set up the actual devices
-	image_interface_iterator iter(window->machine().root_device());
-	for (device_image_interface *img = iter.first(); img; img = iter.next())
+	for (device_image_interface &img : image_interface_iterator(window->machine().root_device()))
 	{
 		new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
 		flags_for_exists = MF_STRING;
 
-		if (!img->exists())
+		if (!img.exists())
 			flags_for_exists |= MF_GRAYED;
 
 		flags_for_writing = flags_for_exists;
-		if (img->is_readonly())
+		if (img.is_readonly())
 			flags_for_writing |= MF_GRAYED;
 
 		sub_menu = CreateMenu();
 		win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_OPEN, "Mount File...");
 
-		if (img->is_creatable())
+		if (img.is_creatable())
 			win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_CREATE, "Create...");
 
 		win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CLOSE, "Unmount");
 
-		if (img->device().type() == CASSETTE)
+		if (img.device().type() == CASSETTE)
 		{
 			cassette_state state;
-			state = (cassette_state)(img->exists() ? (dynamic_cast<cassette_image_device*>(&img->device())->get_state() & CASSETTE_MASK_UISTATE) : CASSETTE_STOPPED);
+			state = (cassette_state)(img.exists() ? (dynamic_cast<cassette_image_device*>(&img.device())->get_state() & CASSETTE_MASK_UISTATE) : CASSETTE_STOPPED);
 			win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
 			win_append_menu_utf8(sub_menu, flags_for_exists	| ((state == CASSETTE_STOPPED) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_STOPPAUSE, "Pause/Stop");
 			win_append_menu_utf8(sub_menu, flags_for_exists	| ((state == CASSETTE_PLAY) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_PLAY, "Play");
@@ -3327,9 +3327,9 @@ static void prepare_menus(HWND wnd)
 			win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CASSETTE_REWIND, "Rewind");
 			win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CASSETTE_FASTFORWARD, "Fast Forward");
 		}
-		s = img->exists() ? img->filename() : "[empty slot]";
+		s = img.exists() ? img.filename() : "[empty slot]";
 
-		snprintf(buf, ARRAY_LENGTH(buf), "%s: %s", img->device().name(), s);
+		snprintf(buf, ARRAY_LENGTH(buf), "%s: %s", img.device().name(), s);
 		win_append_menu_utf8(device_menu, MF_POPUP, (UINT_PTR)sub_menu, buf);
 
 		cnt++;
