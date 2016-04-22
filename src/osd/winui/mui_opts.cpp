@@ -23,7 +23,7 @@
 #include <math.h>
 #include <direct.h>
 #include <emu.h>
-#include <emuopts.h>
+#include <mameopts.h>
 #include <ui/moptions.h>
 #include <stddef.h>
 #include <tchar.h>
@@ -201,7 +201,7 @@ static void ResetToDefaults(windows_options &opts, int priority);
     Internal variables
  ***************************************************************************/
 
-static mame_options mameopts; // something Micko made up
+static mame_options mameopts; // core options
 static ui_options mewui; // ui.ini
 static winui_options settings; // mameui.ini
 

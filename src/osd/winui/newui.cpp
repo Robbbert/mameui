@@ -3363,7 +3363,6 @@ static void set_speed(running_machine &machine, int speed)
 
 static void win_toggle_menubar(void)
 {
-	//win_window_info *window;
 	LONG width_diff = 0;
 	LONG height_diff = 0;
 	DWORD style = 0, exstyle = 0;
