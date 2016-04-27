@@ -1465,6 +1465,8 @@ end
 --------------------------------------------------
 -- NEC V-series Intel-compatible
 --@src/devices/cpu/nec/nec.h,CPUS["NEC"] = true
+--@src/devices/cpu/nec/v25.h,CPUS["NEC"] = true
+--@src/devices/cpu/nec/v53.h,CPUS["NEC"] = true
 --@src/devices/cpu/v30mz/v30mz.h,CPUS["V30MZ"] = true
 --------------------------------------------------
 
@@ -1716,6 +1718,12 @@ if (CPUS["SM510"]~=null) then
 		MAME_DIR .. "src/devices/cpu/sm510/sm510op.cpp",
 		MAME_DIR .. "src/devices/cpu/sm510/sm510core.cpp",
 		MAME_DIR .. "src/devices/cpu/sm510/sm511core.cpp",
+		MAME_DIR .. "src/devices/cpu/sm510/sm500.h",
+		MAME_DIR .. "src/devices/cpu/sm510/sm500op.cpp",
+		MAME_DIR .. "src/devices/cpu/sm510/sm500core.cpp",
+		MAME_DIR .. "src/devices/cpu/sm510/kb1013vk1-2.h",
+		MAME_DIR .. "src/devices/cpu/sm510/kb1013vk1-2op.cpp",
+		MAME_DIR .. "src/devices/cpu/sm510/kb1013vk1-2core.cpp",
 	}
 end
 

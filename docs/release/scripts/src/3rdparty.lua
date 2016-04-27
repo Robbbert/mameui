@@ -18,6 +18,34 @@ project "expat"
 	uuid "f4cd40b1-c37c-452d-9785-640f26f0bf54"
 	kind "StaticLib"
 
+	-- fake out the enough of expat_config.h to get by
+	defines {
+		"HAVE_MEMMOVE",
+		"HAVE_STDINT_H",
+		"HAVE_STDLIB_H",
+		"HAVE_STRING_H",
+		"PACKAGE_BUGREPORT=\"expat-bugs@libexpat.org\"",
+		"PACKAGE_NAME=\"expat\"",
+		"PACKAGE_STRING=\"expat 2.1.1\"",
+		"PACKAGE_TARNAME=\"expat\"",
+		"PACKAGE_URL=\"\"",
+		"PACKAGE_VERSION=\"2.1.1\"",
+		"STDC_HEADERS",
+		"XML_CONTEXT_BYTES=1024",
+		"XML_DTD",
+		"XML_NS",
+	}
+if _OPTIONS["BIGENDIAN"]=="1" then
+	defines {
+		"BYTEORDER=4321",
+		"WORDS_BIGENDIAN",
+	}
+else
+	defines {
+		"BYTEORDER=1234",
+	}
+end
+
 	configuration { "vs*" }
 		buildoptions {
 			"/wd4100", -- warning C4100: 'xxx' : unreferenced formal parameter
@@ -271,7 +299,7 @@ end
 			"HAVE_CONFIG_H=1",
 		}
 
-	configuration { "gmake"}
+	configuration { "gmake" }
 		buildoptions_c {
 			"-Wno-unused-function",
 			"-O0",
@@ -324,6 +352,17 @@ project "7z"
 	uuid "ad573d62-e76a-4b11-ae34-5110a6789a42"
 	kind "StaticLib"
 
+	configuration { "gmake" }
+		buildoptions_c {
+			"-Wno-undef",
+      "-Wno-strict-prototypes",
+		}
+
+	configuration { "mingw*" }
+		buildoptions_c {
+			"-Wno-strict-prototypes",
+		}
+		
 	configuration { "vs*" }
 		buildoptions {
 			"/wd4100", -- warning C4100: 'xxx' : unreferenced formal parameter
@@ -346,24 +385,47 @@ end
 		}
 
 	files {
+			MAME_DIR .. "3rdparty/lzma/C/7zAlloc.c",
+			MAME_DIR .. "3rdparty/lzma/C/7zArcIn.c",
 			MAME_DIR .. "3rdparty/lzma/C/7zBuf.c",
 			MAME_DIR .. "3rdparty/lzma/C/7zBuf2.c",
 			MAME_DIR .. "3rdparty/lzma/C/7zCrc.c",
 			MAME_DIR .. "3rdparty/lzma/C/7zCrcOpt.c",
 			MAME_DIR .. "3rdparty/lzma/C/7zDec.c",
-			MAME_DIR .. "3rdparty/lzma/C/7zIn.c",
-			MAME_DIR .. "3rdparty/lzma/C/CpuArch.c",
-			MAME_DIR .. "3rdparty/lzma/C/LzmaDec.c",
-			MAME_DIR .. "3rdparty/lzma/C/Lzma2Dec.c",
-			MAME_DIR .. "3rdparty/lzma/C/LzmaEnc.c",
-			MAME_DIR .. "3rdparty/lzma/C/Lzma2Enc.c",
-			MAME_DIR .. "3rdparty/lzma/C/LzFind.c",
+			MAME_DIR .. "3rdparty/lzma/C/7zFile.c",
+			MAME_DIR .. "3rdparty/lzma/C/7zStream.c",
+			MAME_DIR .. "3rdparty/lzma/C/Aes.c",
+			MAME_DIR .. "3rdparty/lzma/C/AesOpt.c",
+			MAME_DIR .. "3rdparty/lzma/C/Alloc.c",
+			MAME_DIR .. "3rdparty/lzma/C/Bcj2.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/Bcj2Enc.c",
 			MAME_DIR .. "3rdparty/lzma/C/Bra.c",
 			MAME_DIR .. "3rdparty/lzma/C/Bra86.c",
-			MAME_DIR .. "3rdparty/lzma/C/Bcj2.c",
+			MAME_DIR .. "3rdparty/lzma/C/BraIA64.c",
+			MAME_DIR .. "3rdparty/lzma/C/CpuArch.c",
+			MAME_DIR .. "3rdparty/lzma/C/Delta.c",
+			MAME_DIR .. "3rdparty/lzma/C/LzFind.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/LzFindMt.c",
+			MAME_DIR .. "3rdparty/lzma/C/Lzma2Dec.c",
+			MAME_DIR .. "3rdparty/lzma/C/Lzma2Enc.c",
+			MAME_DIR .. "3rdparty/lzma/C/Lzma86Dec.c",
+			MAME_DIR .. "3rdparty/lzma/C/Lzma86Enc.c",
+			MAME_DIR .. "3rdparty/lzma/C/LzmaDec.c",
+			MAME_DIR .. "3rdparty/lzma/C/LzmaEnc.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/LzmaLib.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/MtCoder.c",
 			MAME_DIR .. "3rdparty/lzma/C/Ppmd7.c",
 			MAME_DIR .. "3rdparty/lzma/C/Ppmd7Dec.c",
-			MAME_DIR .. "3rdparty/lzma/C/7zStream.c",
+			MAME_DIR .. "3rdparty/lzma/C/Ppmd7Enc.c",
+			MAME_DIR .. "3rdparty/lzma/C/Sha256.c",
+			MAME_DIR .. "3rdparty/lzma/C/Sort.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/Threads.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/Xz.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/XzCrc64.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/XzCrc64Opt.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/XzDec.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/XzEnc.c",
+			-- MAME_DIR .. "3rdparty/lzma/C/XzIn.c",
 		}
 
 --------------------------------------------------
@@ -720,6 +782,7 @@ end
 		buildoptions {
 			"-Wno-uninitialized",
 			"-Wno-unused-function",
+			"-Wno-unused-but-set-variable",
 		}
 	configuration { "rpi" }
 		buildoptions {
@@ -765,14 +828,15 @@ end
 		MAME_DIR .. "3rdparty/bgfx/src/glcontext_ppapi.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/glcontext_wgl.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/image.cpp",
-		MAME_DIR .. "3rdparty/bgfx/src/ovr.cpp",
+		MAME_DIR .. "3rdparty/bgfx/src/hmd_ovr.cpp",
+		MAME_DIR .. "3rdparty/bgfx/src/hmd_openvr.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/renderer_d3d12.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/renderer_d3d11.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/renderer_d3d9.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/renderer_gl.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/renderer_null.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/renderer_vk.cpp",
-		MAME_DIR .. "3rdparty/bgfx/src/renderdoc.cpp",
+		MAME_DIR .. "3rdparty/bgfx/src/debug_renderdoc.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/shader.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/shader_dxbc.cpp",
 		MAME_DIR .. "3rdparty/bgfx/src/shader_dx9bc.cpp",
@@ -788,8 +852,17 @@ end
 		MAME_DIR .. "3rdparty/bgfx/examples/common/font/text_metrics.cpp",
 		MAME_DIR .. "3rdparty/bgfx/examples/common/font/utf8.cpp",
 		MAME_DIR .. "3rdparty/bgfx/examples/common/imgui/imgui.cpp",
+		MAME_DIR .. "3rdparty/bgfx/examples/common/imgui/ocornut_imgui.cpp",
+		MAME_DIR .. "3rdparty/bgfx/examples/common/imgui/scintilla.cpp",
 		MAME_DIR .. "3rdparty/bgfx/examples/common/nanovg/nanovg.cpp",
 		MAME_DIR .. "3rdparty/bgfx/examples/common/nanovg/nanovg_bgfx.cpp",
+		MAME_DIR .. "3rdparty/bgfx/3rdparty/ib-compress/indexbuffercompression.cpp",
+		MAME_DIR .. "3rdparty/bgfx/3rdparty/ib-compress/indexbufferdecompression.cpp",
+		MAME_DIR .. "3rdparty/bgfx/3rdparty/ocornut-imgui/imgui.cpp",
+		MAME_DIR .. "3rdparty/bgfx/3rdparty/ocornut-imgui/imgui_demo.cpp",
+		MAME_DIR .. "3rdparty/bgfx/3rdparty/ocornut-imgui/imgui_draw.cpp",
+		MAME_DIR .. "3rdparty/bgfx/3rdparty/ocornut-imgui/imgui_node_graph_test.cpp",
+		MAME_DIR .. "3rdparty/bgfx/3rdparty/ocornut-imgui/imgui_wm.cpp",
 	}
 	if _OPTIONS["targetos"]=="macosx" then
 		files {
@@ -1187,7 +1260,7 @@ if _OPTIONS["targetos"]=="android" then
 		"log",
 	}
 	linkoptions {
-		"-Wl,-soname,liSDL2.so"
+		"-Wl,-soname,libSDL2.so"
 	}
 
 	if _OPTIONS["SEPARATE_BIN"]~="1" then

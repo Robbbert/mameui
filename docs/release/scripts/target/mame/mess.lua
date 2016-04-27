@@ -251,6 +251,7 @@ SOUNDS["TMS5110A"] = true
 SOUNDS["LMC1992"] = true
 SOUNDS["AWACS"] = true
 --SOUNDS["YMZ770"] = true
+--SOUNDS["MPEG_AUDIO"] = true
 SOUNDS["T6721A"] = true
 SOUNDS["MOS7360"] = true
 SOUNDS["ESQPUMP"] = true
@@ -522,6 +523,7 @@ MACHINES["SMPC"] = true
 MACHINES["STVCD"] = true
 MACHINES["TC0091LVC"] = true
 MACHINES["TIMEKPR"] = true
+MACHINES["TMC0430"] = true
 MACHINES["TMP68301"] = true
 MACHINES["TMS5501"] = true
 MACHINES["TMS6100"] = true
@@ -572,6 +574,7 @@ MACHINES["TMS1024"] = true
 MACHINES["NSC810"] = true
 MACHINES["VT82C496"] = true
 MACHINES["GENPC"] = true
+MACHINES["GEN_LATCH"] = true
 
 --------------------------------------------------
 -- specify available bus cores
@@ -616,9 +619,11 @@ BUSES["GENERIC"] = true
 BUSES["IEEE488"] = true
 BUSES["IMI7000"] = true
 BUSES["INTV"] = true
+BUSES["INTV_CTRL"] = true
 BUSES["IQ151"] = true
 BUSES["ISA"] = true
 BUSES["ISBX"] = true
+BUSES["HP_OPTROM"] = true
 BUSES["KC"] = true
 BUSES["LPCI"] = true
 BUSES["M5"] = true
@@ -628,6 +633,7 @@ BUSES["MEGADRIVE"] = true
 BUSES["MSX_SLOT"] = true
 BUSES["NASBUS"] = true
 BUSES["NEOGEO"] = true
+BUSES["NEOGEO_CTRL"] = true
 BUSES["NES"] = true
 BUSES["NES_CTRL"] = true
 BUSES["NEWBRAIN"] = true
@@ -643,6 +649,7 @@ BUSES["PSX_CONTROLLER"] = true
 BUSES["QL"] = true
 BUSES["RS232"] = true
 BUSES["S100"] = true
+BUSES["SAT_CTRL"] = true
 BUSES["SATURN"] = true
 BUSES["SCSI"] = true
 BUSES["SCV"] = true
@@ -945,9 +952,9 @@ files {
 	MAME_DIR .. "src/mame/video/amigaaga.cpp",
 	MAME_DIR .. "src/mame/video/tia.cpp",
 	MAME_DIR .. "src/mame/video/tia.h",
-	MAME_DIR .. "src/mame/machine/atari.cpp",
-	MAME_DIR .. "src/mame/video/atari.cpp",
-	MAME_DIR .. "src/mame/includes/atari.h",
+	MAME_DIR .. "src/mame/machine/atari400.cpp",
+	MAME_DIR .. "src/mame/video/atari400.cpp",
+	MAME_DIR .. "src/mame/includes/atari400.h",
 	MAME_DIR .. "src/mame/video/antic.cpp",
 	MAME_DIR .. "src/mame/video/antic.h",
 	MAME_DIR .. "src/mame/video/gtia.cpp",
@@ -1318,11 +1325,11 @@ files {
 	MAME_DIR .. "src/mame/drivers/tamag1.cpp",
 	MAME_DIR .. "src/mame/drivers/wswan.cpp",
 	MAME_DIR .. "src/mame/includes/wswan.h",
-	MAME_DIR .. "src/mame/audio/wswan_snd.cpp",
-	MAME_DIR .. "src/mame/audio/wswan_snd.h",
+	MAME_DIR .. "src/mame/audio/wswan.cpp",
+	MAME_DIR .. "src/mame/audio/wswan.h",
 	MAME_DIR .. "src/mame/machine/wswan.cpp",
-	MAME_DIR .. "src/mame/video/wswan_video.cpp",
-	MAME_DIR .. "src/mame/video/wswan_video.h",
+	MAME_DIR .. "src/mame/video/wswan.cpp",
+	MAME_DIR .. "src/mame/video/wswan.h",
 }
 
 createMESSProjects(_target, _subtarget, "be")
@@ -1670,8 +1677,8 @@ files {
 	MAME_DIR .. "src/mame/includes/gamepock.h",
 	MAME_DIR .. "src/mame/machine/gamepock.cpp",
 	MAME_DIR .. "src/mame/drivers/scv.cpp",
-	MAME_DIR .. "src/mame/audio/upd1771.cpp",
-	MAME_DIR .. "src/mame/audio/upd1771.h",
+	MAME_DIR .. "src/devices/sound/upd1771.cpp",
+	MAME_DIR .. "src/devices/sound/upd1771.h",
 }
 
 createMESSProjects(_target, _subtarget, "epson")
@@ -1869,8 +1876,8 @@ createMESSProjects(_target, _subtarget, "interton")
 files {
 	MAME_DIR .. "src/mame/drivers/vc4000.cpp",
 	MAME_DIR .. "src/mame/includes/vc4000.h",
-	MAME_DIR .. "src/mame/audio/vc4000snd.cpp",
-	MAME_DIR .. "src/mame/audio/vc4000snd.h",
+	MAME_DIR .. "src/mame/audio/vc4000.cpp",
+	MAME_DIR .. "src/mame/audio/vc4000.h",
 	MAME_DIR .. "src/mame/video/vc4000.cpp",
 }
 
@@ -1965,6 +1972,7 @@ createMESSProjects(_target, _subtarget, "mb")
 files {
 	MAME_DIR .. "src/mame/drivers/mbdtower.cpp",
 	MAME_DIR .. "src/mame/drivers/microvsn.cpp",
+	MAME_DIR .. "src/mame/drivers/phantom.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "mchester")
@@ -2430,7 +2438,6 @@ files {
 	MAME_DIR .. "src/mame/machine/dccons.cpp",
 	MAME_DIR .. "src/mame/drivers/megadriv.cpp",
 	MAME_DIR .. "src/mame/includes/megadriv.h",
-	MAME_DIR .. "src/mame/includes/md_cons.h",
 	MAME_DIR .. "src/mame/drivers/saturn.cpp",
 	MAME_DIR .. "src/mame/drivers/segapico.cpp",
 	MAME_DIR .. "src/mame/drivers/sega_sawatte.cpp",
@@ -2587,8 +2594,8 @@ createMESSProjects(_target, _subtarget, "special")
 files {
 	MAME_DIR .. "src/mame/drivers/special.cpp",
 	MAME_DIR .. "src/mame/includes/special.h",
-	MAME_DIR .. "src/mame/audio/specimx_snd.cpp",
-	MAME_DIR .. "src/mame/audio/specimx_snd.h",
+	MAME_DIR .. "src/mame/audio/special.cpp",
+	MAME_DIR .. "src/mame/audio/special.h",
 	MAME_DIR .. "src/mame/machine/special.cpp",
 	MAME_DIR .. "src/mame/video/special.cpp",
 }
@@ -2915,8 +2922,8 @@ files {
 createMESSProjects(_target, _subtarget, "videoton")
 files {
 	MAME_DIR .. "src/mame/drivers/tvc.cpp",
-	MAME_DIR .. "src/mame/audio/tvc_snd.cpp",
-	MAME_DIR .. "src/mame/audio/tvc_snd.h",
+	MAME_DIR .. "src/mame/audio/tvc.cpp",
+	MAME_DIR .. "src/mame/audio/tvc.h",
 }
 
 createMESSProjects(_target, _subtarget, "visual")
@@ -3145,6 +3152,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/pipbug.cpp",
 	MAME_DIR .. "src/mame/drivers/plan80.cpp",
 	MAME_DIR .. "src/mame/drivers/pm68k.cpp",
+	MAME_DIR .. "src/mame/drivers/pockchal.cpp",
 	MAME_DIR .. "src/mame/drivers/poly.cpp",
 	MAME_DIR .. "src/mame/drivers/proteus3.cpp",
 	MAME_DIR .. "src/mame/drivers/pt68k4.cpp",

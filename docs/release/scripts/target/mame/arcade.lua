@@ -249,6 +249,7 @@ SOUNDS["TMS5110A"] = true
 SOUNDS["LMC1992"] = true
 SOUNDS["AWACS"] = true
 SOUNDS["YMZ770"] = true
+SOUNDS["MPEG_AUDIO"] = true
 SOUNDS["T6721A"] = true
 SOUNDS["MOS7360"] = true
 --SOUNDS["ESQPUMP"] = true
@@ -565,6 +566,7 @@ MACHINES["STEPPERS"] = true
 MACHINES["PCI9050"] = true
 --MACHINES["TMS1024"] = true
 MACHINES["GENPC"] = true
+MACHINES["GEN_LATCH"] = true
 
 --------------------------------------------------
 -- specify available bus cores
@@ -600,6 +602,7 @@ BUSES["CENTRONICS"] = true
 --BUSES["EP64"] = true
 --BUSES["EPSON_SIO"] = true
 --BUSES["GAMEBOY"] = true
+BUSES["GAMEGEAR"] = true
 --BUSES["GBA"] = true
 BUSES["GENERIC"] = true
 --BUSES["IEEE488"] = true
@@ -615,6 +618,7 @@ BUSES["MIDI"] = true
 --BUSES["MEGADRIVE"] = true
 --BUSES["MSX_SLOT"] = true
 BUSES["NEOGEO"] = true
+BUSES["NEOGEO_CTRL"] = true
 --BUSES["NES"] = true
 --BUSES["NUBUS"] = true
 --BUSES["O2"] = true
@@ -628,10 +632,11 @@ BUSES["PC_KBD"] = true
 --BUSES["QL"] = true
 BUSES["RS232"] = true
 --BUSES["S100"] = true
+BUSES["SAT_CTRL"] = true
 --BUSES["SATURN"] = true
 BUSES["SCSI"] = true
 --BUSES["SCV"] = true
---BUSES["SEGA8"] = true
+BUSES["SEGA8"] = true
 BUSES["SMS_CTRL"] = true
 BUSES["SMS_EXP"] = true
 --BUSES["SNES"] = true
@@ -801,10 +806,8 @@ files {
 	MAME_DIR .. "src/mame/machine/nmk112.h",
 	MAME_DIR .. "src/mame/machine/pcshare.cpp",
 	MAME_DIR .. "src/mame/machine/pcshare.h",
-	MAME_DIR .. "src/mame/machine/segacrpt.cpp",
-	MAME_DIR .. "src/mame/machine/segacrpt.h",
-	MAME_DIR .. "src/mame/machine/segacrp2.cpp",
-	MAME_DIR .. "src/mame/machine/segacrp2.h",
+	MAME_DIR .. "src/mame/machine/segacrpt_device.cpp",
+	MAME_DIR .. "src/mame/machine/segacrpt_device.h",
 	MAME_DIR .. "src/mame/machine/ticket.cpp",
 	MAME_DIR .. "src/mame/machine/ticket.h",
 	MAME_DIR .. "src/mame/video/avgdvg.cpp",
@@ -1283,7 +1286,7 @@ files {
 	MAME_DIR .. "src/mame/video/cps1.cpp",
 	MAME_DIR .. "src/mame/drivers/kenseim.cpp",
 	MAME_DIR .. "src/mame/drivers/cps2.cpp",
-	MAME_DIR .. "src/mame/machine/cps2crpt.cpp",
+	MAME_DIR .. "src/mame/machine/cps2crypt.cpp",
 	MAME_DIR .. "src/mame/machine/cps2crypt.h",
 	MAME_DIR .. "src/mame/drivers/cps3.cpp",
 	MAME_DIR .. "src/mame/includes/cps3.h",
@@ -1334,6 +1337,7 @@ files {
 	MAME_DIR .. "src/mame/machine/kabuki.cpp",
 	MAME_DIR .. "src/mame/machine/kabuki.h",
 	MAME_DIR .. "src/mame/drivers/tvcapcom.cpp",
+	MAME_DIR .. "src/mame/drivers/instantm.cpp",
 }
 
 createMAMEProjects(_target, _subtarget, "cinemat")
@@ -1661,9 +1665,9 @@ files {
 	MAME_DIR .. "src/mame/video/exidy440.cpp",
 	MAME_DIR .. "src/mame/drivers/exidyttl.cpp",
 	MAME_DIR .. "src/mame/drivers/maxaflex.cpp",
-	MAME_DIR .. "src/mame/machine/atari.cpp",
-	MAME_DIR .. "src/mame/includes/atari.h",
-	MAME_DIR .. "src/mame/video/atari.cpp",
+	MAME_DIR .. "src/mame/machine/atari400.cpp",
+	MAME_DIR .. "src/mame/includes/atari400.h",
+	MAME_DIR .. "src/mame/video/atari400.cpp",
 	MAME_DIR .. "src/mame/video/antic.cpp",
 	MAME_DIR .. "src/mame/video/antic.h",
 	MAME_DIR .. "src/mame/video/gtia.cpp",
@@ -1901,6 +1905,7 @@ files {
 	MAME_DIR .. "src/mame/machine/irem_cpu.h",
 	MAME_DIR .. "src/mame/audio/irem.cpp",
 	MAME_DIR .. "src/mame/audio/irem.h",
+  MAME_DIR .. "src/mame/audio/nl_kidniki.cpp",
 }
 
 createMAMEProjects(_target, _subtarget, "itech")
@@ -2998,7 +3003,7 @@ files {
 	MAME_DIR .. "src/mame/machine/segabb.cpp",
 	MAME_DIR .. "src/mame/machine/segabb.h",
 	MAME_DIR .. "src/mame/machine/megadriv.cpp",
-	MAME_DIR .. "src/mame/includes/md_cons.h",
+	MAME_DIR .. "src/mame/includes/megadriv.h",
 	MAME_DIR .. "src/mame/drivers/megadrvb.cpp",
 	MAME_DIR .. "src/mame/drivers/megaplay.cpp",
 	MAME_DIR .. "src/mame/drivers/megatech.cpp",
@@ -3044,6 +3049,8 @@ files {
 	MAME_DIR .. "src/mame/machine/naomim2.h",
 	MAME_DIR .. "src/mame/machine/naomim4.cpp",
 	MAME_DIR .. "src/mame/machine/naomim4.h",
+	MAME_DIR .. "src/mame/machine/m3comm.cpp",
+	MAME_DIR .. "src/mame/machine/m3comm.h",
 	MAME_DIR .. "src/mame/machine/315-5881_crypt.cpp",
 	MAME_DIR .. "src/mame/machine/315-5881_crypt.h",
 	MAME_DIR .. "src/mame/machine/awboard.cpp",
@@ -3125,6 +3132,8 @@ files {
 	MAME_DIR .. "src/mame/video/suprloco.cpp",
 	MAME_DIR .. "src/mame/drivers/system1.cpp",
 	MAME_DIR .. "src/mame/includes/system1.h",
+	MAME_DIR .. "src/mame/machine/segacrp2_device.cpp",
+	MAME_DIR .. "src/mame/machine/segacrp2_device.h",
 	MAME_DIR .. "src/mame/video/system1.cpp",
 	MAME_DIR .. "src/mame/drivers/system16.cpp",
 	MAME_DIR .. "src/mame/includes/system16.h",
@@ -4354,6 +4363,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/jongkyo.cpp",
 	MAME_DIR .. "src/mame/drivers/joystand.cpp",
 	MAME_DIR .. "src/mame/drivers/jubilee.cpp",
+	MAME_DIR .. "src/mame/drivers/jungleyo.cpp",
 	MAME_DIR .. "src/mame/drivers/kas89.cpp",
 	MAME_DIR .. "src/mame/drivers/kingpin.cpp",
 	MAME_DIR .. "src/mame/drivers/koikoi.cpp",

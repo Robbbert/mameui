@@ -44,16 +44,22 @@ function osdmodulesbuild()
 	files {
 		MAME_DIR .. "src/osd/osdnet.cpp",
 		MAME_DIR .. "src/osd/osdnet.h",
+		MAME_DIR .. "src/osd/watchdog.cpp",
+		MAME_DIR .. "src/osd/watchdog.h",
 		MAME_DIR .. "src/osd/modules/debugger/debug_module.h",
 		MAME_DIR .. "src/osd/modules/font/font_module.h",
 		MAME_DIR .. "src/osd/modules/midi/midi_module.h",
 		MAME_DIR .. "src/osd/modules/netdev/netdev_module.h",
 		MAME_DIR .. "src/osd/modules/sound/sound_module.h",
+		MAME_DIR .. "src/osd/modules/diagnostics/diagnostics_module.h",
 		MAME_DIR .. "src/osd/modules/lib/osdobj_common.cpp",
 		MAME_DIR .. "src/osd/modules/lib/osdobj_common.h",
+		MAME_DIR .. "src/osd/modules/diagnostics/none.cpp",
+		MAME_DIR .. "src/osd/modules/diagnostics/diagnostics_win32.cpp",
 		MAME_DIR .. "src/osd/modules/debugger/none.cpp",
 		MAME_DIR .. "src/osd/modules/debugger/debugint.cpp",
 		MAME_DIR .. "src/osd/modules/debugger/debugwin.cpp",
+		MAME_DIR .. "src/osd/modules/debugger/debugimgui.cpp",
 		MAME_DIR .. "src/osd/modules/font/font_sdl.cpp",
 		MAME_DIR .. "src/osd/modules/font/font_windows.cpp",
 		MAME_DIR .. "src/osd/modules/font/font_dwrite.cpp",
@@ -74,6 +80,7 @@ function osdmodulesbuild()
 		MAME_DIR .. "src/osd/modules/input/input_common.cpp",
 		MAME_DIR .. "src/osd/modules/input/input_common.h",
 		MAME_DIR .. "src/osd/modules/input/input_dinput.cpp",
+		MAME_DIR .. "src/osd/modules/input/input_dinput.h",
 		MAME_DIR .. "src/osd/modules/input/input_none.cpp",
 		MAME_DIR .. "src/osd/modules/input/input_rawinput.cpp",
 		MAME_DIR .. "src/osd/modules/input/input_win32.cpp",
@@ -84,8 +91,32 @@ function osdmodulesbuild()
 		MAME_DIR .. "src/osd/modules/input/input_windows.cpp",
 		MAME_DIR .. "src/osd/modules/input/input_windows.h",
 		MAME_DIR .. "src/osd/modules/input/input_xinput.cpp",
+		MAME_DIR .. "src/osd/modules/input/input_xinput.h",
+		MAME_DIR .. "src/osd/modules/input/input_winhybrid.cpp",
+		MAME_DIR .. "src/osd/modules/output/output_module.h",
+		MAME_DIR .. "src/osd/modules/output/none.cpp",
+		MAME_DIR .. "src/osd/modules/output/console.cpp",
+		MAME_DIR .. "src/osd/modules/output/network.cpp",
+		MAME_DIR .. "src/osd/modules/ipc/tcp_connection.cpp",
+		MAME_DIR .. "src/osd/modules/ipc/tcp_connection.h",
+		MAME_DIR .. "src/osd/modules/ipc/tcp_server.cpp",
+		MAME_DIR .. "src/osd/modules/ipc/tcp_server.h",
+		MAME_DIR .. "src/osd/modules/ipc/raw_tcp_connection.cpp",
+		MAME_DIR .. "src/osd/modules/ipc/raw_tcp_connection.h",
+		MAME_DIR .. "src/osd/modules/ipc/raw_tcp_server.cpp",
+		MAME_DIR .. "src/osd/modules/ipc/raw_tcp_server.h",
+		MAME_DIR .. "src/osd/modules/ipc/rtc_tcp_connection.cpp",
+		MAME_DIR .. "src/osd/modules/ipc/rtc_tcp_connection.h",
+		MAME_DIR .. "src/osd/modules/ipc/rtc_tcp_server.cpp",
+		MAME_DIR .. "src/osd/modules/ipc/rtc_tcp_server.h",
+	}
+	includedirs {
+		ext_includedir("uv"),
 	}
 
+	includedirs {
+		MAME_DIR .. "src/frontend/mame", -- for internal debugger
+	}
 	if _OPTIONS["targetos"]=="windows" then
 		includedirs {
 			MAME_DIR .. "3rdparty/winpcap/Include",
@@ -126,10 +157,15 @@ function osdmodulesbuild()
 		"__STDC_LIMIT_MACROS",
 		"__STDC_FORMAT_MACROS",
 		"__STDC_CONSTANT_MACROS",
+		"IMGUI_DISABLE_OBSOLETE_FUNCTIONS",
 	}
 
 	files {
 		MAME_DIR .. "src/osd/modules/render/drawbgfx.cpp",
+		MAME_DIR .. "src/osd/modules/render/aviwrite.cpp",
+		MAME_DIR .. "src/osd/modules/render/aviwrite.h",
+		MAME_DIR .. "src/osd/modules/render/bgfxutil.cpp",
+		MAME_DIR .. "src/osd/modules/render/bgfxutil.h",
 		MAME_DIR .. "src/osd/modules/render/binpacker.cpp",
 		MAME_DIR .. "src/osd/modules/render/bgfx/blendreader.cpp",
 		MAME_DIR .. "src/osd/modules/render/bgfx/chain.cpp",
@@ -137,6 +173,10 @@ function osdmodulesbuild()
 		MAME_DIR .. "src/osd/modules/render/bgfx/chainentryreader.cpp",
 		MAME_DIR .. "src/osd/modules/render/bgfx/chainmanager.cpp",
 		MAME_DIR .. "src/osd/modules/render/bgfx/chainreader.cpp",
+		MAME_DIR .. "src/osd/modules/render/bgfx/clear.cpp",
+		MAME_DIR .. "src/osd/modules/render/bgfx/clear.h",
+		MAME_DIR .. "src/osd/modules/render/bgfx/clearreader.cpp",
+		MAME_DIR .. "src/osd/modules/render/bgfx/clearreader.h",
 		MAME_DIR .. "src/osd/modules/render/bgfx/cullreader.cpp",
 		MAME_DIR .. "src/osd/modules/render/bgfx/depthreader.cpp",
 		MAME_DIR .. "src/osd/modules/render/bgfx/effect.cpp",
@@ -169,7 +209,9 @@ function osdmodulesbuild()
 		MAME_DIR .. "src/osd/modules/render/bgfx/writereader.cpp",
 	}
 	includedirs {
+		MAME_DIR .. "3rdparty/bgfx/examples/common",
 		MAME_DIR .. "3rdparty/bgfx/include",
+		MAME_DIR .. "3rdparty/bgfx/3rdparty",
 		MAME_DIR .. "3rdparty/bx/include",
 		MAME_DIR .. "3rdparty/rapidjson/include",
 	}
@@ -393,6 +435,7 @@ function osdmodulestargetconf()
 			"gdi32",
 			"dsound",
 			"dxguid",
+			"oleaut32",
 		}
 	elseif _OPTIONS["targetos"]=="macosx" then
 		links {

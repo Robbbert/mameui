@@ -38,7 +38,8 @@
 
 // MAME/MAMEUI headers
 #include "emu.h"
-#include "emuopts.h"
+#include "mame.h"
+#include "mameopts.h"
 #include "unzip.h"
 #include "winutf8.h"
 #include "strconv.h"
@@ -227,6 +228,7 @@ static int MIN_HEIGHT = DBU_MIN_HEIGHT;
 extern const ICONDATA g_iconData[];
 extern const TCHAR g_szPlayGameString[];
 extern const char g_szGameCountString[];
+UINT8 playopts_apply = 0;
 
 typedef struct _play_options play_options;
 struct _play_options
@@ -852,11 +854,11 @@ public:
 			char buffer[1024];
 
 			// if we are in fullscreen mode, go to windowed mode
-			if ((video_config.windowed == 0) && (win_window_list ))
+			if ((video_config.windowed == 0) && !win_window_list.empty())
 				winwindow_toggle_full_screen();
 
 			vsnprintf(buffer, ARRAY_LENGTH(buffer), msg, args);printf("%s\n",buffer);
-			win_message_box_utf8(win_window_list ? win_window_list->m_hwnd : hMain, buffer, MAMEUINAME, MB_ICONERROR | MB_OK);
+			win_message_box_utf8(!win_window_list.empty() ? win_window_list.front()->platform_window<HWND>() : hMain, buffer, MAMEUINAME, MB_ICONERROR | MB_OK);
 		}
 		else
 			chain_output(channel, msg, args);
@@ -883,34 +885,34 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 {
 	time_t start, end;
 	double elapsedtime;
-	DWORD dwExitCode = 0;
 	int i;
-	windows_options mame_opts;
+	mame_options mame_opts;
+	windows_options global_opts;
 	std::string error_string;
 	// set up MAME options
 //  mame_opts = mame_options_init(mame_win_options);
 
 	// Tell mame were to get the INIs
-	SetDirectories(mame_opts);
+	SetDirectories(global_opts);
 
 	// add image specific device options
-	mame_opts.set_system_name(driver_list::driver(nGameIndex).name);
+	mame_opts.set_system_name(global_opts, driver_list::driver(nGameIndex).name);
 
 	// set any specified play options
-	if (playopts)
+	if (playopts_apply == 0x57)
 	{
 		if (playopts->record)
-			mame_opts.set_value(OPTION_RECORD, playopts->record, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_RECORD, playopts->record, OPTION_PRIORITY_CMDLINE,error_string);
 		if (playopts->playback)
-			mame_opts.set_value(OPTION_PLAYBACK, playopts->playback, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_PLAYBACK, playopts->playback, OPTION_PRIORITY_CMDLINE,error_string);
 		if (playopts->state)
-			mame_opts.set_value(OPTION_STATE, playopts->state, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_STATE, playopts->state, OPTION_PRIORITY_CMDLINE,error_string);
 		if (playopts->wavwrite)
-			mame_opts.set_value(OPTION_WAVWRITE, playopts->wavwrite, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_WAVWRITE, playopts->wavwrite, OPTION_PRIORITY_CMDLINE,error_string);
 		if (playopts->mngwrite)
-			mame_opts.set_value(OPTION_MNGWRITE, playopts->mngwrite, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_MNGWRITE, playopts->mngwrite, OPTION_PRIORITY_CMDLINE,error_string);
 		if (playopts->aviwrite)
-			mame_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE,error_string);
 	}
 
 	// Mame will parse all the needed .ini files.
@@ -924,12 +926,12 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	// run the emulation
 	// Time the game run.
 	time(&start);
-	windows_osd_interface osd(mame_opts);
+	windows_osd_interface osd(global_opts);
 	// output errors to message boxes
 	mameui_output_error winerror;
 	osd_output::push(&winerror);
 	osd.register_options();
-	machine_manager *manager = machine_manager::instance(mame_opts, osd);
+	mame_machine_manager *manager = mame_machine_manager::instance(global_opts, osd);
 	manager->execute();
 	osd_output::pop(&winerror);
 	global_free(manager);
@@ -938,13 +940,37 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	elapsedtime = end - start;
 	// Increment our playtime.
 	IncrementPlayTime(nGameIndex, elapsedtime);
+
+	// clear any specified play options
+	// do it this way to preserve slots and software entries
+	if (playopts_apply == 0x57)
+	{
+		windows_options o;
+		load_options(o, nGameIndex);
+		if (playopts->record)
+			o.set_value(OPTION_RECORD, "", OPTION_PRIORITY_CMDLINE,error_string);
+		if (playopts->playback)
+			o.set_value(OPTION_PLAYBACK, "", OPTION_PRIORITY_CMDLINE,error_string);
+		if (playopts->state)
+			o.set_value(OPTION_STATE, "", OPTION_PRIORITY_CMDLINE,error_string);
+		if (playopts->wavwrite)
+			o.set_value(OPTION_WAVWRITE, "", OPTION_PRIORITY_CMDLINE,error_string);
+		if (playopts->mngwrite)
+			o.set_value(OPTION_MNGWRITE, "", OPTION_PRIORITY_CMDLINE,error_string);
+		if (playopts->aviwrite)
+			o.set_value(OPTION_AVIWRITE, "", OPTION_PRIORITY_CMDLINE,error_string);
+		// apply the above to the ini file
+		save_options(o, nGameIndex);
+	}
+	playopts_apply = 0;
+
 	// the emulation is complete; continue
 	for (i = 0; i < ARRAY_LENGTH(s_nPickers); i++)
 		Picker_ResetIdle(GetDlgItem(hMain, s_nPickers[i]));
 	ShowWindow(hMain, SW_SHOW);
 	SetForegroundWindow(hMain);
 
-	return dwExitCode;
+	return (DWORD)0;
 }
 
 int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
@@ -1539,7 +1565,7 @@ static void SetMainTitle(void)
 	char version[50];
 	char buffer[100];
 
-	sscanf(build_version,"%49s",version);
+	sscanf(GetVersionString(),"%49s",version);
 	snprintf(buffer, ARRAY_LENGTH(buffer), "%s %s", MAMEUINAME, GetVersionString());
 	win_set_window_text_utf8(hMain,buffer);
 }
@@ -4449,7 +4475,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				printf("%X: %ls\n",g_helpInfo[i].bIsHtmlHelp, g_helpInfo[i].lpFile);
 				if (i == 1) // get current whatsnew.txt from mamedev.org
 				{
-					std::string version = std::string(build_version); // turn version string into std
+					std::string version = std::string(GetVersionString()); // turn version string into std
 					version.erase(1,1); // take out the decimal point
 					version.erase(4, std::string::npos); // take out the date
 					std::string url = "http://mamedev.org/releases/whatsnew_" + version + ".txt"; // construct url
@@ -5289,6 +5315,7 @@ static void MamePlayBackGame()
 
 		memset(&playopts, 0, sizeof(playopts));
 		playopts.playback = fname;
+		playopts_apply = 0x57;
 		MamePlayGameWithOptions(nGame, &playopts);
 	}
 }
@@ -5366,6 +5393,7 @@ static void MameLoadState()
 		memset(&playopts, 0, sizeof(playopts));
 #ifdef MESS
 		playopts.state = state_fname;
+		playopts_apply = 0x57;
 #else
 		{
 			char *cPos;
@@ -5409,6 +5437,7 @@ static void MamePlayRecordGame()
 		memset(&playopts, 0, sizeof(playopts));
 		strcat(fname, ".inp");
 		playopts.record = fname;
+		playopts_apply = 0x57;
 		MamePlayGameWithOptions(nGame, &playopts);
 	}
 }
@@ -5437,6 +5466,7 @@ static void MamePlayRecordWave()
 	{
 		memset(&playopts, 0, sizeof(playopts));
 		playopts.wavwrite = filename;
+		playopts_apply = 0x57;
 		MamePlayGameWithOptions(nGame, &playopts);
 	}
 }
@@ -5467,6 +5497,7 @@ static void MamePlayRecordMNG()
 		memset(&playopts, 0, sizeof(playopts));
 		strcat(fname, ".mng");
 		playopts.mngwrite = fname;
+		playopts_apply = 0x57;
 		MamePlayGameWithOptions(nGame, &playopts);
 	}
 }
@@ -5497,6 +5528,7 @@ static void MamePlayRecordAVI()
 		memset(&playopts, 0, sizeof(playopts));
 		strcat(fname, ".avi");
 		playopts.aviwrite = fname;
+		playopts_apply = 0x57;
 		MamePlayGameWithOptions(nGame, &playopts);
 	}
 }

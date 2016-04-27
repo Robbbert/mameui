@@ -9,6 +9,14 @@
 --
 ----------------------------------------------------------------------------
 
+files {
+	MAME_DIR .. "src/devices/sound/flt_vol.cpp",
+	MAME_DIR .. "src/devices/sound/flt_vol.h",
+	MAME_DIR .. "src/devices/sound/flt_rc.cpp",
+	MAME_DIR .. "src/devices/sound/flt_rc.h",
+	MAME_DIR .. "src/devices/sound/samples.cpp",
+	MAME_DIR .. "src/devices/sound/samples.h",
+}
 
 ---------------------------------------------------
 -- DACs
@@ -1285,6 +1293,16 @@ if (SOUNDS["YMZ770"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/sound/ymz770.cpp",
 		MAME_DIR .. "src/devices/sound/ymz770.h",
+	}
+end
+
+---------------------------------------------------
+-- MPEG AUDIO
+--@src/devices/sound/mpeg_audio.h,SOUNDS["MPEG_AUDIO"] = true
+---------------------------------------------------
+
+if (SOUNDS["MPEG_AUDIO"]~=null) then
+	files {
 		MAME_DIR .. "src/devices/sound/mpeg_audio.cpp",
 		MAME_DIR .. "src/devices/sound/mpeg_audio.h",
 	}

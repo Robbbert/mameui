@@ -16,6 +16,14 @@ MAME_DIR = (path.getabsolute("..") .. "/")
 local MAME_BUILD_DIR = (MAME_DIR .. _OPTIONS["build-dir"] .. "/")
 local naclToolchain = ""
 
+newoption {
+	trigger = "precompile",
+	description = "Precompiled headers generation.",
+	allowed = {
+		{ "0",   "Disabled"     },
+		{ "1",   "Enabled"      },
+	}
+}
 
 function backtick(cmd)
 	result = string.gsub(string.gsub(os.outputof(cmd), "\r?\n$", ""), " $", "")
@@ -53,13 +61,15 @@ end
 
 function layoutbuildtask(_folder, _name)
 	return { MAME_DIR .. "src/".._folder.."/".. _name ..".lay" ,    GEN_DIR .. _folder .. "/".._name..".lh",
-		{  MAME_DIR .. "scripts/build/file2str.py" }, {"@echo Converting src/".._folder.."/".._name..".lay...",    PYTHON .. " $(1) $(<) $(@) layout_".._name }};
+		{  MAME_DIR .. "scripts/build/complay.py" }, {"@echo Compressing src/".._folder.."/".._name..".lay...",    PYTHON .. " $(1) $(<) $(@) layout_".._name }};
 end
 
 function precompiledheaders()
-	configuration { "not xcode4" }
-		pchheader("emu.h")
-	configuration { }
+	if _OPTIONS["precompile"]==nil or (_OPTIONS["precompile"]~=nil and _OPTIONS["precompile"]=="1") then
+		configuration { "not xcode4" }
+			pchheader("emu.h")
+		configuration { }
+	end
 end
 
 function addprojectflags()
@@ -339,17 +349,17 @@ newoption {
 }
 
 newoption {
-	trigger = "SOURCES",
-	description = "List of sources to compile.",
+	trigger = "IGNORE_GIT",
+	description = "Ignore usage of git command in build process",
+	allowed = {
+		{ "0",  "Do not ignore"   },
+		{ "1",  "Ingore"  },
+	},
 }
 
 newoption {
-	trigger = "FORCE_VERSION_COMPILE",
-	description = "Force compiling of version.c file.",
-	allowed = {
-		{ "0",   "Disabled"     },
-		{ "1",   "Enabled"      },
-	}
+	trigger = "SOURCES",
+	description = "List of sources to compile.",
 }
 
 newoption {
@@ -364,6 +374,16 @@ newoption {
 		{ "0",   "Disabled"     },
 		{ "1",   "Enabled"      },
 	}
+}
+
+newoption {
+	trigger = "DEBUG_DIR",
+	description = "Default directory for debugger.",
+}
+
+newoption {
+	trigger = "DEBUG_ARGS",
+	description = "Arguments for running debug build.",
 }
 
 dofile ("extlib.lua")
@@ -628,7 +648,7 @@ if _OPTIONS["with-system-jpeg"]~=nil then
 	}
 end
 
-if _OPTIONS["with-system-flac"]~=nil then
+if not _OPTIONS["with-system-flac"]~=nil then
 	defines {
 		"FLAC__NO_DLL",
 	}
@@ -748,17 +768,6 @@ if _OPTIONS["SYMBOLS"]~=nil and _OPTIONS["SYMBOLS"]~="0" then
 	}
 end
 
---# add the optimization flag
-	buildoptions {
-		"-O".. _OPTIONS["OPTIMIZE"],
-		"-fno-strict-aliasing"
-	}
-configuration { "mingw-clang" }
-	buildoptions {
-		"-O1", -- without this executable crash often
-	}
-configuration {  }
-
 -- add the error warning flag
 if _OPTIONS["NOWERROR"]==nil then
 	buildoptions {
@@ -769,16 +778,9 @@ end
 -- if we are optimizing, include optimization options
 if _OPTIONS["OPTIMIZE"] then
 	buildoptions {
+		"-O".. _OPTIONS["OPTIMIZE"],
 		"-fno-strict-aliasing"
 	}
-	if _OPTIONS["ARCHOPTS"] then
-		buildoptions {
-			_OPTIONS["ARCHOPTS"]
-		}
-		linkoptions {
-			_OPTIONS["ARCHOPTS"]
-		}
-	end
 	if _OPTIONS["OPT_FLAGS"] then
 		buildoptions {
 			_OPTIONS["OPT_FLAGS"]
@@ -829,6 +831,21 @@ if _OPTIONS["OPTIMIZE"] then
 		}
 
 	end
+end
+
+configuration { "mingw-clang" }
+	buildoptions {
+		"-O1", -- without this executable crash often
+	}
+configuration {  }
+
+if _OPTIONS["ARCHOPTS"] then
+	buildoptions {
+		_OPTIONS["ARCHOPTS"]
+	}
+	linkoptions {
+		_OPTIONS["ARCHOPTS"]
+	}
 end
 
 if _OPTIONS["SHLIB"] then
@@ -946,6 +963,7 @@ end
 				"-Wno-inline-new-delete",
 				"-Wno-constant-logical-operand",
 				"-Wno-deprecated-register",
+				"-fdiagnostics-show-note-include-stack",
 			}
 			if (version >= 30500) then
 				buildoptions {
@@ -1298,6 +1316,8 @@ dofile(path.join("src", "3rdparty.lua"))
 group "core"
 
 dofile(path.join("src", "emu.lua"))
+
+dofile(path.join("src", "mame", "frontend.lua"))
 
 group "devices"
 dofile(path.join("src", "devices.lua"))

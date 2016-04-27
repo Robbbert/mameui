@@ -6,6 +6,7 @@ rd %to%\src /q /s
 md %to%\src\emu
 copy /Y %from%\src\emu\video.* %to%\src\emu
 copy /Y %from%\src\emu\audit.* %to%\src\emu
+copy /Y %from%\src\version.cpp %to%\src
 
 md %to%\src\osd\winui
 xcopy /E /Y %from%\src\osd\winui %to%\src\osd\winui
