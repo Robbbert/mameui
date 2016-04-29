@@ -541,6 +541,7 @@ MACHINES["UPD4701"] = true
 MACHINES["UPD7002"] = true
 MACHINES["UPD71071"] = true
 MACHINES["UPD765"] = true
+MACHINES["FDC_PLL"] = true
 MACHINES["V3021"] = true
 MACHINES["WD_FDC"] = true
 MACHINES["WD11C00_17"] = true
@@ -906,6 +907,7 @@ files {
 	MAME_DIR .. "src/mame/machine/asteroid.cpp",
 	MAME_DIR .. "src/mame/audio/asteroid.cpp",
 	MAME_DIR .. "src/mame/audio/llander.cpp",
+	MAME_DIR .. "src/mame/audio/llander.h",
 	MAME_DIR .. "src/mame/drivers/atarifb.cpp",
 	MAME_DIR .. "src/mame/includes/atarifb.h",
 	MAME_DIR .. "src/mame/machine/atarifb.cpp",
@@ -2438,7 +2440,9 @@ files {
 	MAME_DIR .. "src/mame/includes/astrocde.h",
 	MAME_DIR .. "src/mame/video/astrocde.cpp",
 	MAME_DIR .. "src/mame/audio/gorf.cpp",
+	MAME_DIR .. "src/mame/audio/gorf.h",
 	MAME_DIR .. "src/mame/audio/wow.cpp",
+	MAME_DIR .. "src/mame/audio/wow.h",
 	MAME_DIR .. "src/mame/drivers/atlantis.cpp",
 	MAME_DIR .. "src/mame/drivers/balsente.cpp",
 	MAME_DIR .. "src/mame/includes/balsente.h",
