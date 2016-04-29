@@ -58,6 +58,7 @@ CPUS["JAGUAR"] = true
 CPUS["CUBEQCPU"] = true
 CPUS["ESRIP"] = true
 CPUS["MIPS"] = true
+CPUS["R3000"] = true
 CPUS["PSX"] = true
 CPUS["SH2"] = true
 CPUS["SH4"] = true
@@ -259,6 +260,7 @@ SOUNDS["AC97"] = true
 SOUNDS["ES1373"] = true
 SOUNDS["L7A1045"] = true
 SOUNDS["AD1848"] = true
+--SOUNDS["UPD1771"] = true
 
 --------------------------------------------------
 -- specify available video cores
@@ -871,6 +873,7 @@ files {
 	MAME_DIR .. "src/mame/machine/amiga.cpp",
 	MAME_DIR .. "src/mame/video/amiga.cpp",
 	MAME_DIR .. "src/mame/video/amigaaga.cpp",
+	MAME_DIR .. "src/mame/video/amigaaga.h",
 	MAME_DIR .. "src/mame/drivers/arsystems.cpp",
 	MAME_DIR .. "src/mame/drivers/cubo.cpp",
 	MAME_DIR .. "src/mame/drivers/mquake.cpp",
@@ -2651,8 +2654,8 @@ createMAMEProjects(_target, _subtarget, "neogeo")
 files {
 	MAME_DIR .. "src/mame/drivers/neogeo.cpp",
 	MAME_DIR .. "src/mame/includes/neogeo.h",
+	MAME_DIR .. "src/mame/drivers/neodriv.inc",
 	MAME_DIR .. "src/mame/video/neogeo.cpp",
-	MAME_DIR .. "src/mame/drivers/neogeo_noslot.cpp",
 	MAME_DIR .. "src/mame/drivers/neopcb.cpp",
 	MAME_DIR .. "src/mame/video/neogeo_spr.cpp",
 	MAME_DIR .. "src/mame/video/neogeo_spr.h",

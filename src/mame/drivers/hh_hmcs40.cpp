@@ -805,8 +805,8 @@ static MACHINE_CONFIG_START( packmon, packmon_state )
 	/* video hardware */
 	MCFG_SCREEN_SVG_ADD("screen", "svg")
 	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_SIZE(3840, 1376)
-	MCFG_SCREEN_VISIBLE_AREA(0, 3840-1, 0, 1376-1)
+	MCFG_SCREEN_SIZE(3840, 1532)
+	MCFG_SCREEN_VISIBLE_AREA(0, 3840-1, 0, 1532-1)
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_hmcs40_state, display_decay_tick, attotime::from_msec(1))
 
@@ -963,8 +963,6 @@ MACHINE_CONFIG_END
   * cyan/red/blue VFD display NEC FIP11BM24T no. 4-8, half of it reflected
     with a one-way mirror to give the illusion of a 3D display
 
-  NOTE!: MAME external artwork is required
-
 ***************************************************************************/
 
 class bzaxxon_state : public hh_hmcs40_state
@@ -1062,8 +1060,13 @@ static MACHINE_CONFIG_START( bzaxxon, bzaxxon_state )
 	MCFG_HMCS40_WRITE_D_CB(WRITE16(bzaxxon_state, grid_w))
 	MCFG_HMCS40_READ_D_CB(IOPORT("IN.5"))
 
+	/* video hardware */
+	MCFG_SCREEN_SVG_ADD("screen", "svg")
+	MCFG_SCREEN_REFRESH_RATE(50)
+	MCFG_SCREEN_SIZE(1225, 2160)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1225-1, 0, 2160-1)
+	MCFG_DEFAULT_LAYOUT(layout_svg)
 	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_hmcs40_state, display_decay_tick, attotime::from_msec(1))
-	MCFG_DEFAULT_LAYOUT(layout_hh_hmcs40_test)
 
 	/* sound hardware */
 	MCFG_SPEAKER_STANDARD_MONO("mono")
@@ -3978,8 +3981,8 @@ ROM_START( packmon )
 	ROM_LOAD( "hd38800a27", 0x0000, 0x1000, CRC(86e09e84) SHA1(ac7d3c43667d5720ca513f8ff51d146d9f2af124) )
 	ROM_CONTINUE(           0x1e80, 0x0100 )
 
-	ROM_REGION( 400909, "svg", 0)
-	ROM_LOAD( "packmon.svg", 0, 400909, CRC(d91393ac) SHA1(1aa27b6dbef59ea6482a41f3e6eb30ff0eb91b4a) ) // by kevtris/OG/hap, ver. 25 apr 2016
+	ROM_REGION( 246356, "svg", 0)
+	ROM_LOAD( "packmon.svg", 0, 246356, CRC(991eea96) SHA1(bf42765aea838e9c26453642b01a962399b3e74c) ) // by Rik/kevtris, ver. 27 apr 2016
 ROM_END
 
 
@@ -3997,6 +4000,9 @@ ROM_START( bzaxxon )
 	ROM_REGION( 0x2000, "maincpu", ROMREGION_ERASE00 )
 	ROM_LOAD( "hd38800b19", 0x0000, 0x1000, CRC(4fecb80d) SHA1(7adf079480ffd3825ad5ae1eaa4d892eecbcc42d) )
 	ROM_CONTINUE(           0x1e80, 0x0100 )
+
+	ROM_REGION( 521080, "svg", 0)
+	ROM_LOAD( "bzaxxon.svg", 0, 521080, BAD_DUMP CRC(f4fbb2de) SHA1(83db400e67d91ae4bfee3e8568ae9df94ebede19) ) // by kevtris/hap, ver. 28 apr 2016 - BAD_DUMP: needs cleanup/redo
 ROM_END
 
 
@@ -4273,7 +4279,7 @@ CONS( 1979, bmboxing,  0,        0, bmboxing, bmboxing, driver_device, 0, "Bambi
 CONS( 1982, bfriskyt,  0,        0, bfriskyt, bfriskyt, driver_device, 0, "Bandai", "Frisky Tom (Bandai)", MACHINE_SUPPORTS_SAVE )
 CONS( 1981, packmon,   0,        0, packmon,  packmon,  driver_device, 0, "Bandai", "Packri Monster", MACHINE_SUPPORTS_SAVE )
 CONS( 1982, msthawk,   0,        0, msthawk,  msthawk,  driver_device, 0, "Bandai (Mattel license)", "Star Hawk (Mattel)", MACHINE_SUPPORTS_SAVE )
-CONS( 1982, bzaxxon,   0,        0, bzaxxon,  bzaxxon,  driver_device, 0, "Bandai", "Zaxxon (Bandai)", MACHINE_SUPPORTS_SAVE | MACHINE_REQUIRES_ARTWORK )
+CONS( 1982, bzaxxon,   0,        0, bzaxxon,  bzaxxon,  driver_device, 0, "Bandai", "Zaxxon (Bandai)", MACHINE_SUPPORTS_SAVE )
 CONS( 1983, zackman,   0,        0, zackman,  zackman,  driver_device, 0, "Bandai", "Zackman", MACHINE_SUPPORTS_SAVE )
 CONS( 1983, bpengo,    0,        0, bpengo,   bpengo,   driver_device, 0, "Bandai", "Pengo (Bandai)", MACHINE_SUPPORTS_SAVE )
 CONS( 1983, bbtime,    0,        0, bbtime,   bbtime,   driver_device, 0, "Bandai", "Burger Time (Bandai)", MACHINE_SUPPORTS_SAVE )

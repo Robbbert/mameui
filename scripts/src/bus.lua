@@ -1188,7 +1188,7 @@ end
 
 ---------------------------------------------------
 --
---@src/devices/bus/vcs/ctrl.h,BUSES["VCS_CTRL"] = true
+--@src/devices/bus/vcs_ctrl/ctrl.h,BUSES["VCS_CTRL"] = true
 ---------------------------------------------------
 
 if (BUSES["VCS_CTRL"]~=null) then
@@ -1895,8 +1895,6 @@ if (BUSES["NEOGEO"]~=null) then
 		MAME_DIR .. "src/devices/bus/neogeo/slot.h",
 		MAME_DIR .. "src/devices/bus/neogeo/carts.cpp",
 		MAME_DIR .. "src/devices/bus/neogeo/carts.h",
-		MAME_DIR .. "src/devices/bus/neogeo/neogeo_helper.cpp",
-		MAME_DIR .. "src/devices/bus/neogeo/neogeo_helper.h",
 		MAME_DIR .. "src/devices/bus/neogeo/rom.cpp",
 		MAME_DIR .. "src/devices/bus/neogeo/rom.h",
 		MAME_DIR .. "src/devices/bus/neogeo/fatfury2.cpp",
