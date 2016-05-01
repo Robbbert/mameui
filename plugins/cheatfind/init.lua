@@ -71,7 +71,7 @@ function cheatfind.startplugin()
 	end
 
 	-- compare two data blocks, format is as lua string.unpack, bne and beq val is table of masks
-	function cheat.comp(olddata, newdata, oper, format, val, bcd)
+	function cheat.comp(newdata, olddata, oper, format, val, bcd)
 		local ret = {}
 		local ref = {} -- this is a helper for comparing two match lists
 		local bitmask = nil
@@ -106,6 +106,10 @@ function cheatfind.startplugin()
 			eq = function(a, b, val) return a == b end,
 			ne = function(a, b, val) return (a ~= b and val == 0) or
 				(val > 0 and ((a - val) == b or (a + val) == b)) end,
+			ltv = function(a, b, val) return a < val end,
+			gtv = function(a, b, val) return a > val end,
+			eqv = function(a, b, val) return a == val end,
+			nev = function(a, b, val) return a ~= val end,
 			bne = bne, beq = beq }
 
 		local function check_bcd(val)
@@ -125,12 +129,16 @@ function cheatfind.startplugin()
 			return result
 		end
 
+		if not newdata and oper:sub(3, 3) == "v" then
+			newdata = olddata
+		end
 		if olddata.start ~= newdata.start or olddata.size ~= newdata.size or not cfoper[oper] then
 			return {} 
 		end
 		if not val then
 			val = 0
 		end
+
 		for i = 1, olddata.size do
 			local old = string.unpack(format, olddata.block, i)
 			local new = string.unpack(format, newdata.block, i)
@@ -168,8 +176,8 @@ function cheatfind.startplugin()
 	end
 
 	-- compare two blocks and filter by table of previous matches
-	function cheat.compnext(olddata, newdata, oldmatch, oper, format, val, bcd)
-		local matches, refs = cheat.comp(olddata, newdata, oper, format, check_val(oper, val, oldmatch), bcd)
+	function cheat.compnext(newdata, olddata, oldmatch, oper, format, val, bcd)
+		local matches, refs = cheat.comp(newdata, olddata, oper, format, check_val(oper, val, oldmatch), bcd)
 		local nonmatch = {}
 		local oldrefs = {}
 		for num, match in pairs(oldmatch) do
@@ -196,13 +204,13 @@ function cheatfind.startplugin()
 	-- compare a data block to the current state
 	function cheat.compcur(olddata, oper, format, val, bcd)
 		local newdata = cheat.save(olddata.space, olddata.start, olddata.size, olddata.space)
-		return cheat.comp(olddata, newdata, oper, format, val, bcd)
+		return cheat.comp(newdata, olddata, oper, format, val, bcd)
 	end
 
 	-- compare a data block to the current state and filter
 	function cheat.compcurnext(olddata, oldmatch, oper, format, val, bcd)
 		local newdata = cheat.save(olddata.space, olddata.start, olddata.size, olddata.space)
-		return cheat.compnext(olddata, newdata, oldmatch, oper, format, val, bcd)
+		return cheat.compnext(newdata, olddata, oldmatch, oper, format, val, bcd)
 	end
 
 
@@ -216,16 +224,16 @@ function cheatfind.startplugin()
 			   "little u32", "big u32", "little s32", "big s32", "little u64", "big u64", "little s64", "big s64" }
 	local width = 1
 	local bcd = 0
-	local optable = { "lt", "gt", "eq", "ne", "beq", "bne" }
+	local optable = { "lt", "gt", "eq", "ne", "beq", "bne", "ltv", "gtv", "eqv", "nev" }
 	local opsel = 1
 	local value = 0
-	local leftop = 1
-	local rightop = 0
+	local leftop = 2
+	local rightop = 1
 	local matches = {}
-	local matchsel = 1
+	local matchsel = 0
 	local menu_blocks = {}
-	local midx = { region = 1, init = 2, lop = 4, op = 5, rop = 6, val = 7,
-		       width = 9,  bcd = 10, undo = 11, save = 12, comp = 13, match = 15, watch = 0 }
+	local midx = { region = 1, init = 2, save = 4, comp = 5, lop = 6, op = 7, rop = 8, val = 9,
+		       width = 11,  bcd = 12, undo = 13,  match = 15, watch = 0 }
 	local watches = {}
 
 	local function start()
@@ -236,10 +244,10 @@ function cheatfind.startplugin()
 		bcd = 0
 		opsel = 1
 		value = 0
-		leftop = 1
+		leftop = 2
 		rightop = 1
 		matches = {}
-		matchsel = 1
+		matchsel = 0
 		menu_blocks = {}
 		watches = {}
 
@@ -291,21 +299,20 @@ function cheatfind.startplugin()
 		menu[midx.init] = { "Start new search", "", 0 }
 		if #menu_blocks ~= 0 then
 			menu[midx.init + 1] = { "---", "", "off" }
+			menu[midx.save] = { "Save current -- #" .. #menu_blocks[1] + 1, "", 0 }
+			menu[midx.comp] = { "Compare", "", 0 }
 			menu[midx.lop] = { "Left operand", leftop, "" }
 			menu_lim(leftop, 1, #menu_blocks[1] + 1, menu[midx.lop])
 			if leftop == #menu_blocks[1] + 1 then
-				menu[midx.lop][2] = "All"
+				menu[midx.lop][2] = "Current"
 			end
 			menu[midx.op] = { "Operator", optable[opsel], "" }
 			menu_lim(opsel, 1, #optable, menu[midx.op])
 			menu[midx.rop] = { "Right operand", rightop, "" }
-			menu_lim(rightop, 1, #menu_blocks[1] + 1, menu[midx.rop])
-			if rightop == #menu_blocks[1] + 1 then
-				menu[midx.rop][2] = "Current"
-			end
+			menu_lim(rightop, 1, #menu_blocks[1], menu[midx.rop])
 			menu[midx.val] = { "Value", value, "" }
 			menu_lim(value, 0, 100, menu[midx.val]) -- max value?
-			if value == 0 then
+			if value == 0 and optable[opsel]:sub(3, 3) ~= "v" then
 				menu[midx.val][2] = "Any"
 			end
 			menu[midx.val + 1] = { "---", "", "off" }
@@ -317,18 +324,41 @@ function cheatfind.startplugin()
 				menu[midx.bcd][2] = "On"
 			end
 			menu[midx.undo] = { "Undo last search -- #" .. #matches, "", 0 }
-			menu[midx.save] = { "Save current -- #" .. #menu_blocks[1] + 1, "", 0 }
-			menu[midx.comp] = { "Compare", "", 0 }
 			if #matches ~= 0 then
-				menu[midx.comp + 1] = { "---", "", "off" }
+				menu[midx.undo + 1] = { "---", "", "off" }
 				menu[midx.match] = { "Match block", matchsel, "" }
-				if #matches[#matches] == 1 then
-					menu[midx.match][3] = 0
-				else
-					menu_lim(matchsel, 1, #matches[#matches], menu[midx.match])
+				menu_lim(matchsel, 0, #matches[#matches], menu[midx.match])
+				if matchsel == 0 then
+					menu[midx.match][2] = "All"
 				end
-				for num2, match in ipairs(matches[#matches][matchsel]) do
-					if #menu > 50 then
+				local function mpairs(sel, list)
+					if #list == 0 then
+						return function() end, nil, nil
+					end
+					if sel ~= 0 then
+						return ipairs(list[sel])
+					end
+					local function mpairs_it(list, i)
+						local match
+						i = i + 1
+						local sel = i
+						for j = 1, #list do
+							if sel <= #list[j] then
+								match = list[j][sel]
+								break
+							else
+								sel = sel - #list[j]
+							end
+						end
+						if not match then
+							return
+						end
+						return i, match
+					end
+					return mpairs_it, list, 0
+				end
+				for num2, match in mpairs(matchsel, matches[#matches]) do
+					if #menu > 100 then
 						break
 					end
 					local numform = ""
@@ -395,8 +425,9 @@ function cheatfind.startplugin()
 				end
 				manager:machine():popmessage("Data cleared and current state saved")
 				watches = {}
-				leftop = 1
-				rightop = 2
+				leftop = 2
+				rightop = 1
+				matchsel = 0
 				ret = true
 			end
 			devcur = devsel
@@ -411,6 +442,8 @@ function cheatfind.startplugin()
 					menu_blocks[num][#menu_blocks[num] + 1] = cheat.save(devtable[devcur].space, region.offset, region.size)
 				end
 				manager:machine():popmessage("Current state saved")
+				leftop = (leftop == #menu_blocks[1]) and #menu_blocks[1] + 1 or leftop
+				rightop = (rightop == #menu_blocks[1] - 1) and #menu_blocks[1] or rightop
 				ret = true
 			end
 		elseif index == midx.op then
@@ -428,44 +461,57 @@ function cheatfind.startplugin()
 					manager:machine():popmessage("Left equal to right with bitmask, value is ignored")
 				elseif optable[opsel] == "bne" then
 					manager:machine():popmessage("Left not equal to right with bitmask, value is ignored")
+				elseif optable[opsel] == "ltv" then
+					manager:machine():popmessage("Left less than value, right is ignored")
+				elseif optable[opsel] == "gtv" then
+					manager:machine():popmessage("Left greater than value, right is ignored")
+				elseif optable[opsel] == "eqv" then
+					manager:machine():popmessage("Left equal to value, right is ignored")
+				elseif optable[opsel] == "nev" then
+					manager:machine():popmessage("Left not equal to value, right is ignored")
 				end
 			end
+			ret = true
 		elseif index == midx.val then
 			value = incdec(value, 0, 100)
 		elseif index == midx.lop then
-			leftop = incdec(leftop, 1, #menu_blocks[1])
+			leftop = incdec(leftop, 1, #menu_blocks[1] + 1)
 		elseif index == midx.rop then
-			rightop = incdec(rightop, 1, #menu_blocks[1] + 1)
+			rightop = incdec(rightop, 1, #menu_blocks[1])
 		elseif index == midx.width then
 			width = incdec(width, 1, #formtable)
 		elseif index == midx.bcd then
 			bcd = incdec(bcd, 0, 1)
 		elseif index == midx.comp then
 			if event == "select" then
+				local count = 0
 				if #matches == 0 then
 					matches[1] = {}
 					for num = 1, #menu_blocks do
-						if rightop == #menu_blocks[1] + 1 then
-							matches[1][num] = cheat.compcur(menu_blocks[num][leftop], optable[opsel],
+						if leftop == #menu_blocks[1] + 1 then
+							matches[1][num] = cheat.compcur(menu_blocks[num][rightop], optable[opsel],
 										formtable[width], value, bcd == 1)
 						else
 							matches[1][num] = cheat.comp(menu_blocks[num][leftop], menu_blocks[num][rightop],
 										   optable[opsel], formtable[width], value, bcd == 1)
 						end
+						count = count + #matches[1][num]
 					end
 				else
 					lastmatch = matches[#matches]
 					matches[#matches + 1] = {}
 					for num = 1, #menu_blocks do
-						if rightop == #menu_blocks[1] + 1 then
-							matches[#matches][num] = cheat.compcurnext(menu_blocks[num][leftop], lastmatch[num],
+						if leftop == #menu_blocks[1] + 1 then
+							matches[#matches][num] = cheat.compcurnext(menu_blocks[num][rightop], lastmatch[num],
 											optable[opsel], formtable[width], value, bcd == 1)
 						else
 							matches[#matches][num] = cheat.compnext(menu_blocks[num][leftop], menu_blocks[num][rightop],
 											lastmatch[num], optable[opsel], formtable[width], value, bcd == 1)
 						end
+						count = count + #matches[#matches][num]
 					end
 				end
+				manager:machine():popmessage(count .. " total matches found")
 				ret = true
 			end
 		elseif index == midx.match then
@@ -474,7 +520,20 @@ function cheatfind.startplugin()
 			watches = {}
 			ret = true
 		elseif index > midx.match then 
-			local match = matches[#matches][matchsel][index - midx.match]
+			local match
+			if matchsel == 0 then
+				local sel = index - midx.match
+				for i = 1, #matches[#matches] do
+					if sel <= #matches[#matches][i] then
+						match = matches[#matches][i][sel]
+						break
+					else
+						sel = sel - #matches[#matches][i]
+					end
+				end
+			else
+				match = matches[#matches][matchsel][index - midx.match]
+			end
 			match.mode = incdec(match.mode, 1, 3)
 			if event == "select" then
 				local dev = devtable[devcur]
@@ -515,15 +574,19 @@ function cheatfind.startplugin()
 						_G.ce.inject(cheat)
 					end
 				elseif match.mode == 2 then
-					local filename = string.format("%s/%s_%08X_cheat", manager:machine():options().entries.cheatpath:value(), emu.romname(), match.addr)
+					local filename = string.format("%s/%s_%08X_cheat", manager:machine():options().entries.cheatpath:value():match("([^;]+)"), emu.romname(), match.addr)
 					local json = require("json")
 					local file = io.open(filename .. ".json", "w")
-					file:write(json.stringify({[1] = cheat}, {indent = true}))
-					file:close()
-					file = io.open(filename .. ".xml", "w")
-					file:write(xmlcheat)
-					file:close()
-					manager:machine():popmessage("Cheat written to " .. filename)
+					if file then
+						file:write(json.stringify({[1] = cheat}, {indent = true}))
+						file:close()
+						file = io.open(filename .. ".xml", "w")
+						file:write(xmlcheat)
+						file:close()
+						manager:machine():popmessage("Cheat written to " .. filename)
+					else
+						manager:machine():popmessage("Unable to write file\nCheck cheatpath dir exists")
+					end
 				else
 					local func = "return space:read"
 					local env = { space = devtable[devcur].space }
@@ -534,6 +597,7 @@ function cheatfind.startplugin()
 					watches[#watches + 1] = { addr = match.addr, func = load(func, func, "t", env), format = form }
 				end
 			end
+			ret = true
 		end
 		devsel = devcur
 		return ret
