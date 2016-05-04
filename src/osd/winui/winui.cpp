@@ -40,6 +40,7 @@
 #include "emu.h"
 #include "mame.h"
 #include "mameopts.h"
+#include "language.h"
 #include "unzip.h"
 #include "winutf8.h"
 #include "strconv.h"
