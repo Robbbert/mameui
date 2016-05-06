@@ -14,9 +14,7 @@
 #endif
 
 // standard SDL headers
-#include "sdlinc.h"
-
-#include <SDL2/SDL_thread.h>
+#include <SDL2/SDL.h>
 
 // standard C headers
 #include <math.h>
@@ -770,7 +768,7 @@ int sdl_window_info::complete_create()
 
 #ifdef SDLMAME_WIN32
 	if (fullscreen())
-		SDL_SetWindowGrab(window->platform_window<SDL_Window*>(), SDL_TRUE);
+		SDL_SetWindowGrab(platform_window<SDL_Window*>(), SDL_TRUE);
 #endif
 
 	// set main window
