@@ -6,7 +6,7 @@
 
 #include "emu.h"
 #include "drivenum.h"
-#include "options.h"
+#include "win_options.h"
 
 class string_iterator
 {
@@ -19,7 +19,6 @@ public:
 	void copy(const char *str)
 	{
 		/* reset the structure */
-		m_index = 0;
 		m_str.clear();
 		m_base = (str != NULL) ? str : "";
 		m_cur = m_base;
@@ -216,7 +215,7 @@ public:
 	}
 
 private:
-	core_options m_info;
+	win_options m_info;
 	int         m_total;
 
 	struct driver_options
