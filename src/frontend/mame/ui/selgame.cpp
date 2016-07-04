@@ -501,6 +501,7 @@ void menu_select_game::populate()
 	ui_globals::redraw_icon = true;
 	ui_globals::switch_image = true;
 	int old_item_selected = -1;
+	UINT32 flags_ui = FLAG_UI | FLAG_LEFT_ARROW | FLAG_RIGHT_ARROW;
 
 	if (!isfavorite())
 	{
@@ -537,8 +538,6 @@ void menu_select_game::populate()
 			int curitem = 0;
 			for (auto & elem : m_displaylist)
 			{
-				UINT32 flags_ui = FLAG_UI | FLAG_LEFT_ARROW | FLAG_RIGHT_ARROW;
-
 				if (old_item_selected == -1 && elem->name == reselect_last::driver)
 					old_item_selected = curitem;
 
@@ -549,10 +548,8 @@ void menu_select_game::populate()
 					if (cx != -1 && ((driver_list::driver(cx).flags & MACHINE_IS_BIOS_ROOT) != 0))
 						cloneof = false;
 				}
-				if (cloneof)
-					flags_ui |= FLAG_INVERT;
 
-				item_append(elem->description, nullptr, flags_ui, (void *)elem);
+				item_append(elem->description, "", (cloneof) ? (flags_ui | FLAG_INVERT) : flags_ui, (void *)elem);
 				curitem++;
 			}
 		}
@@ -565,7 +562,7 @@ void menu_select_game::populate()
 		// iterate over entries
 		for (auto & mfavorite : mame_machine_manager::instance()->favorite().m_list)
 		{
-			UINT32 flags_ui = FLAG_UI | FLAG_LEFT_ARROW | FLAG_RIGHT_ARROW | FLAG_UI_FAVORITE;
+			auto flags = flags_ui | FLAG_UI_FAVORITE;
 			if (mfavorite.startempty == 1)
 			{
 				if (old_item_selected == -1 && mfavorite.shortname == reselect_last::driver)
@@ -578,34 +575,31 @@ void menu_select_game::populate()
 					if (cx != -1 && ((driver_list::driver(cx).flags & MACHINE_IS_BIOS_ROOT) != 0))
 						cloneof = false;
 				}
-				if (cloneof)
-					flags_ui |= FLAG_INVERT;
 
-				item_append(mfavorite.longname.c_str(), nullptr, flags_ui, (void *)&mfavorite);
+				item_append(mfavorite.longname, "", (cloneof) ? (flags | FLAG_INVERT) : flags, (void *)&mfavorite);
 			}
 			else
 			{
 				if (old_item_selected == -1 && mfavorite.shortname == reselect_last::driver)
 					old_item_selected = curitem;
-				item_append(mfavorite.longname.c_str(), mfavorite.devicetype.c_str(),
-					mfavorite.parentname.empty() ? flags_ui : (FLAG_INVERT | flags_ui), (void *)&mfavorite);
+				item_append(mfavorite.longname, mfavorite.devicetype,
+					mfavorite.parentname.empty() ? flags : (FLAG_INVERT | flags), (void *)&mfavorite);
 			}
 			curitem++;
 		}
 	}
 
-	item_append(menu_item_type::SEPARATOR);
+	item_append(menu_item_type::SEPARATOR, flags_ui);
 
 	// add special items
 	if (menu::stack_has_special_main_menu())
 	{
-		UINT32 flags_ui = FLAG_UI | FLAG_LEFT_ARROW | FLAG_RIGHT_ARROW;
-		item_append(_("Configure Options"), nullptr, flags_ui, (void *)(FPTR)CONF_OPTS);
-		item_append(_("Configure Machine"), nullptr, flags_ui, (void *)(FPTR)CONF_MACHINE);
+		item_append(_("Configure Options"), "", flags_ui, (void *)(FPTR)CONF_OPTS);
+		item_append(_("Configure Machine"), "", flags_ui, (void *)(FPTR)CONF_MACHINE);
 		skip_main_items = 2;
 		if (machine().options().plugins())
 		{
-			item_append(_("Plugins"), nullptr, flags_ui, (void *)(FPTR)CONF_PLUGINS);
+			item_append(_("Plugins"), "", flags_ui, (void *)(FPTR)CONF_PLUGINS);
 			skip_main_items++;
 		}
 	}
@@ -1549,7 +1543,7 @@ void menu_select_game::populate_search()
 			if (cx != -1 && ((driver_list::driver(cx).flags & MACHINE_IS_BIOS_ROOT) != 0))
 				cloneof = false;
 		}
-		item_append(m_searchlist[curitem]->description, nullptr, (!cloneof) ? flags_ui : (FLAG_INVERT | flags_ui),
+		item_append(m_searchlist[curitem]->description, "", (!cloneof) ? flags_ui : (FLAG_INVERT | flags_ui),
 			(void *)m_searchlist[curitem]);
 	}
 }
