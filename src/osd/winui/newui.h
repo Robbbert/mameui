@@ -27,7 +27,7 @@
 
 
 
-// These are called from src/osd/windows/windows.c and
+// These are called from src/osd/windows/windows.cpp and
 //   provide the linkage between newui and the core. 
 
 LRESULT CALLBACK winwindow_video_window_proc_ui(HWND wnd, UINT message, WPARAM wparam, LPARAM lparam);
