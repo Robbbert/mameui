@@ -2471,11 +2471,11 @@ static void format_combo_changed(dialog_box *dialog, HWND dlgwnd, NMHDR *notific
 	// compute our parameters
 	dev = params->dev;
 	guide = dev->device_get_creation_option_guide();
-	optspec =dev->device_get_indexed_creatable_format(format_combo_val)->optspec();
+	optspec =dev->device_get_indexed_creatable_format(format_combo_val)->optspec().c_str();
 
 	// set the default extension
 	CommDlg_OpenSave_SetDefExt(GetParent(dlgwnd),
-		(const char*)dev->device_get_indexed_creatable_format(format_combo_val)->extensions());
+		(const char*)dev->device_get_indexed_creatable_format(format_combo_val)->extensions().c_str());
 
 	// enumerate through all of the child windows
 	wnd = NULL;
@@ -2535,7 +2535,7 @@ static void storeval_option_resolution(void *storeval_param, int val)
 		const option_guide *optguide = dev->device_get_creation_option_guide();
 		const image_device_format *format = dev->device_get_indexed_creatable_format(*(params->fdparams->create_format));
 
-		resolution = option_resolution_create(optguide, format->optspec());
+		resolution = option_resolution_create(optguide, format->optspec().c_str());
 		if (!resolution)
 			return;
 		*(params->fdparams->create_args) = resolution;
@@ -2564,7 +2564,7 @@ static dialog_box *build_option_dialog(device_image_interface *dev, char *filter
 	// make the filter
 	pos = 0;
 	for (auto &format : dev->formatlist())
-		pos += add_filter_entry(filter + pos, filter_len - pos, format->description(), format->extensions());
+		pos += add_filter_entry(filter + pos, filter_len - pos, format->description().c_str(), format->extensions().c_str());
 
 	// create the dialog
 	dialog = win_dialog_init(NULL, &filedialog_layout);
@@ -2590,7 +2590,7 @@ static dialog_box *build_option_dialog(device_image_interface *dev, char *filter
 		found = FALSE;
 		for (auto &format : dev->formatlist())
 		{
-			if (option_resolution_contains(format->optspec(), guide_entry->parameter))
+			if (option_resolution_contains(format->optspec().c_str(), guide_entry->parameter))
 			{
 				found = TRUE;
 				break;

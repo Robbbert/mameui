@@ -23,6 +23,7 @@ Board names displayed on test mode menu:
 
 Heated Barrel includes only the I/O test, and Legionnaire only has a DSW
 display. These can be accessed by holding down the P1 joystick at reset.
+(Legionnaire's program contains remnants of a more complete test mode.)
 
 
 TODO
@@ -776,6 +777,7 @@ static INPUT_PORTS_START( grainbow )
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( denjinmk )
+	// SEIBU_COIN_INPUTS override
 	PORT_START("COIN")      /* coin inputs read through sound cpu, an impulse of 4 frame is too much for this game, especially for coin 2 */
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_COIN1 ) PORT_IMPULSE(2)
 	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_COIN2 ) PORT_IMPULSE(2)
@@ -891,13 +893,23 @@ INPUT_PORTS_END
 
 
 static INPUT_PORTS_START( cupsoc )
-	SEIBU_COIN_INPUTS   /* coin inputs read through sound cpu */
+	// TODO: dip-conditional with coin slots
+	// SEIBU_COIN_INPUTS override
+	PORT_START("COIN")
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_COIN1 ) 
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_COIN2 )
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_UNUSED )                    
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_UNUSED )                    
+	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_UNUSED )
+	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_UNUSED )                    
+	PORT_BIT( 0x40, IP_ACTIVE_HIGH, IPT_UNUSED )                    
+	PORT_BIT( 0x80, IP_ACTIVE_HIGH, IPT_UNUSED )
 
 	PORT_START("SYSTEM")
 	PORT_BIT( 0x0001, IP_ACTIVE_LOW, IPT_START1 )
 	PORT_BIT( 0x0002, IP_ACTIVE_LOW, IPT_START2 )
 	PORT_BIT( 0x0004, IP_ACTIVE_LOW, IPT_UNKNOWN ) //TEST
-	PORT_BIT( 0x0008, IP_ACTIVE_LOW, IPT_SERVICE2 )
+	PORT_BIT( 0x0008, IP_ACTIVE_LOW, IPT_SERVICE1 )
 	PORT_BIT( 0x00f0, IP_ACTIVE_LOW, IPT_UNUSED )
 	PORT_BIT( 0x0100, IP_ACTIVE_LOW, IPT_START3 )
 	PORT_BIT( 0x0200, IP_ACTIVE_LOW, IPT_START4 )
@@ -911,7 +923,7 @@ static INPUT_PORTS_START( cupsoc )
 	PORT_BIT( 0x0010, IP_ACTIVE_LOW,  IPT_BUTTON1 ) PORT_PLAYER(1)
 	PORT_BIT( 0x0020, IP_ACTIVE_LOW,  IPT_BUTTON2 ) PORT_PLAYER(1)
 	PORT_BIT( 0x0040, IP_ACTIVE_LOW,  IPT_BUTTON3 ) PORT_PLAYER(1)
-	PORT_BIT( 0x0080, IP_ACTIVE_LOW,  IPT_COIN1 )
+	PORT_BIT( 0x0080, IP_ACTIVE_LOW,  IPT_UNUSED ) 
 	PORT_BIT( 0x0100, IP_ACTIVE_LOW,  IPT_JOYSTICK_UP ) PORT_8WAY PORT_PLAYER(2)
 	PORT_BIT( 0x0200, IP_ACTIVE_LOW,  IPT_JOYSTICK_DOWN ) PORT_8WAY PORT_PLAYER(2)
 	PORT_BIT( 0x0400, IP_ACTIVE_LOW,  IPT_JOYSTICK_LEFT ) PORT_8WAY PORT_PLAYER(2)
@@ -919,7 +931,7 @@ static INPUT_PORTS_START( cupsoc )
 	PORT_BIT( 0x1000, IP_ACTIVE_LOW,  IPT_BUTTON1 ) PORT_PLAYER(2)
 	PORT_BIT( 0x2000, IP_ACTIVE_LOW,  IPT_BUTTON2 ) PORT_PLAYER(2)
 	PORT_BIT( 0x4000, IP_ACTIVE_LOW,  IPT_BUTTON3 ) PORT_PLAYER(2)
-	PORT_BIT( 0x8000, IP_ACTIVE_LOW,  IPT_COIN2 )
+	PORT_BIT( 0x8000, IP_ACTIVE_LOW,  IPT_UNUSED )
 
 	PORT_START("PLAYERS34")
 	PORT_BIT( 0x0001, IP_ACTIVE_LOW,  IPT_JOYSTICK_UP ) PORT_8WAY PORT_PLAYER(3)
@@ -929,7 +941,7 @@ static INPUT_PORTS_START( cupsoc )
 	PORT_BIT( 0x0010, IP_ACTIVE_LOW,  IPT_BUTTON1  ) PORT_PLAYER(3)
 	PORT_BIT( 0x0020, IP_ACTIVE_LOW,  IPT_BUTTON2  ) PORT_PLAYER(3)
 	PORT_BIT( 0x0040, IP_ACTIVE_LOW,  IPT_BUTTON3 ) PORT_PLAYER(3)
-	PORT_BIT( 0x0080, IP_ACTIVE_LOW,  IPT_UNKNOWN ) //TEST
+	PORT_BIT( 0x0080, IP_ACTIVE_LOW,  IPT_COIN3 ) // p3 coin slot
 	PORT_BIT( 0x0100, IP_ACTIVE_LOW,  IPT_JOYSTICK_UP ) PORT_8WAY PORT_PLAYER(4)
 	PORT_BIT( 0x0200, IP_ACTIVE_LOW,  IPT_JOYSTICK_DOWN ) PORT_8WAY PORT_PLAYER(4)
 	PORT_BIT( 0x0400, IP_ACTIVE_LOW,  IPT_JOYSTICK_LEFT ) PORT_8WAY PORT_PLAYER(4)
@@ -937,7 +949,7 @@ static INPUT_PORTS_START( cupsoc )
 	PORT_BIT( 0x1000, IP_ACTIVE_LOW,  IPT_BUTTON1 ) PORT_PLAYER(4)
 	PORT_BIT( 0x2000, IP_ACTIVE_LOW,  IPT_BUTTON2 ) PORT_PLAYER(4)
 	PORT_BIT( 0x4000, IP_ACTIVE_LOW,  IPT_BUTTON3 ) PORT_PLAYER(4)
-	PORT_BIT( 0x8000, IP_ACTIVE_LOW,  IPT_SERVICE1 )
+	PORT_BIT( 0x8000, IP_ACTIVE_LOW,  IPT_COIN4 ) // p4 coin slot
 
 	PORT_START("DSW1")
 	PORT_DIPNAME( 0x0007, 0x0007, "Coin 1 (3)" )
@@ -1116,51 +1128,6 @@ static GFXDECODE_START( cupsoc )
 	GFXDECODE_ENTRY( "sprite", 0, legionna_spritelayout,  0*16, 8*16 )
 	GFXDECODE_ENTRY( "gfx5", 0, legionna_tilelayout,   32*16, 16 )
 	GFXDECODE_ENTRY( "gfx6", 0, legionna_tilelayout,   16*16, 16 )
-GFXDECODE_END
-
-
-static const gfx_layout cupsocsb_spritelayout =
-{
-	16,16,
-	RGN_FRAC(1,1),
-	4,
-	{ 0,1,2,3 },
-	{ 4,0,12,8,20,16,28,24, 512+4, 512+0, 512+12, 512+8, 512+20, 512+16, 512+28, 512+24 },
-	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32, 8*32, 9*32, 10*32, 11*32, 12*32, 13*32, 14*32, 15*32 },
-	32*32
-};
-
-static const gfx_layout cupsocsb_8x8_tilelayout =
-{
-	8,8,
-	RGN_FRAC(1,1),
-	4,
-	{ 8,12,0,4 },
-	{ 0,3,2,1,16,19,18,17 },
-	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32 },
-	8*32
-};
-
-
-static const gfx_layout cupsocsb_tilelayout =
-{
-	16,16,
-	RGN_FRAC(1,1),
-	4,
-	{ 8,12,0,4 },
-	{ 0,3,2,1,16,19,18,17,  512+0,512+3,512+2,512+1,512+16,512+19,512+18,512+17 },
-	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32, 8*32, 9*32, 10*32, 11*32, 12*32, 13*32, 14*32, 15*32 },
-	32*32
-};
-
-
-static GFXDECODE_START( heatbrl_csb )
-	GFXDECODE_ENTRY( "char", 0, cupsocsb_8x8_tilelayout,    48*16, 16 )
-	GFXDECODE_ENTRY( "gfx3", 0, cupsocsb_tilelayout,        0*16, 32 )
-	GFXDECODE_ENTRY( "gfx4", 0, cupsocsb_tilelayout,        32*16, 16 ) /* unused */
-	GFXDECODE_ENTRY( "sprite", 0, cupsocsb_spritelayout,      0*16, 8*16 )
-	GFXDECODE_ENTRY( "gfx5", 0, cupsocsb_tilelayout,        32*16, 16 )
-	GFXDECODE_ENTRY( "gfx6", 0, cupsocsb_tilelayout,        16*16, 16 )
 GFXDECODE_END
 
 
@@ -1416,6 +1383,7 @@ MACHINE_CONFIG_END
 ***************************************************************************/
 
 // all 3 Legionnaire sets differ only by the region byte at 0x1ef in rom 4 (Japan 0x00, US 0x01, World 0x02)
+// unused program code above 0x28c00 has many bad bits, probably a defective copy of a previous build
 ROM_START( legionna )
 	ROM_REGION( 0x80000, "maincpu", 0 ) /* 68000 code */
 	ROM_LOAD32_BYTE( "1.u025",  0x00000, 0x20000, CRC(9e2d3ec8) SHA1(8af9ca349389cbbd2b541aafa09de57f87f6fd72) )
