@@ -118,9 +118,10 @@
 
 */
 
-#define MASTER_CLOCK    15750000
-#define CPU_CLOCK       MASTER_CLOCK / 9
-#define SND_CLOCK       MASTER_CLOCK / 9
+#define MASTER_CLOCK    (15750000)
+#define CPU_CLOCK       (MASTER_CLOCK / 9)
+#define SND_CLOCK       (MASTER_CLOCK / 9)
+#define PIXEL_CLOCK     (MASTER_CLOCK / 3)
 
 #include "emu.h"
 #include "cpu/i8085/i8085.h"
@@ -323,8 +324,6 @@ static MACHINE_CONFIG_START( tiamc1, tiamc1_state )
 	MCFG_CPU_PROGRAM_MAP(tiamc1_map)
 	MCFG_CPU_IO_MAP(tiamc1_io_map)
 
-	MCFG_CPU_VBLANK_INT_DRIVER("screen", tiamc1_state,  irq1_line_hold)
-
 	MCFG_DEVICE_ADD("kr580vv55a", I8255A, 0)  /* soviet clone of i8255 */
 	MCFG_I8255_IN_PORTA_CB(IOPORT("IN0"))
 	MCFG_I8255_IN_PORTB_CB(IOPORT("IN1"))
@@ -333,10 +332,7 @@ static MACHINE_CONFIG_START( tiamc1, tiamc1_state )
 
 	/* video hardware */
 	MCFG_SCREEN_ADD("screen", RASTER)
-	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_VBLANK_TIME(ATTOSECONDS_IN_USEC(1600))
-	MCFG_SCREEN_SIZE(256, 256)
-	MCFG_SCREEN_VISIBLE_AREA(0, 256-1, 0, 256-1)
+	MCFG_SCREEN_RAW_PARAMS(PIXEL_CLOCK, 336, 0, 256, 312, 0, 256)		// pixel clock and htotal comes from docs/schematics, the rest is guess (determined by undumped PROM)
 	MCFG_SCREEN_UPDATE_DRIVER(tiamc1_state, screen_update_tiamc1)
 	MCFG_SCREEN_PALETTE("palette")
 
@@ -367,8 +363,7 @@ static MACHINE_CONFIG_DERIVED(kot, tiamc1)
 	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "mono", 0.50)
 
 	MCFG_DEVICE_ADD("pit8253", PIT8253, 0)
-	MCFG_PIT8253_CLK0(SND_CLOCK)				// guess
-	MCFG_PIT8253_CLK1(SND_CLOCK)				// guess
+	MCFG_PIT8253_CLK0(PIXEL_CLOCK / 4)
 	MCFG_PIT8253_CLK2(SND_CLOCK)				// guess
 	MCFG_PIT8253_OUT2_HANDLER(WRITELINE(tiamc1_state, pit8253_2_w))
 MACHINE_CONFIG_END
@@ -415,6 +410,12 @@ ROM_START( sosterm )
 	ROM_LOAD( "02.5a", 0x04000, 0x2000, CRC(9506cf9b) SHA1(3e54593d4452b956509877d9b6b26aa3e3a90beb) )
 	ROM_LOAD( "03.6a", 0x06000, 0x2000, CRC(5a0c14e1) SHA1(3eebe2c3ce114b87723fa6571623ee065a0b5646) )
 
+	ROM_REGION( 0x0400, "proms", 0 )
+	ROM_LOAD( "prom100.e10", 0x0000, 0x100, NO_DUMP ) /* i/o ports map 256x8 */
+	ROM_LOAD( "prom101.a01", 0x0100, 0x100, NO_DUMP ) /* video sync 256x8 */
+	ROM_LOAD( "prom102.b03", 0x0200, 0x080, NO_DUMP ) /* sprites rom index 256x4 */
+	ROM_LOAD( "prom102.b06", 0x0280, 0x080, NO_DUMP ) /* buffer optimization logic 256x4 */
+	ROM_LOAD( "prom102.b05", 0x0300, 0x100, NO_DUMP ) /* sprites rom index 256x8 */
 ROM_END
 
 ROM_START( koroleva )
@@ -433,8 +434,15 @@ ROM_START( koroleva )
 	ROM_LOAD( "02.5a", 0x04000, 0x2000, CRC(97770b0f) SHA1(cf4605e31f8c57a76bfda6a7ea329058da8b8c9c) )
 	ROM_LOAD( "03.6a", 0x06000, 0x2000, CRC(9b0a686a) SHA1(f02910db9f862ec017bb3834c58e96e780fb6322) )
 
+	ROM_REGION( 0x0400, "proms", 0 )
+	ROM_LOAD( "prom100.e10", 0x0000, 0x100, NO_DUMP ) /* i/o ports map 256x8 */
+	ROM_LOAD( "prom101.a01", 0x0100, 0x100, NO_DUMP ) /* video sync 256x8 */
+	ROM_LOAD( "prom102.b03", 0x0200, 0x080, NO_DUMP ) /* sprites rom index 256x4 */
+	ROM_LOAD( "prom102.b06", 0x0280, 0x080, NO_DUMP ) /* buffer optimization logic 256x4 */
+	ROM_LOAD( "prom102.b05", 0x0300, 0x100, NO_DUMP ) /* sprites rom index 256x8 */
 ROM_END
 
+// this game ROM board have only one 2KB main CPU RAM IC populated
 ROM_START( bilyard )
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "04.1g", 0x00000, 0x2000, CRC(a44f913d) SHA1(f01a0e931fb0f719bc7b3f1ca7802dd747c8a56f) )
@@ -450,8 +458,16 @@ ROM_START( bilyard )
 	ROM_LOAD( "01.3a", 0x02000, 0x2000, CRC(daddbbb5) SHA1(1460aebcbb57180e05930845703ff6325d85702a) )
 	ROM_LOAD( "02.5a", 0x04000, 0x2000, CRC(3d744d33) SHA1(f1375098e81986715d0497b09df0c6622bd75b9a) )
 	ROM_LOAD( "03.6a", 0x06000, 0x2000, CRC(8bfc0b15) SHA1(221efdce516274d3b1d9009d11dc9ed6cd67ef12) )
+
+	ROM_REGION( 0x0400, "proms", 0 )
+	ROM_LOAD( "prom100.e10", 0x0000, 0x100, NO_DUMP ) /* i/o ports map 256x8 */
+	ROM_LOAD( "prom101.a01", 0x0100, 0x100, NO_DUMP ) /* video sync 256x8 */
+	ROM_LOAD( "prom102.b03", 0x0200, 0x080, NO_DUMP ) /* sprites rom index 256x4 */
+	ROM_LOAD( "prom102.b06", 0x0280, 0x080, NO_DUMP ) /* buffer optimization logic 256x4 */
+	ROM_LOAD( "prom102.b05", 0x0300, 0x100, NO_DUMP ) /* sprites rom index 256x8 */
 ROM_END
 
+// this game ROM board have only one 2KB main CPU RAM IC populated
 ROM_START( gorodki )
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "70.1g", 0x00000, 0x2000, CRC(bd3eb624) SHA1(acfc7e7186daf399f858a0d0cf462b0eaabb3f9e) )
@@ -468,6 +484,12 @@ ROM_START( gorodki )
 	ROM_LOAD( "68.5a", 0x04000, 0x2000, CRC(0d64708d) SHA1(6a84b4293f0e983424ef361ab3ebf62ab5f8b21c) )
 	ROM_LOAD( "69.6a", 0x06000, 0x2000, CRC(57c8ae81) SHA1(c73bbfaa53195a19599dd2bbc3948c819597b035) )
 
+	ROM_REGION( 0x0400, "proms", 0 )
+	ROM_LOAD( "prom100.e10", 0x0000, 0x100, NO_DUMP ) /* i/o ports map 256x8 */
+	ROM_LOAD( "prom101.a01", 0x0100, 0x100, NO_DUMP ) /* video sync 256x8 */
+	ROM_LOAD( "prom102.b03", 0x0200, 0x080, NO_DUMP ) /* sprites rom index 256x4 */
+	ROM_LOAD( "prom102.b06", 0x0280, 0x080, NO_DUMP ) /* buffer optimization logic 256x4 */
+	ROM_LOAD( "prom102.b05", 0x0300, 0x100, NO_DUMP ) /* sprites rom index 256x8 */
 ROM_END
 
 /*
@@ -477,7 +499,7 @@ ROM_END
   Specs:
   1x KR580VM80A (Russian: KP580BM80A. Soviet clone of i8080).
   1x KR580VV55A (Russian: KP580BB55A. Soviet clone of i8255).
-  1x KR580VI53 (soviet clone of i8253) unlike original TIA-MC1 hardware only timer 2 used for sound generation
+  1x KR580VI53 (Soviet clone of i8253)
   1x KR580VK28 (Russian: KP580BK28. Soviet clone of i8228: bus controllers/drivers).
 
   1x K174YH7 (soviet clone of TBA810, 7W audio amplifier).
@@ -490,7 +512,12 @@ ROM_END
   Sometimes the code tries to write through a port that was
   previously set as input. Not sure if it's a leftover, a bug,
   or just some differences against the i8255. Needs more research.
- 
+
+  KR580VI53/i8253 timers usage:
+  0 - used to blank part of display in horizontal direction, apparently it's CLK0 is PIXEL_CLOCK/4, GATE0 is HBlank, OUT0 - blank video
+  1 - used to blank part of display in vertical direction, apparently it's CLK1 is HBlank or OUT0, GATE1 is VBlank, OUT1 - blank video
+  2 - sound generation
+
 */
 ROM_START( kot )
 	ROM_REGION( 0xc000, "maincpu", ROMREGION_ERASE00)

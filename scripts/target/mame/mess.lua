@@ -586,6 +586,7 @@ MACHINES["APPLE_FDC"] = true
 MACHINES["SONY_DRIVE"] = true
 MACHINES["SCNXX562"] = true
 MACHINES["FGA002"] = true
+MACHINES["INPUT_MERGER"] = true
 
 --------------------------------------------------
 -- specify available bus cores
@@ -3097,6 +3098,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/dim68k.cpp",
 	MAME_DIR .. "src/mame/drivers/dm7000.cpp",
 	MAME_DIR .. "src/mame/includes/dm7000.h",
+	MAME_DIR .. "src/mame/drivers/dmax8000.cpp",
 	MAME_DIR .. "src/mame/drivers/dmv.cpp",
 	MAME_DIR .. "src/mame/machine/dmv_keyb.cpp",
 	MAME_DIR .. "src/mame/machine/dmv_keyb.h",

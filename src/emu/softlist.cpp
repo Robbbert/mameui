@@ -92,7 +92,45 @@ private:
 
 // device type definition
 const device_type SOFTWARE_LIST = &device_creator<software_list_device>;
+false_software_list_loader false_software_list_loader::s_instance;
+rom_software_list_loader rom_software_list_loader::s_instance;
+image_software_list_loader image_software_list_loader::s_instance;
 
+
+
+//**************************************************************************
+//  SOFTWARE LIST LOADER
+//**************************************************************************
+
+//-------------------------------------------------
+//  false_software_list_loader::load_software
+//-------------------------------------------------
+
+bool false_software_list_loader::load_software(device_image_interface &device, software_list_device &swlist, const char *swname, const rom_entry *start_entry) const
+{
+	return false;
+}
+
+
+//-------------------------------------------------
+//  rom_software_list_loader::load_software
+//-------------------------------------------------
+
+bool rom_software_list_loader::load_software(device_image_interface &device, software_list_device &swlist, const char *swname, const rom_entry *start_entry) const
+{
+	swlist.machine().rom_load().load_software_part_region(device, swlist, swname, start_entry);
+	return true;
+}
+
+
+//-------------------------------------------------
+//  image_software_list_loader::load_software
+//-------------------------------------------------
+
+bool image_software_list_loader::load_software(device_image_interface &device, software_list_device &swlist, const char *swname, const rom_entry *start_entry) const
+{
+	return device.load_software(swlist, swname, start_entry);
+}
 
 
 //**************************************************************************
@@ -519,13 +557,20 @@ const software_info *software_list_device::find(const char *look_for)
 	bool iswild = strchr(look_for, '*') != nullptr || strchr(look_for, '?');
 
 	// find a match (will cause a parse if needed when calling get_info)
-	for (const software_info &info : get_info())
-	{
-		if ((iswild && core_strwildcmp(look_for, info.shortname().c_str()) == 0) || core_stricmp(look_for, info.shortname().c_str()) == 0)
-			return &info;
-	}
+	const auto &info_list = get_info();
+	auto iter = std::find_if(
+		info_list.begin(),
+		info_list.end(),
+		[&](const software_info &info)
+		{
+			const char *shortname = info.shortname().c_str();
+			return (iswild && core_strwildcmp(look_for, shortname) == 0)
+				|| core_stricmp(look_for, shortname) == 0;
+		});
 
-	return nullptr;
+	return iter != info_list.end()
+		? &*iter
+		: nullptr;
 }
 
 
@@ -693,7 +738,7 @@ void software_list_device::internal_validity_check(validity_checker &valid)
 				if (data->_hashdata != nullptr)
 				{
 					// make sure the hash is valid
-					hash_collection hashes;
+					util::hash_collection hashes;
 					if (!hashes.from_internal_string(data->_hashdata))
 						osd_printf_error("%s: %s has rom '%s' with an invalid hash string '%s'\n", filename(), swinfo.shortname().c_str(), data->_name, data->_hashdata);
 				}
@@ -1227,7 +1272,7 @@ void softlist_parser::parse_data_start(const char *tagname, const char **attribu
 				else
 				{
 					if (!crc.empty() && !sha1.empty())
-						hashdata = string_format("%c%s%c%s%s", hash_collection::HASH_CRC, crc, hash_collection::HASH_SHA1, sha1, (baddump ? BAD_DUMP : ""));
+						hashdata = string_format("%c%s%c%s%s", util::hash_collection::HASH_CRC, crc, util::hash_collection::HASH_SHA1, sha1, (baddump ? BAD_DUMP : ""));
 					else
 						parse_error("Incomplete rom hash definition");
 				}
@@ -1274,7 +1319,7 @@ void softlist_parser::parse_data_start(const char *tagname, const char **attribu
 			const bool baddump = (status == "baddump");
 			const bool nodump = (status == "nodump" );
 			const bool writeable = (writeablestr == "yes");
-			std::string hashdata = string_format("%c%s%s", hash_collection::HASH_SHA1, sha1, (nodump ? NO_DUMP : (baddump ? BAD_DUMP : "")));
+			std::string hashdata = string_format("%c%s%s", util::hash_collection::HASH_SHA1, sha1, (nodump ? NO_DUMP : (baddump ? BAD_DUMP : "")));
 
 			add_rom_entry(name.c_str(), hashdata.c_str(), 0, 0, ROMENTRYTYPE_ROM | (writeable ? DISK_READWRITE : DISK_READONLY));
 		}
