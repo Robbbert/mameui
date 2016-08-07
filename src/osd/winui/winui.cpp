@@ -4187,14 +4187,15 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		{
 			OPTIONS_TYPE curOptType = OPTIONS_SOURCE;
 			folder = GetSelectedFolder();
-			if(folder->m_nFolderId == FOLDER_RASTER)
-				curOptType = OPTIONS_RASTER;
-			else if(folder->m_nFolderId == FOLDER_VECTOR)
+//			if(folder->m_nFolderId == FOLDER_RASTER)
+//				curOptType = OPTIONS_RASTER;
+//			else if(folder->m_nFolderId == FOLDER_VECTOR)
+			if(folder->m_nFolderId == FOLDER_VECTOR)
 				curOptType = OPTIONS_VECTOR;
-			else if(folder->m_nFolderId == FOLDER_HORIZONTAL)
-				curOptType = OPTIONS_HORIZONTAL;
-			else if(folder->m_nFolderId == FOLDER_VERTICAL)
-				curOptType = OPTIONS_VERTICAL;
+//			else if(folder->m_nFolderId == FOLDER_HORIZONTAL)
+//				curOptType = OPTIONS_HORIZONTAL;
+//			else if(folder->m_nFolderId == FOLDER_VERTICAL)
+//				curOptType = OPTIONS_VERTICAL;
 
 			InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), curOptType, folder->m_nFolderId, Picker_GetSelectedItem(hwndList));
 		}
