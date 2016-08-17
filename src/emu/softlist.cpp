@@ -8,9 +8,19 @@
 
 ***************************************************************************/
 
+#include <regex>
+
 #include "softlist.h"
 #include "hash.h"
 #include "expat.h"
+
+
+//**************************************************************************
+//  STATIC VARIABLES
+//**************************************************************************
+
+static std::regex s_potenial_softlist_regex("\\w+(\\:\\w+)*");
+
 
 //**************************************************************************
 //  FEATURE LIST ITEM
@@ -101,20 +111,16 @@ bool software_part::matches_interface(const char *interface_list) const
 //  software_info - constructor
 //-------------------------------------------------
 
-software_info::software_info(std::string &&name, std::string &&parent, const char *supported)
-	: m_next(nullptr),
-		m_supported(SOFTWARE_SUPPORTED_YES),
+software_info::software_info(std::string &&name, std::string &&parent, const std::string &supported)
+	: m_supported(SOFTWARE_SUPPORTED_YES),
 		m_shortname(std::move(name)),
 		m_parentname(std::move(parent))
 {
 	// handle the supported flag if provided
-	if (supported != nullptr)
-	{
-		if (strcmp(supported, "partial") == 0)
-			m_supported = SOFTWARE_SUPPORTED_PARTIAL;
-		else if (strcmp(supported, "no") == 0)
-			m_supported = SOFTWARE_SUPPORTED_NO;
-	}
+	if (supported == "partial")
+		m_supported = SOFTWARE_SUPPORTED_PARTIAL;
+	else if (supported == "no")
+		m_supported = SOFTWARE_SUPPORTED_NO;
 }
 
 
@@ -123,22 +129,20 @@ software_info::software_info(std::string &&name, std::string &&parent, const cha
 //  optional interface match
 //-------------------------------------------------
 
-const software_part *software_info::find_part(const char *partname, const char *interface) const
+const software_part *software_info::find_part(const std::string &partname, const char *interface) const
 {
 	// if neither partname nor interface supplied, then we just return the first entry
-	if (partname != nullptr && strlen(partname)==0) partname = nullptr;
-
-	if (partname == nullptr && interface == nullptr)
+	if (partname.empty() && interface == nullptr)
 		return &m_partdata.front();
 
 	// look for the part by name and match against the interface if provided
 	for (const software_part &part : m_partdata)
-		if (partname != nullptr && (partname == part.name()))
+		if (!partname.empty() && (partname == part.name()))
 		{
 			if (interface == nullptr || part.matches_interface(interface))
 				return &part;
 		}
-		else if (partname == nullptr && part.matches_interface(interface))
+		else if (partname.empty() && part.matches_interface(interface))
 				return &part;
 	return nullptr;
 }
@@ -172,12 +176,13 @@ bool software_info::has_multiple_parts(const char *interface) const
 //  softlist_parser - constructor
 //-------------------------------------------------
 
-softlist_parser::softlist_parser(util::core_file &file, const std::string &filename, std::list<software_info> &infolist, std::ostringstream &errors)
+softlist_parser::softlist_parser(util::core_file &file, const std::string &filename, std::string &description, std::list<software_info> &infolist, std::ostringstream &errors)
 		: m_file(file),
 		m_filename(filename),
 		m_infolist(infolist),
 		m_errors(errors),
 		m_done(false),
+		m_description(description),
 		m_data_accum_expected(false),
 		m_current_info(nullptr),
 		m_current_part(nullptr),
@@ -812,4 +817,66 @@ void softlist_parser::parse_soft_end(const char *tagname)
 				m_current_part->m_featurelist.emplace_back(item.name(), item.value());
 	}
 }
+
+
+//-------------------------------------------------
+//  software_name_parse - helper that splits a
+//  software_list:software:part string into
+//  separate software_list, software, and part
+//  strings.
+//
+//  str1:str2:str3  => swlist_name - str1, swname - str2, swpart - str3
+//  str1:str2       => swlist_name - nullptr, swname - str1, swpart - str2
+//  str1            => swlist_name - nullptr, swname - str1, swpart - nullptr
+//
+//  Notice however that we could also have been
+//  passed a string swlist_name:swname, and thus
+//  some special check has to be performed in this
+//  case.
+//-------------------------------------------------
+
+bool software_name_parse(const std::string &text, std::string *swlist_name, std::string *swname, std::string *swpart)
+{
+	// first, sanity check the arguments
+	if (!std::regex_match(text, s_potenial_softlist_regex))
+		return false;
+
+	// reset all output parameters (if specified of course)
+	if (swlist_name != nullptr)
+		swlist_name->clear();
+	if (swname != nullptr)
+		swname->clear();
+	if (swpart != nullptr)
+		swpart->clear();
+
+	// if no colon, this is the swname by itself
+	auto split1 = text.find_first_of(':');
+	if (split1 == std::string::npos)
+	{
+		if (swname != nullptr)
+			*swname = text;
+		return true;
+	}
+
+	// if one colon, it is the swname and swpart alone
+	auto split2 = text.find_first_of(':', split1 + 1);
+	if (split2 == std::string::npos)
+	{
+		if (swname != nullptr)
+			*swname = text.substr(0, split1);
+		if (swpart != nullptr)
+			*swpart = text.substr(split1 + 1);
+		return true;
+	}
+
+	// if two colons present, split into 3 parts
+	if (swlist_name != nullptr)
+		*swlist_name = text.substr(0, split1);
+	if (swname != nullptr)
+		*swname = text.substr(split1 + 1, split2 - (split1 + 1));
+	if (swpart != nullptr)
+		*swpart = text.substr(split2 + 1);
+	return true;
+}
+
 
