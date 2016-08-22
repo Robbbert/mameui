@@ -76,6 +76,68 @@
 
 #include "maygay1b.lh"
 
+#include "m1albsqp.lh"
+#include "m1apollo2.lh"
+#include "m1bargnc.lh"
+#include "m1bghou.lh"
+#include "m1bigdel.lh"
+#include "m1calypsa.lh"
+#include "m1casclb.lh"
+#include "m1casroy1.lh"
+#include "m1chain.lh"
+#include "m1cik51o.lh"
+#include "m1clbfvr.lh"
+#include "m1cluecb1.lh"
+#include "m1cluedo4.lh"
+#include "m1cluessf.lh"
+#include "m1coro21n.lh"
+#include "m1cororrk.lh"
+#include "m1dkong91n.lh"
+#include "m1dxmono51o.lh"
+#include "m1eastndl.lh"
+#include "m1eastqv3.lh"
+#include "m1fantfbb.lh"
+#include "m1fightb.lh"
+#include "m1frexplc.lh"
+#include "m1gladg.lh"
+#include "m1grescb.lh"
+#include "m1guvnor.lh"
+#include "m1hotpoth.lh"
+#include "m1htclb.lh"
+#include "m1imclb.lh"
+#include "m1infern.lh"
+#include "m1inwinc.lh"
+#include "m1itjobc.lh"
+#include "m1itskob.lh"
+#include "m1jpmult.lh"
+#include "m1lucknon.lh"
+#include "m1luxorb.lh"
+#include "m1manhat.lh"
+#include "m1monclb.lh"
+#include "m1mongam.lh"
+#include "m1monmon.lh"
+#include "m1monou.lh"
+#include "m1nhp.lh"
+#include "m1nudbnke.lh"
+#include "m1omega.lh"
+#include "m1onbusa.lh"
+#include "m1pinkpc.lh"
+#include "m1przeeb.lh"
+#include "m1retpp.lh"
+#include "m1search.lh"
+#include "m1sptlgtc.lh"
+#include "m1startr.lh"
+#include "m1sudnima.lh"
+#include "m1taknot.lh"
+#include "m1thatlfc.lh"
+#include "m1topstr.lh"
+#include "m1triviax.lh"
+#include "m1trtr.lh"
+#include "m1ttcash.lh"
+#include "m1wldzner.lh"
+#include "m1wotwa.lh"
+
+
 // not yet working
 //#define USE_MCU
 
@@ -565,18 +627,9 @@ WRITE8_MEMBER( maygay1b_state::lamp_data_w )
 		// Because of the nature of the lamping circuit, there is an element of persistance
 		// As a consequence, the lamp column data can change before the input strobe without
 		// causing the relevant lamps to black out.
-		int bit_offset;
 		for (int i = 0; i < 8; i++)
 		{
-			if(i < 4)
-			{
-				bit_offset = i + 4;
-			}
-			else
-			{
-				bit_offset = i - 4;
-			}
-			output().set_lamp_value((8*m_lamp_strobe)+i, ((data  & (1 << bit_offset)) !=0));
+			output().set_lamp_value((8*m_lamp_strobe)+i, ((data  & (1 << (i^4))) !=0));
 		}
 
 		m_old_lamp_strobe = m_lamp_strobe;
@@ -586,7 +639,7 @@ WRITE8_MEMBER( maygay1b_state::lamp_data_w )
 
 READ8_MEMBER( maygay1b_state::kbd_r )
 {
-	return (m_kbd_ports[m_lamp_strobe&0x07])->read();
+	return (m_kbd_ports[(m_lamp_strobe&0x07)^4])->read();
 }
 
 WRITE8_MEMBER( maygay1b_state::scanlines_2_w )
@@ -596,8 +649,6 @@ WRITE8_MEMBER( maygay1b_state::scanlines_2_w )
 
 WRITE8_MEMBER( maygay1b_state::lamp_data_2_w )
 {
-	// TODO: THIS FUNCTION IS NEVER CALLED!  So we are missing the second half of the lamp matrix
-
 	//The two A/B ports are merged back into one, to make one row of 8 lamps.
 
 	if (m_old_lamp_strobe2 != m_lamp_strobe2)
@@ -605,10 +656,9 @@ WRITE8_MEMBER( maygay1b_state::lamp_data_2_w )
 		// Because of the nature of the lamping circuit, there is an element of persistance
 		// As a consequence, the lamp column data can change before the input strobe without
 		// causing the relevant lamps to black out.
-
 		for (int i = 0; i < 8; i++)
 		{
-			output().set_lamp_value((8*m_lamp_strobe2)+i+128, ((data  & (1 << i)) !=0));
+			output().set_lamp_value((8*m_lamp_strobe2)+i+128, ((data  & (1 << (i^4))) !=0));
 		}
 
 		m_old_lamp_strobe2 = m_lamp_strobe2;
@@ -767,7 +817,7 @@ MACHINE_CONFIG_START( maygay_m1, maygay1b_state )
 	MCFG_I8279_IN_RL_CB(READ8(maygay1b_state, kbd_r))           // kbd RL lines
 	
 #ifndef USE_MCU
-	// there is no 2nd i8279, the 8051 handles this task!
+	// on M1B there is a 2nd i8279, on M1 / M1A a 8051 handles this task!
 	MCFG_DEVICE_ADD("i8279_2", I8279, M1_MASTER_CLOCK/4)        // unknown clock
 	MCFG_I8279_OUT_SL_CB(WRITE8(maygay1b_state, scanlines_2_w))   // scan SL lines
 	MCFG_I8279_OUT_DISP_CB(WRITE8(maygay1b_state, lamp_data_2_w))       // display A&B

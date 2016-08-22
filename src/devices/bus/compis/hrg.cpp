@@ -42,12 +42,26 @@ ADDRESS_MAP_END
 
 
 //-------------------------------------------------
-//  UPD7220_INTERFACE( hgdc_intf )
+//  UPD7220_DISPLAY_PIXELS_MEMBER( display_pixels )
 //-------------------------------------------------
 
 UPD7220_DISPLAY_PIXELS_MEMBER( compis_hrg_t::display_pixels )
 {
 	UINT16 i,gfx = m_video_ram[(address & 0x7fff) >> 1];
+	const pen_t *pen = m_palette->pens();
+
+	for(i=0; i<16; i++)
+		bitmap.pix32(y, x + i) = pen[BIT(gfx, i)];
+}
+
+
+//-------------------------------------------------
+//  UPD7220_DISPLAY_PIXELS_MEMBER( display_pixels )
+//-------------------------------------------------
+
+UPD7220_DISPLAY_PIXELS_MEMBER( compis_uhrg_t::display_pixels )
+{
+	UINT16 i,gfx = m_video_ram[(address & 0x1ffff) >> 1];
 	const pen_t *pen = m_palette->pens();
 
 	for(i=0; i<16; i++)
@@ -68,7 +82,7 @@ static MACHINE_CONFIG_FRAGMENT( hrg )
 	MCFG_SCREEN_VISIBLE_AREA(0, 640-1, 0, 400-1)
 	MCFG_SCREEN_UPDATE_DEVICE(UPD7220_TAG, upd7220_device, screen_update)
 
-	MCFG_DEVICE_ADD(UPD7220_TAG, UPD7220, XTAL_4_433619MHz/2) // unknown clock
+	MCFG_DEVICE_ADD(UPD7220_TAG, UPD7220, 2252500) // unknown clock
 	MCFG_DEVICE_ADDRESS_MAP(AS_0, hrg_map)
 	MCFG_UPD7220_DISPLAY_PIXELS_CALLBACK_OWNER(compis_hrg_t, display_pixels)
 	MCFG_VIDEO_SET_SCREEN(SCREEN_TAG)
@@ -101,9 +115,9 @@ static MACHINE_CONFIG_FRAGMENT( uhrg )
 	MCFG_SCREEN_VISIBLE_AREA(0, 1280-1, 0, 800-1)
 	MCFG_SCREEN_UPDATE_DEVICE(UPD7220_TAG, upd7220_device, screen_update)
 
-	MCFG_DEVICE_ADD(UPD7220_TAG, UPD7220, XTAL_4_433619MHz/2) // unknown clock
+	MCFG_DEVICE_ADD(UPD7220_TAG, UPD7220, 2252500*2) // unknown clock
 	MCFG_DEVICE_ADDRESS_MAP(AS_0, uhrg_map)
-	MCFG_UPD7220_DISPLAY_PIXELS_CALLBACK_OWNER(compis_hrg_t, display_pixels)
+	MCFG_UPD7220_DISPLAY_PIXELS_CALLBACK_OWNER(compis_uhrg_t, display_pixels)
 	MCFG_VIDEO_SET_SCREEN(SCREEN_TAG)
 
 	MCFG_PALETTE_ADD_MONOCHROME("palette")

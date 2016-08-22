@@ -29,22 +29,19 @@
     80000-EFFFF NOP
     F0000-FFFFF ROM UMCS (Upper Memory Chip Select)
 
-18/08/2011 -[Robbbert]
-- Modernised
-- Removed F4 display, as the gfx is in different places per bios.
-- Changed to monochrome, it usually had a greenscreen monitor, although some
-  were amber.
-- Still doesn't work.
-- Added a nasty hack to get a display on compis2 (wait 20 seconds)
-
-
 ******************************************************************************/
 
 /*
 
 	TODO:
 
-	- cannot detect UHRG card (writes 0x1234 to 0x8000 in VRAM but does not read it back?)
+	- disk formats
+	- uhrg graphics are drawn wrong (upd7220 bugs?)
+	- compis2
+		- color graphics
+		- 8087
+		- programmable keyboard
+	- hard disk
 
 */
 
@@ -404,7 +401,7 @@ ADDRESS_MAP_END
 
 static ADDRESS_MAP_START( compis2_mem, AS_PROGRAM, 16, compis_state )
 	ADDRESS_MAP_UNMAP_HIGH
-	AM_RANGE(0x00000, 0xbffff) AM_RAM
+	AM_RANGE(0x00000, 0x3ffff) AM_RAM
 	AM_RANGE(0xe0000, 0xeffff) AM_MIRROR(0x10000) AM_ROM AM_REGION(I80186_TAG, 0)
 ADDRESS_MAP_END
 
@@ -418,12 +415,9 @@ static ADDRESS_MAP_START( compis_io, AS_IO, 16, compis_state )
 	AM_RANGE(0x0000, 0x0007) /* PCS0 */ AM_MIRROR(0x78) AM_DEVREADWRITE8(I8255_TAG, i8255_device, read, write, 0xff00)
 	AM_RANGE(0x0080, 0x0087) /* PCS1 */ AM_MIRROR(0x78) AM_DEVREADWRITE8(I8253_TAG, pit8253_device, read, write, 0x00ff)
 	AM_RANGE(0x0100, 0x011f) /* PCS2 */ AM_MIRROR(0x60) AM_DEVREADWRITE8(MM58174A_TAG, mm58274c_device, read, write, 0x00ff)
-	//AM_RANGE(0x0180, 0x0181) /* PCS3 */ AM_MIRROR(0x7e)
+	AM_RANGE(0x0180, 0x01ff) /* PCS3 */ AM_DEVREADWRITE(GRAPHICS_TAG, compis_graphics_slot_t, pcs3_r, pcs3_w)
 	//AM_RANGE(0x0200, 0x0201) /* PCS4 */ AM_MIRROR(0x7e)
 	AM_RANGE(0x0280, 0x028f) /* PCS5 */ AM_MIRROR(0x70) AM_DEVICE(I80130_TAG, i80130_device, io_map)
-//	AM_RANGE(0x0300, 0x0301) /* PCS6:0 */ AM_MIRROR(0xe) AM_WRITE8(tape_mon_w, 0x00ff)
-//	AM_RANGE(0x0310, 0x0311) /* PCS6:3 */ AM_MIRROR(0xc) AM_DEVREADWRITE8(I8251A_TAG, i8251_device, data_r, data_w, 0xff00)
-//	AM_RANGE(0x0312, 0x0313) /* PCS6:3 */ AM_MIRROR(0xc) AM_DEVREADWRITE8(I8251A_TAG, i8251_device, status_r, control_w, 0xff00)
 	AM_RANGE(0x0300, 0x030f) AM_READWRITE(pcs6_0_1_r, pcs6_0_1_w)
 	AM_RANGE(0x0310, 0x031f) AM_READWRITE(pcs6_2_3_r, pcs6_2_3_w)
 	AM_RANGE(0x0320, 0x032f) AM_READWRITE(pcs6_4_5_r, pcs6_4_5_w)
@@ -689,6 +683,8 @@ TIMER_DEVICE_CALLBACK_MEMBER( compis_state::tape_tick )
 	m_maincpu->tmrin0_w(m_cassette->input() > 0.0);
 }
 
+
+
 //**************************************************************************
 //  MACHINE INITIALIZATION
 //**************************************************************************
@@ -699,10 +695,26 @@ TIMER_DEVICE_CALLBACK_MEMBER( compis_state::tape_tick )
 
 void compis_state::machine_start()
 {
-	if (m_ram->size() == 256*1024)
+	// RAM size
+	switch (m_ram->size())
 	{
+	case 256*1024:
 		m_maincpu->space(AS_PROGRAM).install_ram(0x20000, 0x3ffff, nullptr);
+		break;
+
+	case 512*1024:
+		m_maincpu->space(AS_PROGRAM).install_ram(0x20000, 0x7ffff, nullptr);
+		break;
+
+	case 768*1024:
+		m_maincpu->space(AS_PROGRAM).install_ram(0x20000, 0xbffff, nullptr);
+		break;
 	}
+
+	// state saving
+	save_item(NAME(m_centronics_busy));
+	save_item(NAME(m_centronics_select));
+	save_item(NAME(m_tmr0));
 }
 
 
@@ -732,7 +744,7 @@ void compis_state::machine_reset()
 
 static MACHINE_CONFIG_START( compis, compis_state )
 	// basic machine hardware
-	MCFG_CPU_ADD(I80186_TAG, I80186, XTAL_16MHz)
+	MCFG_CPU_ADD(I80186_TAG, I80186, XTAL_15_36MHz)
 	MCFG_CPU_PROGRAM_MAP(compis_mem)
 	MCFG_CPU_IO_MAP(compis_io)
 	MCFG_80186_IRQ_SLAVE_ACK(DEVREAD8(DEVICE_SELF, compis_state, compis_irq_callback))
@@ -740,17 +752,17 @@ static MACHINE_CONFIG_START( compis, compis_state )
 	MCFG_80186_TMROUT1_HANDLER(DEVWRITELINE(DEVICE_SELF, compis_state, tmr1_w))
 
 	// devices
-	MCFG_DEVICE_ADD(I80130_TAG, I80130, XTAL_16MHz/2)
+	MCFG_DEVICE_ADD(I80130_TAG, I80130, XTAL_15_36MHz/2)
 	MCFG_I80130_IRQ_CALLBACK(DEVWRITELINE(I80186_TAG, i80186_cpu_device, int0_w))
 	MCFG_I80130_SYSTICK_CALLBACK(DEVWRITELINE(I80130_TAG, i80130_device, ir3_w))
 	MCFG_I80130_DELAY_CALLBACK(DEVWRITELINE(I80130_TAG, i80130_device, ir7_w))
 	MCFG_I80130_BAUD_CALLBACK(WRITELINE(compis_state, tmr2_w))
 
 	MCFG_DEVICE_ADD(I8253_TAG, PIT8253, 0)
-	MCFG_PIT8253_CLK0(XTAL_16MHz/8)
+	MCFG_PIT8253_CLK0(XTAL_15_36MHz/8)
 	MCFG_PIT8253_OUT0_HANDLER(DEVWRITELINE(I8274_TAG, i8274_device, rxtxcb_w))
-	MCFG_PIT8253_CLK1(XTAL_16MHz/8)
-	MCFG_PIT8253_CLK2(XTAL_16MHz/8)
+	MCFG_PIT8253_CLK1(XTAL_15_36MHz/8)
+	MCFG_PIT8253_CLK2(XTAL_15_36MHz/8)
 	MCFG_PIT8253_OUT2_HANDLER(WRITELINE(compis_state, tmr5_w))
 
 	MCFG_DEVICE_ADD(I8255_TAG, I8255, 0)
@@ -766,7 +778,7 @@ static MACHINE_CONFIG_START( compis, compis_state )
 	MCFG_DEVICE_ADD(COMPIS_KEYBOARD_TAG, COMPIS_KEYBOARD, 0)
 	MCFG_COMPIS_KEYBOARD_OUT_TX_HANDLER(DEVWRITELINE(I8251A_TAG, i8251_device, write_rxd))
 
-	MCFG_I8274_ADD(I8274_TAG, XTAL_16MHz/4, 0, 0, 0, 0)
+	MCFG_I8274_ADD(I8274_TAG, XTAL_15_36MHz/4, 0, 0, 0, 0)
 	MCFG_Z80DART_OUT_TXDA_CB(DEVWRITELINE(RS232_A_TAG, rs232_port_device, write_txd))
 	MCFG_Z80DART_OUT_DTRA_CB(DEVWRITELINE(RS232_A_TAG, rs232_port_device, write_dtr))
 	MCFG_Z80DART_OUT_RTSA_CB(DEVWRITELINE(RS232_A_TAG, rs232_port_device, write_rts))
@@ -775,8 +787,8 @@ static MACHINE_CONFIG_START( compis, compis_state )
 	MCFG_Z80DART_OUT_RTSB_CB(DEVWRITELINE(RS232_B_TAG, rs232_port_device, write_rts))
 	MCFG_Z80DART_OUT_INT_CB(DEVWRITELINE(I80186_TAG, i80186_cpu_device, int3_w))
 
-	MCFG_DEVICE_ADD(MM58174A_TAG, MM58274C, 0)
-	MCFG_MM58274C_MODE24(0) // 12 hour
+	MCFG_DEVICE_ADD(MM58174A_TAG, MM58274C, XTAL_32_768kHz)
+	MCFG_MM58274C_MODE24(1) // 24 hour
 	MCFG_MM58274C_DAY1(1)   // monday
 
 	MCFG_CASSETTE_ADD(CASSETTE_TAG)
@@ -799,7 +811,7 @@ static MACHINE_CONFIG_START( compis, compis_state )
 	MCFG_CENTRONICS_SELECT_HANDLER(WRITELINE(compis_state, write_centronics_select))
 	MCFG_CENTRONICS_OUTPUT_LATCH_ADD("cent_data_out", CENTRONICS_TAG)
 
-	MCFG_COMPIS_GRAPHICS_SLOT_ADD(GRAPHICS_TAG, XTAL_16MHz, compis_graphics_cards, "hrg")
+	MCFG_COMPIS_GRAPHICS_SLOT_ADD(GRAPHICS_TAG, XTAL_15_36MHz/2, compis_graphics_cards, "hrg")
 
 	MCFG_ISBX_SLOT_ADD(ISBX_0_TAG, 0, isbx_cards, "fdc")
 	MCFG_ISBX_SLOT_MINTR0_CALLBACK(DEVWRITELINE(I80130_TAG, i80130_device, ir1_w))
@@ -835,7 +847,8 @@ static MACHINE_CONFIG_DERIVED( compis2, compis )
 
 	// internal ram
 	MCFG_RAM_MODIFY(RAM_TAG)
-	MCFG_RAM_DEFAULT_SIZE("768K")
+	MCFG_RAM_DEFAULT_SIZE("256K")
+	MCFG_RAM_EXTRA_OPTIONS("512K,768K")
 MACHINE_CONFIG_END
 
 
@@ -876,5 +889,5 @@ ROM_END
 //**************************************************************************
 
 //    YEAR  NAME        PARENT      COMPAT  MACHINE     INPUT   INIT                         COMPANY             FULLNAME        FLAGS
-COMP(1985,  compis,     0,      0,     compis,  compis, driver_device, 0, "Telenova", "Compis" , MACHINE_NOT_WORKING )
-COMP(1986,  compis2,    compis, 0,     compis2, compis, driver_device, 0, "Telenova", "Compis II" , MACHINE_NOT_WORKING )
+COMP(1985,  compis,     0,      0,     compis,  compis, driver_device, 0, "Telenova", "Compis" , MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS )
+COMP(1986,  compis2,    compis, 0,     compis2, compis, driver_device, 0, "Telenova", "Compis II" , MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS )
