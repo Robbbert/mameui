@@ -105,7 +105,7 @@ ioport_constructor hpc104_2_t::device_input_ports() const
 //  hpc104_t - constructor
 //-------------------------------------------------
 
-hpc104_t::hpc104_t(const machine_config &mconfig, device_type type, const char *name, const char *tag, device_t *owner, UINT32 clock, const char *shortname, const char *source) :
+hpc104_t::hpc104_t(const machine_config &mconfig, device_type type, const char *name, const char *tag, device_t *owner, uint32_t clock, const char *shortname, const char *source) :
 	device_t(mconfig, type, name, tag, owner, clock, shortname, source),
 	device_portfolio_expansion_slot_interface(mconfig, *this),
 	device_nvram_interface(mconfig, *this),
@@ -116,7 +116,7 @@ hpc104_t::hpc104_t(const machine_config &mconfig, device_type type, const char *
 {
 }
 
-hpc104_t::hpc104_t(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock) :
+hpc104_t::hpc104_t(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	device_t(mconfig, HPC104, "Atari Portfolio HPC-104", tag, owner, clock, "hpc104", __FILE__),
 	device_portfolio_expansion_slot_interface(mconfig, *this),
 	device_nvram_interface(mconfig, *this),
@@ -132,7 +132,7 @@ hpc104_t::hpc104_t(const machine_config &mconfig, const char *tag, device_t *own
 //  hpc104_2_t - constructor
 //-------------------------------------------------
 
-hpc104_2_t::hpc104_2_t(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock) :
+hpc104_2_t::hpc104_2_t(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	hpc104_t(mconfig, HPC104_2, "Atari Portfolio HPC-104 (Unit 2)", tag, owner, clock, "hpc104_2", __FILE__) { }
 
 
@@ -161,7 +161,7 @@ void hpc104_t::device_reset()
 //  nrdi_r - read
 //-------------------------------------------------
 
-UINT8 hpc104_t::nrdi_r(address_space &space, offs_t offset, UINT8 data, bool iom, bool bcom, bool ncc1)
+uint8_t hpc104_t::nrdi_r(address_space &space, offs_t offset, uint8_t data, bool iom, bool bcom, bool ncc1)
 {
 	data = m_exp->nrdi_r(space, offset, data, iom, bcom, m_ncc1_out || ncc1);
 
@@ -169,9 +169,9 @@ UINT8 hpc104_t::nrdi_r(address_space &space, offs_t offset, UINT8 data, bool iom
 	{
 		if (!(!m_ncc1_out || ncc1))
 		{
-			if (LOG) logerror("%s %s CCM0 read %05x\n", machine().time().as_string(), machine().describe_context(), offset & 0x1ffff);
-
 			data = m_ccm->nrdi_r(space, offset & 0x1ffff);
+
+			if (LOG) logerror("%s %s CCM1 read %05x:%02x\n", machine().time().as_string(), machine().describe_context(), offset & 0x1ffff, data);
 		}
 
 		if (m_sw1)
@@ -198,7 +198,7 @@ UINT8 hpc104_t::nrdi_r(address_space &space, offs_t offset, UINT8 data, bool iom
 //  nwri_w - write
 //-------------------------------------------------
 
-void hpc104_t::nwri_w(address_space &space, offs_t offset, UINT8 data, bool iom, bool bcom, bool ncc1)
+void hpc104_t::nwri_w(address_space &space, offs_t offset, uint8_t data, bool iom, bool bcom, bool ncc1)
 {
 	m_exp->nwri_w(space, offset, data, iom, bcom, m_ncc1_out || ncc1);
 
@@ -234,7 +234,7 @@ void hpc104_t::nwri_w(address_space &space, offs_t offset, UINT8 data, bool iom,
 			{
 				m_ncc1_out = BIT(data, 0);
 
-				if (LOG) logerror("NCC1 out %u\n", machine().time().as_string(), machine().describe_context(), m_ncc1_out);
+				if (LOG) logerror("%s %s NCC1 out %u\n", machine().time().as_string(), machine().describe_context(), m_ncc1_out);
 			}
 		}
 	}

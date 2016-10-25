@@ -79,6 +79,7 @@
 #include "unzip.h"
 #include "debug/debugvw.h"
 #include "debug/debugcpu.h"
+#include "dirtc.h"
 #include "image.h"
 #include "network.h"
 #include "ui/uimain.h"
@@ -267,7 +268,6 @@ void running_machine::start()
 	else if (options().autosave() && (m_system.flags & MACHINE_SUPPORTS_SAVE) != 0)
 		schedule_load("auto");
 
-
 	manager().update_machine();
 }
 
@@ -300,7 +300,7 @@ int running_machine::run(bool quiet)
 		// then finish setting up our local machine
 		start();
 
-		// load the configuration settings and NVRAM
+		// load the configuration settings
 		m_configuration->load_settings();
 
 		// disallow save state registrations starting here.
@@ -308,7 +308,12 @@ int running_machine::run(bool quiet)
 		// devices with timers.
 		m_save.allow_registration(false);
 
+		// load the NVRAM
 		nvram_load();
+
+		// set the time on RTCs (this may overwrite parts of NVRAM)
+		set_rtc_datetime(system_time(m_base_time));
+
 		sound().ui_mute(false);
 		if (!quiet)
 			sound().start_recording();
@@ -796,10 +801,23 @@ void running_machine::current_datetime(system_time &systime)
 
 
 //-------------------------------------------------
+//  set_rtc_datetime - set the current time on
+//  battery-backed RTCs
+//-------------------------------------------------
+
+void running_machine::set_rtc_datetime(const system_time &systime)
+{
+	for (device_rtc_interface &rtc : rtc_interface_iterator(root_device()))
+		if (rtc.has_battery())
+			rtc.set_current_time(systime);
+}
+
+
+//-------------------------------------------------
 //  rand - standardized random numbers
 //-------------------------------------------------
 
-UINT32 running_machine::rand()
+uint32_t running_machine::rand()
 {
 	m_rand_seed = 1664525 * m_rand_seed + 1013904223;
 
@@ -845,7 +863,7 @@ void running_machine::handle_saveload()
 		}
 		else
 		{
-			UINT32 const openflags = (m_saveload_schedule == SLS_LOAD) ? OPEN_FLAG_READ : (OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
+			uint32_t const openflags = (m_saveload_schedule == SLS_LOAD) ? OPEN_FLAG_READ : (OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
 
 			// open the file
 			emu_file file(m_saveload_searchpath, openflags);
@@ -909,7 +927,7 @@ void running_machine::handle_saveload()
 //  of the system
 //-------------------------------------------------
 
-void running_machine::soft_reset(void *ptr, INT32 param)
+void running_machine::soft_reset(void *ptr, int32_t param)
 {
 	logerror("Soft reset\n");
 
@@ -1169,6 +1187,11 @@ running_machine::logerror_callback_item::logerror_callback_item(logerror_callbac
 system_time::system_time()
 {
 	set(0);
+}
+
+system_time::system_time(time_t t)
+{
+	set(t);
 }
 
 

@@ -179,9 +179,6 @@ int mame_machine_manager::execute()
 	bool exit_pending = false;
 	int error = EMU_ERR_NONE;
 
-	if (m_options.console()) {
-		m_lua->start_console();
-	}
 	while (error == EMU_ERR_NONE && !exit_pending)
 	{
 		m_new_driver_pending = nullptr;

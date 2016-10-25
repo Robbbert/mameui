@@ -61,7 +61,6 @@
 # USE_SYSTEM_LIB_LUA = 1
 # USE_SYSTEM_LIB_PORTMIDI = 1
 # USE_SYSTEM_LIB_PORTAUDIO = 1
-# USE_SYSTEM_LIB_UV = 1
 # USE_BUNDLED_LIB_SDL2 = 1
 
 # MESA_INSTALL_ROOT = /opt/mesa
@@ -96,7 +95,6 @@
 # FORCE_VERSION_COMPILE = 1
 
 # MSBUILD = 1
-# USE_LIBUV = 1
 # IGNORE_BAD_LOCALISATION=1
 # PRECOMPILE = 0
 
@@ -437,10 +435,6 @@ ifdef USE_BUNDLED_LIB_SDL2
 PARAMS += --with-bundled-sdl2
 endif
 
-ifdef USE_SYSTEM_LIB_UV
-PARAMS += --with-system-uv='$(USE_SYSTEM_LIB_UV)'
-endif
-
 #-------------------------------------------------
 # distribution may change things
 #-------------------------------------------------
@@ -737,10 +731,6 @@ ifdef PLATFORM
 TARGET_PARAMS += --PLATFORM='$(PLATFORM)'
 endif
 
-ifdef USE_LIBUV
-PARAMS += --USE_LIBUV='$(USE_LIBUV)'
-endif
-
 ifdef PRECOMPILE
 PARAMS += --precompile='$(PRECOMPILE)'
 endif
@@ -1025,7 +1015,7 @@ endif
 
 .PHONY: vs2015_uwp
 vs2015_uwp: generate
-	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --vs=winstore82 --osd=windows --NO_USE_MIDI=1 --USE_LIBUV=0 --NO_OPENGL=1 --USE_QTDEBUG=0 --MODERN_WIN_API=1 vs2015
+	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --vs=winstore82 --osd=windows --NO_USE_MIDI=1 --NO_OPENGL=1 --USE_QTDEBUG=0 --MODERN_WIN_API=1 vs2015
 ifdef MSBUILD
 	$(SILENT) msbuild.exe $(PROJECTDIR_WIN)/vs2015-winstore82/$(PROJECT_NAME).sln $(MSBUILD_PARAMS)
 endif
@@ -1495,7 +1485,7 @@ $(GENDIR)/%.lh: $(SRC)/%.lay scripts/build/complay.py | $(GEN_FOLDERS)
 
 $(GENDIR)/mame/drivers/ymmu100.hxx: $(SRC)/mame/drivers/ymmu100.ppm scripts/build/file2str.py
 	@echo Converting $<...
-	$(SILENT)$(PYTHON) scripts/build/file2str.py $< $@ ymmu100_bkg UINT8
+	$(SILENT)$(PYTHON) scripts/build/file2str.py $< $@ ymmu100_bkg uint8_t
 
 $(SRC)/devices/cpu/m68000/m68kops.cpp: $(SRC)/devices/cpu/m68000/m68k_in.cpp $(SRC)/devices/cpu/m68000/m68kmake.cpp
 ifeq ($(TARGETOS),asmjs)

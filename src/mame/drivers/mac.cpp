@@ -46,21 +46,18 @@
 
 
 #include "emu.h"
+#include "includes/mac.h"
 #include "cpu/m68000/m68000.h"
 #include "cpu/powerpc/ppc.h"
 #include "cpu/m6805/m6805.h"
-#include "machine/6522via.h"
 #include "machine/applefdc.h"
 #include "machine/swim.h"
 #include "machine/sonydriv.h"
 #include "formats/ap_dsk35.h"
-#include "machine/ram.h"
 #include "bus/scsi/scsi.h"
 #include "bus/scsi/scsihd.h"
 #include "bus/scsi/scsicd.h"
-#include "sound/asc.h"
-#include "sound/awacs.h"
-#include "sound/cdda.h"
+#include "sound/volt_reg.h"
 
 // NuBus and 030/040 PDS cards
 #include "bus/nubus/nubus_48gc.h"
@@ -83,7 +80,6 @@
 // 68000 PDS cards
 #include "bus/macpds/pds_tpdfpd.h"
 
-#include "includes/mac.h"
 #include "machine/macadb.h"
 #include "softlist.h"
 #include "mac.lh"
@@ -219,7 +215,7 @@ WRITE8_MEMBER( mac_state::mac_sonora_vctl_w )
 void mac_state::rbv_recalc_irqs()
 {
 	// check slot interrupts and bubble them down to IFR
-	UINT8 slot_irqs = (~m_rbv_regs[2]) & 0x78;
+	uint8_t slot_irqs = (~m_rbv_regs[2]) & 0x78;
 	slot_irqs &= (m_rbv_regs[0x12] & 0x78);
 
 	if (slot_irqs)
@@ -231,7 +227,7 @@ void mac_state::rbv_recalc_irqs()
 		m_rbv_regs[3] &= ~2; // any slot
 	}
 
-	UINT8 ifr = (m_rbv_regs[3] & m_rbv_ier) & 0x1b; //m_rbv_regs[0x13]);
+	uint8_t ifr = (m_rbv_regs[3] & m_rbv_ier) & 0x1b; //m_rbv_regs[0x13]);
 
 //  printf("ifr = %02x (reg3 %02x reg13 %02x)\n", ifr, m_rbv_regs[3], m_rbv_regs[0x13]);
 	if (ifr != 0)
@@ -506,7 +502,7 @@ WRITE8_MEMBER(mac_state::amic_dma_w)
 // HMC has one register: a 35-bit shift register which is accessed one bit at a time (see pmac6100 code at 4030383c which makes this obvious)
 READ8_MEMBER(mac_state::hmc_r)
 {
-	UINT8 rv = (UINT8)(m_hmc_shiftout&1);
+	uint8_t rv = (uint8_t)(m_hmc_shiftout&1);
 	m_hmc_shiftout>>= 1;
 	return rv;
 }
@@ -520,7 +516,7 @@ WRITE8_MEMBER(mac_state::hmc_w)
 	}
 	else
 	{
-		UINT64 temp = (data & 1) ? U64(0x400000000) : U64(0x0);
+		uint64_t temp = (data & 1) ? U64(0x400000000) : U64(0x0);
 		m_hmc_reg >>= 1;
 		m_hmc_reg |= temp;
 	}
@@ -566,6 +562,27 @@ WRITE8_MEMBER(mac_state::mac_5396_w)
 		m_539x_1->write(space, 2, data);
 	}
 }
+
+#define MAC_MAIN_SND_BUF_OFFSET 0x0300
+#define MAC_ALT_SND_BUF_OFFSET  0x5F00
+
+TIMER_DEVICE_CALLBACK_MEMBER(mac_state::mac_scanline)
+{
+	int scanline = param;
+	uint16_t *mac_snd_buf_ptr;
+
+	if (m_main_buffer)
+	{
+		mac_snd_buf_ptr = (uint16_t *)(m_ram->pointer() + m_ram->size() - MAC_MAIN_SND_BUF_OFFSET);
+	}
+	else
+	{
+		mac_snd_buf_ptr = (uint16_t *)(m_ram->pointer() + m_ram->size() - MAC_ALT_SND_BUF_OFFSET);
+	}
+
+	m_dac->write(mac_snd_buf_ptr[scanline] >> 8);
+}
+
 
 /***************************************************************************
     ADDRESS MAPS
@@ -898,11 +915,7 @@ static MACHINE_CONFIG_START( mac512ke, mac_state )
 
 	/* video hardware */
 	MCFG_SCREEN_ADD(MAC_SCREEN_NAME, RASTER)
-	MCFG_SCREEN_REFRESH_RATE(60.15)
-	MCFG_SCREEN_VBLANK_TIME(ATTOSECONDS_IN_USEC(1260))
-	MCFG_SCREEN_VIDEO_ATTRIBUTES(VIDEO_UPDATE_BEFORE_VBLANK)
-	MCFG_SCREEN_SIZE(MAC_H_TOTAL, MAC_V_TOTAL)
-	MCFG_SCREEN_VISIBLE_AREA(0, MAC_H_VIS-1, 0, MAC_V_VIS-1)
+	MCFG_SCREEN_RAW_PARAMS(C7M*2, MAC_H_TOTAL, 0, MAC_H_VIS, MAC_V_TOTAL, 0, MAC_V_VIS)
 	MCFG_SCREEN_UPDATE_DRIVER(mac_state, screen_update_mac)
 	MCFG_SCREEN_PALETTE("palette")
 
@@ -911,10 +924,13 @@ static MACHINE_CONFIG_START( mac512ke, mac_state )
 
 	MCFG_VIDEO_START_OVERRIDE(mac_state,mac)
 
+	MCFG_TIMER_DRIVER_ADD_SCANLINE("scantimer", mac_state, mac_scanline, "screen", 0, 1)
+
 	/* sound hardware */
-	MCFG_SPEAKER_STANDARD_MONO("mono")
-	MCFG_SOUND_ADD("custom", MAC_SOUND, 0)
-	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "mono", 1.00)
+	MCFG_SPEAKER_STANDARD_MONO("speaker")
+	MCFG_SOUND_ADD("dac", DAC_8BIT_PWM, 0) MCFG_SOUND_ROUTE(ALL_OUTPUTS, "speaker", 0.25) // 2 x ls161
+	MCFG_DEVICE_ADD("vref", VOLTAGE_REGULATOR, 0) MCFG_VOLTAGE_REGULATOR_OUTPUT(5.0)
+	MCFG_SOUND_ROUTE_EX(0, "dac", 1.0, DAC_VREF_POS_INPUT) MCFG_SOUND_ROUTE_EX(0, "dac", -1.0, DAC_VREF_NEG_INPUT)
 
 	/* devices */
 	MCFG_RTC3430042_ADD("rtc", XTAL_32_768kHz)

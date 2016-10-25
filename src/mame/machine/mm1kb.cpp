@@ -205,21 +205,12 @@ ioport_constructor mm1_keyboard_t::device_input_ports() const
 //  mm1_keyboard_t - constructor
 //-------------------------------------------------
 
-mm1_keyboard_t::mm1_keyboard_t(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock) :
+mm1_keyboard_t::mm1_keyboard_t(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	device_t(mconfig, MM1_KEYBOARD, "MikroMikko 1 keyboard", tag, owner, clock, "mm1kb", __FILE__),
 	m_write_kbst(*this),
 	m_samples(*this, "keyboard_and_chassis_sounds"),
 	m_rom(*this, "keyboard"),
-	m_y0(*this, "Y0"),
-	m_y1(*this, "Y1"),
-	m_y2(*this, "Y2"),
-	m_y3(*this, "Y3"),
-	m_y4(*this, "Y4"),
-	m_y5(*this, "Y5"),
-	m_y6(*this, "Y6"),
-	m_y7(*this, "Y7"),
-	m_y8(*this, "Y8"),
-	m_y9(*this, "Y9"),
+	m_y(*this, "Y%u", 0),
 	m_special(*this, "SPECIAL"),
 	m_sense(0),
 	m_drive(0),
@@ -266,26 +257,17 @@ void mm1_keyboard_t::shut_down_mm1()
 void mm1_keyboard_t::device_timer(emu_timer &timer, device_timer_id id, int param, void *ptr)
 {
 	// handle scan timer
-	UINT8 data = 0xff;
+	uint8_t data = 0xff;
 
-	switch (m_drive)
+	if (m_drive < 10)
 	{
-	case 0: data = m_y0->read(); break;
-	case 1: data = m_y1->read(); break;
-	case 2: data = m_y2->read(); break;
-	case 3: data = m_y3->read(); break;
-	case 4: data = m_y4->read(); break;
-	case 5: data = m_y5->read(); break;
-	case 6: data = m_y6->read(); break;
-	case 7: data = m_y7->read(); break;
-	case 8: data = m_y8->read(); break;
-	case 9: data = m_y9->read(); break;
+		data = m_y[m_drive]->read();
 	}
 
-	UINT8 special = m_special->read();
+	uint8_t special = m_special->read();
 	int ctrl = BIT(special, 0);
 	int shift = BIT(special, 2) & BIT(special, 1);
-	UINT8 keydata = 0xff;
+	uint8_t keydata = 0xff;
 
 	if (!BIT(data, m_sense))
 	{

@@ -23,6 +23,7 @@
 #define __MSM58321__
 
 #include "emu.h"
+#include "dirtc.h"
 
 
 
@@ -59,7 +60,7 @@ class msm58321_device : public device_t,
 {
 public:
 	// construction/destruction
-	msm58321_device(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock);
+	msm58321_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// static configuration helpers
 	template<class _Object> static devcb_base &set_d0_handler(device_t &device, _Object object) { return downcast<msm58321_device &>(device).m_d0_handler.set_callback(object); }
@@ -89,7 +90,7 @@ protected:
 
 	// device_rtc_interface overrides
 	virtual void rtc_clock_updated(int year, int month, int day, int day_of_week, int hour, int minute, int second) override;
-	virtual bool rtc_feature_y2k() override { return m_year0 != 0; }
+	virtual bool rtc_feature_y2k() const override { return m_year0 != 0; }
 
 	// device_nvram_interface overrides
 	virtual void nvram_default() override;
@@ -131,8 +132,8 @@ private:
 	int m_test;                 // test flag
 	int m_cs1;                  // chip select 1
 
-	UINT8 m_address;            // address latch
-	UINT8 m_reg[13];            // registers
+	uint8_t m_address;            // address latch
+	uint8_t m_reg[13];            // registers
 
 	// timers
 	emu_timer *m_clock_timer;

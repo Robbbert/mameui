@@ -646,6 +646,12 @@ if (CPUS["SH2"]~=null) then
 		MAME_DIR .. "src/devices/cpu/sh2/sh2.cpp",
 		MAME_DIR .. "src/devices/cpu/sh2/sh2.h",
 		MAME_DIR .. "src/devices/cpu/sh2/sh2fe.cpp",
+		MAME_DIR .. "src/devices/cpu/sh2/sh7604_bus.cpp",
+		MAME_DIR .. "src/devices/cpu/sh2/sh7604_bus.h",
+		MAME_DIR .. "src/devices/cpu/sh2/sh7604_sci.cpp",
+		MAME_DIR .. "src/devices/cpu/sh2/sh7604_sci.h",
+		MAME_DIR .. "src/devices/cpu/sh2/sh7604_wdt.cpp",
+		MAME_DIR .. "src/devices/cpu/sh2/sh7604_wdt.h",
 		--MAME_DIR .. "src/devices/cpu/sh2/sh2comn.cpp",
 		--MAME_DIR .. "src/devices/cpu/sh2/sh2comn.h",
 		--MAME_DIR .. "src/devices/cpu/sh2/sh2drc.cpp",
@@ -1350,9 +1356,7 @@ if (CPUS["M6809"]~=null) then
 end
 
 if (CPUS["M6809"]~=null or _OPTIONS["with-tools"]) then
-	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/m6809/6809dasm.cpp")
-	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/m6809/6309dasm.cpp")
-	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/m6809/knmidasm.cpp")
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/m6809/6x09dasm.cpp")
 end
 
 --------------------------------------------------

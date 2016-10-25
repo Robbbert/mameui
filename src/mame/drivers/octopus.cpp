@@ -120,9 +120,17 @@ Its BIOS performs POST and halts as there's no keyboard.
 #include "imagedev/floppy.h"
 #include "machine/pit8253.h"
 #include "sound/speaker.h"
+#include "machine/z80dart.h"
 #include "machine/octo_kbd.h"
 #include "machine/bankdev.h"
 #include "machine/ram.h"
+#include "bus/centronics/ctronics.h"
+#include "bus/centronics/comxpl80.h"
+#include "bus/centronics/epson_ex800.h"
+#include "bus/centronics/epson_lx800.h"
+#include "bus/centronics/epson_lx810l.h"
+#include "bus/centronics/printer.h"
+#include "softlist.h"
 
 class octopus_state : public driver_device
 {
@@ -146,8 +154,10 @@ public:
 		m_pit(*this, "pit"),
 		m_ppi(*this, "ppi"),
 		m_speaker(*this, "speaker"),
+		m_serial(*this, "serial"),
+		m_parallel(*this, "parallel"),
 		m_z80_bankdev(*this, "z80_bank"),
-		m_ram(*this, "main_ram"),
+		m_ram(*this, "ram"),
 		m_current_dma(-1),
 		m_speaker_active(false),
 		m_beep_active(false),
@@ -180,10 +190,17 @@ public:
 	IRQ_CALLBACK_MEMBER(x86_irq_cb);
 	DECLARE_READ8_MEMBER(rtc_r);
 	DECLARE_WRITE8_MEMBER(rtc_w);
+	DECLARE_READ8_MEMBER(z80_vector_r);
+	DECLARE_WRITE8_MEMBER(z80_vector_w);
+	DECLARE_READ8_MEMBER(parallel_r);
+	DECLARE_WRITE8_MEMBER(parallel_w);
 
 	DECLARE_WRITE_LINE_MEMBER(spk_w);
 	DECLARE_WRITE_LINE_MEMBER(spk_freq_w);
 	DECLARE_WRITE_LINE_MEMBER(beep_w);
+	DECLARE_WRITE_LINE_MEMBER(serial_clock_w);
+	DECLARE_WRITE_LINE_MEMBER(parallel_busy_w) { m_printer_busy = state; }
+	DECLARE_WRITE_LINE_MEMBER(parallel_slctout_w) { m_printer_slctout = state; }
 
 	DECLARE_WRITE_LINE_MEMBER(dack0_w) { m_dma1->hack_w(state ? 0 : 1); }  // for all unused DMA channel?
 	DECLARE_WRITE_LINE_MEMBER(dack1_w) { if(!state) m_current_dma = 1; else if(m_current_dma == 1) m_current_dma = -1; }  // HD
@@ -206,8 +223,8 @@ private:
 	required_device<cpu_device> m_maincpu;
 	required_device<cpu_device> m_subcpu;
 	required_device<scn2674_device> m_crtc;
-	required_shared_ptr<UINT8> m_vram;
-	required_shared_ptr<UINT8> m_fontram;
+	required_shared_ptr<uint8_t> m_vram;
+	required_shared_ptr<uint8_t> m_fontram;
 	required_device<am9517a_device> m_dma1;
 	required_device<am9517a_device> m_dma2;
 	required_device<pic8259_device> m_pic1;
@@ -220,24 +237,30 @@ private:
 	required_device<pit8253_device> m_pit;
 	required_device<i8255_device> m_ppi;
 	required_device<speaker_sound_device> m_speaker;
+	required_device<z80sio2_device> m_serial;
+	required_device<centronics_device> m_parallel;
 	required_device<address_map_bank_device> m_z80_bankdev;
 	required_device<ram_device> m_ram;
 
-	UINT8 m_hd_bank;  // HD bank select
-	UINT8 m_fd_bank;  // Floppy bank select
-	UINT8 m_z80_bank; // Z80 bank / RAM refresh
-	INT8 m_current_dma;  // current DMA channel (-1 for none)
-	UINT8 m_current_drive;
-	UINT8 m_cntl;  // RTC / FDC control (PPI port B)
-	UINT8 m_gpo;  // General purpose outputs (PPI port C)
-	UINT8 m_vidctrl;
+	uint8_t m_hd_bank;  // HD bank select
+	uint8_t m_fd_bank;  // Floppy bank select
+	uint8_t m_z80_bank; // Z80 bank / RAM refresh
+	int8_t m_current_dma;  // current DMA channel (-1 for none)
+	uint8_t m_current_drive;
+	uint8_t m_cntl;  // RTC / FDC control (PPI port B)
+	uint8_t m_gpo;  // General purpose outputs (PPI port C)
+	uint8_t m_vidctrl;
 	bool m_speaker_active;
 	bool m_beep_active;
 	bool m_speaker_level;
 	bool m_z80_active;
 	bool m_rtc_address;
 	bool m_rtc_data;
-	UINT8 m_prev_cntl;
+	uint8_t m_prev_cntl;
+	uint8_t m_rs232_vector;
+	uint8_t m_rs422_vector;
+	bool m_printer_busy;
+	bool m_printer_slctout;
 
 	emu_timer* m_timer_beep;
 };
@@ -267,7 +290,10 @@ static ADDRESS_MAP_START( octopus_io, AS_IO, 8, octopus_state )
 	AM_RANGE(0x51, 0x51) AM_DEVREADWRITE("keyboard", i8251_device, status_r, control_w)
 	// 0x70-73: HD controller
 	AM_RANGE(0x80, 0x83) AM_DEVREADWRITE("pit", pit8253_device, read, write)
-	// 0xa0-a3: serial interface (Z80 SIO/2)
+	AM_RANGE(0xa0, 0xa0) AM_DEVREADWRITE("serial", z80sio2_device, da_r, da_w)
+	AM_RANGE(0xa1, 0xa1) AM_DEVREADWRITE("serial", z80sio2_device, ca_r, ca_w)
+	AM_RANGE(0xa2, 0xa2) AM_DEVREADWRITE("serial", z80sio2_device, db_r, db_w)
+	AM_RANGE(0xa3, 0xa3) AM_DEVREADWRITE("serial", z80sio2_device, cb_r, cb_w)
 	AM_RANGE(0xb0, 0xb1) AM_DEVREADWRITE("pic_master", pic8259_device, read, write)
 	AM_RANGE(0xb4, 0xb5) AM_DEVREADWRITE("pic_slave", pic8259_device, read, write)
 	AM_RANGE(0xc0, 0xc7) AM_DEVREADWRITE("crtc", scn2674_device, read, write)
@@ -276,9 +302,8 @@ static ADDRESS_MAP_START( octopus_io, AS_IO, 8, octopus_state )
 	AM_RANGE(0xca, 0xca) AM_RAM // attribute writes go here
 	// 0xcf: mode control
 	AM_RANGE(0xd0, 0xd3) AM_DEVREADWRITE("fdc", fd1793_t, read, write)
-	// 0xe0: Z80 interrupt vector for RS232
-	// 0xe4: Z80 interrupt vector for RS422
-	// 0xf0-f1: Parallel interface data I/O (Centronics), and control/status
+	AM_RANGE(0xe0, 0xe4) AM_READWRITE(z80_vector_r, z80_vector_w)
+	AM_RANGE(0xf0, 0xf1) AM_READWRITE(parallel_r, parallel_w)
 	AM_RANGE(0xf8, 0xff) AM_DEVREADWRITE("ppi", i8255_device, read, write)
 ADDRESS_MAP_END
 
@@ -404,10 +429,14 @@ WRITE8_MEMBER(octopus_state::system_w)
 
 READ8_MEMBER(octopus_state::system_r)
 {
+	uint8_t val = 0x00;
 	switch(offset)
 	{
 	case 0:
-		return 0x1f;  // do bits 0-4 mean anything?  Language DIPs?
+		val = 0x1f;
+		if(m_printer_slctout)
+			val |= 0x20;
+		return val;  // do bits 0-4 mean anything?  Language DIPs?
 	}
 
 	return 0xff;
@@ -427,6 +456,38 @@ WRITE8_MEMBER(octopus_state::z80_io_w)
 	m_z80_active = false;
 }
 
+// Z80 vector for RS232 and RS422
+READ8_MEMBER(octopus_state::z80_vector_r)
+{
+	switch(offset)
+	{
+		case 0:
+			return m_rs232_vector;
+		case 4:
+			return m_rs422_vector;
+		default:
+			return 0xff;
+	}
+	return 0xff;
+}
+
+WRITE8_MEMBER(octopus_state::z80_vector_w)
+{
+	switch(offset)
+	{
+		case 0:
+			m_rs232_vector = data;
+			logerror("RS232 vector set to %02x\n",data);
+			break;
+		case 4:
+			m_rs422_vector = data;
+			logerror("RS422 vector set to %02x\n",data);
+			break;
+		default:
+			logerror("Read invalid vector port 0x%02x\n",0xe0 + offset);
+	}
+}
+
 // RTC data and I/O - PPI port A
 // bits 0-3 of RTC/FDC control go to control lines of the MC146818
 // The technical manual does not mention what is connected to each bit
@@ -437,7 +498,7 @@ WRITE8_MEMBER(octopus_state::z80_io_w)
 // bit 3 = Address strobe?
 READ8_MEMBER(octopus_state::rtc_r)
 {
-	UINT8 ret = 0xff;
+	uint8_t ret = 0xff;
 
 	if(m_rtc_data)
 		ret = m_rtc->read(space,1);
@@ -472,13 +533,11 @@ WRITE8_MEMBER(octopus_state::cntl_w)
 	{
 		m_rtc_address = true;
 		m_rtc_data = false;
-		logerror("Address strobe!\n");
 	}
 	if((data & 0x04) && !(m_prev_cntl & 0x04))
 	{
 		m_rtc_address = false;
 		m_rtc_data = true;
-		logerror("Data strobe!\n");
 	}
 	m_ppi->pc4_w(data & 0x02);
 	m_prev_cntl = m_cntl;
@@ -567,9 +626,59 @@ WRITE_LINE_MEMBER(octopus_state::beep_w)
 	}
 }
 
+WRITE_LINE_MEMBER(octopus_state::serial_clock_w)
+{
+	m_serial->rxca_w(state);
+	m_serial->txca_w(state);
+}
+
+// Parallel Centronics port
+// 0xf0 : data
+// 0xf1 : control
+//      bit 2 = INIT?  On boot, bits 0 and 1 are set high, bit 2 is set low then high again, all other bits are set low
+// can generate interrupts - tech manual suggests that Strobe, Init, Ack, and Busy can trigger an interrupt (IRQ14)
+READ8_MEMBER(octopus_state::parallel_r)
+{
+	switch(offset)
+	{
+	case 0:
+		return 0;
+	case 1:
+		return m_printer_busy ? 0x01 : 0x00;  // correct?  Tech manual doesn't explain which bit is which
+	}
+	return 0xff;
+}
+
+WRITE8_MEMBER(octopus_state::parallel_w)
+{
+	switch(offset)
+	{
+	case 0:  // data
+		if(!(m_gpo & 0x02))  // parallel data direction
+		{
+			m_parallel->write_data0(BIT(data,0));
+			m_parallel->write_data1(BIT(data,1));
+			m_parallel->write_data2(BIT(data,2));
+			m_parallel->write_data3(BIT(data,3));
+			m_parallel->write_data4(BIT(data,4));
+			m_parallel->write_data5(BIT(data,5));
+			m_parallel->write_data6(BIT(data,6));
+			m_parallel->write_data7(BIT(data,7));
+		}
+		break;
+	case 1:  // control (bit order unknown?)
+		if(!(m_gpo & 0x01))  // parallel control direction
+		{
+			m_parallel->write_init(BIT(data,2));
+			m_pic2->ir6_w(!BIT(data,2));
+		}
+		break;
+	}
+}
+
 READ8_MEMBER(octopus_state::dma_read)
 {
-	UINT8 byte;
+	uint8_t byte;
 	address_space& prog_space = m_maincpu->space(AS_PROGRAM); // get the right address space
 	if(m_current_dma == -1)
 		return 0;
@@ -596,10 +705,14 @@ WRITE_LINE_MEMBER( octopus_state::dma_hrq_changed )
 // Any interrupt will also give bus control back to the 8088
 IRQ_CALLBACK_MEMBER(octopus_state::x86_irq_cb)
 {
+	uint8_t vector;
 	m_subcpu->set_input_line(INPUT_LINE_HALT, ASSERT_LINE);
 	m_maincpu->set_input_line(INPUT_LINE_HALT, CLEAR_LINE);
 	m_z80_active = false;
-	return m_pic1->inta_cb(device,irqline);
+	vector = m_pic1->inta_cb(device,irqline);
+	if(vector == 0x61)  // if we have hit a serial comms IRQ, then also have the Z80SIO/2 acknowledge the interrupt
+		vector = m_serial->m1_r();
+	return vector;
 }
 
 void octopus_state::machine_start()
@@ -608,7 +721,7 @@ void octopus_state::machine_start()
 
 	// install extra RAM
 	if(m_ram->size() > 0x20000)
-		m_maincpu->space(AS_PROGRAM).install_readwrite_bank(0x10000,m_ram->size()-1,"extra_ram_bank");
+		m_maincpu->space(AS_PROGRAM).install_readwrite_bank(0x20000,m_ram->size()-1,"extra_ram_bank");
 }
 
 void octopus_state::machine_reset()
@@ -621,6 +734,9 @@ void octopus_state::machine_reset()
 	m_rtc_address = true;
 	m_rtc_data = false;
 	membank("main_ram_bank")->set_base(m_ram->pointer());
+	if(m_ram->size() > 0x20000)
+		membank("extra_ram_bank")->set_base(m_ram->pointer()+0x20000);
+	m_kb_uart->write_dsr(1);  // DSR is used to determine if a keyboard is connected?  If DSR is high, then the CHAR_OUT BIOS function will not output to the screen.
 }
 
 void octopus_state::video_start()
@@ -632,10 +748,10 @@ SCN2674_DRAW_CHARACTER_MEMBER(octopus_state::display_pixels)
 {
 	if(!lg)
 	{
-		UINT8 tile = m_vram[address & 0x1fff];
-		UINT8 data = m_fontram[(tile * 16) + linecount];
+		uint8_t tile = m_vram[address & 0x0fff];
+		uint8_t data = m_fontram[(tile * 16) + linecount];
 		for (int z=0;z<8;z++)
-			bitmap.pix32(y,x + z) = BIT(data,z) ? rgb_t::white : rgb_t::black;
+			bitmap.pix32(y,x + z) = BIT(data,z) ? rgb_t::white() : rgb_t::black();
 	}
 }
 
@@ -653,6 +769,15 @@ SLOT_INTERFACE_END
 
 static SLOT_INTERFACE_START(keyboard)
 	SLOT_INTERFACE("octopus", OCTOPUS_KEYBOARD)
+SLOT_INTERFACE_END
+
+SLOT_INTERFACE_START(octopus_centronics_devices)
+	SLOT_INTERFACE("pl80", COMX_PL80)
+	SLOT_INTERFACE("ex800", EPSON_EX800)
+	SLOT_INTERFACE("lx800", EPSON_LX800)
+	SLOT_INTERFACE("lx810l", EPSON_LX810L)
+	SLOT_INTERFACE("ap2000", EPSON_AP2000)
+	SLOT_INTERFACE("printer", CENTRONICS_PRINTER)
 SLOT_INTERFACE_END
 
 static MACHINE_CONFIG_START( octopus, octopus_state )
@@ -711,7 +836,7 @@ static MACHINE_CONFIG_START( octopus, octopus_state )
 	MCFG_I8255_OUT_PORTB_CB(WRITE8(octopus_state,cntl_w))
 	MCFG_I8255_OUT_PORTC_CB(WRITE8(octopus_state,gpo_w))
 	MCFG_MC146818_ADD("rtc", XTAL_32_768kHz)
-	MCFG_MC146818_IRQ_HANDLER(DEVWRITELINE("pic_slave",pic8259_device, ir2_w))
+	MCFG_MC146818_IRQ_HANDLER(DEVWRITELINE("pic_slave",pic8259_device, ir2_w)) MCFG_DEVCB_INVERT
 
 	// Keyboard UART
 	MCFG_DEVICE_ADD("keyboard", I8251, 0)
@@ -720,7 +845,6 @@ static MACHINE_CONFIG_START( octopus, octopus_state )
 	MCFG_I8251_RTS_HANDLER(WRITELINE(octopus_state,beep_w))
 	MCFG_RS232_PORT_ADD("keyboard_port", keyboard, "octopus")
 	MCFG_RS232_RXD_HANDLER(DEVWRITELINE("keyboard", i8251_device, write_rxd))
-	MCFG_RS232_DSR_HANDLER(DEVWRITELINE("keyboard", i8251_device, write_dsr))
 	MCFG_DEVICE_ADD("keyboard_clock_rx", CLOCK, 9600 * 64)
 	MCFG_CLOCK_SIGNAL_HANDLER(DEVWRITELINE("keyboard",i8251_device,write_rxc))
 	MCFG_DEVICE_ADD("keyboard_clock_tx", CLOCK, 1200 * 64)
@@ -731,10 +855,13 @@ static MACHINE_CONFIG_START( octopus, octopus_state )
 	MCFG_WD_FDC_DRQ_CALLBACK(DEVWRITELINE("dma2",am9517a_device, dreq1_w))
 	MCFG_FLOPPY_DRIVE_ADD("fdc:0", octopus_floppies, "525dd", floppy_image_device::default_floppy_formats)
 	MCFG_FLOPPY_DRIVE_ADD("fdc:1", octopus_floppies, "525dd", floppy_image_device::default_floppy_formats)
+	MCFG_SOFTWARE_LIST_ADD("fd_list","octopus")
 
 	MCFG_DEVICE_ADD("pit", PIT8253, 0)
-	MCFG_PIT8253_CLK0(500)  // DART channel A
-	MCFG_PIT8253_CLK1(500)  // DART channel B
+	MCFG_PIT8253_CLK0(2457500)  // DART channel A
+	MCFG_PIT8253_OUT0_HANDLER(WRITELINE(octopus_state,serial_clock_w))  // being able to write both Rx and Tx clocks at one time would be nice
+	MCFG_PIT8253_CLK1(2457500)  // DART channel B
+	MCFG_PIT8253_OUT1_HANDLER(DEVWRITELINE("serial",z80sio2_device,rxtxcb_w))
 	MCFG_PIT8253_CLK2(2457500)  // speaker frequency
 	MCFG_PIT8253_OUT2_HANDLER(WRITELINE(octopus_state,spk_freq_w))
 
@@ -742,11 +869,19 @@ static MACHINE_CONFIG_START( octopus, octopus_state )
 	MCFG_SOUND_ADD("speaker", SPEAKER_SOUND, 0)
 	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "mono", 0.50)
 
-	// TODO: add components
-	// i8253 PIT timer (speaker output, serial timing, other stuff too?)
-	// Centronics parallel interface
-	// Z80SIO/2 (serial)
-	// Winchester HD controller (Xebec/SASI compatible? uses TTL logic)
+	MCFG_Z80SIO2_ADD("serial", XTAL_16MHz / 4, 0, 0, 0, 0) // clock rate not mentioned in tech manual
+	MCFG_Z80DART_OUT_INT_CB(DEVWRITELINE("pic_master",pic8259_device, ir1_w))
+	MCFG_RS232_PORT_ADD("serial_a", default_rs232_devices, nullptr)
+	MCFG_RS232_CTS_HANDLER(DEVWRITELINE("serial",z80sio2_device, ctsa_w))
+	MCFG_RS232_RI_HANDLER(DEVWRITELINE("serial",z80sio2_device, ria_w)) MCFG_DEVCB_INVERT
+	MCFG_RS232_PORT_ADD("serial_b", default_rs232_devices, nullptr)
+	MCFG_RS232_CTS_HANDLER(DEVWRITELINE("serial",z80sio2_device, ctsb_w))
+	MCFG_RS232_RI_HANDLER(DEVWRITELINE("serial",z80sio2_device, rib_w)) MCFG_DEVCB_INVERT
+
+	MCFG_CENTRONICS_ADD("parallel", octopus_centronics_devices, "printer")
+	MCFG_CENTRONICS_BUSY_HANDLER(WRITELINE(octopus_state, parallel_busy_w))
+	MCFG_CENTRONICS_SELECT_HANDLER(WRITELINE(octopus_state, parallel_slctout_w))
+	// TODO: Winchester HD controller (Xebec/SASI compatible? uses TTL logic)
 
 	/* video hardware */
 	MCFG_SCREEN_ADD("screen", RASTER)
@@ -770,9 +905,9 @@ static MACHINE_CONFIG_START( octopus, octopus_state )
 	MCFG_ADDRESS_MAP_BANK_DATABUS_WIDTH(8)
 	MCFG_ADDRESS_MAP_BANK_STRIDE(0x10000)
 
-	MCFG_RAM_ADD("main_ram")
-	MCFG_RAM_DEFAULT_SIZE("128K")
-	MCFG_RAM_EXTRA_OPTIONS("256K")
+	MCFG_RAM_ADD("ram")
+	MCFG_RAM_DEFAULT_SIZE("256K")
+	MCFG_RAM_EXTRA_OPTIONS("128K,512K,768K")
 
 MACHINE_CONFIG_END
 

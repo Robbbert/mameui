@@ -69,12 +69,10 @@ const device_type PTM6840 = &device_creator<ptm6840_device>;
 //  ptm6840_device - constructor
 //-------------------------------------------------
 
-ptm6840_device::ptm6840_device(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock)
+ptm6840_device::ptm6840_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
 	: device_t(mconfig, PTM6840, "6840 PTM", tag, owner, clock, "ptm6840", __FILE__),
 		m_internal_clock(0.0),
-		m_out0_cb(*this),
-		m_out1_cb(*this),
-		m_out2_cb(*this),
+		m_out_cb{*this, *this, *this},
 		m_irq_cb(*this)
 {
 	m_external_clock[0] = m_external_clock[1] = m_external_clock[2] = 0.0;
@@ -87,9 +85,9 @@ ptm6840_device::ptm6840_device(const machine_config &mconfig, const char *tag, d
 void ptm6840_device::device_start()
 {
 	// resolve callbacks
-	m_out0_cb.resolve_safe();
-	m_out1_cb.resolve_safe();
-	m_out2_cb.resolve_safe();
+	m_out_cb[0].resolve_safe();
+	m_out_cb[1].resolve_safe();
+	m_out_cb[2].resolve_safe();
 	m_irq_cb.resolve_safe();
 
 	for (auto & elem : m_external_clock)
@@ -306,7 +304,7 @@ void ptm6840_device::update_interrupts()
 //  compute_counter - Compute Counter
 //-------------------------------------------------
 
-UINT16 ptm6840_device::compute_counter( int counter ) const
+uint16_t ptm6840_device::compute_counter( int counter ) const
 {
 	double clock;
 
@@ -388,18 +386,7 @@ void ptm6840_device::reload_count(int idx)
 	if ((m_mode[idx] == 4) || (m_mode[idx] == 6))
 	{
 		m_output[idx] = 1;
-		switch (idx)
-		{
-			case 0:
-				m_out0_cb((offs_t)0, m_output[0]);
-				break;
-			case 1:
-				m_out1_cb((offs_t)0, m_output[1]);
-				break;
-			case 2:
-				m_out2_cb((offs_t)0, m_output[2]);
-				break;
-		}
+		m_out_cb[idx](m_output[idx]);
 	}
 
 	// Set the timer
@@ -509,7 +496,7 @@ WRITE8_MEMBER( ptm6840_device::write )
 		case PTM_6840_CTRL2:
 		{
 			int idx = (offset == 1) ? 1 : (m_control_reg[1] & CR1_SELECT) ? 0 : 2;
-			UINT8 diffs = data ^ m_control_reg[idx];
+			uint8_t diffs = data ^ m_control_reg[idx];
 			m_t3_divisor = (m_control_reg[2] & T3_PRESCALE_EN) ? 8 : 1;
 			m_mode[idx] = (data >> 3) & 0x07;
 			m_control_reg[idx] = data;
@@ -525,18 +512,7 @@ WRITE8_MEMBER( ptm6840_device::write )
 			if (!(m_control_reg[idx] & COUNT_OUT_EN))
 			{
 				// Output cleared
-				switch (idx)
-				{
-					case 0:
-						m_out0_cb((offs_t)0, 0);
-						break;
-					case 1:
-						m_out1_cb((offs_t)0, 0);
-						break;
-					case 2:
-						m_out2_cb((offs_t)0, 0);
-						break;
-				}
+				m_out_cb[idx](0);
 			}
 
 			// Reset?
@@ -621,51 +597,32 @@ void ptm6840_device::timeout(int idx)
 
 	if (m_control_reg[idx] & COUNT_OUT_EN)
 	{
-		if (m_mode[idx] == 0 || m_mode[idx] == 2)
+		switch (m_mode[idx])
 		{
-			m_output[idx] = m_output[idx] ? 0 : 1;
-			PLOG(("**ptm6840 %s t%d output %d **\n", tag(), idx, m_output[idx]));
-
-			switch (idx)
-			{
-				case 0:
-					m_out0_cb((offs_t)0, m_output[0]);
-					break;
-				case 1:
-					m_out1_cb((offs_t)0, m_output[1]);
-					break;
-				case 2:
-					m_out2_cb((offs_t)0, m_output[2]);
-					break;
-			}
-		}
-		if ((m_mode[idx] == 4)||(m_mode[idx] == 6))
-		{
-			if (!m_fired[idx])
-			{
-				m_output[idx] = 1;
+			case 0:
+			case 2:
+				m_output[idx] = m_output[idx] ^ 1;
 				PLOG(("**ptm6840 %s t%d output %d **\n", tag(), idx, m_output[idx]));
+				m_out_cb[idx](m_output[idx]);
+				break;
 
-				switch (idx)
+			case 4:
+			case 6:
+				if (!m_fired[idx])
 				{
-					case 0:
-						m_out0_cb((offs_t)0, m_output[0]);
-						break;
-					case 1:
-						m_out1_cb((offs_t)0, m_output[1]);
-						break;
-					case 2:
-						m_out2_cb((offs_t)0, m_output[2]);
-						break;
+					m_output[idx] = 1;
+					PLOG(("**ptm6840 %s t%d output %d **\n", tag(), idx, m_output[idx]));
+
+					m_out_cb[idx](m_output[idx]);
+
+					// No changes in output until reinit
+					m_fired[idx] = 1;
+
+					m_status_reg |= (1 << idx);
+					m_status_read_since_int &= ~(1 << idx);
+					update_interrupts();
 				}
-
-				// No changes in output until reinit
-				m_fired[idx] = 1;
-
-				m_status_reg |= (1 << idx);
-				m_status_read_since_int &= ~(1 << idx);
-				update_interrupts();
-			}
+				break;
 		}
 	}
 	m_enabled[idx]= 0;

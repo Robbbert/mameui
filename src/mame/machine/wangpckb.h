@@ -48,7 +48,7 @@ class wangpc_keyboard_t :  public device_t,
 {
 public:
 	// construction/destruction
-	wangpc_keyboard_t(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock);
+	wangpc_keyboard_t(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	template<class _Object> static devcb_base &set_txd_handler(device_t &device, _Object object) { return downcast<wangpc_keyboard_t &>(device).m_txd_handler.set_callback(object); }
 
@@ -82,25 +82,10 @@ protected:
 
 private:
 	required_device<i8051_device> m_maincpu;
-	required_ioport m_y0;
-	required_ioport m_y1;
-	required_ioport m_y2;
-	required_ioport m_y3;
-	required_ioport m_y4;
-	required_ioport m_y5;
-	required_ioport m_y6;
-	required_ioport m_y7;
-	required_ioport m_y8;
-	required_ioport m_y9;
-	required_ioport m_ya;
-	required_ioport m_yb;
-	required_ioport m_yc;
-	required_ioport m_yd;
-	required_ioport m_ye;
-	required_ioport m_yf;
+	required_ioport_array<16> m_y;
 	devcb_write_line m_txd_handler;
 
-	UINT8 m_y;
+	uint8_t m_keylatch;
 	int m_rxd;
 };
 

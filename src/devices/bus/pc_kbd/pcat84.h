@@ -29,8 +29,8 @@ class ibm_pc_at_84_keyboard_device :  public device_t,
 {
 public:
 	// construction/destruction
-	ibm_pc_at_84_keyboard_device(const machine_config &mconfig, device_type type, const char *name, const char *tag, device_t *owner, UINT32 clock, const char *shortname, const char *source);
-	ibm_pc_at_84_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock);
+	ibm_pc_at_84_keyboard_device(const machine_config &mconfig, device_type type, const char *name, const char *tag, device_t *owner, uint32_t clock, const char *shortname, const char *source);
+	ibm_pc_at_84_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// optional information overrides
 	virtual const tiny_rom_entry *device_rom_region() const override;
@@ -65,26 +65,11 @@ private:
 	int key_depressed();
 
 	required_device<cpu_device> m_maincpu;
-	required_ioport m_dr00;
-	required_ioport m_dr01;
-	required_ioport m_dr02;
-	required_ioport m_dr03;
-	required_ioport m_dr04;
-	required_ioport m_dr05;
-	required_ioport m_dr06;
-	required_ioport m_dr07;
-	required_ioport m_dr08;
-	required_ioport m_dr09;
-	required_ioport m_dr10;
-	required_ioport m_dr11;
-	required_ioport m_dr12;
-	required_ioport m_dr13;
-	required_ioport m_dr14;
-	required_ioport m_dr15;
+	required_ioport_array<16> m_dr;
 	optional_ioport m_kbdida;
 	optional_ioport m_kbdidb;
 
-	UINT8 m_db;
+	uint8_t m_db;
 	int m_cnt;
 	int m_sense;
 	int m_t1;
@@ -97,7 +82,7 @@ class ibm_3270pc_122_keyboard_device :  public ibm_pc_at_84_keyboard_device
 {
 public:
 	// construction/destruction
-	ibm_3270pc_122_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock);
+	ibm_3270pc_122_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// optional information overrides
 	virtual const tiny_rom_entry *device_rom_region() const override;

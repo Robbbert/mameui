@@ -39,7 +39,7 @@ DRIVER_INIT_MEMBER(mpu4_state,m4debug)
 {
 	// many original barcrest / bwb sets have identification info around here
 	// this helps with sorting
-	UINT8 *src = memregion( "maincpu" )->base();
+	uint8_t *src = memregion( "maincpu" )->base();
 	int size = memregion( "maincpu" )->bytes();
 
 	// m4richfm__e only has 0x004000
@@ -64,8 +64,8 @@ DRIVER_INIT_MEMBER(mpu4_state,m4debug)
 		printf("flags ENABLED\n");
 		for (int i = 0xff30; i<0xff9f; i+=2)
 		{
-			UINT8 enable = src[j+i+0];
-			UINT8 letter = src[j+i+1];
+			uint8_t enable = src[j+i+0];
+			uint8_t letter = src[j+i+1];
 
 			if (enable == 0x00)
 			{
@@ -76,8 +76,8 @@ DRIVER_INIT_MEMBER(mpu4_state,m4debug)
 		printf("flags DISABLED\n");
 		for (int i = 0xff30; i<0xff9f; i+=2)
 		{
-			UINT8 enable = src[j+i+0];
-			UINT8 letter = src[j+i+1];
+			uint8_t enable = src[j+i+0];
+			uint8_t letter = src[j+i+1];
 
 			if (enable == 0xff)
 			{
@@ -1242,7 +1242,7 @@ ROM_START( m4eaw__bz ) \
 	M4EAW_EXTRA_ROMS
 ROM_END
 
-GAME(199?, m4eaw__bz, m4eaw ,mod4oki ,mpu4 , mpu4_state,m4_showstring ,ROT0,"Barcrest","Everyone's A Winner (Barcrest) (MPU4) (unkown rev, bad)",GAME_FLAGS )
+GAME(199?, m4eaw__bz, m4eaw ,mod4oki ,mpu4 , mpu4_state,m4_showstring ,ROT0,"Barcrest","Everyone's A Winner (Barcrest) (MPU4) (unknown rev, bad)",GAME_FLAGS )
 
 #define M4WTA_EXTRA_ROMS \
 	ROM_REGION( 0x48, "fakechr", 0 ) \

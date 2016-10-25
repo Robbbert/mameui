@@ -43,7 +43,11 @@ SOUNDS["HC55516"] = true
 SOUNDS["YM3812"] = true
 SOUNDS["CEM3394"] = true
 SOUNDS["VOTRAX"] = true
+<<<<<<< HEAD
 SOUNDS["VLM5030"] = true
+=======
+SOUNDS["VOLT_REG"] = true
+>>>>>>> upstream/master
 
 --------------------------------------------------
 -- specify available video cores

@@ -380,7 +380,7 @@
 const device_type PDP1 = &device_creator<pdp1_device>;
 
 
-pdp1_device::pdp1_device(const machine_config &mconfig, const char *tag, device_t *owner, UINT32 clock)
+pdp1_device::pdp1_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
 	: cpu_device(mconfig, PDP1, "PDP1", tag, owner, clock, "pdp1_cpu", __FILE__)
 	, m_program_config("program", ENDIANNESS_BIG, 32, 18, 0)
 {
@@ -412,7 +412,7 @@ void pdp1_device::device_config_complete()
 }
 
 
-offs_t pdp1_device::disasm_disassemble(char *buffer, offs_t pc, const UINT8 *oprom, const UINT8 *opram, UINT32 options)
+offs_t pdp1_device::disasm_disassemble(char *buffer, offs_t pc, const uint8_t *oprom, const uint8_t *opram, uint32_t options)
 {
 	extern CPU_DISASSEMBLE( pdp1 );
 	return CPU_DISASSEMBLE_NAME(pdp1)(this, buffer, pc, oprom, opram, options);
@@ -640,6 +640,7 @@ void pdp1_device::device_start()
 	state_add( PDP1_IOS,       "IOS", m_ios).mask(1).formatstr("%1X");
 
 	state_add( STATE_GENPC, "GENPC", m_pc ).noshow();
+	state_add( STATE_GENPCBASE, "CURPC", m_pc ).noshow();
 	state_add( STATE_GENFLAGS, "GENFLAGS", m_pf ).formatstr("%13s").noshow();
 
 	m_icountptr = &m_icount;
@@ -771,7 +772,7 @@ void pdp1_device::device_reset()
       except cal and jda, and with the addition of jmp and jsp)
     * 2 for memory reference instructions
 */
-static const UINT8 instruction_kind[32] =
+static const uint8_t instruction_kind[32] =
 {
 /*      and ior xor xct         cal/jda */
 	0,  3,  3,  3,  3,  0,  0,  2,

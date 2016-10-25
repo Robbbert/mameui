@@ -51,11 +51,11 @@ public:
 private:
 	bool m_dispclk;
 	bool m_lampclk;
-	UINT8 m_digit;
-	UINT8 m_row; // for lamps and switches
-	UINT8 m_segment[4];
-	UINT8 m_u4b;
-	UINT8 m_dmd;
+	uint8_t m_digit;
+	uint8_t m_row; // for lamps and switches
+	uint8_t m_segment[4];
+	uint8_t m_u4b;
+	uint8_t m_dmd;
 	virtual void machine_reset() override;
 	required_device<m65c02_device> m_maincpu;
 	required_device<m65c02_device> m_dmdcpu;
@@ -225,7 +225,7 @@ WRITE_LINE_MEMBER( gts3a_state::nmi_w )
 
 WRITE8_MEMBER( gts3a_state::segbank_w )
 { // this is all wrong
-	UINT32 seg1,seg2;
+	uint32_t seg1,seg2;
 	m_segment[offset] = data;
 	seg1 = m_segment[offset&2] | (m_segment[offset|1] << 8);
 	seg2 = BITSWAP32(seg1,16,16,16,16,16,16,16,16,16,16,16,16,16,16,15,14,9,7,13,11,10,6,8,12,5,4,3,3,2,1,0,0);
@@ -280,7 +280,7 @@ void gts3a_state::machine_reset()
 
 DRIVER_INIT_MEMBER( gts3a_state, gts3a )
 {
-	UINT8 *dmd = memregion("dmdcpu")->base();
+	uint8_t *dmd = memregion("dmdcpu")->base();
 
 	membank("bank1")->configure_entries(0, 32, &dmd[0x0000], 0x4000);
 }
@@ -305,9 +305,9 @@ PALETTE_INIT_MEMBER( gts3a_state, gts3a )
 MC6845_UPDATE_ROW( gts3a_state::crtc_update_row )
 {
 	const rgb_t *palette = m_palette->palette()->entry_list_raw();
-	UINT8 gfx=0;
-	UINT16 mem,x;
-	UINT32 *p = &bitmap.pix32(y);
+	uint8_t gfx=0;
+	uint16_t mem,x;
+	uint32_t *p = &bitmap.pix32(y);
 
 	for (x = 0; x < x_count; x++)
 	{
@@ -805,6 +805,26 @@ ROM_START(stargatp4)
 	ROM_LOAD("yrom1.bin", 0x8000, 0x8000, CRC(53123fd4) SHA1(77fd183a10eea2e04a07edf9da14ef7aadb65f91))
 ROM_END
 
+ROM_START(stargatp5)
+	ROM_REGION(0x10000, "maincpu", 0)
+	ROM_LOAD("stgtcpu5.512", 0x0000, 0x10000, CRC(c0579d86) SHA1(ba7ea85ccf407ec72d19e15b34b96a7ca95bf893))
+
+	ROM_REGION(0x10000, "cpu2", ROMREGION_ERASEFF)
+
+	ROM_REGION(0x80000, "dmdcpu", 0)
+	ROM_LOAD("dsprom3.bin", 0x00000, 0x80000, CRC(db483524) SHA1(ea14e8b04c32fc403ce2ff060caed5562104a862))
+
+	ROM_REGION(0x10000, "cpu4", 0)
+	ROM_LOAD("drom1.bin", 0x8000, 0x8000, CRC(781b2b27) SHA1(06decd22b9064ee4859618a043055e0b3e3b9e04))
+
+	ROM_REGION(0x100000, "sound1", 0)
+	ROM_LOAD("arom1.bin", 0x00000, 0x80000, CRC(a0f62605) SHA1(8c39452367150f66271371ab02be2f5a812cb954))
+	ROM_RELOAD(0x80000, 0x80000)
+
+	ROM_REGION(0x10000, "cpu3", 0)
+	ROM_LOAD("yrom1.bin", 0x8000, 0x8000, CRC(53123fd4) SHA1(77fd183a10eea2e04a07edf9da14ef7aadb65f91))
+ROM_END
+
 /*-------------------------------------------------------------------
 / Street Fighter II (#735)
 /-------------------------------------------------------------------*/
@@ -1266,6 +1286,7 @@ GAME(1995,  stargatp1,  stargatp,   gts3a,   gts3a, gts3a_state,   gts3a,   ROT0
 GAME(1995,  stargatp2,  stargatp,   gts3a,   gts3a, gts3a_state,   gts3a,   ROT0,   "Gottlieb", "Stargate (rev.2)",             MACHINE_IS_SKELETON_MECHANICAL)
 GAME(1995,  stargatp3,  stargatp,   gts3a,   gts3a, gts3a_state,   gts3a,   ROT0,   "Gottlieb", "Stargate (rev.3)",             MACHINE_IS_SKELETON_MECHANICAL)
 GAME(1995,  stargatp4,  stargatp,   gts3a,   gts3a, gts3a_state,   gts3a,   ROT0,   "Gottlieb", "Stargate (rev.4)",             MACHINE_IS_SKELETON_MECHANICAL)
+GAME(1995,  stargatp5,  stargatp,   gts3a,   gts3a, gts3a_state,   gts3a,   ROT0,   "Gottlieb", "Stargate (rev.5)",             MACHINE_IS_SKELETON_MECHANICAL)
 GAME(1995,  shaqattq,   0,          gts3a,   gts3a, gts3a_state,   gts3a,   ROT0,   "Gottlieb", "Shaq Attaq (rev.5)",               MACHINE_IS_SKELETON_MECHANICAL)
 GAME(1995,  shaqattq2,  shaqattq,   gts3a,   gts3a, gts3a_state,   gts3a,   ROT0,   "Gottlieb", "Shaq Attaq (rev.2)",               MACHINE_IS_SKELETON_MECHANICAL)
 GAME(1994,  freddy,     0,          gts3a,   gts3a, gts3a_state,   gts3a,   ROT0,   "Gottlieb", "Freddy: A Nightmare on Elm Street (rev.3)",                MACHINE_IS_SKELETON_MECHANICAL)
