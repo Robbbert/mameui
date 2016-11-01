@@ -267,7 +267,7 @@ image_init_result cassette_image_device::internal_load(bool is_create)
 	device_image_interface *image = nullptr;
 	interface(image);
 
-	if (is_create)
+	if (is_create || (length()==0)) // MESSUI - empty existing images are fine to write over.
 	{
 		// creating an image
 		err = cassette_create((void *)image, &image_ioprocs, &wavfile_format, m_create_opts, CASSETTE_FLAG_READWRITE|CASSETTE_FLAG_SAVEONEXIT, &m_cassette);

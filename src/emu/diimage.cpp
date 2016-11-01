@@ -886,11 +886,12 @@ bool device_image_interface::load_software(software_list_device &swlist, const c
 				if (swinfo == nullptr)
 					return false;
 
-				uint32_t supported = swinfo->supported();
-				if (supported == SOFTWARE_SUPPORTED_PARTIAL)
-					osd_printf_error("WARNING: support for software %s (in list %s) is only partial\n", swname, swlist.list_name().c_str());
-				if (supported == SOFTWARE_SUPPORTED_NO)
-					osd_printf_error("WARNING: support for software %s (in list %s) is only preliminary\n", swname, swlist.list_name().c_str());
+				// MESSUI - get rid of pointless message covered by driver status
+				//uint32_t supported = swinfo->supported();
+				//if (supported == SOFTWARE_SUPPORTED_PARTIAL)
+				//	osd_printf_error("WARNING: support for software %s (in list %s) is only partial\n", swname, swlist.list_name().c_str());
+				//if (supported == SOFTWARE_SUPPORTED_NO)
+				//	osd_printf_error("WARNING: support for software %s (in list %s) is only preliminary\n", swname, swlist.list_name().c_str());
 
 				// attempt reading up the chain through the parents and create a locationtag std::string in the format
 				// " swlist % clonename % parentname "

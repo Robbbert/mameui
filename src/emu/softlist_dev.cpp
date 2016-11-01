@@ -375,9 +375,11 @@ device_image_interface *software_list_device::find_mountable_image(const machine
 		const char *interface = image.image_interface();
 		if (interface != nullptr && part.matches_interface(interface))
 		{
+// MESSUI - fix MT 6107
 			// mount only if not already mounted
-			const char *option = mconfig.options().value(image.brief_instance_name());
-			if (*option == '\0' && !image.filename())
+//			const char *option = mconfig.options().value(image.brief_instance_name());
+//			if (*option == '\0' && !image.filename())
+			if (!image.filename())
 				return &image;
 		}
 	}
