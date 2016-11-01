@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	const char *resourcefile, *varname, *type;
 	FILE *src, *dst;
 	char *buffer;
-	int bytes = 0;
+	int bytes;
 
 	varname = "dwHelpIDs";
 	type = "DWORD";
@@ -94,10 +94,11 @@ int main(int argc, char *argv[])
 
 static int compare( const void *arg1, const void *arg2 )
 {
-	/* Compare all of both strings: */
-	return _stricmp( * ( char** ) arg1, * ( char** ) arg2 );
+   /* Compare all of both strings: */
+   return _stricmp( * ( char** ) arg1, * ( char** ) arg2 );
 }
 
+#pragma GCC diagnostic ignored "-Wsizeof-pointer-memaccess"
 static void extract_help_ids(const char *buffer, FILE *fp)
 {
 	const char *ptr = buffer;
@@ -105,8 +106,7 @@ static void extract_help_ids(const char *buffer, FILE *fp)
 	int num_help_id = 0;
 	int i;
 
-	//memset(help_ids, '\0', sizeof(*help_ids));
-	memset(help_ids, 0, 500);
+	memset(help_ids, '\0', sizeof(help_ids));
 
 	while(*ptr) {
 		if (strncmp("HIDC_", ptr, 5) == 0) {
@@ -149,4 +149,5 @@ static void extract_help_ids(const char *buffer, FILE *fp)
 	}
 	free (help_ids);
 }
+#pragma GCC diagnostic error "-Wsizeof-pointer-memaccess"
 

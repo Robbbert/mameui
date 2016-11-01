@@ -1,6 +1,6 @@
 // For licensing and usage information, read docs/winui_license.txt
 //****************************************************************************
-
+// NOTE: ifdef MESS doesn't work here
 #ifndef TREEVIEW_H
 #define TREEVIEW_H
 
@@ -73,15 +73,11 @@ void CreateSoundFolders(int parent_index);
 void CreateOrientationFolders(int parent_index);
 void CreateDeficiencyFolders(int parent_index);
 void CreateDumpingFolders(int parent_index);
-void CreateBIOSFolders(int parent_index);
-void CreateFPSFolders(int parent_index);
-void CreateResolutionFolders(int parent_index);
 
 /***************************************************************************/
 
 #define MAX_EXTRA_FOLDERS 256
 #define MAX_EXTRA_SUBFOLDERS 256
-#define SHOW_UNAVAILABLE_FOLDER
 
 /* TreeView structures */
 enum
@@ -89,9 +85,7 @@ enum
 	FOLDER_NONE = 0,
 	FOLDER_ALLGAMES,
 	FOLDER_AVAILABLE,
-#ifdef SHOW_UNAVAILABLE_FOLDER
 	FOLDER_UNAVAILABLE,
-#endif
 	FOLDER_MANUFACTURER,
 	FOLDER_YEAR,
 	FOLDER_SOURCE,
@@ -112,14 +106,16 @@ enum
 	FOLDER_DUMPING,
 	FOLDER_SAVESTATE,
 	FOLDER_BIOS,
-	FOLDER_RESOLUTION,
-	FOLDER_FPS,
 	FOLDER_HORIZONTAL,
 	FOLDER_VERTICAL,
 	FOLDER_SCREENS,
 	FOLDER_MECHANICAL,
 	FOLDER_NONMECHANICAL,
-	MAX_FOLDERS
+	FOLDER_CONSOLE,
+	FOLDER_COMPUTER,
+	FOLDER_MODIFIED,
+	FOLDER_MOUSE,
+	MAX_FOLDERS,
 };
 
 typedef enum
@@ -137,11 +133,9 @@ typedef enum
 	F_MECHANICAL    = 0x00000400,
 	F_ARCADE        = 0x00000800,
 	F_MESS          = 0x00001000,
-#ifdef MESS
 	F_COMPUTER      = 0x00002000,
 	F_CONSOLE       = 0x00004000,
 	F_MODIFIED      = 0x00008000,
-#endif
 	F_MASK          = 0x0000FFFF,
 	F_INIEDIT       = 0x00010000, // There is an .ini that can be edited. MSH 20070811
 	F_CUSTOM        = 0x01000000  // for current .ini custom folders
@@ -188,7 +182,7 @@ void ResetWhichGamesInFolders(void);
 
 LPCFOLDERDATA FindFilter(DWORD folderID);
 
-bool GameFiltered(int nGame, DWORD dwFlags);
+BOOL GameFiltered(int nGame, DWORD dwFlags);
 BOOL GetParentFound(int nGame);
 
 LPCFILTER_ITEM GetFilterList(void);
