@@ -476,23 +476,25 @@ static BOOL SoftwarePicker_InternalAddFile(HWND hwndPicker, LPCSTR pszFilename, 
 	int res = 0;
 	LPCSTR s;
 	BOOL rc = TRUE;
-	util::archive_file::error ziperr;
+	util::archive_file::error ziperr = util::archive_file::error::UNSUPPORTED;
 	util::archive_file::ptr pZip;
 
 	s = strrchr(pszFilename, '.');
-	if (s && ((core_stricmp(s, ".zip")==0) || (core_stricmp(s, ".7z")==0)))
-	{
+	if (s && (core_stricmp(s, ".zip")==0))
 		ziperr = util::archive_file::open_zip(pszFilename, pZip);
-		if (ziperr  == util::archive_file::error::NONE)
+	else
+	if (s && (core_stricmp(s, ".7z")==0))
+		ziperr = util::archive_file::open_7z(pszFilename, pZip);
+
+	if (ziperr  == util::archive_file::error::NONE)
+	{
+		res = pZip->first_file();
+		while(rc && (res >= 0))
 		{
-			res = pZip->first_file();
-			while(rc && (res >= 0))
-			{
-				rc = SoftwarePicker_AddZipEntFile(hwndPicker, pszFilename, bForce, pZip, check);
-				res = pZip->next_file();
-			}
-			pZip.reset();
+			rc = SoftwarePicker_AddZipEntFile(hwndPicker, pszFilename, bForce, pZip, check);
+			res = pZip->next_file();
 		}
+	pZip.reset();
 	}
 	else
 		rc = SoftwarePicker_AddFileEntry(hwndPicker, pszFilename, 0, 0, bForce, check);
