@@ -1113,7 +1113,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 	if ((!osd::directory::open(as.c_str())) || (as.find(':') == std::string::npos))
 	{
 		/* Get the path from the software tab */
-		as = GetSWDir();
+		as = GetSLDir();
 
 		/* We only want the first path; throw out the rest */
 		i = as.find(';');

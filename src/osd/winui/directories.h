@@ -1,4 +1,5 @@
 // For licensing and usage information, read docs/winui_license.txt
+// MASTER
 //****************************************************************************
 
 #ifndef DIRECTORIES_H
@@ -35,7 +36,7 @@ const DIRECTORYINFO g_directoryInfo[] =
 	{ "ROMs",                  GetRomDirs,         SetRomDirs,         TRUE,  DIRDLG_ROMS },
 	{ "Samples",               GetSampleDirs,      SetSampleDirs,      TRUE,  DIRDLG_SAMPLES },
 	{ "Software File Base",    GetSWDir,           SetSWDir,           FALSE, DIRDLG_SW }, // core cannot handle multiple path, even though we can.
-	//{ "Software List Base",    GetSLDir,           SetSLDir,           FALSE, DIRDLG_SL }, // put on hold for now
+	{ "Software List Base",    GetSLDir,           SetSLDir,           FALSE, DIRDLG_SL },
 	{ "Artwork",               GetArtDir,          SetArtDir,          TRUE, 0 },
 	{ "Cabinets",              GetCabinetDir,      SetCabinetDir,      TRUE, 0 },
 	{ "Cheats",                GetCheatDir,        SetCheatDir,        TRUE, DIRDLG_CHEAT },
