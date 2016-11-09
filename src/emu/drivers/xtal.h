@@ -146,6 +146,7 @@ enum
 	XTAL_16MHz          = 16000000,     /* Extremely common, used on 100's of PCBs */
 	XTAL_16_384MHz      = 16384000,
 	XTAL_16_5888MHz     = 16588800,     /* SM 7238 */
+	XTAL_16_67MHz       = 16670000,
 	XTAL_16_777216MHz   = 16777216,     /* Nintendo Game Boy Advance */
 	XTAL_16_9344MHz     = 16934400,     /* Usually used to drive 90's Yamaha OPL/FM chips (44100 * 384) */
 	XTAL_17_36MHz       = 17360000,     /* OMTI Series 10 SCSI controller */
@@ -186,6 +187,7 @@ enum
 	XTAL_27_164MHz      = 27164000,     /* Typically used on 90's Taito PCBs to drive the custom chips */
 	XTAL_27_2109MHz     = 27210900,     /* LA Girl */
 	XTAL_28MHz          = 28000000,
+	XTAL_28_322MHz      = 28322000,     /* Saitek RISC 2500, Mephisto Montreux */
 	XTAL_28_37516MHz    = 28375160,     /* Amiga PAL systems */
 	XTAL_28_48MHz       = 28480000,     /* Chromatics CGC-7900 */
 	XTAL_28_63636MHz    = 28636363,     /* Later Leland games and Atari GT, Amiga NTSC, Raiden2 h/w (8x NTSC subcarrier)*/

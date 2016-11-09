@@ -104,7 +104,127 @@ I suspect the additional memory was an afterthought.
 
 */
 
-#include "cedar_magnet.h"
+#include "emu.h"
+#include "cpu/z80/z80.h"
+#include "cpu/z80/z80daisy.h"
+#include "machine/z80pio.h"
+#include "machine/bankdev.h"
+#include "machine/z80ctc.h"
+#include "sound/ay8910.h"
+
+#include "machine/cedar_magnet_sound.h"
+#include "machine/cedar_magnet_plane.h"
+#include "machine/cedar_magnet_sprite.h"
+#include "machine/cedar_magnet_flop.h"
+
+#define LOG_IC49_PIO_PB 0
+#define LOG_IC48_PIO_PB 0
+#define LOG_IC48_PIO_PA 0
+
+class cedar_magnet_state : public driver_device
+{
+public:
+	cedar_magnet_state(const machine_config &mconfig, device_type type, const char *tag)
+		: driver_device(mconfig, type, tag),
+		m_bank0(*this, "bank0"),
+		m_sub_ram_bankdev(*this, "mb_sub_ram"),
+		m_sub_pal_bankdev(*this, "mb_sub_pal"),
+		m_ram0(*this, "ram0"),
+		m_pal_r(*this, "pal_r"),
+		m_pal_g(*this, "pal_g"),
+		m_pal_b(*this, "pal_b"),
+
+		m_ic48_pio(*this, "z80pio_ic48"),
+		m_ic49_pio(*this, "z80pio_ic49"),
+		m_palette(*this, "palette"),
+		m_maincpu(*this, "maincpu"),
+		m_cedsound(*this, "cedtop"),
+		m_cedplane0(*this, "cedplane0"),
+		m_cedplane1(*this, "cedplane1"),
+		m_cedsprite(*this, "cedsprite")
+	{
+		m_ic48_pio_pa_val = 0xff;
+		m_ic48_pio_pb_val = 0xff;
+		m_ic49_pio_pb_val = 0xff;
+		m_prothack = nullptr;
+	}
+
+	required_device<address_map_bank_device> m_bank0;
+	required_device<address_map_bank_device> m_sub_ram_bankdev;
+	required_device<address_map_bank_device> m_sub_pal_bankdev;
+
+	required_shared_ptr<uint8_t> m_ram0;
+	required_shared_ptr<uint8_t> m_pal_r;
+	required_shared_ptr<uint8_t> m_pal_g;
+	required_shared_ptr<uint8_t> m_pal_b;
+
+	required_device<z80pio_device> m_ic48_pio;
+	required_device<z80pio_device> m_ic49_pio;
+
+	DECLARE_READ8_MEMBER(ic48_pio_pa_r);
+	DECLARE_WRITE8_MEMBER(ic48_pio_pa_w);
+
+	DECLARE_READ8_MEMBER(ic48_pio_pb_r);
+	DECLARE_WRITE8_MEMBER(ic48_pio_pb_w);
+
+	DECLARE_READ8_MEMBER(ic49_pio_pb_r);
+	DECLARE_WRITE8_MEMBER(ic49_pio_pb_w);
+
+	// 1x range ports
+	DECLARE_WRITE8_MEMBER(port18_w);
+	DECLARE_WRITE8_MEMBER(port19_w);
+	DECLARE_WRITE8_MEMBER(port1b_w);
+
+	DECLARE_READ8_MEMBER(port18_r);
+	DECLARE_READ8_MEMBER(port19_r);
+	DECLARE_READ8_MEMBER(port1a_r);
+
+	// 7x range ports
+	DECLARE_WRITE8_MEMBER(rambank_palbank_w);
+	DECLARE_WRITE8_MEMBER(palupload_w);
+	DECLARE_WRITE8_MEMBER(paladdr_w);
+	DECLARE_READ8_MEMBER(watchdog_r);
+	DECLARE_READ8_MEMBER(port7c_r);
+
+	// other ports
+	DECLARE_WRITE8_MEMBER(soundlatch_w);
+	uint8_t portff_data;
+
+	DECLARE_READ8_MEMBER(other_cpu_r);
+	DECLARE_WRITE8_MEMBER(other_cpu_w);
+
+	uint8_t m_paladdr;
+	int m_palbank;
+
+	uint8_t m_ic48_pio_pa_val;
+	uint8_t m_ic48_pio_pb_val;
+	uint8_t m_ic49_pio_pb_val;
+
+	void set_palette(int offset);
+	DECLARE_WRITE8_MEMBER(palette_r_w);
+	DECLARE_WRITE8_MEMBER(palette_g_w);
+	DECLARE_WRITE8_MEMBER(palette_b_w);
+
+	void handle_sub_board_cpu_lines(cedar_magnet_board_device* dev, int old_data, int data);
+	INTERRUPT_GEN_MEMBER(irq);
+	void(*m_prothack)(cedar_magnet_state*);
+
+	virtual void machine_start() override;
+	virtual void machine_reset() override;
+	virtual void video_start() override;
+	uint32_t screen_update_cedar_magnet(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
+	required_device<palette_device> m_palette;
+	required_device<cpu_device> m_maincpu;
+
+	required_device<cedar_magnet_sound_device> m_cedsound;
+	required_device<cedar_magnet_plane_device> m_cedplane0;
+	required_device<cedar_magnet_plane_device> m_cedplane1;
+	required_device<cedar_magnet_sprite_device> m_cedsprite;
+
+	DECLARE_DRIVER_INIT(mag_time);
+	DECLARE_DRIVER_INIT(mag_xain);
+	DECLARE_DRIVER_INIT(mag_exzi);
+};
 
 /***********************
 
@@ -217,7 +337,7 @@ READ8_MEMBER(cedar_magnet_state::watchdog_r)
 
 READ8_MEMBER(cedar_magnet_state::port7c_r)
 {
-	//printf("%s: port7c_r\n", device().machine().describe_context());
+	//printf("%s: port7c_r\n", machine().describe_context());
 	return 0x01;
 }
 
@@ -231,19 +351,19 @@ READ8_MEMBER(cedar_magnet_state::port7c_r)
 
 READ8_MEMBER(cedar_magnet_state::port18_r)
 {
-//  printf("%s: port18_r\n", device().machine().describe_context());
+//  printf("%s: port18_r\n", machine().describe_context());
 	return 0x00;
 }
 
 WRITE8_MEMBER(cedar_magnet_state::port18_w)
 {
-//  printf("%s: port18_w %02x\n", device().machine().describe_context(), data);
+//  printf("%s: port18_w %02x\n", machine().describe_context(), data);
 }
 
 READ8_MEMBER(cedar_magnet_state::port19_r)
 {
 	uint8_t ret = 0x00;
-//  printf("%s: port19_r\n", device().machine().describe_context());
+//  printf("%s: port19_r\n", machine().describe_context());
 
 // 9496 in a,($19)
 // 9498 bit 2,a
@@ -255,19 +375,19 @@ READ8_MEMBER(cedar_magnet_state::port19_r)
 
 READ8_MEMBER(cedar_magnet_state::port1a_r)
 {
-//  printf("%s: port1a_r\n", device().machine().describe_context());
+//  printf("%s: port1a_r\n", machine().describe_context());
 	return 0x00;
 }
 
 
 WRITE8_MEMBER(cedar_magnet_state::port19_w)
 {
-//  printf("%s: port19_w %02x\n", device().machine().describe_context(), data);
+//  printf("%s: port19_w %02x\n", machine().describe_context(), data);
 }
 
 WRITE8_MEMBER(cedar_magnet_state::port1b_w)
 {
-//  printf("%s: port1b_w %02x\n", device().machine().describe_context(), data);
+//  printf("%s: port1b_w %02x\n", machine().describe_context(), data);
 }
 
 /***********************
@@ -325,7 +445,7 @@ void cedar_magnet_state::video_start()
 
 WRITE8_MEMBER(cedar_magnet_state::soundlatch_w)
 {
-//  printf("%s: writing soundlatch_w! %02x\n", device().machine().describe_context(), data);
+//  printf("%s: writing soundlatch_w! %02x\n", machine().describe_context(), data);
 	portff_data = data;
 	m_cedsound->write_command(data);
 }
@@ -367,14 +487,14 @@ READ8_MEMBER(cedar_magnet_state::other_cpu_r)
 	{
 		cpus_accessed++;
 		ret |= m_cedsound->read_cpu_bus(offset2);
-		logerror("%s: reading soundselect! %04x - bank bits %d %d %d %d %d %d %d\n", device().machine().describe_context(), offset,bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
+		logerror("%s: reading soundselect! %04x - bank bits %d %d %d %d %d %d %d\n", machine().describe_context(), offset,bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
 	}
 
 	if (cpus_accessed != 1)
-		logerror("%s: reading multiple CPUS!!! %04x - bank bits %d %d %d %d %d %d %d\n", device().machine().describe_context(), offset,bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
+		logerror("%s: reading multiple CPUS!!! %04x - bank bits %d %d %d %d %d %d %d\n", machine().describe_context(), offset,bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
 
 //  if ((offset==0) || (offset2 == 0xe) || (offset2 == 0xf) || (offset2 == 0x68))
-//      logerror("%s: reading banked bus area %04x - bank bits %d %d %d %d %d %d %d\n", device().machine().describe_context(), offset,bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
+//      logerror("%s: reading banked bus area %04x - bank bits %d %d %d %d %d %d %d\n", machine().describe_context(), offset,bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
 
 	return ret;
 }
@@ -415,14 +535,14 @@ WRITE8_MEMBER(cedar_magnet_state::other_cpu_w)
 	{
 		cpus_accessed++;
 		m_cedsound->write_cpu_bus(offset2, data);
-	//  printf("%s: sound cpu write %04x %02x - bank bits %d %d %d %d %d %d %d\n", device().machine().describe_context(), offset,data, bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
+	//  printf("%s: sound cpu write %04x %02x - bank bits %d %d %d %d %d %d %d\n", machine().describe_context(), offset,data, bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
 	}
 
 	if (cpus_accessed != 1)
-		logerror("%s: writing multiple CPUS!!! %04x %02x - bank bits %d %d %d %d %d %d %d\n", device().machine().describe_context(), offset,data, bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
+		logerror("%s: writing multiple CPUS!!! %04x %02x - bank bits %d %d %d %d %d %d %d\n", machine().describe_context(), offset,data, bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
 
 //  if ((offset==0) || (offset2 == 0xe) || (offset2 == 0xf) || (offset2 == 0x68))
-//      printf("%s: other cpu write %04x %02x - bank bits %d %d %d %d %d %d %d\n", device().machine().describe_context(), offset,data, bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
+//      printf("%s: other cpu write %04x %02x - bank bits %d %d %d %d %d %d %d\n", machine().describe_context(), offset,data, bankbit0, plane0select, plane1select, spriteselect, soundselect, windowbank, unk2);
 }
 
 
@@ -459,7 +579,7 @@ READ8_MEMBER( cedar_magnet_state::ic48_pio_pa_r ) // 0x20
 	// interrupt source stuff??
 	ret &= ~0x10;
 
-	if (LOG_IC48_PIO_PA) printf("%s: ic48_pio_pa_r (returning %02x)\n", device().machine().describe_context(), ret);
+	if (LOG_IC48_PIO_PA) printf("%s: ic48_pio_pa_r (returning %02x)\n", machine().describe_context(), ret);
 	return ret;
 }
 
@@ -471,7 +591,7 @@ WRITE8_MEMBER( cedar_magnet_state::ic48_pio_pa_w ) // 0x20
 	m_ic48_pio_pa_val = data;
 
 	// address 0x20 - pio ic48 port a
-	if (LOG_IC48_PIO_PA) printf("%s: ic48_pio_pa_w %02x (memory banking etc.)\n", device().machine().describe_context(), data);
+	if (LOG_IC48_PIO_PA) printf("%s: ic48_pio_pa_w %02x (memory banking etc.)\n", machine().describe_context(), data);
 
 	if (LOG_IC48_PIO_PA) printf("output bit 0x80 %d (unused)\n", (data >> 7)&1); // A7 -> 12 J4 unpopulated
 	if (LOG_IC48_PIO_PA) printf("output bit 0x40 %d (bank)\n", (data >> 6)&1); // A6 -> 2 74HC10 3NAND IC19
@@ -500,7 +620,7 @@ READ8_MEMBER( cedar_magnet_state::ic48_pio_pb_r ) // 0x22
 	if (!m_cedsprite->is_running()) ret &= ~0x10;
 	if (!m_cedplane1->is_running()) ret &= ~0x01;
 
-	if (LOG_IC48_PIO_PB) printf("%s: ic48_pio_pb_r (returning %02x)\n", device().machine().describe_context(), ret);
+	if (LOG_IC48_PIO_PB) printf("%s: ic48_pio_pb_r (returning %02x)\n", machine().describe_context(), ret);
 	return ret;
 }
 
@@ -511,7 +631,7 @@ WRITE8_MEMBER(cedar_magnet_state::ic48_pio_pb_w) // 0x22
 
 	m_ic48_pio_pb_val = data;
 
-	if (LOG_IC48_PIO_PB)  printf("%s: ic48_pio_pb_w %02x\n", device().machine().describe_context(), data);
+	if (LOG_IC48_PIO_PB)  printf("%s: ic48_pio_pb_w %02x\n", machine().describe_context(), data);
 
 	// address 0x22 - pio ic48 port b
 	if (LOG_IC48_PIO_PB) printf("input  bit 0x80 %d (COIN2)\n", (data >> 7)&1); // B7 <- 2 74HC14P (inverter) IC4 <- EDGE 22 COIN2
@@ -543,7 +663,7 @@ READ8_MEMBER( cedar_magnet_state::ic49_pio_pb_r ) // 0x42
 
 	if (!m_cedsound->is_running()) ret &= ~0x10;
 
-	if (LOG_IC49_PIO_PB) printf("%s: ic49_pio_pb_r (returning %02x)\n", device().machine().describe_context(), ret);
+	if (LOG_IC49_PIO_PB) printf("%s: ic49_pio_pb_r (returning %02x)\n", machine().describe_context(), ret);
 	return ret;
 }
 
@@ -553,7 +673,7 @@ WRITE8_MEMBER( cedar_magnet_state::ic49_pio_pb_w ) // 0x42
 
 	m_ic49_pio_pb_val = data;
 
-	//printf("%s: ic49_pio_pb_w %02x\n", device().machine().describe_context(), data);
+	//printf("%s: ic49_pio_pb_w %02x\n", machine().describe_context(), data);
 
 	// address 0x42 - pio ic49 port b
 	if (LOG_IC49_PIO_PB) printf("output bit 0x80 %d (Q9)\n", (data >> 7)&1); // B7 -> Q9 transistor

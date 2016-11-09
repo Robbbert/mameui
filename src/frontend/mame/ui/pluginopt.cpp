@@ -41,6 +41,21 @@ void menu_plugin::populate()
 	item_append(menu_item_type::SEPARATOR);
 }
 
+void menu_plugin::show_menu(mame_ui_manager &mui, render_container &container, char *menu)
+{
+	// reset the menu stack
+	menu::stack_reset(mui.machine());
+
+	// add the plugin menu entry
+	menu::stack_push<menu_plugin_opt>(mui, container, menu);
+
+	// force the menus on
+	mui.show_menu();
+
+	// make sure MAME is paused
+	mui.machine().pause();
+}
+
 menu_plugin::~menu_plugin()
 {
 }
@@ -91,28 +106,32 @@ void menu_plugin_opt::handle()
 
 void menu_plugin_opt::populate()
 {
-	std::vector<lua_engine::menu_item> menu_list;
+	std::vector<std::tuple<std::string, std::string, std::string>> menu_list;
 	mame_machine_manager::instance()->lua()->menu_populate(m_menu, menu_list);
 	uintptr_t i = 1;
 	for(auto &item : menu_list)
 	{
+		const std::string &text = std::get<0>(item);
+		const std::string &subtext = std::get<1>(item);
+		const std::string &tflags = std::get<2>(item);
+
 		uint32_t flags = 0;
-		if(item.flags == "off")
+		if(tflags == "off")
 			flags = FLAG_DISABLE;
-		else if(item.flags == "l")
+		else if(tflags == "l")
 			flags = FLAG_LEFT_ARROW;
-		else if(item.flags == "r")
+		else if(tflags == "r")
 			flags = FLAG_RIGHT_ARROW;
-		else if(item.flags == "lr")
+		else if(tflags == "lr")
 			flags = FLAG_RIGHT_ARROW | FLAG_LEFT_ARROW;
 
-		if(item.text == "---")
+		if(text == "---")
 		{
 			item_append(menu_item_type::SEPARATOR);
 			i++;
 		}
 		else
-			item_append(item.text, item.subtext, flags, (void *)i++);
+			item_append(text, subtext, flags, (void *)i++);
 	}
 	item_append(menu_item_type::SEPARATOR);
 }

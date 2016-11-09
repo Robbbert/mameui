@@ -133,6 +133,7 @@ CPUS["MELPS4"] = true
 CPUS["HPHYBRID"] = true
 CPUS["SM510"] = true
 CPUS["MB86901"] = true
+CPUS["NANOPROCESSOR"] = true
 
 --------------------------------------------------
 -- specify available sound cores; some of these are
@@ -1429,7 +1430,6 @@ files {
 	MAME_DIR .. "src/mame/machine/msx_matsushita.h",
 	MAME_DIR .. "src/mame/machine/msx_s1985.cpp",
 	MAME_DIR .. "src/mame/machine/msx_s1985.h",
-	MAME_DIR .. "src/mame/machine/msx_switched.cpp",
 	MAME_DIR .. "src/mame/machine/msx_switched.h",
 	MAME_DIR .. "src/mame/machine/msx_systemflags.cpp",
 	MAME_DIR .. "src/mame/machine/msx_systemflags.h",

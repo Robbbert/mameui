@@ -83,7 +83,7 @@ typedef uint32_t  offs_t;
 typedef void (*address_map_constructor)(address_map &map, device_t &devconfig);
 
 // submap retriever delegate
-typedef delegate<void (address_map &, device_t &)> address_map_delegate;
+typedef named_delegate<void (address_map &, device_t &)> address_map_delegate;
 
 // struct with function pointers for accessors; use is generally discouraged unless necessary
 struct data_accessors
@@ -734,6 +734,7 @@ public:
 private:
 	// internal helpers
 	void bank_reattach();
+	void allocate(device_memory_interface &memory);
 
 	// internal state
 	running_machine &           m_machine;              // reference to the machine

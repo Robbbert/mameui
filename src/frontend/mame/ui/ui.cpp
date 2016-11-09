@@ -208,7 +208,7 @@ void mame_ui_manager::init()
 	m_mouse_show = machine().system().flags & MACHINE_CLICKABLE_ARTWORK ? true : false;
 
 	// request a callback upon exiting
-	machine().add_notifier(MACHINE_NOTIFY_EXIT, machine_notify_delegate(FUNC(mame_ui_manager::exit), this));
+	machine().add_notifier(MACHINE_NOTIFY_EXIT, machine_notify_delegate(&mame_ui_manager::exit, this));
 
 	// create mouse bitmap
 	bitmap_argb32 *ui_mouse_bitmap = auto_alloc(machine(), bitmap_argb32(32, 32));
@@ -407,10 +407,7 @@ void mame_ui_manager::update_and_render(render_container &container)
 
 	// render any cheat stuff at the bottom
 	if (machine().phase() >= MACHINE_PHASE_RESET)
-	{
-		mame_machine_manager::instance()->lua()->on_frame_done();
 		mame_machine_manager::instance()->cheat().render_text(*this, container);
-	}
 
 	// call the current UI handler
 	m_handler_param = m_handler_callback(container);

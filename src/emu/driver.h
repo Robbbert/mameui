@@ -24,28 +24,28 @@
 
 // core machine callbacks
 #define MCFG_MACHINE_START_OVERRIDE(_class, _func) \
-	driver_device::static_set_callback(config.root_device(), driver_device::CB_MACHINE_START, driver_callback_delegate(&_class::MACHINE_START_NAME(_func), #_class "::machine_start_" #_func, downcast<_class *>(owner)));
+	driver_device::static_set_callback(config.root_device(), driver_device::CB_MACHINE_START, driver_callback_delegate(&_class::MACHINE_START_NAME(_func), downcast<_class *>(owner)));
 
 #define MCFG_MACHINE_RESET_OVERRIDE(_class, _func) \
-	driver_device::static_set_callback(config.root_device(), driver_device::CB_MACHINE_RESET, driver_callback_delegate(&_class::MACHINE_RESET_NAME(_func), #_class "::machine_reset_" #_func, downcast<_class *>(owner)));
+	driver_device::static_set_callback(config.root_device(), driver_device::CB_MACHINE_RESET, driver_callback_delegate(&_class::MACHINE_RESET_NAME(_func), downcast<_class *>(owner)));
 
 #define MCFG_MACHINE_RESET_REMOVE() \
 	driver_device::static_set_callback(config.root_device(), driver_device::CB_MACHINE_RESET, driver_callback_delegate());
 
 // core sound callbacks
 #define MCFG_SOUND_START_OVERRIDE(_class, _func) \
-	driver_device::static_set_callback(config.root_device(), driver_device::CB_SOUND_START, driver_callback_delegate(&_class::SOUND_START_NAME(_func), #_class "::sound_start_" #_func, downcast<_class *>(owner)));
+	driver_device::static_set_callback(config.root_device(), driver_device::CB_SOUND_START, driver_callback_delegate(&_class::SOUND_START_NAME(_func), downcast<_class *>(owner)));
 
 #define MCFG_SOUND_RESET_OVERRIDE(_class, _func) \
-	driver_device::static_set_callback(config.root_device(), driver_device::CB_SOUND_RESET, driver_callback_delegate(&_class::SOUND_RESET_NAME(_func), #_class "::sound_reset_" #_func, downcast<_class *>(owner)));
+	driver_device::static_set_callback(config.root_device(), driver_device::CB_SOUND_RESET, driver_callback_delegate(&_class::SOUND_RESET_NAME(_func), downcast<_class *>(owner)));
 
 
 // core video callbacks
 #define MCFG_VIDEO_START_OVERRIDE(_class, _func) \
-	driver_device::static_set_callback(config.root_device(), driver_device::CB_VIDEO_START, driver_callback_delegate(&_class::VIDEO_START_NAME(_func), #_class "::video_start_" #_func, downcast<_class *>(owner)));
+	driver_device::static_set_callback(config.root_device(), driver_device::CB_VIDEO_START, driver_callback_delegate(&_class::VIDEO_START_NAME(_func), downcast<_class *>(owner)));
 
 #define MCFG_VIDEO_RESET_OVERRIDE(_class, _func) \
-	driver_device::static_set_callback(config.root_device(), driver_device::CB_VIDEO_RESET, driver_callback_delegate(&_class::VIDEO_RESET_NAME(_func), #_class "::video_reset_" #_func, downcast<_class *>(owner)));
+	driver_device::static_set_callback(config.root_device(), driver_device::CB_VIDEO_RESET, driver_callback_delegate(&_class::VIDEO_RESET_NAME(_func), downcast<_class *>(owner)));
 
 
 
@@ -97,8 +97,7 @@ typedef delegate<void ()> driver_callback_delegate;
 // ======================> driver_device
 
 // base class for machine driver-specific devices
-class driver_device :   public device_t,
-						public device_memory_interface
+class driver_device : public device_t
 {
 public:
 	// construction/destruction
@@ -135,7 +134,7 @@ public:
 	void init_0() { }
 
 	// memory helpers
-	address_space &generic_space() const { return space(AS_PROGRAM); }
+	address_space &generic_space() const { return machine().dummy_space(); }
 
 	// output heler
 	output_manager &output() const { return machine().output(); }
@@ -192,10 +191,6 @@ public:
 	// generic input port helpers
 	DECLARE_CUSTOM_INPUT_MEMBER( custom_port_read );
 
-	// general fatal error handlers
-	DECLARE_READ8_MEMBER( fatal_generic_read );
-	DECLARE_WRITE8_MEMBER( fatal_generic_write );
-
 protected:
 	// helpers called at startup
 	virtual void driver_start();
@@ -215,15 +210,10 @@ protected:
 	virtual void device_start() override;
 	virtual void device_reset_after_children() override;
 
-	// device_memory_interface overrides
-	virtual const address_space_config *memory_space_config(address_spacenum spacenum = AS_0) const override;
 private:
 	// helpers
 	void irq_pulse_clear(void *ptr, int32_t param);
 	void updateflip();
-
-	// configuration state
-	const address_space_config  m_space_config;
 
 	// internal state
 	const game_driver *     m_system;                   // pointer to the game driver
