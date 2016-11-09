@@ -17,7 +17,7 @@
 #include "emu.h"
 #include "mui_opts.h"
 #include "devview.h"
-//#include "optionsms.h"
+#include "softlist_dev.h"
 #include "strconv.h"
 #include "winutf8.h"
 #include "mui_util.h"
@@ -195,8 +195,6 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 	LPTSTR t_s;
 	SIZE sz;
 	LONG_PTR l = 0;
-
-
 	pDevViewInfo = GetDevViewInfo(hwndDevView);
 
 	// clear out
@@ -250,6 +248,7 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 		DevView_GetColumns(hwndDevView, &nStaticPos, &nStaticWidth,
 			&nEditPos, &nEditWidth, &nButtonPos, &nButtonWidth);
 
+		i = 0;
 		for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 		{
 			pEnt->dev = &dev;
@@ -284,6 +283,7 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 
 			y += nHeight;
 			y += nHeight;
+
 			pEnt++;
 		}
 	}
@@ -303,17 +303,43 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 	HMENU hMenu;
 	RECT r;
 	int rc = 0;
-	BOOL b = 0;
+	BOOL b = true, ShowItem = false;
 	TCHAR szPath[MAX_PATH];
 
 	pDevViewInfo = GetDevViewInfo(hwndDevView);
 
 	hMenu = CreatePopupMenu();
 
+	for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
+	{
+		for (software_list_device &swlist : software_list_device_iterator(pDevViewInfo->config->mconfig->root_device()))
+		{
+			for (const software_info &swinfo : swlist.get_info())
+			{
+				const software_part &part = swinfo.parts().front();
+				if (swlist.is_compatible(part) == SOFTWARE_IS_COMPATIBLE)
+				{
+					for (device_image_interface &image : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
+					{
+						if (b && (std::string(dev.instance_name()) == std::string(image.instance_name())))
+						{
+							const char *interface = image.image_interface();
+							if (interface != nullptr && part.matches_interface(interface))
+							{
+								ShowItem = true;
+								b = false;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	if (pDevViewInfo->pCallbacks->pfnGetOpenFileName)
 		AppendMenu(hMenu, MF_STRING, 1, TEXT("Mount File..."));
 
-	if (pDevViewInfo->pCallbacks->pfnGetOpenItemName)
+	if (ShowItem && pDevViewInfo->pCallbacks->pfnGetOpenItemName)
 		AppendMenu(hMenu, MF_STRING, 4, TEXT("Mount Item..."));
 
 	if (pEnt->dev->is_creatable())
