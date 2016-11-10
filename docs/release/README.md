@@ -12,12 +12,6 @@ You can only build MAMEUI on a Windows computer. It won't compile on Unix. More 
 make OSD=messui
 ```
 
-or
-
-```
-make SUBTARGET=arcade OSD=messui
-```
-
 
 
 Where can I find out more?

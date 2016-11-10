@@ -942,6 +942,9 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 	char* utf8_filename;
 	BOOL bResult = 0;
 	std::string dst = GetSWDir();
+	// We only want the first path; throw out the rest
+	size_t i = dst.find(';');
+	if (i > 0) dst.substr(0, i);
 	wchar_t* t_s = ui_wstring_from_utf8(dst.c_str());
 
 	//  begin_resource_tracking();
@@ -1055,7 +1058,7 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 		if ((!osd::directory::open(as.c_str())) || (as.find(':') == std::string::npos))
 		{
 			// Get the global loose software path
-			as = GetSWDir();//GetExtraSoftwarePaths(-1, 0);
+			as = GetSWDir();
 
 			/* We only want the first path; throw out the rest */
 			i = as.find(';');
@@ -1112,7 +1115,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 	/* See if an image was loaded, and that the path still exists */
 	if ((!osd::directory::open(as.c_str())) || (as.find(':') == std::string::npos))
 	{
-		/* Get the path from the software tab */
+		/* Get the path from the SL base */
 		as = GetSLDir();
 
 		/* We only want the first path; throw out the rest */
@@ -1252,7 +1255,7 @@ static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *co
 	if ((!osd::directory::open(as.c_str())) || (as.find(':') == std::string::npos))
 	{
 		// Get the global loose software path
-		as = GetSWDir();//GetExtraSoftwarePaths(-1, 0);
+		as = GetSWDir();
 
 		/* We only want the first path; throw out the rest */
 		i = as.find(';');

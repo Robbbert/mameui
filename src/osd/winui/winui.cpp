@@ -886,7 +886,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	// Tell mame where to get the INIs
 	SetDirectories(global_opts);
 
-	MessSetupGameOptions(global_opts, OPTIONS_GLOBAL, nGameIndex);
+	CreateGameOptions(global_opts, OPTIONS_GLOBAL, nGameIndex);
 
 	// set some startup options
 	global_opts.set_value(OPTION_LANGUAGE, GetLanguageUI(), OPTION_PRIORITY_CMDLINE, error_string);
