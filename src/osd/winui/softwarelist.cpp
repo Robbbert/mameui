@@ -249,7 +249,7 @@ LPCTSTR SoftwareList_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCHAR
 				return s;
 			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_buf);
 			s = pszBuffer;
-			osd_free(t_buf);
+			free(t_buf);
 			break;
 		case 1:
 			t_buf = ui_wstring_from_utf8(pFileInfo->list_name);
@@ -257,7 +257,7 @@ LPCTSTR SoftwareList_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCHAR
 				return s;
 			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_buf);
 			s = pszBuffer;
-			osd_free(t_buf);
+			free(t_buf);
 			break;
 		case 2:
 			t_buf = ui_wstring_from_utf8(pFileInfo->description);
@@ -265,7 +265,7 @@ LPCTSTR SoftwareList_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCHAR
 				return s;
 			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_buf);
 			s = pszBuffer;
-			osd_free(t_buf);
+			free(t_buf);
 			break;
 		case 3:
 			t_buf = ui_wstring_from_utf8(pFileInfo->year);
@@ -273,7 +273,7 @@ LPCTSTR SoftwareList_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCHAR
 				return s;
 			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_buf);
 			s = pszBuffer;
-			osd_free(t_buf);
+			free(t_buf);
 			break;
 		case 4:
 			t_buf = ui_wstring_from_utf8(pFileInfo->publisher);
@@ -281,7 +281,7 @@ LPCTSTR SoftwareList_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCHAR
 				return s;
 			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_buf);
 			s = pszBuffer;
-			osd_free(t_buf);
+			free(t_buf);
 			break;
 		case 5:
 			t_buf = ui_wstring_from_utf8(pFileInfo->usage);
@@ -289,7 +289,7 @@ LPCTSTR SoftwareList_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCHAR
 				return s;
 			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_buf);
 			s = pszBuffer;
-			osd_free(t_buf);
+			free(t_buf);
 			break;
 
 	}

@@ -841,7 +841,7 @@ static BOOL CommonFileImageDialog(LPTSTR the_last_directory, common_file_dialog_
 		t_filter[i] = (t_buffer[i] != '|') ? t_buffer[i] : '\0';
 	t_filter[i++] = '\0';
 	t_filter[i++] = '\0';
-	osd_free(t_buffer);
+	free(t_buffer);
 
 	of.lStructSize = sizeof(of);
 	of.hwndOwner = GetMainWindow();
@@ -929,7 +929,7 @@ static void CleanupImageTypes(mess_image_type *types, int count)
 {
 	for (int i = 0; i < count; ++i)
 		if (types[i].ext)
-			osd_free(types[i].ext);
+			free(types[i].ext);
 }
 
 
@@ -956,7 +956,7 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 
 	SetupImageTypes(&config, imagetypes, ARRAY_LENGTH(imagetypes), TRUE, dev);
 	bResult = CommonFileImageDialog(t_s, cfd, filename, &config, imagetypes);
-	osd_free(t_s);
+	free(t_s);
 	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
 
 	if (bResult)
@@ -966,7 +966,7 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 			return;
 		// TODO - this should go against InternalSetSelectedSoftware()
 		SoftwarePicker_AddFile(GetDlgItem(GetMainWindow(), IDC_SWLIST), utf8_filename, 0);
-		osd_free(utf8_filename);
+		free(utf8_filename);
 	}
 }
 
@@ -1079,7 +1079,7 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 	bResult = CommonFileImageDialog(t_s, GetOpenFileName, pszFilename, config, imagetypes);
 	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
 
-	osd_free(t_s);
+	free(t_s);
 
 	return bResult;
 }
@@ -1183,7 +1183,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 	strcpy(g_szSelectedSoftware, t3.c_str()); // store to global item name
 	strcpy(g_szSelectedDevice, opt_name); // get media-device name (brief_instance_name is ok too)
 
-	osd_free(t_s);
+	free(t_s);
 	return bResult;
 }
 
@@ -1276,7 +1276,7 @@ static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *co
 	bResult = CommonFileImageDialog(t_s, GetSaveFileName, pszFilename, config, imagetypes);
 	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
 
-	osd_free(t_s);
+	free(t_s);
 
 	return bResult;
 }
@@ -1291,7 +1291,7 @@ static void DevView_SetSelectedSoftware(HWND hwndDevView, int drvindex,
 		return;
 	MessSpecifyImage(drvindex, dev, utf8_filename);
 	MessRefreshPicker();
-	osd_free(utf8_filename);
+	free(utf8_filename);
 }
 
 
@@ -1313,7 +1313,7 @@ static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex,
 		return t_buffer;
 
 	_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_s);
-	osd_free(t_s);
+	free(t_s);
 	t_buffer = pszBuffer;
 
 	return t_buffer;
