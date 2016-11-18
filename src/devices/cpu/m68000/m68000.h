@@ -109,6 +109,7 @@ enum
 	M68K_FPSR, M68K_FPCR
 };
 
+unsigned int m68k_disassemble_raw(std::ostream &stream, unsigned int pc, const unsigned char* opdata, const unsigned char* argdata, unsigned int cpu_type);
 unsigned int m68k_disassemble_raw(char* str_buff, unsigned int pc, const unsigned char* opdata, const unsigned char* argdata, unsigned int cpu_type);
 
 class m68000_base_device;
@@ -167,9 +168,13 @@ public:
 	void set_tas_write_callback(write8_delegate callback);
 	uint16_t get_fc();
 	void set_hmmu_enable(int enable);
+	void set_fpu_enable(int enable);
+	int get_fpu_enable();
 	void set_instruction_hook(read32_delegate ihook);
 	void set_buserror_details(uint32_t fault_addr, uint8_t rw, uint8_t fc);
 
+private:
+	int    has_fpu;      /* Indicates if a FPU is available (yes on 030, 040, may be on 020) */
 public:
 
 
@@ -210,7 +215,6 @@ public:
 	int    has_hmmu;     /* Indicates if an Apple HMMU is available in place of the 68851 (020 only) */
 	int    pmmu_enabled; /* Indicates if the PMMU is enabled */
 	int    hmmu_enabled; /* Indicates if the HMMU is enabled */
-	int    has_fpu;      /* Indicates if a FPU is available (yes on 030, 040, may be on 020) */
 	int    fpu_just_reset; /* Indicates the FPU was just reset */
 
 	/* Clocks required for instructions / exceptions */
