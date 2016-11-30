@@ -1,4 +1,4 @@
-del *.sym
+del mameui.sym
 :start
 del mameui.exe
 if exist mameui.exe goto start

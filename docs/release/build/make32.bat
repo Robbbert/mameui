@@ -4,7 +4,7 @@ set minpath=%MINGW32%\bin
 set oldpath=%Path%
 set Path=%minpath%;%oldpath%
 echo.|time
-%MINGW32%\bin\make PTR64=0 OSD=winui SYMBOLS=0 NO_SYMBOLS=1 %1 %2 %3 %4
+%MINGW32%\bin\make PTR64=0 OSD=messui SYMBOLS=0 NO_SYMBOLS=1 %1 %2 %3 %4
 echo.|time
 set Path=%oldpath%
 set oldpath=

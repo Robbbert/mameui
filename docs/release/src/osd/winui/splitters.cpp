@@ -17,10 +17,10 @@
 #include <windows.h>
 #include <windowsx.h>
 #include <commctrl.h>
-#include <stdlib.h>
 #include <assert.h>
 
 // MAME/MAMEUI headers
+#include <stdlib.h>
 #include "splitters.h"
 #include "mui_opts.h"
 #include "resource.h"
@@ -31,8 +31,8 @@ static BOOL         bTracking = 0;
 static int          numSplitters = 0;
 static int          currentSplitter = 0;
 static HZSPLITTER   *splitter;
-static LPHZSPLITTER lpCurSpltr = nullptr;
-static HCURSOR      hSplitterCursor = nullptr;
+static LPHZSPLITTER lpCurSpltr = 0;
+static HCURSOR      hSplitterCursor = 0;
 
 int *nSplitterOffset;
 

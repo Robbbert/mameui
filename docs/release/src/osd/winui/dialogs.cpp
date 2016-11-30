@@ -606,7 +606,8 @@ INT_PTR CALLBACK AboutDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			hBmp = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_ABOUT),
 				IMAGE_BITMAP, 0, 0, LR_SHARED);
 			SendDlgItemMessage(hDlg, IDC_ABOUT, STM_SETIMAGE, (WPARAM)IMAGE_BITMAP, (LPARAM)hBmp);
-			win_set_window_text_utf8(GetDlgItem(hDlg, IDC_VERSION), GetVersionString());
+			std::string temp = std::string(MAMENAME) + " " + GetVersionString();
+			win_set_window_text_utf8(GetDlgItem(hDlg, IDC_VERSION), temp.c_str());
 		}
 		return 1;
 

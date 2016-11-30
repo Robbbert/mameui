@@ -12,8 +12,11 @@
 #include "screenshot.h"
 #include "drivenum.h"
 
+// Make sure all MESS features are included
+#define MESS
+
 #define MAMENAME "MAME"
-#define UI_INI_FILENAME MAMENAME "UI.ini"
+#define UI_INI_FILENAME "MAMEUI.ini"
 
 #ifdef PTR64
 #define MAMEUINAME MAMENAME "UI64"
@@ -63,6 +66,8 @@ BOOL CommonFileDialog(common_file_dialog_proc cfd,char *filename, int filetype);
 
 HWND GetMainWindow(void);
 HWND GetTreeView(void);
+HIMAGELIST GetLargeImageList(void);
+HIMAGELIST GetSmallImageList(void);
 void SetNumOptionFolders(int count);
 void GetRealColumnOrder(int order[]);
 HICON LoadIconFromFile(const char *iconname);
@@ -93,6 +98,7 @@ int GetMinimumScreenShotWindowWidth(void);
 
 // we maintain an array of drivers sorted by name, useful all around
 int GetParentIndex(const game_driver *driver);
+int GetCompatIndex(const game_driver *driver);
 int GetParentRomSetIndex(const game_driver *driver);
 int GetGameNameIndex(const char *name);
 
@@ -100,9 +106,7 @@ int GetGameNameIndex(const char *name);
 void SetStatusBarText(int part_index, const char *message);
 void SetStatusBarTextF(int part_index, const char *fmt, ...) ATTR_PRINTF(2,3);
 
-int MameUIMain(HINSTANCE	hInstance,
-                   LPWSTR    lpCmdLine,
-                   int      nCmdShow);
+int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow);
 
 BOOL MouseHasBeenMoved(void);
 

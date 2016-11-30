@@ -11,16 +11,10 @@
 #include <wingdi.h>
 
 // MAME/MAMEUI headers
-#include "winui.h"
 #include "tabview.h"
 #include "emu.h"
 #include "mui_util.h"
 #include "strconv.h"
-
-
-#ifdef __GNUC__
-#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
-#endif
 
 
 struct TabViewInfo
@@ -136,7 +130,7 @@ int TabView_GetCurrentTab(HWND hwndTabView)
 			for (i = 0; i < pTabViewInfo->nTabCount; i++)
 			{
 				pszThatTab = pTabViewInfo->pCallbacks->pfnGetTabShortName(i);
-				if (pszThatTab && !core_stricmp(pszTab, pszThatTab))
+				if (pszThatTab && (core_stricmp(pszTab, pszThatTab)==0))
 				{
 					nTab = i;
 					break;
@@ -172,8 +166,7 @@ void TabView_SetCurrentTab(HWND hwndTabView, int nTab)
 	}
 	else
 	{
-		snprintf(szBuffer, ARRAY_LENGTH(szBuffer),
-			"%d", nTab);
+		snprintf(szBuffer, sizeof(szBuffer) / sizeof(szBuffer[0]), "%d", nTab);
 		pszName = szBuffer;
 	}
 
@@ -210,6 +203,7 @@ void TabView_UpdateSelection(HWND hwndTabView)
 {
 	HRESULT res;
 	res = TabCtrl_SetCurSel(hwndTabView, TabView_GetCurrentTabIndex(hwndTabView));
+	res++;
 }
 
 
@@ -264,7 +258,6 @@ void TabView_CalculateNextTab(HWND hwndTabView)
 }
 
 
-
 void TabView_Reset(HWND hwndTabView)
 {
 	struct TabViewInfo *pTabViewInfo;
@@ -291,12 +284,13 @@ void TabView_Reset(HWND hwndTabView)
 				return;
 			tci.pszText = t_text;
 			res = TabCtrl_InsertItem(hwndTabView, i, &tci);
-			osd_free(t_text);
+			free(t_text);
 		}
 	}
 	TabView_UpdateSelection(hwndTabView);
+	res++;
+	b_res++;
 }
-
 
 
 BOOL SetupTabView(HWND hwndTabView, const struct TabViewOptions *pOptions)
