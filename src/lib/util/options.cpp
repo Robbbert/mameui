@@ -513,7 +513,7 @@ std::string core_options::output_ini(const core_options *diff) const
 			if (!curentry.is_internal())
 			{
 				// look up counterpart in diff, if diff is specified
-				//if (diff == nullptr || strcmp(value, diff->value(name)) != 0) MESSUI need entire file
+				if (diff == nullptr || strcmp(value, diff->value(name)) != 0)
 				{
 					// output header, if we have one
 					if (last_header != nullptr)
