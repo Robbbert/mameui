@@ -4,7 +4,6 @@
 // Software Device View class
 // ------------------------------------------------------------------------
 
-#define WIN32_LEAN_AND_MEAN
 #include <string.h>
 #include <windows.h>
 #include <shellapi.h>

@@ -203,7 +203,6 @@ project ("osd_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/osd/modules/debugger/win/debugwin.h",
 		MAME_DIR .. "src/osd/winui/bitmask.cpp",
 		MAME_DIR .. "src/osd/winui/columnedit.cpp",
-		MAME_DIR .. "src/osd/winui/datafile.cpp",
 		MAME_DIR .. "src/osd/winui/datamap.cpp",
 		MAME_DIR .. "src/osd/winui/devview.cpp",
 		MAME_DIR .. "src/osd/winui/dialogs.cpp",
