@@ -296,6 +296,7 @@ VIDEOS["HD44780"] = true
 VIDEOS["HD61830"] = true
 --VIDEOS+= HD63484"] = true
 VIDEOS["HD66421"] = true
+VIDEOS["HLCD0515"] = true
 VIDEOS["HUC6202"] = true
 VIDEOS["HUC6260"] = true
 VIDEOS["HUC6261"] = true
@@ -1327,6 +1328,8 @@ createMESSProjects(_target, _subtarget, "amiga")
 files {
 	MAME_DIR .. "src/mame/drivers/amiga.cpp",
 	MAME_DIR .. "src/mame/includes/amiga.h",
+	MAME_DIR .. "src/mame/machine/a1200kbd.cpp",
+	MAME_DIR .. "src/mame/machine/a1200kbd.h",
 	MAME_DIR .. "src/mame/machine/amigakbd.cpp",
 	MAME_DIR .. "src/mame/machine/amigakbd.h",
 }
