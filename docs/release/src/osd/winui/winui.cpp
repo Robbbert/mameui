@@ -422,9 +422,6 @@ typedef struct tagPOPUPSTRING
 
 #define MAX_MENUS 3
 
-#define SPLITTER_WIDTH	4
-#define MIN_VIEW_WIDTH	10
-
 // Struct needed for Game Window Communication
 
 typedef struct
@@ -934,7 +931,9 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	osd.register_options();
 	mame_machine_manager *manager = mame_machine_manager::instance(global_opts, osd);
 	load_translation(global_opts);
+	manager->start_http_server();
 	manager->start_luaengine();
+	manager->start_context();
 	manager->execute();
 	osd_output::pop(&winerror);
 	global_free(manager);
@@ -1258,13 +1257,16 @@ const char * GetSearchText(void)
 /* Sets the treeview and listviews sizes in accordance with their visibility and the splitters */
 static void ResizeTreeAndListViews(BOOL bResizeHidden)
 {
+	AREA area;
+	GetWindowArea(&area);
+	int fullwidth = area.width;
+	bool bShowPicture = GetShowScreenShot();
+	bool bShowSoftware = GetShowSoftware();
 	int i = 0;
 	int nLastWidth = 0;
-	int nLastWidth2 = 0;
+	//int nLastWidth2 = 0;
 	int nLeftWindowWidth = 0;
 	RECT rect;
-	BOOL bVisible = 0;
-	//int nLastOverlap = -1;
 
 	/* Size the List Control in the Picker */
 	GetClientRect(hMain, &rect);
@@ -1279,34 +1281,40 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 
 	for (i = 0; g_splitterInfo[i].nSplitterWindow; i++)
 	{
-		bVisible = GetWindowLong(GetDlgItem(hMain, g_splitterInfo[i].nLeftWindow), GWL_STYLE) & WS_VISIBLE ? TRUE : FALSE;
+		bool bVisible = GetWindowLong(GetDlgItem(hMain, g_splitterInfo[i].nLeftWindow), GWL_STYLE) & WS_VISIBLE ? TRUE : FALSE;
 		if (bResizeHidden || bVisible)
 		{
 			nLeftWindowWidth = nSplitterOffset[i] - SPLITTER_WIDTH/2 - nLastWidth;
 
 			/* special case for the rightmost pane when the screenshot is gone */
-			if (!GetShowScreenShot() && !g_splitterInfo[i+1].nSplitterWindow)
-				nLeftWindowWidth = rect.right - nLastWidth;
+			if (!bShowPicture && !bShowSoftware && !g_splitterInfo[i+1].nSplitterWindow)
+				//nLeftWindowWidth = rect.right - nLastWidth;
+				nLeftWindowWidth = fullwidth - nLastWidth;
 
 			/* woah?  are we overlapping ourselves? */
-			if (nLeftWindowWidth < MIN_VIEW_WIDTH)
-			{
-				//nLastOverlap = i;
-				nLastWidth = nLastWidth2;
-				nLeftWindowWidth = nSplitterOffset[i] - MIN_VIEW_WIDTH - (SPLITTER_WIDTH*3/2) - nLastWidth;
-				i--;
-			}
+//			while ((nLeftWindowWidth + nLastWidth) > fullwidth)
+//				nLeftWindowWidth--;
+//			if (nLeftWindowWidth < MIN_VIEW_WIDTH)
+//			{
+//				nLastWidth = nLastWidth2;
+//				nLeftWindowWidth = nSplitterOffset[i] - MIN_VIEW_WIDTH - SPLITTER_WIDTH/2 - nLastWidth;
+//				//i--;
+//			}
+			if (nLastWidth > fullwidth)
+				nLastWidth = fullwidth - MIN_VIEW_WIDTH;
+			if ((nLastWidth + nLeftWindowWidth) > fullwidth)
+				nLeftWindowWidth = MIN_VIEW_WIDTH;
 
 			MoveWindow(GetDlgItem(hMain, g_splitterInfo[i].nLeftWindow), nLastWidth, rect.top + 2,
-				nLeftWindowWidth, (rect.bottom - rect.top) - 4 , TRUE);
+				nLeftWindowWidth, rect.bottom - rect.top - 4, TRUE);
 
 			MoveWindow(GetDlgItem(hMain, g_splitterInfo[i].nSplitterWindow), nSplitterOffset[i], rect.top + 2,
-				SPLITTER_WIDTH, (rect.bottom - rect.top) - 4, TRUE);
+				SPLITTER_WIDTH, rect.bottom - rect.top - 4, TRUE);
 		}
 
 		if (bVisible)
 		{
-			nLastWidth2 = nLastWidth;
+			//nLastWidth2 = nLastWidth;
 			nLastWidth += nLeftWindowWidth + SPLITTER_WIDTH;
 		}
 	}
@@ -1427,9 +1435,8 @@ void UpdateScreenShot(void)
 
 	if (have_selection)
 	{
-		if (!g_szSelectedItem[0] || !LoadScreenShotEx(Picker_GetSelectedItem(hwndList), g_szSelectedItem,
-			TabView_GetCurrentTab(hTabCtrl)))
-
+		if (!g_szSelectedItem[0] || 
+			!LoadScreenShotEx(Picker_GetSelectedItem(hwndList), g_szSelectedItem, TabView_GetCurrentTab(hTabCtrl)))
 				// load and set image, or empty it if we don't have one
 				LoadScreenShot(Picker_GetSelectedItem(hwndList), TabView_GetCurrentTab(hTabCtrl));
 	}
@@ -1490,8 +1497,8 @@ void ResizePickerControls(HWND hWnd)
 	RECT rect, sRect;
 	int  nListWidth = 0, nScreenShotWidth = 0;
 	static BOOL firstTime = TRUE;
-	int  doSSControls = TRUE;
-	int i = 0, nSplitterCount = 0;
+	int doSSControls = TRUE;
+	int nSplitterCount = 0;
 
 	nSplitterCount = GetSplitterCount();
 
@@ -1503,8 +1510,9 @@ void ResizePickerControls(HWND hWnd)
 	{
 		RECT rWindow;
 
-		for (i = 0; i < nSplitterCount; i++)
-			nSplitterOffset[i] = rect.right * g_splitterInfo[i].dPosition;
+		for (int i = 0; i < nSplitterCount; i++)
+//			nSplitterOffset[i] = rect.right * g_splitterInfo[i].dPosition;
+			nSplitterOffset[i] = GetSplitterPos(i);
 
 		GetWindowRect(hStatusBar, &rWindow);
 		bottomMargin = rWindow.bottom - rWindow.top;
@@ -1528,9 +1536,11 @@ void ResizePickerControls(HWND hWnd)
 	MoveWindow(GetDlgItem(hWnd, IDC_DIVIDER), rect.left, rect.top - 4, rect.right, 2, TRUE);
 
 	ResizeTreeAndListViews(TRUE);
-
-	nListWidth = nSplitterOffset[nSplitterCount-1];
-	nScreenShotWidth = (rect.right - nListWidth) - 4;
+	if (GetShowSoftware())
+		nListWidth = nSplitterOffset[2];
+	else
+		nListWidth = nSplitterOffset[1];
+	nScreenShotWidth = rect.right - nListWidth - SPLITTER_WIDTH;
 
 	/* Screen shot Page tab control */
 	if (bShowTabCtrl)
@@ -1542,31 +1552,29 @@ void ResizePickerControls(HWND hWnd)
 
 	/* resize the Screen shot frame */
 	MoveWindow(GetDlgItem(hWnd, IDC_SSFRAME), nListWidth + 4, rect.top + 2,
-		nScreenShotWidth - 2, (rect.bottom - rect.top) - 4, doSSControls);
+		nScreenShotWidth - 2, rect.bottom - rect.top - 4, doSSControls);
 
 	/* The screen shot controls */
 	GetClientRect(GetDlgItem(hWnd, IDC_SSFRAME), &frameRect);
 
 	/* Text control - game history */
 	sRect.left = nListWidth + 14;
-	sRect.right = sRect.left + (nScreenShotWidth - 22);
+	sRect.right = sRect.left + nScreenShotWidth - 22;
 
 	if (GetShowTab(TAB_HISTORY))
 	{
 		// We're using the new mode, with the history filling the entire tab (almost)
 		sRect.top = rect.top + 14;
-		sRect.bottom = (rect.bottom - rect.top) - 30;
+		sRect.bottom = rect.bottom - rect.top - 30;
 	}
 	else
 	{
 		// We're using the original mode, with the history beneath the SS picture
 		sRect.top = rect.top + 264;
-		sRect.bottom = (rect.bottom - rect.top) - 278;
+		sRect.bottom = rect.bottom - rect.top - 278;
 	}
 
-	MoveWindow(GetDlgItem(hWnd, IDC_HISTORY),
-		sRect.left, sRect.top,
-		sRect.right - sRect.left, sRect.bottom, doSSControls);
+	MoveWindow(GetDlgItem(hWnd, IDC_HISTORY), sRect.left, sRect.top, sRect.right - sRect.left, sRect.bottom, doSSControls);
 
 	/* the other screen shot controls will be properly placed in UpdateScreenshot() */
 }
@@ -1694,8 +1702,8 @@ static void memory_error(const char *message)
 static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
 	extern int mame_validitychecks(int game);
-	WNDCLASS	wndclass;
-	RECT		rect;
+	WNDCLASS wndclass;
+	RECT rect;
 	int i = 0, nSplitterCount = 0;
 	extern const FOLDERDATA g_folderData[];
 	extern const FILTER_ITEM g_filterList[];
@@ -1717,13 +1725,13 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	memset(icon_index, '\0', sizeof(int) * driver_list::total());
 
 	// set up window class
-	wndclass.style		   = CS_HREDRAW | CS_VREDRAW;
+	wndclass.style         = CS_HREDRAW | CS_VREDRAW;
 	wndclass.lpfnWndProc   = MameWindowProc;
 	wndclass.cbClsExtra    = 0;
 	wndclass.cbWndExtra    = DLGWINDOWEXTRA;
-	wndclass.hInstance	   = hInstance;
-	wndclass.hIcon		   = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_MAMEUI_ICON));
-	wndclass.hCursor	   = NULL;
+	wndclass.hInstance     = hInstance;
+	wndclass.hIcon         = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_MAMEUI_ICON));
+	wndclass.hCursor       = NULL;
 	wndclass.hbrBackground = (HBRUSH)(COLOR_3DFACE + 1);
 	wndclass.lpszMenuName  = MAKEINTRESOURCE(IDR_UI_MENU);
 	wndclass.lpszClassName = TEXT("MainClass");
@@ -1735,21 +1743,18 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	InitCommonControls();
 
 	// Are we using an Old comctl32.dll?
-	dprintf("common controlversion %ld %ld\n",common_control_version >> 16, common_control_version & 0xffff);
+	dprintf("common controlversion %ld %ld\n", common_control_version >> 16, common_control_version & 0xffff);
 
 	oldControl = (common_control_version < PACKVERSION(4,71));
 	xpControl = (common_control_version >= PACKVERSION(6,0));
 	if (oldControl)
 	{
-		char buf[] = MAMEUINAME " has detected an old version of comctl32.dll\n\n"
-					 "Game Properties, many configuration options and\n"
-					 "features are not available without an updated DLL\n\n"
-					 "Please install the common control update found at:\n\n"
-					 "http://www.microsoft.com/msdownload/ieplatform/ie/comctrlx86.asp\n\n"
-					 "Would you like to continue without using the new features?\n";
+		char buf[] = MAMEUINAME " has detected an old version of comctl32.dll.\n\n"
+					"Various features are not available without an updated DLL.\n\n"
+					"Would you like to continue without using the new features?\n";
 
-		if (IDNO == win_message_box_utf8(0, buf, MAMEUINAME " Outdated comctl32.dll Warning", MB_YESNO | MB_ICONWARNING))
-			return FALSE;
+		win_message_box_utf8(0, buf, MAMEUINAME " Outdated comctl32.dll Error", MB_OK | MB_ICONWARNING);
+		return false;
 	}
 
 	HelpInit();
@@ -1757,7 +1762,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	// should be able to get rid of this directory stuff soon
 	t_inpdir = ui_wstring_from_utf8(GetInpDir());
 	if( ! t_inpdir )
-		return FALSE;
+		return false;
 
 	_tcscpy(last_directory,t_inpdir);
 	free(t_inpdir);
@@ -1765,7 +1770,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	if (hMain == NULL)
 	{
 		dprintf("error creating main dialog, aborting\n");
-		return FALSE;
+		return false;
 	}
 
 	s_pWatcher = DirWatcher_Init(hMain, WM_MAME32_FILECHANGED);
@@ -1799,7 +1804,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		opts.nTabCount = MAX_TAB_TYPES;
 
 		if (!SetupTabView(hTabCtrl, &opts))
-			return FALSE;
+			return false;
 	}
 
 	/* subclass history window */
@@ -2013,7 +2018,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		SetTimer(hMain, SCREENSHOT_TIMER, GetCycleScreenshot()*1000, NULL); //scale to Seconds
 	}
 
-	return TRUE;
+	return true;
 }
 
 

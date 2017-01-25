@@ -11,11 +11,13 @@ call clean.bat
 
 rem --- 32bit ---
 del mameui.exe
+del mameui.sym
 call make32 -j4 %1 %2 %3
 if not exist mameui.exe goto end
 
 rem --- 64bit ---
 del mameui64.exe
+del mameui64.sym
 call make64 -j4 %1 %2 %3
 
 :end
