@@ -5,8 +5,6 @@
  *
  */
 
-#include <cstdio>
-
 #include "plib/palloc.h"
 #include "plib/putil.h"
 #include "nl_base.h"
@@ -123,7 +121,7 @@ void setup_t::register_alias(const pstring &alias, const pstring &out)
 
 void setup_t::register_dippins_arr(const pstring &terms)
 {
-	plib::pstring_vector_t list(terms,", ");
+	std::vector<pstring> list(plib::psplit(terms,", "));
 	if (list.size() == 0 || (list.size() % 2) == 1)
 		log().fatal(MF_1_DIP_PINS_MUST_BE_AN_EQUAL_NUMBER_OF_PINS_1,
 				build_fqn(""));
@@ -135,7 +133,7 @@ void setup_t::register_dippins_arr(const pstring &terms)
 	}
 }
 
-pstring setup_t::objtype_as_str(detail::device_object_t &in) const
+pstring setup_t::termtype_as_str(detail::core_terminal_t &in) const
 {
 	switch (in.type())
 	{
@@ -145,8 +143,6 @@ pstring setup_t::objtype_as_str(detail::device_object_t &in) const
 			return pstring("INPUT");
 		case terminal_t::OUTPUT:
 			return pstring("OUTPUT");
-		case terminal_t::PARAM:
-			return pstring("PARAM");
 	}
 	// FIXME: noreturn
 	log().fatal(MF_1_UNKNOWN_OBJECT_TYPE_1, static_cast<unsigned>(in.type()));
@@ -199,14 +195,14 @@ void setup_t::register_param(pstring name, param_t &param)
 void setup_t::register_term(detail::core_terminal_t &term)
 {
 	if (!m_terminals.insert({term.name(), &term}).second)
-		log().fatal(MF_2_ADDING_1_2_TO_TERMINAL_LIST, objtype_as_str(term),
+		log().fatal(MF_2_ADDING_1_2_TO_TERMINAL_LIST, termtype_as_str(term),
 				term.name());
-	log().debug("{1} {2}\n", objtype_as_str(term), term.name());
+	log().debug("{1} {2}\n", termtype_as_str(term), term.name());
 }
 
 void setup_t::register_link_arr(const pstring &terms)
 {
-	plib::pstring_vector_t list(terms,", ");
+	std::vector<pstring> list(plib::psplit(terms,", "));
 	if (list.size() < 2)
 		log().fatal(MF_2_NET_C_NEEDS_AT_LEAST_2_TERMINAL);
 	for (std::size_t i = 1; i < list.size(); i++)
@@ -340,12 +336,12 @@ detail::core_terminal_t *setup_t::find_terminal(const pstring &terminal_in, bool
 }
 
 detail::core_terminal_t *setup_t::find_terminal(const pstring &terminal_in,
-		detail::device_object_t::type_t atype, bool required)
+		detail::core_terminal_t::type_t atype, bool required)
 {
 	const pstring &tname = resolve_alias(terminal_in);
 	auto ret = m_terminals.find(tname);
 	/* look for default */
-	if (ret == m_terminals.end() && atype == detail::device_object_t::OUTPUT)
+	if (ret == m_terminals.end() && atype == detail::core_terminal_t::OUTPUT)
 	{
 		/* look for ".Q" std output */
 		ret = m_terminals.find(tname + ".Q");
@@ -440,7 +436,6 @@ devices::nld_base_proxy *setup_t::get_a_d_proxy(detail::core_terminal_t &inp)
 
 		auto ret = new_proxy.get();
 
-#if 1
 		/* connect all existing terminals to new net */
 
 		if (inp.has_net())
@@ -455,13 +450,6 @@ devices::nld_base_proxy *setup_t::get_a_d_proxy(detail::core_terminal_t &inp)
 			inp.net().m_core_terms.clear(); // clear the list
 		}
 		ret->out().net().add_terminal(inp);
-#else
-		if (inp.has_net())
-			//fatalerror("logic inputs can only belong to one net!\n");
-			merge_nets(ret->out().net(), inp.net());
-		else
-			ret->out().net().add_terminal(inp);
-#endif
 		netlist().register_dev(std::move(new_proxy));
 		return ret;
 	}
@@ -781,7 +769,7 @@ void setup_t::start_devices()
 	if (env != "")
 	{
 		log().debug("Creating dynamic logs ...");
-		plib::pstring_vector_t loglist(env, ":");
+		std::vector<pstring> loglist(plib::psplit(env, ":"));
 		for (pstring ll : loglist)
 		{
 			pstring name = "log_" + ll;
@@ -852,7 +840,7 @@ void setup_t::model_parse(const pstring &model_in, model_map_t &map)
 	// FIMXE: Not optimal
 	remainder = remainder.left(remainder.begin() + (remainder.len() - 1));
 
-	plib::pstring_vector_t pairs(remainder," ", true);
+	std::vector<pstring> pairs(plib::psplit(remainder," ", true));
 	for (pstring &pe : pairs)
 	{
 		auto pose = pe.find("=");

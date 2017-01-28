@@ -5,7 +5,6 @@
  *
  */
 
-//#include <memory>
 #include "nlid_proxy.h"
 #include "solver/nld_solver.h"
 //#include "plib/pstream.h"
@@ -113,9 +112,9 @@ namespace netlist
 		{
 			pstring devname = out_proxied->device().name();
 			auto tp = netlist().setup().find_terminal(devname + "." + power_syms[i][0],
-					detail::device_object_t::type_t::INPUT, false);
+					detail::core_terminal_t::type_t::INPUT, false);
 			auto tn = netlist().setup().find_terminal(devname + "." + power_syms[i][1],
-					detail::device_object_t::type_t::INPUT, false);
+					detail::core_terminal_t::type_t::INPUT, false);
 			if (tp != nullptr && tn != nullptr)
 			{
 				/* alternative logic */

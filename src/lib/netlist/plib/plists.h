@@ -10,10 +10,7 @@
 #ifndef PLISTS_H_
 #define PLISTS_H_
 
-#include <algorithm>
 #include <vector>
-#include <type_traits>
-#include <cmath>
 
 #include "pstring.h"
 
@@ -56,6 +53,7 @@ public:
 	template<typename... Args>
 	void emplace(const std::size_t index, Args&&... args)
 	{
+		// allocate on buffer
 		new (&m_buf[index]) C(std::forward<Args>(args)...);
 	}
 
