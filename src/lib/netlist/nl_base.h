@@ -20,6 +20,10 @@
 
 #include <unordered_map>
 
+#ifdef NL_PROHIBIT_BASEH_INCLUDE
+#error "nl_base.h included. Please correct."
+#endif
+
 // ----------------------------------------------------------------------------------------
 // Type definitions
 // ----------------------------------------------------------------------------------------
@@ -223,11 +227,6 @@ namespace netlist
 	class netlist_t;
 	class core_device_t;
 	class device_t;
-
-	/*! Type of the model map used.
-	 *  This is used to hold all #Models in an unordered map
-	 */
-	using model_map_t = std::unordered_map<pstring, pstring>;
 
 	/*! Logic families descriptors are used to create proxy devices.
 	 *  The logic family describes the analog capabilities of logic devices,
@@ -481,25 +480,18 @@ namespace netlist
 			STATE_BIDIR = 256
 		};
 
-		/*! Enum specifying the type of object */
-		enum type_t {
-			TERMINAL = 0, /*!< object is an analog terminal */
-			INPUT    = 1, /*!< object is an input */
-			OUTPUT   = 2, /*!< object is an output */
-		};
-
 		core_terminal_t(core_device_t &dev, const pstring &aname, const state_e state);
 		virtual ~core_terminal_t();
 
 		/*! The object type.
 		 * \returns type of the object
 		 */
-		type_t type() const;
+		terminal_type type() const;
 		/*! Checks if object is of specified type.
 		 * \param atype type to check object against.
 		 * \returns true if object is of specified type else false.
 		 */
-		bool is_type(const type_t atype) const { return (type() == atype); }
+		bool is_type(const terminal_type atype) const { return (type() == atype); }
 
 		void set_net(net_t *anet);
 		void clear_net();
@@ -555,16 +547,12 @@ namespace netlist
 
 		void set(const nl_double G)
 		{
-			set_ptr(m_Idr1, 0);
-			set_ptr(m_go1, G);
-			set_ptr(m_gt1, G);
+			set(G,G, 0.0);
 		}
 
 		void set(const nl_double GO, const nl_double GT)
 		{
-			set_ptr(m_Idr1, 0);
-			set_ptr(m_go1, GO);
-			set_ptr(m_gt1, GT);
+			set(GO, GT, 0.0);
 		}
 
 		void set(const nl_double GO, const nl_double GT, const nl_double I)
@@ -743,13 +731,13 @@ namespace netlist
 		state_var_s32            m_active;
 		state_var_u8             m_in_queue;    /* 0: not in queue, 1: in queue, 2: last was taken */
 
+		state_var<nl_double>     m_cur_Analog;
+
 	private:
 		plib::linkedlist_t<core_terminal_t> m_list_active;
 		core_terminal_t * m_railterminal;
 
 	public:
-		// FIXME: Have to fix the public at some time
-		state_var<nl_double>     m_cur_Analog;
 
 	};
 
@@ -804,6 +792,7 @@ namespace netlist
 		virtual ~analog_net_t();
 
 		nl_double Q_Analog() const { return m_cur_Analog; }
+		void set_Q_Analog(const nl_double &v) { m_cur_Analog = v; }
 		nl_double *Q_Analog_state_ptr() { return m_cur_Analog.ptr(); }
 
 		//FIXME: needed by current solver code
@@ -980,7 +969,7 @@ namespace netlist
 	private:
 		/* hide this */
 		void setTo(const pstring &param) = delete;
-		model_map_t m_map;
+		detail::model_map_t m_map;
 };
 
 
@@ -1458,7 +1447,7 @@ namespace netlist
 	{
 		if (newQ != m_my_net.Q_Analog())
 		{
-			m_my_net.m_cur_Analog = newQ;
+			m_my_net.set_Q_Analog(newQ);
 			m_my_net.toggle_new_Q();
 			m_my_net.push_to_queue(NLTIME_FROM_NS(1));
 		}
