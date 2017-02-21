@@ -134,6 +134,7 @@ CPUS["HPHYBRID"] = true
 CPUS["SM510"] = true
 CPUS["MB86901"] = true
 CPUS["NANOPROCESSOR"] = true
+CPUS["CLIPPER"] = true
 
 --------------------------------------------------
 -- specify available sound cores; some of these are
@@ -167,7 +168,7 @@ SOUNDS["SN76496"] = true
 SOUNDS["POKEY"] = true
 SOUNDS["TIA"] = true
 SOUNDS["NES_APU"] = true
-SOUNDS["AMIGA"] = true
+SOUNDS["PAULA_8364"] = true
 SOUNDS["ASTROCADE"] = true
 --SOUNDS["NAMCO"] = true
 --SOUNDS["NAMCO_15XX"] = true
@@ -266,6 +267,7 @@ SOUNDS["VOLT_REG"] = true
 SOUNDS["MEA8000"] = true
 --SOUNDS["DAC76"] = true
 --SOUNDS["MM5837"] = true
+SOUNDS["DAVE"] = true
 
 --------------------------------------------------
 -- specify available video cores
@@ -276,6 +278,7 @@ VIDEOS["SEGA315_5313"] = true
 --VIDEOS+= BUFSPRITE"] = true
 VIDEOS["CDP1861"] = true
 VIDEOS["CDP1862"] = true
+--VIDEOS["CESBLIT"] = true
 VIDEOS["CRT9007"] = true
 VIDEOS["CRT9021"] = true
 VIDEOS["CRT9212"] = true
@@ -301,6 +304,7 @@ VIDEOS["HUC6202"] = true
 VIDEOS["HUC6260"] = true
 VIDEOS["HUC6261"] = true
 VIDEOS["HUC6270"] = true
+VIDEOS["HUC6271"] = true
 VIDEOS["HUC6272"] = true
 VIDEOS["I8244"] = true
 VIDEOS["I82730"] = true
@@ -342,6 +346,7 @@ VIDEOS["SCN2674"] = true
 VIDEOS["GB_LCD"] = true
 VIDEOS["GBA_LCD"] = true
 VIDEOS["MGA2064W"] = true
+VIDEOS["PPU2C0X"] = true
 
 --------------------------------------------------
 -- specify available machine cores
@@ -543,6 +548,7 @@ MACHINES["TTL74148"] = true
 MACHINES["TTL74153"] = true
 --MACHINES["TTL74157"] = true
 MACHINES["TTL74161"] = true
+MACHINES["TTL74164"] = true
 MACHINES["TTL74175"] = true
 MACHINES["TTL74181"] = true
 MACHINES["TTL7474"] = true
@@ -800,6 +806,7 @@ FORMATS["M5_DSK"] = true
 FORMATS["MBEE_CAS"] = true
 FORMATS["MFM_HD"] = true
 FORMATS["MM_DSK"] = true
+FORMATS["MS0515_DSK"] = true
 FORMATS["MSX_DSK"] = true
 FORMATS["MZ_CAS"] = true
 FORMATS["NANOS_DSK"] = true
@@ -945,6 +952,7 @@ function linkProjects_mame_mess(_target, _subtarget)
 		"ibm6580",
 		"imp",
 		"intel",
+		"interpro",
 		"interton",
 		"intv",
 		"isc",
@@ -1063,6 +1071,7 @@ function linkProjects_mame_mess(_target, _subtarget)
 		"vtech",
 		"wang",
 		"wavemate",
+		"westinghouse",
 		"xerox",
 		"xussrpc",
 		"yamaha",
@@ -1155,8 +1164,6 @@ files {
 	MAME_DIR .. "src/mame/machine/kabuki.cpp",
 	MAME_DIR .. "src/mame/machine/kabuki.h",
 	MAME_DIR .. "src/mame/video/pk8000.cpp",
-	MAME_DIR .. "src/mame/video/ppu2c0x.cpp",
-	MAME_DIR .. "src/mame/video/ppu2c0x.h",
 	MAME_DIR .. "src/mame/machine/snes.cpp",
 	MAME_DIR .. "src/mame/audio/snes_snd.cpp",
 	MAME_DIR .. "src/mame/audio/snes_snd.h",
@@ -1169,6 +1176,8 @@ files {
 	MAME_DIR .. "src/mame/video/rdpblend.h",
 	MAME_DIR .. "src/mame/video/rdptpipe.cpp",
 	MAME_DIR .. "src/mame/video/rdptpipe.h",
+	MAME_DIR .. "src/mame/video/pin64.cpp",
+	MAME_DIR .. "src/mame/video/pin64.h",
 	MAME_DIR .. "src/mame/machine/megadriv.cpp",
 	MAME_DIR .. "src/mame/drivers/naomi.cpp",
 	MAME_DIR .. "src/mame/includes/naomi.h",
@@ -1491,7 +1500,6 @@ files {
 createMESSProjects(_target, _subtarget, "banctec")
 files {
 	MAME_DIR .. "src/mame/drivers/banctec.cpp",
-	MAME_DIR .. "src/mame/includes/banctec.h",
 }
 
 createMESSProjects(_target, _subtarget, "bandai")
@@ -1837,8 +1845,6 @@ files {
 createMESSProjects(_target, _subtarget, "enterprise")
 files {
 	MAME_DIR .. "src/mame/drivers/ep64.cpp",
-	MAME_DIR .. "src/mame/audio/dave.cpp",
-	MAME_DIR .. "src/mame/audio/dave.h",
 	MAME_DIR .. "src/mame/video/nick.cpp",
 	MAME_DIR .. "src/mame/video/nick.h",
 }
@@ -2525,6 +2531,8 @@ files {
 createMESSProjects(_target, _subtarget, "prodigy")
 files {
 	MAME_DIR .. "src/mame/drivers/prodigy.cpp",
+	MAME_DIR .. "src/mame/machine/nl_prodigy.cpp",
+	MAME_DIR .. "src/mame/machine/nl_prodigy.h",
 }
 
 createMESSProjects(_target, _subtarget, "psion")
@@ -3208,6 +3216,11 @@ files {
 	MAME_DIR .. "src/mame/includes/wangpc.h",
 	MAME_DIR .. "src/mame/machine/wangpckb.cpp",
 	MAME_DIR .. "src/mame/machine/wangpckb.h",
+}
+
+createMESSProjects(_target, _subtarget, "westinghouse")
+files {
+	MAME_DIR .. "src/mame/drivers/testconsole.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "wavemate")
