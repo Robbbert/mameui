@@ -775,8 +775,6 @@ static Resize main_resize = { {0, 0, 0, 0}, main_resize_items };
 /* last directory for common file dialogs */
 TCHAR last_directory[MAX_PATH];
 
-static BOOL use_gui_romloading = FALSE;
-
 static BOOL g_listview_dragging = FALSE;
 static HIMAGELIST himl_drag;
 static int game_dragged; /* which game started the drag */
@@ -973,39 +971,22 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	return (DWORD)0;
 }
 
-int MameUIMain(HINSTANCE    hInstance, LPWSTR lpCmdLine, int nCmdShow)
+int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
 	dprintf("MAMEUI starting\n");
-
-	use_gui_romloading = TRUE;
 
 	if (__argc != 1)
 	{
 		/* Rename main because gcc will use it instead of WinMain even with -mwindows */
-		extern int /*DECL_SPEC*/ utf8_main(int, char*[]);
-		char **utf8_argv;
-		int i = 0, rc = 0;
+		extern int utf8_main(std::vector<std::string> &args);
+		std::vector<std::string> utf8_argv(__argc);
 
 		/* convert arguments to UTF-8 */
-		utf8_argv = (char **) malloc(__argc * sizeof(*__targv));
-		if (utf8_argv == NULL)
-			return 999;
-		for (i = 0; i < __argc; i++)
-		{
+		for (int i = 0; i < __argc; i++)
 			utf8_argv[i] = ui_utf8_from_wstring(__targv[i]);
-			if (utf8_argv[i] == NULL)
-				return 999;
-		}
 
 		/* run utf8_main */
-		rc = utf8_main(__argc, utf8_argv);
-
-		/* free arguments */
-		for (i = 0; i < __argc; i++)
-			free(utf8_argv[i]);
-		free(utf8_argv);
-
-		exit(rc);
+		exit(utf8_main(utf8_argv));
 	}
 	if (!Win32UI_init(hInstance, lpCmdLine, nCmdShow))
 		return 1;

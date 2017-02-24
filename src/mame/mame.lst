@@ -2387,6 +2387,7 @@ atetrisc2                       // 136066           (c) 1989
 mwskins                         // (c) 2000 Midway
 mwskinsa                        // (c) 2000 Midway
 mwskinso                        // (c) 2000 Midway
+mwskinst                        // (c) 2000 Midway
 
 @source:atm.cpp
 atm                             //
@@ -9446,6 +9447,7 @@ mj3d                            // 2005.12 Sega Network Taisen Mahjong MJ 3 (Rev
 mj3evo                          // 2007.06 Sega Network Taisen Mahjong MJ 3 Evolution (Rev B)
 ollie                           // 2004.03 Ollie King
 outr2                           // 2003.12 Outrun 2 (Rev A)
+outr2sto                        // 2004.09 Outrun 2 Special Tours
 outr2st                         // 2004.12 Outrun 2 Special Tours (Rev A)
 outr2stj                        // 2004.12 Outrun 2 Special Tours (Japan) (Rev A)
 scg06nt                         // 2005.12 Sega Golf Club 2006: Next Tours (Rev A)
@@ -10486,6 +10488,9 @@ raidersr3                       // (c) 1983 Century Electronics UK
 spacefrt                        // (c) 1981 Century
 superbik                        // (c) 1983 Century
 wallst                          // (c) 1982 Century
+
+@source:cxgz80.cpp
+ch2001                          //
 
 @source:cxhumax.cpp
 hxhdci2k                        //
@@ -12292,6 +12297,7 @@ fgoala                          // MF  (c) 1979 Taito Corporation
 
 @source:fidel6502.cpp
 chesster                        //
+chesstera                       //
 csc                             // CSC: Champion Sensory Chess Challenger (English)
 cscfr                           // * French
 cscg                            // * German
@@ -14323,11 +14329,14 @@ hccbaskb                        // Tiger Electronics
 leboom                          // Lakeside
 maniac                          // Ideal
 melodym                         // GAF
+pabball                         // Caprice
 rockpin                         // Tiger Electronics
 tbaskb                          // Tandy Radio Shack
 touchme                         // Atari
 ttfball                         // Toytronic
 ttfballa                        // Toytronic
+usfball                         // US Games
+uspbball                        // US Games
 
 @source:hh_sm510.cpp
 gnwmndon                        // Nintendo
@@ -14544,6 +14553,7 @@ vector1                         //
 @source:hornet.cpp
 gradius4                        // GX837 (c)1999
 nbapbp                          // GX778 (c)1998
+nbapbpa                         // GX778 (c)1998
 sscope                          // GX830 (c)1999
 sscope2                         // GX931 (c)2000
 sscopea                         // GX830 (c)1999
@@ -20361,6 +20371,7 @@ nbahangt                        // (c) 1996 Midway
 nbamht                          // (c) 1996 Midway
 nbamht1                         // (c) 1996 Midway
 openice                         // (c) 1995 Midway
+openicea                        // (c) 1995 Midway
 rmpgwt                          // (c) 1997 Midway
 rmpgwt11                        // (c) 1997 Midway
 umk3                            // (c) 1994 Midway
@@ -31638,6 +31649,7 @@ raiden2                         // (c) 1993 Seibu Kaihatsu + Fabtek license
 raiden2dx                       // (c) 1993 Seibu Kaihatsu
 raiden2e                        // (c) 1993 Seibu Kaihatsu
 raiden2ea                       // (c) 1993 Seibu Kaihatsu
+raiden2eg                       // (c) 1993 Seibu Kaihatsu + Tuning license
 raiden2eu                       // (c) 1993 Seibu Kaihatsu + Fabtek license
 raiden2eua                      // (c) 1993 Seibu Kaihatsu + Fabtek license
 raiden2f                        // (c) 1993 Seibu Kaihatsu
@@ -34728,6 +34740,7 @@ supracan                        //
 @source:suprgolf.cpp
 albatross                       //
 suprgolf                        // (c) 1989 Nasco
+suprgolfj                       // (c) 1989 Nasco
 
 @source:suprloco.cpp
 suprloco                        // (c) 1982 Sega
