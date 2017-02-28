@@ -29,7 +29,7 @@ typedef std::unordered_map<std::string, const software_info *> softlist_map;
 //**************************************************************************
 
 // device type definition
-const device_type SOFTWARE_LIST = &device_creator<software_list_device>;
+const device_type SOFTWARE_LIST = device_creator<software_list_device>;
 false_software_list_loader false_software_list_loader::s_instance;
 rom_software_list_loader rom_software_list_loader::s_instance;
 image_software_list_loader image_software_list_loader::s_instance;
@@ -377,10 +377,6 @@ device_image_interface *software_list_device::find_mountable_image(const machine
 		const char *interface = image.image_interface();
 		if (interface != nullptr && part.matches_interface(interface))
 		{
-// MESSUI - fix MT 6107
-			// mount only if not already mounted
-//			const char *option = mconfig.options().value(image.brief_instance_name());
-//			if (*option == '\0' && !image.filename())
 			if (!image.filename())
 				return &image;
 		}
