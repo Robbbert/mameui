@@ -396,11 +396,12 @@ private:
 	uint8_t m_exp_regs[0x10];
 	uint8_t *m_exp_ram;
 	int m_exp_wptr, m_exp_liveptr;
+	int m_wrtcount;
 
 	void do_io(address_space &space, int offset, bool is_iic);
 	uint8_t read_floatingbus();
 	void update_slotrom_banks();
-	void lc_update(int offset);
+	void lc_update(int offset, bool write);
 	uint8_t read_slot_rom(address_space &space, int slotbias, int offset);
 	void write_slot_rom(address_space &space, int slotbias, int offset, uint8_t data);
 	uint8_t read_int_rom(address_space &space, int slotbias, int offset);
@@ -702,6 +703,7 @@ void apple2e_state::machine_start()
 	save_item(NAME(m_lcram2));
 	save_item(NAME(m_lcwriteenable));
 	save_item(NAME(m_mockingboard4c));
+	save_item(NAME(m_wrtcount));
 }
 
 void apple2e_state::machine_reset()
@@ -755,11 +757,14 @@ void apple2e_state::machine_reset()
 	m_lcram = false;
 	m_lcram2 = true;
 	m_lcwriteenable = true;
+	m_wrtcount = 2;
+	// set bank device to read ROM, write enabled
+	m_lcbank->set_bank(0);
 
 	m_exp_bankhior = 0xf0;
 
 	// sync up the banking with the variables.
-	// RESEARCH: how does RESET affect LC state and aux banking states?
+	// Understanding the Apple IIe: RESET on the IIe always resets LC state, doesn't on II/II+ with discrete LC
 	auxbank_update();
 	update_slotrom_banks();
 }
@@ -1004,25 +1009,54 @@ void apple2e_state::update_slotrom_banks()
 	}
 }
 
-void apple2e_state::lc_update(int offset)
+void apple2e_state::lc_update(int offset, bool write)
 {
 	bool m_last_lcram = m_lcram;
 
 	m_lcram = false;
 	m_lcram2 = false;
-	m_lcwriteenable = false;
 
-	if (offset & 1)
+	switch (offset)
 	{
-		m_lcwriteenable = true;
-	}
-
-	switch(offset & 0x03)
-	{
-		case 0x00:
-		case 0x03:
+		case 0x0: case 0x8: case 0x4: case 0xc:
+			m_wrtcount = 0;
+			m_lcwriteenable = false;
 			m_lcram = true;
 			break;
+			
+		case 0x1: case 0x9: case 0x5: case 0xd:
+			if (write)
+			{
+				m_wrtcount = 0;
+			}
+			else
+			{
+				m_wrtcount++;
+			}		
+			break;
+
+		case 0x2: case 0xa: case 0x6: case 0xe:
+			m_wrtcount = 0;
+			m_lcwriteenable = false;
+			break;
+			
+		case 0x3: case 0xb: case 0x7: case 0xf:
+			if (write)
+			{
+				m_wrtcount = 0;
+			}
+			else
+			{
+				m_wrtcount++;
+			}		
+			m_lcram = true;
+			break;
+	}
+	
+	if (m_wrtcount >= 2)
+	{
+		m_lcwriteenable = true;
+		m_wrtcount = 2;
 	}
 
 	if (!(offset & 8))
@@ -1050,9 +1084,10 @@ void apple2e_state::lc_update(int offset)
 	}
 
 	#if 0
-	printf("LC: new state %c%c dxxx=%04x altzp=%d\n",
+	printf("LC: new state %c%c (%d) dxxx=%04x altzp=%d\n",
 			m_lcram ? 'R' : 'x',
 			m_lcwriteenable ? 'W' : 'x',
+			m_wrtcount,
 			m_lcram2 ? 0x1000 : 0x0000,
 			m_altzp);
 	#endif
@@ -1842,7 +1877,7 @@ READ8_MEMBER(apple2e_state::c080_r)
 
 		if (slot == 0)
 		{
-			lc_update(offset & 0xf);
+			lc_update(offset & 0xf, false);
 		}
 		else
 		{
@@ -1865,7 +1900,7 @@ WRITE8_MEMBER(apple2e_state::c080_w)
 
 	if (slot == 0)
 	{
-		lc_update(offset & 0xf);
+		lc_update(offset & 0xf, true);
 	}
 	else
 	{
