@@ -498,7 +498,8 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 							if (flist.name() == "usage")
 								usage = flist.value().c_str();
 						// Now actually add the item
-						SoftwareList_AddFile(hwndSoftwareList, swinfo.shortname().c_str(), swlistdev.list_name().c_str(), swinfo.longname().c_str(), swinfo.publisher().c_str(), swinfo.year().c_str(), usage, image.brief_instance_name());
+						SoftwareList_AddFile(hwndSoftwareList, swinfo.shortname().c_str(), swlistdev.list_name().c_str(), swinfo.longname().c_str(),
+							swinfo.publisher().c_str(), swinfo.year().c_str(), usage, image.brief_instance_name().c_str());
 						break;
 					}
 				}
@@ -544,11 +545,12 @@ static void InternalSetSelectedSoftware(int drvindex, const machine_config *conf
 	if (!pszSoftware)
 		pszSoftware = "";
 
-	const char *s, *opt_name = device->instance_name();
+	const char *s;
+	std::string opt_name = device->instance_name();
 	windows_options o;
 
 	load_options(o, OPTIONS_GAME, drvindex);
-	s = o.value(opt_name);
+	s = o.value(opt_name.c_str());
 	// only call SetSelectedSoftware() if this value is different
 	if (strcmp(s, pszSoftware)!=0)
 	{
@@ -580,9 +582,9 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *device,
 	{
 		for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 		{
-			const char *opt_name = dev.instance_name();
-			s = o.value(opt_name);
-			if ((s != NULL) && (core_stricmp(s, pszFilename)==0))
+			std::string opt_name = dev.instance_name();
+			s = o.value(opt_name.c_str());
+			if (s && (core_stricmp(s, pszFilename)==0))
 			{
 				device = &dev;
 				break;
@@ -603,8 +605,8 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *device,
 		{
 			for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 			{
-				const char *opt_name = dev.instance_name();
-				s = o.value(opt_name);
+				std::string opt_name = dev.instance_name();
+				s = o.value(opt_name.c_str());
 				if (is_null_or_empty(s) && dev.uses_file_extension(file_extension))
 				{
 					device = &dev;
@@ -620,8 +622,8 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *device,
 		{
 			for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 			{
-				const char *opt_name = dev.instance_name();
-				s = o.value(opt_name);
+				std::string opt_name = dev.instance_name();
+				s = o.value(opt_name.c_str());
 				if (!is_null_or_empty(s) && dev.uses_file_extension(file_extension))
 				{
 					device = &dev;
@@ -653,9 +655,9 @@ static void MessRemoveImage(int drvindex, const char *pszFilename)
 
 	for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 	{
-		const char *opt_name = dev.instance_name();
+		std::string opt_name = dev.instance_name();
 		load_options(o, OPTIONS_GAME, drvindex);
-		s = o.value(opt_name);
+		s = o.value(opt_name.c_str());
 		if ((s) && !strcmp(pszFilename, s))
 			MessSpecifyImage(drvindex, &dev, NULL);
 	}
@@ -692,9 +694,9 @@ static void MessRefreshPicker(void)
 
 	for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 	{
-		const char *opt_name = dev.instance_name(); // get name of device slot
+		std::string opt_name = dev.instance_name(); // get name of device slot
 		load_options(o, OPTIONS_GAME, s_config->driver_index);
-		s = o.value(opt_name); // get name of software in the slot
+		s = o.value(opt_name.c_str()); // get name of software in the slot
 
 		if (s[0]) // if software is loaded
 		{
@@ -997,11 +999,11 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 	mess_image_type imagetypes[256];
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	int drvindex = Picker_GetSelectedItem(hwndList);
-	std::string as, dst;
-	const char *s, *opt_name = dev->instance_name();
+	const char *s;
+	std::string as, dst, opt_name = dev->instance_name();
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex);
-	s = o.value(opt_name);
+	s = o.value(opt_name.c_str());
 
 	/* Get the path to the currently mounted image */
 	util::zippath_parent(as, s);
@@ -1099,11 +1101,11 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 	mess_image_type imagetypes[256];
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	int drvindex = Picker_GetSelectedItem(hwndList);
-	std::string as, dst;
-	const char *s, *opt_name = dev->instance_name();
+	const char *s;
+	std::string as, dst, opt_name = dev->instance_name();
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex);
-	s = o.value(opt_name);
+	s = o.value(opt_name.c_str());
 
 	/* Get the path to the currently mounted image, chop off any trailing backslash */
 	util::zippath_parent(as, s);
@@ -1132,7 +1134,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 				{
 					for (device_image_interface &image : image_interface_iterator(config->root_device()))
 					{
-						if ((i == 0) && (std::string(opt_name) == std::string(image.instance_name())))
+						if ((i == 0) && (opt_name == image.instance_name()))
 						{
 							const char *interface = image.image_interface();
 							if (interface != nullptr && part.matches_interface(interface))
@@ -1180,7 +1182,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 
 	// set up inifile text to signify to MAME that a SW ITEM is to be used
 	strcpy(g_szSelectedSoftware, t3.c_str()); // store to global item name
-	strcpy(g_szSelectedDevice, opt_name); // get media-device name (brief_instance_name is ok too)
+	strcpy(g_szSelectedDevice, opt_name.c_str()); // get media-device name (brief_instance_name is ok too)
 
 	free(t_s);
 	return bResult;
@@ -1301,11 +1303,11 @@ static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex,
 	LPCTSTR t_buffer = NULL;
 	TCHAR* t_s;
 	LPCSTR s;
-	const char *opt_name = dev->instance_name();
+	std::string opt_name = dev->instance_name();
 	windows_options o;
 
 	load_options(o, OPTIONS_GAME, nDriverIndex);
-	s = o.value(opt_name);
+	s = o.value(opt_name.c_str());
 
 	t_s = ui_wstring_from_utf8(s);
 	if( !t_s )
