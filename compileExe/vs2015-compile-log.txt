@@ -1,0 +1,6761 @@
+1>------ 已启动生成: 项目: atari, 配置: Debug Win32 ------
+2>------ 已启动生成: 项目: xerox, 配置: Debug Win32 ------
+3>------ 已启动生成: 项目: xussrpc, 配置: Debug Win32 ------
+4>------ 已启动生成: 项目: yamaha, 配置: Debug Win32 ------
+5>------ 已启动生成: 项目: zenith, 配置: Debug Win32 ------
+6>------ 已启动生成: 项目: zpa, 配置: Debug Win32 ------
+7>------ 已启动生成: 项目: zvt, 配置: Debug Win32 ------
+8>------ 已启动生成: 项目: qtdbg_messui, 配置: Debug Win32 ------
+1>  arcadecl.cpp
+1>  asteroid.cpp
+1>  atarifb.cpp
+1>  atarig1.cpp
+1>  atarig42.cpp
+1>  atarigt.cpp
+1>  atarigx2.cpp
+1>  atarisy1.cpp
+3>  ec184x.cpp
+3>  iskr103x.cpp
+3>  mc1502.cpp
+3>  poisk1.cpp
+1>  atarisy2.cpp
+1>  atarisy4.cpp
+1>  atarittl.cpp
+1>  atetris.cpp
+1>  avalnche.cpp
+1>  badlands.cpp
+1>  bartop52.cpp
+1>  batman.cpp
+1>  beathead.cpp
+1>  blstroid.cpp
+1>  boxer.cpp
+1>  bsktball.cpp
+1>  bwidow.cpp
+1>  bzone.cpp
+1>  canyon.cpp
+6>  iq151.cpp
+5>  z100.cpp
+8>  debugqt.cpp
+7>  pp01.cpp
+4>  ymmu100.cpp
+4>  fb01.cpp
+2>  xerox820.cpp
+2>  bigbord2.cpp
+2>  alto2.cpp
+8>  qtdbg_messui.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\qtdbg_messui.lib
+9>------ 已启动生成: 项目: osd_messui, 配置: Debug Win32 ------
+9>  osdnet.cpp
+9>  watchdog.cpp
+1>  cball.cpp
+3>  xussrpc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\xussrpc.lib
+10>------ 已启动生成: 项目: ocore_messui, 配置: Debug Win32 ------
+7>  pp01.cpp
+10>  osdcore.cpp
+10>  strconv.cpp
+10>  osdsync.cpp
+5>  zenith.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\zenith.lib
+11>------ 已启动生成: 项目: utils, 配置: Debug Win32 ------
+6>  zpa.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\zpa.lib
+12>------ 已启动生成: 项目: netlist, 配置: Debug Win32 ------
+11>  avhuff.cpp
+11>  aviio.cpp
+11>  bitmap.cpp
+11>  cdrom.cpp
+11>  chd.cpp
+11>  chdcd.cpp
+11>  chdcodec.cpp
+11>  corefile.cpp
+12>  nl_base.cpp
+12>  nl_factory.cpp
+12>  nl_parser.cpp
+12>  nl_setup.cpp
+1>  ccastles.cpp
+11>  corestr.cpp
+11>  coreutil.cpp
+1>  centiped.cpp
+11>  delegate.cpp
+10>  main.cpp
+10>  winutf8.cpp
+10>  winutil.cpp
+11>  flac.cpp
+11>  harddisk.cpp
+11>  hash.cpp
+1>  cloak.cpp
+1>  cloud9.cpp
+11>  hashing.cpp
+11>  huffman.cpp
+11>  jedparse.cpp
+11>  md5.cpp
+11>  nanosvg.cpp
+1>  cmmb.cpp
+1>  cops.cpp
+11>  opresolv.cpp
+11>  options.cpp
+11>  palette.cpp
+11>  path_to_regex.cpp
+11>  plaparse.cpp
+11>  png.cpp
+11>  pool.cpp
+11>  sha1.cpp
+11>  strformat.cpp
+11>  timeconv.cpp
+11>  unicode.cpp
+11>  unzip.cpp
+1>  copsnrob.cpp
+9>  osdobj_common.cpp
+11>  un7z.cpp
+11>  vbiparse.cpp
+11>  vecstream.cpp
+7>  pp01.cpp
+11>  wavwrite.cpp
+11>  xmlfile.cpp
+11>  zippath.cpp
+1>  cyberbal.cpp
+1>  destroyr.cpp
+1>  dragrace.cpp
+4>  yamaha.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\yamaha.lib
+13>------ 已启动生成: 项目: formats, 配置: Debug Win32 ------
+1>  eprom.cpp
+10>  osdmodule.cpp
+1>  firefox.cpp
+13>  ioprocs.cpp
+13>  imageutl.cpp
+13>  cassimg.cpp
+13>  wavfile.cpp
+13>  flopimg.cpp
+13>  cqm_dsk.cpp
+13>  dsk_dsk.cpp
+13>  td0_dsk.cpp
+12>  palloc.cpp
+12>  pchrono.cpp
+12>  pexception.cpp
+12>  pfunction.cpp
+12>  pfmtlog.cpp
+12>  pdynlib.cpp
+12>  pmain.cpp
+12>  poptions.cpp
+2>  x820kb.cpp
+10>  windir.cpp
+10>  winfile.cpp
+10>  winptty.cpp
+10>  winsocket.cpp
+12>  pparser.cpp
+1>  firetrk.cpp
+12>  pstate.cpp
+12>  pstring.cpp
+13>  hxchfe_dsk.cpp
+12>  pstream.cpp
+12>  putil.cpp
+13>  hxcmfm_dsk.cpp
+13>  mfi_dsk.cpp
+13>  imd_dsk.cpp
+13>  ipf_dsk.cpp
+11>  utils.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\utils.lib
+13>  d88_dsk.cpp
+14>------ 已启动生成: 项目: expat, 配置: Debug Win32 ------
+9>  none.cpp
+9>  diagnostics_win32.cpp
+14>  xmlparse.c
+14>  xmlrole.c
+14>  xmltok.c
+1>  flyball.cpp
+13>  dfi_dsk.cpp
+10>  osdlib_win32.cpp
+14>  expat.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\expat.lib
+15>------ 已启动生成: 项目: zlib, 配置: Debug Win32 ------
+15>  adler32.c
+15>  compress.c
+15>  crc32.c
+15>  deflate.c
+15>  inffast.c
+15>  inflate.c
+15>  infback.c
+13>  fdi_dsk.cpp
+15>  inftrees.c
+7>  zvt.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\zvt.lib
+16>------ 已启动生成: 项目: softfloat, 配置: Debug Win32 ------
+15>  trees.c
+12>  nl_convert.cpp
+15>  uncompr.c
+15>  zutil.c
+16>  softfloat.c
+16>  fsincos.c
+16>  fyl2x.c
+13>  2d_dsk.cpp
+15>  zlib.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\zlib.lib
+17>------ 已启动生成: 项目: jpeg, 配置: Debug Win32 ------
+13>  a26_cas.cpp
+13>  a5105_dsk.cpp
+13>  abc800_dsk.cpp
+17>  jaricom.c
+10>  ocore_messui.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\ocore_messui.lib
+18>------ 已启动生成: 项目: flac, 配置: Debug Win32 ------
+17>  jcapimin.c
+17>  jcapistd.c
+17>  jcarith.c
+17>  jccoefct.c
+17>  jccolor.c
+1>  foodf.cpp
+17>  jcdctmgr.c
+17>  jchuff.c
+18>  bitmath.c
+18>  bitreader.c
+18>  bitwriter.c
+18>  cpu.c
+16>  softfloat.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\softfloat.lib
+19>------ 已启动生成: 项目: 7z, 配置: Debug Win32 ------
+17>  jcinit.c
+18>  crc.c
+18>  fixed.c
+17>  jcmainct.c
+18>  float.c
+17>  jcmarker.c
+17>  jcmaster.c
+17>  jcomapi.c
+17>  jcparam.c
+18>  format.c
+18>  lpc.c
+18>  md5.c
+17>  jcprepct.c
+18>  memory.c
+18>  stream_decoder.c
+18>  stream_encoder.c
+17>  jcsample.c
+18>  stream_encoder_framing.c
+18>  window.c
+17>  jctrans.c
+17>  jdapimin.c
+17>  jdapistd.c
+17>  jdarith.c
+17>  jdatadst.c
+17>  jdatasrc.c
+19>  7zAlloc.c
+19>  7zArcIn.c
+19>  7zBuf.c
+19>  7zBuf2.c
+19>  7zCrc.c
+19>  7zCrcOpt.c
+19>  7zDec.c
+19>  7zFile.c
+17>  jdcoefct.c
+17>  jdcolor.c
+19>  7zStream.c
+19>  Aes.c
+17>  jddctmgr.c
+19>  AesOpt.c
+19>  Alloc.c
+19>  Bcj2.c
+17>  jdhuff.c
+17>  jdinput.c
+17>  jdmainct.c
+17>  jdmarker.c
+17>  jdmaster.c
+13>  abcfd2_dsk.cpp
+19>  Bra.c
+19>  Bra86.c
+19>  BraIA64.c
+19>  CpuArch.c
+19>  Delta.c
+19>  LzFind.c
+19>  Lzma2Dec.c
+19>  Lzma2Enc.c
+19>  Lzma86Dec.c
+17>  jdmerge.c
+17>  jdpostct.c
+17>  jdsample.c
+17>  jdtrans.c
+19>  Lzma86Enc.c
+17>  jerror.c
+17>  jfdctflt.c
+19>  LzmaDec.c
+17>  jfdctfst.c
+19>  LzmaEnc.c
+19>  Ppmd7.c
+17>  jfdctint.c
+19>  Ppmd7Dec.c
+13>  ace_tap.cpp
+19>  Ppmd7Enc.c
+13>  acorn_dsk.cpp
+19>  Sha256.c
+19>  Sort.c
+13>  adam_cas.cpp
+12>  nld_bjt.cpp
+12>  nlid_fourterm.cpp
+13>  adam_dsk.cpp
+12>  nld_switches.cpp
+12>  nlid_twoterm.cpp
+17>  jidctflt.c
+12>  nld_opamps.cpp
+17>  jidctfst.c
+17>  jidctint.c
+17>  jquant1.c
+17>  jquant2.c
+17>  jutils.c
+17>  jmemmgr.c
+17>  jmemansi.c
+19>  7z.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\7z.lib
+20>------ 已启动生成: 项目: lua, 配置: Debug Win32 ------
+17>  jpeg.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\jpeg.lib
+21>------ 已启动生成: 项目: lualibs, 配置: Debug Win32 ------
+20>  lapi.c
+20>  lcode.c
+20>  lctype.c
+20>  ldebug.c
+20>  ldo.c
+20>  ldump.c
+20>  lfunc.c
+20>  lgc.c
+13>  afs_dsk.cpp
+20>  llex.c
+21>  lsqlite3.c
+13>  ami_dsk.cpp
+13>  ap2_dsk.cpp
+13>  apd_dsk.cpp
+20>  lmem.c
+20>  lobject.c
+20>  lopcodes.c
+20>  lparser.c
+20>  lstate.c
+1>  gauntlet.cpp
+20>  lstring.c
+20>  ltable.c
+20>  ltm.c
+20>  lundump.c
+20>  lvm.c
+20>  lzio.c
+20>  lauxlib.c
+20>  lbaselib.c
+20>  lbitlib.c
+20>  lcorolib.c
+13>  apf_apt.cpp
+20>  ldblib.c
+20>  liolib.c
+20>  lmathlib.c
+20>  loslib.c
+20>  lstrlib.c
+20>  ltablib.c
+20>  loadlib.c
+20>  linit.c
+20>  lutf8lib.c
+21>  lua_zlib.c
+1>  harddriv.cpp
+13>  apollo_dsk.cpp
+21>  lfs.c
+20>  lua.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\lua.lib
+22>------ 已启动生成: 项目: sqlite3, 配置: Debug Win32 ------
+13>  applix_dsk.cpp
+13>  apridisk.cpp
+1>  irobot.cpp
+13>  ap_dsk35.cpp
+13>  asst128_dsk.cpp
+13>  atari_dsk.cpp
+21>  linenoise.c
+22>  sqlite3.c
+1>  jaguar.cpp
+13>  atom_dsk.cpp
+1>  jedi.cpp
+13>  atom_tap.cpp
+1>  klax.cpp
+1>  liberatr.cpp
+13>  basicdsk.cpp
+21>  lualibs.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\lualibs.lib
+23>------ 已启动生成: 项目: portmidi, 配置: Debug Win32 ------
+18>  flac.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\flac.lib
+24>------ 已启动生成: 项目: bx, 配置: Debug Win32 ------
+12>  nld_solver.cpp
+12>  nld_matrix_solver.cpp
+23>  portmidi.c
+23>  pmutil.c
+24>  commandline.cpp
+24>  crt.cpp
+24>  crtimpl.cpp
+24>  debug.cpp
+24>  dtoa.cpp
+24>  fpumath.cpp
+24>  mutex.cpp
+24>  os.cpp
+13>  bw12_dsk.cpp
+23>  ptwinmm.c
+13>  bw2_dsk.cpp
+13>  c3040_dsk.cpp
+23>  pmwin.c
+23>  pmwinmm.c
+13>  c4040_dsk.cpp
+24>  sem.cpp
+22>  sqlite3.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\sqlite3.lib
+25>------ 已启动生成: 项目: bgfx, 配置: Debug Win32 ------
+24>  string.cpp
+24>  thread.cpp
+25>  bgfx.cpp
+25>  glcontext_egl.cpp
+25>  glcontext_glx.cpp
+25>  glcontext_ppapi.cpp
+25>  glcontext_wgl.cpp
+25>  image.cpp
+25>  hmd.cpp
+25>  hmd_ovr.cpp
+13>  c8280_dsk.cpp
+23>  portmidi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\portmidi.lib
+26>------ 已启动生成: 项目: portaudio, 配置: Debug Win32 ------
+24>  bx.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\bx.lib
+27>------ 已启动生成: 项目: linenoise-ng, 配置: Debug Win32 ------
+1>  mediagx.cpp
+13>  camplynx_cas.cpp
+13>  camplynx_dsk.cpp
+26>  pa_allocation.c
+26>  pa_converters.c
+26>  pa_cpuload.c
+26>  pa_dither.c
+26>  pa_debugprint.c
+26>  pa_front.c
+26>  pa_process.c
+26>  pa_stream.c
+13>  cbm_crt.cpp
+13>  cbm_tap.cpp
+13>  ccvf_dsk.cpp
+27>  ConvertUTF.cpp
+26>  pa_trace.c
+27>  linenoise.cpp
+26>  pa_ringbuffer.c
+27>  wcwidth.cpp
+13>  cd90_640_dsk.cpp
+2>  xerox.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\xerox.lib
+28>------ 已启动生成: 项目: utf8proc, 配置: Debug Win32 ------
+26>  pa_hostapi_skeleton.c
+13>  cgenie_dsk.cpp
+13>  cgen_cas.cpp
+28>  utf8proc.c
+26>  pa_win_util.c
+26>  pa_win_waveformat.c
+9>  none.cpp
+26>  pa_win_hostapis.c
+26>  pa_win_coinitialize.c
+9>  debugwin.cpp
+9>  debugimgui.cpp
+25>  hmd_openvr.cpp
+25>  renderer_d3d12.cpp
+25>  renderer_d3d11.cpp
+25>  renderer_d3d9.cpp
+1>  metalmx.cpp
+13>  coco_cas.cpp
+26>  pa_win_ds.c
+26>  pa_win_ds_dynlink.c
+25>  renderer_gl.cpp
+13>  comx35_dsk.cpp
+13>  concept_dsk.cpp
+13>  coupedsk.cpp
+28>  utf8proc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\utf8proc.lib
+29>------ 已启动生成: 项目: emu, 配置: Debug Win32 ------
+27>  linenoise-ng.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\linenoise-ng.lib
+30>------ 已启动生成: 项目: skeleton, 配置: Debug Win32 ------
+1>  mgolf.cpp
+26>  pa_win_wasapi.c
+25>  renderer_gnm.cpp
+25>  renderer_noop.cpp
+30>  aceex.cpp
+30>  akaiax80.cpp
+30>  alesis_qs.cpp
+30>  alphasma.cpp
+30>  ampro.cpp
+30>  amust.cpp
+30>  anzterm.cpp
+30>  applix.cpp
+25>  renderer_vk.cpp
+13>  cpis_dsk.cpp
+13>  csw_cas.cpp
+13>  d64_dsk.cpp
+13>  d71_dsk.cpp
+25>  debug_renderdoc.cpp
+25>  shader.cpp
+1>  mhavoc.cpp
+25>  shader_dxbc.cpp
+25>  shader_dx9bc.cpp
+25>  shader_spirv.cpp
+25>  topology.cpp
+13>  d80_dsk.cpp
+25>  vertexdecl.cpp
+13>  d81_dsk.cpp
+13>  d82_dsk.cpp
+1>  missile.cpp
+1>  nitedrvr.cpp
+13>  dcp_dsk.cpp
+26>  pa_win_wdmks.c
+12>  nld_2102A.cpp
+12>  nld_2716.cpp
+12>  nld_4020.cpp
+12>  nld_4066.cpp
+12>  nld_4316.cpp
+12>  nld_7448.cpp
+12>  nld_7450.cpp
+12>  nld_7473.cpp
+13>  dim_dsk.cpp
+1>  offtwall.cpp
+25>  imgui.cpp
+25>  ocornut_imgui.cpp
+13>  dip_dsk.cpp
+13>  dmk_dsk.cpp
+13>  ep64_dsk.cpp
+13>  dmv_dsk.cpp
+13>  esq16_dsk.cpp
+1>  orbit.cpp
+13>  esq8_dsk.cpp
+1>  pong.cpp
+1>  poolshrk.cpp
+13>  excali64_dsk.cpp
+30>  argox.cpp
+1>  quantum.cpp
+13>  fc100_cas.cpp
+13>  fdd_dsk.cpp
+13>  flex_dsk.cpp
+13>  fm7_cas.cpp
+13>  fmsx_cas.cpp
+30>  attache.cpp
+26>  pa_win_wmme.c
+13>  fmtowns_dsk.cpp
+13>  fsd_dsk.cpp
+13>  g64_dsk.cpp
+13>  gtp_cas.cpp
+13>  guab_dsk.cpp
+13>  hector_minidisc.cpp
+13>  hect_dsk.cpp
+30>  aussiebyte.cpp
+13>  hect_tap.cpp
+26>  portaudio.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\portaudio.lib
+31>------ 已启动生成: 项目: frontend, 配置: Debug Win32 ------
+30>  ax20.cpp
+13>  iq151_dsk.cpp
+30>  beehive.cpp
+29>  Compressing src/emu/layout/lcd_rot.lay...
+13>  itt3030_dsk.cpp
+13>  jvc_dsk.cpp
+13>  kaypro_dsk.cpp
+1>  quizshow.cpp
+13>  kc85_dsk.cpp
+1>  rampart.cpp
+30>  binbug.cpp
+31>  audit.cpp
+31>  cheat.cpp
+31>  clifront.cpp
+31>  info.cpp
+31>  language.cpp
+13>  kc_cas.cpp
+1>  relief.cpp
+30>  besta.cpp
+31>  luaengine.cpp
+30>  bitgraph.cpp
+31>  mame.cpp
+13>  kim1_cas.cpp
+31>  mameopts.cpp
+13>  lviv_lvt.cpp
+13>  m20_dsk.cpp
+13>  m5_dsk.cpp
+1>  runaway.cpp
+13>  mbee_cas.cpp
+1>  sbrkout.cpp
+13>  mfm_hd.cpp
+25>  nanovg.cpp
+25>  nanovg_bgfx.cpp
+13>  mm_dsk.cpp
+13>  ms0515_dsk.cpp
+13>  msx_dsk.cpp
+30>  br8641.cpp
+1>  shuuz.cpp
+13>  mz_cas.cpp
+30>  busicom.cpp
+1>  skullxbo.cpp
+30>  chaos.cpp
+13>  nanos_dsk.cpp
+1>  skydiver.cpp
+30>  chesstrv.cpp
+13>  nascom_dsk.cpp
+13>  naslite_dsk.cpp
+13>  nes_dsk.cpp
+30>  cd2650.cpp
+1>  skyraid.cpp
+30>  cdc721.cpp
+1>  sprint2.cpp
+30>  codata.cpp
+1>  sprint4.cpp
+31>  media_ident.cpp
+31>  pluginopts.cpp
+30>  cortex.cpp
+13>  nfd_dsk.cpp
+13>  orao_cas.cpp
+13>  oric_dsk.cpp
+13>  oric_tap.cpp
+13>  p6001_cas.cpp
+13>  pasti_dsk.cpp
+13>  pc98fdi_dsk.cpp
+13>  pc98_dsk.cpp
+1>  sprint8.cpp
+30>  cosmicos.cpp
+1>  starshp1.cpp
+30>  cp1.cpp
+30>  cxhumax.cpp
+1>  starwars.cpp
+30>  czk80.cpp
+30>  d6800.cpp
+30>  d6809.cpp
+30>  daruma.cpp
+30>  didact.cpp
+1>  subs.cpp
+1>  tank8.cpp
+1>  tempest.cpp
+1>  thunderj.cpp
+1>  tomcat.cpp
+25>  imgui.cpp
+25>  imgui_draw.cpp
+1>  toobin.cpp
+1>  tourtabl.cpp
+1>  triplhnt.cpp
+30>  digel804.cpp
+30>  digijet.cpp
+1>  tunhunt.cpp
+30>  dim68k.cpp
+1>  ultratnk.cpp
+30>  dm7000.cpp
+1>  videopin.cpp
+30>  dmax8000.cpp
+1>  vindictr.cpp
+30>  dmv.cpp
+1>  wolfpack.cpp
+1>  xybots.cpp
+1>  a2600.cpp
+30>  dps1.cpp
+1>  a7800.cpp
+1>  atari400.cpp
+1>  atarist.cpp
+1>  lynx.cpp
+1>  pofo.cpp
+30>  dsb46.cpp
+30>  dual68.cpp
+30>  eacc.cpp
+30>  elwro800.cpp
+30>  eti660.cpp
+30>  excali64.cpp
+30>  fanucs15.cpp
+30>  fanucspmg.cpp
+30>  fc100.cpp
+30>  fk1.cpp
+30>  ft68m.cpp
+30>  gamate.cpp
+30>  gameking.cpp
+30>  gimix.cpp
+30>  goupil.cpp
+30>  grfd2301.cpp
+30>  harriet.cpp
+30>  hazeltin.cpp
+30>  hprot1.cpp
+30>  hpz80unk.cpp
+30>  ht68k.cpp
+30>  hunter2.cpp
+30>  i7000.cpp
+30>  ibm3153.cpp
+30>  icatel.cpp
+1>  arcadecl.cpp
+1>  atarifb.cpp
+1>  atarig1.cpp
+1>  atarig42.cpp
+1>  atarigt.cpp
+1>  atarigx2.cpp
+1>  atarisy1.cpp
+1>  atarisy2.cpp
+30>  ie15.cpp
+30>  if800.cpp
+30>  imsai.cpp
+30>  indiana.cpp
+30>  itt3030.cpp
+30>  jade.cpp
+30>  jonos.cpp
+30>  konin.cpp
+29>  Compressing src/emu/layout/triphsxs.lay...
+13>  pc_dsk.cpp
+13>  phc25_cas.cpp
+13>  pk8020_dsk.cpp
+13>  pmd_cas.cpp
+13>  primoptp.cpp
+13>  pyldin_dsk.cpp
+13>  ql_dsk.cpp
+13>  rk_cas.cpp
+13>  rx50_dsk.cpp
+13>  sc3000_bit.cpp
+13>  sf7000_dsk.cpp
+13>  smx_dsk.cpp
+13>  sol_cas.cpp
+13>  sorc_cas.cpp
+13>  sorc_dsk.cpp
+13>  sord_cas.cpp
+13>  spc1000_cas.cpp
+13>  st_dsk.cpp
+13>  svi_cas.cpp
+13>  svi_dsk.cpp
+13>  tandy2k_dsk.cpp
+13>  thom_cas.cpp
+29>  Compressing src/emu/layout/noscreens.lay...
+13>  thom_dsk.cpp
+13>  ti99_dsk.cpp
+12>  nld_7474.cpp
+12>  nld_7475.cpp
+13>  tiki100_dsk.cpp
+12>  nld_7483.cpp
+12>  nld_7485.cpp
+12>  nld_7490.cpp
+12>  nld_7493.cpp
+12>  nld_74107.cpp
+12>  nld_74123.cpp
+13>  trd_dsk.cpp
+13>  trs80_dsk.cpp
+13>  trs_cas.cpp
+13>  tvc_cas.cpp
+13>  tvc_dsk.cpp
+13>  tzx_cas.cpp
+29>  Compressing src/emu/layout/snap.lay...
+31>  ui.cpp
+31>  text.cpp
+31>  menu.cpp
+31>  submenu.cpp
+31>  mainmenu.cpp
+31>  miscmenu.cpp
+31>  barcode.cpp
+31>  cheatopt.cpp
+13>  uef_cas.cpp
+13>  upd765_dsk.cpp
+13>  vdk_dsk.cpp
+13>  vector06_dsk.cpp
+13>  vg5k_cas.cpp
+13>  victor9k_dsk.cpp
+29>  Compressing src/emu/layout/vertical.lay...
+25>  bgfx.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\bgfx.lib
+32>------ 已启动生成: 项目: optional, 配置: Debug Win32 ------
+13>  vt_cas.cpp
+13>  wd177x_dsk.cpp
+13>  x07_cas.cpp
+13>  x1_tap.cpp
+13>  xdf_dsk.cpp
+29>  Compressing src/emu/layout/dualhovu.lay...
+13>  zx81_p.cpp
+12>  nld_74153.cpp
+12>  nld_74161.cpp
+12>  nld_74164.cpp
+29>  Compressing src/emu/layout/horizont.lay...
+12>  nld_74165.cpp
+12>  nld_74166.cpp
+12>  nld_74174.cpp
+12>  nld_74175.cpp
+12>  nld_74192.cpp
+12>  nld_74193.cpp
+12>  nld_74194.cpp
+12>  nld_74365.cpp
+12>  nld_74ls629.cpp
+12>  nld_82S16.cpp
+12>  nld_82S115.cpp
+12>  nld_82S123.cpp
+12>  nld_82S126.cpp
+29>  Converting NotoSans-Bold.bdc...
+12>  nld_9310.cpp
+12>  nld_9316.cpp
+12>  nld_9322.cpp
+12>  nld_am2847.cpp
+12>  nld_dm9334.cpp
+12>  nld_ne555.cpp
+12>  nld_mm5837.cpp
+12>  nld_r2r_dac.cpp
+32>  Generating hd6309 source file...
+29>  Converting uicmd14.png...
+12>  nld_tristate.cpp
+12>  nld_legacy.cpp
+12>  net_lib.cpp
+12>  nld_log.cpp
+12>  nld_system.cpp
+12>  nlid_truthtable.cpp
+12>  nlid_proxy.cpp
+32>  Generating m65ce02 source file...
+29>  Compressing src/emu/layout/lcd.lay...
+32>  Generating m740 source file...
+29>  Compressing src/emu/layout/svg.lay...
+32>  Generating TMS57002 source file...
+30>  kron.cpp
+30>  leapster.cpp
+30>  lft.cpp
+30>  lg-dvd.cpp
+30>  lola8a.cpp
+30>  m79152pc.cpp
+30>  mccpm.cpp
+29>  Compressing src/emu/layout/dualhsxs.lay...
+32>  Generating n2a03 source file...
+30>  mes.cpp
+30>  mice.cpp
+30>  micral.cpp
+29>  Compressing src/emu/layout/dualhuov.lay...
+32>  Generating r65c02 source file...
+30>  micro20.cpp
+30>  micronic.cpp
+30>  mini2440.cpp
+30>  mmd1.cpp
+30>  mod8.cpp
+29>  Compressing src/emu/layout/quadhsxs.lay...
+32>  Generating ARCOMPACT source files...
+30>  modellot.cpp
+30>  molecular.cpp
+30>  ms0515.cpp
+30>  ms9540.cpp
+30>  mstation.cpp
+30>  mt735.cpp
+32>  Generating m6502 source file...
+30>  mx2178.cpp
+30>  mycom.cpp
+30>  myvision.cpp
+30>  notetaker.cpp
+30>  ngen.cpp
+32>  Compressing src/emu/layout/ex800.lay...
+30>  octopus.cpp
+30>  onyx.cpp
+30>  okean240.cpp
+30>  p8k.cpp
+32>  Generating konami source file...
+30>  pegasus.cpp
+30>  pencil2.cpp
+29>  main.cpp
+29>  hashfile.cpp
+29>  addrmap.cpp
+30>  pes.cpp
+29>  attotime.cpp
+29>  bookkeeping.cpp
+29>  config.cpp
+29>  crsshair.cpp
+29>  debugger.cpp
+32>  Generating m6809 source file...
+32>  Generating m6509 source file...
+30>  pipbug.cpp
+32>  Generating m4510 source file...
+32>  Generating H8-300 source file...
+30>  plan80.cpp
+32>  Generating H8-300H source file...
+32>  Generating H8S/2000 source file...
+32>  Generating H8S/2600 source file...
+32>  Generating m6510 source file...
+32>  Compressing src/emu/layout/lx800.lay...
+32>  Generating deco16 source file...
+32>  Generating mcs96 source file...
+29>  devdelegate.cpp
+32>  Generating i8x9x source file...
+32>  Generating i8xc196 source file...
+32>  Generating m65c02 source file...
+30>  pm68k.cpp
+32>  drcbec.cpp
+32>  drcbeut.cpp
+32>  drccache.cpp
+32>  drcfe.cpp
+32>  drcuml.cpp
+32>  uml.cpp
+32>  x86log.cpp
+32>  drcbex86.cpp
+30>  pockchal.cpp
+30>  poly.cpp
+30>  proteus3.cpp
+30>  pt68k4.cpp
+29>  devcb.cpp
+30>  ptcsol.cpp
+29>  devcpu.cpp
+29>  devfind.cpp
+29>  device.cpp
+30>  pulsar.cpp
+29>  didisasm.cpp
+29>  diexec.cpp
+30>  pv9234.cpp
+29>  digfx.cpp
+32>  drcbex64.cpp
+30>  qtsbc.cpp
+30>  rd100.cpp
+30>  rvoice.cpp
+30>  sacstate.cpp
+29>  diimage.cpp
+29>  dimemory.cpp
+29>  dinetwork.cpp
+29>  dinvram.cpp
+30>  sbrain.cpp
+29>  dioutput.cpp
+30>  seattlecmp.cpp
+29>  dipty.cpp
+29>  dirom.cpp
+30>  sh4robot.cpp
+30>  sansa_fuze.cpp
+30>  softbox.cpp
+30>  squale.cpp
+30>  swtpc.cpp
+30>  swyft.cpp
+29>  dirtc.cpp
+29>  diserial.cpp
+29>  dislot.cpp
+29>  disound.cpp
+29>  distate.cpp
+30>  symbolics.cpp
+30>  sys2900.cpp
+30>  systec.cpp
+30>  tavernie.cpp
+30>  tecnbras.cpp
+29>  divideo.cpp
+29>  divtlb.cpp
+30>  terak.cpp
+30>  ti630.cpp
+30>  tsispch.cpp
+29>  drawgfx.cpp
+30>  tvgame.cpp
+29>  driver.cpp
+29>  drivenum.cpp
+29>  emualloc.cpp
+29>  emucore.cpp
+29>  emumem.cpp
+30>  unistar.cpp
+30>  v6809.cpp
+29>  emuopts.cpp
+30>  vector4.cpp
+30>  vii.cpp
+30>  vsmilepro.cpp
+1>  atetris.cpp
+1>  badlands.cpp
+1>  batman.cpp
+1>  beathead.cpp
+1>  blstroid.cpp
+1>  bsktball.cpp
+1>  canyon.cpp
+1>  ccastles.cpp
+29>  emupal.cpp
+30>  wicat.cpp
+30>  xor100.cpp
+31>  pluginopt.cpp
+31>  devopt.cpp
+31>  filemngr.cpp
+31>  filesel.cpp
+29>  fileio.cpp
+31>  filecreate.cpp
+31>  floppycntrl.cpp
+31>  imgcntrl.cpp
+31>  info.cpp
+30>  xavix.cpp
+29>  image.cpp
+30>  zorba.cpp
+29>  input.cpp
+29>  inputdev.cpp
+29>  ioport.cpp
+29>  machine.cpp
+29>  mconfig.cpp
+31>  info_pty.cpp
+29>  memarray.cpp
+31>  inputmap.cpp
+31>  selmenu.cpp
+31>  sliders.cpp
+31>  slotopt.cpp
+31>  swlist.cpp
+31>  tapectrl.cpp
+29>  natkeyboard.cpp
+29>  network.cpp
+29>  parameters.cpp
+31>  videoopt.cpp
+29>  profiler.cpp
+29>  output.cpp
+13>  formats.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\formats.lib
+33>------ 已启动生成: 项目: dasm, 配置: Debug Win32 ------
+29>  render.cpp
+29>  rendfont.cpp
+31>  viewgfx.cpp
+31>  auditmenu.cpp
+31>  custmenu.cpp
+31>  custui.cpp
+31>  datmenu.cpp
+29>  rendlay.cpp
+32>  8x300.cpp
+31>  dirmenu.cpp
+30>  aussiebyte.cpp
+30>  busicom.cpp
+29>  rendutil.cpp
+29>  romload.cpp
+29>  romentry.cpp
+31>  inifile.cpp
+31>  moptions.cpp
+29>  save.cpp
+31>  optsmenu.cpp
+29>  schedule.cpp
+33>  Generating TMS57002 source file...
+31>  selector.cpp
+29>  screen.cpp
+31>  selgame.cpp
+31>  simpleselgame.cpp
+29>  softlist.cpp
+31>  selsoft.cpp
+29>  softlist_dev.cpp
+31>  sndmenu.cpp
+29>  sound.cpp
+29>  speaker.cpp
+29>  tilemap.cpp
+31>  utils.cpp
+31>  widgets.cpp
+29>  timer.cpp
+29>  uiinput.cpp
+29>  validity.cpp
+33>  8x300dasm.cpp
+29>  video.cpp
+33>  arcdasm.cpp
+12>  nlm_base.cpp
+12>  nlm_ttl74xx.cpp
+12>  nlm_cd4xxx.cpp
+12>  nlm_opamp.cpp
+12>  nlm_other.cpp
+32>  arc.cpp
+33>  arcompactdasm.cpp
+33>  arcompactdasm_dispatch.cpp
+33>  arcompactdasm_ops.cpp
+33>  arcompact_common.cpp
+32>  arcompact.cpp
+32>  arcompact_execute.cpp
+33>  armdasm.cpp
+32>  arm.cpp
+33>  arm7dasm.cpp
+32>  arm7.cpp
+32>  arm7thmb.cpp
+32>  arm7ops.cpp
+32>  lpc210x.cpp
+33>  se3208dis.cpp
+33>  amis2000d.cpp
+9>  font_sdl.cpp
+9>  font_windows.cpp
+9>  font_dwrite.cpp
+9>  font_osx.cpp
+9>  font_none.cpp
+32>  se3208.cpp
+33>  8201dasm.cpp
+1>  centiped.cpp
+1>  cloak.cpp
+1>  cloud9.cpp
+1>  copsnrob.cpp
+1>  cyberbal.cpp
+1>  dragrace.cpp
+1>  eprom.cpp
+1>  firetrk.cpp
+33>  2100dasm.cpp
+32>  amis2000.cpp
+32>  amis2000op.cpp
+1>  foodf.cpp
+1>  gauntlet.cpp
+1>  harddriv.cpp
+1>  irobot.cpp
+1>  jaguar.cpp
+1>  jedi.cpp
+1>  klax.cpp
+33>  sharcdsm.cpp
+1>  liberatr.cpp
+32>  alph8201.cpp
+33>  apexcdsm.cpp
+1>  nitedrvr.cpp
+1>  offtwall.cpp
+1>  orbit.cpp
+1>  poolshrk.cpp
+1>  rampart.cpp
+1>  relief.cpp
+1>  runaway.cpp
+33>  dsp16dis.cpp
+1>  shuuz.cpp
+32>  adsp2100.cpp
+1>  skullxbo.cpp
+1>  skydiver.cpp
+33>  dsp32dis.cpp
+1>  skyraid.cpp
+32>  sharc.cpp
+32>  sharcdrc.cpp
+1>  sprint2.cpp
+32>  sharcfe.cpp
+1>  sprint4.cpp
+1>  sprint8.cpp
+1>  starshp1.cpp
+1>  subs.cpp
+33>  asapdasm.cpp
+1>  tank8.cpp
+30>  dmv_keyb.cpp
+30>  ie15_kbd.cpp
+30>  nl_hazelvid.cpp
+30>  ngen_kb.cpp
+1>  thunderj.cpp
+30>  octo_kbd.cpp
+30>  zorbakbd.cpp
+1>  toobin.cpp
+33>  am29dasm.cpp
+1>  tia.cpp
+1>  triplhnt.cpp
+1>  tunhunt.cpp
+32>  apexc.cpp
+29>  debugcmd.cpp
+29>  debugcon.cpp
+29>  debugcpu.cpp
+29>  debughlp.cpp
+1>  ultratnk.cpp
+29>  debugvw.cpp
+29>  dvdisasm.cpp
+29>  dvmemory.cpp
+29>  dvbpoints.cpp
+33>  jagdasm.cpp
+1>  videopin.cpp
+1>  vindictr.cpp
+32>  dsp16.cpp
+33>  cubedasm.cpp
+1>  wolfpack.cpp
+1>  xybots.cpp
+1>  atarimo.cpp
+30>  gamate.cpp
+1>  atarirle.cpp
+1>  maria.cpp
+33>  esripdsm.cpp
+1>  atarist.cpp
+32>  dsp32.cpp
+33>  e0c6200d.cpp
+32>  asap.cpp
+33>  cosdasm.cpp
+32>  am29000.cpp
+1>  asteroid.cpp
+1>  atarifb.cpp
+1>  nl_stuntcyc.cpp
+1>  bsktball.cpp
+1>  harddriv.cpp
+1>  irobot.cpp
+1>  mhavoc.cpp
+1>  nitedrvr.cpp
+33>  cop410ds.cpp
+33>  cop420ds.cpp
+33>  cop444ds.cpp
+33>  cop424ds.cpp
+32>  jaguar.cpp
+1>  nl_pong.cpp
+32>  cubeqcpu.cpp
+1>  nl_pongd.cpp
+1>  nl_breakout.cpp
+1>  starwars.cpp
+1>  subs.cpp
+1>  asic65.cpp
+1>  atari_vg.cpp
+1>  atarigen.cpp
+33>  1610dasm.cpp
+1>  mathbox.cpp
+1>  slapstic.cpp
+1>  atarixga.cpp
+32>  es5510.cpp
+1>  atarifdc.cpp
+1>  lynx.cpp
+33>  ccpudasm.cpp
+32>  esrip.cpp
+33>  t11dasm.cpp
+32>  e0c6200.cpp
+32>  e0c6s46.cpp
+32>  e0c6200op.cpp
+33>  f8dasm.cpp
+31>  frontend.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\frontend.lib
+34>------ 已启动生成: 项目: shared, 配置: Debug Win32 ------
+1>  asteroid.cpp
+1>  llander.cpp
+1>  atarifb.cpp
+1>  avalnche.cpp
+1>  bsktball.cpp
+1>  bwidow.cpp
+1>  bzone.cpp
+1>  canyon.cpp
+34>  meters.cpp
+34>  nmk112.cpp
+34>  pcshare.cpp
+34>  segacrpt_device.cpp
+34>  ticket.cpp
+33>  g65816ds.cpp
+32>  cosmac.cpp
+33>  hcd62121d.cpp
+1>  copsnrob.cpp
+32>  cop400.cpp
+33>  hmcs40d.cpp
+1>  cyberbal.cpp
+1>  dragrace.cpp
+1>  firetrk.cpp
+1>  harddriv.cpp
+1>  jaguar.cpp
+1>  jedi.cpp
+29>  dvwpoints.cpp
+29>  dvstate.cpp
+1>  nitedrvr.cpp
+29>  dvtext.cpp
+29>  express.cpp
+34>  avgdvg.cpp
+34>  awpvid.cpp
+33>  sh2dasm.cpp
+32>  cp1610.cpp
+29>  textbuf.cpp
+32>  ccpu.cpp
+33>  sh4dasm.cpp
+1>  orbit.cpp
+32>  t11.cpp
+1>  poolshrk.cpp
+1>  skydiver.cpp
+1>  skyraid.cpp
+1>  sprint2.cpp
+33>  hphybrid_dasm.cpp
+1>  sprint4.cpp
+1>  sprint8.cpp
+1>  starshp1.cpp
+34>  dcs.cpp
+34>  decobsmt.cpp
+34>  efo_zsu.cpp
+1>  starwars.cpp
+9>  taptun.cpp
+9>  pcap.cpp
+34>  segam1audio.cpp
+9>  none.cpp
+33>  nanoprocessor_dasm.cpp
+32>  f8.cpp
+1>  subs.cpp
+1>  tank8.cpp
+1>  triplhnt.cpp
+1>  videopin.cpp
+1>  atarijsa.cpp
+1>  cage.cpp
+33>  6280dasm.cpp
+32>  g65816.cpp
+1>  redbaron.cpp
+32>  g65816o0.cpp
+32>  g65816o1.cpp
+32>  g65816o2.cpp
+32>  g65816o3.cpp
+32>  g65816o4.cpp
+1>  lynx.cpp
+33>  32xsdasm.cpp
+34>  shared.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\shared.lib
+35>------ 已启动生成: 项目: acorn, 配置: Debug Win32 ------
+35>  ertictac.cpp
+35>  ssfindo.cpp
+35>  aristmk5.cpp
+35>  aa310.cpp
+35>  a6809.cpp
+35>  acrnsys1.cpp
+35>  atom.cpp
+35>  bbc.cpp
+29>  empty.cpp
+33>  ie15dasm.cpp
+9>  portmidi.cpp
+9>  none.cpp
+33>  4004dasm.cpp
+29>  generic.cpp
+29>  resnet.cpp
+29>  rgbgen.cpp
+29>  rgbsse.cpp
+29>  rgbvmx.cpp
+32>  h8.cpp
+32>  h8h.cpp
+32>  h8s2000.cpp
+32>  h8s2600.cpp
+32>  h83337.cpp
+32>  h83002.cpp
+32>  h83006.cpp
+32>  h83008.cpp
+35>  electron.cpp
+33>  8008dasm.cpp
+35>  riscpc.cpp
+35>  z88.cpp
+12>  netlist.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\netlist.lib
+36>------ 已启动生成: 项目: alba, 配置: Debug Win32 ------
+36>  albazc.cpp
+36>  albazg.cpp
+36>  rmhaihai.cpp
+33>  scmpdasm.cpp
+33>  8085dasm.cpp
+32>  h83048.cpp
+9>  js_sound.cpp
+9>  direct_sound.cpp
+9>  pa_sound.cpp
+9>  coreaudio_sound.cpp
+9>  sdl_sound.cpp
+9>  xaudio2_sound.cpp
+9>  none.cpp
+32>  h8s2245.cpp
+32>  h8s2320.cpp
+32>  h8s2357.cpp
+32>  h8s2655.cpp
+32>  h8_adc.cpp
+32>  h8_dma.cpp
+32>  h8_dtc.cpp
+33>  i8089_dasm.cpp
+35>  archimds.cpp
+35>  bbc.cpp
+35>  electron.cpp
+35>  upd65031.cpp
+36>  alba.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\alba.lib
+37>------ 已启动生成: 项目: alliedl, 配置: Debug Win32 ------
+37>  ace.cpp
+37>  aleisttl.cpp
+37>  clayshoo.cpp
+33>  mcs48dsm.cpp
+32>  h8_intc.cpp
+32>  h8_port.cpp
+32>  h8_timer8.cpp
+32>  h8_timer16.cpp
+32>  h8_sci.cpp
+32>  h8_watchdog.cpp
+33>  mcs51dasm.cpp
+30>  skeleton.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\skeleton.lib
+38>------ 已启动生成: 项目: alpha, 配置: Debug Win32 ------
+38>  alpha68k.cpp
+38>  champbas.cpp
+38>  equites.cpp
+38>  meijinsn.cpp
+38>  shougi.cpp
+33>  i386dasm.cpp
+37>  alliedl.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\alliedl.lib
+39>------ 已启动生成: 项目: amiga, 配置: Debug Win32 ------
+35>  archimds.cpp
+35>  bbc.cpp
+35>  electron.cpp
+35>  z88.cpp
+39>  alg.cpp
+39>  arsystems.cpp
+39>  cubo.cpp
+39>  mquake.cpp
+39>  upscope.cpp
+39>  amiga.cpp
+32>  hcd62121.cpp
+29>  emu.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\emu.lib
+40>------ 已启动生成: 项目: aristocr, 配置: Debug Win32 ------
+38>  alpha68k.cpp
+38>  champbas.cpp
+38>  equites.cpp
+9>  input_common.cpp
+9>  input_dinput.cpp
+9>  input_none.cpp
+9>  input_rawinput.cpp
+9>  input_win32.cpp
+9>  input_sdl.cpp
+9>  input_sdlcommon.cpp
+9>  input_x11.cpp
+32>  hmcs40.cpp
+32>  hmcs40op.cpp
+40>  aristmk4.cpp
+40>  aristmk6.cpp
+40>  caswin.cpp
+9>  input_windows.cpp
+9>  input_xinput.cpp
+9>  input_winhybrid.cpp
+35>  acorn.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\acorn.lib
+9>  input_uwp.cpp
+41>------ 已启动生成: 项目: ascii, 配置: Debug Win32 ------
+41>  big10.cpp
+41>  forte2.cpp
+41>  pengadvb.cpp
+41>  sangho.cpp
+41>  sfkick.cpp
+41>  msx.cpp
+33>  i860dis.cpp
+32>  sh2.cpp
+32>  sh2fe.cpp
+32>  sh7604_bus.cpp
+32>  sh7604_sci.cpp
+32>  sh7604_wdt.cpp
+38>  alpha8201.cpp
+39>  amiga.cpp
+38>  alpha.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\alpha.lib
+42>------ 已启动生成: 项目: midway, 配置: Debug Win32 ------
+40>  aristocr.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\aristocr.lib
+43>------ 已启动生成: 项目: atlus, 配置: Debug Win32 ------
+33>  i960dis.cpp
+42>  astrocde.cpp
+42>  atlantis.cpp
+42>  balsente.cpp
+42>  gridlee.cpp
+42>  mcr.cpp
+42>  mcr3.cpp
+42>  spyhuntertec.cpp
+42>  mcr68.cpp
+9>  none.cpp
+9>  console.cpp
+9>  network.cpp
+9>  win32_output.cpp
+32>  sh4.cpp
+32>  sh4comn.cpp
+32>  sh3comn.cpp
+32>  sh4tmu.cpp
+32>  sh4dmac.cpp
+43>  blmbycar.cpp
+43>  ohmygod.cpp
+43>  powerins.cpp
+43>  bowltry.cpp
+39>  amiga.cpp
+39>  amigaaga.cpp
+42>  zwackery.cpp
+42>  midqslvr.cpp
+42>  midtunit.cpp
+42>  midvunit.cpp
+42>  midwunit.cpp
+42>  midxunit.cpp
+41>  msx.cpp
+41>  msx_matsushita.cpp
+41>  msx_s1985.cpp
+41>  msx_systemflags.cpp
+42>  midyunit.cpp
+43>  blmbycar.cpp
+43>  ohmygod.cpp
+43>  powerins.cpp
+42>  midzeus.cpp
+33>  5801dasm.cpp
+42>  mw18w.cpp
+32>  hphybrid.cpp
+42>  mwsub.cpp
+42>  omegrace.cpp
+42>  pinball2k.cpp
+42>  seattle.cpp
+42>  sspeedr.cpp
+1>  atari.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\atari.lib
+44>------ 已启动生成: 项目: barcrest, 配置: Debug Win32 ------
+44>  mpu2.cpp
+44>  mpu3.cpp
+44>  mpu4.cpp
+44>  mpu4plasma.cpp
+44>  mpu4dealem.cpp
+44>  mpu4vid.cpp
+44>  mpu5.cpp
+39>  amiga.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\amiga.lib
+45>------ 已启动生成: 项目: bfm, 配置: Debug Win32 ------
+33>  ssemdasm.cpp
+45>  bfcobra.cpp
+45>  bfm_sc1.cpp
+45>  bfm_sc2.cpp
+45>  bfm_sc4.cpp
+45>  bfm_sc5.cpp
+45>  bfm_ad5.cpp
+45>  bfm_swp.cpp
+45>  bfmsys83.cpp
+32>  nanoprocessor.cpp
+33>  mb88dasm.cpp
+32>  h6280.cpp
+42>  tmaster.cpp
+33>  mb86233d.cpp
+32>  e132xs.cpp
+42>  vegas.cpp
+42>  wmg.cpp
+42>  williams.cpp
+33>  mb86235d.cpp
+32>  ie15.cpp
+43>  atlus.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\atlus.lib
+46>------ 已启动生成: 项目: bmc, 配置: Debug Win32 ------
+46>  bmcbowl.cpp
+46>  koftball.cpp
+46>  popobear.cpp
+46>  bmcpokr.cpp
+45>  bfmsys85.cpp
+45>  rastersp.cpp
+9>  monitor_common.cpp
+9>  monitor_win32.cpp
+9>  monitor_dxgi.cpp
+9>  monitor_sdl.cpp
+33>  16c5xdsm.cpp
+33>  16c62xdsm.cpp
+42>  astrocde.cpp
+42>  balsente.cpp
+42>  gridlee.cpp
+42>  mcr.cpp
+42>  mcr3.cpp
+42>  mcr68.cpp
+42>  midtunit.cpp
+42>  midvunit.cpp
+32>  i4004.cpp
+33>  r3kdasm.cpp
+33>  mips3dsm.cpp
+41>  ascii.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ascii.lib
+47>------ 已启动生成: 项目: capcom, 配置: Debug Win32 ------
+9>  drawogl.cpp
+9>  drawbgfx.cpp
+9>  aviwrite.cpp
+9>  bgfxutil.cpp
+9>  binpacker.cpp
+9>  drawd3d.cpp
+9>  drawgdi.cpp
+9>  drawnone.cpp
+47>  1942.cpp
+47>  1943.cpp
+47>  alien.cpp
+47>  bionicc.cpp
+47>  supduck.cpp
+47>  blktiger.cpp
+47>  cbasebal.cpp
+47>  commando.cpp
+46>  bmc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\bmc.lib
+48>------ 已启动生成: 项目: ces, 配置: Debug Win32 ------
+32>  i8008.cpp
+48>  cesclass.cpp
+48>  galgames.cpp
+32>  scmp.cpp
+32>  i8085.cpp
+47>  cps1.cpp
+47>  kenseim.cpp
+47>  cps2.cpp
+47>  cps3.cpp
+47>  egghunt.cpp
+47>  exedexes.cpp
+44>  barcrest.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\barcrest.lib
+49>------ 已启动生成: 项目: cinemat, 配置: Debug Win32 ------
+32>  i8089.cpp
+32>  i8089_channel.cpp
+32>  i8089_ops.cpp
+47>  fcrash.cpp
+47>  gng.cpp
+49>  cinemat.cpp
+49>  cchasm.cpp
+49>  dlair.cpp
+49>  dlair2.cpp
+49>  embargo.cpp
+49>  jack.cpp
+49>  leland.cpp
+45>  bfm_comn.cpp
+45>  bfm_sc45_helper.cpp
+45>  sec.cpp
+45>  bfm_bd1.cpp
+45>  bfm_bda.cpp
+47>  gunsmoke.cpp
+47>  higemaru.cpp
+47>  lastduel.cpp
+47>  lwings.cpp
+47>  mitchell.cpp
+47>  sf.cpp
+47>  sidearms.cpp
+48>  ces.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ces.lib
+50>------ 已启动生成: 项目: comad, 配置: Debug Win32 ------
+32>  mcs48.cpp
+50>  funybubl.cpp
+50>  galspnbl.cpp
+50>  zerozone.cpp
+9>  gl_shader_tool.cpp
+9>  gl_shader_mgr.cpp
+42>  midyunit.cpp
+42>  midzeus.cpp
+42>  sspeedr.cpp
+42>  williams.cpp
+45>  bfm_adr2.cpp
+45>  bfm_dm01.cpp
+47>  sonson.cpp
+32>  mcs51.cpp
+47>  srumbler.cpp
+47>  tigeroad.cpp
+47>  vulgus.cpp
+47>  tvcapcom.cpp
+32>  mcs96.cpp
+32>  i8x9x.cpp
+32>  i8xc196.cpp
+47>  instantm.cpp
+49>  cinemat.cpp
+49>  cchasm.cpp
+49>  leland.cpp
+50>  funybubl.cpp
+50>  galspnbl.cpp
+50>  zerozone.cpp
+42>  balsente.cpp
+42>  mcr.cpp
+42>  mcr68.cpp
+42>  midtunit.cpp
+42>  midwunit.cpp
+42>  midxunit.cpp
+42>  midyunit.cpp
+42>  williams.cpp
+45>  bfm.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\bfm.lib
+51>------ 已启动生成: 项目: cvs, 配置: Debug Win32 ------
+51>  cvs.cpp
+51>  galaxia.cpp
+51>  quasar.cpp
+33>  psxdasm.cpp
+32>  i86.cpp
+32>  i186.cpp
+32>  i286.cpp
+9>  blendreader.cpp
+9>  chain.cpp
+9>  chainentry.cpp
+9>  chainentryreader.cpp
+9>  chainmanager.cpp
+9>  chainreader.cpp
+9>  clear.cpp
+9>  clearreader.cpp
+47>  1942.cpp
+47>  1943.cpp
+47>  bionicc.cpp
+47>  tigeroad_spr.cpp
+47>  blktiger.cpp
+47>  cbasebal.cpp
+47>  commando.cpp
+47>  cps1.cpp
+9>  cullreader.cpp
+50>  comad.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\comad.lib
+52>------ 已启动生成: 项目: dataeast, 配置: Debug Win32 ------
+42>  midwayic.cpp
+52>  actfancr.cpp
+52>  astrof.cpp
+52>  backfire.cpp
+52>  battlera.cpp
+52>  boogwing.cpp
+52>  brkthru.cpp
+52>  btime.cpp
+52>  bwing.cpp
+9>  depthreader.cpp
+9>  effect.cpp
+9>  effectmanager.cpp
+9>  effectreader.cpp
+51>  cvs.cpp
+51>  galaxia.cpp
+51>  quasar.cpp
+9>  entryuniformreader.cpp
+9>  inputpair.cpp
+32>  i386.cpp
+52>  cbuster.cpp
+52>  chanbara.cpp
+9>  frameparameter.cpp
+52>  cninja.cpp
+52>  cntsteer.cpp
+52>  compgolf.cpp
+9>  timeparameter.cpp
+52>  darkseal.cpp
+52>  dassault.cpp
+9>  paramreader.cpp
+9>  paramuniform.cpp
+9>  paramuniformreader.cpp
+9>  shadermanager.cpp
+52>  dblewing.cpp
+9>  slider.cpp
+9>  sliderreader.cpp
+9>  slideruniform.cpp
+9>  slideruniformreader.cpp
+9>  statereader.cpp
+42>  gridlee.cpp
+42>  williams.cpp
+42>  midway.cpp
+42>  csd.cpp
+9>  suppressor.cpp
+9>  suppressorreader.cpp
+32>  i860.cpp
+9>  target.cpp
+32>  i960.cpp
+9>  targetreader.cpp
+52>  dec0.cpp
+52>  dec8.cpp
+52>  deco_ld.cpp
+52>  deco_mlc.cpp
+52>  deco156.cpp
+32>  lh5801.cpp
+52>  deco32.cpp
+52>  decocass.cpp
+9>  targetmanager.cpp
+9>  texture.cpp
+9>  texturemanager.cpp
+9>  uniform.cpp
+9>  uniformreader.cpp
+9>  valueuniform.cpp
+47>  exedexes.cpp
+9>  valueuniformreader.cpp
+47>  gng.cpp
+9>  writereader.cpp
+47>  gunsmoke.cpp
+47>  higemaru.cpp
+47>  lastduel.cpp
+47>  lwings.cpp
+52>  deshoros.cpp
+47>  mitchell.cpp
+47>  sf.cpp
+32>  ssem.cpp
+52>  dietgo.cpp
+52>  dreambal.cpp
+51>  cvs.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cvs.lib
+53>------ 已启动生成: 项目: dgrm, 配置: Debug Win32 ------
+53>  blackt96.cpp
+53>  pokechmp.cpp
+42>  midway.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\midway.lib
+54>------ 已启动生成: 项目: dooyong, 配置: Debug Win32 ------
+52>  exprraid.cpp
+54>  dooyong.cpp
+54>  gundealr.cpp
+52>  firetrap.cpp
+52>  funkyjet.cpp
+49>  cinemat.cpp
+49>  cchasm.cpp
+49>  jack.cpp
+49>  leland.cpp
+52>  karnov.cpp
+52>  kchamp.cpp
+47>  sidearms.cpp
+47>  sonson.cpp
+47>  srumbler.cpp
+47>  tigeroad.cpp
+47>  vulgus.cpp
+52>  kingobox.cpp
+52>  lemmings.cpp
+53>  pokechmp.cpp
+52>  liberate.cpp
+52>  madalien.cpp
+52>  madmotor.cpp
+52>  metlclsh.cpp
+52>  mirage.cpp
+32>  mb88xx.cpp
+9>  d3dhlsl.cpp
+53>  dgrm.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dgrm.lib
+55>------ 已启动生成: 项目: dynax, 配置: Debug Win32 ------
+52>  pcktgal.cpp
+55>  ddenlovr.cpp
+55>  dynax.cpp
+55>  hnayayoi.cpp
+55>  realbrk.cpp
+55>  royalmah.cpp
+54>  dooyong.cpp
+54>  gundealr.cpp
+33>  melps4d.cpp
+49>  cchasm.cpp
+49>  leland.cpp
+47>  cps2crypt.cpp
+47>  tigeroad.cpp
+47>  kabuki.cpp
+52>  pktgaldx.cpp
+52>  progolf.cpp
+52>  rohga.cpp
+52>  shootout.cpp
+52>  sidepckt.cpp
+52>  simpl156.cpp
+52>  sshangha.cpp
+52>  stadhero.cpp
+32>  mb86233.cpp
+52>  supbtime.cpp
+55>  dynax.cpp
+55>  hnayayoi.cpp
+55>  realbrk.cpp
+52>  tryout.cpp
+52>  tumbleb.cpp
+52>  tumblep.cpp
+52>  vaportra.cpp
+54>  dooyong.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dooyong.lib
+56>------ 已启动生成: 项目: edevices, 配置: Debug Win32 ------
+32>  mb86235.cpp
+56>  diverboy.cpp
+32>  mb86235drc.cpp
+56>  fantland.cpp
+32>  mb86235fe.cpp
+56>  mwarr.cpp
+56>  mugsmash.cpp
+56>  ppmast93.cpp
+56>  pzletime.cpp
+56>  stlforce.cpp
+56>  twins.cpp
+9>  video.cpp
+9>  window.cpp
+9>  winmain.cpp
+33>  m7700ds.cpp
+47>  cps3.cpp
+33>  6800dasm.cpp
+55>  dynax.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dynax.lib
+57>------ 已启动生成: 项目: efo, 配置: Debug Win32 ------
+57>  cedar_magnet.cpp
+57>  cidelsa.cpp
+56>  fantland.cpp
+56>  mugsmash.cpp
+56>  stlforce.cpp
+32>  pic16c5x.cpp
+47>  capcom.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\capcom.lib
+58>------ 已启动生成: 项目: eolith, 配置: Debug Win32 ------
+33>  6805dasm.cpp
+58>  eolith.cpp
+49>  cinemat.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cinemat.lib
+59>------ 已启动生成: 项目: excelent, 配置: Debug Win32 ------
+58>  eolith16.cpp
+58>  ghosteo.cpp
+58>  vegaeo.cpp
+59>  aquarium.cpp
+59>  d9final.cpp
+59>  dblcrown.cpp
+59>  gcpinbal.cpp
+59>  lastbank.cpp
+59>  witch.cpp
+9>  osdwindow.cpp
+32>  pic16c62x.cpp
+9>  newui.cpp
+9>  bitmask.cpp
+9>  columnedit.cpp
+9>  datamap.cpp
+9>  devview.cpp
+9>  dialogs.cpp
+9>  dijoystick.cpp
+9>  directdraw.cpp
+32>  r3000.cpp
+32>  mips3com.cpp
+32>  mips3.cpp
+32>  mips3fe.cpp
+32>  mips3drc.cpp
+52>  actfancr.cpp
+52>  boogwing.cpp
+52>  brkthru.cpp
+52>  btime.cpp
+52>  bwing.cpp
+52>  cbuster.cpp
+52>  cninja.cpp
+52>  compgolf.cpp
+56>  edevices.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\edevices.lib
+60>------ 已启动生成: 项目: exidy, 配置: Debug Win32 ------
+60>  carpolo.cpp
+60>  circus.cpp
+60>  exidy.cpp
+60>  exidy440.cpp
+60>  exidyttl.cpp
+60>  maxaflex.cpp
+60>  starfire.cpp
+60>  vertigo.cpp
+58>  eolith.cpp
+9>  directinput.cpp
+9>  directories.cpp
+52>  darkseal.cpp
+52>  dassault.cpp
+52>  dec0.cpp
+33>  6x09dasm.cpp
+58>  eolith.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\eolith.lib
+61>------ 已启动生成: 项目: f32, 配置: Debug Win32 ------
+9>  dirwatch.cpp
+9>  dxdecode.cpp
+52>  dec8.cpp
+52>  deco_mlc.cpp
+52>  deco32.cpp
+52>  dvi.cpp
+59>  aquarium.cpp
+59>  gcpinbal.cpp
+59>  excellent_spr.cpp
+32>  psx.cpp
+32>  gte.cpp
+32>  dma.cpp
+32>  irq.cpp
+32>  mdec.cpp
+32>  rcnt.cpp
+32>  sio.cpp
+52>  deco_zoomspr.cpp
+52>  decocass.cpp
+52>  dietgo.cpp
+9>  help.cpp
+61>  crospang.cpp
+9>  helpids.cpp
+60>  victory.cpp
+61>  silvmil.cpp
+9>  history.cpp
+60>  sorcerer.cpp
+61>  f-32.cpp
+9>  layout.cpp
+9>  messui.cpp
+9>  mui_audit.cpp
+9>  mui_main.cpp
+9>  mui_opts.cpp
+52>  exprraid.cpp
+9>  mui_util.cpp
+52>  firetrap.cpp
+52>  funkyjet.cpp
+52>  karnov.cpp
+9>  picker.cpp
+52>  kchamp.cpp
+61>  crospang.cpp
+9>  properties.cpp
+9>  screenshot.cpp
+9>  softwarelist.cpp
+61>  f32.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\f32.lib
+62>------ 已启动生成: 项目: funworld, 配置: Debug Win32 ------
+9>  softwarepicker.cpp
+33>  hc11dasm.cpp
+60>  carpolo.cpp
+60>  atari400.cpp
+60>  vertigo.cpp
+60>  sorcerer.cpp
+60>  micropolis.cpp
+62>  4roses.cpp
+62>  funworld.cpp
+62>  snookr10.cpp
+52>  kingobox.cpp
+9>  splitters.cpp
+59>  excelent.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\excelent.lib
+63>------ 已启动生成: 项目: fuuki, 配置: Debug Win32 ------
+33>  m68kdasm.cpp
+63>  fuukifg2.cpp
+63>  fuukifg3.cpp
+52>  lemmings.cpp
+52>  liberate.cpp
+52>  madalien.cpp
+33>  dsp56dsm.cpp
+33>  opcode.cpp
+33>  inst.cpp
+33>  pmove.cpp
+33>  tables.cpp
+52>  madmotor.cpp
+52>  metlclsh.cpp
+52>  pcktgal.cpp
+9>  swconfig.cpp
+9>  tabview.cpp
+9>  treeview.cpp
+52>  pktgaldx.cpp
+9>  winui.cpp
+52>  rohga.cpp
+32>  melps4.cpp
+32>  melps4op.cpp
+32>  m58846.cpp
+52>  shootout.cpp
+52>  sidepckt.cpp
+63>  fuukifg2.cpp
+63>  fuukifg3.cpp
+63>  fuukifg.cpp
+52>  simpl156.cpp
+52>  sshangha.cpp
+52>  stadhero.cpp
+60>  carpolo.cpp
+60>  circus.cpp
+60>  exidy.cpp
+60>  exidy440.cpp
+60>  atari400.cpp
+60>  antic.cpp
+60>  gtia.cpp
+60>  starfire.cpp
+52>  supbtime.cpp
+52>  tryout.cpp
+33>  pdp1dasm.cpp
+33>  tx0dasm.cpp
+52>  tumbleb.cpp
+62>  funworld.cpp
+62>  snookr10.cpp
+52>  tumblep.cpp
+52>  vaportra.cpp
+52>  decbac06.cpp
+52>  deco16ic.cpp
+60>  vertigo.cpp
+60>  victory.cpp
+52>  decocomn.cpp
+52>  decospr.cpp
+63>  fuuki.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\fuuki.lib
+64>------ 已启动生成: 项目: gaelco, 配置: Debug Win32 ------
+64>  atvtrack.cpp
+64>  gaelco.cpp
+64>  gaelco2.cpp
+64>  gaelco3d.cpp
+64>  glass.cpp
+64>  mastboy.cpp
+64>  rollext.cpp
+64>  splash.cpp
+52>  decmxc06.cpp
+52>  deckarn.cpp
+32>  m37710.cpp
+32>  m37710o0.cpp
+32>  m37710o1.cpp
+32>  m37710o2.cpp
+32>  m37710o3.cpp
+9>  consolewininfo.cpp
+9>  debugbaseinfo.cpp
+9>  debugviewinfo.cpp
+9>  debugwininfo.cpp
+9>  disasmbasewininfo.cpp
+9>  disasmviewinfo.cpp
+9>  disasmwininfo.cpp
+9>  editwininfo.cpp
+64>  targeth.cpp
+64>  thoop2.cpp
+64>  tokyocop.cpp
+64>  wrally.cpp
+64>  xorworld.cpp
+57>  cedar_magnet_plane.cpp
+57>  cedar_magnet_sprite.cpp
+57>  cedar_magnet_board.cpp
+57>  cedar_magnet_flop.cpp
+9>  logwininfo.cpp
+9>  memoryviewinfo.cpp
+9>  memorywininfo.cpp
+62>  funworld.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\funworld.lib
+65>------ 已启动生成: 项目: gameplan, 配置: Debug Win32 ------
+65>  enigma2.cpp
+65>  gameplan.cpp
+65>  toratora.cpp
+32>  deco16.cpp
+32>  m4510.cpp
+32>  m6502.cpp
+9>  pointswininfo.cpp
+32>  m65c02.cpp
+32>  m65ce02.cpp
+32>  m65sc02.cpp
+9>  uimetrics.cpp
+32>  m6504.cpp
+32>  m6507.cpp
+33>  patinho_feio_dasm.cpp
+32>  m6509.cpp
+32>  m6510.cpp
+32>  m6510t.cpp
+32>  m7501.cpp
+64>  gaelco.cpp
+64>  gaelco2.cpp
+32>  m8502.cpp
+64>  gaelco3d.cpp
+32>  n2a03.cpp
+64>  glass.cpp
+64>  splash.cpp
+64>  targeth.cpp
+32>  r65c02.cpp
+64>  thoop2.cpp
+64>  wrally.cpp
+32>  m740.cpp
+65>  gameplan.cpp
+60>  circus.cpp
+60>  exidy.cpp
+60>  targ.cpp
+60>  exidy440.cpp
+32>  m3745x.cpp
+32>  m5074x.cpp
+65>  gameplan.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\gameplan.lib
+66>------ 已启动生成: 项目: gametron, 配置: Debug Win32 ------
+64>  xorworld.cpp
+66>  gatron.cpp
+66>  gotya.cpp
+66>  sbugger.cpp
+33>  ppc_dasm.cpp
+52>  astrof.cpp
+52>  madalien.cpp
+32>  m6800.cpp
+66>  gatron.cpp
+66>  gotya.cpp
+66>  sbugger.cpp
+64>  gaelcrpt.cpp
+64>  gaelco2.cpp
+64>  gaelco3d.cpp
+64>  wrally.cpp
+32>  m6805.cpp
+32>  m68705.cpp
+32>  m68hc05.cpp
+57>  cidelsa.cpp
+66>  gotya.cpp
+33>  necdasm.cpp
+52>  btime.cpp
+52>  dec0.cpp
+52>  deco222.cpp
+52>  decocpu7.cpp
+52>  decocpu6.cpp
+52>  deco156.cpp
+52>  decocass.cpp
+52>  decocass_tape.cpp
+66>  gametron.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\gametron.lib
+67>------ 已启动生成: 项目: gottlieb, 配置: Debug Win32 ------
+32>  m6809.cpp
+32>  hd6309.cpp
+32>  konami.cpp
+67>  exterm.cpp
+67>  gottlieb.cpp
+64>  gaelco.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\gaelco.lib
+68>------ 已启动生成: 项目: ibmpc, 配置: Debug Win32 ------
+33>  v60d.cpp
+68>  calchase.cpp
+68>  fruitpc.cpp
+68>  pangofun.cpp
+68>  pcat_dyn.cpp
+68>  pcat_nit.cpp
+68>  pcxt.cpp
+68>  quakeat.cpp
+68>  queen.cpp
+52>  deco102.cpp
+52>  decocrpt.cpp
+52>  deco104.cpp
+52>  deco146.cpp
+33>  v810dasm.cpp
+33>  dasm7725.cpp
+9>treeview.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>treeview.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>tabview.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>tabview.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>softwarepicker.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>softwarepicker.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>softwarelist.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>softwarelist.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>screenshot.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>screenshot.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>properties.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>properties.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>properties.obj : warning LNK4006: "int g_bModifiedSoftwarePaths" (?g_bModifiedSoftwarePaths@@3HA) 已在 winui.obj 中定义；已忽略第二个定义
+9>mui_util.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>mui_util.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>mui_opts.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>mui_opts.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>mui_audit.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>mui_audit.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>mui_audit.obj : warning LNK4006: "int g_bModifiedSoftwarePaths" (?g_bModifiedSoftwarePaths@@3HA) 已在 winui.obj 中定义；已忽略第二个定义
+9>messui.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>messui.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>layout.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>layout.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>layout.obj : warning LNK4006: "int g_bModifiedSoftwarePaths" (?g_bModifiedSoftwarePaths@@3HA) 已在 winui.obj 中定义；已忽略第二个定义
+9>history.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>history.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>dirwatch.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>dirwatch.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>directories.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>directories.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>directinput.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>directinput.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>directdraw.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>directdraw.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>dijoystick.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>dijoystick.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>dialogs.obj : warning LNK4006: "int g_bModifiedSoftwarePaths" (?g_bModifiedSoftwarePaths@@3HA) 已在 winui.obj 中定义；已忽略第二个定义
+9>devview.obj : warning LNK4006: "char * __cdecl ui_utf8_from_wstring(wchar_t const *)" (?ui_utf8_from_wstring@@YAPADPB_W@Z) 已在 winui.obj 中定义；已忽略第二个定义
+9>devview.obj : warning LNK4006: "wchar_t * __cdecl ui_wstring_from_utf8(char const *)" (?ui_wstring_from_utf8@@YAPA_WPBD@Z) 已在 winui.obj 中定义；已忽略第二个定义
+67>  exterm.cpp
+68>  igspc.cpp
+67>  gottlieb.cpp
+57>  efo.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\efo.lib
+69>------ 已启动生成: 项目: igs, 配置: Debug Win32 ------
+69>  cabaret.cpp
+69>  dunhuang.cpp
+69>  goldstar.cpp
+69>  funtech.cpp
+69>  jackie.cpp
+69>  igspoker.cpp
+69>  igs009.cpp
+69>  igs011.cpp
+67>  gottlieb.cpp
+69>  igs017.cpp
+69>  igs_fear.cpp
+69>  igs_m027.cpp
+69>  igs_m036.cpp
+69>  iqblock.cpp
+69>  lordgun.cpp
+32>  mc68hc11.cpp
+67>  gottlieb.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\gottlieb.lib
+70>------ 已启动生成: 项目: irem, 配置: Debug Win32 ------
+70>  m10.cpp
+70>  m14.cpp
+70>  m52.cpp
+70>  m57.cpp
+70>  m58.cpp
+70>  m62.cpp
+70>  spartanxtec.cpp
+70>  m63.cpp
+69>  pgm.cpp
+69>  pgm2.cpp
+68>  ibmpc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ibmpc.lib
+71>------ 已启动生成: 项目: itech, 配置: Debug Win32 ------
+71>  capbowl.cpp
+71>  itech8.cpp
+71>  itech32.cpp
+71>  iteagle.cpp
+32>  m68kcpu.cpp
+32>  m68kops.cpp
+69>  pgm3.cpp
+69>  spoker.cpp
+70>  m72.cpp
+70>  m90.cpp
+70>  m92.cpp
+70>  m107.cpp
+70>  olibochu.cpp
+70>  redalert.cpp
+70>  shisen.cpp
+70>  travrusa.cpp
+71>  capbowl.cpp
+71>  itech8.cpp
+71>  itech32.cpp
+33>  upd7810_dasm.cpp
+70>  vigilant.cpp
+32>  dsp56k.cpp
+32>  dsp56mem.cpp
+32>  dsp56pcu.cpp
+52>  dataeast.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dataeast.lib
+72>------ 已启动生成: 项目: jaleco, 配置: Debug Win32 ------
+72>  aeroboto.cpp
+72>  argus.cpp
+72>  bestleag.cpp
+72>  bigstrkb.cpp
+72>  blueprnt.cpp
+72>  bnstars.cpp
+72>  cischeat.cpp
+72>  citycon.cpp
+69>  goldstar.cpp
+69>  igs017_igs031.cpp
+69>  iqblock.cpp
+69>  lordgun.cpp
+69>  pgm.cpp
+9>  osd_messui.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\osd_messui.lib
+60>  exidy.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\exidy.lib
+73>------ 已启动生成: 项目: jpm, 配置: Debug Win32 ------
+74>------ 已启动生成: 项目: kaneko, 配置: Debug Win32 ------
+72>  ddayjlc.cpp
+72>  exerion.cpp
+72>  fcombat.cpp
+72>  ginganin.cpp
+72>  homerun.cpp
+71>  itech8.cpp
+71>  iteagle_fpga.cpp
+72>  megasys1.cpp
+73>  guab.cpp
+72>  momoko.cpp
+73>  jpmsys5.cpp
+73>  jpmsys5sw.cpp
+73>  jpmmps.cpp
+73>  jpms80.cpp
+74>  airbustr.cpp
+74>  djboy.cpp
+73>  jpmsru.cpp
+74>  expro02.cpp
+73>  jpmimpct.cpp
+74>  galpanic.cpp
+74>  galpani2.cpp
+74>  galpani3.cpp
+73>  jpmimpctsw.cpp
+74>  hvyunit.cpp
+74>  jchan.cpp
+72>  ms32.cpp
+70>  m10.cpp
+70>  m52.cpp
+70>  m57.cpp
+70>  m58.cpp
+70>  m62.cpp
+70>  m72.cpp
+70>  m90.cpp
+70>  m92.cpp
+32>  pdp1.cpp
+32>  tx0.cpp
+33>  ucom4d.cpp
+72>  psychic5.cpp
+72>  pturn.cpp
+72>  skyfox.cpp
+69>  pgmprot_igs027a_type1.cpp
+73>  pluto5.cpp
+70>  m107.cpp
+74>  kaneko16.cpp
+69>  pgmprot_igs027a_type2.cpp
+72>  tetrisp2.cpp
+70>  redalert.cpp
+74>  sandscrp.cpp
+69>  pgmprot_igs027a_type3.cpp
+70>  shisen.cpp
+74>  suprnova.cpp
+69>  pgmprot_igs025_igs012.cpp
+70>  travrusa.cpp
+74>  airbustr.cpp
+69>  pgmprot_igs025_igs022.cpp
+70>  vigilant.cpp
+74>  djboy.cpp
+69>  pgmprot_igs025_igs028.cpp
+74>  galpanic.cpp
+69>  pgmprot_orlegend.cpp
+73>  jpmsys7.cpp
+74>  galpani2.cpp
+69>  igs036crypt.cpp
+74>  kaneko_grap2.cpp
+69>  pgmcrypt.cpp
+74>  kaneko16.cpp
+69>  igs025.cpp
+74>  kaneko_tmap.cpp
+74>  kaneko_spr.cpp
+69>  igs022.cpp
+69>  igs028.cpp
+32>  patinho_feio.cpp
+71>  itech.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\itech.lib
+74>  suprnova.cpp
+74>  sknsspr.cpp
+75>------ 已启动生成: 项目: konami, 配置: Debug Win32 ------
+72>  aeroboto.cpp
+72>  argus.cpp
+72>  bigstrkb.cpp
+72>  blueprnt.cpp
+72>  cischeat.cpp
+72>  citycon.cpp
+72>  exerion.cpp
+72>  fcombat.cpp
+75>  88games.cpp
+75>  ajax.cpp
+75>  aliens.cpp
+75>  asterix.cpp
+75>  battlnts.cpp
+75>  bishi.cpp
+75>  bladestl.cpp
+75>  blockhl.cpp
+75>  bottom9.cpp
+75>  chqflag.cpp
+75>  circusc.cpp
+75>  cobra.cpp
+75>  combatsc.cpp
+75>  contra.cpp
+75>  crimfght.cpp
+75>  dbz.cpp
+70>  m72.cpp
+70>  redalert.cpp
+70>  irem.cpp
+70>  nl_kidniki.cpp
+33>  minxd.cpp
+75>  ddribble.cpp
+75>  divebomb.cpp
+75>  djmain.cpp
+75>  fastfred.cpp
+75>  fastlane.cpp
+72>  ginganin.cpp
+72>  homerun.cpp
+72>  megasys1.cpp
+72>  momoko.cpp
+72>  ms32.cpp
+72>  psychic5.cpp
+75>  finalizr.cpp
+75>  firebeat.cpp
+72>  skyfox.cpp
+72>  tetrisp2.cpp
+75>  flkatck.cpp
+70>  irem_cpu.cpp
+75>  gberet.cpp
+75>  gijoe.cpp
+75>  gradius3.cpp
+72>  jalblend.cpp
+75>  gticlub.cpp
+72>  ms1_tmap.cpp
+75>  gyruss.cpp
+75>  hcastle.cpp
+75>  hexion.cpp
+75>  hornet.cpp
+75>  hyperspt.cpp
+75>  ironhors.cpp
+75>  jackal.cpp
+75>  jailbrek.cpp
+73>  jpmimpct.cpp
+75>  junofrst.cpp
+75>  konamigq.cpp
+75>  konamigv.cpp
+75>  konamigx.cpp
+75>  konamim2.cpp
+75>  konmedal.cpp
+75>  kontest.cpp
+75>  konendev.cpp
+75>  ksys573.cpp
+72>  jalcrpt.cpp
+75>  labyrunr.cpp
+75>  lethal.cpp
+75>  mainevt.cpp
+75>  megazone.cpp
+73>  jpm.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\jpm.lib
+76>------ 已启动生成: 项目: matic, 配置: Debug Win32 ------
+76>  barata.cpp
+75>  mikie.cpp
+75>  mogura.cpp
+75>  moo.cpp
+70>  irem.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\irem.lib
+77>------ 已启动生成: 项目: maygay, 配置: Debug Win32 ------
+77>  maygay1b.cpp
+77>  maygayv1.cpp
+77>  maygayep.cpp
+77>  maygaysw.cpp
+77>  mmm.cpp
+75>  mystwarr.cpp
+75>  nemesis.cpp
+75>  nwk-tr.cpp
+75>  overdriv.cpp
+75>  pandoras.cpp
+32>  ppccom.cpp
+32>  ppcfe.cpp
+32>  ppcdrc.cpp
+75>  parodius.cpp
+75>  pingpong.cpp
+72>  jaleco.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\jaleco.lib
+78>------ 已启动生成: 项目: meadows, 配置: Debug Win32 ------
+78>  lazercmd.cpp
+78>  meadwttl.cpp
+78>  meadows.cpp
+75>  plygonet.cpp
+78>  warpsped.cpp
+75>  pooyan.cpp
+75>  pyson.cpp
+75>  qdrmfgp.cpp
+75>  rockrage.cpp
+75>  rocnrope.cpp
+75>  rollerg.cpp
+75>  rungun.cpp
+75>  sbasketb.cpp
+76>  matic.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\matic.lib
+79>------ 已启动生成: 项目: merit, 配置: Debug Win32 ------
+78>  lazercmd.cpp
+78>  meadows.cpp
+32>  nec.cpp
+32>  v25.cpp
+32>  v25sfr.cpp
+32>  v53.cpp
+79>  mgames.cpp
+79>  merit.cpp
+79>  meritm.cpp
+75>  scobra.cpp
+75>  scotrsht.cpp
+77>  maygay.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\maygay.lib
+80>------ 已启动生成: 项目: metro, 配置: Debug Win32 ------
+80>  hyprduel.cpp
+80>  metro.cpp
+80>  rabbit.cpp
+80>  tmmjprd.cpp
+75>  scramble.cpp
+75>  shaolins.cpp
+75>  simpsons.cpp
+75>  spy.cpp
+75>  surpratk.cpp
+75>  tasman.cpp
+75>  tgtpanic.cpp
+75>  thunderx.cpp
+79>  merit.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\merit.lib
+81>------ 已启动生成: 项目: midcoin, 配置: Debug Win32 ------
+75>  timeplt.cpp
+78>  meadows.cpp
+75>  tmnt.cpp
+75>  tp84.cpp
+75>  trackfld.cpp
+81>  wallc.cpp
+81>  wink.cpp
+75>  tutankhm.cpp
+81>  24cdjuke.cpp
+80>  hyprduel.cpp
+80>  metro.cpp
+75>  twin16.cpp
+78>  meadows.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\meadows.lib
+82>------ 已启动生成: 项目: midw8080, 配置: Debug Win32 ------
+75>  twinkle.cpp
+75>  ultrsprt.cpp
+82>  8080bw.cpp
+82>  m79amb.cpp
+82>  mw8080bw.cpp
+82>  rotaryf.cpp
+75>  ultraman.cpp
+75>  vendetta.cpp
+80>  metro.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\metro.lib
+83>------ 已启动生成: 项目: virtual, 配置: Debug Win32 ------
+75>  viper.cpp
+75>  wecleman.cpp
+75>  xexex.cpp
+75>  xmen.cpp
+75>  yiear.cpp
+32>  v30mz.cpp
+75>  zr107.cpp
+83>  vgmplay.cpp
+83>  ldplayer.cpp
+82>  8080bw.cpp
+82>  m79amb.cpp
+82>  mw8080bw.cpp
+81>  midcoin.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\midcoin.lib
+84>------ 已启动生成: 项目: namco, 配置: Debug Win32 ------
+32>  v60.cpp
+74>  kaneko_hit.cpp
+74>  kaneko_calc3.cpp
+74>  kaneko_toybox.cpp
+84>  20pacgal.cpp
+83>  virtual.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\virtual.lib
+84>  30test.cpp
+84>  baraduke.cpp
+85>------ 已启动生成: 项目: nasco, 配置: Debug Win32 ------
+84>  cswat.cpp
+84>  dambustr.cpp
+84>  gal3.cpp
+84>  galaga.cpp
+84>  galaxian.cpp
+85>  crgolf.cpp
+85>  himesiki.cpp
+85>  suprgolf.cpp
+82>  8080bw.cpp
+82>  mw8080bw.cpp
+32>  v810.cpp
+84>  galaxold.cpp
+84>  gaplus.cpp
+84>  kungfur.cpp
+84>  mappy.cpp
+84>  namcofl.cpp
+84>  namcona1.cpp
+84>  namconb1.cpp
+84>  namcond1.cpp
+69>  igs.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\igs.lib
+84>  namcops2.cpp
+86>------ 已启动生成: 项目: neogeo, 配置: Debug Win32 ------
+84>  namcos1.cpp
+84>  namcos10.cpp
+82>  mw8080bw.cpp
+75>  88games.cpp
+75>  ajax.cpp
+84>  namcos11.cpp
+85>  crgolf.cpp
+33>  rsp_dasm.cpp
+85>  himesiki.cpp
+75>  aliens.cpp
+75>  asterix.cpp
+75>  battlnts.cpp
+75>  bishi.cpp
+75>  bladestl.cpp
+75>  bottom9.cpp
+32>  upd7725.cpp
+86>  neogeo.cpp
+86>  neopcb.cpp
+32>  upd7810.cpp
+32>  upd7810_opcodes.cpp
+32>  upd7810_table.cpp
+84>  namcos12.cpp
+82>  midw8080.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\midw8080.lib
+87>------ 已启动生成: 项目: nichibut, 配置: Debug Win32 ------
+33>  mn102dis.cpp
+87>  armedf.cpp
+84>  namcos2.cpp
+84>  namcos21.cpp
+87>  cclimber.cpp
+87>  clshroad.cpp
+87>  csplayh5.cpp
+87>  cop01.cpp
+87>  dacholer.cpp
+87>  galivan.cpp
+87>  gomoku.cpp
+84>  namcos22.cpp
+84>  namcos23.cpp
+84>  namcos86.cpp
+84>  pacland.cpp
+75>  chqflag.cpp
+75>  circusc.cpp
+75>  combatsc.cpp
+75>  contra.cpp
+84>  polepos.cpp
+85>  nasco.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nasco.lib
+88>------ 已启动生成: 项目: nintendo, 配置: Debug Win32 ------
+75>  crimfght.cpp
+75>  dbz.cpp
+75>  ddribble.cpp
+88>  cham24.cpp
+88>  dkong.cpp
+88>  mario.cpp
+88>  mmagic.cpp
+88>  multigam.cpp
+88>  n8080.cpp
+88>  nss.cpp
+88>  playch10.cpp
+75>  divebomb.cpp
+87>  hyhoo.cpp
+87>  jangou.cpp
+87>  magmax.cpp
+84>  rallyx.cpp
+87>  nbmj8688.cpp
+87>  nbmj8891.cpp
+84>  skykid.cpp
+84>  tankbatt.cpp
+87>  nbmj8900.cpp
+84>  tceptor.cpp
+84>  toypop.cpp
+87>  nbmj8991.cpp
+75>  djmain.cpp
+75>  fastfred.cpp
+87>  nbmj9195.cpp
+84>  turrett.cpp
+84>  warpwarp.cpp
+75>  fastlane.cpp
+75>  finalizr.cpp
+75>  flkatck.cpp
+86>  neogeo.cpp
+86>  neogeo_spr.cpp
+75>  gberet.cpp
+88>  popeye.cpp
+88>  punchout.cpp
+75>  gijoe.cpp
+88>  famibox.cpp
+88>  sfcbox.cpp
+88>  snesb.cpp
+75>  gradius3.cpp
+88>  spacefb.cpp
+88>  vsnes.cpp
+88>  gb.cpp
+87>  nightgal.cpp
+87>  niyanpai.cpp
+87>  pastelg.cpp
+87>  seicross.cpp
+75>  gyruss.cpp
+75>  hcastle.cpp
+87>  terracre.cpp
+87>  tubep.cpp
+87>  wiping.cpp
+75>  hexion.cpp
+75>  hyperspt.cpp
+75>  ironhors.cpp
+84>  20pacgal.cpp
+84>  baraduke.cpp
+84>  galaga.cpp
+84>  bosco.cpp
+84>  digdug.cpp
+84>  xevious.cpp
+84>  galaxian.cpp
+84>  galaxold.cpp
+88>  gba.cpp
+88>  n64.cpp
+75>  jackal.cpp
+75>  jailbrek.cpp
+88>  nes.cpp
+86>  ng_memcard.cpp
+88>  pokemini.cpp
+88>  snes.cpp
+88>  vboy.cpp
+86>  neogeo.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\neogeo.lib
+89>------ 已启动生成: 项目: nix, 配置: Debug Win32 ------
+89>  fitfight.cpp
+89>  pirates.cpp
+75>  konamigx.cpp
+75>  labyrunr.cpp
+75>  lethal.cpp
+75>  mainevt.cpp
+75>  megazone.cpp
+75>  mikie.cpp
+84>  gaplus.cpp
+33>  saturnds.cpp
+84>  mappy.cpp
+84>  namcofl.cpp
+84>  namcona1.cpp
+84>  namconb1.cpp
+84>  ygv608.cpp
+84>  namcos1.cpp
+75>  moo.cpp
+75>  mystwarr.cpp
+84>  namcos2.cpp
+87>  armedf.cpp
+87>  cclimber.cpp
+87>  clshroad.cpp
+87>  cop01.cpp
+87>  galivan.cpp
+87>  gomoku.cpp
+87>  hyhoo.cpp
+87>  magmax.cpp
+75>  nemesis.cpp
+75>  overdriv.cpp
+75>  pandoras.cpp
+89>  fitfight.cpp
+89>  pirates.cpp
+75>  parodius.cpp
+89>  nix.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nix.lib
+74>  kaneko.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\kaneko.lib
+87>  nbmj8688.cpp
+87>  nbmj8891.cpp
+87>  nbmj8900.cpp
+87>  nbmj8991.cpp
+87>  nbmj9195.cpp
+88>  dkong.cpp
+87>  niyanpai.cpp
+88>  nl_mario.cpp
+87>  pastelg.cpp
+88>  mario.cpp
+87>  seicross.cpp
+88>  n8080.cpp
+87>  terracre.cpp
+88>  snes_snd.cpp
+87>  tubep.cpp
+88>  spacefb.cpp
+87>  wiping.cpp
+88>  vboy.cpp
+87>  cclimber.cpp
+88>  dkong.cpp
+87>  nb1413m3.cpp
+88>  mario.cpp
+87>  nb1414m4.cpp
+88>  n8080.cpp
+87>  cclimber.cpp
+88>  playch10.cpp
+87>  gomoku.cpp
+88>  popeye.cpp
+87>  wiping.cpp
+88>  punchout.cpp
+87>  nichibut.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nichibut.lib
+88>  spacefb.cpp
+88>  vsnes.cpp
+88>  nes.cpp
+88>  snes.cpp
+88>  playch10.cpp
+88>  vsnes.cpp
+88>  gb.cpp
+90>------ 已启动生成: 项目: nmk, 配置: Debug Win32 ------
+84>  namcos21.cpp
+88>  nes.cpp
+84>  namcos22.cpp
+88>  snescx4.cpp
+88>  nintendo.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nintendo.lib
+84>  namcos86.cpp
+84>  pacland.cpp
+84>  polepos.cpp
+84>  rallyx.cpp
+84>  skykid.cpp
+84>  tankbatt.cpp
+84>  tceptor.cpp
+91>------ 已启动生成: 项目: olympia, 配置: Debug Win32 ------
+84>  turrett.cpp
+84>  warpwarp.cpp
+84>  namco_c116.cpp
+84>  c45.cpp
+84>  galaga.cpp
+92>------ 已启动生成: 项目: omori, 配置: Debug Win32 ------
+84>  galaxian.cpp
+84>  polepos.cpp
+84>  turrett.cpp
+84>  geebee.cpp
+84>  warpwarp.cpp
+84>  namco52.cpp
+84>  namco54.cpp
+84>  xevious.cpp
+84>  galaxold.cpp
+93>------ 已启动生成: 项目: orca, 配置: Debug Win32 ------
+84>  gaplus.cpp
+84>  namcoic.cpp
+84>  namcond1.cpp
+84>  namcos1.cpp
+84>  ns10crypt.cpp
+84>  ns11prot.cpp
+84>  namco_settings.cpp
+84>  namcos2.cpp
+84>  c117.cpp
+84>  namcoio.cpp
+84>  namco06.cpp
+75>  pingpong.cpp
+32>  ucom4.cpp
+33>  sm510d.cpp
+32>  ucom4op.cpp
+33>  sm8500d.cpp
+32>  minx.cpp
+33>  2650dasm.cpp
+32>  rsp.cpp
+84>  namco50.cpp
+33>  scdasm.cpp
+32>  rspdrc.cpp
+84>  namco51.cpp
+33>  spc700ds.cpp
+84>  namco53.cpp
+32>  rspfe.cpp
+33>  ssp1601d.cpp
+32>  rspcp2.cpp
+33>  unspdasm.cpp
+84>  namco62.cpp
+32>  rspcp2d.cpp
+33>  avr8dasm.cpp
+84>  namcomcu.cpp
+32>  mn10200.cpp
+84>  namcoio_gearbox.cpp
+84>  namco_c148.cpp
+32>  saturn.cpp
+84>  namco_c139.cpp
+84>  namco.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\namco.lib
+33>  tms1k_dasm.cpp
+32>  sm510.cpp
+33>  7000dasm.cpp
+32>  sm510op.cpp
+32>  sm510core.cpp
+32>  sm511core.cpp
+32>  sm500op.cpp
+32>  sm500core.cpp
+32>  kb1013vk1-2op.cpp
+94>------ 已启动生成: 项目: pacific, 配置: Debug Win32 ------
+75>  plygonet.cpp
+32>  kb1013vk1-2core.cpp
+75>  pooyan.cpp
+75>  qdrmfgp.cpp
+75>  rockrage.cpp
+75>  rocnrope.cpp
+75>  rollerg.cpp
+75>  rungun.cpp
+75>  sbasketb.cpp
+75>  scotrsht.cpp
+75>  shaolins.cpp
+75>  simpsons.cpp
+75>  spy.cpp
+75>  surpratk.cpp
+75>  thunderx.cpp
+75>  timeplt.cpp
+75>  tmnt.cpp
+75>  tp84.cpp
+75>  trackfld.cpp
+75>  tutankhm.cpp
+75>  twin16.cpp
+75>  ultraman.cpp
+75>  vendetta.cpp
+75>  wecleman.cpp
+75>  xexex.cpp
+75>  xmen.cpp
+75>  yiear.cpp
+75>  konami_helper.cpp
+75>  k007121.cpp
+75>  k007342.cpp
+75>  k007420.cpp
+75>  k037122.cpp
+75>  k051316.cpp
+75>  k051733.cpp
+75>  k051960.cpp
+75>  k052109.cpp
+75>  k053250.cpp
+75>  k053251.cpp
+75>  k054156_k054157_k056832.cpp
+75>  k053244_k053245.cpp
+75>  k053246_k053247_k055673.cpp
+75>  k055555.cpp
+75>  k054000.cpp
+75>  k054338.cpp
+75>  k053936.cpp
+75>  k001006.cpp
+75>  k001005.cpp
+75>  k001604.cpp
+75>  k057714.cpp
+75>  ajax.cpp
+75>  midikbd.cpp
+75>  konppc.cpp
+75>  konamigx.cpp
+75>  k573cass.cpp
+75>  k573dio.cpp
+75>  k573mcr.cpp
+75>  k573msu.cpp
+75>  k573npu.cpp
+75>  zs01.cpp
+75>  scramble.cpp
+75>  simpsons.cpp
+75>  konami1.cpp
+90>  acommand.cpp
+90>  cultures.cpp
+91>  dday.cpp
+90>  ddealer.cpp
+90>  jalmah.cpp
+90>  macrossp.cpp
+91>  lbeach.cpp
+91>  monzagp.cpp
+90>  nmk16.cpp
+91>  portrait.cpp
+90>  quizdna.cpp
+90>  quizpani.cpp
+91>  vega.cpp
+91>  peoplepc.cpp
+92>  battlex.cpp
+92>  carjmbre.cpp
+94>  mrflea.cpp
+92>  popper.cpp
+92>  spaceg.cpp
+93>  espial.cpp
+94>  thief.cpp
+93>  funkybee.cpp
+93>  marineb.cpp
+93>  vastar.cpp
+93>  zodiack.cpp
+32>  sm8500.cpp
+32>  s2650.cpp
+93>  espial.cpp
+93>  funkybee.cpp
+93>  marineb.cpp
+93>  vastar.cpp
+93>  zodiack.cpp
+33>  9900dasm.cpp
+92>  battlex.cpp
+75>  hyprolyb.cpp
+75>  scramble.cpp
+75>  timeplt.cpp
+75>  trackfld.cpp
+92>  omori.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\omori.lib
+95>------ 已启动生成: 项目: pacman, 配置: Debug Win32 ------
+91>  dday.cpp
+91>  portrait.cpp
+32>  sc61860.cpp
+95>  jrpacman.cpp
+95>  pacman.cpp
+95>  pengo.cpp
+93>  orca.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\orca.lib
+96>------ 已启动生成: 项目: pce, 配置: Debug Win32 ------
+94>  mrflea.cpp
+94>  thief.cpp
+96>  ggconnie.cpp
+96>  paranoia.cpp
+96>  tourvis.cpp
+96>  uapce.cpp
+33>  34010dsm.cpp
+32>  spc700.cpp
+91>  olympia.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\olympia.lib
+97>------ 已启动生成: 项目: phoenix, 配置: Debug Win32 ------
+33>  32010dsm.cpp
+95>  pacman.cpp
+97>  naughtyb.cpp
+97>  phoenix.cpp
+97>  safarir.cpp
+96>  pcecommn.cpp
+75>  konami.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\konami.lib
+98>------ 已启动生成: 项目: playmark, 配置: Debug Win32 ------
+94>  pacific.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\pacific.lib
+99>------ 已启动生成: 项目: promat, 配置: Debug Win32 ------
+90>  macrossp.cpp
+98>  drtomy.cpp
+90>  nmk16.cpp
+98>  playmark.cpp
+90>  quizdna.cpp
+98>  powerbal.cpp
+90>  quizpani.cpp
+98>  sderby.cpp
+98>  sslam.cpp
+99>  1945kiii.cpp
+99>  3x3puzzl.cpp
+99>  gstream.cpp
+32>  ssp1601.cpp
+96>  pce.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\pce.lib
+100>------ 已启动生成: 项目: psikyo, 配置: Debug Win32 ------
+100>  psikyo.cpp
+100>  psikyo4.cpp
+100>  psikyosh.cpp
+95>  jumpshot.cpp
+95>  epos.cpp
+95>  pacplus.cpp
+33>  32025dsm.cpp
+98>  playmark.cpp
+98>  sderby.cpp
+98>  sslam.cpp
+90>  nmk004.cpp
+32>  unsp.cpp
+97>  naughtyb.cpp
+97>  phoenix.cpp
+99>  promat.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\promat.lib
+95>  pacman.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\pacman.lib
+98>  playmark.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\playmark.lib
+90>  nmk.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nmk.lib
+101>------ 已启动生成: 项目: ramtek, 配置: Debug Win32 ------
+102>------ 已启动生成: 项目: rare, 配置: Debug Win32 ------
+103>------ 已启动生成: 项目: sanritsu, 配置: Debug Win32 ------
+104>------ 已启动生成: 项目: sega, 配置: Debug Win32 ------
+33>  dis32031.cpp
+100>  psikyo.cpp
+100>  psikyo4.cpp
+32>  avr8.cpp
+100>  psikyosh.cpp
+102>  btoads.cpp
+103>  appoooh.cpp
+103>  bankp.cpp
+103>  chinsan.cpp
+102>  kinst.cpp
+103>  drmicro.cpp
+103>  jantotsu.cpp
+103>  mayumi.cpp
+103>  mermaid.cpp
+101>  hitme.cpp
+101>  ramtek.cpp
+102>  xtheball.cpp
+101>  starcrus.cpp
+103>  mjkjidai.cpp
+104>  angelkds.cpp
+104>  bingoc.cpp
+104>  blockade.cpp
+104>  calorie.cpp
+104>  chihiro.cpp
+104>  coolridr.cpp
+104>  deniam.cpp
+104>  dotrikun.cpp
+97>  phoenix.cpp
+97>  pleiads.cpp
+104>  gpworld.cpp
+104>  hikaru.cpp
+104>  hshavoc.cpp
+104>  kopunch.cpp
+104>  lindbergh.cpp
+104>  megadrvb.cpp
+101>  hitme.cpp
+100>  psikyo.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\psikyo.lib
+105>------ 已启动生成: 项目: seibu, 配置: Debug Win32 ------
+33>  dis32051.cpp
+104>  megaplay.cpp
+103>  appoooh.cpp
+102>  btoads.cpp
+104>  megatech.cpp
+103>  bankp.cpp
+103>  drmicro.cpp
+103>  mermaid.cpp
+103>  mjkjidai.cpp
+105>  airraid.cpp
+105>  bloodbro.cpp
+105>  cabal.cpp
+105>  darkmist.cpp
+105>  dcon.cpp
+105>  deadang.cpp
+105>  dynduke.cpp
+105>  feversoc.cpp
+97>  phoenix.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\phoenix.lib
+106>------ 已启动生成: 项目: seta, 配置: Debug Win32 ------
+101>  starcrus.cpp
+102>  rare.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\rare.lib
+107>------ 已启动生成: 项目: sigma, 配置: Debug Win32 ------
+33>  dis_mp.cpp
+33>  dis_pp.cpp
+107>  nyny.cpp
+106>  aleck64.cpp
+107>  r2dtank.cpp
+107>  sigmab52.cpp
+106>  hanaawas.cpp
+107>  sigmab98.cpp
+106>  jclub2.cpp
+107>  spiders.cpp
+106>  macs.cpp
+107>  sub.cpp
+106>  seta.cpp
+106>  seta2.cpp
+106>  speedatk.cpp
+106>  speglsht.cpp
+104>  model1.cpp
+101>  ramtek.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ramtek.lib
+108>------ 已启动生成: 项目: snk, 配置: Debug Win32 ------
+108>  bbusters.cpp
+108>  dmndrby.cpp
+108>  hng64.cpp
+108>  lasso.cpp
+108>  mainsnk.cpp
+108>  munchmo.cpp
+108>  prehisle.cpp
+108>  snk6502.cpp
+104>  model2.cpp
+104>  model3.cpp
+104>  monacogp.cpp
+105>  goal92.cpp
+105>  goodejan.cpp
+104>  naomi.cpp
+105>  kncljoe.cpp
+104>  segasp.cpp
+105>  legionna.cpp
+104>  triforce.cpp
+104>  puckpkmn.cpp
+105>  seicupbl.cpp
+105>  metlfrzr.cpp
+105>  mustache.cpp
+103>  sanritsu.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sanritsu.lib
+109>------ 已启动生成: 项目: sony, 配置: Debug Win32 ------
+109>  zn.cpp
+109>  pockstat.cpp
+109>  psx.cpp
+109>  pve500.cpp
+109>  smc777.cpp
+105>  panicr.cpp
+106>  srmp2.cpp
+108>  snk.cpp
+106>  srmp5.cpp
+108>  snk68.cpp
+108>  neogeocd.cpp
+108>  ngp.cpp
+104>  segac2.cpp
+104>  segae.cpp
+106>  srmp6.cpp
+106>  ssv.cpp
+106>  simple_st0016.cpp
+106>  thedealr.cpp
+104>  sms.cpp
+105>  raiden.cpp
+105>  raiden2.cpp
+104>  sms_bootleg.cpp
+105>  r2dx_v33.cpp
+105>  seibuspi.cpp
+104>  shtzone.cpp
+105>  sengokmj.cpp
+105>  stfight.cpp
+104>  segacoin.cpp
+105>  toki.cpp
+104>  segag80r.cpp
+104>  segag80v.cpp
+105>  wiz.cpp
+107>  spiders.cpp
+109>  znmcu.cpp
+104>  segahang.cpp
+109>  cat702.cpp
+109>  psxcd.cpp
+104>  segajw.cpp
+104>  segald.cpp
+104>  segaorun.cpp
+104>  segas16a.cpp
+104>  segas16b.cpp
+104>  segas18.cpp
+104>  segas24.cpp
+33>  57002dsm.cpp
+104>  segam1.cpp
+105>  bloodbro.cpp
+105>  cabal.cpp
+105>  darkmist.cpp
+105>  dcon.cpp
+104>  segas32.cpp
+105>  deadang.cpp
+105>  dynduke.cpp
+105>  goal92.cpp
+105>  kncljoe.cpp
+104>  segaufo.cpp
+104>  segaxbd.cpp
+104>  segaybd.cpp
+104>  sg1000a.cpp
+109>  sony.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sony.lib
+110>------ 已启动生成: 项目: stern, 配置: Debug Win32 ------
+104>  stactics.cpp
+104>  stv.cpp
+104>  saturn.cpp
+110>  astinvad.cpp
+110>  berzerk.cpp
+110>  cliffhgr.cpp
+110>  mazerbla.cpp
+110>  supdrapo.cpp
+104>  suprloco.cpp
+104>  system1.cpp
+104>  system16.cpp
+104>  timetrv.cpp
+104>  turbo.cpp
+104>  vicdual.cpp
+104>  zaxxon.cpp
+104>  dccons.cpp
+104>  megadriv.cpp
+104>  segapico.cpp
+104>  sega_sawatte.cpp
+110>  cliffhgr.cpp
+104>  segapm.cpp
+104>  sg1000.cpp
+104>  svmu.cpp
+110>  stern.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\stern.lib
+111>------ 已启动生成: 项目: subsino, 配置: Debug Win32 ------
+111>  lastfght.cpp
+111>  subsino.cpp
+111>  subsino2.cpp
+111>  subsino.cpp
+32>  tms1k_base.cpp
+32>  tms1000.cpp
+32>  tms1100.cpp
+32>  tms1400.cpp
+32>  tms0970.cpp
+32>  tms0980.cpp
+32>  tms0270.cpp
+32>  tp0320.cpp
+107>  sigma.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sigma.lib
+112>------ 已启动生成: 项目: suna, 配置: Debug Win32 ------
+111>  subsino.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\subsino.lib
+113>------ 已启动生成: 项目: sunelect, 配置: Debug Win32 ------
+112>  go2000.cpp
+112>  goindol.cpp
+112>  suna8.cpp
+112>  suna16.cpp
+113>  arabian.cpp
+113>  dai3wksi.cpp
+113>  ikki.cpp
+113>  kangaroo.cpp
+113>  markham.cpp
+113>  route16.cpp
+113>  shanghai.cpp
+113>  shangha3.cpp
+113>  strnskil.cpp
+113>  tonton.cpp
+112>  goindol.cpp
+112>  suna8.cpp
+112>  suna16.cpp
+113>  arabian.cpp
+113>  ikki.cpp
+113>  kangaroo.cpp
+113>  markham.cpp
+113>  route16.cpp
+113>  shangha3.cpp
+113>  strnskil.cpp
+105>  legionna.cpp
+105>  mustache.cpp
+105>  raiden.cpp
+105>  seibuspi.cpp
+105>  stfight_dev.cpp
+105>  airraid_dev.cpp
+112>  suna8.cpp
+105>  toki.cpp
+105>  wiz.cpp
+112>  suna.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\suna.lib
+114>------ 已启动生成: 项目: sure, 配置: Debug Win32 ------
+105>  seibu_crtc.cpp
+114>  mil4000.cpp
+113>  sunelect.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sunelect.lib
+115>------ 已启动生成: 项目: taito, 配置: Debug Win32 ------
+105>  r2crypt.cpp
+105>  stfight.cpp
+105>  seicop.cpp
+105>  seibuspi.cpp
+115>  2mindril.cpp
+115>  40love.cpp
+115>  arkanoid.cpp
+115>  ashnojoe.cpp
+115>  asuka.cpp
+115>  bigevglf.cpp
+115>  bking.cpp
+115>  bublbobl.cpp
+114>  sure.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sure.lib
+116>------ 已启动生成: 项目: tatsumi, 配置: Debug Win32 ------
+116>  kingdrby.cpp
+116>  lockon.cpp
+116>  tatsumi.cpp
+116>  tx1.cpp
+115>  buggychl.cpp
+115>  capr1.cpp
+115>  caprcyc.cpp
+115>  cchance.cpp
+115>  chaknpop.cpp
+115>  champbwl.cpp
+115>  changela.cpp
+105>  seibucop.cpp
+106>  n64.cpp
+106>  st0016.cpp
+115>  crbaloon.cpp
+116>  lockon.cpp
+116>  tatsumi.cpp
+115>  cyclemb.cpp
+116>  tx1.cpp
+115>  darius.cpp
+115>  exzisus.cpp
+115>  fgoal.cpp
+105>  seibu.cpp
+105>  t5182.cpp
+115>  flstory.cpp
+115>  galastrm.cpp
+115>  gladiatr.cpp
+115>  grchamp.cpp
+115>  groundfx.cpp
+115>  gsword.cpp
+115>  gunbustr.cpp
+115>  halleys.cpp
+115>  invqix.cpp
+116>  tatsumi.cpp
+116>  tx1.cpp
+115>  jollyjgr.cpp
+115>  ksayakyu.cpp
+115>  lgp.cpp
+115>  lkage.cpp
+115>  lsasquad.cpp
+115>  marinedt.cpp
+115>  mexico86.cpp
+115>  minivadr.cpp
+116>  tx1.cpp
+115>  missb2.cpp
+115>  mlanding.cpp
+105>  seibu.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\seibu.lib
+117>------ 已启动生成: 项目: tch, 配置: Debug Win32 ------
+117>  kickgoal.cpp
+117>  littlerb.cpp
+117>  rltennis.cpp
+117>  speedspn.cpp
+117>  wheelfir.cpp
+116>  tatsumi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tatsumi.lib
+118>------ 已启动生成: 项目: tecfri, 配置: Debug Win32 ------
+115>  msisaac.cpp
+118>  ambush.cpp
+118>  holeland.cpp
+118>  sauro.cpp
+118>  speedbal.cpp
+115>  ninjaw.cpp
+115>  nycaptor.cpp
+115>  opwolf.cpp
+115>  othunder.cpp
+115>  pitnrun.cpp
+115>  qix.cpp
+115>  rbisland.cpp
+115>  rastan.cpp
+117>  kickgoal.cpp
+117>  rltennis.cpp
+117>  speedspn.cpp
+115>  retofinv.cpp
+115>  rollrace.cpp
+115>  sbowling.cpp
+115>  slapshot.cpp
+118>  holeland.cpp
+118>  sauro.cpp
+115>  ssrj.cpp
+118>  speedbal.cpp
+115>  superchs.cpp
+108>  bbusters.cpp
+108>  hng64.cpp
+108>  lasso.cpp
+108>  mainsnk.cpp
+108>  munchmo.cpp
+108>  prehisle.cpp
+108>  snk6502.cpp
+108>  snk.cpp
+115>  superqix.cpp
+115>  taito_b.cpp
+115>  taito_f2.cpp
+115>  taito_f3.cpp
+115>  taito_h.cpp
+115>  taito_l.cpp
+115>  taito_x.cpp
+117>  tch.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tch.lib
+119>------ 已启动生成: 项目: technos, 配置: Debug Win32 ------
+119>  battlane.cpp
+115>  taito_z.cpp
+119>  blockout.cpp
+119>  bogeyman.cpp
+119>  chinagat.cpp
+119>  ddragon.cpp
+119>  ddragon3.cpp
+119>  dogfgt.cpp
+119>  matmania.cpp
+118>  tecfri.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tecfri.lib
+120>------ 已启动生成: 项目: tehkan, 配置: Debug Win32 ------
+120>  tecmo_spr.cpp
+120>  tecmo_mix.cpp
+120>  bombjack.cpp
+120>  gaiden.cpp
+120>  lvcards.cpp
+120>  pbaction.cpp
+120>  senjyo.cpp
+120>  solomon.cpp
+115>  taito_o.cpp
+115>  taitoair.cpp
+115>  taitogn.cpp
+115>  taitojc.cpp
+115>  taitopjc.cpp
+119>  mystston.cpp
+119>  renegade.cpp
+119>  scregg.cpp
+119>  shadfrce.cpp
+115>  taitosj.cpp
+120>  spbactn.cpp
+119>  spdodgeb.cpp
+120>  tbowl.cpp
+120>  tecmo.cpp
+120>  tecmo16.cpp
+119>  ssozumo.cpp
+115>  taitottl.cpp
+115>  taitotz.cpp
+120>  tecmosys.cpp
+119>  tagteam.cpp
+120>  tehkanwc.cpp
+119>  vball.cpp
+120>  wc90.cpp
+120>  wc90b.cpp
+115>  taitotx.cpp
+119>  wwfsstar.cpp
+115>  taitowlf.cpp
+119>  xain.cpp
+115>  tnzs.cpp
+115>  topspeed.cpp
+115>  tsamurai.cpp
+108>  snk68.cpp
+108>  snk68_spr.cpp
+108>  k1ge.cpp
+115>  undrfire.cpp
+115>  volfied.cpp
+115>  warriorb.cpp
+115>  wgp.cpp
+120>  bombjack.cpp
+120>  gaiden.cpp
+115>  wyvernf0.cpp
+120>  lvcards.cpp
+120>  pbaction.cpp
+120>  senjyo.cpp
+120>  solomon.cpp
+120>  spbactn.cpp
+120>  tbowl.cpp
+119>  battlane.cpp
+119>  blockout.cpp
+119>  bogeyman.cpp
+119>  ddragon.cpp
+119>  ddragon3.cpp
+119>  dogfgt.cpp
+119>  matmania.cpp
+119>  mystston.cpp
+104>  angelkds.cpp
+104>  blockade.cpp
+104>  xbox_nv2a.cpp
+104>  deniam.cpp
+104>  kopunch.cpp
+104>  model1.cpp
+104>  model2.cpp
+104>  model3.cpp
+120>  tecmo.cpp
+120>  tecmo16.cpp
+120>  tecmosys.cpp
+120>  tehkanwc.cpp
+120>  wc90.cpp
+120>  wc90b.cpp
+119>  renegade.cpp
+119>  shadfrce.cpp
+119>  spdodgeb.cpp
+119>  ssozumo.cpp
+119>  tagteam.cpp
+119>  vball.cpp
+119>  wwfsstar.cpp
+119>  xain.cpp
+106>  n64.cpp
+106>  rdpblend.cpp
+106>  rdptpipe.cpp
+106>  pin64.cpp
+106>  hanaawas.cpp
+106>  seta.cpp
+106>  seta2.cpp
+106>  speedatk.cpp
+115>  40love.cpp
+115>  arkanoid.cpp
+115>  ashnojoe.cpp
+115>  asuka.cpp
+115>  bigevglf.cpp
+115>  bking.cpp
+115>  bublbobl.cpp
+115>  buggychl.cpp
+119>  technos.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\technos.lib
+121>------ 已启动生成: 项目: terminal, 配置: Debug Win32 ------
+121>  istrebiteli.cpp
+121>  tiamc1.cpp
+106>  srmp2.cpp
+106>  ssv.cpp
+106>  st0020.cpp
+106>  seta001.cpp
+121>  tiamc1.cpp
+121>  tiamc1.cpp
+108>  hng64.cpp
+108>  snk6502.cpp
+121>  terminal.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\terminal.lib
+122>------ 已启动生成: 项目: thepit, 配置: Debug Win32 ------
+122>  thepit.cpp
+122>  timelimt.cpp
+122>  thepit.cpp
+122>  timelimt.cpp
+122>  thepit.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\thepit.lib
+123>------ 已启动生成: 项目: toaplan, 配置: Debug Win32 ------
+123>  mjsister.cpp
+123>  slapfght.cpp
+123>  snowbros.cpp
+123>  toaplan1.cpp
+123>  toaplan2.cpp
+123>  twincobr.cpp
+123>  wardner.cpp
+123>  slapfght.cpp
+123>  toaplan1.cpp
+123>  twincobr.cpp
+115>  chaknpop.cpp
+115>  changela.cpp
+115>  crbaloon.cpp
+115>  darius.cpp
+115>  exzisus.cpp
+115>  fgoal.cpp
+115>  flstory.cpp
+115>  galastrm.cpp
+104>  powervr2.cpp
+123>  slapfght.cpp
+123>  snowbros.cpp
+123>  kan_pand.cpp
+123>  toaplan1.cpp
+123>  toaplan2.cpp
+123>  gp9001.cpp
+123>  twincobr.cpp
+123>  toaplan_scu.cpp
+106>  seta.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\seta.lib
+124>------ 已启动生成: 项目: tong, 配置: Debug Win32 ------
+108>  hng64_net.cpp
+104>  segag80r.cpp
+115>  gladiatr.cpp
+104>  segag80v.cpp
+115>  grchamp.cpp
+104>  segahang.cpp
+104>  segaorun.cpp
+124>  beezer.cpp
+104>  segas16a.cpp
+115>  groundfx.cpp
+115>  gsword.cpp
+104>  segas16b.cpp
+115>  gunbustr.cpp
+33>  dasm900.cpp
+104>  segas18.cpp
+115>  ksayakyu.cpp
+115>  lkage.cpp
+115>  lsasquad.cpp
+124>  tong.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tong.lib
+125>------ 已启动生成: 项目: unico, 配置: Debug Win32 ------
+125>  drgnmst.cpp
+125>  silkroad.cpp
+125>  unico.cpp
+115>  mexico86.cpp
+115>  msisaac.cpp
+104>  segas24.cpp
+104>  segas32.cpp
+104>  segaxbd.cpp
+104>  segaybd.cpp
+104>  stactics.cpp
+115>  ninjaw.cpp
+115>  nycaptor.cpp
+104>  suprloco.cpp
+115>  opwolf.cpp
+104>  system1.cpp
+123>  toaplan.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\toaplan.lib
+126>------ 已启动生成: 项目: univers, 配置: Debug Win32 ------
+126>  cheekyms.cpp
+126>  cosmic.cpp
+126>  docastle.cpp
+126>  ladybug.cpp
+126>  mrdo.cpp
+126>  redclash.cpp
+126>  superdq.cpp
+115>  othunder.cpp
+115>  pitnrun.cpp
+104>  system16.cpp
+115>  qix.cpp
+115>  rbisland.cpp
+115>  rastan.cpp
+125>  drgnmst.cpp
+125>  silkroad.cpp
+125>  unico.cpp
+104>  turbo.cpp
+115>  retofinv.cpp
+115>  rollrace.cpp
+104>  vicdual.cpp
+104>  zaxxon.cpp
+115>  slapshot.cpp
+104>  segaic16.cpp
+104>  segaic16_road.cpp
+104>  sega16sp.cpp
+104>  segaic24.cpp
+115>  ssrj.cpp
+115>  superchs.cpp
+126>  cheekyms.cpp
+126>  cosmic.cpp
+126>  docastle.cpp
+126>  ladybug.cpp
+126>  mrdo.cpp
+126>  redclash.cpp
+115>  superqix.cpp
+115>  taito_b.cpp
+115>  taito_f2.cpp
+115>  taito_f3.cpp
+115>  taito_h.cpp
+115>  taito_l.cpp
+125>  unico.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\unico.lib
+127>------ 已启动生成: 项目: upl, 配置: Debug Win32 ------
+127>  mouser.cpp
+127>  ninjakd2.cpp
+127>  nova2001.cpp
+127>  xxmissio.cpp
+115>  taito_z.cpp
+115>  taito_o.cpp
+115>  taitoair.cpp
+115>  taitojc.cpp
+115>  taitosj.cpp
+115>  tnzs.cpp
+32>  tms7000.cpp
+32>  tms7000op.cpp
+115>  topspeed.cpp
+126>  docastle.cpp
+115>  tsamurai.cpp
+115>  undrfire.cpp
+115>  volfied.cpp
+115>  warriorb.cpp
+127>  mouser.cpp
+127>  ninjakd2.cpp
+127>  nova2001.cpp
+127>  xxmissio.cpp
+115>  wgp.cpp
+115>  taito_helper.cpp
+126>  univers.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\univers.lib
+128>------ 已启动生成: 项目: valadon, 配置: Debug Win32 ------
+115>  pc080sn.cpp
+128>  bagman.cpp
+128>  tankbust.cpp
+115>  pc090oj.cpp
+115>  tc0080vco.cpp
+115>  tc0100scn.cpp
+115>  tc0150rod.cpp
+115>  tc0280grd.cpp
+115>  tc0360pri.cpp
+115>  tc0480scp.cpp
+115>  tc0110pcr.cpp
+127>  upl.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\upl.lib
+128>  bagman.cpp
+129>------ 已启动生成: 项目: venture, 配置: Debug Win32 ------
+129>  looping.cpp
+115>  tc0180vcu.cpp
+129>  spcforce.cpp
+129>  suprridr.cpp
+115>  tc0780fpa.cpp
+128>  bagman.cpp
+128>  tankbust.cpp
+120>  senjyo.cpp
+129>  spcforce.cpp
+129>  suprridr.cpp
+128>  valadon.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\valadon.lib
+130>------ 已启动生成: 项目: vsystem, 配置: Debug Win32 ------
+115>  arkanoid.cpp
+115>  bonzeadv.cpp
+115>  bublbobl.cpp
+115>  taito68705interface.cpp
+115>  chaknpop.cpp
+115>  flstory.cpp
+115>  tait8741.cpp
+115>  lsasquad.cpp
+130>  vsystem_spr.cpp
+130>  vsystem_spr2.cpp
+130>  aerofgt.cpp
+130>  crshrace.cpp
+130>  f1gp.cpp
+130>  fromance.cpp
+130>  fromanc2.cpp
+130>  gstriker.cpp
+129>  venture.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\venture.lib
+131>------ 已启动生成: 项目: wing, 配置: Debug Win32 ------
+131>  lucky74.cpp
+131>  luckgrln.cpp
+131>  pinkiri8.cpp
+131>  slotcarn.cpp
+131>  superwng.cpp
+108>  snk.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\snk.lib
+132>------ 已启动生成: 项目: yunsung, 配置: Debug Win32 ------
+33>  z80dasm.cpp
+132>  nmg5.cpp
+132>  paradise.cpp
+132>  yunsung8.cpp
+115>  mexico86.cpp
+132>  yunsun16.cpp
+115>  opwolf.cpp
+115>  pitnrun.cpp
+115>  qix.cpp
+115>  rbisland.cpp
+130>  mb60553.cpp
+130>  vs920a.cpp
+115>  cchip.cpp
+130>  inufuku.cpp
+33>  lr35902d.cpp
+130>  ojankohs.cpp
+115>  taitosj.cpp
+130>  rpunch.cpp
+130>  suprslam.cpp
+115>  tnzs.cpp
+33>  z180dasm.cpp
+130>  tail2nos.cpp
+130>  taotaido.cpp
+33>  8000dasm.cpp
+115>  volfied.cpp
+115>  taitoio.cpp
+130>  welltris.cpp
+131>  lucky74.cpp
+132>  paradise.cpp
+132>  yunsung8.cpp
+132>  yunsun16.cpp
+33>  z8dasm.cpp
+131>  wing.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\wing.lib
+133>------ 已启动生成: 项目: zaccaria, 配置: Debug Win32 ------
+133>  zaccaria.cpp
+133>  laserbat.cpp
+120>  tecmosys.cpp
+130>  aerofgt.cpp
+130>  crshrace.cpp
+130>  f1gp.cpp
+130>  fromance.cpp
+130>  fromanc2.cpp
+130>  gstriker.cpp
+130>  inufuku.cpp
+130>  ojankohs.cpp
+115>  crbaloon.cpp
+115>  grchamp.cpp
+115>  qix.cpp
+115>  taito_en.cpp
+115>  taitosnd.cpp
+115>  taito_zm.cpp
+33>  sfx_dasm.cpp
+132>  yunsung.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\yunsung.lib
+134>------ 已启动生成: 项目: pinball, 配置: Debug Win32 ------
+134>  allied.cpp
+134>  alvg.cpp
+134>  atari_s1.cpp
+134>  atari_s2.cpp
+134>  barni.cpp
+134>  bingo.cpp
+134>  by17.cpp
+134>  by35.cpp
+130>  pipedrm.cpp
+130>  rpunch.cpp
+130>  suprslam.cpp
+130>  tail2nos.cpp
+130>  taotaido.cpp
+130>  welltris.cpp
+133>  laserbat.cpp
+133>  seabattl.cpp
+133>  zac2650.cpp
+133>  zaccaria.cpp
+130>  vsystem.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\vsystem.lib
+135>------ 已启动生成: 项目: misc, 配置: Debug Win32 ------
+120>  tehkan.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tehkan.lib
+136>------ 已启动生成: 项目: messshared, 配置: Debug Win32 ------
+134>  by6803.cpp
+104>  blockade.cpp
+33>  pps4dasm.cpp
+134>  by68701.cpp
+104>  dsbz80.cpp
+134>  byvid.cpp
+104>  segag80r.cpp
+134>  capcom.cpp
+104>  segag80v.cpp
+134>  de_2.cpp
+104>  turbo.cpp
+134>  de_3.cpp
+104>  vicdual.cpp
+134>  de_3b.cpp
+104>  carnival.cpp
+134>  flicker.cpp
+104>  depthch.cpp
+134>  g627.cpp
+136>  microdrv.cpp
+136>  teleprinter.cpp
+136>  z80bin.cpp
+135>  39in1.cpp
+135>  3do.cpp
+135>  4enraya.cpp
+135>  4enlinea.cpp
+135>  5clown.cpp
+135>  a1supply.cpp
+135>  acefruit.cpp
+135>  aces1.cpp
+134>  gp_1.cpp
+134>  gp_2.cpp
+133>  laserbat.cpp
+133>  zac2650.cpp
+133>  zaccaria.cpp
+134>  gts1.cpp
+134>  gts3.cpp
+134>  gts3a.cpp
+104>  invinco.cpp
+104>  pulsar.cpp
+104>  zaxxon.cpp
+104>  segasnd.cpp
+134>  gts80.cpp
+134>  gts80a.cpp
+134>  gts80b.cpp
+134>  hankin.cpp
+134>  icecold.cpp
+135>  acesp.cpp
+135>  adp.cpp
+135>  age_candy.cpp
+134>  idsa.cpp
+135>  alinvade.cpp
+136>  messshared.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\messshared.lib
+137>------ 已启动生成: 项目: act, 配置: Debug Win32 ------
+134>  inder.cpp
+135>  amaticmg.cpp
+135>  amerihok.cpp
+135>  ampoker2.cpp
+137>  apricot.cpp
+137>  apricotf.cpp
+137>  apricotp.cpp
+137>  victor9k.cpp
+134>  inderp.cpp
+33>  hd61700d.cpp
+134>  jeutel.cpp
+135>  amspdwy.cpp
+134>  joctronic.cpp
+134>  jp.cpp
+135>  amusco.cpp
+134>  jvh.cpp
+134>  kissproto.cpp
+135>  arachnid.cpp
+135>  artmagic.cpp
+135>  astrafr.cpp
+134>  ltd.cpp
+134>  macp.cpp
+135>  astrcorp.cpp
+135>  astropc.cpp
+135>  atronic.cpp
+134>  micropin.cpp
+32>  tms9900.cpp
+133>  zaccaria.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\zaccaria.lib
+138>------ 已启动生成: 项目: adc, 配置: Debug Win32 ------
+32>  tms9980a.cpp
+32>  tms9995.cpp
+32>  ti990_10.cpp
+33>  lc8670dsm.cpp
+138>  super6.cpp
+138>  superslave.cpp
+137>  apricotkb.cpp
+137>  victor9kb.cpp
+137>  victor9k_fdc.cpp
+135>  attckufo.cpp
+134>  mephistp.cpp
+134>  mrgame.cpp
+135>  avt.cpp
+134>  nsm.cpp
+134>  peyper.cpp
+135>  aztarac.cpp
+135>  bailey.cpp
+134>  play_1.cpp
+135>  beaminv.cpp
+134>  play_2.cpp
+135>  belatra.cpp
+134>  play_3.cpp
+135>  bgt.cpp
+134>  rowamet.cpp
+135>  bingoman.cpp
+33>  scudspdasm.cpp
+135>  bingor.cpp
+104>  segabb.cpp
+137>  act.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\act.lib
+139>------ 已启动生成: 项目: alesis, 配置: Debug Win32 ------
+104>  megadriv.cpp
+104>  model1.cpp
+104>  s32comm.cpp
+104>  m1comm.cpp
+104>  m2comm.cpp
+104>  model3.cpp
+104>  dc.cpp
+139>  alesis.cpp
+134>  s11.cpp
+134>  s11a.cpp
+135>  blitz.cpp
+134>  s11b.cpp
+138>  adc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\adc.lib
+140>------ 已启动生成: 项目: altos, 配置: Debug Win32 ------
+33>  scoredsm.cpp
+140>  altos5.cpp
+140>  altos486.cpp
+135>  blitz68k.cpp
+134>  s11c.cpp
+139>  alesis.cpp
+135>  buster.cpp
+115>  taito.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\taito.lib
+141>------ 已启动生成: 项目: ami, 配置: Debug Win32 ------
+134>  s3.cpp
+135>  calomega.cpp
+134>  s4.cpp
+135>  cardline.cpp
+139>  alesis.cpp
+139>  alesis.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\alesis.lib
+141>  hh_amis2k.cpp
+141>  ami.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ami.lib
+142>------ 已启动生成: 项目: amstrad, 配置: Debug Win32 ------
+143>------ 已启动生成: 项目: apf, 配置: Debug Win32 ------
+135>  carrera.cpp
+134>  s6.cpp
+143>  apf.cpp
+104>  naomi.cpp
+142>  amstrad.cpp
+135>  castle.cpp
+104>  naomig1.cpp
+135>  cave.cpp
+104>  naomibd.cpp
+104>  naomirom.cpp
+104>  naomigd.cpp
+134>  s6a.cpp
+142>  amstr_pc.cpp
+134>  s7.cpp
+142>  nc.cpp
+142>  pc1512.cpp
+142>  pcw.cpp
+142>  pcw16.cpp
+142>  pda600.cpp
+134>  s8.cpp
+135>  cavepc.cpp
+104>  naomim1.cpp
+104>  naomim2.cpp
+134>  s8a.cpp
+143>  apf.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\apf.lib
+144>------ 已启动生成: 项目: apollo, 配置: Debug Win32 ------
+144>  apollo.cpp
+135>  cv1k.cpp
+134>  s9.cpp
+104>  naomim4.cpp
+135>  cb2001.cpp
+134>  sam.cpp
+134>  sleic.cpp
+135>  cdi.cpp
+135>  chance32.cpp
+33>  alto2dsm.cpp
+135>  chexx.cpp
+144>  apollo.cpp
+144>  apollo_dbg.cpp
+144>  apollo_kbd.cpp
+135>  chicago.cpp
+104>  m3comm.cpp
+104>  315-5881_crypt.cpp
+104>  awboard.cpp
+134>  spectra.cpp
+134>  spinb.cpp
+104>  mie.cpp
+134>  st_mp100.cpp
+140>  altos.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\altos.lib
+145>------ 已启动生成: 项目: apple, 配置: Debug Win32 ------
+134>  st_mp200.cpp
+104>  maple-dc.cpp
+135>  chsuper.cpp
+104>  mapledev.cpp
+135>  clowndwn.cpp
+104>  dc-ctrl.cpp
+33>  sparcdasm.cpp
+145>  apple1.cpp
+145>  apple2.cpp
+145>  apple2e.cpp
+145>  tk2000.cpp
+145>  apple2gs.cpp
+145>  apple3.cpp
+145>  lisa.cpp
+145>  lwriter.cpp
+135>  cocoloco.cpp
+134>  taito.cpp
+104>  jvs13551.cpp
+135>  coinmstr.cpp
+33>  clipperd.cpp
+134>  techno.cpp
+134>  vd.cpp
+135>  coinmvga.cpp
+134>  whitestar.cpp
+135>  comebaby.cpp
+104>  sms.cpp
+135>  cupidon.cpp
+104>  segag80.cpp
+104>  segas32.cpp
+134>  white_mod.cpp
+134>  wico.cpp
+104>  saturn.cpp
+104>  stvprot.cpp
+135>  bntyhunt.cpp
+134>  wpc_95.cpp
+134>  wpc_an.cpp
+145>  mac128.cpp
+145>  mac.cpp
+135>  coolpool.cpp
+104>  315-5838_317-0229_comp.cpp
+145>  macpci.cpp
+135>  megaphx.cpp
+134>  wpc_dcs.cpp
+104>  segacrp2_device.cpp
+134>  wpc_dot.cpp
+135>  corona.cpp
+135>  amazonlf.cpp
+104>  315_5296.cpp
+135>  crystal.cpp
+134>  wpc_flip1.cpp
+135>  cubeqst.cpp
+134>  wpc_flip2.cpp
+104>  fd1089.cpp
+135>  cybertnk.cpp
+134>  wpc_s.cpp
+104>  fd1094.cpp
+104>  fddebug.cpp
+134>  zac_1.cpp
+135>  dcheese.cpp
+104>  mc8123.cpp
+104>  segaic16.cpp
+104>  gdrom.cpp
+134>  zac_2.cpp
+134>  zac_proto.cpp
+135>  dfruit.cpp
+135>  dgpix.cpp
+135>  discoboy.cpp
+104>  xbox.cpp
+104>  xbox_usb.cpp
+135>  dominob.cpp
+135>  dorachan.cpp
+142>  amstrad.cpp
+142>  nc.cpp
+142>  pc1512kb.cpp
+135>  dreamwld.cpp
+104>  dccons.cpp
+104>  mega32x.cpp
+104>  megacd.cpp
+135>  dribling.cpp
+104>  megacdcd.cpp
+135>  drw80pkr.cpp
+135>  dwarfd.cpp
+135>  dynadice.cpp
+135>  ecoinfr.cpp
+135>  ecoinf1.cpp
+134>  decopincpu.cpp
+134>  genpin.cpp
+134>  wpc.cpp
+134>  wpc_pic.cpp
+134>  wpc_lamp.cpp
+134>  wpc_out.cpp
+134>  wpc_shift.cpp
+135>  ecoinf2.cpp
+135>  ecoinf3.cpp
+135>  electra.cpp
+135>  epos.cpp
+135>  esd16.cpp
+135>  esh.cpp
+32>  tms34010.cpp
+135>  esripsys.cpp
+135>  ettrivia.cpp
+135>  extrema.cpp
+135>  fastinvaders.cpp
+135>  fireball.cpp
+135>  flipjack.cpp
+144>  apollo.cpp
+135>  flower.cpp
+135>  fortecar.cpp
+135>  fresh.cpp
+135>  freekick.cpp
+135>  fungames.cpp
+135>  funkball.cpp
+135>  gambl186.cpp
+135>  galaxi.cpp
+142>  nc.cpp
+142>  pc1512.cpp
+142>  pcw.cpp
+142>  pcw16.cpp
+135>  galgame.cpp
+135>  gamecstl.cpp
+135>  gammagic.cpp
+135>  gamtor.cpp
+135>  gei.cpp
+33>  dasm.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dasm.lib
+146>------ 已启动生成: 项目: applied, 配置: Debug Win32 ------
+146>  mbee.cpp
+135>  gkigt.cpp
+135>  globalfr.cpp
+135>  globalvr.cpp
+135>  gluck2.cpp
+135>  goldngam.cpp
+135>  goldnpkr.cpp
+135>  good.cpp
+146>  mbee.cpp
+135>  gotcha.cpp
+144>  apollo.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\apollo.lib
+147>------ 已启动生成: 项目: arcadia, 配置: Debug Win32 ------
+135>  gumbo.cpp
+142>  amstrad.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\amstrad.lib
+148>------ 已启动生成: 项目: at, 配置: Debug Win32 ------
+134>  decodmd1.cpp
+134>  decodmd2.cpp
+134>  decodmd3.cpp
+134>  wpc_dmd.cpp
+147>  arcadia.cpp
+135>  gunpey.cpp
+148>  at.cpp
+148>  atpci.cpp
+148>  ps2.cpp
+145>  apple2.cpp
+145>  apple2gs.cpp
+145>  apple3.cpp
+145>  lisa.cpp
+145>  egret.cpp
+145>  mac.cpp
+145>  macadb.cpp
+145>  macrtc.cpp
+148>  ct486.cpp
+135>  hapyfish.cpp
+135>  hideseek.cpp
+146>  mbee.cpp
+135>  hazelgr.cpp
+147>  arcadia.cpp
+135>  headonb.cpp
+135>  highvdeo.cpp
+135>  hitpoker.cpp
+146>  applied.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\applied.lib
+147>  arcadia.cpp
+149>------ 已启动生成: 项目: att, 配置: Debug Win32 ------
+135>  homedata.cpp
+149>  unixpc.cpp
+145>  mackbd.cpp
+145>  swim.cpp
+145>  macpci.cpp
+145>  cuda.cpp
+135>  hotblock.cpp
+135>  hotstuff.cpp
+135>  ichiban.cpp
+135>  imolagp.cpp
+147>  arcadia.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\arcadia.lib
+150>------ 已启动生成: 项目: bally, 配置: Debug Win32 ------
+149>  att.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\att.lib
+151>------ 已启动生成: 项目: banctec, 配置: Debug Win32 ------
+151>  banctec.cpp
+150>  astrohome.cpp
+134>  s11c_bg.cpp
+134>  wpcsnd.cpp
+135>  intrscti.cpp
+135>  istellar.cpp
+135>  itgambl2.cpp
+135>  itgambl3.cpp
+151>  banctec.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\banctec.lib
+150>  bally.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\bally.lib
+152>------ 已启动生成: 项目: bandai, 配置: Debug Win32 ------
+153>------ 已启动生成: 项目: be, 配置: Debug Win32 ------
+148>  at.cpp
+135>  itgamble.cpp
+153>  bebox.cpp
+152>  sv8000.cpp
+152>  rx78.cpp
+152>  tamag1.cpp
+152>  wswan.cpp
+135>  jackpool.cpp
+135>  jankenmn.cpp
+135>  jokrwild.cpp
+148>  at.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\at.lib
+154>------ 已启动生成: 项目: bnpo, 配置: Debug Win32 ------
+154>  b2m.cpp
+135>  jongkyo.cpp
+135>  joystand.cpp
+145>  apple2.cpp
+145>  apple2gs.cpp
+145>  apple3.cpp
+145>  mac.cpp
+135>  jubilee.cpp
+135>  jungleyo.cpp
+135>  kas89.cpp
+154>  b2m.cpp
+152>  wswan.cpp
+135>  kingpin.cpp
+135>  koikoi.cpp
+135>  kurukuru.cpp
+135>  kyugo.cpp
+154>  b2m.cpp
+152>  wswan.cpp
+135>  ladyfrog.cpp
+135>  laserbas.cpp
+135>  laz_awetoss.cpp
+135>  laz_aftrshok.cpp
+153>  bebox.cpp
+154>  bnpo.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\bnpo.lib
+155>------ 已启动生成: 项目: bondwell, 配置: Debug Win32 ------
+135>  laz_ribrac.cpp
+155>  bw12.cpp
+152>  wswan.cpp
+155>  bw2.cpp
+135>  lethalj.cpp
+135>  limenko.cpp
+135>  ltcasino.cpp
+135>  magic10.cpp
+135>  magicard.cpp
+135>  magicfly.cpp
+135>  magictg.cpp
+135>  magtouch.cpp
+145>  apple.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\apple.lib
+156>------ 已启动生成: 项目: booth, 配置: Debug Win32 ------
+135>  majorpkr.cpp
+135>  malzak.cpp
+135>  manohman.cpp
+135>  marywu.cpp
+135>  mcatadv.cpp
+135>  mgavegas.cpp
+135>  meyc8080.cpp
+135>  meyc8088.cpp
+135>  micro3d.cpp
+135>  midas.cpp
+135>  miniboy7.cpp
+135>  mirax.cpp
+135>  mjsenpu.cpp
+135>  mole.cpp
+135>  mosaic.cpp
+135>  mpu12wbk.cpp
+152>  bandai.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\bandai.lib
+157>------ 已启动生成: 项目: camputers, 配置: Debug Win32 ------
+156>  apexc.cpp
+135>  mrjong.cpp
+135>  multfish.cpp
+134>  pinball.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\pinball.lib
+158>------ 已启动生成: 项目: canon, 配置: Debug Win32 ------
+135>  multfish_boot.cpp
+135>  murogem.cpp
+135>  murogmbl.cpp
+135>  neoprint.cpp
+135>  neptunp2.cpp
+153>  be.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\be.lib
+159>------ 已启动生成: 项目: cantab, 配置: Debug Win32 ------
+155>  bondwell.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\bondwell.lib
+160>------ 已启动生成: 项目: casio, 配置: Debug Win32 ------
+135>  news.cpp
+135>  nexus3d.cpp
+135>  nibble.cpp
+135>  norautp.cpp
+135>  nsmpoker.cpp
+135>  oneshot.cpp
+135>  onetwo.cpp
+135>  othello.cpp
+135>  pachifev.cpp
+157>  camplynx.cpp
+135>  pasha2.cpp
+135>  pass.cpp
+135>  peplus.cpp
+135>  photon.cpp
+135>  piggypas.cpp
+135>  photon2.cpp
+159>  jupace.cpp
+135>  photoply.cpp
+135>  pipeline.cpp
+158>  cat.cpp
+158>  x07.cpp
+158>  canon_s80.cpp
+135>  pkscram.cpp
+156>  booth.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\booth.lib
+161>------ 已启动生成: 项目: cbm, 配置: Debug Win32 ------
+160>  casloopy.cpp
+160>  cfx9850.cpp
+160>  fp200.cpp
+160>  fp1100.cpp
+160>  fp6000.cpp
+160>  pb1000.cpp
+160>  pv1000.cpp
+160>  pv2000.cpp
+135>  pntnpuzl.cpp
+135>  policetr.cpp
+135>  polyplay.cpp
+135>  poker72.cpp
+161>  c128.cpp
+159>  cantab.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cantab.lib
+161>  c64.cpp
+161>  c64dtv.cpp
+161>  c65.cpp
+157>  camputers.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\camputers.lib
+162>------ 已启动生成: 项目: cccp, 配置: Debug Win32 ------
+163>------ 已启动生成: 项目: cce, 配置: Debug Win32 ------
+161>  c900.cpp
+161>  cbm2.cpp
+161>  clcd.cpp
+161>  pet.cpp
+163>  mc1000.cpp
+162>  argo.cpp
+162>  cm1800.cpp
+162>  lviv.cpp
+162>  mikro80.cpp
+162>  pk8000.cpp
+162>  pk8020.cpp
+162>  pyl601.cpp
+162>  sm1800.cpp
+135>  potgoldu.cpp
+163>  cce.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cce.lib
+164>------ 已启动生成: 项目: ccs, 配置: Debug Win32 ------
+164>  ccs2810.cpp
+164>  ccs300.cpp
+135>  proconn.cpp
+135>  pse.cpp
+135>  quizo.cpp
+135>  quizpun2.cpp
+161>  plus4.cpp
+135>  rbmk.cpp
+135>  rcorsair.cpp
+162>  sm7238.cpp
+135>  re900.cpp
+135>  rgum.cpp
+162>  uknc.cpp
+162>  unior.cpp
+162>  ut88.cpp
+162>  vector06.cpp
+162>  vta2000.cpp
+161>  vic10.cpp
+161>  vic20.cpp
+161>  mps1230.cpp
+160>  casio.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\casio.lib
+164>  ccs.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ccs.lib
+165>------ 已启动生成: 项目: chromatics, 配置: Debug Win32 ------
+166>------ 已启动生成: 项目: coleco, 配置: Debug Win32 ------
+135>  roul.cpp
+165>  cgc7900.cpp
+135>  savquest.cpp
+135>  sanremo.cpp
+135>  sanremmg.cpp
+166>  adam.cpp
+166>  coleco.cpp
+135>  sealy.cpp
+135>  scm_500.cpp
+135>  sfbonus.cpp
+135>  shangkid.cpp
+162>  lviv.cpp
+162>  mikro80.cpp
+162>  pk8020.cpp
+162>  km035.cpp
+162>  ut88.cpp
+162>  vector06.cpp
+165>  cgc7900.cpp
+158>  canon.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\canon.lib
+167>------ 已启动生成: 项目: compugraphic, 配置: Debug Win32 ------
+135>  skeetsht.cpp
+161>  cbm_snqk.cpp
+135>  skimaxx.cpp
+167>  pwrview.cpp
+135>  skyarmy.cpp
+135>  skylncr.cpp
+165>  chromatics.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\chromatics.lib
+168>------ 已启动生成: 项目: cromemco, 配置: Debug Win32 ------
+168>  c10.cpp
+168>  mcb216.cpp
+166>  coleco.cpp
+135>  sliver.cpp
+135>  smsmcorp.cpp
+161>  cbm.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cbm.lib
+169>------ 已启动生成: 项目: comx, 配置: Debug Win32 ------
+135>  sothello.cpp
+135>  splus.cpp
+167>  compugraphic.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\compugraphic.lib
+170>------ 已启动生成: 项目: concept, 配置: Debug Win32 ------
+169>  comx35.cpp
+170>  concept.cpp
+166>  coleco.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\coleco.lib
+171>------ 已启动生成: 项目: conitec, 配置: Debug Win32 ------
+135>  spool99.cpp
+135>  sprcros2.cpp
+135>  sshot.cpp
+171>  prof180x.cpp
+135>  ssingles.cpp
+171>  prof80.cpp
+135>  sstrangr.cpp
+169>  comx35.cpp
+135>  statriv2.cpp
+104>  sega.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sega.lib
+172>------ 已启动生成: 项目: cxg, 配置: Debug Win32 ------
+170>  concept.cpp
+162>  lviv.cpp
+162>  mikro80.cpp
+162>  pk8020.cpp
+162>  ut88.cpp
+162>  vector06.cpp
+172>  cxgz80.cpp
+135>  stellafr.cpp
+135>  stuntair.cpp
+169>  comx.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\comx.lib
+173>------ 已启动生成: 项目: cybiko, 配置: Debug Win32 ------
+135>  su2000.cpp
+135>  subhuntr.cpp
+135>  summit.cpp
+32>  tms32010.cpp
+170>  concept.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\concept.lib
+172>  cxg.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cxg.lib
+174>------ 已启动生成: 项目: dai, 配置: Debug Win32 ------
+175>------ 已启动生成: 项目: ddr, 配置: Debug Win32 ------
+135>  sumt8035.cpp
+173>  cybiko.cpp
+174>  dai.cpp
+175>  ac1.cpp
+175>  bcs3.cpp
+175>  c80.cpp
+175>  huebler.cpp
+135>  supercrd.cpp
+175>  jtc.cpp
+175>  kramermc.cpp
+175>  llc.cpp
+175>  nanos.cpp
+135>  supertnk.cpp
+173>  cybiko.cpp
+174>  dai_snd.cpp
+171>  prof80mmu.cpp
+135>  tapatune.cpp
+168>  cromemco.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cromemco.lib
+176>------ 已启动生成: 项目: dec, 配置: Debug Win32 ------
+135>  tattack.cpp
+162>  cccp.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cccp.lib
+177>------ 已启动生成: 项目: dicksmth, 配置: Debug Win32 ------
+171>  conitec.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\conitec.lib
+178>------ 已启动生成: 项目: dms, 配置: Debug Win32 ------
+174>  dai.cpp
+173>  cybiko.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\cybiko.lib
+179>------ 已启动生成: 项目: dragon, 配置: Debug Win32 ------
+177>  super80.cpp
+135>  taxidriv.cpp
+135>  tcl.cpp
+178>  dms5000.cpp
+178>  dms86.cpp
+178>  zsbc3.cpp
+135>  thayers.cpp
+179>  dgn_beta.cpp
+176>  dct11em.cpp
+176>  dectalk.cpp
+176>  decwritr.cpp
+176>  pdp11.cpp
+176>  vax11.cpp
+176>  rainbow.cpp
+176>  vk100.cpp
+176>  vt100.cpp
+135>  thedeep.cpp
+175>  pcm.cpp
+175>  vcs80.cpp
+135>  tickee.cpp
+177>  super80.cpp
+179>  dgn_beta.cpp
+135>  tmspoker.cpp
+177>  super80.cpp
+135>  truco.cpp
+135>  trucocl.cpp
+179>  dgn_beta.cpp
+176>  vt220.cpp
+135>  trvmadns.cpp
+176>  vt240.cpp
+176>  vt320.cpp
+176>  vt520.cpp
+135>  trvquest.cpp
+177>  dicksmth.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dicksmth.lib
+180>------ 已启动生成: 项目: drc, 配置: Debug Win32 ------
+135>  ttchamp.cpp
+180>  zrt80.cpp
+135>  tugboat.cpp
+179>  dragon.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dragon.lib
+181>------ 已启动生成: 项目: dulmont, 配置: Debug Win32 ------
+175>  ac1.cpp
+135>  ice_bozopail.cpp
+178>  dms.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dms.lib
+182>------ 已启动生成: 项目: eaca, 配置: Debug Win32 ------
+175>  kramermc.cpp
+181>  magnum.cpp
+175>  llc.cpp
+175>  k7659kb.cpp
+180>  drc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\drc.lib
+183>------ 已启动生成: 项目: einis, 配置: Debug Win32 ------
+182>  cgenie.cpp
+135>  ice_tbd.cpp
+183>  pecom.cpp
+181>  dulmont.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dulmont.lib
+184>------ 已启动生成: 项目: elektrka, 配置: Debug Win32 ------
+184>  bk.cpp
+184>  dvk_kcgd.cpp
+184>  dvk_ksm.cpp
+184>  mk85.cpp
+184>  mk90.cpp
+135>  umipoker.cpp
+182>  eaca.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\eaca.lib
+185>------ 已启动生成: 项目: elektor, 配置: Debug Win32 ------
+135>  unkhorse.cpp
+185>  ec65.cpp
+185>  elekscmp.cpp
+183>  pecom.cpp
+185>  junior.cpp
+135>  usgames.cpp
+135>  vamphalf.cpp
+174>  dai.cpp
+135>  vcombat.cpp
+183>  pecom.cpp
+135>  vectrex.cpp
+135>  videopkr.cpp
+176>  dec_lk201.cpp
+176>  rx01.cpp
+175>  ac1.cpp
+175>  kramermc.cpp
+135>  vlc.cpp
+175>  llc.cpp
+135>  voyager.cpp
+135>  vp101.cpp
+135>  vpoker.cpp
+184>  bk.cpp
+184>  ms7004.cpp
+185>  elektor.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\elektor.lib
+186>------ 已启动生成: 项目: ensoniq, 配置: Debug Win32 ------
+186>  esq1.cpp
+186>  esq5505.cpp
+186>  esqasr.cpp
+186>  esqkt.cpp
+186>  esqmr.cpp
+186>  enmirage.cpp
+135>  vroulet.cpp
+135>  wildpkr.cpp
+174>  dai.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dai.lib
+187>------ 已启动生成: 项目: enterprise, 配置: Debug Win32 ------
+135>  wms.cpp
+176>  vtvideo.cpp
+135>  wacky_gator.cpp
+135>  xtom3d.cpp
+183>  einis.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\einis.lib
+188>------ 已启动生成: 项目: entex, 配置: Debug Win32 ------
+175>  ddr.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ddr.lib
+189>------ 已启动生成: 项目: epoch, 配置: Debug Win32 ------
+187>  ep64.cpp
+188>  advision.cpp
+189>  gamepock.cpp
+189>  scv.cpp
+135>  xyonix.cpp
+184>  bk.cpp
+176>  dec.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\dec.lib
+190>------ 已启动生成: 项目: epson, 配置: Debug Win32 ------
+187>  nick.cpp
+188>  advision.cpp
+184>  elektrka.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\elektrka.lib
+191>------ 已启动生成: 项目: fairch, 配置: Debug Win32 ------
+190>  hx20.cpp
+190>  px4.cpp
+190>  px8.cpp
+190>  qx10.cpp
+186>  esqpanel.cpp
+186>  esqvfd.cpp
+186>  esqlcd.cpp
+191>  channelf.cpp
+188>  advision.cpp
+189>  gamepock.cpp
+191>  channelf.cpp
+188>  entex.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\entex.lib
+192>------ 已启动生成: 项目: fairlight, 配置: Debug Win32 ------
+192>  cmi.cpp
+187>  enterprise.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\enterprise.lib
+193>------ 已启动生成: 项目: fidelity, 配置: Debug Win32 ------
+190>  qx10kbd.cpp
+135>  3do.cpp
+135>  cdi070.cpp
+135>  cdislave.cpp
+135>  cdicdic.cpp
+135>  inder_sb.cpp
+135>  inder_vid.cpp
+135>  micro3d.cpp
+135>  vectrex.cpp
+186>  ensoniq.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ensoniq.lib
+191>  channelf.cpp
+194>------ 已启动生成: 项目: force, 配置: Debug Win32 ------
+194>  miniforce.cpp
+194>  fccpu20.cpp
+194>  fccpu30.cpp
+194>  force68k.cpp
+193>  fidelz80.cpp
+193>  fidel6502.cpp
+193>  fidel68k.cpp
+191>  fairch.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\fairch.lib
+192>  fairlight.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\fairlight.lib
+195>------ 已启动生成: 项目: fujitsu, 配置: Debug Win32 ------
+196>------ 已启动生成: 项目: funtech, 配置: Debug Win32 ------
+196>  supracan.cpp
+195>  fmtowns.cpp
+195>  fm7.cpp
+196>  funtech.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\funtech.lib
+197>------ 已启动生成: 项目: galaxy, 配置: Debug Win32 ------
+197>  galaxy.cpp
+194>  force.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\force.lib
+198>------ 已启动生成: 项目: gamepark, 配置: Debug Win32 ------
+198>  gp2x.cpp
+198>  gp32.cpp
+197>  galaxy.cpp
+190>  epson.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\epson.lib
+199>------ 已启动生成: 项目: gi, 配置: Debug Win32 ------
+195>  fmtowns.cpp
+195>  fm7.cpp
+193>  fidelity.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\fidelity.lib
+200>------ 已启动生成: 项目: grundy, 配置: Debug Win32 ------
+199>  hh_pic16.cpp
+200>  newbrain.cpp
+197>  galaxy.cpp
+198>  gamepark.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\gamepark.lib
+201>------ 已启动生成: 项目: hartung, 配置: Debug Win32 ------
+197>  galaxy.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\galaxy.lib
+202>------ 已启动生成: 项目: heathkit, 配置: Debug Win32 ------
+201>  gmaster.cpp
+199>  gi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\gi.lib
+203>------ 已启动生成: 项目: hegener, 配置: Debug Win32 ------
+195>  fm_scsi.cpp
+200>  newbrain.cpp
+202>  et3400.cpp
+202>  h8.cpp
+195>  fmt_icmem.cpp
+202>  h19.cpp
+203>  glasgow.cpp
+203>  mephisto.cpp
+202>  h89.cpp
+203>  mmodular.cpp
+203>  risc2500.cpp
+203>  stratos.cpp
+201>  hartung.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\hartung.lib
+204>------ 已启动生成: 项目: hitachi, 配置: Debug Win32 ------
+204>  b16.cpp
+204>  bmjr.cpp
+204>  bml3.cpp
+204>  hh_hmcs40.cpp
+195>  fujitsu.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\fujitsu.lib
+205>------ 已启动生成: 项目: homebrew, 配置: Debug Win32 ------
+205>  4004clk.cpp
+205>  68ksbc.cpp
+205>  craft.cpp
+205>  homez80.cpp
+205>  p112.cpp
+205>  phunsy.cpp
+205>  pimps.cpp
+205>  ravens.cpp
+200>  grundy.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\grundy.lib
+206>------ 已启动生成: 项目: homelab, 配置: Debug Win32 ------
+202>  heathkit.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\heathkit.lib
+207>------ 已启动生成: 项目: hp, 配置: Debug Win32 ------
+203>  hegener.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\hegener.lib
+208>------ 已启动生成: 项目: hec2hrp, 配置: Debug Win32 ------
+206>  homelab.cpp
+207>  hp16500.cpp
+207>  hp48.cpp
+207>  hp49gp.cpp
+207>  hp9845.cpp
+207>  hp9k.cpp
+207>  hp9k_3xx.cpp
+207>  hp64k.cpp
+207>  hp_ipc.cpp
+208>  hec2hrp.cpp
+208>  interact.cpp
+204>  hitachi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\hitachi.lib
+206>  homelab.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\homelab.lib
+209>------ 已启动生成: 项目: heurikon, 配置: Debug Win32 ------
+210>------ 已启动生成: 项目: ibm6580, 配置: Debug Win32 ------
+210>  ibm6580.cpp
+209>  hk68v10.cpp
+205>  sbc6510.cpp
+205>  sitcom.cpp
+205>  slc1.cpp
+205>  uzebox.cpp
+205>  z80dev.cpp
+209>  heurikon.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\heurikon.lib
+211>------ 已启动生成: 项目: intel, 配置: Debug Win32 ------
+210>  ibm6580_kbd.cpp
+210>  ibm6580_fdc.cpp
+211>  basic52.cpp
+211>  imds.cpp
+211>  ipc.cpp
+211>  ipds.cpp
+211>  isbc.cpp
+211>  isbc8010.cpp
+211>  isbc8030.cpp
+211>  rex6000.cpp
+207>  hp48.cpp
+205>  homebrew.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\homebrew.lib
+212>------ 已启动生成: 项目: imp, 配置: Debug Win32 ------
+211>  sdk80.cpp
+211>  sdk85.cpp
+212>  tim011.cpp
+212>  tim100.cpp
+211>  sdk86.cpp
+211>  imds2.cpp
+207>  hp48.cpp
+210>  ibm6580.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ibm6580.lib
+213>------ 已启动生成: 项目: interpro, 配置: Debug Win32 ------
+213>  interpro.cpp
+207>  hp.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\hp.lib
+214>------ 已启动生成: 项目: interton, 配置: Debug Win32 ------
+214>  vc4000.cpp
+212>  imp.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\imp.lib
+215>------ 已启动生成: 项目: intv, 配置: Debug Win32 ------
+215>  intv.cpp
+208>  hec2hrp.cpp
+213>  cammu.cpp
+213>  interpro_ioga.cpp
+213>  interpro_mcga.cpp
+32>  tms32025.cpp
+213>  interpro_sga.cpp
+214>  vc4000.cpp
+215>  intv.cpp
+208>  hec2hrp.cpp
+214>  vc4000.cpp
+215>  intv.cpp
+215>  stic.cpp
+213>  interpro.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\interpro.lib
+216>------ 已启动生成: 项目: isc, 配置: Debug Win32 ------
+216>  compucolor.cpp
+214>  interton.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\interton.lib
+217>------ 已启动生成: 项目: kaypro, 配置: Debug Win32 ------
+32>  tms32031.cpp
+217>  kaypro.cpp
+216>  isc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\isc.lib
+218>------ 已启动生成: 项目: koei, 配置: Debug Win32 ------
+217>  kaypro.cpp
+217>  kay_kbd.cpp
+215>  intv.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\intv.lib
+208>  hec2hrp.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\hec2hrp.lib
+219>------ 已启动生成: 项目: kyocera, 配置: Debug Win32 ------
+220>------ 已启动生成: 项目: luxor, 配置: Debug Win32 ------
+218>  pasogo.cpp
+32>  tms32051.cpp
+219>  kyocera.cpp
+220>  abc80.cpp
+220>  abc80x.cpp
+220>  abc1600.cpp
+217>  kaypro.cpp
+211>  isbc_215g.cpp
+211>  isbc_208.cpp
+219>  kyocera.cpp
+217>  kaypro.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\kaypro.lib
+221>------ 已启动生成: 项目: magnavox, 配置: Debug Win32 ------
+218>  koei.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\koei.lib
+222>------ 已启动生成: 项目: makerbot, 配置: Debug Win32 ------
+221>  odyssey2.cpp
+219>  kyocera.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\kyocera.lib
+223>------ 已启动生成: 项目: mattel, 配置: Debug Win32 ------
+220>  abc80kb.cpp
+222>  replicator.cpp
+220>  abc1600mac.cpp
+32>  tms32082.cpp
+32>  mp_ops.cpp
+223>  aquarius.cpp
+223>  juicebox.cpp
+223>  hyperscan.cpp
+222>  makerbot.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\makerbot.lib
+224>------ 已启动生成: 项目: matsushi, 配置: Debug Win32 ------
+224>  jr100.cpp
+224>  jr200.cpp
+224>  myb3k.cpp
+221>  magnavox.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\magnavox.lib
+225>------ 已启动生成: 项目: mb, 配置: Debug Win32 ------
+225>  microvsn.cpp
+225>  phantom.cpp
+211>  intel.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\intel.lib
+226>------ 已启动生成: 项目: mchester, 配置: Debug Win32 ------
+223>  aquarius.cpp
+220>  abc80.cpp
+220>  abc800.cpp
+220>  abc802.cpp
+220>  abc806.cpp
+220>  abc1600.cpp
+32>  tms57002.cpp
+32>  tms57kdec.cpp
+226>  ssem.cpp
+223>  mattel.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mattel.lib
+227>------ 已启动生成: 项目: memotech, 配置: Debug Win32 ------
+225>  mb.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mb.lib
+228>------ 已启动生成: 项目: mgu, 配置: Debug Win32 ------
+226>  mchester.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mchester.lib
+229>------ 已启动生成: 项目: microkey, 配置: Debug Win32 ------
+228>  irisha.cpp
+227>  mtx.cpp
+229>  primo.cpp
+228>  mgu.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mgu.lib
+230>------ 已启动生成: 项目: microsoft, 配置: Debug Win32 ------
+230>  xbox.cpp
+227>  mtx.cpp
+224>  matsushi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\matsushi.lib
+231>------ 已启动生成: 项目: mit, 配置: Debug Win32 ------
+220>  luxor.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\luxor.lib
+231>  tx0.cpp
+232>------ 已启动生成: 项目: mits, 配置: Debug Win32 ------
+232>  altair.cpp
+232>  mits680b.cpp
+189>  epoch.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\epoch.lib
+233>------ 已启动生成: 项目: mitsubishi, 配置: Debug Win32 ------
+233>  hh_melps4.cpp
+233>  multi8.cpp
+233>  multi16.cpp
+32>  tlcs90.cpp
+135>  4enraya.cpp
+135>  ampoker2.cpp
+135>  amspdwy.cpp
+135>  artmagic.cpp
+135>  aztarac.cpp
+135>  calomega.cpp
+135>  cave.cpp
+135>  mcd212.cpp
+230>  microsoft.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\microsoft.lib
+234>------ 已启动生成: 项目: mizar, 配置: Debug Win32 ------
+231>  crt.cpp
+231>  tx0.cpp
+234>  mzr8105.cpp
+227>  memotech.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\memotech.lib
+235>------ 已启动生成: 项目: morrow, 配置: Debug Win32 ------
+235>  microdec.cpp
+235>  mpz80.cpp
+235>  tricep.cpp
+32>  tlcs870.cpp
+135>  vrender0.cpp
+232>  mits.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mits.lib
+236>------ 已启动生成: 项目: mos, 配置: Debug Win32 ------
+135>  dcheese.cpp
+135>  dribling.cpp
+135>  epos.cpp
+236>  kim1.cpp
+229>  primo.cpp
+135>  esd16.cpp
+135>  esripsys.cpp
+233>  mitsubishi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mitsubishi.lib
+237>------ 已启动生成: 项目: motorola, 配置: Debug Win32 ------
+237>  m6805evs.cpp
+237>  m68705prg.cpp
+237>  mekd2.cpp
+237>  mvme147.cpp
+135>  freekick.cpp
+135>  gotcha.cpp
+231>  mit.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mit.lib
+238>------ 已启动生成: 项目: multitch, 配置: Debug Win32 ------
+238>  mkit09.cpp
+238>  mpf1.cpp
+236>  mos.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mos.lib
+239>------ 已启动生成: 项目: nakajima, 配置: Debug Win32 ------
+32>  tlcs900.cpp
+239>  nakajies.cpp
+234>  mizar.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\mizar.lib
+235>  morrow.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\morrow.lib
+240>------ 已启动生成: 项目: nascom, 配置: Debug Win32 ------
+241>------ 已启动生成: 项目: ne, 配置: Debug Win32 ------
+240>  nascom1.cpp
+135>  gumbo.cpp
+135>  homedata.cpp
+241>  z80ne.cpp
+135>  kyugo.cpp
+229>  primo.cpp
+239>  nakajima.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nakajima.lib
+242>------ 已启动生成: 项目: nec, 配置: Debug Win32 ------
+135>  ladyfrog.cpp
+135>  lethalj.cpp
+242>  apc.cpp
+242>  pce.cpp
+242>  pcfx.cpp
+242>  pc6001.cpp
+242>  pc8401a.cpp
+242>  pc8001.cpp
+242>  pc8801.cpp
+135>  malzak.cpp
+242>  pc88va.cpp
+135>  mcatadv.cpp
+240>  nascom.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nascom.lib
+243>------ 已启动生成: 项目: netronic, 配置: Debug Win32 ------
+135>  micro3d.cpp
+237>  motorola.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\motorola.lib
+244>------ 已启动生成: 项目: next, 配置: Debug Win32 ------
+243>  elf.cpp
+243>  exp85.cpp
+238>  multitch.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\multitch.lib
+245>------ 已启动生成: 项目: nokia, 配置: Debug Win32 ------
+32>  z80.cpp
+32>  z80daisy.cpp
+32>  tmpz84c011.cpp
+32>  tmpz84c015.cpp
+32>  kl5c80a12.cpp
+135>  mosaic.cpp
+244>  next.cpp
+245>  mikromik.cpp
+245>  nokia_3310.cpp
+135>  mrjong.cpp
+135>  news.cpp
+242>  pc100.cpp
+242>  pc9801.cpp
+244>  nextkbd.cpp
+244>  nextmo.cpp
+135>  oneshot.cpp
+135>  pass.cpp
+135>  pk8000.cpp
+242>  tk80bs.cpp
+242>  hh_ucom4.cpp
+135>  policetr.cpp
+135>  polyplay.cpp
+135>  shangkid.cpp
+135>  taxidriv.cpp
+229>  microkey.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\microkey.lib
+246>------ 已启动生成: 项目: northstar, 配置: Debug Win32 ------
+135>  thedeep.cpp
+243>  netronic.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\netronic.lib
+247>------ 已启动生成: 项目: novag, 配置: Debug Win32 ------
+245>  mm1kb.cpp
+246>  horizon.cpp
+247>  mk1.cpp
+247>  mk2.cpp
+247>  novag6502.cpp
+247>  novag68k.cpp
+247>  ssystem3.cpp
+32>  lr35902.cpp
+245>  mikromik.cpp
+246>  northstar.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\northstar.lib
+248>------ 已启动生成: 项目: olivetti, 配置: Debug Win32 ------
+244>  next.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\next.lib
+249>------ 已启动生成: 项目: ns, 配置: Debug Win32 ------
+249>  hh_cop400.cpp
+245>  nokia.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nokia.lib
+249>  ns.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ns.lib
+247>  ssystem3.cpp
+247>  novag.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\novag.lib
+250>------ 已启动生成: 项目: omnibyte, 配置: Debug Win32 ------
+251>------ 已启动生成: 项目: orion, 配置: Debug Win32 ------
+252>------ 已启动生成: 项目: osborne, 配置: Debug Win32 ------
+135>  truco.cpp
+241>  z80ne.cpp
+242>  pce.cpp
+32>  z180.cpp
+248>  m20.cpp
+135>  trucocl.cpp
+248>  m24.cpp
+242>  pce_cd.cpp
+135>  usgames.cpp
+242>  pc9801_26.cpp
+135>  vectrex.cpp
+135>  xyonix.cpp
+242>  pc9801_86.cpp
+242>  pc9801_118.cpp
+242>  pc9801_cbus.cpp
+242>  pc9801_kbd.cpp
+242>  pc9801_cd.cpp
+251>  orion.cpp
+250>  msbc1.cpp
+250>  ob68k1a.cpp
+252>  osborne1.cpp
+252>  osbexec.cpp
+252>  vixen.cpp
+248>  m20_kbd.cpp
+248>  m20_8086.cpp
+248>  m24_kbd.cpp
+248>  m24_z8000.cpp
+241>  ne.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ne.lib
+253>------ 已启动生成: 项目: osi, 配置: Debug Win32 ------
+251>  orion.cpp
+253>  osi.cpp
+135>  aztarac.cpp
+135>  micro3d.cpp
+135>  norautp.cpp
+135>  polyplay.cpp
+135>  rax.cpp
+253>  osi.cpp
+248>  olivetti.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\olivetti.lib
+250>  omnibyte.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\omnibyte.lib
+252>  osborne1.cpp
+251>  orion.cpp
+253>  osi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\osi.lib
+252>  osborne.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\osborne.lib
+251>  orion.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\orion.lib
+254>------ 已启动生成: 项目: palm, 配置: Debug Win32 ------
+255>------ 已启动生成: 项目: pitronic, 配置: Debug Win32 ------
+256>------ 已启动生成: 项目: pc, 配置: Debug Win32 ------
+257>------ 已启动生成: 项目: pdp1, 配置: Debug Win32 ------
+258>------ 已启动生成: 项目: pel, 配置: Debug Win32 ------
+32>  z8000.cpp
+242>  pc8401a.cpp
+32>  z8.cpp
+32>  superfx.cpp
+32>  pps4.cpp
+32>  hd61700.cpp
+32>  lc8670.cpp
+32>  scudsp.cpp
+32>  score.cpp
+32>  alto2cpu.cpp
+32>  a2disk.cpp
+32>  a2disp.cpp
+32>  a2curt.cpp
+32>  a2dht.cpp
+32>  a2dvt.cpp
+32>  a2dwt.cpp
+32>  a2emu.cpp
+32>  a2ether.cpp
+32>  a2hw.cpp
+32>  a2kbd.cpp
+32>  a2ksec.cpp
+32>  a2kwd.cpp
+32>  a2mem.cpp
+32>  a2mouse.cpp
+32>  a2mrt.cpp
+32>  a2part.cpp
+32>  a2ram.cpp
+32>  a2roms.cpp
+32>  mb86901.cpp
+32>  clipper.cpp
+32>  flt_vol.cpp
+32>  flt_rc.cpp
+32>  samples.cpp
+32>  dac.cpp
+32>  dmadac.cpp
+32>  speaker.cpp
+32>  beep.cpp
+32>  cdda.cpp
+32>  discrete.cpp
+32>  pci-ac97.cpp
+32>  asc.cpp
+32>  awacs.cpp
+32>  pokey.cpp
+32>  tiasound.cpp
+32>  tiaintf.cpp
+32>  astrocde.cpp
+32>  cem3394.cpp
+32>  sb0400.cpp
+32>  es1373.cpp
+32>  bsmt2000.cpp
+32>  es5503.cpp
+32>  es5506.cpp
+32>  esqpump.cpp
+32>  es8712.cpp
+32>  gaelco.cpp
+32>  cdp1863.cpp
+32>  cdp1864.cpp
+32>  cdp1869.cpp
+32>  ay8910.cpp
+32>  hc55516.cpp
+32>  c6280.cpp
+32>  ics2115.cpp
+32>  i5000.cpp
+32>  iremga20.cpp
+32>  k005289.cpp
+32>  k007232.cpp
+32>  k051649.cpp
+32>  k053260.cpp
+32>  k054539.cpp
+32>  k056800.cpp
+32>  l7a1045_l6028_dsp_a.cpp
+32>  lmc1992.cpp
+32>  mas3507d.cpp
+32>  mea8000.cpp
+32>  mos6560.cpp
+32>  mos7360.cpp
+32>  namco.cpp
+32>  n63701x.cpp
+32>  c140.cpp
+32>  c352.cpp
+32>  digitalk.cpp
+32>  nes_apu.cpp
+32>  upd7759.cpp
+32>  315-5641.cpp
+32>  okiadpcm.cpp
+32>  msm5205.cpp
+32>  msm5232.cpp
+32>  okim6376.cpp
+32>  okim6295.cpp
+32>  okim6258.cpp
+32>  okim9810.cpp
+32>  saa1099.cpp
+32>  qs1000.cpp
+32>  qsound.cpp
+254>  palm.cpp
+32>  rf5c68.cpp
+255>  beta.cpp
+256>  asst128.cpp
+254>  palmz22.cpp
+32>  rf5c400.cpp
+256>  europc.cpp
+256>  genpc.cpp
+256>  ibmpc.cpp
+256>  ibmpcjr.cpp
+256>  pc.cpp
+256>  pcipc.cpp
+256>  tandy1t.cpp
+257>  pdp1.cpp
+258>  galeb.cpp
+258>  orao.cpp
+32>  segapcm.cpp
+32>  multipcm.cpp
+255>  pitronic.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\pitronic.lib
+259>------ 已启动生成: 项目: philips, 配置: Debug Win32 ------
+259>  p2000t.cpp
+259>  vg5k.cpp
+257>  pdp1.cpp
+257>  pdp1.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\pdp1.lib
+260>------ 已启动生成: 项目: poly88, 配置: Debug Win32 ------
+32>  scsp.cpp
+256>  tosh1000.cpp
+32>  scspdsp.cpp
+32>  aica.cpp
+32>  aicadsp.cpp
+32>  st0016.cpp
+32>  nile.cpp
+32>  x1_010.cpp
+32>  mos6581.cpp
+32>  sid.cpp
+32>  sidenvel.cpp
+32>  sidvoice.cpp
+254>  palm.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\palm.lib
+261>------ 已启动生成: 项目: prodigy, 配置: Debug Win32 ------
+260>  poly88.cpp
+259>  p2000t.cpp
+258>  galeb.cpp
+32>  t6w28.cpp
+258>  orao.cpp
+261>  prodigy.cpp
+32>  snkwave.cpp
+32>  spu.cpp
+32>  spu_tables.cpp
+256>  pc_t1t.cpp
+260>  poly88.cpp
+32>  spureverb.cpp
+32>  sp0256.cpp
+32>  sp0250.cpp
+32>  s14001a.cpp
+259>  p2000t.cpp
+256>  pc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\pc.lib
+32>  sn76477.cpp
+262>------ 已启动生成: 项目: psion, 配置: Debug Win32 ------
+258>  orao.cpp
+260>  poly88.cpp
+32>  sn76496.cpp
+261>  nl_prodigy.cpp
+32>  tms36xx.cpp
+32>  tms3615.cpp
+32>  tms5110.cpp
+32>  tms5220.cpp
+32>  t6721a.cpp
+32>  tc8830f.cpp
+262>  psion.cpp
+259>  philips.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\philips.lib
+263>------ 已启动生成: 项目: radio, 配置: Debug Win32 ------
+260>  poly88.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\poly88.lib
+258>  pel.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\pel.lib
+264>------ 已启动生成: 项目: rca, 配置: Debug Win32 ------
+265>------ 已启动生成: 项目: regnecentralen, 配置: Debug Win32 ------
+261>  prodigy.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\prodigy.lib
+266>------ 已启动生成: 项目: ritam, 配置: Debug Win32 ------
+263>  apogee.cpp
+263>  mikrosha.cpp
+263>  partner.cpp
+265>  rc702.cpp
+32>  upd7752.cpp
+264>  microkit.cpp
+263>  radio86.cpp
+32>  vlm5030.cpp
+264>  studio2.cpp
+265>  rc759.cpp
+264>  vip.cpp
+266>  monty.cpp
+262>  psion_pack.cpp
+32>  votrax.cpp
+32>  vrender0.cpp
+32>  wave.cpp
+32>  ym2151.cpp
+32>  ym2413.cpp
+266>  ritam.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ritam.lib
+267>------ 已启动生成: 项目: rm, 配置: Debug Win32 ------
+32>  2203intf.cpp
+267>  rm380z.cpp
+267>  rmnimbus.cpp
+262>  psion.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\psion.lib
+268>------ 已启动生成: 项目: robotron, 配置: Debug Win32 ------
+32>  fm.cpp
+268>  a5105.cpp
+268>  a51xx.cpp
+268>  a7150.cpp
+268>  k1003.cpp
+268>  k8915.cpp
+268>  rt1715.cpp
+268>  z1013.cpp
+268>  z9001.cpp
+32>  2608intf.cpp
+32>  ymdeltat.cpp
+32>  2610intf.cpp
+32>  2612intf.cpp
+32>  fm2612.cpp
+263>  partner.cpp
+264>  rca.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\rca.lib
+269>------ 已启动生成: 项目: roland, 配置: Debug Win32 ------
+263>  radio86.cpp
+265>  regnecentralen.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\regnecentralen.lib
+270>------ 已启动生成: 项目: rolm, 配置: Debug Win32 ------
+269>  rmt32.cpp
+269>  rd110.cpp
+269>  rsc55.cpp
+269>  tb303.cpp
+269>  tr606.cpp
+32>  3812intf.cpp
+270>  r9751.cpp
+32>  fmopl.cpp
+32>  3526intf.cpp
+32>  8950intf.cpp
+32>  ymf262.cpp
+32>  262intf.cpp
+32>  ymf271.cpp
+32>  ymf278b.cpp
+32>  ymz280b.cpp
+32>  ymz770.cpp
+32>  mpeg_audio.cpp
+32>  zsg2.cpp
+32>  vrc6.cpp
+267>  rm380z.cpp
+267>  rmnimbus.cpp
+267>  rmnkbd.cpp
+32>  ad1848.cpp
+32>  upd1771.cpp
+32>  gb.cpp
+32>  pcd3311.cpp
+32>  volt_reg.cpp
+32>  dac76.cpp
+32>  mm5837.cpp
+32>  dave.cpp
+270>  rolm.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\rolm.lib
+271>------ 已启动生成: 项目: rockwell, 配置: Debug Win32 ------
+267>  rm380z.cpp
+267>  rmnimbus.cpp
+263>  radio.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\radio.lib
+272>------ 已启动生成: 项目: saturn, 配置: Debug Win32 ------
+271>  aim65.cpp
+271>  aim65_40.cpp
+272>  st17xx.cpp
+272>  saturn.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\saturn.lib
+273>------ 已启动生成: 项目: sage, 配置: Debug Win32 ------
+273>  sage2.cpp
+268>  robotron.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\robotron.lib
+274>------ 已启动生成: 项目: samcoupe, 配置: Debug Win32 ------
+271>  aim65.cpp
+267>  rm.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\rm.lib
+275>------ 已启动生成: 项目: samsung, 配置: Debug Win32 ------
+274>  samcoupe.cpp
+275>  spc1000.cpp
+275>  spc1500.cpp
+273>  sage.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sage.lib
+276>------ 已启动生成: 项目: sanyo, 配置: Debug Win32 ------
+276>  mbc200.cpp
+276>  mbc55x.cpp
+276>  phc25.cpp
+32>  8364_paula.cpp
+32>  spchrom.cpp
+32>  bcreader.cpp
+32>  buffer.cpp
+32>  clock.cpp
+32>  keyboard.cpp
+32>  laserdsc.cpp
+32>  latch.cpp
+274>  samcoupe.cpp
+275>  samsung.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\samsung.lib
+277>------ 已启动生成: 项目: sequential, 配置: Debug Win32 ------
+274>  samcoupe.cpp
+277>  prophet600.cpp
+32>  nvram.cpp
+32>  ram.cpp
+32>  legscsi.cpp
+32>  terminal.cpp
+32>  akiko.cpp
+32>  autoconfig.cpp
+271>  rockwell.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\rockwell.lib
+278>------ 已启动生成: 项目: sgi, 配置: Debug Win32 ------
+276>  mbc55x.cpp
+278>  sgi.cpp
+277>  sequential.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sequential.lib
+274>  samcoupe.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\samcoupe.lib
+32>  cr511b.cpp
+279>------ 已启动生成: 项目: sharp, 配置: Debug Win32 ------
+280>------ 已启动生成: 项目: sinclair, 配置: Debug Win32 ------
+32>  dmac.cpp
+279>  mz700.cpp
+279>  hh_sm510.cpp
+279>  pc1500.cpp
+279>  pocketc.cpp
+279>  x68k.cpp
+279>  mz80.cpp
+279>  mz2000.cpp
+279>  x1.cpp
+280>  spectrum.cpp
+280>  timex.cpp
+280>  zx.cpp
+280>  zx8301.cpp
+278>  iris3130.cpp
+278>  4dpi.cpp
+278>  indigo.cpp
+278>  indy_indigo2.cpp
+276>  mbc55x.cpp
+32>  gayle.cpp
+32>  40105.cpp
+32>  53c7xx.cpp
+32>  53c810.cpp
+276>  sanyo.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sanyo.lib
+281>------ 已启动生成: 项目: siemens, 配置: Debug Win32 ------
+32>  6522via.cpp
+281>  pcd.cpp
+281>  pg685.cpp
+32>  6525tpi.cpp
+279>  x1twin.cpp
+32>  6532riot.cpp
+279>  mz2500.cpp
+279>  mz3500.cpp
+279>  pce220.cpp
+279>  mz6500.cpp
+279>  zaurus.cpp
+32>  6821pia.cpp
+32>  6840ptm.cpp
+280>  zx.cpp
+280>  spectrum.cpp
+280>  spec128.cpp
+280>  timex.cpp
+280>  specpls3.cpp
+280>  scorpion.cpp
+280>  atm.cpp
+280>  pentagon.cpp
+32>  6850acia.cpp
+278>  newport.cpp
+32>  68153bim.cpp
+32>  68230pit.cpp
+32>  68561mpcc.cpp
+278>  sgi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sgi.lib
+282>------ 已启动生成: 项目: slicer, 配置: Debug Win32 ------
+282>  slicer.cpp
+32>  mc68681.cpp
+281>  pcd_kbd.cpp
+32>  7200fifo.cpp
+32>  7400.cpp
+32>  7404.cpp
+280>  ql.cpp
+32>  74123.cpp
+282>  slicer.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\slicer.lib
+283>------ 已启动生成: 项目: sord, 配置: Debug Win32 ------
+279>  mz700.cpp
+279>  pc1401.cpp
+279>  pc1403.cpp
+279>  pc1350.cpp
+279>  pc1251.cpp
+279>  pocketc.cpp
+32>  74145.cpp
+279>  x68k.cpp
+283>  m5.cpp
+279>  mz80.cpp
+281>  pcd.cpp
+32>  74148.cpp
+32>  74153.cpp
+32>  74157.cpp
+32>  74161.cpp
+32>  74175.cpp
+32>  74181.cpp
+32>  7474.cpp
+32>  82s129.cpp
+283>  sord.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sord.lib
+281>  siemens.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\siemens.lib
+284>------ 已启动生成: 项目: special, 配置: Debug Win32 ------
+285>------ 已启动生成: 项目: sun, 配置: Debug Win32 ------
+32>  8042kbdc.cpp
+284>  special.cpp
+285>  sun1.cpp
+285>  sun2.cpp
+285>  sun3.cpp
+285>  sun3x.cpp
+285>  sun4.cpp
+32>  8530scc.cpp
+32>  aakart.cpp
+32>  adc0808.cpp
+32>  adc083x.cpp
+32>  adc1038.cpp
+32>  adc1213x.cpp
+32>  aicartc.cpp
+135>  misc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\misc.lib
+286>------ 已启动生成: 项目: svi, 配置: Debug Win32 ------
+32>  am2847.cpp
+32>  am53cf96.cpp
+286>  svi318.cpp
+284>  special.cpp
+242>  nec.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\nec.lib
+287>------ 已启动生成: 项目: svision, 配置: Debug Win32 ------
+32>  am9517a.cpp
+32>  amigafdc.cpp
+287>  svision.cpp
+32>  at28c16.cpp
+32>  at29x.cpp
+32>  at45dbxx.cpp
+32>  ataflash.cpp
+280>  zx.cpp
+280>  beta.cpp
+280>  spec_snqk.cpp
+280>  qimi.cpp
+280>  zx8302.cpp
+284>  special.cpp
+32>  ay31015.cpp
+286>  svi.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\svi.lib
+288>------ 已启动生成: 项目: swtpc09, 配置: Debug Win32 ------
+288>  swtpc09.cpp
+32>  bankdev.cpp
+284>  special.cpp
+32>  cdp1852.cpp
+32>  cdp1871.cpp
+32>  cdp1879.cpp
+287>  svis_snd.cpp
+32>  com8116.cpp
+284>  special.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\special.lib
+289>------ 已启动生成: 项目: synertec, 配置: Debug Win32 ------
+32>  cr589.cpp
+32>  cs4031.cpp
+32>  cs8221.cpp
+289>  sym1.cpp
+288>  swtpc09.cpp
+32>  dm9334.cpp
+32>  ds1204.cpp
+285>  sun.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sun.lib
+290>------ 已启动生成: 项目: ta, 配置: Debug Win32 ------
+280>  sinclair.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sinclair.lib
+291>------ 已启动生成: 项目: tandberg, 配置: Debug Win32 ------
+32>  ds1302.cpp
+290>  alphatro.cpp
+291>  tdv2324.cpp
+32>  ds1315.cpp
+289>  synertec.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\synertec.lib
+292>------ 已启动生成: 项目: tangerin, 配置: Debug Win32 ------
+287>  svision.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\svision.lib
+293>------ 已启动生成: 项目: tatung, 配置: Debug Win32 ------
+293>  einstein.cpp
+292>  microtan.cpp
+288>  swtpc09.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\swtpc09.lib
+294>------ 已启动生成: 项目: teamconc, 配置: Debug Win32 ------
+292>  oric.cpp
+294>  comquest.cpp
+32>  ds1386.cpp
+290>  ta.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ta.lib
+295>------ 已启动生成: 项目: tektroni, 配置: Debug Win32 ------
+291>  tandberg.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tandberg.lib
+296>------ 已启动生成: 项目: telenova, 配置: Debug Win32 ------
+296>  compis.cpp
+295>  tek405x.cpp
+295>  tek410x.cpp
+295>  tek440x.cpp
+295>  tekxp33x.cpp
+32>  ds2401.cpp
+293>  einstein.cpp
+32>  ds2404.cpp
+32>  ds75160a.cpp
+32>  ds75161a.cpp
+32>  e0516.cpp
+32>  e05a03.cpp
+293>  tatung.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tatung.lib
+297>------ 已启动生成: 项目: telercas, 配置: Debug Win32 ------
+297>  tmc1800.cpp
+297>  tmc600.cpp
+297>  tmc2000e.cpp
+32>  e05a30.cpp
+32>  eeprom.cpp
+279>  pc1401.cpp
+279>  pc1403.cpp
+279>  pc1350.cpp
+279>  pc1251.cpp
+279>  mz700.cpp
+279>  x68k_hdc.cpp
+279>  x68k_kbd.cpp
+279>  mz80.cpp
+32>  eepromser.cpp
+32>  eeprompar.cpp
+32>  er2055.cpp
+32>  f3853.cpp
+32>  fga002.cpp
+32>  hd63450.cpp
+292>  microtan.cpp
+294>  comquest.cpp
+279>  x1.cpp
+32>  hd64610.cpp
+279>  pce220_ser.cpp
+297>  tmc1800.cpp
+32>  hp_taco.cpp
+297>  tmc600.cpp
+32>  i2cmem.cpp
+32>  i8155.cpp
+296>  compiskb.cpp
+292>  microtan.cpp
+32>  i8212.cpp
+32>  i8214.cpp
+32>  i8243.cpp
+32>  i8251.cpp
+292>  tangerin.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tangerin.lib
+298>------ 已启动生成: 项目: televideo, 配置: Debug Win32 ------
+294>  teamconc.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\teamconc.lib
+299>------ 已启动生成: 项目: tem, 配置: Debug Win32 ------
+296>  telenova.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\telenova.lib
+300>------ 已启动生成: 项目: tesla, 配置: Debug Win32 ------
+299>  tec1.cpp
+298>  ts802.cpp
+298>  ts803.cpp
+298>  ts816.cpp
+298>  tv910.cpp
+298>  tv950.cpp
+298>  tv990.cpp
+295>  tektroni.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tektroni.lib
+301>------ 已启动生成: 项目: test, 配置: Debug Win32 ------
+32>  i8257.cpp
+300>  ondra.cpp
+300>  pmd85.cpp
+300>  pmi80.cpp
+300>  sapi1.cpp
+301>  test_t400.cpp
+301>  zexall.cpp
+32>  i8271.cpp
+297>  telercas.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\telercas.lib
+302>------ 已启动生成: 项目: thomson, 配置: Debug Win32 ------
+302>  thomson.cpp
+279>  sharp.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\sharp.lib
+303>------ 已启动生成: 项目: ti, 配置: Debug Win32 ------
+32>  i8279.cpp
+299>  tem.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tem.lib
+304>------ 已启动生成: 项目: tiger, 配置: Debug Win32 ------
+32>  i8355.cpp
+303>  avigo.cpp
+303>  evmbug.cpp
+303>  cc40.cpp
+303>  exelv.cpp
+303>  geneve.cpp
+303>  ticalc1x.cpp
+303>  tispeak.cpp
+303>  tispellb.cpp
+304>  gamecom.cpp
+304>  k28.cpp
+32>  i80130.cpp
+32>  atadev.cpp
+32>  atahle.cpp
+32>  ataintf.cpp
+32>  atapicdr.cpp
+32>  atapihle.cpp
+301>  test.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\test.lib
+305>------ 已启动生成: 项目: tigertel, 配置: Debug Win32 ------
+32>  idectrl.cpp
+303>  ti74.cpp
+305>  gizmondo.cpp
+298>  televideo.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\televideo.lib
+303>  ti85.cpp
+306>------ 已启动生成: 项目: tiki, 配置: Debug Win32 ------
+303>  ti89.cpp
+303>  ti99_2.cpp
+303>  ti99_4x.cpp
+32>  idehd.cpp
+32>  vt83c461.cpp
+32>  im6402.cpp
+306>  tiki100.cpp
+303>  ti99_4p.cpp
+303>  ti99_8.cpp
+303>  ti990_4.cpp
+32>  ins8154.cpp
+32>  ins8250.cpp
+305>  docg3.cpp
+32>  intelfsh.cpp
+32>  jvsdev.cpp
+306>  tiki.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tiki.lib
+307>------ 已启动生成: 项目: tomy, 配置: Debug Win32 ------
+307>  tutor.cpp
+32>  jvshost.cpp
+303>  ti990_10.cpp
+303>  tm990189.cpp
+305>  tigertel.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tigertel.lib
+308>------ 已启动生成: 项目: toshiba, 配置: Debug Win32 ------
+32>  k033906.cpp
+303>  hh_tms1k.cpp
+32>  k053252.cpp
+32>  k056230.cpp
+32>  kb3600.cpp
+32>  kr2376.cpp
+308>  pasopia.cpp
+308>  pasopia7.cpp
+308>  paso1600.cpp
+32>  latch8.cpp
+32>  lc89510.cpp
+32>  ldpr8210.cpp
+32>  ldstub.cpp
+32>  ldv1000.cpp
+32>  ldp1000.cpp
+32>  ldp1450.cpp
+32>  ldvp931.cpp
+32>  lh5810.cpp
+32>  linflash.cpp
+32>  m6m80011ap.cpp
+32>  mb14241.cpp
+32>  mb3773.cpp
+32>  mb8421.cpp
+307>  tomy.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tomy.lib
+32>  mb87078.cpp
+32>  mb8795.cpp
+32>  mb89352.cpp
+309>------ 已启动生成: 项目: trainer, 配置: Debug Win32 ------
+32>  mb89371.cpp
+32>  mc146818.cpp
+32>  ds128x.cpp
+32>  mc2661.cpp
+32>  mc6843.cpp
+32>  mc6846.cpp
+32>  mc6852.cpp
+32>  mc6854.cpp
+32>  mc68328.cpp
+32>  mc68901.cpp
+32>  mccs1850.cpp
+32>  68307.cpp
+308>  toshiba.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\toshiba.lib
+310>------ 已启动生成: 项目: trs, 配置: Debug Win32 ------
+32>  68307sim.cpp
+32>  68307bus.cpp
+32>  68307tmu.cpp
+32>  68340.cpp
+32>  68340sim.cpp
+32>  68340dma.cpp
+32>  68340ser.cpp
+309>  amico2k.cpp
+309>  babbage.cpp
+309>  bob85.cpp
+309>  cvicny.cpp
+309>  datum.cpp
+309>  dolphunk.cpp
+309>  instruct.cpp
+309>  mk14.cpp
+302>  thomson.cpp
+302>  thomflop.cpp
+310>  coco12.cpp
+310>  coco3.cpp
+310>  dragon.cpp
+310>  mc10.cpp
+310>  trs80.cpp
+310>  trs80m2.cpp
+310>  tandy2k.cpp
+310>  vis.cpp
+32>  68340tmu.cpp
+32>  mcf5206e.cpp
+32>  microtch.cpp
+32>  mm58274c.cpp
+32>  mm74c922.cpp
+309>  pro80.cpp
+309>  savia84.cpp
+32>  mos6526.cpp
+309>  selz80.cpp
+309>  tk80.cpp
+309>  zapcomputer.cpp
+32>  mos6529.cpp
+32>  mos6702.cpp
+32>  mos8706.cpp
+32>  mos8722.cpp
+32>  mos8726.cpp
+32>  mos6530.cpp
+32>  mos6530n.cpp
+32>  mos6551.cpp
+32>  msm5832.cpp
+32>  msm58321.cpp
+32>  msm6242.cpp
+32>  ncr539x.cpp
+309>  trainer.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\trainer.lib
+311>------ 已启动生成: 项目: ultimachine, 配置: Debug Win32 ------
+32>  nmc9306.cpp
+300>  ondra.cpp
+300>  pmd85.cpp
+310>  6883sam.cpp
+310>  coco.cpp
+310>  coco12.cpp
+32>  nscsi_bus.cpp
+310>  coco3.cpp
+310>  coco_vhd.cpp
+310>  dragon.cpp
+310>  dgnalpha.cpp
+310>  trs80.cpp
+311>  rambo.cpp
+32>  nscsi_cb.cpp
+32>  nscsi_cd.cpp
+311>  ultimachine.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ultimachine.lib
+312>------ 已启动生成: 项目: ultratec, 配置: Debug Win32 ------
+312>  minicom.cpp
+32>  nscsi_hd.cpp
+32>  nscsi_s1410.cpp
+32>  pcf8593.cpp
+312>  ultratec.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ultratec.lib
+313>------ 已启动生成: 项目: unicard, 配置: Debug Win32 ------
+32>  lpci.cpp
+313>  bbcbc.cpp
+32>  pci.cpp
+310>  trs80m2kb.cpp
+310>  tandy2kb.cpp
+32>  pci-usb.cpp
+32>  pci-sata.cpp
+302>  thomson.cpp
+32>  pci-ide.cpp
+313>  unicard.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\unicard.lib
+314>------ 已启动生成: 项目: unisonic, 配置: Debug Win32 ------
+32>  pci-apic.cpp
+314>  unichamp.cpp
+32>  pci-smbus.cpp
+32>  i82541.cpp
+304>  gamecom.cpp
+32>  i82875p.cpp
+32>  i6300esb.cpp
+32>  i82439hx.cpp
+310>  gime.cpp
+310>  trs80.cpp
+314>  gic.cpp
+32>  i82439tx.cpp
+32>  i82371sb.cpp
+32>  lpc.cpp
+32>  lpc-acpi.cpp
+32>  lpc-rtc.cpp
+314>  unisonic.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\unisonic.lib
+315>------ 已启动生成: 项目: unisys, 配置: Debug Win32 ------
+315>  univac.cpp
+302>  thomson.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\thomson.lib
+316>------ 已启动生成: 项目: usp, 配置: Debug Win32 ------
+304>  gamecom.cpp
+32>  lpc-pit.cpp
+316>  patinho_feio.cpp
+32>  vrc4373.cpp
+32>  gt64xxx.cpp
+32>  pckeybrd.cpp
+32>  phi.cpp
+310>  trs.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\trs.lib
+315>  unisys.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\unisys.lib
+317>------ 已启动生成: 项目: veb, 配置: Debug Win32 ------
+318>------ 已启动生成: 项目: verifone, 配置: Debug Win32 ------
+318>  tranz330.cpp
+317>  chessmst.cpp
+317>  kc.cpp
+317>  lc80.cpp
+317>  mc80.cpp
+317>  poly880.cpp
+317>  sc1.cpp
+317>  sc2.cpp
+300>  ondra.cpp
+316>  usp.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\usp.lib
+319>------ 已启动生成: 项目: vidbrain, 配置: Debug Win32 ------
+32>  pic8259.cpp
+32>  pit8253.cpp
+319>  vidbrain.cpp
+32>  pla.cpp
+304>  tiger.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tiger.lib
+320>------ 已启动生成: 项目: videoton, 配置: Debug Win32 ------
+32>  r10696.cpp
+318>  verifone.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\verifone.lib
+321>------ 已启动生成: 项目: visual, 配置: Debug Win32 ------
+320>  tvc.cpp
+32>  r10788.cpp
+319>  uv201.cpp
+321>  v1050.cpp
+300>  tesla.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\tesla.lib
+322>------ 已启动生成: 项目: votrax, 配置: Debug Win32 ------
+303>  avigo.cpp
+303>  ti85.cpp
+303>  733_asr.cpp
+303>  911_vdt.cpp
+322>  votrpss.cpp
+322>  votrtnt.cpp
+32>  ra17xx.cpp
+32>  rf5c296.cpp
+32>  roc10937.cpp
+32>  rp5c01.cpp
+319>  vidbrain.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\vidbrain.lib
+323>------ 已启动生成: 项目: vtech, 配置: Debug Win32 ------
+321>  v1050kb.cpp
+320>  tvc.cpp
+32>  rp5c15.cpp
+323>  crvision.cpp
+323>  geniusiq.cpp
+323>  laser3k.cpp
+323>  lcmate2.cpp
+323>  pc4.cpp
+323>  pc2000.cpp
+323>  pitagjr.cpp
+323>  prestige.cpp
+32>  rp5h01.cpp
+317>  kc.cpp
+317>  kc_keyb.cpp
+317>  mc80.cpp
+321>  v1050.cpp
+320>  videoton.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\videoton.lib
+324>------ 已启动生成: 项目: wang, 配置: Debug Win32 ------
+32>  64h156.cpp
+32>  rtc4543.cpp
+32>  rtc65271.cpp
+32>  rtc9701.cpp
+32>  s2636.cpp
+321>  visual.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\visual.lib
+325>------ 已启动生成: 项目: westinghouse, 配置: Debug Win32 ------
+32>  s3520cf.cpp
+325>  testconsole.cpp
+32>  s3c2400.cpp
+32>  s3c2410.cpp
+32>  s3c44b0.cpp
+32>  s3c2440.cpp
+32>  serflash.cpp
+325>  westinghouse.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\westinghouse.lib
+326>------ 已启动生成: 项目: wavemate, 配置: Debug Win32 ------
+326>  bullet.cpp
+326>  jupiter.cpp
+32>  smc91c9x.cpp
+32>  smpc.cpp
+32>  stvcd.cpp
+323>  vtech1.cpp
+323>  vtech2.cpp
+324>  wangpc.cpp
+323>  socrates.cpp
+322>  votrax.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\votrax.lib
+327>------ 已启动生成: 项目: precompile, 配置: Debug Win32 ------
+323>  pc4.cpp
+32>  t10mmc.cpp
+323>  vtech2.cpp
+327>  empty.cpp
+32>  t10sbc.cpp
+32>  t10spc.cpp
+32>  tc009xlvc.cpp
+317>  kc.cpp
+317>  mc80.cpp
+32>  timekpr.cpp
+32>  tmc0430.cpp
+327>  precompile.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\precompile.lib
+326>  wavemate.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\wavemate.lib
+32>  tmp68301.cpp
+32>  tms1024.cpp
+317>  veb.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\veb.lib
+32>  tms5501.cpp
+324>  wangpckb.cpp
+32>  tms6100.cpp
+32>  tms9901.cpp
+32>  tms9902.cpp
+32>  upd1990a.cpp
+32>  upd4992.cpp
+32>  upd4701.cpp
+32>  upd7002.cpp
+32>  upd71071.cpp
+32>  upd765.cpp
+32>  v3021.cpp
+32>  wd_fdc.cpp
+303>  ti85.cpp
+32>  wd11c00_17.cpp
+32>  wd2010.cpp
+32>  wd33c93.cpp
+324>  wang.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\wang.lib
+303>  ti.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\ti.lib
+32>  wd7600.cpp
+323>  vtech2.cpp
+32>  x2212.cpp
+32>  x76f041.cpp
+32>  x76f100.cpp
+32>  ym2148.cpp
+32>  z80ctc.cpp
+32>  z80dart.cpp
+32>  z80sio.cpp
+323>  socrates.cpp
+32>  z80scc.cpp
+32>  z80dma.cpp
+32>  z80pio.cpp
+32>  z80sti.cpp
+32>  z8536.cpp
+32>  pccard.cpp
+32>  i8255.cpp
+32>  mb89363b.cpp
+323>  vtech.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\vtech.lib
+32>  ncr5380.cpp
+32>  ncr5380n.cpp
+32>  ncr5390.cpp
+32>  mm58167.cpp
+32>  dp8390.cpp
+32>  pc_lpt.cpp
+32>  pc_fdc.cpp
+32>  mpu401.cpp
+32>  at_keybc.cpp
+32>  hdc92x4.cpp
+32>  strata.cpp
+32>  steppers.cpp
+32>  corvushd.cpp
+32>  wozfdc.cpp
+32>  diablo_hd.cpp
+32>  fdc37c665gt.cpp
+32>  pci9050.cpp
+32>  netlist.cpp
+32>  nsc810.cpp
+32>  vt82c496.cpp
+32>  pdc.cpp
+32>  genpc.cpp
+32>  gen_latch.cpp
+32>  fdc_pll.cpp
+32>  watchdog.cpp
+32>  smartmed.cpp
+32>  appldriv.cpp
+32>  applefdc.cpp
+32>  sonydriv.cpp
+32>  scnxx562.cpp
+32>  input_merger.cpp
+269>  roland.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\roland.lib
+32>  sprite.cpp
+32>  vector.cpp
+32>  315_5124.cpp
+32>  315_5313.cpp
+32>  bufsprite.cpp
+32>  cdp1861.cpp
+32>  cdp1862.cpp
+32>  cesblit.cpp
+32>  crt9007.cpp
+32>  crt9021.cpp
+32>  crt9212.cpp
+32>  dl1416.cpp
+32>  dm9368.cpp
+32>  ef9340_1.cpp
+32>  ef9345.cpp
+32>  ef9364.cpp
+32>  ef9365.cpp
+32>  epic12.cpp
+32>  epic12_blit0.cpp
+32>  epic12_blit1.cpp
+32>  epic12_blit2.cpp
+32>  epic12_blit3.cpp
+32>  epic12_blit4.cpp
+32>  epic12_blit5.cpp
+32>  epic12_blit6.cpp
+32>  epic12_blit7.cpp
+32>  epic12_blit8.cpp
+32>  fixfreq.cpp
+32>  gf4500.cpp
+32>  gf7600gs.cpp
+32>  mga2064w.cpp
+32>  hd44102.cpp
+32>  hd44352.cpp
+32>  hd44780.cpp
+32>  hd61830.cpp
+32>  hd63484.cpp
+32>  hd66421.cpp
+32>  hlcd0515.cpp
+32>  huc6202.cpp
+32>  huc6260.cpp
+32>  huc6261.cpp
+32>  huc6270.cpp
+32>  huc6271.cpp
+32>  huc6272.cpp
+32>  i8244.cpp
+32>  i82730.cpp
+32>  i8275.cpp
+32>  m50458.cpp
+32>  mb90082.cpp
+32>  mb_vcu.cpp
+32>  mc6845.cpp
+32>  mc6847.cpp
+32>  msm6222b.cpp
+32>  msm6255.cpp
+32>  mos6566.cpp
+32>  cgapal.cpp
+32>  pc_vga.cpp
+32>  clgd542x.cpp
+32>  pcd8544.cpp
+32>  polylgcy.cpp
+32>  psx.cpp
+32>  ramdac.cpp
+32>  saa5050.cpp
+32>  sed1200.cpp
+32>  sed1330.cpp
+32>  sed1520.cpp
+32>  scn2674.cpp
+32>  snes_ppu.cpp
+32>  stvvdp1.cpp
+32>  stvvdp2.cpp
+32>  t6a04.cpp
+32>  tea1002.cpp
+32>  tlc34076.cpp
+32>  tms34061.cpp
+32>  tms3556.cpp
+32>  tms9927.cpp
+32>  tms9928a.cpp
+32>  upd3301.cpp
+32>  upd7220.cpp
+32>  upd7227.cpp
+32>  vic4567.cpp
+32>  v9938.cpp
+32>  zeus2.cpp
+32>  voodoo.cpp
+32>  voodoo_pci.cpp
+32>  crtc_ega.cpp
+32>  jangou_blitter.cpp
+32>  gb_lcd.cpp
+32>  gba_lcd.cpp
+32>  ef9369.cpp
+32>  ppu2c0x.cpp
+32>  trident.cpp
+32>  isa.cpp
+32>  isa_cards.cpp
+32>  mda.cpp
+32>  wdxt_gen.cpp
+32>  adlib.cpp
+32>  com.cpp
+32>  fdc.cpp
+32>  mufdc.cpp
+32>  finalchs.cpp
+32>  gblaster.cpp
+32>  gus.cpp
+32>  sb16.cpp
+32>  hdc.cpp
+32>  ibm_mfc.cpp
+32>  mpu401.cpp
+32>  sblaster.cpp
+32>  stereo_fx.cpp
+32>  ssi2001.cpp
+32>  ide.cpp
+32>  xtide.cpp
+32>  side116.cpp
+32>  aha1542.cpp
+32>  wd1002a_wx1.cpp
+32>  dectalk.cpp
+32>  pds.cpp
+32>  omti8621.cpp
+32>  cga.cpp
+32>  svga_cirrus.cpp
+32>  ega.cpp
+32>  pgc.cpp
+32>  vga.cpp
+32>  vga_ati.cpp
+32>  mach32.cpp
+32>  svga_tseng.cpp
+32>  svga_s3.cpp
+32>  s3virge.cpp
+32>  pc1640_iga.cpp
+32>  3c503.cpp
+32>  ne1000.cpp
+32>  ne2000.cpp
+32>  3c505.cpp
+32>  lpt.cpp
+32>  p1_fdc.cpp
+32>  p1_hdc.cpp
+32>  p1_rom.cpp
+32>  p1_sound.cpp
+32>  mc1502_fdc.cpp
+32>  mc1502_rom.cpp
+32>  xsu_cards.cpp
+32>  sc499.cpp
+32>  aga.cpp
+32>  svga_trident.cpp
+32>  num9rev.cpp
+32>  mcd.cpp
+32>  bitbngr.cpp
+32>  cassette.cpp
+32>  chd_cd.cpp
+32>  diablo.cpp
+32>  flopdrv.cpp
+32>  floppy.cpp
+32>  harddriv.cpp
+32>  mfmhd.cpp
+32>  midiin.cpp
+32>  midiout.cpp
+32>  printer.cpp
+32>  snapquik.cpp
+32>  a78_slot.cpp
+32>  rom.cpp
+32>  hiscore.cpp
+32>  xboard.cpp
+32>  cpuwiz.cpp
+32>  a8sio.cpp
+32>  cassette.cpp
+32>  a800_slot.cpp
+32>  rom.cpp
+32>  oss.cpp
+32>  sparta.cpp
+32>  abcbus.cpp
+32>  abc890.cpp
+32>  fd2.cpp
+32>  hdc.cpp
+32>  lux10828.cpp
+32>  lux21046.cpp
+32>  lux21056.cpp
+32>  lux4105.cpp
+32>  memcard.cpp
+32>  ram.cpp
+32>  sio.cpp
+32>  slutprov.cpp
+32>  turbo.cpp
+32>  uni800.cpp
+32>  exp.cpp
+32>  adamlink.cpp
+32>  ide.cpp
+32>  ram.cpp
+32>  adamnet.cpp
+32>  ddp.cpp
+32>  fdc.cpp
+32>  kb.cpp
+32>  printer.cpp
+32>  spi.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  expansion.cpp
+32>  cards.cpp
+32>  ram.cpp
+32>  keyboard.cpp
+32>  hle.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  exp.cpp
+32>  ram.cpp
+32>  fdc.cpp
+32>  acorn.cpp
+32>  cumana.cpp
+32>  opus.cpp
+32>  watford.cpp
+32>  analogue.cpp
+32>  joystick.cpp
+32>  joyport.cpp
+32>  joystick.cpp
+32>  1mhzbus.cpp
+32>  opus3.cpp
+32>  tube.cpp
+32>  userport.cpp
+32>  exp.cpp
+32>  ramcard.cpp
+32>  exp.cpp
+32>  c128_comal80.cpp
+32>  c128_partner.cpp
+32>  comal80.cpp
+32>  cpm.cpp
+32>  currah_speech.cpp
+32>  dela_ep256.cpp
+32>  dela_ep64.cpp
+32>  dela_ep7x8.cpp
+32>  dinamic.cpp
+32>  dqbb.cpp
+32>  easy_calc_result.cpp
+32>  easyflash.cpp
+32>  epyx_fast_load.cpp
+32>  exos.cpp
+32>  fcc.cpp
+32>  final.cpp
+32>  final3.cpp
+32>  fun_play.cpp
+32>  georam.cpp
+32>  ide64.cpp
+32>  ieee488.cpp
+32>  kingsoft.cpp
+32>  mach5.cpp
+32>  magic_desk.cpp
+32>  magic_formel.cpp
+32>  magic_voice.cpp
+32>  midi_maplin.cpp
+32>  midi_namesoft.cpp
+32>  midi_passport.cpp
+32>  midi_sci.cpp
+32>  midi_siel.cpp
+32>  mikro_assembler.cpp
+32>  multiscreen.cpp
+32>  music64.cpp
+32>  neoram.cpp
+32>  ocean.cpp
+32>  pagefox.cpp
+32>  partner.cpp
+32>  prophet64.cpp
+32>  ps64.cpp
+32>  reu.cpp
+32>  rex.cpp
+32>  rex_ep256.cpp
+32>  ross.cpp
+32>  sfx_sound_expander.cpp
+32>  silverrock.cpp
+32>  simons_basic.cpp
+32>  speakeasy.cpp
+32>  stardos.cpp
+32>  std.cpp
+32>  structured_basic.cpp
+32>  super_explode.cpp
+32>  super_games.cpp
+32>  supercpu.cpp
+32>  sw8k.cpp
+32>  swiftlink.cpp
+32>  system3.cpp
+32>  tdos.cpp
+32>  turbo232.cpp
+32>  vizastar.cpp
+32>  vw64.cpp
+32>  warp_speed.cpp
+32>  westermann.cpp
+32>  xl80.cpp
+32>  zaxxon.cpp
+32>  user.cpp
+32>  4dxh.cpp
+32>  4ksa.cpp
+32>  4tba.cpp
+32>  16kb.cpp
+32>  bn1541.cpp
+32>  geocable.cpp
+32>  exp.cpp
+32>  24k.cpp
+32>  hrg.cpp
+32>  std.cpp
+32>  user.cpp
+32>  cbmiec.cpp
+32>  c1541.cpp
+32>  c1571.cpp
+32>  c1581.cpp
+32>  c64_nl10.cpp
+32>  cmdhd.cpp
+32>  diag264_lb_iec.cpp
+32>  fd2000.cpp
+32>  interpod.cpp
+32>  serialbox.cpp
+32>  vic1515.cpp
+32>  vic1520.cpp
+32>  c1526.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  exp.cpp
+32>  clm.cpp
+32>  expbox.cpp
+32>  eprom.cpp
+32>  fdc.cpp
+32>  joycard.cpp
+32>  printer.cpp
+32>  ram.cpp
+32>  thermal.cpp
+32>  ctrl.cpp
+32>  hand.cpp
+32>  sac.cpp
+32>  exp.cpp
+32>  std.cpp
+32>  xin1.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  dmvbus.cpp
+32>  k210.cpp
+32>  k220.cpp
+32>  k230.cpp
+32>  k233.cpp
+32>  k801.cpp
+32>  k803.cpp
+32>  k806.cpp
+32>  ram.cpp
+32>  ecbbus.cpp
+32>  grip.cpp
+32>  econet.cpp
+32>  e01.cpp
+32>  exp.cpp
+32>  plus3.cpp
+32>  m2105.cpp
+32>  exp.cpp
+32>  exdos.cpp
+32>  slot.cpp
+32>  carts.cpp
+32>  ram.cpp
+32>  rom.cpp
+32>  ieee488.cpp
+32>  c2031.cpp
+32>  c2040.cpp
+32>  c2040fdc.cpp
+32>  c8050.cpp
+32>  c8050fdc.cpp
+32>  c8280.cpp
+32>  d9060.cpp
+32>  softbox.cpp
+32>  hardbox.cpp
+32>  shark.cpp
+32>  hp9895.cpp
+32>  iq151.cpp
+32>  disc2.cpp
+32>  grafik.cpp
+32>  minigraf.cpp
+32>  ms151a.cpp
+32>  rom.cpp
+32>  staper.cpp
+32>  video32.cpp
+32>  video64.cpp
+32>  imi7000.cpp
+32>  imi5000h.cpp
+32>  slot.cpp
+32>  voice.cpp
+32>  rom.cpp
+32>  ecs.cpp
+32>  ctrl.cpp
+32>  handctrl.cpp
+32>  ecs_ctrl.cpp
+32>  isbx.cpp
+32>  compis_fdc.cpp
+32>  isbc_218a.cpp
+32>  bunsetsu.cpp
+32>  cartridge.cpp
+32>  disk.cpp
+32>  fs4600.cpp
+32>  music.cpp
+32>  panasonic08.cpp
+32>  rom.cpp
+32>  ram.cpp
+32>  ram_mm.cpp
+32>  slot.cpp
+32>  sony08.cpp
+32>  arc.cpp
+32>  ascii.cpp
+32>  bm_012.cpp
+32>  cartridge.cpp
+32>  crossblaim.cpp
+32>  disk.cpp
+32>  dooly.cpp
+32>  fmpac.cpp
+32>  fs_sr022.cpp
+32>  halnote.cpp
+32>  hfox.cpp
+32>  holy_quran.cpp
+32>  konami.cpp
+32>  korean.cpp
+32>  majutsushi.cpp
+32>  moonsound.cpp
+32>  msx_audio.cpp
+32>  msx_audio_kb.cpp
+32>  msxdos2.cpp
+32>  nomapper.cpp
+32>  rtype.cpp
+32>  superloderunner.cpp
+32>  super_swangi.cpp
+32>  yamaha.cpp
+32>  kc.cpp
+32>  d002.cpp
+32>  d004.cpp
+32>  ram.cpp
+32>  rom.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  chess.cpp
+32>  voice.cpp
+32>  pc_joy.cpp
+32>  pc_joy_sw.cpp
+32>  pc_kbdc.cpp
+32>  keyboards.cpp
+32>  ec1841.cpp
+32>  iskr1030.cpp
+32>  keytro.cpp
+32>  msnat.cpp
+32>  pc83.cpp
+32>  pcat84.cpp
+32>  pcxt83.cpp
+32>  cass.cpp
+32>  c2n.cpp
+32>  diag264_lb_tape.cpp
+32>  exp.cpp
+32>  64k.cpp
+32>  hsg.cpp
+32>  superpet.cpp
+32>  user.cpp
+32>  diag.cpp
+32>  petuja.cpp
+32>  cb2snd.cpp
+32>  2joysnd.cpp
+32>  exp.cpp
+32>  c1551.cpp
+32>  sid.cpp
+32>  std.cpp
+32>  user.cpp
+32>  diag264_lb_user.cpp
+32>  exp.cpp
+32>  hpc101.cpp
+32>  hpc102.cpp
+32>  hpc104.cpp
+32>  ccm.cpp
+32>  ram.cpp
+32>  rom.cpp
+32>  s100.cpp
+32>  dj2db.cpp
+32>  djdma.cpp
+32>  mm65k16s.cpp
+32>  nsmdsa.cpp
+32>  nsmdsad.cpp
+32>  wunderbus.cpp
+32>  exp.cpp
+32>  fdd.cpp
+32>  vdp.cpp
+32>  exp.cpp
+32>  8088.cpp
+32>  hdc.cpp
+32>  tvc.cpp
+32>  hbf.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  vcs_slot.cpp
+32>  rom.cpp
+32>  compumat.cpp
+32>  dpc.cpp
+32>  harmony_melody.cpp
+32>  scharger.cpp
+32>  ctrl.cpp
+32>  joystick.cpp
+32>  joybooster.cpp
+32>  keypad.cpp
+32>  lightpen.cpp
+32>  paddles.cpp
+32>  wheel.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  exp.cpp
+32>  std.cpp
+32>  exp.cpp
+32>  fe3.cpp
+32>  megacart.cpp
+32>  std.cpp
+32>  vic1010.cpp
+32>  vic1110.cpp
+32>  vic1111.cpp
+32>  vic1112.cpp
+32>  vic1210.cpp
+32>  videopak.cpp
+32>  speakeasy.cpp
+32>  user.cpp
+32>  4cga.cpp
+32>  vic1011.cpp
+32>  exp.cpp
+32>  std.cpp
+32>  money_minder.cpp
+32>  timeshare.cpp
+32>  byteio.cpp
+32>  vp620.cpp
+32>  exp.cpp
+32>  vp550.cpp
+32>  vp570.cpp
+32>  vp575.cpp
+32>  vp585.cpp
+32>  vp590.cpp
+32>  vp595.cpp
+32>  vp700.cpp
+32>  vme.cpp
+32>  vme_mzr8300.cpp
+32>  vme_mvme350.cpp
+32>  vme_fccpu20.cpp
+32>  vme_fcisio.cpp
+32>  vme_fcscsi.cpp
+32>  wangpc.cpp
+32>  emb.cpp
+32>  lic.cpp
+32>  lvc.cpp
+32>  mcc.cpp
+32>  mvc.cpp
+32>  rtc.cpp
+32>  tig.cpp
+32>  wdc.cpp
+32>  z88.cpp
+32>  flash.cpp
+32>  ram.cpp
+32>  rom.cpp
+32>  a2bus.cpp
+32>  a2diskii.cpp
+32>  a2mockingboard.cpp
+32>  a2cffa.cpp
+32>  a2memexp.cpp
+32>  a2scsi.cpp
+32>  a2thunderclock.cpp
+32>  a2softcard.cpp
+32>  a2videoterm.cpp
+32>  a2ssc.cpp
+32>  a2swyft.cpp
+32>  a2eauxslot.cpp
+32>  a2themill.cpp
+32>  a2sam.cpp
+32>  a2alfam2.cpp
+32>  laser128.cpp
+32>  a2echoii.cpp
+32>  a2arcadebd.cpp
+32>  a2midi.cpp
+32>  a2vulcan.cpp
+32>  a2zipdrive.cpp
+32>  a2applicard.cpp
+32>  a2hsscsi.cpp
+32>  a2ultraterm.cpp
+32>  a2pic.cpp
+32>  a2estd80col.cpp
+32>  a2eext80col.cpp
+32>  a2corvus.cpp
+32>  a2eramworks3.cpp
+32>  a2diskiing.cpp
+32>  a2mcms.cpp
+32>  a2dx1.cpp
+32>  timemasterho.cpp
+32>  mouse.cpp
+32>  corvfdc01.cpp
+32>  corvfdc02.cpp
+32>  ramcard16k.cpp
+32>  ramcard128k.cpp
+32>  ezcgi.cpp
+32>  pc_xporter.cpp
+32>  nubus.cpp
+32>  nubus_48gc.cpp
+32>  nubus_cb264.cpp
+32>  nubus_vikbw.cpp
+32>  nubus_specpdq.cpp
+32>  nubus_m2hires.cpp
+32>  nubus_spec8.cpp
+32>  nubus_radiustpd.cpp
+32>  nubus_m2video.cpp
+32>  nubus_asntmc3b.cpp
+32>  nubus_image.cpp
+32>  nubus_wsportrait.cpp
+32>  pds30_cb264.cpp
+32>  pds30_procolor816.cpp
+32>  pds30_sigmalview.cpp
+32>  pds30_30hr.cpp
+32>  pds30_mc30.cpp
+32>  ctronics.cpp
+32>  comxpl80.cpp
+32>  covox.cpp
+32>  dsjoy.cpp
+32>  epson_ex800.cpp
+32>  epson_lx800.cpp
+32>  epson_lx810l.cpp
+32>  nec_p72.cpp
+32>  printer.cpp
+32>  digiblst.cpp
+32>  keyboard.cpp
+32>  loopback.cpp
+32>  null_modem.cpp
+32>  printer.cpp
+32>  rs232.cpp
+32>  pty.cpp
+32>  ser_mouse.cpp
+32>  sun_kbd.cpp
+32>  terminal.cpp
+32>  xvd701.cpp
+32>  midi.cpp
+32>  midiinport.cpp
+32>  midioutport.cpp
+32>  pci.cpp
+32>  cirrus.cpp
+32>  i82371ab.cpp
+32>  i82371sb.cpp
+32>  i82439tx.cpp
+32>  northbridge.cpp
+32>  southbridge.cpp
+32>  mpc105.cpp
+32>  vt82c505.cpp
+32>  nes_slot.cpp
+32>  nes_carts.cpp
+32>  2a03pur.cpp
+32>  act53.cpp
+32>  aladdin.cpp
+32>  ave.cpp
+32>  bandai.cpp
+32>  benshieng.cpp
+32>  bootleg.cpp
+32>  camerica.cpp
+32>  cne.cpp
+32>  cony.cpp
+32>  datach.cpp
+32>  discrete.cpp
+32>  disksys.cpp
+32>  event.cpp
+32>  ggenie.cpp
+32>  henggedianzi.cpp
+32>  hes.cpp
+32>  hosenkan.cpp
+32>  irem.cpp
+32>  jaleco.cpp
+32>  jy.cpp
+32>  kaiser.cpp
+32>  karastudio.cpp
+32>  konami.cpp
+32>  legacy.cpp
+32>  mmc1.cpp
+32>  mmc2.cpp
+32>  mmc3.cpp
+32>  mmc3_clones.cpp
+32>  mmc5.cpp
+32>  multigame.cpp
+32>  namcot.cpp
+32>  nanjing.cpp
+32>  ntdec.cpp
+32>  nxrom.cpp
+32>  pirate.cpp
+32>  pt554.cpp
+32>  racermate.cpp
+32>  rcm.cpp
+32>  rexsoft.cpp
+32>  sachen.cpp
+32>  somari.cpp
+32>  sunsoft.cpp
+32>  sunsoft_dcs.cpp
+32>  taito.cpp
+32>  tengen.cpp
+32>  txc.cpp
+32>  waixing.cpp
+32>  ctrl.cpp
+32>  joypad.cpp
+32>  4score.cpp
+32>  arkpaddle.cpp
+32>  bcbattle.cpp
+32>  ftrainer.cpp
+32>  fckeybrd.cpp
+32>  hori.cpp
+32>  konamihs.cpp
+32>  miracle.cpp
+32>  mjpanel.cpp
+32>  pachinko.cpp
+32>  partytap.cpp
+32>  powerpad.cpp
+32>  suborkey.cpp
+32>  zapper.cpp
+32>  snes_slot.cpp
+32>  snes_carts.cpp
+32>  bsx.cpp
+32>  event.cpp
+32>  rom.cpp
+32>  rom21.cpp
+32>  sa1.cpp
+32>  sdd1.cpp
+32>  sfx.cpp
+32>  sgb.cpp
+32>  spc7110.cpp
+32>  sufami.cpp
+32>  upd.cpp
+32>  ctrl.cpp
+32>  bcbattle.cpp
+32>  joypad.cpp
+32>  miracle.cpp
+32>  mouse.cpp
+32>  multitap.cpp
+32>  pachinko.cpp
+32>  sscope.cpp
+32>  twintap.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  md_slot.cpp
+32>  md_carts.cpp
+32>  eeprom.cpp
+32>  ggenie.cpp
+32>  jcart.cpp
+32>  rom.cpp
+32>  sk.cpp
+32>  stm95.cpp
+32>  svp.cpp
+32>  slot.cpp
+32>  carts.cpp
+32>  rom.cpp
+32>  fatfury2.cpp
+32>  kof98.cpp
+32>  mslugx.cpp
+32>  cmc.cpp
+32>  sma.cpp
+32>  pcm2.cpp
+32>  kof2k2.cpp
+32>  pvc.cpp
+32>  boot_cthd.cpp
+32>  boot_misc.cpp
+32>  boot_svc.cpp
+32>  boot_kof2k2.cpp
+32>  boot_kof2k3.cpp
+32>  sbp.cpp
+32>  prot_fatfury2.cpp
+32>  prot_kof98.cpp
+32>  prot_mslugx.cpp
+32>  prot_cmc.cpp
+32>  prot_sma.cpp
+32>  prot_pcm2.cpp
+32>  prot_kof2k2.cpp
+32>  prot_pvc.cpp
+32>  prot_cthd.cpp
+32>  prot_kof2k3bl.cpp
+32>  boot_kof10th.cpp
+32>  prot_misc.cpp
+32>  ctrl.cpp
+32>  joystick.cpp
+32>  mahjong.cpp
+32>  dial.cpp
+32>  irrmaze.cpp
+32>  kizuna4p.cpp
+32>  ctrl.cpp
+32>  analog.cpp
+32>  joy.cpp
+32>  joy_md.cpp
+32>  keybd.cpp
+32>  mouse.cpp
+32>  multitap.cpp
+32>  pointer.cpp
+32>  racing.cpp
+32>  segatap.cpp
+32>  sat_slot.cpp
+32>  bram.cpp
+32>  dram.cpp
+32>  rom.cpp
+32>  sega8_slot.cpp
+32>  rom.cpp
+32>  ccatch.cpp
+32>  mgear.cpp
+32>  sg1000exp.cpp
+32>  sk1100.cpp
+32>  fm_unit.cpp
+32>  smsctrl.cpp
+32>  joypad.cpp
+32>  lphaser.cpp
+32>  paddle.cpp
+32>  rfu.cpp
+32>  sports.cpp
+32>  sportsjp.cpp
+32>  multitap.cpp
+32>  graphic.cpp
+32>  smsexp.cpp
+32>  gender.cpp
+32>  990_dk.cpp
+32>  990_hd.cpp
+32>  990_tap.cpp
+32>  998board.cpp
+32>  datamux.cpp
+32>  genboard.cpp
+32>  gromport.cpp
+32>  handset.cpp
+32>  joyport.cpp
+32>  mecmouse.cpp
+32>  peribox.cpp
+32>  bwg.cpp
+32>  evpc.cpp
+32>  hfdc.cpp
+32>  horizon.cpp
+32>  hsgpl.cpp
+32>  memex.cpp
+32>  myarcmem.cpp
+32>  pcode.cpp
+32>  samsmem.cpp
+32>  spchsyn.cpp
+32>  ti_32kmem.cpp
+32>  ti_fdc.cpp
+32>  ti_rs232.cpp
+32>  tn_ide.cpp
+32>  tn_usbsm.cpp
+32>  gb_slot.cpp
+32>  rom.cpp
+32>  mbc.cpp
+32>  ggext.cpp
+32>  smsctrladp.cpp
+32>  gba_slot.cpp
+32>  rom.cpp
+32>  bml3bus.cpp
+32>  bml3mp1802.cpp
+32>  bml3mp1805.cpp
+32>  bml3kanji.cpp
+32>  cococart.cpp
+32>  coco_232.cpp
+32>  coco_orch90.cpp
+32>  coco_pak.cpp
+32>  coco_fdc.cpp
+32>  coco_multi.cpp
+32>  coco_dwsock.cpp
+32>  dragon_fdc.cpp
+32>  coco_t4426.cpp
+32>  cpcexp.cpp
+32>  cpc_ssa1.cpp
+32>  cpc_rom.cpp
+32>  cpc_pds.cpp
+32>  cpc_rs232.cpp
+32>  mface2.cpp
+32>  symbfac2.cpp
+32>  amdrum.cpp
+32>  playcity.cpp
+32>  smartwatch.cpp
+32>  brunword4.cpp
+32>  hd20.cpp
+32>  ddi1.cpp
+32>  magicsound.cpp
+32>  doubler.cpp
+32>  transtape.cpp
+32>  epson_sio.cpp
+32>  pf10.cpp
+32>  tf20.cpp
+32>  pce_slot.cpp
+32>  pce_rom.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  x68kexp.cpp
+32>  x68k_neptunex.cpp
+32>  x68k_scsiext.cpp
+32>  abckb.cpp
+32>  abc77.cpp
+32>  abc99.cpp
+32>  abc800kb.cpp
+32>  floppy.cpp
+32>  scsi.cpp
+32>  scsicd.cpp
+32>  scsihd.cpp
+32>  scsihle.cpp
+32>  cdu76s.cpp
+32>  acb4070.cpp
+32>  d9060hd.cpp
+32>  sa1403d.cpp
+32>  s1410.cpp
+32>  pc9801_sasi.cpp
+32>  omti5100.cpp
+32>  macpds.cpp
+32>  pds_tpdfpd.cpp
+32>  oricext.cpp
+32>  jasmin.cpp
+32>  microdisc.cpp
+32>  a1bus.cpp
+32>  a1cassette.cpp
+32>  a1cffa.cpp
+32>  keyboard.cpp
+32>  matrix.cpp
+32>  a1200.cpp
+32>  a500.cpp
+32>  zorro.cpp
+32>  cards.cpp
+32>  a2052.cpp
+32>  a2232.cpp
+32>  a590.cpp
+32>  action_replay.cpp
+32>  buddha.cpp
+32>  hlekbd.cpp
+32>  sunkbd.cpp
+32>  exp.cpp
+32>  cst_qdisc.cpp
+32>  cst_q_plus4.cpp
+32>  cumana_fdi.cpp
+32>  kempston_di.cpp
+32>  miracle_gold_card.cpp
+32>  mp_fdi.cpp
+32>  opd_basic_master.cpp
+32>  pcml_qdisk.cpp
+32>  qubide.cpp
+32>  sandy_superdisk.cpp
+32>  sandy_superqboard.cpp
+32>  trumpcard.cpp
+32>  rom.cpp
+32>  miracle_hd.cpp
+32>  std.cpp
+32>  memexp.cpp
+32>  carts.cpp
+32>  floppy.cpp
+32>  memory.cpp
+32>  rs232.cpp
+32>  rtty.cpp
+32>  wordpro.cpp
+32>  ioexp.cpp
+32>  carts.cpp
+32>  joystick.cpp
+32>  printer.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  ctlrport.cpp
+32>  analogue.cpp
+32>  multitap.cpp
+32>  memcard.cpp
+32>  nasbus.cpp
+32>  cards.cpp
+32>  avc.cpp
+32>  floppy.cpp
+32>  expansion.cpp
+32>  carts.cpp
+32>  floppy.cpp
+32>  parallel.cpp
+32>  carts.cpp
+32>  joystick.cpp
+32>  printer.cpp
+32>  slot.cpp
+32>  rom.cpp
+32>  exp.cpp
+32>  eim.cpp
+32>  fdc.cpp
+32>  expander.cpp
+32>  modules.cpp
+32>  sv601.cpp
+32>  sv602.cpp
+32>  sv603.cpp
+32>  slot.cpp
+32>  cards.cpp
+32>  sv801.cpp
+32>  sv802.cpp
+32>  sv803.cpp
+32>  sv805.cpp
+32>  sv806.cpp
+32>  sv807.cpp
+32>  hp_optrom.cpp
+32>  hp9845_io.cpp
+32>  98034.cpp
+32>  98035.cpp
+32>  graphics.cpp
+32>  hrg.cpp
+32>  mouse.cpp
+32>  optional.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\vs2015\bin\x32\Debug\mame_mame\optional.lib
+328>------ 已启动生成: 项目: mame, 配置: Debug Win32 ------
+328>  Emitting mamevers.rc...
+328>  Building driver list...
+328>  34056 driver(s) found
+328>  mame.cpp
+328>  version.cpp
+328>  drivlist.cpp
+328>..\..\..\..\..\src\osd\winui\mameui.rc(632): warning RC2182: duplicate dialog control ID 1188
+328>
+328>  mame.vcxproj -> F:\MAME\msys64\src\mameui-git\mameui\build\projects\messui\mame\vs2015\..\..\..\..\..\mameuid.exe
+328>  mame.vcxproj -> ..\..\..\..\..\mameuid.pdb (Full PDB)
+========== 生成: 成功 328 个，失败 0 个，最新 0 个，跳过 0 个 ==========
