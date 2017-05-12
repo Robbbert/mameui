@@ -11,11 +11,11 @@
 
 #include "emu.h"
 #include "includes/xbox.h"
+#include "includes/xbox_pci.h"
 
 #include "cpu/i386/i386.h"
 #include "machine/atapicdr.h"
 #include "machine/idehd.h"
-#include "machine/lpci.h"
 #include "machine/pit8253.h"
 
 #include "debug/debugcmd.h"
@@ -136,8 +136,8 @@ void xbox_state::machine_start()
 	xbox_devs.ide = machine().device<bus_master_ide_controller_device>("ide");
 	usb_device = machine().device<ohci_game_controller>("ohci_gamepad");
 	if (usb_device != nullptr) {
-		usb_device->initialize(machine(), ohci_usb);
-		ohci_usb->usb_ohci_plug(3, usb_device); // connect to root hub port 3, chihiro needs to use 1 and 2
+		usb_device->initialize(machine());
+		machine().device<mcpx_ohci_device>(":pci:02.0")->plug_usb_device(3, usb_device); // connect to root hub port 3, chihiro needs to use 1 and 2
 	}
 	// savestates
 	//save_item(NAME(item));
@@ -194,8 +194,7 @@ MACHINE_CONFIG_END
 
 ROM_START( xbox )
 	ROM_REGION( 0x400, "mcpx", 0 )
-	// mcpx_1_0.bin is bad, first byte (0x7f) sould be removed and a byte with value 0xee added at the end
-	ROM_LOAD( "mcpx_1_0.bin", 0, 0x200, CRC(f31429fc) SHA1(a9ecbf8896d10db81594923e485862aa3aac7b58) )
+	ROM_LOAD( "mcpx_1_0.bin", 0, 0x200, CRC(0b07d1f1) SHA1(5d270675b54eb8071b480e42d22a3015ac211cef) )
 	ROM_LOAD( "mcpx_1_1.bin", 0x200, 0x200, CRC(94ce376b) SHA1(6c875f17f773aaec51eb434068bb6c657c4343c0) )
 
 	ROM_REGION( 0x100000, "bios", 0)

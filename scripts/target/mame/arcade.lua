@@ -1252,6 +1252,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/ohmygod.cpp",
 	MAME_DIR .. "src/mame/includes/ohmygod.h",
 	MAME_DIR .. "src/mame/video/ohmygod.cpp",
+	MAME_DIR .. "src/mame/drivers/patapata.cpp",
 	MAME_DIR .. "src/mame/drivers/powerins.cpp",
 	MAME_DIR .. "src/mame/includes/powerins.h",
 	MAME_DIR .. "src/mame/video/powerins.cpp",
@@ -2931,7 +2932,6 @@ files {
 
 createMAMEProjects(_target, _subtarget, "nmk")
 files {
-	MAME_DIR .. "src/mame/drivers/acchi.cpp",
 	MAME_DIR .. "src/mame/drivers/acommand.cpp",
 	MAME_DIR .. "src/mame/drivers/cultures.cpp",
 	MAME_DIR .. "src/mame/drivers/ddealer.cpp",
@@ -3339,6 +3339,7 @@ files {
 	MAME_DIR .. "src/mame/machine/gdrom.h",
 	MAME_DIR .. "src/mame/machine/xbox.cpp",
 	MAME_DIR .. "src/mame/machine/xbox_usb.cpp",
+	MAME_DIR .. "src/mame/machine/xbox_pci.cpp",
 }
 
 createMAMEProjects(_target, _subtarget, "seibu")
