@@ -70,6 +70,7 @@ public:
 	static void static_set_default_size(device_t &device, const char *default_size)     { downcast<ram_device &>(device).m_default_size = default_size; }
 	static void static_set_extra_options(device_t &device, const char *extra_options)   { downcast<ram_device &>(device).m_extra_options_string = extra_options && extra_options[0] ? extra_options : nullptr; downcast<ram_device &>(device).m_extra_options.clear(); }
 	static void static_set_default_value(device_t &device, uint8_t default_value)       { downcast<ram_device &>(device).m_default_value = default_value; }
+	static uint32_t parse_string(const char *s);
 
 protected:
 	virtual void device_start() override;
@@ -77,7 +78,6 @@ protected:
 
 private:
 	static std::vector<uint32_t> calculate_extra_options(const char *extra_options_string, std::string *bad_option);
-	static uint32_t parse_string(const char *s);
 	bool is_valid_size(uint32_t size) const;
 
 	// device state
