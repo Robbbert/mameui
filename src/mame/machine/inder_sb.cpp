@@ -10,14 +10,14 @@
 #include "speaker.h"
 
 
-const device_type INDER_AUDIO = device_creator<inder_sb_device>;
+DEFINE_DEVICE_TYPE(INDER_AUDIO, inder_sb_device, "indersb", "Inder 4xDAC Sound Board")
 
 
 inder_sb_device::inder_sb_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, INDER_AUDIO, "Inder 4xDAC Sound Board", tag, owner, clock, "indersb", __FILE__),
-		device_mixer_interface(mconfig, *this, 2),
-		m_audiocpu(*this, "audiocpu"),
-		m_ctc(*this, "ctc")
+	: device_t(mconfig, INDER_AUDIO, tag, owner, clock)
+	, device_mixer_interface(mconfig, *this, 2)
+	, m_audiocpu(*this, "audiocpu")
+	, m_ctc(*this, "ctc")
 {
 }
 
@@ -207,7 +207,7 @@ ADDRESS_MAP_END
 
 
 
-static MACHINE_CONFIG_FRAGMENT( inder_sb )
+static MACHINE_CONFIG_START( inder_sb )
 	MCFG_CPU_ADD("audiocpu", Z80, 8000000) // unk freq
 	MCFG_Z80_DAISY_CHAIN(daisy_chain)
 	MCFG_CPU_PROGRAM_MAP(sound_map)

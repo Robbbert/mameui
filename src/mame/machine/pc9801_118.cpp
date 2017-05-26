@@ -27,7 +27,7 @@
 //**************************************************************************
 
 // device type definition
-const device_type PC9801_118 = device_creator<pc9801_118_device>;
+DEFINE_DEVICE_TYPE(PC9801_118, pc9801_118_device, "pc9801_118", "pc9801_118")
 
 
 READ8_MEMBER(pc9801_118_device::opn_porta_r)
@@ -46,7 +46,7 @@ WRITE_LINE_MEMBER(pc9801_118_device::pc9801_sound_irq)
 	machine().device<pic8259_device>(":pic8259_slave")->ir4_w(state);
 }
 
-static MACHINE_CONFIG_FRAGMENT( pc9801_118_config )
+static MACHINE_CONFIG_START( pc9801_118_config )
 	MCFG_SPEAKER_STANDARD_MONO("mono")
 	MCFG_SOUND_ADD("opn3", YM2608, MAIN_CLOCK_X2*4) // actually YMF288, unknown clock / divider, might be X1 x 5 actually
 	MCFG_YM2608_IRQ_HANDLER(WRITELINE(pc9801_118_device, pc9801_sound_irq))
@@ -121,7 +121,7 @@ const tiny_rom_entry *pc9801_118_device::device_rom_region() const
 //-------------------------------------------------
 
 pc9801_118_device::pc9801_118_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, PC9801_118, "pc9801_118", tag, owner, clock, "pc9801_118", __FILE__),
+	: device_t(mconfig, PC9801_118, tag, owner, clock),
 //      m_maincpu(*this, "^maincpu"),
 		m_opn3(*this, "opn3")
 {

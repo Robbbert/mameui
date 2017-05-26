@@ -71,7 +71,7 @@ Notes:
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type ABC99 = device_creator<abc99_device>;
+DEFINE_DEVICE_TYPE(ABC99, abc99_device, "abc99", "Luxor ABC 99")
 
 
 //-------------------------------------------------
@@ -149,7 +149,7 @@ ADDRESS_MAP_END
 //  MACHINE_DRIVER( abc99 )
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( abc99 )
+static MACHINE_CONFIG_START( abc99 )
 	// keyboard CPU
 	MCFG_CPU_ADD(I8035_Z2_TAG, I8035, XTAL_6MHz/3) // from Z5 T0 output
 	MCFG_CPU_PROGRAM_MAP(abc99_z2_mem)
@@ -479,7 +479,7 @@ inline void abc99_device::scan_mouse()
 //-------------------------------------------------
 
 abc99_device::abc99_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	device_t(mconfig, ABC99, "Luxor ABC 99", tag, owner, clock, "abc99", __FILE__),
+	device_t(mconfig, ABC99, tag, owner, clock),
 	abc_keyboard_interface(mconfig, *this), m_serial_timer(nullptr), m_mouse_timer(nullptr),
 	m_maincpu(*this, I8035_Z2_TAG),
 	m_mousecpu(*this, I8035_Z5_TAG),

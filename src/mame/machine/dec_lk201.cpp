@@ -177,7 +177,7 @@ ________|D7  |D6  |D5  |D4 |D3 |D2 |D1 |D0
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type LK201 = device_creator<lk201_device>;
+DEFINE_DEVICE_TYPE(LK201, lk201_device, "lk201", "DEC LK201 Keyboard")
 
 ROM_START( lk201 )
 	ROM_REGION(0x2000, LK201_CPU_TAG, 0)
@@ -209,7 +209,7 @@ ADDRESS_MAP_END
 //  MACHINE_CONFIG
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( lk201 )
+static MACHINE_CONFIG_START( lk201 )
 	MCFG_CPU_ADD(LK201_CPU_TAG, M68HC05EG, XTAL_4MHz) // actually 68HC05C4, clock verified by Lord_Nightmare
 	MCFG_CPU_PROGRAM_MAP(lk201_map)
 
@@ -512,7 +512,7 @@ ioport_constructor lk201_device::device_input_ports() const
 //-------------------------------------------------
 
 lk201_device::lk201_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, LK201, "DEC LK201 keyboard", tag, owner, clock, "lk201", __FILE__),
+	: device_t(mconfig, LK201, tag, owner, clock),
 	device_serial_interface(mconfig, *this),
 	m_maincpu(*this, LK201_CPU_TAG),
 	m_speaker(*this, LK201_SPK_TAG),

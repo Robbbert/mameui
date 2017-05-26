@@ -19,7 +19,7 @@ ROM_START( dmv_k806 )
 	ROM_LOAD( "dmv_mouse_8741a.bin", 0x0000, 0x0400, CRC(2163737a) SHA1(b82c14dba6c25cb1f60cf623989ca8c0c1ee4cc3))
 ROM_END
 
-static MACHINE_CONFIG_FRAGMENT( dmv_k806 )
+static MACHINE_CONFIG_START( dmv_k806 )
 	MCFG_CPU_ADD("mcu", I8741, XTAL_6MHz)
 	MCFG_MCS48_PORT_P1_IN_CB(READ8(dmv_k806_device, port1_r))
 	MCFG_MCS48_PORT_P2_OUT_CB(WRITE8(dmv_k806_device, port2_w))
@@ -61,7 +61,7 @@ INPUT_PORTS_END
 //  GLOBAL VARIABLES
 //**************************************************************************
 
-const device_type DMV_K806 = device_creator<dmv_k806_device>;
+DEFINE_DEVICE_TYPE(DMV_K806, dmv_k806_device, "dmv_k806", "K806 mouse")
 
 //**************************************************************************
 //  LIVE DEVICE
@@ -72,14 +72,15 @@ const device_type DMV_K806 = device_creator<dmv_k806_device>;
 //-------------------------------------------------
 
 dmv_k806_device::dmv_k806_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-		: device_t(mconfig, DMV_K806, "K806 mouse", tag, owner, clock, "dmv_k806", __FILE__),
-		device_dmvslot_interface( mconfig, *this ),
-		m_mcu(*this, "mcu"),
-		m_jumpers(*this, "JUMPERS"),
-		m_mouse_buttons(*this, "MOUSE"),
-		m_mouse_x(*this, "MOUSEX"),
-		m_mouse_y(*this, "MOUSEY"), m_bus(nullptr)
-	{
+	: device_t(mconfig, DMV_K806, tag, owner, clock)
+	, device_dmvslot_interface( mconfig, *this )
+	, m_mcu(*this, "mcu")
+	, m_jumpers(*this, "JUMPERS")
+	, m_mouse_buttons(*this, "MOUSE")
+	, m_mouse_x(*this, "MOUSEX")
+	, m_mouse_y(*this, "MOUSEY")
+	, m_bus(nullptr)
+{
 }
 
 //-------------------------------------------------

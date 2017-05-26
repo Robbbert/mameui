@@ -41,8 +41,8 @@
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type PC_KBD_IBM_PC_AT_84 = device_creator<ibm_pc_at_84_keyboard_device>;
-const device_type PC_KBD_IBM_3270PC_122 = device_creator<ibm_3270pc_122_keyboard_device>;
+DEFINE_DEVICE_TYPE(PC_KBD_IBM_PC_AT_84,   ibm_pc_at_84_keyboard_device,   "kb_pcat84", "IBM PC/AT Keyboard")
+DEFINE_DEVICE_TYPE(PC_KBD_IBM_3270PC_122, ibm_3270pc_122_keyboard_device, "kb_3270pc", "IBM 3270PC Keyboard")
 
 
 //-------------------------------------------------
@@ -103,7 +103,7 @@ const tiny_rom_entry *ibm_3270pc_122_keyboard_device::device_rom_region() const
 //  MACHINE_DRIVER( ibm_pc_at_84_keyboard )
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( ibm_pc_at_84_keyboard )
+static MACHINE_CONFIG_START( ibm_pc_at_84_keyboard )
 	MCFG_CPU_ADD(I8048_TAG, I8048, 5364000)
 	MCFG_MCS48_PORT_BUS_OUT_CB(WRITE8(ibm_pc_at_84_keyboard_device, bus_w))
 	MCFG_MCS48_PORT_P1_IN_CB(READ8(ibm_pc_at_84_keyboard_device, p1_r))
@@ -347,8 +347,8 @@ ioport_constructor ibm_3270pc_122_keyboard_device::device_input_ports() const
 //  ibm_pc_at_84_keyboard_device - constructor
 //-------------------------------------------------
 
-ibm_pc_at_84_keyboard_device::ibm_pc_at_84_keyboard_device(const machine_config &mconfig, device_type type, const char *name, const char *tag, device_t *owner, uint32_t clock, const char *shortname, const char *source) :
-	device_t(mconfig, type, name, tag, owner, clock, shortname, source),
+ibm_pc_at_84_keyboard_device::ibm_pc_at_84_keyboard_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock) :
+	device_t(mconfig, type, tag, owner, clock),
 	device_pc_kbd_interface(mconfig, *this),
 	m_maincpu(*this, I8048_TAG),
 	m_dr(*this, "DR%02u", 0),
@@ -362,10 +362,14 @@ ibm_pc_at_84_keyboard_device::ibm_pc_at_84_keyboard_device(const machine_config 
 }
 
 ibm_pc_at_84_keyboard_device::ibm_pc_at_84_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	ibm_pc_at_84_keyboard_device(mconfig, PC_KBD_IBM_PC_AT_84, "IBM PC/AT Keyboard", tag, owner, clock, "kb_pcat84", __FILE__) { }
+	ibm_pc_at_84_keyboard_device(mconfig, PC_KBD_IBM_PC_AT_84, tag, owner, clock)
+{
+}
 
 ibm_3270pc_122_keyboard_device::ibm_3270pc_122_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	ibm_pc_at_84_keyboard_device(mconfig, PC_KBD_IBM_3270PC_122, "IBM 3270PC Keyboard", tag, owner, clock, "kb_3270pc", __FILE__) { }
+	ibm_pc_at_84_keyboard_device(mconfig, PC_KBD_IBM_3270PC_122, tag, owner, clock)
+{
+}
 
 
 //-------------------------------------------------

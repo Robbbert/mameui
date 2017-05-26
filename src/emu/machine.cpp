@@ -116,7 +116,7 @@ running_machine::running_machine(const machine_config &_config, machine_manager 
 		m_config(_config),
 		m_system(_config.gamedrv()),
 		m_manager(manager),
-		m_current_phase(MACHINE_PHASE_PREINIT),
+		m_current_phase(machine_phase::PREINIT),
 		m_paused(false),
 		m_hard_reset_pending(false),
 		m_exit_pending(false),
@@ -293,7 +293,7 @@ int running_machine::run(bool quiet)
 		m_manager.http()->clear();
 
 		// move to the init phase
-		m_current_phase = MACHINE_PHASE_INIT;
+		m_current_phase = machine_phase::INIT;
 
 		// if we have a logfile, set up the callback
 		if (options().log() && !quiet)
@@ -369,7 +369,7 @@ int running_machine::run(bool quiet)
 		m_manager.http()->clear();
 
 		// and out via the exit phase
-		m_current_phase = MACHINE_PHASE_EXIT;
+		m_current_phase = machine_phase::EXIT;
 
 		// save the NVRAM and configuration
 		sound().ui_mute(true);
@@ -411,7 +411,7 @@ int running_machine::run(bool quiet)
 
 	// make sure our phase is set properly before cleaning up,
 	// in case we got here via exception
-	m_current_phase = MACHINE_PHASE_EXIT;
+	m_current_phase = machine_phase::EXIT;
 
 	// call all exit callbacks registered
 	call_notifiers(MACHINE_NOTIFY_EXIT);
@@ -736,7 +736,7 @@ void running_machine::toggle_pause()
 
 void running_machine::add_notifier(machine_notification event, machine_notify_delegate callback, bool first)
 {
-	assert_always(m_current_phase == MACHINE_PHASE_INIT, "Can only call add_notifier at init time!");
+	assert_always(m_current_phase == machine_phase::INIT, "Can only call add_notifier at init time!");
 
 	if(first)
 		m_notifier_list[event].push_front(std::make_unique<notifier_callback_item>(callback));
@@ -758,7 +758,7 @@ void running_machine::add_notifier(machine_notification event, machine_notify_de
 
 void running_machine::add_logerror_callback(logerror_callback callback)
 {
-	assert_always(m_current_phase == MACHINE_PHASE_INIT, "Can only call add_logerror_callback at init time!");
+	assert_always(m_current_phase == machine_phase::INIT, "Can only call add_logerror_callback at init time!");
 		m_string_buffer.reserve(1024);
 	m_logerror_list.push_back(std::make_unique<logerror_callback_item>(callback));
 }
@@ -943,13 +943,13 @@ void running_machine::soft_reset(void *ptr, s32 param)
 	logerror("Soft reset\n");
 
 	// temporarily in the reset phase
-	m_current_phase = MACHINE_PHASE_RESET;
+	m_current_phase = machine_phase::RESET;
 
 	// call all registered reset callbacks
 	call_notifiers(MACHINE_NOTIFY_RESET);
 
 	// now we're running
-	m_current_phase = MACHINE_PHASE_RUNNING;
+	m_current_phase = machine_phase::RUNNING;
 }
 
 
@@ -1280,10 +1280,10 @@ static ADDRESS_MAP_START(dummy, AS_0, 8, dummy_space_device)
 	AM_RANGE(0x00000000, 0xffffffff) AM_READWRITE(read, write)
 ADDRESS_MAP_END
 
-const device_type DUMMY_SPACE = device_creator<dummy_space_device>;
+DEFINE_DEVICE_TYPE(DUMMY_SPACE, dummy_space_device, "dummy_space", "Dummy Space")
 
 dummy_space_device::dummy_space_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock) :
-	device_t(mconfig, DUMMY_SPACE, "Dummy Space", tag, owner, clock, "dummy_space", __FILE__),
+	device_t(mconfig, DUMMY_SPACE, tag, owner, clock),
 	device_memory_interface(mconfig, *this),
 	m_space_config("dummy", ENDIANNESS_LITTLE, 8, 32, 0, nullptr, *ADDRESS_MAP_NAME(dummy))
 {

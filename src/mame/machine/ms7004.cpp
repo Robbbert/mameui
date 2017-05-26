@@ -36,7 +36,7 @@
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type MS7004 = device_creator<ms7004_device>;
+DEFINE_DEVICE_TYPE(MS7004, ms7004_device, "ms7004", "MS7004 keyboard")
 
 ROM_START( ms7004 )
 	ROM_REGION (0x800, MS7004_CPU_TAG, 0)
@@ -55,7 +55,7 @@ ADDRESS_MAP_END
 //  MACHINE_CONFIG
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( ms7004 )
+static MACHINE_CONFIG_START( ms7004 )
 	MCFG_CPU_ADD(MS7004_CPU_TAG, I8035, XTAL_4_608MHz)
 	MCFG_CPU_PROGRAM_MAP(ms7004_map)
 	MCFG_MCS48_PORT_P1_OUT_CB(WRITE8(ms7004_device, p1_w))
@@ -357,7 +357,7 @@ ioport_constructor ms7004_device::device_input_ports() const
 //-------------------------------------------------
 
 ms7004_device::ms7004_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, MS7004, "MS7004 keyboard", tag, owner, clock, "ms7004", __FILE__),
+	: device_t(mconfig, MS7004, tag, owner, clock),
 	m_maincpu(*this, MS7004_CPU_TAG),
 	m_speaker(*this, MS7004_SPK_TAG),
 	m_i8243(*this, "i8243"),

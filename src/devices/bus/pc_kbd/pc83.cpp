@@ -23,7 +23,7 @@
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type PC_KBD_IBM_PC_83 = device_creator<ibm_pc_83_keyboard_device>;
+DEFINE_DEVICE_TYPE(PC_KBD_IBM_PC_83, ibm_pc_83_keyboard_device, "kb_pc83", "IBM PC Keyboard")
 
 
 //-------------------------------------------------
@@ -50,7 +50,7 @@ const tiny_rom_entry *ibm_pc_83_keyboard_device::device_rom_region() const
 //  MACHINE_DRIVER( ibm_pc_83_keyboard )
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( ibm_pc_83_keyboard )
+static MACHINE_CONFIG_START( ibm_pc_83_keyboard )
 	MCFG_CPU_ADD(I8048_TAG, I8048, MCS48_LC_CLOCK(IND_U(47), CAP_P(20)))
 	MCFG_MCS48_PORT_BUS_OUT_CB(WRITE8(ibm_pc_83_keyboard_device, bus_w))
 	MCFG_MCS48_PORT_P1_IN_CB(READ8(ibm_pc_83_keyboard_device, p1_r))
@@ -241,7 +241,7 @@ ioport_constructor ibm_pc_83_keyboard_device::device_input_ports() const
 //-------------------------------------------------
 
 ibm_pc_83_keyboard_device::ibm_pc_83_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	device_t(mconfig, PC_KBD_IBM_PC_83, "IBM PC Keyboard", tag, owner, clock, "kb_pc83", __FILE__),
+	device_t(mconfig, PC_KBD_IBM_PC_83, tag, owner, clock),
 	device_pc_kbd_interface(mconfig, *this),
 	m_maincpu(*this, I8048_TAG),
 	m_dr(*this, "DR%02u", 0),

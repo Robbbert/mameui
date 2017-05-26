@@ -34,7 +34,7 @@
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type KM035 = device_creator<km035_device>;
+DEFINE_DEVICE_TYPE(KM035, km035_device, "km035", "KM035 Keyboard")
 
 ROM_START( km035 )
 	ROM_REGION (0x800, KM035_CPU_TAG, 0)
@@ -53,7 +53,7 @@ ADDRESS_MAP_END
 //  MACHINE_CONFIG
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( km035 )
+static MACHINE_CONFIG_START( km035 )
 	MCFG_CPU_ADD(KM035_CPU_TAG, I8035, XTAL_4_608MHz)
 	MCFG_CPU_PROGRAM_MAP(km035_map)
 	MCFG_MCS48_PORT_BUS_OUT_CB(WRITE8(km035_device, bus_w))
@@ -269,7 +269,7 @@ ioport_constructor km035_device::device_input_ports() const
 //-------------------------------------------------
 
 km035_device::km035_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, KM035, "KM035 keyboard", tag, owner, clock, "km035", __FILE__),
+	: device_t(mconfig, KM035, tag, owner, clock),
 	m_maincpu(*this, KM035_CPU_TAG),
 	m_speaker(*this, KM035_SPK_TAG),
 	m_kbd(*this, "KBD%u", 0),

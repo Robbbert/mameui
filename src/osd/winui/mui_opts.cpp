@@ -2534,7 +2534,7 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 
 	if (opt_type == OPTIONS_SOURCE)
 	{
-		fname = std::string(GetIniDir()) + PATH_SEPARATOR + "source" + PATH_SEPARATOR + core_filename_extract_base(driver->source_file, true) + ".ini";
+		fname = std::string(GetIniDir()) + PATH_SEPARATOR + "source" + PATH_SEPARATOR + core_filename_extract_base(driver->type.source(), true) + ".ini";
 		LoadSettingsFile(opts, fname.c_str());
 		return;
 	}
@@ -2575,7 +2575,7 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 		{
 			filename.assign(driver->name);
 			if (opt_type == OPTIONS_SOURCE)
-				filepath = std::string(GetIniDir()) + PATH_SEPARATOR + "source" + PATH_SEPARATOR + core_filename_extract_base(driver->source_file, true) + ".ini";
+				filepath = std::string(GetIniDir()) + PATH_SEPARATOR + "source" + PATH_SEPARATOR + core_filename_extract_base(driver->type.source(), true) + ".ini";
 		}
 	}
 	else
@@ -2768,7 +2768,8 @@ BOOL GetSWSortReverse(void)
 	return MameUISettings().bool_value(MESSUI_SW_SORT_REVERSED);
 }
 
-void SetSelectedSoftware(int driver_index, const machine_config *config, const device_image_interface *dev, const char *software)
+
+void SetSelectedSoftware(int driver_index, const device_image_interface *dev, const char *software)
 {
 	std::string opt_name = dev->instance_name();
 	windows_options o;
@@ -2781,6 +2782,7 @@ void SetSelectedSoftware(int driver_index, const machine_config *config, const d
 
 	load_options(o, OPTIONS_GAME, driver_index);
 	o.set_value(opt_name.c_str(), software, OPTION_PRIORITY_CMDLINE,error_string);
+	o.image_options()[opt_name] = software;
 	save_options(o, OPTIONS_GAME, driver_index);
 }
 

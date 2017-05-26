@@ -23,7 +23,7 @@
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type TANDY2K_KEYBOARD = device_creator<tandy2k_keyboard_device>;
+DEFINE_DEVICE_TYPE(TANDY2K_KEYBOARD, tandy2k_keyboard_device, "tandy2kb", "Tandy 2000 Keyboard")
 
 
 
@@ -51,7 +51,7 @@ const tiny_rom_entry *tandy2k_keyboard_device::device_rom_region() const
 //  MACHINE_DRIVER( tandy2k_keyboard )
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( tandy2k_keyboard )
+static MACHINE_CONFIG_START( tandy2k_keyboard )
 	MCFG_CPU_ADD(I8048_TAG, I8048, 1000000) // ?
 	MCFG_MCS48_PORT_P1_OUT_CB(WRITE8(tandy2k_keyboard_device, kb_p1_w))
 	MCFG_MCS48_PORT_P2_OUT_CB(WRITE8(tandy2k_keyboard_device, kb_p2_w))
@@ -218,7 +218,7 @@ ioport_constructor tandy2k_keyboard_device::device_input_ports() const
 //-------------------------------------------------
 
 tandy2k_keyboard_device::tandy2k_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	device_t(mconfig, TANDY2K_KEYBOARD, "Tandy 2000 Keyboard", tag, owner, clock, "tandy2kb", __FILE__),
+	device_t(mconfig, TANDY2K_KEYBOARD, tag, owner, clock),
 	m_maincpu(*this, I8048_TAG),
 	m_y(*this, "Y%u", 0),
 	m_write_clock(*this),

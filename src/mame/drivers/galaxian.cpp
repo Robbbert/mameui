@@ -5586,7 +5586,7 @@ DISCRETE_SOUND_END
  *
  *************************************/
 
-static MACHINE_CONFIG_START( galaxian_base, galaxian_state )
+static MACHINE_CONFIG_START( galaxian_base )
 
 	/* basic machine hardware */
 	MCFG_CPU_ADD("maincpu", Z80, GALAXIAN_PIXEL_CLOCK/3/2)
@@ -5631,7 +5631,7 @@ static MACHINE_CONFIG_DERIVED( konami_base, galaxian_base )
 MACHINE_CONFIG_END
 
 
-static MACHINE_CONFIG_FRAGMENT( konami_sound_1x_ay8910 )
+static MACHINE_CONFIG_START( konami_sound_1x_ay8910 )
 
 	/* 2nd CPU to drive sound */
 	MCFG_CPU_ADD("audiocpu", Z80, KONAMI_SOUND_CLOCK/8)
@@ -5656,7 +5656,7 @@ static MACHINE_CONFIG_FRAGMENT( konami_sound_1x_ay8910 )
 MACHINE_CONFIG_END
 
 
-static MACHINE_CONFIG_FRAGMENT( konami_sound_2x_ay8910 )
+static MACHINE_CONFIG_START( konami_sound_2x_ay8910 )
 
 	/* 2nd CPU to drive sound */
 	MCFG_CPU_ADD("audiocpu", Z80, KONAMI_SOUND_CLOCK/8)

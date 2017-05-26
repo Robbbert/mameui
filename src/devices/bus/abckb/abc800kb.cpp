@@ -85,7 +85,7 @@ XR22-050-3B Pinout
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type ABC800_KEYBOARD = device_creator<abc800_keyboard_device>;
+DEFINE_DEVICE_TYPE(ABC800_KEYBOARD, abc800_keyboard_device, "abc800kb", "ABC-800 Keyboard")
 
 
 //-------------------------------------------------
@@ -112,7 +112,7 @@ const tiny_rom_entry *abc800_keyboard_device::device_rom_region() const
 //  MACHINE_DRIVER( abc800_keyboard )
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( abc800_keyboard )
+static MACHINE_CONFIG_START( abc800_keyboard )
 	MCFG_CPU_ADD(I8048_TAG, I8048, XTAL_5_9904MHz)
 	MCFG_MCS48_PORT_P1_IN_CB(READ8(abc800_keyboard_device, kb_p1_r))
 	MCFG_MCS48_PORT_P1_OUT_CB(WRITE8(abc800_keyboard_device, kb_p1_w))
@@ -325,7 +325,8 @@ inline void abc800_keyboard_device::key_down(int state)
 //  abc800_keyboard_device - constructor
 //-------------------------------------------------
 
-abc800_keyboard_device::abc800_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) : device_t(mconfig, ABC800_KEYBOARD, "ABC-800 Keyboard", tag, owner, clock, "abc800kb", __FILE__),
+abc800_keyboard_device::abc800_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
+	device_t(mconfig, ABC800_KEYBOARD, tag, owner, clock),
 	abc_keyboard_interface(mconfig, *this),
 	m_maincpu(*this, I8048_TAG),
 	m_x(*this, "X%u", 0),

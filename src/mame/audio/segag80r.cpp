@@ -10,8 +10,9 @@
 ***************************************************************************/
 
 #include "emu.h"
-#include "cpu/mcs48/mcs48.h"
 #include "includes/segag80r.h"
+
+#include "cpu/mcs48/mcs48.h"
 #include "machine/i8255.h"
 #include "machine/i8243.h"
 #include "sound/samples.h"
@@ -29,13 +30,13 @@
 #define SEGA005_555_TIMER_FREQ      (1.44 / ((15000 + 2 * 4700) * 1.5e-6))
 #define SEGA005_COUNTER_FREQ        (100000)    /* unknown, just a guess */
 
-const device_type SEGA005 = device_creator<sega005_sound_device>;
+DEFINE_DEVICE_TYPE(SEGA005, sega005_sound_device, "sega005_sound", "Sega 005 Audio Custom")
 
 sega005_sound_device::sega005_sound_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, SEGA005, "Sega 005 Audio Custom", tag, owner, clock, "sega005_sound", __FILE__),
-		device_sound_interface(mconfig, *this),
-		m_sega005_sound_timer(nullptr),
-		m_sega005_stream(nullptr)
+	: device_t(mconfig, SEGA005, tag, owner, clock)
+	, device_sound_interface(mconfig, *this)
+	, m_sega005_sound_timer(nullptr)
+	, m_sega005_stream(nullptr)
 {
 }
 
@@ -230,7 +231,7 @@ static const char *const astrob_sample_names[] =
 };
 
 
-MACHINE_CONFIG_FRAGMENT( astrob_sound_board )
+MACHINE_CONFIG_START( astrob_sound_board )
 
 	/* sound hardware */
 	MCFG_SOUND_ADD("samples", SAMPLES, 0)
@@ -417,7 +418,7 @@ static const char *const sega005_sample_names[] =
 };
 
 
-MACHINE_CONFIG_FRAGMENT( 005_sound_board )
+MACHINE_CONFIG_START( 005_sound_board )
 
 	MCFG_DEVICE_ADD("ppi8255", I8255A, 0)
 	MCFG_I8255_OUT_PORTA_CB(WRITE8(segag80r_state, sega005_sound_a_w))
@@ -579,7 +580,7 @@ static const char *const spaceod_sample_names[] =
 };
 
 
-MACHINE_CONFIG_FRAGMENT( spaceod_sound_board )
+MACHINE_CONFIG_START( spaceod_sound_board )
 
 	/* sound hardware */
 
@@ -677,7 +678,7 @@ static const char *const monsterb_sample_names[] =
  *
  *************************************/
 
-MACHINE_CONFIG_FRAGMENT( monsterb_sound_board )
+MACHINE_CONFIG_START( monsterb_sound_board )
 	MCFG_DEVICE_ADD("ppi8255", I8255A, 0)
 	MCFG_I8255_OUT_PORTA_CB(WRITE8(segag80r_state, monsterb_sound_a_w))
 	MCFG_I8255_OUT_PORTB_CB(WRITE8(segag80r_state, monsterb_sound_b_w))

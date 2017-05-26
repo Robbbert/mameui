@@ -39,7 +39,7 @@
 //  DEVICE DEFINITIONS
 //**************************************************************************
 
-const device_type PC_KBD_EC_1841 = device_creator<ec_1841_keyboard_device>;
+DEFINE_DEVICE_TYPE(PC_KBD_EC_1841, ec_1841_keyboard_device, "kb_ec1841", "EC-1841 Keyboard")
 
 
 //-------------------------------------------------
@@ -66,7 +66,7 @@ const tiny_rom_entry *ec_1841_keyboard_device::device_rom_region() const
 //  MACHINE_DRIVER( ec_1841_keyboard )
 //-------------------------------------------------
 
-static MACHINE_CONFIG_FRAGMENT( ec_1841_keyboard )
+static MACHINE_CONFIG_START( ec_1841_keyboard )
 	MCFG_CPU_ADD(I8048_TAG, I8048, XTAL_5_46MHz)
 	MCFG_MCS48_PORT_BUS_OUT_CB(WRITE8(ec_1841_keyboard_device, bus_w))
 	MCFG_MCS48_PORT_P1_IN_CB(READ8(ec_1841_keyboard_device, p1_r))
@@ -274,7 +274,7 @@ ioport_constructor ec_1841_keyboard_device::device_input_ports() const
 //-------------------------------------------------
 
 ec_1841_keyboard_device::ec_1841_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, PC_KBD_EC_1841, "EC-1841 Keyboard", tag, owner, clock, "kb_ec1841", __FILE__),
+	: device_t(mconfig, PC_KBD_EC_1841, tag, owner, clock),
 		device_pc_kbd_interface(mconfig, *this),
 		m_maincpu(*this, I8048_TAG),
 		m_kbd(*this, "MD%02u", 0),

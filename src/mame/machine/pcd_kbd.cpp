@@ -7,7 +7,7 @@
 #include "sound/spkrdev.h"
 #include "speaker.h"
 
-const device_type PCD_KEYBOARD = device_creator<pcd_keyboard_device>;
+DEFINE_DEVICE_TYPE(PCD_KEYBOARD, pcd_keyboard_device, "pcd_kbd", "Siemens PC-D Keyboard")
 
 ROM_START( pcd_keyboard )
 	ROM_REGION(0x1000, "mcu", 0)
@@ -26,7 +26,7 @@ static ADDRESS_MAP_START( pcd_keyboard_map, AS_PROGRAM, 8, pcd_keyboard_device )
 	AM_RANGE(0x000, 0xfff) AM_ROM
 ADDRESS_MAP_END
 
-static MACHINE_CONFIG_FRAGMENT( pcd_keyboard )
+static MACHINE_CONFIG_START( pcd_keyboard )
 	MCFG_CPU_ADD("mcu", I8035, 5760000*2) // FIXME: the mc2661 baud rate calculation
 	MCFG_CPU_PROGRAM_MAP(pcd_keyboard_map)
 	MCFG_MCS48_PORT_BUS_IN_CB(READ8(pcd_keyboard_device, bus_r))
@@ -224,7 +224,7 @@ ioport_constructor pcd_keyboard_device::device_input_ports() const
 }
 
 pcd_keyboard_device::pcd_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, PCD_KEYBOARD, "PC-D Keyboard", tag, owner, clock, "pcd_kbd", __FILE__)
+	: device_t(mconfig, PCD_KEYBOARD, tag, owner, clock)
 	, m_rows(*this, "ROW.%u", 0)
 	, m_p1(0)
 	, m_out_tx_handler(*this)

@@ -3,7 +3,7 @@
 #include "emu.h"
 #include "m24_kbd.h"
 
-const device_type M24_KEYBOARD = device_creator<m24_keyboard_device>;
+DEFINE_DEVICE_TYPE(M24_KEYBOARD, m24_keyboard_device, "m24_kbd", "Olivetti M24 Keyboard")
 
 ROM_START( m24_keyboard )
 	ROM_REGION(0x800, "mcu", 0)
@@ -16,7 +16,7 @@ const tiny_rom_entry *m24_keyboard_device::device_rom_region() const
 	return ROM_NAME( m24_keyboard );
 }
 
-static MACHINE_CONFIG_FRAGMENT( m24_keyboard )
+static MACHINE_CONFIG_START( m24_keyboard )
 	MCFG_CPU_ADD("mcu", I8049, XTAL_6MHz)
 	MCFG_MCS48_PORT_BUS_OUT_CB(WRITE8(m24_keyboard_device, bus_w))
 	MCFG_MCS48_PORT_P1_IN_CB(READ8(m24_keyboard_device, p1_r))
@@ -209,7 +209,7 @@ ioport_constructor m24_keyboard_device::device_input_ports() const
 }
 
 m24_keyboard_device::m24_keyboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, M24_KEYBOARD, "Olivetti M24 Keyboard", tag, owner, clock, "m24_kbd", __FILE__)
+	: device_t(mconfig, M24_KEYBOARD, tag, owner, clock)
 	, m_rows(*this, "ROW.%u", 0)
 	, m_mousebtn(*this, "MOUSEBTN")
 	, m_out_data(*this)

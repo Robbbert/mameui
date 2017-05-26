@@ -536,7 +536,7 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 	switch( opt_type )
 	{
 	case OPTIONS_GAME:
-		t_description = ui_wstring_from_utf8(ModifyThe(driver_list::driver(g_nGame).description));
+		t_description = ui_wstring_from_utf8(ModifyThe(driver_list::driver(g_nGame).type.fullname()));
 		break;
 	case OPTIONS_SOURCE:
 		t_description = ui_wstring_from_utf8(GetDriverFilename(g_nGame));
@@ -906,7 +906,7 @@ char *GameInfoTitle(OPTIONS_TYPE opt_type, UINT nIndex)
 		strcpy(buf, "Global vector options");
 	else
 	if (OPTIONS_GAME == opt_type)
-		sprintf(buf, "%s\n\"%s\"", ModifyThe(driver_list::driver(nIndex).description), driver_list::driver(nIndex).name);
+		sprintf(buf, "%s\n\"%s\"", ModifyThe(driver_list::driver(nIndex).type.fullname()), driver_list::driver(nIndex).name);
 	return buf;
 }
 
@@ -922,7 +922,7 @@ static char *GameInfoCloneOf(UINT nIndex)
 	{
 		nParentIndex = GetParentIndex(&driver_list::driver(nIndex));
 		sprintf(buf, "%s - \"%s\"",
-			ConvertAmpersandString(ModifyThe(driver_list::driver(nParentIndex).description)),
+			ConvertAmpersandString(ModifyThe(driver_list::driver(nParentIndex).type.fullname())),
 			driver_list::driver(nParentIndex).name);
 	}
 
@@ -3006,12 +3006,12 @@ static const char *messram_string(char *buffer, UINT32 ram)
 	if ((ram % (1024*1024)) == 0)
 	{
 		ram /= 1024*1024;
-		suffix = "m";
+		suffix = "MB";
 	}
 	else if ((ram % 1024) == 0)
 	{
 		ram /= 1024;
-		suffix = "k";
+		suffix = "KB";
 	}
 	else
 		suffix = "";
@@ -3022,11 +3022,12 @@ static const char *messram_string(char *buffer, UINT32 ram)
 
 static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_options *opts, const char *option_name)
 {
-	int res = 0, i = 0, current_index, driver_index;
+	int res = 0, i = 0, current_index = 0, driver_index;
 	const game_driver *gamedrv;
-	UINT32 ram, current_ram;
+	uint32_t ram, current_ram;
 	const char *this_ram_string;
 	TCHAR* t_ramstring;
+	char ramtext[20];
 
 	// identify the driver
 	driver_index = PropertiesCurrentGame(dialog);
@@ -3052,69 +3053,44 @@ static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_
 		// identify the current amount of RAM
 		this_ram_string = opts->value(OPTION_RAMSIZE);
 		current_ram = (this_ram_string != NULL) ? ramdev->parse_string(this_ram_string) : 0;
+		ram = ramdev->default_size();
 		if (current_ram == 0)
-			current_ram = ramdev->default_size();
+			current_ram = ram;
 
-		// by default, assume index 0
-		current_index = 0;
+		messram_string(ramtext, ram);
+		t_ramstring = ui_wstring_from_utf8(ramtext);
+		if( !t_ramstring )
+			return FALSE;
 
+		res = ComboBox_InsertString(control, i, win_tstring_strdup(t_ramstring));
+		res = ComboBox_SetItemData(control, i, ram);
+
+		if (!ramdev->extra_options().empty())
 		{
-			char tmpval[20] ;
-			ram = ramdev->default_size();
-			messram_string(tmpval,ram);
-			t_ramstring = ui_wstring_from_utf8(tmpval);
-			if( !t_ramstring )
-				return FALSE;
-
-			res = ComboBox_InsertString(control, i, win_tstring_strdup(t_ramstring));
-			res = ComboBox_SetItemData(control, i, ram);
-
-			free(t_ramstring);
-		}
-		if (ramdev->extra_options())
-		{
-			int j;
-			int size = strlen(ramdev->extra_options());
-			char * const s = core_strdup(ramdev->extra_options());
-			char * const e = s + size;
-			char *p = s;
-			for (j=0;j<size;j++)
-				if (p[j]==',')
-					p[j]=0;
-
 			/* try to parse each option */
-			while(p <= e)
+			const uint32_t *p = ramdev->extra_options().data();
+			for (int j = 0; j < ramdev->extra_options().size(); j++)
 			{
 				i++;
+				char ramtext[20];
 				// identify this option
-				ram = ramdev->parse_string(p);
+				messram_string(ramtext, p[j]);
 
-				this_ram_string = p;
-
-				t_ramstring = ui_wstring_from_utf8(this_ram_string);
+				t_ramstring = ui_wstring_from_utf8(ramtext);
 				if( !t_ramstring )
 					return FALSE;
 
 				// add this option to the combo box
 				res = ComboBox_InsertString(control, i, win_tstring_strdup(t_ramstring));
-				res = ComboBox_SetItemData(control, i, ram);
-
-				free(t_ramstring);
+				res = ComboBox_SetItemData(control, i, p[j]);
 
 				// is this the current option?  record the index if so
-				if (ram == current_ram)
+				if (p[j] == current_ram)
 					current_index = i;
-
-				p+= strlen(p);
-				if (p == e)
-					break;
-
-				p++;
 			}
-
-			free(s);
 		}
-
+		if (t_ramstring)
+			free (t_ramstring);
 		// set the combo box
 		res = ComboBox_SetCurSel(control, current_index);
 	}

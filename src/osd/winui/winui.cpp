@@ -904,7 +904,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 		if (playopts->aviwrite)
 			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE,error_string);
 	}
-
+printf("Software=%s:%s\n",g_szSelectedDevice, g_szSelectedSoftware);
 	if (g_szSelectedSoftware[0] && g_szSelectedDevice[0])
 	{
 		global_opts.set_value(g_szSelectedDevice, g_szSelectedSoftware, OPTION_PRIORITY_CMDLINE,error_string);
@@ -966,6 +966,10 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 		Picker_ResetIdle(GetDlgItem(hMain, s_nPickers[i]));
 	ShowWindow(hMain, SW_SHOW);
 	SetForegroundWindow(hMain);
+
+	// update Media View in case software was loaded in newui
+	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
+		DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
 
 	return (DWORD)0;
 }
@@ -2521,7 +2525,7 @@ static BOOL FolderCheck(void)
 			ProgressBarStepParam(i, nCount);
 	}
 	ProgressBarHide();
-	pDescription = ModifyThe(driver_list::driver(Picker_GetSelectedItem(hwndList)).description);
+	pDescription = ModifyThe(driver_list::driver(Picker_GetSelectedItem(hwndList)).type.fullname());
 	SetStatusBarText(0, pDescription);
 	UpdateStatusBar();
 	res++;
@@ -2599,7 +2603,7 @@ static BOOL OnIdle(HWND hWnd)
 	// in case it's not found, get it back
 	driver_index = Picker_GetSelectedItem(hwndList);
 
-	pDescription = ModifyThe(driver_list::driver(driver_index).description);
+	pDescription = ModifyThe(driver_list::driver(driver_index).type.fullname());
 	SetStatusBarText(0, pDescription);
 	idle_work = FALSE;
 	UpdateStatusBar();
@@ -3126,7 +3130,7 @@ static void EnableSelection(int nGame)
 
 	MyFillSoftwareList(nGame, FALSE);
 
-	t_description = ui_wstring_from_utf8(ConvertAmpersandString(ModifyThe(driver_list::driver(nGame).description)));
+	t_description = ui_wstring_from_utf8(ConvertAmpersandString(ModifyThe(driver_list::driver(nGame).type.fullname())));
 	if( !t_description )
 		return;
 
@@ -3138,7 +3142,7 @@ static void EnableSelection(int nGame)
 	mmi.cch = _tcslen(mmi.dwTypeData);
 	SetMenuItemInfo(hMenu, ID_FILE_PLAY, FALSE, &mmi);
 
-	pText = ModifyThe(driver_list::driver(nGame).description);
+	pText = ModifyThe(driver_list::driver(nGame).type.fullname());
 	SetStatusBarText(0, pText);
 	/* Add this game's status to the status bar */
 	pText = GameInfoStatus(nGame, FALSE);
@@ -3237,7 +3241,7 @@ static LPCSTR GetCloneParentName(int nItem)
 	{
 		nParentIndex = GetParentIndex(&driver_list::driver(nItem));
 		if( nParentIndex >= 0)
-			return ModifyThe(driver_list::driver(nParentIndex).description);
+			return ModifyThe(driver_list::driver(nParentIndex).type.fullname());
 	}
 	return "";
 }
@@ -4669,7 +4673,7 @@ static const TCHAR *GamePicker_GetItemString(HWND hwndPicker, int nItem, int nCo
 	{
 		case COLUMN_GAMES:
 			/* Driver description */
-			utf8_s = ModifyThe(driver_list::driver(nItem).description);
+			utf8_s = ModifyThe(driver_list::driver(nItem).type.fullname());
 			break;
 
 		case COLUMN_ORIENTATION:
@@ -5081,8 +5085,8 @@ static int GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_
 	switch (sort_subitem)
 	{
 	case COLUMN_GAMES:
-		return core_stricmp(ModifyThe(driver_list::driver(index1).description),
-			ModifyThe(driver_list::driver(index2).description));
+		return core_stricmp(ModifyThe(driver_list::driver(index1).type.fullname()),
+			ModifyThe(driver_list::driver(index2).type.fullname()));
 
 	case COLUMN_ORIENTATION:
 		nTemp1 = DriverIsVertical(index1) ? 1 : 0;
@@ -5927,7 +5931,7 @@ static void UpdateMenu(HMENU hMenu)
 
 	if (have_selection)
 	{
-		t_description = ui_wstring_from_utf8(ConvertAmpersandString(ModifyThe(driver_list::driver(nGame).description)));
+		t_description = ui_wstring_from_utf8(ConvertAmpersandString(ModifyThe(driver_list::driver(nGame).type.fullname())));
 		if( !t_description )
 			return;
 

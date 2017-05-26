@@ -11,11 +11,11 @@
 #include "screen.h"
 
 
-const device_type INDER_VIDEO = device_creator<inder_vid_device>;
+DEFINE_DEVICE_TYPE(INDER_VIDEO, inder_vid_device, "indervd", "Inder / Dinamic TMS Video")
 
 
 inder_vid_device::inder_vid_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, INDER_VIDEO, "Inder / Dinamic TMS Video", tag, owner, clock, "indervd", __FILE__),
+	: device_t(mconfig, INDER_VIDEO, tag, owner, clock),
 /*  device_video_interface(mconfig, *this, false), */
 		m_vram(*this, "vram"),
 		m_palette(*this, "palette"),
@@ -88,7 +88,7 @@ static ADDRESS_MAP_START( ramdac_map, AS_0, 8, inder_vid_device )
 	AM_RANGE(0x000, 0x3ff) AM_DEVREADWRITE("ramdac",ramdac_device,ramdac_pal_r,ramdac_rgb888_w)
 ADDRESS_MAP_END
 
-static MACHINE_CONFIG_FRAGMENT( inder_vid )
+static MACHINE_CONFIG_START( inder_vid )
 	MCFG_CPU_ADD("tms", TMS34010, XTAL_40MHz)
 	MCFG_CPU_PROGRAM_MAP(megaphx_tms_map)
 	MCFG_TMS340X0_HALT_ON_RESET(true) /* halt on reset */
