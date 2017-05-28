@@ -2377,49 +2377,37 @@ static bool get_softlist_info(HWND wnd, device_image_interface *img)
 
 static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 {
-	std::string filter;
-	char filename[MAX_PATH];
-	const char *initial_dir;
-	BOOL result = 0;
-	util::option_resolution *create_args = NULL;
-
-	// get the file
-	if (image->exists())
+	// path name
+	std::string initial_dir = std::string(software_dir);
+	// must be specified, must have a drive letter, must exist
+	if (initial_dir.empty() || (initial_dir.find(":")==std::string::npos) || (!osd::directory::open(initial_dir.c_str())))
 	{
-		const char *imgname;
-		imgname = image->basename();
-		snprintf(filename, ARRAY_LENGTH(filename), "%s", imgname);
+		// NOTE: the working directory can come from the .cfg file. If it's wrong delete the cfg.
+		initial_dir = image->working_directory().c_str();
+		// make sure this exists too
+		if (!osd::directory::open(initial_dir.c_str()))
+			// last fallback is to mame root
+			osd_get_full_path(initial_dir, ".");
 	}
+
+	// remove any trailing backslash
+	if (initial_dir.length() == initial_dir.find_last_of("\\"))
+		initial_dir.erase(initial_dir.length()-1);
+
+	// file name
+	char filename[MAX_PATH];
+	if (image->exists())
+		strcpy(filename, image->basename());
 	else
 		filename[0] = '\0';
 
-	// get the working directory, but if it is ".", then use the one specified in swpath
-	char *working = 0;
-	std::string dst;
-	osd_get_full_path(dst,"."); // turn local directory into full path
-	initial_dir = image->working_directory().c_str(); // get working directory from diimage.cpp
-	// if . use swpath
-	if (strcmp(dst.c_str(), initial_dir) == 0)  // same?
-		initial_dir = software_dir;
-
-	// remove any trailing backslash
-	working = core_strdup(initial_dir);
-	int temp = strlen(working) - 1;
-	if (temp > 2)
-		if (working[temp] == '\\')
-		{
-			working[temp] = '\0';
-			initial_dir = working;
-		}
-
-// NOTE: the working directory can come from the .cfg file. If it's wrong delete the cfg.
-//printf("%s = %s = %s = %s\n",dst,working,initial_dir,software_dir);
-
 	// build a normal filter
+	std::string filter;
 	build_generic_filter(image, is_save, filter);
 
 	// display the dialog
-	result = win_file_dialog(image->device().machine(), wnd, is_save ? WIN_FILE_DIALOG_SAVE : WIN_FILE_DIALOG_OPEN, filter.c_str(), initial_dir, filename);
+	util::option_resolution *create_args = NULL;
+	bool result = win_file_dialog(image->device().machine(), wnd, is_save ? WIN_FILE_DIALOG_SAVE : WIN_FILE_DIALOG_OPEN, filter.c_str(), initial_dir.c_str(), filename);
 	if (result)
 	{
 		// mount the image
@@ -3455,13 +3443,14 @@ int win_create_menu(running_machine &machine, HMENU *menus)
 
 	// Get the path for loose software from <gamename>.ini
 	// if this is invalid, then windows chooses whatever directory it used last.
-	const char* t = machine.options().emu_options::sw_path();
+	char rompath[400];
+	strcpy(rompath, machine.options().emu_options::media_path());
 	// This pulls out the first path from a multipath field
-	const char* t1 = strtok((char*)t, ";");
+	const char* t1 = strtok(rompath, ";");
 	if (t1)
 		software_dir = t1; // the first path of many
 	else
-		software_dir = t; // the only path
+		software_dir = rompath; // the only path
 
 	HMODULE module = win_resource_module();
 	HMENU menu_bar = LoadMenu(module, MAKEINTRESOURCE(IDR_RUNTIME_MENU));
