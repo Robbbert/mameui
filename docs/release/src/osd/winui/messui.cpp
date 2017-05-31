@@ -159,6 +159,7 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem);
 static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
 static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
 static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
+static BOOL DevView_Unmount(HWND hwndDevView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
 static void DevView_SetSelectedSoftware(HWND hwndDevView, int nDriverIndex, const machine_config *config, const device_image_interface *dev, LPCTSTR pszFilename);
 static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex, const machine_config *config, const device_image_interface *dev, LPTSTR pszBuffer, UINT nBufferLength);
 
@@ -539,104 +540,39 @@ BOOL MessApproveImageList(HWND hParent, int drvindex)
 
 
 
-// this is a wrapper call to wrap the idiosycracies of SetSelectedSoftware()
-static void InternalSetSelectedSoftware(int drvindex, const machine_config *config, const device_image_interface *device, const char *pszSoftware)
-{
-	if (!pszSoftware)
-		pszSoftware = "";
-
-	const char *s;
-	std::string opt_name = device->instance_name();
-	windows_options o;
-
-	load_options(o, OPTIONS_GAME, drvindex);
-	s = o.value(opt_name.c_str());
-	// only call SetSelectedSoftware() if this value is different
-	if (strcmp(s, pszSoftware)!=0)
-	{
-		SetSelectedSoftware(drvindex, config, device, pszSoftware);
-	}
-}
-
-
-
-static int is_null_or_empty(const char *s)
-{
-	return (s == NULL) || (s[0] == 0);    // was '\0');
-}
-
-
-
-// Places the specified image in the specified slot; nID = -1 means don't matter
+// Places the specified image in the specified slot - MUST be a valid filename, not blank
 static void MessSpecifyImage(int drvindex, const device_image_interface *device, LPCSTR pszFilename)
 {
-	const char *s, *file_extension;
-	windows_options o;
-	load_options(o, OPTIONS_GAME, drvindex);
+	const char *file_extension;
+	std::string opt_name;
+	device_image_interface* img = 0;
 
 	if (LOG_SOFTWARE)
 		dprintf("MessSpecifyImage(): device=%p pszFilename='%s'\n", device, pszFilename);
 
-	// see if the software is already loaded (why?)
-	if (device == NULL)
+	// identify the file extension
+	file_extension = strrchr(pszFilename, '.'); // find last period
+	file_extension = file_extension ? file_extension + 1 : NULL; // if found bump pointer to first letter of the extension; if not found return NULL
+
+	if (file_extension)
 	{
 		for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 		{
-			std::string opt_name = dev.instance_name();
-			s = o.value(opt_name.c_str());
-			if (s && (core_stricmp(s, pszFilename)==0))
+			if (dev.uses_file_extension(file_extension))
 			{
-				device = &dev;
+				opt_name = dev.instance_name();
+				img = &dev;
 				break;
 			}
 		}
 	}
 
-
-	// still not found?  find an empty slot for which the device uses the
-	// same file extension
-	if (device == NULL)
-	{
-		// identify the file extension
-		file_extension = strrchr(pszFilename, '.');
-		file_extension = file_extension ? file_extension + 1 : NULL;
-
-		if (file_extension)
-		{
-			for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
-			{
-				std::string opt_name = dev.instance_name();
-				s = o.value(opt_name.c_str());
-				if (is_null_or_empty(s) && dev.uses_file_extension(file_extension))
-				{
-					device = &dev;
-					break;
-				}
-			}
-		}
-	}
-	// no choice but to replace the existing cart
-	if (device == NULL)
-	{
-		if (file_extension)
-		{
-			for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
-			{
-				std::string opt_name = dev.instance_name();
-				s = o.value(opt_name.c_str());
-				if (!is_null_or_empty(s) && dev.uses_file_extension(file_extension))
-				{
-					device = &dev;
-					break;
-				}
-			}
-		}
-	}
-
-	if (device)
+	if (img)
 	{
 		// place the image
-		InternalSetSelectedSoftware(drvindex, s_config->mconfig, device, pszFilename);
+		SetSelectedSoftware(drvindex, img, pszFilename);
+		strcpy(g_szSelectedSoftware, pszFilename);
+		strcpy(g_szSelectedDevice, opt_name.c_str());
 	}
 	else
 	{
@@ -647,20 +583,27 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *device,
 }
 
 
-
+// This is pointless because clicking on a new item overwrites the old one anyway
 static void MessRemoveImage(int drvindex, const char *pszFilename)
 {
+#if 0
 	const char *s;
 	windows_options o;
+	load_options(o, OPTIONS_GAME, drvindex);
+	device_image_interface* img = 0;
 
 	for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 	{
+		// search through all the slots looking for a matching software name and unload it
 		std::string opt_name = dev.instance_name();
-		load_options(o, OPTIONS_GAME, drvindex);
 		s = o.value(opt_name.c_str());
-		if ((s) && !strcmp(pszFilename, s))
-			MessSpecifyImage(drvindex, &dev, NULL);
+		if (s && (strcmp(pszFilename, s)==0))
+		{
+			img = &dev;
+			SetSelectedSoftware(drvindex, img, NULL);
+		}
 	}
+#endif
 }
 
 
@@ -749,7 +692,8 @@ void InitMessPicker(void)
 			DevView_GetCreateFileName,
 			DevView_SetSelectedSoftware,
 			DevView_GetSelectedSoftware,
-			DevView_GetOpenItemName
+			DevView_GetOpenItemName,
+			DevView_Unmount
 		};
 		DevView_SetCallbacks(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW), &s_devViewCallbacks);
 	}
@@ -965,7 +909,7 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 		utf8_filename = ui_utf8_from_wstring(filename);
 		if( !utf8_filename )
 			return;
-		// TODO - this should go against InternalSetSelectedSoftware()
+
 		SoftwarePicker_AddFile(GetDlgItem(GetMainWindow(), IDC_SWLIST), utf8_filename, 0);
 		free(utf8_filename);
 	}
@@ -976,6 +920,18 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 static void MessOpenOtherSoftware(const device_image_interface *dev)
 {
 	MessSetupDevice(GetOpenFileName, dev);
+}
+
+
+
+static BOOL DevView_Unmount(HWND hwndDevView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength)
+{
+	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
+	int drvindex = Picker_GetSelectedItem(hwndList);
+
+	SetSelectedSoftware(drvindex, dev, "");
+
+	return true;
 }
 
 
@@ -999,11 +955,12 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 	mess_image_type imagetypes[256];
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	int drvindex = Picker_GetSelectedItem(hwndList);
-	const char *s;
 	std::string as, dst, opt_name = dev->instance_name();
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex);
-	s = o.value(opt_name.c_str());
+	auto iter = o.image_options().find(opt_name.c_str());
+	std::string temp = std::move(iter->second);
+	const char *s = temp.c_str();
 
 	/* Get the path to the currently mounted image */
 	util::zippath_parent(as, s);
@@ -1078,9 +1035,15 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 	SetupImageTypes(config, imagetypes, ARRAY_LENGTH(imagetypes), TRUE, dev);
 	t_s = ui_wstring_from_utf8(dst.c_str());
 	bResult = CommonFileImageDialog(t_s, GetOpenFileName, pszFilename, config, imagetypes);
+	free(t_s);
 	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
 
-	free(t_s);
+	if (bResult)
+	{
+		char t2[nFilenameLength];
+		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
+		SetSelectedSoftware(drvindex, dev, t2);
+	}
 
 	return bResult;
 }
@@ -1161,30 +1124,34 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 	SetupImageTypes(config, imagetypes, ARRAY_LENGTH(imagetypes), TRUE, dev);
 	t_s = ui_wstring_from_utf8(dst.c_str());
 	bResult = CommonFileImageDialog(t_s, GetOpenFileName, pszFilename, config, imagetypes);
+	free(t_s);
 	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
 
-	// This crappy code is typical of what you get with strings in c++
-	// All we want to do is get the Item name out of the full path
-	char t2[nFilenameLength];
-	wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
-	std::string t3 = t2; // then convert to a c++ string so we can manipulate it
-	t1 = t3.find(".zip"); // get rid of zip name and anything after
-	if (t1) t3[t1] = '\0';
-	t1 = t3.find(".7z"); // get rid of 7zip name and anything after
-	if (t1) t3[t1] = '\0';
-//	t1 = t3.find_last_of("\\");   // we can force the swlist name in, if needed
-//	t3[t1] = ':';
-	t1 = t3.find_last_of("\\"); // get rid of path; we only want the item name
-	t3.erase(0, t1+1);
+	if (bResult)
+	{
+		// This crappy code is typical of what you get with strings in c++
+		// All we want to do is get the Item name out of the full path
+		char t2[nFilenameLength];
+		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
+		std::string t3 = t2; // then convert to a c++ string so we can manipulate it
+		t1 = t3.find(".zip"); // get rid of zip name and anything after
+		if (t1) t3[t1] = '\0';
+		t1 = t3.find(".7z"); // get rid of 7zip name and anything after
+		if (t1) t3[t1] = '\0';
+		t1 = t3.find_last_of("\\");   // put the swlist name in
+		t3[t1] = ':';
+		t1 = t3.find_last_of("\\"); // get rid of path; we only want the item name
+		t3.erase(0, t1+1);
 
-	// set up editbox display text
-	mbstowcs(pszFilename, t3.c_str(), nFilenameLength-1); // convert it back to a wide string
+		// set up editbox display text
+		mbstowcs(pszFilename, t3.c_str(), nFilenameLength-1); // convert it back to a wide string
 
-	// set up inifile text to signify to MAME that a SW ITEM is to be used
-	strcpy(g_szSelectedSoftware, t3.c_str()); // store to global item name
-	strcpy(g_szSelectedDevice, opt_name.c_str()); // get media-device name (brief_instance_name is ok too)
+		// set up inifile text to signify to MAME that a SW ITEM is to be used
+		SetSelectedSoftware(drvindex, dev, t3.c_str());
+		strcpy(g_szSelectedSoftware, t3.c_str()); // store to global item name
+		strcpy(g_szSelectedDevice, opt_name.c_str()); // get media-device name (brief_instance_name is ok too)
+	}
 
-	free(t_s);
 	return bResult;
 }
 
@@ -1275,9 +1242,15 @@ static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *co
 
 	SetupImageTypes(config, imagetypes, ARRAY_LENGTH(imagetypes), TRUE, dev);
 	bResult = CommonFileImageDialog(t_s, GetSaveFileName, pszFilename, config, imagetypes);
+	free(t_s);
 	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
 
-	free(t_s);
+	if (bResult)
+	{
+		char t2[nFilenameLength];
+		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
+		SetSelectedSoftware(drvindex, dev, t2);
+	}
 
 	return bResult;
 }
@@ -1300,24 +1273,25 @@ static void DevView_SetSelectedSoftware(HWND hwndDevView, int drvindex,
 static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex,
 	const machine_config *config, const device_image_interface *dev, LPTSTR pszBuffer, UINT nBufferLength)
 {
-	LPCTSTR t_buffer = NULL;
-	TCHAR* t_s;
-	LPCSTR s;
-	std::string opt_name = dev->instance_name();
+	// can't get loaded image from dev->basename because the machine isn't running.
 	windows_options o;
-
 	load_options(o, OPTIONS_GAME, nDriverIndex);
-	s = o.value(opt_name.c_str());
+	auto iter = o.image_options().find(dev->instance_name().c_str());
+	std::string temp = std::move(iter->second);
 
-	t_s = ui_wstring_from_utf8(s);
-	if( !t_s )
-		return t_buffer;
+	if (!temp.empty())
+	{
+		TCHAR* t_s = ui_wstring_from_utf8(temp.c_str());
+		if( t_s )
+		{
+			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_s);
+			free(t_s);
+			LPCTSTR t_buffer = pszBuffer;
+			return t_buffer;
+		}
+	}
 
-	_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_s);
-	free(t_s);
-	t_buffer = pszBuffer;
-
-	return t_buffer;
+	return ui_wstring_from_utf8(""); // nothing loaded or error occurred
 }
 
 

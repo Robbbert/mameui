@@ -195,6 +195,7 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 	SIZE sz;
 	LONG_PTR l = 0;
 	pDevViewInfo = GetDevViewInfo(hwndDevView);
+	std::string instance;
 
 	// clear out
 	DevView_Clear(hwndDevView);
@@ -205,17 +206,19 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 	// count total amount of devices
 	nDevCount = 0;
 
+	// compiler says &dev is unused
 	for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 		nDevCount++;
 
 	if (nDevCount > 0)
 	{
-		// get the names of all of the devices
+		// get the names of all of the media-slots so we can then work out how much space is needed to display them
 		ppszDevices = (LPTSTR *) alloca(nDevCount * sizeof(*ppszDevices));
 		i = 0;
 		for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 		{
-			t_s = ui_wstring_from_utf8(dev.device().name());
+			instance = string_format("%s (%s)", dev.instance_name(), dev.brief_instance_name());
+			t_s = ui_wstring_from_utf8(instance.c_str());
 			ppszDevices[i] = (TCHAR*)alloca((_tcslen(t_s) + 1) * sizeof(TCHAR));
 			_tcscpy(ppszDevices[i], t_s);
 			free(t_s);
@@ -224,17 +227,14 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 
 		// Calculate the requisite size for the device column
 		pDevViewInfo->nWidth = 0;
-		if (nDevCount > 0)
+		hDc = GetDC(hwndDevView);
+		for (i = 0; i < nDevCount; i++)
 		{
-			hDc = GetDC(hwndDevView);
-			for (i = 0; i < nDevCount; i++)
-			{
-				GetTextExtentPoint32(hDc, ppszDevices[i], _tcslen(ppszDevices[i]), &sz);
-				if (sz.cx > pDevViewInfo->nWidth)
-					pDevViewInfo->nWidth = sz.cx;
-			}
-			ReleaseDC(hwndDevView, hDc);
+			GetTextExtentPoint32(hDc, ppszDevices[i], _tcslen(ppszDevices[i]), &sz);
+			if (sz.cx > pDevViewInfo->nWidth)
+				pDevViewInfo->nWidth = sz.cx;
 		}
+		ReleaseDC(hwndDevView, hDc);
 
 		pEnt = (struct DevViewEntry *) malloc(sizeof(struct DevViewEntry) * (nDevCount + 1));
 		if (!pEnt)
@@ -244,26 +244,27 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 
 		y = DEVVIEW_PADDING;
 		nHeight = DEVVIEW_SPACING;
-		DevView_GetColumns(hwndDevView, &nStaticPos, &nStaticWidth,
-			&nEditPos, &nEditWidth, &nButtonPos, &nButtonWidth);
+		DevView_GetColumns(hwndDevView, &nStaticPos, &nStaticWidth, &nEditPos, &nEditWidth, &nButtonPos, &nButtonWidth);
 
-		i = 0;
+		// Now actually display the media-slot names, and show the empty boxes and the browse button
 		for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 		{
 			pEnt->dev = &dev;
 
-			pEnt->hwndStatic = win_create_window_ex_utf8(0, "STATIC", dev.device().name(),
+			instance = string_format("%s (%s)", dev.instance_name(), dev.brief_instance_name()); // get name of the slot (long and short)
+			std::transform(instance.begin(), instance.begin()+1, instance.begin(), ::toupper); // turn first char to uppercase
+			pEnt->hwndStatic = win_create_window_ex_utf8(0, "STATIC", instance.c_str(), // display it
 				WS_VISIBLE | WS_CHILD, nStaticPos,
 				y, nStaticWidth, nHeight, hwndDevView, NULL, NULL, NULL);
 			y += nHeight;
 
 			pEnt->hwndEdit = win_create_window_ex_utf8(0, "EDIT", "",
 				WS_VISIBLE | WS_CHILD | WS_BORDER | ES_AUTOHSCROLL, nEditPos,
-				y, nEditWidth, nHeight, hwndDevView, NULL, NULL, NULL);
+				y, nEditWidth, nHeight, hwndDevView, NULL, NULL, NULL); // display blank edit box
 
 			pEnt->hwndBrowseButton = win_create_window_ex_utf8(0, "BUTTON", "...",
 				WS_VISIBLE | WS_CHILD, nButtonPos,
-				y, nButtonWidth, nHeight, hwndDevView, NULL, NULL, NULL);
+				y, nButtonWidth, nHeight, hwndDevView, NULL, NULL, NULL); // display browse button
 
 			if (pEnt->hwndStatic)
 				SendMessage(pEnt->hwndStatic, WM_SETFONT, (WPARAM) pDevViewInfo->hFont, TRUE);
@@ -287,7 +288,7 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 		}
 	}
 
-	DevView_Refresh(hwndDevView);
+	DevView_Refresh(hwndDevView); // show names of already-loaded software
 	return TRUE;
 }
 #ifdef __GNUC__
@@ -320,7 +321,7 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 				{
 					for (device_image_interface &image : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 					{
-						if (b && (std::string(dev.instance_name()) == std::string(image.instance_name())))
+						if (b && (dev.instance_name() == image.instance_name()))
 						{
 							const char *interface = image.image_interface();
 							if (interface != nullptr && part.matches_interface(interface))
@@ -350,8 +351,7 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 	AppendMenu(hMenu, MF_STRING, 3, TEXT("Unmount"));
 
 	GetWindowRect(hwndButton, &r);
-	rc = TrackPopupMenu(hMenu, TPM_TOPALIGN | TPM_NONOTIFY | TPM_RETURNCMD,
-		r.left, r.bottom, 0, hwndDevView, NULL);
+	rc = TrackPopupMenu(hMenu, TPM_TOPALIGN | TPM_NONOTIFY | TPM_RETURNCMD, r.left, r.bottom, 0, hwndDevView, NULL);
 
 	switch(rc)
 	{
@@ -364,8 +364,8 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 				pDevViewInfo->config->mconfig, pEnt->dev, szPath, ARRAY_LENGTH(szPath));
 			break;
 		case 3:
-			memset(szPath, 0, sizeof(szPath));
-			b = TRUE;
+			b = pDevViewInfo->pCallbacks->pfnUnmount(hwndDevView,
+				pDevViewInfo->config->mconfig, pEnt->dev, szPath, ARRAY_LENGTH(szPath));
 			break;
 		case 4:
 			b = pDevViewInfo->pCallbacks->pfnGetOpenItemName(hwndDevView,

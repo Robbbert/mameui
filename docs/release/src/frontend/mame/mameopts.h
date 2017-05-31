@@ -8,10 +8,10 @@
 
 ***************************************************************************/
 
-#pragma once
+#ifndef MAME_FRONTEND_MAMEOPTS_H
+#define MAME_FRONTEND_MAMEOPTS_H
 
-#ifndef __MAMEOPTS_H__
-#define __MAMEOPTS_H__
+#pragma once
 
 #include "emuopts.h"
 
@@ -45,7 +45,7 @@ enum
 //**************************************************************************
 
 // forward references
-struct game_driver;
+class game_driver;
 class software_part;
 
 class mame_options
@@ -76,11 +76,13 @@ private:
 
 	// INI parsing helper
 	static bool parse_one_ini(emu_options &options, const char *basename, int priority, std::string *error_string = nullptr);
-	static bool parse_org_ini(emu_options &options, const char *basename, int priority, std::string *error_string = nullptr); // MESSUI
 	static bool parse_parent_ini(emu_options &options, const char *basename, int priority, std::string *error_string = nullptr); // MESSUI
 
 	// softlist handling
 	static std::map<std::string, std::string> evaluate_initial_softlist_options(emu_options &options);
+
+	// special function to fish hashpath out of INI files - needed for softlist processing
+	static void populate_hashpath_from_ini_files(emu_options &options);
 
 	// represents an "invalid" value (an empty string is valid so we can't use that; what I
 	// really want to return is std::optional<std::string> but C++17 isn't here yet)
@@ -90,4 +92,4 @@ private:
 	static int m_device_options;
 };
 
-#endif  /* __MAMEOPTS_H__ */
+#endif  // MAME_FRONTEND_MAMEOPTS_H

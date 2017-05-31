@@ -366,14 +366,14 @@ BOOL GameFiltered(int nGame, DWORD dwMask)
 
 	if (strlen(GetSearchText()) && _stricmp(GetSearchText(), SEARCH_PROMPT))
 	{
-		if (MyStrStrI(driver_list::driver(nGame).description,GetSearchText()) == NULL &&
+		if (MyStrStrI(driver_list::driver(nGame).type.fullname(),GetSearchText()) == NULL &&
 			MyStrStrI(driver_list::driver(nGame).name,GetSearchText()) == NULL)
 				return TRUE;
 	}
 	/*Filter Text is already global*/
-	if (MyStrStrI(driver_list::driver(nGame).description,GetFilterText()) == NULL &&
+	if (MyStrStrI(driver_list::driver(nGame).type.fullname(),GetFilterText()) == NULL &&
 		MyStrStrI(driver_list::driver(nGame).name,GetFilterText()) == NULL &&
-		MyStrStrI(driver_list::driver(nGame).source_file,GetFilterText()) == NULL &&
+		MyStrStrI(driver_list::driver(nGame).type.source(),GetFilterText()) == NULL &&
 		MyStrStrI(driver_list::driver(nGame).manufacturer,GetFilterText()) == NULL)
 	{
 		return TRUE;

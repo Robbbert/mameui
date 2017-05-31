@@ -13,6 +13,7 @@ struct DevViewCallbacks
 	void (*pfnSetSelectedSoftware)(HWND hwndDevView, int nGame, const machine_config *config, const device_image_interface *dev, LPCTSTR pszFilename);
 	LPCTSTR (*pfnGetSelectedSoftware)(HWND hwndDevView, int nGame, const machine_config *config, const device_image_interface *dev, LPTSTR pszBuffer, UINT nBufferLength);
 	BOOL (*pfnGetOpenItemName)(HWND hwndDevView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
+	BOOL (*pfnUnmount)(HWND hwndDevView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
 };
 
 void DevView_SetCallbacks(HWND hwndDevView, const struct DevViewCallbacks *pCallbacks);

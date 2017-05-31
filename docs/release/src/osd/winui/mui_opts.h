@@ -500,7 +500,7 @@ int  GetSLSortColumn(void);
 void SetSLSortReverse(BOOL reverse);
 BOOL GetSLSortReverse(void);
 
-void SetSelectedSoftware(int driver_index, const machine_config *config, const device_image_interface *device, const char *software);
+void SetSelectedSoftware(int driver_index, const device_image_interface *device, const char *software);
 
 void SetCurrentSoftwareTab(const char *shortname);
 const char *GetCurrentSoftwareTab(void);
