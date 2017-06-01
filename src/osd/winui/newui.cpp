@@ -2379,8 +2379,8 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 {
 	// path name
 	std::string initial_dir = std::string(software_dir);
-	// must be specified, must have a drive letter, must exist
-	if (initial_dir.empty() || (initial_dir.find(":")==std::string::npos) || (!osd::directory::open(initial_dir.c_str())))
+	// must be specified, must exist
+	if (initial_dir.empty() || (!osd::directory::open(initial_dir.c_str())))
 	{
 		// NOTE: the working directory can come from the .cfg file. If it's wrong delete the cfg.
 		initial_dir = image->working_directory().c_str();
@@ -2425,10 +2425,6 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 //============================================================
 static void load_item(HWND wnd, device_image_interface *img, bool is_save)
 {
-	std::string filter;
-	char filename[MAX_PATH] = "";
-	const char *initial_dir;
-	BOOL result = 0;
 	std::string opt_name = img->instance_name();
 	std::string as = slmap.find(opt_name)->second;
 
@@ -2439,28 +2435,31 @@ static void load_item(HWND wnd, device_image_interface *img, bool is_save)
 		osd_get_full_path(as, ".");
 	}
 
-	initial_dir = as.c_str();
 	// build a normal filter
+	std::string filter;
 	build_generic_filter(NULL, is_save, filter);
 
 	// display the dialog
-	result = win_file_dialog(img->device().machine(), wnd, WIN_FILE_DIALOG_OPEN, filter.c_str(), initial_dir, filename);
+	char filename[MAX_PATH] = "";
+	bool result = win_file_dialog(img->device().machine(), wnd, WIN_FILE_DIALOG_OPEN, filter.c_str(), as.c_str(), filename);
 
 	if (result)
 	{
 		// Get the Item name out of the full path
-		std::string t3 = filename; // convert to a c++ string so we can manipulate it
-		size_t t1 = t3.find(".zip"); // get rid of zip name and anything after
-		if (t1) t3[t1] = '\0';
-		t1 = t3.find(".7z"); // get rid of 7zip name and anything after
-		if (t1) t3[t1] = '\0';
-		t1 = t3.find_last_of("\\");   // put the swlist name in
-		t3[t1] = ':';
-		t1 = t3.find_last_of("\\"); // get rid of path; we only want the item name
-		t3.erase(0, t1+1);
+		std::string buf = filename; // convert to a c++ string so we can manipulate it
+		size_t t1 = buf.find(".zip"); // get rid of zip name and anything after
+		if (t1 != std::string::npos)
+			buf.erase(t1);
+		t1 = buf.find(".7z"); // get rid of 7zip name and anything after
+		if (t1 != std::string::npos)
+			buf.erase(t1);
+		t1 = buf.find_last_of("\\");   // put the swlist name in
+		buf[t1] = ':';
+		t1 = buf.find_last_of("\\"); // get rid of path; we only want the item name
+		buf.erase(0, t1+1);
 
 		// load software
-		(image_error_t)img->load_software( t3.c_str());
+		img->load_software( buf.c_str());
 	}
 }
 
@@ -3444,7 +3443,7 @@ int win_create_menu(running_machine &machine, HMENU *menus)
 	// Get the path for loose software from <gamename>.ini
 	// if this is invalid, then windows chooses whatever directory it used last.
 	char rompath[400];
-	strcpy(rompath, machine.options().emu_options::media_path());
+	strcpy(rompath, machine.options().emu_options::sw_path());
 	// This pulls out the first path from a multipath field
 	const char* t1 = strtok(rompath, ";");
 	if (t1)

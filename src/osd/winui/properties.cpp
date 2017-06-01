@@ -3020,6 +3020,48 @@ static const char *messram_string(char *buffer, UINT32 ram)
 	return buffer;
 }
 
+//-------------------------------------------------
+//  parse_string - convert a ram string to an
+//  integer value
+//-------------------------------------------------
+
+static uint32_t parse_string(const char *s)
+{
+	static const struct
+	{
+		const char *suffix;
+		unsigned multiple;
+	} s_suffixes[] =
+	{
+		{ "",		1 },
+		{ "k",		1024 },
+		{ "kb",		1024 },
+		{ "kib",	1024 },
+		{ "m",		1024 * 1024 },
+		{ "mb",		1024 * 1024 },
+		{ "mib",	1024 * 1024 }
+	};
+
+	// parse the string
+	unsigned ram = 0;
+	char suffix[8] = { 0, };
+	sscanf(s, "%u%7s", &ram, suffix);
+
+	// perform the lookup
+	auto iter = std::find_if(
+		std::begin(s_suffixes),
+		std::end(s_suffixes),
+		[&suffix](const auto &potential_suffix) { return !core_stricmp(suffix, potential_suffix.suffix); });
+
+	// identify the multiplier (or 0 if not recognized, signalling a parse failure)
+	unsigned multiple = iter != std::end(s_suffixes)
+		? iter->multiple
+		: 0;
+
+	// return the result
+	return ram * multiple;
+}
+
 static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_options *opts, const char *option_name)
 {
 	int res = 0, i = 0, current_index = 0, driver_index;
@@ -3052,7 +3094,7 @@ static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_
 
 		// identify the current amount of RAM
 		this_ram_string = opts->value(OPTION_RAMSIZE);
-		current_ram = (this_ram_string != NULL) ? ramdev->parse_string(this_ram_string) : 0;
+		current_ram = (this_ram_string != NULL) ? parse_string(this_ram_string) : 0;
 		ram = ramdev->default_size();
 		if (current_ram == 0)
 			current_ram = ram;
