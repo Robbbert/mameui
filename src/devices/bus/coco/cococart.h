@@ -29,6 +29,7 @@
 #include "sound/sp0256.h"
 #include "sound/sn76496.h"
 #include "formats/dmk_dsk.h"
+#include "formats/sdf_dsk.h"
 #include "formats/jvc_dsk.h"
 #include "formats/vdk_dsk.h"
 
@@ -55,7 +56,7 @@ typedef delegate<void (uint8_t *)> cococart_base_update_delegate;
 // ======================> cococart_slot_device
 class device_cococart_interface;
 
-class cococart_slot_device : public device_t,
+class cococart_slot_device final : public device_t,
 								public device_slot_interface,
 								public device_image_interface
 {
@@ -120,17 +121,10 @@ public:
 	// cart base
 	uint8_t* get_cart_base();
 	void set_cart_base_update(cococart_base_update_delegate update);
-		
+
 private:
 	// TIMER_POOL: Must be power of two
 	static constexpr int TIMER_POOL = 2;
-
-	enum
-	{
-		TIMER_CART,
-		TIMER_NMI,
-		TIMER_HALT
-	};
 
 	struct coco_cartridge_line
 	{
@@ -192,10 +186,17 @@ public:
 	virtual uint8_t* get_cart_base();
 	void set_cart_base_update(cococart_base_update_delegate update);
 
+	virtual void interface_config_complete() override;
+	virtual void interface_pre_start() override;
+
 protected:
 	device_cococart_interface(const machine_config &mconfig, device_t &device);
 
 	void cart_base_changed(void);
+
+	// accessors for containers
+	cococart_slot_device &owning_slot()		{ assert(m_owning_slot); return *m_owning_slot; }
+	device_cococart_host_interface &host()	{ assert(m_host); return *m_host; }
 
 	// CoCo cartridges can read directly from the address bus.  This is used by a number of
 	// cartridges (e.g. - Orch-90, Multi-Pak interface) for their control registers, independently
@@ -207,9 +208,15 @@ protected:
 
 	// setting line values
 	void set_line_value(cococart_slot_device::line line, cococart_slot_device::line_value value);
+	void set_line_value(cococart_slot_device::line line, bool value) { set_line_value(line, value ? cococart_slot_device::line_value::ASSERT : cococart_slot_device::line_value::CLEAR); }
+
+	typedef cococart_slot_device::line line;
+	typedef cococart_slot_device::line_value line_value;
 
 private:
-	cococart_base_update_delegate m_update;
+	cococart_base_update_delegate    m_update;
+	cococart_slot_device *           m_owning_slot;
+	device_cococart_host_interface * m_host;
 };
 
 
@@ -249,5 +256,6 @@ extern const device_type COCO_PAK;
 extern const device_type COCO_PAK_BANKED;
 extern const device_type COCO_PAK_GMC;
 extern const device_type COCO_T4426;
+extern const device_type DRAGON_JCBSND;
 
 #endif // MAME_BUS_COCO_COCOCART_H
