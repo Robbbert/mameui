@@ -3442,14 +3442,14 @@ int win_create_menu(running_machine &machine, HMENU *menus)
 
 	// Get the path for loose software from <gamename>.ini
 	// if this is invalid, then windows chooses whatever directory it used last.
-	char rompath[400];
-	strcpy(rompath, machine.options().emu_options::sw_path());
+	char buf[400];
+	strcpy(buf, machine.options().emu_options::sw_path());
 	// This pulls out the first path from a multipath field
-	const char* t1 = strtok(rompath, ";");
+	const char* t1 = strtok(buf, ";");
 	if (t1)
 		software_dir = t1; // the first path of many
 	else
-		software_dir = rompath; // the only path
+		software_dir = buf; // the only path
 
 	HMODULE module = win_resource_module();
 	HMENU menu_bar = LoadMenu(module, MAKEINTRESOURCE(IDR_RUNTIME_MENU));

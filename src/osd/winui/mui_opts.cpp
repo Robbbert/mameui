@@ -1384,13 +1384,7 @@ void SetBgDir (const char* path)
 
 const char * GetDatsDir(void)
 {
-	const char* t = settings.value( MUIOPTION_DATS_DIRECTORY);
-	const char* t1 = strtok((char*)t, ";");
-	if (t1)
-		return t1;
-	else
-		return t;
-	//return settings.value( MUIOPTION_DATS_DIRECTORY);
+	return settings.value( MUIOPTION_DATS_DIRECTORY);
 	//return mewui.value(OPTION_HISTORY_PATH);
 }
 
@@ -1398,7 +1392,7 @@ void SetDatsDir(const char *path)
 {
 	std::string error_string;
 	settings.set_value(MUIOPTION_DATS_DIRECTORY, path, OPTION_PRIORITY_CMDLINE,error_string);
-	//mewui.set_value(OPTION_HISTORY_PATH, path, OPTION_PRIORITY_CMDLINE, error_string);
+	mewui.set_value(OPTION_HISTORY_PATH, path, OPTION_PRIORITY_CMDLINE, error_string);
 }
 
 const char* GetFolderDir(void)
