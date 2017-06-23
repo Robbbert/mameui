@@ -1268,15 +1268,17 @@ static void DevView_SetSelectedSoftware(HWND hwndDevView, int drvindex,
 }
 
 
-
+// *config not used
 static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex,
 	const machine_config *config, const device_image_interface *dev, LPTSTR pszBuffer, UINT nBufferLength)
 {
 	// can't get loaded image from dev->basename because the machine isn't running.
+	std::string temp;
 	windows_options o;
 	load_options(o, OPTIONS_GAME, nDriverIndex);
 	auto iter = o.image_options().find(dev->instance_name().c_str());
-	std::string temp = std::move(iter->second);
+	if (iter != o.image_options().end())
+		temp = std::move(iter->second);
 
 	if (!temp.empty())
 	{

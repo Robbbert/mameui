@@ -204,6 +204,8 @@ static char state_filename[MAX_PATH];
 static void add_filter_entry(std::string &dest, const char *description, const char *extensions);
 static const char* software_dir;
 static std::map<std::string,std::string> slmap;
+struct slot_data { std::string slotname; std::string optname; };
+static std::map<int, slot_data> slot_map;
 
 
 //============================================================
@@ -2333,6 +2335,8 @@ static bool get_softlist_info(HWND wnd, device_image_interface *img)
 			{
 				for (device_image_interface &image : image_interface_iterator(window->machine().root_device()))
 				{
+					if (!image.user_loadable())
+						continue;
 					if (!has_software && (opt_name == image.instance_name()))
 					{
 						const char *interface = image.image_interface();
@@ -2671,6 +2675,7 @@ static void prepare_menus(HWND wnd)
 	HMENU menu_bar;
 	HMENU video_menu;
 	HMENU device_menu;
+	HMENU slot_menu;
 	HMENU sub_menu;
 	UINT_PTR new_item;
 	UINT flags_for_exists = 0;
@@ -2790,7 +2795,10 @@ static void prepare_menus(HWND wnd)
 	// then set up the actual devices
 	for (device_image_interface &img : image_interface_iterator(window->machine().root_device()))
 	{
-		new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
+		if (!img.user_loadable())
+			continue;
+
+			new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
 		flags_for_exists = MF_STRING;
 
 		if (!img.exists())
@@ -2851,11 +2859,6 @@ static void prepare_menus(HWND wnd)
 		else
 			filename.assign("---");
 
-		//s = img.exists() ? img.filename() : "[empty slot]";
-
-		// Full name for slot name (too long for a cartslot)
-		//snprintf(buf, ARRAY_LENGTH(buf), "%s: %s", img.device().name(), s);
-
 		// Get instance names instead, like Media View, and mame's File Manager
 		std::string instance = string_format("%s (%s): %s", img.instance_name(), img.brief_instance_name(), filename.c_str());
 		std::transform(instance.begin(), instance.begin()+1, instance.begin(), ::toupper); // turn first char to uppercase
@@ -2864,6 +2867,58 @@ static void prepare_menus(HWND wnd)
 		win_append_menu_utf8(device_menu, MF_POPUP, (UINT_PTR)sub_menu, buf);
 
 		cnt++;
+	}
+
+	// set up slot menu; first remove all existing menu items
+	slot_menu = find_sub_menu(menu_bar, "&Slots\0", FALSE);
+	remove_menu_items(slot_menu);
+	cnt = 3400;
+	// cycle through all slots for this system
+	for (device_slot_interface &slot : slot_interface_iterator(window->machine().root_device()))
+	{
+		if (slot.fixed())
+			continue;
+		// does this slot have any selectable options?
+		if (!slot.has_selectable_options())
+			continue;
+
+		std::string opt_name="0", current="0";
+
+		// name this option
+		const char *slot_option_name = slot.slot_name();
+		if (window->machine().options().slot_options().count(slot_option_name) > 0)
+			current = window->machine().options().slot_options()[slot_option_name].value();
+		else
+		if (slot.default_option())
+			current.assign(slot.default_option());
+
+		const device_slot_option *option = slot.option(current.c_str());
+		if (option)
+			opt_name = option->name();
+
+		sub_menu = CreateMenu();
+		// add the slot
+		win_append_menu_utf8(slot_menu, MF_POPUP, (UINT_PTR)sub_menu, slot.slot_name());
+		// build a list of user-selectable options
+		std::vector<device_slot_option *> option_list;
+		for (auto &option : slot.option_list())
+			if (option.second->selectable())
+				option_list.push_back(option.second.get());
+
+		// add the empty option
+		slot_map[cnt] = slot_data { slot.slot_name(), "" };
+		win_append_menu_utf8(sub_menu, MF_STRING | (opt_name == "0") ? MF_CHECKED : 0, cnt++, "[Empty]");
+
+		// sort them by name
+		std::sort(option_list.begin(), option_list.end(), [](device_slot_option *opt1, device_slot_option *opt2) {return strcmp(opt1->name(), opt2->name()) < 0;});
+
+		// add each option in sorted order
+		for (device_slot_option *opt : option_list)
+		{
+			std::string temp = string_format("%s (%s)", opt->name(), opt->devtype().fullname());
+			slot_map[cnt] = slot_data { slot.slot_name(), opt->name() };
+			win_append_menu_utf8(sub_menu, MF_STRING | (opt->name()==opt_name) ? MF_CHECKED : 0, cnt++, temp.c_str());
+		}
 	}
 }
 
@@ -2879,11 +2934,11 @@ static void set_speed(running_machine &machine, int speed)
 	if (speed != 0)
 	{
 		machine.video().set_speed_factor(speed);
-		machine.options().emu_options::set_value(OPTION_SPEED, speed / 1000, OPTION_PRIORITY_CMDLINE,error_string);
+		machine.options().emu_options::set_value(OPTION_SPEED, speed / 1000, OPTION_PRIORITY_CMDLINE, error_string);
 	}
 
 	machine.video().set_throttled(speed != 0);
-	machine.options().emu_options::set_value(OPTION_THROTTLE, (speed != 0), OPTION_PRIORITY_CMDLINE,error_string);
+	machine.options().emu_options::set_value(OPTION_THROTTLE, (speed != 0), OPTION_PRIORITY_CMDLINE, error_string);
 }
 
 
@@ -2969,7 +3024,7 @@ static void device_command(HWND wnd, device_image_interface *img, int devoption)
 		case DEVOPTION_CLOSE:
 			img->unload();
 			img->device().machine().options().image_options()[img->instance_name()] = "";
-			img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE,error_string);
+			img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE, error_string);
 			break;
 
 		default:
@@ -3256,7 +3311,7 @@ static bool invoke_command(HWND wnd, UINT command)
 
 		case ID_FRAMESKIP_AUTO:
 			window->machine().video().set_frameskip(-1);
-			window->machine().options().emu_options::set_value(OPTION_AUTOFRAMESKIP, 1, OPTION_PRIORITY_CMDLINE,error_string);
+			window->machine().options().emu_options::set_value(OPTION_AUTOFRAMESKIP, 1, OPTION_PRIORITY_CMDLINE, error_string);
 			break;
 
 		case ID_HELP_ABOUT_NEWUI:
@@ -3296,8 +3351,8 @@ static bool invoke_command(HWND wnd, UINT command)
 			{
 				// change frameskip
 				window->machine().video().set_frameskip(command - ID_FRAMESKIP_0);
-				window->machine().options().emu_options::set_value(OPTION_AUTOFRAMESKIP, 0, OPTION_PRIORITY_CMDLINE,error_string);
-				window->machine().options().emu_options::set_value(OPTION_FRAMESKIP, (int)command - ID_FRAMESKIP_0, OPTION_PRIORITY_CMDLINE,error_string);
+				window->machine().options().emu_options::set_value(OPTION_AUTOFRAMESKIP, 0, OPTION_PRIORITY_CMDLINE, error_string);
+				window->machine().options().emu_options::set_value(OPTION_FRAMESKIP, (int)command - ID_FRAMESKIP_0, OPTION_PRIORITY_CMDLINE, error_string);
 			}
 			else
 			if ((command >= ID_DEVICE_0) && (command < ID_DEVICE_0 + (IO_COUNT*DEVOPTION_MAX)))
@@ -3316,6 +3371,12 @@ static bool invoke_command(HWND wnd, UINT command)
 				// render views
 				window->m_target->set_view(command - ID_VIDEO_VIEW_0);
 				window->update(); // actually change window size
+			}
+			else
+			if ((command >= 3400) && (command < 4000))
+			{
+				window->machine().options().emu_options::set_value(slot_map[command].slotname.c_str(), slot_map[command].optname.c_str(), OPTION_PRIORITY_CMDLINE, error_string);
+				window->machine().schedule_hard_reset();
 			}
 			else
 				// bogus command

@@ -285,6 +285,10 @@ BEGIN
     BEGIN
         MENUITEM SEPARATOR
     END
+    POPUP "&Slots"
+    BEGIN
+        MENUITEM SEPARATOR
+    END
     POPUP "&Help"
     BEGIN
         MENUITEM "About This System...",        ID_HELP_ABOUTSYSTEM

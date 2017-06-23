@@ -904,7 +904,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 		if (playopts->aviwrite)
 			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE,error_string);
 	}
-printf("Software=%s:%s\n",g_szSelectedDevice, g_szSelectedSoftware);
+	//printf("Software=%s:%s\n",g_szSelectedDevice, g_szSelectedSoftware);
 	if (g_szSelectedSoftware[0] && g_szSelectedDevice[0])
 	{
 		global_opts.set_value(g_szSelectedDevice, g_szSelectedSoftware, OPTION_PRIORITY_CMDLINE,error_string);

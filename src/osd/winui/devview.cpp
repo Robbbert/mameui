@@ -179,19 +179,17 @@ static LRESULT CALLBACK DevView_EditWndProc(HWND hwndEdit, UINT nMessage, WPARAM
 
 
 
-#ifdef __GNUC__
-#pragma GCC diagnostic ignored "-Wunused-variable"
-#endif
+//#ifdef __GNUC__
+//#pragma GCC diagnostic ignored "-Wunused-variable"
+//#endif
 BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 {
 	struct DevViewInfo *pDevViewInfo;
 	struct DevViewEntry *pEnt;
-	int i = 0;
-	int y = 0, nHeight = 0, nDevCount = 0;
+	int i, y = 0, nHeight = 0, nDevCount = 0;
 	int nStaticPos = 0, nStaticWidth = 0, nEditPos = 0, nEditWidth = 0, nButtonPos = 0, nButtonWidth = 0;
 	HDC hDc;
 	LPTSTR *ppszDevices;
-	LPTSTR t_s;
 	SIZE sz;
 	LONG_PTR l = 0;
 	pDevViewInfo = GetDevViewInfo(hwndDevView);
@@ -204,11 +202,9 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 	pDevViewInfo->config = config;
 
 	// count total amount of devices
-	nDevCount = 0;
-
-	// compiler says &dev is unused
 	for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
-		nDevCount++;
+		if (dev.user_loadable())
+			nDevCount++;
 
 	if (nDevCount > 0)
 	{
@@ -217,8 +213,10 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 		i = 0;
 		for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 		{
+			if (!dev.user_loadable())
+				continue;
 			instance = string_format("%s (%s)", dev.instance_name(), dev.brief_instance_name());
-			t_s = ui_wstring_from_utf8(instance.c_str());
+			LPTSTR t_s = ui_wstring_from_utf8(instance.c_str());
 			ppszDevices[i] = (TCHAR*)alloca((_tcslen(t_s) + 1) * sizeof(TCHAR));
 			_tcscpy(ppszDevices[i], t_s);
 			free(t_s);
@@ -249,6 +247,8 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 		// Now actually display the media-slot names, and show the empty boxes and the browse button
 		for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 		{
+			if (!dev.user_loadable())
+				continue;
 			pEnt->dev = &dev;
 
 			instance = string_format("%s (%s)", dev.instance_name(), dev.brief_instance_name()); // get name of the slot (long and short)
@@ -291,9 +291,9 @@ BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 	DevView_Refresh(hwndDevView); // show names of already-loaded software
 	return TRUE;
 }
-#ifdef __GNUC__
-#pragma GCC diagnostic error "-Wunused-variable"
-#endif
+//#ifdef __GNUC__
+//#pragma GCC diagnostic error "-Wunused-variable"
+//#endif
 
 
 
@@ -312,6 +312,8 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 
 	for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 	{
+		if (!dev.user_loadable())
+			continue;
 		for (software_list_device &swlist : software_list_device_iterator(pDevViewInfo->config->mconfig->root_device()))
 		{
 			for (const software_info &swinfo : swlist.get_info())
@@ -321,6 +323,8 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 				{
 					for (device_image_interface &image : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
 					{
+						if (!dev.user_loadable())
+							continue;
 						if (b && (dev.instance_name() == image.instance_name()))
 						{
 							const char *interface = image.image_interface();
@@ -366,6 +370,7 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 		case 3:
 			b = pDevViewInfo->pCallbacks->pfnUnmount(hwndDevView,
 				pDevViewInfo->config->mconfig, pEnt->dev, szPath, ARRAY_LENGTH(szPath));
+			memset(szPath, 0, sizeof(szPath));
 			break;
 		case 4:
 			b = pDevViewInfo->pCallbacks->pfnGetOpenItemName(hwndDevView,
