@@ -2798,7 +2798,7 @@ static void prepare_menus(HWND wnd)
 		if (!img.user_loadable())
 			continue;
 
-			new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
+		new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
 		flags_for_exists = MF_STRING;
 
 		if (!img.exists())
