@@ -325,7 +325,7 @@ static HWND             InitStatusBar(HWND hParent);
 
 static LRESULT          Statusbar_MenuSelect (HWND hwnd, WPARAM wParam, LPARAM lParam);
 
-static void             UpdateHistory(void);
+static void             UpdateHistory(std::string software);
 
 
 static void RemoveCurrentGameCustomFolder(void);
@@ -904,7 +904,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 		if (playopts->aviwrite)
 			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE,error_string);
 	}
-printf("Software=%s:%s\n",g_szSelectedDevice, g_szSelectedSoftware);
+	//printf("Software=%s:%s\n",g_szSelectedDevice, g_szSelectedSoftware);
 	if (g_szSelectedSoftware[0] && g_szSelectedDevice[0])
 	{
 		global_opts.set_value(g_szSelectedDevice, g_szSelectedSoftware, OPTION_PRIORITY_CMDLINE,error_string);
@@ -1426,7 +1426,8 @@ void UpdateScreenShot(void)
 	}
 
 	// figure out if we have a history or not, to place our other windows properly
-	UpdateHistory();
+	std::string t_software = std::string(g_szSelectedItem);
+	UpdateHistory(t_software);
 
 	// setup the picture area
 
@@ -1734,8 +1735,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	if (oldControl)
 	{
 		char buf[] = MAMEUINAME " has detected an old version of comctl32.dll.\n\n"
-					"Various features are not available without an updated DLL.\n\n"
-					"Would you like to continue without using the new features?\n";
+					"Various features are not available without an updated DLL.\n\n";
 
 		win_message_box_utf8(0, buf, MAMEUINAME " Outdated comctl32.dll Error", MB_OK | MB_ICONWARNING);
 		return false;
@@ -3047,7 +3047,7 @@ static void UpdateStatusBar()
 	}
 }
 
-static void UpdateHistory(void)
+static void UpdateHistory(std::string software)
 {
 	HDC hDC;
 	RECT rect;
@@ -3058,7 +3058,7 @@ static void UpdateHistory(void)
 
 	if (GetSelectedPick() >= 0)
 	{
-		char *histText = GetGameHistory(Picker_GetSelectedItem(hwndList));
+		char *histText = GetGameHistory(Picker_GetSelectedItem(hwndList), software);
 
 		have_history = (histText && histText[0]) ? TRUE : FALSE;
 		win_set_window_text_utf8(GetDlgItem(hMain, IDC_HISTORY), histText);
@@ -3089,7 +3089,6 @@ static void UpdateHistory(void)
 	}
 	else
 		ShowWindow(GetDlgItem(hMain, IDC_HISTORY), SW_HIDE);
-
 }
 
 

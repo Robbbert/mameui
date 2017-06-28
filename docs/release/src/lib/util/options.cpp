@@ -943,7 +943,7 @@ core_options::entry *core_options::get_entry(const char *name) const
 }
 
 // MESSUI
-bool core_options::parse_parent_file(util::core_file &inifile, int priority, int ignore_priority, std::string &error_string)
+bool core_options::parse_parent_file(util::core_file &inifile, int priority, bool ignore_unknown_options, std::string &error_string)
 {
 	// loop over lines in the file
 	char buffer[4096];
@@ -999,13 +999,15 @@ bool core_options::parse_parent_file(util::core_file &inifile, int priority, int
 		auto curentry = m_entrymap.find(optionname);
 		if (curentry == m_entrymap.end())
 		{
-			if (priority >= ignore_priority)
+			if (!ignore_unknown_options)
 				error_string.append(string_format("Warning: unknown option in INI: %s\n", optionname));
 			continue;
 		}
 
 		// set the new data
-		validate_and_set_data(*curentry->second, optiondata, priority, error_string);
+		std::string data = optiondata;
+		trim_spaces_and_quotes(data);
+		validate_and_set_data(*curentry->second, std::move(data), priority, error_string);
 	}
 	return true;
 }

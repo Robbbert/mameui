@@ -580,7 +580,7 @@ void mame_options::parse_standard_inis(emu_options &options, std::string &error_
 	int gparent = (parent != -1) ? driver_list::clone(parent) : -1;
 	// MESSUI: ignore slots and images unless it is the gamename INI
 	if (gparent != -1)
-		parse_parent_ini(options,driver_list::driver(gparent).name, OPTION_PRIORITY_GPARENT_INI, &error_string);
+		parse_one_ini(options,driver_list::driver(gparent).name, OPTION_PRIORITY_GPARENT_INI, &error_string);
 	if (parent != -1)
 		parse_parent_ini(options,driver_list::driver(parent).name, OPTION_PRIORITY_PARENT_INI, &error_string);
 	options.revert(OPTION_PRIORITY_SUBCMD, OPTION_PRIORITY_SUBCMD);

@@ -7,6 +7,6 @@
 #ifndef HISTORY_H
 #define HISTORY_H
 
-char * GetGameHistory(int driver_index);
+char * GetGameHistory(int driver_index, std::string software);
 
 #endif

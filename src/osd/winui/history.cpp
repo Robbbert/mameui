@@ -943,11 +943,11 @@ static int load_driver_scoreinfo(const game_driver *drv, char *buffer, int bufsi
  **************************************************************/
 
 // Load indexes from history.dat if found
-char * GetGameHistory(int driver_index)
+char * GetGameHistory(int driver_index, std::string software)
 {
 	static char dataBuf[2048 * 2048];
 	static char buffer[2048 * 2048];
-	
+
 	memset(&buffer, 0, sizeof(buffer));
 	memset(&dataBuf, 0, sizeof(dataBuf));
 	const char * datsdir = 0;

@@ -889,7 +889,7 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 	std::string dst = GetSWDir();
 	// We only want the first path; throw out the rest
 	size_t i = dst.find(';');
-	if (i > 0) dst.substr(0, i);
+	if (i != std::string::npos) dst.substr(0, i);
 	wchar_t* t_s = ui_wstring_from_utf8(dst.c_str());
 
 	//  begin_resource_tracking();
@@ -951,7 +951,7 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 {
 	BOOL bResult = 0;
 	TCHAR *t_s;
-	int i = 0;
+	size_t i = 0;
 	mess_image_type imagetypes[256];
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	int drvindex = Picker_GetSelectedItem(hwndList);
@@ -1009,7 +1009,7 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 		as = paths;
 		/* We only want the first path; throw out the rest */
 		i = as.find(';');
-		if (i > 0) as.substr(0, i);
+		if (i != std::string::npos) as.substr(0, i);
 		dst = as;
 
 		/* Make sure a folder was specified in the tab, and that it exists */
@@ -1020,7 +1020,7 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 
 			/* We only want the first path; throw out the rest */
 			i = as.find(';');
-			if (i > 0) as.substr(0, i);
+			if (i != std::string::npos) as.substr(0, i);
 			dst = as;
 
 			/* Make sure a folder was specified in the tab, and that it exists */
@@ -1060,7 +1060,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 {
 	BOOL bResult = 0;
 	TCHAR *t_s;
-	int i = 0;
+	size_t i = 0;
 	mess_image_type imagetypes[256];
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	int drvindex = Picker_GetSelectedItem(hwndList);
@@ -1072,8 +1072,8 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 
 	/* Get the path to the currently mounted image, chop off any trailing backslash */
 	util::zippath_parent(as, s);
-	size_t t1 = as.length()-1;
-	if (as[t1] == '\\') as[t1]='\0';
+	i = as.length()-1;
+	if (as[i] == '\\') as[i]='\0';
 	dst = as;
 
 	/* See if an image was loaded, and that the path still exists */
@@ -1084,7 +1084,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 
 		/* We only want the first path; throw out the rest */
 		i = as.find(';');
-		if (i > 0) as.substr(0, i);
+		if (i != std::string::npos) as.substr(0, i);
 
 		// Get the path to suitable software
 		i = 0;
@@ -1129,19 +1129,18 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 
 	if (bResult)
 	{
-		// This crappy code is typical of what you get with strings in c++
-		// All we want to do is get the Item name out of the full path
+		// Get the Item name out of the full path
 		char t2[nFilenameLength];
 		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
 		std::string t3 = t2; // then convert to a c++ string so we can manipulate it
-		t1 = t3.find(".zip"); // get rid of zip name and anything after
-		if (t1) t3[t1] = '\0';
-		t1 = t3.find(".7z"); // get rid of 7zip name and anything after
-		if (t1) t3[t1] = '\0';
-		t1 = t3.find_last_of("\\");   // put the swlist name in
-		t3[t1] = ':';
-		t1 = t3.find_last_of("\\"); // get rid of path; we only want the item name
-		t3.erase(0, t1+1);
+		i = t3.find(".zip"); // get rid of zip name and anything after
+		if (i != std::string::npos) t3.erase(i);
+		i = t3.find(".7z"); // get rid of 7zip name and anything after
+		if (i != std::string::npos) t3.erase(i);
+		i = t3.find_last_of("\\");   // put the swlist name in
+		t3[i] = ':';
+		i = t3.find_last_of("\\"); // get rid of path; we only want the item name
+		t3.erase(0, i+1);
 
 		// set up editbox display text
 		mbstowcs(pszFilename, t3.c_str(), nFilenameLength-1); // convert it back to a wide string
@@ -1167,7 +1166,7 @@ static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *co
 {
 	BOOL bResult;
 	TCHAR *t_s;
-	int i = 0;
+	size_t i = 0;
 	mess_image_type imagetypes[256];
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	int drvindex = Picker_GetSelectedItem(hwndList);
@@ -1216,7 +1215,7 @@ static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *co
 	as = paths;
 	/* We only want the first path; throw out the rest */
 	i = as.find(';');
-	if (i > 0) as.substr(0, i);
+	if (i != std::string::npos) as.substr(0, i);
 	t_s = ui_wstring_from_utf8(as.c_str());
 
 	/* Make sure a folder was specified in the tab, and that it exists */
@@ -1227,7 +1226,7 @@ static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *co
 
 		/* We only want the first path; throw out the rest */
 		i = as.find(';');
-		if (i > 0) as.substr(0, i);
+		if (i != std::string::npos) as.substr(0, i);
 		t_s = ui_wstring_from_utf8(as.c_str());
 
 		/* Make sure a folder was specified in the tab, and that it exists */
@@ -1269,15 +1268,17 @@ static void DevView_SetSelectedSoftware(HWND hwndDevView, int drvindex,
 }
 
 
-
+// *config not used
 static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex,
 	const machine_config *config, const device_image_interface *dev, LPTSTR pszBuffer, UINT nBufferLength)
 {
 	// can't get loaded image from dev->basename because the machine isn't running.
+	std::string temp;
 	windows_options o;
 	load_options(o, OPTIONS_GAME, nDriverIndex);
 	auto iter = o.image_options().find(dev->instance_name().c_str());
-	std::string temp = std::move(iter->second);
+	if (iter != o.image_options().end())
+		temp = std::move(iter->second);
 
 	if (!temp.empty())
 	{
