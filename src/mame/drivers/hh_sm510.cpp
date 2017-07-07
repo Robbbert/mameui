@@ -1,20 +1,15 @@
 // license:BSD-3-Clause
 // copyright-holders:hap, Sean Riddle
-// thanks-to:Igor
+// thanks-to:Igor, ChoccyHobNob, RColtrane
 /***************************************************************************
 
   Sharp SM5xx family handhelds.
 
   TODO:
-  - gnw_mc25 emulation is preliminary
-  - confirm gnw_mc25 romdump
-  - improve svg layout for gnw_jr55, gnw_mw56
-  - svg lcd screen background/foreground (not supported in core),
-    or should it be for external artwork only?
-  - flickering segments, lcd physics? or screen update timing?
-    * ktmnt: "LIMIT" segment when going underwater on level 1
-    * gnw_dj101: cage and clock before you start the game
-    * gnw_mw56: truck boxes while playing
+  - improve LCD segments in SVGs for: gnw_mc25, gnw_eg26, exospace
+  - SVG background/foreground vector graphics where possible. Doesn't apply to eg. the
+    Konami games where MAME's SVG renderer needs to add support for embedded images.
+  - confirm gnw_mc25/gnw_eg26 rom (dumped from Soviet clone, but pretty confident that it's same)
 
 ***************************************************************************/
 
@@ -30,7 +25,7 @@
 #include "gnw_dualv.lh"
 #include "gnw_dualh.lh"
 //#include "hh_sm510_test.lh" // common test-layout - use external artwork
-#include "hh_sm500_test.lh" // "
+//#include "hh_sm500_test.lh" // "
 
 
 class hh_sm510_state : public driver_device
@@ -41,7 +36,8 @@ public:
 		m_maincpu(*this, "maincpu"),
 		m_inp_matrix(*this, "IN.%u", 0),
 		m_speaker(*this, "speaker"),
-		m_inp_lines(0)
+		m_inp_lines(0),
+		m_display_wait(33)
 	{ }
 
 	// devices
@@ -50,10 +46,9 @@ public:
 	optional_device<speaker_sound_device> m_speaker;
 
 	// misc common
-	u16 m_inp_mux;                 // multiplexed inputs mask
-	int m_inp_lines;               // number of input mux columns
-	u8 m_lcd_output_cache[0x100];
-
+	u16 m_inp_mux;                  // multiplexed inputs mask
+	int m_inp_lines;                // number of input mux columns
+	
 	u8 read_inputs(int columns);
 
 	virtual void update_k_line();
@@ -66,6 +61,18 @@ public:
 	virtual DECLARE_WRITE8_MEMBER(piezo_r1_w);
 	virtual DECLARE_WRITE8_MEMBER(piezo_r2_w);
 	virtual DECLARE_WRITE8_MEMBER(piezo_input_w);
+
+	// display common
+	int m_display_wait;             // lcd segment on/off-delay in milliseconds (default 33ms)
+	u8 m_display_x_len;             // lcd number of groups
+	u8 m_display_y_len;             // lcd number of segments
+	u8 m_display_z_len;             // lcd number of commons
+	u32 m_display_state[0x20];      // lcd segment data (max. 5-bit offset)
+	u8 m_display_decay[0x20][0x20]; // (internal use)
+	u8 m_display_cache[0x20][0x20]; // (internal use)
+
+	void set_display_size(u8 x, u8 y, u8 z);
+	TIMER_DEVICE_CALLBACK_MEMBER(display_decay_tick);
 
 protected:
 	virtual void machine_start() override;
@@ -80,12 +87,22 @@ void hh_sm510_state::machine_start()
 	// zerofill
 	m_inp_mux = 0;
 	/* m_inp_lines = 0; */ // not here
-	memset(m_lcd_output_cache, ~0, sizeof(m_lcd_output_cache));
+	m_display_x_len = 0;
+	m_display_y_len = 0;
+	m_display_z_len = 0;
+	memset(m_display_state, 0, sizeof(m_display_state));
+	memset(m_display_decay, 0, sizeof(m_display_decay));
+	memset(m_display_cache, ~0, sizeof(m_display_cache));
 
 	// register for savestates
 	save_item(NAME(m_inp_mux));
 	save_item(NAME(m_inp_lines));
-	/* save_item(NAME(m_lcd_output_cache)); */ // don't save!
+	save_item(NAME(m_display_x_len));
+	save_item(NAME(m_display_y_len));
+	save_item(NAME(m_display_z_len));
+	save_item(NAME(m_display_state));
+	save_item(NAME(m_display_decay));
+	/* save_item(NAME(m_display_cache)); */ // don't save!
 }
 
 void hh_sm510_state::machine_reset()
@@ -101,49 +118,68 @@ void hh_sm510_state::machine_reset()
 ***************************************************************************/
 
 // lcd panel - on lcd handhelds, usually not a generic x/y screen device
+// deflicker here, especially needed for SM500/SM5A with the active shift register
 
-WRITE16_MEMBER(hh_sm510_state::sm510_lcd_segment_w)
+TIMER_DEVICE_CALLBACK_MEMBER(hh_sm510_state::display_decay_tick)
 {
-	for (int seg = 0; seg < 0x10; seg++)
+	u8 z_mask = (1 << m_display_z_len) - 1;
+	u8 zx_len = 1 << (m_display_x_len + m_display_z_len);
+	
+	for (int zx = 0; zx < zx_len; zx++)
 	{
-		int index = offset << 4 | seg;
-		u8 state = data >> seg & 1;
-
-		if (state != m_lcd_output_cache[index])
+		for (int y = 0; y < m_display_y_len; y++)
 		{
-			// output to row.seg.H, where:
-			// row = row a/b/bs/c (0/1/2/3)
-			// seg = seg 1-16 (0-15)
-			// H = H1-H4 (0-3)
-			char buf[0x10];
-			sprintf(buf, "%d.%d.%d", offset >> 2, seg, offset & 3);
-			output().set_value(buf, state);
+			// delay lcd segment on/off state
+			if (m_display_state[zx] >> y & 1)
+			{
+				if (m_display_decay[y][zx] < (2 * m_display_wait - 1))
+					m_display_decay[y][zx]++;
+			}
+			else if (m_display_decay[y][zx] > 0)
+				m_display_decay[y][zx]--;
+			u8 active_state = (m_display_decay[y][zx] < m_display_wait) ? 0 : 1;
 
-			m_lcd_output_cache[index] = state;
+			if (active_state != m_display_cache[y][zx])
+			{
+				// SM510 series: output to x.y.z, where:
+				// x = group a/b/bs/c (0/1/2/3)
+				// y = segment 1-16 (0-15)
+				// z = common H1-H4 (0-3)
+
+				// SM500 series: output to x.y.z, where:
+				// x = O group (0-*)
+				// y = O segment 1-4 (0-3)
+				// z = common H1/H2 (0/1)
+				char buf[0x10];
+				sprintf(buf, "%d.%d.%d", zx >> m_display_z_len, y, zx & z_mask);
+				output().set_value(buf, active_state);
+				
+				m_display_cache[y][zx] = active_state;
+			}
 		}
 	}
 }
 
+void hh_sm510_state::set_display_size(u8 x, u8 y, u8 z)
+{
+	// x = groups(in bits)
+	// y = number of segments per group
+	// z = commons(in bits)
+	m_display_x_len = x;
+	m_display_y_len = y;
+	m_display_z_len = z;
+}
+
+WRITE16_MEMBER(hh_sm510_state::sm510_lcd_segment_w)
+{
+	set_display_size(2, 16, 2);
+	m_display_state[offset] = data;
+}
+
 WRITE8_MEMBER(hh_sm510_state::sm500_lcd_segment_w)
 {
-	for (int seg = 0; seg < 4; seg++)
-	{
-		int index = offset << 2 | seg;
-		u8 state = data >> seg & 1;
-
-		if (state != m_lcd_output_cache[index])
-		{
-			// output to row.seg.H, where:
-			// row = O group (0-*)
-			// seg = O data (0-3)
-			// H = H1/H2 (0/1)
-			char buf[0x10];
-			sprintf(buf, "%d.%d.%d", offset & 0xf, seg, offset >> 4);
-			output().set_value(buf, state);
-
-			m_lcd_output_cache[index] = state;
-		}
-	}
+	set_display_size(4, 4, 1);
+	m_display_state[offset] = data;
 }
 
 
@@ -276,6 +312,8 @@ static MACHINE_CONFIG_START( ktopgun )
 	MCFG_SCREEN_REFRESH_RATE(50)
 	MCFG_SCREEN_SIZE(1611, 1080)
 	MCFG_SCREEN_VISIBLE_AREA(0, 1611-1, 0, 1080-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
@@ -345,6 +383,8 @@ static MACHINE_CONFIG_START( kcontra )
 	MCFG_SCREEN_REFRESH_RATE(50)
 	MCFG_SCREEN_SIZE(1501, 1080)
 	MCFG_SCREEN_VISIBLE_AREA(0, 1501-1, 0, 1080-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
@@ -413,6 +453,8 @@ static MACHINE_CONFIG_START( ktmnt )
 	MCFG_SCREEN_REFRESH_RATE(50)
 	MCFG_SCREEN_SIZE(1380, 1080)
 	MCFG_SCREEN_VISIBLE_AREA(0, 1380-1, 0, 1080-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
@@ -478,6 +520,8 @@ static MACHINE_CONFIG_START( kgradius )
 	MCFG_SCREEN_REFRESH_RATE(50)
 	MCFG_SCREEN_SIZE(1435, 1080)
 	MCFG_SCREEN_VISIBLE_AREA(0, 1435-1, 0, 1080-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
@@ -541,6 +585,8 @@ static MACHINE_CONFIG_START( kloneran )
 	MCFG_SCREEN_REFRESH_RATE(50)
 	MCFG_SCREEN_SIZE(1495, 1080)
 	MCFG_SCREEN_VISIBLE_AREA(0, 1495-1, 0, 1080-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
@@ -561,9 +607,11 @@ MACHINE_CONFIG_END
   MC-25 and EG-26 are the same game, it's assumed that the latter was for
   regions where Nintendo wasn't able to license from Disney.
 
-  In 1984, Elektronika(USSR) released a clone, Nu, Pogodi! This was followed
-  by several other games that were the same under the hood, only differing
-  in graphics.
+  In 1984, Elektronika(USSR) released a clone: Nu, pogodi! This was followed
+  by several other titles that were the same under the hood, only differing
+  in graphics. They also made a slightly modified version, adding a new game
+  mode (by pressing A+B) where the player/CPU roles are reversed. This version
+  is known as Razvedciki kosmosa (export version: Explorers of Space).
 
 ***************************************************************************/
 
@@ -581,25 +629,34 @@ public:
 
 static INPUT_PORTS_START( mc25 )
 	PORT_START("IN.0")
-	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_1) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
-	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_2) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_3) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_4) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
+	PORT_BIT( 0x0f, IP_ACTIVE_HIGH, IPT_UNUSED )
 
 	PORT_START("IN.1")
-	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_Q) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
-	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_W) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_E) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_R) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_JOYSTICKRIGHT_DOWN ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) PORT_16WAY
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_JOYSTICKRIGHT_UP ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) PORT_16WAY
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_JOYSTICKLEFT_DOWN ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) PORT_16WAY
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_JOYSTICKLEFT_UP ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) PORT_16WAY
 
 	PORT_START("IN.2")
-	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_A) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
-	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_S) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) // game b
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_D) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) // game a
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_F) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr)
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SELECT ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) PORT_NAME("Time")
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_START2 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) PORT_NAME("Game B")
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_START1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) PORT_NAME("Game A")
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_SERVICE2 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, input_changed, nullptr) PORT_NAME("Alarm")
 
 	PORT_START("ACL")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, acl_button, nullptr) PORT_NAME("ACL")
+
+	PORT_START("BA") // MCU BA(alpha) pin pulled to GND, only works after power-on
+	PORT_CONFNAME( 0x01, 0x01, "Infinite Lives (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
+INPUT_PORTS_END
+
+static INPUT_PORTS_START( exospace )
+	PORT_INCLUDE( mc25 )
+
+	PORT_MODIFY("BA")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNUSED )
 INPUT_PORTS_END
 
 static MACHINE_CONFIG_START( mc25 )
@@ -609,14 +666,52 @@ static MACHINE_CONFIG_START( mc25 )
 	MCFG_SM500_WRITE_O_CB(WRITE8(hh_sm510_state, sm500_lcd_segment_w))
 	MCFG_SM510_READ_K_CB(READ8(hh_sm510_state, input_r))
 	MCFG_SM510_WRITE_R_CB(WRITE8(hh_sm510_state, piezo_input_w))
+	MCFG_SM510_READ_BA_CB(IOPORT("BA"))
 
 	/* video hardware */
-	MCFG_DEFAULT_LAYOUT(layout_hh_sm500_test)
+	MCFG_SCREEN_SVG_ADD("screen", "svg")
+	MCFG_SCREEN_REFRESH_RATE(50)
+	MCFG_SCREEN_SIZE(1711, 1080)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1711-1, 0, 1080-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
+	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
 	MCFG_SPEAKER_STANDARD_MONO("mono")
 	MCFG_SOUND_ADD("speaker", SPEAKER_SOUND, 0)
 	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "mono", 0.25)
+MACHINE_CONFIG_END
+
+static MACHINE_CONFIG_DERIVED( eg26, mc25 )
+
+	/* video hardware */
+	MCFG_SCREEN_MODIFY("screen")
+	MCFG_SCREEN_SIZE(1694, 1080)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1694-1, 0, 1080-1)
+MACHINE_CONFIG_END
+
+static MACHINE_CONFIG_DERIVED( nupogodi, mc25 )
+
+	/* basic machine hardware */
+	MCFG_CPU_REPLACE("maincpu", KB1013VK12, XTAL_32_768kHz)
+	MCFG_SM500_WRITE_O_CB(WRITE8(hh_sm510_state, sm500_lcd_segment_w))
+	MCFG_SM510_READ_K_CB(READ8(hh_sm510_state, input_r))
+	MCFG_SM510_WRITE_R_CB(WRITE8(hh_sm510_state, piezo_input_w))
+	MCFG_SM510_READ_BA_CB(IOPORT("BA"))
+
+	/* video hardware */
+	MCFG_SCREEN_MODIFY("screen")
+	MCFG_SCREEN_SIZE(1715, 1080)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1715-1, 0, 1080-1)
+MACHINE_CONFIG_END
+
+static MACHINE_CONFIG_DERIVED( exospace, nupogodi )
+
+	/* video hardware */
+	MCFG_SCREEN_MODIFY("screen")
+	MCFG_SCREEN_SIZE(1756, 1080)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1756-1, 0, 1080-1)
 MACHINE_CONFIG_END
 
 
@@ -658,6 +753,11 @@ static INPUT_PORTS_START( dm53 )
 
 	PORT_START("ACL")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, acl_button, nullptr) PORT_NAME("ACL")
+
+	PORT_START("B") // MCU B(beta) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "Infinite Lives (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
 static MACHINE_CONFIG_START( dm53 )
@@ -668,18 +768,20 @@ static MACHINE_CONFIG_START( dm53 )
 	MCFG_SM510_READ_K_CB(READ8(hh_sm510_state, input_r))
 	MCFG_SM510_WRITE_S_CB(WRITE8(hh_sm510_state, input_w))
 	MCFG_SM510_WRITE_R_CB(WRITE8(hh_sm510_state, piezo_r2_w))
+	MCFG_SM510_READ_B_CB(IOPORT("B"))
 
 	/* video hardware */
 	MCFG_SCREEN_SVG_ADD("screen_top", "svg_top")
 	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_SIZE(1920/2, 1238/2)
-	MCFG_SCREEN_VISIBLE_AREA(0, 1920/2-1, 0, 1238/2-1)
+	MCFG_SCREEN_SIZE(1920/2, 1281/2)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1920/2-1, 0, 1281/2-1)
 
 	MCFG_SCREEN_SVG_ADD("screen_bottom", "svg_bottom")
 	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_SIZE(1920/2, 1219/2)
-	MCFG_SCREEN_VISIBLE_AREA(0, 1920/2-1, 0, 1219/2-1)
+	MCFG_SCREEN_SIZE(1920/2, 1236/2)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1920/2-1, 0, 1236/2-1)
 
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_gnw_dualv)
 
 	/* sound hardware */
@@ -731,6 +833,11 @@ static INPUT_PORTS_START( jr55 )
 
 	PORT_START("ACL")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, acl_button, nullptr) PORT_NAME("ACL")
+
+	PORT_START("B") // MCU B(beta) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "Invincibility (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
 static MACHINE_CONFIG_START( jr55 )
@@ -741,18 +848,20 @@ static MACHINE_CONFIG_START( jr55 )
 	MCFG_SM510_READ_K_CB(READ8(hh_sm510_state, input_r))
 	MCFG_SM510_WRITE_S_CB(WRITE8(hh_sm510_state, input_w))
 	MCFG_SM510_WRITE_R_CB(WRITE8(hh_sm510_state, piezo_r1_w))
+	MCFG_SM510_READ_B_CB(IOPORT("B"))
 
 	/* video hardware */
 	MCFG_SCREEN_SVG_ADD("screen_top", "svg_top")
 	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_SIZE(1920/2, 1225/2)
-	MCFG_SCREEN_VISIBLE_AREA(0, 1920/2-1, 0, 1225/2-1)
+	MCFG_SCREEN_SIZE(1920/2, 1229/2)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1920/2-1, 0, 1229/2-1)
 
 	MCFG_SCREEN_SVG_ADD("screen_bottom", "svg_bottom")
 	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_SIZE(1920/2, 1261/2)
-	MCFG_SCREEN_VISIBLE_AREA(0, 1920/2-1, 0, 1261/2-1)
+	MCFG_SCREEN_SIZE(1920/2, 1238/2)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1920/2-1, 0, 1238/2-1)
 
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_gnw_dualv)
 
 	/* sound hardware */
@@ -800,6 +909,16 @@ static INPUT_PORTS_START( mw56 )
 
 	PORT_START("ACL")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, acl_button, nullptr) PORT_NAME("ACL")
+
+	PORT_START("BA") // MCU BA(alpha) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "Increase Score (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
+
+	PORT_START("B") // MCU B(beta) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "Infinite Lives (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
 static MACHINE_CONFIG_START( mw56 )
@@ -810,18 +929,21 @@ static MACHINE_CONFIG_START( mw56 )
 	MCFG_SM510_READ_K_CB(READ8(hh_sm510_state, input_r))
 	MCFG_SM510_WRITE_S_CB(WRITE8(hh_sm510_state, input_w))
 	MCFG_SM510_WRITE_R_CB(WRITE8(hh_sm510_state, piezo_r1_w))
+	MCFG_SM510_READ_BA_CB(IOPORT("BA"))
+	MCFG_SM510_READ_B_CB(IOPORT("B"))
 
 	/* video hardware */
 	MCFG_SCREEN_SVG_ADD("screen_left", "svg_left")
 	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_SIZE(2087/2, 1440/2)
-	MCFG_SCREEN_VISIBLE_AREA(0, 2087/2-1, 0, 1440/2-1)
+	MCFG_SCREEN_SIZE(2258/2, 1440/2)
+	MCFG_SCREEN_VISIBLE_AREA(0, 2258/2-1, 0, 1440/2-1)
 
 	MCFG_SCREEN_SVG_ADD("screen_right", "svg_right")
 	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_SIZE(2079/2, 1440/2)
-	MCFG_SCREEN_VISIBLE_AREA(0, 2079/2-1, 0, 1440/2-1)
+	MCFG_SCREEN_SIZE(2261/2, 1440/2)
+	MCFG_SCREEN_VISIBLE_AREA(0, 2261/2-1, 0, 1440/2-1)
 
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_gnw_dualh)
 
 	/* sound hardware */
@@ -875,6 +997,16 @@ static INPUT_PORTS_START( dj101 )
 
 	PORT_START("ACL")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, acl_button, nullptr) PORT_NAME("ACL")
+
+	PORT_START("BA") // MCU BA(alpha) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "Increase Score (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
+
+	PORT_START("B") // MCU B(beta) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "Invincibility (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
 static MACHINE_CONFIG_START( dj101 )
@@ -885,12 +1017,16 @@ static MACHINE_CONFIG_START( dj101 )
 	MCFG_SM510_READ_K_CB(READ8(hh_sm510_state, input_r))
 	MCFG_SM510_WRITE_S_CB(WRITE8(hh_sm510_state, input_w))
 	MCFG_SM510_WRITE_R_CB(WRITE8(hh_sm510_state, piezo_r1_w))
+	MCFG_SM510_READ_BA_CB(IOPORT("BA"))
+	MCFG_SM510_READ_B_CB(IOPORT("B"))
 
 	/* video hardware */
 	MCFG_SCREEN_SVG_ADD("screen", "svg")
 	MCFG_SCREEN_REFRESH_RATE(50)
 	MCFG_SCREEN_SIZE(1665, 1080)
 	MCFG_SCREEN_VISIBLE_AREA(0, 1665-1, 0, 1080-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
@@ -939,6 +1075,16 @@ static INPUT_PORTS_START( ml102 )
 
 	PORT_START("ACL")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, acl_button, nullptr) PORT_NAME("ACL")
+
+	PORT_START("BA") // MCU BA(alpha) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "Increase Score (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
+
+	PORT_START("B") // MCU B(beta) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "Infinite Lives (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
 static MACHINE_CONFIG_START( ml102 )
@@ -949,12 +1095,16 @@ static MACHINE_CONFIG_START( ml102 )
 	MCFG_SM510_READ_K_CB(READ8(hh_sm510_state, input_r))
 	MCFG_SM510_WRITE_S_CB(WRITE8(hh_sm510_state, input_w))
 	MCFG_SM510_WRITE_R_CB(WRITE8(hh_sm510_state, piezo_r1_w))
+	MCFG_SM510_READ_BA_CB(IOPORT("BA"))
+	MCFG_SM510_READ_B_CB(IOPORT("B"))
 
 	/* video hardware */
 	MCFG_SCREEN_SVG_ADD("screen", "svg")
 	MCFG_SCREEN_REFRESH_RATE(50)
-	MCFG_SCREEN_SIZE(1759, 1080)
-	MCFG_SCREEN_VISIBLE_AREA(0, 1759-1, 0, 1080-1)
+	MCFG_SCREEN_SIZE(1647, 1080)
+	MCFG_SCREEN_VISIBLE_AREA(0, 1647-1, 0, 1080-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
@@ -1025,6 +1175,16 @@ static INPUT_PORTS_START( bx301 )
 
 	PORT_START("ACL")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_sm510_state, acl_button, nullptr) PORT_NAME("ACL")
+
+	PORT_START("BA") // MCU BA(alpha) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "P2 Decrease Health (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
+
+	PORT_START("B") // MCU B(beta) pin pulled to GND
+	PORT_CONFNAME( 0x01, 0x01, "P1 Infinite Health (Cheat)")
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
 static MACHINE_CONFIG_START( bx301 )
@@ -1035,12 +1195,16 @@ static MACHINE_CONFIG_START( bx301 )
 	MCFG_SM510_READ_K_CB(READ8(hh_sm510_state, input_r))
 	MCFG_SM510_WRITE_S_CB(WRITE8(hh_sm510_state, input_w))
 	MCFG_SM510_WRITE_R_CB(WRITE8(hh_sm510_state, piezo_r1_w))
+	MCFG_SM510_READ_BA_CB(IOPORT("BA"))
+	MCFG_SM510_READ_B_CB(IOPORT("B"))
 
 	/* video hardware */
 	MCFG_SCREEN_SVG_ADD("screen", "svg")
 	MCFG_SCREEN_REFRESH_RATE(50)
 	MCFG_SCREEN_SIZE(1920, 529)
 	MCFG_SCREEN_VISIBLE_AREA(0, 1920-1, 0, 529-1)
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_sm510_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_svg)
 
 	/* sound hardware */
@@ -1063,8 +1227,8 @@ ROM_START( ktopgun ) // except for filler/unused bytes, ROM listing in patent US
 	ROM_REGION( 0x1000, "maincpu", 0 )
 	ROM_LOAD( "cms54c_kms598", 0x0000, 0x1000, CRC(50870b35) SHA1(cda1260c2e1c180995eced04b7d7ff51616dcef5) )
 
-	ROM_REGION( 423317, "svg", 0)
-	ROM_LOAD( "ktopgun.svg", 0, 423317, CRC(1e341717) SHA1(74f4ae3fa0e4aacfda76d46753a5a06f115d221f) )
+	ROM_REGION( 426017, "svg", 0)
+	ROM_LOAD( "ktopgun.svg", 0, 426017, CRC(21399091) SHA1(58f6359261d7cffe74cebdf961c95b12ffac3bbc) )
 ROM_END
 
 
@@ -1075,8 +1239,8 @@ ROM_START( kcontra ) // except for filler/unused bytes, ROM listing in patent US
 	ROM_REGION( 0x100, "maincpu:melody", 0 )
 	ROM_LOAD( "kms73b_kms773.melody", 0x000, 0x100, CRC(23d02b99) SHA1(703938e496db0eeacd14fe7605d4b5c39e0a5bc8) )
 
-	ROM_REGION( 710430, "svg", 0)
-	ROM_LOAD( "kcontra.svg", 0, 710430, CRC(66cfc3a2) SHA1(bd38d62bb14321dfec2f99c1cd9346fb5f1fd856) )
+	ROM_REGION( 713736, "svg", 0)
+	ROM_LOAD( "kcontra.svg", 0, 713736, CRC(1b76b219) SHA1(77e458fa2b1aec65f1cb9d517baf70d9fcf8112a) )
 ROM_END
 
 
@@ -1087,8 +1251,8 @@ ROM_START( ktmnt ) // except for filler/unused bytes, ROM listing in patent US51
 	ROM_REGION( 0x100, "maincpu:melody", 0 )
 	ROM_LOAD( "kms73b_kms774.melody", 0x000, 0x100, CRC(8270d626) SHA1(bd91ca1d5cd7e2a62eef05c0033b19dcdbe441ca) )
 
-	ROM_REGION( 607424, "svg", 0)
-	ROM_LOAD( "ktmnt.svg", 0, 607424, CRC(54ce0f2e) SHA1(1cd2d4c3026e8693f234ddfbbbe5f24311e5981d) )
+	ROM_REGION( 610249, "svg", 0)
+	ROM_LOAD( "ktmnt.svg", 0, 610249, CRC(9e1f391b) SHA1(0783e710df79bba3dafe90f4ed61134bc3a3278a) )
 ROM_END
 
 
@@ -1099,8 +1263,8 @@ ROM_START( kgradius )
 	ROM_REGION( 0x100, "maincpu:melody", 0 )
 	ROM_LOAD( "kms73b_kms771.melody", 0x000, 0x100, CRC(4c586b73) SHA1(14c5ab2898013a577f678970a648c374749cc66d) )
 
-	ROM_REGION( 628695, "svg", 0)
-	ROM_LOAD( "kgradius.svg", 0, 628695, CRC(56ac8ee8) SHA1(c47190e7aaebbe84ed1ad55a8e88f5ebb18f939b) )
+	ROM_REGION( 633084, "svg", 0)
+	ROM_LOAD( "kgradius.svg", 0, 633084, CRC(c968f3c5) SHA1(fed6cc92ea3e6cc2119de554d8413499c34ca86d) )
 ROM_END
 
 
@@ -1111,8 +1275,8 @@ ROM_START( kloneran )
 	ROM_REGION( 0x100, "maincpu:melody", 0 )
 	ROM_LOAD( "kms73b_kms781.melody", 0x000, 0x100, CRC(a393de36) SHA1(55089f04833ccb318524ab2b584c4817505f4019) )
 
-	ROM_REGION( 630184, "svg", 0)
-	ROM_LOAD( "kloneran.svg", 0, 630184, CRC(9b254520) SHA1(c9c85df44cc16f59f25df418b2e1aeba9f2f470c) )
+	ROM_REGION( 632841, "svg", 0)
+	ROM_LOAD( "kloneran.svg", 0, 632841, CRC(cf679db7) SHA1(e43e0562bb887b221ab79d9538cb84dd7ffe0120) )
 ROM_END
 
 
@@ -1120,8 +1284,32 @@ ROM_START( gnw_mc25 )
 	ROM_REGION( 0x1000, "maincpu", 0 )
 	ROM_LOAD( "mc-25", 0x0000, 0x0740, BAD_DUMP CRC(cb820c32) SHA1(7e94fc255f32db725d5aa9e196088e490c1a1443) ) // dumped from Soviet clone
 
-	ROM_REGION( 100000, "svg", 0)
-	ROM_LOAD( "gnw_mc25.svg", 0, 100000, NO_DUMP )
+	ROM_REGION( 102453, "svg", 0)
+	ROM_LOAD( "gnw_mc25.svg", 0, 102453, CRC(88cc7c49) SHA1(c000d51d1b99750116b97f9bafc0314ea506366d) )
+ROM_END
+
+ROM_START( gnw_eg26 )
+	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_LOAD( "eg-26", 0x0000, 0x0740, BAD_DUMP CRC(cb820c32) SHA1(7e94fc255f32db725d5aa9e196088e490c1a1443) ) // dumped from Soviet clone
+
+	ROM_REGION( 102848, "svg", 0)
+	ROM_LOAD( "gnw_eg26.svg", 0, 102848, CRC(742c2605) SHA1(984d430ad2ff47ad7a3f9b25b7d3f3d51b10cca5) )
+ROM_END
+
+ROM_START( nupogodi )
+	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_LOAD( "nupogodi.bin", 0x0000, 0x0740, CRC(cb820c32) SHA1(7e94fc255f32db725d5aa9e196088e490c1a1443) )
+
+	ROM_REGION( 202839, "svg", 0)
+	ROM_LOAD( "nupogodi.svg", 0, 202839, CRC(4c8a38ce) SHA1(cdb5cbbef0f71584d89a5acfea73dd21a72d2318) )
+ROM_END
+
+ROM_START( exospace )
+	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_LOAD( "exospace.bin", 0x0000, 0x0740, CRC(553e2b09) SHA1(2b74f8437b881fbb62b61f25435a5bfc66872a9a) )
+
+	ROM_REGION( 66790, "svg", 0)
+	ROM_LOAD( "exospace.svg", 0, 66790, CRC(df31043a) SHA1(2d8caf42894df699e469652e5f448beaebbcc1ae) )
 ROM_END
 
 
@@ -1129,11 +1317,11 @@ ROM_START( gnw_dm53 )
 	ROM_REGION( 0x1000, "maincpu", 0 )
 	ROM_LOAD( "dm-53_cms54c_cms565", 0x0000, 0x1000, CRC(e21fc0f5) SHA1(3b65ccf9f98813319410414e11a3231b787cdee6) )
 
-	ROM_REGION( 124249, "svg_top", 0)
-	ROM_LOAD( "gnw_dm53_top.svg", 0, 124249, CRC(d85ec1cc) SHA1(19828945c09defa3efc47eea8fa6128a0e5e9a2a) )
+	ROM_REGION( 207524, "svg_top", 0)
+	ROM_LOAD( "gnw_dm53_top.svg", 0, 207524, CRC(07a19adb) SHA1(605b73d79639bbe6a2e88e3186d677ad0e0a5a86) )
 
-	ROM_REGION( 108485, "svg_bottom", 0)
-	ROM_LOAD( "gnw_dm53_bottom.svg", 0, 108485, CRC(c5649701) SHA1(b5bd436015927503a8e647a5d02bd9c87acd1e55) )
+	ROM_REGION( 227954, "svg_bottom", 0)
+	ROM_LOAD( "gnw_dm53_bottom.svg", 0, 227954, CRC(906121e9) SHA1(1319226f9259cc179e2336308e1ab279d6b4097e) )
 ROM_END
 
 
@@ -1141,11 +1329,11 @@ ROM_START( gnw_jr55 )
 	ROM_REGION( 0x1000, "maincpu", 0 )
 	ROM_LOAD( "jr-55_cms54c_kms560", 0x0000, 0x1000, CRC(46aed0ae) SHA1(72f75ccbd84aea094148c872fc7cc1683619a18a) )
 
-	ROM_REGION( 207510, "svg_top", 0)
-	ROM_LOAD( "gnw_jr55_top.svg", 0, 207510, CRC(598cc4b1) SHA1(ec485b73b8dcd521c236803d50c80203e0f29330) )
+	ROM_REGION( 264099, "svg_top", 0)
+	ROM_LOAD( "gnw_jr55_top.svg", 0, 264099, CRC(0d2f6d9e) SHA1(9a6b0b453dd66e31c48799f1712fe3ea435331af) )
 
-	ROM_REGION( 200145, "svg_bottom", 0)
-	ROM_LOAD( "gnw_jr55_bottom.svg", 0, 200145, CRC(07285db4) SHA1(49e1fc394750457cab0fb3297b12957af685ac2d) )
+	ROM_REGION( 391063, "svg_bottom", 0)
+	ROM_LOAD( "gnw_jr55_bottom.svg", 0, 391063, CRC(8214db21) SHA1(e7bb53193bdebd4bba69e399b9633c7dd5884d04) )
 ROM_END
 
 
@@ -1153,11 +1341,11 @@ ROM_START( gnw_mw56 )
 	ROM_REGION( 0x1000, "maincpu", 0 )
 	ROM_LOAD( "mw-56", 0x0000, 0x1000, CRC(385e59da) SHA1(2f79281bdf2f2afca2fb5bd7b9a3beeffc9c4eb7) )
 
-	ROM_REGION( 100251, "svg_left", 0)
-	ROM_LOAD( "gnw_mw56_left.svg", 0, 100251, CRC(316b2516) SHA1(41b5a1e9ceb919bc8b0b1dfb0f8f21cda6fee665) )
+	ROM_REGION( 172381, "svg_left", 0)
+	ROM_LOAD( "gnw_mw56_left.svg", 0, 172381, CRC(6000f1c2) SHA1(7395d89d62cc77f59b9ce12c200cd6748f287f9d) )
 
-	ROM_REGION( 85767, "svg_right", 0)
-	ROM_LOAD( "gnw_mw56_right.svg", 0, 85767, CRC(8210e6e0) SHA1(d42d47cea5a5a4d6c979ba7b06b646320a458290) )
+	ROM_REGION( 229866, "svg_right", 0)
+	ROM_LOAD( "gnw_mw56_right.svg", 0, 229866, CRC(7c58f0c2) SHA1(6dd975ecd52ab6fc436b671b6a31007f94628e3d) )
 ROM_END
 
 
@@ -1165,8 +1353,8 @@ ROM_START( gnw_dj101 )
 	ROM_REGION( 0x1000, "maincpu", 0 )
 	ROM_LOAD( "dj-101", 0x0000, 0x1000, CRC(8dcfb5d1) SHA1(e0ef578e9362eb9a3cab631376df3cf55978f2de) )
 
-	ROM_REGION( 277252, "svg", 0)
-	ROM_LOAD( "gnw_dj101.svg", 0, 277252, CRC(d7a3832d) SHA1(59e603d9a3ba503ebbf94574d6544cb5095a0df4) )
+	ROM_REGION( 280871, "svg", 0)
+	ROM_LOAD( "gnw_dj101.svg", 0, 280871, CRC(e75adb36) SHA1(2a9854fabb8efab9e11f1f661a09c2cc30de28af) )
 ROM_END
 
 
@@ -1174,8 +1362,8 @@ ROM_START( gnw_ml102 )
 	ROM_REGION( 0x1000, "maincpu", 0 )
 	ROM_LOAD( "ml-102_cms54c_kms577", 0x0000, 0x1000, CRC(c1128dea) SHA1(8647e36f43a0e37756a3c7b6a3f08d4c8243f1cc) )
 
-	ROM_REGION( 300571, "svg", 0)
-	ROM_LOAD( "gnw_ml102.svg", 0, 300571, CRC(8d8be5a9) SHA1(ee3a761ee956b86c064c83a15e4b833f83c23520) )
+	ROM_REGION( 361742, "svg", 0)
+	ROM_LOAD( "gnw_ml102.svg", 0, 361742, CRC(a9fe2c05) SHA1(ec16081a7444cccd7fa90fda9a94dbcb037c5c67) )
 ROM_END
 
 
@@ -1186,23 +1374,29 @@ ROM_START( gnw_bx301 )
 	ROM_REGION( 0x100, "maincpu:melody", 0 )
 	ROM_LOAD( "bx-301_kms73b_kms744.melody", 0x000, 0x100, CRC(439d943d) SHA1(52880df15ec7513f96482f455ef3d9778aa24750) )
 
-	ROM_REGION( 258514, "svg", 0)
-	ROM_LOAD( "gnw_bx301.svg", 0, 258514, CRC(7b251101) SHA1(002e41374517f1fd8cecd66a2b2338aac736f319) )
+	ROM_REGION( 265213, "svg", 0)
+	ROM_LOAD( "gnw_bx301.svg", 0, 265213, CRC(90514ce3) SHA1(544b6ffbcf04e847fef8723b603f46769a6a09e4) )
 ROM_END
 
 
 
-//    YEAR  NAME       PARENT CMP MACHINE    INPUT      STATE        INIT  COMPANY, FULLNAME, FLAGS
-CONS( 1989, ktopgun,   0,      0, ktopgun,   ktopgun,   ktopgun_state,  0, "Konami", "Top Gun (handheld)", MACHINE_SUPPORTS_SAVE )
-CONS( 1989, kcontra,   0,      0, kcontra,   kcontra,   kcontra_state,  0, "Konami", "Contra (handheld)", MACHINE_SUPPORTS_SAVE )
-CONS( 1989, ktmnt,     0,      0, ktmnt,     ktmnt,     ktmnt_state,    0, "Konami", "Teenage Mutant Ninja Turtles (handheld)", MACHINE_SUPPORTS_SAVE )
-CONS( 1989, kgradius,  0,      0, kgradius,  kgradius,  kgradius_state, 0, "Konami", "Gradius (handheld)", MACHINE_SUPPORTS_SAVE )
-CONS( 1989, kloneran,  0,      0, kloneran,  kloneran,  kloneran_state, 0, "Konami", "Lone Ranger (handheld)", MACHINE_SUPPORTS_SAVE )
+//    YEAR  NAME       PARENT  COMP MACHINE    INPUT      STATE        INIT  COMPANY, FULLNAME, FLAGS
+CONS( 1989, ktopgun,   0,        0, ktopgun,   ktopgun,   ktopgun_state,  0, "Konami", "Top Gun (handheld)", MACHINE_SUPPORTS_SAVE )
+CONS( 1989, kcontra,   0,        0, kcontra,   kcontra,   kcontra_state,  0, "Konami", "Contra (handheld)", MACHINE_SUPPORTS_SAVE )
+CONS( 1989, ktmnt,     0,        0, ktmnt,     ktmnt,     ktmnt_state,    0, "Konami", "Teenage Mutant Ninja Turtles (handheld)", MACHINE_SUPPORTS_SAVE )
+CONS( 1989, kgradius,  0,        0, kgradius,  kgradius,  kgradius_state, 0, "Konami", "Gradius (handheld)", MACHINE_SUPPORTS_SAVE )
+CONS( 1989, kloneran,  0,        0, kloneran,  kloneran,  kloneran_state, 0, "Konami", "Lone Ranger (handheld)", MACHINE_SUPPORTS_SAVE )
 
-CONS( 1981, gnw_mc25,  0,      0, mc25,      mc25,      mc25_state,     0, "Nintendo", "Game & Watch: Mickey Mouse", MACHINE_SUPPORTS_SAVE | MACHINE_NOT_WORKING )
-CONS( 1982, gnw_dm53,  0,      0, dm53,      dm53,      dm53_state,     0, "Nintendo", "Game & Watch: Mickey & Donald", MACHINE_SUPPORTS_SAVE )
-CONS( 1983, gnw_jr55,  0,      0, jr55,      jr55,      jr55_state,     0, "Nintendo", "Game & Watch: Donkey Kong II", MACHINE_SUPPORTS_SAVE )
-CONS( 1983, gnw_mw56,  0,      0, mw56,      mw56,      mw56_state,     0, "Nintendo", "Game & Watch: Mario Bros.", MACHINE_SUPPORTS_SAVE )
-CONS( 1982, gnw_dj101, 0,      0, dj101,     dj101,     dj101_state,    0, "Nintendo", "Game & Watch: Donkey Kong Jr. (new wide screen)", MACHINE_SUPPORTS_SAVE )
-CONS( 1983, gnw_ml102, 0,      0, ml102,     ml102,     ml102_state,    0, "Nintendo", "Game & Watch: Mario's Cement Factory (new wide screen)", MACHINE_SUPPORTS_SAVE )
-CONS( 1984, gnw_bx301, 0,      0, bx301,     bx301,     bx301_state,    0, "Nintendo", "Game & Watch: Boxing", MACHINE_SUPPORTS_SAVE )
+CONS( 1981, gnw_mc25,  0,        0, mc25,      mc25,      mc25_state,     0, "Nintendo", "Game & Watch: Mickey Mouse", MACHINE_SUPPORTS_SAVE )
+CONS( 1981, gnw_eg26,  gnw_mc25, 0, eg26,      mc25,      mc25_state,     0, "Nintendo", "Game & Watch: Egg", MACHINE_SUPPORTS_SAVE )
+CONS( 1984, nupogodi,  gnw_mc25, 0, nupogodi,  mc25,      mc25_state,     0, "Elektronika", "Nu, pogodi!", MACHINE_SUPPORTS_SAVE )
+CONS( 1989, exospace,  gnw_mc25, 0, exospace,  exospace,  mc25_state,     0, "Elektronika", "Explorers of Space", MACHINE_SUPPORTS_SAVE )
+
+CONS( 1982, gnw_dm53,  0,        0, dm53,      dm53,      dm53_state,     0, "Nintendo", "Game & Watch: Mickey & Donald", MACHINE_SUPPORTS_SAVE )
+CONS( 1983, gnw_jr55,  0,        0, jr55,      jr55,      jr55_state,     0, "Nintendo", "Game & Watch: Donkey Kong II", MACHINE_SUPPORTS_SAVE )
+CONS( 1983, gnw_mw56,  0,        0, mw56,      mw56,      mw56_state,     0, "Nintendo", "Game & Watch: Mario Bros.", MACHINE_SUPPORTS_SAVE )
+
+CONS( 1982, gnw_dj101, 0,        0, dj101,     dj101,     dj101_state,    0, "Nintendo", "Game & Watch: Donkey Kong Jr. (new wide screen)", MACHINE_SUPPORTS_SAVE )
+CONS( 1983, gnw_ml102, 0,        0, ml102,     ml102,     ml102_state,    0, "Nintendo", "Game & Watch: Mario's Cement Factory (new wide screen)", MACHINE_SUPPORTS_SAVE )
+
+CONS( 1984, gnw_bx301, 0,        0, bx301,     bx301,     bx301_state,    0, "Nintendo", "Game & Watch: Boxing", MACHINE_SUPPORTS_SAVE )

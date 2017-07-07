@@ -875,7 +875,6 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	double elapsedtime = 0;
 	int i = 0;
 	windows_options global_opts;
-	std::string error_string;
 
 	// Tell mame where to get the INIs
 	SetDirectories(global_opts);
@@ -883,31 +882,32 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	CreateGameOptions(global_opts, OPTIONS_GLOBAL, nGameIndex);
 
 	// set some startup options
-	global_opts.set_value(OPTION_LANGUAGE, GetLanguageUI(), OPTION_PRIORITY_CMDLINE, error_string);
-	global_opts.set_value(OPTION_PLUGINS, GetEnablePlugins(), OPTION_PRIORITY_CMDLINE, error_string);
-	global_opts.set_value(OPTION_PLUGIN, GetPlugins(), OPTION_PRIORITY_CMDLINE, error_string);
-	global_opts.set_value(OPTION_SYSTEMNAME, driver_list::driver(nGameIndex).name, OPTION_PRIORITY_CMDLINE, error_string);
+	global_opts.set_value(OPTION_LANGUAGE, GetLanguageUI(), OPTION_PRIORITY_CMDLINE);
+	global_opts.set_value(OPTION_PLUGINS, GetEnablePlugins(), OPTION_PRIORITY_CMDLINE);
+	global_opts.set_value(OPTION_PLUGIN, GetPlugins(), OPTION_PRIORITY_CMDLINE);
+	global_opts.set_value(OPTION_SYSTEMNAME, driver_list::driver(nGameIndex).name, OPTION_PRIORITY_CMDLINE);
 
 	// set any specified play options
 	if (playopts_apply == 0x57)
 	{
 		if (playopts->record)
-			global_opts.set_value(OPTION_RECORD, playopts->record, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_RECORD, playopts->record, OPTION_PRIORITY_CMDLINE);
 		if (playopts->playback)
-			global_opts.set_value(OPTION_PLAYBACK, playopts->playback, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_PLAYBACK, playopts->playback, OPTION_PRIORITY_CMDLINE);
 		if (playopts->state)
-			global_opts.set_value(OPTION_STATE, playopts->state, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_STATE, playopts->state, OPTION_PRIORITY_CMDLINE);
 		if (playopts->wavwrite)
-			global_opts.set_value(OPTION_WAVWRITE, playopts->wavwrite, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_WAVWRITE, playopts->wavwrite, OPTION_PRIORITY_CMDLINE);
 		if (playopts->mngwrite)
-			global_opts.set_value(OPTION_MNGWRITE, playopts->mngwrite, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_MNGWRITE, playopts->mngwrite, OPTION_PRIORITY_CMDLINE);
 		if (playopts->aviwrite)
-			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE,error_string);
+			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE);
 	}
 	//printf("Software=%s:%s\n",g_szSelectedDevice, g_szSelectedSoftware);
+	// These are needed when choosing an item from the SW List
 	if (g_szSelectedSoftware[0] && g_szSelectedDevice[0])
 	{
-		global_opts.set_value(g_szSelectedDevice, g_szSelectedSoftware, OPTION_PRIORITY_CMDLINE,error_string);
+		global_opts.set_value(g_szSelectedDevice, g_szSelectedSoftware, OPTION_PRIORITY_CMDLINE);
 		// Add params and clear so next start of driver is without parameters
 		g_szSelectedSoftware[0] = 0;
 		g_szSelectedDevice[0] = 0;
@@ -945,17 +945,17 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 		windows_options o;
 		load_options(o, OPTIONS_GAME, nGameIndex);
 		if (playopts->record)
-			o.set_value(OPTION_RECORD, "", OPTION_PRIORITY_CMDLINE,error_string);
+			o.set_value(OPTION_RECORD, "", OPTION_PRIORITY_CMDLINE);
 		if (playopts->playback)
-			o.set_value(OPTION_PLAYBACK, "", OPTION_PRIORITY_CMDLINE,error_string);
+			o.set_value(OPTION_PLAYBACK, "", OPTION_PRIORITY_CMDLINE);
 		if (playopts->state)
-			o.set_value(OPTION_STATE, "", OPTION_PRIORITY_CMDLINE,error_string);
+			o.set_value(OPTION_STATE, "", OPTION_PRIORITY_CMDLINE);
 		if (playopts->wavwrite)
-			o.set_value(OPTION_WAVWRITE, "", OPTION_PRIORITY_CMDLINE,error_string);
+			o.set_value(OPTION_WAVWRITE, "", OPTION_PRIORITY_CMDLINE);
 		if (playopts->mngwrite)
-			o.set_value(OPTION_MNGWRITE, "", OPTION_PRIORITY_CMDLINE,error_string);
+			o.set_value(OPTION_MNGWRITE, "", OPTION_PRIORITY_CMDLINE);
 		if (playopts->aviwrite)
-			o.set_value(OPTION_AVIWRITE, "", OPTION_PRIORITY_CMDLINE,error_string);
+			o.set_value(OPTION_AVIWRITE, "", OPTION_PRIORITY_CMDLINE);
 		// apply the above to the ini file
 		save_options(o, OPTIONS_GAME, nGameIndex);
 	}
@@ -1419,10 +1419,10 @@ void UpdateScreenShot(void)
 
 	if (have_selection)
 	{
-		if (!g_szSelectedItem[0] || 
-			!LoadScreenShotEx(Picker_GetSelectedItem(hwndList), g_szSelectedItem, TabView_GetCurrentTab(hTabCtrl)))
-				// load and set image, or empty it if we don't have one
-				LoadScreenShot(Picker_GetSelectedItem(hwndList), TabView_GetCurrentTab(hTabCtrl));
+		if (g_szSelectedItem[0])
+			LoadScreenShot(Picker_GetSelectedItem(hwndList), g_szSelectedItem, TabView_GetCurrentTab(hTabCtrl));
+		else
+			LoadScreenShot(Picker_GetSelectedItem(hwndList), NULL, TabView_GetCurrentTab(hTabCtrl));
 	}
 
 	// figure out if we have a history or not, to place our other windows properly
@@ -1441,7 +1441,7 @@ void UpdateScreenShot(void)
 		GetWindowRect(GetDlgItem(hMain, IDC_SSFRAME), &fRect);
 		OffsetRect(&fRect, -p.x, -p.y);
 
-		// show history on this tab IFF
+		// show history on this tab IF
 		// - we have history for the game
 		// - we're on the first tab
 		// - we DON'T have a separate history tab
@@ -4776,9 +4776,10 @@ static void GamePicker_LeavingItem(HWND hwndPicker, int nItem)
 static void GamePicker_EnteringItem(HWND hwndPicker, int nItem)
 {
 	// printf("entering %s\n",driver_list::driver(nItem).name);
-
 	EnableSelection(nItem);
+
 	MessReadMountedSoftware(nItem);
+
 	// decide if it is valid to load a savestate
 	if (driver_list::driver(nItem).flags & MACHINE_SUPPORTS_SAVE)
 		EnableMenuItem(GetMenu(hMain), ID_FILE_LOADSTATE, MFS_ENABLED);

@@ -397,9 +397,6 @@ void MySoftwareListClose(void)
 void MyFillSoftwareList(int drvindex, BOOL bForce)
 {
 	BOOL is_same = 0;
-	HWND hwndSoftwarePicker;
-	HWND hwndSoftwareList;
-	HWND hwndSoftwareDevView;
 
 	// do we have to do anything?
 	if (!bForce)
@@ -420,9 +417,9 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 		s_config = software_config_alloc(drvindex);
 
 	// locate key widgets
-	hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
-	hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
-	hwndSoftwareDevView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
+	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
+	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
+	HWND hwndSoftwareDevView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
 
 	// set up the device view
 	DevView_SetDriver(hwndSoftwareDevView, s_config);
@@ -434,6 +431,8 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 	// Get the game's software path
 	int driver_index = drvindex;
 	windows_options o;
+	const char* name = driver_list::driver(driver_index).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, driver_index);
 	const char* paths = o.value(OPTION_SWPATH);
 	if (paths && (paths[0] > 64)) 
@@ -518,22 +517,22 @@ void MessUpdateSoftwareList(void)
 }
 
 
-
+// umm, what's this do??
 BOOL MessApproveImageList(HWND hParent, int drvindex)
 {
-	char szMessage[256];
+	//char szMessage[256];
 	BOOL bResult = FALSE;
-	windows_options o;
+	//windows_options o;
 
 	if (g_szSelectedSoftware[0] && g_szSelectedDevice[0])
 		return TRUE;
 
 	bResult = TRUE;
 
-	if (!bResult)
-	{
-		win_message_box_utf8(hParent, szMessage, MAMEUINAME, MB_OK);
-	}
+	//if (!bResult)
+	//{
+	//	win_message_box_utf8(hParent, szMessage, MAMEUINAME, MB_OK);
+	//}
 
 	return bResult;
 }
@@ -589,6 +588,8 @@ static void MessRemoveImage(int drvindex, const char *pszFilename)
 #if 0
 	const char *s;
 	windows_options o;
+	const char* name = driver_list::driver(drvindex).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, drvindex);
 	device_image_interface* img = 0;
 
@@ -621,13 +622,7 @@ void MessReadMountedSoftware(int drvindex)
 
 static void MessRefreshPicker(void)
 {
-	HWND hwndSoftware;
-	int i = 0;
-	LVFINDINFO lvfi;
-	const char *s;
-	windows_options o;
-
-	hwndSoftware = GetDlgItem(GetMainWindow(), IDC_SWLIST);
+	HWND hwndSoftware = GetDlgItem(GetMainWindow(), IDC_SWLIST);
 
 	s_bIgnoreSoftwarePickerNotifies = TRUE;
 
@@ -635,11 +630,17 @@ static void MessRefreshPicker(void)
 	// be problematic
 	ListView_SetItemState(hwndSoftware, -1, 0, LVIS_SELECTED);
 
+	int i = 0;
+	LVFINDINFO lvfi;
+	const char *s;
+	windows_options o;
+	const char* name = driver_list::driver(s_config->driver_index).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
+	load_options(o, OPTIONS_GAME, s_config->driver_index);
 	for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 	{
 		std::string opt_name = dev.instance_name(); // get name of device slot
-		load_options(o, OPTIONS_GAME, s_config->driver_index);
-		s = o.value(opt_name.c_str()); // get name of software in the slot
+		s = o.value(opt_name.c_str()); // get name of software in the slot  ## THIS CRASHES ##
 
 		if (s[0]) // if software is loaded
 		{
@@ -957,10 +958,10 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 	int drvindex = Picker_GetSelectedItem(hwndList);
 	std::string as, dst, opt_name = dev->instance_name();
 	windows_options o;
+	const char* name = driver_list::driver(drvindex).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, drvindex);
-	auto iter = o.image_options().find(opt_name.c_str());
-	std::string temp = std::move(iter->second);
-	const char *s = temp.c_str();
+	const char* s = o.value(opt_name.c_str());            // ## THIS CRASHES ##
 
 	/* Get the path to the currently mounted image */
 	util::zippath_parent(as, s);
@@ -971,8 +972,6 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 	{
 		/* Get the path from the software tab */
 		int driver_index = drvindex;
-		windows_options o;
-		load_options(o, OPTIONS_GAME, driver_index);
 		const char* paths = o.value(OPTION_SWPATH);
 		if (paths && (paths[0] > 64)) 
 		{} else
@@ -1067,8 +1066,10 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 	const char *s;
 	std::string as, dst, opt_name = dev->instance_name();
 	windows_options o;
+	const char* name = driver_list::driver(drvindex).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, drvindex);
-	s = o.value(opt_name.c_str());
+	s = o.value(opt_name.c_str());                // ## THIS CRASHES ##
 
 	/* Get the path to the currently mounted image, chop off any trailing backslash */
 	util::zippath_parent(as, s);
@@ -1097,6 +1098,8 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 				{
 					for (device_image_interface &image : image_interface_iterator(config->root_device()))
 					{
+						if (!image.user_loadable())
+							continue;
 						if ((i == 0) && (opt_name == image.instance_name()))
 						{
 							const char *interface = image.image_interface();
@@ -1177,6 +1180,8 @@ static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *co
 	// Get the game's software path
 	int driver_index = drvindex;
 	windows_options o;
+	const char* name = driver_list::driver(driver_index).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, driver_index);
 	const char* paths = o.value(OPTION_SWPATH);
 	if (paths && (paths[0] > 64)) 
@@ -1273,12 +1278,12 @@ static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex,
 	const machine_config *config, const device_image_interface *dev, LPTSTR pszBuffer, UINT nBufferLength)
 {
 	// can't get loaded image from dev->basename because the machine isn't running.
-	std::string temp;
 	windows_options o;
+	const char* name = driver_list::driver(nDriverIndex).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, nDriverIndex);
-	auto iter = o.image_options().find(dev->instance_name().c_str());
-	if (iter != o.image_options().end())
-		temp = std::move(iter->second);
+	//const char* temp = o.value(dev->instance_name().c_str());
+	const std::string temp = o.image_option(dev->instance_name()).value();
 
 	if (!temp.empty())
 	{
@@ -1441,9 +1446,7 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem)
 	LPCSTR pszFullName;
 	LPCSTR pszFileName;
 	int drvindex = 0;
-	HWND hwndList;
-
-	hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
+	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 
 	if (!s_bIgnoreSoftwarePickerNotifies)
 	{
