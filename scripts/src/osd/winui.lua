@@ -207,7 +207,7 @@ project ("osd_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/osd/winui/datamap.cpp",
 		MAME_DIR .. "src/osd/winui/dialogs.cpp",
 		MAME_DIR .. "src/osd/winui/dijoystick.cpp",
-		MAME_DIR .. "src/osd/winui/directdraw.cpp",
+--		MAME_DIR .. "src/osd/winui/directdraw.cpp",
 		MAME_DIR .. "src/osd/winui/directinput.cpp",
 		MAME_DIR .. "src/osd/winui/directories.cpp",
 		MAME_DIR .. "src/osd/winui/dirwatch.cpp",

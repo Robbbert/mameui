@@ -123,7 +123,9 @@ b) Exit the dialog.
 #endif
 
 #include "newuires.h"
+#ifdef UI_DIRECTDRAW
 #include "directdraw.h"    /* has to be after samples.h */
+#endif
 #include "properties.h"
 #include "drivenum.h"
 #include "machine/ram.h"
@@ -239,7 +241,9 @@ static struct ComboBoxVideo
 {
 	{ TEXT("Auto"),                 "auto"    },
 	{ TEXT("GDI"),                  "gdi"     },
-//	{ TEXT("DirectDraw"),           "ddraw"   }, // removed 20160217
+#ifdef UI_DIRECTDRAW
+	{ TEXT("DirectDraw"),           "ddraw"   }, // removed 20160217
+#endif
 	{ TEXT("Direct3D"),             "d3d"     },
 	{ TEXT("BGFX"),                 "bgfx"    },
 	{ TEXT("OpenGL"),               "opengl"  },
@@ -1538,7 +1542,6 @@ static void OptionsToProp(HWND hWnd, windows_options& o)
 /* Adjust controls - tune them to the currently selected game */
 static void SetPropEnabledControls(HWND hWnd)
 {
-	//HWND hCtrl;
 	bool useart = TRUE;
 	BOOL joystick_attached = FALSE;
 	bool in_window = FALSE;
@@ -1547,8 +1550,11 @@ static void SetPropEnabledControls(HWND hWnd)
 	// auto is a reserved word
 	bool autov = (core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "auto")==0);
 	bool d3d = (core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "d3d")==0) | autov;
-	bool ddraw = 0;//(core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "ddraw")==0) | autov;
-	//bool gdi = (core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "gdi")==0) | autov;
+#ifdef UI_DIRECTDRAW
+	bool ddraw = (core_stricmp(pCurrentOpts.value(OSDOPTION_VIDEO), "ddraw")==0) | autov;
+#else
+	bool ddraw = false;
+#endif
 
 	in_window = pCurrentOpts.bool_value(OSDOPTION_WINDOW);
 	Button_SetCheck(GetDlgItem(hWnd, IDC_ASPECT), g_bAutoAspect[GetSelectedScreen(hWnd)] );
@@ -1558,7 +1564,11 @@ static void SetPropEnabledControls(HWND hWnd)
 	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALE), d3d|ddraw);
 	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALEDISP), d3d|ddraw);
 	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALETEXT), d3d|ddraw);
+#ifdef UI_DIRECTDRAW
 	EnableWindow(GetDlgItem(hWnd, IDC_HWSTRETCH), ddraw && DirectDraw_HasHWStretch());
+#else
+	EnableWindow(GetDlgItem(hWnd, IDC_HWSTRETCH), false);
+#endif
 	EnableWindow(GetDlgItem(hWnd, IDC_SWITCHRES), TRUE);
 	EnableWindow(GetDlgItem(hWnd, IDC_SYNCREFRESH), TRUE);
 	EnableWindow(GetDlgItem(hWnd, IDC_REFRESH), !in_window);

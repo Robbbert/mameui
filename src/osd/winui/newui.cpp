@@ -202,7 +202,6 @@ static const WORD dlgitem_combobox[] = { 0xFFFF, 0x0085 };
 static int joystick_menu_setup = 0;
 static char state_filename[MAX_PATH];
 static void add_filter_entry(std::string &dest, const char *description, const char *extensions);
-static const char* software_dir;
 static std::map<std::string,std::string> slmap;
 struct slot_data { std::string slotname; std::string optname; };
 static std::map<int, slot_data> slot_map;
@@ -2381,8 +2380,13 @@ static bool get_softlist_info(HWND wnd, device_image_interface *img)
 
 static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 {
-	// path name
-	std::string initial_dir = std::string(software_dir);
+	// Get the path for loose software from <gamename>.ini
+	// if this is invalid, then windows chooses whatever directory it used last.
+	char buf[400];
+	strcpy(buf, image->device().machine().options().emu_options::sw_path());
+	// This pulls out the first path from a multipath field
+	const char* t1 = strtok(buf, ";");
+	std::string initial_dir = std::string(t1);
 	// must be specified, must exist
 	if (initial_dir.empty() || (!osd::directory::open(initial_dir.c_str())))
 	{
@@ -3490,17 +3494,6 @@ int win_create_menu(running_machine &machine, HMENU *menus)
 	// do not show in the mewui ui.
 	if (strcmp(machine.system().name, "___empty") == 0)
 		return 0;
-
-	// Get the path for loose software from <gamename>.ini
-	// if this is invalid, then windows chooses whatever directory it used last.
-	char buf[400];
-	strcpy(buf, machine.options().emu_options::sw_path());
-	// This pulls out the first path from a multipath field
-	const char* t1 = strtok(buf, ";");
-	if (t1)
-		software_dir = t1; // the first path of many
-	else
-		software_dir = buf; // the only path
 
 	HMODULE module = win_resource_module();
 	HMENU menu_bar = LoadMenu(module, MAKEINTRESOURCE(IDR_RUNTIME_MENU));

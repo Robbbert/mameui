@@ -487,6 +487,8 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 			// search for a device with the right interface
 			for (device_image_interface &image : image_interface_iterator(config.root_device()))
 			{
+				if (!image.user_loadable())
+					continue;
 				const char *interface = image.image_interface();
 				if (interface)
 				{
@@ -557,6 +559,8 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *device,
 	{
 		for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 		{
+			if (!dev.user_loadable())
+				continue;
 			if (dev.uses_file_extension(file_extension))
 			{
 				opt_name = dev.instance_name();
@@ -595,6 +599,8 @@ static void MessRemoveImage(int drvindex, const char *pszFilename)
 
 	for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 	{
+		if (!dev.user_loadable())
+			continue;
 		// search through all the slots looking for a matching software name and unload it
 		std::string opt_name = dev.instance_name();
 		s = o.value(opt_name.c_str());
@@ -639,6 +645,8 @@ static void MessRefreshPicker(void)
 	load_options(o, OPTIONS_GAME, s_config->driver_index);
 	for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
 	{
+		if (!dev.user_loadable())
+			continue;
 		std::string opt_name = dev.instance_name(); // get name of device slot
 		s = o.value(opt_name.c_str()); // get name of software in the slot  ## THIS CRASHES ##
 
@@ -847,6 +855,8 @@ static void SetupImageTypes(const machine_config *config, mess_image_type *types
 		/* special case; all non-printer devices */
 		for (device_image_interface &device : image_interface_iterator(s_config->mconfig->root_device()))
 		{
+			if (!device.user_loadable())
+				continue;
 			if (device.image_type() != IO_PRINTER)
 				SetupImageTypes(config, &types[num_extensions], count - num_extensions, FALSE, &device);
 		}
