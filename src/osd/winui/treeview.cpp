@@ -911,6 +911,52 @@ static const char* TrimManufacturer(const char *s)
 	return strTemp2;
 }
 
+// This produces no output, so commented out in layout.cpp
+void CreateBIOSFolders(int parent_index)
+{
+	int i, nGames = driver_list::total();
+	int start_folder = numFolders;
+	const game_driver *drv;
+	int nParentIndex = -1;
+	LPTREEFOLDER lpFolder = treeFolders[parent_index];
+	LPTREEFOLDER lpTemp;
+
+	// no games in top level folder
+	SetAllBits(lpFolder->m_lpGameBits, FALSE);
+
+	for (int jj = 0; jj < nGames; jj++)
+	{
+		if ( DriverIsClone(jj) )
+		{
+			nParentIndex = GetParentIndex(&driver_list::driver(jj));
+			if (nParentIndex < 0) return;
+			drv = &driver_list::driver(nParentIndex);
+		}
+		else
+			drv = &driver_list::driver(jj);
+		nParentIndex = GetParentIndex(drv);
+
+		if (nParentIndex < 0 || !driver_list::driver(nParentIndex).type.fullname())
+			continue;
+
+		for (i = numFolders-1; i >= start_folder; i--)
+		{
+			if (strcmp(treeFolders[i]->m_lpTitle, driver_list::driver(nParentIndex).type.fullname()) == 0)
+			{
+				AddGame(treeFolders[i], jj);
+				break;
+			}
+		}
+
+		if (i == start_folder-1)
+		{
+			lpTemp = NewFolder(driver_list::driver(nParentIndex).type.fullname(), next_folder_id++, parent_index, IDI_CPU, GetFolderFlags(numFolders));
+			AddFolder(lpTemp);
+			AddGame(lpTemp, jj);
+		}
+	}
+}
+
 void CreateCPUFolders(int parent_index)
 {
 	int i, j, device_folder_count = 0;

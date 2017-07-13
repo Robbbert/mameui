@@ -223,12 +223,12 @@ UINT8 playopts_apply = 0;
 typedef struct _play_options play_options;
 struct _play_options
 {
-	const char *record;			// OPTION_RECORD
-	const char *playback;		// OPTION_PLAYBACK
-	const char *state;			// OPTION_STATE
-	const char *wavwrite;		// OPTION_WAVWRITE
-	const char *mngwrite;		// OPTION_MNGWRITE
-	const char *aviwrite;		// OPTION_AVIWRITE
+	const char *record;      // OPTION_RECORD
+	const char *playback;    // OPTION_PLAYBACK
+	const char *state;       // OPTION_STATE
+	const char *wavwrite;    // OPTION_WAVWRITE
+	const char *mngwrite;    // OPTION_MNGWRITE
+	const char *aviwrite;    // OPTION_AVIWRITE
 };
 
 /***************************************************************************
@@ -5304,7 +5304,6 @@ static void MameLoadState()
 {
 	char filename[MAX_PATH];
 	char selected_filename[MAX_PATH];
-	play_options playopts;
 
 	*filename = 0;
 
@@ -5319,42 +5318,35 @@ static void MameLoadState()
 		char drive[_MAX_DRIVE];
 		char dir[_MAX_DIR];
 		char ext[_MAX_EXT];
-
 		char path[MAX_PATH];
 		char fname[MAX_PATH];
 		char bare_fname[_MAX_FNAME];
-		char *state_fname;
-		//int rc;
 
 		_splitpath(filename, drive, dir, bare_fname, ext);
 
 		// parse path
-		sprintf(path,"%s%s",drive,dir);
-		sprintf(fname,"%s%s",bare_fname,ext);
+		sprintf(path, "%s%s", drive, dir);
+		sprintf(fname, "%s%s", bare_fname, ext);
 		if (path[strlen(path)-1] == '\\')
 			path[strlen(path)-1] = 0; // take off trailing back slash
 
-		{
-			state_fname = filename;
-		}
+		char* state_fname = filename;
 
 		emu_file pSaveState(MameUIGlobal().state_directory(), OPEN_FLAG_READ);
-		osd_file::error fileerr = pSaveState.open(state_fname);
-		if (fileerr != osd_file::error::NONE)
+		if (pSaveState.open(state_fname) != osd_file::error::NONE)
 		{
 			MameMessageBox("Could not open '%s' as a valid savestate file.", filename);
 			return;
 		}
 
 		// call the MAME core function to check the save state file
-		//rc = state_manager::check_file(NULL, pSaveState, selected_filename, MameMessageBox);
+		//int rc = state_manager::check_file(NULL, pSaveState, selected_filename, MameMessageBox);
 		//if (rc)
 
+		play_options playopts;
 		memset(&playopts, 0, sizeof(playopts));
-
 		playopts.state = state_fname;
 		playopts_apply = 0x57;
-
 		MamePlayGameWithOptions(nGame, &playopts);
 	}
 }
@@ -5363,7 +5355,6 @@ static void MamePlayRecordGame()
 {
 	char filename[MAX_PATH];
 	*filename = 0;
-
 	int nGame = Picker_GetSelectedItem(hwndList);
 	strcpy(filename, driver_list::driver(nGame).name);
 
@@ -5374,7 +5365,6 @@ static void MamePlayRecordGame()
 		char fname[_MAX_FNAME];
 		char ext[_MAX_EXT];
 		char path[MAX_PATH];
-		play_options playopts;
 
 		_splitpath(filename, drive, dir, fname, ext);
 
@@ -5382,6 +5372,7 @@ static void MamePlayRecordGame()
 		if (path[strlen(path)-1] == '\\')
 			path[strlen(path)-1] = 0; // take off trailing back slash
 
+		play_options playopts;
 		memset(&playopts, 0, sizeof(playopts));
 		strcat(fname, ".inp");
 		playopts.record = fname;
@@ -5392,10 +5383,9 @@ static void MamePlayRecordGame()
 
 void MamePlayGame(void)
 {
-	play_options playopts;
-
 	int nGame = Picker_GetSelectedItem(hwndList);
 
+	play_options playopts;
 	memset(&playopts, 0, sizeof(playopts));
 	MamePlayGameWithOptions(nGame, &playopts);
 }
@@ -5403,13 +5393,12 @@ void MamePlayGame(void)
 static void MamePlayRecordWave()
 {
 	char filename[MAX_PATH];
-	play_options playopts;
-
 	int nGame = Picker_GetSelectedItem(hwndList);
 	strcpy(filename, driver_list::driver(nGame).name);
 
 	if (CommonFileDialog(GetSaveFileName, filename, FILETYPE_WAVE_FILES))
 	{
+		play_options playopts;
 		memset(&playopts, 0, sizeof(playopts));
 		playopts.wavwrite = filename;
 		playopts_apply = 0x57;
@@ -5420,7 +5409,6 @@ static void MamePlayRecordWave()
 static void MamePlayRecordMNG()
 {
 	char filename[MAX_PATH] = { 0, };
-
 	int nGame = Picker_GetSelectedItem(hwndList);
 	strcpy(filename, driver_list::driver(nGame).name);
 
@@ -5431,7 +5419,6 @@ static void MamePlayRecordMNG()
 		char fname[_MAX_FNAME];
 		char ext[_MAX_EXT];
 		char path[MAX_PATH];
-		play_options playopts;
 
 		_splitpath(filename, drive, dir, fname, ext);
 
@@ -5439,6 +5426,7 @@ static void MamePlayRecordMNG()
 		if (path[strlen(path)-1] == '\\')
 			path[strlen(path)-1] = 0; // take off trailing back slash
 
+		play_options playopts;
 		memset(&playopts, 0, sizeof(playopts));
 		strcat(fname, ".mng");
 		playopts.mngwrite = fname;
@@ -5450,7 +5438,6 @@ static void MamePlayRecordMNG()
 static void MamePlayRecordAVI()
 {
 	char filename[MAX_PATH] = { 0, };
-
 	int nGame = Picker_GetSelectedItem(hwndList);
 	strcpy(filename, driver_list::driver(nGame).name);
 
@@ -5461,7 +5448,6 @@ static void MamePlayRecordAVI()
 		char fname[_MAX_FNAME];
 		char ext[_MAX_EXT];
 		char path[MAX_PATH];
-		play_options playopts;
 
 		_splitpath(filename, drive, dir, fname, ext);
 
@@ -5469,6 +5455,7 @@ static void MamePlayRecordAVI()
 		if (path[strlen(path)-1] == '\\')
 			path[strlen(path)-1] = 0; // take off trailing back slash
 
+		play_options playopts;
 		memset(&playopts, 0, sizeof(playopts));
 		strcat(fname, ".avi");
 		playopts.aviwrite = fname;
