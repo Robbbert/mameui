@@ -13,7 +13,6 @@ void MyFillSoftwareList(int nGame, BOOL bForce);
 BOOL MessCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify);
 void MessReadMountedSoftware(int nGame);
 BOOL CreateMessIcons(void);
-BOOL MessApproveImageList(HWND hParent, int nDriver);
 void MySoftwareListClose(void);
 void DevView_RegisterClass(void);
 void DevView_Refresh(HWND hwndDevView);

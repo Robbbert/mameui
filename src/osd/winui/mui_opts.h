@@ -201,8 +201,8 @@ void SetStateDir(const char* path);
 const char* GetTitlesDir(void);
 void SetTitlesDir(const char* path);
 
-const char* GetSLDir(void);
-void SetSLDir(const char* path);
+//const char* GetSLDir(void);
+//void SetSLDir(const char* path);
 const char* GetSWDir(void);
 void SetSWDir(const char* path);
 // End interface to directories.h
