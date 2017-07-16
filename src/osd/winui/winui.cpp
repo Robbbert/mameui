@@ -965,9 +965,9 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	ShowWindow(hMain, SW_SHOW);
 	SetForegroundWindow(hMain);
 
-	// update Media View in case software was loaded in newui
+	// update Media View in case software was loaded in newui: TODO replace with general call to messui.cpp for refresh
 	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
-		DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
+		DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW)); // messui.cpp
 
 	return (DWORD)0;
 }
@@ -1678,7 +1678,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	RegisterClass(&wndclass);
 
-	DevView_RegisterClass();
+	DevView_RegisterClass(); // messui.cpp
 
 	InitCommonControls();
 
@@ -1853,7 +1853,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	dprintf("did init tree\n");
 
 	/* Initialize listview columns */
-	InitMessPicker();
+	InitMessPicker(); // messui.cpp
 	InitListView();
 	SetFocus(hwndList);
 
@@ -1862,13 +1862,13 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		LOGFONT logfont;
 
 		GetListFont(&logfont);
-		if (hFont != NULL)
+		if (hFont)
 		{
 			//Cleanup old Font, otherwise we have a GDI handle leak
 			DeleteFont(hFont);
 		}
 		hFont = CreateFontIndirect(&logfont);
-		if (hFont != NULL)
+		if (hFont)
 			SetAllWindowsFont(hMain, &main_resize, hFont, false);
 	}
 
@@ -1968,9 +1968,9 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 static void Win32UI_exit()
 {
-	MySoftwareListClose();
+	MySoftwareListClose(); // messui.cpp
 
-	if (g_pJoyGUI != NULL)
+	if (g_pJoyGUI)
 		g_pJoyGUI->exit();
 
 	/* Free GDI resources */
@@ -3073,7 +3073,7 @@ static void DisableSelection()
 
 static void EnableSelection(int nGame)
 {
-	MyFillSoftwareList(nGame, false);
+	MyFillSoftwareList(nGame, false); // messui.cpp
 
 	TCHAR* t_description = ui_wstring_from_utf8(ConvertAmpersandString(ModifyThe(driver_list::driver(nGame).type.fullname())));
 	if( !t_description )
@@ -3211,7 +3211,7 @@ static BOOL TreeViewNotify(LPNMHDR nm)
 				if (bListReady)
 				{
 					ResetListView();
-					MessUpdateSoftwareList();
+					MessUpdateSoftwareList(); // messui.cpp
 					UpdateScreenShot();
 				}
 			}
@@ -4215,7 +4215,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				if (g_bModifiedSoftwarePaths)
 				{
 					g_bModifiedSoftwarePaths = false;
-					MessUpdateSoftwareList();
+					MessUpdateSoftwareList(); // messui.cpp
 				}
 			}
 		}
@@ -4306,7 +4306,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 			BOOL bUpdateSoftware = ((nResult & DIRDLG_SL) == DIRDLG_SL) ? true : false;
 
 			if (bUpdateSoftware)
-				MessUpdateSoftwareList();
+				MessUpdateSoftwareList(); // messui.cpp
 
 			if (s_pWatcher)
 			{
@@ -4548,7 +4548,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				return false;
 			}
 		}
-		return MessCommand(hwnd, id, hwndCtl, codeNotify);
+		return MessCommand(hwnd, id, hwndCtl, codeNotify); // messui.cpp: Open Other Software menu choice
 	}
 	res++;
 	return false;
@@ -4714,7 +4714,7 @@ static void GamePicker_EnteringItem(HWND hwndPicker, int nItem)
 	// printf("entering %s\n",driver_list::driver(nItem).name);
 	EnableSelection(nItem);
 
-	MessReadMountedSoftware(nItem);
+	MessReadMountedSoftware(nItem); // messui.cpp
 
 	// decide if it is valid to load a savestate
 	if (driver_list::driver(nItem).flags & MACHINE_SUPPORTS_SAVE)
@@ -4999,7 +4999,7 @@ static void CreateIcons(void)
 	// restore our view
 	SetWindowLong(hwndList,GWL_STYLE,dwStyle);
 
-	CreateMessIcons();
+	CreateMessIcons(); // messui.cpp
 
 	// Now set up header specific stuff
 	hHeaderImages = ImageList_Create(8,8,ILC_COLORDDB | ILC_MASK,2,2);

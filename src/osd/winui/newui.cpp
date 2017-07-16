@@ -2458,9 +2458,12 @@ static void load_item(HWND wnd, device_image_interface *img, bool is_save)
 		size_t t1 = buf.find(".zip"); // get rid of zip name and anything after
 		if (t1 != std::string::npos)
 			buf.erase(t1);
-		t1 = buf.find(".7z"); // get rid of 7zip name and anything after
-		if (t1 != std::string::npos)
-			buf.erase(t1);
+		else
+		{
+			t1 = buf.find(".7z"); // get rid of 7zip name and anything after
+			if (t1 != std::string::npos)
+				buf.erase(t1);
+		}
 		t1 = buf.find_last_of("\\");   // put the swlist name in
 		buf[t1] = ':';
 		t1 = buf.find_last_of("\\"); // get rid of path; we only want the item name

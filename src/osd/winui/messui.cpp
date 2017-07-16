@@ -81,7 +81,8 @@ static HWND MyColumnDialogProc_hwndPicker;
 static int *MyColumnDialogProc_order;
 static int *MyColumnDialogProc_shown;
 static int *mess_icon_index;
-static std::map<std::string,std::string> slmap;
+static std::map<std::string,std::string> slmap; // store folder for Media View Mount Item
+static std::map<std::string,int> mvmap;  // store indicator if Media View Unmount should be enabled
 
 // TODO - We need to make icons for Cylinders, Punch Cards, and Punch Tape!
 static const device_entry s_devices[] =
@@ -750,12 +751,11 @@ static BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 
 void MyFillSoftwareList(int drvindex, BOOL bForce)
 {
-	BOOL is_same = 0;
-
 	// do we have to do anything?
 	if (!bForce)
 	{
-		if (s_config != NULL)
+		BOOL is_same = false;
+		if (s_config)
 			is_same = (drvindex == s_config->driver_index);
 		else
 			is_same = (drvindex < 0);
@@ -763,6 +763,7 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 			return;
 	}
 
+	mvmap.clear();
 	slmap.clear();
 
 	// free the machine config, if necessary
@@ -1156,7 +1157,7 @@ static BOOL DevView_Unmount(HWND hwndDevView, const machine_config *config, cons
 	int drvindex = Picker_GetSelectedItem(GetDlgItem(GetMainWindow(), IDC_LIST));
 
 	SetSelectedSoftware(drvindex, dev, "");
-
+	mvmap[dev->instance_name()] = 0;
 	return true;
 }
 
@@ -1198,6 +1199,7 @@ static BOOL DevView_GetOpenFileName(HWND hwndDevView, const machine_config *conf
 		char t2[nFilenameLength];
 		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
 		SetSelectedSoftware(drvindex, dev, t2);
+		mvmap[opt_name] = 1;
 	}
 
 	return bResult;
@@ -1275,6 +1277,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 
 		// set up inifile text to signify to MAME that a SW ITEM is to be used
 		SetSelectedSoftware(drvindex, dev, t3.c_str());
+		mvmap[opt_name] = 1;
 	}
 
 	return bResult;
@@ -1306,6 +1309,7 @@ static BOOL DevView_GetCreateFileName(HWND hwndDevView, const machine_config *co
 		char t2[nFilenameLength];
 		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
 		SetSelectedSoftware(drvindex, dev, t2);
+		mvmap[dev->instance_name()] = 1;
 	}
 
 	return bResult;
@@ -1328,11 +1332,12 @@ static void DevView_SetSelectedSoftware(HWND hwndDevView, int drvindex, const ma
 static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex, const machine_config *config, const device_image_interface *dev, LPTSTR pszBuffer, UINT nBufferLength)
 {
 	windows_options o;
+	std::string opt_name = dev->instance_name();
 	const char* name = driver_list::driver(nDriverIndex).name;
 	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, nDriverIndex);
-	//const char* temp = o.value(dev->instance_name().c_str());
-	const std::string temp = o.image_option(dev->instance_name()).value();
+	//const char* temp = o.value(opt_name.c_str());
+	const std::string temp = o.image_option(opt_name).value();
 
 	if (!temp.empty())
 	{
@@ -1342,10 +1347,12 @@ static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex, c
 			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_s);
 			free(t_s);
 			LPCTSTR t_buffer = pszBuffer;
+			mvmap[opt_name] = 1;
 			return t_buffer;
 		}
 	}
 
+	mvmap[opt_name] = 0;
 	return ui_wstring_from_utf8(""); // nothing loaded or error occurred
 }
 
@@ -1587,13 +1594,7 @@ static void SoftwareList_OnHeaderContextMenu(POINT pt, int nColumn)
 	HMENU hMenuLoad = LoadMenu(NULL, MAKEINTRESOURCE(IDR_CONTEXT_HEADER));
 	HMENU hMenu = GetSubMenu(hMenuLoad, 0);
 
-	int nMenuItem = (int) TrackPopupMenu(hMenu,
-		TPM_LEFTALIGN | TPM_RIGHTBUTTON | TPM_RETURNCMD,
-		pt.x,
-		pt.y,
-		0,
-		GetMainWindow(),
-		NULL);
+	int nMenuItem = (int) TrackPopupMenu(hMenu, TPM_LEFTALIGN | TPM_RIGHTBUTTON | TPM_RETURNCMD, pt.x, pt.y, 0, GetMainWindow(), NULL);
 
 	DestroyMenu(hMenuLoad);
 
@@ -1747,7 +1748,7 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 	RECT r;
 	BOOL has_software = false;
 	TCHAR szPath[MAX_PATH];
-
+	std::string opt_name = pEnt->dev->instance_name();
 	pDevViewInfo = GetDevViewInfo(hwndDevView);
 
 	HMENU hMenu = CreatePopupMenu();
@@ -1763,12 +1764,12 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 				{
 					if (!image.user_loadable())
 						continue;
-					if (!has_software && (pEnt->dev->instance_name() == image.instance_name()))
+					if (!has_software && (opt_name == image.instance_name()))
 					{
 						const char *interface = image.image_interface();
 						if (interface && part.matches_interface(interface))
 						{
-							slmap[pEnt->dev->instance_name()] = swlist.list_name();
+							slmap[opt_name] = swlist.list_name();
 							has_software = true;
 						}
 					}
@@ -1789,7 +1790,8 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 			AppendMenu(hMenu, MF_STRING, 2, TEXT("Create..."));
 	}
 
-	AppendMenu(hMenu, MF_STRING, 3, TEXT("Unmount")); // TODO: add this only if something is mounted
+	if (mvmap.find(opt_name)->second == 1)
+		AppendMenu(hMenu, MF_STRING, 3, TEXT("Unmount"));
 
 	GetWindowRect(hwndButton, &r);
 	int rc = TrackPopupMenu(hMenu, TPM_TOPALIGN | TPM_NONOTIFY | TPM_RETURNCMD, r.left, r.bottom, 0, hwndDevView, NULL);
