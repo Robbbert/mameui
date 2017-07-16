@@ -57,7 +57,7 @@ static const char *DATAFILE_TAG_CMD = "$cmd";
 int file_sizes[8] = { 0 };
 std::map<std::string, std::streampos> mymap[8];
 
-bool create_index(std::ifstream &fp, int filenum)
+static bool create_index(std::ifstream &fp, int filenum)
 {
 	size_t i;
 	if (!fp.good())
@@ -160,7 +160,7 @@ static bool load_software_history(const game_driver *drv, char *buffer, int bufs
 	{
 		size_t i = software.find(":");
 		std::string ssys = software.substr(0, i);
-		std::string ssoft = software.substr(i+2);
+		std::string ssoft = software.substr(i+1);
 		std::string first = std::string("$") + ssys + std::string("=") + ssoft;
 		// find pointer
 		auto search = mymap[filenum].find(first);
@@ -258,7 +258,7 @@ static bool load_driver_sysinfo(const game_driver *drv, char *buffer, int bufsiz
 	return result;
 }
 
-bool load_driver_mameinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+static bool load_driver_mameinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
 {
 	bool result = false;
 
@@ -333,7 +333,7 @@ static bool load_driver_mamedrv(const game_driver *drv, char *buffer, int bufsiz
 	return result;
 }
 
-bool load_driver_messinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+static bool load_driver_messinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
 {
 	bool result = false;
 
