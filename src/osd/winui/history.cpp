@@ -43,6 +43,7 @@ static const char *DATAFILE_TAG_DRIV = "$drv";
 static const char *DATAFILE_TAG_SCORE = "$story";
 static const char *DATAFILE_TAG_END = "$end";
 static const char *DATAFILE_TAG_CMD = "$cmd";
+static const char *DATAFILE_TAG_MARP = "$marp";
 
 /* File Numbers:
    0 = Messinfo.dat
@@ -52,6 +53,7 @@ static const char *DATAFILE_TAG_CMD = "$cmd";
    4 = Gameinit.dat
    5 = Command.dat
    6 = Story.dat
+   7 = Marp.dat
 */
 
 int file_sizes[8] = { 0 };
@@ -450,6 +452,34 @@ std::string load_driver_scoreinfo(const game_driver *drv, const char* datsdir, i
 	return buffer;
 }
 
+std::string load_driver_marpinfo(const game_driver *drv, const char* datsdir, int filenum)
+{
+	std::string buffer;
+	char filename[MAX_PATH];  /* datafile name */
+	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\marp.dat", datsdir);
+	std::ifstream fp (filename);
+
+	/* try to open datafile */
+	if (create_index(fp, filenum))
+	{
+		std::string first = std::string("$info=")+drv->name;
+		// find pointer
+		auto search = mymap[filenum].find(first);
+		if (search != mymap[filenum].end())
+		{
+			std::streampos position = mymap[filenum].find(first)->second;
+			/* load informational text (append) */
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_MARP);
+			if (!temp.empty())
+				buffer.append("\n**** :MARP HIGH SCORES: ****\n\n").append(temp).append("\n\n\n");
+		}
+
+		fp.close();
+	}
+
+	return buffer;
+}
+
 // General hardware information
 std::string load_driver_geninfo(const game_driver *drv, const char* datsdir)
 {
@@ -747,6 +777,7 @@ char * GetGameHistory(int driver_index, std::string software)
 	fullbuf.append(load_driver_messdrv(&driver_list::driver(driver_index), datsdir, 0));
 	fullbuf.append(load_driver_command(&driver_list::driver(driver_index), datsdir, 5));
 	fullbuf.append(load_driver_scoreinfo(&driver_list::driver(driver_index), datsdir, 6));
+	fullbuf.append(load_driver_marpinfo(&driver_list::driver(driver_index), datsdir, 7));
 	fullbuf.append(load_driver_geninfo(&driver_list::driver(driver_index), datsdir));
 
 	return ConvertToWindowsNewlines(fullbuf.c_str());
