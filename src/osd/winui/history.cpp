@@ -79,9 +79,21 @@ static bool create_index(std::ifstream &fp, int filenum)
 		char t1 = file_line[0];
 		if ((std::count(file_line.begin(),file_line.end(),'=') == 1) && (t1 == '$')) // line must start with $ and contain one =
 		{
+			// tellg is buggy, we need to rewind the pointer to the previous $
+			int position = fp.tellg(); // get bugged info
+			fp.seekg(position); // position file to wrong place
+			int c = fp.get(); // now scan backwards until $ found
+			while(c != 0x24)
+			{
+				position--;
+				fp.seekg(position);
+				c = fp.get();
+			}
+			// now start
 			i = std::count(file_line.begin(),file_line.end(),',');
 			if (i)
 			{
+				// line has commas, split up to separate keys
 				size_t j = file_line.find('=');
 				first = file_line.substr(0, j+1);
 				file_line.erase(0, j+1);
@@ -101,25 +113,24 @@ static bool create_index(std::ifstream &fp, int filenum)
 					else
 						second = file_line;
 					// store into index
-					mymap[filenum][first + second] = fp.tellg();
+					mymap[filenum][first + second] = position;
 				}
 			}
 			else
-				mymap[filenum][file_line] = fp.tellg();
+				mymap[filenum][file_line] = position;
 		}
 		std::getline(fp, file_line);
 	}
 	// check contents
+//	if (filenum == 3)
 //	for (auto const &it : mymap[filenum])
 //		printf("%s = %X\n", it.first.c_str(), int(it.second));
 	return true;
 }
 
-static bool load_datafile_text(std::ifstream &fp, char *buffer, int bufsize, std::streampos offset, const char *tag)
+static std::string load_datafile_text(std::ifstream &fp, std::streampos offset, const char *tag)
 {
-	char readbuf[16384];
-
-	*buffer = '\0';
+	std::string readbuf;
 
 	fp.seekg(offset);
 	std::string file_line;
@@ -127,33 +138,27 @@ static bool load_datafile_text(std::ifstream &fp, char *buffer, int bufsize, std
 	/* read text until buffer is full or end of entry is encountered */
 	while (std::getline(fp, file_line))
 	{
-		strcpy(readbuf, file_line.c_str());
-		if (!core_strnicmp(DATAFILE_TAG_END, readbuf, strlen(DATAFILE_TAG_END)))
+		//printf("%s\n",file_line.c_str());
+		if (file_line.find(DATAFILE_TAG_END)==0)
 			break;
 
-		if (!core_strnicmp(tag, readbuf, strlen(tag)))
+		if (file_line.find(tag)==0)
 			continue;
 
-		if (strlen(buffer) + strlen(readbuf) > bufsize)
-			break;
-
-		strcat(buffer, readbuf);
-		strcat(buffer, "\n");
+		readbuf.append(file_line).append("\n");
 	}
 
-	return true;
+	return readbuf;
 }
 
-static bool load_software_history(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, std::string software, int filenum)
+std::string load_software_history(const game_driver *drv, const char* datsdir, std::string software, int filenum)
 {
-	bool result = false;
-
-	*buffer = 0;
+	std::string buffer;
 	char filename[MAX_PATH];  /* datafile name */
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\history.dat", datsdir);
 
-	/* try to open history datafile */
-	std::ifstream fp (filename);
+	/* try to open datafile */
+	std::ifstream fp (filename,std::ios::binary);
 
 	/* try to open datafile */
 	if (create_index(fp, filenum))
@@ -168,31 +173,24 @@ static bool load_software_history(const game_driver *drv, char *buffer, int bufs
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, "\n**** :HISTORY item: ****\n\n");
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_BIO);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_BIO);
+			if (!temp.empty())
+				buffer.append("\n**** :HISTORY item: ****\n\n").append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_history(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_history(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
-
-	*buffer = 0;
+	std::string buffer;
 	char filename[MAX_PATH];  /* datafile name */
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\history.dat", datsdir);
 
-	/* try to open history datafile */
+	/* try to open datafile */
 	std::ifstream fp (filename);
 
 	/* try to open datafile */
@@ -205,31 +203,24 @@ static bool load_driver_history(const game_driver *drv, char *buffer, int bufsiz
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, "\n**** :HISTORY: ****\n\n");
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_BIO);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_BIO);
+			if (!temp.empty())
+				buffer.append("\n**** :HISTORY: ****\n\n").append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_sysinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_sysinfo(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
-
-	*buffer = 0;
+	std::string buffer;
 	char filename[MAX_PATH];  /* datafile name */
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\sysinfo.dat", datsdir);
 
-	/* try to open history datafile */
+	/* try to open datafile */
 	std::ifstream fp (filename);
 
 	/* try to open datafile */
@@ -242,27 +233,20 @@ static bool load_driver_sysinfo(const game_driver *drv, char *buffer, int bufsiz
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, "\n**** :SYSINFO: ****\n\n");
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_BIO);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_BIO);
+			if (!temp.empty())
+				buffer.append("\n**** :SYSINFO: ****\n\n").append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_mameinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_mameinfo(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
-
-	*buffer = 0;
+	std::string buffer;
 	char filename[MAX_PATH];  /* datafile name */
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\mameinfo.dat", datsdir);
 	std::ifstream fp (filename);
@@ -277,25 +261,20 @@ static bool load_driver_mameinfo(const game_driver *drv, char *buffer, int bufsi
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, "\n**** :MAMEINFO: ****\n\n");
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_MAME);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_MAME);
+			if (!temp.empty())
+				buffer.append("\n**** :MAMEINFO: ****\n\n").append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_mamedrv(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_mamedrv(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
+	std::string buffer;
 	char tmp[100];
 	char filename[MAX_PATH];  /* datafile name */
 
@@ -303,10 +282,9 @@ static bool load_driver_mamedrv(const game_driver *drv, char *buffer, int bufsiz
 	size_t i = temp.find_last_of("/");
 	temp.erase(0,i+1);
 
-	*buffer = 0;
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\mameinfo.dat", datsdir);
 	std::ifstream fp (filename);
-	snprintf(tmp, WINUI_ARRAY_LENGTH(tmp), "\n***:MAMEINFO SOURCE NOTES: %s\n", temp.c_str());
+	snprintf(tmp, WINUI_ARRAY_LENGTH(tmp), "\n***:MAMEINFO DRIVER: %s\n", temp.c_str());
 
 	if (create_index(fp, filenum))
 	{
@@ -317,27 +295,20 @@ static bool load_driver_mamedrv(const game_driver *drv, char *buffer, int bufsiz
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, tmp);
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_DRIV);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_DRIV);
+			if (!temp.empty())
+				buffer.append(tmp).append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_messinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_messinfo(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
-
-	*buffer = 0;
+	std::string buffer;
 	char filename[MAX_PATH];  /* datafile name */
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\messinfo.dat", datsdir);
 	std::ifstream fp (filename);
@@ -352,25 +323,20 @@ static bool load_driver_messinfo(const game_driver *drv, char *buffer, int bufsi
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, "\n**** :MESSINFO: ****\n\n");
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_MAME);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_MAME);
+			if (!temp.empty())
+				buffer.append("\n**** :MESSINFO: ****\n\n").append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_messdrv(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_messdrv(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
+	std::string buffer;
 	char tmp[100];
 	char filename[MAX_PATH];  /* datafile name */
 
@@ -378,10 +344,9 @@ static bool load_driver_messdrv(const game_driver *drv, char *buffer, int bufsiz
 	size_t i = temp.find_last_of("/");
 	temp.erase(0,i+1);
 
-	*buffer = 0;
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\messinfo.dat", datsdir);
 	std::ifstream fp (filename);
-	snprintf(tmp, WINUI_ARRAY_LENGTH(tmp), "\n***:MESSINFO SOURCE NOTES: %s\n", temp.c_str());
+	snprintf(tmp, WINUI_ARRAY_LENGTH(tmp), "\n***:MESSINFO DRIVER: %s\n", temp.c_str());
 
 	if (create_index(fp, filenum))
 	{
@@ -392,27 +357,20 @@ static bool load_driver_messdrv(const game_driver *drv, char *buffer, int bufsiz
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, tmp);
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_DRIV);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_DRIV);
+			if (!temp.empty())
+				buffer.append(tmp).append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_initinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_initinfo(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
-
-	*buffer = 0;
+	std::string buffer;
 	char filename[MAX_PATH];  /* datafile name */
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\gameinit.dat", datsdir);
 	std::ifstream fp (filename);
@@ -425,27 +383,20 @@ static bool load_driver_initinfo(const game_driver *drv, char *buffer, int bufsi
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, "\n**** :GAMEINIT: ****\n\n");
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_MAME);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_MAME);
+			if (!temp.empty())
+				buffer.append("\n**** :GAMEINIT: ****\n\n").append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_command(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_command(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
-
-	*buffer = 0;
+	std::string buffer;
 	char filename[MAX_PATH];  /* datafile name */
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\command.dat", datsdir);
 	std::ifstream fp (filename);
@@ -460,27 +411,20 @@ static bool load_driver_command(const game_driver *drv, char *buffer, int bufsiz
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, "\n**** :COMMANDS: ****\n\n");
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_CMD);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_CMD);
+			if (!temp.empty())
+				buffer.append("\n**** :COMMANDS: ****\n\n").append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
-static bool load_driver_scoreinfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir, int filenum)
+std::string load_driver_scoreinfo(const game_driver *drv, const char* datsdir, int filenum)
 {
-	bool result = false;
-
-	*buffer = 0;
+	std::string buffer;
 	char filename[MAX_PATH];  /* datafile name */
 	snprintf(filename, WINUI_ARRAY_LENGTH(filename), "%s\\story.dat", datsdir);
 	std::ifstream fp (filename);
@@ -495,79 +439,72 @@ static bool load_driver_scoreinfo(const game_driver *drv, char *buffer, int bufs
 		{
 			std::streampos position = mymap[filenum].find(first)->second;
 			/* load informational text (append) */
-			strcat(buffer, "\n**** :HIGH SCORES: ****\n\n");
-			int len = strlen(buffer);
-			bool err = load_datafile_text(fp, buffer + len, bufsize - len, position, DATAFILE_TAG_SCORE);
-
-			if (err)
-				result = true;
+			std::string temp = load_datafile_text(fp, position, DATAFILE_TAG_SCORE);
+			if (!temp.empty())
+				buffer.append("\n**** :HIGH SCORES: ****\n\n").append(temp).append("\n\n\n");
 		}
 
 		fp.close();
 	}
 
-	if (result)
-		strcat(buffer, "\n\n\n");
-	return result;
+	return buffer;
 }
 
 // General hardware information
-static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsize, const char* datsdir)
+std::string load_driver_geninfo(const game_driver *drv, const char* datsdir)
 {
 	machine_config config(*drv, MameUIGlobal());
 	const game_driver *parent = NULL;
 	char name[512];
 	bool is_bios = false;
-
-	*buffer = 0;
-	strcat(buffer, "\n**** :GENERAL MACHINE INFO: ****\n\n");
+	std::string buffer = "\n**** :GENERAL MACHINE INFO: ****\n\n";
 
 	/* List the game info 'flags' */
 	if (drv->flags & MACHINE_NOT_WORKING)
-		strcat(buffer, "This game doesn't work properly\n");
+		buffer.append("This game doesn't work properly\n");
 
 	if (drv->flags & MACHINE_UNEMULATED_PROTECTION)
-		strcat(buffer, "This game has protection which isn't fully emulated.\n");
+		buffer.append("This game has protection which isn't fully emulated.\n");
 
 	if (drv->flags & MACHINE_IMPERFECT_GRAPHICS)
-		strcat(buffer, "The video emulation isn't 100% accurate.\n");
+		buffer.append("The video emulation isn't 100% accurate.\n");
 
 	if (drv->flags & MACHINE_WRONG_COLORS)
-		strcat(buffer, "The colors are completely wrong.\n");
+		buffer.append("The colors are completely wrong.\n");
 
 	if (drv->flags & MACHINE_IMPERFECT_COLORS)
-		strcat(buffer, "The colors aren't 100% accurate.\n");
+		buffer.append("The colors aren't 100% accurate.\n");
 
 	if (drv->flags & MACHINE_NO_SOUND)
-		strcat(buffer, "This game lacks sound.\n");
+		buffer.append("This game lacks sound.\n");
 
 	if (drv->flags & MACHINE_IMPERFECT_SOUND)
-		strcat(buffer, "The sound emulation isn't 100% accurate.\n");
+		buffer.append("The sound emulation isn't 100% accurate.\n");
 
 	if (drv->flags & MACHINE_SUPPORTS_SAVE)
-		strcat(buffer, "Save state support.\n");
+		buffer.append("Save state support.\n");
 
 	if (drv->flags & MACHINE_MECHANICAL)
-		strcat(buffer, "This game contains mechanical parts.\n");
+		buffer.append("This game contains mechanical parts.\n");
 
 	if (drv->flags & MACHINE_IS_INCOMPLETE)
-		strcat(buffer, "This game was never completed.\n");
+		buffer.append("This game was never completed.\n");
 
 	if (drv->flags & MACHINE_NO_SOUND_HW)
-		strcat(buffer, "This game has no sound hardware.\n");
+		buffer.append("This game has no sound hardware.\n");
 
-	strcat(buffer, "\n");
+	buffer.append("\n");
 
 	if (drv->flags & MACHINE_IS_BIOS_ROOT)
 		is_bios = true;
 
 	/* GAME INFORMATIONS */
 	snprintf(name, WINUI_ARRAY_LENGTH(name), "\nGAME: %s\n", drv->name);
-	strcat(buffer, name);
+	buffer.append(name);
 	snprintf(name, WINUI_ARRAY_LENGTH(name), "%s", drv->type.fullname());
-	strcat(buffer, name);
+	buffer.append(name);
 	snprintf(name, WINUI_ARRAY_LENGTH(name), " (%s %s)\n\nCPU:\n", drv->manufacturer, drv->year);
-	strcat(buffer, name);
+	buffer.append(name);
 	/* iterate over CPUs */
 	execute_interface_iterator cpuiter(config.root_device());
 	std::unordered_set<std::string> exectags;
@@ -589,7 +526,7 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 		if (count > 1)
 		{
 			snprintf(name, WINUI_ARRAY_LENGTH(name), "%d x ", count);
-			strcat(buffer, name);
+			buffer.append(name);
 		}
 
 		if (clock >= 1000000)
@@ -597,10 +534,10 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 		else
 			snprintf(name, WINUI_ARRAY_LENGTH(name), "%s %d.%03d kHz\n", cpu_name, clock / 1000, clock % 1000);
 
-		strcat(buffer, name);
+		buffer.append(name);
 	}
 
-	strcat(buffer, "\nSOUND:\n");
+	buffer.append("\nSOUND:\n");
 	int has_sound = 0;
 	/* iterate over sound chips */
 	sound_interface_iterator sounditer(config.root_device());
@@ -624,10 +561,10 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 		if (count > 1)
 		{
 			snprintf(name, WINUI_ARRAY_LENGTH(name), "%d x ", count);
-			strcat(buffer, name);
+			buffer.append(name);
 		}
 
-		strcat(buffer, sound_name);
+		buffer.append(sound_name);
 
 		if (clock)
 		{
@@ -636,10 +573,10 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 			else
 				snprintf(name, WINUI_ARRAY_LENGTH(name), " %d.%03d kHz", clock / 1000, clock % 1000);
 
-			strcat(buffer, name);
+			buffer.append(name);
 		}
 
-		strcat(buffer, "\n");
+		buffer.append("\n");
 	}
 
 	if (has_sound)
@@ -652,21 +589,21 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 		else
 			snprintf(name, WINUI_ARRAY_LENGTH(name), "%d Channels\n", channels);
 
-		strcat(buffer, name);
+		buffer.append(name);
 	}
 
-	strcat(buffer, "\nVIDEO:\n");
+	buffer.append("\nVIDEO:\n");
 	screen_device_iterator screeniter(config.root_device());
 	int scrcount = screeniter.count();
 
 	if (scrcount == 0)
-		strcat(buffer, "Screenless");
+		buffer.append("Screenless");
 	else
 	{
 		for (screen_device &screen : screeniter)
 		{
 			if (screen.screen_type() == SCREEN_TYPE_VECTOR)
-				strcat(buffer, "Vector");
+				buffer.append("Vector");
 			else
 			{
 				const rectangle &visarea = screen.visible_area();
@@ -676,14 +613,14 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 				else
 					snprintf(name, WINUI_ARRAY_LENGTH(name), "%d x %d (H) %f Hz", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen.refresh_attoseconds()));
 
-				strcat(buffer, name);
+				buffer.append(name);
 			}
 
-			strcat(buffer, "\n");
+			buffer.append("\n");
 		}
 	}
 
-	strcat(buffer, "\nROM REGION:\n");
+	buffer.append("\nROM REGION:\n");
 	int g = driver_list::clone(*drv);
 
 	if (g != -1)
@@ -717,12 +654,11 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 				}
 
 				snprintf(name, WINUI_ARRAY_LENGTH(name), "%-16s \t", ROM_GETNAME(rom));
-				strcat(buffer, name);
+				buffer.append(name);
 				snprintf(name, WINUI_ARRAY_LENGTH(name), "%09d \t", rom_file_size(rom));
-				strcat(buffer, name);
+				buffer.append(name);
 				snprintf(name, WINUI_ARRAY_LENGTH(name), "%-10s", ROMREGION_GETTAG(region));
-				strcat(buffer, name);
-				strcat(buffer, "\n");
+				buffer.append(name).append("\n");
 			}
 		}
 	}
@@ -734,7 +670,7 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 		if (sampiter.altbasename())
 		{
 			snprintf(name, WINUI_ARRAY_LENGTH(name), "\nSAMPLES (%s):\n", sampiter.altbasename());
-			strcat(buffer, name);
+			buffer.append(name);
 		}
 
 		std::unordered_set<std::string> already_printed;
@@ -747,7 +683,7 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 
 			// output the sample name
 			snprintf(name, WINUI_ARRAY_LENGTH(name), "%s.wav\n", samplename);
-			strcat(buffer, name);
+			buffer.append(name);
 		}
 	}
 
@@ -758,16 +694,16 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 		if (g != -1)
 			drv = &driver_list::driver(g);
 
-		strcat(buffer, "\nORIGINAL:\n");
-		strcat(buffer, drv->type.fullname());
-		strcat(buffer, "\n\nCLONES:\n");
+		buffer.append("\nORIGINAL:\n");
+		buffer.append(drv->type.fullname());
+		buffer.append("\n\nCLONES:\n");
 
 		for (int i = 0; i < driver_list::total(); i++)
 		{
 			if (!strcmp (drv->name, driver_list::driver(i).parent))
 			{
-				strcat(buffer, driver_list::driver(i).type.fullname());
-				strcat(buffer, "\n");
+				buffer.append(driver_list::driver(i).type.fullname());
+				buffer.append("\n");
 			}
 		}
 	}
@@ -776,8 +712,8 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 	std::string temp = core_filename_extract_base(drv->type.source(), false);
 	strcpy(source_file, temp.c_str());
 	snprintf(tmp, WINUI_ARRAY_LENGTH(tmp), "\nGENERAL SOURCE INFO: %s\n", temp.c_str());
-	strcat(buffer, tmp);
-	strcat(buffer, "\nGAMES SUPPORTED:\n");
+	buffer.append(tmp);
+	buffer.append("\nGAMES SUPPORTED:\n");
 
 	for (int i = 0; i < driver_list::total(); i++)
 	{
@@ -785,61 +721,34 @@ static bool load_driver_geninfo(const game_driver *drv, char *buffer, int bufsiz
 		size_t j = t1.find_last_of("/");
 		t1.erase(0, j+1);
 		if ((strcmp(source_file, t1.c_str())==0) && !(DriverIsBios(i)))
-		{
-			strcat(buffer, driver_list::driver(i).type.fullname());
-			strcat(buffer,"\n");
-		}
+			buffer.append(driver_list::driver(i).type.fullname()).append("\n");
 	}
 
-	return true;
+	return buffer;
 }
 
 char * GetGameHistory(int driver_index, std::string software)
 {
-	static char dataBuf[2048 * 2048];
-	static char buffer[2048 * 2048];
-
-	memset(&buffer, 0, sizeof(buffer));
-	memset(&dataBuf, 0, sizeof(dataBuf));
+	std::string fullbuf;
 	char buf[400];
 	strcpy(buf, GetDatsDir());
 	// only want first path
 	const char* datsdir = strtok(buf, ";");
 
 	if (!software.empty())
-		if (load_software_history(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, software, 2))
-			strcat(dataBuf, buffer);
+		fullbuf.append(load_software_history(&driver_list::driver(driver_index), datsdir, software, 2));
 
-	if (load_driver_history(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, 2))
-		strcat(dataBuf, buffer);
+	fullbuf.append(load_driver_history(&driver_list::driver(driver_index), datsdir, 2));
+	fullbuf.append(load_driver_sysinfo(&driver_list::driver(driver_index), datsdir, 3));
+	fullbuf.append(load_driver_initinfo(&driver_list::driver(driver_index), datsdir, 4));
+	fullbuf.append(load_driver_mameinfo(&driver_list::driver(driver_index), datsdir, 1));
+	fullbuf.append(load_driver_mamedrv(&driver_list::driver(driver_index), datsdir, 1));
+	fullbuf.append(load_driver_messinfo(&driver_list::driver(driver_index), datsdir, 0));
+	fullbuf.append(load_driver_messdrv(&driver_list::driver(driver_index), datsdir, 0));
+	fullbuf.append(load_driver_command(&driver_list::driver(driver_index), datsdir, 5));
+	fullbuf.append(load_driver_scoreinfo(&driver_list::driver(driver_index), datsdir, 6));
+	fullbuf.append(load_driver_geninfo(&driver_list::driver(driver_index), datsdir));
 
-	if (load_driver_sysinfo(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, 3))
-		strcat(dataBuf, buffer);
-
-	if (load_driver_initinfo(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, 4))
-		strcat(dataBuf, buffer);
-
-	if (load_driver_mameinfo(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, 1))
-		strcat(dataBuf, buffer);
-
-	if (load_driver_mamedrv(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, 1))
-		strcat(dataBuf, buffer);
-
-	if (load_driver_messinfo(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, 0))
-		strcat(dataBuf, buffer);
-
-	if (load_driver_messdrv(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, 0))
-		strcat(dataBuf, buffer);
-
-	if (load_driver_command(&driver_list::driver(driver_index), buffer, ARRAY_LENGTH(buffer), datsdir, 5))
-		strcat(dataBuf, buffer);
-
-	if (load_driver_scoreinfo(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir, 6))
-		strcat(dataBuf, buffer);
-
-	if (load_driver_geninfo(&driver_list::driver(driver_index), buffer, WINUI_ARRAY_LENGTH(buffer), datsdir))
-		strcat(dataBuf, buffer);
-
-	return ConvertToWindowsNewlines(dataBuf);
+	return ConvertToWindowsNewlines(fullbuf.c_str());
 }
 
