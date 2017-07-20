@@ -45,12 +45,8 @@ enum
 	COLUMN_PLAYTIME,
 	COLUMN_CLONE,
 	COLUMN_TRACKBALL,
-#ifdef SHOW_COLUMN_SAMPLES
 	COLUMN_SAMPLES,
-#endif
-#ifdef SHOW_COLUMN_ROMS
 	COLUMN_ROMS,
-#endif
 	COLUMN_MAX
 };
 
@@ -73,8 +69,8 @@ typedef struct
 // List of artwork types to display in the screen shot area
 enum
 {
-	// these must match array of strings image_tabs_long_name in options.c
-	// if you add new Tabs, be sure to also add them to the ComboBox init in dialogs.c
+	// these must match array of strings image_tabs_long_name in mui_opts.cpp
+	// if you add new Tabs, be sure to also add them to the ComboBox init in dialogs.cpp
 	TAB_SCREENSHOT = 0,
 	TAB_FLYER,
 	TAB_CABINET,
@@ -201,8 +197,6 @@ void SetStateDir(const char* path);
 const char* GetTitlesDir(void);
 void SetTitlesDir(const char* path);
 
-//const char* GetSLDir(void);
-//void SetSLDir(const char* path);
 const char* GetSWDir(void);
 void SetSWDir(const char* path);
 // End interface to directories.h

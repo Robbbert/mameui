@@ -757,6 +757,7 @@ std::string load_driver_geninfo(const game_driver *drv, const char* datsdir)
 	return buffer;
 }
 
+// For all of MAME builds
 char * GetGameHistory(int driver_index, std::string software)
 {
 	std::string fullbuf;
@@ -775,6 +776,27 @@ char * GetGameHistory(int driver_index, std::string software)
 	fullbuf.append(load_driver_mamedrv(&driver_list::driver(driver_index), datsdir, 1));
 	fullbuf.append(load_driver_messinfo(&driver_list::driver(driver_index), datsdir, 0));
 	fullbuf.append(load_driver_messdrv(&driver_list::driver(driver_index), datsdir, 0));
+	fullbuf.append(load_driver_command(&driver_list::driver(driver_index), datsdir, 5));
+	fullbuf.append(load_driver_scoreinfo(&driver_list::driver(driver_index), datsdir, 6));
+	fullbuf.append(load_driver_marpinfo(&driver_list::driver(driver_index), datsdir, 7));
+	fullbuf.append(load_driver_geninfo(&driver_list::driver(driver_index), datsdir));
+
+	return ConvertToWindowsNewlines(fullbuf.c_str());
+}
+
+// For Arcade-only builds
+char * GetArcadeHistory(int driver_index)
+{
+	std::string fullbuf;
+	char buf[400];
+	strcpy(buf, GetDatsDir());
+	// only want first path
+	const char* datsdir = strtok(buf, ";");
+
+	fullbuf.append(load_driver_history(&driver_list::driver(driver_index), datsdir, 2));
+	fullbuf.append(load_driver_initinfo(&driver_list::driver(driver_index), datsdir, 4));
+	fullbuf.append(load_driver_mameinfo(&driver_list::driver(driver_index), datsdir, 1));
+	fullbuf.append(load_driver_mamedrv(&driver_list::driver(driver_index), datsdir, 1));
 	fullbuf.append(load_driver_command(&driver_list::driver(driver_index), datsdir, 5));
 	fullbuf.append(load_driver_scoreinfo(&driver_list::driver(driver_index), datsdir, 6));
 	fullbuf.append(load_driver_marpinfo(&driver_list::driver(driver_index), datsdir, 7));

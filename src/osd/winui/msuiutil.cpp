@@ -26,23 +26,23 @@ BOOL DriverIsModified(int driver_index)
 
 BOOL DriverHasDevice(const game_driver *gamedrv, iodevice_t type)
 {
-	BOOL b = FALSE;
+	BOOL b = false;
 //	const device_image_interface *device;
 
 	// allocate the machine config
 	machine_config config(*gamedrv,MameUIGlobal());
 
 	image_interface_iterator iter(config.root_device());
-	for (device_image_interface *dev = iter.first(); dev != NULL; dev = iter.next())
-//	for (bool gotone = config.devicelist().first(device); gotone; gotone = device->next(device))
+	for (device_image_interface *dev = iter.first(); dev; dev = iter.next())
 	{
+		if (!dev.user_loadable())
+			continue;
 		if (dev->image_type() == type)
 		{
-			b = TRUE;
+			b = true;
 			break;
 		}
 	}
 	return b;
 }
-
 

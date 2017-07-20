@@ -1220,26 +1220,7 @@ static BOOL DevView_GetOpenItemName(HWND hwndDevView, const machine_config *conf
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	int drvindex = Picker_GetSelectedItem(hwndList);
 
-	// Now, scan through the media_path looking for the required folder
-	BOOL passes_tests = false;
-	std::string as, dst;
-	char rompath[512];
-	strcpy(rompath, GetRomDirs());
-	char* sl_root = strtok(rompath, ";");
-	while (sl_root && !passes_tests)
-	{
-		as = sl_root + std::string("\\") + slmap.find(opt_name)->second;
-		TCHAR *szPath = ui_wstring_from_utf8(as.c_str());
-		DWORD dwAttrib = GetFileAttributes(szPath);
-		if ((dwAttrib != INVALID_FILE_ATTRIBUTES) && (dwAttrib & FILE_ATTRIBUTE_DIRECTORY))
-		{
-			passes_tests = true;
-			dst = as;
-		}
-		free(szPath);
-
-		sl_root = strtok(NULL, ";");
-	}
+	std::string dst = slmap.find(opt_name)->second;
 
 	if (!osd::directory::open(dst.c_str()))
 		// Default to emu directory
@@ -1746,7 +1727,7 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 {
 	struct DevViewInfo *pDevViewInfo;
 	RECT r;
-	BOOL has_software = false;
+	BOOL has_software = false, passes_tests = false;
 	TCHAR szPath[MAX_PATH];
 	std::string opt_name = pEnt->dev->instance_name();
 	pDevViewInfo = GetDevViewInfo(hwndDevView);
@@ -1778,10 +1759,32 @@ static void DevView_ButtonClick(HWND hwndDevView, struct DevViewEntry *pEnt, HWN
 		}
 	}
 
+	if (has_software)
+	{
+		std::string as, dst;
+		char rompath[512];
+		strcpy(rompath, GetRomDirs());
+		char* sl_root = strtok(rompath, ";");
+		while (sl_root && !passes_tests)
+		{
+			as = sl_root + std::string("\\") + slmap.find(opt_name)->second;
+			TCHAR *szPath = ui_wstring_from_utf8(as.c_str());
+			DWORD dwAttrib = GetFileAttributes(szPath);
+			if ((dwAttrib != INVALID_FILE_ATTRIBUTES) && (dwAttrib & FILE_ATTRIBUTE_DIRECTORY))
+				passes_tests = true;
+
+			free(szPath);
+
+			sl_root = strtok(NULL, ";");
+		}
+		if (passes_tests)
+			slmap[opt_name] = as;
+	}
+
 	if (pDevViewInfo->pCallbacks->pfnGetOpenFileName)
 		AppendMenu(hMenu, MF_STRING, 1, TEXT("Mount File..."));
 
-	if (has_software && pDevViewInfo->pCallbacks->pfnGetOpenItemName)
+	if (passes_tests && pDevViewInfo->pCallbacks->pfnGetOpenItemName)
 		AppendMenu(hMenu, MF_STRING, 4, TEXT("Mount Item..."));
 
 	if (pEnt->dev->is_creatable())

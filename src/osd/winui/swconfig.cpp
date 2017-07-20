@@ -7,12 +7,9 @@
 //============================================================
 // standard windows headers
 #include <windows.h>
-#include <shellapi.h>
 
 // standard C headers
-#include <stdio.h>
 #include <tchar.h>
-#include "emu.h"
 #include "swconfig.h"
 #include "mui_opts.h"
 #include "drivenum.h"

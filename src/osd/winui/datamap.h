@@ -10,9 +10,6 @@
 #ifndef _DATAMAP_H_
 #define _DATAMAP_H_
 
-#include "emu.h"
-
-
 //============================================================
 //  TYPE DEFINITIONS
 //============================================================
@@ -33,7 +30,6 @@ enum _datamap_callback_type
 	DCT_READ_CONTROL,
 	DCT_POPULATE_CONTROL,
 	DCT_UPDATE_STATUS,
-
 	DCT_COUNT
 };
 

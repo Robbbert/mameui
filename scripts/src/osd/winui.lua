@@ -211,7 +211,7 @@ project ("osd_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/osd/winui/directinput.cpp",
 		MAME_DIR .. "src/osd/winui/directories.cpp",
 		MAME_DIR .. "src/osd/winui/dirwatch.cpp",
-		MAME_DIR .. "src/osd/winui/dxdecode.cpp",
+--		MAME_DIR .. "src/osd/winui/dxdecode.cpp",
 		MAME_DIR .. "src/osd/winui/help.cpp",
 		MAME_DIR .. "src/osd/winui/helpids.cpp",
 		MAME_DIR .. "src/osd/winui/history.cpp",

@@ -4,7 +4,7 @@
 
 /***************************************************************************
 
-  layout.c
+  layout.cpp
 
   MAME specific TreeView definitions (and maybe more in the future)
 
@@ -24,7 +24,7 @@
 #include "help.h"
 #include "mui_audit.h"
 #include "properties.h"
-//#define MESS
+
 
 static BOOL FilterAvailable(int driver_index);
 
@@ -254,7 +254,7 @@ extern const ICONDATA g_iconData[] =
 
 #ifdef MESS
 extern const TCHAR g_szPlayGameString[] = TEXT("&Run %s");
-extern const char g_szGameCountString[] = "%d systems";
+extern const char g_szGameCountString[] = "%d machines";
 #else
 extern const TCHAR g_szPlayGameString[] = TEXT("&Play %s");
 extern const char g_szGameCountString[] = "%d games";

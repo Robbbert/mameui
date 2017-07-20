@@ -23,8 +23,7 @@ struct PickerCallbacks
 
 	int (*pfnCompare)(HWND hwndPicker, int nIndex1, int nIndex2, int nSortSubItem);
 	void (*pfnDoubleClick)(void);
-	const TCHAR *(*pfnGetItemString)(HWND hwndPicker, int nItem, int nColumn,
-		TCHAR *pszBuffer, UINT nBufferLength);
+	const TCHAR *(*pfnGetItemString)(HWND hwndPicker, int nItem, int nColumn, TCHAR *pszBuffer, UINT nBufferLength);
 	int (*pfnGetItemImage)(HWND hwndPicker, int nItem);
 	void (*pfnLeavingItem)(HWND hwndPicker, int nItem);
 	void (*pfnEnteringItem)(HWND hwndPicker, int nItem);

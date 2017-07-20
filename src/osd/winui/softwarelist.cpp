@@ -6,26 +6,11 @@
 //
 //============================================================
 
-#include <assert.h>
-#include <string.h>
 #include <windows.h>
-#include <shellapi.h>
 #include <commctrl.h>
-#include <commdlg.h>
-#include <wingdi.h>
-#include <winuser.h>
 #include <tchar.h>
-#include <ctype.h>
 
-#include "emu.h"
-#include "unzip.h"
-#include "strconv.h"
 #include "picker.h"
-#include "screenshot.h"
-#include "bitmask.h"
-#include "winui.h"
-//#include "resource.h"
-#include "mui_opts.h"
 #include "softwarelist.h"
 #include "mui_util.h"
 
@@ -70,9 +55,8 @@ static int software_numberofitems = 0;
 
 static software_list_info *GetSoftwareListInfo(HWND hwndPicker)
 {
-	HANDLE h;
-	h = GetProp(hwndPicker, software_list_property_name);
-	assert(h);
+	HANDLE h = GetProp(hwndPicker, software_list_property_name);
+	//assert(h);
 	return (software_list_info *) h;
 }
 
@@ -110,10 +94,9 @@ LPCSTR SoftwareList_LookupDevice(HWND hwndPicker, int nIndex)
 int SoftwareList_LookupIndex(HWND hwndPicker, LPCSTR pszFilename)
 {
 	software_list_info *pPickerInfo;
-	int i;
-
 	pPickerInfo = GetSoftwareListInfo(hwndPicker);
-	for (i = 0; i < pPickerInfo->file_index_length; i++)
+
+	for (int i = 0; i < pPickerInfo->file_index_length; i++)
 	{
 		if (core_stricmp(pPickerInfo->file_index[i]->file_name, pszFilename)==0)
 			return i;
@@ -146,16 +129,12 @@ BOOL SoftwareList_AddFile(HWND hwndPicker,LPCSTR pszName, LPCSTR pszListname, LP
 	software_list_info *pPickerInfo;
 	file_info **ppNewIndex;
 	file_info *pInfo;
-	int nIndex, nSize;
-
-	// first check to see if it is already here
-	//if (SoftwareList_LookupIndex(hwndPicker, pszName) >= 0)
-	//	return TRUE;
+	int nIndex;
 
 	pPickerInfo = GetSoftwareListInfo(hwndPicker);
 
 	// create the FileInfo structure
-	nSize = sizeof(file_info);
+	int nSize = sizeof(file_info);
 	pInfo = (file_info *) malloc(nSize);
 	if (!pInfo)
 		goto error;
@@ -171,7 +150,6 @@ BOOL SoftwareList_AddFile(HWND hwndPicker,LPCSTR pszName, LPCSTR pszListname, LP
 	strcpy(pInfo->device, pszDevice);
 	sprintf(pInfo->full_name,"%s:%s", pszListname,pszName);
 
-
 	ppNewIndex = (file_info**)malloc((pPickerInfo->file_index_length + 1) * sizeof(*pPickerInfo->file_index));
 	memcpy(ppNewIndex,pPickerInfo->file_index,pPickerInfo->file_index_length * sizeof(*pPickerInfo->file_index));
 	if (pPickerInfo->file_index) free(pPickerInfo->file_index);
@@ -185,20 +163,18 @@ BOOL SoftwareList_AddFile(HWND hwndPicker,LPCSTR pszName, LPCSTR pszListname, LP
 	// Actually insert the item into the picker
 	Picker_InsertItemSorted(hwndPicker, nIndex);
 	software_numberofitems++;
-	return TRUE;
+	return true;
 
 error:
 	if (pInfo)
 		free(pInfo);
-	return FALSE;
+	return false;
 }
 
 
 static void SoftwareList_InternalClear(software_list_info *pPickerInfo)
 {
-	int i;
-
-	for (i = 0; i < pPickerInfo->file_index_length; i++)
+	for (int i = 0; i < pPickerInfo->file_index_length; i++)
 		free(pPickerInfo->file_index[i]);
 
 	pPickerInfo->file_index = NULL;
@@ -211,18 +187,17 @@ static void SoftwareList_InternalClear(software_list_info *pPickerInfo)
 void SoftwareList_Clear(HWND hwndPicker)
 {
 	software_list_info *pPickerInfo;
-	BOOL res;
 
 	pPickerInfo = GetSoftwareListInfo(hwndPicker);
 	SoftwareList_InternalClear(pPickerInfo);
-	res = ListView_DeleteAllItems(hwndPicker);
+	BOOL res = ListView_DeleteAllItems(hwndPicker);
 	res++;
 }
 
 
 BOOL SoftwareList_Idle(HWND hwndPicker)
 {
-	return FALSE;
+	return false;
 }
 
 
@@ -290,21 +265,17 @@ LPCTSTR SoftwareList_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCHAR
 			s = pszBuffer;
 			free(t_buf);
 			break;
-
 	}
 	return s;
 }
 
 
 
-static LRESULT CALLBACK SoftwareList_WndProc(HWND hwndPicker, UINT nMessage,
-	WPARAM wParam, LPARAM lParam)
+static LRESULT CALLBACK SoftwareList_WndProc(HWND hwndPicker, UINT nMessage, WPARAM wParam, LPARAM lParam)
 {
 	software_list_info *pPickerInfo;
-	LRESULT rc;
-
 	pPickerInfo = GetSoftwareListInfo(hwndPicker);
-	rc = CallWindowProc(pPickerInfo->old_window_proc, hwndPicker, nMessage, wParam, lParam);
+	LRESULT rc = CallWindowProc(pPickerInfo->old_window_proc, hwndPicker, nMessage, wParam, lParam);
 
 	if (nMessage == WM_DESTROY)
 	{
@@ -337,12 +308,12 @@ BOOL SetupSoftwareList(HWND hwndPicker, const struct PickerOptions *pOptions)
 	l = (LONG_PTR) SoftwareList_WndProc;
 	l = SetWindowLongPtr(hwndPicker, GWLP_WNDPROC, l);
 	pPickerInfo->old_window_proc = (WNDPROC) l;
-	return TRUE;
+	return true;
 
 error:
 	if (pPickerInfo)
 		free(pPickerInfo);
-	return FALSE;
+	return false;
 }
 
 int SoftwareList_GetNumberOfItems()
