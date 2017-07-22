@@ -808,7 +808,7 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 			const software_part &swpart = swinfo.parts().front();
 
 			// search for a device with the right interface
-			for (device_image_interface &image : image_interface_iterator(config.root_device()))
+			for (const device_image_interface &image : image_interface_iterator(config.root_device()))
 			{
 				if (!image.user_loadable())
 					continue;
@@ -1458,27 +1458,23 @@ static void SoftwareList_LeavingItem(HWND hwndSoftwareList, int nItem)
 // what does drvindex do here?
 static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem)
 {
-	int drvindex = 0;
-	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
+	//HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 
 	if (!s_bIgnoreSoftwarePickerNotifies)
 	{
-		drvindex = Picker_GetSelectedItem(hwndList);
+		//int drvindex = Picker_GetSelectedItem(hwndList);
 
-		// Get the fullname and partialname for this file
-		LPCSTR pszFileName = SoftwareList_LookupFilename(hwndSoftwareList, nItem); // to run the software
+		// Get the fullname for this file
 		LPCSTR pszFullName = SoftwareList_LookupFullname(hwndSoftwareList, nItem); // for the screenshot
 
-		strncpyz(g_szSelectedSoftware, pszFileName, ARRAY_LENGTH(g_szSelectedSoftware));
-
+		// These 2 over to winui to load the SL item
+		strncpyz(g_szSelectedSoftware, pszFullName, ARRAY_LENGTH(g_szSelectedSoftware));
 		strncpyz(g_szSelectedDevice, SoftwareList_LookupDevice(hwndSoftwareList, nItem), ARRAY_LENGTH(g_szSelectedDevice));
 
-		// Set up s_szSelecteItem, for the benefit of UpdateScreenShot()
+		// For UpdateScreenShot()
 		strncpyz(g_szSelectedItem, pszFullName, ARRAY_LENGTH(g_szSelectedItem));
-
 		UpdateScreenShot();
 	}
-	drvindex++;
 }
 
 

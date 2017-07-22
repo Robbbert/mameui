@@ -61,7 +61,7 @@ static software_list_info *GetSoftwareListInfo(HWND hwndPicker)
 }
 
 
-// return just the filename, to run a software in the software list
+// return just the filename, to run a software in the software list - THIS IS NO LONGER USED
 LPCSTR SoftwareList_LookupFilename(HWND hwndPicker, int nIndex)
 {
 	software_list_info *pPickerInfo;
@@ -71,7 +71,7 @@ LPCSTR SoftwareList_LookupFilename(HWND hwndPicker, int nIndex)
 	return pPickerInfo->file_index[nIndex]->file_name;
 }
 
-// return the list:file, for the screenshot to work
+// return the list:file, for screenshot / history / inifile
 LPCSTR SoftwareList_LookupFullname(HWND hwndPicker, int nIndex)
 {
 	software_list_info *pPickerInfo;
@@ -81,6 +81,7 @@ LPCSTR SoftwareList_LookupFullname(HWND hwndPicker, int nIndex)
 	return pPickerInfo->file_index[nIndex]->full_name;
 }
 
+// return the media slot in which the software is mounted
 LPCSTR SoftwareList_LookupDevice(HWND hwndPicker, int nIndex)
 {
 	software_list_info *pPickerInfo;
