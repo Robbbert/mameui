@@ -1,4 +1,5 @@
 // For licensing and usage information, read docs/winui_license.txt
+// MASTER
 //****************************************************************************
 
 // standard windows headers
@@ -14,6 +15,7 @@
 #include "picker.h"
 #include "winui.h"
 #include "mui_opts.h"
+#include "treeview.h"
 
 
 // fix warning: cast does not match function type
@@ -78,8 +80,7 @@ static struct PickerInfo *GetPickerInfo(HWND hWnd)
 
 
 
-static LRESULT CallParentWndProc(WNDPROC pfnParentWndProc,
-	HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+static LRESULT CallParentWndProc(WNDPROC pfnParentWndProc, HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	LRESULT rc;
 
@@ -762,8 +763,7 @@ struct CompareProcParams
 
 
 
-static void Picker_PopulateCompareProcParams(HWND hwndPicker,
-	struct CompareProcParams *pParams)
+static void Picker_PopulateCompareProcParams(HWND hwndPicker, struct CompareProcParams *pParams)
 {
 	struct PickerInfo *pPickerInfo;
 
@@ -1242,6 +1242,13 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 	bDrawAsChild = (pPickerInfo->pCallbacks->pfnGetViewMode() == VIEW_GROUPED && (nParent >= 0));
 
 	/* only indent if parent is also in this view */
+#if 1	// minimal listview flickering.
+	if ((nParent >= 0) && bDrawAsChild)
+	{
+		if (GetParentFound(lvi.lParam))
+			bParentFound = TRUE;
+	}
+#else
 	if ((nParent >= 0) && bDrawAsChild)
 	{
 		for (i = 0; i < ListView_GetItemCount(hWnd); i++)
@@ -1252,11 +1259,12 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 
 			if (lvi.lParam == nParent)
 			{
-				bParentFound = true;
+				bParentFound = TRUE;
 				break;
 			}
 		}
 	}
+#endif
 
 	if (pPickerInfo->pCallbacks->pfnGetOffsetChildren && pPickerInfo->pCallbacks->pfnGetOffsetChildren())
 	{

@@ -1,4 +1,5 @@
 // For licensing and usage information, read docs/winui_license.txt
+// MASTER
 //****************************************************************************
 
 #ifndef __GAME_OPTS_H__
@@ -57,7 +58,6 @@ public:
 		osd_file::error filerr = file.open(filename);
 		if (filerr == osd_file::error::NONE)
 		{
-			std::string error_string;
 			m_info.parse_ini_file(file, OPTION_PRIORITY_CMDLINE, true, true);
 		}
 

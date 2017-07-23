@@ -164,7 +164,7 @@ BOOL win_move_file_utf8(const char *existingfilename, const char *newfilename)
  **************************************************************************/
 static int ci_strncmp (const char *s1, const char *s2, int n)
 {
-	int c1, c2;
+	int c1 = 0, c2 = 0;
 	while (n)
 	{
 		if ((c1 = tolower (*s1)) != (c2 = tolower (*s2)))
