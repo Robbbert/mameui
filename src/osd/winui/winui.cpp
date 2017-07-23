@@ -965,9 +965,8 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	ShowWindow(hMain, SW_SHOW);
 	SetForegroundWindow(hMain);
 
-	// update Media View in case software was loaded in newui: TODO replace with general call to messui.cpp for refresh
-	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
-		DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW)); // messui.cpp
+	// update display in case software was changed by the machine or by newui
+	MessReadMountedSoftware(nGameIndex); // messui.cpp
 
 	return (DWORD)0;
 }

@@ -916,10 +916,12 @@ static void MessRemoveImage(int drvindex, const char *pszFilename)
 void MessReadMountedSoftware(int drvindex)
 {
 	// First read stuff into device view
-	DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
+	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
+		DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
 
 	// Now read stuff into picker
-	MessRefreshPicker();
+	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==0)
+		MessRefreshPicker();
 }
 
 
@@ -1654,12 +1656,14 @@ static void SoftwareTabView_OnSelectionChanged(void)
 			ShowWindow(hwndSoftwarePicker, SW_SHOW);
 			ShowWindow(hwndSoftwareDevView, SW_HIDE);
 			ShowWindow(hwndSoftwareList, SW_HIDE);
+			//MessRefreshPicker(); // crashes MESSUI at start
 			break;
 
 		case 1:
 			ShowWindow(hwndSoftwarePicker, SW_HIDE);
 			ShowWindow(hwndSoftwareDevView, SW_SHOW);
 			ShowWindow(hwndSoftwareList, SW_HIDE);
+			DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
 			break;
 		case 2:
 			ShowWindow(hwndSoftwarePicker, SW_HIDE);

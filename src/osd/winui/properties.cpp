@@ -1140,6 +1140,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			default:
 #ifdef MESS
 			if (MessPropertiesCommand(hDlg, wNotifyCode, wID, &changed))
+				// To Do: add a hook to MessReadMountedSoftware(drvindex); so the software will update itself when the folder is configured
 					break;
 #endif
 
