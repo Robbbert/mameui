@@ -18,28 +18,28 @@
  *
  * Display front - LEDs
  * --------------------
- *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  
- *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  
- *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  
- *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  
- *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  
- *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  
- *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  
+ *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx
+ *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx
+ *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx
+ *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx
+ *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx
+ *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx
+ *           xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx  xxxxx
  *            Dig0   Dig1   Dig2   Dig3   Dig4   Dig5   Dig6   Dig7
  *
  * Display rear - Pinout
  * ---------------------
- *        +--------------------------------------------------------+    
- *        | O                                                    O |      
- *        |    +----------------------------------------------+    |      
- *        |    |                  o o o o o o                 |    |      
- *        |    |              Pin:6 5 4 3 2 1                 |    |      
- *        |    |                                              |    |      
- *        |    +----------------------------------------------+    |      
- *        +--------------------------------------------------------+      
+ *        +--------------------------------------------------------+
+ *        | O                                                    O |
+ *        |    +----------------------------------------------+    |
+ *        |    |                  o o o o o o                 |    |
+ *        |    |              Pin:6 5 4 3 2 1                 |    |
+ *        |    |                                              |    |
+ *        |    +----------------------------------------------+    |
+ *        +--------------------------------------------------------+
  *             6:GND  5:_RESET  4:SDCLK  3:Data  2:_Load  1:Vcc
- *                                                                    
- */ 
+ *
+ */
 
 ///*************************************************************************
 //  INTERFACE CONFIGURATION MACROS
@@ -70,6 +70,8 @@ protected:
 	// device-level overrides
 	virtual void device_start() override;
 	virtual void device_reset() override;
+
+	void update_display();
 
 private:
 	enum {
@@ -111,6 +113,9 @@ private:
 	uint8_t m_dispmem[7 * 8];
 	uint8_t m_cdp;
 	uint8_t m_digit;
+	uint8_t m_bright;
+	uint8_t m_clear;
+	uint8_t m_ip;
 };
 
 
