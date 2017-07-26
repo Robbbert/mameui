@@ -2386,7 +2386,7 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 	strcpy(buf, image->device().machine().options().emu_options::sw_path());
 	// This pulls out the first path from a multipath field
 	const char* t1 = strtok(buf, ";");
-	std::string initial_dir = std::string(t1);
+	std::string initial_dir = t1 ? std::string(t1) : "";
 	// must be specified, must exist
 	if (initial_dir.empty() || (!osd::directory::open(initial_dir.c_str())))
 	{
