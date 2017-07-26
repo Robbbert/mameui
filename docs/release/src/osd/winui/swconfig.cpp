@@ -7,12 +7,9 @@
 //============================================================
 // standard windows headers
 #include <windows.h>
-#include <shellapi.h>
 
 // standard C headers
-#include <stdio.h>
 #include <tchar.h>
-#include "emu.h"
 #include "swconfig.h"
 #include "mui_opts.h"
 #include "drivenum.h"
@@ -30,9 +27,10 @@ software_config *software_config_alloc(int driver_index) //, hashfile_error_func
 	memset(config,0,sizeof(software_config));
 
 	// allocate the machine config
-	windows_options pCurrentOpts;
-	load_options(pCurrentOpts, OPTIONS_GAME, driver_index);
-	config->mconfig = global_alloc(machine_config(driver_list::driver(driver_index),pCurrentOpts));
+	windows_options o;
+	const char* name = driver_list::driver(driver_index).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
+	config->mconfig = global_alloc(machine_config(driver_list::driver(driver_index), o));
 
 	// other stuff
 	config->driver_index = driver_index;
@@ -45,7 +43,7 @@ software_config *software_config_alloc(int driver_index) //, hashfile_error_func
 
 void software_config_free(software_config *config)
 {
-	if (config->mconfig != NULL)
+	if (config->mconfig)
 	{
 		global_free(config->mconfig);
 		config->mconfig = NULL;

@@ -343,6 +343,7 @@
 #define IDI_WIN_CYLN                    2110
 #define IDI_WIN_PTAP                    2111
 #define IDI_WIN_PCRD                    2112
+#define IDI_WIN_MIDI                    2113
 #define ID_MESS_OPEN_SOFTWARE           2200
 #define IDD_PROP_SOFTWARE               2202
 #define IDD_PROP_CONFIGURATION          2203

@@ -18,8 +18,7 @@ void SoftwarePicker_Clear(HWND hwndPicker);
 void SoftwarePicker_SetDriver(HWND hwndPicker, const software_config *config);
 
 // PickerOptions callbacks
-LPCTSTR SoftwarePicker_GetItemString(HWND hwndPicker, int nRow, int nColumn,
-	TCHAR *pszBuffer, UINT nBufferLength);
+LPCTSTR SoftwarePicker_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCHAR *pszBuffer, UINT nBufferLength);
 BOOL SoftwarePicker_Idle(HWND hwndPicker);
 
 BOOL SetupSoftwarePicker(HWND hwndPicker, const struct PickerOptions *pOptions);

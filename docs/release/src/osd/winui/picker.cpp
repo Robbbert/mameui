@@ -1,4 +1,5 @@
 // For licensing and usage information, read docs/winui_license.txt
+// MASTER
 //****************************************************************************
 
 // standard windows headers
@@ -14,6 +15,7 @@
 #include "picker.h"
 #include "winui.h"
 #include "mui_opts.h"
+#include "treeview.h"
 
 
 // fix warning: cast does not match function type
@@ -78,8 +80,7 @@ static struct PickerInfo *GetPickerInfo(HWND hWnd)
 
 
 
-static LRESULT CallParentWndProc(WNDPROC pfnParentWndProc,
-	HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+static LRESULT CallParentWndProc(WNDPROC pfnParentWndProc, HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	LRESULT rc;
 
@@ -95,40 +96,34 @@ static LRESULT CallParentWndProc(WNDPROC pfnParentWndProc,
 
 static BOOL ListViewOnErase(HWND hWnd, HDC hDC)
 {
-	RECT		rcClient;
-	HRGN		rgnBitmap;
-	HPALETTE	hPAL;
-
-	int 		i = 0, j = 0;
-	HDC 		htempDC;
-	POINT		ptOrigin;
-	POINT		pt = {0,0};
-	HBITMAP 	hOldBitmap;
 	MYBITMAPINFO *pbmDesc = GetBackgroundInfo();
-	HBITMAP		hBackground = GetBackgroundBitmap();
-	HPALETTE	hPALbg = GetBackgroundPalette();
+	HBITMAP hBackground = GetBackgroundBitmap();
+	HPALETTE hPALbg = GetBackgroundPalette();
 
 	// this does not draw the background properly in report view
 
+	RECT rcClient;
 	GetClientRect(hWnd, &rcClient);
 
-	htempDC = CreateCompatibleDC(hDC);
-	hOldBitmap = (HBITMAP)SelectObject(htempDC, hBackground);
+	HDC htempDC = CreateCompatibleDC(hDC);
+	HBITMAP hOldBitmap = (HBITMAP)SelectObject(htempDC, hBackground);
 
-	rgnBitmap = CreateRectRgnIndirect(&rcClient);
+	HRGN rgnBitmap = CreateRectRgnIndirect(&rcClient);
 	SelectClipRgn(hDC, rgnBitmap);
 	DeleteBitmap(rgnBitmap);
 
-	hPAL = (!hPALbg) ? CreateHalftonePalette(hDC) : hPALbg;
+	HPALETTE hPAL = (!hPALbg) ? CreateHalftonePalette(hDC) : hPALbg;
 
 	if (GetDeviceCaps(htempDC, RASTERCAPS) & RC_PALETTE && hPAL != NULL)
 	{
-		SelectPalette(htempDC, hPAL, FALSE);
+		SelectPalette(htempDC, hPAL, false);
 		RealizePalette(htempDC);
 	}
 
 	// Get x and y offset
+	POINT pt = {0,0};
 	MapWindowPoints(hWnd, GetTreeView(), &pt, 1);
+	POINT ptOrigin;
 	GetDCOrgEx(hDC, &ptOrigin);
 	ptOrigin.x -= pt.x;
 	ptOrigin.y -= pt.y;
@@ -136,11 +131,9 @@ static BOOL ListViewOnErase(HWND hWnd, HDC hDC)
 	ptOrigin.y = -GetScrollPos(hWnd, SB_VERT);
 
 	if (pbmDesc->bmWidth && pbmDesc->bmHeight)
-	{
-		for (i = ptOrigin.x; i < rcClient.right; i += pbmDesc->bmWidth)
-			for (j = ptOrigin.y; j < rcClient.bottom; j += pbmDesc->bmHeight)
+		for (int i = ptOrigin.x; i < rcClient.right; i += pbmDesc->bmWidth)
+			for (int j = ptOrigin.y; j < rcClient.bottom; j += pbmDesc->bmHeight)
 				BitBlt(hDC, i, j, pbmDesc->bmWidth, pbmDesc->bmHeight, htempDC, 0, 0, SRCCOPY);
-	}
 
 	SelectObject(htempDC, hOldBitmap);
 	DeleteDC(htempDC);
@@ -151,31 +144,29 @@ static BOOL ListViewOnErase(HWND hWnd, HDC hDC)
 		hPAL = 0;
 	}
 
-	return TRUE;
+	return true;
 }
 
 
 
 static BOOL ListViewNotify(HWND hWnd, LPNMHDR lpNmHdr)
 {
-	RECT rcClient;
-	DWORD dwPos = 0;
-	POINT pt;
-
 	// This code is for using bitmap in the background
 	// Invalidate the right side of the control when a column is resized
 	if (lpNmHdr->code == HDN_ITEMCHANGINGA || lpNmHdr->code == HDN_ITEMCHANGINGW)
 	{
-		dwPos = GetMessagePos();
+		DWORD dwPos = GetMessagePos();
+		POINT pt;
 		pt.x = LOWORD(dwPos);
 		pt.y = HIWORD(dwPos);
 
+		RECT rcClient;
 		GetClientRect(hWnd, &rcClient);
 		ScreenToClient(hWnd, &pt);
 		rcClient.left = pt.x;
-		InvalidateRect(hWnd, &rcClient, FALSE);
+		InvalidateRect(hWnd, &rcClient, false);
 	}
-	return FALSE;
+	return false;
 }
 
 
@@ -183,28 +174,27 @@ static BOOL ListViewNotify(HWND hWnd, LPNMHDR lpNmHdr)
 static BOOL ListViewContextMenu(HWND hwndPicker, LPARAM lParam)
 {
 	struct PickerInfo *pPickerInfo;
-	POINT pt, headerPt;
-	int i = 0, nViewID = 0, nColumn = -1;
-	HWND hwndHeader;
-	RECT rcCol;
-
 	pPickerInfo = GetPickerInfo(hwndPicker);
 
 	// Extract the point out of the lparam
+	POINT pt;
 	pt.x = GET_X_LPARAM(lParam);
 	pt.y = GET_Y_LPARAM(lParam);
 	if (pt.x < 0 && pt.y < 0)
 		GetCursorPos(&pt);
 
 	// Figure out which header column was clicked, if at all
-	nViewID = Picker_GetViewID(hwndPicker);
+	int nViewID = Picker_GetViewID(hwndPicker);
+	int nColumn = -1;
+
 	if ((nViewID == VIEW_REPORT) || (nViewID == VIEW_GROUPED))
 	{
-		hwndHeader = ListView_GetHeader(hwndPicker);
-		headerPt = pt;
+		HWND hwndHeader = ListView_GetHeader(hwndPicker);
+		POINT headerPt = pt;
 		ScreenToClient(hwndHeader, &headerPt);
 
-		for (i = 0; Header_GetItemRect(hwndHeader, i, &rcCol); i++)
+		RECT rcCol;
+		for (int i = 0; Header_GetItemRect(hwndHeader, i, &rcCol); i++)
 		{
 			if (PtInRect(&rcCol, headerPt))
 			{
@@ -226,7 +216,7 @@ static BOOL ListViewContextMenu(HWND hwndPicker, LPARAM lParam)
 		if (pPickerInfo->pCallbacks->pfnOnBodyContextMenu)
 			pPickerInfo->pCallbacks->pfnOnBodyContextMenu(pt);
 	}
-	return TRUE;
+	return true;
 }
 
 
@@ -247,7 +237,7 @@ static LRESULT CALLBACK ListViewWndProc(HWND hWnd, UINT message, WPARAM wParam, 
 {
 	struct PickerInfo *pPickerInfo;
 	LRESULT rc = 0;
-	BOOL bHandled = FALSE;
+	BOOL bHandled = false;
 	WNDPROC pfnParentWndProc;
 	HWND hwndHeaderCtrl  = NULL;
 	HFONT hHeaderCtrlFont = NULL;
@@ -259,14 +249,14 @@ static LRESULT CALLBACK ListViewWndProc(HWND hWnd, UINT message, WPARAM wParam, 
 	{
 		case WM_MOUSEMOVE:
 			if (MouseHasBeenMoved())
-				ShowCursor(TRUE);
+				ShowCursor(true);
 			break;
 
 		case WM_ERASEBKGND:
 			if (GetBackgroundBitmap())
 			{
 				rc = ListViewOnErase(hWnd, (HDC) wParam);
-				bHandled = TRUE;
+				bHandled = true;
 			}
 			break;
 
@@ -299,7 +289,7 @@ static LRESULT CALLBACK ListViewWndProc(HWND hWnd, UINT message, WPARAM wParam, 
 
 	 // If we received WM_SETFONT, reset header ctrl font back to original font
 	if (hwndHeaderCtrl)
-		SetWindowFont(hwndHeaderCtrl, hHeaderCtrlFont, TRUE);
+		SetWindowFont(hwndHeaderCtrl, hHeaderCtrlFont, true);
 
 	return rc;
 }
@@ -312,9 +302,6 @@ static void Picker_InternalResetColumnDisplay(HWND hWnd, BOOL bFirstTime)
 	LV_COLUMN   lvc;
 	int         i = 0;
 	int         nColumn = 0;
-	int         *widths;
-	int         *order;
-	int         *shown;
 	//int shown_columns;
 	LVCOLUMN col;
 	struct PickerInfo *pPickerInfo;
@@ -323,6 +310,7 @@ static void Picker_InternalResetColumnDisplay(HWND hWnd, BOOL bFirstTime)
 
 	pPickerInfo = GetPickerInfo(hWnd);
 
+	int *widths, *order, *shown;
 	widths = (int*)malloc(pPickerInfo->nColumnCount * sizeof(*widths));
 	order = (int*)malloc(pPickerInfo->nColumnCount * sizeof(*order));
 	shown = (int*)malloc(pPickerInfo->nColumnCount * sizeof(*shown));
@@ -412,7 +400,7 @@ done:
 
 void Picker_ResetColumnDisplay(HWND hWnd)
 {
-	Picker_InternalResetColumnDisplay(hWnd, FALSE);
+	Picker_InternalResetColumnDisplay(hWnd, false);
 }
 
 
@@ -431,17 +419,15 @@ void Picker_ClearIdle(HWND hwndPicker)
 
 
 
-static void CALLBACK Picker_TimerProc(HWND hwndPicker, UINT uMsg,
-  UINT_PTR idEvent, DWORD dwTime)
+static void CALLBACK Picker_TimerProc(HWND hwndPicker, UINT uMsg, UINT_PTR idEvent, DWORD dwTime)
 {
 	struct PickerInfo *pPickerInfo;
-	BOOL bContinueIdle = 0;
-	DWORD nTickCount = 0, nBaseTickCount = 0;
+	DWORD nTickCount = 0;
 	DWORD nMaxIdleTicks = 50;
 
 	pPickerInfo = GetPickerInfo(hwndPicker);
-	bContinueIdle = FALSE;
-	nBaseTickCount = GetTickCount();
+	BOOL bContinueIdle = false;
+	DWORD nBaseTickCount = GetTickCount();
 
 	// This idle procedure will loop until either idling is over, or until
 	// a specified amount of time elapses (in this case, 50ms).  This frees
@@ -462,7 +448,7 @@ static void CALLBACK Picker_TimerProc(HWND hwndPicker, UINT uMsg,
 
 
 // Instructs this picker to reset idling; idling will continue until the
-// idle function returns FALSE
+// idle function returns false
 void Picker_ResetIdle(HWND hwndPicker)
 {
 	struct PickerInfo *pPickerInfo;
@@ -492,12 +478,12 @@ BOOL SetupPicker(HWND hwndPicker, const struct PickerOptions *pOptions)
 	LONG_PTR l = 0;
 	HRESULT res = 0;
 
-	assert(hwndPicker);
+	//assert(hwndPicker);
 
 	// Allocate the list view struct
 	pPickerInfo = (struct PickerInfo *) malloc(sizeof(struct PickerInfo));
 	if (!pPickerInfo)
-		return FALSE;
+		return false;
 
 	// And fill it out
 	memset(pPickerInfo, 0, sizeof(*pPickerInfo));
@@ -520,7 +506,7 @@ BOOL SetupPicker(HWND hwndPicker, const struct PickerOptions *pOptions)
 		for (i = 0; i < pPickerInfo->nColumnCount; i++)
 		{
 			pPickerInfo->pnColumnsOrder[i] = i;
-			pPickerInfo->pnColumnsShown[i] = TRUE;
+			pPickerInfo->pnColumnsShown[i] = true;
 		}
 
 		if (GetUseOldControl())
@@ -548,15 +534,15 @@ BOOL SetupPicker(HWND hwndPicker, const struct PickerOptions *pOptions)
 	res = ListView_SetExtendedListViewStyle(hwndPicker, LVS_EX_FULLROWSELECT | LVS_EX_HEADERDRAGDROP |
 		LVS_EX_UNDERLINEHOT | LVS_EX_UNDERLINECOLD | LVS_EX_LABELTIP);
 
-	Picker_InternalResetColumnDisplay(hwndPicker, TRUE);
+	Picker_InternalResetColumnDisplay(hwndPicker, true);
 	Picker_ResetIdle(hwndPicker);
 	res++;
-	return TRUE;
+	return true;
 
 error:
 	if (pPickerInfo)
 		Picker_Free(pPickerInfo);
-	return FALSE;
+	return false;
 }
 
 
@@ -573,9 +559,6 @@ int Picker_GetViewID(HWND hwndPicker)
 void Picker_SetViewID(HWND hwndPicker, int nViewID)
 {
 	struct PickerInfo *pPickerInfo;
-	LONG_PTR nListViewStyle = 0;
-	DWORD dwStyle = 0;
-
 	pPickerInfo = GetPickerInfo(hwndPicker);
 
 	// Change the nCurrentViewID member
@@ -584,6 +567,7 @@ void Picker_SetViewID(HWND hwndPicker, int nViewID)
 		pPickerInfo->pCallbacks->pfnSetViewMode(pPickerInfo->nCurrentViewID);
 
 	// Change the ListView flags in accordance
+	LONG_PTR nListViewStyle;
 	switch(nViewID)
 	{
 		case VIEW_LARGE_ICONS:
@@ -602,7 +586,7 @@ void Picker_SetViewID(HWND hwndPicker, int nViewID)
 			break;
 	}
 
-	dwStyle = GetWindowLong(hwndPicker, GWL_STYLE);
+	DWORD dwStyle = GetWindowLong(hwndPicker, GWL_STYLE);
 	if (GetUseXPControl())
 	{
 		// RS Microsoft must have changed something in the Ownerdraw handling with Version 6 of the Common Controls
@@ -616,8 +600,7 @@ void Picker_SetViewID(HWND hwndPicker, int nViewID)
 				// to properly get them to arrange, otherwise the entries might overlap
 				// we have to call SetWindowLong to get it into effect !!
 				// It's no use just setting the Style, as it's changed again further down...
-				SetWindowLong(hwndPicker, GWL_STYLE, (GetWindowLong(hwndPicker, GWL_STYLE)
-					& ~LVS_TYPEMASK) | LVS_ICON);
+				SetWindowLong(hwndPicker, GWL_STYLE, (GetWindowLong(hwndPicker, GWL_STYLE) & ~LVS_TYPEMASK) | LVS_ICON);
 			}
 		}
 		else
@@ -636,18 +619,15 @@ void Picker_SetViewID(HWND hwndPicker, int nViewID)
 
 static BOOL PickerHitTest(HWND hWnd)
 {
-	RECT			rect;
-	POINTS			p;
-	DWORD			res = GetMessagePos();
-	LVHITTESTINFO	htInfo;
-	HRESULT result;
-
+	LVHITTESTINFO htInfo;
 	memset(&htInfo, 0, sizeof(htInfo));
-	p = MAKEPOINTS(res);
+	RECT rect;
 	GetWindowRect(hWnd, &rect);
+	DWORD res = GetMessagePos();
+	POINTS p = MAKEPOINTS(res);
 	htInfo.pt.x = p.x - rect.left;
 	htInfo.pt.y = p.y - rect.top;
-	result = ListView_HitTest(hWnd, &htInfo);
+	HRESULT result = ListView_HitTest(hWnd, &htInfo);
 	result++;
 	return (! (htInfo.flags & LVHT_NOWHERE));
 }
@@ -655,18 +635,15 @@ static BOOL PickerHitTest(HWND hWnd)
 
 int Picker_GetSelectedItem(HWND hWnd)
 {
-	int nItem = 0;
-	LV_ITEM lvi;
-	BOOL res = 0;
-
-	nItem = ListView_GetNextItem(hWnd, -1, LVIS_SELECTED | LVIS_FOCUSED);
+	int nItem = ListView_GetNextItem(hWnd, -1, LVIS_SELECTED | LVIS_FOCUSED);
 	if (nItem < 0)
 		return 0;
 
+	LV_ITEM lvi;
 	memset(&lvi, 0, sizeof(lvi));
 	lvi.iItem = nItem;
 	lvi.mask = LVIF_PARAM;
-	res = ListView_GetItem(hWnd, &lvi);
+	BOOL res = ListView_GetItem(hWnd, &lvi);
 	res++;
 	return lvi.lParam;
 }
@@ -675,8 +652,6 @@ int Picker_GetSelectedItem(HWND hWnd)
 // This highlights a selected game, and scrolls it into view
 void Picker_SetSelectedPick(HWND hWnd, int nIndex)
 {
-	BOOL res;
-
 	if (nIndex < 0)
 		nIndex = 0;
 	// Protection against bad coding elsewhere
@@ -692,7 +667,7 @@ void Picker_SetSelectedPick(HWND hWnd, int nIndex)
 	if (nIndex > -1)
 		ListView_SetItemState(hWnd, nIndex, LVIS_FOCUSED | LVIS_SELECTED, LVIS_FOCUSED | LVIS_SELECTED);
 	// Bring the game into view
-	res = ListView_EnsureVisible(hWnd, nIndex, FALSE);
+	BOOL res = ListView_EnsureVisible(hWnd, nIndex, false);
 	res++;
 }
 
@@ -700,15 +675,13 @@ void Picker_SetSelectedPick(HWND hWnd, int nIndex)
 
 void Picker_SetSelectedItem(HWND hWnd, int nItem)
 {
-	int i = 0;
-	LV_FINDINFO lvfi;
-
 	if (nItem < 0)
 		return;
 
+	LV_FINDINFO lvfi;
 	lvfi.flags = LVFI_PARAM;
 	lvfi.lParam = nItem;
-	i = ListView_FindItem(hWnd, -1, &lvfi);
+	int i = ListView_FindItem(hWnd, -1, &lvfi);
 	if (i == -1)
 	{
 		POINT p = {0,0};
@@ -721,8 +694,7 @@ void Picker_SetSelectedItem(HWND hWnd, int nItem)
 
 
 
-static const TCHAR *Picker_CallGetItemString(HWND hwndPicker,
-	int nItem, int nColumn, TCHAR *pszBuffer, UINT nBufferLength)
+static const TCHAR *Picker_CallGetItemString(HWND hwndPicker, int nItem, int nColumn, TCHAR *pszBuffer, UINT nBufferLength)
 {
 	// this call wraps the pfnGetItemString callback to properly set up the
 	// buffers, and normalize the results
@@ -734,10 +706,8 @@ static const TCHAR *Picker_CallGetItemString(HWND hwndPicker,
 	s = NULL;
 
 	if (pPickerInfo->pCallbacks->pfnGetItemString)
-	{
-		s = pPickerInfo->pCallbacks->pfnGetItemString(hwndPicker,
-			nItem, nColumn, pszBuffer, nBufferLength);
-	}
+		s = pPickerInfo->pCallbacks->pfnGetItemString(hwndPicker, nItem, nColumn, pszBuffer, nBufferLength);
+
 	if (!s)
 		s = pszBuffer;
 	return s;
@@ -749,23 +719,17 @@ static const TCHAR *Picker_CallGetItemString(HWND hwndPicker,
 static void Picker_ResetHeaderSortIcon(HWND hwndPicker)
 {
 	struct PickerInfo *pPickerInfo;
-	HWND hwndHeader;
-	HD_ITEM hdi;
-	int i = 0, nViewColumn = 0;
-	BOOL res = 0;
-
 	pPickerInfo = GetPickerInfo(hwndPicker);
-
-	hwndHeader = ListView_GetHeader(hwndPicker);
+	HWND hwndHeader = ListView_GetHeader(hwndPicker);
+	BOOL res;
 
 	// take arrow off non-current columns
+	HD_ITEM hdi;
 	hdi.mask = HDI_FORMAT;
 	hdi.fmt = HDF_STRING;
-	for (i = 0; i < pPickerInfo->nColumnCount; i++)
-	{
+	for (int i = 0; i < pPickerInfo->nColumnCount; i++)
 		if (i != pPickerInfo->pCallbacks->pfnGetSortColumn())
 			res = Header_SetItem(hwndHeader, Picker_GetViewColumnFromRealColumn(hwndPicker, i), &hdi);
-	}
 
 	if (GetUseXPControl())
 	{
@@ -781,7 +745,7 @@ static void Picker_ResetHeaderSortIcon(HWND hwndPicker)
 		hdi.iImage = pPickerInfo->pCallbacks->pfnGetSortReverse() ? 1 : 0;
 	}
 
-	nViewColumn = Picker_GetViewColumnFromRealColumn(hwndPicker, pPickerInfo->pCallbacks->pfnGetSortColumn());
+	int nViewColumn = Picker_GetViewColumnFromRealColumn(hwndPicker, pPickerInfo->pCallbacks->pfnGetSortColumn());
 	res = Header_SetItem(hwndHeader, nViewColumn, &hdi);
 	res++;
 }
@@ -799,8 +763,7 @@ struct CompareProcParams
 
 
 
-static void Picker_PopulateCompareProcParams(HWND hwndPicker,
-	struct CompareProcParams *pParams)
+static void Picker_PopulateCompareProcParams(HWND hwndPicker, struct CompareProcParams *pParams)
 {
 	struct PickerInfo *pPickerInfo;
 
@@ -823,7 +786,7 @@ static int CALLBACK Picker_CompareProc(LPARAM index1, LPARAM index2, LPARAM nPar
 {
 	struct CompareProcParams *pcpp = (struct CompareProcParams *) nParamSort;
 	struct PickerInfo *pPickerInfo = pcpp->pPickerInfo;
-	BOOL bCallCompare = TRUE;
+	BOOL bCallCompare = true;
 	int nResult = 0, nParent1 = 0, nParent2 = 0;
 	TCHAR szBuffer1[256], szBuffer2[256];
 	const TCHAR *s1, *s2;
@@ -866,7 +829,7 @@ static int CALLBACK Picker_CompareProc(LPARAM index1, LPARAM index2, LPARAM nPar
 				{
 					// if this is a child and its parent, put child after
 					nResult = 1;
-					bCallCompare = FALSE;
+					bCallCompare = false;
 				}
 				else
 				{
@@ -881,7 +844,7 @@ static int CALLBACK Picker_CompareProc(LPARAM index1, LPARAM index2, LPARAM nPar
 				{
 					// if this is a child and its parent, put child after
 					nResult = -1;
-					bCallCompare = FALSE;
+					bCallCompare = false;
 				}
 				else
 				{
@@ -919,27 +882,25 @@ static int CALLBACK Picker_CompareProc(LPARAM index1, LPARAM index2, LPARAM nPar
 
 void Picker_Sort(HWND hwndPicker)
 {
-	LV_FINDINFO lvfi;
 	//struct PickerInfo *pPickerInfo;
 	struct CompareProcParams params;
-	int nItem = 0;
-	BOOL res = 0;
 
 	//pPickerInfo = GetPickerInfo(hwndPicker);
 
 	// populate the CompareProcParams structure
 	Picker_PopulateCompareProcParams(hwndPicker, &params);
 
-	res = ListView_SortItems(hwndPicker, Picker_CompareProc, (LPARAM) &params);
+	BOOL res = ListView_SortItems(hwndPicker, Picker_CompareProc, (LPARAM) &params);
 
 	Picker_ResetHeaderSortIcon(hwndPicker);
 
+	LV_FINDINFO lvfi;
 	memset(&lvfi, 0, sizeof(lvfi));
 	lvfi.flags = LVFI_PARAM;
 	lvfi.lParam = Picker_GetSelectedItem(hwndPicker);
-	nItem = ListView_FindItem(hwndPicker, -1, &lvfi);
+	int nItem = ListView_FindItem(hwndPicker, -1, &lvfi);
 
-	res = ListView_EnsureVisible(hwndPicker, nItem, FALSE);
+	res = ListView_EnsureVisible(hwndPicker, nItem, false);
 	res++;
 }
 
@@ -948,7 +909,7 @@ void Picker_Sort(HWND hwndPicker)
 int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 {
 	//struct PickerInfo *pPickerInfo;
-	int nHigh = 0, nLow = 0, nMid = 0;
+	int nLow = 0, nMid = 0;
 	struct CompareProcParams params;
 	int nCompareResult = 0;
 	LVITEM lvi;
@@ -956,8 +917,7 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 
 	//pPickerInfo = GetPickerInfo(hwndPicker);
 
-	nLow = 0;
-	nHigh = ListView_GetItemCount(hwndPicker);
+	int nHigh = ListView_GetItemCount(hwndPicker);
 
 	// populate the CompareProcParams structure
 	Picker_PopulateCompareProcParams(hwndPicker, &params);
@@ -970,7 +930,6 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		lvi.mask = LVIF_PARAM;
 		lvi.iItem = nMid;
 		res = ListView_GetItem(hwndPicker, &lvi);
-		res++;
 		nCompareResult = Picker_CompareProc(nParam, lvi.lParam, (LPARAM) &params);
 
 		if (nCompareResult > 0)
@@ -984,13 +943,14 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		}
 	}
 
+	res++;
 	memset(&lvi, 0, sizeof(lvi));
 	lvi.mask     = LVIF_IMAGE | LVIF_TEXT | LVIF_PARAM;
-	lvi.iItem	 = nLow;
+	lvi.iItem    = nLow;
 	lvi.iSubItem = 0;
-	lvi.lParam	 = nParam;
+	lvi.lParam   = nParam;
 	lvi.pszText  = LPSTR_TEXTCALLBACK;
-	lvi.iImage	 = I_IMAGECALLBACK;
+	lvi.iImage   = I_IMAGECALLBACK;
 
 	return ListView_InsertItem(hwndPicker, &lvi);
 }
@@ -1013,10 +973,9 @@ int Picker_GetRealColumnFromViewColumn(HWND hWnd, int nViewColumn)
 int Picker_GetViewColumnFromRealColumn(HWND hWnd, int nRealColumn)
 {
 	struct PickerInfo *pPickerInfo;
-	int i = 0;
 
 	pPickerInfo = GetPickerInfo(hWnd);
-	for (i = 0; i < pPickerInfo->nColumnCount; i++)
+	for (int i = 0; i < pPickerInfo->nColumnCount; i++)
 		if (pPickerInfo->pnColumnsOrder[i] == nRealColumn)
 			return i;
 
@@ -1030,7 +989,7 @@ BOOL Picker_HandleNotify(LPNMHDR lpNmHdr)
 {
 	struct PickerInfo *pPickerInfo;
 	HWND hWnd;
-	BOOL bResult = FALSE;
+	BOOL bResult = false;
 	NM_LISTVIEW *pnmv;
 	LV_DISPINFO *pDispInfo;
 	int nItem = 0, nColumn = 0;
@@ -1054,13 +1013,13 @@ BOOL Picker_HandleNotify(LPNMHDR lpNmHdr)
 				{
 					Picker_SetSelectedItem(hWnd, pPickerInfo->nLastItem);
 				}
-				bResult = TRUE;
+				bResult = true;
 			}
 			else if ((lpNmHdr->code == NM_DBLCLK) && (pPickerInfo->pCallbacks->pfnDoubleClick))
 			{
 				// double click!
 				pPickerInfo->pCallbacks->pfnDoubleClick();
-				bResult = TRUE;
+				bResult = true;
 			}
 			break;
 
@@ -1075,13 +1034,13 @@ BOOL Picker_HandleNotify(LPNMHDR lpNmHdr)
 					pDispInfo->item.iImage = pPickerInfo->pCallbacks->pfnGetItemImage(hWnd, nItem);
 				else
 					pDispInfo->item.iImage = 0;
-				bResult = TRUE;
+				bResult = true;
 			}
 
 			if (pDispInfo->item.mask & LVIF_STATE)
 			{
 				pDispInfo->item.state = 0;
-				bResult = TRUE;
+				bResult = true;
 			}
 
 			if (pDispInfo->item.mask & LVIF_TEXT)
@@ -1093,7 +1052,7 @@ BOOL Picker_HandleNotify(LPNMHDR lpNmHdr)
 					pDispInfo->item.pszText, pDispInfo->item.cchTextMax);
 
 				pDispInfo->item.pszText = (TCHAR *) s;
-				bResult = TRUE;
+				bResult = true;
 			}
 			break;
 
@@ -1112,7 +1071,7 @@ BOOL Picker_HandleNotify(LPNMHDR lpNmHdr)
 				if (pPickerInfo->pCallbacks->pfnEnteringItem)
 					pPickerInfo->pCallbacks->pfnEnteringItem(hWnd, pnmv->lParam);
 			}
-			bResult = TRUE;
+			bResult = true;
 			break;
 
 		case LVN_COLUMNCLICK:
@@ -1120,11 +1079,11 @@ BOOL Picker_HandleNotify(LPNMHDR lpNmHdr)
 			if (pPickerInfo->pCallbacks->pfnGetSortColumn() == Picker_GetRealColumnFromViewColumn(hWnd, pnmv->iSubItem))
 				bReverse = !pPickerInfo->pCallbacks->pfnGetSortReverse();
 			else
-				bReverse = FALSE;
+				bReverse = false;
 			pPickerInfo->pCallbacks->pfnSetSortReverse(bReverse);
 			pPickerInfo->pCallbacks->pfnSetSortColumn(Picker_GetRealColumnFromViewColumn(hWnd, pnmv->iSubItem));
 			Picker_Sort(hWnd);
-			bResult = TRUE;
+			bResult = true;
 			break;
 
 		case LVN_BEGINDRAG:
@@ -1140,11 +1099,8 @@ BOOL Picker_HandleNotify(LPNMHDR lpNmHdr)
 int Picker_GetNumColumns(HWND hWnd)
 {
 	int  nColumnCount = 0;
-	int  i = 0;
-	HWND hwndHeader;
 	int  *shown;
 	struct PickerInfo *pPickerInfo;
-
 	pPickerInfo = GetPickerInfo(hWnd);
 
 	shown = (int*)malloc(pPickerInfo->nColumnCount * sizeof(*shown));
@@ -1152,16 +1108,14 @@ int Picker_GetNumColumns(HWND hWnd)
 		return -1;
 
 	pPickerInfo->pCallbacks->pfnGetColumnShown(shown);
-	hwndHeader = ListView_GetHeader(hWnd);
+	HWND hwndHeader = ListView_GetHeader(hWnd);
 
 	if (GetUseOldControl() || (nColumnCount = Header_GetItemCount(hwndHeader)) < 1)
 	{
 		nColumnCount = 0;
-		for (i = 0; i < pPickerInfo->nColumnCount ; i++ )
-		{
+		for (int i = 0; i < pPickerInfo->nColumnCount ; i++ )
 			if (shown[i])
 				nColumnCount++;
-		}
 	}
 
 	free(shown);
@@ -1176,9 +1130,7 @@ static LPCTSTR MakeShortString(HDC hDC, LPCTSTR lpszLong, int nColumnLen, int nO
 	static const TCHAR szThreeDots[] = TEXT("...");
 	static TCHAR szShort[MAX_PATH];
 	int nStringLen = lstrlen(lpszLong);
-	int nAddLen = 0;
 	SIZE size;
-	int i = 0;
 
 	GetTextExtentPoint32(hDC, lpszLong, nStringLen, &size);
 	if (nStringLen == 0 || size.cx + nOffset <= nColumnLen)
@@ -1186,9 +1138,9 @@ static LPCTSTR MakeShortString(HDC hDC, LPCTSTR lpszLong, int nColumnLen, int nO
 
 	lstrcpy(szShort, lpszLong);
 	GetTextExtentPoint32(hDC, szThreeDots, ARRAY_LENGTH(szThreeDots), &size);
-	nAddLen = size.cx;
+	int nAddLen = size.cx;
 
-	for (i = nStringLen - 1; i > 0; i--)
+	for (int i = nStringLen - 1; i > 0; i--)
 	{
 		szShort[i] = 0;
 		GetTextExtentPoint32(hDC, szShort, i, &size);
@@ -1205,51 +1157,48 @@ static LPCTSTR MakeShortString(HDC hDC, LPCTSTR lpszLong, int nColumnLen, int nO
 
 void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 {
-	struct PickerInfo *pPickerInfo;
-	HDC         hDC = lpDrawItemStruct->hDC;
-	RECT        rcItem = lpDrawItemStruct->rcItem;
-	UINT        uiFlags = ILD_TRANSPARENT;
-	HIMAGELIST  hImageList;
-	int         nItem = lpDrawItemStruct->itemID;
-	COLORREF    clrTextSave = 0;
-	COLORREF    clrBkSave = 0;
-	COLORREF    clrImage = GetSysColor(COLOR_WINDOW);
-	static TCHAR szBuff[MAX_PATH];
-	BOOL        bFocus = (GetFocus() == hWnd);
-	LPCTSTR     pszText;
-	UINT        nStateImageMask = 0;
-	BOOL        bSelected = 0;
-	LV_COLUMN   lvc;
-	LV_ITEM     lvi;
-	RECT        rcAllLabels;
-	RECT        rcLabel;
-	RECT        rcIcon;
-	int         offset = 0;
-	SIZE        size;
-	int         i = 0, j = 0;
-	int         nColumn = 0;
-	int         nColumnMax = 0;
-	int         *order;
-	BOOL        bDrawAsChild = 0;
-	int indent_space = 0;
-	BOOL		bColorChild = FALSE;
-	BOOL		bParentFound = FALSE;
-	int		nParent = 0;
-	HBITMAP		hBackground = GetBackgroundBitmap();
-	MYBITMAPINFO *pbmDesc = GetBackgroundInfo();
-	BOOL res = 0;
-
+	struct       PickerInfo *pPickerInfo;
 	pPickerInfo = GetPickerInfo(hWnd);
-
+	int          *order;
 	order = (int*)malloc(pPickerInfo->nColumnCount * sizeof(*order));
 	if (!order)
 		return;
-	nColumnMax = Picker_GetNumColumns(hWnd);
+
+	HDC          hDC = lpDrawItemStruct->hDC;
+	RECT         rcItem = lpDrawItemStruct->rcItem;
+	UINT         uiFlags = ILD_TRANSPARENT;
+	HIMAGELIST   hImageList;
+	int          nItem = lpDrawItemStruct->itemID;
+	COLORREF     clrTextSave = 0;
+	COLORREF     clrBkSave = 0;
+	COLORREF     clrImage = GetSysColor(COLOR_WINDOW);
+	static TCHAR szBuff[MAX_PATH];
+	BOOL         bFocus = (GetFocus() == hWnd);
+	LPCTSTR      pszText;
+	UINT         nStateImageMask = 0;
+	BOOL         bSelected = 0;
+	LV_COLUMN    lvc;
+	LV_ITEM      lvi;
+	RECT         rcAllLabels;
+	RECT         rcLabel;
+	RECT         rcIcon;
+	int          offset = 0;
+	SIZE         size;
+	int          i = 0, j = 0;
+	int          nColumn = 0;
+	BOOL         bDrawAsChild = 0;
+	int          indent_space = 0;
+	BOOL         bColorChild = false;
+	BOOL         bParentFound = false;
+	int          nParent = 0;
+	HBITMAP      hBackground = GetBackgroundBitmap();
+	MYBITMAPINFO *pbmDesc = GetBackgroundInfo();
+	BOOL         res = 0;
+
+	int nColumnMax = Picker_GetNumColumns(hWnd);
 
 	if (GetUseOldControl())
-	{
 		pPickerInfo->pCallbacks->pfnGetColumnOrder(order);
-	}
 	else
 	{
 		/* Get the Column Order and save it */
@@ -1275,16 +1224,15 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 	GetTextExtentPoint32(hDC, TEXT(" "), 1, &size);
 	offset = size.cx;
 
-	lvi.mask	   = LVIF_TEXT | LVIF_IMAGE | LVIF_STATE | LVIF_PARAM;
-	lvi.iItem	   = nItem;
+	lvi.mask       = LVIF_TEXT | LVIF_IMAGE | LVIF_STATE | LVIF_PARAM;
+	lvi.iItem      = nItem;
 	lvi.iSubItem   = order[0];
-	lvi.pszText	   = szBuff;
+	lvi.pszText    = szBuff;
 	lvi.cchTextMax = sizeof(szBuff) / sizeof(szBuff[0]);
-	lvi.stateMask  = 0xFFFF;	   /* get all state flags */
+	lvi.stateMask  = 0xFFFF;   /* get all state flags */
 	res = ListView_GetItem(hWnd, &lvi);
 
-	bSelected = ((lvi.state & LVIS_DROPHILITED) || ( (lvi.state & LVIS_SELECTED)
-		&& ((bFocus) || (GetWindowLong(hWnd, GWL_STYLE) & LVS_SHOWSELALWAYS))));
+	bSelected = ((lvi.state & LVIS_DROPHILITED) || ( (lvi.state & LVIS_SELECTED) && ((bFocus) || (GetWindowLong(hWnd, GWL_STYLE) & LVS_SHOWSELALWAYS))));
 
 	/* figure out if we indent and draw grayed */
 	if (pPickerInfo->pCallbacks->pfnFindItemParent)
@@ -1294,6 +1242,13 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 	bDrawAsChild = (pPickerInfo->pCallbacks->pfnGetViewMode() == VIEW_GROUPED && (nParent >= 0));
 
 	/* only indent if parent is also in this view */
+#if 1	// minimal listview flickering.
+	if ((nParent >= 0) && bDrawAsChild)
+	{
+		if (GetParentFound(lvi.lParam))
+			bParentFound = TRUE;
+	}
+#else
 	if ((nParent >= 0) && bDrawAsChild)
 	{
 		for (i = 0; i < ListView_GetItemCount(hWnd); i++)
@@ -1309,19 +1264,20 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 			}
 		}
 	}
+#endif
 
 	if (pPickerInfo->pCallbacks->pfnGetOffsetChildren && pPickerInfo->pCallbacks->pfnGetOffsetChildren())
 	{
 		if (!bParentFound && bDrawAsChild)
 		{
 			/*Reset it, as no Parent is there*/
-			bDrawAsChild = FALSE;
-			bColorChild = TRUE;
+			bDrawAsChild = false;
+			bColorChild = true;
 		}
 		else
 		{
 			nParent = -1;
-			bParentFound = FALSE;
+			bParentFound = false;
 		}
 	}
 
@@ -1330,19 +1286,17 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 
 	rcAllLabels.left = rcLabel.left;
 
-	if (hBackground != NULL)
+	if (hBackground)
 	{
-		RECT		rcClient;
-		HRGN		rgnBitmap;
-		RECT		rcTmpBmp = rcItem;
-		RECT		rcFirstItem;
-		HPALETTE	hPAL;
-		HDC 		htempDC;
-		HBITMAP 	oldBitmap;
+		RECT rcClient;
+		HRGN rgnBitmap;
+		RECT rcTmpBmp = rcItem;
+		RECT rcFirstItem;
+		HPALETTE hPAL;
 
-		htempDC = CreateCompatibleDC(hDC);
+		HDC htempDC = CreateCompatibleDC(hDC);
 
-		oldBitmap = (HBITMAP)SelectObject(htempDC, hBackground);
+		HBITMAP oldBitmap = (HBITMAP)SelectObject(htempDC, hBackground);
 
 		GetClientRect(hWnd, &rcClient);
 		rcTmpBmp.right = rcClient.right;
@@ -1361,7 +1315,7 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 
 		if (GetDeviceCaps(htempDC, RASTERCAPS) & RC_PALETTE && hPAL != NULL)
 		{
-			SelectPalette(htempDC, hPAL, FALSE);
+			SelectPalette(htempDC, hPAL, false);
 			RealizePalette(htempDC);
 		}
 
@@ -1405,14 +1359,14 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 		if (bFocus)
 		{
 			clrTextSave = SetTextColor(hDC, GetSysColor(COLOR_HIGHLIGHTTEXT));
-			clrBkSave	= SetBkColor(hDC, GetSysColor(COLOR_HIGHLIGHT));
-			hBrush		= CreateSolidBrush(GetSysColor(COLOR_HIGHLIGHT));
+			clrBkSave = SetBkColor(hDC, GetSysColor(COLOR_HIGHLIGHT));
+			hBrush = CreateSolidBrush(GetSysColor(COLOR_HIGHLIGHT));
 		}
 		else
 		{
 			clrTextSave = SetTextColor(hDC, GetSysColor(COLOR_BTNTEXT));
-			clrBkSave	= SetBkColor(hDC, GetSysColor(COLOR_BTNFACE));
-			hBrush		= CreateSolidBrush(GetSysColor(COLOR_BTNFACE));
+			clrBkSave = SetBkColor(hDC, GetSysColor(COLOR_BTNFACE));
+			hBrush = CreateSolidBrush(GetSysColor(COLOR_BTNFACE));
 		}
 
 		hOldBrush = (HBRUSH)SelectObject(hDC, hBrush);
@@ -1424,9 +1378,7 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 	{
 		if (hBackground == NULL)
 		{
-			HBRUSH hBrush;
-
-			hBrush = CreateSolidBrush(GetSysColor(COLOR_WINDOW));
+			HBRUSH hBrush = CreateSolidBrush(GetSysColor(COLOR_WINDOW));
 			FillRect(hDC, &rcAllLabels, hBrush);
 			DeleteBrush(hBrush);
 		}
@@ -1455,7 +1407,8 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 		clrImage = GetSysColor(COLOR_WINDOW);
 		uiFlags |= ILD_BLEND50;
 	}
-	else if (bSelected)
+	else
+	if (bSelected)
 	{
 		if (bFocus)
 			clrImage = GetSysColor(COLOR_HIGHLIGHT);
@@ -1486,10 +1439,7 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 	{
 		UINT nOvlImageMask = lvi.state & LVIS_OVERLAYMASK;
 		if (rcIcon.left + 16 + indent_space < rcItem.right)
-		{
-			ImageList_DrawEx(hImageList, lvi.iImage, hDC, rcIcon.left, rcIcon.top, 16, 16,
-				GetSysColor(COLOR_WINDOW), clrImage, uiFlags | nOvlImageMask);
-		}
+			ImageList_DrawEx(hImageList, lvi.iImage, hDC, rcIcon.left, rcIcon.top, 16, 16, GetSysColor(COLOR_WINDOW), clrImage, uiFlags | nOvlImageMask);
 	}
 
 	res = ListView_GetItemRect_Modified(hWnd, nItem, &rcItem, LVIR_LABEL);
@@ -1504,20 +1454,20 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 
 	for (nColumn = 1; nColumn < nColumnMax; nColumn++)
 	{
-		int 	nRetLen;
-		UINT	nJustify;
+		int nRetLen;
+		UINT nJustify;
 		LV_ITEM lvItem;
 
 		lvc.mask = LVCF_FMT | LVCF_WIDTH;
 		res = ListView_GetColumn(hWnd, order[nColumn], &lvc);
 
-		lvItem.mask 	  = LVIF_TEXT;
-		lvItem.iItem	  = nItem;
+		lvItem.mask       = LVIF_TEXT;
+		lvItem.iItem      = nItem;
 		lvItem.iSubItem   = order[nColumn];
-		lvItem.pszText	  = szBuff;
+		lvItem.pszText    = szBuff;
 		lvItem.cchTextMax = sizeof(szBuff) / sizeof(szBuff[0]);
 
-		if (ListView_GetItem(hWnd, &lvItem) == FALSE)
+		if (ListView_GetItem(hWnd, &lvItem) == false)
 			continue;
 
 		rcItem.left   = rcItem.right;
@@ -1551,8 +1501,7 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 		rcLabel = rcItem;
 		rcLabel.left  += offset;
 		rcLabel.right -= offset;
-		DrawText(hDC, pszText, -1, &rcLabel,
-				 nJustify | DT_SINGLELINE | DT_NOPREFIX | DT_VCENTER);
+		DrawText(hDC, pszText, -1, &rcLabel, nJustify | DT_SINGLELINE | DT_NOPREFIX | DT_VCENTER);
 	}
 
 	if (lvi.state & LVIS_FOCUSED && bFocus)
@@ -1606,16 +1555,14 @@ void Picker_SetHeaderImageList(HWND hwndPicker, HIMAGELIST hHeaderImages)
 BOOL Picker_SaveColumnWidths(HWND hwndPicker)
 {
 	struct PickerInfo *pPickerInfo;
-	int *widths;
-	int *order;
-	int *tmpOrder;
 	int nColumnMax = 0, i = 0;
-	BOOL bSuccess = FALSE;
+	BOOL bSuccess = false;
 	BOOL res = 0;
 
 	pPickerInfo = GetPickerInfo(hwndPicker);
 
 	/* allocate space for the column info */
+	int *widths, *order, *tmpOrder;
 	widths = (int*)malloc(pPickerInfo->nColumnCount * sizeof(*widths));
 	order = (int*)malloc(pPickerInfo->nColumnCount * sizeof(*order));
 	tmpOrder = (int*)malloc(pPickerInfo->nColumnCount * sizeof(*tmpOrder));
@@ -1634,13 +1581,8 @@ BOOL Picker_SaveColumnWidths(HWND hwndPicker)
 	nColumnMax = Picker_GetNumColumns(hwndPicker);
 
 	if (GetUseOldControl())
-	{
 		for (i = 0; i < nColumnMax; i++)
-		{
-			widths[Picker_GetRealColumnFromViewColumn(hwndPicker, i)] =
-				ListView_GetColumnWidth(hwndPicker, i);
-		}
-	}
+			widths[Picker_GetRealColumnFromViewColumn(hwndPicker, i)] = ListView_GetColumnWidth(hwndPicker, i);
 	else
 	{
 		/* Get the Column Order and save it */
@@ -1648,15 +1590,14 @@ BOOL Picker_SaveColumnWidths(HWND hwndPicker)
 
 		for (i = 0; i < nColumnMax; i++)
 		{
-			widths[Picker_GetRealColumnFromViewColumn(hwndPicker, i)]
-				= ListView_GetColumnWidth(hwndPicker, i);
+			widths[Picker_GetRealColumnFromViewColumn(hwndPicker, i)] = ListView_GetColumnWidth(hwndPicker, i);
 			order[i] = Picker_GetRealColumnFromViewColumn(hwndPicker, tmpOrder[i]);
 		}
 	}
 
 	pPickerInfo->pCallbacks->pfnSetColumnWidths(widths);
 	pPickerInfo->pCallbacks->pfnSetColumnOrder(order);
-	bSuccess = TRUE;
+	bSuccess = true;
 
 done:
 	if (widths)

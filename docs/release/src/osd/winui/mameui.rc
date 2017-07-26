@@ -279,7 +279,7 @@ BEGIN
             MENUITEM "1000%",                       ID_THROTTLE_1000
             MENUITEM "Unlimited",                   ID_THROTTLE_UNTHROTTLED
         END
-        MENUITEM "Show &FPS",                   ID_OPTIONS_TOGGLEFPS
+        MENUITEM "Show F&PS",                   ID_OPTIONS_TOGGLEFPS
     END
     POPUP "&Media"
     BEGIN
@@ -366,16 +366,17 @@ IDI_HEADER_UP           ICON                    "res\\header_up.ico"
 IDI_HEADER_DOWN         ICON                    "res\\header_down.ico"
 
 IDI_WIN_NOROMSNEEDED    ICON                    "res\\win_nrnd.ico"
-IDI_WIN_MISSINGOPTROM	ICON	         	"res\\win_noor.ico"
-IDI_WIN_FLOP            ICON        		"res\\win_flop.ico"
-IDI_WIN_CASS            ICON        		"res\\win_cass.ico"
-IDI_WIN_SERL            ICON       		"res\\win_serl.ico"
-IDI_WIN_SNAP            ICON        		"res\\win_snap.ico"
-IDI_WIN_PRIN            ICON        		"res\\win_prin.ico"
-IDI_WIN_HARD            ICON        		"res\\win_hard.ico"
-IDI_WIN_CYLN            ICON        		"res\\win_cyln.ico"
-IDI_WIN_PTAP            ICON        		"res\\win_ptap.ico"
-IDI_WIN_PCRD            ICON        		"res\\win_pcrd.ico"
+IDI_WIN_MISSINGOPTROM   ICON                    "res\\win_noor.ico"
+IDI_WIN_FLOP            ICON                    "res\\win_flop.ico"
+IDI_WIN_CASS            ICON                    "res\\win_cass.ico"
+IDI_WIN_SERL            ICON                    "res\\win_serl.ico"
+IDI_WIN_SNAP            ICON                    "res\\win_snap.ico"
+IDI_WIN_PRIN            ICON                    "res\\win_prin.ico"
+IDI_WIN_HARD            ICON                    "res\\win_hard.ico"
+IDI_WIN_CYLN            ICON                    "res\\win_cyln.ico"
+IDI_WIN_PTAP            ICON                    "res\\win_ptap.ico"
+IDI_WIN_PCRD            ICON                    "res\\win_pcrd.ico"
+IDI_WIN_MIDI            ICON                    "res\\win_midi.ico"
 IDI_ICON_CART           ICON    DISCARDABLE     "res\\cpu.ico"
 IDI_ICON_HARD           ICON    DISCARDABLE     "res\\harddisk.ico"
 IDI_ICON_CASS           ICON    DISCARDABLE     "res\\win_cass.ico"

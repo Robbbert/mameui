@@ -202,7 +202,6 @@ static const WORD dlgitem_combobox[] = { 0xFFFF, 0x0085 };
 static int joystick_menu_setup = 0;
 static char state_filename[MAX_PATH];
 static void add_filter_entry(std::string &dest, const char *description, const char *extensions);
-static const char* software_dir;
 static std::map<std::string,std::string> slmap;
 struct slot_data { std::string slotname; std::string optname; };
 static std::map<int, slot_data> slot_map;
@@ -2381,8 +2380,13 @@ static bool get_softlist_info(HWND wnd, device_image_interface *img)
 
 static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 {
-	// path name
-	std::string initial_dir = std::string(software_dir);
+	// Get the path for loose software from <gamename>.ini
+	// if this is invalid, then windows chooses whatever directory it used last.
+	char buf[400];
+	strcpy(buf, image->device().machine().options().emu_options::sw_path());
+	// This pulls out the first path from a multipath field
+	const char* t1 = strtok(buf, ";");
+	std::string initial_dir = std::string(t1);
 	// must be specified, must exist
 	if (initial_dir.empty() || (!osd::directory::open(initial_dir.c_str())))
 	{
@@ -2454,9 +2458,12 @@ static void load_item(HWND wnd, device_image_interface *img, bool is_save)
 		size_t t1 = buf.find(".zip"); // get rid of zip name and anything after
 		if (t1 != std::string::npos)
 			buf.erase(t1);
-		t1 = buf.find(".7z"); // get rid of 7zip name and anything after
-		if (t1 != std::string::npos)
-			buf.erase(t1);
+		else
+		{
+			t1 = buf.find(".7z"); // get rid of 7zip name and anything after
+			if (t1 != std::string::npos)
+				buf.erase(t1);
+		}
 		t1 = buf.find_last_of("\\");   // put the swlist name in
 		buf[t1] = ':';
 		t1 = buf.find_last_of("\\"); // get rid of path; we only want the item name
@@ -2798,7 +2805,7 @@ static void prepare_menus(HWND wnd)
 		if (!img.user_loadable())
 			continue;
 
-			new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
+		new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
 		flags_for_exists = MF_STRING;
 
 		if (!img.exists())
@@ -2844,14 +2851,10 @@ static void prepare_menus(HWND wnd)
 				const software_part *tmp = img.part_entry();
 				if (!tmp->name().empty())
 				{
-					filename.append(" (");
-					filename.append(tmp->name());
+					filename.append(" (").append(tmp->name());
 					// also check if this part has a specific part_id (e.g. "Map Disc", "Bonus Disc", etc.), and in case display it
-					if (img.get_feature("part_id") != nullptr)
-					{
-						filename.append(": ");
-						filename.append(img.get_feature("part_id"));
-					}
+					if (img.get_feature("part_id"))
+						filename.append(": ").append(img.get_feature("part_id"));
 					filename.append(")");
 				}
 			}
@@ -2886,11 +2889,7 @@ static void prepare_menus(HWND wnd)
 
 		// name this option
 		const char *slot_option_name = slot.slot_name();
-		if (window->machine().options().slot_options().count(slot_option_name) > 0)
-			current = window->machine().options().slot_options()[slot_option_name].value();
-		else
-		if (slot.default_option())
-			current.assign(slot.default_option());
+		current = window->machine().options().slot_option(slot_option_name).value();
 
 		const device_slot_option *option = slot.option(current.c_str());
 		if (option)
@@ -2930,15 +2929,14 @@ static void prepare_menus(HWND wnd)
 
 static void set_speed(running_machine &machine, int speed)
 {
-	std::string error_string;
 	if (speed != 0)
 	{
 		machine.video().set_speed_factor(speed);
-		machine.options().emu_options::set_value(OPTION_SPEED, speed / 1000, OPTION_PRIORITY_CMDLINE, error_string);
+		machine.options().emu_options::set_value(OPTION_SPEED, speed / 1000, OPTION_PRIORITY_CMDLINE);
 	}
 
 	machine.video().set_throttled(speed != 0);
-	machine.options().emu_options::set_value(OPTION_THROTTLE, (speed != 0), OPTION_PRIORITY_CMDLINE, error_string);
+	machine.options().emu_options::set_value(OPTION_THROTTLE, (speed != 0), OPTION_PRIORITY_CMDLINE);
 }
 
 
@@ -3006,7 +3004,6 @@ static void win_toggle_menubar(void)
 
 static void device_command(HWND wnd, device_image_interface *img, int devoption)
 {
-	std::string error_string;
 	switch(devoption)
 	{
 		case DEVOPTION_OPEN:
@@ -3023,8 +3020,8 @@ static void device_command(HWND wnd, device_image_interface *img, int devoption)
 
 		case DEVOPTION_CLOSE:
 			img->unload();
-			img->device().machine().options().image_options()[img->instance_name()] = "";
-			img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE, error_string);
+			img->device().machine().options().image_option(img->instance_name()).specify("");
+			img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE);
 			break;
 
 		default:
@@ -3187,7 +3184,6 @@ static int pause_for_command(UINT command)
 
 static bool invoke_command(HWND wnd, UINT command)
 {
-	std::string error_string;
 	bool handled = TRUE;
 	int dev_command = 0;
 	device_image_interface *img;
@@ -3311,7 +3307,7 @@ static bool invoke_command(HWND wnd, UINT command)
 
 		case ID_FRAMESKIP_AUTO:
 			window->machine().video().set_frameskip(-1);
-			window->machine().options().emu_options::set_value(OPTION_AUTOFRAMESKIP, 1, OPTION_PRIORITY_CMDLINE, error_string);
+			window->machine().options().emu_options::set_value(OPTION_AUTOFRAMESKIP, 1, OPTION_PRIORITY_CMDLINE);
 			break;
 
 		case ID_HELP_ABOUT_NEWUI:
@@ -3351,8 +3347,8 @@ static bool invoke_command(HWND wnd, UINT command)
 			{
 				// change frameskip
 				window->machine().video().set_frameskip(command - ID_FRAMESKIP_0);
-				window->machine().options().emu_options::set_value(OPTION_AUTOFRAMESKIP, 0, OPTION_PRIORITY_CMDLINE, error_string);
-				window->machine().options().emu_options::set_value(OPTION_FRAMESKIP, (int)command - ID_FRAMESKIP_0, OPTION_PRIORITY_CMDLINE, error_string);
+				window->machine().options().emu_options::set_value(OPTION_AUTOFRAMESKIP, 0, OPTION_PRIORITY_CMDLINE);
+				window->machine().options().emu_options::set_value(OPTION_FRAMESKIP, (int)command - ID_FRAMESKIP_0, OPTION_PRIORITY_CMDLINE);
 			}
 			else
 			if ((command >= ID_DEVICE_0) && (command < ID_DEVICE_0 + (IO_COUNT*DEVOPTION_MAX)))
@@ -3375,7 +3371,8 @@ static bool invoke_command(HWND wnd, UINT command)
 			else
 			if ((command >= 3400) && (command < 4000))
 			{
-				window->machine().options().emu_options::set_value(slot_map[command].slotname.c_str(), slot_map[command].optname.c_str(), OPTION_PRIORITY_CMDLINE, error_string);
+				slot_option &opt(window->machine().options().slot_option(slot_map[command].slotname.c_str()));
+				opt.specify(slot_map[command].optname.c_str());
 				window->machine().schedule_hard_reset();
 			}
 			else
@@ -3500,17 +3497,6 @@ int win_create_menu(running_machine &machine, HMENU *menus)
 	// do not show in the mewui ui.
 	if (strcmp(machine.system().name, "___empty") == 0)
 		return 0;
-
-	// Get the path for loose software from <gamename>.ini
-	// if this is invalid, then windows chooses whatever directory it used last.
-	char buf[400];
-	strcpy(buf, machine.options().emu_options::sw_path());
-	// This pulls out the first path from a multipath field
-	const char* t1 = strtok(buf, ";");
-	if (t1)
-		software_dir = t1; // the first path of many
-	else
-		software_dir = buf; // the only path
 
 	HMODULE module = win_resource_module();
 	HMENU menu_bar = LoadMenu(module, MAKEINTRESOURCE(IDR_RUNTIME_MENU));

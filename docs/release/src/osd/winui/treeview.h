@@ -30,6 +30,7 @@
     SNDMSG(w,TVM_EDITLABEL,0,(LPARAM)(i))
 
 #endif /* defined(__GNUC__) */
+#include "bitmask.h"
 
 /***************************************************************************
     Folder And Filter Definitions
@@ -68,6 +69,7 @@ void CreateManufacturerFolders(int parent_index);
 void CreateYearFolders(int parent_index);
 void CreateSourceFolders(int parent_index);
 void CreateScreenFolders(int parent_index);
+void CreateBIOSFolders(int parent_index);
 void CreateCPUFolders(int parent_index);
 void CreateSoundFolders(int parent_index);
 void CreateOrientationFolders(int parent_index);
