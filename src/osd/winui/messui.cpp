@@ -854,7 +854,7 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *dev, LP
 	device_image_interface* img = 0;
 
 	if (LOG_SOFTWARE)
-		dprintf("MessSpecifyImage(): device=%p pszFilename='%s'\n", dev, pszFilename);
+		printf("MessSpecifyImage(): device=%p pszFilename='%s'\n", dev, pszFilename);
 
 	// identify the file extension
 	const char *file_extension = strrchr(pszFilename, '.'); // find last period
@@ -884,7 +884,7 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *dev, LP
 	{
 		// could not place the image
 		if (LOG_SOFTWARE)
-			dprintf("MessSpecifyImage(): Failed to place image '%s'\n", pszFilename);
+			printf("MessSpecifyImage(): Failed to place image '%s'\n", pszFilename);
 	}
 }
 

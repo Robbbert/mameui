@@ -615,32 +615,32 @@ typedef struct
 
 static const GUISequence GUISequenceControl[]=
 {
-	{"gui_key_up",                input_seq(),    ID_UI_UP,           Get_ui_key_up },
-	{"gui_key_down",              input_seq(),    ID_UI_DOWN,         Get_ui_key_down },
-	{"gui_key_left",              input_seq(),    ID_UI_LEFT,         Get_ui_key_left },
-	{"gui_key_right",             input_seq(),    ID_UI_RIGHT,        Get_ui_key_right },
-	{"gui_key_start",             input_seq(),    ID_UI_START,        Get_ui_key_start },
-	{"gui_key_pgup",              input_seq(),    ID_UI_PGUP,         Get_ui_key_pgup },
-	{"gui_key_pgdwn",             input_seq(),    ID_UI_PGDOWN,       Get_ui_key_pgdwn },
-	{"gui_key_home",              input_seq(),    ID_UI_HOME,         Get_ui_key_home },
-	{"gui_key_end",               input_seq(),    ID_UI_END,          Get_ui_key_end },
-	{"gui_key_ss_change",         input_seq(),    IDC_SSFRAME,        Get_ui_key_ss_change },
-	{"gui_key_history_up",        input_seq(),    ID_UI_HISTORY_UP,   Get_ui_key_history_up },
-	{"gui_key_history_down",      input_seq(),    ID_UI_HISTORY_DOWN, Get_ui_key_history_down },
+	{"gui_key_up",                   input_seq(),  ID_UI_UP,                  Get_ui_key_up },
+	{"gui_key_down",                 input_seq(),  ID_UI_DOWN,                Get_ui_key_down },
+	{"gui_key_left",                 input_seq(),  ID_UI_LEFT,                Get_ui_key_left },
+	{"gui_key_right",                input_seq(),  ID_UI_RIGHT,               Get_ui_key_right },
+	{"gui_key_start",                input_seq(),  ID_UI_START,               Get_ui_key_start },
+	{"gui_key_pgup",                 input_seq(),  ID_UI_PGUP,                Get_ui_key_pgup },
+	{"gui_key_pgdwn",                input_seq(),  ID_UI_PGDOWN,              Get_ui_key_pgdwn },
+	{"gui_key_home",                 input_seq(),  ID_UI_HOME,                Get_ui_key_home },
+	{"gui_key_end",                  input_seq(),  ID_UI_END,                 Get_ui_key_end },
+	{"gui_key_ss_change",            input_seq(),  IDC_SSFRAME,               Get_ui_key_ss_change },
+	{"gui_key_history_up",           input_seq(),  ID_UI_HISTORY_UP,          Get_ui_key_history_up },
+	{"gui_key_history_down",         input_seq(),  ID_UI_HISTORY_DOWN,        Get_ui_key_history_down },
 
-	{"gui_key_context_filters",    input_seq(),    ID_CONTEXT_FILTERS,       Get_ui_key_context_filters },
-	{"gui_key_select_random",      input_seq(),    ID_CONTEXT_SELECT_RANDOM, Get_ui_key_select_random },
-	{"gui_key_game_audit",         input_seq(),    ID_GAME_AUDIT,            Get_ui_key_game_audit },
-	{"gui_key_game_properties",    input_seq(),    ID_GAME_PROPERTIES,       Get_ui_key_game_properties },
-	{"gui_key_help_contents",      input_seq(),    ID_HELP_CONTENTS,         Get_ui_key_help_contents },
-	{"gui_key_update_gamelist",    input_seq(),    ID_UPDATE_GAMELIST,       Get_ui_key_update_gamelist },
-	{"gui_key_view_folders",       input_seq(),    ID_VIEW_FOLDERS,          Get_ui_key_view_folders },
-	{"gui_key_view_fullscreen",    input_seq(),    ID_VIEW_FULLSCREEN,       Get_ui_key_view_fullscreen },
-	{"gui_key_view_pagetab",       input_seq(),    ID_VIEW_PAGETAB,          Get_ui_key_view_pagetab },
-	{"gui_key_view_picture_area",  input_seq(),    ID_VIEW_PICTURE_AREA,     Get_ui_key_view_picture_area },
-	{"gui_key_view_software_area", input_seq(),    ID_VIEW_SOFTWARE_AREA,    Get_ui_key_view_software_area },
-	{"gui_key_view_status",        input_seq(),    ID_VIEW_STATUS,           Get_ui_key_view_status },
-	{"gui_key_view_toolbars",      input_seq(),    ID_VIEW_TOOLBARS,         Get_ui_key_view_toolbars },
+	{"gui_key_context_filters",      input_seq(),  ID_CONTEXT_FILTERS,        Get_ui_key_context_filters },
+	{"gui_key_select_random",        input_seq(),  ID_CONTEXT_SELECT_RANDOM,  Get_ui_key_select_random },
+	{"gui_key_game_audit",           input_seq(),  ID_GAME_AUDIT,             Get_ui_key_game_audit },
+	{"gui_key_game_properties",      input_seq(),  ID_GAME_PROPERTIES,        Get_ui_key_game_properties },
+	{"gui_key_help_contents",        input_seq(),  ID_HELP_CONTENTS,          Get_ui_key_help_contents },
+	{"gui_key_update_gamelist",      input_seq(),  ID_UPDATE_GAMELIST,        Get_ui_key_update_gamelist },
+	{"gui_key_view_folders",         input_seq(),  ID_VIEW_FOLDERS,           Get_ui_key_view_folders },
+	{"gui_key_view_fullscreen",      input_seq(),  ID_VIEW_FULLSCREEN,        Get_ui_key_view_fullscreen },
+	{"gui_key_view_pagetab",         input_seq(),  ID_VIEW_PAGETAB,           Get_ui_key_view_pagetab },
+	{"gui_key_view_picture_area",    input_seq(),  ID_VIEW_PICTURE_AREA,      Get_ui_key_view_picture_area },
+	{"gui_key_view_software_area",   input_seq(),  ID_VIEW_SOFTWARE_AREA,     Get_ui_key_view_software_area },
+	{"gui_key_view_status",          input_seq(),  ID_VIEW_STATUS,            Get_ui_key_view_status },
+	{"gui_key_view_toolbars",        input_seq(),  ID_VIEW_TOOLBARS,          Get_ui_key_view_toolbars },
 
 	{"gui_key_view_tab_cabinet",     input_seq(),  ID_VIEW_TAB_CABINET,       Get_ui_key_view_tab_cabinet },
 	{"gui_key_view_tab_cpanel",      input_seq(),  ID_VIEW_TAB_CONTROL_PANEL, Get_ui_key_view_tab_cpanel },
@@ -649,7 +649,7 @@ static const GUISequence GUISequenceControl[]=
 	{"gui_key_view_tab_marquee",     input_seq(),  ID_VIEW_TAB_MARQUEE,       Get_ui_key_view_tab_marquee },
 	{"gui_key_view_tab_screenshot",  input_seq(),  ID_VIEW_TAB_SCREENSHOT,    Get_ui_key_view_tab_screenshot },
 	{"gui_key_view_tab_title",       input_seq(),  ID_VIEW_TAB_TITLE,         Get_ui_key_view_tab_title },
-	{"gui_key_view_tab_pcb",         input_seq(),  ID_VIEW_TAB_PCB, 	    Get_ui_key_view_tab_pcb },
+	{"gui_key_view_tab_pcb",         input_seq(),  ID_VIEW_TAB_PCB,           Get_ui_key_view_tab_pcb },
 	{"gui_key_quit",                 input_seq(),  ID_FILE_EXIT,              Get_ui_key_quit },
 };
 
@@ -847,8 +847,28 @@ public:
 			vsnprintf(buffer, ARRAY_LENGTH(buffer), msg, args);printf("%s\n",buffer);
 			win_message_box_utf8(!osd_common_t::s_window_list.empty() ? std::static_pointer_cast<win_window_info>(osd_common_t::s_window_list.front())->platform_window() : hMain, buffer, MAMEUINAME, MB_ICONERROR | MB_OK);
 		}
-		else
-			chain_output(channel, msg, args);
+//		else
+//			chain_output(channel, msg, args);   // goes down the black hole
+		// LOG all messages
+		FILE *pFile;
+		pFile = fopen("winui.log", "a");
+		vfprintf(pFile, msg, args);
+		fclose (pFile);
+/*  List of output types:
+		case OSD_OUTPUT_CHANNEL_ERROR:
+		case OSD_OUTPUT_CHANNEL_WARNING:
+			vfprintf(stderr, msg, args);     // send errors and warnings to standard error (=console)
+			break;
+		case OSD_OUTPUT_CHANNEL_INFO:
+		case OSD_OUTPUT_CHANNEL_LOG:
+			vfprintf(stdout, msg, args);     // send info and logging to standard output (=console)
+			break;
+		case OSD_OUTPUT_CHANNEL_VERBOSE:
+			if (verbose()) vfprintf(stdout, msg, args);      // send verbose (2nd half) to console if enabled (first half lost)
+			break;
+		case OSD_OUTPUT_CHANNEL_DEBUG:   // only for debug builds
+			vfprintf(stdout, msg, args);
+*/
 	}
 };
 
@@ -974,7 +994,10 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 
 int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
-	dprintf("MAMEUI starting\n");
+	// delete old log file, ignore any error
+	unlink("winui.log");
+
+	printf("MAMEUI starting\n");
 
 	if (__argc != 1)
 	{
@@ -1649,10 +1672,10 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	extern const FOLDERDATA g_folderData[];
 	extern const FILTER_ITEM g_filterList[];
 
-	dprintf("about to init options\n");
+	printf("about to init options\n");
 	if (!OptionsInit())
 		return false;
-	dprintf("options loaded\n");
+	printf("options loaded\n");
 	//win_message_box_utf8(hMain, "test", emulator_info::get_appname(), MB_OK);
 
 	// create the memory pool
@@ -1683,7 +1706,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	// Are we using an Old comctl32.dll?
 	LONG common_control_version = GetCommonControlVersion();
-	dprintf("common controlversion %ld %ld\n", common_control_version >> 16, common_control_version & 0xffff);
+	printf("common controlversion %ld %ld\n", common_control_version >> 16, common_control_version & 0xffff);
 
 	oldControl = (common_control_version < PACKVERSION(4,71));
 	xpControl = (common_control_version >= PACKVERSION(6,0));
@@ -1709,7 +1732,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	hMain = CreateDialog(hInstance, MAKEINTRESOURCE(IDD_MAIN), 0, NULL);
 	if (hMain == NULL)
 	{
-		dprintf("error creating main dialog, aborting\n");
+		printf("error creating main dialog, aborting\n");
 		return false;
 	}
 
@@ -1847,9 +1870,9 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	LoadBackgroundBitmap();
 
-	dprintf("about to init tree\n");
+	printf("about to init tree\n");
 	InitTree(g_folderData, g_filterList);
-	dprintf("did init tree\n");
+	printf("did init tree\n");
 
 	/* Initialize listview columns */
 	InitMessPicker(); // messui.cpp
@@ -1910,7 +1933,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		ShowCursor(false);
 	}
 
-	dprintf("about to show window\n");
+	printf("about to show window\n");
 
 	nCmdShow = GetWindowState();
 	if (nCmdShow == SW_HIDE || nCmdShow == SW_MINIMIZE || nCmdShow == SW_SHOWMINIMIZED)
@@ -2252,7 +2275,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 		// tell the list view that each row (item) should be just taller than our font
 
 		//DefWindowProc(hWnd, message, wParam, lParam);
-		//dprintf("default row height calculation gives %u\n",lpmis->itemHeight);
+		//printf("default row height calculation gives %u\n",lpmis->itemHeight);
 
 		TEXTMETRIC tm;
 		HDC hDC = GetDC(NULL);
@@ -2263,7 +2286,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 		lpmis->itemHeight = tm.tmHeight + tm.tmExternalLeading + 1;
 		if (lpmis->itemHeight < 17)
 			lpmis->itemHeight = 17;
-		//dprintf("we would do %u\n",tm.tmHeight + tm.tmExternalLeading + 1);
+		//printf("we would do %u\n",tm.tmHeight + tm.tmExternalLeading + 1);
 		SelectObject(hDC,hFontOld);
 		ReleaseDC(NULL,hDC);
 
@@ -3337,7 +3360,7 @@ static void check_for_GUI_action(void)
 
 		if (GUI_seq_pressed(is))
 		{
-			dprintf("seq =%s pressed\n", GUISequenceControl[i].name);
+			printf("seq =%s pressed\n", GUISequenceControl[i].name);
 			switch (GUISequenceControl[i].func_id)
 			{
 			case ID_GAME_AUDIT:
@@ -3358,7 +3381,7 @@ static void check_for_GUI_action(void)
 static void KeyboardStateClear(void)
 {
 	memset(keyboard_state, 0, sizeof(keyboard_state));
-	dprintf("keyboard gui state cleared.\n");
+	printf("keyboard gui state cleared.\n");
 }
 
 
@@ -3423,11 +3446,11 @@ static void KeyboardKeyDown(int syskey, int vk_code, int special)
 	}
 	if (!found)
 	{
-		dprintf("VK_code pressed not found =  %i\n",vk_code);
+		printf("VK_code pressed not found =  %i\n",vk_code);
 		//MessageBox(NULL,"keydown message arrived not processed","TitleBox",MB_OK);
 		return;
 	}
-	dprintf("VK_code pressed found =  %i, sys=%i, mame_keycode=%i special=%08x\n", vk_code, syskey, icode, special);
+	printf("VK_code pressed found =  %i, sys=%i, mame_keycode=%i special=%08x\n", vk_code, syskey, icode, special);
 	keyboard_state[icode] = true;
 	check_for_GUI_action();
 }
@@ -3494,12 +3517,12 @@ static void KeyboardKeyUp(int syskey, int vk_code, int special)
 	}
 	if (!found)
 	{
-		dprintf("VK_code released not found =  %i\n",vk_code);
+		printf("VK_code released not found =  %i\n",vk_code);
 		//MessageBox(NULL,"keyup message arrived not processed","TitleBox",MB_OK);
 		return;
 	}
 	keyboard_state[icode] = false;
-	dprintf("VK_code released found=  %i, sys=%i, mame_keycode=%i special=%08x\n", vk_code, syskey, icode, special );
+	printf("VK_code released found=  %i, sys=%i, mame_keycode=%i special=%08x\n", vk_code, syskey, icode, special );
 	check_for_GUI_action();
 }
 
@@ -5254,7 +5277,7 @@ BOOL CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype)
 	BOOL success = cfd(&ofn);
 	if (success)
 	{
-		//dprintf("got filename %s nFileExtension %u\n",filename,ofn.nFileExtension);
+		//printf("got filename %s nFileExtension %u\n",filename,ofn.nFileExtension);
 		/*GetDirectory(filename,last_directory,sizeof(last_directory));*/
 	}
 
@@ -5933,13 +5956,13 @@ void InitTreeContextMenu(HMENU hTreeMenu)
 
 	if (GetMenuItemInfo(hMenu,3,true,&mii) == false)
 	{
-		dprintf("can't find show folders context menu\n");
+		printf("can't find show folders context menu\n");
 		return;
 	}
 
 	if (mii.hSubMenu == NULL)
 	{
-		dprintf("can't find submenu for show folders context menu\n");
+		printf("can't find submenu for show folders context menu\n");
 		return;
 	}
 
@@ -5979,7 +6002,7 @@ void InitBodyContextMenu(HMENU hBodyContextMenu)
 
 	if (GetMenuItemInfo(hBodyContextMenu,ID_FOLDER_SOURCEPROPERTIES,false,&mii) == false)
 	{
-		dprintf("can't find show folders context menu\n");
+		printf("can't find show folders context menu\n");
 		return;
 	}
 	LPTREEFOLDER lpFolder = GetFolderByName(FOLDER_SOURCE, GetDriverFilename(Picker_GetSelectedItem(hwndList)) );
