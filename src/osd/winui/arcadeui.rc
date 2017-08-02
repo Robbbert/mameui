@@ -245,6 +245,14 @@ BEGIN
         MENUITEM "Soft &Reset",                 ID_OPTIONS_SOFTRESET
         MENUITEM "Ha&rd Reset",                 ID_OPTIONS_HARDRESET
         MENUITEM SEPARATOR
+        POPUP "&Video"
+        BEGIN
+            MENUITEM SEPARATOR
+            MENUITEM "Rotate 0 degrees",        ID_VIDEO_ROTATE_0
+            MENUITEM "Rotate 90 degrees",       ID_VIDEO_ROTATE_90
+            MENUITEM "Rotate 180 degrees",      ID_VIDEO_ROTATE_180
+            MENUITEM "Rotate 270 degrees",      ID_VIDEO_ROTATE_270
+        END
         POPUP "&Keyboard"
         BEGIN
             MENUITEM "Emulated",                    ID_KEYBOARD_EMULATED
@@ -253,18 +261,10 @@ BEGIN
             MENUITEM "Customise Emulated Keyboard...",     ID_KEYBOARD_CUSTOMIZE
         END
         MENUITEM "&Joysticks",                  ID_OPTIONS_JOYSTICKS, GRAYED
-        POPUP "&Video"
-        BEGIN
-		    MENUITEM SEPARATOR
-		    MENUITEM "Rotate 0 degrees",        ID_VIDEO_ROTATE_0
-		    MENUITEM "Rotate 90 degrees",       ID_VIDEO_ROTATE_90
-		    MENUITEM "Rotate 180 degrees",      ID_VIDEO_ROTATE_180
-		    MENUITEM "Rotate 270 degrees",      ID_VIDEO_ROTATE_270
-        END
-        MENUITEM "&Configuration...",           ID_OPTIONS_CONFIGURATION
-        MENUITEM "&DIP Switches...",            ID_OPTIONS_DIPSWITCHES
         MENUITEM "&Miscellaneous Inputs...",    ID_OPTIONS_MISCINPUT
         MENUITEM "&Analog Controls...",         ID_OPTIONS_ANALOGCONTROLS
+        MENUITEM "&DIP Switches...",            ID_OPTIONS_DIPSWITCHES
+        MENUITEM "&Configuration...",           ID_OPTIONS_CONFIGURATION
         MENUITEM SEPARATOR
         POPUP "&Frameskip"
         BEGIN
