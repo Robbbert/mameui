@@ -19,6 +19,11 @@ ERROR_PAGE = string.Template(
         '</html>\n')
 
 
+SORTABLE_TABLE_EPILOGUE = string.Template(
+        '    </tbody>\n'
+        '</table>\n'
+        '<script>make_table_sortable(document.getElementById("${id}"));</script>\n')
+
 MACHINE_PROLOGUE = string.Template(
         '<!DOCTYPE html>\n' \
         '<html>\n' \
@@ -43,9 +48,18 @@ MACHINE_PROLOGUE = string.Template(
         '    <tr><th>Runnable:</th><td>${runnable}</td></tr>\n' \
         '    <tr><th>Source file:</th><td><a href="${sourcehref}">${sourcefile}</a></td></tr>\n')
 
-MACHINE_SLOTS_PLACEHOLDER = string.Template(
+MACHINE_OPTIONS_HEADING = string.Template(
         '<h2>Options</h2>\n' \
-        '<p id="para-cmd-preview"></p>\n' \
+        '<p id="para-cmd-preview"></p>\n')
+
+MACHINE_BIOS_PROLOGUE = string.Template(
+        '<h3>System BIOS</h3>' \
+        '<select id="select-system-bios" onchange="update_cmd_preview()">')
+
+MACHINE_BIOS_OPTION = string.Template(
+        '    <option value="${name}" data-isdefault="${isdefault}">${name} - ${description}</option>\n')
+
+MACHINE_SLOTS_PLACEHOLDER = string.Template(
         '<h3>Slots</h3>\n' \
         '<p id="para-slots-placeholder">Loading slot information&hellip;<p>\n' \
         '<script>fetch_slots("${machine}");</script>\n')
@@ -62,6 +76,15 @@ EXCL_MACHINE_ROW = string.Template(
         '            <td><a href="${machinehref}">${shortname}</a></td>\n' \
         '            <td></td>\n' \
         '            <td></td>\n' \
+        '        </tr>\n')
+
+COMPATIBLE_SLOT_ROW = string.Template(
+        '        <tr>\n' \
+        '            <td><a href="${machinehref}">${shortname}</a></td>\n' \
+        '            <td><a href="${machinehref}">${description}</a></td>\n' \
+        '            <td>${slot}</td>\n' \
+        '            <td>${slotoption}</td>\n' \
+        '            <td><a href="${sourcehref}">${sourcefile}</a></td>\n' \
         '        </tr>\n')
 
 
