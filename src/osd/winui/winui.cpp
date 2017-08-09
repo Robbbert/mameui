@@ -836,6 +836,15 @@ class mameui_output_error : public osd_output
 public:
 	virtual void output_callback(osd_output_channel channel, const char *msg, va_list args)
 	{
+		if (channel == OSD_OUTPUT_CHANNEL_VERBOSE)
+		{
+			FILE *pFile;
+			pFile = fopen("verbose.log", "a");
+			vfprintf(pFile, msg, args);
+			fclose (pFile);
+			return;
+		}
+
 		if (channel == OSD_OUTPUT_CHANNEL_ERROR)
 		{
 			char buffer[2048];
@@ -844,15 +853,16 @@ public:
 			if ((video_config.windowed == 0) && !osd_common_t::s_window_list.empty())
 				winwindow_toggle_full_screen();
 
-			vsnprintf(buffer, ARRAY_LENGTH(buffer), msg, args);printf("%s\n",buffer);
-			win_message_box_utf8(!osd_common_t::s_window_list.empty() ? std::static_pointer_cast<win_window_info>(osd_common_t::s_window_list.front())->platform_window() : hMain, buffer, MAMEUINAME, MB_ICONERROR | MB_OK);
+			vsnprintf(buffer, ARRAY_LENGTH(buffer), msg, args);
+			win_message_box_utf8(!osd_common_t::s_window_list.empty() ?
+				std::static_pointer_cast<win_window_info>(osd_common_t::s_window_list.front())->platform_window() : hMain, buffer, MAMEUINAME, MB_ICONERROR | MB_OK);
 		}
 //		else
 //			chain_output(channel, msg, args);   // goes down the black hole
 		// LOG all messages
 		FILE *pFile;
 		pFile = fopen("winui.log", "a");
-		vfprintf(pFile, msg, args);
+		vfprintf(pFile, msg, args);fflush(pFile);
 		fclose (pFile);
 /*  List of output types:
 		case OSD_OUTPUT_CHANNEL_ERROR:
@@ -920,18 +930,27 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 		if (playopts->aviwrite)
 			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE);
 	}
+
+	// redirect messages to our handler
+	mameui_output_error winerror;
+	osd_output::push(&winerror);
+	osd_printf_verbose("********** STARTING %s **********\n", driver_list::driver(nGameIndex).name);
+	osd_printf_info("********** STARTING %s **********\n", driver_list::driver(nGameIndex).name);
+	
 	//printf("Software=%s:%s\n",g_szSelectedDevice, g_szSelectedSoftware);
 	// These are needed when choosing an item from the SW List
 	if (g_szSelectedSoftware[0] && g_szSelectedDevice[0])
 	{
+		osd_printf_info("Loading from software list: %s %s\n", g_szSelectedDevice, g_szSelectedSoftware);
 		global_opts.set_value(g_szSelectedDevice, g_szSelectedSoftware, OPTION_PRIORITY_CMDLINE);
 		// Add params and clear so next start of driver is without parameters
 		g_szSelectedSoftware[0] = 0;
 		g_szSelectedDevice[0] = 0;
 	}
+	osd_output::pop(&winerror);
 	// Mame will parse all the needed .ini files.
 
-	// prepare to run the game
+	// hide mameui
 	ShowWindow(hMain, SW_HIDE);
 
 	for (i = 0; i < ARRAY_LENGTH(s_nPickers); i++)
@@ -940,18 +959,22 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	// run the emulation
 	time_t start = 0, end = 0;
 	time(&start);
+	// pass down any command-line arguments
 	windows_osd_interface osd(global_opts);
-	// output errors to message boxes
-	mameui_output_error winerror;
 	osd_output::push(&winerror);
 	osd.register_options();
 	mame_machine_manager *manager = mame_machine_manager::instance(global_opts, osd);
 	load_translation(global_opts);
+	// start processes
 	manager->start_http_server();
 	manager->start_luaengine();
+	// run the game
 	manager->execute();
+	osd_printf_info("********** FINISHED %s **********\n", driver_list::driver(nGameIndex).name);
+	// turn off message redirect
 	osd_output::pop(&winerror);
 	global_free(manager);
+	// save game time played
 	time(&end);
 	double elapsedtime = end - start;
 	IncrementPlayTime(nGameIndex, elapsedtime);
@@ -995,6 +1018,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
 	// delete old log file, ignore any error
+	unlink("verbose.log");
 	unlink("winui.log");
 
 	printf("MAMEUI starting\n");

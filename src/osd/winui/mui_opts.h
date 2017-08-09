@@ -113,7 +113,7 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num);
 
 void CreateGameOptions(windows_options &opts, OPTIONS_TYPE opt_type, int driver_index);
 
-winui_options &MameUISettings(void);
+//winui_options &MameUISettings(void);
 windows_options &MameUIGlobal(void);
 
 void LoadFolderFlags(void);

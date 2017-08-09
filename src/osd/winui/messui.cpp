@@ -635,7 +635,7 @@ void DevView_Refresh(HWND hwndDevView)
 //#ifdef __GNUC__
 //#pragma GCC diagnostic ignored "-Wunused-variable"
 //#endif
-static BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
+static BOOL DevView_SetDriver(HWND hwndDevView, const software_config *sconfig)
 {
 	struct DevViewInfo *pDevViewInfo;
 	struct DevViewEntry *pEnt;
@@ -652,10 +652,18 @@ static BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 	DevView_Clear(hwndDevView);
 
 	// copy the config
-	pDevViewInfo->config = config;
+	pDevViewInfo->config = sconfig;
+
+	/* allocate the machine config */
+	// Get the game's options including slots & software
+	windows_options o;
+	const char* name = driver_list::driver(s_config->driver_index).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
+	load_options(o, OPTIONS_GAME, s_config->driver_index);
+	machine_config config(driver_list::driver(s_config->driver_index), o);
 
 	// count total amount of devices
-	for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
+	for (device_image_interface &dev : image_interface_iterator(config.root_device()))
 		if (dev.user_loadable())
 			nDevCount++;
 
@@ -664,7 +672,7 @@ static BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 		// get the names of all of the media-slots so we can then work out how much space is needed to display them
 		ppszDevices = (LPTSTR *) alloca(nDevCount * sizeof(*ppszDevices));
 		i = 0;
-		for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
+		for (device_image_interface &dev : image_interface_iterator(config.root_device()))
 		{
 			if (!dev.user_loadable())
 				continue;
@@ -698,7 +706,7 @@ static BOOL DevView_SetDriver(HWND hwndDevView, const software_config *config)
 		DevView_GetColumns(hwndDevView, &nStaticPos, &nStaticWidth, &nEditPos, &nEditWidth, &nButtonPos, &nButtonWidth);
 
 		// Now actually display the media-slot names, and show the empty boxes and the browse button
-		for (device_image_interface &dev : image_interface_iterator(pDevViewInfo->config->mconfig->root_device()))
+		for (device_image_interface &dev : image_interface_iterator(config.root_device()))
 		{
 			if (!dev.user_loadable())
 				continue;
@@ -798,8 +806,14 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 	SoftwareList_Clear(hwndSoftwareList);
 	SoftwareList_SetDriver(hwndSoftwareList, s_config);
 
+	// Get the game's options including slots & software
+	windows_options o;
+	const char* name = driver_list::driver(drvindex).name;
+	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
+	load_options(o, OPTIONS_GAME, drvindex);
+
 	/* allocate the machine config */
-	machine_config config(driver_list::driver(drvindex),MameUIGlobal());
+	machine_config config(driver_list::driver(drvindex), o);
 
 	for (software_list_device &swlistdev : software_list_device_iterator(config.root_device()))
 	{
@@ -916,8 +930,8 @@ static void MessRemoveImage(int drvindex, const char *pszFilename)
 void MessReadMountedSoftware(int drvindex)
 {
 	// First read stuff into device view
-	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
-		DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
+//	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
+//		DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW)); // crashes cocoe
 
 	// Now read stuff into picker
 	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==0)
@@ -937,11 +951,16 @@ static void MessRefreshPicker(void)
 	int i = 0;
 	LVFINDINFO lvfi;
 	const char *s;
+
+	// Get the game's options including slots & software
 	windows_options o;
 	const char* name = driver_list::driver(s_config->driver_index).name;
 	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, s_config->driver_index);
-	for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
+	/* allocate the machine config */
+	machine_config config(driver_list::driver(s_config->driver_index), o);
+
+	for (device_image_interface &dev : image_interface_iterator(config.root_device()))
 	{
 		if (!dev.user_loadable())
 			continue;
@@ -1314,17 +1333,27 @@ static void DevView_SetSelectedSoftware(HWND hwndDevView, int drvindex, const ma
 // Unused fields: config
 static LPCTSTR DevView_GetSelectedSoftware(HWND hwndDevView, int nDriverIndex, const machine_config *config, const device_image_interface *dev, LPTSTR pszBuffer, UINT nBufferLength)
 {
-	windows_options o;
-	std::string opt_name = dev->instance_name();
-	const char* name = driver_list::driver(nDriverIndex).name;
-	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
-	load_options(o, OPTIONS_GAME, nDriverIndex);
-	//const char* temp = o.value(opt_name.c_str());
-	const std::string temp = o.image_option(opt_name).value();
-
-	if (!temp.empty())
+	BOOL res = false;
+	std::string opt_name, opt_value;
+	if (dev && dev->user_loadable())  //!dev->instance_name().empty())
 	{
-		TCHAR* t_s = ui_wstring_from_utf8(temp.c_str());
+		windows_options o;
+		const char* name = driver_list::driver(nDriverIndex).name;
+		o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
+		load_options(o, OPTIONS_GAME, nDriverIndex);
+
+		opt_name = dev->instance_name();
+		//const char* temp = o.value(opt_name.c_str());
+		//if (o.find_image_option(opt_name))
+			opt_value = o.image_option(opt_name).value().empty() ? "" : o.image_option(opt_name).value();
+
+		if (!opt_value.empty())
+			res = true;
+	}
+
+	if (res)
+	{
+		TCHAR* t_s = ui_wstring_from_utf8(opt_value.c_str());
 		if( t_s )
 		{
 			_sntprintf(pszBuffer, nBufferLength, TEXT("%s"), t_s);
@@ -1663,7 +1692,7 @@ static void SoftwareTabView_OnSelectionChanged(void)
 			ShowWindow(hwndSoftwarePicker, SW_HIDE);
 			ShowWindow(hwndSoftwareDevView, SW_SHOW);
 			ShowWindow(hwndSoftwareList, SW_HIDE);
-			DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
+			//DevView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
 			break;
 		case 2:
 			ShowWindow(hwndSoftwarePicker, SW_HIDE);

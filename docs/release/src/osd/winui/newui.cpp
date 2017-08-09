@@ -283,7 +283,7 @@ static char *ui_utf8_from_wstring(const WCHAR *wstring)
 
 static BOOL win_get_file_name_dialog(win_open_file_name *ofn)
 {
-	BOOL result = FALSE;
+	BOOL result = false;
 	BOOL dialog_result;
 	OPENFILENAME os_ofn;
 	LPTSTR t_filter = NULL;
@@ -359,7 +359,7 @@ static BOOL win_get_file_name_dialog(win_open_file_name *ofn)
 
 		default:
 			// should not reach here
-			dialog_result = FALSE;
+			dialog_result = false;
 			break;
 	}
 
@@ -443,7 +443,7 @@ static void win_scroll_window(HWND window, WPARAM wparam, int scroll_bar, int sc
 	// if the value changed, set the scroll position
 	if (scroll_pos != si.nPos)
 	{
-		SetScrollPos(window, scroll_bar, scroll_pos, TRUE);
+		SetScrollPos(window, scroll_bar, scroll_pos, true);
 		ScrollWindowEx(window, 0, si.nPos - scroll_pos, NULL, NULL, NULL, NULL, SW_SCROLLCHILDREN | SW_INVALIDATE | SW_ERASE);
 	}
 }
@@ -744,7 +744,7 @@ static void dialog_trigger(HWND dlgwnd, WORD trigger_flags)
 
 static INT_PTR CALLBACK dialog_proc(HWND dlgwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 {
-	INT_PTR handled = TRUE;
+	INT_PTR handled = true;
 	std::string buf;
 	WORD command;
 
@@ -777,7 +777,7 @@ static INT_PTR CALLBACK dialog_proc(HWND dlgwnd, UINT msg, WPARAM wparam, LPARAM
 					break;
 
 				default:
-					handled = FALSE;
+					handled = false;
 					break;
 			}
 			break;
@@ -786,7 +786,7 @@ static INT_PTR CALLBACK dialog_proc(HWND dlgwnd, UINT msg, WPARAM wparam, LPARAM
 			if (wparam == SC_CLOSE)
 				EndDialog(dlgwnd, 0);
 			else
-				handled = FALSE;
+				handled = false;
 
 			break;
 
@@ -802,7 +802,7 @@ static INT_PTR CALLBACK dialog_proc(HWND dlgwnd, UINT msg, WPARAM wparam, LPARAM
 			break;
 
 		default:
-			handled = FALSE;
+			handled = false;
 			break;
 	}
 	return handled;
@@ -916,7 +916,7 @@ static LRESULT dialog_scrollbar_init(dialog_box *dialog, HWND dlgwnd, UINT messa
 	si.nPage = pixels_to_ydlgunits * MAX_DIALOG_HEIGHT;
 	si.fMask = SIF_PAGE | SIF_RANGE;
 
-	SetScrollInfo(dlgwnd, SB_VERT, &si, TRUE);
+	SetScrollInfo(dlgwnd, SB_VERT, &si, true);
 	return 0;
 }
 
@@ -1373,7 +1373,7 @@ static void seqselect_start_read_from_main_thread(void *param)
 	int pause_count = 0;
 	while(Machine->paused() && !winwindow_ui_is_paused(*Machine))
 	{
-		winwindow_ui_pause(*Machine, FALSE);
+		winwindow_ui_pause(*Machine, false);
 		pause_count++;
 	}
 
@@ -1395,7 +1395,7 @@ static void seqselect_start_read_from_main_thread(void *param)
 
 	// repause the OSD code
 	while(pause_count--)
-		winwindow_ui_pause(*Machine, TRUE);
+		winwindow_ui_pause(*Machine, true);
 }
 
 
@@ -1430,7 +1430,7 @@ static INT_PTR CALLBACK seqselect_wndproc(HWND editwnd, UINT msg, WPARAM wparam,
 {
 	seqselect_info *stuff;
 	INT_PTR result = 0;
-	BOOL call_baseclass = TRUE;
+	BOOL call_baseclass = true;
 
 	stuff = get_seqselect_info(editwnd);
 
@@ -1442,7 +1442,7 @@ static INT_PTR CALLBACK seqselect_wndproc(HWND editwnd, UINT msg, WPARAM wparam,
 		case WM_KEYUP:
 		case WM_SYSKEYUP:
 			result = 1;
-			call_baseclass = FALSE;
+			call_baseclass = false;
 			break;
 
 		case WM_SETFOCUS:
@@ -1467,7 +1467,7 @@ static INT_PTR CALLBACK seqselect_wndproc(HWND editwnd, UINT msg, WPARAM wparam,
 		case WM_RBUTTONDOWN:
 			SetFocus(editwnd);
 			SendMessage(editwnd, EM_SETSEL, 0, -1);
-			call_baseclass = FALSE;
+			call_baseclass = false;
 			result = 0;
 			break;
 	}
@@ -1580,24 +1580,24 @@ static int win_dialog_add_portselect(dialog_box *dialog, ioport_field *field)
 	{
 		seq_types[seq_count] = SEQ_TYPE_STANDARD;
 		port_suffix[seq_count] = " Analog";
-		is_analog[seq_count] = TRUE;
+		is_analog[seq_count] = true;
 		seq_count++;
 
 		seq_types[seq_count] = SEQ_TYPE_DECREMENT;
 		port_suffix[seq_count] = " Dec";
-		is_analog[seq_count] = FALSE;
+		is_analog[seq_count] = false;
 		seq_count++;
 
 		seq_types[seq_count] = SEQ_TYPE_INCREMENT;
 		port_suffix[seq_count] = " Inc";
-		is_analog[seq_count] = FALSE;
+		is_analog[seq_count] = false;
 		seq_count++;
 	}
 	else
 	{
 		seq_types[seq_count] = SEQ_TYPE_STANDARD;
 		port_suffix[seq_count] = NULL;
-		is_analog[seq_count] = FALSE;
+		is_analog[seq_count] = false;
 		seq_count++;
 	}
 
@@ -1678,7 +1678,7 @@ static int win_dialog_add_standard_buttons(dialog_box *dialog)
 static void before_display_dialog(running_machine &machine)
 {
 	Machine = &machine;
-	winwindow_ui_pause(machine, TRUE);
+	winwindow_ui_pause(machine, true);
 }
 
 
@@ -1689,7 +1689,7 @@ static void before_display_dialog(running_machine &machine)
 
 static void after_display_dialog(running_machine &machine)
 {
-	winwindow_ui_pause(machine, FALSE);
+	winwindow_ui_pause(machine, false);
 }
 
 
@@ -1724,7 +1724,7 @@ static void win_dialog_runmodal(running_machine &machine, HWND wnd, dialog_box *
 static BOOL win_file_dialog(running_machine &machine, HWND parent, win_file_dialog_type dlgtype, const char *filter, const char *initial_dir, char *filename)
 {
 	win_open_file_name ofn;
-	BOOL result = FALSE;
+	BOOL result = false;
 
 	// set up the OPENFILENAME data structure
 	memset(&ofn, 0, sizeof(ofn));
@@ -1844,11 +1844,11 @@ static bool check_for_miscinput(running_machine &machine)
 			&& (this_inputclass != INPUT_CLASS_CONTROLLER)
 			&& (this_inputclass != INPUT_CLASS_KEYBOARD))
 			{
-				return TRUE;
+				return true;
 			}
 		}
 	}
-	return FALSE;
+	return false;
 }
 
 
@@ -2095,11 +2095,11 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 				afield = &field;
 
 				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Digital Speed");
-				if (win_dialog_add_adjuster(dlg, buf, settings.delta, 1, 255, FALSE, store_delta, (void *) afield))
+				if (win_dialog_add_adjuster(dlg, buf, settings.delta, 1, 255, false, store_delta, (void *) afield))
 					goto done;
 
 				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Autocenter Speed");
-				if (win_dialog_add_adjuster(dlg, buf, settings.centerdelta, 0, 255, FALSE, store_centerdelta, (void *) afield))
+				if (win_dialog_add_adjuster(dlg, buf, settings.centerdelta, 0, 255, false, store_centerdelta, (void *) afield))
 					goto done;
 
 				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Reverse");
@@ -2111,7 +2111,7 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 					goto done;
 
 				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Sensitivity");
-				if (win_dialog_add_adjuster(dlg, buf, settings.sensitivity, 1, 255, TRUE, store_sensitivity, (void *) afield))
+				if (win_dialog_add_adjuster(dlg, buf, settings.sensitivity, 1, 255, true, store_sensitivity, (void *) afield))
 					goto done;
 			}
 		}
@@ -2135,12 +2135,12 @@ done:
 
 static char *win_dirname(const char *filename)
 {
-	char *dirname;
-	char *c;
-
 	// NULL begets NULL
 	if (!filename)
 		return NULL;
+
+	char *dirname;
+	char *c;
 
 	// allocate space for it
 	dirname = (char*)malloc(strlen(filename) + 1);
@@ -2172,13 +2172,12 @@ static char *win_dirname(const char *filename)
 
 static void state_dialog(HWND wnd, win_file_dialog_type dlgtype, DWORD fileproc_flags, bool is_load, running_machine &machine)
 {
-	win_open_file_name ofn;
 	char *dir = NULL;
-	int result = 0;
 
 	if (state_filename[0])
 		dir = win_dirname(state_filename);
 
+	win_open_file_name ofn;
 	memset(&ofn, 0, sizeof(ofn));
 	ofn.type = dlgtype;
 	ofn.owner = wnd;
@@ -2191,7 +2190,7 @@ static void state_dialog(HWND wnd, win_file_dialog_type dlgtype, DWORD fileproc_
 	else
 		snprintf(ofn.filename, ARRAY_LENGTH(ofn.filename), "%s", state_filename);
 
-	result = win_get_file_name_dialog(&ofn);
+	BOOL result = win_get_file_name_dialog(&ofn);
 
 	if (result)
 	{
@@ -2215,12 +2214,12 @@ static void state_dialog(HWND wnd, win_file_dialog_type dlgtype, DWORD fileproc_
 
 static void state_load(HWND wnd, running_machine &machine)
 {
-	state_dialog(wnd, WIN_FILE_DIALOG_OPEN, OFN_FILEMUSTEXIST, TRUE, machine);
+	state_dialog(wnd, WIN_FILE_DIALOG_OPEN, OFN_FILEMUSTEXIST, true, machine);
 }
 
 static void state_save_as(HWND wnd, running_machine &machine)
 {
-	state_dialog(wnd, WIN_FILE_DIALOG_SAVE, OFN_OVERWRITEPROMPT, FALSE, machine);
+	state_dialog(wnd, WIN_FILE_DIALOG_SAVE, OFN_OVERWRITEPROMPT, false, machine);
 }
 
 static void state_save(running_machine &machine)
@@ -2386,7 +2385,7 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 	strcpy(buf, image->device().machine().options().emu_options::sw_path());
 	// This pulls out the first path from a multipath field
 	const char* t1 = strtok(buf, ";");
-	std::string initial_dir = std::string(t1);
+	std::string initial_dir = t1 ? std::string(t1) : "";
 	// must be specified, must exist
 	if (initial_dir.empty() || (!osd::directory::open(initial_dir.c_str())))
 	{
@@ -2512,14 +2511,14 @@ static BOOL get_menu_item_string(HMENU menu, UINT item, BOOL by_position, HMENU 
 
 	// call GetMenuItemInfo()
 	if (!GetMenuItemInfo(menu, item, by_position, &mii))
-		return FALSE;
+		return false;
 
 	// return results
 	if (sub_menu)
 		*sub_menu = mii.hSubMenu;
 	if (mii.fType == MFT_SEPARATOR)
 		_sntprintf(buffer, buffer_len, TEXT("-"));
-	return TRUE;
+	return true;
 }
 
 
@@ -2540,7 +2539,7 @@ static HMENU find_sub_menu(HMENU menu, const char *menutext, bool create_sub_men
 		int i = -1;
 		do
 		{
-			if (!get_menu_item_string(menu, ++i, TRUE, &sub_menu, buf, ARRAY_LENGTH(buf)))
+			if (!get_menu_item_string(menu, ++i, true, &sub_menu, buf, ARRAY_LENGTH(buf)))
 			{
 				free(t_menutext);
 				return NULL;
@@ -2557,7 +2556,7 @@ static HMENU find_sub_menu(HMENU menu, const char *menutext, bool create_sub_men
 			mii.cbSize = sizeof(mii);
 			mii.fMask = MIIM_SUBMENU;
 			mii.hSubMenu = CreateMenu();
-			if (!SetMenuItemInfo(menu, i, TRUE, &mii))
+			if (!SetMenuItemInfo(menu, i, true, &mii))
 			{
 				i = GetLastError();
 				return NULL;
@@ -2580,15 +2579,12 @@ static HMENU find_sub_menu(HMENU menu, const char *menutext, bool create_sub_men
 
 static void set_command_state(HMENU menu_bar, UINT command, UINT state)
 {
-	BOOL result = 0;
-
 	MENUITEMINFO mii;
-
 	memset(&mii, 0, sizeof(mii));
 	mii.cbSize = sizeof(mii);
 	mii.fMask = MIIM_STATE;
 	mii.fState = state;
-	result = SetMenuItemInfo(menu_bar, command, FALSE, &mii);
+	BOOL result = SetMenuItemInfo(menu_bar, command, false, &mii);
 	result++;
 }
 
@@ -2613,21 +2609,17 @@ static void remove_menu_items(HMENU menu)
 
 static void setup_joystick_menu(running_machine &machine, HMENU menu_bar)
 {
-	int joystick_count = 0;
-	HMENU joystick_menu;
-	int i = 0;
-	char buf[256];
-	int child_count = 0;
-
-	joystick_menu = find_sub_menu(menu_bar, "&Options\0&Joysticks\0", TRUE);
+	HMENU joystick_menu = find_sub_menu(menu_bar, "&Options\0&Joysticks\0", true);
 	if (!joystick_menu)
 		return;
 
 	// set up joystick menu
-	joystick_count = machine.ioport().count_players();
+	char buf[256];
+	int child_count = 0;
+	int joystick_count = machine.ioport().count_players();
 	if (joystick_count > 0)
 	{
-		for (i = 0; i < joystick_count; i++)
+		for (int i = 0; i < joystick_count; i++)
 		{
 			snprintf(buf, ARRAY_LENGTH(buf), "Joystick %i", i + 1);
 			win_append_menu_utf8(joystick_menu, MF_STRING, ID_JOYSTICK_0 + i, buf);
@@ -2676,28 +2668,9 @@ static int frameskip_level_count(running_machine &machine)
 
 static void prepare_menus(HWND wnd)
 {
-	int i = 0;
-	char buf[MAX_PATH];
-	TCHAR t_buf[MAX_PATH];
-	HMENU menu_bar;
-	HMENU video_menu;
-	HMENU device_menu;
-	HMENU slot_menu;
-	HMENU sub_menu;
-	UINT_PTR new_item;
-	UINT flags_for_exists = 0;
-	UINT flags_for_writing = 0;
-	bool has_config = 0, has_dipswitch = 0, has_keyboard = 0, has_misc = 0, has_analog = 0;
-	int frameskip = 0;
-	int orientation = 0;
-	int speed = 0;
 	LONG_PTR ptr = GetWindowLongPtr(wnd, GWLP_USERDATA);
 	win_window_info *window = (win_window_info *)ptr;
-	const char *view_name;
-	int view_index = 0;
-	ioport_field::user_settings settings;
-
-	menu_bar = GetMenu(wnd);
+	HMENU menu_bar = GetMenu(wnd);
 	if (!menu_bar)
 		return;
 
@@ -2707,25 +2680,25 @@ static void prepare_menus(HWND wnd)
 		joystick_menu_setup = 1;
 	}
 
-	frameskip = window->machine().video().frameskip();
+	int frameskip = window->machine().video().frameskip();
 
-	orientation = window->m_target->orientation();
+	int orientation = window->m_target->orientation();
 
-	speed = window->machine().video().throttled() ? window->machine().video().speed_factor() : 0;
+	int speed = window->machine().video().throttled() ? window->machine().video().speed_factor() : 0;
 
-	has_config = window->machine().ioport().type_class_present(INPUT_CLASS_CONFIG);
-	has_dipswitch = window->machine().ioport().type_class_present(INPUT_CLASS_DIPSWITCH);
-	has_keyboard = window->machine().ioport().type_class_present(INPUT_CLASS_KEYBOARD);
-	has_misc = check_for_miscinput(window->machine());
+	bool has_config = window->machine().ioport().type_class_present(INPUT_CLASS_CONFIG);
+	bool has_dipswitch = window->machine().ioport().type_class_present(INPUT_CLASS_DIPSWITCH);
+	bool has_keyboard = window->machine().ioport().type_class_present(INPUT_CLASS_KEYBOARD);
+	bool has_misc = check_for_miscinput(window->machine());
 
-	has_analog = 0;
+	bool has_analog = false;
 	for (auto &port : window->machine().ioport().ports())
 	{
 		for (ioport_field &field : port.second->fields())
 		{
 			if (port_type_is_analog(field.type()))
 			{
-				has_analog = 1;
+				has_analog = true;
 				break;
 			}
 		}
@@ -2772,20 +2745,24 @@ static void prepare_menus(HWND wnd)
 	set_command_state(menu_bar, ID_THROTTLE_UNTHROTTLED, (speed == 0) ? MFS_CHECKED : MFS_ENABLED);
 
 	set_command_state(menu_bar, ID_FRAMESKIP_AUTO, (frameskip < 0) ? MFS_CHECKED : MFS_ENABLED);
+	int i;
 	for (i = 0; i < frameskip_level_count(window->machine()); i++)
 		set_command_state(menu_bar, ID_FRAMESKIP_0 + i, (frameskip == i) ? MFS_CHECKED : MFS_ENABLED);
 
 	// set up screens in video menu
-	video_menu = find_sub_menu(menu_bar, "&Options\0&Video\0", FALSE);
+	TCHAR t_buf[MAX_PATH];
+	HMENU video_menu = find_sub_menu(menu_bar, "&Options\0&Video\0", false);
 	do
 	{
-		get_menu_item_string(video_menu, 0, TRUE, NULL, t_buf, ARRAY_LENGTH(t_buf));
+		get_menu_item_string(video_menu, 0, true, NULL, t_buf, ARRAY_LENGTH(t_buf));
 		if (_tcscmp(t_buf, TEXT("-")))
 			RemoveMenu(video_menu, 0, MF_BYPOSITION);
 	}
 	while(_tcscmp(t_buf, TEXT("-")));
+
 	i = 0;
-	view_index = window->m_target->view();
+	const char *view_name;
+	int view_index = window->m_target->view();
 	while((view_name = window->m_target->view_name(i)))
 	{
 		TCHAR *t_view_name = ui_wstring_from_utf8(view_name);
@@ -2795,10 +2772,14 @@ static void prepare_menus(HWND wnd)
 	}
 
 	// set up device menu; first remove all existing menu items
-	device_menu = find_sub_menu(menu_bar, "&Media\0", FALSE);
+	HMENU sub_menu, device_menu = find_sub_menu(menu_bar, "&Media\0", false);
 	remove_menu_items(device_menu);
 
+	UINT_PTR new_item;
+	UINT flags_for_exists = 0;
+	UINT flags_for_writing = 0;
 	int cnt = 0;
+	char buf[MAX_PATH];
 	// then set up the actual devices
 	for (device_image_interface &img : image_interface_iterator(window->machine().root_device()))
 	{
@@ -2873,7 +2854,7 @@ static void prepare_menus(HWND wnd)
 	}
 
 	// set up slot menu; first remove all existing menu items
-	slot_menu = find_sub_menu(menu_bar, "&Slots\0", FALSE);
+	HMENU slot_menu = find_sub_menu(menu_bar, "&Slots\0", false);
 	remove_menu_items(slot_menu);
 	cnt = 3400;
 	// cycle through all slots for this system
@@ -2966,7 +2947,7 @@ static void win_toggle_menubar(void)
 		// get before rect
 		style = GetWindowLong(hwnd, GWL_STYLE);
 		exstyle = GetWindowLong(hwnd, GWL_EXSTYLE);
-		AdjustWindowRectEx(&before_rect, style, menu ? TRUE : FALSE, exstyle);
+		AdjustWindowRectEx(&before_rect, style, menu ? true : false, exstyle);
 
 		// toggle the menu
 		if (menu)
@@ -2980,7 +2961,7 @@ static void win_toggle_menubar(void)
 		SetMenu(hwnd, menu);
 
 		// get after rect, and width/height diff
-		AdjustWindowRectEx(&after_rect, style, menu ? TRUE : FALSE, exstyle);
+		AdjustWindowRectEx(&after_rect, style, menu ? true : false, exstyle);
 		width_diff = (after_rect.right - after_rect.left) - (before_rect.right - before_rect.left);
 		height_diff = (after_rect.bottom - after_rect.top) - (before_rect.bottom - before_rect.top);
 
@@ -3007,15 +2988,15 @@ static void device_command(HWND wnd, device_image_interface *img, int devoption)
 	switch(devoption)
 	{
 		case DEVOPTION_OPEN:
-			change_device(wnd, img, FALSE);
+			change_device(wnd, img, false);
 			break;
 
 		case DEVOPTION_ITEM:
-			load_item(wnd, img, FALSE);
+			load_item(wnd, img, false);
 			break;
 
 		case DEVOPTION_CREATE:
-			change_device(wnd, img, TRUE);
+			change_device(wnd, img, true);
 			break;
 
 		case DEVOPTION_CLOSE:
@@ -3184,7 +3165,7 @@ static int pause_for_command(UINT command)
 
 static bool invoke_command(HWND wnd, UINT command)
 {
-	bool handled = TRUE;
+	bool handled = true;
 	int dev_command = 0;
 	device_image_interface *img;
 	LONG_PTR ptr = GetWindowLongPtr(wnd, GWLP_USERDATA);
@@ -3193,7 +3174,7 @@ static bool invoke_command(HWND wnd, UINT command)
 
 	// pause while invoking certain commands
 	if (pause_for_command(command))
-		winwindow_ui_pause(window->machine(), TRUE);
+		winwindow_ui_pause(window->machine(), true);
 
 	switch(command)
 	{
@@ -3226,11 +3207,11 @@ static bool invoke_command(HWND wnd, UINT command)
 			break;
 
 		case ID_KEYBOARD_NATURAL:
-			window->machine().ioport().natkeyboard().set_in_use(TRUE);
+			window->machine().ioport().natkeyboard().set_in_use(true);
 			break;
 
 		case ID_KEYBOARD_EMULATED:
-			window->machine().ioport().natkeyboard().set_in_use(FALSE);
+			window->machine().ioport().natkeyboard().set_in_use(false);
 			break;
 
 		case ID_KEYBOARD_CUSTOMIZE:
@@ -3377,14 +3358,14 @@ static bool invoke_command(HWND wnd, UINT command)
 			}
 			else
 				// bogus command
-			handled = FALSE;
+				handled = false;
 
 			break;
 	}
 
 	// resume emulation
 	if (pause_for_command(command))
-		winwindow_ui_pause(window->machine(), FALSE);
+		winwindow_ui_pause(window->machine(), false);
 
 	return handled;
 }
@@ -3408,7 +3389,7 @@ static void set_menu_text(HMENU menu_bar, int command, const char *text)
 	mii.cbSize = sizeof(mii);
 	mii.fMask = MIIM_TYPE;
 	mii.dwTypeData = t_text;
-	SetMenuItemInfo(menu_bar, command, FALSE, &mii);
+	SetMenuItemInfo(menu_bar, command, false, &mii);
 
 	// cleanup
 	free(t_text);
@@ -3433,7 +3414,7 @@ static int win_setup_menus(running_machine &machine, HMODULE module, HMENU menu_
 	joystick_menu_setup = 0;
 
 	// set up frameskip menu
-	frameskip_menu = find_sub_menu(menu_bar, "&Options\0&Frameskip\0", FALSE);
+	frameskip_menu = find_sub_menu(menu_bar, "&Options\0&Frameskip\0", false);
 
 	if (!frameskip_menu)
 		return 1;

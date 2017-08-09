@@ -202,7 +202,6 @@ static void ResetToDefaults(windows_options &opts, int priority);
 #define MESSUI_SW_SORT_REVERSED       "sw_sort_reversed"
 #define MESSUI_SW_SORT_COLUMN         "sw_sort_column"
 #define MESSUI_SOFTWARE_TAB           "current_software_tab"
-//#define MESSUI_SLPATH                 "slpath"
 
 
 /***************************************************************************
@@ -286,7 +285,6 @@ const options_entry winui_options::s_option_entries[] =
 	{ MUIOPTION_BACKGROUND_DIRECTORY,         "bkground", OPTION_STRING,                 NULL },
 	{ MUIOPTION_ICONS_DIRECTORY,              "icons",    OPTION_STRING,                 NULL },
 	{ MUIOPTION_DATS_DIRECTORY,               "dats",     OPTION_STRING,                 NULL },
-//	{ MESSUI_SLPATH,                          "software", OPTION_STRING, NULL },
 	{ NULL,                                   NULL,       OPTION_HEADER,     "NAVIGATION KEY CODES" },
 	{ MUIOPTION_UI_KEY_UP,                    "KEYCODE_UP",                        OPTION_STRING,          NULL },
 	{ MUIOPTION_UI_KEY_DOWN,                  "KEYCODE_DOWN",                     OPTION_STRING,          NULL },
@@ -501,13 +499,10 @@ static void options_set_color(winui_options &opts, const char *name, COLORREF va
 	char value_str[32];
 
 	if (value == (COLORREF) -1)
-	{
 		snprintf(value_str, ARRAY_LENGTH(value_str), "%d", (int) value);
-	}
 	else
-	{
 		snprintf(value_str, ARRAY_LENGTH(value_str), "%d,%d,%d", (((int) value) >>  0) & 0xFF, (((int) value) >>  8) & 0xFF, (((int) value) >> 16) & 0xFF);
-	}
+
 	opts.set_value(name, value_str, OPTION_PRIORITY_CMDLINE);
 }
 
@@ -516,6 +511,7 @@ static COLORREF options_get_color_default(winui_options &opts, const char *name,
 	COLORREF value = options_get_color(opts, name);
 	if (value == (COLORREF) -1)
 		value = GetSysColor(default_color);
+
 	return value;
 }
 
@@ -1441,18 +1437,15 @@ int GetPlayCount(int driver_index)
 static void ResetPlayVariable(int driver_index, const char *play_variable)
 {
 	if (driver_index < 0)
-	{
 		/* all games */
 		for (int i = 0; i< driver_list::total(); i++)
-		{
 			ResetPlayVariable(i, play_variable);
-		}
-	}
 	else
 	{
 		if (strcmp(play_variable, "count") == 0)
 			game_opts.play_count(driver_index, 0);
-		else if (strcmp(play_variable, "time") == 0)
+		else
+		if (strcmp(play_variable, "time") == 0)
 			game_opts.play_time(driver_index, 0);
 	}
 }
@@ -1480,17 +1473,19 @@ void IncrementPlayTime(int driver_index,int playtime)
 void GetTextPlayTime(int driver_index, char *buf)
 {
 
-	assert(0 <= driver_index && driver_index < driver_list::total());
-	int temp = GetPlayTime(driver_index);
-	int hour = temp / 3600;
-	temp = temp - 3600*hour;
-	int minute = temp / 60; //Calc Minutes
-	int second = temp - 60*minute;
+	if (0 <= driver_index && driver_index < driver_list::total())
+	{
+		int second = GetPlayTime(driver_index);
+		int hour = second / 3600;
+		second -= 3600*hour;
+		int minute = second / 60; //Calc Minutes
+		second -= 60*minute;
 
-	if (hour == 0)
-		sprintf(buf, "%d:%02d", minute, second );
-	else
-		sprintf(buf, "%d:%02d:%02d", hour, minute, second );
+		if (hour == 0)
+			sprintf(buf, "%d:%02d", minute, second );
+		else
+			sprintf(buf, "%d:%02d:%02d", hour, minute, second );
+	}
 }
 
 input_seq* Get_ui_key_up(void)
@@ -2471,12 +2466,12 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 
 		if (game_num > -1)
 		{
-			// global swpath serves a different purpose than for games, so blank it out
-			opts.set_value(OPTION_SWPATH, "", OPTION_PRIORITY_CMDLINE);
 			// Lastly, gamename.ini
 			if (driver)
 			{
 				fname = std::string(GetIniDir()) + PATH_SEPARATOR + std::string(driver->name).append(".ini");
+				const char* name = driver_list::driver(game_num).name;
+				opts.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
 				LoadSettingsFile(opts, fname.c_str());
 			}
 		}
@@ -2688,7 +2683,7 @@ void SetSelectedSoftware(int driver_index, const device_image_interface *dev, co
 
 	if (LOG_SOFTWARE)
 	{
-		dprintf("SetSelectedSoftware(): dev=%p (\'%s\') software='%s'\n", dev, driver_list::driver(driver_index).name, software);
+		printf("SetSelectedSoftware(): dev=%p (\'%s\') software='%s'\n", dev, driver_list::driver(driver_index).name, software);
 	}
 
 	const char* name = driver_list::driver(driver_index).name;
@@ -2708,16 +2703,6 @@ const char *GetCurrentSoftwareTab(void)
 {
 	return MameUISettings().value(MESSUI_SOFTWARE_TAB);
 }
-
-//const char* GetSLDir(void)
-//{
-//	return MameUISettings().value(MESSUI_SLPATH);
-//}
-
-//void SetSLDir(const char* paths)
-//{
-//	MameUISettings().set_value(MESSUI_SLPATH, paths, OPTION_PRIORITY_CMDLINE);
-//}
 
 bool AreOptionsEqual(windows_options &opts1, windows_options &opts2)
 {
