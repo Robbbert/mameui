@@ -44,6 +44,7 @@ typedef struct
 	UINT        m_nIconId; // if >= 0, resource id of icon (IDI_xxx), otherwise index in image list
 	DWORD       m_dwUnset; // Excluded filters
 	DWORD       m_dwSet;   // Implied filters
+	BOOL        m_process;      // 1 = process only if enabled
 	void        (*m_pfnCreateFolders)(int parent_index); // Constructor for special folders
 	BOOL        (*m_pfnQuery)(int nDriver);              // Query function
 	BOOL        m_bExpectedResult;                       // Expected query result

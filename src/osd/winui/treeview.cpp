@@ -277,26 +277,29 @@ void ResetWhichGamesInFolders(void)
 		// setup the games in our built-in folders
 		for (UINT k = 0; g_lpFolderData[k].m_lpTitle; k++)
 		{
-			if (lpFolder->m_nFolderId == g_lpFolderData[k].m_nFolderId)
+			if ((g_lpFolderData[k].m_process && GetShowExtraFolders()) || (!g_lpFolderData[k].m_process))
 			{
-				if (g_lpFolderData[k].m_pfnQuery || g_lpFolderData[k].m_bExpectedResult)
+				if (lpFolder->m_nFolderId == g_lpFolderData[k].m_nFolderId)
 				{
-					SetAllBits(lpFolder->m_lpGameBits, false);
-					for (UINT jj = 0; jj < nGames; jj++)
+					if (g_lpFolderData[k].m_pfnQuery || g_lpFolderData[k].m_bExpectedResult)
 					{
-						// invoke the query function
-						BOOL b = g_lpFolderData[k].m_pfnQuery ? g_lpFolderData[k].m_pfnQuery(jj) : true;
+						SetAllBits(lpFolder->m_lpGameBits, false);
+						for (UINT jj = 0; jj < nGames; jj++)
+						{
+							// invoke the query function
+							BOOL b = g_lpFolderData[k].m_pfnQuery ? g_lpFolderData[k].m_pfnQuery(jj) : true;
 
-						// if we expect false, flip the result
-						if (!g_lpFolderData[k].m_bExpectedResult)
-							b = !b;
+							// if we expect false, flip the result
+							if (!g_lpFolderData[k].m_bExpectedResult)
+								b = !b;
 
-						// if we like what we hear, add the game
-						if (b)
-							AddGame(lpFolder, jj);
+							// if we like what we hear, add the game
+							if (b)
+								AddGame(lpFolder, jj);
+						}
 					}
+					break;
 				}
-				break;
 			}
 		}
 	}
@@ -1426,17 +1429,20 @@ void CreateAllChildFolders(void)
 
 		for (int j = 0; g_lpFolderData[j].m_lpTitle; j++)
 		{
-			if (g_lpFolderData[j].m_nFolderId == lpFolder->m_nFolderId)
+			if ((g_lpFolderData[j].m_process && GetShowExtraFolders()) || (!g_lpFolderData[j].m_process))
 			{
-				lpFolderData = &g_lpFolderData[j];
-				break;
+				if (g_lpFolderData[j].m_nFolderId == lpFolder->m_nFolderId)
+				{
+					lpFolderData = &g_lpFolderData[j];
+					break;
+				}
 			}
 		}
 
-		if (lpFolderData != NULL)
+		if (lpFolderData)
 		{
 			//printf("Found built-in-folder id %i %i\n",i,lpFolder->m_nFolderId);
-			if (lpFolderData->m_pfnCreateFolders != NULL)
+			if (lpFolderData->m_pfnCreateFolders)
 				lpFolderData->m_pfnCreateFolders(i);
 		}
 		else
@@ -1695,11 +1701,14 @@ BOOL InitFolders(void)
 	// built-in top level folders
 	for (i = 0; g_lpFolderData[i].m_lpTitle; i++)
 	{
-		fData = &g_lpFolderData[i];
-		/* get the saved folder flags */
-		dwFolderFlags = GetFolderFlags(numFolders);
-		/* create the folder */
-		AddFolder(NewFolder(fData->m_lpTitle, fData->m_nFolderId, -1, fData->m_nIconId, dwFolderFlags));
+		if ((g_lpFolderData[i].m_process && GetShowExtraFolders()) || (!g_lpFolderData[i].m_process))
+		{
+			fData = &g_lpFolderData[i];
+			/* get the saved folder flags */
+			dwFolderFlags = GetFolderFlags(numFolders);
+			/* create the folder */
+			AddFolder(NewFolder(fData->m_lpTitle, fData->m_nFolderId, -1, fData->m_nIconId, dwFolderFlags));
+		}
 	}
 
 	numExtraFolders = InitExtraFolders();
@@ -1718,7 +1727,6 @@ BOOL InitFolders(void)
 	CreateAllChildFolders();
 	CreateTreeIcons();
 	ResetWhichGamesInFolders();
-	// TODO: make this activate for the current folder when it is selected, instead of during initialisation
 	ResetTreeViewFolders();
 	SelectTreeViewFolder(GetSavedFolderID());
 	LoadFolderFlags();
@@ -1936,8 +1944,9 @@ static LRESULT CALLBACK TreeWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
 LPCFOLDERDATA FindFilter(DWORD folderID)
 {
 	for (int i = 0; g_lpFolderData[i].m_lpTitle; i++)
-		if (g_lpFolderData[i].m_nFolderId == folderID)
-			return &g_lpFolderData[i];
+		if ((g_lpFolderData[i].m_process && GetShowExtraFolders()) || (!g_lpFolderData[i].m_process))
+			if (g_lpFolderData[i].m_nFolderId == folderID)
+				return &g_lpFolderData[i];
 
 	return (LPFOLDERDATA) 0;
 }
