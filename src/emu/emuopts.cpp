@@ -1025,6 +1025,11 @@ slot_option &emu_options::slot_option(const std::string &device_name)
 //  image_option
 //-------------------------------------------------
 
+bool emu_options::find_image_option(const std::string &device_name) // MESSUI
+{
+	auto iter = m_image_options.find(device_name);
+	return (iter != m_image_options.end());
+}
 const image_option &emu_options::image_option(const std::string &device_name) const
 {
 	auto iter = m_image_options.find(device_name);

@@ -69,6 +69,8 @@ void CreateManufacturerFolders(int parent_index);
 void CreateYearFolders(int parent_index);
 void CreateSourceFolders(int parent_index);
 void CreateScreenFolders(int parent_index);
+void CreateResolutionFolders(int parent_index);
+void CreateFPSFolders(int parent_index);
 void CreateBIOSFolders(int parent_index);
 void CreateCPUFolders(int parent_index);
 void CreateSoundFolders(int parent_index);
@@ -99,6 +101,8 @@ enum
 	FOLDER_ORIGINAL,
 	FOLDER_CLONES,
 	FOLDER_RASTER,
+	FOLDER_RESOLUTION,
+	FOLDER_FPS,
 	FOLDER_VECTOR,
 	FOLDER_TRACKBALL,
 	FOLDER_LIGHTGUN,

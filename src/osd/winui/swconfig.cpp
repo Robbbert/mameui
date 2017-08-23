@@ -28,8 +28,7 @@ software_config *software_config_alloc(int driver_index) //, hashfile_error_func
 
 	// allocate the machine config
 	windows_options o;
-	const char* name = driver_list::driver(driver_index).name;
-	o.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
+	load_options(o, OPTIONS_GAME, driver_index, 1);  // need software loaded via optional slots
 	config->mconfig = global_alloc(machine_config(driver_list::driver(driver_index), o));
 
 	// other stuff

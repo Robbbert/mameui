@@ -2850,7 +2850,7 @@ static void prepare_menus(HWND wnd)
 			filename.assign("---");
 
 		// Get instance names instead, like Media View, and mame's File Manager
-		std::string instance = string_format("%s (%s): %s", img.instance_name(), img.brief_instance_name(), filename.c_str());
+		std::string instance = img.instance_name() + std::string(" (") + img.brief_instance_name() + std::string("): ") + filename;
 		std::transform(instance.begin(), instance.begin()+1, instance.begin(), ::toupper); // turn first char to uppercase
 
 		snprintf(buf, ARRAY_LENGTH(buf), "%s", instance.c_str());
@@ -2901,7 +2901,7 @@ static void prepare_menus(HWND wnd)
 		// add each option in sorted order
 		for (device_slot_option *opt : option_list)
 		{
-			std::string temp = string_format("%s (%s)", opt->name(), opt->devtype().fullname());
+			std::string temp = opt->name() + std::string(" (") + opt->devtype().fullname() + std::string(")");
 			slot_map[cnt] = slot_data { slot.slot_name(), opt->name() };
 			win_append_menu_utf8(sub_menu, MF_STRING | (opt->name()==opt_name) ? MF_CHECKED : 0, cnt++, temp.c_str());
 		}
@@ -3008,7 +3008,7 @@ static void device_command(HWND wnd, device_image_interface *img, int devoption)
 		case DEVOPTION_CLOSE:
 			img->unload();
 			img->device().machine().options().image_option(img->instance_name()).specify("");
-			img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE);
+			//img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE);
 			break;
 
 		default:
