@@ -751,8 +751,7 @@ static BOOL MView_SetDriver(HWND hwndMView, const software_config *sconfig)
 			instance = dev.instance_name() + string(" (") + dev.brief_instance_name() + string(")"); // get name of the slot (long and short)
 			std::transform(instance.begin(), instance.begin()+1, instance.begin(), ::toupper); // turn first char to uppercase
 			pEnt->hwndStatic = win_create_window_ex_utf8(0, "STATIC", instance.c_str(), // display it
-				WS_VISIBLE | WS_CHILD, nStaticPos,
-				y, nStaticWidth, nHeight, hwndMView, NULL, NULL, NULL);
+				WS_VISIBLE | WS_CHILD, nStaticPos, y, nStaticWidth, nHeight, hwndMView, NULL, NULL, NULL);
 			y += nHeight;
 
 			pEnt->hwndEdit = win_create_window_ex_utf8(0, "EDIT", "",
@@ -760,8 +759,7 @@ static BOOL MView_SetDriver(HWND hwndMView, const software_config *sconfig)
 				y, nEditWidth, nHeight, hwndMView, NULL, NULL, NULL); // display blank edit box
 
 			pEnt->hwndBrowseButton = win_create_window_ex_utf8(0, "BUTTON", "...",
-				WS_VISIBLE | WS_CHILD, nButtonPos,
-				y, nButtonWidth, nHeight, hwndMView, NULL, NULL, NULL); // display browse button
+				WS_VISIBLE | WS_CHILD, nButtonPos, y, nButtonWidth, nHeight, hwndMView, NULL, NULL, NULL); // display browse button
 
 			if (pEnt->hwndStatic)
 				SendMessage(pEnt->hwndStatic, WM_SETFONT, (WPARAM) pMViewInfo->hFont, true);
@@ -999,7 +997,6 @@ static void MessRefreshPicker(void)
 
 	// Get the game's options including slots & software
 	windows_options o;
-	//o.set_value(OPTION_SYSTEMNAME, driver_list::driver(s_config->driver_index).name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, s_config->driver_index, 1);
 	/* allocate the machine config */
 	machine_config config(driver_list::driver(s_config->driver_index), o);
@@ -1017,7 +1014,7 @@ static void MessRefreshPicker(void)
 			if (i < 0) // not there
 			{
 				// add already loaded software to picker, but not if its already there
-				SoftwarePicker_AddFile(hwndSoftware, s, 1);
+//				SoftwarePicker_AddFile(hwndSoftware, s, 1);    // this adds the 'extra' loaded software item into the list - we don't need to see this
 				i = SoftwarePicker_LookupIndex(hwndSoftware, s); // refresh pointer
 			}
 			if (i >= 0) // is there
@@ -1240,7 +1237,6 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 		return false;
 	string dst, opt_name = dev->instance_name();
 	windows_options o;
-	//o.set_value(OPTION_SYSTEMNAME, driver_list::driver(drvindex).name, OPTION_PRIORITY_CMDLINE); // required
 	load_options(o, OPTIONS_GAME, drvindex, 1);
 	const char* s = o.value(opt_name.c_str());
 
@@ -1391,7 +1387,6 @@ static LPCTSTR MView_GetSelectedSoftware(HWND hwndMView, int nDriverIndex, const
 	if (dev && dev->user_loadable())
 	{
 		windows_options o;
-		//o.set_value(OPTION_SYSTEMNAME, driver_list::driver(nDriverIndex).name, OPTION_PRIORITY_CMDLINE);
 		load_options(o, OPTIONS_GAME, nDriverIndex, 1);
 		printf("MView_GetSelectedSoftware: Got options\n");fflush(stdout);
 		opt_name = dev->instance_name();
@@ -1760,7 +1755,7 @@ static void SoftwareTabView_OnSelectionChanged(void)
 			ShowWindow(hwndSoftwarePicker, SW_HIDE);
 			ShowWindow(hwndSoftwareMView, SW_SHOW);
 			ShowWindow(hwndSoftwareList, SW_HIDE);
-			MView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW)); // crashes MESSUI at start
+			MView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
 			break;
 		case 2:
 			ShowWindow(hwndSoftwarePicker, SW_HIDE);

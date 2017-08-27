@@ -229,7 +229,8 @@ void core_options::entry::validate(const std::string &data)
 	case OPTION_HEADER:
 	default:
 		// anything else is invalid
-		throw options_error_exception("Attempted to set invalid option %s\n", name());
+		//throw options_error_exception("Attempted to set invalid option %s\n", name());    // MESSUI - don't crash for no reason please
+		break;
 	}
 }
 
