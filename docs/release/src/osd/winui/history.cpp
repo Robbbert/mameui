@@ -38,6 +38,7 @@
 #include "mui_util.h"
 #include "mui_opts.h"
 #include "sound/samples.h"
+
 #define WINUI_ARRAY_LENGTH(x) (sizeof(x) / sizeof(x[0]))
 
 
@@ -122,23 +123,12 @@ static bool create_index(std::ifstream &fp, int filenum)
 	fp.seekg(0);
 	std::string file_line, first, second;
 	std::getline(fp, file_line);
+	int position = file_line.size() + 2; // tellg is buggy, this works and is faster
 	while (fp.good())
 	{
 		char t1 = file_line[0];
 		if ((std::count(file_line.begin(),file_line.end(),'=') == 1) && (t1 == '$')) // line must start with $ and contain one =
 		{
-
-			// tellg is buggy, we need to rewind the pointer to the previous $
-			int position = fp.tellg(); // get bugged info
-			fp.seekg(position); // position file to wrong place
-			int c = fp.get(); // now scan backwards until $ found
-			while(c != 0x24)
-			{
-				position--;
-				fp.seekg(position);
-				c = fp.get();
-			}
-
 			// now start by removing all spaces
 			file_line.erase(remove_if(file_line.begin(), file_line.end(), ::isspace), file_line.end());
 			char s[file_line.length()];
@@ -154,6 +144,7 @@ static bool create_index(std::ifstream &fp, int filenum)
 			}
 		}
 		std::getline(fp, file_line);
+		position += (file_line.size() + 2);
 	}
 	// check contents
 //	if (filenum == 0)
@@ -291,7 +282,7 @@ std::string load_sourceinfo(const game_driver *drv, const char* datsdir, int fil
 
 
 // General hardware information
-std::string load_driver_geninfo(const game_driver *drv)
+std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 {
 	machine_config config(*drv, MameUIGlobal());
 	const game_driver *parent = NULL;
@@ -300,37 +291,38 @@ std::string load_driver_geninfo(const game_driver *drv)
 	std::string buffer = "\n**** :GENERAL MACHINE INFO: ****\n\n";
 
 	/* List the game info 'flags' */
-	if (drv->flags & MACHINE_NOT_WORKING)
+	uint32_t cache = GetDriverCacheLower(drvindex);
+	if (BIT(cache, 6))
 		buffer.append("This game doesn't work properly\n");
 
-	if (drv->flags & MACHINE_UNEMULATED_PROTECTION)
+	if (BIT(cache, 22))
 		buffer.append("This game has protection which isn't fully emulated.\n");
 
-	if (drv->flags & MACHINE_IMPERFECT_GRAPHICS)
+	if (BIT(cache, 18))
 		buffer.append("The video emulation isn't 100% accurate.\n");
 
-	if (drv->flags & MACHINE_WRONG_COLORS)
+	if (BIT(cache, 21))
 		buffer.append("The colors are completely wrong.\n");
 
-	if (drv->flags & MACHINE_IMPERFECT_COLORS)
+	if (BIT(cache, 20))
 		buffer.append("The colors aren't 100% accurate.\n");
 
-	if (drv->flags & MACHINE_NO_SOUND)
+	if (BIT(cache, 17))
 		buffer.append("This game lacks sound.\n");
 
-	if (drv->flags & MACHINE_IMPERFECT_SOUND)
+	if (BIT(cache, 16))
 		buffer.append("The sound emulation isn't 100% accurate.\n");
 
-	if (drv->flags & MACHINE_SUPPORTS_SAVE)
+	if (BIT(cache, 7))
 		buffer.append("Save state support.\n");
 
-	if (drv->flags & MACHINE_MECHANICAL)
+	if (BIT(cache, 14))
 		buffer.append("This game contains mechanical parts.\n");
 
-	if (drv->flags & MACHINE_IS_INCOMPLETE)
+	if (BIT(cache, 15))
 		buffer.append("This game was never completed.\n");
 
-	if (drv->flags & MACHINE_NO_SOUND_HW)
+	if (BIT(cache, 13))
 		buffer.append("This game has no sound hardware.\n");
 
 	buffer.append("\n");
@@ -597,11 +589,15 @@ bool validate_datfiles(void)
 char * GetGameHistory(int driver_index, std::string software)
 {
 	std::string fullbuf;
+	if (driver_index < 0)
+			return ConvertToWindowsNewlines(fullbuf.c_str());
+
 	if (validate_datfiles())
 	{
 		// Get the path to dat files
 		char buf[400];
-		strcpy(buf, GetDatsDir());
+		std::string t = GetDatsDir();
+		strcpy(buf, t.c_str());
 		// only want first path
 		const char* datsdir = strtok(buf, ";");
 		// validate software
@@ -628,7 +624,7 @@ char * GetGameHistory(int driver_index, std::string software)
 	else
 		fullbuf = "\nUnable to display info due to an internal error.\n\n\n";
 
-	fullbuf.append(load_driver_geninfo(&driver_list::driver(driver_index)));
+	fullbuf.append(load_driver_geninfo(&driver_list::driver(driver_index), driver_index));
 
 	return ConvertToWindowsNewlines(fullbuf.c_str());
 }
@@ -637,10 +633,14 @@ char * GetGameHistory(int driver_index, std::string software)
 char * GetGameHistory(int driver_index)
 {
 	std::string fullbuf;
+	if (driver_index < 0)
+			return ConvertToWindowsNewlines(fullbuf.c_str());
+
 	if (validate_datfiles())
 	{
 		char buf[400];
-		strcpy(buf, GetDatsDir());
+		std::string t = GetDatsDir();
+		strcpy(buf, t.c_str());
 		// only want first path
 		const char* datsdir = strtok(buf, ";");
 
@@ -658,7 +658,7 @@ char * GetGameHistory(int driver_index)
 	else
 		fullbuf = "\nUnable to display info due to an internal error.\n\n\n";
 
-	fullbuf.append(load_driver_geninfo(&driver_list::driver(driver_index)));
+	fullbuf.append(load_driver_geninfo(&driver_list::driver(driver_index), driver_index));
 
 	return ConvertToWindowsNewlines(fullbuf.c_str());
 }

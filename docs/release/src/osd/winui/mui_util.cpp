@@ -4,7 +4,7 @@
 
 /***************************************************************************
 
-  mui_util.c
+  mui_util.cpp
 
  ***************************************************************************/
 
@@ -60,7 +60,8 @@ struct DriversInfo
 	bool hasRam;
 };
 
-static std::vector<DriversInfo>	drivers_info;
+static std::vector<DriversInfo> drivers_info;
+static bool bFirst = true;
 
 
 enum
@@ -310,10 +311,9 @@ BOOL isDriverVector(const machine_config *config)
 	const screen_device *screen  = config->first_screen();
 
 	if (screen)
-	{
 		if (SCREEN_TYPE_VECTOR == screen->screen_type())
 			return true;
-	}
+
 	return false;
 }
 
@@ -368,6 +368,7 @@ static void SetDriversInfo(void)
 
 static void InitDriversInfo(void)
 {
+	printf("InitDriversInfo: A\n");fflush(stdout);
 	int num_speakers;
 	int total = driver_list::total();
 	const game_driver *gamedrv = NULL;
@@ -376,15 +377,17 @@ static void InitDriversInfo(void)
 
 	for (int ndriver = 0; ndriver < total; ndriver++)
 	{
+		uint32_t cache = GetDriverCacheLower(ndriver);
 		gamedrv = &driver_list::driver(ndriver);
 		gameinfo = &drivers_info[ndriver];
 		machine_config config(*gamedrv, MameUIGlobal());
-
-		gameinfo->isClone = (GetParentRomSetIndex(gamedrv) != -1);
-		gameinfo->isBroken = (gamedrv->flags & (MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_MECHANICAL)) ? true : false;
-		gameinfo->supportsSaveState = ((gamedrv->flags & MACHINE_SUPPORTS_SAVE) != 0);
+		bool const have_parent(strcmp(gamedrv->parent, "0"));
+		auto const parent_idx(have_parent ? driver_list::find(gamedrv->parent) : -1);
+		gameinfo->isClone = ( !have_parent || (0 > parent_idx) || BIT(GetDriverCacheLower(parent_idx),9)) ? false : true;
+		gameinfo->isBroken = (cache & 0x404040) ? true : false;  // (MACHINE_NOT_WORKING | MACHINE_MECHANICAL | protection)
+		gameinfo->supportsSaveState = BIT(cache, 7);  //MACHINE_SUPPORTS_SAVE
 		gameinfo->isHarddisk = false;
-		gameinfo->isVertical = (gamedrv->flags & ORIENTATION_SWAP_XY) ? true : false;
+		gameinfo->isVertical = BIT(cache, 2);  //ORIENTATION_SWAP_XY
 
 		ram_device_iterator iter1(config.root_device());
 		gameinfo->hasRam = (iter1.first() );
@@ -450,64 +453,68 @@ static void InitDriversInfo(void)
 	}
 
 	SetDriversInfo();
+	printf("InitDriversInfo: Finished\n");fflush(stdout);
 }
 
 static int InitDriversCache(void)
 {
+	printf("InitDriversCache: A\n");fflush(stdout);
 	if (RequiredDriverCache())
 	{
+		printf("InitDriversCache: B\n");fflush(stdout);
 		InitDriversInfo();
 		return 0;
 	}
 
-	int cache = -1;
+	printf("InitDriversCache: C\n");fflush(stdout);
+	uint32_t cache_lower, cache_upper;
 	int total = driver_list::total();
-	const game_driver *gamedrv = NULL;
 	struct DriversInfo *gameinfo = NULL;
 
+	printf("InitDriversCache: D\n");fflush(stdout);
 	for (int ndriver = 0; ndriver < total; ndriver++)
 	{
-		gamedrv  = &driver_list::driver(ndriver);
 		gameinfo = &drivers_info[ndriver];
-		cache    = GetDriverCache(ndriver);
+		cache_lower = GetDriverCacheLower(ndriver);
+		cache_upper = GetDriverCacheUpper(ndriver);
 
-		if (cache == -1)
-		{
-			InitDriversInfo();
-			break;
-		}
+		//if (cache == 0)
+		//{
+		//	printf("InitDriversCache: F\n");fflush(stdout);
+		//	InitDriversInfo();
+		//	break;
+		//}
 
-		gameinfo->isBroken  = (gamedrv->flags & (MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_MECHANICAL)) ? true : false;
-		gameinfo->supportsSaveState = ((gamedrv->flags & MACHINE_SUPPORTS_SAVE) != 0);
-		gameinfo->isVertical        =  (gamedrv->flags & ORIENTATION_SWAP_XY) ? true : false;
-		gameinfo->screenCount       =   cache & DRIVER_CACHE_SCREEN;
-		gameinfo->isClone           = ((cache & DRIVER_CACHE_CLONE)     != 0);
-		gameinfo->isHarddisk        = ((cache & DRIVER_CACHE_HARDDISK)  != 0);
-		gameinfo->hasOptionalBIOS   = ((cache & DRIVER_CACHE_BIOS)      != 0);
-		gameinfo->isStereo          = ((cache & DRIVER_CACHE_STEREO)    != 0);
-		gameinfo->isVector          = ((cache & DRIVER_CACHE_VECTOR)    != 0);
-		gameinfo->usesRoms          = ((cache & DRIVER_CACHE_ROMS)      != 0);
-		gameinfo->usesSamples       = ((cache & DRIVER_CACHE_SAMPLES)   != 0);
-		gameinfo->usesTrackball     = ((cache & DRIVER_CACHE_TRACKBALL) != 0);
-		gameinfo->usesLightGun      = ((cache & DRIVER_CACHE_LIGHTGUN)  != 0);
-		gameinfo->usesMouse         = ((cache & DRIVER_CACHE_MOUSE)     != 0);
-		gameinfo->hasRam            = ((cache & DRIVER_CACHE_RAM)       != 0);
+		gameinfo->isBroken          =  (cache_lower & 0x404040) ? true : false; //MACHINE_NOT_WORKING | MACHINE_MECHANICAL | protection
+		gameinfo->supportsSaveState =  BIT(cache_lower, 7) ? true : false;  //MACHINE_SUPPORTS_SAVE
+		gameinfo->isVertical        =  BIT(cache_lower, 2) ? true : false;  //ORIENTATION_XY
+		gameinfo->screenCount       =   cache_upper & DRIVER_CACHE_SCREEN;
+		gameinfo->isClone           = ((cache_upper & DRIVER_CACHE_CLONE)     != 0);
+		gameinfo->isHarddisk        = ((cache_upper & DRIVER_CACHE_HARDDISK)  != 0);
+		gameinfo->hasOptionalBIOS   = ((cache_upper & DRIVER_CACHE_BIOS)      != 0);
+		gameinfo->isStereo          = ((cache_upper & DRIVER_CACHE_STEREO)    != 0);
+		gameinfo->isVector          = ((cache_upper & DRIVER_CACHE_VECTOR)    != 0);
+		gameinfo->usesRoms          = ((cache_upper & DRIVER_CACHE_ROMS)      != 0);
+		gameinfo->usesSamples       = ((cache_upper & DRIVER_CACHE_SAMPLES)   != 0);
+		gameinfo->usesTrackball     = ((cache_upper & DRIVER_CACHE_TRACKBALL) != 0);
+		gameinfo->usesLightGun      = ((cache_upper & DRIVER_CACHE_LIGHTGUN)  != 0);
+		gameinfo->usesMouse         = ((cache_upper & DRIVER_CACHE_MOUSE)     != 0);
+		gameinfo->hasRam            = ((cache_upper & DRIVER_CACHE_RAM)       != 0);
 	}
 
+	printf("InitDriversCache: Finished\n");fflush(stdout);
 	return 0;
 }
 
 static struct DriversInfo* GetDriversInfo(int driver_index)
 {
-	static bool bFirst = true;
-
 	if (bFirst)
 	{
 		bFirst = false;
 
 		drivers_info.clear();
 		drivers_info.reserve(driver_list::total());
-
+		printf("DriversInfo: B\n");fflush(stdout);
 		InitDriversCache();
 	}
 
@@ -531,17 +538,17 @@ BOOL DriverIsHarddisk(int driver_index)
 
 BOOL DriverIsBios(int driver_index)
 {
-	return ( driver_list::driver(driver_index).flags & MACHINE_IS_BIOS_ROOT ) ? true : false;
+	return BIT(GetDriverCacheLower(driver_index), 9);
 }
 
 BOOL DriverIsMechanical(int driver_index)
 {
-	return ( driver_list::driver(driver_index).flags & MACHINE_MECHANICAL ) ? true : false;
+	return BIT(GetDriverCacheLower(driver_index), 14);
 }
 
 BOOL DriverIsArcade(int driver_index)
 {
-	return ((driver_list::driver(driver_index).flags & machine_flags::MASK_TYPE) == machine_flags::TYPE_ARCADE);
+	return ((GetDriverCacheLower(driver_index) & 3) == 0) ? true: false;  //TYPE_ARCADE
 }
 
 BOOL DriverHasOptionalBIOS(int driver_index)
@@ -710,7 +717,8 @@ DWORD win_get_current_directory_utf8(DWORD bufferlength, char* buffer)
 	DWORD result = 0;
 	TCHAR* t_buffer = NULL;
 
-	if( bufferlength > 0 ) {
+	if( bufferlength > 0 )
+	{
 		t_buffer = (TCHAR*)malloc((bufferlength * sizeof(TCHAR)) + 1);
 		if( !t_buffer )
 			return result;
@@ -719,9 +727,11 @@ DWORD win_get_current_directory_utf8(DWORD bufferlength, char* buffer)
 	result = GetCurrentDirectory(bufferlength, t_buffer);
 
 	char* utf8_buffer = NULL;
-	if( bufferlength > 0 ) {
+	if( bufferlength > 0 )
+	{
 		utf8_buffer = ui_utf8_from_wstring(t_buffer);
-		if( !utf8_buffer ) {
+		if( !utf8_buffer )
+		{
 			free(t_buffer);
 			return result;
 		}

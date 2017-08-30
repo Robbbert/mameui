@@ -362,8 +362,7 @@ static void SoftwarePicker_RealizeHash(HWND hwndPicker, int nIndex)
 #pragma GCC diagnostic error "-Wunused-but-set-variable"
 
 
-static BOOL SoftwarePicker_AddFileEntry(HWND hwndPicker, LPCSTR pszFilename,
-	UINT nZipEntryNameLength, UINT32 nCrc, BOOL bForce, bool check)
+static BOOL SoftwarePicker_AddFileEntry(HWND hwndPicker, LPCSTR pszFilename, UINT nZipEntryNameLength, UINT32 nCrc, BOOL bForce, bool check)
 {
 	software_picker_info *pPickerInfo;
 	file_info **ppNewIndex;

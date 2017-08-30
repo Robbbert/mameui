@@ -637,7 +637,7 @@ int Picker_GetSelectedItem(HWND hWnd)
 {
 	int nItem = ListView_GetNextItem(hWnd, -1, LVIS_SELECTED | LVIS_FOCUSED);
 	if (nItem < 0)
-		return 0;
+		return nItem;
 
 	LV_ITEM lvi;
 	memset(&lvi, 0, sizeof(lvi));

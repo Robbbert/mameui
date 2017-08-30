@@ -6469,7 +6469,7 @@ static LPTREEFOLDER GetSelectedFolder(void)
 		TVITEM tvi;
 		tvi.hItem = htree;
 		tvi.mask = TVIF_PARAM;
-		TreeView_GetItem(hTreeView,&tvi);
+		(void)TreeView_GetItem(hTreeView,&tvi);
 		return (LPTREEFOLDER)tvi.lParam;
 	}
 	return NULL;
@@ -6486,7 +6486,7 @@ static HICON GetSelectedFolderIcon(void)
 		TVITEM tvi;
 		tvi.hItem = htree;
 		tvi.mask = TVIF_PARAM;
-		TreeView_GetItem(hTreeView,&tvi);
+		(void)TreeView_GetItem(hTreeView,&tvi);
 		folder = (LPTREEFOLDER)tvi.lParam;
 		HIMAGELIST hSmall_icon;
 		//hSmall_icon = TreeView_GetImageList(hTreeView,(int)tvi.iImage);

@@ -288,7 +288,7 @@ void mame_ui_manager::display_startup_screens(bool first_time)
 	const int maxstate = 3;
 	int str = machine().options().seconds_to_run();
 	bool show_gameinfo = !machine().options().skip_gameinfo();
-	bool show_warnings = true, show_mandatory_fileman = true;
+	bool show_warnings = true, show_mandatory_fileman = false; //true; //MESSUI
 
 	// disable everything if we are using -str for 300 or fewer seconds, or if we're the empty driver,
 	// or if we are debugging
@@ -822,7 +822,7 @@ void mame_ui_manager::process_natural_keyboard()
 	while (machine().ui_input().pop_event(&event))
 	{
 		// if this was a UI_EVENT_CHAR event, post it
-		if (event.event_type == UI_EVENT_CHAR)
+		if (event.event_type == ui_event::IME_CHAR)
 			machine().ioport().natkeyboard().post(event.ch);
 	}
 

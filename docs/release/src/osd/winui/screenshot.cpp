@@ -197,30 +197,27 @@ inline void store_pixels(UINT8 *buf, int len)
 static bool png_read_bitmap_gui(util::core_file &mfile, HGLOBAL *phDIB, HPALETTE *pPAL)
 {
 	png_info p;
-	if (png_read_file(mfile, &p) != PNGERR_NONE)
+	if (p.read_file(mfile) != PNGERR_NONE)
 		return 0;
 
 	if (p.color_type != 3 && p.color_type != 2)
 	{
 		printf("PNG Unsupported color type %i (has to be 2 or 3)\n", p.color_type);
-		//png_free(&p);
 		//return 0;                    Leave in so ppl can see incompatibility
 	}
 
 	if (p.interlace_method != 0)
 	{
 		printf("PNG Interlace unsupported\n");
-		png_free(&p);
 		return 0;
 	}
 
 	/* Convert < 8 bit to 8 bit */
-	png_expand_buffer_8bit(&p);
+	p.expand_buffer_8bit();
 
 	if (!AllocatePNG(&p, phDIB, pPAL))
 	{
 		printf("PNG Unable to allocate memory to display screenshot\n");
-		png_free(&p);
 		return 0;
 	}
 
@@ -228,7 +225,7 @@ static bool png_read_bitmap_gui(util::core_file &mfile, HGLOBAL *phDIB, HPALETTE
 
 	for (uint32_t i = 0; i < p.height; i++)
 	{
-		UINT8 *ptr = p.image + i * (p.width * bytespp);
+		UINT8 *ptr = &p.image[i * (p.width * bytespp)];
 
 		if (p.color_type == 2) /*(p->bit_depth > 8) */
 		{
@@ -243,10 +240,8 @@ static bool png_read_bitmap_gui(util::core_file &mfile, HGLOBAL *phDIB, HPALETTE
 				ptr += 3;
 			}
 		}
-		store_pixels(p.image + i * (p.width * bytespp), p.width * bytespp);
+		store_pixels(&p.image[i * (p.width * bytespp)], p.width * bytespp);
 	}
-
-	png_free(&p);
 
 	return 1;
 }
@@ -263,7 +258,7 @@ static osd_file::error OpenRawDIBFile(const char *dir_name, const char *filename
 	file = NULL;
 
 	// look for the raw file
-	std::string fname = std::string(dir_name) + PATH_SEPARATOR + std::string(filename);
+	string fname = string(dir_name) + PATH_SEPARATOR + string(filename);
 	return util::core_file::open(fname.c_str(), OPEN_FLAG_READ, file);
 }
 
@@ -276,7 +271,7 @@ static osd_file::error OpenZipDIBFile(const char *dir_name, const char *zip_name
 	file = NULL;
 
 	// look into zip file
-	std::string fname = std::string(dir_name) + PATH_SEPARATOR + std::string(zip_name) + ".zip";
+	string fname = string(dir_name) + PATH_SEPARATOR + string(zip_name) + ".zip";
 	if (util::archive_file::open_zip(fname, zip) == util::archive_file::error::NONE)
 	{
 		if (zip->search(filename, false) >= 0)
@@ -289,7 +284,7 @@ static osd_file::error OpenZipDIBFile(const char *dir_name, const char *zip_name
 	}
 	else
 	{
-		fname = std::string(dir_name) + PATH_SEPARATOR + std::string(zip_name) + ".7z";
+		fname = string(dir_name) + PATH_SEPARATOR + string(zip_name) + ".7z";
 		if (util::archive_file::open_7z(fname, zip) == util::archive_file::error::NONE)
 		{
 			if (zip->search(filename, false) >= 0)
@@ -311,6 +306,7 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 	util::core_file::ptr file = NULL;
 	char fullpath[400];
 	const char* zip_name;
+	string t;
 
 	if (pPal)
 		DeletePalette(pPal);
@@ -318,31 +314,31 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 	switch (pic_type)
 	{
 		case TAB_SCREENSHOT:
-			strcpy(fullpath, GetImgDir());
+			t = GetImgDir();
 			zip_name = "snap";
 			break;
 		case TAB_FLYER:
-			strcpy(fullpath, GetFlyerDir());
+			t = GetFlyerDir();
 			zip_name = "flyers";
 			break;
 		case TAB_CABINET:
-			strcpy(fullpath, GetCabinetDir());
+			t = GetCabinetDir();
 			zip_name = "cabinets";
 			break;
 		case TAB_MARQUEE:
-			strcpy(fullpath, GetMarqueeDir());
+			t = GetMarqueeDir();
 			zip_name = "marquees";
 			break;
 		case TAB_TITLE:
-			strcpy(fullpath, GetTitlesDir());
+			t = GetTitlesDir();
 			zip_name = "titles";
 			break;
 		case TAB_CONTROL_PANEL:
-			strcpy(fullpath, GetControlPanelDir());
+			t = GetControlPanelDir();
 			zip_name = "cpanel";
 			break;
 		case TAB_PCB:
-			strcpy(fullpath, GetPcbDir());
+			t = GetPcbDir();
 			zip_name = "pcb";
 			break;
 		default :
@@ -351,12 +347,13 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 	}
 
 	// we need to split the filename into the game name (system_name), and the software-list item name (file_name)
+	strcpy(fullpath, t.c_str());
 	char tempfile [400];
 	strcpy(tempfile, filename);
 	char* system_name = strtok(tempfile, ":");
 	char* file_name = strtok(NULL, ":");
 	void *buffer = NULL;
-	std::string fname;
+	string fname;
 
 	// Support multiple paths
 	char* partpath = strtok(fullpath, ";");
@@ -370,20 +367,20 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 		if (file_name)
 		{
 			// Try dir/system/game.png
-			fname = std::string(system_name) + PATH_SEPARATOR + std::string(file_name) + ".png";
+			fname = string(system_name) + PATH_SEPARATOR + string(file_name) + ".png";
 			filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
 
 			// Try dir/system.zip/game.png
 			if (filerr != osd_file::error::NONE)
 			{
-				fname = std::string(file_name) + ".png";
+				fname = string(file_name) + ".png";
 				filerr = OpenZipDIBFile(partpath, system_name, fname.c_str(), file, &buffer);
 			}
 
 			// Try dir/system.zip/system/game.png
 			if (filerr != osd_file::error::NONE)
 			{
-				fname = std::string(system_name) + "/" + std::string(file_name) + ".png";
+				fname = string(system_name) + "/" + string(file_name) + ".png";
 				filerr = OpenZipDIBFile(partpath, system_name, fname.c_str(), file, &buffer);
 			}
 
@@ -397,7 +394,7 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 		// give up on software-specific, try dir/system.png
 		if (filerr != osd_file::error::NONE)
 		{
-			fname = std::string(system_name) + ".png";
+			fname = string(system_name) + ".png";
 			filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
 		}
 
@@ -407,19 +404,19 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 			if (filerr != osd_file::error::NONE)
 			{
 				//%g/%i
-				fname = std::string(system_name) + PATH_SEPARATOR + "0000.png";
+				fname = string(system_name) + PATH_SEPARATOR + "0000.png";
 				filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
 			}
 			if (filerr != osd_file::error::NONE)
 			{
 				//%g%i
-				fname = std::string(system_name) + "0000.png";
+				fname = string(system_name) + "0000.png";
 				filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
 			}
 			if (filerr != osd_file::error::NONE)
 			{
 				//%g/%g%i
-				fname = std::string(system_name) + PATH_SEPARATOR + std::string(system_name) + "0000.png";
+				fname = string(system_name) + PATH_SEPARATOR + string(system_name) + "0000.png";
 				filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
 			}
 		}
@@ -427,7 +424,7 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 		// Try dir/zipfile/system.png
 		if (filerr != osd_file::error::NONE)
 		{
-			fname = std::string(system_name) + ".png";
+			fname = string(system_name) + ".png";
 			filerr = OpenZipDIBFile(partpath, zip_name, fname.c_str(), file, &buffer);
 		}
 
@@ -490,8 +487,10 @@ HBITMAP DIBToDDB(HDC hDC, HANDLE hDIB, LPMYBITMAPINFO desc)
 BOOL LoadScreenShot(int nGame, LPCSTR lpSoftwareName, int nType)
 {
 	/* Delete the last ones */
+	//printf("LoadScreenShot: A\n");fflush(stdout);
 	FreeScreenShot();
 
+	//printf("LoadScreenShot: B\n");fflush(stdout);
 	BOOL loaded = false;
 	BOOL isclone = DriverIsClone(nGame);
 	int nParentIndex = -1;
@@ -499,18 +498,26 @@ BOOL LoadScreenShot(int nGame, LPCSTR lpSoftwareName, int nType)
 		nParentIndex = GetParentIndex(&driver_list::driver(nGame));
 
 	// If software item, see if picture exist (correct parent is passed in lpSoftwareName)
+	//printf("LoadScreenShot: C\n");fflush(stdout);
 	if (lpSoftwareName)
 		loaded = LoadDIB(lpSoftwareName, &m_hDIB, &m_hPal, nType);
 
 	// If game, see if picture exist. Or, if no picture for the software, use game's picture.
+	//printf("LoadScreenShot: D\n");fflush(stdout);
 	if (!loaded)
 	{
+		//printf("LoadScreenShot: E\n");fflush(stdout);
 		loaded = LoadDIB(driver_list::driver(nGame).name, &m_hDIB, &m_hPal, nType);
 		// none? try parent
+		//printf("LoadScreenShot: F\n");fflush(stdout);
 		if (!loaded && isclone)
+		{
+			//printf("LoadScreenShot: G\n");fflush(stdout);
 			loaded = LoadDIB(driver_list::driver(nParentIndex).name, &m_hDIB, &m_hPal, nType);
+		}
 	}
 
+	//printf("LoadScreenShot: K\n");fflush(stdout);
 	if (loaded)
 	{
 		HDC hdc = GetDC(GetMainWindow());
@@ -518,6 +525,7 @@ BOOL LoadScreenShot(int nGame, LPCSTR lpSoftwareName, int nType)
 		ReleaseDC(GetMainWindow(),hdc);
 	}
 
+	printf("LoadScreenShot: Finished\n");fflush(stdout);
 	return loaded;
 }
 
@@ -530,7 +538,7 @@ BOOL LoadDIBBG(HGLOBAL *phDIB, HPALETTE *pPal)
 		DeletePalette(pPal);
 
 	// look for the raw file
-	std::string fname = GetBgDir();
+	string fname = GetBgDir();
 	if (util::core_file::open(fname.c_str(), OPEN_FLAG_READ, file) == osd_file::error::NONE)
 	{
 		success = png_read_bitmap_gui(*file, phDIB, pPal);

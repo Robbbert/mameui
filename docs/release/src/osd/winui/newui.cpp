@@ -1060,6 +1060,14 @@ static WCHAR *win_dialog_wcsdup(dialog_box *dialog, const WCHAR *s)
 //============================================================
 //  win_dialog_add_active_combobox
 //    called from win_dialog_add_combobox
+//       dialog = handle of dialog box?
+//       item_label = name of key
+//       default_value = current value of key
+//       storeval = function to handle changed key
+//       storeval_param = ?
+//       changed = ?
+//       changed_param = ?
+//       rc = return code (1 = failure)
 //============================================================
 
 static int win_dialog_add_active_combobox(dialog_box *dialog, const char *item_label, int default_value,
@@ -1071,8 +1079,8 @@ static int win_dialog_add_active_combobox(dialog_box *dialog, const char *item_l
 
 	dialog_new_control(dialog, &x, &y);
 
-	if (dialog_write_item(dialog, WS_CHILD | WS_VISIBLE | SS_LEFT,
-			x, y, dialog->layout->label_width, DIM_COMBO_ROW_HEIGHT, item_label, DLGITEM_STATIC, NULL))
+	// put name of key on the left
+	if (dialog_write_item(dialog, WS_CHILD | WS_VISIBLE | SS_LEFT, x, y, dialog->layout->label_width, DIM_COMBO_ROW_HEIGHT, item_label, DLGITEM_STATIC, NULL))
 		goto done;
 
 	y += DIM_BOX_VERTSKEW;
@@ -1082,7 +1090,7 @@ static int win_dialog_add_active_combobox(dialog_box *dialog, const char *item_l
 			x, y, dialog->layout->combo_width, DIM_COMBO_ROW_HEIGHT * 8, NULL, DLGITEM_COMBOBOX, NULL))
 		goto done;
 	dialog->combo_string_count = 0;
-	dialog->combo_default_value = default_value;
+	dialog->combo_default_value = default_value; // show current value
 
 	// add the trigger invoked when the apply button is pressed
 	if (dialog_add_trigger(dialog, dialog->item_count, TRIGGER_APPLY, 0, dialog_get_combo_value, 0, 0, storeval, storeval_param))
@@ -1090,10 +1098,8 @@ static int win_dialog_add_active_combobox(dialog_box *dialog, const char *item_l
 
 	// if appropriate, add the optional changed trigger
 	if (changed)
-	{
 		if (dialog_add_trigger(dialog, dialog->item_count, TRIGGER_INITDIALOG | TRIGGER_CHANGED, 0, dialog_combo_changed, (WPARAM) changed, (LPARAM) changed_param, NULL, NULL))
 			goto done;
-	}
 
 	x += dialog->layout->combo_width + DIM_HORIZONTAL_SPACING;
 	y += DIM_COMBO_ROW_HEIGHT + DIM_VERTICAL_SPACING * 2;
@@ -1383,7 +1389,7 @@ static void seqselect_start_read_from_main_thread(void *param)
 	while(stuff->poll_state == SEQSELECT_STATE_POLLING)
 	{
 		// poll
-		if (Machine->input().seq_poll())
+		if (Machine->input().seq_poll())       // This never returns anything, so updating keys doesn't work.
 		{
 			*stuff->code = Machine->input().seq_poll_final();
 			seqselect_settext(editwnd);
@@ -1540,7 +1546,7 @@ static int dialog_add_single_seqselect(struct _dialog_box *di, short x, short y,
 	stuff->is_analog = is_analog;
 
 	// This next line is completely unsafe, but I do not know what to use *****************
-	stuff->code = const_cast <input_seq*> (&field->seq( (input_seq_type) seqtype) );
+	stuff->code = const_cast <input_seq*> (&field->seq( SEQ_TYPE_STANDARD ));
 
 	if (dialog_add_trigger(di, di->item_count, TRIGGER_INITDIALOG, 0, seqselect_setup, di->item_count, (LPARAM) stuff, NULL, NULL))
 		return 1;
@@ -1903,11 +1909,11 @@ done:
 
 
 //============================================================
-//  storeval_inputport
+//  update_keyval
 //    called from customise_switches
 //============================================================
 
-static void storeval_inputport(void *param, int val)
+static void update_keyval(void *param, int val)
 {
 	ioport_field *field = (ioport_field *) param;
 	ioport_field::user_settings settings;
@@ -1949,7 +1955,7 @@ static void customise_switches(running_machine &machine, HWND wnd, const char* t
 
 				field.get_user_settings(settings);
 				afield = &field;
-				if (win_dialog_add_combobox(dlg, switch_name, settings.value, storeval_inputport, (void *) afield))
+				if (win_dialog_add_combobox(dlg, switch_name, settings.value, update_keyval, (void *) afield))
 					goto done;
 
 				for (setting = field.settings().first(); setting; setting = setting->next())
@@ -2844,7 +2850,7 @@ static void prepare_menus(HWND wnd)
 			filename.assign("---");
 
 		// Get instance names instead, like Media View, and mame's File Manager
-		std::string instance = string_format("%s (%s): %s", img.instance_name(), img.brief_instance_name(), filename.c_str());
+		std::string instance = img.instance_name() + std::string(" (") + img.brief_instance_name() + std::string("): ") + filename;
 		std::transform(instance.begin(), instance.begin()+1, instance.begin(), ::toupper); // turn first char to uppercase
 
 		snprintf(buf, ARRAY_LENGTH(buf), "%s", instance.c_str());
@@ -2895,7 +2901,7 @@ static void prepare_menus(HWND wnd)
 		// add each option in sorted order
 		for (device_slot_option *opt : option_list)
 		{
-			std::string temp = string_format("%s (%s)", opt->name(), opt->devtype().fullname());
+			std::string temp = opt->name() + std::string(" (") + opt->devtype().fullname() + std::string(")");
 			slot_map[cnt] = slot_data { slot.slot_name(), opt->name() };
 			win_append_menu_utf8(sub_menu, MF_STRING | (opt->name()==opt_name) ? MF_CHECKED : 0, cnt++, temp.c_str());
 		}
@@ -3002,7 +3008,7 @@ static void device_command(HWND wnd, device_image_interface *img, int devoption)
 		case DEVOPTION_CLOSE:
 			img->unload();
 			img->device().machine().options().image_option(img->instance_name()).specify("");
-			img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE);
+			//img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE);
 			break;
 
 		default:

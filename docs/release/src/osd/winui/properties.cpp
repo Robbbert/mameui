@@ -415,29 +415,25 @@ static PROPSHEETPAGE *CreatePropSheetPages(HINSTANCE hInst, BOOL bOnlyDefault,
 // This is for the DEFAULT property-page options only
 void InitDefaultPropertyPage(HINSTANCE hInst, HWND hWnd)
 {
-	PROPSHEETHEADER pshead;
-	PROPSHEETPAGE   *pspage;
-
 	// clear globals
 	g_nGame = GLOBAL_OPTIONS;
 	windows_options dummy;
-	pCurrentOpts.copy_from(dummy);
-	pOrigOpts.copy_from(dummy);
-	pDefaultOpts.copy_from(dummy);
+	OptionsCopy(dummy,pDefaultOpts);
+	OptionsCopy(dummy,pOrigOpts);
+	OptionsCopy(dummy,pCurrentOpts);
 
 	/* Get default options to populate property sheets */
-	load_options(pCurrentOpts, OPTIONS_GLOBAL, g_nGame);
-	load_options(pOrigOpts, OPTIONS_GLOBAL, g_nGame);
-	load_options(pDefaultOpts, OPTIONS_GLOBAL, -2);
-
-	/* Stash the result for comparing later */
-	//CreateGameOptions(pOrigOpts, OPTIONS_TYPE_GLOBAL);
+	load_options(pCurrentOpts, OPTIONS_GLOBAL, g_nGame, 0);
+	load_options(pOrigOpts, OPTIONS_GLOBAL, g_nGame, 0);
+	load_options(pDefaultOpts, OPTIONS_GLOBAL, -2, 0);
 
 	g_nPropertyMode = OPTIONS_GLOBAL;
 	BuildDataMap();
 
+	PROPSHEETHEADER pshead;
 	ZeroMemory(&pshead, sizeof(pshead));
 
+	PROPSHEETPAGE   *pspage;
 	pspage = CreatePropSheetPages(hInst, true, -1, &pshead.nPages, false);
 	if (!pspage)
 		return;
@@ -472,11 +468,6 @@ void InitPropertyPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYPE opt_
 
 void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYPE opt_type, int folder_id, int game_num, int start_page )
 {
-	PROPSHEETHEADER pshead;
-	PROPSHEETPAGE   *pspage;
-	TCHAR*          t_description = 0;
-///	OPTIONS_TYPE    default_type = opt_type;
-
 	if (highlight_brush == NULL)
 		highlight_brush = CreateSolidBrush(HIGHLIGHT_COLOR);
 
@@ -484,15 +475,17 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 		background_brush = CreateSolidBrush(GetSysColor(COLOR_3DFACE));
 
 	// Initialize the options
-	load_options(pCurrentOpts, opt_type, game_num);
-	load_options(pOrigOpts, opt_type, game_num);
-	if (game_num == GLOBAL_OPTIONS)
-		load_options(pDefaultOpts, OPTIONS_GLOBAL, -2); // base opts is the backup for global
-	else
-		load_options(pDefaultOpts, OPTIONS_GLOBAL, -1); // global is the backup for games
+	windows_options dummy;
+	OptionsCopy(dummy,pDefaultOpts);
+	OptionsCopy(dummy,pOrigOpts);
+	OptionsCopy(dummy,pCurrentOpts);
 
-	// Copy current_options to original options
-///	CreateGameOptions(pOrigOpts, OPTIONS_TYPE_GLOBAL);
+	load_options(pCurrentOpts, opt_type, game_num, 1);
+	load_options(pOrigOpts, opt_type, game_num, 1);
+	if (game_num == GLOBAL_OPTIONS)
+		load_options(pDefaultOpts, OPTIONS_GLOBAL, -2, 0); // base opts is the backup for global
+	else
+		load_options(pDefaultOpts, OPTIONS_GLOBAL, -1, 0); // global is the backup for games
 
 	// Copy icon to use for the property pages
 	g_hIcon = CopyIcon(hIcon);
@@ -504,20 +497,18 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 	// Keep track of OPTIONS_TYPE that was passed in.
 	g_nPropertyMode = opt_type;
 
-	// Evaluate if the current set uses the Default set
-	//g_bUseDefaults = (pCurrentOpts != pDefaultOpts);
-	//g_bReset = false;
 	BuildDataMap();
 
+	PROPSHEETHEADER pshead;
 	ZeroMemory(&pshead, sizeof(PROPSHEETHEADER));
 
 	// Set the game to audit to this game
 
 	// Create the property sheets
+	PROPSHEETPAGE *pspage;
 	if( OPTIONS_GAME == opt_type )
 	{
 		InitGameAudit(game_num);
-//		pspage = CreatePropSheetPages(hInst, false, &driver_list::driver(game_num), &pshead.nPages, true);
 		pspage = CreatePropSheetPages(hInst, false, game_num, &pshead.nPages, true);
 	}
 	else
@@ -526,8 +517,8 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 	if (!pspage)
 		return;
 
-
 	// Get the description use as the dialog caption.
+	TCHAR* t_description = 0;
 	switch( opt_type )
 	{
 	case OPTIONS_GAME:
@@ -692,7 +683,7 @@ static char *GameInfoScreen(UINT nIndex)
 				char tmpbuf[256];
 				const rectangle &visarea = screen.visible_area();
 
-				if (driver_list::driver(nIndex).flags & ORIENTATION_SWAP_XY)
+				if (BIT(GetDriverCacheLower(nIndex), 2)) //ORIENTATION_SWAP_XY
 				{
 					sprintf(tmpbuf,"%d x %d (V) %f Hz\n",
 							visarea.max_y - visarea.min_y + 1,
@@ -718,61 +709,66 @@ static char *GameInfoScreen(UINT nIndex)
 const char *GameInfoStatus(int driver_index, BOOL bRomStatus)
 {
 	static char buffer[1024];
+	if (driver_index < 0)
+		return buffer;
+
 	int audit_result = GetRomAuditResults(driver_index);
+	uint32_t cache = GetDriverCacheLower(driver_index);
 	memset(buffer,0,sizeof(char)*1024);
 	if ( bRomStatus )
 	{
 		if (IsAuditResultKnown(audit_result) == false)
 			strcpy(buffer, "Unknown");
-		else if (IsAuditResultYes(audit_result))
+		else
+		if (IsAuditResultYes(audit_result))
 		{
 			if (DriverIsBroken(driver_index))
 			{
 				strcpy(buffer, "Not working");
 
-				if (driver_list::driver(driver_index).flags & MACHINE_UNEMULATED_PROTECTION)
+				if (BIT(cache, 22))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Game protection isn't fully emulated");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_WRONG_COLORS)
+				if (BIT(cache, 21))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Colors are completely wrong");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_COLORS)
+				if (BIT(cache, 20))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Colors aren't 100% accurate");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_GRAPHICS)
+				if (BIT(cache, 18))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Video emulation isn't 100% accurate");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_NO_SOUND)
+				if (BIT(cache, 17))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Game lacks sound");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_SOUND)
+				if (BIT(cache, 16))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Sound emulation isn't 100% accurate");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_NO_COCKTAIL)
+				if (BIT(cache, 8))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Screen flipping is not supported");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_REQUIRES_ARTWORK)
+				if (BIT(cache, 10))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
@@ -783,49 +779,49 @@ const char *GameInfoStatus(int driver_index, BOOL bRomStatus)
 			{
 				strcpy(buffer, "Working");
 
-				if (driver_list::driver(driver_index).flags & MACHINE_UNEMULATED_PROTECTION)
+				if (BIT(cache, 22))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Game protection isn't fully emulated");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_WRONG_COLORS)
+				if (BIT(cache, 21))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Colors are completely wrong");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_COLORS)
+				if (BIT(cache, 20))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Colors aren't 100% accurate");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_GRAPHICS)
+				if (BIT(cache, 18))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Video emulation isn't 100% accurate");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_NO_SOUND)
+				if (BIT(cache, 17))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Game lacks sound");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_SOUND)
+				if (BIT(cache, 16))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Sound emulation isn't 100% accurate");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_NO_COCKTAIL)
+				if (BIT(cache, 8))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
 					strcat(buffer, "Screen flipping is not supported");
 				}
-				if (driver_list::driver(driver_index).flags & MACHINE_REQUIRES_ARTWORK)
+				if (BIT(cache, 10))
 				{
 					if (*buffer != '\0')
 						strcat(buffer, "\r\n");
@@ -845,49 +841,49 @@ const char *GameInfoStatus(int driver_index, BOOL bRomStatus)
 		else
 			strcpy(buffer, "Working");
 
-		if (driver_list::driver(driver_index).flags & MACHINE_UNEMULATED_PROTECTION)
+		if (BIT(cache, 22))
 		{
 			if (*buffer != '\0')
 				strcat(buffer, "\r\n");
 			strcat(buffer, "Game protection isn't fully emulated");
 		}
-		if (driver_list::driver(driver_index).flags & MACHINE_WRONG_COLORS)
+		if (BIT(cache, 21))
 		{
-		if (*buffer != '\0')
+			if (*buffer != '\0')
 				strcat(buffer, "\r\n");
 			strcat(buffer, "Colors are completely wrong");
 		}
-		if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_COLORS)
+		if (BIT(cache, 20))
 		{
 			if (*buffer != '\0')
 				strcat(buffer, "\r\n");
 			strcat(buffer, "Colors aren't 100% accurate");
 		}
-		if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_GRAPHICS)
+		if (BIT(cache, 18))
 		{
 			if (*buffer != '\0')
 				strcat(buffer, "\r\n");
 			strcat(buffer, "Video emulation isn't 100% accurate");
 		}
-		if (driver_list::driver(driver_index).flags & MACHINE_NO_SOUND)
+		if (BIT(cache, 17))
 		{
 			if (*buffer != '\0')
 				strcat(buffer, "\r\n");
 			strcat(buffer, "Game lacks sound");
 		}
-		if (driver_list::driver(driver_index).flags & MACHINE_IMPERFECT_SOUND)
+		if (BIT(cache, 16))
 		{
 			if (*buffer != '\0')
 				strcat(buffer, "\r\n");
 			strcat(buffer, "Sound emulation isn't 100% accurate");
 		}
-		if (driver_list::driver(driver_index).flags & MACHINE_NO_COCKTAIL)
+		if (BIT(cache, 8))
 		{
 			if (*buffer != '\0')
 				strcat(buffer, "\r\n");
 			strcat(buffer, "Screen flipping is not supported");
 		}
-		if (driver_list::driver(driver_index).flags & MACHINE_REQUIRES_ARTWORK)
+		if (BIT(cache, 10))
 		{
 			if (*buffer != '\0')
 				strcat(buffer, "\r\n");
@@ -1905,7 +1901,8 @@ static BOOL DefaultInputPopulateControl(datamap *map, HWND dialog, HWND control,
 	res = ComboBox_SetItemData(control, index, "");
 	index++;
 
-	TCHAR *t_ctrldir = ui_wstring_from_utf8(GetCtrlrDir());
+	std::string t = GetCtrlrDir();
+	TCHAR *t_ctrldir = ui_wstring_from_utf8(t.c_str());
 	if( !t_ctrldir )
 	{
 		if( t_buf )
@@ -2924,7 +2921,7 @@ static BOOL DirListPopulateControl(datamap *map, HWND dialog, HWND control, wind
 	// access the directory list, and convert to TCHARs
 	int driver_index = PropertiesCurrentGame(dialog);
 	windows_options o;
-	load_options(o, OPTIONS_GAME, driver_index);
+	load_options(o, OPTIONS_GAME, driver_index, 0);
 	const char* paths = o.value(OPTION_SWPATH);
 	TCHAR* t_dir_list = ui_wstring_from_utf8(paths);
 	paths = 0;
