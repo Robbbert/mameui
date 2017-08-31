@@ -98,7 +98,7 @@ public:
 		m_total = driver_list::total();
 		m_list.reserve(m_total);
 
-		driver_options option = { -1, -1, 0, 0, 0, 0 };
+		driver_options option = { -1, -1, 0, 0, 0 };
 
 		for (int i = 0; i < m_total; i++)
 			m_list[i] = option;
@@ -183,30 +183,30 @@ public:
 
 				ft = info.imperfect_features();
 				// BIT 16 = IMPERFECT_SOUND
-				t = (ft & device_t::feature::SOUND) ? 1 : 0;
+				t = (ft & device_t::feature::SOUND) ? 1 : 0; // 0x10000
 				m_cache |= (t << 16);
 				// BIT 18 = IMPERFECT_GRAPHICS
-				t = (ft & device_t::feature::GRAPHICS) ? 1 : 0;
+				t = (ft & device_t::feature::GRAPHICS) ? 1 : 0; // 0x40000
 				m_cache |= (t << 18);
 				// BIT 20 = IMPERFECT_COLOUR
-				t = (ft & device_t::feature::PALETTE) ? 1 : 0;
+				t = (ft & device_t::feature::PALETTE) ? 1 : 0; // 0x100000
 				m_cache |= (t << 20);
 				// BIT 22 = PROTECTION
-				t = (ft & device_t::feature::PROTECTION) ? 1 : 0;
+				t = (ft & device_t::feature::PROTECTION) ? 1 : 0; // 0x400000
 				m_cache |= (t << 22);
 				// BIT 23 = IMPERFECT_CONTROLS
-				t = (ft & device_t::feature::CONTROLS) ? 1 : 0;
+				t = (ft & device_t::feature::CONTROLS) ? 1 : 0; // 0x800000
 				m_cache |= (t << 23);
 
 				ft = info.unemulated_features();
 				// BIT 17 = NO_SOUND
-				t = (ft & device_t::feature::SOUND) ? 1 : 0;
+				t = (ft & device_t::feature::SOUND) ? 1 : 0; // 0x20000
 				m_cache |= (t << 17);
 				// BIT 19 = NO_GRAPHICS
-				t = (ft & device_t::feature::GRAPHICS) ? 1 : 0;
+				t = (ft & device_t::feature::GRAPHICS) ? 1 : 0; // 0x80000
 				m_cache |= (t << 19);
 				// BIT 21 = NO_COLOUR
-				t = (ft & device_t::feature::PALETTE) ? 1 : 0;
+				t = (ft & device_t::feature::PALETTE) ? 1 : 0; // 0x200000
 				m_cache |= (t << 21);
 
 				m_list[i].cache_lower = m_cache;

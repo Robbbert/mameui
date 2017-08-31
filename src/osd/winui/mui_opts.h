@@ -340,6 +340,8 @@ void ResetPlayTime(int driver_index);
 
 const char * GetVersionString(void);
 
+bool DriverHasSoftware(int drvindex);
+
 void SaveDefaultOptions(void);
 
 BOOL IsGlobalOption(const char *option_name);

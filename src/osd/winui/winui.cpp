@@ -1330,37 +1330,11 @@ void UpdateSoftware(void)
 		ToolBar_CheckButton(s_hToolBar, ID_VIEW_SOFTWARE_AREA, MF_UNCHECKED);
 	}
 
-	ResizeTreeAndListViews(false);
-
-	if (GetShowSoftware())
+	//int nGame = Picker_GetSelectedItem(hwndList);
+	if (GetShowSoftware()) // && DriverHasSoftware(nGame))   // not working correctly, look at it later
 	{
 		ShowWindow(GetDlgItem(hMain,IDC_SWTAB),SW_SHOW);
-
-		HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
-		HWND hwndSoftwareDevView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
-		HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
-
-		int nTab = TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB));
-
-		switch(nTab)
-		{
-			case 0:
-				ShowWindow(hwndSoftwarePicker, SW_SHOW);
-				ShowWindow(hwndSoftwareDevView, SW_HIDE);
-				ShowWindow(hwndSoftwareList, SW_HIDE);
-				break;
-
-			case 1:
-				ShowWindow(hwndSoftwarePicker, SW_HIDE);
-				ShowWindow(hwndSoftwareDevView, SW_SHOW);
-				ShowWindow(hwndSoftwareList, SW_HIDE);
-				break;
-			case 2:
-				ShowWindow(hwndSoftwarePicker, SW_HIDE);
-				ShowWindow(hwndSoftwareDevView, SW_HIDE);
-				ShowWindow(hwndSoftwareList, SW_SHOW);
-				break;
-		}
+		SoftwareTabView_OnSelectionChanged();
 	}
 	else
 	{
@@ -1369,6 +1343,7 @@ void UpdateSoftware(void)
 		ShowWindow(GetDlgItem(hMain,IDC_SOFTLIST),SW_HIDE);
 		ShowWindow(GetDlgItem(hMain,IDC_SWTAB),SW_HIDE);
 	}
+	ResizeTreeAndListViews(false);
 }
 
 
@@ -1924,7 +1899,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	printf("Win32UI_init: Adjusting..\n");fflush(stdout);
 	AdjustMetrics();
-	UpdateSoftware();
+	//UpdateSoftware();
 	UpdateScreenShot();
 
 	hAccel = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDA_TAB_KEYS));
@@ -3125,7 +3100,7 @@ static void DisableSelection()
 static void EnableSelection(int nGame)
 {
 	printf("EnableSelection: A\n");fflush(stdout);
-	MyFillSoftwareList(nGame, false); // messui.cpp
+	BOOL has_software = MyFillSoftwareList(nGame, false); // messui.cpp
 	printf("EnableSelection: B\n");fflush(stdout);
 
 	TCHAR* t_description = ui_wstring_from_utf8(ConvertAmpersandString(ModifyThe(driver_list::driver(nGame).type.fullname())));
@@ -3168,7 +3143,10 @@ static void EnableSelection(int nGame)
 	printf("EnableSelection: F\n");fflush(stdout);
 	EnableMenuItem(hMenu, ID_FILE_PLAY, MF_ENABLED);
 	EnableMenuItem(hMenu, ID_FILE_PLAY_RECORD, MF_ENABLED);
-	EnableMenuItem(hMenu, ID_MESS_OPEN_SOFTWARE, MF_ENABLED);
+	if (has_software)
+		EnableMenuItem(hMenu, ID_MESS_OPEN_SOFTWARE, MF_ENABLED);
+	else
+		EnableMenuItem(hMenu, ID_MESS_OPEN_SOFTWARE, MF_GRAYED);
 
 	if (!oldControl)
 		EnableMenuItem(hMenu, ID_GAME_PROPERTIES, MF_ENABLED);
@@ -3181,6 +3159,7 @@ static void EnableSelection(int nGame)
 
 	printf("EnableSelection: H\n");fflush(stdout);
 	UpdateScreenShot();
+	//UpdateSoftware();   // to fix later
 
 	printf("EnableSelection: Finished\n");fflush(stdout);
 	free(t_description);
@@ -4423,19 +4402,23 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		{
 			// Get the path from the existing filename; if no filename go to root
 			TCHAR* t_bgdir = TEXT(".");
-			const string s = GetBgDir();
+			bool free_bgdir = false;
+			string s = GetBgDir();
 			string as;
 			util::zippath_parent(as, s.c_str());
 			size_t t1 = as.length()-1;
 			if (as[t1] == '\\') as.substr(0, t1-1);
 			t1 = as.find(':');
 			if (t1 != string::npos)
+			{
 				t_bgdir = ui_wstring_from_utf8(as.c_str());
+				free_bgdir = true;
+				if( !t_bgdir )
+					return false;
+			}
 
 			OPENFILENAME OFN;
-			static TCHAR szFile[MAX_PATH] = TEXT("\0");
-			if( !t_bgdir )
-				return false;
+			TCHAR szFile[MAX_PATH] = TEXT("\0");
 
 			OFN.lStructSize       = sizeof(OPENFILENAME);
 			OFN.hwndOwner         = hMain;
@@ -4458,9 +4441,11 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 			OFN.lpTemplateName    = NULL;
 			OFN.Flags             = OFN_NOCHANGEDIR | OFN_SHOWHELP | OFN_EXPLORER;
 
-			if (GetOpenFileName(&OFN))
+			BOOL res = GetOpenFileName(&OFN);
+			if (res)
 			{
-				free(t_bgdir);
+				if (free_bgdir)
+					free(t_bgdir);
 				utf8_szFile = ui_utf8_from_wstring(szFile);
 				if( !utf8_szFile )
 					return false;
@@ -4474,7 +4459,8 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				free(utf8_szFile);
 				return true;
 			}
-			free(t_bgdir);
+			if (free_bgdir)
+				free(t_bgdir);
 		}
 		break;
 
@@ -5678,7 +5664,7 @@ static void ToggleSoftware(void)
 	UpdateSoftware();
 
 	/* Redraw list view */
-	if (hBackground != NULL && showSoftware)
+	if (hBackground && showSoftware)
 		InvalidateRect(hwndList, NULL, false);
 }
 

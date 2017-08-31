@@ -184,7 +184,7 @@ const WINUIOPTS option_entries[] =
 	{ MUIOPTION_SCREENSHOT_BORDER_COLOR,      "-1",       OPTION_INTEGER,                 NULL },
 	{ MUIOPTION_EXEC_COMMAND,                 "",         OPTION_STRING,                 NULL },
 	{ MUIOPTION_EXEC_WAIT,                    "0",        OPTION_INTEGER,                 NULL },
-	{ MUIOPTION_BACKGROUND_DIRECTORY,         "bkground", OPTION_STRING,                 NULL },
+	{ MUIOPTION_BACKGROUND_DIRECTORY,         "bkground\\bkground.png", OPTION_STRING,                 NULL },
 	{ MUIOPTION_ICONS_DIRECTORY,              "icons",    OPTION_STRING,                 NULL },
 	{ MUIOPTION_DATS_DIRECTORY,               "dats",     OPTION_STRING,                 NULL },
 	{ MUIOPTION_UI_KEY_UP,                    "KEYCODE_UP",                        OPTION_STRING,          NULL },
