@@ -8,15 +8,15 @@
 class winui_game_options
 {
 	int m_total;
-	uint64_t m_cache;
+	uint32_t m_cache;
 	bool m_rebuild;
 
 	struct driver_options
 	{
 		int rom;
 		int sample;
-		uint64_t cache_lower;
-		uint64_t cache_upper;
+		uint32_t cache_lower;
+		uint32_t cache_upper;
 		int play_count;
 		int play_time;
 	};
@@ -37,7 +37,7 @@ class winui_game_options
 			return true;
 
 		// check that totals match
-		int total = std::stoll(file_line);
+		int total = std::atoll(file_line.c_str());
 		if (total == m_total)
 			m_rebuild = false;
 
@@ -58,23 +58,22 @@ class winui_game_options
 				{
 					char* data = strtok(NULL, ",");    // get next part
 					if (data)
-						m_list[index].rom = std::stoll(data);
+						m_list[index].rom = std::atoll(data);
 					data = strtok(NULL, ",");    // get next part
 					if (data)
-						m_list[index].sample = std::stoll(data);
+						m_list[index].sample = std::atoll(data);
 					data = strtok(NULL, ",");    // get next part
 					if (data)
-					{
-						m_cache = std::stoll(data);
-						m_list[index].cache_lower = m_cache & 0xffffffff;
-						m_list[index].cache_upper = m_cache >> 32;
-					}
+						m_list[index].cache_lower = std::atoll(data);
 					data = strtok(NULL, ",");    // get next part
 					if (data)
-						m_list[index].play_count = std::stoll(data);
+						m_list[index].cache_upper = std::atoll(data);
 					data = strtok(NULL, ",");    // get next part
 					if (data)
-						m_list[index].play_time = std::stoll(data);
+						m_list[index].play_count = std::atoll(data);
+					data = strtok(NULL, ",");    // get next part
+					if (data)
+						m_list[index].play_time = std::atoll(data);
 				}
 			}
 			else
@@ -98,7 +97,7 @@ public:
 		m_total = driver_list::total();
 		m_list.reserve(m_total);
 
-		driver_options option = { -1, -1, 0, 0, 0 };
+		driver_options option = { -1, -1, 0, 0, 0, 0 };
 
 		for (int i = 0; i < m_total; i++)
 			m_list[i] = option;
@@ -221,11 +220,11 @@ public:
 		for (int i = 0; i < m_total; i++)
 		{
 			// 1:Rom, 2:Sample, 3:Cache, 4:Play Count, 5:Play Time
-			m_cache = m_list[i].cache_lower | (m_list[i].cache_upper << 32);
 			inistring.append(driver_list::driver(i).name).append("\t");
 			inistring.append(std::to_string(m_list[i].rom)).append(",");
 			inistring.append(std::to_string(m_list[i].sample)).append(",");
-			inistring.append(std::to_string(m_cache)).append(",");
+			inistring.append(std::to_string(m_list[i].cache_lower)).append(",");
+			inistring.append(std::to_string(m_list[i].cache_upper)).append(",");
 			inistring.append(std::to_string(m_list[i].play_count)).append(",");
 			inistring.append(std::to_string(m_list[i].play_time)).append(",\n");
 		}

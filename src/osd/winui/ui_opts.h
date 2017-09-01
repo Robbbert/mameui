@@ -99,11 +99,11 @@
 
 #ifdef MESS
 #define MUIOPTION_DEFAULT_GAME                   "default_system"
-#define MUIDEFAULT_SELECTION                     "3do"
+#define MUIDEFAULT_SELECTION                     "0"
 #define MUIDEFAULT_SPLITTERS                     "133,625,806"
 #else
 #define MUIOPTION_DEFAULT_GAME                   "default_machine"
-#define MUIDEFAULT_SELECTION                     "puckman"
+#define MUIDEFAULT_SELECTION                     "0"
 #define MUIDEFAULT_SPLITTERS                     "164,800"
 #endif
 
@@ -131,12 +131,12 @@ WINUIOPTS;
 const WINUIOPTS option_entries[] =
 {
 	{ MUIOPTION_EXTRA_FOLDERS,                "0",        OPTION_INTEGER,                 NULL },
-	{ MUIOPTION_DEFAULT_GAME,                 MUIDEFAULT_SELECTION, OPTION_STRING,       NULL },
+	{ MUIOPTION_DEFAULT_GAME,                 MUIDEFAULT_SELECTION, OPTION_INTEGER,       NULL },
 	{ MUIOPTION_DEFAULT_FOLDER_ID,            "0",        OPTION_INTEGER,                 NULL },
 	{ MUIOPTION_SHOW_IMAGE_SECTION,           "1",        OPTION_BOOLEAN,    NULL },
 	{ MUIOPTION_FULL_SCREEN,                  "0",        OPTION_BOOLEAN,    NULL },
 	{ MUIOPTION_CURRENT_TAB,                  "0",        OPTION_STRING,                 NULL },
-	{ MESSUI_SOFTWARE_TAB,                    "0",        OPTION_STRING, NULL },
+	{ MESSUI_SOFTWARE_TAB,                    "0",        OPTION_INTEGER, NULL },
 	{ MUIOPTION_SHOW_TOOLBAR,                 "1",        OPTION_BOOLEAN,    NULL },
 	{ MUIOPTION_SHOW_STATUS_BAR,              "1",        OPTION_BOOLEAN,    NULL },
 	{ MUIOPTION_HIDE_FOLDERS,                 "",         OPTION_STRING,                 NULL },
@@ -350,7 +350,11 @@ public:
 
 	int int_value(const char* name)
 	{
-		return std::stoi(getter(name));
+		string t = getter(name);
+		if (t.empty())
+			return 0;
+		else
+			return std::atoll(t.c_str());
 	}
 
 	bool bool_value(const char* name)

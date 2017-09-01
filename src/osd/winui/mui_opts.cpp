@@ -502,24 +502,26 @@ BOOL GetShowToolBar(void)
 	return settings.bool_value( MUIOPTION_SHOW_TOOLBAR);
 }
 
-void SetCurrentTab(const char *shortname)
+void SetCurrentTab(int val)
 {
-	settings.setter(MUIOPTION_CURRENT_TAB, shortname);
+	settings.setter(MUIOPTION_CURRENT_TAB, val);
 }
 
-const char *GetCurrentTab(void)
+int GetCurrentTab(void)
 {
-	return settings.getter(MUIOPTION_CURRENT_TAB).c_str();
+	return settings.int_value(MUIOPTION_CURRENT_TAB);
 }
 
-void SetDefaultGame(const char *name)
+void SetDefaultGame(int val)
 {
-	settings.setter(MUIOPTION_DEFAULT_GAME, name);
+	if (val < 0)
+		val = 0;
+	settings.setter(MUIOPTION_DEFAULT_GAME, val);
 }
 
-const char *GetDefaultGame(void)
+int GetDefaultGame(void)
 {
-	return settings.getter(MUIOPTION_DEFAULT_GAME).c_str();
+	return settings.int_value(MUIOPTION_DEFAULT_GAME);
 }
 
 void SetWindowArea(const AREA *area)
@@ -2310,14 +2312,14 @@ void SetSelectedSoftware(int driver_index, string opt_name, const char *software
 	}
 }
 
-void SetCurrentSoftwareTab(const char *shortname)
+void SetCurrentSoftwareTab(int val)
 {
-	settings.setter(MESSUI_SOFTWARE_TAB, shortname);
+	settings.setter(MESSUI_SOFTWARE_TAB, val);
 }
 
-const char *GetCurrentSoftwareTab(void)
+int GetCurrentSoftwareTab(void)
 {
-	return settings.getter(MESSUI_SOFTWARE_TAB).c_str();
+	return settings.int_value(MESSUI_SOFTWARE_TAB);
 }
 
 bool AreOptionsEqual(windows_options &opts1, windows_options &opts2)

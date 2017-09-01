@@ -2178,7 +2178,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 			/* Save the users current game options and default game */
 			int nItem = Picker_GetSelectedItem(hwndList);
 			if (nItem >= 0)
-				SetDefaultGame(ModifyThe(driver_list::driver(nItem).name));
+				SetDefaultGame(nItem);
 
 			/* hide window to prevent orphan empty rectangles on the taskbar */
 			/* ShowWindow(hWnd,SW_HIDE); */
@@ -3153,7 +3153,7 @@ static void EnableSelection(int nGame)
 
 	printf("EnableSelection: G\n");fflush(stdout);
 	if (bProgressShown && bListReady == true)
-		SetDefaultGame(ModifyThe(driver_list::driver(nGame).name));
+		SetDefaultGame(nGame);
 
 	have_selection = true;
 
@@ -4638,7 +4638,7 @@ static void ResetColumnDisplay(BOOL first_time)
 
 	ResetListView();
 
-	Picker_SetSelectedItem(hwndList, GetGameNameIndex(GetDefaultGame()));
+	Picker_SetSelectedItem(hwndList, GetDefaultGame());
 }
 
 

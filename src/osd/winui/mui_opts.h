@@ -258,11 +258,11 @@ BOOL GetShowToolBar(void);
 void SetShowTabCtrl(BOOL val);
 BOOL GetShowTabCtrl(void);
 
-void SetCurrentTab(const char *shortname);
-const char *GetCurrentTab(void);
+void SetCurrentTab(int val);
+int GetCurrentTab(void);
 
-void SetDefaultGame(const char *name);
-const char *GetDefaultGame(void);
+void SetDefaultGame(int val);
+int GetDefaultGame(void);
 
 void SetWindowArea(const AREA *area);
 void GetWindowArea(AREA *area);
@@ -486,8 +486,8 @@ BOOL GetSLSortReverse(void);
 
 void SetSelectedSoftware(int driver_index, string opt_name, const char *software);
 
-void SetCurrentSoftwareTab(const char *shortname);
-const char *GetCurrentSoftwareTab(void);
+void SetCurrentSoftwareTab(int val);
+int GetCurrentSoftwareTab(void);
 
 
 #endif
