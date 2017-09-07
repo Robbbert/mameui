@@ -234,15 +234,6 @@ BOOL GetOffsetClones(void);
 void SetSavedFolderID(UINT val);
 UINT GetSavedFolderID(void);
 
-void SetShowScreenShot(BOOL val);
-BOOL GetShowScreenShot(void);
-
-void SetShowSoftware(BOOL val);
-BOOL GetShowSoftware(void);
-
-void SetShowFolderList(BOOL val);
-BOOL GetShowFolderList(void);
-
 void SetShowExtraFolders(BOOL val);
 BOOL GetShowExtraFolders(void);
 
@@ -269,6 +260,9 @@ void GetWindowArea(AREA *area);
 
 void SetWindowState(UINT state);
 UINT GetWindowState(void);
+
+void SetWindowPanes(int val);
+UINT GetWindowPanes(void);
 
 void SetColumnWidths(int widths[]);
 void GetColumnWidths(int widths[]);

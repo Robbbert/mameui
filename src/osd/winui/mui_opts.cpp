@@ -358,36 +358,6 @@ UINT GetSavedFolderID(void)
 	return (UINT) settings.int_value(MUIOPTION_DEFAULT_FOLDER_ID);
 }
 
-void SetShowScreenShot(BOOL val)
-{
-	settings.setter(MUIOPTION_SHOW_IMAGE_SECTION, val);
-}
-
-BOOL GetShowScreenShot(void)
-{
-	return settings.bool_value(MUIOPTION_SHOW_IMAGE_SECTION);
-}
-
-void SetShowSoftware(BOOL val)
-{
-	settings.setter(MUIOPTION_SHOW_SOFTWARE_SECTION, val);
-}
-
-BOOL GetShowSoftware(void)
-{
-	return settings.bool_value(MUIOPTION_SHOW_SOFTWARE_SECTION);
-}
-
-void SetShowFolderList(BOOL val)
-{
-	settings.setter(MUIOPTION_SHOW_FOLDER_SECTION, val);
-}
-
-BOOL GetShowFolderList(void)
-{
-	return settings.bool_value(MUIOPTION_SHOW_FOLDER_SECTION);
-}
-
 void SetShowExtraFolders(BOOL val)
 {
 	settings.setter(MUIOPTION_EXTRA_FOLDERS, val);
@@ -548,6 +518,16 @@ void SetWindowState(UINT state)
 UINT GetWindowState(void)
 {
 	return settings.int_value(MUIOPTION_WINDOW_STATE);
+}
+
+void SetWindowPanes(int val)
+{
+	settings.setter(MUIOPTION_WINDOW_PANES, val & 15);
+}
+
+UINT GetWindowPanes(void)
+{
+	return settings.int_value(MUIOPTION_WINDOW_PANES) & 15;
 }
 
 void SetCustomColor(int iIndex, COLORREF uColor)

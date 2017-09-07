@@ -361,6 +361,16 @@ void InitMessPicker(void)
 	printf("InitMessPicker: J\n");fflush(stdout);
 	SetWindowLong(hwndSoftwareList, GWL_STYLE, GetWindowLong(hwndSoftwareList, GWL_STYLE) | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED);
 	printf("InitMessPicker: Finished\n");fflush(stdout);
+
+	BOOL bShowSoftware = BIT(GetWindowPanes(), 2);
+	int swtab = GetCurrentSoftwareTab();
+	if (!bShowSoftware)
+		swtab = -1;
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWLIST), (swtab == 0) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW), (swtab == 1) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SOFTLIST), (swtab == 2) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWTAB), bShowSoftware ? SW_SHOW : SW_HIDE);
+	CheckMenuItem(GetMenu(GetMainWindow()), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
 }
 
 
@@ -1417,7 +1427,7 @@ static LPCTSTR MView_GetSelectedSoftware(HWND hwndMView, int nDriverIndex, const
 			return t_buffer;
 		}
 	}
-	printf("MView_GetSelectedSoftware: Got nothing\n\n");fflush(stdout);
+	printf("MView_GetSelectedSoftware: Got nothing\n");fflush(stdout);
 	if (!opt_name.empty())
 		mvmap[opt_name] = 0;
 	return ui_wstring_from_utf8(""); // nothing loaded or error occurred

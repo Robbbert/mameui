@@ -219,6 +219,7 @@ extern const ICONDATA g_iconData[];
 extern const TCHAR g_szPlayGameString[];
 extern const char g_szGameCountString[];
 UINT8 playopts_apply = 0;
+static BOOL m_resized = false;
 
 typedef struct _play_options play_options;
 struct _play_options
@@ -465,7 +466,6 @@ static int  progBarStep = 0;
 static BOOL bDoGameCheck = false;
 
 /* Tree control variables */
-static BOOL bShowTree      = 1;
 static BOOL bShowToolBar   = 1;
 static BOOL bShowStatusBar = 1;
 static BOOL bShowTabCtrl   = 1;
@@ -1239,9 +1239,8 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 {
 	AREA area;
 	GetWindowArea(&area);
-	int fullwidth = area.width;
-	bool bShowPicture = GetShowScreenShot();
-	bool bShowSoftware = GetShowSoftware();
+	bool bShowPicture = BIT(GetWindowPanes(), 3);
+	bool bShowSoftware = BIT(GetWindowPanes(), 2);
 	int nLastWidth = 0;
 	//int nLastWidth2 = 0;
 	int nLeftWindowWidth = 0;
@@ -1250,13 +1249,47 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 	RECT rect;
 	GetClientRect(hMain, &rect);
 
+	// first time, we use the saved values rather than current ones
+	if (!m_resized)
+	{
+		// First make sure the window isn't going to be larger than the desktop,
+		// if it is, size it to just fit in.
+		RECT desktop;
+		const HWND hDesktop = GetDesktopWindow();
+		GetWindowRect(hDesktop, &desktop);
+		if ((desktop.right < (area.x + area.width)) || (area.x < 0))
+		{
+			area.x = 10;
+			area.width = desktop.right - 20;
+		}
+		if ((desktop.bottom < (area.y + area.height)) || (area.y < 0))
+		{
+			area.y = 10;
+			area.height = desktop.bottom - 60;
+		}
+		// now use these values
+		rect.left = area.x;
+		rect.right = area.width + area.x;
+		rect.top = area.y;
+		rect.bottom = area.height + area.y;
+	}
+	else
+	{
+		area.x = rect.left;
+		area.y = rect.top;
+		area.width = rect.right - rect.left;
+		area.height = rect.bottom - rect.top;
+	}
+	SetWindowArea(&area);
+	int fullwidth = area.width;printf("Fullwidth = %d\n",fullwidth);
+
 	if (bShowStatusBar)
 		rect.bottom -= bottomMargin;
 	if (bShowToolBar)
 		rect.top += topMargin;
 
 	/* Tree control */
-	ShowWindow(GetDlgItem(hMain, IDC_TREE), bShowTree ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(hMain, IDC_TREE), BIT(GetWindowPanes(), 0) ? SW_SHOW : SW_HIDE);
 
 	for (int i = 0; g_splitterInfo[i].nSplitterWindow; i++)
 	{
@@ -1269,7 +1302,7 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 			if (!bShowPicture && !bShowSoftware && !g_splitterInfo[i+1].nSplitterWindow)
 				//nLeftWindowWidth = rect.right - nLastWidth;
 				nLeftWindowWidth = fullwidth - nLastWidth;
-
+				printf("ResizeTreeAndListViews: %d,%d\n",SPLITTER_WIDTH,MIN_VIEW_WIDTH);
 			/* woah?  are we overlapping ourselves? */
 //			while ((nLeftWindowWidth + nLastWidth) > fullwidth)
 //				nLeftWindowWidth--;
@@ -1279,16 +1312,15 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 //				nLeftWindowWidth = nSplitterOffset[i] - MIN_VIEW_WIDTH - SPLITTER_WIDTH/2 - nLastWidth;
 //				//i--;
 //			}
+			printf("Sizes: nLastWidth %d, fullwidth %d, nLastWidth + nLeftWindowWidth %d\n",nLastWidth,fullwidth,nLastWidth + nLeftWindowWidth);
 			if (nLastWidth > fullwidth)
 				nLastWidth = fullwidth - MIN_VIEW_WIDTH;
 			if ((nLastWidth + nLeftWindowWidth) > fullwidth)
 				nLeftWindowWidth = MIN_VIEW_WIDTH;
+			printf("ResizeTreeAndListViews: Window %d, Left %d, Right %d\n",i,nLastWidth, nLeftWindowWidth + nLastWidth);
+			MoveWindow(GetDlgItem(hMain, g_splitterInfo[i].nLeftWindow), nLastWidth, rect.top + 2, nLeftWindowWidth, rect.bottom - rect.top - 4, true);
 
-			MoveWindow(GetDlgItem(hMain, g_splitterInfo[i].nLeftWindow), nLastWidth, rect.top + 2,
-				nLeftWindowWidth, rect.bottom - rect.top - 4, true);
-
-			MoveWindow(GetDlgItem(hMain, g_splitterInfo[i].nSplitterWindow), nSplitterOffset[i], rect.top + 2,
-				SPLITTER_WIDTH, rect.bottom - rect.top - 4, true);
+			MoveWindow(GetDlgItem(hMain, g_splitterInfo[i].nSplitterWindow), nSplitterOffset[i], rect.top + 2, SPLITTER_WIDTH, rect.bottom - rect.top - 4, true);
 		}
 
 		if (bVisible)
@@ -1306,6 +1338,7 @@ void UpdateSoftware(void)
 	if (hwndList == NULL)
 		return;
 
+	BOOL bShowSoftware = BIT(GetWindowPanes(), 2);
 	//int  nWidth;
 
 	/* Size the List Control in the Picker */
@@ -1317,21 +1350,11 @@ void UpdateSoftware(void)
 	if (bShowToolBar)
 		rect.top += topMargin;
 
-	if (GetShowSoftware())
-	{
-		//nWidth = nSplitterOffset[GetSplitterCount() - 1];
-		CheckMenuItem(GetMenu(hMain),ID_VIEW_SOFTWARE_AREA, MF_CHECKED);
-		ToolBar_CheckButton(s_hToolBar, ID_VIEW_SOFTWARE_AREA, MF_CHECKED);
-	}
-	else
-	{
-		//nWidth = rect.right;
-		CheckMenuItem(GetMenu(hMain),ID_VIEW_SOFTWARE_AREA, MF_UNCHECKED);
-		ToolBar_CheckButton(s_hToolBar, ID_VIEW_SOFTWARE_AREA, MF_UNCHECKED);
-	}
+	CheckMenuItem(GetMenu(hMain), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
+	ToolBar_CheckButton(s_hToolBar, ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
 
 	//int nGame = Picker_GetSelectedItem(hwndList);
-	if (GetShowSoftware()) // && DriverHasSoftware(nGame))   // not working correctly, look at it later
+	if (bShowSoftware) // && DriverHasSoftware(nGame))   // not working correctly, look at it later
 	{
 		ShowWindow(GetDlgItem(hMain,IDC_SWTAB),SW_SHOW);
 		SoftwareTabView_OnSelectionChanged();
@@ -1355,8 +1378,6 @@ void UpdateScreenShot(void)
 	if (hwndList == NULL)
 		return;
 
-	//int  nWidth;
-
 	/* Size the List Control in the Picker */
 	RECT rect;
 	GetClientRect(hMain, &rect);
@@ -1368,18 +1389,9 @@ void UpdateScreenShot(void)
 		rect.top += topMargin;
 
 	//printf("Update Screenshot: C\n");fflush(stdout);
-	if (GetShowScreenShot())
-	{
-		//nWidth = nSplitterOffset[GetSplitterCount() - 1];
-		CheckMenuItem(GetMenu(hMain),ID_VIEW_PICTURE_AREA, MF_CHECKED);
-		ToolBar_CheckButton(s_hToolBar, ID_VIEW_PICTURE_AREA, MF_CHECKED);
-	}
-	else
-	{
-		//nWidth = rect.right;
-		CheckMenuItem(GetMenu(hMain),ID_VIEW_PICTURE_AREA, MF_UNCHECKED);
-		ToolBar_CheckButton(s_hToolBar, ID_VIEW_PICTURE_AREA, MF_UNCHECKED);
-	}
+	BOOL bShowImage = BIT(GetWindowPanes(), 3); // ss
+	CheckMenuItem(GetMenu(hMain), ID_VIEW_PICTURE_AREA, bShowImage ? MF_CHECKED : MF_UNCHECKED);
+	ToolBar_CheckButton(s_hToolBar, ID_VIEW_PICTURE_AREA, bShowImage ? MF_CHECKED : MF_UNCHECKED);
 
 	//printf("Update Screenshot: F\n");fflush(stdout);
 	ResizeTreeAndListViews(false);
@@ -1404,7 +1416,7 @@ void UpdateScreenShot(void)
 	// setup the picture area
 
 	//printf("Update Screenshot: J\n");fflush(stdout);
-	if (GetShowScreenShot())
+	if (bShowImage)
 	{
 		DWORD dwStyle;
 		DWORD dwStyleEx;
@@ -1450,7 +1462,7 @@ void ResizePickerControls(HWND hWnd)
 {
 	RECT rect, sRect;
 	static BOOL firstTime = true;
-	int doSSControls = true;
+	BOOL doSSControls = true;
 	int nSplitterCount = GetSplitterCount();
 
 	/* Size the List Control in the Picker */
@@ -1474,7 +1486,7 @@ void ResizePickerControls(HWND hWnd)
 	}
 	else
 	{
-		doSSControls = GetShowScreenShot();
+		doSSControls = BIT(GetWindowPanes(), 3);
 	}
 
 	if (bShowStatusBar)
@@ -1487,7 +1499,7 @@ void ResizePickerControls(HWND hWnd)
 
 	ResizeTreeAndListViews(true);
 	int nListWidth = 0;
-	if (GetShowSoftware())
+	if (BIT(GetWindowPanes(), 2)) // sw
 		nListWidth = nSplitterOffset[2];
 	else
 		nListWidth = nSplitterOffset[1];
@@ -1497,14 +1509,12 @@ void ResizePickerControls(HWND hWnd)
 	/* Screen shot Page tab control */
 	if (bShowTabCtrl)
 	{
-		MoveWindow(GetDlgItem(hWnd, IDC_SSTAB), nListWidth + 4, rect.top + 2,
-			nScreenShotWidth - 2, rect.top + 20, doSSControls);
+		MoveWindow(GetDlgItem(hWnd, IDC_SSTAB), nListWidth + 4, rect.top + 2, nScreenShotWidth - 2, rect.top + 20, doSSControls);
 		rect.top += 20;
 	}
 
 	/* resize the Screen shot frame */
-	MoveWindow(GetDlgItem(hWnd, IDC_SSFRAME), nListWidth + 4, rect.top + 2,
-		nScreenShotWidth - 2, rect.bottom - rect.top - 4, doSSControls);
+	MoveWindow(GetDlgItem(hWnd, IDC_SSFRAME), nListWidth + 4, rect.top + 2, nScreenShotWidth - 2, rect.bottom - rect.top - 4, doSSControls);
 
 	/* The screen shot controls */
 	RECT frameRect;
@@ -1669,9 +1679,9 @@ static void memory_error(const char *message)
 
 static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
-	extern int mame_validitychecks(int game);
 	extern const FOLDERDATA g_folderData[];
 	extern const FILTER_ITEM g_filterList[];
+	m_resized = false;
 
 	printf("Win32UI_init: About to init options\n");fflush(stdout);
 	if (!OptionsInit())
@@ -1832,7 +1842,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	idle_work    = true;
 	game_index   = 0;
 
-	bShowTree      = GetShowFolderList();
+	BOOL bShowTree = BIT(GetWindowPanes(), 0);
 	bShowToolBar   = GetShowToolBar();
 	bShowStatusBar = GetShowStatusBar();
 	bShowTabCtrl   = GetShowTabCtrl();
@@ -1936,9 +1946,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	nCmdShow = GetWindowState();
 	if (nCmdShow == SW_HIDE || nCmdShow == SW_MINIMIZE || nCmdShow == SW_SHOWMINIMIZED)
-	{
 		nCmdShow = SW_RESTORE;
-	}
 
 	if (GetRunFullScreen())
 	{
@@ -2092,7 +2100,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 		return 0;
 
 	case WM_SIZE:
-		OnSize(hWnd, wParam, LOWORD(lParam), HIWORD(wParam));
+		OnSize(hWnd, wParam, LOWORD(lParam), HIWORD(lParam));
 		return true;
 
 	case WM_MENUSELECT:
@@ -2612,7 +2620,10 @@ static void OnSize(HWND hWnd, UINT nState, int nWidth, int nHeight)
 	ResizeWindow(hWnd, &main_resize);
 	ResizeProgressBar();
 	if (firstTime == false)
+	{
 		OnSizeSplitter(hMain);
+		m_resized = true;
+	}
 	//firstTime = false;
 	/* Update the splitters structures as appropriate */
 	RecalcSplitters();
@@ -2620,6 +2631,7 @@ static void OnSize(HWND hWnd, UINT nState, int nWidth, int nHeight)
 		ResizePickerControls(hMain);
 	firstTime = false;
 	UpdateScreenShot();
+	printf("OnSize: Finished\n");
 }
 
 
@@ -2846,7 +2858,7 @@ static HWND InitProgressBar(HWND hParent)
 			WS_CHILD | PBS_SMOOTH,
 			rect.left,
 			rect.top,
-			rect.right	- rect.left,
+			rect.right - rect.left,
 			rect.bottom - rect.top,
 			hParent,
 			NULL,
@@ -3038,7 +3050,7 @@ static void UpdateHistory(string software)
 		win_set_window_text_utf8(GetDlgItem(hMain, IDC_HISTORY), histText);
 	}
 
-	if (have_history && GetShowScreenShot()
+	if (have_history && BIT(GetWindowPanes(), 3)
 		&& ((TabView_GetCurrentTab(hTabCtrl) == TAB_HISTORY) ||
 			(TabView_GetCurrentTab(hTabCtrl) == GetHistoryTab() && GetShowTab(TAB_HISTORY) == false) ||
 			(TAB_ALL == GetHistoryTab() && GetShowTab(TAB_HISTORY) == false) ))
@@ -4043,12 +4055,15 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 	case ID_VIEW_FOLDERS:
-		bShowTree = !bShowTree;
-		SetShowFolderList(bShowTree);
+	{
+		int val = GetWindowPanes() ^ 1;
+		BOOL bShowTree = BIT(val, 0);
+		SetWindowPanes(val);
 		CheckMenuItem(GetMenu(hMain), ID_VIEW_FOLDERS, (bShowTree) ? MF_CHECKED : MF_UNCHECKED);
 		ToolBar_CheckButton(s_hToolBar, ID_VIEW_FOLDERS, (bShowTree) ? MF_CHECKED : MF_UNCHECKED);
 		UpdateScreenShot();
 		break;
+	}
 
 	case ID_VIEW_TOOLBARS:
 		bShowToolBar = !bShowToolBar;
@@ -4392,9 +4407,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 		KillTimer(hMain, SCREENSHOT_TIMER);
 		if( GetCycleScreenshot() > 0)
-		{
 			SetTimer(hMain, SCREENSHOT_TIMER, GetCycleScreenshot()*1000, NULL ); // Scale to seconds
-		}
 
 		return true;
 
@@ -5645,32 +5658,33 @@ static void MamePlayRecordAVI()
 /* Toggle ScreenShot ON/OFF */
 static void ToggleScreenShot(void)
 {
-	BOOL showScreenShot = GetShowScreenShot();
-
-	SetShowScreenShot((showScreenShot) ? false : true);
+	UINT val = GetWindowPanes() ^ 8;
+	BOOL show = BIT(val, 3);
+	SetWindowPanes(val);
 	UpdateScreenShot();
 
 	/* Redraw list view */
-	if (hBackground != NULL && showScreenShot)
+	if (hBackground != NULL && show)
 		InvalidateRect(hwndList, NULL, false);
 }
 
 
 static void ToggleSoftware(void)
 {
-	BOOL showSoftware = GetShowSoftware();
-
-	SetShowSoftware((showSoftware) ? false : true);
+	UINT val = GetWindowPanes() ^ 4;
+	BOOL show = BIT(val, 2);
+	SetWindowPanes(val);
 	UpdateSoftware();
 
 	/* Redraw list view */
-	if (hBackground && showSoftware)
+	if (hBackground && show)
 		InvalidateRect(hwndList, NULL, false);
 }
 
 
 static void AdjustMetrics(void)
 {
+	printf("Adjust Metrics\n");fflush(stdout);
 	/* WM_SETTINGCHANGE also */
 	int xtraX  = GetSystemMetrics(SM_CXFIXEDFRAME); /* Dialog frame width */
 	int xtraY  = GetSystemMetrics(SM_CYFIXEDFRAME); /* Dialog frame height */
@@ -5704,7 +5718,8 @@ static void AdjustMetrics(void)
 				res = ListView_SetTextColor(hWnd, textColor);
 				res++;
 			}
-			else if (!_tcscmp(szClass, TEXT("SysTreeView32")))
+			else
+			if (!_tcscmp(szClass, TEXT("SysTreeView32")))
 			{
 				HRESULT hres = TreeView_SetBkColor(hTreeView, GetSysColor(COLOR_WINDOW));
 				hres = TreeView_SetTextColor(hTreeView, textColor);
@@ -5731,8 +5746,9 @@ static void AdjustMetrics(void)
 		area.y = (offY - area.height > 0) ? (offY - area.height) : 0;
 	}
 
-	SetWindowArea(&area);
+	//SetWindowArea(&area);
 	SetWindowPos(hMain, 0, area.x, area.y, area.width, area.height, SWP_NOZORDER | SWP_SHOWWINDOW | SWP_NOACTIVATE);
+	printf("Adjust Metrics: Finished\n");fflush(stdout);
 }
 
 
@@ -6623,7 +6639,7 @@ static void SwitchFullScreenMode(void)
 		SetMenu(hMain, LoadMenu(hInst,MAKEINTRESOURCE(IDR_UI_MENU)));
 
 		// Refresh the checkmarks
-		CheckMenuItem(GetMenu(hMain), ID_VIEW_FOLDERS, GetShowFolderList() ? MF_CHECKED : MF_UNCHECKED);
+		CheckMenuItem(GetMenu(hMain), ID_VIEW_FOLDERS, BIT(GetWindowPanes(), 0) ? MF_CHECKED : MF_UNCHECKED);
 		CheckMenuItem(GetMenu(hMain), ID_VIEW_TOOLBARS, GetShowToolBar() ? MF_CHECKED : MF_UNCHECKED);
 		CheckMenuItem(GetMenu(hMain), ID_VIEW_STATUS, GetShowStatusBar() ? MF_CHECKED : MF_UNCHECKED);
 		CheckMenuItem(GetMenu(hMain), ID_VIEW_PAGETAB, GetShowTabCtrl() ? MF_CHECKED : MF_UNCHECKED);
