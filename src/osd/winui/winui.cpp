@@ -4411,13 +4411,36 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 		return true;
 
+	case ID_VIDEO_SNAP:
+		{
+			int nGame = Picker_GetSelectedItem(hwndList);
+			if (nGame >= 0)
+			{
+				string path = GetVideoDir() + string("\\") + driver_list::driver(nGame).name + string(".mp4");
+				ShellExecuteCommon(hMain, path.c_str());
+			}
+			SetFocus(hwndList);
+		}
+		break;
+
+	case ID_MANUAL:
+		{
+			int nGame = Picker_GetSelectedItem(hwndList);
+			if (nGame >= 0)
+			{
+				string path = GetManualsDir() + string("\\") + driver_list::driver(nGame).name + string(".pdf");
+				ShellExecuteCommon(hMain, path.c_str());
+			}
+			SetFocus(hwndList);
+		}
+		break;
+
 	case ID_OPTIONS_BG:
 		{
 			// Get the path from the existing filename; if no filename go to root
 			TCHAR* t_bgdir = TEXT(".");
 			bool free_bgdir = false;
-			string s = GetBgDir();
-			string as;
+			string as, s = GetBgDir();
 			util::zippath_parent(as, s.c_str());
 			size_t t1 = as.length()-1;
 			if (as[t1] == '\\') as.substr(0, t1-1);
@@ -4777,10 +4800,7 @@ static void GamePicker_EnteringItem(HWND hwndPicker, int nItem)
 	MessReadMountedSoftware(nItem); // messui.cpp
 
 	// decide if it is valid to load a savestate
-	if (driver_list::driver(nItem).flags & MACHINE_SUPPORTS_SAVE)
-		EnableMenuItem(GetMenu(hMain), ID_FILE_LOADSTATE, MFS_ENABLED);
-	else
-		EnableMenuItem(GetMenu(hMain), ID_FILE_LOADSTATE, MFS_GRAYED);
+	EnableMenuItem(GetMenu(hMain), ID_FILE_LOADSTATE, (driver_list::driver(nItem).flags & MACHINE_SUPPORTS_SAVE) ? MFS_ENABLED : MFS_GRAYED);
 }
 
 
@@ -5664,7 +5684,7 @@ static void ToggleScreenShot(void)
 	UpdateScreenShot();
 
 	/* Redraw list view */
-	if (hBackground != NULL && show)
+	if (hBackground && show)
 		InvalidateRect(hwndList, NULL, false);
 }
 
