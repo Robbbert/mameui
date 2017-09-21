@@ -31,6 +31,7 @@
 
 #endif /* defined(__GNUC__) */
 #include "bitmask.h"
+#include <stdint.h>
 
 /***************************************************************************
     Folder And Filter Definitions
@@ -46,7 +47,7 @@ typedef struct
 	DWORD       m_dwSet;   // Implied filters
 	BOOL        m_process;      // 1 = process only if enabled
 	void        (*m_pfnCreateFolders)(int parent_index); // Constructor for special folders
-	BOOL        (*m_pfnQuery)(int nDriver);              // Query function
+	BOOL        (*m_pfnQuery)(uint32_t nDriver);              // Query function
 	BOOL        m_bExpectedResult;                       // Expected query result
 } FOLDERDATA, *LPFOLDERDATA;
 
@@ -56,7 +57,7 @@ typedef struct
 {
 	DWORD m_dwFilterType;				/* Filter value */
 	DWORD m_dwCtrlID;					/* Control ID that represents it */
-	BOOL (*m_pfnQuery)(int nDriver);	/* Query function */
+	BOOL (*m_pfnQuery)(uint32_t nDriver);	/* Query function */
 	BOOL m_bExpectedResult;				/* Expected query result */
 } FILTER_ITEM, *LPFILTER_ITEM;
 

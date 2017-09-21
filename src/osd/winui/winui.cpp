@@ -2037,7 +2037,6 @@ static void Win32UI_exit()
 
 	SetSavedFolderID(GetCurrentFolderID());
 	SaveGameListOptions();
-	//SaveDefaultOptions();   causes all changes to ini\mess.ini to be reverted
 	SaveOptions();
 
 	FreeFolders();
@@ -2293,8 +2292,8 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 
 	case WM_MAME32_FILECHANGED:
 		{
-			int (*pfnGetAuditResults)(int driver_index) = NULL;
-			void (*pfnSetAuditResults)(int driver_index, int audit_results) = NULL;
+			int (*pfnGetAuditResults)(uint32_t driver_index) = NULL;
+			void (*pfnSetAuditResults)(uint32_t driver_index, int audit_results) = NULL;
 
 			switch(HIWORD(wParam))
 			{
