@@ -4,6 +4,8 @@
 #ifndef PICKER_H
 #define PICKER_H
 
+#include <stdint.h>
+
 struct PickerCallbacks
 {
 	// Options retrieval
@@ -64,8 +66,8 @@ int Picker_GetViewColumnFromRealColumn(HWND hwndPicker, int nRealColumn);
 void Picker_Sort(HWND hwndPicker);
 void Picker_ResetColumnDisplay(HWND hwndPicker);
 int Picker_GetSelectedItem(HWND hwndPicker);
-void Picker_SetSelectedItem(HWND hwndPicker, int nItem);
-void Picker_SetSelectedPick(HWND hwndPicker, int nIndex);
+void Picker_SetSelectedItem(HWND hwndPicker, uint32_t nItem);
+void Picker_SetSelectedPick(HWND hwndPicker, uint32_t nIndex);
 int Picker_GetNumColumns(HWND hWnd);
 void Picker_ClearIdle(HWND hwndPicker);
 void Picker_ResetIdle(HWND hwndPicker);

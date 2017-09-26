@@ -1295,16 +1295,6 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 			if (!bShowPicture && !bShowSoftware && !g_splitterInfo[i+1].nSplitterWindow)
 				//nLeftWindowWidth = rect.right - nLastWidth;
 				nLeftWindowWidth = fullwidth - nLastWidth;
-			//printf("ResizeTreeAndListViews: %d,%d\n",SPLITTER_WIDTH,MIN_VIEW_WIDTH);
-			/* woah?  are we overlapping ourselves? */
-//			while ((nLeftWindowWidth + nLastWidth) > fullwidth)
-//				nLeftWindowWidth--;
-//			if (nLeftWindowWidth < MIN_VIEW_WIDTH)
-//			{
-//				nLastWidth = nLastWidth2;
-//				nLeftWindowWidth = nSplitterOffset[i] - MIN_VIEW_WIDTH - SPLITTER_WIDTH/2 - nLastWidth;
-//				//i--;
-//			}
 			//printf("Sizes: nLastWidth %d, fullwidth %d, nLastWidth + nLeftWindowWidth %d\n",nLastWidth,fullwidth,nLastWidth + nLeftWindowWidth);
 			if (nLastWidth > fullwidth)
 				nLastWidth = fullwidth - MIN_VIEW_WIDTH;
@@ -1318,7 +1308,6 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 
 		if (bVisible)
 		{
-			//nLastWidth2 = nLastWidth;
 			nLastWidth += nLeftWindowWidth + SPLITTER_WIDTH;
 		}
 	}
@@ -3777,6 +3766,19 @@ static void UpdateGameList(BOOL bUpdateRomAudit, BOOL bUpdateSampleAudit)
 	Picker_ResetIdle(hwndList);
 }
 
+static void UpdateCache()
+{
+	int current_id = GetCurrentFolderID(); // remember selected folder
+	SetWindowRedraw(hwndList, false);   // stop screen updating
+	ForceRebuild();          // tell system that cache needs redoing
+	(void)OptionsInit();      // reload options and fix game cache
+	//extern const FOLDERDATA g_folderData[];
+	//extern const FILTER_ITEM g_filterList[];
+	//InitTree(g_folderData, g_filterList);         // redo folders... This crashes, leave out for now
+	ResetTreeViewFolders();                      // something with folders
+	SelectTreeViewFolder(current_id);            // select previous folder
+	SetWindowRedraw(hwndList, true);             // refresh screen
+}
 
 UINT_PTR CALLBACK CFHookProc(HWND hdlg, UINT uiMsg, WPARAM wParam, LPARAM lParam)
 // handle to dialog box, message identifier, message parameter, message parameter
@@ -4312,6 +4314,10 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 	case ID_UPDATE_GAMELIST:
 		UpdateGameList(true, true);
+		break;
+
+	case ID_UPDATE_CACHE:
+		UpdateCache();
 		break;
 
 	case ID_OPTIONS_FONT:
