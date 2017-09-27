@@ -131,7 +131,7 @@ static bool create_index(std::ifstream &fp, int filenum)
 		{
 			// now start by removing all spaces
 			file_line.erase(remove_if(file_line.begin(), file_line.end(), ::isspace), file_line.end());
-			char s[file_line.length()];
+			char s[file_line.length()+1];
 			strcpy(s, file_line.c_str());
 
 			const char* first = strtok(s, "=");  // get first part of key
@@ -314,7 +314,7 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 		buffer.append("The sound emulation isn't 100% accurate.\n");
 
 	if (BIT(cache, 7))
-		buffer.append("Save state support.\n");
+		buffer.append("Save state not supported.\n");
 
 	if (BIT(cache, 14))
 		buffer.append("This game contains mechanical parts.\n");

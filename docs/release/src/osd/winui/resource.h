@@ -91,6 +91,7 @@
 #define IDD_PROP_CONTROLLER             185
 #define IDD_PROP_SCREEN                 187
 #define IDD_PROP_DEBUG                  188
+#define IDI_WIN_IMPERFECT               198
 #define IDI_SOUNDTAB                    666
 #define IDC_LIST                        1000
 #define IDC_JOYSTICK                    1003
@@ -219,7 +220,6 @@
 #define IDC_SYNCREFRESH                 1142
 #define IDC_USE_MOUSE                   1143
 #define IDC_THROTTLE                    1144
-#define IDC_EXTRA_FOLDERS               1145
 #define IDC_VOLUMETEXT                  1146
 #define IDC_REFRESH                     1148
 #define IDC_REFRESHTEXT                 1149
@@ -322,6 +322,7 @@
 #define IDC_SNAPSIZETEXT                1252
 #define IDC_SNAPSIZEX                   1253
 #define IDC_FILTER_MECHANICAL           1254
+#define IDC_OVERRIDE_REDX               1352
 #define IDC_SPLITTER3                   2000
 #define IDC_SWTAB                       2001
 #define IDC_SWLIST                      2002
@@ -386,6 +387,7 @@
 #define ID_VIEW_BYTIMESPLAYED           40039
 #define ID_VIEW_LINEUPICONS             40040
 #define ID_UPDATE_GAMELIST              40042
+#define ID_UPDATE_CACHE                 40043
 #define ID_SORT_ASCENDING               40045
 #define ID_SORT_DESCENDING              40046
 #define ID_CUSTOMIZE_FIELDS             40048
@@ -438,6 +440,12 @@
 #define ID_OPTIONS_MAMEINFO             40100
 #define ID_OPTIONS_HISTORY              40101
 #define ID_VIEW_SOFTWARE_AREA           40102
+#define ID_MANUAL                       40108
+#define ID_VIDEO_SNAP                   40109
+#define ID_PLAY_VIDEO                   40110
+#define ID_PLAY_AUDIO                   40111
+#define ID_PLAY_MNG                     40112
+#define ID_PLAY_M1                      40113
 #define IDC_STATIC                      -1
 
 // Next default values for new objects

@@ -156,6 +156,9 @@ void SetDiffDir(const char *path);
 const string GetIconsDir(void);
 void SetIconsDir(const char *path);
 
+const string GetImgDir(void);
+void SetImgDir(const char *path);
+
 const char *GetIniDir(void);
 void SetIniDir(const char *path);
 
@@ -164,6 +167,9 @@ void SetInpDir(const char *path);
 
 const string GetLangDir(void);
 void SetLangDir(const char *path);
+
+const string GetManualsDir(void);
+void SetManualsDir(const char* path);
 
 const string GetMarqueeDir(void);
 void SetMarqueeDir(const char *path);
@@ -177,9 +183,6 @@ void SetPcbDir(const char *path);
 const string GetPluginsDir(void);
 void SetPluginsDir(const char *path);
 
-const string GetImgDir(void);
-void SetImgDir(const char *path);
-
 const string GetStateDir(void);
 void SetStateDir(const char *path);
 
@@ -188,6 +191,9 @@ void SetTitlesDir(const char *path);
 
 const string GetSWDir(void);
 void SetSWDir(const char *path);
+
+const string GetVideoDir(void);
+void SetVideoDir(const char *path);
 // End interface to directories.h
 
 void SaveOptions(void);
@@ -234,17 +240,8 @@ BOOL GetOffsetClones(void);
 void SetSavedFolderID(UINT val);
 UINT GetSavedFolderID(void);
 
-void SetShowScreenShot(BOOL val);
-BOOL GetShowScreenShot(void);
-
-void SetShowSoftware(BOOL val);
-BOOL GetShowSoftware(void);
-
-void SetShowFolderList(BOOL val);
-BOOL GetShowFolderList(void);
-
-void SetShowExtraFolders(BOOL val);
-BOOL GetShowExtraFolders(void);
+void SetOverrideRedX(BOOL val);
+BOOL GetOverrideRedX(void);
 
 BOOL GetShowFolder(int folder);
 void SetShowFolder(int folder,BOOL show);
@@ -258,17 +255,20 @@ BOOL GetShowToolBar(void);
 void SetShowTabCtrl(BOOL val);
 BOOL GetShowTabCtrl(void);
 
-void SetCurrentTab(const char *shortname);
-const char *GetCurrentTab(void);
+void SetCurrentTab(int val);
+int GetCurrentTab(void);
 
-void SetDefaultGame(const char *name);
-const char *GetDefaultGame(void);
+void SetDefaultGame(uint32_t val);
+uint32_t GetDefaultGame(void);
 
 void SetWindowArea(const AREA *area);
 void GetWindowArea(AREA *area);
 
 void SetWindowState(UINT state);
 UINT GetWindowState(void);
+
+void SetWindowPanes(int val);
+UINT GetWindowPanes(void);
 
 void SetColumnWidths(int widths[]);
 void GetColumnWidths(int widths[]);
@@ -323,22 +323,24 @@ void SetBgDir(const char *path);
 
 void ResetGameOptions(int driver_index);
 
-int GetRomAuditResults(int driver_index);
-void SetRomAuditResults(int driver_index, int audit_results);
+int GetRomAuditResults(uint32_t driver_index);
+void SetRomAuditResults(uint32_t driver_index, int audit_results);
 
-int GetSampleAuditResults(int driver_index);
-void SetSampleAuditResults(int driver_index, int audit_results);
+int GetSampleAuditResults(uint32_t driver_index);
+void SetSampleAuditResults(uint32_t driver_index, int audit_results);
 
-void IncrementPlayCount(int driver_index);
-int GetPlayCount(int driver_index);
+void IncrementPlayCount(uint32_t driver_index);
+uint32_t GetPlayCount(uint32_t driver_index);
 void ResetPlayCount(int driver_index);
 
-void IncrementPlayTime(int driver_index,int playtime);
-int GetPlayTime(int driver_index);
-void GetTextPlayTime(int driver_index,char *buf);
+void IncrementPlayTime(uint32_t driver_index, uint32_t playtime);
+uint32_t GetPlayTime(uint32_t driver_index);
+void GetTextPlayTime(uint32_t driver_index, char *buf);
 void ResetPlayTime(int driver_index);
 
 const char * GetVersionString(void);
+
+bool DriverHasSoftware(uint32_t drvindex);
 
 void SaveDefaultOptions(void);
 
@@ -424,7 +426,7 @@ void SetUIJoyHistoryDown(int joycodeIndex, int val);
 int GetUIJoyExec(int joycodeIndex);
 void SetUIJoyExec(int joycodeIndex, int val);
 
-const char *GetExecCommand(void);
+const string GetExecCommand(void);
 void SetExecCommand(char *cmd);
 
 int GetExecWait(void);
@@ -436,10 +438,16 @@ void SetHideMouseOnStartup(BOOL hide);
 BOOL GetRunFullScreen(void);
 void SetRunFullScreen(BOOL fullScreen);
 
-uint32_t GetDriverCacheLower(int driver_index);
-uint32_t GetDriverCacheUpper(int driver_index);
-void SetDriverCache(int driver_index, uint32_t val);
+uint32_t GetDriverCacheLower(uint32_t driver_index);
+uint32_t GetDriverCacheUpper(uint32_t driver_index);
+void SetDriverCache(uint32_t driver_index, uint32_t val);
 BOOL RequiredDriverCache(void);
+void ForceRebuild(void);
+BOOL DriverIsComputer(uint32_t driver_index);
+BOOL DriverIsConsole(uint32_t driver_index);
+BOOL DriverIsModified(uint32_t driver_index);
+BOOL DriverIsImperfect(uint32_t driver_index);
+string GetGameName(uint32_t driver_index);
 
 // from optionsms.h (MESSUI)
 
@@ -484,8 +492,8 @@ BOOL GetSLSortReverse(void);
 
 void SetSelectedSoftware(int driver_index, string opt_name, const char *software);
 
-void SetCurrentSoftwareTab(const char *shortname);
-const char *GetCurrentSoftwareTab(void);
+void SetCurrentSoftwareTab(int val);
+int GetCurrentSoftwareTab(void);
 
 
 #endif

@@ -123,6 +123,8 @@ static const LPCTSTR softlist_column_names[] =
 };
 
 static BOOL MVstate = 0;
+static BOOL has_software = 0;
+
 struct MViewCallbacks
 {
 	BOOL (*pfnGetOpenFileName)(HWND hwndMView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
@@ -173,7 +175,6 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem);
 
 static LPCSTR SoftwareTabView_GetTabShortName(int tab);
 static LPCSTR SoftwareTabView_GetTabLongName(int tab);
-static void SoftwareTabView_OnSelectionChanged(void);
 static void SoftwareTabView_OnMoveSize(void);
 static void SetupSoftwareTabView(void);
 
@@ -360,6 +361,16 @@ void InitMessPicker(void)
 	printf("InitMessPicker: J\n");fflush(stdout);
 	SetWindowLong(hwndSoftwareList, GWL_STYLE, GetWindowLong(hwndSoftwareList, GWL_STYLE) | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED);
 	printf("InitMessPicker: Finished\n");fflush(stdout);
+
+	BOOL bShowSoftware = BIT(GetWindowPanes(), 2);
+	int swtab = GetCurrentSoftwareTab();
+	if (!bShowSoftware)
+		swtab = -1;
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWLIST), (swtab == 0) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW), (swtab == 1) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SOFTLIST), (swtab == 2) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWTAB), bShowSoftware ? SW_SHOW : SW_HIDE);
+	CheckMenuItem(GetMenu(GetMainWindow()), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
 }
 
 
@@ -687,7 +698,7 @@ static BOOL MView_SetDriver(HWND hwndMView, const software_config *sconfig)
 	printf("MView_SetDriver: B\n");fflush(stdout);
 	pMViewInfo->config = sconfig;
 
-	if (!sconfig)
+	if (!sconfig || !has_software)
 		return false;
 
 	// count total amount of devices
@@ -797,7 +808,7 @@ static BOOL MView_SetDriver(HWND hwndMView, const software_config *sconfig)
 //#endif
 
 
-void MyFillSoftwareList(int drvindex, BOOL bForce)
+BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 {
 	// do we have to do anything?
 	if (!bForce)
@@ -808,18 +819,22 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 		else
 			is_same = (drvindex < 0);
 		if (is_same)
-			return;
+			return has_software;
 	}
 
 	mvmap.clear();
 	slmap.clear();
+	has_software = false;
 
 	// free the machine config, if necessary
 	MySoftwareListClose();
 
 	// allocate the machine config, if necessary
 	if (drvindex >= 0)
+	{
 		s_config = software_config_alloc(drvindex);
+		has_software = DriverHasSoftware(drvindex);
+	}
 
 	// locate key widgets
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
@@ -839,8 +854,8 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 	printf("MyFillSoftwareList: Calling SoftwarePicker_SetDriver\n");fflush(stdout);
 	SoftwarePicker_SetDriver(hwndSoftwarePicker, s_config);
 
-	if (!s_config)
-		return;
+	if (!s_config || !has_software)
+		return has_software;
 
 	// set up the Software Files by using swpath (can handle multiple paths)
 	printf("MyFillSoftwareList: Processing SWDir\n");fflush(stdout);
@@ -889,6 +904,7 @@ void MyFillSoftwareList(int drvindex, BOOL bForce)
 		}
 	}
 	printf("MyFillSoftwareList: Finished\n");fflush(stdout);
+	return has_software;
 }
 
 
@@ -1411,7 +1427,7 @@ static LPCTSTR MView_GetSelectedSoftware(HWND hwndMView, int nDriverIndex, const
 			return t_buffer;
 		}
 	}
-	printf("MView_GetSelectedSoftware: Got nothing\n\n");fflush(stdout);
+	printf("MView_GetSelectedSoftware: Got nothing\n");fflush(stdout);
 	if (!opt_name.empty())
 		mvmap[opt_name] = 0;
 	return ui_wstring_from_utf8(""); // nothing loaded or error occurred
@@ -1734,7 +1750,7 @@ static LPCSTR SoftwareTabView_GetTabLongName(int tab)
 }
 
 
-static void SoftwareTabView_OnSelectionChanged(void)
+void SoftwareTabView_OnSelectionChanged(void)
 {
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
 	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
@@ -1819,7 +1835,7 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 {
 	struct MViewInfo *pMViewInfo;
 	RECT r;
-	BOOL has_software = false, passes_tests = false;
+	BOOL software = false, passes_tests = false;
 	TCHAR szPath[MAX_PATH];
 	string opt_name = pEnt->dev->instance_name();
 	pMViewInfo = GetMViewInfo(hwndMView);
@@ -1837,13 +1853,13 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 				{
 					if (!image.user_loadable())
 						continue;
-					if (!has_software && (opt_name == image.instance_name()))
+					if (!software && (opt_name == image.instance_name()))
 					{
 						const char *interface = image.image_interface();
 						if (interface && part.matches_interface(interface))
 						{
 							slmap[opt_name] = swlist.list_name();
-							has_software = true;
+							software = true;
 						}
 					}
 				}
@@ -1851,7 +1867,7 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 		}
 	}
 
-	if (has_software)
+	if (software)
 	{
 		string as, dst;
 		char rompath[512];

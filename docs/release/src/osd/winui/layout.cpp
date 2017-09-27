@@ -26,26 +26,12 @@
 #include "properties.h"
 
 
-static BOOL FilterAvailable(int driver_index);
+static BOOL FilterAvailable(uint32_t driver_index)
+{
+	return !DriverUsesRoms(driver_index) || IsAuditResultYes(GetRomAuditResults(driver_index));
+}
 
 #ifdef MESS
-#include "drivenum.h"
-
-static BOOL DriverIsComputer(int driver_index)
-{
-	return ((driver_list::driver(driver_index).flags & machine_flags::MASK_TYPE) == machine_flags::TYPE_COMPUTER);
-}
-
-static BOOL DriverIsConsole(int driver_index)
-{
-	return ((driver_list::driver(driver_index).flags & machine_flags::MASK_TYPE) == machine_flags::TYPE_CONSOLE);
-}
-
-static BOOL DriverIsModified(int driver_index)
-{
-	return (driver_list::driver(driver_index).flags & MACHINE_UNOFFICIAL) ? true : false;
-}
-
 extern const FOLDERDATA g_folderData[] =
 {
 	{"All Systems",     "allgames",          FOLDER_ALLGAMES,     IDI_FOLDER,               0,             0,            0, NULL,                       NULL,                    TRUE },
@@ -61,7 +47,7 @@ extern const FOLDERDATA g_folderData[] =
 	{"Horizontal",      "horizontal",        FOLDER_HORIZONTAL,   IDI_FOLDER_HORIZONTAL,    F_HORIZONTAL,  F_VERTICAL,   0, NULL,                       DriverIsVertical,        FALSE },
 	{"Imperfect",       "imperfect",         FOLDER_DEFICIENCY,   IDI_FOLDER,               0,             0,            0, CreateDeficiencyFolders },
 	{"Lightgun",        "Lightgun",          FOLDER_LIGHTGUN,     IDI_FOLDER,               0,             0,            0, NULL,                       DriverUsesLightGun,      TRUE },
-	{"Manufacturer",    "manufacturer",      FOLDER_MANUFACTURER, IDI_FOLDER_MANUFACTURER,  0,             0,            0, CreateManufacturerFolders },
+	{"Manufacturer",    "manufacturer",      FOLDER_MANUFACTURER, IDI_FOLDER_MANUFACTURER,  0,             0,            1, CreateManufacturerFolders },
 	{"Mechanical",      "mechanical",        FOLDER_MECHANICAL,   IDI_FOLDER,               0,             0,            0, NULL,                       DriverIsMechanical,      TRUE },
 	{"Modified/Hacked", "modified",          FOLDER_MODIFIED,     IDI_FOLDER,               0,             0,            0, NULL,                       DriverIsModified,        TRUE },
 	{"Mouse",           "mouse",             FOLDER_MOUSE,        IDI_FOLDER,               0,             0,            0, NULL,                       DriverUsesMouse,         TRUE },
@@ -72,16 +58,16 @@ extern const FOLDERDATA g_folderData[] =
 	{"Resolution",      "resolution",        FOLDER_RESOLUTION,   IDI_FOLDER,               0,             0,            1, CreateResolutionFolders },
 	{"Samples",         "samples",           FOLDER_SAMPLES,      IDI_FOLDER,               0,             0,            0, NULL,                       DriverUsesSamples,       TRUE },
 	{"Save State",      "savestate",         FOLDER_SAVESTATE,    IDI_FOLDER,               0,             0,            0, NULL,                       DriverSupportsSaveState, TRUE },
-	{"Screens",         "screens",           FOLDER_SCREENS,      IDI_FOLDER,               0,             0,            0, CreateScreenFolders },
+	{"Screens",         "screens",           FOLDER_SCREENS,      IDI_FOLDER,               0,             0,            1, CreateScreenFolders },
 	{"Sound",           "sound",             FOLDER_SND,          IDI_FOLDER,               0,             0,            1, CreateSoundFolders },
-	{"Source",          "source",            FOLDER_SOURCE,       IDI_FOLDER_SOURCE,        0,             0,            0, CreateSourceFolders },
+	{"Source",          "source",            FOLDER_SOURCE,       IDI_FOLDER_SOURCE,        0,             0,            1, CreateSourceFolders },
 	{"Stereo",          "stereo",            FOLDER_STEREO,       IDI_SOUND,                0,             0,            0, NULL,                       DriverIsStereo,          TRUE },
 	{"Trackball",       "trackball",         FOLDER_TRACKBALL,    IDI_FOLDER,               0,             0,            0, NULL,                       DriverUsesTrackball,     TRUE },
 	{"Unavailable",     "unavailable",       FOLDER_UNAVAILABLE,  IDI_FOLDER_UNAVAILABLE,   0,             F_AVAILABLE,  0, NULL,                       FilterAvailable,         FALSE },
 	{"Vector",          "vector",            FOLDER_VECTOR,       IDI_FOLDER,               F_VECTOR,      F_RASTER,     0, NULL,                       DriverIsVector,          TRUE },
 	{"Vertical",        "vertical",          FOLDER_VERTICAL,     IDI_FOLDER_VERTICAL,      F_VERTICAL,    F_HORIZONTAL, 0, NULL,                       DriverIsVertical,        TRUE },
 	{"Working",         "working",           FOLDER_WORKING,      IDI_WORKING,              F_WORKING,     F_NONWORKING, 0, NULL,                       DriverIsBroken,          FALSE },
-	{"Year",            "year",              FOLDER_YEAR,         IDI_FOLDER_YEAR,          0,             0,            0, CreateYearFolders },
+	{"Year",            "year",              FOLDER_YEAR,         IDI_FOLDER_YEAR,          0,             0,            1, CreateYearFolders },
 	{ NULL }
 };
 #else
@@ -98,7 +84,7 @@ extern const FOLDERDATA g_folderData[] =
 	{"Horizontal",      "horizontal",        FOLDER_HORIZONTAL,   IDI_FOLDER_HORIZONTAL,    F_HORIZONTAL,  F_VERTICAL,   0, NULL,                       DriverIsVertical,        FALSE },
 	{"Imperfect",       "imperfect",         FOLDER_DEFICIENCY,   IDI_FOLDER,               0,             0,            0, CreateDeficiencyFolders },
 	{"Lightgun",        "Lightgun",          FOLDER_LIGHTGUN,     IDI_FOLDER,               0,             0,            0, NULL,                       DriverUsesLightGun,      TRUE },
-	{"Manufacturer",    "manufacturer",      FOLDER_MANUFACTURER, IDI_FOLDER_MANUFACTURER,  0,             0,            0, CreateManufacturerFolders },
+	{"Manufacturer",    "manufacturer",      FOLDER_MANUFACTURER, IDI_FOLDER_MANUFACTURER,  0,             0,            1, CreateManufacturerFolders },
 	{"Mechanical",      "mechanical",        FOLDER_MECHANICAL,   IDI_FOLDER,               0,             0,            0, NULL,                       DriverIsMechanical,      TRUE },
 	{"Non Mechanical",  "nonmechanical",     FOLDER_NONMECHANICAL,IDI_FOLDER,               0,             0,            0, NULL,                       DriverIsMechanical,      FALSE },
 	{"Not Working",     "nonworking",        FOLDER_NONWORKING,   IDI_NONWORKING,           F_NONWORKING,  F_WORKING,    0, NULL,                       DriverIsBroken,          TRUE },
@@ -107,16 +93,16 @@ extern const FOLDERDATA g_folderData[] =
 	{"Resolution",      "resolution",        FOLDER_RESOLUTION,   IDI_FOLDER,               0,             0,            1, CreateResolutionFolders },
 	{"Samples",         "samples",           FOLDER_SAMPLES,      IDI_FOLDER,               0,             0,            0, NULL,                       DriverUsesSamples,       TRUE },
 	{"Save State",      "savestate",         FOLDER_SAVESTATE,    IDI_FOLDER,               0,             0,            0, NULL,                       DriverSupportsSaveState, TRUE },
-	{"Screens",         "screens",           FOLDER_SCREENS,      IDI_FOLDER,               0,             0,            0, CreateScreenFolders },
+	{"Screens",         "screens",           FOLDER_SCREENS,      IDI_FOLDER,               0,             0,            1, CreateScreenFolders },
 	{"Sound",           "sound",             FOLDER_SND,          IDI_SOUND,                0,             0,            1, CreateSoundFolders },
-	{"Source",          "source",            FOLDER_SOURCE,       IDI_FOLDER_SOURCE,        0,             0,            0, CreateSourceFolders },
+	{"Source",          "source",            FOLDER_SOURCE,       IDI_FOLDER_SOURCE,        0,             0,            1, CreateSourceFolders },
 	{"Stereo",          "stereo",            FOLDER_STEREO,       IDI_FOLDER,               0,             0,            0, NULL,                       DriverIsStereo,          TRUE },
 	{"Trackball",       "trackball",         FOLDER_TRACKBALL,    IDI_FOLDER,               0,             0,            0, NULL,                       DriverUsesTrackball,     TRUE },
 	{"Unavailable",     "unavailable",       FOLDER_UNAVAILABLE,  IDI_FOLDER_UNAVAILABLE,   0,             F_AVAILABLE,  0, NULL,                       FilterAvailable,         FALSE },
 	{"Vector",          "vector",            FOLDER_VECTOR,       IDI_FOLDER,               F_VECTOR,      F_RASTER,     0, NULL,                       DriverIsVector,          TRUE },
 	{"Vertical",        "vertical",          FOLDER_VERTICAL,     IDI_FOLDER_VERTICAL,      F_VERTICAL,    F_HORIZONTAL, 0, NULL,                       DriverIsVertical,        TRUE },
 	{"Working",         "working",           FOLDER_WORKING,      IDI_WORKING,              F_WORKING,     F_NONWORKING, 0, NULL,                       DriverIsBroken,          FALSE },
-	{"Year",            "year",              FOLDER_YEAR,         IDI_FOLDER_YEAR,          0,             0,            0, CreateYearFolders },
+	{"Year",            "year",              FOLDER_YEAR,         IDI_FOLDER_YEAR,          0,             0,            1, CreateYearFolders },
 	{ NULL }
 };
 #endif
@@ -229,6 +215,7 @@ extern const ICONDATA g_iconData[] =
 	{ IDI_WIN_UNKNOWN,       "unknown" },
 	{ IDI_WIN_CLONE,         "clone" },
 	{ IDI_WIN_REDX,          "warning" },
+	{ IDI_WIN_IMPERFECT,     "imperfect" },
 	{ IDI_WIN_NOROMSNEEDED,  "noromsneeded" },
 	{ IDI_WIN_MISSINGOPTROM, "missingoptrom" },
 	{ IDI_WIN_FLOP,          "floppy" },
@@ -248,6 +235,7 @@ extern const ICONDATA g_iconData[] =
 	{ IDI_WIN_UNKNOWN,       "unknown" },
 	{ IDI_WIN_CLONE,         "clone" },
 	{ IDI_WIN_REDX,          "warning" },
+	{ IDI_WIN_IMPERFECT,     "imperfect" },
 	{ 0 }
 };
 #endif
@@ -259,8 +247,3 @@ extern const char g_szGameCountString[] = "%d machines";
 extern const TCHAR g_szPlayGameString[] = TEXT("&Play %s");
 extern const char g_szGameCountString[] = "%d games";
 #endif
-
-static BOOL FilterAvailable(int driver_index)
-{
-	return !DriverUsesRoms(driver_index) || IsAuditResultYes(GetRomAuditResults(driver_index));
-}

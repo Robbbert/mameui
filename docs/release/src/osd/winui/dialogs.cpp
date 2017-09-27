@@ -170,7 +170,6 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 	int nTabCount = 0;
 	int nPatternCount = 0;
 	int value = 0;
-	const char* snapname = NULL;
 
 	switch (Msg)
 	{
@@ -178,7 +177,7 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 		Button_SetCheck(GetDlgItem(hDlg,IDC_START_GAME_CHECK),GetGameCheck());
 		Button_SetCheck(GetDlgItem(hDlg,IDC_JOY_GUI),GetJoyGUI());
 		Button_SetCheck(GetDlgItem(hDlg,IDC_KEY_GUI),GetKeyGUI());
-		Button_SetCheck(GetDlgItem(hDlg,IDC_EXTRA_FOLDERS),GetShowExtraFolders());
+		Button_SetCheck(GetDlgItem(hDlg,IDC_OVERRIDE_REDX),GetOverrideRedX());
 		Button_SetCheck(GetDlgItem(hDlg,IDC_HIDE_MOUSE),GetHideMouseOnStartup());
 
 		// Get the current value of the control
@@ -227,21 +226,23 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 		(void)ComboBox_SetItemData(GetDlgItem(hDlg, IDC_SNAPNAME), nPatternCount, "%g/%i");
 		//Default to this setting
 		(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), nPatternCount++);
-		snapname = GetSnapName();
-		if (core_stricmp(snapname,"%g" )==0) {
-			(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 0);
-		}
-		if (core_stricmp(snapname,"%g%i" )==0) {
-			(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 1);
-		}
-		if (core_stricmp(snapname,"%g/%g" )==0) {
-			(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 2);
-		}
-		if (core_stricmp(snapname,"%g/%g%i" )==0) {
-			(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 3);
-		}
-		if (core_stricmp(snapname,"%g/%i" )==0) {
-			(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 4);
+
+		{
+			const char* snapname = GetSnapName();
+			if (core_stricmp(snapname,"%g" )==0)
+				(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 0);
+			else
+			if (core_stricmp(snapname,"%g%i" )==0)
+				(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 1);
+			else
+			if (core_stricmp(snapname,"%g/%g" )==0)
+				(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 2);
+			else
+			if (core_stricmp(snapname,"%g/%g%i" )==0)
+				(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 3);
+			else
+			if (core_stricmp(snapname,"%g/%i" )==0)
+				(void)ComboBox_SetCurSel(GetDlgItem(hDlg, IDC_SNAPNAME), 4);
 		}
 
 		SendDlgItemMessage(hDlg, IDC_SCREENSHOT_BORDERSIZE, TBM_SETRANGE, (WPARAM)false, (LPARAM)MAKELONG(0, 100)); /* [0, 100] */
@@ -292,7 +293,7 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 			SetGameCheck(Button_GetCheck(GetDlgItem(hDlg, IDC_START_GAME_CHECK)));
 			SetJoyGUI(Button_GetCheck(GetDlgItem(hDlg, IDC_JOY_GUI)));
 			SetKeyGUI(Button_GetCheck(GetDlgItem(hDlg, IDC_KEY_GUI)));
-			SetShowExtraFolders(Button_GetCheck(GetDlgItem(hDlg, IDC_EXTRA_FOLDERS)));
+			SetOverrideRedX(Button_GetCheck(GetDlgItem(hDlg, IDC_OVERRIDE_REDX)));
 			SetHideMouseOnStartup(Button_GetCheck(GetDlgItem(hDlg,IDC_HIDE_MOUSE)));
 
 			if( Button_GetCheck(GetDlgItem(hDlg,IDC_RESET_PLAYSTATS ) ) )
