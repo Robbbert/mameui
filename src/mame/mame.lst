@@ -13782,6 +13782,9 @@ goindolk                        // (c) 1987 Sun a Electronics
 goindolu                        // (c) 1987 Sun a Electronics
 homo                            // bootleg
 
+@source:gokidetor.cpp
+gokidetor                       // (c) 1992 Taito
+
 @source:goldngam.cpp
 moviecrd                        // (c) 1998 Golden Games
 swisspkr                        // (c) 1990 Golden Games
@@ -14653,8 +14656,10 @@ taltbeast                       // Tiger
 tbatman                         // Tiger
 tddragon                        // Tiger
 tgaunt                          // Tiger
+tjdredd                         // Tiger
 tsjam                           // Tiger
 tsonic                          // Tiger
+tswampt                         // Tiger
 
 @source:hh_tms1k.cpp
 7in1ss                          // Tiger Electronics
@@ -29785,6 +29790,9 @@ smshilo                         // (c) 1983 SMS Manufacturing Corp.
 ssjkrpkr                        // (c) 1982 Southern Systems & Assembly, Ltd.
 tpoker2                         // (c) 1993 Micro Manufacturing, Inc.
 
+@source:notechan.cpp
+notechan                        // (c) 1995 Banpresto
+
 @source:notetaker.cpp
 notetakr                        //
 
@@ -33710,7 +33718,8 @@ gforce2j                        // 1988.07 Galaxy Force II (Japan)
 gforce2ja                       // 1988.07 Galaxy Force II (Japan)
 gforce2sd                       // 1988.?? Galaxy Force II (World, Super Deluxe unit)
 gloc                            // 1990.?? G-LOC Air Battle (World)
-glocr360                        // 1990.?? G-LOC (R360, World?)
+glocr360                        // 1990.?? G-LOC (R360, World)
+glocr360j                       // 1990.?? G-LOC (R360, Japan)
 glocu                           // 1990.04 G-LOC Air Battle (US)
 pdrift                          // 1988.?? Power Drift (World)
 pdrifta                         // 1988.?? Power Drift (World)
@@ -33721,6 +33730,11 @@ rchase                          // 1991.09 Rail Chase (World)
 rchasej                         // 1991.09 Rail Chase (Japan)
 strkfgtr                        // 1991.06 Strike Fighter (World)
 strkfgtrj                       // 1991.06 Strike Fighter (Japan)
+
+@source:seibucats.cpp
+emjjoshi						// (c) 1999 Seibu Kaihatsu / CATS
+emjscanb						// (c) 2001 Seibu Kaihatsu / CATS
+emjtrapz						// (c) 2001 Seibu Kaihatsu / CATS
 
 @source:seibuspi.cpp
 batlball                        // (c) 1995 Seibu Kaihatsu (Tuning License)
@@ -36271,7 +36285,8 @@ to9                             // 1985 Thomson T09
 to9p                            // 1986 Thomson T09+
 
 @source:thoop2.cpp
-thoop2                          // (c) 1994 - Ref ???
+thoop2                          // (c) 1994 - REF.940411
+thoop2a                         // (c) 1994 - REF.940411
 
 @source:thunderj.cpp
 thunderj                        // 136076           (c) 1990
@@ -38839,6 +38854,3 @@ vgmplay
 @source:ldplayer.cpp
 simldv1000                      // Pioneer LD-V1000
 simpr8210                       // Pioneer PR-8210
-
-@source:notechan.cpp
-notechan                        // (c) Banpresto

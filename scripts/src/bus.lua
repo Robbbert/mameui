@@ -308,6 +308,8 @@ if (BUSES["BBC_TUBE"]~=null) then
 		MAME_DIR .. "src/devices/bus/bbc/tube/tube_casper.h",
 		MAME_DIR .. "src/devices/bus/bbc/tube/tube_z80.cpp",
 		MAME_DIR .. "src/devices/bus/bbc/tube/tube_z80.h",
+		MAME_DIR .. "src/devices/bus/bbc/tube/tube_zep100.cpp",
+		MAME_DIR .. "src/devices/bus/bbc/tube/tube_zep100.h",
 	}
 end
 
@@ -1595,6 +1597,8 @@ if (BUSES["VME"]~=null) then
 		MAME_DIR .. "src/devices/bus/vme/vme_fcisio.h",
 		MAME_DIR .. "src/devices/bus/vme/vme_fcscsi.cpp",
 		MAME_DIR .. "src/devices/bus/vme/vme_fcscsi.h",
+		MAME_DIR .. "src/devices/bus/vme/vme_hcpu30.cpp",
+		MAME_DIR .. "src/devices/bus/vme/vme_hcpu30.h",
 	}
 end
 
