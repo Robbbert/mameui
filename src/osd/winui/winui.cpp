@@ -66,6 +66,7 @@
 #include "messui.h"
 #include "winui.h"
 #include "drivenum.h"
+#include <fstream>
 
 #ifdef _MSC_VER
 #define snprintf _snprintf
@@ -4431,6 +4432,26 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 			if (nGame >= 0)
 			{
 				string path = GetManualsDir() + string("\\") + driver_list::driver(nGame).name + string(".pdf");
+				ShellExecuteCommon(hMain, path.c_str());
+			}
+			SetFocus(hwndList);
+		}
+		break;
+
+	case ID_NOTEPAD:
+		{
+			int nGame = Picker_GetSelectedItem(hwndList);
+			if (nGame >= 0)
+			{
+				const char* filename = "history.wtx";
+				string t2 = GetGameHistory(nGame);
+				std::ofstream outfile (filename, std::ios::out | std::ios::trunc);
+				size_t size = t2.size();
+				char t1[size+1];
+				strcpy(t1, t2.c_str());
+				outfile.write(t1, size);
+				outfile.close();
+				string path = string(".\\") + filename;
 				ShellExecuteCommon(hMain, path.c_str());
 			}
 			SetFocus(hwndList);
