@@ -441,7 +441,6 @@ I/O is via TTL, very similar to Designer Display
 #include "machine/6821pia.h"
 #include "machine/i8255.h"
 #include "machine/nvram.h"
-#include "machine/timer.h"
 #include "sound/volt_reg.h"
 #include "speaker.h"
 
@@ -581,7 +580,7 @@ WRITE8_MEMBER(fidel6502_state::csc_pia0_pa_w)
 	m_speech->data_w(space, 0, data & 0x3f);
 
 	// d0-d7: data for the 4 7seg leds, bits are ABFGHCDE (H is extra led)
-	m_7seg_data = BITSWAP8(data,0,1,5,6,7,2,3,4);
+	m_7seg_data = bitswap<8>(data,0,1,5,6,7,2,3,4);
 	csc_prepare_display();
 }
 
@@ -687,7 +686,7 @@ WRITE8_MEMBER(fidel6502_state::eas_segment_w)
 {
 	// a0-a2,d7: digit segment
 	m_7seg_data = (data & 0x80) >> offset;
-	m_7seg_data = BITSWAP8(m_7seg_data,7,6,4,5,0,2,1,3);
+	m_7seg_data = bitswap<8>(m_7seg_data,7,6,4,5,0,2,1,3);
 	eas_prepare_display();
 }
 
@@ -912,11 +911,11 @@ WRITE8_MEMBER(fidel6502_state::fexcel_ttl_w)
 	m_dac->write(BIT(sel, 9));
 
 	// 74259 Q4-Q7,Q2,Q1: digit/led select (active low)
-	u8 led_sel = ~BITSWAP8(m_led_select,0,3,1,2,7,6,5,4) & 0x3f;
+	u8 led_sel = ~bitswap<8>(m_led_select,0,3,1,2,7,6,5,4) & 0x3f;
 
 	// a0-a2,d1: digit segment data (model 6093)
 	m_7seg_data = (m_7seg_data & ~mask) | ((data & 2) ? mask : 0);
-	u8 seg_data = BITSWAP8(m_7seg_data,0,1,3,2,7,5,6,4);
+	u8 seg_data = bitswap<8>(m_7seg_data,0,1,3,2,7,5,6,4);
 
 	// update display: 4 7seg leds, 2*8 chessboard leds
 	for (int i = 0; i < 6; i++)
@@ -1009,7 +1008,7 @@ WRITE8_MEMBER(fidel6502_state::fdesdis_control_w)
 WRITE8_MEMBER(fidel6502_state::fdesdis_lcd_w)
 {
 	// a0-a2,d0-d3: 4*74259 to lcd digit segments
-	u32 mask = BITSWAP8(1 << offset,3,7,6,0,1,2,4,5);
+	u32 mask = bitswap<8>(1 << offset,3,7,6,0,1,2,4,5);
 	for (int i = 0; i < 4; i++)
 	{
 		m_7seg_data = (m_7seg_data & ~mask) | ((data >> i & 1) ? 0 : mask);
@@ -1080,7 +1079,8 @@ WRITE8_MEMBER(fidel6502_state::kishon_control_w)
 	chesster_control_w(space, offset, data);
 
 	// 2 more bankswitch bits: 74259(2) Q2 to A17, Q0 to A18
-	membank("bank1")->set_entry((m_led_select >> 2 & 3) | (m_speech_bank >> 1 & 4) | (m_speech_bank << 1 & 8) | (m_speech_bank << 4 & 0x10));
+	u8 bank = (m_led_select >> 2 & 3) | bitswap<3>(m_speech_bank, 0,2,3) << 2;
+	membank("bank1")->set_entry(bank);
 }
 
 DRIVER_INIT_MEMBER(fidel6502_state, chesster)
