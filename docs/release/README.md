@@ -6,7 +6,7 @@ MAMEUI has an inbuilt front-end allowing you to run a game from a list.
 How to compile?
 ===============
 
-You can only build MAMEUI on a Windows computer. It won't compile on Unix. More info at docs/compile.doc
+You can only build MAMEUI on a Windows computer. It won't compile on Unix.
 
 ```
 make OSD=messui

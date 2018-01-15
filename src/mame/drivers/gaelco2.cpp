@@ -25,6 +25,8 @@
     sounds cut out sometimes, others are often missing (sound status reads as busy,
     so no attempt made to play new sound) probably bug in devices\sound\gaelco.cpp ??
 
+Known to exist but not dumped is a Maniac Square v1.0 with checksum 66B1
+
 ***************************************************************************/
 
 #include "emu.h"
@@ -319,7 +321,7 @@ http://web.archive.org/web/20001206204300/http://luckysunshine.com/products/game
 
 READ16_MEMBER(gaelco2_state::play2000_shareram_68k_r)
 {
-	int pc = space.device().safe_pc();
+	int pc = m_maincpu->pc();
 	uint16_t ret = m_shareram[offset];
 
 	// checks at 0x00814, 0x23504, 0x2340a after writing command?
@@ -352,7 +354,7 @@ READ16_MEMBER(gaelco2_state::play2000_shareram_68k_r)
 
 WRITE16_MEMBER(gaelco2_state::play2000_shareram_68k_w)
 {
-	int pc = space.device().safe_pc();
+	int pc = m_maincpu->pc();
 
 	COMBINE_DATA(&m_shareram[offset]);
 

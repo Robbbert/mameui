@@ -14,7 +14,7 @@
   - tispeak: TI Speak & Spell series gen. 1
 
   Let's use this driver for a list of known devices and their serials,
-  excluding TI's own products.
+  excluding most of TI's own products(they normally didn't use "MP" codes).
 
   serial   device    etc.
 --------------------------------------------------------------------
@@ -37,6 +37,7 @@
  @MP0919   TMS1000   1979, Tiger Copy Cat (model 7-520)
  @MP0920   TMS1000   1979, Entex Space Battle (6004)
  @MP0923   TMS1000   1979, Entex Baseball 2 (6002)
+ *MP1022   TMS1100   1979, Texas Instruments unknown thermostat
  @MP1030   TMS1100   1980, APF Mathemagician
  @MP1133   TMS1470   1979, Kosmos Astro
  @MP1180   TMS1100   1980, Tomy Power House Pinball
@@ -53,7 +54,7 @@
  *MP1296   TMS1100?  1982, Entex Black Knight
  @MP1312   TMS1100   1983, Gakken FX-Micom R-165/Tandy Radio Shack Science Fair Microcomputer Trainer
  *MP1359   TMS1100?  1985, Capsela CRC2000
- @MP1525   TMS1170   1980, Coleco Head to Head Baseball
+ @MP1525   TMS1170   1980, Coleco Head to Head: Electronic Baseball
  @MP1604   TMS1370   1982, Gakken Invader 2000/Tandy Cosmic Fire Away 3000
  @MP1801   TMS1700   1981, Tiger Ditto/Tandy Pocket Repeat (model 60-2152)
  @MP2105   TMS1370   1979, Gakken/Entex Poker (6005)
@@ -67,7 +68,8 @@
  *MP3232   TMS1000   1979, Fonas 2-Player Baseball (no "MP" on chip label)
  @MP3300   TMS1000   1979, Milton Bradley Simon (Rev F)
  @MP3301A  TMS1000   1979, Milton Bradley Big Trak
- *MP3320A  TMS1000   1979, Coleco Head to Head Basketball
+ *MP3320A  TMS1000   1980, Coleco Head to Head: Electronic Basketball
+ *MP3321A  TMS1000   1980, Coleco Head to Head: Electronic Hockey
  @M32001   TMS1000   1981, Coleco Quiz Wiz Challenger (note: MP3398, MP3399, M3200x?)
  *M32018   TMS1000   1990, unknown device (have decap/dump)
   M32045B  TMS1000   1983, Chrysler Electronic Voice Alert (11-function) -> eva.cpp
@@ -81,7 +83,7 @@
   MP3454   TMS1100   1979, MicroVision cartridge: Star Trek Phaser Strike
   MP3455   TMS1100   1980, MicroVision cartridge: Pinball
   MP3457   TMS1100   1979, MicroVision cartridge: Mindbuster
- @MP3460   TMS1100   1980, Coleco Head to Head Football
+ @MP3460   TMS1100   1980, Coleco Head to Head: Electronic Football
   MP3474   TMS1100   1979, MicroVision cartridge: Vegas Slots
   MP3475   TMS1100   1979, MicroVision cartridge: Bowling
  @MP3476   TMS1100   1979, Milton Bradley Super Simon
@@ -96,11 +98,12 @@
  @M34012   TMS1100   1980, Mattel Dungeons & Dragons - Computer Labyrinth Game
  *M34014   TMS1100   1981, Coleco Bowlatronic
   M34017   TMS1100   1981, MicroVision cartridge: Cosmic Hunter
- @M34018   TMS1100   1981, Coleco Head to Head Boxing
+ @M34018   TMS1100   1981, Coleco Head to Head: Electronic Boxing
  @M34038   TMS1100   1982, Parker Brothers Lost Treasure
   M34047   TMS1100   1982, MicroVision cartridge: Super Blockbuster
  @M34078A  TMS1100   1983, Milton Bradley Electronic Arcade Mania
  @MP4486A  TMS1000C  1983, Vulcan XL 25
+ *MP6061   TMS0970   1979, Texas Instruments Electronic Digital Thermostat
  @MP6100A  TMS0980   1979, Ideal Electronic Detective
  @MP6101B  TMS0980   1979, Parker Brothers Stop Thief
  *MP6361   ?         1983, Defender Strikes (? note: VFD-capable)
@@ -138,6 +141,7 @@
   - bship discrete sound, netlist is documented
   - finish bshipb SN76477 sound
   - improve elecbowl driver
+  - is alphie(patent) the same as the final version?
 
 ***************************************************************************/
 
@@ -158,6 +162,7 @@
 
 // internal artwork
 #include "7in1ss.lh"
+#include "alphie.lh"
 #include "amaztron.lh" // clickable
 #include "arcmania.lh" // clickable
 #include "arrball.lh"
@@ -218,6 +223,7 @@
 #include "tc4.lh"
 #include "tcfball.lh"
 #include "tcfballa.lh"
+#include "timaze.lh"
 #include "xl25.lh" // clickable
 #include "zodiac.lh"
 
@@ -477,7 +483,6 @@ READ8_MEMBER(matchnum_state::read_k)
 	return read_inputs(6);
 }
 
-
 // config
 
 static INPUT_PORTS_START( matchnum )
@@ -606,7 +611,6 @@ READ8_MEMBER(arrball_state::read_k)
 	return read_inputs(1);
 }
 
-
 // config
 
 static INPUT_PORTS_START( arrball )
@@ -713,7 +717,6 @@ READ8_MEMBER(mathmagi_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(6);
 }
-
 
 // config
 
@@ -876,7 +879,6 @@ READ8_MEMBER(bcheetah_state::read_k)
 	return read_inputs(5);
 }
 
-
 // config
 
 static INPUT_PORTS_START( bcheetah )
@@ -988,7 +990,6 @@ READ8_MEMBER(amaztron_state::read_k)
 	if (k & 0x10) k |= 0xc;
 	return k & 0xf;
 }
-
 
 // config
 
@@ -1113,7 +1114,6 @@ READ8_MEMBER(zodiac_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(6);
 }
-
 
 // config
 
@@ -1297,7 +1297,6 @@ READ8_MEMBER(cqback_state::read_k)
 	return read_rotated_inputs(5);
 }
 
-
 // config
 
 static INPUT_PORTS_START( cqback )
@@ -1350,7 +1349,7 @@ MACHINE_CONFIG_END
 
 /***************************************************************************
 
-  Coleco Head to Head Football
+  Coleco Head to Head: Electronic Football
   * TMS1100NLLE (rev. E!) MP3460 (die label same)
   * 2*SN75492N LED display drivers, 9-digit LED grid, 1-bit sound
 
@@ -1358,7 +1357,7 @@ MACHINE_CONFIG_END
   offense blips (should) appear brighter. The hardware is similar to cqback.
 
   known releases:
-  - USA(1): Head to Head Football
+  - USA(1): Head to Head: Electronic Football
   - USA(2): Team Play Football, published by Sears
 
 ***************************************************************************/
@@ -1410,7 +1409,6 @@ READ8_MEMBER(h2hfootb_state::read_k)
 	// K: multiplexed inputs, rotated matrix
 	return read_rotated_inputs(9);
 }
-
 
 // config
 
@@ -1468,13 +1466,13 @@ MACHINE_CONFIG_END
 
 /***************************************************************************
 
-  Coleco Head to Head Baseball
+  Coleco Head to Head: Electronic Baseball
   * PCB labels Coleco rev C 73891/2
   * TMS1170NLN MP1525-N2 (die label MP1525)
   * 9-digit cyan VFD display, and other LEDs behind bezel, 1-bit sound
 
   known releases:
-  - USA: Head to Head Baseball
+  - USA: Head to Head: Electronic Baseball
   - Japan: Computer Baseball, published by Tsukuda
 
 ***************************************************************************/
@@ -1533,7 +1531,6 @@ READ8_MEMBER(h2hbaseb_state::read_k)
 	// K: multiplexed inputs (note: K8(Vss row) is always on)
 	return m_inp_matrix[4]->read() | read_inputs(4);
 }
-
 
 // config
 
@@ -1607,7 +1604,7 @@ MACHINE_CONFIG_END
 
 /***************************************************************************
 
-  Coleco Head to Head Boxing
+  Coleco Head to Head: Electronic Boxing
   * TMS1100NLL M34018-N2 (die label M34018)
   * 2-digit 7seg LED display, LED grid display, 1-bit sound
 
@@ -1662,7 +1659,6 @@ READ8_MEMBER(h2hboxing_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(5);
 }
-
 
 // config
 
@@ -1817,7 +1813,6 @@ READ8_MEMBER(quizwizc_state::read_k)
 	// K1: cartridge pin 4 (pin 5 N/C)
 	return read_inputs(6) | ((m_r & m_pinout) ? 1 : 0);
 }
-
 
 // config
 
@@ -1994,7 +1989,6 @@ READ8_MEMBER(tc4_state::read_k)
 	return read_inputs(6) | ((m_r & 0x200) ? m_pinout : 0);
 }
 
-
 // config
 
 static INPUT_PORTS_START( tc4 )
@@ -2136,7 +2130,6 @@ READ8_MEMBER(cnbaskb_state::read_k)
 	return read_inputs(3);
 }
 
-
 // config
 
 static INPUT_PORTS_START( cnbaskb )
@@ -2244,7 +2237,6 @@ READ8_MEMBER(cmsport_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(3);
 }
-
 
 // config
 
@@ -2372,7 +2364,6 @@ READ8_MEMBER(cnfball_state::read_k)
 	return read_inputs(2) | (m_r << 3 & 8);
 }
 
-
 // config
 
 static INPUT_PORTS_START( cnfball )
@@ -2484,7 +2475,6 @@ READ8_MEMBER(cnfball2_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(3);
 }
-
 
 // config
 
@@ -2612,7 +2602,6 @@ READ8_MEMBER(eleciq_state::read_k)
 	return read_inputs(7);
 }
 
-
 // config
 
 static INPUT_PORTS_START( eleciq )
@@ -2656,7 +2645,7 @@ static INPUT_PORTS_START( eleciq )
 	PORT_BIT( 0x0e, IP_ACTIVE_HIGH, IPT_UNUSED )
 
 	PORT_START("RESET")
-	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_R) PORT_NAME("Reset") PORT_CHANGED_MEMBER(DEVICE_SELF, eleciq_state, reset_button, 0)
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_R) PORT_NAME("Reset") PORT_CHANGED_MEMBER(DEVICE_SELF, eleciq_state, reset_button, nullptr)
 INPUT_PORTS_END
 
 INPUT_CHANGED_MEMBER(eleciq_state::reset_button)
@@ -2745,7 +2734,6 @@ READ8_MEMBER(esoccer_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(3);
 }
-
 
 // config
 
@@ -2870,7 +2858,6 @@ READ8_MEMBER(ebball_state::read_k)
 	// K: multiplexed inputs (note: K8(Vss row) is always on)
 	return m_inp_matrix[5]->read() | read_inputs(5);
 }
-
 
 // config
 
@@ -2999,7 +2986,6 @@ READ8_MEMBER(ebball2_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(4);
 }
-
 
 // config
 
@@ -3145,7 +3131,6 @@ READ8_MEMBER(ebball3_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(3);
 }
-
 
 // config
 
@@ -3299,7 +3284,6 @@ READ8_MEMBER(esbattle_state::read_k)
 	return read_inputs(2);
 }
 
-
 // config
 
 static INPUT_PORTS_START( esbattle )
@@ -3394,7 +3378,6 @@ WRITE16_MEMBER(einvader_state::write_o)
 	m_o = data;
 	prepare_display();
 }
-
 
 // config
 
@@ -3507,7 +3490,6 @@ READ8_MEMBER(efootb4_state::read_k)
 {
 	return read_inputs(5);
 }
-
 
 // config
 
@@ -3635,7 +3617,6 @@ READ8_MEMBER(ebaskb2_state::read_k)
 {
 	return read_inputs(4);
 }
-
 
 // config
 
@@ -3766,7 +3747,6 @@ READ8_MEMBER(raisedvl_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(2) & 0xf;
 }
-
 
 // config
 
@@ -3904,7 +3884,6 @@ READ8_MEMBER(f2pbball_state::read_k)
 	return read_inputs(3);
 }
 
-
 // config
 
 static INPUT_PORTS_START( f2pbball )
@@ -3929,7 +3908,7 @@ static INPUT_PORTS_START( f2pbball )
 	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_BUTTON4 ) PORT_COCKTAIL PORT_NAME("P2 Fast")
 
 	PORT_START("RESET")
-	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_BUTTON5 ) PORT_NAME("P1 Reset") PORT_CHANGED_MEMBER(DEVICE_SELF, f2pbball_state, reset_button, 0)
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_BUTTON5 ) PORT_NAME("P1 Reset") PORT_CHANGED_MEMBER(DEVICE_SELF, f2pbball_state, reset_button, nullptr)
 INPUT_PORTS_END
 
 INPUT_CHANGED_MEMBER(f2pbball_state::reset_button)
@@ -4024,7 +4003,6 @@ READ8_MEMBER(f3in1_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(4);
 }
-
 
 // config
 
@@ -4164,7 +4142,6 @@ READ8_MEMBER(gpoker_state::read_k)
 	return read_inputs(7);
 }
 
-
 // config
 
 /* physical button layout and labels is like this:
@@ -4272,7 +4249,6 @@ WRITE16_MEMBER(gjackpot_state::write_r)
 	gpoker_state::write_r(space, offset, data);
 	m_inp_mux = (data & 0x3f) | (data >> 4 & 0x40);
 }
-
 
 // config
 
@@ -4418,7 +4394,6 @@ READ8_MEMBER(ginv1000_state::read_k)
 	return m_inp_matrix[2]->read() | read_inputs(2);
 }
 
-
 // config
 
 static INPUT_PORTS_START( ginv1000 )
@@ -4542,7 +4517,6 @@ READ8_MEMBER(ginv2000_state::read_k)
 	// K1,K2: multiplexed inputs (K8 is fire button)
 	return m_inp_matrix[2]->read() | read_inputs(2);
 }
-
 
 // config
 
@@ -4674,7 +4648,6 @@ READ8_MEMBER(fxmcr165_state::read_k)
 	return read_inputs(5);
 }
 
-
 // config
 
 /* physical button layout and labels is like this:
@@ -4792,7 +4765,6 @@ READ8_MEMBER(elecdet_state::read_k)
 	// K: multiplexed inputs (note: the Vss row is always on)
 	return m_inp_matrix[4]->read() | read_inputs(4);
 }
-
 
 // config
 
@@ -4928,7 +4900,6 @@ READ8_MEMBER(starwbc_state::read_k)
 	return read_inputs(5);
 }
 
-
 // config
 
 /* physical button layout and labels is like this:
@@ -5048,7 +5019,6 @@ READ8_MEMBER(astro_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(8);
 }
-
 
 // config
 
@@ -5217,7 +5187,6 @@ READ8_MEMBER(elecbowl_state::read_k)
 	return read_inputs(4);
 }
 
-
 // config
 
 static INPUT_PORTS_START( elecbowl )
@@ -5358,7 +5327,6 @@ READ8_MEMBER(horseran_state::read_k)
 	return read_inputs(8);
 }
 
-
 // config
 
 /* physical button layout and labels is like this:
@@ -5487,7 +5455,6 @@ READ8_MEMBER(mdndclab_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(18);
 }
-
 
 // config
 
@@ -5682,7 +5649,6 @@ READ8_MEMBER(comp4_state::read_k)
 	return read_inputs(3);
 }
 
-
 // config
 
 static INPUT_PORTS_START( comp4 )
@@ -5777,7 +5743,6 @@ READ8_MEMBER(bship_state::read_k)
 	// K: multiplexed inputs (note: the Vss row is always on)
 	return m_inp_matrix[11]->read() | read_inputs(11);
 }
-
 
 // config
 
@@ -5953,7 +5918,6 @@ READ8_MEMBER(bshipb_state::read_k)
 	return m_inp_matrix[11]->read() | read_inputs(11);
 }
 
-
 // config
 
 // buttons are same as bship set
@@ -6044,7 +6008,6 @@ READ8_MEMBER(simon_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(4);
 }
-
 
 // config
 
@@ -6146,7 +6109,6 @@ READ8_MEMBER(ssimon_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(6);
 }
-
 
 // config
 
@@ -6327,7 +6289,6 @@ READ8_MEMBER(bigtrak_state::read_k)
 	// K8: IR sensor
 	return read_inputs(7) | (sensor_state() ? 8 : 0);
 }
-
 
 // config
 
@@ -6570,7 +6531,6 @@ READ8_MEMBER(mbdtower_state::read_k)
 	return read_inputs(3) | ((!m_sensor_blind && sensor_led_on()) ? 8 : 0);
 }
 
-
 // config
 
 /* physical button layout and labels is like this:
@@ -6702,7 +6662,6 @@ READ8_MEMBER(arcmania_state::read_k)
 	return read_inputs(3);
 }
 
-
 // config
 
 /* physical button layout and labels is like this:
@@ -6811,7 +6770,6 @@ READ8_MEMBER(cnsector_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(5);
 }
-
 
 // config
 
@@ -6943,7 +6901,6 @@ READ8_MEMBER(merlin_state::read_k)
 	return read_inputs(4);
 }
 
-
 // config
 
 static INPUT_PORTS_START( merlin )
@@ -7027,7 +6984,6 @@ public:
 };
 
 // handlers: uses the ones in merlin_state
-
 
 // config
 
@@ -7114,7 +7070,6 @@ READ8_MEMBER(stopthief_state::read_k)
 	// K: multiplexed inputs (note: the Vss row is always on)
 	return m_inp_matrix[2]->read() | read_inputs(2);
 }
-
 
 // config
 
@@ -7238,7 +7193,6 @@ READ8_MEMBER(bankshot_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(2);
 }
-
 
 // config
 
@@ -7368,7 +7322,6 @@ READ8_MEMBER(splitsec_state::read_k)
 	return read_inputs(2);
 }
 
-
 // config
 
 static INPUT_PORTS_START( splitsec )
@@ -7455,7 +7408,6 @@ READ8_MEMBER(lostreas_state::read_k)
 	return read_inputs(4);
 }
 
-
 // config
 
 /* physical button layout and labels is like this:
@@ -7518,6 +7470,127 @@ static MACHINE_CONFIG_START( lostreas )
 	MCFG_SPEAKER_STANDARD_MONO("mono")
 	MCFG_SOUND_ADD("speaker", SPEAKER_SOUND, 0)
 	MCFG_SPEAKER_LEVELS(16, lostreas_speaker_levels)
+	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "mono", 0.25)
+MACHINE_CONFIG_END
+
+
+
+
+
+/***************************************************************************
+
+  Playskool Alphie
+  * TMS1000 (label not known yet)
+  * 5 LEDs, 1-bit sound
+
+  This is an educational toy robot for young kids. It has 2 sliding arms:
+  the left arm(Alphie's right arm) is for questions, the other for answers.
+  Cardboard inlays are used for arm position labels.
+
+  There are 4 play modes:
+  - S symbol: Alphie answers questions. The answers are always the same,
+    no matter the inlay: Q1=A3, Q2=A5, Q3=A4, Q4=A1, Q5=A2.
+  - * symbol: used with Lunar Landing board game
+  - X symbol: used with Robot Land board game
+  - music note: play a selection of 5 tunes
+
+***************************************************************************/
+
+class alphie_state : public hh_tms1k_state
+{
+public:
+	alphie_state(const machine_config &mconfig, device_type type, const char *tag)
+		: hh_tms1k_state(mconfig, type, tag)
+	{ }
+
+	TIMER_DEVICE_CALLBACK_MEMBER(show_arm_position);
+
+	DECLARE_WRITE16_MEMBER(write_r);
+	DECLARE_WRITE16_MEMBER(write_o);
+	DECLARE_READ8_MEMBER(read_k);
+};
+
+// handlers
+
+TIMER_DEVICE_CALLBACK_MEMBER(alphie_state::show_arm_position)
+{
+	// arm position 1(up) to 5(down)
+	output().set_value("q_pos", 32 - count_leading_zeros(m_inp_matrix[1]->read()));
+	output().set_value("a_pos", 32 - count_leading_zeros(m_inp_matrix[2]->read()));
+}
+
+WRITE16_MEMBER(alphie_state::write_r)
+{
+	// R1-R5, input mux (using d5 for Vss)
+	m_inp_mux = (data >> 1 & 0x1f) | 0x20;
+
+	// R6-R10: leds
+	display_matrix(5, 1, data >> 6, 1);
+
+	// R0: power off on falling edge (turn back on with button)
+	if (~data & m_r & 1)
+		power_off();
+
+	m_r = data;
+}
+
+WRITE16_MEMBER(alphie_state::write_o)
+{
+	// O?: speaker out
+	m_speaker->level_w(data & 1);
+}
+
+READ8_MEMBER(alphie_state::read_k)
+{
+	// K: multiplexed inputs, rotated matrix
+	return read_rotated_inputs(6);
+}
+
+// config
+
+static const ioport_value alphie_armpos_table[5] = { 0x01, 0x02, 0x04, 0x08, 0x10 };
+
+static INPUT_PORTS_START( alphie )
+	PORT_START("IN.0") // K1
+	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_BUTTON1 ) PORT_CHANGED_MEMBER(DEVICE_SELF, hh_tms1k_state, power_button, (void *)true)
+
+	PORT_START("IN.1") // K2
+	PORT_BIT( 0x1f, 0x00, IPT_POSITIONAL_V ) PORT_PLAYER(2) PORT_POSITIONS(5) PORT_REMAP_TABLE(alphie_armpos_table) PORT_SENSITIVITY(10) PORT_KEYDELTA(1) PORT_CENTERDELTA(0) PORT_NAME("Question Arm")
+
+	PORT_START("IN.2") // K4
+	PORT_BIT( 0x1f, 0x00, IPT_POSITIONAL_V ) PORT_POSITIONS(5) PORT_REMAP_TABLE(alphie_armpos_table) PORT_SENSITIVITY(10) PORT_KEYDELTA(1) PORT_CENTERDELTA(0) PORT_NAME("Answer Arm")
+
+	PORT_START("IN.3") // K8
+	PORT_CONFNAME( 0x0f, 0x01, "Activity" )
+	PORT_CONFSETTING(    0x01, "Questions" )
+	PORT_CONFSETTING(    0x02, "Lunar Landing" )
+	PORT_CONFSETTING(    0x04, "Robot Land" )
+	PORT_CONFSETTING(    0x08, "Tunes" )
+INPUT_PORTS_END
+
+// output PLA is guessed
+static const u16 alphie_output_pla[0x20] =
+{
+	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1,
+	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1
+};
+
+static MACHINE_CONFIG_START( alphie )
+
+	/* basic machine hardware */
+	MCFG_CPU_ADD("maincpu", TMS1000, 350000) // approximation
+	MCFG_TMS1XXX_OUTPUT_PLA(alphie_output_pla)
+	MCFG_TMS1XXX_READ_K_CB(READ8(alphie_state, read_k))
+	MCFG_TMS1XXX_WRITE_R_CB(WRITE16(alphie_state, write_r))
+	MCFG_TMS1XXX_WRITE_O_CB(WRITE16(alphie_state, write_o))
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("arm_position", alphie_state, show_arm_position, attotime::from_msec(50))
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_tms1k_state, display_decay_tick, attotime::from_msec(1))
+	MCFG_DEFAULT_LAYOUT(layout_alphie)
+
+	/* sound hardware */
+	MCFG_SPEAKER_STANDARD_MONO("mono")
+	MCFG_SOUND_ADD("speaker", SPEAKER_SOUND, 0)
 	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "mono", 0.25)
 MACHINE_CONFIG_END
 
@@ -7590,7 +7663,6 @@ READ8_MEMBER(tcfball_state::read_k)
 	return read_inputs(3);
 }
 
-
 // config
 
 static INPUT_PORTS_START( tcfball )
@@ -7658,7 +7730,6 @@ public:
 };
 
 // handlers: uses the ones in tcfball_state
-
 
 // config
 
@@ -7771,7 +7842,6 @@ READ8_MEMBER(tandy12_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(5);
 }
-
 
 // config
 
@@ -7915,7 +7985,6 @@ READ8_MEMBER(monkeysee_state::read_k)
 	return read_inputs(5);
 }
 
-
 // config
 
 static INPUT_PORTS_START( monkeysee )
@@ -8037,7 +8106,6 @@ READ8_MEMBER(speechp_state::read_k)
 	return m_inp_matrix[10]->read() | (read_inputs(10) & 7);
 }
 
-
 // config
 
 static INPUT_PORTS_START( speechp )
@@ -8122,6 +8190,84 @@ MACHINE_CONFIG_END
 
 /***************************************************************************
 
+  Texas Instruments maze game (unreleased, from patent GB2040172A)
+  * TMS1000 (development version)
+  * 1 7seg LED digit, no sound
+
+  The title of this game is unknown, the patent describes it simply as a maze game.
+  Several electronic maze game concepts are listed in the patent. The PCB schematic
+  and program source code is included for one of them: A predefined 12*8 maze,
+  walls close to the player are displayed on a 7seg digit.
+
+  In the end Texas Instruments didn't release any electronic maze game. This version
+  is too simple and obviously unfinished, start and goal positions are always the same
+  and there is a lot of ROM space left for more levels.
+
+***************************************************************************/
+
+class timaze_state : public hh_tms1k_state
+{
+public:
+	timaze_state(const machine_config &mconfig, device_type type, const char *tag)
+		: hh_tms1k_state(mconfig, type, tag)
+	{ }
+
+	DECLARE_WRITE16_MEMBER(write_r);
+	DECLARE_WRITE16_MEMBER(write_o);
+	DECLARE_READ8_MEMBER(read_k);
+};
+
+// handlers
+
+WRITE16_MEMBER(timaze_state::write_r)
+{
+	// R0: input mux
+	m_inp_mux = data & 1;
+}
+
+WRITE16_MEMBER(timaze_state::write_o)
+{
+	// O3210: 7seg EGCD?
+	set_display_segmask(1, 0x5c);
+	display_matrix(8, 1, bitswap<8>(data, 7,1,6,0,3,2,5,4), 1);
+}
+
+READ8_MEMBER(timaze_state::read_k)
+{
+	// K: multiplexed inputs
+	return read_inputs(1);
+}
+
+// config
+
+static INPUT_PORTS_START( timaze )
+	PORT_START("IN.0") // R0
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_JOYSTICK_LEFT ) PORT_16WAY
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_JOYSTICK_RIGHT ) PORT_16WAY
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_JOYSTICK_DOWN ) PORT_16WAY
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_JOYSTICK_UP ) PORT_16WAY
+INPUT_PORTS_END
+
+static MACHINE_CONFIG_START( timaze )
+
+	/* basic machine hardware */
+	MCFG_CPU_ADD("maincpu", TMS1000, 200000) // approximation - RC osc. R=80K, C=27pF
+	MCFG_TMS1XXX_READ_K_CB(READ8(timaze_state, read_k))
+	MCFG_TMS1XXX_WRITE_R_CB(WRITE16(timaze_state, write_r))
+	MCFG_TMS1XXX_WRITE_O_CB(WRITE16(timaze_state, write_o))
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_tms1k_state, display_decay_tick, attotime::from_msec(1))
+	MCFG_DEFAULT_LAYOUT(layout_timaze)
+
+	/* no sound! */
+MACHINE_CONFIG_END
+
+
+
+
+
+/***************************************************************************
+
   Tiger Electronics Copy Cat (model 7-520)
   * PCB label CC REV B
   * TMS1000 MCU, label 69-11513 MP0919 (die label MP0919)
@@ -8170,7 +8316,6 @@ READ8_MEMBER(copycat_state::read_k)
 	// K: multiplexed inputs
 	return read_inputs(4);
 }
-
 
 // config
 
@@ -8269,7 +8414,6 @@ WRITE16_MEMBER(copycatm2_state::write_o)
 	m_speaker->level_w((data & 1) | (data >> 5 & 2));
 }
 
-
 // config
 
 static INPUT_PORTS_START( copycatm2 )
@@ -8339,7 +8483,6 @@ WRITE16_MEMBER(ditto_state::write_o)
 	// O5,O6: speaker out
 	m_speaker->level_w(data >> 5 & 3);
 }
-
 
 // config
 
@@ -8435,7 +8578,6 @@ READ8_MEMBER(ss7in1_state::read_k)
 {
 	return read_inputs(4);
 }
-
 
 // config
 
@@ -8611,7 +8753,6 @@ READ8_MEMBER(tbreakup_state::read_k)
 	return (m_inp_matrix[2]->read() & 4) | (read_inputs(2) & 8);
 }
 
-
 // config
 
 static INPUT_PORTS_START( tbreakup )
@@ -8773,7 +8914,6 @@ READ8_MEMBER(phpball_state::read_k)
 	return m_inp_matrix[1]->read() | read_inputs(1);
 }
 
-
 // config
 
 static INPUT_PORTS_START( phpball )
@@ -8873,7 +9013,6 @@ READ8_MEMBER(ssports4_state::read_k)
 	m_inp_mux = (m_r & 3) | (m_r >> 3 & 4) | (m_r >> 5 & 0x18) | (m_o >> 2 & 0x20);
 	return read_inputs(6);
 }
-
 
 // config
 
@@ -9020,7 +9159,6 @@ READ8_MEMBER(xl25_state::read_k)
 	// K4 also goes to MCU halt
 	return read_inputs(10);
 }
-
 
 // config
 
@@ -9776,6 +9914,17 @@ ROM_START( lostreas )
 ROM_END
 
 
+ROM_START( alphie )
+	ROM_REGION( 0x0400, "maincpu", 0 )
+	ROM_LOAD( "us4280809", 0x0000, 0x0400, CRC(f8f14013) SHA1(bf31b929fcbcb189bbe4623104e1da0a639b5954) ) // from patent US4280809, should be good
+
+	ROM_REGION( 867, "maincpu:mpla", 0 )
+	ROM_LOAD( "tms1000_common2_micro.pla", 0, 867, BAD_DUMP CRC(d33da3cf) SHA1(13c4ebbca227818db75e6db0d45b66ba5e207776) ) // not in patent description
+	ROM_REGION( 365, "maincpu:opla", 0 )
+	ROM_LOAD( "tms1000_alphie_output.pla", 0, 365, NO_DUMP ) // "
+ROM_END
+
+
 ROM_START( tcfball )
 	ROM_REGION( 0x0800, "maincpu", 0 )
 	ROM_LOAD( "mp1193", 0x0000, 0x0800, CRC(7d9f446f) SHA1(bb6af47b42d989494f21475a73f072cddf58c99f) )
@@ -9830,6 +9979,17 @@ ROM_START( speechp )
 
 	ROM_REGION( 0x0800, "speech", 0 )
 	ROM_LOAD("s14007-a", 0x0000, 0x0800, CRC(543b46d4) SHA1(99daf7fe3354c378b4bd883840c9bbd22b22ebe7) )
+ROM_END
+
+
+ROM_START( timaze )
+	ROM_REGION( 0x0400, "maincpu", 0 )
+	ROM_LOAD( "gb2040172a", 0x0000, 0x0400, CRC(0bab4dc6) SHA1(c9d40649fbb27a8b7cf7460d66c7e217b63376f0) ) // from patent GB2040172A, verified with source code
+
+	ROM_REGION( 867, "maincpu:mpla", 0 )
+	ROM_LOAD( "tms1000_common2_micro.pla", 0, 867, BAD_DUMP CRC(d33da3cf) SHA1(13c4ebbca227818db75e6db0d45b66ba5e207776) ) // not in patent, use default one
+	ROM_REGION( 365, "maincpu:opla", 0 )
+	ROM_LOAD( "tms1000_timaze_output.pla", 0, 365, BAD_DUMP CRC(f0f36970) SHA1(a6ad1f5e804ac98e5e1a1d07466b3db3a8d6c256) ) // described in patent, but unsure about pin order
 ROM_END
 
 
@@ -9932,9 +10092,9 @@ CONS( 1979, bcheetah,   0,         0, bcheetah,  bcheetah,  bcheetah_state,  0, 
 CONS( 1978, amaztron,   0,         0, amaztron,  amaztron,  amaztron_state,  0, "Coleco", "Amaze-A-Tron", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS ) // ***
 COMP( 1979, zodiac,     0,         0, zodiac,    zodiac,    zodiac_state,    0, "Coleco", "Zodiac - The Astrology Computer", MACHINE_SUPPORTS_SAVE )
 CONS( 1978, cqback,     0,         0, cqback,    cqback,    cqback_state,    0, "Coleco", "Electronic Quarterback", MACHINE_SUPPORTS_SAVE )
-CONS( 1980, h2hfootb,   0,         0, h2hfootb,  h2hfootb,  h2hfootb_state,  0, "Coleco", "Head to Head Football", MACHINE_SUPPORTS_SAVE )
-CONS( 1980, h2hbaseb,   0,         0, h2hbaseb,  h2hbaseb,  h2hbaseb_state,  0, "Coleco", "Head to Head Baseball", MACHINE_SUPPORTS_SAVE )
-CONS( 1981, h2hboxing,  0,         0, h2hboxing, h2hboxing, h2hboxing_state, 0, "Coleco", "Head to Head Boxing", MACHINE_SUPPORTS_SAVE )
+CONS( 1980, h2hfootb,   0,         0, h2hfootb,  h2hfootb,  h2hfootb_state,  0, "Coleco", "Head to Head: Electronic Football", MACHINE_SUPPORTS_SAVE )
+CONS( 1980, h2hbaseb,   0,         0, h2hbaseb,  h2hbaseb,  h2hbaseb_state,  0, "Coleco", "Head to Head: Electronic Baseball", MACHINE_SUPPORTS_SAVE )
+CONS( 1981, h2hboxing,  0,         0, h2hboxing, h2hboxing, h2hboxing_state, 0, "Coleco", "Head to Head: Electronic Boxing", MACHINE_SUPPORTS_SAVE )
 CONS( 1981, quizwizc,   0,         0, quizwizc,  quizwizc,  quizwizc_state,  0, "Coleco", "Quiz Wiz Challenger", MACHINE_SUPPORTS_SAVE ) // ***
 CONS( 1981, tc4,        0,         0, tc4,       tc4,       tc4_state,       0, "Coleco", "Total Control 4", MACHINE_SUPPORTS_SAVE | MACHINE_REQUIRES_ARTWORK )
 
@@ -9994,12 +10154,16 @@ CONS( 1980, splitsec,   0,         0, splitsec,  splitsec,  splitsec_state,  0, 
 CONS( 1982, mmerlin,    0,         0, mmerlin,   mmerlin,   mmerlin_state,   0, "Parker Brothers", "Master Merlin", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 CONS( 1982, lostreas,   0,         0, lostreas,  lostreas,  lostreas_state,  0, "Parker Brothers", "Lost Treasure - The Electronic Deep-Sea Diving Game (Electronic Dive-Control Center)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK ) // ***
 
+CONS( 1978, alphie,     0,         0, alphie,    alphie,    alphie_state,    0, "Playskool", "Alphie - The Electronic Robot (patent)", MACHINE_SUPPORTS_SAVE ) // ***
+
 CONS( 1980, tcfball,    0,         0, tcfball,   tcfball,   tcfball_state,   0, "Tandy Radio Shack", "Championship Football (model 60-2150)", MACHINE_SUPPORTS_SAVE )
 CONS( 1980, tcfballa,   tcfball,   0, tcfballa,  tcfballa,  tcfballa_state,  0, "Tandy Radio Shack", "Championship Football (model 60-2151)", MACHINE_SUPPORTS_SAVE )
 CONS( 1981, tandy12,    0,         0, tandy12,   tandy12,   tandy12_state,   0, "Tandy Radio Shack", "Tandy-12: Computerized Arcade", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK ) // some of the minigames: ***
 CONS( 1982, monkeysee,  0,         0, monkeysee, monkeysee, monkeysee_state, 0, "Tandy Radio Shack", "Monkey See (1982 version)", MACHINE_SUPPORTS_SAVE )
 
 COMP( 1976, speechp,    0,         0, speechp,   speechp,   speechp_state,   0, "Telesensory Systems, Inc.", "Speech+", MACHINE_SUPPORTS_SAVE )
+
+CONS( 1979, timaze,     0,         0, timaze,    timaze,    timaze_state,    0, "Texas Instruments", "unknown electronic maze game (patent)", MACHINE_SUPPORTS_SAVE | MACHINE_NO_SOUND_HW )
 
 CONS( 1979, copycat,    0,         0, copycat,   copycat,   copycat_state,   0, "Tiger Electronics", "Copy Cat (model 7-520)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 CONS( 1989, copycatm2,  copycat,   0, copycatm2, copycatm2, copycatm2_state, 0, "Tiger Electronics", "Copy Cat (model 7-522)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )

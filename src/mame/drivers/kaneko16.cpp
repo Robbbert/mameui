@@ -404,7 +404,7 @@ WRITE16_MEMBER(kaneko16_gtmr_state::bloodwar_oki_0_bank_w)
 	if (ACCESSING_BITS_0_7)
 	{
 		m_oki[0]->set_rom_bank(data & 0xf);
-//      logerror("CPU #0 PC %06X : OKI0  bank %08X\n",space.device().safe_pc(),data);
+//      logerror("CPU #0 PC %06X : OKI0  bank %08X\n",m_maincpu->pc(),data);
 	}
 }
 
@@ -413,7 +413,7 @@ WRITE16_MEMBER(kaneko16_gtmr_state::bloodwar_oki_1_bank_w)
 	if (ACCESSING_BITS_0_7)
 	{
 		m_oki[1]->set_rom_bank(data);
-//      logerror("CPU #0 PC %06X : OKI1  bank %08X\n",space.device().safe_pc(),data);
+//      logerror("CPU #0 PC %06X : OKI1  bank %08X\n",m_maincpu->pc(),data);
 	}
 }
 
@@ -537,7 +537,7 @@ WRITE16_MEMBER(kaneko16_gtmr_state::gtmr_oki_0_bank_w)
 	if (ACCESSING_BITS_0_7)
 	{
 		m_oki[0]->set_rom_bank(data & 0xf);
-//      logerror("CPU #0 PC %06X : OKI0 bank %08X\n",space.device().safe_pc(),data);
+//      logerror("CPU #0 PC %06X : OKI0 bank %08X\n",m_maincpu->pc(),data);
 	}
 }
 
@@ -546,7 +546,7 @@ WRITE16_MEMBER(kaneko16_gtmr_state::gtmr_oki_1_bank_w)
 	if (ACCESSING_BITS_0_7)
 	{
 		m_oki[1]->set_rom_bank(data & 0x1);
-//      logerror("CPU #0 PC %06X : OKI1 bank %08X\n",space.device().safe_pc(),data);
+//      logerror("CPU #0 PC %06X : OKI1 bank %08X\n",m_maincpu->pc(),data);
 	}
 }
 
@@ -609,7 +609,7 @@ READ16_MEMBER(kaneko16_gtmr_state::gtmr2_wheel_r)
 		case 0x0800:    // 360' Wheel
 			return  (ioport("WHEEL2")->read() << 8);
 		default:
-			logerror("gtmr2_wheel_r : read at %06x with joystick\n", space.device().safe_pc());
+			logerror("gtmr2_wheel_r : read at %06x with joystick\n", m_maincpu->pc());
 			return  (~0);
 	}
 }

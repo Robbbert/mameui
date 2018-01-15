@@ -7,7 +7,6 @@
 
   TODO:
   - why does h2hbaskb(and clones) need a workaround on writing L pins?
-  - is h2hhockey supposed to show timer countdown? or only on TMS1000 version?
   - plus1: which sensor position is which colour?
 
 ***************************************************************************/
@@ -36,6 +35,7 @@
 #include "lightfgt.lh" // clickable
 #include "mdallas.lh"
 #include "qkracer.lh"
+#include "unkeinv.lh"
 
 //#include "hh_cop400_test.lh" // common test-layout - use external artwork
 
@@ -285,7 +285,6 @@ READ8_MEMBER(ctstein_state::read_l)
 	return read_inputs(3) << 4 | 0xf;
 }
 
-
 // config
 
 static INPUT_PORTS_START( ctstein )
@@ -333,7 +332,7 @@ MACHINE_CONFIG_END
 
 /***************************************************************************
 
-  Coleco Head to Head Basketball/Hockey/Soccer
+  Coleco Head to Head: Electronic Basketball/Hockey/Soccer (model 2150/2160/2170)
   * COP420 MCU label COP420L-NEZ/N
   * 2-digit 7seg display, 41 other leds, 1-bit sound
 
@@ -341,7 +340,9 @@ MACHINE_CONFIG_END
   the same, only differing on game time. The PCB is pre-configured on G1+IN2
   and IN3 to select the game.
 
-  An earlier revision of this runs on TMS1000.
+  An earlier revision of this runs on TMS1000. Model numbers are the same.
+  From the outside, an easy way to spot the difference is the Start/Display
+  button: TMS1000 version button label is D, COP420 label is a *.
 
 ***************************************************************************/
 
@@ -394,7 +395,6 @@ READ8_MEMBER(h2hbaskb_state::read_in)
 	// IN: multiplexed inputs
 	return (read_inputs(4) & 7) | (m_inp_matrix[4]->read() & 8);
 }
-
 
 // config
 
@@ -558,7 +558,6 @@ WRITE8_MEMBER(einvaderc_state::write_l)
 	prepare_display();
 }
 
-
 // config
 
 static INPUT_PORTS_START( einvaderc )
@@ -590,6 +589,129 @@ static MACHINE_CONFIG_START( einvaderc )
 	MCFG_SCREEN_VISIBLE_AREA(0, 913-1, 0, 1080-1)
 	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_cop400_state, display_decay_tick, attotime::from_msec(1))
 	MCFG_DEFAULT_LAYOUT(layout_einvaderc)
+
+	/* sound hardware */
+	MCFG_SPEAKER_STANDARD_MONO("mono")
+	MCFG_SOUND_ADD("speaker", SPEAKER_SOUND, 0)
+	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "mono", 0.25)
+MACHINE_CONFIG_END
+
+
+
+
+
+/***************************************************************************
+
+  Gordon Barlow Design electronic Space Invaders game (unreleased, from patent US4345764)
+  * COP421 (likely a development chip)
+  * 36+9 LEDs, 1-bit sound
+
+  This game is presumedly unreleased. The title is unknown, the patent simply names
+  it "Hand-held electronic game". There is no mass-manufacture company assigned
+  to it either. The game seems unfinished(no scorekeeping, some bugs), and the design
+  is very complex. Player ship and bullets are on a moving "wand", a 2-way mirror
+  makes it appear on the same plane as the enemies and barriers.
+
+***************************************************************************/
+
+class unkeinv_state : public hh_cop400_state
+{
+public:
+	unkeinv_state(const machine_config &mconfig, device_type type, const char *tag)
+		: hh_cop400_state(mconfig, type, tag)
+	{ }
+
+	void prepare_display();
+	DECLARE_WRITE8_MEMBER(write_g);
+	DECLARE_WRITE8_MEMBER(write_d);
+	DECLARE_WRITE8_MEMBER(write_l);
+	DECLARE_READ8_MEMBER(read_l);
+
+	DECLARE_INPUT_CHANGED_MEMBER(position_changed);
+};
+
+// handlers
+
+void unkeinv_state::prepare_display()
+{
+	display_matrix(8+8, 8+12, m_g << 4 | m_d, m_l, false);
+
+	// positional led row is on L6,L7
+	u16 wand = m_display_state[7] << 8 | m_display_state[6];
+	m_display_state[8 + m_inp_matrix[1]->read()] = wand;
+	display_update();
+}
+
+WRITE8_MEMBER(unkeinv_state::write_g)
+{
+	// G0-G3: led select part
+	// G2,G3: input mux
+	m_g = ~data & 0xf;
+	prepare_display();
+}
+
+WRITE8_MEMBER(unkeinv_state::write_d)
+{
+	// D0-D3: led select part
+	m_d = ~data & 0xf;
+	prepare_display();
+}
+
+WRITE8_MEMBER(unkeinv_state::write_l)
+{
+	// L0-L7: led data
+	m_l = ~data & 0xff;
+	prepare_display();
+}
+
+READ8_MEMBER(unkeinv_state::read_l)
+{
+	u8 ret = 0xff;
+
+	// L0-L5+G2: positional odd
+	// L0-L5+G3: positional even
+	u8 pos = m_inp_matrix[1]->read();
+	if (m_g & 4 && pos & 1)
+		ret ^= (1 << (pos >> 1));
+	if (m_g & 8 && ~pos & 1)
+		ret ^= (1 << (pos >> 1));
+
+	// L7+G3: fire button
+	if (m_g & 8 && m_inp_matrix[0]->read())
+		ret ^= 0x80;
+
+	return ret & ~m_l;
+}
+
+// config
+
+INPUT_CHANGED_MEMBER(unkeinv_state::position_changed)
+{
+	prepare_display();
+}
+
+static INPUT_PORTS_START( unkeinv )
+	PORT_START("IN.0")
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_BUTTON1 )
+
+	PORT_START("IN.1")
+	PORT_BIT( 0x0f, 0x00, IPT_POSITIONAL ) PORT_POSITIONS(12) PORT_SENSITIVITY(10) PORT_KEYDELTA(1) PORT_CENTERDELTA(0) PORT_CHANGED_MEMBER(DEVICE_SELF, unkeinv_state, position_changed, nullptr)
+INPUT_PORTS_END
+
+static MACHINE_CONFIG_START( unkeinv )
+
+	/* basic machine hardware */
+	MCFG_CPU_ADD("maincpu", COP421, 850000) // frequency guessed
+	MCFG_COP400_CONFIG(COP400_CKI_DIVISOR_4, COP400_CKO_OSCILLATOR_OUTPUT, false) // guessed
+	MCFG_COP400_WRITE_G_CB(WRITE8(unkeinv_state, write_g))
+	MCFG_COP400_WRITE_D_CB(WRITE8(unkeinv_state, write_d))
+	MCFG_COP400_WRITE_L_CB(WRITE8(unkeinv_state, write_l))
+	MCFG_COP400_READ_L_CB(READ8(unkeinv_state, read_l))
+	MCFG_COP400_READ_L_TRISTATE_CB(CONSTANT(0xff))
+	MCFG_COP400_WRITE_SO_CB(DEVWRITELINE("speaker", speaker_sound_device, level_w))
+
+	MCFG_TIMER_DRIVER_ADD_PERIODIC("display_decay", hh_cop400_state, display_decay_tick, attotime::from_msec(1))
+	MCFG_DEFAULT_LAYOUT(layout_unkeinv)
 
 	/* sound hardware */
 	MCFG_SPEAKER_STANDARD_MONO("mono")
@@ -688,7 +810,6 @@ READ_LINE_MEMBER(lchicken_state::read_si)
 	// SI: SO
 	return m_so;
 }
-
 
 // config
 
@@ -817,7 +938,6 @@ READ8_MEMBER(funjacks_state::read_g)
 	return m_inp_matrix[3]->read() | (m_g & 2);
 }
 
-
 // config
 
 static INPUT_PORTS_START( funjacks )
@@ -914,7 +1034,6 @@ WRITE8_MEMBER(funrlgl_state::write_g)
 	// G3: speaker out
 	m_speaker->level_w(data >> 3 & 1);
 }
-
 
 // config
 
@@ -1021,7 +1140,6 @@ READ8_MEMBER(mdallas_state::read_in)
 	// IN: multiplexed inputs
 	return read_inputs(6) & 0xf;
 }
-
 
 // config
 
@@ -1139,7 +1257,6 @@ READ8_MEMBER(plus1_state::read_l)
 	return m_inp_matrix[1]->read() & m_l;
 }
 
-
 // config
 
 static INPUT_PORTS_START( plus1 )
@@ -1250,7 +1367,6 @@ READ8_MEMBER(lightfgt_state::read_g)
 	return read_inputs(5);
 }
 
-
 // config
 
 static INPUT_PORTS_START( lightfgt )
@@ -1356,7 +1472,6 @@ WRITE_LINE_MEMBER(bship82_state::write_so)
 	// SO: led
 	display_matrix(1, 1, state, 1);
 }
-
 
 // config
 
@@ -1536,7 +1651,6 @@ WRITE_LINE_MEMBER(qkracer_state::write_sk)
 	prepare_display();
 }
 
-
 // config
 
 static INPUT_PORTS_START( qkracer )
@@ -1609,12 +1723,12 @@ ROM_START( h2hbaskb )
 	ROM_LOAD( "cop420l-nmy", 0x0000, 0x0400, CRC(87152509) SHA1(acdb869b65d49b3b9855a557ed671cbbb0f61e2c) )
 ROM_END
 
-ROM_START( h2hhockey )
+ROM_START( h2hhockey ) // dumped from Basketball
 	ROM_REGION( 0x0400, "maincpu", 0 )
 	ROM_LOAD( "cop420l-nmy", 0x0000, 0x0400, CRC(87152509) SHA1(acdb869b65d49b3b9855a557ed671cbbb0f61e2c) )
 ROM_END
 
-ROM_START( h2hsoccer )
+ROM_START( h2hsoccer ) // dumped from Basketball
 	ROM_REGION( 0x0400, "maincpu", 0 )
 	ROM_LOAD( "cop420l-nmy", 0x0000, 0x0400, CRC(87152509) SHA1(acdb869b65d49b3b9855a557ed671cbbb0f61e2c) )
 ROM_END
@@ -1626,6 +1740,12 @@ ROM_START( einvaderc )
 
 	ROM_REGION( 80636, "svg", 0)
 	ROM_LOAD( "einvaderc.svg", 0, 80636, CRC(a52d0166) SHA1(f69397ebcc518701f30a47b4d62e5a700825375a) )
+ROM_END
+
+
+ROM_START( unkeinv )
+	ROM_REGION( 0x0400, "maincpu", 0 )
+	ROM_LOAD( "cop421_us4345764", 0x0000, 0x0400, CRC(0068c3a3) SHA1(4e5fd566a5a26c066cc14623a9bd01e109ebf797) ) // typed in from patent US4345764, good print quality
 ROM_END
 
 
@@ -1681,11 +1801,13 @@ ROM_END
 //    YEAR  NAME       PARENT   CMP MACHINE    INPUT      STATE          INIT COMPANY, FULLNAME, FLAGS
 CONS( 1979, ctstein,   0,        0, ctstein,   ctstein,   ctstein_state,   0, "Castle Toy", "Einstein (Castle Toy)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 
-CONS( 1980, h2hbaskb,  0,        0, h2hbaskb,  h2hbaskb,  h2hbaskb_state,  0, "Coleco", "Head to Head Basketball (COP420L version)", MACHINE_SUPPORTS_SAVE )
-CONS( 1980, h2hhockey, h2hbaskb, 0, h2hhockey, h2hhockey, h2hbaskb_state,  0, "Coleco", "Head to Head Hockey (COP420L version)", MACHINE_SUPPORTS_SAVE )
-CONS( 1980, h2hsoccer, h2hbaskb, 0, h2hsoccer, h2hsoccer, h2hbaskb_state,  0, "Coleco", "Head to Head Soccer (COP420L version)", MACHINE_SUPPORTS_SAVE )
+CONS( 1980, h2hbaskb,  0,        0, h2hbaskb,  h2hbaskb,  h2hbaskb_state,  0, "Coleco", "Head to Head: Electronic Basketball (COP420L version)", MACHINE_SUPPORTS_SAVE )
+CONS( 1980, h2hhockey, h2hbaskb, 0, h2hhockey, h2hhockey, h2hbaskb_state,  0, "Coleco", "Head to Head: Electronic Hockey (COP420L version)", MACHINE_SUPPORTS_SAVE )
+CONS( 1980, h2hsoccer, h2hbaskb, 0, h2hsoccer, h2hsoccer, h2hbaskb_state,  0, "Coleco", "Head to Head: Electronic Soccer (COP420L version)", MACHINE_SUPPORTS_SAVE )
 
 CONS( 1981, einvaderc, einvader, 0, einvaderc, einvaderc, einvaderc_state, 0, "Entex", "Space Invader (Entex, COP444L version)", MACHINE_SUPPORTS_SAVE )
+
+CONS( 1980, unkeinv,   0,        0, unkeinv,   unkeinv,   unkeinv_state,   0, "Gordon Barlow Design", "unknown electronic Space Invaders game (patent)", MACHINE_SUPPORTS_SAVE )
 
 CONS( 1980, lchicken,  0,        0, lchicken,  lchicken,  lchicken_state,  0, "LJN", "I Took a Lickin' From a Chicken", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_MECHANICAL )
 
