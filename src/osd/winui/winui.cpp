@@ -4120,7 +4120,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 	case ID_GAME_AUDIT:
 		InitGameAudit(0);
-		if (!oldControl && (current_game >= 0))
+		if (current_game >= 0)
 		{
 			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, current_game, AUDIT_PAGE);
 		}

@@ -1129,6 +1129,19 @@ static BOOL CommonFileImageDialog(LPTSTR the_last_directory, common_file_dialog_
 }
 
 
+char *core_strdup(const char *str)
+{
+	char *cpy = nullptr;
+	if (str != nullptr)
+	{
+		cpy = (char*) malloc(strlen(str)+1);
+		if (cpy != nullptr)
+			strcpy(cpy, str);
+	}
+	return cpy;
+}
+
+
 /* Specify IO_COUNT for type if you want all types */
 static void SetupImageTypes(const machine_config *config, mess_image_type *types, int count, BOOL bZip, const device_image_interface *dev)
 {
