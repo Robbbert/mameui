@@ -411,8 +411,7 @@ ADDRESS_MAP_END
 
 static ADDRESS_MAP_START( sound_map, AS_PROGRAM, 8, namcos1_state )
 	AM_RANGE(0x0000, 0x3fff) AM_ROMBANK("soundbank")   /* Banked ROMs */
-	AM_RANGE(0x4000, 0x4001) AM_DEVREAD("ymsnd", ym2151_device, status_r)
-	AM_RANGE(0x4000, 0x4001) AM_DEVREADWRITE("ymsnd", ym2151_device, read, write)
+	AM_RANGE(0x4000, 0x4001) AM_DEVREADWRITE("ymsnd", ym2151_device, status_r, write)
 	AM_RANGE(0x5000, 0x53ff) AM_DEVREADWRITE("namco", namco_cus30_device, namcos1_cus30_r, namcos1_cus30_w) AM_MIRROR(0x400) /* PSG ( Shared ) */
 	AM_RANGE(0x7000, 0x77ff) AM_RAM AM_SHARE("triram")
 	AM_RANGE(0x8000, 0x9fff) AM_RAM /* Sound RAM 3 */
@@ -1017,22 +1016,22 @@ GFXDECODE_END
     LPF info : Fco = 3.3KHz , g = -12dB/oct
 */
 
-static MACHINE_CONFIG_START( ns1 )
+MACHINE_CONFIG_START(namcos1_state::ns1)
 
 	/* basic machine hardware */
-	MCFG_CPU_ADD("maincpu", MC6809E, XTAL_49_152MHz/32)
+	MCFG_CPU_ADD("maincpu", MC6809E, XTAL(49'152'000)/32)
 	MCFG_CPU_PROGRAM_MAP(main_map)
 	MCFG_CPU_VBLANK_INT_DRIVER("screen", namcos1_state,  irq0_line_assert)
 
-	MCFG_CPU_ADD("subcpu", MC6809E, XTAL_49_152MHz/32)
+	MCFG_CPU_ADD("subcpu", MC6809E, XTAL(49'152'000)/32)
 	MCFG_CPU_PROGRAM_MAP(sub_map)
 	MCFG_CPU_VBLANK_INT_DRIVER("screen", namcos1_state,  irq0_line_assert)
 
-	MCFG_CPU_ADD("audiocpu", MC6809E, XTAL_49_152MHz/32)
+	MCFG_CPU_ADD("audiocpu", MC6809E, XTAL(49'152'000)/32)
 	MCFG_CPU_PROGRAM_MAP(sound_map)
 	MCFG_CPU_VBLANK_INT_DRIVER("screen", namcos1_state,  irq0_line_assert)
 
-	MCFG_CPU_ADD("mcu", HD63701, XTAL_49_152MHz/8)
+	MCFG_CPU_ADD("mcu", HD63701, XTAL(49'152'000)/8)
 	MCFG_CPU_PROGRAM_MAP(mcu_map)
 	MCFG_CPU_IO_MAP(mcu_port_map)
 	MCFG_CPU_VBLANK_INT_DRIVER("screen", namcos1_state,  irq0_line_assert)
@@ -1049,7 +1048,7 @@ static MACHINE_CONFIG_START( ns1 )
 
 	/* video hardware */
 	MCFG_SCREEN_ADD("screen", RASTER)
-	MCFG_SCREEN_RAW_PARAMS(XTAL_49_152MHz/8, 384, 9+8*8, 9+44*8, 264, 2*8, 30*8)
+	MCFG_SCREEN_RAW_PARAMS(XTAL(49'152'000)/8, 384, 9+8*8, 9+44*8, 264, 2*8, 30*8)
 	MCFG_SCREEN_UPDATE_DRIVER(namcos1_state, screen_update)
 	MCFG_SCREEN_VBLANK_CALLBACK(WRITELINE(namcos1_state, screen_vblank))
 	MCFG_SCREEN_PALETTE("palette")
@@ -1070,7 +1069,7 @@ static MACHINE_CONFIG_START( ns1 )
 	MCFG_SOUND_ROUTE(0, "lspeaker", 0.50)
 	MCFG_SOUND_ROUTE(1, "rspeaker", 0.50)
 
-	MCFG_SOUND_ADD("namco", NAMCO_CUS30, XTAL_49_152MHz/2048/2)
+	MCFG_SOUND_ADD("namco", NAMCO_CUS30, XTAL(49'152'000)/2048/2)
 	MCFG_NAMCO_AUDIO_VOICES(8)
 	MCFG_NAMCO_AUDIO_STEREO(1)
 	MCFG_SOUND_ROUTE(0, "lspeaker", 0.50)

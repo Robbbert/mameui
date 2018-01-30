@@ -90,7 +90,7 @@ ioport_constructor electron_plus1_device::device_input_ports() const
 //  device_add_mconfig - add device configuration
 //-------------------------------------------------
 
-MACHINE_CONFIG_MEMBER( electron_plus1_device::device_add_mconfig )
+MACHINE_CONFIG_START(electron_plus1_device::device_add_mconfig)
 	/* printer */
 	MCFG_CENTRONICS_ADD("centronics", centronics_devices, "printer")
 	MCFG_CENTRONICS_BUSY_HANDLER(WRITELINE(electron_plus1_device, busy_w))
@@ -105,10 +105,12 @@ MACHINE_CONFIG_MEMBER( electron_plus1_device::device_add_mconfig )
 	MCFG_ADC0844_CH4_CB(IOPORT("JOY4"))
 
 	/* cartridges */
-	MCFG_GENERIC_CARTSLOT_ADD("cart_sk1", generic_plain_slot, "electron_cart")
-	MCFG_GENERIC_LOAD(electron_plus1_device, electron_cart_sk1)
-	MCFG_GENERIC_CARTSLOT_ADD("cart_sk2", generic_plain_slot, "electron_cart")
-	MCFG_GENERIC_LOAD(electron_plus1_device, electron_cart_sk2)
+	MCFG_ELECTRON_CARTSLOT_ADD("cart_sk1", electron_cart, nullptr)
+	MCFG_ELECTRON_CARTSLOT_IRQ_HANDLER(WRITELINE(electron_plus1_device, irq_w))
+	MCFG_ELECTRON_CARTSLOT_NMI_HANDLER(WRITELINE(electron_plus1_device, nmi_w))
+	MCFG_ELECTRON_CARTSLOT_ADD("cart_sk2", electron_cart, nullptr)
+	MCFG_ELECTRON_CARTSLOT_IRQ_HANDLER(WRITELINE(electron_plus1_device, irq_w))
+	MCFG_ELECTRON_CARTSLOT_NMI_HANDLER(WRITELINE(electron_plus1_device, nmi_w))
 MACHINE_CONFIG_END
 
 //-------------------------------------------------
@@ -139,10 +141,12 @@ electron_plus1_device::electron_plus1_device(const machine_config &mconfig, cons
 	m_adc(*this, "adc"),
 	m_joy(*this, "JOY%u", 1),
 	m_buttons(*this, "BUTTONS"),
+	m_romsel(0),
 	m_centronics_busy(0),
 	m_adc_ready(0)
 {
 }
+
 
 //-------------------------------------------------
 //  device_start - device-specific startup
@@ -150,33 +154,114 @@ electron_plus1_device::electron_plus1_device(const machine_config &mconfig, cons
 
 void electron_plus1_device::device_start()
 {
-	address_space& space = machine().device("maincpu")->memory().space(AS_PROGRAM);
 	m_slot = dynamic_cast<electron_expansion_slot_device *>(owner());
-
-	space.install_readwrite_handler(0xfc70, 0xfc70, READ8_DEVICE_DELEGATE(m_adc, adc0844_device, read), WRITE8_DEVICE_DELEGATE(m_adc, adc0844_device, write));
-	space.install_write_handler(0xfc71, 0xfc71, WRITE8_DEVICE_DELEGATE("cent_data_out", output_latch_device, write));
-	space.install_read_handler(0xfc72, 0xfc72, READ8_DELEGATE(electron_plus1_device, status_r));
 }
 
+
 //-------------------------------------------------
-//  device_reset - device-specific reset
+//  expbus_r - expansion data read
 //-------------------------------------------------
 
-void electron_plus1_device::device_reset()
+uint8_t electron_plus1_device::expbus_r(address_space &space, offs_t offset, uint8_t data)
 {
-	std::string region_tag;
-	memory_region *tmp_reg;
-	if (m_cart_sk2 && (tmp_reg = memregion(region_tag.assign(m_cart_sk2->tag()).append(GENERIC_ROM_REGION_TAG).c_str())))
+	if (offset >= 0x8000 && offset < 0xc000)
 	{
-		machine().root_device().membank("bank2")->configure_entries(0, 2, tmp_reg->base(), 0x4000);
+		switch (m_romsel)
+		{
+		case 0:
+		case 1:
+			if (m_cart_sk2->exists())
+			{
+				data = m_cart_sk2->read(space, offset & 0x3fff, 0, 0, m_romsel & 0x01);
+			}
+			break;
+		case 2:
+		case 3:
+			if (m_cart_sk1->exists())
+			{
+				data = m_cart_sk1->read(space, offset & 0x3fff, 0, 0, m_romsel & 0x01);
+			}
+			break;
+		case 12:
+			data = m_exp_rom->base()[offset & 0x1fff];
+			break;
+		}
 	}
-	if (m_cart_sk1 && (tmp_reg = memregion(region_tag.assign(m_cart_sk1->tag()).append(GENERIC_ROM_REGION_TAG).c_str())))
+	else if ((offset & 0xfc00) == 0xfc00)
 	{
-		machine().root_device().membank("bank2")->configure_entries(2, 2, tmp_reg->base(), 0x4000);
+		data &= m_cart_sk1->read(space, offset & 0xff, 1, 0, m_romsel & 0x01);
+		data &= m_cart_sk2->read(space, offset & 0xff, 1, 0, m_romsel & 0x01);
+
+		if (offset == 0xfc70)
+		{
+			data &= m_adc->read(space, offset);
+		}
+		else if (offset == 0xfc72)
+		{
+			data &= status_r(space, offset);
+		}
+	}
+	else if ((offset & 0xfd00) == 0xfd00)
+	{
+		data &= m_cart_sk1->read(space, offset & 0xff, 0, 1, m_romsel & 0x01);
+		data &= m_cart_sk2->read(space, offset & 0xff, 0, 1, m_romsel & 0x01);
 	}
 
-	machine().root_device().membank("bank2")->configure_entry(12, memregion("exp_rom")->base());
+	return data;
 }
+
+
+//-------------------------------------------------
+//  expbus_w - expansion data write
+//-------------------------------------------------
+
+void electron_plus1_device::expbus_w(address_space &space, offs_t offset, uint8_t data)
+{
+	if (offset >= 0x8000 && offset < 0xc000)
+	{
+		switch (m_romsel)
+		{
+		case 0:
+		case 1:
+			if (m_cart_sk2->exists())
+			{
+				m_cart_sk2->write(space, offset & 0x3fff, data, 0, 0, m_romsel & 0x01);
+			}
+			break;
+		case 2:
+		case 3:
+			if (m_cart_sk1->exists())
+			{
+				m_cart_sk1->write(space, offset & 0x3fff, data, 0, 0, m_romsel & 0x01);
+			}
+			break;
+		}
+	}
+	else if ((offset & 0xfc00) == 0xfc00)
+	{
+		m_cart_sk1->write(space, offset & 0xff, data, 1, 0, m_romsel & 0x01);
+		m_cart_sk2->write(space, offset & 0xff, data, 1, 0, m_romsel & 0x01);
+
+		if (offset == 0xfc70)
+		{
+			m_adc->write(space, offset, data);
+		}
+		else if (offset == 0xfc71)
+		{
+			m_cent_data_out->write(data);
+		}
+		else if (offset == 0xfe05)
+		{
+			m_romsel = data & 0x0f;
+		}
+	}
+	else if ((offset & 0xfd00) == 0xfd00)
+	{
+		m_cart_sk1->write(space, offset & 0xff, data, 0, 1, m_romsel & 0x01);
+		m_cart_sk2->write(space, offset & 0xff, data, 0, 1, m_romsel & 0x01);
+	}
+}
+
 
 //**************************************************************************
 //  IMPLEMENTATION
@@ -206,47 +291,12 @@ WRITE_LINE_MEMBER(electron_plus1_device::ready_w)
 	m_adc_ready = !state;
 }
 
-image_init_result electron_plus1_device::load_cart(device_image_interface &image, generic_slot_device *slot)
+WRITE_LINE_MEMBER(electron_plus1_device::irq_w)
 {
-	if (image.software_entry() == nullptr)
-	{
-		uint32_t filesize = image.length();
+	m_slot->irq_w(state);
+}
 
-		if (filesize != 16384)
-		{
-			image.seterror(IMAGE_ERROR_UNSPECIFIED, "Invalid size: Only size 16384 is supported");
-			return image_init_result::FAIL;
-		}
-
-		slot->rom_alloc(filesize, GENERIC_ROM8_WIDTH, ENDIANNESS_LITTLE);
-		image.fread(slot->get_rom_base(), filesize);
-		return image_init_result::PASS;
-	}
-	else
-	{
-		int upsize = image.get_software_region_length("uprom");
-		int losize = image.get_software_region_length("lorom");
-
-		if (upsize != 16384 && upsize != 0)
-		{
-			image.seterror(IMAGE_ERROR_UNSPECIFIED, "Invalid size for uprom");
-			return image_init_result::FAIL;
-		}
-
-		if (losize != 16384 && losize != 0)
-		{
-			image.seterror(IMAGE_ERROR_UNSPECIFIED, "Invalid size for lorom");
-			return image_init_result::FAIL;
-		}
-
-		slot->rom_alloc(upsize + losize, GENERIC_ROM8_WIDTH, ENDIANNESS_LITTLE);
-
-		if (upsize)
-			memcpy(slot->get_rom_base(), image.get_software_region("uprom"), upsize);
-
-		if (losize)
-			memcpy(slot->get_rom_base() + upsize, image.get_software_region("lorom"), losize);
-
-		return image_init_result::PASS;
-	}
+WRITE_LINE_MEMBER(electron_plus1_device::nmi_w)
+{
+	m_slot->nmi_w(state);
 }

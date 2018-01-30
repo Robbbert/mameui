@@ -91,10 +91,11 @@ public:
 	required_device<cpu_device> m_maincpu;
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<palette_device> m_palette;
+	void hitpoker(machine_config &config);
 };
 
 
-#define CRTC_CLOCK XTAL_3_579545MHz
+#define CRTC_CLOCK XTAL(3'579'545)
 
 void hitpoker_state::video_start()
 {
@@ -469,7 +470,7 @@ INTERRUPT_GEN_MEMBER(hitpoker_state::hitpoker_irq)
 	device.execute().set_input_line(MC68HC11_IRQ_LINE, HOLD_LINE);
 }
 
-static MACHINE_CONFIG_START( hitpoker )
+MACHINE_CONFIG_START(hitpoker_state::hitpoker)
 	MCFG_CPU_ADD("maincpu", MC68HC11,1000000)
 	MCFG_CPU_PROGRAM_MAP(hitpoker_map)
 	MCFG_CPU_IO_MAP(hitpoker_io)

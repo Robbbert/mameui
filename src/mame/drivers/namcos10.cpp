@@ -434,6 +434,16 @@ public:
 	uint8_t *nand_base;
 	void nand_copy( uint32_t *dst, uint32_t address, int len );
 
+	void ns10_konotako(machine_config &config);
+	void ns10_mrdrilr2(machine_config &config);
+	void ns10_knpuzzle(machine_config &config);
+	void ns10_chocovdr(machine_config &config);
+	void ns10_startrgn(machine_config &config);
+	void namcos10_memm(machine_config &config);
+	void namcos10_memn(machine_config &config);
+	void ns10_gjspace(machine_config &config);
+	void ns10_nflclsfb(machine_config &config);
+	void ns10_gamshara(machine_config &config);
 private:
 	enum {
 		I2CP_IDLE,
@@ -898,9 +908,9 @@ MACHINE_RESET_MEMBER(namcos10_state,namcos10)
 	i2c_bit = 0;
 }
 
-static MACHINE_CONFIG_START( namcos10_memm )
+MACHINE_CONFIG_START(namcos10_state::namcos10_memm)
 	/* basic machine hardware */
-	MCFG_CPU_ADD( "maincpu", CXD8606BQ, XTAL_101_4912MHz )
+	MCFG_CPU_ADD( "maincpu", CXD8606BQ, XTAL(101'491'200) )
 	MCFG_CPU_PROGRAM_MAP( namcos10_memm_map )
 
 	// The bios first configures the rom window as 80000-big, then
@@ -916,15 +926,15 @@ static MACHINE_CONFIG_START( namcos10_memm )
 	MCFG_MACHINE_RESET_OVERRIDE(namcos10_state, namcos10 )
 
 	/* video hardware */
-	MCFG_PSXGPU_ADD( "maincpu", "gpu", CXD8561CQ, 0x200000, XTAL_53_693175MHz )
+	MCFG_PSXGPU_ADD( "maincpu", "gpu", CXD8561CQ, 0x200000, XTAL(53'693'175) )
 
 	/* sound hardware */
 	MCFG_SPEAKER_STANDARD_STEREO("lspeaker", "rspeaker")
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_START( namcos10_memn )
+MACHINE_CONFIG_START(namcos10_state::namcos10_memn)
 	/* basic machine hardware */
-	MCFG_CPU_ADD( "maincpu", CXD8606BQ, XTAL_101_4912MHz )
+	MCFG_CPU_ADD( "maincpu", CXD8606BQ, XTAL(101'491'200) )
 	MCFG_CPU_PROGRAM_MAP( namcos10_memn_map )
 
 	// The bios first configures the rom window as 80000-big, then
@@ -940,48 +950,48 @@ static MACHINE_CONFIG_START( namcos10_memn )
 	MCFG_MACHINE_RESET_OVERRIDE(namcos10_state, namcos10 )
 
 	/* video hardware */
-	MCFG_PSXGPU_ADD( "maincpu", "gpu", CXD8561CQ, 0x200000, XTAL_53_693175MHz )
+	MCFG_PSXGPU_ADD( "maincpu", "gpu", CXD8561CQ, 0x200000, XTAL(53'693'175) )
 
 	/* sound hardware */
 	MCFG_SPEAKER_STANDARD_STEREO("lspeaker", "rspeaker")
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED(ns10_mrdrilr2, namcos10_memm)
+MACHINE_CONFIG_DERIVED(namcos10_state::ns10_mrdrilr2, namcos10_memm)
 /* decrypter device (CPLD in hardware?) */
 MCFG_DEVICE_ADD("decrypter", MRDRILR2_DECRYPTER, 0)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED(ns10_chocovdr, namcos10_memn)
+MACHINE_CONFIG_DERIVED(namcos10_state::ns10_chocovdr, namcos10_memn)
 /* decrypter device (CPLD in hardware?) */
 MCFG_DEVICE_ADD("decrypter", CHOCOVDR_DECRYPTER, 0)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED(ns10_gamshara, namcos10_memn)
+MACHINE_CONFIG_DERIVED(namcos10_state::ns10_gamshara, namcos10_memn)
 /* decrypter device (CPLD in hardware?) */
 MCFG_DEVICE_ADD("decrypter", GAMSHARA_DECRYPTER, 0)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED(ns10_gjspace, namcos10_memn)
+MACHINE_CONFIG_DERIVED(namcos10_state::ns10_gjspace, namcos10_memn)
 /* decrypter device (CPLD in hardware?) */
 MCFG_DEVICE_ADD("decrypter", GJSPACE_DECRYPTER, 0)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED(ns10_knpuzzle, namcos10_memn)
+MACHINE_CONFIG_DERIVED(namcos10_state::ns10_knpuzzle, namcos10_memn)
 /* decrypter device (CPLD in hardware?) */
 MCFG_DEVICE_ADD("decrypter", KNPUZZLE_DECRYPTER, 0)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED(ns10_konotako, namcos10_memn)
+MACHINE_CONFIG_DERIVED(namcos10_state::ns10_konotako, namcos10_memn)
 /* decrypter device (CPLD in hardware?) */
 MCFG_DEVICE_ADD("decrypter", KONOTAKO_DECRYPTER, 0)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED(ns10_nflclsfb, namcos10_memn)
+MACHINE_CONFIG_DERIVED(namcos10_state::ns10_nflclsfb, namcos10_memn)
 /* decrypter device (CPLD in hardware?) */
 MCFG_DEVICE_ADD("decrypter", NFLCLSFB_DECRYPTER, 0)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED(ns10_startrgn, namcos10_memn)
+MACHINE_CONFIG_DERIVED(namcos10_state::ns10_startrgn, namcos10_memn)
 /* decrypter device (CPLD in hardware?) */
 MCFG_DEVICE_ADD("decrypter", STARTRGN_DECRYPTER, 0)
 MACHINE_CONFIG_END

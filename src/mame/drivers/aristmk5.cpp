@@ -465,7 +465,7 @@
 #include "swhr2u.lh"          // 5      1, 2, 3, 4, 5   25
 #include "wnpost.lh"          // 5      1, 2, 3, 5, 10  50
 
-#define MASTER_CLOCK        XTAL_72MHz      /* confirmed */
+#define MASTER_CLOCK        XTAL(72'000'000)      /* confirmed */
 
 class aristmk5_state : public archimedes_state
 {
@@ -518,6 +518,10 @@ public:
 	CUSTOM_INPUT_MEMBER(coin_usa_r);
 	CUSTOM_INPUT_MEMBER(hopper_r);
 
+	void aristmk5(machine_config &config);
+	void aristmk5_touch(machine_config &config);
+	void aristmk5_usa_touch(machine_config &config);
+	void aristmk5_usa(machine_config &config);
 private:
 	required_device_array<eeprom_serial_93cxx_device, 2> m_eeprom;
 	required_device<ds1302_device> m_rtc;
@@ -590,7 +594,7 @@ WRITE8_MEMBER(aristmk5_state::spi_data_w)
 	m_spi_bits = 0;
 
 	// start the SPI clock
-	m_spi_timer->adjust(attotime::from_hz((double)MASTER_CLOCK / 9 / 512 / 2), 0, attotime::from_hz((double)MASTER_CLOCK / 9 / 512 / 2));
+	m_spi_timer->adjust(attotime::from_hz(MASTER_CLOCK / 9 / 512 / 2), 0, attotime::from_hz(MASTER_CLOCK / 9 / 512 / 2));
 }
 
 READ8_MEMBER(aristmk5_state::spi_data_r)
@@ -746,7 +750,7 @@ READ32_MEMBER(aristmk5_state::Ns5x58)
 
 
 	// reset 2KHz timer
-	m_mk5_2KHz_timer->adjust(attotime::from_hz((double)MASTER_CLOCK / 9 / 4096));
+	m_mk5_2KHz_timer->adjust(attotime::from_hz(MASTER_CLOCK / 9 / 4096));
 	archimedes_clear_irq_a(0x01);
 	return 0xffffffff;
 }
@@ -1976,7 +1980,7 @@ void aristmk5_state::machine_start()
 void aristmk5_state::machine_reset()
 {
 	archimedes_reset();
-	m_mk5_2KHz_timer->adjust(attotime::from_hz((double)MASTER_CLOCK / 9 / 4096)); // 8MHz / 4096
+	m_mk5_2KHz_timer->adjust(attotime::from_hz(MASTER_CLOCK / 9 / 4096)); // 8MHz / 4096
 	m_mk5_VSYNC_timer->adjust(attotime::from_hz(50000)); // default bit 1 & bit 2 == 0
 
 	m_ioc_regs[IRQ_STATUS_B] |= 0x40; //hack, set keyboard irq empty to be ON
@@ -2011,7 +2015,7 @@ void aristmk5_state::machine_reset()
 }
 
 
-static MACHINE_CONFIG_START( aristmk5 )
+MACHINE_CONFIG_START(aristmk5_state::aristmk5)
 	MCFG_CPU_ADD("maincpu", ARM, MASTER_CLOCK/6)    // 12000000
 	MCFG_CPU_PROGRAM_MAP(aristmk5_drame_map)
 
@@ -2062,7 +2066,7 @@ static MACHINE_CONFIG_START( aristmk5 )
 	MCFG_INPUT_MERGER_ANY_HIGH("uart_irq")
 	MCFG_INPUT_MERGER_OUTPUT_HANDLER(WRITELINE(aristmk5_state, uart_irq_callback))
 
-	MCFG_DS1302_ADD("rtc", XTAL_32_768kHz)
+	MCFG_DS1302_ADD("rtc", XTAL(32'768))
 
 	MCFG_TICKET_DISPENSER_ADD("hopper", attotime::from_msec(100), TICKET_MOTOR_ACTIVE_HIGH, TICKET_STATUS_ACTIVE_LOW)
 
@@ -2087,19 +2091,19 @@ static MACHINE_CONFIG_START( aristmk5 )
 MACHINE_CONFIG_END
 
 
-static MACHINE_CONFIG_DERIVED( aristmk5_touch, aristmk5 )
+MACHINE_CONFIG_DERIVED(aristmk5_state::aristmk5_touch, aristmk5)
 	MCFG_DEVICE_MODIFY("uart_0a")
 	MCFG_INS8250_OUT_TX_CB(DEVWRITELINE("microtouch", microtouch_device, rx))
 
 	MCFG_MICROTOUCH_ADD("microtouch", 2400, DEVWRITELINE("uart_0a", ins8250_uart_device, rx_w))
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED( aristmk5_usa, aristmk5 )
+MACHINE_CONFIG_DERIVED(aristmk5_state::aristmk5_usa, aristmk5)
 	MCFG_CPU_MODIFY("maincpu")
 	MCFG_CPU_PROGRAM_MAP(aristmk5_usa_map)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED( aristmk5_usa_touch, aristmk5_usa )
+MACHINE_CONFIG_DERIVED(aristmk5_state::aristmk5_usa_touch, aristmk5_usa)
 	MCFG_DEVICE_MODIFY("uart_0a")
 	MCFG_INS8250_OUT_TX_CB(DEVWRITELINE("microtouch", microtouch_device, rx))
 
@@ -3859,7 +3863,7 @@ ROM_END
 // Green Lizard [Reel Game] / Export / A - 05/01/01
 // Requires set chip version: 4.04.xx
 // Variation (% and NO):
-// Doesn't requires touch screen 
+// Doesn't requires touch screen
 ROM_START( glizrdce )
 	ARISTOCRAT_MK5_BIOS
 	/*
@@ -4489,7 +4493,7 @@ ROM_END
 // Keep Your Hat On / Export / B - 08/05/2000
 // Requires set chips 4.01.xx
 // Variation (% and NO)
-// Requires touch screen 
+// Requires touch screen
 ROM_START( kyhatonu )
 	ARISTOCRAT_MK5_BIOS
 	/*

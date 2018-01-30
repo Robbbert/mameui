@@ -115,6 +115,9 @@ public:
 	DECLARE_WRITE8_MEMBER(beep_w);
 	DECLARE_WRITE8_MEMBER(bank_w);
 
+	void alphatp2(machine_config &config);
+	void alphatp3(machine_config &config);
+	void alphatp2u(machine_config &config);
 protected:
 	virtual void machine_start() override;
 	virtual void machine_reset() override;
@@ -593,14 +596,14 @@ void alphatpx_state::machine_reset()
 //  MACHINE DEFINITIONS
 //**************************************************************************
 
-static MACHINE_CONFIG_START( alphatp3 )
-	MCFG_CPU_ADD("maincpu", I8085A, XTAL_6MHz)
+MACHINE_CONFIG_START(alphatpx_state::alphatp3)
+	MCFG_CPU_ADD("maincpu", I8085A, XTAL(6'000'000))
 	MCFG_CPU_PROGRAM_MAP(alphatp3_mem)
 	MCFG_CPU_IO_MAP(alphatp3_io)
 
 	MCFG_QUANTUM_PERFECT_CPU("maincpu")
 
-	MCFG_CPU_ADD("kbdmcu", I8041, XTAL_12_8544MHz/2)
+	MCFG_CPU_ADD("kbdmcu", I8041, XTAL(12'854'400)/2)
 	MCFG_MCS48_PORT_T0_IN_CB(READLINE(alphatpx_state, kbd_matrix_r))
 	MCFG_MCS48_PORT_P1_OUT_CB(WRITE8(alphatpx_state, kbd_matrix_w))
 	MCFG_MCS48_PORT_P2_IN_CB(READ8(alphatpx_state, kbd_port2_r))
@@ -615,12 +618,12 @@ static MACHINE_CONFIG_START( alphatp3 )
 
 	// video hardware
 	MCFG_SCREEN_ADD_MONOCHROME("screen", RASTER, rgb_t::green())
-	MCFG_SCREEN_RAW_PARAMS(XTAL_12_8544MHz, 824, 0, 640, 312, 0, 288)
+	MCFG_SCREEN_RAW_PARAMS(XTAL(12'854'400), 824, 0, 640, 312, 0, 288)
 	MCFG_SCREEN_UPDATE_DRIVER(alphatpx_state, screen_update)
 
 	MCFG_PALETTE_ADD_MONOCHROME("palette")
 
-	MCFG_DEVICE_ADD("crtc", CRT5037, XTAL_12_8544MHz)
+	MCFG_DEVICE_ADD("crtc", CRT5037, XTAL(12'854'400))
 	MCFG_TMS9927_CHAR_WIDTH(8)
 
 	MCFG_TMS9927_VSYN_CALLBACK(INPUTLINE("maincpu", I8085_RST65_LINE)) MCFG_DEVCB_XOR(1)
@@ -634,9 +637,9 @@ static MACHINE_CONFIG_START( alphatp3 )
 	MCFG_SOUND_ROUTE( ALL_OUTPUTS, "mono", 1.00 )
 
 	MCFG_DEVICE_ADD("uart", I8251, 0)
-	// XTAL_4_9152MHz serial clock
+	// XTAL(4'915'200) serial clock
 
-	MCFG_FD1791_ADD("fdc", XTAL_4MHz / 4)
+	MCFG_FD1791_ADD("fdc", XTAL(4'000'000) / 4)
 	MCFG_WD_FDC_INTRQ_CALLBACK(WRITELINE(alphatpx_state, fdcirq_w))
 	MCFG_WD_FDC_DRQ_CALLBACK(WRITELINE(alphatpx_state, fdcdrq_w))
 	MCFG_WD_FDC_HLD_CALLBACK(WRITELINE(alphatpx_state, fdchld_w))
@@ -644,14 +647,14 @@ static MACHINE_CONFIG_START( alphatp3 )
 	MCFG_FLOPPY_DRIVE_ADD("fdc:1", alphatp3_floppies, "525qd", floppy_image_device::default_floppy_formats)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_START( alphatp2 )
-	MCFG_CPU_ADD("maincpu", I8085A, XTAL_6MHz)
+MACHINE_CONFIG_START(alphatpx_state::alphatp2)
+	MCFG_CPU_ADD("maincpu", I8085A, XTAL(6'000'000))
 	MCFG_CPU_PROGRAM_MAP(alphatp3_mem)
 	MCFG_CPU_IO_MAP(alphatp3_io)
 
 	MCFG_QUANTUM_PERFECT_CPU("maincpu")
 
-	MCFG_CPU_ADD("kbdmcu", I8041, XTAL_12_8544MHz/2)
+	MCFG_CPU_ADD("kbdmcu", I8041, XTAL(12'854'400)/2)
 	MCFG_MCS48_PORT_T0_IN_CB(READLINE(alphatpx_state, kbd_matrix_r))
 	MCFG_MCS48_PORT_P1_OUT_CB(WRITE8(alphatpx_state, kbd_matrix_w))
 	MCFG_MCS48_PORT_P2_IN_CB(READ8(alphatpx_state, kbd_port2_r))
@@ -666,12 +669,12 @@ static MACHINE_CONFIG_START( alphatp2 )
 
 	// video hardware
 	MCFG_SCREEN_ADD_MONOCHROME("screen", RASTER, rgb_t::green())
-	MCFG_SCREEN_RAW_PARAMS(XTAL_12_8544MHz, 824, 0, 640, 312, 0, 288)
+	MCFG_SCREEN_RAW_PARAMS(XTAL(12'854'400), 824, 0, 640, 312, 0, 288)
 	MCFG_SCREEN_UPDATE_DRIVER(alphatpx_state, screen_update)
 
 	MCFG_PALETTE_ADD_MONOCHROME("palette")
 
-	MCFG_DEVICE_ADD("crtc", CRT5037, XTAL_12_8544MHz)
+	MCFG_DEVICE_ADD("crtc", CRT5037, XTAL(12'854'400))
 	MCFG_TMS9927_CHAR_WIDTH(8)
 	MCFG_TMS9927_HSYN_CALLBACK(INPUTLINE("maincpu", I8085_RST55_LINE))
 	MCFG_TMS9927_VSYN_CALLBACK(INPUTLINE("maincpu", I8085_RST65_LINE)) MCFG_DEVCB_XOR(1)
@@ -685,9 +688,9 @@ static MACHINE_CONFIG_START( alphatp2 )
 	MCFG_SOUND_ROUTE( ALL_OUTPUTS, "mono", 1.00 )
 
 	MCFG_DEVICE_ADD("uart", I8251, 0)
-	// XTAL_4_9152MHz serial clock
+	// XTAL(4'915'200) serial clock
 
-	MCFG_FD1791_ADD("fdc", XTAL_4MHz / 4)
+	MCFG_FD1791_ADD("fdc", XTAL(4'000'000) / 4)
 	MCFG_WD_FDC_INTRQ_CALLBACK(WRITELINE(alphatpx_state, fdcirq_w))
 	MCFG_WD_FDC_DRQ_CALLBACK(WRITELINE(alphatpx_state, fdcdrq_w))
 	MCFG_WD_FDC_HLD_CALLBACK(WRITELINE(alphatpx_state, fdchld_w))
@@ -695,7 +698,7 @@ static MACHINE_CONFIG_START( alphatp2 )
 	MCFG_FLOPPY_DRIVE_ADD("fdc:1", alphatp2_floppies, "525ssdd", floppy_image_device::default_floppy_formats)
 MACHINE_CONFIG_END
 
-static MACHINE_CONFIG_DERIVED (alphatp2u, alphatp2)
+MACHINE_CONFIG_DERIVED(alphatpx_state::alphatp2u, alphatp2)
 	MCFG_DEVICE_REMOVE("fdc:0")
 	MCFG_DEVICE_REMOVE("fdc:1")
 	MCFG_FLOPPY_DRIVE_ADD("fdc:0", alphatp2su_floppies, "525dd", floppy_image_device::default_floppy_formats)

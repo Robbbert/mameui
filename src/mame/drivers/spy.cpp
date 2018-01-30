@@ -64,7 +64,7 @@ WRITE8_MEMBER(spy_state::spy_bankedram1_w)
 {
 	if (m_rambank & 1)
 	{
-		m_palette->write(space,offset,data);
+		m_palette->write8(space,offset,data);
 	}
 	else if (m_rambank & 2)
 	{
@@ -492,14 +492,14 @@ void spy_state::machine_reset()
 	m_old_3f90 = -1;
 }
 
-static MACHINE_CONFIG_START( spy )
+MACHINE_CONFIG_START(spy_state::spy)
 
 	/* basic machine hardware */
-	MCFG_CPU_ADD("maincpu", MC6809E, XTAL_24MHz / 8) // 3 MHz? (divided by 051961)
+	MCFG_CPU_ADD("maincpu", MC6809E, XTAL(24'000'000) / 8) // 3 MHz? (divided by 051961)
 	MCFG_CPU_PROGRAM_MAP(spy_map)
 	MCFG_CPU_VBLANK_INT_DRIVER("screen", spy_state,  spy_interrupt)
 
-	MCFG_CPU_ADD("audiocpu", Z80, XTAL_3_579545MHz)
+	MCFG_CPU_ADD("audiocpu", Z80, XTAL(3'579'545))
 	MCFG_CPU_PROGRAM_MAP(spy_sound_map) /* nmi by the sound chip */
 
 	MCFG_WATCHDOG_ADD("watchdog")
