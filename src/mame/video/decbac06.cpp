@@ -94,13 +94,13 @@ deco_bac06_device::deco_bac06_device(const machine_config &mconfig, const char *
 }
 
 //-------------------------------------------------
-//  static_set_gfxdecode_tag: Set the tag of the
+//  set_gfxdecode_tag: Set the tag of the
 //  gfx decoder
 //-------------------------------------------------
 
-void deco_bac06_device::static_set_gfxdecode_tag(device_t &device, const char *tag)
+void deco_bac06_device::set_gfxdecode_tag(const char *tag)
 {
-	downcast<deco_bac06_device &>(device).m_gfxdecode.set_tag(tag);
+	m_gfxdecode.set_tag(tag);
 }
 
 void deco_bac06_device::device_start()
@@ -118,6 +118,7 @@ void deco_bac06_device::device_start()
 	m_bppmult = 0x10;
 	m_bppmask = 0x0f;
 	m_rambank = 0;
+	m_flip_screen = false;
 
 	save_pointer(NAME(m_pf_data.get()), 0x4000/2);
 	save_pointer(NAME(m_pf_rowscroll.get()), 0x2000/2);
@@ -126,18 +127,31 @@ void deco_bac06_device::device_start()
 	save_item(NAME(m_pf_control_1));
 	save_item(NAME(m_gfxcolmask));
 	save_item(NAME(m_rambank));
+	save_item(NAME(m_flip_screen));
 }
 
 void deco_bac06_device::device_reset()
 {
 }
 
-void deco_bac06_device::set_gfx_region_wide(device_t &device, int region8x8, int region16x16, int wide)
+void deco_bac06_device::set_gfx_region_wide(int region8x8, int region16x16, int wide)
 {
-	deco_bac06_device &dev = downcast<deco_bac06_device &>(device);
-	dev.m_gfxregion8x8 = region8x8;
-	dev.m_gfxregion16x16 = region16x16;
-	dev.m_wide = wide;
+	m_gfxregion8x8 = region8x8;
+	m_gfxregion16x16 = region16x16;
+	m_wide = wide;
+}
+
+void deco_bac06_device::set_flip_screen(bool flip)
+{
+	if (m_flip_screen != flip)
+	{
+		m_flip_screen = flip;
+		for (int i = 0; i < 3; i++)
+		{
+			m_pf8x8_tilemap[i]->set_flip(flip ? (TILEMAP_FLIPY | TILEMAP_FLIPX) : 0);
+			m_pf16x16_tilemap[i]->set_flip(flip ? (TILEMAP_FLIPY | TILEMAP_FLIPX) : 0);
+		}
+	}
 }
 
 TILEMAP_MAPPER_MEMBER(deco_bac06_device::tile_shape0_scan)
@@ -280,7 +294,7 @@ void deco_bac06_device::custom_tilemap_draw(bitmap_ind16 &bitmap,
 	doesn't affect any games.
 	*/
 
-	if (machine().driver_data()->flip_screen())
+	if (m_flip_screen)
 		src_y = (src_bitmap.height() - 256) - scrolly;
 	else
 		src_y = scrolly;
@@ -291,7 +305,7 @@ void deco_bac06_device::custom_tilemap_draw(bitmap_ind16 &bitmap,
 		else
 			src_x=scrollx;
 
-		if (machine().driver_data()->flip_screen())
+		if (m_flip_screen)
 			src_x=(src_bitmap.width() - 256) - src_x;
 
 		for (x=0; x<=cliprect.max_x; x++) {

@@ -13,8 +13,7 @@ public:
 		m_soundcpu(*this, "soundcpu"),
 		m_audio(*this, "m72"),
 		m_gfxdecode(*this, "gfxdecode"),
-		m_palette(*this, "palette"),
-		m_soundlatch(*this, "soundlatch") { }
+		m_palette(*this, "palette") { }
 
 	required_shared_ptr<uint16_t> m_video_data;
 	optional_shared_ptr<uint16_t> m_spriteram;
@@ -24,7 +23,6 @@ public:
 	optional_device<m72_audio_device> m_audio;
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<palette_device> m_palette;
-	required_device<generic_latch_8_device> m_soundlatch;
 
 	uint16_t m_video_control_data[8];
 	tilemap_t *m_pf1_layer;
@@ -80,4 +78,13 @@ public:
 	void dynablsb(machine_config &config);
 	void matchit2(machine_config &config);
 	void quizf1(machine_config &config);
+	void bomblord_main_cpu_map(address_map &map);
+	void dynablsb_main_cpu_io_map(address_map &map);
+	void dynablsb_main_cpu_map(address_map &map);
+	void dynablsb_sound_cpu_io_map(address_map &map);
+	void m90_main_cpu_io_map(address_map &map);
+	void m90_main_cpu_map(address_map &map);
+	void m90_sound_cpu_io_map(address_map &map);
+	void m90_sound_cpu_map(address_map &map);
+	void m99_sound_cpu_io_map(address_map &map);
 };
