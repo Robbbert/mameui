@@ -485,7 +485,7 @@ static const struct OSDJoystick* g_pJoyGUI = NULL;
 static bool keyboard_state[4096]; /* __code_max #defines the number of internal key_codes */
 
 /* search */
-static char g_SearchText[256];
+static char g_SearchText[2048];
 /* table copied from windows/inputs.c */
 // table entry indices
 #define MAME_KEY      0
@@ -1222,7 +1222,7 @@ void SetNumOptionFolders(int count)
 
 
 /* search */
-const char * GetSearchText(void)
+const char* GetSearchText(void)
 {
 	return g_SearchText;
 }
@@ -1529,12 +1529,12 @@ void ResizePickerControls(HWND hWnd)
 char *ModifyThe(const char *str)
 {
 	static int  bufno = 0;
-	static char buffer[4][255];
+	static char buffer[4][2048];
 
 	if (strncmp(str, "The ", 4) == 0)
 	{
 		char *s, *p;
-		char temp[255];
+		char temp[2048];
 
 		strcpy(temp, &str[4]);
 

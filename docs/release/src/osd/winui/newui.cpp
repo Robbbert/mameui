@@ -2326,7 +2326,7 @@ static bool get_softlist_info(HWND wnd, device_image_interface *img)
 	win_window_info *window = (win_window_info *)ptr;
 
 	/* Get the media_path */
-	char rompath[400];
+	char rompath[2048];
 	strcpy(rompath, window->machine().options().emu_options::media_path());
 
 	// Get the path to suitable software
@@ -2387,7 +2387,7 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 {
 	// Get the path for loose software from <gamename>.ini
 	// if this is invalid, then windows chooses whatever directory it used last.
-	char buf[400];
+	char buf[2048];
 	strcpy(buf, image->device().machine().options().emu_options::sw_path());
 	// This pulls out the first path from a multipath field
 	const char* t1 = strtok(buf, ";");

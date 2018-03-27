@@ -1180,7 +1180,8 @@ static void SetupImageTypes(const machine_config *config, mess_image_type *types
 		return; // used by MView_MountItem
 	else
 	{
-		char t1[256];
+		string exts = dev->file_extensions();
+		char t1[exts.size()+1];
 		strcpy(t1, dev->file_extensions());
 		char *ext = strtok(t1,",");
 		while (ext)
@@ -1883,8 +1884,8 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 	if (software)
 	{
 		string as, dst;
-		char rompath[512];
 		string t = GetRomDirs();
+		char rompath[t.size()+1];
 		strcpy(rompath, t.c_str());
 		char* sl_root = strtok(rompath, ";");
 		while (sl_root && !passes_tests)

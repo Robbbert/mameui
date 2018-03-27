@@ -1257,7 +1257,7 @@ void CreateYearFolders(int parent_index)
 
 	for (jj = 0; jj < nGames; jj++)
 	{
-		char s[100];
+		char s[strlen(driver_list::driver(jj).year)+1];
 		strcpy(s,driver_list::driver(jj).year);
 
 		if (s[0] == '\0' || s[0] == '?')
@@ -1303,7 +1303,7 @@ void CreateResolutionFolders(int parent_index)
 	int i,jj;
 	int nGames = driver_list::total();
 	int start_folder = numFolders;
-	char Screen[40];
+	char Screen[2048];
 	const game_driver *gamedrv;
 	LPTREEFOLDER lpFolder = treeFolders[parent_index];
 
@@ -1372,7 +1372,7 @@ void CreateFPSFolders(int parent_index)
 	int i,jj;
 	int nGames = driver_list::total();
 	int start_folder = numFolders;
-	char Screen[40];
+	char Screen[2048];
 	const game_driver *gamedrv;
 	LPTREEFOLDER lpFolder = treeFolders[parent_index];
 
@@ -1992,7 +1992,7 @@ static int InitExtraFolders(void)
 	struct _finddata_t files;
 	int             i, count = 0;
 	char *          ext;
-	char            buf[256];
+	char            buf[2048];
 	char            curdir[MAX_PATH];
 	const std::string    t = GetFolderDir();
 	const char *dir = t.c_str();
@@ -2331,7 +2331,7 @@ BOOL TryRenameCustomFolder(LPTREEFOLDER lpFolder, const char *new_name)
 	}
 	else
 	{
-		char buf[500];
+		char buf[2048];
 		snprintf(buf,ARRAY_LENGTH(buf),"Error while renaming custom file %s to %s", filename,new_filename);
 		win_message_box_utf8(GetMainWindow(), buf, MAMEUINAME, MB_OK | MB_ICONERROR);
 	}
