@@ -4,10 +4,10 @@ pause
 
 
 call newsrc.bat
-call clean.bat
-call clean.bat
-call clean.bat
-call clean.bat
+//call clean.bat
+//call clean.bat
+//call clean.bat
+//call clean.bat
 
 rem --- 32bit ---
 del mameui.exe

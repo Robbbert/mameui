@@ -3075,25 +3075,21 @@ static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_
 		if (!ramdev->extra_options().empty())
 		{
 			/* try to parse each option */
-			const uint32_t *p = ramdev->extra_options().data();
-			for (int j = 0; j < ramdev->extra_options().size(); j++)
+			for (ram_device::extra_option const &option : ramdev->extra_options())
 			{
-				i++;
-				char ramtext[20];
 				// identify this option
-				messram_string(ramtext, p[j]);
+				t_ramstring = ui_wstring_from_utf8(option.first.c_str());
+				if( t_ramstring )
+				{
+					i++;
+					// add this option to the combo box
+					res = ComboBox_InsertString(control, i, win_tstring_strdup(t_ramstring));
+					res = ComboBox_SetItemData(control, i, option.second);
 
-				t_ramstring = ui_wstring_from_utf8(ramtext);
-				if( !t_ramstring )
-					return false;
-
-				// add this option to the combo box
-				res = ComboBox_InsertString(control, i, win_tstring_strdup(t_ramstring));
-				res = ComboBox_SetItemData(control, i, p[j]);
-
-				// is this the current option?  record the index if so
-				if (p[j] == current_ram)
-					current_index = i;
+					// is this the current option?  record the index if so
+					if (option.second == current_ram)
+						current_index = i;
+				}
 			}
 		}
 		if (t_ramstring)
