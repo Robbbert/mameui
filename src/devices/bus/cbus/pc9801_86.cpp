@@ -3,15 +3,20 @@
 /***************************************************************************
 
     NEC PC-9801-86 sound card
+	NEC PC-9801-SpeakBoard sound card
 
     Similar to PC-9801-26, this one has YM2608 instead of YM2203 and an
     additional DAC port
+	SpeakBoard sound card seems to be derived design from -86, with an additional 
+	OPNA mapped at 0x58*
 
     TODO:
     - joystick code should be shared between -26, -86 and -118
     - Test all pcm modes
     - Make volume work
     - Recording
+	- actual stereo sound routing (currently routes to ALL_OUTPUTS)
+	- SpeakBoard: no idea about software that uses this;
 
 ***************************************************************************/
 
@@ -44,7 +49,7 @@ WRITE_LINE_MEMBER(pc9801_86_device::sound_irq)
 {
 	m_fmirq = state ? true : false;
 	/* TODO: seems to die very often */
-	machine().device<pic8259_device>(":pic8259_slave")->ir4_w(state || (m_pcmirq ? ASSERT_LINE : CLEAR_LINE));
+	m_bus->int_w<5>(state || (m_pcmirq ? ASSERT_LINE : CLEAR_LINE));
 }
 
 
@@ -52,26 +57,43 @@ WRITE_LINE_MEMBER(pc9801_86_device::sound_irq)
 //  device_add_mconfig - add device configuration
 //-------------------------------------------------
 
-MACHINE_CONFIG_START(pc9801_86_device::device_add_mconfig)
-	MCFG_SPEAKER_STANDARD_STEREO("lspeaker", "rspeaker")
-	MCFG_SOUND_ADD("opna", YM2608, 7.987_MHz_XTAL)
-	MCFG_YM2608_IRQ_HANDLER(WRITELINE(pc9801_86_device, sound_irq))
+MACHINE_CONFIG_START(pc9801_86_device::pc9801_86_config)
+	SPEAKER(config, "lspeaker").front_left();
+	SPEAKER(config, "rspeaker").front_right();
+	MCFG_DEVICE_ADD("opna", YM2608, 7.987_MHz_XTAL)
+	MCFG_YM2608_IRQ_HANDLER(WRITELINE(*this, pc9801_86_device, sound_irq))
 	MCFG_AY8910_OUTPUT_TYPE(0)
-	MCFG_AY8910_PORT_A_READ_CB(READ8(pc9801_86_device, opn_porta_r))
-	//MCFG_AY8910_PORT_B_READ_CB(READ8(pc9801_state, opn_portb_r))
-	//MCFG_AY8910_PORT_A_WRITE_CB(WRITE8(pc9801_state, opn_porta_w))
-	MCFG_AY8910_PORT_B_WRITE_CB(WRITE8(pc9801_86_device, opn_portb_w))
+	MCFG_AY8910_PORT_A_READ_CB(READ8(*this, pc9801_86_device, opn_porta_r))
+	//MCFG_AY8910_PORT_B_READ_CB(READ8(*this, pc9801_state, opn_portb_r))
+	//MCFG_AY8910_PORT_A_WRITE_CB(WRITE8(*this, pc9801_state, opn_porta_w))
+	MCFG_AY8910_PORT_B_WRITE_CB(WRITE8(*this, pc9801_86_device, opn_portb_w))
 	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "lspeaker", 1.00)
 	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "rspeaker", 1.00)
-	MCFG_SOUND_ADD("ldac", DAC_16BIT_R2R_TWOS_COMPLEMENT, 0) MCFG_SOUND_ROUTE(ALL_OUTPUTS, "lspeaker", 1.0) // burr brown pcm61p
-	MCFG_SOUND_ADD("rdac", DAC_16BIT_R2R_TWOS_COMPLEMENT, 0) MCFG_SOUND_ROUTE(ALL_OUTPUTS, "rspeaker", 1.0) // burr brown pcm61p
+	MCFG_DEVICE_ADD("ldac", DAC_16BIT_R2R_TWOS_COMPLEMENT, 0) MCFG_SOUND_ROUTE(ALL_OUTPUTS, "lspeaker", 1.0) // burr brown pcm61p
+	MCFG_DEVICE_ADD("rdac", DAC_16BIT_R2R_TWOS_COMPLEMENT, 0) MCFG_SOUND_ROUTE(ALL_OUTPUTS, "rspeaker", 1.0) // burr brown pcm61p
 	MCFG_DEVICE_ADD("vref", VOLTAGE_REGULATOR, 0) MCFG_VOLTAGE_REGULATOR_OUTPUT(5.0)
-	MCFG_SOUND_ROUTE_EX(0, "ldac", 1.0, DAC_VREF_POS_INPUT) MCFG_SOUND_ROUTE_EX(0, "ldac", -1.0, DAC_VREF_NEG_INPUT)
-	MCFG_SOUND_ROUTE_EX(0, "rdac", 1.0, DAC_VREF_POS_INPUT) MCFG_SOUND_ROUTE_EX(0, "rdac", -1.0, DAC_VREF_NEG_INPUT)
+	MCFG_SOUND_ROUTE(0, "ldac", 1.0, DAC_VREF_POS_INPUT) MCFG_SOUND_ROUTE(0, "ldac", -1.0, DAC_VREF_NEG_INPUT)
+	MCFG_SOUND_ROUTE(0, "rdac", 1.0, DAC_VREF_POS_INPUT) MCFG_SOUND_ROUTE(0, "rdac", -1.0, DAC_VREF_NEG_INPUT)
 MACHINE_CONFIG_END
 
-// RAM
+MACHINE_CONFIG_START(pc9801_86_device::device_add_mconfig)
+	pc9801_86_config(config);
+MACHINE_CONFIG_END
+
+// to load a different bios for slots:
+// -cbusX pc9801_86,bios=N
 ROM_START( pc9801_86 )
+	ROM_REGION( 0x4000, "sound_bios", ROMREGION_ERASEFF )
+	// following roms are unchecked and of dubious quality
+	// we currently mark bios names based off where they originally belonged to, lacking of a better info
+	// supposedly these are -86 roms according to eikanwa2 sound card detection,
+	// loading a -26 rom in a -86 environment causes an hang there.
+	ROM_SYSTEM_BIOS( 0,  "86rx",    "nec86rx" )
+	ROMX_LOAD( "sound_rx.rom",    0x0000, 0x4000, BAD_DUMP CRC(fe9f57f2) SHA1(d5dbc4fea3b8367024d363f5351baecd6adcd8ef), ROM_BIOS(1) )
+	ROM_SYSTEM_BIOS( 1,  "86mu",    "nec86mu" )
+	ROMX_LOAD( "sound_486mu.rom", 0x0000, 0x4000, BAD_DUMP CRC(6cdfa793) SHA1(4b8250f9b9db66548b79f961d61010558d6d6e1c), ROM_BIOS(2) )
+
+	// RAM
 	ROM_REGION( 0x100000, "opna", ROMREGION_ERASE00 )
 ROM_END
 
@@ -123,14 +145,20 @@ ioport_constructor pc9801_86_device::device_input_ports() const
 //  pc9801_86_device - constructor
 //-------------------------------------------------
 
-pc9801_86_device::pc9801_86_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: device_t(mconfig, PC9801_86, tag, owner, clock),
+pc9801_86_device::pc9801_86_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
+	: device_t(mconfig, type, tag, owner, clock),
 		m_bus(*this, DEVICE_SELF_OWNER),
 		m_opna(*this, "opna"),
 		m_ldac(*this, "ldac"),
 		m_rdac(*this, "rdac"),
 		m_queue(QUEUE_SIZE)
 {
+}
+
+pc9801_86_device::pc9801_86_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: pc9801_86_device(mconfig, PC9801_86, tag, owner, clock)
+{
+	
 }
 
 
@@ -169,7 +197,16 @@ void pc9801_86_device::install_device(offs_t start, offs_t end, read8_delegate r
 
 void pc9801_86_device::device_start()
 {
+	m_bus->program_space().install_rom(0xcc000,0xcffff,memregion(this->subtag("sound_bios").c_str())->base());
+	install_device(0xa460, 0xa463, read8_delegate(FUNC(pc9801_86_device::id_r), this), write8_delegate(FUNC(pc9801_86_device::mask_w), this));
+	install_device(0xa464, 0xa46f, read8_delegate(FUNC(pc9801_86_device::pcm_r), this), write8_delegate(FUNC(pc9801_86_device::pcm_w), this));
+	install_device(0xa66c, 0xa66f, read8_delegate([this](address_space &s, offs_t o, u8 mm){ return o == 2 ? m_pcm_mute : 0xff; }, "pc9801_86_mute_r"),
+								   write8_delegate([this](address_space &s, offs_t o, u8 d, u8 mm){ if(o == 2) m_pcm_mute = d; }, "pc9801_86_mute_w"));
+
 	m_dac_timer = timer_alloc();
+	save_item(NAME(m_count));
+	save_item(NAME(m_queue));
+	save_item(NAME(m_irq_rate));
 }
 
 
@@ -180,14 +217,16 @@ void pc9801_86_device::device_start()
 void pc9801_86_device::device_reset()
 {
 	uint16_t port_base = (ioport("OPNA_DSW")->read() & 1) << 8;
-	install_device(port_base + 0x0088, port_base + 0x008f, read8_delegate(FUNC(pc9801_86_device::opn_r), this), write8_delegate(FUNC(pc9801_86_device::opn_w), this) );
-	install_device(0xa460, 0xa463, read8_delegate(FUNC(pc9801_86_device::id_r), this), write8_delegate(FUNC(pc9801_86_device::mask_w), this));
-	install_device(0xa464, 0xa46f, read8_delegate(FUNC(pc9801_86_device::pcm_r), this), write8_delegate(FUNC(pc9801_86_device::pcm_w), this));
+	m_bus->io_space().unmap_readwrite(0x0088, 0x008f, 0x100);
+	install_device(port_base + 0x0088, port_base + 0x008f, read8_delegate(FUNC(pc9801_86_device::opna_r), this), write8_delegate(FUNC(pc9801_86_device::opna_w), this) );
+
 	m_mask = 0;
 	m_head = m_tail = m_count = 0;
-	m_fmirq = m_pcmirq = false;
+	m_fmirq = m_pcmirq = m_init = false;
 	m_irq_rate = 0;
 	m_pcm_ctrl = m_pcm_mode = 0;
+	m_pcm_mute = 0;
+	m_pcm_clk = false;
 	memset(&m_queue[0], 0, QUEUE_SIZE);
 }
 
@@ -197,7 +236,7 @@ void pc9801_86_device::device_reset()
 //**************************************************************************
 
 
-READ8_MEMBER(pc9801_86_device::opn_r)
+READ8_MEMBER(pc9801_86_device::opna_r)
 {
 	if((offset & 1) == 0)
 		return m_opna->read(space, offset >> 1);
@@ -208,7 +247,7 @@ READ8_MEMBER(pc9801_86_device::opn_r)
 	}
 }
 
-WRITE8_MEMBER(pc9801_86_device::opn_w)
+WRITE8_MEMBER(pc9801_86_device::opna_w)
 {
 	if((offset & 1) == 0)
 		m_opna->write(space, offset >> 1,data);
@@ -234,15 +273,13 @@ READ8_MEMBER(pc9801_86_device::pcm_r)
 		{
 			case 1:
 				return ((queue_count() == QUEUE_SIZE) ? 0x80 : 0) |
-						(!queue_count() ? 0x40 : 0);
+						(!queue_count() ? 0x40 : 0) | (m_pcm_clk ? 1 : 0);
 			case 2:
 				return m_pcm_ctrl | (m_pcmirq ? 0x10 : 0);
 			case 3:
 				return m_pcm_mode;
 			case 4:
 				return 0;
-			case 5:
-				return m_pcm_mute;
 		}
 	}
 	else // odd
@@ -262,18 +299,18 @@ WRITE8_MEMBER(pc9801_86_device::pcm_w)
 				m_vol[data >> 5] = data & 0x0f;
 				break;
 			case 2:
-				m_pcm_ctrl = data & ~0x10;
-				if(data & 0x80)
+				if(((data & 7) != (m_pcm_ctrl & 7)) || !m_init)
 					m_dac_timer->adjust(attotime::from_ticks(divs[data & 7], rate), 0, attotime::from_ticks(divs[data & 7], rate));
-				else
-					m_dac_timer->adjust(attotime::never);
 				if(data & 8)
 					m_head = m_tail = m_count = 0;
 				if(!(data & 0x10))
 				{
-					m_pcmirq = false;
-					machine().device<pic8259_device>(":pic8259_slave")->ir4_w(m_fmirq ? ASSERT_LINE : CLEAR_LINE);
+					m_bus->int_w<5>(m_fmirq ? ASSERT_LINE : CLEAR_LINE);
+					if(!(queue_count() < m_irq_rate) || !(data & 0x80))
+						m_pcmirq = false; //TODO: this needs research
 				}
+				m_init = true;
+				m_pcm_ctrl = data & ~0x10;
 				break;
 			case 3:
 				if(m_pcm_ctrl & 0x20)
@@ -289,9 +326,6 @@ WRITE8_MEMBER(pc9801_86_device::pcm_w)
 					m_count++;
 				}
 				break;
-			case 5:
-				m_pcm_mute = data;
-				break;
 		}
 	}
 	else // odd
@@ -305,11 +339,9 @@ int pc9801_86_device::queue_count()
 
 uint8_t pc9801_86_device::queue_pop()
 {
-	if(!queue_count())
-		return 0;
 	uint8_t ret = m_queue[m_tail++];
 	m_tail %= QUEUE_SIZE;
-	m_count--;
+	m_count = (m_count - 1) % QUEUE_SIZE; // dangel resets the fifo after filling it completely so maybe it expects an underflow
 	return ret;
 }
 
@@ -317,7 +349,8 @@ void pc9801_86_device::device_timer(emu_timer& timer, device_timer_id id, int pa
 {
 	int16_t lsample, rsample;
 
-	if((m_pcm_ctrl & 0x40) || !(m_pcm_ctrl & 0x80) || !queue_count())
+	m_pcm_clk = !m_pcm_clk;
+	if((m_pcm_ctrl & 0x40) || !(m_pcm_ctrl & 0x80))
 		return;
 
 	switch(m_pcm_mode & 0x70)
@@ -354,6 +387,84 @@ void pc9801_86_device::device_timer(emu_timer& timer, device_timer_id id, int pa
 	if((queue_count() < m_irq_rate) && (m_pcm_ctrl & 0x20))
 	{
 		m_pcmirq = true;
-		machine().device<pic8259_device>(":pic8259_slave")->ir4_w(ASSERT_LINE);
+		m_bus->int_w<5>(ASSERT_LINE);
 	}
 }
+
+//**************************************************************************
+//  SpeakBoard device section
+//**************************************************************************
+
+DEFINE_DEVICE_TYPE(PC9801_SPEAKBOARD, pc9801_speakboard_device, "pc9801_spb", "NEC PC9801 SpeakBoard")
+
+ROM_START( pc9801_spb )
+	ROM_REGION( 0x4000, "sound_bios", ROMREGION_ERASEFF )
+	ROM_LOAD16_BYTE( "spb lh5764 ic21_pink.bin",    0x0001, 0x2000, CRC(5bcefa1f) SHA1(ae88e45d411bf5de1cb42689b12b6fca0146c586) )
+	ROM_LOAD16_BYTE( "spb lh5764 ic22_green.bin",   0x0000, 0x2000, CRC(a7925ced) SHA1(3def9ee386ab6c31436888261bded042cd64a0eb) )
+
+	// RAM
+	ROM_REGION( 0x100000, "opna", ROMREGION_ERASE00 )
+
+	ROM_REGION( 0x100000, "opna_slave", ROMREGION_ERASE00 )
+ROM_END
+
+const tiny_rom_entry *pc9801_speakboard_device::device_rom_region() const
+{
+	return ROM_NAME( pc9801_spb );
+}
+
+
+//**************************************************************************
+//  LIVE DEVICE
+//**************************************************************************
+
+//-------------------------------------------------
+//  pc9801_86_device - constructor
+//-------------------------------------------------
+
+pc9801_speakboard_device::pc9801_speakboard_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: pc9801_86_device(mconfig, PC9801_SPEAKBOARD, tag, owner, clock),
+	m_opna_slave(*this, "opna_slave")
+{
+}
+
+MACHINE_CONFIG_START(pc9801_speakboard_device::device_add_mconfig)
+	pc9801_86_config(config);
+
+	MCFG_DEVICE_ADD("opna_slave", YM2608, 7.987_MHz_XTAL)
+	MCFG_AY8910_OUTPUT_TYPE(0)
+	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "lspeaker", 1.00)
+	MCFG_SOUND_ROUTE(ALL_OUTPUTS, "rspeaker", 1.00)
+MACHINE_CONFIG_END
+
+void pc9801_speakboard_device::device_start()
+{
+	pc9801_86_device::device_start();
+	
+	install_device(0x0588, 0x058f, read8_delegate(FUNC(pc9801_speakboard_device::opna_slave_r), this), write8_delegate(FUNC(pc9801_speakboard_device::opna_slave_w), this) );
+}
+
+void pc9801_speakboard_device::device_reset()
+{
+	pc9801_86_device::device_reset();
+}
+
+READ8_MEMBER(pc9801_speakboard_device::opna_slave_r)
+{
+	if((offset & 1) == 0)
+		return m_opna_slave->read(space, offset >> 1);
+	else // odd
+	{
+		logerror("PC9801-SPB: Read to undefined port [%02x]\n",offset+0x588);
+		return 0xff;
+	}
+}
+
+WRITE8_MEMBER(pc9801_speakboard_device::opna_slave_w)
+{
+	if((offset & 1) == 0)
+		m_opna_slave->write(space, offset >> 1,data);
+	else // odd
+		logerror("PC9801-SPB: Write to undefined port [%02x] %02x\n",offset+0x588,data);
+}
+
