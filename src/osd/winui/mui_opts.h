@@ -11,10 +11,6 @@
 #if 0
 enum class m_optnum
 {
-	MOPT_SYSTEMNAME,
-	MOPT_SOFTWARENAME,
-	MOPT_READCONFIG,
-	MOPT_WRITECONFIG,
 	MOPT_ROMPATH,
 	MOPT_HASHPATH,
 	MOPT_SAMPLEPATH,
@@ -68,10 +64,6 @@ MAINOPTINFO;
 // must be in same order as enum above
 const MAINOPTINFO m_opt_info [] =
 {
-	{ m_optnum::MOPT_SYSTEMNAME,      OPTION_SYSTEMNAME,         "",          0x01 },
-	{ m_optnum::MOPT_SOFTWARENAME,    OPTION_SOFTWARENAME,       "",          0x01 },
-	{ m_optnum::MOPT_READCONFIG,      OPTION_READCONFIG,         "1",         0x01 },
-	{ m_optnum::MOPT_WRITECONFIG,     OPTION_WRITECONFIG,        "1",         0x01 },
 	{ m_optnum::MOPT_ROMPATH,         OPTION_MEDIAPATH,          "roms",      0x01 },
 	{ m_optnum::MOPT_HASHPATH,        OPTION_HASHPATH,           "hash",      0x01 },
 	{ m_optnum::MOPT_SAMPLEPATH,      OPTION_SAMPLEPATH,         "samples",   0x01 },
@@ -90,7 +82,7 @@ const MAINOPTINFO m_opt_info [] =
 	{ m_optnum::MOPT_SAVESTATEPATH,   OPTION_STATE_DIRECTORY,    "sta",       0x01 },
 	{ m_optnum::MOPT_DIFFPATH,        OPTION_DIFF_DIRECTORY,     "diff",      0x01 },
 	{ m_optnum::MOPT_COMMENTPATH,     OPTION_COMMENT_DIRECTORY,  "comments",  0x01 },
-	{ m_optnum::MOPT_DATPATH,         OPTION_HISTORY_PATH,       "dats",      0x02 },
+	{ m_optnum::MOPT_DATPATH,         OPTION_HISTORY_PATH,       "history",   0x02 },
 	{ m_optnum::MOPT_FOLDERPATH,      OPTION_CATEGORYINI_PATH,   "folders",   0x02 },
 	{ m_optnum::MOPT_UIPATH,          OPTION_UI_PATH,            "ui",        0x02 },
 	{ m_optnum::MOPT_ICONSPATH,       OPTION_ICONS_PATH,         "icons",     0x02 },
@@ -114,152 +106,6 @@ const MAINOPTINFO m_opt_info [] =
 };
 
 int m_index = static_cast<uint8_t>(MOPT_whatever);
-
-#endif
-#if 0
-
-// core state/playback options
-#define OPTION_STATE                "state"
-#define OPTION_AUTOSAVE             "autosave"
-#define OPTION_PLAYBACK             "playback"
-#define OPTION_RECORD               "record"
-#define OPTION_RECORD_TIMECODE      "record_timecode"
-#define OPTION_EXIT_AFTER_PLAYBACK  "exit_after_playback"
-#define OPTION_MNGWRITE             "mngwrite"
-#define OPTION_AVIWRITE             "aviwrite"
-#define OPTION_WAVWRITE             "wavwrite"
-#define OPTION_SNAPNAME             "snapname"
-#define OPTION_SNAPSIZE             "snapsize"
-#define OPTION_SNAPVIEW             "snapview"
-#define OPTION_SNAPBILINEAR         "snapbilinear"
-#define OPTION_STATENAME            "statename"
-#define OPTION_BURNIN               "burnin"
-
-// core performance options
-#define OPTION_AUTOFRAMESKIP        "autoframeskip"
-#define OPTION_FRAMESKIP            "frameskip"
-#define OPTION_SECONDS_TO_RUN       "seconds_to_run"
-#define OPTION_THROTTLE             "throttle"
-#define OPTION_SLEEP                "sleep"
-#define OPTION_SPEED                "speed"
-#define OPTION_REFRESHSPEED         "refreshspeed"
-
-// core render options
-#define OPTION_KEEPASPECT           "keepaspect"
-#define OPTION_UNEVENSTRETCH        "unevenstretch"
-#define OPTION_UNEVENSTRETCHX       "unevenstretchx"
-#define OPTION_UNEVENSTRETCHY       "unevenstretchy"
-#define OPTION_AUTOSTRETCHXY        "autostretchxy"
-#define OPTION_INTOVERSCAN          "intoverscan"
-#define OPTION_INTSCALEX            "intscalex"
-#define OPTION_INTSCALEY            "intscaley"
-
-// core rotation options
-#define OPTION_ROTATE               "rotate"
-#define OPTION_ROR                  "ror"
-#define OPTION_ROL                  "rol"
-#define OPTION_AUTOROR              "autoror"
-#define OPTION_AUTOROL              "autorol"
-#define OPTION_FLIPX                "flipx"
-#define OPTION_FLIPY                "flipy"
-
-// core artwork options
-#define OPTION_ARTWORK_CROP         "artwork_crop"
-#define OPTION_USE_BACKDROPS        "use_backdrops"
-#define OPTION_USE_OVERLAYS         "use_overlays"
-#define OPTION_USE_BEZELS           "use_bezels"
-#define OPTION_USE_CPANELS          "use_cpanels"
-#define OPTION_USE_MARQUEES         "use_marquees"
-
-// core screen options
-#define OPTION_BRIGHTNESS           "brightness"
-#define OPTION_CONTRAST             "contrast"
-#define OPTION_GAMMA                "gamma"
-#define OPTION_PAUSE_BRIGHTNESS     "pause_brightness"
-#define OPTION_EFFECT               "effect"
-
-// core vector options
-#define OPTION_BEAM_WIDTH_MIN       "beam_width_min"
-#define OPTION_BEAM_WIDTH_MAX       "beam_width_max"
-#define OPTION_BEAM_INTENSITY_WEIGHT   "beam_intensity_weight"
-#define OPTION_FLICKER              "flicker"
-
-// core sound options
-#define OPTION_SAMPLERATE           "samplerate"
-#define OPTION_SAMPLES              "samples"
-#define OPTION_VOLUME               "volume"
-
-// core input options
-#define OPTION_COIN_LOCKOUT         "coin_lockout"
-#define OPTION_CTRLR                "ctrlr"
-#define OPTION_MOUSE                "mouse"
-#define OPTION_JOYSTICK             "joystick"
-#define OPTION_LIGHTGUN             "lightgun"
-#define OPTION_MULTIKEYBOARD        "multikeyboard"
-#define OPTION_MULTIMOUSE           "multimouse"
-#define OPTION_STEADYKEY            "steadykey"
-#define OPTION_UI_ACTIVE            "ui_active"
-#define OPTION_OFFSCREEN_RELOAD     "offscreen_reload"
-#define OPTION_JOYSTICK_MAP         "joystick_map"
-#define OPTION_JOYSTICK_DEADZONE    "joystick_deadzone"
-#define OPTION_JOYSTICK_SATURATION  "joystick_saturation"
-#define OPTION_NATURAL_KEYBOARD     "natural"
-#define OPTION_JOYSTICK_CONTRADICTORY   "joystick_contradictory"
-#define OPTION_COIN_IMPULSE         "coin_impulse"
-
-// input autoenable options
-#define OPTION_PADDLE_DEVICE        "paddle_device"
-#define OPTION_ADSTICK_DEVICE       "adstick_device"
-#define OPTION_PEDAL_DEVICE         "pedal_device"
-#define OPTION_DIAL_DEVICE          "dial_device"
-#define OPTION_TRACKBALL_DEVICE     "trackball_device"
-#define OPTION_LIGHTGUN_DEVICE      "lightgun_device"
-#define OPTION_POSITIONAL_DEVICE    "positional_device"
-#define OPTION_MOUSE_DEVICE         "mouse_device"
-
-// core debugging options
-#define OPTION_LOG                  "log"
-#define OPTION_DEBUG                "debug"
-#define OPTION_VERBOSE              "verbose"
-#define OPTION_OSLOG                "oslog"
-#define OPTION_UPDATEINPAUSE        "update_in_pause"
-#define OPTION_DEBUGSCRIPT          "debugscript"
-
-// core misc options
-#define OPTION_DRC                  "drc"
-#define OPTION_DRC_USE_C            "drc_use_c"
-#define OPTION_DRC_LOG_UML          "drc_log_uml"
-#define OPTION_DRC_LOG_NATIVE       "drc_log_native"
-#define OPTION_BIOS                 "bios"
-#define OPTION_CHEAT                "cheat"
-#define OPTION_SKIP_GAMEINFO        "skip_gameinfo"
-#define OPTION_UI_FONT              "uifont"
-#define OPTION_UI                   "ui"
-#define OPTION_RAMSIZE              "ramsize"
-
-// core comm options
-#define OPTION_COMM_LOCAL_HOST      "comm_localhost"
-#define OPTION_COMM_LOCAL_PORT      "comm_localport"
-#define OPTION_COMM_REMOTE_HOST     "comm_remotehost"
-#define OPTION_COMM_REMOTE_PORT     "comm_remoteport"
-
-#define OPTION_CONFIRM_QUIT         "confirm_quit"
-#define OPTION_UI_MOUSE             "ui_mouse"
-
-#define OPTION_AUTOBOOT_COMMAND     "autoboot_command"
-#define OPTION_AUTOBOOT_DELAY       "autoboot_delay"
-#define OPTION_AUTOBOOT_SCRIPT      "autoboot_script"
-
-#define OPTION_CONSOLE              "console"
-#define OPTION_PLUGINS              "plugins"
-#define OPTION_PLUGIN               "plugin"
-#define OPTION_NO_PLUGIN            "noplugin"
-
-#define OPTION_LANGUAGE             "language"
-
-#define OPTION_HTTP                 "http"
-#define OPTION_HTTP_PORT            "http_port"
-#define OPTION_HTTP_ROOT            "http_root"
 
 #endif
 
@@ -607,11 +453,11 @@ int  GetSortColumn(void);
 void SetSortReverse(BOOL reverse);
 BOOL GetSortReverse(void);
 
-const char *GetLanguageUI(void);
+const string GetLanguageUI(void);
 
 bool GetEnablePlugins(void);
 
-const char *GetPlugins(void);
+const string GetPlugins(void);
 
 const char *GetSnapName(void);
 void SetSnapName(const char *pattern);

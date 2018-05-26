@@ -250,7 +250,7 @@ public:
 			device_t::feature_type ft;
 			const game_driver *drv;
 			windows_options dummy;
-			printf("game_opts.cpp::load_file : Rebuilding cache\n");fflush(stdout);
+			printf("game_opts.h::load_file : Rebuilding cache\n");fflush(stdout);
 			for (uint32_t i = 0; i < m_total; i++)
 			{
 				uint32_t t = 0;
@@ -331,7 +331,7 @@ public:
 				m_list[i].cache_lower = m_cache;
 				m_list[i].cache_upper = 0;
 			}
-			printf("game_opts.cpp::load_file : Finished Rebuilding cache\n");fflush(stdout);
+			printf("game_opts.h::load_file : Finished Rebuilding cache\n");fflush(stdout);
 		}
 	}
 
