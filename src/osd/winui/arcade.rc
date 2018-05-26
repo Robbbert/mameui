@@ -17,4 +17,5 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 2           ICON    DISCARDABLE     "res\\mameui.ico"
 #endif    // English (U.S.) resources
 
-#include "arcadeui.rc"
+#define RCARC
+#include "mameui.rc"

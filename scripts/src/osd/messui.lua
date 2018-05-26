@@ -66,7 +66,7 @@ function maintargetosdoptions(_target,_subtarget)
 -- Local file must #include messui.rc
 	override_resources = true;
 	local rcfile = MAME_DIR .. "src/osd/winui/" .. _subtarget .. ".rc"
-	local uifile = MAME_DIR .. "src/osd/winui/" .. _subtarget .. "ui.rc"
+	local uifile = MAME_DIR .. "src/osd/winui/mameui.rc"
 
 	if not os.isfile(rcfile) then
 		print(string.format("***** %s not found *****",rcfile))
