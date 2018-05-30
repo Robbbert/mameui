@@ -184,6 +184,7 @@ extern const PROPERTYSHEETINFO g_propSheets[] =
 	{ TRUE,  NULL,                   IDD_PROP_CONTROLLER,    GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_DEBUG,         GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_MISC,          GameOptionsProc },
+//	{ TRUE,  NULL,                   IDD_PROP_MISC2,         GameOptionsProc },
 	{ FALSE, NULL,                   IDD_PROP_SOFTWARE,      GameMessOptionsProc },
 	{ FALSE, DriverHasRam,           IDD_PROP_CONFIGURATION, GameMessOptionsProc }, // PropSheetFilter_Config not needed
 	{ TRUE,  DriverIsVector,         IDD_PROP_VECTOR,        GameOptionsProc },     // PropSheetFilter_Vector not needed
@@ -201,6 +202,7 @@ extern const PROPERTYSHEETINFO g_propSheets[] =
 	{ TRUE,  NULL,                   IDD_PROP_INPUT,         GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_CONTROLLER,    GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_MISC,          GameOptionsProc },
+//	{ TRUE,  NULL,                   IDD_PROP_MISC2,         GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_DEBUG,         GameOptionsProc },
 	{ TRUE,  DriverIsVector,         IDD_PROP_VECTOR,        GameOptionsProc },
 	{ FALSE }

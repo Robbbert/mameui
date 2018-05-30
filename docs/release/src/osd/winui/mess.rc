@@ -17,4 +17,5 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 2           ICON    DISCARDABLE     "res\\mess.ico"
 #endif    // English (U.S.) resources
 
-#include "messui.rc"
+#define RCMESS
+#include "mameui.rc"

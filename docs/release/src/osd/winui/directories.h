@@ -8,13 +8,13 @@
 /* Dialog return codes - do these do anything??? */
 #define DIRDLG_ROMS         0x0010  // this one does
 #define DIRDLG_SAMPLES      0x0020  // this one does
-#define DIRDLG_INI          0x0040
-#define DIRDLG_CFG          0x0100
-#define DIRDLG_IMG          0x0400
-#define DIRDLG_INP          0x0800
-#define DIRDLG_CTRLR        0x1000
+//#define DIRDLG_INI          0x0040
+//#define DIRDLG_CFG          0x0100
+//#define DIRDLG_IMG          0x0400
+//#define DIRDLG_INP          0x0800
+//#define DIRDLG_CTRLR        0x1000
 #define DIRDLG_SW           0x4000  // this one does
-#define DIRDLG_CHEAT        0x8000
+//#define DIRDLG_CHEAT        0x8000
 
 #define DIRLIST_NEWENTRYTEXT "<               >"
 
@@ -39,10 +39,10 @@ const DIRECTORYINFO g_directoryInfo[] =
 	{ "Artwork Previews",      GetArtworkDir,      SetArtworkDir,      true, 0 },
 	{ "Bosses",                GetBossesDir,       SetBossesDir,       true, 0 },
 	{ "Cabinets",              GetCabinetDir,      SetCabinetDir,      true, 0 },
-	{ "Cheats",                GetCheatDir,        SetCheatDir,        true, DIRDLG_CHEAT },
-	{ "Config",                GetCfgDir,          SetCfgDir,          false, DIRDLG_CFG },
+	{ "Cheats",                GetCheatDir,        SetCheatDir,        true, 0 }, //DIRDLG_CHEAT },  //not used anywhere
+	{ "Config",                GetCfgDir,          SetCfgDir,          false, 0 }, //DIRDLG_CFG },  //not used anywhere
 	{ "Control Panels",        GetControlPanelDir, SetControlPanelDir, true, 0 },
-	{ "Controller Files",      GetCtrlrDir,        SetCtrlrDir,        true, DIRDLG_CTRLR },
+	{ "Controller Files",      GetCtrlrDir,        SetCtrlrDir,        true, 0 }, //DIRDLG_CTRLR },  //not used anywhere
 	{ "Covers",                GetCoversDir,       SetCoversDir,       true, 0 },
 	{ "Crosshairs",            GetCrosshairDir,    SetCrosshairDir,    true, 0 },
 	{ "DAT files",             GetDatsDir,         SetDatsDir,         false, 0 },
@@ -57,7 +57,7 @@ const DIRECTORYINFO g_directoryInfo[] =
 	{ "How To",                GetHowToDir,        SetHowToDir,        true, 0 },
 	{ "Icons",                 GetIconsDir,        SetIconsDir,        false, 0 },
 //	{ "Ini Files",             GetIniDir,          SetIniDir,          false, DIRDLG_INI },  // 2017-02-03 hardcoded to 'ini' now
-	{ "Input files",           GetInpDir,          SetInpDir,          true, DIRDLG_INP },
+	{ "Input files",           GetInpDir,          SetInpDir,          true, 0 }, //DIRDLG_INP },  //not used anywhere
 	{ "Language",              GetLangDir,         SetLangDir,         false, 0 },
 	{ "Logos",                 GetLogoDir,         SetLogoDir,         true, 0 },
 	{ "Manuals (PDF)",         GetManualsDir,      SetManualsDir,      false, 0 },
@@ -67,7 +67,7 @@ const DIRECTORYINFO g_directoryInfo[] =
 	{ "Plugins",               GetPluginsDir,      SetPluginsDir,      false, 0 },
 	{ "Scores",                GetScoresDir,       SetScoresDir,       true, 0 },
 	{ "Selects",               GetSelectDir,       SetSelectDir,       true, 0 },
-	{ "Snapshots",             GetImgDir,          SetImgDir,          true, DIRDLG_IMG },
+	{ "Snapshots",             GetImgDir,          SetImgDir,          true, 0 }, //DIRDLG_IMG },  //not used anywhere
 	{ "State",                 GetStateDir,        SetStateDir,        true, 0 },
 	{ "Titles",                GetTitlesDir,       SetTitlesDir,       true, 0 },
 	{ "Versus",                GetVersusDir,       SetVersusDir,       true, 0 },

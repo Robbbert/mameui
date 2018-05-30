@@ -16,7 +16,6 @@ extern const DWORD dwHelpIDs[] =
 	IDC_AUDIO_LATENCY             ,HIDC_AUDIO_LATENCY,
 	IDC_AUTOFRAMESKIP             ,HIDC_AUTOFRAMESKIP,
 	IDC_BACKDROPS                 ,HIDC_BACKDROPS,
-	IDC_BEAM                      ,HIDC_BEAM,
 	IDC_BEZELS                    ,HIDC_BEZELS,
 	IDC_BIOS                      ,HIDC_BIOS,
 	IDC_BRIGHTCORRECT             ,HIDC_BRIGHTCORRECT,
