@@ -1305,6 +1305,7 @@ apple2e                         // Jan 1983 Apple //e
 apple2ee                        // Mar 1985 Apple //e Enhanced
 apple2eeuk                      // Mar 1985 Apple //e Enhanced (UK)
 apple2eefr                      // Mar 1985 Apple //e Enhanced (France)
+apple2ees                       // Mar 1985 Apple //e Enhanced (Spain)
 apple2ep                        // Jan 1987 Apple //e Platinum
 apple2euk                       // Jan 1983 Apple //e (UK)
 las128e2                        // ??? Laser 128 EX2
@@ -11678,6 +11679,7 @@ dynadice                        // ?
 
 @source:dynamoah.cpp
 dynamoah                        //
+dynamoaha                       //
 
 @source:dynax.cpp
 7jigen                          // "37" 7jigen no Youseitachi 1990 Dynax
@@ -12229,6 +12231,9 @@ ec_unk5__a                      //
 ec_unk5__b                      //
 ec_unk5__c                      //
 ec_unkt                         // Unknown 'T' (MAB PCB) (Concept - Electrocoin)
+
+@source:efdt.cpp
+efdt                            // El Fin Del Tiempo - (c) 1981 Niemer
 
 @source:egghunt.cpp
 egghunt                         // (c) 1995 Invi Image
@@ -15679,6 +15684,7 @@ gtg                             // (c) 1990 Strata/Incredible Technologies
 gtg2                            // (c) 1992 Strata/Incredible Technologies
 gtg2j                           // (c) 1991 Strata/Incredible Technologies
 gtg2t                           // (c) 1989 Strata/Incredible Technologies
+gtgj31                          // (c) 1990 Strata/Incredible Technologies
 gtgt                            // (c) 1990 Strata/Incredible Technologies
 gtgt1                           // (c) 1990 Strata/Incredible Technologies
 hstennis                        // (c) 1990 Strata/Incredible Technologies
@@ -29580,7 +29586,6 @@ imekura                         // (c) 1994 SPHINX/AV JAPAN
 janbari                         // (c) 1992 Nichibutsu/Yubis/AV JAPAN
 jituroku                        // (c) 1993 Windom
 koinomp                         // (c) 1992
-ldquiz4                         // (c) 1992
 mjanbari                        // (c) 1992 Nichibutsu/Yubis/AV JAPAN
 mjegolf                         // (c) 1994 FUJIC/AV JAPAN
 mjgottsu                        // (c) 1991
@@ -29601,7 +29606,6 @@ renaiclb                        // (c) 1993 FUJIC
 sailorwa                        // (c) 1993
 sailorwr                        // (c) 1993
 sailorws                        // (c) 1993
-shabdama                        // (c) 199?
 ultramhm                        // (c) 1993 Apple
 wcatcher                        // (c) 1993
 yosimotm                        // (c) 1994 Nichibutsu/Yoshimoto Kougyou
@@ -29707,6 +29711,7 @@ goalx3                          // 0209 (c) 1995 Visco
 gowcaizr                        // 0094 (c) 1995 Technos
 gpilots                         // 0020 (c) 1991 SNK
 gpilotsh                        // 0020 (c) 1991 SNK
+gpilotsp                        // prototype
 gururin                         // 0067 (c) 1994 Face
 ironclad                        // 0220 (c) 1996 Saurus - Choutetsu Brikin'ger - Iron clad (protoype)
 ironclado                       // 0220 (c) 1996 Saurus - Choutetsu Brikin'ger - Iron clad (protoype, older)
@@ -29794,6 +29799,7 @@ mslug                           // 0201 (c) 1996 Nazca
 mslug2                          // 0241 (c) 1998 SNK
 mslug2t                         // bootleg
 mslug3                          // 0256 (c) 2000 SNK
+mslug3a                         // 0256 (c) 2000 SNK
 mslug3b6                        // bootleg
 mslug3h                         // 0256 (c) 2000 SNK
 mslug4                          // 0263 (c) 2002 Mega Enterprise
@@ -30039,6 +30045,10 @@ ngpc                            // NeoGeo Pocket Color
 
 @source:nibble.cpp
 l9nibble                        // unknown Nibble game.
+
+@source:nichild.cpp
+ldquiz4                         // (c) 1992
+shabdama                        // (c) 1991
 
 @source:nightgal.cpp
 ngalsumr                        // (c) 1985
@@ -30524,6 +30534,7 @@ mspacmab                        // bootleg
 mspacmab2                       // bootleg
 mspacman                        // (c) 1981 Midway  // made by General Computer
 mspacmanbcc                     // bootleg
+mspacmanbco                     // bootleg
 mspacmanbg                      // bootleg
 mspacmanbgd                     // bootleg
 mspacmanblt                     // bootleg
@@ -31582,6 +31593,7 @@ kov2103                         //
 kov2104                         //
 kov2106                         //
 kov2p                           // (c) 2000 Knights of Valor 2 Nine Dragons
+kov2p200                        //
 kov2p202                        //
 kov2p204                        //
 kovlsjb                         // bootleg
@@ -33071,6 +33083,7 @@ rz1                             // 1986 Casio
 @source:rzone.cpp
 rzbatfor                        //
 rzindy500                       //
+rztoshden                       //
 
 @source:s11.cpp
 gmine_l2                        //
@@ -34319,6 +34332,7 @@ rdftja                          // (c) 1996 Seibu Kaihatsu
 rdftjb                          // (c) 1996 Seibu Kaihatsu
 rdfts                           // (c) 1996 Seibu Kaihatsu (Explorer System Corp.)
 rdftu                           // (c) 1996 Seibu Kaihatsu (Fabtek license)
+rdftua                          // (c) 1996 Seibu Kaihatsu (Fabtek license)
 rfjet                           // (c) 1998 Seibu Kaihatsu (Tuning License)
 rfjet2kc                        // (c) 2000 Seibu Kaihatsu
 rfjeta                          // (c) 1998 Seibu Kaihatsu (Dream Island license)
@@ -34337,6 +34351,7 @@ viprp1k                         // (c) 1995 Seibu Kaihatsu (Dream Island license
 viprp1oj                        // (c) 1995 Seibu Kaihatsu
 viprp1ot                        // (c) 1995 Seibu Kaihatsu (Tuning License)
 viprp1s                         // (c) 1995 Seibu Kaihatsu
+viprp1t                         // (c) 1995 Seibu Kaihatsu (Tuning License)
 viprp1u                         // (c) 1995 Seibu Kaihatsu (Fabtek license)
 viprp1ua                        // (c) 1995 Seibu Kaihatsu (Fabtek license)
 
@@ -36315,6 +36330,7 @@ arkretrnj                       // 1997.03 E36 (c) 1997 Taito Corporation (Japan
 arkretrnu                       // 1997.03 E36 (c) 1997 Taito Corporation (US)
 bubblem                         // 1996.?? E21 (c) 1995 Taito Corporation Japan (World)
 bubblemj                        // 1996.04 E21 (c) 1995 Taito Corporation (Japan)
+bubblemu                        // 1996.04 E21 (c) 1995 Taito America Corporation (US)
 bublbob2                        // 1994.?? D90 (c) 1994 Taito Corporation Japan (World)
 bublbob2o                       // 1994.?? D90 (c) 1994 Taito Corporation Japan (World)
 bublbob2p                       // prototype
@@ -37432,13 +37448,16 @@ avalns13                        // 2004.06.08 The Key Of Avalon 1.30 - Chaotic S
 avalon20                        // 2004.11.02 The Key Of Avalon 2.0 - Eutaxy Commandment (client) (Rev B)
 avalonc                         // 2003.11 The Key Of Avalon: The Wizard Master (client) (Rev G)
 avalonce                        // 2003.08 The Key Of Avalon: The Wizard Master (client) (Rev E)
+avaloncc                        // 2003.07 The Key Of Avalon: The Wizard Master (client) (Rev C)
 avaloncf                        // 2003.09 The Key Of Avalon: The Wizard Master (client) (Rev F)
 avalons                         // 2003.11 The Key Of Avalon: The Wizard Master (server) (Rev G)
 avalonsc                        // 2003.07 The Key Of Avalon: The Wizard Master (server) (Rev C)
 avalonse                        // 2003.08 The Key Of Avalon: The Wizard Master (server) (Rev E)
 avalonsf                        // 2003.09 The Key Of Avalon: The Wizard Master (server) (Rev F)
 avalns25                        // 2005.08 The Key Of Avalon 2.5 - War of the Key (server) (Rev B)
+avalns25a                       // 2005.05 The Key Of Avalon 2.5 - War of the Key (server) (Rev A)
 avalnc25                        // 2005.08 The Key Of Avalon 2.5 - War of the Key (client) (Rev B)
+avalnc25a                       // 2005.05 The Key Of Avalon 2.5 - War of the Key (client) (Rev A)
 fzeroax                         // 2003.12 F-Zero AX (Rev E)
 fzeroaxc                        // 2003.06.11 F-Zero AX (Rev C)
 gekpurya                        // 2003.10 Gekitou Pro Yakyuu Mizushima Shinji All Stars vs. Pro Yakyuu (Rev C)
@@ -38756,6 +38775,7 @@ defenderg                       // (c) 1980
 defenderj                       // (c) 1980
 defenderw                       // (c) 1980
 defndjeu                        // bootleg
+galwars2                        // bootleg
 inferno                         // (c) 1984
 jin                             // Falcon bootleg/hack
 joust                           // (c) 1982
