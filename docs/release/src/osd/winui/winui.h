@@ -10,6 +10,7 @@
 #include "pool.h"
 #include "screenshot.h"
 #include "drivenum.h"
+#include "romload.h"
 
 // Make sure all MESS features are included
 #define MESS
