@@ -188,7 +188,7 @@ LVS-JAM SNK 1999.1.20
 
 No.  PCB Label  IC Markings               IC Package
 ----------------------------------------------------
-01   DPRAM1     DT 71321 LA55PF           QFP64
+01   DPRAM1     DT 71321 LA55PF           QFP64 *
 02   IC1        MC44200FT                 QFP44
 03   IOCTR1     TOSHIBA TMP87CH40N-4828   SDIP64
 04   BACKUP     EPSON RTC62423            SOP24
@@ -204,6 +204,9 @@ Notes:
        2. If the game cart is not plugged in, the hardware shows nothing on screen.
        3. The IOCTR I/O MCU runs at 8 MHz.
 
+	   *"IDT71321 is function-compatible (but not pin-compatible) with MB8421" ( src\devices\machine\mb8421.cpp )
+	    It appears unlikely the interrupt function of the DPRAM is unused unless address pins are all inverted as
+		there aren't any accesses to 7ff / 7fe outside of the RAM testing, commands are put at byte 0 by the MIPS
 
 Hyper Neo Geo game cartridges
 -----------------------------
@@ -782,8 +785,24 @@ Beast Busters 2 outputs (all at offset == 0x1c):
 
 WRITE32_MEMBER(hng64_state::hng64_dualport_w)
 {
-	//printf("dualport WRITE %08x %08x (PC=%08x)\n", offset*4, hng64_dualport[offset], m_maincpu->pc());
-	COMBINE_DATA (&m_dualport[offset]);
+	/*
+		MIPS clearly writes commands for the TLCS870 MCU at 00 here
+		first command it writes after the startup checks is 0x0a, it should also trigger an EXTINT0 on the TLCS870
+		around that time, as the EXTINT0 reads the command.
+
+		call at CBB0 in the MCU is to read the command from shared RAM
+		value is used in the jump table at CBC5
+		command 0x0a points at ccbd
+		which starts with a call to copy 0x40 bytes of data from 0x200 in shared RAM to the internal RAM of the MCU
+		the MIPS (at least in Fatal Fury) uploads this data to shared RAM prior to the call.
+
+		need to work out what triggers the interrupt, as a write to 0 wouldn't as the Dual Port RAM interrupts
+		are on addresses 0x7fe and 0x7ff
+
+		(currently we use m_dualport due to simulation, but this should actually be the same RAM as m_ioram)
+	*/
+	COMBINE_DATA(&m_dualport[offset]);
+	logerror("%s: dualport WRITE %08x (%08x)\n", machine().describe_context(), offset * 4, data, mem_mask);
 }
 
 
@@ -1520,6 +1539,8 @@ void hng64_state::machine_start()
 	}
 
 	m_3dfifo_timer = machine().scheduler().timer_alloc(timer_expired_delegate(FUNC(hng64_state::hng64_3dfifo_processed), this));
+
+	init_io();
 }
 
 void hng64_state::machine_reset()
@@ -1530,6 +1551,196 @@ void hng64_state::machine_reset()
 
 	reset_net();
 	reset_sound();
+}
+
+/***********************************************
+
+  Control / Lamp etc. access from MCU side?
+
+  this is probably 8 multiplexed 8-bit input / output ports (probably joysticks, coins etc.)
+
+***********************************************/
+
+WRITE8_MEMBER(hng64_state::ioport1_w)
+{
+	logerror("%s: ioport1_w %02x\n", machine().describe_context(), data);
+
+	/* Port bits
+	
+	  aaac w-?-
+
+	  a = external port number / address?
+	  c = toggled during read / write accesses, probably clocking byte from/to latch
+
+	  ? = toggled at the start of extint 0 , set during reads?
+
+	  w = set during writes?
+
+	*/
+
+	m_port1 = data;
+}
+
+// it does write 0xff here before each set of reading, but before setting a new output address?
+WRITE8_MEMBER(hng64_state::ioport3_w)
+{
+	int addr = (m_port1&0xe0)>>5;
+
+	logerror("%s: ioport3_w %02x (to address %02x) (other bits of m_port1 %02x)\n", machine().describe_context(), data, addr, m_port1 & 0x1f);
+}
+
+READ8_MEMBER(hng64_state::ioport3_r)
+{
+	int addr = (m_port1&0xe0)>>5;
+
+	logerror("%s: ioport3_r (from address %02x) (other bits of m_port1 %02x)\n", machine().describe_context(), addr, m_port1 & 0x1f);
+	return 0xff;
+}
+
+/***********************************************
+
+ Dual Port RAM access from MCU side
+
+***********************************************/
+
+WRITE8_MEMBER(hng64_state::ioport7_w)
+{
+	/* Port bits
+
+	 i?xR Aacr
+
+	 a = 0x200 of address bit to external RAM (direct?)
+	 A = 0x400 of address bit to external RAM (direct?)
+	 R = read / write mode? (if 1, write, if 0, read?)
+
+	 r = counter reset? ( 1->0 ?)
+	 c = clock address? ( 1->0 ?)
+
+	 x = written with clock bits, might be latch related?
+	 ? = written before some operations
+
+	 i = generate interrupt on MIPS? (written after the MCU has completed writing 'results' of some operations to shared ram, before executing more code to write another result, so needs to be processed quickly by the MIPS?)
+
+	*/
+
+	//logerror("%s: ioport7_w %02x\n", machine().describe_context(), data);
+
+	m_ex_ramaddr_upper = (data & 0x0c) >> 2;
+
+	if ((!(data & 0x80)) && (m_port7 & 0x80))
+	{
+		logerror("%s: MCU request MIPS IRQ?\n");
+	}
+
+	if ((!(data & 0x01)) && (m_port7 & 0x01))
+	{
+		m_ex_ramaddr = 0;
+	}
+
+	if ((!(data & 0x02)) && (m_port7 & 0x02))
+	{
+		m_ex_ramaddr++;
+		m_ex_ramaddr &= 0x1ff;
+	}
+
+	m_port7 = data;
+}
+
+READ8_MEMBER(hng64_state::ioport0_r)
+{
+	uint16_t addr = (m_ex_ramaddr | (m_ex_ramaddr_upper<<9)) & 0x7ff;
+	uint8_t ret = m_ioram[addr];
+
+	logerror("%s: ioport0_r %02x (from address %04x)\n", machine().describe_context(), ret, addr);
+	return ret; // expects 0x03 after writing it to port 0 earlier
+}
+
+WRITE8_MEMBER(hng64_state::ioport0_w)
+{
+	uint16_t addr = (m_ex_ramaddr | (m_ex_ramaddr_upper<<9)) & 0x7ff;
+	m_ioram[addr] = data;
+
+	logerror("%s: ioport0_w %02x (to address %04x)\n", machine().describe_context(), data, addr);
+}
+
+
+/***********************************************
+
+ Unknown (LED?) access from MCU side
+
+***********************************************/
+
+/* This port is dual purpose, with the upper pins being used as a serial input / output / clock etc. and the output latch (written data) being configured appropriately however the lower 2 bits also seem to be used
+   maybe these lower 2 bits were intended for serial comms LEDs, although none are documented in the PCB layouts.
+*/
+WRITE8_MEMBER(hng64_state::ioport4_w)
+{
+	logerror("%s: ioport4_w %02x\n", machine().describe_context(), data);
+}
+
+/***********************************************
+
+ Other port accesses from MCU side
+
+***********************************************/
+
+READ8_MEMBER(hng64_state::anport0_r) { logerror("%s: anport0_r\n", machine().describe_context()); return 0xff; }
+READ8_MEMBER(hng64_state::anport1_r) { logerror("%s: anport1_r\n", machine().describe_context()); return 0xff; }
+READ8_MEMBER(hng64_state::anport2_r) { logerror("%s: anport2_r\n", machine().describe_context()); return 0xff; }
+READ8_MEMBER(hng64_state::anport3_r) { logerror("%s: anport3_r\n", machine().describe_context()); return 0xff; }
+READ8_MEMBER(hng64_state::anport4_r) { logerror("%s: anport4_r\n", machine().describe_context()); return 0xff; }
+READ8_MEMBER(hng64_state::anport5_r) { logerror("%s: anport5_r\n", machine().describe_context()); return 0xff; }
+READ8_MEMBER(hng64_state::anport6_r) { logerror("%s: anport6_r\n", machine().describe_context()); return 0xff; }
+READ8_MEMBER(hng64_state::anport7_r) { logerror("%s: anport7_r\n", machine().describe_context()); return 0xff; }
+
+/***********************************************
+
+ Serial Accesses from MCU side
+
+***********************************************/
+
+/* I think the serial reads / writes actually go to the network hardware, and the IO MCU is acting as an interface between the actual network and the KL5C80A12CFP
+   because the network connectors are on the IO board.  This might also be related to the 'm_no_machine_error_code' value required which differs per IO board
+   type as the game startup sequences read that from the 0x6xx region of shared RAM, which also seems to be where a lot of the serial stuff is stored.
+*/
+
+// there are also serial reads, TLCS870 core doesn't support them yet
+
+WRITE_LINE_MEMBER( hng64_state::sio0_w )
+{
+	// tlcs870 core provides better logging than anything we could put here at the moment
+}
+
+
+
+
+TIMER_CALLBACK_MEMBER(hng64_state::tempio_irqon_callback)
+{
+	logerror("timer_hack_on\n");
+	m_iomcu->set_input_line(INPUT_LINE_IRQ0, ASSERT_LINE );
+	m_tempio_irqoff_timer->adjust(m_maincpu->cycles_to_attotime(1000));
+}
+
+TIMER_CALLBACK_MEMBER(hng64_state::tempio_irqoff_callback)
+{
+	logerror("timer_hack_off\n");
+	m_iomcu->set_input_line(INPUT_LINE_IRQ0, CLEAR_LINE );
+}
+
+void hng64_state::init_io()
+{
+	m_tempio_irqon_timer = machine().scheduler().timer_alloc(timer_expired_delegate(FUNC(hng64_state::tempio_irqon_callback), this));
+	m_tempio_irqoff_timer = machine().scheduler().timer_alloc(timer_expired_delegate(FUNC(hng64_state::tempio_irqoff_callback), this));
+
+	m_tempio_irqon_timer->adjust(m_maincpu->cycles_to_attotime(100000000)); // just ensure an IRQ gets turned on to move the program forward, real source currently unknown
+	m_port7 = 0x00;
+	m_port1 = 0x00;
+	m_ex_ramaddr = 0;
+	m_ex_ramaddr_upper = 0;
+
+	m_ioram = std::make_unique<uint8_t[]>(0x800); // in realty this is 'm_dualport' but as the hookup is incomplete the program fights with the simulation at the moment
+	save_pointer(&m_ioram[0], "m_ioram", 0x800);
+
 }
 
 MACHINE_CONFIG_START(hng64_state::hng64)
@@ -1557,18 +1768,53 @@ MACHINE_CONFIG_START(hng64_state::hng64)
 	hng64_audio(config);
 	hng64_network(config);
 
-	MCFG_DEVICE_ADD("iomcu", TMP87PH40AN, 8000000)
-	MCFG_DEVICE_DISABLE() // work in progress
-
+	tmp87ph40an_device &iomcu(TMP87PH40AN(config, m_iomcu, 8_MHz_XTAL));
+	iomcu.p0_in_cb().set(FUNC(hng64_state::ioport0_r)); // reads from shared ram
+	//iomcu.p1_in_cb().set(FUNC(hng64_state::ioport1_r)); // the IO MCU code uses opcodes that only access the output latch, never read from the port
+	//iomcu.p2_in_cb().set(FUNC(hng64_state::ioport2_r)); // the IO MCU uses EXTINT0 which shares one of the pins on this port, but the port is not used for IO
+	iomcu.p3_in_cb().set(FUNC(hng64_state::ioport3_r)); // probably reads input ports?
+	//iomcu.p4_in_cb().set(FUNC(hng64_state::ioport4_r)); // the IO MCU code uses opcodes that only access the output latch, never read from the port
+	//iomcu.p5_in_cb().set(FUNC(hng64_state::ioport5_r)); // simply seems to be unused, neither used for an IO port, nor any of the other features
+	//iomcu.p6_in_cb().set(FUNC(hng64_state::ioport6_r)); // the IO MCU code uses the ADC which shares pins with port 6, meaning port 6 isn't used as an IO port
+	//iomcu.p7_in_cb().set(FUNC(hng64_state::ioport7_r)); // the IO MCU code uses opcodes that only access the output latch, never read from the port
+	iomcu.p0_out_cb().set(FUNC(hng64_state::ioport0_w)); // writes to shared ram
+	iomcu.p1_out_cb().set(FUNC(hng64_state::ioport1_w));  // configuration / clocking for input port (port 3) accesses
+	//iomcu.p2_out_cb().set(FUNC(hng64_state::ioport2_w)); // the IO MCU uses EXTINT0 which shares one of the pins on this port, but the port is not used for IO
+	iomcu.p3_out_cb().set(FUNC(hng64_state::ioport3_w)); // writes to input ports? maybe lamps, coin counters etc.?
+	iomcu.p4_out_cb().set(FUNC(hng64_state::ioport4_w)); // unknown, lower 2 IO bits accessed along with serial accesses
+	//iomcu.p5_out_cb().set(FUNC(hng64_state::ioport5_w));  // simply seems to be unused, neither used for an IO port, nor any of the other features
+	//iomcu.p6_out_cb().set(FUNC(hng64_state::ioport6_w)); // the IO MCU code uses the ADC which shares pins with port 6, meaning port 6 isn't used as an IO port
+	iomcu.p7_out_cb().set(FUNC(hng64_state::ioport7_w)); // configuration / clocking for shared ram (port 0) accesses
+	// most likely the analog inputs, up to a maximum of 8
+	iomcu.an0_in_cb().set(FUNC(hng64_state::anport0_r));
+	iomcu.an1_in_cb().set(FUNC(hng64_state::anport1_r));
+	iomcu.an2_in_cb().set(FUNC(hng64_state::anport2_r));
+	iomcu.an3_in_cb().set(FUNC(hng64_state::anport3_r));
+	iomcu.an4_in_cb().set(FUNC(hng64_state::anport4_r));
+	iomcu.an5_in_cb().set(FUNC(hng64_state::anport5_r));
+	iomcu.an6_in_cb().set(FUNC(hng64_state::anport6_r));
+	iomcu.an7_in_cb().set(FUNC(hng64_state::anport7_r));
+	// network related?
+	iomcu.serial0_out_cb().set(FUNC(hng64_state::sio0_w));
+	//iomcu.serial1_out_cb().set(FUNC(hng64_state::sio1_w)); // not initialized / used
 MACHINE_CONFIG_END
 
 
 #define ROM_LOAD_HNG64_BIOS(bios,name,offset,length,hash) \
 		ROMX_LOAD(name, offset, length, hash,  ROM_BIOS(bios))
 
-// all BIOS roms are said to be from 'fighting' type PCB, it is unknown if the actual MIPS BIOS differs on the others, or only the MCU internal ROM
+/* All main BIOS roms are said to be from 'fighting' type PCB, it is unknown if the actual MIPS BIOS differs on the others, but it appears unlikely.
+  
+  The IO MCU was dumped from a TMP87PH40AN type chip taken from an unknown IO board type. 
+  
+  Some boards instead use a TMP87CH40N but in all cases they're stickered SNK-IOJ1.00A so the content is possibly the same on all types.
+
+  This needs further studying of the MCU code as it is known that the different IO boards return a different ident value. 
+*/
+
 #define HNG64_BIOS \
-	ROM_REGION32_BE( 0x0100000, "user1", 0 ) /* 512k for R4300 BIOS code */ \
+	/* R4300 BIOS code (main CPU) */ \
+	ROM_REGION32_BE( 0x0100000, "user1", 0 ) \
 	ROM_SYSTEM_BIOS( 0, "japan", "Japan" ) \
 	ROM_LOAD_HNG64_BIOS( 0, "brom1.bin",         0x00000, 0x080000, CRC(a30dd3de) SHA1(3e2fd0a56214e6f5dcb93687e409af13d065ea30) ) \
 	ROM_SYSTEM_BIOS( 1, "us", "USA" ) \
@@ -1577,12 +1823,14 @@ MACHINE_CONFIG_END
 	ROM_LOAD_HNG64_BIOS( 2, "bios_export.bin",   0x00000, 0x080000, CRC(bbf07ec6) SHA1(5656aa077f6a6d43953f15b5123eea102a9d5313) ) \
 	ROM_SYSTEM_BIOS( 3, "korea", "Korea" ) \
 	ROM_LOAD_HNG64_BIOS( 3, "bios_korea.bin",    0x00000, 0x080000, CRC(ac953e2e) SHA1(f502188ef252b7c9d04934c4b525730a116de48b) ) \
-	ROM_REGION( 0x0100000, "user2", 0 ) /* KL5C80 BIOS */ \
+	/* KL5C80 BIOS (network CPU) */	\
+	ROM_REGION( 0x0100000, "user2", 0 ) \
 	ROM_LOAD ( "from1.bin", 0x000000, 0x080000,  CRC(6b933005) SHA1(e992747f46c48b66e5509fe0adf19c91250b00c7) ) \
+	/* FPGA (unknown) */ \
 	ROM_REGION( 0x0100000, "fpga", 0 ) /* FPGA data  */ \
 	ROM_LOAD ( "rom1.bin",  0x000000, 0x01ff32,  CRC(4a6832dc) SHA1(ae504f7733c2f40450157cd1d3b85bc83fac8569) ) \
+	/* TMP87PH40AN (I/O MCU) */	\
 	ROM_REGION( 0x10000, "iomcu", 0 ) /* "64Bit I/O Controller Ver 1.0 1997.06.29(C)SNK" internal ID string */ \
-	/* this was dumped from a TMP87PH40AN type chip.  Some boards use a TMP87CH40N, in all cases they're stickered SNK-IOJ1.00A so likely the same content */ \
 	ROM_LOAD ( "tmp87ph40an.bin",  0x8000, 0x8000,  CRC(b70df21f) SHA1(5b742e8a0bbf4c0ae4f4398d34c7058fb24acc92) )
 
 
