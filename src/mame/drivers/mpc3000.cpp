@@ -56,9 +56,15 @@
 #include "emu.h"
 #include "cpu/nec/v53.h"
 #include "sound/l7a1045_l6028_dsp_a.h"
+#include "video/hd61830.h"
 #include "bus/midi/midi.h"
 #include "speaker.h"
 #include "screen.h"
+#include "emupal.h"
+#include "machine/74259.h"
+#include "machine/i8255.h"
+#include "machine/pit8253.h"
+#include "machine/upd765.h"
 
 class mpc3000_state : public driver_device
 {
@@ -66,8 +72,10 @@ public:
 	mpc3000_state(const machine_config &mconfig, device_type type, const char *tag)
 		: driver_device(mconfig, type, tag)
 		, m_maincpu(*this, "maincpu")
+		, m_lcdc(*this, "lcdc")
 		, m_dsp(*this, "dsp")
 		, m_mdout(*this, "mdout")
+		, m_fdc(*this, "upd72068")
 	{ }
 
 	void mpc3000(machine_config &config);
@@ -76,14 +84,20 @@ public:
 
 private:
 	required_device<v53_base_device> m_maincpu;
+	required_device<hd61830_device> m_lcdc;
 	required_device<l7a1045_sound_device> m_dsp;
 	required_device<midi_port_device> m_mdout;
-
+	required_device<upd72065_device> m_fdc;
 	virtual void machine_start() override;
 	virtual void machine_reset() override;
 
 	void mpc3000_map(address_map &map);
 	void mpc3000_io_map(address_map &map);
+
+	DECLARE_READ16_MEMBER(dsp_0008_hack_r);
+	DECLARE_WRITE16_MEMBER(dsp_0008_hack_w);
+	DECLARE_READ8_MEMBER(dma_memr_cb);
+	DECLARE_PALETTE_INIT(mpc3000);
 };
 
 void mpc3000_state::machine_start()
@@ -101,21 +115,120 @@ void mpc3000_state::mpc3000_map(address_map &map)
 	map(0x500000, 0x500fff).ram(); // actually 8-bit battery-backed RAM
 }
 
+WRITE16_MEMBER(mpc3000_state::dsp_0008_hack_w)
+{
+	// this is related to the DSP's DMA capability.  The DSP
+	// connects to the V53's DMA3 channel on both the MPCs and HNG64.
+	m_maincpu->dreq3_w(data&0x1);
+	m_dsp->l7a1045_sound_w(space,8/2,data,mem_mask);
+}
+
+
+READ16_MEMBER(mpc3000_state::dsp_0008_hack_r)
+{
+	// read in irq5
+	return 0;
+}
+
 void mpc3000_state::mpc3000_io_map(address_map &map)
 {
+	map(0x0000, 0x0000).w("loledlatch", FUNC(hc259_device::write_nibble_d3));
+	map(0x0020, 0x0020).w("hiledlatch", FUNC(hc259_device::write_nibble_d3));
+	map(0x0060, 0x0067).rw(m_dsp, FUNC(l7a1045_sound_device::l7a1045_sound_r), FUNC(l7a1045_sound_device::l7a1045_sound_w));
+	map(0x0068, 0x0069).rw(FUNC(mpc3000_state::dsp_0008_hack_r), FUNC(mpc3000_state::dsp_0008_hack_w));
+	map(0x0080, 0x0087).rw("dioexp", FUNC(i8255_device::read), FUNC(i8255_device::write)).umask16(0x00ff);
+	//map(0x00a0, 0x00bf).rw("spc", FUNC(mb89352_device::read), FUNC(mb89352_device::write)).umask(0x00ff);
+	//map(0x00c0, 0x00c7).rw("sio", FUNC(te7774_device::read0), FUNC(te7774_device::write0)).umask(0x00ff);
+	//map(0x00c8, 0x00cf).rw("sio", FUNC(te7774_device::read1), FUNC(te7774_device::write1)).umask(0x00ff);
+	//map(0x00d0, 0x00d7).rw("sio", FUNC(te7774_device::read2), FUNC(te7774_device::write2)).umask(0x00ff);
+	//map(0x00d8, 0x00df).rw("sio", FUNC(te7774_device::read3), FUNC(te7774_device::write3)).umask(0x00ff);
+	map(0x00e0, 0x00e0).rw(m_lcdc, FUNC(hd61830_device::data_r), FUNC(hd61830_device::data_w)).umask16(0x00ff);
+	map(0x00e2, 0x00e2).rw(m_lcdc, FUNC(hd61830_device::status_r), FUNC(hd61830_device::control_w)).umask16(0x00ff);
+	map(0x00e8, 0x00eb).m(m_fdc, FUNC(upd72065_device::map)).umask16(0x00ff);
+	map(0x00f0, 0x00f7).rw("synctmr", FUNC(pit8254_device::read), FUNC(pit8254_device::write)).umask16(0x00ff);
+	map(0x00f8, 0x00ff).rw("adcexp", FUNC(i8255_device::read), FUNC(i8255_device::write)).umask16(0x00ff);
+}
+
+READ8_MEMBER(mpc3000_state::dma_memr_cb)
+{
+	//logerror("dma_memr_cb: offset %x\n", offset);
+	return m_maincpu->space(AS_PROGRAM).read_byte(offset);
+}
+
+PALETTE_INIT_MEMBER(mpc3000_state, mpc3000)
+{
+	palette.set_pen_color(0, rgb_t(138, 146, 148));
+	palette.set_pen_color(1, rgb_t(92, 83, 88));
 }
 
 void mpc3000_state::mpc3000(machine_config &config)
 {
-	V53A(config, m_maincpu, 16_MHz_XTAL);
-	m_maincpu->set_addrmap(AS_PROGRAM, &mpc3000_state::mpc3000_map);
-	m_maincpu->set_addrmap(AS_IO, &mpc3000_state::mpc3000_io_map);
+	// V53A isn't devcb3 compliant yet.
+	//V53A(config, m_maincpu, 16_MHz_XTAL);
+	//m_maincpu->set_addrmap(AS_PROGRAM, &mpc3000_state::mpc3000_map);
+	//m_maincpu->set_addrmap(AS_IO, &mpc3000_state::mpc3000_io_map);
+	device_t *device = nullptr;
+	MCFG_DEVICE_ADD("maincpu", V53A, 16_MHz_XTAL)
+	MCFG_DEVICE_PROGRAM_MAP(mpc3000_map)
+	MCFG_DEVICE_IO_MAP(mpc3000_io_map)
+	MCFG_V53_DMAU_OUT_HREQ_CB(WRITELINE("maincpu", v53_base_device, hack_w))
+	MCFG_V53_DMAU_IN_MEMR_CB(READ8(*this, mpc3000_state, dma_memr_cb))
+	MCFG_V53_DMAU_IN_IOR_3_CB(WRITE8("dsp", l7a1045_sound_device, dma_r_cb))
+	MCFG_V53_DMAU_OUT_IOW_3_CB(WRITE8("dsp", l7a1045_sound_device, dma_w_cb))
+
+	hc259_device &loledlatch(HC259(config, "loledlatch"));
+	loledlatch.q_out_cb<0>().set_output("led0").invert(); // Edit Loop
+	loledlatch.q_out_cb<1>().set_output("led1").invert(); // Simul Seq
+	loledlatch.q_out_cb<2>().set_output("led2").invert(); // Transpose
+	loledlatch.q_out_cb<3>().set_output("led3").invert(); // Wait For
+	loledlatch.q_out_cb<4>().set_output("led4").invert(); // Count In
+	loledlatch.q_out_cb<5>().set_output("led5").invert(); // Auto Punch
+	loledlatch.q_out_cb<6>().set_output("led6").invert(); // Rec
+	loledlatch.q_out_cb<7>().set_output("led7").invert(); // Over Dub
+
+	hc259_device &hiledlatch(HC259(config, "hiledlatch"));
+	hiledlatch.q_out_cb<0>().set_output("led8").invert(); // Play
+	hiledlatch.q_out_cb<1>().set_output("led9").invert(); // Bank A
+	hiledlatch.q_out_cb<2>().set_output("led10").invert(); // Bank B
+	hiledlatch.q_out_cb<3>().set_output("led11").invert(); // Bank C
+	hiledlatch.q_out_cb<4>().set_output("led12").invert(); // Bank D
+	hiledlatch.q_out_cb<5>().set_output("led13").invert(); // Full Level
+	hiledlatch.q_out_cb<6>().set_output("led14").invert(); // 16 Levels
+	hiledlatch.q_out_cb<7>().set_output("led15").invert(); // After
+
+	MCFG_SCREEN_ADD("screen", LCD)
+	MCFG_SCREEN_REFRESH_RATE(80)
+	MCFG_SCREEN_UPDATE_DEVICE("lcdc", hd61830_device, screen_update)
+	MCFG_SCREEN_SIZE(240, 64)   //6x20, 8x8
+	MCFG_SCREEN_VISIBLE_AREA(0, 240-1, 0, 64-1)
+	MCFG_SCREEN_PALETTE("palette")
+
+	MCFG_PALETTE_ADD("palette", 2)
+	MCFG_PALETTE_INIT_OWNER(mpc3000_state, mpc3000)
+
+	MCFG_UPD72065_ADD("upd72068", true, true) // TODO: upd72068 supports motor control
+	//MCFG_UPD765_INTRQ_CALLBACK(WRITELINE("maincpu", v53a_device, ir?_w))
+	//MCFG_UPD765_DRQ_CALLBACK(WRITELINE("maincpu", v53a_device, drq?_w))
+
+	pit8254_device &pit(PIT8254(config, "synctmr", 0)); // MB89254
+	pit.set_clk<0>(16_MHz_XTAL / 4);
+	pit.set_clk<1>(16_MHz_XTAL / 4);
+	pit.set_clk<2>(16_MHz_XTAL / 4);
+
+	I8255(config, "adcexp"); // MB89255B
+	I8255(config, "dioexp"); // MB89255B
+
+	HD61830(config, m_lcdc, 4.9152_MHz_XTAL / 2 / 2);
+
+	//TE7774(config, "sio", 16_MHz_XTAL / 4);
 
 	auto &mdin(MIDI_PORT(config, "mdin"));
 	midiin_slot(mdin);
 	//mdin.rxd_handler().set(m_maincpu, FUNC());
 
 	midiout_slot(MIDI_PORT(config, "mdout"));
+
+	//MB89352(config, "spc", 16_MHz_XTAL / 2);
 
 	SPEAKER(config, "lspeaker").front_left();
 	SPEAKER(config, "rspeaker").front_right();
@@ -143,4 +256,4 @@ void mpc3000_state::init_mpc3000()
 {
 }
 
-CONS( 1994, mpc3000, 0, 0, mpc3000, mpc3000, mpc3000_state, init_mpc3000, "Akai / Roger Linn", "MPC-3000", MACHINE_IMPERFECT_SOUND )
+CONS( 1994, mpc3000, 0, 0, mpc3000, mpc3000, mpc3000_state, init_mpc3000, "Akai / Roger Linn", "MPC-3000", MACHINE_NOT_WORKING )
