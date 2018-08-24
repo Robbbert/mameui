@@ -749,6 +749,23 @@ if (CPUS["SH"]~=null or _OPTIONS["with-tools"]) then
 end
 
 --------------------------------------------------
+-- STmicro ST62xx
+--@src/devices/cpu/st62xx/st62xx.h,CPUS["ST62XX"] = true
+--------------------------------------------------
+
+if (CPUS["ST62XX"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/cpu/st62xx/st62xx.cpp",
+		MAME_DIR .. "src/devices/cpu/st62xx/st62xx.h",
+	}
+end
+
+if (CPUS["ST62XX"]~=null or _OPTIONS["with-tools"]) then
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/st62xx/st62xx_dasm.cpp")
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/st62xx/st62xx_dasm.h")
+end
+
+--------------------------------------------------
 -- HP Hybrid processor
 --@src/devices/cpu/hphybrid/hphybrid.h,CPUS["HPHYBRID"] = true
 --------------------------------------------------
@@ -2345,11 +2362,13 @@ if (CPUS["TMS57002"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/cpu/tms57002/tms57002.cpp",
 		MAME_DIR .. "src/devices/cpu/tms57002/tms57002.h",
+		MAME_DIR .. "src/devices/cpu/tms57002/tmsops.cpp",
 		MAME_DIR .. "src/devices/cpu/tms57002/tms57kdec.cpp",
 	}
 	dependency {
 		{ MAME_DIR .. "src/devices/cpu/tms57002/tms57kdec.cpp", GEN_DIR .. "emu/cpu/tms57002/tms57002.hxx" },
 		{ MAME_DIR .. "src/devices/cpu/tms57002/tms57002.cpp",  GEN_DIR .. "emu/cpu/tms57002/tms57002.hxx" },
+		{ MAME_DIR .. "src/devices/cpu/tms57002/tmsops.cpp",  GEN_DIR .. "emu/cpu/tms57002/tms57002.hxx" },
 	}
 	custombuildtask {
 		{ MAME_DIR .. "src/devices/cpu/tms57002/tmsinstr.lst" , GEN_DIR .. "emu/cpu/tms57002/tms57002.hxx",   { MAME_DIR .. "src/devices/cpu/tms57002/tmsmake.py" }, {"@echo Generating TMS57002 source file...", PYTHON .. " $(1) $(<) $(@)" } }
