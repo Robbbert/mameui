@@ -1026,14 +1026,16 @@ int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	unlink("verbose.log");
 	unlink("winui.log");
 
-	printf("MAMEUI starting\n");fflush(stdout);
-
 	if (__argc != 1)
 	{
 		/* Rename main because gcc will use it instead of WinMain even with -mwindows */
 		extern int main_(int argc, char *argv[]);
 		exit(main_(__argc, __argv));
 	}
+	// printf's not allowed before here, else they get into mame queries
+
+	printf("MAMEUI starting\n");fflush(stdout);
+
 	if (!Win32UI_init(hInstance, lpCmdLine, nCmdShow))
 		return 1;
 
