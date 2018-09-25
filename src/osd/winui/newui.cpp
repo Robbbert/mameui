@@ -3109,7 +3109,8 @@ static void help_about_thissystem(running_machine &machine, HWND wnd)
 	char buf[100];
 //	snprintf(buf, ARRAY_LENGTH(buf), "mess.chm::/sysinfo/%s.htm", machine.system().name);
 //	snprintf(buf, ARRAY_LENGTH(buf), "http://messui.polygonal-moogle.com/onlinehelp/%s.html", machine.system().name);
-	snprintf(buf, ARRAY_LENGTH(buf), "http://www.progettoemma.net/mess/system.php?machine=%s", machine.system().name);
+//	snprintf(buf, ARRAY_LENGTH(buf), "http://www.progettoemma.net/mess/system.php?machine=%s", machine.system().name);
+	snprintf(buf, ARRAY_LENGTH(buf), "http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=%s", machine.system().name);
 	help_display(wnd, buf);
 }
 
