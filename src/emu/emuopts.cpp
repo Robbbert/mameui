@@ -30,7 +30,7 @@ const options_entry emu_options::s_option_entries[] =
 	// config options
 	{ nullptr,                                           nullptr,     OPTION_HEADER,     "CORE CONFIGURATION OPTIONS" },
 	{ OPTION_READCONFIG ";rc",                           "1",         OPTION_BOOLEAN,    "enable loading of configuration files" },
-	{ OPTION_WRITECONFIG ";wc",                          "0",         OPTION_BOOLEAN,    "writes configuration to (driver).ini on exit" },
+	{ OPTION_WRITECONFIG ";wc",                          "1",         OPTION_BOOLEAN,    "writes configuration to (driver).ini on exit" }, // MESSUI
 
 	// search path options
 	{ nullptr,                                           nullptr,     OPTION_HEADER,     "CORE SEARCH PATH OPTIONS" },
@@ -40,7 +40,7 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_SAMPLEPATH ";sp",                           "samples",   OPTION_STRING,     "path to samplesets" },
 	{ OPTION_ARTPATH,                                    "artwork",   OPTION_STRING,     "path to artwork files" },
 	{ OPTION_CTRLRPATH,                                  "ctrlr",     OPTION_STRING,     "path to controller definitions" },
-	{ OPTION_INIPATH,                                    ".",         OPTION_STRING,     "path to ini files" },  // MESSUI
+	{ OPTION_INIPATH,                                    ".;ini;ini/presets",     OPTION_STRING,     "path to ini files" },
 	{ OPTION_FONTPATH,                                   ".",         OPTION_STRING,     "path to font files" },
 	{ OPTION_CHEATPATH,                                  "cheat",     OPTION_STRING,     "path to cheat files" },
 	{ OPTION_CROSSHAIRPATH,                              "crosshair", OPTION_STRING,     "path to crosshair files" },
@@ -389,9 +389,9 @@ namespace
 		if (!same_name)
 			result.push_back(image.brief_instance_name());
 
-		if (strcmp(image.device_typename(image.image_type()), image.instance_name().c_str()) == 0)
+		if( image.instance_name() != image.cannonical_instance_name() )
 		{
-			result.push_back(image.instance_name() + "1");
+			result.push_back(image.cannonical_instance_name());
 			if (!same_name)
 				result.push_back(image.brief_instance_name() + "1");
 		}
@@ -635,7 +635,7 @@ bool emu_options::add_and_remove_image_options()
 	// "cartridge" starting out, but become "cartridge1" when another cartridge device is added.
 	//
 	// To get around this behavior, our internal data structures work in terms of what is
-	// returned by device().tag(), which will be something like ":cartridge" both
+	// returned by cannonical_instance_name(), which will be something like "cartridge1" both
 	// for a singular cartridge device and the first cartridge in a multi cartridge system.
 	//
 	// The need for this behavior was identified by Tafoid when the following command line
@@ -666,18 +666,21 @@ bool emu_options::add_and_remove_image_options()
 		// iterate through all image devices
 		for (device_image_interface &image : image_interface_iterator(config.root_device()))
 		{
-			const char *canonical_name = image.device().tag();
+		// MESSUI start - the MAME code through here is broken, won't save images loaded via the menu
+		// to ini file, so we use older code instead.
+			const char *cn = image.device().tag();
 
 			// erase this option from existing (so we don't purge it later)
-			existing.remove(canonical_name);
+			existing.remove(cn);
 
 			// do we need to add this option?
-			auto iter = m_image_options_cannonical.find(canonical_name);
+			auto iter = m_image_options_cannonical.find(cn);
 			::image_option *this_option = iter != m_image_options_cannonical.end() ? &iter->second : nullptr;
 			if (!this_option)
 			{
 				// we do - add it to both m_image_options_cannonical and m_image_options
-				auto pair = std::make_pair(canonical_name, ::image_option(*this, canonical_name));
+				auto pair = std::make_pair(cn, ::image_option(*this, cn));
+				// MESSUI end
 				this_option = &m_image_options_cannonical.emplace(std::move(pair)).first->second;
 				changed = true;
 
@@ -1036,11 +1039,6 @@ slot_option &emu_options::slot_option(const std::string &device_name)
 //  image_option
 //-------------------------------------------------
 
-bool emu_options::find_image_option(const std::string &device_name) // MESSUI
-{
-	auto iter = m_image_options.find(device_name);
-	return (iter != m_image_options.end());
-}
 const image_option &emu_options::image_option(const std::string &device_name) const
 {
 	auto iter = m_image_options.find(device_name);
@@ -1053,23 +1051,6 @@ image_option &emu_options::image_option(const std::string &device_name)
 	auto iter = m_image_options.find(device_name);
 	assert(iter != m_image_options.end() && "Attempt to access non-existent image option");
 	return *iter->second;
-}
-
-
-//-------------------------------------------------
-//  find_image_option_canonical
-//-------------------------------------------------
-
-const image_option *emu_options::find_image_option_canonical(const std::string &device_name) const
-{
-	auto iter = m_image_options_cannonical.find(device_name);
-	return iter != m_image_options_cannonical.end() ? &iter->second : nullptr;
-}
-
-image_option *emu_options::find_image_option_canonical(const std::string &device_name)
-{
-	auto iter = m_image_options_cannonical.find(device_name);
-	return iter != m_image_options_cannonical.end() ? &iter->second : nullptr;
 }
 
 
@@ -1259,9 +1240,9 @@ core_options::entry::shared_ptr slot_option::setup_option_entry(const char *name
 //  image_option ctor
 //-------------------------------------------------
 
-image_option::image_option(emu_options &host, std::string &&cannonical_instance_name)
+image_option::image_option(emu_options &host, const std::string &cannonical_instance_name)
 	: m_host(host)
-	, m_canonical_instance_name(std::move(cannonical_instance_name))
+	, m_canonical_instance_name(cannonical_instance_name)
 {
 }
 
@@ -1305,3 +1286,29 @@ core_options::entry::shared_ptr image_option::setup_option_entry(std::vector<std
 	m_entry = entry;
 	return entry;
 }
+
+// MESSUI
+
+bool emu_options::find_image_option(const std::string &device_name) // MESSUI
+{
+	auto iter = m_image_options.find(device_name);
+	return (iter != m_image_options.end());
+}
+
+
+//-------------------------------------------------
+//  find_image_option_canonical
+//-------------------------------------------------
+
+const image_option *emu_options::find_image_option_canonical(const std::string &device_name) const
+{
+	auto iter = m_image_options_cannonical.find(device_name);
+	return iter != m_image_options_cannonical.end() ? &iter->second : nullptr;
+}
+
+image_option *emu_options::find_image_option_canonical(const std::string &device_name)
+{
+	auto iter = m_image_options_cannonical.find(device_name);
+	return iter != m_image_options_cannonical.end() ? &iter->second : nullptr;
+}
+
