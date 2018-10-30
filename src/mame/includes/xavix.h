@@ -41,6 +41,7 @@ public:
 		m_in1(*this, "IN1"),
 		m_region(*this, "REGION"),
 		m_gfxdecode(*this, "gfxdecode"),
+		m_lowbus(*this, "lowbus"),
 		m_i2cmem(*this, "i2cmem")
 	{ }
 
@@ -62,7 +63,8 @@ private:
 	void xavix_map(address_map &map);
 
 	void xavix_lowbus_map(address_map &map);
-	void superxavix_lowbus_map(address_map &map);
+	void xavix_extbus_map(address_map &map);
+void superxavix_lowbus_map(address_map &map);
 
 	INTERRUPT_GEN_MEMBER(interrupt);
 	TIMER_DEVICE_CALLBACK_MEMBER(scanline_cb);
@@ -79,6 +81,9 @@ private:
 	DECLARE_WRITE8_MEMBER(main2_w);
 	DECLARE_READ8_MEMBER(main3_r);
 	DECLARE_WRITE8_MEMBER(main3_w);
+
+	DECLARE_READ8_MEMBER(extbus_r) { return m_rgn[(offset) & (m_rgnlen - 1)]; }
+	DECLARE_WRITE8_MEMBER(extbus_w) { logerror("write to external bus %06x %02x\n", offset, data); }
 
 	DECLARE_WRITE8_MEMBER(extintrf_7900_w);
 	DECLARE_WRITE8_MEMBER(extintrf_7901_w);
@@ -197,7 +202,7 @@ private:
 
 	required_device<xavix_device> m_maincpu;
 	required_device<screen_device> m_screen;
-	
+
 	uint8_t m_vectorenable;
 	uint8_t m_nmi_vector_lo_data;
 	uint8_t m_nmi_vector_hi_data;
@@ -230,7 +235,7 @@ private:
 	uint8_t m_timer_baseval;
 
 	int16_t get_vectors(int which, int half);
-	
+
 	// raster IRQ
 	TIMER_CALLBACK_MEMBER(interrupt_gen);
 	emu_timer *m_interrupt_timer;
@@ -292,6 +297,7 @@ private:
 	uint8_t get_next_byte();
 
 	int get_current_address_byte();
+	required_device<address_map_bank_device> m_lowbus;
 	optional_device<i2cmem_device> m_i2cmem;
 };
 
