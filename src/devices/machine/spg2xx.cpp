@@ -52,8 +52,7 @@ DEFINE_DEVICE_TYPE(SPG28X, spg28x_device, "spg28x", "SPG280-series System-on-a-C
 #define LOG_PPU             (LOG_PPU_READS | LOG_PPU_WRITES | LOG_UNKNOWN_PPU)
 #define LOG_ALL             (LOG_IO | LOG_SPU | LOG_PPU | LOG_VLINES | LOG_SEGMENT | LOG_FIQ)
 
-#define VERBOSE             (LOG_ALL & ~LOG_SPU)
-//#define VERBOSE             (0)
+//#define VERBOSE             (LOG_ALL & ~LOG_SPU)
 #include "logmacro.h"
 
 #define SPG_DEBUG_VIDEO     (0)
@@ -237,6 +236,9 @@ void spg2xx_device::device_reset()
 	m_timer_b_tick_rate = 0;
 
 	m_io_regs[0x23] = 0x0028;
+	m_io_regs[0x2c] = 0x1418;
+	m_io_regs[0x2d] = 0x1658;
+
 	m_uart_rx_available = false;
 	memset(m_uart_rx_fifo, 0, ARRAY_LENGTH(m_uart_rx_fifo));
 	m_uart_rx_fifo_start = 0;
@@ -1096,10 +1098,19 @@ READ16_MEMBER(spg2xx_device::io_r)
 		LOGMASKED(LOG_IO_READS, "io_r: NTSC/PAL = %04x\n", m_pal_flag);
 		return m_pal_flag;
 
-	case 0x2c: case 0x2d: // PRNG 0/1
-		val = machine().rand() & 0x0000ffff;
-		LOGMASKED(LOG_IO_READS, "io_r: PRNG %d = %04x\n", offset - 0x2c, val);
-		break;
+	case 0x2c: // PRNG 0
+	{
+		const uint16_t value = m_io_regs[0x2c];
+		m_io_regs[0x2c] = ((value << 1) | (BIT(value, 14) ^ BIT(value, 13))) & 0x7fff;
+		return value;
+	}
+
+	case 0x2d: // PRNG 1
+	{
+		const uint16_t value = m_io_regs[0x2d];
+		m_io_regs[0x2d] = ((value << 1) | (BIT(value, 14) ^ BIT(value, 13))) & 0x7fff;
+		return value;
+	}
 
 	case 0x2e: // FIQ Source Select
 		LOGMASKED(LOG_FIQ, "io_r: FIQ Source Select = %04x\n", val);
@@ -1665,6 +1676,16 @@ WRITE16_MEMBER(spg2xx_device::io_w)
 		LOGMASKED(LOG_IO_WRITES, "      %s\n", buf);
 		break;
 	}
+
+	case 0x2c: // PRNG 0 seed
+		LOGMASKED(LOG_IO_WRITES, "io_w: PRNG 0 seed = %04x\n", data & 0x7fff);
+		m_io_regs[offset] = data & 0x7fff;
+		break;
+
+	case 0x2d: // PRNG 1 seed
+		LOGMASKED(LOG_IO_WRITES, "io_w: PRNG 1 seed = %04x\n", data & 0x7fff);
+		m_io_regs[offset] = data & 0x7fff;
+		break;
 
 	case 0x2e: // FIQ Source Select
 	{
