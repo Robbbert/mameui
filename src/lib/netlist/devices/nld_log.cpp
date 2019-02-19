@@ -6,8 +6,8 @@
  */
 
 #include "../nl_base.h"
-#include "../plib/pstream.h"
 #include "../plib/pfmtlog.h"
+#include "../plib/pstream.h"
 #include "nld_log.h"
 //#include "sound/wavwrite.h"
 
@@ -89,8 +89,8 @@ namespace netlist
 	#endif
 
 
-	NETLIB_DEVICE_IMPL_DEPRECATED(log)
-	NETLIB_DEVICE_IMPL_DEPRECATED(logD)
+	NETLIB_DEVICE_IMPL(log,  "LOG",  "+I")
+	NETLIB_DEVICE_IMPL(logD, "LOGD", "+I,+I2")
 
 	} //namespace devices
 } // namespace netlist

@@ -310,12 +310,12 @@ WRITE8_MEMBER(smc777_state::mc6845_w)
 	if(offset == 0)
 	{
 		m_crtc_addr = data;
-		m_crtc->address_w(space, 0,data);
+		m_crtc->address_w(data);
 	}
 	else
 	{
 		m_crtc_vreg[m_crtc_addr] = data;
-		m_crtc->register_w(space, 0,data);
+		m_crtc->register_w(data);
 	}
 }
 
@@ -755,7 +755,7 @@ void smc777_state::smc777_io(address_map &map)
 	// TODO: address bit 8 selects joy port 2
 	map(0x51, 0x51).mirror(0xff00).portr("JOY_1P").w(FUNC(smc777_state::color_mode_w));
 	map(0x52, 0x52).select(0xff00).w(FUNC(smc777_state::ramdac_w));
-	map(0x53, 0x53).mirror(0xff00).w("sn1", FUNC(sn76489a_device::command_w));
+	map(0x53, 0x53).mirror(0xff00).w("sn1", FUNC(sn76489a_device::write));
 //  map(0x54, 0x59) vrt controller
 //  map(0x5a, 0x5b) ram banking
 //  map(0x70, 0x70) auto-start ROM (ext-ROM)
@@ -1139,11 +1139,11 @@ MACHINE_CONFIG_START(smc777_state::smc777)
 	m_fdc->drq_wr_callback().set(FUNC(smc777_state::fdc_drq_w));
 
 	// does it really support 16 of them?
-	MCFG_FLOPPY_DRIVE_ADD("fdc:0", smc777_floppies, "ssdd", floppy_image_device::default_floppy_formats)
-	MCFG_FLOPPY_DRIVE_ADD("fdc:1", smc777_floppies, "ssdd", floppy_image_device::default_floppy_formats)
+	FLOPPY_CONNECTOR(config, "fdc:0", smc777_floppies, "ssdd", floppy_image_device::default_floppy_formats);
+	FLOPPY_CONNECTOR(config, "fdc:1", smc777_floppies, "ssdd", floppy_image_device::default_floppy_formats);
 
-	MCFG_SOFTWARE_LIST_ADD("flop_list", "smc777")
-	MCFG_QUICKLOAD_ADD("quickload", smc777_state, smc777, "com,cpm", 3)
+	SOFTWARE_LIST(config, "flop_list").set_original("smc777");
+	MCFG_QUICKLOAD_ADD("quickload", smc777_state, smc777, "com,cpm", attotime::from_seconds(3))
 
 	/* sound hardware */
 	SPEAKER(config, "mono").front_center();

@@ -8,9 +8,9 @@
 #include "pstream.h"
 #include "palloc.h"
 
+#include <algorithm>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
 
 // VS2015 prefers _dup
 #ifdef _WIN32
@@ -20,10 +20,6 @@
 #endif
 
 namespace plib {
-
-pstream::~pstream()
-{
-}
 
 // -----------------------------------------------------------------------------
 // pistream: input stream
@@ -124,10 +120,6 @@ pstdin::pstdin()
 	/* nothing to do */
 }
 
-pstdin::~pstdin()
-{
-}
-
 // -----------------------------------------------------------------------------
 // Output file stream
 // -----------------------------------------------------------------------------
@@ -169,7 +161,6 @@ void pofilestream::vwrite(const value_type *buf, const pos_type n)
 	std::size_t r = fwrite(buf, 1, n, static_cast<FILE *>(m_file));
 	if (r < n)
 	{
-		//printf("%ld %ld %s\n", r, n, strerror(errno));
 		if (ferror(static_cast<FILE *>(m_file)))
 			throw file_write_e(m_filename);
 	}
@@ -199,11 +190,6 @@ pstream::pos_type pofilestream::vtell() const
 		return static_cast<pos_type>(ret);
 }
 
-postringstream::~postringstream()
-{
-}
-
-
 // -----------------------------------------------------------------------------
 // pstderr: write to stderr
 // -----------------------------------------------------------------------------
@@ -217,10 +203,6 @@ pstderr::pstderr()
 {
 }
 
-pstderr::~pstderr()
-{
-}
-
 // -----------------------------------------------------------------------------
 // pstdout: write to stdout
 // -----------------------------------------------------------------------------
@@ -231,10 +213,6 @@ pstdout::pstdout()
 #else
 : pofilestream(fdopen(dup(fileno(stdout)), "wb"), "<stdout>", true)
 #endif
-{
-}
-
-pstdout::~pstdout()
 {
 }
 
@@ -254,10 +232,6 @@ pimemstream::pimemstream()
 
 pimemstream::pimemstream(const pomemstream &ostrm)
 : pistream(FLAG_SEEKABLE), m_pos(0), m_len(ostrm.size()), m_mem(reinterpret_cast<const char *>(ostrm.memory()))
-{
-}
-
-pimemstream::~pimemstream()
 {
 }
 
@@ -287,10 +261,6 @@ void pimemstream::vseek(const pos_type n)
 pimemstream::pos_type pimemstream::vtell() const
 {
 	return m_pos;
-}
-
-pistringstream::~pistringstream()
-{
 }
 
 // -----------------------------------------------------------------------------
@@ -377,10 +347,6 @@ bool putf8_reader::readline(pstring &line)
 }
 
 
-putf8_fmt_writer::~putf8_fmt_writer()
-{
-}
-
 void putf8_fmt_writer::vdowrite(const pstring &ls) const
 {
 	write(ls);
@@ -388,4 +354,4 @@ void putf8_fmt_writer::vdowrite(const pstring &ls) const
 
 
 
-}
+} // namespace plib

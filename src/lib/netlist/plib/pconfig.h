@@ -21,7 +21,7 @@
  * if PHAS_RDTSCP == 1
  */
 #ifndef PUSE_ACCURATE_STATS
-#define PUSE_ACCURATE_STATS (1)
+#define PUSE_ACCURATE_STATS (0)
 #endif
 
 /*
@@ -31,6 +31,20 @@
 
 #ifndef PHAS_INT128
 #define PHAS_INT128 (0)
+#endif
+
+/*
+ * Standard alignment macros
+ */
+
+#define PALIGNAS_CACHELINE()	PALIGNAS(64)
+#define PALIGNAS_VECTOROPT()	PALIGNAS(64)
+
+/* Breaks mame build on windows due to -Wattribute */
+#if defined(_WIN32) && defined(__GNUC__)
+#define PALIGNAS(x)
+#else
+#define PALIGNAS(x) alignas(x)
 #endif
 
 /*============================================================
@@ -74,15 +88,6 @@
 #if (PHAS_INT128)
 typedef __uint128_t UINT128;
 typedef __int128_t INT128;
-#endif
-
-#if defined(__GNUC__)
-#ifdef RESTRICT
-#undef RESTRICT
-#endif
-#define RESTRICT                __restrict__
-#else
-#define RESTRICT
 #endif
 
 //============================================================

@@ -33,9 +33,9 @@
 #ifndef NLID_TWOTERM_H_
 #define NLID_TWOTERM_H_
 
+#include "../plib/pfunction.h"
 #include "netlist/nl_base.h"
 #include "netlist/nl_setup.h"
-#include "../plib/pfunction.h"
 
 // -----------------------------------------------------------------------------
 // Implementation
@@ -52,12 +52,13 @@ namespace netlist
 		template <class C>
 		inline core_device_t &bselect(bool b, C &d1, core_device_t &d2)
 		{
-			core_device_t *h = dynamic_cast<core_device_t *>(&d1);
+			auto *h = dynamic_cast<core_device_t *>(&d1);
 			return b ? *h : d2;
 		}
 		template<>
-		inline core_device_t &bselect(bool b, netlist_base_t &d1, core_device_t &d2)
+		inline core_device_t &bselect(bool b, netlist_state_t &d1, core_device_t &d2)
 		{
+			plib::unused_var(d1);
 			if (b)
 				throw nl_exception("bselect with netlist and b==true");
 			return d2;
@@ -66,11 +67,9 @@ namespace netlist
 NETLIB_OBJECT(twoterm)
 {
 	NETLIB_CONSTRUCTOR_EX(twoterm, bool terminals_owned = false)
-	, m_P(bselect(terminals_owned, owner, *this), (terminals_owned ? name + "." : "") + "1")
-	, m_N(bselect(terminals_owned, owner, *this), (terminals_owned ? name + "." : "") + "2")
+	, m_P(bselect(terminals_owned, owner, *this), (terminals_owned ? name + "." : "") + "1", &m_N)
+	, m_N(bselect(terminals_owned, owner, *this), (terminals_owned ? name + "." : "") + "2", &m_P)
 	{
-		m_P.m_otherterm = &m_N;
-		m_N.m_otherterm = &m_P;
 	}
 
 	terminal_t m_P;
@@ -78,9 +77,15 @@ NETLIB_OBJECT(twoterm)
 
 	//NETLIB_UPDATE_TERMINALSI() { }
 	//NETLIB_RESETI() { }
-	NETLIB_UPDATEI();
 
 public:
+
+	NETLIB_UPDATEI();
+
+	void solve_now();
+
+	void solve_later(netlist_time delay = netlist_time::from_nsec(1));
+
 	void set(const nl_double G, const nl_double V, const nl_double I)
 	{
 		/*      GO, GT, I                */
@@ -118,14 +123,14 @@ NETLIB_OBJECT_DERIVED(R_base, twoterm)
 public:
 	void set_R(const nl_double R)
 	{
-		const nl_double G = NL_FCONST(1.0) / R;
+		const nl_double G = plib::constants<nl_double>::one() / R;
 		set_mat( G, -G, 0.0,
 				-G,  G, 0.0);
 	}
 
 protected:
 	NETLIB_RESETI();
-	NETLIB_UPDATEI();
+	//NETLIB_UPDATEI();
 
 };
 
@@ -160,7 +165,7 @@ NETLIB_OBJECT(POT)
 	, m_R2(*this, "_R2")
 	, m_R(*this, "R", 10000)
 	, m_Dial(*this, "DIAL", 0.5)
-	, m_DialIsLog(*this, "DIALLOG", 0)
+	, m_DialIsLog(*this, "DIALLOG", false)
 	{
 		register_subalias("1", m_R1.m_P);
 		register_subalias("2", m_R1.m_N);
@@ -189,8 +194,8 @@ NETLIB_OBJECT(POT2)
 	, m_R1(*this, "_R1")
 	, m_R(*this, "R", 10000)
 	, m_Dial(*this, "DIAL", 0.5)
-	, m_DialIsLog(*this, "DIALLOG", 0)
-	, m_Reverse(*this, "REVERSE", 0)
+	, m_DialIsLog(*this, "DIALLOG", false)
+	, m_Reverse(*this, "REVERSE", false)
 	{
 		register_subalias("1", m_R1.m_P);
 		register_subalias("2", m_R1.m_N);
@@ -233,7 +238,7 @@ public:
 
 protected:
 	NETLIB_RESETI();
-	NETLIB_UPDATEI();
+	//NETLIB_UPDATEI();
 	NETLIB_UPDATE_PARAMI();
 
 private:
@@ -265,7 +270,7 @@ public:
 
 protected:
 	NETLIB_RESETI();
-	NETLIB_UPDATEI();
+	//NETLIB_UPDATEI();
 	NETLIB_UPDATE_PARAMI();
 
 private:
@@ -381,7 +386,7 @@ public:
 
 protected:
 	NETLIB_RESETI();
-	NETLIB_UPDATEI();
+	//NETLIB_UPDATEI();
 	NETLIB_UPDATE_PARAMI();
 
 	generic_diode m_D;
@@ -398,6 +403,7 @@ NETLIB_OBJECT_DERIVED(VS, twoterm)
 {
 public:
 	NETLIB_CONSTRUCTOR_DERIVED(VS, twoterm)
+	, m_t(*this, "m_t", 0.0)
 	, m_R(*this, "R", 0.1)
 	, m_V(*this, "V", 0.0)
 	, m_func(*this,"FUNC", "")
@@ -410,12 +416,26 @@ public:
 	}
 
 	NETLIB_IS_TIMESTEP(m_func() != "")
-	NETLIB_TIMESTEPI();
+
+	NETLIB_TIMESTEPI()
+	{
+		m_t += step;
+		this->set(1.0 / m_R(),
+				m_compiled.evaluate(std::vector<double>({m_t})),
+				0.0);
+	}
 
 protected:
-	NETLIB_UPDATEI();
-	NETLIB_RESETI();
+	// NETLIB_UPDATEI() { 	NETLIB_NAME(twoterm)::update(time); }
 
+	NETLIB_RESETI()
+	{
+		NETLIB_NAME(twoterm)::reset();
+		this->set(1.0 / m_R(), m_V(), 0.0);
+	}
+
+private:
+	state_var<double> m_t;
 	param_double_t m_R;
 	param_double_t m_V;
 	param_str_t m_func;
@@ -430,6 +450,7 @@ NETLIB_OBJECT_DERIVED(CS, twoterm)
 {
 public:
 	NETLIB_CONSTRUCTOR_DERIVED(CS, twoterm)
+	, m_t(*this, "m_t", 0.0)
 	, m_I(*this, "I", 1.0)
 	, m_func(*this,"FUNC", "")
 	, m_compiled(this->name() + ".FUNCC", this, this->state().run_state_manager())
@@ -441,19 +462,33 @@ public:
 	}
 
 	NETLIB_IS_TIMESTEP(m_func() != "")
-	NETLIB_TIMESTEPI();
+	NETLIB_TIMESTEPI()
+	{
+		m_t += step;
+		const double I = m_compiled.evaluate(std::vector<double>({m_t}));
+		set_mat(0.0, 0.0, -I,
+				0.0, 0.0,  I);
+	}
+
 protected:
 
-	NETLIB_UPDATEI();
-	NETLIB_RESETI();
+	//NETLIB_UPDATEI() { NETLIB_NAME(twoterm)::update(time); }
+	NETLIB_RESETI()
+	{
+		NETLIB_NAME(twoterm)::reset();
+		set_mat(0.0, 0.0, -m_I(),
+				0.0, 0.0,  m_I());
+	}
 
+private:
+	state_var<double> m_t;
 	param_double_t m_I;
 	param_str_t m_func;
 	plib::pfunction m_compiled;
 };
 
 
-	} //namespace devices
+	} // namespace analog
 } // namespace netlist
 
 #endif /* NLD_TWOTERM_H_ */

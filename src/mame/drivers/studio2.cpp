@@ -514,10 +514,10 @@ WRITE8_MEMBER( mpt02_state::dma_w )
 /* Machine Initialization */
 
 // trampolines to cartridge
-READ8_MEMBER( studio2_state::cart_400 ) { return m_cart->read_rom(space, offset); }
-READ8_MEMBER( studio2_state::cart_a00 ) { return m_cart->read_rom(space, offset + 0x600); }
-READ8_MEMBER( studio2_state::cart_e00 ) { return m_cart->read_rom(space, offset + 0xa00); }
-READ8_MEMBER( mpt02_state::cart_c00 ) { return m_cart->read_rom(space, offset + 0x800); }
+READ8_MEMBER( studio2_state::cart_400 ) { return m_cart->read_rom(offset); }
+READ8_MEMBER( studio2_state::cart_a00 ) { return m_cart->read_rom(offset + 0x600); }
+READ8_MEMBER( studio2_state::cart_e00 ) { return m_cart->read_rom(offset + 0xa00); }
+READ8_MEMBER( mpt02_state::cart_c00 ) { return m_cart->read_rom(offset + 0x800); }
 
 void studio2_state::machine_start()
 {
@@ -645,7 +645,7 @@ MACHINE_CONFIG_START(studio2_state::studio2_cartslot)
 	MCFG_GENERIC_LOAD(studio2_state, studio2_cart_load)
 
 	/* software lists */
-	MCFG_SOFTWARE_LIST_ADD("cart_list", "studio2")
+	SOFTWARE_LIST(config, "cart_list").set_original("studio2");
 MACHINE_CONFIG_END
 
 MACHINE_CONFIG_START(studio2_state::studio2)
@@ -703,7 +703,7 @@ MACHINE_CONFIG_START(visicom_state::visicom)
 	MCFG_GENERIC_EXTENSIONS("bin,rom")
 
 	/* software lists */
-	MCFG_SOFTWARE_LIST_ADD("cart_list", "visicom")
+	SOFTWARE_LIST(config, "cart_list").set_original("visicom");
 MACHINE_CONFIG_END
 
 MACHINE_CONFIG_START(mpt02_state::mpt02)

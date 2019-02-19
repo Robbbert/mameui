@@ -313,13 +313,19 @@ void apple2_state::machine_start()
 	m_inh_bank = 0;
 
 	// precalculate joystick time constants
-	m_x_calibration = attotime::from_usec(12).as_double();
-	m_y_calibration = attotime::from_usec(13).as_double();
+	m_x_calibration = attotime::from_nsec(10800).as_double();
+	m_y_calibration = attotime::from_nsec(10800).as_double();
 
 	// cache slot devices
 	for (int i = 0; i <= 7; i++)
 	{
 		m_slotdevice[i] = m_a2bus->get_a2bus_card(i);
+	}
+
+	for (int adr = 0; adr < m_ram_size; adr += 2)
+	{
+		m_ram_ptr[adr] = 0;
+		m_ram_ptr[adr+1] = 0xff;
 	}
 
 	// setup save states
@@ -626,37 +632,39 @@ READ8_MEMBER(apple2_state::switches_r)
 
 READ8_MEMBER(apple2_state::flags_r)
 {
+	u8 uFloatingBus7 = read_floatingbus() & 0x7f;
+
 	// Y output of 74LS251 at H14 read as D7
 	switch (offset)
 	{
-	case 0: // cassette in
-		return m_cassette->input() > 0.0 ? 0x80 : 0;
+	case 0: // cassette in (accidentally read at $C068 by ProDOS to attempt IIgs STATE register)
+		return (m_cassette->input() > 0.0 ? 0x80 : 0) | uFloatingBus7;
 
 	case 1:  // button 0
-		return (m_joybuttons->read() & 0x10) ? 0x80 : 0;
+		return ((m_joybuttons->read() & 0x10) ? 0x80 : 0) | uFloatingBus7;
 
 	case 2:  // button 1
-		return (m_joybuttons->read() & 0x20) ? 0x80 : 0;
+		return ((m_joybuttons->read() & 0x20) ? 0x80 : 0) | uFloatingBus7;
 
 	case 3:  // button 2
 		// check if SHIFT key mod configured
 		if (m_sysconfig->read() & 0x04)
 		{
-			return ((m_joybuttons->read() & 0x40) || (m_kbspecial->read() & 0x06)) ? 0x80 : 0;
+			return (((m_joybuttons->read() & 0x40) || (m_kbspecial->read() & 0x06)) ? 0x80 : 0) | uFloatingBus7;
 		}
-		return (m_joybuttons->read() & 0x40) ? 0x80 : 0;
+		return ((m_joybuttons->read() & 0x40) ? 0x80 : 0) | (read_floatingbus() & 0x7f);
 
 	case 4:  // joy 1 X axis
-		return (machine().time().as_double() < m_joystick_x1_time) ? 0x80 : 0;
+		return ((machine().time().as_double() < m_joystick_x1_time) ? 0x80 : 0) | uFloatingBus7;
 
 	case 5:  // joy 1 Y axis
-		return (machine().time().as_double() < m_joystick_y1_time) ? 0x80 : 0;
+		return ((machine().time().as_double() < m_joystick_y1_time) ? 0x80 : 0) | uFloatingBus7;
 
 	case 6: // joy 2 X axis
-		return (machine().time().as_double() < m_joystick_x2_time) ? 0x80 : 0;
+		return ((machine().time().as_double() < m_joystick_x2_time) ? 0x80 : 0) | uFloatingBus7;
 
 	case 7: // joy 2 Y axis
-		return (machine().time().as_double() < m_joystick_y2_time) ? 0x80 : 0;
+		return ((machine().time().as_double() < m_joystick_y2_time) ? 0x80 : 0) | uFloatingBus7;
 	}
 
 	// this is never reached
@@ -1369,7 +1377,8 @@ static void apple2_cards(device_slot_interface &device)
 //  device.option_add("magicmusician", A2BUS_MAGICMUSICIAN);    /* Magic Musician Card */
 }
 
-MACHINE_CONFIG_START(apple2_state::apple2_common)
+void apple2_state::apple2_common(machine_config &config)
+{
 	/* basic machine hardware */
 	M6502(config, m_maincpu, 1021800);
 	m_maincpu->set_addrmap(AS_PROGRAM, &apple2_state::apple2_map);
@@ -1438,14 +1447,17 @@ MACHINE_CONFIG_START(apple2_state::apple2_common)
 	A2BUS_SLOT(config, "sl6", m_a2bus, apple2_cards, "diskiing");
 	A2BUS_SLOT(config, "sl7", m_a2bus, apple2_cards, nullptr);
 
-	MCFG_SOFTWARE_LIST_ADD("flop525_list","apple2")
+	/* Set up the softlists: clean cracks priority, originals second, others last */
+	SOFTWARE_LIST(config, "flop525_clean").set_original("apple2_flop_clcracked");
 	SOFTWARE_LIST(config, "flop525_orig").set_compatible("apple2_flop_orig").set_filter("A2");
-	MCFG_SOFTWARE_LIST_ADD("cass_list", "apple2_cass")
+	SOFTWARE_LIST(config, "flop525_misc").set_compatible("apple2_flop_misc");
+	SOFTWARE_LIST(config, "cass_list").set_original("apple2_cass");
+	//MCFG_SOFTWARE_LIST_ADD("cass_list", "apple2_cass")
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_default_state(CASSETTE_STOPPED);
 	m_cassette->set_interface("apple2_cass");
-MACHINE_CONFIG_END
+}
 
 void apple2_state::apple2(machine_config &config)
 {
@@ -1478,9 +1490,9 @@ static MACHINE_CONFIG_START( laba2p )
 	apple2p(config);
 	MCFG_MACHINE_START_OVERRIDE(apple2_state,laba2p)
 
-	MCFG_DEVICE_REMOVE("sl0")
-	MCFG_DEVICE_REMOVE("sl3")
-	MCFG_DEVICE_REMOVE("sl6")
+	config.device_remove("sl0");
+	config.device_remove("sl3");
+	config.device_remove("sl6");
 
 //  A2BUS_LAB_80COL("sl3", A2BUS_LAB_80COL).set_onboard(m_a2bus);
 	A2BUS_IWM_FDC("sl6", A2BUS_IWM_FDC).set_onboard(m_a2bus);

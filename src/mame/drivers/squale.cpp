@@ -832,14 +832,14 @@ MACHINE_CONFIG_START(squale_state::squale)
 
 	/* Floppy */
 	WD1770(config, m_fdc, 8_MHz_XTAL);
-	MCFG_FLOPPY_DRIVE_ADD("wd1770:0", squale_floppies, "525qd", floppy_image_device::default_floppy_formats)
-	MCFG_FLOPPY_DRIVE_ADD("wd1770:1", squale_floppies, "525qd", floppy_image_device::default_floppy_formats)
-	MCFG_SOFTWARE_LIST_ADD("flop525_list", "squale")
+	FLOPPY_CONNECTOR(config, "wd1770:0", squale_floppies, "525qd", floppy_image_device::default_floppy_formats);
+	FLOPPY_CONNECTOR(config, "wd1770:1", squale_floppies, "525qd", floppy_image_device::default_floppy_formats);
+	SOFTWARE_LIST(config, "flop525_list").set_original("squale");
 
 	/* Cartridge slot */
 	MCFG_GENERIC_CARTSLOT_ADD("cartslot", generic_linear_slot, "squale_cart")
 	MCFG_GENERIC_LOAD(squale_state, squale_cart)
-	MCFG_SOFTWARE_LIST_ADD("cart_list", "squale_cart")
+	SOFTWARE_LIST(config, "cart_list").set_original("squale_cart");
 MACHINE_CONFIG_END
 
 /* ROM definition */

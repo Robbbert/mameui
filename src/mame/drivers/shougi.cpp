@@ -182,18 +182,18 @@ void shougi_state::shougi_palette(palette_device &palette) const
 		bit0 = (color_prom[i] >> 0) & 0x01;
 		bit1 = (color_prom[i] >> 1) & 0x01;
 		bit2 = (color_prom[i] >> 2) & 0x01;
-		int const r = combine_3_weights(weights_r, bit0, bit1, bit2);
+		int const r = combine_weights(weights_r, bit0, bit1, bit2);
 
 		/* green component */
 		bit0 = (color_prom[i] >> 3) & 0x01;
 		bit1 = (color_prom[i] >> 4) & 0x01;
 		bit2 = (color_prom[i] >> 5) & 0x01;
-		int const g = combine_3_weights(weights_g, bit0, bit1, bit2);
+		int const g = combine_weights(weights_g, bit0, bit1, bit2);
 
 		/* blue component */
 		bit0 = (color_prom[i] >> 6) & 0x01;
 		bit1 = (color_prom[i] >> 7) & 0x01;
-		int const b = combine_2_weights(weights_b, bit0, bit1);
+		int const b = combine_weights(weights_b, bit0, bit1);
 
 		palette.set_pen_color(i,rgb_t(r,g,b));
 	}
@@ -391,7 +391,7 @@ MACHINE_CONFIG_START(shougi_state::shougi)
 	mainlatch.q_out_cb<4>().set("alpha_8201", FUNC(alpha_8201_device::bus_dir_w)).invert(); // ALPHA-8201 shared RAM bus direction: 0: mcu, 1: maincpu
 	mainlatch.q_out_cb<7>().set_nop(); // nothing? connected to +5v via resistor
 
-	MCFG_QUANTUM_PERFECT_CPU("maincpu")
+	config.m_perfect_cpu_quantum = subtag("maincpu");
 
 	WATCHDOG_TIMER(config, "watchdog").set_vblank_count("screen", 0x10); // assuming it's the same as champbas
 

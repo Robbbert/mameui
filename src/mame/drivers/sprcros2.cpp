@@ -260,9 +260,9 @@ void sprcros2_state::master_map(address_map &map)
 void sprcros2_state::master_io(address_map &map)
 {
 	map.global_mask(0xff);
-	map(0x00, 0x00).portr("P1").w("sn1", FUNC(sn76489_device::command_w));
-	map(0x01, 0x01).portr("P2").w("sn2", FUNC(sn76489_device::command_w));
-	map(0x02, 0x02).portr("EXTRA").w("sn3", FUNC(sn76489_device::command_w));
+	map(0x00, 0x00).portr("P1").w("sn1", FUNC(sn76489_device::write));
+	map(0x01, 0x01).portr("P2").w("sn2", FUNC(sn76489_device::write));
+	map(0x02, 0x02).portr("EXTRA").w("sn3", FUNC(sn76489_device::write));
 	map(0x04, 0x04).portr("DSW1");
 	map(0x05, 0x05).portr("DSW2");
 	map(0x07, 0x07).w(FUNC(sprcros2_state::master_output_w));
@@ -466,7 +466,7 @@ MACHINE_CONFIG_START(sprcros2_state::sprcros2)
 	MCFG_DEVICE_IO_MAP(slave_io)
 	MCFG_DEVICE_VBLANK_INT_DRIVER("screen", sprcros2_state,  slave_vblank_irq)
 
-	MCFG_QUANTUM_PERFECT_CPU("master_cpu")
+	config.m_perfect_cpu_quantum = subtag("master_cpu");
 
 	/* video hardware */
 	MCFG_SCREEN_ADD("screen", RASTER)

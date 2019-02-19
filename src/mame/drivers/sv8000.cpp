@@ -182,7 +182,7 @@ void sv8000_state::machine_start()
 	m_inv = 0;
 
 	if (m_cart->exists())
-		m_maincpu->space(AS_PROGRAM).install_read_handler(0x0000, 0x0fff, read8_delegate(FUNC(generic_slot_device::read_rom),(generic_slot_device*)m_cart));
+		m_maincpu->space(AS_PROGRAM).install_read_handler(0x0000, 0x0fff, read8sm_delegate(FUNC(generic_slot_device::read_rom),(generic_slot_device*)m_cart));
 
 	save_item(NAME(m_column));
 	save_item(NAME(m_ag));
@@ -412,7 +412,7 @@ MACHINE_CONFIG_START(sv8000_state::sv8000)
 	MCFG_GENERIC_LOAD(sv8000_state, cart)
 
 	/* software lists */
-	MCFG_SOFTWARE_LIST_ADD("cart_list","sv8000")
+	SOFTWARE_LIST(config, "cart_list").set_original("sv8000");
 MACHINE_CONFIG_END
 
 /* ROM definition */

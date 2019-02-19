@@ -297,6 +297,7 @@ VIDEOS["CDP1862"] = true
 --VIDEOS["CESBLIT"] = true
 VIDEOS["CRT9007"] = true
 VIDEOS["CRT9021"] = true
+VIDEOS["CRT9028"] = true
 VIDEOS["CRT9212"] = true
 VIDEOS["CRTC_EGA"] = true
 VIDEOS["DL1416"] = true
@@ -681,6 +682,7 @@ MACHINES["IOPTIMER"] = true
 MACHINES["Z8038"] = true
 MACHINES["AIC6250"] = true
 MACHINES["DC7085"] = true
+MACHINES["I82357"] = true
 
 --------------------------------------------------
 -- specify available bus cores
@@ -754,6 +756,7 @@ BUSES["INTV_CTRL"] = true
 BUSES["IQ151"] = true
 BUSES["ISA"] = true
 BUSES["ISBX"] = true
+BUSES["JAKKS_GAMEKEY"] = true
 BUSES["HP_OPTROM"] = true
 BUSES["HP80_OPTROM"] = true
 BUSES["HP80_IO"] = true
@@ -1093,6 +1096,7 @@ function linkProjects_mame_mess(_target, _subtarget)
 		"kontron",
 		"kurzweil",
 		"kyocera",
+		"leapfrog",
 		"luxor",
 		"magnavox",
 		"makerbot",
@@ -1212,6 +1216,7 @@ function linkProjects_mame_mess(_target, _subtarget)
 		"vtech",
 		"wang",
 		"wavemate",
+		"wyse",
 		"westinghouse",
 		"xerox",
 		"xussrpc",
@@ -1830,7 +1835,9 @@ files {
 
 createMESSProjects(_target, _subtarget, "chessking")
 files {
-	MAME_DIR .. "src/mame/drivers/ckz80.cpp",
+	MAME_DIR .. "src/mame/drivers/ckingbase.cpp",
+	MAME_DIR .. "src/mame/includes/ckingbase.h",
+	MAME_DIR .. "src/mame/drivers/cking_master.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "chromatics")
@@ -1892,7 +1899,9 @@ files {
 
 createMESSProjects(_target, _subtarget, "cxg")
 files {
-	MAME_DIR .. "src/mame/drivers/cxgz80.cpp",
+	MAME_DIR .. "src/mame/drivers/cxgbase.cpp",
+	MAME_DIR .. "src/mame/includes/cxgbase.h",
+	MAME_DIR .. "src/mame/drivers/cxg_ch2001.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "cybiko")
@@ -1948,6 +1957,8 @@ files {
 	MAME_DIR .. "src/mame/machine/decioga.h",
 	MAME_DIR .. "src/mame/drivers/dectalk.cpp",
 	MAME_DIR .. "src/mame/drivers/decwritr.cpp",
+	MAME_DIR .. "src/mame/drivers/jensen.cpp",
+	MAME_DIR .. "src/mame/includes/jensen.h",
 	MAME_DIR .. "src/mame/drivers/pdp11.cpp",
 	MAME_DIR .. "src/mame/drivers/vax11.cpp",
 	MAME_DIR .. "src/mame/drivers/rainbow.cpp",
@@ -2120,11 +2131,26 @@ files {
 
 createMESSProjects(_target, _subtarget, "fidelity")
 files {
-	MAME_DIR .. "src/mame/drivers/fidelz80.cpp",
+	MAME_DIR .. "src/mame/drivers/fidelbase.cpp",
 	MAME_DIR .. "src/mame/includes/fidelbase.h",
-	MAME_DIR .. "src/mame/drivers/fidel6502.cpp",
-	MAME_DIR .. "src/mame/drivers/fidel68k.cpp",
-	MAME_DIR .. "src/mame/drivers/fidelmcs48.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_as12.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_card.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_cc10.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_cc7.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_chesster.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_csc.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_dames.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_desdis.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_eag68k.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_elite.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_excel.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_phantom.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_sc12.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_sc6.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_sc8.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_sc9.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_vcc.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_vsc.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "force")
@@ -2412,6 +2438,12 @@ files {
 	MAME_DIR .. "src/mame/drivers/kyocera.cpp",
 	MAME_DIR .. "src/mame/includes/kyocera.h",
 	MAME_DIR .. "src/mame/video/kyocera.cpp",
+}
+
+createMESSProjects(_target, _subtarget, "leapfrog")
+files {
+	MAME_DIR .. "src/mame/drivers/leapster.cpp",
+	MAME_DIR .. "src/mame/drivers/leapfrog_leappad.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "luxor")
@@ -2710,11 +2742,11 @@ createMESSProjects(_target, _subtarget, "novag")
 files {
 	MAME_DIR .. "src/mame/drivers/mk1.cpp",
 	MAME_DIR .. "src/mame/drivers/mk2.cpp",
-	MAME_DIR .. "src/mame/drivers/novag6502.cpp",
+	MAME_DIR .. "src/mame/drivers/novagbase.cpp",
 	MAME_DIR .. "src/mame/includes/novagbase.h",
-	MAME_DIR .. "src/mame/drivers/novag68k.cpp",
-	MAME_DIR .. "src/mame/drivers/novagf8.cpp",
-	MAME_DIR .. "src/mame/drivers/novagmcs48.cpp",
+	MAME_DIR .. "src/mame/drivers/novag_delta1.cpp",
+	MAME_DIR .. "src/mame/drivers/novag_diablo.cpp",
+	MAME_DIR .. "src/mame/drivers/novag_presto.cpp",
 	MAME_DIR .. "src/mame/drivers/ssystem3.cpp",
 	MAME_DIR .. "src/mame/includes/ssystem3.h",
 	MAME_DIR .. "src/mame/video/ssystem3.cpp",
@@ -3014,6 +3046,7 @@ files {
 	MAME_DIR .. "src/mame/includes/megadriv_rad.h",
 	MAME_DIR .. "src/mame/drivers/segapico.cpp",
 	MAME_DIR .. "src/mame/drivers/sega_sawatte.cpp",
+	MAME_DIR .. "src/mame/drivers/sega_beena.cpp",
 	MAME_DIR .. "src/mame/drivers/segapm.cpp",
 	MAME_DIR .. "src/mame/drivers/sg1000.cpp",
 	MAME_DIR .. "src/mame/includes/sg1000.h",
@@ -3056,6 +3089,8 @@ files {
 	MAME_DIR .. "src/mame/drivers/4dpi.cpp",
 	MAME_DIR .. "src/mame/drivers/indigo.cpp",
 	MAME_DIR .. "src/mame/drivers/indy_indigo2.cpp",
+	MAME_DIR .. "src/mame/video/light.cpp",
+	MAME_DIR .. "src/mame/video/light.h",
 	MAME_DIR .. "src/mame/video/newport.cpp",
 	MAME_DIR .. "src/mame/video/newport.h",
 	MAME_DIR .. "src/mame/video/crime.cpp",
@@ -3505,6 +3540,7 @@ files {
 	MAME_DIR .. "src/mame/machine/xavix_io.h",
 	MAME_DIR .. "src/mame/machine/xavix2002_io.cpp",
 	MAME_DIR .. "src/mame/machine/xavix2002_io.h",
+	MAME_DIR .. "src/mame/drivers/xavix2.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "ultimachine")
@@ -3655,6 +3691,16 @@ files {
 	MAME_DIR .. "src/mame/includes/jupiter.h",
 }
 
+createMESSProjects(_target, _subtarget, "wyse")
+files {
+	MAME_DIR .. "src/mame/drivers/wy100.cpp",
+	MAME_DIR .. "src/mame/drivers/wy50.cpp",
+	MAME_DIR .. "src/mame/drivers/wy85.cpp",
+	MAME_DIR .. "src/mame/drivers/wyse.cpp",
+	MAME_DIR .. "src/mame/machine/wy50kb.cpp",
+	MAME_DIR .. "src/mame/machine/wy50kb.h",
+}
+
 createMESSProjects(_target, _subtarget, "xerox")
 files {
 	MAME_DIR .. "src/mame/drivers/xerox820.cpp",
@@ -3709,6 +3755,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/acd.cpp",
 	MAME_DIR .. "src/mame/drivers/aceex.cpp",
 	MAME_DIR .. "src/mame/drivers/adm23.cpp",
+	MAME_DIR .. "src/mame/drivers/adm31.cpp",
 	MAME_DIR .. "src/mame/drivers/akaiax80.cpp",
 	MAME_DIR .. "src/mame/drivers/alcat7100.cpp",
 	MAME_DIR .. "src/mame/drivers/alesis_qs.cpp",
@@ -3737,6 +3784,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/busicom.cpp",
 	MAME_DIR .. "src/mame/includes/busicom.h",
 	MAME_DIR .. "src/mame/video/busicom.cpp",
+	MAME_DIR .. "src/mame/drivers/c2color.cpp",
 	MAME_DIR .. "src/mame/drivers/candela.cpp",
 	MAME_DIR .. "src/mame/drivers/cardinal.cpp",
 	MAME_DIR .. "src/mame/drivers/chaos.cpp",
@@ -3821,7 +3869,6 @@ files {
 	MAME_DIR .. "src/mame/drivers/jade.cpp",
 	MAME_DIR .. "src/mame/drivers/jonos.cpp",
 	MAME_DIR .. "src/mame/drivers/kron.cpp",
-	MAME_DIR .. "src/mame/drivers/leapster.cpp",
 	MAME_DIR .. "src/mame/drivers/lee1214.cpp",
 	MAME_DIR .. "src/mame/drivers/learnwin.cpp",
 	MAME_DIR .. "src/mame/drivers/lft.cpp",
@@ -3927,10 +3974,6 @@ files {
 	MAME_DIR .. "src/mame/drivers/vp415.cpp",
 	MAME_DIR .. "src/mame/drivers/vsmilepro.cpp",
 	MAME_DIR .. "src/mame/drivers/wicat.cpp",
-	MAME_DIR .. "src/mame/drivers/wy100.cpp",
-	MAME_DIR .. "src/mame/drivers/wy50.cpp",
-	MAME_DIR .. "src/mame/drivers/wy85.cpp",
-	MAME_DIR .. "src/mame/drivers/wyse.cpp",
 	MAME_DIR .. "src/mame/drivers/xor100.cpp",
 	MAME_DIR .. "src/mame/includes/xor100.h",
 	MAME_DIR .. "src/mame/drivers/zms8085.cpp",
