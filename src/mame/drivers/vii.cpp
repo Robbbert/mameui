@@ -13,27 +13,27 @@
         Justice League
         Dora the Explorer
         Mattel Classic Sports
-		Disney Princess (GKR)
-		Wheel of Fortune (GKR)
-		(all GameKeyReady units?)
+        Disney Princess (GKR)
+        Wheel of Fortune (GKR)
+        (all GameKeyReady units?)
 
         "SunPlus QL8041C" ( known as Sunplus SPG2?? )
-		Clickstart ( see clickstart.cpp instead)
-		Wheel of Fortune 2nd Edition
+        Clickstart ( see clickstart.cpp instead)
+        Wheel of Fortune 2nd Edition
 
 
         "SunPlus PA7801" ( known as Sunplus SPG110? ) see spg110.cpp instead
-		Classic Arcade Pinball
-		EA Sports (NHL95 + Madden 95)
- 
-		It is unknown if the following are close to this architecture or not (no dumps yet)
+        Classic Arcade Pinball
+        EA Sports (NHL95 + Madden 95)
 
-		"SunPlus QU7073-P69A"
-		Mortal Kombat
+        It is unknown if the following are close to this architecture or not (no dumps yet)
 
-		"Sunplus QL8167"
-		Disney Princess (older)
-		Go Diego Go
+        "SunPlus QU7073-P69A"
+        Mortal Kombat
+
+        "Sunplus QL8167"
+        Disney Princess (older)
+        Go Diego Go
 
 
 Disney Princess non-GKR is Sunplus QL8167.
@@ -53,11 +53,11 @@ Disney Princess non-GKR is Sunplus QL8167.
 
         walle:
             Game seems unhappy with NVRAM, clears contents on each boot.
-		jak_pooh:
-		    In the 'Light Tag' minigame (select the rock) you can't move left with the DRC (ok with -nodrc)
-			and the game usually softlocks when you find a friend (with or without DRC)
-		
-		vii:
+        jak_pooh:
+            In the 'Light Tag' minigame (select the rock) you can't move left with the DRC (ok with -nodrc)
+            and the game usually softlocks when you find a friend (with or without DRC)
+
+        vii:
             When loading a cart from file manager, sometimes MAME will crash.
             The "MOTOR" option in the diagnostic menu does nothing when selected.
             The "SPEECH IC" option in the diagnostic menu does nothing when selected.
@@ -71,9 +71,9 @@ Disney Princess non-GKR is Sunplus QL8167.
         Test Modes:
         Justice League : press UP, DOWN, LEFT, BT3 on the JAKKS logo in that order, quickly, to get test menu
         WWE : press UP, BT1, BT2 together during startup logos
-		
-		Disney Friends, MS Pacman, WallE, Batman (and some other HotGen GameKKeys) for test mode, hold UP,
-		press A, press DOWN during startup
+
+        Disney Friends, MS Pacman, WallE, Batman (and some other HotGen GameKKeys) for test mode, hold UP,
+        press A, press DOWN during startup
 
     TODO:
         Work out how to access the hidden TEST menus for all games (most JAKKS games should have one at least)
@@ -260,6 +260,28 @@ private:
 	emu_timer *m_ctrl_poll_timer;
 	uint8_t m_controller_input[8];
 };
+
+class icanguit_state : public spg2xx_game_state
+{
+public:
+	icanguit_state(const machine_config &mconfig, device_type type, const char *tag)
+		: spg2xx_game_state(mconfig, type, tag)
+		, m_cart(*this, "cartslot")
+		, m_cart_region(nullptr)
+	{ }
+
+	void icanguit(machine_config &config);
+
+private:
+	virtual void machine_start() override;
+	//virtual void machine_reset() override;
+
+	DECLARE_DEVICE_IMAGE_LOAD_MEMBER(icanguit_cart);
+
+	required_device<generic_slot_device> m_cart;
+	memory_region *m_cart_region;
+};
+
 
 /*************************
 *    Machine Hardware    *
@@ -952,6 +974,155 @@ static INPUT_PORTS_START( rad_crik )
 	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNKNOWN )
 INPUT_PORTS_END
 
+static INPUT_PORTS_START( icanguit ) // this has something like 55 buttons, and some strings to map, must be multiplexed somehow?
+	PORT_START("P1")
+	PORT_DIPNAME( 0x0001, 0x0001, "P1" )
+	PORT_DIPSETTING(      0x0001, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0002, 0x0002, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0002, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0004, 0x0004, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0004, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0008, 0x0008, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0008, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0010, 0x0010, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0010, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0020, 0x0020, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0020, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0040, 0x0040, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0040, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0080, 0x0080, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0080, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0100, 0x0100, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0100, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0200, 0x0200, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0200, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0400, 0x0400, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0400, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0800, 0x0800, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0800, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x1000, 0x1000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x1000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x2000, 0x2000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x2000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x4000, 0x4000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x4000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x8000, 0x8000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x8000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+
+	PORT_START("P2")
+	PORT_DIPNAME( 0x0001, 0x0001, "P2" )
+	PORT_DIPSETTING(      0x0001, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0002, 0x0002, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0002, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0004, 0x0004, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0004, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0008, 0x0008, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0008, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0010, 0x0010, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0010, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0020, 0x0020, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0020, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0040, 0x0040, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0040, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0080, 0x0080, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0080, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0100, 0x0100, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0100, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0200, 0x0200, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0200, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0400, 0x0400, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0400, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0800, 0x0800, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0800, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x1000, 0x1000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x1000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x2000, 0x2000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x2000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x4000, 0x4000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x4000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x8000, 0x8000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x8000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+
+	PORT_START("P3")
+	PORT_DIPNAME( 0x0001, 0x0001, "P3" )
+	PORT_DIPSETTING(      0x0001, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_BIT( 0x0002, IP_ACTIVE_LOW, IPT_BUTTON1 ) // Enter?
+	PORT_DIPNAME( 0x0004, 0x0004, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0004, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0008, 0x0008, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0008, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0010, 0x0010, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0010, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0020, 0x0020, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0020, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0040, 0x0040, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0040, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0080, 0x0080, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0080, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0100, 0x0100, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0100, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0200, 0x0200, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0200, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_BIT( 0x0400, IP_ACTIVE_HIGH, IPT_POWER_OFF ) PORT_NAME("Power Switch") // presumably power, kils the game
+	PORT_DIPNAME( 0x0800, 0x0800, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0800, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x1000, 0x1000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x1000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x2000, 0x2000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x2000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x4000, 0x4000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x4000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x8000, 0x8000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x8000, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+INPUT_PORTS_END
+
+
 static INPUT_PORTS_START( rad_fb2 ) // controls must be multiplexed somehow, as there's no room for P2 controls otherwise (unless P2 controls were never finished and it was only sold in a single mat version, Radica left useless P2 menu options in the mini Genesis consoles)
 	PORT_START("P1")
 	PORT_BIT( 0x0001, IP_ACTIVE_LOW, IPT_JOYSTICK_LEFT ) PORT_PLAYER(1) // 'left'
@@ -1104,6 +1275,37 @@ static INPUT_PORTS_START( lexizeus ) // how many buttons does this have?  I acci
 	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
 INPUT_PORTS_END
 
+void icanguit_state::machine_start()
+{
+	spg2xx_game_state::machine_start();
+
+	// if there's a cart, override the standard banking
+	if (m_cart && m_cart->exists())
+	{
+		std::string region_tag;
+		m_cart_region = memregion(region_tag.assign(m_cart->tag()).append(GENERIC_ROM_REGION_TAG).c_str());
+		m_bank->configure_entries(0, (m_cart_region->bytes() + 0x7fffff) / 0x800000, m_cart_region->base(), 0x800000);
+		m_bank->set_entry(0);
+	}
+}
+
+DEVICE_IMAGE_LOAD_MEMBER(icanguit_state, icanguit_cart)
+{
+	uint32_t size = m_cart->common_get_size("rom");
+
+	if (size < 0x800000)
+	{
+		image.seterror(IMAGE_ERROR_UNSPECIFIED, "Unsupported cartridge size");
+		return image_init_result::FAIL;
+	}
+
+	m_cart->rom_alloc(size, GENERIC_ROM16_WIDTH, ENDIANNESS_LITTLE);
+	m_cart->common_load_rom(m_cart->get_rom_base(), size, "rom");
+
+	return image_init_result::PASS;
+}
+
+
 
 void vii_state::machine_start()
 {
@@ -1254,6 +1456,25 @@ void vii_state::vii(machine_config &config)
 
 	SOFTWARE_LIST(config, "vii_cart").set_original("vii");
 }
+
+void icanguit_state::icanguit(machine_config &config)
+{
+	SPG24X(config, m_spg, XTAL(27'000'000), m_maincpu, m_screen);
+
+	spg2xx_base(config);
+
+	m_spg->porta_in().set_ioport("P1");
+	m_spg->portb_in().set_ioport("P2");
+	m_spg->portc_in().set_ioport("P3");
+
+	GENERIC_CARTSLOT(config, m_cart, generic_plain_slot, "icanguit_cart");
+	m_cart->set_width(GENERIC_ROM16_WIDTH);
+	m_cart->set_device_load(device_image_load_delegate(&icanguit_state::device_image_load_icanguit_cart, this));
+	m_cart->set_must_be_loaded(true);
+
+	SOFTWARE_LIST(config, "icanguit_cart").set_original("icanguit");
+}
+
 
 void spg2xx_game_state::wireless60(machine_config &config)
 {
@@ -1627,6 +1848,12 @@ ROM_START( dreamlif )
 	ROM_LOAD16_WORD_SWAP( "dreamlife.bin", 0x000000, 0x800000, CRC(632e0237) SHA1(a8586e8a626d75cf7782f13cfd9f1b938af23d56) )
 ROM_END
 
+ROM_START( icanguit )
+	ROM_REGION( 0x800000, "maincpu", ROMREGION_ERASE00 )
+	// no internal ROM, requires a cartridge
+ROM_END
+
+
 /*
 Wireless Air 60
 (info provided with dump)
@@ -1752,7 +1979,7 @@ void spg2xx_game_state::init_crc()
 
 	logerror("Calculated Byte Sum of bytes from 0x10 to 0x%08x is %08x)\n", length - 1, checksum);
 }
-	
+
 void spg2xx_game_state::init_zeus()
 {
 	uint16_t *ROM = (uint16_t*)memregion("maincpu")->base();
@@ -1825,11 +2052,11 @@ CONS( 2005, jak_wof,  0, 0, jakks_gkr_wf_i2c, jak_wf_i2c,   jakks_gkr_state, emp
 CONS( 2004, jak_spdm, 0, 0, jakks_gkr_mv_i2c, jak_gkr_i2c,  jakks_gkr_state, empty_init, "JAKKS Pacific Inc / Digital Eclipse",         "Spider-Man (JAKKS Pacific TV Game, Game-Key Ready)", MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_GRAPHICS ) //  MV (1 key available)
 CONS( 2005, jak_pooh, 0, 0, jakks_gkr_wp,     jak_pooh,     jakks_gkr_state, empty_init, "JAKKS Pacific Inc / Backbone Entertainment",  "Winnie the Pooh - Piglet's Special Day (JAKKS Pacific TV Game, Game-Key Ready)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_GRAPHICS ) // WP (no game-keys released)
 
-// SpongeBob SquarePants: The Fry Cook Games   NK (3 keys available)  ^^                
+// SpongeBob SquarePants: The Fry Cook Games   NK (3 keys available)  ^^
 
 // no keys released for the following, some were in development but cancelled
 // Capcom 3-in-1                               CC (no game-keys released)
-// Care Bears                                  CB (no game-keys released)                           
+// Care Bears                                  CB (no game-keys released)
 
 // Radica TV games
 CONS( 2006, rad_skat,  0,        0, rad_skat, rad_skat,   spg2xx_game_state, init_crc, "Radica", "Play TV Skateboarder (NTSC)", MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_GRAPHICS )
@@ -1842,7 +2069,9 @@ CONS( 2007, rad_fb2,   0,        0, rad_skat, rad_fb2,    spg2xx_game_state, ini
 CONS( 2005, mattelcs,  0,        0, rad_skat, mattelcs,   spg2xx_game_state, empty_init, "Mattel", "Mattel Classic Sports",     MACHINE_IMPERFECT_SOUND )
 
 // Hasbro games
-CONS( 2007, dreamlif,  0,        0, rad_skat, rad_crik,   spg2xx_game_state, empty_init, "Hasbro ", "Dream Life",     MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
+CONS( 2007, dreamlif,  0,        0, rad_skat, rad_crik,   spg2xx_game_state, empty_init, "Hasbro", "Dream Life",     MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
+
+CONS( 2007, icanguit,  0,        0, icanguit, icanguit,   icanguit_state, empty_init, "Mattel / Fisher-Price", "I Can Play Guitar",     MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
 
 // might not fit here.  First 0x8000 bytes are blank (not too uncommon for these) then rest of rom looks like it's probably encrypted at least
 // could be later model VT based instead? even after decrypting (simple word xor) the vectors have a different format and are at a different location to the SunPlus titles

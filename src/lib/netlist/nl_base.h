@@ -24,10 +24,10 @@
 #include "plib/pstate.h"
 #include "plib/pstream.h"
 
-#include "netlist_types.h"
+#include "nltypes.h"
 #include "nl_errstr.h"
 #include "nl_lists.h"
-#include "nl_time.h"
+#include "plib/ptime.h"
 
 //============================================================
 //  MACROS / New Syntax
@@ -130,11 +130,11 @@ class NETLIB_NAME(name) : public device_t
 
 #define NETLIB_DELEGATE(chip, name) nldelegate(&NETLIB_NAME(chip) :: name, this)
 
-#define NETLIB_UPDATE_TERMINALSI() public: virtual void update_terminals() override
-#define NETLIB_HANDLERI(name) private: virtual void name() NL_NOEXCEPT
-#define NETLIB_UPDATEI() public: virtual void update() NL_NOEXCEPT override
-#define NETLIB_UPDATE_PARAMI() public: virtual void update_param() override
-#define NETLIB_RESETI() public: virtual void reset() override
+#define NETLIB_UPDATE_TERMINALSI() virtual void update_terminals() override
+#define NETLIB_HANDLERI(name) virtual void name() NL_NOEXCEPT
+#define NETLIB_UPDATEI() virtual void update() NL_NOEXCEPT override
+#define NETLIB_UPDATE_PARAMI() virtual void update_param() override
+#define NETLIB_RESETI() virtual void reset() override
 
 #define NETLIB_TIMESTEP(chip) void NETLIB_NAME(chip) :: timestep(const nl_double step)
 
@@ -773,7 +773,7 @@ namespace netlist
 		void rebuild_list();     /* rebuild m_list after a load */
 		void move_connections(net_t &dest_net);
 
-		std::vector<core_terminal_t *> m_core_terms; // save post-start m_list ...
+		std::vector<core_terminal_t *> &core_terms() { return m_core_terms; }
 #if USE_COPY_INSTEAD_OF_REFERENCE
 		void update_inputs()
 		{
@@ -786,34 +786,20 @@ namespace netlist
 			/* nothing needs to be done */
 		}
 #endif
+
 	protected:
-		state_var<netlist_sig_t> m_new_Q;
-		state_var<netlist_sig_t> m_cur_Q;
-		state_var<queue_status>  m_in_queue;    /* 0: not in queue, 1: in queue, 2: last was taken */
 
-		state_var<netlist_time>  m_next_scheduled_time;
-
-	private:
-		plib::linkedlist_t<core_terminal_t> m_list_active;
-		core_terminal_t * m_railterminal;
-
-		template <typename T>
-		void process(const T mask, netlist_sig_t sig);
-	};
-
-	class logic_net_t : public detail::net_t
-	{
-	public:
-
-		logic_net_t(netlist_state_t &nl, const pstring &aname, detail::core_terminal_t *mr = nullptr);
-
+		/* only used for logic nets */
 		netlist_sig_t Q() const noexcept { return m_cur_Q; }
+
+		/* only used for logic nets */
 		void initial(const netlist_sig_t val) noexcept
 		{
 			m_cur_Q = m_new_Q = val;
 			update_inputs();
 		}
 
+		/* only used for logic nets */
 		void set_Q_and_push(const netlist_sig_t newQ, const netlist_time delay) NL_NOEXCEPT
 		{
 			if (newQ != m_new_Q)
@@ -822,15 +808,8 @@ namespace netlist
 				push_to_queue(delay);
 			}
 		}
-		void set_Q_and_push_force(const netlist_sig_t newQ, const netlist_time delay) NL_NOEXCEPT
-		{
-			if (newQ != m_new_Q || is_queued())
-			{
-				m_new_Q = newQ;
-				push_to_queue(delay);
-			}
-		}
 
+		/* only used for logic nets */
 		void set_Q_time(const netlist_sig_t newQ, const netlist_time at) NL_NOEXCEPT
 		{
 			if (newQ != m_new_Q)
@@ -845,10 +824,34 @@ namespace netlist
 		/* internal state support
 		 * FIXME: get rid of this and implement export/import in MAME
 		 */
+		/* only used for logic nets */
 		netlist_sig_t *Q_state_ptr() { return m_cur_Q.ptr(); }
 
-	protected:
 	private:
+		state_var<netlist_sig_t> m_new_Q;
+		state_var<netlist_sig_t> m_cur_Q;
+		state_var<queue_status>  m_in_queue;    /* 0: not in queue, 1: in queue, 2: last was taken */
+		state_var<netlist_time>  m_next_scheduled_time;
+
+		core_terminal_t * m_railterminal;
+		plib::linkedlist_t<core_terminal_t> m_list_active;
+		std::vector<core_terminal_t *> m_core_terms; // save post-start m_list ...
+
+		template <typename T>
+		void process(const T mask, netlist_sig_t sig);
+	};
+
+	class logic_net_t : public detail::net_t
+	{
+	public:
+
+		logic_net_t(netlist_state_t &nl, const pstring &aname, detail::core_terminal_t *mr = nullptr);
+
+		using detail::net_t::Q;
+		using detail::net_t::initial;
+		using detail::net_t::set_Q_and_push;
+		using detail::net_t::set_Q_time;
+		using detail::net_t::Q_state_ptr;
 
 	};
 
@@ -890,11 +893,6 @@ namespace netlist
 		void push(const netlist_sig_t newQ, const netlist_time delay) NL_NOEXCEPT
 		{
 			m_my_net.set_Q_and_push(newQ, delay); // take the shortcut
-		}
-
-		void push_force(const netlist_sig_t newQ, const netlist_time delay) NL_NOEXCEPT
-		{
-			m_my_net.set_Q_and_push_force(newQ, delay); // take the shortcut
 		}
 
 		void set_Q_time(const netlist_sig_t newQ, const netlist_time at) NL_NOEXCEPT
@@ -1070,7 +1068,7 @@ namespace netlist
 		{
 		}
 
-		std::unique_ptr<plib::pistream> stream();
+		plib::unique_ptr<plib::pistream> stream();
 	protected:
 		void changed() override { }
 	};
@@ -1166,7 +1164,7 @@ namespace netlist
 		virtual bool is_timestep() const { return false; }
 
 	private:
-		bool 			m_hint_deactivate;
+		bool            m_hint_deactivate;
 		state_var_s32   m_active_outputs;
 	};
 
@@ -1276,8 +1274,8 @@ namespace netlist
 		/* need to preserve order of device creation ... */
 		using devices_collection_type = std::vector<std::pair<pstring, poolptr<core_device_t>>>;
 		netlist_state_t(const pstring &aname,
-			std::unique_ptr<callbacks_t> &&callbacks,
-			std::unique_ptr<setup_t> &&setup);
+			plib::unique_ptr<callbacks_t> &&callbacks,
+			plib::unique_ptr<setup_t> &&setup);
 
 		COPYASSIGNMOVE(netlist_state_t, delete)
 
@@ -1371,7 +1369,7 @@ namespace netlist
 		}
 
 		/* sole use is to manage lifetime of family objects */
-		std::vector<std::pair<pstring, std::unique_ptr<logic_family_desc_t>>> m_family_cache;
+		std::vector<std::pair<pstring, plib::unique_ptr<logic_family_desc_t>>> m_family_cache;
 
 		setup_t &setup() NL_NOEXCEPT { return *m_setup; }
 		const setup_t &setup() const NL_NOEXCEPT { return *m_setup; }
@@ -1387,11 +1385,11 @@ namespace netlist
 		void reset();
 
 		pstring                             m_name;
-		std::unique_ptr<plib::dynlib>       m_lib; // external lib needs to be loaded as long as netlist exists
+		plib::unique_ptr<plib::dynlib>      m_lib; // external lib needs to be loaded as long as netlist exists
 		plib::state_manager_t               m_state;
-		std::unique_ptr<callbacks_t>        m_callbacks;
+		plib::unique_ptr<callbacks_t>       m_callbacks;
 		log_type                            m_log;
-		std::unique_ptr<setup_t>            m_setup;
+		plib::unique_ptr<setup_t>           m_setup;
 
 		nets_collection_type                m_nets;
 		/* sole use is to manage lifetime of net objects */
@@ -1409,7 +1407,7 @@ namespace netlist
 	{
 	public:
 
-		explicit netlist_t(const pstring &aname, std::unique_ptr<callbacks_t> callbacks);
+		explicit netlist_t(const pstring &aname, plib::unique_ptr<callbacks_t> callbacks);
 
 		COPYASSIGNMOVE(netlist_t, delete)
 
@@ -1454,7 +1452,7 @@ namespace netlist
 		void print_stats() const;
 
 	private:
-		std::unique_ptr<netlist_state_t>    m_state;
+		plib::unique_ptr<netlist_state_t>   m_state;
 		devices::NETLIB_NAME(solver) *      m_solver;
 
 		/* mostly rw */
@@ -1462,6 +1460,7 @@ namespace netlist
 		netlist_time                        m_time;
 		devices::NETLIB_NAME(mainclock) *   m_mainclock;
 
+		PALIGNAS_CACHELINE()
 		detail::queue_t                     m_queue;
 
 		// performance
@@ -1676,7 +1675,7 @@ namespace netlist
 	{
 		nl_assert(terminal_state() != STATE_INP_PASSIVE);
 		//if (net().Q() != m_Q)
-		//	printf("term: %s, %d %d TS %d\n", this->name().c_str(), net().Q(), m_Q, terminal_state());
+		//  printf("term: %s, %d %d TS %d\n", this->name().c_str(), net().Q(), m_Q, terminal_state());
 #if USE_COPY_INSTEAD_OF_REFERENCE
 		return m_Q;
 #else

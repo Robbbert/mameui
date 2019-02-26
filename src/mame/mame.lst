@@ -2712,6 +2712,9 @@ avalnche                        // 030574           1978/04 [6502]
 cascade                         // bootleg
 catchp                          // 008837 prototype 1977/?? [6502]
 
+@source:ave_arb.cpp
+arb                             //
+
 @source:avigo.cpp
 avigo                           // 1997 Avigo
 avigo_de                        // 1997 Avigo (German)
@@ -11305,6 +11308,7 @@ ffantasyb                       // EX (c) 1989 Data East Corporation (World)
 ffantasybl                      // bootleg
 hbarrel                         // (c) 1987 Data East USA (US)
 hbarrelw                        // (c) 1987 Data East Corporation (World)
+bandit                          // (c) 1989 Data East USA (US)
 hippodrm                        // EW (c) 1989 Data East USA (US)
 midres                          // (c) 1989 Data East Corporation (World)
 midresb                         // bootleg
@@ -12913,10 +12917,18 @@ feasgla                         // EAS: Elite A/S Challenger (Glasgow program, E
 feasglafr                       // * French
 feasglag                        // * German
 feasglasp                       // * Spanish
+feag                            //
+feagfr                          //
+feagg                           //
+feagsp                          //
 feag2100                        // EAG: Elite Avant Garde 2100 (English)
 feag2100fr                      // * French
 feag2100g                       // * German
 feag2100sp                      // * Spanish
+fepriv                          //
+feprivfr                        //
+feprivg                         //
+feprivsp                        //
 fpres                           //
 fpressp                         //
 fpresg                          //
@@ -13310,8 +13322,8 @@ aligatoruna                     // (c) 1994 - Ref 940411 (unprotected)
 bang                            // (c) 1998 - Ref ???
 bangj                           // (c) 1999 - Ref ???
 play2000                        // (c) 1999 - Ref ???
-play2000a                       // (c) 1999 - Ref ???
-play2000b                       // (c) 1999 - Ref ???
+play2000_40i                    // (c) 1999 - Ref ???
+play2000_50i                    // (c) 1999 - Ref ???
 maniacsq                        // (c) 1996 - Ref 940411
 maniacsqa                       // (c) 1996 - Ref 940411
 maniacsqu                       // (c) 1996 - Ref 940411 - (unprotected)
@@ -15748,6 +15760,9 @@ inteladv
 @source:intellec4.cpp
 intlc44                         //
 intlc440                        //
+
+@source:intellect02.cpp
+intel02                         //
 
 @source:interact.cpp
 hector1                         //
@@ -18279,6 +18294,7 @@ lemmings                        // prototype (c) 1991 Data East USA (US)
 lethalen                        // GX191 (c) 1992
 lethaleneaa                     // GX191 (c) 1992
 lethaleneab                     // GX191 (c) 1992
+lethalenead                     // GX191 (c) 1992
 lethaleneae                     // GX191 (c) 1992
 lethalenj                       // GX191 (c) 1992
 lethalenua                      // GX191 (c) 1992
@@ -30363,6 +30379,10 @@ neoprint                        //
 npcartv1                        //
 npmillen                        //
 nprsp                           //
+npskv                           //
+npsprg98                        //
+npsprgv4                        //
+npusagif                        //
 
 @source:neptunp2.cpp
 neptunp2                        //
@@ -30696,6 +30716,10 @@ pkunwarj                        // UPL-????? (c) 1985 (Arcade Game TV List - P.9
 raiders5                        // UPL-85004 (c) 1985
 raiders5t                       // UPL-85004 (c) 1985 Taito license
 
+@source:novag_cforte.cpp
+cfortea                         //
+cforteb                         //
+
 @source:novag_delta1.cpp
 ccdelta1                        //
 
@@ -30707,9 +30731,10 @@ scorpio68                       //
 nocto                           //
 npresto                         //
 
-@source:novagbase.cpp
-cfortea                         //
-cforteb                         //
+@source:novag_scon.cpp
+supercon                        //
+
+@source:novag_sexpert.cpp
 sexperta                        //
 sexpertb                        //
 sexpertc                        //
@@ -30718,7 +30743,6 @@ sfortea                         //
 sfortea1                        //
 sforteb                         //
 sfortec                         //
-supercon                        //
 
 @source:nsg6809.cpp
 pitchhit                        //
@@ -34732,6 +34756,7 @@ dinoki25                        //
 dinoking                        // 2005.09 Kodai Ouja Kyouryuu King / Ancient Ruler Dinosaur King
 dinokior                        //
 loveber3                        //
+loveber3cn                      //
 lovebero                        //
 lovebery                        // 2004.10 Oshare Majo Love and Berry / Fashionable Witch Love and Berry
 ochaken                         //
@@ -36528,6 +36553,7 @@ galpani4j                       // 1996.09 (c) 1996 Kaneko (Japan)
 galpani4k                       // 1996.09 (c) 1996 Kaneko (Korea)
 galpanidx                       // 1996.09 (c) 1996 Kaneko (Asia)
 galpanis                        // 1997.04 (c) 1997 Kaneko (Europe)
+galpanisa                       // 1997.04 (c) 1997 Kaneko (Asia)
 galpanise                       // 1997.04 (c) 1997 Kaneko (Europe)
 galpanisj                       // 1997.04 (c) 1997 Kaneko (Japan)
 galpanisk                       // 1997.04 (c) 1997 Kaneko (Korea)
@@ -38737,6 +38763,7 @@ rad_crik                        //
 rad_fb2                         //
 mattelcs                        //
 dreamlif                        //
+icanguit                        //
 
 @source:vsmile.cpp
 vsmile                          //
@@ -39821,20 +39848,27 @@ wwfsstaru4                      // TA-0024 (c) 1989 (US)
 @source:wy100.cpp
 wy100                           // WY-100
 
+@source:wy150.cpp
+wy120                           // WY-120
+wy150                           // WY-150
+wy160                           // WY-160
+
+@source:wy30p.cpp
+wy30p                           // WY-30+
+
 @source:wy50.cpp
 wy50                            // WY-50
 wy75                            // WY-75
 
+@source:wy55.cpp
+wy55                            // WY-55
+
+@source:wy60.cpp
+wy60                            // WY-60
+wy60a                           // WY-60
+
 @source:wy85.cpp
 wy85                            // WY-85
-
-@source:wyse.cpp
-wy55                            // WY-55
-wy60                            // WY-60
-wy120                           // WY-120
-wy150                           // WY-150
-wy160                           // WY-160
-wy30p                           // WY-30+
 
 @source:wyvernf0.cpp
 wyvernf0                        // A39 (c) 1985 Taito Corporation (Japan)
@@ -39911,6 +39945,7 @@ ekaraphs                        //
 epitch                          //
 ddrfammt                        //
 popira                          //
+popira2                         //
 taikodp                         //
 ttv_sw                          //
 ttv_lotr                        //

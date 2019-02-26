@@ -2,6 +2,10 @@
 // copyright-holders:hap
 // thanks-to:Berger
 /******************************************************************************
+*
+* fidel_cc7.cpp, subdriver of machine/fidelbase.cpp, machine/chessbase.cpp
+
+*******************************************************************************
 
 Fidelity Chess Challenger 7 (BCC)
 ------------------------
@@ -195,7 +199,7 @@ void bcc_state::bkc(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &bcc_state::main_map);
 	m_maincpu->set_addrmap(AS_IO, &bcc_state::main_io);
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(bcc_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_bkc);
 }
 
@@ -206,7 +210,7 @@ void bcc_state::bcc(machine_config &config)
 
 	/* sound hardware */
 	SPEAKER(config, "speaker").front_center();
-	DAC_1BIT(config, m_dac, 0).add_route(ALL_OUTPUTS, "speaker", 0.25);
+	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
 	VOLTAGE_REGULATOR(config, "vref").add_route(0, "dac", 1.0, DAC_VREF_POS_INPUT);
 }
 

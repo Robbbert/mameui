@@ -1,6 +1,8 @@
 // license:BSD-3-Clause
 // copyright-holders:Kevin Horton,Jonathan Gevaryahu,Sandro Ronco,hap
 /******************************************************************************
+*
+* fidel_vcc.cpp, subdriver of machine/fidelbase.cpp, machine/chessbase.cpp
 
 Fidelity Voice Chess Challenger series hardware
 - Voice Chess Challenger (VCC) (version A and B?)
@@ -121,6 +123,7 @@ public:
 		m_ppi8255(*this, "ppi8255")
 	{ }
 
+	// machine drivers
 	void vcc(machine_config &config);
 
 protected:
@@ -301,7 +304,7 @@ void vcc_state::vcc(machine_config &config)
 	m_ppi8255->in_pc_callback().set(FUNC(vcc_state::ppi_portc_r));
 	m_ppi8255->out_pc_callback().set(FUNC(vcc_state::ppi_portc_w));
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(vcc_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_vcc);
 
 	/* sound hardware */
@@ -406,9 +409,9 @@ ROM_END
 //    YEAR  NAME   PARENT CMP MACHINE  INPUT  STATE      INIT              COMPANY, FULLNAME, FLAGS
 CONS( 1979, vcc,   0,      0, vcc,     vcc,   vcc_state, init_language<0>, "Fidelity Electronics", "Voice Chess Challenger (English)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 CONS( 1979, vccg,  vcc,    0, vcc,     vcc,   vcc_state, init_language<1>, "Fidelity Electronics", "Voice Chess Challenger (German)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
-CONS( 1979, vccsp, vcc,    0, vcc,     vcc,   vcc_state, init_language<2>, "Fidelity Electronics", "Voice Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
-CONS( 1979, vccfr, vcc,    0, vcc,     vcc,   vcc_state, init_language<4>, "Fidelity Electronics", "Voice Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1979, vccsp, vcc,    0, vcc,     vcc,   vcc_state, init_language<4>, "Fidelity Electronics", "Voice Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1979, vccfr, vcc,    0, vcc,     vcc,   vcc_state, init_language<2>, "Fidelity Electronics", "Voice Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 CONS( 1980, uvc,   vcc,    0, vcc,     vcc,   vcc_state, init_language<0>, "Fidelity Electronics", "Advanced Voice Chess Challenger (English)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 CONS( 1980, uvcg,  vcc,    0, vcc,     vcc,   vcc_state, init_language<1>, "Fidelity Electronics", "Advanced Voice Chess Challenger (German)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
-CONS( 1980, uvcsp, vcc,    0, vcc,     vcc,   vcc_state, init_language<2>, "Fidelity Electronics", "Advanced Voice Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
-CONS( 1980, uvcfr, vcc,    0, vcc,     vcc,   vcc_state, init_language<4>, "Fidelity Electronics", "Advanced Voice Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1980, uvcsp, vcc,    0, vcc,     vcc,   vcc_state, init_language<4>, "Fidelity Electronics", "Advanced Voice Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1980, uvcfr, vcc,    0, vcc,     vcc,   vcc_state, init_language<2>, "Fidelity Electronics", "Advanced Voice Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )

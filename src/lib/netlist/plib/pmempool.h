@@ -29,12 +29,11 @@ namespace plib {
 		constexpr pool_deleter() noexcept = default;
 
 		template<typename PU, typename U, typename = typename
-		       std::enable_if<std::is_convertible< U*, T*>::value>::type>
-	    pool_deleter(const pool_deleter<PU, U>&) noexcept { }
+			   std::enable_if<std::is_convertible< U*, T*>::value>::type>
+		pool_deleter(const pool_deleter<PU, U>&) noexcept { }
 
 		void operator()(T *p) const
 		{
-			p->~T();
 			P::free(p);
 		}
 	};
@@ -48,17 +47,18 @@ namespace plib {
 	private:
 		struct block
 		{
-			block(mempool *mp)
+			block(mempool *mp, std::size_t min_bytes)
 			: m_num_alloc(0)
-			, m_free(mp->m_min_alloc)
 			, m_cur(0)
 			, m_data(nullptr)
 			, m_mempool(mp)
 			{
-				std::size_t alloc_bytes = (mp->m_min_alloc + mp->m_min_align - 1) & ~(mp->m_min_align - 1);
+				min_bytes = std::max(mp->m_min_alloc, min_bytes);
+				m_free = min_bytes;
+				std::size_t alloc_bytes = (min_bytes + mp->m_min_align - 1) & ~(mp->m_min_align - 1);
 				m_data_allocated = static_cast<char *>(::operator new(alloc_bytes));
 				void *r = m_data_allocated;
-				std::align(mp->m_min_align, mp->m_min_alloc, r, alloc_bytes);
+				std::align(mp->m_min_align, min_bytes, r, alloc_bytes);
 				m_data  = reinterpret_cast<char *>(r);
 			}
 			std::size_t m_num_alloc;
@@ -80,9 +80,9 @@ namespace plib {
 		};
 
 
-		block * new_block()
+		block * new_block(std::size_t min_bytes)
 		{
-			auto *b = new block(this);
+			auto *b = plib::pnew<block>(this, min_bytes);
 			m_blocks.push_back(b);
 			return b;
 		}
@@ -122,42 +122,54 @@ namespace plib {
 			}
 		}
 
-		void *alloc(size_t size, size_t align)
+		template <std::size_t ALIGN>
+		void *alloc(size_t size)
 		{
+			size_t align = ALIGN;
 			if (align < m_min_align)
 				align = m_min_align;
 
-			size_t rs = (size + align - 1) & ~(align - 1);
+			size_t rs = size + align;
 			for (auto &b : m_blocks)
 			{
 				if (b->m_free > rs)
 				{
 					b->m_free -= rs;
 					b->m_num_alloc++;
-					auto ret = reinterpret_cast<void *>(b->m_data + b->m_cur);
+					auto *ret = reinterpret_cast<void *>(b->m_data + b->m_cur);
 					auto capacity(rs);
-					std::align(align, size, ret, capacity);
+					ret = std::align(align, size, ret, capacity);
+					// FIXME: if (ret == nullptr)
+					//  printf("Oh no\n");
 					sinfo().insert({ ret, info(b, b->m_cur)});
+					rs -= (capacity - size);
 					b->m_cur += rs;
 
 					return ret;
 				}
 			}
 			{
-				block *b = new_block();
+				block *b = new_block(rs);
 				b->m_num_alloc = 1;
 				b->m_free = m_min_alloc - rs;
-				auto ret = reinterpret_cast<void *>(b->m_data + b->m_cur);
+				auto *ret = reinterpret_cast<void *>(b->m_data + b->m_cur);
 				auto capacity(rs);
-				std::align(align, size, ret, capacity);
+				ret = std::align(align, size, ret, capacity);
+				// FIXME: if (ret == nullptr)
+				//  printf("Oh no\n");
 				sinfo().insert({ ret, info(b, b->m_cur)});
+				rs -= (capacity - size);
 				b->m_cur += rs;
 				return ret;
 			}
 		}
 
-		static void free(void *ptr)
+		template <typename T>
+		static void free(T *ptr)
 		{
+			/* call destructor */
+			ptr->~T();
+
 			auto it = sinfo().find(ptr);
 			if (it == sinfo().end())
 				plib::terminate("mempool::free - pointer not found\n");
@@ -181,7 +193,7 @@ namespace plib {
 		template<typename T, typename... Args>
 		poolptr<T> make_poolptr(Args&&... args)
 		{
-			auto mem = this->alloc(sizeof(T), alignof(T));
+			auto *mem = this->alloc<alignof(T)>(sizeof(T));
 			auto *obj = new (mem) T(std::forward<Args>(args)...);
 			poolptr<T> a(obj, true);
 			return std::move(a);
@@ -207,6 +219,7 @@ namespace plib {
 
 		~mempool_default() = default;
 
+#if 0
 		void *alloc(size_t size)
 		{
 			plib::unused_var(m_min_alloc); // -Wunused-private-field fires without
@@ -215,9 +228,11 @@ namespace plib {
 			return ::operator new(size);
 		}
 
-		static void free(void *ptr)
+#endif
+		template <typename T>
+		static void free(T *ptr)
 		{
-			::operator delete(ptr);
+			plib::pdelete(ptr);
 		}
 
 		template <typename T>
@@ -226,12 +241,13 @@ namespace plib {
 		template<typename T, typename... Args>
 		poolptr<T> make_poolptr(Args&&... args)
 		{
-			auto mem(alloc(sizeof(T)));
-			auto *obj = new (mem) T(std::forward<Args>(args)...);
+			plib::unused_var(m_min_alloc); // -Wunused-private-field fires without
+			plib::unused_var(m_min_align);
+
+			auto *obj = plib::pnew<T>(std::forward<Args>(args)...);
 			poolptr<T> a(obj, true);
 			return std::move(a);
 		}
-
 	};
 
 

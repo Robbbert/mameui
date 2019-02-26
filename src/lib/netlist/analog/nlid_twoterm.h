@@ -33,7 +33,7 @@
 #ifndef NLID_TWOTERM_H_
 #define NLID_TWOTERM_H_
 
-#include "../plib/pfunction.h"
+#include "plib/pfunction.h"
 #include "netlist/nl_base.h"
 #include "netlist/nl_setup.h"
 
@@ -120,7 +120,6 @@ NETLIB_OBJECT_DERIVED(R_base, twoterm)
 	{
 	}
 
-public:
 	void set_R(const nl_double R)
 	{
 		const nl_double G = plib::constants<nl_double>::one() / R;
@@ -128,8 +127,9 @@ public:
 				-G,  G, 0.0);
 	}
 
-protected:
 	NETLIB_RESETI();
+
+protected:
 	//NETLIB_UPDATEI();
 
 };
@@ -141,7 +141,6 @@ NETLIB_OBJECT_DERIVED(R, R_base)
 	{
 	}
 
-	param_double_t m_R;
 
 protected:
 
@@ -150,6 +149,7 @@ protected:
 	NETLIB_UPDATE_PARAMI();
 
 private:
+	param_double_t m_R;
 	/* protect set_R ... it's a recipe to desaster when used to bypass the parameter */
 	using NETLIB_NAME(R_base)::set_R;
 };
@@ -235,9 +235,9 @@ public:
 	NETLIB_TIMESTEPI();
 
 	param_double_t m_C;
+	NETLIB_RESETI();
 
 protected:
-	NETLIB_RESETI();
 	//NETLIB_UPDATEI();
 	NETLIB_UPDATE_PARAMI();
 
@@ -265,15 +265,15 @@ public:
 
 	NETLIB_IS_TIMESTEP(true)
 	NETLIB_TIMESTEPI();
-
-	param_double_t m_L;
+	NETLIB_RESETI();
 
 protected:
-	NETLIB_RESETI();
 	//NETLIB_UPDATEI();
 	NETLIB_UPDATE_PARAMI();
 
 private:
+	param_double_t m_L;
+
 	nl_double m_GParallel;
 	nl_double m_G;
 	nl_double m_I;
@@ -286,7 +286,7 @@ private:
 class generic_diode
 {
 public:
-	generic_diode(device_t &dev, pstring name);
+	generic_diode(device_t &dev, const pstring &name);
 
 	void update_diode(const double nVd);
 
@@ -381,14 +381,14 @@ public:
 
 	NETLIB_IS_DYNAMIC(true)
 	NETLIB_UPDATE_TERMINALSI();
-
-	diode_model_t m_model;
+	NETLIB_RESETI();
 
 protected:
-	NETLIB_RESETI();
 	//NETLIB_UPDATEI();
 	NETLIB_UPDATE_PARAMI();
 
+private:
+	diode_model_t m_model;
 	generic_diode m_D;
 };
 
@@ -426,7 +426,7 @@ public:
 	}
 
 protected:
-	// NETLIB_UPDATEI() { 	NETLIB_NAME(twoterm)::update(time); }
+	// NETLIB_UPDATEI() {   NETLIB_NAME(twoterm)::update(time); }
 
 	NETLIB_RESETI()
 	{

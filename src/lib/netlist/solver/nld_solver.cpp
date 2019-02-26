@@ -31,11 +31,11 @@
 #pragma GCC optimize "ivopts"
 #endif
 
-#include "../nl_lists.h"
+#include "netlist/nl_lists.h"
 
-#include "../plib/pomp.h"
+#include "plib/pomp.h"
 
-#include "../nl_factory.h"
+#include "netlist/nl_factory.h"
 
 #include "nld_matrix_solver.h"
 #include "nld_solver.h"
@@ -175,6 +175,25 @@ poolptr<matrix_solver_t> NETLIB_NAME(solver)::create_solver(std::size_t size, co
 	}
 }
 
+template <typename FT, int SIZE>
+poolptr<matrix_solver_t> NETLIB_NAME(solver)::create_solver_x(std::size_t size, const pstring &solvername)
+{
+	if (SIZE > 0)
+	{
+		if (size == SIZE)
+			return create_solver<FT, SIZE>(size, solvername);
+		else
+			return this->create_solver_x<FT, SIZE-1>(size, solvername);
+	}
+	else
+	{
+		if (size * 2 > -SIZE )
+			return create_solver<FT, SIZE>(size, solvername);
+		else
+			return this->create_solver_x<FT, SIZE / 2>(size, solvername);
+	}
+};
+
 struct net_splitter
 {
 
@@ -194,7 +213,7 @@ struct net_splitter
 			return;
 		/* add the net */
 		groups.back().push_back(n);
-		for (auto &p : n->m_core_terms)
+		for (auto &p : n->core_terms())
 		{
 			if (p->is_type(detail::terminal_type::TERMINAL))
 			{
@@ -230,9 +249,6 @@ struct net_splitter
 
 void NETLIB_NAME(solver)::post_start()
 {
-	const bool use_specific = true;
-	plib::unused_var(use_specific);
-
 	m_params.m_pivot = m_pivot();
 	m_params.m_accuracy = m_accuracy();
 	/* FIXME: Throw when negative */
@@ -245,6 +261,10 @@ void NETLIB_NAME(solver)::post_start()
 	m_params.m_min_timestep = m_dynamic_min_ts();
 	m_params.m_dynamic_ts = (m_dynamic_ts() == 1 ? true : false);
 	m_params.m_max_timestep = netlist_time::from_double(1.0 / m_freq()).as_double();
+
+	m_params.m_use_gabs = m_use_gabs();
+	m_params.m_use_linear_prediction = m_use_linear_prediction();
+
 
 	if (m_params.m_dynamic_ts)
 	{
@@ -283,18 +303,11 @@ void NETLIB_NAME(solver)::post_start()
 		{
 #if 1
 			case 1:
-				if (use_specific)
-					ms = pool().make_poolptr<matrix_solver_direct1_t<double>>(state(), sname, &m_params);
-				else
-					ms = create_solver<double, 1>(1, sname);
+				ms = pool().make_poolptr<matrix_solver_direct1_t<double>>(state(), sname, &m_params);
 				break;
 			case 2:
-				if (use_specific)
-					ms = pool().make_poolptr<matrix_solver_direct2_t<double>>(state(), sname, &m_params);
-				else
-					ms = create_solver<double, 2>(2, sname);
+				ms = pool().make_poolptr<matrix_solver_direct2_t<double>>(state(), sname, &m_params);
 				break;
-#if 1
 			case 3:
 				ms = create_solver<double, 3>(3, sname);
 				break;
@@ -319,6 +332,7 @@ void NETLIB_NAME(solver)::post_start()
 			case 10:
 				ms = create_solver<double, 10>(10, sname);
 				break;
+#if 0
 			case 11:
 				ms = create_solver<double, 11>(11, sname);
 				break;
@@ -341,7 +355,7 @@ void NETLIB_NAME(solver)::post_start()
 				ms = create_solver<double, 49>(49, sname);
 				break;
 #endif
-#if 0
+#if 1
 			case 86:
 				ms = create_solver<double,86>(86, sname);
 				break;
@@ -389,7 +403,7 @@ void NETLIB_NAME(solver)::post_start()
 		for (auto &n : grp)
 		{
 			log().verbose("Net {1}", n->name());
-			for (const auto &pcore : n->m_core_terms)
+			for (const auto &pcore : n->core_terms())
 			{
 				log().verbose("   {1}", pcore->name());
 			}

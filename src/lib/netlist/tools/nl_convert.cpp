@@ -5,8 +5,8 @@
  *
  */
 
-#include "../plib/palloc.h"
-#include "../plib/putil.h"
+#include "plib/palloc.h"
+#include "plib/putil.h"
 #include "nl_convert.h"
 #include <algorithm>
 #include <cmath>
@@ -81,7 +81,7 @@ void nl_convert_base_t::add_ext_alias(const pstring &alias)
 	m_ext_alias.push_back(alias);
 }
 
-void nl_convert_base_t::add_device(std::unique_ptr<dev_t> dev)
+void nl_convert_base_t::add_device(plib::unique_ptr<dev_t> dev)
 {
 	for (auto & d : m_devs)
 		if (d->name() == dev->name())
@@ -105,7 +105,7 @@ void nl_convert_base_t::add_device(const pstring &atype, const pstring &aname)
 	add_device(plib::make_unique<dev_t>(atype, aname));
 }
 
-void nl_convert_base_t::add_term(pstring netname, pstring termname)
+void nl_convert_base_t::add_term(const pstring &netname, const pstring &termname)
 {
 	net_t * net = nullptr;
 	auto idx = m_nets.find(netname);

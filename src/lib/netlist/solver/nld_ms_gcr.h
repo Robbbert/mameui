@@ -10,14 +10,15 @@
 #ifndef NLD_MS_GCR_H_
 #define NLD_MS_GCR_H_
 
-#include <algorithm>
-#include <netlist/plib/mat_cr.h>
+#include "plib/mat_cr.h"
 
-#include "../plib/pdynlib.h"
-#include "../plib/pstream.h"
-#include "../plib/vector_ops.h"
+#include "plib/pdynlib.h"
+#include "plib/pstream.h"
+#include "plib/vector_ops.h"
 #include "nld_ms_direct.h"
 #include "nld_solver.h"
+
+#include <algorithm>
 
 namespace netlist
 {
@@ -65,7 +66,8 @@ private:
 	plib::parray<FT, SIZE> RHS;
 	plib::parray<FT, SIZE> new_V;
 
-	std::array<std::vector<FT *>, storage_N> m_term_cr;
+	std::array<plib::aligned_vector<FT *, PALIGN_VECTOROPT>, storage_N> m_term_cr;
+//  std::array<std::vector<FT *>, storage_N> m_term_cr;
 
 	mat_type mat;
 

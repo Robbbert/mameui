@@ -2,6 +2,8 @@
 // copyright-holders:Kevin Horton,Jonathan Gevaryahu,Sandro Ronco,hap
 // thanks-to:Berger,yoyo_chessboard
 /******************************************************************************
+*
+* fidel_csc.cpp, subdriver of machine/fidelbase.cpp, machine/chessbase.cpp
 
 Fidelity CSC(and derived) hardware
 - Champion Sensory Chess Challenger
@@ -151,8 +153,8 @@ All three of the above are called "segment H".
 Super 9 Sensory Chess Challenger (SU9/DS9)
 This is basically the Fidelity Elite A/S program on CSC hardware.
 Model DS9(Deluxe) has a 5MHz XTAL, but is otherwise same.
+Septennial(SCC) is the same as well, but clocked even higher.
 ---------------------------------
-
 R6502AP CPU, 1.95MHz(3.9MHz resonator)
 2 RAM chips, assume 4KB
 2*8KB ROM + 1*2KB ROM
@@ -166,7 +168,6 @@ Reversi Sensory Challenger (RSC)
 The 1st version came out in 1980, a program revision was released in 1981.
 Another distinction is the board color and layout, the 1981 version is green.
 ---------------------------------
-
 8*(8+1) buttons, 8*8+1 LEDs
 1KB RAM(2*2114), 4KB ROM
 MOS MPS 6502B CPU, frequency unknown
@@ -251,8 +252,9 @@ void su9_state::machine_reset()
 
 void su9_state::su9_set_cpu_freq()
 {
-	// SU9 CPU is clocked 1.95MHz, DS9 is 2.5MHz
-	m_maincpu->set_unscaled_clock((ioport("FAKE")->read() & 1) ? (5_MHz_XTAL/2) : (3.9_MHz_XTAL/2));
+	// SU9 CPU is clocked 1.95MHz, DS9 is 2.5MHz, SCC is 3MHz
+	u8 inp = ioport("FAKE")->read();
+	m_maincpu->set_unscaled_clock((inp & 2) ? (6_MHz_XTAL/2) : ((inp & 1) ? (5_MHz_XTAL/2) : (3.9_MHz_XTAL/2)));
 }
 
 
@@ -419,7 +421,7 @@ void csc_state::rsc_map(address_map &map)
 ******************************************************************************/
 
 static INPUT_PORTS_START( csc )
-	PORT_INCLUDE( fidel_cb_buttons )
+	PORT_INCLUDE( generic_cb_buttons )
 
 	PORT_MODIFY("IN.0")
 	PORT_BIT(0x100, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_SPACE) PORT_NAME("Speaker")
@@ -462,13 +464,14 @@ static INPUT_PORTS_START( su9 )
 	PORT_BIT(0x20, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_6) PORT_CODE(KEYCODE_6_PAD) PORT_NAME("PB / King")
 
 	PORT_START("FAKE")
-	PORT_CONFNAME( 0x01, 0x00, "CPU Frequency" ) PORT_CHANGED_MEMBER(DEVICE_SELF, su9_state, su9_cpu_freq, nullptr) // factory set
+	PORT_CONFNAME( 0x03, 0x00, "CPU Frequency" ) PORT_CHANGED_MEMBER(DEVICE_SELF, su9_state, su9_cpu_freq, nullptr) // factory set
 	PORT_CONFSETTING(    0x00, "1.95MHz (SU9)" )
 	PORT_CONFSETTING(    0x01, "2.5MHz (DS9)" )
+	PORT_CONFSETTING(    0x02, "3MHz (SCC)" )
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( rsc )
-	PORT_INCLUDE( fidel_cb_buttons )
+	PORT_INCLUDE( generic_cb_buttons )
 
 	PORT_START("IN.8")
 	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_8) PORT_CODE(KEYCODE_1_PAD) PORT_NAME("ST")
@@ -513,7 +516,7 @@ void csc_state::csc(machine_config &config)
 	m_pia[1]->writepb_handler().set(FUNC(csc_state::pia1_pb_w));
 	m_pia[1]->ca2_handler().set(FUNC(csc_state::pia1_ca2_w));
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(csc_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_csc);
 
 	/* sound hardware */
@@ -522,7 +525,7 @@ void csc_state::csc(machine_config &config)
 	m_speech->ext_read().set(FUNC(csc_state::speech_r));
 	m_speech->add_route(ALL_OUTPUTS, "speaker", 0.75);
 
-	DAC_1BIT(config, m_dac, 0).add_route(ALL_OUTPUTS, "speaker", 0.25);
+	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
 	VOLTAGE_REGULATOR(config, "vref").add_route(0, "dac", 1.0, DAC_VREF_POS_INPUT);
 }
 
@@ -554,12 +557,12 @@ void csc_state::rsc(machine_config &config)
 	m_pia[0]->ca2_handler().set(FUNC(csc_state::pia0_ca2_w));
 	m_pia[0]->cb2_handler().set(FUNC(csc_state::pia0_cb2_w));
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(csc_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_rsc_v2);
 
 	/* sound hardware */
 	SPEAKER(config, "speaker").front_center();
-	DAC_1BIT(config, m_dac, 0).add_route(ALL_OUTPUTS, "speaker", 0.25);
+	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
 	VOLTAGE_REGULATOR(config, "vref").add_route(0, "dac", 1.0, DAC_VREF_POS_INPUT);
 }
 
@@ -681,12 +684,12 @@ ROM_END
 //    YEAR  NAME        PARENT    CMP MACHINE  INPUT  STATE      INIT              COMPANY, FULLNAME, FLAGS
 CONS( 1981, csc,        0,        0, csc,      csc,   csc_state, init_language<0>, "Fidelity Electronics", "Champion Sensory Chess Challenger (English)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
 CONS( 1981, cscg,       csc,      0, csc,      csc,   csc_state, init_language<1>, "Fidelity Electronics", "Champion Sensory Chess Challenger (German)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
-CONS( 1981, cscsp,      csc,      0, csc,      csc,   csc_state, init_language<2>, "Fidelity Electronics", "Champion Sensory Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
-CONS( 1981, cscfr,      csc,      0, csc,      csc,   csc_state, init_language<3>, "Fidelity Electronics", "Champion Sensory Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
+CONS( 1981, cscsp,      csc,      0, csc,      csc,   csc_state, init_language<3>, "Fidelity Electronics", "Champion Sensory Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
+CONS( 1981, cscfr,      csc,      0, csc,      csc,   csc_state, init_language<2>, "Fidelity Electronics", "Champion Sensory Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
 
 CONS( 1983, super9cc,   0,        0, su9,      su9,   su9_state, init_language<0>, "Fidelity Electronics", "Super 9 Sensory Chess Challenger (English)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
 CONS( 1983, super9ccg,  super9cc, 0, su9,      su9,   su9_state, init_language<1>, "Fidelity Electronics", "Super 9 Sensory Chess Challenger (German)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
-CONS( 1983, super9ccsp, super9cc, 0, su9,      su9,   su9_state, init_language<2>, "Fidelity Electronics", "Super 9 Sensory Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
-CONS( 1983, super9ccfr, super9cc, 0, su9,      su9,   su9_state, init_language<3>, "Fidelity Electronics", "Super 9 Sensory Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
+CONS( 1983, super9ccsp, super9cc, 0, su9,      su9,   su9_state, init_language<3>, "Fidelity Electronics", "Super 9 Sensory Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
+CONS( 1983, super9ccfr, super9cc, 0, su9,      su9,   su9_state, init_language<2>, "Fidelity Electronics", "Super 9 Sensory Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
 
 CONS( 1981, reversic,   0,        0, rsc,      rsc,   csc_state, empty_init,       "Fidelity Electronics", "Reversi Sensory Challenger (green version)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )

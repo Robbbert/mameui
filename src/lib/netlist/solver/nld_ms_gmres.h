@@ -8,10 +8,10 @@
 #ifndef NLD_MS_GMRES_H_
 #define NLD_MS_GMRES_H_
 
-#include "../plib/gmres.h"
-#include "../plib/mat_cr.h"
-#include "../plib/parray.h"
-#include "../plib/vector_ops.h"
+#include "plib/gmres.h"
+#include "plib/mat_cr.h"
+#include "plib/parray.h"
+#include "plib/vector_ops.h"
 #include "nld_ms_direct.h"
 #include "nld_solver.h"
 
@@ -51,7 +51,7 @@ namespace devices
 
 		using mattype = typename plib::matrix_compressed_rows_t<FT, SIZE>::index_type;
 
-		plib::parray<std::vector<FT *>, SIZE> m_term_cr;
+		plib::parray<plib::aligned_vector<FT *, PALIGN_VECTOROPT>, SIZE> m_term_cr;
 		plib::mat_precondition_ILU<FT, SIZE> m_ops;
 		//plib::mat_precondition_diag<FT, SIZE> m_ops;
 		plib::gmres_t<FT, SIZE> m_gmres;
@@ -117,11 +117,10 @@ namespace devices
 			this->m_new_V[k] = this->m_nets[k]->Q_Analog();
 		}
 
-
 		const float_type accuracy = this->m_params.m_accuracy;
 
-		const std::size_t iter = std::max(1u, this->m_params.m_gs_loops);
-		std::size_t gsl = m_gmres.solve(m_ops, this->m_new_V, RHS, iter, accuracy);
+		auto iter = std::max(plib::constants<std::size_t>::one(), this->m_params.m_gs_loops);
+		auto gsl = m_gmres.solve(m_ops, this->m_new_V, RHS, iter, accuracy);
 
 		this->m_iterative_total += gsl;
 		this->m_stat_calculations++;

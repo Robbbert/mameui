@@ -2,11 +2,14 @@
 // copyright-holders:hap
 // thanks-to:yoyo_chessboard
 /******************************************************************************
+*
+* fidel_chesster.cpp, subdriver of machine/fidelbase.cpp, machine/chessbase.cpp
+
+*******************************************************************************
 
 Fidelity Chesster (model 6120)
 There is also a German version titled Kishon Chesster (model 6120G, or 6127)
 ----------------
-
 8*(8+1) buttons, 8+8+1 LEDs
 8KB RAM(UM6264-12), 32KB ROM(M27C256B)
 Ricoh RP65C02G CPU, 5MHz XTAL
@@ -47,6 +50,7 @@ public:
 	void init_chesster();
 
 private:
+	// address maps
 	void main_map(address_map &map);
 
 	int m_numbanks;
@@ -118,7 +122,7 @@ void chesster_state::main_map(address_map &map)
 ******************************************************************************/
 
 static INPUT_PORTS_START( chesster )
-	PORT_INCLUDE( fidel_cb_buttons )
+	PORT_INCLUDE( generic_cb_buttons )
 
 	PORT_START("IN.8")
 	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_DEL) PORT_NAME("Clear")
@@ -148,12 +152,12 @@ void chesster_state::chesster(machine_config &config)
 	m_irq_on->set_start_delay(irq_period - attotime::from_nsec(2600)); // active for 2.6us
 	TIMER(config, "irq_off").configure_periodic(FUNC(chesster_state::irq_off<M6502_IRQ_LINE>), irq_period);
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(chesster_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_chesster);
 
 	/* sound hardware */
 	SPEAKER(config, "speaker").front_center();
-	DAC_8BIT_R2R(config, "dac8", 0).add_route(ALL_OUTPUTS, "speaker", 0.5); // m74hc374b1.ic1 + 8l513_02.z2
+	DAC_8BIT_R2R(config, "dac8").add_route(ALL_OUTPUTS, "speaker", 0.5); // m74hc374b1.ic1 + 8l513_02.z2
 	voltage_regulator_device &vref(VOLTAGE_REGULATOR(config, "vref"));
 	vref.add_route(0, "dac8", 1.0, DAC_VREF_POS_INPUT);
 	vref.add_route(0, "dac8", -1.0, DAC_VREF_NEG_INPUT);

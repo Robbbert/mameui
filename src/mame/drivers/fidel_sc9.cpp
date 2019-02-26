@@ -2,23 +2,26 @@
 // copyright-holders:hap
 // thanks-to:Berger,yoyo_chessboard
 /******************************************************************************
+*
+* fidel_sc9.cpp, subdriver of machine/fidelbase.cpp, machine/chessbase.cpp
 
-Fidelity Sensory Chess Challenger "9" (SC9)
-3 versions were available, the newest "B" version was 2MHz and included the Budapest program.
-The Playmatic S was only released in Germany, it's basically a 'deluxe' version of SC9
-with magnet sensors and came with CB9 and CB16.
----------------------------------
+*******************************************************************************
 
-8*(8+1) buttons, 8*8+1 LEDs
-36-pin edge connector, assume same as SC12
-2KB RAM(TMM2016P), 2*8KB ROM(HN48364P)
-R6502-13, 1.4MHz from resonator, another pcb with the same resonator was measured 1.49MHz*
-PCB label 510-1046C01 2-1-82
+Fidelity Sensory Chess Challenger "9" (SC9) overview:
+- 8*(8+1) buttons, 8*8+1 LEDs
+- 36-pin edge connector, assume same as SC12
+- 2KB RAM(TMM2016P), 2*8KB ROM(HN48364P)
+- R6502-13, 1.4MHz from resonator, another pcb with the same resonator was measured 1.49MHz*
+- PCB label 510-1046C01 2-1-82
 
 *: 2 other boards were measured 1.60MHz and 1.88MHz(newest serial). Online references
 suggest 3 versions of SC9(C01) total: 1.5MHz, 1.6MHz, and 1.9MHz.
 
 I/O is via TTL, not further documented here
+
+3 versions were available, the newest "B" version was 2MHz and included the Budapest program.
+The Playmatic S was only released in Germany, it's basically a 'deluxe' version of SC9
+with magnet sensors and came with CB9 and CB16.
 
 ******************************************************************************/
 
@@ -178,12 +181,12 @@ static INPUT_PORTS_START( sc9_sidepanel )
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( sc9 )
-	PORT_INCLUDE( fidel_cb_buttons )
+	PORT_INCLUDE( generic_cb_buttons )
 	PORT_INCLUDE( sc9_sidepanel )
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( playmatic )
-	PORT_INCLUDE( fidel_cb_magnets )
+	PORT_INCLUDE( generic_cb_magnets )
 	PORT_INCLUDE( sc9_sidepanel )
 INPUT_PORTS_END
 
@@ -214,17 +217,17 @@ void sc9_state::sc9d(machine_config &config)
 	m_irq_on->set_start_delay(irq_period - attotime::from_usec(41)); // active for 41us
 	TIMER(config, "irq_off").configure_periodic(FUNC(sc9_state::irq_off<M6502_IRQ_LINE>), irq_period);
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(sc9_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_sc9);
 
 	/* sound hardware */
 	SPEAKER(config, "speaker").front_center();
-	DAC_1BIT(config, m_dac, 0).add_route(ALL_OUTPUTS, "speaker", 0.25);
+	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
 	VOLTAGE_REGULATOR(config, "vref").add_route(0, "dac", 1.0, DAC_VREF_POS_INPUT);
 
 	/* cartridge */
-	generic_cartslot_device &cartslot(GENERIC_CARTSLOT(config, "cartslot", generic_plain_slot, "fidel_scc", "bin,dat"));
-	cartslot.set_device_load(device_image_load_delegate(&fidelbase_state::device_image_load_scc_cartridge, this));
+	GENERIC_CARTSLOT(config, m_cart, generic_plain_slot, "fidel_scc", "bin,dat");
+	m_cart->set_device_load(device_image_load_delegate(&sc9_state::device_image_load_scc_cartridge, this));
 
 	SOFTWARE_LIST(config, "cart_list").set_original("fidel_scc");
 }

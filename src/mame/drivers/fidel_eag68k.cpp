@@ -2,6 +2,8 @@
 // copyright-holders:hap
 // thanks-to:Berger,yoyo_chessboard
 /******************************************************************************
+*
+* fidel_eag68k.cpp, subdriver of machine/fidelbase.cpp, machine/chessbase.cpp
 
 Fidelity 68000-based Elite Avant Garde driver
 For 6502-based EAG, see fidel_elite.cpp
@@ -18,12 +20,11 @@ TODO:
 
 *******************************************************************************
 
-Excel 68000 (model 6094)
-------------------------
-16KB RAM(2*SRM2264C-10 @ U8/U9), 64KB ROM(2*AT27C256-15DC @ U6/U7)
-HD68HC000P12 CPU, 12MHz XTAL
-PCB label 510-1129A01
-PCB has edge connector for module, but no external slot
+Excel 68000 (model 6094) overview:
+- 16KB RAM(2*SRM2264C-10 @ U8/U9), 64KB ROM(2*AT27C256-15DC @ U6/U7)
+- HD68HC000P12 CPU, 12MHz XTAL
+- PCB label 510-1129A01
+- PCB has edge connector for module, but no external slot
 
 There's room for 2 SIMMs at U22 and U23, unpopulated in Excel 68000 and Mach III.
 Mach II has 2*64KB DRAM with a MB1422A DRAM controller @ 25MHz.
@@ -178,7 +179,6 @@ public:
 	{ }
 
 	// machine drivers
-	void eag_base(machine_config &config);
 	void eag(machine_config &config);
 	void eagv5(machine_config &config);
 	void eagv7(machine_config &config);
@@ -189,6 +189,8 @@ public:
 	void init_eag();
 
 protected:
+	void eag_base(machine_config &config);
+
 	// devices/pointers
 	optional_device<ram_device> m_ram;
 
@@ -256,16 +258,6 @@ WRITE8_MEMBER(eag_state::mux_w)
 	prepare_display();
 }
 
-WRITE8_MEMBER(excel68k_state::mux_w)
-{
-	// a1-a3,d0: 74259
-	u8 mask = 1 << offset;
-	m_led_select = (m_led_select & ~mask) | ((data & 1) ? mask : 0);
-
-	// 74259 Q0-Q3: 74145 A-D (Q4-Q7 N/C)
-	eag_state::mux_w(space, offset, m_led_select & 0xf);
-}
-
 READ8_MEMBER(eag_state::input1_r)
 {
 	// a1-a3,d7: multiplexed inputs (active low)
@@ -290,6 +282,19 @@ WRITE8_MEMBER(eag_state::digit_w)
 	// a1-a3,d0(d8): digit segment data
 	m_7seg_data = (m_7seg_data & ~(1 << offset)) | ((data & 1) << offset);
 	prepare_display();
+}
+
+
+// fex68k-specific
+
+WRITE8_MEMBER(excel68k_state::mux_w)
+{
+	// a1-a3,d0: 74259
+	u8 mask = 1 << offset;
+	m_led_select = (m_led_select & ~mask) | ((data & 1) ? mask : 0);
+
+	// 74259 Q0-Q3: 74145 A-D (Q4-Q7 N/C)
+	eag_state::mux_w(space, offset, m_led_select & 0xf);
 }
 
 
@@ -386,7 +391,7 @@ void eag_state::eagv5_slave_map(address_map &map)
 ******************************************************************************/
 
 static INPUT_PORTS_START( excel68k )
-	PORT_INCLUDE( fidel_cb_buttons )
+	PORT_INCLUDE( generic_cb_buttons )
 
 	PORT_START("IN.8")
 	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_DEL) PORT_NAME("Clear")
@@ -401,7 +406,7 @@ INPUT_PORTS_END
 
 
 static INPUT_PORTS_START( eag )
-	PORT_INCLUDE( fidel_cb_magnets )
+	PORT_INCLUDE( generic_cb_magnets )
 
 	PORT_MODIFY("IN.0")
 	PORT_BIT(0x100, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_DEL) PORT_NAME("CL")
@@ -440,12 +445,12 @@ void excel68k_state::fex68k(machine_config &config)
 	m_irq_on->set_start_delay(irq_period - attotime::from_nsec(1528)); // active for 1.525us
 	TIMER(config, "irq_off").configure_periodic(FUNC(excel68k_state::irq_off<M68K_IRQ_2>), irq_period);
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(excel68k_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_ex_68k);
 
 	/* sound hardware */
 	SPEAKER(config, "speaker").front_center();
-	DAC_1BIT(config, m_dac, 0).add_route(ALL_OUTPUTS, "speaker", 0.25);
+	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
 	VOLTAGE_REGULATOR(config, "vref").add_route(0, "dac", 1.0, DAC_VREF_POS_INPUT);
 }
 
@@ -479,17 +484,17 @@ void eag_state::eag_base(machine_config &config)
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(eag_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_eag_68k);
 
 	/* sound hardware */
 	SPEAKER(config, "speaker").front_center();
-	DAC_1BIT(config, m_dac, 0).add_route(ALL_OUTPUTS, "speaker", 0.25);
+	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
 	VOLTAGE_REGULATOR(config, "vref").add_route(0, "dac", 1.0, DAC_VREF_POS_INPUT);
 
 	/* cartridge */
-	generic_cartslot_device &cartslot(GENERIC_CARTSLOT(config, "cartslot", generic_plain_slot, "fidel_scc", "bin,dat"));
-	cartslot.set_device_load(device_image_load_delegate(&fidelbase_state::device_image_load_scc_cartridge, this));
+	GENERIC_CARTSLOT(config, m_cart, generic_plain_slot, "fidel_scc", "bin,dat");
+	m_cart->set_device_load(device_image_load_delegate(&eag_state::device_image_load_scc_cartridge, this));
 
 	SOFTWARE_LIST(config, "cart_list").set_original("fidel_scc");
 }

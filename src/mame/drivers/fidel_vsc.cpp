@@ -1,6 +1,10 @@
 // license:BSD-3-Clause
 // copyright-holders:Kevin Horton,Jonathan Gevaryahu,Sandro Ronco,hap
 /******************************************************************************
+*
+* fidel_vsc.cpp, subdriver of machine/fidelbase.cpp, machine/chessbase.cpp
+
+*******************************************************************************
 
 Fidelity Voice Sensory Chess Challenger (VSC)
 ---------------------------------------------
@@ -163,6 +167,7 @@ public:
 		m_ppi8255(*this, "ppi8255")
 	{ }
 
+	// machine drivers
 	void vsc(machine_config &config);
 
 private:
@@ -320,7 +325,7 @@ void vsc_state::main_io(address_map &map)
 ******************************************************************************/
 
 static INPUT_PORTS_START( vsc )
-	PORT_INCLUDE( fidel_cb_buttons )
+	PORT_INCLUDE( generic_cb_buttons )
 
 	PORT_START("IN.8")
 	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_1) PORT_CODE(KEYCODE_1_PAD) PORT_NAME("Pawn")
@@ -370,7 +375,7 @@ void vsc_state::vsc(machine_config &config)
 	m_z80pio->in_pb_callback().set(FUNC(vsc_state::pio_portb_r));
 	m_z80pio->out_pb_callback().set(FUNC(vsc_state::pio_portb_w));
 
-	TIMER(config, "display_decay").configure_periodic(FUNC(fidelbase_state::display_decay_tick), attotime::from_msec(1));
+	TIMER(config, "display_decay").configure_periodic(FUNC(vsc_state::display_decay_tick), attotime::from_msec(1));
 	config.set_default_layout(layout_fidel_vsc);
 
 	/* sound hardware */
@@ -438,5 +443,5 @@ ROM_END
 //    YEAR  NAME   PARENT CMP MACHINE  INPUT  STATE      INIT              COMPANY, FULLNAME, FLAGS
 CONS( 1980, vsc,   0,      0, vsc,     vsc,   vsc_state, init_language<0>, "Fidelity Electronics", "Voice Sensory Chess Challenger (English)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
 CONS( 1980, vscg,  vsc,    0, vsc,     vsc,   vsc_state, init_language<1>, "Fidelity Electronics", "Voice Sensory Chess Challenger (German)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
-CONS( 1980, vscsp, vsc,    0, vsc,     vsc,   vsc_state, init_language<2>, "Fidelity Electronics", "Voice Sensory Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
-CONS( 1980, vscfr, vsc,    0, vsc,     vsc,   vsc_state, init_language<3>, "Fidelity Electronics", "Voice Sensory Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
+CONS( 1980, vscsp, vsc,    0, vsc,     vsc,   vsc_state, init_language<3>, "Fidelity Electronics", "Voice Sensory Chess Challenger (Spanish)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )
+CONS( 1980, vscfr, vsc,    0, vsc,     vsc,   vsc_state, init_language<2>, "Fidelity Electronics", "Voice Sensory Chess Challenger (French)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_CONTROLS )

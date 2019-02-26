@@ -219,7 +219,7 @@ namespace netlist
 		return false;
 	}
 
-	bool nlparse_t::parse_stream(std::unique_ptr<plib::pistream> &&istrm, const pstring &name)
+	bool nlparse_t::parse_stream(plib::unique_ptr<plib::pistream> &&istrm, const pstring &name)
 	{
 		return parser_t(std::move(plib::ppreprocessor(&m_defines).process(std::move(istrm))), *this).parse(name);
 	}
@@ -462,14 +462,14 @@ devices::nld_base_proxy *setup_t::get_d_a_proxy(detail::core_terminal_t &out)
 		m_proxy_cnt++;
 		/* connect all existing terminals to new net */
 
-		for (auto & p : out.net().m_core_terms)
+		for (auto & p : out.net().core_terms())
 		{
 			p->clear_net(); // de-link from all nets ...
 			if (!connect(new_proxy->proxy_term(), *p))
 				log().fatal(MF_2_CONNECTING_1_TO_2,
 						new_proxy->proxy_term().name(), (*p).name());
 		}
-		out.net().m_core_terms.clear(); // clear the list
+		out.net().core_terms().clear(); // clear the list
 
 		out.net().add_terminal(new_proxy->in());
 		out_cast.set_proxy(proxy);
@@ -505,14 +505,14 @@ devices::nld_base_proxy *setup_t::get_a_d_proxy(detail::core_terminal_t &inp)
 
 		if (inp.has_net())
 		{
-			for (auto & p : inp.net().m_core_terms)
+			for (auto & p : inp.net().core_terms())
 			{
 				p->clear_net(); // de-link from all nets ...
 				if (!connect(ret->proxy_term(), *p))
 					log().fatal(MF_2_CONNECTING_1_TO_2,
 							ret->proxy_term().name(), (*p).name());
 			}
-			inp.net().m_core_terms.clear(); // clear the list
+			inp.net().core_terms().clear(); // clear the list
 		}
 		ret->out().net().add_terminal(inp);
 		m_netlist.nlstate().add_dev(new_proxy->name(), std::move(new_proxy));
@@ -667,7 +667,7 @@ bool setup_t::connect_input_input(detail::core_terminal_t &t1, detail::core_term
 			ret = connect(t2, t1.net().railterminal());
 		if (!ret)
 		{
-			for (auto & t : t1.net().m_core_terms)
+			for (auto & t : t1.net().core_terms())
 			{
 				if (t->is_type(detail::terminal_type::TERMINAL))
 					ret = connect(t2, *t);
@@ -682,7 +682,7 @@ bool setup_t::connect_input_input(detail::core_terminal_t &t1, detail::core_term
 			ret = connect(t1, t2.net().railterminal());
 		if (!ret)
 		{
-			for (auto & t : t2.net().m_core_terms)
+			for (auto & t : t2.net().core_terms())
 			{
 				if (t->is_type(detail::terminal_type::TERMINAL))
 					ret = connect(t1, *t);
@@ -986,7 +986,7 @@ const logic_family_desc_t *setup_t::family_from_model(const pstring &model)
 // Sources
 // ----------------------------------------------------------------------------------------
 
-std::unique_ptr<plib::pistream> setup_t::get_data_stream(const pstring &name)
+plib::unique_ptr<plib::pistream> setup_t::get_data_stream(const pstring &name)
 {
 	for (auto &source : m_sources)
 	{
@@ -998,7 +998,7 @@ std::unique_ptr<plib::pistream> setup_t::get_data_stream(const pstring &name)
 		}
 	}
 	log().warning(MW_1_DATA_1_NOT_FOUND, name);
-	return std::unique_ptr<plib::pistream>(nullptr);
+	return plib::unique_ptr<plib::pistream>(nullptr);
 }
 
 
@@ -1123,7 +1123,7 @@ void setup_t::prepare_to_run()
 		solver->post_start();
 
 	for (auto &n : netlist().nets())
-		for (auto & term : n->m_core_terms)
+		for (auto & term : n->core_terms())
 		{
 			//core_device_t *dev = reinterpret_cast<core_device_t *>(term->m_delegate.object());
 			core_device_t *dev = &term->device();
@@ -1146,19 +1146,19 @@ bool source_t::parse(nlparse_t &setup, const pstring &name)
 	}
 }
 
-std::unique_ptr<plib::pistream> source_string_t::stream(const pstring &name)
+plib::unique_ptr<plib::pistream> source_string_t::stream(const pstring &name)
 {
 	plib::unused_var(name);
 	return plib::make_unique<plib::pimemstream>(m_str.c_str(), std::strlen(m_str.c_str()));
 }
 
-std::unique_ptr<plib::pistream> source_mem_t::stream(const pstring &name)
+plib::unique_ptr<plib::pistream> source_mem_t::stream(const pstring &name)
 {
 	plib::unused_var(name);
 	return plib::make_unique<plib::pimemstream>(m_str.c_str(), std::strlen(m_str.c_str()));
 }
 
-std::unique_ptr<plib::pistream> source_file_t::stream(const pstring &name)
+plib::unique_ptr<plib::pistream> source_file_t::stream(const pstring &name)
 {
 	plib::unused_var(name);
 	return plib::make_unique<plib::pifilestream>(m_filename);
@@ -1175,10 +1175,10 @@ bool source_proc_t::parse(nlparse_t &setup, const pstring &name)
 		return false;
 }
 
-std::unique_ptr<plib::pistream> source_proc_t::stream(const pstring &name)
+plib::unique_ptr<plib::pistream> source_proc_t::stream(const pstring &name)
 {
 	plib::unused_var(name);
-	std::unique_ptr<plib::pistream> p(nullptr);
+	plib::unique_ptr<plib::pistream> p(nullptr);
 	return p;
 }
 

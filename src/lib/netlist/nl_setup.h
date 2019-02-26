@@ -18,9 +18,9 @@
 #include "plib/pstring.h"
 #include "plib/putil.h"
 
-#include "netlist_types.h"
 #include "nl_config.h"
 #include "nl_factory.h"
+#include "nltypes.h"
 
 //============================================================
 //  MACROS / inline netlist definitions
@@ -180,7 +180,7 @@ namespace netlist
 			DATA
 		};
 
-		using list_t = std::vector<std::unique_ptr<source_t>>;
+		using list_t = std::vector<plib::unique_ptr<source_t>>;
 
 		source_t(const type_t type = SOURCE)
 		: m_type(type)
@@ -195,7 +195,7 @@ namespace netlist
 		type_t type() const { return m_type; }
 
 	protected:
-		virtual std::unique_ptr<plib::pistream> stream(const pstring &name) = 0;
+		virtual plib::unique_ptr<plib::pistream> stream(const pstring &name) = 0;
 
 	private:
 		const type_t m_type;
@@ -224,7 +224,7 @@ namespace netlist
 		void register_frontier(const pstring &attach, const double r_IN, const double r_OUT);
 
 		/* register a source */
-		void register_source(std::unique_ptr<source_t> &&src)
+		void register_source(plib::unique_ptr<source_t> &&src)
 		{
 			m_sources.push_back(std::move(src));
 		}
@@ -251,9 +251,9 @@ namespace netlist
 		bool device_exists(const pstring &name) const;
 
 		/* FIXME: used by source_t - need a different approach at some time */
-		bool parse_stream(std::unique_ptr<plib::pistream> &&istrm, const pstring &name);
+		bool parse_stream(plib::unique_ptr<plib::pistream> &&istrm, const pstring &name);
 
-		void add_define(pstring def, pstring val)
+		void add_define(const pstring &def, const pstring &val)
 		{
 			m_defines.insert({ def, plib::ppreprocessor::define_t(def, val)});
 		}
@@ -278,9 +278,9 @@ namespace netlist
 	protected:
 		std::unordered_map<pstring, pstring>        m_models;
 		std::stack<pstring>                         m_namespace_stack;
-		std::unordered_map<pstring, pstring> 		m_alias;
+		std::unordered_map<pstring, pstring>        m_alias;
 		std::vector<link_t>                         m_links;
-		std::unordered_map<pstring, pstring> 		m_param_values;
+		std::unordered_map<pstring, pstring>        m_param_values;
 
 		source_t::list_t                            m_sources;
 
@@ -291,7 +291,7 @@ namespace netlist
 
 
 	private:
-		plib::ppreprocessor::defines_map_type	    m_defines;
+		plib::ppreprocessor::defines_map_type       m_defines;
 
 		setup_t  &m_setup;
 		log_type &m_log;
@@ -328,7 +328,7 @@ namespace netlist
 		void register_dynamic_log_devices();
 		void resolve_inputs();
 
-		std::unique_ptr<plib::pistream> get_data_stream(const pstring &name);
+		plib::unique_ptr<plib::pistream> get_data_stream(const pstring &name);
 
 
 		factory::list_t &factory() { return m_factory; }
@@ -384,7 +384,7 @@ namespace netlist
 		std::unordered_map<pstring, detail::core_terminal_t *> m_terminals;
 
 		netlist_t                                   &m_netlist;
-		devices::nld_netlistparams			 		*m_netlist_params;
+		devices::nld_netlistparams                  *m_netlist_params;
 		std::unordered_map<pstring, param_ref_t>    m_params;
 
 		unsigned m_proxy_cnt;
@@ -404,7 +404,7 @@ namespace netlist
 		}
 
 	protected:
-		std::unique_ptr<plib::pistream> stream(const pstring &name) override;
+		plib::unique_ptr<plib::pistream> stream(const pstring &name) override;
 
 	private:
 		pstring m_str;
@@ -420,7 +420,7 @@ namespace netlist
 		}
 
 	protected:
-		std::unique_ptr<plib::pistream> stream(const pstring &name) override;
+		plib::unique_ptr<plib::pistream> stream(const pstring &name) override;
 
 	private:
 		pstring m_filename;
@@ -435,7 +435,7 @@ namespace netlist
 		}
 
 	protected:
-		std::unique_ptr<plib::pistream> stream(const pstring &name) override;
+		plib::unique_ptr<plib::pistream> stream(const pstring &name) override;
 
 	private:
 		pstring m_str;
@@ -444,7 +444,7 @@ namespace netlist
 	class source_proc_t : public source_t
 	{
 	public:
-		source_proc_t(pstring name, void (*setup_func)(nlparse_t &))
+		source_proc_t(const pstring &name, void (*setup_func)(nlparse_t &))
 		: source_t(),
 			m_setup_func(setup_func),
 			m_setup_func_name(name)
@@ -454,7 +454,7 @@ namespace netlist
 		bool parse(nlparse_t &setup, const pstring &name) override;
 
 	protected:
-		std::unique_ptr<plib::pistream> stream(const pstring &name) override;
+		plib::unique_ptr<plib::pistream> stream(const pstring &name) override;
 
 	private:
 		void (*m_setup_func)(nlparse_t &);
