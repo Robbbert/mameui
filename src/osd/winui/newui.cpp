@@ -3095,7 +3095,7 @@ static void help_about_mess(HWND wnd)
 {
 	//help_display(wnd, "mess.chm::/windows/main.htm"); //doesnt do anything
 	//help_display(wnd, "mess.chm");
-	help_display(wnd, "http://mamedev.org/");
+	help_display(wnd, "https://mamedev.org/");
 }
 
 
