@@ -15,6 +15,12 @@ del mameui.sym
 call make32 -j4 %1 %2 %3
 if not exist mameui.exe goto end
 
+rem --- XP 32bit ---
+del mame.exe
+del mame.sym
+call makexp -j4 %1 %2 %3
+if not exist mame.exe goto end
+
 rem --- 64bit ---
 del mameui64.exe
 del mameui64.sym
