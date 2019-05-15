@@ -347,7 +347,7 @@ protected:
 
 	// cp1 implementation
 	void cp1_execute(u32 const op);
-	void cp1_set(unsigned const reg, u64 const data);
+	template <typename T> void cp1_set(unsigned const reg, T const data);
 
 	// cp2 implementation
 	void cp2_execute(u32 const op);
@@ -394,7 +394,7 @@ protected:
 	u64 m_cp0[32];
 	u64 m_cp0_timer_zero;
 	emu_timer *m_cp0_timer;
-	memory_passthrough_handler *m_ll_watch;
+	bool m_ll_active;
 	struct tlb_entry_t
 	{
 		u64 mask;
