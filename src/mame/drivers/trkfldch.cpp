@@ -40,7 +40,8 @@ public:
 		m_maincpu(*this, "maincpu"),
 		m_screen(*this, "screen"),
 		m_gfxdecode(*this, "gfxdecode"),
-		m_mainram(*this, "mainram")
+		m_mainram(*this, "mainram"),
+		m_palette(*this, "palette")
 	{ }
 
 	void trkfldch(machine_config &config);
@@ -57,6 +58,7 @@ private:
 	required_device<screen_device> m_screen;
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_shared_ptr<uint8_t> m_mainram;
+	required_device<palette_device> m_palette;
 
 	uint32_t screen_update_trkfldch(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 	void trkfldch_map(address_map &map);
@@ -89,48 +91,73 @@ uint32_t trkfldch_state::screen_update_trkfldch(screen_device &screen, bitmap_in
 	// at 0xe9c (actually 0x0d0c when fully populated) in trkfldch
 	// 7861 / 7860 point here most of the time in both games (so maybe DMA source, or just uses a direct pointer)
 
-	//for (int i = 0x0d0c+0x100*5; i >= 0x0d0c; i -= 5)
-	for (int i = 0x1189+0x100*5; i >= 0x1189; i -= 5)
+	int spritelistbase = (m_unkregs[0x61] << 8) | (m_unkregs[0x60] << 0);
+	int spritelistend = spritelistbase+0x100*5;
+
+	spritelistbase &= 0x3fff;
+	spritelistend &= 0x3fff;
+
+	gfx_element* gfx;
+
+
+	if (spritelistend >= spritelistbase)
 	{
-	//	printf("entry %02x %02x %02x %02x %02x\n", m_mainram[i + 0], m_mainram[i + 1], m_mainram[i + 2], m_mainram[i + 3], m_mainram[i + 4]);
-	//	int tilegfxbase = 0x1f80; // select mode 
-	//	int tilegfxbase = 0x2780; // 2nd demo (+0x800 from above)
-	//	int tilegfxbase = 0x3780; // 1st demo and 'letters' minigame (+0x1000 from above)
-		int tilegfxbase = (m_unkregs[0x15] * 0x800) - 0x80;
+		for (int i = spritelistend; i >= spritelistbase; i -= 5)
+		{
+			//  printf("entry %02x %02x %02x %02x %02x\n", m_mainram[i + 0], m_mainram[i + 1], m_mainram[i + 2], m_mainram[i + 3], m_mainram[i + 4]);
+			//  int tilegfxbase = 0x1f80; // select mode
+			//  int tilegfxbase = 0x2780; // 2nd demo (+0x800 from above)
+			//  int tilegfxbase = 0x3780; // 1st demo and 'letters' minigame (+0x1000 from above)
+			int tilegfxbase = (m_unkregs[0x15] * 0x800);
 
-		int y = m_mainram[i + 1];
-		int x = m_mainram[i + 3];
-		int tile = m_mainram[i + 2];
+			int y = m_mainram[i + 1];
+			int x = m_mainram[i + 3];
+			int tile = m_mainram[i + 2];
 
-		int tilehigh = m_mainram[i + 4] & 0x04;
-		int tilehigh2 = m_mainram[i + 0] & 0x04;
-		int tilehigh3 = m_mainram[i + 0] & 0x08;
+			int tilehigh = m_mainram[i + 4] & 0x04;
+			int tilehigh2 = m_mainram[i + 0] & 0x04;
+			int tilehigh3 = m_mainram[i + 0] & 0x08;
+
+			//int unk = m_mainram[i + 4] & 0x20;
+
+			if (tilehigh)
+				tile += 0x100;
+
+			if (tilehigh2)
+				tile += 0x200;
+
+			if (tilehigh3)
+				tile += 0x400;
+
+			//if (unk) // set on score + 'press start' in ddr, priority? palette select?
+			//  tile = machine().rand();
 
 
-		if (tilehigh)
-			tile += 0x100;
+			int xhigh = m_mainram[i + 4] & 0x01;
+			int yhigh = m_mainram[i + 0] & 0x01; // or enable bit?
 
-		if (tilehigh2)
-			tile += 0x200;
+			x = x | (xhigh << 8);
+			y = y | (yhigh << 8);
 
-		if (tilehigh3)
-			tile += 0x400;
+			y -= 0x100;
+			y -= 16;
+			x -= 16;
+
+			if (m_unkregs[0x10] & 1) // seems to change something at least (trkfldch events)
+			{
+				gfx = m_gfxdecode->gfx(1);
+				tilegfxbase -= 0x80;
+			}
+			else
+			{
+				gfx = m_gfxdecode->gfx(2);
+				tilegfxbase -= 0x80;
+			}
 
 
-		int xhigh = m_mainram[i + 4] & 0x01;
-		int yhigh = m_mainram[i + 0] & 0x01; // or enable bit?
-
-		x = x | (xhigh << 8);
-		y = y | (yhigh << 8);
-
-		y -= 0x100;
-		y -= 16;
-		x -= 16;
-
-		gfx_element *gfx = m_gfxdecode->gfx(1);
-		gfx->transpen(bitmap,cliprect,tile+tilegfxbase,0,0,0,x,y,0);
+			gfx->transpen(bitmap, cliprect, tile + tilegfxbase, 0, 0, 0, x, y, 0);
+		}
 	}
-
 	return 0;
 }
 
@@ -182,11 +209,11 @@ READ8_MEMBER(trkfldch_state::read_vector)
 	logerror("reading vector offset %02x\n", offset);
 
 	if (offset == 0x0b)
-	{	// NMI
+	{   // NMI
 		return rom[m_which_vector+1];
 	}
 	else if (offset == 0x0a)
-	{	// NMI
+	{   // NMI
 		return rom[m_which_vector];
 	}
 
@@ -267,31 +294,48 @@ static INPUT_PORTS_START( trkfldch )
 INPUT_PORTS_END
 
 // dummy, doesn't appear to be tile based
-static const gfx_layout tiles8x8_layout =
+static const gfx_layout tiles8x8x8_layout =
 {
 	8,8,
 	RGN_FRAC(1,1),
 	8,
-	{ 0, 1, 2, 3, 4, 5, 6, 7 },
-	{ 0, 8, 16, 24, 32, 40, 48, 56 },
-	{ 0*64, 1*64, 2*64, 3*64, 4*64, 5*64, 6*64, 7*64 },
-	64*8
+	{ 0, 1, 16, 17, 32, 33, 48, 49 },
+	{  8,10,12, 14, 0,2,4,6  },
+	{ 0,0 + 64,
+	128,128 + 64,
+	256,256 + 64,
+	384, 384 + 64 },
+	512,
 };
 
-static const gfx_layout tiles16x16_layout =
+static const gfx_layout tiles16x16x8_layout =
 {
 	16,16,
 	RGN_FRAC(1,1),
 	8,
 	{ 0, 1, 32, 33, 64, 65, 96, 97 },
-	{ 8,10,12,14, 0,2,4,6, 24,26,28,30, 16,18,20,22,},
+	{ 8,10,12,14, 0,2,4,6, 24,26,28,30, 16,18,20,22 },
 	{ STEP16(0,128) },
 	128*16,
 };
 
+// not correct
+static const gfx_layout tiles16x16x4_layout =
+{
+	16,16,
+	RGN_FRAC(1,1),
+	4,
+	{ 0, 1, 32, 33 },
+	{ 8,10,12,14, 0,2,4,6, 24,26,28,30, 16,18,20,22 },
+	{ STEP16(0,64) },
+	64*16,
+};
+
+
 static GFXDECODE_START( gfx_trkfldch )
-	GFXDECODE_ENTRY( "maincpu", 0, tiles8x8_layout, 0, 1 )
-	GFXDECODE_ENTRY( "maincpu", 0, tiles16x16_layout, 0, 1 )
+	GFXDECODE_ENTRY( "maincpu", 0, tiles8x8x8_layout, 0, 1 )
+	GFXDECODE_ENTRY( "maincpu", 0, tiles16x16x8_layout, 0, 1 )
+	GFXDECODE_ENTRY( "maincpu", 0, tiles16x16x4_layout, 0, 1 )
 GFXDECODE_END
 
 /*
@@ -302,19 +346,19 @@ GFXDECODE_END
        0002 - ? (there is no irq 0x02)
        0004 used in irq 0x04
        0008 used in irq 0x06
-	   0010 used in irq 0x08
-	   0020 used in irq 0x0a
-	   0x40 used in irq 0x0c
-	   0x80 used in irq 0x0e (and by code accessing other ports in the main execution?!)
+       0010 used in irq 0x08
+       0020 used in irq 0x0a
+       0x40 used in irq 0x0c
+       0x80 used in irq 0x0e (and by code accessing other ports in the main execution?!)
 
 7801 : 0001 used in irq 0x10
      : 0002 used in irq 0x12
-	 : 0004 used in irq 0x14
-	 : 0008 - ? (there is no irq 0x016, it points to unknown area? and we have no code touching this bit)
-	 : 0010 used in irq 0x18
-	 : 0020 used in irq 0x1a and 0x06?! (used with OR instead of EOR in 0x06, force IRQ?)
-	 : 0x40 - ? (there is no irq 0x1c - it's the boot vector)
-	 : 0x80 - ? (there is no irq 0x1e)
+     : 0004 used in irq 0x14
+     : 0008 - ? (there is no irq 0x016, it points to unknown area? and we have no code touching this bit)
+     : 0010 used in irq 0x18
+     : 0020 used in irq 0x1a and 0x06?! (used with OR instead of EOR in 0x06, force IRQ?)
+     : 0x40 - ? (there is no irq 0x1c - it's the boot vector)
+     : 0x80 - ? (there is no irq 0x1e)
 
 */
 
@@ -448,11 +492,11 @@ WRITE8_MEMBER(trkfldch_state::unkregs_w)
 	switch (offset)
 	{
 	case 0x00: // IRQ ack/force?, see above
-	//	logerror("%s: unkregs_w (IRQ ack/force?) %04x %02x\n", machine().describe_context(), offset, data);
+	//  logerror("%s: unkregs_w (IRQ ack/force?) %04x %02x\n", machine().describe_context(), offset, data);
 		break;
 
 	case 0x01: // IRQ maybe status, see above
-	//	logerror("%s: unkregs_w (IRQ ack/force?) %04x %02x\n", machine().describe_context(), offset, data);
+	//  logerror("%s: unkregs_w (IRQ ack/force?) %04x %02x\n", machine().describe_context(), offset, data);
 		break;
 
 	case 0x02: // startup
@@ -474,7 +518,7 @@ WRITE8_MEMBER(trkfldch_state::unkregs_w)
 
 	// is it significant that 0x10 goes up to 0x1a, 0x20 to 0x2b, 0x30 to 0x3b could be 3 sets of similar things?
 
-	case 0x10:
+	case 0x10: // gfxmode select (4bpp / 8bpp) for sprites? maybe
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
 
@@ -494,7 +538,7 @@ WRITE8_MEMBER(trkfldch_state::unkregs_w)
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
 
-	case 0x15:
+	case 0x15: // gfxbank select for sprites
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
 
@@ -532,7 +576,7 @@ WRITE8_MEMBER(trkfldch_state::unkregs_w)
 	case 0x22: // rarely
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
-	
+
 	case 0x23: // after a long time
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
@@ -636,11 +680,11 @@ WRITE8_MEMBER(trkfldch_state::unkregs_w)
 
 
 
-	case 0x60:
+	case 0x60: // sprite list location (dma source?)
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
 
-	case 0x61:
+	case 0x61: // sprite list location (dma source?)
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
 
@@ -720,7 +764,7 @@ WRITE8_MEMBER(trkfldch_state::unkregs_w)
 	case 0x77: // every second or so
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
-	
+
 	case 0x78: // startup
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		break;
@@ -760,8 +804,8 @@ WRITE8_MEMBER(trkfldch_state::unkregs_w)
 		break;
 
 	case 0xb6: // significant data transfer shortly after boot, seems to clock writes with 0073 writing  d0 / c0? (then writes 2 bytes here)
-		       // values are coming from a structure in RAM
-		       // how does it reset?
+			   // values are coming from a structure in RAM
+			   // how does it reset?
 
 		//logerror("%s: unkregs_w %04x %02x\n", machine().describe_context(), offset, data);
 		m_unkdata[m_unkdata_addr] = data;
@@ -789,6 +833,12 @@ void trkfldch_state::machine_start()
 {
 	save_item(NAME(m_unkdata_addr));
 	save_item(NAME(m_unkdata));
+
+	for (int i = 0; i < 256; i++)
+	{
+		m_palette->set_pen_color(i, machine().rand(), machine().rand(), machine().rand());
+	}
+
 }
 
 void trkfldch_state::machine_reset()
@@ -800,7 +850,7 @@ void trkfldch_state::machine_reset()
 
 	for (int i = 0; i < 0x100000; i++)
 		m_unkdata[i] = 0;
- 
+
 	m_unkdata_addr = 0;
 
 }
