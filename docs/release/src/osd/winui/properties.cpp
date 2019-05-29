@@ -1983,88 +1983,97 @@ static BOOL DefaultInputReadControl(datamap *map, HWND dialog, HWND control, win
 	return false;
 }
 
+wchar_t *win_wstring_from_utf8(const char *utf8string)
+{
+	// convert MAME string (UTF-8) to UTF-16
+	int char_count = MultiByteToWideChar(CP_UTF8, 0, utf8string, -1, nullptr, 0);
+	wchar_t *result = (wchar_t *)malloc(char_count * sizeof(*result));
+
+	if (result != nullptr)
+		MultiByteToWideChar(CP_UTF8, 0, utf8string, -1, result, char_count);
+
+	return result;
+}
+
+char *win_utf8_from_wstring(const wchar_t *wstring)
+{
+	// convert UTF-16 to MAME string (UTF-8)
+	int char_count = WideCharToMultiByte(CP_UTF8, 0, wstring, -1, nullptr, 0, nullptr, nullptr);
+	char *result = (char *)malloc(char_count * sizeof(*result));
+
+	if (result != nullptr)
+		WideCharToMultiByte(CP_UTF8, 0, wstring, -1, result, char_count, nullptr, nullptr);
+
+	return result;
+}
+
+HANDLE winui_find_first_file_utf8(const char* filename, WIN32_FIND_DATA *findfiledata)
+{
+	wchar_t *t_filename = win_wstring_from_utf8(filename);
+
+	if (!t_filename)
+		return NULL;
+
+	HANDLE result = FindFirstFile(t_filename, findfiledata);
+	free(t_filename);
+	return result;
+}
+
 static BOOL DefaultInputPopulateControl(datamap *map, HWND dialog, HWND control, windows_options *opts, const char *option_name)
 {
-	TCHAR root[256];
-	TCHAR path[256];
+	WIN32_FIND_DATA FindFileData;
+	char path[MAX_PATH];
 	int selected = 0;
 	int index = 0;
-	LPCTSTR t_ctrlr_option = 0;
-	LPTSTR t_buf = 0;
 
 	// determine the ctrlr option
 	const char *ctrlr_option = opts->value(OPTION_CTRLR);
-	if( ctrlr_option )
-	{
-		t_buf = ui_wstring_from_utf8(ctrlr_option);
-		if( !t_buf )
-			return false;
-		t_ctrlr_option = t_buf;
-	}
-	else
-		t_ctrlr_option = TEXT("");
 
 	// reset the controllers dropdown
-	int res = ComboBox_ResetContent(control);
-	res = ComboBox_InsertString(control, index, TEXT("Default"));
-	res = ComboBox_SetItemData(control, index, "");
+	(void)ComboBox_ResetContent(control);
+	(void)ComboBox_InsertString(control, index, TEXT("Default"));
+	(void)ComboBox_SetItemData(control, index, "");
 	index++;
-
-	std::string t = GetCtrlrDir();
-	TCHAR *t_ctrldir = ui_wstring_from_utf8(t.c_str());
-	if( !t_ctrldir )
-	{
-		if( t_buf )
-			free(t_buf);
-		return false;
-	}
-
-	_stprintf (path, TEXT("%s\\*.*"), t_ctrldir);
-
-	free(t_ctrldir);
-
-	WIN32_FIND_DATA FindFileData;
-	HANDLE hFind = FindFirstFile(path, &FindFileData);
+	snprintf(path, WINUI_ARRAY_LENGTH(path), "%s\\*.*", GetCtrlrDir().c_str());
+	HANDLE hFind = winui_find_first_file_utf8(path, &FindFileData);
 
 	if (hFind != INVALID_HANDLE_VALUE)
 	{
-		do
+		while (FindNextFile (hFind, &FindFileData) != 0)
 		{
 			// copy the filename
-			_tcscpy (root,FindFileData.cFileName);
-
+			const char *root = win_utf8_from_wstring(FindFileData.cFileName);
 			// find the extension
-			TCHAR *ext = _tcsrchr (root,'.');
+			char *ext = strrchr(root, '.');
+
 			if (ext)
 			{
 				// check if it's a cfg file
-				if (_tcscmp (ext, TEXT(".cfg")) == 0)
+				if (strcmp (ext, ".cfg") == 0)
 				{
 					// and strip off the extension
 					*ext = 0;
 
 					// set the option?
-					if (!_tcscmp(root, t_ctrlr_option))
+					if (!strcmp(root, ctrlr_option))
 						selected = index;
 
 					// add it as an option
-					res = ComboBox_InsertString(control, index, root);
-					res = ComboBox_SetItemData(control, index, (void*)win_tstring_strdup(root)); // FIXME - leaks memory!
+					wchar_t *t_root = win_wstring_from_utf8(root);
+					(void)ComboBox_InsertString(control, index, t_root);
+					(void)ComboBox_SetItemData(control, index, root);
+					free(t_root);
+					root = NULL;
 					index++;
 				}
 			}
 		}
-		while (FindNextFile (hFind, &FindFileData) != 0);
 
 		FindClose (hFind);
 	}
 
-	res = ComboBox_SetCurSel(control, selected);
+	(void)ComboBox_SetCurSel(control, selected);
 
-	if( t_buf )
-		free(t_buf);
-
-	res++;
 	return false;
 }
 
