@@ -49,7 +49,7 @@ public:
 	constexpr explicit XTAL(double base_clock) : m_base_clock(base_clock), m_current_clock(base_clock) {}
 
 	constexpr double dvalue() const noexcept { return m_current_clock; }
-	constexpr u32    value()  const noexcept { return u32(m_current_clock); }
+	constexpr u32    value()  const noexcept { return u32(m_current_clock + 1e-3); }
 	constexpr double base()   const noexcept { return m_base_clock; }
 
 	template <typename T> constexpr XTAL operator *(T &&mult) const noexcept { return XTAL(m_base_clock, m_current_clock * mult); }
@@ -81,8 +81,8 @@ constexpr XTAL operator *(unsigned int mult, const XTAL &xtal) { return XTAL(xta
 constexpr XTAL operator *(double       mult, const XTAL &xtal) { return XTAL(xtal.base(), mult * xtal.dvalue()); }
 
 constexpr XTAL operator ""_Hz_XTAL(long double clock) { return XTAL(double(clock)); }
-constexpr XTAL operator ""_kHz_XTAL(long double clock) { return XTAL(double(clock * 1e3)); }
-constexpr XTAL operator ""_MHz_XTAL(long double clock) { return XTAL(double(clock * 1e6)); }
+constexpr XTAL operator ""_kHz_XTAL(long double clock) { return XTAL(double(clock) * 1e3); }
+constexpr XTAL operator ""_MHz_XTAL(long double clock) { return XTAL(double(clock) * 1e6); }
 
 constexpr XTAL operator ""_Hz_XTAL(unsigned long long clock) { return XTAL(double(clock)); }
 constexpr XTAL operator ""_kHz_XTAL(unsigned long long clock) { return XTAL(double(clock) * 1e3); }

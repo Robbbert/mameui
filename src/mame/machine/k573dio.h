@@ -15,12 +15,8 @@ public:
 
 	auto output_callback() { return output_cb.bind(); }
 
-	required_device<k573fpga_device> k573fpga;
-	required_device<ds2401_device> digital_id;
-
 	void amap(address_map &map);
 	void set_ddrsbm_fpga(bool flag) { is_ddrsbm_fpga = flag; }
-	void set_mp3_dynamic_base(uint32_t base) { mp3_dynamic_base = base; }
 
 	DECLARE_READ16_MEMBER(a00_r);
 	DECLARE_READ16_MEMBER(a02_r);
@@ -47,10 +43,8 @@ public:
 	DECLARE_WRITE16_MEMBER(ram_w);
 	DECLARE_WRITE16_MEMBER(ram_read_adr_high_w);
 	DECLARE_WRITE16_MEMBER(ram_read_adr_low_w);
-	DECLARE_READ16_MEMBER(mp3_playback_high_r);
-	DECLARE_WRITE16_MEMBER(mp3_playback_high_w);
-	DECLARE_READ16_MEMBER(mp3_playback_low_r);
-	DECLARE_WRITE16_MEMBER(mp3_playback_low_w);
+	DECLARE_READ16_MEMBER(mp3_frame_count_high_r);
+	DECLARE_READ16_MEMBER(mp3_frame_count_low_r);
 	DECLARE_WRITE16_MEMBER(output_0_w);
 	DECLARE_WRITE16_MEMBER(output_1_w);
 	DECLARE_WRITE16_MEMBER(output_7_w);
@@ -74,6 +68,9 @@ protected:
 	virtual void device_timer(emu_timer &timer, device_timer_id id, int param, void *ptr) override;
 
 private:
+	required_device<k573fpga_device> k573fpga;
+	required_device<ds2401_device> digital_id;
+	required_device<mas3507d_device> mas3507d;
 	devcb_write8 output_cb;
 
 	std::unique_ptr<uint16_t[]> ram;
@@ -83,8 +80,7 @@ private:
 	void output(int offset, uint16_t data);
 
 	bool is_ddrsbm_fpga;
-	uint32_t mp3_dynamic_base;
-	uint16_t crypto_key1;
+	u16 crypto_key1;
 };
 
 DECLARE_DEVICE_TYPE(KONAMI_573_DIGITAL_IO_BOARD, k573dio_device)
