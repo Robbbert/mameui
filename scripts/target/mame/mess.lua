@@ -143,6 +143,7 @@ CPUS["HPC"] = true
 CPUS["MEG"] = true
 CPUS["DSPV"] = true
 CPUS["RII"] = true
+CPUS["BCP"] = true
 
 --------------------------------------------------
 -- specify available sound cores; some of these are
@@ -4048,6 +4049,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/tasc.cpp",
 	MAME_DIR .. "src/mame/drivers/tavernie.cpp",
 	MAME_DIR .. "src/mame/drivers/tecnbras.cpp",
+	MAME_DIR .. "src/mame/drivers/telex1192.cpp",
 	MAME_DIR .. "src/mame/drivers/telex274.cpp",
 	MAME_DIR .. "src/mame/drivers/telex277d.cpp",
 	MAME_DIR .. "src/mame/drivers/terak.cpp",
