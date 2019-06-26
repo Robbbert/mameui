@@ -238,6 +238,8 @@ enum
 	DEVOPTION_CASSETTE_RECORD,
 	DEVOPTION_CASSETTE_REWIND,
 	DEVOPTION_CASSETTE_FASTFORWARD,
+	DEVOPTION_CASSETTE_MOTOR,
+	DEVOPTION_CASSETTE_SOUND,
 	DEVOPTION_MAX
 };
 
@@ -2813,18 +2815,29 @@ static void prepare_menus(HWND wnd)
 		if (img.is_creatable())
 			win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_CREATE, "Create...");
 
-		win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CLOSE, "Unmount");
-
-		if (img.device().type() == CASSETTE)
+		if (img.exists())
 		{
-			cassette_state state;
-			state = (cassette_state)(img.exists() ? (dynamic_cast<cassette_image_device*>(&img.device())->get_state() & CASSETTE_MASK_UISTATE) : CASSETTE_STOPPED);
-			win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
-			win_append_menu_utf8(sub_menu, flags_for_exists | ((state == CASSETTE_STOPPED) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_STOPPAUSE, "Pause/Stop");
-			win_append_menu_utf8(sub_menu, flags_for_exists | ((state == CASSETTE_PLAY) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_PLAY, "Play");
-			win_append_menu_utf8(sub_menu, flags_for_writing | ((state == CASSETTE_RECORD) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_RECORD, "Record");
-			win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CASSETTE_REWIND, "Rewind");
-			win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CASSETTE_FASTFORWARD, "Fast Forward");
+			win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CLOSE, "Unmount");
+
+			if (img.device().type() == CASSETTE)
+			{
+				cassette_state state,t_state;
+				state = cassette_state(img.exists() ? (dynamic_cast<cassette_image_device*>(&img.device())->get_state()) : 0);
+				t_state = cassette_state(state & CASSETTE_MASK_UISTATE);
+				win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
+				win_append_menu_utf8(sub_menu, flags_for_exists | ((t_state == CASSETTE_STOPPED) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_STOPPAUSE, "Pause/Stop");
+				win_append_menu_utf8(sub_menu, flags_for_exists | ((t_state == CASSETTE_PLAY) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_PLAY, "Play");
+				win_append_menu_utf8(sub_menu, flags_for_writing | ((t_state == CASSETTE_RECORD) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_RECORD, "Record");
+				win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CASSETTE_REWIND, "Rewind");
+				win_append_menu_utf8(sub_menu, flags_for_exists, new_item + DEVOPTION_CASSETTE_FASTFORWARD, "Fast Forward");
+				win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
+				// Motor state can be overriden by the driver
+				t_state = cassette_state(state & CASSETTE_MASK_MOTOR);
+				win_append_menu_utf8(sub_menu, flags_for_exists | ((t_state == CASSETTE_MOTOR_ENABLED) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_MOTOR, "Motor");
+				// Speaker requires that cassette-wave device be included in the machine config
+				t_state = cassette_state(state & CASSETTE_MASK_SPEAKER);
+				win_append_menu_utf8(sub_menu, flags_for_exists | ((t_state == CASSETTE_SPEAKER_ENABLED) ? MF_CHECKED : 0), new_item + DEVOPTION_CASSETTE_SOUND, "Audio while Loading");
+			}
 		}
 
 		std::string filename;
@@ -3015,7 +3028,7 @@ static void device_command(HWND wnd, device_image_interface *img, int devoption)
 			if (img->device().type() == CASSETTE)
 			{
 				cassette_image_device* cassette = dynamic_cast<cassette_image_device*>(&img->device());
-
+				bool s;
 				switch(devoption)
 				{
 					case DEVOPTION_CASSETTE_STOPPAUSE:
@@ -3031,11 +3044,21 @@ static void device_command(HWND wnd, device_image_interface *img, int devoption)
 						break;
 
 					case DEVOPTION_CASSETTE_REWIND:
-						cassette->seek(-60.0, SEEK_CUR);
+						cassette->seek(0, SEEK_SET); // start
 						break;
 
 					case DEVOPTION_CASSETTE_FASTFORWARD:
-						cassette->seek(+60.0, SEEK_CUR);
+						cassette->seek(+300.0, SEEK_CUR); // 5 minutes forward or end, whichever comes first
+						break;
+
+					case DEVOPTION_CASSETTE_MOTOR:
+						s =((cassette->get_state() & CASSETTE_MASK_MOTOR) == CASSETTE_MOTOR_DISABLED);
+						cassette->change_state(s ? CASSETTE_MOTOR_ENABLED : CASSETTE_MOTOR_DISABLED, CASSETTE_MASK_MOTOR);
+						break;
+
+					case DEVOPTION_CASSETTE_SOUND:
+						s =((cassette->get_state() & CASSETTE_MASK_SPEAKER) == CASSETTE_SPEAKER_MUTED);
+						cassette->change_state(s ? CASSETTE_SPEAKER_ENABLED : CASSETTE_SPEAKER_MUTED, CASSETTE_MASK_SPEAKER);
 						break;
 				}
 			}
