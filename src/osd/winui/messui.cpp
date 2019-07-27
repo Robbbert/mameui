@@ -1421,7 +1421,7 @@ static LPCTSTR MView_GetSelectedSoftware(HWND hwndMView, int nDriverIndex, const
 		printf("MView_GetSelectedSoftware: Got options\n");fflush(stdout);
 		opt_name = dev->instance_name();
 		//const char* temp = o.value(opt_name.c_str());
-		if (o.find_image_option(opt_name))
+		if (o.has_image_option(opt_name))
 			opt_value = o.image_option(opt_name).value().empty() ? "" : o.image_option(opt_name).value();
 		printf("MView_GetSelectedSoftware: == %s : %s\n", opt_name.c_str(), opt_value.c_str());fflush(stdout);
 		if (!opt_value.empty())

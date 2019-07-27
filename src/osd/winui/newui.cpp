@@ -3546,7 +3546,7 @@ LRESULT CALLBACK winwindow_video_window_proc_ui(HWND wnd, UINT message, WPARAM w
 
 		case WM_PASTE:
 			{
-				mame_machine_manager::instance()->ui().paste();
+				mame_machine_manager::instance()->ui().machine().ioport().natkeyboard().paste();
 			}
 			break;
 

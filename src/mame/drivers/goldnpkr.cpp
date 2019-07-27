@@ -1273,6 +1273,8 @@
 #include "emu.h"
 
 #include "cpu/m6502/m6502.h"
+#include "cpu/m6502/m65sc02.h"
+#include "cpu/m6502/r65c02.h"
 #include "cpu/m6805/m68705.h"
 #include "cpu/z80/z80.h"
 #include "machine/6821pia.h"
@@ -1323,6 +1325,7 @@ public:
 	void pottnpkr(machine_config &config);
 	void goldnpkr(machine_config &config);
 	void wcrdxtnd(machine_config &config);
+	void paradiss(machine_config &config);
 
 	void init_vkdlswwh();
 	void init_icp1db();
@@ -1374,7 +1377,9 @@ protected:
 private:
 	DECLARE_READ8_MEMBER(goldnpkr_mux_port_r);
 	DECLARE_WRITE8_MEMBER(mux_port_w);
-	DECLARE_WRITE8_MEMBER(wcfalcon_snd_w);
+	uint8_t ay8910_data_r();
+	void ay8910_data_w(uint8_t data);
+	void ay8910_control_w(uint8_t data);
 	DECLARE_WRITE8_MEMBER(pia0_a_w);
 	DECLARE_WRITE8_MEMBER(pia0_b_w);
 	DECLARE_WRITE8_MEMBER(pia1_a_w);
@@ -1404,6 +1409,7 @@ private:
 	void wildcrdb_mcu_map(address_map &map);
 	void witchcrd_falcon_map(address_map &map);
 	void witchcrd_map(address_map &map);
+	void paradiss_map(address_map &map);
 
 	required_shared_ptr<uint8_t> m_videoram;
 	required_shared_ptr<uint8_t> m_colorram;
@@ -1413,6 +1419,8 @@ private:
 	tilemap_t *m_bg_tilemap;
 	uint8_t m_mux_data;
 	uint8_t m_pia0_PA_data;
+	uint8_t m_ay8910_data;
+	uint8_t m_ay8910_control;
 };
 
 class blitz_state : public goldnpkr_state
@@ -1681,7 +1689,7 @@ READ8_MEMBER(goldnpkr_state::pottnpkr_mux_port_r)
 
 WRITE8_MEMBER(goldnpkr_state::mux_w)
 {
-	logerror("mux_w: %2x\n",data);
+	//logerror("mux_w: %2x\n",data);
 	m_mux_data = data ^ 0xff;   /* inverted */
 }
 
@@ -1693,20 +1701,28 @@ WRITE8_MEMBER(goldnpkr_state::mux_port_w)
 
 /* Demuxing ay8910 data/address from Falcon board, PIA portA out */
 
-uint8_t wcfalcon_flag = 0;
-
-WRITE8_MEMBER(goldnpkr_state::wcfalcon_snd_w)
+uint8_t goldnpkr_state::ay8910_data_r()
 {
-	if (wcfalcon_flag == 0)
-	{
-		m_ay8910->data_address_w(0, data);
-	}
-	else
-	{
-		m_ay8910->data_address_w(1, data);
-	}
+	return (m_ay8910_control & 0xc0) == 0x40 ? m_ay8910->data_r() : 0xff;
+}
 
-	wcfalcon_flag = wcfalcon_flag ^ 1;
+void goldnpkr_state::ay8910_data_w(uint8_t data)
+{
+	m_ay8910_data = data;
+}
+
+void goldnpkr_state::ay8910_control_w(uint8_t data)
+{
+	if (BIT(data, 7))
+		m_ay8910->data_address_w(BIT(data, 6), m_ay8910_data);
+
+	m_ay8910_control = data;
+
+	m_lamps[0] = !BIT(data, 0);
+	m_lamps[1] = !BIT(data, 1);
+	m_lamps[2] = !BIT(data, 2);
+	m_lamps[3] = !BIT(data, 3);
+	m_lamps[4] = !BIT(data, 4);
 }
 
 
@@ -2023,6 +2039,24 @@ void goldnpkr_state::bchancep_map(address_map &map)
 	map(0x1000, 0x13ff).ram().w(FUNC(goldnpkr_state::goldnpkr_videoram_w)).share("videoram");
 	map(0x1800, 0x1bff).ram().w(FUNC(goldnpkr_state::goldnpkr_colorram_w)).share("colorram");
 	map(0x2000, 0x7fff).rom();
+}
+
+void goldnpkr_state::paradiss_map(address_map &map)
+{
+//  ADDRESS_MAP_GLOBAL_MASK(0x7fff)
+	map(0x0000, 0x07ff).ram().share("nvram");   /* battery backed RAM */
+	map(0x0800, 0x0800).w("crtc", FUNC(mc6845_device::address_w));
+	map(0x0801, 0x0801).rw("crtc", FUNC(mc6845_device::register_r), FUNC(mc6845_device::register_w));
+	map(0x0844, 0x0847).rw("pia0", FUNC(pia6821_device::read), FUNC(pia6821_device::write));
+	map(0x0848, 0x084b).rw("pia1", FUNC(pia6821_device::read), FUNC(pia6821_device::write));
+	map(0x0884, 0x0887).ram();  // unknown
+	map(0x0888, 0x088b).ram();  // unknown
+	map(0x1000, 0x13ff).ram().w(FUNC(goldnpkr_state::goldnpkr_videoram_w)).share("videoram");
+	map(0x1800, 0x1bff).ram().w(FUNC(goldnpkr_state::goldnpkr_colorram_w)).share("colorram");
+	map(0x2000, 0x2000).portr("SW2");
+	map(0x2200, 0x27ff).rom(); /* for VK set */
+	map(0x2800, 0x2fff).ram(); /* for VK set */
+	map(0x3000, 0xffff).rom(); /* for VK set. bootleg starts from 4000 */
 }
 
 
@@ -4202,6 +4236,13 @@ static GFXDECODE_START( gfx_wcrdxtnd )
 	GFXDECODE_ENTRY( "gfx15", 0, tilelayout, 0, 16 )
 GFXDECODE_END
 
+static GFXDECODE_START( gfx_paradiss )
+	GFXDECODE_ENTRY( "gfx1", 0, tilelayout, 0, 16 )
+//	GFXDECODE_ENTRY( "gfx1", 0x1000, tilelayout, 0, 16 )
+	GFXDECODE_ENTRY( "gfx1", 0x1000, tilelayout, 16, 16 )
+GFXDECODE_END
+
+
 /**********************************************************
 *                 Discrete Sound Routines                 *
 ***********************************************************
@@ -4447,10 +4488,34 @@ void goldnpkr_state::wcfalcon(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &goldnpkr_state::witchcrd_falcon_map);
 
 	m_pia[0]->writepa_handler().set(FUNC(goldnpkr_state::mux_port_w));
-	m_pia[1]->writepa_handler().set(FUNC(goldnpkr_state::wcfalcon_snd_w)); /* port A out, custom handler due to address + data are muxed */
+	m_pia[0]->writepb_handler().set(FUNC(goldnpkr_state::ay8910_control_w));
+	m_pia[1]->readpa_handler().set(FUNC(goldnpkr_state::ay8910_data_r));
+	m_pia[1]->writepa_handler().set(FUNC(goldnpkr_state::ay8910_data_w));
 
 	/* video hardware */
 	m_palette->set_init(FUNC(goldnpkr_state::witchcrd_palette));
+
+	/* sound hardware */
+	SPEAKER(config, "mono").front_center();
+	AY8910(config, m_ay8910, MASTER_CLOCK/4).add_route(ALL_OUTPUTS, "mono", 1.00);    /* guess, seems ok */
+}
+
+void goldnpkr_state::paradiss(machine_config &config)
+{
+	goldnpkr_base(config);
+
+	/* basic machine hardware */
+	R65C02(config.replace(), m_maincpu, CPU_CLOCK); /* 2MHz */
+	m_maincpu->set_addrmap(AS_PROGRAM, &goldnpkr_state::paradiss_map);
+
+	m_pia[0]->writepa_handler().set(FUNC(goldnpkr_state::mux_port_w));
+	m_pia[0]->writepb_handler().set(FUNC(goldnpkr_state::ay8910_control_w));
+	m_pia[1]->readpa_handler().set(FUNC(goldnpkr_state::ay8910_data_r));
+	m_pia[1]->writepa_handler().set(FUNC(goldnpkr_state::ay8910_data_w));
+
+	/* video hardware */
+	m_palette->set_init(FUNC(goldnpkr_state::witchcrd_palette));
+	m_gfxdecode->set_info(gfx_paradiss);
 
 	/* sound hardware */
 	SPEAKER(config, "mono").front_center();
@@ -4509,7 +4574,9 @@ void goldnpkr_state::wildcrdb(machine_config &config)
 	mcu.set_addrmap(AS_IO, &goldnpkr_state::wildcrdb_mcu_io_map);
 
 	m_pia[0]->writepa_handler().set(FUNC(goldnpkr_state::mux_port_w));
-	m_pia[1]->writepa_handler().set(FUNC(goldnpkr_state::wcfalcon_snd_w));
+	m_pia[0]->writepb_handler().set(FUNC(goldnpkr_state::ay8910_control_w));
+	m_pia[1]->readpa_handler().set(FUNC(goldnpkr_state::ay8910_data_r));
+	m_pia[1]->writepa_handler().set(FUNC(goldnpkr_state::ay8910_data_w));
 
 	/* video hardware */
 //  m_gfxdecode->set_info(gfx_wildcard);
@@ -10406,6 +10473,29 @@ ROM_START( caspokera )
 	ROM_LOAD( "tbp24sa10.bin",  0x0000, 0x0100, CRC(7f31066b) SHA1(15420780ec6b2870fc4539ec3afe4f0c58eedf12) )  // PROM dump confirmed OK
 ROM_END
 
+ROM_START( caspokerb )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "514.bin",    0x4000, 0x1000, CRC(4fadd660) SHA1(a06ef3e89ae09536a2f159c16726091a42430140) )
+	ROM_LOAD( "515.bin",    0x5000, 0x1000, CRC(07d8b4e0) SHA1(105a1595a1a4e2d8c976ffc852636938acdd5922) )
+	ROM_LOAD( "516.bin",    0x6000, 0x1000, CRC(da067462) SHA1(308368057c3126d053c89c36701be446001d34cf) )
+	ROM_LOAD( "517.bin",    0x7000, 0x1000, CRC(df4c2976) SHA1(425e9f05df2e7c30422d1828c3c6471635249c7a) )
+
+	ROM_REGION( 0x1800, "gfx1", 0 )
+	ROM_FILL(               0x0000, 0x1000, 0x0000 )  // filling the R-G bitplanes
+	ROM_LOAD( "433.bin",    0x1000, 0x0800, CRC(434a7cbb) SHA1(447bf44e04d023aab8a58c3973f83a12af5b1b2b) )  // text chars
+
+	ROM_REGION( 0x1800, "gfx2", 0 )
+	ROM_LOAD( "430.bin",  0x0000, 0x0800, CRC(46927b19) SHA1(d24c8f81bc1d34d52c759268b582a61f1455299b) )  // cards deck gfx, bitplane 1
+	ROM_LOAD( "431.bin",  0x0800, 0x0800, CRC(082a5585) SHA1(580ee2a824bed4b483d88dc99793c3a06dad12e0) )  // cards deck gfx, bitplane 2
+	ROM_LOAD( "432.bin",  0x1000, 0x0800, CRC(04adfcb8) SHA1(3aabbd997dec65cb5e4f044f16c742902a775e98) )  // cards deck gfx, bitplane 3
+
+	// TODO, once the game boots
+	//ROM_REGION( 0x0800, "nvram", 0 )  // default NVRAM, otherwise settings parameters are incorrect
+	//ROM_LOAD( "caspokerb_nvram.bin", 0x0000, 0x0800, CRC() SHA1() )
+
+	ROM_REGION( 0x0100, "proms", 0 )
+	ROM_LOAD( "tbp24sa10.bin",  0x0000, 0x0100, CRC(079d26c4) SHA1(b8adf9bdc36107f3e4f6f41f2337a8b67b70e0da) )
+ROM_END
 
 /*
   Bonus Poker.
@@ -11163,6 +11253,52 @@ ROM_START( megadpkrb )
 ROM_END
 
 
+/*
+  SE Paradise.
+  Paradais PCB
+  "SUPN-072"
+
+  1x Scratched CPU (seems 6502 family)
+  1x GI AY-3-8910.
+  2x Hitachi HD6821P.
+  1x IC CIC8645BE (seems 6845 CRTC type)
+
+  3x 27256 EPROMs.
+  3x N82S129AN Bipolar PROMs.
+
+  2x HM6116LP-3 SRAM.
+
+  1x 10.000 MHz. Xtal.
+  2x 8 DIP switches bank.
+
+*/
+
+ROM_START( paradiss )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "13.ic4",  0xc000, 0x2000, CRC(6f414354) SHA1(290e97b876ce7aa9e273fe5f597caaa2e31992a8) )  // ok
+	ROM_CONTINUE(        0x8000, 0x2000)  // to check...
+	ROM_CONTINUE(        0xe000, 0x2000)  // ok
+	ROM_CONTINUE(        0xa000, 0x2000)  // to check...
+
+	ROM_REGION( 0x6000, "gfx1", 0 )
+	ROM_LOAD( "1.ic10",  0x0000, 0x4000, CRC(40bb114e) SHA1(be4636455c6dd303255d21799cd17c590d8f1423) )  // identical halves, 2 bitplanes.
+	ROM_IGNORE(                  0x4000)  // discarding the 2nd half.
+	ROM_LOAD( "2.ic9",   0x4000, 0x2000, CRC(51c08823) SHA1(123dab7485cac23ee1d72fd50e4af273c946fc56) )  // identical halves, 1 bitplane.
+	ROM_IGNORE(                  0x6000)  // discarding the 2nd half and the unused 0x2000.
+
+	ROM_REGION( 0x6000, "gfx2", 0 )
+	ROM_LOAD( "1.ic10",  0x0000, 0x4000, CRC(40bb114e) SHA1(be4636455c6dd303255d21799cd17c590d8f1423) )  // identical halves, 2 bitplanes.
+	ROM_IGNORE(                  0x4000)  // discarding the 2nd half.
+	ROM_LOAD( "2.ic9",   0x4000, 0x2000, CRC(51c08823) SHA1(123dab7485cac23ee1d72fd50e4af273c946fc56) )  // identical halves, 1 bitplane.
+	ROM_IGNORE(                  0x6000)  // discarding the 2nd half and the unused 0x2000.
+
+	ROM_REGION( 0x0300, "proms", 0 )
+	ROM_LOAD( "82s129_1.ic31", 0x0000, 0x0100, CRC(c3d777b4) SHA1(5a3c0325dcbddde3f8ae2ffbc1cb56cfccda308d) )
+	ROM_LOAD( "82s129_2.ic30", 0x0100, 0x0100, CRC(c9c12b13) SHA1(e0b26febb265af01f2caa891e14f4999400820b8) )
+	ROM_LOAD( "82s129_3.ic29", 0x0200, 0x0100, CRC(f079b80c) SHA1(c76706ad90a67ea7eda4e191840f95e18f3788d0) )
+ROM_END
+
+
 /*********************************************
 *                Driver Init                 *
 *********************************************/
@@ -11664,6 +11800,8 @@ GAMEL( 1990, falcnwlda, falcnwld, wildcard, wildcard, goldnpkr_state, empty_init
 GAMEL( 1990, falcnwldb, falcnwld, wildcard, wildcard, goldnpkr_state, empty_init,    ROT0,   "Video Klein",              "Falcons Wild - World Wide Poker (Video Klein, set 2)", 0,      layout_goldnpkr )
 GAME(  1983, falcnwldc, falcnwld, wildcrdb, wildcard, goldnpkr_state, init_flcnw,    ROT0,   "Falcon",                   "Falcons Wild - World Wide Poker (Falcon original)",    MACHINE_NOT_WORKING )
 
+GAME(  1987, paradiss,  0,        paradiss, wildcard, goldnpkr_state, empty_init,    ROT0,   "Paradise",                 "Paradise 21",                                MACHINE_NOT_WORKING )
+
 GAMEL( 1991, witchcrd,  0,        witchcrd, witchcrd, goldnpkr_state, init_vkdlsc,   ROT0,   "Video Klein?",             "Witch Card (Video Klein CPU box, set 1)",    0,                   layout_goldnpkr )
 GAME(  1991, witchcda,  witchcrd, witchcrd, witchcda, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Witch Card (Spanish, witch game, set 1)",    0 )
 GAME(  1991, witchcdb,  witchcrd, witchcrd, witchcda, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Witch Card (Spanish, witch game, set 2)",    0 )
@@ -11727,12 +11865,13 @@ GAMEL( 1994, wtchjackj, wtchjack, wcrdxtnd, wtchjack, goldnpkr_state, empty_init
 
 /*************************************** OTHER SETS ***************************************/
 
-/*     YEAR  NAME       PARENT    MACHINE   INPUT     STATE           INIT           ROT      COMPANY                     FULLNAME                                  FLAGS             LAYOUT  */
-GAMEL( 1981, pmpoker,   0,        goldnpkr, pmpoker,  goldnpkr_state, empty_init,    ROT0,   "PM / Beck Elektronik",     "PlayMan Poker (German)",                  0,                layout_pmpoker  )
-GAMEL( 1987, caspoker,  0,        goldnpkr, caspoker, goldnpkr_state, empty_init,    ROT0,   "PM / Beck Elektronik",     "Casino Poker (Ver PM86LO-35-5, German)",  0,                layout_pmpoker  )
-GAMEL( 1986, caspokera, caspoker, goldnpkr, caspoker, goldnpkr_state, empty_init,    ROT0,   "PM / Beck Elektronik",     "Casino Poker (Ver PM86-35-1, German)",    0,                layout_pmpoker  )
-GAMEL( 198?, royale,    0,        goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Royale (set 1)",                          0,                layout_goldnpkr )
-GAMEL( 198?, royalea,   royale,   goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Royale (set 2)",                          0,                layout_goldnpkr )
+/*     YEAR  NAME       PARENT    MACHINE   INPUT     STATE           INIT           ROT      COMPANY                     FULLNAME                                  FLAGS                LAYOUT  */
+GAMEL( 1981, pmpoker,   0,        goldnpkr, pmpoker,  goldnpkr_state, empty_init,    ROT0,   "PM / Beck Elektronik",     "PlayMan Poker (German)",                  0,                   layout_pmpoker  )
+GAMEL( 1987, caspoker,  0,        goldnpkr, caspoker, goldnpkr_state, empty_init,    ROT0,   "PM / Beck Elektronik",     "Casino Poker (Ver PM86LO-35-5, German)",  0,                   layout_pmpoker  )
+GAMEL( 1986, caspokera, caspoker, goldnpkr, caspoker, goldnpkr_state, empty_init,    ROT0,   "PM / Beck Elektronik",     "Casino Poker (Ver PM86-35-1, German)",    0,                   layout_pmpoker  )
+GAMEL( 1988, caspokerb, caspoker, goldnpkr, caspoker, goldnpkr_state, empty_init,    ROT0,   "PM / Beck Elektronik",     "Casino Poker (Ver PM88-01-21, German)",   MACHINE_NOT_WORKING, layout_pmpoker  ) // flashes ROM FEHLER (ROM error) on start up
+GAMEL( 198?, royale,    0,        goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Royale (set 1)",                          0,                   layout_goldnpkr )
+GAMEL( 198?, royalea,   royale,   goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Royale (set 2)",                          0,                   layout_goldnpkr )
 GAME(  1993, sloco93,   0,        witchcrd, sloco93,  goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Super Loco 93 (Spanish, set 1)",          0 )
 GAME(  1993, sloco93a,  sloco93,  witchcrd, sloco93,  goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Super Loco 93 (Spanish, set 2)",          0 )
 GAME(  198?, maverik,   0,        witchcrd, bsuerte,  goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Maverik",                                 0 )
