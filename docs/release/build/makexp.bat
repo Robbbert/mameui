@@ -6,6 +6,6 @@ set Path=%minpath%;%oldpath%
 %MINGW32%\bin\make PTR64=0 SYMBOLS=0 NO_SYMBOLS=1 %1 %2 %3 %4
 set Path=%oldpath%
 set oldpath=
-if exist mameui.exe %minpath%\strip -s mameui.exe
+if exist mame.exe %minpath%\strip -s mame.exe
 set minpath=
 

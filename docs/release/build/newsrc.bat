@@ -4,7 +4,6 @@ set to=c:\MAMEUI\docs\release
 rd %to%\src /q /s
 
 md %to%\src\emu
-copy /Y %from%\src\emu\image.cpp %to%\src\emu
 copy /Y %from%\src\emu\diimage.cpp %to%\src\emu
 copy /Y %from%\src\emu\emuopts.* %to%\src\emu
 copy /Y %from%\src\emu\softlist.cpp %to%\src\emu
