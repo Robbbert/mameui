@@ -54,6 +54,8 @@ TODO:
   maybe it has a pre-NMK004 chip using the same communication protocol but used
   for protection instead.
 
+- tharrier: Current emulation is stuck when try to access test mode.
+
 - Protection is patched in several games.
 
 - Hacha Mecha Fighter: mcu simulation is wrong/incorrect (see notes).
@@ -74,6 +76,8 @@ TODO:
 - Verify sprite limits for games when resolution is 384x224
 
 NOT BUGS:
+- Black Heart: test mode text are buggy
+
 - Hacha Mecha Fighter: (BTANB) the bomb graphics are pretty weird when the game
   is in japanese mode, but it's like this on the original game.
 
@@ -87,12 +91,18 @@ NOT BUGS:
 
 ----
 
+tharrier test mode:
+
+1)  Press player 2 buttons 1+2 during reset.  "Are you ready?" will appear
+2)  Press player 1 buttons in this sequence:
+    2,1,2,2,1,1,↓,↓
+
 tdragon and hachamf test mode:
 
 1)  Press player 2 buttons 1+2 during reset.  "Ready?" will appear
 2)  Press player 1 button 2 14 (!) times
 
-mustang test mode:
+mustang and blkheart test mode:
 
 1)  Press player 2 buttons 1+2 during reset.  "Ready?" will appear
 2)  Press player 1 button 1 14 (!) times
@@ -4100,6 +4110,7 @@ void nmk16_state::set_hacky_interrupt_timing(machine_config &config)
 void nmk16_state::set_hacky_screen_lowres(machine_config &config)
 {
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
+	//m_screen->set_raw(XTAL(12'000'000)/2, 384, 0, 256, 278, 16, 240); // confirmed
 	m_screen->set_refresh_hz(56.18);
 	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(3450));
 	m_screen->set_size(256, 256);
@@ -4110,6 +4121,7 @@ void nmk16_state::set_hacky_screen_lowres(machine_config &config)
 void nmk16_state::set_hacky_screen_hires(machine_config &config)
 {
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
+	//m_screen->set_raw(XTAL(16'000'000)/2, 512, 0, 384, 278, 16, 240); // confirmed
 	m_screen->set_refresh_hz(56.18);
 	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(3450));
 	m_screen->set_size(512, 256);
@@ -5407,7 +5419,7 @@ void afega_state::stagger1(machine_config &config)
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_macross);
 	PALETTE(config, m_palette).set_format(palette_device::RRRRGGGGBBBBRGBx, 768);
-	MCFG_VIDEO_START_OVERRIDE(afega_state,afega)
+	MCFG_VIDEO_START_OVERRIDE(afega_state,macross)
 
 	/* sound hardware */
 	SPEAKER(config, "mono").front_center();
