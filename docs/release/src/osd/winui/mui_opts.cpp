@@ -2308,7 +2308,8 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num, bo
 			}
 		}
 	}
-	SetDirectories(opts);
+	if (game_num > -1)
+		SetDirectories(opts);
 }
 
 /* Save ini file based on game_number. */
@@ -2339,7 +2340,8 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 
 	if (!filepath.empty())
 	{
-		SetDirectories(opts);
+		if (game_num > -1)
+			SetDirectories(opts);
 		SaveSettingsFile(opts, filepath.c_str());
 //		printf("Settings saved to %s\n",filepath.c_str());
 	}
