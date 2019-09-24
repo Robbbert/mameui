@@ -1,5 +1,5 @@
 // license:BSD-3-Clause
-// copyright-holders:ElSemi
+// copyright-holders:ElSemi, Angelo Salese
 /*
     CRYSTAL SYSTEM by Brezzasoft (2001)
     using VRender0 System on a Chip
@@ -21,6 +21,23 @@
     program with the correct data
 
     MAME driver by ElSemi
+    Additional work and refactoring by Angelo Salese
+
+    TODO:
+    - provide NVRAM defaults where applicable;
+    - add an actual reset button (helps with inp record/playback);
+    - donghaer: needs "raster effect" for 2 players mode split screen, but no
+      interrupt is actually provided for the task so apparently not a timer
+      related effect;
+    - wulybuly: strips off main RAM to texture transfers except for text after
+      the first couple of frames;
+    - maldaiza: PIC protection.
+    - urachamu: some animation timings seems off, like bat hit animation before starting a given game.
+      They were actually too fast before adding 30 Hz vblank for interlace mode, even if the game don't
+      really read crtc blanking reg or use any other interrupt but the coin ones;
+    - urachamu: investigate what CDMA in test mode really do, assuming it's not a dud;
+
+========================================================================================================
 
 The Crystal of Kings
 Brezza Soft Corporation (Japan), 2001
@@ -124,17 +141,8 @@ Notes:
 #include "machine/nvram.h"
 #include "machine/eepromser.h"
 #include "machine/vrender0.h"
-#include "sound/vrender0.h"
-#include "video/vrender0.h"
-#include "emupal.h"
-#include "screen.h"
-#include "speaker.h"
 
 #include <algorithm>
-
-#define IDLE_LOOP_SPEEDUP
-// strip this define once we have actual credits from Smitdogg
-//#define ROGUE_CARTS
 
 class crystal_state : public driver_device
 {
@@ -142,17 +150,12 @@ public:
 	crystal_state(const machine_config &mconfig, device_type type, const char *tag) :
 		driver_device(mconfig, type, tag),
 		m_workram(*this, "workram"),
-		m_textureram(*this, "textureram"),
-		m_frameram(*this, "frameram"),
 		m_reset_patch(*this, "reset_patch"),
 		m_flash(*this, "flash"),
 		m_mainbank(*this, "mainbank"),
 		m_maincpu(*this, "maincpu"),
 		m_vr0soc(*this, "vr0soc"),
-		m_vr0vid(*this, "vr0vid"),
-		m_vr0snd(*this, "vr0snd"),
 		m_ds1302(*this, "rtc"),
-		m_screen(*this, "screen"),
 		m_eeprom(*this, "eeprom")
 	{ }
 
@@ -161,9 +164,7 @@ public:
 	void init_crysking();
 	void init_evosocc();
 	void init_donghaer();
-#ifdef ROGUE_CARTS
 	void init_maldaiza();
-#endif
 
 	void crystal(machine_config &config);
 	DECLARE_INPUT_CHANGED_MEMBER(coin_inserted);
@@ -171,8 +172,6 @@ public:
 private:
 	/* memory pointers */
 	required_shared_ptr<uint32_t> m_workram;
-	required_shared_ptr<uint32_t> m_textureram;
-	required_shared_ptr<uint32_t> m_frameram;
 	optional_shared_ptr<uint32_t> m_reset_patch;
 	optional_region_ptr<uint32_t> m_flash;
 
@@ -181,17 +180,8 @@ private:
 	/* devices */
 	required_device<se3208_device> m_maincpu;
 	required_device<vrender0soc_device> m_vr0soc;
-	required_device<vr0video_device> m_vr0vid;
-	required_device<vr0sound_device> m_vr0snd;
 	required_device<ds1302_device> m_ds1302;
-	required_device<screen_device> m_screen;
 	optional_device<eeprom_serial_93cxx_device> m_eeprom;
-
-#ifdef IDLE_LOOP_SPEEDUP
-	uint8_t     m_FlipCntRead;
-	DECLARE_WRITE_LINE_MEMBER(idle_skip_resume_w);
-	DECLARE_WRITE_LINE_MEMBER(idle_skip_speedup_w);
-#endif
 
 	uint32_t    m_Bank;
 	uint32_t    m_maxbank;
@@ -206,8 +196,6 @@ private:
 
 	virtual void machine_start() override;
 	virtual void machine_reset() override;
-	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
-	DECLARE_WRITE_LINE_MEMBER(screen_vblank);
 	void PatchReset();
 	void crystal_mem(address_map &map);
 
@@ -218,50 +206,10 @@ private:
 	uint32_t m_PIO;
 };
 
-uint32_t crystal_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
-{
-	if (m_vr0soc->crt_is_blanked()) // Blank Screen
-	{
-		bitmap.fill(0, cliprect);
-		return 0;
-	}
-
-	m_vr0vid->screen_update(screen, bitmap, cliprect);
-	return 0;
-}
-
-WRITE_LINE_MEMBER(crystal_state::screen_vblank)
-{
-	// rising edge
-	if (state)
-	{
-		if (m_vr0soc->crt_active_vblank_irq() == true)
-			m_vr0soc->IntReq(24);      //VRender0 VBlank
-
-		m_vr0vid->execute_drawing();
-	}
-}
-
 IRQ_CALLBACK_MEMBER(crystal_state::icallback)
 {
 	return m_vr0soc->irq_callback();
 }
-
-
-#ifdef IDLE_LOOP_SPEEDUP
-WRITE_LINE_MEMBER(crystal_state::idle_skip_resume_w)
-{
-	m_FlipCntRead = 0;
-	m_maincpu->resume(SUSPEND_REASON_SPIN);
-}
-
-WRITE_LINE_MEMBER(crystal_state::idle_skip_speedup_w)
-{
-	m_FlipCntRead++;
-	if (m_FlipCntRead >= 16 && m_vr0soc->irq_pending() == false && state == ASSERT_LINE)
-		m_maincpu->suspend(SUSPEND_REASON_SPIN, 1);
-}
-#endif
 
 READ32_MEMBER(crystal_state::system_input_r)
 {
@@ -355,10 +303,7 @@ void crystal_state::crystal_mem(address_map &map)
 	// mirror is accessed by donghaer on later levels
 	map(0x02000000, 0x027fffff).mirror(0x00800000).ram().share("workram");
 
-	map(0x03000000, 0x0300ffff).m(m_vr0vid, FUNC(vr0video_device::regs_map));
-	map(0x03800000, 0x03ffffff).ram().share("textureram");
-	map(0x04000000, 0x047fffff).ram().share("frameram");
-	map(0x04800000, 0x04800fff).rw(m_vr0snd, FUNC(vr0sound_device::vr0_snd_read), FUNC(vr0sound_device::vr0_snd_write));
+	map(0x03000000, 0x04ffffff).m(m_vr0soc, FUNC(vrender0soc_device::audiovideo_map));
 
 	map(0x05000000, 0x05ffffff).bankr("mainbank");
 	map(0x05000000, 0x05000003).rw(FUNC(crystal_state::FlashCmd_r), FUNC(crystal_state::FlashCmd_w));
@@ -420,9 +365,6 @@ loop:
 
 void crystal_state::machine_start()
 {
-	m_vr0vid->set_areas(reinterpret_cast<uint8_t*>(m_textureram.target()), reinterpret_cast<uint16_t*>(m_frameram.target()));
-	m_vr0snd->set_areas(m_textureram, m_frameram);
-
 	PatchReset();
 
 	if (m_mainbank)
@@ -439,10 +381,6 @@ void crystal_state::machine_start()
 				m_mainbank->configure_entry(i, dummy_region);
 		}
 	}
-
-#ifdef IDLE_LOOP_SPEEDUP
-	save_item(NAME(m_FlipCntRead));
-#endif
 }
 
 void crystal_state::machine_reset()
@@ -450,10 +388,6 @@ void crystal_state::machine_reset()
 	m_Bank = 0;
 	m_mainbank->set_entry(m_Bank);
 	m_FlashCmd = 0xff;
-
-#ifdef IDLE_LOOP_SPEEDUP
-	m_FlipCntRead = 0;
-#endif
 
 	PatchReset();
 }
@@ -566,7 +500,7 @@ static INPUT_PORTS_START( topbladv )
 INPUT_PORTS_END
 
 
-static INPUT_PORTS_START( urachamu )
+static INPUT_PORTS_START( officeye )
 	PORT_INCLUDE( crystal )
 
 	// TODO: player 2 start doesn't work ingame, it only skip attract mode items,
@@ -601,6 +535,20 @@ static INPUT_PORTS_START( urachamu )
 	PORT_BIT( 0x0000000f, IP_ACTIVE_LOW, IPT_UNKNOWN )
 INPUT_PORTS_END
 
+static INPUT_PORTS_START( urachamu )
+	PORT_INCLUDE( officeye )
+
+	// oddily they reversed red and blue
+	PORT_MODIFY("P1_P2")
+	PORT_BIT( 0x00000001, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(2) PORT_NAME("P2 Blue")
+	PORT_BIT( 0x00000010, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(2) PORT_NAME("P2 Red")
+	PORT_BIT( 0x00010000, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(1) PORT_NAME("P1 Blue")
+	PORT_BIT( 0x00020000, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(3) PORT_NAME("P3 Blue")
+	PORT_BIT( 0x00100000, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(1) PORT_NAME("P1 Red")
+	PORT_BIT( 0x00200000, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(3) PORT_NAME("P3 Red")
+INPUT_PORTS_END
+
+
 void crystal_state::crystal(machine_config &config)
 {
 	SE3208(config, m_maincpu, 14318180 * 3); // TODO : different between each PCBs
@@ -609,33 +557,10 @@ void crystal_state::crystal(machine_config &config)
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
-	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	// evolution soccer defaults
-	m_screen->set_raw((XTAL(14'318'180)*2)/4, 455, 0, 320, 262, 0, 240);
-	m_screen->set_screen_update(FUNC(crystal_state::screen_update));
-	m_screen->screen_vblank().set(FUNC(crystal_state::screen_vblank));
-	m_screen->set_palette("palette");
-
-	VRENDER0_SOC(config, m_vr0soc, 0);
+	VRENDER0_SOC(config, m_vr0soc, 14318180 * 3);
 	m_vr0soc->set_host_cpu_tag(m_maincpu);
-	m_vr0soc->set_host_screen_tag(m_screen);
-
-	VIDEO_VRENDER0(config, m_vr0vid, 14318180, m_maincpu);
-	#ifdef IDLE_LOOP_SPEEDUP
-	m_vr0soc->idleskip_cb().set(FUNC(crystal_state::idle_skip_resume_w));
-	m_vr0vid->idleskip_cb().set(FUNC(crystal_state::idle_skip_speedup_w));
-	#endif
-
-	PALETTE(config, "palette", palette_device::RGB_565);
 
 	DS1302(config, m_ds1302, 32.768_kHz_XTAL);
-
-	SPEAKER(config, "lspeaker").front_left();
-	SPEAKER(config, "rspeaker").front_right();
-
-	SOUND_VRENDER0(config, m_vr0snd, 0);
-	m_vr0snd->add_route(0, "lspeaker", 1.0);
-	m_vr0snd->add_route(1, "rspeaker", 1.0);
 }
 
 
@@ -703,7 +628,6 @@ ROM_START( donghaer )
 	ROM_LOAD( "u2",           0x1000000, 0x1000000, CRC(6d82f1a5) SHA1(036bd45f0daac1ffeaa5ad9774fc1b56e3c75ff9) )
 ROM_END
 
-#ifdef ROGUE_CARTS
 ROM_START( wulybuly )
 	CRYSBIOS
 
@@ -739,7 +663,6 @@ ROM_START( maldaiza )
 	ROM_LOAD( "u1",           0x0000000, 0x1000000,  CRC(f484d12b) SHA1(29641cda9138b5bf02c2ece34f8289385fd2ba29) )
 	ROM_LOAD( "u2",           0x1000000, 0x1000000,  CRC(86175ebf) SHA1(c1800f7339dafd3ec6c0302eebc8406582a46b04) ) // $ff filled
 ROM_END
-#endif
 
 /* note on PIC protection from ElSemi (for actually emulating it instead of patching)
 
@@ -858,22 +781,18 @@ void crystal_state::init_donghaer()
 	Rom[WORD_XOR_LE(0x19C72 / 2)] = 0x9001; // PUSH %R0
 }
 
-#ifdef ROGUE_CARTS
 void crystal_state::init_maldaiza()
 {
 	//uint16_t *Rom = (uint16_t*)memregion("flash")->base();
 	// ...
 }
-#endif
 
 GAME( 2001, crysbios, 0,        crystal,  crystal,  crystal_state, empty_init,    ROT0, "BrezzaSoft",          "Crystal System BIOS", MACHINE_IS_BIOS_ROOT )
 GAME( 2001, crysking, crysbios, crystal,  crystal,  crystal_state, init_crysking, ROT0, "BrezzaSoft",          "The Crystal of Kings", 0 )
 GAME( 2001, evosocc,  crysbios, crystal,  crystal,  crystal_state, init_evosocc,  ROT0, "Evoga",               "Evolution Soccer", 0 )
-GAME( 2001, officeye, 0,        crystal,  urachamu, crystal_state, init_officeye, ROT0, "Danbi",               "Office Yeo In Cheon Ha (version 1.2)", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // still has some instability issues
-GAME( 2001, donghaer, crysbios, crystal,  crystal,  crystal_state, init_donghaer, ROT0, "Danbi",               "Donggul Donggul Haerong", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // 2 players mode has GFX issues
+GAME( 2001, officeye, 0,        crystal,  officeye, crystal_state, init_officeye, ROT0, "Danbi",               "Office Yeo In Cheon Ha (version 1.2)", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // still has some instability issues
+GAME( 2001, donghaer, crysbios, crystal,  crystal,  crystal_state, init_donghaer, ROT0, "Danbi",               "Donggul Donggul Haerong", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // 2 players mode has GFX issues, seldomly hangs
+GAME( 2002, urachamu, crysbios, crystal,  urachamu, crystal_state, empty_init,    ROT0, "GamToU",              "Urachacha Mudaeri (Korea)", 0 ) // lamps, verify game timings
 GAME( 2003, topbladv, crysbios, crystal,  topbladv, crystal_state, init_topbladv, ROT0, "SonoKong / Expotato", "Top Blade V", 0 )
-#ifdef ROGUE_CARTS
-GAME( 2002, urachamu, crysbios, crystal,  urachamu, crystal_state, empty_init,    ROT0, "GamToU",              "Urachacha Mudaeri (Korea)", MACHINE_NOT_WORKING ) // lamps, not extensively tested
 GAME( 200?, wulybuly, crysbios, crystal,  crystal,  crystal_state, empty_init,    ROT0, "<unknown>",           "Wully Bully", MACHINE_NOT_WORKING ) // no actual graphics except offset text, confirmed to have no PIC protection so failing elsewhere
 GAME( 200?, maldaiza, crysbios, crystal,  crystal,  crystal_state, init_maldaiza, ROT0, "<unknown>",           "Maldaliza", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // PIC hookup
-#endif

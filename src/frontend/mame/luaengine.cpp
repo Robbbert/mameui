@@ -2,7 +2,7 @@
 // copyright-holders:Miodrag Milanovic,Luca Bruno
 /***************************************************************************
 
-    luaengine.c
+    luaengine.cpp
 
     Controls execution of the core MAME system.
 
@@ -638,13 +638,6 @@ int lua_engine::enumerate_functions(const char *id, std::function<bool(const sol
 				count++;
 				if (!cont)
 					break;
-
-				auto ret = invoke(func.second.as<sol::protected_function>());
-				if (!ret.valid())
-				{
-					sol::error err = ret;
-					osd_printf_error("[LUA ERROR] in execute_function: %s\n", err.what());
-				}
 			}
 		}
 		return true;
@@ -1247,6 +1240,8 @@ void lua_engine::initialize()
  *
  * machine.paused - get paused state
  * machine.samplerate - get audio sample rate
+ * machine.exit_pending
+ * machine.hard_reset_pending
  *
  * machine.devices[] - get device table (k=tag, v=device_t)
  * machine.screens[] - get screens table (k=tag, v=screen_device)
@@ -1277,6 +1272,8 @@ void lua_engine::initialize()
 				},
 			"paused", sol::property(&running_machine::paused),
 			"samplerate", sol::property(&running_machine::sample_rate),
+			"exit_pending", sol::property(&running_machine::exit_pending),
+			"hard_reset_pending", sol::property(&running_machine::hard_reset_pending),
 			"devices", sol::property([this](running_machine &m) {
 					std::function<void(device_t &, sol::table)> tree;
 					sol::table table = sol().create_table();
@@ -1482,16 +1479,14 @@ void lua_engine::initialize()
 			"bpclr", &device_debug::breakpoint_clear,
 			"bplist", [this](device_debug &dev) {
 					sol::table table = sol().create_table();
-					device_debug::breakpoint *list = dev.breakpoint_first();
-					while(list)
+					for(const device_debug::breakpoint &bpt : dev.breakpoint_list())
 					{
 						sol::table bp = sol().create_table();
-						bp["enabled"] = list->enabled();
-						bp["address"] = list->address();
-						bp["condition"] = list->condition();
-						bp["action"] = list->action();
-						table[list->index()] = bp;
-						list = list->next();
+						bp["enabled"] = bpt.enabled();
+						bp["address"] = bpt.address();
+						bp["condition"] = bpt.condition();
+						bp["action"] = bpt.action();
+						table[bpt.index()] = bp;
 					}
 					return table;
 				},

@@ -25,7 +25,7 @@ public:
 
 	void driver_init() override;
 
-	DECLARE_CUSTOM_INPUT_MEMBER(bsmt_status_r);
+	DECLARE_READ_LINE_MEMBER(bsmt_status_r);
 
 protected:
 	policetr_state(const machine_config &mconfig, device_type type, const char *tag, uint32_t speedup_pc, uint32_t speedup_addr) :
@@ -119,7 +119,7 @@ class sshooter_state : public policetr_state
 {
 public:
 	sshooter_state(const machine_config &mconfig, device_type type, const char *tag)
-		: sshooter_state(mconfig, type, tag, 0x1fc03470, 0x00018fd8)
+		: sshooter_state(mconfig, type, tag, 0x1fc03440, 0x00018fd8)
 	{ }
 
 	void sshooter(machine_config &config);
@@ -132,6 +132,14 @@ protected:
 	void mem(address_map &map);
 };
 
+class sshoot17_state : public sshooter_state
+{
+public:
+	sshoot17_state(const machine_config &mconfig, device_type type, const char *tag)
+		: sshooter_state(mconfig, type, tag, 0x1fc03470, 0x00018fd8)
+	{ }
+};
+
 class sshoot12_state : public sshooter_state
 {
 public:
@@ -140,10 +148,26 @@ public:
 	{ }
 };
 
+class sshoot11_state : public sshooter_state
+{
+public:
+	sshoot11_state(const machine_config &mconfig, device_type type, const char *tag)
+		: sshooter_state(mconfig, type, tag, 0x1fc032f8, 0x00018fd8)
+	{ }
+};
+
 class plctr13b_state : public sshooter_state
 {
 public:
 	plctr13b_state(const machine_config &mconfig, device_type type, const char *tag)
 		: sshooter_state(mconfig, type, tag, 0x1fc028bc, 0x00000fc8)
+	{ }
+};
+
+class polict10_state : public sshooter_state
+{
+public:
+	polict10_state(const machine_config &mconfig, device_type type, const char *tag)
+		: sshooter_state(mconfig, type, tag, 0x1fc028b4, 0x00000fc8)
 	{ }
 };
