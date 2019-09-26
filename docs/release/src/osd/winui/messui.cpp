@@ -875,29 +875,36 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 	printf("MyFillSoftwareList: Getting Softlist Information\n");fflush(stdout);
 	for (software_list_device &swlistdev : software_list_device_iterator(s_config->mconfig->root_device()))
 	{
-		for (const software_info &swinfo : swlistdev.get_info())
+		if ((swlistdev.list_type() == SOFTWARE_LIST_COMPATIBLE_SYSTEM)
+			|| (swlistdev.list_type() == SOFTWARE_LIST_ORIGINAL_SYSTEM))
 		{
-			const software_part &swpart = swinfo.parts().front();
-
-			// search for a device with the right interface
-			for (const device_image_interface &image : image_interface_iterator(s_config->mconfig->root_device()))
+			for (const software_info &swinfo : swlistdev.get_info())
 			{
-				if (!image.user_loadable())
-					continue;
-				const char *interface = image.image_interface();
-				if (interface)
+				const software_part &swpart = swinfo.parts().front();
+
+				// search for a device with the right interface
+				for (const device_image_interface &image : image_interface_iterator(s_config->mconfig->root_device()))
 				{
-					if (swpart.matches_interface(interface))
+					if (!image.user_loadable())
+						continue;
+					if (swlistdev.is_compatible(swpart) == SOFTWARE_IS_COMPATIBLE)
 					{
-						// Extract the Usage data from the "info" fields.
-						const char* usage = NULL;
-						for (const feature_list_item &flist : swinfo.other_info())
-							if (flist.name() == "usage")
-								usage = flist.value().c_str();
-						// Now actually add the item
-						SoftwareList_AddFile(hwndSoftwareList, swinfo.shortname().c_str(), swlistdev.list_name().c_str(), swinfo.longname().c_str(),
-							swinfo.publisher().c_str(), swinfo.year().c_str(), usage, image.brief_instance_name().c_str());
-						break;
+						const char *interface = image.image_interface();
+						if (interface)
+						{
+							if (swpart.matches_interface(interface))
+							{
+								// Extract the Usage data from the "info" fields.
+								const char* usage = NULL;
+								for (const feature_list_item &flist : swinfo.other_info())
+									if (flist.name() == "usage")
+										usage = flist.value().c_str();
+								// Now actually add the item
+								SoftwareList_AddFile(hwndSoftwareList, swinfo.shortname().c_str(), swlistdev.list_name().c_str(), swinfo.longname().c_str(),
+									swinfo.publisher().c_str(), swinfo.year().c_str(), usage, image.brief_instance_name().c_str());
+								break;
+							}
+						}
 					}
 				}
 			}
