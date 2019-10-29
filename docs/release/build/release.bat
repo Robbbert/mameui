@@ -4,10 +4,11 @@ pause
 
 
 call newsrc.bat
-//call clean.bat
-//call clean.bat
-//call clean.bat
-//call clean.bat
+call clean.bat
+call clean.bat
+call clean.bat
+call clean.bat
+//goto 64bit
 
 rem --- 32bit ---
 del mameui.exe
@@ -21,6 +22,7 @@ del mame.sym
 call makexp -j4 %1 %2 %3
 if not exist mame.exe goto end
 
+:64bit
 rem --- 64bit ---
 del mameui64.exe
 del mameui64.sym

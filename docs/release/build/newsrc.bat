@@ -36,9 +36,9 @@ type %from%\docs\BSD3Clause.txt    | MORE /P > %to%\docs\BSD3Clause.txt
 type %from%\docs\LICENSE           | MORE /P > %to%\docs\license.txt
 type %from%\docs\winui_license.txt | MORE /P > %to%\docs\winui_license.txt
 
-pause
+rem pause
 echo off
-cls
+rem cls
 echo.
 echo RAR up everything.
 echo.

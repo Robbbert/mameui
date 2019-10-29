@@ -3488,13 +3488,8 @@ static BOOL SoftwareDirectories_OnInsertBrowse(HWND hDlg, BOOL bBrowse, LPCTSTR 
 
 	if (!lpItem)
 	{
-		if (bBrowse)
-		{
-			ListView_GetItemText(hList, nItem, 0, inbuf, ARRAY_LENGTH(inbuf));
-			lpIn = inbuf;
-		}
-		else
-			lpIn = NULL;
+		ListView_GetItemText(hList, nItem, 0, inbuf, ARRAY_LENGTH(inbuf));
+		lpIn = inbuf;
 
 		if (!BrowseForDirectory(hDlg, lpIn, outbuf))
 			return false;
