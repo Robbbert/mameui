@@ -29,7 +29,8 @@ TODO:
   electronically. For the ones that weren't decapped, they were read by
   playing back all melody data and reconstructing it to ROM. Visual(decap)
   verification is wanted for: gnw_bfightn, gnw_bjack, gnw_bsweep, gnw_climbern,
-  gnw_dkjrp, gnw_gcliff, gnw_mbaway, gnw_sbuster, gnw_zelda
+  gnw_dkcirc, gnw_dkjrp, gnw_gcliff, gnw_mariotj, gnw_mbaway, gnw_sbuster,
+  gnw_zelda
 
 ****************************************************************************
 
@@ -89,7 +90,7 @@ PG-92*    p    SM511?  Popeye          "
 CJ-93     p    SM511   Donkey Kong Jr. "
 TB-94     p    SM511   Mario's Bombs Away
 DC-95*    p    SM511?  Mickey Mouse
-MK-96*    p    SM511?  Donkey Kong Circus (same ROM as DC-95? LCD is different)
+MK-96     p    SM511   Donkey Kong Circus (same ROM as DC-95? LCD is different)
 DJ-101    nws  SM510   Donkey Kong Jr.
 ML-102    nws  SM510   Mario's Cement Factory
 NH-103    nws  SM510   Manhole
@@ -97,7 +98,7 @@ TF-104    nws  SM510   Tropical Fish
 YM-105    nws  SM511   Super Mario Bros.
 DR-106    nws  SM511   Climber
 BF-107    nws  SM511   Balloon Fight
-MJ-108*   nws  SM511?  Mario The Juggler
+MB-108    nws  SM511   Mario The Juggler
 BU-201    sc   SM510   Spitball Sparky
 UD-202*   sc   SM510?  Crab Grab
 BX-301    mvs  SM511   Boxing (aka Punch Out)
@@ -2929,6 +2930,76 @@ ROM_END
 
 /***************************************************************************
 
+  Nintendo Game & Watch: Donkey Kong Circus (model MK-96)
+  * PCB labels: DC-95M (main board), DC-95C (controller board)
+  * Sharp SM511 label DC-95 541D (no decap)
+  * inverted lcd screen with custom segments, 1-bit sound
+
+***************************************************************************/
+
+class gnw_dkcirc_state : public hh_sm510_state
+{
+public:
+	gnw_dkcirc_state(const machine_config &mconfig, device_type type, const char *tag) :
+		hh_sm510_state(mconfig, type, tag)
+	{ }
+
+	void gnw_dkcirc(machine_config &config);
+};
+
+// config
+
+static INPUT_PORTS_START( gnw_dkcirc )
+	PORT_START("IN.0") // S1
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_UNUSED )
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_JOYSTICK_RIGHT ) PORT_CHANGED_CB(input_changed) PORT_16WAY
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_JOYSTICK_LEFT ) PORT_CHANGED_CB(input_changed) PORT_16WAY
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_UNUSED )
+
+	PORT_START("IN.1") // S2
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SELECT ) PORT_CHANGED_CB(input_changed) PORT_NAME("Time")
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_START2 ) PORT_CHANGED_CB(input_changed) PORT_NAME("Game B")
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_START1 ) PORT_CHANGED_CB(input_changed) PORT_NAME("Game A")
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_SERVICE2 ) PORT_CHANGED_CB(input_changed) PORT_NAME("Alarm")
+
+	PORT_START("ACL")
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_CB(acl_button) PORT_NAME("ACL")
+
+	PORT_START("BA")
+	PORT_CONFNAME( 0x01, 0x01, "Increase Score (Cheat)") // factory test, unpopulated on PCB
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
+
+	PORT_START("B")
+	PORT_CONFNAME( 0x01, 0x01, "Infinite Lives (Cheat)") // "
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
+INPUT_PORTS_END
+
+void gnw_dkcirc_state::gnw_dkcirc(machine_config &config)
+{
+	sm511_common(config, 1920, 1107);
+}
+
+// roms
+
+ROM_START( gnw_dkcirc )
+	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_LOAD( "mk-96.program", 0x0000, 0x1000, CRC(39dd864a) SHA1(25c67dac7320fe00990989cd42438461950a68ec) )
+
+	ROM_REGION( 0x100, "maincpu:melody", 0 )
+	ROM_LOAD( "mk-96.melody", 0x000, 0x100, BAD_DUMP CRC(2908380f) SHA1(8361bbe4df28b17e791035d077e892f29149c777) ) // decap needed for verification
+
+	ROM_REGION( 367718, "screen", 0)
+	ROM_LOAD( "gnw_dkcirc.svg", 0, 367718, CRC(f8571437) SHA1(bc000267deab83dfd460aea5c4102a23ac51f169) )
+ROM_END
+
+
+
+
+
+/***************************************************************************
+
   Nintendo Game & Watch: Donkey Kong Jr. (model DJ-101)
   * Sharp SM510 label DJ-101 52ZA (no decap)
   * lcd screen with custom segments, 1-bit sound
@@ -3483,6 +3554,71 @@ ROM_START( gnw_bfightn )
 
 	ROM_REGION( 558496, "screen", 0)
 	ROM_LOAD( "gnw_bfightn.svg", 0, 558496, CRC(c488000e) SHA1(f9a042799a1489f83b07a91827b8b421238a67e8) )
+ROM_END
+
+
+
+
+
+/***************************************************************************
+
+  Nintendo Game & Watch: Mario The Juggler (model MB-108)
+  * PCB label MB-108
+  * Sharp SM511 label MB-108 9209B (no decap)
+  * lcd screen with custom segments, 1-bit sound
+
+***************************************************************************/
+
+class gnw_mariotj_state : public hh_sm510_state
+{
+public:
+	gnw_mariotj_state(const machine_config &mconfig, device_type type, const char *tag) :
+		hh_sm510_state(mconfig, type, tag)
+	{ }
+
+	void gnw_mariotj(machine_config &config);
+};
+
+// config
+
+static INPUT_PORTS_START( gnw_mariotj )
+	PORT_START("IN.0") // S1
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_JOYSTICK_RIGHT ) PORT_CHANGED_CB(input_changed) PORT_16WAY
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_UNUSED )
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_UNUSED )
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_JOYSTICK_LEFT ) PORT_CHANGED_CB(input_changed) PORT_16WAY
+
+	PORT_START("IN.1") // S2
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SELECT ) PORT_CHANGED_CB(input_changed) PORT_NAME("Time")
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_START2 ) PORT_CHANGED_CB(input_changed) PORT_NAME("Game B")
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_START1 ) PORT_CHANGED_CB(input_changed) PORT_NAME("Game A")
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_SERVICE2 ) PORT_CHANGED_CB(input_changed) PORT_NAME("Alarm")
+
+	PORT_START("ACL")
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_SERVICE1 ) PORT_CHANGED_CB(acl_button) PORT_NAME("ACL")
+
+	PORT_START("B")
+	PORT_CONFNAME( 0x01, 0x01, "Infinite Lives (Cheat)") // factory test, unpopulated on PCB
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
+INPUT_PORTS_END
+
+void gnw_mariotj_state::gnw_mariotj(machine_config &config)
+{
+	sm511_common(config, 1630, 1080);
+}
+
+// roms
+
+ROM_START( gnw_mariotj )
+    ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_LOAD( "mb-108.program", 0x0000, 0x1000, CRC(f7118bb4) SHA1(c3117fd009e4686a149f85fb65786ddffc091eeb) )
+
+	ROM_REGION( 0x100, "maincpu:melody", 0 )
+	ROM_LOAD( "mb-108.melody", 0x000, 0x100, BAD_DUMP CRC(d8cc1f74) SHA1(4bbb470ef01777b0c1dbd7b84dc560da6d3b87e7) ) // decap needed for verification
+
+	ROM_REGION( 210391, "screen", 0)
+	ROM_LOAD( "gnw_mariotj.svg", 0, 210391, CRC(8f1e6118) SHA1(4ecad443142330470384659af1e8dd59bca519e4) )
 ROM_END
 
 
@@ -8663,10 +8799,12 @@ CONS( 1986, gnw_climber, 0,          0, gnw_climber, gnw_climber, gnw_climber_st
 CONS( 1988, gnw_climbern,gnw_climber,0, gnw_climbern,gnw_climber, gnw_climber_state, empty_init, "Nintendo", "Game & Watch: Climber (new wide screen)", MACHINE_SUPPORTS_SAVE )
 CONS( 1986, gnw_bfight,  0,          0, gnw_bfight,  gnw_bfight,  gnw_bfight_state,  empty_init, "Nintendo", "Game & Watch: Balloon Fight (crystal screen)", MACHINE_SUPPORTS_SAVE )
 CONS( 1988, gnw_bfightn, gnw_bfight, 0, gnw_bfightn, gnw_bfight,  gnw_bfight_state,  empty_init, "Nintendo", "Game & Watch: Balloon Fight (new wide screen)", MACHINE_SUPPORTS_SAVE )
+CONS( 1991, gnw_mariotj, 0,          0, gnw_mariotj, gnw_mariotj, gnw_mariotj_state, empty_init, "Nintendo", "Game & Watch: Mario The Juggler", MACHINE_SUPPORTS_SAVE )
 
 // Nintendo G&W: table top / panorama screen
 CONS( 1983, gnw_dkjrp,   0,          0, gnw_dkjrp,   gnw_dkjrp,   gnw_dkjrp_state,   empty_init, "Nintendo", "Game & Watch: Donkey Kong Jr. (panorama screen)", MACHINE_SUPPORTS_SAVE )
 CONS( 1983, gnw_mbaway,  0,          0, gnw_mbaway,  gnw_mbaway,  gnw_mbaway_state,  empty_init, "Nintendo", "Game & Watch: Mario's Bombs Away", MACHINE_SUPPORTS_SAVE )
+CONS( 1984, gnw_dkcirc,  0,          0, gnw_dkcirc,  gnw_dkcirc,  gnw_dkcirc_state,  empty_init, "Nintendo", "Game & Watch: Donkey Kong Circus", MACHINE_SUPPORTS_SAVE )
 
 // Nintendo G&W: super color
 CONS( 1984, gnw_ssparky, 0,          0, gnw_ssparky, gnw_ssparky, gnw_ssparky_state, empty_init, "Nintendo", "Game & Watch: Spitball Sparky", MACHINE_SUPPORTS_SAVE )

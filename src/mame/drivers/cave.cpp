@@ -18,7 +18,7 @@ Other        :  93C46 EEPROM
 
 
 -----------------------------------------------------------------------------------------
-Year + Game           License       PCB         Tilemaps        Sprites         Other
+Year + Game               License       PCB         Tilemaps        Sprites         Other
 -----------------------------------------------------------------------------------------
 94 Mazinger Z             Banpresto     BP943A      038 9335EX706   013 9341E7009   Z80
 94 Power Instinct 2       Atlus         ATG02?      038 9429WX709   013 9341E7009   Z80 NMK 112
@@ -1961,6 +1961,7 @@ void cave_state::add_base_config(machine_config &config, int layer)
 
 void cave_state::add_ymz(machine_config &config)
 {
+	// TODO: all PCB versions using mono, on a YMZ chip as well? Sounds very unlikely, verify on all flavours.
 	SPEAKER(config, "mono").front_center();
 
 	ymz280b_device &ymz(YMZ280B(config, "ymz", 16.9344_MHz_XTAL));
@@ -2491,7 +2492,7 @@ void cave_state::sailormn(machine_config &config)
 	m_audiocpu->set_addrmap(AS_PROGRAM, &cave_state::sailormn_sound_map);
 	m_audiocpu->set_addrmap(AS_IO, &cave_state::sailormn_sound_portmap);
 
-//  config.m_minimum_quantum = attotime::from_hz(600);
+//  config.set_maximum_quantum(attotime::from_hz(600));
 
 	MCFG_MACHINE_RESET_OVERRIDE(cave_state,sailormn)
 	EEPROM_93C46_16BIT(config, m_eeprom);
@@ -2501,7 +2502,7 @@ void cave_state::sailormn(machine_config &config)
 	m_screen[0]->set_visarea(0+1, 320+1-1, 0, 240-1);
 
 	/* Layer 2 (8x8) needs to be handled differently */
-	m_tilemap[2]->set_tile_callback(tilemap038_device::tmap038_cb_delegate(FUNC(cave_state::sailormn_get_banked_code), this)); /* Layer 2 has 1 banked ROM */
+	m_tilemap[2]->set_tile_callback(FUNC(cave_state::sailormn_get_banked_code)); /* Layer 2 has 1 banked ROM */
 
 	GFXDECODE(config, m_gfxdecode[0], m_palette[0], gfx_sailormn); // 4 bit sprites, 6 bit tiles
 	m_palette[0]->set_entries(0x4000/2);

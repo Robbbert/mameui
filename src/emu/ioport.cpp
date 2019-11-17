@@ -597,6 +597,8 @@ ioport_field::ioport_field(ioport_port &port, ioport_type type, ioport_value def
 		m_flags(0),
 		m_impulse(0),
 		m_name(name),
+		m_read(port.device()),
+		m_write(port.device()),
 		m_write_param(0),
 		m_digital_value(false),
 		m_min(0),
@@ -608,6 +610,7 @@ ioport_field::ioport_field(ioport_port &port, ioport_type type, ioport_value def
 		m_crosshair_scale(1.0),
 		m_crosshair_offset(0),
 		m_crosshair_altaxis(0),
+		m_crosshair_mapper(port.device()),
 		m_full_turn_count(0),
 		m_remap_table(nullptr),
 		m_way(0)
@@ -869,20 +872,18 @@ void ioport_field::get_user_settings(user_settings &settings)
 	if (!m_settinglist.empty() || m_type == IPT_ADJUSTER)
 		settings.value = m_live->value;
 
-	// if there's analog data, extract the analog settings
 	if (m_live->analog != nullptr)
 	{
+		// if there's analog data, extract the analog settings
 		settings.sensitivity = m_live->analog->sensitivity();
 		settings.delta = m_live->analog->delta();
 		settings.centerdelta = m_live->analog->centerdelta();
 		settings.reverse = m_live->analog->reverse();
 	}
-
-	// non-analog settings
 	else
 	{
+		// non-analog settings
 		settings.toggle = m_live->toggle;
-		settings.autofire = m_live->autofire;
 	}
 }
 
@@ -908,20 +909,18 @@ void ioport_field::set_user_settings(const user_settings &settings)
 	if (!m_settinglist.empty() || m_type == IPT_ADJUSTER)
 		m_live->value = settings.value;
 
-	// if there's analog data, extract the analog settings
 	if (m_live->analog != nullptr)
 	{
+		// if there's analog data, extract the analog settings
 		m_live->analog->m_sensitivity = settings.sensitivity;
 		m_live->analog->m_delta = settings.delta;
 		m_live->analog->m_centerdelta = settings.centerdelta;
 		m_live->analog->m_reverse = settings.reverse;
 	}
-
-	// non-analog settings
 	else
 	{
+		// non-analog settings
 		m_live->toggle = settings.toggle;
-		m_live->autofire = settings.autofire;
 	}
 }
 
@@ -1098,19 +1097,6 @@ void ioport_field::frame_update(ioport_value &result)
 
 	// if the state changed, look for switch down/switch up
 	bool curstate = m_digital_value || machine().input().seq_pressed(seq());
-	if (m_live->autofire && !machine().ioport().get_autofire_toggle())
-	{
-		if (curstate)
-		{
-			if (m_live->autopressed > machine().ioport().get_autofire_delay())
-				m_live->autopressed = 0;
-			else if (m_live->autopressed > machine().ioport().get_autofire_delay() / 2)
-				curstate = false;
-			m_live->autopressed++;
-		}
-		else
-			m_live->autopressed = 0;
-	}
 	bool changed = false;
 	if (curstate != m_live->last)
 	{
@@ -1329,9 +1315,9 @@ void ioport_field::expand_diplocation(const char *location, std::string &errorbu
 void ioport_field::init_live_state(analog_field *analog)
 {
 	// resolve callbacks
-	m_read.bind_relative_to(device());
-	m_write.bind_relative_to(device());
-	m_crosshair_mapper.bind_relative_to(device());
+	m_read.resolve();
+	m_write.resolve();
+	m_crosshair_mapper.resolve();
 
 	// allocate live state
 	m_live = std::make_unique<ioport_field_live>(*this, analog);
@@ -1360,8 +1346,6 @@ ioport_field_live::ioport_field_live(ioport_field &field, analog_field *analog)
 		last(0),
 		toggle(field.toggle()),
 		joydir(digital_joystick::JOYDIR_COUNT),
-		autofire(false),
-		autopressed(0),
 		lockout(false)
 {
 	// fill in the basic values
@@ -1677,9 +1661,7 @@ ioport_manager::ioport_manager(running_machine &machine)
 		m_playback_accumulated_frames(0),
 		m_timecode_file(machine.options().input_directory(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS),
 		m_timecode_count(0),
-		m_timecode_last_time(attotime::zero),
-		m_autofire_toggle(false),
-		m_autofire_delay(3)                 // 1 seems too fast for a bunch of games
+		m_timecode_last_time(attotime::zero)
 {
 	memset(m_type_to_entry, 0, sizeof(m_type_to_entry));
 }
