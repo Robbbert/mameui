@@ -1281,7 +1281,7 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 		if ((desktop.bottom < (area.y + area.height)) || (area.y < 0))
 		{
 			area.y = 10;
-			area.height = desktop.bottom - 60;
+			area.height = desktop.bottom - 40;
 		}
 		// now use these values
 		rect.left = area.x;
