@@ -1325,6 +1325,7 @@ static seqselect_info *get_seqselect_info(HWND editwnd)
 
 static void seqselect_settext(HWND editwnd)
 {
+#if 0
 	seqselect_info *stuff;
 	std::string seqstring, buf;
 
@@ -1349,6 +1350,7 @@ static void seqselect_settext(HWND editwnd)
 		if ((start != 0) || (end != buf.size()))
 			SendMessage(editwnd, EM_SETSEL, 0, -1);
 	}
+#endif
 }
 
 #ifdef __GNUC__
