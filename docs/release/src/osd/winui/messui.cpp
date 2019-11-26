@@ -457,7 +457,7 @@ static string ProcessSWDir(int drvindex)
 	string t = GetSWDir();
 	if (!t.empty())
 	{
-		printf("ProcessSWDir: B\n");fflush(stdout);
+		printf("ProcessSWDir: B=%s\n",t.c_str());fflush(stdout);
 		strcpy(dir0, t.c_str()); // global SW
 		t0 = strtok(dir0, ";");
 		if (t0 && osd::directory::open(t0))  // make sure its valid
@@ -471,10 +471,10 @@ static string ProcessSWDir(int drvindex)
 	char dir1[2048];
 	strcpy(dir1, o.value(OPTION_SWPATH));
 	char* t1 = strtok(dir1, ";");
-	printf("ProcessSWDir: D\n");fflush(stdout);
+	printf("ProcessSWDir: D=%s=%s\n",t1,o.value(OPTION_SWPATH));fflush(stdout);
 	if (t1 && osd::directory::open(t1))  // make sure its valid
 		if (b_dir && (strcmp(t0, t1) != 0))
-			return string("1") + string(dir1);
+			return string("1") + o.value(OPTION_SWPATH);
 
 	// not specified in driver, try parent if it has one
 	printf("ProcessSWDir: E\n");fflush(stdout);
@@ -496,7 +496,7 @@ static string ProcessSWDir(int drvindex)
 				if (b_dir && (strcmp(t0, t1) != 0))
 				{
 					printf("ProcessSWDir: GC\n");fflush(stdout);
-					return string("1") + string(dir1);
+					return string("1") + o.value(OPTION_SWPATH);
 				}
 			}
 		}
@@ -516,13 +516,13 @@ static string ProcessSWDir(int drvindex)
 		t1 = strtok(dir1, ";");
 		if (t1 && osd::directory::open(t1))  // make sure its valid
 			if (b_dir && (strcmp(t0, t1) != 0))
-				return string("1") + string(dir1);
+				return string("1") + o.value(OPTION_SWPATH);
 	}
 
 	// Try the global root
 	printf("ProcessSWDir: J\n");fflush(stdout);
 	if (b_dir)
-		return string("0") + string(dir0);
+		return string("0") + t;
 
 	// nothing valid, drop to default emu directory
 	printf("ProcessSWDir: K\n");fflush(stdout);
@@ -554,7 +554,7 @@ static BOOL AddSoftwarePickerDirs(HWND hwndPicker, LPCSTR pszDirectories, LPCSTR
 		if (!SoftwarePicker_AddDirectory(hwndPicker, pszNewString.c_str()))
 			return false;
 
-		t1 = strtok (NULL, ",");
+		t1 = strtok (NULL, ";");
 	}
 	return true;
 }

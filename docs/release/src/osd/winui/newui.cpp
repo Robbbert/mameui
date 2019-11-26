@@ -1363,6 +1363,7 @@ static void seqselect_settext(HWND editwnd)
 
 static void seqselect_start_read_from_main_thread(void *param)
 {
+#if 0
 	seqselect_info *stuff;
 
 	// get the basics
@@ -1404,6 +1405,7 @@ static void seqselect_start_read_from_main_thread(void *param)
 	// repause the OSD code
 	while(pause_count--)
 		winwindow_ui_pause(*Machine, true);
+#endif
 }
 
 

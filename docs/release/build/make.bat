@@ -1,5 +1,7 @@
-del mameui.sym
+del mameui64.sym
 :start
-del mameui.exe
-if exist mameui.exe goto start
-make32 -j4 %1 %2 %3
+del mameui64.exe
+if exist mameui64.exe goto start
+make64 -j4 %1 %2 %3
+copy /Y mameui64.exe mameui.exe
+

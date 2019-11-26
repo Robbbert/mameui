@@ -8,7 +8,7 @@ call clean.bat
 call clean.bat
 call clean.bat
 call clean.bat
-//goto 64bit
+goto 64bit
 
 rem --- 32bit ---
 del mameui.exe
