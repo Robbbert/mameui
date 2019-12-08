@@ -872,7 +872,7 @@ chd_error chdcd_parse_cue(const char *tocfname, cdrom_toc &outtoc, chdcd_track_i
 	while (!feof(infile))
 	{
 		/* get the next line */
-		fgets(linebuffer, 511, infile);
+		fgets(linebuffer, 511, infile);printf("%s",linebuffer);
 
 		/* if EOF didn't hit, keep going */
 		if (!feof(infile))
@@ -912,9 +912,8 @@ chd_error chdcd_parse_cue(const char *tocfname, cdrom_toc &outtoc, chdcd_track_i
 				}
 				else
 				{
-					fclose(infile);
-					printf("ERROR: Unhandled track type %s\n", token);
-					return CHDERR_UNSUPPORTED_FORMAT;
+					printf("ERROR: Track %02d: Unhandled track type %s\n", trknum+2,token);   // MESSUI
+					goto nextpart;   // MESSUI
 				}
 			}
 			else if (!strcmp(token, "TRACK"))
@@ -1038,6 +1037,7 @@ chd_error chdcd_parse_cue(const char *tocfname, cdrom_toc &outtoc, chdcd_track_i
 			}
 		}
 	}
+	nextpart: printf("TOTAL TRACKS = %d\n",trknum+1);  // MESSUI
 
 	/* close the input CUE */
 	fclose(infile);
