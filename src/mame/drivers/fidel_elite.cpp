@@ -33,10 +33,10 @@ Note that EAS doesn't have a "new game" button, it is done through game options:
 Press GAME CONTROL, then place/lift a piece on D6 to restart, or D8 to reset
 with default settings, then press CL.
 
-Prestige Challenger (PC) hardware is very similar. They stripped the 8255 PPI,
-and added more RAM(7*TMM2016P). Some were released at 3.6MHz instead of 4MHz,
-perhaps due to hardware instability? Opening module PC16 was included by default,
-this module is the same as CB16 but at different form factor.
+Prestige Challenger (PC) hardware is very similar. It was released before EAS,
+it doesn't have the 8255 PPI, but has more RAM(7*TMM2016P). Some were released at
+3.6MHz instead of 4MHz, perhaps due to hardware instability? Opening module PC16 was
+included by default, this module is the same as CB16 but at different form factor.
 
 Elite Avant Garde (models 6081,6088,6089) is on the same hardware as EAS.
 
@@ -469,10 +469,8 @@ void elite_state::eas(machine_config &config)
 
 	I8255(config, m_ppi8255); // port B: input, port A & C: output
 	m_ppi8255->out_pa_callback().set(FUNC(elite_state::ppi_porta_w));
-	m_ppi8255->tri_pa_callback().set_constant(0);
 	m_ppi8255->in_pb_callback().set(FUNC(elite_state::ppi_portb_r));
 	m_ppi8255->out_pc_callback().set(FUNC(elite_state::ppi_portc_w));
-	m_ppi8255->tri_pc_callback().set_constant(0);
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
