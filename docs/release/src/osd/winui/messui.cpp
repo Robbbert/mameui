@@ -875,8 +875,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 	printf("MyFillSoftwareList: Getting Softlist Information\n");fflush(stdout);
 	for (software_list_device &swlistdev : software_list_device_iterator(s_config->mconfig->root_device()))
 	{
-		if ((swlistdev.list_type() == SOFTWARE_LIST_COMPATIBLE_SYSTEM)
-			|| (swlistdev.list_type() == SOFTWARE_LIST_ORIGINAL_SYSTEM))
+		if (swlistdev.is_compatible() || swlistdev.is_original())
 		{
 			for (const software_info &swinfo : swlistdev.get_info())
 			{
