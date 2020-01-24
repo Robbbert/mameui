@@ -2068,6 +2068,11 @@ ROM_START( silv35 )
 	ROM_LOAD( "silverlit35.bin", 0x00000, 0x400000, CRC(7540e350) SHA1(a0cb456136560fa4d8a365dd44d815ec0e9fc2e7) )
 ROM_END
 
+ROM_START( lpgm240 )
+	ROM_REGION( 0x800000, "mainrom", 0 )
+	ROM_LOAD( "w25q64jv.u1", 0x00000, 0x800000, CRC(b973e65b) SHA1(36ff137068ea56b4679c2db386ac0067de0a9eaf) )
+ROM_END
+
 ROM_START( pjoyn50 )
 	ROM_REGION( 0x400000, "mainrom", 0 )
 	ROM_LOAD( "power joy navigator 50-in-1.prg", 0x00000, 0x400000, CRC(d1bbadd4) SHA1(2186c71bcedf6c2eedf58233faa26fca9586aa40) )
@@ -2261,6 +2266,11 @@ ROM_START( cbrs8 )
 	ROM_LOAD( "rs-8.bin", 0x00000, 0x1000000, BAD_DUMP CRC(10b2bed0) SHA1(0453a1e6769818ccf25dcf22b2c6198a5688a1d4) )
 ROM_END
 
+ROM_START( rfcp168 )
+	ROM_REGION( 0x1000000, "mainrom", 0 )
+	ROM_LOAD( "winbond_w29gl128c.bin", 0x00000, 0x1000000, CRC(d11caf71) SHA1(64b269cee30a51549a2d0491bbeed07751771559) )
+ROM_END
+
 ROM_START( mc_tv200 )
 	ROM_REGION( 0x800000, "mainrom", 0 )
 	ROM_LOAD( "s29gl064n90.bin", 0x00000, 0x800000, CRC(ae1905d2) SHA1(11582055713ba937c1ad32c4ada8683eebc1c83c) )
@@ -2315,7 +2325,8 @@ CONS( 200?, vtsndtest, 0,  0,  nes_vt,    nes_vt, nes_vt_state, empty_init, "VRT
 // Bundled as "Demo for VT03 Pic32" on the V.R. Technology VT SDK
 CONS( 200?, vtboxing,     0,  0,  nes_vt, nes_vt, nes_vt_state, empty_init, "VRT", "VRT VT SDK 'Boxing' (Demo for VT03 Pic32)", MACHINE_NOT_WORKING )
 
-// clearly started off as 'vtpinball'  050329 (29th March 2005) date on PCB
+// Menu system clearly started off as 'vtpinball'  Many elements seem similar to Family Pinball for the Famicom.
+// 050329 (29th March 2005) date on PCB
 CONS( 2005, ablpinb, 0,  0,  nes_vt_ablpinb,    ablpinb, nes_vt_ablpinb_state, empty_init, "Advance Bright Ltd", "Pinball (P8002, ABL TV Game)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND )
 
 
@@ -2337,7 +2348,9 @@ CONS( 2004, majkon,    0, 0,  nes_vt_vg_baddma, nes_vt, nes_vt_hh_state, empty_i
 CONS( 2009, cybar120,  0,  0,  nes_vt_vg, nes_vt, nes_vt_hh_state, empty_init, "Defender", "Defender M2500P 120-in-1", MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_GRAPHICS )
 CONS( 2005, vgpocket,  0,  0,  nes_vt_vg, nes_vt, nes_vt_hh_state, empty_init, "Performance Designed Products", "VG Pocket (VG-2000)", MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_GRAPHICS )
 CONS( 200?, vgpmini,   0,  0,  nes_vt_vg, nes_vt, nes_vt_hh_state, empty_init, "Performance Designed Products", "VG Pocket Mini (VG-1500)", MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_GRAPHICS )
-
+// VG Pocket Max (VG-2500) (blue case, 75 games)
+// VG Pocket Max (VG-3000) (white case, 75 games) (does the game selection differ, or only the case?)
+// VG Pocket Caplet is likely SunPlus hardware instead. (has common SunPlus games)
 
 // Runs fine, non-sport 121 in 1 games perfect, but minor graphical issues in
 // sport games, also no sound in menu or sport games due to missing PCM
@@ -2354,6 +2367,8 @@ CONS( 200?, lxcmcysw,  0,  0,  nes_vt_cy, nes_vt, nes_vt_cy_state, empty_init, "
 //      Lexibook Compact Cyber Arcade - Paw Patrol
 //      Lexibook Compact Cyber Arcade - Barbie
 //      Lexibook Compact Cyber Arcade - Finding Dory
+//      Lexibook Compact Cyber Arcade - Marvel Ultimate Spiderman
+//      Lexibook Compact Cyber Arcade - PJ Masks
 // more?
 
 
@@ -2369,6 +2384,8 @@ CONS( 2015, dgun2573,  0,  0,  nes_vt_fp, nes_vt, nes_vt_hh_state, empty_init, "
 CONS( 200?, polmega,   0,  0,  nes_vt_vh2009,        nes_vt, nes_vt_vh2009_state, empty_init, "Polaroid", "Megamax GPD001SDG", MACHINE_NOT_WORKING )
 CONS( 200?, silv35,    0,  0,  nes_vt_vh2009,        nes_vt, nes_vt_vh2009_state, empty_init, "SilverLit", "35 in 1 Super Twins", MACHINE_NOT_WORKING )
 
+// same encryption as above, but seems like newer hardware (or the above aren't using most of the features)
+CONS( 200?, lpgm240,    0,  0,  nes_vt_vh2009,        nes_vt, nes_vt_vh2009_state, empty_init, "<unknown>", "Let's Play! Game Machine 240 in 1", MACHINE_NOT_WORKING ) // mini 'retro-arcade' style cabinet
 
 // this has 'Shark' and 'Octopus' etc. like mc_dgear but uses scrambled bank registers
 CONS( 200?, mc_sp69,   0,  0,  nes_vt,    nes_vt, nes_vt_sp69_state, empty_init, "<unknown>", "Sports Game 69 in 1", MACHINE_IMPERFECT_GRAPHICS  | MACHINE_IMPERFECT_SOUND)
@@ -2396,6 +2413,8 @@ CONS( 200?, mc_138cb,   0,        0,  nes_vt,    nes_vt, nes_vt_state, empty_ini
 // doesn't boot, bad dump
 CONS( 201?, cbrs8,      0,        0,  nes_vt,    nes_vt, nes_vt_state, empty_init, "CoolBoy", "CoolBoy RS-8 168 in 1", MACHINE_NOT_WORKING )
 
+CONS( 201?, rfcp168,    0,        0,  nes_vt,    nes_vt, nes_vt_state, empty_init, "<unknown>",   "Retro FC Plus 168 in 1 Handheld", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS ) // "RETRO_FC_V3.5"  (doesn't boot, ends up in weeds after jumping to bank with no code, dump not verified)
+
 CONS( 200?, gprnrs1,    0,        0,  nes_vt,    nes_vt, nes_vt_state, empty_init, "<unknown>", "Game Prince RS-1", MACHINE_IMPERFECT_GRAPHICS )
 CONS( 200?, gprnrs16,   0,        0,  nes_vt,    nes_vt, nes_vt_state, empty_init, "<unknown>", "Game Prince RS-16", MACHINE_IMPERFECT_GRAPHICS )
 
@@ -2422,6 +2441,7 @@ CONS( 2004, mc_dcat8a,  mc_dcat8, 0,  nes_vt,    nes_vt, nes_vt_state, empty_ini
 // Runs well, minor GFX issues in intro
 CONS( 2017, sy889,      0,        0,  nes_vt_hh, nes_vt, nes_vt_hh_state, empty_init, "SY Corp",   "SY-889 300 in 1 Handheld", MACHINE_IMPERFECT_GRAPHICS )
 CONS( 2016, sy888b,     0,        0,  nes_vt_hh, nes_vt, nes_vt_hh_state, empty_init, "SY Corp",   "SY-888B 288 in 1 Handheld", MACHINE_IMPERFECT_GRAPHICS )
+
 
 // Same hardware as SY-889
 CONS( 201?, mc_cb280,   0,        0,  nes_vt_hh, nes_vt, nes_vt_hh_state, empty_init, "CoolBoy",   "Coolboy RS-18 (280 in 1)", MACHINE_IMPERFECT_GRAPHICS )

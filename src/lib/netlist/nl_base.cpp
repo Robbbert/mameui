@@ -5,6 +5,7 @@
 #include "solver/nld_solver.h"
 
 #include "plib/palloc.h"
+#include "plib/pfmtlog.h"
 #include "plib/pmempool.h"
 #include "plib/putil.h"
 
@@ -101,7 +102,7 @@ namespace netlist
 	// ----------------------------------------------------------------------------------------
 
 	detail::queue_t::queue_t(netlist_t &nl)
-		: timed_queue<plib::pqentry_t<net_t *, netlist_time>, false>(512)
+		: timed_queue<plib::pqentry_t<net_t *, netlist_time_ext>, false>(512)
 		, netlist_ref(nl)
 		, m_qsize(0)
 		, m_times(512)
@@ -128,7 +129,6 @@ namespace netlist
 		}
 	}
 
-
 	void detail::queue_t::on_post_load(plib::state_manager_t &manager)
 	{
 		plib::unused_var(manager);
@@ -136,7 +136,7 @@ namespace netlist
 		for (std::size_t i = 0; i < m_qsize; i++ )
 		{
 			detail::net_t *n = state().nets()[m_net_ids[i]].get();
-			this->push<false>(queue_t::entry_t(netlist_time::from_raw(m_times[i]),n));
+			this->push<false>(queue_t::entry_t(netlist_time_ext::from_raw(m_times[i]),n));
 		}
 	}
 
@@ -170,7 +170,7 @@ namespace netlist
 		else
 		{
 			state().log().fatal(MF_UNKNOWN_TYPE_FOR_OBJECT(name()));
-			plib::pthrow<nl_exception>(MF_UNKNOWN_TYPE_FOR_OBJECT(name()));
+			throw nl_exception(MF_UNKNOWN_TYPE_FOR_OBJECT(name()));
 			//return terminal_type::TERMINAL; // please compiler
 		}
 	}
@@ -182,7 +182,7 @@ namespace netlist
 	netlist_t::netlist_t(netlist_state_t &state)
 		: m_state(state)
 		, m_solver(nullptr)
-		, m_time(netlist_time::zero())
+		, m_time(netlist_time_ext::zero())
 		, m_mainclock(nullptr)
 		, m_queue(*this)
 		, m_use_stats(false)
@@ -202,6 +202,7 @@ namespace netlist
 	, m_callbacks(std::move(callbacks)) // Order is important here
 	, m_log(*m_callbacks)
 	, m_extended_validation(false)
+	, m_dummy_version(1)
 	{
 		pstring libpath = plib::util::environment("NL_BOOSTLIB", plib::util::buildpath({".", "nlboost.so"}));
 		m_lib = plib::make_unique<plib::dynlib>(libpath);
@@ -210,6 +211,11 @@ namespace netlist
 		// create the run interface
 		m_netlist = m_pool.make_unique<netlist_t>(*this);
 
+		// Make sure save states are invalidated when a new version is deployed
+
+		m_state.save_item(this, m_dummy_version, pstring("V") + version());
+
+		// Initialize factory
 		devices::initialize_factory(m_setup->factory());
 		NETLIST_NAME(base)(*m_setup);
 	}
@@ -241,19 +247,19 @@ namespace netlist
 		return std::numeric_limits<std::size_t>::max();
 	}
 
-
-
 	void netlist_state_t::rebuild_lists()
 	{
 		for (auto & net : m_nets)
 			net->rebuild_list();
 	}
 
-
 	void netlist_state_t::compile_defines(std::vector<std::pair<pstring, pstring>> &defs)
 	{
 	#define ENTRY(x) if (pstring(#x) != PSTRINGIFY(x)) defs.emplace_back(std::pair<pstring, pstring>(#x, PSTRINGIFY(x)));
-		ENTRY(PHAS_RDTSCP)
+		ENTRY(NL_VERSION_MAJOR)
+		ENTRY(NL_VERSION_MINOR)
+		ENTRY(NL_VERSION_PATCHLEVEL)
+
 		ENTRY(PUSE_ACCURATE_STATS)
 		ENTRY(PHAS_INT128)
 		ENTRY(PUSE_ALIGNED_OPTIMIZATIONS)
@@ -300,6 +306,16 @@ namespace netlist
 	#undef ENTRY
 	}
 
+	pstring netlist_state_t::version()
+	{
+		return plib::pfmt("{1}.{2}")(NL_VERSION_MAJOR, NL_VERSION_MINOR);
+	}
+
+	pstring netlist_state_t::version_patchlevel()
+	{
+		return plib::pfmt("{1}.{2}.{3}")(NL_VERSION_MAJOR, NL_VERSION_MINOR, NL_VERSION_PATCHLEVEL);
+	}
+
 	void netlist_t::reset()
 	{
 		log().debug("Searching for mainclock\n");
@@ -308,10 +324,10 @@ namespace netlist
 		log().debug("Searching for solver\n");
 		m_solver = m_state.get_single_device<devices::NETLIB_NAME(solver)>("solver");
 
-		m_time = netlist_time::zero();
+		m_time = netlist_time_ext::zero();
 		m_queue.clear();
 		if (m_mainclock != nullptr)
-			m_mainclock->m_Q.net().set_next_scheduled_time(netlist_time::zero());
+			m_mainclock->m_Q.net().set_next_scheduled_time(netlist_time_ext::zero());
 		//if (m_solver != nullptr)
 		//  m_solver->reset();
 
@@ -502,7 +518,7 @@ namespace netlist
 				if (ret != nullptr)
 				{
 					m_log.fatal(MF_MORE_THAN_ONE_1_DEVICE_FOUND(classname));
-					plib::pthrow<nl_exception>(MF_MORE_THAN_ONE_1_DEVICE_FOUND(classname));
+					throw nl_exception(MF_MORE_THAN_ONE_1_DEVICE_FOUND(classname));
 				}
 				else
 					ret = d.second.get();
@@ -603,7 +619,7 @@ namespace netlist
 		if (!state().setup().connect(t1, t2))
 		{
 			log().fatal(MF_ERROR_CONNECTING_1_TO_2(t1.name(), t2.name()));
-			plib::pthrow<nl_exception>(MF_ERROR_CONNECTING_1_TO_2(t1.name(), t2.name()));
+			throw nl_exception(MF_ERROR_CONNECTING_1_TO_2(t1.name(), t2.name()));
 		}
 	}
 
@@ -637,7 +653,7 @@ namespace netlist
 		, m_new_Q(*this, "m_new_Q", 0)
 		, m_cur_Q (*this, "m_cur_Q", 0)
 		, m_in_queue(*this, "m_in_queue", queue_status::DELIVERED)
-		, m_next_scheduled_time(*this, "m_time", netlist_time::zero())
+		, m_next_scheduled_time(*this, "m_time", netlist_time_ext::zero())
 		, m_railterminal(railterminal)
 	{
 	}
@@ -658,7 +674,7 @@ namespace netlist
 
 	void detail::net_t::reset() noexcept
 	{
-		m_next_scheduled_time = netlist_time::zero();
+		m_next_scheduled_time = netlist_time_ext::zero();
 		m_in_queue = queue_status::DELIVERED;
 
 		m_new_Q = 0;
@@ -687,7 +703,7 @@ namespace netlist
 			if (t == &terminal)
 			{
 				state().log().fatal(MF_NET_1_DUPLICATE_TERMINAL_2(name(), t->name()));
-				plib::pthrow<nl_exception>(MF_NET_1_DUPLICATE_TERMINAL_2(name(), t->name()));
+				throw nl_exception(MF_NET_1_DUPLICATE_TERMINAL_2(name(), t->name()));
 			}
 
 		terminal.set_net(this);
@@ -705,7 +721,7 @@ namespace netlist
 		else
 		{
 			state().log().fatal(MF_REMOVE_TERMINAL_1_FROM_NET_2(terminal.name(), this->name()));
-			plib::pthrow<nl_exception>(MF_REMOVE_TERMINAL_1_FROM_NET_2(terminal.name(), this->name()));
+			throw nl_exception(MF_REMOVE_TERMINAL_1_FROM_NET_2(terminal.name(), this->name()));
 		}
 	}
 
@@ -775,9 +791,8 @@ namespace netlist
 	, m_Idr1(nullptr)
 	, m_go1(nullptr)
 	, m_gt1(nullptr)
-	, m_connected_terminal(otherterm)
 	{
-		state().setup().register_term(*this);
+		state().setup().register_term(*this, *otherterm);
 	}
 
 	void terminal_t::solve_now()
@@ -892,7 +907,7 @@ namespace netlist
 		else
 		{
 			state().log().fatal(MF_UNKNOWN_PARAM_TYPE(name()));
-			plib::pthrow<nl_exception>(MF_UNKNOWN_PARAM_TYPE(name()));
+			throw nl_exception(MF_UNKNOWN_PARAM_TYPE(name()));
 		}
 	}
 

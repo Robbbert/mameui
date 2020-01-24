@@ -156,7 +156,7 @@ namespace plib {
 			C14CONSTEXPR LC* operator->() const noexcept { return p; }
 		};
 
-		constexpr linkedlist_t() : m_head(nullptr) {}
+		constexpr linkedlist_t() noexcept : m_head(nullptr) {}
 
 		constexpr iter_t begin() const noexcept { return iter_t(m_head); }
 		constexpr iter_t end() const noexcept { return iter_t(nullptr); }
@@ -326,7 +326,7 @@ namespace plib {
 				m_prof_call.inc();
 		}
 
-		T pop() noexcept       { return *(--m_end); }
+		void pop() noexcept       { --m_end; }
 		const T &top() const noexcept { return *(m_end-1); }
 
 		template <bool KEEPSTAT, class R>
@@ -461,8 +461,7 @@ namespace plib {
 				if (*i == elem)
 				{
 					m_end--;
-					for (;i < m_end; i++)
-						*i = std::move(*(i+1));
+					*i = *m_end;
 					std::make_heap(&m_list[0], m_end, compare());
 					return;
 				}
