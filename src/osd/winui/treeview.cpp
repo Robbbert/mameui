@@ -2554,7 +2554,7 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 	}
 
 	fclose(f);
-	printf("SaveExternalFolders: Saved file %s.\n",filename.c_str());
+	printf("SaveExternalFolders: Saved file %s.\n",filename.c_str());fflush(stdout);
 }
 
 /* End of source file */
