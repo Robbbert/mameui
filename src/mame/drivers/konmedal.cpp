@@ -42,7 +42,8 @@ Konami PWB 402218 boards
 
  Notes and TODOs:
  - Priorities not understood and wrong in places of GX-based games, apparently controlled by PROM
- - Column scroll not correct in TMNT-based games
+ - X/Y scroll effects not handled well by current K052109(TMNT tilemaps) emulation.
+   Mario Roulette glitches "resolved" using hack, Fuusen Pentai still have issues with column scroll (not OK with -6 added to column index).
 
 ***************************************************************************/
 
@@ -124,6 +125,7 @@ private:
 	DECLARE_WRITE8_MEMBER(shuri_bank_w);
 	DECLARE_READ8_MEMBER(shuri_irq_r);
 	DECLARE_WRITE8_MEMBER(shuri_irq_w);
+	DECLARE_WRITE8_MEMBER(mario_scrollhack_w);
 
 	void ddboy_main(address_map &map);
 	void medal_main(address_map &map);
@@ -156,17 +158,17 @@ private:
 WRITE8_MEMBER(konmedal_state::control2_w)
 {
 /*  CN3
-	---- ---x uPD7759 /ST (TMNT-based boards)
-	---- --x- uPD7759 /RESET (TMNT-based boards)
-	---- -x-- 10Y Counter
-	---- x--- 100Y Counter
-	---x ---- 10Y Lock
-	--x- ---- 100Y Lock
-	-x-- ---- Hopper On
-	x--- ---- K056832 RAM/ROM access switch (GX-based boards)
+    ---- ---x uPD7759 /ST (TMNT-based boards)
+    ---- --x- uPD7759 /RESET (TMNT-based boards)
+    ---- -x-- 10Y Counter
+    ---- x--- 100Y Counter
+    ---x ---- 10Y Lock
+    --x- ---- 100Y Lock
+    -x-- ---- Hopper On
+    x--- ---- K056832 RAM/ROM access switch (GX-based boards)
 */
 	m_control2 = data;
-	if (m_upd7759) 	// note: this is needed because games clear reset line and assert start line at the same time, but MAME's outport can't handle right order
+	if (m_upd7759)  // note: this is needed because games clear reset line and assert start line at the same time, but MAME's outport can't handle right order
 		m_upd7759->reset_w((data & 2) ? 1 : 0);
 	m_outport->write(data);
 	machine().bookkeeping().coin_counter_w(0, data & 4);
@@ -178,9 +180,9 @@ WRITE8_MEMBER(konmedal_state::control2_w)
 WRITE8_MEMBER(konmedal_state::medalcnt_w)
 {
 /*  CN5
-	---- ---x Medal counter +1 (medal in)
-	---- --x- Medal counter -1 (hopper out)
-	---- -x-- Medal Lock
+    ---- ---x Medal counter +1 (medal in)
+    ---- --x- Medal counter -1 (hopper out)
+    ---- -x-- Medal Lock
 */
 	machine().bookkeeping().coin_counter_w(2, data & 2);
 	machine().bookkeeping().coin_lockout_w(2, (data & 4) ? 0 : 1);
@@ -188,7 +190,7 @@ WRITE8_MEMBER(konmedal_state::medalcnt_w)
 
 WRITE8_MEMBER(konmedal_state::lamps_w)
 {
-//	CN6
+//  CN6
 	for (int i = 0; i < 8; i++)
 		m_lamps[i] = BIT(data, i);
 }
@@ -275,7 +277,7 @@ K056832_CB_MEMBER(konmedal_state::tile_callback)
 	m_k056832->read_avac(&mode, &avac);
 	if (mode)
 		*code = (((avac >> ((codebits >> 8) & 0xc)) & 0xf) << 10) | (codebits & 0x3ff);
-	else 
+	else
 		*code = codebits & 0xfff;
 
 	*code = bitswap<14>(*code, 8, 9, 13, 12, 11, 10, 7, 6, 5, 4, 3, 2, 1, 0);
@@ -422,6 +424,7 @@ void konmedal_state::shuriboy_main(address_map &map)
 	map(0xa000, 0xbfff).bankr("bank1");
 	map(0xc000, 0xffff).rw(m_k052109, FUNC(k052109_device::read), FUNC(k052109_device::write));
 	map(0xdd00, 0xdd00).rw(FUNC(konmedal_state::shuri_irq_r), FUNC(konmedal_state::shuri_irq_w));
+	map(0xdc80, 0xdc80).w(FUNC(konmedal_state::mario_scrollhack_w));
 }
 
 static INPUT_PORTS_START( konmedal )
@@ -798,6 +801,15 @@ TIMER_DEVICE_CALLBACK_MEMBER(konmedal_state::shuri_scanline)
 	{
 		m_maincpu->set_input_line(INPUT_LINE_NMI, ASSERT_LINE);
 	}
+}
+
+WRITE8_MEMBER(konmedal_state::mario_scrollhack_w)
+{
+	// Mario Roulette enable X and Y scroll in the same time for both layers, which is currently not supported by emulated K052109.
+	// here we hacky disable Y scroll for layer A and X scroll for layer B.
+	if (data == 0x36)
+		data = 0x22;
+	m_k052109->write(0x1c80, data);
 }
 
 void konmedal_state::shuriboy(machine_config &config)

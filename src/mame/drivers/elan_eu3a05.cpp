@@ -380,6 +380,25 @@ static INPUT_PORTS_START( sudoku )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
+static INPUT_PORTS_START( carlecfg )
+	PORT_START("IN0")
+	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("IN1")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_BUTTON4 ) PORT_NAME("Start/Pause")
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_NAME("Select")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_BUTTON1 )
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_BUTTON2 )
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_JOYSTICK_LEFT )
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_JOYSTICK_RIGHT )
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_JOYSTICK_UP ) // guess, not used?
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_JOYSTICK_DOWN ) // guess, not used?
+
+	PORT_START("IN2")
+	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
+INPUT_PORTS_END
+
+
 
 void elan_eu3a05_state::machine_start()
 {
@@ -545,6 +564,8 @@ void elan_eu3a05_state::elan_sudoku(machine_config& config)
 {
 	elan_eu3a05(config);
 	m_maincpu->set_addrmap(AS_PROGRAM, &elan_eu3a05_state::elan_sudoku_map);
+	m_vid->set_is_sudoku();
+	m_sys->set_alt_timer(); // for Carl Edwards'
 }
 
 
@@ -585,6 +606,17 @@ ROM_START( sudoelan )
 	ROM_RELOAD(0x300000,0x100000)
 ROM_END
 
+ROM_START( carlecfg )
+	ROM_REGION( 0x400000, "maincpu", ROMREGION_ERASE00 )
+	ROM_LOAD( "carledwardsracing.bin", 0x00000, 0x100000, CRC(920f633e) SHA1(8460b77b9635a2484edab1111f35bbda74eb68e4) )
+	ROM_RELOAD(0x100000,0x100000)
+	ROM_RELOAD(0x200000,0x100000)
+	ROM_RELOAD(0x300000,0x100000)
+ROM_END
+
+
+
+
 
 CONS( 2004, rad_sinv, 0, 0, elan_eu3a05, rad_sinv, elan_eu3a05_state, empty_init, "Radica (licensed from Taito)",                      "Space Invaders [Lunar Rescue, Colony 7, Qix, Phoenix] (Radica, Arcade Legends TV Game)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND ) // "5 Taito games in 1"
 
@@ -594,3 +626,5 @@ CONS( 2004, rad_tetr, 0, 0, elan_eu3a05, rad_tetr, elan_eu3a05_state, empty_init
 CONS( 2005, airblsjs, 0, 0, airblsjs, airblsjs, elan_eu3a05_state, empty_init, "Advance Bright Ltd", "Air-Blaster Joystick (AB1500, PAL)", MACHINE_NOT_WORKING )
 
 CONS( 2006, sudoelan, 0,        0, elan_sudoku,  sudoku,   elan_eu3a05_state, empty_init,  "Senario / All in 1 Products Ltd",  "Ultimate Sudoku TV Edition 3-in-1", MACHINE_NOT_WORKING )
+
+CONS( 200?, carlecfg, 0,        0, elan_sudoku,  carlecfg,   elan_eu3a05_state, empty_init,  "Excalibur Electronics Inc",  "Carl Edwards' Chase For Glory", MACHINE_NOT_WORKING )

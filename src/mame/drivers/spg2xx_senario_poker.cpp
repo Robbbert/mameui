@@ -682,7 +682,7 @@ void sentx6p_state::sentx6p(machine_config &config)
 
 ROM_START( sentx6p )
 	ROM_REGION( 0x800000, "maincpu", ROMREGION_ERASE00 )
-	ROM_LOAD16_WORD_SWAP( "vsmaxxtexasholdem.bin", 0x000000, 0x400000, CRC(00180abb) SHA1(c2af28f64bfdfc9d671bb84561f8a916bc907176) )
+	ROM_LOAD16_WORD_SWAP( "vsmaxxtexasholdem.bin", 0x000000, 0x200000, CRC(d9d7ea1d) SHA1(ae531958d6074ea2034910f53e043d5fa10eaf8c) )
 ROM_END
 
 ROM_START( sentx6puk )
@@ -722,5 +722,5 @@ void sentx6p_state::init_sentx6pd()
 CONS( 2004, sentx6p,    0,           0,        sentx6p,     sentx6p, sentx6p_state, init_sentx6p,   "Senario",               "Vs Maxx Texas Hold'em TV Poker - 6 Player Edition (US)", MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_GRAPHICS ) // from a US version, values in USD
 CONS( 2004, sentx6puk,  sentx6p,     0,        sentx6p,     sentx6p, sentx6p_state, init_sentx6puk, "Senario / Play Vision", "Vs Maxx Texas Hold'em TV Poker - 6 Player Edition (UK)", MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_GRAPHICS ) // from a UK Play Vision branded box, values in GBP
 
-CONS( 2004, sentx6pd,   0,           0,        sentx6p,     sentx6p, sentx6p_state, init_sentx6pd,  "Senario",               "Deluxe TV Poker - Texas Hold'em, Blackjack & Video Poker (US)", MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_GRAPHICS ) 
+CONS( 2004, sentx6pd,   0,           0,        sentx6p,     sentx6p, sentx6p_state, init_sentx6pd,  "Senario",               "Deluxe TV Poker - Texas Hold'em, Blackjack & Video Poker (US)", MACHINE_CLICKABLE_ARTWORK | MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_GRAPHICS )
 // Deluxe version wasn't released outside of US?
