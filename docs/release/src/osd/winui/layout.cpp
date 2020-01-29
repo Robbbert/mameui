@@ -41,7 +41,7 @@ extern const FOLDERDATA g_folderData[] =
 	{"Clones",          "clones",            FOLDER_CLONES,       IDI_FOLDER,               F_CLONES,      F_ORIGINALS,  0, NULL,                       DriverIsClone,           TRUE },
 	{"Computer",        "computer",          FOLDER_COMPUTER,     IDI_FOLDER,               F_COMPUTER,    F_CONSOLE,    0, NULL,                       DriverIsComputer,        TRUE },
 	{"Console",         "console",           FOLDER_CONSOLE,      IDI_FOLDER,               F_CONSOLE,     F_COMPUTER,   0, NULL,                       DriverIsConsole,         TRUE },
-	{"CPU",             "cpu",               FOLDER_CPU,          IDI_FOLDER,               0,             0,            1, CreateCPUFolders },
+//	{"CPU",             "cpu",               FOLDER_CPU,          IDI_FOLDER,               0,             0,            1, CreateCPUFolders },
 	{"Dumping Status",  "dumping",           FOLDER_DUMPING,      IDI_FOLDER,               0,             0,            1, CreateDumpingFolders },
 	{"FPS",             "fps",               FOLDER_FPS,          IDI_FOLDER,               0,             0,            1, CreateFPSFolders },
 	{"Horizontal",      "horizontal",        FOLDER_HORIZONTAL,   IDI_FOLDER_HORIZONTAL,    F_HORIZONTAL,  F_VERTICAL,   0, NULL,                       DriverIsVertical,        FALSE },
