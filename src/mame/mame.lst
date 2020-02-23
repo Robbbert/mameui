@@ -1291,7 +1291,7 @@ dialog80                        // Ampex Dialogue 80
 
 @source:ampex210.cpp
 ampex210p                       //
-ampex230                        //
+ampex230p                       //
 
 @source:ampro.cpp
 ampro                           //
@@ -15046,6 +15046,10 @@ nfb96a                          // (c) 1996 Amcoe
 nfb96b                          // (c) 1996 Amcoe
 nfb96c                          // (c) 1996 Amcoe
 nfb96d                          // (c) 1996 Amcoe
+nfb96e                          // (c) 1996 Amcoe
+nfb96f                          // (c) 1996 Amcoe
+nfb96g                          // (c) 1996 Amcoe
+nfb96h                          // (c) 1996 Amcoe
 nfb96se                         // bootleg
 nfb96sea                        // bootleg
 nfb96seb                        // bootleg
@@ -34490,7 +34494,7 @@ cm32p                           //
 
 @source:roland_d50.cpp
 d50                             //
-d50a                            //
+d50o                            //
 d550                            //
 
 @source:roland_d110.cpp
@@ -37100,6 +37104,7 @@ jak_sbfc                        //
 
 @source:spg2xx_jakks_tvtouch.cpp
 tvtchsw
+tvtchspd
 
 @source:spg2xx_lexibook.cpp
 lexizeus                        // Lexibook
@@ -37107,6 +37112,7 @@ lexiseal                        //
 discpal
 
 @source:spg2xx_mysprtch.cpp
+mysprtch
 mysprtcp
 mysptqvc
 mgt20in1
@@ -38669,6 +38675,7 @@ silkwormb                       // bootleg
 @source:tecmo16.cpp
 fstarfrc                        // (c) 1992 Tecmo
 fstarfrcj                       // (c) 1992 Tecmo
+fstarfrcw                       // (c) 1992 Tecmo
 ginkun                          // (c) 1995 Tecmo
 riot                            // (c) 1992 NMK
 

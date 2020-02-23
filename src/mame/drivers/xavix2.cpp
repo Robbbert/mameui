@@ -17,6 +17,7 @@
 #include "softlist.h"
 #include "speaker.h"
 #include "cpu/xavix2/xavix2.h"
+#include "machine/i2cmem.h"
 
 class xavix2_state : public driver_device
 {
@@ -25,6 +26,7 @@ public:
 		: driver_device(mconfig, type, tag)
 		, m_maincpu(*this, "maincpu")
 		, m_screen(*this, "screen")
+		, m_i2cmem(*this, "i2cmem")
 	{ }
 
 	void xavix2(machine_config &config);
@@ -37,6 +39,7 @@ private:
 
 	required_device<xavix2_device> m_maincpu;
 	required_device<screen_device> m_screen;
+	required_device<i2c_24c08_device> m_i2cmem;
 
 	u32 m_dma_src;
 	u16 m_dma_dst;
@@ -111,7 +114,7 @@ void xavix2_state::irq_clear_w(u16 data)
 	m_int_active &= ~data;
 	if(!m_int_active)
 		m_maincpu->set_input_line(0, CLEAR_LINE);
-	
+
 }
 
 u8 xavix2_state::irq_level_r()
@@ -206,13 +209,13 @@ void xavix2_state::gpu_count_w(u16 data)
 			}
 			break;
 		}
-			
+
 		default:
 			for(u32 yy=0; yy<sy; yy++)
 				for(u32 xx=0; xx<sx; xx++)
-					m_sd[yy+y][xx+x] = 0x00000000;
+					m_sd[yy+y][xx+x] = 0xffff0000;
 			break;
-		}		
+		}
 	}
 }
 
@@ -255,7 +258,7 @@ void xavix2_state::dma_control_w(u8 data)
 		auto &prg = m_maincpu->space(AS_PROGRAM);
 		for(u32 i=0; i != m_dma_count; i++)
 			prg.write_byte(dadr + i, prg.read_byte(sadr + i));
-		m_dma_timer->adjust(attotime::from_ticks(m_dma_count, m_maincpu->clock()));			
+		m_dma_timer->adjust(attotime::from_ticks(m_dma_count, m_maincpu->clock()));
 	}
 }
 
@@ -319,12 +322,17 @@ u16 xavix2_state::port0_ddr_r()
 void xavix2_state::port0_w(u16 data)
 {
 	m_port0_data = data;
-	logerror("port0 %04x\n", data);
+	m_i2cmem->write_sda(data & 0x20);
+	m_i2cmem->write_scl(data & 0x10);
+	logerror("port0_w %04x\n", data);
 }
 
 u16 xavix2_state::port0_r()
 {
-	return m_port0_data;
+	// Slightly hacky, should take ddr into account
+	u16 data = m_port0_data & (m_i2cmem->read_sda() ? ~0x00 : ~0x20);
+	logerror("port0_r %04x\n", data);
+	return data;
 }
 
 /*
@@ -365,7 +373,7 @@ void xavix2_state::crtc_w(offs_t reg, u16 data)
 
 void xavix2_state::mem(address_map &map)
 {
-	map(0x00000000, 0x0000ffff).ram();	
+	map(0x00000000, 0x0000ffff).ram();
 	map(0x00010000, 0x00ffffff).rom().region("maincpu", 0x010000);
 
 	map(0x40000000, 0x40ffffff).rom().region("maincpu", 0);
@@ -438,6 +446,8 @@ void xavix2_state::xavix2(machine_config &config)
 	m_screen->set_screen_update(FUNC(xavix2_state::screen_update));
 	m_screen->set_size(640, 400);
 	m_screen->set_visarea(0, 639, 0, 399);
+
+	I2C_24C08(config, m_i2cmem);
 
 	/* sound hardware */
 	SPEAKER(config, "lspeaker").front_left();
