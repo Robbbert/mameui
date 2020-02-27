@@ -1219,7 +1219,7 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 	// We only want the first path; throw out the rest
 	size_t i = dst.find(';');
 	if (i != string::npos)
-		dst.substr(0, i);
+		dst = dst.substr(0, i);
 	wchar_t* t_s = ui_wstring_from_utf8(dst.c_str());
 
 	//  begin_resource_tracking();
@@ -1286,7 +1286,7 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 		/* We only want the first path; throw out the rest */
 		size_t i = dst.find(';');
 		if (i != string::npos)
-			dst.substr(0, i);
+			dst = dst.substr(0, i);
 	}
 
 	mess_image_type imagetypes[256];
@@ -1382,7 +1382,7 @@ static BOOL MView_GetCreateFileName(HWND hwndMView, const machine_config *config
 	/* We only want the first path; throw out the rest */
 	size_t i = dst.find(';');
 	if (i != string::npos)
-		dst.substr(0, i);
+		dst = dst.substr(0, i);
 
 	TCHAR *t_s = ui_wstring_from_utf8(dst.c_str());
 	mess_image_type imagetypes[256];
