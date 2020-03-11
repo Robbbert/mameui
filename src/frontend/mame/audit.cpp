@@ -275,9 +275,19 @@ media_auditor::summary media_auditor::summarize(const char *name, std::ostream *
 		if (output)
 		{
 			if (name)
-				util::stream_format(*output, "%-12s: %s", name, record.name());
+			{
+				if (record.type() == media_type::DISK)
+					util::stream_format(*output, "%-12s: %s%s", name, record.name(), ".chd"); // MESSUI: include .chd for disks
+				else
+					util::stream_format(*output, "%-12s: %s", name, record.name());
+			}
 			else
-				util::stream_format(*output, "%s", record.name());
+			{
+				if (record.type() == media_type::DISK)
+					util::stream_format(*output, "%s%s", record.name(), ".chd"); // MESSUI: include .chd for disks
+				else
+					util::stream_format(*output, "%s", record.name());
+			}
 			if (record.expected_length() > 0)
 				util::stream_format(*output, " (%d bytes)", record.expected_length());
 			*output << " - ";
@@ -583,13 +593,17 @@ media_auditor::summary media_auditor::winui_summarize(const char *name, std::str
 			|| (record.substatus() == audit_substatus::GOOD_NEEDS_REDUMP)
 			|| (record.substatus() == audit_substatus::NOT_FOUND_NODUMP)
 			|| (record.substatus() == audit_substatus::FOUND_NODUMP)
+			|| (record.substatus() == audit_substatus::NOT_FOUND_OPTIONAL)
 			)
 			continue;
 
 		// output the game name, file name, and length (if applicable)
 		//if (output)
 		{
-			output->append(string_format("%-12s: %s", name, record.name()));
+			if (record.type() == media_type::DISK)
+				output->append(string_format("%-12s: %s%s", name, record.name(), ".chd"));
+			else
+				output->append(string_format("%-12s: %s", name, record.name()));
 			if (record.expected_length() > 0)
 				output->append(string_format(" (%d bytes)", record.expected_length()));
 			output->append(" - ");
@@ -625,11 +639,6 @@ media_auditor::summary media_auditor::winui_summarize(const char *name, std::str
 					else
 						output->append(string_format("NOT FOUND (%s)\n", shared_device->shortname()));
 				}
-				break;
-
-			case audit_substatus::NOT_FOUND_OPTIONAL:
-				if (output) output->append("NOT FOUND BUT OPTIONAL\n");
-				best_new_status = BEST_AVAILABLE;
 				break;
 
 			default:
