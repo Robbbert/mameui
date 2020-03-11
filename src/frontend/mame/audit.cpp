@@ -279,12 +279,18 @@ media_auditor::summary media_auditor::summarize(const char *name, std::ostream *
 				if (record.type() == media_type::DISK)
 					util::stream_format(*output, "%-12s: %s%s", name, record.name(), ".chd"); // MESSUI: include .chd for disks
 				else
+				if (record.type() == media_type::SAMPLE)
+					util::stream_format(*output, "%-12s: %s%s", name, record.name(), ".wav"); // MESSUI: include .wav for samples
+				else
 					util::stream_format(*output, "%-12s: %s", name, record.name());
 			}
 			else
 			{
 				if (record.type() == media_type::DISK)
 					util::stream_format(*output, "%s%s", record.name(), ".chd"); // MESSUI: include .chd for disks
+				else
+				if (record.type() == media_type::SAMPLE)
+					util::stream_format(*output, "%s%s", record.name(), ".wav"); // MESSUI: include .wav for samples
 				else
 					util::stream_format(*output, "%s", record.name());
 			}
