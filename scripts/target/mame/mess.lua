@@ -2648,6 +2648,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/korgdss1.cpp",
 	MAME_DIR .. "src/mame/drivers/korgdw8k.cpp",
 	MAME_DIR .. "src/mame/drivers/korgm1.cpp",
+	MAME_DIR .. "src/mame/drivers/korgz3.cpp",
 	MAME_DIR .. "src/mame/drivers/poly800.cpp",
 	MAME_DIR .. "src/mame/drivers/polysix.cpp",
 }
@@ -3263,6 +3264,8 @@ files {
 	MAME_DIR .. "src/mame/drivers/roland_tr707.cpp",
 	MAME_DIR .. "src/mame/audio/jx8p_synth.cpp",
 	MAME_DIR .. "src/mame/audio/jx8p_synth.h",
+	MAME_DIR .. "src/mame/machine/mb63h149.cpp",
+	MAME_DIR .. "src/mame/machine/mb63h149.h",
 	MAME_DIR .. "src/mame/machine/pg200.cpp",
 	MAME_DIR .. "src/mame/machine/pg200.h",
 }
@@ -3292,7 +3295,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/saitek_cp2000.cpp",
 	MAME_DIR .. "src/mame/drivers/saitek_delta1.cpp",
 	MAME_DIR .. "src/mame/drivers/saitek_mark5.cpp",
-	MAME_DIR .. "src/mame/drivers/saitek_president.cpp",
+	MAME_DIR .. "src/mame/drivers/saitek_prschess.cpp",
 	MAME_DIR .. "src/mame/drivers/saitek_risc2500.cpp",
 	MAME_DIR .. "src/mame/includes/saitek_stratos.h",
 	MAME_DIR .. "src/mame/drivers/saitek_ssystem3.cpp",
