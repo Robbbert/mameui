@@ -152,7 +152,6 @@ void mame_options::parse_one_ini(emu_options &options, const char *basename, int
 }
 
 
-
 //-------------------------------------------------
 //  populate_hashpath_from_args_and_inis
 //-------------------------------------------------
@@ -228,7 +227,7 @@ void mame_options::parse_parent_ini(emu_options &options, const char *basename, 
 	// open the file; if we fail, that's ok
 	emu_file file(options.ini_path(), OPEN_FLAG_READ);
 	osd_printf_verbose("Attempting load of %s.ini\n", basename);
-	osd_file::error filerr = file.open(basename, ".ini");
+	osd_file::error filerr = file.open(std::string(basename) + ".ini");
 	if (filerr != osd_file::error::NONE)
 		return;
 
