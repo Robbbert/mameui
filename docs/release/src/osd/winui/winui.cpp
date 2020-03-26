@@ -1273,16 +1273,16 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 		RECT desktop;
 		const HWND hDesktop = GetDesktopWindow();
 		GetWindowRect(hDesktop, &desktop);
-		if ((desktop.right < (area.x + area.width)) || (area.x < 0))
-		{
-			area.x = 10;
-			area.width = desktop.right - 20;
-		}
-		if ((desktop.bottom < (area.y + area.height)) || (area.y < 0))
-		{
-			area.y = 10;
-			area.height = desktop.bottom - 40;
-		}
+//		if ((desktop.right < (area.x + area.width)) || (area.x < 0))
+//		{
+//			area.x = 10;
+//			area.width = desktop.right - 20;
+//		}
+//		if ((desktop.bottom < (area.y + area.height)) || (area.y < 0))
+//		{
+//			area.y = 10;
+//			area.height = desktop.bottom - 40;
+//		}
 		// now use these values
 		rect.left = area.x;
 		rect.right = area.width + area.x;

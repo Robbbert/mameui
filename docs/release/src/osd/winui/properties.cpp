@@ -2763,7 +2763,7 @@ static void InitializeBIOSUI(HWND hwnd)
 			res = ComboBox_SetItemData( hCtrl, i++, "");
 			return;
 		}
-		if (g_nGame == LOCAL_OPTIONS) //Folder Options: This is the only place that LOCAL_OPTIONS is used, is this code ever executed?
+		if (g_nGame == LOCAL_OPTIONS) //Folder Options: This is the only place that LOCAL_OPTIONS is used.
 		{
 			gamedrv = &driver_list::driver(g_nFolderGame);
 			if (DriverHasOptionalBIOS(g_nFolderGame) == false)
@@ -2773,7 +2773,7 @@ static void InitializeBIOSUI(HWND hwnd)
 				return;
 			}
 			res = ComboBox_InsertString(hCtrl, i, TEXT("Default"));
-			res = ComboBox_SetItemData( hCtrl, i++, "");
+			res = ComboBox_SetItemData( hCtrl, i++, "default");
 
 			if (gamedrv->rom)
 			{
@@ -2790,6 +2790,8 @@ static void InitializeBIOSUI(HWND hwnd)
 						res = ComboBox_InsertString(hCtrl, i, win_tstring_strdup(t_s));
 						res = ComboBox_SetItemData( hCtrl, i++, biosname);
 						free(t_s);
+						if (ROMENTRY_ISDEFAULT_BIOS(rom))
+							res = ComboBox_SetItemData( hCtrl, 0, biosname);
 					}
 				}
 			}
