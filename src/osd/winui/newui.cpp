@@ -2931,14 +2931,16 @@ static void prepare_menus(HWND wnd)
 
 static void set_speed(running_machine &machine, int speed)
 {
-	if (speed != 0)
+	bool throttled = speed ? true : false;
+	if (throttled)
 	{
 		machine.video().set_speed_factor(speed);
-		machine.options().emu_options::set_value(OPTION_SPEED, speed / 1000, OPTION_PRIORITY_CMDLINE);
+		float dspeed = float(speed) / 1000;
+		machine.options().emu_options::set_value(OPTION_SPEED, dspeed, OPTION_PRIORITY_CMDLINE);
 	}
 
-	machine.video().set_throttled(speed != 0);
-	machine.options().emu_options::set_value(OPTION_THROTTLE, (speed != 0), OPTION_PRIORITY_CMDLINE);
+	machine.video().set_throttled(throttled);
+	machine.options().emu_options::set_value(OPTION_THROTTLE, throttled, OPTION_PRIORITY_CMDLINE);
 }
 
 
