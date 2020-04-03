@@ -1258,7 +1258,6 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 	bool bShowPicture = BIT(GetWindowPanes(), 3);
 	bool bShowSoftware = BIT(GetWindowPanes(), 2);
 	int nLastWidth = 0;
-	//int nLastWidth2 = 0;
 	int nLeftWindowWidth = 0;
 
 	/* Size the List Control in the Picker */
@@ -1268,36 +1267,11 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 	// first time, we use the saved values rather than current ones
 	if (!m_resized)
 	{
-		// First make sure the window isn't going to be larger than the desktop,
-		// if it is, size it to just fit in.
-		RECT desktop;
-		const HWND hDesktop = GetDesktopWindow();
-		GetWindowRect(hDesktop, &desktop);
-//		if ((desktop.right < (area.x + area.width)) || (area.x < 0))
-//		{
-//			area.x = 10;
-//			area.width = desktop.right - 20;
-//		}
-//		if ((desktop.bottom < (area.y + area.height)) || (area.y < 0))
-//		{
-//			area.y = 10;
-//			area.height = desktop.bottom - 40;
-//		}
-		// now use these values
-		rect.left = area.x;
-		rect.right = area.width + area.x;
-		rect.top = area.y;
-		rect.bottom = area.height + area.y;
 	}
 	else
 	{
-		area.x = rect.left;
-		area.y = rect.top;
-		area.width = rect.right - rect.left;
-		area.height = rect.bottom - rect.top;
 	}
-	SetWindowArea(&area);
-	int fullwidth = area.width;//printf("Fullwidth = %d\n",fullwidth);
+	int fullwidth = area.width;
 
 	if (bShowStatusBar)
 		rect.bottom -= bottomMargin;
@@ -5795,21 +5769,20 @@ static void AdjustMetrics(void)
 	}
 
 	AREA area;
-	GetWindowArea(&area);
+	GetWindowArea(&area); // read window size from ini
 
-	int offX = area.x + area.width;
-	int offY = area.y + area.height;
+	// Reposition the window so that the top or left side is in view.
+	// The width and height never change, even if they stretch off the screen.
+	if (area.x < 0)
+		area.x = 0;
+	if (area.y < 0)
+		area.y = 0;
 
-	if (offX > maxX)
-	{
-		offX = maxX;
-		area.x = (offX - area.width > 0) ? (offX - area.width) : 0;
-	}
-	if (offY > maxY)
-	{
-		offY = maxY;
-		area.y = (offY - area.height > 0) ? (offY - area.height) : 0;
-	}
+	// If the width or height is too small, or bigger than the screen, default them to the max screen size.
+	if ((area.width < 200) || (area.width > maxX))
+		area.width = maxX;
+	if ((area.height < 100) || (area.height > maxY))
+		area.height = maxY;
 
 	//SetWindowArea(&area);
 	SetWindowPos(hMain, 0, area.x, area.y, area.width, area.height, SWP_NOZORDER | SWP_SHOWWINDOW | SWP_NOACTIVATE);
