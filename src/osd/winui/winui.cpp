@@ -2163,8 +2163,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 
 			/* Save the users current game options and default game */
 			int nItem = Picker_GetSelectedItem(hwndList);
-			if (nItem >= 0)
-				SetDefaultGame(nItem);
+			SetDefaultGame(nItem);
 
 			/* hide window to prevent orphan empty rectangles on the taskbar */
 			/* ShowWindow(hWnd,SW_HIDE); */
@@ -2473,7 +2472,7 @@ static BOOL FolderCheck(void)
 			changed = true;
 		}
 
-		lvfi.flags	= LVFI_PARAM;
+		lvfi.flags = LVFI_PARAM;
 		lvfi.lParam = nGameIndex;
 
 		i = ListView_FindItem(hwndList, -1, &lvfi);
