@@ -205,6 +205,8 @@ static void add_filter_entry(std::string &dest, const char *description, const c
 static std::map<std::string,std::string> slmap;
 struct slot_data { std::string slotname; std::string optname; };
 static std::map<int, slot_data> slot_map;
+struct part_data { std::string part_name; device_image_interface *img; };
+static std::map<int, part_data> part_map;
 
 
 //============================================================
@@ -224,6 +226,7 @@ static int dialog_write_item(dialog_box *di, DWORD style, short x, short y, shor
 #define ID_DEVICE_0      11000
 #define ID_JOYSTICK_0    12000
 #define ID_VIDEO_VIEW_0  14000
+#define ID_SWPART        15000
 #define MAX_JOYSTICKS    (8)
 
 enum
@@ -275,6 +278,14 @@ static char *ui_utf8_from_wstring(const WCHAR *wstring)
 	return result;
 }
 
+// This function truncates a long string, replacing the end with ...
+static std::string longdots(std::string incoming, int howmany)
+{
+	std::string outgoing = incoming;
+	if (incoming.length() > howmany)
+		outgoing = incoming.substr(0, howmany) + "...";
+	return outgoing;
+}
 
 
 //============================================================
@@ -2431,7 +2442,7 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 		if (is_save)
 			(image_error_t)image->create(filename, image->device_get_indexed_creatable_format(0), create_args);
 		else
-			(image_error_t)image->load( filename);
+			(image_error_t)image->load(filename);
 	}
 }
 
@@ -2479,7 +2490,7 @@ static void load_item(HWND wnd, device_image_interface *img, bool is_save)
 		buf.erase(0, t1+1);
 
 		// load software
-		img->load_software( buf.c_str());
+		img->load_software(buf);
 	}
 }
 
@@ -2786,10 +2797,10 @@ static void prepare_menus(HWND wnd)
 	remove_menu_items(device_menu);
 
 	UINT_PTR new_item;
+	UINT_PTR new_switem = 0;
 	UINT flags_for_exists = 0;
 	UINT flags_for_writing = 0;
 	int cnt = 0;
-	char buf[MAX_PATH];
 	// then set up the actual devices
 	for (device_image_interface &img : image_interface_iterator(window->machine().root_device()))
 	{
@@ -2808,9 +2819,46 @@ static void prepare_menus(HWND wnd)
 
 		sub_menu = CreateMenu();
 
-		// see if a software list exists and if so add the Mount Item menu
+		// Software-list processing
 		if (get_softlist_info(wnd, &img))
+		{
+			bool anything = false;
+			// If there's a swlist item mounted, see if has multiple parts and if so, display them as choices
+			if (img.loaded_through_softlist())
+			{
+				const software_part *tmp = img.part_entry();
+				const char *interface = img.image_interface();
+				const software_info *swinfo = img.software_entry();
+				for (const software_part &swpart : swinfo->parts())
+				{
+					if (swpart.matches_interface(interface))
+					{
+						if (!tmp->name().empty())
+						{
+							// Don't show the part that is already loaded
+							if (tmp->name() != swpart.name())
+							{
+								// check if the available parts have specific part_id to be displayed (e.g. "Map Disc", "Bonus Disc", etc.)
+								// if not, we simply display "part_name"; if yes we display "part_name (part_id)"
+								std::string menu_part_name(swpart.name());
+								if (swpart.feature("part_id"))
+									menu_part_name.append(": ").append(longdots(swpart.feature("part_id"),50));
+								win_append_menu_utf8(sub_menu, MF_STRING, new_switem + ID_SWPART, menu_part_name.c_str());
+								part_map[new_switem] = part_data{ swpart.name(), &img };
+								new_switem++;
+								anything = true;
+							}
+						}
+					}
+				}
+			}
+
+			if (anything)
+				win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
+
+			// Since a software list exists, add the Mount Item menu
 			win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_ITEM, "Mount Item...");
+		}
 
 		win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_OPEN, "Mount File...");
 
@@ -2856,7 +2904,7 @@ static void prepare_menus(HWND wnd)
 					filename.append(" (").append(tmp->name());
 					// also check if this part has a specific part_id (e.g. "Map Disc", "Bonus Disc", etc.), and in case display it
 					if (img.get_feature("part_id"))
-						filename.append(": ").append(img.get_feature("part_id"));
+						filename.append(": ").append(longdots(img.get_feature("part_id"),50));
 					filename.append(")");
 				}
 			}
@@ -2865,11 +2913,9 @@ static void prepare_menus(HWND wnd)
 			filename.assign("---");
 
 		// Get instance names instead, like Media View, and mame's File Manager
-		std::string instance = img.instance_name() + std::string(" (") + img.brief_instance_name() + std::string("): ") + filename;
+		std::string instance = img.instance_name() + std::string(" (") + img.brief_instance_name() + std::string("): ") + longdots(filename,127);
 		std::transform(instance.begin(), instance.begin()+1, instance.begin(), ::toupper); // turn first char to uppercase
-
-		snprintf(buf, ARRAY_LENGTH(buf), "%s", instance.c_str());
-		win_append_menu_utf8(device_menu, MF_POPUP, (UINT_PTR)sub_menu, buf);
+		win_append_menu_utf8(device_menu, MF_POPUP, (UINT_PTR)sub_menu, instance.c_str());
 
 		cnt++;
 	}
@@ -3389,6 +3435,15 @@ static bool invoke_command(HWND wnd, UINT command)
 				slot_option &opt(window->machine().options().slot_option(slot_map[command].slotname.c_str()));
 				opt.specify(slot_map[command].optname.c_str());
 				window->machine().schedule_hard_reset();
+			}
+			else
+			if ((command >= ID_SWPART) && (command < ID_SWPART + 100))
+			{
+				int mapindex = command - ID_SWPART;
+				img = part_map[mapindex].img;
+				std::string instance = std::string(img->software_list_name()) + ":" + std::string(img->basename()) + ":" + part_map[mapindex].part_name;
+				//printf("Loading index %X : %s *******\n",mapindex,instance.c_str());
+				img->load_software(instance);
 			}
 			else
 				// bogus command

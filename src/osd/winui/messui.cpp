@@ -1360,7 +1360,7 @@ static BOOL MView_GetOpenItemName(HWND hwndMView, const machine_config *config, 
 		// set up editbox display text
 		mbstowcs(pszFilename, t3.c_str(), nFilenameLength-1); // convert it back to a wide string
 
-		// set up inifile text to signify to MAME that a SW ITEM is to be used
+		// set up inifile text to signify to MAME that a SW ITEM is to be used ************** will only load to the specified slot, multipart items are cut to the first
 		SetSelectedSoftware(drvindex, dev->instance_name(), t3.c_str());
 		mvmap[opt_name] = 1;
 	}
@@ -1596,14 +1596,11 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem)
 		// Get the fullname for this file
 		LPCSTR pszFullName = SoftwareList_LookupFullname(hwndSoftwareList, nItem); // for the screenshot and SetSoftware.
 
-		char t[100];
-		strncpyz(t, SoftwareList_LookupDevice(hwndSoftwareList, nItem), ARRAY_LENGTH(t));
-		string opt_name = t[0] ? t : "";
-
 		// For UpdateScreenShot()
 		strncpyz(g_szSelectedItem, pszFullName, ARRAY_LENGTH(g_szSelectedItem));
 		UpdateScreenShot();
-		SetSelectedSoftware(drvindex, opt_name, pszFullName);
+		// use SOFTWARENAME option to properly load a multipart set
+		SetSelectedSoftware(drvindex, "", pszFullName);
 	}
 }
 
