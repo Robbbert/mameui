@@ -279,10 +279,10 @@ static char *ui_utf8_from_wstring(const WCHAR *wstring)
 }
 
 // This function truncates a long string, replacing the end with ...
-static std::string longdots(std::string incoming, int howmany)
+static std::string longdots(std::string incoming, uint16_t howmany)
 {
 	std::string outgoing = incoming;
-	if (incoming.length() > howmany)
+	if ((howmany > 5) && (incoming.length() > howmany))
 		outgoing = incoming.substr(0, howmany) + "...";
 	return outgoing;
 }
@@ -2800,6 +2800,7 @@ static void prepare_menus(HWND wnd)
 	UINT_PTR new_switem = 0;
 	UINT flags_for_exists = 0;
 	UINT flags_for_writing = 0;
+	bool usage_shown = false;
 	int cnt = 0;
 	// then set up the actual devices
 	for (device_image_interface &img : image_interface_iterator(window->machine().root_device()))
@@ -2833,6 +2834,19 @@ static void prepare_menus(HWND wnd)
 				{
 					if (swpart.matches_interface(interface))
 					{
+						// Extract the Usage data from the "info" fields.
+						for (const feature_list_item &flist : swinfo->other_info())
+						{
+							if (flist.name() == "usage" && !usage_shown)
+							{
+								std::string usage = "Usage: " + longdots(flist.value(),255);
+								win_append_menu_utf8(sub_menu, MF_STRING, 0, usage.c_str());
+								win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
+								usage_shown = true;
+							}
+						}
+
+						// Get any multiple parts
 						if (!tmp->name().empty())
 						{
 							// Don't show the part that is already loaded
