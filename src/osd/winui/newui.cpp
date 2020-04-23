@@ -200,7 +200,7 @@ static const WORD dlgitem_listbox[] = { 0xFFFF, 0x0083 };
 static const WORD dlgitem_scrollbar[] = { 0xFFFF, 0x0084 };
 static const WORD dlgitem_combobox[] = { 0xFFFF, 0x0085 };
 static int joystick_menu_setup = 0;
-static char state_filename[MAX_PATH];
+static char state_filename[512];
 static void add_filter_entry(std::string &dest, const char *description, const char *extensions);
 static std::map<std::string,std::string> slmap;
 struct slot_data { std::string slotname; std::string optname; };
@@ -281,7 +281,14 @@ static char *ui_utf8_from_wstring(const WCHAR *wstring)
 // This function truncates a long string, replacing the end with ...
 static std::string longdots(std::string incoming, uint16_t howmany)
 {
+	// Firstly, find out if it's multi-line text
+	size_t i = incoming.find_first_of("\n");
+	// If so, truncate at first newline
+	if (i != std::string::npos)
+		incoming = incoming.substr(0, i);
+	// Now assume all is ok
 	std::string outgoing = incoming;
+	// But if it's too long, replace the excess with dots
 	if ((howmany > 5) && (incoming.length() > howmany))
 		outgoing = incoming.substr(0, howmany) + "...";
 	return outgoing;
@@ -1000,7 +1007,7 @@ static LRESULT dialog_get_combo_value(dialog_box *dialog, HWND dialog_item, UINT
 static LRESULT dialog_get_adjuster_value(dialog_box *dialog, HWND dialog_item, UINT message, WPARAM wparam, LPARAM lparam)
 {
 	TCHAR buf[32];
-	GetWindowText(dialog_item, buf, ARRAY_LENGTH(buf));
+	GetWindowText(dialog_item, buf, ARRAY_LENGTH(buf)-1);
 	return _ttoi(buf);
 }
 
@@ -1217,7 +1224,7 @@ static INT_PTR CALLBACK adjuster_sb_wndproc(HWND sbwnd, UINT msg, WPARAM wparam,
 			value = stuff->min_value;
 		else if (value > stuff->max_value)
 			value = stuff->max_value;
-		_snprintf(BUF, 64, "%d", value);
+		_snprintf(BUF, 63, "%d", value);
 		win_set_window_text_utf8(editwnd, BUF);
 		result = 0;
 	}
@@ -2098,7 +2105,7 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 	ioport_field::user_settings settings;
 	ioport_field *afield;
 	const char *name;
-	char buf[255];
+	char buf[256];
 	static const struct dialog_layout layout = { 120, 52 };
 
 	dlg = win_dialog_init("Analog Controls", &layout);
@@ -2115,15 +2122,15 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 				name = field.name();
 				afield = &field;
 
-				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Digital Speed");
+				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Digital Speed");
 				if (win_dialog_add_adjuster(dlg, buf, settings.delta, 1, 255, false, store_delta, (void *) afield))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Autocenter Speed");
+				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Autocenter Speed");
 				if (win_dialog_add_adjuster(dlg, buf, settings.centerdelta, 0, 255, false, store_centerdelta, (void *) afield))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Reverse");
+				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Reverse");
 				if (win_dialog_add_combobox(dlg, buf, settings.reverse ? 1 : 0, store_reverse, (void *) afield))
 					goto done;
 				if (win_dialog_add_combobox_item(dlg, "Off", 0))
@@ -2131,7 +2138,7 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 				if (win_dialog_add_combobox_item(dlg, "On", 1))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Sensitivity");
+				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Sensitivity");
 				if (win_dialog_add_adjuster(dlg, buf, settings.sensitivity, 1, 255, true, store_sensitivity, (void *) afield))
 					goto done;
 			}
@@ -2423,7 +2430,7 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 		initial_dir.erase(initial_dir.length()-1);
 
 	// file name
-	char filename[MAX_PATH];
+	char filename[512];
 	if (image->exists())
 		strcpy(filename, image->basename());
 	else
@@ -2468,7 +2475,7 @@ static void load_item(HWND wnd, device_image_interface *img, bool is_save)
 	build_generic_filter(NULL, is_save, filter);
 
 	// display the dialog
-	char filename[MAX_PATH] = "";
+	char filename[512] = "";
 	bool result = win_file_dialog(img->device().machine(), wnd, WIN_FILE_DIALOG_OPEN, filter.c_str(), as.c_str(), filename);
 
 	if (result)
@@ -2839,7 +2846,7 @@ static void prepare_menus(HWND wnd)
 						{
 							if (flist.name() == "usage" && !usage_shown)
 							{
-								std::string usage = "Usage: " + longdots(flist.value(),255);
+								std::string usage = "Usage: " + longdots(flist.value(),200);
 								win_append_menu_utf8(sub_menu, MF_STRING, 0, usage.c_str());
 								win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
 								usage_shown = true;
