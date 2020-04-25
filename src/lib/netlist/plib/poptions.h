@@ -234,14 +234,14 @@ namespace plib {
 
 	private:
 		static pstring split_paragraphs(const pstring &text, unsigned width, unsigned indent,
-				unsigned firstline_indent);
+				unsigned firstline_indent, const pstring &line_end = "\n");
 
 		void check_consistency() noexcept(false);
 
 		template <typename T>
 		T *getopt_type() const
 		{
-			for (auto & optbase : m_opts )
+			for (const auto & optbase : m_opts )
 			{
 				if (auto opt = dynamic_cast<T *>(optbase))
 					return opt;
