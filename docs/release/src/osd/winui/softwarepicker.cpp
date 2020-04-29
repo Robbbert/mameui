@@ -54,7 +54,7 @@ struct _file_info
 
 	const char *zip_entry_name;
 	const char *base_name;
-	char file_name[1];
+	char file_name[1024];
 };
 
 typedef struct _directory_search_info directory_search_info;
@@ -63,7 +63,7 @@ struct _directory_search_info
 	directory_search_info *next;
 	HANDLE find_handle;
 	WIN32_FIND_DATA fd;
-	char directory_name[1];
+	char directory_name[1024];
 };
 
 typedef struct _software_picker_info software_picker_info;
@@ -506,7 +506,7 @@ static BOOL SoftwarePicker_InternalAddFile(HWND hwndPicker, LPCSTR pszFilename, 
 
 BOOL SoftwarePicker_AddFile(HWND hwndPicker, LPCSTR pszFilename, bool check)
 {
-	char szBuffer[MAX_PATH];
+	char szBuffer[2048];
 
 	Picker_ResetIdle(hwndPicker);
 	pszFilename = NormalizePath(pszFilename, szBuffer, sizeof(szBuffer) / sizeof(szBuffer[0]));
@@ -522,7 +522,7 @@ BOOL SoftwarePicker_AddDirectory(HWND hwndPicker, LPCSTR pszDirectory)
 	directory_search_info *pSearchInfo;
 	directory_search_info **ppLast;
 	size_t nSearchInfoSize;
-	char szBuffer[MAX_PATH];
+	char szBuffer[2048];
 
 	pszDirectory = NormalizePath(pszDirectory, szBuffer, sizeof(szBuffer) / sizeof(szBuffer[0]));
 

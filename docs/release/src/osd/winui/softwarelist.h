@@ -13,7 +13,7 @@ LPCSTR SoftwareList_LookupFullname(HWND hwndPicker, int nIndex); // returns list
 LPCSTR SoftwareList_LookupDevice(HWND hwndPicker, int nIndex); // returns the media slot in which the software is to be mounted
 int SoftwareList_LookupIndex(HWND hwndPicker, LPCSTR pszFilename);
 iodevice_t SoftwareList_GetImageType(HWND hwndPicker, int nIndex);
-BOOL SoftwareList_AddFile(HWND hwndPicker, LPCSTR pszName, LPCSTR pszListname, LPCSTR pszDescription, LPCSTR pszPublisher, LPCSTR pszYear, LPCSTR pszUsage, LPCSTR pszDevice);
+BOOL SoftwareList_AddFile(HWND hwndPicker, string pszName, string pszListname, string pszDescription, string pszPublisher, string pszYear, string pszUsage, string pszDevice);
 void SoftwareList_Clear(HWND hwndPicker);
 void SoftwareList_SetDriver(HWND hwndPicker, const software_config *config);
 

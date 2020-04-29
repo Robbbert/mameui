@@ -200,11 +200,13 @@ static const WORD dlgitem_listbox[] = { 0xFFFF, 0x0083 };
 static const WORD dlgitem_scrollbar[] = { 0xFFFF, 0x0084 };
 static const WORD dlgitem_combobox[] = { 0xFFFF, 0x0085 };
 static int joystick_menu_setup = 0;
-static char state_filename[MAX_PATH];
+static char state_filename[512];
 static void add_filter_entry(std::string &dest, const char *description, const char *extensions);
 static std::map<std::string,std::string> slmap;
 struct slot_data { std::string slotname; std::string optname; };
 static std::map<int, slot_data> slot_map;
+struct part_data { std::string part_name; device_image_interface *img; };
+static std::map<int, part_data> part_map;
 
 
 //============================================================
@@ -224,6 +226,7 @@ static int dialog_write_item(dialog_box *di, DWORD style, short x, short y, shor
 #define ID_DEVICE_0      11000
 #define ID_JOYSTICK_0    12000
 #define ID_VIDEO_VIEW_0  14000
+#define ID_SWPART        15000
 #define MAX_JOYSTICKS    (8)
 
 enum
@@ -275,6 +278,21 @@ static char *ui_utf8_from_wstring(const WCHAR *wstring)
 	return result;
 }
 
+// This function truncates a long string, replacing the end with ...
+static std::string longdots(std::string incoming, uint16_t howmany)
+{
+	// Firstly, find out if it's multi-line text
+	size_t i = incoming.find_first_of("\n");
+	// If so, truncate at first newline
+	if (i != std::string::npos)
+		incoming = incoming.substr(0, i);
+	// Now assume all is ok
+	std::string outgoing = incoming;
+	// But if it's too long, replace the excess with dots
+	if ((howmany > 5) && (incoming.length() > howmany))
+		outgoing = incoming.substr(0, howmany) + "...";
+	return outgoing;
+}
 
 
 //============================================================
@@ -989,7 +1007,7 @@ static LRESULT dialog_get_combo_value(dialog_box *dialog, HWND dialog_item, UINT
 static LRESULT dialog_get_adjuster_value(dialog_box *dialog, HWND dialog_item, UINT message, WPARAM wparam, LPARAM lparam)
 {
 	TCHAR buf[32];
-	GetWindowText(dialog_item, buf, ARRAY_LENGTH(buf));
+	GetWindowText(dialog_item, buf, ARRAY_LENGTH(buf)-1);
 	return _ttoi(buf);
 }
 
@@ -1206,7 +1224,7 @@ static INT_PTR CALLBACK adjuster_sb_wndproc(HWND sbwnd, UINT msg, WPARAM wparam,
 			value = stuff->min_value;
 		else if (value > stuff->max_value)
 			value = stuff->max_value;
-		_snprintf(BUF, 64, "%d", value);
+		_snprintf(BUF, 63, "%d", value);
 		win_set_window_text_utf8(editwnd, BUF);
 		result = 0;
 	}
@@ -2087,7 +2105,7 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 	ioport_field::user_settings settings;
 	ioport_field *afield;
 	const char *name;
-	char buf[255];
+	char buf[256];
 	static const struct dialog_layout layout = { 120, 52 };
 
 	dlg = win_dialog_init("Analog Controls", &layout);
@@ -2104,15 +2122,15 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 				name = field.name();
 				afield = &field;
 
-				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Digital Speed");
+				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Digital Speed");
 				if (win_dialog_add_adjuster(dlg, buf, settings.delta, 1, 255, false, store_delta, (void *) afield))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Autocenter Speed");
+				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Autocenter Speed");
 				if (win_dialog_add_adjuster(dlg, buf, settings.centerdelta, 0, 255, false, store_centerdelta, (void *) afield))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Reverse");
+				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Reverse");
 				if (win_dialog_add_combobox(dlg, buf, settings.reverse ? 1 : 0, store_reverse, (void *) afield))
 					goto done;
 				if (win_dialog_add_combobox_item(dlg, "Off", 0))
@@ -2120,7 +2138,7 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 				if (win_dialog_add_combobox_item(dlg, "On", 1))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf), "%s %s", name, "Sensitivity");
+				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Sensitivity");
 				if (win_dialog_add_adjuster(dlg, buf, settings.sensitivity, 1, 255, true, store_sensitivity, (void *) afield))
 					goto done;
 			}
@@ -2412,7 +2430,7 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 		initial_dir.erase(initial_dir.length()-1);
 
 	// file name
-	char filename[MAX_PATH];
+	char filename[512];
 	if (image->exists())
 		strcpy(filename, image->basename());
 	else
@@ -2431,7 +2449,7 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 		if (is_save)
 			(image_error_t)image->create(filename, image->device_get_indexed_creatable_format(0), create_args);
 		else
-			(image_error_t)image->load( filename);
+			(image_error_t)image->load(filename);
 	}
 }
 
@@ -2457,7 +2475,7 @@ static void load_item(HWND wnd, device_image_interface *img, bool is_save)
 	build_generic_filter(NULL, is_save, filter);
 
 	// display the dialog
-	char filename[MAX_PATH] = "";
+	char filename[512] = "";
 	bool result = win_file_dialog(img->device().machine(), wnd, WIN_FILE_DIALOG_OPEN, filter.c_str(), as.c_str(), filename);
 
 	if (result)
@@ -2479,7 +2497,7 @@ static void load_item(HWND wnd, device_image_interface *img, bool is_save)
 		buf.erase(0, t1+1);
 
 		// load software
-		img->load_software( buf.c_str());
+		img->load_software(buf);
 	}
 }
 
@@ -2786,10 +2804,11 @@ static void prepare_menus(HWND wnd)
 	remove_menu_items(device_menu);
 
 	UINT_PTR new_item;
+	UINT_PTR new_switem = 0;
 	UINT flags_for_exists = 0;
 	UINT flags_for_writing = 0;
+	bool usage_shown = false;
 	int cnt = 0;
-	char buf[MAX_PATH];
 	// then set up the actual devices
 	for (device_image_interface &img : image_interface_iterator(window->machine().root_device()))
 	{
@@ -2808,9 +2827,59 @@ static void prepare_menus(HWND wnd)
 
 		sub_menu = CreateMenu();
 
-		// see if a software list exists and if so add the Mount Item menu
+		// Software-list processing
 		if (get_softlist_info(wnd, &img))
+		{
+			bool anything = false;
+			// If there's a swlist item mounted, see if has multiple parts and if so, display them as choices
+			if (img.loaded_through_softlist())
+			{
+				const software_part *tmp = img.part_entry();
+				const char *interface = img.image_interface();
+				const software_info *swinfo = img.software_entry();
+				for (const software_part &swpart : swinfo->parts())
+				{
+					if (swpart.matches_interface(interface))
+					{
+						// Extract the Usage data from the "info" fields.
+						for (const feature_list_item &flist : swinfo->other_info())
+						{
+							if (flist.name() == "usage" && !usage_shown)
+							{
+								std::string usage = "Usage: " + longdots(flist.value(),200);
+								win_append_menu_utf8(sub_menu, MF_STRING, 0, usage.c_str());
+								win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
+								usage_shown = true;
+							}
+						}
+
+						// Get any multiple parts
+						if (!tmp->name().empty())
+						{
+							// Don't show the part that is already loaded
+							if (tmp->name() != swpart.name())
+							{
+								// check if the available parts have specific part_id to be displayed (e.g. "Map Disc", "Bonus Disc", etc.)
+								// if not, we simply display "part_name"; if yes we display "part_name (part_id)"
+								std::string menu_part_name(swpart.name());
+								if (swpart.feature("part_id"))
+									menu_part_name.append(": ").append(longdots(swpart.feature("part_id"),50));
+								win_append_menu_utf8(sub_menu, MF_STRING, new_switem + ID_SWPART, menu_part_name.c_str());
+								part_map[new_switem] = part_data{ swpart.name(), &img };
+								new_switem++;
+								anything = true;
+							}
+						}
+					}
+				}
+			}
+
+			if (anything)
+				win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
+
+			// Since a software list exists, add the Mount Item menu
 			win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_ITEM, "Mount Item...");
+		}
 
 		win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_OPEN, "Mount File...");
 
@@ -2856,7 +2925,7 @@ static void prepare_menus(HWND wnd)
 					filename.append(" (").append(tmp->name());
 					// also check if this part has a specific part_id (e.g. "Map Disc", "Bonus Disc", etc.), and in case display it
 					if (img.get_feature("part_id"))
-						filename.append(": ").append(img.get_feature("part_id"));
+						filename.append(": ").append(longdots(img.get_feature("part_id"),50));
 					filename.append(")");
 				}
 			}
@@ -2865,11 +2934,9 @@ static void prepare_menus(HWND wnd)
 			filename.assign("---");
 
 		// Get instance names instead, like Media View, and mame's File Manager
-		std::string instance = img.instance_name() + std::string(" (") + img.brief_instance_name() + std::string("): ") + filename;
+		std::string instance = img.instance_name() + std::string(" (") + img.brief_instance_name() + std::string("): ") + longdots(filename,127);
 		std::transform(instance.begin(), instance.begin()+1, instance.begin(), ::toupper); // turn first char to uppercase
-
-		snprintf(buf, ARRAY_LENGTH(buf), "%s", instance.c_str());
-		win_append_menu_utf8(device_menu, MF_POPUP, (UINT_PTR)sub_menu, buf);
+		win_append_menu_utf8(device_menu, MF_POPUP, (UINT_PTR)sub_menu, instance.c_str());
 
 		cnt++;
 	}
@@ -2931,14 +2998,16 @@ static void prepare_menus(HWND wnd)
 
 static void set_speed(running_machine &machine, int speed)
 {
-	if (speed != 0)
+	bool throttled = speed ? true : false;
+	if (throttled)
 	{
 		machine.video().set_speed_factor(speed);
-		machine.options().emu_options::set_value(OPTION_SPEED, speed / 1000, OPTION_PRIORITY_CMDLINE);
+		float dspeed = float(speed) / 1000;
+		machine.options().emu_options::set_value(OPTION_SPEED, dspeed, OPTION_PRIORITY_CMDLINE);
 	}
 
-	machine.video().set_throttled(speed != 0);
-	machine.options().emu_options::set_value(OPTION_THROTTLE, (speed != 0), OPTION_PRIORITY_CMDLINE);
+	machine.video().set_throttled(throttled);
+	machine.options().emu_options::set_value(OPTION_THROTTLE, throttled, OPTION_PRIORITY_CMDLINE);
 }
 
 
@@ -3387,6 +3456,15 @@ static bool invoke_command(HWND wnd, UINT command)
 				slot_option &opt(window->machine().options().slot_option(slot_map[command].slotname.c_str()));
 				opt.specify(slot_map[command].optname.c_str());
 				window->machine().schedule_hard_reset();
+			}
+			else
+			if ((command >= ID_SWPART) && (command < ID_SWPART + 100))
+			{
+				int mapindex = command - ID_SWPART;
+				img = part_map[mapindex].img;
+				std::string instance = std::string(img->software_list_name()) + ":" + std::string(img->basename()) + ":" + part_map[mapindex].part_name;
+				//printf("Loading index %X : %s *******\n",mapindex,instance.c_str());
+				img->load_software(instance);
 			}
 			else
 				// bogus command

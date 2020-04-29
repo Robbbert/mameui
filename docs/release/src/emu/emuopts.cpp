@@ -706,19 +706,20 @@ bool emu_options::add_and_remove_image_options()
 	}
 
 	// at this point we need to purge stray image options that may no longer be pertinent
-	for (auto &opt_name : existing)
-	{
-		auto iter = m_image_options_canonical.find(*opt_name);
-		assert(iter != m_image_options_canonical.end());
+// MESSUI - commented out because it crashes BML3 with 1802 slot.
+//	for (auto &opt_name : existing)
+//	{
+//		auto iter = m_image_options_canonical.find(*opt_name);
+//		assert(iter != m_image_options_canonical.end());
 
 		// if this is represented in core_options, remove it
-		if (iter->second.option_entry())
-			remove_entry(*iter->second.option_entry());
+//		if (iter->second.option_entry())
+//			remove_entry(*iter->second.option_entry());
 
 		// remove this option
-		m_image_options_canonical.erase(iter);
-		changed = true;
-	}
+//		m_image_options_canonical.erase(iter);
+//		changed = true;
+//	}
 
 	return changed;
 }

@@ -11,6 +11,7 @@
 
 #include "emu.h"
 #include "mconfig.h"
+#include "winui.h"
 
 
 //============================================================

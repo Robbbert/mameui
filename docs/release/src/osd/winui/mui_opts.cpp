@@ -490,9 +490,12 @@ int GetCurrentTab(void)
 }
 
 // Need int here in case no games were in the list at exit
-void SetDefaultGame(uint32_t val)
+void SetDefaultGame(int val)
 {
-	settings.setter(MUIOPTION_DEFAULT_GAME, driver_list::driver(val).name);
+	if ((val < 0) || (val > driver_list::total()))
+		settings.setter(MUIOPTION_DEFAULT_GAME, "");
+	else
+		settings.setter(MUIOPTION_DEFAULT_GAME, driver_list::driver(val).name);
 }
 
 uint32_t GetDefaultGame(void)
@@ -2531,22 +2534,29 @@ BOOL GetSWSortReverse(void)
 
 void SetSelectedSoftware(int driver_index, string opt_name, const char *software)
 {
-	const char *s = opt_name.c_str();
-
-	if (LOG_SOFTWARE)
+	if (opt_name.empty())
 	{
-		printf("SetSelectedSoftware(): slot=%s driver=%s software='%s'\n", s, driver_list::driver(driver_index).name, software);
-	}
-
-	if (s)
-	{
-		printf("About to load %s into slot %s\n",software,s);
+		// Software List Item, we write to SOFTWARENAME to ensure all parts of a multipart set are loaded
 		windows_options o;
-		//o.set_value(OPTION_SYSTEMNAME, driver_list::driver(driver_index).name, OPTION_PRIORITY_CMDLINE);
+		printf("About to write %s to OPTION_SOFTWARENAME\n",software);fflush(stdout);
+		load_options(o, OPTIONS_GAME, driver_index, 1);
+		o.set_value(OPTION_SOFTWARENAME, software, OPTION_PRIORITY_CMDLINE);
+		save_options(o, OPTIONS_GAME, driver_index);
+	}
+	else
+	{
+		// Loose software, we write the filename to the requested image device
+		const char *s = opt_name.c_str();
+
+		if (LOG_SOFTWARE)
+			printf("SetSelectedSoftware(): slot=%s driver=%s software='%s'\n", s, driver_list::driver(driver_index).name, software);
+
+		printf("About to load %s into slot %s\n",software,s);fflush(stdout);
+		windows_options o;
 		load_options(o, OPTIONS_GAME, driver_index, 1);
 		o.set_value(s, software, OPTION_PRIORITY_CMDLINE);
 		//o.image_option(opt_name).specify(software);
-		printf("Done\n");
+		printf("Done\n");;fflush(stdout);
 		save_options(o, OPTIONS_GAME, driver_index);
 	}
 }

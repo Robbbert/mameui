@@ -23,14 +23,14 @@
 typedef struct _file_info file_info;
 struct _file_info
 {
-	char list_name[MAX_PATH];
-	char description[MAX_PATH];
-	char file_name[MAX_PATH];
-	char publisher[MAX_PATH];
-	char year[10];
-	char full_name[MAX_PATH*2];
-	char usage[MAX_PATH*2];
-	char device[MAX_PATH];
+	char list_name[512];
+	char description[1024];
+	char file_name[128];
+	char publisher[1024];
+	char year[32];
+	char full_name[640];
+	char usage[1024];
+	char device[512];
 };
 
 typedef struct _software_list_info software_list_info;
@@ -60,7 +60,7 @@ static software_list_info *GetSoftwareListInfo(HWND hwndPicker)
 	return (software_list_info *) h;
 }
 
-
+#if 0
 // return just the filename, to run a software in the software list - THIS IS NO LONGER USED
 LPCSTR SoftwareList_LookupFilename(HWND hwndPicker, int nIndex)
 {
@@ -70,6 +70,7 @@ LPCSTR SoftwareList_LookupFilename(HWND hwndPicker, int nIndex)
 		return NULL;
 	return pPickerInfo->file_index[nIndex]->file_name;
 }
+#endif
 
 // return the list:file, for screenshot / history / inifile
 LPCSTR SoftwareList_LookupFullname(HWND hwndPicker, int nIndex)
@@ -123,7 +124,7 @@ void SoftwareList_SetDriver(HWND hwndPicker, const software_config *config)
 }
 
 
-BOOL SoftwareList_AddFile(HWND hwndPicker,LPCSTR pszName, LPCSTR pszListname, LPCSTR pszDescription, LPCSTR pszPublisher, LPCSTR pszYear, LPCSTR pszUsage, LPCSTR pszDevice)
+BOOL SoftwareList_AddFile(HWND hwndPicker, string pszName, string pszListname, string pszDescription, string pszPublisher, string pszYear, string pszUsage, string pszDevice)
 {
 	Picker_ResetIdle(hwndPicker);
 
@@ -142,14 +143,14 @@ BOOL SoftwareList_AddFile(HWND hwndPicker,LPCSTR pszName, LPCSTR pszListname, LP
 	memset(pInfo, 0, nSize);
 
 	// copy the filename
-	strcpy(pInfo->file_name, pszName);
-	strcpy(pInfo->list_name, pszListname);
-	strcpy(pInfo->description, pszDescription);
-	strcpy(pInfo->publisher, pszPublisher);
-	strcpy(pInfo->year, pszYear);
-	if (pszUsage) strcpy(pInfo->usage, pszUsage);
-	strcpy(pInfo->device, pszDevice);
-	sprintf(pInfo->full_name,"%s:%s", pszListname,pszName);
+	strcpy(pInfo->file_name, pszName.c_str());
+	strcpy(pInfo->list_name, pszListname.c_str());
+	if (!pszDescription.empty()) strcpy(pInfo->description, longdots(pszDescription,200).c_str());
+	if (!pszPublisher.empty()) strcpy(pInfo->publisher, longdots(pszPublisher,200).c_str());
+	if (!pszYear.empty()) strcpy(pInfo->year, longdots(pszYear, 8).c_str());
+	if (!pszUsage.empty()) strcpy(pInfo->usage, longdots(pszUsage,200).c_str());
+	if (!pszDevice.empty()) strcpy(pInfo->device, pszDevice.c_str());
+	sprintf(pInfo->full_name,"%s:%s", pInfo->list_name,pInfo->file_name);
 
 	ppNewIndex = (file_info**)malloc((pPickerInfo->file_index_length + 1) * sizeof(*pPickerInfo->file_index));
 	memcpy(ppNewIndex,pPickerInfo->file_index,pPickerInfo->file_index_length * sizeof(*pPickerInfo->file_index));
