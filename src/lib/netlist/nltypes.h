@@ -26,9 +26,45 @@
 
 namespace netlist
 {
-	/// \brief plib::constants struct specialized for nl_fptype.
+	/// \brief Constants and const calculations for the library
 	///
-	struct nlconst : public plib::constants<nl_fptype>
+	template<typename T>
+	struct nlconst_base : public plib::constants<T>
+	{
+		using BC = plib::constants<T>;
+
+		static inline constexpr T np_VT(T n=BC::one(), T temp=BC::T0()) noexcept
+		{ return n * temp * BC::k_b() / BC::Q_e(); }
+
+		static inline constexpr T np_Is() noexcept { return static_cast<T>(1e-15); } // NOLINT
+
+		static inline constexpr std::size_t max_queue_size() { return 512; } // NOLINT
+
+		/// \brief constant startup gmin
+		///
+		/// This should be used during object creation to initialize
+		/// conductivities with a reasonable value.
+		/// During reset, the object should than make use of exec().gmin()
+		/// to use the actual gmin() value.
+		static inline constexpr T cgmin() noexcept { return BC::magic(1e-9); } // NOLINT
+
+		// FIXME: Some objects used 1e-15 for initial gmin. Needs to be
+		//        aligned with cgmin
+		static inline constexpr T cgminalt() noexcept { return BC::magic(1e-15); } // NOLINT
+
+		/// \brief Multiplier applied to VT in np diode models to determine range for constant model
+		///
+		static inline constexpr T diode_min_cutoff_mult() noexcept { return BC::magic(-5.0); } // NOLINT
+
+		/// \brief Startup voltage used by np diode models
+		///
+		static inline constexpr T diode_start_voltage() noexcept { return BC::magic(0.7); } // NOLINT
+
+	};
+
+	/// \brief nlconst_base struct specialized for nl_fptype.
+	///
+	struct nlconst : public nlconst_base<nl_fptype>
 	{
 	};
 
@@ -126,15 +162,63 @@ namespace netlist
 	template <typename T> inline constexpr netlist_time NLTIME_FROM_US(T &&t) noexcept { return netlist_time::from_usec(t); }
 	template <typename T> inline constexpr netlist_time NLTIME_FROM_MS(T &&t) noexcept { return netlist_time::from_msec(t); }
 
+	struct desc_base
+	{
+		/// \brief: used to hold one static netlist_time value
+		///
+		template<netlist_time::internal_type value0>
+		struct times_ns1
+		{
+			static constexpr netlist_time value(std::size_t N = 0)
+			{
+				plib::unused_var(N);
+				return NLTIME_FROM_NS(value0);
+			}
+		};
+
+		template <netlist_time::internal_type value0>
+		using time_ns = times_ns1<value0>;
+
+		/// \brief: used to hold two static netlist_time values
+		///
+		template<netlist_time::internal_type value0,
+			netlist_time::internal_type  value1>
+		struct times_ns2
+		{
+			static constexpr netlist_time value(std::size_t N)
+			{
+				return NLTIME_FROM_NS(N == 0 ? value0 : value1);
+			}
+		};
+
+		/// \brief: used to hold two static netlist_time values
+		///
+		template<netlist_time::internal_type value0,
+			netlist_time::internal_type value1,
+			netlist_time::internal_type value2>
+		struct times_ns3
+		{
+			static constexpr netlist_time value(std::size_t N)
+			{
+				return NLTIME_FROM_NS(N == 0 ? value0 :
+						N == 1 ? value1 :
+								 value2);
+			}
+		};
+
+		/// \brief: used define a constant in device description struct
+		///
+		/// See the 74125 implementation
+		///
+		template <std::size_t V>
+		using desc_const =  std::integral_constant<const std::size_t, V>;
+
+		template <typename T, T V>
+		using desc_const_t =  std::integral_constant<const T, V>;
+	};
+
+
 } // namespace netlist
 
-namespace plib {
-
-	template<>
-	inline void state_manager_t::save_item(const void *owner, netlist::netlist_time &state, const pstring &stname)
-	{
-		save_state_ptr(owner, stname, datatype_t(sizeof(netlist::netlist_time::internal_type), true, false), 1, state.get_internaltype_ptr());
-	}
-} // namespace plib
 
 #endif // NLTYPES_H_

@@ -24,6 +24,8 @@
 
 #include "unspdasm.h"
 
+#include <climits>
+
 DEFINE_DEVICE_TYPE(UNSP,    unsp_device,    "unsp",    "SunPlus u'nSP (ISA 1.0)")
 // 1.1 is just 1.0 with better CPI?
 DEFINE_DEVICE_TYPE(UNSP_11, unsp_11_device, "unsp_11", "SunPlus u'nSP (ISA 1.1)")
@@ -281,6 +283,9 @@ void unsp_device::device_start()
 	save_item(NAME(m_core->m_bnk));
 	save_item(NAME(m_core->m_ine));
 	save_item(NAME(m_core->m_pri));
+	save_item(NAME(m_core->m_divq_bit));
+	save_item(NAME(m_core->m_divq_dividend));
+	save_item(NAME(m_core->m_divq_divisor));
 
 	set_icountptr(m_core->m_icount);
 }
@@ -328,6 +333,7 @@ void unsp_device::device_reset()
 	m_core->m_fiq = 0;
 	m_core->m_irq = 0;
 	m_core->m_sirq = 0;
+	m_core->m_divq_bit = UINT_MAX;
 }
 
 void unsp_20_device::device_reset()

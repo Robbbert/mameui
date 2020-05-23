@@ -48,8 +48,8 @@ protected:
 private:
 	DECLARE_READ8_MEMBER(pic_r);
 	DECLARE_WRITE8_MEMBER(pic_w);
-	DECLARE_READ8_MEMBER(dma_mem_r);
-	DECLARE_WRITE8_MEMBER(dma_mem_w);
+	uint8_t dma_mem_r(offs_t offset);
+	void dma_mem_w(offs_t offset, uint8_t data);
 	DECLARE_READ8_MEMBER(dmapg_r);
 	DECLARE_WRITE8_MEMBER(dmapg_w);
 	DECLARE_WRITE8_MEMBER(fdcctrl_w);
@@ -117,12 +117,12 @@ WRITE8_MEMBER(duet16_state::fdcctrl_w)
 	// TODO: bit 3 = LSPD
 }
 
-READ8_MEMBER(duet16_state::dma_mem_r)
+uint8_t duet16_state::dma_mem_r(offs_t offset)
 {
 	return m_maincpu->space(AS_PROGRAM).read_byte((m_dmapg << 16) | offset);
 }
 
-WRITE8_MEMBER(duet16_state::dma_mem_w)
+void duet16_state::dma_mem_w(offs_t offset, uint8_t data)
 {
 	m_maincpu->space(AS_PROGRAM).write_byte((m_dmapg << 16) | offset, data);
 }
@@ -192,6 +192,8 @@ WRITE8_MEMBER(duet16_state::dispctrl_w)
 
 MC6845_UPDATE_ROW(duet16_state::crtc_update_row)
 {
+	if(!de)
+		return;
 	u8 *gvram = (u8 *)&m_gvram[0];
 	for(int i = 0; i < x_count; i++)
 	{

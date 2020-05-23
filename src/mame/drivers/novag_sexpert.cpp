@@ -10,7 +10,7 @@ Hardware notes (Super Expert)
 - 8KB RAM battery-backed, 3*32KB ROM
 - HD44780 LCD controller (16x1)
 - beeper(32KHz/32), IRQ(32KHz/128) via MC14060
-- optional R65C51P2 ACIA @ 1.8432MHz, for IBM PC interface (only works in version C?)
+- optional R65C51P2 ACIA @ 1.8432MHz, for IBM PC interface (only works in version C)
 - printer port, magnetic sensors, 8*8 chessboard leds
 
 I/O via TTL, hardware design was very awkward.
@@ -196,9 +196,9 @@ void sforte_state::machine_start()
 
 void sexpert_state::lcd_palette(palette_device &palette) const
 {
-	palette.set_pen_color(0, rgb_t(138, 146, 148)); // background
-	palette.set_pen_color(1, rgb_t(92, 83, 88)); // lcd pixel on
-	palette.set_pen_color(2, rgb_t(131, 136, 139)); // lcd pixel off
+	palette.set_pen_color(0, rgb_t(0xff, 0xff, 0xff)); // background
+	palette.set_pen_color(1, rgb_t(0x00, 0x00, 0x00)); // lcd pixel on
+	palette.set_pen_color(2, rgb_t(0xe8, 0xe8, 0xe8)); // lcd pixel off
 }
 
 HD44780_PIXEL_UPDATE(sexpert_state::lcd_pixel_update)
@@ -419,16 +419,6 @@ void sexpert_state::sexpert(machine_config &config)
 	m_irq_on->set_start_delay(irq_period - attotime::from_nsec(21500)); // active for 21.5us
 	TIMER(config, "irq_off").configure_periodic(FUNC(sexpert_state::irq_off<M6502_IRQ_LINE>), irq_period);
 
-	MOS6551(config, m_acia).set_xtal(1.8432_MHz_XTAL); // R65C51P2 - RTS to CTS, DCD to GND
-	m_acia->irq_handler().set_inputline("maincpu", m65c02_device::NMI_LINE);
-	m_acia->rts_handler().set("acia", FUNC(mos6551_device::write_cts));
-	m_acia->txd_handler().set("rs232", FUNC(rs232_port_device::write_txd));
-	m_acia->dtr_handler().set("rs232", FUNC(rs232_port_device::write_dtr));
-
-	RS232_PORT(config, m_rs232, default_rs232_devices, nullptr);
-	m_rs232->rxd_handler().set("acia", FUNC(mos6551_device::write_rxd));
-	m_rs232->dsr_handler().set("acia", FUNC(mos6551_device::write_dsr));
-
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
 	SENSORBOARD(config, m_board).set_type(sensorboard_device::MAGNETS);
@@ -457,6 +447,17 @@ void sexpert_state::sexpert(machine_config &config)
 	SPEAKER(config, "mono").front_center();
 	BEEP(config, m_beeper, 32.768_kHz_XTAL/32); // 1024Hz
 	m_beeper->add_route(ALL_OUTPUTS, "mono", 0.25);
+
+	/* uart (configure after video) */
+	MOS6551(config, m_acia).set_xtal(1.8432_MHz_XTAL); // R65C51P2 - RTS to CTS, DCD to GND
+	m_acia->irq_handler().set_inputline("maincpu", m65c02_device::NMI_LINE);
+	m_acia->rts_handler().set("acia", FUNC(mos6551_device::write_cts));
+	m_acia->txd_handler().set("rs232", FUNC(rs232_port_device::write_txd));
+	m_acia->dtr_handler().set("rs232", FUNC(rs232_port_device::write_dtr));
+
+	RS232_PORT(config, m_rs232, default_rs232_devices, nullptr);
+	m_rs232->rxd_handler().set("acia", FUNC(mos6551_device::write_rxd));
+	m_rs232->dsr_handler().set("acia", FUNC(mos6551_device::write_dsr));
 }
 
 void sforte_state::sforte(machine_config &config)
@@ -498,18 +499,18 @@ ROM_START( sexpertb ) // from model 887
 	ROM_LOAD("se_f_hi0_605.u2", 0x10000, 0x8000, CRC(bb07ad52) SHA1(30cf9005021ab2d7b03facdf2d3588bc94dc68a6) )
 ROM_END
 
-ROM_START( sexpertc )
+ROM_START( sexpertc ) // ID = E3.6
 	ROM_REGION( 0x18000, "maincpu", 0 )
 	ROM_LOAD("se_lo_v3.6.u3", 0x0000, 0x8000, CRC(5a29105e) SHA1(be37bb29b530dbba847a5e8d27d81b36525e47f7) )
 	ROM_LOAD("se_hi1.u1", 0x8000, 0x8000, CRC(0085c2c4) SHA1(d84bf4afb022575db09dd9dc12e9b330acce35fa) )
 	ROM_LOAD("se_hi0.u2", 0x10000, 0x8000, CRC(2d085064) SHA1(76162322aa7d23a5c07e8356d0bbbb33816419af) )
 ROM_END
 
-ROM_START( sexpertc1 )
+ROM_START( sexpertc1 ) // from model 902, ID = E3.0
 	ROM_REGION( 0x18000, "maincpu", 0 )
-	ROM_LOAD("se_lo_v1.2.u3", 0x0000, 0x8000, CRC(43ed7a9e) SHA1(273c485e5be6b107b6c5c448003ba7686d4a6d06) )
-	ROM_LOAD("se_hi1.u1", 0x8000, 0x8000, CRC(0085c2c4) SHA1(d84bf4afb022575db09dd9dc12e9b330acce35fa) )
-	ROM_LOAD("se_hi0.u2", 0x10000, 0x8000, CRC(2d085064) SHA1(76162322aa7d23a5c07e8356d0bbbb33816419af) )
+	ROM_LOAD("se_c24_l.u3", 0x0000, 0x8000, CRC(43ed7a9e) SHA1(273c485e5be6b107b6c5c448003ba7686d4a6d06) )
+	ROM_LOAD("se_c23_h1.u1", 0x8000, 0x8000, CRC(0085c2c4) SHA1(d84bf4afb022575db09dd9dc12e9b330acce35fa) )
+	ROM_LOAD("se_c22_h0.u2", 0x10000, 0x8000, CRC(2d085064) SHA1(76162322aa7d23a5c07e8356d0bbbb33816419af) )
 ROM_END
 
 
@@ -541,7 +542,7 @@ ROM_START( sforteb )
 	ROM_LOAD("forte_b_hi0.u2", 0x10000, 0x8000, CRC(bb07ad52) SHA1(30cf9005021ab2d7b03facdf2d3588bc94dc68a6) )
 ROM_END
 
-ROM_START( sfortec )
+ROM_START( sfortec ) // ID = F1.2
 	ROM_REGION( 0x18000, "maincpu", 0 )
 	ROM_LOAD("sfl_c_iii.u3", 0x0000, 0x8000, CRC(f040cf30) SHA1(1fc1220b8ed67cdffa3866d230ce001721cf684f) ) // Toshiba TC57256AD-12
 	ROM_LOAD("sfh_c_iii.u1", 0x8000, 0x8000, CRC(0f926b32) SHA1(9c7270ecb3f41dd9172a9a7928e6e04e64b2a340) ) // NEC D27C256AD-12
@@ -561,7 +562,7 @@ CONS( 1988, sexperta,  0,        0, sexpert, sexpert, sexpert_state, init_sexper
 CONS( 1987, sexperta1, sexperta, 0, sexpert, sexpert, sexpert_state, init_sexpert, "Novag", "Super Expert (version A, older)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 CONS( 1988, sexpertb,  sexperta, 0, sexpert, sexpert, sexpert_state, init_sexpert, "Novag", "Super Expert (version B)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 CONS( 1990, sexpertc,  sexperta, 0, sexpert, sexpert, sexpert_state, init_sexpert, "Novag", "Super Expert (version C, V3.6)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
-CONS( 1990, sexpertc1, sexperta, 0, sexpert, sexpert, sexpert_state, init_sexpert, "Novag", "Super Expert (version C, V1.2)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1990, sexpertc1, sexperta, 0, sexpert, sexpert, sexpert_state, init_sexpert, "Novag", "Super Expert (version C, V3.0)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 
 CONS( 1987, sfortea,   0,        0, sforte,  sexpert, sforte_state,  init_sexpert, "Novag", "Super Forte (version A, set 1)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
 CONS( 1987, sfortea1,  sfortea,  0, sforte,  sexpert, sforte_state,  init_sexpert, "Novag", "Super Forte (version A, set 2)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )

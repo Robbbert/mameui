@@ -77,9 +77,9 @@ private:
 	DECLARE_WRITE8_MEMBER(floppy_reserve_w);
 	DECLARE_WRITE8_MEMBER(floppy_release_w);
 
-	DECLARE_READ8_MEMBER(ppi_porta_r);
-	DECLARE_READ8_MEMBER(ppi_portb_r);
-	DECLARE_WRITE8_MEMBER(ppi_portc_w);
+	uint8_t ppi_porta_r();
+	uint8_t ppi_portb_r();
+	void ppi_portc_w(uint8_t data);
 
 	DECLARE_WRITE_LINE_MEMBER(centronics_busy_w);
 	DECLARE_WRITE_LINE_MEMBER(centronics_ack_w);
@@ -106,7 +106,7 @@ private:
 	DECLARE_WRITE8_MEMBER(nvram_w);
 	DECLARE_READ8_MEMBER(rtc_r);
 	DECLARE_WRITE8_MEMBER(rtc_w);
-	DECLARE_READ8_MEMBER(irq_callback);
+	uint8_t irq_callback();
 
 	void rc759_io(address_map &map);
 	void rc759_map(address_map &map);
@@ -176,7 +176,7 @@ READ8_MEMBER( rc759_state::keyboard_r )
 		return 0x00;
 }
 
-READ8_MEMBER( rc759_state::ppi_porta_r )
+uint8_t rc759_state::ppi_porta_r()
 {
 	uint8_t data = 0;
 
@@ -192,7 +192,7 @@ READ8_MEMBER( rc759_state::ppi_porta_r )
 	return data;
 }
 
-READ8_MEMBER( rc759_state::ppi_portb_r )
+uint8_t rc759_state::ppi_portb_r()
 {
 	uint8_t data = 0;
 
@@ -207,7 +207,7 @@ READ8_MEMBER( rc759_state::ppi_portb_r )
 	return data;
 }
 
-WRITE8_MEMBER( rc759_state::ppi_portc_w )
+void rc759_state::ppi_portc_w(uint8_t data)
 {
 	m_cas_enabled = BIT(data, 0);
 	m_cas->change_state(BIT(data, 1) ? CASSETTE_MOTOR_DISABLED : CASSETTE_MOTOR_ENABLED, CASSETTE_MASK_MOTOR);
@@ -449,7 +449,7 @@ WRITE8_MEMBER( rc759_state::nvram_w )
 		m_nvram_mem[addr >> 1] = (m_nvram_mem[addr >> 1] & 0xf0) | (data & 0x0f);
 }
 
-READ8_MEMBER( rc759_state::irq_callback )
+uint8_t rc759_state::irq_callback()
 {
 	return m_pic->acknowledge();
 }

@@ -369,7 +369,7 @@ public:
 	DECLARE_WRITE_LINE_MEMBER(ay3600_ako_w);
 	DECLARE_READ8_MEMBER(memexp_r);
 	DECLARE_WRITE8_MEMBER(memexp_w);
-	DECLARE_READ8_MEMBER(nsc_backing_r);
+	uint8_t nsc_backing_r(offs_t offset);
 
 	void apple2cp(machine_config &config);
 	void laser128ex2(machine_config &config);
@@ -2380,7 +2380,7 @@ uint8_t apple2e_state::read_int_rom(int slotbias, int offset)
 	return m_ds1315->read(slotbias + offset);
 }
 
-READ8_MEMBER(apple2e_state::nsc_backing_r) { return m_rom_ptr[offset]; }
+uint8_t apple2e_state::nsc_backing_r(offs_t offset) { return m_rom_ptr[offset]; }
 
 READ8_MEMBER(apple2e_state::c100_r)  { return read_slot_rom(1, offset); }
 READ8_MEMBER(apple2e_state::c100_int_r)  { return read_int_rom(0x100, offset); }
@@ -4546,7 +4546,7 @@ void apple2e_state::apple2cp(machine_config &config)
 
 	config.device_remove("sl4");
 	config.device_remove("sl6");
-	IWM(config, m_iicpiwm, &a2cp_interface);
+	LEGACY_IWM(config, m_iicpiwm, &a2cp_interface);
 	FLOPPY_APPLE(config, FLOPPY_0, &floppy_interface, 15, 16);
 	FLOPPY_APPLE(config, FLOPPY_1, &floppy_interface, 15, 16);
 	FLOPPY_SONY(config, FLOPPY_2, &apple2cp_floppy35_floppy_interface);
@@ -4592,7 +4592,7 @@ void apple2e_state::laser128(machine_config &config)
 	M65C02(config.replace(), m_maincpu, 1021800);
 	m_maincpu->set_addrmap(AS_PROGRAM, &apple2e_state::laser128_map);
 
-	APPLEFDC(config, m_laserudc, &fdc_interface);
+	LEGACY_APPLEFDC(config, m_laserudc, &fdc_interface);
 	FLOPPY_APPLE(config, FLOPPY_0, &floppy_interface, 15, 16);
 	FLOPPY_APPLE(config, FLOPPY_1, &floppy_interface, 15, 16);
 
@@ -4616,7 +4616,7 @@ void apple2e_state::laser128ex2(machine_config &config)
 	M65C02(config.replace(), m_maincpu, 1021800);
 	m_maincpu->set_addrmap(AS_PROGRAM, &apple2e_state::laser128_map);
 
-	APPLEFDC(config, m_laserudc, &fdc_interface);
+	LEGACY_APPLEFDC(config, m_laserudc, &fdc_interface);
 	FLOPPY_APPLE(config, FLOPPY_0, &floppy_interface, 15, 16);
 	FLOPPY_APPLE(config, FLOPPY_1, &floppy_interface, 15, 16);
 

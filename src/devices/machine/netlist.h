@@ -78,7 +78,7 @@ public:
 	void update_icount(netlist::netlist_time_ext time) noexcept;
 	void check_mame_abort_slice() noexcept;
 
-	static void register_memregion_source(netlist::nlparse_t &setup, device_t &dev, const char *name);
+	static void register_memregion_source(netlist::nlparse_t &parser, device_t &dev, const char *name);
 
 	int m_icount;
 
@@ -99,7 +99,7 @@ protected:
 	netlist_mame_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock);
 
 	// Custom to netlist ...
-	virtual void nl_register_devices(netlist::setup_t &lsetup) const { }
+	virtual void nl_register_devices(netlist::nlparse_t &parser) const { }
 
 	// device_t overrides
 	virtual void device_config_complete() override;
@@ -113,6 +113,8 @@ protected:
 
 	plib::unique_ptr<netlist::netlist_state_t> base_validity_check(validity_checker &valid) const;
 
+	attotime m_cur_time;
+	attotime m_attotime_per_clock;
 private:
 	void save_state();
 
@@ -178,7 +180,7 @@ public:
 
 protected:
 	// netlist_mame_device
-	virtual void nl_register_devices(netlist::setup_t &lsetup) const override;
+	virtual void nl_register_devices(netlist::nlparse_t &parser) const override;
 
 	// device_t overrides
 	virtual void device_start() override;
@@ -230,6 +232,7 @@ public:
 
 
 	inline sound_stream *get_stream() { return m_stream; }
+	void update_to_current_time();
 
 
 	// device_sound_interface overrides
@@ -238,15 +241,18 @@ public:
 
 protected:
 	// netlist_mame_device
-	virtual void nl_register_devices(netlist::setup_t &lsetup) const override;
+	virtual void nl_register_devices(netlist::nlparse_t &parser) const override;
 
 	// device_t overrides
 	virtual void device_start() override;
+	virtual void device_reset() override;
+	virtual void device_clock_changed() override;
 
 private:
 	std::map<int, nld_sound_out *> m_out;
 	nld_sound_in *m_in;
 	sound_stream *m_stream;
+	bool m_is_device_call;
 };
 
 // ----------------------------------------------------------------------------------------
@@ -269,7 +275,7 @@ public:
 	}
 
 	virtual void custom_netlist_additions(netlist::netlist_state_t &nlstate) { }
-	virtual void pre_parse_action(netlist::netlist_state_t &nlstate) { }
+	virtual void pre_parse_action(netlist::nlparse_t &parser) { }
 	virtual void validity_helper(validity_checker &valid,
 		netlist::netlist_state_t &nlstate) const { }
 
@@ -278,11 +284,14 @@ public:
 	inline void update_to_current_time()
 	{
 		if (m_sound != nullptr)
-			m_sound->get_stream()->update();
+		{
+			m_sound->update_to_current_time();
+		}
 	}
 
 	void set_mult_offset(const double mult, const double offset);
 
+	netlist_mame_sound_device *sound() { return m_sound;}
 protected:
 	double m_offset;
 	double m_mult;

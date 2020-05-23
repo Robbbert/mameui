@@ -658,7 +658,7 @@
 * Read/Write Handlers *
 **********************/
 
-WRITE8_MEMBER(funworld_state::funworld_lamp_a_w)
+void funworld_state::funworld_lamp_a_w(uint8_t data)
 {
 /*  - bits -
     7654 3210
@@ -686,7 +686,7 @@ WRITE8_MEMBER(funworld_state::funworld_lamp_a_w)
 //  popmessage("Lamps A: %02X", (data ^ 0xff));
 }
 
-WRITE8_MEMBER(funworld_state::funworld_lamp_b_w)
+void funworld_state::funworld_lamp_b_w(uint8_t data)
 {
 /*  - bits -
     7654 3210
@@ -2966,12 +2966,12 @@ GFXDECODE_END
 */
 
 /* these ports are set to output anyway, but this quietens the log */
-READ8_MEMBER(funworld_state::funquiz_ay8910_a_r)
+uint8_t funworld_state::funquiz_ay8910_a_r()
 {
 	return 0x00;
 }
 
-READ8_MEMBER(funworld_state::funquiz_ay8910_b_r)
+uint8_t funworld_state::funquiz_ay8910_b_r()
 {
 	return 0x00;
 }
@@ -3123,9 +3123,7 @@ void funworld_state::saloon(machine_config &config)
 	config.device_remove("pia1");
 
 	/* Serial Memory */
-	i2cmem_device &m_i2cmem(I2CMEM(config, "i2cmem", 0));
-	m_i2cmem.set_data_size(256);
-	m_i2cmem.set_e0(1);
+	I2C_24C02(config, "i2cmem", 0).set_e0(1); // ? or maybe 2nd half of 24C04?
 }
 
 

@@ -178,8 +178,8 @@ protected:
 	TIMER_DEVICE_CALLBACK_MEMBER(timer_update);
 	TIMER_DEVICE_CALLBACK_MEMBER(clk_busy_timer);
 
-	DECLARE_WRITE8_MEMBER(irl_w);
-	DECLARE_WRITE8_MEMBER(halt_w);
+	void irl_w(offs_t offset, uint8_t data);
+	void halt_w(offs_t offset, uint8_t data);
 
 	required_device<capricorn_cpu_device> m_cpu;
 	required_device<timer_device> m_clk_busy_timer;
@@ -487,10 +487,9 @@ READ8_MEMBER(hp80_base_state::keycod_r)
 
 WRITE8_MEMBER(hp80_base_state::keycod_w)
 {
-	if (m_has_int_keyb) {
+	if (m_kb_raw_readout) {
 		m_kb_keycode = data;
-	}
-	if (data == 1) {
+	} else if (data == 1) {
 		unsigned irq = get_kb_irq();
 		irq_w(irq , false);
 		m_kb_enable = true;
@@ -862,12 +861,12 @@ TIMER_DEVICE_CALLBACK_MEMBER(hp80_base_state::clk_busy_timer)
 	m_clk_busy = false;
 }
 
-WRITE8_MEMBER(hp80_base_state::irl_w)
+void hp80_base_state::irl_w(offs_t offset, uint8_t data)
 {
 	irq_w(offset + IRQ_IOP0_BIT , data != 0);
 }
 
-WRITE8_MEMBER(hp80_base_state::halt_w)
+void hp80_base_state::halt_w(offs_t offset, uint8_t data)
 {
 	bool prev_halt = m_halt_lines != 0;
 	COPY_BIT(data != 0 , m_halt_lines , offset);
@@ -2433,7 +2432,7 @@ ROM_START(hp86b_004)
 	ROM_LOAD("chrgen.bin" , 0 , 0x500 , CRC(c7d04292) SHA1(b86ed801ee9f7a57b259374b8a9810572cb03230))
 ROM_END
 
-COMP( 1980, hp85, 0, 0, hp85, hp85, hp85_state, empty_init, "HP", "HP 85", 0)
-COMP( 1983, hp86b,0, 0, hp86, hp86, hp86_state, empty_init, "HP", "HP 86B",0)
-COMP( 1983, hp86b_001, 0, 0, hp86, hp86_001, hp86_int_state, empty_init, "HP", "HP 86B Opt 001",0)
-COMP( 1983, hp86b_004, 0, 0, hp86, hp86_004, hp86_int_state, empty_init, "HP", "HP 86B Opt 004",0)
+COMP( 1980, hp85,      0,     0, hp85, hp85,     hp85_state,     empty_init, "HP", "HP 85", 0)
+COMP( 1983, hp86b,     0,     0, hp86, hp86,     hp86_state,     empty_init, "HP", "HP 86B",0)
+COMP( 1983, hp86b_001, hp86b, 0, hp86, hp86_001, hp86_int_state, empty_init, "HP", "HP 86B Opt 001",0)
+COMP( 1983, hp86b_004, hp86b, 0, hp86, hp86_004, hp86_int_state, empty_init, "HP", "HP 86B Opt 004",0)

@@ -11,6 +11,7 @@
 #include "netlist/devices/nlid_system.h"
 #include "netlist/nl_base.h"
 #include "netlist/nl_setup.h"
+#include "plib/ptypes.h"
 #include "plib/putil.h"
 
 #define USE_TT_ALTERNATIVE (0)
@@ -20,31 +21,12 @@ namespace netlist
 namespace devices
 {
 
-	template<unsigned bits>
-	struct need_bytes_for_bits
-	{
-		enum { value =
-			bits <= 8       ?   1 :
-			bits <= 16      ?   2 :
-			bits <= 32      ?   4 :
-								8
-		};
-	};
-
-	template<unsigned bits> struct uint_for_size;
-	template<> struct uint_for_size<1> { using type = uint_least8_t; };
-	template<> struct uint_for_size<2> { using type = uint_least16_t; };
-	template<> struct uint_for_size<4> { using type = uint_least32_t; };
-	template<> struct uint_for_size<8> { using type = uint_least64_t; };
-
 	template<std::size_t m_NI, std::size_t m_NO>
-	NETLIB_OBJECT(truthtable_t)
+	class NETLIB_NAME(truthtable_t) : public device_t
 	{
-	private:
-		detail::family_setter_t m_fam;
 	public:
 
-		using type_t = typename uint_for_size<need_bytes_for_bits<m_NO + m_NI>::value>::type;
+		using type_t = typename plib::least_type_for_bits<m_NO + m_NI>::type;
 
 		static constexpr const std::size_t m_num_bits = m_NI;
 		static constexpr const std::size_t m_size = (1 << (m_num_bits));
@@ -63,10 +45,9 @@ namespace devices
 
 		template <class C>
 		nld_truthtable_t(C &owner, const pstring &name,
-				const logic_family_desc_t &fam,
+				const pstring &model,
 				truthtable_t &ttp, const std::vector<pstring> &desc)
-		: device_t(owner, name)
-		, m_fam(*this, fam)
+		: device_t(owner, name, model)
 #if USE_TT_ALTERNATIVE
 		, m_state(*this, "m_state", 0)
 #endif
@@ -203,7 +184,6 @@ namespace devices
 		plib::uninitialised_array_t<logic_input_t, m_NI> m_I;
 		plib::uninitialised_array_t<logic_output_t, m_NO> m_Q;
 
-		/* FIXME: check width */
 #if USE_TT_ALTERNATIVE
 		state_var<type_t>   m_state;
 #endif
@@ -220,16 +200,14 @@ namespace factory
 	class truthtable_base_element_t : public factory::element_t
 	{
 	public:
-		truthtable_base_element_t(const pstring &name, const pstring &classname,
-				const pstring &def_param, const pstring &sourcefile);
+		truthtable_base_element_t(const pstring &name,properties &&props);
 
 		std::vector<pstring> m_desc;
 		pstring m_family_name;
-		const logic_family_desc_t *m_family_desc;
 	};
 
-	// FIXME: the returned element is missing a pointer to the family ...
-	plib::unique_ptr<truthtable_base_element_t> truthtable_create(tt_desc &desc, const pstring &sourcefile);
+	plib::unique_ptr<truthtable_base_element_t> truthtable_create(tt_desc &desc,
+		properties &&props);
 
 } // namespace factory
 } // namespace netlist

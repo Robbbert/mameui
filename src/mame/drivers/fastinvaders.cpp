@@ -75,10 +75,10 @@ private:
 	TIMER_DEVICE_CALLBACK_MEMBER(count_ar);
 	DECLARE_WRITE_LINE_MEMBER(vsync);
 	DECLARE_WRITE_LINE_MEMBER(hsync);
-	DECLARE_READ8_MEMBER(memory_read_byte);
-	DECLARE_WRITE8_MEMBER(memory_write_byte);
-	DECLARE_WRITE8_MEMBER(dark_1_clr);
-	DECLARE_WRITE8_MEMBER(dark_2_clr);
+	uint8_t memory_read_byte(offs_t offset);
+	void memory_write_byte(offs_t offset, uint8_t data);
+	void dark_1_clr(uint8_t data);
+	void dark_2_clr(uint8_t data);
 	uint32_t screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
 
 	void fastinvaders_map(address_map &map);
@@ -177,7 +177,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(fastinvaders_state::count_ar)
 	}
 }
 
-WRITE8_MEMBER(fastinvaders_state::dark_1_clr)
+void fastinvaders_state::dark_1_clr(uint8_t data)
 {
 	//address_space& prog_space = m_maincpu->space(AS_PROGRAM);
 	if (data)
@@ -196,7 +196,7 @@ WRITE8_MEMBER(fastinvaders_state::dark_1_clr)
 	//return 0x00;
 }
 
-WRITE8_MEMBER(fastinvaders_state::dark_2_clr)
+void fastinvaders_state::dark_2_clr(uint8_t data)
 {
 	//address_space& prog_space = m_maincpu->space(AS_PROGRAM);
 	if (data)
@@ -470,7 +470,7 @@ DECLARE_WRITE_LINE_MEMBER( fastinvaders_state::hsync)
 	}
 }
 
-READ8_MEMBER(fastinvaders_state::memory_read_byte)
+uint8_t fastinvaders_state::memory_read_byte(offs_t offset)
 {
 	address_space& prog_space = m_maincpu->space(AS_PROGRAM);
 	logerror("dma read\n");
@@ -480,7 +480,7 @@ READ8_MEMBER(fastinvaders_state::memory_read_byte)
 	//return 0x00;
 }
 
-WRITE8_MEMBER(fastinvaders_state::memory_write_byte)
+void fastinvaders_state::memory_write_byte(offs_t offset, uint8_t data)
 {
 	//address_space& prog_space = m_maincpu->space(AS_PROGRAM);
 	logerror("dma write\n");
@@ -634,7 +634,7 @@ void fastinvaders_state::fastinvaders(machine_config &config)
 //  m_maincpu->set_addrmap(AS_IO, &fastinvaders_state::fastinvaders_io_map);
 //  m_maincpu->set_vblank_int("screen", FUNC(fastinvaders_state::irq0_line_hold));
 	m_maincpu->in_sid_func().set(FUNC(fastinvaders_state::sid_read));
-	m_maincpu->set_irq_acknowledge_callback("pic8259", FUNC(pic8259_device::inta_cb));
+	m_maincpu->in_inta_func().set("pic8259", FUNC(pic8259_device::acknowledge));
 
 	TIMER(config, "scantimer").configure_scanline(FUNC(fastinvaders_state::scanline_timer), "screen", 0, 1);
 

@@ -119,15 +119,14 @@ private:
 	DECLARE_WRITE8_MEMBER(cb_w);
 	DECLARE_READ8_MEMBER(cb_r);
 
-	template<int N> DECLARE_WRITE8_MEMBER(pwm_output_w);
-	template<int N> DECLARE_WRITE64_MEMBER(lcd_output_w);
+	template<int N> void pwm_output_w(offs_t offset, u8 data);
+	template<int N> void lcd_output_w(u64 data);
 
 	u8 m_dac_data = 0;
 	u8 m_lcd_lcd = 0;
 	u8 m_lcd_rowsel = 0;
 	u8 m_cb_mux = 0;
 
-	emu_timer *m_cb_startdelay;
 	emu_timer *m_irqtimer;
 	TIMER_CALLBACK_MEMBER(interrupt);
 	void write_lcd(int state);
@@ -137,9 +136,6 @@ void mark5_state::machine_start()
 {
 	m_out_x.resolve();
 	m_irqtimer = machine().scheduler().timer_alloc(timer_expired_delegate(FUNC(mark5_state::interrupt),this));
-
-	m_cb_startdelay = machine().scheduler().timer_alloc(timer_expired_delegate());
-	m_cb_startdelay->adjust(attotime::from_msec(100));
 
 	// register for savestates
 	save_item(NAME(m_dac_data));
@@ -171,13 +167,13 @@ READ8_MEMBER(mark5_state::nvram_r)
 }
 
 template<int N>
-WRITE8_MEMBER(mark5_state::pwm_output_w)
+void mark5_state::pwm_output_w(offs_t offset, u8 data)
 {
 	m_out_x[N][offset & 0x3f][offset >> 6] = data;
 }
 
 template<int N>
-WRITE64_MEMBER(mark5_state::lcd_output_w)
+void mark5_state::lcd_output_w(u64 data)
 {
 	if (N == 0)
 	{
@@ -277,7 +273,7 @@ WRITE8_MEMBER(mark5_state::cb_w)
 
 READ8_MEMBER(mark5_state::cb_r)
 {
-	if (~m_inputs[6]->read() & 0x20 || m_cb_startdelay->enabled())
+	if (~m_inputs[6]->read() & 0x20)
 		return 0xff;
 
 	// read chessboard sensors
@@ -481,7 +477,7 @@ ROM_START( ccmk5 )
 	ROM_LOAD("c47027_syp_2364-3-y5d", 0xe000, 0x2000, CRC(7c0f7bd8) SHA1(68b4566f0501005f6b1739bb24a4bec990421a6f) ) // "
 
 	ROM_REGION( 1887415, "screen", 0)
-	ROM_LOAD( "ccmk5.svg", 0, 1887415, CRC(656a2263) SHA1(4557979c62b1240f7a0d813ec5f4d54b8a27218e) )
+	ROM_LOAD("ccmk5.svg", 0, 1887415, CRC(656a2263) SHA1(4557979c62b1240f7a0d813ec5f4d54b8a27218e) )
 ROM_END
 
 ROM_START( ccmk6 )
@@ -495,7 +491,7 @@ ROM_START( ccmk6 )
 	ROM_LOAD("d2732c-e.u1", 0x0000, 0x1000, CRC(93221b4c) SHA1(8561b52c80cab7c04d30eaa14f9520a362d7f822) ) // no label, identical halves
 
 	ROM_REGION( 1887415, "screen", 0)
-	ROM_LOAD( "ccmk5.svg", 0, 1887415, CRC(656a2263) SHA1(4557979c62b1240f7a0d813ec5f4d54b8a27218e) )
+	ROM_LOAD("ccmk5.svg", 0, 1887415, CRC(656a2263) SHA1(4557979c62b1240f7a0d813ec5f4d54b8a27218e) )
 ROM_END
 
 } // anonymous namespace

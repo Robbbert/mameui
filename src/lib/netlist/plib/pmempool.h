@@ -45,6 +45,7 @@ namespace plib {
 		, m_stat_cur_alloc(0)
 		, m_stat_max_alloc(0)
 		{
+			icount()++;
 		}
 
 		PCOPYASSIGNMOVE(mempool, delete)
@@ -61,6 +62,11 @@ namespace plib {
 				}
 				aligned_arena::free(b);
 				//::operator delete(b->m_data);
+			}
+			if (icount()-- == 1)
+			{
+				if (sinfo().size() != 0)
+					plib::perrlogger("Still found {} info blocks after last mempool deleted\n", sinfo().size());
 			}
 		}
 
@@ -112,7 +118,6 @@ namespace plib {
 				mempool &mp = b->m_mempool;
 				b->m_num_alloc--;
 				mp.m_stat_cur_alloc -= size;
-				//printf("Freeing in block %p %lu\n", b, b->m_num_alloc);
 				if (b->m_num_alloc == 0)
 				{
 					auto itb = std::find(mp.m_blocks.begin(), mp.m_blocks.end(), b);
@@ -138,6 +143,7 @@ namespace plib {
 			auto *mem = this->allocate(alignof(T), sizeof(T));
 			try
 			{
+				// NOLINTNEXTLINE(cppcoreguidelines-owning-memory)
 				auto *mema = new (mem) T(std::forward<Args>(args)...);
 				return owned_pool_ptr<T>(mema, true, arena_deleter<mempool, T>(this));
 			}
@@ -154,6 +160,7 @@ namespace plib {
 			auto *mem = this->allocate(alignof(T), sizeof(T));
 			try
 			{
+				// NOLINTNEXTLINE(cppcoreguidelines-owning-memory)
 				auto *mema = new (mem) T(std::forward<Args>(args)...);
 				return unique_pool_ptr<T>(mema, arena_deleter<mempool, T>(this));
 			}
@@ -181,7 +188,7 @@ namespace plib {
 				min_bytes = std::max(mp.m_min_alloc, min_bytes);
 				m_free = min_bytes;
 				size_type alloc_bytes = (min_bytes + mp.m_min_align); // - 1); // & ~(mp.m_min_align - 1);
-				//m_data_allocated = ::operator new(alloc_bytes);
+				// NOLINTNEXTLINE(cppcoreguidelines-owning-memory)
 				m_data_allocated = new char[alloc_bytes];
 				void *r = m_data_allocated;
 				std::align(mp.m_min_align, min_bytes, r, alloc_bytes);
@@ -227,6 +234,12 @@ namespace plib {
 		{
 			static std::unordered_map<void *, info> spinfo;
 			return spinfo;
+		}
+
+		static std::size_t &icount()
+		{
+			static std::size_t count = 0;
+			return count;
 		}
 
 		size_t m_min_alloc;

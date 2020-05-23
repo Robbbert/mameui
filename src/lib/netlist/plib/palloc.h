@@ -30,45 +30,59 @@ namespace plib {
 	// Standard arena_deleter
 	//============================================================
 
-	template <typename P, typename T>
+	template <typename P, typename T, typename A = void>
 	struct arena_deleter
 	{
-		//using arena_storage_type = P *;
-		using arena_storage_type = typename std::conditional<P::is_stateless, P, P *>::type;
 
-		template <typename X, typename Y = void>
-		typename std::enable_if<!X::is_stateless, X&>::type getref(X *x) const noexcept
-		{ return *x;}
+	};
 
-		template <typename X, typename Y = void *>
-		typename std::enable_if<std::remove_pointer<X>::type::is_stateless, X&>::type
-		getref(X &x, Y y = nullptr) const noexcept
-		{
-			unused_var(y);
-			return x;
-		}
+
+	template <typename P, typename T>
+	struct arena_deleter<P, T, typename std::enable_if<!P::is_stateless>::type>
+	{
+		using arena_storage_type = P *;
 
 		constexpr arena_deleter(arena_storage_type a = arena_storage_type()) noexcept
 		: m_a(a) { }
 
-#if 1
 		template<typename U, typename = typename
 			   std::enable_if<std::is_convertible< U*, T*>::value>::type>
 		arena_deleter(const arena_deleter<P, U> &rhs) noexcept
 		: m_a(rhs.m_a) { }
-#else
-		template<typename PU, typename U, typename = typename
-			   std::enable_if<std::is_convertible< U*, T*>::value>::type>
-		arena_deleter(const arena_deleter<PU, U> &rhs) : m_a(rhs.m_a) { }
-#endif
+
 		void operator()(T *p) noexcept
 		{
 			// call destructor
 			p->~T();
-			getref(m_a).deallocate(p, sizeof(T));
+			m_a->deallocate(p, sizeof(T));
 		}
 	//private:
 		arena_storage_type m_a;
+	};
+
+	template <typename P, typename T>
+	struct arena_deleter<P, T, typename std::enable_if<P::is_stateless>::type>
+	{
+		using arena_storage_type = P;
+
+		constexpr arena_deleter(arena_storage_type a = arena_storage_type()) noexcept
+		{
+			plib::unused_var(a);
+		}
+
+		template<typename U, typename = typename
+			   std::enable_if<std::is_convertible< U*, T*>::value>::type>
+		arena_deleter(const arena_deleter<P, U> &rhs) noexcept
+		{
+			plib::unused_var(rhs);
+		}
+
+		void operator()(T *p) noexcept
+		{
+			// call destructor
+			p->~T();
+			P::deallocate(p, sizeof(T));
+		}
 	};
 
 	//============================================================
@@ -225,7 +239,7 @@ namespace plib {
 
 		T* allocate(std::size_t n)
 		{
-			return reinterpret_cast<T *>(m_a.allocate(ALIGN, sizeof(T) * n));
+			return reinterpret_cast<T *>(m_a.allocate(ALIGN, sizeof(T) * n)); //NOLINT
 		}
 
 		void deallocate(T* p, std::size_t n) noexcept
@@ -234,7 +248,7 @@ namespace plib {
 		}
 
 		template <class AR1, class T1, std::size_t A1, class AR2, class T2, std::size_t A2>
-		friend bool operator==(const arena_allocator<AR1, T1, A1>& lhs,
+		friend bool operator==(const arena_allocator<AR1, T1, A1>& lhs, // NOLINT
 			const arena_allocator<AR2, T2, A2>& rhs) noexcept;
 
 		template <class AU, class U, std::size_t A>
@@ -323,6 +337,7 @@ namespace plib {
 			auto *mem = allocate(alignof(T), sizeof(T));
 			try
 			{
+				// NOLINTNEXTLINE(cppcoreguidelines-owning-memory)
 				auto *mema = new (mem) T(std::forward<Args>(args)...);
 				return unique_pool_ptr<T>(mema, arena_deleter<aligned_arena, T>(*this));
 			}
@@ -339,6 +354,7 @@ namespace plib {
 			auto *mem = allocate(alignof(T), sizeof(T));
 			try
 			{
+				// NOLINTNEXTLINE(cppcoreguidelines-owning-memory)
 				auto *mema = new (mem) T(std::forward<Args>(args)...);
 				return owned_pool_ptr<T>(mema, true, arena_deleter<aligned_arena, T>(*this));
 			}
@@ -353,6 +369,7 @@ namespace plib {
 		static T *alloc(Args&&... args)
 		{
 			auto *p = allocate(alignof(T), sizeof(T));
+			// NOLINTNEXTLINE(cppcoreguidelines-owning-memory)
 			return new(p) T(std::forward<Args>(args)...);
 		}
 
@@ -382,9 +399,7 @@ namespace plib {
 	{
 		static_assert(ALIGN >= alignof(T), "Alignment must be greater or equal to alignof(T)");
 		static_assert(is_pow2(ALIGN), "Alignment must be a power of 2");
-		//auto t = reinterpret_cast<std::uintptr_t>(p);
-		//if (t & (ALIGN-1))
-		//  printf("alignment error!");
+
 #if (PUSE_ALIGNED_HINTS)
 		return reinterpret_cast<T *>(__builtin_assume_aligned(p, ALIGN));
 #else

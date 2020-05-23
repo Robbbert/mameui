@@ -240,12 +240,12 @@ namespace devices
 	class netlist_factory_truthtable_t : public factory::truthtable_base_element_t
 	{
 	public:
-		netlist_factory_truthtable_t(const pstring &name, const pstring &classname,
-				const pstring &def_param, const pstring  &sourcefile)
-		: truthtable_base_element_t(name, classname, def_param, sourcefile)
+		netlist_factory_truthtable_t(const pstring &name,
+			factory::properties &&props)
+		: truthtable_base_element_t(name, std::move(props))
 		{ }
 
-		unique_pool_ptr<device_t> make_device(nlmempool &pool, netlist_state_t &anetlist, const pstring &name) override
+		unique_pool_ptr<core_device_t> make_device(nlmempool &pool, netlist_state_t &anetlist, const pstring &name) override
 		{
 			using tt_type = nld_truthtable_t<m_NI, m_NO>;
 
@@ -259,14 +259,7 @@ namespace devices
 				desc_s.parse(m_desc);
 			}
 
-			// update truthtable family definitions
-			if (m_family_name != "")
-				m_family_desc = anetlist.setup().family_from_model(m_family_name);
-
-			if (m_family_desc == nullptr)
-				throw nl_exception("family description not found for {1}", m_family_name);
-
-			return pool.make_unique<tt_type>(anetlist, name, *m_family_desc, *m_ttbl, m_desc);
+			return pool.make_unique<tt_type>(anetlist, name, m_family_name, *m_ttbl, m_desc);
 		}
 	private:
 		unique_pool_ptr<typename nld_truthtable_t<m_NI, m_NO>::truthtable_t> m_ttbl;
@@ -478,45 +471,47 @@ void truthtable_parser::parse(const std::vector<pstring> &truthtable)
 namespace factory
 {
 
-	truthtable_base_element_t::truthtable_base_element_t(const pstring &name, const pstring &classname,
-			const pstring &def_param, const pstring &sourcefile)
-	: factory::element_t(name, classname, def_param, sourcefile)
-	, m_family_desc(family_TTL())
+	truthtable_base_element_t::truthtable_base_element_t(const pstring &name,
+		properties &&props)
+	: factory::element_t(name, std::move(props))
+	, m_family_name(NETLIST_DEFAULT_LOGIC_FAMILY)
 	{
 	}
 
 	#define ENTRYY(n, m, s)    case (n * 100 + m): \
 		{ using xtype = devices::netlist_factory_truthtable_t<n, m>; \
-			ret = plib::make_unique<xtype>(desc.name, desc.classname, desc.def_param, s); } break
+			auto cs=s; \
+			ret = plib::make_unique<xtype>(desc.name, std::move(cs)); } \
+			break
 
 	#define ENTRY(n, s) ENTRYY(n, 1, s); ENTRYY(n, 2, s); ENTRYY(n, 3, s); \
 						ENTRYY(n, 4, s); ENTRYY(n, 5, s); ENTRYY(n, 6, s); \
 						ENTRYY(n, 7, s); ENTRYY(n, 8, s)
 
-	plib::unique_ptr<truthtable_base_element_t> truthtable_create(tt_desc &desc, const pstring &sourcefile)
+	plib::unique_ptr<truthtable_base_element_t> truthtable_create(tt_desc &desc, properties &&props)
 	{
 		plib::unique_ptr<truthtable_base_element_t> ret;
 
 		switch (desc.ni * 100 + desc.no)
 		{
-			ENTRY(1, sourcefile);
-			ENTRY(2, sourcefile);
-			ENTRY(3, sourcefile);
-			ENTRY(4, sourcefile);
-			ENTRY(5, sourcefile);
-			ENTRY(6, sourcefile);
-			ENTRY(7, sourcefile);
-			ENTRY(8, sourcefile);
-			ENTRY(9, sourcefile);
-			ENTRY(10, sourcefile);
-			ENTRY(11, sourcefile);
-			ENTRY(12, sourcefile);
+			ENTRY(1, props);
+			ENTRY(2, props);
+			ENTRY(3, props);
+			ENTRY(4, props);
+			ENTRY(5, props);
+			ENTRY(6, props);
+			ENTRY(7, props);
+			ENTRY(8, props);
+			ENTRY(9, props);
+			ENTRY(10, props);
+			ENTRY(11, props);
+			ENTRY(12, props);
 			default:
 				pstring msg = plib::pfmt("unable to create truthtable<{1},{2}>")(desc.ni)(desc.no);
 				nl_assert_always(false, msg.c_str());
 		}
 		ret->m_desc = desc.desc;
-		ret->m_family_name = desc.family;
+		ret->m_family_name = (desc.family != "" ? desc.family : pstring(NETLIST_DEFAULT_LOGIC_FAMILY));
 
 		return ret;
 	}

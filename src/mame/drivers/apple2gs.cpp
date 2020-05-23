@@ -141,7 +141,6 @@
 #define A2GS_LC00_TAG "lc00"
 #define A2GS_LC01_TAG "lc01"
 #define A2GS_B0CXXX_TAG "bnk0atc"
-#define A2GS_B01_TAG    "bnk1at0"
 #define A2GS_B1CXXX_TAG "bnk1atc"
 #define A2GS_B00000_TAG "b0r00bank"
 #define A2GS_B00200_TAG "b0r02bank"
@@ -203,7 +202,6 @@ public:
 		m_lc00(*this, A2GS_LC00_TAG),
 		m_lc01(*this, A2GS_LC01_TAG),
 		m_bank0_atc(*this, A2GS_B0CXXX_TAG),
-		m_bank1_at0(*this, A2GS_B01_TAG),
 		m_bank1_atc(*this, A2GS_B1CXXX_TAG),
 		m_scc(*this, SCC_TAG),
 		m_doc(*this, A2GS_DOC_TAG),
@@ -242,7 +240,7 @@ public:
 	required_device<address_map_bank_device> m_upperbank, m_upperaux, m_upper00, m_upper01;
 	required_device<address_map_bank_device> m_c100bank, m_c300bank, m_c400bank, m_c800bank;
 	required_device<address_map_bank_device> m_b0_0000bank, m_b0_0200bank, m_b0_0400bank, m_b0_0800bank, m_b0_2000bank, m_b0_4000bank;
-	required_device<address_map_bank_device> m_lcbank, m_lcaux, m_lc00, m_lc01, m_bank0_atc, m_bank1_at0, m_bank1_atc;
+	required_device<address_map_bank_device> m_lcbank, m_lcaux, m_lc00, m_lc01, m_bank0_atc, m_bank1_atc;
 	required_device<z80scc_device> m_scc;
 	required_device<es5503_device> m_doc;
 	required_device<applefdc_base_device> m_iwm;
@@ -479,7 +477,6 @@ private:
 	DECLARE_READ8_MEMBER(bank0_c000_r);
 	DECLARE_WRITE8_MEMBER(bank0_c000_w);
 	DECLARE_READ8_MEMBER(bank1_0000_r);
-	DECLARE_WRITE8_MEMBER(bank1_0000_w);
 	DECLARE_WRITE8_MEMBER(bank1_0000_sh_w);
 	DECLARE_READ8_MEMBER(bank1_c000_r);
 	DECLARE_WRITE8_MEMBER(bank1_c000_w);
@@ -488,7 +485,7 @@ private:
 	DECLARE_WRITE_LINE_MEMBER(a2bus_inh_w);
 	DECLARE_WRITE_LINE_MEMBER(doc_irq_w);
 	DECLARE_WRITE_LINE_MEMBER(scc_irq_w);
-	DECLARE_READ8_MEMBER(doc_adc_read);
+	uint8_t doc_adc_read();
 	DECLARE_READ8_MEMBER(apple2gs_read_vector);
 
 #if !RUN_ADB_MICRO
@@ -505,17 +502,17 @@ private:
 	void keyglu_816_write(uint8_t offset, uint8_t data);
 	void keyglu_regen_irqs();
 
-	DECLARE_READ8_MEMBER(adbmicro_p0_in);
-	DECLARE_READ8_MEMBER(adbmicro_p1_in);
-	DECLARE_READ8_MEMBER(adbmicro_p2_in);
-	DECLARE_READ8_MEMBER(adbmicro_p3_in);
-	DECLARE_WRITE8_MEMBER(adbmicro_p0_out);
-	DECLARE_WRITE8_MEMBER(adbmicro_p1_out);
-	DECLARE_WRITE8_MEMBER(adbmicro_p2_out);
-	DECLARE_WRITE8_MEMBER(adbmicro_p3_out);
+	uint8_t adbmicro_p0_in();
+	uint8_t adbmicro_p1_in();
+	uint8_t adbmicro_p2_in();
+	uint8_t adbmicro_p3_in();
+	void adbmicro_p0_out(uint8_t data);
+	void adbmicro_p1_out(uint8_t data);
+	void adbmicro_p2_out(uint8_t data);
+	void adbmicro_p3_out(uint8_t data);
 
 	offs_t dasm_trampoline(std::ostream &stream, offs_t pc, const util::disasm_interface::data_buffer &opcodes, const util::disasm_interface::data_buffer &params);
-	DECLARE_WRITE8_MEMBER(wdm_trampoline) { }; //m_a2host->wdm_w(space, offset, data); }
+	void wdm_trampoline(offs_t offset, uint8_t data) { }; //m_a2host->wdm_w(space, offset, data); }
 
 private:
 	bool m_is_rom3;
@@ -1082,6 +1079,7 @@ void apple2gs_state::adb_write_datareg(uint8_t data)
 					break;
 
 				case 0xf2:
+					adb_post_response_1(0x80);
 					break;
 
 				default:
@@ -1457,7 +1455,6 @@ void apple2gs_state::machine_reset()
 	m_b0_2000bank->set_bank(0);
 	m_b0_4000bank->set_bank(0);
 	m_bank0_atc->set_bank(1);
-	m_bank1_at0->set_bank(1);
 	m_bank1_atc->set_bank(1);
 
 	// LC default state: read ROM, write enabled, Dxxx bank 2
@@ -3466,7 +3463,7 @@ WRITE8_MEMBER(apple2gs_state::b1ram4000_w)
 	m_ram_ptr[offset+0x14000] = data;
 	if (offset < 0x2000)
 	{
-		if (!(m_shadow & SHAD_HIRESPG2) && !(m_shadow & SHAD_AUXHIRES))
+		if ((!(m_shadow & SHAD_HIRESPG2) && !(m_shadow & SHAD_AUXHIRES)) || (!(m_shadow & SHAD_SUPERHIRES)))
 		{
 			auxram0000_w(space, offset+0x4000, data);
 		}
@@ -3512,7 +3509,6 @@ WRITE8_MEMBER(apple2gs_state::bank0_c000_w)
 }
 
 READ8_MEMBER(apple2gs_state::bank1_0000_r) { return m_ram_ptr[offset + 0x10000]; }
-WRITE8_MEMBER(apple2gs_state::bank1_0000_w) { m_ram_ptr[offset + 0x10000] = data; }
 READ8_MEMBER(apple2gs_state::bank1_c000_r) { if (offset & 0x2000) offset ^= 0x1000; return m_ram_ptr[offset + 0x1c000]; }
 WRITE8_MEMBER(apple2gs_state::bank1_c000_w) { if (offset & 0x2000) offset ^= 0x1000; m_ram_ptr[offset + 0x1c000] = data; }
 WRITE8_MEMBER(apple2gs_state::bank1_0000_sh_w)
@@ -3590,7 +3586,7 @@ void apple2gs_state::apple2gs_map(address_map &map)
 	map(0x002000, 0x003fff).m(m_b0_2000bank, FUNC(address_map_bank_device::amap8));
 	map(0x004000, 0x00bfff).m(m_b0_4000bank, FUNC(address_map_bank_device::amap8));
 	map(0x00c000, 0x00ffff).m(m_bank0_atc, FUNC(address_map_bank_device::amap8));
-	map(0x010000, 0x01bfff).m(m_bank1_at0, FUNC(address_map_bank_device::amap8));
+	map(0x010000, 0x01bfff).rw(FUNC(apple2gs_state::bank1_0000_r), FUNC(apple2gs_state::bank1_0000_sh_w));
 	map(0x01c000, 0x01ffff).m(m_bank1_atc, FUNC(address_map_bank_device::amap8));
 
 	/* "Mega II side" - this is basically a 128K IIe on a chip that runs merrily at 1 MHz */
@@ -3705,12 +3701,6 @@ void apple2gs_state::bank0_iolc_map(address_map &map)
 	map(0x5000, 0x7fff).m(m_upper00,  FUNC(address_map_bank_device::amap8));
 }
 
-void apple2gs_state::bank1_lower48_map(address_map &map)
-{
-	map(0x0000, 0x0bfff).rw(FUNC(apple2gs_state::bank1_0000_r), FUNC(apple2gs_state::bank1_0000_w));
-	map(0xc000, 0x17fff).rw(FUNC(apple2gs_state::bank1_0000_r), FUNC(apple2gs_state::bank1_0000_sh_w));
-}
-
 void apple2gs_state::bank1_iolc_map(address_map &map)
 {
 	map(0x0000, 0x3fff).rw(FUNC(apple2gs_state::bank1_c000_r), FUNC(apple2gs_state::bank1_c000_w));
@@ -3781,12 +3771,12 @@ void apple2gs_state::a2gs_es5503_map(address_map &map)
     http://www.llx.com/~nparker/a2/adb.html
 ***************************************************************************/
 
-READ8_MEMBER(apple2gs_state::adbmicro_p0_in)
+uint8_t apple2gs_state::adbmicro_p0_in()
 {
 	return m_glu_bus;
 }
 
-READ8_MEMBER(apple2gs_state::adbmicro_p1_in)
+uint8_t apple2gs_state::adbmicro_p1_in()
 {
 #if RUN_ADB_MICRO
 	switch (m_glu_kbd_y)
@@ -3816,7 +3806,7 @@ READ8_MEMBER(apple2gs_state::adbmicro_p1_in)
 	return 0xff;
 }
 
-READ8_MEMBER(apple2gs_state::adbmicro_p2_in)
+uint8_t apple2gs_state::adbmicro_p2_in()
 {
 	uint8_t rv = 0;
 
@@ -3826,7 +3816,7 @@ READ8_MEMBER(apple2gs_state::adbmicro_p2_in)
 	return rv;
 }
 
-READ8_MEMBER(apple2gs_state::adbmicro_p3_in)
+uint8_t apple2gs_state::adbmicro_p3_in()
 {
 	uint8_t rv = 0;
 #if RUN_ADB_MICRO
@@ -3843,16 +3833,16 @@ READ8_MEMBER(apple2gs_state::adbmicro_p3_in)
 	return rv;
 }
 
-WRITE8_MEMBER(apple2gs_state::adbmicro_p0_out)
+void apple2gs_state::adbmicro_p0_out(uint8_t data)
 {
 	m_glu_bus = data;
 }
 
-WRITE8_MEMBER(apple2gs_state::adbmicro_p1_out)
+void apple2gs_state::adbmicro_p1_out(uint8_t data)
 {
 }
 
-WRITE8_MEMBER(apple2gs_state::adbmicro_p2_out)
+void apple2gs_state::adbmicro_p2_out(uint8_t data)
 {
 	if (!(data & 0x10))
 	{
@@ -3871,7 +3861,7 @@ WRITE8_MEMBER(apple2gs_state::adbmicro_p2_out)
 	}
 }
 
-WRITE8_MEMBER(apple2gs_state::adbmicro_p3_out)
+void apple2gs_state::adbmicro_p3_out(uint8_t data)
 {
 	if (((data & 0x08) == 0x08) != m_adb_line)
 	{
@@ -4105,7 +4095,7 @@ WRITE_LINE_MEMBER(apple2gs_state::doc_irq_w)
 	}
 }
 
-READ8_MEMBER(apple2gs_state::doc_adc_read)
+uint8_t apple2gs_state::doc_adc_read()
 {
 	return 0x80;
 }
@@ -4698,9 +4688,6 @@ void apple2gs_state::apple2gs(machine_config &config)
 	/* Bank 0 - I/O and LC area */
 	ADDRESS_MAP_BANK(config, A2GS_B0CXXX_TAG).set_map(&apple2gs_state::bank0_iolc_map).set_options(ENDIANNESS_LITTLE, 8, 32, 0x4000);
 
-	/* Bank 1 - lower 48K */
-	ADDRESS_MAP_BANK(config, A2GS_B01_TAG).set_map(&apple2gs_state::bank1_lower48_map).set_options(ENDIANNESS_LITTLE, 8, 32, 0xc000);
-
 	/* Bank 1 - I/O and LC area */
 	ADDRESS_MAP_BANK(config, A2GS_B1CXXX_TAG).set_map(&apple2gs_state::bank1_iolc_map).set_options(ENDIANNESS_LITTLE, 8, 32, 0x4000);
 
@@ -4753,7 +4740,7 @@ void apple2gs_state::apple2gs(machine_config &config)
 	A2BUS_SLOT(config, "sl6", m_a2bus, apple2_cards, nullptr);
 	A2BUS_SLOT(config, "sl7", m_a2bus, apple2_cards, nullptr);
 
-	IWM(config, m_iwm, &apple2_fdc_interface);
+	LEGACY_IWM(config, m_iwm, &apple2_fdc_interface);
 
 	FLOPPY_APPLE(config, FLOPPY_0, &apple2gs_floppy525_floppy_interface, 15, 16);
 	FLOPPY_APPLE(config, FLOPPY_1, &apple2gs_floppy525_floppy_interface, 15, 16);

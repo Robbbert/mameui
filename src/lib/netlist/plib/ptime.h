@@ -27,13 +27,6 @@ namespace plib
 		const static bool value = sizeof(T) <= sizeof(U);
 	};
 
-#if 0
-	template<typename T, typename U>
-	struct ptime_res {
-		using type = typename std::conditional<sizeof(T) >= sizeof(U), T, U>::type;
-	};
-#endif
-
 	template <typename TYPE, TYPE RES>
 	struct ptime final
 	{
@@ -117,6 +110,13 @@ namespace plib
 			return static_cast<mult_type>(m_time / rhs.m_time);
 		}
 
+		template <typename T>
+		constexpr typename std::enable_if<std::is_integral<T>::value, ptime>::type
+		operator/(const T &rhs) const noexcept
+		{
+			return ptime(m_time / rhs);
+		}
+
 		friend constexpr bool operator<(const ptime &lhs, const ptime &rhs) noexcept
 		{
 			return (lhs.m_time < rhs.m_time);
@@ -165,7 +165,14 @@ namespace plib
 		constexpr ptime shr(unsigned shift) const noexcept { return ptime(m_time >> shift); }
 
 		// for save states ....
+#if 0
 		C14CONSTEXPR internal_type *get_internaltype_ptr() noexcept { return &m_time; }
+#endif
+		template <typename ST>
+		void save_state(ST &st)
+		{
+			st.save_item(m_time, "m_time");
+		}
 
 		static constexpr ptime from_nsec(internal_type ns) noexcept { return ptime(ns, UINT64_C(1000000000)); }
 		static constexpr ptime from_usec(internal_type us) noexcept { return ptime(us, UINT64_C(   1000000)); }
