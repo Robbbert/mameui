@@ -109,17 +109,20 @@ public:
 		, m_bankr(*this, "bankr")
 		, m_bankv(*this, "bankv")
 		, m_banka(*this, "banka")
-	{
-	}
+	{ }
 
+	void bigbord2(machine_config &config);
+	void init_bigbord2();
+
+private:
 	DECLARE_WRITE_LINE_MEMBER(side_select_w);
 	DECLARE_WRITE_LINE_MEMBER(smc1_w);
 	DECLARE_WRITE_LINE_MEMBER(smc2_w);
 	DECLARE_WRITE_LINE_MEMBER(head_load_w);
 	DECLARE_WRITE_LINE_MEMBER(disk_motor_w);
-	DECLARE_WRITE8_MEMBER(syslatch2_w);
-	DECLARE_READ8_MEMBER(status_port_r);
-	DECLARE_READ8_MEMBER(kbd_r);
+	void syslatch2_w(u8 data);
+	u8 status_port_r();
+	u8 kbd_r();
 	void kbd_put(u8 data);
 	DECLARE_WRITE_LINE_MEMBER(clock_w);
 	DECLARE_WRITE_LINE_MEMBER(busreq_w);
@@ -127,17 +130,13 @@ public:
 	DECLARE_WRITE_LINE_MEMBER(sio_wrdya_w);
 	DECLARE_WRITE_LINE_MEMBER(sio_wrdyb_w);
 	DECLARE_WRITE_LINE_MEMBER(fdc_drq_w);
-	void init_bigbord2();
 	uint8_t memory_read_byte(offs_t offset);
 	void memory_write_byte(offs_t offset, uint8_t data);
 	uint8_t io_read_byte(offs_t offset);
 	void io_write_byte(offs_t offset, uint8_t data);
 	MC6845_UPDATE_ROW(crtc_update_row);
-
-	void bigbord2(machine_config &config);
 	void bigbord2_io(address_map &map);
 	void bigbord2_mem(address_map &map);
-private:
 	u8 crt8002(u8 ac_ra, u8 ac_chr, u8 ac_attr, uint16_t ac_cnt, bool ac_curs);
 	u8 m_term_data;
 	u8 m_term_status;
@@ -176,7 +175,7 @@ private:
     6 = DIPSW 3
     7 = DIPSW 4 */
 
-READ8_MEMBER(bigbord2_state::status_port_r)
+u8 bigbord2_state::status_port_r()
 {
 	u8 ret = m_term_status | 3 | (m_syslatch1->q6_r() << 2) | m_dsw->read();
 	m_term_status = 0;
@@ -185,7 +184,7 @@ READ8_MEMBER(bigbord2_state::status_port_r)
 
 // KBD port - read ascii value of key pressed
 
-READ8_MEMBER(bigbord2_state::kbd_r)
+u8 bigbord2_state::kbd_r()
 {
 	u8 ret = m_term_data;
 	m_term_data = 0;
@@ -280,7 +279,7 @@ WRITE_LINE_MEMBER(bigbord2_state::disk_motor_w)
 		m_floppy->mon_w(state ? 0 : 1);
 }
 
-WRITE8_MEMBER(bigbord2_state::syslatch2_w)
+void bigbord2_state::syslatch2_w(u8 data)
 {
 	/*
 
