@@ -126,10 +126,10 @@ private:
 
 	// I/O handlers
 	void update_display();
-	DECLARE_WRITE8_MEMBER(mux_w);
-	DECLARE_WRITE8_MEMBER(control_w);
-	DECLARE_READ8_MEMBER(input1_r);
-	DECLARE_READ8_MEMBER(input2_r);
+	void mux_w(u8 data);
+	void control_w(u8 data);
+	u8 input1_r();
+	u8 input2_r();
 
 	void power_off();
 	bool m_power = false;
@@ -171,14 +171,14 @@ void const_state::update_display()
 	m_display->matrix(m_led_select, m_inp_mux);
 }
 
-WRITE8_MEMBER(const_state::mux_w)
+void const_state::mux_w(u8 data)
 {
 	// d0-d7: input mux, led data
 	m_inp_mux = data;
 	update_display();
 }
 
-WRITE8_MEMBER(const_state::control_w)
+void const_state::control_w(u8 data)
 {
 	// d0-d2: ?
 	// d3: ? (goes high at power-off NMI)
@@ -190,7 +190,7 @@ WRITE8_MEMBER(const_state::control_w)
 	m_beeper->set_state(data >> 7 & 1);
 }
 
-READ8_MEMBER(const_state::input1_r)
+u8 const_state::input1_r()
 {
 	u8 data = 0;
 
@@ -202,7 +202,7 @@ READ8_MEMBER(const_state::input1_r)
 	return ~data;
 }
 
-READ8_MEMBER(const_state::input2_r)
+u8 const_state::input2_r()
 {
 	u8 data = 0;
 
@@ -377,6 +377,7 @@ void const_state::ssensor4(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &const_state::ssensor4_map);
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
+	m_board->set_nvram_enable(true);
 
 	config.set_default_layout(layout_novag_ssensor4);
 }
@@ -447,6 +448,7 @@ void const_state::sconst(machine_config &config)
 	m_irq_on->set_start_delay(m_irq_on->period() - attotime::from_nsec(10200)); // irq active for 10.2us
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
+	m_board->set_nvram_enable(true);
 
 	config.set_default_layout(layout_novag_supercon);
 }

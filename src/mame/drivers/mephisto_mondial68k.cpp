@@ -36,7 +36,6 @@ public:
 	mondial68k_state(const machine_config &mconfig, device_type type, const char *tag)
 		: driver_device(mconfig, type, tag)
 		, m_maincpu(*this, "maincpu")
-		, m_dac(*this, "dac")
 		, m_board(*this, "board")
 		, m_display(*this, "display")
 		, m_lcd(*this, "lcd")
@@ -52,13 +51,12 @@ protected:
 	void mondial68k_mem(address_map &map);
 
 	void lcd_s_w(u32 data);
-	DECLARE_WRITE8_MEMBER(input_mux_w);
-	DECLARE_WRITE8_MEMBER(board_mux_w);
-	DECLARE_READ8_MEMBER(inputs_r);
+	void input_mux_w(uint8_t data);
+	void board_mux_w(uint8_t data);
+	uint8_t inputs_r();
 	void update_display();
 
 	required_device<cpu_device> m_maincpu;
-	required_device<dac_1bit_device> m_dac;
 	required_device<sensorboard_device> m_board;
 	required_device<pwm_display_device> m_display;
 	required_device<pcf2112_device> m_lcd;
@@ -96,14 +94,14 @@ void mondial68k_state::lcd_s_w(u32 data)
 		m_digits[i] = bitswap<8>((data & 0x7fffffff) >> (8 * i), 7,4,5,0,1,2,3,6);
 }
 
-WRITE8_MEMBER(mondial68k_state::board_mux_w)
+void mondial68k_state::board_mux_w(uint8_t data)
 {
 	// d0-d7: chessboard mux, led data
 	m_board_mux = data;
 	update_display();
 }
 
-WRITE8_MEMBER(mondial68k_state::input_mux_w)
+void mondial68k_state::input_mux_w(uint8_t data)
 {
 	// d0-d3: button mux
 	// d6,d7: led select
@@ -111,7 +109,7 @@ WRITE8_MEMBER(mondial68k_state::input_mux_w)
 	update_display();
 }
 
-READ8_MEMBER(mondial68k_state::inputs_r)
+uint8_t mondial68k_state::inputs_r()
 {
 	uint8_t data = 0x00;
 
@@ -194,7 +192,7 @@ void mondial68k_state::mondial68k(machine_config &config)
 	outlatch.q_out_cb<1>().set(m_lcd, FUNC(pcf2112_device::data_w));
 	outlatch.q_out_cb<2>().set(m_lcd, FUNC(pcf2112_device::dlen_w));
 	outlatch.q_out_cb<6>().set_nop(); // another DAC input?
-	outlatch.q_out_cb<7>().set(m_dac, FUNC(dac_1bit_device::write));
+	outlatch.q_out_cb<7>().set("dac", FUNC(dac_1bit_device::write));
 
 	SENSORBOARD(config, m_board).set_type(sensorboard_device::BUTTONS);
 	m_board->init_cb().set(m_board, FUNC(sensorboard_device::preset_chess));
@@ -209,7 +207,7 @@ void mondial68k_state::mondial68k(machine_config &config)
 
 	/* sound hardware */
 	SPEAKER(config, "speaker").front_center();
-	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
+	DAC_1BIT(config, "dac").add_route(ALL_OUTPUTS, "speaker", 0.25);
 	VOLTAGE_REGULATOR(config, "vref").add_route(0, "dac", 1.0, DAC_VREF_POS_INPUT);
 }
 
