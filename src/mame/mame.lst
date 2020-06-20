@@ -10048,8 +10048,6 @@ yamato2                         // (c) 1983 Sega
 @source:ccs2810.cpp
 ccs2422                         //
 ccs2810                         //
-
-@source:ccs300.cpp
 ccs300                          //
 
 @source:cd100.cpp
@@ -19390,8 +19388,10 @@ lkageb3                         // bootleg
 lkageo                          // A54 (c) 1984 Taito Corporation
 lkageoo                         // A54 (c) 1984 Taito Corporation
 
-@source:llc.cpp
+@source:llc1.cpp
 llc1                            //
+
+@source:llc2.cpp
 llc2                            //
 
 @source:lms46.cpp
@@ -32737,7 +32737,6 @@ pengo4                          // 834-0386 (c) 1982 Sega
 pengo5                          // 834-0386 (c) 1982 Sega
 pengob                          // bootleg
 penta                           // bootleg
-schick                          // Microhard
 
 @source:pentagon.cpp
 pent1024                        //
@@ -35630,6 +35629,9 @@ sbuggera                        // (c) 1981 Game-A-Tron
 @source:sc2.cpp
 sc2                             //
 sc2a                            //
+
+@source:schick.cpp
+schick                          // Microhard
 
 @source:scm_500.cpp
 scm_500                         //
