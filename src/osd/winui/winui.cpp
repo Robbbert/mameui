@@ -4720,7 +4720,10 @@ static const TCHAR *GamePicker_GetItemString(HWND hwndPicker, int nItem, int nCo
 			break;
 
 		case COLUMN_ROMS:
-			utf8_s = GetAuditString(GetRomAuditResults(nItem));
+			if (DriverUsesRoms(nItem))
+				utf8_s = GetAuditString(GetRomAuditResults(nItem));
+			else
+				s = TEXT("-");
 			break;
 
 		case COLUMN_SAMPLES:
