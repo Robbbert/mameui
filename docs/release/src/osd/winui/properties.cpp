@@ -1715,7 +1715,6 @@ static void SetPropEnabledControls(HWND hWnd)
 	EnableWindow(GetDlgItem(hWnd, IDC_SCREENSELECTTEXT), ddraw | d3d);
 
 	EnableWindow(GetDlgItem(hWnd, IDC_ARTWORK_CROP), useart);
-	EnableWindow(GetDlgItem(hWnd, IDC_BACKDROPS), useart);
 	EnableWindow(GetDlgItem(hWnd, IDC_ARTMISCTEXT), useart);
 
 	/* Joystick options */
@@ -2763,7 +2762,7 @@ static void InitializeBIOSUI(HWND hwnd)
 			res = ComboBox_SetItemData( hCtrl, i++, "");
 			return;
 		}
-		if (g_nGame == LOCAL_OPTIONS) //Folder Options: This is the only place that LOCAL_OPTIONS is used.
+		if (g_nGame == -10) //LOCAL_OPTIONS) //Folder Options: This is the only place that LOCAL_OPTIONS is used.
 		{
 			gamedrv = &driver_list::driver(g_nFolderGame);
 			if (DriverHasOptionalBIOS(g_nFolderGame) == false)

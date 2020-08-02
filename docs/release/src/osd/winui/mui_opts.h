@@ -151,7 +151,6 @@ enum
 	COLUMN_MAX
 };
 
-#define LOCAL_OPTIONS   -10
 #define GLOBAL_OPTIONS  -1
 
 typedef struct
