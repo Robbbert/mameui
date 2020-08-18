@@ -137,7 +137,7 @@ floppy_connector::floppy_connector(const machine_config &mconfig, const char *ta
 	device_t(mconfig, FLOPPY_CONNECTOR, tag, owner, clock),
 	device_slot_interface(mconfig, *this),
 	formats(nullptr),
-	m_enable_sound(false)
+	m_enable_sound(true)
 {
 }
 
@@ -196,7 +196,7 @@ floppy_image_device::floppy_image_device(const machine_config &mconfig, device_t
 		subcyl(0),
 		image_dirty(false),
 		ready_counter(0),
-		m_make_sound(false),
+		m_make_sound(true),
 		m_sound_out(nullptr)
 {
 	extension_list[0] = '\0';
