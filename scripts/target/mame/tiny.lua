@@ -77,6 +77,7 @@ MACHINES["OUTPUT_LATCH"] = true
 MACHINES["TICKET"] = true
 MACHINES["WATCHDOG"] = true
 MACHINES["Z80DAISY"] = true
+MACHINES["NETLIST"] = true
 
 
 --------------------------------------------------
@@ -111,6 +112,8 @@ function createProjects_mame_tiny(_target, _subtarget)
 	}
 
 files{
+	MAME_DIR .. "src/mame/audio/nl_carpolo.h",
+	MAME_DIR .. "src/mame/audio/nl_carpolo.cpp",
 	MAME_DIR .. "src/mame/drivers/carpolo.cpp",
 	MAME_DIR .. "src/mame/includes/carpolo.h",
 	MAME_DIR .. "src/mame/machine/carpolo.cpp",
@@ -126,6 +129,10 @@ files{
 	MAME_DIR .. "src/mame/video/exidy.cpp",
 	MAME_DIR .. "src/mame/audio/exidy440.cpp",
 	MAME_DIR .. "src/mame/audio/exidy440.h",
+	MAME_DIR .. "src/mame/audio/nl_fireone.h",
+	MAME_DIR .. "src/mame/audio/nl_fireone.cpp",
+	MAME_DIR .. "src/mame/audio/nl_starfire.h",
+	MAME_DIR .. "src/mame/audio/nl_starfire.cpp",
 	MAME_DIR .. "src/mame/drivers/starfire.cpp",
 	MAME_DIR .. "src/mame/includes/starfire.h",
 	MAME_DIR .. "src/mame/video/starfire.cpp",
