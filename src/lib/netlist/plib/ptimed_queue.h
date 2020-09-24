@@ -165,6 +165,7 @@ namespace plib {
 					return;
 				}
 			}
+			//printf("Element not found in delete %s\n", elem->name().c_str());
 		}
 
 		template <bool KEEPSTAT, class R>
@@ -340,3 +341,4 @@ namespace plib {
 } // namespace plib
 
 #endif // PTIMED_QUEUE_H_
+#include <cstdlib> 
