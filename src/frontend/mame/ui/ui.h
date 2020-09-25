@@ -245,8 +245,8 @@ public:
 	void start_load_state();
 
 	// config callbacks
-	void config_load(config_type cfg_type, util::xml::data_node const *parentnode);
-	void config_save(config_type cfg_type, util::xml::data_node *parentnode);
+	void config_load_s(config_type cfg_type, util::xml::data_node const *parentnode);
+	void config_save_s(config_type cfg_type, util::xml::data_node *parentnode);
 	void config_apply(void);
 
 	// slider controls
