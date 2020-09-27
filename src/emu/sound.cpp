@@ -88,9 +88,9 @@ void stream_buffer::set_sample_rate(u32 rate, bool resample)
 	if (rate == m_sample_rate)
 		return;
 
-	// force resampling off if coming to or from an invalid rate
+	// force resampling off if coming to or from an invalid rate, or if we're at time 0 (startup)
 	sound_assert(rate >= SAMPLE_RATE_MINIMUM - 1);
-	if (rate < SAMPLE_RATE_MINIMUM || m_sample_rate < SAMPLE_RATE_MINIMUM)
+	if (rate < SAMPLE_RATE_MINIMUM || m_sample_rate < SAMPLE_RATE_MINIMUM || (m_end_second == 0 && m_end_sample == 0))
 		resample = false;
 
 	// note the time and period of the current buffer (end_time is AFTER the final sample)
@@ -393,7 +393,7 @@ void sound_stream_output::init(sound_stream &stream, u32 index, char const *tag)
 
 #if (LOG_OUTPUT_WAV)
 	std::string filename = stream.device().machine().basename();
-	filename +=	stream.device().tag();
+	filename += stream.device().tag();
 	for (int index = 0; index < filename.size(); index++)
 		if (filename[index] == ':')
 			filename[index] = '_';
