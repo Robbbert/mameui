@@ -2,7 +2,7 @@
 //************************************************************************************************
 // MASTER
 //
-//  newui.c - This is the NEWUI Windows dropdown menu system
+//  newui.cpp - This is the NEWUI Windows dropdown menu system
 //
 //  known bugs:
 //  -  Unable to modify keyboard or joystick. Last known to be working in 0.158 .
@@ -59,12 +59,6 @@ struct dialog_layout
 typedef void (*dialog_itemstoreval)(void *param, int val);
 typedef void (*dialog_itemchangedproc)(dialog_box *dialog, HWND dlgitem, void *changed_param);
 typedef void (*dialog_notification)(dialog_box *dialog, HWND dlgwnd, NMHDR *notification, void *param);
-
-#ifdef UNICODE
-#define win_dialog_tcsdup win_dialog_wcsdup
-#else
-#define win_dialog_tcsdup win_dialog_strdup
-#endif
 
 #define SEQWM_SETFOCUS  (WM_APP + 0)
 #define SEQWM_KILLFOCUS (WM_APP + 1)
@@ -251,7 +245,7 @@ enum
 //  LOCAL STRING FUNCTIONS (these require free after being called)
 //========================================================================
 
-static WCHAR *ui_wstring_from_utf8(const char *utf8string)
+static WCHAR *newui_wstring_from_utf8(const char *utf8string)
 {
 	int char_count;
 	WCHAR *result;
@@ -265,7 +259,7 @@ static WCHAR *ui_wstring_from_utf8(const char *utf8string)
 	return result;
 }
 
-static char *ui_utf8_from_wstring(const WCHAR *wstring)
+static char *newui_utf8_from_wstring(const WCHAR *wstring)
 {
 	int char_count;
 	char *result;
@@ -279,13 +273,17 @@ static char *ui_utf8_from_wstring(const WCHAR *wstring)
 }
 
 // This function truncates a long string, replacing the end with ...
-static std::string longdots(std::string incoming, uint16_t howmany)
+static std::string newui_longdots(std::string incoming, uint16_t howmany)
 {
+	// change all newlines to spaces
+	for (int i = 0; i < incoming.size(); i++)
+		if (incoming[i] == '\n')
+			incoming[i] = ' ';
 	// Firstly, find out if it's multi-line text
-	size_t i = incoming.find_first_of("\n");
+//	size_t i = incoming.find_first_of("\n");
 	// If so, truncate at first newline
-	if (i != std::string::npos)
-		incoming = incoming.substr(0, i);
+//	if (i != std::string::npos)
+//		incoming = incoming.substr(0, i);
 	// Now assume all is ok
 	std::string outgoing = incoming;
 	// But if it's too long, replace the excess with dots
@@ -317,7 +315,7 @@ static BOOL win_get_file_name_dialog(win_open_file_name *ofn)
 	// do we have to translate the filter?
 	if (ofn->filter)
 	{
-		buffer = ui_wstring_from_utf8(ofn->filter);
+		buffer = newui_wstring_from_utf8(ofn->filter);
 		if (!buffer)
 			goto done;
 
@@ -333,7 +331,7 @@ static BOOL win_get_file_name_dialog(win_open_file_name *ofn)
 	// do we need to translate the file parameter?
 	if (ofn->filename)
 	{
-		buffer = ui_wstring_from_utf8(ofn->filename);
+		buffer = newui_wstring_from_utf8(ofn->filename);
 		if (!buffer)
 			goto done;
 
@@ -346,7 +344,7 @@ static BOOL win_get_file_name_dialog(win_open_file_name *ofn)
 	// do we need to translate the initial directory?
 	if (ofn->initial_directory)
 	{
-		t_initial_directory = ui_wstring_from_utf8(ofn->initial_directory);
+		t_initial_directory = newui_wstring_from_utf8(ofn->initial_directory);
 		if (t_initial_directory == NULL)
 			goto done;
 	}
@@ -390,7 +388,7 @@ static BOOL win_get_file_name_dialog(win_open_file_name *ofn)
 	// copy file back out into passed structure
 	if (t_file)
 	{
-		utf8_file = ui_utf8_from_wstring(t_file);
+		utf8_file = newui_utf8_from_wstring(t_file);
 		if (!utf8_file)
 			goto done;
 
@@ -484,7 +482,7 @@ static BOOL win_append_menu_utf8(HMENU menu, UINT flags, UINT_PTR id, const char
 	// only convert string when it's not a bitmap
 	if (!(flags & MF_BITMAP) && item)
 	{
-		t_str = ui_wstring_from_utf8(item);
+		t_str = newui_wstring_from_utf8(item);
 		t_item = t_str;
 	}
 
@@ -646,7 +644,7 @@ dialog_box *win_dialog_init(const char *title, const struct dialog_layout *layou
 	if (dialog_write(di, w, sizeof(w), 2))
 		goto error;
 
-	w_title = ui_wstring_from_utf8(title);
+	w_title = newui_wstring_from_utf8(title);
 	rc = dialog_write_string(di, w_title);
 	free(w_title);
 	if (rc)
@@ -861,7 +859,7 @@ static int dialog_write_item(dialog_box *di, DWORD style, short x, short y, shor
 	if (dialog_write(di, class_name, class_name_length, 2))
 		return 1;
 
-	w_str = str ? ui_wstring_from_utf8(str) : NULL;
+	w_str = str ? newui_wstring_from_utf8(str) : NULL;
 	rc = dialog_write_string(di, w_str);
 	if (w_str)
 		free(w_str);
@@ -1063,21 +1061,6 @@ static LRESULT dialog_combo_changed(dialog_box *dialog, HWND dlgitem, UINT messa
 
 
 //============================================================
-//  win_dialog_wcsdup
-//    called from win_dialog_add_adjuster (via define)
-//============================================================
-
-static WCHAR *win_dialog_wcsdup(dialog_box *dialog, const WCHAR *s)
-{
-	WCHAR *result = global_alloc_array(WCHAR, wcslen(s) + 1);
-	if (result)
-		wcscpy(result, s);
-	return result;
-}
-
-
-
-//============================================================
 //  win_dialog_add_active_combobox
 //    called from win_dialog_add_combobox
 //       dialog = handle of dialog box?
@@ -1246,7 +1229,7 @@ static LRESULT adjuster_sb_setup(dialog_box *dialog, HWND sbwnd, UINT message, W
 	struct adjuster_sb_stuff *stuff;
 	LONG_PTR l;
 
-	stuff = global_alloc(adjuster_sb_stuff);
+	stuff = new adjuster_sb_stuff;
 	if (!stuff)
 		return 1;
 	stuff->min_value = (WORD) (lparam >> 0);
@@ -1273,7 +1256,7 @@ static int win_dialog_add_adjuster(dialog_box *dialog, const char *item_label, i
 	short x;
 	short y;
 	TCHAR buf[32];
-	TCHAR *s;
+	TCHAR *s = new TCHAR[33];
 
 	dialog_new_control(dialog, &x, &y);
 
@@ -1289,7 +1272,7 @@ static int win_dialog_add_adjuster(dialog_box *dialog, const char *item_label, i
 	x += dialog->layout->combo_width - DIM_ADJUSTER_SCR_WIDTH;
 
 	_sntprintf(buf, ARRAY_LENGTH(buf), is_percentage ? TEXT("%d%%") : TEXT("%d"), default_value);
-	s = win_dialog_tcsdup(dialog, buf);
+	_tcscpy(s, buf);
 
 	if (!s)
 		return 1;
@@ -2384,7 +2367,7 @@ static bool get_softlist_info(HWND wnd, device_image_interface *img)
 		while (sl_root && !passes_tests)
 		{
 			std::string test_path = sl_root + sl_dir;
-			TCHAR *szPath = ui_wstring_from_utf8(test_path.c_str());
+			TCHAR *szPath = newui_wstring_from_utf8(test_path.c_str());
 			DWORD dwAttrib = GetFileAttributes(szPath);
 			if ((dwAttrib != INVALID_FILE_ATTRIBUTES) && (dwAttrib & FILE_ATTRIBUTE_DIRECTORY))
 			{
@@ -2562,7 +2545,7 @@ static HMENU find_sub_menu(HMENU menu, const char *menutext, bool create_sub_men
 
 	while(*menutext)
 	{
-		TCHAR *t_menutext = ui_wstring_from_utf8(menutext);
+		TCHAR *t_menutext = newui_wstring_from_utf8(menutext);
 
 		int i = -1;
 		do
@@ -2793,7 +2776,7 @@ static void prepare_menus(HWND wnd)
 	int view_index = window->m_target->view();
 	while((view_name = window->m_target->view_name(i)))
 	{
-		TCHAR *t_view_name = ui_wstring_from_utf8(view_name);
+		TCHAR *t_view_name = newui_wstring_from_utf8(view_name);
 		InsertMenu(video_menu, i, MF_BYPOSITION | (i == view_index ? MF_CHECKED : 0), ID_VIDEO_VIEW_0 + i, t_view_name);
 		free(t_view_name);
 		i++;
@@ -2846,7 +2829,7 @@ static void prepare_menus(HWND wnd)
 						{
 							if (flist.name() == "usage" && !usage_shown)
 							{
-								std::string usage = "Usage: " + longdots(flist.value(),200);
+								std::string usage = "Usage: " + newui_longdots(flist.value(),200);
 								win_append_menu_utf8(sub_menu, MF_STRING, 0, usage.c_str());
 								win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
 								usage_shown = true;
@@ -2863,7 +2846,7 @@ static void prepare_menus(HWND wnd)
 								// if not, we simply display "part_name"; if yes we display "part_name (part_id)"
 								std::string menu_part_name(swpart.name());
 								if (swpart.feature("part_id"))
-									menu_part_name.append(": ").append(longdots(swpart.feature("part_id"),50));
+									menu_part_name.append(": ").append(newui_longdots(swpart.feature("part_id"),50));
 								win_append_menu_utf8(sub_menu, MF_STRING, new_switem + ID_SWPART, menu_part_name.c_str());
 								part_map[new_switem] = part_data{ swpart.name(), &img };
 								new_switem++;
@@ -2925,7 +2908,7 @@ static void prepare_menus(HWND wnd)
 					filename.append(" (").append(tmp->name());
 					// also check if this part has a specific part_id (e.g. "Map Disc", "Bonus Disc", etc.), and in case display it
 					if (img.get_feature("part_id"))
-						filename.append(": ").append(longdots(img.get_feature("part_id"),50));
+						filename.append(": ").append(newui_longdots(img.get_feature("part_id"),50));
 					filename.append(")");
 				}
 			}
@@ -2934,7 +2917,7 @@ static void prepare_menus(HWND wnd)
 			filename.assign("---");
 
 		// Get instance names instead, like Media View, and mame's File Manager
-		std::string instance = img.instance_name() + std::string(" (") + img.brief_instance_name() + std::string("): ") + longdots(filename,127);
+		std::string instance = img.instance_name() + std::string(" (") + img.brief_instance_name() + std::string("): ") + newui_longdots(filename,127);
 		std::transform(instance.begin(), instance.begin()+1, instance.begin(), ::toupper); // turn first char to uppercase
 		win_append_menu_utf8(device_menu, MF_POPUP, (UINT_PTR)sub_menu, instance.c_str());
 
@@ -3167,7 +3150,7 @@ static void help_display(HWND wnd, const char *chapter)
 	if (!is_windowed())
 		winwindow_toggle_full_screen();
 
-	TCHAR *t_chapter = ui_wstring_from_utf8(chapter);
+	TCHAR *t_chapter = newui_wstring_from_utf8(chapter);
 //	htmlhelp(wnd, t_chapter, 0 /*HH_DISPLAY_TOPIC*/, 0);
 //	TCHAR *szSite = new TCHAR[100];
 //	_tcscpy(szSite, TEXT("http://messui.polygonal-moogle.com/onlinehelp/"));
@@ -3492,7 +3475,7 @@ static void set_menu_text(HMENU menu_bar, int command, const char *text)
 	MENUITEMINFO mii;
 
 	// convert to TCHAR
-	t_text = ui_wstring_from_utf8(text);
+	t_text = newui_wstring_from_utf8(text);
 
 	// invoke SetMenuItemInfo()
 	memset(&mii, 0, sizeof(mii));

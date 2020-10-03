@@ -981,7 +981,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	osd_printf_info("********** FINISHED %s **********\n", name);
 	// turn off message redirect
 	osd_output::pop(&winerror);
-	global_free(manager);
+	delete manager;
 	// save game time played
 	time(&end);
 	double elapsedtime = end - start;
