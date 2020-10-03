@@ -1168,6 +1168,7 @@ function linkProjects_mame_mess(_target, _subtarget)
 		"cccp",
 		"cce",
 		"ccs",
+		"ceres",
 		"chessking",
 		"chromatics",
 		"chrysler",
@@ -1748,6 +1749,7 @@ files {
 	MAME_DIR .. "src/mame/machine/lisa.cpp",
 	MAME_DIR .. "src/mame/drivers/lwriter.cpp",
 	MAME_DIR .. "src/mame/drivers/mac128.cpp",
+	MAME_DIR .. "src/mame/drivers/macquadra700.cpp",
 	MAME_DIR .. "src/mame/drivers/mac.cpp",
 	MAME_DIR .. "src/mame/includes/mac.h",
 	MAME_DIR .. "src/mame/machine/egret.cpp",
@@ -2015,6 +2017,11 @@ files {
 createMESSProjects(_target, _subtarget, "ccs")
 files {
 	MAME_DIR .. "src/mame/drivers/ccs2810.cpp",
+}
+
+createMESSProjects(_target, _subtarget, "ceres")
+files {
+	MAME_DIR .. "src/mame/drivers/ceres.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "chessking")
@@ -4025,6 +4032,7 @@ files {
 	MAME_DIR .. "src/mame/machine/generalplus_gpl16250.cpp",
 	MAME_DIR .. "src/mame/machine/generalplus_gpl16250.h",
 	MAME_DIR .. "src/mame/drivers/generalplus_gpl32612.cpp",
+	MAME_DIR .. "src/mame/drivers/generalplus_gpl162xx_lcdtype.cpp",
 	MAME_DIR .. "src/mame/drivers/generalplus_gpl_unknown.cpp",
 	MAME_DIR .. "src/mame/drivers/xavix.cpp",
 	MAME_DIR .. "src/mame/includes/xavix.h",

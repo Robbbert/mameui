@@ -473,7 +473,7 @@ uint8_t nes_vt_soc_device::spr_r(offs_t offset)
 
 uint8_t nes_vt_soc_device::chr_r(offs_t offset)
 {
-	if (m_4242 & 0x1 || m_411d & 0x04)
+	if (m_4242 & 0x1 || m_411d & 0x04) // newer VT platforms only (not VT03/09), split out
 	{
 		return m_chrram[offset];
 	}
@@ -489,10 +489,17 @@ uint8_t nes_vt_soc_device::chr_r(offs_t offset)
 
 void nes_vt_soc_device::chr_w(offs_t offset, uint8_t data)
 {
-	if (m_4242 & 0x1 || m_411d & 0x04)
+	if (m_4242 & 0x1 || m_411d & 0x04) // newer VT platforms only (not VT03/09), split out
 	{
 		logerror("vram write %04x %02x\n", offset, data);
 		m_chrram[offset] = data;
+	}
+	else
+	{
+		int realaddr = calculate_real_video_address(offset, 1, 0);
+
+		address_space& spc = this->space(AS_PROGRAM);
+		return spc.write_byte(realaddr, data);
 	}
 }
 
@@ -775,7 +782,7 @@ void nes_vt_soc_device::scrambled_8000_w(uint16_t offset, uint8_t data)
 	offset &= 0x7fff;
 
 	uint16_t addr = offset+0x8000;
-	if ((m_411d & 0x01) && (m_411d & 0x03))
+	if ((m_411d & 0x01) && (m_411d & 0x03)) // this condition is nonsense, maybe should be ((m_411d & 0x03) == 0x03) check it!  (newer VT only, not VT03/09, split)
 	{
 		//CNROM compat
 		logerror("%s: vtxx_cnrom_8000_w real address: (%04x) translated address: (%04x) %02x\n", machine().describe_context(), addr, offset + 0x8000, data);
@@ -787,13 +794,13 @@ void nes_vt_soc_device::scrambled_8000_w(uint16_t offset, uint8_t data)
 		m_ppu->set_201x_reg(0x5, data * 8 + 7);
 
 	}
-	else if (m_411d & 0x01)
+	else if (m_411d & 0x01) // (newer VT only, not VT03/09, split)
 	{
 		//MMC1 compat, TODO
 		logerror("%s: vtxx_mmc1_8000_w real address: (%04x) translated address: (%04x) %02x\n", machine().describe_context(), addr, offset + 0x8000, data);
 
 	}
-	else if (m_411d & 0x02)
+	else if (m_411d & 0x02) // (newer VT only, not VT03/09, split)
 	{
 		//UNROM compat
 		logerror("%s: vtxx_unrom_8000_w real address: (%04x) translated address: (%04x) %02x\n", machine().describe_context(), addr, offset + 0x8000, data);
@@ -802,7 +809,7 @@ void nes_vt_soc_device::scrambled_8000_w(uint16_t offset, uint8_t data)
 		m_410x[0x8] = ((data & 0x0F) << 1) + 1;
 		update_banks();
 	}
-	else
+	else // standard mode (VT03/09)
 	{
 		//logerror("%s: vtxx_mmc3_8000_w real address: (%04x) translated address: (%04x) %02x\n",  machine().describe_context(), addr, offset+0x8000, data );
 
@@ -1214,7 +1221,7 @@ void nes_vt_soc_device::do_pal_timings_and_ppu_replacement(machine_config& confi
 
 void nes_vt_soc_device::device_add_mconfig(machine_config &config)
 {
-	M6502(config, m_maincpu, NTSC_APU_CLOCK);
+	N2A03_CORE(config, m_maincpu, NTSC_APU_CLOCK); // Butterfly Catch in vgpocket confirms N2A03 core type, not 6502
 	m_maincpu->set_addrmap(AS_PROGRAM, &nes_vt_soc_device::nes_vt_map);
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
@@ -1235,11 +1242,7 @@ void nes_vt_soc_device::device_add_mconfig(machine_config &config)
 	/* sound hardware */
 	SPEAKER(config, "mono").front_center();
 
-	/* this should actually be a custom *almost* doubled up APU, however requires more thought
-	   than just using 2 APUs as registers in the 2nd one affect the PCM channel mode but the
-	   DMA control still comes from the 1st, but in the new mode, sound always outputs via the
-	   2nd.  Probably need to split the APU into interface and sound gen logic. */
-	NES_APU(config, m_apu, NTSC_APU_CLOCK);
+	NES_APU_VT(config, m_apu, NTSC_APU_CLOCK);
 	m_apu->irq().set(FUNC(nes_vt_soc_device::apu_irq));
 	m_apu->mem_read().set(FUNC(nes_vt_soc_device::apu_read_mem));
 	m_apu->add_route(ALL_OUTPUTS, "mono", 0.50);
@@ -1260,7 +1263,7 @@ void nes_vt_soc_scramble_device::device_add_mconfig(machine_config& config)
 {
 	nes_vt_soc_device::device_add_mconfig(config);
 
-	M6502_SWAP_OP_D5_D6(config.replace(), m_maincpu, NTSC_APU_CLOCK);
+	N2A03_CORE_SWAP_OP_D5_D6(config.replace(), m_maincpu, NTSC_APU_CLOCK); // Insect Chase in polmega confirms N2A03 core type, not 6502
 	m_maincpu->set_addrmap(AS_PROGRAM, &nes_vt_soc_scramble_device::nes_vt_map);
 }
 
@@ -1461,7 +1464,7 @@ void nes_vt_soc_4kram_fp_device::device_add_mconfig(machine_config& config)
 {
 	nes_vt_soc_device::device_add_mconfig(config);
 
-	M6502_VTSCR(config.replace(), m_maincpu, NTSC_APU_CLOCK);
+	M6502_VTSCR(config.replace(), m_maincpu, NTSC_APU_CLOCK); // are these later chips N2A03 core, or 6502 core derived?
 	m_maincpu->set_addrmap(AS_PROGRAM, &nes_vt_soc_4kram_fp_device::nes_vt_fp_map);
 }
 

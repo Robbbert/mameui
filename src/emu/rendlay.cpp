@@ -1432,7 +1432,7 @@ private:
 			m_bitmap.fill(0);
 			for (int step = 0; step < 100; step += 25)
 				for (int line = 0; line < 100; line++)
-					m_bitmap.pix32((step + line) % 100, line % 100) = rgb_t(0xff,0xff,0xff,0xff);
+					m_bitmap.pix((step + line) % 100, line % 100) = rgb_t(0xff,0xff,0xff,0xff);
 
 			// log an error
 			if (m_alphafile.empty())
@@ -1587,9 +1587,8 @@ protected:
 	// overrides
 	virtual void draw(running_machine &machine, bitmap_argb32 &dest, const rectangle &bounds, int state) override
 	{
-		render_font *font = machine.render().font_alloc("default");
+		auto font = machine.render().font_alloc("default");
 		draw_text(*font, dest, bounds, m_string.c_str(), m_textalign, color(state));
-		machine.render().font_free(font);
 	}
 
 private:
@@ -2278,9 +2277,8 @@ protected:
 
 	virtual void draw(running_machine &machine, bitmap_argb32 &dest, const rectangle &bounds, int state) override
 	{
-		render_font *const font = machine.render().font_alloc("default");
+		auto font = machine.render().font_alloc("default");
 		draw_text(*font, dest, bounds, string_format("%0*d", m_digits, state).c_str(), m_textalign, color(state));
-		machine.render().font_free(font);
 	}
 
 private:
@@ -2375,7 +2373,7 @@ protected:
 		u32 const a = c.a * 255.0f;
 
 		// get the width of the string
-		render_font *font = machine.render().font_alloc("default");
+		auto font = machine.render().font_alloc("default");
 		float aspect = 1.0f;
 		s32 width;
 
@@ -2437,8 +2435,8 @@ protected:
 
 							if (effy >= bounds.top() && effy <= bounds.bottom())
 							{
-								u32 *src = &tempbitmap2.pix32(y);
-								u32 *d = &dest.pix32(effy);
+								u32 const *const src = &tempbitmap2.pix(y);
+								u32 *const d = &dest.pix(effy);
 								for (int x = 0; x < dest.width(); x++)
 								{
 									int effx = x;
@@ -2484,8 +2482,8 @@ protected:
 
 							if (effy >= bounds.top() && effy <= bounds.bottom())
 							{
-								u32 *src = &tempbitmap.pix32(y);
-								u32 *d = &dest.pix32(effy);
+								u32 const *const src = &tempbitmap.pix(y);
+								u32 *const d = &dest.pix(effy);
 								for (int x = 0; x < chbounds.width(); x++)
 								{
 									int effx = curx + x + chbounds.left();
@@ -2517,7 +2515,6 @@ protected:
 		}
 
 		// free the temporary bitmap and font
-		machine.render().font_free(font);
 	}
 
 private:
@@ -2537,7 +2534,7 @@ private:
 		u32 const a = c.a * 255.0f;
 
 		// get the width of the string
-		render_font *font = machine.render().font_alloc("default");
+		auto font = machine.render().font_alloc("default");
 		float aspect = 1.0f;
 		s32 width;
 		int currx = 0;
@@ -2597,8 +2594,8 @@ private:
 
 							if (effy >= bounds.top() && effy <= bounds.bottom())
 							{
-								u32 *src = &tempbitmap2.pix32(y);
-								u32 *d = &dest.pix32(effy);
+								u32 const *const src = &tempbitmap2.pix(y);
+								u32 *const d = &dest.pix(effy);
 								for (int x = 0; x < ourwidth/num_shown; x++)
 								{
 									int effx = basex + x;
@@ -2645,8 +2642,8 @@ private:
 
 							if (effy >= bounds.top() && effy <= bounds.bottom())
 							{
-								u32 *src = &tempbitmap.pix32(y);
-								u32 *d = &dest.pix32(effy);
+								u32 const *const src = &tempbitmap.pix(y);
+								u32 *const d = &dest.pix(effy);
 								for (int x = 0; x < chbounds.width(); x++)
 								{
 									int effx = basex + curx + x;
@@ -2678,7 +2675,6 @@ private:
 		}
 
 		// free the temporary bitmap and font
-		machine.render().font_free(font);
 	}
 
 	void load_reel_bitmap(int number)
@@ -3109,8 +3105,8 @@ void layout_element::component::draw_text(
 			int effy = bounds.top() + y;
 			if (effy >= bounds.top() && effy <= bounds.bottom())
 			{
-				u32 *src = &tempbitmap.pix32(y);
-				u32 *d = &dest.pix32(effy);
+				u32 const *const src = &tempbitmap.pix(y);
+				u32 *const d = &dest.pix(effy);
 				for (int x = 0; x < chbounds.width(); x++)
 				{
 					int effx = curx + x + chbounds.left();
@@ -3149,8 +3145,8 @@ void layout_element::component::draw_segment_horizontal_caps(bitmap_argb32 &dest
 	// loop over the width of the segment
 	for (int y = 0; y < width / 2; y++)
 	{
-		u32 *d0 = &dest.pix32(midy - y);
-		u32 *d1 = &dest.pix32(midy + y);
+		u32 *const d0 = &dest.pix(midy - y);
+		u32 *const d1 = &dest.pix(midy + y);
 		int ty = (y < width / 8) ? width / 8 : y;
 
 		// loop over the length of the segment
@@ -3182,8 +3178,8 @@ void layout_element::component::draw_segment_vertical_caps(bitmap_argb32 &dest, 
 	// loop over the width of the segment
 	for (int x = 0; x < width / 2; x++)
 	{
-		u32 *d0 = &dest.pix32(0, midx - x);
-		u32 *d1 = &dest.pix32(0, midx + x);
+		u32 *const d0 = &dest.pix(0, midx - x);
+		u32 *const d1 = &dest.pix(0, midx + x);
 		int tx = (x < width / 8) ? width / 8 : x;
 
 		// loop over the length of the segment
@@ -3219,7 +3215,7 @@ void layout_element::component::draw_segment_diagonal_1(bitmap_argb32 &dest, int
 	for (int x = minx; x < maxx; x++)
 		if (x >= 0 && x < dest.width())
 		{
-			u32 *d = &dest.pix32(0, x);
+			u32 *const d = &dest.pix(0, x);
 			int step = (x - minx) * ratio;
 
 			for (int y = maxy - width - step; y < maxy - step; y++)
@@ -3244,7 +3240,7 @@ void layout_element::component::draw_segment_diagonal_2(bitmap_argb32 &dest, int
 	for (int x = minx; x < maxx; x++)
 		if (x >= 0 && x < dest.width())
 		{
-			u32 *d = &dest.pix32(0, x);
+			u32 *const d = &dest.pix(0, x);
 			int step = (x - minx) * ratio;
 
 			for (int y = miny + step; y < miny + step + width; y++)
@@ -3267,8 +3263,8 @@ void layout_element::component::draw_segment_decimal(bitmap_argb32 &dest, int mi
 	// iterate over y
 	for (u32 y = 0; y <= width; y++)
 	{
-		u32 *d0 = &dest.pix32(midy - y);
-		u32 *d1 = &dest.pix32(midy + y);
+		u32 *const d0 = &dest.pix(midy - y);
+		u32 *const d1 = &dest.pix(midy + y);
 		float xval = width * sqrt(1.0f - (float)(y * y) * ooradius2);
 		s32 left, right;
 
@@ -3296,7 +3292,7 @@ void layout_element::component::draw_segment_comma(bitmap_argb32 &dest, int minx
 	// draw line
 	for (int x = minx; x < maxx; x++)
 	{
-		u32 *d = &dest.pix32(0, x);
+		u32 *const d = &dest.pix(0, x);
 		int step = (x - minx) * ratio;
 
 		for (int y = maxy; y < maxy  - width - step; y--)
@@ -3313,7 +3309,7 @@ void layout_element::component::apply_skew(bitmap_argb32 &dest, int skewwidth)
 {
 	for (int y = 0; y < dest.height(); y++)
 	{
-		u32 *destrow = &dest.pix32(y);
+		u32 *const destrow = &dest.pix(y);
 		int offs = skewwidth * (dest.height() - y) / dest.height();
 		for (int x = dest.width() - skewwidth - 1; x >= 0; x--)
 			destrow[x + offs] = destrow[x];
@@ -3450,7 +3446,18 @@ layout_view::~layout_view()
 //  the given screen
 //-------------------------------------------------
 
-bool layout_view::has_screen(screen_device &screen) const
+bool layout_view::has_screen(screen_device &screen)
+{
+	return std::find_if(m_items.begin(), m_items.end(), [&screen] (auto &itm) { return itm.screen() == &screen; }) != m_items.end();
+}
+
+
+//-------------------------------------------------
+//  has_visible_screen - return true if this view
+//  has the given screen visble
+//-------------------------------------------------
+
+bool layout_view::has_visible_screen(screen_device &screen) const
 {
 	return std::find_if(m_screens.begin(), m_screens.end(), [&screen] (auto const &scr) { return &scr.get() == &screen; }) != m_screens.end();
 }

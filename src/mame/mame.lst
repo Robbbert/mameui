@@ -10134,6 +10134,9 @@ millpac                         // Valadon
 multiped                        // hack
 warlords                        // 037153-037159    (c) 1980
 
+@source:ceres.cpp
+ceres1                          // Eidgenössische Technische Hochschule Zürich Ceres-1
+
 @source:cesclass.cpp
 ccclass                         //
 hrclass                         //
@@ -14804,9 +14807,11 @@ suprpokrb                       // (c) 1986 Grayhound Electronics
 rp200
 
 @source:generalplus_gpl_unknown.cpp
+unkunsp
+
+@source:generalplus_gpl162xx_lcdtype.cpp
 pcp8718
 pcp8728
-unkunsp
 bkid218
 
 @source:generalplus_gpl16250_mobigo.cpp
@@ -19893,9 +19898,11 @@ macpb180                        // 1992 Apple Macintosh PowerBook 180
 macpb180c                       // 1992 Apple Macintosh PowerBook 180c
 macpd210                        // 1992 Apple Macintosh PowerBook Duo 210
 macprtb                         // 1989 Apple Macintosh Portable
-macqd700                        // 1991 Apple Macintosh Quadra 700
 macse30                         // 1989 Apple Macintosh SE/30
 pmac6100                        // 1993 Apple Power Macintosh 6100
+
+@source:macquadra700.cpp
+macqd700                        // 1991 Apple Macintosh Quadra 700
 
 @source:mac128.cpp
 mac128k                         // 1984 Apple Macintosh
@@ -36476,6 +36483,7 @@ endurord                        // bootleg
 hangon                          // (c) 1985 (Rev A)
 hangon1                         // (c) 1985
 hangon2                         // (c) 1985
+hangonvf                        // bootleg
 shangonrb                       // (c) 1992 (but bootleg, hangon hw?)
 shangonrb2                      // bootleg (Beta)
 shangonro                       // (c) 1987 (FD1094)
