@@ -780,6 +780,8 @@ MACHINES["EDLC"] = true
 MACHINES["WTL3132"] = true
 MACHINES["CXD1185"] = true
 MACHINES["BL_HANDHELDS_MENUCONTROL"] = true
+MACHINES["NS32081"] = true
+MACHINES["NS32202"] = true
 
 --------------------------------------------------
 -- specify available bus cores
@@ -840,6 +842,7 @@ BUSES["ELECTRON"] = true
 BUSES["ELECTRON_CART"] = true
 BUSES["EP64"] = true
 BUSES["EPSON_SIO"] = true
+BUSES["FMT_SCSI"] = true
 BUSES["GAMATE"] = true
 BUSES["GAMEBOY"] = true
 BUSES["GAMEGEAR"] = true

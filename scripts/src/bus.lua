@@ -1117,6 +1117,20 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/bus/fmt_scsi/fmt_scsi.h,BUSES["FMT_SCSI"] = true
+---------------------------------------------------
+
+if (BUSES["FMT_SCSI"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/fmt_scsi/fmt_scsi.cpp",
+		MAME_DIR .. "src/devices/bus/fmt_scsi/fmt_scsi.h",
+		MAME_DIR .. "src/devices/bus/fmt_scsi/fmt121.cpp",
+		MAME_DIR .. "src/devices/bus/fmt_scsi/fmt121.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/bus/gamate/slot.h,BUSES["GAMATE"] = true
 ---------------------------------------------------
 
@@ -3873,6 +3887,8 @@ if (BUSES["VSMILE"]~=null) then
 		MAME_DIR .. "src/devices/bus/vsmile/vsmile_ctrl.h",
 		MAME_DIR .. "src/devices/bus/vsmile/pad.cpp",
 		MAME_DIR .. "src/devices/bus/vsmile/pad.h",
+		MAME_DIR .. "src/devices/bus/vsmile/mat.cpp",
+		MAME_DIR .. "src/devices/bus/vsmile/mat.h",
 		MAME_DIR .. "src/devices/bus/vsmile/vsmile_slot.cpp",
 		MAME_DIR .. "src/devices/bus/vsmile/vsmile_slot.h",
 		MAME_DIR .. "src/devices/bus/vsmile/rom.cpp",

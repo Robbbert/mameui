@@ -1356,10 +1356,7 @@ render_primitive_list &render_target::get_primitives()
 			item_xform.yoffs = root_xform.yoffs + bounds.y0 * root_xform.yscale;
 			item_xform.xscale = (bounds.x1 - bounds.x0) * root_xform.xscale;
 			item_xform.yscale = (bounds.y1 - bounds.y0) * root_xform.yscale;
-			item_xform.color.r = curitem.color().r * root_xform.color.r;
-			item_xform.color.g = curitem.color().g * root_xform.color.g;
-			item_xform.color.b = curitem.color().b * root_xform.color.b;
-			item_xform.color.a = curitem.color().a * root_xform.color.a;
+			item_xform.color = curitem.color() * root_xform.color;
 			item_xform.orientation = orientation_add(curitem.orientation(), root_xform.orientation);
 			item_xform.no_center = false;
 
@@ -1374,9 +1371,9 @@ render_primitive_list &render_target::get_primitives()
 	{
 		// if we are not in the running stage, draw an outer box
 		render_primitive *prim = list.alloc(render_primitive::QUAD);
-		set_render_bounds_xy(prim->bounds, 0.0f, 0.0f, (float)m_width, (float)m_height);
+		prim->bounds.set_xy(0.0f, 0.0f, (float)m_width, (float)m_height);
 		prim->full_bounds = prim->bounds;
-		set_render_color(&prim->color, 1.0f, 0.1f, 0.1f, 0.1f);
+		prim->color.set(1.0f, 0.1f, 0.1f, 0.1f);
 		prim->texture.base = nullptr;
 		prim->flags = PRIMFLAG_BLENDMODE(BLENDMODE_ALPHA);
 		list.append(*prim);
@@ -1384,9 +1381,9 @@ render_primitive_list &render_target::get_primitives()
 		if (m_width > 1 && m_height > 1)
 		{
 			prim = list.alloc(render_primitive::QUAD);
-			set_render_bounds_xy(prim->bounds, 1.0f, 1.0f, (float)(m_width - 1), (float)(m_height - 1));
+			prim->bounds.set_xy(1.0f, 1.0f, float(m_width - 1), float(m_height - 1));
 			prim->full_bounds = prim->bounds;
-			set_render_color(&prim->color, 1.0f, 0.0f, 0.0f, 0.0f);
+			prim->color.set(1.0f, 0.0f, 0.0f, 0.0f);
 			prim->texture.base = nullptr;
 			prim->flags = PRIMFLAG_BLENDMODE(BLENDMODE_ALPHA);
 			list.append(*prim);
@@ -1474,11 +1471,12 @@ bool render_target::map_point_container(s32 target_x, s32 target_y, render_conta
 		if (items.end() != found)
 		{
 			layout_view::item &item(*found);
-			if (item.bounds().includes(target_f.first, target_f.second))
+			render_bounds const bounds(item.bounds());
+			if (bounds.includes(target_f.first, target_f.second))
 			{
 				// point successfully mapped
-				container_x = (target_f.first - item.bounds().x0) / item.bounds().width();
-				container_y = (target_f.second - item.bounds().y0) / item.bounds().height();
+				container_x = (target_f.first - bounds.x0) / bounds.width();
+				container_y = (target_f.second - bounds.y0) / bounds.height();
 				return true;
 			}
 		}
@@ -1531,17 +1529,21 @@ bool render_target::map_point_input(s32 target_x, s32 target_y, ioport_port *&in
 		if (m_hit_test[i] && m_hit_test[items.size() + i])
 		{
 			layout_view::item &item(items[i]);
-			if (item.has_input())
+			render_bounds const bounds(item.bounds());
+			if (bounds.includes(target_f.first, target_f.second))
 			{
-				// point successfully mapped
-				input_port = item.input_tag_and_mask(input_mask);
-				input_x = (target_f.first - item.bounds().x0) / item.bounds().width();
-				input_y = (target_f.second - item.bounds().y0) / item.bounds().height();
-				return true;
-			}
-			else
-			{
-				break;
+				if (item.has_input())
+				{
+					// point successfully mapped
+					std::tie(input_port, input_mask) = item.input_tag_and_mask();
+					input_x = (target_f.first - bounds.x0) / bounds.width();
+					input_y = (target_f.second - bounds.y0) / bounds.height();
+					return true;
+				}
+				else
+				{
+					break;
+				}
 			}
 		}
 	}
@@ -2235,7 +2237,7 @@ void render_target::add_container_primitives(render_primitive_list &list, const 
 	cliprect.y0 = xform.yoffs;
 	cliprect.x1 = xform.xoffs + xform.xscale;
 	cliprect.y1 = xform.yoffs + xform.yscale;
-	sect_render_bounds(cliprect, m_bounds);
+	cliprect &= m_bounds;
 
 	float root_xoffs = root_xform.xoffs + fabsf(root_xform.xscale - xform.xscale) * 0.5f;
 	float root_yoffs = root_xform.yoffs + fabsf(root_xform.yscale - xform.yscale) * 0.5f;
@@ -2245,7 +2247,7 @@ void render_target::add_container_primitives(render_primitive_list &list, const 
 	root_cliprect.y0 = root_yoffs;
 	root_cliprect.x1 = root_xoffs + root_xform.xscale;
 	root_cliprect.y1 = root_yoffs + root_xform.yscale;
-	sect_render_bounds(root_cliprect, m_bounds);
+	root_cliprect &= m_bounds;
 
 	// compute the container transform
 	object_transform container_xform;
@@ -2475,7 +2477,7 @@ void render_target::add_container_primitives(render_primitive_list &list, const 
 
 		// allocate a primitive
 		render_primitive *prim = list.alloc(render_primitive::QUAD);
-		set_render_bounds_wh(prim->bounds, xform.xoffs, xform.yoffs, xform.xscale, xform.yscale);
+		prim->bounds.set_wh(xform.xoffs, xform.yoffs, xform.xscale, xform.yscale);
 		prim->full_bounds = prim->bounds;
 		prim->color = container_xform.color;
 		width = render_round_nearest(prim->bounds.x1) - render_round_nearest(prim->bounds.x0);
@@ -2523,7 +2525,7 @@ void render_target::add_element_primitives(render_primitive_list &list, const ob
 		// compute the bounds
 		s32 width = render_round_nearest(xform.xscale);
 		s32 height = render_round_nearest(xform.yscale);
-		set_render_bounds_wh(prim->bounds, render_round_nearest(xform.xoffs), render_round_nearest(xform.yoffs), (float) width, (float) height);
+		prim->bounds.set_wh(render_round_nearest(xform.xoffs), render_round_nearest(xform.yoffs), float(width), float(height));
 		prim->full_bounds = prim->bounds;
 		if (xform.orientation & ORIENTATION_SWAP_XY)
 			std::swap(width, height);
@@ -2540,7 +2542,7 @@ void render_target::add_element_primitives(render_primitive_list &list, const ob
 		cliprect.y0 = render_round_nearest(xform.yoffs);
 		cliprect.x1 = render_round_nearest(xform.xoffs + xform.xscale);
 		cliprect.y1 = render_round_nearest(xform.yoffs + xform.yscale);
-		sect_render_bounds(cliprect, m_bounds);
+		cliprect &= m_bounds;
 
 		// determine UV coordinates and apply clipping
 		prim->texcoords = oriented_texcoords[xform.orientation];
@@ -2954,9 +2956,9 @@ void render_target::add_clear_extents(render_primitive_list &list)
 			if (x1 - x0 > 0)
 			{
 				render_primitive *prim = list.alloc(render_primitive::QUAD);
-				set_render_bounds_xy(prim->bounds, (float)x0, (float)y0, (float)x1, (float)y1);
+				prim->bounds.set_xy(float(x0), float(y0), float(x1), float(y1));
 				prim->full_bounds = prim->bounds;
-				set_render_color(&prim->color, 1.0f, 0.0f, 0.0f, 0.0f);
+				prim->color.set(1.0f, 0.0f, 0.0f, 0.0f);
 				prim->texture.base = nullptr;
 				prim->flags = PRIMFLAG_BLENDMODE(BLENDMODE_ALPHA);
 				clearlist.append(*prim);
@@ -3010,7 +3012,7 @@ void render_target::add_clear_and_optimize_primitive_list(render_primitive_list 
 				if (PRIMFLAG_GET_BLENDMODE(prim.flags) == BLENDMODE_RGB_MULTIPLY)
 				{
 					// RGB multiply will multiply against 0, leaving nothing
-					set_render_color(&prim.color, 1.0f, 0.0f, 0.0f, 0.0f);
+					prim.color.set(1.0f, 0.0f, 0.0f, 0.0f);
 					prim.texture.base = nullptr;
 					prim.flags = (prim.flags & ~PRIMFLAG_BLENDMODE_MASK) | PRIMFLAG_BLENDMODE(BLENDMODE_NONE);
 				}
