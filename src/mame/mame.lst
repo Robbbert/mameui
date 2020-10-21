@@ -2408,6 +2408,7 @@ astrof                          // (c) [1980?]
 astrof2                         // (c) [1980?]
 astrof3                         // (c) [1980?]
 astroff                         // bootleg (Famaresa)
+astroff2                        // bootleg (Famaresa)
 spfghmk2                        // (c) [1979] Data East Corporation
 spfghmk22                       // (c) [1979] Data East Corporation
 sstarbtl                        // bootleg
@@ -19074,6 +19075,12 @@ korgwssr                        //
 @source:korgz3.cpp
 korgz3                          //
 
+@source:kpython.cpp
+kpython                         // Konami Python Bios
+wswe                            // World Soccer Winning Eleven
+wswe2k3                         // World Soccer Winning Eleven 2003
+popn9                           // 2003
+
 @source:kramermc.cpp
 kramermc                        // 1987 Kramer MC
 
@@ -19899,7 +19906,17 @@ maclc                           // 1990 Apple Macintosh LC
 maclc2                          // 1991 Apple Macintosh LC II
 maclc3                          // 1993 Apple Macintosh LC III
 maclc520                        // 1993 Apple Macintosh LC 520
+macse30                         // 1989 Apple Macintosh SE/30
+pmac6100                        // 1993 Apple Power Macintosh 6100
+
+@source:macquadra700.cpp
+macqd700                        // 1991 Apple Macintosh Quadra 700
+
+@source:macprtb.cpp
+macprtb                         // 1989 Apple Macintosh Portable
 macpb100                        // 1991 Apple Macintosh PowerBook 100
+
+@source:macpwrbk030.cpp
 macpb140                        // 1991 Apple Macintosh PowerBook 140
 macpb145                        // 1992 Apple Macintosh PowerBook 145
 macpb145b                       // 1993 Apple Macintosh PowerBook 145B
@@ -19908,12 +19925,6 @@ macpb170                        // 1991 Apple Macintosh PowerBook 170
 macpb180                        // 1992 Apple Macintosh PowerBook 180
 macpb180c                       // 1992 Apple Macintosh PowerBook 180c
 macpd210                        // 1992 Apple Macintosh PowerBook Duo 210
-macprtb                         // 1989 Apple Macintosh Portable
-macse30                         // 1989 Apple Macintosh SE/30
-pmac6100                        // 1993 Apple Power Macintosh 6100
-
-@source:macquadra700.cpp
-macqd700                        // 1991 Apple Macintosh Quadra 700
 
 @source:mac128.cpp
 mac128k                         // 1984 Apple Macintosh
@@ -22240,6 +22251,7 @@ rad_sf2                         // (c)2004 Radica
 rad_sf2p                        // (c)2004 Radica
 rad_gen1                        // (c)2004 Radica
 rad_gen2                        // (c)2004 Radica
+rad_md1
 rad_ssoc                        // (c)2004 Radica
 rad_sonic
 rad_orun
@@ -22764,7 +22776,9 @@ tankbatl                        // (c) 1992 Microprose Games Inc.
 dm3270                          //
 
 @source:microdar.cpp
-dibifuca                        //
+dibifuca                        // (c) 199? Compumatic
+dibif743                        // (c) 199? Compumatic
+dibif727                        // (c) 199? Compumatic
 cfarwest                        // (c) 1997 Compumatic
 prospdp                         // (c) 1997 Compumatic
 diolakoa                        // (c) 1997 Compumatic
@@ -31458,6 +31472,7 @@ monkeyba                        // 2001.05 Monkey Ball
 mslug6                          // 2006.02 Metal Slug 6
 mushi2k4                        // 2004.?? MushiKing The King Of Beetles 2004 Second (Japan)
 mushi2k5                        // 2005.?? MushiKing The King Of Beetles 2005 First (Japan)
+mushi2k62                       // 2006.?? MushiKing The King Of Beetles 2006 Second (Japan)
 mushike                         // 2004.?? MushiKing The King Of Beetle (2K3 2ND Ver. 1.003-, World)
 mushikeo                        // 2004.?? MushiKing The King Of Beetle (2K3 2ND Ver. 1.002-, World)
 mushikep                        // 2004.?? MushiKing The King Of Beetle (Prototype)
@@ -32184,113 +32199,122 @@ max10in1
 vsmaxx25
 vsmaxx15
 
-@source:nes_vt.cpp
+@source:nes_vt02_vt03.cpp
 vdogdeme
 vdogdemo
-pinkjelly                       // From V.R. Technology VT SDK
-vtpinball                       // From V.R. Technology VT SDK
-vtsndtest                       // From V.R. Technology VT SDK
-vtboxing                        // From V.R. Technology VT SDK
+pinkjelly
+vtpinball
+vtsndtest
+vtboxing
+ablpinb
+sporzpp
+sporzbx
+sporztn
+wldsoctv
+mc_dgear
+sudopptv
+megapad
+ablmini
+solargm
+zudugo
+timetp36
+timetp7
+majkon
+majgnc
+vsmaxx17
+polmega
+dgun851
+silv35
+vsmaxxvd
+vsmaxx77
+techni4
+senwld
+protpp
+mc_sp69
+ablping
+mc_sam60
+zdog
+pjoyn50
+pjoys30
+pjoys60
+sarc110
+sarc110a
+mc_110cb
+mc_138cb
+cbrs8
+rfcp168
+gprnrs1
+gprnrs16
+ddrdismx
+ddrstraw
+dbdancem
+sen101
+mc_dg101
+mc_aa2
+mc_105te
+mc_8x6cb
+mc_9x6ss
+mc_9x6sa
+mc_7x6ss
+mc_8x6ss
+mc_dcat8
+mc_dcat8a
+mc_89in1
+mc_tv200
+dgun2500
+ppgc200g
+
+@source:nes_vt09.cpp
 msiwwe
 msiwwea
 msidd
 msimpac
-msisinv
 msimm2
+msisinv
 msifrog
-ablpinb
-mc_dgear
-dgun2500
+cybar120
+vsmaxtx2
+senario25
+rcapnp
+dturbogt
+ventur25
+vgpocket
+vgpmini
+vgtablet
+
+@source:nes_vt32_vt369.cpp
+bittboy
+mc_pg150
+mc_hh210
+dvnimbus
+unkra200
+fapocket
+sy889
+sy888b
+mc_cb280
+mog_m320
+dgun2573
+dgun2573a
+rminitv
+fcpocket
 dgun2561
+dgun2593
 lxcmcy
 lxcmc250
 lxcmcysw
 lxcmcyfz
 lxcmcydp
 lxcmcysp
-lxcmcypp
 lxcmcycr
+lxcmcypp
 lxccminn
 lxccplan
 rtvgc300
 rtvgc300fz
 red5mam
-cybar120
-sen101
-mc_dg101
-mc_aa2
-mc_105te
-mc_sp69
-vsmaxx17
-vsmaxtx2
-vsmaxx77
-vsmaxxvd
-polmega
-silv35
-lpgm240
-mc_dcat8
-mc_dcat8a
-pjoyn50
-pjoys30
-pjoys60
-sarc110
-sarc110a
-mc_8x6cb
-mc_9x6ss
-mc_9x6sa
-mc_110cb
-mc_138cb
-mc_7x6ss
-mc_8x6ss
-mc_sam60
-vgtablet
-gprnrs1
-gprnrs16
-ddrdismx                        // (c) 2006 Majesco / Konami [(c) 2001 Disney on title screen]
-ddrstraw                        // (c) 2006 Majesco / Konami
-dbdancem
-megapad
-timetp36
-timetp7
-majkon
-majgnc
-sudopptv
-zudugo
-ablping
-protpp
-vgpocket
-vgpmini
-sy889
-sy888b
-rfcp168
-dgun2573
-dgun2573a
-dgun2593
-bittboy
-mc_89in1
-mc_cb280
-mc_pg150
-mc_hh210
-dvnimbus
-cbrs8
-mc_tv200
-rminitv
-unkra200
-ppgc200g
-fcpocket
-mog_m320
-fapocket
-zdog
-otrail
 denv150
-techni4
-sporzpp
-sporzbx
-sporztn
-wldsoctv
-solargm
-ablmini
-senwld
+lpgm240
+otrail
 zonefusn
 
 @source:newbrain.cpp
@@ -32656,8 +32680,8 @@ racingj                         // GX676 (c)1998
 racingj2                        // GX888 (c)1999 (EAE)
 racingj2j                       // GX888 (c)1999 (JAE)
 thrilld                         // GX713 (c)1998 Japan JAE
-thrilldae                       // GX713 (c)1998 Europe EAA
 thrilldb                        // GX713 (c)1998 Japan JAB
+thrilldbe                       // GX713 (c)1998 Europe EAB
 
 @source:nycaptor.cpp
 bronx                           // bootleg
@@ -34188,6 +34212,10 @@ photoply2ksp                    // (c) 2000 Funworld
 photoply2k1it                   // (c) 2001 Funworld
 photoply2k4                     // (c) 2004 Funworld
 
+@source:photoplysx.cpp
+photopsxsp                      // (c) 2004 Funworld
+photopsxusp                     // (c) 200? Funworld
+
 @source:phunsy.cpp
 phunsy                          //
 
@@ -35028,11 +35056,6 @@ px8                             //
 pyl601                          //
 pyl601a                         //
 
-@source:pyson.cpp
-pyson                           // Konami Pyson Bios
-wswe                            // World Soccer Winning Eleven
-wswe2k3                         // World Soccer Winning Eleven 2003
-
 @source:pzletime.cpp
 pzletime                        //
 
@@ -35366,6 +35389,9 @@ rex6000                         //
 
 @source:rfslots8085.cpp
 unkrfslt                        //
+
+@source:rfslotspcpent.cpp
+rfsantafeg                      // (c) 2014 Recreativos Franco
 
 @source:rgum.cpp
 rgum                            //
@@ -41301,7 +41327,6 @@ p911ea                          // 2001
 p911j                           // 2001
 p911kc                          // 2001
 p911uc                          // 2001
-popn9                           // 2003
 ppp2nd                          // 2001
 sogeki                          // 2001
 sscopefh                        // 2002

@@ -595,6 +595,7 @@ sound_stream::sound_stream(device_t &device, u32 inputs, u32 outputs, u32 output
 	// create a unique tag for saving
 	std::string state_tag = string_format("%d", m_device.machine().sound().unique_id());
 	auto &save = m_device.machine().save();
+	save.save_item(&m_device, "stream.sample_rate", state_tag.c_str(), 0, NAME(m_sample_rate));
 	save.register_postload(save_prepost_delegate(FUNC(sound_stream::postload), this));
 
 	// initialize all inputs
@@ -744,6 +745,7 @@ read_stream_view sound_stream::update_view(attotime start, attotime end, u32 out
 					m_input_view[inputnum] = m_input[inputnum].update(update_start, end);
 				else
 					m_input_view[inputnum] = empty_view(update_start, end);
+				sound_assert(m_input_view[inputnum].samples() > 0);
 				sound_assert(m_resampling_disabled || m_input_view[inputnum].sample_rate() == m_sample_rate);
 			}
 
