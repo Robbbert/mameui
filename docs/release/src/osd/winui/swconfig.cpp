@@ -29,7 +29,7 @@ software_config *software_config_alloc(int driver_index) //, hashfile_error_func
 	// allocate the machine config
 	windows_options o;
 	load_options(o, OPTIONS_GAME, driver_index, 1);  // need software loaded via optional slots
-	config->mconfig = global_alloc(machine_config(driver_list::driver(driver_index), o));
+	config->mconfig = new machine_config(driver_list::driver(driver_index), o);
 
 	// other stuff
 	config->driver_index = driver_index;
@@ -44,8 +44,7 @@ void software_config_free(software_config *config)
 {
 	if (config->mconfig)
 	{
-		global_free(config->mconfig);
-		config->mconfig = NULL;
+		delete config->mconfig;
 	}
 
 	/*if (config->hashfile != NULL)
