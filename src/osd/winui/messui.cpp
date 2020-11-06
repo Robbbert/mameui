@@ -17,6 +17,7 @@
 #include "winui.h"
 #include "resource.h"
 #include "mui_opts.h"
+#include "emu_opts.h"
 #include "picker.h"
 #include "tabview.h"
 #include "mui_util.h"
@@ -454,7 +455,7 @@ static string ProcessSWDir(int drvindex)
 	char dir0[2048];
 	char *t0 = 0;
 	printf("ProcessSWDir: A\n");fflush(stdout);
-	string t = GetSWDir();
+	string t = dir_get_value(13);
 	if (!t.empty())
 	{
 		printf("ProcessSWDir: B=%s\n",t.c_str());fflush(stdout);
@@ -1215,7 +1216,7 @@ static void CleanupImageTypes(mess_image_type *types, int count)
 
 static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_interface *dev)
 {
-	string dst = GetSWDir();
+	string dst = dir_get_value(13);
 	// We only want the first path; throw out the rest
 	size_t i = dst.find(';');
 	if (i != string::npos)
@@ -1887,7 +1888,7 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 	if (software)
 	{
 		string as, dst;
-		string t = GetRomDirs();
+		string t = dir_get_value(2);
 		char rompath[t.size()+1];
 		strcpy(rompath, t.c_str());
 		char* sl_root = strtok(rompath, ";");

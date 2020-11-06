@@ -22,6 +22,7 @@
 #include "winutf8.h"
 #include "audit.h"
 #include "resource.h"
+#include "emu_opts.h"
 #include "mui_opts.h"
 #include "mui_util.h"
 #include "properties.h"
@@ -40,7 +41,7 @@ static DWORD WINAPI AuditThreadProc(LPVOID hDlg);
 static INT_PTR CALLBACK AuditWindowProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam);
 static void ProcessNextRom(void);
 static void ProcessNextSample(void);
-static void CLIB_DECL DetailsPrintf(const char *fmt, ...) ATTR_PRINTF(1,2);
+static void CLIB_DECL DetailsPrintf(int box, const char *fmt, ...) ATTR_PRINTF(2,3);
 static const char * StatusString(int iStatus);
 
 /***************************************************************************
@@ -178,7 +179,7 @@ int MameUIVerifyRomSet(int game, bool choice)
 	}
 
 	// output the summary of the audit
-	DetailsPrintf("%s", summary_string.c_str());
+	DetailsPrintf(0, "%s", summary_string.c_str());
 
 	SetRomAuditResults(game, summary);
 	return summary;
@@ -204,7 +205,7 @@ int MameUIVerifySampleSet(int game)
 	}
 
 	// output the summary of the audit
-	DetailsPrintf("%s", summary_string.c_str());
+	DetailsPrintf(1, "%s", summary_string.c_str());
 
 	SetSampleAuditResults(game, summary);
 	return summary;
@@ -421,21 +422,32 @@ static void ProcessNextSample()
 
 	if (sample_index == driver_list::total())
 	{
-		DetailsPrintf("Audit complete.\n");
+		DetailsPrintf(1, "Audit complete.\n");
 		SendDlgItemMessage(hAudit, IDCANCEL, WM_SETTEXT, 0, (LPARAM)TEXT("Close"));
 		sample_index = -1;
 	}
 }
 
-static void CLIB_DECL DetailsPrintf(const char *fmt, ...)
+static void CLIB_DECL DetailsPrintf(int box, const char *fmt, ...)
 {
 	//RS 20030613 Different Ids for Property Page and Dialog
 	// so see which one's currently instantiated
-	HWND hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS);
-	if (hEdit ==  NULL)
-		hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS_PROP);
+	HWND hEdit = 0;
+	if (box == 0)
+	{
+		hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS);
+		if (!hEdit)
+			hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS_PROP0);
+	}
+	else
+	if (box == 1)
+	{
+		hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS);
+		if (!hEdit)
+			hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS_PROP1);
+	}
 
-	if (hEdit == NULL)
+	if (!hEdit)
 	{
 		// Auditing via F5 - no window to display the results
 		//printf("audit detailsprintf() can't find any audit control\n");
