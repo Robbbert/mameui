@@ -205,15 +205,19 @@ void ResetFilters(void)
 
 void InitTree(LPCFOLDERDATA lpFolderData, LPCFILTER_ITEM lpFilterList)
 {
+	printf("InitTree: A\n");fflush(stdout);
 	g_lpFolderData = lpFolderData;
 	g_lpFilterList = lpFilterList;
 
+	printf("InitTree: B\n");fflush(stdout);
 	InitFolders();
+	printf("InitTree: C\n");fflush(stdout);
 
 	/* this will subclass the treeview (where WM_DRAWITEM gets sent for the header control) */
 	LONG_PTR l = GetWindowLongPtr(GetTreeView(), GWLP_WNDPROC);
 	g_lpTreeWndProc = (WNDPROC)l;
 	SetWindowLongPtr(GetTreeView(), GWLP_WNDPROC, (LONG_PTR)TreeWndProc);
+	printf("InitTree: Finished\n");fflush(stdout);
 }
 
 void SetCurrentFolder(LPTREEFOLDER lpFolder)
@@ -401,6 +405,7 @@ LPCFILTER_ITEM GetFilterList(void)
 
 void CreateSourceFolders(int parent_index)
 {
+	printf("Source: A\n");fflush(stdout);
 	int i, k=0;
 	int nGames = driver_list::total();
 	int start_folder = numFolders;
@@ -454,6 +459,7 @@ void CreateSourceFolders(int parent_index)
 
 void CreateScreenFolders(int parent_index)
 {
+	printf("Screen: A\n");fflush(stdout);
 	int i, k=0;
 	int nGames = driver_list::total();
 	int start_folder = numFolders;
@@ -507,6 +513,7 @@ void CreateScreenFolders(int parent_index)
 
 void CreateManufacturerFolders(int parent_index)
 {
+	printf("Manufacturer: A\n");fflush(stdout);
 	int i;
 	int nGames = driver_list::total();
 	int start_folder = numFolders;
@@ -880,6 +887,7 @@ static const char *TrimManufacturer(const char *s)
 
 void CreateBIOSFolders(int parent_index)
 {
+	printf("BIOS: A\n");fflush(stdout);
 	int i, nGames = driver_list::total();
 	int start_folder = numFolders;
 	const game_driver *drv;
@@ -926,6 +934,7 @@ void CreateBIOSFolders(int parent_index)
 
 void CreateCPUFolders(int parent_index)
 {
+	printf("CPU: A\n");fflush(stdout);
 	int device_folder_count = 0;
 	LPTREEFOLDER device_folders[512];
 	LPTREEFOLDER folder;
@@ -981,6 +990,7 @@ void CreateCPUFolders(int parent_index)
 
 void CreateSoundFolders(int parent_index)
 {
+	printf("Sound: A\n");fflush(stdout);
 	int device_folder_count = 0;
 	LPTREEFOLDER device_folders[512];
 	LPTREEFOLDER folder;
@@ -1038,6 +1048,7 @@ void CreateSoundFolders(int parent_index)
 
 void CreateDeficiencyFolders(int parent_index)
 {
+	printf("Deficiency: A\n");fflush(stdout);
 	int nGames = driver_list::total();
 	LPTREEFOLDER lpFolder = treeFolders[parent_index];
 
@@ -1171,6 +1182,7 @@ void CreateDeficiencyFolders(int parent_index)
 
 void CreateDumpingFolders(int parent_index)
 {
+	printf("Dumping: A\n");fflush(stdout);
 	BOOL bBadDump  = false;
 	BOOL bNoDump = false;
 	int nGames = driver_list::total();
@@ -1248,6 +1260,7 @@ void CreateDumpingFolders(int parent_index)
 
 void CreateYearFolders(int parent_index)
 {
+	printf("Year: A\n");fflush(stdout);
 	int i,jj;
 	int nGames = driver_list::total();
 	int start_folder = numFolders;
@@ -1301,6 +1314,7 @@ void CreateYearFolders(int parent_index)
 
 void CreateResolutionFolders(int parent_index)
 {
+	printf("Resolution: A\n");fflush(stdout);
 	int i,jj;
 	int nGames = driver_list::total();
 	int start_folder = numFolders;
@@ -1370,6 +1384,7 @@ void CreateResolutionFolders(int parent_index)
 
 void CreateFPSFolders(int parent_index)
 {
+	printf("FPS: A\n");fflush(stdout);
 	int i,jj;
 	int nGames = driver_list::total();
 	int start_folder = numFolders;
@@ -1649,9 +1664,10 @@ static void DeleteFolder(LPTREEFOLDER lpFolder)
 /* Can be called to re-initialize the array of treeFolders */
 BOOL InitFolders(void)
 {
+	printf("InitFolders: A\n");fflush(stdout);
 	int i = 0;
 	DWORD dwFolderFlags;
-	if (treeFolders != NULL)
+	if (treeFolders)
 	{
 		for (i = numFolders - 1; i >= 0; i--)
 		{
@@ -1660,6 +1676,7 @@ BOOL InitFolders(void)
 			numFolders--;
 		}
 	}
+	printf("InitFolders: B\n");fflush(stdout);
 	numFolders = 0;
 	if (folderArrayLength == 0)
 	{
@@ -1667,17 +1684,20 @@ BOOL InitFolders(void)
 		treeFolders = (TREEFOLDER **)malloc(sizeof(TREEFOLDER **) * folderArrayLength);
 		if (!treeFolders)
 		{
+			printf("InitFolders: C\n");fflush(stdout);
 			folderArrayLength = 0;
 			return 0;
 		}
 		else
 			memset(treeFolders,'\0', sizeof(TREEFOLDER **) * folderArrayLength);
 	}
+	printf("InitFolders: D\n");fflush(stdout);
 	// built-in top level folders
 	for (i = 0; g_lpFolderData[i].m_lpTitle; i++)
 	{
 		if (RequiredDriverCache() || (!RequiredDriverCache() && !g_lpFolderData[i].m_process))
 		{
+			printf("InitFolders: E\n");fflush(stdout);
 			LPCFOLDERDATA fData = &g_lpFolderData[i];
 			/* get the saved folder flags */
 			dwFolderFlags = GetFolderFlags(numFolders);
@@ -1686,6 +1706,7 @@ BOOL InitFolders(void)
 		}
 	}
 
+	printf("InitFolders: F\n");fflush(stdout);
 	numExtraFolders = InitExtraFolders();
 
 	for (i = 0; i < numExtraFolders; i++)
@@ -1704,13 +1725,15 @@ BOOL InitFolders(void)
 			AddFolder(NewFolder(fExData->m_szTitle,fExData->m_nFolderId,fExData->m_nParent, fExData->m_nIconId,dwFolderFlags));
 	}
 
-// creates child folders of all the top level folders, including custom ones
+	printf("InitFolders: G=%d\n",numFolders);fflush(stdout);
+	// creates child folders of all the top level folders, including custom ones
 	int num_top_level_folders = numFolders;
 
 	for (int i = 0; i < num_top_level_folders; i++)
 	{
 		LPTREEFOLDER lpFolder = treeFolders[i];
 		LPCFOLDERDATA lpFolderData = NULL;
+		printf("InitFolders: G1\n");fflush(stdout);
 
 		for (int j = 0; g_lpFolderData[j].m_lpTitle; j++)
 		{
@@ -1721,19 +1744,37 @@ BOOL InitFolders(void)
 			}
 		}
 
+		printf("InitFolders: G2\n");fflush(stdout);
 		if (lpFolderData)
 		{
+			printf("InitFolders: G3\n");fflush(stdout);
 			if (lpFolderData->m_pfnCreateFolders)
 			{
+				printf("InitFolders: G4\n");fflush(stdout);
 				if (RequiredDriverCache() && lpFolderData->m_process) // rebuild cache
+				{
+					printf("InitFolders: G41\n");fflush(stdout);
 					lpFolderData->m_pfnCreateFolders(i);
+					printf("InitFolders: G42\n");fflush(stdout);
+				}
 				else
-				if (!lpFolderData->m_process) // build every time (CreateDeficiencyFolders)
-					lpFolderData->m_pfnCreateFolders(i);
+				{
+					printf("InitFolders: G43\n");fflush(stdout);
+					if (!lpFolderData->m_process) // build every time (CreateDeficiencyFolders)
+					{
+						printf("InitFolders: G44\n");fflush(stdout);
+						lpFolderData->m_pfnCreateFolders(i);
+						printf("InitFolders: G45\n");fflush(stdout);
+					}
+					printf("InitFolders: G46\n");fflush(stdout);
+				}
+				printf("InitFolders: G47\n");fflush(stdout);
 			}
+			printf("InitFolders: G48\n");fflush(stdout);
 		}
 		else
 		{
+			printf("InitFolders: G5\n");fflush(stdout);
 			if ((lpFolder->m_dwFlags & F_CUSTOM) == 0)
 			{
 				printf("Internal inconsistency with non-built-in folder, but not custom\n");
@@ -1743,16 +1784,19 @@ BOOL InitFolders(void)
 			//printf("Loading custom folder %i %i\n",i,lpFolder->m_nFolderId);
 
 			// load the extra folder files, which also adds children
+			printf("InitFolders: G6\n");fflush(stdout);
 			if (TryAddExtraFolderAndChildren(i) == false)
 				lpFolder->m_nFolderId = FOLDER_NONE;
 		}
 	}
 
+	printf("InitFolders: H\n");fflush(stdout);
 	CreateTreeIcons();
 	ResetWhichGamesInFolders();
 	ResetTreeViewFolders();
 	SelectTreeViewFolder(GetSavedFolderID());
 	LoadFolderFlags();
+	printf("InitFolders: Finished\n");fflush(stdout);
 	return true;
 }
 
@@ -2496,12 +2540,14 @@ int GetTreeViewIconIndex(int icon_id)
 
 static void SaveExternalFolders(int parent_index, const char *fname)
 {
+	printf("SaveExternalFolders: A:%s\n",fname);fflush(stdout);
 	string val = dir_get_value(24);
 	char s[val.size()+1];
 	strcpy(s, val.c_str());
 	char *fdir = strtok(s, ";"); // get first dir
 
 	// create directory if needed
+	printf("SaveExternalFolders: B\n");fflush(stdout);
 	wchar_t *temp = ui_wstring_from_utf8(fdir);
 	BOOL res = CreateDirectory(temp, NULL);
 	free(temp);
@@ -2515,6 +2561,7 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 	}
 
 	// create/truncate file
+	printf("SaveExternalFolders: C\n");fflush(stdout);
 	string filename = fdir + string("\\") + fname + string(".ini");
 	FILE *f = fopen(filename.c_str(), "w");
 	if (f == NULL)
@@ -2524,17 +2571,20 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 	}
 
 	// Populate the file
+	printf("SaveExternalFolders: D\n");fflush(stdout);
 	fprintf(f, "[FOLDER_SETTINGS]\n");
 	fprintf(f, "RootFolderIcon custom\n");
 	fprintf(f, "SubFolderIcon custom\n");
 
 	/* need to loop over all our TREEFOLDERs--first the root one, then each child.
 	start with the root */
+	printf("SaveExternalFolders: E\n");fflush(stdout);
 	LPTREEFOLDER lpFolder = treeFolders[parent_index];
 	TREEFOLDER *folder_data = lpFolder;
 	fprintf(f, "\n[ROOT_FOLDER]\n");
 
 	int i;
+	printf("SaveExternalFolders: F\n");fflush(stdout);
 	for (i = 0; i < driver_list::total(); i++)
 	{
 		if (TestBit(folder_data->m_lpGameBits, i))
@@ -2542,6 +2592,7 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 	}
 
 	/* look through the custom folders for ones with our root as parent */
+	printf("SaveExternalFolders: G\n");fflush(stdout);
 	for (int jj = 0; jj < numFolders; jj++)
 	{
 		folder_data = treeFolders[jj];
@@ -2558,8 +2609,9 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 		}
 	}
 
+	printf("SaveExternalFolders: H\n");fflush(stdout);
 	fclose(f);
-	printf("SaveExternalFolders: Saved file %s.\n",filename.c_str());
+	printf("SaveExternalFolders: Saved file %s.\n",filename.c_str());fflush(stdout);
 }
 
 /* End of source file */
