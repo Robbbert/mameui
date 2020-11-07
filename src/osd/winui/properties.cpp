@@ -172,10 +172,8 @@ static void OptionsToProp(HWND hWnd, windows_options &o);
 static void SetPropEnabledControls(HWND hWnd);
 static bool SelectLUAScript(HWND hWnd);
 static bool ResetLUAScript(HWND hWnd);
-static bool SelectMameShader(HWND, int);
-static bool ResetMameShader(HWND, int);
-static bool SelectScreenShader(HWND, int);
-static bool ResetScreenShader(HWND, int);
+static bool SelectGLSLShader(HWND, int, BOOL);
+static bool ResetGLSLShader(HWND, int, BOOL);
 static bool SelectPlugins(HWND hWnd);
 static bool ResetPlugins(HWND hWnd);
 static bool SelectBGFXChains(HWND hWnd);
@@ -1196,7 +1194,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			case IDC_SELECT_SHADER2:
 			case IDC_SELECT_SHADER3:
 			case IDC_SELECT_SHADER4:
-				changed = SelectMameShader(hDlg, (wID - IDC_SELECT_SHADER0));
+				changed = SelectGLSLShader(hDlg, (wID - IDC_SELECT_SHADER0), 0);
 				break;
 
 			case IDC_RESET_SHADER0:
@@ -1204,7 +1202,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			case IDC_RESET_SHADER2:
 			case IDC_RESET_SHADER3:
 			case IDC_RESET_SHADER4:
-				changed = ResetMameShader(hDlg, (wID - IDC_RESET_SHADER0));
+				changed = ResetGLSLShader(hDlg, (wID - IDC_RESET_SHADER0), 0);
 				break;
 
 			case IDC_SELECT_SCR_SHADER0:
@@ -1212,7 +1210,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			case IDC_SELECT_SCR_SHADER2:
 			case IDC_SELECT_SCR_SHADER3:
 			case IDC_SELECT_SCR_SHADER4:
-				changed = SelectScreenShader(hDlg, (wID - IDC_SELECT_SCR_SHADER0));
+				changed = SelectGLSLShader(hDlg, (wID - IDC_SELECT_SCR_SHADER0), 1);
 				break;
 
 			case IDC_RESET_SCR_SHADER0:
@@ -1220,7 +1218,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			case IDC_RESET_SCR_SHADER2:
 			case IDC_RESET_SCR_SHADER3:
 			case IDC_RESET_SCR_SHADER4:
-				changed = ResetScreenShader(hDlg, (wID - IDC_RESET_SCR_SHADER0));
+				changed = ResetGLSLShader(hDlg, (wID - IDC_RESET_SCR_SHADER0), 1);
 				break;
 
 			case IDC_SELECT_BGFX:
@@ -1564,15 +1562,28 @@ static void UpdateProperties(HWND hDlg, datamap *map, windows_options &o)
 	SetPropEnabledControls(hDlg);
 }
 
-static bool SelectMameShader(HWND hWnd, int slot)
+/* Note with shaders:
+	MAME shader has *.vsh, plus *_rgb32_dir.fsh
+	SCREEN shader has *.vsh, plus *.fsh
+	In both cases, the vsh is entered into the ini-file, but without the extension */
+static bool SelectGLSLShader(HWND hWnd, int slot, BOOL is_scr)
 {
 	char filename[MAX_PATH];
 	bool changed = false;
 	char shader[32];
-	int dialog = IDC_MAME_SHADER0 + slot;
+	int dialog;
 
 	*filename = 0;
-	snprintf(shader, WINUI_ARRAY_LENGTH(shader), "glsl_shader_mame%d", slot);
+	if (is_scr)
+	{
+		dialog = IDC_SCREEN_SHADER0 + slot;
+		snprintf(shader, WINUI_ARRAY_LENGTH(shader), "glsl_shader_screen%d", slot);
+	}
+	else
+	{
+		dialog = IDC_MAME_SHADER0 + slot;
+		snprintf(shader, WINUI_ARRAY_LENGTH(shader), "glsl_shader_mame%d", slot);
+	}
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_SHADER_FILES))
 	{
@@ -1587,7 +1598,8 @@ static bool SelectMameShader(HWND hWnd, int slot)
 
 		if (strcmp(option, m_CurrentOpts.value(shader)))
 		{
-			emu_set_value(m_CurrentOpts, shader, option);
+			filename[strlen(filename)-4] = '\0';    // must remove ext or glsl fails
+			emu_set_value(m_CurrentOpts, shader, filename);
 			win_set_window_text_utf8(GetDlgItem(hWnd, dialog), option);
 			changed = true;
 		}
@@ -1596,14 +1608,23 @@ static bool SelectMameShader(HWND hWnd, int slot)
 	return changed;
 }
 
-static bool ResetMameShader(HWND hWnd, int slot)
+static bool ResetGLSLShader(HWND hWnd, int slot, BOOL is_scr)
 {
 	bool changed = false;
 	const char *new_value = "none";
 	char option[32];
-	int dialog = IDC_MAME_SHADER0 + slot;
+	int dialog;
 
-	snprintf(option, WINUI_ARRAY_LENGTH(option), "glsl_shader_mame%d", slot);
+	if (is_scr)
+	{
+		dialog = IDC_SCREEN_SHADER0 + slot;
+		snprintf(option, WINUI_ARRAY_LENGTH(option), "glsl_shader_screen%d", slot);
+	}
+	else
+	{
+		dialog = IDC_MAME_SHADER0 + slot;
+		snprintf(option, WINUI_ARRAY_LENGTH(option), "glsl_shader_mame%d", slot);
+	}
 
 	if (strcmp(new_value, m_CurrentOpts.value(option)))
 	{
@@ -1615,58 +1636,7 @@ static bool ResetMameShader(HWND hWnd, int slot)
 	return changed;
 }
 
-static bool SelectScreenShader(HWND hWnd, int slot)
-{
-	char filename[MAX_PATH];
-	bool changed = false;
-	char shader[32];
-	int dialog = IDC_SCREEN_SHADER0 + slot;
-
-	*filename = 0;
-	snprintf(shader, WINUI_ARRAY_LENGTH(shader), "glsl_shader_screen%d", slot);
-
-	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_SHADER_FILES))
-	{
-		char option[MAX_PATH];
-		wchar_t *t_filename = ui_wstring_from_utf8(filename);
-		wchar_t *tempname = PathFindFileName(t_filename);
-		PathRemoveExtension(tempname);
-		char *optname = ui_utf8_from_wstring(tempname);
-		strcpy(option, optname);
-		free(t_filename);
-		free(optname);
-
-		if (strcmp(option, m_CurrentOpts.value(shader)))
-		{
-			emu_set_value(m_CurrentOpts, shader, option);
-			win_set_window_text_utf8(GetDlgItem(hWnd, dialog), option);
-			changed = true;
-		}
-	}
-
-	return changed;
-}
-
-static bool ResetScreenShader(HWND hWnd, int slot)
-{
-	bool changed = false;
-	const char *new_value = "none";
-	char option[32];
-	int dialog = IDC_SCREEN_SHADER0 + slot;
-
-	snprintf(option, WINUI_ARRAY_LENGTH(option), "glsl_shader_screen%d", slot);
-
-	if (strcmp(new_value, m_CurrentOpts.value(option)))
-	{
-		emu_set_value(m_CurrentOpts, option, new_value);
-		win_set_window_text_utf8(GetDlgItem(hWnd, dialog), "None");
-		changed = true;
-	}
-
-	return changed;
-}
-
-static void UpdateMameShader(HWND hWnd, int slot, windows_options &opts)
+static void UpdateMameShader(HWND hWnd, int slot, windows_options &o)
 {
 	HWND hCtrl = GetDlgItem(hWnd, IDC_MAME_SHADER0 + slot);
 
@@ -1674,7 +1644,7 @@ static void UpdateMameShader(HWND hWnd, int slot, windows_options &opts)
 	{
 		char option[32];
 		snprintf(option, WINUI_ARRAY_LENGTH(option), "glsl_shader_mame%d", slot);
-		const char* value = opts.value(option);
+		const char* value = o.value(option);
 
 		if (strcmp(value, "none") == 0)
 			win_set_window_text_utf8(hCtrl, "None");
@@ -1683,7 +1653,7 @@ static void UpdateMameShader(HWND hWnd, int slot, windows_options &opts)
 	}
 }
 
-static void UpdateScreenShader(HWND hWnd, int slot, windows_options &opts)
+static void UpdateScreenShader(HWND hWnd, int slot, windows_options &o)
 {
 	HWND hCtrl = GetDlgItem(hWnd, IDC_SCREEN_SHADER0 + slot);
 
@@ -1691,7 +1661,7 @@ static void UpdateScreenShader(HWND hWnd, int slot, windows_options &opts)
 	{
 		char option[32];
 		snprintf(option, WINUI_ARRAY_LENGTH(option), "glsl_shader_screen%d", slot);
-		const char* value = opts.value(option);
+		const char* value = o.value(option);
 
 		if (strcmp(value, "none") == 0)
 			win_set_window_text_utf8(hCtrl, "None");

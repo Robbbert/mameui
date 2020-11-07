@@ -5266,7 +5266,7 @@ BOOL CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype)
 	case FILETYPE_SHADER_FILES :
 		ofn.lpstrFilter   = TEXT("shaders (*.vsh)\0*.vsh;\0");
 		ofn.lpstrDefExt   = TEXT("vsh");
-		dirname = dir_get_value(22) + PATH_SEPARATOR + "glsl";
+		dirname = dir_get_value(22); // + PATH_SEPARATOR + "glsl";
 //		ofn.lpstrTitle  = TEXT("Select a GLSL shader file");
 		break;
 	case FILETYPE_BGFX_FILES :
