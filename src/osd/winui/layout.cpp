@@ -31,7 +31,6 @@ static BOOL FilterAvailable(uint32_t driver_index)
 	return !DriverUsesRoms(driver_index) || IsAuditResultYes(GetRomAuditResults(driver_index));
 }
 
-// Any folders that are commented out cause MAMEUI to fail at start, probably due to an unstable device
 #ifdef MESS
 extern const FOLDERDATA g_folderData[] =
 {
@@ -183,7 +182,7 @@ extern const PROPERTYSHEETINFO g_propSheets[] =
 	{ TRUE,  NULL,                   IDD_PROP_INPUT,         GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_CONTROLLER,    GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_MISC,          GameOptionsProc },
-	{ TRUE,  NULL,                   IDD_PROP_MISC2,         GameOptionsProc },
+	{ TRUE,  NULL,                   IDD_PROP_LUA,           GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_OPENGL,        GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_SHADER,        GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_SNAP,          GameOptionsProc },

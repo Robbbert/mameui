@@ -426,7 +426,7 @@ IDI_YEAR                ICON                    "res\\year.ico"
 // Property pages
 IDI_ADVANCED            ICON                    "res\\advanced.ico"
 IDI_CHECKMARK           ICON                    "res\\checkmark.ico"
-IDI_DEBUG               ICON                    "res\\debug.ico"
+//IDI_DEBUG               ICON                    "res\\debug.ico"
 IDI_DISPLAY             ICON                    "res\\display.ico"
 IDI_JOYSTICK            ICON                    "res\\joystick.ico"
 IDI_MISC                ICON                    "res\\misc.ico"
@@ -448,7 +448,7 @@ IDI_VECTOR              ICON                    "res\\vector.ico"
 //IDI_INPUTSHEET          ICON                    "res\\keyboard.ico"
 //IDI_CONTROLSHEET        ICON                    "res\\joystick.ico"
 //IDI_MISCSHEET           ICON                    "res\\misc.ico"
-//IDI_MISC2SHEET          ICON                    "res\\debug.ico"
+//IDI_LUASHEET            ICON                    "res\\debug.ico"
 //IDI_SNAPSHEET           ICON                    "res\\snapshot.ico"
 // Winui
 IDI_HEADER_UP           ICON                    "res\\header_up.ico"
@@ -978,29 +978,6 @@ BEGIN
     PUSHBUTTON      "Restore default options",IDC_USE_DEFAULT,118,258,98,14,0,0
 END
 
-IDD_PROP_DEBUG DIALOGEX 0, 0, 220, 280
-STYLE DS_FIXEDSYS | WS_CHILD | WS_CAPTION
-CAPTION "Debug"
-FONT 8, "Tahoma", 0, 0, 0x1
-BEGIN
-    ICON            IDI_MANUFACTURER,IDC_STATIC,20,10,20,20
-    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,52,9,161,25,SS_NOPREFIX
-//    CONTROL         "Enable cheats",IDC_CHEAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,40,86,10,0,HIDC_CHEAT
-//    CONTROL         "Output log to Windows Debugger",IDC_OSLOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,52,124,10,0,HIDC_OSLOG
-//    CONTROL         "Output log to Logfile",IDC_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,64,93,10,0,HIDC_LOG
-//    CONTROL         "Output diagnostic information",IDC_VERBOSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,76,111,10,0,HIDC_VERBOSE
-//    CONTROL         "Update Main window during paused emulation",IDC_UPDATEINPAUSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,88,171,10,0,HIDC_UPDATEINPAUSE
-//    CONTROL         "Activate Integrated Debugger",IDC_DEBUG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,100,118,10,0,HIDC_DEBUG
-
-//    GROUPBOX        "Debugscript",IDC_STATIC,6,116,211,50
-//    EDITTEXT        IDC_DEBUGSCRIPT,14,126,200,14,ES_AUTOHSCROLL | WS_DISABLED
-//    PUSHBUTTON      "Select Debugscript",IDC_SELECT_DEBUGSCRIPT,14,145,67,14,0,0,HIDC_SELECT_DEBUGSCRIPT
-//    PUSHBUTTON      "Reset Debugscript",IDC_RESET_DEBUGSCRIPT,149,145,65,14,0,0,HIDC_RESET_DEBUGSCRIPT
-
-//    PUSHBUTTON      "Reset",IDC_PROP_RESET,4,258,97,14,0,0,HIDC_PROP_RESET
-    PUSHBUTTON      "Restore Default Settings",IDC_USE_DEFAULT,120,258,97,14,0,0,HIDC_USE_DEFAULT
-END
-
 IDD_PROP_INPUT DIALOGEX 0, 0, 220, 280
 STYLE DS_FIXEDSYS | WS_CHILD | WS_CAPTION
 CAPTION "Controllers"
@@ -1070,7 +1047,7 @@ BEGIN
     PUSHBUTTON      "Restore Default Settings",IDC_USE_DEFAULT,118,258,97,14,0,0,HIDC_USE_DEFAULT
 END
 
-IDD_PROP_MISC2 DIALOGEX 0, 0, 220, 280
+IDD_PROP_LUA DIALOGEX 0, 0, 220, 280
 STYLE WS_CHILD | WS_DISABLED | WS_CAPTION | DS_SETFONT
 CAPTION "LUA"
 FONT 8, "Tahoma"
@@ -1523,7 +1500,7 @@ BEGIN
         BOTTOMMARGIN, 236
     END
 
-    IDD_PROP_MISC2, DIALOG
+    IDD_PROP_LUA, DIALOG
     BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 213

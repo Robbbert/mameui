@@ -27,9 +27,6 @@
 #include <sys/stat.h>
 #include <tchar.h>
 
-/* Uncomment to add Direct Draw support (has to be added back to the core too) */
-//#define UI_DIRECTDRAW
-
 // MAME/MAMEUI headers
 #include "emu.h"
 #include "mame.h"
@@ -58,9 +55,6 @@
 #include "help.h"
 #include "history.h"
 #include "dialogs.h"
-#ifdef UI_DIRECTDRAW
-#include "directdraw.h"
-#endif
 #include "directinput.h"
 #include "dijoystick.h"     /* For DIJoystick availability. */
 #include "softwarelist.h"
@@ -1822,15 +1816,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	ShowWindow(hStatusBar, (bShowStatusBar) ? SW_SHOW : SW_HIDE);
 	CheckMenuItem(GetMenu(hMain), ID_VIEW_PAGETAB, (bShowTabCtrl) ? MF_CHECKED : MF_UNCHECKED);
 
-#ifdef UI_DIRECTDRAW
-	/* Init DirectDraw */
-	if (!DirectDraw_Initialize())
-	{
-		DialogBox(GetModuleHandle(NULL),MAKEINTRESOURCE(IDD_DIRECTX), NULL, DirectXDialogProc);
-		return false;
-	}
-#endif
-
 	LoadBackgroundBitmap();
 
 	printf("Win32UI_init: About to init tree\n");fflush(stdout);
@@ -1997,10 +1982,6 @@ static void Win32UI_exit()
 	DestroyAcceleratorTable(hAccel);
 
 	DirectInputClose();
-
-#ifdef UI_DIRECTDRAW
-	DirectDraw_Close();
-#endif
 
 	SetSavedFolderID(GetCurrentFolderID());
 	SaveGameListOptions();

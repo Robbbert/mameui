@@ -124,9 +124,6 @@ b) Exit the dialog.
 #endif
 
 #include "newuires.h"
-#ifdef UI_DIRECTDRAW
-#include "directdraw.h"    /* has to be after samples.h */
-#endif
 #include "properties.h"
 #include "drivenum.h"
 #include "machine/ram.h"
@@ -262,9 +259,6 @@ const DUALCOMBOSTR m_cb_Video[] =
 {
 	{ TEXT("Auto"),             "auto"    },
 	{ TEXT("GDI"),              "gdi"     },
-#ifdef UI_DIRECTDRAW
-	{ TEXT("DirectDraw"),       "ddraw"   }, // removed 20160217
-#endif
 	{ TEXT("Direct3D"),         "d3d"     },
 	{ TEXT("BGFX"),             "bgfx"    },
 	{ TEXT("OpenGL"),           "opengl"  },
@@ -1900,25 +1894,13 @@ static void SetPropEnabledControls(HWND hWnd)
 	// auto is a reserved word
 	bool autov = (core_stricmp(m_CurrentOpts.value(OSDOPTION_VIDEO), "auto")==0);
 	bool d3d = (core_stricmp(m_CurrentOpts.value(OSDOPTION_VIDEO), "d3d")==0) | autov;
-#ifdef UI_DIRECTDRAW
-	bool ddraw = (core_stricmp(m_CurrentOpts.value(OSDOPTION_VIDEO), "ddraw")==0) | autov;
-#else
-	bool ddraw = false;
-#endif
-
 	in_window = m_CurrentOpts.bool_value(OSDOPTION_WINDOW);
 	Button_SetCheck(GetDlgItem(hWnd, IDC_ASPECT), g_bAutoAspect[m_currScreen+1] );
-
-	EnableWindow(GetDlgItem(hWnd, IDC_WAITVSYNC), d3d|ddraw);
-	EnableWindow(GetDlgItem(hWnd, IDC_TRIPLE_BUFFER), d3d|ddraw);
-	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALE), d3d|ddraw);
-	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALEDISP), d3d|ddraw);
-	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALETEXT), d3d|ddraw);
-#ifdef UI_DIRECTDRAW
-	EnableWindow(GetDlgItem(hWnd, IDC_HWSTRETCH), ddraw && DirectDraw_HasHWStretch());
-#else
-	EnableWindow(GetDlgItem(hWnd, IDC_HWSTRETCH), false);
-#endif
+	EnableWindow(GetDlgItem(hWnd, IDC_WAITVSYNC), d3d);
+	EnableWindow(GetDlgItem(hWnd, IDC_TRIPLE_BUFFER), d3d);
+	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALE), d3d);
+	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALEDISP), d3d);
+	EnableWindow(GetDlgItem(hWnd, IDC_PRESCALETEXT), d3d);
 	EnableWindow(GetDlgItem(hWnd, IDC_SWITCHRES), true);
 	EnableWindow(GetDlgItem(hWnd, IDC_SYNCREFRESH), true);
 	EnableWindow(GetDlgItem(hWnd, IDC_REFRESH), !in_window);
@@ -2569,10 +2551,7 @@ static void BuildDataMap(void)
 
 	// core debugging options
 	datamap_add(properties_datamap, IDC_LOG,					DM_BOOL,	OPTION_LOG);
-	datamap_add(properties_datamap, IDC_DEBUG,					DM_BOOL,	OPTION_DEBUG);
-	datamap_add(properties_datamap, IDC_VERBOSE,				DM_BOOL,	OPTION_VERBOSE);
 	datamap_add(properties_datamap, IDC_UPDATEINPAUSE,			DM_BOOL,	OPTION_UPDATEINPAUSE);
-	datamap_add(properties_datamap, IDC_DEBUGSCRIPT,			DM_STRING,	OPTION_DEBUGSCRIPT);
 
 	// core misc options
 	datamap_add(properties_datamap, IDC_BIOS,					DM_STRING,	OPTION_BIOS);
@@ -2614,9 +2593,6 @@ static void BuildDataMap(void)
 	datamap_add(properties_datamap, IDC_SCREEN_SHADER2,			DM_STRING,	OSDOPTION_SHADER_SCREEN "2");
 	datamap_add(properties_datamap, IDC_SCREEN_SHADER3,			DM_STRING,	OSDOPTION_SHADER_SCREEN "3");
 	datamap_add(properties_datamap, IDC_SCREEN_SHADER4,			DM_STRING,	OSDOPTION_SHADER_SCREEN "4");
-
-	// windows debugging options
-	datamap_add(properties_datamap, IDC_OSLOG,					DM_BOOL,	OPTION_OSLOG);
 
 	// windows performance options
 	datamap_add(properties_datamap, IDC_HIGH_PRIORITY,			DM_INT,		WINOPTION_PRIORITY);
@@ -3542,12 +3518,10 @@ static bool SelectPlugins(HWND hWnd)
 
 static bool ResetPlugins(HWND hWnd)
 {
-	bool changed = false;
 	emu_set_value(m_CurrentOpts, OPTION_PLUGIN, "");
 	win_set_window_text_utf8(GetDlgItem(hWnd, IDC_PLUGIN), "None");
-	changed = true;
 	ComboBox_SetCurSel(GetDlgItem(hWnd, IDC_SELECT_PLUGIN), -1);
-	return changed;
+	return true;
 }
 
 static bool SelectBGFXChains(HWND hWnd)
@@ -3594,44 +3568,6 @@ static bool ResetBGFXChains(HWND hWnd)
 	return changed;
 }
 
-#if 0
-static BOOL SelectDebugscript(HWND hWnd)
-{
-	BOOL changed = false;
-
-	char filename[MAX_PATH];
-	*filename = 0;
-	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_DEBUGSCRIPT_FILES))
-	{
-		if (strcmp(filename, m_CurrentOpts.value(OPTION_DEBUGSCRIPT))!=0)
-		{
-			HWND control = GetDlgItem(hWnd, IDC_DEBUGSCRIPT);
-			emu_set_value(m_CurrentOpts, OPTION_DEBUGSCRIPT, filename);
-			win_set_window_text_utf8(control, filename);
-			changed = true;
-		}
-	}
-
-	return changed;
-}
-
-static BOOL ResetDebugscript(HWND hWnd)
-{
-	BOOL changed = false;
-
-	const char *new_value = "";
-
-	if (strcmp(new_value, m_CurrentOpts.value(OPTION_DEBUGSCRIPT))!=0)
-	{
-		HWND control = GetDlgItem(hWnd, IDC_DEBUGSCRIPT);
-		emu_set_value(m_CurrentOpts, OPTION_DEBUGSCRIPT, new_value);
-		win_set_window_text_utf8(control, new_value);
-		changed = true;
-	}
-
-	return changed;
-}
-#endif
 void UpdateBackgroundBrush(HWND hwndTab)
 {
 	// Destroy old brush

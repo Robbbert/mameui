@@ -102,15 +102,13 @@
 #define IDD_PROP_CONTROLLER             185
 #define IDD_PROP_SHADER                 186
 #define IDD_PROP_SCREEN                 187
-#define IDD_PROP_DEBUG                  188
-#define IDD_PROP_MISC2                  189
+#define IDD_PROP_LUA                    189
 #define IDI_SCREEN                      190
 #define IDI_WIN_IMPERFECT               198
 #define IDB_SPLASH                      199
 //#define IDI_AUDIT_FAIL                  200
 #define IDI_SYSTRAY                     201
 #define IDD_PROP_OPENGL                 202
-#define IDI_DEBUG                       203
 #define IDI_MONITOR                     204
 #define IDI_FOLDER_MECHANICAL           205
 #define IDI_FOLDER_ALLGAMES             206
@@ -188,7 +186,7 @@
 //#define IDI_INPUTSHEET                  279
 //#define IDI_CONTROLSHEET                280
 //#define IDI_MISCSHEET                   281
-//#define IDI_MISC2SHEET                  282
+//#define IDI_LUASHEET                    282
 //#define IDI_SNAPSHEET                   283
 #define IDI_SHADER                      284
 #define IDI_SOUNDTAB                    666
@@ -305,7 +303,6 @@
 #define IDC_ABOUT                       1134
 #define IDC_USE_SOUND                   1136
 #define IDC_WAITVSYNC                   1137
-#define IDC_HWSTRETCH                   1138
 #define IDC_SWITCHRES                   1139
 #define IDC_MAXIMIZE                    1140
 #define IDC_KEEPASPECT                  1141
@@ -390,7 +387,6 @@
 #define IDC_PRESCALETEXT                1228
 #define IDC_SOUND_MODE                  1229
 #define IDC_MULTIMOUSE                  1230
-#define IDC_DEBUG                       1231
 #define IDC_REFRESHSPEED                1232
 #define IDC_SPEEDTEXT                   1233
 #define IDC_SPEED                       1234
@@ -399,12 +395,7 @@
 #define IDC_SNAPNAME                    1237
 #define IDC_COINLOCKOUT                 1238
 #define IDC_SECONDSTORUNTEXT            1239
-#define IDC_OSLOG                       1240
-#define IDC_VERBOSE                     1241
 #define IDC_UPDATEINPAUSE               1242
-#define IDC_DEBUGSCRIPT                 1243
-#define IDC_SELECT_DEBUGSCRIPT          1244
-#define IDC_RESET_DEBUGSCRIPT           1245
 #define IDC_RESET_JOYSTICKMAP           1247
 #define IDC_JOYSTICKMAP                 1248
 #define IDC_SNAPSIZE                    1249
@@ -533,6 +524,7 @@
 #define ID_MESS_OPEN_SOFTWARE           2200
 #define IDD_PROP_SOFTWARE               2202
 #define IDD_PROP_CONFIGURATION          2203
+// 3xxx reserved for NEWUI
 #define ID_CONTEXT_SHOW_FOLDER_START    39000
 #define ID_CONTEXT_SHOW_FOLDER_END      39200
 #define ID_FILE_EXIT                    40001
@@ -654,15 +646,3 @@
 #define ID_TOGGLE_TAB_HISTORY           40167
 #define IDC_STATIC                      -1
 
-// Next default values for new objects
-//
-#ifdef APSTUDIO_INVOKED
-#ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NO_MFC                     1
-#define _APS_3D_CONTROLS                1
-#define _APS_NEXT_RESOURCE_VALUE        192
-#define _APS_NEXT_COMMAND_VALUE         40157
-#define _APS_NEXT_CONTROL_VALUE         1353
-#define _APS_NEXT_SYMED_VALUE           93
-#endif
-#endif
