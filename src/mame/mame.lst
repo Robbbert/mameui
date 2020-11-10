@@ -103,7 +103,8 @@ undoukai                        // A17 (c) 1984 Taito
 @source:4enlinea.cpp
 4enlinea                        // (c) 1991 Compumatic / CIC Play
 4enlineb                        // (c) 1991 Compumatic / CIC Play
-k7_olym                         // (c) 1994 K7 Kursaal
+k7_olym                         // (c) 1994 K7 Kursaal / NMI Electronics
+k7_olym30                       // (c) 1994 K7 Kursaal / NMI Electronics
 sprtdart                        // (c) 1993 Compumatic / Desarrollos y Recambios S.L.
 
 @source:4enraya.cpp
@@ -32377,6 +32378,7 @@ lxccplan
 rtvgc300
 rtvgc300fz
 red5mam
+240in1ar
 denv150
 egame150
 lpgm240
@@ -38022,7 +38024,8 @@ crystalca                       // 1998 JCD srl
 4in1boot                        // (c) 2002 KISoft (includes hacks of Semicom games + Snowbros)
 ballboy                         // bootleg
 cookbib2                        // (c) 1996 SemiCom
-cookbib2a
+cookbib2a                       // (c) 1996 SemiCom
+cookbib2b                       // (c) 1996 SemiCom
 cookbib3                        // (c) 1997 SemiCom
 finalttr                        // (c) 1993 Jeil Computer System
 honeydol                        // (c) 1995 Barko Corp
@@ -38397,6 +38400,7 @@ itvg49
 zone60                          // Zone 60
 zone100                         //
 lx_jg7415                       //
+lx_jg7410
 zonemini
 react
 
@@ -41217,7 +41221,7 @@ gauntleg                        // (c) 1998 Atari Games
 gauntleg12                      // (c) 1998 Atari Games
 nbagold                         // (c) 2000 Midway Games
 nbanfl                          // (c) 1999 Midway Games
-nbashowt                        // (c) 1998 Midway Games
+nbashowt                        // (c) 1999 Midway Games
 roadburn                        // (c) 1999 Atari Games
 roadburn1                       // (c) 1999 Atari Games
 sf2049                          // (c) 1999 Atari Games
@@ -42153,6 +42157,9 @@ stinger2                        // (c) 1983 Seibu Denshi
 wiz                             // (c) 1985 Seibu Kaihatsu
 wizt                            // (c) 1985 Taito Corporation
 wizta                           // (c) 1985 Taito Corporation
+
+@source:wizard.cpp
+iq7000                          //
 
 @source:wmg.cpp
 wmg                             // Williams 6in1 Multigame, Clay Cowgill
