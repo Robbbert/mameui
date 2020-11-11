@@ -1010,8 +1010,8 @@ void ay8910_device::ay8910_write_reg(int r, int v)
 						logerror("warning: activated unknown mode %02x at %s\n", m_mode & 0xf, name());
 				}
 			}
-			if ((v & 0x0f) > 0)
-				osd_printf_verbose("EShape\n");
+			//if ((v & 0x0f) > 0)
+				//osd_printf_verbose("EShape\n");
 			m_envelope[0].set_shape(m_regs[AY_EASHAPE], m_env_step_mask);
 			break;
 		case AY_PORTA:
