@@ -181,6 +181,7 @@ INT_PTR CALLBACK ResetDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 					break;
 				}
 			}
+			[[fallthrough]];
 		// Nothing was selected but OK, just fall through
 		case IDCANCEL :
 			EndDialog(hDlg, 0);

@@ -1300,11 +1300,12 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 
 				// MSH 20070813 - Update all related controls
 			case IDC_SCREENSELECT:
-			{
-				HWND hCtrl = GetDlgItem(hDlg, wID);
-				if (hCtrl)
-					m_currScreen = ComboBox_GetCurSel(hCtrl)-1;
-			}
+				{
+					HWND hCtrl = GetDlgItem(hDlg, wID);
+					if (hCtrl)
+						m_currScreen = ComboBox_GetCurSel(hCtrl)-1;
+				}
+				break;
 
 			case IDC_SCREEN:
 				// NPW 3-Apr-2007:  Ugh I'm only perpetuating the vile hacks in this code

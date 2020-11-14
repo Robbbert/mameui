@@ -8,6 +8,7 @@
 // MAME/MAMEUI headers
 #include "dirwatch.h"
 #include "mui_util.h"
+#include "winui.h"
 
 typedef BOOL (WINAPI *READDIRECTORYCHANGESFUNC)(HANDLE hDirectory, LPVOID lpBuffer,
 		DWORD nBufferLength, BOOL bWatchSubtree, DWORD dwNotifyFilter,
