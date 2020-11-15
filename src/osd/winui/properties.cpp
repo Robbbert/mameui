@@ -1305,7 +1305,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 					if (hCtrl)
 						m_currScreen = ComboBox_GetCurSel(hCtrl)-1;
 				}
-				break;
+				[[fallthrough]];
 
 			case IDC_SCREEN:
 				// NPW 3-Apr-2007:  Ugh I'm only perpetuating the vile hacks in this code
