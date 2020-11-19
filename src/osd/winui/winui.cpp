@@ -832,11 +832,11 @@ public:
 		const char* buffer = s.c_str();
 		if (channel == OSD_OUTPUT_CHANNEL_VERBOSE)
 		{
-			FILE *pFile;
-			pFile = fopen("verbose.log", "a");
-			fputs(buffer, pFile);
-			fflush(pFile);
-			fclose (pFile);
+//			FILE *pFile;
+//			pFile = fopen("verbose.log", "a");
+//			fputs(buffer, pFile);
+//			fflush(pFile);
+//			fclose (pFile);
 			return;
 		}
 

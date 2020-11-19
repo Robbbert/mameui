@@ -477,6 +477,8 @@ void SetDirectories(windows_options &o)
 	emu_set_value(o, OPTION_DIFF_DIRECTORY, dir_get_value(19));
 	emu_set_value(o, OPTION_SNAPNAME, emu_get_value(emu_global, OPTION_SNAPNAME));
 	emu_set_value(o, OPTION_DEBUG, "0");
+	emu_set_value(o, OPTION_SPEAKER_REPORT, "0");
+	emu_set_value(o, OPTION_VERBOSE, "0");
 }
 
 // For dialogs.cpp
