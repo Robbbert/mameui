@@ -20,7 +20,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Englisch (USA) resources
+// English (USA) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 #ifdef _WIN32
@@ -435,7 +435,7 @@ IDI_SCREEN              ICON                    "res\\screen.ico"
 IDI_SHADER              ICON                    "res\\shader.ico"
 IDI_SNAPSHOT            ICON                    "res\\snapshot.ico"
 IDI_SOUND               ICON                    "res\\sound.ico"
-IDI_SYSTRAY             ICON                    "res\\mameui.ico"
+//IDI_SYSTRAY             ICON                    "res\\mameui.ico"
 IDI_VECTOR              ICON                    "res\\vector.ico"
 // Property sheet
 //IDI_DISPLAYSHEET        ICON                    "res\\display.ico"
@@ -469,13 +469,13 @@ IDI_WIN_CYLN            ICON                    "res\\win_cyln.ico"
 IDI_WIN_PTAP            ICON                    "res\\win_ptap.ico"
 IDI_WIN_PCRD            ICON                    "res\\win_pcrd.ico"
 IDI_WIN_MIDI            ICON                    "res\\win_midi.ico"
-IDI_ICON_CART           ICON    DISCARDABLE     "res\\cpu.ico"
-IDI_ICON_HARD           ICON    DISCARDABLE     "res\\harddisk.ico"
-IDI_ICON_CASS           ICON    DISCARDABLE     "res\\win_cass.ico"
-IDI_ICON_FLOP           ICON    DISCARDABLE     "res\\win_flop.ico"
-IDI_ICON_PRIN           ICON    DISCARDABLE     "res\\win_prin.ico"
-IDI_ICON_SERL           ICON    DISCARDABLE     "res\\win_serl.ico"
-IDI_ICON_SNAP           ICON    DISCARDABLE     "res\\win_snap.ico"
+IDI_ICON_CART           ICON                    "res\\cpu.ico"
+IDI_ICON_HARD           ICON                    "res\\harddisk.ico"
+IDI_ICON_CASS           ICON                    "res\\win_cass.ico"
+IDI_ICON_FLOP           ICON                    "res\\win_flop.ico"
+IDI_ICON_PRIN           ICON                    "res\\win_prin.ico"
+IDI_ICON_SERL           ICON                    "res\\win_serl.ico"
+IDI_ICON_SNAP           ICON                    "res\\win_snap.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -530,15 +530,14 @@ END
 //END
 
 IDD_AUDIT DIALOG DISCARDABLE 0, 0, 283, 388
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "File Audit"
 FONT 8, "Tahoma"
 BEGIN
 //    PUSHBUTTON      "&Pause",IDPAUSE,98,168,40,14
 //    PUSHBUTTON      "&Cancel",IDCANCEL,144,168,40,14
 //    GROUPBOX        "ROMs",IDC_STATIC,6,4,271,65
-//    CONTROL         "Progress1",IDC_ROMS_PROGRESS,"msctls_progress32",
-//                    PBS_SMOOTH | WS_BORDER,14,16,255,8
+//    CONTROL         "Progress1",IDC_ROMS_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,14,16,255,8
 //    LTEXT           "Correct:",IDC_STATIC,111,28,32,8
 //    LTEXT           "Incorrect:",IDC_STATIC,111,42,32,8
 //    LTEXT           "Total:",IDC_STATIC,111,56,32,8
@@ -546,9 +545,7 @@ BEGIN
 //    LTEXT           "0",IDC_ROMS_INCORRECT,147,42,20,8
 //    LTEXT           "0",IDC_ROMS_TOTAL,147,56,20,8
 //    GROUPBOX        "Details",IDC_STATIC,6,72,271,90
-//    EDITTEXT        IDC_AUDIT_DETAILS,12,82,259,74,ES_MULTILINE |
-//                    ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL |
-//                    NOT WS_TABSTOP
+//    EDITTEXT        IDC_AUDIT_DETAILS,12,82,259,74,ES_MULTILINE |ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL |NOT WS_TABSTOP
     GROUPBOX        "ROMs",IDC_STATIC,6,4,132,65
     LTEXT           "Correct:",IDC_STATIC,51,28,32,8
     CONTROL         "Progress1",IDC_ROMS_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,14,16,116,8
@@ -1131,8 +1128,7 @@ BEGIN
 END
 
 IDD_FILTERS DIALOGEX 0, 0, 190, 210
-STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION |
-    WS_SYSMENU
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_CONTEXTHELP
 CAPTION "System Filters"
 FONT 8, "Tahoma", 0, 0, 0x1
