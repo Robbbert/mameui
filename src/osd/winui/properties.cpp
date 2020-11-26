@@ -657,7 +657,7 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 static char *GameInfoCPU(int nIndex)
 {
 	machine_config config(driver_list::driver(nIndex), MameUIGlobal());
-	execute_interface_iterator cpuiter(config.root_device());
+	execute_interface_enumerator cpuiter(config.root_device());
 	std::unordered_set<std::string> exectags;
 	static char buffer[1024];
 
@@ -701,7 +701,7 @@ static char *GameInfoCPU(int nIndex)
 static char *GameInfoSound(int nIndex)
 {
 	machine_config config(driver_list::driver(nIndex), MameUIGlobal());
-	sound_interface_iterator sounditer(config.root_device());
+	sound_interface_enumerator sounditer(config.root_device());
 	std::unordered_set<std::string> soundtags;
 	static char buffer[1024];
 
@@ -759,13 +759,13 @@ static char *GameInfoScreen(UINT nIndex)
 		strcpy(buf, "Vector Game");
 	else
 	{
-		screen_device_iterator iter(config.root_device());
+		screen_device_enumerator iter(config.root_device());
 		const screen_device *screen = iter.first();
 		if (screen == NULL)
 			strcpy(buf, "Screenless Game");
 		else
 		{
-			for (screen_device &screen : screen_device_iterator(config.root_device()))
+			for (screen_device &screen : screen_device_enumerator(config.root_device()))
 			{
 				char tmpbuf[2048];
 				const rectangle &visarea = screen.visible_area();
@@ -2746,7 +2746,7 @@ static void SetSamplesEnabled(HWND hWnd, int nIndex, BOOL bSoundEnabled)
 		{
 			machine_config config(driver_list::driver(nIndex),m_CurrentOpts);
 
-			for (device_sound_interface &sound : sound_interface_iterator(config.root_device()))
+			for (device_sound_interface &sound : sound_interface_enumerator(config.root_device()))
 				if (sound.device().type() == SAMPLES)
 					enabled = true;
 		}
@@ -3880,7 +3880,7 @@ static BOOL DriverHasDevice(const game_driver *gamedrv, iodevice_t type)
 	// allocate the machine config
 	machine_config config(*gamedrv,MameUIGlobal());
 
-	for (device_image_interface &dev : image_interface_iterator(config.root_device()))
+	for (device_image_interface &dev : image_interface_enumerator(config.root_device()))
 	{
 		if (!dev.user_loadable())
 			continue;
@@ -3895,7 +3895,7 @@ static BOOL DriverHasDevice(const game_driver *gamedrv, iodevice_t type)
 
 BOOL PropSheetFilter_Config(const machine_config *drv, const game_driver *gamedrv)
 {
-	ram_device_iterator iter(drv->root_device());
+	ram_device_enumerator iter(drv->root_device());
 	return (iter.first()) || DriverHasDevice(gamedrv, IO_PRINTER);
 }
 
@@ -3961,25 +3961,24 @@ BOOL MessPropertiesCommand(HWND hWnd, WORD wNotifyCode, WORD wID, BOOL *changed)
 //  Functions to handle the RAM control
 //============================================================
 
-static const char *messram_string(char *buffer, UINT32 ram)
+static string messram_string(UINT32 ram) // FIXME - limit of 4GB
 {
-	const char *suffix;
+	 string suffix = "", messram;
 
 	if ((ram % (1024*1024)) == 0)
 	{
 		ram /= 1024*1024;
-		suffix = "MB";
-	}
-	else if ((ram % 1024) == 0)
-	{
-		ram /= 1024;
-		suffix = "KB";
+		suffix = "M";
 	}
 	else
-		suffix = "";
+	if ((ram % 1024) == 0)
+	{
+		ram /= 1024;
+		suffix = "K";
+	}
 
-	sprintf(buffer, "%u%s", ram, suffix);
-	return buffer;
+	messram = std::to_string(ram).append(suffix);
+	return messram;
 }
 
 //-------------------------------------------------
@@ -4001,7 +4000,13 @@ static uint32_t parse_string(const char *s)
 		{ "kib",    1024 },
 		{ "m",      1024 * 1024 },
 		{ "mb",     1024 * 1024 },
-		{ "mib",    1024 * 1024 }
+		{ "mib",    1024 * 1024 },
+		{ "K",      1024 },
+		{ "KB",     1024 },
+		{ "KiB",    1024 },
+		{ "M",      1024 * 1024 },
+		{ "MB",     1024 * 1024 },
+		{ "MiB",    1024 * 1024 }
 	};
 
 	// parse the string
@@ -4035,16 +4040,13 @@ static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_
 	machine_config cfg(*gamedrv,*o);
 
 	// identify how many options that we have
-	ram_device_iterator iter(cfg.root_device());
+	ram_device_enumerator iter(cfg.root_device());
 	ram_device *device = iter.first();
-
-	EnableWindow(control, (device != NULL));
 
 	// we can only do something meaningful if there is more than one option
 	if (device)
 	{
 		const ram_device *ramdev = dynamic_cast<const ram_device *>(device);
-
 		// identify the current amount of RAM
 		const char *this_ram_string = o->value(OPTION_RAMSIZE);
 		uint32_t current_ram = (this_ram_string) ? parse_string(this_ram_string) : 0;
@@ -4052,9 +4054,8 @@ static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_
 		if (current_ram == 0)
 			current_ram = ram;
 
-		char ramtext[20];
-		messram_string(ramtext, ram);
-		TCHAR *t_ramstring = ui_wstring_from_utf8(ramtext);
+		string ramtext = messram_string(ram);
+		TCHAR *t_ramstring = ui_wstring_from_utf8(ramtext.c_str());
 		if( !t_ramstring )
 			return false;
 
@@ -4067,25 +4068,33 @@ static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_
 			for (ram_device::extra_option const &option : ramdev->extra_options())
 			{
 				// identify this option
-				t_ramstring = ui_wstring_from_utf8(option.first.c_str());
-				if( t_ramstring )
+				string ramtext2 = option.first;
+				if (ramtext2 != ramtext)
 				{
-					i++;
-					// add this option to the combo box
-					ComboBox_InsertString(control, i, win_tstring_strdup(t_ramstring));
-					ComboBox_SetItemData(control, i, option.second);
+					t_ramstring = ui_wstring_from_utf8(ramtext2.c_str());
+					if( t_ramstring )
+					{
+						i++;
+						// add this option to the combo box
+						ComboBox_InsertString(control, i, win_tstring_strdup(t_ramstring));
+						ComboBox_SetItemData(control, i, option.second);
 
-					// is this the current option?  record the index if so
-					if (option.second == current_ram)
-						current_index = i;
+						// is this the current option?  record the index if so
+						if (option.second == current_ram)
+							current_index = i;
+					}
 				}
 			}
 		}
 		if (t_ramstring)
 			free (t_ramstring);
+
 		// set the combo box
 		ComboBox_SetCurSel(control, current_index);
 	}
+
+	EnableWindow(control, i ? 1 : 0);
+
 	return true;
 }
 

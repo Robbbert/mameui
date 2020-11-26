@@ -2335,14 +2335,14 @@ static bool get_softlist_info(HWND wnd, device_image_interface *img)
 	strcpy(rompath, window->machine().options().emu_options::media_path());
 
 	// Get the path to suitable software
-	for (software_list_device &swlist : software_list_device_iterator(window->machine().root_device()))
+	for (software_list_device &swlist : software_list_device_enumerator(window->machine().root_device()))
 	{
 		for (const software_info &swinfo : swlist.get_info())
 		{
 			const software_part &part = swinfo.parts().front();
 			if (swlist.is_compatible(part) == SOFTWARE_IS_COMPATIBLE)
 			{
-				for (device_image_interface &image : image_interface_iterator(window->machine().root_device()))
+				for (device_image_interface &image : image_interface_enumerator(window->machine().root_device()))
 				{
 					if (!image.user_loadable())
 						continue;
@@ -2793,7 +2793,7 @@ static void prepare_menus(HWND wnd)
 	bool usage_shown = false;
 	int cnt = 0;
 	// then set up the actual devices
-	for (device_image_interface &img : image_interface_iterator(window->machine().root_device()))
+	for (device_image_interface &img : image_interface_enumerator(window->machine().root_device()))
 	{
 		if (!img.user_loadable())
 			continue;
@@ -2929,7 +2929,7 @@ static void prepare_menus(HWND wnd)
 	remove_menu_items(slot_menu);
 	cnt = 3400;
 	// cycle through all slots for this system
-	for (device_slot_interface &slot : slot_interface_iterator(window->machine().root_device()))
+	for (device_slot_interface &slot : slot_interface_enumerator(window->machine().root_device()))
 	{
 		if (slot.fixed())
 			continue;
@@ -3205,7 +3205,7 @@ static device_image_interface *decode_deviceoption(running_machine &machine, int
 	if (devoption)
 		*devoption = command % DEVOPTION_MAX;
 
-	image_interface_iterator iter(machine.root_device());
+	image_interface_enumerator iter(machine.root_device());
 	return iter.byindex(absolute_index);
 }
 
