@@ -3220,8 +3220,7 @@ static void set_window_orientation(win_window_info *window, int orientation)
 	window->m_target->set_orientation(orientation);
 	if (window->m_target->is_ui_target())
 	{
-		render_container::user_settings settings;
-		window->machine().render().ui_container().get_user_settings(settings);
+		render_container::user_settings settings = window->machine().render().ui_container().get_user_settings();
 		settings.m_orientation = orientation;
 		window->machine().render().ui_container().set_user_settings(settings);
 	}
