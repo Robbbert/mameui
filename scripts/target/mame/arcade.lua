@@ -528,6 +528,7 @@ MACHINES["LDP1450"] = true
 MACHINES["LDVP931"] = true
 --MACHINES["LH5810"] = true
 MACHINES["LINFLASH"] = true
+--MACHINES["LOCOMO"] = true
 MACHINES["LPCI"] = true
 --MACHINES["LSI53C810"] = true
 --MACHINES["M3002"] = true
@@ -623,6 +624,7 @@ MACHINES["S3C24XX"] = true
 MACHINES["SATURN"] = true
 MACHINES["SCC68070"] = true
 MACHINES["SCN_PCI"] = true
+--MACHINES["SCOOP"] = true
 MACHINES["SCSI"] = true
 MACHINES["SCUDSP"] = true
 MACHINES["SDA2006"] = true
@@ -655,6 +657,7 @@ MACHINES["TSB12LV01A"] = true
 --MACHINES["TTL74153"] = true
 --MACHINES["TTL74181"] = true
 --MACHINES["TTL7474"] = true
+--MACHINES["UCB1200"] = true
 MACHINES["UPD1990A"] = true
 MACHINES["UPD4992"] = true
 MACHINES["UPD4701"] = true
@@ -1945,7 +1948,6 @@ files {
 	MAME_DIR .. "src/mame/audio/exidy.cpp",
 	MAME_DIR .. "src/mame/audio/exidy.h",
 	MAME_DIR .. "src/mame/video/exidy.cpp",
-	MAME_DIR .. "src/mame/audio/targ.cpp",
 	MAME_DIR .. "src/mame/drivers/exidy440.cpp",
 	MAME_DIR .. "src/mame/includes/exidy440.h",
 	MAME_DIR .. "src/mame/audio/exidy440.cpp",
@@ -3814,6 +3816,8 @@ files {
 	MAME_DIR .. "src/mame/includes/simple_st0016.h",
 	MAME_DIR .. "src/mame/video/seta001.cpp",
 	MAME_DIR .. "src/mame/video/seta001.h",
+	MAME_DIR .. "src/mame/video/x1_012.cpp",
+	MAME_DIR .. "src/mame/video/x1_012.h",
 	MAME_DIR .. "src/mame/drivers/thedealr.cpp",
 }
 

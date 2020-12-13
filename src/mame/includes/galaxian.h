@@ -76,6 +76,7 @@ public:
 		, m_soundlatch(*this, "soundlatch")
 		, m_netlist(*this, "konami")
 		, m_filter_ctl(*this, "konami:ctl%u", 0)
+		, m_ckong_coinage(*this, "COINAGE")
 		, m_fake_select(*this, "FAKE_SELECT")
 		, m_tenspot_game_dsw(*this, {"IN2_GAME0", "IN2_GAME1", "IN2_GAME2", "IN2_GAME3", "IN2_GAME4", "IN2_GAME5", "IN2_GAME6", "IN2_GAME7", "IN2_GAME8", "IN2_GAME9"})
 		, m_spriteram(*this, "spriteram")
@@ -198,14 +199,12 @@ public:
 	void init_checkmaj();
 	void init_dingo();
 	void init_dingoe();
-	void init_skybase();
 	void init_kong();
 	void init_mshuttle();
 	void init_mshuttlj();
 	void init_fantastc();
 	void init_timefgtr();
 	void init_kingball();
-	void init_scorpnmc();
 	void init_theend();
 	void init_scramble();
 	void init_sidam();
@@ -224,6 +223,8 @@ public:
 	void init_quaak();
 	void init_turtles();
 	void init_scorpion();
+	void init_ckongs();
+	void init_ckonggx();
 	void init_anteater();
 	void init_anteateruk();
 	void init_superbon();
@@ -233,6 +234,8 @@ public:
 	void init_froggrs();
 	void init_warofbugg();
 	void init_jungsub();
+	void init_mimonkey();
+	void init_mimonkeyb();
 	void init_victoryc();
 	TILE_GET_INFO_MEMBER(bg_get_tile_info);
 	void galaxian_palette(palette_device &palette);
@@ -284,6 +287,8 @@ public:
 	void calipso_extend_sprite_info(const uint8_t *base, uint8_t *sx, uint8_t *sy, uint8_t *flipx, uint8_t *flipy, uint16_t *code, uint8_t *color);
 	void jumpbug_extend_tile_info(uint16_t *code, uint8_t *color, uint8_t attrib, uint8_t x);
 	void jumpbug_extend_sprite_info(const uint8_t *base, uint8_t *sx, uint8_t *sy, uint8_t *flipx, uint8_t *flipy, uint16_t *code, uint8_t *color);
+	void mimonkey_extend_tile_info(uint16_t *code, uint8_t *color, uint8_t attrib, uint8_t x);
+	void mimonkey_extend_sprite_info(const uint8_t *base, uint8_t *sx, uint8_t *sy, uint8_t *flipx, uint8_t *flipy, uint16_t *code, uint8_t *color);
 	void monsterz_set_latch();
 	void decode_mooncrst(int length, uint8_t *dest);
 	void decode_checkman();
@@ -308,6 +313,7 @@ public:
 	void moonqsr(machine_config &config);
 	void frogger(machine_config &config);
 	void anteatergg(machine_config &config);
+	void ozon1(machine_config &config);
 	void theend(machine_config &config);
 	void turtles(machine_config &config);
 	void fantastc(machine_config &config);
@@ -316,6 +322,7 @@ public:
 	void pacmanbl(machine_config &config);
 	void quaak(machine_config &config);
 	void galaxian(machine_config &config);
+	void pisces(machine_config &config);
 	void highroll(machine_config &config);
 	void tenspot(machine_config &config);
 	void froggers(machine_config &config);
@@ -339,6 +346,7 @@ public:
 	void mooncrst(machine_config &config);
 	void eagle(machine_config &config);
 	void scorpion(machine_config &config);
+	void ckongs(machine_config &config);
 	void frogf(machine_config &config);
 	void amigo2(machine_config &config);
 	void zigzag(machine_config &config);
@@ -348,12 +356,21 @@ public:
 	void frogg(machine_config &config);
 	void mandingarf(machine_config &config);
 	void thepitm(machine_config &config);
+	void porter(machine_config &config);
 	void skybase(machine_config &config);
 	void kong(machine_config &config);
+	void bongo(machine_config &config);
 	void scorpnmc(machine_config &config);
+	void ckongg(machine_config &config);
+	void ckongmc(machine_config &config);
 	void fourplay(machine_config &config);
 	void videight(machine_config &config);
 	void astroamb(machine_config &config);
+	void mimonkey(machine_config &config);
+	void mimonscr(machine_config &config);
+
+	template <int Mask> CUSTOM_INPUT_MEMBER(ckongg_coinage_r);
+	template <int Mask> DECLARE_READ_LINE_MEMBER(ckongs_coinage_r);
 
 protected:
 	void amigo2_map(address_map &map);
@@ -361,9 +378,15 @@ protected:
 	void anteatergg_map(address_map &map);
 	void anteateruk_map(address_map &map);
 	void astroamb_map(address_map &map);
+	void bongo_map(address_map &map);
+	void bongo_io_map(address_map &map);
 	void checkmaj_sound_map(address_map &map);
 	void checkman_sound_map(address_map &map);
 	void checkman_sound_portmap(address_map &map);
+	void ckongg_map(address_map &map);
+	void ckongg_map_base(address_map &map);
+	void ckongmc_map(address_map &map);
+	void ckongs_map(address_map &map);
 	void explorer_map(address_map &map);
 	void fantastc_map(address_map &map);
 	void frogf_map(address_map &map);
@@ -387,7 +410,10 @@ protected:
 	void konami_sound_portmap(address_map &map);
 	void kong_map(address_map &map);
 	void mandingarf_map(address_map &map);
+	void mimonkey_map(address_map &map);
+	void mimonscr_map(address_map &map);
 	void monsterz_map(address_map &map);
+	void monsterz_sound_map(address_map &map);
 	void mooncrst_map(address_map &map);
 	void mooncrst_map_base(address_map &map);
 	void mooncrst_map_discrete(address_map &map);
@@ -395,6 +421,10 @@ protected:
 	void mshuttle_decrypted_opcodes_map(address_map &map);
 	void mshuttle_map(address_map &map);
 	void mshuttle_portmap(address_map &map);
+	void ozon1_map(address_map &map);
+	void ozon1_io_map(address_map &map);
+	void pisces_map(address_map &map);
+	void porter_map(address_map &map);
 	void scobra_map(address_map &map);
 	void scorpion_map(address_map &map);
 	void scorpion_sound_map(address_map &map);
@@ -433,6 +463,7 @@ protected:
 	optional_device<generic_latch_8_device> m_soundlatch;
 	optional_device<netlist_mame_sound_device> m_netlist;
 	optional_device_array<netlist_mame_logic_input_device, 12> m_filter_ctl;
+	optional_ioport m_ckong_coinage;
 	optional_ioport m_fake_select;
 	optional_ioport_array<10> m_tenspot_game_dsw;
 
