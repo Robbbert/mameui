@@ -1100,6 +1100,16 @@ BEGIN
     PUSHBUTTON      "Restore Default Settings",IDC_USE_DEFAULT,118,258,97,14,0,0,HIDC_USE_DEFAULT
 END
 
+IDD_STARTUP DIALOGEX 0, 0, 263, 86
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER | DS_CENTER | DS_SETFOREGROUND | DS_SETFONT
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 10, "Tahoma"
+BEGIN
+    CONTROL         "",IDC_SPLASH,WC_STATIC,SS_BITMAP|SS_REALSIZECONTROL,0,0,262,65
+    CTEXT           "",IDC_STATIC,0,69,262,12
+    CTEXT           "",IDC_PROGBAR,0,77,262,12
+END
+
 IDD_MAIN DIALOGEX 0, 0, 364, 206
 STYLE DS_3DLOOK | DS_NOFAILCREATE | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
 EXSTYLE WS_EX_CONTROLPARENT
@@ -1309,9 +1319,9 @@ IDB_ABOUT               BITMAP                    "res\\logo_mess.bmp"
 IDB_ABOUT               BITMAP                    "res\\about.bmp"
 #endif
 IDB_TOOLBAR             BITMAP                    "res\\toolbar.bmp"
+IDB_SPLASH              BITMAP                    "res\\splash.bmp"
 #if 0
 IDB_SNAPSHOT            BITMAP                    "res\\snapshot.bmp"
-IDB_SPLASH              BITMAP                    "res\\splash.bmp"
 IDB_ABOUTMENU           BITMAP                    "res\\aboutmenu.bmp"
 IDB_CUSTOM              BITMAP                    "res\\custom.bmp"
 IDB_DIRECTORIES         BITMAP                    "res\\directories.bmp"
