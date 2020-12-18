@@ -16,7 +16,16 @@
 ***************************************************************************/
 
 // standard windows headers
-#define _WIN32_IE 0x0501
+#ifdef WINVER
+#undef WINVER
+#endif
+#define WINVER 0x501
+
+#ifdef _WIN32_WINNT
+#undef _WIN32_WINNT
+#endif
+#define _WIN32_WINNT 0x501
+
 #include <windows.h>
 #include <windowsx.h>
 #include <shellapi.h>
@@ -1666,7 +1675,7 @@ static intptr_t CALLBACK StartupProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM
 			hProgress = CreateWindowEx(0, PROGRESS_CLASS, NULL, WS_CHILD | WS_VISIBLE, 0, 136, 526, 18, hDlg, NULL, hInst, NULL);
 			SetWindowTheme(hProgress, L" ", L" ");
 			SendMessage(hProgress, PBM_SETBKCOLOR, 0, GetSysColor(COLOR_3DFACE));
-			SendMessage(hProgress, PBM_SETRANGE, 0, MAKELPARAM(0, 120));
+			//SendMessage(hProgress, PBM_SETRANGE, 0, MAKELPARAM(0, 100));
 			SendMessage(hProgress, PBM_SETPOS, 0, 0);
 			return true;
 		}
@@ -1696,10 +1705,10 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	printf("Win32UI_init: About to init options\n");fflush(stdout);
 	OptionsInit();
-	SendMessage(hProgress, PBM_SETPOS, 20, 0);
+	SendMessage(hProgress, PBM_SETPOS, 25, 0);
 	emu_opts_init(0);
 	printf("Win32UI_init: Options loaded\n");fflush(stdout);
-	SendMessage(hProgress, PBM_SETPOS, 30, 0);
+	SendMessage(hProgress, PBM_SETPOS, 40, 0);
 	//win_message_box_utf8(hMain, "test", emulator_info::get_appname(), MB_OK);
 
 	// create the memory pool
@@ -1727,7 +1736,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	MView_RegisterClass(); // messui.cpp
 
 	InitCommonControls();
-	SendMessage(hProgress, PBM_SETPOS, 40, 0);
+	SendMessage(hProgress, PBM_SETPOS, 55, 0);
 
 	// Are we using an Old comctl32.dll?
 	LONG common_control_version = GetCommonControlVersion();
@@ -1761,7 +1770,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	SetMainTitle();
 	hTabCtrl = GetDlgItem(hMain, IDC_SSTAB);
-	SendMessage(hProgress, PBM_SETPOS, 50, 0);
+	SendMessage(hProgress, PBM_SETPOS, 70, 0);
 
 	{
 		struct TabViewOptions opts;
@@ -1837,7 +1846,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	if (!InitSplitters())
 		return false;
 
-	SendMessage(hProgress, PBM_SETPOS, 60, 0);
 	int nSplitterCount = GetSplitterCount();
 	for (int i = 0; i < nSplitterCount; i++)
 	{
@@ -1872,17 +1880,17 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	LoadBackgroundBitmap();
 
+	SendMessage(hProgress, PBM_SETPOS, 85, 0);
 	printf("Win32UI_init: About to init tree\n");fflush(stdout);
 	InitTree(g_folderData, g_filterList);
 	printf("Win32UI_init: Did init tree\n");fflush(stdout);
-	SendMessage(hProgress, PBM_SETPOS, 70, 0);
+	SendMessage(hProgress, PBM_SETPOS, 100, 0);
 
 	/* Initialize listview columns */
 	InitMessPicker(); // messui.cpp
 	printf("Win32UI_init: About to InitListView\n");fflush(stdout);
 	InitListView();
 	SetFocus(hwndList);
-	SendMessage(hProgress, PBM_SETPOS, 80, 0);
 
 	/* Reset the font */
 	printf("Win32UI_init: Reset the font\n");fflush(stdout);
@@ -1908,7 +1916,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		return false;
 	}
 
-	SendMessage(hProgress, PBM_SETPOS, 90, 0);
 	printf("Win32UI_init: Adjusting..\n");fflush(stdout);
 	AdjustMetrics();
 	//UpdateSoftware();
@@ -1917,7 +1924,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	hAccel = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDA_TAB_KEYS));
 
 	/* clear keyboard state */
-	SendMessage(hProgress, PBM_SETPOS, 100, 0);
 	printf("Win32UI_init: Keyboard\n");fflush(stdout);
 	KeyboardStateClear();
 
@@ -1932,7 +1938,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	else
 		g_pJoyGUI = NULL;
 
-	SendMessage(hProgress, PBM_SETPOS, 110, 0);
 	printf("Win32UI_init: Mouse\n");fflush(stdout);
 	if (GetHideMouseOnStartup())
 	{
@@ -1946,7 +1951,6 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		ShowCursor(false);
 	}
 
-	SendMessage(hProgress, PBM_SETPOS, 120, 0);
 	printf("Win32UI_init: About to show window\n");fflush(stdout);
 
 	nCmdShow = GetWindowState();
