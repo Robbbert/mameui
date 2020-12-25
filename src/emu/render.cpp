@@ -1061,8 +1061,8 @@ unsigned render_target::configured_view(const char *viewname, int targetindex, i
 {
 	layout_view *view = nullptr;
 
-	// auto view just selects the nth view
-	if (strcmp(viewname, "auto") != 0)
+	// if it isn't "auto" or an empty string, try to match it as a view name prefix
+	if (viewname && *viewname && strcmp(viewname, "auto"))
 	{
 		// scan for a matching view name
 		size_t const viewlen = strlen(viewname);
@@ -3315,7 +3315,7 @@ void render_manager::config_load(config_type cfg_type, util::xml::data_node cons
 	for (util::xml::data_node const *targetnode = parentnode->get_child("target"); targetnode; targetnode = targetnode->get_next_sibling("target"))
 	{
 		render_target *const target = target_by_index(targetnode->get_attribute_int("index", -1));
-		if (target)
+		if (target && !target->hidden())
 			target->config_load(*targetnode);
 	}
 
@@ -3366,17 +3366,21 @@ void render_manager::config_save(config_type cfg_type, util::xml::data_node *par
 	}
 
 	// iterate over targets
-	for (int targetnum = 0; targetnum < 1000; targetnum++)
+	for (int targetnum = 0; ; ++targetnum)
 	{
 		// get this target and break when we fail
 		render_target *target = target_by_index(targetnum);
-		if (target == nullptr)
+		if (!target)
+		{
 			break;
-
-		// create a node
-		util::xml::data_node *const targetnode = parentnode->add_child("target", nullptr);
-		if (targetnode && !target->config_save(*targetnode))
-			targetnode->delete_node();
+		}
+		else if (!target->hidden())
+		{
+			// create a node
+			util::xml::data_node *const targetnode = parentnode->add_child("target", nullptr);
+			if (targetnode && !target->config_save(*targetnode))
+				targetnode->delete_node();
+		}
 	}
 
 	// iterate over screen containers

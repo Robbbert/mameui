@@ -483,6 +483,7 @@ MACHINES["CDP1879"] = true
 --MACHINES["CDU76S"] = true
 MACHINES["CHESSMACHINE"] = true
 MACHINES["CMOS40105"] = true
+MACHINES["COM52C50"] = true
 MACHINES["COM8116"] = true
 MACHINES["COP452"] = true
 MACHINES["CR589"] = true
@@ -3141,6 +3142,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/novag_micro2.cpp",
 	MAME_DIR .. "src/mame/drivers/novag_savant.cpp",
 	MAME_DIR .. "src/mame/drivers/novag_sexpert.cpp",
+	MAME_DIR .. "src/mame/drivers/novag_snova.cpp",
 	MAME_DIR .. "src/mame/drivers/novag_supremo.cpp",
 }
 
@@ -3758,6 +3760,7 @@ files {
 createMESSProjects(_target, _subtarget, "synertek")
 files {
 	MAME_DIR .. "src/mame/drivers/ktm3.cpp",
+	MAME_DIR .. "src/mame/drivers/mbc020.cpp",
 	MAME_DIR .. "src/mame/drivers/sym1.cpp",
 }
 
@@ -4104,6 +4107,8 @@ files {
 	MAME_DIR .. "src/mame/drivers/titan_soc.cpp",
 	MAME_DIR .. "src/mame/drivers/st22xx_bbl338.cpp",
 	MAME_DIR .. "src/mame/drivers/unk6502_st2xxx.cpp",
+	MAME_DIR .. "src/mame/video/bl_handhelds_lcdc.cpp",
+	MAME_DIR .. "src/mame/video/bl_handhelds_lcdc.h",
 	MAME_DIR .. "src/mame/drivers/actions_atj2279b.cpp",
 	MAME_DIR .. "src/mame/drivers/pubint_storyreader.cpp",
 	MAME_DIR .. "src/mame/drivers/magiceyes_pollux_vr3520f.cpp",
@@ -4485,6 +4490,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/mini2440.cpp",
 	MAME_DIR .. "src/mame/drivers/miniframe.cpp",
 	MAME_DIR .. "src/mame/drivers/minitel_2_rpic.cpp",
+	MAME_DIR .. "src/mame/drivers/miuchiz.cpp",
 	MAME_DIR .. "src/mame/drivers/ml20.cpp",
 	MAME_DIR .. "src/mame/drivers/mmd1.cpp",
 	MAME_DIR .. "src/mame/drivers/mmd2.cpp",
