@@ -2728,7 +2728,7 @@ static void prepare_menus(HWND wnd)
 		set_command_state(menu_bar, ID_FILE_SAVESTATE, MFS_GRAYED);
 	}
 
-	set_command_state(menu_bar, ID_EDIT_PASTE, window->machine().ioport().natkeyboard().can_post() ? MFS_ENABLED : MFS_GRAYED);
+	set_command_state(menu_bar, ID_EDIT_PASTE, window->machine().natkeyboard().can_post() ? MFS_ENABLED : MFS_GRAYED);
 
 	set_command_state(menu_bar, ID_OPTIONS_PAUSE, winwindow_ui_is_paused(window->machine()) ? MFS_CHECKED : MFS_ENABLED);
 	set_command_state(menu_bar, ID_OPTIONS_CONFIGURATION, has_config ? MFS_ENABLED : MFS_GRAYED);
@@ -2739,8 +2739,8 @@ static void prepare_menus(HWND wnd)
 	set_command_state(menu_bar, ID_OPTIONS_TOGGLEFPS, mame_machine_manager::instance()->ui().show_fps() ? MFS_CHECKED : MFS_ENABLED);
 	set_command_state(menu_bar, ID_FILE_UIACTIVE, has_keyboard ? (window->machine().ui_active() ? MFS_CHECKED : MFS_ENABLED): MFS_CHECKED | MFS_GRAYED);
 
-	set_command_state(menu_bar, ID_KEYBOARD_EMULATED, has_keyboard ? (!window->machine().ioport().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
-	set_command_state(menu_bar, ID_KEYBOARD_NATURAL, (has_keyboard && window->machine().ioport().natkeyboard().can_post()) ? (window->machine().ioport().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
+	set_command_state(menu_bar, ID_KEYBOARD_EMULATED, has_keyboard ? (!window->machine().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
+	set_command_state(menu_bar, ID_KEYBOARD_NATURAL, (has_keyboard && window->machine().natkeyboard().can_post()) ? (window->machine().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
 	set_command_state(menu_bar, ID_KEYBOARD_CUSTOMIZE, has_keyboard ? MFS_ENABLED : MFS_GRAYED);
 
 	set_command_state(menu_bar, ID_VIDEO_ROTATE_0, (orientation == ROT0) ? MFS_CHECKED : MFS_ENABLED);
@@ -3290,11 +3290,11 @@ static bool invoke_command(HWND wnd, UINT command)
 			break;
 
 		case ID_KEYBOARD_NATURAL:
-			window->machine().ioport().natkeyboard().set_in_use(true);
+			window->machine().natkeyboard().set_in_use(true);
 			break;
 
 		case ID_KEYBOARD_EMULATED:
-			window->machine().ioport().natkeyboard().set_in_use(false);
+			window->machine().natkeyboard().set_in_use(false);
 			break;
 
 		case ID_KEYBOARD_CUSTOMIZE:
@@ -3608,7 +3608,7 @@ LRESULT CALLBACK winwindow_video_window_proc_ui(HWND wnd, UINT message, WPARAM w
 
 		case WM_PASTE:
 			{
-				mame_machine_manager::instance()->ui().machine().ioport().natkeyboard().paste();
+				mame_machine_manager::instance()->ui().machine().natkeyboard().paste();
 			}
 			break;
 
