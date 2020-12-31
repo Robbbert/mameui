@@ -60,7 +60,7 @@ function maintargetosdoptions(_target,_subtarget)
 		rcfile,
 	}
 	dependency {
-		{ "$(OBJDIR)/".._subtarget..".res" ,  GEN_DIR  .. "/resource/".._subtarget.."vers.rc", true  },
+		{ "$(OBJDIR)/".._subtarget..".res" ,  GEN_DIR  .. "resource/".._subtarget.."vers.rc", true  },
 	}
 end
 

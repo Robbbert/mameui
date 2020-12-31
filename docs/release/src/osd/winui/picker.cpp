@@ -509,20 +509,10 @@ BOOL SetupPicker(HWND hwndPicker, const struct PickerOptions *pOptions)
 			pPickerInfo->pnColumnsShown[i] = true;
 		}
 
-		if (GetUseOldControl())
-		{
-			if (pPickerInfo->pCallbacks->pfnSetColumnOrder)
-				pPickerInfo->pCallbacks->pfnSetColumnOrder(pPickerInfo->pnColumnsOrder);
-			if (pPickerInfo->pCallbacks->pfnSetColumnShown)
-				pPickerInfo->pCallbacks->pfnSetColumnShown(pPickerInfo->pnColumnsShown);
-		}
-		else
-		{
-			if (pPickerInfo->pCallbacks->pfnGetColumnOrder)
-				pPickerInfo->pCallbacks->pfnGetColumnOrder(pPickerInfo->pnColumnsOrder);
-			if (pPickerInfo->pCallbacks->pfnGetColumnShown)
-				pPickerInfo->pCallbacks->pfnGetColumnShown(pPickerInfo->pnColumnsShown);
-		}
+		if (pPickerInfo->pCallbacks->pfnGetColumnOrder)
+			pPickerInfo->pCallbacks->pfnGetColumnOrder(pPickerInfo->pnColumnsOrder);
+		if (pPickerInfo->pCallbacks->pfnGetColumnShown)
+			pPickerInfo->pCallbacks->pfnGetColumnShown(pPickerInfo->pnColumnsShown);
 	}
 
 	// Hook in our wndproc and userdata pointer
@@ -882,7 +872,7 @@ void Picker_Sort(HWND hwndPicker)
 	// populate the CompareProcParams structure
 	Picker_PopulateCompareProcParams(hwndPicker, &params);
 
-	BOOL res = ListView_SortItems(hwndPicker, Picker_CompareProc, (LPARAM) &params);
+	ListView_SortItems(hwndPicker, Picker_CompareProc, (LPARAM) &params);
 
 	Picker_ResetHeaderSortIcon(hwndPicker);
 
@@ -892,8 +882,7 @@ void Picker_Sort(HWND hwndPicker)
 	lvfi.lParam = Picker_GetSelectedItem(hwndPicker);
 	int nItem = ListView_FindItem(hwndPicker, -1, &lvfi);
 
-	res = ListView_EnsureVisible(hwndPicker, nItem, false);
-	res++;
+	ListView_EnsureVisible(hwndPicker, nItem, false);
 }
 
 
@@ -905,8 +894,6 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 	struct CompareProcParams params;
 	int nCompareResult = 0;
 	LVITEM lvi;
-	BOOL res = 0;
-
 	//pPickerInfo = GetPickerInfo(hwndPicker);
 
 	int nHigh = ListView_GetItemCount(hwndPicker);
@@ -921,7 +908,7 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		memset(&lvi, 0, sizeof(lvi));
 		lvi.mask = LVIF_PARAM;
 		lvi.iItem = nMid;
-		res = ListView_GetItem(hwndPicker, &lvi);
+		ListView_GetItem(hwndPicker, &lvi);
 		nCompareResult = Picker_CompareProc(nParam, lvi.lParam, (LPARAM) &params);
 
 		if (nCompareResult > 0)
@@ -935,7 +922,6 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		}
 	}
 
-	res++;
 	memset(&lvi, 0, sizeof(lvi));
 	lvi.mask     = LVIF_IMAGE | LVIF_TEXT | LVIF_PARAM;
 	lvi.iItem    = nLow;
@@ -1102,7 +1088,7 @@ int Picker_GetNumColumns(HWND hWnd)
 	pPickerInfo->pCallbacks->pfnGetColumnShown(shown);
 	HWND hwndHeader = ListView_GetHeader(hWnd);
 
-	if (GetUseOldControl() || (nColumnCount = Header_GetItemCount(hwndHeader)) < 1)
+	if ((nColumnCount = Header_GetItemCount(hwndHeader)) < 1)
 	{
 		nColumnCount = 0;
 		for (int i = 0; i < pPickerInfo->nColumnCount ; i++ )
@@ -1189,26 +1175,21 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 
 	int nColumnMax = Picker_GetNumColumns(hWnd);
 
-	if (GetUseOldControl())
-		pPickerInfo->pCallbacks->pfnGetColumnOrder(order);
-	else
-	{
-		/* Get the Column Order and save it */
-		res = ListView_GetColumnOrderArray(hWnd, nColumnMax, order);
+	/* Get the Column Order and save it */
+	ListView_GetColumnOrderArray(hWnd, nColumnMax, order);
 
-		/* Disallow moving column 0 */
-		if (order[0] != 0)
+	/* Disallow moving column 0 */
+	if (order[0] != 0)
+	{
+		for (i = 0; i < nColumnMax; i++)
 		{
-			for (i = 0; i < nColumnMax; i++)
+			if (order[i] == 0)
 			{
-				if (order[i] == 0)
-				{
-					order[i] = order[0];
-					order[0] = 0;
-				}
+				order[i] = order[0];
+				order[0] = 0;
 			}
-			res = ListView_SetColumnOrderArray(hWnd, nColumnMax, order);
 		}
+		ListView_SetColumnOrderArray(hWnd, nColumnMax, order);
 	}
 
 	/* Labels are offset by a certain amount */
@@ -1572,19 +1553,13 @@ BOOL Picker_SaveColumnWidths(HWND hwndPicker)
 
 	nColumnMax = Picker_GetNumColumns(hwndPicker);
 
-	if (GetUseOldControl())
-		for (i = 0; i < nColumnMax; i++)
-			widths[Picker_GetRealColumnFromViewColumn(hwndPicker, i)] = ListView_GetColumnWidth(hwndPicker, i);
-	else
-	{
-		/* Get the Column Order and save it */
-		res = ListView_GetColumnOrderArray(hwndPicker, nColumnMax, tmpOrder);
+	/* Get the Column Order and save it */
+	ListView_GetColumnOrderArray(hwndPicker, nColumnMax, tmpOrder);
 
-		for (i = 0; i < nColumnMax; i++)
-		{
-			widths[Picker_GetRealColumnFromViewColumn(hwndPicker, i)] = ListView_GetColumnWidth(hwndPicker, i);
-			order[i] = Picker_GetRealColumnFromViewColumn(hwndPicker, tmpOrder[i]);
-		}
+	for (i = 0; i < nColumnMax; i++)
+	{
+		widths[Picker_GetRealColumnFromViewColumn(hwndPicker, i)] = ListView_GetColumnWidth(hwndPicker, i);
+		order[i] = Picker_GetRealColumnFromViewColumn(hwndPicker, tmpOrder[i]);
 	}
 
 	pPickerInfo->pCallbacks->pfnSetColumnWidths(widths);

@@ -10,6 +10,7 @@
 // MAME/MAMEUI headers
 #include "tabview.h"
 #include "mui_util.h"
+#include "winui.h"
 
 
 struct TabViewInfo

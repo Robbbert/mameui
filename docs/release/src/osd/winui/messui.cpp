@@ -17,6 +17,7 @@
 #include "winui.h"
 #include "resource.h"
 #include "mui_opts.h"
+#include "emu_opts.h"
 #include "picker.h"
 #include "tabview.h"
 #include "mui_util.h"
@@ -454,7 +455,7 @@ static string ProcessSWDir(int drvindex)
 	char dir0[2048];
 	char *t0 = 0;
 	printf("ProcessSWDir: A\n");fflush(stdout);
-	string t = GetSWDir();
+	string t = dir_get_value(13);
 	if (!t.empty())
 	{
 		printf("ProcessSWDir: B=%s\n",t.c_str());fflush(stdout);
@@ -703,7 +704,7 @@ static BOOL MView_SetDriver(HWND hwndMView, const software_config *sconfig)
 
 	// count total amount of devices
 	printf("MView_SetDriver: C\n");fflush(stdout);
-	for (device_image_interface &dev : image_interface_iterator(pMViewInfo->config->mconfig->root_device()))
+	for (device_image_interface &dev : image_interface_enumerator(pMViewInfo->config->mconfig->root_device()))
 		if (dev.user_loadable())
 			pMViewInfo->slots++;
 
@@ -716,7 +717,7 @@ static BOOL MView_SetDriver(HWND hwndMView, const software_config *sconfig)
 		LPTSTR *ppszDevices;
 		ppszDevices = (LPTSTR *) alloca(pMViewInfo->slots * sizeof(*ppszDevices));
 		i = 0;
-		for (device_image_interface &dev : image_interface_iterator(pMViewInfo->config->mconfig->root_device()))
+		for (device_image_interface &dev : image_interface_enumerator(pMViewInfo->config->mconfig->root_device()))
 		{
 			if (!dev.user_loadable())
 				continue;
@@ -754,7 +755,7 @@ static BOOL MView_SetDriver(HWND hwndMView, const software_config *sconfig)
 
 		// Now actually display the media-slot names, and show the empty boxes and the browse button
 		LONG_PTR l = 0;
-		for (device_image_interface &dev : image_interface_iterator(pMViewInfo->config->mconfig->root_device()))
+		for (device_image_interface &dev : image_interface_enumerator(pMViewInfo->config->mconfig->root_device()))
 		{
 			if (!dev.user_loadable())
 				continue;
@@ -873,7 +874,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 	SoftwareList_SetDriver(hwndSoftwareList, s_config);
 
 	printf("MyFillSoftwareList: Getting Softlist Information\n");fflush(stdout);
-	for (software_list_device &swlistdev : software_list_device_iterator(s_config->mconfig->root_device()))
+	for (software_list_device &swlistdev : software_list_device_enumerator(s_config->mconfig->root_device()))
 	{
 		if (swlistdev.is_compatible() || swlistdev.is_original())
 		{
@@ -882,7 +883,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 				const software_part &swpart = swinfo.parts().front();
 
 				// search for a device with the right interface
-				for (const device_image_interface &image : image_interface_iterator(s_config->mconfig->root_device()))
+				for (const device_image_interface &image : image_interface_enumerator(s_config->mconfig->root_device()))
 				{
 					if (!image.user_loadable())
 						continue;
@@ -942,7 +943,7 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *dev, LP
 
 	if (file_extension)
 	{
-		for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
+		for (device_image_interface &dev : image_interface_enumerator(s_config->mconfig->root_device()))
 		{
 			if (!dev.user_loadable())
 				continue;
@@ -978,7 +979,7 @@ static void MessRemoveImage(int drvindex, const char *pszFilename)
 	//o.set_value(OPTION_SYSTEMNAME, driver_list::driver(drvindex).name, OPTION_PRIORITY_CMDLINE);
 	load_options(o, OPTIONS_GAME, drvindex, 1);
 
-	for (device_image_interface &dev : image_interface_iterator(s_config->mconfig->root_device()))
+	for (device_image_interface &dev : image_interface_enumerator(s_config->mconfig->root_device()))
 	{
 		if (!dev.user_loadable())
 			continue;
@@ -1023,7 +1024,7 @@ static void MessRefreshPicker(void)
 	/* allocate the machine config */
 	machine_config config(driver_list::driver(s_config->driver_index), o);
 
-	for (device_image_interface &dev : image_interface_iterator(config.root_device()))
+	for (device_image_interface &dev : image_interface_enumerator(config.root_device()))
 	{
 		if (!dev.user_loadable())
 			continue;
@@ -1174,7 +1175,7 @@ static void SetupImageTypes(const machine_config *config, mess_image_type *types
 	// Nobody used this so we will usurp it to just exit instead
 	{
 		/* special case; all non-printer devices */
-		for (device_image_interface &device : image_interface_iterator(s_config->mconfig->root_device()))
+		for (device_image_interface &device : image_interface_enumerator(s_config->mconfig->root_device()))
 		{
 			if (!device.user_loadable())
 				continue;
@@ -1215,7 +1216,7 @@ static void CleanupImageTypes(mess_image_type *types, int count)
 
 static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_interface *dev)
 {
-	string dst = GetSWDir();
+	string dst = dir_get_value(13);
 	// We only want the first path; throw out the rest
 	size_t i = dst.find(';');
 	if (i != string::npos)
@@ -1859,14 +1860,14 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 
 	HMENU hMenu = CreatePopupMenu();
 
-	for (software_list_device &swlist : software_list_device_iterator(pMViewInfo->config->mconfig->root_device()))
+	for (software_list_device &swlist : software_list_device_enumerator(pMViewInfo->config->mconfig->root_device()))
 	{
 		for (const software_info &swinfo : swlist.get_info())
 		{
 			const software_part &part = swinfo.parts().front();
 			if (swlist.is_compatible(part) == SOFTWARE_IS_COMPATIBLE)
 			{
-				for (device_image_interface &image : image_interface_iterator(pMViewInfo->config->mconfig->root_device()))
+				for (device_image_interface &image : image_interface_enumerator(pMViewInfo->config->mconfig->root_device()))
 				{
 					if (!image.user_loadable())
 						continue;
@@ -1887,7 +1888,7 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 	if (software)
 	{
 		string as, dst;
-		string t = GetRomDirs();
+		string t = dir_get_value(2);
 		char rompath[t.size()+1];
 		strcpy(rompath, t.c_str());
 		char* sl_root = strtok(rompath, ";");

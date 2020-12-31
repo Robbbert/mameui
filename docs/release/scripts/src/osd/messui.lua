@@ -60,11 +60,14 @@ function maintargetosdoptions(_target,_subtarget)
 		"comdlg32",
 		"psapi",
 		"ole32",
+--		"shell32",
+		"uxtheme",
 	}
 
--- Local file gives correct icon in mess instance inside of messui
--- Local file must #include messui.rc
+-- Local file gives correct icon in mame instance inside of mameui
+-- Local file must #include mameui.rc
 	override_resources = true;
+	rctarget = _subtarget;
 	local rcfile = MAME_DIR .. "src/osd/winui/" .. _subtarget .. ".rc"
 	local uifile = MAME_DIR .. "src/osd/winui/mameui.rc"
 
@@ -82,7 +85,7 @@ function maintargetosdoptions(_target,_subtarget)
 		rcfile,
 	}
 	dependency {
-		{ "$(OBJDIR)/".._subtarget..".res" ,  GEN_DIR  .. "/resource/".._subtarget.."vers.rc", true  },
+		{ "$(OBJDIR)/".._subtarget..".res" ,  GEN_DIR  .. "resource/".._subtarget.."vers.rc", true  },
 	}
 end
 
@@ -206,14 +209,12 @@ project ("osd_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/osd/winui/bitmask.cpp",
 		MAME_DIR .. "src/osd/winui/columnedit.cpp",
 		MAME_DIR .. "src/osd/winui/datamap.cpp",
---		MAME_DIR .. "src/osd/winui/devview.cpp",
 		MAME_DIR .. "src/osd/winui/dialogs.cpp",
 		MAME_DIR .. "src/osd/winui/dijoystick.cpp",
---		MAME_DIR .. "src/osd/winui/directdraw.cpp",
 		MAME_DIR .. "src/osd/winui/directinput.cpp",
 		MAME_DIR .. "src/osd/winui/directories.cpp",
 		MAME_DIR .. "src/osd/winui/dirwatch.cpp",
---		MAME_DIR .. "src/osd/winui/dxdecode.cpp",
+		MAME_DIR .. "src/osd/winui/emu_opts.cpp",
 		MAME_DIR .. "src/osd/winui/help.cpp",
 		MAME_DIR .. "src/osd/winui/helpids.cpp",
 		MAME_DIR .. "src/osd/winui/history.cpp",

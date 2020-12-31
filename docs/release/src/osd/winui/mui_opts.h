@@ -2,135 +2,11 @@
 // MASTER
 //****************************************************************************
 
-#ifndef MUI_OPTS_H
-#define MUI_OPTS_H
+#ifndef WINUI_MUI_OPTS_H
+#define WINUI_MUI_OPTS_H
 
 #include "winmain.h"
 #include "winui.h"
-
-#if 0
-enum class m_optnum
-{
-	MOPT_ROMPATH,
-	MOPT_HASHPATH,
-	MOPT_SAMPLEPATH,
-	MOPT_ARTPATH,
-	MOPT_CTRLRPATH,
-	MOPT_INIPATH,
-	MOPT_FONTPATH,
-	MOPT_CHEATPATH,
-	MOPT_CROSSHAIRPATH,
-	MOPT_PLUGINSPATH,
-	MOPT_LANGUAGEPATH,
-	MOPT_SWPATH,
-	MOPT_CFGPATH,
-	MOPT_NVRAMPATH,
-	MOPT_INPUTPATH,
-	MOPT_SAVESTATEPATH,
-	MOPT_DIFFPATH,
-	MOPT_COMMENTPATH,
-	MOPT_DATPATH,
-	MOPT_FOLDERPATH,
-	MOPT_UIPATH,
-	MOPT_ICONSPATH,
-	MOPT_SS_ARTPREVPATH,
-	MOPT_SS_BOSSPATH,
-	MOPT_SS_CABPATH,
-	MOPT_SS_COVERPATH,
-	MOPT_SS_CPANELPATH,
-	MOPT_SS_ENDPATH,
-	MOPT_SS_FLYERPATH,
-	MOPT_SS_GAMEOVERPATH,
-	MOPT_SS_HOWTOPATH,
-	MOPT_SS_LOGOPATH,
-	MOPT_SS_MARQUEEPATH,
-	MOPT_SS_PCBPATH,
-	MOPT_SS_SCOREPATH,
-	MOPT_SS_SELECTPATH,
-	MOPT_SS_SNAPPATH,
-	MOPT_SS_TITLEPATH,
-	MOPT_SS_VERSUSPATH,
-};
-
-typedef struct
-{
-	m_optnum    optnum;
-	LPCSTR      optname;
-	LPCSTR      defdata;
-	uint8_t     optfile; // 1 = mame.ini; 2 = ui.ini; 4 = mameui.ini
-}
-MAINOPTINFO;
-
-// must be in same order as enum above
-const MAINOPTINFO m_opt_info [] =
-{
-	{ m_optnum::MOPT_ROMPATH,         OPTION_MEDIAPATH,          "roms",      0x01 },
-	{ m_optnum::MOPT_HASHPATH,        OPTION_HASHPATH,           "hash",      0x01 },
-	{ m_optnum::MOPT_SAMPLEPATH,      OPTION_SAMPLEPATH,         "samples",   0x01 },
-	{ m_optnum::MOPT_ARTPATH,         OPTION_ARTPATH,            "artwork",   0x01 },
-	{ m_optnum::MOPT_CTRLRPATH,       OPTION_CTRLRPATH,          "ctrlr",     0x01 },
-	{ m_optnum::MOPT_INIPATH,         OPTION_INIPATH,            "ini",       0x01 },
-	{ m_optnum::MOPT_FONTPATH,        OPTION_FONTPATH,           ".",         0x01 },
-	{ m_optnum::MOPT_CHEATPATH,       OPTION_CHEATPATH,          "cheat",     0x01 },
-	{ m_optnum::MOPT_CROSSHAIRPATH,   OPTION_CROSSHAIRPATH,      "crosshair", 0x01 },
-	{ m_optnum::MOPT_PLUGINSPATH,     OPTION_PLUGINSPATH,        "plugins",   0x01 },
-	{ m_optnum::MOPT_LANGUAGEPATH,    OPTION_LANGUAGEPATH,       "language",  0x01 },
-	{ m_optnum::MOPT_SWPATH,          OPTION_SWPATH,             "data",      0x01 },
-	{ m_optnum::MOPT_CFGPATH,         OPTION_CFG_DIRECTORY,      "cfg",       0x01 },
-	{ m_optnum::MOPT_NVRAMPATH,       OPTION_NVRAM_DIRECTORY,    "nvram",     0x01 },
-	{ m_optnum::MOPT_INPUTPATH,       OPTION_INPUT_DIRECTORY,    "inp",       0x01 },
-	{ m_optnum::MOPT_SAVESTATEPATH,   OPTION_STATE_DIRECTORY,    "sta",       0x01 },
-	{ m_optnum::MOPT_DIFFPATH,        OPTION_DIFF_DIRECTORY,     "diff",      0x01 },
-	{ m_optnum::MOPT_COMMENTPATH,     OPTION_COMMENT_DIRECTORY,  "comments",  0x01 },
-	{ m_optnum::MOPT_DATPATH,         OPTION_HISTORY_PATH,       "history",   0x02 },
-	{ m_optnum::MOPT_FOLDERPATH,      OPTION_CATEGORYINI_PATH,   "folders",   0x02 },
-	{ m_optnum::MOPT_UIPATH,          OPTION_UI_PATH,            "ui",        0x02 },
-	{ m_optnum::MOPT_ICONSPATH,       OPTION_ICONS_PATH,         "icons",     0x02 },
-	{ m_optnum::MOPT_SS_ARTPREVPATH,  OPTION_ARTPREV_PATH,       "artprev",   0x02 },
-	{ m_optnum::MOPT_SS_BOSSPATH,     OPTION_BOSSES_PATH,        "bosses",    0x02 },
-	{ m_optnum::MOPT_SS_CABPATH,      OPTION_CABINETS_PATH,      "cabinets",  0x02 },
-	{ m_optnum::MOPT_SS_COVERPATH,    OPTION_COVER_PATH,         "covers",    0x02 },
-	{ m_optnum::MOPT_SS_CPANELPATH,   OPTION_CPANELS_PATH,       "cpanel",    0x02 },
-	{ m_optnum::MOPT_SS_ENDPATH,      OPTION_ENDS_PATH,          "ends",      0x02 },
-	{ m_optnum::MOPT_SS_FLYERPATH,    OPTION_FLYERS_PATH,        "flyers",    0x02 },
-	{ m_optnum::MOPT_SS_GAMEOVERPATH, OPTION_GAMEOVER_PATH,      "gameover",  0x02 },
-	{ m_optnum::MOPT_SS_HOWTOPATH,    OPTION_HOWTO_PATH,         "howto",     0x02 },
-	{ m_optnum::MOPT_SS_LOGOPATH,     OPTION_LOGOS_PATH,         "logo",      0x02 },
-	{ m_optnum::MOPT_SS_MARQUEEPATH,  OPTION_MARQUEES_PATH,      "marquees",  0x02 },
-	{ m_optnum::MOPT_SS_PCBPATH,      OPTION_PCBS_PATH,          "pcb",       0x02 },
-	{ m_optnum::MOPT_SS_SCOREPATH,    OPTION_SCORES_PATH,        "scores",    0x02 },
-	{ m_optnum::MOPT_SS_SELECTPATH,   OPTION_SELECT_PATH,        "select",    0x02 },
-	{ m_optnum::MOPT_SS_SNAPPATH,     OPTION_SNAPSHOT_DIRECTORY, "snap",      0x01 },
-	{ m_optnum::MOPT_SS_TITLEPATH,    OPTION_TITLES_PATH,        "titles",    0x02 },
-	{ m_optnum::MOPT_SS_VERSUSPATH,   OPTION_VERSUS_PATH,        "versus",    0x02 },
-};
-
-int m_index = static_cast<uint8_t>(MOPT_whatever);
-
-#endif
-
-// These help categorise the folders on the left side
-// This list is mainly for documentation, although a few are used in code
-typedef enum {
-	// Global types
-	OPTIONS_GLOBAL = 0,
-	OPTIONS_HORIZONTAL,
-	OPTIONS_VERTICAL,
-	OPTIONS_RASTER,
-	OPTIONS_VECTOR,
-	OPTIONS_LCD,
-	OPTIONS_ARCADE,
-	OPTIONS_CONSOLE,
-	OPTIONS_COMPUTER,
-	OPTIONS_OTHERSYS,
-	// Local types
-	OPTIONS_SOURCE,
-	OPTIONS_GPARENT,
-	OPTIONS_PARENT,
-	OPTIONS_GAME,
-	// EOF marker
-	OPTIONS_MAX
-} OPTIONS_TYPE;
 
 // List of columns in the main game list
 enum
@@ -151,7 +27,7 @@ enum
 	COLUMN_MAX
 };
 
-#define GLOBAL_OPTIONS  -1
+#define LOCAL_OPTIONS   -10
 
 typedef struct
 {
@@ -198,154 +74,28 @@ enum
 // (that's how many options we have after MAX_TAB_TYPES)
 #define TAB_SUBTRACT 3
 
-BOOL OptionsInit(void);
+void OptionsInit(void);
 
 #define OPTIONS_TYPE_GLOBAL -1
 #define OPTIONS_TYPE_FOLDER -2
 
-bool AreOptionsEqual(windows_options &opts1, windows_options &opts2);
-void OptionsCopy(windows_options &source, windows_options &dest);
-void SetDirectories(windows_options &opts);
-
-void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num, bool set_system_name);
-void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num);
-
-void SetSystemName(windows_options &opts, OPTIONS_TYPE opt_type, int driver_index);
-
-windows_options &MameUIGlobal(void);
-
 void LoadFolderFlags(void);
 
 // Start interface to directories.h
-const string GetRomDirs(void);
-void SetRomDirs(const char *paths);
-
-const string GetSampleDirs(void);
-void SetSampleDirs(const char *paths);
-
-const string GetArtDir(void);
-void SetArtDir(const char *path);
-
-const string GetArtworkDir(void);
-void SetArtworkDir(const char *path);
-
-const string GetBossesDir(void);
-void SetBossesDir(const char *path);
-
-const string GetCabinetDir(void);
-void SetCabinetDir(const char *path);
-
-const string GetCheatDir(void);
-void SetCheatDir(const char *path);
-
-const string GetCfgDir(void);
-void SetCfgDir(const char *path);
-
-const string GetControlPanelDir(void);
-void SetControlPanelDir(const char *path);
-
-const string GetCoversDir(void);
-void SetCoversDir(const char *path);
-
-const string GetCtrlrDir(void);
-void SetCtrlrDir(const char *path);
-
-const string GetCrosshairDir(void);
-void SetCrosshairDir(const char *paths);
-
-const string GetDatsDir(void);
-void SetDatsDir(const char *path);
-
-const string GetDiffDir(void);
-void SetDiffDir(const char *path);
-
-const string GetEndsDir(void);
-void SetEndsDir(const char *path);
-
-const string GetFlyerDir(void);
-void SetFlyerDir(const char *path);
-
-const string GetFolderDir(void);
-void SetFolderDir(const char *path);
-
-const string GetFontDir(void);
-void SetFontDir(const char *paths);
-
-const string GetGameOverDir(void);
-void SetGameOverDir(const char *path);
-
-const string GetHashDirs(void);
-void SetHashDirs(const char *paths);
-
-const string GetHLSLDir(void);
-void SetHLSLDir(const char *path);
-
-const string GetHowToDir(void);
-void SetHowToDir(const char *path);
-
-const string GetIconsDir(void);
-void SetIconsDir(const char *path);
-
-const string GetImgDir(void);
-void SetImgDir(const char *path);
-
-const char *GetIniDir(void);
-void SetIniDir(const char *path);
-
-const string GetInpDir(void);
-void SetInpDir(const char *path);
-
-const string GetLangDir(void);
-void SetLangDir(const char *path);
-
-const string GetLogoDir(void);
-void SetLogoDir(const char *path);
 
 const string GetManualsDir(void);
 void SetManualsDir(const char* path);
-
-const string GetMarqueeDir(void);
-void SetMarqueeDir(const char *path);
-
-const string GetNvramDir(void);
-void SetNvramDir(const char *path);
-
-const string GetPcbDir(void);
-void SetPcbDir(const char *path);
-
-const string GetPluginsDir(void);
-void SetPluginsDir(const char *path);
-
-const string GetScoresDir(void);
-void SetScoresDir(const char *path);
-
-const string GetStateDir(void);
-void SetStateDir(const char *path);
-
-const string GetTitlesDir(void);
-void SetTitlesDir(const char *path);
-
-const string GetSelectDir(void);
-void SetSelectDir(const char *path);
-
-const string GetSWDir(void);
-void SetSWDir(const char *path);
-
-const string GetVersusDir(void);
-void SetVersusDir(const char *path);
 
 const string GetVideoDir(void);
 void SetVideoDir(const char *path);
 
 // End interface to directories.h
 
-void SaveOptions(void);
-void SaveDefaultOptions(void);
+void mui_save_ini(void);
 void SaveGameListOptions(void);
 
 void ResetGUI(void);
-void ResetGameDefaults(void);
-void ResetAllGameOptions(void);
+
 
 const char * GetImageTabLongName(int tab_index);
 const char * GetImageTabShortName(int tab_index);
@@ -452,19 +202,8 @@ int  GetSortColumn(void);
 void SetSortReverse(BOOL reverse);
 BOOL GetSortReverse(void);
 
-const string GetLanguageUI(void);
-
-bool GetEnablePlugins(void);
-
-const string GetPlugins(void);
-
-const char *GetSnapName(void);
-void SetSnapName(const char *pattern);
-
 const string GetBgDir(void);
 void SetBgDir(const char *path);
-
-void ResetGameOptions(int driver_index);
 
 int GetRomAuditResults(uint32_t driver_index);
 void SetRomAuditResults(uint32_t driver_index, int audit_results);
@@ -483,11 +222,6 @@ void ResetPlayTime(int driver_index);
 
 const char * GetVersionString(void);
 
-bool DriverHasSoftware(uint32_t drvindex);
-
-void SaveDefaultOptions(void);
-
-BOOL IsGlobalOption(const char *option_name);
 
 
 
@@ -633,7 +367,6 @@ int  GetSLSortColumn(void);
 void SetSLSortReverse(BOOL reverse);
 BOOL GetSLSortReverse(void);
 
-void SetSelectedSoftware(int driver_index, string opt_name, const char *software);
 
 void SetCurrentSoftwareTab(int val);
 int GetCurrentSoftwareTab(void);

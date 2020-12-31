@@ -382,7 +382,7 @@ static BOOL SoftwarePicker_AddFileEntry(HWND hwndPicker, LPCSTR pszFilename, UIN
 		pszExtension = strrchr(pszFilename, '.');
 	if ((pszExtension) && (pPickerInfo->config))
 	{
-		for (device_image_interface &dev : image_interface_iterator(pPickerInfo->config->mconfig->root_device()))
+		for (device_image_interface &dev : image_interface_enumerator(pPickerInfo->config->mconfig->root_device()))
 		{
 			if (!dev.user_loadable())
 				continue;

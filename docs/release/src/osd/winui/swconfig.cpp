@@ -11,7 +11,7 @@
 // standard C headers
 #include <tchar.h>
 #include "swconfig.h"
-#include "mui_opts.h"
+#include "emu_opts.h"
 #include "drivenum.h"
 
 //============================================================
@@ -55,3 +55,4 @@ void software_config_free(software_config *config)
 
 	free(config);
 }
+

@@ -2335,14 +2335,14 @@ static bool get_softlist_info(HWND wnd, device_image_interface *img)
 	strcpy(rompath, window->machine().options().emu_options::media_path());
 
 	// Get the path to suitable software
-	for (software_list_device &swlist : software_list_device_iterator(window->machine().root_device()))
+	for (software_list_device &swlist : software_list_device_enumerator(window->machine().root_device()))
 	{
 		for (const software_info &swinfo : swlist.get_info())
 		{
 			const software_part &part = swinfo.parts().front();
 			if (swlist.is_compatible(part) == SOFTWARE_IS_COMPATIBLE)
 			{
-				for (device_image_interface &image : image_interface_iterator(window->machine().root_device()))
+				for (device_image_interface &image : image_interface_enumerator(window->machine().root_device()))
 				{
 					if (!image.user_loadable())
 						continue;
@@ -2728,7 +2728,7 @@ static void prepare_menus(HWND wnd)
 		set_command_state(menu_bar, ID_FILE_SAVESTATE, MFS_GRAYED);
 	}
 
-	set_command_state(menu_bar, ID_EDIT_PASTE, window->machine().ioport().natkeyboard().can_post() ? MFS_ENABLED : MFS_GRAYED);
+	set_command_state(menu_bar, ID_EDIT_PASTE, window->machine().natkeyboard().can_post() ? MFS_ENABLED : MFS_GRAYED);
 
 	set_command_state(menu_bar, ID_OPTIONS_PAUSE, winwindow_ui_is_paused(window->machine()) ? MFS_CHECKED : MFS_ENABLED);
 	set_command_state(menu_bar, ID_OPTIONS_CONFIGURATION, has_config ? MFS_ENABLED : MFS_GRAYED);
@@ -2739,8 +2739,8 @@ static void prepare_menus(HWND wnd)
 	set_command_state(menu_bar, ID_OPTIONS_TOGGLEFPS, mame_machine_manager::instance()->ui().show_fps() ? MFS_CHECKED : MFS_ENABLED);
 	set_command_state(menu_bar, ID_FILE_UIACTIVE, has_keyboard ? (window->machine().ui_active() ? MFS_CHECKED : MFS_ENABLED): MFS_CHECKED | MFS_GRAYED);
 
-	set_command_state(menu_bar, ID_KEYBOARD_EMULATED, has_keyboard ? (!window->machine().ioport().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
-	set_command_state(menu_bar, ID_KEYBOARD_NATURAL, (has_keyboard && window->machine().ioport().natkeyboard().can_post()) ? (window->machine().ioport().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
+	set_command_state(menu_bar, ID_KEYBOARD_EMULATED, has_keyboard ? (!window->machine().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
+	set_command_state(menu_bar, ID_KEYBOARD_NATURAL, (has_keyboard && window->machine().natkeyboard().can_post()) ? (window->machine().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
 	set_command_state(menu_bar, ID_KEYBOARD_CUSTOMIZE, has_keyboard ? MFS_ENABLED : MFS_GRAYED);
 
 	set_command_state(menu_bar, ID_VIDEO_ROTATE_0, (orientation == ROT0) ? MFS_CHECKED : MFS_ENABLED);
@@ -2793,7 +2793,7 @@ static void prepare_menus(HWND wnd)
 	bool usage_shown = false;
 	int cnt = 0;
 	// then set up the actual devices
-	for (device_image_interface &img : image_interface_iterator(window->machine().root_device()))
+	for (device_image_interface &img : image_interface_enumerator(window->machine().root_device()))
 	{
 		if (!img.user_loadable())
 			continue;
@@ -2929,7 +2929,7 @@ static void prepare_menus(HWND wnd)
 	remove_menu_items(slot_menu);
 	cnt = 3400;
 	// cycle through all slots for this system
-	for (device_slot_interface &slot : slot_interface_iterator(window->machine().root_device()))
+	for (device_slot_interface &slot : slot_interface_enumerator(window->machine().root_device()))
 	{
 		if (slot.fixed())
 			continue;
@@ -3205,7 +3205,7 @@ static device_image_interface *decode_deviceoption(running_machine &machine, int
 	if (devoption)
 		*devoption = command % DEVOPTION_MAX;
 
-	image_interface_iterator iter(machine.root_device());
+	image_interface_enumerator iter(machine.root_device());
 	return iter.byindex(absolute_index);
 }
 
@@ -3220,8 +3220,7 @@ static void set_window_orientation(win_window_info *window, int orientation)
 	window->m_target->set_orientation(orientation);
 	if (window->m_target->is_ui_target())
 	{
-		render_container::user_settings settings;
-		window->machine().render().ui_container().get_user_settings(settings);
+		render_container::user_settings settings = window->machine().render().ui_container().get_user_settings();
 		settings.m_orientation = orientation;
 		window->machine().render().ui_container().set_user_settings(settings);
 	}
@@ -3291,11 +3290,11 @@ static bool invoke_command(HWND wnd, UINT command)
 			break;
 
 		case ID_KEYBOARD_NATURAL:
-			window->machine().ioport().natkeyboard().set_in_use(true);
+			window->machine().natkeyboard().set_in_use(true);
 			break;
 
 		case ID_KEYBOARD_EMULATED:
-			window->machine().ioport().natkeyboard().set_in_use(false);
+			window->machine().natkeyboard().set_in_use(false);
 			break;
 
 		case ID_KEYBOARD_CUSTOMIZE:
@@ -3609,7 +3608,7 @@ LRESULT CALLBACK winwindow_video_window_proc_ui(HWND wnd, UINT message, WPARAM w
 
 		case WM_PASTE:
 			{
-				mame_machine_manager::instance()->ui().machine().ioport().natkeyboard().paste();
+				mame_machine_manager::instance()->ui().machine().natkeyboard().paste();
 			}
 			break;
 
