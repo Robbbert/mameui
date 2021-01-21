@@ -941,7 +941,10 @@ std::string nes_cart_slot_device::get_default_card_software(get_default_card_sof
 		if ((rom[0] == 'U') && (rom[1] == 'N') && (rom[2] == 'I') && (rom[3] == 'F'))
 			slot_string = get_default_card_unif(&rom[0], len);
 
-		return std::string(slot_string);
+		if (slot_string) // MESSUI
+			return std::string(slot_string);
+		else
+			return "";
 	}
 	else
 		return software_get_default_slot("nrom");
