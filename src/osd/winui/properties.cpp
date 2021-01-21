@@ -128,7 +128,7 @@ b) Exit the dialog.
 #include "drivenum.h"
 #include "machine/ram.h"
 #include <shlwapi.h>
-
+#include "corestr.h"
 
 #if defined(__GNUC__)
 /* fix warning: cast does not match function type */
@@ -3090,7 +3090,7 @@ static void InitializeBIOSUI(HWND hwnd)
 				{
 					if (ROMENTRY_ISSYSTEM_BIOS(rom))
 					{
-						const char *name = ROM_GETHASHDATA(rom);
+						const char *name = rom->hashdata().c_str();
 						const char *biosname = ROM_GETNAME(rom);
 						t_s = ui_wstring_from_utf8(name);
 						if( !t_s )
@@ -3122,7 +3122,7 @@ static void InitializeBIOSUI(HWND hwnd)
 			{
 				if (ROMENTRY_ISSYSTEM_BIOS(rom))
 				{
-					const char *name = ROM_GETHASHDATA(rom);
+					const char *name = rom->hashdata().c_str();
 					const char *biosname = ROM_GETNAME(rom);
 					t_s = ui_wstring_from_utf8(name);
 					if( !t_s )

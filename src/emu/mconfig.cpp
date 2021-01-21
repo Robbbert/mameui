@@ -145,7 +145,7 @@ device_execute_interface *machine_config::perfect_quantum_device() const
 	if (!m_perfect_quantum_device.first)
 		return nullptr;
 
-	device_t *const found(m_perfect_quantum_device.first->subdevice(m_perfect_quantum_device.second.c_str()));
+	device_t *const found(m_perfect_quantum_device.first->subdevice(m_perfect_quantum_device.second));
 	if (!found)
 	{
 		throw emu_fatalerror(
@@ -241,7 +241,7 @@ device_t *machine_config::device_remove(const char *tag)
 		remove_references(*device);
 
 		// let the device's owner do the work
-		owner->subdevices().m_list.remove(*device);
+		owner->subdevices().remove(*device);
 	}
 	return nullptr;
 }
@@ -266,12 +266,11 @@ std::pair<const char *, device_t *> machine_config::resolve_owner(const char *ta
 	}
 
 	// go down the path until we're done with it
-	std::string part;
 	while (strchr(tag, ':'))
 	{
 		const char *next = strchr(tag, ':');
 		assert(next != tag);
-		part.assign(tag, next - tag);
+		std::string_view part(tag, next - tag);
 		owner = owner->subdevices().find(part);
 		if (!owner)
 			throw emu_fatalerror("Could not find %s when looking up path for device %s\n", part, orig_tag);
@@ -316,7 +315,7 @@ device_t &machine_config::add_device(std::unique_ptr<device_t> &&device, device_
 	if (owner)
 	{
 		// allocate the new device and append it to the owner's list
-		device_t &result(owner->subdevices().m_list.append(*device.release()));
+		device_t &result(owner->subdevices().append(std::move(device)));
 		result.add_machine_configuration(*this);
 		return result;
 	}
@@ -340,8 +339,8 @@ device_t &machine_config::replace_device(std::unique_ptr<device_t> &&device, dev
 {
 	current_device_stack const context(*this);
 	device_t &result(existing
-			? owner.subdevices().m_list.replace_and_remove(*device.release(), *existing)
-			: owner.subdevices().m_list.append(*device.release()));
+			? owner.subdevices().replace_and_remove(std::move(device), *existing)
+			: owner.subdevices().append(std::move(device)));
 	result.add_machine_configuration(*this);
 	return result;
 }
@@ -380,10 +379,6 @@ void machine_config::remove_references(device_t &device)
 		else
 			++it;
 	}
-
-	// iterate over all devices and remove any references
-	for (device_t &scan : device_enumerator(root_device()))
-		scan.subdevices().m_tagmap.clear();
 }
 
 

@@ -99,6 +99,7 @@
 #include "inputdev.h"
 #include "natkeyboard.h"
 
+#include "corestr.h"
 #include "osdepend.h"
 #include "unicode.h"
 
@@ -1366,7 +1367,7 @@ ioport_field_live::ioport_field_live(ioport_field &field, analog_field *analog)
 		}
 
 		// trim extra spaces
-		strtrimspace(name);
+		name = strtrimspace(name);
 
 		// special case
 		if (name.empty())
@@ -2787,19 +2788,19 @@ void ioport_manager::timecode_init()
 	if (filerr != osd_file::error::NONE)
 		throw emu_fatalerror("ioport_manager::timecode_init: Failed to open file for input timecode recording");
 
-	m_timecode_file.puts(std::string("# ==========================================\n").c_str());
-	m_timecode_file.puts(std::string("# TIMECODE FILE FOR VIDEO PREVIEW GENERATION\n").c_str());
-	m_timecode_file.puts(std::string("# ==========================================\n").c_str());
-	m_timecode_file.puts(std::string("#\n").c_str());
-	m_timecode_file.puts(std::string("# VIDEO_PART:     code of video timecode\n").c_str());
-	m_timecode_file.puts(std::string("# START:          start time (hh:mm:ss.mmm)\n").c_str());
-	m_timecode_file.puts(std::string("# ELAPSED:        elapsed time (hh:mm:ss.mmm)\n").c_str());
-	m_timecode_file.puts(std::string("# MSEC_START:     start time (milliseconds)\n").c_str());
-	m_timecode_file.puts(std::string("# MSEC_ELAPSED:   elapsed time (milliseconds)\n").c_str());
-	m_timecode_file.puts(std::string("# FRAME_START:    start time (frames)\n").c_str());
-	m_timecode_file.puts(std::string("# FRAME_ELAPSED:  elapsed time (frames)\n").c_str());
-	m_timecode_file.puts(std::string("#\n").c_str());
-	m_timecode_file.puts(std::string("# VIDEO_PART======= START======= ELAPSED===== MSEC_START===== MSEC_ELAPSED=== FRAME_START==== FRAME_ELAPSED==\n").c_str());
+	m_timecode_file.puts("# ==========================================\n");
+	m_timecode_file.puts("# TIMECODE FILE FOR VIDEO PREVIEW GENERATION\n");
+	m_timecode_file.puts("# ==========================================\n");
+	m_timecode_file.puts("#\n");
+	m_timecode_file.puts("# VIDEO_PART:     code of video timecode\n");
+	m_timecode_file.puts("# START:          start time (hh:mm:ss.mmm)\n");
+	m_timecode_file.puts("# ELAPSED:        elapsed time (hh:mm:ss.mmm)\n");
+	m_timecode_file.puts("# MSEC_START:     start time (milliseconds)\n");
+	m_timecode_file.puts("# MSEC_ELAPSED:   elapsed time (milliseconds)\n");
+	m_timecode_file.puts("# FRAME_START:    start time (frames)\n");
+	m_timecode_file.puts("# FRAME_ELAPSED:  elapsed time (frames)\n");
+	m_timecode_file.puts("#\n");
+	m_timecode_file.puts("# VIDEO_PART======= START======= ELAPSED===== MSEC_START===== MSEC_ELAPSED=== FRAME_START==== FRAME_ELAPSED==\n");
 }
 
 //-------------------------------------------------
