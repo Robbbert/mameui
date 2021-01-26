@@ -170,8 +170,9 @@ void mame_machine_manager::start_luaengine()
 		{
 			plugin_options::plugin *p = m_plugins->find(incl);
 			if (!p)
-				fatalerror("Fatal error: Could not load plugin: %s\n", incl);
-			p->m_start = true;
+				osd_printf_error("Could not load plugin: %s\n", incl); // MESSUI - removed fatalerror
+			else
+				p->m_start = true;
 		}
 
 		// process excludes
@@ -179,8 +180,9 @@ void mame_machine_manager::start_luaengine()
 		{
 			plugin_options::plugin *p = m_plugins->find(excl);
 			if (!p)
-				fatalerror("Fatal error: Unknown plugin: %s\n", excl);
-			p->m_start = false;
+				osd_printf_error("Unknown plugin: %s\n", excl); // MESSUI - removed fatalerror
+			else
+				p->m_start = false;
 		}
 	}
 
@@ -189,9 +191,9 @@ void mame_machine_manager::start_luaengine()
 	{
 		plugin_options::plugin *p = m_plugins->find(OPTION_CONSOLE);
 		if (!p)
-			fatalerror("Fatal error: Console plugin not found.\n");
-
-		p->m_start = true;
+			osd_printf_error("Console plugin not found.\n"); // MESSUI - removed fatalerror
+		else
+			p->m_start = true;
 	}
 
 	m_lua->initialize();

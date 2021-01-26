@@ -1227,9 +1227,7 @@ void core_options::parse_parent_file(util::core_file &inifile, int priority, boo
 		}
 
 		// set the new data
-		std::string data = optiondata;
-		trim_spaces_and_quotes(data);
-		do_set_value(*curentry, std::move(data), priority, error_stream, condition);
+		do_set_value(*curentry, trim_spaces_and_quotes(optiondata), priority, error_stream, condition);
 	}
 
 	// did we have any errors that may need to be aggregated?

@@ -257,7 +257,7 @@ public:
 	}
 	sns_cart_slot_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 	virtual const char *image_interface() const noexcept override { return "snes_cart"; }
-	virtual const char *file_extensions() const noexcept override { return "sfc"; }
+	virtual const char *file_extensions() const noexcept override { return "sfc,smc"; }
 };
 
 // ======================> sns_sufami_cart_slot_device
