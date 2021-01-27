@@ -19,7 +19,7 @@
 #define MUI_INI_FILENAME "MAMEUI.ini"
 
 #ifdef PTR64
-#define MAMEUINAME MAMENAME "UI64"
+#define MAMEUINAME MAMENAME "UI"
 #else
 #define MAMEUINAME MAMENAME "UI32"
 #endif
