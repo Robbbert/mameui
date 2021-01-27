@@ -2265,8 +2265,7 @@ void mame_ui_manager::save_ui_options()
 	if (file.open("ui.ini") == osd_file::error::NONE)
 	{
 		// generate the updated INI
-		std::string initext = options().output_ini();
-		file.puts(initext.c_str());
+		file.puts(options().output_ini());
 		file.close();
 	}
 	else
@@ -2312,7 +2311,7 @@ void mame_ui_manager::save_main_option()
 	for (const auto &f_entry : machine().options().entries())
 	{
 		const char *value = f_entry->value();
-		if (value && options.exists(f_entry->name()) && strcmp(value, options.value(f_entry->name().c_str())))
+		if (value && options.exists(f_entry->name()) && strcmp(value, options.value(f_entry->name())))
 		{
 			options.set_value(f_entry->name(), *f_entry->value(), OPTION_PRIORITY_CMDLINE);
 		}
@@ -2324,8 +2323,7 @@ void mame_ui_manager::save_main_option()
 		if (file.open(std::string(emulator_info::get_configname()) + ".ini") == osd_file::error::NONE)
 		{
 			// generate the updated INI
-			std::string initext = options.output_ini();
-			file.puts(initext.c_str());
+			file.puts(options.output_ini());
 			file.close();
 		}
 		else {

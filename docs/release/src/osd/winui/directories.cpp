@@ -162,6 +162,7 @@ static TCHAR* DirInfo_Path(tDirInfo *pInfo, int nType, int nItem)
 	return pInfo[nType].m_Path->m_Directories[nItem];
 }
 
+// only used by Multiple directories; single dirs are always updated
 static void DirInfo_SetModified(tDirInfo *pInfo, int nType, BOOL bModified)
 {
 	//assert(IsMultiDir(nType));
@@ -368,6 +369,7 @@ static void Directories_OnClose(HWND hDlg)
 	EndDialog(hDlg, IDCANCEL);
 }
 
+// Only used by multi dir
 static int RetrieveDirList(int nDir, int nFlagResult, void (*SetTheseDirs)(const char *s))
 {
 	int nResult = 0;
@@ -408,7 +410,7 @@ static void Directories_OnOk(HWND hDlg)
 		if (IsMultiDir(i))
 			nResult |= RetrieveDirList(i, g_directoryInfo[i].nDirDlgFlags, g_directoryInfo[i].pfnSetTheseDirs);
 		else
-		if (DirInfo_Modified(g_pDirInfo, i))
+		//if (DirInfo_Modified(g_pDirInfo, i))   // this line only makes sense with multi - TODO - fix this up.
 		{
 			LPTSTR s = FixSlash(DirInfo_Dir(g_pDirInfo, i));
 			char* utf8_s = ui_utf8_from_wstring(s);

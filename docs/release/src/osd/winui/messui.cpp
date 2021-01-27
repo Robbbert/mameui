@@ -1272,13 +1272,13 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 	int drvindex = Picker_GetSelectedItem(hwndList);
 	if (drvindex < 0)
 		return false;
-	string dst, opt_name = dev->instance_name();
+	string opt_name = dev->instance_name();
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex, 1);
-	const char* s = o.value(opt_name.c_str());
+	string s = o.value(opt_name);
 
 	/* Get the path to the currently mounted image */
-	util::zippath_parent(dst, s);
+	string dst = util::zippath_parent(s);
 	if ((!osd::directory::open(dst.c_str())) || (dst.find(':') == string::npos))
 	{
 		// no image loaded, use swpath

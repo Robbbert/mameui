@@ -12,7 +12,7 @@
 
 #include "picker.h"
 #include "softwarelist.h"
-#include "mui_util.h"
+#include "corestr.h"
 
 
 

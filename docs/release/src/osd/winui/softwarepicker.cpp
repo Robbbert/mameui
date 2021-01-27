@@ -35,7 +35,7 @@
 #include "hash.h"
 #include "softwarepicker.h"
 #include "drivenum.h"
-
+#include "corestr.h"
 
 
 //============================================================
