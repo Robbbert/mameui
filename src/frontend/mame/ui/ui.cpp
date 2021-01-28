@@ -1533,7 +1533,7 @@ std::vector<ui::menu_item> mame_ui_manager::slider_init(running_machine &machine
 		std::string screen_desc = machine_info().get_screen_desc(screen);
 
 		// add refresh rate tweaker
-		if (machine.options().cheat())
+		//if (machine.options().cheat())
 		{
 			std::string str = string_format(_("%1$s Refresh Rate"), screen_desc);
 			slider_alloc(std::move(str), -10000, 0, 10000, 1000, std::bind(&mame_ui_manager::slider_refresh, this, std::ref(screen), _1, _2));
