@@ -1115,7 +1115,7 @@ static LPCTSTR MakeShortString(HDC hDC, LPCTSTR lpszLong, int nColumnLen, int nO
 		return lpszLong;
 
 	lstrcpy(szShort, lpszLong);
-	GetTextExtentPoint32(hDC, szThreeDots, ARRAY_LENGTH(szThreeDots), &size);
+	GetTextExtentPoint32(hDC, szThreeDots, std::size(szThreeDots), &size);
 	int nAddLen = size.cx;
 
 	for (int i = nStringLen - 1; i > 0; i--)

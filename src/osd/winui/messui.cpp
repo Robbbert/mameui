@@ -291,7 +291,7 @@ static char *strncpyz(char *dest, const char *source, size_t len)
 
 static const device_entry *lookupdevice(iodevice_t d)
 {
-	for (int i = 0; i < ARRAY_LENGTH(s_devices); i++)
+	for (int i = 0; i < std::size(s_devices); i++)
 	{
 		if (s_devices[i].dev_type == d)
 			return &s_devices[i];
@@ -417,7 +417,7 @@ static int GetMessIcon(int drvindex, int nSoftwareType)
 			drv = &driver_list::driver(drvindex);
 			while (drv)
 			{
-				_snprintf(buffer, ARRAY_LENGTH(buffer), "%s/%s", drv->name, iconname);
+				_snprintf(buffer, std::size(buffer), "%s/%s", drv->name, iconname);
 				hIcon = LoadIconFromFile(buffer);
 				if (hIcon)
 					break;
@@ -1233,11 +1233,11 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 	machine_config config(driver_list::driver(drvindex), MameUIGlobal());
 
 	mess_image_type imagetypes[256];
-	SetupImageTypes(&config, imagetypes, ARRAY_LENGTH(imagetypes), true, dev);
+	SetupImageTypes(&config, imagetypes, std::size(imagetypes), true, dev);
 	TCHAR filename[MAX_PATH];
 	BOOL bResult = CommonFileImageDialog(t_s, cfd, filename, &config, imagetypes);
 	free(t_s);
-	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
+	CleanupImageTypes(imagetypes, std::size(imagetypes));
 
 	if (bResult)
 	{
@@ -1291,11 +1291,11 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 	}
 
 	mess_image_type imagetypes[256];
-	SetupImageTypes(config, imagetypes, ARRAY_LENGTH(imagetypes), true, dev);
+	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, dev);
 	TCHAR *t_s = ui_wstring_from_utf8(dst.c_str());
 	BOOL bResult = CommonFileImageDialog(t_s, GetOpenFileName, pszFilename, config, imagetypes);
 	free(t_s);
-	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
+	CleanupImageTypes(imagetypes, std::size(imagetypes));
 
 	if (bResult)
 	{
@@ -1332,11 +1332,11 @@ static BOOL MView_GetOpenItemName(HWND hwndMView, const machine_config *config, 
 		osd_get_full_path(dst, ".");
 
 	mess_image_type imagetypes[256];
-	SetupImageTypes(config, imagetypes, ARRAY_LENGTH(imagetypes), true, NULL); // just get zip & 7z
+	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, NULL); // just get zip & 7z
 	TCHAR *t_s = ui_wstring_from_utf8(dst.c_str());
 	BOOL bResult = CommonFileImageDialog(t_s, GetOpenFileName, pszFilename, config, imagetypes);
 	free(t_s);
-	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
+	CleanupImageTypes(imagetypes, std::size(imagetypes));
 
 	if (bResult)
 	{
@@ -1387,10 +1387,10 @@ static BOOL MView_GetCreateFileName(HWND hwndMView, const machine_config *config
 
 	TCHAR *t_s = ui_wstring_from_utf8(dst.c_str());
 	mess_image_type imagetypes[256];
-	SetupImageTypes(config, imagetypes, ARRAY_LENGTH(imagetypes), true, dev);
+	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, dev);
 	BOOL bResult = CommonFileImageDialog(t_s, GetSaveFileName, pszFilename, config, imagetypes);
 	free(t_s);
-	CleanupImageTypes(imagetypes, ARRAY_LENGTH(imagetypes));
+	CleanupImageTypes(imagetypes, std::size(imagetypes));
 
 	if (bResult)
 	{
@@ -1527,7 +1527,7 @@ static void SoftwarePicker_EnteringItem(HWND hwndSoftwarePicker, int nItem)
 		MessSpecifyImage(drvindex, NULL, pszFullName);
 
 		// Set up g_szSelectedItem, for the benefit of UpdateScreenShot()
-		strncpyz(g_szSelectedItem, pszName, ARRAY_LENGTH(g_szSelectedItem));
+		strncpyz(g_szSelectedItem, pszName, std::size(g_szSelectedItem));
 		LPSTR s = strrchr(g_szSelectedItem, '.');
 		if (s)
 			*s = '\0';
@@ -1598,7 +1598,7 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem)
 		LPCSTR pszFullName = SoftwareList_LookupFullname(hwndSoftwareList, nItem); // for the screenshot and SetSoftware.
 
 		// For UpdateScreenShot()
-		strncpyz(g_szSelectedItem, pszFullName, ARRAY_LENGTH(g_szSelectedItem));
+		strncpyz(g_szSelectedItem, pszFullName, std::size(g_szSelectedItem));
 		UpdateScreenShot();
 		// use SOFTWARENAME option to properly load a multipart set
 		SetSelectedSoftware(drvindex, "", pszFullName);
@@ -1843,7 +1843,7 @@ static void SetupSoftwareTabView(void)
 
 	memset(&opts, 0, sizeof(opts));
 	opts.pCallbacks = &s_softwareTabViewCallbacks;
-	opts.nTabCount = ARRAY_LENGTH(s_tabs);
+	opts.nTabCount = std::size(s_tabs);
 
 	SetupTabView(GetDlgItem(GetMainWindow(), IDC_SWTAB), &opts);
 }
@@ -1929,17 +1929,17 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 	switch(rc)
 	{
 		case 1:
-			res = pMViewInfo->pCallbacks->pfnGetOpenFileName(hwndMView, pMViewInfo->config->mconfig, pEnt->dev, szPath, ARRAY_LENGTH(szPath));
+			res = pMViewInfo->pCallbacks->pfnGetOpenFileName(hwndMView, pMViewInfo->config->mconfig, pEnt->dev, szPath, std::size(szPath));
 			break;
 		case 2:
-			res = pMViewInfo->pCallbacks->pfnGetCreateFileName(hwndMView, pMViewInfo->config->mconfig, pEnt->dev, szPath, ARRAY_LENGTH(szPath));
+			res = pMViewInfo->pCallbacks->pfnGetCreateFileName(hwndMView, pMViewInfo->config->mconfig, pEnt->dev, szPath, std::size(szPath));
 			break;
 		case 3:
-			res = pMViewInfo->pCallbacks->pfnUnmount(hwndMView, pMViewInfo->config->mconfig, pEnt->dev, szPath, ARRAY_LENGTH(szPath));
+			res = pMViewInfo->pCallbacks->pfnUnmount(hwndMView, pMViewInfo->config->mconfig, pEnt->dev, szPath, std::size(szPath));
 			memset(szPath, 0, sizeof(szPath));
 			break;
 		case 4:
-			res = pMViewInfo->pCallbacks->pfnGetOpenItemName(hwndMView, pMViewInfo->config->mconfig, pEnt->dev, szPath, ARRAY_LENGTH(szPath));
+			res = pMViewInfo->pCallbacks->pfnGetOpenItemName(hwndMView, pMViewInfo->config->mconfig, pEnt->dev, szPath, std::size(szPath));
 			break;
 		default:
 			break;

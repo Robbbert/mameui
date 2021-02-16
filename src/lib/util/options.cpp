@@ -1164,7 +1164,7 @@ void core_options::parse_parent_file(util::core_file &inifile, int priority, boo
 
 	// loop over lines in the file
 	char buffer[4096];
-	while (inifile.gets(buffer, ARRAY_LENGTH(buffer)) != nullptr)
+	while (inifile.gets(buffer, std::size(buffer)) != nullptr)
 	{
 		// find the extent of the name
 		char *optionname;

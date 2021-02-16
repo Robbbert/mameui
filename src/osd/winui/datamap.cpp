@@ -126,7 +126,7 @@ void datamap_free(datamap *map)
 void datamap_add(datamap *map, int dlgitem, datamap_entry_type type, const char *option_name)
 {
 	// sanity check for too many entries
-	if (!(map->entry_count < ARRAY_LENGTH(map->entries)))
+	if (!(map->entry_count < std::size(map->entries)))
 	{
 		printf("Datamap.cpp Line __LINE__ too many entries\n");
 		return;
@@ -309,7 +309,7 @@ static control_type get_control_type(HWND hwnd)
 	control_type type;
 	TCHAR class_name[256];
 
-	GetClassName(hwnd, class_name, ARRAY_LENGTH(class_name));
+	GetClassName(hwnd, class_name, std::size(class_name));
 	if (!_tcscmp(class_name, WC_BUTTON))
 		type = CT_BUTTON;
 	else if (!_tcscmp(class_name, WC_STATIC))
@@ -412,7 +412,7 @@ static int control_operation(datamap *map, HWND dialog, windows_options *o, data
 			if (entry->get_option_name)
 			{
 				option_name_buffer[0] = '\0';
-				entry->get_option_name(map, dialog, hwnd, option_name_buffer, ARRAY_LENGTH(option_name_buffer));
+				entry->get_option_name(map, dialog, hwnd, option_name_buffer, std::size(option_name_buffer));
 				option_name = option_name_buffer;
 			}
 			else
@@ -420,7 +420,7 @@ static int control_operation(datamap *map, HWND dialog, windows_options *o, data
 
 			// if reading, get the option value, solely for the purposes of comparison
 			if ((callback_type == DCT_READ_CONTROL) && option_name)
-				snprintf(option_value, ARRAY_LENGTH(option_value), "%s", o->value(option_name));
+				snprintf(option_value, std::size(option_value), "%s", o->value(option_name));
 
 			if (entry->callbacks[callback_type])
 			{
@@ -608,7 +608,7 @@ static void populate_control(datamap *map, HWND hwnd, windows_options *o, datama
 					if (entry->int_format)
 					{
 						sscanf(c.c_str(), "%d", &int_value);
-						snprintf(buffer, ARRAY_LENGTH(buffer), entry->int_format, int_value);
+						snprintf(buffer, std::size(buffer), entry->int_format, int_value);
 						c = string(buffer);
 					}
 					break;
@@ -617,7 +617,7 @@ static void populate_control(datamap *map, HWND hwnd, windows_options *o, datama
 					if (entry->float_format)
 					{
 						sscanf(c.c_str(), "%f", &float_value);
-						snprintf(buffer, ARRAY_LENGTH(buffer), entry->float_format, float_value);
+						snprintf(buffer, std::size(buffer), entry->float_format, float_value);
 						c = string(buffer);
 					}
 					break;

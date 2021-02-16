@@ -413,7 +413,7 @@ static BOOL SoftwarePicker_AddFileEntry(HWND hwndPicker, LPCSTR pszFilename, UIN
 	if ((device != NULL))
 		nCrc = 0;
 	//if (nCrc != 0)
-		//snprintf(pInfo->hash_string, ARRAY_LENGTH(pInfo->hash_string), "c:%08x#", nCrc);
+		//snprintf(pInfo->hash_string, std::size(pInfo->hash_string), "c:%08x#", nCrc);
 
 	// set up zip entry name length, if specified
 	if (nZipEntryNameLength > 0)
