@@ -147,6 +147,7 @@ CPUS["HPC"] = true
 CPUS["FR"] = true
 CPUS["UPD78K"] = true
 CPUS["KS0164"] = true
+--CPUS["COPS1"] = true
 
 --------------------------------------------------
 -- specify available sound cores
@@ -487,6 +488,7 @@ MACHINES["DS2401"] = true
 MACHINES["DS2404"] = true
 MACHINES["DS75160A"] = true
 MACHINES["DS75161A"] = true
+--MACHINES["DS8874"] = true
 MACHINES["E0516"] = true
 MACHINES["E05A03"] = true
 MACHINES["E05A30"] = true
@@ -1127,7 +1129,6 @@ files {
 	MAME_DIR .. "src/mame/machine/asteroid.cpp",
 	MAME_DIR .. "src/mame/audio/asteroid.cpp",
 	MAME_DIR .. "src/mame/audio/llander.cpp",
-	MAME_DIR .. "src/mame/audio/llander.h",
 	MAME_DIR .. "src/mame/drivers/atarifb.cpp",
 	MAME_DIR .. "src/mame/includes/atarifb.h",
 	MAME_DIR .. "src/mame/machine/atarifb.cpp",
@@ -3638,13 +3639,9 @@ files {
 	MAME_DIR .. "src/mame/video/vicdual-97269pb.cpp",
 	MAME_DIR .. "src/mame/video/vicdual-97269pb.h",
 	MAME_DIR .. "src/mame/audio/carnival.cpp",
-	MAME_DIR .. "src/mame/audio/carnival.h",
 	MAME_DIR .. "src/mame/audio/depthch.cpp",
-	MAME_DIR .. "src/mame/audio/depthch.h",
 	MAME_DIR .. "src/mame/audio/invinco.cpp",
-	MAME_DIR .. "src/mame/audio/invinco.h",
 	MAME_DIR .. "src/mame/audio/pulsar.cpp",
-	MAME_DIR .. "src/mame/audio/pulsar.h",
 	MAME_DIR .. "src/mame/drivers/zaxxon.cpp",
 	MAME_DIR .. "src/mame/includes/zaxxon.h",
 	MAME_DIR .. "src/mame/audio/zaxxon.cpp",
@@ -3857,7 +3854,6 @@ files {
 	MAME_DIR .. "src/mame/video/hng64.cpp",
 	MAME_DIR .. "src/mame/audio/hng64.cpp",
 	MAME_DIR .. "src/mame/machine/hng64_net.cpp",
-	MAME_DIR .. "src/mame/machine/hng64_net.h",
 	MAME_DIR .. "src/mame/video/hng64_3d.hxx",
 	MAME_DIR .. "src/mame/video/hng64_sprite.hxx",
 	MAME_DIR .. "src/mame/drivers/lasso.cpp",
@@ -3939,6 +3935,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/arabian.cpp",
 	MAME_DIR .. "src/mame/includes/arabian.h",
 	MAME_DIR .. "src/mame/video/arabian.cpp",
+	MAME_DIR .. "src/mame/drivers/blockch.cpp",
 	MAME_DIR .. "src/mame/drivers/dai3wksi.cpp",
 	MAME_DIR .. "src/mame/drivers/ikki.cpp",
 	MAME_DIR .. "src/mame/includes/ikki.h",
@@ -4744,7 +4741,6 @@ files {
 createMAMEProjects(_target, _subtarget, "misc")
 files {
 	MAME_DIR .. "src/mame/drivers/39in1.cpp",
-	MAME_DIR .. "src/mame/machine/pxa255.h",
 	MAME_DIR .. "src/mame/drivers/3do.cpp",
 	MAME_DIR .. "src/mame/includes/3do.h",
 	MAME_DIR .. "src/mame/machine/3do.cpp",
