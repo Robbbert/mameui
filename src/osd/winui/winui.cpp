@@ -71,6 +71,7 @@
 #include "softwarelist.h"
 #include "messui.h"
 #include "drivenum.h"
+#include "mameopts.h"
 #include <fstream>
 
 #ifdef _MSC_VER
@@ -976,18 +977,20 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 		Picker_ClearIdle(GetDlgItem(hMain, s_nPickers[i]));
 
 	// run the emulation
-	time_t start = 0, end = 0;
-	time(&start);
 	// pass down any command-line arguments
 	windows_osd_interface osd(global_opts);
 	osd_output::push(&winerror);
 	osd.register_options();
 	mame_machine_manager *manager = mame_machine_manager::instance(global_opts, osd);
+	std::ostringstream option_errors;
+	mame_options::parse_standard_inis(global_opts, option_errors);
 	load_translation(global_opts);
 	// start processes
 	manager->start_http_server();
 	manager->start_luaengine();
 	// run the game
+	time_t start = 0, end = 0;
+	time(&start);
 	manager->execute();
 	osd_printf_info("********** FINISHED %s **********\n", name);
 	// turn off message redirect
