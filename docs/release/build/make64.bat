@@ -9,6 +9,6 @@ echo.|time
 echo.|time
 set Path=%oldpath%
 set oldpath=
-if exist mameui64.exe %minpath%\strip -s mameui64.exe
+if exist mameui.exe %minpath%\strip -s mameui.exe
 set minpath=
 

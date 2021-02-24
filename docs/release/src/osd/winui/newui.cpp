@@ -392,7 +392,7 @@ static BOOL win_get_file_name_dialog(win_open_file_name *ofn)
 		if (!utf8_file)
 			goto done;
 
-		snprintf(ofn->filename, ARRAY_LENGTH(ofn->filename), "%s", utf8_file);
+		snprintf(ofn->filename, std::size(ofn->filename), "%s", utf8_file);
 		free(utf8_file);
 	}
 
@@ -595,7 +595,7 @@ static void win_dialog_exit(dialog_box *dialog)
 	objpool = dialog->objpool;
 	if (objpool)
 	{
-		for (i = 0; i < ARRAY_LENGTH(objpool->objects); i++)
+		for (i = 0; i < std::size(objpool->objects); i++)
 			DeleteObject(objpool->objects[i]);
 	}
 
@@ -1005,7 +1005,7 @@ static LRESULT dialog_get_combo_value(dialog_box *dialog, HWND dialog_item, UINT
 static LRESULT dialog_get_adjuster_value(dialog_box *dialog, HWND dialog_item, UINT message, WPARAM wparam, LPARAM lparam)
 {
 	TCHAR buf[32];
-	GetWindowText(dialog_item, buf, ARRAY_LENGTH(buf)-1);
+	GetWindowText(dialog_item, buf, std::size(buf)-1);
 	return _ttoi(buf);
 }
 
@@ -1271,7 +1271,7 @@ static int win_dialog_add_adjuster(dialog_box *dialog, const char *item_label, i
 		goto error;
 	x += dialog->layout->combo_width - DIM_ADJUSTER_SCR_WIDTH;
 
-	_sntprintf(buf, ARRAY_LENGTH(buf), is_percentage ? TEXT("%d%%") : TEXT("%d"), default_value);
+	_sntprintf(buf, std::size(buf), is_percentage ? TEXT("%d%%") : TEXT("%d"), default_value);
 	_tcscpy(s, buf);
 
 	if (!s)
@@ -1748,13 +1748,13 @@ static BOOL win_file_dialog(running_machine &machine, HWND parent, win_file_dial
 	if (dlgtype == WIN_FILE_DIALOG_OPEN)
 		ofn.flags |= OFN_FILEMUSTEXIST;
 
-	snprintf(ofn.filename, ARRAY_LENGTH(ofn.filename), "%s", filename);
+	snprintf(ofn.filename, std::size(ofn.filename), "%s", filename);
 
 	before_display_dialog(machine);
 	result = win_get_file_name_dialog(&ofn);
 	after_display_dialog(machine);
 
-	snprintf(filename, ARRAY_LENGTH(ofn.filename), "%s", ofn.filename);
+	snprintf(filename, std::size(ofn.filename), "%s", ofn.filename);
 	return result;
 }
 
@@ -2105,15 +2105,15 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 				name = field.name();
 				afield = &field;
 
-				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Digital Speed");
+				_snprintf(buf, std::size(buf)-1, "%s %s", name, "Digital Speed");
 				if (win_dialog_add_adjuster(dlg, buf, settings.delta, 1, 255, false, store_delta, (void *) afield))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Autocenter Speed");
+				_snprintf(buf, std::size(buf)-1, "%s %s", name, "Autocenter Speed");
 				if (win_dialog_add_adjuster(dlg, buf, settings.centerdelta, 0, 255, false, store_centerdelta, (void *) afield))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Reverse");
+				_snprintf(buf, std::size(buf)-1, "%s %s", name, "Reverse");
 				if (win_dialog_add_combobox(dlg, buf, settings.reverse ? 1 : 0, store_reverse, (void *) afield))
 					goto done;
 				if (win_dialog_add_combobox_item(dlg, "Off", 0))
@@ -2121,7 +2121,7 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 				if (win_dialog_add_combobox_item(dlg, "On", 1))
 					goto done;
 
-				_snprintf(buf, ARRAY_LENGTH(buf)-1, "%s %s", name, "Sensitivity");
+				_snprintf(buf, std::size(buf)-1, "%s %s", name, "Sensitivity");
 				if (win_dialog_add_adjuster(dlg, buf, settings.sensitivity, 1, 255, true, store_sensitivity, (void *) afield))
 					goto done;
 			}
@@ -2197,9 +2197,9 @@ static void state_dialog(HWND wnd, win_file_dialog_type dlgtype, DWORD fileproc_
 	ofn.initial_directory = dir;
 
 	if (!core_filename_ends_with(ofn.filename, "sta"))
-		snprintf(ofn.filename, ARRAY_LENGTH(ofn.filename), "%s.sta", state_filename);
+		snprintf(ofn.filename, std::size(ofn.filename), "%s.sta", state_filename);
 	else
-		snprintf(ofn.filename, ARRAY_LENGTH(ofn.filename), "%s", state_filename);
+		snprintf(ofn.filename, std::size(ofn.filename), "%s", state_filename);
 
 	BOOL result = win_get_file_name_dialog(&ofn);
 
@@ -2207,9 +2207,9 @@ static void state_dialog(HWND wnd, win_file_dialog_type dlgtype, DWORD fileproc_
 	{
 		// the core doesn't add the extension if it's an absolute path
 		if (osd_is_absolute_path(ofn.filename) && !core_filename_ends_with(ofn.filename, "sta"))
-			snprintf(state_filename, ARRAY_LENGTH(state_filename), "%s.sta", ofn.filename);
+			snprintf(state_filename, std::size(state_filename), "%s.sta", ofn.filename);
 		else
-			snprintf(state_filename, ARRAY_LENGTH(state_filename), "%s", ofn.filename);
+			snprintf(state_filename, std::size(state_filename), "%s", ofn.filename);
 
 		if (is_load)
 			machine.schedule_load(state_filename);
@@ -2555,7 +2555,7 @@ static HMENU find_sub_menu(HMENU menu, const char *menutext, bool create_sub_men
 		int i = -1;
 		do
 		{
-			if (!get_menu_item_string(menu, ++i, true, &sub_menu, buf, ARRAY_LENGTH(buf)))
+			if (!get_menu_item_string(menu, ++i, true, &sub_menu, buf, std::size(buf)))
 			{
 				free(t_menutext);
 				return NULL;
@@ -2637,7 +2637,7 @@ static void setup_joystick_menu(running_machine &machine, HMENU menu_bar)
 	{
 		for (int i = 0; i < joystick_count; i++)
 		{
-			snprintf(buf, ARRAY_LENGTH(buf), "Joystick %i", i + 1);
+			snprintf(buf, std::size(buf), "Joystick %i", i + 1);
 			win_append_menu_utf8(joystick_menu, MF_STRING, ID_JOYSTICK_0 + i, buf);
 			child_count++;
 		}
@@ -2770,7 +2770,7 @@ static void prepare_menus(HWND wnd)
 	HMENU video_menu = find_sub_menu(menu_bar, "&Options\0&Video\0", false);
 	do
 	{
-		get_menu_item_string(video_menu, 0, true, NULL, t_buf, ARRAY_LENGTH(t_buf));
+		get_menu_item_string(video_menu, 0, true, NULL, t_buf, std::size(t_buf));
 		if (_tcscmp(t_buf, TEXT("-")))
 			RemoveMenu(video_menu, 0, MF_BYPOSITION);
 	}
@@ -3189,10 +3189,10 @@ static void help_about_mess(HWND wnd)
 static void help_about_thissystem(running_machine &machine, HWND wnd)
 {
 	char buf[100];
-//	snprintf(buf, ARRAY_LENGTH(buf), "mess.chm::/sysinfo/%s.htm", machine.system().name);
-//	snprintf(buf, ARRAY_LENGTH(buf), "http://messui.polygonal-moogle.com/onlinehelp/%s.html", machine.system().name);
-//	snprintf(buf, ARRAY_LENGTH(buf), "http://www.progettoemma.net/mess/system.php?machine=%s", machine.system().name);
-	snprintf(buf, ARRAY_LENGTH(buf), "http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=%s", machine.system().name);
+//	snprintf(buf, std::size(buf), "mess.chm::/sysinfo/%s.htm", machine.system().name);
+//	snprintf(buf, std::size(buf), "http://messui.polygonal-moogle.com/onlinehelp/%s.html", machine.system().name);
+//	snprintf(buf, std::size(buf), "http://www.progettoemma.net/mess/system.php?machine=%s", machine.system().name);
+	snprintf(buf, std::size(buf), "http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=%s", machine.system().name);
 	help_display(wnd, buf);
 }
 
@@ -3518,12 +3518,12 @@ static int win_setup_menus(running_machine &machine, HMODULE module, HMENU menu_
 
 	for(i = 0; i < frameskip_level_count(machine); i++)
 	{
-		snprintf(buf, ARRAY_LENGTH(buf), "%i", i);
+		snprintf(buf, std::size(buf), "%i", i);
 		win_append_menu_utf8(frameskip_menu, MF_STRING, ID_FRAMESKIP_0 + i, buf);
 	}
 
 	// set the help menu to refer to this machine
-	snprintf(buf, ARRAY_LENGTH(buf), "About %s (%s)...", machine.system().type.fullname(), machine.system().name);
+	snprintf(buf, std::size(buf), "About %s (%s)...", machine.system().type.fullname(), machine.system().name);
 	set_menu_text(menu_bar, ID_HELP_ABOUTSYSTEM, buf);
 
 	// initialize state_filename for each driver, so we don't carry names in-between them
@@ -3531,7 +3531,7 @@ static int win_setup_menus(running_machine &machine, HMODULE module, HMENU menu_
 		char *src;
 		char *dst;
 
-		snprintf(state_filename, ARRAY_LENGTH(state_filename), "%s State", machine.system().type.fullname());
+		snprintf(state_filename, std::size(state_filename), "%s State", machine.system().type.fullname());
 
 		src = state_filename;
 		dst = state_filename;
