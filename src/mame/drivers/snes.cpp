@@ -1183,7 +1183,7 @@ void snes_console_state::machine_start()
 {
 	snes_state::machine_start();
 
-	if (m_cartslot && m_cartslot->exists())
+	if (m_cartslot && m_cartslot->exists() && m_cartslot->m_cart) // MESSUI - don't crash if bsmempak or strom slot-option is needed
 	{
 		m_maincpu->space(AS_PROGRAM).install_readwrite_handler(0x000000, 0x7dffff, read8m_delegate(*this, FUNC(snes_console_state::snes20_lo_r)), write8m_delegate(*this, FUNC(snes_console_state::snes20_lo_w)));
 		m_maincpu->space(AS_PROGRAM).install_readwrite_handler(0x800000, 0xffffff, read8m_delegate(*this, FUNC(snes_console_state::snes20_hi_r)), write8m_delegate(*this, FUNC(snes_console_state::snes20_hi_w)));

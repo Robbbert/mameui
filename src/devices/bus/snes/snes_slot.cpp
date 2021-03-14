@@ -239,6 +239,8 @@ void base_sns_cart_slot_device::device_start()
 	m_cart = dynamic_cast<device_sns_cart_interface *>(get_card_device());
 	if (m_cart != nullptr)
 		m_cart->m_slot = this;
+	else
+		osd_printf_error("The cart could not be loaded\n");   // MESSUI - let us know there's a problem
 
 	m_irq_callback.resolve_safe();
 	m_open_bus_callback.resolve_safe(0xff);

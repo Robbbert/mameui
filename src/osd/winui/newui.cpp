@@ -2803,6 +2803,16 @@ static void prepare_menus(HWND wnd)
 		if (!img.user_loadable())
 			continue;
 
+		// image_interface_enumerator doesn't update when a slot is removed,
+		// so we need to check for a removed slot and restart the emulation.
+		// But, windows won't allow it until you click away from the menu.
+		if (!img.device().machine().options().has_image_option(img.instance_name()))
+		{
+			winwindow_ui_pause(window->machine(), false);
+			window->machine().schedule_hard_reset();
+			continue;
+		}
+
 		new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
 		flags_for_exists = MF_STRING;
 
