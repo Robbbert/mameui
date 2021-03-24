@@ -153,6 +153,7 @@
 #include "machine/rtc65271.h"
 #include "machine/timer.h"
 #include "sound/cdda.h"
+#include "sound/xt446.h"
 #include "sound/rf5c400.h"
 #include "sound/ymz280b.h"
 #include "video/k057714.h"
@@ -1878,6 +1879,12 @@ void firebeat_kbm_state::firebeat_kbm(machine_config &config)
 	auto &midi_chan0(NS16550(config, "duart_midi:chan0", XTAL(24'000'000)));
 	MIDI_KBD(config, m_kbd[1], 31250).tx_callback().set(midi_chan0, FUNC(ins8250_uart_device::rx_w));
 	midi_chan0.out_int_callback().set(FUNC(firebeat_kbm_state::midi_keyboard_right_irq_callback));
+
+	// Synth card
+	auto &xt446(XT446(config, "xt446"));
+	midi_chan1.out_tx_callback().set(xt446, FUNC(xt446_device::midi_w));
+	xt446.add_route(0, "lspeaker", 1.0);
+	xt446.add_route(1, "rspeaker", 1.0);
 }
 
 void firebeat_kbm_state::firebeat_kbm_map(address_map &map)
@@ -2341,10 +2348,10 @@ ROM_START( kbm )
 	ROM_LOAD("gq974", 0x00, 0xc8, CRC(65e4886a) SHA1(afba0315f2532599c51e232f734c538c4d108d73))
 
 	DISK_REGION( "ata:0:cdrom" ) // program CD-ROM
-	DISK_IMAGE_READONLY( "gq974-ja c01", 0, SHA1(46b766b5ed75de4139df369b414692919de244c7) )
+	DISK_IMAGE_READONLY( "gq974-ja c01", 0, SHA1(975a4a59f842b8a7edad79b307e489cc88bef24d) )
 
 	DISK_REGION( "ata:1:cdrom" ) // audio CD-ROM
-	DISK_IMAGE_READONLY( "gq974-ja a02", 1, SHA1(e66930f965b1aa1a681ab696302a04958dc8a334) )
+	DISK_IMAGE_READONLY( "gq974-ja a02", 1, SHA1(80086676c00c9ca06ec14e305ea4523b6576e47f) )
 ROM_END
 
 ROM_START( kbh )
@@ -2355,10 +2362,10 @@ ROM_START( kbh )
 	ROM_LOAD("gu974", 0x00, 0xc8, CRC(748b8476) SHA1(5d507fd46235c4315ad32599ce87aa4e06642eb5))
 
 	DISK_REGION( "ata:0:cdrom" ) // program CD-ROM
-	DISK_IMAGE_READONLY( "gu974-ka a01", 0, SHA1(af4e8182f6a984895d9a9a00bbfb6c65fb7b4738) )
+	DISK_IMAGE_READONLY( "gu974-ka a01", 0, SHA1(07d3d6abcb13b2c2a556f2eed7e89e3d11febf1b) )
 
 	DISK_REGION( "ata:1:cdrom" ) // audio CD-ROM
-	DISK_IMAGE_READONLY( "gu974-ka a02", 1, SHA1(e66930f965b1aa1a681ab696302a04958dc8a334) ) // identical to jaa02 image
+	DISK_IMAGE_READONLY( "gu974-ka a02", 1, SHA1(9e358b0551b650a432e685ec82d3df2433e2aac3) )
 ROM_END
 
 ROM_START( kbm2nd )
@@ -2369,10 +2376,10 @@ ROM_START( kbm2nd )
 	ROM_LOAD("gca01ja_gca01aa", 0x00, 0xc8, CRC(27f977cf) SHA1(14739cb4edfc3c4453673d59f2bd0442eab71d6a))
 
 	DISK_REGION( "ata:0:cdrom" ) // program CD-ROM
-	DISK_IMAGE_READONLY( "a01 ja a01", 0, SHA1(0aabc0c03f7ae7e7633bf6056de833ace68f9163) )
+	DISK_IMAGE_READONLY( "a01 ja a01", 0, SHA1(6a661dd737c83130febe771402a159859afeffba) )
 
 	DISK_REGION( "ata:1:cdrom" ) // audio CD-ROM
-	DISK_IMAGE_READONLY( "a01 ja a02", 1, SHA1(4d62f6ecfbf5ab0b014feb7b01014cba440c87f8) )
+	DISK_IMAGE_READONLY( "a01 ja a02", 1, SHA1(e1ffc0bd4ea169951ed9ceaf090dbb1511a46601) )
 ROM_END
 
 ROM_START( kbm3rd )
