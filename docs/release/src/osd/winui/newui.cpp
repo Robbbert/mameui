@@ -2803,6 +2803,9 @@ static void prepare_menus(HWND wnd)
 		if (!img.user_loadable())
 			continue;
 
+		if (!img.device().machine().options().has_image_option(img.instance_name()))
+			continue;
+
 		new_item = ID_DEVICE_0 + (cnt * DEVOPTION_MAX);
 		flags_for_exists = MF_STRING;
 
@@ -3078,8 +3081,16 @@ static void device_command(HWND wnd, device_image_interface *img, int devoption)
 			break;
 
 		case DEVOPTION_CLOSE:
+		{
+			std::string t = img->instance_name();
 			img->unload();
 			img->device().machine().options().image_option(img->instance_name()).specify("");
+			// Some cartridges have their own extra slot. When the cart is removed we need to restart to remove the slot too.
+			// This could fail if the system normally has 2 slots.
+			if (!img->device().machine().options().has_image_option(t))
+				img->device().machine().schedule_hard_reset();
+		}
+
 			//img->device().machine().options().emu_options::set_value(img->instance_name().c_str(), "", OPTION_PRIORITY_CMDLINE);
 			break;
 

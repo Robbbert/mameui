@@ -657,21 +657,18 @@ bool emu_options::add_and_remove_image_options()
 		// iterate through all image devices
 		for (device_image_interface &image : image_interface_enumerator(config.root_device()))
 		{
-		// MESSUI start - the MAME code through here is broken, won't save images loaded via the menu
-		// to ini file, so we use older code instead.
-			const char *cn = image.device().tag();
+			const std::string &canonical_name(image.canonical_instance_name());
 
 			// erase this option from existing (so we don't purge it later)
-			existing.remove(cn);
+			existing.remove(canonical_name);
 
 			// do we need to add this option?
-			auto iter = m_image_options_canonical.find(cn);
+			auto iter = m_image_options_canonical.find(canonical_name);
 			::image_option *this_option = iter != m_image_options_canonical.end() ? &iter->second : nullptr;
 			if (!this_option)
 			{
-				// we do - add it to both m_image_options_cannonical and m_image_options
-				auto pair = std::make_pair(cn, ::image_option(*this, cn));
-				// MESSUI end
+				// we do - add it to both m_image_options_canonical and m_image_options
+				auto pair = std::make_pair(canonical_name, ::image_option(*this, image.canonical_instance_name()));
 				this_option = &m_image_options_canonical.emplace(std::move(pair)).first->second;
 				changed = true;
 
@@ -700,20 +697,22 @@ bool emu_options::add_and_remove_image_options()
 	}
 
 	// at this point we need to purge stray image options that may no longer be pertinent
-// MESSUI - commented out because it crashes BML3 with 1802 slot.
-//	for (auto &opt_name : existing)
-//	{
-//		auto iter = m_image_options_canonical.find(*opt_name);
-//		assert(iter != m_image_options_canonical.end());
+// MESSUI - don't blow up if option not found (occurs with BML3 with 1802 slot)
+	for (auto &opt_name : existing)
+	{
+		auto iter = m_image_options_canonical.find(*opt_name);
+		if (iter != m_image_options_canonical.end())
+		{
 
-		// if this is represented in core_options, remove it
-//		if (iter->second.option_entry())
-//			remove_entry(*iter->second.option_entry());
+			// if this is represented in core_options, remove it
+			if (iter->second.option_entry())
+				remove_entry(*iter->second.option_entry());
 
-		// remove this option
-//		m_image_options_canonical.erase(iter);
-//		changed = true;
-//	}
+			// remove this option
+			m_image_options_canonical.erase(iter);
+			changed = true;
+		}
+	}
 
 	return changed;
 }

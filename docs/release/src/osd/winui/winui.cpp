@@ -356,6 +356,7 @@ static HDC hDC = NULL;
 static HWND	hSplash = NULL;
 static HWND	hProgress = NULL;
 static intptr_t CALLBACK StartupProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
+static bool m_lock = false;    // prevent MAME from being launched twice by accident, and crashing the entire app.
 
 /***************************************************************************
     External variables
@@ -930,6 +931,7 @@ static std::wstring s2ws(const string& s)
 static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 {
 	int i = 0;
+	m_lock = true;
 	windows_options global_opts;
 
 	// Tell mame where to get the INIs
@@ -1033,6 +1035,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 
 	// update display in case software was changed by the machine or by newui
 	MessReadMountedSoftware(nGameIndex); // messui.cpp
+	m_lock = false;
 
 	return (DWORD)0;
 }
@@ -1041,7 +1044,6 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
 	// delete old log file, ignore any error
-	unlink("verbose.log");
 	unlink("winui.log");
 
 	if (__argc != 1)
@@ -4468,6 +4470,64 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		}
 		break;
 
+	case ID_RC_CLEAN:
+		{
+			int nGame = Picker_GetSelectedItem(hwndList);
+			if (nGame >= 0)
+			{
+				// INI
+				string t = dir_get_value(7);
+				char buf7[t.size()+1];
+				strcpy(buf7, t.c_str());
+				char * t_dir = strtok(buf7, ";");
+				while (t_dir)
+				{
+					string t_path = string(t_dir) + PATH_SEPARATOR + driver_list::driver(nGame).name + ".ini";
+					printf("Deleting %s\n",t_path.c_str());
+					remove(t_path.c_str());
+					t_dir = strtok(NULL, ";");
+				}
+				// CFG
+				t = dir_get_value(14);
+				char buf14[t.size()+1];
+				strcpy(buf14, t.c_str());
+				t_dir = strtok(buf14, ";");
+				while (t_dir)
+				{
+					string t_path = string(t_dir) + PATH_SEPARATOR + driver_list::driver(nGame).name + ".cfg";
+					printf("Deleting %s\n",t_path.c_str());
+					remove(t_path.c_str());
+					t_dir = strtok(NULL, ";");
+				}
+				// NVRAM
+				t = dir_get_value(15);
+				char buf15[t.size()+1];
+				strcpy(buf15, t.c_str());
+				t_dir = strtok(buf15, ";");
+				while (t_dir)
+				{
+					string t_path = string("rd /s /q ") + string(t_dir) + PATH_SEPARATOR + driver_list::driver(nGame).name;
+					printf("Deleting %s\n",t_path.c_str());
+					system(t_path.c_str());
+					t_dir = strtok(NULL, ";");
+				}
+				// Save states
+				t = dir_get_value(17);
+				char buf17[t.size()+1];
+				strcpy(buf17, t.c_str());
+				t_dir = strtok(buf17, ";");
+				while (t_dir)
+				{
+					string t_path = string("rd /s /q ") + string(t_dir) + PATH_SEPARATOR + driver_list::driver(nGame).name;
+					printf("Deleting %s\n",t_path.c_str());
+					system(t_path.c_str());
+					t_dir = strtok(NULL, ";");
+				}
+			}
+			SetFocus(hwndList);
+		}
+		break;
+
 	case ID_NOTEPAD:
 		{
 			int nGame = Picker_GetSelectedItem(hwndList);
@@ -5417,6 +5477,7 @@ static void CLIB_DECL ATTR_PRINTF(1,2) MameMessageBox(const char *fmt, ...)
 
 static void MamePlayGameWithOptions(int nGame, const play_options *playopts)
 {
+	m_lock = true;
 	if (g_pJoyGUI)
 		KillTimer(hMain, JOYGUI_TIMER);
 
@@ -5617,6 +5678,9 @@ static void MamePlayRecordGame()
 void MamePlayGame(void)
 {
 	int nGame = Picker_GetSelectedItem(hwndList);
+
+	if (m_lock)
+		return;
 
 	if (nGame != -1)
 	{
