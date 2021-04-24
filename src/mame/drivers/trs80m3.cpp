@@ -57,16 +57,17 @@ Model 4P - is the same as Model 4 except:
 To Do / Status:
 --------------
 
-trs80m3:   works
-           MT 07903 - most floppies no longer boot
-           CAS handler doesn't support 1500 baud
+JV3: Cannot write, due to an emulation bug causing the machine to hang.
+JV1: If you try to create a disk in the File Manager, MAME will crash.
+DMK: Cannot write (no option).
+IMD: Does not work with a quad drive. Cannot write.
 
-trs80m4:   works
-           will boot model 3 floppies, but not model 4 ones
-           MT 07903 - most floppies no longer boot
-           CAS handler doesn't support 1500 baud
+trs80m3:   Works
 
-trs80m4p:  floppy not working, so machine is useless
+trs80m4:   Works
+
+trs80m4p:  Floppy not working, so machine is useless.
+           In debugger g 402a, then pc=0;g and it will boot.
 
 ***************************************************************************/
 
@@ -76,6 +77,7 @@ trs80m4p:  floppy not working, so machine is useless
 #include "screen.h"
 #include "speaker.h"
 
+#include "formats/imd_dsk.h"
 #include "formats/trs80_dsk.h"
 #include "formats/dmk_dsk.h"
 
@@ -328,14 +330,23 @@ GFXDECODE_END
 
 void trs80m3_state::floppy_formats(format_registration &fr)
 {
-	fr.add_mfm_containers();
-	fr.add(FLOPPY_TRS80_FORMAT);
+	fr.add(FLOPPY_IMD_FORMAT);
+	fr.add(FLOPPY_JV3_FORMAT);
 	fr.add(FLOPPY_DMK_FORMAT);
+	fr.add(FLOPPY_JV1_FORMAT);
 }
 
+// If you choose a disk that has more tracks than the drive,
+// MAME will probably crash. The default is DD, which allows
+// IMD boot disks to work, and any other disk with up to 40
+// tracks. You need QD to support up to 80 tracks, but it
+// breaks the IMD disks.
 static void trs80_floppies(device_slot_interface &device)
 {
-	device.option_add("sssd", FLOPPY_525_QD);
+	device.option_add("35t_sd", FLOPPY_525_SSSD_35T);
+	device.option_add("40t_sd", FLOPPY_525_SSSD);
+	device.option_add("40t_dd", FLOPPY_525_DD);
+	device.option_add("80t_qd", FLOPPY_525_QD);
 }
 
 
@@ -373,8 +384,8 @@ void trs80m3_state::model3(machine_config &config)
 	m_fdc->drq_wr_callback().set(FUNC(trs80m3_state::drq_w));
 
 	// Internal drives
-	FLOPPY_CONNECTOR(config, "fdc:0", trs80_floppies, "sssd", trs80m3_state::floppy_formats).enable_sound(true);
-	FLOPPY_CONNECTOR(config, "fdc:1", trs80_floppies, "sssd", trs80m3_state::floppy_formats).enable_sound(true);
+	FLOPPY_CONNECTOR(config, m_floppy[0], trs80_floppies, "40t_dd", trs80m3_state::floppy_formats).enable_sound(true);
+	FLOPPY_CONNECTOR(config, m_floppy[1], trs80_floppies, "40t_dd", trs80m3_state::floppy_formats).enable_sound(true);
 
 	CENTRONICS(config, m_centronics, centronics_devices, "printer");
 	m_centronics->busy_handler().set(m_cent_status_in, FUNC(input_buffer_device::write_bit7));
@@ -415,6 +426,8 @@ void trs80m3_state::model4(machine_config &config)
 	m_m4_bank->set_data_width(8);
 	m_m4_bank->set_addr_width(18);
 	m_m4_bank->set_stride(0x10000);
+
+	config.device_remove("quickload");  // removed because it crashes..
 }
 
 void trs80m3_state::model4p(machine_config &config)
@@ -435,6 +448,7 @@ void trs80m3_state::model4p(machine_config &config)
 	m_m4p_bank->set_stride(0x10000);
 
 	config.device_remove("quickload");
+	config.device_remove("cassette");
 }
 
 void trs80m3_state::cp500(machine_config &config)

@@ -38,15 +38,16 @@ This does not work for model 1 (no parallel printer support in ROM).
 Status:
 - Starts up, runs Basic. Cassette works. Quickload mostly works.
 - Some quickloads have corrupt text due to no lowercase.
-- Some quickloads don't run at all. Some may crash the emulator.
+- Some quickloads don't run at all.
 - Intel chips need adding, along with the peripherals they control.
 - A speaker has been included (which works), but real machine might not have
-  one at that address. To be checked.
+    one at that address. To be checked.
 - On meritum1, type SYSTEM then /12288 to enter the Monitor.
 - On meritum_net, type NET to activate the networking features.
 - Add Reset key and 2 blank keys.
 - Need software specific to test the hardware.
 - Need boot disks (MER-DOS, CP/M 2.2)
+- Due to faster CPU clock, no TRS-80 cassettes can be loaded.
 
 For Model III:
 - Add 4-colour mode, 4 shades of grey mode, and 512x192 monochrome.
@@ -341,20 +342,15 @@ void meritum_state::port_ff_w(u8 data)
     d1, d0 Cassette output */
 
 	static const double levels[4] = { 0.0, 1.0, -1.0, 0.0 };
-	static bool init = 0; // FIXME: static variable, breaks hard reset and multiple runs from system selection menu
-
 	m_cassette->change_state(BIT(data, 2) ? CASSETTE_MOTOR_ENABLED : CASSETTE_MOTOR_DISABLED, CASSETTE_MASK_MOTOR );
 	m_cassette->output(levels[data & 3]);
 	m_cassette_data = false;
 
 	m_mode = BIT(data, 3);
 
-	if (!init)
-	{
-		init = 1;
-		static double const speaker_levels[4] = { 0.0, -1.0, 0.0, 1.0 };
-		m_speaker->set_levels(4, speaker_levels);
-	}
+	static double const speaker_levels[4] = { 0.0, -1.0, 0.0, 1.0 };
+	m_speaker->set_levels(4, speaker_levels);
+	m_speaker->level_w(data & 3); // see note about the speaker
 }
 
 u8 meritum_state::keyboard_r(offs_t offset)
@@ -406,9 +402,9 @@ QUICKLOAD_LOAD_MEMBER(meritum_state::quickload_cb)
 {
 	address_space &program = m_maincpu->space(AS_PROGRAM);
 
-	u8 type, length;
-	u8 data[0x100];
-	u8 addr[2];
+	uint8_t type, length;
+	uint8_t data[0x100];
+	uint8_t addr[2];
 	void *ptr;
 
 	while (!image.image_feof())
@@ -416,39 +412,49 @@ QUICKLOAD_LOAD_MEMBER(meritum_state::quickload_cb)
 		image.fread( &type, 1);
 		image.fread( &length, 1);
 
-		length -= 2;
-		int block_length = length ? length : 256;
-
 		switch (type)
 		{
-		case CMD_TYPE_OBJECT_CODE:
+			case CMD_TYPE_OBJECT_CODE:  // 01 - block of data
 			{
+				length -= 2;
+				u16 block_length = length ? length : 256;
 				image.fread( &addr, 2);
-				uint16_t address = (addr[1] << 8) | addr[0];
+				u16 address = (addr[1] << 8) | addr[0];
+				logerror("/CMD object code block: address %04x length %u\n", address, block_length);
+				if (address < 0x3c00)
+				{
+					image.message("Attempting to write outside of RAM");
+					return image_init_result::FAIL;
+				}
 				ptr = program.get_write_ptr(address);
 				image.fread( ptr, block_length);
 			}
 			break;
 
-		case CMD_TYPE_TRANSFER_ADDRESS:
+			case CMD_TYPE_TRANSFER_ADDRESS: // 02 - go address
 			{
 				image.fread( &addr, 2);
-				uint16_t address = (addr[1] << 8) | addr[0];
+				u16 address = (addr[1] << 8) | addr[0];
+				logerror("/CMD transfer address %04x\n", address);
 				m_maincpu->set_state_int(Z80_PC, address);
 			}
+			return image_init_result::PASS;
+
+		case CMD_TYPE_LOAD_MODULE_HEADER: // 05 - name
+			image.fread( &data, length);
+			logerror("/CMD load module header '%s'\n", data);
 			break;
 
-		case CMD_TYPE_LOAD_MODULE_HEADER:
-			image.fread( &data, block_length);
-			break;
-
-		case CMD_TYPE_COPYRIGHT_BLOCK:
-			image.fread( &data, block_length);
+		case CMD_TYPE_COPYRIGHT_BLOCK: // 1F - copyright info
+			image.fread( &data, length);
+			logerror("/CMD copyright block '%s'\n", data);
 			break;
 
 		default:
-			image.fread( &data, block_length);
+			image.fread( &data, length);
 			logerror("/CMD unsupported block type %u!\n", type);
+			image.message("Unsupported or invalid block type");
+			return image_init_result::FAIL;
 		}
 	}
 
@@ -546,45 +552,45 @@ void meritum_state::meritum2(machine_config &config)
 
 ROM_START( meritum1 )
 	ROM_REGION(0x3800, "maincpu",0)
-	ROM_LOAD( "rom_0.bin", 0x0000, 0x0800, CRC(1ecf7205) SHA1(e91cedfe2ce7636d37d5b765e5bbc8168deaba77))
-	ROM_LOAD( "rom_1.bin", 0x0800, 0x0800, CRC(ac297d99) SHA1(ccf31d3f9d02c3b68a0ee3be4984424df0e83ab0))
-	ROM_LOAD( "rom_2.bin", 0x1000, 0x0800, CRC(a21d0d62) SHA1(6dfdf3806ed2b6502e09a1b6922f21494134cc05))
-	ROM_LOAD( "rom_3.bin", 0x1800, 0x0800, CRC(3a5ea239) SHA1(8c489670977892d7f2bfb098f5df0b4dfa8fbba6))
-	ROM_LOAD( "rom_4.bin", 0x2000, 0x0800, CRC(2ba025d7) SHA1(232efbe23c3f5c2c6655466ebc0a51cf3697be9b))
-	ROM_LOAD( "rom_5.bin", 0x2800, 0x0800, CRC(ed547445) SHA1(20102de89a3ee4a65366bc2d62be94da984a156b))
-	ROM_LOAD( "rom_6.bin", 0x3000, 0x0800, CRC(650c0f47) SHA1(05f67fed3c3f69ad210823460bacf40166cbf06e))
+	ROM_LOAD( "rom_0.ic7",  0x0000, 0x0800, CRC(1ecf7205) SHA1(e91cedfe2ce7636d37d5b765e5bbc8168deaba77))
+	ROM_LOAD( "rom_1.ic8",  0x0800, 0x0800, CRC(ac297d99) SHA1(ccf31d3f9d02c3b68a0ee3be4984424df0e83ab0))
+	ROM_LOAD( "rom_2.ic9",  0x1000, 0x0800, CRC(a21d0d62) SHA1(6dfdf3806ed2b6502e09a1b6922f21494134cc05))
+	ROM_LOAD( "rom_3.ic10", 0x1800, 0x0800, CRC(3a5ea239) SHA1(8c489670977892d7f2bfb098f5df0b4dfa8fbba6))
+	ROM_LOAD( "rom_4.ic11", 0x2000, 0x0800, CRC(2ba025d7) SHA1(232efbe23c3f5c2c6655466ebc0a51cf3697be9b))
+	ROM_LOAD( "rom_5.ic12", 0x2800, 0x0800, CRC(ed547445) SHA1(20102de89a3ee4a65366bc2d62be94da984a156b))
+	ROM_LOAD( "rom_6.ic13", 0x3000, 0x0800, CRC(650c0f47) SHA1(05f67fed3c3f69ad210823460bacf40166cbf06e))
 
 	ROM_REGION(0x1000, "chargen", ROMREGION_INVERT)
-	ROM_LOAD( "char_gen.bin", 0x0000, 0x0400, CRC(626fb8b1) SHA1(1274d14efad46e5397bd9952e1277ebee44e0491))
+	ROM_LOAD( "char_gen.ic72", 0x0000, 0x0400, CRC(626fb8b1) SHA1(1274d14efad46e5397bd9952e1277ebee44e0491))
 	ROM_CONTINUE( 0x0800, 0x0400)
 ROM_END
 
 ROM_START( meritum2)
 	ROM_REGION(0x3800, "maincpu",0)
-	ROM_LOAD( "01.bin", 0x0000, 0x0800, CRC(ed705a47) SHA1(dae8b14eb2ddb2a8b4458215180ebc0fb781816a))
-	ROM_LOAD( "02.bin", 0x0800, 0x0800, CRC(ac297d99) SHA1(ccf31d3f9d02c3b68a0ee3be4984424df0e83ab0))
-	ROM_LOAD( "03.bin", 0x1000, 0x0800, CRC(a21d0d62) SHA1(6dfdf3806ed2b6502e09a1b6922f21494134cc05))
-	ROM_LOAD( "04.bin", 0x1800, 0x0800, CRC(3610bdda) SHA1(602f0ba1e1267f24620f993acac019ac6342a594))
-	ROM_LOAD( "05.bin", 0x2000, 0x0800, CRC(461fbf0d) SHA1(bd19187dd992168af43bd68055343d515f152624))
-	ROM_LOAD( "06.bin", 0x2800, 0x0800, CRC(ed547445) SHA1(20102de89a3ee4a65366bc2d62be94da984a156b))
-	ROM_LOAD( "07.bin", 0x3000, 0x0800, CRC(044b1459) SHA1(faace7353ffbef6587b1b9e7f8b312e0892e3427))
+	ROM_LOAD( "01.ic7",  0x0000, 0x0800, CRC(ed705a47) SHA1(dae8b14eb2ddb2a8b4458215180ebc0fb781816a))
+	ROM_LOAD( "02.ic8",  0x0800, 0x0800, CRC(ac297d99) SHA1(ccf31d3f9d02c3b68a0ee3be4984424df0e83ab0))
+	ROM_LOAD( "03.ic9",  0x1000, 0x0800, CRC(a21d0d62) SHA1(6dfdf3806ed2b6502e09a1b6922f21494134cc05))
+	ROM_LOAD( "04.ic10", 0x1800, 0x0800, CRC(3610bdda) SHA1(602f0ba1e1267f24620f993acac019ac6342a594))
+	ROM_LOAD( "05.ic11", 0x2000, 0x0800, CRC(461fbf0d) SHA1(bd19187dd992168af43bd68055343d515f152624))
+	ROM_LOAD( "06.ic12", 0x2800, 0x0800, CRC(ed547445) SHA1(20102de89a3ee4a65366bc2d62be94da984a156b))
+	ROM_LOAD( "07.ic13", 0x3000, 0x0800, CRC(044b1459) SHA1(faace7353ffbef6587b1b9e7f8b312e0892e3427))
 
 	ROM_REGION(0x1000, "chargen", ROMREGION_INVERT)
-	ROM_LOAD( "chargen.bin", 0x0000, 0x1000, CRC(3dfc6439) SHA1(6e45a27f68c3491c403b4eafe45a108f348dd2fd))
+	ROM_LOAD( "chargen.ic72", 0x0000, 0x1000, CRC(3dfc6439) SHA1(6e45a27f68c3491c403b4eafe45a108f348dd2fd))
 ROM_END
 
 ROM_START( meritum_net )
 	ROM_REGION(0x3800, "maincpu",0)
-	ROM_LOAD( "01_447_m07_015m.bin", 0x0000, 0x0800, CRC(6d30cb49) SHA1(558241340a84eebcbbf8d92540e028e9164b6f8a))
-	ROM_LOAD( "02_440_m08_01.bin",   0x0800, 0x0800, CRC(ac297d99) SHA1(ccf31d3f9d02c3b68a0ee3be4984424df0e83ab0))
-	ROM_LOAD( "03_440_m09_015m.bin", 0x1000, 0x0800, CRC(88e267da) SHA1(9cb8626801f8e969f35291de43c1b643c809a3c3))
-	ROM_LOAD( "04_447_m10_015m.bin", 0x1800, 0x0800, CRC(e51991e4) SHA1(a7d42436da1af405970f9f99ab34b6d9abd05adf))
-	ROM_LOAD( "05_440_m11_02.bin",   0x2000, 0x0800, CRC(461fbf0d) SHA1(bd19187dd992168af43bd68055343d515f152624))
-	ROM_LOAD( "06_440_m12_01.bin",   0x2800, 0x0800, CRC(ed547445) SHA1(20102de89a3ee4a65366bc2d62be94da984a156b))
-	ROM_LOAD( "07_447_m13_015m.bin", 0x3000, 0x0800, CRC(789f6964) SHA1(9b2231ca7ffd82bbca1f53988a7df833290ddbf2))
+	ROM_LOAD( "01_447_m07_015m.ic7",  0x0000, 0x0800, CRC(6d30cb49) SHA1(558241340a84eebcbbf8d92540e028e9164b6f8a))
+	ROM_LOAD( "02_440_m08_01.ic8",    0x0800, 0x0800, CRC(ac297d99) SHA1(ccf31d3f9d02c3b68a0ee3be4984424df0e83ab0))
+	ROM_LOAD( "03_440_m09_015m.ic9",  0x1000, 0x0800, CRC(88e267da) SHA1(9cb8626801f8e969f35291de43c1b643c809a3c3))
+	ROM_LOAD( "04_447_m10_015m.ic10", 0x1800, 0x0800, CRC(e51991e4) SHA1(a7d42436da1af405970f9f99ab34b6d9abd05adf))
+	ROM_LOAD( "05_440_m11_02.ic11",   0x2000, 0x0800, CRC(461fbf0d) SHA1(bd19187dd992168af43bd68055343d515f152624))
+	ROM_LOAD( "06_440_m12_01.ic12",   0x2800, 0x0800, CRC(ed547445) SHA1(20102de89a3ee4a65366bc2d62be94da984a156b))
+	ROM_LOAD( "07_447_m13_015m.ic13", 0x3000, 0x0800, CRC(789f6964) SHA1(9b2231ca7ffd82bbca1f53988a7df833290ddbf2))
 
 	ROM_REGION(0x1000, "chargen", ROMREGION_INVERT)
-	ROM_LOAD( "char.bin", 0x0000, 0x1000, CRC(2c09a5a7) SHA1(146891b3ddfc2de95e6a5371536394a657880054))
+	ROM_LOAD( "char.ic72", 0x0000, 0x1000, CRC(2c09a5a7) SHA1(146891b3ddfc2de95e6a5371536394a657880054))
 ROM_END
 
 
