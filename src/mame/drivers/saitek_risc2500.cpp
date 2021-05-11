@@ -4,9 +4,9 @@
 
 Saitek RISC 2500, Mephisto Montreux
 
-The chess engine is also compatible with Tasc's The ChessMachine software.
-The hardware+software appears to have been subcontracted to Tasc. It has
-similarities with Tasc R30.
+The chess engine (The King) is also compatible with Tasc's The ChessMachine
+software. The hardware+software appears to have been subcontracted to Tasc.
+It has similarities with Tasc R30.
 
 To make sure it continues the game at next power-on, press the OFF button before
 exiting MAME. If nvram is broken somehow, boot with the BACK button held down.
@@ -48,8 +48,8 @@ TODO:
 #include "machine/ram.h"
 #include "machine/sensorboard.h"
 #include "machine/timer.h"
-#include "video/sed1520.h"
 #include "sound/spkrdev.h"
+#include "video/sed1520.h"
 
 #include "emupal.h"
 #include "screen.h"
@@ -321,13 +321,8 @@ u32 risc2500_state::rom_r(offs_t offset)
 	if (!machine().side_effects_disabled())
 	{
 		// handle dynamic cpu clock divider when accessing rom
-		u64 cur_cycle = m_maincpu->total_cycles();
-		u64 prev_cycle = m_prev_cycle;
-		s64 diff = cur_cycle - prev_cycle;
-
+		s64 diff = m_maincpu->total_cycles() - m_prev_cycle;
 		u32 pc = m_maincpu->pc();
-		u32 prev_pc = m_prev_pc;
-		m_prev_pc = pc;
 
 		if (diff > 0)
 		{
@@ -336,13 +331,14 @@ u32 risc2500_state::rom_r(offs_t offset)
 			static constexpr int divider = -8 + 1;
 
 			// this takes care of almost all cases, otherwise, total cycles taken can't be determined
-			if (diff <= arm_branch_cycles || (diff <= arm_max_cycles && (pc - prev_pc) == 4 && (pc & ~0x02000000) == (offset * 4)))
+			if (diff <= arm_branch_cycles || (diff <= arm_max_cycles && (pc - m_prev_pc) == 4 && (pc & ~0x02000000) == (offset * 4)))
 				m_maincpu->adjust_icount(divider * (int)diff);
 			else
 				m_maincpu->adjust_icount(divider);
 		}
 
 		m_prev_cycle = m_maincpu->total_cycles();
+		m_prev_pc = pc;
 	}
 
 	return m_rom[offset];
@@ -504,7 +500,7 @@ ROM_END
 ******************************************************************************/
 
 //    YEAR  NAME       PARENT    COMPAT  MACHINE   INPUT     CLASS           INIT        COMPANY, FULLNAME, FLAGS
-CONS( 1992, risc2500,  0,        0,      risc2500, risc2500, risc2500_state, empty_init, "Saitek / Tasc", "Kasparov RISC 2500 (v1.04)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
-CONS( 1992, risc2500a, risc2500, 0,      risc2500, risc2500, risc2500_state, empty_init, "Saitek / Tasc", "Kasparov RISC 2500 (v1.03)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1992, risc2500,  0,        0,      risc2500, risc2500, risc2500_state, empty_init, "Saitek / Tasc", "Kasparov RISC 2500 (v1.04)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_TIMING | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1992, risc2500a, risc2500, 0,      risc2500, risc2500, risc2500_state, empty_init, "Saitek / Tasc", "Kasparov RISC 2500 (v1.03)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_TIMING | MACHINE_CLICKABLE_ARTWORK )
 
-CONS( 1995, montreux,  0,        0,      montreux, montreux, risc2500_state, empty_init, "Saitek / Tasc", "Mephisto Montreux", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK ) // after Saitek bought Hegener + Glaser
+CONS( 1995, montreux,  0,        0,      montreux, montreux, risc2500_state, empty_init, "Saitek / Tasc", "Mephisto Montreux", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_TIMING | MACHINE_CLICKABLE_ARTWORK ) // after Saitek bought Hegener + Glaser

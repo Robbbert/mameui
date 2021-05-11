@@ -59,13 +59,12 @@ TODO:
 #include "emu.h"
 
 #include "cpu/arm/arm.h"
-#include "machine/bankdev.h"
 #include "machine/nvram.h"
 #include "machine/ram.h"
 #include "machine/smartboard.h"
 #include "machine/timer.h"
-#include "video/t6963c.h"
 #include "sound/spkrdev.h"
+#include "video/t6963c.h"
 
 #include "speaker.h"
 
@@ -83,6 +82,7 @@ public:
 		m_maincpu(*this, "maincpu"),
 		m_rom(*this, "maincpu"),
 		m_ram(*this, "ram"),
+		m_nvram(*this, "nvram", 0x20000, ENDIANNESS_LITTLE),
 		m_lcd(*this, "lcd"),
 		m_smartboard(*this, "smartboard"),
 		m_speaker(*this, "speaker"),
@@ -105,6 +105,7 @@ private:
 	required_device<arm_cpu_device> m_maincpu;
 	required_region_ptr<u32> m_rom;
 	required_device<ram_device> m_ram;
+	memory_share_creator<u8> m_nvram;
 	required_device<lm24014h_device> m_lcd;
 	required_device<tasc_sb30_device> m_smartboard;
 	required_device<speaker_sound_device> m_speaker;
@@ -113,12 +114,14 @@ private:
 	output_finder<2> m_out_leds;
 
 	void main_map(address_map &map);
-	void nvram_map(address_map &map);
 
 	// I/O handlers
 	u32 input_r();
 	u32 rom_r(offs_t offset);
 	void control_w(offs_t offset, u32 data, u32 mem_mask = ~0);
+
+	u8 nvram_r(offs_t offset) { return m_nvram[offset]; }
+	void nvram_w(offs_t offset, u8 data) { m_nvram[offset] = data; }
 
 	void set_cpu_freq();
 	void install_bootrom(bool enable);
@@ -224,13 +227,8 @@ u32 tasc_state::rom_r(offs_t offset)
 	if (!machine().side_effects_disabled())
 	{
 		// handle dynamic cpu clock divider when accessing rom
-		u64 cur_cycle = m_maincpu->total_cycles();
-		u64 prev_cycle = m_prev_cycle;
-		s64 diff = cur_cycle - prev_cycle;
-
+		s64 diff = m_maincpu->total_cycles() - m_prev_cycle;
 		u32 pc = m_maincpu->pc();
-		u32 prev_pc = m_prev_pc;
-		m_prev_pc = pc;
 
 		if (diff > 0)
 		{
@@ -239,13 +237,14 @@ u32 tasc_state::rom_r(offs_t offset)
 			static constexpr int divider = -7 + 1;
 
 			// this takes care of almost all cases, otherwise, total cycles taken can't be determined
-			if (diff <= arm_branch_cycles || (diff <= arm_max_cycles && (pc - prev_pc) == 4 && (pc & ~0x02000000) == (offset * 4)))
+			if (diff <= arm_branch_cycles || (diff <= arm_max_cycles && (pc - m_prev_pc) == 4 && (pc & ~0x02000000) == (offset * 4)))
 				m_maincpu->adjust_icount(divider * (int)diff);
 			else
 				m_maincpu->adjust_icount(divider);
 		}
 
 		m_prev_cycle = m_maincpu->total_cycles();
+		m_prev_pc = pc;
 	}
 
 	return m_rom[offset];
@@ -261,13 +260,7 @@ void tasc_state::main_map(address_map &map)
 {
 	map(0x01000000, 0x01000003).rw(FUNC(tasc_state::input_r), FUNC(tasc_state::control_w));
 	map(0x02000000, 0x0203ffff).r(FUNC(tasc_state::rom_r));
-	map(0x03000000, 0x0307ffff).m("nvram_map", FUNC(address_map_bank_device::amap8)).umask32(0x000000ff);
-}
-
-void tasc_state::nvram_map(address_map &map)
-{
-	// nvram is 8-bit (128KB)
-	map(0x00000, 0x1ffff).ram().share("nvram");
+	map(0x03000000, 0x0307ffff).rw(FUNC(tasc_state::nvram_r), FUNC(tasc_state::nvram_w)).umask32(0x000000ff);
 }
 
 
@@ -326,7 +319,6 @@ void tasc_state::tasc(machine_config &config)
 	m_ram->set_default_value(0);
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
-	ADDRESS_MAP_BANK(config, "nvram_map").set_map(&tasc_state::nvram_map).set_options(ENDIANNESS_LITTLE, 8, 17);
 
 	TASC_SB30(config, m_smartboard);
 	subdevice<sensorboard_device>("smartboard:board")->set_nvram_enable(true);
@@ -383,7 +375,7 @@ ROM_END
 ******************************************************************************/
 
 //    YEAR  NAME      PARENT  CMP MACHINE  INPUT  CLASS       INIT        COMPANY, FULLNAME, FLAGS
-CONS( 1995, tascr30,  0,       0, tasc,    tasc,  tasc_state, empty_init, "Tasc", "ChessSystem R30 (The King 2.50)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
-CONS( 1993, tascr30a, tascr30, 0, tasc,    tasc,  tasc_state, empty_init, "Tasc", "ChessSystem R30 (The King 2.20)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK )
-CONS( 1993, tascr30b, tascr30, 0, tasc,    tasc,  tasc_state, empty_init, "Tasc", "ChessSystem R30 (The King 2.23, TM version)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK ) // competed in several chesscomputer tournaments
-CONS( 1993, tascr30g, tascr30, 0, tasc,    tasc,  tasc_state, empty_init, "Tasc", "ChessSystem R30 (Gideon 2.1, prototype)", MACHINE_SUPPORTS_SAVE | MACHINE_CLICKABLE_ARTWORK ) // made in 1993, later released in 2012
+CONS( 1995, tascr30,  0,       0, tasc,    tasc,  tasc_state, empty_init, "Tasc", "ChessSystem R30 (The King 2.50)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_TIMING | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1993, tascr30a, tascr30, 0, tasc,    tasc,  tasc_state, empty_init, "Tasc", "ChessSystem R30 (The King 2.20)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_TIMING | MACHINE_CLICKABLE_ARTWORK )
+CONS( 1993, tascr30b, tascr30, 0, tasc,    tasc,  tasc_state, empty_init, "Tasc", "ChessSystem R30 (The King 2.23, TM version)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_TIMING | MACHINE_CLICKABLE_ARTWORK ) // competed in several chesscomputer tournaments
+CONS( 1993, tascr30g, tascr30, 0, tasc,    tasc,  tasc_state, empty_init, "Tasc", "ChessSystem R30 (Gideon 2.1, prototype)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_TIMING | MACHINE_CLICKABLE_ARTWORK ) // made in 1993, later released in 2012

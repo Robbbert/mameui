@@ -455,7 +455,6 @@ MACHINES["MPCC68561"] = true
 MACHINES["68681"] = true
 MACHINES["7200FIFO"] = true
 MACHINES["8530SCC"] = true
-MACHINES["AAKARTDEV"] = true
 MACHINES["ACIA6850"] = true
 MACHINES["ACORN_IOC"] = true
 MACHINES["ACORN_MEMC"] = true
@@ -479,6 +478,7 @@ MACHINES["AMIGAFDC"] = true
 MACHINES["ARM_IOMD"] = true
 MACHINES["AT_KEYBC"] = true
 MACHINES["AT28C16"] = true
+MACHINES["AT28C64B"] = true
 MACHINES["AT29X"] = true
 MACHINES["AT45DBXX"] = true
 MACHINES["ATAFLASH"] = true
@@ -491,6 +491,7 @@ MACHINES["CDP1852"] = true
 MACHINES["CDP1871"] = true
 MACHINES["CDP1879"] = true
 --MACHINES["CDU76S"] = true
+MACHINES["CH376"] = true
 MACHINES["CHESSMACHINE"] = true
 MACHINES["CMOS40105"] = true
 MACHINES["COM52C50"] = true
@@ -619,7 +620,6 @@ MACHINES["MSM58321"] = true
 MACHINES["MSM6242"] = true
 --MACHINES["MSM6253"] = true
 MACHINES["MYB3K_KEYBOARD"] = true
-MACHINES["NCR5380"] = true
 MACHINES["NCR5380N"] = true
 MACHINES["NCR5385"] = true
 MACHINES["NCR5390"] = true
@@ -1156,6 +1156,7 @@ FORMATS["X1_TAP"] = true
 FORMATS["XDF_DSK"] = true
 FORMATS["ZX81_P"] = true
 FORMATS["FS_PRODOS"] = true
+FORMATS["FS_ORIC_JASMIN"] = true
 
 --------------------------------------------------
 -- this is the list of driver libraries that
@@ -1483,7 +1484,6 @@ function createProjects_mame_mess(_target, _subtarget)
 if (_subtarget=="mess") then
 createMESSProjects(_target, _subtarget, "mameshared")
 files {
-	MAME_DIR .. "src/mame/machine/archimds.cpp",
 	MAME_DIR .. "src/mame/machine/amiga.cpp",
 	MAME_DIR .. "src/mame/video/amiga.cpp",
 	MAME_DIR .. "src/mame/video/amigaaga.cpp",
@@ -1817,6 +1817,8 @@ files {
 	MAME_DIR .. "src/mame/machine/macpci.cpp",
 	MAME_DIR .. "src/mame/machine/cuda.cpp",
 	MAME_DIR .. "src/mame/machine/cuda.h",
+	MAME_DIR .. "src/mame/machine/macscsi.cpp",
+	MAME_DIR .. "src/mame/machine/macscsi.h",
 	MAME_DIR .. "src/mame/drivers/iphone2g.cpp",
 	MAME_DIR .. "src/mame/drivers/superga2.cpp",
 }
@@ -2515,9 +2517,7 @@ files {
 
 createMESSProjects(_target, _subtarget, "h01x")
 files {
-	MAME_DIR .. "src/mame/includes/h01x.h",
 	MAME_DIR .. "src/mame/drivers/h01x.cpp",
-	MAME_DIR .. "src/mame/video/h01x.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "hartung")
@@ -2586,7 +2586,6 @@ files {
 	MAME_DIR .. "src/mame/drivers/sbc6510.cpp",
 	MAME_DIR .. "src/mame/drivers/sitcom.cpp",
 	MAME_DIR .. "src/mame/drivers/slc1.cpp",
-	MAME_DIR .. "src/mame/drivers/slc1a.cpp",
 	MAME_DIR .. "src/mame/drivers/test_t400.cpp",
 	MAME_DIR .. "src/mame/drivers/uzebox.cpp",
 	MAME_DIR .. "src/mame/drivers/z80dev.cpp",
@@ -3887,6 +3886,7 @@ files {
 	MAME_DIR .. "src/mame/includes/tek405x.h",
 	MAME_DIR .. "src/mame/drivers/tek410x.cpp",
 	MAME_DIR .. "src/mame/drivers/tek440x.cpp",
+	MAME_DIR .. "src/mame/drivers/tekigw.cpp",
 	MAME_DIR .. "src/mame/drivers/tekxp33x.cpp",
 }
 
@@ -4224,6 +4224,7 @@ files {
 createMESSProjects(_target, _subtarget, "veb")
 files {
 	MAME_DIR .. "src/mame/drivers/chessmst.cpp",
+	MAME_DIR .. "src/mame/drivers/chessmstdm.cpp",
 	MAME_DIR .. "src/mame/drivers/kc.cpp",
 	MAME_DIR .. "src/mame/includes/kc.h",
 	MAME_DIR .. "src/mame/machine/kc.cpp",
@@ -4231,11 +4232,9 @@ files {
 	MAME_DIR .. "src/mame/machine/kc_keyb.h",
 	MAME_DIR .. "src/mame/video/kc.cpp",
 	MAME_DIR .. "src/mame/drivers/lc80.cpp",
-	MAME_DIR .. "src/mame/includes/lc80.h",
 	MAME_DIR .. "src/mame/drivers/mc8020.cpp",
 	MAME_DIR .. "src/mame/drivers/mc8030.cpp",
 	MAME_DIR .. "src/mame/drivers/poly880.cpp",
-	MAME_DIR .. "src/mame/includes/poly880.h",
 	MAME_DIR .. "src/mame/drivers/sc2.cpp",
 }
 
@@ -4381,6 +4380,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/ymmu50.cpp",
 	MAME_DIR .. "src/mame/drivers/ymmu80.cpp",
 	MAME_DIR .. "src/mame/drivers/ymmu100.cpp",
+	MAME_DIR .. "src/mame/drivers/ympsr60.cpp",
 	MAME_DIR .. "src/mame/drivers/ympsr340.cpp",
 	MAME_DIR .. "src/mame/drivers/ymtx81z.cpp",
 	MAME_DIR .. "src/mame/drivers/ymvl70.cpp",
