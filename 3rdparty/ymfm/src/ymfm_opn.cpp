@@ -207,7 +207,12 @@ int32_t opn_registers_base<IsOpnA>::clock_noise_and_lfo()
 	// when we cross the divider count, add enough to zero it and cause an
 	// increment at bit 8; the 7-bit value lives from bits 8-14
 	if (subcount >= lfo_max_count[lfo_rate()])
-		m_lfo_counter += subcount ^ 0xff;
+	{
+		// note: to match the published values this should be 0x100 - subcount;
+		// however, tests on the hardware and nuked bear out an off-by-one
+		// error exists that causes the max LFO rate to be faster than published
+		m_lfo_counter += 0x101 - subcount;
+	}
 
 	// AM value is 7 bits, staring at bit 8; grab the low 6 directly
 	m_lfo_am = bitfield(m_lfo_counter, 8, 6);
@@ -661,160 +666,6 @@ void ssg_resampler<OutputType, FirstOutput, MixTo1>::resample_nop(OutputType *ou
 {
 	// nothing to do except increment the sample index
 	m_sampindex += numsamples;
-}
-
-
-
-//*********************************************************
-//  YM2149
-//*********************************************************
-
-//-------------------------------------------------
-//  ym2149 - constructor
-//-------------------------------------------------
-
-ym2149::ym2149(ymfm_interface &intf) :
-	m_address(0),
-	m_ssg(intf)
-{
-}
-
-
-//-------------------------------------------------
-//  reset - reset the system
-//-------------------------------------------------
-
-void ym2149::reset()
-{
-	// reset the engines
-	m_ssg.reset();
-}
-
-
-//-------------------------------------------------
-//  save_restore - save or restore the data
-//-------------------------------------------------
-
-void ym2149::save_restore(ymfm_saved_state &state)
-{
-	state.save_restore(m_address);
-	m_ssg.save_restore(state);
-}
-
-
-//-------------------------------------------------
-//  read_data - read the data register
-//-------------------------------------------------
-
-uint8_t ym2149::read_data()
-{
-	return m_ssg.read(m_address & 0x0f);
-}
-
-
-//-------------------------------------------------
-//  read - handle a read from the device
-//-------------------------------------------------
-
-uint8_t ym2149::read(uint32_t offset)
-{
-	uint8_t result = 0xff;
-	switch (offset & 3)	// BC2,BC1
-	{
-		case 0: // inactive
-			break;
-
-		case 1: // address
-			break;
-
-		case 2: // inactive
-			break;
-
-		case 3: // read
-			result = read_data();
-			break;
-	}
-	return result;
-}
-
-
-//-------------------------------------------------
-//  write_address - handle a write to the address
-//  register
-//-------------------------------------------------
-
-void ym2149::write_address(uint8_t data)
-{
-	// just set the address
-	m_address = data;
-}
-
-
-//-------------------------------------------------
-//  write - handle a write to the register
-//  interface
-//-------------------------------------------------
-
-void ym2149::write_data(uint8_t data)
-{
-	m_ssg.write(m_address & 0x0f, data);
-}
-
-
-//-------------------------------------------------
-//  write - handle a write to the register
-//  interface
-//-------------------------------------------------
-
-void ym2149::write(uint32_t offset, uint8_t data)
-{
-	switch (offset & 3)	// BC2,BC1
-	{
-		case 0: // address
-			write_address(data);
-			break;
-
-		case 1: // inactive
-			break;
-
-		case 2: // write
-			write_data(data);
-			break;
-
-		case 3: // address
-			write_address(data);
-			break;
-	}
-}
-
-
-//-------------------------------------------------
-//  generate - generate one sample of FM sound
-//-------------------------------------------------
-
-void ym2149::generate(output_data *output, uint32_t numsamples)
-{
-	// no FM output, just clear
-	for (uint32_t samp = 0; samp < numsamples; samp++, output++)
-		output->clear();
-}
-
-
-//-------------------------------------------------
-//  generate_ssg - generate one sample of SSG
-//  sound
-//-------------------------------------------------
-
-void ym2149::generate_ssg(output_data_ssg *output, uint32_t numsamples)
-{
-	for (uint32_t samp = 0; samp < numsamples; samp++, output++)
-	{
-		// clock the SSG
-		m_ssg.clock();
-
-		// YM2149 keeps the three SSG outputs independent
-		m_ssg.output(*output);
-	}
 }
 
 
