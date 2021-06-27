@@ -78,7 +78,7 @@ static BOOL s_bIgnoreSoftwarePickerNotifies = 0;
 static HWND MyColumnDialogProc_hwndPicker;
 static int *MyColumnDialogProc_order;
 static int *MyColumnDialogProc_shown;
-static int *mess_icon_index;
+static std::unique_ptr<int[]> mess_icon_index;
 static std::map<string,string> slmap; // store folder for Media View Mount Item
 static std::map<string,int> mvmap;  // store indicator if Media View Unmount should be enabled
 
@@ -379,10 +379,7 @@ BOOL CreateMessIcons(void)
 {
 	// create the icon index, if we haven't already
 	if (!mess_icon_index)
-		mess_icon_index = (int*)pool_malloc_lib(GetMameUIMemoryPool(), driver_list::total() * IO_COUNT * sizeof(*mess_icon_index));
-
-	for (int i = 0; i < (driver_list::total() * IO_COUNT); i++)
-		mess_icon_index[i] = 0;
+		mess_icon_index = make_unique_clear<int[]>(driver_list::total() * IO_COUNT);
 
 	// Associate the image lists with the list view control.
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SWLIST);
@@ -402,9 +399,6 @@ static int GetMessIcon(int drvindex, int nSoftwareType)
 	const game_driver *drv;
 	char buffer[256];
 	const char *iconname;
-
-	//assert(drvindex >= 0);
-	//assert(drvindex < driver_list::total());
 
 	if ((nSoftwareType >= 0) && (nSoftwareType < IO_COUNT))
 	{
