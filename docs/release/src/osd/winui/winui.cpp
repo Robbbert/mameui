@@ -472,9 +472,6 @@ static BOOL in_emulation = 0;
 /* idle work at startup */
 static BOOL idle_work = 0;
 
-/* object pool in use */
-static object_pool *mameui_pool;
-
 static int  game_index = 0;
 static int  progBarStep = 0;
 
@@ -698,7 +695,7 @@ static HBITMAP hMissing_bitmap = NULL;
 static HIMAGELIST   hLarge = NULL;
 static HIMAGELIST   hSmall = NULL;
 static HIMAGELIST   hHeaderImages = NULL;
-static int          *icon_index = NULL; /* for custom per-game icons */
+static std::unique_ptr<int[]> icon_index; // for custom per-game icons
 
 static const TBBUTTON tbb[] =
 {
@@ -1097,12 +1094,6 @@ HIMAGELIST GetLargeImageList(void)
 HIMAGELIST GetSmallImageList(void)
 {
 	return hSmall;
-}
-
-
-object_pool *GetMameUIMemoryPool(void)
-{
-	return mameui_pool;
 }
 
 
@@ -1668,13 +1659,6 @@ static void SetMainTitle(void)
 }
 
 
-static void memory_error(const char *message)
-{
-	win_message_box_utf8(hMain, message, emulator_info::get_appname(), MB_OK);
-	exit(-1);
-}
-
-
 static intptr_t CALLBACK StartupProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (uMsg)
@@ -1724,12 +1708,8 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 	SendMessage(hProgress, PBM_SETPOS, 40, 0);
 	//win_message_box_utf8(hMain, "test", emulator_info::get_appname(), MB_OK);
 
-	// create the memory pool
-	mameui_pool = pool_alloc_lib(memory_error);
-
 	// custom per-game icons
-	icon_index = (int*)pool_malloc_lib(mameui_pool, sizeof(int) * driver_list::total());
-	memset(icon_index, '\0', sizeof(int) * driver_list::total());
+	icon_index = make_unique_clear<int[]>(driver_list::total());
 
 	// set up window class
 	WNDCLASS wndclass;
@@ -2072,9 +2052,6 @@ static void Win32UI_exit()
 	FreeScreenShot();
 
 	HelpExit();
-
-	pool_free_lib(mameui_pool);
-	mameui_pool = NULL;
 }
 
 
