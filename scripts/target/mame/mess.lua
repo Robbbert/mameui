@@ -363,7 +363,7 @@ VIDEOS["HD44780"] = true
 VIDEOS["HD61202"] = true
 VIDEOS["HD61603"] = true
 VIDEOS["HD61830"] = true
---VIDEOS["HD63484"] = true
+VIDEOS["HD63484"] = true
 VIDEOS["HD66421"] = true
 VIDEOS["HLCD0438"] = true
 VIDEOS["HLCD0488"] = true
@@ -625,7 +625,7 @@ MACHINES["MSM58321"] = true
 MACHINES["MSM6242"] = true
 --MACHINES["MSM6253"] = true
 MACHINES["MYB3K_KEYBOARD"] = true
-MACHINES["NCR5380N"] = true
+MACHINES["NCR5380"] = true
 MACHINES["NCR5385"] = true
 MACHINES["NCR5390"] = true
 MACHINES["NCR539x"] = true
@@ -700,6 +700,7 @@ MACHINES["TDC1008"] = true
 --MACHINES["TE7750"] = true
 MACHINES["TIMEKPR"] = true
 MACHINES["TMC0430"] = true
+MACHINES["TMC0999"] = true
 MACHINES["TMC208K"] = true
 MACHINES["TMP68301"] = true
 MACHINES["TMS5501"] = true
@@ -715,7 +716,7 @@ MACHINES["TTL74123"] = true
 MACHINES["TTL74145"] = true
 MACHINES["TTL74148"] = true
 MACHINES["TTL74153"] = true
---MACHINES["TTL74157"] = true
+MACHINES["TTL74157"] = true
 MACHINES["TTL74161"] = true
 MACHINES["TTL74164"] = true
 MACHINES["TTL74175"] = true
@@ -930,6 +931,7 @@ BUSES["PC_JOY"] = true
 BUSES["PC_KBD"] = true
 BUSES["PC1512"] = true
 BUSES["PCE"] = true
+BUSES["PCE_CTRL"] = true
 BUSES["PET"] = true
 BUSES["PLUS4"] = true
 BUSES["POFO"] = true
@@ -2021,6 +2023,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/pv1000.cpp",
 	MAME_DIR .. "src/mame/drivers/pv2000.cpp",
 	MAME_DIR .. "src/mame/drivers/sk1.cpp",
+	MAME_DIR .. "src/mame/drivers/sx1000.cpp",
 	MAME_DIR .. "src/mame/drivers/rz1.cpp",
 	MAME_DIR .. "src/mame/drivers/casio_rompack.cpp",
 }
@@ -2454,6 +2457,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/fidel_dames.cpp",
 	MAME_DIR .. "src/mame/drivers/fidel_desdis.cpp",
 	MAME_DIR .. "src/mame/drivers/fidel_eag68k.cpp",
+	MAME_DIR .. "src/mame/drivers/fidel_eldorado.cpp",
 	MAME_DIR .. "src/mame/drivers/fidel_elite.cpp",
 	MAME_DIR .. "src/mame/drivers/fidel_excel.cpp",
 	MAME_DIR .. "src/mame/drivers/fidel_msc.cpp",
@@ -2969,8 +2973,9 @@ files {
 createMESSProjects(_target, _subtarget, "microterm")
 files {
 	MAME_DIR .. "src/mame/drivers/ergo201.cpp",
-	MAME_DIR .. "src/mame/drivers/microterm.cpp",
 	MAME_DIR .. "src/mame/drivers/microterm_f8.cpp",
+	MAME_DIR .. "src/mame/drivers/mt420.cpp",
+	MAME_DIR .. "src/mame/drivers/mt5510.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "mips")
@@ -3063,6 +3068,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/hh_cop400.cpp",
 	MAME_DIR .. "src/mame/drivers/hh_cops1.cpp",
 	MAME_DIR .. "src/mame/drivers/ns5652.cpp",
+	MAME_DIR .. "src/mame/drivers/ns32kdb.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "ncd")
@@ -3122,7 +3128,6 @@ files {
 	MAME_DIR .. "src/mame/drivers/elf.cpp",
 	MAME_DIR .. "src/mame/includes/elf.h",
 	MAME_DIR .. "src/mame/drivers/exp85.cpp",
-	MAME_DIR .. "src/mame/includes/exp85.h",
 }
 
 createMESSProjects(_target, _subtarget, "next")
