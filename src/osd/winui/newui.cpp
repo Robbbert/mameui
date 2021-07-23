@@ -1938,7 +1938,6 @@ static void customise_switches(running_machine &machine, HWND wnd, const char* t
 {
 	dialog_box *dlg;
 	ioport_field *afield;
-	ioport_setting *setting;
 	const char *switch_name = NULL;
 	ioport_field::user_settings settings;
 
@@ -1963,9 +1962,9 @@ static void customise_switches(running_machine &machine, HWND wnd, const char* t
 				if (win_dialog_add_combobox(dlg, switch_name, settings.value, update_keyval, (void *) afield))
 					goto done;
 
-				for (setting = field.settings().first(); setting; setting = setting->next())
+				for (auto setting : field.settings())
 				{
-					if (win_dialog_add_combobox_item(dlg, setting->name(), setting->value()))
+					if (win_dialog_add_combobox_item(dlg, setting.name(), setting.value()))
 						goto done;
 				}
 			}
