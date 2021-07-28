@@ -7,7 +7,7 @@ del mameui.exe
 if exist mameui.exe goto start
 call make64 -j6 %1 %2 %3
 if not exist mameui.exe goto end
-del mameui.sym
+rem del mameui.sym
 :end
 
 

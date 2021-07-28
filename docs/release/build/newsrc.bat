@@ -10,6 +10,9 @@ copy /Y %from%\src\emu\softlist.cpp %to%\src\emu
 copy /Y %from%\src\emu\video.* %to%\src\emu
 copy /Y %from%\src\version.cpp %to%\src
 
+md %to%\src\devices\bus\saitek_osa
+copy /Y %from%\src\devices\bus\saitek_osa\maestro.cpp %to%\src\devices\bus\saitek_osa
+
 md %to%\src\frontend\mame\ui
 copy /Y %from%\src\frontend\mame\mameopts.*         %to%\src\frontend\mame
 copy /Y %from%\src\frontend\mame\audit.*            %to%\src\frontend\mame
