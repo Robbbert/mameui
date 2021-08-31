@@ -289,9 +289,9 @@ void software_list_device::parse()
 	m_errors.clear();
 
 	// attempt to open the file
-	const osd_file::error filerr = m_file.open(m_list_name + ".xml");
+	const std::error_condition filerr = m_file.open(m_list_name + ".xml");
 	m_filename = m_file.filename();
-	if (filerr == osd_file::error::NONE)
+	if (!filerr)
 	{
 		// parse if no error
 		std::ostringstream errs;
@@ -299,7 +299,7 @@ void software_list_device::parse()
 		m_file.close();
 		m_errors = errs.str();
 	}
-	else if (filerr == osd_file::error::NOT_FOUND)
+	else if (std::errc::no_such_file_or_directory == filerr)
 	{
 		osd_printf_verbose("%s: Software list %s not found\n", tag(), m_filename);
 	}

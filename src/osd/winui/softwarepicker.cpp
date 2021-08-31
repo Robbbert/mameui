@@ -479,7 +479,7 @@ static BOOL SoftwarePicker_InternalAddFile(HWND hwndPicker, LPCSTR pszFilename, 
 	int res = 0;
 	LPCSTR s;
 	BOOL rc = TRUE;
-	util::archive_file::error ziperr = util::archive_file::error::UNSUPPORTED;
+	std::error_condition ziperr = std::errc::function_not_supported;
 	util::archive_file::ptr pZip;
 
 	s = strrchr(pszFilename, '.');
@@ -489,7 +489,7 @@ static BOOL SoftwarePicker_InternalAddFile(HWND hwndPicker, LPCSTR pszFilename, 
 	if (s && (core_stricmp(s, ".7z")==0))
 		ziperr = util::archive_file::open_7z(pszFilename, pZip);
 
-	if (ziperr  == util::archive_file::error::NONE)
+	if (!ziperr)
 	{
 		res = pZip->first_file();
 		while(rc && (res >= 0))

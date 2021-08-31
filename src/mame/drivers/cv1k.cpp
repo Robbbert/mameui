@@ -35,8 +35,8 @@ CA019B Do-Don-Pachi Dai-Fukkatsu Black Label
 CA021  Akai Katana
 
 CMDL01 Medal Mahjong Moukari Bancho
-       Pirates of Gappori http://web.archive.org/web/20090907145501/http://www.cave.co.jp/gameonline/gappori/
-       Oooku http://web.archive.org/web/20141104001322/http://www.cave.co.jp/gameonline/oooku/
+?????? Pirates of Gappori: http://web.archive.org/web/20090907145501/http://www.cave.co.jp/gameonline/gappori/
+?????? Uhauha Ooku: http://web.archive.org/web/20141104001322/http://www.cave.co.jp/gameonline/oooku/
 
 Note: CA018 - Deathsmiles II: Makai no Merry Christmas on unknown custom platform
       CA020 - Do-Don-Pachi Dai-ou-jou Tamashii on PGM2 platform
@@ -184,7 +184,7 @@ Common game codes:
 #include "screen.h"
 #include "speaker.h"
 
-
+namespace {
 
 class cv1k_state : public driver_device
 {
@@ -203,6 +203,21 @@ public:
 		m_idlepc(0)
 	{ }
 
+	void cv1k(machine_config &config);
+	void cv1k_d(machine_config &config);
+
+	void init_mushisam();
+	void init_ibara();
+	void init_espgal2();
+	void init_mushitam();
+	void init_pinkswts();
+	void init_deathsml();
+	void init_ddpdfk();
+
+protected:
+	virtual void machine_reset() override;
+
+private:
 	required_device<sh34_base_device> m_maincpu;
 	required_device<epic12_device> m_blitter;
 	required_device<serflash_device> m_serflash;
@@ -219,26 +234,15 @@ public:
 
 	uint32_t screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
 
-	virtual void machine_reset() override;
-
-	/* game specific */
-	uint64_t speedup_r();
-	void init_mushisam();
-	void init_ibara();
-	void init_espgal2();
-	void init_mushitam();
-	void init_pinkswts();
-	void init_deathsml();
-	void init_dpddfk();
-
 	required_ioport m_blitrate;
 	required_ioport m_eepromout;
 
 	uint32_t m_idleramoffs;
 	uint32_t m_idlepc;
+
+	uint64_t speedup_r();
 	void install_speedups(uint32_t idleramoff, uint32_t idlepc, bool is_typed);
-	void cv1k_d(machine_config &config);
-	void cv1k(machine_config &config);
+
 	void cv1k_d_map(address_map &map);
 	void cv1k_map(address_map &map);
 	void cv1k_port(address_map &map);
@@ -276,8 +280,7 @@ uint8_t cv1k_state::flash_io_r(offs_t offset)
 		case 0x05:
 		case 0x06:
 		case 0x07:
-
-		//  logerror("flash_io_r offset %04x\n", offset);
+			// logerror("flash_io_r offset %04x\n", offset);
 			return 0xff;
 
 		case 0x00:
@@ -915,10 +918,10 @@ void cv1k_state::install_speedups(uint32_t idleramoff, uint32_t idlepc, bool is_
 
 	m_maincpu->space(AS_PROGRAM).install_read_handler(0xc000000+m_idleramoffs, 0xc000000+m_idleramoffs+7, read64smo_delegate(*this, FUNC(cv1k_state::speedup_r)));
 
-	m_maincpu->sh2drc_add_fastram(0x00000000, 0x003fffff, true,  m_rombase);
+	m_maincpu->sh2drc_add_fastram(0x00000000, 0x003fffff, true, m_rombase);
 
-	m_maincpu->sh2drc_add_fastram(0x0c000000, 0x0c000000+m_idleramoffs-1, false,  m_ram);
-	m_maincpu->sh2drc_add_fastram(0x0c000000+m_idleramoffs+8, is_typed ? 0x0cffffff : 0x0c7fffff, false,  m_ram + ((m_idleramoffs+8)/8));
+	m_maincpu->sh2drc_add_fastram(0x0c000000, 0x0c000000+m_idleramoffs-1, false, m_ram);
+	m_maincpu->sh2drc_add_fastram(0x0c000000+m_idleramoffs+8, is_typed ? 0x0cffffff : 0x0c7fffff, false, m_ram + ((m_idleramoffs+8)/8));
 }
 
 
@@ -952,10 +955,13 @@ void cv1k_state::init_deathsml()
 	install_speedups(0x02310, 0xc0519a2, false);
 }
 
-void cv1k_state::init_dpddfk()
+void cv1k_state::init_ddpdfk()
 {
 	install_speedups(0x02310, 0xc1d1346, true);
 }
+
+
+} // anonymous namespace
 
 
 // The black label versions are intentionally not set as clones, they were re-releases with different game codes, not bugfixes.
@@ -1003,17 +1009,17 @@ GAME( 2007, mmpork,     0,        cv1k,   cv1ks,cv1k_state, init_pinkswts, ROT27
 GAME( 2007, deathsml,   0,        cv1k,   cv1k, cv1k_state, init_deathsml, ROT0,   "Cave (AMI license)", "Deathsmiles (2007/10/09 MASTER VER)",                             MACHINE_IMPERFECT_TIMING )
 
 // CA017B Deathsmiles Black Label
-GAME( 2008, dsmbl,      0,        cv1k_d, cv1k, cv1k_state, init_dpddfk,   ROT0,   "Cave (AMI license)", "Deathsmiles MegaBlack Label (2008/10/06 MEGABLACK LABEL VER)",    MACHINE_IMPERFECT_TIMING )
+GAME( 2008, dsmbl,      0,        cv1k_d, cv1k, cv1k_state, init_ddpdfk,   ROT0,   "Cave (AMI license)", "Deathsmiles MegaBlack Label (2008/10/06 MEGABLACK LABEL VER)",    MACHINE_IMPERFECT_TIMING )
 
 // CA019  Do-Don-Pachi Dai-Fukkatsu
-GAME( 2008, ddpdfk,     0,        cv1k_d, cv1k, cv1k_state, init_dpddfk,   ROT270, "Cave (AMI license)", "DoDonPachi Dai-Fukkatsu Ver 1.5 (2008/06/23 MASTER VER 1.5)",     MACHINE_IMPERFECT_TIMING )
-GAME( 2008, ddpdfk10,   ddpdfk,   cv1k_d, cv1k, cv1k_state, init_dpddfk,   ROT270, "Cave (AMI license)", "DoDonPachi Dai-Fukkatsu Ver 1.0 (2008/05/16 MASTER VER)",         MACHINE_IMPERFECT_TIMING )
+GAME( 2008, ddpdfk,     0,        cv1k_d, cv1k, cv1k_state, init_ddpdfk,   ROT270, "Cave (AMI license)", "DoDonPachi Dai-Fukkatsu Ver 1.5 (2008/06/23 MASTER VER 1.5)",     MACHINE_IMPERFECT_TIMING )
+GAME( 2008, ddpdfk10,   ddpdfk,   cv1k_d, cv1k, cv1k_state, init_ddpdfk,   ROT270, "Cave (AMI license)", "DoDonPachi Dai-Fukkatsu Ver 1.0 (2008/05/16 MASTER VER)",         MACHINE_IMPERFECT_TIMING )
 
 // CA019B Do-Don-Pachi Dai-Fukkatsu Black Label
-GAME( 2010, dfkbl,      0,        cv1k_d, cv1k, cv1k_state, init_dpddfk,   ROT270, "Cave (AMI license)", "DoDonPachi Dai-Fukkatsu Black Label (2010/1/18 BLACK LABEL)",     MACHINE_IMPERFECT_TIMING )
+GAME( 2010, dfkbl,      0,        cv1k_d, cv1k, cv1k_state, init_ddpdfk,   ROT270, "Cave",               "DoDonPachi Dai-Fukkatsu Black Label (2010/1/18 BLACK LABEL)",     MACHINE_IMPERFECT_TIMING )
 
 // CA021  Akai Katana
-GAME( 2010, akatana,    0,        cv1k_d, cv1k, cv1k_state, init_dpddfk,   ROT0,   "Cave (AMI license)", "Akai Katana (2010/ 8/13 MASTER VER.)",                            MACHINE_IMPERFECT_TIMING )
+GAME( 2010, akatana,    0,        cv1k_d, cv1k, cv1k_state, init_ddpdfk,   ROT0,   "Cave",               "Akai Katana (2010/ 8/13 MASTER VER.)",                            MACHINE_IMPERFECT_TIMING )
 
 // CMDL01 Medal Mahjong Moukari Bancho
 GAME( 2007, mmmbanc,    0,        cv1k,   cv1k, cv1k_state, init_pinkswts, ROT0,   "Cave (AMI license)", "Medal Mahjong Moukari Bancho (2007/06/05 MASTER VER.)",           MACHINE_NOT_WORKING )

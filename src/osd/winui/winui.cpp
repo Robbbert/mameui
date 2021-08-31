@@ -1209,14 +1209,14 @@ HICON LoadIconFromFile(const char *iconname)
 			sprintf(tmpStr, "%s/icons.zip", s1);
 			sprintf(tmpIcoName, "%s.ico", iconname);
 
-			if (util::archive_file::open_zip(tmpStr, zip) == util::archive_file::error::NONE)
+			if (!util::archive_file::open_zip(tmpStr, zip))
 			{
 				if (zip->search(tmpIcoName, false) >= 0)
 				{
 					bufferPtr = (PBYTE)malloc(zip->current_uncompressed_length());
 					if (bufferPtr)
 					{
-						if (zip->decompress(bufferPtr, zip->current_uncompressed_length()) == util::archive_file::error::NONE)
+						if (!zip->decompress(bufferPtr, zip->current_uncompressed_length()))
 							hIcon = FormatICOInMemoryToHICON(bufferPtr, zip->current_uncompressed_length());
 
 						free(bufferPtr);
@@ -1229,14 +1229,14 @@ HICON LoadIconFromFile(const char *iconname)
 				sprintf(tmpStr, "%s/icons.7z", s1);
 				sprintf(tmpIcoName, "%s.ico", iconname);
 
-				if (util::archive_file::open_7z(tmpStr, zip) == util::archive_file::error::NONE)
+				if (!util::archive_file::open_7z(tmpStr, zip))
 				{
 					if (zip->search(tmpIcoName, false) >= 0)
 					{
 						bufferPtr = (PBYTE)malloc(zip->current_uncompressed_length());
 						if (bufferPtr)
 						{
-							if (zip->decompress(bufferPtr, zip->current_uncompressed_length()) == util::archive_file::error::NONE)
+							if (!zip->decompress(bufferPtr, zip->current_uncompressed_length()))
 								hIcon = FormatICOInMemoryToHICON(bufferPtr, zip->current_uncompressed_length());
 
 							free(bufferPtr);
@@ -1657,6 +1657,13 @@ static void SetMainTitle(void)
 	snprintf(buffer, std::size(buffer), "%s %s", MAMEUINAME, GetVersionString());
 	win_set_window_text_utf8(hMain,buffer);
 }
+
+
+//static void memory_error(const char *message)
+//{
+//	win_message_box_utf8(hMain, message, emulator_info::get_appname(), MB_OK);
+//	exit(-1);
+//}
 
 
 static intptr_t CALLBACK StartupProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -5505,7 +5512,6 @@ static void MamePlayBackGame()
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_INPUT_FILES))
 	{
-		osd_file::error fileerr;
 		char drive[_MAX_DRIVE];
 		char dir[_MAX_DIR];
 		char bare_fname[_MAX_FNAME];
@@ -5522,8 +5528,8 @@ static void MamePlayBackGame()
 			path[strlen(path)-1] = 0; // take off trailing back slash
 
 		emu_file pPlayBack(MameUIGlobal().input_directory(), OPEN_FLAG_READ);
-		fileerr = pPlayBack.open(fname);
-		if (fileerr != osd_file::error::NONE)
+		std::error_condition fileerr = pPlayBack.open(fname);
+		if (fileerr)
 		{
 			MameMessageBox("Could not open '%s' as a valid input file.", filename);
 			return;
@@ -5601,7 +5607,7 @@ static void MameLoadState()
 		char* state_fname = filename;
 
 		emu_file pSaveState(MameUIGlobal().state_directory(), OPEN_FLAG_READ);
-		if (pSaveState.open(state_fname) != osd_file::error::NONE)
+		if (pSaveState.open(state_fname))
 		{
 			MameMessageBox("Could not open '%s' as a valid savestate file.", filename);
 			return;

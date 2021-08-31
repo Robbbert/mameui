@@ -2434,9 +2434,9 @@ static void change_device(HWND wnd, device_image_interface *image, bool is_save)
 	{
 		// mount the image
 		if (is_save)
-			(image_error_t)image->create(filename, image->device_get_indexed_creatable_format(0), create_args);
+			image->create(filename, image->device_get_indexed_creatable_format(0), create_args);
 		else
-			(image_error_t)image->load(filename);
+			image->load(filename);
 	}
 }
 
