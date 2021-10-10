@@ -91,7 +91,8 @@ software_list_device::software_list_device(const machine_config &mconfig, const 
 	m_filter(nullptr),
 	m_parsed(false),
 	m_file(mconfig.options().hash_path(), OPEN_FLAG_READ),
-	m_description("")
+	m_description(""),
+	m_notes("")
 {
 }
 
@@ -182,6 +183,7 @@ void software_list_device::release()
 	m_filename.clear();
 	m_shortname.clear();
 	m_description.clear();
+	m_notes.clear();
 	m_errors.clear();
 	m_infolist.clear();
 }
@@ -295,7 +297,7 @@ void software_list_device::parse()
 	{
 		// parse if no error
 		std::ostringstream errs;
-		parse_software_list(m_file, m_filename, m_shortname, m_description, m_infolist, errs);
+		parse_software_list(m_file, m_filename, m_shortname, m_description, m_notes, m_infolist, errs);
 		m_file.close();
 		m_errors = errs.str();
 	}
