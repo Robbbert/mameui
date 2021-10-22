@@ -636,7 +636,7 @@ void menu_export::handle()
 					// and do the dirty work
 					info_xml_creator creator(machine().options());
 					creator.output(pfile, filter, include_devices);
-					machine().popmessage(_("%s.xml saved under ui folder."), filename);
+					machine().popmessage(_("%s.xml saved in UI settings folder."), filename);
 				}
 			}
 			break;
@@ -673,7 +673,7 @@ void menu_export::handle()
 						util::stream_format(buffer, "%-18s\"%s\"\n", drvlist.driver().name, drvlist.driver().type.fullname());
 					file.puts(buffer.str());
 					file.close();
-					machine().popmessage(_("%s.txt saved under ui folder."), filename);
+					machine().popmessage(_("%s.txt saved in UI settings folder."), filename);
 				}
 			}
 			break;
@@ -840,7 +840,7 @@ void menu_machine_configure::custom_render(void *selectedref, float top, float b
 	draw_text_box(
 			std::begin(text), std::end(text),
 			origx1, origx2, origy1 - top, origy1 - ui().box_tb_border(),
-			ui::text_layout::CENTER, ui::text_layout::TRUNCATE, false,
+			text_layout::text_justify::CENTER, text_layout::word_wrapping::TRUNCATE, false,
 			ui().colors().text_color(), UI_GREEN_COLOR, 1.0f);
 }
 
@@ -963,7 +963,7 @@ void menu_plugins_configure::custom_render(void *selectedref, float top, float b
 	draw_text_box(
 			std::begin(toptext), std::end(toptext),
 			origx1, origx2, origy1 - top, origy1 - ui().box_tb_border(),
-			ui::text_layout::CENTER, ui::text_layout::TRUNCATE, false,
+			text_layout::text_justify::CENTER, text_layout::word_wrapping::TRUNCATE, false,
 			ui().colors().text_color(), UI_GREEN_COLOR, 1.0f);
 }
 
