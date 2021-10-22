@@ -51,7 +51,7 @@ menu_about::menu_about(mame_ui_manager &mui, render_container &container)
 					(sizeof(int) == sizeof(void *)) ? "I" : "",
 					(sizeof(long) == sizeof(void *)) ? "L" : (sizeof(long long) == sizeof(void *)) ? "LL" : "",
 					sizeof(void *) * 8),
-			util::string_format(_("Revision: %1$s"), bare_vcs_revision) }
+			/*util::string_format(_("Revision: %1$s"), bare_vcs_revision)*/" " }  // MESSUI
 {
 }
 
