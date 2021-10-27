@@ -890,7 +890,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 							{
 								// Extract the Usage data from the "info" fields.
 								string usage;
-								for (const feature_list_item &flist : swinfo.other_info())
+								for (const software_info_item &flist : swinfo.info())
 									if (flist.name() == "usage")
 										usage = flist.value();
 								// Now actually add the item

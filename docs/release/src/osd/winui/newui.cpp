@@ -2832,7 +2832,7 @@ static void prepare_menus(HWND wnd)
 					if (swpart.matches_interface(interface))
 					{
 						// Extract the Usage data from the "info" fields.
-						for (const feature_list_item &flist : swinfo->other_info())
+						for (const software_info_item &flist : swinfo->info())
 						{
 							if (flist.name() == "usage" && !usage_shown)
 							{
