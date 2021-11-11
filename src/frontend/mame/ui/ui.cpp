@@ -19,6 +19,7 @@
 #include "ui/info.h"
 #include "ui/mainmenu.h"
 #include "ui/menu.h"
+#include "ui/quitmenu.h"
 #include "ui/sliders.h"
 #include "ui/state.h"
 #include "ui/systemlist.h"
@@ -594,7 +595,9 @@ void mame_ui_manager::display_startup_screens(bool first_time)
 
 	// if we're the empty driver, force the menus on
 	if (ui::menu::stack_has_special_main_menu(*this))
+	{
 		show_menu();
+	}
 	else if (config_menu)
 	{
 		show_menu();
@@ -833,7 +836,14 @@ void mame_ui_manager::draw_text(render_container &container, std::string_view bu
 //  and full size computation
 //-------------------------------------------------
 
-void mame_ui_manager::draw_text_full(render_container &container, std::string_view origs, float x, float y, float origwrapwidth, ui::text_layout::text_justify justify, ui::text_layout::word_wrapping wrap, draw_mode draw, rgb_t fgcolor, rgb_t bgcolor, float *totalwidth, float *totalheight, float text_size)
+void mame_ui_manager::draw_text_full(
+		render_container &container,
+		std::string_view origs,
+		float x, float y, float origwrapwidth,
+		ui::text_layout::text_justify justify, ui::text_layout::word_wrapping wrap,
+		draw_mode draw, rgb_t fgcolor, rgb_t bgcolor,
+		float *totalwidth, float *totalheight,
+		float text_size)
 {
 	// create the layout
 	auto layout = create_layout(container, origwrapwidth, justify, wrap);
@@ -842,7 +852,7 @@ void mame_ui_manager::draw_text_full(render_container &container, std::string_vi
 	layout.add_text(
 			origs,
 			fgcolor,
-			draw == OPAQUE_ ? bgcolor : rgb_t::transparent(),
+			(draw == OPAQUE_) ? bgcolor : rgb_t::transparent(),
 			text_size);
 
 	// and emit it (if we are asked to do so)
@@ -865,7 +875,7 @@ void mame_ui_manager::draw_text_full(render_container &container, std::string_vi
 void mame_ui_manager::draw_text_box(render_container &container, std::string_view text, ui::text_layout::text_justify justify, float xpos, float ypos, rgb_t backcolor)
 {
 	// cap the maximum width
-	float maximum_width = 1.0f - box_lr_border() * 2;
+	float maximum_width = 1.0f - (box_lr_border() * machine().render().ui_aspect(&container) * 2.0f);
 
 	// create a layout
 	ui::text_layout layout = create_layout(container, maximum_width, justify);
@@ -886,17 +896,18 @@ void mame_ui_manager::draw_text_box(render_container &container, std::string_vie
 void mame_ui_manager::draw_text_box(render_container &container, ui::text_layout &layout, float xpos, float ypos, rgb_t backcolor)
 {
 	// xpos and ypos are where we want to "pin" the layout, but we need to adjust for the actual size of the payload
-	auto actual_left = layout.actual_left();
-	auto actual_width = layout.actual_width();
-	auto actual_height = layout.actual_height();
-	auto x = std::clamp(xpos - actual_width / 2, box_lr_border(), 1.0f - actual_width - box_lr_border());
-	auto y = std::clamp(ypos - actual_height / 2, box_tb_border(), 1.0f - actual_height - box_tb_border());
+	auto const lrborder = box_lr_border() * machine().render().ui_aspect(&container);
+	auto const actual_left = layout.actual_left();
+	auto const actual_width = layout.actual_width();
+	auto const actual_height = layout.actual_height();
+	auto const x = std::clamp(xpos - actual_width / 2, lrborder, 1.0f - actual_width - lrborder);
+	auto const y = std::clamp(ypos - actual_height / 2, box_tb_border(), 1.0f - actual_height - box_tb_border());
 
 	// add a box around that
 	draw_outlined_box(
 			container,
-			x - box_lr_border(), y - box_tb_border(),
-			x + actual_width + box_lr_border(), y + actual_height + box_tb_border(),
+			x - lrborder, y - box_tb_border(),
+			x + actual_width + lrborder, y + actual_height + box_tb_border(),
 			backcolor);
 
 	// emit the text
@@ -1134,38 +1145,6 @@ void mame_ui_manager::draw_fps_counter(render_container &container)
 
 
 //-------------------------------------------------
-//  draw_timecode_counter
-//-------------------------------------------------
-
-void mame_ui_manager::draw_timecode_counter(render_container &container)
-{
-	std::string tempstring;
-	draw_text_full(
-			container,
-			machine().video().timecode_text(tempstring),
-			0.0f, 0.0f, 1.0f,
-			ui::text_layout::text_justify::RIGHT, ui::text_layout::word_wrapping::WORD,
-			OPAQUE_, rgb_t(0xf0, 0xf0, 0x10, 0x10), rgb_t::black(), nullptr, nullptr);
-}
-
-
-//-------------------------------------------------
-//  draw_timecode_total
-//-------------------------------------------------
-
-void mame_ui_manager::draw_timecode_total(render_container &container)
-{
-	std::string tempstring;
-	draw_text_full(
-			container,
-			machine().video().timecode_total_text(tempstring),
-			0.0f, 0.0f, 1.0f,
-			ui::text_layout::text_justify::LEFT, ui::text_layout::word_wrapping::WORD,
-			OPAQUE_, rgb_t(0xf0, 0x10, 0xf0, 0x10), rgb_t::black(), nullptr, nullptr);
-}
-
-
-//-------------------------------------------------
 //  draw_profiler
 //-------------------------------------------------
 
@@ -1249,14 +1228,6 @@ uint32_t mame_ui_manager::handler_ingame(render_container &container)
 	if (show_fps_counter())
 		draw_fps_counter(container);
 
-	// Show the duration of current part (intro or gameplay or extra)
-	if (show_timecode_counter())
-		draw_timecode_counter(container);
-
-	// Show the total time elapsed for the video preview (all parts intro, gameplay, extras)
-	if (show_timecode_total())
-		draw_timecode_total(container);
-
 	// draw the profiler if visible
 	if (show_profiler())
 		draw_profiler(container);
@@ -1302,10 +1273,6 @@ uint32_t mame_ui_manager::handler_ingame(render_container &container)
 	}
 
 	image_handler_ingame();
-
-	// handle a save input timecode request
-	if (machine().ui_input().pressed(IPT_UI_TIMECODE))
-		machine().video().save_input_timecode();
 
 	if (ui_disabled)
 		return ui_disabled;
@@ -1462,50 +1429,14 @@ uint32_t mame_ui_manager::handler_ingame(render_container &container)
 void mame_ui_manager::request_quit()
 {
 	if (!machine().options().confirm_quit())
-		machine().schedule_exit();
-	else
-		set_handler(ui_callback_type::GENERAL, handler_callback_func(&mame_ui_manager::handler_confirm_quit, this));
-}
-
-
-//-------------------------------------------------
-//  handler_confirm_quit - leads the user through
-//  confirming quit emulation
-//-------------------------------------------------
-
-uint32_t mame_ui_manager::handler_confirm_quit(render_container &container)
-{
-	uint32_t state = 0;
-
-	// get the text for 'UI Select'
-	std::string ui_select_text = get_general_input_setting(IPT_UI_SELECT);
-
-	// get the text for 'UI Cancel'
-	std::string ui_cancel_text = get_general_input_setting(IPT_UI_CANCEL);
-
-	// assemble the quit message
-	std::string quit_message = string_format(
-			_("Are you sure you want to quit?\n\n"
-			"Press ''%1$s'' to quit,\n"
-			"Press ''%2$s'' to return to emulation."),
-			ui_select_text,
-			ui_cancel_text);
-
-	draw_text_box(container, quit_message, ui::text_layout::text_justify::CENTER, 0.5f, 0.5f, UI_RED_COLOR);
-	machine().pause();
-
-	// if the user press ENTER, quit the game
-	if (machine().ui_input().pressed(IPT_UI_SELECT))
-		machine().schedule_exit();
-
-	// if the user press ESC, just continue
-	else if (machine().ui_input().pressed(IPT_UI_CANCEL))
 	{
-		machine().resume();
-		state = UI_HANDLER_CANCEL;
+		machine().schedule_exit();
 	}
-
-	return state;
+	else
+	{
+		show_menu();
+		ui::menu::stack_push<ui::menu_confirm_quit>(*this, machine().render().ui_container());
+	}
 }
 
 

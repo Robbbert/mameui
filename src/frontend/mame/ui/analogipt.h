@@ -45,9 +45,9 @@ private:
 
 		std::reference_wrapper<ioport_field> field;
 		int type;
+		int defvalue;
 		int min, max;
 		int cur;
-		int defvalue;
 	};
 
 	struct field_data
@@ -72,7 +72,10 @@ private:
 
 	item_data_vector m_item_data;
 	field_data_vector m_field_data;
+	std::string m_prompt;
 	unsigned m_visible_fields;
+	int m_top_field;
+	bool m_hide_menu;
 };
 
 } // namespace ui
