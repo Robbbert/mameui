@@ -1582,7 +1582,7 @@ static int win_dialog_add_portselect(dialog_box *dialog, ioport_field *field)
 	int is_analog[3];
 	int len;
 
-	port_name = field->name();
+	port_name = field->name().c_str();
 	if (!port_name)
 		printf("Blank port_name encountered in win_dialog_add_portselect\n");
 	assert(port_name);
@@ -1764,7 +1764,7 @@ static BOOL win_file_dialog(running_machine &machine, HWND parent, win_file_dial
 //  customise_input
 //============================================================
 
-static void customise_input(running_machine &machine, HWND wnd, const char *title, int player, int inputclass)
+void customise_input(running_machine &machine, HWND wnd, const char *title, int player, int inputclass)
 {
 	dialog_box *dlg;
 	int this_inputclass, this_player;
@@ -1779,7 +1779,7 @@ static void customise_input(running_machine &machine, HWND wnd, const char *titl
 		for (ioport_field &field : port.second->fields())
 		{
 			/* add if we match the group and we have a valid name */
-			const char *name = field.name();
+			const char *name = field.name().c_str();
 			this_inputclass = field.type_class();
 			this_player = field.player();
 
@@ -1815,7 +1815,7 @@ done:
 
 static void customise_joystick(running_machine &machine, HWND wnd, int joystick_num)
 {
-	customise_input(machine, wnd, "Joysticks/Controllers", joystick_num, INPUT_CLASS_CONTROLLER);
+///	customise_input(machine, wnd, "Joysticks/Controllers", joystick_num, INPUT_CLASS_CONTROLLER);
 }
 
 
@@ -1826,7 +1826,7 @@ static void customise_joystick(running_machine &machine, HWND wnd, int joystick_
 
 static void customise_keyboard(running_machine &machine, HWND wnd)
 {
-	customise_input(machine, wnd, "Emulated Keyboard", 0, INPUT_CLASS_KEYBOARD);
+///	customise_input(machine, wnd, "Emulated Keyboard", 0, INPUT_CLASS_KEYBOARD);
 }
 
 
@@ -1845,17 +1845,17 @@ static bool check_for_miscinput(running_machine &machine)
 	{
 		for (ioport_field &field : port.second->fields())
 		{
-			const char *name = field.name();
+			const char *name = field.name().c_str();
 			this_inputclass = field.type_class();
 
 			/* add if we match the group and we have a valid name */
 			if ((name)
 			&& (field.enabled())
-			&& ((field.type() == IPT_OTHER && field.name()) || (machine.ioport().type_group(field.type(), field.player()) != IPG_INVALID))
+			&& ((field.type() == IPT_OTHER && name) || (machine.ioport().type_group(field.type(), field.player()) != IPG_INVALID))
 			&& (this_inputclass != INPUT_CLASS_CONTROLLER)
 			&& (this_inputclass != INPUT_CLASS_KEYBOARD))
 			{
-				return true;
+///				return true;
 			}
 		}
 	}
@@ -1883,13 +1883,13 @@ static void customise_miscinput(running_machine &machine, HWND wnd)
 	{
 		for (ioport_field &field : port.second->fields())
 		{
-			const char *name = field.name();
+			const char *name = field.name().c_str();
 			this_inputclass = field.type_class();
 
 			/* add if we match the group and we have a valid name */
 			if ((name)
 			&& (field.enabled())
-			&& ((field.type() == IPT_OTHER && field.name()) || (machine.ioport().type_group(field.type(), field.player()) != IPG_INVALID))
+			&& ((field.type() == IPT_OTHER && name) || (machine.ioport().type_group(field.type(), field.player()) != IPG_INVALID))
 			&& (this_inputclass != INPUT_CLASS_CONTROLLER)
 			&& (this_inputclass != INPUT_CLASS_KEYBOARD))
 			{
@@ -1955,7 +1955,7 @@ static void customise_switches(running_machine &machine, HWND wnd, const char* t
 
 			if (type == ipt_name)
 			{
-				switch_name = field.name();
+				switch_name = field.name().c_str();
 
 				field.get_user_settings(settings);
 				afield = &field;
@@ -2101,7 +2101,7 @@ static void customise_analogcontrols(running_machine &machine, HWND wnd)
 			if (port_type_is_analog(field.type()))
 			{
 				field.get_user_settings(settings);
-				name = field.name();
+				name = field.name().c_str();
 				afield = &field;
 
 				_snprintf(buf, std::size(buf)-1, "%s %s", name, "Digital Speed");
