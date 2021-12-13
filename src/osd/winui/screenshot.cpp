@@ -588,13 +588,25 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 			// give up on software-specific.
 			// For SNAPS only, try filenames with 0000.png
 			if ((pic_type == TAB_SCREENSHOT) && (extnum == 0))
-			{
-				if (filerr)
-				{
-					//%g/%i
+			if (filerr)
+
+			{      //%g/%i              gamename/increment
 					fname = string(system_name) + PATH_SEPARATOR + "0000.png";
 					filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
-				}
+			}
+
+			if ((pic_type == TAB_SCREENSHOT) && (extnum == 0))
+			if (filerr)
+			{       //%g/%g+0000.png    gamename/gamename+increment
+			        fname = string(system_name) + PATH_SEPARATOR + string(system_name) + "0000.png";
+			        filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
+			}
+
+			if ((pic_type == TAB_SCREENSHOT) && (extnum == 0))
+			if (filerr)
+			{       //%g+0000.png       gamename + increment
+			        fname = string(system_name) + "0000.png";
+			        filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
 			}
 
 			// Try dir/system.png  %g
