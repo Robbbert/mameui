@@ -463,15 +463,14 @@ static const nes_mmc mmc_list[] =
 	// 425 Cube Tech PnP
 	// 426 PnP
 	// 427 PnP
-	// 428 a couple multicarts
+	{ 428, BMC_TF2740 },
 	// 429 Unused
 	// 430 Unused
 	{ 431, BMC_GN91B },
 	// 432 Realtec 8090
 	{ 433, BMC_NC20MB },
 	// 434 S-009
-	{ 435, NTDEC_2746 },
-	// 436...442 Unused
+	// 435...442 Unused
 	// 443 NC3000M multicart
 	// 444 NC7000M multicart
 	// 445...511 Unused
