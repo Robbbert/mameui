@@ -9,9 +9,6 @@
 #include "emu.h"
 #include "includes/tx0.h"
 
-#include "imagedev/magtape.h"
-#include "imagedev/papertape.h"
-
 #include "video/crt.h"
 #include "screen.h"
 #include "softlist_dev.h"
@@ -361,18 +358,27 @@ void tx0_state::machine_start()
     perforated tape handling
 */
 
-class tx0_readtape_image_device : public paper_tape_reader_device
+class tx0_readtape_image_device :   public device_t,
+									public device_image_interface
 {
 public:
 	// construction/destruction
 	tx0_readtape_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// image-level overrides
+	virtual iodevice_t image_type() const noexcept override { return IO_PUNCHTAPE; }
+
+	virtual bool is_readable()  const noexcept override { return true; }
+	virtual bool is_writeable() const noexcept override { return false; }
+	virtual bool is_creatable() const noexcept override { return false; }
+	virtual bool must_be_loaded() const noexcept override { return false; }
+	virtual bool is_reset_on_load() const noexcept override { return false; }
 	virtual const char *file_extensions() const noexcept override { return "tap,rim"; }
 
 	virtual image_init_result call_load() override;
 	virtual void call_unload() override;
 	virtual const char *image_interface() const noexcept override { return "tx0_ptp"; }
+	virtual const software_list_loader &get_software_list_loader() const override { return image_software_list_loader::instance(); }
 
 protected:
 	// device-level overrides
@@ -385,18 +391,28 @@ private:
 DEFINE_DEVICE_TYPE(TX0_READTAPE, tx0_readtape_image_device, "tx0_readtape_image", "TX0 Tape Reader")
 
 tx0_readtape_image_device::tx0_readtape_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: paper_tape_reader_device(mconfig, TX0_READTAPE, tag, owner, clock)
+	: device_t(mconfig, TX0_READTAPE, tag, owner, clock)
+	, device_image_interface(mconfig, *this)
 	, m_tx0(*this, DEVICE_SELF_OWNER)
 {
 }
 
-class tx0_punchtape_image_device : public paper_tape_punch_device
+class tx0_punchtape_image_device :  public device_t,
+									public device_image_interface
 {
 public:
 	// construction/destruction
 	tx0_punchtape_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// image-level overrides
+	virtual iodevice_t image_type() const noexcept override { return IO_PUNCHTAPE; }
+	virtual bool support_command_line_image_creation() const noexcept override { return true; }
+
+	virtual bool is_readable()  const noexcept override { return false; }
+	virtual bool is_writeable() const noexcept override { return true; }
+	virtual bool is_creatable() const noexcept override { return true; }
+	virtual bool must_be_loaded() const noexcept override { return false; }
+	virtual bool is_reset_on_load() const noexcept override { return false; }
 	virtual const char *file_extensions() const noexcept override { return "tap,rim"; }
 
 	virtual image_init_result call_load() override;
@@ -414,7 +430,8 @@ private:
 DEFINE_DEVICE_TYPE(TX0_PUNCHTAPE, tx0_punchtape_image_device, "tx0_punchtape_image", "TX0 Tape Puncher")
 
 tx0_punchtape_image_device::tx0_punchtape_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: paper_tape_punch_device(mconfig, TX0_PUNCHTAPE, tag, owner, clock)
+	: device_t(mconfig, TX0_PUNCHTAPE, tag, owner, clock)
+	, device_image_interface(mconfig, *this)
 	, m_tx0(*this, DEVICE_SELF_OWNER)
 {
 }
@@ -428,14 +445,14 @@ public:
 	tx0_printer_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// image-level overrides
+	virtual iodevice_t image_type() const noexcept override { return IO_PRINTER; }
+
 	virtual bool is_readable()  const noexcept override { return false; }
 	virtual bool is_writeable() const noexcept override { return true; }
 	virtual bool is_creatable() const noexcept override { return true; }
+	virtual bool must_be_loaded() const noexcept override { return false; }
 	virtual bool is_reset_on_load() const noexcept override { return false; }
-	virtual bool support_command_line_image_creation() const noexcept override { return true; }
 	virtual const char *file_extensions() const noexcept override { return "typ"; }
-	virtual const char *image_type_name() const noexcept override { return "printout"; }
-	virtual const char *image_brief_type_name() const noexcept override { return "prin"; }
 
 	virtual image_init_result call_load() override;
 	virtual void call_unload() override;
@@ -457,13 +474,21 @@ tx0_printer_image_device::tx0_printer_image_device(const machine_config &mconfig
 {
 }
 
-class tx0_magtape_image_device : public magtape_image_device
+class tx0_magtape_image_device :    public device_t,
+									public device_image_interface
 {
 public:
 	// construction/destruction
 	tx0_magtape_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// image-level overrides
+	virtual iodevice_t image_type() const noexcept override { return IO_MAGTAPE; }
+
+	virtual bool is_readable()  const noexcept override { return true; }
+	virtual bool is_writeable() const noexcept override { return true; }
+	virtual bool is_creatable() const noexcept override { return true; }
+	virtual bool must_be_loaded() const noexcept override { return false; }
+	virtual bool is_reset_on_load() const noexcept override { return false; }
 	virtual const char *file_extensions() const noexcept override { return "tap"; }
 
 	virtual image_init_result call_load() override;
@@ -480,7 +505,8 @@ private:
 DEFINE_DEVICE_TYPE(TX0_MAGTAPE, tx0_magtape_image_device, "tx0_magtape_image", "TX0 Magnetic Tape")
 
 tx0_magtape_image_device::tx0_magtape_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: magtape_image_device(mconfig, TX0_MAGTAPE, tag, owner, clock)
+	: device_t(mconfig, TX0_MAGTAPE, tag, owner, clock)
+	, device_image_interface(mconfig, *this)
 	, m_tx0(*this, DEVICE_SELF_OWNER)
 {
 }

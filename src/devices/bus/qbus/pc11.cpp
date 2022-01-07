@@ -4,8 +4,6 @@
 
     DEC PC11 paper tape reader and punch controller (punch not implemented)
 
-    FIXME: PC11 is a Unibus device with no direct Q-bus counterpart
-
 ***************************************************************************/
 
 #include "emu.h"
@@ -55,7 +53,8 @@ const char* pc11_regnames[] = {
 //-------------------------------------------------
 
 pc11_device::pc11_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: paper_tape_reader_device(mconfig, DEC_PC11, tag, owner, clock)
+	: device_t(mconfig, DEC_PC11, tag, owner, clock)
+	, device_image_interface(mconfig, *this)
 	, device_qbus_card_interface(mconfig, *this)
 	, m_rxvec(070)
 	, m_txvec(074)

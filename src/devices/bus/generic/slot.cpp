@@ -121,11 +121,12 @@ void device_generic_cart_interface::ram_alloc(u32 size)
 
 generic_slot_device::generic_slot_device(machine_config const &mconfig, device_type type, char const *tag, device_t *owner, u32 clock) :
 	device_t(mconfig, type, tag, owner, clock),
-	device_rom_image_interface(mconfig, *this),
+	device_image_interface(mconfig, *this),
 	device_single_card_slot_interface<device_generic_cart_interface>(mconfig, *this),
 	m_interface(nullptr),
 	m_default_card("rom"),
 	m_extensions("bin"),
+	m_must_be_loaded(false),
 	m_width(GENERIC_ROM8_WIDTH),
 	m_endianness(ENDIANNESS_LITTLE),
 	m_cart(nullptr),

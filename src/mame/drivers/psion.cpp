@@ -24,7 +24,7 @@
 #include "includes/psion.h"
 
 #include "screen.h"
-#include "softlist_dev.h"
+#include "softlist.h"
 #include "speaker.h"
 
 

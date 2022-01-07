@@ -10,7 +10,7 @@
 #pragma once
 
 #include "formats/imageutl.h"
-#include "imagedev/memcard.h"
+#include "softlist_dev.h"
 
 //#define SMARTMEDIA_IMAGE_SAVE
 
@@ -195,14 +195,19 @@ protected:
 
 
 
-class smartmedia_image_device : public nand_device, public device_memcard_image_interface
+class smartmedia_image_device : public nand_device, public device_image_interface
 {
 public:
 	// construction/destruction
 	smartmedia_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// image-level overrides
+	virtual iodevice_t image_type() const noexcept override { return IO_MEMCARD; }
+
+	virtual bool is_readable()  const noexcept override { return true; }
+	virtual bool is_writeable() const noexcept override { return true; }
 	virtual bool is_creatable() const noexcept override { return false; }
+	virtual bool must_be_loaded() const noexcept override { return false; }
 	virtual bool is_reset_on_load() const noexcept override { return false; }
 	virtual const char *image_interface() const noexcept override { return "sm_memc"; }
 	virtual const char *file_extensions() const noexcept override { return "smc"; }
@@ -211,7 +216,7 @@ public:
 	virtual void call_unload() override;
 
 protected:
-	virtual const software_list_loader &get_software_list_loader() const override;
+	virtual const software_list_loader &get_software_list_loader() const override { return image_software_list_loader::instance(); }
 
 	image_init_result smartmedia_format_1();
 	image_init_result smartmedia_format_2();

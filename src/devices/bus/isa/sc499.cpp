@@ -1285,7 +1285,8 @@ void sc499_device::block_set_filemark()
 DEFINE_DEVICE_TYPE(SC499_CTAPE, sc499_ctape_image_device, "sc499_ctape", "SC-499 Cartridge Tape")
 
 sc499_ctape_image_device::sc499_ctape_image_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: microtape_image_device(mconfig, SC499_CTAPE, tag, owner, clock)
+	: device_t(mconfig, SC499_CTAPE, tag, owner, clock)
+	, device_image_interface(mconfig, *this)
 {
 }
 

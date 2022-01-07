@@ -973,7 +973,7 @@ void gamegear_state::gamegear(machine_config &config)
 	m_vdp->add_route(1, "rspeaker", 1.00);
 
 	/* cartridge */
-	GAMEGEAR_CART_SLOT(config, "slot", gg_cart, nullptr).set_must_be_loaded(true);
+	GAMEGEAR_CART_SLOT(config, "slot", gg_cart, nullptr);
 
 	SOFTWARE_LIST(config, "cart_list").set_original("gamegear");
 
