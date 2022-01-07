@@ -263,6 +263,7 @@ const double XTAL::known_xtals[] = {
 	 16'364'000, /* 16.364_MHz_XTAL        Corvus Concept */
 	 16'384'000, /* 16.384_MHz_XTAL        - */
 	 16'400'000, /* 16.4_MHz_XTAL          MS 6102 */
+	 16'537'000, /* 16.537_MHz_XTAL        Falco terminals 80-column clock */
 	 16'572'000, /* 16.572_MHz_XTAL        Micro-Term ACT-5A */
 	 16'588'800, /* 16.5888_MHz_XTAL       SM 7238 */
 	 16'666'600, /* 16.6666_MHz_XTAL       Firebeat GCU */
@@ -374,7 +375,7 @@ const double XTAL::known_xtals[] = {
 	 28'475'000, /* 28.475_MHz_XTAL        CoCo 3 PAL */
 	 28'480'000, /* 28.48_MHz_XTAL         Chromatics CGC-7900 */
 	 28'636'000, /* 28.636_MHz_XTAL        Super Kaneko Nova System */
-	 28'636'363, /* 28.636363_MHz_XTAL     Later Leland games and Atari GT, Amiga NTSC, Raiden2 h/w (8x NTSC subcarrier)*/
+	 28'636'363, /* 28.636363_MHz_XTAL     Later Leland games and Atari GT, Amiga NTSC, Raiden2 h/w (8x NTSC subcarrier), NEC PC-88xx */
 	 28'640'000, /* 28.64_MHz_XTAL         Fuuki FG-1c AI AM-2 PCB */
 	 28'700'000, /* 28.7_MHz_XTAL          - */
 	 29'376'000, /* 29.376_MHz_XTAL        Qume QVT-103 */
