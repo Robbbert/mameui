@@ -11,6 +11,7 @@
 #include "emu.h"
 #include "emuopts.h"
 #include "debugger.h"
+#include "fileio.h"
 #include "ui/uimain.h"
 #include "crsshair.h"
 #include "rendersw.hxx"
@@ -318,7 +319,7 @@ std::string video_manager::speed_text()
 //  file handle
 //-------------------------------------------------
 
-void video_manager::save_snapshot(screen_device *screen, emu_file &file)
+void video_manager::save_snapshot(screen_device *screen, util::core_file &file)
 {
 	// validate
 	assert(!m_snap_native || screen != nullptr);
@@ -493,7 +494,7 @@ void video_manager::exit()
 //  when there are no screens to drive it
 //-------------------------------------------------
 
-void video_manager::screenless_update_callback(void *ptr, int param)
+void video_manager::screenless_update_callback(int param)
 {
 	// force an update
 	frame_update(false);
@@ -511,7 +512,7 @@ void video_manager::postload()
 	for (const auto &x : m_movie_recordings)
 		x->set_next_frame_time(emutime);
 
-	// reset speed counters
+	// reset speed measurements
 	m_speed_last_realtime = osd_ticks();
 	m_speed_last_emutime = emutime;
 }

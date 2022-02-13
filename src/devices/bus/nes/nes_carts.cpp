@@ -119,6 +119,7 @@ void nes_cart(device_slot_interface &device)
 	device.option_add_internal("pal_zz",           NES_ZZ_PCB);
 	device.option_add_internal("nes_qj",           NES_QJ_PCB);
 	device.option_add_internal("nes_event",        NES_EVENT);
+	device.option_add_internal("nes_event2",       NES_EVENT2);
 // Discrete Components boards
 // IC_74x139x74
 	device.option_add_internal("discrete_74x139",  NES_74X139X74);
@@ -293,7 +294,7 @@ void nes_cart(device_slot_interface &device)
 	device.option_add_internal("xiaozy",           NES_XIAOZY);
 	device.option_add_internal("edu2k",            NES_EDU2K);
 	device.option_add_internal("t230",             NES_T230);
-	device.option_add_internal("mk2",              NES_MK2);
+	device.option_add_internal("jy830623c",        NES_JY830623C);
 	device.option_add_internal("unl_43272",        NES_43272);     // used in Gaau Hok Gwong Cheung
 	device.option_add_internal("tf1201",           NES_TF1201);
 	device.option_add_internal("th21311",          NES_TH21311);
@@ -383,10 +384,12 @@ void nes_cart(device_slot_interface &device)
 	device.option_add_internal("bmc_60311c",       NES_BMC_60311C);
 	device.option_add_internal("bmc_80013b",       NES_BMC_80013B);
 	device.option_add_internal("bmc_810544c",      NES_BMC_810544C);
+	device.option_add_internal("bmc_82ab",         NES_BMC_82AB);
 	device.option_add_internal("bmc_830425c",      NES_BMC_830425C);
 	device.option_add_internal("bmc_830506c",      NES_BMC_830506C);
 	device.option_add_internal("bmc_830928c",      NES_BMC_830928C);
 	device.option_add_internal("bmc_850437c",      NES_BMC_850437C);
+	device.option_add_internal("bmc_891227",       NES_BMC_891227);
 	device.option_add_internal("bmc_970630c",      NES_BMC_970630C);
 	device.option_add_internal("bmc_jy012005",     NES_BMC_JY012005);
 	device.option_add_internal("bmc_jy820845c",    NES_BMC_JY820845C);
@@ -394,6 +397,7 @@ void nes_cart(device_slot_interface &device)
 	device.option_add_internal("n32_4in1",         NES_N32_4IN1);
 	device.option_add_internal("ntd03",            NES_NTD03);
 	device.option_add_internal("bmc_ctc09",        NES_BMC_CTC09);
+	device.option_add_internal("bmc_ctc12in1",     NES_BMC_CTC12IN1);
 	device.option_add_internal("bmc_fam250",       NES_BMC_FAM250);
 	device.option_add_internal("bmc_gka",          NES_BMC_GKA);
 	device.option_add_internal("bmc_gkb",          NES_BMC_GKB);

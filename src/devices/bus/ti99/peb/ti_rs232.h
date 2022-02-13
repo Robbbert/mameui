@@ -144,7 +144,7 @@ public:
 	void connect(tms9902_device *dev) { m_uart = dev; }
 
 protected:
-	void device_start() override { };
+	void device_start() override { }
 	image_init_result    call_load() override;
 	void    call_unload() override;
 
@@ -171,7 +171,7 @@ public:
 	const char *file_extensions() const noexcept override { return ""; }
 
 protected:
-	void    device_start() override { };
+	void    device_start() override { }
 	image_init_result    call_load() override;
 	void    call_unload() override;
 };

@@ -123,7 +123,7 @@ static const nes_mmc mmc_list[] =
 	{ 88, NAMCOT_34X3 },
 	{ 89, SUNSOFT_2 },
 	{ 90, JYCOMPANY_A },
-	{ 91, UNL_MK2 },
+	{ 91, UNL_JY830623C },
 	{ 92, JALECO_JF19 },
 	{ 93, SUNSOFT_2 },
 	{ 94, STD_UN1ROM },
@@ -372,7 +372,7 @@ static const nes_mmc mmc_list[] =
 	{ 334, BMC_5IN1_1993 },
 	{ 335, BMC_CTC09 },
 	{ 336, BMC_K3046 },
-	// { 337, BMC_CTC_12IN1 }, not in nes.xml
+	{ 337, BMC_CTC_12IN1 },
 	{ 338, BMC_SA005A },
 	{ 339, BMC_K3006 },
 	{ 340, BMC_K3036 },
@@ -385,7 +385,7 @@ static const nes_mmc mmc_list[] =
 	{ 347, KAISER_KS7030 },        // Doki Doki Panic alt FDS conversion
 	{ 348, BMC_830118C },
 	{ 349, BMC_G146 },
-	// { 350, BMC_891227 }, not in nes.xml
+	{ 350, BMC_891227 },
 	{ 351, BMC_TECHLINE9IN1 },
 	{ 352, KAISER_KS106C },        // 4-in-1
 	{ 353, BMC_810305C },          // Super Mario Family multicart
@@ -516,7 +516,7 @@ static const nes_mmc mmc_list[] =
 	// 552 TAITO_X1_017, this is a correction of mapper 82. We should drop 82 and only support the accurate dumps of 552?
 	{ 553, SACHEN_3013 },          // Dong Dong Nao 1
 	{ 554, KAISER_KS7010 },        // Akumajo Dracula FDS conversion
-	// 555 retroUSB re-release of 1991 Nintendo Campus Challenge
+	{ 555, STD_EVENT2 },
 	// 556 JY-215 multicart
 	{ 557, UNL_LG25 },             // Moero TwinBee FDS conversion
 	// 558 some games on YC-03-09 board (related to mappers 162-164)
@@ -946,6 +946,10 @@ void nes_cart_slot_device::call_load_ines()
 				m_cart->set_vrc_lines(1, 0, 0);
 			if (mapper == 26)
 				m_cart->set_vrc_lines(0, 1, 0);
+			break;
+
+		case KONAMI_VRC7:
+			m_cart->set_vrc_lines((crc_hack || submapper == 2) ? 4 : 3, 0, 0);
 			break;
 
 		case IREM_G101:

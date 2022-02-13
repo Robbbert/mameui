@@ -2529,6 +2529,8 @@ if (BUSES["A2BUS"]~=null) then
 		MAME_DIR .. "src/devices/bus/a2bus/a2softcard.h",
 		MAME_DIR .. "src/devices/bus/a2bus/a2ssc.cpp",
 		MAME_DIR .. "src/devices/bus/a2bus/a2ssc.h",
+		MAME_DIR .. "src/devices/bus/a2bus/a2superdrive.cpp",
+		MAME_DIR .. "src/devices/bus/a2bus/a2superdrive.h",
 		MAME_DIR .. "src/devices/bus/a2bus/a2swyft.cpp",
 		MAME_DIR .. "src/devices/bus/a2bus/a2swyft.h",
 		MAME_DIR .. "src/devices/bus/a2bus/a2themill.cpp",
@@ -3735,6 +3737,17 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/bus/epson_qx/option.h,BUSES["EPSON_QX"] = true
+---------------------------------------------------
+if (BUSES["EPSON_QX"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/epson_qx/option.cpp",
+		MAME_DIR .. "src/devices/bus/epson_qx/option.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/bus/pce/pce_slot.h,BUSES["PCE"] = true
 ---------------------------------------------------
 if (BUSES["PCE"]~=null) then
@@ -4114,6 +4127,8 @@ if (BUSES["SPECTRUM"]~=null) then
 		MAME_DIR .. "src/devices/bus/spectrum/mgt.h",
 		MAME_DIR .. "src/devices/bus/spectrum/mikroplus.cpp",
 		MAME_DIR .. "src/devices/bus/spectrum/mikroplus.h",
+		MAME_DIR .. "src/devices/bus/spectrum/mpoker.cpp",
+		MAME_DIR .. "src/devices/bus/spectrum/mpoker.h",
 		MAME_DIR .. "src/devices/bus/spectrum/opus.cpp",
 		MAME_DIR .. "src/devices/bus/spectrum/opus.h",
 		MAME_DIR .. "src/devices/bus/spectrum/plus2test.cpp",
@@ -4128,6 +4143,8 @@ if (BUSES["SPECTRUM"]~=null) then
 		MAME_DIR .. "src/devices/bus/spectrum/speccydos.h",
 		MAME_DIR .. "src/devices/bus/spectrum/specdrum.cpp",
 		MAME_DIR .. "src/devices/bus/spectrum/specdrum.h",
+		MAME_DIR .. "src/devices/bus/spectrum/specmate.cpp",
+		MAME_DIR .. "src/devices/bus/spectrum/specmate.h",
 		MAME_DIR .. "src/devices/bus/spectrum/uslot.cpp",
 		MAME_DIR .. "src/devices/bus/spectrum/uslot.h",
 		MAME_DIR .. "src/devices/bus/spectrum/usource.cpp",

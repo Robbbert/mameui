@@ -895,6 +895,7 @@ BUSES["ELECTRON_CART"] = true
 BUSES["ELECTRON"] = true
 BUSES["EP64"] = true
 BUSES["EPSON_SIO"] = true
+BUSES["EPSON_QX"] = true
 BUSES["FMT_SCSI"] = true
 BUSES["GAMATE"] = true
 BUSES["GAMEBOY"] = true
@@ -1020,6 +1021,7 @@ BUSES["ZORRO"] = true
 FORMATS["2D_DSK"] = true
 FORMATS["A26_CAS"] = true
 FORMATS["A5105_DSK"] = true
+FORMATS["ABC1600_DSK"] = true
 FORMATS["ABC800_DSK"] = true
 FORMATS["ABCFD2_DSK"] = true
 FORMATS["ACE_TAP"] = true
@@ -2044,6 +2046,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/ctk2000.cpp",
 	MAME_DIR .. "src/mame/drivers/ctk551.cpp",
 	MAME_DIR .. "src/mame/drivers/ht6000.cpp",
+	MAME_DIR .. "src/mame/drivers/ld50.cpp",
 	MAME_DIR .. "src/mame/drivers/pb1000.cpp",
 	MAME_DIR .. "src/mame/drivers/pv1000.cpp",
 	MAME_DIR .. "src/mame/drivers/pv2000.cpp",
@@ -4474,7 +4477,6 @@ files {
 	MAME_DIR .. "src/mame/drivers/iskr103x.cpp",
 	MAME_DIR .. "src/mame/drivers/mc1502.cpp",
 	MAME_DIR .. "src/mame/machine/kb_7007_3.h",
-	MAME_DIR .. "src/mame/includes/mc1502.h",
 	MAME_DIR .. "src/mame/drivers/poisk1.cpp",
 	MAME_DIR .. "src/mame/machine/kb_poisk1.h",
 }
@@ -4596,6 +4598,9 @@ files {
 	MAME_DIR .. "src/mame/drivers/didact.cpp",
 	MAME_DIR .. "src/mame/drivers/digel804.cpp",
 	MAME_DIR .. "src/mame/drivers/digilog320.cpp",
+	MAME_DIR .. "src/mame/drivers/digilog400.cpp",
+	MAME_DIR .. "src/mame/machine/digilog_kbd.cpp",
+	MAME_DIR .. "src/mame/machine/digilog_kbd.h",
 	MAME_DIR .. "src/mame/drivers/digijet.cpp",
 	MAME_DIR .. "src/mame/drivers/dim68k.cpp",
 	MAME_DIR .. "src/mame/drivers/dm7000.cpp",
