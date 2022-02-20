@@ -20,6 +20,7 @@
 #include "debug/debugvw.h"
 #include "debug/debugcpu.h"
 #include "dirtc.h"
+#include "fileio.h"
 #include "image.h"
 #include "network.h"
 #include "romload.h"
