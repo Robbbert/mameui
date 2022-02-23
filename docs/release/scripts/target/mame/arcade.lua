@@ -803,7 +803,7 @@ BUSES["MIDI"] = true
 --BUSES["MSX_SLOT"] = true
 BUSES["NEOGEO"] = true
 BUSES["NEOGEO_CTRL"] = true
---BUSES["NES"] = true
+BUSES["NES_CTRL"] = true
 BUSES["NSCSI"] = true
 --BUSES["NUBUS"] = true
 --BUSES["O2"] = true
@@ -827,7 +827,7 @@ BUSES["SG1000_EXP"] = true
 BUSES["SGIKBD"] = true
 BUSES["SMS_CTRL"] = true
 BUSES["SMS_EXP"] = true
---BUSES["SNES"] = true
+BUSES["SNES_CTRL"] = true
 --BUSES["SPC1000"] = true
 BUSES["SUNKBD"] = true
 --BUSES["TI99PEB"] = true
@@ -937,6 +937,7 @@ function linkProjects_mame_arcade(_target, _subtarget)
 		"nintendo",
 		"nix",
 		"nmk",
+		"novadesitec",
 		"omori",
 		"olympia",
 		"orca",
@@ -2211,7 +2212,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/m62.cpp",
 	MAME_DIR .. "src/mame/includes/m62.h",
 	MAME_DIR .. "src/mame/video/m62.cpp",
-	MAME_DIR .. "src/mame/drivers/kungfum2.cpp",
+	MAME_DIR .. "src/mame/drivers/m62_bkungfu.cpp",
 	MAME_DIR .. "src/mame/drivers/spartanxtec.cpp",
 	MAME_DIR .. "src/mame/drivers/m63.cpp",
 	MAME_DIR .. "src/mame/drivers/m72.cpp",
@@ -2545,6 +2546,8 @@ files {
 	MAME_DIR .. "src/mame/machine/k573fpga.h",
 	MAME_DIR .. "src/mame/machine/k573kara.cpp",
 	MAME_DIR .. "src/mame/machine/k573kara.h",
+	MAME_DIR .. "src/mame/machine/k573mcal.cpp",
+	MAME_DIR .. "src/mame/machine/k573mcal.h",
 	MAME_DIR .. "src/mame/machine/k573mcr.cpp",
 	MAME_DIR .. "src/mame/machine/k573mcr.h",
 	MAME_DIR .. "src/mame/machine/k573msu.cpp",
@@ -3276,6 +3279,13 @@ files {
 	MAME_DIR .. "src/mame/drivers/quizpani.cpp",
 	MAME_DIR .. "src/mame/includes/quizpani.h",
 	MAME_DIR .. "src/mame/video/quizpani.cpp",
+}
+
+createMAMEProjects(_target, _subtarget, "novadesitec")
+files {
+	MAME_DIR .. "src/mame/drivers/novadesitec_fr002.cpp",
+	MAME_DIR .. "src/mame/drivers/novadesitec_fr004.cpp",
+	MAME_DIR .. "src/mame/drivers/novadesitec_fr009.cpp",
 }
 
 createMAMEProjects(_target, _subtarget, "olympia")
@@ -4652,7 +4662,6 @@ files {
 	MAME_DIR .. "src/mame/video/decodmd2.h",
 	MAME_DIR .. "src/mame/video/decodmd3.cpp",
 	MAME_DIR .. "src/mame/video/decodmd3.h",
-	MAME_DIR .. "src/mame/drivers/de_3b.cpp",
 	MAME_DIR .. "src/mame/drivers/flicker.cpp",
 	MAME_DIR .. "src/mame/drivers/g627.cpp",
 	MAME_DIR .. "src/mame/drivers/gp_1.cpp",
@@ -4693,11 +4702,8 @@ files {
 	MAME_DIR .. "src/mame/drivers/s11.cpp",
 	MAME_DIR .. "src/mame/includes/s11.h",
 	MAME_DIR .. "src/mame/drivers/s11a.cpp",
-	MAME_DIR .. "src/mame/includes/s11a.h",
 	MAME_DIR .. "src/mame/drivers/s11b.cpp",
-	MAME_DIR .. "src/mame/includes/s11b.h",
 	MAME_DIR .. "src/mame/drivers/s11c.cpp",
-	MAME_DIR .. "src/mame/includes/s11c.h",
 	MAME_DIR .. "src/mame/audio/pinsnd88.cpp",
 	MAME_DIR .. "src/mame/audio/pinsnd88.h",
 	MAME_DIR .. "src/mame/audio/s11c_bg.cpp",
@@ -4705,7 +4711,6 @@ files {
 	MAME_DIR .. "src/mame/drivers/s3.cpp",
 	MAME_DIR .. "src/mame/drivers/s4.cpp",
 	MAME_DIR .. "src/mame/drivers/s6.cpp",
-	MAME_DIR .. "src/mame/drivers/s6a.cpp",
 	MAME_DIR .. "src/mame/drivers/s7.cpp",
 	MAME_DIR .. "src/mame/drivers/s8.cpp",
 	MAME_DIR .. "src/mame/drivers/s8a.cpp",
@@ -4723,7 +4728,6 @@ files {
 	MAME_DIR .. "src/mame/drivers/techno.cpp",
 	MAME_DIR .. "src/mame/drivers/vd.cpp",
 	MAME_DIR .. "src/mame/drivers/whitestar.cpp",
-	MAME_DIR .. "src/mame/drivers/white_mod.cpp",
 	MAME_DIR .. "src/mame/drivers/wico.cpp",
 	MAME_DIR .. "src/mame/drivers/wms_shuffle.cpp",
 	MAME_DIR .. "src/mame/drivers/wpc_95.cpp",
@@ -4732,9 +4736,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/wpc_dot.cpp",
 	MAME_DIR .. "src/mame/includes/wpc_dot.h",
 	MAME_DIR .. "src/mame/drivers/wpc_flip1.cpp",
-	MAME_DIR .. "src/mame/includes/wpc_flip1.h",
 	MAME_DIR .. "src/mame/drivers/wpc_flip2.cpp",
-	MAME_DIR .. "src/mame/includes/wpc_flip2.h",
 	MAME_DIR .. "src/mame/drivers/wpc_s.cpp",
 	MAME_DIR .. "src/mame/machine/wpc.cpp",
 	MAME_DIR .. "src/mame/machine/wpc.h",
@@ -4978,6 +4980,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/jungleyo.cpp",
 	MAME_DIR .. "src/mame/drivers/kas89.cpp",
 	MAME_DIR .. "src/mame/drivers/kingpin.cpp",
+	MAME_DIR .. "src/mame/drivers/krokha.cpp",
 	MAME_DIR .. "src/mame/drivers/kurukuru.cpp",
 	MAME_DIR .. "src/mame/drivers/kyugo.cpp",
 	MAME_DIR .. "src/mame/includes/kyugo.h",
@@ -5068,6 +5071,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/pkscram.cpp",
 	MAME_DIR .. "src/mame/drivers/playcenter.cpp",
 	MAME_DIR .. "src/mame/drivers/plsonic4.cpp",
+	MAME_DIR .. "src/mame/drivers/pmc.cpp",
 	MAME_DIR .. "src/mame/drivers/pntnpuzl.cpp",
 	MAME_DIR .. "src/mame/drivers/policetr.cpp",
 	MAME_DIR .. "src/mame/includes/policetr.h",
