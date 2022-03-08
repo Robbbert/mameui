@@ -482,6 +482,7 @@ MACHINES["AM9513"] = true
 MACHINES["AM9517A"] = true
 MACHINES["AM9519"] = true
 MACHINES["AMIGAFDC"] = true
+MACHINES["AMIGA_COPPER"] = true
 MACHINES["APPLEPIC"] = true
 MACHINES["ARM_IOMD"] = true
 MACHINES["AT_KEYBC"] = true
@@ -830,6 +831,7 @@ MACHINES["NS32081"] = true
 MACHINES["NS32202"] = true
 MACHINES["NS32082"] = true
 MACHINES["BITMAP_PRINTER"] = true
+MACHINES["NS32382"] = true
 
 --------------------------------------------------
 -- specify available bus cores
@@ -2175,6 +2177,7 @@ files {
 createMESSProjects(_target, _subtarget, "conic")
 files {
 	MAME_DIR .. "src/mame/drivers/conic_cchess2.cpp",
+	MAME_DIR .. "src/mame/drivers/conic_cchess3.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "consumenta")
@@ -4629,6 +4632,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/fanucspmg.cpp",
 	MAME_DIR .. "src/mame/drivers/fc100.cpp",
 	MAME_DIR .. "src/mame/drivers/fk1.cpp",
+	MAME_DIR .. "src/mame/drivers/freedom120.cpp",
 	MAME_DIR .. "src/mame/drivers/fs3216.cpp",
 	MAME_DIR .. "src/mame/drivers/ft68m.cpp",
 	MAME_DIR .. "src/mame/drivers/gameking.cpp",

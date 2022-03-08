@@ -434,18 +434,18 @@ nes_bmc_4in1reset_device::nes_bmc_4in1reset_device(const machine_config &mconfig
 {
 }
 
-nes_bmc_42in1reset_device::nes_bmc_42in1reset_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock)
-	: nes_nrom_device(mconfig, type, tag, owner, clock), m_latch(0), m_mirror_flip(type == NES_BMC_NC20MB)
+nes_bmc_42in1reset_device::nes_bmc_42in1reset_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock, u8 mirror_flip)
+	: nes_nrom_device(mconfig, type, tag, owner, clock), m_latch(0), m_mirror_flip(mirror_flip)
 {
 }
 
 nes_bmc_42in1reset_device::nes_bmc_42in1reset_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock)
-	: nes_bmc_42in1reset_device(mconfig, NES_BMC_42IN1RESET, tag, owner, clock)
+	: nes_bmc_42in1reset_device(mconfig, NES_BMC_42IN1RESET, tag, owner, clock, 0)
 {
 }
 
 nes_bmc_nc20mb_device::nes_bmc_nc20mb_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock)
-	: nes_bmc_42in1reset_device(mconfig, NES_BMC_NC20MB, tag, owner, clock)
+	: nes_bmc_42in1reset_device(mconfig, NES_BMC_NC20MB, tag, owner, clock, 1)
 {
 }
 
@@ -3281,11 +3281,6 @@ void nes_bmc_60311c_device::write_h(offs_t offset, u8 data)
 
  In MAME: Supported.
 
- TODO: Investigate why Legend of Kage has a corrupt
- title screen (inverting mirroring bit fixes it but
- breaks the rest of the game). Also why are walls in
- Pacman glitched?
-
  -------------------------------------------------*/
 
 u8 nes_bmc_ctc12in1_device::read_m(offs_t offset)
@@ -3316,7 +3311,7 @@ void nes_bmc_ctc12in1_device::write_h(offs_t offset, u8 data)
 			break;
 	}
 
-	m_vram_protect == !BIT(m_reg[0], 7) || (offset & 0x6000) == 0x6000;
+	m_vram_protect = !BIT(m_reg[0], 7) || (offset & 0x6000) == 0x6000;
 	set_nt_mirroring(BIT(m_reg[0], 5) ? PPU_MIRROR_HORZ : PPU_MIRROR_VERT);
 }
 
