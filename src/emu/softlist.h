@@ -102,7 +102,7 @@ public:
 
 	// helpers
 	bool matches_interface(const char *interface_list) const noexcept;
-	const char *feature(const std::string &feature_name) const noexcept;
+	const char *feature(std::string_view feature_name) const noexcept;
 
 private:
 	// internal state

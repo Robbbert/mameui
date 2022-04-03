@@ -361,6 +361,7 @@ static bool m_lock = false;    // prevent MAME from being launched twice by acci
 /***************************************************************************
     External variables
  ***************************************************************************/
+
 static void load_translation(emu_options &m_options)
 {
 	util::unload_translation();
@@ -389,7 +390,6 @@ static void load_translation(emu_options &m_options)
 	osd_printf_verbose("Loading translation file %s\n", file.fullpath());
 	util::load_translation(file);
 }
-
 /***************************************************************************
     Internal structures
  ***************************************************************************/
@@ -5888,7 +5888,7 @@ int FindIconIndex(int nIconResource)
 	return -1;
 }
 
-
+// not used
 int FindIconIndexByName(const char *icon_name)
 {
 	for (int i = 0; g_iconData[i].icon_name; i++)

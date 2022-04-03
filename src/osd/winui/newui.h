@@ -21,6 +21,7 @@
 #include "newuires.h"
 #include "strconv.h"
 #include "natkeyboard.h"
+#include "softlist_dev.h"
 #include "imagedev/cassette.h"
 #include "windows/window.h"
 #include "winutf8.h"
@@ -36,3 +37,4 @@ LRESULT CALLBACK winwindow_video_window_proc_ui(HWND wnd, UINT message, WPARAM w
 int win_create_menu(running_machine &machine, HMENU *menus);
 
 #endif /* NEWUI_H */
+

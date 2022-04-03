@@ -212,6 +212,13 @@ extern const ICONDATA g_iconData[] =
 	{ IDI_WIN_PRIN,          "printer" },
 	{ IDI_WIN_HARD,          "hard" },
 	{ IDI_WIN_MIDI,          "midi" },
+	{ IDI_WIN_CYLN,          "cyln" },
+	{ IDI_WIN_PTAP,          "ptap" },
+	{ IDI_WIN_PCRD,          "pcrd" },
+	{ IDI_WIN_MEMC,          "memc" },
+	{ IDI_WIN_CDRM,          "cdrm" },
+	{ IDI_WIN_MTAP,          "mtap" },
+	{ IDI_WIN_CART,          "cart" },
 #endif
 	{ 0 }
 };
