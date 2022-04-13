@@ -2406,6 +2406,8 @@ if (BUSES["VME"]~=null) then
 		MAME_DIR .. "src/devices/bus/vme/vme_fcscsi.h",
 		MAME_DIR .. "src/devices/bus/vme/vme_hcpu30.cpp",
 		MAME_DIR .. "src/devices/bus/vme/vme_hcpu30.h",
+		MAME_DIR .. "src/devices/bus/vme/vme_smvme2000.cpp",
+		MAME_DIR .. "src/devices/bus/vme/vme_smvme2000.h",
 	}
 end
 
@@ -4667,6 +4669,8 @@ if (BUSES["MULTIBUS"]~=null) then
 		MAME_DIR .. "src/devices/bus/multibus/multibus.h",
 		MAME_DIR .. "src/devices/bus/multibus/isbc202.cpp",
 		MAME_DIR .. "src/devices/bus/multibus/isbc202.h",
+		MAME_DIR .. "src/devices/bus/multibus/isbc8024.cpp",
+		MAME_DIR .. "src/devices/bus/multibus/isbc8024.h",
 		MAME_DIR .. "src/devices/bus/multibus/cpuap.cpp",
 		MAME_DIR .. "src/devices/bus/multibus/cpuap.h",
 		MAME_DIR .. "src/devices/bus/multibus/serad.cpp",
