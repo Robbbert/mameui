@@ -47,12 +47,14 @@ enum class meta_type {
 
 class meta_value {
 public:
+	meta_type type() const;
 	std::string to_string() const;
 	static meta_value from_string(meta_type type, std::string value);
 
 	meta_value() { value = false; }
 	meta_value(std::string &&str) { value = std::move(str); }
 	meta_value(std::string_view str) { value = std::string(str); }
+	meta_value(const char *str) { value = std::string(str); }
 	meta_value(bool b) { value = b; }
 	meta_value(int32_t num) { value = uint64_t(num); }
 	meta_value(uint32_t num) { value = uint64_t(num); }
