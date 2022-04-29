@@ -76,7 +76,7 @@ software_part::software_part(software_info &info, std::string &&name, std::strin
 //  feature, if specified
 //-------------------------------------------------
 
-const char *software_part::feature(const std::string &feature_name) const noexcept
+const char *software_part::feature(std::string_view feature_name) const noexcept
 {
 	// scan the feature list for an entry matching feature_name and return the value
 	auto const iter = m_features.find(feature_name);

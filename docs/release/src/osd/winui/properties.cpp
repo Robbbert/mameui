@@ -3871,8 +3871,9 @@ static BOOL SoftwareDirectories_OnEndLabelEdit(HWND hDlg, NMHDR* pNMHDR)
 	return bResult;
 }
 
-
-static BOOL DriverHasDevice(const game_driver *gamedrv, iodevice_t type)
+#if 0
+// only called by PropSheetFilter_Config (below)
+static BOOL DriverHasDevice(const game_driver *gamedrv, iodevice_/t type)
 {
 	BOOL b = false;
 
@@ -3892,12 +3893,13 @@ static BOOL DriverHasDevice(const game_driver *gamedrv, iodevice_t type)
 	return b;
 }
 
+// not used
 BOOL PropSheetFilter_Config(const machine_config *drv, const game_driver *gamedrv)
 {
 	ram_device_enumerator iter(drv->root_device());
 	return (iter.first()) || DriverHasDevice(gamedrv, IO_PRINTER);
 }
-
+#endif
 INT_PTR CALLBACK GameMessOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
 {
 	INT_PTR rc = 0;

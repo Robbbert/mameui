@@ -2931,6 +2931,10 @@ static void prepare_menus(HWND wnd)
 		cnt++;
 	}
 
+	// Print a warning if the media devices overrun the allocated range
+	if ((ID_DEVICE_0 + (cnt * DEVOPTION_MAX)) >= ID_JOYSTICK_0)
+		printf("Maximum number of media items exceeded !!!\n");
+
 	// set up slot menu; first remove all existing menu items
 	HMENU slot_menu = find_sub_menu(menu_bar, "&Slots\0", false);
 	remove_menu_items(slot_menu);
@@ -3430,7 +3434,7 @@ static bool invoke_command(HWND wnd, UINT command)
 				window->machine().options().emu_options::set_value(OPTION_FRAMESKIP, (int)command - ID_FRAMESKIP_0, OPTION_PRIORITY_CMDLINE);
 			}
 			else
-			if ((command >= ID_DEVICE_0) && (command < ID_DEVICE_0 + (IO_COUNT*DEVOPTION_MAX)))
+			if ((command >= ID_DEVICE_0) && (command < ID_JOYSTICK_0))
 			{
 				// change device
 				img = decode_deviceoption(window->machine(), command, &dev_command);
@@ -3513,9 +3517,6 @@ static int win_setup_menus(running_machine &machine, HMODULE module, HMENU menu_
 	HMENU frameskip_menu;
 	char buf[256];
 	int i = 0;
-
-	// verify that our magic numbers work
-	assert((ID_DEVICE_0 + IO_COUNT * DEVOPTION_MAX) < ID_JOYSTICK_0);
 
 	// initialize critical values
 	joystick_menu_setup = 0;

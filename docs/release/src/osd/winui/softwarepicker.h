@@ -11,7 +11,7 @@
 LPCSTR SoftwarePicker_LookupFilename(HWND hwndPicker, int nIndex);
 const device_image_interface *SoftwarePicker_LookupDevice(HWND hwndPicker, int nIndex);
 int SoftwarePicker_LookupIndex(HWND hwndPicker, LPCSTR pszFilename);
-iodevice_t SoftwarePicker_GetImageType(HWND hwndPicker, int nIndex);
+string SoftwarePicker_GetImageType(HWND hwndPicker, int nIndex);
 BOOL SoftwarePicker_AddFile(HWND hwndPicker, LPCSTR pszFilename, bool check);
 BOOL SoftwarePicker_AddDirectory(HWND hwndPicker, LPCSTR pszDirectory);
 void SoftwarePicker_Clear(HWND hwndPicker);
@@ -22,3 +22,4 @@ LPCTSTR SoftwarePicker_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCH
 BOOL SoftwarePicker_Idle(HWND hwndPicker);
 
 BOOL SetupSoftwarePicker(HWND hwndPicker, const struct PickerOptions *pOptions);
+bool uses_file_extension(device_image_interface &dev, const char *file_extension);

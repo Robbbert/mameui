@@ -114,7 +114,11 @@
 #define IDI_WIN_CYLN                    188
 #define IDI_WIN_PTAP                    189
 #define IDI_WIN_PCRD                    190
-#define IDI_WIN_MIDI                    191
+#define IDI_WIN_MEMC                    191
+#define IDI_WIN_MIDI                    192
+#define IDI_WIN_CDRM                    193
+#define IDI_WIN_MTAP                    194
+#define IDI_WIN_CART                    195
 #define IDB_ABOUT                       200
 #define IDB_TOOLBAR                     201
 #define IDB_SPLASH                      202

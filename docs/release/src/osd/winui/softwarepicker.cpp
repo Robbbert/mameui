@@ -184,15 +184,14 @@ int SoftwarePicker_LookupIndex(HWND hwndPicker, LPCSTR pszFilename)
 
 
 
-iodevice_t SoftwarePicker_GetImageType(HWND hwndPicker, int nIndex)
+string SoftwarePicker_GetImageType(HWND hwndPicker, int nIndex)
 {
-	iodevice_t type;
+	string type = "unkn";
 	const device_image_interface *device = SoftwarePicker_LookupDevice(hwndPicker, nIndex);
 
 	if (device)
-		type = device->image_type();
-	else
-		type = IO_UNKNOWN;
+		type = string(device->image_brief_type_name());
+
 	return type;
 }
 
@@ -323,6 +322,30 @@ static BOOL SoftwarePicker_CalculateHash(HWND hwndPicker, int nIndex)
 }
 
 */
+
+bool uses_file_extension(device_image_interface &dev, const char *file_extension)
+{
+	bool result = false;
+
+	if (file_extension[0] == '.')
+		file_extension++;
+
+	/* find the extensions */
+	std::string extensions(dev.file_extensions());
+	char *ext = strtok((char*)extensions.c_str(),",");
+	while (ext != nullptr)
+	{
+		if (!core_stricmp(ext, file_extension))
+		{
+			result = true;
+			break;
+		}
+		ext = strtok (nullptr, ",");
+	}
+	return result;
+}
+
+
 #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 static void SoftwarePicker_RealizeHash(HWND hwndPicker, int nIndex)
 {
@@ -330,7 +353,7 @@ static void SoftwarePicker_RealizeHash(HWND hwndPicker, int nIndex)
 	file_info *pFileInfo;
 	//const char *nHashFunctionsUsed = NULL;
 	//unsigned int nCalculatedHashes = 0;
-	//iodevice_t type;
+	//iodevice_/t type;
 
 	pPickerInfo = GetSoftwarePickerInfo(hwndPicker);
 	assert((nIndex >= 0) && (nIndex < pPickerInfo->file_index_length));
@@ -342,7 +365,7 @@ static void SoftwarePicker_RealizeHash(HWND hwndPicker, int nIndex)
 	if ((pPickerInfo->config->hashfile != NULL) && (pFileInfo->device != NULL))
 	{
 		type = pFileInfo->device->image_type();
-		if (type < IO_COUNT)
+		if (type < std::size(s_devices))
 			nHashFunctionsUsed = hashfile_functions_used(pPickerInfo->config->hashfile, type);
 		nCalculatedHashes = hash_data_used_functions(pFileInfo->hash_string);
 	}
@@ -389,7 +412,7 @@ static BOOL SoftwarePicker_AddFileEntry(HWND hwndPicker, LPCSTR pszFilename, UIN
 		{
 			if (!dev.user_loadable())
 				continue;
-			if (dev.uses_file_extension(pszExtension))
+			if (uses_file_extension(dev, pszExtension))
 			{
 				device = &dev;
 				break;

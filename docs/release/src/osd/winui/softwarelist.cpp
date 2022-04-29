@@ -107,12 +107,13 @@ int SoftwareList_LookupIndex(HWND hwndPicker, LPCSTR pszFilename)
 }
 
 
-
-iodevice_t SoftwareList_GetImageType(HWND hwndPicker, int nIndex)
+#if 0
+// not used, swlist items don't have icons
+iodevice_//t SoftwareList_GetImageType(HWND hwndPicker, int nIndex)
 {
 	return IO_UNKNOWN;
 }
-
+#endif
 
 
 void SoftwareList_SetDriver(HWND hwndPicker, const software_config *config)
