@@ -2261,11 +2261,11 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 	}
 
 	case WM_LBUTTONUP:
-	    if (g_listview_dragging)
-		    ButtonUpListViewDrag(MAKEPOINTS(lParam));
+		if (g_listview_dragging)
+			ButtonUpListViewDrag(MAKEPOINTS(lParam));
 		else
-		   /* for splitters */
-		   OnLButtonUp(hWnd, (UINT)wParam, MAKEPOINTS(lParam));
+			/* for splitters */
+			OnLButtonUp(hWnd, (UINT)wParam, MAKEPOINTS(lParam));
 		break;
 
 	case WM_NOTIFY:
@@ -2950,19 +2950,19 @@ static void CopyToolTipText(LPTOOLTIPTEXT lpttt)
 static HWND InitToolbar(HWND hParent)
 {
 	HWND hToolBar = CreateToolbarEx(hParent,
-						   WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS |
-						   CCS_TOP | TBSTYLE_FLAT | TBSTYLE_TOOLTIPS,
-						   1,
-						   8,
-						   hInst,
-						   IDB_TOOLBAR,
-						   tbb,
-						   NUM_TOOLBUTTONS,
-						   16,
-						   16,
-						   0,
-						   0,
-						   sizeof(TBBUTTON));
+						WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS |
+						CCS_TOP | TBSTYLE_FLAT | TBSTYLE_TOOLTIPS,
+						1,
+						8,
+						hInst,
+						IDB_TOOLBAR,
+						tbb,
+						NUM_TOOLBUTTONS,
+						16,
+						16,
+						0,
+						0,
+						sizeof(TBBUTTON));
 	RECT rect;
 
 	// get Edit Control position
@@ -4172,7 +4172,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		}
 		/* Just in case the toggle MMX on/off */
 		UpdateStatusBar();
-	   break;
+		break;
 
 	/* ListView Context Menu */
 	case ID_CONTEXT_ADD_CUSTOM:
@@ -6429,7 +6429,7 @@ static void RemoveGameCustomFolder(int driver_index)
 
 	for (int i=0;i<num_folders;i++)
 	{
-	    if (folders[i]->m_dwFlags & F_CUSTOM && folders[i]->m_nFolderId == GetCurrentFolderID())
+		if (folders[i]->m_dwFlags & F_CUSTOM && folders[i]->m_nFolderId == GetCurrentFolderID())
 		{
 			int current_pick_index;
 
