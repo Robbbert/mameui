@@ -551,6 +551,8 @@ if (BUSES["BBC_INTERNAL"]~=null) then
 		MAME_DIR .. "src/devices/bus/bbc/internal/cumana68k.h",
 		MAME_DIR .. "src/devices/bus/bbc/internal/integrab.cpp",
 		MAME_DIR .. "src/devices/bus/bbc/internal/integrab.h",
+		MAME_DIR .. "src/devices/bus/bbc/internal/memex.cpp",
+		MAME_DIR .. "src/devices/bus/bbc/internal/memex.h",
 		MAME_DIR .. "src/devices/bus/bbc/internal/morleyaa.cpp",
 		MAME_DIR .. "src/devices/bus/bbc/internal/morleyaa.h",
 		MAME_DIR .. "src/devices/bus/bbc/internal/overlay.cpp",
@@ -2104,6 +2106,16 @@ if (BUSES["RC2014"]~=null) then
 		MAME_DIR .. "src/devices/bus/rc2014/serial.h",
 		MAME_DIR .. "src/devices/bus/rc2014/cf.cpp",
 		MAME_DIR .. "src/devices/bus/rc2014/cf.h",
+		MAME_DIR .. "src/devices/bus/rc2014/rtc.cpp",
+		MAME_DIR .. "src/devices/bus/rc2014/rtc.h",
+		MAME_DIR .. "src/devices/bus/rc2014/sound.cpp",
+		MAME_DIR .. "src/devices/bus/rc2014/sound.h",
+		MAME_DIR .. "src/devices/bus/rc2014/ide.cpp",
+		MAME_DIR .. "src/devices/bus/rc2014/ide.h",
+		MAME_DIR .. "src/devices/bus/rc2014/fdc.cpp",
+		MAME_DIR .. "src/devices/bus/rc2014/fdc.h",
+		MAME_DIR .. "src/devices/bus/rc2014/micro.cpp",
+		MAME_DIR .. "src/devices/bus/rc2014/micro.h",
 	}
 end
 
