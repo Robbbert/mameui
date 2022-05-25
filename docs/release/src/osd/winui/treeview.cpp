@@ -2020,7 +2020,7 @@ static int InitExtraFolders(void)
 
 	/* NPW 9-Feb-2003 - MSVC stat() doesn't like stat() called with an empty string */
 	if (!dir)
-		dir = ".";
+		return 0;
 
 	// Why create the directory if it doesn't exist, just return 0 folders.
 	if (stat(dir, &stat_buffer) != 0)
@@ -2030,14 +2030,16 @@ static int InitExtraFolders(void)
 
 	chdir(dir);
 
-	long hLong = _findfirst("*", &files);
-
 	for (i = 0; i < MAX_EXTRA_FOLDERS; i++)
 		ExtraFolderIcons[i] = NULL;
 
 	numExtraIcons = 0;
+	intptr_t hLong = 0L;
 
-	while (!_findnext(hLong, &files))
+	if ( (hLong = _findfirst("*.ini", &files)) == -1L )
+		return 0;
+
+	do
 	{
 		if ((files.attrib & _A_SUBDIR) == 0)
 		{
@@ -2112,9 +2114,10 @@ static int InitExtraFolders(void)
 				}
 			}
 		}
-	}
+	} while( _findnext(hLong, &files) == 0);
 
 	chdir(curdir);
+	_findclose(hLong);
 	return count;
 }
 
