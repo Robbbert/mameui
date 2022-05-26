@@ -3,6 +3,7 @@ defines {
 	"_UNICODE",
 	"OSD_WINDOWS",
 	"USE_SDL=0",
+	"WINVER=0x600",
 	"_WIN32_WINNT=0x0600",
 	"NTDDI_VERSION=0x06000000",
 	"USE_QTDEBUG=0",
@@ -32,5 +33,4 @@ if _OPTIONS["USE_TAPTUN"]=="1" or _OPTIONS["USE_PCAP"]==1 then
 		}
 	end
 end
-
 

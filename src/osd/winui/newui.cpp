@@ -11,21 +11,9 @@
 //
 //************************************************************************************************
 
-// Set minimum windows version to XP
-#ifdef WINVER
-#undef WINVER
-#endif
-#define WINVER 0x600
-
-#ifdef _WIN32_WINNT
-#undef _WIN32_WINNT
-#endif
-#define _WIN32_WINNT 0x600
-
-
-// standard windows headers
 #include "newui.h"
 
+// standard windows headers
 #include <shellapi.h>
 
 

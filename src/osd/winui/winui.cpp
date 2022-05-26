@@ -16,16 +16,6 @@
 ***************************************************************************/
 
 // standard windows headers
-#ifdef WINVER
-#undef WINVER
-#endif
-#define WINVER 0x600
-
-#ifdef _WIN32_WINNT
-#undef _WIN32_WINNT
-#endif
-#define _WIN32_WINNT 0x600
-
 #include <windows.h>
 #include <windowsx.h>
 #include <shellapi.h>
