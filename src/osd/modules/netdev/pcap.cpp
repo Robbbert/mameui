@@ -1,5 +1,6 @@
 // license:BSD-3-Clause
 // copyright-holders:Carl
+
 #if defined(OSD_NET_USE_PCAP)
 
 #include "emu.h"
