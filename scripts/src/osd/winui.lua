@@ -60,6 +60,8 @@ function maintargetosdoptions(_target,_subtarget)
 		"comdlg32",
 		"psapi",
 		"ole32",
+		"uuid",
+		"shlwapi",
 	}
 
 -- Local file gives correct icon in mame instance inside of mameui
