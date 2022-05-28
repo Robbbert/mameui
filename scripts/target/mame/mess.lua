@@ -1326,6 +1326,7 @@ function linkProjects_mame_mess(_target, _subtarget)
 		"kurzweil",
 		"kyber",
 		"kyocera",
+		"labtam",
 		"leapfrog",
 		"learsiegler",
 		"lsi",
@@ -2898,6 +2899,11 @@ files {
 	MAME_DIR .. "src/mame/drivers/kyocera.cpp",
 	MAME_DIR .. "src/mame/includes/kyocera.h",
 	MAME_DIR .. "src/mame/video/kyocera.cpp",
+}
+
+createMESSProjects(_target, _subtarget, "labtam")
+files {
+	MAME_DIR .. "src/mame/drivers/labtam.cpp",
 }
 
 createMESSProjects(_target, _subtarget, "leapfrog")
@@ -4509,6 +4515,7 @@ files {
 	MAME_DIR .. "src/mame/drivers/ympsr40.cpp",
 	MAME_DIR .. "src/mame/drivers/ympsr60.cpp",
 	MAME_DIR .. "src/mame/drivers/ympsr340.cpp",
+	MAME_DIR .. "src/mame/drivers/ymqy70.cpp",
 	MAME_DIR .. "src/mame/drivers/ymrx15.cpp",
 	MAME_DIR .. "src/mame/drivers/ymsy35.cpp",
 	MAME_DIR .. "src/mame/drivers/ymtx81z.cpp",
