@@ -42,8 +42,8 @@ void spectrum_state::video_start()
 {
 	m_irq_on_timer = timer_alloc(FUNC(spectrum_state::irq_on), this);
 	m_irq_off_timer = timer_alloc(FUNC(spectrum_state::irq_off), this);
-	m_finish_screen_update_timer = timer_alloc(FUNC(spectrum_state::finish_screen_update), this);
-	finish_screen_update(0);
+	//m_finish_screen_update_timer = timer_alloc(FUNC(spectrum_state::finish_screen_update), this); // MESSUI
+	//finish_screen_update(0); // MESSUI
 
 	m_frame_invert_count = 16;
 	m_screen_location = m_video_ram;
@@ -103,8 +103,9 @@ void spectrum_state::spectrum_palette(palette_device &palette) const
 rectangle spectrum_state::get_screen_area()
 {
 	// 256x192 screen position without border
-	return { SPEC_LEFT_BORDER, SPEC_LEFT_BORDER + SPEC_DISPLAY_XSIZE - 1,
-			SPEC_UNSEEN_LINES + SPEC_TOP_BORDER, SPEC_UNSEEN_LINES + SPEC_TOP_BORDER + SPEC_DISPLAY_YSIZE - 1 };
+//	return { SPEC_LEFT_BORDER, SPEC_LEFT_BORDER + SPEC_DISPLAY_XSIZE - 1,
+//			SPEC_UNSEEN_LINES + SPEC_TOP_BORDER, SPEC_UNSEEN_LINES + SPEC_TOP_BORDER + SPEC_DISPLAY_YSIZE - 1 };
+	return rectangle(48, 48+255, 64, 64+191);   // MESSUI
 }
 
 u8 spectrum_state::get_border_color(u16 hpos, u16 vpos)
