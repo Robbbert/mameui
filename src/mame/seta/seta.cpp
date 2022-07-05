@@ -129,8 +129,7 @@ TODO:
 - flip screen and mirror support not working correctly in zombraid
 - gundhara visible area might be smaller (zombraid uses the same MachineDriver, and
   the current area is right for it)
-- crazyfgt: emulate protection & tickets, fix graphics glitches, find correct clocks,
-  level 2 interrupt should probably be triggered by the 3812 but sound tends to die that way.
+- crazyfgt: emulate protection & tickets, fix graphics glitches, find correct clocks.
 - jjsquawk: Player's shot sound is missing (not requested to X1-010?).
   Many sounds are wrong since MAME 0.62.
   i.e.
@@ -10001,23 +10000,12 @@ void pairlove_state::pairlove(machine_config &config)
                                 Crazy Fight
 ***************************************************************************/
 
-TIMER_DEVICE_CALLBACK_MEMBER(seta_state::crazyfgt_interrupt)
-{
-	int scanline = param;
-
-	if ((scanline % 48) == 0)
-		m_maincpu->set_input_line(2, HOLD_LINE); // should this be triggered by the 3812?
-
-	if (scanline == 240)
-		m_maincpu->set_input_line(1, HOLD_LINE);
-}
-
 void seta_state::crazyfgt(machine_config &config)
 {
 	/* basic machine hardware */
 	M68000(config, m_maincpu, 16_MHz_XTAL);
 	m_maincpu->set_addrmap(AS_PROGRAM, &seta_state::crazyfgt_map);
-	TIMER(config, "scantimer").configure_scanline(FUNC(seta_state::crazyfgt_interrupt), "screen", 0, 1);
+	m_maincpu->set_vblank_int("screen", FUNC(seta_state::irq1_line_hold));
 
 	X1_001(config, m_spritegen, 16_MHz_XTAL, m_palette, gfx_sprites);
 	m_spritegen->set_gfxbank_callback(FUNC(seta_state::setac_gfxbank_callback));
@@ -10043,6 +10031,7 @@ void seta_state::crazyfgt(machine_config &config)
 	SPEAKER(config, "mono").front_center();
 
 	ym3812_device &ymsnd(YM3812(config, "ymsnd", 16_MHz_XTAL / 4));
+	ymsnd.irq_handler().set_inputline(m_maincpu, 2);
 	ymsnd.add_route(ALL_OUTPUTS, "mono", 0.5);
 
 	okim6295_device &oki(OKIM6295(config, "oki", 4.433619_MHz_XTAL / 4, okim6295_device::PIN7_HIGH));
@@ -10530,6 +10519,25 @@ ROM_START( thunderl )
 	ROM_REGION( 0x010000, "maincpu", 0 )        /* 68000 Code */
 	ROM_LOAD16_BYTE( "m4", 0x000000, 0x008000, CRC(1e6b9462) SHA1(f7f93479117e97d4e38632fef83c10345587f77f) )
 	ROM_LOAD16_BYTE( "m5", 0x000001, 0x008000, CRC(7e82793e) SHA1(3e487f465d64af8c1c4852567b2fd9190363570c) )
+
+	ROM_REGION( 0x080000, "gfx1", 0 )   /* Sprites */
+	ROM_LOAD16_BYTE( "t17", 0x000000, 0x020000, CRC(599a632a) SHA1(29da423dfe1f971cbb205767cf902d199d968d85) )
+	ROM_LOAD16_BYTE( "t16", 0x000001, 0x020000, CRC(3aeef91c) SHA1(a5dc8c22a7bcc1199bdd09c7d0f1f8a378e757c5) )
+	ROM_LOAD16_BYTE( "t15", 0x040000, 0x020000, CRC(b97a7b56) SHA1(c08d3586d489947af21f3493356e3a88d79746e8) )
+	ROM_LOAD16_BYTE( "t14", 0x040001, 0x020000, CRC(79c707be) SHA1(f67fa40c8f6ab0fbce44997fdfbf699fea1f0df6) )
+
+	ROM_REGION( 0x100000, "x1snd", 0 )  /* Samples */
+	ROM_LOAD( "r28", 0x000000, 0x080000, CRC(a043615d) SHA1(e483fa9fd8e922578a9d7b6ced0750643089ca78) )
+	ROM_LOAD( "r27", 0x080000, 0x080000, CRC(cb8425a3) SHA1(655afa295fbe99acc79c4004f03ed832560cff5b) )
+
+	ROM_REGION(0x200, "plds", 0)        /* Protection, bruteforced and recreated for GAL16V8 */
+	ROM_LOAD("tl-9", 0x000000, 0x117, BAD_DUMP CRC(3b62882d) SHA1(a590648cb013f20d837f18ddb2e839a89bac5fcb))
+ROM_END
+
+ROM_START( thunderla )
+	ROM_REGION( 0x010000, "maincpu", 0 )        /* 68000 Code */
+	ROM_LOAD16_BYTE( "tl-1-1.u1", 0x000000, 0x008000, CRC(3d4b1888) SHA1(9f26e777460e5ab8cf1f6cd97a8df7428f8068f7) )
+	ROM_LOAD16_BYTE( "tl-1-2.u4", 0x000001, 0x008000, CRC(974dddda) SHA1(cb685904c7e3b48dee9bf274b1e81d87c9e8f573) )
 
 	ROM_REGION( 0x080000, "gfx1", 0 )   /* Sprites */
 	ROM_LOAD16_BYTE( "t17", 0x000000, 0x020000, CRC(599a632a) SHA1(29da423dfe1f971cbb205767cf902d199d968d85) )
@@ -12590,7 +12598,8 @@ GAME( 1989, drgnunit,  0,        drgnunit,  drgnunit,  seta_state,     empty_ini
 
 GAME( 1989, wits,      0,        wits,      wits,      seta_state,     empty_init,     ROT0,   "Athena (Visco license)",    "Wit's (Japan)" , 0) // Country/License: DSW
 
-GAME( 1990, thunderl,   0,       thunderl,  thunderl,  thunderl_state, empty_init,     ROT270, "Seta",                      "Thunder & Lightning" , 0) // Country/License: DSW
+GAME( 1990, thunderl,   0,       thunderl,  thunderl,  thunderl_state, empty_init,     ROT270, "Seta",                      "Thunder & Lightning (set 1)" , 0) // Country/License: DSW
+GAME( 1990, thunderla,  thunderl,thunderl,  thunderl,  thunderl_state, empty_init,     ROT270, "Seta",                      "Thunder & Lightning (set 2)" , 0) // Country/License: DSW
 GAME( 1991, thunderlbl, thunderl,thunderlbl,thunderlbl,thunderl_state, empty_init,     ROT270, "bootleg (Hyogo)",           "Thunder & Lightning (bootleg with Tetris sound, set 1)", MACHINE_IMPERFECT_SOUND | MACHINE_NO_COCKTAIL ) // Country/License: DSW
 GAME( 1990, thunderlbl2,thunderl,thunderlbl,thunderl,  thunderl_state, empty_init,     ROT270, "bootleg",                   "Thunder & Lightning (bootleg with Tetris sound, set 2)", MACHINE_IMPERFECT_SOUND | MACHINE_NO_COCKTAIL ) // Country/License: DSW
 
