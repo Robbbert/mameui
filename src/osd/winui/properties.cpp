@@ -118,6 +118,9 @@ b) Exit the dialog.
 #include "winutf8.h"
 #include "directories.h"
 #include "sound/samples.h"
+#include "modules/font/font_module.h"
+#include "modules/input/input_module.h"
+#include "modules/monitor/monitor_module.h"
 
 #ifdef _MSC_VER
 #define snprintf _snprintf
