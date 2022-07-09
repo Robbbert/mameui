@@ -10235,6 +10235,7 @@ cannonb2                        // (c) 1985 TV Game Gruenberg
 cannonb3                        // (c) 1985 Soft
 ccboot                          // bootleg
 ccboot2                         // bootleg
+ccbootmm                        // MM Computer Games bootleg
 ccbootmr                        // Model Racing bootleg
 cclimber                        // (c) 1980 Nichibutsu
 cclimbera                       // (c) 1980 Nichibutsu
@@ -20729,9 +20730,11 @@ maciivx                         // 1993 Apple Macintosh IIvx
 maciix                          // 1988 Apple Macintosh IIx
 maclc                           // 1990 Apple Macintosh LC
 maclc2                          // 1991 Apple Macintosh LC II
+macse30                         // 1989 Apple Macintosh SE/30
+
+@source:apple/maclc3.cpp
 maclc3                          // 1993 Apple Macintosh LC III
 maclc520                        // 1993 Apple Macintosh LC 520
-macse30                         // 1989 Apple Macintosh SE/30
 
 @source:apple/macpdm.cpp
 pmac6100                        // 1993 Apple Power Macintosh 6100
@@ -27528,7 +27531,7 @@ m4hotrod__v                     //
 m4holdtm                        // Hold Timer (Barcrest)
 m4hpyjok                        // Happy Joker (Barcrest)
 m4jok300                        // Jokers Millenium 300
-m4jok300a                       // 
+m4jok300a                       //
 m4jolgem                        // Jolly Gems (Barcrest)
 m4jolgem__0                     //
 m4jolgem__1                     //
@@ -34525,7 +34528,7 @@ tetriskr                        // (c) 1988? bootleg
 @source:amstrad/pda600.cpp
 pda600                          //
 
-@source:pdp1/pdp1.cpp
+@source:dec/pdp1.cpp
 pdp1                            // 1961 DEC PDP1
 
 @source:dec/pdp11.cpp
