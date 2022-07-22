@@ -19,7 +19,7 @@ You must use GCC 10.1 - later versions will compile but crash at start.
 Where can I find out more?
 ==========================
 
-* [Official MAME Development Team Site](http://mamedev.org/) (includes binary downloads for MAME and MESS, wiki, forums, and more)
+* [Official MAME Development Team Site](http://mamedev.org/)
 * [MAMEUI site] http://www.mameui.info/
 * [MAMEUI forum] http://www.mameworld.info/ubbthreads/postlist.php?Cat=&Board=mameui
 
