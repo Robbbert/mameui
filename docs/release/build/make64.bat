@@ -5,7 +5,7 @@ set oldpath=%Path%
 set Path=%minpath%;%oldpath%
 touch src\version.cpp
 echo.|time
-%MINGW64%\bin\make PTR64=1 OSD=messui SYMBOLS=0 NO_SYMBOLS=1 %1 %2 %3 %4
+%MINGW64%\bin\make PTR64=1 OSD=messui DEPRECATED=0 SYMBOLS=0 NO_SYMBOLS=1 %1 %2 %3 %4
 echo.|time
 set Path=%oldpath%
 set oldpath=
