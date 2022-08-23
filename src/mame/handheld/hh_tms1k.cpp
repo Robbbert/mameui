@@ -112,8 +112,8 @@ on Joerg Woerner's datamath.org: http://www.datamath.org/IC_List.htm
  @MP1525   TMS1170   1980, Coleco Head to Head: Electronic Baseball
  @MP1604   TMS1370   1982, Gakken Invader 2000/Tandy Cosmic Fire Away 3000
  @MP1801   TMS1700   1981, Tiger Ditto/Tandy Pocket Repeat (model 60-2152)
- *MP2012   TMS1300   1977, Atari Europe Hit Parade 144 (jukebox) (have decap/dump)
- *MP2032   TMS1300   1980, Atari Europe unknown (jukebox)
+  MP2012   TMS1300   1977, Atari Europe Hit Parade 144 (jukebox) -> atari/hitparade.cpp
+ *MP2032   TMS1300   1980, Atari Europe unknown (jukebox, same PCB as the other one)
  @MP2105   TMS1370   1979, Gakken/Entex Poker (6005)
  @MP2110   TMS1370   1980, Gakken Invader/Tandy Fire Away
  @MP2139   TMS1370   1981, Gakken Galaxy Invader 1000/Tandy Cosmic 1000 Fire Away
@@ -14271,7 +14271,7 @@ ROM_END
   * PCB label: TOFL003
   * TMS2670 M95041 (die label: TMS2400, M95041, 40H-01D-ND02-PHI0032-TTL O300-R300)
   * TMS1024 I/O expander
-  * cyan/red/yellow VFD NEC FIP9AM31T no. 21-84, 1-bit sound
+  * cyan/red/green VFD NEC FIP9AM31T no. 21-84, 1-bit sound
 
   Two versions are known, one with a red trigger button and blue slot button,
   and one with a blue trigger button and red slot button. The game itself is
@@ -14397,7 +14397,7 @@ ROM_START( tgpachi )
 	ROM_LOAD( "tms2100_tgpachi_output.pla", 0, 557, CRC(90849b91) SHA1(ed19444b655c48bbf2a662478d46c045d900080d) )
 
 	ROM_REGION( 140540, "screen", 0)
-	ROM_LOAD( "tgpachi.svg", 0, 140540, CRC(438906cf) SHA1(c5d1a1d877e8abcd19fd3e1f0cdf3f8fd0d5a9ef) )
+	ROM_LOAD( "tgpachi.svg", 0, 140540, CRC(95ad7b9f) SHA1(f2f5550ff6a406bcf8310674e55f1ab8ec21f5d2) )
 ROM_END
 
 
