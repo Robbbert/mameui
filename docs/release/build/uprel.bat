@@ -1,6 +1,6 @@
-\goto end
+goto end
 git fetch upstream
-git merge upstream/release0246
+git merge upstream/release0248
 git checkout master
 :end
 pause
