@@ -247,6 +247,8 @@ epson/qx10.cpp
 ericsson/e9161.cpp
 ericsson/eispc.cpp
 exidy/sorcerer.cpp
+facit/f4431.cpp
+facit/facit4440.cpp
 fairchild/channelf.cpp
 fairchild/f387x.cpp
 fairlight/cmi.cpp
@@ -391,6 +393,7 @@ husky/husky.cpp
 ibm/ibm3153.cpp
 ibm/ibm6580.cpp
 ibm/rtpc.cpp
+ibm/rs6000_type7xxx.cpp
 informer/informer_207_100.cpp
 informer/informer_207_376.cpp
 informer/informer_213.cpp
@@ -480,6 +483,8 @@ mips/mips.cpp
 misc/3do.cpp
 misc/eva.cpp
 misc/monon_color.cpp
+misc/mtu130.cpp
+misc/z80ne.cpp
 mit/tx0.cpp
 mits/altair.cpp
 mits/mits680b.cpp
@@ -518,7 +523,6 @@ ncd/ncd68k.cpp
 ncd/ncd88k.cpp
 ncd/ncdmips.cpp
 ncd/ncdppc.cpp
-ne/z80ne.cpp
 nec/apc.cpp
 nec/ews4800.cpp
 nec/pc100.cpp
@@ -827,7 +831,6 @@ skeleton/epic14e.cpp
 skeleton/esprit.cpp
 skeleton/eurit.cpp
 skeleton/eurocom2.cpp
-skeleton/facit4440.cpp
 skeleton/fanucs15.cpp
 skeleton/fanucspmg.cpp
 skeleton/fc100.cpp
@@ -1260,6 +1263,7 @@ yamaha/ymqy70.cpp
 yamaha/ymrx15.cpp
 yamaha/ymsy35.cpp
 yamaha/ymtx81z.cpp
+yamaha/ymvl1.cpp
 yamaha/ymvl70.cpp
 zenith/mdt60.cpp
 zenith/z100.cpp
