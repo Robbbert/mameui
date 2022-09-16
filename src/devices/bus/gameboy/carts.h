@@ -31,6 +31,7 @@ extern char const *const GB_MBC1;
 extern char const *const GB_MBC2;
 extern char const *const GB_MBC3;
 extern char const *const GB_MBC3;
+extern char const *const GB_MBC30;
 extern char const *const GB_MBC5;
 //extern char const *const GB_MBC6;
 extern char const *const GB_MBC7_2K;
@@ -43,6 +44,7 @@ extern char const *const GB_TAMA5;
 extern char const *const GB_SINTAX;
 extern char const *const GB_CHONGWU;
 extern char const *const GB_LICHENG;
+extern char const *const GB_NEWGBCHK;
 extern char const *const GB_VF001;
 extern char const *const GB_DIGIMON;
 

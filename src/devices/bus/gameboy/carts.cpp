@@ -31,12 +31,13 @@ char const *const GB_ROCKMAN8       = "rom_rock8";
 char const *const GB_SM3SP          = "rom_sm3sp";
 char const *const GB_SACHEN1        = "rom_sachen1";
 char const *const GB_SACHEN2        = "rom_sachen2";
-char const *const GB_ROCKET         = "rom_atvrac";
+char const *const GB_ROCKET         = "rom_rocket";
 char const *const GB_LASAMA         = "rom_lasama";
 char const *const GB_GBCK003        = "rom_gbck003";
 char const *const GB_MBC1           = "rom_mbc1";
 char const *const GB_MBC2           = "rom_mbc2";
 char const *const GB_MBC3           = "rom_mbc3";
+char const *const GB_MBC30          = "rom_mbc30";
 char const *const GB_MBC5           = "rom_mbc5";
 //char const *const GB_MBC6           = "rom_mbc6";
 char const *const GB_MBC7_2K        = "rom_mbc7_2k";
@@ -49,6 +50,7 @@ char const *const GB_CAMERA         = "rom_camera";
 char const *const GB_SINTAX         = "rom_sintax";
 char const *const GB_CHONGWU        = "rom_chong";
 char const *const GB_LICHENG        = "rom_licheng";
+char const *const GB_NEWGBCHK       = "rom_newgbchk";
 char const *const GB_VF001          = "rom_vf001";
 char const *const GB_DIGIMON        = "rom_digimon";
 
@@ -76,6 +78,7 @@ void gameboy_cartridges(device_slot_interface &device)
 	device.option_add_internal(slotoptions::GB_MBC1,            GB_ROM_MBC1);
 	device.option_add_internal(slotoptions::GB_MBC2,            GB_ROM_MBC2);
 	device.option_add_internal(slotoptions::GB_MBC3,            GB_ROM_MBC3);
+	device.option_add_internal(slotoptions::GB_MBC30,           GB_ROM_MBC3); // MBC3 and MBC30 treated as the same thing for now
 	device.option_add_internal(slotoptions::GB_MBC5,            GB_ROM_MBC5);
 //	device.option_add_internal(slotoptions::GB_MBC6,            GB_ROM_MBC6);
 	device.option_add_internal(slotoptions::GB_MBC7_2K,         GB_ROM_MBC7_2K);
@@ -89,6 +92,7 @@ void gameboy_cartridges(device_slot_interface &device)
 	device.option_add_internal(slotoptions::GB_SINTAX,          GB_ROM_SINTAX);
 	device.option_add_internal(slotoptions::GB_CHONGWU,         GB_ROM_CHONGWU);
 	device.option_add_internal(slotoptions::GB_LICHENG,         GB_ROM_LICHENG);
+	device.option_add_internal(slotoptions::GB_NEWGBCHK,        GB_ROM_NEWGBCHK);
 	device.option_add_internal(slotoptions::GB_VF001,           GB_ROM_VF001);
 	device.option_add_internal(slotoptions::GB_DIGIMON,         GB_ROM_DIGIMON);
 }
