@@ -13,6 +13,6 @@
 #include "slot.h"
 
 
-//DECLARE_DEVICE_TYPE(GB_ROM_MBC6, device_gb_cart_interface)
+DECLARE_DEVICE_TYPE(GB_ROM_MBC6, device_gb_cart_interface)
 
 #endif // MAME_BUS_GAMEBOY_MBC7_H

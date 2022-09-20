@@ -65,7 +65,7 @@ enum : u8
 	TYPE_MBC5_RUMBLE_RAM        = 0x1d,
 	TYPE_MBC5_RUMBLE_RAM_BATT   = 0x1e,
 
-//	TYPE_MBC6                   = 0x20,
+	TYPE_MBC6                   = 0x20,
 
 	TYPE_MBC7_ACCEL_EEPROM      = 0x22,
 

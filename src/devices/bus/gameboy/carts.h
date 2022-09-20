@@ -32,7 +32,7 @@ extern char const *const GB_MBC3;
 extern char const *const GB_MBC3;
 extern char const *const GB_MBC30;
 extern char const *const GB_MBC5;
-//extern char const *const GB_MBC6;
+extern char const *const GB_MBC6;
 extern char const *const GB_MBC7_2K;
 extern char const *const GB_MBC7_4K;
 extern char const *const GB_MMM01;

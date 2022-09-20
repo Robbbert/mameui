@@ -200,8 +200,8 @@ char const *cart_type_description(u8 type)
 		return "Nintendo MBC5 with RAM and vibration motor";
 	case cartheader::TYPE_MBC5_RUMBLE_RAM_BATT:
 		return "Nintendo MBC5 with battery-backed RAM and vibration motor";
-//	case cartheader::TYPE_MBC6:
-//		return "Nintendo MBC6 with Flash memory and battery-backed RAM";
+	case cartheader::TYPE_MBC6:
+		return "Nintendo MBC6 with Flash memory and battery-backed RAM";
 	case cartheader::TYPE_MBC7_ACCEL_EEPROM:
 		return "Nintendo MBC7 with EEPROM and two-axis accelerometer";
 	case cartheader::TYPE_UNLICENSED_YONGYONG:
@@ -903,8 +903,8 @@ char const *guess_cart_type(std::string_view tag, util::random_read &file, u64 l
 	case cartheader::TYPE_MBC5_RUMBLE_RAM_BATT:
 		return slotoptions::GB_MBC5;
 	// 0x1f
-//	case cartheader::TYPE_MBC6:
-//		return slotoptions::GB_MBC6;
+	case cartheader::TYPE_MBC6:
+		return slotoptions::GB_MBC6;
 	// 0x21
 	case cartheader::TYPE_MBC7_ACCEL_EEPROM:
 		return guess_mbc7_type(tag, file, length, offset, header);
