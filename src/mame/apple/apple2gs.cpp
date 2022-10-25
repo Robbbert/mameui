@@ -82,8 +82,7 @@
 #include "softlist_dev.h"
 #include "speaker.h"
 
-#include "formats/ap_dsk35.h"
-#include "formats/ap2_dsk.h"
+#include "utf8.h"
 
 
 namespace {
