@@ -39,6 +39,7 @@
 #include "mui_opts.h"
 #include "emu_opts.h"
 #include "sound/samples.h"
+#include "path.h"
 
 
 /****************************************************************************
