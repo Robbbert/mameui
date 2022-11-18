@@ -4,4 +4,6 @@
 
 This repository has been archived.
 
-At this time, it is expected to be removed at the end of October.
+The license requires it to be available for 3 years after the last release.
+
+After that, it might be removed.
