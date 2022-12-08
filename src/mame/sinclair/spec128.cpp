@@ -308,8 +308,6 @@ void spectrum_128_state::machine_start()
 
 void spectrum_128_state::machine_reset()
 {
-//	m_bank_ram[1]->set_entry(5); /* Bank 5 is always in 0x4000 - 0x7fff */
-//	m_bank_ram[2]->set_entry(2); /* Bank 2 is always in 0x8000 - 0xbfff */
 	spectrum_state::machine_reset();
 
 	/* set initial ram config */

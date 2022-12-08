@@ -45,7 +45,7 @@ includedirs {
 }
 
 configuration { }
-if (_OPTIONS["targetos"] == "windows") then
+if (_OPTIONS["targetos"] == "windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui") then
 	defines {
 		"UI_WINDOWS",
 	}

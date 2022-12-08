@@ -869,7 +869,7 @@ end
 			"LUA_COMPAT_5_1",
 			"LUA_COMPAT_5_2",
 		}
-	if not (_OPTIONS["targetos"]=="windows") and not (_OPTIONS["targetos"]=="asmjs") then
+	if not (_OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui") or _OPTIONS["targetos"]=="messui" and not (_OPTIONS["targetos"]=="asmjs") then
 		defines {
 			"LUA_USE_POSIX",
 		}
@@ -1063,7 +1063,7 @@ end
 		MAME_DIR .. "3rdparty/portmidi/pm_common/pmutil.c",
 	}
 
-	if _OPTIONS["targetos"]=="windows" then
+	if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui" then
 		files {
 			MAME_DIR .. "3rdparty/portmidi/porttime/ptwinmm.c",
 			MAME_DIR .. "3rdparty/portmidi/pm_win/pmwin.c",
@@ -1339,7 +1339,7 @@ end
 		end
 	end
 
-	if _OPTIONS["targetos"]=="windows" then
+	if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui" then
 		if _OPTIONS["gcc"]~=nil and string.find(_OPTIONS["gcc"], "clang") then
 			buildoptions {
 				"-Wno-unknown-attributes",

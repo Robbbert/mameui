@@ -135,9 +135,8 @@ function osdmodulesbuild()
 		}
 	end
 
-	if _OPTIONS["targetos"]=="windows" then
+	if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui" then
 		includedirs {
-			MAME_DIR .. "3rdparty/winpcap/Include",
 			MAME_DIR .. "3rdparty/compat/mingw",
 			MAME_DIR .. "3rdparty/portaudio/include",
 		}
@@ -401,7 +400,7 @@ function qtdebuggerbuild()
 
 		}
 
-		if _OPTIONS["targetos"]=="windows" then
+		if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui" then
 			configuration { "mingw*" }
 				buildoptions {
 					"-I$(shell qmake -query QT_INSTALL_HEADERS)",
@@ -464,7 +463,7 @@ function osdmodulestargetconf()
 	end
 
 	if _OPTIONS["USE_QTDEBUG"]=="1" then
-		if _OPTIONS["targetos"]=="windows" then
+		if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui" then
 			linkoptions {
 				"-L$(shell qmake -query QT_INSTALL_LIBS)",
 			}
@@ -500,7 +499,7 @@ function osdmodulestargetconf()
 		end
 	end
 
-	if _OPTIONS["targetos"]=="windows" then
+	if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui" then
 		links {
 			"gdi32",
 			"dsound",
@@ -657,7 +656,7 @@ if not _OPTIONS["USE_PCAP"] then
 end
 
 if not _OPTIONS["USE_QTDEBUG"] then
-	if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="macosx" or _OPTIONS["targetos"]=="solaris" or _OPTIONS["targetos"]=="haiku" or _OPTIONS["targetos"]=="asmjs" then
+	if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui" or _OPTIONS["targetos"]=="macosx" or _OPTIONS["targetos"]=="solaris" or _OPTIONS["targetos"]=="haiku" or _OPTIONS["targetos"]=="asmjs" then
 		_OPTIONS["USE_QTDEBUG"] = "0"
 	else
 		_OPTIONS["USE_QTDEBUG"] = "1"

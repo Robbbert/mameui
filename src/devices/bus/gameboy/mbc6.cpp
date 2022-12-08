@@ -51,6 +51,7 @@
  * What do the unknown bits in the Flash enable register do?
 
  ***************************************************************************/
+
 #include "emu.h"
 #include "mbc6.h"
 
