@@ -11,6 +11,7 @@
 #pragma once
 
 
+extern char const *const SMS_CTRL_OPTION_DIY_PADDLE;
 extern char const *const SMS_CTRL_OPTION_GRAPHIC;
 extern char const *const SMS_CTRL_OPTION_LPHASER;
 extern char const *const SMS_CTRL_OPTION_MD_6BUTTON;
@@ -19,6 +20,7 @@ extern char const *const SMS_CTRL_OPTION_MULTITAP;
 extern char const *const SMS_CTRL_OPTION_JOYPAD;
 extern char const *const SMS_CTRL_OPTION_PADDLE;
 extern char const *const SMS_CTRL_OPTION_RAPID_FIRE;
+extern char const *const SMS_CTRL_OPTION_RS232;
 extern char const *const SMS_CTRL_OPTION_SPORTS;
 extern char const *const SMS_CTRL_OPTION_SPORTS_JP;
 
