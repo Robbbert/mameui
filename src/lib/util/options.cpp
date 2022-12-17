@@ -1383,7 +1383,7 @@ void core_options::parse_parent_file(util::core_file &inifile, int priority, boo
 		}
 
 		// set the new data
-		do_set_value(*curentry, trim_spaces_and_quotes(optiondata), priority, error_stream, condition);
+		do_set_value(*curentry, trim_spaces_and_quotes(optiondata), priority, error_stream, condition, true);
 	}
 
 	// did we have any errors that may need to be aggregated?
