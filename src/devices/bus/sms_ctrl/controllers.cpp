@@ -2,7 +2,14 @@
 // copyright-holders:Vas Crabb
 /**********************************************************************
 
-    Sega DE-9 controllers
+    Sega 9-pin controllers
+
+    Unemulated Mega Drive peripherals:
+    * Mega Modem (connects to EXP port on Mega Drive)
+    * Sega Menacer (infrared wireless lightgun)
+    * Konami Justifier (dual wired lightguns)
+    * Dempa XE-1AP (3-axis analog "Cyber Stick" pad)
+    * EA 4-Play (impractical - connects to both CTRL1 and CTRL2)
 
 **********************************************************************/
 
@@ -10,6 +17,7 @@
 #include "controllers.h"
 
 #include "diypaddle.h"
+#include "hypershot.h"
 #include "graphic.h"
 #include "joypad.h"
 #include "lphaser.h"
@@ -26,6 +34,7 @@
 
 
 char const *const SMS_CTRL_OPTION_DIY_PADDLE  = "diypaddle";
+char const *const SMS_CTRL_OPTION_HYPERSHOT   = "hypershot";
 char const *const SMS_CTRL_OPTION_GRAPHIC     = "graphic";
 char const *const SMS_CTRL_OPTION_LPHASER     = "lphaser";
 char const *const SMS_CTRL_OPTION_MD_6BUTTON  = "md6button";
@@ -46,6 +55,7 @@ char const *const SMS_CTRL_OPTION_TEAM_PLAYER = "teamplay";
 void sms_control_port_devices(device_slot_interface &device)
 {
 	device.option_add(SMS_CTRL_OPTION_DIY_PADDLE,  SMS_DIY_PADDLE);
+	device.option_add(SMS_CTRL_OPTION_HYPERSHOT,   SMS_HYPERSHOT);
 	device.option_add(SMS_CTRL_OPTION_GRAPHIC,     SMS_GRAPHIC);
 	device.option_add(SMS_CTRL_OPTION_LPHASER,     SMS_LIGHT_PHASER);
 	device.option_add(SMS_CTRL_OPTION_MD_6BUTTON,  SMS_MD6BUTTON);
@@ -65,5 +75,6 @@ void sms_control_port_devices(device_slot_interface &device)
 
 void sms_control_port_passive_devices(device_slot_interface &device)
 {
-	device.option_add(SMS_CTRL_OPTION_JOYPAD,     SMS_JOYPAD);
+	device.option_add(SMS_CTRL_OPTION_HYPERSHOT,   SMS_HYPERSHOT);
+	device.option_add(SMS_CTRL_OPTION_JOYPAD,      SMS_JOYPAD);
 }
