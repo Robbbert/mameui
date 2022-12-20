@@ -615,8 +615,8 @@ bool emu_options::add_and_remove_slot_options()
 
 
 //-------------------------------------------------
-//  add_and_remove_slot_options - add any missing
-//  and/or purge extraneous slot options
+//  add_and_remove_image_options - add any missing
+//  and/or purge extraneous image options
 //-------------------------------------------------
 
 bool emu_options::add_and_remove_image_options()
@@ -722,7 +722,7 @@ bool emu_options::add_and_remove_image_options()
 
 //-------------------------------------------------
 //  reevaluate_default_card_software - based on recent
-//  changes in what images are mounted, give drivers
+//  changes in what images are mounted, give devices
 //  a chance to specify new default slot options
 //-------------------------------------------------
 
@@ -761,6 +761,16 @@ void emu_options::reevaluate_default_card_software()
 			std::string default_card_software = get_default_card_software(slot);
 			if (slot_opt.default_card_software() != default_card_software)
 			{
+				// HACK: prevent option values set from "XXX_default" in software list entries
+				// from getting cleared out, using crude heuristic to distinguish these from
+				// values representing cartridge types and such
+				if (default_card_software.empty())
+				{
+					auto *opt = slot.option(slot_opt.default_card_software().c_str());
+					if (opt && opt->selectable())
+						continue;
+				}
+
 				slot_opt.set_default_card_software(std::move(default_card_software));
 
 				// calling set_default_card_software() can cause a cascade of slot/image
@@ -849,12 +859,21 @@ void emu_options::set_software(std::string &&new_software)
 		}
 
 		// keep any deferred options for the next round
-		softlist_opts = std::move(deferred_opts);
+		softlist_opts.slot = std::move(deferred_opts.slot);
+		softlist_opts.image = std::move(deferred_opts.image);
 
 		// do we have any pending options after failing to distribute any?
 		size_t after_size = softlist_opts.slot.size() + softlist_opts.image.size();
 		if ((after_size > 0) && after_size >= before_size)
 			throw options_error_exception("Could not assign software option");
+	}
+
+	// distribute slot option defaults
+	for (auto &slot_opt : softlist_opts.slot_defaults)
+	{
+		auto iter = m_slot_options.find(slot_opt.first);
+		if (iter != m_slot_options.end())
+			iter->second.set_default_card_software(std::move(slot_opt.second));
 	}
 
 	// we've succeeded; update the set name
@@ -964,7 +983,15 @@ emu_options::software_options emu_options::evaluate_initial_softlist_options(con
 								&& fi.name().compare(fi.name().size() - default_suffix.size(), default_suffix.size(), default_suffix) == 0)
 							{
 								std::string slot_name = fi.name().substr(0, fi.name().size() - default_suffix.size());
-								results.slot[slot_name] = fi.value();
+
+								// only add defaults if they exist in this configuration
+								device_t *device = config.root_device().subdevice(slot_name.c_str());
+								if (device)
+								{
+									device_slot_interface *intf;
+									if (device->interface(intf) && intf->option(fi.value().c_str()))
+										results.slot_defaults[slot_name] = fi.value();
+								}
 							}
 						}
 					}

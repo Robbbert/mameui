@@ -16413,10 +16413,11 @@ gunpey                          // (c) 2000 Banpresto
 gunsmoke                        // 11/1985 (c) 1985 (World)
 gunsmokeb                       //
 gunsmokej                       // 11/1985 (c) 1985 (Japan)
-gunsmokeu                       // 11/1985 (c) 1985 + Romstar (US)
-gunsmokeua                      // 11/1985 (c) 1985 (US)
-gunsmokeub                      // 11/1985 (c) 1985 (US)
-gunsmokeg                       //
+gunsmokeu                       // 04/1986 (c) 1986 + Romstar (US)
+gunsmokeua                      // 01/1986 (c) 1985 + Romstar (US)
+gunsmokeub                      // 11/1985 (c) 1985 + Romstar (US)
+gunsmokeuc                      // 11/1985 (c) 1985 + Romstar (US)
+gunsmokeg                       // 11/1985 (c) 1985 (Germany)
 
 @source:konami/gyruss.cpp
 gyruss                          // GX347 (c) 1983
@@ -39560,6 +39561,10 @@ sm7238                          //
 @source:sony/smc777.cpp
 smc777                          //
 
+@source:misc/smd2144c.cpp
+thecastle                       //
+therock                         //
+
 @source:sega/sms.cpp
 gamegeaj                        // Sega GameGear (Japan)
 gamegear                        // Sega GameGear
@@ -43050,8 +43055,8 @@ pk6128c                         //
 vec1200                         //
 vector06                        //
 
-@source:skeleton/vector4.cpp
-vector4                         //
+@source:skeleton/vector3.cpp
+vector3                         //
 
 @source:miltonbradley/vectrex.cpp
 raaspec                         // (c) Roy Abel & Associates 1984
@@ -44315,7 +44320,7 @@ ww_l4                           //
 ww_l5                           //
 ww_lh5                          //
 ww_lh6                          //
-ww_p1                           //
+ww_p6                           //
 ww_p8                           //
 
 @source:pinball/wpc_s.cpp
@@ -45126,4 +45131,4 @@ mtu130
 vl1
 
 @source:ddr/sprachmg.cpp
-sprachmg						// 1985 Institut für Kosmosforschung
+sprachmg                        // 1985 Institut für Kosmosforschung
