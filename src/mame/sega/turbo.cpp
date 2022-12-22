@@ -8,9 +8,12 @@
     and Aaron Giles
 
     Games supported:
-        * Turbo
-        * Subroc 3D
-        * Buck Rogers: Planet of Zoom
+    - Turbo
+    - Subroc 3D
+    - Buck Rogers: Planet of Zoom
+
+    BTANB:
+    - subroc3d 'seafoam' appears as black spots on top of some sprites
 
 **************************************************************************
     TURBO
@@ -214,6 +217,8 @@ void subroc3d_state::machine_start()
 {
 	turbo_base_state::machine_start();
 
+	m_shutter.resolve();
+
 	save_item(NAME(m_col));
 	save_item(NAME(m_ply));
 	save_item(NAME(m_flip));
@@ -354,6 +359,10 @@ void subroc3d_state::ppi0b_w(uint8_t data)
 	machine().bookkeeping().coin_counter_w(1, data & 0x02);
 	m_lamp = BIT(data, 2);
 	m_flip = BIT(data, 4);
+
+	// flip also goes to 3D scope shutter sync
+	// (it's a motor to 2 rotating discs, half painted black)
+	m_shutter = BIT(data, 4);
 }
 
 /*************************************
@@ -714,15 +723,15 @@ static INPUT_PORTS_START( turbo )
 	PORT_DIPNAME( 0x20, 0x20, DEF_STR( Unknown ) )      PORT_DIPLOCATION("SW3:2")
 	PORT_DIPSETTING(    0x20, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x40, 0x40, "Tachometer" )            PORT_DIPLOCATION("SW3:3")
+	PORT_DIPNAME( 0x40, 0x00, "Tachometer" )            PORT_DIPLOCATION("SW3:3")
 	PORT_DIPSETTING(    0x40, "Analog (Meter)")
 	PORT_DIPSETTING(    0x00, "Digital (LED)")
-	PORT_DIPNAME( 0x80, 0x80, "Sound System" )          PORT_DIPLOCATION("SW3:4")
+	PORT_DIPNAME( 0x80, 0x00, "Sound System" )          PORT_DIPLOCATION("SW3:4")
 	PORT_DIPSETTING(    0x80, DEF_STR( Upright ) )
 	PORT_DIPSETTING(    0x00, "Cockpit")
 
 	PORT_START("DIAL")
-	PORT_BIT( 0xff, 0, IPT_DIAL ) PORT_SENSITIVITY(10) PORT_KEYDELTA(30)
+	PORT_BIT( 0xff, 0, IPT_DIAL ) PORT_SENSITIVITY(50) PORT_KEYDELTA(10)
 
 	PORT_START("PEDAL")
 	PORT_BIT( 0xff, 0, IPT_PEDAL ) PORT_SENSITIVITY(100) PORT_KEYDELTA(20)
@@ -739,12 +748,12 @@ INPUT_PORTS_END
 
 static INPUT_PORTS_START( subroc3d )
 	PORT_START("IN0")
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_JOYSTICK_DOWN )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_JOYSTICK_UP )
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_JOYSTICK_DOWN ) PORT_16WAY // buttons on right side of periscope
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_JOYSTICK_UP )   PORT_16WAY // "
 
 	PORT_START("IN1")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_JOYSTICK_LEFT )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_JOYSTICK_RIGHT )
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_JOYSTICK_RIGHT ) // pull handle on left side of periscope
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_JOYSTICK_LEFT )  // push "
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_BUTTON1 )
 	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_START1 )
 	PORT_SERVICE_NO_TOGGLE( 0x10, 0x10 )
