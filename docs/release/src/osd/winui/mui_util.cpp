@@ -30,6 +30,7 @@
 #include "machine/ram.h"
 #include <shlwapi.h>
 #include "corestr.h"
+#include "path.h"
 
 /***************************************************************************
     function prototypes

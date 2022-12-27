@@ -25,7 +25,6 @@
 #include <clocale>
 #include <cstdarg>
 #include <cstdio>
-#include <mutex>
 #include <optional>
 #include <sstream>
 #include <thread>
@@ -56,30 +55,9 @@
 //============================================================
 //  winui_output_error
 //============================================================
-
+// MAMEUI Robbbert, 2022-11-18. The removed code was a total horrible hack and froze the system.
 class winui_output_error : public osd_output
 {
-private:
-	struct ui_state
-	{
-		~ui_state()
-		{
-			if (thread)
-				thread->join();
-		}
-
-		std::ostringstream buffer;
-		std::optional<std::thread> thread;
-		std::mutex mutex;
-		bool active;
-	};
-
-	static ui_state &get_state()
-	{
-		static ui_state state;
-		return state;
-	}
-
 public:
 	virtual void output_callback(osd_output_channel channel, const util::format_argument_pack<std::ostream> &args) override
 	{
@@ -89,41 +67,12 @@ public:
 			if ((video_config.windowed == 0) && !osd_common_t::s_window_list.empty())
 				winwindow_toggle_full_screen();
 
-			auto &state(get_state());
-			std::lock_guard<std::mutex> guard(state.mutex);
-			util::stream_format(state.buffer, args);
-			if (!state.active)
-			{
-				if (state.thread)
-				{
-					state.thread->join();
-					state.thread = std::nullopt;
-				}
-				state.thread.emplace(
-						[] ()
-						{
-							auto &state(get_state());
-							std::string message;
-							while (true)
-							{
-								{
-									std::lock_guard<std::mutex> guard(state.mutex);
-									message = std::move(state.buffer).str();
-									if (message.empty())
-									{
-										state.active = false;
-										return;
-									}
-									state.buffer.str(std::string());
-								}
-								// Don't hold any locks lock while calling MessageBox.
-								// Parent window isn't set because MAME could destroy
-								// the window out from under us on a fatal error.
-								win_message_box_utf8(nullptr, message.c_str(), emulator_info::get_appname(), MB_OK);
-							}
-						});
-				state.active = true;
-			}
+			std::ostringstream buffer;
+			util::stream_format(buffer, args);
+			win_message_box_utf8(!osd_common_t::s_window_list.empty() ?
+				std::static_pointer_cast<win_window_info>(osd_common_t::s_window_list.front())->platform_window() :
+					nullptr, buffer.str().c_str(), "MAMEUI", MB_OK);
+// MAMEUI end
 		}
 		else
 		{
@@ -176,10 +125,10 @@ const options_entry windows_options::s_option_entries[] =
 
 	// post-processing options
 	{ nullptr,                                                  nullptr,             core_options::option_type::HEADER,     "DIRECT3D POST-PROCESSING OPTIONS" },
-	{ WINOPTION_HLSLPATH,                                       "hlsl",              core_options::option_type::STRING,     "path to HLSL support files" },
+	{ WINOPTION_HLSLPATH,                                       "hlsl",              core_options::option_type::PATH,       "path to HLSL support files" },
 	{ WINOPTION_HLSL_ENABLE";hlsl",                             "0",                 core_options::option_type::BOOLEAN,    "enable HLSL post-processing (PS3.0 required)" },
 	{ WINOPTION_HLSL_OVERSAMPLING,                              "0",                 core_options::option_type::BOOLEAN,    "enable HLSL oversampling" },
-	{ WINOPTION_HLSL_WRITE,                                     OSDOPTVAL_AUTO,      core_options::option_type::STRING,     "enable HLSL AVI writing (huge disk bandwidth suggested)" },
+	{ WINOPTION_HLSL_WRITE,                                     OSDOPTVAL_AUTO,      core_options::option_type::PATH,       "enable HLSL AVI writing (huge disk bandwidth suggested)" },
 	{ WINOPTION_HLSL_SNAP_WIDTH,                                "2048",              core_options::option_type::STRING,     "HLSL upscaled-snapshot width" },
 	{ WINOPTION_HLSL_SNAP_HEIGHT,                               "1536",              core_options::option_type::STRING,     "HLSL upscaled-snapshot height" },
 	{ WINOPTION_SHADOW_MASK_TILE_MODE,                          "0",                 core_options::option_type::INTEGER,    "shadow mask tile mode (0 for screen based, 1 for source based)" },
@@ -262,9 +211,9 @@ const options_entry windows_options::s_option_entries[] =
 	{ WINOPTION_BLOOM_LEVEL6_WEIGHT,                            "0.04",              core_options::option_type::FLOAT,      "bloom level 6 weight (1/4 smaller that level 5 target)" },
 	{ WINOPTION_BLOOM_LEVEL7_WEIGHT,                            "0.02",              core_options::option_type::FLOAT,      "bloom level 7 weight (1/4 smaller that level 6 target)" },
 	{ WINOPTION_BLOOM_LEVEL8_WEIGHT,                            "0.01",              core_options::option_type::FLOAT,      "bloom level 8 weight (1/4 smaller that level 7 target)" },
-	{ WINOPTION_LUT_TEXTURE,                                    "lut-default.png",   core_options::option_type::STRING,     "3D LUT texture filename for screen, PNG format" },
+	{ WINOPTION_LUT_TEXTURE,                                    "lut-default.png",   core_options::option_type::PATH,       "3D LUT texture filename for screen, PNG format" },
 	{ WINOPTION_LUT_ENABLE,                                     "0",                 core_options::option_type::BOOLEAN,    "Enables 3D LUT to be applied to screen after post-processing" },
-	{ WINOPTION_UI_LUT_TEXTURE,                                 "lut-default.png",   core_options::option_type::STRING,     "3D LUT texture filename of UI, PNG format" },
+	{ WINOPTION_UI_LUT_TEXTURE,                                 "lut-default.png",   core_options::option_type::PATH,       "3D LUT texture filename of UI, PNG format" },
 	{ WINOPTION_UI_LUT_ENABLE,                                  "0",                 core_options::option_type::BOOLEAN,    "enable 3D LUT to be applied to UI and artwork after post-processing" },
 
 	// full screen options

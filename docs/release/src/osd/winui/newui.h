@@ -26,6 +26,7 @@
 #include "windows/window.h"
 #include "winutf8.h"
 #include "modules/lib/osdobj_common.h"
+#include "path.h"
 
 
 

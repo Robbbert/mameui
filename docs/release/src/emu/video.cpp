@@ -19,6 +19,7 @@
 #include "screen.h"
 
 #include "corestr.h"
+#include "path.h"
 #include "png.h"
 #include "xmlfile.h"
 
@@ -983,7 +984,7 @@ void video_manager::recompute_speed(const attotime &emutime)
 	}
 
 	// if we're past the "time-to-execute" requested, signal an exit
-	if (m_seconds_to_run != 0 && emutime.seconds() >= m_seconds_to_run)
+	if (m_seconds_to_run > 1 && emutime.seconds() >= m_seconds_to_run) // MESSUI 2022-12-03 Robbbert, nonag hack
 	{
 		// create a final screenshot
 		if (m_snap_native)
