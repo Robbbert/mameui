@@ -211,6 +211,7 @@ end
 		MAME_DIR .. "3rdparty/softfloat/fsincos.c",
 		MAME_DIR .. "3rdparty/softfloat/fpatan.c",
 		MAME_DIR .. "3rdparty/softfloat/fyl2x.c",
+		MAME_DIR .. "3rdparty/softfloat/f2xm1.c",
 	}
 
 
@@ -1251,7 +1252,7 @@ project "bimg"
 	configuration { "mingw*" }
 		defines {
 			"ASTCENC_AVX=0",
-			"ASTCENC_SSE=2",
+			"ASTCENC_SSE=20",
 		}
 	configuration { }
 
