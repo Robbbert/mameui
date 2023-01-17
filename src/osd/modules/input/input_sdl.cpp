@@ -35,6 +35,7 @@
 #include <algorithm>
 #include <cctype>
 #include <cstddef>
+#include <cstring>
 #include <iterator>
 #include <memory>
 #include <optional>
@@ -105,7 +106,7 @@ char const *const CONTROLLER_BUTTON_XBOX360[]{
 		"X",
 		"Y",
 		"View",
-		"Guide",
+		"Logo",
 		"Menu",
 		"LSB",
 		"RSB",
@@ -208,10 +209,10 @@ char const *const CONTROLLER_BUTTON_XBOX360[]{
 		"D-pad Left",
 		"D-pad Right",
 		"Capture",
-		"P1",
-		"P2",
-		"P3",
-		"P4",
+		"RSR",
+		"LSL",
+		"RSL",
+		"LSR",
 		"Touchpad" };
 
 [[maybe_unused]] char const *const CONTROLLER_BUTTON_STADIA[]{
@@ -231,6 +232,29 @@ char const *const CONTROLLER_BUTTON_XBOX360[]{
 		"D-pad Left",
 		"D-pad Right",
 		"Capture",
+		"P1",
+		"P2",
+		"P3",
+		"P4",
+		"Touchpad" };
+
+[[maybe_unused]] char const *const CONTROLLER_BUTTON_SHIELD[]{
+		"A",
+		"B",
+		"X",
+		"Y",
+		"Back",
+		"Logo",
+		"Start",
+		"LSB",
+		"RSB",
+		"LB",
+		"RB",
+		"D-pad Up",
+		"D-pad Down",
+		"D-pad Left",
+		"D-pad Right",
+		"Share",
 		"P1",
 		"P2",
 		"P3",
@@ -523,7 +547,7 @@ int lookup_sdl_code(const char *scode)
 
 	while (sdl_lookup_table[i].code >= 0)
 	{
-		if (!strcmp(scode, sdl_lookup_table[i].name))
+		if (!std::strcmp(scode, sdl_lookup_table[i].name))
 			return sdl_lookup_table[i].code;
 		i++;
 	}
@@ -1197,22 +1221,36 @@ public:
 			buttonnames = CONTROLLER_BUTTON_SWITCH;
 			digitaltriggers = true;
 			break;
-#if SDL_VERSION_ATLEAST(2, 0, 14) // TODO: support more controller types
+#if SDL_VERSION_ATLEAST(2, 0, 14)
 		//case SDL_CONTROLLER_TYPE_VIRTUAL:
 		case SDL_CONTROLLER_TYPE_PS5:
 			osd_printf_verbose("Game Controller:   ...  PlayStation 5 type\n");
 			axisnames = CONTROLLER_AXIS_PS;
 			buttonnames = CONTROLLER_BUTTON_PS5;
 			break;
+#endif
+#if SDL_VERSION_ATLEAST(2, 0, 16)
 		//case SDL_CONTROLLER_TYPE_AMAZON_LUNA:
 		case SDL_CONTROLLER_TYPE_GOOGLE_STADIA:
 			osd_printf_verbose("Game Controller:   ...  Google Stadia type\n");
 			axisnames = CONTROLLER_AXIS_PS;
 			buttonnames = CONTROLLER_BUTTON_STADIA;
 			break;
-		//case SDL_CONTROLLER_TYPE_SWITCH_JOYCON_LEFT:
-		//case SDL_CONTROLLER_TYPE_SWITCH_JOYCON_RIGHT:
-		//case SDL_CONTROLLER_TYPE_SWITCH_JOYCON_PAIR:
+#endif
+#if SDL_VERSION_ATLEAST(2, 24, 0)
+		case SDL_CONTROLLER_TYPE_NVIDIA_SHIELD:
+			osd_printf_verbose("Game Controller:   ...  NVIDIA Shield type\n");
+			axisnames = CONTROLLER_AXIS_XBOX;
+			buttonnames = CONTROLLER_BUTTON_SHIELD;
+			break;
+		//case SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_LEFT:
+		//case SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT:
+		case SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR:
+			osd_printf_verbose("Game Controller:   ...  Joy-Con pair type\n");
+			axisnames = CONTROLLER_AXIS_SWITCH;
+			buttonnames = CONTROLLER_BUTTON_SWITCH;
+			digitaltriggers = true;
+			break;
 #endif
 		default: // default to Xbox 360 names
 			osd_printf_verbose("Game Controller:   ...  unrecognized type (%d)\n", int(ctrltype));
@@ -1221,13 +1259,13 @@ public:
 #endif
 
 		// add axes
-		std::tuple<SDL_GameControllerAxis, input_item_id, bool> axes[]{
-				{ SDL_CONTROLLER_AXIS_LEFTX,           ITEM_ID_XAXIS,   false },
-				{ SDL_CONTROLLER_AXIS_LEFTY,           ITEM_ID_YAXIS,   false },
-				{ SDL_CONTROLLER_AXIS_RIGHTX,          ITEM_ID_ZAXIS,   false },
-				{ SDL_CONTROLLER_AXIS_RIGHTY,          ITEM_ID_RZAXIS,  false },
-				{ SDL_CONTROLLER_AXIS_TRIGGERLEFT,     ITEM_ID_SLIDER1, true },
-				{ SDL_CONTROLLER_AXIS_TRIGGERRIGHT,    ITEM_ID_SLIDER2, true } };
+		std::tuple<SDL_GameControllerAxis, input_item_id, bool> const axes[]{
+				{ SDL_CONTROLLER_AXIS_LEFTX,        ITEM_ID_XAXIS,   false },
+				{ SDL_CONTROLLER_AXIS_LEFTY,        ITEM_ID_YAXIS,   false },
+				{ SDL_CONTROLLER_AXIS_RIGHTX,       ITEM_ID_ZAXIS,   false },
+				{ SDL_CONTROLLER_AXIS_RIGHTY,       ITEM_ID_RZAXIS,  false },
+				{ SDL_CONTROLLER_AXIS_TRIGGERLEFT,  ITEM_ID_SLIDER1, true },
+				{ SDL_CONTROLLER_AXIS_TRIGGERRIGHT, ITEM_ID_SLIDER2, true } };
 		for (auto [axis, item, buttontest] : axes)
 		{
 			bool avail = !buttontest || !digitaltriggers;
@@ -1261,7 +1299,7 @@ public:
 		}
 
 		// add automatically numbered buttons
-		std::pair<SDL_GameControllerButton, SDL_GameControllerAxis> numberedbuttons[]{
+		std::pair<SDL_GameControllerButton, SDL_GameControllerAxis> const numberedbuttons[]{
 				{ SDL_CONTROLLER_BUTTON_A,             SDL_CONTROLLER_AXIS_INVALID },
 				{ SDL_CONTROLLER_BUTTON_B,             SDL_CONTROLLER_AXIS_INVALID },
 				{ SDL_CONTROLLER_BUTTON_X,             SDL_CONTROLLER_AXIS_INVALID },
@@ -1348,7 +1386,7 @@ public:
 		}
 
 		// add buttons with fixed item IDs
-		std::pair<SDL_GameControllerButton, input_item_id> fixedbuttons[]{
+		std::pair<SDL_GameControllerButton, input_item_id> const fixedbuttons[]{
 				{ SDL_CONTROLLER_BUTTON_BACK,       ITEM_ID_SELECT },
 				{ SDL_CONTROLLER_BUTTON_START,      ITEM_ID_START },
 				{ SDL_CONTROLLER_BUTTON_DPAD_UP,    ITEM_ID_HAT1UP },
@@ -1849,6 +1887,11 @@ public:
 
 	virtual void input_init(running_machine &machine) override
 	{
+		auto &sdlopts = downcast<sdl_options const &>(*options());
+		bool const sixaxis_mode = sdlopts.sixaxis();
+
+		if (!machine.options().debug() && sdlopts.background_input())
+			SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
 		SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
 
 		init_joystick();
@@ -1856,8 +1899,6 @@ public:
 			return;
 
 		sdl_joystick_module_base::input_init(machine);
-
-		bool const sixaxis_mode = downcast<const sdl_options *>(options())->sixaxis();
 
 		osd_printf_verbose("Joystick: Start initialization\n");
 		for (int physical_stick = 0; physical_stick < SDL_NumJoysticks(); physical_stick++)
@@ -1937,6 +1978,11 @@ public:
 
 	virtual void input_init(running_machine &machine) override
 	{
+		auto &sdlopts = downcast<sdl_options const &>(*options());
+		bool const sixaxis_mode = sdlopts.sixaxis();
+
+		if (!machine.options().debug() && sdlopts.background_input())
+			SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
 		SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
 
 		init_joystick();
@@ -1944,12 +1990,24 @@ public:
 			return;
 
 		m_initialized_game_controller = !SDL_InitSubSystem(SDL_INIT_GAMECONTROLLER);
-		if (!m_initialized_game_controller)
+		if (m_initialized_game_controller)
+		{
+			char const *const mapfile = sdlopts.controller_mapping_file();
+			if (mapfile && *mapfile && std::strcmp(mapfile, OSDOPTVAL_NONE))
+			{
+				auto const count = SDL_GameControllerAddMappingsFromFile(mapfile);
+				if (0 <= count)
+					osd_printf_verbose("Game Controller: %d controller mapping(s) added from file [%s].\n", count, mapfile);
+				else
+					osd_printf_error("Game Controller: Error adding mappings from file [%s]: %s.\n", mapfile, SDL_GetError());
+			}
+		}
+		else
+		{
 			osd_printf_warning("Could not initialize SDL Game Controller: %s.\n", SDL_GetError());
+		}
 
 		sdl_joystick_module_base::input_init(machine);
-
-		bool const sixaxis_mode = downcast<const sdl_options *>(options())->sixaxis();
 
 		osd_printf_verbose("Game Controller: Start initialization\n");
 		for (int physical_stick = 0; physical_stick < SDL_NumJoysticks(); physical_stick++)
@@ -1970,6 +2028,14 @@ public:
 				create_game_controller_device(machine, physical_stick, ctrl);
 		}
 
+		static int const joy_event_types[] = {
+				int(SDL_JOYAXISMOTION),
+				int(SDL_JOYBALLMOTION),
+				int(SDL_JOYHATMOTION),
+				int(SDL_JOYBUTTONDOWN),
+				int(SDL_JOYBUTTONUP),
+				int(SDL_JOYDEVICEADDED),
+				int(SDL_JOYDEVICEREMOVED) };
 		static int const event_types[] = {
 				int(SDL_JOYAXISMOTION),
 				int(SDL_JOYBALLMOTION),
@@ -1983,7 +2049,10 @@ public:
 				int(SDL_CONTROLLERBUTTONUP),
 				int(SDL_CONTROLLERDEVICEADDED),
 				int(SDL_CONTROLLERDEVICEREMOVED) };
-		sdl_event_manager::instance().subscribe(event_types, this);
+		if (m_initialized_game_controller)
+			sdl_event_manager::instance().subscribe(event_types, this);
+		else
+			sdl_event_manager::instance().subscribe(joy_event_types, this);
 
 		osd_printf_verbose("Game Controller: End initialization\n");
 	}
@@ -2036,6 +2105,7 @@ public:
 
 		// for devices supported by the game controller API, this is received before the corresponding SDL_JOYDEVICEADDED
 		case SDL_CONTROLLERDEVICEADDED:
+			if (m_initialized_game_controller)
 			{
 				SDL_GameController *const ctrl = SDL_GameControllerOpen(sdlevent.cdevice.which);
 				if (!ctrl)

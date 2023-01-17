@@ -13956,7 +13956,8 @@ famibox                         // 1986
 famistat                        // 1986
 
 @source:edevices/fantland.cpp
-borntofi                        // (c) International Games?
+borntofi                        // (c) International Games
+borntofia                       // (c) International Games
 borntofiv                       // (c) International Games (Vifico license)
 fantland                        // (c) 198? Electronic Devices Italy
 fantlanda                       // (c) 198? Electronic Devices Italy
@@ -17415,6 +17416,10 @@ icecold                         //
 icecoldf                        //
 zekepeak                        //
 
+@source:sfrj/idpartner.cpp
+partner1fg                      // Iskra Delta Partner 1F/G
+partnerwfg                      // Iskra Delta Partner WF/G
+
 @source:pinball/idsa.cpp
 bsktbllp                        //
 v1                              //
@@ -19618,7 +19623,10 @@ movmastr                        //
 k1003                           //
 
 @source:tiger/k28.cpp
-k28                             // Tiger Electronics
+k28
+
+@source:tiger/k28m2.cpp
+k28m2
 
 @source:robotron/k8915.cpp
 k8915                           //
@@ -19958,6 +19966,7 @@ pwrchanc
 spcpokan
 unkkonmd
 ymcapsul
+pikkaric
 
 @source:konami/quickpick5.cpp
 quickp5
@@ -36360,6 +36369,10 @@ powerstk                        // Motorola Powerstack II
 @source:stm/pp.cpp
 pp                              // STM Pied Piper Communicator 1
 
+@source:stm/stmpc.cpp
+stmpc                           // STM PC portable
+stmpcp                          // STM PC portable (prototype?)
+
 @source:zvt/pp01.cpp
 pp01                            //
 
@@ -37089,7 +37102,8 @@ rex6000                         //
 rf51w14cg                       // (c) 2003 Recreativos Franco
 
 @source:misc/rfslots8085.cpp
-unkrfslt                        //
+bbombo                          // (c) 198? Recreativos Franco
+bformula2                       // (c) 1988 Recreativos Franco
 
 @source:misc/rfslotsmcs48.cpp
 ajofrin                         // (c) 1981 Recreativos Franco
@@ -42107,7 +42121,6 @@ ts2068                          // 1983 TS2068
 uk2086                          // 1986 UK2086
 
 @source:handheld/tispeak.cpp
-k28m2                           // Tiger Electronics
 lanteach                        //
 lantrans                        //
 lantransp                       //
@@ -45162,3 +45175,6 @@ vl1
 
 @source:ddr/sprachmg.cpp
 sprachmg                        // 1985 Institut für Kosmosforschung
+
+@source:skeleton/tnshc08.cpp
+tnshc08                         // JZD Slušovice TNS HC-08

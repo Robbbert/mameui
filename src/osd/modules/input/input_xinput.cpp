@@ -44,6 +44,19 @@ RSB             Button          Button^         Button^         Button^         
 ^ optional
 
 
+At least the vast majority of controllers report 8-bit trigger
+resolution and 10-bit stick resolution, even when the physical controls
+use digital switches.  Resolution can't be used to reliably detect
+nominal analog axes controlled by switches.
+
+Some arcade sticks report unknown or gamepad subtype, but have a single
+digital joystick with a switch to select between controlling the D-pad,
+left stick and right stick.  You can't assume that all three can be
+controlled at the same time.
+
+Many controllers don't correctly report the absence of analog sticks.
+
+
 There are multiple physical button layouts for arcade sticks, for
 example:
 
@@ -68,17 +81,26 @@ Hori Real Arcade Pro VX-SA Kai, Razer Atrox
  B  X  Y  LB
 A  LT RT RB
 
-Hori Real Arcade Pro.V Kai, Mayflash F300, Mayflash F500
+Hori Real Arcade Pro.V Kai, Mad Catz EGO Arcade Stick, Mayflash F300, Mayflash F500
  X  Y  RB LB
 A  B  RT LT
 
-Mad Catz Brawl Stick
+Mad Catz WWE All Stars Brawl Stick
  X  Y  LB LT
 A  B  RB RT
 
 Arcade pads typically have six face buttons, and come with different
 layouts corresponding to the latter two arcade stick layouts, with the
-rightmost column on the shoulder buttons.
+rightmost column on the shoulder buttons.  Examples of face button
+layouts:
+
+Hori Fighting Commander OCTA, Mad Catz Street Fighter IV FightPad, PowerA FUSION Wired FightPad
+X  Y  RB
+A  B  RT
+
+Hori Pad EX Turbo 2, Mad Catz WWE All Stars BrawlPad, Mortal Kombat X Fight Pad, PDP Versus Fighting Pad
+X  Y  LB
+A  B  RB
 
 
 Dance mats usually have this layout:
@@ -99,6 +121,18 @@ A  U  B
 L     R
 Y  D  X
 
+
+Drum kits also have multiple layouts.
+
+Rock Band:
+B  Y  X  A
+    LB
+
+Guitar Hero:
+ Y  RB
+A  X  B
+   LB
+
 */
 
 #include "modules/osdmodule.h"
@@ -115,7 +149,6 @@ Y  D  X
 #include <algorithm>
 #include <cstdint>
 #include <string>
-#include <tuple>
 #include <utility>
 
 
@@ -150,6 +183,14 @@ char const *const AXIS_NAMES_FLIGHT_STICK[]{
 		"Rudder",
 		"Throttle" };
 
+char const *const AXIS_NAMES_GUITAR[]{
+		"LSX",
+		"LSY",
+		"Whammy Bar",
+		"Orientation",
+		"Pickup Selector",
+		"RT" };
+
 input_item_id const AXIS_IDS_GAMEPAD[]{
 		ITEM_ID_XAXIS,
 		ITEM_ID_YAXIS,
@@ -166,7 +207,7 @@ input_item_id const AXIS_IDS_FLIGHT_STICK[]{
 		ITEM_ID_RZAXIS,
 		ITEM_ID_ZAXIS };
 
-const char *const HAT_NAMES_GAMEPAD[]{
+char const *const HAT_NAMES_GAMEPAD[]{
 		"D-pad Up",
 		"D-pad Down",
 		"D-pad Left",
@@ -176,7 +217,7 @@ const char *const HAT_NAMES_GAMEPAD[]{
 		"POV Hat Left",
 		"POV Hat Right" };
 
-const char *const HAT_NAMES_ARCADE_STICK[]{
+char const *const HAT_NAMES_ARCADE_STICK[]{
 		"Joystick Up",
 		"Joystick Down",
 		"Joystick Left",
@@ -185,6 +226,42 @@ const char *const HAT_NAMES_ARCADE_STICK[]{
 		nullptr,
 		nullptr,
 		nullptr };
+
+char const *const BUTTON_NAMES_GAMEPAD[]{
+		"A",
+		"B",
+		"X",
+		"Y",
+		"LT",
+		"RT",
+		"LB",
+		"RB",
+		"LSB",
+		"RSB" };
+
+char const *const BUTTON_NAMES_GUITAR[]{
+		"Fret 1",
+		"Fret 2",
+		"Fret 3",
+		"Fret 4",
+		nullptr,
+		nullptr,
+		"Fret 5",
+		"RB",
+		"LSB", // supposedly "fret modifier" - how does this work?
+		"RSB" };
+
+char const *const BUTTON_NAMES_DRUMKIT[]{
+		"Green",        // floor tom
+		"Red",          // snare
+		"Blue",         // low tom
+		"Yellow",       // Rock Band high tom, Guitar Hero hi-hat
+		nullptr,
+		nullptr,
+		"Orange",       // Guitar Hero crash cymbal
+		"Bass Drum",
+		"LSB",
+		"RSB" };
 
 
 //============================================================
@@ -272,11 +349,11 @@ private:
 		AXIS_TOTAL
 	};
 
-	uint32_t const            m_player_index;
-	XINPUT_CAPABILITIES const m_capabilities;
-	XINPUT_STATE              m_xinput_state;
-	uint8_t                   m_switches[SWITCH_TOTAL];
-	int32_t                   m_axes[AXIS_TOTAL];
+	uint32_t const      m_player_index;
+	XINPUT_CAPABILITIES m_capabilities;
+	XINPUT_STATE        m_xinput_state;
+	uint8_t             m_switches[SWITCH_TOTAL];
+	int32_t             m_axes[AXIS_TOTAL];
 
 	std::shared_ptr<xinput_api_helper> m_xinput_helper;
 };
@@ -347,7 +424,7 @@ void xinput_joystick_device::reset()
 void xinput_joystick_device::configure()
 {
 	// TODO: don't add axes not present in capabilities
-	// TODO: proper support for dance mat, guitar and drum kit controllers
+	// TODO: proper support for dance mat controllers
 
 	// default characteristics for a gamepad
 	char const *type_name = "unsupported";
@@ -355,9 +432,12 @@ void xinput_joystick_device::configure()
 	bool lt_rt_button = false;
 	bool lt_rt_fullaxis = false;
 	bool rstick_hat = false;
+	bool button_order_guitar = false;
+	bool button_order_drumkit = false;
 	char const *const *axis_names = AXIS_NAMES_GAMEPAD;
 	input_item_id const *axis_ids = AXIS_IDS_GAMEPAD;
 	char const *const *hat_names = HAT_NAMES_GAMEPAD;
+	char const *const *button_names = BUTTON_NAMES_GAMEPAD;
 
 	// consider the device type to decide how to map controls
 	switch (m_capabilities.Type)
@@ -395,9 +475,14 @@ void xinput_joystick_device::configure()
 		case XINPUT_DEVSUBTYPE_GUITAR_ALTERNATE:
 		case XINPUT_DEVSUBTYPE_GUITAR_BASS:
 			subtype_name = "guitar";
+			button_order_guitar = true;
+			axis_names = AXIS_NAMES_GUITAR;
+			button_names = BUTTON_NAMES_GUITAR;
 			break;
 		case XINPUT_DEVSUBTYPE_DRUM_KIT:
 			subtype_name = "drum kit";
+			button_order_drumkit = true;
+			button_names = BUTTON_NAMES_DRUMKIT;
 			break;
 		case XINPUT_DEVSUBTYPE_ARCADE_PAD:
 			subtype_name = "arcade pad";
@@ -407,16 +492,24 @@ void xinput_joystick_device::configure()
 		break;
 	}
 
+	// detect invalid axis resolutions
+	bool const ltcap_bad = m_capabilities.Gamepad.bLeftTrigger && count_leading_zeros_32(m_capabilities.Gamepad.bLeftTrigger << 24);
+	bool const rtcap_bad = m_capabilities.Gamepad.bRightTrigger && count_leading_zeros_32(m_capabilities.Gamepad.bRightTrigger << 24);
+	bool const lsxcap_bad = m_capabilities.Gamepad.sThumbLX && count_leading_zeros_32(m_capabilities.Gamepad.sThumbLX << 16);
+	bool const lsycap_bad = m_capabilities.Gamepad.sThumbLY && count_leading_zeros_32(m_capabilities.Gamepad.sThumbLY << 16);
+	bool const rsxcap_bad = m_capabilities.Gamepad.sThumbRX && count_leading_zeros_32(m_capabilities.Gamepad.sThumbRX << 16);
+	bool const rsycap_bad = m_capabilities.Gamepad.sThumbRY && count_leading_zeros_32(m_capabilities.Gamepad.sThumbRY << 16);
+
 	// log some diagnostic information
 	osd_printf_verbose(
-			"Configuring XInput player %d type 0x%02X (%s) sub type 0x%02X (%s)\n",
+			"XInput: Configuring player %d type 0x%02X (%s) sub type 0x%02X (%s).\n",
 			m_player_index + 1,
 			m_capabilities.Type,
 			type_name,
 			m_capabilities.SubType,
 			subtype_name);
 	osd_printf_verbose(
-			"XInput switch capabilities A=%d B=%d X=%d Y=%d LB=%d RB=%d LSB=%d RSB=%d Start=%d Back=%d Up=%d Down=%d Left=%d Right=%d\n",
+			"XInput: Switch capabilities A=%d B=%d X=%d Y=%d LB=%d RB=%d LSB=%d RSB=%d Start=%d Back=%d Up=%d Down=%d Left=%d Right=%d.\n",
 			(m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_A) ? 1 : 0,
 			(m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_B) ? 1 : 0,
 			(m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_X) ? 1 : 0,
@@ -432,19 +525,50 @@ void xinput_joystick_device::configure()
 			(m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_DPAD_LEFT) ? 1 : 0,
 			(m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_DPAD_RIGHT) ? 1 : 0);
 	osd_printf_verbose(
-			"XInput axis capabilities LT=0x%02X (%d-bit) RT=0x%02X (%d-bit) LSX=0x%04X (%d-bit) LSY=0x%04X (%d-bit) RSX=0x%04X (%d-bit) RSY=0x%04X (%d-bit)\n",
+			"XInput: Axis capabilities LT=0x%02X (%d-bit%s) RT=0x%02X (%d-bit%s) LSX=0x%04X (%d-bit%s) LSY=0x%04X (%d-bit%s) RSX=0x%04X (%d-bit%s) RSY=0x%04X (%d-bit%s).\n",
 			m_capabilities.Gamepad.bLeftTrigger,
 			count_leading_ones_32(uint32_t(m_capabilities.Gamepad.bLeftTrigger) << 24),
+			ltcap_bad ? ", invalid" : "",
 			m_capabilities.Gamepad.bRightTrigger,
 			count_leading_ones_32(uint32_t(m_capabilities.Gamepad.bRightTrigger) << 24),
+			rtcap_bad ? ", invalid" : "",
 			m_capabilities.Gamepad.sThumbLX,
 			count_leading_ones_32(uint32_t(uint16_t(m_capabilities.Gamepad.sThumbLX)) << 16),
+			lsxcap_bad ? ", invalid" : "",
 			m_capabilities.Gamepad.sThumbLY,
 			count_leading_ones_32(uint32_t(uint16_t(m_capabilities.Gamepad.sThumbLY)) << 16),
+			lsycap_bad ? ", invalid" : "",
 			m_capabilities.Gamepad.sThumbRX,
 			count_leading_ones_32(uint32_t(uint16_t(m_capabilities.Gamepad.sThumbRX)) << 16),
+			rsxcap_bad ? ", invalid" : "",
 			m_capabilities.Gamepad.sThumbRY,
-			count_leading_ones_32(uint32_t(uint16_t(m_capabilities.Gamepad.sThumbRY)) << 16));
+			count_leading_ones_32(uint32_t(uint16_t(m_capabilities.Gamepad.sThumbRY)) << 16),
+			rsycap_bad ? ", invalid" : "");
+
+	// ignore capabilities if invalid
+	bool ignore_caps = false;
+	if (ltcap_bad || rtcap_bad || lsxcap_bad || lsycap_bad || rsxcap_bad || rsycap_bad)
+	{
+		// Retro-Bit Sega Saturn Control Pad reports garbage for axis resolutions and absence of several buttons
+		osd_printf_verbose("XInput: Ignoring invalid capabilities (invalid axis resolution).\n");
+		ignore_caps = true;
+	}
+	else if (!m_capabilities.Gamepad.wButtons && !m_capabilities.Gamepad.bLeftTrigger && !m_capabilities.Gamepad.bRightTrigger && !m_capabilities.Gamepad.sThumbLX && !m_capabilities.Gamepad.sThumbLY && !m_capabilities.Gamepad.sThumbRX && !m_capabilities.Gamepad.sThumbRY)
+	{
+		// 8BitDo SN30 Pro V1 reports no controls at all, which would be completely useless
+		osd_printf_verbose("XInput: Ignoring invalid capabilities (no controls reported).\n");
+		ignore_caps = true;
+	}
+	if (ignore_caps)
+	{
+		m_capabilities.Gamepad.wButtons = 0xf3ff;
+		m_capabilities.Gamepad.bLeftTrigger = 0xff;
+		m_capabilities.Gamepad.bRightTrigger = 0xff;
+		m_capabilities.Gamepad.sThumbLX = s16(u16(0xffc0));
+		m_capabilities.Gamepad.sThumbLY = s16(u16(0xffc0));
+		m_capabilities.Gamepad.sThumbRX = s16(u16(0xffc0));
+		m_capabilities.Gamepad.sThumbRY = s16(u16(0xffc0));
+	}
 
 	// add full-precision axes
 	for (unsigned i = 0; ((rstick_hat ? AXIS_LSY : AXIS_RSY) - AXIS_LSX) >= i; ++i)
@@ -492,27 +616,38 @@ void xinput_joystick_device::configure()
 	}
 
 	// add buttons
-	std::tuple<unsigned, char const *, bool> const button_caps[]{
-			{ SWITCH_A,   "A",   (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_A) != 0 },
-			{ SWITCH_B,   "B",   (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_B) != 0 },
-			{ SWITCH_X,   "X",   (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_X) != 0 },
-			{ SWITCH_Y,   "Y",   (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_Y) != 0 },
-			{ SWITCH_LT,  "LT",  lt_rt_button && m_capabilities.Gamepad.bLeftTrigger },
-			{ SWITCH_RT,  "RT",  lt_rt_button && m_capabilities.Gamepad.bRightTrigger },
-			{ SWITCH_LB,  "LB",  (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_SHOULDER) != 0 },
-			{ SWITCH_RB,  "RB",  (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_SHOULDER) != 0 },
-			{ SWITCH_LSB, "LSB", (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_THUMB) != 0 },
-			{ SWITCH_RSB, "RSB", (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_THUMB) != 0 } };
-	input_item_id button_id = ITEM_ID_BUTTON1;
-	for (auto [i, name, supported] : button_caps)
+	std::pair<unsigned, bool> button_caps[]{
+			{ SWITCH_A,   (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_A) != 0 },
+			{ SWITCH_B,   (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_B) != 0 },
+			{ SWITCH_X,   (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_X) != 0 },
+			{ SWITCH_Y,   (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_Y) != 0 },
+			{ SWITCH_LT,  lt_rt_button && m_capabilities.Gamepad.bLeftTrigger },
+			{ SWITCH_RT,  lt_rt_button && m_capabilities.Gamepad.bRightTrigger },
+			{ SWITCH_LB,  (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_SHOULDER) != 0 },
+			{ SWITCH_RB,  (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_SHOULDER) != 0 },
+			{ SWITCH_LSB, (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_THUMB) != 0 },
+			{ SWITCH_RSB, (m_capabilities.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_THUMB) != 0 } };
+	if (button_order_guitar)
 	{
+		using std::swap;
+		swap(button_caps[2], button_caps[3]);
+	}
+	if (button_order_drumkit)
+	{
+		using std::swap;
+		swap(button_caps[6], button_caps[7]);
+	}
+	input_item_id button_id = ITEM_ID_BUTTON1;
+	for (unsigned i = 0; std::size(button_caps) > i; ++i)
+	{
+		auto const [offset, supported] = button_caps[i];
 		if (supported)
 		{
 			device()->add_item(
-					name,
+					button_names[i],
 					button_id++,
 					generic_button_get_state<uint8_t>,
-					&m_switches[i]);
+					&m_switches[offset]);
 		}
 	}
 
@@ -609,7 +744,7 @@ int xinput_api_helper::initialize()
 
 	if (!XInputGetState || !XInputGetCapabilities)
 	{
-		osd_printf_verbose("Could not find XInput. Please try to reinstall DirectX runtime package.\n");
+		osd_printf_error("XInput: Could not find API functions.\n");
 		return -1;
 	}
 
