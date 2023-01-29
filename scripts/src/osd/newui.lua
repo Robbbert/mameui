@@ -151,6 +151,7 @@ project ("osd_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/osd/osdepend.h",
 		MAME_DIR .. "src/osd/winui/newui.cpp",
 		MAME_DIR .. "src/osd/windows/winmain.cpp",
+		MAME_DIR .. "src/osd/windows/winopts.cpp",
 		MAME_DIR .. "src/osd/modules/debugger/win/consolewininfo.cpp",
 		MAME_DIR .. "src/osd/modules/debugger/win/consolewininfo.h",
 		MAME_DIR .. "src/osd/modules/debugger/win/debugbaseinfo.cpp",
