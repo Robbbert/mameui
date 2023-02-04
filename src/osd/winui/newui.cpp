@@ -2997,7 +2997,7 @@ static void set_speed(running_machine &machine, int speed)
 //============================================================
 //  win_toggle_menubar
 //============================================================
-
+#if 0
 static void win_toggle_menubar(void)
 {
 	LONG width_diff = 0;
@@ -3006,12 +3006,12 @@ static void win_toggle_menubar(void)
 	HWND hwnd = 0;
 	HMENU menu = 0;
 
-	for (auto window : osd_common_t::s_window_list)
+	for (auto const &window : osd_common_t::window_list())
 	{
 		RECT before_rect = { 100, 100, 200, 200 };
 		RECT after_rect = { 100, 100, 200, 200 };
 
-		hwnd = std::static_pointer_cast<win_window_info>(window)->platform_window();
+		hwnd = dynamic_cast<win_window_info &>(*window).platform_window();
 
 		// get current menu
 		menu = GetMenu(hwnd);
@@ -3047,7 +3047,7 @@ static void win_toggle_menubar(void)
 		RedrawWindow(hwnd, NULL, NULL, 0);
 	}
 }
-
+#endif
 
 
 //============================================================
@@ -3373,7 +3373,7 @@ static bool invoke_command(HWND wnd, UINT command)
 			break;
 
 		case ID_FILE_TOGGLEMENUBAR:
-			win_toggle_menubar();
+			//win_toggle_menubar();
 			break;
 
 		case ID_FRAMESKIP_AUTO:
