@@ -19,6 +19,7 @@
 
 // MAME/MAMEUI headers
 #include "emu.h"
+#include "main.h"
 #include "ui/info.h"
 #include "drivenum.h"
 #include "mui_opts.h"

@@ -24,6 +24,7 @@
 #include "drivenum.h"
 #include "emu_opts.h"
 #include "path.h"
+#include "main.h"
 
 
 static emu_options mameopts; // core options
