@@ -93,7 +93,11 @@ public:
 		m_uart_clock(*this, "uart_clock"),
 		m_nvram(*this, "nvram"),
 		m_pcmcia(*this, "pcmcia"),
-		m_mem_view{ {*this, "block0"}, {*this, "block1"}, {*this, "block2"}, {*this, "block3"} },
+		m_memv0(*this, "block0"),
+		m_memv1(*this, "block1"),
+		m_memv2(*this, "block2"),
+		m_memv3(*this, "block3"),
+		//m_mem_view{ {*this, "block0"}, {*this, "block1"}, {*this, "block2"}, {*this, "block3"} },
 		m_keyboard(*this, "line%d", 0U),
 		m_battery(*this, "battery")
 	{
@@ -137,7 +141,11 @@ protected:
 	required_device<clock_device> m_uart_clock;
 	required_device<nvram_device> m_nvram;
 	required_device<pccard_slot_device> m_pcmcia;
-	memory_view m_mem_view[4];
+	//memory_view m_mem_view[4];
+	memory_view m_memv0;
+	memory_view m_memv1;
+	memory_view m_memv2;
+	memory_view m_memv3;
 	required_ioport_array<10> m_keyboard;
 	required_ioport m_battery;
 
@@ -263,26 +271,26 @@ private:
 
 void nc_state::mem_map(address_map &map)
 {
-	map(0x0000, 0x3fff).view(m_mem_view[0]);
-	m_mem_view[0][0](0x0000, 0x3fff).bankr(m_rombank[0]);
-	m_mem_view[0][1](0x0000, 0x3fff).bankrw(m_rambank[0]);
-	m_mem_view[0][2](0x0000, 0x3fff).rw(FUNC(nc_state::pcmcia_r<0>), FUNC(nc_state::pcmcia_w<0>));
-	m_mem_view[0][3](0x0000, 0x3fff).bankr(m_rombank[0]);
-	map(0x4000, 0x7fff).view(m_mem_view[1]);
-	m_mem_view[1][0](0x4000, 0x7fff).bankr(m_rombank[1]);
-	m_mem_view[1][1](0x4000, 0x7fff).bankrw(m_rambank[1]);
-	m_mem_view[1][2](0x4000, 0x7fff).rw(FUNC(nc_state::pcmcia_r<1>), FUNC(nc_state::pcmcia_w<1>));
-	m_mem_view[1][3](0x4000, 0x7fff).bankr(m_rombank[1]);
-	map(0x8000, 0xbfff).view(m_mem_view[2]);
-	m_mem_view[2][0](0x8000, 0xbfff).bankr(m_rombank[2]);
-	m_mem_view[2][1](0x8000, 0xbfff).bankrw(m_rambank[2]);
-	m_mem_view[2][2](0x8000, 0xbfff).rw(FUNC(nc_state::pcmcia_r<2>), FUNC(nc_state::pcmcia_w<2>));
-	m_mem_view[2][3](0x8000, 0xbfff).bankr(m_rombank[2]);
-	map(0xc000, 0xffff).view(m_mem_view[3]);
-	m_mem_view[3][0](0xc000, 0xffff).bankr(m_rombank[3]);
-	m_mem_view[3][1](0xc000, 0xffff).bankrw(m_rambank[3]);
-	m_mem_view[3][2](0xc000, 0xffff).rw(FUNC(nc_state::pcmcia_r<3>), FUNC(nc_state::pcmcia_w<3>));
-	m_mem_view[3][3](0xc000, 0xffff).bankr(m_rombank[3]);
+	map(0x0000, 0x3fff).view(m_memv0);
+	m_memv0[0](0x0000, 0x3fff).bankr(m_rombank[0]);
+	m_memv0[1](0x0000, 0x3fff).bankrw(m_rambank[0]);
+	m_memv0[2](0x0000, 0x3fff).rw(FUNC(nc_state::pcmcia_r<0>), FUNC(nc_state::pcmcia_w<0>));
+	m_memv0[3](0x0000, 0x3fff).bankr(m_rombank[0]);
+	map(0x4000, 0x7fff).view(m_memv1);
+	m_memv1[0](0x4000, 0x7fff).bankr(m_rombank[1]);
+	m_memv1[1](0x4000, 0x7fff).bankrw(m_rambank[1]);
+	m_memv1[2](0x4000, 0x7fff).rw(FUNC(nc_state::pcmcia_r<1>), FUNC(nc_state::pcmcia_w<1>));
+	m_memv1[3](0x4000, 0x7fff).bankr(m_rombank[1]);
+	map(0x8000, 0xbfff).view(m_memv2);
+	m_memv2[0](0x8000, 0xbfff).bankr(m_rombank[2]);
+	m_memv2[1](0x8000, 0xbfff).bankrw(m_rambank[2]);
+	m_memv2[2](0x8000, 0xbfff).rw(FUNC(nc_state::pcmcia_r<2>), FUNC(nc_state::pcmcia_w<2>));
+	m_memv2[3](0x8000, 0xbfff).bankr(m_rombank[2]);
+	map(0xc000, 0xffff).view(m_memv3);
+	m_memv3[0](0xc000, 0xffff).bankr(m_rombank[3]);
+	m_memv3[1](0xc000, 0xffff).bankrw(m_rambank[3]);
+	m_memv3[2](0xc000, 0xffff).rw(FUNC(nc_state::pcmcia_r<3>), FUNC(nc_state::pcmcia_w<3>));
+	m_memv3[3](0xc000, 0xffff).bankr(m_rombank[3]);
 }
 
 void nc100_state::io_map(address_map &map)
@@ -1193,7 +1201,15 @@ void nc_state::memory_management_w(offs_t offset, uint8_t data)
 
 	m_mmc[offset] = data;
 
-	m_mem_view[offset].select(BIT(m_mmc[offset], 6, 2));
+	u8 t = BIT(m_mmc[offset], 6, 2);
+	switch (offset)
+	{
+		case 0: m_memv0.select(t);break;
+		case 1: m_memv1.select(t);break;
+		case 2: m_memv2.select(t);break;
+		case 3: m_memv3.select(t);break;
+	}
+	//m_mem_view[offset].select(BIT(m_mmc[offset], 6, 2));
 	m_rombank[offset]->set_entry(m_mmc[offset] & 0x3f & (m_rom_banks - 1));
 	m_rambank[offset]->set_entry(m_mmc[offset] & 0x3f & (m_ram_banks - 1));
 }
