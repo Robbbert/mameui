@@ -499,28 +499,28 @@ BEGIN
     CTEXT           "Copyright (C) 1997-2023 MAME Contributors",IDC_STATIC,147,29,142,10,NOT WS_GROUP
     CTEXT           "MESSUI based on MAMEUI version by",IDC_STATIC,147,51,142,10,NOT WS_GROUP
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,147,44,142,1
-    CTEXT           "Christopher Kirmse and the MAMEUI team",IDC_STATIC,147,62,142,9,NOT WS_GROUP
-    CTEXT           "Additional MAMEUI code by",IDC_STATIC,147,74,142,9
+    CTEXT           "Christopher Kirmse and the former MAMEUI team",IDC_STATIC,147,62,142,9,NOT WS_GROUP
+    CTEXT           "Additional code by",IDC_STATIC,147,74,142,9
     CTEXT           "Mike Haaland, Andrew Kirmse, Jeff Miller",IDC_STATIC,147,85,142,9
     CTEXT           "John Hardy IV and Michael Soderstrom",IDC_STATIC,147,96,142,9
     CONTROL         "",IDC_ABOUT,"Static",SS_BITMAP | SS_SUNKEN,7,7,16,14
 END
 #else
-IDD_ABOUT DIALOG DISCARDABLE 0, 0, 296, 129
+IDD_ABOUT DIALOG DISCARDABLE 0, 0, 356, 129
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "About MAMEUI"
+CAPTION "About MAMEUI Classic"
 FONT 8, "Tahoma"
 BEGIN
-    DEFPUSHBUTTON   "&OK",IDOK,200,109,50,14,WS_GROUP
-    CTEXT           "MAME Version 0",IDC_VERSION,147,7,142,11,NOT WS_GROUP
-    CTEXT           "Copyright (C) 1997-2023 MAME Contributors",IDC_STATIC,147,18,142,10,NOT WS_GROUP
-    CTEXT           "MAMEUI developed by",IDC_STATIC,147,42,142,10,NOT WS_GROUP
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,147,35,142,1
-    CTEXT           "Christopher Kirmse and the MAMEUI team",IDC_STATIC,147,51,142,9,NOT WS_GROUP
-    CTEXT           "Additional MAMEUI code by",IDC_STATIC,147,62,142,9
-    CTEXT           "Mike Haaland, Andrew Kirmse, Jeff Miller,",IDC_STATIC,147,74,142,9
-    CTEXT           "John Hardy IV and Michael Soderstrom.",IDC_STATIC,147,85,142,9
-    CTEXT           "Maintained by Robbbert.",IDC_STATIC,147,96,142,9
+    DEFPUSHBUTTON   "&OK",IDOK,260,109,50,14,WS_GROUP
+    CTEXT           "MAME Version 0",IDC_VERSION,147,7,200,11,NOT WS_GROUP
+    CTEXT           "Copyright (C) 1997-2023 MAME Contributors",IDC_STATIC,147,18,200,10,NOT WS_GROUP
+    CTEXT           "MAMEUI Classic developed by",IDC_STATIC,147,42,200,10,NOT WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,147,35,200,1
+    CTEXT           "Christopher Kirmse and the former MAMEUI team",IDC_STATIC,147,51,200,9,NOT WS_GROUP
+    CTEXT           "Additional code by",IDC_STATIC,147,62,200,9
+    CTEXT           "Mike Haaland, Andrew Kirmse, Jeff Miller,",IDC_STATIC,147,74,200,9
+    CTEXT           "John Hardy IV and Michael Soderstrom.",IDC_STATIC,147,85,200,9
+    CTEXT           "Maintained by Robbbert.",IDC_STATIC,147,96,200,9
     CONTROL         "",IDC_ABOUT,"Static",SS_BITMAP | SS_SUNKEN,7,7,16,14
 END
 #endif

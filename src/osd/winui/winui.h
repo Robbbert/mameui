@@ -18,9 +18,9 @@
 #define MUI_INI_FILENAME "MAMEUI.ini"
 
 #ifdef PTR64
-#define MAMEUINAME MAMENAME "UI"
+#define MAMEUINAME MAMENAME "UI64 Classic"
 #else
-#define MAMEUINAME MAMENAME "UI32"
+#define MAMEUINAME MAMENAME "UI32 Classic"
 #endif
 
 #define SEARCH_PROMPT "<search here>"
