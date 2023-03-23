@@ -320,8 +320,6 @@ uint32_t GetDriverCacheUpper(uint32_t driver_index);
 void SetDriverCache(uint32_t driver_index, uint32_t val);
 BOOL RequiredDriverCache(void);
 void ForceRebuild(void);
-BOOL DriverIsComputer(uint32_t driver_index);
-BOOL DriverIsConsole(uint32_t driver_index);
 BOOL DriverIsModified(uint32_t driver_index);
 BOOL DriverIsImperfect(uint32_t driver_index);
 string GetGameName(uint32_t driver_index);

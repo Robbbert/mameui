@@ -58,6 +58,9 @@ void mame_options::parse_standard_inis(emu_options &options, std::ostream &error
 		else
 			parse_one_ini(options, "horizont", OPTION_PRIORITY_ORIENTATION_INI, &error_stream);
 
+		if ((cursystem->flags & machine_flags::MASK_TYPE) == machine_flags::TYPE_ARCADE)      // MAMEUI Robbbert 2023-03-23
+			parse_one_ini(options, "arcade", OPTION_PRIORITY_ORIENTATION_INI, &error_stream);
+
 		machine_config config(*cursystem, options);
 		for (const screen_device &device : screen_device_enumerator(config.root_device()))
 		{

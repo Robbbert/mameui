@@ -31,6 +31,7 @@ struct machine_flags
 	enum type : u32
 	{
 		MASK_ORIENTATION    = 0x0000'0007,
+		MASK_TYPE           = 0x0000'0038,   // MAMEUI Robbbert 2023-03-23
 
 		FLIP_X              = 0x0000'0001,
 		FLIP_Y              = 0x0000'0002,
@@ -40,6 +41,7 @@ struct machine_flags
 		ROT180              = FLIP_X | FLIP_Y,
 		ROT270              = FLIP_Y | SWAP_XY,
 
+		TYPE_ARCADE         = 0x0000'0008,   //MAMEUI Robbbert 2023-03-23
 		NOT_WORKING         = 0x0000'0040,
 		SUPPORTS_SAVE       = 0x0000'0080,  // system supports save states
 		NO_COCKTAIL         = 0x0000'0100,  // screen flip support is missing
@@ -56,6 +58,7 @@ struct machine_flags
 DECLARE_ENUM_BITWISE_OPERATORS(machine_flags::type);
 
 
+constexpr u64 MACHINE_TYPE_ARCADE = machine_flags::TYPE_ARCADE; // MAMEUI Robbbert 2023-03-23
 /// \addtogroup machinedef
 /// \{
 /// \name System emulation status constants
@@ -239,6 +242,7 @@ driver_device_creator< \
 ///   all systems implemented using the class in the class itself to
 ///   avoid repetition.
 /// \sa GAMEL SYST
+    // MAMEUI Robbbert 2023-03-23
 #define GAME(YEAR, NAME, PARENT, MACHINE, INPUT, CLASS, INIT, MONITOR, COMPANY, FULLNAME, FLAGS) \
 GAME_DRIVER_TRAITS(NAME, FULLNAME)                                      \
 extern game_driver const GAME_NAME(NAME)                                \
@@ -253,7 +257,7 @@ extern game_driver const GAME_NAME(NAME)                                \
 	ROM_NAME(NAME),                                                     \
 	nullptr,                                                            \
 	nullptr,                                                            \
-	machine_flags::type(u32((MONITOR) | (FLAGS))),                      \
+	machine_flags::type(u32((MONITOR) | (FLAGS) | MACHINE_TYPE_ARCADE)),                      \
 	#NAME                                                               \
 };
 
@@ -311,6 +315,7 @@ extern game_driver const GAME_NAME(NAME)                                \
 /// \param LAYOUT An #internal_layout structure providing additional
 ///   internal artwork for the system.
 /// \sa GAME SYST
+      // MAMEUI Robbbert 2023-03-23
 #define GAMEL(YEAR, NAME, PARENT, MACHINE, INPUT, CLASS, INIT, MONITOR, COMPANY, FULLNAME, FLAGS, LAYOUT) \
 GAME_DRIVER_TRAITS(NAME, FULLNAME)                                      \
 extern game_driver const GAME_NAME(NAME)                                \
@@ -325,7 +330,7 @@ extern game_driver const GAME_NAME(NAME)                                \
 	ROM_NAME(NAME),                                                     \
 	nullptr,                                                            \
 	&LAYOUT,                                                            \
-	machine_flags::type(u32((MONITOR) | (FLAGS))),                      \
+	machine_flags::type(u32((MONITOR) | (FLAGS) | MACHINE_TYPE_ARCADE)),                      \
 	#NAME                                                               \
 };
 

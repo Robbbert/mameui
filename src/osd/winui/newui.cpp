@@ -2729,7 +2729,7 @@ static void prepare_menus(HWND wnd)
 	set_command_state(menu_bar, ID_OPTIONS_ANALOGCONTROLS, has_analog ? MFS_ENABLED : MFS_GRAYED);
 	set_command_state(menu_bar, ID_FILE_FULLSCREEN, !is_windowed() ? MFS_CHECKED : MFS_ENABLED);
 	set_command_state(menu_bar, ID_OPTIONS_TOGGLEFPS, mame_machine_manager::instance()->ui().show_fps() ? MFS_CHECKED : MFS_ENABLED);
-	set_command_state(menu_bar, ID_FILE_UIACTIVE, has_keyboard ? (window->machine().ui_active() ? MFS_CHECKED : MFS_ENABLED): MFS_CHECKED | MFS_GRAYED);
+	set_command_state(menu_bar, ID_FILE_UIACTIVE, has_keyboard ? (mame_machine_manager::instance()->ui().ui_active() ? MFS_CHECKED : MFS_ENABLED): MFS_CHECKED | MFS_GRAYED);
 
 	set_command_state(menu_bar, ID_KEYBOARD_EMULATED, has_keyboard ? (!window->machine().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
 	set_command_state(menu_bar, ID_KEYBOARD_NATURAL, (has_keyboard && window->machine().natkeyboard().can_post()) ? (window->machine().natkeyboard().in_use() ? MFS_CHECKED : MFS_ENABLED): MFS_GRAYED);
@@ -3285,7 +3285,7 @@ static bool invoke_command(HWND wnd, UINT command)
 			break;
 
 		case ID_FILE_UIACTIVE:
-			window->machine().set_ui_active(!window->machine().ui_active());
+			mame_machine_manager::instance()->ui().set_ui_active(!mame_machine_manager::instance()->ui().ui_active());
 			break;
 
 		case ID_FILE_EXIT_NEWUI:

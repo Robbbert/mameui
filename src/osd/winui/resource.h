@@ -88,6 +88,7 @@
 #define IDI_CHECKMARK                   155
 #define IDI_HEADER_UP                   156
 #define IDI_HEADER_DOWN                 157
+#define IDI_FOLDER_ARCADE               158
 //#define IDI_AUDIT_PASS                  160
 //#define IDI_AUDIT_FAIL                  161
 //#define IDI_SYSTRAY                     162
@@ -528,8 +529,6 @@
 #define IDC_SWTAB                       2001
 #define IDC_SWLIST                      2002
 #define IDC_SWDEVVIEW                   2003
-#define IDC_FILTER_COMPUTER             2004
-#define IDC_FILTER_CONSOLE              2005
 #define IDC_FILTER_MODIFIED             2006
 #define IDC_RAM_COMBOBOX                2008
 #define IDC_RAM_CAPTION                 2009
