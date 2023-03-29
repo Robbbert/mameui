@@ -255,18 +255,12 @@ public:
 			for (uint32_t i = 0; i < m_total; i++)
 			{
 				uint32_t t = 0;
-				// BITS 0,1 = arcade, console, computer, other
+				// BITS 0,1 = arcade, non-arcade, unused, unused
 				drv = &driver_list::driver(i);
 				machine_config config(*drv, dummy);
 				ui::machine_static_info const info(ui_opts, config);
-				if ((info.machine_flags() & machine_flags::MASK_TYPE) == machine_flags::TYPE_CONSOLE)
+				if ((info.machine_flags() & machine_flags::MASK_TYPE) != machine_flags::TYPE_ARCADE)
 					t = 1;
-				else
-				if ((info.machine_flags() & machine_flags::MASK_TYPE) == machine_flags::TYPE_COMPUTER)
-					t = 2;
-				else
-				if ((info.machine_flags() & machine_flags::MASK_TYPE) == machine_flags::TYPE_OTHER)
-					t = 3;
 				m_cache = t;
 				// BIT 2 = SWAP_XY
 				t = (drv->flags & ORIENTATION_SWAP_XY) ? 0x0004 : 0;

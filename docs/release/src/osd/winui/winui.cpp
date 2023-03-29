@@ -859,7 +859,7 @@ extern const LPCTSTR column_names[COLUMN_MAX] =
 class mameui_output_error : public osd_output
 {
 public:
-	virtual void output_callback(osd_output_channel channel, const util::format_argument_pack<std::ostream> &args) override
+	virtual void output_callback(osd_output_channel channel, const util::format_argument_pack<char> &args) override
 	{
 		std::ostringstream sbuffer;
 		util::stream_format(sbuffer, args);
@@ -893,11 +893,11 @@ public:
 		if (s_action)
 		{
 			// if we are in fullscreen mode, go to windowed mode
-			if ((video_config.windowed == 0) && !osd_common_t::s_window_list.empty())
+			if ((video_config.windowed == 0) && !osd_common_t::window_list().empty())
 				winwindow_toggle_full_screen();
 
-			win_message_box_utf8(!osd_common_t::s_window_list.empty() ?
-				std::static_pointer_cast<win_window_info>(osd_common_t::s_window_list.front())->platform_window() :
+			win_message_box_utf8(!osd_common_t::window_list().empty() ?
+				dynamic_cast<win_window_info &>(*osd_common_t::window_list().front()).platform_window() :
 					hMain, buffer, MAMEUINAME, (BIT(s_action, 0) ? MB_ICONINFORMATION : MB_ICONERROR) | MB_OK);
 		}
 

@@ -19,6 +19,7 @@
 
 // MAME/MAMEUI headers
 #include "emu.h"
+#include "main.h"
 #include "ui/info.h"
 #include "drivenum.h"
 #include "mui_opts.h"
@@ -1589,18 +1590,6 @@ BOOL RequiredDriverCache(void)
 void ForceRebuild(void)
 {
 	game_opts.force_rebuild();
-}
-
-BOOL DriverIsComputer(uint32_t driver_index)
-{
-	uint32_t cache = game_opts.cache_lower(driver_index) & 3;
-	return (cache == 2) ? true : false;
-}
-
-BOOL DriverIsConsole(uint32_t driver_index)
-{
-	uint32_t cache = game_opts.cache_lower(driver_index) & 3;
-	return (cache == 1) ? true : false;
 }
 
 BOOL DriverIsModified(uint32_t driver_index)

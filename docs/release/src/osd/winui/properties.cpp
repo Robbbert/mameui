@@ -589,7 +589,7 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 	if (!pspage)
 		return;
 
-	// Get the description use as the dialog caption.
+	// The title of the entire properties dialog (it mysteriously appends "Properties" to these descriptions).
 	TCHAR* t_description = 0;
 	switch( opt_type )
 	{
@@ -602,23 +602,20 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 	case OPTIONS_GLOBAL:
 		t_description = ui_wstring_from_utf8("Default Settings");
 		break;
-	case OPTIONS_COMPUTER:
-		t_description = ui_wstring_from_utf8("Default properties for computers");
-		break;
-	case OPTIONS_CONSOLE:
-		t_description = ui_wstring_from_utf8("Default properties for consoles");
+	case OPTIONS_ARCADE:
+		t_description = ui_wstring_from_utf8("Arcade game");
 		break;
 	case OPTIONS_HORIZONTAL:
-		t_description = ui_wstring_from_utf8("Default properties for horizontal screens");
+		t_description = ui_wstring_from_utf8("Horizontal screens");
 		break;
 	case OPTIONS_RASTER:
-		t_description = ui_wstring_from_utf8("Default properties for raster machines");
+		t_description = ui_wstring_from_utf8("Raster machines");
 		break;
 	case OPTIONS_VECTOR:
-		t_description = ui_wstring_from_utf8("Default properties for vector machines");
+		t_description = ui_wstring_from_utf8("Vector machines");
 		break;
 	case OPTIONS_VERTICAL:
-		t_description = ui_wstring_from_utf8("Default properties for vertical screens");
+		t_description = ui_wstring_from_utf8("Vertical screens");
 		break;
 	default:
 		return;
@@ -991,7 +988,7 @@ static char *GameInfoManufactured(UINT nIndex)
 	return buffer;
 }
 
-/* Build Game title string */
+// The title on each property page
 char *GameInfoTitle(OPTIONS_TYPE opt_type, UINT nIndex)
 {
 	static char buf[1024];
@@ -1004,11 +1001,8 @@ char *GameInfoTitle(OPTIONS_TYPE opt_type, UINT nIndex)
 	case OPTIONS_SOURCE:
 		sprintf(buf, "Properties for machines in %s", GetDriverFilename(nIndex));
 		break;
-	case OPTIONS_COMPUTER:
-		sprintf(buf, "Default properties for computers");
-		break;
-	case OPTIONS_CONSOLE:
-		sprintf(buf, "Default properties for consoles");
+	case OPTIONS_ARCADE:
+		sprintf(buf, "Default properties for arcade games");
 		break;
 	case OPTIONS_HORIZONTAL:
 		sprintf(buf, "Default properties for horizontal screens");

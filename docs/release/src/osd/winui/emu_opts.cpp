@@ -24,6 +24,7 @@
 #include "drivenum.h"
 #include "emu_opts.h"
 #include "path.h"
+#include "main.h"
 
 
 static emu_options mameopts; // core options
@@ -233,11 +234,8 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num, bo
 	}
 
 	fname.clear();
-	if (opt_type == OPTIONS_COMPUTER)
-		fname = GetIniDir() + PATH_SEPARATOR + "computer.ini";
-	else
-	if (opt_type == OPTIONS_CONSOLE)
-		fname = GetIniDir() + PATH_SEPARATOR + "console.ini";
+	if (opt_type == OPTIONS_ARCADE)
+		fname = GetIniDir() + PATH_SEPARATOR + "arcade.ini";
 	else
 	if (opt_type == OPTIONS_HORIZONTAL)
 		fname = GetIniDir() + PATH_SEPARATOR + "horizontal.ini";
@@ -285,11 +283,8 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 	const game_driver *driver = NULL;
 	string fname, filepath;
 
-	if (opt_type == OPTIONS_COMPUTER)
-		fname = GetIniDir() + PATH_SEPARATOR + "computer.ini";
-	else
-	if (opt_type == OPTIONS_CONSOLE)
-		fname = GetIniDir() + PATH_SEPARATOR + "console.ini";
+	if (opt_type == OPTIONS_ARCADE)
+		fname = GetIniDir() + PATH_SEPARATOR + "arcade.ini";
 	else
 	if (opt_type == OPTIONS_HORIZONTAL)
 		fname = GetIniDir() + PATH_SEPARATOR + "horizontal.ini";

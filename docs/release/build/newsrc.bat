@@ -8,6 +8,7 @@ rd %to%\build /q /s
 md %to%\src\emu
 copy %from%\src\emu\diimage.cpp                     %to%\src\emu
 copy %from%\src\emu\emuopts.cpp                     %to%\src\emu
+copy %from%\src\emu\gamedrv.h                       %to%\src\emu
 copy %from%\src\emu\inpttype.ipp                    %to%\src\emu
 copy %from%\src\emu\ioport.*                        %to%\src\emu
 copy %from%\src\emu\mconfig.cpp                     %to%\src\emu
@@ -48,7 +49,8 @@ copy %from%\src\osd\modules\render\drawd3d.cpp      %to%\src\osd\modules\render
 
 md %to%\src\osd\windows
 copy %from%\src\osd\windows\winmain.*               %to%\src\osd\windows
-copy %from%\src\osd\windows\window.cpp              %to%\src\osd\windows
+copy %from%\src\osd\windows\winopts.*               %to%\src\osd\windows
+copy %from%\src\osd\windows\window.*                %to%\src\osd\windows
 
 md %to%\src\osd\winui
 xcopy /E /Y %from%\src\osd\winui                    %to%\src\osd\winui

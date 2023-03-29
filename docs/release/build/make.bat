@@ -5,7 +5,7 @@ del mameui.sym
 :start
 del mameui.exe
 if exist mameui.exe goto start
-call mk.bat
+rem call mk.bat
 call make64 -j6 %1 %2 %3
 if not exist mameui.exe goto end
 rem del mameui.sym
