@@ -223,16 +223,16 @@ void elf2_state::machine_start()
 
 QUICKLOAD_LOAD_MEMBER(elf2_state::quickload_cb)
 {
-	int size = image.length();
+	int const size = image.length();
 
 	if (size > m_ram->size())
 	{
-		return image_init_result::FAIL;
+		return image_error::INVALIDLENGTH;
 	}
 
 	image.fread(m_ram->pointer(), size);
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 void elf2_state::elf2(machine_config &config)

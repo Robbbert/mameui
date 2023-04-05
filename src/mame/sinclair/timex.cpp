@@ -600,19 +600,13 @@ DEVICE_IMAGE_LOAD_MEMBER( ts2068_state::cart_load )
 
 	if (!image.loaded_through_softlist())
 	{
-		int chunks_in_file = 0;
 		std::vector<uint8_t> header;
 		header.resize(9);
 
 		if (size % 0x2000 != 9)
 		{
-			image.seterror(image_error::INVALIDIMAGE, "File corrupted");
-			return image_init_result::FAIL;
-		}
-		if (!image.loaded_through_softlist())
-		{
-			image.seterror(image_error::UNSUPPORTED, "Loading from softlist is not supported yet");
-			return image_init_result::FAIL;
+			osd_printf_error("%s: File corrupted\n", image.basename());
+			return image_error::INVALIDLENGTH;
 		}
 
 		m_dock->rom_alloc(0x10000, GENERIC_ROM8_WIDTH, ENDIANNESS_LITTLE);
@@ -621,13 +615,14 @@ DEVICE_IMAGE_LOAD_MEMBER( ts2068_state::cart_load )
 		// check header
 		image.fread(&header[0], 9);
 
+		int chunks_in_file = 0;
 		for (int i = 0; i < 8; i++)
 			if (header[i + 1] & 0x02) chunks_in_file++;
 
 		if (chunks_in_file * 0x2000 + 0x09 != size)
 		{
-			image.seterror(image_error::INVALIDIMAGE, "File corrupted");
-			return image_init_result::FAIL;
+			osd_printf_error("%s: File corrupted\n", image.basename());
+			return image_error::INVALIDIMAGE;
 		}
 
 		switch (header[0])
@@ -650,8 +645,8 @@ DEVICE_IMAGE_LOAD_MEMBER( ts2068_state::cart_load )
 				break;
 
 			default:
-				image.seterror(image_error::INVALIDIMAGE, "Cart type not supported");
-				return image_init_result::FAIL;
+				osd_printf_error("%s: Cart type not supported\n", image.basename());
+				return image_error::INVALIDIMAGE;
 		}
 
 		logerror ("Cart loaded [Chunks %02x]\n", m_ram_chunks);
@@ -662,7 +657,7 @@ DEVICE_IMAGE_LOAD_MEMBER( ts2068_state::cart_load )
 		memcpy(m_dock->get_rom_base(), image.get_software_region("rom"), size);
 	}
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 

@@ -766,17 +766,17 @@ void nano_state::machine_reset()
 
 QUICKLOAD_LOAD_MEMBER(tmc1800_base_state::quickload_cb)
 {
-	uint8_t *ptr = m_rom->base();
-	int size = image.length();
+	int const size = image.length();
 
-	if (size > m_ram->size())
+	if (size > m_ram->size()) // FIXME: comparing size to RAM size, but loading to ROM - seems incorrect
 	{
-		return image_init_result::FAIL;
+		return image_error::INVALIDLENGTH;
 	}
 
-	image.fread( ptr, size);
+	uint8_t *const ptr = m_rom->base();
+	image.fread(ptr, size);
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 void tmc1800_state::tmc1800(machine_config &config)

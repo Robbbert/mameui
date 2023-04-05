@@ -732,6 +732,7 @@ void rex6000_state::rex6000_palettte(palette_device &palette) const
 
 QUICKLOAD_LOAD_MEMBER(rex6000_state::quickload_rex6000)
 {
+	// FIXME: this suffers buffer overruns on excessively short images and various kinds of invalid images
 	static const char magic[] = "ApplicationName:Addin";
 	uint32_t img_start = 0;
 
@@ -739,7 +740,7 @@ QUICKLOAD_LOAD_MEMBER(rex6000_state::quickload_rex6000)
 	image.fread(&data[0], image.length());
 
 	if(strncmp((const char*)&data[0], magic, 21))
-		return image_init_result::FAIL;
+		return image_error::INVALIDIMAGE;
 
 	img_start = strlen((const char*)&data[0]) + 5;
 	img_start += 0xa0;  //skip the icon (40x32 pixel)
@@ -747,7 +748,7 @@ QUICKLOAD_LOAD_MEMBER(rex6000_state::quickload_rex6000)
 	for (uint32_t i=0; i<image.length() - img_start ;i++)
 		m_flash0b->write_raw(i, data[img_start + i]);
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 int oz750_state::oz_wzd_extract_tag(const std::vector<uint8_t> &data, const char *tag, char *dest_buf)
@@ -795,7 +796,7 @@ QUICKLOAD_LOAD_MEMBER(oz750_state::quickload_oz750)
 
 	oz_wzd_extract_tag(data, "<DATA TYPE>", data_type);
 	if (strcmp(data_type, "MY PROGRAMS"))
-		return image_init_result::FAIL;
+		return image_error::INVALIDIMAGE;
 
 	oz_wzd_extract_tag(data, "<TITLE>", app_name);
 	oz_wzd_extract_tag(data, "<DATA>", file_name);
@@ -805,7 +806,7 @@ QUICKLOAD_LOAD_MEMBER(oz750_state::quickload_oz750)
 	uint32_t img_start = oz_wzd_extract_tag(data, "<BIN>", nullptr);
 
 	if (img_start == 0)
-		return image_init_result::FAIL;
+		return image_error::INVALIDIMAGE;
 
 	uint16_t icon_size = data[img_start++];
 
@@ -845,7 +846,7 @@ QUICKLOAD_LOAD_MEMBER(oz750_state::quickload_oz750)
 	for (int i=img_start; i<image.length(); i++)
 		flash->write_byte(pos++, data[i]);                      // data
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 

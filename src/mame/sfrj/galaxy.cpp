@@ -196,14 +196,14 @@ void galaxy_state::setup_snapshot(const uint8_t * data, uint32_t size)
 
 SNAPSHOT_LOAD_MEMBER(galaxy_state::snapshot_cb)
 {
-	uint32_t snapshot_size = image.length();
+	uint32_t const snapshot_size = image.length();
 	switch (snapshot_size)
 	{
 		case GALAXY_SNAPSHOT_V1_SIZE:
 		case GALAXY_SNAPSHOT_V2_SIZE:
 			break;
 		default:
-			return image_init_result::FAIL;
+			return image_error::INVALIDLENGTH;
 	}
 
 	std::vector<uint8_t> snapshot_data(snapshot_size);
@@ -211,7 +211,7 @@ SNAPSHOT_LOAD_MEMBER(galaxy_state::snapshot_cb)
 
 	setup_snapshot(&snapshot_data[0], snapshot_size);
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 /***************************************************************************

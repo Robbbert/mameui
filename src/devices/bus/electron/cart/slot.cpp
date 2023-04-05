@@ -122,18 +122,18 @@ void electron_cartslot_device::device_start()
 //  call load
 //-------------------------------------------------
 
-image_init_result electron_cartslot_device::call_load()
+std::error_condition electron_cartslot_device::call_load()
 {
 	if (m_cart)
 	{
 		if (!loaded_through_softlist())
 		{
-			uint32_t size = length();
+			uint32_t const size = length();
 
 			if (size % 0x2000)
 			{
-				seterror(image_error::INVALIDIMAGE, "Unsupported cartridge size");
-				return image_init_result::FAIL;
+				osd_printf_error("%s: Unsupported cartridge size\n", basename());
+				return image_error::INVALIDLENGTH;
 			}
 
 			m_cart->rom_alloc(size, tag());
@@ -150,10 +150,10 @@ image_init_result electron_cartslot_device::call_load()
 			uint32_t ramsize = get_software_region_length("ram");
 			uint32_t nvramsize = get_software_region_length("nvram");
 
-			if ((upsize % 0x2000 && upsize != 0) || (losize % 0x2000 && losize != 0) || (romsize % 0x2000 && romsize != 0))
+			if ((upsize % 0x2000) || (losize % 0x2000) || (romsize % 0x2000))
 			{
-				seterror(image_error::INVALIDIMAGE, "Unsupported cartridge size");
-				return image_init_result::FAIL;
+				osd_printf_error("%s: Unsupported cartridge size\n", basename());
+				return image_error::INVALIDLENGTH;
 			}
 
 			// load standard 2x16K ROM cartridges
@@ -197,7 +197,7 @@ image_init_result electron_cartslot_device::call_load()
 		}
 	}
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 

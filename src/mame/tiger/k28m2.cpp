@@ -68,12 +68,12 @@ private:
 	optional_device<generic_slot_device> m_cart;
 	required_ioport_array<9> m_inputs;
 
+	void power_off();
 	u8 read_k();
 	void write_o(u16 data);
 	void write_r(u32 data);
 
 	DECLARE_DEVICE_IMAGE_LOAD_MEMBER(cart_load);
-	void power_off();
 
 	bool m_power_on = false;
 	u16 m_inp_mux = 0;
@@ -120,18 +120,18 @@ void k28m2_state::power_off()
 
 DEVICE_IMAGE_LOAD_MEMBER(k28m2_state::cart_load)
 {
-	u32 size = m_cart->common_get_size("rom");
+	u32 const size = m_cart->common_get_size("rom");
 
 	if (size > 0x4000)
 	{
-		image.seterror(image_error::INVALIDIMAGE, "Invalid file size");
-		return image_init_result::FAIL;
+		osd_printf_error("%s: Invalid file size\n", image.basename());
+		return image_error::INVALIDLENGTH;
 	}
 
-	u8 *base = memregion("tms6100")->base() + 0x8000;
+	u8 *const base = memregion("tms6100")->base() + 0x8000;
 	m_cart->common_load_rom(base, size, "rom");
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 
@@ -307,5 +307,5 @@ ROM_END
     Drivers
 *******************************************************************************/
 
-//    YEAR  NAME    PARENT  CMP MACHINE  INPUT  CLASS        INIT        COMPANY, FULLNAME, FLAGS
-COMP( 1985, k28m2,  0,       0, k28m2,   k28m2, k28m2_state, empty_init, "Tiger Electronics", "K28: Talking Learning Computer (model 7-232)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING )
+//    YEAR  NAME    PARENT  COMPAT  MACHINE  INPUT  CLASS        INIT        COMPANY, FULLNAME, FLAGS
+COMP( 1985, k28m2,  0,      0,      k28m2,   k28m2, k28m2_state, empty_init, "Tiger Electronics", "K28: Talking Learning Computer (model 7-232)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING )

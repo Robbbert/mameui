@@ -23,7 +23,7 @@
 class diablo_image_device : public harddisk_image_base_device
 {
 public:
-	typedef device_delegate<image_init_result (device_image_interface &)> load_delegate;
+	typedef device_delegate<std::error_condition (device_image_interface &)> load_delegate;
 	typedef device_delegate<void (device_image_interface &)> unload_delegate;
 
 	// construction/destruction
@@ -34,9 +34,9 @@ public:
 	template <typename Object> void set_device_unload(Object &&cb) { m_device_image_unload = std::forward<Object>(cb); }
 	void set_interface(const char *interface) { m_interface = interface; }
 
-	// image-level overrides
-	virtual image_init_result call_load() override;
-	virtual image_init_result call_create(int create_format, util::option_resolution *create_args) override;
+	// device_image_interface implementation
+	virtual std::error_condition call_load() override;
+	virtual std::error_condition call_create(int create_format, util::option_resolution *create_args) override;
 	virtual void call_unload() override;
 
 	virtual bool image_is_chd_type() const noexcept override { return true; }
@@ -48,7 +48,7 @@ public:
 	hard_disk_file *get_hard_disk_file() { return m_hard_disk_handle; }
 
 protected:
-	// device-level overrides
+	// device_t implementation
 	virtual void device_config_complete() override;
 	virtual void device_start() override;
 	virtual void device_stop() override;
@@ -56,7 +56,7 @@ protected:
 	// device_image_interface implementation
 	virtual const software_list_loader &get_software_list_loader() const override { return rom_software_list_loader::instance(); }
 
-	image_init_result internal_load_dsk();
+	std::error_condition internal_load_dsk();
 
 	chd_file        *m_chd;
 	chd_file        m_origchd;              /* handle to the original CHD */

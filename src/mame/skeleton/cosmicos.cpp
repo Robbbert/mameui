@@ -497,13 +497,13 @@ void cosmicos_state::machine_reset()
 
 QUICKLOAD_LOAD_MEMBER(cosmicos_state::quickload_cb)
 {
-	uint8_t *ptr = m_rom->base();
-	int size = image.length();
+	int const size = image.length();
+	uint8_t *const ptr = m_rom->base();
 
-	/* load image to RAM */
+	// load image to RAM
 	image.fread(ptr, size);
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 /* Machine Driver */

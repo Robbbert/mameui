@@ -137,16 +137,16 @@ static const char *crvision_get_slot(int type)
  call load
  -------------------------------------------------*/
 
-image_init_result crvision_cart_slot_device::call_load()
+std::error_condition crvision_cart_slot_device::call_load()
 {
 	if (m_cart)
 	{
-		uint32_t size = !loaded_through_softlist() ? length() : get_software_region_length("rom");
+		uint32_t const size = !loaded_through_softlist() ? length() : get_software_region_length("rom");
 
 		if (size > 0x4800)
 		{
-			seterror(image_error::INVALIDIMAGE, "Image extends beyond the expected size for an APF cart");
-			return image_init_result::FAIL;
+			osd_printf_error("%s: Image extends beyond the expected size for an APF cart\n", basename());
+			return image_error::INVALIDLENGTH;
 		}
 
 		m_cart->rom_alloc(size);
@@ -192,12 +192,10 @@ image_init_result crvision_cart_slot_device::call_load()
 				m_type = crvision_get_pcb_id(pcb_name);
 		}
 
-		printf("Type: %s\n", crvision_get_slot(m_type));
-
-		return image_init_result::PASS;
+		logerror("Type: %s\n", crvision_get_slot(m_type));
 	}
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 

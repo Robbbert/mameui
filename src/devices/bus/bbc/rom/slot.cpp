@@ -114,16 +114,16 @@ void bbc_romslot_device::device_start()
 //  call load
 //-------------------------------------------------
 
-image_init_result bbc_romslot_device::call_load()
+std::error_condition bbc_romslot_device::call_load()
 {
 	if (m_cart)
 	{
-		uint32_t size = !loaded_through_softlist() ? length() : get_software_region_length("rom");
+		uint32_t const size = !loaded_through_softlist() ? length() : get_software_region_length("rom");
 
 		if (size % 0x2000)
 		{
-			seterror(image_error::INVALIDIMAGE, "Invalid ROM size");
-			return image_init_result::FAIL;
+			osd_printf_error("%s: Invalid ROM size\n", basename());
+			return image_error::INVALIDLENGTH;
 		}
 
 		m_cart->rom_alloc(size, tag());
@@ -142,7 +142,7 @@ image_init_result bbc_romslot_device::call_load()
 			m_cart->nvram_alloc(get_software_region_length("nvram"));
 	}
 
-	return image_init_result::PASS;
+	return std::error_condition();
 }
 
 //-------------------------------------------------
