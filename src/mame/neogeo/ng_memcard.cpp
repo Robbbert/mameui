@@ -2,7 +2,7 @@
 // copyright-holders:Miodrag Milanovic
 /*********************************************************************
 
-    Neo Geo Memory card functions.
+    Neo Geo Memory card functions
 
     JEIDA V3 SRAM cards.  The BIOS supports 8-bit and 16-bit cards,
     in 2KiB, 4KiB, 6KiB, 8KiB, 10KiB, 14KiB and 16KiB capacities.
@@ -61,17 +61,17 @@ void ng_memcard_device::device_start()
     with the given index
 -------------------------------------------------*/
 
-std::error_condition ng_memcard_device::call_load()
+std::pair<std::error_condition, std::string> ng_memcard_device::call_load()
 {
 	if (length() != 0x800)
-		return image_error::INVALIDLENGTH;
+		return std::make_pair(image_error::INVALIDLENGTH, "Unsupported memory card size (only 2K cards are supported)");
 
 	fseek(0, SEEK_SET);
 	size_t ret = fread(m_memcard_data, 0x800);
 	if (ret != 0x800)
-		return image_error::UNSPECIFIED;
+		return std::make_pair(image_error::UNSPECIFIED, "Error reading file");
 
-	return std::error_condition();
+	return std::make_pair(std::error_condition(), std::string());
 }
 
 void ng_memcard_device::call_unload()
@@ -80,15 +80,15 @@ void ng_memcard_device::call_unload()
 	fwrite(m_memcard_data, 0x800);
 }
 
-std::error_condition ng_memcard_device::call_create(int format_type, util::option_resolution *format_options)
+std::pair<std::error_condition, std::string> ng_memcard_device::call_create(int format_type, util::option_resolution *format_options)
 {
 	memset(m_memcard_data, 0, 0x800);
 
 	size_t const ret = fwrite(m_memcard_data, 0x800);
 	if (ret != 0x800)
-		return image_error::UNSPECIFIED;
+		return std::make_pair(image_error::UNSPECIFIED, "Error writing file");
 
-	return std::error_condition();
+	return std::make_pair(std::error_condition(), std::string());
 }
 
 
@@ -102,7 +102,7 @@ uint16_t ng_memcard_device::read(offs_t offset)
 
 void ng_memcard_device::write(offs_t offset, uint16_t data)
 {
-	if (m_regsel && !m_lock1 && m_unlock2)
+	if (!m_lock1 && m_unlock2)
 		m_memcard_data[offset & 0x07ff] = uint8_t(data & 0x00ff);
 }
 

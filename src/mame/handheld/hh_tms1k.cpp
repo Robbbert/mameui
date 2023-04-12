@@ -173,6 +173,7 @@ on Joerg Woerner's datamath.org: http://www.datamath.org/IC_List.htm
  *M34014   TMS1100   1981, Coleco Bowlatronic
   M34017   TMS1100   1981, Microvision cartridge: Cosmic Hunter
  @M34018   TMS1100   1981, Coleco Head to Head: Electronic Boxing
+ *M34033   TMS1100   1982, Spartus Electronic Talking Clock (1411-61)
  @M34038   TMS1100   1982, Parker Brothers Lost Treasure
   M34047   TMS1100   1982, Microvision cartridge: Super Blockbuster
  @M34078A  TMS1100   1983, Milton Bradley Electronic Arcade Mania
@@ -2938,10 +2939,7 @@ void quizwizc_state::machine_start()
 DEVICE_IMAGE_LOAD_MEMBER(quizwizc_state::cart_load)
 {
 	if (!image.loaded_through_softlist())
-	{
-		osd_printf_error("Can only load through softwarelist\n");
-		return image_error::UNSUPPORTED;
-	}
+		return std::make_pair(image_error::UNSUPPORTED, "Can only load through software list");
 
 	// get cartridge pinout K1 to R connections
 	const char *pinout = image.get_feature("pinout");
@@ -2949,12 +2947,9 @@ DEVICE_IMAGE_LOAD_MEMBER(quizwizc_state::cart_load)
 	m_pinout = bitswap<8>(m_pinout,4,3,7,5,2,1,6,0) << 4;
 
 	if (m_pinout == 0)
-	{
-		osd_printf_error("%s: Invalid cartridge pinout\n", image.basename());
-		return image_error::BADSOFTWARE;
-	}
+		return std::make_pair(image_error::BADSOFTWARE, "Invalid cartridge pinout\n");
 
-	return std::error_condition();
+	return std::make_pair(std::error_condition(), std::string());
 }
 
 void quizwizc_state::update_display()
@@ -3135,16 +3130,13 @@ void tc4_state::machine_start()
 DEVICE_IMAGE_LOAD_MEMBER(tc4_state::cart_load)
 {
 	if (!image.loaded_through_softlist())
-	{
-		osd_printf_error("Can only load through softwarelist\n");
-		return image_error::UNSUPPORTED;
-	}
+		return std::make_pair(image_error::UNSUPPORTED, "Can only load through software list\n");
 
 	// get cartridge pinout R9 to K connections
 	const char *pinout = image.get_feature("pinout");
 	m_pinout = pinout ? strtoul(pinout, nullptr, 0) & 0xf : 0xf;
 
-	return std::error_condition();
+	return std::make_pair(std::error_condition(), std::string());
 }
 
 void tc4_state::update_display()
@@ -3276,6 +3268,10 @@ ROM_END
 
   Two versions are known, one with the tone knob, and one without. The MCU
   is the same for both.
+
+  Electronic Jukebox (model 552) has the exact same MCU as well, it's on a
+  much smaller PCB. It doesn't have the tone knob either. They removed the
+  LEDs and learn mode.
 
 ***************************************************************************/
 
@@ -11391,8 +11387,12 @@ ROM_END
   * TMS5110AN2L-1 speech chip, 4KB VSM CM72010NL (die label: T0355C, 72010U)
   * 4-digit 7seg LED display, 6 other LEDs
 
-  Micronta is not a company, but one of the Radio Shack house brands. Schematics
-  are included in the manual, they also mention a CM72005 VSM.
+  Even though it has a 60 Hz inputline, it doesn't use it to sync the clock.
+  Instead, it relies on the MCU frequency, which is not very accurate when
+  using a simple R/C osc.
+
+  Micronta is not a company, but one of the Radio Shack house brands.
+  Schematics are included in the manual, they also mention a CM72005 VSM.
 
   Spartus AVT from 1982 is nearly the same as VoxClock 3.
 
@@ -11512,9 +11512,9 @@ static INPUT_PORTS_START( vclock3 )
 	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYPAD ) PORT_CODE(KEYCODE_S) PORT_NAME("Set Time")
 
 	PORT_START("IN.4") // R4 (factory-set jumpers)
-	PORT_CONFNAME( 0x01, 0x01, "AC Frequency") PORT_CHANGED_MEMBER(DEVICE_SELF, vclock3_state, switch_hz, 0)
-	PORT_CONFSETTING( 0x00, "50 Hz" )
-	PORT_CONFSETTING( 0x01, "60 Hz" )
+	PORT_CONFNAME( 0x01, 0x00, "AC Frequency") PORT_CHANGED_MEMBER(DEVICE_SELF, vclock3_state, switch_hz, 0)
+	PORT_CONFSETTING(    0x01, "50 Hz" )
+	PORT_CONFSETTING(    0x00, "60 Hz" )
 	PORT_CONFNAME( 0x02, 0x00, "Chime / Announce" )
 	PORT_CONFSETTING(    0x02, DEF_STR( Off ) )
 	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
@@ -14552,16 +14552,13 @@ void playmaker_state::machine_start()
 DEVICE_IMAGE_LOAD_MEMBER(playmaker_state::cart_load)
 {
 	if (!image.loaded_through_softlist())
-	{
-		osd_printf_error("Can only load through softwarelist\n");
-		return image_error::UNSUPPORTED;
-	}
+		return std::make_pair(image_error::UNSUPPORTED, "Can only load through software list\n");
 
 	// get cartridge notch
 	const char *notch = image.get_feature("notch");
 	m_notch = notch ? strtoul(notch, nullptr, 0) & 3 : 0;
 
-	return std::error_condition();
+	return std::make_pair(std::error_condition(), std::string());
 }
 
 void playmaker_state::update_display()
@@ -16316,7 +16313,7 @@ INPUT_PORTS_END
 void xl25_state::xl25(machine_config &config)
 {
 	// basic machine hardware
-	TMS1000C(config, m_maincpu, 300000); // approximation - RC osc. R=5.6K, C=47pF
+	TMS1000C(config, m_maincpu, 300000); // approximation - RC osc. R=56K, C=47pF
 	m_maincpu->read_k().set(FUNC(xl25_state::read_k));
 	m_maincpu->write_r().set(FUNC(xl25_state::write_r));
 	m_maincpu->write_o().set(FUNC(xl25_state::write_o));

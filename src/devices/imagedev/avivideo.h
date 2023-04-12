@@ -13,8 +13,14 @@
 
 #pragma once
 
-#include "bitmap.h"
 #include "aviio.h"
+#include "bitmap.h"
+
+#include <memory>
+#include <string>
+#include <system_error>
+#include <utility>
+
 
 /***************************************************************************
     TYPE DEFINITIONS
@@ -30,7 +36,7 @@ public:
 	virtual ~avivideo_image_device();
 
 	// device_image_interface implementation
-	virtual std::error_condition call_load() override;
+	virtual std::pair<std::error_condition, std::string> call_load() override;
 	virtual void call_unload() override;
 
 	virtual bool is_readable()  const noexcept override { return true; }
@@ -51,7 +57,7 @@ protected:
 	TIMER_CALLBACK_MEMBER(frame_timer);
 
 private:
-	bitmap_argb32 *m_frame;
+	std::unique_ptr<bitmap_argb32> m_frame;
 	avi_file::ptr m_avi;
 
 	emu_timer *m_frame_timer;

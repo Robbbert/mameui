@@ -1289,6 +1289,18 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/machine/ds2430a.h,MACHINES["DS2430A"] = true
+---------------------------------------------------
+
+if (MACHINES["DS2430A"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/machine/ds2430a.cpp",
+		MAME_DIR .. "src/devices/machine/ds2430a.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/machine/ds6417.h,MACHINES["DS6417"] = true
 ---------------------------------------------------
 
@@ -2199,18 +2211,6 @@ if (MACHINES["MB8795"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/machine/mb8795.cpp",
 		MAME_DIR .. "src/devices/machine/mb8795.h",
-	}
-end
-
----------------------------------------------------
---
---@src/devices/machine/mb89352.h,MACHINES["MB89352"] = true
----------------------------------------------------
-
-if (MACHINES["MB89352"]~=null) then
-	files {
-		MAME_DIR .. "src/devices/machine/mb89352.cpp",
-		MAME_DIR .. "src/devices/machine/mb89352.h",
 	}
 end
 
