@@ -19,12 +19,6 @@
     - 3x D8251AC
     - 18.432 MHz XTAL
 
-    Keyboard:
-    - SCN8050 (8039)
-    - 2716 labeled "121"
-    - UA555TC
-    - Speaker
-
     External:
     - DB25 connector "Main Port"
     - DB25 connector "Auxialiary Port"
@@ -32,17 +26,22 @@
     - Expansion slot
 
     TODO:
-    - Fix CRT controller hookup
-	- Keyboard
+    - Fix and improve video emulation
+    - Aux port
 
 ****************************************************************************/
 
 #include "emu.h"
+
 #include "bus/rs232/rs232.h"
 #include "cpu/z80/z80.h"
 #include "machine/i8251.h"
+#include "machine/input_merger.h"
 #include "machine/pit8253.h"
 #include "video/scn2674.h"
+
+#include "freedom220_kbd.h"
+
 #include "emupal.h"
 #include "screen.h"
 
@@ -68,6 +67,7 @@ public:
 		m_translate(*this, "translate"),
 		m_charram(*this, "charram%u", 0U),
 		m_attrram(*this, "attrram%u", 0U),
+		m_current_line(0),
 		m_nmi_enabled(false)
 	{ }
 
@@ -88,18 +88,23 @@ private:
 	required_shared_ptr_array<uint8_t, 2> m_charram;
 	required_shared_ptr_array<uint8_t, 2> m_attrram;
 
+	uint8_t m_current_line;
+	bool m_nmi_enabled;
+
+	uint8_t m_current_line;
+	bool m_nmi_enabled;
+
 	void mem_map(address_map &map);
 	void io_map(address_map &map);
 
 	void row_buffer_map(address_map &map);
 	uint8_t mbc_char_r(offs_t offset);
 	uint8_t mbc_attr_r(offs_t offset);
+	void avdc_intr_w(int state);
+	void avdc_breq_w(int state);
 	SCN2674_DRAW_CHARACTER_MEMBER(draw_character);
 
 	void nmi_control_w(uint8_t data);
-	void nmi_w(int state);
-
-	bool m_nmi_enabled;
 };
 
 
@@ -125,7 +130,6 @@ void freedom220_state::io_map(address_map &map)
 	map(0x40, 0x41).rw(m_usart[0], FUNC(i8251_device::read), FUNC(i8251_device::write));
 	map(0x60, 0x61).rw(m_usart[1], FUNC(i8251_device::read), FUNC(i8251_device::write));
 	map(0x80, 0x81).rw(m_usart[2], FUNC(i8251_device::read), FUNC(i8251_device::write));
-	map(0x81, 0x81).lr8(NAME([] () { return 0x01; })); // hack
 	map(0xa0, 0xa0).w(FUNC(freedom220_state::nmi_control_w));
 }
 
@@ -142,27 +146,66 @@ void freedom220_state::row_buffer_map(address_map &map)
 
 uint8_t freedom220_state::mbc_char_r(offs_t offset)
 {
-	logerror("read char offset %04x\n", offset);
-	return m_charram[0][offset & 0x7ff];
+	if (offset >= 0x800)
+		logerror("%d read char offset %04x\n", m_current_line, offset);
+
+	return m_charram[0][(m_current_line * 0x50 + offset) & 0x7ff];
 }
 
 uint8_t freedom220_state::mbc_attr_r(offs_t offset)
 {
-	logerror("read attr offset %04x\n", offset);
-	return m_attrram[0][offset & 0x7ff];
+	return m_attrram[0][(m_current_line * 0x50 + offset) & 0x7ff];
+}
+
+void freedom220_state::avdc_intr_w(int state)
+{
+	if (state && m_nmi_enabled)
+		m_maincpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
+}
+
+void freedom220_state::avdc_breq_w(int state)
+{
+	if (state)
+	{
+		if (m_screen->vblank())
+			m_current_line = 0;
+		else
+			m_current_line++;
+	}
 }
 
 SCN2674_DRAW_CHARACTER_MEMBER( freedom220_state::draw_character )
 {
+	// 765-----  unknown
+	// ---4----  normal/bold
+	// ----3---  underline
+	// -----2--  invert
+	// ------1-  blink
+	// -------0  unknown
+
+	const pen_t *const pen = m_palette->pens();
+
 	// translation table
 	const int table = 0; // 0-f
 	charcode = m_translate[(table << 8) | charcode];
 
 	uint8_t data = m_chargen[charcode << 4 | linecount];
-	const pen_t *const pen = m_palette->pens();
+
+	if (ul && (BIT(attrcode, 3)))
+		data = 0xff;
+
+	if (blink && (BIT(attrcode, 1)))
+		data = 0x00;
+
+	if (BIT(attrcode, 2))
+		data = ~data;
+
+	// TODO
+	if (0 && cursor)
+		data = ~data;
 
 	// foreground/background colors
-	rgb_t fg = pen[1];
+	rgb_t fg = BIT(attrcode, 4) ? pen[1] : pen[2];
 	rgb_t bg = pen[0];
 
 	// draw 8 pixels of the character
@@ -198,21 +241,20 @@ void freedom220_state::nmi_control_w(uint8_t data)
 	m_nmi_enabled = true;
 }
 
-void freedom220_state::nmi_w(int state)
-{
-	if (state && m_nmi_enabled)
-		m_maincpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
-}
-
 void freedom220_state::machine_start()
 {
 	// register for save states
+	save_item(NAME(m_current_line));
 	save_item(NAME(m_nmi_enabled));
 }
 
 void freedom220_state::machine_reset()
 {
 	m_nmi_enabled = false;
+
+	// allow data to be send to keyboard
+	m_usart[2]->write_dsr(1);
+	m_usart[2]->write_cts(0);
 }
 
 
@@ -226,23 +268,26 @@ void freedom220_state::freedom220(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &freedom220_state::mem_map);
 	m_maincpu->set_addrmap(AS_IO, &freedom220_state::io_map);
 
+	input_merger_device &irq(INPUT_MERGER_ANY_HIGH(config, "irq"));
+	irq.output_handler().set_inputline("maincpu", INPUT_LINE_IRQ0);
+
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	m_screen->set_color(rgb_t::green());
 	m_screen->set_raw(16000000, 768, 0, 640, 321, 0, 300); // clock unverified
 	m_screen->set_screen_update(m_avdc, FUNC(scn2674_device::screen_update));
-	
-	PALETTE(config, m_palette, palette_device::MONOCHROME);
+
+	PALETTE(config, m_palette, palette_device::MONOCHROME_HIGHLIGHT);
 
 	GFXDECODE(config, "gfxdecode", m_palette, chars);
 
 	SCN2674(config, m_avdc, 16000000 / 8); // clock unverified
-	//m_avdc->intr_callback().set_inputline("maincpu", INPUT_LINE_IRQ0); // ?
+	m_avdc->intr_callback().set(FUNC(freedom220_state::avdc_intr_w));
+	m_avdc->breq_callback().set(FUNC(freedom220_state::avdc_breq_w));
 	m_avdc->set_screen(m_screen);
 	m_avdc->set_character_width(8); // unverified
 	m_avdc->set_addrmap(0, &freedom220_state::row_buffer_map);
 	m_avdc->set_addrmap(1, &freedom220_state::row_buffer_map);
 	m_avdc->set_display_callback(FUNC(freedom220_state::draw_character));
-	m_avdc->breq_callback().set(FUNC(freedom220_state::nmi_w));
 	m_avdc->mbc_char_callback().set(FUNC(freedom220_state::mbc_char_r));
 	m_avdc->mbc_attr_callback().set(FUNC(freedom220_state::mbc_attr_r));
 
@@ -258,17 +303,23 @@ void freedom220_state::freedom220(machine_config &config)
 	pit.out_handler<2>().append(m_usart[0], FUNC(i8251_device::write_rxc));
 
 	I8251(config, m_usart[0], 0); // unknown clock
-	m_usart[0]->rxrdy_handler().set_inputline("maincpu", INPUT_LINE_IRQ0); // ?
+	m_usart[0]->rxrdy_handler().set("irq", FUNC(input_merger_device::in_w<0>));
+	m_usart[0]->txrdy_handler().set("irq", FUNC(input_merger_device::in_w<1>));
 	m_usart[0]->txd_handler().set("mainport", FUNC(rs232_port_device::write_txd));
 	m_usart[0]->rts_handler().set("mainport", FUNC(rs232_port_device::write_rts));
 
 	I8251(config, m_usart[1], 0); // unknown clock
 
 	I8251(config, m_usart[2], 0); // unknown clock
+	m_usart[2]->rxrdy_handler().set("irq", FUNC(input_merger_device::in_w<2>));
+	m_usart[2]->txd_handler().set("kbd", FUNC(freedom220_kbd_device::rx_w));
 
 	rs232_port_device &mainport(RS232_PORT(config, "mainport", default_rs232_devices, nullptr));
 	mainport.rxd_handler().set(m_usart[0], FUNC(i8251_device::write_rxd));
 	mainport.cts_handler().set(m_usart[0], FUNC(i8251_device::write_cts));
+
+	freedom220_kbd_device &kbd(FREEDOM220_KBD(config, "kbd"));
+	kbd.tx_handler().set(m_usart[2], FUNC(i8251_device::write_rxd));
 }
 
 
@@ -287,9 +338,6 @@ ROM_START( free220 )
 
 	ROM_REGION(0x1000, "translate", 0)
 	ROM_LOAD("t022010__61f0.bin", 0x0000, 0x1000, CRC(00461116) SHA1(79a53a557ea4386b3e85a312731c6c0763ab46cc))
-
-	ROM_REGION(0x800, "keyboard", 0)
-	ROM_LOAD("121.bin", 0x000, 0x800, CRC(ee491f39) SHA1(477eb9f3d3abc89cfc9b5f9a924a794ca48750c4))
 ROM_END
 
 
