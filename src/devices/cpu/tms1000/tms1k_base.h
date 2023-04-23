@@ -62,7 +62,7 @@ protected:
 	virtual u32 execute_min_cycles() const noexcept override { return 1; }
 	virtual u32 execute_max_cycles() const noexcept override { return 1; }
 	virtual void execute_run() override;
-	virtual void execute_one();
+	virtual void execute_one(int subcycle);
 
 	// device_memory_interface overrides
 	virtual space_config_vector memory_space_config() const override;
@@ -156,9 +156,15 @@ protected:
 	virtual void read_opcode();
 	virtual void op_extra() { }
 
-	virtual void op_br();
-	virtual void op_call();
-	virtual void op_retn();
+	virtual void op_br() { (m_stack_levels == 1) ? op_br1() : op_brn(); }
+	virtual void op_call() { (m_stack_levels == 1) ? op_call1() : op_calln(); }
+	virtual void op_retn() { (m_stack_levels == 1) ? op_retn1() : op_retnn(); }
+	virtual void op_br1();
+	virtual void op_call1();
+	virtual void op_retn1();
+	virtual void op_brn();
+	virtual void op_calln();
+	virtual void op_retnn();
 
 	virtual void op_sbit();
 	virtual void op_rbit();

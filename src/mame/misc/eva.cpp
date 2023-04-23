@@ -1,12 +1,12 @@
 // license:BSD-3-Clause
 // copyright-holders:hap
 // thanks-to:David Viens, Sean Riddle
-/***************************************************************************
+/*******************************************************************************
 
 Chrysler Electronic Voice Alert
 
 11-function board "EVA-11"
-- TMS1000 MCU (label 4230625-N1LL 32045B, die label 1000F M32045B)
+- TMS1000 MCU (label 4230625-N1LL 32045B, die label: 1000F, M32045B)
 - TMS5110A, TMS6125 CM73002
 - 2 Nat.Semi. 20-pin SDIP, I/O expanders?
 
@@ -19,13 +19,15 @@ TODO:
 - add eva11/eva24 sensors
 - add eva24 VFD
 
-***************************************************************************/
+*******************************************************************************/
 
 #include "emu.h"
+
 #include "cpu/cop400/cop400.h"
 #include "cpu/tms1000/tms1000.h"
 #include "machine/tms6100.h"
 #include "sound/tms5110.h"
+
 #include "speaker.h"
 
 
@@ -98,9 +100,9 @@ void eva24_state::machine_start()
 
 
 
-/******************************************************************************
+/*******************************************************************************
     I/O
-******************************************************************************/
+*******************************************************************************/
 
 // EVA-24
 
@@ -150,9 +152,9 @@ u8 eva11_state::read_k()
 
 
 
-/******************************************************************************
+/*******************************************************************************
     Input Ports
-******************************************************************************/
+*******************************************************************************/
 
 static INPUT_PORTS_START( eva24 )
 INPUT_PORTS_END
@@ -162,13 +164,13 @@ INPUT_PORTS_END
 
 
 
-/******************************************************************************
+/*******************************************************************************
     Machine Configs
-******************************************************************************/
+*******************************************************************************/
 
 void base_state::eva_sound(machine_config &config)
 {
-	/* sound hardware */
+	// sound hardware
 	TMS6100(config, m_tms6100, 640_kHz_XTAL/4);
 
 	SPEAKER(config, "mono").front_center();
@@ -183,7 +185,7 @@ void base_state::eva_sound(machine_config &config)
 
 void eva24_state::eva(machine_config &config)
 {
-	/* basic machine hardware */
+	// basic machine hardware
 	COP420(config, m_maincpu, 640_kHz_XTAL/2); // guessed
 	m_maincpu->set_config(COP400_CKI_DIVISOR_4, COP400_CKO_OSCILLATOR_OUTPUT, false); // guessed
 	m_maincpu->write_d().set(FUNC(eva24_state::write_d));
@@ -195,7 +197,7 @@ void eva24_state::eva(machine_config &config)
 
 void eva11_state::eva(machine_config &config)
 {
-	/* basic machine hardware */
+	// basic machine hardware
 	TMS1000(config, m_maincpu, 640_kHz_XTAL/2); // from TMS5110A CPU CK
 	m_maincpu->read_k().set(FUNC(eva11_state::read_k));
 	m_maincpu->write_o().set(FUNC(eva11_state::write_o));
@@ -206,9 +208,9 @@ void eva11_state::eva(machine_config &config)
 
 
 
-/******************************************************************************
+/*******************************************************************************
     ROM Definitions
-******************************************************************************/
+*******************************************************************************/
 
 ROM_START( eva24 )
 	ROM_REGION( 0x0400, "maincpu", 0 )
@@ -235,10 +237,10 @@ ROM_END
 
 
 
-/******************************************************************************
+/*******************************************************************************
     Drivers
-******************************************************************************/
+*******************************************************************************/
 
-//    YEAR  NAME   PARENT CMP MACHINE INPUT  CLASS        INIT        COMPANY     FULLNAME                                FLAGS
-SYST( 1984, eva24, 0,      0, eva,    eva24, eva24_state, empty_init, "Chrysler", "Electronic Voice Alert (24-function)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING )
-SYST( 1983, eva11, eva24,  0, eva,    eva11, eva11_state, empty_init, "Chrysler", "Electronic Voice Alert (11-function)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING )
+//    YEAR  NAME   PARENT  COMPAT  MACHINE  INPUT  CLASS        INIT        COMPANY     FULLNAME                                FLAGS
+SYST( 1984, eva24, 0,      0,      eva,     eva24, eva24_state, empty_init, "Chrysler", "Electronic Voice Alert (24-function)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING )
+SYST( 1983, eva11, eva24,  0,      eva,     eva11, eva11_state, empty_init, "Chrysler", "Electronic Voice Alert (11-function)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING )
