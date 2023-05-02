@@ -14,14 +14,12 @@
 
     TODO:
     - Better keyboard
-    - Floppy
     - Cassette
     - Color/brightness levels
     - Sound
     - Joysticks
     - Centronics
     - Serial
-    - Expansion slots
 
     Notes:
     - This computer was described in the "mc" magazine by Franzis Verlag.
@@ -33,6 +31,7 @@
 ****************************************************************************/
 
 #include "emu.h"
+#include "bus/mc68000/sysbus.h"
 #include "cpu/m68000/m68000.h"
 #include "machine/6522via.h"
 #include "machine/input_merger.h"
@@ -46,7 +45,7 @@
 #define LOG_IO_READ  (1U << 1)
 #define LOG_IO_WRITE (1U << 2)
 
-#define VERBOSE (LOG_GENERAL | LOG_IO_WRITE)
+//#define VERBOSE (LOG_GENERAL | LOG_IO_WRITE | LOG_IO_READ)
 #include "logmacro.h"
 
 
@@ -67,6 +66,7 @@ public:
 		m_ram(*this, RAM_TAG),
 		m_crtc(*this, "crtc"),
 		m_via(*this, "via%u", 0U),
+		m_sysbus(*this, "sysbus"),
 		m_apm_view(*this, "apm"),
 		m_eprom(*this, "eprom%u", 0U),
 		m_switches(*this, "switches")
@@ -84,6 +84,7 @@ private:
 	required_device<ram_device> m_ram;
 	required_device<mc6845_device> m_crtc;
 	required_device_array<via6522_device, 2> m_via;
+	required_device<mc68000_sysbus_device> m_sysbus;
 	memory_view m_apm_view;
 	required_memory_region_array<2> m_eprom;
 	required_ioport m_switches;
@@ -165,8 +166,7 @@ uint16_t mc68000_state::memory_r(offs_t offset, uint16_t mem_mask)
 			break;
 
 		case 2:
-			LOGMASKED(LOG_IO_READ, "Unhandled floppy access\n");
-			data = 0xffff;
+			data = m_sysbus->floppy_r(offset >> 1, mem_mask);
 			break;
 
 		case 3:
@@ -201,6 +201,18 @@ uint16_t mc68000_state::memory_r(offs_t offset, uint16_t mem_mask)
 	case 0x6:
 		if (!machine().side_effects_disabled())
 			m_maincpu->trigger_bus_error();
+		break;
+
+	// expansion slots
+	case 0x8:
+	case 0x9:
+	case 0xa:
+	case 0xb:
+	case 0xc:
+	case 0xd:
+	case 0xe:
+	case 0xf:
+		data = m_sysbus->slot_r(code - 0x8, offset, mem_mask);
 		break;
 
 	default:
@@ -245,7 +257,7 @@ void mc68000_state::memory_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 			break;
 
 		case 2:
-			LOGMASKED(LOG_IO_WRITE, "Unhandled floppy access\n");
+			m_sysbus->floppy_w(offset >> 1, data, mem_mask);
 			break;
 
 		case 3:
@@ -277,6 +289,18 @@ void mc68000_state::memory_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	// bus error
 	case 0x6:
 		m_maincpu->trigger_bus_error();
+		break;
+
+	// expansion slots
+	case 0x8:
+	case 0x9:
+	case 0xa:
+	case 0xb:
+	case 0xc:
+	case 0xd:
+	case 0xe:
+	case 0xf:
+		m_sysbus->slot_w(code - 0x8, offset, data, mem_mask);
 		break;
 
 	default:
@@ -419,6 +443,23 @@ void mc68000_state::mc68000(machine_config &config)
 	MOS6522(config, m_via[1], 16_MHz_XTAL / 16); // ic56
 	m_via[1]->irq_handler().set(m_irq3, FUNC(input_merger_device::in_w<1>));
 	m_via[1]->writepa_handler().set(FUNC(mc68000_state::uvia_porta_w));
+
+	MC68000_SYSBUS(config, m_sysbus, 0);
+	m_sysbus->irq1_cb().set_inputline(m_maincpu, INPUT_LINE_IRQ1);
+	m_sysbus->irq2_cb().set_inputline(m_maincpu, INPUT_LINE_IRQ2);
+	m_sysbus->irq3_cb().set(m_irq3, FUNC(input_merger_device::in_w<2>));
+	m_sysbus->irq4_cb().set_inputline(m_maincpu, INPUT_LINE_IRQ4);
+	m_sysbus->irq5_cb().set_inputline(m_maincpu, INPUT_LINE_IRQ5);
+	m_sysbus->irq6_cb().set_inputline(m_maincpu, INPUT_LINE_IRQ6);
+	m_sysbus->irq7_cb().set_inputline(m_maincpu, INPUT_LINE_IRQ7);
+	MC68000_SYSBUS_SLOT(config, "sysbus:0", mc68000_sysbus_cards, nullptr);
+	MC68000_SYSBUS_SLOT(config, "sysbus:1", mc68000_sysbus_cards, nullptr);
+	MC68000_SYSBUS_SLOT(config, "sysbus:2", mc68000_sysbus_cards, nullptr);
+	MC68000_SYSBUS_SLOT(config, "sysbus:3", mc68000_sysbus_cards, nullptr);
+	MC68000_SYSBUS_SLOT(config, "sysbus:4", mc68000_sysbus_cards, nullptr);
+	MC68000_SYSBUS_SLOT(config, "sysbus:5", mc68000_sysbus_cards, nullptr);
+	MC68000_SYSBUS_SLOT(config, "sysbus:6", mc68000_sysbus_cards, nullptr);
+	MC68000_SYSBUS_SLOT(config, "sysbus:7", mc68000_sysbus_cards, nullptr);
 
 	generic_keyboard_device &kbd(GENERIC_KEYBOARD(config, "kbd", 0));
 	kbd.set_keyboard_callback(FUNC(mc68000_state::kbd_put));
