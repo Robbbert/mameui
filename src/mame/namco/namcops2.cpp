@@ -868,6 +868,10 @@ Notes:
           CN3 - 40 pin connector with perpendicular adapter board plugged into main board to connector J11
           CN6 - 2 pin connector joined with a small cable to the board where the dongle plugs in
           CN7 - 6 pin connector (unused)
+
+
+TODO: all DVD dumps but taiko8 should be updated with chdman's createdvd option
+
 ***************************************************************************/
 
 
@@ -1142,6 +1146,9 @@ ROM_START( taiko7 )
 
 	DISK_REGION("dvd")
 	DISK_IMAGE_READONLY( "tk71dvd0", 0, SHA1(622ffc8f71f50e93069a8e91b56a7e63cf98b5ae) )
+
+	DISK_REGION("cd")
+	DISK_IMAGE_READONLY( "tk71_cd01", 0, SHA1(f2a88cfcc3cf8691987bed27c3e20a7fc828a7db) ) // firmware updater
 ROM_END
 
 ROM_START( taiko8 )
@@ -1153,7 +1160,7 @@ ROM_START( taiko8 )
 	ROM_LOAD( "tk81001-na-a_spr.ic002", 0x800000, 0x040000, CRC(590c8d80) SHA1(30622142428e37b8c3b91dee7fdd147d593b4d6f) )
 
 	DISK_REGION("dvd")
-	DISK_IMAGE_READONLY( "tk8100-1-na-dvd0-a", 0, SHA1(81a2a9d7164495af825ad038fbf6f696e755ab9c) )
+	DISK_IMAGE_READONLY( "tk8100-1-na-dvd0-a", 0, SHA1(a06b32741b3eb61084d8176306005d08d36eb987) ) // read confirmed from two different DVDs
 ROM_END
 
 ROM_START( zoidsinf )
