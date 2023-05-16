@@ -18841,6 +18841,7 @@ kosmicpt                        // Elektronika
 krybolov                        // Elektronika
 kskatedie                       // Konami
 ktmnt                           // Konami
+ktmnt3                          // Konami
 ktopgun                         // Konami
 kvakazad                        // Elektronika
 morataka                        // Elektronika
@@ -33750,7 +33751,8 @@ sgmt1                           // 1994
 supergm3                        // 1996
 
 @source:nintendo/n64.cpp
-n64                             // Nintendo N64
+n64                             // Nintendo N64 (NTSC)
+n64pal                          // Nintendo N64 (PAL)
 n64dd                           // Nintendo N64 (64DD Attachment)
 
 @source:nintendo/n64_gateway.cpp
@@ -40796,6 +40798,9 @@ zx80                            // 1980 Sinclair ZX-80
 zx81                            // 1981 Sinclair ZX-81
 zx97                            //
 
+@source:skeleton/600cat.cpp
+600cat                          //
+
 @source:skeleton/aaa.cpp
 aaa                             //
 
@@ -42460,9 +42465,9 @@ othunderu                       // B67 (c) 1988 Taito America Corporation (US, r
 othunderuo                      // B67 (c) 1988 Taito America Corporation (US)
 
 @source:taito/pitnrun.cpp
+jumpkun                         // prototype
 pitnrun                         // PR  (c) 1984 Taito Corporation
 pitnruna                        // PR  (c) 1984 Taito Corporation
-jumpkun                         // prototype
 
 @source:taito/pkspirit.cpp
 pkspirit                        // D41
@@ -45350,6 +45355,9 @@ mu50                            // 1995 MU-50
 
 @source:yamaha/ymmu80.cpp
 mu80                            // 1994 MU-80
+
+@source:yamaha/ympcs30.cpp
+pcs30                           // 1984
 
 @source:yamaha/ympsr16.cpp
 psr16                           // 1988 PSR-16
