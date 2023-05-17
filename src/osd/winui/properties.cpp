@@ -2683,18 +2683,18 @@ static void BuildDataMap(void)
 	datamap_set_float_format(properties_datamap, IDC_BRIGHTCORRECTDISP,	"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_CONTRASTDISP,		"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_PAUSEBRIGHTDISP,	"%3.2f");
-	datamap_set_float_format(properties_datamap, IDC_FSGAMMADISP,		"%3.1f");
-	datamap_set_float_format(properties_datamap, IDC_FSBRIGHTNESSDISP,	"%3.1f");
-	datamap_set_float_format(properties_datamap, IDC_FSCONTRASTDISP,	"%3.1f");
+	datamap_set_float_format(properties_datamap, IDC_FSGAMMADISP,		"%3.2f");
+	datamap_set_float_format(properties_datamap, IDC_FSBRIGHTNESSDISP,	"%3.2f");
+	datamap_set_float_format(properties_datamap, IDC_FSCONTRASTDISP,	"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_JDZDISP,			"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_JSATDISP,			"%3.2f");
-	datamap_set_float_format(properties_datamap, IDC_SPEEDDISP,			"%3.2f");
+	datamap_set_float_format(properties_datamap, IDC_SPEEDDISP,			"%3.1f");
 	datamap_set_float_format(properties_datamap, IDC_PORTAUDIO_LATENCY_DISP, "%3.2f");
 
 	// trackbar ranges - slider-name,start,end,step
 	datamap_set_trackbar_range(properties_datamap, IDC_JDZ,           0.00, 1.00,  (float)0.05);
 	datamap_set_trackbar_range(properties_datamap, IDC_JSAT,          0.00, 1.00,  (float)0.05);
-	datamap_set_trackbar_range(properties_datamap, IDC_SPEED,         0.00, 3.00,  (float)0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_SPEED,         0.1, 100.00,  (float)0.1);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MIN,      0.00, 1.00, (float)0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MAX,      1.00, 10.00, (float)0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_INTEN,    -10.00, 10.00, (float)0.01);
