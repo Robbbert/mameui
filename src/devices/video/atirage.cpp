@@ -233,7 +233,7 @@ u8 atirage_device::regs_0_read(offs_t offset)
 
 		case CRTC_DAC_BASE + 1:
 			{
-				u8 result = 0;
+				u8 result;
 				switch (m_dac_state)
 				{
 					case 0: // red
@@ -407,7 +407,7 @@ void atirage_device::update_mode()
 		return;
 	}
 
-	double vpll_frequency = 0;
+	double vpll_frequency;
 	int clk_source = m_regs0[CLOCK_CNTL] & 3;
 
 	switch (vclk_source)
