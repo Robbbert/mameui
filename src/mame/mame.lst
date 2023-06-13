@@ -28647,6 +28647,7 @@ cmkenospa                       // (c) 2000 Coinmaster-Gaming, Ltd.
 cmrltv75                        // (c) 2001 Coinmaster-Gaming, Ltd.
 colorama                        // (c) 2000 Coinmaster-Gaming, Ltd.
 coloramas                       // (c) 2000 Coinmaster-Gaming, Ltd.
+wof_v11                         // (c) 2000 Coinmaster-Gaming, Ltd.
 
 @source:misc/cointek.cpp
 unkct                           //
@@ -39824,6 +39825,7 @@ starjacks                       // (c) 1983 Stern (S1)
 swat                            // 834-5388 (c) 1984 Coreland / Sega (S1)
 teddybb                         // 834-5712 (c) 1985 (S1)
 teddybbo                        // 834-5712 (c) 1985 (S1)
+teddybboa                       // 834-5712 (c) 1985 (S1)
 teddybbobl                      // bootleg
 thetogyu                        // 834-5478 (c) 1984 Sega / Coreland (S1)
 tokisens                        // (c) 1987
@@ -41107,6 +41109,9 @@ goupilg2                        //
 @source:skeleton/grfd2301.cpp
 grfd2301                        //
 
+@source:skeleton/happyvideo.cpp
+hppyvideo                       //
+
 @source:skeleton/hazeltin.cpp
 hazl1500                        // Hazeltine 1500 (c) 1977
 hazl1552                        // Hazeltine 1552 (c) 1979
@@ -41246,6 +41251,9 @@ mini2440                        //
 
 @source:skeleton/miniframe.cpp
 minifram
+
+@source:skeleton/minihock.cpp
+minihockey                      // (c) 1991 Rumatic
 
 @source:skeleton/miuchiz.cpp
 miuchiz                         // (c) 2006 MGA Entertainment
@@ -43021,6 +43029,7 @@ styphp                          // E98 (c) 2000 Taito
 taitotz                         //
 
 @source:taito/taitowlf.cpp
+p5txla
 pf2012                          // E59 (c) 1997 Taito
 
 @source:taito/tnzs.cpp
@@ -45172,6 +45181,11 @@ las3000                         // 1983 Laser 3000
 @source:vtech/lcmate2.cpp
 lcmate2                         //
 
+@source:vtech/pc1000.cpp
+misterx                         // 1988 (Yeno) MisterX
+ordisava                        // 1988 Ordisavant (France)
+pc1000                          // 1988 PreComputer 1000
+
 @source:vtech/pc2000.cpp
 gbs5505x                        // 2001 Genius BrainStation 5505X (Germany)
 gl2000                          // 1993 Genius Leader 2000
@@ -45185,9 +45199,6 @@ gl5005x                         // Genius Leader 5005X (Germany)
 glpn                            // Genius Leader Power Notebook (Germany)
 gmtt                            // 1998 Genius Master Table Top (Germany)
 lexipcm                         // LexiPC Mega 2000 (Germany)
-misterx                         // 1988 (Yeno) MisterX
-ordisava                        // 1988 Ordisavant (France)
-pc1000                          // 1988 PreComputer 1000
 pc2000                          // 1993 PreComputer 2000
 pc2000s                         // 1993 PreComputer 2000 (Spain)
 primusex                        // 198? Yeno Primus Expert mit Stimme (Germany)
