@@ -9,11 +9,16 @@ Three board system consisting of a P5TX-LA PC motherboard, a Taito main board an
 
 TODO:
 - The Retro Web MB pic has a Winbond w83877tf Super I/O but neither BIOSes accesses it, is it specific to the (unavailable) ECS P5TX-LA BIOS?
-- pf2012: crashes with "EMM386 not installed - insufficient memory" during boot up;
-- pf2012: Hookup Voodoo to PCI root;
+- pf2012: enters service mode no matter what (failed EEPROM? bad data bank?),
+          fully resets the machine if exited;
+- pf2012: PC portion returns an EMM386 "WARNING: Unable to set page frame base address"
+          during boot up, safe to ignore?
 - According to manual hold A+B+service button for 10 seconds for entering test mode during initial bootup
   sequence. Board and input test menu doesn't seem to have a dedicated test mode switch.
   This statement needs verification once we get there;
+
+Notes:
+- pf2012: -isa1 svga_et4k if you need PC side logs;
 
 ===================================================================================================
 
@@ -63,15 +68,24 @@ Taito W Rom Board:
 #include "bus/rs232/sun_kbd.h"
 #include "bus/rs232/terminal.h"
 #include "cpu/i386/i386.h"
-#include "machine/w83977tf.h"
+#include "machine/bankdev.h"
+//#include "machine/w83977tf.h"
+#include "machine/8042kbdc.h"
+#include "machine/ds128x.h"
 #include "machine/i82371sb.h"
-#include "machine/i82439hx.h"
 #include "machine/i82439tx.h"
 #include "machine/pci-ide.h"
 #include "machine/pci.h"
-#include "video/virge_pci.h"
 #include "video/atirage.h"
 #include "video/voodoo_pci.h"
+
+#include "taitoio.h"
+
+/***********************
+ *
+ * Taito extra ISA board
+ *
+ **********************/
 
 class isa16_taito_rom_disk : public device_t, public device_isa16_card_interface
 {
@@ -85,21 +99,26 @@ public:
 protected:
 	virtual void device_start() override;
 	virtual void device_reset() override;
+	virtual void device_add_mconfig(machine_config &config) override;
+	virtual ioport_constructor device_input_ports() const override;
 
 private:
 	required_memory_region m_program_rom;
 	required_memory_region m_data_rom;
+	required_device<address_map_bank_device> m_bankdev;
+	required_device<tc0510nio_device> m_tc0510nio;
+
+	void io_map(address_map &map);
 
 	u8 m_program_bank = 0;
 	u8 m_program_select = 0;
-	u8 read_program(offs_t offset);
-	void write_program(offs_t offset, u8 data);
-	u8 read_data(offs_t offset);
-	void write_data(offs_t offset, u8 data);
+
 	u8 read_bank(offs_t offset);
 	void write_bank(offs_t offset, u8 data);
 
 	void remap(int space_id, offs_t start, offs_t end) override;
+
+	void bankdev_map(address_map &map);
 };
 
 DEFINE_DEVICE_TYPE(ISA16_TAITO_ROM_DISK, isa16_taito_rom_disk, "isa16_taito_rom_disk", "ISA16 Taito Wolf System ROM DISK")
@@ -109,7 +128,56 @@ isa16_taito_rom_disk::isa16_taito_rom_disk(const machine_config &mconfig, const 
 	, device_isa16_card_interface(mconfig, *this)
 	, m_program_rom(*this, finder_base::DUMMY_TAG)
 	, m_data_rom(*this, finder_base::DUMMY_TAG)
+	, m_bankdev(*this, "bankdev")
+	, m_tc0510nio(*this, "tc0510nio")
 {
+}
+
+void isa16_taito_rom_disk::device_add_mconfig(machine_config &config)
+{
+	ADDRESS_MAP_BANK(config, m_bankdev).set_map(&isa16_taito_rom_disk::bankdev_map).set_options(ENDIANNESS_LITTLE, 8, 16 + 14, 0x4000);
+
+	TC0510NIO(config, m_tc0510nio, 0);
+	m_tc0510nio->read_0_callback().set_ioport("IN0");
+	m_tc0510nio->read_1_callback().set_ioport("IN1");
+	m_tc0510nio->read_2_callback().set_ioport("IN2");
+	m_tc0510nio->read_3_callback().set_ioport("IN3");
+	// TODO: check me
+	//m_tc0510nio->write_3_callback().set
+	//m_tc0510nio->write_4_callback().set
+	m_tc0510nio->read_7_callback().set_ioport("IN7");
+
+	// TODO: sound CPU et al.
+}
+
+void isa16_taito_rom_disk::io_map(address_map &map)
+{
+	map.unmap_value_high();
+
+	map(0x080, 0x081).rw(FUNC(isa16_taito_rom_disk::read_bank), FUNC(isa16_taito_rom_disk::write_bank));
+	// writes watchdog to port 1, in 8-bit fashion
+	map(0x200, 0x207).lrw8(
+		NAME([this] (offs_t offset) { return m_tc0510nio->read(offset ^ 1); }),
+		NAME([this] (offs_t offset, u8 data) { m_tc0510nio->write(offset ^ 1, data); })
+	);
+
+	//map(0x400, 0x4ff) sound CPU shared RAM?
+
+	//map(0x601, 0x601) EEPROM?
+	//map(0x602, 0x603) to sound CPU
+}
+
+void isa16_taito_rom_disk::bankdev_map(address_map &map)
+{
+	map.unmap_value_high();
+	// TODO: EMM386 and flush interactions only for writes?
+	map(0x0000'0000, 0x003f'ffff).lr8(
+		NAME([this] (offs_t offset) { return m_program_rom->base()[offset]; })
+	);
+	// TODO: unconfirmed upper bounds
+	map(0x0080'0000, 0x047f'ffff).lr8(
+		NAME([this] (offs_t offset) { return m_data_rom->base()[offset]; })
+	);
 }
 
 void isa16_taito_rom_disk::device_start()
@@ -126,37 +194,11 @@ void isa16_taito_rom_disk::remap(int space_id, offs_t start, offs_t end)
 	if (space_id == AS_PROGRAM)
 	{
 		// emm386 /X=CB00-D400
-		m_isa->install_memory(0xcb080, 0xcb081, read8sm_delegate(*this, FUNC(isa16_taito_rom_disk::read_bank)), write8sm_delegate(*this, FUNC(isa16_taito_rom_disk::write_bank)));
+		m_isa->install_memory(0xcb000, 0xcbfff, *this, &isa16_taito_rom_disk::io_map);
+		//m_isa->install_memory(0xcb080, 0xcb081, read8sm_delegate(*this, FUNC(isa16_taito_rom_disk::read_bank)), write8sm_delegate(*this, FUNC(isa16_taito_rom_disk::write_bank)));
 
-		m_isa->install_memory(0xd0000, 0xd3fff, read8sm_delegate(*this, FUNC(isa16_taito_rom_disk::read_program)), write8sm_delegate(*this, FUNC(isa16_taito_rom_disk::write_program)));
-
-		// TODO: unknown location
-		//m_isa->install_memory(0xd8000, 0xdffff, read8sm_delegate(*this, FUNC(isa16_taito_rom_disk::read_data)), write8sm_delegate(*this, FUNC(isa16_taito_rom_disk::write_data)));
+		m_isa->install_memory(0xd0000, 0xd3fff, *m_bankdev, &address_map_bank_device::amap8);
 	}
-}
-
-
-u8 isa16_taito_rom_disk::read_program(offs_t offset)
-{
-	if (m_program_select == 2)
-		return m_data_rom->base()[offset | ((m_program_bank) * 0x4000)];
-
-	return m_program_rom->base()[offset | (m_program_bank * 0x4000)];
-}
-
-void isa16_taito_rom_disk::write_program(offs_t offset, u8 data)
-{
-	// TODO: EMM386 and flush interactions only?
-}
-
-u8 isa16_taito_rom_disk::read_data(offs_t offset)
-{
-	return m_data_rom->base()[offset];
-}
-
-void isa16_taito_rom_disk::write_data(offs_t offset, u8 data)
-{
-
 }
 
 u8 isa16_taito_rom_disk::read_bank(offs_t offset)
@@ -175,12 +217,105 @@ void isa16_taito_rom_disk::write_bank(offs_t offset, u8 data)
 	if (!offset)
 		m_program_bank = data;
 	else
-	{
 		m_program_select = data;
-		if (data != 2 && data != 0)
-			logerror("Upper data bank unknown %02x\n", data);
-	}
+
+	m_bankdev->set_bank(m_program_select << 8 | m_program_bank);
 }
+
+static INPUT_PORTS_START(pf2012)
+	PORT_START("IN0")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(1)
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_PLAYER(1)
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(1)
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_START1 ) // marked as セレクト (Select) in test mode
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_COIN1 )
+
+	PORT_START("IN1")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(2)
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_PLAYER(2)
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(2)
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_START2 ) // as above
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_COIN2 )
+
+	PORT_START("IN2")
+	PORT_DIPNAME( 0x0001, 0x0001, "IN2" )
+	PORT_DIPSETTING(      0x0001, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0002, 0x0002, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0002, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0004, 0x0004, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0004, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0008, 0x0008, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0008, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0010, 0x0010, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0010, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	// TODO: Either test or service (game doesn't tell which is which)
+	PORT_DIPNAME( 0x0020, 0x0020, "Service/Test? (0x20)" )
+	PORT_DIPSETTING(      0x0020, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_TILT )
+	PORT_DIPNAME( 0x0080, 0x0080, "Service/Test? (0x80)" )
+	PORT_DIPSETTING(      0x0080, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+
+	PORT_START("IN3")
+	PORT_DIPNAME( 0x0001, 0x0001, "IN3" )
+	PORT_DIPSETTING(      0x0001, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0002, 0x0002, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0002, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0004, 0x0004, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0004, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0008, 0x0008, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0008, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0010, 0x0010, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0010, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0020, 0x0020, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0020, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0040, 0x0040, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0040, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x0080, 0x0080, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(      0x0080, DEF_STR( Off ) )
+	PORT_DIPSETTING(      0x0000, DEF_STR( On ) )
+
+	PORT_START("IN7")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_JOYSTICK_UP ) PORT_PLAYER(1)
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_JOYSTICK_DOWN ) PORT_PLAYER(1)
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_JOYSTICK_LEFT ) PORT_PLAYER(1)
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_JOYSTICK_RIGHT ) PORT_PLAYER(1)
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_JOYSTICK_UP ) PORT_PLAYER(2)
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_JOYSTICK_DOWN ) PORT_PLAYER(2)
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_JOYSTICK_LEFT ) PORT_PLAYER(2)
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_JOYSTICK_RIGHT ) PORT_PLAYER(2)
+INPUT_PORTS_END
+
+ioport_constructor isa16_taito_rom_disk::device_input_ports() const
+{
+	return INPUT_PORTS_NAME(pf2012);
+}
+
+
+/***********************
+ *
+ * Motherboard resources
+ *
+ **********************/
 
 class isa16_p5txla_mb : public device_t, public device_isa16_card_interface
 {
@@ -212,7 +347,7 @@ isa16_p5txla_mb::isa16_p5txla_mb(const machine_config &mconfig, const char *tag,
 
 void isa16_p5txla_mb::device_add_mconfig(machine_config &config)
 {
-    // TODO: verify keyboard / rtc types
+    // TODO: verify keyboard / RTC types, latter lies inside PIIX4?
     // need at least a DS12885 otherwise EMM386 will complain to not have enough memory
 	DS12885(config, m_rtc, 32.768_kHz_XTAL);
 	//m_rtc->irq().set(m_pic8259_2, FUNC(pic8259_device::ir0_w));
@@ -368,11 +503,9 @@ void p5txla_state::taitowlf(machine_config &config)
     p5txla_state::p5txla(config);
 
 	ISA16_SLOT(config, "board1", 0, "pci:07.0:isabus", isa_internal_devices, "taito_romdisk", true).set_option_machine_config("taito_romdisk", romdisk_config);
+	// TODO: remove keyboard slot option
 
-    // TODO: remove this
-    VIRGE_PCI(config.replace(), "pci:12.0", 0);
-
-	voodoo_1_pci_device &voodoo(VOODOO_1_PCI(config, "pci:13.0", 0, "maincpu", "screen"));
+	voodoo_1_pci_device &voodoo(VOODOO_1_PCI(config.replace(), "pci:12.0", 0, "maincpu", "screen"));
 	voodoo.set_fbmem(2);
 	voodoo.set_tmumem(4, 0);
 	voodoo.set_status_cycles(1000); // optimization to consume extra cycles when polling status
@@ -383,7 +516,7 @@ void p5txla_state::taitowlf(machine_config &config)
 	screen.set_refresh_hz(57);
 	screen.set_size(800, 262);
 	screen.set_visarea(0, 512 - 1, 0, 240 - 1);
-    screen.set_screen_update("pci:13.0", FUNC(voodoo_1_pci_device::screen_update));
+    screen.set_screen_update("pci:12.0", FUNC(voodoo_1_pci_device::screen_update));
 }
 
 /*****************************************************************************/
@@ -398,12 +531,12 @@ ROM_START(pf2012)
     // TAITO Ver1.0 1998/5/7
 	ROM_LOAD("p5tx-la_861.u16", 0x20000, 0x20000, CRC(a4d4a0fc) SHA1(af3a49a1bee416b58a61af28473f3dac0a4160c8))
 
-	ROM_REGION(0x400000, "board1:program_rom", 0) // Program ROM (FAT12)
+	ROM_REGION16_LE(0x400000, "board1:program_rom", 0) // Program ROM (FAT12)
 	ROM_LOAD("u1.bin", 0x000000, 0x200000, CRC(8f4c09cb) SHA1(0969a92fec819868881683c580f9e01cbedf4ad2))
 	ROM_LOAD("u2.bin", 0x200000, 0x200000, CRC(59881781) SHA1(85ff074ab2a922eac37cf96f0bf153a2dac55aa4))
 
-	ROM_REGION(0x4000000, "board1:data_rom", 0) // Data ROM (FAT12)
-	ROM_LOAD("e59-01.u20", 0x0000000, 0x800000, CRC(701d3a9a) SHA1(34c9f34f4da34bb8eed85a4efd1d9eea47a21d77) )
+	ROM_REGION16_LE(0x4000000, "board1:data_rom", 0) // Data ROM (FAT12)
+	ROM_LOAD("e59-01.u20", 0x0000000, 0x800000, CRC(60f2ce4a) SHA1(322dd62022527997ecc655347fdf75a092aefa8a) )
 	ROM_LOAD("e59-02.u23", 0x0800000, 0x800000, CRC(626df682) SHA1(35bb4f91201734ce7ccdc640a75030aaca3d1151) )
 	ROM_LOAD("e59-03.u26", 0x1000000, 0x800000, CRC(74e4efde) SHA1(630235c2e4a11f615b5f3b8c93e1e645da09eefe) )
 	ROM_LOAD("e59-04.u21", 0x1800000, 0x800000, CRC(c900e8df) SHA1(93c06b8f5082e33f0dcc41f1be6a79283de16c40) )
@@ -412,16 +545,16 @@ ROM_START(pf2012)
 	ROM_LOAD("e59-07.u22", 0x3000000, 0x800000, CRC(1f0ddcdc) SHA1(72ffe08f5effab093bdfe9863f8a11f80e914272) )
 	ROM_LOAD("e59-08.u25", 0x3800000, 0x800000, CRC(8db38ffd) SHA1(4b71ea86fb774ba6a8ac45abf4191af64af007e7) )
 
-	ROM_REGION(0x1400000, "samples", 0) // ZOOM sample data
-	ROM_LOAD("e59-09.u29", 0x0000000, 0x800000, CRC(d0da5c50) SHA1(56fb3c38f35244720d32a44fed28e6b58c7851f7) )
-	ROM_LOAD("e59-10.u32", 0x0800000, 0x800000, CRC(4c0e0a5c) SHA1(6454befa3a1dd532eb2a760129dcd7e611508730) )
-	ROM_LOAD("e59-11.u33", 0x1000000, 0x400000, CRC(c90a896d) SHA1(2b62992f20e4ca9634e7953fe2c553906de44f04) )
-
-	ROM_REGION(0x180000, "cpu1", 0) // MN10200 program
+	ROM_REGION(0x180000, "board1:taito_zoom:mn10200", 0) // MN10200 program
 	ROM_LOAD("e59-12.u13", 0x000000, 0x80000, CRC(9a473a7e) SHA1(b0ec7b0ae2b33a32da98899aa79d44e8e318ceb7) )
 	ROM_LOAD("e59-13.u15", 0x080000, 0x80000, CRC(77719880) SHA1(8382dd2dfb0dae60a3831ed6d3ff08539e2d94eb) )
 	ROM_LOAD("e59-14.u14", 0x100000, 0x40000, CRC(d440887c) SHA1(d965871860d757bc9111e9adb2303a633c662d6b) )
 	ROM_LOAD("e59-15.u16", 0x140000, 0x40000, CRC(eae8e523) SHA1(8a054d3ded7248a7906c4f0bec755ddce53e2023) )
+
+	ROM_REGION(0x1400000, "board1:taito_zoom:zsg2", 0) // ZOOM sample data
+	ROM_LOAD("e59-09.u29", 0x0000000, 0x800000, CRC(d0da5c50) SHA1(56fb3c38f35244720d32a44fed28e6b58c7851f7) )
+	ROM_LOAD("e59-10.u32", 0x0800000, 0x800000, CRC(4c0e0a5c) SHA1(6454befa3a1dd532eb2a760129dcd7e611508730) )
+	ROM_LOAD("e59-11.u33", 0x1000000, 0x400000, CRC(c90a896d) SHA1(2b62992f20e4ca9634e7953fe2c553906de44f04) )
 
 	ROM_REGION(0x20000, "bootscreen", 0) // bootscreen
 	ROM_LOAD("e58-04.u71", 0x000000, 0x20000, CRC(500e6113) SHA1(93226706517c02e336f96bdf9443785158e7becf) )
@@ -434,4 +567,4 @@ ROM_END
 
 COMP(1997, p5txla, 0,   0, p5txla, 0,   p5txla_state, empty_init, "ECS",    "P5TX-LA (i430TX)", MACHINE_NOT_WORKING | MACHINE_NO_SOUND)
 
-GAME(1998, pf2012, 0,   taitowlf, 0, p5txla_state, empty_init, ROT0, "Taito",  "Psychic Force 2012", MACHINE_NOT_WORKING | MACHINE_NO_SOUND)
+GAME(1998, pf2012, 0,   taitowlf, 0, p5txla_state, empty_init, ROT0, "Taito",  "Psychic Force 2012 (Ver 2.04J)", MACHINE_NOT_WORKING | MACHINE_NO_SOUND) // 1998/05/07 18:30:00
