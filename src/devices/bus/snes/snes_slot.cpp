@@ -227,7 +227,7 @@ base_sns_cart_slot_device::base_sns_cart_slot_device(const machine_config &mconf
 	m_type(SNES_MODE20),
 	m_cart(nullptr),
 	m_irq_callback(*this),
-	m_open_bus_callback(*this)
+	m_open_bus_callback(*this, 0xff)
 {
 }
 
@@ -265,9 +265,6 @@ void base_sns_cart_slot_device::device_start()
 		m_cart->m_slot = this;
 	else
 		osd_printf_error("The cart could not be loaded\n");   // MESSUI - let us know there's a problem
-
-	m_irq_callback.resolve_safe();
-	m_open_bus_callback.resolve_safe(0xff);
 }
 
 

@@ -280,7 +280,6 @@ void i80286_cpu_device::device_start()
 	state_add( I8086_HALT, "HALT", m_halt ).mask(1);
 
 	m_a20_callback.resolve_safe(0xffffff);
-	m_out_shutdown_func.resolve_safe();
 }
 
 device_memory_interface::space_config_vector i80286_cpu_device::memory_space_config() const
@@ -1344,7 +1343,7 @@ m_limit[sreg] = LIMIT(desc); }
 							LOADDESC(0x842, SS);
 							LOADDESC(0x848, DS);
 #undef LOADDESC
-							// void cast supresses warning
+							// void cast suppresses warning
 #define LOADDESC(addr, reg, r) { desc[1] = read_word(addr); desc[2] = read_word(addr + 2); desc[0] = read_word(addr + 4); \
 reg.base = BASE(desc); (void)(r); reg.limit = LIMIT(desc); }
 							LOADDESC(0x84e, m_gdtr, 1);
