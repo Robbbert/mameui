@@ -181,27 +181,29 @@ static void create_index_history(const char* datsdir, std::ifstream &fp, std::st
 			}
 		}
 		else
-		find = file_line.find(text2);
-		if (find != npos)   // found a sw-item
 		{
-			// Find position of the 4 double-quotes
-			quot1 = file_line.find(text4), quot2 = npos;
-			if (quot1 != npos)
+			find = file_line.find(text2);
+			if (find != npos)   // found a sw-item
 			{
-				quot1++;
-				quot2 = file_line.find(text4, quot1);
-				if (quot2 != npos)
+				// Find position of the 4 double-quotes
+				quot1 = file_line.find(text4), quot2 = npos;
+				if (quot1 != npos)
 				{
-					std::string first = file_line.substr(quot1, quot2-quot1);
-					quot1 = file_line.find(text4, quot2+1);
-					if (quot1 != npos)
+					quot1++;
+					quot2 = file_line.find(text4, quot1);
+					if (quot2 != npos)
 					{
-						quot1++;
-						quot2 = file_line.find(text4, quot1);
-						if (quot2 != npos)
+						std::string first = file_line.substr(quot1, quot2-quot1);
+						quot1 = file_line.find(text4, quot2+1);
+						if (quot1 != npos)
 						{
-							std::string second = file_line.substr(quot1, quot2-quot1);
-							final_key = first + std::string(":") + second;
+							quot1++;
+							quot2 = file_line.find(text4, quot1);
+							if (quot2 != npos)
+							{
+								std::string second = file_line.substr(quot1, quot2-quot1);
+								final_key = first + std::string(":") + second;
+							}
 						}
 					}
 				}
