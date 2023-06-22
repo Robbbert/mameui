@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 //****************************************************************************
 //============================================================
 //
@@ -6,8 +6,8 @@
 //
 //============================================================
 
-#ifndef NEWUI_H
-#define NEWUI_H
+#ifndef WINUI_NEWUI_H
+#define WINUI_NEWUI_H
 
 ///// INCLUDES /////
 

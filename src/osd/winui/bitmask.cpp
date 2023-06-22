@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 // MASTER
 //****************************************************************************
 /* bitmask.c - Bitmask support routines - MSH 11/19/1998 */
@@ -143,4 +143,3 @@ int FindBit(LPBITS lpBits, int nStartPos, BOOL bSet)
 	return -1;
 }
 
-/* End of source file */

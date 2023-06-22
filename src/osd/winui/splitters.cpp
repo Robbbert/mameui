@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 // MASTER
 //****************************************************************************
 
@@ -368,4 +368,3 @@ int GetSplitterCount(void)
 	return nSplitterCount;
 }
 
-/* End of file */

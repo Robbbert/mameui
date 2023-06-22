@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 //****************************************************************************
 //============================================================
 //
@@ -6,8 +6,8 @@
 //
 //============================================================
 
-#ifndef __SWCONFIG_H__
-#define __SWCONFIG_H__
+#ifndef WINUI_SWCONFIG_H
+#define WINUI_SWCONFIG_H
 
 #include "emu.h"
 #include "mconfig.h"
@@ -36,3 +36,4 @@ software_config *software_config_alloc(int driver_index); //, hashfile_error_fun
 void software_config_free(software_config *config);
 
 #endif // __SWCONFIG_H__
+
