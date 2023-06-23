@@ -698,9 +698,6 @@ static POPUPSTRING popstr[MAX_MENUS + 1];
 static HWND hStatusBar = 0;
 static HWND s_hToolBar   = 0;
 
-/* Column Order as Displayed */
-static BOOL xpControl = false;
-
 /* Used to recalculate the main window layout */
 static int  bottomMargin = 0;
 static int  topMargin = 0;
@@ -1606,12 +1603,6 @@ MYBITMAPINFO * GetBackgroundInfo(void)
 }
 
 
-BOOL GetUseXPControl(void)
-{
-	return xpControl;
-}
-
-
 int GetMinimumScreenShotWindowWidth(void)
 {
 	BITMAP bmp;
@@ -1754,15 +1745,14 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	// Are we using an Old comctl32.dll?
 	LONG common_control_version = GetCommonControlVersion();
-	printf("Win32UI_init: Common controlversion %ld %ld\n", common_control_version >> 16, common_control_version & 0xffff);fflush(stdout);
+	printf("COMCTL32.DLL version = %ld %ld\n",common_control_version >> 16, common_control_version & 0xffff);
 
-	xpControl = (common_control_version >= PACKVERSION(6,0));
-	if (common_control_version < PACKVERSION(4,71))
+	if (common_control_version < PACKVERSION(6,0))
 	{
-		char buf[] = MAMEUINAME " has detected an old version of comctl32.dll.\n\n"
+		char buf[] = MAMEUINAME " needs COMCTL32.DLL version 6.0\n\n"
 					"Unable to proceed.\n\n";
 
-		win_message_box_utf8(0, buf, MAMEUINAME " Outdated comctl32.dll Error", MB_OK | MB_ICONWARNING);
+		win_message_box_utf8(0, buf, MAMEUINAME " Outdated COMCTL32.DLL Error", MB_OK | MB_ICONWARNING);
 		return false;
 	}
 

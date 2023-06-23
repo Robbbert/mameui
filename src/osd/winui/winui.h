@@ -85,7 +85,6 @@ char * ConvertAmpersandString(const char *s);
 HBITMAP GetBackgroundBitmap(void);
 HPALETTE GetBackgroundPalette(void);
 MYBITMAPINFO* GetBackgroundInfo(void);
-BOOL GetUseXPControl(void);
 
 int GetMinimumScreenShotWindowWidth(void);
 
