@@ -247,6 +247,16 @@ BOOL GetGameCheck(void)
 	return settings.bool_value(MUIOPTION_CHECK_GAME);
 }
 
+void SetEnableIndent(bool value)
+{
+	settings.setter(MUIOPTION_VIEW_INDENT, value);
+}
+
+bool GetEnableIndent()
+{
+	return settings.bool_value(MUIOPTION_VIEW_INDENT);
+}
+
 void SetJoyGUI(BOOL use_joygui)
 {
 	settings.setter(MUIOPTION_JOYSTICK_IN_INTERFACE, use_joygui);

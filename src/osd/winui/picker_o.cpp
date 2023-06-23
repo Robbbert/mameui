@@ -183,10 +183,10 @@ static BOOL ListViewContextMenu(HWND hwndPicker, LPARAM lParam)
 		GetCursorPos(&pt);
 
 	// Figure out which header column was clicked, if at all
-	//int nViewID = Picker_GetViewID(hwndPicker);
+	int nViewID = Picker_GetViewID(hwndPicker);
 	int nColumn = -1;
 
-	//if ((nViewID == VIEW_REPORT) || (nViewID == VIEW_GROUPED))
+	if ((nViewID == VIEW_REPORT) || (nViewID == VIEW_GROUPED))
 	{
 		HWND hwndHeader = ListView_GetHeader(hwndPicker);
 		POINT headerPt = pt;
@@ -555,6 +555,53 @@ void Picker_SetViewID(HWND hwndPicker, int nViewID)
 	if (pPickerInfo->pCallbacks->pfnSetViewMode)
 		pPickerInfo->pCallbacks->pfnSetViewMode(pPickerInfo->nCurrentViewID);
 
+	// Change the ListView flags in accordance
+	LONG_PTR nListViewStyle;
+	switch(nViewID)
+	{
+		case VIEW_LARGE_ICONS:
+			nListViewStyle = LVS_ICON;
+			break;
+		case VIEW_SMALL_ICONS:
+			nListViewStyle = LVS_SMALLICON;
+			break;
+		case VIEW_INLIST:
+			nListViewStyle = LVS_LIST;
+			break;
+		case VIEW_GROUPED:
+		case VIEW_REPORT:
+		default:
+			nListViewStyle = LVS_REPORT;
+			break;
+	}
+
+	DWORD dwStyle = GetWindowLong(hwndPicker, GWL_STYLE);
+	if (GetUseXPControl())
+	{
+		// RS Microsoft must have changed something in the Ownerdraw handling with Version 6 of the Common Controls
+		// as on all other OSes it works without this...
+		if (nViewID == VIEW_LARGE_ICONS || nViewID == VIEW_SMALL_ICONS)
+		{
+			// remove Ownerdraw style for Icon views
+			dwStyle &= ~LVS_OWNERDRAWFIXED;
+			if( nViewID == VIEW_SMALL_ICONS )
+			{
+				// to properly get them to arrange, otherwise the entries might overlap
+				// we have to call SetWindowLong to get it into effect !!
+				// It's no use just setting the Style, as it's changed again further down...
+				SetWindowLong(hwndPicker, GWL_STYLE, (GetWindowLong(hwndPicker, GWL_STYLE) & ~LVS_TYPEMASK) | LVS_ICON);
+			}
+		}
+		else
+		{
+			// add again..
+			dwStyle |= LVS_OWNERDRAWFIXED;
+		}
+	}
+
+	dwStyle &= ~LVS_TYPEMASK;
+	dwStyle |= nListViewStyle;
+	SetWindowLong(hwndPicker, GWL_STYLE, dwStyle);
 	RedrawWindow(hwndPicker, NULL, NULL, RDW_ERASE | RDW_INVALIDATE | RDW_FRAME);
 }
 
@@ -665,10 +712,18 @@ static void Picker_ResetHeaderSortIcon(HWND hwndPicker)
 		if (i != pPickerInfo->pCallbacks->pfnGetSortColumn())
 			res = Header_SetItem(hwndHeader, Picker_GetViewColumnFromRealColumn(hwndPicker, i), &hdi);
 
+	if (GetUseXPControl())
 	{
 		// use built in sort arrows
 		hdi.mask = HDI_FORMAT;
 		hdi.fmt = HDF_STRING | (pPickerInfo->pCallbacks->pfnGetSortReverse() ? HDF_SORTDOWN : HDF_SORTUP);
+	}
+	else
+	{
+		// put our arrow icon next to the text
+		hdi.mask = HDI_FORMAT | HDI_IMAGE;
+		hdi.fmt = HDF_STRING | HDF_IMAGE | HDF_BITMAP_ON_RIGHT;
+		hdi.iImage = pPickerInfo->pCallbacks->pfnGetSortReverse() ? 1 : 0;
 	}
 
 	int nViewColumn = Picker_GetViewColumnFromRealColumn(hwndPicker, pPickerInfo->pCallbacks->pfnGetSortColumn());
@@ -717,7 +772,7 @@ static int CALLBACK Picker_CompareProc(LPARAM index1, LPARAM index2, LPARAM nPar
 	TCHAR szBuffer1[256], szBuffer2[256];
 	const TCHAR *s1, *s2;
 
-	if (GetEnableIndent())
+	if (pcpp->nViewMode == VIEW_GROUPED)
 	{
 		// do our fancy compare, with clones grouped under parents
 		// first thing we need to do is identify both item's parents
@@ -816,7 +871,7 @@ void Picker_Sort(HWND hwndPicker)
 	// populate the CompareProcParams structure
 	Picker_PopulateCompareProcParams(hwndPicker, &params);
 
-	BOOL res = ListView_SortItems(hwndPicker, Picker_CompareProc, (LPARAM) &params);
+	ListView_SortItems(hwndPicker, Picker_CompareProc, (LPARAM) &params);
 
 	Picker_ResetHeaderSortIcon(hwndPicker);
 
@@ -826,8 +881,7 @@ void Picker_Sort(HWND hwndPicker)
 	lvfi.lParam = Picker_GetSelectedItem(hwndPicker);
 	int nItem = ListView_FindItem(hwndPicker, -1, &lvfi);
 
-	res = ListView_EnsureVisible(hwndPicker, nItem, false);
-	res++;
+	ListView_EnsureVisible(hwndPicker, nItem, false);
 }
 
 
@@ -839,8 +893,6 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 	struct CompareProcParams params;
 	int nCompareResult = 0;
 	LVITEM lvi;
-	BOOL res = 0;
-
 	//pPickerInfo = GetPickerInfo(hwndPicker);
 
 	int nHigh = ListView_GetItemCount(hwndPicker);
@@ -855,7 +907,7 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		memset(&lvi, 0, sizeof(lvi));
 		lvi.mask = LVIF_PARAM;
 		lvi.iItem = nMid;
-		res = ListView_GetItem(hwndPicker, &lvi);
+		ListView_GetItem(hwndPicker, &lvi);
 		nCompareResult = Picker_CompareProc(nParam, lvi.lParam, (LPARAM) &params);
 
 		if (nCompareResult > 0)
@@ -869,7 +921,6 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		}
 	}
 
-	res++;
 	memset(&lvi, 0, sizeof(lvi));
 	lvi.mask     = LVIF_IMAGE | LVIF_TEXT | LVIF_PARAM;
 	lvi.iItem    = nLow;
@@ -1124,7 +1175,7 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 	int nColumnMax = Picker_GetNumColumns(hWnd);
 
 	/* Get the Column Order and save it */
-	res = ListView_GetColumnOrderArray(hWnd, nColumnMax, order);
+	ListView_GetColumnOrderArray(hWnd, nColumnMax, order);
 
 	/* Disallow moving column 0 */
 	if (order[0] != 0)
@@ -1137,7 +1188,7 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 				order[0] = 0;
 			}
 		}
-		res = ListView_SetColumnOrderArray(hWnd, nColumnMax, order);
+		ListView_SetColumnOrderArray(hWnd, nColumnMax, order);
 	}
 
 	/* Labels are offset by a certain amount */
@@ -1160,10 +1211,10 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 		nParent = pPickerInfo->pCallbacks->pfnFindItemParent(hWnd, lvi.lParam);
 	else
 		nParent = -1;
-	//bDrawAsChild = (pPickerInfo->pCallbacks->pfnGetViewMode() == VIEW_GROUPED && (nParent >= 0));
+	bDrawAsChild = (pPickerInfo->pCallbacks->pfnGetViewMode() == VIEW_GROUPED && (nParent >= 0));
 
 	/* only indent if parent is also in this view */
-#if 1   // minimal listview flickering.
+#if 1	// minimal listview flickering.
 	if ((nParent >= 0) && bDrawAsChild)
 	{
 		if (GetParentFound(lvi.lParam))
@@ -1222,7 +1273,7 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 		GetClientRect(hWnd, &rcClient);
 		rcTmpBmp.right = rcClient.right;
 		/* We also need to check whether it is the last item
-		   The update region has to be extended to the bottom if it is */
+           The update region has to be extended to the bottom if it is */
 		if (nItem == ListView_GetItemCount(hWnd) - 1)
 			rcTmpBmp.bottom = rcClient.bottom;
 
@@ -1265,8 +1316,8 @@ void Picker_HandleDrawItem(HWND hWnd, LPDRAWITEMSTRUCT lpDrawItemStruct)
 		res = ListView_GetItemRect_Modified(hWnd, nItem, &rect, LVIR_ICON);
 
 		/* indent width of icon + the space between the icon and text
-		 * so left of clone icon starts at text of parent
-		 */
+         * so left of clone icon starts at text of parent
+         */
 		indent_space = rect.right - rect.left + offset;
 	}
 
@@ -1502,7 +1553,7 @@ BOOL Picker_SaveColumnWidths(HWND hwndPicker)
 	nColumnMax = Picker_GetNumColumns(hwndPicker);
 
 	/* Get the Column Order and save it */
-	res = ListView_GetColumnOrderArray(hwndPicker, nColumnMax, tmpOrder);
+	ListView_GetColumnOrderArray(hwndPicker, nColumnMax, tmpOrder);
 
 	for (i = 0; i < nColumnMax; i++)
 	{

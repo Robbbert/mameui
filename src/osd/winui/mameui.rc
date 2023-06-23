@@ -106,11 +106,10 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "L&arge Icons",                ID_VIEW_LARGE_ICON
         MENUITEM "S&mall Icons",                ID_VIEW_SMALL_ICON
-        MENUITEM "&List",                       ID_VIEW_LIST_MENU
-        MENUITEM "&Details",                    ID_VIEW_DETAIL
-        MENUITEM "&Grouped",                    ID_VIEW_GROUPED
         MENUITEM SEPARATOR
-        POPUP "Arrange &Icons"
+        MENUITEM "Indented",                    ID_VIEW_INDENT
+        MENUITEM SEPARATOR
+        POPUP "Sort Games"
         BEGIN
             MENUITEM "by &Name",                    ID_VIEW_BYGAME
             MENUITEM "by D&irectory",               ID_VIEW_BYDIRECTORY
@@ -119,7 +118,6 @@ BEGIN
             MENUITEM "by &Type",                    ID_VIEW_BYTYPE
             MENUITEM "by &Date",                    ID_VIEW_BYYEAR
         END
-        MENUITEM "Line &Up Icons",              ID_VIEW_LINEUPICONS
         MENUITEM SEPARATOR
         MENUITEM "&Custom Filters...\tCtrl+F",  ID_CONTEXT_FILTERS
         MENUITEM "Cust&omise Fields...",        ID_CUSTOMIZE_FIELDS
@@ -1593,12 +1591,9 @@ STRINGTABLE DISCARDABLE
 BEGIN
     IDS_VIEW_LARGEICONS     "Display items by using large icons."
     IDS_VIEW_SMALLICONS     "Display items by using small icons."
-    IDS_VIEW_LIST           "Displays items in a list."
-    IDS_VIEW_DETAILS        "Displays detailed information about each item in the window."
-    IDS_VIEW_GROUPED        "Displays items grouped by parent game"
+    IDS_VIEW_INDENT         "Indent clones"
     IDS_VIEW_SPACER4        "Spacer"
     IDS_VIEW_ARRANGE        "Contains commands for sorting by various columns"
-    IDS_VIEW_LINEUPICONS    "Arranges icons in a grid"
     IDS_VIEW_SPACER5        "Spacer"
     IDS_VIEW_REFRESH        "Refresh game list"
     IDS_VIEW_CONTEXTFILTERS "Allows filtering out games from a folder"
@@ -1613,12 +1608,10 @@ BEGIN
     ID_HELP_ABOUT           "Displays program and copyright information"
     ID_VIEW_LARGE_ICON      "Display items by using large icons."
     ID_VIEW_SMALL_ICON      "Display items by using small icons."
-    ID_VIEW_LIST_MENU       "Displays items in a list."
-    ID_VIEW_DETAIL          "Displays detailed information about each item in the window."
     ID_OPTIONS_FONT         "Set system list and folder list font"
     ID_OPTIONS_DIR          "Set directory configuration"
     ID_OPTIONS_DEFAULTS     "Set default system options"
-    ID_VIEW_GROUPED         "Show items grouped by parent game"
+    ID_VIEW_INDENT          "Indent clones"
     ID_OPTIONS_CLONE_COLOR  "Set the clone font color"
 END
 

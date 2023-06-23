@@ -106,6 +106,9 @@ int  GetViewMode(void);
 void SetGameCheck(BOOL game_check);
 BOOL GetGameCheck(void);
 
+void SetEnableIndent(bool value);
+bool GetEnableIndent();
+
 void SetJoyGUI(BOOL use_joygui);
 BOOL GetJoyGUI(void);
 
