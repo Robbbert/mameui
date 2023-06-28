@@ -1,7 +1,7 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 //****************************************************************************
-#ifndef WINUI_MESSUI_H__
-#define WINUI_MESSUI_H__
+#ifndef WINUI_MESSUI_H
+#define WINUI_MESSUI_H
 
 extern char g_szSelectedItem[MAX_PATH];
 
@@ -17,3 +17,4 @@ void MView_RegisterClass(void);
 void MView_Refresh(HWND hwndDevView);
 
 #endif // __MESSUI_H__
+

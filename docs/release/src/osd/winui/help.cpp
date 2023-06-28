@@ -1,9 +1,9 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 //****************************************************************************
 
 /***************************************************************************
 
-  help.c
+  help.cpp
 
     Help wrapper code.
 
@@ -105,3 +105,4 @@ static void Help_Load(void)
 		}
 	}
 }
+

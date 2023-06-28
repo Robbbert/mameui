@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 // MASTER
 //****************************************************************************
 
@@ -245,6 +245,16 @@ void SetGameCheck(BOOL game_check)
 BOOL GetGameCheck(void)
 {
 	return settings.bool_value(MUIOPTION_CHECK_GAME);
+}
+
+void SetEnableIndent(bool value)
+{
+	settings.setter(MUIOPTION_VIEW_INDENT, value);
+}
+
+bool GetEnableIndent()
+{
+	return settings.bool_value(MUIOPTION_VIEW_INDENT);
 }
 
 void SetJoyGUI(BOOL use_joygui)

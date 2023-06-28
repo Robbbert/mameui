@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 // MASTER
 //****************************************************************************
 
@@ -854,3 +854,4 @@ static void OnHScroll(HWND hwnd, HWND hwndCtl, UINT code, int pos)
 		SendDlgItemMessage(hwnd,IDC_SCREENSHOT_BORDERSIZETXT,WM_SETTEXT,0, (WPARAM)tmp);
 	}
 }
+

@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 //****************************************************************************
 
 /***************************************************************************
@@ -2582,4 +2582,3 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 	printf("SaveExternalFolders: Saved file %s.\n",filename.c_str());
 }
 
-/* End of source file */

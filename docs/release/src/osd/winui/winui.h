@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 //****************************************************************************
 
 #ifndef WINUI_WINUI_H
@@ -85,7 +85,6 @@ char * ConvertAmpersandString(const char *s);
 HBITMAP GetBackgroundBitmap(void);
 HPALETTE GetBackgroundPalette(void);
 MYBITMAPINFO* GetBackgroundInfo(void);
-BOOL GetUseXPControl(void);
 
 int GetMinimumScreenShotWindowWidth(void);
 

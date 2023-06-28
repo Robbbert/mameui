@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 // MASTER
 //****************************************************************************
 
@@ -105,6 +105,9 @@ int  GetViewMode(void);
 
 void SetGameCheck(BOOL game_check);
 BOOL GetGameCheck(void);
+
+void SetEnableIndent(bool value);
+bool GetEnableIndent();
 
 void SetJoyGUI(BOOL use_joygui);
 BOOL GetJoyGUI(void);

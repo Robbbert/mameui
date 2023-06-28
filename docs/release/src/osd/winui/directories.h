@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 // MASTER
 //****************************************************************************
 
@@ -80,5 +80,4 @@ const DIRECTORYINFO g_directoryInfo[] =
 INT_PTR CALLBACK DirectoriesDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam);
 
 #endif /* DIRECTORIES_H */
-
 

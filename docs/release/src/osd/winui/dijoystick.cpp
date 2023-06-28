@@ -1,4 +1,4 @@
-// For licensing and usage information, read docs/winui_license.txt
+// For licensing and usage information, read docs/release/winui_license.txt
 // MASTER
 //****************************************************************************
 
@@ -225,7 +225,7 @@ static int DIJoystick_is_joy_pressed(int joycode)
 		button--;
 
 		if (button >= This.joysticks[joy_num].num_buttons
-		||	GET_JOYCODE_DIR(joycode) != JOYCODE_DIR_BTN)
+		|| GET_JOYCODE_DIR(joycode) != JOYCODE_DIR_BTN)
 			return 0;
 
 		return dijs.rgbButtons[button] != 0;
