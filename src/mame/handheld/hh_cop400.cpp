@@ -444,7 +444,7 @@ ROM_END
   * COP444L MCU label /B138 COPL444-HRZ/N INV II (die label HRZ COP 444L/A)
   * 3 7seg LEDs, LED matrix and overlay mask, 1-bit sound
 
-  The first version was on TMS1100 (see hh_tms1k.c), this is the reprogrammed
+  The first version was on TMS1100 (see hh_tms1k.cpp), this is the reprogrammed
   second release with a gray case instead of black.
 
 *******************************************************************************/
@@ -702,7 +702,7 @@ ROM_END
   known releases:
   - USA: I Took a Lickin' From a Chicken, published by LJN
   - Japan: Professor Chicken's Genius Classroom 「にわとり博士の天才教室」, published by Bandai
-    (not sure if it's the same ROM, or just licensed the outer shell)
+  - Netherlands: Kip ik heb je, published by Smith Family Toys
 
 *******************************************************************************/
 
