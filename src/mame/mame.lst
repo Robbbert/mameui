@@ -17716,12 +17716,12 @@ fdes2325                        //
 @source:fidelity/eag68k.cpp
 feagv10                         //
 feagv11                         //
-feagv2                          //
-feagv3                          //
+feagv4                          //
+feagv4a                         //
 feagv5                          //
-feagv6                          //
 feagv7                          //
 feagv7a                         //
+feagv7b                         //
 feagv9                          //
 fex68k                          //
 fex68ka                         //
@@ -18250,6 +18250,7 @@ frogf                           // bootleg
 frogg                           // bootleg
 frogger                         // GX392 (c) 1981 Konami
 froggeram                       // bootleg
+froggereb                       // bootleg
 froggermc                       // 800-3110 (c) 1981 Sega
 froggers                        // bootleg
 froggers1                       // (c) 1981 Sega
@@ -18669,11 +18670,11 @@ lightfgt                        // Milton Bradley
 lilcomp                         // Texas Instruments
 mbaskb2                         // Mattel
 mdallas                         // Mattel
+minspacep                       // Mego
 msoccer2                        // Mattel
 plus1                           // Milton Bradley
 qkracera                        // National Semiconductor
 solution                        // SCAT
-unkeinv                         // Gordon Barlow Design
 vidchal                         // Select Merchandise
 
 @source:handheld/hh_cops1.cpp
@@ -19081,10 +19082,10 @@ bmsoccer                        // Bambino
 ctntune                         // Castle Toy
 edracula                        // Epoch
 efball                          // Epoch
+einspace                        // Epoch
 galaxy2                         // Epoch
 galaxy2b                        // Epoch
 grobot9                         // Gakken
-invspace                        // Epoch
 mcompgin                        // Mattel
 mvbfree                         // Mego
 splasfgt                        // Bambino
@@ -28486,6 +28487,8 @@ roljokr1                        // (c) 1999 Paloma-Elektronik
 roljokr2                        // (c) 1997 Paloma-Elektronik
 roljokr3                        // (c) 1999 Paloma-Elektronik
 vip2000                         // (c) Paloma-Elektronik
+vip2000a                        // (c) Paloma-Elektronik
+vip2000b                        // (c) Paloma-Elektronik
 
 @source:misc/blitz68k.cpp
 bankrob                         // (c) 1993 Entertainment Technology Corp.
@@ -34949,6 +34952,7 @@ mkp286                          // Morse KP-286 motherboard (286)
 n8810m15                        // 1987 Nixdorf 8810 M15 Laptop - PC07
 n8810m16c                       // 1990 Nixdorf 8810 M16 Laptop - PC17 - CGA version
 n8810m16v                       // 1990 Nixdorf 8810 M16 Laptop - PC17 - VGA version
+n8810m20						// 1989 Nixdorf 8810/20 Laptop VGA
 n8810m30                        // 1990 Nixdorf 8810 M30
 n8810m55                        // 1986 Nixdorf 8810 M55
 ncr3302                         // NCR Class 3302 Model 0110
@@ -34959,6 +34963,7 @@ necapciv                        // NEC APC IV
 o286foxii                       // Octek Fox II motherboard (286)
 ocfoxm                          // Octek Fox M 286
 octekg2                         // Octek motherboard with Headland G2 chipset (286)
+ocxt286							// Octek XT-286 motherboard
 olim203                         // Olivetti 286 motherboard
 olyport40                       // AEG Olympia Olyport 40
 pc30iii                         // Commodore PC 30-III
@@ -35343,6 +35348,7 @@ gogostrk                        //
 @source:pc/pc.cpp
 ataripc1                        // Atari PC1
 ataripc3                        // Atari PC3
+auvip800						// AUVA VIP 800
 bw230                           // 1985 Bondwell (CGA)
 cadd810                         // CompuAdd 810
 comdesk                         // Compaq Deskpro
@@ -35356,6 +35362,8 @@ dtkerso                         // 198? PC-XT clones with a DTK/ERSO BIOS
 eaglespirit                     // Eagle PC Spirit
 eppc                            // 1985 Ericsson Portable PC
 hyo88t                          // Hyosung Topstar 88T
+hyu16t							// Hyundai Super 16 T
+hyu16te							// Hyundai Super 16 TE
 ibm5550                         //
 iskr3104                        //
 ittxtra                         // 1984 ITT XTRA
@@ -35373,6 +35381,7 @@ mpc1600                         // Columbia Data Products MPC 1600
 mc1702                          //
 mk88                            //
 ncrpc4i                         // NCR PC4i
+ncrpc6							// NCR PC6
 nixpc01                         // Nixdorf 8810/25 - PC01
 olivm15                         // Olivetti M15
 olystar20f                      // AEG Olympia Olystar 20F
