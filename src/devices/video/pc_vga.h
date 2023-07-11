@@ -151,6 +151,7 @@ protected:
 
 		return res;
 	}
+	virtual bool get_interlace_mode() { return false; }
 
 	struct vga_t
 	{
@@ -291,7 +292,6 @@ protected:
 	address_space_config m_seq_space_config;
 	address_space_config m_atc_space_config;
 
-private:
 	bool m_ioas = false;
 };
 

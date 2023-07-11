@@ -18672,7 +18672,7 @@ lightfgt                        // Milton Bradley
 lilcomp                         // Texas Instruments
 mbaskb2                         // Mattel
 mdallas                         // Mattel
-minspacep                       // Mego
+minspace                        // Mego
 msoccer2                        // Mattel
 plus1                           // Milton Bradley
 qkracera                        // National Semiconductor
@@ -20196,6 +20196,7 @@ pepk0810a                       // (c) 1987 IGT - International Game Technology
 pepk0811                        // (c) 1987 IGT - International Game Technology
 pepk0823                        // (c) 1987 IGT - International Game Technology
 pepk0832                        // (c) 1987 IGT - International Game Technology
+pepk0846                        // (c) 1987 IGT - International Game Technology
 pepk0849                        // (c) 1987 IGT - International Game Technology
 pepk0856                        // (c) 1987 IGT - International Game Technology
 pepk0856a                       // (c) 1987 IGT - International Game Technology
@@ -20209,6 +20210,7 @@ pepk1002                        // (c) 1987 IGT - International Game Technology
 pepk1004                        // (c) 1987 IGT - International Game Technology
 pepk1013                        // (c) 1987 IGT - International Game Technology
 pepk1015                        // (c) 1987 IGT - International Game Technology
+pepk1017                        // (c) 1987 IGT - International Game Technology
 pepk1020                        // (c) 1987 IGT - International Game Technology
 pepk1024                        // (c) 1987 IGT - International Game Technology
 pepk1030                        // (c) 1987 IGT - International Game Technology
@@ -31859,6 +31861,9 @@ multi8                          //
 @source:mitsubishi/multi16.cpp
 multi16                         //
 
+@source:mitsubishi/trium.cpp
+triumec                         //
+
 @source:mizar/mzr8105.cpp
 mzr8105                         //
 
@@ -33419,6 +33424,7 @@ terrafb                         // (c) 1987
 terrafj                         // (c) 1987 Nichibutsu Japan
 terrafjb                        // (c) 1987
 terrafu                         // (c) 1987 Nichibutsu USA
+terrafua                        // (c) 1987 Nichibutsu USA
 
 @source:nichibutsu/cclimber.cpp
 bagmanf                         // bootleg on Falcon FCK-00 (Falcon Crazy Kong) PCB
@@ -45198,6 +45204,7 @@ ojankoy                         // [1986] V-System Co. (Japan)
 @source:vsystem/pipedrm.cpp
 hatris                          // (c) 1990 Video System Co. (US)
 hatrisj                         // (c) 1990 Video System Co. (Japan)
+hatrisp                         // (c) 1990 Video System Co. (prototype)
 pipedrm                         // (c) 1990 Video System Co. (World)
 pipedrmj                        // (c) 1990 Video System Co. (Japan)
 pipedrmt                        // (c) 1990 Video System Co. (Taiwan)
