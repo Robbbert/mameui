@@ -10,7 +10,7 @@
 
 #include "emu.h"
 
-#include "machine/mos6530n.h"
+#include "machine/mos6530.h"
 #include "cpu/m6502/m6507.h"
 #include "machine/watchdog.h"
 #include "sound/tiaintf.h"
@@ -42,7 +42,7 @@ protected:
 
 private:
 	required_device<cpu_device> m_maincpu;
-	required_device_array<mos6532_new_device, 2> m_riot;
+	required_device_array<mos6532_device, 2> m_riot;
 	required_device<tia_video_device> m_tia;
 	required_ioport_array<6> m_tia_inputs;
 	required_device<screen_device> m_screen;
@@ -70,33 +70,33 @@ void tourtabl_state::tourtabl_led_w(uint8_t data)
 void tourtabl_state::main_map(address_map &map)
 {
 	map(0x0000, 0x007f).mirror(0x0100).rw(m_tia, FUNC(tia_video_device::read), FUNC(tia_video_device::write));
-	map(0x0080, 0x00ff).mirror(0x0100).m(m_riot[0], FUNC(mos6532_new_device::ram_map));
-	map(0x0280, 0x029f).m(m_riot[0], FUNC(mos6532_new_device::io_map));
-	map(0x0400, 0x047f).m(m_riot[1], FUNC(mos6532_new_device::ram_map));
-	map(0x0500, 0x051f).m(m_riot[1], FUNC(mos6532_new_device::io_map));
+	map(0x0080, 0x00ff).mirror(0x0100).m(m_riot[0], FUNC(mos6532_device::ram_map));
+	map(0x0280, 0x029f).m(m_riot[0], FUNC(mos6532_device::io_map));
+	map(0x0400, 0x047f).m(m_riot[1], FUNC(mos6532_device::ram_map));
+	map(0x0500, 0x051f).m(m_riot[1], FUNC(mos6532_device::io_map));
 	map(0x0800, 0x1fff).rom();
 }
 
 
 static INPUT_PORTS_START( tourtabl )
-	PORT_START("PADDLE1")
+	PORT_START("PADDLE1") // P1 white
 	PORT_BIT( 0xff, 0x8f, IPT_PADDLE ) PORT_MINMAX(0x1f, 0xff) PORT_SENSITIVITY(40) PORT_KEYDELTA(10) PORT_CENTERDELTA(0) PORT_REVERSE PORT_PLAYER(1)
 
-	PORT_START("PADDLE2")
+	PORT_START("PADDLE2") // P2 black
 	PORT_BIT( 0xff, 0x8f, IPT_PADDLE ) PORT_MINMAX(0x1f, 0xff) PORT_SENSITIVITY(40) PORT_KEYDELTA(10) PORT_CENTERDELTA(0) PORT_REVERSE PORT_PLAYER(2)
 
-	PORT_START("PADDLE3")
+	PORT_START("PADDLE3") // P3 white, or Breakout P2
 	PORT_BIT( 0xff, 0x8f, IPT_PADDLE ) PORT_MINMAX(0x1f, 0xff) PORT_SENSITIVITY(40) PORT_KEYDELTA(10) PORT_CENTERDELTA(0) PORT_PLAYER(3)
 
-	PORT_START("PADDLE4")
+	PORT_START("PADDLE4") // P4 black, or Breakout P1
 	PORT_BIT( 0xff, 0x8f, IPT_PADDLE ) PORT_MINMAX(0x1f, 0xff) PORT_SENSITIVITY(40) PORT_KEYDELTA(10) PORT_CENTERDELTA(0) PORT_REVERSE PORT_PLAYER(4)
 
-	PORT_START("TIA_IN4")   // TIA INPT4
+	PORT_START("TIA_IN4") // TIA INPT4
 	PORT_DIPNAME( 0x80, 0x80, "Breakout Replay" )
 	PORT_DIPSETTING(    0x00, DEF_STR( Off ))
 	PORT_DIPSETTING(    0x80, DEF_STR( On ))
 
-	PORT_START("TIA_IN5")   // TIA INPT5
+	PORT_START("TIA_IN5") // TIA INPT5
 	PORT_DIPNAME( 0x80, 0x80, "Game Length" )
 	PORT_DIPSETTING(    0x00, "11 points (3 balls)" )
 	PORT_DIPSETTING(    0x80, "15 points (5 balls)" )
@@ -158,12 +158,12 @@ void tourtabl_state::tourtabl(machine_config &config)
 	M6507(config, m_maincpu, MASTER_CLOCK / 3);
 	m_maincpu->set_addrmap(AS_PROGRAM, &tourtabl_state::main_map);
 
-	MOS6532_NEW(config, m_riot[0], MASTER_CLOCK / 3);
+	MOS6532(config, m_riot[0], MASTER_CLOCK / 3);
 	m_riot[0]->pa_rd_callback().set_ioport("RIOT0_SWA");
 	m_riot[0]->pb_rd_callback().set_ioport("RIOT0_SWB");
 	m_riot[0]->pb_wr_callback().set("watchdog", FUNC(watchdog_timer_device::reset_line_w)).bit(0);
 
-	MOS6532_NEW(config, m_riot[1], MASTER_CLOCK / 3);
+	MOS6532(config, m_riot[1], MASTER_CLOCK / 3);
 	m_riot[1]->pa_rd_callback().set_ioport("RIOT1_SWA");
 	m_riot[1]->pb_rd_callback().set_ioport("RIOT1_SWB");
 	m_riot[1]->pb_wr_callback().set(FUNC(tourtabl_state::tourtabl_led_w));
