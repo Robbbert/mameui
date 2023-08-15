@@ -904,6 +904,10 @@ macqd605                        // 1993 Apple Macintosh Quadra 605
 maclc475                        // 1993 Apple Macintosh LC/Performa 475
 maclc575                        // 1994 Apple Macintosh LC/Performa 575
 
+@source:apple/macquadra630.cpp
+macqd630                        // July 18, 1994 Apple Macintosh Quadra 630
+maclc580                        // April 3, 1995 Apple Macintosh LC/Performa 580
+
 @source:apple/macquadra700.cpp
 macqd700                        // 1991 Apple Macintosh Quadra 700
 
@@ -30331,8 +30335,10 @@ belslots                        // (c) 1999 Impera
 bigdeal0                        // (c) 2001 Impera
 dallaspk                        // 1993, unknown
 hotslots                        // (c) 2002 Impera
+jjokeri                         // (c) 199? Impera
 kajotcrd                        // (c) 1993 Amatic
 lucky7i                         // (c) 1991 Impera
+lucky7x                         // (c) 1991 Impera
 magicard                        // (c) 1994 Impera
 magicrd1                        // (c) 1994 Impera
 magicrd1a                       // (c) 1993 Impera
@@ -30922,6 +30928,7 @@ pma                             // 1983, PMA
 smshilo                         // (c) 1983 SMS Manufacturing Corp.
 ssjkrpkr                        // (c) 1982 Southern Systems & Assembly, Ltd.
 tpoker2                         // (c) 1993 Micro Manufacturing, Inc.
+unkljfpk                        // (c) 1989 LJF Corporation
 
 @source:misc/notechan.cpp
 notechan                        // (c) 1995 Banpresto
@@ -37731,6 +37738,7 @@ dvlriderf                       //
 dvlriderg                       //
 dvlrideri                       //
 farfalla                        //
+farfallaf                       //
 farfallag                       //
 farfallai                       //
 mcastle                         //
@@ -37738,12 +37746,15 @@ mcastlef                        //
 mcastleg                        //
 mcastlei                        //
 mexico                          //
+mexicoi                         //
 nstrphnx                        //
 nstrphnxf                       //
 pinchamp                        //
 pinchamp7                       //
+pinchamp7f                      //
 pinchamp7g                      //
 pinchamp7i                      //
+pinchampf                       //
 pinchampg                       //
 pinchampi                       //
 poolcham                        //
@@ -37765,6 +37776,7 @@ thndrman                        //
 tmachzac                        //
 tmachzacf                       //
 tmachzacg                       //
+tmachzaci                       //
 zankor                          //
 zankor2i                        //
 
@@ -40740,6 +40752,9 @@ indy_4613                       // IP22: Indy, R4600, 133MHz
 indy_5015                       // IP22: Indy, R5000, 150MHz
 indigo2_4415                    // IP24: Indigo 2, R4400, 150MHz
 
+@source:sgi/ip4.cpp
+pi4d50                          // Professional IRIS 4D/50 (R2000 @ 8MHz)
+
 @source:sgi/ip6.cpp
 pi4d20                          // Personal IRIS 4D/20 (R2000 @ 12.5MHz)
 pi4d25                          // Personal IRIS 4D/25 (R3000 @ 20MHz)
@@ -41742,6 +41757,7 @@ bbustersja                      //
 @source:snk/dmndrby.cpp
 dmndrby                         // G4001 'DD' (c) 1986
 dmndrbya                        // G4001 'DD' (c) 1986
+dmndrbybl                       // bootleg
 
 @source:snk/hng64.cpp
 bbust2                          // 004 1998/09/11 Beast Busters: Second Nightmare
@@ -42634,8 +42650,9 @@ lkageb                          // bootleg
 lkageb2                         // bootleg
 lkageb3                         // bootleg
 lkageb4                         // bootleg
+lkagem                          //
 lkageo                          // A54 (c) 1984 Taito Corporation
-lkageoo                         // A54 (c) 1984 Taito Corporation
+lkageo2                         // A54 (c) 1984 Taito Corporation
 
 @source:taito/lsasquad.cpp
 daikaiju                        // A74 (c) 1986 Taito
