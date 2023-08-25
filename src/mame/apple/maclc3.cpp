@@ -24,6 +24,7 @@
 #include "mactoolbox.h"
 #include "sonora.h"
 
+#include "bus/nscsi/cd.h"
 #include "bus/nscsi/devices.h"
 #include "bus/rs232/rs232.h"
 #include "cpu/m68000/m68030.h"
@@ -241,8 +242,13 @@ void macvail_state::maclc3_base(machine_config &config)
 	NSCSI_CONNECTOR(config, "scsi:0", mac_scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:1", mac_scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:2", mac_scsi_devices, nullptr);
-	NSCSI_CONNECTOR(config, "scsi:3", mac_scsi_devices, nullptr);
-	NSCSI_CONNECTOR(config, "scsi:4", mac_scsi_devices, "cdrom");
+	NSCSI_CONNECTOR(config, "scsi:3").option_set("cdrom", NSCSI_CDROM_APPLE).machine_config(
+		[](device_t *device)
+		{
+			device->subdevice<cdda_device>("cdda")->add_route(0, "^^sonora:lspeaker", 1.0);
+			device->subdevice<cdda_device>("cdda")->add_route(1, "^^sonora:rspeaker", 1.0);
+		});
+	NSCSI_CONNECTOR(config, "scsi:4", mac_scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:5", mac_scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:6", mac_scsi_devices, "harddisk");
 	NSCSI_CONNECTOR(config, "scsi:7").option_set("ncr5380", NCR53C80).machine_config([this](device_t *device)
@@ -291,7 +297,8 @@ void macvail_state::maclc3(machine_config &config)
 	maclc3_base(config);
 	m_maincpu->set_addrmap(AS_PROGRAM, &macvail_state::maclc3_map);
 
-	EGRET(config, m_egret, EGRET_341S0851);
+	EGRET(config, m_egret, XTAL(32'768));
+	m_egret->set_default_bios_tag("341s0851");
 	m_egret->reset_callback().set(FUNC(macvail_state::cuda_reset_w));
 	m_egret->linechange_callback().set(m_macadb, FUNC(macadb_device::adb_linechange_w));
 	m_egret->via_clock_callback().set(m_sonora, FUNC(sonora_device::cb1_w));
@@ -317,7 +324,8 @@ void macvail_state::maclc520(machine_config &config)
 	maclc3_base(config);
 	m_maincpu->set_addrmap(AS_PROGRAM, &macvail_state::maclc520_map);
 
-	CUDA_V240(config, m_cuda, XTAL(32'768));
+	CUDA_V2XX(config, m_cuda, XTAL(32'768));
+	m_cuda->set_default_bios_tag("341s0060");
 	m_cuda->reset_callback().set(FUNC(macvail_state::cuda_reset_w));
 	m_cuda->linechange_callback().set(m_macadb, FUNC(macadb_device::adb_linechange_w));
 	m_cuda->via_clock_callback().set(m_sonora, FUNC(sonora_device::cb1_w));
@@ -353,7 +361,7 @@ ROM_END
 
 } // anonymous namespace
 
-COMP(1993, maclc3, 0, 0, maclc3, macadb, macvail_state, empty_init, "Apple Computer", "Macintosh LC III", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND)
-COMP(1993, maclc3p, maclc3, 0, maclc3p, macadb, macvail_state, empty_init, "Apple Computer", "Macintosh LC III+", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND)
-COMP(1993, maclc520, 0, 0, maclc520, macadb, macvail_state, empty_init, "Apple Computer", "Macintosh LC 520", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND)
-COMP(1994, maclc550, maclc520, 0, maclc550, macadb, macvail_state, empty_init, "Apple Computer", "Macintosh LC 550", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND)
+COMP(1993, maclc3, 0, 0, maclc3, macadb, macvail_state, empty_init, "Apple Computer", "Macintosh LC III", MACHINE_SUPPORTS_SAVE )
+COMP(1993, maclc3p, maclc3, 0, maclc3p, macadb, macvail_state, empty_init, "Apple Computer", "Macintosh LC III+", MACHINE_SUPPORTS_SAVE )
+COMP(1993, maclc520, 0, 0, maclc520, macadb, macvail_state, empty_init, "Apple Computer", "Macintosh LC 520", MACHINE_SUPPORTS_SAVE )
+COMP(1994, maclc550, maclc520, 0, maclc550, macadb, macvail_state, empty_init, "Apple Computer", "Macintosh LC 550", MACHINE_SUPPORTS_SAVE )

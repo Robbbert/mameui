@@ -23,6 +23,7 @@
 #include "macadb.h"
 #include "mactoolbox.h"
 
+#include "bus/nscsi/cd.h"
 #include "bus/nscsi/devices.h"
 #include "bus/rs232/rs232.h"
 #include "cpu/m68000/m68040.h"
@@ -183,8 +184,13 @@ void quadra605_state::macqd605(machine_config &config)
 	NSCSI_CONNECTOR(config, "scsi:0", mac_scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:1", mac_scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:2", mac_scsi_devices, nullptr);
-	NSCSI_CONNECTOR(config, "scsi:3", mac_scsi_devices, nullptr);
-	NSCSI_CONNECTOR(config, "scsi:4", mac_scsi_devices, "cdrom");
+	NSCSI_CONNECTOR(config, "scsi:3").option_set("cdrom", NSCSI_CDROM_APPLE).machine_config(
+		[](device_t *device)
+		{
+			device->subdevice<cdda_device>("cdda")->add_route(0, "^^primetime:lspeaker", 1.0);
+			device->subdevice<cdda_device>("cdda")->add_route(1, "^^primetime:rspeaker", 1.0);
+		});
+	NSCSI_CONNECTOR(config, "scsi:4", mac_scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:5", mac_scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:6", mac_scsi_devices, "harddisk");
 	NSCSI_CONNECTOR(config, "scsi:7").option_set("ncr53c96", NCR53C96).clock(40_MHz_XTAL).machine_config(
@@ -199,7 +205,8 @@ void quadra605_state::macqd605(machine_config &config)
 
 	MACADB(config, m_macadb, C15M);
 
-	CUDA_V237(config, m_cuda, XTAL(32'768));
+	CUDA_V2XX(config, m_cuda, XTAL(32'768));
+	m_cuda->set_default_bios_tag("341s0788");
 	m_cuda->reset_callback().set(FUNC(quadra605_state::cuda_reset_w));
 	m_cuda->linechange_callback().set(m_macadb, FUNC(macadb_device::adb_linechange_w));
 	m_cuda->via_clock_callback().set(m_primetime, FUNC(primetime_device::cb1_w));

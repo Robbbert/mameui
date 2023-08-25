@@ -84,7 +84,7 @@ void get_general_warnings(std::ostream &buf, running_machine &machine, machine_f
 	{
 		if (bad_roms)
 			buf << '\n';
-		buf << _("There are known problems with this system\n\n");
+		buf << _("There are known problems with this system:\n\n");
 	}
 
 	// add a warning if any ROMs are flagged BAD_DUMP/NO_DUMP
@@ -129,6 +129,8 @@ void get_device_warnings(std::ostream &buf, device_t::feature_type unemulated, d
 
 void get_system_warnings(std::ostream &buf, running_machine &machine, machine_flags::type flags, device_t::feature_type unemulated, device_t::feature_type imperfect)
 {
+	std::streampos start_position = buf.tellp();
+
 	// start with the unemulated/imperfect features
 	get_device_warnings(buf, unemulated, imperfect);
 
@@ -137,16 +139,34 @@ void get_system_warnings(std::ostream &buf, running_machine &machine, machine_fl
 		buf << _("Screen flipping in cocktail mode is not supported.\n");
 	if (flags & ::machine_flags::REQUIRES_ARTWORK)
 		buf << _("This system requires external artwork files.\n");
+
+	// add the 'BTANB' warnings
 	if (flags & ::machine_flags::IS_INCOMPLETE)
+	{
+		if (buf.tellp() > start_position)
+			buf << '\n';
 		buf << _("This system was never completed. It may exhibit strange behavior or missing elements that are not bugs in the emulation.\n");
+	}
 	if (flags & ::machine_flags::NO_SOUND_HW)
-		buf << _("This system has no sound hardware, MAME will produce no sounds, this is expected behaviour.\n");
+	{
+		if (buf.tellp() > start_position)
+			buf << '\n';
+		buf << _("This system has no sound hardware, MAME will produce no sounds, this is expected behavior.\n");
+	}
 
 	// these are more severe warnings
-	if (flags & ::machine_flags::NOT_WORKING)
-		buf << _("\nTHIS SYSTEM DOESN'T WORK. The emulation for this system is not yet complete. There is nothing you can do to fix this problem except wait for the developers to improve the emulation.\n");
 	if (flags & ::machine_flags::MECHANICAL)
-		buf << _("\nElements of this system cannot be emulated accurately as they require physical interaction or consist of mechanical devices. It is not possible to fully experience this system.\n");
+	{
+		if (buf.tellp() > start_position)
+			buf << '\n';
+		buf << _("Elements of this system cannot be emulated accurately as they require physical interaction or consist of mechanical devices. It is not possible to fully experience this system.\n");
+	}
+	if (flags & ::machine_flags::NOT_WORKING)
+	{
+		if (buf.tellp() > start_position)
+			buf << '\n';
+		buf << _("THIS SYSTEM DOESN'T WORK. The emulation for this system is not yet complete. There is nothing you can do to fix this problem except wait for the developers to improve the emulation.\n");
+	}
 
 	if ((flags & MACHINE_ERRORS) || ((machine.system().type.unemulated_features() | machine.system().type.imperfect_features()) & device_t::feature::PROTECTION))
 	{
@@ -376,7 +396,7 @@ std::string machine_info::game_info_string() const
 	}
 
 	// print description, manufacturer, and CPU:
-	util::stream_format(buf, _("%1$s\n%2$s %3$s\nDriver: %4$s\n\nCPU:\n"),
+	util::stream_format(buf, _("%1$s\n%2$s %3$s\nSource file: %4$s\n\nCPU:\n"),
 			system_list::instance().systems()[driver_list::find(m_machine.system().name)].description,
 			m_machine.system().year,
 			m_machine.system().manufacturer,

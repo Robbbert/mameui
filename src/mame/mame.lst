@@ -2275,10 +2275,20 @@ m_gndgit                        // Golden Nudge It (Barcrest)
 m_lndg                          // Lucky Nudge (Leisure Games)
 m_mtchit                        // Match It (Barcrest)
 m_mtchup                        // Match Up (Barcrest)
-
-@source:barcrest/mpu2.cpp
-m2hilite                        // Hi-Lights (Barcrest) (MPU2)
-m2svlite                        // Silver Lights (Barcrest) (MPU2)
+m2comet                         // Comet Catcher (Leisure Games)
+m2frpoly                        // Fruitopoly (VFS)
+m2hilite                        // Hi Lights (Barcrest)
+m2jmt9                          // JMT9 Test Program (Barcrest)
+m2luckyl                        // Lucky Line (Leisure Games)
+m2luckys                        // Lucky Strike (Associated Leisure)
+m2rockon                        // Rock On (Barcrest)
+m2splite                        // Spot Light (Barcrest)
+m2splitea                       //
+m2spliteb                       //
+m2sstar                         // Super Star (Barcrest)
+m2starl                         // Star Light (Barcrest)
+m2svlite                        // Silver Lights
+m2triple                        // Triple Chance (VFS)
 
 @source:barcrest/mpu3.cpp
 m3acech                         // Ace Chase (Bwb)
@@ -19184,13 +19194,9 @@ h8                              //
 
 @source:heathkit/h19.cpp
 h19                             // Heath H19 (Zenith Z-19)
-gp19                            // H19 with Northwest Digital Systems GP-19
-super19                         // Super19 replacement ROMS for H19
-ultra19                         // ULTRA ROM replacement ROMS for H19
-watz19                          // Watzman replacement ROMS for H19
 
 @source:heathkit/h89.cpp
-h89                             //
+h89                             // Heath H89 (H88, Zenith Z-89, Z-90)
 
 @source:hec2hrp/hec2hrp.cpp
 hec2hr                          //
@@ -23788,6 +23794,9 @@ unkkonmd
 ymcapsul
 pikkaric
 
+@source:konami/konmedalppc.cpp
+turfwld3						// GSF51 (c) 2005 Konami
+
 @source:konami/kontest.cpp
 kontest                         // GX800 (c) 198? (Japan)
 
@@ -24117,9 +24126,25 @@ racingj2                        // GQ888 (c)1999 (UAA)
 racingj2a                       // GQ888 (c)1999 (AAA)
 racingj2e                       // GQ888 (c)1999 (EAA)
 racingj2j                       // GQ888 (c)1999 (JAA)
+racingj2m                       // GM888 (c)1999 (UAA)
+racingj2ma                      // GM888 (c)1999 (AAA)
+racingj2me                      // GM888 (c)1999 (EAA)
+racingj2mj                      // GM888 (c)1999 (JAA)
+racingj2n                       // GN888 (c)1999 (UAA)
+racingj2na                      // GN888 (c)1999 (AAA)
+racingj2ne                      // GN888 (c)1999 (EAA)
+racingj2nj                      // GN888 (c)1999 (JAA)
 racingja                        // GQ676 (c)1998 (AAC)
 racingje                        // GQ676 (c)1998 (EAC)
 racingjj                        // GQ676 (c)1998 (JAC)
+racingjn                        // GN676 (c)1998 (UAC)
+racingjna                       // GN676 (c)1998 (AAC)
+racingjne                       // GN676 (c)1998 (EAC)
+racingjnj                       // GN676 (c)1998 (JAC)
+racingjm                        // GM676 (c)1998 (UAC)
+racingjma                       // GM676 (c)1998 (AAC)
+racingjme                       // GM676 (c)1998 (EAC)
+racingjmj                       // GM676 (c)1998 (JAC)
 thrilld                         // GC713 (c)1998 Japan UDE
 thrillda                        // GC713 (c)1998 Japan ACE
 thrilldab                       // GC713 (c)1998 Japan ABE
@@ -35017,6 +35042,7 @@ k286i                           // 1985 Kaypro 286i
 kma202f                         // KMA-202F-12R motherboard (286)
 kt216wb5                        // KT216WB5-HI Rev.2
 lm103s                          // LM-103S
+m250e							// Olivetti M250E
 m290                            // Olivetti M290
 magb233                         // Magitronic B233
 magb236                         // Magitronic B236
