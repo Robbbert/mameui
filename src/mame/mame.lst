@@ -24257,6 +24257,9 @@ simpsons4pe2                    // GX072 (c) 1991 (World)
 spy                             // GX857 (c) 1989 (World)
 spyu                            // GX857 (c) 1989 (US)
 
+@source:konami/stingnet.cpp
+tropchnc                        // GC968 (c) 1999
+
 @source:konami/surpratk.cpp
 suratk                          // GX911 (c) 1990 (World)
 suratka                         // GX911 (c) 1990 (Asia)
@@ -30210,6 +30213,11 @@ houseball                       // (c) 1989 Olakoa
 imolagp                         // (c) 198? RB Bologna
 imolagpo                        // (c) 198? RB Bologna
 
+@source:misc/interflip8035.cpp
+cbrava                          //
+sevilla                         //
+toledo                          //
+
 @source:misc/intrscti.cpp
 intrscti                        // ????
 
@@ -34616,6 +34624,9 @@ nmicro
 
 @source:novag/micro2.cpp
 nmicro2
+
+@source:novag/robotadv.cpp
+robotadv
 
 @source:novag/savant.cpp
 savant                          //
@@ -40007,6 +40018,7 @@ flickyo                         // (c) 1984 (S1)
 flickys1                        // (c) 1984 (S1)
 flickys2                        // (c) 1984 (S1)
 flickyup                        // (c) 1984 (Converted from Up'n Down)
+flickyupa                       // (c) 1984 (Converted from Up'n Down)
 gardia                          // 834-6119 (S2?)
 gardiab                         // bootleg
 gardiaj                         //
@@ -40418,6 +40430,7 @@ zeroteama                       // (c) 1993 Seibu Kaihatsu
 zeroteamb                       // (c) 1993 Seibu Kaihatsu
 zeroteamc                       // (c) 1993 Seibu Kaihatsu + Liang Hwa license
 zeroteamd                       // (c) 1993 Seibu Kaihatsu + Dreamsoft license
+zeroteame                       // (c) 1993 Seibu Kaihatsu
 zeroteams                       // (c) 1993 Seibu Kaihatsu
 zeroteamsr                      // (c) 1993 Seibu Kaihatsu
 
@@ -40601,6 +40614,7 @@ daiohp3                         // (C) 1993 Athena (prototype)
 drgnunit                        // (c) 1989 Athena / Seta + Romstar or Taito license (DSW)
 eightfrc                        // (c) 1994 Tecmo
 extdwnhl                        // (c) 1995 Sammy Japan
+gderby                          // hack (CODERE)
 gundhara                        // (c) 1995 Banpresto
 gundharac                       // (c) 1995 Banpresto (Chinese, bootleg?)
 inttoote                        // (c) 1998 Coinmaster (bootleg)
@@ -40629,6 +40643,7 @@ qzkklogy                        // (c) 1992 Tecmo
 rezon                           // (c) 1991 Allumer
 rezont                          // (c) 1991 Allumer / Taito
 setaroul                        // UF   (c) 1989? Visco
+setaroula                       // hack (CODERE)
 simpsonjr                       // bootleg of J. J. Squawkers by Daigom
 sokonuke                        // (c) 1995 Sammy Industries
 stg                             // (c) 1991 Athena / Tecmo
@@ -43611,6 +43626,7 @@ solrwarr                        // TA-0019 (c) 1986 + Taito / Memetron license
 xsleena                         // TA-0019 (c) 1986 + Taito license
 xsleenab                        // bootleg
 xsleenaba                       // bootleg
+xsleenabb                       // bootleg
 xsleenaj                        // TA-0019 (c) 1986
 
 @source:tecmo/bombjack.cpp

@@ -122,7 +122,6 @@ private:
 	void ifu_dpram_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 
 	void gcu_interrupt(int state);
-	INTERRUPT_GEN_MEMBER(vbl_interrupt);
 
 	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
@@ -203,14 +202,14 @@ void konendev_state::main_map(address_map &map)
 	map(0x79800000, 0x798000ff).rw(m_gcu, FUNC(k057714_device::read), FUNC(k057714_device::write));
 	map(0x7a000000, 0x7a01ffff).ram().share("nvram0");
 	map(0x7a100000, 0x7a11ffff).ram().share("nvram1");
-	map(0x7e800000, 0x7e9fffff).rw("prgflash1", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
-	map(0x7ea00000, 0x7ebfffff).rw("prgflash2", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
-	map(0x7ec00000, 0x7edfffff).rw("prgflash3", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
-	map(0x7ee00000, 0x7effffff).rw("prgflash4", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
-	map(0x7f000000, 0x7f1fffff).rw("prgflash5", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
-	map(0x7f200000, 0x7f3fffff).rw("prgflash6", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
-	map(0x7f400000, 0x7f5fffff).rw("prgflash7", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
-	map(0x7f600000, 0x7f7fffff).rw("prgflash8", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
+	map(0x7e800000, 0x7effffff).rw("prgflash1", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write)).umask32(0x000000ff);
+	map(0x7e800000, 0x7effffff).rw("prgflash2", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write)).umask32(0x0000ff00);
+	map(0x7e800000, 0x7effffff).rw("prgflash3", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write)).umask32(0x00ff0000);
+	map(0x7e800000, 0x7effffff).rw("prgflash4", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write)).umask32(0xff000000);
+	map(0x7f000000, 0x7f7fffff).rw("prgflash5", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write)).umask32(0x000000ff);
+	map(0x7f000000, 0x7f7fffff).rw("prgflash6", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write)).umask32(0x0000ff00);
+	map(0x7f000000, 0x7f7fffff).rw("prgflash7", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write)).umask32(0x00ff0000);
+	map(0x7f000000, 0x7f7fffff).rw("prgflash8", FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write)).umask32(0xff000000);
 	map(0x7ff00000, 0x7fffffff).rom().region("program", 0);
 }
 
@@ -241,10 +240,10 @@ void konendev_state::ifu_map(address_map &map)
 
 void konendev_state::ymz280b_map(address_map &map)
 {
-	map(0x000000, 0x1fffff).r("sndflash1.u08", FUNC(fujitsu_29f016a_device::read));
-	map(0x200000, 0x3fffff).r("sndflash2.u07", FUNC(fujitsu_29f016a_device::read));
-	map(0x400000, 0x5fffff).r("sndflash3.u06", FUNC(fujitsu_29f016a_device::read));
-	map(0x600000, 0x7fffff).r("sndflash4.u05", FUNC(fujitsu_29f016a_device::read));
+	map(0x000000, 0x1fffff).r("sndflash1.u8", FUNC(fujitsu_29f016a_device::read));
+	map(0x200000, 0x3fffff).r("sndflash2.u7", FUNC(fujitsu_29f016a_device::read));
+	map(0x400000, 0x5fffff).r("sndflash3.u6", FUNC(fujitsu_29f016a_device::read));
+	map(0x600000, 0x7fffff).r("sndflash4.u5", FUNC(fujitsu_29f016a_device::read));
 }
 
 /*******************************************************************************
@@ -382,19 +381,11 @@ void konendev_state::gcu_interrupt(int state)
 	m_maincpu->set_input_line(INPUT_LINE_IRQ3, state);
 }
 
-
-INTERRUPT_GEN_MEMBER(konendev_state::vbl_interrupt)
-{
-	device.execute().set_input_line(INPUT_LINE_IRQ1, ASSERT_LINE);
-	device.execute().set_input_line(INPUT_LINE_IRQ3, ASSERT_LINE);
-}
-
 void konendev_state::konendev(machine_config &config)
 {
 	// basic machine hardware
 	PPC403GCX(config, m_maincpu, 32'000'000); // Clock unknown
 	m_maincpu->set_addrmap(AS_PROGRAM, &konendev_state::main_map);
-	m_maincpu->set_vblank_int("screen", FUNC(konendev_state::vbl_interrupt));
 
 	H83007(config, m_ifu, 8'000'000); // Clock unknown
 	m_ifu->set_addrmap(AS_PROGRAM, &konendev_state::ifu_map);
@@ -407,10 +398,10 @@ void konendev_state::konendev(machine_config &config)
 	FUJITSU_29F016A(config, "prgflash6");
 	FUJITSU_29F016A(config, "prgflash7");
 	FUJITSU_29F016A(config, "prgflash8");
-	FUJITSU_29F016A(config, "sndflash1.u08");
-	FUJITSU_29F016A(config, "sndflash2.u07");
-	FUJITSU_29F016A(config, "sndflash3.u06");
-	FUJITSU_29F016A(config, "sndflash4.u05");
+	FUJITSU_29F016A(config, "sndflash1.u8");
+	FUJITSU_29F016A(config, "sndflash2.u7");
+	FUJITSU_29F016A(config, "sndflash3.u6");
+	FUJITSU_29F016A(config, "sndflash4.u5");
 
 	CY7C131(config, "dpram"); // TODO: hook up instead of custom methods
 
@@ -421,6 +412,7 @@ void konendev_state::konendev(machine_config &config)
 	screen.set_raw(25.175_MHz_XTAL, 800, 0, 640, 525, 0, 480); // Based on Firebeat settings
 	screen.set_screen_update(FUNC(konendev_state::screen_update));
 	screen.set_palette("palette");
+	screen.screen_vblank().set(m_gcu, FUNC(k057714_device::vblank_w));
 
 	K057714(config, m_gcu, 0).set_screen("screen");
 	m_gcu->irq_callback().set(FUNC(konendev_state::gcu_interrupt));
@@ -448,18 +440,18 @@ void konendev_state::konendev(machine_config &config)
 	ROM_LOAD( "2v02s502_ifu.u190", 0x000000, 0x080000, CRC(36122a98) SHA1(3d2c40c9d504358d890364e26c9562e40314d8a4) )
 
 #define ENDEAVOUR_UNDUMPED_FLASH \
-	ROM_REGION( 0x200000, "prgflash1",     ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "prgflash2",     ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "prgflash3",     ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "prgflash4",     ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "prgflash5",     ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "prgflash6",     ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "prgflash7",     ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "prgflash8",     ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "sndflash1.u08", ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "sndflash2.u07", ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "sndflash3.u06", ROMREGION_ERASE00 ) \
-	ROM_REGION( 0x200000, "sndflash4.u05", ROMREGION_ERASE00 )
+	ROM_REGION( 0x200000, "prgflash1",    ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "prgflash2",    ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "prgflash3",    ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "prgflash4",    ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "prgflash5",    ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "prgflash6",    ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "prgflash7",    ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "prgflash8",    ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "sndflash1.u8", ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "sndflash2.u7", ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "sndflash3.u6", ROMREGION_ERASE00 ) \
+	ROM_REGION( 0x200000, "sndflash4.u5", ROMREGION_ERASE00 )
 
 ROM_START( konendev )
 	ENDEAVOUR_BIOS
@@ -480,16 +472,16 @@ ROM_START( enchlamp ) // the flash dumps have been split from an aggregated dump
 	ROM_LOAD32_WORD_SWAP( "enl5rg26_02l.u66", 0x00002, 0x100000, CRC(d0e42c9f) SHA1(10ff944ec0a626d47ec12be291ff5fe001342ed4) )
 
 	ROM_REGION( 0x200000, "prgflash1", ROMREGION_ERASE00 )
-	ROM_LOAD( "prgflash1", 0x000000, 0x200000, CRC(d68cab01) SHA1(c7f31c9620fad83794954ba4f0f7c39224698cf7) )
+	ROM_LOAD( "prgflash1", 0x000000, 0x200000, CRC(575327f8) SHA1(3a05e66c0323d92121d33b4d8b9072b81a25b053) )
 
 	ROM_REGION( 0x200000, "prgflash2", ROMREGION_ERASE00 )
-	ROM_LOAD( "prgflash2", 0x000000, 0x200000, CRC(0c8b1e84) SHA1(73a1203784e3a9e7c58a8d539615d69325b1871c) )
+	ROM_LOAD( "prgflash2", 0x000000, 0x200000, CRC(6a3c0df4) SHA1(1c4fc6f6300ced8e22e79cff28627411b3b3b0f2) )
 
 	ROM_REGION( 0x200000, "prgflash3", ROMREGION_ERASE00 )
-	ROM_LOAD( "prgflash3", 0x000000, 0x200000, CRC(0ea9f37b) SHA1(2883292792df8a366bc0a36e1939d811b4aae9c8) )
+	ROM_LOAD( "prgflash3", 0x000000, 0x200000, CRC(8a02ca3f) SHA1(4692cfa25b6eb2e3e055711bd6a741c4fb1a5b0d) )
 
 	ROM_REGION( 0x200000, "prgflash4", ROMREGION_ERASE00 )
-	ROM_LOAD( "prgflash4", 0x000000, 0x200000, CRC(6d0549ed) SHA1(785485e1eebd32e4bcb76b6b3aa67238ed492f4e) )
+	ROM_LOAD( "prgflash4", 0x000000, 0x200000, CRC(04a37ed2) SHA1(5dc255d71588d39fe563fc5bb0c3e1f5b1ee7c89) )
 
 	ROM_REGION( 0x200000, "prgflash5", ROMREGION_ERASE00 )
 	// not populated
@@ -503,16 +495,68 @@ ROM_START( enchlamp ) // the flash dumps have been split from an aggregated dump
 	ROM_REGION( 0x200000, "prgflash8", ROMREGION_ERASE00 )
 	// not populated
 
-	ROM_REGION( 0x200000, "sndflash1.u08", ROMREGION_ERASE00 )
+	ROM_REGION( 0x200000, "sndflash1.u8", ROMREGION_ERASE00 )
 	ROM_LOAD( "sndflash1", 0x000000, 0x200000, CRC(2b4dc7d4) SHA1(77c1d1baa20e29de22c0d710949987ef5fff8c78) )
 
-	ROM_REGION( 0x200000, "sndflash2.u07", ROMREGION_ERASE00 )
+	ROM_REGION( 0x200000, "sndflash2.u7", ROMREGION_ERASE00 )
 	ROM_LOAD( "sndflash2", 0x000000, 0x200000, CRC(59ddc211) SHA1(5c6b630df10b3d49ce72a80b402355fa23fa7324) )
 
-	ROM_REGION( 0x200000, "sndflash3.u06", ROMREGION_ERASE00 )
+	ROM_REGION( 0x200000, "sndflash3.u6", ROMREGION_ERASE00 )
 	// not populated
 
-	ROM_REGION( 0x200000, "sndflash4.u05", ROMREGION_ERASE00 )
+	ROM_REGION( 0x200000, "sndflash4.u5", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION16_BE( 0x100, "eeprom", 0 )
+	ROM_LOAD( "93c56.u98", 0x00, 0x100, CRC(b2521a6a) SHA1(f44711545bee7e9c772a3dc23b79f0ea8059ec50) ) // empty eeprom with Konami header
+ROM_END
+
+// Rapid Fire 5 (NSW)
+// Same game as Black Rose
+ROM_START( rapfire5 )
+	ROM_REGION32_BE( 0x200000, "program", 0 )
+	ROM_LOAD32_WORD_SWAP( "r056na12_01h.u75", 0x00000, 0x080000, CRC(bed72d6c) SHA1(2bc4d88ed62aaed9fb0c75ee7153c81d8e6f38d9) )
+	ROM_LOAD32_WORD_SWAP( "r056na12_02l.u66", 0x00002, 0x080000, CRC(bf17c88f) SHA1(b9b3448b4accf676c9d60643270c045ffe3c59f9) )
+
+	ROM_REGION( 0x200000, "ifu", 0 )
+	ROM_LOAD( "2n12prog_ifu.u190", 0x00000, 0x080000, CRC(c9c4ac89) SHA1(8eebda327892d00951355a86e927fa2e4ad3c9a0) )
+
+	// R0561111.FMU Chk-GR: 1CC6, SD: 6FEE R_FIRE05 6 x 2M Konami
+	// once concatenated, dumps below match the above checksum16s
+	ROM_REGION( 0x200000, "prgflash1", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200000, "prgflash2", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200000, "prgflash3", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200000, "prgflash4", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200000, "prgflash5", ROMREGION_ERASE00 )
+	ROM_LOAD( "r_fire05.c4.u4", 0x000000, 0x200000, CRC(08d31cb1) SHA1(1f0f05f078befcdb79c4d42d39a7ab5438b7bda3) )
+
+	ROM_REGION( 0x200000, "prgflash6", ROMREGION_ERASE00 )
+	ROM_LOAD( "r_fire05.c3.u3", 0x000000, 0x200000, CRC(1bf7ed0f) SHA1(664fe15c577f46ae1a17ad1d75c5c3c1cd3c01c9) )
+
+	ROM_REGION( 0x200000, "prgflash7", ROMREGION_ERASE00 )
+	ROM_LOAD( "r_fire05.c2.u2", 0x000000, 0x200000, CRC(c9282734) SHA1(11f5d30bfc6a971f6f8ad71f8f26582931442ec9) )
+
+	ROM_REGION( 0x200000, "prgflash8", ROMREGION_ERASE00 )
+	ROM_LOAD( "r_fire05.c1.u1", 0x000000, 0x200000, CRC(ad41d7a5) SHA1(f3ba22228e5699185a329508a1a3291e352e858d) )
+
+	ROM_REGION( 0x200000, "sndflash1.u8", ROMREGION_ERASE00 )
+	ROM_LOAD( "r_fire05.a4.u8", 0x000000, 0x200000, CRC(f89dbb3b) SHA1(08495770597cb91245251adc74d7a1597a95b0c9) )
+
+	ROM_REGION( 0x200000, "sndflash2.u7", ROMREGION_ERASE00 )
+	ROM_LOAD( "r_fire05.a3.u7", 0x000000, 0x200000, CRC(26d365d3) SHA1(7dfeeb0880d917b54b89694dfe434577d64fad90) )
+
+	ROM_REGION( 0x200000, "sndflash3.u6", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200000, "sndflash4.u5", ROMREGION_ERASE00 )
 	// not populated
 
 	ROM_REGION16_BE( 0x100, "eeprom", 0 )
@@ -621,19 +665,6 @@ ROM_START( monshow )
 	ENDEAVOUR_UNDUMPED_FLASH
 ROM_END
 
-// Rapid Fire 5 (NSW)
-// Same game as Black Rose
-ROM_START( rapfire5 )
-	ROM_REGION32_BE( 0x200000, "program", 0 )
-	ROM_LOAD32_WORD_SWAP( "r056na12_01h.u75", 0x00000, 0x080000, CRC(bed72d6c) SHA1(2bc4d88ed62aaed9fb0c75ee7153c81d8e6f38d9) )
-	ROM_LOAD32_WORD_SWAP( "r056na12_02l.u66", 0x00002, 0x080000, CRC(bf17c88f) SHA1(b9b3448b4accf676c9d60643270c045ffe3c59f9) )
-
-	ROM_REGION( 0x200000, "ifu", 0 )
-	ROM_LOAD( "2n12prog_ifu.u190", 0x00000, 0x080000, CRC(c9c4ac89) SHA1(8eebda327892d00951355a86e927fa2e4ad3c9a0) )
-
-	ENDEAVOUR_UNDUMPED_FLASH // R0561111.FMU Chk-GR: 1CC6, SD: 6FEE R_FIRE05 6 x 2M Konami
-ROM_END
-
 // Roman Legion (Russia)
 ROM_START( romanl )
 	ENDEAVOUR_BIOS
@@ -722,8 +753,9 @@ ROM_END
 // BIOS
 GAME( 200?, konendev, 0,        konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Konami Endeavour BIOS",                                           MACHINE_NOT_WORKING | MACHINE_IS_BIOS_ROOT )
 
-// has flash dump
+// have flash dump
 GAME( 200?, enchlamp, konendev, konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Enchanted Lamp (Konami Endeavour, Russia)",                       MACHINE_NOT_WORKING )
+GAME( 200?, rapfire5, 0,        konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Rapid Fire 5 (Konami Endeavour, NSW)",                            MACHINE_NOT_WORKING )
 
 // missing flash
 GAME( 200?, aadvent,  konendev, konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "African Adventure (Konami Endeavour, Russia)",                    MACHINE_NOT_WORKING )
@@ -735,7 +767,6 @@ GAME( 200?, jestmagi, konendev, konendev, konendev, konendev_state, empty_init, 
 GAME( 200?, luckfoun, konendev, konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Lucky Fountain (Konami Endeavour, Russia)",                       MACHINE_NOT_WORKING )
 GAME( 200?, mohicans, konendev, konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Mohican Sun (Konami Endeavour, Russia)",                          MACHINE_NOT_WORKING )
 GAME( 200?, monshow,  konendev, konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "The Monster Show (Konami Endeavour, Russia)",                     MACHINE_NOT_WORKING )
-GAME( 200?, rapfire5, 0,        konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Rapid Fire 5 (Konami Endeavour, NSW)",                            MACHINE_NOT_WORKING )
 GAME( 200?, romanl,   konendev, konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Roman Legions (Konami Endeavour, Russia)",                        MACHINE_NOT_WORKING )
 GAME( 200?, safemon,  konendev, konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Safe Money (Konami Endeavour, Russia)",                           MACHINE_NOT_WORKING )
 GAME( 200?, showqn,   konendev, konendev, konendev, konendev_state, empty_init, ROT0, "Konami", "Show Queen (Konami Endeavour, Russia)",                           MACHINE_NOT_WORKING )
