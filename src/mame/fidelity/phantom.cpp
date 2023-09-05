@@ -112,6 +112,7 @@ protected:
 	u8 hmotor_ff_clear_r();
 	u8 vmotor_ff_clear_r();
 
+	void clear_board(int state);
 	void check_rotation();
 	TIMER_DEVICE_CALLBACK_MEMBER(motors_timer);
 	void update_pieces_position(int state);
@@ -158,10 +159,14 @@ void phantom_state::machine_start()
 void phantom_state::machine_reset()
 {
 	m_rombank->set_entry(0);
+	output_magnet_pos();
+}
 
+void phantom_state::clear_board(int state)
+{
 	memset(m_pieces_map, 0, sizeof(m_pieces_map));
 	m_piece_hand = 0;
-	output_magnet_pos();
+	m_board->clear_board();
 }
 
 void phantom_state::init_phantom()
@@ -265,21 +270,23 @@ void phantom_state::update_pieces_position(int state)
 		x += 12;
 
 	// check if the magnet is in the center of a square
-	bool valid_pos = ((m_hmotor_pos & 0x0f) > 0 && (m_hmotor_pos & 0x0f) <= 7) && ((m_vmotor_pos & 0x0f) > 8 && (m_vmotor_pos & 0x0f) <= 0xf);
+	const bool valid_pos = ((m_hmotor_pos & 0x0f) > 0 && (m_hmotor_pos & 0x0f) <= 7) && ((m_vmotor_pos & 0x0f) > 8 && (m_vmotor_pos & 0x0f) <= 0xf);
 
 	if (state)
 	{
 		if (valid_pos)
 		{
 			// pick up piece, unless it was picked up by the user
-			int pos = (y << 4 & 0xf0) | (x & 0x0f);
+			const int pos = (y << 4 & 0xf0) | (x & 0x0f);
 			if (pos != m_board->get_handpos())
+			{
 				m_piece_hand = m_board->read_piece(x, y);
 
-			if (m_piece_hand != 0)
-			{
-				m_board->write_piece(x, y, 0);
-				m_board->refresh();
+				if (m_piece_hand != 0)
+				{
+					m_board->write_piece(x, y, 0);
+					m_board->refresh();
+				}
 			}
 		}
 		else
@@ -589,6 +596,7 @@ void phantom_state::phantom(machine_config &config)
 
 	SENSORBOARD(config, m_board).set_type(sensorboard_device::BUTTONS);
 	m_board->set_size(8+4, 8);
+	m_board->clear_cb().set(FUNC(phantom_state::clear_board));
 	m_board->init_cb().set(m_board, FUNC(sensorboard_device::preset_chess));
 	m_board->set_delay(attotime::from_msec(100));
 
