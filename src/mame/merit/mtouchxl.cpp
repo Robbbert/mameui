@@ -357,7 +357,7 @@ void mtxl_state::at486hd(machine_config &config)
 	ROM_REGION32_LE(0x20000, "bios", 0) \
 	ROM_LOAD("prom.mb", 0x10000, 0x10000, BAD_DUMP CRC(e44bfd3c) SHA1(c07ec94e11efa30e001f39560010112f73cc0016) ) \
 	ROM_REGION(0x80, "mb:rtc", 0) \
-	ROM_LOAD("mb_rtc", 0, 0x80, BAD_DUMP CRC(b724e5d3) SHA1(45a19ec4201d2933d033689b7a01a0260962fb0b))
+	ROM_LOAD("mb_rtc", 0, 0x80, BAD_DUMP CRC(ac77f726) SHA1(e6ae2010d8cebb82d0414c70e41ae9dbcbc460e4))
 #endif
 
 ROM_START( mtouchxl )
