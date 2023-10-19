@@ -19572,6 +19572,9 @@ husky                           // DVW Husky
 @source:ibm/ibm3153.cpp
 ibm3153                         //
 
+@source:ibm/ibm5550.cpp
+ibm5550                         //
+
 @source:ibm/ibm6580.cpp
 ibm6580                         //
 
@@ -19805,6 +19808,7 @@ ss2001                          // bootleg / hack
 star100                         // (c) 199? Sang Ho
 super7                          // bootleg (New Impeuropex?)
 super9                          // (c) 2001 Playmark
+super9a                         // (c) 2001 Playmark
 super972                        // unknown
 tcl                             // (c) 1995 Uniwang
 tonypok                         // (c) 1991 Corsica
@@ -21047,6 +21051,7 @@ bmaster                         // (c) 1991 Irem (World)
 crossbld                        // (c) 1991 Irem (Japan)
 dsoccr94j                       // (c) 1994 Irem (Japan)
 geostorm                        // (c) 1994 Irem (Japan)
+geostorma                       // (c) 1994 Irem (Japan)
 gunforc2                        // (c) 1994 Irem (World)
 gunforce                        // (c) 1991 Irem (World)
 gunforcej                       // (c) 1991 Irem (Japan)
@@ -29673,6 +29678,7 @@ gambl186a                       // EGD
 gambl186b                       // EGD
 gambl186c                       // EGD
 gambl186d                       // EGD
+gambl186e                       // EGD
 
 @source:misc/gamemasters.cpp
 gmsshoot                        // (c) 1989 GameMasters
@@ -30278,6 +30284,7 @@ millsun                         // (c) 200? unknown
 mnumitg                         // (c) 200? unknown
 ntcash                          // (c) 1999 unknown
 pirati                          // (c) 2001 Cin
+smcard                          // (c) 200? unknown
 sspac2k1                        // (c) 200? unknown
 sstar                           // (c) 200? unknown
 te0144                          // (c) 2001 unknown
@@ -31875,6 +31882,7 @@ newxpanga                       // (c) 1999 F2 System
 poosho                          // (c) 1999 F2 System
 puzlbang                        // (c) 1999 Omega System
 puzlbanga                       // (c) 1999 Omega System
+solitaire                       // (c) 1999 F2 System
 suplup                          // (c) 1999 Omega System
 toyland                         // (c) 2001 Semicom
 vamphalf                        // (c) 1999 DanBi & F2 System (Europe version 1.1.0908)
@@ -35502,7 +35510,6 @@ eppc                            // 1985 Ericsson Portable PC
 hyo88t                          // Hyosung Topstar 88T
 hyu16t                          // Hyundai Super 16 T
 hyu16te                         // Hyundai Super 16 TE
-ibm5550                         //
 iskr3104                        //
 ittxtra                         // 1984 ITT XTRA
 juko8                           // JUKO NEST motherboards with 8088/V20 CPU
@@ -39771,7 +39778,9 @@ bingpty                         // (c) 1994 Sega
 @source:sega/segasp.cpp
 aminosan                        // 2010.?? Aminosan (satellite)
 bingogal                        // 2009.05 Bingo Galaxy (main)
+bingogalo                       // 2007.11 Bingo Galaxy (main)
 bingogals                       // 2009.05 Bingo Galaxy (satellite)
+bingopar                        // 2005.05 Bingo Parade (main)
 brickppl                        //
 dinoki25                        //
 dinokich                        // 2010.05 Konglongwang - D-Kids VS Alpha Yaosai (China, Ver 2.501) (MDA-C0081)
@@ -42264,6 +42273,7 @@ dinofmlya                       // (c) 1995 Subsino (Tangasoft license or hack?)
 mtrainnv                        // (c) 1996 Subsino
 newhunter                       // (c) 1992 Karam
 newhunterb                      // bootleg
+newhunterc                      // bootleg
 sharkpy                         // (c) 1996 Subsino
 sharkpya                        // (c) 1996 Subsino
 sharkpye                        // (c) 1996 Subsino (Alpha license)
