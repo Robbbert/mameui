@@ -8,7 +8,7 @@
 
 ***************************************************************************/
 
-#define BARE_BUILD_VERSION "0.259.x"
+#define BARE_BUILD_VERSION "0.260.0"
 
 extern const char bare_build_version[];
 extern const char build_version[];
