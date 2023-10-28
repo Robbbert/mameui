@@ -811,6 +811,28 @@ void goldstar_state::nfm_map(address_map &map)
 	map(0xfc80, 0xffff).ram();
 }
 
+void goldstar_state::sunspckr_map(address_map &map)
+{
+	map(0x0000, 0xb7ff).rom().nopw();
+
+	map(0xd000, 0xd7ff).ram().w(FUNC(goldstar_state::goldstar_fg_vidram_w)).share("fg_vidram");
+	map(0xd800, 0xdfff).ram().w(FUNC(goldstar_state::goldstar_fg_atrram_w)).share("fg_atrram");
+
+	map(0xe000, 0xe1ff).ram().w(FUNC(goldstar_state::goldstar_reel1_ram_w)).share("reel1_ram");
+	map(0xe200, 0xe3ff).ram().w(FUNC(goldstar_state::goldstar_reel2_ram_w)).share("reel2_ram");
+	map(0xe400, 0xe5ff).ram().w(FUNC(goldstar_state::goldstar_reel3_ram_w)).share("reel3_ram");
+	map(0xe600, 0xe7ff).ram();
+
+	map(0xe800, 0xe87f).ram().share("reel1_scroll");
+	map(0xe880, 0xe9ff).ram();
+	map(0xea00, 0xea7f).ram().share("reel2_scroll");
+	map(0xea80, 0xebff).ram();
+	map(0xec00, 0xec7f).ram().share("reel3_scroll");
+	map(0xec80, 0xefff).ram();
+
+	map(0xf000, 0xf7ff).ram().share("nvram");
+	map(0xf800, 0xffff).ram();
+}
 
 
 void goldstar_state::cm_coincount_w(uint8_t data)
@@ -936,6 +958,20 @@ void goldstar_state::pkrmast_portmap(address_map &map)
 	map(0x29, 0x29).portr("DSW4"); // actually it reads DSW4 and DSW5. Muxed?
 
 	map(0xf0, 0xf0).nopw();    /* Writing 0's and 1's constantly.  Watchdog feeder? */
+}
+
+void goldstar_state::sunspckr_portmap(address_map &map) // TODO: incomplete!
+{
+	map.global_mask(0xff);
+
+	map(0x01, 0x01).w("aysnd", FUNC(ay8910_device::data_w));
+	map(0x02, 0x02).r("aysnd", FUNC(ay8910_device::data_r));
+	map(0x03, 0x03).w("aysnd", FUNC(ay8910_device::address_w));
+	// map(0x10, 0x13) // DSW?
+	map(0x60, 0x60).portr("IN2");
+	map(0x61, 0x61).portr("IN0");
+	map(0x62, 0x62).portr("IN1");
+	map(0x63, 0x63).lr8(NAME([] () -> uint8_t { return 0xff; })); // checks battery level here, among other things
 }
 
 void goldstar_state::cmast91_portmap(address_map &map)
@@ -9727,6 +9763,14 @@ void goldstar_state::crazybonb(machine_config &config)
 	m_maincpu->set_addrmap(AS_OPCODES, &goldstar_state::super972_decrypted_opcodes_map);
 }
 
+void goldstar_state::sunspckr(machine_config &config)
+{
+	crazybonb(config);
+
+	m_maincpu->set_addrmap(AS_PROGRAM, &goldstar_state::sunspckr_map);
+	m_maincpu->set_addrmap(AS_IO, &goldstar_state::sunspckr_portmap);
+}
+
 void unkch_state::megaline(machine_config &config)
 {
 	/* basic machine hardware */
@@ -16486,8 +16530,34 @@ ROM_START( cmast97 )
 	ROM_LOAD( "82s135.c9",  0x100, 0x100, CRC(85883486) SHA1(adcee60f6fc1e8a75c529951df9e5e1ee277e131) )
 ROM_END
 
-// DYNA D9105 PCB with Sharp LH0080B (Z80B) CPU and 2 customs (DYNA DC4000 and DYNA 22A078803), 5x 8-dips, XTAL 24 MHz. DYNA ELD3 V1.1TA in ROM.
-ROM_START( eldoradd )
+/* DYNA D9106C PCB:
+    -Zilog Z0840006.
+    -DYNA DC4000.
+    -DYNA 22A078803.
+    -24 MHz xtal.
+    -Winbond WF19054y.
+    -5 banks of 8 DIP switches, plus an unpopulated location on the PCB for a sixth one.
+*/
+ROM_START( eldoradd ) // String "DYNA ELD3 V5.1DR" on program ROM
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD16_WORD( "51d_el3_m27c512.15d", 0x00000, 0x10000, CRC(a7769d4a) SHA1(2ccd14be94a0b752113f529431b3dd4fadbf619b) )
+
+	ROM_REGION( 0x100000, "gfx", 0 )
+	ROM_LOAD( "1h_el3_tms27c040.1h", 0x000000, 0x080000, CRC(0ba677ac) SHA1(4492183cd01ba6f8ba3da233a6fd4fcb86447308) )
+	ROM_LOAD( "2h_el3_tms27c040.2h", 0x080000, 0x080000, CRC(79a37ee1) SHA1(510e4ab168003d48173d5f8ddbf396668caf8e3e) )
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "eh_82s135.15h", 0x000, 0x100, NO_DUMP )
+	ROM_LOAD( "eg_82s135.15g", 0x100, 0x100, NO_DUMP )
+
+	ROM_REGION( 0x600, "plds", 0 )
+	ROM_LOAD( "pal16l8.13f", 0x000, 0x104, NO_DUMP )
+	ROM_LOAD( "pal16l8.11e", 0x200, 0x104, NO_DUMP )
+	ROM_LOAD( "gal16v8.9f",  0x400, 0x104, NO_DUMP )
+ROM_END
+
+// DYNA D9105 PCB with Sharp LH0080B (Z80B) CPU and 2 customs (DYNA DC4000 and DYNA 22A078803), 5x 8-dips, XTAL 24 MHz.
+ROM_START( eldoraddo ) // String "DYNA ELD3 V1.1TA" on program ROM
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD16_WORD( "dyna nel 20t.c14", 0x00000, 0x10000, CRC(77b3b2ce) SHA1(e94b976ae9e5a899d916fffc8118486cbedab8b6) )
 
@@ -16503,6 +16573,37 @@ ROM_START( eldoradd )
 	ROM_LOAD( "pal16l8.d13", 0x000, 0x104, NO_DUMP )
 	ROM_LOAD( "pal16l8.e11", 0x200, 0x104, NO_DUMP )
 ROM_END
+
+ROM_START( sunspckr ) // "Suns Pecker" (also known as "Animal House"). Strings "SUNS PECKER V1.0" and "SUNS CO LTD." on program ROM
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD16_WORD( "1_am27512.l2", 0x00000, 0x10000, CRC(258208d7) SHA1(11a75963c535636ff1320a3d3c3b9867a1f169d4) )
+
+	ROM_REGION( 0x20000, "gfx1", 0 )
+	ROM_LOAD( "2_tms27c010.f6", 0x00000, 0x20000, CRC(8adb2cf7) SHA1(b5ba73e9e1ba9a443b33bd90579b05f143fef91a) )
+
+	ROM_REGION( 0x20000, "gfx2", 0 )
+	ROM_LOAD( "3_tms27c010.c6", 0x00000, 0x20000, CRC(44a9ae66) SHA1(86db8fdebcb82b9114e16f91f4aaa1f9b733e9ae))
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "1_82s129.d5", 0x000, 0x100, NO_DUMP )
+	ROM_LOAD( "2_82s129.n6", 0x100, 0x100, NO_DUMP )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "3_82s129.m6", 0x000, 0x100, NO_DUMP )
+
+	// The JEDECs were provided by the arcade PCB shop as "needed for repairs".
+	ROM_REGION( 0x400, "plds", 0 )
+	ROM_LOAD( "an_1_palce16v8.bin", 0x000, 0x117, CRC(16dac349) SHA1(793b90554baa1effc8de9298012b06f50d925560) )
+	ROM_LOAD( "an_2_palce16v8.bin", 0x000, 0x117, CRC(88e8ca22) SHA1(9033cd6905146ee67dbd802b10b8775254a6f00d) )
+	ROM_LOAD( "an_3_palce16v8.bin", 0x000, 0x117, CRC(0c360a96) SHA1(55c64511d0e6ab53875bc3f6de1b4146fb021cf3) )
+	ROM_LOAD( "an_4_palce16v8.bin", 0x000, 0x117, CRC(6fca48ea) SHA1(9254bcfc1e1a483cccf9efa6b6122f7ef78b0bbd) )
+	ROM_LOAD( "an_5_palce16v8.bin", 0x000, 0x117, CRC(7f163a81) SHA1(9b46be169e3e4bede092b7887586fd067f536fa1) )
+	ROM_LOAD( "an_6_hy18cv8.bin",   0x000, 0x117, CRC(b2cae264) SHA1(7e3b1e855e8cab0eb7b357668f3996ff431cec65) )
+	ROM_LOAD( "an_7_peel18cv8.bin", 0x000, 0x117, CRC(b2cae264) SHA1(7e3b1e855e8cab0eb7b357668f3996ff431cec65) ) // Same as "an_6"
+	ROM_LOAD( "ani_910_ep910.bin",  0x000, 0x117, CRC(446af3c9) SHA1(c38119c70d1b6e4a49bebcd59112437d9a2838ae) )
+ROM_END
+
+
 
 /*****************************************************************************************
 
@@ -19891,12 +19992,20 @@ void cmaster_state::init_super7() // possibly incomplete decryption. Game appear
 	}
 }
 
+void goldstar_state::init_sunspckr()
+{
+	uint8_t *rom = memregion("maincpu")->base();
+
+	for (int a = 0; a < 0xc000; a++)
+		m_decrypted_opcodes[a] = bitswap<8>(rom[a] ^ 0xff, 2, 3, 0, 1, 6, 7, 4, 5);
+}
+
 
 /*********************************************
 *                Game Drivers                *
-**********************************************
+*********************************************/
 
-       YEAR  NAME       PARENT    MACHINE   INPUT     STATE           INIT       ROT    COMPANY              FULLNAME                                      FLAGS              LAYOUT */
+//     YEAR  NAME       PARENT    MACHINE   INPUT     STATE           INIT            ROT   COMPANY              FULLNAME                                       FLAGS              LAYOUT
 GAMEL( 199?, goldstar,  0,        goldstar, goldstar, goldstar_state, init_goldstar,  ROT0, "IGS",               "Golden Star",                                 0,                 layout_goldstar )
 GAMEL( 199?, goldstbl,  goldstar, goldstbl, goldstar, goldstar_state, empty_init,     ROT0, "IGS",               "Golden Star (Blue version)",                  0,                 layout_goldstar )
 GAME(  199?, moonlght,  goldstar, moonlght, goldstar, goldstar_state, empty_init,     ROT0, "bootleg",           "Moon Light (v.0629, low program)",            0 )
@@ -19923,7 +20032,10 @@ GAMEL( 199?, cb3f,      ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3f,
 GAMEL( 199?, chryglda,  ncb3,     cb3e,     chrygld,  cb3_state,      init_cb3e,      ROT0, "bootleg",           "Cherry Gold I (set 2, encrypted bootleg)",    0,                 layout_chrygld )  // Runs in CB3e hardware.
 GAME(  1994, chryangla, ncb3,     chryangla,ncb3,     cb3_state,      init_chryangl,  ROT0, "bootleg (G.C.I.)",  "Cherry Angel (encrypted, W-4 hardware)",      MACHINE_NOT_WORKING ) // DYNA CB3  V1.40 string, decrypted but only test screens work
 
-GAME(  1991, eldoradd,  0,        eldoradd, chrygld,  cb3_state,      empty_init,     ROT0, "Dyna",              "El Dorado",                                   MACHINE_NOT_WORKING) // everything
+GAME(  1991, eldoradd,  0,        eldoradd, chrygld,  cb3_state,      empty_init,     ROT0, "Dyna",              "El Dorado (V5.1DR)",                          MACHINE_NOT_WORKING) // everything
+GAME(  1991, eldoraddo, eldoradd, eldoradd, chrygld,  cb3_state,      empty_init,     ROT0, "Dyna",              "El Dorado (V1.1TA)",                          MACHINE_NOT_WORKING) // everything
+
+GAME(  1991, sunspckr,  0,        sunspckr, cmv4,     goldstar_state, init_sunspckr,  ROT0, "Suns Co Ltd.",      "Animal House (V1.0)",                         MACHINE_NOT_WORKING) // correct GFX decode, I/O, etc
 
 // looks like a hack of Cherry Bonus 3
 GAME(  1994, chryangl,  ncb3,     chryangl, chryangl,  cmaster_state, init_chryangl,  ROT0, "bootleg (G.C.I.)",  "Cherry Angel (set 1)",                                MACHINE_NOT_WORKING ) // SKY SUPERCB 1.0 string, decrypted but hangs when betting
