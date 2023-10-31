@@ -8,7 +8,7 @@ LJN Video Art
 It's a toy for drawing/coloring pictures on the tv, not a video game console.
 Picture libraries were available on separate cartridges.
 
-On the splash screen, press CLEAR to start drawing (no need to wait half a minute).
+On the title screen, press CLEAR to start drawing (no need to wait half a minute).
 To change the background color, choose one from the color slider and press CLEAR.
 Drawing with the same color as the picture outline is not allowed.
 
@@ -18,13 +18,15 @@ Hardware notes:
 - TSGB01019ACP 48-pin DIP gate array (die label: MOSTEK (C) 1984, MK GB 1000 HAA),
   interfaces with EF9367P and DRAM
 - 2*D41416C-15 (16Kbit*4) DRAM
-- 36-pin cartridge slot, 8KB or 16KB ROM
+- 36-pin cartridge slot, 8KB or 16KB ROM (can also boot without cartridge)
 - DB9 joystick port, no known peripherals other than the default analog joystick
 - RF NTSC video, no sound
 
+LJN also patented a video art system under US4782335, but the hardware doesn't
+match the final product. It has no CPU, and no cartridge slot.
+
 TODO:
-- custom chip command upper bits meaning is unknown
-- palette is approximated from photos/videos
+- palette is approximated from photos/videos, there is no color prom
 
 *******************************************************************************/
 
@@ -39,6 +41,8 @@ TODO:
 #include "emupal.h"
 #include "screen.h"
 #include "softlist_dev.h"
+
+#include "videoart.lh"
 
 
 namespace {
@@ -95,7 +99,6 @@ private:
 	u8 m_romlatch = 0;
 	u8 m_ccount = 0;
 	u8 m_command = 0;
-	u8 m_color = 0;
 	u8 m_pixel_offset = 0;
 	u8 m_vramdata = 0;
 };
@@ -118,7 +121,6 @@ void videoart_state::machine_start()
 	save_item(NAME(m_romlatch));
 	save_item(NAME(m_ccount));
 	save_item(NAME(m_command));
-	save_item(NAME(m_color));
 	save_item(NAME(m_pixel_offset));
 	save_item(NAME(m_vramdata));
 }
@@ -138,41 +140,49 @@ DEVICE_IMAGE_LOAD_MEMBER(videoart_state::cart_load)
     Video
 *******************************************************************************/
 
+// note: if palette gets tweaked, don't forget to update internal artwork too
 constexpr rgb_t videoart_colors[] =
 {
 	{ 0x00, 0x00, 0x00 }, // 2 black
-	{ 0x50, 0x20, 0x28 }, // b dark pink
-	{ 0x80, 0x80, 0x80 }, // 1 gray
-	{ 0xff, 0x78, 0xff }, // c pink
-
-	{ 0x20, 0x18, 0x90 }, // 7 blue
-	{ 0x40, 0x10, 0x50 }, // 8 purple
-	{ 0x68, 0xa8, 0xff }, // 6 cyan
-	{ 0xd8, 0x78, 0xff }, // 9 lilac
-
-	{ 0x00, 0x60, 0x00 }, // 3 dark green
-	{ 0x30, 0x28, 0x08 }, // a brown
-	{ 0x68, 0xb0, 0x18 }, // 4 lime green
-	{ 0xd0, 0x78, 0x20 }, // f orange
-
+	{ 0x40, 0x30, 0xbc }, // 7 blue
+	{ 0x14, 0x68, 0x14 }, // 3 dark green
 	{ 0xff, 0xff, 0xff }, // 0 white
-	{ 0x40, 0x10, 0x10 }, // d dark red
-	{ 0x48, 0xb0, 0x20 }, // 5 green
-	{ 0xe0, 0x60, 0x58 }  // e light red
+
+	{ 0x78, 0x20, 0x38 }, // b dark red
+	{ 0x70, 0x20, 0x78 }, // 8 purple
+	{ 0x3c, 0x50, 0x00 }, // a moss green
+	{ 0x58, 0x34, 0x00 }, // d brown
+
+	{ 0x80, 0x80, 0x80 }, // 1 gray
+	{ 0x98, 0xe8, 0xff }, // 6 cyan
+	{ 0xb4, 0xff, 0x38 }, // 4 lime green
+	{ 0x84, 0xff, 0x68 }, // 5 green
+
+	{ 0xff, 0x90, 0xff }, // c pink
+	{ 0xfc, 0xa8, 0xff }, // 9 light pink
+	{ 0xff, 0xc4, 0x40 }, // f orange
+	{ 0xff, 0xa0, 0x80 }  // e light red
 };
 
 void videoart_state::palette(palette_device &palette) const
 {
-	// initialize palette (there is no color prom)
 	palette.set_pen_colors(0, videoart_colors);
 }
 
 u32 videoart_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	// width of 512 compressed down to 128
-	for (int y = cliprect.min_y; y <= cliprect.max_y; y++)
-		for (int x = cliprect.min_x; x <= cliprect.max_x; x++)
-			bitmap.pix(y, x) = m_vram[(y << 7 | x >> 2) & 0x7fff] & 0xf;
+	if (m_command & 2)
+	{
+		// display gets blanked after a couple of minutes idle
+		bitmap.fill(0, cliprect);
+	}
+	else
+	{
+		// width of 512 compressed down to 128
+		for (int y = cliprect.min_y; y <= cliprect.max_y; y++)
+			for (int x = cliprect.min_x; x <= cliprect.max_x; x++)
+				bitmap.pix(y, x) = m_vram[(y << 7 | x >> 2) & 0x7fff] & 0xf;
+	}
 
 	return 0;
 }
@@ -181,10 +191,10 @@ void videoart_state::vram_w(offs_t offset, u8 data)
 {
 	// correct offset (by default, ef9365_device wants to write per byte)
 	data = BIT(data, ~m_pixel_offset & 7);
-	offset = offset << 1 | BIT(m_pixel_offset, 2);
+	offset = (offset << 1 | BIT(m_pixel_offset, 2)) & 0x7fff;
 
 	if (data)
-		m_vram[offset] = m_color;
+		m_vram[offset] = m_command >> 4;
 	else
 		m_vram[offset] ^= 0xf;
 }
@@ -194,7 +204,7 @@ u8 videoart_state::vram_r(offs_t offset)
 	// correct offset (by default, ef9365_device wants to read per byte)
 	int pixel_offset = 0;
 	m_ef9367->get_last_readback_word(0, &pixel_offset);
-	offset = offset << 1 | BIT(pixel_offset, 2);
+	offset = (offset << 1 | BIT(pixel_offset, 2)) & 0x7fff;
 
 	if (!machine().side_effects_disabled())
 		m_vramdata = m_vram[offset];
@@ -229,11 +239,8 @@ u8 videoart_state::porta_r()
 		data &= m_efdata;
 
 	// read vram data
-	if (~m_portb & 4)
-	{
-		u8 shift = (m_ccount & 1) * 2;
-		data &= m_vramdata >> shift | 0xfc;
-	}
+	if (~m_portb & 4 && m_command & 1)
+		data &= m_vramdata >> (m_ccount & 2) | 0xfc;
 
 	// read cartridge data
 	if (~m_portb & 0x10)
@@ -263,17 +270,19 @@ void videoart_state::portb_w(u8 data)
 	// B2: shift custom chip command
 	if (~data & m_portb & 4)
 	{
-		m_command = (m_command << 2) | (m_porta & 3);
-
 		// reset count
 		if (~data & 2)
 			m_ccount = 0;
+		else
+			m_ccount = (m_ccount + 2) & 7;
 
-		// change color
-		if (m_ccount == 3)
-			m_color = m_command & 0xf;
-
-		m_ccount = (m_ccount + 1) & 3;
+		// bit 0: enable vram read
+		// bit 1: enable display
+		// bit 2: same as bit 0
+		// bit 3: always 1
+		// bit 4-7: color
+		u8 mask = 3 << m_ccount;
+		m_command = (m_command & ~mask) | (m_porta << m_ccount & mask);
 	}
 
 	// B3: erase led
@@ -324,7 +333,7 @@ static INPUT_PORTS_START( videoart )
 	PORT_BIT(0x80, IP_ACTIVE_HIGH, IPT_BUTTON4) PORT_NAME("Erase")
 
 	PORT_START("AN0")
-	PORT_BIT(0xff, 0x80, IPT_AD_STICK_X) PORT_SENSITIVITY(50) PORT_KEYDELTA(2) PORT_CENTERDELTA(0) PORT_REVERSE PORT_PLAYER(2) PORT_NAME("Color")
+	PORT_BIT(0xff, 0x7b, IPT_AD_STICK_X) PORT_SENSITIVITY(50) PORT_KEYDELTA(2) PORT_CENTERDELTA(0) PORT_REVERSE PORT_MINMAX(0x00, 0xf6) PORT_PLAYER(2) PORT_NAME("Color")
 
 	PORT_START("AN1")
 	PORT_BIT(0xff, 0x80, IPT_AD_STICK_X) PORT_SENSITIVITY(50) PORT_KEYDELTA(4) PORT_CENTERDELTA(0)
@@ -366,11 +375,13 @@ void videoart_state::videoart(machine_config &config)
 	TIMER(config, "scanline").configure_scanline(FUNC(videoart_state::scanline), "screen", 0, 1);
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_refresh_hz(60);
+	m_screen->set_refresh_hz(m_ef9367->clock() / (262.0 * 96.0));
 	m_screen->set_screen_update(FUNC(videoart_state::screen_update));
 	m_screen->set_size(512, 256);
 	m_screen->set_visarea(0, 512-1, 48, 256-1);
 	m_screen->set_palette("palette");
+
+	config.set_default_layout(layout_videoart);
 
 	// cartridge
 	GENERIC_CARTSLOT(config, m_cart, generic_linear_slot, "videoart");

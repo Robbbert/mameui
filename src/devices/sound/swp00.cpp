@@ -321,7 +321,6 @@ void swp00_device::device_start()
 
 	save_item(NAME(m_lfo_phase));
 	save_item(NAME(m_sample_pos));
-	save_item(NAME(m_sample_increment));
 	save_item(NAME(m_envelope_level));
 
 	save_item(NAME(m_glo_level_cur));
@@ -340,6 +339,10 @@ void swp00_device::device_start()
 	save_item(NAME(m_decay_done));
 	save_item(NAME(m_lpf_done));
 
+	save_item(NAME(m_dpcm_current));
+	save_item(NAME(m_dpcm_next));
+	save_item(NAME(m_dpcm_address));
+
 	for(int i=0; i != 128; i++) {
 		u32 v = 0;
 		switch(i >> 3) {
@@ -353,24 +356,12 @@ void swp00_device::device_start()
 		m_global_step[i] = v;
 	}
 
-	// Log to linear 8-bits sample decompression.  Statistics say
-	// that's what it should look like.  Note that 0 can be encoded
-	// both as 0x00 and 0x80, and as it happens 0x80 is never used in
-	// these samples.  Ends up with a 55dB dynamic range, to compare
-	// with 8bits 48dB, 12bits 72dB and 16bits 96dB.
+	// Delta-packed samples decompression.
 
-	//  Rescale so that it's roughly 16 bits.  Range ends up being +/- 78c0.
-
-	for(int i=0; i<32; i++) {
-		m_sample_log8[     i] =  i << 0;
-		m_sample_log8[0x20|i] = (i << 1) + 0x21;
-		m_sample_log8[0x40|i] = (i << 2) + 0x62;
-		m_sample_log8[0x60|i] = (i << 3) + 0xe3;
-	}
 	for(int i=0; i<128; i++) {
-		s16 base = m_sample_log8[i] << 6;
-		m_sample_log8[i | 0x80] = - base;
-		m_sample_log8[i]        = + base;
+		s16 base = ((i & 0x1f) << (7+(i >> 5))) + (((1 << (i >> 5))-1) << 12);
+		m_dpcm[i | 0x80] = - base;
+		m_dpcm[i]        = + base;
 	}
 }
 
@@ -465,7 +456,6 @@ void swp00_device::device_reset()
 
 	std::fill(m_lfo_phase.begin(), m_lfo_phase.end(), 0);
 	std::fill(m_sample_pos.begin(), m_sample_pos.end(), 0);
-	std::fill(m_sample_increment.begin(), m_sample_increment.end(), 0);
 	std::fill(m_envelope_level.begin(), m_envelope_level.end(), 0);
 
 	std::fill(m_glo_level_cur.begin(), m_glo_level_cur.end(), 0);
@@ -483,6 +473,10 @@ void swp00_device::device_reset()
 	std::fill(m_decay.begin(), m_decay.end(), false);
 	std::fill(m_decay_done.begin(), m_decay_done.end(), false);
 	std::fill(m_lpf_done.begin(), m_lpf_done.end(), false);
+
+	std::fill(m_dpcm_current.begin(), m_dpcm_current.end(), false);
+	std::fill(m_dpcm_next.begin(), m_dpcm_next.end(), false);
+	std::fill(m_dpcm_address.begin(), m_dpcm_address.end(), false);
 }
 
 void swp00_device::rom_bank_pre_change()
@@ -726,7 +720,7 @@ void swp00_device::attack_speed_w(offs_t offset, u8 data)
 		return;
 	m_stream->update();
 	m_attack_speed[chan] = data;
-	//	logerror("attack_speed[%02x] = %02x\n", chan, m_attack_speed[chan]);
+	logerror("attack_speed[%02x] = %02x\n", chan, m_attack_speed[chan]);
 }
 
 u8 swp00_device::attack_speed_r(offs_t offset)
@@ -742,7 +736,7 @@ void swp00_device::attack_level_w(offs_t offset, u8 data)
 		return;
 	m_stream->update();
 	m_attack_level[chan] = data;
-	//	logerror("attack_level[%02x] = %02x\n", chan, m_attack_level[chan]);
+	logerror("attack_level[%02x] = %02x\n", chan, m_attack_level[chan]);
 }
 
 u8 swp00_device::attack_level_r(offs_t offset)
@@ -763,7 +757,7 @@ void swp00_device::decay_speed_w(offs_t offset, u8 data)
 	if(data & 0x80)
 		m_decay[chan] = true;
 
-	//	logerror("decay_speed[%02x] = %02x\n", chan, m_decay_speed[chan]);
+	logerror("decay_speed[%02x] = %02x\n", chan, m_decay_speed[chan]);
 }
 
 u8 swp00_device::decay_speed_r(offs_t offset)
@@ -779,7 +773,7 @@ void swp00_device::decay_level_w(offs_t offset, u8 data)
 		return;
 	m_stream->update();
 	m_decay_level[chan] = data;
-	//	logerror("decay_level[%02x] = %02x\n", chan, m_decay_level[chan]);
+	logerror("decay_level[%02x] = %02x\n", chan, m_decay_level[chan]);
 }
 
 u8 swp00_device::decay_level_r(offs_t offset)
@@ -906,13 +900,17 @@ u8 swp00_device::lfo_pmod_depth_r(offs_t offset)
 void swp00_device::keyon(int chan)
 {
 	m_stream->update();
-	//	logerror("keyon %02x a=%02x/%02x d=%02x/%02x\n", chan, m_attack_speed[chan], m_attack_level[chan], m_decay_speed[chan], m_decay_level[chan]);
+	logerror("keyon %02x a=%02x/%02x d=%02x/%02x glo=%02x pan=%02x [%x %x %x %x]\n", chan, m_attack_speed[chan], m_attack_level[chan], m_decay_speed[chan], m_decay_level[chan], m_glo_level[chan], m_panning[chan], m_sample_start[chan], m_sample_end[chan], m_sample_address[chan], m_sample_dec_and_format[chan]);
 	m_lfo_phase[chan] = 0;
 	m_sample_pos[chan] = -m_sample_start[chan] << 15;
 
 	m_active[chan] = true;
 	m_decay[chan] = false;
 	m_decay_done[chan] = false;
+
+	m_dpcm_current[chan] = 0;
+	m_dpcm_next[chan] = 0;
+	m_dpcm_address[chan] = m_sample_address[chan] - m_sample_start[chan];
 
 	m_lpf_value[chan] = m_lpf_target_value[chan];
 	m_lpf_timer[chan] = 0x4000000;
@@ -1251,6 +1249,11 @@ s32 swp00_device::saturate(s32 value)
 		return value;
 }
 
+double v2f2(s32 value)
+{
+	return (1.0 - (value & 0xffffff) / 33554432.0) / (1 << (value >> 24));
+}
+
 void swp00_device::sound_stream_update(sound_stream &stream, std::vector<read_stream_view> const &inputs, std::vector<write_stream_view> &outputs)
 {
 	const delay_block brev(this, m_rev_buffer);
@@ -1278,21 +1281,21 @@ void swp00_device::sound_stream_update(sound_stream &stream, std::vector<read_st
 			case 0: { // 16-bits linear
 				offs_t adr = base_address + (spos << 1);
 				val0 = read_word(adr);
-				val1 = read_word(adr+1);
+				val1 = read_word(adr+2);
 				break;
 			}
 
 			case 1: { // 12-bits linear
 				offs_t adr = base_address + (spos >> 2)*6;
 				switch(spos & 3) {
-				case 0: { // .abc .... ....
+				case 0: { // Cabc ..AB .... ....
 					u16 w0 = read_word(adr);
 					u16 w1 = read_word(adr+2);
 					val0 = (w0 & 0x0fff) << 4;
 					val1 = ((w0 & 0xf000) >> 8) | ((w1 & 0x00ff) << 8);
 					break;
 				}
-				case 1: { // C... ..AB ....
+				case 1: { // c... BCab ...A ....
 					u16 w0 = read_word(adr);
 					u16 w1 = read_word(adr+2);
 					u16 w2 = read_word(adr+4);
@@ -1300,14 +1303,14 @@ void swp00_device::sound_stream_update(sound_stream &stream, std::vector<read_st
 					val1 = ((w1 & 0xff00) >> 4) | ((w2 & 0x000f) << 12);
 					break;
 				}
-				case 2: { // .... bc.. ...a
+				case 2: { // .... bc.. ABCa ....
 					u16 w1 = read_word(adr+2);
 					u16 w2 = read_word(adr+4);
 					val0 = ((w1 & 0xff00) >> 4) | ((w2 & 0x000f) << 12);
 					val1 = w2 & 0xfff0;
 					break;
 				}
-				case 3: { // .... .... ABC.
+				case 3: { // .... .... abc. .ABC
 					u16 w2 = read_word(adr+4);
 					u16 w3 = read_word(adr+6);
 					val0 = w2 & 0xfff0;
@@ -1323,10 +1326,22 @@ void swp00_device::sound_stream_update(sound_stream &stream, std::vector<read_st
 				val1 = (read_byte(base_address + spos + 1) << 8);
 				break;
 
-			case 3:   // 8-bits logarithmic
-				val0 = m_sample_log8[read_byte(base_address + spos)];
-				val1 = m_sample_log8[read_byte(base_address + spos + 1)];
+			case 3: { // 8-bits logarithmic
+				u32 target_address = base_address + spos + 1;
+				while(m_dpcm_address[chan] <= target_address) {
+					m_dpcm_current[chan] = m_dpcm_next[chan];
+					s32 sample = m_dpcm_next[chan] + m_dpcm[read_byte(m_dpcm_address[chan])];
+					m_dpcm_address[chan] ++;
+					if(sample < -0x8000)
+						sample = -0x8000;
+					else if(sample > 0x7fff)
+						sample = 0x7fff;
+					m_dpcm_next[chan] = sample;
+				}
+				val0 = m_dpcm_current[chan];
+				val1 = m_dpcm_next[chan];
 				break;
+			}
 			}
 
 			s32 mul = m_sample_pos[chan] & 0x7fff;
@@ -1363,9 +1378,11 @@ void swp00_device::sound_stream_update(sound_stream &stream, std::vector<read_st
 				if(!m_sample_end[chan])
 					m_active[chan] = false;
 				else {
+					s32 prev = m_sample_pos[chan];
 					do
 						m_sample_pos[chan] -= (m_sample_end[chan] << 15) | ((m_sample_dec_and_format[chan] & 0x3f) << 9);
 					while((m_sample_pos[chan] >> 15) >= m_sample_end[chan]);
+					m_dpcm_address[chan] += (m_sample_pos[chan] >> 15) - (prev >> 15);
 				}
 			}
 

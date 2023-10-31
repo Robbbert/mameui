@@ -16687,6 +16687,7 @@ skullfngj                       // MCH (c) 1996 Data East Corporation (Japan)
 stadhr96                        // MCM (c) 1996 Data East Corporation (World)
 stadhr96j                       // MCM (c) 1996 Data East Corporation (Japan)
 stadhr96j2                      // MCM (c) 1996 Data East Corporation (Japan)
+stadhr96k                       // ??? (c) 1996 Data East Corporation
 stadhr96u                       // MCM (c) 1996 Data East Corporation (USA)
 
 @source:dataeast/decocass.cpp
@@ -17399,7 +17400,8 @@ twinbrata                       // (c) 1995
 twinbratb                       // (c) 1995
 
 @source:edevices/twins.cpp
-spider                          //
+spider                          // (c) 1994 Buena Vision
+spidern                         // (c) 1994 Buena Vision
 twins                           // (c) 1993 Ecogames
 twinsa                          // (c) 1993 Ecogames
 twinsed1                        // (c) 1994 Electronic Devices
@@ -19714,6 +19716,7 @@ fl7_tw                          // Taiwanese Hardware.
 goldfrui                        // bootleg
 goldstar                        // (c) 198? IGS
 goldstbl                        // (c) 198? IGS
+hamhouse                        // bootleg
 jkrmast                         // (c) 199? unknown
 jkrmasta                        // (c) 199? unknown
 kkotnoli                        // 198? south korean hack
@@ -33138,6 +33141,9 @@ mini5sx                         // 1991
 
 @source:nec/ews4800.cpp
 ews4800_310                     // NEC EWS4800/310
+
+@source:nec/pc_h98.cpp
+pc_h98s                         // 1991
 
 @source:nec/pc100.cpp
 pc100                           //
