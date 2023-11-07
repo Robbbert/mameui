@@ -18267,6 +18267,7 @@ anteaterg                       // (c) 1983 TV-Tuning (F.E.G. license)
 anteatergg                      // bootleg
 anteateruk                      // (c) 1983 Free Enterprise Games
 aracnis                         // bootleg
+aracnisa                        // bootleg
 armorcar                        // (c) 1981 Stern
 armorcar2                       // (c) 1981 Stern
 asideral                        // bootleg
@@ -18555,6 +18556,7 @@ hunchbgb                        // bootleg
 hunchbkg                        // (c) 1983 Century
 hustlerb3                       // bootleg
 racknrol                        // (c) 1986 Status (Shinkia license) (Senko Kit)
+scrabbleo                       // bootleg
 scramb2                         // bootleg
 scramb3                         // bootleg
 scramblb                        // bootleg
@@ -19647,6 +19649,8 @@ fts2in1
 @source:igs/goldstar.cpp
 3cdpoker                        // hack?
 3cdpokera                       // hack?
+animalhs                        // (c) 1991 Suns Co Ltd.
+animalhsa                       // (c) 1991 Suns Co Ltd.
 animalw                         // bootleg
 aplan                           // bootleg (WeaShing)
 bingowng                        // (c) 1993 Wing Co. Ltd
@@ -19707,6 +19711,7 @@ crazybona                       // (c) 199? Sang Ho
 crazybonb                       // (c) 199? unknown
 eldoradd                        // (c) 1991 Dyna Electronics
 eldoraddo                       // (c) 1991 Dyna Electronics
+eldoraddoa                      // (c) 1991 Dyna Electronics
 fb2010                          // (c) 2009 Amcoe
 fl7_3121                        // (c) 199? Cyberdyne Systems, Inc.
 fl7_50                          // (c) 199? Cyberdyne Systems, Inc.
@@ -19811,7 +19816,6 @@ skill98                         // (c) 1998 Amcoe
 srmagic                         // bootleg
 ss2001                          // bootleg / hack
 star100                         // (c) 199? Sang Ho
-sunspckr                        // (c) 1991 Suns Co Ltd.
 super7                          // bootleg (New Impeuropex?)
 super9                          // (c) 2001 Playmark
 super9a                         // (c) 2001 Playmark
@@ -38319,6 +38323,10 @@ sage2
 @source:saitek/ccompan.cpp
 ccompan
 
+@source:saitek/ccompan2.cpp
+ccompan2
+expchess
+
 @source:saitek/chesstrv.cpp
 chesstrv
 chesstrvi
@@ -38334,8 +38342,8 @@ cp2000
 @source:saitek/delta1.cpp
 ccdelta1
 
-@source:saitek/exchess.cpp
-exchess
+@source:saitek/exechess.cpp
+exechess
 
 @source:saitek/intchess.cpp
 intchess

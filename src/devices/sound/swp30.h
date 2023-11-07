@@ -50,7 +50,12 @@ private:
 	static const std::array<s32, 0x20> decay_linear_step;
 	static const std::array<s32, 16> panmap;
 	std::array<s32,  0x80> m_global_step;
-	std::array<s16, 0x100> m_sample_log8;
+	std::array<s16, 0x100> m_dpcm;
+
+	static const std::array<u32, 4> lfo_shape_centered_saw;
+	static const std::array<u32, 4> lfo_shape_centered_tri;
+	static const std::array<u32, 4> lfo_shape_offset_saw;
+	static const std::array<u32, 4> lfo_shape_offset_tri;
 
 	std::array<s32,  0x40> m_sample_start;
 	std::array<s32,  0x40> m_sample_end;
@@ -64,7 +69,10 @@ private:
 	std::array<u16,  0x40> m_pan;
 	std::array<u16,  0x40> m_dry_rev;
 	std::array<u16,  0x40> m_cho_var;
+	std::array<u16,  0x40> m_lfo_step_pmod;
+	std::array<u16,  0x40> m_lfo_amod;
 
+	std::array<u32,  0x40> m_lfo_phase;
 	std::array<s32,  0x40> m_sample_pos;
 	std::array<s32,  0x40> m_envelope_level;
 	std::array<s32,  0x40> m_envelope_timer;
@@ -74,6 +82,9 @@ private:
 	std::array<s32,  0x40> m_glo_level_cur;
 	std::array<s32,  0x40> m_pan_l;
 	std::array<s32,  0x40> m_pan_r;
+	std::array<s16,  0x40> m_dpcm_current;
+	std::array<s16,  0x40> m_dpcm_next;
+	std::array<u32,  0x40> m_dpcm_address;
 
 	std::array<u64, 0x180> m_meg_program;
 	std::array<s16, 0x180> m_meg_const;
@@ -138,6 +149,11 @@ private:
 	void dry_rev_w(offs_t offset, u16 data);
 	u16 cho_var_r(offs_t offset);
 	void cho_var_w(offs_t offset, u16 data);
+
+	void lfo_step_pmod_w(offs_t offset, u16 data);
+	u16 lfo_step_pmod_r(offs_t offset);
+	void lfo_amod_w(offs_t offset, u16 data);
+	u16 lfo_amod_r(offs_t offset);
 
 	u16 internal_adr_r();
 	void internal_adr_w(u16 data);
