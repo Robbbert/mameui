@@ -5,12 +5,15 @@
 
 SciSys Chess Companion II family
 
-The chess engine is LogiChess (ported from Z80 to 6800), by Kaare Danielsen.
+The chess engine is LogiChess (ported from Z80 to 6801), by Kaare Danielsen.
 CXG Enterprise "S" / Star Chess is probably on similar hardware.
 
+NOTE: It triggers an NMI when the power switch is changed from ON to MEMORY.
+If this is not done, NVRAM may fail on the next boot.
+
 TODO:
-- add nvram (belongs in m6801.cpp, and it needs to save port $14 too)
-- verify SciSys MCU frequency, the only videos online (for hearing sound pitch)
+- if/when MAME supports an exit callback, hook up power-off NMI to that
+- verify Concord II MCU speed, the only videos online (for hearing sound pitch)
   are from the Tandy 1650 ones
 
 ********************************************************************************
@@ -19,7 +22,7 @@ Hardware notes:
 
 Chess Companion II:
 - PCB label: YO1B-01 REV.B
-- Hitachi HD6301V1 (0609V171) @ ~3MHz (LC oscillator)
+- Hitachi HD6301V1 (0609V171) @ ~4MHz (LC oscillator)
 - chessboard buttons, 16+5 leds, piezo
 
 Explorer Chess:
@@ -29,7 +32,7 @@ Explorer Chess:
 
 Concord II:
 - PCB label: SCISYS ST3 REV.E
-- MCU clock frequency is twice higher than Concord, again no XTAL
+- MCU clock frequency is around twice higher than Concord, again no XTAL
 - rest is same as ccompan2, it just has the buttons/status leds at the bottom
   instead of at the right
 
@@ -45,6 +48,8 @@ is either VCC or GND to distinguish between the two.
 - SciSys Electronic Chess Mark 8
 - Tandy 1650 Portable Sensory Chess (Tandy brand Explorer Chess)
 - Tandy 1650 Fast Response Time: Computerized Chess (Tandy brand Concord II)
+
+The Tandy clones run at a lower clock frequency, 3MHz and 6MHz respectively.
 
 *******************************************************************************/
 
@@ -93,9 +98,6 @@ private:
 	required_device<pwm_display_device> m_display;
 	required_ioport_array<8+1> m_inputs;
 
-	// address maps
-	void main_map(address_map &map);
-
 	// I/O handlers
 	u8 input1_r();
 	u8 input2_r();
@@ -104,8 +106,10 @@ private:
 	void led_w(u8 data);
 
 	void set_cpu_freq();
-	TIMER_CALLBACK_MEMBER(delayed_nmi);
+	TIMER_CALLBACK_MEMBER(set_pin);
+	void standby(int state);
 
+	emu_timer *m_standbytimer;
 	emu_timer *m_nmitimer;
 	bool m_power = false;
 	u8 m_inp_mux = 0;
@@ -113,7 +117,8 @@ private:
 
 void ccompan2_state::machine_start()
 {
-	m_nmitimer = timer_alloc(FUNC(ccompan2_state::delayed_nmi), this);
+	m_nmitimer = timer_alloc(FUNC(ccompan2_state::set_pin), this);
+	m_standbytimer = timer_alloc(FUNC(ccompan2_state::set_pin), this);
 
 	// register for savestates
 	save_item(NAME(m_power));
@@ -122,8 +127,8 @@ void ccompan2_state::machine_start()
 
 void ccompan2_state::set_cpu_freq()
 {
-	// Concord II MCU speed is twice higher
-	m_maincpu->set_unscaled_clock((ioport("FAKE")->read() & 1) ? 6000000 : 3000000);
+	// Concord II MCU speed is around twice higher
+	m_maincpu->set_unscaled_clock((ioport("FAKE")->read() & 1) ? 7200000 : 4000000);
 }
 
 
@@ -135,11 +140,20 @@ void ccompan2_state::set_cpu_freq()
 void ccompan2_state::machine_reset()
 {
 	m_power = true;
+
+	m_maincpu->set_input_line(INPUT_LINE_NMI, CLEAR_LINE);
+	m_maincpu->set_input_line(M6801_STBY_LINE, CLEAR_LINE);
 }
 
-TIMER_CALLBACK_MEMBER(ccompan2_state::delayed_nmi)
+void ccompan2_state::standby(int state)
 {
-	m_maincpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
+	if (state)
+		m_display->clear();
+}
+
+TIMER_CALLBACK_MEMBER(ccompan2_state::set_pin)
+{
+	m_maincpu->set_input_line(param, ASSERT_LINE);
 }
 
 INPUT_CHANGED_MEMBER(ccompan2_state::power_off)
@@ -149,8 +163,12 @@ INPUT_CHANGED_MEMBER(ccompan2_state::power_off)
 		m_power = false;
 
 		// when power switch is set to MEMORY, it triggers an NMI after a short delay
-		// (and shortly after that, MCU STBY is asserted)
-		m_nmitimer->adjust(attotime::from_msec(100));
+		attotime delay = attotime::from_msec(100);
+		m_nmitimer->adjust(delay, INPUT_LINE_NMI);
+
+		// afterwards, MCU STBY pin is asserted after a short delay
+		delay += attotime::from_msec(10);
+		m_standbytimer->adjust(delay, M6801_STBY_LINE);
 	}
 }
 
@@ -205,19 +223,6 @@ void ccompan2_state::led_w(u8 data)
 	// P41-P45: direct leds
 	// P46,P47: board leds
 	m_display->write_my(~data >> 1 & 0x7f);
-}
-
-
-
-/*******************************************************************************
-    Address Maps
-*******************************************************************************/
-
-void ccompan2_state::main_map(address_map &map)
-{
-	map(0x0000, 0x0014).m(m_maincpu, FUNC(hd6301v1_cpu_device::m6801_io));
-	map(0x0080, 0x00ff).ram(); // internal
-	map(0xf000, 0xffff).rom(); // internal
 }
 
 
@@ -306,8 +311,8 @@ static INPUT_PORTS_START( ccompan2 )
 
 	PORT_START("FAKE")
 	PORT_CONFNAME( 0x01, 0x00, "CPU Frequency" ) PORT_CHANGED_MEMBER(DEVICE_SELF, ccompan2_state, change_cpu_freq, 0) // factory set
-	PORT_CONFSETTING(    0x00, "3MHz (original)" )
-	PORT_CONFSETTING(    0x01, "6MHz (Concord II)" )
+	PORT_CONFSETTING(    0x00, "4MHz (original)" )
+	PORT_CONFSETTING(    0x01, "7.2MHz (Concord II)" )
 INPUT_PORTS_END
 
 
@@ -319,8 +324,9 @@ INPUT_PORTS_END
 void ccompan2_state::expchess(machine_config &config)
 {
 	// basic machine hardware
-	HD6301V1(config, m_maincpu, 3000000); // approximation, no XTAL
-	m_maincpu->set_addrmap(AS_PROGRAM, &ccompan2_state::main_map);
+	HD6301V1(config, m_maincpu, 4000000); // approximation, no XTAL
+	m_maincpu->nvram_enable_backup(true);
+	m_maincpu->standby_cb().set(FUNC(ccompan2_state::standby));
 	m_maincpu->in_p1_cb().set(FUNC(ccompan2_state::input1_r));
 	m_maincpu->in_p2_cb().set(FUNC(ccompan2_state::input2_r));
 	m_maincpu->out_p2_cb().set("dac", FUNC(dac_1bit_device::write)).bit(0);
@@ -331,10 +337,10 @@ void ccompan2_state::expchess(machine_config &config)
 	SENSORBOARD(config, m_board).set_type(sensorboard_device::BUTTONS);
 	m_board->init_cb().set(m_board, FUNC(sensorboard_device::preset_chess));
 	m_board->set_delay(attotime::from_msec(150));
+	m_board->set_nvram_enable(true);
 
 	// video hardware
 	PWM_DISPLAY(config, m_display).set_size(5+2, 8);
-	m_display->set_interpolation(0.25);
 	config.set_default_layout(layout_saitek_expchess);
 
 	// sound hardware
@@ -357,13 +363,13 @@ void ccompan2_state::ccompan2(machine_config &config)
 *******************************************************************************/
 
 ROM_START( ccompan2 )
-	ROM_REGION( 0x10000, "maincpu", 0 )
-	ROM_LOAD("1983_te-1_scisys-w_0609v171.u1", 0xf000, 0x1000, CRC(a26632fd) SHA1(fb83dc2476500acaabd949d749e58adca01012ea) )
+	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_LOAD("1983_te-1_scisys-w_0609v171.u1", 0x0000, 0x1000, CRC(a26632fd) SHA1(fb83dc2476500acaabd949d749e58adca01012ea) )
 ROM_END
 
 ROM_START( expchess )
-	ROM_REGION( 0x10000, "maincpu", 0 )
-	ROM_LOAD("1983_te-1_scisys-w_0609v171.u1", 0xf000, 0x1000, CRC(a26632fd) SHA1(fb83dc2476500acaabd949d749e58adca01012ea) )
+	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_LOAD("1983_te-1_scisys-w_0609v171.u1", 0x0000, 0x1000, CRC(a26632fd) SHA1(fb83dc2476500acaabd949d749e58adca01012ea) )
 ROM_END
 
 } // anonymous namespace

@@ -1,31 +1,42 @@
 // license:BSD-3-Clause
 // copyright-holders:
+/**************************************************************************************************
 
-/*
-    Poker Spirit (c) 1992 Taito
-    2 PCBs: Base PCB (stickered K11J0730A Poker Spirit) + video PCB (stickered K11X0731A Poker Spirit)
+Poker Spirit (c) 1992 Taito
 
-    Main components:
+TODO:
+- accesses unmapped range $e80 in TMP68303F for a sprite DMA $300ff2 -> $b10000
+- Palette, $a04000 looks the most likely candidate except it spawns 4-bits per gun in dword?
+- Opto coin chutes are non-canonical, need to press H then L in quick succession
+  (game will presumably draw a coin error if this isn't done right, needs Reset SW to fix)
+- EEPROM
 
-    Base PCB:
-    1 x TMP68303F-16
-    2 x 84256A-10L CMOS 256K-bit low power SRAM
-    1 x TE7750 I/O expander
-    1 x M66011 serial bus controller
-    1 x 93C46 EEPROM
-    1 x 32.000MHz Osc (near the TMP)
-    2 x 8-dip banks
+===================================================================================================
 
-    Video PCB:
-    1 x TC0470LIN video custom
-    1 x TC0600OBT video custom
-    1 x TC0650FDA video custom
-    1 x Z8400BB1
-    1 x OKI M6295
-    1 x YM2203C
-    1 x PC060HA CIU
-    1 x 36.000MHz Osc (near the Z80)
-*/
+2 PCBs: Base PCB (stickered K11J0730A Poker Spirit) + video PCB (stickered K11X0731A Poker Spirit)
+
+Main components:
+
+Base PCB:
+1 x TMP68303F-16
+2 x 84256A-10L CMOS 256K-bit low power SRAM
+1 x TE7750 I/O expander
+1 x M66011 serial bus controller
+1 x 93C46 EEPROM
+1 x 32.000MHz Osc (near the TMP)
+2 x 8-dip banks
+
+Video PCB:
+1 x TC0470LIN video custom
+1 x TC0600OBT video custom
+1 x TC0650FDA video custom
+1 x Z8400BB1
+1 x OKI M6295
+1 x YM2203C
+1 x PC060HA CIU
+1 x 36.000MHz Osc (near the Z80)
+
+**************************************************************************************************/
 
 #include "emu.h"
 
@@ -51,6 +62,7 @@ public:
 	pkspirit_state(const machine_config &mconfig, device_type type, const char *tag) :
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
+		m_mainio(*this, "mainio"),
 		m_gfxdecode(*this, "gfxdecode"),
 		m_bg_videoram(*this, "bg_videoram"),
 		m_fg_videoram(*this, "fg_videoram")
@@ -63,6 +75,7 @@ protected:
 
 private:
 	required_device<tmp68301_device> m_maincpu;
+	required_device<te7750_device> m_mainio;
 	required_device<gfxdecode_device> m_gfxdecode;
 
 	required_shared_ptr<uint16_t> m_bg_videoram;
@@ -126,7 +139,7 @@ uint32_t pkspirit_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 void pkspirit_state::main_map(address_map &map) // TODO: verify everything
 {
 	map(0x000000, 0x01ffff).rom().region("maincpu", 0);
-	map(0x100000, 0x10001f).rw("te7750", FUNC(te7750_device::read), FUNC(te7750_device::write)).umask16(0x00ff); // maybe
+	map(0x100000, 0x10001f).rw(m_mainio, FUNC(te7750_device::read), FUNC(te7750_device::write)).umask16(0x00ff);
 	// map(0x200000, 0x200001).r //?
 	map(0x300000, 0x30ffff).ram(); // main RAM?
 	map(0x800001, 0x800001).w("ciu", FUNC(pc060ha_device::master_port_w));
@@ -134,7 +147,7 @@ void pkspirit_state::main_map(address_map &map) // TODO: verify everything
 	//map(0x900000, 0x900001).w // ?
 
 	map(0xa00000, 0xa0003f).ram();
-	map(0xa04000, 0xa057ff).ram();
+	map(0xa04000, 0xa057ff).ram(); // palette?
 	map(0xb00000, 0xb00fff).ram().w(FUNC(pkspirit_state::fg_videoram_w)).share(m_fg_videoram); // GFX chips RAM?
 	map(0xb01000, 0xb01fff).ram(); // GFX chips RAM?
 	map(0xb02000, 0xb02fff).ram().w(FUNC(pkspirit_state::bg_videoram_w)).share(m_bg_videoram); // GFX chips RAM?
@@ -148,7 +161,7 @@ void pkspirit_state::main_map(address_map &map) // TODO: verify everything
 
 void pkspirit_state::sound_map(address_map &map) // TODO: verify everything
 {
-	map(0x0000, 0x3fff).rom().region("audiocpu", 0); // banked?
+	map(0x0000, 0x7fff).rom().region("audiocpu", 0); // banked?
 	map(0x8000, 0x8fff).ram();
 	map(0xa000, 0xa000).w("ciu", FUNC(pc060ha_device::slave_port_w));
 	map(0xa001, 0xa001).rw("ciu", FUNC(pc060ha_device::slave_comm_r), FUNC(pc060ha_device::slave_comm_w));
@@ -157,26 +170,43 @@ void pkspirit_state::sound_map(address_map &map) // TODO: verify everything
 }
 
 
+// TODO: verify some of these labels means anything in normal English, remap accordingly
+// TODO: Opto labels are supposedly coin chutes
 static INPUT_PORTS_START( pkspirit )
-	PORT_START("IN0")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
-
 	PORT_START("IN1")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_GAMBLE_BET ) PORT_NAME("1 Bet SW")
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("Duabet SW")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_GAMBLE_DEAL ) PORT_NAME("Deal/Draw SW") // "DE/DR"
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_GAMBLE_D_UP ) PORT_NAME("Double SW")
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_GAMBLE_PAYOUT ) PORT_NAME("Payout SW")
+	PORT_BIT (0x40, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("Opto2 (H)")
+	PORT_BIT (0x80, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("Opto2 (L)")
+
+	PORT_START("IN2")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_POKER_HOLD1 )
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_POKER_HOLD2 )
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_POKER_HOLD3 )
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_POKER_HOLD4 )
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_POKER_HOLD5 )
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT (0x40, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("Opto1 (H)")
+	PORT_BIT (0x80, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("Opto1 (L)")
+
+	PORT_START("IN3")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_SERVICE1 ) PORT_NAME("Reset Key")
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_SERVICE2 ) PORT_NAME("Last Key")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_SERVICE3 ) PORT_NAME("Meter Key")
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_SERVICE4 ) PORT_NAME("All Clear SW")
+	PORT_SERVICE_NO_TOGGLE( 0x10, IP_ACTIVE_LOW )
+	PORT_BIT( 0xe0, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("IN4")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT (0x02, IP_ACTIVE_HIGH, IPT_OTHER ) PORT_NAME("Hopper Rot") // "Hop Rot"?
+	PORT_BIT (0x04, IP_ACTIVE_HIGH, IPT_OTHER ) PORT_NAME("Pay Out") // Hopper related?
+	PORT_BIT (0x08, IP_ACTIVE_HIGH, IPT_OTHER ) PORT_NAME("Hopper Over") // "Hop Over"?
+	PORT_BIT( 0xf0, IP_ACTIVE_LOW, IPT_UNUSED )
 
 	PORT_START("DSW1")
 	PORT_DIPUNKNOWN_DIPLOC(0x01, 0x01, "SW1:1")
@@ -220,14 +250,20 @@ GFXDECODE_END
 void pkspirit_state::pkspirit(machine_config &config)
 {
 	// basic machine hardware
-	TMP68301(config, m_maincpu, 32_MHz_XTAL / 2); // divider not verified, actually TMP68303F-16
+	TMP68303(config, m_maincpu, 32_MHz_XTAL / 2); // divider not verified, TMP68303F-16
 	m_maincpu->set_addrmap(AS_PROGRAM, &pkspirit_state::main_map);
 	m_maincpu->parallel_r_cb().set([this]() { logerror("%s par_r\n", machine().describe_context()); return 0xffff; });
 
 	z80_device &audiocpu(Z80(config, "audiocpu", 36_MHz_XTAL / 9)); // divider not verified, but marked as 4MHz on PCB
 	audiocpu.set_addrmap(AS_PROGRAM, &pkspirit_state::sound_map);
 
-	TE7750(config, "te7750");
+	TE7750(config, m_mainio);
+	// TODO: check me
+//	m_mainio->ios_cb().set_constant(7);
+	m_mainio->in_port1_cb().set_ioport("IN1");
+	m_mainio->in_port2_cb().set_ioport("IN2");
+	m_mainio->in_port3_cb().set_ioport("IN3");
+	m_mainio->in_port4_cb().set_ioport("IN4");
 
 	// video hardware
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER)); // TODO: wrong
@@ -292,4 +328,4 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1992, pkspirit, 0, pkspirit, pkspirit, pkspirit_state, empty_init, ROT0, "Taito Corporation", "Poker Spirit", MACHINE_IS_SKELETON )
+GAME( 1992, pkspirit, 0, pkspirit, pkspirit, pkspirit_state, empty_init, ROT0, "Taito Corporation", "Poker Spirit", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_GRAPHICS )
