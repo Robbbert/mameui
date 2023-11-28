@@ -183,7 +183,7 @@ Bit 15 : ?
 		machine().bookkeeping().coin_counter_w(2, BIT(data, 2));  //
 		machine().bookkeeping().coin_counter_w(3, BIT(data, 3));  // Games
 		m_hopper->motor_w(BIT(data, 9));
-		//logerror("Port a:lines: data:%04x\n", data);	
+		//logerror("Port a:lines: data:%04x\n", data);
 	}
 }
 
@@ -221,7 +221,7 @@ Bit 14 : paid lamp? (one short pulse after all is paid)
 */
 	for (u8 i = 0; i < 16; i++)
 		m_lamps[i] = BIT(data, i);
-//	logerror("Port b:lamps: data:%04x\n", data);
+//  logerror("Port b:lamps: data:%04x\n", data);
 }
 
 
@@ -287,7 +287,7 @@ static INPUT_PORTS_START( parentj )
 	// dip descriptions and defaults taken from dip sheet
 	// NOTE: bit 0 = loc 8, bit 7 = loc 1
 	PORT_START("DSWA")
-	PORT_DIPNAME(0x01, 0x00, "Credits at start") PORT_DIPLOCATION("DSWA:8")
+	PORT_DIPNAME(0x01, 0x01, "Credits at start") PORT_DIPLOCATION("DSWA:8")
 	PORT_DIPSETTING(   0x00, "500" )
 	PORT_DIPSETTING(   0x01, "0" )
 	PORT_DIPNAME(0x02, 0x02, "Key Up / Clear")   PORT_DIPLOCATION("DSWA:7")
