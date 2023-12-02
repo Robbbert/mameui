@@ -8747,7 +8747,7 @@ void galaxian_state::init_highroll()
 	{
 		uint8_t x = rom[i];
 
-		switch(i & 0x03)
+		switch (i & 0x03)
 		{
 			case 0x000: x = bitswap<8>(x, 1, 6, 7, 4, 5, 2, 3, 0); break;
 			case 0x001: x = bitswap<8>(x, 5, 6, 3, 4, 1, 2, 7, 0); break;
@@ -8762,7 +8762,7 @@ void galaxian_state::init_highroll()
 	{
 		uint8_t x = rom[i];
 
-		switch(i & 0x01)
+		switch (i & 0x01)
 		{
 			case 0x000: x = bitswap<8>(x, 3, 6, 1, 4, 5, 2, 7, 0); break;
 			case 0x001: x = bitswap<8>(x, 1, 6, 7, 4, 3, 2, 5, 0); break;
@@ -9522,13 +9522,13 @@ void galaxian_state::init_crazym()
 {
 	init_nolock();
 
-	m_extend_sprite_info_ptr = extend_sprite_info_delegate(&bagmanmc_state::upper_extend_sprite_info, this);
+	m_extend_sprite_info_ptr = extend_sprite_info_delegate(&galaxian_state::upper_extend_sprite_info, this);
 
 	uint8_t *rom = memregion("maincpu")->base();
 
 	for (int i = 0; i < 0x4000; i++)
 	{
-		switch(rom[i] & 0x38)
+		switch (rom[i] & 0x38)
 		{
 			case 0x00: (i & 0x01) ? rom[i] ^= 0x30 : rom[i] ^= 0x20; break;
 			case 0x08: (i & 0x01) ? rom[i] ^= 0x30 : rom[i] ^= 0x08; break;
@@ -15420,7 +15420,7 @@ SUPER COBRA  RA1 5C  1981   STERN  (black dot on label)
 SUPER COBRA  RA1 5D  1981   STERN  (black dot on label)
 SUPER COBRA  RA1 5E  1981   STERN  (black dot on label)
 */
-ROM_START( scobrae ) // main program is identical to the scobras set once decrypted
+ROM_START( scobrae ) // main program is identical to the scobras set once decrypted. L-1200-1B + L-1220-2B PCBs
 	ROM_REGION( 0x10000, "maincpu", 0 ) // all roms have STERN labels
 	ROM_LOAD( "super cobra ra1 2c 1981.2c",   0x0000, 0x1000, CRC(ba9d4152) SHA1(f1792c0049804ac956ab7f95f699559fca4df960) )
 	ROM_LOAD( "super cobra ra1 2e 1981.2e",   0x1000, 0x1000, CRC(f9b77b27) SHA1(7974761456aaabcf016158ee5f5c32c89e43c748) )
@@ -15435,12 +15435,12 @@ ROM_START( scobrae ) // main program is identical to the scobras set once decryp
 
 	// ROMs below were missing, so not verified for this set but likely the same because the main program is.
 	ROM_REGION( 0x10000, "audiocpu", 0 )
-	ROM_LOAD( "5c",   0x0000, 0x0800, BAD_DUMP CRC(deeb0dd3) SHA1(b815a586f05361b75078d58f1fddfdb36f9d8fae) )
-	ROM_LOAD( "5d",   0x0800, 0x0800, BAD_DUMP CRC(872c1a74) SHA1(20f05bf398ad2690f5ba4e4158ad62aeec226413) )
-	ROM_LOAD( "5e",   0x1000, 0x0800, BAD_DUMP CRC(ccd7a110) SHA1(5a247e360530be0f94c90fcc7d0ce628d460449f) )
+	ROM_LOAD( "super cobra ra1 5c 1981.5c",   0x0000, 0x0800, CRC(deeb0dd3) SHA1(b815a586f05361b75078d58f1fddfdb36f9d8fae) )
+	ROM_LOAD( "super cobra ra1 5d 1981.5d",   0x0800, 0x0800, CRC(872c1a74) SHA1(20f05bf398ad2690f5ba4e4158ad62aeec226413) )
+	ROM_LOAD( "super cobra ra1 5e 1981.5e",   0x1000, 0x0800, CRC(ccd7a110) SHA1(5a247e360530be0f94c90fcc7d0ce628d460449f) )
 
 	ROM_REGION( 0x0020, "proms", 0 )
-	ROM_LOAD( "82s123.6e",    0x0000, 0x0020, BAD_DUMP CRC(9b87f90d) SHA1(d11ac5e4a6057301ea2a9cbb404c2b978eb4c1dc) )
+	ROM_LOAD( "ss1.6e",  0x0000, 0x0020,   CRC(fd35c561) SHA1(590f60beb443dd689c890c37cc100e0b936bf8c9) )
 ROM_END
 
 
