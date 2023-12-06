@@ -99,6 +99,7 @@
     \- sscopex/sogeki desyncs during gameplay intro, leaves heavy trails in gameplay;
     - ppp2nd: hangs when selecting game mode from service (manages to save);
     - code1d, code1da, p9112: RTC self check bad;
+    - code1db: crashes when selecting single course type;
     - thrild2c: blue screen;
     - thrild2ac: black screen;
     - all games needs to be verified against factory settings
@@ -456,8 +457,8 @@ The golf club acts like a LED gun. PCB power input is 12V.
 
 namespace {
 
-
-#define SDRAM_CLOCK         XTAL(33'868'800) * 3 // Main SDRAMs run at PCI * 3
+#define PCI_CLOCK           (XTAL(33'868'800))
+#define SDRAM_CLOCK         (PCI_CLOCK * 3) // Main SDRAMs run at 100 MHz
 
 class viper_state : public driver_device
 {
@@ -466,12 +467,15 @@ public:
 		: driver_device(mconfig, type, tag),
 		m_voodoo(*this, "voodoo"),
 		m_maincpu(*this, "maincpu"),
+		m_screen(*this, "screen"),
 		m_ata(*this, "ata"),
 		m_lpci(*this, "pcibus"),
 		m_ds2430_bit_timer(*this, "ds2430_timer2"),
 		m_workram(*this, "workram"),
 		m_ds2430_rom(*this, "ds2430"),
 		m_io_ports(*this, "IN%u", 0U),
+		m_analog_input(*this, "AN%u", 0U),
+		m_gun_input(*this, "GUN%u", 0U),
 		m_io_ppp_sensors(*this, "SENSOR%u", 1U),
 		m_dmadac(*this, { "dacr", "dacl" })
 	{
@@ -635,6 +639,8 @@ private:
 		uint8_t cr = 0U;
 		uint8_t sr = 0U;
 		int state = 0;
+		uint8_t addr_latch = 0U;
+		bool rw = 0;
 		emu_timer *timer = nullptr;
 	};
 
@@ -666,12 +672,15 @@ private:
 	void DS2430_w(int bit);
 
 	required_device<ppc_device> m_maincpu;
+	required_device<screen_device> m_screen;
 	required_device<ata_interface_device> m_ata;
 	required_device<pci_bus_legacy_device> m_lpci;
 	required_device<timer_device> m_ds2430_bit_timer;
 	required_shared_ptr<uint64_t> m_workram;
 	required_region_ptr<uint8_t> m_ds2430_rom;
 	required_ioport_array<8> m_io_ports;
+	required_ioport_array<4> m_analog_input;
+	required_ioport_array<4> m_gun_input;
 	optional_ioport_array<4> m_io_ppp_sensors;
 	required_device_array<dmadac_sound_device, 2> m_dmadac;
 
@@ -794,6 +803,7 @@ void viper_state::pci_config_data_w(uint64_t data)
 
 uint8_t viper_state::i2cdr_r(offs_t offset)
 {
+	u8 res = 0;
 	if (m_i2c.cr & 0x80 && !machine().side_effects_disabled())     // only do anything if the I2C module is enabled
 	{
 		if (m_i2c.state == I2C_STATE_ADDRESS_CYCLE)
@@ -813,6 +823,34 @@ uint8_t viper_state::i2cdr_r(offs_t offset)
 			// set transfer complete in status register
 			m_i2c.sr |= 0x80;
 
+			if (m_i2c.rw)
+			{
+				if ((m_i2c.addr_latch & 0xf0) == 0x10)
+				{
+					// TODO: hackish direct read
+					// What should really happen here is that i2c initiates a transfer with
+					// connected devices in serial form, cycling thru the various devices.
+					// The hard part is to drive the adc (which has 4 write and 2 read lines)
+					// with only sda/scl, and assuming it is really adc and the Guru note doesn't
+					// refer to boxingm instead.
+
+					// 0x1c: voltage, assume 5v
+					if (m_i2c.addr_latch == 0x1c)
+						return 0x80;
+					const u16 adc_value = m_analog_input[m_i2c.addr_latch & 0x3]->read();
+					// FIXME: upper nibble is currently discarded in port defs
+					// is it expecting 7 bits of data and 1 of parity?
+					// cfr. input tests returning different values for each nibble when both are equal.
+					const u8 adc_nibble = BIT(m_i2c.addr_latch, 2) ? 0 : 8;
+
+					res = (adc_value) >> adc_nibble;
+				}
+				else
+					LOG("I2C: unmapped read access %02x\n", m_i2c.addr_latch);
+			}
+			else
+				LOG("I2C: read access %02x in write mode!\n", m_i2c.addr_latch);
+
 			// generate interrupt if interrupt are enabled
 			/*if (m_i2c.cr & 0x40)
 			{
@@ -825,7 +863,7 @@ uint8_t viper_state::i2cdr_r(offs_t offset)
 		}
 	}
 
-	return 0;
+	return res;
 }
 
 void viper_state::i2cdr_w(offs_t offset, uint8_t data)
@@ -835,16 +873,19 @@ void viper_state::i2cdr_w(offs_t offset, uint8_t data)
 		if (m_i2c.state == I2C_STATE_ADDRESS_CYCLE)          // waiting for address cycle
 		{
 			//int rw = data & 1;
-
-			int addr = (data >> 1) & 0x7f;
-			LOGI2C("I2C address cycle, addr = %02X\n", addr);
+			m_i2c.rw = bool(data & 1);
+			m_i2c.addr_latch = (data >> 1) & 0x7f;
+			LOGI2C("I2C address cycle %s, addr = %02X \n"
+				, m_i2c.rw ? "read" : "write"
+				, m_i2c.addr_latch
+			);
 			m_i2c.state = I2C_STATE_DATA_TRANSFER;
 
 			m_i2c.timer->adjust(attotime::from_hz(I2C_TIMER_FREQ));
 		}
 		else if (m_i2c.state == I2C_STATE_DATA_TRANSFER)     // waiting for data transfer
 		{
-			LOGI2C("I2C data transfer, data = %02X\n", data);
+			LOGI2C("I2C data transfer, data = %02x\n", data);
 			m_i2c.state = I2C_STATE_ADDRESS_CYCLE;
 
 			m_i2c.timer->adjust(attotime::from_hz(I2C_TIMER_FREQ));
@@ -1962,9 +2003,10 @@ void viper_state::viper_map(address_map &map)
 	map(0xffe10000, 0xffe10007).rw(FUNC(viper_state::input_r), FUNC(viper_state::output_w));
 	map(0xffe20000, 0xffe20007).nopw(); // motor k-type for deluxe force feedback (xtrial, gticlub2, jpark3)
 	map(0xffe28000, 0xffe28007).nopw(); // ppp2nd/boxingm extended leds
+	map(0xffe28000, 0xffe28007).nopr(); // sscopex busy flag for secondary screen?
 	// boxingm reads and writes here to read the pad sensor values, 2nd adc?
 	// $10 bit 7 (w) clk_write, $18 bit 7 (r) do_read
-//	map(0xffe28008, 0xffe2801f).noprw();
+//  map(0xffe28008, 0xffe2801f).noprw();
 	map(0xffe30000, 0xffe31fff).rw("m48t58", FUNC(timekeeper_device::read), FUNC(timekeeper_device::write));
 	map(0xffe40000, 0xffe4000f).noprw();
 	map(0xffe50000, 0xffe50007).w(FUNC(viper_state::unk2_w));
@@ -1974,7 +2016,12 @@ void viper_state::viper_map(address_map &map)
 	map(0xffe88000, 0xffe88007).w(FUNC(viper_state::unk1b_w));
 	map(0xffe98000, 0xffe98007).noprw(); // network?
 	map(0xffe9a000, 0xffe9bfff).ram();   // wcombat uses this
-	map(0xffea0000, 0xffea0007).noprw(); // Gun sensor? Read heavily by p9112
+	map(0xffea0000, 0xffea0007).lr8(
+		NAME([this] (offs_t offset) {
+			const u8 res = m_gun_input[offset >> 1]->read() >> ((offset & 1) ? 0 : 8);
+			return res;
+		})
+	).nopw(); // Gun sensor? Read heavily by p9112
 	map(0xffea8000, 0xffea8007).nopw(); // sound DMA trigger for block request?
 	map(0xfff00000, 0xfff3ffff).rom().region("user1", 0);       // Boot ROM
 }
@@ -2092,6 +2139,30 @@ static INPUT_PORTS_START( viper )
 
 	PORT_START("IN7")
 	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("GUN0")
+	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("GUN1")
+	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("GUN2")
+	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("GUN3")
+	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("AN0")
+	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("AN1")
+	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("AN2")
+	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("AN3")
+	PORT_BIT( 0xffff, IP_ACTIVE_LOW, IPT_UNUSED )
 INPUT_PORTS_END
 
 INPUT_PORTS_START( ppp2nd )
@@ -2157,13 +2228,26 @@ INPUT_PORTS_START( thrild2 )
 	PORT_MODIFY("IN4")
 	PORT_BIT(0x01, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_NAME("Shift Up")
 
-	// TODO: analog channels
+	// TODO: normal type steering wheel (non-K type)
+	PORT_MODIFY("AN0")
+	PORT_BIT( 0xfff, 0x000, IPT_PADDLE ) PORT_NAME("Steering Wheel") PORT_MINMAX(0x800,0x7ff) PORT_SENSITIVITY(50) PORT_KEYDELTA(50)
+
+	PORT_MODIFY("AN1")
+	PORT_BIT( 0xff, 0x00, IPT_PEDAL ) PORT_NAME("Gas Pedal") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE
+
+	PORT_MODIFY("AN2")
+	PORT_BIT( 0xff, 0x00, IPT_PEDAL2 ) PORT_NAME("Brake Pedal") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE
 INPUT_PORTS_END
 
 INPUT_PORTS_START( gticlub2 )
 	PORT_INCLUDE( thrild2 )
 
-	// TODO: specific analog channel for hand brake
+	// K-Type steering wheel
+	PORT_MODIFY("AN0")
+	PORT_BIT( 0xff, 0x80, IPT_PADDLE ) PORT_NAME("Steering Wheel") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(50) PORT_REVERSE
+
+	PORT_MODIFY("AN3")
+	PORT_BIT( 0xff, 0x00, IPT_PEDAL3 ) PORT_NAME("Handbrake Lever") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(100) PORT_KEYDELTA(25) PORT_REVERSE
 INPUT_PORTS_END
 
 INPUT_PORTS_START( gticlub2ea )
@@ -2193,6 +2277,7 @@ INPUT_PORTS_START( boxingm )
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("BodyPad R")
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN ) // memory card check for boxingm (actually comms enable?)
 
+	// TODO: non-i2c analog ports
 INPUT_PORTS_END
 
 INPUT_PORTS_START( jpark3 )
@@ -2211,6 +2296,18 @@ INPUT_PORTS_START( jpark3 )
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("Right Escape button")
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("Left Escape button")
+
+	PORT_MODIFY("GUN0")
+	PORT_BIT( 0x07ff, 0x2f8, IPT_LIGHTGUN_X ) PORT_CROSSHAIR(X, 1.0, 0.0, 0) PORT_MINMAX( 0x00e0, 0x0510 ) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_PLAYER(1)
+
+	PORT_MODIFY("GUN1")
+	PORT_BIT( 0x01ff, 0x0e7, IPT_LIGHTGUN_Y ) PORT_CROSSHAIR(Y, 1.0, 0.0, 0) PORT_MINMAX(0x0020, 0x01af) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_PLAYER(1)
+
+	PORT_MODIFY("GUN2")
+	PORT_BIT( 0x07ff, 0x2f8, IPT_LIGHTGUN_X ) PORT_CROSSHAIR(X, 1.0, 0.0, 0) PORT_MINMAX( 0x00e0, 0x0510 ) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_PLAYER(2)
+
+	PORT_MODIFY("GUN3")
+	PORT_BIT( 0x01ff, 0x0e7, IPT_LIGHTGUN_Y ) PORT_CROSSHAIR(Y, 1.0, 0.0, 0) PORT_MINMAX(0x0020, 0x01af) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_PLAYER(2)
 INPUT_PORTS_END
 
 INPUT_PORTS_START( p911 )
@@ -2230,6 +2327,19 @@ INPUT_PORTS_START( p911 )
 	PORT_MODIFY("IN5")
 	PORT_BIT(0x40, IP_ACTIVE_LOW, IPT_UNKNOWN ) // P2 SHT2 (checks and fails serial if pressed)
 	PORT_BIT(0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+
+	// TODO: corrupted GFXs on calibration screen
+	PORT_MODIFY("GUN0")
+	PORT_BIT( 0x07ff, 0x2f8, IPT_LIGHTGUN_X ) PORT_CROSSHAIR(Y, -1.0, 0.0, 0) PORT_MINMAX( 0x00e0, 0x0510 ) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_PLAYER(1)
+
+	PORT_MODIFY("GUN1")
+	PORT_BIT( 0x01ff, 0x0e7, IPT_LIGHTGUN_Y ) PORT_CROSSHAIR(X, 1.0, 0.0, 0) PORT_MINMAX(0x0020, 0x01af) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_PLAYER(1)
+
+	PORT_MODIFY("GUN2")
+	PORT_BIT( 0x07ff, 0x2f8, IPT_LIGHTGUN_X ) PORT_CROSSHAIR(Y, -1.0, 0.0, 0) PORT_MINMAX( 0x00e0, 0x0510 ) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_PLAYER(2)
+
+	PORT_MODIFY("GUN3")
+	PORT_BIT( 0x01ff, 0x0e7, IPT_LIGHTGUN_Y ) PORT_CROSSHAIR(X, 1.0, 0.0, 0) PORT_MINMAX(0x0020, 0x01af) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_PLAYER(2)
 INPUT_PORTS_END
 
 INPUT_PORTS_START( mfightc )
@@ -2245,6 +2355,8 @@ INPUT_PORTS_START( mfightc )
 
 	PORT_MODIFY("IN5")
 	PORT_BIT(0x80, IP_ACTIVE_LOW, IPT_UNKNOWN ) // if off tries to check UART
+
+	// TODO: touchscreen
 INPUT_PORTS_END
 
 INPUT_PORTS_START( mocapglf )
@@ -2260,6 +2372,20 @@ INPUT_PORTS_START( mocapglf )
 	PORT_DIPNAME( 0x40, 0x40, "Show Diagnostics On Boot" ) // Shows UART status, lamp status, and accelerometer values
 	PORT_DIPSETTING( 0x00, DEF_STR( Yes ) )
 	PORT_DIPSETTING( 0x40, DEF_STR( No ) )
+
+	// TODO: placeholder, can be tested thru I/O check -> G-Sensor check
+	// (is there missing GFXs for pitch/roll angle displays?)
+	PORT_MODIFY("GUN0")
+	PORT_BIT( 0xffff, 0x8000, IPT_LIGHTGUN_X ) PORT_CROSSHAIR(Y, -1.0, 0.0, 0) PORT_MINMAX( 0x0000, 0xffff ) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_NAME("Pitch Angle X")
+
+	PORT_MODIFY("GUN1")
+	PORT_BIT( 0xffff, 0x8000, IPT_LIGHTGUN_Y ) PORT_CROSSHAIR(X, 1.0, 0.0, 0) PORT_MINMAX(0x0000, 0xffff) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_NAME("Pitch Angle Y")
+
+	PORT_MODIFY("GUN2")
+	PORT_BIT( 0xffff, 0x8000, IPT_LIGHTGUN_X ) PORT_CROSSHAIR(Y, -1.0, 0.0, 0) PORT_MINMAX( 0x0000, 0xffff ) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_NAME("Roll Angle X")
+
+	PORT_MODIFY("GUN3")
+	PORT_BIT( 0xffff, 0x8000, IPT_LIGHTGUN_Y ) PORT_CROSSHAIR(X, 1.0, 0.0, 0) PORT_MINMAX( 0x0000, 0xffff ) PORT_SENSITIVITY(15) PORT_KEYDELTA(1) PORT_NAME("Roll Angle Y")
 INPUT_PORTS_END
 
 INPUT_PORTS_START( mocapb )
@@ -2362,6 +2488,8 @@ INPUT_PORTS_START( wcombat )
 
 	PORT_MODIFY("IN4")
 	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_UNKNOWN ) // X flip screen
+
+	// TODO: whatever it reads from the i2c analog ports (needs service mode)
 INPUT_PORTS_END
 
 INPUT_PORTS_START( xtrial )
@@ -2380,16 +2508,31 @@ INPUT_PORTS_START( xtrial )
 
 	PORT_MODIFY("IN4")
 	PORT_BIT(0x01, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_NAME("Shift Up")
+
+	// virtually identical to gticlub
+	PORT_MODIFY("AN0")
+	PORT_BIT( 0xff, 0x80, IPT_PADDLE ) PORT_NAME("Steering Wheel") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(50) PORT_REVERSE
+
+	PORT_MODIFY("AN1")
+	PORT_BIT( 0xff, 0x00, IPT_PEDAL ) PORT_NAME("Gas Pedal") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE
+
+	PORT_MODIFY("AN2")
+	PORT_BIT( 0xff, 0x00, IPT_PEDAL2 ) PORT_NAME("Brake Pedal") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE
+
+	PORT_MODIFY("AN3")
+	PORT_BIT( 0xff, 0x00, IPT_PEDAL3 ) PORT_NAME("Handbrake Lever") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(100) PORT_KEYDELTA(25) PORT_REVERSE
 INPUT_PORTS_END
 
 INPUT_PORTS_START( code1d )
 	PORT_INCLUDE( viper )
 
 	PORT_MODIFY("IN2")
-	PORT_DIPNAME( 0x01, 0x00, "DIP4" ) PORT_DIPLOCATION("SW:4") // Unknown, but without this set the game won't display anything besides a blue screen
+	// Unknown, but without this set the game won't display anything besides a blue screen
+	PORT_DIPNAME( 0x01, 0x00, "DIP4" ) PORT_DIPLOCATION("SW:4")
 	PORT_DIPSETTING( 0x01, DEF_STR( Off ) )
 	PORT_DIPSETTING( 0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x04, 0x00, "Calibrate Controls On Boot" ) PORT_DIPLOCATION("SW:2") // Game crashes during boot when this is on
+	// needs it to be on otherwise analog inputs won't work in gameplay
+	PORT_DIPNAME( 0x04, 0x04, "Calibrate Controls On Boot" ) PORT_DIPLOCATION("SW:2")
 	PORT_DIPSETTING( 0x04, DEF_STR( Yes ) )
 	PORT_DIPSETTING( 0x00, DEF_STR( No ) )
 	PORT_DIPNAME( 0x08, 0x00, "Memory Card Check On Boot" ) PORT_DIPLOCATION("SW:1")
@@ -2399,6 +2542,14 @@ INPUT_PORTS_START( code1d )
 	PORT_MODIFY("IN4")
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_NAME("Action Button")
 
+	PORT_MODIFY("AN0")
+	PORT_BIT( 0xff, 0x80, IPT_PADDLE ) PORT_NAME("Steering Wheel") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(50) PORT_REVERSE
+
+	PORT_MODIFY("AN1")
+	PORT_BIT( 0xff, 0x00, IPT_PEDAL ) PORT_NAME("Gas Pedal") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE
+
+	PORT_MODIFY("AN2")
+	PORT_BIT( 0xff, 0x00, IPT_PEDAL2 ) PORT_NAME("Brake Pedal") PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE
 INPUT_PORTS_END
 
 /*****************************************************************************/
@@ -2536,8 +2687,8 @@ void viper_state::machine_reset()
 void viper_state::viper(machine_config &config)
 {
 	/* basic machine hardware */
-	MPC8240(config, m_maincpu, XTAL(33'868'800) * 6); // PCI clock * 6
-	m_maincpu->set_bus_frequency(XTAL(33'868'800) * 2); // TODO: x2 for AGP, other devices x1
+	MPC8240(config, m_maincpu, PCI_CLOCK * 6); // 200 Mhz
+	m_maincpu->set_bus_frequency(PCI_CLOCK * 2); // TODO: x2 for AGP, Epic gets x1
 	m_maincpu->set_addrmap(AS_PROGRAM, &viper_state::viper_map);
 
 	pci_bus_legacy_device &pcibus(PCI_BUS_LEGACY(config, "pcibus", 0, 0));
