@@ -5364,3 +5364,23 @@ if (BUSES["MC68000_SYSBUS"]~=null) then
 		MAME_DIR .. "src/devices/bus/mc68000/ram.h",
 	}
 end
+
+---------------------------------------------------
+--
+--@src/devices/bus/waveblaster/waveblaster.h,BUSES["WAVEBLASTER"] = true
+---------------------------------------------------
+
+if (BUSES["WAVEBLASTER"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/waveblaster/waveblaster.cpp",
+		MAME_DIR .. "src/devices/bus/waveblaster/waveblaster.h",
+		MAME_DIR .. "src/devices/bus/waveblaster/omniwave.cpp",
+		MAME_DIR .. "src/devices/bus/waveblaster/omniwave.h",
+		MAME_DIR .. "src/devices/bus/waveblaster/db50xg.cpp",
+		MAME_DIR .. "src/devices/bus/waveblaster/db50xg.h",
+		MAME_DIR .. "src/devices/bus/waveblaster/db60xg.cpp",
+		MAME_DIR .. "src/devices/bus/waveblaster/db60xg.h",
+		MAME_DIR .. "src/devices/bus/waveblaster/wg130.cpp",
+		MAME_DIR .. "src/devices/bus/waveblaster/wg130.h",
+	}
+end

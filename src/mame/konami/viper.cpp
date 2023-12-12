@@ -1,5 +1,5 @@
 // license:BSD-3-Clause
-// copyright-holders:Ville Linde
+// copyright-holders:Ville Linde, Angelo Salese
 
 /*
     Konami Viper System
@@ -144,7 +144,7 @@
 
 
 
-===========================================================================================================================
+===================================================================================================
 
 Konami Viper Hardware Overview (last updated 5th June 2011 10:56pm)
 
@@ -223,75 +223,8 @@ MB81G163222-80 - Fujitsu MB81G163222-80 256k x 32-bit x 2 banks Synchronous Grap
         LM358 - National Semiconductor LM358 low power dual operational amplifier (SOIC8 @ U14)
        6379AL - NEC uPC6379AL 2-channel 16-bit D/A converter (SOIC8 @ U30)
       ADC0838 - National Semiconductor ADC0838 Serial I/O 8-Bit A/D Converters with Multiplexer Options (SOIC20 @ U13)
-       DS2430 - Dallas DS2430 256-bits 1-Wire EEPROM. Has 256 bits x8 EEPROM (32 bytes), 64 bits x8 (8 bytes)
-                one-time programmable application register and unique factory-lasered and tested 64-bit
-                registration number (8-bit family code + 48-bit serial number + 8-bit CRC) (TO-92 @ U37)
-                The OTP application register on the common DS2430 and the Police 911 2 DS2430 are not programmed
-                (application register reads all 0xFF and the status register reads back 0xFF), so it's probably safe
-                to assume they're not used on any of them.
-                It appears the DS2430 is not protected from reading and the unique silicon serial number is
-                included in the 40 byte dump. This serial number is used as a check to verify the NVRAM and DS2430.
-                In the Police 911 2 NVRAM dump the serial number of the DS2430 is located at 0x002A and 0x1026
-                If the serial number in the NVRAM and DS2430 match then they are paired and the game accepts the NVRAM.
-                If they don't match the game requires an external DS2430 (i.e. dongle) and flags the NVRAM as 'BAD'
-                The serial number is not present in the CF card (2 different Police 911 2 cards of the same version
-                were dumped and matched).
-                When the lasered ROM is read from the DS2430, it comes out from LSB to MSB (family code, LSB of
-                S/N->MSB of S/N, CRC)
-                For Police 911 2 that is 0x14 0xB2 0xB7 0x4A 0x00 0x00 0x00 0x83
-                Family code=0x14
-                S/N=0x0000004AB7B2
-                CRC=0x83
-                In a DS2430 dump, the first 32 bytes is the EEPROM and the lasered ROM is 8 bytes and starts at 0x20h
-                For Police 911 2 that is....
-                00000000h CB 9B 56 EC A0 4C 87 53 51 46 28 E7 00 00 00 74
-                00000010h 30 A9 C7 76 B9 85 A3 43 87 53 50 42 1A E7 FA CF
-                00000020h 14 B2 B7 4A 00 00 00 83
-                It may be possible to hand craft a DS2430 for a dongle-protected version of a game simply by using
-                one of the existing DS2430 dumps and adjusting the serial number found in a dump of the NVRAM to pair them
-                or adjusting the serial number in the NVRAM to match the serial number found in one of the dumped DS2430s.
-                This Police 911 2 board was upgraded from Police 911 by plugging in the dongle and changing the CF card.
-                The NVRAM had previously died and the board was dead. Normally for a Viper game that is fatal. Using
-                the NVRAM from Police 911 allowed it to boot and then the NVRAM upgraded itself with some additional
-                data (the original data remained untouched). This means the dongle does more than just protect the game.
-                Another interesting fact about this upgrade is it has been discovered that the PCB can write to the
-                external DS2430 in the dongle. This has been proven because the serial number of the DS2430 soldered
-                on the PCB is present in the EEPROM area of the Police 911 2 DS2430.
-                Here is a dump of the DS2430 from Police 911. Note the EEPROM area is empty and the serial number (from 0x20 onwards)
-                is present in the above Police 911 2 DS2430 dump at locations 0x11, 0x10 and 0x0F
-                00000000h FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
-                00000010h FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
-                00000020h 14 A9 30 74 00 00 00 E7
-                This proves that the EEPROM area in the DS2430 is unused by an unprotected game and in fact the on-board
-                DS2430 is completely unused by an unprotected game. That is why any unprotected game will work on any
-                Viper PCB regardless of the on-board DS2430 serial number.
-                The existing DS2430 'common' dump used in the unprotected games was actually from a (dongle-protected)
-                Mahjong Fight Club PCB but that PCB was used to test and run all of the unprotected Viper games.
-      M48T58Y - ST Microelectronics M48T58Y Timekeeper RAM (DIP28 @ U39). When this dies (after 10 year lifespan)
-                the game will complain with error RTC BAD then reset. The data inside the RTC can not be hand created
-                (yet) so to revive the PCB the correct RTC data must be re-programmed to a new RTC and replaced
-                on the PCB.
-                Regarding the RTC and protection-related checks....
-                "RTC OK" checks 0x0000->0x0945 (i.e. I can clear the contents after 0x0945 and the game will still
-                happily boot). The NVRAM contents are split into chunks, each of which are checksummed.  It is a 16-bit checksum,
-                computed by summing two consecutive bytes as a 16-bit integer, where the final sum must add up to 0xFFFF (mod
-                65536).  The last two bytes in the chunk are used to make the value 0xFFFF.  There doesn't appear to be a
-                complete checksum over all the chunks (I can pick and choose chunks from various NVRAMs, as long as each chunk
-                checksum checks out). The important chunks for booting are the first two.
-                The first chunk goes from 0x0000-0x000F.  This seems to be a game/region identifier, and doesn't like its
-                contents changed (I didn't try changing every byte, but several of the bytes would throw RTC errors, even with a
-                fixed checksum).  I'd guess that the CF verifies this value, since it's different for every game (i.e. Mocap
-                Boxing NVRAM would have a correct checksum, but shouldn't pass Police 911 checks).
-                The second chunk goes from 0x0010-0x0079.  This seems to be a board identifier.  This has (optionally)
-                several fields, each of which are 20 bytes long.  I'm unsure of the first 6 bytes, the following 6
-                bytes are the DS2430A S/N, and the last 8 bytes are a game/region/dongle identifier.  If running
-                without a dongle, only the first 20 byte field is present.  With a dongle, a second 20 byte field will
-                be present.  Moving this second field into the place of the first field (and fixing the checksum)
-                doesn't work, and the second field will be ignored if the first field is valid for the game (and in
-                which case the dongle will be ignored).  For example, Police 911 will boot with a valid first field,
-                with or without the second field, and with or without the dongle plugged in.  If you have both fields,
-                and leave the dongle plugged in, you can switch between Police 911 and Police 911/2 by simply swapping
-                CF cards.
+       DS2430 - Dallas DS2430 256-bits 1-Wire EEPROM.
+      M48T58Y - ST Microelectronics M48T58Y Timekeeper RAM (DIP28 @ U39).
        29F002 - Fujitsu 29F002 256k x8 EEPROM stamped '941B01' (PLCC44 @ U25). Earlier revision stamped '941A01'
       CN4/CN5 - RCA-type network connection jacks
           CN7 - 80 pin connector (unused in all games?)
@@ -309,9 +242,80 @@ MB81G163222-80 - Fujitsu MB81G163222-80 256k x 32-bit x 2 banks Synchronous Grap
                 CF card version of the same game can be swapped and the existing RTC works but sometimes the RTC data
                 needs to be re-initialised to factory defaults by entering test mode. Sometimes the game will not boot
                 and gives error RTC BAD meaning the RTC is not compatible with the version or the dongle is required.
-                See DS2430 above for more info.
+                See DS2430 below for more info.
        28-WAY - Edge connector used for connecting special controls such as guns etc.
        DIP(4) - 4-position DIP switch. Switch 1 skips the CF check for a faster boot-up. The others appear unused?
+
+[DS2430] Has 256 bits x8 EEPROM (32 bytes), 64 bits x8 (8 bytes)
+    one-time programmable application register and unique factory-lasered and tested 64-bit
+    registration number (8-bit family code + 48-bit serial number + 8-bit CRC) (TO-92 @ U37)
+    The OTP application register on the common DS2430 and the Police 911 2 DS2430 are not programmed
+    (application register reads all 0xFF and the status register reads back 0xFF), so it's probably safe
+    to assume they're not used on any of them.
+    It appears the DS2430 is not protected from reading and the unique silicon serial number is
+    included in the 40 byte dump. This serial number is used as a check to verify the NVRAM and DS2430.
+    In the Police 911 2 NVRAM dump the serial number of the DS2430 is located at 0x002A and 0x1026
+    If the serial number in the NVRAM and DS2430 match then they are paired and the game accepts the NVRAM.
+    If they don't match the game requires an external DS2430 (i.e. dongle) and flags the NVRAM as 'BAD'
+    The serial number is not present in the CF card (2 different Police 911 2 cards of the same version
+    were dumped and matched).
+    When the lasered ROM is read from the DS2430, it comes out from LSB to MSB (family code, LSB of
+    S/N->MSB of S/N, CRC)
+    For Police 911 2 that is 0x14 0xB2 0xB7 0x4A 0x00 0x00 0x00 0x83
+    Family code=0x14
+    S/N=0x0000004AB7B2
+    CRC=0x83
+    In a DS2430 dump, the first 32 bytes is the EEPROM and the lasered ROM is 8 bytes and starts at 0x20h
+    For Police 911 2 that is....
+    00000000h CB 9B 56 EC A0 4C 87 53 51 46 28 E7 00 00 00 74
+    00000010h 30 A9 C7 76 B9 85 A3 43 87 53 50 42 1A E7 FA CF
+    00000020h 14 B2 B7 4A 00 00 00 83
+    It may be possible to hand craft a DS2430 for a dongle-protected version of a game simply by using
+    one of the existing DS2430 dumps and adjusting the serial number found in a dump of the NVRAM to pair them
+    or adjusting the serial number in the NVRAM to match the serial number found in one of the dumped DS2430s.
+    This Police 911 2 board was upgraded from Police 911 by plugging in the dongle and changing the CF card.
+    The NVRAM had previously died and the board was dead. Normally for a Viper game that is fatal. Using
+    the NVRAM from Police 911 allowed it to boot and then the NVRAM upgraded itself with some additional
+    data (the original data remained untouched). This means the dongle does more than just protect the game.
+    Another interesting fact about this upgrade is it has been discovered that the PCB can write to the
+    external DS2430 in the dongle. This has been proven because the serial number of the DS2430 soldered
+    on the PCB is present in the EEPROM area of the Police 911 2 DS2430.
+    Here is a dump of the DS2430 from Police 911. Note the EEPROM area is empty and the serial number (from 0x20 onwards)
+    is present in the above Police 911 2 DS2430 dump at locations 0x11, 0x10 and 0x0F
+    00000000h FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+    00000010h FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+    00000020h 14 A9 30 74 00 00 00 E7
+    This proves that the EEPROM area in the DS2430 is unused by an unprotected game and in fact the on-board
+    DS2430 is completely unused by an unprotected game. That is why any unprotected game will work on any
+    Viper PCB regardless of the on-board DS2430 serial number.
+    The existing DS2430 'common' dump used in the unprotected games was actually from a (dongle-protected)
+    Mahjong Fight Club PCB but that PCB was used to test and run all of the unprotected Viper games.
+
+[M48T58Y] When this dies (after 10 year lifespan)
+    the game will complain with error RTC BAD then reset. The data inside the RTC can not be hand created
+    (yet) so to revive the PCB the correct RTC data must be re-programmed to a new RTC and replaced
+    on the PCB.
+    Regarding the RTC and protection-related checks....
+    "RTC OK" checks 0x0000->0x0945 (i.e. I can clear the contents after 0x0945 and the game will still
+    happily boot). The NVRAM contents are split into chunks, each of which are checksummed.  It is a 16-bit checksum,
+    computed by summing two consecutive bytes as a 16-bit integer, where the final sum must add up to 0xFFFF (mod
+    65536).  The last two bytes in the chunk are used to make the value 0xFFFF.  There doesn't appear to be a
+    complete checksum over all the chunks (I can pick and choose chunks from various NVRAMs, as long as each chunk
+    checksum checks out). The important chunks for booting are the first two.
+    The first chunk goes from 0x0000-0x000F.  This seems to be a game/region identifier, and doesn't like its
+    contents changed (I didn't try changing every byte, but several of the bytes would throw RTC errors, even with a
+    fixed checksum).  I'd guess that the CF verifies this value, since it's different for every game (i.e. Mocap
+    Boxing NVRAM would have a correct checksum, but shouldn't pass Police 911 checks).
+    The second chunk goes from 0x0010-0x0079.  This seems to be a board identifier.  This has (optionally)
+    several fields, each of which are 20 bytes long.  I'm unsure of the first 6 bytes, the following 6
+    bytes are the DS2430A S/N, and the last 8 bytes are a game/region/dongle identifier.  If running
+    without a dongle, only the first 20 byte field is present.  With a dongle, a second 20 byte field will
+    be present.  Moving this second field into the place of the first field (and fixing the checksum)
+    doesn't work, and the second field will be ignored if the first field is valid for the game (and in
+    which case the dongle will be ignored).  For example, Police 911 will boot with a valid first field,
+    with or without the second field, and with or without the dongle plugged in.  If you have both fields,
+    and leave the dongle plugged in, you can switch between Police 911 and Police 911/2 by simply swapping
+    CF cards.
 
 The PCB pinout is JAMMA but the analog controls (pots for driving games mostly) connect to pins on the JAMMA connector.
 The 2 outer pins of each pot connect to +5V and GND. If the direction of control is opposite to what is expected simply
@@ -319,7 +323,7 @@ reverse the wires.
 The centre pin of each pot joins to the following pins on the JAMMA connector.....
 Pin 25 Parts side  - GAS POT
 Pin 25 Solder side - STEERING POT
-Pin 26 Parts side  - HANDBRAKE POT (if used, for example Xtrail Racing)
+Pin 26 Parts side  - HANDBRAKE POT (if used, for example Xtrial Racing)
 Pin 26 Solder side - BRAKE POT
 
 For the gun games (Jurassic Park III and Warzaid) the gun connects to the 28 way connector like this......
@@ -430,6 +434,7 @@ The golf club acts like a LED gun. PCB power input is 12V.
 #include "cpu/upd78k/upd78k4.h"
 #include "bus/ata/ataintf.h"
 #include "bus/ata/hdd.h"
+#include "machine/ins8250.h"
 #include "machine/lpci.h"
 #include "machine/timekpr.h"
 #include "machine/timer.h"
@@ -459,6 +464,7 @@ namespace {
 
 #define PCI_CLOCK           (XTAL(33'868'800))
 #define SDRAM_CLOCK         (PCI_CLOCK * 3) // Main SDRAMs run at 100 MHz
+#define TIMER_CLOCK         (SDRAM_CLOCK / 8)
 
 class viper_state : public driver_device
 {
@@ -468,6 +474,7 @@ public:
 		m_voodoo(*this, "voodoo"),
 		m_maincpu(*this, "maincpu"),
 		m_screen(*this, "screen"),
+		m_duart_com(*this, "duart_com"),
 		m_ata(*this, "ata"),
 		m_lpci(*this, "pcibus"),
 		m_ds2430_bit_timer(*this, "ds2430_timer2"),
@@ -515,9 +522,7 @@ private:
 	void e70000_w(offs_t offset, uint64_t data, uint64_t mem_mask = ~0);
 	void unk1a_w(offs_t offset, uint64_t data, uint64_t mem_mask = ~0);
 	void unk1b_w(offs_t offset, uint64_t data, uint64_t mem_mask = ~0);
-	uint8_t e00008_r(offs_t offset);
-	void e00008_w(offs_t offset, uint8_t data);
-	uint64_t e00000_r();
+
 	uint64_t pci_config_addr_r();
 	void pci_config_addr_w(uint64_t data);
 	uint64_t pci_config_data_r();
@@ -530,10 +535,12 @@ private:
 	void ata_w(offs_t offset, uint64_t data, uint64_t mem_mask = ~0);
 	uint64_t unk_serial_r(offs_t offset, uint64_t mem_mask = ~0);
 	void unk_serial_w(offs_t offset, uint64_t data, uint64_t mem_mask = ~0);
-	void voodoo_vblank(int state);
 
 	uint16_t ppp_sensor_r(offs_t offset);
 
+	void uart_int(int state);
+
+	void voodoo_vblank(int state);
 	void voodoo_pciint(int state);
 
 	//the following two arrays need to stay public til the legacy PCI bus is removed
@@ -554,7 +561,6 @@ private:
 	uint16_t m_unk_serial_data = 0U;
 	uint16_t m_unk_serial_data_r = 0U;
 	uint8_t m_unk_serial_regs[0x80]{};
-	uint64_t m_e00008_data = 0U;
 	uint32_t m_sound_buffer_offset = 0U;
 	bool m_sound_irq_enabled = false;
 
@@ -619,6 +625,8 @@ private:
 		uint32_t eicr = 0U;
 		uint32_t svr = 0U;
 
+		uint8_t pctpr = 0xfU;
+
 		int active_irq = 0;
 
 		MPC8240_IRQ irq[MPC8240_NUM_INTERRUPTS]{};
@@ -673,6 +681,7 @@ private:
 
 	required_device<ppc_device> m_maincpu;
 	required_device<screen_device> m_screen;
+	required_device<pc16552_device> m_duart_com;
 	required_device<ata_interface_device> m_ata;
 	required_device<pci_bus_legacy_device> m_lpci;
 	required_device<timer_device> m_ds2430_bit_timer;
@@ -716,16 +725,31 @@ void viper_subscreen_state::video_start()
 	m_ttl_buf = std::make_unique<bitmap_rgb32>(1024, 1024);
 }
 
-// TODO: stub, pinpoint where the TTL muxer control is located
-// It definitely dispatch every 30 Hz, there must be a signal for starting it up.
+// TODO: multiscreen games enables TV out in Voodoo core specifically for these games,
+// then drives what to actually draw thru overlay regs.
+// [:voodoo] ':maincpu' (000205C8):internal_io_w(vidInFormat) = 00008000 & FFFFFFFF
+// sscopex (sub screen 320x240, current m_ttl_buf cuts off picture)
+// [:voodoo] ':maincpu' (0002A424):internal_io_w(vidOverlayStartCoords) = 00000000 & FFFFFFFF
+// [:voodoo] ':maincpu' (0002A424):internal_io_w(vidOverlayEndScreenCoord) = 0017F3FF & FFFFFFFF
+// [:voodoo] ':maincpu' (0002A424):internal_io_w(vidOverlayDudxOffsetSrcWidth) = 20000000 & FFFFFFFF
+// [:voodoo] ':maincpu' (0002A424):internal_io_w(vidDesktopOverlayStride) = 00080008 & FFFFFFFF
+// [:voodoo] ':maincpu' (000200DC):internal_io_w(vidOverlayStartCoords) = 0000004E & FFFFFFFF
+// [:voodoo] ':maincpu' (000200DC):internal_io_w(vidOverlayEndScreenCoord) = 000FF289 & FFFFFFFF
+// [:voodoo] ':maincpu' (000200DC):internal_io_w(vidOverlayDudxOffsetSrcWidth) = 11E00000 & FFFFFFFF
+// [:voodoo] ':maincpu' (000200DC):internal_io_w(vidDesktopOverlayStride) = 00050008 & FFFFFFFF
+// mocapglf (sub screen 512x384, ROT90 like main)
+// [:voodoo] ':maincpu' (0102A4AC):internal_io_w(vidOverlayStartCoords) = 00000000 & FFFFFFFF
+// [:voodoo] ':maincpu' (0102A4AC):internal_io_w(vidOverlayEndScreenCoord) = 0017F3FF & FFFFFFFF
+// [:voodoo] ':maincpu' (0102A4AC):internal_io_w(vidOverlayDudxOffsetSrcWidth) = 20000000 & FFFFFFFF
+// [:voodoo] ':maincpu' (0102A4AC):internal_io_w(vidDesktopOverlayStride) = 00080008 & FFFFFFFF
+// [:voodoo] ':maincpu' (010200DC):internal_io_w(vidOverlayStartCoords) = 00000000 & FFFFFFFF
+// [:voodoo] ':maincpu' (010200DC):internal_io_w(vidOverlayEndScreenCoord) = 0017F3FF & FFFFFFFF
+// [:voodoo] ':maincpu' (010200DC):internal_io_w(vidOverlayDudxOffsetSrcWidth) = 20000000 & FFFFFFFF
+// [:voodoo] ':maincpu' (010200DC):internal_io_w(vidDesktopOverlayStride) = 00080008 & FFFFFFFF
+// Stereo video seems disabled (no writes to rightOverlayBuf) so a 30 Hz TTL demuxer may still be
+// used here.
 
-// TODO: understand how even TTL manages to rearrange Voodoo source with overrides
-// Generally Konami uses a readback bit for this.
-// Oddly enough the Voodoo is not touched on even/odd frame setup, and it doesn't setup anything
-// worth writing home in the VGA core, so a possible explaination is that TTL just pickup linear
-// pixels and rearranges on its own rules?
-
-// TODO: we need to read the TTL for nothing atm, otherwise sscopefh (at least) will hang earlier (???)
+// TODO: we need to read the secondary TV out for nothing atm, otherwise sscopefh (at least) will hang (???)
 uint32_t viper_subscreen_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	m_voodoo->update(screen.frame_number() & 1 ? *m_voodoo_buf : *m_ttl_buf, cliprect);
@@ -970,6 +994,7 @@ void viper_state::mpc8240_soc_map(address_map &map)
 			return m_i2c.sr;
 		}),
 		NAME([this] (offs_t offset, u8 data) {
+			// TODO: very wrong, only bits 4 & 2 writeable
 			m_i2c.sr = data;
 			LOGI2C("I2CSR %02x\n", data);
 		})
@@ -1012,7 +1037,7 @@ void viper_state::mpc8240_soc_map(address_map &map)
 
 			if (m_epic.global_timer[timer_num].enable && m_epic.global_timer[timer_num].base_count > 0)
 			{
-				attotime timer_duration =  attotime::from_hz((SDRAM_CLOCK / 8) / m_epic.global_timer[timer_num].base_count);
+				attotime timer_duration = attotime::from_hz(TIMER_CLOCK / m_epic.global_timer[timer_num].base_count);
 				m_epic.global_timer[timer_num].timer->adjust(timer_duration, timer_num);
 
 				LOGTIMER("EPIC GTIMER%d: next in %s\n", timer_num, (timer_duration / 8).as_string() );
@@ -1127,6 +1152,12 @@ void viper_state::mpc8240_soc_map(address_map &map)
 			// epic_update_interrupts();
 		})
 	);
+	map(0x60080, 0x60080).lw8(
+		NAME([this] (offs_t offset, u8 data) {
+			m_epic.pctpr = data & 0xf;
+			epic_update_interrupts();
+		})
+	);
 	// IACK
 	map(0x600a0, 0x600a0).lr8(
 		NAME([this] (offs_t offset) {
@@ -1162,10 +1193,10 @@ TIMER_CALLBACK_MEMBER(viper_state::epic_global_timer_callback)
 
 	if (m_epic.global_timer[timer_num].enable && m_epic.global_timer[timer_num].base_count > 0)
 	{
-		attotime timer_duration =  attotime::from_hz((SDRAM_CLOCK / 8) / m_epic.global_timer[timer_num].base_count);
+		attotime timer_duration = attotime::from_hz(TIMER_CLOCK / m_epic.global_timer[timer_num].base_count);
 		m_epic.global_timer[timer_num].timer->adjust(timer_duration, timer_num);
 
-		LOGTIMER("EPIC GTIMER%d: next in %s\n", timer_num, (timer_duration / 8).as_string() );
+		LOGTIMER("EPIC GTIMER%d: next in %s\n", timer_num, timer_duration.as_string() );
 	}
 	else
 	{
@@ -1192,8 +1223,9 @@ void viper_state::epic_update_interrupts()
 	{
 		if (m_epic.irq[i].pending)
 		{
-			// pending interrupt can only be serviced if its mask is enabled and priority is non-zero
-			if (m_epic.irq[i].mask == 0 && m_epic.irq[i].priority > 0)
+			// pending interrupt can only be serviced if its mask is enabled
+			// and priority is above PCTPR (> 1 for Konami Viper)
+			if (m_epic.irq[i].mask == 0 && m_epic.irq[i].priority > m_epic.pctpr)
 			{
 				if (m_epic.irq[i].priority > priority)
 				{
@@ -1254,6 +1286,7 @@ void viper_state::mpc8240_epic_reset(void)
 	}
 
 	m_epic.active_irq = -1;
+	m_epic.pctpr = 0xf;
 }
 
 /*****************************************************************************/
@@ -1890,35 +1923,6 @@ void viper_state::unk1b_w(offs_t offset, uint64_t data, uint64_t mem_mask)
 	}
 }
 
-// ties with irq2
-uint8_t viper_state::e00008_r(offs_t offset)
-{
-	uint8_t r = 0;
-	LOG("e00008_r %02x\n", offset);
-	if (offset == 7)
-	{
-		r |= m_e00008_data;
-	}
-
-	return r;
-}
-
-void viper_state::e00008_w(offs_t offset, uint8_t data)
-{
-	LOG("e00008_w %02x -> %02x\n", offset, data);
-
-	if (offset == 7)
-	{
-		m_e00008_data = data & 0xff;
-	}
-}
-
-uint64_t viper_state::e00000_r()
-{
-	uint64_t r = 0;//0xffffffffffffffffU;
-	return r;
-}
-
 uint64_t viper_state::unk_serial_r(offs_t offset, uint64_t mem_mask)
 {
 	uint64_t r = 0;
@@ -1990,6 +1994,7 @@ void viper_state::viper_map(address_map &map)
 	map(0x80000000, 0x800fffff).m(*this, FUNC(viper_state::mpc8240_soc_map));
 	map(0x82000000, 0x83ffffff).rw(FUNC(viper_state::voodoo3_r), FUNC(viper_state::voodoo3_w));
 	map(0x84000000, 0x85ffffff).rw(FUNC(viper_state::voodoo3_lfb_r), FUNC(viper_state::voodoo3_lfb_w));
+	// I/O space, Voodoo 3 sets 0x00800001 as BAR2
 	map(0xfe800000, 0xfe8000ff).rw(FUNC(viper_state::voodoo3_io_r), FUNC(viper_state::voodoo3_io_w));
 	map(0xfec00000, 0xfedfffff).rw(FUNC(viper_state::pci_config_addr_r), FUNC(viper_state::pci_config_addr_w));
 	map(0xfee00000, 0xfeefffff).rw(FUNC(viper_state::pci_config_data_r), FUNC(viper_state::pci_config_data_w));
@@ -1997,8 +2002,7 @@ void viper_state::viper_map(address_map &map)
 	// 0xff200000, 0xff200fff - cf_card_r/w (installed in DRIVER_INIT(vipercf))
 	// 0xff300000, 0xff300fff - ata_r/w (installed in DRIVER_INIT(viperhd))
 //  map(0xff400xxx, 0xff400xxx) ppp2nd sense device
-	map(0xffe00000, 0xffe00007).r(FUNC(viper_state::e00000_r));
-	map(0xffe00008, 0xffe0000f).rw(FUNC(viper_state::e00008_r), FUNC(viper_state::e00008_w));
+	map(0xffe00000, 0xffe0000f).rw(m_duart_com, FUNC(pc16552_device::read), FUNC(pc16552_device::write));
 	map(0xffe08000, 0xffe08007).nopw(); // timestamp? watchdog?
 	map(0xffe10000, 0xffe10007).rw(FUNC(viper_state::input_r), FUNC(viper_state::output_w));
 	map(0xffe20000, 0xffe20007).nopw(); // motor k-type for deluxe force feedback (xtrial, gticlub2, jpark3)
@@ -2008,7 +2012,8 @@ void viper_state::viper_map(address_map &map)
 	// $10 bit 7 (w) clk_write, $18 bit 7 (r) do_read
 //  map(0xffe28008, 0xffe2801f).noprw();
 	map(0xffe30000, 0xffe31fff).rw("m48t58", FUNC(timekeeper_device::read), FUNC(timekeeper_device::write));
-	map(0xffe40000, 0xffe4000f).noprw();
+	map(0xffe40000, 0xffe40007).noprw(); // JTAG? 0x00 on normal operation, other values on POST,
+										 // 0xa8/0xa9 for unexpected irq (namely irq1)
 	map(0xffe50000, 0xffe50007).w(FUNC(viper_state::unk2_w));
 	map(0xffe60000, 0xffe60007).noprw();
 	map(0xffe70000, 0xffe7000f).rw(FUNC(viper_state::e70000_r), FUNC(viper_state::e70000_w)); // DS2430
@@ -2402,6 +2407,21 @@ INPUT_PORTS_START( mocapb )
 
 	PORT_MODIFY("IN5")
 	PORT_BIT(0x40, IP_ACTIVE_LOW, IPT_UNKNOWN ) // P2 SHT2 (checks and fails serial if pressed)
+
+	// TODO: placeholders, not really IPT_PEDALs and not really PORT_PLAYER(2)
+	PORT_MODIFY("AN0")
+	PORT_BIT( 0xfff, 0x00, IPT_PEDAL ) PORT_NAME("Left Glove Rear-Front") PORT_MINMAX(0x000,0xfff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE
+
+	PORT_MODIFY("AN1")
+	PORT_BIT( 0xfff, 0x00, IPT_PEDAL2 ) PORT_NAME("Left Glove Left-Right") PORT_MINMAX(0x000,0xfff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE
+	// TODO: Left Glove Bottom-Top
+
+	PORT_MODIFY("AN2")
+	PORT_BIT( 0xfff, 0x00, IPT_PEDAL ) PORT_NAME("Right Glove Rear-Front") PORT_MINMAX(0x00,0xfff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE PORT_PLAYER(2)
+
+	PORT_MODIFY("AN3")
+	PORT_BIT( 0xfff, 0x00, IPT_PEDAL2 ) PORT_NAME("Right Glove Left-Right") PORT_MINMAX(0x00,0xfff) PORT_SENSITIVITY(50) PORT_KEYDELTA(25) PORT_REVERSE PORT_PLAYER(2)
+	// TODO: Right Glove Bottom-Top
 INPUT_PORTS_END
 
 INPUT_PORTS_START( sscopefh )
@@ -2554,6 +2574,12 @@ INPUT_PORTS_END
 
 /*****************************************************************************/
 
+void viper_state::uart_int(int state)
+{
+	if (state)
+		mpc8240_interrupt(MPC8240_IRQ2);
+}
+
 void viper_state::voodoo_vblank(int state)
 {
 	if (state)
@@ -2697,8 +2723,13 @@ void viper_state::viper(machine_config &config)
 
 	ATA_INTERFACE(config, m_ata).options(ata_devices, "hdd", nullptr, true);
 
+	PC16552D(config, "duart_com", 0);
+	// TODO: unverified clocks and channel types, likely connects to sensor motion based games
+	NS16550(config, "duart_com:chan0", XTAL(19'660'800));
+	NS16550(config, "duart_com:chan1", XTAL(19'660'800)).out_int_callback().set(FUNC(viper_state::uart_int));
+
 	VOODOO_3(config, m_voodoo, voodoo_3_device::NOMINAL_CLOCK);
-	m_voodoo->set_fbmem(8);
+	m_voodoo->set_fbmem(8); // TODO: should be 16, implement VMI_DATA_5 strapping pin in Voodoo 3 core instead
 	m_voodoo->set_screen("screen");
 	m_voodoo->set_cpu("maincpu");
 	m_voodoo->set_status_cycles(1000); // optimization to consume extra cycles when polling status
@@ -3458,7 +3489,7 @@ GAME(2000, gticlub2,  kviper,    viper,     gticlub2,   viper_state, init_viperc
 GAME(2000, gticlub2ea,gticlub2,  viper,     gticlub2ea, viper_state, init_vipercf,  ROT0,  "Konami", "Driving Party: Racing in Italy (ver EAA)", MACHINE_NOT_WORKING)
 GAME(2001, jpark3,    kviper,    viper,     jpark3,     viper_state, init_vipercf,  ROT0,  "Konami", "Jurassic Park III (ver EBC)", MACHINE_NOT_WORKING)
 GAME(2001, jpark3u,   jpark3,    viper,     jpark3,     viper_state, init_vipercf,  ROT0,  "Konami", "Jurassic Park III (ver UBC)", MACHINE_NOT_WORKING)
-GAME(2001, mocapglf,  kviper,    viper_omz, mocapglf,   viper_subscreen_state, init_vipercf,  ROT90, "Konami", "Mocap Golf (ver UAA)", MACHINE_NOT_WORKING)
+GAME(2001, mocapglf,  kviper,    viper_omz, mocapglf,   viper_subscreen_state, init_vipercf,  ROT90, "Konami", "Mocap Golf (ver EAA:B)", MACHINE_NOT_WORKING)
 GAME(2001, mocapb,    kviper,    viper_fullbody, mocapb,     viper_state, init_vipercf,  ROT90, "Konami", "Mocap Boxing (ver AAB)", MACHINE_NOT_WORKING)
 GAME(2001, mocapbj,   mocapb,    viper_fullbody, mocapb,     viper_state, init_vipercf,  ROT90, "Konami", "Mocap Boxing (ver JAA)", MACHINE_NOT_WORKING)
 GAME(2000, p911,      kviper,    viper_fullbody,     p911,       viper_state, init_vipercf,  ROT90, "Konami", "The Keisatsukan: Shinjuku 24-ji (ver AAE)", MACHINE_NOT_WORKING)
@@ -3474,9 +3505,9 @@ GAME(2001, sscopex,   kviper,    viper,     sscopex,    viper_subscreen_state, i
 GAME(2001, sogeki,    sscopex,   viper,     sogeki,     viper_subscreen_state, init_vipercf,  ROT0,  "Konami", "Sogeki (ver JAA)", MACHINE_NOT_WORKING)
 GAME(2002, sscopefh,  kviper,    viper,     sscopefh,   viper_subscreen_state, init_vipercf,  ROT0,  "Konami", "Silent Scope Fortune Hunter (ver EAA)", MACHINE_NOT_WORKING) // UK only?
 GAME(2001, thrild2,   kviper,    viper,     thrild2,    viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver EBB)", MACHINE_NOT_WORKING)
-GAME(2001, thrild2j,  thrild2,   viper,     thrild2,    viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver JAA)", MACHINE_NOT_WORKING)
-GAME(2001, thrild2a,  thrild2,   viper,     thrild2,    viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver AAA)", MACHINE_NOT_WORKING)
-GAME(2001, thrild2ab, thrild2,   viper,     thrild2,    viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver AAA, alt)", MACHINE_NOT_WORKING)
+GAME(2001, thrild2j,  thrild2,   viper,     gticlub2,   viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver JAA)", MACHINE_NOT_WORKING)
+GAME(2001, thrild2a,  thrild2,   viper,     gticlub2,   viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver AAA)", MACHINE_NOT_WORKING)
+GAME(2001, thrild2ab, thrild2,   viper,     gticlub2,   viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver AAA, alt)", MACHINE_NOT_WORKING)
 GAME(2001, thrild2ac, thrild2,   viper,     thrild2,    viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver AAA, alt 2)", MACHINE_NOT_WORKING)
 GAME(2001, thrild2c,  thrild2,   viper,     thrild2,    viper_state, init_vipercf,  ROT0,  "Konami", "Thrill Drive 2 (ver EAA)", MACHINE_NOT_WORKING)
 GAME(2002, tsurugi,   kviper,    viper,     tsurugi,    viper_state, init_vipercf,  ROT0,  "Konami", "Tsurugi (ver EAB)", MACHINE_NOT_WORKING)
