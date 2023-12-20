@@ -4416,6 +4416,24 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/bus/kim1/kim1bus.h,BUSES["KIM1BUS"] = true
+---------------------------------------------------
+
+if (BUSES["KIM1BUS"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/kim1/cards.cpp",
+		MAME_DIR .. "src/devices/bus/kim1/cards.h",
+		MAME_DIR .. "src/devices/bus/kim1/kim1bus.cpp",
+		MAME_DIR .. "src/devices/bus/kim1/kim1bus.h",
+		MAME_DIR .. "src/devices/bus/kim1/k1008_vismem.cpp",
+		MAME_DIR .. "src/devices/bus/kim1/k1008_vismem.h",
+		MAME_DIR .. "src/devices/bus/kim1/k1016_16k.cpp",
+		MAME_DIR .. "src/devices/bus/kim1/k1016_16k.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/bus/amiga/keyboard/keyboard.h,BUSES["AMIGA_KEYBOARD"] = true
 ---------------------------------------------------
 
@@ -5161,6 +5179,8 @@ if (BUSES["MULTIBUS"]~=null) then
 		MAME_DIR .. "src/devices/bus/multibus/labtam_vducom.h",
 		MAME_DIR .. "src/devices/bus/multibus/labtam_z80sbc.cpp",
 		MAME_DIR .. "src/devices/bus/multibus/labtam_z80sbc.h",
+		MAME_DIR .. "src/devices/bus/multibus/robotron_k7070.cpp",
+		MAME_DIR .. "src/devices/bus/multibus/robotron_k7070.h",
 	}
 end
 

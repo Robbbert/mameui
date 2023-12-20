@@ -2630,6 +2630,18 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/machine/msm5001n.h,MACHINES["MSM5001N"] = true
+---------------------------------------------------
+
+if (MACHINES["MSM5001N"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/machine/msm5001n.cpp",
+		MAME_DIR .. "src/devices/machine/msm5001n.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/machine/msm5832.h,MACHINES["MSM5832"] = true
 ---------------------------------------------------
 
@@ -2877,6 +2889,14 @@ if (MACHINES["PCI"]~=null) then
 		MAME_DIR .. "src/devices/machine/sis85c496.h",
 		MAME_DIR .. "src/devices/machine/vt8231_isa.cpp",
 		MAME_DIR .. "src/devices/machine/vt8231_isa.h",
+		MAME_DIR .. "src/devices/machine/mediagx_cs5530_bridge.cpp",
+		MAME_DIR .. "src/devices/machine/mediagx_cs5530_bridge.h",
+		MAME_DIR .. "src/devices/machine/mediagx_cs5530_ide.cpp",
+		MAME_DIR .. "src/devices/machine/mediagx_cs5530_ide.h",
+		MAME_DIR .. "src/devices/machine/mediagx_host.cpp",
+		MAME_DIR .. "src/devices/machine/mediagx_host.h",
+		MAME_DIR .. "src/devices/machine/zfmicro_usb.cpp",
+		MAME_DIR .. "src/devices/machine/zfmicro_usb.h",
 	}
 end
 

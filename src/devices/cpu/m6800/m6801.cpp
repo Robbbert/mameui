@@ -795,14 +795,14 @@ void m6801_cpu_device::set_rmcr(uint8_t data)
 	{
 	case 0:
 		LOGSER("SCI: Using external serial clock: false\n");
-		m_sci_timer->enable(false);
+		m_sci_timer->adjust(attotime::never);
 		m_use_ext_serclock = false;
 		break;
 
 	case 3: // external clock
 		LOGSER("SCI: Using external serial clock: true\n");
 		m_use_ext_serclock = true;
-		m_sci_timer->enable(false);
+		m_sci_timer->adjust(attotime::never);
 		break;
 
 	case 1:
@@ -831,7 +831,7 @@ void hd6301x_cpu_device::set_rmcr(uint8_t data)
 	case 7: // external clock
 		LOGSER("SCI: Using external serial clock: true\n");
 		m_use_ext_serclock = true;
-		m_sci_timer->enable(false);
+		m_sci_timer->adjust(attotime::never);
 		break;
 
 	case 1:
@@ -842,7 +842,7 @@ void hd6301x_cpu_device::set_rmcr(uint8_t data)
 		if (BIT(m_rmcr, 5))
 		{
 			LOGSER("SCI: Using Timer 2 clock\n");
-			m_sci_timer->enable(false);
+			m_sci_timer->adjust(attotime::never);
 		}
 		else
 		{
@@ -2084,14 +2084,12 @@ void hd6301x_cpu_device::increment_t2cnt(int amount)
 
 		if (BIT(m_rmcr, 5) && !m_use_ext_serclock)
 		{
-			if (m_ext_serclock + amount >= 32)
+			m_ext_serclock++;
+			if (m_ext_serclock >= 32)
 			{
-				m_ext_serclock = (m_ext_serclock + amount) % 32;
-				serial_transmit();
-				serial_receive();
+				m_ext_serclock = 0;
+				machine().scheduler().synchronize(timer_expired_delegate(FUNC(hd6301x_cpu_device::sci_tick), this));
 			}
-			else
-				m_ext_serclock += amount;
 		}
 
 		m_tcsr3 |= 0x80;
