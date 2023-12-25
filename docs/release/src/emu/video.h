@@ -91,7 +91,7 @@ public:
 private:
 	// internal helpers
 	void exit();
-	void screenless_update_callback(int param);
+	void screenless_update_callback(s32 param);
 	void postload();
 
 	// effective value helpers
