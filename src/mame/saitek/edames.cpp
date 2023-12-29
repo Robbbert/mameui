@@ -117,8 +117,9 @@ void edames_state::init_board(int state)
 
 INPUT_CHANGED_MEMBER(edames_state::change_cpu_freq)
 {
-	// 8MHz and 12MHz versions were sold
-	m_maincpu->set_unscaled_clock((newval & 2) ? 8'000'000 : 12'000'000);
+	// 6MHz and 10MHz versions don't exist, but the software supports it
+	static const u32 freq[4] = { 6'000'000, 8'000'000, 10'000'000, 12'000'000 };
+	m_maincpu->set_unscaled_clock(freq[~newval & 3]);
 }
 
 
@@ -234,8 +235,8 @@ static INPUT_PORTS_START( edames ) // see comments for French version labels
 
 	PORT_START("IN.3")
 	PORT_CONFNAME( 0x03, 0x02, "CPU Frequency" ) PORT_CHANGED_MEMBER(DEVICE_SELF, edames_state, change_cpu_freq, 0) // factory set
-	PORT_CONFSETTING(    0x02, "8MHz" )
-	PORT_CONFSETTING(    0x00, "12MHz" )
+	PORT_CONFSETTING(    0x02, "8MHz (original)" )
+	PORT_CONFSETTING(    0x00, "12MHz (newer)" )
 	PORT_BIT(0x04, IP_ACTIVE_LOW, IPT_KEYPAD) PORT_CODE(KEYCODE_T) PORT_NAME("Swap Side")   // Tourne Damier
 
 	PORT_START("RESET")
