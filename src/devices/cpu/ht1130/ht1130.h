@@ -6,6 +6,10 @@
 
 #pragma once
 
+// when in halt state, inputs (configured by mask option) can wake up the CPU,
+// driver is required to use set_input_line(HT1130_EXT_WAKEUP_LINE, state)
+#define HT1130_EXT_WAKEUP_LINE 0
+
 
 class ht1130_device : public cpu_device
 {
@@ -24,22 +28,25 @@ public:
 		HT1130_TIMER,
 	};
 
+	// I/O ports
 	auto pm_in_cb() { return m_port_in_pm.bind(); }
 	auto ps_in_cb() { return m_port_in_ps.bind(); }
 	auto pp_in_cb() { return m_port_in_pp.bind(); }
 
 	auto pa_out_cb() { return m_port_out_pa.bind(); }
 
-	auto display_data_out_cb() { return m_display_data_out.bind(); }
+	// LCD output: COM in offset, SEG in data
+	auto segment_out_cb() { return m_segment_out.bind(); }
 
 protected:
 	ht1130_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock, address_map_constructor data);
-
 
 	virtual void device_start() override;
 	virtual void device_reset() override;
 
 	virtual void execute_run() override;
+	virtual u32 execute_input_lines() const noexcept override { return 1; }
+	virtual bool execute_input_edge_triggered(int inputnum) const noexcept override { return inputnum == HT1130_EXT_WAKEUP_LINE; }
 	virtual void execute_set_input(int inputnum, int state) override;
 	virtual uint32_t execute_max_cycles() const noexcept override { return 2; }
 
@@ -56,7 +63,6 @@ protected:
 	required_shared_ptr<u8> m_tempram;
 	required_shared_ptr<u8> m_displayram;
 
-private:
 	address_space_config m_space_config;
 	address_space_config m_data_config;
 
@@ -82,6 +88,10 @@ private:
 	u8 gettimer_upper();
 	u8 gettimer_lower();
 
+	void init_lcd();
+	TIMER_CALLBACK_MEMBER(update_lcd);
+	virtual u64 get_segs(u8 com);
+
 	void cycle();
 	u8 fetch();
 	void do_op();
@@ -95,8 +105,13 @@ private:
 	u8 m_irqen;
 	u8 m_timer_en;
 	u8 m_inhalt;
+	u8 m_wakeline;
 	u8 m_timerover;
 	u16 m_timer;
+
+	u8 m_compins;
+	u8 m_comcount;
+	emu_timer *m_lcd_timer;
 
 	u16 m_stackaddr;
 	u8 m_stackcarry;
@@ -107,13 +122,16 @@ private:
 
 	devcb_write8 m_port_out_pa;
 
-	devcb_write8 m_display_data_out;
+	devcb_write64 m_segment_out;
 };
 
 class ht1190_device : public ht1130_device
 {
 public:
 	ht1190_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
+
+protected:
+	virtual u64 get_segs(u8 coms) override;
 
 private:
 	void internal_data_map_ht1190(address_map &map);
