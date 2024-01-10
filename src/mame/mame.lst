@@ -19230,7 +19230,8 @@ h8                              //
 h19                             // Heath H19 (Zenith Z-19)
 
 @source:heathkit/h89.cpp
-h89                             // Heath H89 (H88, Zenith Z-89, Z-90)
+h89                             // Heath H89 (WH89, Zenith Z-89, Z-90)
+h88                             // Heath H88 (with cassette tape)
 
 @source:hec2hrp/hec2hrp.cpp
 hec2hr                          //
@@ -24765,6 +24766,7 @@ stepone                         //
 aquarius                        // 1983 Aquarius (NTSC)
 aquariusp                       // 1983 Aquarius (PAL)
 aquarius2                       // 1984 Aquarius II
+aquarius_ar                     // 1985 Aquarius (Arabic)
 
 @source:mattel/chess.cpp
 mchess
@@ -38170,6 +38172,7 @@ psion3a2_de                     // 1995 Psion Series 3a (German)
 psion3a2_ru                     // 1997 Psion Series 3a (Russian)
 psion3c                         // 1996 Psion Series 3c
 psion3mx                        // 1998 Psion Series 3mx
+psion3mx_fr                     // 1998 Psion Series 3mx (French)
 
 @source:psion/psion5.cpp
 psion5mx                        // 1999 Psion Series 5mx
@@ -38462,6 +38465,9 @@ cp2000
 @source:saitek/delta1.cpp
 ccdelta1
 
+@source:saitek/ecbackg.cpp
+ecbackg
+
 @source:saitek/edames.cpp
 edames
 
@@ -38637,6 +38643,7 @@ mj3d                            // 2005.12 Sega Network Taisen Mahjong MJ 3 (Rev
 mj3evo                          // 2007.06 Sega Network Taisen Mahjong MJ 3 Evolution (Rev B)
 mj3evoa                         // 2007.02 Sega Network Taisen Mahjong MJ 3 Evolution (Rev A)
 mj3evoup                        // 2006.12 Sega Network Taisen Mahjong MJ 3 Evolution Firmware Update (GDX-0023)
+mj3up                           // 2005.09 Sega Network Taisen Mahjong MJ 3 Firmware Update (GDX-0019)
 ollie                           // 2004.03 Ollie King
 outr2                           // 2003.12 Outrun 2 (Rev A)
 outr2stjo                       // 2004.09 Outrun 2 Special Tours (Japan)
@@ -43444,7 +43451,9 @@ sidebsja                        // 1996.07 E23 (c) 1996 Taito Corporation (Japan
 sidebsjb                        // 1996.07 E23 (c) 1996 Taito Corporation (Japan) - Ver 2.5 J
 
 @source:taito/taitopjc.cpp
-optiger                         // 1998.09 E63 (c) 1998 Taito
+optiger                         // 1998.09 E63 (c) 1998 Taito Corporation - Ver 2.14 O
+optigera                        // 1998.09 E63 (c) 1998 Taito Corporation - Ver 2.10 O
+optigerj                        // 1998.09 E63 (c) 1998 Taito Corporation - Ver 2.09 J
 
 @source:taito/taitosj.cpp
 alpine                          // RH  (c) 1982 Taito Corporation
@@ -44618,6 +44627,7 @@ gammonm2
 
 @source:tryom/omar.cpp
 omar
+omar2
 
 @source:tvgames/actions_atj2279b.cpp
 rbitgen
