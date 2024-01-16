@@ -1361,6 +1361,10 @@ zorroa6                         // (c) 2003
 zorroa6a                        // (c) 2006
 zorroa6u                        // (c) 2005
 
+@source:aristocrat/aristmk7.cpp
+aristmk7                        // (c) 2006?
+a7lucky88                       // (c) 200?
+
 @source:aristocrat/caswin.cpp
 caswin                          // (c) 1985
 rcasino                         // (c) 1984 Dyna Electronics (D-2608208A1-2)
@@ -26859,6 +26863,7 @@ megat7e                         // (c) 1998 Merit
 meritjp                         // (c) 1987 Merit
 mtjpoker                        // (c) 1994 Merit
 pbss330                         // (c) 1994 Merit
+pbss330a                        // (c) 1994 Merit
 pbss330ca                       // (c) 1994 Merit
 pbst30                          // (c) 1994 Merit
 pbst30a                         // (c) 1993 Merit
@@ -31679,9 +31684,6 @@ version4v                       // (c) 2006 Amcoe
 version4v2                      // (c) 2006 Amcoe
 version4v3                      // (c) 2006 Amcoe
 
-@source:misc/shambros.cpp
-shambros
-
 @source:misc/shangkid.cpp
 chinhero                        // (c) 1984 Taiyo
 chinhero2                       // (c) 1984 Taiyo
@@ -31828,6 +31830,9 @@ stop
 
 @source:misc/strkzn.cpp
 strkzn                          // (c) 1994 Purple Star
+
+@source:misc/sttechno.cpp
+shambros
 
 @source:misc/stuntair.cpp
 stuntair                        // (c) 1983 Nuova Videotron
@@ -33272,6 +33277,7 @@ pc8001mk2                       // 1983
 pc8001mk2sr                     // 1985
 
 @source:nec/pc8401a.cpp
+pc8401bd                        //
 pc8500                          //
 
 @source:nec/pc8801.cpp
@@ -35717,8 +35723,6 @@ streetgr3                       // (c) 1993
 
 @source:pc/pcipc.cpp
 pciagp                          //
-pcimga                          //
-pcinv3                          //
 pcipc                           //
 pcipctx                         //
 
@@ -36194,6 +36198,7 @@ bay_d300                        //
 bay_d400                        //
 bay_e400                        //
 bay_f201                        //
+bay_g300                        //
 baywatch                        //
 bmf_at                          //
 bmf_be                          //
@@ -36280,6 +36285,7 @@ tmnt_104g                       //
 tmnt_a07                        //
 tomy_102                        //
 tomy_102be                      //
+tomy_201h                       //
 tomy_300h                       //
 tomy_301g                       //
 tomy_400                        //
@@ -36942,11 +36948,13 @@ whirl_lg3                       //
 
 @source:pinball/s11c.cpp
 bbnny_l2                        //
+bbnny_lg                        //
 bbnny_lu                        //
 dd_l2                           //
 dd_lu1                          //
 dd_p6                           //
 diner_f2                        //
+diner_g2                        //
 diner_l1                        //
 diner_l2                        //
 diner_l3                        //
@@ -38728,6 +38736,9 @@ croquisg                        // (c) 1996 Deniam (Germany)
 karianx                         // (c) 1996 Deniam
 logicpr2                        // (c) 1997 Deniam (Japan)
 logicpro                        // (c) 1996 Deniam
+
+@source:sega/digamart.cpp
+digamart
 
 @source:sega/dotrikun.cpp
 dotrikun                        // cabinet test board
@@ -41181,6 +41192,7 @@ s8waysfc                        // (c) 1989 Sigma
 
 @source:sigma/sigmab88.cpp
 cool104
+freedeal
 
 @source:sigma/sigmab98.cpp
 animalc                         // (c) 2000 Sammy
@@ -45032,6 +45044,7 @@ evio                            //
 gcslottv                        //
 gungunad                        //
 has_wamg                        //
+hikara                          //
 jarajal                         //
 jpopira                         //
 ltv_tam                         //
@@ -45927,11 +45940,6 @@ dx11                            //
 @source:yamaha/ymdx100.cpp
 dx100                           //
 
-@source:yamaha/ymmu100.cpp
-mu100                           // 1997 MU-100
-mu100r                          // 1997 MU-100 Rackable version
-mu100b                          // 1998 MU-100B
-
 @source:yamaha/ymmu5.cpp
 mu5                             // 1994 MU-5
 
@@ -45940,6 +45948,14 @@ mu50                            // 1995 MU-50
 
 @source:yamaha/ymmu80.cpp
 mu80                            // 1994 MU-80
+
+@source:yamaha/ymmu90.cpp
+mu90                            // 1996 MU-90
+
+@source:yamaha/ymmu100.cpp
+mu100                           // 1997 MU-100
+mu100r                          // 1997 MU-100 Rackable version
+mu100b                          // 1998 MU-100B
 
 @source:yamaha/ympcs30.cpp
 pcs30                           // 1984
