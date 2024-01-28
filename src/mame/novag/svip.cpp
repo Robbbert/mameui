@@ -18,6 +18,8 @@ TODO:
 - unmapped reads from 0x3* range, same as snova driver
 
 BTANB:
+- on nvip, if you press GO right after entering a move, it will reply by moving
+  one of your pieces, taken from the board layout before your move
 - just for fun, I'll mention that on many (not all) batches of Super VIP, the
   white text label under the Knight button says "Into" instead of "Info"
 
@@ -231,7 +233,7 @@ void svip_state::svip_map(address_map &map)
 
 static INPUT_PORTS_START( vip )
 	PORT_START("IN.0")
-	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_SLASH) PORT_CODE(KEYCODE_ENTER) PORT_CODE(KEYCODE_ENTER_PAD) PORT_NAME("GO")
+	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_SLASH) PORT_NAME("GO")
 	PORT_BIT(0x02, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_OPENBRACE) PORT_NAME("Restore")
 	PORT_BIT(0x04, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_CLOSEBRACE) PORT_NAME("Hint")
 	PORT_BIT(0x08, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_BACKSPACE) PORT_CODE(KEYCODE_DEL) PORT_NAME("C/CB")
