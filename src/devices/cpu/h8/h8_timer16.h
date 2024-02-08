@@ -6,7 +6,6 @@
 
     H8 16 bits timer
 
-
 ***************************************************************************/
 
 #ifndef MAME_CPU_H8_H8_TIMER16_H
@@ -137,15 +136,21 @@ public:
 		m_intc.set_tag(std::forward<U>(intc));
 		m_tgr_count = 3; // OCRA/OCRB/ICR
 
-		m_interrupt[0] = irq_base + 1;
-		m_interrupt[1] = irq_base + 2;
-		m_interrupt[2] = irq_base;
+		m_interrupt[0] = irq_base + 1; // OCIA
+		m_interrupt[1] = irq_base + 2; // OCIB
+		m_interrupt[2] = irq_base;     // ICI
 		m_interrupt[3] = -1;
-		m_interrupt[4] = irq_base + 3;
+		m_interrupt[4] = irq_base + 3; // FOVI
 		m_interrupt[5] = -1;
 	}
 
 	virtual ~h8325_timer16_channel_device();
+
+	uint16_t ocra_r() { return tgr_r(0); }
+	void ocra_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0) { tgr_w(0, data, mem_mask); }
+	uint16_t ocrb_r() { return tgr_r(1); }
+	void ocrb_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0) { tgr_w(1, data, mem_mask); }
+	uint16_t icr_r() { return tgr_r(2); }
 
 protected:
 	virtual void tcr_update() override;

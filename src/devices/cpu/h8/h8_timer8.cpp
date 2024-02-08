@@ -1,5 +1,19 @@
 // license:BSD-3-Clause
 // copyright-holders:Olivier Galibert
+/***************************************************************************
+
+    h8_timer8.cpp
+
+    H8 8 bits timer
+
+    TODO:
+    - IRQs are level triggered? eg. when an interrupt enable flag gets set
+      while an overflow or compare match flag is 1, will it trigger an IRQ?
+      Or if it's edge triggered, will it trigger an IRQ on rising edge of
+      (irq_enable & flag)?
+
+***************************************************************************/
+
 #include "emu.h"
 #include "h8_timer8.h"
 
