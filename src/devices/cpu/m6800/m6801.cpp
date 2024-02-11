@@ -274,7 +274,7 @@ void m6801_cpu_device::m6801_io(address_map &map)
 void m6801_cpu_device::m6803_mem(address_map &map)
 {
 	m6801_io(map);
-	map(0x0080, 0x00ff).ram().share("internal");
+	map(0x0080, 0x00ff).ram().share(m_internal_ram);
 }
 
 void m6801_cpu_device::m6801_mem(address_map &map)
@@ -300,7 +300,7 @@ void m6801u4_cpu_device::m6801u4_io(address_map &map)
 void m6801u4_cpu_device::m6801u4_mem(address_map &map)
 {
 	m6801u4_io(map);
-	map(0x0040, 0x00ff).ram().share("internal");
+	map(0x0040, 0x00ff).ram().share(m_internal_ram);
 	map(0xf000, 0xffff).rom().region(DEVICE_SELF, 0);
 }
 
@@ -351,13 +351,13 @@ void hd6301x_cpu_device::hd6301x_io(address_map &map)
 void hd6301x_cpu_device::hd6303x_mem(address_map &map)
 {
 	hd6303x_io(map);
-	map(0x0040, 0x00ff).ram().share("internal");
+	map(0x0040, 0x00ff).ram().share(m_internal_ram);
 }
 
 void hd6301x_cpu_device::hd6301x_mem(address_map &map)
 {
 	hd6301x_io(map);
-	map(0x0040, 0x00ff).ram().share("internal");
+	map(0x0040, 0x00ff).ram().share(m_internal_ram);
 	map(0xf000, 0xffff).rom().region(DEVICE_SELF, 0);
 }
 
@@ -387,13 +387,13 @@ void hd6301y_cpu_device::hd6301y_io(address_map &map)
 void hd6301y_cpu_device::hd6303y_mem(address_map &map)
 {
 	hd6303y_io(map);
-	map(0x0040, 0x013f).ram().share("internal");
+	map(0x0040, 0x013f).ram().share(m_internal_ram);
 }
 
 void hd6301y_cpu_device::hd6301y_mem(address_map &map)
 {
 	hd6301y_io(map);
-	map(0x0040, 0x013f).ram().share("internal");
+	map(0x0040, 0x013f).ram().share(m_internal_ram);
 	map(0xc000, 0xffff).rom().region(DEVICE_SELF, 0);
 }
 
@@ -428,7 +428,7 @@ m6801_cpu_device::m6801_cpu_device(const machine_config &mconfig, device_type ty
 	, m_out_sc2_func(*this)
 	, m_out_sertx_func(*this)
 	, m_standby_func(*this)
-	, m_internal_ram(*this, "internal")
+	, m_internal_ram(*this, "internal_ram")
 	, m_nvram_bytes(nvram_bytes)
 	, m_nvram_defval(0)
 	, m_nvram_battery(true)
@@ -1508,10 +1508,9 @@ void mc68120_device::dpram_w(offs_t offset, uint8_t data)
 
 bool m6801_cpu_device::nvram_write(util::write_stream &file)
 {
-	// if it's currently not battery-backed, reinitialize nvram
-	// so it won't load the previous nvram file on the next boot
+	// if it's currently not battery-backed, don't save at all
 	if (!m_nvram_battery)
-		nvram_default();
+		return true;
 
 	size_t actual;
 
@@ -1568,6 +1567,10 @@ void m6801_cpu_device::nvram_default()
 
 bool hd6301_cpu_device::nvram_write(util::write_stream &file)
 {
+	// if it's currently not battery-backed, don't save at all
+	if (!m_nvram_battery)
+		return true;
+
 	if (!m6801_cpu_device::nvram_write(file))
 		return false;
 
@@ -1586,10 +1589,6 @@ bool hd6301_cpu_device::nvram_write(util::write_stream &file)
 	// port output latches
 	buf.insert(buf.end(), m_port_data, m_port_data + sizeof(m_port_data));
 
-	// zerofill if it's currently not battery-backed
-	if (!m_nvram_battery)
-		std::fill(buf.begin(), buf.end(), 0);
-
 	if (file.write(buf.data(), buf.size(), actual) || (buf.size() != actual))
 		return false;
 
@@ -1598,6 +1597,10 @@ bool hd6301_cpu_device::nvram_write(util::write_stream &file)
 
 bool hd6301x_cpu_device::nvram_write(util::write_stream &file)
 {
+	// if it's currently not battery-backed, don't save at all
+	if (!m_nvram_battery)
+		return true;
+
 	if (!hd6301_cpu_device::nvram_write(file))
 		return false;
 
@@ -1606,10 +1609,6 @@ bool hd6301x_cpu_device::nvram_write(util::write_stream &file)
 
 	// port output latches
 	buf.insert(buf.begin(), m_portx_data, m_portx_data + sizeof(m_portx_data));
-
-	// zerofill if it's currently not battery-backed
-	if (!m_nvram_battery)
-		std::fill(buf.begin(), buf.end(), 0);
 
 	if (file.write(buf.data(), buf.size(), actual) || (buf.size() != actual))
 		return false;
