@@ -19,7 +19,10 @@ jobs:
         MINGW64: "/mingw64"
         OSD: "messui"
         PTR64: "1"
-      run: make -j2
+        DEPRECATED: "0"
+        SYMBOLS: "0"
+        NO_SYMBOLS: "1"
+      run: make -j2 PTR64=1 OSD=messui DEPRECATED=0 SYMBOLS=0 NO_SYMBOLS=1
     - name: Validate
       run: ./mameui -validate
     - uses: actions/upload-artifact@master
