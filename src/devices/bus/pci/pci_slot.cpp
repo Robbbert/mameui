@@ -13,6 +13,7 @@
 #include "geforce.h"
 #include "mga2064w.h"
 #include "opti82c861.h"
+#include "oti_spitfire.h"
 #include "promotion.h"
 #include "riva128.h"
 #include "rivatnt.h"
@@ -122,14 +123,15 @@ void pci_cards(device_slot_interface &device)
 	device.option_add("quadro",         QUADRO);
 	device.option_add("mga2064w",       MGA2064W);
 	device.option_add("promotion3210",  PROMOTION3210);
+	device.option_add("oti64111",       OTI64111_PCI);
 
 	// 0x04 - multimedia controllers
 	device.option_add("sw1000xg",       SW1000XG);
 	device.option_add("ds2416",         DS2416);
 	device.option_add("sonicvibes",     SONICVIBES);
+	device.option_add("ess_solo1",      ES1946_SOLO1E);
 	device.option_add("zr36057",        ZR36057_PCI);
 	device.option_add("audiowerk2",     AUDIOWERK2);
-	device.option_add("ess_solo1",      ES1946_SOLO1E);
 
 	// 0x05 - memory controllers
 	// 0x06 - bridge devices

@@ -16426,8 +16426,12 @@ galaxiac                        // (c) 1979
 quasar                          // (c) 1980 Zelco Games Italy
 quasara                         // (c) 1980 Zelco Games Italy
 
-@source:cxg/ch2001.cpp
+@source:cxg/chess2001.cpp
 ch2001
+
+@source:cxg/computachess.cpp
+scptchess
+scptchessa
 
 @source:cxg/dominator.cpp
 scmder
@@ -16436,9 +16440,8 @@ sgalaxy
 sgalaxya
 sgalaxyb
 
-@source:cxg/scptchess.cpp
-scptchess
-scptchessa
+@source:cxg/professor.cpp
+scprof
 
 @source:cxg/senterprise.cpp
 senterp
@@ -27026,6 +27029,9 @@ act5a                           //
 @source:microterm/mt420.cpp
 mt420                           //
 
+@source:microterm/mt440.cpp
+mt440                           // (c) 1986 Micro-Term
+
 @source:microterm/mt5510.cpp
 mt5510                          //
 
@@ -30173,6 +30179,7 @@ ngolda                          // 198? Unknown
 ngoldb                          // 198? Unknown
 olym65bj                        // (c) 1989 Olympic Video Gaming PTY LTD
 olym65wc                        // (c) 1989 Olympic Video Gaming PTY LTD
+op5cards                        // (c) 1987 MNG
 pmpoker                         // (c) 1981 PlayMan
 poker91                         // 1991, Unknown
 pokerdub                        // 198?, Unknown
@@ -38525,6 +38532,9 @@ edames
 @source:saitek/exechess.cpp
 exechess
 
+@source:saitek/gk2000.cpp
+gk2000
+
 @source:saitek/intchess.cpp
 intchess
 
@@ -41070,6 +41080,7 @@ galeb                           //
 hr84                            //
 
 @source:sfrj/idpartner.cpp
+partnerw                        // Iskra Delta Partner
 partner1fg                      // Iskra Delta Partner 1F/G
 partnerwfg                      // Iskra Delta Partner WF/G
 

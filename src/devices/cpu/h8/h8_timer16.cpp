@@ -10,9 +10,14 @@
     - IRQs are level triggered? eg. when an interrupt enable flag gets set
       while an overflow or compare match flag is 1, will it trigger an IRQ?
       Or if it's edge triggered, will it trigger an IRQ on rising edge of
-      (irq_enable & flag)?
+      (irq_enable & flag)? Note that mu100 will lock up at boot if it's
+      triggered at rising edge of (flag) or (irq_enable & flag).
     - H8/325 16-bit timer is shoehorned in and may have a bug lurking?
       It doesn't have TGR registers, but functionally equivalent OCR/ICR.
+    - Make the base class more generic, and derive the devices from that,
+      so they don't have to jumble so much with the IRQ/flag bits. The
+      overflow IRQ/flag being hardcoded on bit 4 is also problematic.
+    - Proper support for input capture registers.
 
 ***************************************************************************/
 
@@ -321,6 +326,7 @@ void h8_timer16_channel_device::recalc_event(uint64_t cur_time)
 		m_cpu->internal_update();
 }
 
+
 h8_timer16_device::h8_timer16_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	device_t(mconfig, H8_TIMER16, tag, owner, clock),
 	m_cpu(*this, finder_base::DUMMY_TAG),
@@ -440,7 +446,6 @@ void h8_timer16_device::tolr_w(uint8_t data)
 }
 
 
-
 void h8_timer16_channel_device::tier_update()
 {
 }
@@ -516,6 +521,8 @@ uint8_t h8_timer16_channel_device::tisr_r(int offset) const
 }
 
 
+// H8/325
+
 h8325_timer16_channel_device::h8325_timer16_channel_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	h8_timer16_channel_device(mconfig, H8325_TIMER16_CHANNEL, tag, owner, clock),
 	m_tcsr(0)
@@ -562,8 +569,8 @@ void h8325_timer16_channel_device::tcr_update()
 	case 2: // /32
 		m_clock_divider = 5;
 		break;
-	case 3: // external
-		m_clock_type = INPUT_A;
+	case 3: // TODO: external
+		m_clock_type = -1;
 		break;
 	}
 }
@@ -596,6 +603,8 @@ uint8_t h8325_timer16_channel_device::isr_to_sr() const
 		(m_isr & IRQ_C ? 0x80 : 0);
 }
 
+
+// H8H
 
 h8h_timer16_channel_device::h8h_timer16_channel_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	h8_timer16_channel_device(mconfig, H8H_TIMER16_CHANNEL, tag, owner, clock)
@@ -680,6 +689,9 @@ void h8h_timer16_channel_device::tcr_update()
 		if(V>=1) logerror("counting input %c\n", 'a'+count_type-INPUT_A);
 	}
 }
+
+
+// H8S
 
 h8s_timer16_channel_device::h8s_timer16_channel_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	h8_timer16_channel_device(mconfig, H8S_TIMER16_CHANNEL, tag, owner, clock)

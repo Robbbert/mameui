@@ -5,11 +5,11 @@
  * National Semiconductor 32082 Memory Management Unit.
  *
  * Sources:
- *   - http://bitsavers.org/components/national/_dataBooks/1988_National_Series_32000_Microprocessors_Databook.pdf
+ *  - Microprocessor Databook, Series 32000, NSC800, 1989 Edition, National Semiconductor
  *
  * TODO:
- *   - tlb
- *   - breakpoints
+ *  - tlb
+ *  - breakpoints
  */
 
 #include "emu.h"

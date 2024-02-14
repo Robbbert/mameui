@@ -7,7 +7,13 @@
     H8-300 base cpu emulation
 
     TODO:
-    - add STBY pin (hardware standby mode)
+    - use logmacro and be quiet by default, same for H8 peripherals that
+      currently have "static constexpr int V"
+    - NVRAM won't work properly when it goes into SSBY (software standby
+      mode) and the power button triggers an IRQ to wake up instead of RES.
+      Obviously, MAME always starts at reset-phase at power-on, so it's more
+      like a 'known issue' instead of a TODO since it can't really be fixed.
+    - add STBY pin (hardware standby mode, can only wake up with reset)
 
 ***************************************************************************/
 
@@ -24,7 +30,7 @@ h8_device::h8_device(const machine_config &mconfig, device_type type, const char
 	m_program_config("program", ENDIANNESS_BIG, 16, 16, 0, map_delegate),
 	m_internal_ram(*this, "internal_ram"),
 	m_read_adc(*this, 0),
-	m_read_port(*this, 0),
+	m_read_port(*this, 0xff),
 	m_write_port(*this),
 	m_sci(*this, "sci%u", 0),
 	m_sci_tx(*this),
@@ -55,7 +61,8 @@ h8_device::h8_device(const machine_config &mconfig, device_type type, const char
 
 u16 h8_device::adc_default(int adc)
 {
-	logerror("read of un-hooked adc %d\n", adc);
+	if(!machine().side_effects_disabled())
+		logerror("read of un-hooked adc %d\n", adc);
 	return 0;
 }
 
@@ -63,8 +70,9 @@ const char h8_device::port_names[] = "123456789abcdefg";
 
 u8 h8_device::port_default_r(int port)
 {
-	logerror("read of un-hooked port %c (PC=%X)\n", port_names[port], m_PPC);
-	return 0;
+	if(!machine().side_effects_disabled())
+		logerror("read of un-hooked port %c (PC=%X)\n", port_names[port], m_PPC);
+	return 0xff;
 }
 
 void h8_device::port_default_w(int port, u8 data)
@@ -536,7 +544,7 @@ void h8_device::prefetch_done_noirq_notrace()
 void h8_device::set_irq(int irq_vector, int irq_level, bool irq_nmi)
 {
 	// wake up from software standby with an external interrupt
-	if(standby() && (irq_vector || irq_nmi)) {
+	if(standby() && irq_level >= 0) {
 		resume(SUSPEND_REASON_CLOCK);
 		m_standby_cb(0);
 	}

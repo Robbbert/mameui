@@ -1512,6 +1512,20 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/bus/idpartner/bus.h,BUSES["IDPARTNER"] = true
+---------------------------------------------------
+
+if (BUSES["IDPARTNER"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/idpartner/bus.cpp",
+		MAME_DIR .. "src/devices/bus/idpartner/bus.h",
+		MAME_DIR .. "src/devices/bus/idpartner/gdp.cpp",
+		MAME_DIR .. "src/devices/bus/idpartner/gdp.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/bus/ieee488/ieee488.h,BUSES["IEEE488"] = true
 ---------------------------------------------------
 
@@ -5472,6 +5486,8 @@ if (BUSES["PCI"]~=null) then
 		MAME_DIR .. "src/devices/bus/pci/geforce.h",
 		MAME_DIR .. "src/devices/bus/pci/mga2064w.cpp",
 		MAME_DIR .. "src/devices/bus/pci/mga2064w.h",
+		MAME_DIR .. "src/devices/bus/pci/oti_spitfire.cpp",
+		MAME_DIR .. "src/devices/bus/pci/oti_spitfire.h",
 		MAME_DIR .. "src/devices/bus/pci/opti82c861.cpp",
 		MAME_DIR .. "src/devices/bus/pci/opti82c861.h",
 		MAME_DIR .. "src/devices/bus/pci/promotion.cpp",

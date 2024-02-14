@@ -3,7 +3,14 @@
 // thanks-to:Sean Riddle
 /*******************************************************************************
 
-Saitek Kasparov Prisma
+Saitek Kasparov Prisma (model 281)
+
+NOTE: Before exiting MAME, press the STOP button to turn the power off. Otherwise,
+NVRAM won't save properly. To force a cold boot, hold the PLAY button and trigger
+a power on/reset (F3).
+
+It's the 'sequel' to Simultano, and the first chess computer with a H8 CPU. Even
+though H8 is much faster than 6502, it plays weaker, probably due to less RAM.
 
 Hardware notes:
 - PCB label: ST9A-PE-001
@@ -11,10 +18,11 @@ Hardware notes:
 - Epson SED1502F, LCD screen (same as simultano)
 - piezo, 16+3 leds, button sensors chessboard
 
-It was also sold by Tandy as Chess Champion 2150L, with a slower CPU (16MHz XTAL).
+In 1992, it was also sold by Tandy as Chess Champion 2150L, still manufactured
+by Saitek. Overall, the hardware is the same, but with a slower CPU (16MHz XTAL).
 
 TODO:
-- finish driver
+- internal artwork
 
 *******************************************************************************/
 
@@ -22,7 +30,7 @@ TODO:
 
 #include "cpu/h8/h8325.h"
 #include "machine/sensorboard.h"
-#include "sound/dac.h"
+#include "sound/spkrdev.h"
 #include "video/pwm.h"
 #include "video/sed1500.h"
 
@@ -42,7 +50,7 @@ public:
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
 		m_board(*this, "board"),
-		m_display(*this, "display"),
+		m_led_pwm(*this, "led_pwm"),
 		m_lcd_pwm(*this, "lcd_pwm"),
 		m_lcd(*this, "lcd"),
 		m_dac(*this, "dac"),
@@ -53,6 +61,7 @@ public:
 	void prisma(machine_config &config);
 
 	DECLARE_INPUT_CHANGED_MEMBER(go_button);
+	DECLARE_INPUT_CHANGED_MEMBER(change_cpu_freq);
 
 protected:
 	virtual void machine_start() override;
@@ -61,10 +70,10 @@ private:
 	// devices/pointers
 	required_device<h8325_device> m_maincpu;
 	required_device<sensorboard_device> m_board;
-	required_device<pwm_display_device> m_display;
+	required_device<pwm_display_device> m_led_pwm;
 	required_device<pwm_display_device> m_lcd_pwm;
 	required_device<sed1502_device> m_lcd;
-	required_device<dac_bit_interface> m_dac;
+	required_device<speaker_sound_device> m_dac;
 	required_ioport_array<4> m_inputs;
 	output_finder<16, 34> m_out_lcd;
 
@@ -72,6 +81,8 @@ private:
 	u8 m_lcd_address = 0;
 	u8 m_lcd_write = 0;
 	u8 m_inp_mux = 0;
+	u8 m_led_select = 0;
+	u8 m_led_direct = 0;
 
 	void main_map(address_map &map);
 
@@ -79,10 +90,12 @@ private:
 	void lcd_pwm_w(offs_t offset, u8 data);
 	void lcd_output_w(offs_t offset, u64 data);
 
+	void standby(int state);
+	void update_leds();
+
 	void p1_w(u8 data);
 	void p2_w(u8 data);
 	void p3_w(u8 data);
-	u8 p4_r();
 	void p4_w(u8 data);
 	u8 p5_r();
 	void p5_w(u8 data);
@@ -99,6 +112,15 @@ void prisma_state::machine_start()
 	save_item(NAME(m_lcd_address));
 	save_item(NAME(m_lcd_write));
 	save_item(NAME(m_inp_mux));
+	save_item(NAME(m_led_select));
+	save_item(NAME(m_led_direct));
+}
+
+INPUT_CHANGED_MEMBER(prisma_state::change_cpu_freq)
+{
+	// 6MHz and 12MHz versions don't exist, but the software supports it
+	static const XTAL freq[4] = { 16_MHz_XTAL, 20_MHz_XTAL, 24_MHz_XTAL, 12_MHz_XTAL };
+	m_maincpu->set_unscaled_clock(freq[bitswap<2>(newval,7,0)] / 2);
 }
 
 
@@ -107,9 +129,29 @@ void prisma_state::machine_start()
     I/O
 *******************************************************************************/
 
+// power
+
+void prisma_state::standby(int state)
+{
+	if (state)
+	{
+		// clear display
+		for (int i = 0; i < 0x80; i++)
+			m_lcd->write(i, 0);
+
+		m_led_pwm->clear();
+		m_lcd_pwm->clear();
+	}
+}
+
 INPUT_CHANGED_MEMBER(prisma_state::go_button)
 {
+	if (newval && m_maincpu->standby())
+		m_maincpu->pulse_input_line(INPUT_LINE_RESET, attotime::zero);
 }
+
+
+// LCD
 
 void prisma_state::lcd_pwm_w(offs_t offset, u8 data)
 {
@@ -118,41 +160,43 @@ void prisma_state::lcd_pwm_w(offs_t offset, u8 data)
 
 void prisma_state::lcd_output_w(offs_t offset, u64 data)
 {
-	m_lcd_pwm->write_row(offset, data);
+	if (!m_maincpu->standby())
+		m_lcd_pwm->write_row(offset, data);
 }
 
-//[:maincpu:port1] ddr_w ff
-//[:maincpu:port2] ddr_w ff
-//[:maincpu:port3] ddr_w ff
-//[:maincpu:port4] ddr_w 7f
-//[:maincpu:port5] ddr_w 30
-//[:maincpu:port6] ddr_w ff
-//[:maincpu:port7] ddr_w 00
+
+// MCU ports
+
+void prisma_state::update_leds()
+{
+	m_led_pwm->matrix_partial(0, 2, m_led_select, m_inp_mux);
+	m_led_pwm->matrix_partial(2, 1, 1, m_led_direct);
+}
 
 void prisma_state::p1_w(u8 data)
 {
 	// P10-P13: direct leds
+	m_led_direct = (data & 0xf) ^ 3;
+	update_leds();
 
 	// P14: speaker out
-	m_dac->write(BIT(data, 4));
+	m_dac->level_w(BIT(data, 4));
+
+	// P16: ext power
+	// (no need to emulate it)
 }
 
 void prisma_state::p2_w(u8 data)
 {
 	// P20-P27: input mux, led data
 	m_inp_mux = bitswap<8>(~data,7,6,5,4,0,3,1,2);
-	m_display->write_mx(~data);
+	update_leds();
 }
 
 void prisma_state::p3_w(u8 data)
 {
 	// P30-P37: LCD data
 	m_lcd_data = bitswap<8>(data,3,4,5,6,7,0,1,2);
-}
-
-u8 prisma_state::p4_r()
-{
-	return 0xff;
 }
 
 void prisma_state::p4_w(u8 data)
@@ -183,7 +227,8 @@ u8 prisma_state::p5_r()
 void prisma_state::p5_w(u8 data)
 {
 	// P54,P55: led select
-	m_display->write_my(~data >> 4 & 3);
+	m_led_select = ~data >> 4 & 3;
+	update_leds();
 }
 
 void prisma_state::p6_w(u8 data)
@@ -223,34 +268,35 @@ void prisma_state::main_map(address_map &map)
 
 static INPUT_PORTS_START( prisma )
 	PORT_START("IN.0")
-	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_1) // freq sel
-	PORT_BIT(0x02, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_2)
-	PORT_BIT(0x04, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_3) // k
-	PORT_BIT(0x08, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_4) // b
-	PORT_BIT(0x10, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_5) // swap
-	PORT_BIT(0x20, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_6) // ng
-	PORT_BIT(0x40, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_7)
-	PORT_BIT(0x80, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_8) // freq sel
+	PORT_BIT(0x02, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_F) PORT_CODE(KEYCODE_MINUS) PORT_CODE(KEYCODE_MINUS_PAD) PORT_NAME("-")
+	PORT_BIT(0x04, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_Z) PORT_CODE(KEYCODE_1_PAD) PORT_NAME("King")
+	PORT_BIT(0x08, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_V) PORT_CODE(KEYCODE_4_PAD) PORT_NAME("Bishop")
+	PORT_BIT(0x10, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_4) PORT_NAME("Swap Side")
+	PORT_BIT(0x20, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_Q) PORT_NAME("New Game")
+	PORT_BIT(0x40, IP_ACTIVE_HIGH, IPT_UNUSED)
+	PORT_CONFNAME( 0x81, 0x01, "CPU Frequency" ) PORT_CHANGED_MEMBER(DEVICE_SELF, prisma_state, change_cpu_freq, 0) // factory set
+	PORT_CONFSETTING(    0x00, "8MHz (CC 2150L)" )
+	PORT_CONFSETTING(    0x01, "10MHz (Prisma)" )
 
 	PORT_START("IN.1")
-	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_Q) // nor
-	PORT_BIT(0x02, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_W) // col
-	PORT_BIT(0x04, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_E) // n
-	PORT_BIT(0x08, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_R) // p
-	PORT_BIT(0x10, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_T) // stop
-	PORT_BIT(0x20, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_Y) // ana
-	PORT_BIT(0x40, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_U) // info
-	PORT_BIT(0x80, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_I) // fun
+	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_T) PORT_NAME("Normal")
+	PORT_BIT(0x02, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_S) PORT_NAME("Tab / Color")
+	PORT_BIT(0x04, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_B) PORT_CODE(KEYCODE_5_PAD) PORT_NAME("Knight")
+	PORT_BIT(0x08, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_N) PORT_CODE(KEYCODE_6_PAD) PORT_NAME("Pawn")
+	PORT_BIT(0x10, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_2) PORT_NAME("Stop")
+	PORT_BIT(0x20, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_R) PORT_NAME("Analysis")
+	PORT_BIT(0x40, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_3) PORT_NAME("Info")
+	PORT_BIT(0x80, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_A) PORT_NAME("Function")
 
 	PORT_START("IN.2")
-	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_A) // level
-	PORT_BIT(0x02, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_S) // play
-	PORT_BIT(0x04, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_D) // q
-	PORT_BIT(0x08, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_F) // r
-	PORT_BIT(0x10, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_G) // sound
-	PORT_BIT(0x20, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_H)
-	PORT_BIT(0x40, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_J) // setup
-	PORT_BIT(0x80, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_K) // +
+	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_E) PORT_CODE(KEYCODE_L) PORT_NAME("Level")
+	PORT_BIT(0x02, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_5) PORT_NAME("Play")
+	PORT_BIT(0x04, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_X) PORT_CODE(KEYCODE_2_PAD) PORT_NAME("Queen")
+	PORT_BIT(0x08, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_C) PORT_CODE(KEYCODE_3_PAD) PORT_NAME("Rook")
+	PORT_BIT(0x10, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_G) PORT_NAME("Sound")
+	PORT_BIT(0x20, IP_ACTIVE_HIGH, IPT_UNUSED)
+	PORT_BIT(0x40, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_W) PORT_NAME("Set Up")
+	PORT_BIT(0x80, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_D) PORT_CODE(KEYCODE_EQUALS) PORT_CODE(KEYCODE_PLUS_PAD) PORT_NAME("+")
 
 	PORT_START("IN.3")
 	PORT_CONFNAME( 0x01, 0x01, "Battery Status" )
@@ -258,7 +304,7 @@ static INPUT_PORTS_START( prisma )
 	PORT_CONFSETTING(    0x01, DEF_STR( Normal ) )
 
 	PORT_START("RESET")
-	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_Z) PORT_CHANGED_MEMBER(DEVICE_SELF, prisma_state, go_button, 0) PORT_NAME("Go")
+	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_1) PORT_CHANGED_MEMBER(DEVICE_SELF, prisma_state, go_button, 0) PORT_NAME("Go")
 INPUT_PORTS_END
 
 
@@ -271,13 +317,14 @@ void prisma_state::prisma(machine_config &config)
 {
 	// basic machine hardware
 	H8325(config, m_maincpu, 20_MHz_XTAL / 2);
+	m_maincpu->set_addrmap(AS_PROGRAM, &prisma_state::main_map);
 	m_maincpu->nvram_enable_backup(true);
 	m_maincpu->nvram_set_default_value(~0);
-	m_maincpu->set_addrmap(AS_PROGRAM, &prisma_state::main_map);
+	m_maincpu->standby_cb().set(m_maincpu, FUNC(h8325_device::nvram_set_battery));
+	m_maincpu->standby_cb().append(FUNC(prisma_state::standby));
 	m_maincpu->write_port1().set(FUNC(prisma_state::p1_w));
 	m_maincpu->write_port2().set(FUNC(prisma_state::p2_w));
 	m_maincpu->write_port3().set(FUNC(prisma_state::p3_w));
-	m_maincpu->read_port4().set(FUNC(prisma_state::p4_r));
 	m_maincpu->write_port4().set(FUNC(prisma_state::p4_w));
 	m_maincpu->read_port5().set(FUNC(prisma_state::p5_r));
 	m_maincpu->write_port5().set(FUNC(prisma_state::p5_w));
@@ -300,12 +347,12 @@ void prisma_state::prisma(machine_config &config)
 	screen.set_size(873/2, 1080/2);
 	screen.set_visarea_full();
 
-	PWM_DISPLAY(config, m_display).set_size(2+2, 8);
+	PWM_DISPLAY(config, m_led_pwm).set_size(2+1, 8);
 	//config.set_default_layout(layout_saitek_prisma);
 
 	// sound hardware
 	SPEAKER(config, "speaker").front_center();
-	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
+	SPEAKER_SOUND(config, m_dac).add_route(ALL_OUTPUTS, "speaker", 0.25);
 }
 
 
