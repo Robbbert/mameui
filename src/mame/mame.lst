@@ -19482,6 +19482,9 @@ mk1forth                        // (c) 2003 Andrew Holme
 @source:homebrew/p112.cpp
 p112                            //
 
+@source:homebrew/pc532.cpp
+pc532
+
 @source:homebrew/phunsy.cpp
 phunsy                          //
 
@@ -38226,6 +38229,7 @@ psion3s                         // 1994 Psion Series 3s
 pocketbk2                       // 1994 Acorn Pocket Book II
 psion3a                         // 1993 Psion Series 3a
 psion3a2                        // 1995 Psion Series 3a
+psion3a2_us                     // 1995 Psion Series 3a (US)
 psion3a2_de                     // 1995 Psion Series 3a (German)
 psion3a2_ru                     // 1997 Psion Series 3a (Russian)
 psion3c                         // 1996 Psion Series 3c
@@ -39121,7 +39125,8 @@ oceanhun                        // 1998.09 Ocean Hunter (Japan rev A)
 oceanhuna                       // 1998.09 Ocean Hunter (Japan)
 scud                            // 1996.12 Scud Race Twin/DX
 scudau                          // 1996.12 Scud Race Twin/DX - Australia
-scuddx                          // 1996.12 Scud Race Deluxe
+scuddx                          // 1996.12 Scud Race Deluxe (rev A)
+scuddxo                         // 1996.12 Scud Race Deluxe
 scudplus                        // 1997.09 Scud Race Plus Twin/DX (rev A)
 scudplusa                       // 1997.09 Scud Race Plus Twin/DX
 skichamp                        // 1998.01 Ski Champ
@@ -42355,7 +42360,8 @@ spuzbobl                        // 1999.?? Super Puzzle Bobble (V2.05O)
 spuzboblj                       // 1999.03 Super Puzzle Bobble (Japan)
 usagi                           // 2001.12 Usagi (V2.02J)
 xiistag                         // 2002.07 XII Stag (V2.01J)
-zokuoten                        // 2000.12 Zoku Otenamihaiken (V2.03J)
+zokuoten                        // 2000.12 Zoku Otenamihaiken (V2.05J)
+zokuotena                       // 2000.12 Zoku Otenamihaiken (V2.03J)
 zooo                            // 2004.05 Zooo
 
 @source:sony/umatic.cpp
@@ -43157,6 +43163,7 @@ rollace2                        // (c) 1983 Williams
 bubbroul                        // E48 (c) 1997 Taito
 honooinv                        // E41 (c) 1997 Taito
 packysts                        // E55 (c) 1997 Taito
+rendfgtr                        // E88 (c) 2000 Taito
 sbmjb                           // ??? (c) 1998 Taito
 
 @source:taito/sbowling.cpp
@@ -43534,7 +43541,8 @@ landgear                        // 1996.?? E17 (c) 1995 Taito Corporation Japan 
 landgeara                       // 1996.?? E17 (c) 1995 Taito Corporation Japan (World) - Ver 3.1 O
 landgearj                       // 1996.?? E17 (c) 1996 Taito Corporation (Japan) - Ver 4.2 J
 landgearja                      // 1996.03 E17 (c) 1996 Taito Corporation (Japan) - Ver 3.0 J
-sidebs                          // 1996.07 E23 (c) 1996 Taito Corporation (Japan) - Ver 2.7 J
+sidebs                          // 1996.07 E23 (c) 1996 Taito Corporation Japan (World) - Ver 3.0 OK
+sidebsj                         // 1996.07 E23 (c) 1996 Taito Corporation (Japan) - Ver 2.7 J
 sidebs2                         // 1997.07 E38 (c) 1997 Taito Corporation (World) - Ver 2.6 OK
 sidebs2j                        // 1997.07 E38 (c) 1997 Taito Corporation (Japan) - Ver 3.1 J
 sidebs2u                        // 1997.07 E38 (c) 1997 Taito Corporation (US) - Ver 2.6 A
