@@ -17,15 +17,6 @@
 #include "treeview.h"
 
 
-// fix warning: cast does not match function type
-#if defined(__GNUC__) && defined(ListView_GetHeader)
-#undef ListView_GetHeader
-#endif
-#if defined(__GNUC__) && defined(ListView_GetImageList)
-#undef ListView_GetImageList
-#undef ListView_GetItemRect
-#endif
-
 #ifndef ListView_GetItemRect
 #define ListView_GetItemRect(w,i,p,c) \
 	(BOOL)SNDMSG((w),LVM_GETITEMRECT,i,((p != NULL)?(((LPRECT)(p))->left=(c),(LPARAM)(LPRECT)(p)):0))

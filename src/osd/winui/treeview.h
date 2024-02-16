@@ -4,31 +4,6 @@
 #ifndef WINUI_TREEVIEW_H
 #define WINUI_TREEVIEW_H
 
-/* corrections for commctrl.h */
-
-#if defined(__GNUC__)
-/* fix warning: cast does not match function type */
-#undef  TreeView_InsertItem
-#define TreeView_InsertItem(w,i) (HTREEITEM)(LRESULT)(int)SendMessage((w),TVM_INSERTITEM,0,(LPARAM)(LPTV_INSERTSTRUCT)(i))
-
-#undef  TreeView_SetImageList
-#define TreeView_SetImageList(w,h,i) (HIMAGELIST)(LRESULT)(int)SendMessage((w),TVM_SETIMAGELIST,i,(LPARAM)(HIMAGELIST)(h))
-
-#undef  TreeView_GetNextItem
-#define TreeView_GetNextItem(w,i,c) (HTREEITEM)(LRESULT)(int)SendMessage((w),TVM_GETNEXTITEM,c,(LPARAM)(HTREEITEM)(i))
-
-#undef TreeView_HitTest
-#define TreeView_HitTest(hwnd, lpht) \
-    (HTREEITEM)(LRESULT)(int)SNDMSG((hwnd), TVM_HITTEST, 0, (LPARAM)(LPTV_HITTESTINFO)(lpht))
-
-/* fix wrong return type */
-#undef  TreeView_Select
-#define TreeView_Select(w,i,c) (BOOL)(int)SendMessage((w),TVM_SELECTITEM,c,(LPARAM)(HTREEITEM)(i))
-
-#undef TreeView_EditLabel
-#define TreeView_EditLabel(w, i) SNDMSG(w,TVM_EDITLABEL,0,(LPARAM)(i))
-
-#endif /* defined(__GNUC__) */
 #include "bitmask.h"
 #include <stdint.h>
 #include "emu_opts.h"
