@@ -6,6 +6,9 @@ jobs:
 
   build-windows-gcc:
     runs-on: windows-latest
+    concurrency:
+      group: ci-${{ github.ref }}
+      cancel-in-progress: true
     defaults:
       run:
         shell: msys2 {0}
@@ -19,9 +22,8 @@ jobs:
         MINGW64: "/mingw64"
         OSD: "messui"
         PTR64: "1"
-        DEPRECATED: "0"
-        SYMBOLS: "0"
-        NO_SYMBOLS: "1"
+        CC:   gcc-10
+        CXX:  g++-10
       run: make -j2 PTR64=1 OSD=messui DEPRECATED=0 SYMBOLS=0 NO_SYMBOLS=1
     - name: Validate
       run: ./mameui -validate
