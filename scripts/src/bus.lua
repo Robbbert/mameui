@@ -706,6 +706,8 @@ if (BUSES["BBC_1MHZBUS"]~=null) then
 		MAME_DIR .. "src/devices/bus/bbc/1mhzbus/2ndserial.h",
 		MAME_DIR .. "src/devices/bus/bbc/1mhzbus/autoprom.cpp",
 		MAME_DIR .. "src/devices/bus/bbc/1mhzbus/autoprom.h",
+		MAME_DIR .. "src/devices/bus/bbc/1mhzbus/barrybox.cpp",
+		MAME_DIR .. "src/devices/bus/bbc/1mhzbus/barrybox.h",
 		MAME_DIR .. "src/devices/bus/bbc/1mhzbus/beebopl.cpp",
 		MAME_DIR .. "src/devices/bus/bbc/1mhzbus/beebopl.h",
 		MAME_DIR .. "src/devices/bus/bbc/1mhzbus/beebsid.cpp",
@@ -829,6 +831,8 @@ if (BUSES["BBC_USERPORT"]~=null) then
 		MAME_DIR .. "src/devices/bus/bbc/userport/beebspch.h",
 		MAME_DIR .. "src/devices/bus/bbc/userport/lcd.cpp",
 		MAME_DIR .. "src/devices/bus/bbc/userport/lcd.h",
+		MAME_DIR .. "src/devices/bus/bbc/userport/lvlecho.cpp",
+		MAME_DIR .. "src/devices/bus/bbc/userport/lvlecho.h",
 		MAME_DIR .. "src/devices/bus/bbc/userport/m4000.cpp",
 		MAME_DIR .. "src/devices/bus/bbc/userport/m4000.h",
 		MAME_DIR .. "src/devices/bus/bbc/userport/palext.cpp",
@@ -5512,5 +5516,20 @@ if (BUSES["PCI"]~=null) then
 		MAME_DIR .. "src/devices/bus/pci/ymp21.h",
 		MAME_DIR .. "src/devices/bus/pci/zr36057.cpp",
 		MAME_DIR .. "src/devices/bus/pci/zr36057.h",
+	}
+end
+
+
+---------------------------------------------------
+--
+--@src/devices/bus/plg100/plg100.h,BUSES["PLG100"] = true
+---------------------------------------------------
+
+if (BUSES["PLG100"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/plg100/plg100.cpp",
+		MAME_DIR .. "src/devices/bus/plg100/plg100.h",
+		MAME_DIR .. "src/devices/bus/plg100/vl.cpp",
+		MAME_DIR .. "src/devices/bus/plg100/vl.h",
 	}
 end
