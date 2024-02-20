@@ -1525,6 +1525,8 @@ if (BUSES["IDPARTNER"]~=null) then
 		MAME_DIR .. "src/devices/bus/idpartner/bus.h",
 		MAME_DIR .. "src/devices/bus/idpartner/gdp.cpp",
 		MAME_DIR .. "src/devices/bus/idpartner/gdp.h",
+		MAME_DIR .. "src/devices/bus/idpartner/sasi.cpp",
+		MAME_DIR .. "src/devices/bus/idpartner/sasi.h",
 	}
 end
 
@@ -3214,6 +3216,8 @@ if (BUSES["RS232"]~=null) then
 		MAME_DIR .. "src/devices/bus/rs232/rs232.h",
 		MAME_DIR .. "src/devices/bus/rs232/rs232_sync_io.cpp",
 		MAME_DIR .. "src/devices/bus/rs232/rs232_sync_io.h",
+		MAME_DIR .. "src/devices/bus/rs232/scorpion.cpp",
+		MAME_DIR .. "src/devices/bus/rs232/scorpion.h",
 		MAME_DIR .. "src/devices/bus/rs232/sun_kbd.cpp",
 		MAME_DIR .. "src/devices/bus/rs232/sun_kbd.h",
 		MAME_DIR .. "src/devices/bus/rs232/swtpc8212.cpp",
@@ -4721,6 +4725,8 @@ if (BUSES["SPECTRUM"]~=null) then
 		MAME_DIR .. "src/devices/bus/spectrum/usource.h",
 		MAME_DIR .. "src/devices/bus/spectrum/uspeech.cpp",
 		MAME_DIR .. "src/devices/bus/spectrum/uspeech.h",
+		MAME_DIR .. "src/devices/bus/spectrum/vtx5000.cpp",
+		MAME_DIR .. "src/devices/bus/spectrum/vtx5000.h",
 		MAME_DIR .. "src/devices/bus/spectrum/wafa.cpp",
 		MAME_DIR .. "src/devices/bus/spectrum/wafa.h",
 	}
@@ -5510,6 +5516,8 @@ if (BUSES["PCI"]~=null) then
 		MAME_DIR .. "src/devices/bus/pci/sw1000xg.h",
 		MAME_DIR .. "src/devices/bus/pci/virge_pci.cpp",
 		MAME_DIR .. "src/devices/bus/pci/virge_pci.h",
+		MAME_DIR .. "src/devices/bus/pci/vt6306.cpp",
+		MAME_DIR .. "src/devices/bus/pci/vt6306.h",
 		MAME_DIR .. "src/devices/bus/pci/wd9710_pci.cpp",
 		MAME_DIR .. "src/devices/bus/pci/wd9710_pci.h",
 		MAME_DIR .. "src/devices/bus/pci/ymp21.cpp",

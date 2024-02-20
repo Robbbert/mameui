@@ -36,6 +36,7 @@ ar260                           // 1990 Acorn R260
 aa5000                          // 1991 Acorn A5000
 aa4                             // 1992 Acorn A4
 aa3010                          // 1992 Acorn A3010
+aa3010_de                       // 1993 Acorn A3010 (German)
 aa3020                          // 1992 Acorn A3020
 aa4000                          // 1992 Acorn A4000
 aa5000a                         // 1993 Acorn A5000 Alpha
@@ -19262,6 +19263,7 @@ h19                             // Heath H19 (Zenith Z-19)
 @source:heathkit/h89.cpp
 h89                             // Heath H89 (WH89, Zenith Z-89, Z-90)
 h88                             // Heath H88 (with cassette tape)
+h89_sigmasoft                   // H89 with the SigmaSoft IGC card
 
 @source:hec2hrp/hec2hrp.cpp
 hec2hr                          //
@@ -20043,6 +20045,7 @@ kungfu                          // (c) 1992 IGS
 aliencha                        // (c) 1994
 alienchac                       // (c) 1994
 lordgun                         // (c) 1994
+lordgunu                        // (c) 1994
 
 @source:igs/pgm.cpp
 ddp2                            // (c) 2001 DoDonPachi 2 - Bee Storm
@@ -21511,6 +21514,7 @@ edfu                            // (c) 1991 (North America)
 edfp                            // (c) 1991 (Japan, Prototype)
 hachoo                          // (c) 1989
 hachooa                         // (c) 1989
+hachooj                         // (c) 1989
 hayaosi1                        // (c) 1993
 iganinju                        // (c) 1988 (Japan)
 iganinjub                       // bootleg
@@ -24093,6 +24097,7 @@ konam80u                        // 1998 - Konami 80's AC Special (GC826 VER. UAA
 mamboagg                        // 2001 - Mambo A Go-Go (GQA40 VER. JAB)
 mamboagga                       // 2001 - Mambo A Go-Go (GQA40 VER. JRB, Rental)
 mrtlbeat                        // 2002 - Martial Beat (Martial Beat (G*B47 VER. JBA)
+mrtlbeata                       // 2002 - Martial Beat (Martial Beat (G*B47 VER. JAB)
 pcnfrk                          // 1999 - Percussion Freaks (GQ881 VER. EAB)
 pcnfrka                         // 1999 - Percussion Freaks (GQ881 VER. AAB)
 pcnfrkk                         // 1999 - Percussion Freaks (GQ881 VER. KAB)
@@ -26844,10 +26849,12 @@ unkmerit                        // (c) 1989 Merit
 
 @source:merit/merit3xx.cpp
 ma6710                          // (c) 1989 Merit
+ma6710a                         // (c) 199? Merit
 ma7551p                         // (c) 199? Merit
 ma7551t                         // (c) 199? Merit
 ma7556                          // (c) 199? Merit
 ma7558                          // (c) 199? Merit
+ma8350                          // (c) 199? Merit
 
 @source:merit/meritm.cpp
 americna                        // (c) 1987 Merit
@@ -32071,6 +32078,9 @@ nevada                          //
 @source:misc/vlc34010.cpp
 beezerk                         //
 vlcunk                          //
+
+@source:misc/vocalizer.cpp
+vocalizer
 
 @source:misc/voyager.cpp
 voyager                         // (c) 2002 Team Play, Inc.
@@ -41936,6 +41946,10 @@ pv9234                          //
 @source:skeleton/pwp14.cpp
 pwp14                           // Smith Corona PWP System 14
 
+@source:skeleton/qmsirius.cpp
+qmrave                          //
+qmsirius                        //
+
 @source:skeleton/qtsbc.cpp
 qtsbc                           //
 
@@ -43993,6 +44007,7 @@ shadowwa                        // 6215 - (c) 1988 Tecmo (World)
 stratof                         // (c) 1991 Tecmo
 tknight                         // (c) 1989 Tecmo
 wildfang                        // (c) 1989 Tecmo
+wildfangh                       // (c) 1991? Tecmo?
 wildfangs                       // (c) 1989 Tecmo
 
 @source:tecmo/lvcards.cpp
@@ -46034,6 +46049,9 @@ dx100                           //
 @source:yamaha/ymmu5.cpp
 mu5                             // 1994 MU-5
 
+@source:yamaha/ymmu10.cpp
+mu10
+
 @source:yamaha/ymmu15.cpp
 mu15
 
@@ -46050,6 +46068,9 @@ mu90                            // 1996 MU-90
 mu100                           // 1997 MU-100
 mu100r                          // 1997 MU-100 Rackable version
 mu100b                          // 1998 MU-100B
+
+@source:yamaha/ymmu128.cpp
+mu128
 
 @source:yamaha/ympcs30.cpp
 pcs30                           // 1984
