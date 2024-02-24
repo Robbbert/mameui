@@ -25,6 +25,7 @@
 #include "formats/idpart_dsk.h"
 #include "machine/mc14411.h"
 #include "machine/mm58167.h"
+#include "machine/timer.h"
 #include "machine/upd765.h"
 #include "machine/z80ctc.h"
 #include "machine/z80dma.h"
@@ -146,6 +147,7 @@ public:
 		, m_rtc(*this, "rtc")
 		, m_serial(*this, "serial_%d",0U)
 		, m_floppy(*this, "fdc:%d",0U)
+		, m_ram(*this, "ram", 0x20000, ENDIANNESS_LITTLE)
 		, m_rom(*this, "maincpu")
 		, m_bankr0(*this, "bankr0")
 		, m_bankw0(*this, "bankw0")
@@ -178,7 +180,10 @@ private:
 	u8 floppy_motor_r() { return m_floppy_motor; }
 	void update_floppy_motor();
 	void xx2_w(int state) { if (state) { m_floppy_motor = 0; update_floppy_motor(); } }
-	void write_f1_clock(int state);
+	void write_speed1_clock(int state) { m_sio1->txca_w(state); m_sio1->rxca_w(state); }
+    void write_speed2_clock(int state) { m_sio1->txcb_w(state); m_sio1->rxcb_w(state); }
+	void write_speed3_clock(int state) { m_sio2->txca_w(state); m_sio2->rxca_w(state); }
+	void write_speed4_clock(int state) { m_sio2->txcb_w(state); m_sio2->rxcb_w(state); }
 	uint8_t memory_read_byte(offs_t offset) { return m_program.read_byte(offset); }
 	void memory_write_byte(offs_t offset, uint8_t data) { m_program.write_byte(offset, data); }
 	uint8_t io_read_byte(offs_t offset) { if (offset==0xf1) return m_fdc->dma_r(); else return m_io.read_byte(offset); }
@@ -202,7 +207,7 @@ private:
 	required_device<mm58167_device> m_rtc;
 	required_device_array<rs232_port_device,4> m_serial;
 	required_device_array<floppy_connector, 2> m_floppy;
-	std::unique_ptr<u8[]> m_ram;
+	memory_share_creator<u8> m_ram;
 	required_region_ptr<u8> m_rom;
 	required_memory_bank m_bankr0;
 	required_memory_bank m_bankw0;
@@ -215,22 +220,18 @@ private:
 void idpartner_state::machine_start()
 {
 	// 16 KB actually unused
-	m_ram = std::make_unique<u8[]>(0x20000);
-	std::fill_n(m_ram.get(), 0x20000, 0xff);
-	save_pointer(NAME(m_ram), 0x20000);
-
-	m_bankr0->configure_entry(0, m_ram.get() + 0x00000);
-	m_bankr0->configure_entry(1, m_ram.get() + 0x10000);
+	m_bankr0->configure_entry(0, m_ram + 0x00000);
+	m_bankr0->configure_entry(1, m_ram + 0x10000);
 	m_bankr0->configure_entry(2, m_rom);
-	m_bankw0->configure_entry(0, m_ram.get() + 0x00000);
-	m_bankw0->configure_entry(1, m_ram.get() + 0x10000);
+	m_bankw0->configure_entry(0, m_ram + 0x00000);
+	m_bankw0->configure_entry(1, m_ram + 0x10000);
 	m_bankw0->configure_entry(2, m_rom);
 
-	m_bank1->configure_entry(0, m_ram.get() + 0x01000);
-	m_bank1->configure_entry(1, m_ram.get() + 0x11000);
+	m_bank1->configure_entry(0, m_ram + 0x02000);
+	m_bank1->configure_entry(1, m_ram + 0x12000);
 
 	// Last 16KB is always same
-	m_bank2->configure_entry(0, m_ram.get() + 0x0c000);
+	m_bank2->configure_entry(0, m_ram + 0x0c000);
 	m_bank2->set_entry(0);
 
 	m_maincpu->space(AS_PROGRAM).specific(m_program);
@@ -270,8 +271,8 @@ void idpartner_state::machine_reset()
 /* Address maps */
 void idpartner_state::mem_map(address_map &map)
 {
-	map(0x0000, 0x0fff).bankr("bankr0").bankw("bankw0");
-	map(0x1000, 0xbfff).bankrw("bank1");
+	map(0x0000, 0x1fff).bankr("bankr0").bankw("bankw0");
+	map(0x2000, 0xbfff).bankrw("bank1");
 	map(0xc000, 0xffff).bankrw("bank2");
 }
 void idpartner_state::io_map(address_map &map)
@@ -319,20 +320,6 @@ static void partner_floppy_formats(format_registration &fr)
 	fr.add(FLOPPY_IDPART_FORMAT);
 }
 
-void idpartner_state::write_f1_clock(int state)
-{
-	m_sio1->txca_w(state);
-	m_sio1->rxca_w(state);
-
-	m_sio1->txcb_w(state);
-	m_sio1->rxcb_w(state);
-
-	m_sio2->txca_w(state);
-	m_sio2->rxca_w(state);
-
-	m_sio2->txcb_w(state);
-	m_sio2->rxcb_w(state);
-}
 
 static DEVICE_INPUT_DEFAULTS_START(keyboard)
 	DEVICE_INPUT_DEFAULTS("RS232_TXBAUD", 0xff, RS232_BAUD_300)
@@ -362,6 +349,9 @@ void idpartner_state::partner_base(machine_config &config)
 	MC14411(config, m_brg, XTAL(1'843'200));
 	m_brg->rsa_w(0);
 	m_brg->rsb_w(1);
+	m_brg->out_f<1>().set(FUNC(idpartner_state::write_speed2_clock));
+	m_brg->out_f<1>().append(FUNC(idpartner_state::write_speed3_clock));
+	m_brg->out_f<1>().append(FUNC(idpartner_state::write_speed4_clock));
 	m_brg->out_f<13>().set(m_ctc, FUNC(z80ctc_device::trg0)); // signal XX1
 
 	RS232_PORT(config, m_serial[0], partner_rs232_devices, nullptr);
@@ -423,7 +413,7 @@ void idpartner_state::partnerw(machine_config &config)
 {
 	partner_base(config);
 
-	m_brg->out_f<1>().set(FUNC(idpartner_state::write_f1_clock));
+	m_brg->out_f<1>().append(FUNC(idpartner_state::write_speed1_clock));
 
 	m_serial[0]->set_default_option("idpart_video");
 
@@ -434,7 +424,7 @@ void idpartner_state::partner1fg(machine_config &config)
 {
 	partner_base(config);
 
-	m_brg->out_f<9>().set(FUNC(idpartner_state::write_f1_clock));
+	m_brg->out_f<9>().set(FUNC(idpartner_state::write_speed1_clock));
 
 	m_serial[0]->set_default_option("keyboard");
 	m_serial[0]->set_option_device_input_defaults("keyboard", DEVICE_INPUT_DEFAULTS_NAME(keyboard));
@@ -446,7 +436,11 @@ void idpartner_state::partnerwfg(machine_config &config)
 {
 	partner_base(config);
 
-	m_brg->out_f<9>().set(FUNC(idpartner_state::write_f1_clock));
+	m_brg->out_f<9>().set(FUNC(idpartner_state::write_speed1_clock));
+	// TODO: This should be 13 from MC14411 but there are timing issues when
+	// SIO is at lower speed ( < 1200 baud )
+	m_brg->out_f<14>().set(m_ctc, FUNC(z80ctc_device::trg0)); // signal XX1
+	m_brg->out_f<13>().set_nop();
 
 	m_serial[0]->set_default_option("keyboard");
 	m_serial[0]->set_option_device_input_defaults("keyboard", DEVICE_INPUT_DEFAULTS_NAME(keyboard));
@@ -458,19 +452,19 @@ void idpartner_state::partnerwfg(machine_config &config)
 /* ROM definition */
 
 ROM_START( partnerw )
-	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_REGION( 0x2000, "maincpu", ROMREGION_ERASEFF )
 	ROM_LOAD( "partner.e51",     0x0000, 0x800, CRC(cabcf36e) SHA1(9c391bacb8d1a742cf74803c61cc061707ab23f4) )
 	// e50 is empty
 ROM_END
 
 ROM_START( partner1fg )
-	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_REGION( 0x2000, "maincpu", ROMREGION_ERASEFF )
 	ROM_LOAD( "partner1fg.e51",  0x0000, 0x800, CRC(571e297a) SHA1(05379c75d6ceb338e49958576f3a1c844f202a00) )
 	// e50 is empty
 ROM_END
 
 ROM_START( partnerwfg )
-	ROM_REGION( 0x1000, "maincpu", 0 )
+	ROM_REGION( 0x2000, "maincpu", ROMREGION_ERASEFF )
 	ROM_LOAD( "partnerwfg.e51",  0x0000, 0x800, CRC(81a2a3db) SHA1(22b23969d38cf2b400be0042dbdd6f8cff2536be) )
 	// e50 is empty
 ROM_END
