@@ -12,15 +12,13 @@ You can only build MAMEUI on a Windows computer. It won't compile on Unix.
 make OSD=messui
 ```
 
-You must use GCC 10.1 - later versions will compile but crash at start.
-
 
 
 Where can I find out more?
 ==========================
 
 * [Official MAME Development Team Site](http://mamedev.org/)
-* [MAMEUI site] http://www.mameui.info/
+* [MAMEUI site] https://messui.1emulation.com/
 * [MAMEUI forum] http://www.mameworld.info/ubbthreads/postlist.php?Cat=&Board=mameui
 
 
