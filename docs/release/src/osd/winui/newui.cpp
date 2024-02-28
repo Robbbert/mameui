@@ -317,7 +317,7 @@ static BOOL win_get_file_name_dialog(win_open_file_name *ofn)
 	}
 
 	// do we need to translate the file parameter?
-	if (ofn->filename)
+	//if (ofn->filename)   // gcc 13.2 errors because it says this cannot be null
 	{
 		buffer = newui_wstring_from_utf8(ofn->filename);
 		if (!buffer)

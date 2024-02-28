@@ -96,16 +96,16 @@ if build == "mess":
     bundle_identifier = "org.mamedev.mess"
 else:
     # MAME
-    author = "Nicola Salmoria and the MAME Team"
+    author = "Robbbert and the MAME Team"
     comments = "Multi-purpose emulation framework"
     company_name = "MAME Team"
-    file_description = "MAME"
-    internal_name = "MAME" if build == "mame" else build
+    file_description = "MAMEUI"
+    internal_name = "MAMEUI" if build == "mame" else build
     original_filename = "MAME" if build == "mame" else build
-    product_name = "MAME" if build == "mame" else build
+    product_name = "MAMEUI" if build == "mame" else build
     bundle_identifier = "org.mamedev." + build
 
-legal_copyright = "Copyright Nicola Salmoria and the MAME team"
+legal_copyright = "Copyright Robbbert and the MAME team"
 
 if outfmt == 'rc':
     fp.write('VS_VERSION_INFO VERSIONINFO\n')
