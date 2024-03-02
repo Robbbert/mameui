@@ -887,6 +887,7 @@ maclc                           // 1990 Apple Macintosh LC
 maclc2                          // 1991 Apple Macintosh LC II
 macclas2                        // 1991 Apple Macintosh Classic II
 maccclas                        // 1993 Apple Macintosh Color Classic
+mactv                           // 1994 Apple Macintosh TV
 
 @source:apple/maclc3.cpp
 maclc3                          // 1993 Apple Macintosh LC III
@@ -15899,6 +15900,7 @@ casloopy                        //
 
 @source:casio/cfx9850.cpp
 cfx9850                         // Casio CFX-9850
+cfx9850gb                       // Casio CFX-9850GB Plus
 
 @source:casio/ctk2000.cpp
 ctk2100                         //
@@ -16446,6 +16448,7 @@ scprof
 
 @source:cxg/senterprise.cpp
 senterp
+senterpc
 
 @source:cxg/sphinx40.cpp
 sphinx40
@@ -19119,7 +19122,9 @@ h2hfootb                        // Coleco
 h2hhockey                       // Coleco
 horseran                        // Mattel
 lilprof                         // Texas Instruments
-lilprofa                        // Texas Instruments
+lilprofo                        // Texas Instruments
+lilprofoa                       // Texas Instruments
+lilprofob                       // Texas Instruments
 litelrn                         // Concept 2000
 liveafb                         // Kenner
 lostreas                        // Parker Bros
@@ -28612,6 +28617,9 @@ showhand                        // (c) 2000  Astro Corp.
 skilldrp                        // (c) 2002  Astro Corp.
 skilldrpa                       // (c) 2002  Astro Corp.
 speeddrp                        // (c) 2003  Astro Corp.
+speedmst                        // (c) 2004  D2 Enterprises
+speedmsta                       // (c) 2003  D2 Enterprises
+speedmstb                       // (c) 2004  D2 Enterprises
 westvent                        // (c) 2007? Astro Corp.
 winbingo                        // (c) 2006  Astro Corp.
 winbingoa                       // (c) 2006  Astro Corp.
@@ -32109,6 +32117,7 @@ filthyrr                        // (c) 1997 WMS - Filthy Rich (Russian)
 hottop                          // (c) 2003 WMS - Hot Toppings (English)
 hottopa                         // (c) 2001 WMS - Hot Toppings (Russian?)
 inwinner                        // (c) 1998 WMS - Instant Winner (Russian)
+inwinners                       // (c) 1998 WMS - Instant Winner (Spanish)
 jptparty                        // (c) 1998 WMS - Jackpot Party (Russian)
 leprgld                         // (c) 2001 WMS - Leprechaun's Gold (Russian)
 leprglds                        // (c) 2001 WMS - Leprechaun's Gold (Spanish)
@@ -34228,6 +34237,7 @@ smb3bl
 
 @source:nintendo/nes_clone.cpp
 afbm7800
+croaky
 dancexpt
 digezlg
 dnce2000
@@ -35481,6 +35491,7 @@ smih0107                        // unknown 386 AT clone with Forex chipset
 sy012                           // SY-012 16/25 386MB VER: 5.2 motherboard (386)
 sy019hi                         // Soyo SY-019H and SY-019I motherboards (386)
 sybaby386                       // SOYO Baby AT 386
+t4000                           // Tandy 4000
 tam25p2                         // AUVA TAM/25-P2 motherboard (386)
 tam3340ma0                      // TAM/33/40-MA0 (CM318R00,M31-R00)
 um82c481af                      // motherboards using the UMC UM82C481AF chipset (386)
@@ -37006,6 +37017,7 @@ taxi_l4                         //
 taxi_lg1                        //
 taxi_lu1                        //
 taxi_p5                         //
+tsptr_l1                        //
 tsptr_l3                        //
 whirl_l2                        //
 whirl_l3                        //
@@ -41718,6 +41730,7 @@ ht68k                           //
 marimba                         //
 poembase
 poemgolf
+poemspoo
 poemzet
 poemzet2
 
@@ -43032,6 +43045,9 @@ halleysc87                      // A62 (c) 1986 Taito Corporation (Japan)
 halleyscj                       // A62 (c) 1986 Taito Corporation (Japan, rev 1)
 halleyscja                      // A62 (c) 1986 Taito Corporation (Japan)
 halleyscjp                      // A62 (c) 1985 Taito Corporation (Japan, prototype)
+
+@source:taito/haplucky.cpp
+haplucky                        // A58
 
 @source:taito/heromem.cpp
 heromem                         // E34 (c) 1997 Taito
@@ -44920,6 +44936,7 @@ comil                           //
 decathln
 decathlna
 doraglob                        // (c) 2007 VTech
+doraglobf
 doraglobg
 doraphon                        // (c) 2006 VTech
 doraphonf
@@ -44935,6 +44952,7 @@ jeuint
 jjstrip
 jouet
 knd
+lexiart
 lxairjet
 lxspidaj
 mattelcs                        //
@@ -45153,6 +45171,7 @@ epo_epp3                        //
 epo_eppk                        //
 epo_esdx                        //
 epo_guru                        //
+epo_tfp2                        //
 evio                            //
 gcslottv                        //
 gungunad                        //
@@ -46029,6 +46048,7 @@ notetakr                        //
 bigboard                        //
 mk82                            //
 mk83                            //
+mojmikro                        //
 x168                            //
 x820                            //
 x820ii                          //

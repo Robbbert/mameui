@@ -9,8 +9,8 @@
     TODO:
     - serial controllers are slightly different, has 3 interrupt sources
       instead of 4
-    - HCSR register @ 0xfffe (port 3 handshake)
-    - FNCR register @ 0xffff (16-bit timer noise canceler)
+    - HCSR @ 0xfffe (port 3 handshake)
+    - FNCR @ 0xffff (16-bit timer noise canceler)
 
 ***************************************************************************/
 
@@ -197,7 +197,7 @@ void h8325_device::device_reset()
 	m_ram_view.select(0);
 
 	// MD pins are latched at reset
-	m_mds = m_md & 3;
+	m_mds = m_md;
 }
 
 u8 h8325_device::syscr_r()
@@ -228,5 +228,5 @@ u8 h8325_device::mdcr_r()
 {
 	if(!machine().side_effects_disabled())
 		logerror("mdcr_r\n");
-	return m_mds | 0xe4;
+	return (m_mds & 0x03) | 0xe4;
 }

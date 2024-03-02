@@ -24,6 +24,7 @@
 #pragma once
 
 #include "h8.h"
+
 #include "h8_intc.h"
 #include "h8_port.h"
 #include "h8_timer8.h"
@@ -51,7 +52,7 @@ public:
 	auto write_port7() { return m_write_port[PORT_7].bind(); }
 
 	// MD pins, default mode 3 (single chip)
-	void set_mode(u8 mode) { m_md = mode; }
+	void set_mode(u8 mode) { m_md = mode & 3; }
 
 	u8 syscr_r();
 	void syscr_w(u8 data);

@@ -145,6 +145,7 @@ void h8_device::device_start()
 		state_add(H8_R7,           "ER7",       m_TMPR).callimport().callexport().formatstr("%9s");
 	}
 
+	save_item(NAME(m_cycles_base));
 	save_item(NAME(m_PPC));
 	save_item(NAME(m_NPC));
 	save_item(NAME(m_PC));
@@ -189,6 +190,7 @@ void h8_device::device_start()
 
 void h8_device::device_reset()
 {
+	m_cycles_base = machine().time().as_ticks(clock());
 	m_inst_state = STATE_RESET;
 	m_inst_substate = 0;
 	m_count_before_instruction_step = 0;
@@ -215,11 +217,10 @@ bool h8_device::nvram_write(util::write_stream &file)
 	if(!m_nvram_battery)
 		return true;
 
-	size_t actual;
-
 	// internal RAM
 	if(m_internal_ram) {
-		if(file.write(&m_internal_ram[0], m_internal_ram.bytes(), actual) || m_internal_ram.bytes() != actual)
+		auto const [err, actual] = write(file, &m_internal_ram[0], m_internal_ram.bytes());
+		if(err)
 			return false;
 	}
 
@@ -234,11 +235,10 @@ bool h8_device::nvram_write(util::write_stream &file)
 
 bool h8_device::nvram_read(util::read_stream &file)
 {
-	size_t actual;
-
 	// internal RAM
 	if(m_internal_ram) {
-		if(file.read(&m_internal_ram[0], m_internal_ram.bytes(), actual) || m_internal_ram.bytes() != actual)
+		auto const [err, actual] = read(file, &m_internal_ram[0], m_internal_ram.bytes());
+		if (err || (m_internal_ram.bytes() != actual))
 			return false;
 	}
 
