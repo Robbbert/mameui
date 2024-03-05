@@ -35,6 +35,7 @@ public:
 
 	void set_suspend(bool suspend);
 	u64 internal_update(u64 current_time);
+	void notify_standby(int state);
 
 protected:
 	h8_adc_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock);
@@ -135,11 +136,11 @@ protected:
 	virtual void mode_update() override;
 };
 
-class h8_adc_2320_device : public h8_adc_device {
+class h8_adc_2319_device : public h8_adc_device {
 public:
-	h8_adc_2320_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
-	template <typename T, typename U> h8_adc_2320_device(const machine_config &mconfig, const char *tag, device_t *owner, T &&cpu, U &&intc, int vect)
-		: h8_adc_2320_device(mconfig, tag, owner, 0)
+	h8_adc_2319_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
+	template <typename T, typename U> h8_adc_2319_device(const machine_config &mconfig, const char *tag, device_t *owner, T &&cpu, U &&intc, int vect)
+		: h8_adc_2319_device(mconfig, tag, owner, 0)
 	{
 		set_info(cpu, intc, vect);
 	}
@@ -182,7 +183,7 @@ protected:
 DECLARE_DEVICE_TYPE(H8_ADC_3337, h8_adc_3337_device)
 DECLARE_DEVICE_TYPE(H8_ADC_3006, h8_adc_3006_device)
 DECLARE_DEVICE_TYPE(H8_ADC_2245, h8_adc_2245_device)
-DECLARE_DEVICE_TYPE(H8_ADC_2320, h8_adc_2320_device)
+DECLARE_DEVICE_TYPE(H8_ADC_2319, h8_adc_2319_device)
 DECLARE_DEVICE_TYPE(H8_ADC_2357, h8_adc_2357_device)
 DECLARE_DEVICE_TYPE(H8_ADC_2655, h8_adc_2655_device)
 

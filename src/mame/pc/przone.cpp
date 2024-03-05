@@ -1,46 +1,28 @@
 // license:BSD-3-Clause
-// copyright-holders:Grull Osgo, Angelo Salese
+// copyright-holders:
 /**************************************************************************************************
 
-Game Magic (c) 1997 Bally Gaming Co.
-
-Preliminary driver by Grull Osgo
+Prize Zone (c) 199? Lazer-Tron
 
 TODO:
-- gammagic: pings ESS Solo Adlib ports, prints "Voodoo two 50hz enabled" (dual screen?),
-  "ignoring write to swapbufferCMD when CMDFIFO is enabled", hangs there;
-
-- 99bottles: "not High Sierra or ISO9660", likely bad (disc-at-once with one track?)
-
-- Missing 68k dump portion.
-  Very unlikely it transfers code from serial, and CD-ROM dump doesn't have any clear file that
-  would indicate a code transfer or an handshake between main and sub CPUs;
+- identify proper motherboard/BIOS;
+- implement I/O board
+\- (checks for r/w in $d**** range for a "* PrizeZone * V1.1.0    * 09/25/97<bh:00>" string,
+   presumably for a NVRAM presence);
+- implement vibra16 ISA card (fails detecting with regular sb16);
 
 ===================================================================================================
 
-Game Magic
+Prize Zone Gold Version 2.01 its a CDRDAO dumped cd
+The redemption arcade game uses an old Pentium I - 200Mhz 233MMX etc SB16 vibra16,
+a S3 virge vga card and a custom ISA IO card.
+It has games like gem run, chip away, squirm (a centipede rip off) scud attack (a middle command 
+rip off) these are games that atari got mad about and were later removed
 
-Is a Multigame machine build on a Bally's V8000 platform.
-
-This is the first PC based gaming machine developed by Bally Gaming.
-
-V8000 platform includes:
-
-1 Motherboard MICRONICS M55Hi-Plus PCI/ISA, Chipset INTEL i430HX (TRITON II), 64 MB Ram (4 SIMM M x 16 MB SIMM)
-On board Sound Blaster Vibra 16C chipset.
-    [has reference to an ESS Solo-1/Maestro driver -AS]
-1 TOSHIBA CD-ROM or DVD-ROM Drive w/Bootable CD-ROM with Game.
-1 OAK SVGA PCI Video Board.
-1 Voodoo Graphics PCI Video Board, connected to the monitor.
-    [Voodoo 1 or 2 according to strings in dump -AS]
-1 21" SVGA Color Monitor, 16x9 Aspect, Vertical mount, with touchscreen.
-    [running at 50Hz with option for 60Hz declared in config file -AS]
-1 Bally's IO-Board, Based on 68000 procesor as interface to all gaming devices
-(Buttons, Lamps, Switches, Coin acceptor, Bill Validator, Hopper, Touchscreen, etc...)
-
-PC and IO-Board communicates via RS-232 Serial Port.
-
-Additional CD-ROM games: "99 Bottles of Beer"
+This one doesnt have a dongle
+but the sound card, s3 virge video card
+and isa custom board has to be there
+or the disc wont load and gives an error
 
 **************************************************************************************************/
 
@@ -58,42 +40,130 @@ Additional CD-ROM games: "99 Bottles of Beer"
 #include "machine/i82371sb.h"
 #include "machine/i82439hx.h"
 #include "machine/pci.h"
-#include "video/voodoo_pci.h"
+
+class isa16_przone_jamma_if : public device_t, public device_isa16_card_interface
+{
+public:
+	// construction/destruction
+	isa16_przone_jamma_if(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
+	virtual ioport_constructor device_input_ports() const override;
+
+protected:
+	virtual void device_start() override;
+	virtual void device_reset() override;
+
+	virtual void device_add_mconfig(machine_config &config) override;
+
+	virtual void remap(int space_id, offs_t start, offs_t end) override;
+
+private:
+	std::unique_ptr<uint8_t[]> m_nvram_data;
+
+	void mem_map(address_map &map);
+
+	uint8_t nvram_r(offs_t offset);
+	void nvram_w(offs_t offset, uint8_t data);
+};
+
+DEFINE_DEVICE_TYPE(ISA16_PRZONE_JAMMA_IF, isa16_przone_jamma_if, "przone_jamma_if", "ISA16 Prize Zone custom JAMMA I/F")
+
+isa16_przone_jamma_if::isa16_przone_jamma_if(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: device_t(mconfig, ISA16_PRZONE_JAMMA_IF, tag, owner, clock)
+	, device_isa16_card_interface(mconfig, *this)
+//	, m_iocard(*this, "IOCARD%u", 1U)
+{
+}
+
+void isa16_przone_jamma_if::device_add_mconfig(machine_config &config)
+{
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1); // unknown NVRAM type
+}
+
+void isa16_przone_jamma_if::device_start()
+{
+	set_isa_device();
+
+	m_nvram_data = std::make_unique<uint8_t[]>(0x4000);
+	subdevice<nvram_device>("nvram")->set_base(m_nvram_data.get(), 0x4000);
+}
+
+void isa16_przone_jamma_if::remap(int space_id, offs_t start, offs_t end)
+{
+	if (space_id == AS_PROGRAM)
+	{
+		m_isa->install_memory(0x000d0000, 0x000d3fff, *this, &isa16_przone_jamma_if::mem_map);
+	}
+}
+
+void isa16_przone_jamma_if::device_reset()
+{
+}
+
+uint8_t isa16_przone_jamma_if::nvram_r(offs_t offset)
+{
+	return m_nvram_data[offset];
+}
+
+void isa16_przone_jamma_if::nvram_w(offs_t offset, uint8_t data)
+{
+	m_nvram_data[offset] = data;
+}
+
+void isa16_przone_jamma_if::mem_map(address_map &map)
+{
+	map(0x0000, 0x3fff).rw(FUNC(isa16_przone_jamma_if::nvram_r), FUNC(isa16_przone_jamma_if::nvram_w));
+}
+
+// TODO: at least I/O ports $300-$307
+
+static INPUT_PORTS_START( przone_jamma )
+INPUT_PORTS_END
+
+ioport_constructor isa16_przone_jamma_if::device_input_ports() const
+{
+	return INPUT_PORTS_NAME(przone_jamma);
+}
 
 namespace {
 
-class gammagic_state : public driver_device
+class przone_state : public driver_device
 {
 public:
-	gammagic_state(const machine_config &mconfig, device_type type, const char *tag)
+	przone_state(const machine_config &mconfig, device_type type, const char *tag)
 		: driver_device(mconfig, type, tag)
 	{ }
 
-	void gammagic(machine_config &config);
+	void przone(machine_config &config);
 
 private:
-	void gammagic_io(address_map &map);
-	void gammagic_map(address_map &map);
+	void main_io(address_map &map);
+	void main_map(address_map &map);
 
 	static void smc_superio_config(device_t *device);
 };
 
-void gammagic_state::gammagic_map(address_map &map)
+void przone_state::main_map(address_map &map)
 {
 	map.unmap_value_high();
 }
 
-void gammagic_state::gammagic_io(address_map &map)
+void przone_state::main_io(address_map &map)
 {
 	map.unmap_value_high();
 }
 
-static INPUT_PORTS_START( gammagic )
+static INPUT_PORTS_START( przone )
 INPUT_PORTS_END
 
 static void isa_internal_devices(device_slot_interface &device)
 {
 	device.option_add("fdc37c93x", FDC37C93X);
+}
+
+void przone_isa16_cards(device_slot_interface &device)
+{
+	device.option_add("przone_jamma_if", ISA16_PRZONE_JAMMA_IF);
+//	device.option_add("vibra16", ISA16_VIBRA16);
 }
 
 static void isa_com(device_slot_interface &device)
@@ -108,7 +178,7 @@ static void isa_com(device_slot_interface &device)
 	device.option_add("sun_kbd", SUN_KBD_ADAPTOR);
 }
 
-void gammagic_state::smc_superio_config(device_t *device)
+void przone_state::smc_superio_config(device_t *device)
 {
 	fdc37c93x_device &fdc = *downcast<fdc37c93x_device *>(device);
 	fdc.set_sysopt_pin(1);
@@ -124,11 +194,11 @@ void gammagic_state::smc_superio_config(device_t *device)
 	fdc.nrts2().set(":serport1", FUNC(rs232_port_device::write_rts));
 }
 
-void gammagic_state::gammagic(machine_config &config)
+void przone_state::przone(machine_config &config)
 {
 	pentium_device &maincpu(PENTIUM(config, "maincpu", 133000000));
-	maincpu.set_addrmap(AS_PROGRAM, &gammagic_state::gammagic_map);
-	maincpu.set_addrmap(AS_IO, &gammagic_state::gammagic_io);
+	maincpu.set_addrmap(AS_PROGRAM, &przone_state::main_map);
+	maincpu.set_addrmap(AS_IO, &przone_state::main_io);
 	maincpu.set_irq_acknowledge_callback("pci:07.0:pic8259_master", FUNC(pic8259_device::inta_cb));
 	maincpu.smiact().set("pci:00.0", FUNC(i82439hx_host_device::smi_act_w));
 
@@ -143,33 +213,20 @@ void gammagic_state::gammagic(machine_config &config)
 	i82371sb_ide_device &ide(I82371SB_IDE(config, "pci:07.1", 0, "maincpu"));
 	ide.irq_pri().set("pci:07.0", FUNC(i82371sb_isa_device::pc_irq14_w));
 	ide.irq_sec().set("pci:07.0", FUNC(i82371sb_isa_device::pc_mirq0_w));
-	ide.subdevice<bus_master_ide_controller_device>("ide1")->slot(0).set_default_option("xm3301");
-//  ide.subdevice<bus_master_ide_controller_device>("ide1")->slot(0).set_option_machine_config("xm3301", cdrom_config);
+	ide.subdevice<bus_master_ide_controller_device>("ide1")->slot(0).set_default_option("cdrom");
+//  ide.subdevice<bus_master_ide_controller_device>("ide1")->slot(0).set_option_machine_config("cdrom", cdrom_config);
 	ide.subdevice<bus_master_ide_controller_device>("ide2")->slot(0).set_default_option(nullptr);
 
 	PCI_SLOT(config, "pci:1", pci_cards, 15, 0, 1, 2, 3, nullptr);
-	PCI_SLOT(config, "pci:2", pci_cards, 16, 1, 2, 3, 0, "ess_solo1");
-//  PCI_SLOT(config, "pci:3", pci_cards, 17, 2, 3, 0, 1, "voodoo");
-	PCI_SLOT(config, "pci:4", pci_cards, 18, 3, 0, 1, 2, "oti64111");
-
-	// FIXME: this should obviously map to above instead of direct PCI mount ...
-	voodoo_2_pci_device &voodoo(VOODOO_2_PCI(config, "pci:11.0", 0, "maincpu", "voodoo_screen"));
-	voodoo.set_fbmem(2);
-	voodoo.set_tmumem(4, 4);
-	voodoo.set_status_cycles(1000);
-
-	// FIXME: ... and run in VGA passthru mode not define its own screen canvas
-	screen_device &screen(SCREEN(config, "voodoo_screen", SCREEN_TYPE_RASTER));
-	screen.set_refresh_hz(57);
-	screen.set_size(800, 262);
-	screen.set_visarea(0, 512 - 1, 0, 240 - 1);
-	screen.set_screen_update("pci:11.0", FUNC(voodoo_2_pci_device::screen_update));
+	PCI_SLOT(config, "pci:2", pci_cards, 16, 1, 2, 3, 0, nullptr);
+	PCI_SLOT(config, "pci:3", pci_cards, 17, 2, 3, 0, 1, nullptr);
+	PCI_SLOT(config, "pci:4", pci_cards, 18, 3, 0, 1, 2, "virge");
 
 	ISA16_SLOT(config, "board4", 0, "pci:07.0:isabus", isa_internal_devices, "fdc37c93x", true).set_option_machine_config("fdc37c93x", smc_superio_config);
-	ISA16_SLOT(config, "isa1", 0, "pci:07.0:isabus", pc_isa16_cards, nullptr, false);
+	ISA16_SLOT(config, "isa1", 0, "pci:07.0:isabus", przone_isa16_cards, "przone_jamma_if", true);
+	// TODO: one slot for vibra16
 	ISA16_SLOT(config, "isa2", 0, "pci:07.0:isabus", pc_isa16_cards, nullptr, false);
 	ISA16_SLOT(config, "isa3", 0, "pci:07.0:isabus", pc_isa16_cards, nullptr, false);
-	ISA16_SLOT(config, "isa4", 0, "pci:07.0:isabus", pc_isa16_cards, nullptr, false);
 
 	rs232_port_device& serport0(RS232_PORT(config, "serport0", isa_com, nullptr));
 	serport0.rxd_handler().set("board4:fdc37c93x", FUNC(fdc37c93x_device::rxd1_w));
@@ -187,31 +244,13 @@ void gammagic_state::gammagic(machine_config &config)
 }
 
 
-ROM_START( gammagic )
+ROM_START( przonegd )
 	ROM_REGION32_LE(0x40000, "pci:07.0", 0)
+	// borrowed from pcipc -bios 2 (El Torito), technically a BAD_DUMP
 	ROM_LOAD("m7s04.rom",   0, 0x40000, CRC(3689f5a9) SHA1(8daacdb0dc6783d2161680564ffe83ac2515f7ef))
 
-	ROM_REGION(0x20000, "v8000", 0)
-	// 68k code, unknown size/number of roms
-	ROM_LOAD("v8000.bin", 0x0000, 0x20000, NO_DUMP)
-
-	DISK_REGION( "pci:07.1:ide1:0:xm3301" )
-	DISK_IMAGE_READONLY( "gammagic", 0, SHA1(947650b13f87eea6608a32a1bae7dca19d911f15) )
-ROM_END
-
-ROM_START( 99bottles )
-	ROM_REGION32_LE(0x40000, "pci:07.0", 0)
-	ROM_LOAD("m7s04.rom",   0, 0x40000, CRC(3689f5a9) SHA1(8daacdb0dc6783d2161680564ffe83ac2515f7ef))
-
-	// TODO: move to OTI card
-	//ROM_LOAD("otivga_tx2953526.rom", 0x0000, 0x8000, CRC(916491af) SHA1(d64e3a43a035d70ace7a2d0603fc078f22d237e1))
-
-	ROM_REGION(0x20000, "v8000", 0)
-	// 68k code, unknown size/number of roms
-	ROM_LOAD("v8000.bin", 0x0000, 0x20000, NO_DUMP)
-
-	DISK_REGION( "pci:07.1:ide1:0:xm3301" )
-	DISK_IMAGE_READONLY( "99bottles", 0, BAD_DUMP SHA1(0b874178c8dd3cfc451deb53dc7936dc4ad5a04f))
+	DISK_REGION( "pci:07.1:ide1:0:cdrom" )
+	DISK_IMAGE_READONLY( "prizezonegold_201", 0, SHA1(54eec0d7b8629f8e8a4c9b99184ece0be0e8eb06) )
 ROM_END
 
 } // anonymous namespace
@@ -224,5 +263,4 @@ ROM_END
 ***************************************************************************/
 
 
-GAME( 1999, gammagic,  0,        gammagic, gammagic, gammagic_state, empty_init, ROT0, "Bally Gaming Co.", "Game Magic",         MACHINE_NOT_WORKING | MACHINE_NO_SOUND | MACHINE_IMPERFECT_GRAPHICS )
-GAME( 1999, 99bottles, gammagic, gammagic, gammagic, gammagic_state, empty_init, ROT0, "Bally Gaming Co.", "99 Bottles of Beer", MACHINE_NOT_WORKING | MACHINE_NO_SOUND | MACHINE_IMPERFECT_GRAPHICS )
+GAME( 199?, przonegd,  0,        przone, przone, przone_state, empty_init, ROT0, "Lazer-Tron", "Prize Zone Gold (v2.01)", MACHINE_NOT_WORKING | MACHINE_NO_SOUND | MACHINE_IMPERFECT_GRAPHICS )
