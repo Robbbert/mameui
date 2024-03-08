@@ -2,7 +2,7 @@
 // copyright-holders:David Haywood
 /* blitter function */
 
-void epic12_device::FUNCNAME(BLIT_PARAMS)
+void ep1c12_device::FUNCNAME(BLIT_PARAMS)
 {
 	int yf;
 
@@ -130,21 +130,21 @@ void epic12_device::FUNCNAME(BLIT_PARAMS)
 
 		while (bigblocks)
 		{
-			#include "epic12pixel.hxx"
-			#include "epic12pixel.hxx"
-			#include "epic12pixel.hxx"
-			#include "epic12pixel.hxx"
-			#include "epic12pixel.hxx"
-			#include "epic12pixel.hxx"
-			#include "epic12pixel.hxx"
-			#include "epic12pixel.hxx"
+			#include "ep1c12pixel.ipp"
+			#include "ep1c12pixel.ipp"
+			#include "ep1c12pixel.ipp"
+			#include "ep1c12pixel.ipp"
+			#include "ep1c12pixel.ipp"
+			#include "ep1c12pixel.ipp"
+			#include "ep1c12pixel.ipp"
+			#include "ep1c12pixel.ipp"
 
 			bigblocks--;
 		}
 #endif
 		while (bmp < end)
 		{
-			#include "epic12pixel.hxx"
+			#include "ep1c12pixel.ipp"
 		}
 
 	}
