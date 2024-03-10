@@ -1,17 +1,17 @@
 // license:BSD-3-Clause
 // copyright-holders:Angelo Salese
-#ifndef MAME_BUS_PCI_CLGD546X_LAGUNA_H
-#define MAME_BUS_PCI_CLGD546X_LAGUNA_H
+#ifndef MAME_BUS_PCI_CLGD5446_H
+#define MAME_BUS_PCI_CLGD5446_H
 
 #pragma once
 
 #include "pci_slot.h"
 #include "video/pc_vga_cirrus.h"
 
-class cirrus_gd5465_laguna3d_device :  public pci_card_device
+class cirrus_gd5446_pci_device :  public pci_card_device
 {
 public:
-	cirrus_gd5465_laguna3d_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
+	cirrus_gd5446_pci_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	void legacy_memory_map(address_map &map);
 	void legacy_io_map(address_map &map);
@@ -30,6 +30,7 @@ protected:
 
 	virtual void mmio_map(address_map &map);
 	virtual void vram_aperture_map(address_map &map);
+	virtual void gpio_map(address_map &map);
 private:
 	required_device<cirrus_gd5446_vga_device> m_vga;
 	required_memory_region m_vga_rom;
@@ -39,10 +40,8 @@ private:
 
 //  u32 unmap_log_r(offs_t offset, u32 mem_mask = ~0);
 //  void unmap_log_w(offs_t offset, u32 data, u32 mem_mask = ~0);
-
-	bool m_vga_legacy_enable = false;
 };
 
-DECLARE_DEVICE_TYPE(CIRRUS_GD5465_LAGUNA3D, cirrus_gd5465_laguna3d_device)
+DECLARE_DEVICE_TYPE(GD5446_PCI, cirrus_gd5446_pci_device)
 
 #endif // MAME_BUS_PCI_CLGD546X_LAGUNA_H
