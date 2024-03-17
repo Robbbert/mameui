@@ -41,8 +41,8 @@ void zx_state::refresh_w(offs_t offset, uint8_t data)
 	m_prev_refresh = offset;
 	if(m_ula_char_buffer != 0xffff) {
 		uint64_t time = m_maincpu->total_cycles();
-		int x = 2*((time-m_base_vsync_clock) % 207);
-		int y = (time-m_base_vsync_clock) / 207;
+		int x = 2*((time-m_base_vsync_clock) % m_const);
+		int y = (time-m_base_vsync_clock) / m_const;
 		uint8_t pixels;
 		if(m_region_gfx1)
 			pixels = m_region_gfx1->base()[((m_ula_char_buffer & 0x3f) << 3) | (m_ypos & 7)];
@@ -62,10 +62,10 @@ void zx_state::refresh_w(offs_t offset, uint8_t data)
 void zx_state::recalc_hsync()
 {
 	uint64_t time = machine().time().as_ticks(m_maincpu->clock());
-	uint32_t step = (time - m_base_vsync_clock) % 207;
+	uint32_t step = (time - m_base_vsync_clock) % m_const;
 	uint32_t delta;
 	if (m_hsync_active)
-		delta = 207 - step;
+		delta = m_const - step;
 	else {
 		if(step < 192)
 			delta = 192 - step;
@@ -87,9 +87,9 @@ uint8_t zx_state::ula_low_r(offs_t offset)
 
 	if(m_nmi_on) {
 		uint64_t time = m_maincpu->total_cycles();
-		int pos = (time-m_base_vsync_clock) % 207;
+		int pos = (time-m_base_vsync_clock) % m_const;
 		if(pos >= 192)
-			m_maincpu->adjust_icount(pos - 207);
+			m_maincpu->adjust_icount(pos - m_const);
 	}
 	return cdata;
 }
@@ -106,9 +106,9 @@ uint8_t zx_state::ula_high_r(offs_t offset)
 
 	if(m_nmi_on) {
 		uint64_t time = m_maincpu->total_cycles();
-		int pos = (time-m_base_vsync_clock) % 207;
+		int pos = (time-m_base_vsync_clock) % m_const;
 		if(pos >= 192)
-			m_maincpu->adjust_icount(pos - 207);
+			m_maincpu->adjust_icount(pos - m_const);
 	}
 
 	if(cdata & 0x40)

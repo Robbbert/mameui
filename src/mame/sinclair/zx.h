@@ -98,6 +98,7 @@ private:
 	bool m_nmi_on = false, m_nmi_generator_active = false;
 	uint64_t m_base_vsync_clock = 0, m_vsync_start_time = 0;
 	uint32_t m_ypos = 0;
+	uint8_t m_const = 207;
 
 	uint8_t m_prev_refresh = 0;
 	uint8_t m_speaker_state = 0;

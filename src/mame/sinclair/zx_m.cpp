@@ -22,6 +22,10 @@ void zx_state::init_zx()
 		m_program->unmap_readwrite(0x8000, 0xffff);
 	else if(m_ram->size() < 16384)
 		m_program->unmap_readwrite(0x4000 + m_ram->size(), 0xffff);
+
+	m_const = 207;
+	if (m_region_gfx1)
+		m_const = 208;
 }
 
 void zx_state::machine_reset()
@@ -53,10 +57,10 @@ void zx_state::drop_sync()
 		m_vsync_active = false;
 		m_cassette->output(-1.0);
 
-		int xs = 2*((m_vsync_start_time - m_base_vsync_clock) % 207);
-		int ys = (m_vsync_start_time - m_base_vsync_clock) / 207;
-		int xe = 2*((time - m_base_vsync_clock) % 207);
-		int ye = (time - m_base_vsync_clock) / 207;
+		int xs = 2*((m_vsync_start_time - m_base_vsync_clock) % m_const);
+		int ys = (m_vsync_start_time - m_base_vsync_clock) / m_const;
+		int xe = 2*((time - m_base_vsync_clock) % m_const);
+		int ye = (time - m_base_vsync_clock) / m_const;
 		if(xs >= 384) {
 			xs = 0;
 			ys++;
@@ -106,7 +110,7 @@ void zx_state::drop_sync()
 			m_nmi_on = m_hsync_active = false;
 			recalc_hsync();
 		} else
-			m_ypos = ((time-m_base_vsync_clock)%207) < 192 ? 0 : -1;
+			m_ypos = ((time-m_base_vsync_clock)%m_const) < 192 ? 0 : -1;
 	}
 }
 
@@ -198,6 +202,11 @@ uint8_t zx_state::pc8300_io_r(offs_t offset)
 		m_cassette->output(+1.0);
 		if(m_cassette_cur_level <= 0)
 			data &= 0x7f;
+
+		if (!m_vsync_active && !m_nmi_generator_active) {
+			m_vsync_active = true;
+			m_vsync_start_time = m_maincpu->total_cycles();
+		}
 	}
 
 	return data;
@@ -235,6 +244,11 @@ uint8_t zx_state::pow3000_io_r(offs_t offset)
 		m_cassette->output(+1.0);
 		if(m_cassette_cur_level <= 0)
 			data &= 0x7f;
+
+		if (!m_vsync_active && !m_nmi_generator_active) {
+			m_vsync_active = true;
+			m_vsync_start_time = m_maincpu->total_cycles();
+		}
 	}
 
 	return data;
