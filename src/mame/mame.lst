@@ -15968,7 +15968,8 @@ toramich                        // 11/1987 (c) 1987 (Japan
 tvcapcom                        //
 
 @source:capcom/vulgus.cpp
-mach9                           // bootleg (ITISA)
+1942iti                         // bootleg (Itisa)
+mach9                           // bootleg (Itisa)
 vulgus                          // 5/1984 (c) 1984
 vulgusa                         // 5/1984 (c) 1984
 vulgusj                         // 5/1984 (c) 1984
@@ -16151,12 +16152,6 @@ tascr30a
 tascr30b
 tascr30g
 
-@source:chess/yeno_301xl.cpp
-y301xl
-
-@source:chess/yeno_532xl.cpp
-y532xl
-
 @source:chromatics/cgc7900.cpp
 cgc7900                         //
 
@@ -16317,7 +16312,9 @@ bg_ddb                          //
 bg_max                          //
 bg_maxa                         //
 ccorsario                       // (c) 2002 Cirsa / Unidesa
+ccorsarioa                      // (c) 2002 Cirsa / Unidesa
 charles                         // (c) 2002? Cirsa / Unidesa / Europea
+gladiador                       // (c) 2008 Cirsa / Unidesa
 mltpoints                       // (c) 2006 Cirsa / Unidesa
 neptunp2                        // (c) 2003 Cirsa / Unidesa
 perlacrb                        // (c) 2008 Cirsa / Unidesa
@@ -20334,6 +20331,7 @@ thegladpcb                      //
 thegladpcba                     //
 
 @source:igs/pgm2.cpp
+bubucar                         // (c) 2009
 ddpdojt                         // (c) 2010
 kov2nl                          // (c) 2008
 kov2nl_301                      //
@@ -30169,6 +30167,8 @@ magslot                         // (c) 2003 GMS
 rbmk                            // (c) 1998 GMS
 rbspm                           // (c) 1998 GMS
 sc2in1                          // (c) 2001 GMS
+ssanguoj                        // (c) 1998 GMS
+sscs                            // (c) 1999 GMS
 super555                        // (c) 1999 GMS
 
 @source:misc/goldngam.cpp
@@ -34922,6 +34922,7 @@ nmicro2
 @source:novag/primo.cpp
 nprimo
 nsnova
+nsnovaa
 supremo
 
 @source:novag/robotadv.cpp
@@ -46257,6 +46258,15 @@ vl1
 
 @source:yamaha/ymvl70.cpp
 vl70                            // 1996 VL70-m
+
+@source:yeno/301xl.cpp
+y301xl
+
+@source:yeno/416xl.cpp
+y416xl
+
+@source:yeno/532xl.cpp
+y532xl
 
 @source:yunsung/nmg5.cpp
 7ordi                           // (c) 2002 Yun Sung
