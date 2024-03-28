@@ -861,6 +861,7 @@ void m5_state::m5_mem(address_map &map)
 	//map(0x4000, 0x5fff).bankr("bank3r").bankw("bank3w");
 	//map(0x6000, 0x6fff).bankr("bank4r").bankw("bank4w");
 	map(0x7000, 0x7fff).ram();                                         //4kb internal RAM
+	map(0x8000, 0xffff).ram();           // Robbbert 2024-03-28 MT08796
 	//map(0x8000, 0xbfff).bankr("bank5r").bankw("bank5w");
 	//map(0xc000, 0xffff).bankr("bank6r").bankw("bank6w");
 }
