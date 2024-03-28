@@ -163,7 +163,7 @@ protected:
 	bool m_port2_written;
 
 	u8 m_trcsr, m_rmcr, m_rdr, m_tdr, m_rsr, m_tshr;
-	int m_rxbits, m_txbits, m_txstate, m_trcsr_read_tdre, m_trcsr_read_orfe, m_trcsr_read_rdrf, m_tx, m_ext_serclock;
+	int m_rxbits, m_txbits, m_txstate, m_trcsr_read_tdre, m_trcsr_read_orfe, m_trcsr_read_rdrf, m_tx, m_sci_clocks;
 	bool m_use_ext_serclock;
 
 	u8 m_latch09;
@@ -198,6 +198,8 @@ protected:
 	void serial_transmit();
 	void serial_receive();
 	TIMER_CALLBACK_MEMBER(sci_tick);
+	void sci_clock_internal(u8 divider);
+	void reset_sci_timer();
 	void set_os3(int state);
 };
 
