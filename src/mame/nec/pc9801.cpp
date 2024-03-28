@@ -2069,7 +2069,7 @@ MACHINE_RESET_MEMBER(pc9801vm_state,pc9801rs)
 
 	m_dac1bit_disable = true;
 
-	memset(&m_egc, 0, sizeof(m_egc));
+	m_egc = {}; //memset(&m_egc, 0, sizeof(m_egc));  This gives warning "clearing an object of non-trivial type"
 }
 
 MACHINE_RESET_MEMBER(pc9801bx_state,pc9801bx2)
