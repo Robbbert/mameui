@@ -602,6 +602,15 @@ void winwindow_update_cursor_state(running_machine &machine)
 
 	auto &window = static_cast<win_window_info &>(*osd_common_t::window_list().front());
 
+	// MESSUI - rationalise the mouse control
+	bool a = winwindow_has_focus(); // always 1; this function not called otherwise
+	bool b = window.fullscreen();  // 1 = fullscreen
+	bool c = GetMenu(window.platform_window()) ? 1:0;   // 1 = NewUI enabled
+	bool d = machine.paused();  // 1 = paused
+
+#if 0
+	//bool e = WINOSD(machine)->should_hide_mouse();    // this is stupid since it should be active for most arcade games, so ignore it
+	//printf("focus=%X;fullscreen=%X;menu=%X;paused=%X;should_hide=%X\n",a,b,c,d,e);
 	// if we should hide the mouse cursor, then do it
 	// rules are:
 	//   1. we must have focus before hiding the cursor
@@ -616,7 +625,7 @@ void winwindow_update_cursor_state(running_machine &machine)
 		window.hide_pointer();
 
 		// clip pointer to game video window
-		//window.capture_pointer();     // MESSUI
+		window.capture_pointer();
 	}
 	else
 	{
@@ -626,6 +635,17 @@ void winwindow_update_cursor_state(running_machine &machine)
 		// allow cursor to move freely
 		window.release_pointer();
 	}
+#endif
+
+	if (a && b && !c && !d)
+		window.hide_pointer();
+	else
+		window.show_pointer();
+
+	if (a && b && !c)
+		window.capture_pointer();
+	else
+		window.release_pointer();
 }
 
 
