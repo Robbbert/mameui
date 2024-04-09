@@ -136,40 +136,42 @@
    -----+--------------------------+---------+---------+----------+---------+----------+---------+---------------+------+------+-------
     VER |  NAME                    | SYSTEM  | PROGRAM | CHAR GEN | CG P/N  | CLR PROM | CP P/N  | GAME TYPE     | DUMP | STAT | ADDED
    -----+--------------------------+---------+---------+----------+---------+----------+---------+---------------+------+------+-------
- *  7.4 | Gaming Poker (w. export) |   903   | AUG/81  | PKCG     | 6300010 | unknown  | 6600020 | Gaming        | Yes  | OK   | Yes
+ *  7.4 | Gaming Poker (w. export) |   903   | AUG/81  | PKCG     | 6300010 | POKCLR   | 6600020 | Gaming        | Yes  | OK   | Yes
     7.6 | Poker                    |   903   | AUG/81  | PKCG     | 6300010 | POKCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
  *  7.9 | Arcade Poker             |   903   | AUG/81  | PKCG     | 6300010 | POKCLR   | 6600020 | Amusement     | Yes  | BD   | Yes
  *  8.0 | Arcade Black Jack        |   903   | SEP/81  | CPKCG    | 6300010 | POKCLR   | 6600020 | Amusement     | Yes  | BD   | Yes
  *  9.4 | Keno                     |   903   | DEC/81  | KCG      | 6300060 | POKCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
- * 10.7 | Big Game                 |   903   | MAR/82  | LOTCG    | unknown | BCLR     | unknown | Amusement?    | Yes  | OK   | Yes
+   10.2 | Keno                     |   903   | DEC/81  | KCG      | 6300060 | POKCLR   | 6600020 | Amusement     | No   |      | No
+ * 10.7 | Big Game Lottery         |   904   | MAR/82  | LOTCG    | 6300050 | LOTCLR   | 6600030 | Gaming        | Yes  | OK   | Yes
  * 11.3 | Black Jack               |   903   |         | CPKCG?   | 6300010 | POKCLR   | 6600020 | Amusement?    | No   |      | No
  * 12.3 | Ticket Poker             |   903   | JUN/82  | PKCG     | 6300010 | POKCLR   | 6600020 | Amusement     | Yes  | BD   | Yes
- * 12.5 | Bingo                    |   903   | JUN/82  | NBCG     | unknown | BCLR     | unknown | Amusement     | Yes  | OK   | Yes
- * 12.7 | Keno                     |  903/4? | JUL/82  | KCG      | 6300060 | POKCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
+ * 12.5 | Nudge Bingo              |   903   | JUN/82  | NBCG     | 6300040 | BCLR     | 6300040 | Amusement     | Yes  | OK   | Yes
+ * 12.7 | Keno                     |   903   | JUL/82  | KCG      | 6300060 | POKCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
  * 12.8 | Arcade Game (Draw Poker) |   903   | JUL/82  | PKCG     | 6300010 | POKCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
    13.4 | Nudge Bingo              |   903   | SEP/82  | NBCG     | 6300040 | BCLR     | 6600040 | Amusement     | Yes  | OK   | Yes
    14.5 | Pixels                   |   903   | DEC/82  | PIXCG    | 6300070 | PIXCLR   | 6600050 | Amusement     | Yes  | BD   | Yes
    14.7 | Nudge Bingo              |   903   |         | NBCG     | 6300040 | BCLR     | 6600040 | Amusement     | No   |      | No
    15.0 | Punchboard               |   903   |         | PBCG     | 6300190 | PBCLR    | 6600130 | Gaming Wash   | No   |      | No
    15.7 | Double-Draw Poker        |   903   | JAN/83  | CPKCG    | 6300010 | POKCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
-   15.8 | Poker Montana            |    ?    |         | CPKCG    | 6300010 | POKCLR   | 6600020 | Gaming        | No   |      | No
+   15.8 | Poker Montana            |   904   |         | CPKCG    | 6300010 | POKCLR   | 6600020 | Gaming        | No   |      | No
    15.9 | Wild Double-Up           |   905   | JAN/83  | JKR2CG   | 6300100 | WLDCLR   | 6600010 | Amusement     | Yes  | OK   | Yes
-   16.2 | Gaming Lottery           |    ?    |         | LCG      | 6300050 | LOTCLR   | 6600030 | Gaming        | No   |      | No
-   16.3 | Black Jack               |    ?    |         | CPKCG    | 6300010 | POKCLR   | 6600020 | Amusement     | No   |      | No
+   16.2 | Gaming Lottery           |   904   |         | LCG      | 6300050 | LOTCLR   | 6600030 | Gaming        | No   |      | No
+   16.3 | Black Jack               |   903   |         | CPKCG    | 6300010 | POKCLR   | 6600020 | Amusement     | No   |      | No
    16.4 | K.I.S.S. Keno            |   904   | MAY/83  | KCG      | 6300060 | PCLR     | 6600020 | Amusement     | Yes  | IC   | Yes
-   16.5 | K.I.S.S. Poker           |    ?    |         | POKER    | 6300010 | POKCLR   | 6600020 | Amusement     | No   |      | No
-   16.6 | Nudge Bingo              |    ?    |         | NBCG     | 6300040 | BCOLOR   | 6600040 | Amusement     | No   |      | No
-   16.7 | Poker                    |    ?    |         | PCG      | 6300010 | POKCLR   | 6600020 | Amusement     | No   |      | No
-   16.8 | Keno                     |   903   | MAR/83  | KCG      | 6300060 | POKCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
-   17.0 | Poker                    |   905   |         | POKERCGs | 6300010 | PKRCLR   | 6600020 | Amusement     | Yes  |      | Yes
-   17.1 | Nudge Bingo              |    ?    |         | NBCG     | 6300040 | BCOLOR   | 6600040 | Amusement     | No   |      | No
+   16.5 | K.I.S.S. Poker           |   903   |         | POKER    | 6300010 | POKCLR   | 6600020 | Amusement     | No   |      | No
+   16.6 | Nudge Bingo              |   903   |         | NBCG     | 6300040 | BCOLOR   | 6600040 | Amusement     | No   |      | No
+   16.7 | Poker                    |   903   |         | PCG      | 6300010 | POKCLR   | 6600020 | Amusement     | No   |      | No
+   16.8 | Arcade Keno              |   903   | MAR/83  | KCG      | 6300060 | POKCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
+ * 16.9 | Keno                     |   904   |         | KCG      |         |          |         | Gaming        | No   |      | No
+   17.0 | Amusement Poker          |   905   |         | JKRPKR   | 6300010 | PKRCLR   | 6600020 | Amusement     | Yes  | OK   | Yes
+   17.1 | Nudge Bingo              |   903   |         | NBCG     | 6300040 | BCOLOR   | 6600040 | Amusement     | No   |      | No
    17.2 | Double/Double Poker      |   905   | MAY/83  | JKRPKR   | 6300100 | WLDCLR   | 6600010 | Amusement     | Yes  | OK   | Yes
-   17.3 | Casino Poker             |    ?    |         | PKCG     | 6300010 | POKCLR   | 6600020 | Nevada Gaming | No   |      | No
-   17.4 | Gin Gaming               |    ?    |         | GCG0.2   | 6300080 | GINCLR   | 6600060 | Nevada Gaming | No   |      | No
-   17.5 | Gaming Draw Poker        |   903   | DEC/84  | PKCG     | 6300010 | POKCLR   | 6600020 | Nevada Gaming | Yes  | OK   | Yes
+   17.3 | Casino Poker             |   904   |         | PKCG     | 6300010 | POKCLR   | 6600020 | Nevada Gaming | No   |      | No
+   17.4 | Gin Gaming               |   904   |         | GCG0.2   | 6300080 | GINCLR   | 6600060 | Nevada Gaming | No   |      | No
+   17.5 | Gaming Draw Poker        |   904   | DEC/84  | PKCG     | 6300010 | POKCLR   | 6600020 | Nevada Gaming | Yes  | OK   | Yes
    17.6 | Nudge                    |   903   | SEP/82  | NBCG     | 6300040 | BCLR     | 6600040 | Amusement     | Yes  | OK   | Yes
-   17.7 | Keno                     |    ?    |         | KCG      | 6300060 | POKCLR   | 6600020 | Gaming        | No   |      | No
-   17.9 | AWP Poker                |    ?    |         | PKCG     | 6300010 | POKCLR   | 6600020 | Gaming        | No   |      | No
+   17.7 | Keno                     |   904   |         | KCG      | 6300060 | POKCLR   | 6600020 | Gaming        | No   |      | No
+   17.9 | AWP Poker                |   904   |         | PKCG     | 6300010 | POKCLR   | 6600020 | Gaming        | No   |      | No
  * 18.0 | Gin                      |   905   |         | GCG2     | 6300110 | MLTCLR   | 6600070 | Amusement     | No   |      | No
    18.1 | Nudge                    |    ?    | JUL/83  | NBCG     | 6300040 | BCLR     | 6600040 | Amusement     | Yes  | OK   | Yes
    18.2 | Amusement Poker          |   905   |         | JKRCG02  | 6300100 | WLDCLR   | 6600010 | Amusement     | No   |      | No
@@ -261,7 +263,7 @@
         |                          |         |         |          |         |          |         |               |      |      |
    51.07| Poker (906-III)          | 906-III |         | GP2CG    | unknown | WILD     | unknown | Nevada Gaming | Yes  | OK   | Yes
    51.08| Poker (906-III)          | 906-III |         | GP2CG    | unknown | WILD     | unknown | Nevada Gaming | Yes  | OK   | Yes
-   60.04| Poker (906-III)          | 906-III |         | GP2CG    | unknown | WILD     | unknown | Nevada Gaming | Yes  | OK   | Yes
+ * 60.04| Poker (906-III)          | 906-III |         | GP2CG    | unknown | WILD     | unknown | Nevada Gaming | Yes  | OK   | Yes
         |                          |         |         |          |         |          |         |               |      |      |
  * 903d | System 903 Diag.PROM     |   903   | unknown | any      | unknown | any      | unknown | Testing H/W   | Yes  | OK   | Yes
  * 905d | System 905 Diag.PROM     |   905   | unknown | any      | unknown | any      | unknown | Testing H/W   | Yes  | OK   | Yes
@@ -4898,7 +4900,7 @@ ROM_START( comg079 )  // Cal Omega v7.9 (Arcade Poker)
 	ROM_LOAD( "pkcga.u68",  0x1000, 0x0800, CRC(6e3e9b1d) SHA1(14eb8d14ce16719a6ad7d13db01e47c8f05955f0) )
 
 	ROM_REGION( 0x100, "proms", 0 )
-	ROM_LOAD( "clrprom_7.9.u28", 0x0000, 0x0100,CRC(a26a8fae) SHA1(d570fe9443a0912bd34b81ac4c3e4c5f8901f523) )
+	ROM_LOAD( "clrprom_7.9.u28", 0x0000, 0x0100, CRC(a26a8fae) SHA1(d570fe9443a0912bd34b81ac4c3e4c5f8901f523) )
 ROM_END
 
 ROM_START( comg080 )  // Cal Omega v8.0 (Arcade Black Jack)
@@ -6229,7 +6231,7 @@ GAMEL( 1983, comg164,  0,        sys903kb, keno_903, calomega_state, empty_init,
 GAMEL( 1983, comg168,  0,        sys903kb, keno_903, calomega_state, empty_init,   ROT0, "Cal Omega Inc.",                        "Cal Omega - Game 16.8 (Keno)",                     MACHINE_SUPPORTS_SAVE,                        layout_kenokb )
 GAME(  1983, comg170,  0,        sys905,   comg170,  calomega_state, empty_init,   ROT0, "Cal Omega Inc.",                        "Cal Omega - Game 17.0 (Amusement Poker)",          MACHINE_SUPPORTS_SAVE )
 GAME(  1983, comg172,  0,        sys905,   comg172,  calomega_state, empty_init,   ROT0, "Cal Omega Inc.",                        "Cal Omega - Game 17.2 (Double Double Poker)",      MACHINE_SUPPORTS_SAVE )
-GAME(  1984, comg175,  0,        sys903,   gdrwpkrd, calomega_state, empty_init,   ROT0, "Cal Omega / Casino Electronics Inc.",   "Cal Omega - Game 17.51 (Gaming Draw Poker)",       MACHINE_SUPPORTS_SAVE )
+GAME(  1984, comg175,  0,        sys903,   gdrwpkrd, calomega_state, empty_init,   ROT0, "Cal Omega / Casino Electronics Inc.",   "Cal Omega - Game 17.51 (Gaming Draw Poker, Sch 07-0T)", MACHINE_SUPPORTS_SAVE )
 GAME(  1982, comg176,  0,        sys903,   nudgensw, calomega_state, init_comg176, ROT0, "Cal Omega Inc.",                        "Cal Omega - Game 17.6 (Nudge)",                    MACHINE_SUPPORTS_SAVE )
 GAME(  1982, comg181,  0,        sys903,   nudgesw,  calomega_state, empty_init,   ROT0, "Cal Omega Inc.",                        "Cal Omega - Game 18.1 (Nudge)",                    MACHINE_SUPPORTS_SAVE )
 GAME(  1983, comg183,  0,        sys905,   pixels,   calomega_state, empty_init,   ROT0, "Cal Omega Inc.",                        "Cal Omega - Game 18.3 (Pixels)",                   MACHINE_SUPPORTS_SAVE )
