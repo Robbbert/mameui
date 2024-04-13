@@ -603,7 +603,7 @@ void winwindow_update_cursor_state(running_machine &machine)
 	auto &window = static_cast<win_window_info &>(*osd_common_t::window_list().front());
 
 	// MESSUI - rationalise the mouse control
-	bool a = winwindow_has_focus(); // always 1; this function not called otherwise
+	bool a = winwindow_has_focus(); // 1 = has focus
 	bool b = window.fullscreen();  // 1 = fullscreen
 	bool c = GetMenu(window.platform_window()) ? 1:0;   // 1 = NewUI enabled
 	bool d = machine.paused();  // 1 = paused
