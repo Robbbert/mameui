@@ -108,7 +108,7 @@ project ("qtdbg_" .. _OPTIONS["osd"])
 	uuid (os.uuid("qtdbg_" .. _OPTIONS["osd"]))
 	kind (LIBTYPE)
 
-	dofile("winui_cfg.lua")
+	dofile("windows_cfg.lua")
 	includedirs {
 		MAME_DIR .. "src/emu",
 		MAME_DIR .. "src/devices", -- accessing imagedev from debugger
@@ -124,7 +124,7 @@ project ("osd_" .. _OPTIONS["osd"])
 	uuid (os.uuid("osd_" .. _OPTIONS["osd"]))
 	kind "StaticLib"
 
-	dofile("winui_cfg.lua")
+	dofile("windows_cfg.lua")
 	osdmodulesbuild()
 
 	defines {
