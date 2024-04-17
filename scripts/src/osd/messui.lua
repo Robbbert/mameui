@@ -126,7 +126,7 @@ project ("osd_" .. _OPTIONS["osd"])
 	uuid (os.uuid("osd_" .. _OPTIONS["osd"]))
 	kind "StaticLib"
 
-	dofile("winui_cfg.lua")
+	dofile("windows_cfg.lua")
 	osdmodulesbuild()
 
 	defines {
