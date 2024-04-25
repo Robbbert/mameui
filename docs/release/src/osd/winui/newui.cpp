@@ -1532,7 +1532,7 @@ static int dialog_add_single_seqselect(struct _dialog_box *di, short x, short y,
 		return 1;
 
 	// initialize the structure
-	memset(stuff, 0, sizeof(*stuff));
+	stuff = { };
 	field->get_user_settings(stuff->settings);
 	stuff->field = field;
 	stuff->pos = di->item_count;

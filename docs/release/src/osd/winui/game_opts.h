@@ -280,9 +280,7 @@ public:
 				// BIT 10 = REQUIRES_ARTWORK
 				t = (info.machine_flags() & machine_flags::REQUIRES_ARTWORK) ? 0x0400 : 0;
 				m_cache |= t;
-				// BIT 11 = CLICKABLE_ARTWORK
-				t = (info.machine_flags() & machine_flags::CLICKABLE_ARTWORK) ? 0x0800 : 0;
-				m_cache |= t;
+				// BIT 11 = not used - was CLICKABLE_ARTWORK
 				// BIT 12 = UNOFFICIAL
 				t = (info.machine_flags() & machine_flags::UNOFFICIAL) ? 0x1000 : 0;
 				m_cache |= t;
