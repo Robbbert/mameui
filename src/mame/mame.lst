@@ -18020,7 +18020,11 @@ feagv5                          //
 feagv7                          //
 feagv7a                         //
 feagv7b                         //
+feagv7c                         //
 feagv9                          //
+feagv9a                         //
+feagv9b                         //
+feagv9c                         //
 fex68k                          //
 fex68ka                         //
 fex68kb                         //
@@ -19962,6 +19966,7 @@ cmtetrisa                       //
 cmtetrisb                       //
 cmtetrisc                       //
 cmtetrisd                       //
+cmtetriskr                      //
 cmv4                            // (c) 1992 Dyna Electronics
 cmv4a                           // (c) 1992 Dyna Electronics
 cmv801                          // (c) 198? Corsica
@@ -38505,10 +38510,12 @@ rc702                           // 1979 RC702
 rc759                           // 1984 RC759
 
 @source:rm/rm380z.cpp
-rm380z                          // 1978 RM380z with COS 4.0 firmware
-rm380zhrg                       // 1978 RM380z with COS 4.0 and HRG
-rm380z34d                       // 1978 RM380z with COS 3.4 firmware and casette
-rm380z34e                       // 1978 RM380z with COS 3.4 firmware and casette
+rm380z                          // 1978 RM380z with COS 4.0/M firmware
+rm380zhrg                       // 1978 RM380z with COS 4.0/M and HRG
+rm380zf                         // 1978 RM380z with COS 4.0/F firmware
+rm380zfhrg                      // 1978 RM380z with COS 4.0/F and HRG
+rm380z34d                       // 1978 RM380z with COS 3.4/F firmware and casette
+rm380z34e                       // 1978 RM380z with COS 3.4/M firmware and casette
 rm480z                          // 1981 RM480z
 rm480za                         // 1981 RM480z
 
