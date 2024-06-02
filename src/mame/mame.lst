@@ -16146,6 +16146,9 @@ cncchess2
 @source:chess/conic_cchess3.cpp
 cncchess3
 
+@source:chess/krypton_regency.cpp
+regency
+
 @source:chess/regence.cpp
 regence
 
@@ -19435,6 +19438,7 @@ h19                             // Heath H19
 @source:heathzenith/h89.cpp
 h89                             // Heath H89 (WH89)
 h88                             // Heath H88 (with cassette tape)
+h89_mms                         // Heath H89 with Magnolia MicroSystems(MMS) hardware
 h89_sigmasoft                   // H89 with the SigmaSoft IGC card
 z90                             // Zenith Z-90
 
@@ -19954,6 +19958,7 @@ cmast91                         // (c) 1991 Dyna Electronics
 cmast92                         // (c) 1992 Dyna Electronics
 cmast92a                        // (c) 1992 Dyna Electronics
 cmast97                         // (c) 1996 Dyna Electronics
+cmast97i                        // (c) 1996 Dyna Electronics
 cmast99                         // (c) 1999 Dyna Electronics
 cmast99b                        // bootleg
 cmaster                         // (c) 1991 Dyna Electronics
@@ -19982,6 +19987,8 @@ cmtetrisd                       //
 cmtetriskr                      //
 cmv4                            // (c) 1992 Dyna Electronics
 cmv4a                           // (c) 1992 Dyna Electronics
+cmv4zg                          // hack
+cmv4zga                         // hack
 cmv801                          // (c) 198? Corsica
 cmwm                            // (c) 199? Dyna Electronics
 crazybon                        // (c) 199? Sang Ho
@@ -23465,6 +23472,7 @@ gtmr                            // (c) 1994 Kaneko
 gtmr2                           // (c) 1995 Kaneko
 gtmr2a                          // (c) 1995 Kaneko
 gtmr2u                          // (c) 1995 Kaneko
+gtmr2ua                         // (c) 1995 Kaneko
 gtmra                           // (c) 1994 Kaneko
 gtmrb                           // (c) 1994 Kaneko
 gtmre                           // (c) 1994 Kaneko
@@ -30164,6 +30172,7 @@ gtsers3                         // (c) 1984 Greyhound Electronics
 gtsers4                         // (c) 1984 Greyhound Electronics
 gtsers5                         // (c) 1985 Greyhound Electronics
 gtsers7                         // (c) 1985 Greyhound Electronics
+gtsers7a                        // (c) 1985 Greyhound Electronics
 gtsers8                         // (c) 1984 Greyhound Electronics
 gtsers8a                        // (c) 1984 Greyhound Electronics
 gtsers9                         // (c) 1984 Greyhound Electronics
@@ -34813,6 +34822,7 @@ bubl2000                        // (c) 1998 Tuning
 bubl2000a                       // (c) 1998 Tuning
 cactus                          // bootleg
 dolmen                          // (c) 1995
+dolmenk                         // (c) 1995
 firehawk                        // (c) 2001 ESD
 firehawkv                       // (c) 2001 ESD
 grdnstrm                        // (c) 1998 Apples Industries license
@@ -36789,6 +36799,7 @@ ind250cc                        //
 indunkgam                       //
 lapbylap                        //
 larana                          //
+larana2                         //
 mundial                         //
 pinclown                        //
 pinmoonl                        //
@@ -37076,6 +37087,7 @@ sshtl_l3                        //
 sshtl_l7                        //
 
 @source:pinball/s11.cpp
+grand_l1                        //
 grand_l3                        //
 grand_l4                        //
 hs_l3                           //
@@ -40469,7 +40481,8 @@ pclubor                         // 1999.11 Print Club Goukakenran
 pclubpok                        // 1999.11 Print Club Pokemon
 pcpooh2                         // 1997.12 Print Club Winnie-the-Pooh Vol. 2
 pcpooh3                         // 1998.04 Print Club Winnie-the-Pooh Vol. 3
-pclubyo2                        // 1997.04 Print Club Yoshimoto
+pclubyo                         // 1997.02 Print Club Yoshimoto V1
+pclubyo2                        // 1997.04 Print Club Yoshimoto V2
 prc28su                         // 1997.06 Print Club 2 Vol. 8 Summer 97
 prc29au                         // 1997.10 Print Club 2 Vol. 9 Autumn 97
 prc297wi                        // 1997.10 Print Club 2 '97 Winter Ver
@@ -41500,6 +41513,7 @@ dashhero                        // b9811 (c) 1999 Sigma
 dodghero                        // b9802 (c) 1997 Sigma
 gegege                          // b9804 (c) 1997 Sigma / Banpresto
 gocowboy                        // (c) 2003 Sammy
+gunkids                         // (c) 2002 Sammy
 haekaka                         // (c) 2001 Sammy
 itazuram                        // (c) 2000 Sammy
 lufykzku                        // (c) 2001 Banpresto
@@ -41829,6 +41843,7 @@ dual68                          //
 e100                            //
 
 @source:skeleton/easy_karaoke.cpp
+bkarast
 easykara
 karams
 karatvst
@@ -42086,7 +42101,10 @@ mtd1256                         //
 mw4pole                         // (c) 1995 Waldorf Electronics GmbH Germany
 
 @source:skeleton/mx2178.cpp
-mx2178                          //
+mx2178                          // (c) 1984 Memorex
+
+@source:skeleton/mx3210.cpp
+mx3210                          // (c) 1994 Xyplex Inc.
 
 @source:skeleton/mycom.cpp
 mycom                           //
@@ -44820,8 +44838,9 @@ wardnerjb                       // bootleg
 kisssite
 
 @source:tomy/tomy_princ.cpp
-princ                           // Tomy Prin-C (Japan)
-princnt                         // Tomy Prin-C (without touch-pad)
+princnt                         // Tomy Prin-C (Japan) Rev 1
+princnt3                        // Tomy Prin-C (Japan) Rev 3
+princ                           // Tomy Prin-C Tablet (Japan)
 
 @source:tomy/tutor.cpp
 pyuuta                          // 1982 Tomy Pyuuta
