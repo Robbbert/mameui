@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 8 -->
+<softwarelist name="mbc55x_flop" description="mbc55x loose roms">
+	<software name="mbcae941d0493730">
+		<description>(NB)CalcStar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="mbc55x_flop">
+			<dataarea name="flop" size="163840">
+				<rom name="(NB)CalcStar.DSK" size="163840" crc="bc0df58e" sha1="ae941d0493730715c76de2d5d32f652b36c85f14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mbc009af5c05c11f">
+		<description>(NB)InfoStar Disk 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="mbc55x_flop">
+			<dataarea name="flop" size="163840">
+				<rom name="(NB)InfoStar Disk 1.DSK" size="163840" crc="d8093890" sha1="009af5c05c11fef6f1b0338a957233ae3fa1420f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mbc6f1d1f1aeba7e">
+		<description>(NB)InfoStar Disk 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="mbc55x_flop">
+			<dataarea name="flop" size="163840">
+				<rom name="(NB)InfoStar Disk 2.DSK" size="163840" crc="190a78d0" sha1="6f1d1f1aeba7e00cbcb08f418392e92c2fc3faab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mbcf8c8f11f6f8d2">
+		<description>(NB)InfoStar Disk 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="mbc55x_flop">
+			<dataarea name="flop" size="163840">
+				<rom name="(NB)InfoStar Disk 3.DSK" size="163840" crc="95b693d6" sha1="f8c8f11f6f8d2534dcd2ae355a7459de99083429"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mbc3c029eb13809f">
+		<description>(NB)Mailmerge and SpellStar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="mbc55x_flop">
+			<dataarea name="flop" size="163840">
+				<rom name="(NB)Mailmerge and SpellStar.DSK" size="163840" crc="98373283" sha1="3c029eb13809f23d90076fd3d35ea34b39c1a84b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mbcaaef69cbbc501">
+		<description>Sanyo MBC 550 Boot Disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="mbc55x_flop">
+			<dataarea name="flop" size="163840">
+				<rom name="Sanyo MBC 550 Boot Disk.DSK" size="163840" crc="3dbe13de" sha1="aaef69cbbc501422baa6dc6b7173ee8f24663013"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mbcfdac2acbce930">
+		<description>slideshow002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="mbc55x_flop">
+			<dataarea name="flop" size="368640">
+				<rom name="slideshow002.img" size="368640" crc="c57216b7" sha1="fdac2acbce930c76516da649e3e81e05d3970b86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mbcd4cb022a6dd7c">
+		<description>VIDEOBRD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="mbc55x_flop">
+			<dataarea name="flop" size="368640">
+				<rom name="VIDEOBRD.DSK" size="368640" crc="8ce6409c" sha1="d4cb022a6dd7ca65a194b8d90d0bc05f3c151096"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

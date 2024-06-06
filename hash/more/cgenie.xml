@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 6 -->
+<softwarelist name="cgenie_cass" description="cgenie loose roms">
+	<software name="cge6ed44bd8c43dd">
+		<description>abenteue(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cgenie_cass">
+			<dataarea name="cass" size="9331">
+				<rom name="abenteue(DE).cas" size="9331" crc="bbf55ff9" sha1="6ed44bd8c43dd8b8c9786ca801942efc5ebcda6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge280e5e36cbd57">
+		<description>Abenteuerland (19xx)(-)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cgenie_cass">
+			<dataarea name="cass" size="9205">
+				<rom name="Abenteuerland (19xx)(-)(de).cas" size="9205" crc="321710b8" sha1="280e5e36cbd578b94d58d152476de1155c282ae3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge032c9f3f84de6">
+		<description>Adressdatei II (19xx)(Alex D</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cgenie_cass">
+			<dataarea name="cass" size="10858">
+				<rom name="Adressdatei II (19xx)(Alex D.)(de).cas" size="10858" crc="917a2513" sha1="032c9f3f84de63af59dff0af6b0cc58296387536"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge4ffe35d9ebd86">
+		<description>adressen(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cgenie_cass">
+			<dataarea name="cass" size="11004">
+				<rom name="adressen(DE).cas" size="11004" crc="b8b1f920" sha1="4ffe35d9ebd8694cb098f18c0a3d568f80d78da1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgec4490c1fb92eb">
+		<description>Africa (1989)(Marcus Schneider)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cgenie_cass">
+			<dataarea name="cass" size="6949">
+				<rom name="Africa (1989)(Marcus Schneider)(de).cas" size="6949" crc="355dd131" sha1="c4490c1fb92eb64be62c166f77bfc02610b32cf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeff09e04b98cfc">
+		<description>africa(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cgenie_cass">
+			<dataarea name="cass" size="7084">
+				<rom name="africa(DE).cas" size="7084" crc="8fac32a5" sha1="ff09e04b98cfc4a1015c6c22f9a0989b3af752a7"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

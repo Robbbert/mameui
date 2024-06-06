@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="phc25_cass" description="phc25 loose roms">
+	<software name="phc793cd8a63940b">
+		<description>20-sanyo-phc25-invade_11k8b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="6360">
+				<rom name="20-sanyo-phc25-invade_11k8b.phc" size="6360" crc="6902ecac" sha1="793cd8a63940b4571ec3b53d897cf3081621382e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc68470472148f9">
+		<description>b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="971358">
+				<rom name="b.wav" size="971358" crc="d87c03af" sha1="68470472148f981eca698cd82d022c77d7014f52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phcd24c4cac138cd">
+		<description>Exsic4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="13326924">
+				<rom name="Exsic4.wav" size="13326924" crc="68d4b01b" sha1="d24c4cac138cd5745fac17a0a28111538b385554"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc53d51fd4dfe4b">
+		<description>phc25</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="925346">
+				<rom name="phc25.wav" size="925346" crc="4134d2e7" sha1="53d51fd4dfe4b5cca68974a38024efb0e7711583"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
