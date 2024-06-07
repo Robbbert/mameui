@@ -6,7 +6,7 @@
 		<description>2bis</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cass" interface="dai_cass">
+		<part name="cass1" interface="dai_cass">
 			<dataarea name="cass" size="364">
 				<rom name="2bis.txt" size="364" crc="3b3bddcd" sha1="c07e968f4370956ec28f92696d16e80ccf83ed39"/>
 			</dataarea>
@@ -16,7 +16,7 @@
 		<description>Androidenkaefig</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cass" interface="dai_cass">
+		<part name="cass1" interface="dai_cass">
 			<dataarea name="cass" size="5819090">
 				<rom name="Androidenkaefig.wav" size="5819090" crc="d6065011" sha1="2dd79bd9da4fdef57b92d648ff1b695269c63553"/>
 			</dataarea>
@@ -26,7 +26,7 @@
 		<description>dai</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cass" interface="dai_cass">
+		<part name="cass1" interface="dai_cass">
 			<dataarea name="cass" size="319386">
 				<rom name="dai.wav" size="319386" crc="f545c53a" sha1="0920195a55b31b900ef2fb1ca991d355163bfcd3"/>
 			</dataarea>
