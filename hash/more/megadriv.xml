@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1750 -->
+<!-- Number of items in this list = 1760 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -1219,16 +1219,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="(E)sonic spinball (prototype -1993-09-17).bin" size="1048576" crc="c203c557" sha1="1b17e659f8a18656c36b8e26cc997c0d8312761b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen677e1fbf2f6f9">
-		<description>(E)Story of Thor (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(E)Story of Thor (2).bin" size="3145728" crc="b97cca1c" sha1="677e1fbf2f6f90dd5a016f3bd5f305547249205a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7642,6 +7632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen8dad6d550e91d">
+		<description>Hook (hack, spanish, v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Hook (hack, spanish, v2.0)(2021)(Wave).bin" size="1048576" crc="9d347dde" sha1="8dad6d550e91dbd41c49a35d3f4eb92fe462e362"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gene4ed8750c9d5b">
 		<description>Hook (USA)</description>
 		<year>????</year>
@@ -7649,6 +7649,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Hook (USA).bin" size="1048576" crc="a2f81d5a" sha1="e4ed8750c9d5b82a591b1087029ecb87301512b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen65ae91f9cd25d">
+		<description>Hunter Girls (2023)(PSCD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3014656">
+				<rom name="Hunter Girls (2023)(PSCD Games).bin" size="3014656" crc="ad9c96d3" sha1="65ae91f9cd25de2e8ea0170aed184673dbab0827"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7672,6 +7682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen22fe34d4128ce">
+		<description>Incredible Hulk DX, The(2023)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Incredible Hulk DX, The(2023)(BillyTime! Games).bin" size="2097152" crc="b332051d" sha1="22fe34d4128ce16dc59ea534d4a179b3a5150d85"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gencd268dc32d950">
 		<description>Indiana Jones and the Last Crusade (USA)</description>
 		<year>????</year>
@@ -7679,6 +7699,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Indiana Jones and the Last Crusade (USA).bin" size="1048576" crc="8c7871ad" sha1="cd268dc32d950e3117e6d5ac7e3fec5f93660102"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf936c2d56c53d">
+		<description>Insane Pain (2022)(Blast Process Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Insane Pain (2022)(Blast Process Games).bin" size="4194304" crc="e5487539" sha1="f936c2d56c53d70366fb7afd9440066f8b6d4e7e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7742,6 +7772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gene880bfad98d0e">
+		<description>james bond 007 - the duel (europe) (rev a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="james bond 007 - the duel (europe) (rev a).md" size="524288" crc="291a3e4b" sha1="e880bfad98d0e6f9b73db63ea85fb0a103b0e1e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genc70594c06eae4">
 		<description>james bond 007 - the duel (Hack, Spanish)</description>
 		<year>????</year>
@@ -7749,16 +7789,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="james bond 007 - the duel (Hack, Spanish).bin" size="524288" crc="4daf3d0d" sha1="c70594c06eae4678a75946e1a56e407aafc7731c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gene880bfad98d0e">
-		<description>James Bond the duel (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="James Bond the duel (2).bin" size="524288" crc="291a3e4b" sha1="e880bfad98d0e6f9b73db63ea85fb0a103b0e1e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7793,12 +7823,22 @@
 		</part>
 	</software>
 	<software name="gene00c9ab1f22ae">
-		<description>James Pond II Operation Robocod (2)</description>
+		<description>james pond ii - codename robocod (usa, europe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="James Pond II Operation Robocod (2).bin" size="524288" crc="f4abedba" sha1="e00c9ab1f22aeed3031ed9dd985539aa6e31a7a4"/>
+				<rom name="james pond ii - codename robocod (usa, europe).md" size="524288" crc="f4abedba" sha1="e00c9ab1f22aeed3031ed9dd985539aa6e31a7a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen620ecac6c340e">
+		<description>janou touryumon (j) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="janou touryumon (j) [!].md" size="1048576" crc="7011e8eb" sha1="620ecac6c340e617bbde922bf742a9e6d7f8d786"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7829,6 +7869,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Jewel Master (UE) [T+Rus_chief-net].bin" size="524288" crc="92fe3871" sha1="c4fbb5dfcc0b2db37a0f6dcc3b7c35b1cee959d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9c1e91b326df5">
+		<description>Jewel Master T-Spa v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Jewel Master T-Spa v2.0 (2022)(Wave).bin" size="524288" crc="ff242e3d" sha1="9c1e91b326df520551b00467f17eabe7257fc024"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8179,6 +8229,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="John Madden Football SWC-WAC.bin" size="524288" crc="ea2ecea1" sha1="f52fc9fbc2b0dd3572602a19fe72a9a0fa04d846"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2e95b6e38ef03">
+		<description>Journey_to_Obivion_0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3860224">
+				<rom name="Journey_to_Obivion_0.2.7.2(USA-NTSC).bin" size="3860224" crc="4db77bc3" sha1="2e95b6e38ef03f4e6661ce0cc2e9303f67111fea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8712,6 +8772,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen677e1fbf2f6f9">
+		<description>legende de thor, la (france)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="legende de thor, la (france).md" size="3145728" crc="b97cca1c" sha1="677e1fbf2f6f90dd5a016f3bd5f305547249205a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen639357013fe57">
+		<description>Lego Pirates of the Caribbean (Unl)(2014)(BMB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lego Pirates of the Caribbean (Unl)(2014)(BMB).bin" size="1048576" crc="3d2cd306" sha1="639357013fe574afb87d24bd917ed238de7541c3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genfe6533d013100">
 		<description>Lethal Wedding (USA, Japan) (Demo) (Unl)</description>
 		<year>????</year>
@@ -8719,6 +8799,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3014656">
 				<rom name="Lethal Wedding (USA, Japan) (Demo) (Unl).bin" size="3014656" crc="6d372fe4" sha1="fe6533d013100daa65d26e26bbaae551422f57df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5045949f486fc">
+		<description>Life on Earth - Reimagined (2023)(Kai Magazine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Life on Earth - Reimagined (2023)(Kai Magazine).bin" size="4194304" crc="0c194b63" sha1="5045949f486fc8507abd2595340be059c00d909a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen0d48a578735b2">
+		<description>Life on Mars (2022)(Kai Magazine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Life on Mars (2022)(Kai Magazine).bin" size="4194304" crc="b256f14a" sha1="0d48a578735b2524409e00ecd1e7b7d1f311df4b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8793,12 +8893,12 @@
 		</part>
 	</software>
 	<software name="gene2b414cb70f11">
-		<description>Little Medusa (World) (Unl)</description>
+		<description>Little Medusa (2018)(Mega Cat Studios)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Little Medusa (World) (Unl).bin" size="2097152" crc="931dd919" sha1="e2b414cb70f11b494fb7549c34932a60a9109b82"/>
+				<rom name="Little Medusa (2018)(Mega Cat Studios).bin" size="2097152" crc="931dd919" sha1="e2b414cb70f11b494fb7549c34932a60a9109b82"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8823,12 +8923,12 @@
 		</part>
 	</software>
 	<software name="genb6944c40b7d7e">
-		<description>Lotus Turbo Challenge</description>
+		<description>lotus turbo challenge (usa, europe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Lotus Turbo Challenge.bin" size="1048576" crc="a3cf6e9c" sha1="b6944c40b7d7e7548942efb4a732ad20d4500c0c"/>
+				<rom name="lotus turbo challenge (usa, europe).md" size="1048576" crc="a3cf6e9c" sha1="b6944c40b7d7e7548942efb4a732ad20d4500c0c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8993,22 +9093,12 @@
 		</part>
 	</software>
 	<software name="genfab2b178a66de">
-		<description>MADDEN2007-AFC(1)</description>
+		<description>MADDEN2007-AFC</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="MADDEN2007-AFC(1).bin" size="524288" crc="819a66e0" sha1="fab2b178a66de6f14a59680a2792cc8bcabcc10a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen57cc98bcab135">
-		<description>MADDEN2007-NFC(1)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="MADDEN2007-NFC(1).bin" size="524288" crc="c07a1db7" sha1="57cc98bcab135804724cab86b3bfe9fe14ee42c1"/>
+				<rom name="MADDEN2007-AFC.bin" size="524288" crc="819a66e0" sha1="fab2b178a66de6f14a59680a2792cc8bcabcc10a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9049,6 +9139,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="MADDEN2007-NFC(NS)AFC(NS).bin" size="524288" crc="5d45e910" sha1="3e56eef46fdb315ac19c7f75cb337cb7dd612309"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen57cc98bcab135">
+		<description>MADDEN2007-NFC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="MADDEN2007-NFC.bin" size="524288" crc="c07a1db7" sha1="57cc98bcab135804724cab86b3bfe9fe14ee42c1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10512,16 +10612,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen0711080e96849">
-		<description>Phantasy Star II (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="786432">
-				<rom name="Phantasy Star II (2).bin" size="786432" crc="904fa047" sha1="0711080e968490a6b8c5fafbb9db3e62ba597231"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="genceaee5c1efe49">
 		<description>Phantasy Star II (USA, Europe) (Rev A) [En by Naflign v1</description>
 		<year>????</year>
@@ -10699,6 +10789,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="786432">
 				<rom name="Phantasy Star II Sound Engine Replacement (2022)(wyatt8740).bin" size="786432" crc="53018f1e" sha1="343b338de3faa1be1aa72b6fffb05397ff3bef6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen0711080e96849">
+		<description>Phantasy Star II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Phantasy Star II.bin" size="786432" crc="904fa047" sha1="0711080e968490a6b8c5fafbb9db3e62ba597231"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10882,16 +10982,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen699db175ab8a6">
-		<description>Psycho Pinball (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="Psycho Pinball (2).bin" size="1572864" crc="d704784b" sha1="699db175ab8a6abdd941b8a3d81cf203e01053f5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen2ea7befb7e523">
 		<description>psycho pinball (europe) (en,fr,de,es,it) (september 1994)</description>
 		<year>????</year>
@@ -10899,6 +10989,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="psycho pinball (europe) (en,fr,de,es,it) (september 1994).md" size="1572864" crc="11e9c3f2" sha1="2ea7befb7e52334111385667030ceb647157a397"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen699db175ab8a6">
+		<description>Psycho Pinball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Psycho Pinball.bin" size="1572864" crc="d704784b" sha1="699db175ab8a6abdd941b8a3d81cf203e01053f5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10982,16 +11082,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen7b1bd16fb817c">
-		<description>Quackshot (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1310720">
-				<rom name="Quackshot (2).bin" size="1310720" crc="1801098b" sha1="7b1bd16fb817cc5e2af238cebe8521aaca8f6195"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen1b1421f57669e">
 		<description>quackshot starring donald duck ~ quackshot - guruzia ou no hihou (world) (rev01) [a1][c][!]</description>
 		<year>????</year>
@@ -10999,6 +11089,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="quackshot starring donald duck ~ quackshot - guruzia ou no hihou (world) (rev01) [a1][c][!].md" size="1310720" crc="a5c946b3" sha1="1b1421f57669e149ccced2d751a6de83ca941932"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7b1bd16fb817c">
+		<description>Quackshot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Quackshot.bin" size="1310720" crc="1801098b" sha1="7b1bd16fb817cc5e2af238cebe8521aaca8f6195"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11192,16 +11292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen9cddecaecea8b">
-		<description>Road Rash (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Road Rash (2).bin" size="1048576" crc="7640abf1" sha1="9cddecaecea8b6e7cd9978fa391e9875c88c5cfd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen8bb19af5c6074">
 		<description>Road Rash (USA, Europe)</description>
 		<year>????</year>
@@ -11289,6 +11379,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Road Rash Improvement (2022)(Ti).bin" size="1048576" crc="39ad4dc0" sha1="5c7ed162a674bca9ebe21b8b2d03006277e4c0d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9cddecaecea8b">
+		<description>Road Rash</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Road Rash.bin" size="1048576" crc="7640abf1" sha1="9cddecaecea8b6e7cd9978fa391e9875c88c5cfd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11868,7 +11968,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2773736">
-				<rom name="Sega Master System Brawl (PD) (v1.3) (2).bin" size="2773736" crc="340467a3" sha1="8984d605b6d8c136df723827881e935cb7f34212"/>
+				<rom name="Sega Master System Brawl (PD) (v1.3).bin" size="2773736" crc="340467a3" sha1="8984d605b6d8c136df723827881e935cb7f34212"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13063,12 +13163,12 @@
 		</part>
 	</software>
 	<software name="gendfc52220d56fd">
-		<description>SONIC 1 THE BLUE BLUR (hack) (2)</description>
+		<description>SONIC 1 THE BLUE BLUR (hack)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="SONIC 1 THE BLUE BLUR (hack) (2).bin" size="524288" crc="4e0c7737" sha1="dfc52220d56fdaa4a912462d56263add1c7f204c"/>
+				<rom name="SONIC 1 THE BLUE BLUR (hack).bin" size="524288" crc="4e0c7737" sha1="dfc52220d56fdaa4a912462d56263add1c7f204c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13262,6 +13362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen00a540bfecf86">
+		<description>Sonic 3 Complete - Emerald Safari (2023)(BillyTime! Games)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3803704">
+				<rom name="Sonic 3 Complete - Emerald Safari (2023)(BillyTime! Games)(1).bin" size="3803704" crc="d24115da" sha1="00a540bfecf86c51cb7925fb6b192f80b4ce953c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend3016ccef163a">
 		<description>Sonic 3 Complete - Emerald Safari (2023)(BillyTime! Games)</description>
 		<year>????</year>
@@ -13269,16 +13379,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3932160">
 				<rom name="Sonic 3 Complete - Emerald Safari (2023)(BillyTime! Games).bin" size="3932160" crc="af6088b1" sha1="d3016ccef163ab7fbcecc33e92f46f767db878e5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen00a540bfecf86">
-		<description>Sonic 3 Complete - Emerald Safari (2023)(BillyTime! Games)_1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3803704">
-				<rom name="Sonic 3 Complete - Emerald Safari (2023)(BillyTime! Games)_1.bin" size="3803704" crc="d24115da" sha1="00a540bfecf86c51cb7925fb6b192f80b4ce953c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13299,16 +13399,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4191682">
 				<rom name="Sonic 3D Blast  - Directors Cut.bin" size="4191682" crc="9767e840" sha1="4072d34e119e199131b839d338f1fc38e472203a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen89957568386a5">
-		<description>Sonic 3D Blast (4)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Sonic 3D Blast (4).bin" size="4194304" crc="44a2ca44" sha1="89957568386a5023d198ac2251ded9dfb2ab65e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13339,6 +13429,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Sonic 3D Blast Time Attack by fabio (Sonic 3D Blast Hack).bin" size="4194304" crc="9f531e0d" sha1="158f582eed30549eacc4f19c24a194da02a93464"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen89957568386a5">
+		<description>Sonic 3D Blast</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Sonic 3D Blast.bin" size="4194304" crc="44a2ca44" sha1="89957568386a5023d198ac2251ded9dfb2ab65e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14832,16 +14932,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gena42fc3b2a4f4c">
-		<description>Splatterhouse Part 3 (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Splatterhouse Part 3 (2).bin" size="2097152" crc="ed68373a" sha1="a42fc3b2a4f4c2db2f598244c2b137862b8e79ad"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen10349a742a20e">
 		<description>Splatterhouse Part 3 Bloody Edition v1</description>
 		<year>????</year>
@@ -14849,6 +14939,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Splatterhouse Part 3 Bloody Edition v1.2 (J) (2021)(CRT_rex).bin" size="2097152" crc="8e2a70e8" sha1="10349a742a20e7df3b1495e244f05236976104ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena42fc3b2a4f4c">
+		<description>Splatterhouse Part 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Splatterhouse Part 3.bin" size="2097152" crc="ed68373a" sha1="a42fc3b2a4f4c2db2f598244c2b137862b8e79ad"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15283,12 +15383,12 @@
 		</part>
 	</software>
 	<software name="gen9e975ba4c3966">
-		<description>Super League (2)</description>
+		<description>Super League</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Super League (2).bin" size="524288" crc="ea13cb1d" sha1="9e975ba4c396617ff9535d51d0929f6d592478fc"/>
+				<rom name="Super League.bin" size="524288" crc="ea13cb1d" sha1="9e975ba4c396617ff9535d51d0929f6d592478fc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15913,12 +16013,12 @@
 		</part>
 	</software>
 	<software name="gen5eb804cad16af">
-		<description>Tetrogen Classic (PD) (2)</description>
+		<description>Tetrogen Classic (PD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2483390">
-				<rom name="Tetrogen Classic (PD) (2).bin" size="2483390" crc="372a80ce" sha1="5eb804cad16af04ecb129bf3923480ff0fec4c2b"/>
+				<rom name="Tetrogen Classic (PD).bin" size="2483390" crc="372a80ce" sha1="5eb804cad16af04ecb129bf3923480ff0fec4c2b"/>
 			</dataarea>
 		</part>
 	</software>
