@@ -50,7 +50,7 @@ void vc4000_state::video_start()
 	m_joy2_x = STICKCENTRE;
 	m_joy2_y = STICKCENTRE;
 
-	memset(&m_video, 0, sizeof(m_video));
+	m_video = { }; //memset(&m_video, 0, sizeof(m_video));
 	for (i=0; i<3; i++)
 	{
 		m_video.sprites[i].data = &m_video.reg.d.sprites[i];

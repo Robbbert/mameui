@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1760 -->
+<!-- Number of items in this list = 1767 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -69,6 +69,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="(demo)CB68K_BV200_r230.bin" size="1048576" crc="209406fa" sha1="2d3f2b84744901fcafc8ec83dc0c23a4b998766a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc0c1b1406a4d6">
+		<description>(demo)Ghosts'n Goblins (HB, Ver</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="318720">
+				<rom name="(demo)Ghosts'n Goblins (HB, Ver. 2021-11-01).bin" size="318720" crc="fa4da29a" sha1="c0c1b1406a4d69ed3a28ce6768f9d50c8eebdf1e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1029,16 +1039,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(E)FIFA Gold Edition 97.bin" size="2097152" crc="a33d5803" sha1="2d91cb1c50586723f877cb25a37b5ebcd70d8bcc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen13816eb064fe7">
-		<description>(E)golden axe iii (euro)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="(E)golden axe iii (euro).bin" size="1048576" crc="1d90dc83" sha1="13816eb064fe74be42f74ba7e5077832fdf40d42"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4802,26 +4802,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen3a3e9eb5caaf6">
-		<description>Daimakaimura (3)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="655360">
-				<rom name="Daimakaimura (3).bin" size="655360" crc="d31bd910" sha1="3a3e9eb5caaf6cfb75e99ed2843d58b3dda7284f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genaab6d20f01db5">
-		<description>Daimakaimura</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="655360">
-				<rom name="Daimakaimura.bin" size="655360" crc="4f2561d5" sha1="aab6d20f01db51576b1d7cafab46e613dddf7f8a"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen4841d8f05a73c">
 		<description>Darius (World) (Genesis Mini, Mega Drive Mini)</description>
 		<year>????</year>
@@ -5672,6 +5652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen4607c6f8ea056">
+		<description>Gargoyles T-Spa v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Gargoyles T-Spa v2.0 (2022)(Wave).bin" size="3145728" crc="443d085e" sha1="4607c6f8ea056097069019d4ee9bb0a48e8191bf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen347209b0d0927">
 		<description>gauntlet (censor prototype)</description>
 		<year>????</year>
@@ -5872,6 +5862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen0a39bb108b7a2">
+		<description>Ghostbusters - Special Edition v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Ghostbusters - Special Edition v1.1 (2013)(BillyTime! Games).bin" size="1048576" crc="a9542c76" sha1="0a39bb108b7a23c25db7fc07418a4b0d8e686616"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gene3058819380c6">
 		<description>Ghostbusters(RU,CH)</description>
 		<year>????</year>
@@ -5882,6 +5882,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genaab6d20f01db5">
+		<description>ghouls 'n ghosts (usa, europe) (rev a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="655360">
+				<rom name="ghouls 'n ghosts (usa, europe) (rev a).md" size="655360" crc="4f2561d5" sha1="aab6d20f01db51576b1d7cafab46e613dddf7f8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3a3e9eb5caaf6">
+		<description>ghouls 'n ghosts (usa, europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="655360">
+				<rom name="ghouls 'n ghosts (usa, europe).md" size="655360" crc="d31bd910" sha1="3a3e9eb5caaf6cfb75e99ed2843d58b3dda7284f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2d4f0a580a19f">
 		<description>Ghouls'n Ghosts (USA, Europe) (Rev A) (3)</description>
 		<year>????</year>
@@ -5889,6 +5909,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="655360">
 				<rom name="Ghouls'n Ghosts (USA, Europe) (Rev A) (3).bin" size="655360" crc="f71cd080" sha1="2d4f0a580a19f4d7760d47a5a6ab063d2cf555f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen04c2103d1c66f">
+		<description>Gley Lancer (2019-2022)(Columbus Circle)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Gley Lancer (2019-2022)(Columbus Circle).bin" size="1048576" crc="79ce299f" sha1="04c2103d1c66f876e99aa2150af9263fb7dd7fbe"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6012,6 +6042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen13816eb064fe7">
+		<description>golden axe iii (euro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="golden axe iii (euro).bin" size="1048576" crc="1d90dc83" sha1="13816eb064fe74be42f74ba7e5077832fdf40d42"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7c21e095053be">
 		<description>golden axe iii (hack, spanish)</description>
 		<year>????</year>
@@ -6029,6 +6069,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Golden Axe III (J) [T+Fre1.0_Terminus.bin" size="1048576" crc="8a236090" sha1="556f96de64a9c4c73a84320cd5476cdcee12611d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen758b61298fb90">
+		<description>Golden Axe III T-Spa v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Golden Axe III T-Spa v2.0 (2022)(Wave).bin" size="1048576" crc="bf9b2534" sha1="758b61298fb903a7ae80e168738125985c2edd31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen64d96de84ee8c">
+		<description>Golden Axe Plus v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Golden Axe Plus v2.0 (2022)(YoSoyNacho).bin" size="2097152" crc="18f13b66" sha1="64d96de84ee8c8fd89e94cdefe2f2d8312f90c99"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6069,6 +6129,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="GoldenAxeIII_New Character_Hack.bin" size="2097152" crc="b157f06c" sha1="39d9b0a877f2fd14af0f2f29bb31bf5f202984e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gendebdd3193dd67">
+		<description>Gouketsuji Ichizoku Enhanced Colors (2023)(Dolsilwa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Gouketsuji Ichizoku Enhanced Colors (2023)(Dolsilwa).bin" size="3145728" crc="019b11f2" sha1="debdd3193dd67a233698fbf9ddc47692ddea46bd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6163,12 +6233,12 @@
 		</part>
 	</software>
 	<software name="gen3820eac00b888">
-		<description>Gunship</description>
+		<description>gunship (europe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Gunship.bin" size="1048576" crc="da1440c9" sha1="3820eac00b888b17c02f271fab5fd08af99d5ef9"/>
+				<rom name="gunship (europe).md" size="1048576" crc="da1440c9" sha1="3820eac00b888b17c02f271fab5fd08af99d5ef9"/>
 			</dataarea>
 		</part>
 	</software>
