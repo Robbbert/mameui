@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1767 -->
+<!-- Number of items in this list = 1772 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -1032,16 +1032,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen2d91cb1c50586">
-		<description>(E)FIFA Gold Edition 97</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="(E)FIFA Gold Edition 97.bin" size="2097152" crc="a33d5803" sha1="2d91cb1c50586723f877cb25a37b5ebcd70d8bcc"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen90e195d8959b9">
 		<description>(E)Landstalker - The Treasures of King Nole (E) [T+Ita_Gufino2]</description>
 		<year>????</year>
@@ -1679,16 +1669,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="(U)Eternal Champions.bin" size="3145728" crc="48f1a42e" sha1="5e978217c10b679a42d7d2966a4ccb77e1715962"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genbce40031f6ada">
-		<description>(U)Flash back</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="(U)Flash back.bin" size="1572864" crc="23a9616d" sha1="bce40031f6adab48670c8a2d73e42f3a3dcba97c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5303,22 +5283,22 @@
 		</part>
 	</software>
 	<software name="gen1100fbde1cb05">
-		<description>F-22 Interceptor (4)</description>
+		<description>f-22 interceptor (u) (sep 1991) [a1][c][!]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="786432">
-				<rom name="F-22 Interceptor (4).bin" size="786432" crc="31e9d1a5" sha1="1100fbde1cb0534b3688ea8d8dc480d9f6e79548"/>
+				<rom name="f-22 interceptor (u) (sep 1991) [a1][c][!].md" size="786432" crc="31e9d1a5" sha1="1100fbde1cb0534b3688ea8d8dc480d9f6e79548"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="gena8fbd68686abc">
-		<description>F-22 Interceptor</description>
+		<description>f-22 interceptor (usa, europe) (september 1991)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="786432">
-				<rom name="F-22 Interceptor.bin" size="786432" crc="9cf552c2" sha1="a8fbd68686abcec9b765f47de7704ffbed4ec008"/>
+				<rom name="f-22 interceptor (usa, europe) (september 1991).md" size="786432" crc="9cf552c2" sha1="a8fbd68686abcec9b765f47de7704ffbed4ec008"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5333,12 +5313,32 @@
 		</part>
 	</software>
 	<software name="gene1d84357eb8df">
-		<description>Fantasia</description>
+		<description>fantasia (u) (rev00) [!]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Fantasia.bin" size="524288" crc="34e04627" sha1="e1d84357eb8dfb972f22e80b8d26a0b66167f69e"/>
+				<rom name="fantasia (u) (rev00) [!].md" size="524288" crc="34e04627" sha1="e1d84357eb8dfb972f22e80b8d26a0b66167f69e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene0a74238cd459">
+		<description>fatal fury (europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="fatal fury (europe).md" size="1572864" crc="2e730a91" sha1="e0a74238cd4592d900f88d033314c668d1522b72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen48b6277fc7336">
+		<description>fatal fury (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="fatal fury (usa).md" size="1572864" crc="98d49170" sha1="48b6277fc73368d8e96ba407a66f908c3bd87c39"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5349,26 +5349,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="fatal fury 2 (enhanced colors v4.0).md" size="3145728" crc="eb433a36" sha1="3de049325273b752802094b4da39a6d785bf19a6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen48b6277fc7336">
-		<description>Fatal Fury King of Fighters (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="Fatal Fury King of Fighters (2).bin" size="1572864" crc="98d49170" sha1="48b6277fc73368d8e96ba407a66f908c3bd87c39"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gene0a74238cd459">
-		<description>Fatal Fury King of Fighters</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="Fatal Fury King of Fighters.bin" size="1572864" crc="2e730a91" sha1="e0a74238cd4592d900f88d033314c668d1522b72"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5402,6 +5382,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen2d91cb1c50586">
+		<description>fifa soccer 97 (usa, europe) (en,fr,de,es,it,sv)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="fifa soccer 97 (usa, europe) (en,fr,de,es,it,sv).md" size="2097152" crc="a33d5803" sha1="2d91cb1c50586723f877cb25a37b5ebcd70d8bcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencbf3b650c541a">
+		<description>Fight for Vengeance - Tournament Edition v3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fight for Vengeance - Tournament Edition v3.0 (2022)(GFE).bin" size="4194304" crc="813a61a6" sha1="cbf3b650c541ad7ffea7e27d673071ef8fa4e920"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genc618df0b4cd71">
 		<description>fighting masters (Hack, Spanish)</description>
 		<year>????</year>
@@ -5419,6 +5419,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Fighting Masters.bin" size="524288" crc="3c5da13b" sha1="cee833104884cb00ce099b24fe04edaebc3bf022"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen80e5204f55207">
+		<description>fightvengt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="fightvengt.bin" size="4194304" crc="2c1240e2" sha1="80e5204f55207d32a46b14eed03cd8ec5a8497b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend241dd7a13d2c">
+		<description>Fight_for_Vengeance_PD_2022</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fight_for_Vengeance_PD_2022.bin" size="4194304" crc="7db61291" sha1="d241dd7a13d2c69d9a8a0fca11113cc81eb4affd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5452,6 +5472,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen8d4d238cc304e">
+		<description>Fist of the North Star Revisited T-Eng v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="537694">
+				<rom name="Fist of the North Star Revisited T-Eng v1.2 (2024)(Ermani S. Costa).bin" size="537694" crc="7d424a16" sha1="8d4d238cc304e4d1ec81f8d224418c5c77e72c10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6afe36cbe2257">
+		<description>Fist of the North Star T-Eng (2017)(Ermani S</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="537838">
+				<rom name="Fist of the North Star T-Eng (2017)(Ermani S. Costa).bin" size="537838" crc="9ec420cc" sha1="6afe36cbe2257b3dbc3ecc5d11ed73dc20d7ac64"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2bad4a0db0f95">
 		<description>Fix it Felix Jr</description>
 		<year>????</year>
@@ -5472,16 +5512,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen31372b2c056ea">
-		<description>Flash back</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="Flash back.bin" size="1572864" crc="6f311c83" sha1="31372b2c056eacb747de0a706de3899d224f2c92"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen3df0c5606c308">
 		<description>flash point (hack, spanish) ( prototype)</description>
 		<year>????</year>
@@ -5489,6 +5519,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="flash point (hack, spanish) ( prototype).bin" size="131072" crc="cedef845" sha1="3df0c5606c308c2f8bd565a770d5711f844f2750"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen31372b2c056ea">
+		<description>flashback (europe) (rev a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="flashback (europe) (rev a).md" size="1572864" crc="6f311c83" sha1="31372b2c056eacb747de0a706de3899d224f2c92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genbce40031f6ada">
+		<description>flashback - the quest for identity (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="flashback - the quest for identity (usa).md" size="1572864" crc="23a9616d" sha1="bce40031f6adab48670c8a2d73e42f3a3dcba97c"/>
 			</dataarea>
 		</part>
 	</software>
