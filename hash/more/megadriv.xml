@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1777 -->
+<!-- Number of items in this list = 1788 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -9,16 +9,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="(demo) Sonic no way.bin" size="2621440" crc="e01f6ed5" sha1="a3084262f5af481df1a5c5ab03c4862551a53c91"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genbd913dcadba25">
-		<description>(demo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="(demo).bin" size="16384" crc="75582ddb" sha1="bd913dcadba2588d4b9b1aa970038421cba0a1af"/>
 			</dataarea>
 		</part>
 	</software>
@@ -532,16 +522,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="genc44f0037a6856">
-		<description>(demo)Rom-to-Vram DMA test</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="(demo)Rom-to-Vram DMA test.bin" size="16384" crc="549cebf4" sha1="c44f0037a6856bd52a212b26ea416501e92f7645"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen0b5a63a47cb1d">
 		<description>(demo)rpg68-001</description>
 		<year>????</year>
@@ -1009,16 +989,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(E)Landstalker - The Treasures of King Nole (E) [T+Ita_Gufino2].bin" size="2097152" crc="509e425d" sha1="90e195d8959b95580f3f13d618067f58c785b636"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gencd3c50b7f9c2f">
-		<description>(E)Maui Mallard</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(E)Maui Mallard.bin" size="3145728" crc="b2dd857f" sha1="cd3c50b7f9c2f97d7bb0042e4239a05066ae72e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4732,6 +4702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen29bf7476610e9">
+		<description>Darius Extra Version (2020)(Strictly Limited Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Darius Extra Version (2020)(Strictly Limited Games).bin" size="4194304" crc="7fdc6236" sha1="29bf7476610e97ba5ffd7364248373ac48fa84ef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7533827564cbd">
 		<description>darius ii (enhanced colors)</description>
 		<year>????</year>
@@ -4792,6 +4772,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen46c735c1a6dc4">
+		<description>Death Sword Apple II (2014)(F</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="425616">
+				<rom name="Death Sword Apple II (2014)(F.L).bin" size="425616" crc="12a01f70" sha1="46c735c1a6dc422e954d06b287c8d9347d523e82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend278015699f62">
+		<description>Death Sword PC CGA (2014)(F</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="446380">
+				<rom name="Death Sword PC CGA (2014)(F.L).bin" size="446380" crc="aaeaeb87" sha1="d278015699f622765599883f20a26140e6e8b48f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen9e41e814effa5">
 		<description>Deboomer</description>
 		<year>????</year>
@@ -4799,6 +4799,36 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Deboomer.bin" size="131072" crc="49426bb1" sha1="9e41e814effa53f56ac4c1f9768c31c81feaf735"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genbd913dcadba25">
+		<description>debug - charles window bug example (pd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="debug - charles window bug example (pd).md" size="16384" crc="75582ddb" sha1="bd913dcadba2588d4b9b1aa970038421cba0a1af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc44f0037a6856">
+		<description>debug flavio's dma test (pd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="debug flavio's dma test (pd).md" size="16384" crc="549cebf4" sha1="c44f0037a6856bd52a212b26ea416501e92f7645"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6f7f006ef9687">
+		<description>DecapAttack (2022)(hack v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="DecapAttack (2022)(hack v2.0, Spanish).bin" size="524288" crc="29369a7d" sha1="6f7f006ef9687896ea76087143a116b74213f3e8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4852,6 +4882,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen94fbc9e1d4002">
+		<description>Devi and Pii (2022)(Mega Drive Mini 2 Ed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Devi and Pii (2022)(Mega Drive Mini 2 Ed.).bin" size="524288" crc="425e9e31" sha1="94fbc9e1d400286d8c0f2504fef88e8f323c01aa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen9f7f392638bb4">
 		<description>devilish - the next possession (Hack, Spanish)</description>
 		<year>????</year>
@@ -4872,6 +4912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genbb37a1b58eda3">
+		<description>Devwill Too MD (Pt-BR) (2020)(Mega Cat Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3538944">
+				<rom name="Devwill Too MD (Pt-BR) (2020)(Mega Cat Studios).bin" size="3538944" crc="c14fc0d4" sha1="bb37a1b58eda33b6ce108e770fda389476b328cf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb4acee3bf9053">
 		<description>Devwill Too MD (World) (Unl)</description>
 		<year>????</year>
@@ -4882,6 +4932,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen5cb22aadeba74">
+		<description>Devwill Too Prologue (ENG - PTBR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3168608">
+				<rom name="Devwill Too Prologue (ENG - PTBR).bin" size="3168608" crc="736a07e2" sha1="5cb22aadeba74ea155be1eb846a428bd665d5a16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf5de58b8d59a6">
+		<description>Di Guo Wang Chao - Ya Se Chuan Shuo (Chinese)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Di Guo Wang Chao - Ya Se Chuan Shuo (Chinese).BIN" size="2097152" crc="87ac7f92" sha1="f5de58b8d59a6db0911ed856fa803b7e0014d518"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb3a95920fed80">
 		<description>dial q o mawase! (T-Chi) (unl)</description>
 		<year>????</year>
@@ -4889,6 +4959,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="dial q o mawase! (T-Chi) (unl).bin" size="1048576" crc="1002c02f" sha1="b3a95920fed80921e39b211a6ef05964bdc391f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7c04543e0187f">
+		<description>Diamond Thieves (2022)(Mega Cat Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Diamond Thieves (2022)(Mega Cat Studios).bin" size="2097152" crc="b66fa98f" sha1="7c04543e0187f86d064b4ad2270a2fb25ec2475d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4939,6 +5019,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Donald in Maui Mallard (E) [tr Pt1.0_MIB].bin" size="3145728" crc="858d0f6d" sha1="78d4cd8b4c36b0c2102e60b4aa2b38e84e7f9425"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencd3c50b7f9c2f">
+		<description>donald in maui mallard (europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="donald in maui mallard (europe).md" size="3145728" crc="b2dd857f" sha1="cd3c50b7f9c2f97d7bb0042e4239a05066ae72e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4999,6 +5089,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Dr. Robotnik's Mean Bean Machine (US) [T+Fre1.0_Alb_A_Tort].bin" size="1048576" crc="c01a3292" sha1="4f9c1bd1922c55262586748d7d2e8b4336509ebc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfd91c9e17ebe4">
+		<description>Dragon Ball Z - Buu Yuu Retsuden (J) [!] (voice hack v2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2321812">
+				<rom name="Dragon Ball Z - Buu Yuu Retsuden (J) [!] (voice hack v2).bin" size="2321812" crc="1e91792d" sha1="fd91c9e17ebe4472ba3335aa2e11a6c175cd248d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5099,6 +5199,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="dynamite headdy (Hack, Spanish).bin" size="2097152" crc="003fc283" sha1="3dd63a39d31f454bf8031def30a315e971334b54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend32e3a4922d50">
+		<description>Dynamite Headdy T-Spa v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dynamite Headdy T-Spa v2.0 (2023)(Wave).bin" size="2097152" crc="340ff1e3" sha1="d32e3a4922d506a53ad44e3f11dc67fc56d037f6"/>
 			</dataarea>
 		</part>
 	</software>
