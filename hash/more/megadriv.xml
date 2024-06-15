@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1772 -->
+<!-- Number of items in this list = 1777 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -1002,36 +1002,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="genb8e93ea8b42c6">
-		<description>(E)Earthworm Jim 2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(E)Earthworm Jim 2.bin" size="3145728" crc="af235fdf" sha1="b8e93ea8b42c688a218b83797e4a18eda659f3e0"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gend5dc11009e3a5">
-		<description>(E)Earthworm Jim</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(E)Earthworm Jim.bin" size="3145728" crc="1c07b337" sha1="d5dc11009e3a5cc2381dd2a75cb81ce2e7428342"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen578475a736bef">
-		<description>(E)Eternal Champions</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(E)Eternal Champions.bin" size="3145728" crc="b9512f5e" sha1="578475a736bef8c76ba158110cebadf495c2f252"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen90e195d8959b9">
 		<description>(E)Landstalker - The Treasures of King Nole (E) [T+Ita_Gufino2]</description>
 		<year>????</year>
@@ -1639,36 +1609,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(U)escape from mars starring taz (Hack, Spanish).bin" size="2097152" crc="4e2074d1" sha1="0af6e2bcf0ba2fa82d1e8bafe6fbe80268ac74f3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen2d69701a22929">
-		<description>(U)ESPN Speedworld</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="(U)ESPN Speedworld.bin" size="2097152" crc="ab12849a" sha1="2d69701a22929a751483e6f3ccf126dcccdbd38a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen8eeace9ef641d">
-		<description>(U)ESPN Sunday Night NFL (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="(U)ESPN Sunday Night NFL (2).bin" size="2097152" crc="d13aecdc" sha1="8eeace9ef641d806afc1eaeafa244a076123b118"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen5e978217c10b6">
-		<description>(U)Eternal Champions</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(U)Eternal Champions.bin" size="3145728" crc="48f1a42e" sha1="5e978217c10b679a42d7d2966a4ccb77e1715962"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5172,6 +5112,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen6ec3d7a027d90">
+		<description>Earnest Evans T-Spa v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Earnest Evans T-Spa v2.0 (2022)(Wave).bin" size="1048576" crc="926ce1be" sha1="6ec3d7a027d90667672269fbb51dfad876b76412"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend5dc11009e3a5">
+		<description>earthworm jim (europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="earthworm jim (europe).md" size="3145728" crc="1c07b337" sha1="d5dc11009e3a5cc2381dd2a75cb81ce2e7428342"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen606d80bbdddae">
+		<description>Earthworm Jim (Jul 28, 1994 prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Earthworm Jim (Jul 28, 1994 prototype).gen" size="3145728" crc="24aa391b" sha1="606d80bbdddae0cb84d0d56e7c06660d004ee417"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb8e93ea8b42c6">
+		<description>earthworm jim 2 (europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="earthworm jim 2 (europe).md" size="3145728" crc="af235fdf" sha1="b8e93ea8b42c688a218b83797e4a18eda659f3e0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf8ce6087d22ef">
 		<description>earthworm jim 2 (Hack, Spanish)</description>
 		<year>????</year>
@@ -5232,6 +5212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gena51fc79c334cd">
+		<description>Escape 2042 (HB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Escape 2042 (HB).bin" size="4194304" crc="21e7f22b" sha1="a51fc79c334cdfe99224406c52452c2e742a39bd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb4ba79a2b8be9">
 		<description>Escape 2042 - The Truth Defenders (World) (Unl)</description>
 		<year>????</year>
@@ -5239,6 +5229,36 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Escape 2042 - The Truth Defenders (World) (Unl).md" size="4194304" crc="0d81511c" sha1="b4ba79a2b8be9454f26427d1e3fe9f8140742991"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb7f5462fd1d9f">
+		<description>Escape 2042 PT v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Escape 2042 PT v1.1 (2022)(Afsblood).bin" size="4194304" crc="f6fc656a" sha1="b7f5462fd1d9f6454b4ac7a4a35dbc63eb282eb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2d69701a22929">
+		<description>espn speed world (usa) (beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="espn speed world (usa) (beta).md" size="2097152" crc="ab12849a" sha1="2d69701a22929a751483e6f3ccf126dcccdbd38a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8eeace9ef641d">
+		<description>espn sunday night nfl (usa) (beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="espn sunday night nfl (usa) (beta).md" size="2097152" crc="d13aecdc" sha1="8eeace9ef641d806afc1eaeafa244a076123b118"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5262,6 +5282,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen578475a736bef">
+		<description>eternal champions (europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="eternal champions (europe).md" size="3145728" crc="b9512f5e" sha1="578475a736bef8c76ba158110cebadf495c2f252"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5e978217c10b6">
+		<description>eternal champions (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="eternal champions (usa).md" size="3145728" crc="48f1a42e" sha1="5e978217c10b679a42d7d2966a4ccb77e1715962"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen07e872d82e1ae">
 		<description>european club soccer (hack, spanish)</description>
 		<year>????</year>
@@ -5279,6 +5319,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Exile (U) [T+Swe_Cyndeline].bin" size="1048576" crc="53774e55" sha1="a0e7bb3c4832c9dd715be13036dd4a4985dab7fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen22301d6366eac">
+		<description>Eyra the Crow Maiden (2021)(2nd Dimension)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2083840">
+				<rom name="Eyra the Crow Maiden (2021)(2nd Dimension).bin" size="2083840" crc="d48289e3" sha1="22301d6366eac1b89234e59605d40d5e9e6559b5"/>
 			</dataarea>
 		</part>
 	</software>
