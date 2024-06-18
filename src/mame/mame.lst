@@ -30679,7 +30679,9 @@ spotty                          // (c) 2001 Prince Co.
 @source:misc/ltcasino.cpp
 ltcasin2                        // (c) 1984 Digital Controls Inc
 ltcasin2a                       // (c) 1984 Digital Controls Inc
+ltcasin2b                       // (c) 1984 Digital Controls Inc
 ltcasino                        // (c) 1982 Digital Controls Inc
+ltcasinoa                       // (c) 1982 Digital Controls Inc
 mv4in1                          // (c) 1983 Entertainment Enterprises
 
 @source:misc/luckybal.cpp
@@ -36403,16 +36405,17 @@ mnfb_c27                        //
 mnfb_c29                        //
 play_a24                        //
 poto_a29                        //
-poto_a32                        //
 poto_a31                        //
+poto_a32                        //
 robo_a29                        //
 robo_a30                        //
 robo_a34                        //
 simp_a20                        //
 simp_a27                        //
 ssvc_a26                        //
-ssvc_b26                        //
 ssvc_a42                        //
+ssvc_b26                        //
+ssvc_e40                        //
 tmac_a18                        //
 tmac_a24                        //
 tmac_g18                        //
@@ -38520,6 +38523,8 @@ vp111                           // 1977 Cosmac VIP VP-111
 
 @source:recfranco/rf51w14cg.cpp
 rf51w14cg                       // (c) 2003 Recreativos Franco
+rfsantafem                      // (c) 1995 Recreativos Franco
+rfsantafema                     // (c) 1995 Recreativos Franco
 
 @source:recfranco/rfjailbrk.cpp
 rfjailbrk                       // (c) 2000 Recreativos Franco
@@ -42032,6 +42037,9 @@ lilith                          //
 
 @source:skeleton/lms46.cpp
 lms46                           //
+
+@source:skeleton/madmoney2.cpp
+madmoney2                       // (c) 1988 Picmatic
 
 @source:skeleton/mes.cpp
 mes                             //
@@ -46126,6 +46134,9 @@ inteladv
 @source:vtech/iqunlim.cpp
 iqunlim                         // (c) 1995 Vtech / Integrated Systems Inc.
 iqunlimgr                       // (c) 1995 VTech / Integrated Systems Inc.
+
+@source:vtech/kidsupstar.cpp
+kidsupstar                      // (c) 2016 VTech
 
 @source:vtech/laser3k.cpp
 las3000                         // 1983 Laser 3000
