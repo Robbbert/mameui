@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 165 -->
+<!-- Number of items in this list = 167 -->
 <softwarelist name="sms_cart" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -1619,6 +1619,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Ze Legende of Oliv (2019)(OscarB).sms" size="1048576" crc="388b8eee" sha1="fc8c58cd391f25e59fcee43d4d407a8f04670b9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms96eb76d664679">
+		<description>Zemina Best 39 (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Zemina Best 39 (KR).sms" size="524288" crc="d8169fe2" sha1="96eb76d6646797a30d72adf5eec8b1edf19b0efa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3bb6be77eb321">
+		<description>Zemina Best 88 (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zemina Best 88 (KR).sms" size="1048576" crc="3c339d9e" sha1="3bb6be77eb321f5c97948a96878d1a042623c089"/>
 			</dataarea>
 		</part>
 	</software>

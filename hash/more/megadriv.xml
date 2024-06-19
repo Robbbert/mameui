@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1788 -->
+<!-- Number of items in this list = 1799 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -932,23 +932,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen4fd33eeaf1e80">
-		<description>(E)Boogerman</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(E)Boogerman.bin" size="3145728" crc="dbc4340c" sha1="4fd33eeaf1e804d005793a6e1185122fd7e9a751"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gend5d16486acd16">
-		<description>(E)Brutal - Paws of Fury (E) [brutalgfxhackzor]</description>
+		<description>(E)Brutal - Paws of Fury [brutalgfxhackzor]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="(E)Brutal - Paws of Fury (E) [brutalgfxhackzor].bin" size="2097152" crc="97aede65" sha1="d5d16486acd16cbde56695861fb2ecb10748db05"/>
+				<rom name="(E)Brutal - Paws of Fury [brutalgfxhackzor].bin" size="2097152" crc="97aede65" sha1="d5d16486acd16cbde56695861fb2ecb10748db05"/>
 			</dataarea>
 		</part>
 	</software>
@@ -983,12 +973,12 @@
 		</part>
 	</software>
 	<software name="gen90e195d8959b9">
-		<description>(E)Landstalker - The Treasures of King Nole (E) [T+Ita_Gufino2]</description>
+		<description>(E)Landstalker - The Treasures of King Nole [T+Ita_Gufino2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="(E)Landstalker - The Treasures of King Nole (E) [T+Ita_Gufino2].bin" size="2097152" crc="509e425d" sha1="90e195d8959b95580f3f13d618067f58c785b636"/>
+				<rom name="(E)Landstalker - The Treasures of King Nole [T+Ita_Gufino2].bin" size="2097152" crc="509e425d" sha1="90e195d8959b95580f3f13d618067f58c785b636"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1013,12 +1003,12 @@
 		</part>
 	</software>
 	<software name="gen75b4f764f23b1">
-		<description>(E)Mega Turrican (E) [T+Fre_beta_GIX]</description>
+		<description>(E)Mega Turrican [T+Fre_beta_GIX]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="(E)Mega Turrican (E) [T+Fre_beta_GIX].bin" size="1048576" crc="d9188fa6" sha1="75b4f764f23b16e376087e8f1843769aacea639a"/>
+				<rom name="(E)Mega Turrican [T+Fre_beta_GIX].bin" size="1048576" crc="d9188fa6" sha1="75b4f764f23b16e376087e8f1843769aacea639a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3722,16 +3712,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gene5b754cc1910c">
-		<description>BasicCity206</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1138854">
-				<rom name="BasicCity206.bin" size="1138854" crc="8f4ac700" sha1="e5b754cc1910caf593e379e855f1e1ad7fd66d21"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen72fc3b3ca4d37">
 		<description>Batman - The Video Game (USA)</description>
 		<year>????</year>
@@ -4052,6 +4032,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gena8e4318f73289">
+		<description>Block'em Sock'em (2022)(2nd Dimension)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="237312">
+				<rom name="Block'em Sock'em (2022)(2nd Dimension).bin" size="237312" crc="2f1a1655" sha1="a8e4318f732898dadacc7afe33fd1d45bdbc57d7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genc044bd104dc13">
 		<description>Blow'em Out (2017)(2nd Dimension)</description>
 		<year>????</year>
@@ -4072,6 +4062,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gene5b754cc1910c">
+		<description>Bomb on Basic City v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1138854">
+				<rom name="Bomb on Basic City v2.06 (2016)(Studio Vetea).bin" size="1138854" crc="8f4ac700" sha1="e5b754cc1910caf593e379e855f1e1ad7fd66d21"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb3eefdfc3894f">
 		<description>Bonanza Bros</description>
 		<year>????</year>
@@ -4079,6 +4079,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Bonanza Bros. (World) (Rev B).bin" size="524288" crc="96f3fba6" sha1="b3eefdfc3894f43f07a2a837b1c67a6d8d28ef53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6af7f635989d2">
+		<description>Bone Marrow (2021)(PSCD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2359296">
+				<rom name="Bone Marrow (2021)(PSCD Games).bin" size="2359296" crc="cde9ea8a" sha1="6af7f635989d20681cb1b38491c4c554f18b10f0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4092,6 +4102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen4fd33eeaf1e80">
+		<description>boogerman - a pick and flick adventure (europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="boogerman - a pick and flick adventure (europe).md" size="3145728" crc="dbc4340c" sha1="4fd33eeaf1e804d005793a6e1185122fd7e9a751"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen894250074e295">
 		<description>Brave Battle Saga - Legend of the Magic Warrior (World) (Unl)</description>
 		<year>????</year>
@@ -4099,6 +4119,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Brave Battle Saga - Legend of the Magic Warrior (World) (Unl).bin" size="2097152" crc="f4554624" sha1="894250074e295353b0253b7ec6957439583c9aff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen19106ee4378db">
+		<description>Break An Egg</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Break An Egg.bin" size="262144" crc="f293655f" sha1="19106ee4378db00d9b308496581716e09a3dc66d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4113,12 +4143,12 @@
 		</part>
 	</software>
 	<software name="gen622e0451547ad">
-		<description>Bug Hunt MD (PD) (v1</description>
+		<description>Bug Hunt (2015)(The AfroMonkeys)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="393216">
-				<rom name="Bug Hunt MD (PD) (v1.0).bin" size="393216" crc="20175de8" sha1="622e0451547adf0ce29c268920921bd871808ae9"/>
+				<rom name="Bug Hunt (2015)(The AfroMonkeys).bin" size="393216" crc="20175de8" sha1="622e0451547adf0ce29c268920921bd871808ae9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4162,6 +4192,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gendc4aeec8c010b">
+		<description>Cannon Fire Chaos - Triple Threat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Cannon Fire Chaos - Triple Threat.bin" size="1572864" crc="e6d6b7e1" sha1="dc4aeec8c010bb578e2c3d2d45197b48b09453d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genced5f0967e30c">
+		<description>cannon fodder (europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="cannon fodder (europe).md" size="1572864" crc="ad217654" sha1="ced5f0967e30c3b4c4c2a81007a7db2910b1885d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genc78f55d8861a1">
 		<description>cannon fodder (hack, spanish)</description>
 		<year>????</year>
@@ -4169,16 +4219,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="cannon fodder (hack, spanish).bin" size="1572864" crc="14344b29" sha1="c78f55d8861a1febc779b4617d75a9849d4eff08"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genced5f0967e30c">
-		<description>Cannon Fodder</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="Cannon Fodder.bin" size="1572864" crc="ad217654" sha1="ced5f0967e30c3b4c4c2a81007a7db2910b1885d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4192,13 +4232,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen1a2ef77fbb40b">
+		<description>cape 2042 PT v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="cape 2042 PT v1.1 Hack Color (2022)(Afsblood).bin" size="4194304" crc="0a51eccc" sha1="1a2ef77fbb40b43cc2b9b63587a6ebc1be9df039"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen70e5d9f685435">
-		<description>Capoeira Boy (PD)</description>
+		<description>Capoeira Boy (2020)(Manganga Team)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="655360">
-				<rom name="Capoeira Boy (PD).bin" size="655360" crc="2ac1f6ba" sha1="70e5d9f6854357bff37c6ebddc2ffad267153e6f"/>
+				<rom name="Capoeira Boy (2020)(Manganga Team).bin" size="655360" crc="2ac1f6ba" sha1="70e5d9f6854357bff37c6ebddc2ffad267153e6f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4242,6 +4292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen1ce3024755ce0">
+		<description>Castle of illusion Starring Mickey Mouse T-Spa v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Castle of illusion Starring Mickey Mouse T-Spa v2.0 (2023)(Jate).bin" size="1048576" crc="0d72c89d" sha1="1ce3024755ce054a98c529a722368936e69a1c3e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2572d121758ce">
 		<description>Castlevania_Bloodlines(S)</description>
 		<year>????</year>
@@ -4263,12 +4323,12 @@
 		</part>
 	</software>
 	<software name="gen8cc2a28309b2d">
-		<description>Centurion</description>
+		<description>centurion - defender of rome (usa, europe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="786432">
-				<rom name="Centurion.bin" size="786432" crc="21283b14" sha1="8cc2a28309b2dc61da68c77d8a6545af05660e8b"/>
+				<rom name="centurion - defender of rome (usa, europe).md" size="786432" crc="21283b14" sha1="8cc2a28309b2dc61da68c77d8a6545af05660e8b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4452,6 +4512,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gendcad8680f0aef">
+		<description>Citadel of Chaos, The v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3807254">
+				<rom name="Citadel of Chaos, The v2.1 (2021)(Studio Vetea).bin" size="3807254" crc="bfe255e3" sha1="dcad8680f0aef9bcc37804c645bb6cdb4f5d09ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen86756f89ca26e">
+		<description>City Connection (J)(2023)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="City Connection (J)(2023)(Habit Soft).bin" size="524288" crc="5d21d023" sha1="86756f89ca26ebb2c036335592e4f1f2ef546b51"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf12bbdb73c223">
 		<description>Classic Pantufa the Cat DX (PD)</description>
 		<year>????</year>
@@ -4622,6 +4702,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gena3de23e6c16a8">
+		<description>Crazy Cars (2013)(F</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="101994">
+				<rom name="Crazy Cars (2013)(F.L).bin" size="101994" crc="52367ce9" sha1="a3de23e6c16a8f649edff9da808dd50c9b6106ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2b9cb6f0d82ce">
+		<description>Criatura (2023)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1179648">
+				<rom name="Criatura (2023)(Manganga Team).bin" size="1179648" crc="91d31b0f" sha1="2b9cb6f0d82ce2deba25bba5053c42af38928452"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7deaf1dfa2b89">
 		<description>Cross Fire (USA)</description>
 		<year>????</year>
@@ -4639,6 +4739,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3678976">
 				<rom name="CUBICGUY by TmEE 09-2009(demo).bin" size="3678976" crc="145be8f2" sha1="458ee203a5c1aae69eb7e38a3a42ff26f2eec3ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb0ea6ed28d39b">
+		<description>Cursed Knight, The (2022)(Broke Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Cursed Knight, The (2022)(Broke Studio).bin" size="4194304" crc="52c6ef0f" sha1="b0ea6ed28d39b278aabf315841763dfb37b60a1c"/>
 			</dataarea>
 		</part>
 	</software>

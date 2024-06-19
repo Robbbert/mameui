@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 94 -->
+<!-- Number of items in this list = 97 -->
 <softwarelist name="uzebox_cart" description="uzebox loose roms">
 	<software name="uzef78f8bd532e02">
 		<description>2048 (Harty123)</description>
@@ -722,6 +722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze9a1c702f2077c">
+		<description>starduino</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox_cart">
+			<dataarea name="rom" size="42722">
+				<rom name="starduino.uze" size="42722" crc="5aa46f67" sha1="9a1c702f2077c5f2bf57e01421c588ce8b33271e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze9a5a07b90e2df">
 		<description>Stormforce (UCC)(2016)</description>
 		<year>????</year>
@@ -829,6 +839,26 @@
 		<part name="cart" interface="uzebox_cart">
 			<dataarea name="rom" size="48380">
 				<rom name="Uzekickers (Gosma).uze" size="48380" crc="ef6d2831" sha1="abe3c4eca5f062bca489ddf5df1cafd9f17abca4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze0c1077c6d02df">
+		<description>uzemaze(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox_cart">
+			<dataarea name="rom" size="20514">
+				<rom name="uzemaze(1).uze" size="20514" crc="b9642ee1" sha1="0c1077c6d02dfd89e0ea338eb5a7487dd99eeace"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzeb0486f98c2cf6">
+		<description>uzemaze</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox_cart">
+			<dataarea name="rom" size="21184">
+				<rom name="uzemaze.uze" size="21184" crc="721c0cdb" sha1="b0486f98c2cf6c27db4e9d4c7de479fd0a383a61"/>
 			</dataarea>
 		</part>
 	</software>

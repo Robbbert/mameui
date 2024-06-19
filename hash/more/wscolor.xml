@@ -2,46 +2,6 @@
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
 <!-- Number of items in this list = 46 -->
 <softwarelist name="wscolor_cart" description="wscolor loose roms">
-	<software name="wsc5ad3c099614d8">
-		<description>#Wonderwitch Intro (2001)(Tomasz Slanina)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wscolor_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="#Wonderwitch Intro (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="14d19b25" sha1="5ad3c099614d8b0647378ced6a8410ba930926c2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="wsc28a0e1bccc4c1">
-		<description>#Wonderwitch Intro (2002)(Tomasz Slanina)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wscolor_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="#Wonderwitch Intro (2002)(Tomasz Slanina)(PD).wsc" size="524288" crc="2cbe41a6" sha1="28a0e1bccc4c10a57379f87c67c6c5ecf07fb0f4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="wsc3b81949799514">
-		<description>#Wonderwitch Intro v1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wscolor_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="#Wonderwitch Intro v1.4 (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="9439802d" sha1="3b81949799514f7bc78e54b2143e3a0231dfd5db"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="wsc979d43f608e6e">
-		<description>#Wonderwitch Intro v1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wscolor_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="#Wonderwitch Intro v1.x (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="a1f2d257" sha1="979d43f608e6e401a09f896f8fa6a2911b99d832"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="wscf1ccdb96d67a8">
 		<description>(demo)finally</description>
 		<year>????</year>
@@ -459,6 +419,46 @@
 		<part name="cart" interface="wscolor_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Wonderswan Register Diagnostic (2002)(Zalas)(PD).wsc" size="1048576" crc="7e0d787b" sha1="190486646e2f5242f72ac84c251043440655b3db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc5ad3c099614d8">
+		<description>Wonderwitch Intro (2001)(Tomasz Slanina)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wscolor_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wonderwitch Intro (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="14d19b25" sha1="5ad3c099614d8b0647378ced6a8410ba930926c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc28a0e1bccc4c1">
+		<description>Wonderwitch Intro (2002)(Tomasz Slanina)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wscolor_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wonderwitch Intro (2002)(Tomasz Slanina)(PD).wsc" size="524288" crc="2cbe41a6" sha1="28a0e1bccc4c10a57379f87c67c6c5ecf07fb0f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc3b81949799514">
+		<description>Wonderwitch Intro v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wscolor_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wonderwitch Intro v1.4 (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="9439802d" sha1="3b81949799514f7bc78e54b2143e3a0231dfd5db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc979d43f608e6e">
+		<description>Wonderwitch Intro v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wscolor_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wonderwitch Intro v1.x (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="a1f2d257" sha1="979d43f608e6e401a09f896f8fa6a2911b99d832"/>
 			</dataarea>
 		</part>
 	</software>
