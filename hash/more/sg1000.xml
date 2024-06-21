@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 18 -->
+<!-- Number of items in this list = 34 -->
 <softwarelist name="sg1000_cass" description="sg1000 loose roms">
+	<software name="sg1445e32896395a">
+		<description>arno dash (2020)(under4mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="arno dash (2020)(under4mhz).sg" size="32768" crc="ea921f7c" sha1="445e32896395aa61cb9b260775a0924d0acf1f41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1205568a00dfbf">
+		<description>Arno Dash 2 v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="Arno Dash 2 v1.03 (2020)(Under4Mhz).sg" size="32768" crc="e0478a53" sha1="205568a00dfbf57e8549b03beb274eda11a0ee93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg186d6b5f21382b">
 		<description>Astro(Arcade Pack 1)(Poseidon)</description>
 		<year>????</year>
@@ -9,6 +29,66 @@
 		<part name="cass" interface="sg1000_cass">
 			<dataarea name="cass" size="5206676">
 				<rom name="Astro(Arcade Pack 1)(Poseidon).wav" size="5206676" crc="49499fce" sha1="86d6b5f21382bee6dacea432e130fd8d41c14b41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg15c46089a417ad">
+		<description>Black Onyx Enhanced, the (T-Eng)(2010)(SSTranslations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="65535">
+				<rom name="Black Onyx Enhanced, the (T-Eng)(2010)(SSTranslations).bin" size="65535" crc="3003d9bd" sha1="5c46089a417add0f00a3cebf01dc59f53465d47b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg12e2baee16a348">
+		<description>Black Onyx, the (T-Eng)(2010)(SSTranslations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="65535">
+				<rom name="Black Onyx, the (T-Eng)(2010)(SSTranslations).bin" size="65535" crc="626e30cc" sha1="2e2baee16a34839770587d5fab890080bbcd9550"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1f3e175320da83">
+		<description>Bloktris (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="49152">
+				<rom name="Bloktris (2023)(Under4Mhz).sg" size="49152" crc="7febcd40" sha1="f3e175320da83ab1452e71402f69bc6926bd5f22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1c81b116de0446">
+		<description>Chack'n Pop (T-Eng)(2010)(goldenband)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="Chack'n Pop (T-Eng)(2010)(goldenband).bin" size="32768" crc="c106c923" sha1="c81b116de04468cd605078c78dbd17124556c8a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg17e5306252e8f1">
+		<description>Che-Man (2018)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="49152">
+				<rom name="Che-Man (2018)(The Mojon Twins).bin" size="49152" crc="477a5d75" sha1="7e5306252e8f1ad42a08b7aaacafbfd98ed9ee19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg17b8750178a00e">
+		<description>Cheril Perils Classic (2018)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="49152">
+				<rom name="Cheril Perils Classic (2018)(The Mojon Twins).bin" size="49152" crc="f87d6ef5" sha1="7b8750178a00eb7375d506bbe6c6ef12121675fd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52,6 +132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg16d9ed7208032a">
+		<description>Foryster v00</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="Foryster v00.9 (2022)(siudym).bin" size="32768" crc="f8d7fa2c" sha1="6d9ed7208032ad3ec9011bbc999cea426aca46d3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg1e45e4b0cdac18">
 		<description>Fuzi(demo)</description>
 		<year>????</year>
@@ -72,6 +162,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg1c52e3ff244bc5">
+		<description>Klondike Solitaire v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="Klondike Solitaire v1.04 (2020)(Under4Mhz).sg" size="32768" crc="5f9f8b15" sha1="c52e3ff244bc55802b2856054fb01aba7f747620"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg18f52987b16fa1">
+		<description>Mahjong Solitaire v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="Mahjong Solitaire v1.07 (2020)(Under4Mhz).sg" size="32768" crc="1b14b1c2" sha1="8f52987b16fa1148a2da5b2e8b8ca491ba1d95fc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg16476bc0fc1608">
 		<description>Monaco GP (1983)(Sega)</description>
 		<year>????</year>
@@ -79,6 +189,16 @@
 		<part name="cass" interface="sg1000_cass">
 			<dataarea name="cass" size="40960">
 				<rom name="Monaco GP (1983)(Sega).bin" size="40960" crc="72542786" sha1="6476bc0fc1608dd69a1ae62617ea4719bc7eaa50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg10473f6ca89948">
+		<description>Ninja Princess (T-Eng)(2010)(goldenband)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="Ninja Princess (T-Eng)(2010)(goldenband).bin" size="32768" crc="bdb6cf0e" sha1="0473f6ca89948f08f504c634e00cf2cf72f94fc6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -99,6 +219,16 @@
 		<part name="cass" interface="sg1000_cass">
 			<dataarea name="cass" size="32768">
 				<rom name="Pegged v1.02 (2021)(Under4Mhz).sg" size="32768" crc="21e891f0" sha1="ed1ec1df29c2402754cbfb6aa2092de5b722a53d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg122b6c05f186bc">
+		<description>Pitman v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="Pitman v1.03 (2021)(Under4Mhz).sg" size="32768" crc="e325f022" sha1="22b6c05f186bc87bfbeb734e8ef107d314f6825d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -142,6 +272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg141ea56863f656">
+		<description>Sgt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="49152">
+				<rom name="Sgt. Helmet - Training Day (2018)(The Mojon Twins).bin" size="49152" crc="27c065a5" sha1="41ea56863f656eea179b9f923e5270669ea9708c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg1e37a6463b6df6">
 		<description>Shootout(Arcade Pack 1)(Poseidon)</description>
 		<year>????</year>
@@ -179,6 +319,26 @@
 		<part name="cass" interface="sg1000_cass">
 			<dataarea name="cass" size="32768">
 				<rom name="Vexed v1.03 (2020)(Under4Mhz).sg" size="32768" crc="6159a842" sha1="aff1f34dab6f92685348d850db28048c43760a6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg171c703ef178bc">
+		<description>Vexed v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="32768">
+				<rom name="Vexed v1.07 (2023)(Under4Mhz).sg" size="32768" crc="432cd0fc" sha1="71c703ef178bc1f057518aa679bb0774b027d716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg10b1dfe9bdf885">
+		<description>Yewdow (2023)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sg1000_cass">
+			<dataarea name="cass" size="9141">
+				<rom name="Yewdow (2023)(Inufuto).sg" size="9141" crc="5917970d" sha1="0b1dfe9bdf8859a8455ec896093e32e6b4258b26"/>
 			</dataarea>
 		</part>
 	</software>

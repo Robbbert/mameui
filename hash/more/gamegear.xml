@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 43 -->
+<!-- Number of items in this list = 69 -->
 <softwarelist name="gamegear_cart" description="gamegear loose roms">
 	<software name="gg5d2e2a0d8d9fa2">
 		<description>Aladdin (UE) [T+Bra_ERTrans]</description>
@@ -42,6 +42,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ggfe3a487833e4b3">
+		<description>Bishoujo Mahjong Puzzle (2022)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Bishoujo Mahjong Puzzle (2022)(Habit Soft).gg" size="262144" crc="57122381" sha1="fe3a487833e4b3a61790a792dbc227a84c59b0c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gge1218a1772091a">
 		<description>bishoujo senshi sailor moon s (t-eng1</description>
 		<year>????</year>
@@ -49,6 +59,26 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="bishoujo senshi sailor moon s (t-eng1.1).gg" size="1048576" crc="a9a6f271" sha1="e1218a1772091a898a7075a92c1a085efc6360a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg3b63f4f4f7ba15">
+		<description>BreakThru! [Proto] [Patched]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="BreakThru! [Proto] [Patched].gg" size="131072" crc="6edd48a6" sha1="3b63f4f4f7ba154eb147125e0913baedd33de789"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggabf07fd2707096">
+		<description>Burger Kitchen (2022)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Burger Kitchen (2022)(Habit Soft).gg" size="65536" crc="a7a9dd46" sha1="abf07fd270709657bed043a75d26682e3aa72743"/>
 			</dataarea>
 		</part>
 	</software>
@@ -132,6 +162,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ggd1506ac9c06454">
+		<description>Dracula's Castle (2021)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Dracula's Castle (2021)(Habit Soft).gg" size="262144" crc="0ba12ac9" sha1="d1506ac9c06454c089db7a4fa8d4905caa4bf504"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg59761ff70860ea">
+		<description>Dracula's Castle EN (2021)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Dracula's Castle EN (2021)(Habit Soft).gg" size="262144" crc="565ed602" sha1="59761ff70860ea5c9b7c6792e865c67bcb95d0a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gg1e892e544ce696">
 		<description>eternal legend (t-eng)</description>
 		<year>????</year>
@@ -139,6 +189,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="eternal legend (t-eng).gg" size="1048576" crc="ab7ab2e3" sha1="1e892e544ce69675b6eba5b37d9237aa233c6644"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg002de139e9e330">
+		<description>fantasy zone gear (ju) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="fantasy zone gear (ju) [a1].gg" size="131072" crc="365b92cf" sha1="002de139e9e330f2811cf56401b9e3cc7f233b91"/>
 			</dataarea>
 		</part>
 	</software>
@@ -172,6 +232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ggb2948f2498d309">
+		<description>GG Aleste 3 (Japan) (En) (Aleste Collection)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="GG Aleste 3 (Japan) (En) (Aleste Collection).gg" size="1048576" crc="717fd9e3" sha1="b2948f2498d3095aebdb5fe4a62590c12c8ea846"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ggd9177c956324be">
 		<description>gg turrican (demo1</description>
 		<year>????</year>
@@ -192,6 +262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gg1899c34ea4cf2a">
+		<description>Gun Stream Challenge Version (2023)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Gun Stream Challenge Version (2023)(Habit Soft).gg" size="262144" crc="9891292e" sha1="1899c34ea4cf2ae074cdaa40bbfd3888b718d3aa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gg2d8d587f6a5341">
 		<description>Head Buster (J) [t+Eng0</description>
 		<year>????</year>
@@ -199,6 +279,56 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Head Buster (J) [t+Eng0.99_Chirs Covell].gg" size="131072" crc="8ed94c2b" sha1="2d8d587f6a5341d6665de5d9ee1906889344d1ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gga171c8f9ded700">
+		<description>indiana jones and the last crusade (u)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="indiana jones and the last crusade (u).gg" size="262144" crc="8c048325" sha1="a171c8f9ded70023588a3736f8b031d45b6c32de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg658c3e77fd984c">
+		<description>Kaitou Saint Tale T-Eng (2021)(Matt's Messy Room)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="540672">
+				<rom name="Kaitou Saint Tale T-Eng (2021)(Matt's Messy Room).gg" size="540672" crc="a54621a4" sha1="658c3e77fd984c3a70c737516a3a5bbc850e7c9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg64d02b7791865d">
+		<description>lion king, the (e) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="lion king, the (e) [t1].gg" size="524288" crc="040512ce" sha1="64d02b7791865d295474b3661c5b6bc10d64e979"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg151dc547dc42c2">
+		<description>lion king, the (u) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="lion king, the (u) [t1].gg" size="524288" crc="90d40776" sha1="151dc547dc42c214052b3ee8b2f686b73a17d200"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg73fb57977b2e1a">
+		<description>madden nfl '96 (u) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="madden nfl '96 (u) [!].gg" size="524288" crc="75e273eb" sha1="73fb57977b2e1aa96003b4c15a38885ccd3f51a1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -229,6 +359,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Magic Knight Rayearth T-Eng (2018)(Filler).gg" size="524288" crc="6c9b8b15" sha1="451d5ff041ea7051e39af026f9a4ee897509cd32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggfb53789c37aa5f">
+		<description>Mai Nurse (2024)(Lunoka)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mai Nurse (2024)(Lunoka).gg" size="131072" crc="36a2da11" sha1="fb53789c37aa5f36009869bc6c8ea12c97ed65ae"/>
 			</dataarea>
 		</part>
 	</software>
@@ -302,6 +442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ggef9631080e964a">
+		<description>Monaco Master v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Monaco Master v1.1 (2023)(Louis The SEGA Nerd).gg" size="49152" crc="01a074ab" sha1="ef9631080e964a9b027a93264d40d5d523c1ceee"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gg61bfa23db250c8">
 		<description>Out Run [tr Pt G-TMT]</description>
 		<year>????</year>
@@ -309,6 +459,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Out Run [tr Pt G-TMT].gg" size="131072" crc="1738b458" sha1="61bfa23db250c835622a1c1c9b25a5e29705e690"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg25d999bb8edfb5">
+		<description>outrun (ju) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="outrun (ju) [a1].gg" size="131072" crc="4753c309" sha1="25d999bb8edfb59075d774050c68d5c9f286793d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -329,6 +489,26 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Pac-Man (J) (GG2SMS V0.91 Hack).gg" size="131072" crc="fb7c7bf8" sha1="c4d9d3335eb5ddad6ed2ed3d8c6c0b5440a8dfe4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggd01b356706b5d2">
+		<description>Pegged v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Pegged v1.02 (2023)(Under4Mhz).gg" size="32768" crc="a3e06e7a" sha1="d01b356706b5d281d858d41aee8c5cfcd4dbb08e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg4fa8addc05b751">
+		<description>Princess Gardening (2022)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Princess Gardening (2022)(Habit Soft).gg" size="262144" crc="8129b269" sha1="4fa8addc05b7518b5a046eecc117a45c1f41821b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -392,6 +572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gg17794ed08c1df2">
+		<description>skweek (japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="skweek (japan).gg" size="131072" crc="786dd67b" sha1="17794ed08c1df2ebc992c5686dc1072a75731e4d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gg87aeb3d8b9fdfc">
 		<description>Sonic Chaotic</description>
 		<year>????</year>
@@ -408,7 +598,57 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="sports illustrated championship football & baseball (usa, europe).bin" size="524288" crc="de25e2d8" sha1="781bc3ef9fbbbfcb5452dad99633b65c172b62fa"/>
+				<rom name="sports illustrated championship football & baseball (usa, europe).gg" size="524288" crc="de25e2d8" sha1="781bc3ef9fbbbfcb5452dad99633b65c172b62fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg0d2fc2fa9e52e2">
+		<description>super off-road (u)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="super off-road (u).gg" size="131072" crc="2e217fae" sha1="0d2fc2fa9e52e24cf0930e47c16e43a7c26adad7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg0205508c951c38">
+		<description>Sushi Nights v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Sushi Nights v1.01 (2021-24)(MONIS GAMES).gg" size="131072" crc="bdc4c3c9" sha1="0205508c951c389b8dc306237be12767b468453e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg06f1eb442611a8">
+		<description>Sushi Nights v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Sushi Nights v1.04 (2021-24)(MONIS GAMES).gg" size="131072" crc="934523bb" sha1="06f1eb442611a850f57289acf513bbc94b1a00d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggb0a0bf66b1106b">
+		<description>Tetris4GG (0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Tetris4GG (0.9 - SMSPower Competition 2022 Entry).gg" size="65536" crc="e0654d27" sha1="b0a0bf66b1106b39e027574b8215bc658695bb4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg6658517e16288c">
+		<description>Vexed v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Vexed v1.07 (2023)(Under4Mhz).gg" size="32768" crc="86f38694" sha1="6658517e16288c5a72706197f679f6679d5480a2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -429,6 +669,26 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Wing Warriors (PD).gg" size="131072" crc="db029d58" sha1="5bb0b8f9d33e624615b6c00089e06ad8de2cd444"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg7502e660dedbb2">
+		<description>Wonder Boy [Proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Wonder Boy [Proto].gg" size="131072" crc="523c92cb" sha1="7502e660dedbb2df77313531b4a6f5b16000a72b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg7ec6be17c075f0">
+		<description>Yakitori Meijin Torigin (2022)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Yakitori Meijin Torigin (2022)(Habit Soft).gg" size="65536" crc="bfb52bb3" sha1="7ec6be17c075f0f2cdca2c17f194964b4a4c2334"/>
 			</dataarea>
 		</part>
 	</software>

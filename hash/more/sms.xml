@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 167 -->
+<!-- Number of items in this list = 261 -->
 <softwarelist name="sms_cart" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -162,6 +162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms99c6c7d963f3d">
+		<description>Alex Kidd, The Lost Stars - Stella Edition (2023)(poody)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Alex Kidd, The Lost Stars - Stella Edition (2023)(poody).sms" size="262144" crc="85939bf5" sha1="99c6c7d963f3dc3394b3a0ef28bd59e56fe80db3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms25a9c50d842c5">
 		<description>ALF (F) [translation kr151]</description>
 		<year>????</year>
@@ -172,6 +182,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms06566e2970fca">
+		<description>Arno Dash 2 v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Arno Dash 2 v1.03 (2021)(Under4Mhz).sms" size="32768" crc="9091d61a" sha1="06566e2970fcaf654d4398a3ed821015cca030fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0a91b78a43a20">
+		<description>Arno Dash v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Arno Dash v1.03 (2021)(Under4Mhz).sms" size="32768" crc="3dcdb2e0" sha1="0a91b78a43a20604fee016511676335f99ba0a3b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms682e276990d1c">
 		<description>Astro Force (PD) v1</description>
 		<year>????</year>
@@ -179,6 +209,56 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Astro Force (PD) v1.03 eruiz00.sms" size="262144" crc="1bad75c5" sha1="682e276990d1cc9c4e2093ded6eb8335e7d70d3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms4ec137df976a1">
+		<description>Astro Warrior & Pit Pot [Proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Astro Warrior & Pit Pot [Proto].sms" size="131072" crc="3da7f1ce" sha1="4ec137df976a14130beeb835122f73823b4c949b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc61cd327b3be1">
+		<description>Aztec Adventure [HTH] [SMS-GG] (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Aztec Adventure [HTH] [SMS-GG] (TW).sms" size="131072" crc="7ca37320" sha1="c61cd327b3be14e2c09fc381d6850ad875a4a37d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms983c10f9431e1">
+		<description>bank panic (e) [p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="bank panic (e) [p1][!].sms" size="32768" crc="b4dfb825" sha1="983c10f9431e19e0f79627cf72d5425895fd32f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2029dcc36558e">
+		<description>Basketball Nightmare [Proto 0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Basketball Nightmare [Proto 0].sms" size="262144" crc="4e3ebb55" sha1="2029dcc36558eb8897fb913952e2fb80c012e7ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb3098c1cc80e2">
+		<description>Battle City v2 (2023)(old pirate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="114688">
+				<rom name="Battle City v2 (2023)(old pirate).sms" size="114688" crc="0e0c4b81" sha1="b3098c1cc80e23d097ba858ab165edcf0854ebd4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -212,6 +292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms1e0155474b2c3">
+		<description>Bitlogic MSX2SMS (2023)(OXiAB Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Bitlogic MSX2SMS (2023)(OXiAB Studio).sms" size="65536" crc="7145271f" sha1="1e0155474b2c3c7eeb4dc16a21408ec09d893099"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms1d0ca7f98a3cf">
 		<description>Blade Eagle 3-D [tr PT G-TMT]</description>
 		<year>????</year>
@@ -239,6 +329,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="blockhead.sms" size="32768" crc="2734a9b4" sha1="1bf83f9be51226d3311aa604e30b39a20c1a1fdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsdf06a63a14512">
+		<description>Bloktris (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Bloktris (2023)(Under4Mhz).sms" size="262144" crc="2d679b72" sha1="df06a63a1451252a0c00400919632c0f3dccd946"/>
 			</dataarea>
 		</part>
 	</software>
@@ -289,6 +389,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="81920">
 				<rom name="bolhas_1.sms" size="81920" crc="8351496a" sha1="adfb833abf30ca5cbb944f730c1506118cbc04a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms5ecb5433f51a1">
+		<description>Bomb Jack Remake (2024)(MikGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="98304">
+				<rom name="Bomb Jack Remake (2024)(MikGames).sms" size="98304" crc="ec3b0ff2" sha1="5ecb5433f51a1ab1dc40a09df6d297b4f445a063"/>
 			</dataarea>
 		</part>
 	</software>
@@ -352,6 +462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsf3448f8265274">
+		<description>Castle Escape (2023)(IrataHack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Castle Escape (2023)(IrataHack).sms" size="65536" crc="41d70425" sha1="f3448f8265274af7529679bf4e3c57edc135a738"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smscdb4caa0ee036">
 		<description>cavacava</description>
 		<year>????</year>
@@ -372,6 +492,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms62e9dae23d305">
+		<description>Choplifter [HTH] [SMS-GG] (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Choplifter [HTH] [SMS-GG] (TW).sms" size="131072" crc="55f929ce" sha1="62e9dae23d305c792dc1adb8b888d82d333b5265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6d03dfaa30a5b">
+		<description>Circuit, The (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Circuit, The (TW).sms" size="131072" crc="1df0fc90" sha1="6d03dfaa30a5b51d53ecd4f9f25b6ea8237276b7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms1f07da14310bd">
 		<description>Cloud Master (FR)</description>
 		<year>????</year>
@@ -379,6 +519,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Cloud Master (FR).sms" size="262144" crc="84e45c25" sha1="1f07da14310bdb244be18d94a64b192934687996"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms41cbee8e67bbe">
+		<description>Con-Dori (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Con-Dori (KR).sms" size="32768" crc="1e1b9f59" sha1="41cbee8e67bbe0fff89b2656da98a722287ad114"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms9b42c796f3e89">
+		<description>Crazy Pinball (2024)(MikGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Crazy Pinball (2024)(MikGames).sms" size="262144" crc="972d6a6f" sha1="9b42c796f3e89186ea090265b71727b469f49b28"/>
 			</dataarea>
 		</part>
 	</software>
@@ -399,6 +559,36 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="datastorm.sms" size="32768" crc="37b775d6" sha1="73d6f05c6603723ff49ff4925be405ab417c32cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms619d404472085">
+		<description>Do The Same v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Do The Same v1.1 (2022)(Ricco59).sms" size="49152" crc="3e03d019" sha1="619d404472085f73425f4f2de41d78bccc1ae88a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms57819cf5adfd6">
+		<description>Do The Same v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Do The Same v1.30 (2022)(Ricco59).sms" size="49152" crc="01e68ff7" sha1="57819cf5adfd6baa7a8eb57179ea9ed321295bfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms9972e4dc31e1e">
+		<description>Do The Same v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="98304">
+				<rom name="Do The Same v1.40 (2022)(Ricco59).sms" size="98304" crc="641fb1f2" sha1="9972e4dc31e1ef5f4d6007947c712dedc1dab9ea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -432,6 +622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsfb1ad68c5bd09">
+		<description>Draconic Throne (2021)(GW's Workshop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Draconic Throne (2021)(GW's Workshop).sms" size="49152" crc="e31ecd44" sha1="fb1ad68c5bd09c1debb1d35cca30ff4ff44b5231"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms7a01583f1beda">
 		<description>duke nukem (2017)(revo-tibone-calindro)</description>
 		<year>????</year>
@@ -462,6 +662,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsc7518ab2490f6">
+		<description>Dynamite Dux [Proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Dynamite Dux [Proto].sms" size="262144" crc="4e59175e" sha1="c7518ab2490f6eac1a7bc03ca43bb1cd3c25501c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsad9ff725e9196">
+		<description>E-SWAT [v1] [HTH] [SMS-GG] (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="E-SWAT [v1] [HTH] [SMS-GG] (TW).sms" size="262144" crc="96e16fe4" sha1="ad9ff725e9196ab1b1fb1af67be7cee3f75510bc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsc1dab46c2f1b7">
 		<description>EDUSOFT_HAX2</description>
 		<year>????</year>
@@ -469,6 +689,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="EDUSOFT_HAX2.SMS" size="262144" crc="9cc4ae7c" sha1="c1dab46c2f1b71cefba67045f04ec561e348ad21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms7320db867d51e">
+		<description>Electronic Dreams v</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="458752">
+				<rom name="Electronic Dreams v.77 (2023)(MikGames).sms" size="458752" crc="7d49f141" sha1="7320db867d51e9868a0813768b37e512b5d455c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms474a8a3dbec1b">
+		<description>Extreme Volleyball Infernal League v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Extreme Volleyball Infernal League v1.0.5 (2023)(raphnet).sms" size="524288" crc="6402d2d6" sha1="474a8a3dbec1b94a0e0a42d53f03711f4d9d5e56"/>
 			</dataarea>
 		</part>
 	</software>
@@ -489,6 +729,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="147456">
 				<rom name="fchoco_1.sms" size="147456" crc="88c0207f" sha1="96ed4308a0870f7f6ccfc7737e626e61c2c8c885"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb7601ff011649">
+		<description>felipe em acao (b)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="felipe em acao (b).sms" size="32768" crc="ccb2cab4" sha1="b7601ff0116490b85c9bd50109db175ce2dd9104"/>
 			</dataarea>
 		</part>
 	</software>
@@ -522,6 +772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smse21805da7ef80">
+		<description>Fushigi no Oshiro Pit Pot [Proto] (JP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fushigi no Oshiro Pit Pot [Proto] (JP).sms" size="32768" crc="73c76d15" sha1="e21805da7ef8028b78b49505fe7533a32007e0a6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms148397dff73b1">
 		<description>Galactic Boogers</description>
 		<year>????</year>
@@ -533,12 +793,42 @@
 		</part>
 	</software>
 	<software name="smsc9a33510cc843">
-		<description>Galactic Revenge (PD) v3 eruiz00</description>
+		<description>Galactic Revenge v3 (2018)(MikGames)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
-				<rom name="Galactic Revenge (PD) v3 eruiz00.sms" size="131072" crc="4d69cd2c" sha1="c9a33510cc843499816061f453219b9eb93c6526"/>
+				<rom name="Galactic Revenge v3 (2018)(MikGames).sms" size="131072" crc="4d69cd2c" sha1="c9a33510cc843499816061f453219b9eb93c6526"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms265835bf39367">
+		<description>Game Mo-eumjip 188 Hap [v1] (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Game Mo-eumjip 188 Hap [v1] (KR).sms" size="1048576" crc="c76601e0" sha1="265835bf39367fe808f613c3bff72ed54b319eaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms224f350da2a0d">
+		<description>Gaudream v0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Gaudream v0.04 (2015)(1985 Alternativo).sms" size="131072" crc="ff2e1ea4" sha1="224f350da2a0db5892737017084e07d2b8889752"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms4faeb7d33c633">
+		<description>Genius Bakabon, The T-Eng v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Genius Bakabon, The T-Eng v1.2 (2023)( (FCandChill).sms" size="262144" crc="7d0d2d4d" sha1="4faeb7d33c6339659cc48a098e29a80172fff8be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -549,6 +839,76 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262656">
 				<rom name="Ghouls 'n Ghosts (UE) [T+Fre_terminus].sms" size="262656" crc="ba3bdeae" sha1="fc0d36178462c77cd7f1d33d0aebbcb28236466f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms56cd3992948c7">
+		<description>Goblin Kart Rescue v0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="458752">
+				<rom name="Goblin Kart Rescue v0.9.8 (2024)(raphnet).sms" size="458752" crc="cc782e28" sha1="56cd3992948c740fff807dbf315989060f48f700"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms7f17436cd6adc">
+		<description>Goblin Kart Rescue v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Goblin Kart Rescue v1.0.3 (2024)(raphnet).sms" size="393216" crc="db7b9954" sha1="7f17436cd6adc54181fb090c69600ba2b77340c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms799c7b8309ea6">
+		<description>Golden Axe - Tyris Flare Edition (2022)(Pyxosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="573440">
+				<rom name="Golden Axe - Tyris Flare Edition (2022)(Pyxosoft).sms" size="573440" crc="53aec4a5" sha1="799c7b8309ea61d43580757c5ab46725c1397475"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa32b49b6e1e98">
+		<description>Gotris v0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Gotris v0.8 (2019)(1985 Alternativo).sms" size="65536" crc="adb0efa6" sha1="a32b49b6e1e98c53cfb5c93fe3671c41855d1550"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse358d530f25d8">
+		<description>Gotris v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Gotris v1.2p (2021)(Tuxedo Games).sms" size="262144" crc="cfe301ed" sha1="e358d530f25d81078f86bcc52ba18860933aad28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms451d41ba7f41b">
+		<description>Gotris v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="278528">
+				<rom name="Gotris v1.3p (2022)(Tuxedo Games).sms" size="278528" crc="a11888ff" sha1="451d41ba7f41b33c3f03cff3c35ccc093445fc4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsd9cc3803cbd0a">
+		<description>Grail of The Gods v0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Grail of The Gods v0.47 (2023-24)(Guydebaville).sms" size="65536" crc="c1f4206f" sha1="d9cc3803cbd0aa853b584753c79df9963ad3ca3b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -582,6 +942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms2e89689a6b674">
+		<description>Green Beret Remake (2022)(MikGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Green Beret Remake (2022)(MikGames).sms" size="131072" crc="529172bd" sha1="2e89689a6b67438bec09897203d9fb7debbfbdc3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms238d71f12bdfe">
 		<description>Hang-On (1985)(Sega)[tr pt]</description>
 		<year>????</year>
@@ -609,6 +979,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="HeroesAgainstDemons_1.03(smsj).sms" size="131072" crc="35f47e0a" sha1="998723370b3a660aa02c16316dd1591ef44077f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse77c7150ad274">
+		<description>hokuto no ken (j) [p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="hokuto no ken (j) [p1][!].sms" size="131072" crc="656d1a3e" sha1="e77c7150ad274fb9d7df378e460e64daa9b9e9b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -682,6 +1062,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms4033a04c7fee1">
+		<description>Klondike Solitaire v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Klondike Solitaire v1.04 (2023)(Under4Mhz).sms" size="49152" crc="52b870f3" sha1="4033a04c7fee1fde8787780e00572c0c1945f78e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsea2e08841aacf">
+		<description>KunKun & KokoKun (2006)(Bock)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="KunKun & KokoKun (2006)(Bock).sms" size="32768" crc="7e15a103" sha1="ea2e08841aacfb7bc02d9937fb1ae2a74454bf84"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms4d559135c0ace">
 		<description>KunKun & KokoKun 2 (2011)(Bock)</description>
 		<year>????</year>
@@ -699,6 +1099,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="KunKun & KokoKun 2 - Return of the Kun [v0.92].sms" size="65536" crc="857c53e7" sha1="a3dda7c03b737bd05057afbc7375ce591b510e81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms38376dbf12367">
+		<description>Lil Evel Knievel v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lil Evel Knievel v1.0 (2023)(SteveProXNA).sms" size="1048576" crc="11e0647b" sha1="38376dbf12367b136d0d08b30396d7aae78129ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms747f09e78c100">
+		<description>Line Runner v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Line Runner v1.3 (2023)(Louis The SEGA Nerd).sms" size="32768" crc="93f690b5" sha1="747f09e78c100ffab7633247371f9fb7d1ed36db"/>
 			</dataarea>
 		</part>
 	</software>
@@ -752,6 +1172,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms9e0dfd4bd80af">
+		<description>Mahjong Solitaire v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mahjong Solitaire v1.16 (2023)(Under4Mhz).sms" size="32768" crc="d4dc268e" sha1="9e0dfd4bd80af0151c94b3b6e7e2d9e9e1d15c16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms770a8b571af0b">
+		<description>Mai Nurse (2024)(Lunoka)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mai Nurse (2024)(Lunoka).sms" size="131072" crc="6b974d30" sha1="770a8b571af0b8c16c1bde88311b14984aa7f38e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsea442f7a56b59">
 		<description>main</description>
 		<year>????</year>
@@ -772,6 +1212,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms45dec6ddb2417">
+		<description>Master of Darkness (2016)(T-Ita v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Master of Darkness (2016)(T-Ita v1.2)(Michele Di Somma).sms" size="262144" crc="83e3bc8e" sha1="45dec6ddb241737e099fa05049096ac0c1336cb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms805ba172c57ea">
+		<description>Master of Darkness (2018)(T-Spa v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Master of Darkness (2018)(T-Spa v1.2)(Wave).sms" size="262144" crc="56aff22c" sha1="805ba172c57eae3e08db97e40e8cff9ad3d1976b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms9354e82fe63be">
 		<description>Master of Darkness (Europe) [tr It1</description>
 		<year>????</year>
@@ -779,6 +1239,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Master of Darkness (Europe) [tr It1.0_Michele Di Somma].sms" size="262144" crc="8e565270" sha1="9354e82fe63bed8549c87ab0fe8e0149a2609969"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc5e78f61e8ca1">
+		<description>mastermind_SMS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="mastermind_SMS.sms" size="32768" crc="7f6a8a92" sha1="c5e78f61e8ca15d2596ffbbf5cba8991d7d7166e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -892,6 +1362,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms79c4621d49283">
+		<description>Monaco Master v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Monaco Master v2.9 (2023)(Louis The SEGA Nerd).sms" size="65536" crc="db0071cf" sha1="79c4621d49283d6049c12c074620b384dd961503"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms4af5c6b9bbbe9">
+		<description>Monaco Master v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="81920">
+				<rom name="Monaco Master v2.9.2 (2023)(Louis The SEGA Nerd).sms" size="81920" crc="355330b6" sha1="4af5c6b9bbbe9c053a75efe3368693ed964fd917"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms9c8b2b54c7acf">
 		<description>Monkey Lad (PD) v0</description>
 		<year>????</year>
@@ -912,6 +1402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsd3c675d2e6510">
+		<description>Mortal Kombat II - Palette improvement v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mortal Kombat II - Palette improvement v1.2 (2023)(cireza).sms" size="524288" crc="7e85784b" sha1="d3c675d2e65107ad1e918c372c9e1aca8496b6ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsa8d527a2d721c">
 		<description>Mortal Kombat [tr Fr97 Arkames]</description>
 		<year>????</year>
@@ -919,6 +1419,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Mortal Kombat [tr Fr97 Arkames].sms" size="524288" crc="7f3e1df8" sha1="a8d527a2d721ca50b4f7b7cea4ac6d5809ea0223"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2e9cceec6c872">
+		<description>NanoWars8k v0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="NanoWars8k v0.7 (2006)(haroldoop).sms" size="32768" crc="a06d065c" sha1="2e9cceec6c872dc988236c96618225e953c4d794"/>
 			</dataarea>
 		</part>
 	</software>
@@ -959,6 +1469,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Ninja Gaiden [Proto] (ES).sms" size="262144" crc="17fee94a" sha1="4caf200795f8fc6897cebc502d93d43c89c2d6b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms5ba2588533375">
+		<description>Ninja, The [HTH] [SMS-GG] (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Ninja, The [HTH] [SMS-GG] (TW).sms" size="131072" crc="2cd62dca" sha1="5ba2588533375a2c36ea31e352a3ec3ca755a4a1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1132,6 +1652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms6ca463839711e">
+		<description>Piracy - The Chest Of Doom (2021)(SirDarkNoon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Piracy - The Chest Of Doom (2021)(SirDarkNoon).sms" size="524288" crc="d94c89fa" sha1="6ca463839711ef332899d8b4004d23521a5d35eb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms7893e2bfeb4e3">
 		<description>pngmstr2 old</description>
 		<year>????</year>
@@ -1222,6 +1752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsab7b40bc696f5">
+		<description>Psycho Fox [Proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Psycho Fox [Proto].sms" size="262144" crc="4bf0e1cc" sha1="ab7b40bc696f533b5f9fcd0bbdb7fb00595ed4cc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsa4fc2657c2d06">
 		<description>punpun</description>
 		<year>????</year>
@@ -1232,6 +1772,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms4eef74a2baf80">
+		<description>Pyramid Warp Enhanced (2021)(Bitcaffe, Nenefranz, theNestruo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Pyramid Warp Enhanced (2021)(Bitcaffe, Nenefranz, theNestruo).sms" size="49152" crc="e51d3ee9" sha1="4eef74a2baf80712f19b86c5accc32d6eb5d52cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0a36f9120febb">
+		<description>Pyramid Warp Enhanced MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Pyramid Warp Enhanced MSX2SMS Hack.sms" size="49152" crc="6ea50d43" sha1="0a36f9120febb10e259ae1db1f9862a308aefb67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms1820f50cecb9f">
+		<description>Pyramid Warp Enhanced Plus MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Pyramid Warp Enhanced Plus MSX2SMS Hack.sms" size="49152" crc="89aa59b4" sha1="1820f50cecb9f15a03fa8f45e33f478e70a44494"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms743db861ceecf">
+		<description>Pyramid Warp MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Pyramid Warp MSX2SMS Hack.sms" size="49152" crc="915f7679" sha1="743db861ceecf66565209154437617389dd06976"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsce54878c5d7fb">
+		<description>R-Type Arcade Style Hack v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="R-Type Arcade Style Hack v1.1 (2023)(Datchy).sms" size="524288" crc="26ccf06d" sha1="ce54878c5d7fb82238191990806c150409d9f0d2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms0f995079fdc89">
 		<description>R</description>
 		<year>????</year>
@@ -1239,6 +1829,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="R.C. Grand Prix [tr Pt G-TMT].sms" size="262144" crc="6edf4c12" sha1="0f995079fdc89114cf7eb64d382b6097a10c0eec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse96b46d7568bb">
+		<description>Rampage [Proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Rampage [Proto].sms" size="262144" crc="0e0d6c7a" sha1="e96b46d7568bb78511fbb8de844c10da7c53608f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsae852cef94927">
+		<description>Rayman Retro Rumble v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Rayman Retro Rumble v1.3 (2022)(Maxim).sms" size="524288" crc="932c57d5" sha1="ae852cef94927d876ef95d1099bbc8edb7a71b42"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1259,6 +1869,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="scotland 2008-06-26.sms" size="32768" crc="efd5e016" sha1="2990d5750cdce0353ed0a846232ee072b2e7f2ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms69d3d5934a93e">
+		<description>Scramble Spirits [Proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Scramble Spirits [Proto].sms" size="262144" crc="b45d4700" sha1="69d3d5934a93e2593dd2a4bdc85f62b2168b1709"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1322,6 +1942,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsc2ea40ddd282d">
+		<description>Skazka v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Skazka v1.0 (2022)(SteveProXNA).sms" size="262144" crc="40eec164" sha1="c2ea40ddd282d9611e9197a793870f29889ee9d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms76bf9f87577a9">
+		<description>Skazka v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Skazka v2.0 (2022)(SteveProXNA).sms" size="262144" crc="47ab1630" sha1="76bf9f87577a99847dd94552627814bbfa5d6c2d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsa47d5e8e3a388">
 		<description>SMSPower 7th Anniversary (v1</description>
 		<year>????</year>
@@ -1362,6 +2002,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms615f6ca1d397a">
+		<description>Snappy Snorg and the Seven Silver Stones v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Snappy Snorg and the Seven Silver Stones v1.4 (2023)(pinkeyeFR).sms" size="1048576" crc="934b9fe7" sha1="615f6ca1d397abe730a1030386bd4dbd81f07ddc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3d01513c03c5a">
+		<description>Solomon's Key - Tears of Princess Lihita T-Eng (2023)(FlashPV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Solomon's Key - Tears of Princess Lihita T-Eng (2023)(FlashPV).sms" size="131072" crc="66de9f40" sha1="3d01513c03c5adc0fa1c3d4dc1dba1df7bcf64ee"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms5dfff8de0b3b7">
 		<description>Sonic 2 LD Episode 01 - EHZ v0</description>
 		<year>????</year>
@@ -1369,6 +2029,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Sonic 2 LD Episode 01 - EHZ v0.92.sms" size="524288" crc="ef6b1352" sha1="5dfff8de0b3b753dec1e598626203c139c457bef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms95dc26a19110b">
+		<description>Sonic Genesis v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Sonic Genesis v1.04 (2022)(slogra).sms" size="262144" crc="c829fd7e" sha1="95dc26a19110bd77cb2adbe78d942ad1d5f6ea0c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1402,6 +2072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsca94703958ab7">
+		<description>Soul Trials (2021)(Arkia)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Soul Trials (2021)(Arkia).sms" size="32768" crc="c992d9de" sha1="ca94703958ab75c40d9da19d11e245bcded4fd97"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsea4214198a53d">
 		<description>Streets of Rage</description>
 		<year>????</year>
@@ -1419,6 +2099,56 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Strider (1991)(Sega)[b].bin" size="524288" crc="40760bb3" sha1="32e386a2c801761cdfdc818069b1b0ec5057154c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms8b3b7e9dba31e">
+		<description>Stygian Quest (2024)(Naarshakta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="573440">
+				<rom name="Stygian Quest (2024)(Naarshakta).sms" size="573440" crc="3ac7a0c4" sha1="8b3b7e9dba31e812d3df48482e464a04f19b95e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0245ecd6b2e04">
+		<description>Stygian Quest v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="573440">
+				<rom name="Stygian Quest v1.2 (2024)(Naarshakta).sms" size="573440" crc="b6c9a3c5" sha1="0245ecd6b2e0464cc3bafc0e001e78a0f1170c1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc72f2c608f0bd">
+		<description>Sub Rescue v0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Sub Rescue v0.3 (2021)(haroldoop).sms" size="32768" crc="06a41efd" sha1="c72f2c608f0bd73bc8c77aa55060abcdf0d943de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms05f27b2ae222b">
+		<description>Sub-Assault v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Sub-Assault v1.4 (2023)(Louis The SEGA Nerd).sms" size="49152" crc="57234578" sha1="05f27b2ae222bd193005325a8088a300f910578f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms379b0b54a6b26">
+		<description>Sub-Assault V1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Sub-Assault V1.4.1 (2023)(Louis The SEGA Nerd).sms" size="65536" crc="832ddd09" sha1="379b0b54a6b262b9e5471e7c22b99a4b0f83fa8a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1462,6 +2192,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsbb8905478c279">
+		<description>Super Game World 30 Hap [v0] (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Super Game World 30 Hap [v0] (KR).sms" size="524288" crc="0cde0938" sha1="bb8905478c2790637bead350d81ec51abbf77c40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms1ed3efd3b1383">
+		<description>Super Game World 30 Hap [v1] (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Super Game World 30 Hap [v1] (KR).sms" size="524288" crc="e6ad4d4b" sha1="1ed3efd3b1383ac2a70d109d1167634c56cb4027"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2469d356ef51b">
+		<description>Super Monaco GP [Proto 2] (US)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Super Monaco GP [Proto 2] (US).sms" size="262144" crc="3753cc95" sha1="2469d356ef51b9e2c953e51c00427824db8e0b31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb9ec9f1dd336f">
+		<description>Super Penguin (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Super Penguin (KR).sms" size="32768" crc="53d742db" sha1="b9ec9f1dd336fef63f3edd354e897b1e0f913df0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms31aa06d4c0983">
+		<description>Super Wild War '22 (2022)(90soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Super Wild War '22 (2022)(90soft).sms" size="131072" crc="d9ec4d01" sha1="31aa06d4c0983371231409ec0cad047911257227"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms1f81ce95eecf0">
+		<description>Super Wild War '22 224p (2022)(90soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Super Wild War '22 224p (2022)(90soft).sms" size="131072" crc="2d391e7f" sha1="1f81ce95eecf0a64609a42fff870ec1962ed42c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse2c71ddb64cfa">
+		<description>Sushi Nights v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Sushi Nights v1.03 (2021-24)(MONIS GAMES).sms" size="131072" crc="2c03bb6e" sha1="e2c71ddb64cfaad29d6eabb852fc615f2d683c4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms763463aa016ab">
+		<description>Sushi Nights v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Sushi Nights v1.04 (2021-24)(MONIS GAMES).sms" size="131072" crc="723d4880" sha1="763463aa016ab4ed7372c28a9d7a52a8c543fa3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsf0e6925cc6904">
+		<description>Sutoroku (2022)(X7R)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Sutoroku (2022)(X7R).sms" size="49152" crc="f4804329" sha1="f0e6925cc69040174cd296a034e0278435c80c49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc2fb5b046156e">
+		<description>Tails Adventure GG2SMS v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tails Adventure GG2SMS v1.5 (2016)(Tevo, Vingangole).sms" size="1048576" crc="8635c737" sha1="c2fb5b046156e669f93410cc91f8817f862f3638"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsa08cb44e02bf8">
 		<description>tangram</description>
 		<year>????</year>
@@ -1482,6 +2312,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms53bac13aab7ed">
+		<description>Tank Battalion (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Tank Battalion (KR).sms" size="24576" crc="42d911f3" sha1="53bac13aab7ed6b83effa2e79f81e19a4efcea58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms437db0c68b0af">
+		<description>Tempo Jr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Tempo Jr. GG2SMS v1.0 (2014)(Vinganzole).sms" size="524288" crc="4a707dfb" sha1="437db0c68b0af365f04e5c12239ce4e0d213dc7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0dda3513018a9">
+		<description>Tensai Bakabon (2022)(FCandChill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Tensai Bakabon (2022)(FCandChill).sms" size="262144" crc="96ce2f05" sha1="0dda3513018a907590415d57f2c4f61fd5337c0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms45b949ed7a488">
+		<description>Tower of Sorrow - easy v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Tower of Sorrow - easy v1.5 (2021)(Neofuturism).sms" size="524288" crc="72d2089c" sha1="45b949ed7a488a8c13e522fd5f85006a982a82c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms1b4e5fa6066e9">
+		<description>Tower of Sorrow - easy v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Tower of Sorrow - easy v1.5 cb (2021)(Neofuturism).sms" size="524288" crc="0b953948" sha1="1b4e5fa6066e9e949b44a0c7b41ee3dffc3bf1fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms7888ff7bacc9b">
+		<description>Tower of Sorrow - hard v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Tower of Sorrow - hard v1.5 (2021)(Neofuturism).sms" size="524288" crc="93655c5f" sha1="7888ff7bacc9ba89f33b9c92b2fe7ac52710fdc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc6dcc9e3cd3d6">
+		<description>Tower of Sorrow - hard v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Tower of Sorrow - hard v1.5 cb (2021)(Neofuturism).sms" size="524288" crc="e178c8a9" sha1="c6dcc9e3cd3d687f66f0f63f0926aecffce3a85c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms13c15675f6056">
 		<description>Tower_of_Sorrow_REV3</description>
 		<year>????</year>
@@ -1489,6 +2389,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Tower_of_Sorrow_REV3.sms" size="524288" crc="d0e103d9" sha1="13c15675f60563aa03ed5df22a7fa47dc64a1aec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms327c3518363ee">
+		<description>treinamento do mymo (b)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="treinamento do mymo (b).sms" size="262144" crc="e94784f2" sha1="327c3518363ee060b681ff34c0b2eea3ffea27e4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1532,6 +2442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsa274736c8deab">
+		<description>Vexed v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Vexed v1.07 (2023)(Under4Mhz).sms" size="32768" crc="edfe0729" sha1="a274736c8deabada2424d71ff34e12b48522b35d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsc82bcced4cdf4">
 		<description>Voyage - A Sorceress Vacation v1</description>
 		<year>????</year>
@@ -1539,6 +2459,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Voyage - A Sorceress Vacation v1.0 (build 684).sms" size="524288" crc="80afc57a" sha1="c82bcced4cdf48d596a8610402d05cee003d19cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa8a08be94c923">
+		<description>Voyage - A Sorceress Vacation v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Voyage - A Sorceress Vacation v1.03 (2).sms" size="524288" crc="76a1d277" sha1="a8a08be94c9230864ecf47ff8eb9d1abc22cbab3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1559,6 +2489,36 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Waimanu Scary Monsters Saga.sms" size="131072" crc="195c3f78" sha1="be2bf382b651e15e86979ca99cb41e469a396c07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb3b28f9581beb">
+		<description>Where Is It - The Quest For The 10th Island (Enhanced)(2023)(Ricco59)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="81920">
+				<rom name="Where Is It - The Quest For The 10th Island (Enhanced)(2023)(Ricco59).sms" size="81920" crc="d5edf621" sha1="b3b28f9581bebf22bd5eff35cbbc31a277a276e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2be61367ee4ec">
+		<description>Where Is It - The Quest For The 10th Island (Ultimate)(2023)(Ricco59)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="81920">
+				<rom name="Where Is It - The Quest For The 10th Island (Ultimate)(2023)(Ricco59).sms" size="81920" crc="cf9e65d4" sha1="2be61367ee4ec31f53ef2385e27b5887fce40278"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms385a3a2178883">
+		<description>Where is it - The Quest for the 10th Island v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="81920">
+				<rom name="Where is it - The Quest for the 10th Island v1.01 (2023)(Ricco59).sms" size="81920" crc="9ecafb4d" sha1="385a3a217888397f8686ee92ef541a66d49e088d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1639,26 +2599,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Zemina Best 88 (KR).sms" size="1048576" crc="3c339d9e" sha1="3bb6be77eb321f5c97948a96878d1a042623c089"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsf68ab72d6948c">
-		<description>ZEXALL v0</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="ZEXALL v0.13 (2003)(Maxim & Quinn, Eric)(PD)[VDP version].bin" size="32768" crc="39078689" sha1="f68ab72d6948c5ef3ac73728bab53a568565ce37"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsd2379dac92ed9">
-		<description>zexall</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="zexall.sms" size="32768" crc="7ce4ceda" sha1="d2379dac92ed9923c0103171ea9b0e2a84f34341"/>
 			</dataarea>
 		</part>
 	</software>

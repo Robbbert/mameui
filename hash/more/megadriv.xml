@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1799 -->
+<!-- Number of items in this list = 1813 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -1309,16 +1309,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(U)3 Ninjas Kick Back (Hack, Spanish).bin" size="2097152" crc="9a0e98a9" sha1="304fc7f2db485e9957acea8d868194050ca101b0"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genaa276048f010e">
-		<description>(U)3-games-in-1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(U)3-games-in-1.bin" size="3145728" crc="1a6f45dc" sha1="aa276048f010e94020f0c139dcf5829fb9ea6b21"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2892,6 +2882,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen1d2d80d277ffd">
+		<description>240pSuite-1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="240pSuite-1.23.bin" size="262144" crc="439fe2f4" sha1="1d2d80d277ffd6ec9e8b7a624d511f7891c8100c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genbbde5fd790ea0">
 		<description>30 Day Project Revisited</description>
 		<year>????</year>
@@ -2919,6 +2919,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1300053">
 				<rom name="33SFACTOR.bin" size="1300053" crc="366e8cd4" sha1="ded6f8f8e6725b9ebd6177fda3e8698dbd2f9348"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genaa276048f010e">
+		<description>6-pak (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="6-pak (usa).md" size="3145728" crc="1a6f45dc" sha1="aa276048f010e94020f0c139dcf5829fb9ea6b21"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2969,6 +2979,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Abnormal Family - Butt Babies and Tranny Tramps.bin" size="1048576" crc="81c0c868" sha1="744519e7cc320af9f1582939234cd79e1826ff66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen20efa5c4762e2">
+		<description>Abyssal Infants</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="845624">
+				<rom name="Abyssal Infants.bin" size="845624" crc="b893bea7" sha1="20efa5c4762e23f749eeefb297b20862b4a55521"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3142,6 +3162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen22e2ac08d45ce">
+		<description>Alice Sisters (2022)(PixelHeart)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Alice Sisters (2022)(PixelHeart).bin" size="4194304" crc="d5b794ed" sha1="22e2ac08d45cee799d7bfb82a08737800b50a557"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen616b585082c84">
 		<description>Alien 3 (USA, Europe) (Rev A)</description>
 		<year>????</year>
@@ -3192,6 +3222,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen379ee737593b6">
+		<description>Alien3 - Kinoppi version (2024)(Vikfield)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Alien3 - Kinoppi version (2024)(Vikfield).bin" size="524288" crc="477b634b" sha1="379ee737593b6ed59a5167e58ff4a6fa315196bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena7c6e7d6b3df2">
+		<description>AlienSoldier_Europe</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="AlienSoldier_Europe.bin" size="2097152" crc="9b1a1d7f" sha1="a7c6e7d6b3df26a3ca381a170ad06efab0043c97"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen6d5ec8876017e">
 		<description>Alisia Dragoon (USA)</description>
 		<year>????</year>
@@ -3229,6 +3279,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Altered Beast (USA, Europe).bin" size="524288" crc="e4ea5e40" sha1="250c897f03ca741f241833eb042424f2ea958203"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen21d9a51ad55ac">
+		<description>Amshay (2022)(BankBank)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Amshay (2022)(BankBank).bin" size="1048576" crc="79e57b7f" sha1="21d9a51ad55ac3deab0c3cb33c11a3b616e07b51"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3282,6 +3342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genc62ac76fd560e">
+		<description>Arapuca (2020)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="917504">
+				<rom name="Arapuca (2020)(Manganga Team).bin" size="917504" crc="b28a64ac" sha1="c62ac76fd560e8c704a1bcc83cf2706737c8d74b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2bd83b4da2fca">
 		<description>Ariel the Little Mermaid (USA, Europe)</description>
 		<year>????</year>
@@ -3299,6 +3369,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Arrow Flash (USA, Europe).bin" size="524288" crc="06421584" sha1="611873b27970d30812d52d47578c92f76c8733c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend98e47384324c">
+		<description>Art of Fighting Upgrade (2023)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Art of Fighting Upgrade (2023)(BillyTime! Games).bin" size="2097152" crc="912d59ee" sha1="d98e47384324ce75a95f2df755c72d59386748a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfd7473829ff7b">
+		<description>ASAP Plz (2020)(YRS Truly)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="ASAP Plz (2020)(YRS Truly).bin" size="524288" crc="6f65bbf5" sha1="fd7473829ff7b126e62d9ffb8f59e9a77a71a9f0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3462,6 +3552,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf13f06362cfdc">
+		<description>Barbarian AMIGA (2017)(F</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1031574">
+				<rom name="Barbarian AMIGA (2017)(F.L).bin" size="1031574" crc="4fc515f5" sha1="f13f06362cfdc1809f92986a752141c40b22a319"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc082fcdb99abb">
+		<description>Barbarian Amstrad CPC (2014)(F</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2296122">
+				<rom name="Barbarian Amstrad CPC (2014)(F.L).bin" size="2296122" crc="d63f8446" sha1="c082fcdb99abbcdb996d6270c30557347224cb78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen60e22157713fa">
+		<description>Barbarian Atari ST (2014)(F</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2487416">
+				<rom name="Barbarian Atari ST (2014)(F.L).bin" size="2487416" crc="fec97705" sha1="60e22157713fa2582d788d7d77558ea48e848ebe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6dacce873f444">
+		<description>Barbarian C64 (2014)(F</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3028428">
+				<rom name="Barbarian C64 (2014)(F.L).bin" size="3028428" crc="d37f9af0" sha1="6dacce873f444d0708a006322411ce52303cd875"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2aea0d18491d9">
 		<description>Barbarian remake (2019)(Z-Team)</description>
 		<year>????</year>
@@ -3472,13 +3602,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen60e22157713fa">
-		<description>Barbarian</description>
+	<software name="gen04d71f2845675">
+		<description>Barbarian ZX Spectrum (2015)(F</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2487416">
-				<rom name="Barbarian.bin" size="2487416" crc="fec97705" sha1="60e22157713fa2582d788d7d77558ea48e848ebe"/>
+			<dataarea name="rom" size="1432448">
+				<rom name="Barbarian ZX Spectrum (2015)(F.L).bin" size="1432448" crc="5360129d" sha1="04d71f2845675536067b850a9bb07b8454a5d8df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3489,6 +3619,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Bare Knuckle (World) (Rev A).bin" size="524288" crc="3e8baf7e" sha1="8990e9e0220aee274121c57f06b546274b3d1b78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf5b1319e5f6ba">
+		<description>Bare Knuckle 3 Project (5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3882698">
+				<rom name="Bare Knuckle 3 Project (5).bin" size="3882698" crc="3f8f40b1" sha1="f5b1319e5f6ba56fe63c4cd6da053490997e44f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3723,12 +3863,12 @@
 		</part>
 	</software>
 	<software name="gen6e6776b2c9d0f">
-		<description>Batman Forever</description>
+		<description>batman forever (world)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
-				<rom name="Batman Forever.bin" size="3145728" crc="8b723d01" sha1="6e6776b2c9d0f74e8497287b946ead7f630a35ce"/>
+				<rom name="batman forever (world).md" size="3145728" crc="8b723d01" sha1="6e6776b2c9d0f74e8497287b946ead7f630a35ce"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3892,6 +4032,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen862c8e014d6a3">
+		<description>Big's Fishing Derby (2014)(Flamewing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Big's Fishing Derby (2014)(Flamewing).bin" size="1048576" crc="e1448457" sha1="862c8e014d6a37445461363300d6646f5fcd0e6e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend846f56b2b699">
 		<description>Big's Fishing Derby (PD)</description>
 		<year>????</year>
@@ -3899,16 +4049,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Big's Fishing Derby (PD).bin" size="1048576" crc="6aece56c" sha1="d846f56b2b699642e4e59e19a23ac8b9050cf381"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen862c8e014d6a3">
-		<description>bigfd</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="bigfd.bin" size="1048576" crc="e1448457" sha1="862c8e014d6a37445461363300d6646f5fcd0e6e"/>
 			</dataarea>
 		</part>
 	</software>
