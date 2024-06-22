@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 703 -->
+<!-- Number of items in this list = 718 -->
 <softwarelist name="gameboy_cart" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -3152,6 +3152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcc59578dcd60bc">
+		<description>BIG2SMALL (1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="BIG2SMALL (1.2) (World) (Cart) (GB Compatible) (Aftermarket) (Unl).gbc" size="65536" crc="53de0a8b" sha1="c59578dcd60bc8be24967b8a593c8df7a9ceadd0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc013194f3337f4">
 		<description>Binary Chaos (PD) [C]</description>
 		<year>????</year>
@@ -3489,6 +3499,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Captain Knick-Knack [MBC1].gb" size="131072" crc="4e18c5b1" sha1="76316b5772fe76b181dd0ba9a5790048229317fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca6f31c65df9e1">
+		<description>carazu (world) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="carazu (world) (PD).bin" size="262144" crc="c4e1e239" sha1="a6f31c65df9e1607101fa8072524fd37b897326b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3879,6 +3899,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Coffee Drop (Bung) (PD) [C].gbc" size="65536" crc="0338e1b4" sha1="82892bb90ca9f11a00e4e93fe6bb02108d9a854c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3274764be4683">
+		<description>cold nights</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="cold nights.gb" size="524288" crc="5c0e97db" sha1="3274764be46837d2abbd5ed962c192e5a9d094ed"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4532,6 +4562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc01f361ca36dc5">
+		<description>fishin-for-average-caucasian-boyfriends</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="fishin-for-average-caucasian-boyfriends.gb" size="524288" crc="4e0ebcb9" sha1="01f361ca36dc5ddab02271cb3e8acf7758c93129"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcad8eda3459e70">
 		<description>Flare Squip (PD) [a1]</description>
 		<year>????</year>
@@ -4549,6 +4589,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Flare Squip (PD).gb" size="32768" crc="7a086503" sha1="f4cceea1b12532affd3649f0475cc8577a134172"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf61cad20b514a">
+		<description>Flatso in Be Kind, Debind! (Gaming Alexandria)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Flatso in Be Kind, Debind! (Gaming Alexandria).gb" size="131072" crc="70beab39" sha1="f61cad20b514a9b60b4c5e13b97c353c3f3551bc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5029,6 +5079,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Great Greed (U) [tr Sp1.0_lukas].gb" size="262144" crc="770aeccd" sha1="1e38a0a8b68130e717986d3814daa496117cbc82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5b92b0db1af98">
+		<description>green beret (prototype 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="green beret (prototype 1).bin" size="32768" crc="c66c546f" sha1="5b92b0db1af9803e27a4ebb23ad9ed8377d6d87b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5522,6 +5582,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc075b3e29ed14f">
+		<description>libbet01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="libbet01.gb" size="32768" crc="c8176549" sha1="075b3e29ed14f6414d3165f18fac86ebf8c53b9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc16191acbaf8be">
+		<description>libbet02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="libbet02.gb" size="32768" crc="549c8f98" sha1="16191acbaf8be8d495b98983d0082ef397fcd1a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0e842b1ff8b42">
+		<description>libbet03</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="libbet03.gb" size="32768" crc="192d35f1" sha1="0e842b1ff8b42a8bf6e4d2efd5968e132092f30f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3a52a6e7c9c5b">
+		<description>libbet04</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="libbet04.gb" size="32768" crc="1a4ccc92" sha1="3a52a6e7c9c5beb93920043ee932d841ba2ce0e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca84789e68069b">
+		<description>libbet05</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="libbet05.gb" size="32768" crc="7525ae52" sha1="a84789e68069b8c3367ccb31fbf44b63f249a201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2b5418ef6440e">
+		<description>libbet06</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="libbet06.gb" size="32768" crc="9ccc887f" sha1="2b5418ef6440e4002247955df90eab0c4773ba13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9c72848fadc5d">
+		<description>libbet07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="libbet07.gb" size="32768" crc="96d18cfa" sha1="9c72848fadc5d10aba617089406c2c3247ae64f3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbccacf1ca2bf737">
 		<description>Litti's Summer Sports (G)</description>
 		<year>????</year>
@@ -5599,6 +5729,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Marvin Strikes Back! (USA) (En,Fr,Es) [b].gbc" size="2097152" crc="0ea6a9e9" sha1="620e7e82db6d627c7c10df240f5895643f3a611c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc97a02faa5efbb">
+		<description>mastermind_gameboy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="mastermind_gameboy.gb" size="32768" crc="074763ec" sha1="97a02faa5efbb292ae3c517182aba768810e36cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7019,6 +7159,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Zipball [MBC1].gb" size="65536" crc="602e072c" sha1="33782442ad59cc30c9d082a7a46cd6cc5f548f4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc73bd9e6e3bede">
+		<description>Zodiac GBC (WLS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Zodiac GBC (WLS).gbc" size="262144" crc="c4d86c05" sha1="73bd9e6e3bede8de489680ba84129e8fd17abbc0"/>
 			</dataarea>
 		</part>
 	</software>

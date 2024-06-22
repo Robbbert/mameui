@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3230 -->
+<!-- Number of items in this list = 3244 -->
 <softwarelist name="snes_cart" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3849,6 +3849,46 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Brutal Mario English.sfc" size="4194304" crc="d8642ea3" sha1="d91bc627dc9d4f80285abcc98034589fc652d3e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1871c76fca204">
+		<description>BS Mario USA 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="BS Mario USA 1.smc" size="1048576" crc="5eed80d4" sha1="1871c76fca2040bb56b4a4a0d52965c89546822d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3046d91385e13">
+		<description>BS Mario USA 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="BS Mario USA 2.smc" size="1048576" crc="ef291a42" sha1="3046d91385e132f85f3579c5c7255b825d9d6582"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7d4c6fc2e07bc">
+		<description>BS Mario USA 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="BS Mario USA 3.smc" size="1048576" crc="ba140b3c" sha1="7d4c6fc2e07bc9f1ca281e0bdcf7fd311c4184ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa9399ef9acc65">
+		<description>BS Mario USA 4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="BS Mario USA 4.smc" size="1048576" crc="3b5a5041" sha1="a9399ef9acc65b2ae2cf4a64c78086cb66170eca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9042,6 +9082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns208967ec1569b">
+		<description>Hind Strike (USA) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Hind Strike (USA) (Unl).sfc" size="1048576" crc="027bd1d9" sha1="208967ec1569ba42dc70e9cc402aa1937c38bdbe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns715cebe24f4f1">
 		<description>Hiper Metroid (Super Metroid hack)</description>
 		<year>????</year>
@@ -9079,6 +9129,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Holy Umbrella - Dondera no Mubo (J) [T+Eng_agtp].sfc" size="3145728" crc="93a77c59" sha1="9f3562be4dde2ad96f6a2e4019bf3c39a3e66a9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd62896e9d5748">
+		<description>Hong Kong 97 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524800">
+				<rom name="Hong Kong 97 (PD).smc" size="524800" crc="a6c42c06" sha1="d62896e9d574873a0284f53162311a5b887e98c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14419,6 +14479,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194816">
 				<rom name="Mortal Kombat 2 e Meio (unl).sfc" size="4194816" crc="deee492b" sha1="aff0b120e30e0fca34fb83ed5282de12ae85ca85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1fa8c39e5d904">
+		<description>mortal kombat 3 r21</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="mortal kombat 3 r21.sfc" size="4194304" crc="8db650f1" sha1="1fa8c39e5d904ff68d095785ce611b96d4c2809c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22793,12 +22863,12 @@
 		</part>
 	</software>
 	<software name="snsdfd2856dcf975">
-		<description>socks the cat rocks the hill (prototype)</description>
+		<description>Socks the Cat Rocks the Hill (Unl)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="socks the cat rocks the hill (prototype).sfc" size="1048576" crc="cac6521f" sha1="dfd2856dcf975aed784546d1b452eb3fec3f3a90"/>
+				<rom name="Socks the Cat Rocks the Hill (Unl).smc" size="1048576" crc="cac6521f" sha1="dfd2856dcf975aed784546d1b452eb3fec3f3a90"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22939,6 +23009,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Spawn (U) [T+Por_Transcenter].sfc" size="3145728" crc="2bcd5157" sha1="f09fc16318ad1d72ebe520f57dbd1a336de66ff2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3fcd5c9405bc5">
+		<description>Spectre</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Spectre.sfc" size="4194304" crc="6a3a6b8b" sha1="3fcd5c9405bc5c261ae726e0cd91e98c87a359c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -25049,6 +25129,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Super Mario World (USA) [Hack by Stark v1.0Beta] (~Mario's Return Again).sfc" size="4194304" crc="d71f2bda" sha1="9a4d81069f9be5c88425ea6e5ec5c8e3c351ddc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2704ab9a7a651">
+		<description>Super Mario World - 1st Annual Vanilla Level Design Contest - Collaboration Hack [H] [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Super Mario World - 1st Annual Vanilla Level Design Contest - Collaboration Hack [H] [!].smc" size="2097664" crc="613d5e8c" sha1="2704ab9a7a651ab7ad658d25ac4a6fe3d4e4e1f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsdeffbe5f3e57c">
+		<description>Super Mario World - 1st Old-School Level Design Contest - Collaboration Hack [H] [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Super Mario World - 1st Old-School Level Design Contest - Collaboration Hack [H] [!].smc" size="1049088" crc="78ca0b45" sha1="deffbe5f3e57c0b445cb96b8a2b618c9a005b736"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0e8cd958f8fb2">
+		<description>Super Mario World - 7th Annual Vanilla Level Design Contest - Collaboration Hack [H] [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Super Mario World - 7th Annual Vanilla Level Design Contest - Collaboration Hack [H] [!].smc" size="4194816" crc="e51bc081" sha1="0e8cd958f8fb2dff2f3346bb56b50c531d7e6eb9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -27742,6 +27852,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsdcc7bef486ac8">
+		<description>Super_Turrican_1_Director_39_s_Cut_PD_2022 (1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Super_Turrican_1_Director_39_s_Cut_PD_2022 (1).smc" size="1572864" crc="97758715" sha1="dcc7bef486ac8878105635028a75510fc420d53d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8c82944939d51">
+		<description>Super_Turrican_2_PD_2022 (1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Super_Turrican_2_PD_2022 (1).smc" size="3145728" crc="9f1098bd" sha1="8c82944939d510d6a99c8095341bfd93ee96b72b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd34dba8268c75">
 		<description>Super_World_Mario_(U)_[!] (SMW1 Hack)</description>
 		<year>????</year>
@@ -28603,12 +28733,12 @@
 		</part>
 	</software>
 	<software name="snsa92f0b2c2e5fd">
-		<description>Unholy Night M</description>
+		<description>Unholy Night M (Japan) (Unl)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Unholy Night M.sfc" size="4194304" crc="44cfa847" sha1="a92f0b2c2e5fdf756bb06b3f14d1fd7801d0af8c"/>
+				<rom name="Unholy Night M (Japan) (Unl).smc" size="4194304" crc="44cfa847" sha1="a92f0b2c2e5fdf756bb06b3f14d1fd7801d0af8c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29339,6 +29469,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="what. (SMW1 Hack).sfc" size="4194304" crc="e00b70cf" sha1="513812815b2f2de019395e56c3d40f84b6710676"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd0450f0972984">
+		<description>wizap_-_ankoku_no_ou_(japan)_(beta)_(45768)_[h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="wizap_-_ankoku_no_ou_(japan)_(beta)_(45768)_[h1].sfc" size="2097152" crc="2cbc2f72" sha1="d0450f09729844188a0a17a2fb9fc365dd0484cc"/>
 			</dataarea>
 		</part>
 	</software>

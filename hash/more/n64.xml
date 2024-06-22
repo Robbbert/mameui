@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 155 -->
+<!-- Number of items in this list = 164 -->
 <softwarelist name="n64_cart" description="n64 loose roms">
 	<software name="n64bbc390954c605">
 		<description>(demo)2 Blokes & An Armchair - Nintendo 64 Remix (199x)(Tesko)(PD)[h]</description>
@@ -702,6 +702,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="n6499897982637c1">
+		<description>(E)40 winks [fixed]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="(E)40 winks [fixed].z64" size="33554432" crc="f8d0ee57" sha1="99897982637c103a8f1b04fa5bed50ff96d8d003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n643774e87aa3832">
+		<description>(E)40 winks</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="(E)40 winks.z64" size="33554432" crc="7e718143" sha1="3774e87aa383220060d330314f2c5bbb872f72ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n64cdabb42be0755">
+		<description>(E)ECW Hardcore Revolution (G) v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="(E)ECW Hardcore Revolution (G) v1.1.z64" size="33554432" crc="e9cf3d9f" sha1="cdabb42be0755d186ad6cae6427fb7c0a12b2e7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n64c487db55c2c3a">
+		<description>(E)Legend of Zelda, The - Majora's Mask (Europe) (En,Fr,De,Es) (Rev A) (Virtual Console)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="(E)Legend of Zelda, The - Majora's Mask (Europe) (En,Fr,De,Es) (Rev A) (Virtual Console).z64" size="33554432" crc="a83abf72" sha1="c487db55c2c3a97ccd39ded13ef9fd9121dae729"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n64c7fec2a9d57f6">
+		<description>(E)Power Rangers - Lightspeed Rescue (Europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="12582912">
+				<rom name="(E)Power Rangers - Lightspeed Rescue (Europe).z64" size="12582912" crc="36ee5ca8" sha1="c7fec2a9d57f656b8d0b4404c8797c46136fd971"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n64c0c283528cb89">
+		<description>(E)Saban's Power Rangers - Lightspeed Rescue (2000)(THQ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="12582912">
+				<rom name="(E)Saban's Power Rangers - Lightspeed Rescue (2000)(THQ).bin.z64" size="12582912" crc="83590247" sha1="c0c283528cb892195f6d22b8a5c610239fa8c206"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n6415ad0a48dbb2d">
+		<description>(E)WWF No Mercy (Europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="(E)WWF No Mercy (Europe).z64" size="33554432" crc="e88d7e16" sha1="15ad0a48dbb2da32b39601e6bfb5d7b381853529"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n643af3190de8e68">
+		<description>(E)WWF No Mercy v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="(E)WWF No Mercy v1.0 (2000)(THQ).bin.z64" size="33554432" crc="b79bddd8" sha1="3af3190de8e687d2899ee5ea7cdd58a3b6f34953"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="n64a92781bc1e527">
 		<description>64_sm64s</description>
 		<year>????</year>
@@ -819,6 +899,16 @@
 		<part name="cart" interface="n64_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Cruis'n USA (USA) (Rev B) (Virtual Console).z64" size="8388608" crc="8fc564f9" sha1="273f1d6ddd48f92af49f37e88405f318a340c2cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n647bf9b36c44609">
+		<description>Dinosaur Planet - cracked</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="Dinosaur Planet - cracked.z64" size="67108864" crc="704c0012" sha1="7bf9b36c44609396cb7d5b45d85561dbbe239116"/>
 			</dataarea>
 		</part>
 	</software>

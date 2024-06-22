@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5383 -->
+<!-- Number of items in this list = 5401 -->
 <softwarelist name="nes_cart" description="nes loose roms">
 	<software name="nes2d5b194357b46">
 		<description>!Clik! (2008 Sly Dog Studios)</description>
@@ -53212,6 +53212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes9f5844bc73e72">
+		<description>Zelda (ES-1096)(Ch)[U][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="2097259">
+				<rom name="Zelda (ES-1096)(Ch)[U][!].nes" size="2097259" crc="7e5d38bc" sha1="9f5844bc73e7215f48678da179d0a8b3d53b2303"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes8fc46f2222c13">
 		<description>Zelda - Shen Qi De Mao Zi (C)</description>
 		<year>????</year>
@@ -53219,6 +53229,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="2097168">
 				<rom name="Zelda - Shen Qi De Mao Zi (C).NES" size="2097168" crc="cd419878" sha1="8fc46f2222c1347316ed4dd4886f9a1fa9705928"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes01b09cc5b921a">
+		<description>Zelda -The Minish Cap - Shen Qi De Mao Zi (Ch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="2097168">
+				<rom name="Zelda -The Minish Cap - Shen Qi De Mao Zi (Ch).nes" size="2097168" crc="2eee401d" sha1="01b09cc5b921a0e442eaae8c6c7fc66d95df8dcd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53279,6 +53299,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Zelda II - The Adventure of Link (Europe) (Rev 2) (Virtual Console).nes" size="262160" crc="58c33f26" sha1="128ba741f6df302fe04b72cc2e212bc5a33abaca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes230fede95cdf5">
+		<description>zelda ii - the adventure of link (europe) (rev 2) - castellano v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="zelda ii - the adventure of link (europe) (rev 2) - castellano v1.0.nes" size="262160" crc="d31d09ae" sha1="230fede95cdf545f2068b6cd3f218d226391d4c0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53482,6 +53512,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesc877682b22958">
+		<description>Zelda II - The Adventure of Link Redux v3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Zelda II - The Adventure of Link Redux v3.0 (2022)(ShadowOne333).nes" size="262160" crc="f4bdec40" sha1="c877682b2295883915338f50a45a0fd3920c5690"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes56887c0a87e95">
+		<description>Zelda II Amida's Curse GlobHack v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Zelda II Amida's Curse GlobHack v1.6 (2021)(Ok Impala!).nes" size="262160" crc="3250c35d" sha1="56887c0a87e95613ec3a06db33f37179e47bee9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes919fbced862e4">
+		<description>Zelda II Amida's Curse GlobHack v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Zelda II Amida's Curse GlobHack v1.7 (2021)(Ok Impala!).nes" size="262160" crc="a6ccfea4" sha1="919fbced862e4df350edbb862968b19decceec28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes64f6eb82dba9c">
+		<description>Zelda II Amida's Curse GlobHack v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Zelda II Amida's Curse GlobHack v1.9 (2021)(Ok Impala!).nes" size="262160" crc="f01a5b55" sha1="64f6eb82dba9c4c99fea47f61d31ced4990214f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd188aa62366a1">
+		<description>Zelda ll - Amida's Curse</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Zelda ll - Amida's Curse.nes" size="262160" crc="e49fc8d5" sha1="d188aa62366a1c978862f538d15db98ba5c24150"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes81887cc43b6c2">
+		<description>Zelda no Densetsu - The Hyrule Fantasy (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Zelda no Densetsu - The Hyrule Fantasy (T-Chi).nes" size="131088" crc="4522aa89" sha1="81887cc43b6c2902c7d43345a1343b6c55b81ccd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes95c589f8d08ba">
 		<description>Zelda no Densetsu 1 - The Hyrule Fantasy (Japan) (2)</description>
 		<year>????</year>
@@ -53539,6 +53629,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Zen - Intergalactic Ninja (Europe).nes" size="262160" crc="9bce039c" sha1="acee7b07cccf461f1e72ee827db7a412df62f8e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd89eb7ffb9d11">
+		<description>Zen - Intergalactic Ninja (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Zen - Intergalactic Ninja (T-Chi).nes" size="524304" crc="b8e36aee" sha1="d89eb7ffb9d110a735a32fbf3e5088adbb11c9c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53722,6 +53822,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes276be582dec23">
+		<description>Zoids - Chuuou Tairiku no Tatakai T-Eng (2023)(Life With Matthew)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Zoids - Chuuou Tairiku no Tatakai T-Eng (2023)(Life With Matthew).nes" size="131088" crc="1528e6c0" sha1="276be582dec233e014ef8094d37df8e551d62996"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes1246118261a88">
 		<description>Zoids 2 - Zenebas no Gyakushuu (Japan) (2)</description>
 		<year>????</year>
@@ -53812,6 +53922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes000a215a26b65">
+		<description>Zombiehunter Bob (2022)(board-b)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Zombiehunter Bob (2022)(board-b).nes" size="524304" crc="00927241" sha1="000a215a26b65360a0d16599c5d3f38795239a01"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes6a4e3e6e6746c">
 		<description>Zu Qiu Xiao Jiang (Ch) [f1]</description>
 		<year>????</year>
@@ -53829,6 +53949,66 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Zui You Ji Zhi Tang San Zang (C).nes" size="524304" crc="8f6ad11d" sha1="1b65d5cfe042088e8727090c31b1789c40a2fae5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes85414e1c29bdf">
+		<description>Математика 1 Класс (Комплекс программ-тренажёров 'Нитас', Early Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Математика 1 Класс (Комплекс программ-тренажёров 'Нитас', Early Version).nes" size="65552" crc="2b9f1749" sha1="85414e1c29bdf7419e62b84c17ce9be2498317ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7b7fa341189c2">
+		<description>Математика 1 Класс (Комплекс программ-тренажёров 'Нитас', Older Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Математика 1 Класс (Комплекс программ-тренажёров 'Нитас', Older Version).nes" size="65552" crc="74b6fffc" sha1="7b7fa341189c2a9ba5520ffb00b9d122558ba098"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes47005e3aeb9e9">
+		<description>Математика 2 Класс (Комплекс программ-тренажёров 'Нитас', Early Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Математика 2 Класс (Комплекс программ-тренажёров 'Нитас', Early Version).nes" size="65552" crc="84d16ece" sha1="47005e3aeb9e926a2fd1c8290b27ed0f420b7906"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes336e4ffaa9571">
+		<description>Математика 2 Класс (Комплекс программ-тренажёров 'Нитас', Older Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Математика 2 Класс (Комплекс программ-тренажёров 'Нитас', Older Version).nes" size="65552" crc="63b4b939" sha1="336e4ffaa9571ee4a170512e76d39f07966d1ceb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc4dce9b41116c">
+		<description>Математика 2х2= (Комплекс программ-тренажёров 'Нитас', Early Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Математика 2х2= (Комплекс программ-тренажёров 'Нитас', Early Version).nes" size="65552" crc="6b745caf" sha1="c4dce9b41116c01dab172d241f57e3b12d3c3cf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nescc423bac06ca6">
+		<description>Русский Язык 5 Класс (Early Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Русский Язык 5 Класс (Early Version).nes" size="65552" crc="fe4da24e" sha1="cc423bac06ca6b0a6dbd3edea0e461b17e12fc5d"/>
 			</dataarea>
 		</part>
 	</software>
