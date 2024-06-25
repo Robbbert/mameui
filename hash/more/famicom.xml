@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 490 -->
+<!-- Number of items in this list = 506 -->
 <softwarelist name="famicom_flop" description="famicom loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -602,13 +602,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="fds2d1a8a1ea95f0">
-		<description>Aspic - Majaou no Noroi (J)</description>
+	<software name="fdsd53177c8ce9e0">
+		<description>Aspic - Curse of the Snakelord (T-ENG)(2023)(BlackPaladin)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="famicom_flop">
-			<dataarea name="flop" size="131016">
-				<rom name="Aspic - Majaou no Noroi (J).fds" size="131016" crc="a90672a9" sha1="2d1a8a1ea95f015e3dea37ce3ab6105d38eb64f6"/>
+			<dataarea name="flop" size="131000">
+				<rom name="Aspic - Curse of the Snakelord (T-ENG)(2023)(BlackPaladin).fds" size="131000" crc="9f1976dd" sha1="d53177c8ce9e0e56e2dbc7805fa3108648f4830e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1252,6 +1252,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fdsc7770b8e7dc02">
+		<description>Dirty Pair - Project Eden (J) [T+Eng0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131016">
+				<rom name="Dirty Pair - Project Eden (J) [T+Eng0.9_Ballzysoft][o1].fds" size="131016" crc="f3dc053a" sha1="c7770b8e7dc02160affea47626c83a752e0aeab9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdsfffd10cb5d8ba">
+		<description>Dirty Pair - Project Eden (Japan) [T-En by Stardust Crusaders v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Dirty Pair - Project Eden (Japan) [T-En by Stardust Crusaders v1.0].fds" size="131000" crc="5707b40a" sha1="fffd10cb5d8ba14d70260e36f9c1a622434f6d3d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds020603812b545">
 		<description>Disk Hacker - Version 1</description>
 		<year>????</year>
@@ -1299,6 +1319,16 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="65516">
 				<rom name="Donkey Kong Jr. (Japan).fds" size="65516" crc="3046966a" sha1="cacb046690da91da3fb9499781de5dd060033e27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds69e5dad9021f4">
+		<description>Doremikko (Jap)(1987)(Konami)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Doremikko (Jap)(1987)(Konami).fds" size="131000" crc="bee7a47b" sha1="69e5dad9021f47807565571a4f27d7bf527c404e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1369,6 +1399,16 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
 				<rom name="Druid - Kyoufu no Tobira (Japan).fds" size="131016" crc="b5d4e955" sha1="16200df14b148a57013f7432a8c124f6b794a042"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds9a699cac4f3e5">
+		<description>Druid - Kyoufu no Tobira (T-Eng)(2022)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Druid - Kyoufu no Tobira (T-Eng)(2022)(BlackPaladin).fds" size="131000" crc="1e9dc522" sha1="9a699cac4f3e5610813a863872bbe773abbad0c4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1942,6 +1982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds9d360e98d4cb6">
+		<description>Fuuun Shourinken - Ankoku no Maou (Jap)(1988)(Jaleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Fuuun Shourinken - Ankoku no Maou (Jap)(1988)(Jaleco).fds" size="131000" crc="3c5f6468" sha1="9d360e98d4cb6ada219354c7915a4d7db1459838"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds8026cf25ee7bd">
 		<description>Gal's Dungeon - Yakyuuken Part II (Unl)</description>
 		<year>????</year>
@@ -2232,6 +2282,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds0dfac25a62453">
+		<description>Gyruss (Japan) [T-En by Stardust Crusaders v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Gyruss (Japan) [T-En by Stardust Crusaders v1.0].fds" size="131000" crc="f17f2728" sha1="0dfac25a6245330d449ff4adf1e81ef483131ccd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds5d94c78a6dcc4">
 		<description>Gyruss (Japan)</description>
 		<year>????</year>
@@ -2239,16 +2299,6 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
 				<rom name="Gyruss (Japan).fds" size="131016" crc="4552202c" sha1="5d94c78a6dcc4b7aa82ecdf58f786cac31a025eb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds0dfac25a62453">
-		<description>Gyruss (T-eng)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="famicom_flop">
-			<dataarea name="flop" size="131000">
-				<rom name="Gyruss (T-eng).fds" size="131000" crc="f17f2728" sha1="0dfac25a6245330d449ff4adf1e81ef483131ccd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2299,6 +2349,16 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131000">
 				<rom name="Hikari Shinwa - Palutena no Kagami (Japan).fds" size="131000" crc="32516fcf" sha1="877211efd0b2ebeea7918b8f3b91861be528e05b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds8faf292b7f0f8">
+		<description>Hikari Shinwa - Palutena no Kagami T-Eng (2023)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Hikari Shinwa - Palutena no Kagami T-Eng (2023)(BlackPaladin).fds" size="131000" crc="78a03745" sha1="8faf292b7f0f840e4860d5bf398a44aefb700270"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2389,6 +2449,26 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
 				<rom name="Idol Hotline - Nakayama Miho no Tokimeki High School (J).fds" size="131016" crc="70d56d98" sha1="fb3ecd898a3a9ba17dfb45198a361db34eb849e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdsdfb1931c10c8d">
+		<description>Idol Hotline - Nakayama Miho no Tokimeki High School (Japan)(DV10)(1987)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Idol Hotline - Nakayama Miho no Tokimeki High School (Japan)(DV10)(1987)(Nintendo).fds" size="131000" crc="9c9616b8" sha1="dfb1931c10c8d8ee42bb807d8305ef9311c78e4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds14d8ba1ed4dee">
+		<description>Idol Hotline - Nakayama Miho no Tokimeki High School (T-Eng)(2022)(FCandChill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Idol Hotline - Nakayama Miho no Tokimeki High School (T-Eng)(2022)(FCandChill).fds" size="131000" crc="772a6bcc" sha1="14d8ba1ed4deed5a753542c431e1dd607e0cc0c8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2562,6 +2642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fdsb2df96d23a9c5">
+		<description>Kamen Rider Black - Taiketsu Shadow Moon T-Eng (2022)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131016">
+				<rom name="Kamen Rider Black - Taiketsu Shadow Moon T-Eng (2022)(BlackPaladin).fds" size="131016" crc="0ca67b03" sha1="b2df96d23a9c593da05d57b5f0b105e79166fac1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds513db12dddf38">
 		<description>Karate Champ (1986)(Data East Corp</description>
 		<year>????</year>
@@ -2679,6 +2769,36 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
 				<rom name="Kiki Kaikai - Dotou Hen (Japan).fds" size="131016" crc="851c555b" sha1="2b1fc84cfd95c521cf21e2165a4d01e791224554"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds72eece3342815">
+		<description>Kiki Kaikai Dotou Hen (J)(Rev 1)(1987)(Taito)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Kiki Kaikai Dotou Hen (J)(Rev 1)(1987)(Taito).fds" size="131000" crc="007aa4fd" sha1="72eece33428159b71951573efbd5aab7f9490235"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds06862e62293be">
+		<description>Kiki Kaikai Dotou Hen T-Eng (2024)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Kiki Kaikai Dotou Hen T-Eng (2024)(BlackPaladin).fds" size="131000" crc="61d3af7e" sha1="06862e62293be27a9a97f11feb0d12582743309a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds62c3170187ca2">
+		<description>Kitten's Tale, A - The Adventures of Chatran T-Eng (2024)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Kitten's Tale, A - The Adventures of Chatran T-Eng (2024)(BlackPaladin).fds" size="131000" crc="a05d0c22" sha1="62c3170187ca2928f94ab51c0f9cac5b12dd3c31"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2813,52 +2933,52 @@
 		</part>
 	</software>
 	<software name="fds0a358699e8ab8">
-		<description>Lipstick #</description>
+		<description>Lipstick 1 - Lolita Hen (1988)(Mimi Pro)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
-				<rom name="Lipstick #.1 - Lolita Hen (1988)(Mimi Pro).fds" size="131016" crc="80464b1e" sha1="0a358699e8ab8dab80c9687f9ed284a15ea037ba"/>
+				<rom name="Lipstick 1 - Lolita Hen (1988)(Mimi Pro).fds" size="131016" crc="80464b1e" sha1="0a358699e8ab8dab80c9687f9ed284a15ea037ba"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="fdse04f30d04d765">
-		<description>Lipstick #</description>
+		<description>Lipstick 2 - Joshi Gakusei Hen (1988)(Mimi Pro)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
-				<rom name="Lipstick #.2 - Joshi Gakusei Hen (1988)(Mimi Pro).fds" size="131016" crc="c8d136b7" sha1="e04f30d04d76574ba4d9c758281b498a647565a3"/>
+				<rom name="Lipstick 2 - Joshi Gakusei Hen (1988)(Mimi Pro).fds" size="131016" crc="c8d136b7" sha1="e04f30d04d76574ba4d9c758281b498a647565a3"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="fds7742ba9d2df84">
-		<description>Lipstick #</description>
+		<description>Lipstick 3 - OL Hen (1988)(Mimi Pro)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
-				<rom name="Lipstick #.3 - OL Hen (1988)(Mimi Pro).fds" size="131016" crc="0fb80911" sha1="7742ba9d2df847354219345492b9af27d8c2c591"/>
+				<rom name="Lipstick 3 - OL Hen (1988)(Mimi Pro).fds" size="131016" crc="0fb80911" sha1="7742ba9d2df847354219345492b9af27d8c2c591"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="fds9a0e8770cac1c">
-		<description>Lipstick #</description>
+		<description>Lipstick 4 - Hakui no Tenshi Hen (1988)(Mimi Pro)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
-				<rom name="Lipstick #.4 - Hakui no Tenshi Hen (1988)(Mimi Pro).fds" size="131016" crc="c201e3bc" sha1="9a0e8770cac1c9574b0c574e6758be455b40d525"/>
+				<rom name="Lipstick 4 - Hakui no Tenshi Hen (1988)(Mimi Pro).fds" size="131016" crc="c201e3bc" sha1="9a0e8770cac1c9574b0c574e6758be455b40d525"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="fdscbd1443bbbe8c">
-		<description>Lipstick #</description>
+		<description>Lipstick 5 - Stewardess Hen (1988)(Mimi Pro)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
-				<rom name="Lipstick #.5 - Stewardess Hen (1988)(Mimi Pro).fds" size="131016" crc="ce25a442" sha1="cbd1443bbbe8c12538cd190e3b76c66b83646fa2"/>
+				<rom name="Lipstick 5 - Stewardess Hen (1988)(Mimi Pro).fds" size="131016" crc="ce25a442" sha1="cbd1443bbbe8c12538cd190e3b76c66b83646fa2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3372,6 +3492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fdsb8d5e36c0081c">
+		<description>Monty on the Run - Monty no Doki Doki Dai Dassou (Japan) [T-En by Stardust Crusaders v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131016">
+				<rom name="Monty on the Run - Monty no Doki Doki Dai Dassou (Japan) [T-En by Stardust Crusaders v1.0].fds" size="131016" crc="9603c2b4" sha1="b8d5e36c0081c95f4fbc1878b355beb6b7abe703"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdse8fd35e19f38c">
 		<description>Monty on the Run - Monty no Doki Doki Dai Dassou (Japan)</description>
 		<year>????</year>
@@ -3612,6 +3742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds20d7ef16cdd92">
+		<description>Patlabor - The Mobile Police - Dai 2 Shoutai Shutsudou Seyo! T-Eng (2003)(Vice Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131016">
+				<rom name="Patlabor - The Mobile Police - Dai 2 Shoutai Shutsudou Seyo! T-Eng (2003)(Vice Translations).fds" size="131016" crc="9d8236f8" sha1="20d7ef16cdd92b64bd18aae57c5ec899e658f720"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdse18a7ecf7141a">
 		<description>Pinball (1983)(Nintendo)</description>
 		<year>????</year>
@@ -3762,6 +3902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds2f9473e6a5b49">
+		<description>Relics - Ankoku Yousai T-Eng (2023)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Relics - Ankoku Yousai T-Eng (2023)(BlackPaladin).fds" size="131000" crc="389a10ad" sha1="2f9473e6a5b49a1c9c690a926a23018be802aac2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds7bee614cafe22">
 		<description>Replicart (1988)(Taito Corp</description>
 		<year>????</year>
@@ -3779,6 +3929,16 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
 				<rom name="Replicart (Japan).fds" size="131016" crc="c3cbc847" sha1="b031b302deb7c2023e1e11fd432449fa0d10a62f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds2ba7c1e0cad94">
+		<description>Return of Mario Bros</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131000">
+				<rom name="Return of Mario Bros. T-Eng (2021)(FCandChill).fds" size="131000" crc="c3c31d57" sha1="2ba7c1e0cad9452beb113f97f272ca5d69c14311"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3812,16 +3972,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="fds6f13e448fb0b7">
-		<description>Samurai Sword (1988)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="famicom_flop">
-			<dataarea name="flop" size="131016">
-				<rom name="Samurai Sword (1988)(Capcom).fds" size="131016" crc="5ca021ff" sha1="6f13e448fb0b731cd1da0492822a2510c9a40ad5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="fdsc1e00a254f64a">
 		<description>Samurai Sword (1988)(Capcom)[CAP-SMU][tr En Mute]</description>
 		<year>????</year>
@@ -3829,6 +3979,16 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
 				<rom name="Samurai Sword (1988)(Capcom)[CAP-SMU][tr En Mute].fds" size="131016" crc="45ddd0f4" sha1="c1e00a254f64a209dc5d5df00b251604e6cf590b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds6f13e448fb0b7">
+		<description>Samurai Sword (Jap)(1988)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131016">
+				<rom name="Samurai Sword (Jap)(1988)(Capcom).fds" size="131016" crc="5ca021ff" sha1="6f13e448fb0b731cd1da0492822a2510c9a40ad5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4442,16 +4602,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="fds2f65107613664">
-		<description>Ultraman - Kaijuu Teikoku no Gyakushuu (1986)(Bandai)[h]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="famicom_flop">
-			<dataarea name="flop" size="131016">
-				<rom name="Ultraman - Kaijuu Teikoku no Gyakushuu (1986)(Bandai)[h].fds" size="131016" crc="5063f09e" sha1="2f651076136647c7489928eb834d5094995ba692"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="fds8ac0f49bb0847">
 		<description>Ultraman - Kaijuu Teikoku no Gyakushuu (HACK)</description>
 		<year>????</year>
@@ -4459,6 +4609,16 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131000">
 				<rom name="Ultraman - Kaijuu Teikoku no Gyakushuu (HACK).fds" size="131000" crc="339df609" sha1="8ac0f49bb08478983479c92cd415ef54e795e3e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds2f65107613664">
+		<description>Ultraman - Kaijuu Teikoku no Gyakushuu (Japan) [t1] (Infinite Power)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131016">
+				<rom name="Ultraman - Kaijuu Teikoku no Gyakushuu (Japan) [t1] (Infinite Power).fds" size="131016" crc="5063f09e" sha1="2f651076136647c7489928eb834d5094995ba692"/>
 			</dataarea>
 		</part>
 	</software>
