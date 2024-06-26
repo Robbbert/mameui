@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5460 -->
+<!-- Number of items in this list = 5478 -->
 <softwarelist name="nes_cart" description="nes loose roms">
 	<software name="nes2d5b194357b46">
 		<description>!Clik! (2008 Sly Dog Studios)</description>
@@ -1042,6 +1042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nese16a3206bd164">
+		<description>12-in-1 Console TV Game Cartridge (Unl)[!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="2097168">
+				<rom name="12-in-1 Console TV Game Cartridge (Unl)[!].nes" size="2097168" crc="85dc0abf" sha1="e16a3206bd164317a78fe6b5c0b509f9a72c20f6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes3acf074bf7b04">
 		<description>12-in-1 Hwang Shinwei (Unl) [p1][!]</description>
 		<year>????</year>
@@ -1462,6 +1472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesed50425b780b2">
+		<description>2-in-1 1996 Super HIK Gold Card (NT-803)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="2-in-1 1996 Super HIK Gold Card (NT-803)[p1][!].nes" size="1048592" crc="f56040a9" sha1="ed50425b780b22d58b84abeebddd63bc50e4d5ef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesacc0114910801">
 		<description>2-in-1 Cosmo Cop (Light gun) (Sachen) [U][!]</description>
 		<year>????</year>
@@ -1469,6 +1489,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131198">
 				<rom name="2-in-1 Cosmo Cop (Light gun) (Sachen) [U][!].unf" size="131198" crc="0b889dad" sha1="acc01149108010328c2839783c09b030650696a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd8afa87d88899">
+		<description>2-in-1 J-M2 (Unl)[!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="2-in-1 J-M2 (Unl)[!].nes" size="1048592" crc="5b58e0ab" sha1="d8afa87d888990d0553c9979072cfb968485154e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfdc4b64f9d981">
+		<description>2-in-1 King005 (Unl)[!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="2-in-1 King005 (Unl)[!].nes" size="1048592" crc="29ac81be" sha1="fdc4b64f9d981bf024c93c0bf39c332e2189eb2e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1712,6 +1752,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes18376bf995aa0">
+		<description>3-in-1 (BN096)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="3-in-1 (BN096)[p1][!].nes" size="1048592" crc="f1a0f619" sha1="18376bf995aa0810088e624b20320fa5fff20c10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0669d850619dd">
+		<description>3-in-1 (K3011)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="3-in-1 (K3011)[p1][!].nes" size="1048592" crc="478df968" sha1="0669d850619dd60a6a2a972719bf4a41ed456625"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes83e39a25d84a2">
+		<description>3-in-1 (MR028)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="3-in-1 (MR028)[p1][!].nes" size="1048592" crc="0c6fbbee" sha1="83e39a25d84a23f843e919a40e3bfd811c2a8a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfa3e45d524c4a">
+		<description>3-in-1 (MR029)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="3-in-1 (MR029)[p1][!].nes" size="1048592" crc="91f83928" sha1="fa3e45d524c4a71a27ff1fb6b77d227418d68dd3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes7267945f84e68">
 		<description>3-in-1 (N068) [p1][U][!]</description>
 		<year>????</year>
@@ -1792,6 +1872,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes77d031697619d">
+		<description>4-in-1 (ET40, 821243c)[p1][U](!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524393">
+				<rom name="4-in-1 (ET40, 821243c)[p1][U](!).nes" size="524393" crc="da711927" sha1="77d031697619d135e637ab1a807cd742d7cbc795"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes22c133515a46f">
 		<description>4-in-1 (FK23C8244) [p1][U][!]</description>
 		<year>????</year>
@@ -1799,6 +1889,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="2097254">
 				<rom name="4-in-1 (FK23C8244) [p1][U][!].unf" size="2097254" crc="d3b0b6c6" sha1="22c133515a46f7ac50051fbf029e7e52105b15da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes01ee1f95c05de">
+		<description>4-in-1 (GG1, 820916c, 3967, CK-001, Alt_Dump)[p1][U][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524415">
+				<rom name="4-in-1 (GG1, 820916c, 3967, CK-001, Alt_Dump)[p1][U][!].nes" size="524415" crc="9110fafa" sha1="01ee1f95c05de91ee47f964e70d5ee34f31fcd2f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1819,6 +1919,36 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="1048592">
 				<rom name="4-in-1 (K4033)[p1][!].nes" size="1048592" crc="fe85473d" sha1="0051f88141e2cd8fb02b4de749900b717bbe9a71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0973616d2e655">
+		<description>4-in-1 (SO1)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="4-in-1 (SO1)[p1][!].nes" size="524304" crc="11fad7aa" sha1="0973616d2e65593859fbc0bd9220ef64a23c0c4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa5129a18d1ef0">
+		<description>4-in-1 (YH441)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="4-in-1 (YH441)[p1][!].nes" size="1048592" crc="8fc4ddcb" sha1="a5129a18d1ef0052625b585e7a5a2f1f4d1cab60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese2561a9631eb9">
+		<description>4-in-1 1993 (CK-001)[U][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524413">
+				<rom name="4-in-1 1993 (CK-001)[U][!].nes" size="524413" crc="39367d3f" sha1="e2561a9631eb9081aeacdae18c455962dff8e1ae"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1942,6 +2072,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes924e220f535d3">
+		<description>5-in-1 (SPC005)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="2097168">
+				<rom name="5-in-1 (SPC005)[p1][!].nes" size="2097168" crc="df5dba78" sha1="924e220f535d3bf16ebe1a2cac96841f2edc6cee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0a3248ce625e8">
+		<description>5-star Restaurant (2023)(Wendel Scardua)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="81936">
+				<rom name="5-star Restaurant (2023)(Wendel Scardua).nes" size="81936" crc="42658f47" sha1="0a3248ce625e8a8348f8b9dc979d384fab518d8a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes63f9c1d6e2825">
 		<description>54-in-1 (NT886) [p1][U][!]</description>
 		<year>????</year>
@@ -1949,6 +2099,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="196707">
 				<rom name="54-in-1 (NT886) [p1][U][!].unf" size="196707" crc="56d556c3" sha1="63f9c1d6e282501820055014f156b20e6dffd7ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes37d0f76e359a5">
+		<description>6-in-1 (ET40, 840726c, 43-203)[p1][U][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262256">
+				<rom name="6-in-1 (ET40, 840726c, 43-203)[p1][U][!].nes" size="262256" crc="a0ae76fb" sha1="37d0f76e359a5a9b849c9e422d6603e2b0d5f8e1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2019,6 +2179,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="196707">
 				<rom name="65-in-1 (NT766) [p1][U][!].unf" size="196707" crc="90adb8ae" sha1="3fa5ce02d8b574ce8f4ce707aa51ea9f530e8316"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4d0bdd3f65bb3">
+		<description>7-in-1 (K7603)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="7-in-1 (K7603)[p1][!].nes" size="1048592" crc="4eab5c56" sha1="4d0bdd3f65bb30a985806e61908802379bb668da"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2219,6 +2389,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="1048664">
 				<rom name="8-in-1 (A-020) [p1][U][!].unf" size="1048664" crc="e39c31a9" sha1="5baadf86e4ae1b231121c73c7f28cc4559f32e6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf47b6265cb093">
+		<description>8-in-1 (ET40, 821242c)[p1][U][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048681">
+				<rom name="8-in-1 (ET40, 821242c)[p1][U][!].nes" size="1048681" crc="06e2fd6e" sha1="f47b6265cb0937cf7c2bb4df6a9681f992ad57ec"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 506 -->
+<!-- Number of items in this list = 508 -->
 <softwarelist name="famicom_flop" description="famicom loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -509,6 +509,16 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="65516">
 				<rom name="All 1 - Famimaga Disk Vol. 3 (1991)(Tokuma Shoten)[GTS-ALD][a].fds" size="65516" crc="98c9ea35" sha1="956906455b4b2a93a87b68a68e48b669eb01a216"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds66cec5e6501d9">
+		<description>All Night Nippon Super Mario Bros</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="65516">
+				<rom name="All Night Nippon Super Mario Bros. (1986)(Fuji TV)[ANN-NSM].fds" size="65516" crc="b4d032ca" sha1="66cec5e6501d9f4c35bac8093d287d6ce04b561c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4689,6 +4699,16 @@
 		<part name="flop1" interface="famicom_flop">
 			<dataarea name="flop" size="131016">
 				<rom name="Wakusei Aton Gaiden (Japan) (National Tax Agency Demo).fds" size="131016" crc="94a825fa" sha1="e0f6d627d91cdbe10382a9dfdcb971897995505c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdse0fdd1364717c">
+		<description>Wardner_no_Mori_(1988)(Taito_Corp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="famicom_flop">
+			<dataarea name="flop" size="131016">
+				<rom name="Wardner_no_Mori_(1988)(Taito_Corp.)(J)[b2].fds" size="131016" crc="9d9b3fed" sha1="e0fdd1364717c0cc8013f960cbd39311ca3fb66d"/>
 			</dataarea>
 		</part>
 	</software>

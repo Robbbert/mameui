@@ -180,8 +180,11 @@ const unif *nes_unif_lookup( const char *board )
 void unif_mapr_setup( const char *board, int *pcb_id, int *battery, int *prgram, int *vram_chunks )
 {
 	const unif *unif_board = nes_unif_lookup(board);
-	if (unif_board == nullptr)
-		fatalerror("Unknown UNIF board %s.\n", board);
+	if (unif_board == nullptr)      // MESSUI - do not kill emulator
+	{
+		printf("Unknown UNIF board %s.\n", board);
+		return;
+	}
 
 	*pcb_id = unif_board->board_idx;
 	*battery = unif_board->nvwram;  // we should implement battery banks based on the size of this...
