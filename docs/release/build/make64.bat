@@ -1,5 +1,6 @@
 @echo off
-set MINGW64=c:\Mingw\11-2-0\mingw64
+rem set MINGW64=c:\Mingw\11-2-0\mingw64
+set MINGW64=c:\Mingw\13-2\mingw64
 set minpath=%MINGW64%\bin
 set oldpath=%Path%
 set Path=%minpath%;%oldpath%
