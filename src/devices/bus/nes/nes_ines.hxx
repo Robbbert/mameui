@@ -575,7 +575,7 @@ void ines_mapr_setup( int mapper, int *pcb_id )
 	const nes_mmc *mmc = nes_mapper_lookup(mapper);
 	if (mmc == nullptr)
 	{
-		osd_printf_error("Unimplemented Mapper %d\n", mapper);  // MESSUI - do not kill emulator please
+		osd_printf_error("Unimplemented Mapper: %d\n", mapper);  // MESSUI - do not kill emulator please
 		return;
 	}
 

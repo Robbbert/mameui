@@ -239,7 +239,8 @@ s3c44b0_device::s3c44b0_device(const machine_config &mconfig, const char *tag, d
 	memset(m_zdma, 0, sizeof(s3c44b0_dma_t)*2);
 	memset(m_bdma, 0, sizeof(s3c44b0_dma_t)*2);
 	memset(&m_clkpow, 0, sizeof(s3c44b0_clkpow_t));
-	memset(&m_lcd, 0, sizeof(s3c44b0_lcd_t));
+	//memset(&m_lcd, 0, sizeof(s3c44b0_lcd_t));
+	m_lcd = { };
 	memset(m_uart, 0, sizeof(s3c44b0_uart_t)*2);
 	memset(&m_sio, 0, sizeof(s3c44b0_sio_t));
 	memset(&m_pwm, 0, sizeof(s3c44b0_pwm_t));

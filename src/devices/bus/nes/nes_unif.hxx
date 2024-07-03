@@ -182,7 +182,7 @@ void unif_mapr_setup( const char *board, int *pcb_id, int *battery, int *prgram,
 	const unif *unif_board = nes_unif_lookup(board);
 	if (unif_board == nullptr)      // MESSUI - do not kill emulator
 	{
-		printf("Unknown UNIF board %s.\n", board);
+		osd_printf_error("Unknown UNIF board: %s\n", board);
 		return;
 	}
 

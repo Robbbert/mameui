@@ -34,7 +34,8 @@ spu_device::reverb::reverb(const int hz, const int maxdelay)
 	for (int c=0; c<2; c++)
 	{
 		for (int f=0; f<4; f++) {
-			y[c][f]=make_unique_clear<signed short []>(maxdelay);
+			//y[c][f]=make_unique_clear<signed short []>(maxdelay);
+			y[c][f] = { };
 		}
 		x[c]=make_unique_clear<signed short []>(maxdelay);
 		ax[c]=make_unique_clear<signed short []>(maxdelay);

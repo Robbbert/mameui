@@ -2,14 +2,19 @@
 // copyright-holders:David Haywood, XingXing
 
 #include "emu.h"
+
+#include "pgmcrypt.h"
+
 #include "cpu/arm7/arm7.h"
 #include "cpu/arm7/arm7core.h"
+#include "cpu/xa/xa.h"
 #include "machine/nvram.h"
-#include "pgmcrypt.h"
 #include "sound/ics2115.h"
+
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+
 
 namespace {
 
@@ -19,6 +24,7 @@ public:
 	igs_fear_state(const machine_config &mconfig, device_type type, const char *tag) :
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
+		m_xa(*this, "xa"),
 		m_videoram(*this, "videoram"),
 		m_palette(*this, "palette"),
 		m_gfxrom(*this, "gfx1")
@@ -34,6 +40,7 @@ protected:
 
 private:
 	required_device<cpu_device> m_maincpu;
+	required_device<xa_cpu_device> m_xa;
 	required_shared_ptr<uint32_t> m_videoram;
 	required_device<palette_device> m_palette;
 	required_region_ptr<uint8_t> m_gfxrom;
@@ -58,12 +65,12 @@ void igs_fear_state::draw_sprite(bitmap_ind16 &bitmap, const rectangle &cliprect
 	if ((romoffset != 0) && (romoffset != 0xffffffff))
 	{
 		//logerror("x=%d, y=%d, w=%d pix, h=%d pix, c=0x%02x, romoffset=0x%08x\n", xpos, ypos, width, height, palette, romoffset << 2);
-		uint8_t* gfxrom = &m_gfxrom[romoffset << 2];
+		const uint8_t *gfxrom = &m_gfxrom[romoffset << 2];
 		palette = (palette & 0x3f) << 7;
 
 		for (int y = 0; y < height; y++)
 		{
-			uint16_t* dest = &bitmap.pix(ypos + y);
+			uint16_t *dest = &bitmap.pix(ypos + y);
 			for (int x = 0; x < width; x++)
 			{
 				uint8_t pix = *gfxrom++;
@@ -78,7 +85,7 @@ void igs_fear_state::draw_sprite(bitmap_ind16 &bitmap, const rectangle &cliprect
 	}
 }
 
-uint32_t igs_fear_state::screen_update(screen_device& screen, bitmap_ind16& bitmap, const rectangle& cliprect)
+uint32_t igs_fear_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(0x3ff, cliprect);
 
@@ -132,7 +139,7 @@ void igs_fear_state::igs_fear(machine_config &config)
 	ARM7(config, m_maincpu, 50000000/2);
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs_fear_state::main_map);
 
-	// MX10EXAQC (Philips 80C51 XA)
+	MX10EXA(config, m_xa, 10000000); // MX10EXAQC (Philips 80C51 XA) unknown frequency
 
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_refresh_hz(60);
@@ -161,7 +168,7 @@ ROM_START( fearless )
 	ROM_REGION32_LE( 0x80000, "user1", 0 ) // external ARM data / prg
 	ROM_LOAD( "fearlessp_v-101us.u37", 0x000000, 0x80000, CRC(2522873c) SHA1(8db709877311b6d2796353fc9a44a820937e35c2) )
 
-	ROM_REGION( 0x10000, "plcc", 0 ) // MX10EXAQC (80C51 XA based MCU) marked 07, not read protected
+	ROM_REGION( 0x10000, "xa", 0 ) // MX10EXAQC (80C51 XA based MCU) marked 07, not read protected
 	ROM_LOAD( "fearlessp_07.u33", 0x000000, 0x10000, CRC(7dae4900) SHA1(bbf7ba7c9e95ff2ffeb1dc0fc7ccedd4da274d01) )
 
 	ROM_REGION( 0x3000000, "gfx1", 0 ) // FIXED BITS (0xxxxxxx) (graphics are 7bpp)
@@ -178,13 +185,13 @@ ROM_START( fearless )
 ROM_END
 
 ROM_START( superkds )
-	ROM_REGION( 0x04000, "maincpu", 0 ) // Internal rom of IGS027A ARM based MCU */
+	ROM_REGION( 0x04000, "maincpu", 0 ) // Internal rom of IGS027A ARM based MCU
 	ROM_LOAD( "superkids_igs027a.bin", 0x00000, 0x4000, CRC(9a8e790d) SHA1(ab020a04a4ed0c0e5ec8c979f206fe57572d2304) ) // sticker marked 'F5'
 
 	ROM_REGION32_LE( 0x80000, "user1", 0 ) // external ARM data / prg
 	ROM_LOAD( "superkids_s019cn.u37", 0x000000, 0x80000, CRC(1a7f17dd) SHA1(ba20c0f521bff2f5ae2103ea49bd413b0e6459ba) )
 
-	ROM_REGION( 0x10000, "plcc", 0 ) // MX10EXAQC (80C51 XA based MCU) marked 07, not read protected
+	ROM_REGION( 0x10000, "xa", 0 ) // MX10EXAQC (80C51 XA based MCU) marked 07, not read protected
 	ROM_LOAD( "superkids_mx10exa.u33", 0x000000, 0x10000, CRC(8baf5ba2) SHA1(2f8c2c48e756264e593bce7c09260e50d5cac827) ) // sticker marked G6
 
 	ROM_REGION( 0x2000000, "gfx1", 0 ) // FIXED BITS (0xxxxxxx) (graphics are 7bpp)
@@ -205,6 +212,7 @@ void igs_fear_state::init_igs_fear()
 	*/
 	fearless_decrypt(machine());
 }
+
 void igs_fear_state::init_igs_superkds()
 {
 	/*

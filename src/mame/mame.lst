@@ -427,6 +427,9 @@ skattva                         // (c) 1995
 backgamn                        // (c) 1990
 manohman                        // 199?, Merkur.
 
+@source:adp/stella8085.cpp
+dicemstr
+
 @source:adp/stellafr.cpp
 st_ohla                         //
 st_vulkn                        //
@@ -19502,11 +19505,13 @@ mephisto
 mephisto1x
 mephisto2
 mephisto2a
-mephisto2e
+mephisto2b
 mephisto3
 mephisto3a
 mephisto3b
 mephisto3c
+mephistoe2
+mephistoe2a
 mephistoj
 
 @source:hegenerglaser/europa.cpp
@@ -19525,7 +19530,7 @@ nshort                          // 1993 Mephisto Nigel Short
 
 @source:hegenerglaser/mm1.cpp
 mm1
-mm1b
+mm1a
 mmirage
 
 @source:hegenerglaser/mm2.cpp
@@ -20204,6 +20209,8 @@ lhzb4                           // (c) 200?
 mgcs3                           // (c) 200?
 mgfx                            // (c) 200?
 mgzz                            // (c) 2003
+oceanpar                        //
+oceanpara                       //
 qlgs                            // (c) 1999
 sddz                            // (c) 200?
 sdwx                            // (c) 2002
@@ -23408,7 +23415,8 @@ galsnewt                        // (c) 1990 Kaneko (Taiwan)
 galsnewu                        // (c) 1990 Kaneko (US)
 hotnight                        // (c) 1994 Bulldog Amusements Inc.
 missmw96                        // (c) 1996 Comad
-missw02                         // (c) 2002 Daigom
+missw02                         // (c) 2002 Comad
+missw02d                        // (c) 2002 Daigom
 missw96                         // (c) 1996 Comad
 missw96a                        // (c) 1996 Comad
 missw96b                        // (c) 1996 Comad
@@ -23421,6 +23429,7 @@ smissw                          //
 supmodel                        // (c) 1994 Comad & New Japan System
 supmodl2                        // (c) 1997 Comad
 wownfant                        // (c) 2002 Comad
+wownfanta                       // (c) 2002 Comad
 zipzap                          // (c) 1995 Barko Corp
 zipzapa                         // (c) 1995 Barko Corp
 
@@ -27024,9 +27033,9 @@ chkndrawa                       // (c) 1984 Merit
 couple                          // (c) 1988 Merit
 couplei                         // (c) 1988 Merit
 couplep                         // (c) 1988 Merit
-dodgectya                       // (c) 1986 Merit
-dodgectyb                       // (c) 1986 Merit
-dodgectyc                       // (c) 1986 Merit
+dodgectya                       // (c) 1988 Merit
+dodgectyb                       // (c) 1989 Merit
+dodgectyc                       // (c) 1989 Merit
 dtrvwz5                         // (c) 1987 Merit
 dtrvwz5v                        // (c) 1987 Merit
 housecard                       // (c) 1983 Merit
@@ -27039,6 +27048,7 @@ mdchoice                        // (c) 1983 Merit
 mpchoice                        // (c) 1983 Merit
 mpchoicea                       // (c) 1983 Merit
 mroundup                        // (c) 1984 Merit
+msupstar                        // (c) 1989 Merit
 phrcraze                        // (c) 1986 Merit
 phrcrazea                       // (c) 1986 Merit
 phrcrazeb                       // (c) 1986 Merit
@@ -27071,7 +27081,6 @@ trvwz4va                        // (c) 1985 Merit
 trvwza                          // (c) 1985 Merit
 trvwzb                          // (c) 1985 Merit
 trvwzv                          // (c) 1985 Merit
-unkmerit                        // (c) 1989 Merit
 
 @source:merit/merit3xx.cpp
 ma6710                          // (c) 1989 Merit
@@ -32679,9 +32688,13 @@ mkit09                          //
 mkit09a                         //
 
 @source:multitech/mpf1.cpp
-mpf1                            // 1979 Multitech Micro Professor 1
-mpf1b                           // 1979 Multitech Micro Professor 1B
-mpf1p                           //
+cs113                           // 198? Sciento Robot Arm
+mpf1                            // 1981 Multitech Micro-Professor 1
+mpf1b                           // 1982 Multitech Micro-Professor 1B
+mt80z                           // 1982 MT-80Z
+
+@source:multitech/mpf1p.cpp
+mpf1p                           // 1983 Multitech Micro-Professor 1P
 
 @source:multitech/mpf1_88.cpp
 mpf1_88                         // 1985 Multitech Micro-Professor I/88
@@ -32873,6 +32886,7 @@ abcheck                         // (c) 1996 (Japan)
 
 @source:namco/namcops2.cpp
 acedriv3                        //
+batlgr3                         //
 bldyr3b                         //
 cobrata                         //
 dragchrn                        //
@@ -33888,6 +33902,7 @@ terrafu                         // (c) 1987 Nichibutsu USA
 terrafua                        // (c) 1987 Nichibutsu USA
 
 @source:nichibutsu/cclimber.cpp
+au                              // hack
 bagmanf                         // bootleg on Falcon FCK-00 (Falcon Crazy Kong) PCB
 bigkong                         // bootleg
 cannonb                         // (c) 1985 Soft
@@ -38788,7 +38803,10 @@ edames
 exechess
 
 @source:saitek/gk2000.cpp
+centurion
+cougar
 gk2000
+gk2100
 
 @source:saitek/intchess.cpp
 intchess
@@ -39560,7 +39578,12 @@ meltyb                          // 2007.03 Melty Blood Act Cadenza Version B2 (R
 meltybld                        // 2005.08 Melty Blood Act Cadenza Ver. A (Rev C)
 meltyblo                        // 2005.03 Melty Blood Act Cadenza
 meltybo                         // 2006.12 Melty Blood Act Cadenza Version B
-mj1                             // 2002.10 Sega Yonin Uchi Mahjong MJ (Update Disc Ver.1.008) (CDP-10002B)
+mj1a                            // 2002.09 Sega Yonin Uchi Mahjong MJ (Update Disc Ver.1.007) (CDP-10002A)
+mj1b                            // 2002.10 Sega Yonin Uchi Mahjong MJ (Update Disc Ver.1.008) (CDP-10002B)
+mj1c                            // 2003.01 Sega Yonin Uchi Mahjong MJ (Update Disc Ver.1.011) (CDP-10002C)
+mj1d                            // 2003.02 Sega Yonin Uchi Mahjong MJ Network Taisen Ver. (Update Disc Ver.2.000, Japan) (CDP-10002D)
+mj1e                            // 2003.05 Sega Yonin Uchi Mahjong MJ Network Taisen Ver. (Update Disc Ver.2.002, Japan) (CDP-10002E)
+mj1                             // 2003.06 Sega Yonin Uchi Mahjong MJ Network Taisen Ver. (Update Disc Ver.3.000, Japan) (CDP-10002F)
 moeru                           // 2002.12 Moeru Casinyo
 mok                             // 2002.03.06 The Maze of the Kings
 monkeyba                        // 2001.05 Monkey Ball
@@ -39753,6 +39776,7 @@ sderby2                         // (c) 1985
 @source:sega/sega_beena.cpp
 beena                           //
 tvochken                        //
+carbeena                        //
 
 @source:sega/sega_sawatte.cpp
 sawatte                         //
@@ -41884,6 +41908,8 @@ bkarast
 easykara
 karams
 karatvst
+karatvsta
+mks4001
 
 @source:skeleton/elcirculo.cpp
 elcirculo                       // (c) 1980 Inder
@@ -44430,6 +44456,9 @@ tek6130                         // Tektronix 6130
 @source:tektronix/tekxp33x.cpp
 tekxp330                        //
 
+@source:tektronix/xd88.cpp
+xd88_01
+
 @source:telenova/compis.cpp
 compis                          // 1985 Telenova Compis
 compis2                         // 1985 Telenova Compis
@@ -44936,6 +44965,10 @@ instruct                        //
 mk14                            //
 mk14vdu                         //
 
+@source:trainer/thaler.cpp
+ct65                            // 1982 Thaler CT-65
+mps65                           // 1984 Thaler MPS-65
+
 @source:trainer/pro80.cpp
 pro80                           //
 
@@ -45260,6 +45293,7 @@ tmntmutm
 totspies
 tvsprt10                        //
 virtbb
+virtten
 vtechtvsgr                      // (c) 2006 VTech
 vtechtvssp                      // (c) 2006 VTech
 wfcentro
@@ -45970,37 +46004,7 @@ votrpss                         // 1982 Votrax Personal Speech System
 votrtnt                         // 1980 Votrax Type-'N-Talk
 
 @source:vsystem/aerofgt.cpp
-aerfboo2                        // bootleg
-aerfboot                        // bootleg
 aerofgt                         // (c) 1992 Video System Co.
-aerofgtb                        // (c) 1992 Video System Co.
-aerofgtc                        // (c) 1992 Video System Co.
-karatblz                        // (c) 1991 Video System Co.
-karatblza                       // (c) 1991 Video System Co.
-karatblzbl                      // bootleg
-karatblzj                       // (c) 1991 Video System / Tecmo (Japan)
-karatblzt                       // (c) 1991 Video System Co. / Tecmo
-karatblzu                       // (c) 1991 Video System Co. (US)
-kickball                        // (c) 1998 Seoung Youn
-pspikes                         // (c) 1991 Video System Co. (World)
-pspikesb                        // bootleg
-pspikesba                       // bootleg
-pspikesc                        // bootleg
-pspikesk                        // (c) 1991 Video System Co. (Korea)
-pspikesu                        // (c) 1991 Video System Co. (US)
-sonicwi                         // (c) 1992 Video System Co. (Japan)
-spikes91                        // bootleg
-spikes91b                       // bootleg
-spinlbrk                        // (c) 1990 V-System Co. (World)
-spinlbrkj                       // (c) 1990 V-System Co. (Japan)
-spinlbrku                       // (c) 1990 V-System Co. (US)
-spinlbrkup                      // (c) 1990 V-System Co. (US, prototype)
-svolly91                        // (c) 1991 Video System Co. (Japan)
-turbofrc                        // (c) 1991 Video System Co.
-turbofrco                       // (c) 1991 Video System Co.
-turbofrcu                       // (c) 1991 Video System Co. (US)
-turbofrcua                      // (c) 1991 Video System Co. (US)
-wbbc97                          // (c) 1997 Comad
 
 @source:vsystem/crshrace.cpp
 crshrace                        // (c) 1993 Video System Co.
@@ -46061,6 +46065,38 @@ pipedrm                         // (c) 1990 Video System Co. (World)
 pipedrmj                        // (c) 1990 Video System Co. (Japan)
 pipedrmt                        // (c) 1990 Video System Co. (Taiwan)
 pipedrmu                        // (c) 1990 Video System Co. (US)
+
+@source:vsystem/pspikes.cpp
+aerfboo2                        // bootleg
+aerfboot                        // bootleg
+aerofgtb                        // (c) 1992 Video System Co.
+aerofgtc                        // (c) 1992 Video System Co.
+karatblz                        // (c) 1991 Video System Co.
+karatblza                       // (c) 1991 Video System Co.
+karatblzbl                      // bootleg
+karatblzj                       // (c) 1991 Video System / Tecmo (Japan)
+karatblzt                       // (c) 1991 Video System Co. / Tecmo
+karatblzu                       // (c) 1991 Video System Co. (US)
+kickball                        // (c) 1998 Seoung Youn
+pspikes                         // (c) 1991 Video System Co. (World)
+pspikesb                        // bootleg
+pspikesba                       // bootleg
+pspikesc                        // bootleg
+pspikesk                        // (c) 1991 Video System Co. (Korea)
+pspikesu                        // (c) 1991 Video System Co. (US)
+sonicwi                         // (c) 1992 Video System Co. (Japan)
+spikes91                        // bootleg
+spikes91b                       // bootleg
+spinlbrk                        // (c) 1990 V-System Co. (World)
+spinlbrkj                       // (c) 1990 V-System Co. (Japan)
+spinlbrku                       // (c) 1990 V-System Co. (US)
+spinlbrkup                      // (c) 1990 V-System Co. (US, prototype)
+svolly91                        // (c) 1991 Video System Co. (Japan)
+turbofrc                        // (c) 1991 Video System Co.
+turbofrco                       // (c) 1991 Video System Co.
+turbofrcu                       // (c) 1991 Video System Co. (US)
+turbofrcua                      // (c) 1991 Video System Co. (US)
+wbbc97                          // (c) 1997 Comad
 
 @source:vsystem/rpunch.cpp
 rabiolep                        // (c) 1987 V-System Co. (Japan)
