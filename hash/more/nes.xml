@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5654 -->
+<!-- Number of items in this list = 5748 -->
 <softwarelist name="nes_cart" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (Japan) (2)</description>
@@ -689,6 +689,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="1048688">
 				<rom name="(demo)Educational Computer 2000 (Ru) [U][!].nes" size="1048688" crc="f5c55af3" sha1="52cb35b484bf0ecabc364461420a70f96a3b8806"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd21aa48cbca13">
+		<description>(demo)HEOH demo (2019)(shiru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="(demo)HEOH demo (2019)(shiru).nes" size="524304" crc="4fcd5116" sha1="d21aa48cbca132a74e3695a10a8adcb29786ceb6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36632,6 +36642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes84463d10b594b">
+		<description>Halloween</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Halloween.nes" size="65552" crc="e7f649f8" sha1="84463d10b594bc7f1d74e5fef12b142f5eadf50c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesb433a10cf593c">
 		<description>Hammerin' Harry (Europe) (2)</description>
 		<year>????</year>
@@ -36639,6 +36659,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Hammerin' Harry (Europe) (2).nes" size="262160" crc="f8351834" sha1="b433a10cf593c7434139191264d6b9c7ab55b632"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb017bd17b5a9e">
+		<description>Hammerin' Harry (Europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Hammerin' Harry (Europe).nes" size="262160" crc="4d58c832" sha1="b017bd17b5a9e07003cfc3c498b3549bdb49cb1a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36742,6 +36772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesdb3df82253836">
+		<description>Happily Ever After (USA) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Happily Ever After (USA) (Prototype).nes" size="262160" crc="57f5c01d" sha1="db3df822538366e001f184fb4785b649638fe271"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes5729fc8d8e74e">
 		<description>Happily Ever After starring Snow White (USA) (Proto)</description>
 		<year>????</year>
@@ -36749,6 +36789,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Happily Ever After starring Snow White (USA) (Proto).nes" size="262160" crc="4d886bee" sha1="5729fc8d8e74e3d5985622ec078edd46c9c5ad02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes84e2c25c424ff">
+		<description>Happy Biqi - World Fighter (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Happy Biqi - World Fighter (Unl).nes" size="524304" crc="036cdf87" sha1="84e2c25c424ffbd7a9ce00f3b472749561f4addb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36829,6 +36879,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="786448">
 				<rom name="Haradius Zero (HB).nes" size="786448" crc="d2f19ba1" sha1="b5770801881376bc430384ebcb6b5b4feb0e78bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes35883bdb2e0c9">
+		<description>Haradius Zero (Japan) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Haradius Zero (Japan) (Unl).nes" size="786448" crc="3b3127f5" sha1="35883bdb2e0c9b13052933bdb076e89fdfca6b36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa6ec9b93690b3">
+		<description>HaraForce v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="73744">
+				<rom name="HaraForce v1.00 (2022)(Impact Soft)[MMC5].nes" size="73744" crc="79cf8db1" sha1="a6ec9b93690b393e38d928379ea96b78e6aa01cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37202,6 +37272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes1e068753e47ed">
+		<description>Harry Dwarf (2019)(Byte-off)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Harry Dwarf (2019)(Byte-off).nes" size="524304" crc="f51e13d4" sha1="1e068753e47ed11dcb048314fb2e7309d71f3879"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes95c880bcedbeb">
 		<description>Harry Legend (Unl) (English Title) [p2]</description>
 		<year>????</year>
@@ -37212,6 +37292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes278c657578be2">
+		<description>Harry Potter (Pirate Original)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Harry Potter (Pirate Original).nes" size="262160" crc="9ded73b5" sha1="278c657578be27b3e4b8219d1ef7b93374a57104"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes74b55acbdd72b">
 		<description>Harry Potter (shooting game) (Unl)</description>
 		<year>????</year>
@@ -37219,6 +37309,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
 				<rom name="Harry Potter (shooting game) (Unl).nes" size="65552" crc="1125fc8b" sha1="74b55acbdd72b07dd7d5943b3db37259e8c1e8f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfee8f20bcfc9d">
+		<description>Harry Story (Unl) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Harry Story (Unl) [!].nes" size="262160" crc="d76536bf" sha1="fee8f20bcfc9db9b9668444fdab5506115ab7238"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37312,6 +37412,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes1fdaf0214ff89">
+		<description>Haunted Halloween 85 (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Haunted Halloween 85 (Unl).nes" size="524304" crc="4bcf7ae5" sha1="1fdaf0214ff89af0cecf7b9a4f142af4f9cef27a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7649b9f44f6b5">
+		<description>Haunted Halloween 86 (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Haunted Halloween 86 (Unl).nes" size="524304" crc="d008091a" sha1="7649b9f44f6b565f74e6b07752170406d9e314f4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes654ac177c93fc">
 		<description>Hayauchi Super Igo (Japan) (2)</description>
 		<year>????</year>
@@ -37339,6 +37459,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
 				<rom name="Hayauchi Super Igo (Japan).nes" size="65552" crc="236177ab" sha1="0a3f3dfeefb44d5dc161dd3111ec3a4280f8a0e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes41c3db3ff528f">
+		<description>HBC Phutball (2022)(Wendel Scardua)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="HBC Phutball (2022)(Wendel Scardua).nes" size="65552" crc="b2f98884" sha1="41c3db3ff528fe7020df6d472dcbebe29f484d85"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37499,6 +37629,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Hebereke (Japan).nes" size="262160" crc="2a137974" sha1="5ce5daab012ae6a49b2fe18e162343d3ea705eac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes40ab742a78108">
+		<description>Hebereke (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Hebereke (T-Chi).nes" size="393232" crc="0691129d" sha1="40ab742a7810854092848ef7ac043a6f1ca09f4b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37712,6 +37852,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesc624154ffb5ab">
+		<description>Hello Kitty World (Japan)(1992)(Character Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Hello Kitty World (Japan)(1992)(Character Soft).nes" size="131088" crc="54dc10cd" sha1="c624154ffb5ab97bfd62547d8b1205fbf9df8236"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesdf7e273ce83e1">
+		<description>Hello Kitty World T-Eng (2009)(Flake)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Hello Kitty World T-Eng (2009)(Flake).nes" size="131088" crc="bd54af4d" sha1="df7e273ce83e17f4e934a2b2428bf54b7e528c76"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesbe671b105a32f">
 		<description>hellraiser311</description>
 		<year>????</year>
@@ -37722,6 +37882,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes7af26b1b67ecd">
+		<description>Heracles no Eikou - Toujin Makyou Den (J)(1987)(Data East)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Heracles no Eikou - Toujin Makyou Den (J)(1987)(Data East).nes" size="131088" crc="825f8089" sha1="7af26b1b67ecdf4276d3313cbfa1cb46ef9d931c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes9f9633ea104e9">
 		<description>Heracles no Eikou - Toujin Makyou Den (Japan) (2)</description>
 		<year>????</year>
@@ -37729,6 +37899,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Heracles no Eikou - Toujin Makyou Den (Japan) (2).nes" size="131088" crc="e9b3ebd8" sha1="9f9633ea104e9085ff255dbb233a0d39bc5addf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2ce207edabf86">
+		<description>Heracles no Eikou II - Titan no Metsubou (J)(1989)(Data East)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Heracles no Eikou II - Titan no Metsubou (J)(1989)(Data East).nes" size="262160" crc="dfd9a811" sha1="2ce207edabf86fe7d73a79daec21b5051be13b01"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38912,6 +39092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes584d0c44c11b1">
+		<description>Highway Star II (Unl)[p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Highway Star II (Unl)[p1][!].nes" size="262160" crc="6e2bc025" sha1="584d0c44c11b10fddc5964b522b6137b3ad43565"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes959f017c438d9">
 		<description>Hikari no Senshi Foton - The Ultimate Game on Planet Earth (Japan)</description>
 		<year>????</year>
@@ -39402,6 +39592,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesea68cb8af32e2">
+		<description>Hokuto no Ken 4 - Shichisei Haken Den Jpn (1991)(Shouei System)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Hokuto no Ken 4 - Shichisei Haken Den Jpn (1991)(Shouei System).nes" size="262160" crc="06e95541" sha1="ea68cb8af32e25dc8de99b2a27e44d6a575e1b1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes089637db71df8">
+		<description>Hokuto no Ken OVERHAUL Patch (2022)(Rani Baker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Hokuto no Ken OVERHAUL Patch (2022)(Rani Baker).nes" size="65552" crc="b02b18fa" sha1="089637db71df85a1ab32a029969b87773181eed3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesc32e34fa15cfe">
 		<description>Hollywood Squares (U)</description>
 		<year>????</year>
@@ -39632,6 +39842,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes8f47f6f8e5cab">
+		<description>Honoo no Doukyuuji - Dodge Danpei (J)(1992)(Sunsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Honoo no Doukyuuji - Dodge Danpei (J)(1992)(Sunsoft).nes" size="393232" crc="aea2a320" sha1="8f47f6f8e5cab5c1824b146adba0d572e6831b9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes830d37c17ffee">
+		<description>Honoo no Doukyuuji - Dodge Danpei 2 (J)(1993)(Sunsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Honoo no Doukyuuji - Dodge Danpei 2 (J)(1993)(Sunsoft).nes" size="524304" crc="646666f2" sha1="830d37c17ffeecc07b2f66e5278fdcb766cd3eda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes61f198bc5f95d">
+		<description>Honoo no Doukyuuji - Dodge Danpei 2 T-Eng v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Honoo no Doukyuuji - Dodge Danpei 2 T-Eng v1.0a (2017)(TransGen).nes" size="524304" crc="95469699" sha1="61f198bc5f95dfa5a2e9fe567c37e586a54d9313"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9afab7cd56ef2">
+		<description>Honoo no Doukyuuji - Dodge Danpei T-Eng v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Honoo no Doukyuuji - Dodge Danpei T-Eng v1.0.b (2017)(TransGen).nes" size="393232" crc="47325872" sha1="9afab7cd56ef209e35833ff24bcef62bdf8abdf6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesaf2faf83cbff2">
 		<description>Honoo no Toukyuuji - Dodge Danpei (Japan) (2)</description>
 		<year>????</year>
@@ -39752,6 +40002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes474af70ed6e60">
+		<description>Horse Racing</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Horse Racing.nes" size="65552" crc="7ff98948" sha1="474af70ed6e60113f84a1c84b4955bb76d7a5241"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesd0a4d6f40902c">
 		<description>Hoshi no Kirby - Yume no Izumi no Monogatari (J) [t2]</description>
 		<year>????</year>
@@ -39812,6 +40072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesc56e7ed5cbe9e">
+		<description>Hoshi wo Miru Hito (J)(1987)(Hot-B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Hoshi wo Miru Hito (J)(1987)(Hot-B).nes" size="131088" crc="0ec30976" sha1="c56e7ed5cbe9e0470ed70dcfce675923cc9dba7c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesae40df56f936a">
 		<description>Hoshi wo Miru Hito (Japan) [En by KingMike v0</description>
 		<year>????</year>
@@ -39859,6 +40129,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Hostages - The Embassy Mission (Japan).nes" size="262160" crc="e876b411" sha1="2c82b7cc44e780b7482bb4868893f5a6e8df71d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8699ea1866ac4">
+		<description>Hot Blooded Tough Girl Misako</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Hot Blooded Tough Girl Misako.nes" size="131088" crc="95ddc0d9" sha1="8699ea1866ac4625dad46f52202798fd00407267"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes434a0b4a6c194">
+		<description>Hot Blooded Tough Guy Kunio</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Hot Blooded Tough Guy Kunio.nes" size="131088" crc="9d5e57d5" sha1="434a0b4a6c1946b28a23efac33d88185f94991ac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40029,6 +40319,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Huang Di (Asia) (Unl).nes" size="393232" crc="249ef8ac" sha1="c8e9d6d893c0ad1c7070ebc6cea173f8b7e0e3f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb2e8f814bddd3">
+		<description>Huang Di (Asia)(Unl)(1994)(Asder)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Huang Di (Asia)(Unl)(1994)(Asder).nes" size="393232" crc="dfdec378" sha1="b2e8f814bddd33038a6ff729dfb754b52d9b4e19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2a4e43e847934">
+		<description>Huang Di - The Battle of Zhuolu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Huang Di - The Battle of Zhuolu.nes" size="393232" crc="4045fd76" sha1="2a4e43e847934df0646626975b36674b3d99ab6b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40342,6 +40652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes62f01d9bd9363">
+		<description>Huge Insect (Asia)(Unl)(1993)(Thin Chen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Huge Insect (Asia)(Unl)(1993)(Thin Chen).nes" size="65552" crc="552a903a" sha1="62f01d9bd9363348fceb3a2b4756828ed1cd05fe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes6a7bdfa82c724">
 		<description>Hulk (Unl)</description>
 		<year>????</year>
@@ -40452,6 +40772,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesb0f548a287461">
+		<description>Hyaku no Sekai no Monogatari - The 100 World Story (J)(1991)(ASK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Hyaku no Sekai no Monogatari - The 100 World Story (J)(1991)(ASK).nes" size="262160" crc="84ed70ce" sha1="b0f548a287461ac9d9cb5fa41fb4cf520c403764"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes30867b7d263da">
+		<description>Hyaku no Sekai no Monogatari - The 100 World Story (T-Eng)(2007)(AlanMidas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Hyaku no Sekai no Monogatari - The 100 World Story (T-Eng)(2007)(AlanMidas).nes" size="262160" crc="1385e8a5" sha1="30867b7d263da64ad63b3a11e93a473c0c002e30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes21e3bc22efa3e">
+		<description>Hyaku no Sekai no Monogatari - The 100 World Story (T-Ita)(2021)(Mog)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Hyaku no Sekai no Monogatari - The 100 World Story (T-Ita)(2021)(Mog).nes" size="262160" crc="4d740153" sha1="21e3bc22efa3e3cb1fd8c603dc717f26498b10ce"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesf981a9930f908">
 		<description>Hyaku no Sekai no Monogatari - The Tales on a Watery Wilderness (Japan) (2)</description>
 		<year>????</year>
@@ -40459,6 +40809,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Hyaku no Sekai no Monogatari - The Tales on a Watery Wilderness (Japan) (2).nes" size="262160" crc="6a6186c3" sha1="f981a9930f908ba322ceddab37861fa00f6f6f91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbc7c516f66986">
+		<description>Hydlide 3 - Visitor from the Dark</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Hydlide 3 - Visitor from the Dark.nes" size="393232" crc="3915a78b" sha1="bc7c516f669861e46125a95d7f77da5683004bd7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40542,6 +40902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes6a3e40f75113f">
+		<description>Hyrule Warriors</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="196624">
+				<rom name="Hyrule Warriors.nes" size="196624" crc="4264e910" sha1="6a3e40f75113f84931b8cc76b92f1df0c63065ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesa5e25a714a028">
 		<description>I Can Remember (USA) (2)</description>
 		<year>????</year>
@@ -40562,6 +40932,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesb057c3f697bf9">
+		<description>I Love Softball (J)(1989)(Coconuts Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="I Love Softball (J)(1989)(Coconuts Japan).nes" size="262160" crc="c7f03980" sha1="b057c3f697bf9078a4944b3332e6e80425a3ef84"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes658643a276223">
 		<description>I Love Softball (Japan) (2)</description>
 		<year>????</year>
@@ -40572,6 +40952,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes05e2ddc72860d">
+		<description>I Love Softball T-Eng v0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="I Love Softball T-Eng v0.991 (2023)(MrRichard999).nes" size="262160" crc="cb41b78c" sha1="05e2ddc72860dfa3c66d30cc3ca3baebad581d29"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes32d8fc0299bca">
 		<description>Ice Ice! Dickey - Retard City Rumble 2 Tards on Ice (Nekketsu Hockey Hack)</description>
 		<year>????</year>
@@ -40579,6 +40969,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262288">
 				<rom name="Ice Ice! Dickey - Retard City Rumble 2 Tards on Ice (Nekketsu Hockey Hack).nes" size="262288" crc="23f7036d" sha1="32d8fc0299bca67839c6b3189caffc2049cb1492"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb92dcfb693e6b">
+		<description>Ice Ice! Hockey Challenge (T-Eng)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Ice Ice! Hockey Challenge (T-Eng).nes" size="262160" crc="d61c628e" sha1="b92dcfb693e6b1228ea7cc4104c308c048aad90b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -41192,6 +41592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesaa4ea7c0a55e0">
+		<description>Impact Wrestling</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Impact Wrestling.nes" size="131088" crc="8a83f4ab" sha1="aa4ea7c0a55e02a85e47043d1e87614075af5aa9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesffbdbcbcb9ed9">
 		<description>Impossible Mission II (USA) (Unl) (2)</description>
 		<year>????</year>
@@ -41402,6 +41812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesd13c7b57f93bf">
+		<description>Indivisible (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Indivisible (PD).nes" size="262160" crc="9f304e88" sha1="d13c7b57f93bf4a677cc35285008317810e50867"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes80dacb7241740">
 		<description>Indora no Hikari (Japan) (2)</description>
 		<year>????</year>
@@ -41519,6 +41939,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="International Cricket (Australia).nes" size="262160" crc="cbde707e" sha1="d3b09e998ab11568561a0f686045ff50eb871767"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes99dceab985e97">
+		<description>International Cricket (Unl)(Alt version)[f1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="International Cricket (Unl)(Alt version)[f1].nes" size="524304" crc="cadfbef5" sha1="99dceab985e9709c82edc2e35c2e5eba67c8ce62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0e1caa6682082">
+		<description>International Cricket (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="International Cricket (Unl).nes" size="524304" crc="81595701" sha1="0e1caa66820825893ce4034a73c7b9602dd6fdfa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42132,6 +42572,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesf6378a7181eba">
+		<description>Jajamaru Gekimaden - Maboroshi no Kinmajou (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Jajamaru Gekimaden - Maboroshi no Kinmajou (Japan).nes" size="262160" crc="44902c90" sha1="f6378a7181eba89443ef8872d69d5b4b59678171"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes528c0c3ab9a42">
+		<description>Jajamaru Gekimaden - Maboroshi no Kinmajou (T-Eng)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Jajamaru Gekimaden - Maboroshi no Kinmajou (T-Eng)_2.nes" size="262160" crc="367df135" sha1="528c0c3ab9a427f5272785df93f8403e35778a89"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes25b78f33c2b40">
 		<description>Jajamaru Ninpou Chou (Japan) (2)</description>
 		<year>????</year>
@@ -42139,6 +42599,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Jajamaru Ninpou Chou (Japan) (2).nes" size="262160" crc="d23a3e4a" sha1="25b78f33c2b40a8b0730478780526a7c620966f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4553b47024061">
+		<description>Jajamaru Ninpou Chou (Japan) (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Jajamaru Ninpou Chou (Japan) (3).nes" size="262160" crc="0dcf07b3" sha1="4553b470240615842ba2dbfd1680a8a44d3a43ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42192,6 +42662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesa6173bb6dba4f">
+		<description>Jajamaru no Daibouken (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Jajamaru no Daibouken (Japan)_1.nes" size="65552" crc="d7c19e5f" sha1="a6173bb6dba4fbcb3475e8a786a16a56348e5c84"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes52cede3a34c28">
 		<description>James Bond Jr (Europe) (2)</description>
 		<year>????</year>
@@ -42239,6 +42719,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="JAMG - The Lost Coins (HB).nes" size="262160" crc="7a8877aa" sha1="b7ad75c7c1c1a89c877392d47e230087c6aec78d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb189ef567e15c">
+		<description>Janggun ui Adeul (General's Son)(K)[!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="655376">
+				<rom name="Janggun ui Adeul (General's Son)(K)[!].nes" size="655376" crc="54171ca4" sha1="b189ef567e15c227618e70185f20dcb52a88db54"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42312,6 +42802,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes0c63ef11772a6">
+		<description>Jason VS Freddy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Jason VS Freddy.nes" size="65552" crc="e3b25bd7" sha1="0c63ef11772a6d74c5f02523af989b635f0d2982"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbbb6723aa74db">
+		<description>JasonX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="JasonX.nes" size="262160" crc="ba6ba6f2" sha1="bbb6723aa74dbdd4255096b85d04b166f2005a1b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes65808ff4170a3">
 		<description>Jaws (U) [T+Fre_KS151]</description>
 		<year>????</year>
@@ -42349,6 +42859,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
 				<rom name="Jaws (USA).nes" size="65552" crc="fece3f05" sha1="52d1645037756d76a656ea358e88209aefbd1bd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd02e42f97e368">
+		<description>Jay and Silent Bob - Mall Brawl (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Jay and Silent Bob - Mall Brawl (Unl).nes" size="393232" crc="f167590d" sha1="d02e42f97e368812e9399b024b5019881b32355d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42649,6 +43169,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Jim Power - The Lost Dimension (2020)(Piko).nes" size="524304" crc="3f088114" sha1="6ba60bccd1f317eea3e45c071afbfcbb0b4d4e5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb19e96f66006b">
+		<description>Jimmy Connor's Tennis (R) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Jimmy Connor's Tennis (R) [!].nes" size="131088" crc="9c23aae8" sha1="b19e96f66006bd84635ae9ee7abb92ba48e05d40"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43022,6 +43552,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes35a3b48796f54">
+		<description>Journey to the Center of the Alien (2019)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="73744">
+				<rom name="Journey to the Center of the Alien (2019)(The Mojon Twins).nes" size="73744" crc="d4b8eaa5" sha1="35a3b48796f54a33785cc6a609bed980f7565a93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes835ed5ac70b84">
+		<description>Journey to the Center of the Alien EN (2019)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="73744">
+				<rom name="Journey to the Center of the Alien EN (2019)(The Mojon Twins).nes" size="73744" crc="ede880e6" sha1="835ed5ac70b84ed9262b19c9fbe28e480c9013d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes53f90849072fc">
+		<description>Journey to the Center of the Alien ES (2019)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="73744">
+				<rom name="Journey to the Center of the Alien ES (2019)(The Mojon Twins).nes" size="73744" crc="0d68dad3" sha1="53f90849072fc870b7d3c99ad8ed9739ec6daea4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesbab56de95b8ec">
 		<description>Journey to the West (As) (Unl)</description>
 		<year>????</year>
@@ -43039,6 +43599,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Journey to the West (Asia) (Ja) (Unl).nes" size="131088" crc="a1f46fb7" sha1="098689004c0ad923be46cae12409af86709333f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbceec93358696">
+		<description>Joust (USA)(1988)(HAL Laboratory)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="32784">
+				<rom name="Joust (USA)(1988)(HAL Laboratory).nes" size="32784" crc="cdd248a0" sha1="bceec93358696071c562173441ad564ef6cacb02"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43082,6 +43652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes46942528bdccc">
+		<description>Jovial Race (Unl)(1989)(Thin Chen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="98320">
+				<rom name="Jovial Race (Unl)(1989)(Thin Chen).nes" size="98320" crc="52c262b4" sha1="46942528bdccca4a788507bb9473ebd32446fe72"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes51f03abe4e4ff">
 		<description>Joy Mech Fight (Japan) (2)</description>
 		<year>????</year>
@@ -43099,6 +43679,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Joy Mech Fight (Japan) (Virtual Console).nes" size="524304" crc="70341631" sha1="8910448f23512b5f81ebd3bb5d60c5275bef8f9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa8c2984695b82">
+		<description>Joy Mech Fight (Japan)(1993)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Joy Mech Fight (Japan)(1993)(Nintendo).nes" size="524304" crc="d6c81006" sha1="a8c2984695b82d518e53a4c7e4376be867013d06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3ce0cda10d9fd">
+		<description>Joy Mech Fight T-Eng (2016)(AlanMidas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Joy Mech Fight T-Eng (2016)(AlanMidas).nes" size="524304" crc="8bb8bc54" sha1="3ce0cda10d9fd2823bc1cb94f80122bfe9b82b5a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43129,6 +43729,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="JuJu Densetsu (Japan) (2).nes" size="393232" crc="eb86729f" sha1="2069a4c6cd30883b9471391770ae2d26a196af63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbebf2d2bed72b">
+		<description>JuJu Densetsu (Japan)(1991)(Taito)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="JuJu Densetsu (Japan)(1991)(Taito).nes" size="393232" crc="138d2e4b" sha1="bebf2d2bed72b6f2cbecdd6218c8cbdf5731156d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43242,6 +43852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesbaed74663654f">
+		<description>Junkoid GlobalHack v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Junkoid GlobalHack v1.1 (2022)(P. Yoshi).nes" size="393232" crc="f7747212" sha1="baed74663654f90319aed88c72347b4080c8265d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes31865dda58d49">
 		<description>Jurassic Park (Europe) (2)</description>
 		<year>????</year>
@@ -43272,6 +43892,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes3429cd3d0af90">
+		<description>Jurassic Park (USA)(1993)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Jurassic Park (USA)(1993)(Ocean).nes" size="262160" crc="11ec53a9" sha1="3429cd3d0af90ef2315d63c641826dbf35e3c4b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7f5c93a186411">
+		<description>Jurassic Park - The Lost World (Unl)[!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Jurassic Park - The Lost World (Unl)[!].nes" size="524304" crc="d44f0a74" sha1="7f5c93a1864117c96533d578faae5ded34befbde"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes7d7a476b2e2f1">
 		<description>Just Breed (Japan) (2)</description>
 		<year>????</year>
@@ -43279,6 +43919,46 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="786448">
 				<rom name="Just Breed (Japan) (2).nes" size="786448" crc="10c5b44a" sha1="7d7a476b2e2f15a5dcde5890cc3240abbc08d0ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes59a09ce42b819">
+		<description>Just Breed (Japan)(1992)(Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Just Breed (Japan)(1992)(Enix).nes" size="786448" crc="4b69c694" sha1="59a09ce42b819cd3038c1f72bd3ac2583cce75c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesaa1111430bfad">
+		<description>Just Breed T-Eng (2004)(Stealth Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Just Breed T-Eng (2004)(Stealth Translations).nes" size="786448" crc="a4863269" sha1="aa1111430bfad56bb4c3b467a78ba16a12261332"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc3ea5fe2744bb">
+		<description>Justice (2020)(Unknown)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="196624">
+				<rom name="Justice (2020)(Unknown).nes" size="196624" crc="5a8b8f13" sha1="c3ea5fe2744bbd5fdebb1a100b5bc2344f77e50e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0e528e20623c5">
+		<description>Justice Duel (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="196624">
+				<rom name="Justice Duel (Unl).nes" size="196624" crc="ada8853b" sha1="0e528e20623c5459bedfd17868eda3b9b58f5aeb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43312,6 +43992,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesdbdbb9cc04fea">
+		<description>Juuouki (Japan)(1990)(Asmik)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Juuouki (Japan)(1990)(Asmik).nes" size="262160" crc="4de1c214" sha1="dbdbb9cc04feaaa8cea5998a3be52adac910bce8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nescfc93d6d43509">
+		<description>Juuouki T-Eng (2005)(aka translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Juuouki T-Eng (2005)(aka translations).nes" size="262160" crc="b6cf6cbc" sha1="cfc93d6d435091bf010effc043a3ff914ed1eb88"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes478bfe8535b39">
 		<description>Juuryoku Soukou Metal Storm (Japan) (2)</description>
 		<year>????</year>
@@ -43319,6 +44019,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Juuryoku Soukou Metal Storm (Japan) (2).nes" size="393232" crc="da918c3f" sha1="478bfe8535b39ca560ec0d5b7fbf2473369958e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb815e7609dade">
+		<description>Juuryoku Soukou Metal Storm (Japan)(1992)(Irem)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Juuryoku Soukou Metal Storm (Japan)(1992)(Irem).nes" size="393232" crc="984ef54b" sha1="b815e7609dadebbe2593a65e3d332aee8c2116d0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43362,6 +44072,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes913fd34ade501">
+		<description>Juvei Quest (Japan)(1991)(Namco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Juvei Quest (Japan)(1991)(Namco).nes" size="524304" crc="2e937d80" sha1="913fd34ade50115a5b6e695d27c7152144040560"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes1839aa3671f0d">
+		<description>Juvei Quest T-Eng (2013)(Stardust Crusaders)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Juvei Quest T-Eng (2013)(Stardust Crusaders).nes" size="786448" crc="00a5b4f2" sha1="1839aa3671f0df084107e92ed8627f0b0388463f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesf39cc45a38434">
 		<description>Kabuki - Quantum Fighter (Europe) (2)</description>
 		<year>????</year>
@@ -43389,6 +44119,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Kabuki - Quantum Fighter (USA) (2).nes" size="262160" crc="81129df9" sha1="5448cfda3333daedd965b4d33e7a4389337aef1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7b07791f9aea7">
+		<description>Kabuki - Quantum Fighter (USA)(1991)(HAL Laboratory)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Kabuki - Quantum Fighter (USA)(1991)(HAL Laboratory).nes" size="262160" crc="5ee7a400" sha1="7b07791f9aea7170a43f54390b45f2904f78ff0f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43502,6 +44242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes51302aa0efb79">
+		<description>Kage (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="270352">
+				<rom name="Kage (T-Chi).nes" size="270352" crc="2ff63b35" sha1="51302aa0efb79919023bc82f22ed82fa11f3f085"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesd33fc64fe6019">
 		<description>Kage no Densetsu (J) [hM03][t2]</description>
 		<year>????</year>
@@ -43562,6 +44312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes581f5d11c6bc9">
+		<description>Kage no Densetsu (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="106512">
+				<rom name="Kage no Densetsu (T-Chi).nes" size="106512" crc="170884af" sha1="581f5d11c6bc9614d1d31f513e9472e826830649"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes25623eba5cefd">
 		<description>Kage out of control edition by ivex (hack)</description>
 		<year>????</year>
@@ -43612,6 +44372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes083ef41cd1660">
+		<description>Kaguya Hime Densetsu (J)(1988)(Victor)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Kaguya Hime Densetsu (J)(1988)(Victor).nes" size="262160" crc="69565d0e" sha1="083ef41cd1660daf3d1a203d6c2a191ba749ac70"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes2f15698fc61f2">
 		<description>Kaguya Hime Densetsu (Japan) (2)</description>
 		<year>????</year>
@@ -43629,6 +44399,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Kaguya Hime Densetsu (Japan).nes" size="262160" crc="436101f1" sha1="012bac18424430d44afb57ace05f71e17ce86cf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes836b5abdad4a3">
+		<description>Kaguya Hime Densetsu (T-Eng)(2022)(FCandChill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Kaguya Hime Densetsu (T-Eng)(2022)(FCandChill).nes" size="524304" crc="80de5290" sha1="836b5abdad4a3ceb6fb0fa0a8b56e5a8552a34c4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43919,6 +44699,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Kamen Rider SD - Granshocker no Yabou (Japan).nes" size="262160" crc="34cc9097" sha1="ffadedc8ddba7495fe77ead113d1bb698b7eec79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes1691bd925d9be">
+		<description>Kamikaze Mario DX+ v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="147472">
+				<rom name="Kamikaze Mario DX+ v1.9 (2021)(79).nes" size="147472" crc="b7518c16" sha1="1691bd925d9be52dc86cab8c562f3ef544f526e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4b655c11f6aae">
+		<description>Kang Ti Wu Wang (Ch)[!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Kang Ti Wu Wang (Ch)[!].nes" size="262160" crc="61e281be" sha1="4b655c11f6aae9cbe4f30c3e68010ce06dd7b020"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44222,6 +45022,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes166be5e1be37a">
+		<description>Kart Fighter (SOMARI-W)(Unl)[!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Kart Fighter (SOMARI-W)(Unl)[!].nes" size="393232" crc="7318bed4" sha1="166be5e1be37a57aa6db10bbbfba278ca442f536"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese28b1e1df1198">
 		<description>Kart Fighter (Unl) [T+Kor][a1]</description>
 		<year>????</year>
@@ -44229,6 +45039,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Kart Fighter (Unl) [T+Kor][a1].nes" size="393232" crc="90adc740" sha1="e28b1e1df1198ca3cde6f759e1fb5ed38ff3d66f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesebf39b0e6ec4b">
+		<description>Kart Fighter (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Kart Fighter (Unl).nes" size="393232" crc="4877213a" sha1="ebf39b0e6ec4b8d5fc0c7715bb88c9e733018d89"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44429,6 +45249,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="kick master  out of control edition by ivex (hack).nes" size="262160" crc="42e8a322" sha1="c59246905fc6214bb497c62ff81b6a4bfe939e0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesea65b9fe971ce">
+		<description>Kick Master (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Kick Master (T-Chi).nes" size="393232" crc="85f44191" sha1="ea65b9fe971ce27bd1a4a85662c40b8b1626fbae"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44852,6 +45682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesf82a8997ee2d5">
+		<description>King of Fighters 97 (Rex Soft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393331">
+				<rom name="King of Fighters 97 (Rex Soft.) [U][!].nes" size="393331" crc="a4dd4e80" sha1="f82a8997ee2d50a9c3893d3a54eceec8585ef3dc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese47256425ab4a">
 		<description>King of Kings (Japan) (2)</description>
 		<year>????</year>
@@ -45072,6 +45912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes95ddf8572775b">
+		<description>Kira Kira Star Night (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Kira Kira Star Night (Unl).nes" size="524304" crc="6da42efa" sha1="95ddf8572775b6e8822578c55fd696d8a273314a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese9d98969f5ea1">
 		<description>Kira Kira Star Night AC (HB)</description>
 		<year>????</year>
@@ -45079,6 +45929,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Kira Kira Star Night AC (HB).nes" size="524304" crc="9e650f69" sha1="e9d98969f5ea1f665a284f4d75bafe2e4637fb7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3f4b2acae5c2f">
+		<description>Kira Kira Star Night DX (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Kira Kira Star Night DX (Unl).nes" size="524304" crc="66a30110" sha1="3f4b2acae5c2fb39256f26f21997cc0bcff1fb8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9a705d384241f">
+		<description>Kira Kira Star Night DX Gold - Tournament Edition (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Kira Kira Star Night DX Gold - Tournament Edition (Unl).nes" size="524304" crc="d2526d60" sha1="9a705d384241f641bb03855e395a9031c40a265e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -45172,6 +46042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesa64dda6c8642f">
+		<description>Kirby's Adventure (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="Kirby's Adventure (T-Chi).nes" size="1048592" crc="0efa7d0f" sha1="a64dda6c8642f90bd0bdf9d0aefa5a4f230fb00a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes22663ce2da134">
 		<description>Kirby's Adventure (USA) (2)</description>
 		<year>????</year>
@@ -45212,6 +46092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nese48f7099e31d5">
+		<description>Kirby's Halloween Adventure (2021)(Kirb-Star)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Kirby's Halloween Adventure (2021)(Kirb-Star).nes" size="786448" crc="9332bf75" sha1="e48f7099e31d5db6b5e74ef09519121ec2063ae9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesc6f7787081821">
 		<description>KirbyadvFUCKED</description>
 		<year>????</year>
@@ -45229,6 +46119,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Kiteretsu Daihyakka (Japan) (2).nes" size="262160" crc="69018ea0" sha1="2163d5ff5e705aeb3e3ceb64524cf51a3d8098ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes417a3b9e76223">
+		<description>Kiteretsu Daihyakka (Japan)(1990)(Epoch Co)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Kiteretsu Daihyakka (Japan)(1990)(Epoch Co).nes" size="262160" crc="b6f4b759" sha1="417a3b9e762231388295dfe35577c24046334324"/>
 			</dataarea>
 		</part>
 	</software>
@@ -45582,6 +46482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes0ac65c87a6820">
+		<description>Korean Igo (Unl) [U][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="147624">
+				<rom name="Korean Igo (Unl) [U][!].nes" size="147624" crc="253547d8" sha1="0ac65c87a6820fc3d41f3f4bc344304edf08e1f5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesbfbb1204a876e">
 		<description>Kou Dai Bao Shi - Yin (Ch)</description>
 		<year>????</year>
@@ -45619,6 +46529,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="1048592">
 				<rom name="Kou Dai Yao Guai - Shui Jing Ban (C).NES" size="1048592" crc="a0dc84cf" sha1="995d60ec8d5e3ea18eef09dd9f8469e9083096ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes255fcac948f0c">
+		<description>Kou Dai Zuan Shi (NJ010)(Ch)[!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="2097168">
+				<rom name="Kou Dai Zuan Shi (NJ010)(Ch)[!].nes" size="2097168" crc="c9d9246a" sha1="255fcac948f0c615e1014bfb4e6dc9f5cb15a12e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -45839,6 +46759,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Kujaku Ou II (Japan).nes" size="262160" crc="c96ffe06" sha1="af122b14c98eec51e6e6d82d432925f53416ee10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6642a18d1bf0d">
+		<description>Kung Fu 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Kung Fu 2.nes" size="262160" crc="b5fa50d9" sha1="6642a18d1bf0dfe57349bdc7440078cf6eb3cd49"/>
 			</dataarea>
 		</part>
 	</software>
@@ -46149,6 +47079,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Kyouryuu Sentai Juuranger (Japan).nes" size="262160" crc="7bf82c80" sha1="2c76856d6d2184140b2abb61f9efb127a5d706ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb5af4c0c08ac6">
+		<description>Kyouryuu Sentai Juuranger (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Kyouryuu Sentai Juuranger (T-Chi).nes" size="393232" crc="2cebf5e7" sha1="b5af4c0c08ac692bb2f4808bf3e738b507849bba"/>
 			</dataarea>
 		</part>
 	</software>
