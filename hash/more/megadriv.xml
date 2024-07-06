@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1813 -->
+<!-- Number of items in this list = 1816 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -11822,6 +11822,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen7c50aa6315ad4">
+		<description>River City Girls of Rage v0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2889204">
+				<rom name="River City Girls of Rage v0.9.82 (2021)(savok).bin" size="2889204" crc="bea16706" sha1="7c50aa6315ad41106ee1f7224e2b380ec6cc4ea2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen8bb19af5c6074">
 		<description>Road Rash (USA, Europe)</description>
 		<year>????</year>
@@ -15702,6 +15712,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genbe2761203fa5b">
+		<description>Streets of Rage 2 - Cadillacs and Dinosaurs edition v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2603092">
+				<rom name="Streets of Rage 2 - Cadillacs and Dinosaurs edition v1.0 (2024)(FengLao).bin" size="2603092" crc="279ee8a6" sha1="be2761203fa5bb32422571c741e34f0e4a8ba95a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2df5c14fa13d9">
 		<description>Streets of Rage 2 - Fight'n Rage Hack (2021)(savok)</description>
 		<year>????</year>
@@ -17749,6 +17769,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="X-Men 2(R).bin" size="2097152" crc="1750b241" sha1="ed80cd4c19b8abc6ef0d0beb121f4e9d2e63b55b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen08e4fcb1db9b8">
+		<description>X-Men of Rage v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3595434">
+				<rom name="X-Men of Rage v1.1 (2024)(NoMoneyRanger).bin" size="3595434" crc="94781576" sha1="08e4fcb1db9b8c6491b85552e402f62ae5a36dfa"/>
 			</dataarea>
 		</part>
 	</software>
