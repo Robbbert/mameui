@@ -12,9 +12,10 @@ TODO:
 - Memory maps and machine configuration for FP-1000 with reduced VRAM;
 - Unimplemented instruction PER triggered in sub CPU;
 - SCREEN 1 mode has heavy corrupted GFXs and runs at half speed, interlace mode?
-- Cassette Load is untested and probably not working, uses a complex 6 pin discrete circuitry;
-- Sub CPU is supposed to be in WAIT except in horizontal blanking period, WAIT is not emulated.
-- bus slots (uPD765 FDC, ROMPACK, RAMPACK)
+- Cassette Load is really not working, uses a complex 6 pin discrete circuitry;
+- Sub CPU needs proper WAIT line from uPD7801;
+- Main CPU waitstates;
+- bus slots (uPD765 FDC, ROMPACK, RAMPACK), rewrite
 
 ===================================================================================================
 
@@ -54,6 +55,8 @@ The keyboard is a separate unit.  It contains a beeper.
 #include "screen.h"
 #include "speaker.h"
 
+#include "softlist_dev.h"
+
 #define VERBOSE 0
 #include "logmacro.h"
 
@@ -70,14 +73,14 @@ public:
 		, m_maincpu(*this, "maincpu")
 		, m_subcpu(*this, "sub")
 		, m_crtc(*this, "crtc")
-		, m_ipl(*this, "ipl")
-		, m_wram(*this, "wram")
+		, m_iplview(*this, "iplview")
+		, m_workram(*this, "workram")
 		, m_videoram(*this, "videoram.%u", 0)
 		, m_palette(*this, "palette")
 		, m_keyboard(*this, "KEY.%u", 0)
 		, m_beep(*this, "beeper")
 		, m_centronics(*this, "centronics")
-		, m_cass(*this, "cassette")
+		, m_cassette(*this, "cassette")
 	{ }
 
 	void fp1100(machine_config &config);
@@ -90,14 +93,14 @@ private:
 	required_device<cpu_device> m_maincpu;
 	required_device<upd7801_device> m_subcpu;
 	required_device<mc6845_device> m_crtc;
-	required_region_ptr<u8> m_ipl;
-	required_shared_ptr<u8> m_wram;
+	memory_view m_iplview;
+	required_shared_ptr<u8> m_workram;
 	required_shared_ptr_array<u8, 3> m_videoram;
 	required_device<palette_device> m_palette;
 	required_ioport_array<16> m_keyboard;
 	required_device<beep_device> m_beep;
 	required_device<centronics_device> m_centronics;
-	required_device<cassette_image_device> m_cass;
+	required_device<cassette_image_device> m_cassette;
 
 	void main_map(address_map &map);
 	void io_map(address_map &map);
@@ -105,9 +108,6 @@ private:
 
 	void main_bank_w(u8 data);
 	void irq_mask_w(u8 data);
-	void slot_bank_w(u8 data);
-	u8 slot_id_r();
-	u8 memory_r(offs_t offset);
 	void colour_control_w(u8 data);
 	template <unsigned N> u8 vram_r(offs_t offset);
 	template <unsigned N> void vram_w(offs_t offset, u8 data);
@@ -121,27 +121,18 @@ private:
 	MC6845_UPDATE_ROW(crtc_update_row);
 	TIMER_DEVICE_CALLBACK_MEMBER(kansas_w);
 
-	u8 m_slot_num = 0;
 	u8 m_kbd_row = 0;
 	u8 m_col_border = 0;
 	u8 m_col_cursor = 0;
 	u8 m_col_display = 0;
 	u8 m_centronics_busy = 0;
-	u8 m_cass_data[4]{};
-	bool m_bank_sel = false;
+	u8 m_cassette_data[4]{};
 	bool m_sub_irq_status = false;
-	bool m_cassbit = false;
-	bool m_cassold = false;
+	bool m_cassettebit = false;
+	bool m_cassetteold = false;
 
-	struct {
-		u8 id = 0;
-	}m_slot[8];
-
-	struct {
-		u8 porta = 0;
-		u8 portb = 0;
-		u8 portc = 0;
-	}m_upd7801;
+	u8 m_sub_porta = 0;
+	u8 m_sub_portc = 0;
 
 	u8 m_pending_interrupts = 0;
 	u8 m_active_interrupts = 0;
@@ -152,13 +143,17 @@ private:
 	template<int Line> void int_w(int state);
 	TIMER_CALLBACK_MEMBER(update_interrupts);
 	IRQ_CALLBACK_MEMBER(restart_cb);
+
+	int m_hsync_state = 0;
+	bool m_sub_wait = false;
+	void hsync_cb(int state);
 };
 
 MC6845_UPDATE_ROW( fp1100_state::crtc_update_row )
 {
 	rgb_t const *const palette = m_palette->palette()->entry_list_raw();
 	u32 *p = &bitmap.pix(y);
-	const u8 porta = m_upd7801.porta;
+	const u8 porta = m_sub_porta;
 
 	if (BIT(porta, 4))
 	{ // green screen
@@ -202,15 +197,15 @@ other bits not used
 */
 void fp1100_state::main_bank_w(u8 data)
 {
-	m_bank_sel = BIT(data, 1);
-	m_slot_num = (m_slot_num & 3) | ((data & 1) << 2); //??
+	m_iplview.select(BIT(data, 1));
+//  m_slot_num = (m_slot_num & 3) | ((data & 1) << 2); //??
 }
 
 /*
  * x--- ---- mask for main to sub (INTF2)
  * ---x ---- INTS (sub to main)
  * ---- x--- INTD
- * ---- -x-- INTC
+ * ---- -x-- INTC (RS-232C)
  * ---- --x- INTB (FDC bus slot irq)
  * ---- ---x INTA (FDC bus slot drq)
  */
@@ -236,38 +231,23 @@ void fp1100_state::irq_mask_w(u8 data)
 	LOG("%s: IRQmask=%X\n",machine().describe_context(),data);
 }
 
-void fp1100_state::slot_bank_w(u8 data)
-{
-	m_slot_num = (data & 3) | (m_slot_num & 4);
-}
-
-u8 fp1100_state::slot_id_r()
-{
-	//return 0xff;
-	return m_slot[m_slot_num & 7].id;
-}
-
-// TODO: convert to `memory_view`
-u8 fp1100_state::memory_r(offs_t offset)
-{
-	if (offset < 0x9000 && !m_bank_sel)
-		return m_ipl[offset];
-	else
-		return m_wram[offset];
-}
-
 void fp1100_state::main_map(address_map &map)
 {
 	map.unmap_value_high();
-	map(0x0000, 0xffff).r(FUNC(fp1100_state::memory_r));
-	map(0x0000, 0xffff).writeonly().share(m_wram); // always write to ram
+	map(0x0000, 0xffff).view(m_iplview);
+	m_iplview[0](0x0000, 0x7fff).rom().region("ipl", 0);
+	m_iplview[0](0x8000, 0x8fff).rom().region("basic", 0);
+	m_iplview[0](0x9000, 0xffff).lr8(NAME([this] (offs_t offset) { return m_workram[offset + 0x9000]; }));
+	// writes always goes to work RAM
+	m_iplview[0](0x0000, 0xffff).writeonly().share(m_workram);
+	m_iplview[1](0x0000, 0xffff).ram().share(m_workram);
 }
 
 void fp1100_state::io_map(address_map &map)
 {
 	map.unmap_value_high();
 	//map(0x0000, 0xfeff) slot memory area
-	map(0xff00, 0xff00).mirror(0x7f).rw(FUNC(fp1100_state::slot_id_r), FUNC(fp1100_state::slot_bank_w));
+//  map(0xff00, 0xff00).mirror(0x7f).rw(FUNC(fp1100_state::slot_id_r), FUNC(fp1100_state::slot_bank_w));
 	map(0xff80, 0xff80).mirror(0x7f).r("sub2main", FUNC(generic_latch_8_device::read));
 	map(0xff80, 0xff80).mirror(0x1f).w(FUNC(fp1100_state::irq_mask_w));
 	map(0xffa0, 0xffa0).mirror(0x1f).w(FUNC(fp1100_state::main_bank_w));
@@ -304,6 +284,16 @@ template <unsigned N> void fp1100_state::vram_w(offs_t offset, u8 data)
 {
 	// NOTE: POST makes sure to punt in FP-1000 mode if this don't XOR the value
 	m_videoram[N][offset] = ~data;
+
+	if (!machine().side_effects_disabled())
+	{
+		if (!m_sub_wait && m_hsync_state)
+		{
+			// TODO: actual uPD7801 WAIT line
+			m_subcpu->set_input_line(INPUT_LINE_HALT, ASSERT_LINE);
+			m_sub_wait = true;
+		}
+	}
 }
 
 /*
@@ -359,7 +349,7 @@ The SO pin is Serial Output to CMT (1=2400Hz; 0=1200Hz)
 */
 void fp1100_state::porta_w(u8 data)
 {
-	if (BIT(m_upd7801.porta, 5) && !BIT(data, 5))
+	if (BIT(m_sub_porta, 5) && !BIT(data, 5))
 	{
 		for (int i = 0; i < 3; i++)
 		{
@@ -371,7 +361,7 @@ void fp1100_state::porta_w(u8 data)
 	const u8 crtc_divider = BIT(data, 3) ? 16 : 8;
 	m_crtc->set_unscaled_clock(MAIN_CLOCK / crtc_divider);
 
-	m_upd7801.porta = data;
+	m_sub_porta = data;
 }
 
 u8 fp1100_state::portb_r()
@@ -381,8 +371,8 @@ u8 fp1100_state::portb_r()
 	//m_subcpu->set_input_line(UPD7810_INTF0, BIT(data, 7) ? ASSERT_LINE : CLEAR_LINE);
 	if (BIT(m_kbd_row, 5))
 		return data;
-	else
-		return 0;
+
+	return 0;
 }
 
 /*
@@ -393,7 +383,7 @@ d7 - CMT load serial data
 */
 u8 fp1100_state::portc_r()
 {
-	return (m_upd7801.portc & 0x78) | m_centronics_busy;
+	return (m_sub_portc & 0x78) | m_centronics_busy;
 }
 
 /*
@@ -404,14 +394,14 @@ d6 - Centronics strobe
 */
 void fp1100_state::portc_w(u8 data)
 {
-	u8 const bits = data ^ m_upd7801.portc;
+	u8 const bits = data ^ m_sub_portc;
 	const int main_int_state = BIT(data, 3);
-	if (BIT(m_upd7801.portc, 3) != main_int_state)
+	if (BIT(m_sub_portc, 3) != main_int_state)
 		int_w<4>(main_int_state);
-	m_upd7801.portc = data;
+	m_sub_portc = data;
 
 	if (BIT(bits, 5))
-		m_cass->change_state(BIT(data, 5) ? CASSETTE_MOTOR_ENABLED : CASSETTE_MOTOR_DISABLED, CASSETTE_MASK_MOTOR);
+		m_cassette->change_state(BIT(data, 5) ? CASSETTE_MOTOR_ENABLED : CASSETTE_MOTOR_DISABLED, CASSETTE_MASK_MOTOR);
 	if (BIT(bits, 6))
 		m_centronics->write_strobe(BIT(data, 6));
 }
@@ -451,6 +441,19 @@ IRQ_CALLBACK_MEMBER(fp1100_state::restart_cb)
 	}
 	return vector;
 }
+
+// IRQ section (sub)
+
+void fp1100_state::hsync_cb(int state)
+{
+	m_hsync_state = state;
+	if (m_sub_wait && !state)
+	{
+		m_subcpu->set_input_line(INPUT_LINE_HALT, CLEAR_LINE);
+		m_sub_wait = false;
+	}
+}
+
 
 static INPUT_PORTS_START( fp1100 )
 	PORT_START("KEY.0")
@@ -604,51 +607,10 @@ static INPUT_PORTS_START( fp1100 )
 	PORT_DIPSETTING(    0x00, "<undefined>" )
 	PORT_DIPSETTING(    0x20, "Normal" )
 	PORT_BIT(0xc0, IP_ACTIVE_LOW, IPT_UNUSED )
-
-	PORT_START("SLOTS")
-	PORT_CONFNAME( 0x0003, 0x0002, "Slot #0" )
-	PORT_CONFSETTING(    0x0000, "(null)" )
-	PORT_CONFSETTING(    0x0001, "ROM" )
-	PORT_CONFSETTING(    0x0002, "RAM" )
-	PORT_CONFSETTING(    0x0003, "FDC" )
-	PORT_CONFNAME( 0x000c, 0x0008, "Slot #1" )
-	PORT_CONFSETTING(    0x0000, "(null)" )
-	PORT_CONFSETTING(    0x0004, "ROM" )
-	PORT_CONFSETTING(    0x0008, "RAM" )
-	PORT_CONFSETTING(    0x000c, "FDC" )
-	PORT_CONFNAME( 0x0030, 0x0020, "Slot #2" )
-	PORT_CONFSETTING(    0x0000, "(null)" )
-	PORT_CONFSETTING(    0x0010, "ROM" )
-	PORT_CONFSETTING(    0x0020, "RAM" )
-	PORT_CONFSETTING(    0x0030, "FDC" )
-	PORT_CONFNAME( 0x00c0, 0x0080, "Slot #3" )
-	PORT_CONFSETTING(    0x0000, "(null)" )
-	PORT_CONFSETTING(    0x0040, "ROM" )
-	PORT_CONFSETTING(    0x0080, "RAM" )
-	PORT_CONFSETTING(    0x00c0, "FDC" )
-	PORT_CONFNAME( 0x0300, 0x0200, "Slot #4" )
-	PORT_CONFSETTING(    0x0000, "(null)" )
-	PORT_CONFSETTING(    0x0100, "ROM" )
-	PORT_CONFSETTING(    0x0200, "RAM" )
-	PORT_CONFSETTING(    0x0300, "FDC" )
-	PORT_CONFNAME( 0x0c00, 0x0800, "Slot #5" )
-	PORT_CONFSETTING(    0x0000, "(null)" )
-	PORT_CONFSETTING(    0x0400, "ROM" )
-	PORT_CONFSETTING(    0x0800, "RAM" )
-	PORT_CONFSETTING(    0x0c00, "FDC" )
-	PORT_CONFNAME( 0x3000, 0x2000, "Slot #6" )
-	PORT_CONFSETTING(    0x0000, "(null)" )
-	PORT_CONFSETTING(    0x1000, "ROM" )
-	PORT_CONFSETTING(    0x2000, "RAM" )
-	PORT_CONFSETTING(    0x3000, "FDC" )
-	PORT_CONFNAME( 0xc000, 0x8000, "Slot #7" )
-	PORT_CONFSETTING(    0x0000, "(null)" )
-	PORT_CONFSETTING(    0x4000, "ROM" )
-	PORT_CONFSETTING(    0x8000, "RAM" )
-	PORT_CONFSETTING(    0xc000, "FDC" )
 INPUT_PORTS_END
 
 
+// debugging only
 static const gfx_layout chars_8x8 =
 {
 	8,8,
@@ -671,52 +633,60 @@ void fp1100_state::centronics_busy_w(int state)
 
 TIMER_DEVICE_CALLBACK_MEMBER( fp1100_state::kansas_w )
 {
-	m_cass_data[3]++;
+	m_cassette_data[3]++;
 
-	if (m_cassbit != m_cassold)
+	if (m_cassettebit != m_cassetteold)
 	{
-		m_cass_data[3] = 0;
-		m_cassold = m_cassbit;
+		m_cassette_data[3] = 0;
+		m_cassetteold = m_cassettebit;
 	}
 
-	if (m_cassbit)
-		m_cass->output(BIT(m_cass_data[3], 0) ? -1.0 : +1.0); // 2400Hz
+	if (m_cassettebit)
+		m_cassette->output(BIT(m_cassette_data[3], 0) ? -1.0 : +1.0); // 2400Hz
 	else
-		m_cass->output(BIT(m_cass_data[3], 1) ? -1.0 : +1.0); // 1200Hz
+		m_cassette->output(BIT(m_cassette_data[3], 1) ? -1.0 : +1.0); // 1200Hz
 }
 
 void fp1100_state::machine_start()
 {
+	save_item(NAME(m_sub_wait));
+	save_item(NAME(m_sub_irq_status));
+	save_item(NAME(m_kbd_row));
+	save_item(NAME(m_col_border));
+	save_item(NAME(m_col_cursor));
+	save_item(NAME(m_col_display));
+	save_item(NAME(m_centronics_busy));
+
+	save_item(NAME(m_sub_porta));
+	save_item(NAME(m_sub_portc));
+
+	save_item(NAME(m_pending_interrupts));
+	save_item(NAME(m_active_interrupts));
+	save_item(NAME(m_interrupt_mask));
+
 	save_item(NAME(m_caps_led_state));
 	save_item(NAME(m_shift_led_state));
+
+	// FIXME: cassette state intentionally not saved for now
 }
 
 void fp1100_state::machine_reset()
 {
+	m_sub_wait = false;
 	m_sub_irq_status = false;
-	int i;
-	u8 slot_type;
-	const u8 id_type[4] = { 0xff, 0x00, 0x01, 0x04};
-	for(i=0;i<8;i++)
-	{
-		slot_type = (ioport("SLOTS")->read() >> i*2) & 3;
-		m_slot[i].id = id_type[slot_type];
-	}
 
 	m_beep->set_state(0);
 
-	m_bank_sel = false; // point at rom
-
-	m_interrupt_mask = 0;
-	m_slot_num = 0;
+	m_interrupt_mask = m_active_interrupts = m_pending_interrupts = 0;
 	m_kbd_row = 0;
 	m_caps_led_state = m_shift_led_state = 0;
 	m_col_border = 0;
 	m_col_cursor = 0;
 	m_col_display = 0;
-	m_upd7801.porta = 0;
-	m_upd7801.portb = 0;
-	m_upd7801.portc = 0;
+	m_sub_porta = 0;
+	m_sub_portc = 0;
+
+	m_iplview.select(0);
 }
 
 void fp1100_state::fp1100(machine_config &config)
@@ -733,13 +703,13 @@ void fp1100_state::fp1100(machine_config &config)
 	m_subcpu->pb_out_cb().set("cent_data_out", FUNC(output_latch_device::write));
 	m_subcpu->pc_in_cb().set(FUNC(fp1100_state::portc_r));
 	m_subcpu->pc_out_cb().set(FUNC(fp1100_state::portc_w));
-	m_subcpu->txd_func().set([this] (bool state) { m_cassbit = state; });
+	m_subcpu->txd_func().set([this] (bool state) { m_cassettebit = state; });
 
 	GENERIC_LATCH_8(config, "main2sub");
 	GENERIC_LATCH_8(config, "sub2main");
 	// NOTE: Needs some sync otherwise it outright refuses to boot
 	config.set_perfect_quantum("maincpu");
-	config.set_perfect_quantum("sub");
+//  config.set_perfect_quantum("sub");
 
 	CENTRONICS(config, m_centronics, centronics_devices, "printer");
 	m_centronics->busy_handler().set(FUNC(fp1100_state::centronics_busy_w));
@@ -747,14 +717,19 @@ void fp1100_state::fp1100(machine_config &config)
 	output_latch_device &latch(OUTPUT_LATCH(config, "cent_data_out"));
 	m_centronics->set_output_latch(latch);
 
-	CASSETTE(config, m_cass);
-	m_cass->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
-	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
+	CASSETTE(config, m_cassette);
+	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cassette->set_interface("fp1100_cass");
+
 	TIMER(config, "kansas_w").configure_periodic(FUNC(fp1100_state::kansas_w), attotime::from_hz(4800));
 
+	SOFTWARE_LIST(config, "cass_list").set_original("fp1100_cass");
+
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
+	// doesn't matter, will be reset by 6845 anyway
 	screen.set_refresh_hz(60);
-	screen.set_vblank_time(ATTOSECONDS_IN_USEC(2500)); // not accurate
+	screen.set_vblank_time(ATTOSECONDS_IN_USEC(2500));
 	screen.set_size(640, 480);
 	screen.set_visarea_full();
 	screen.set_screen_update("crtc", FUNC(mc6845_device::screen_update));
@@ -766,6 +741,7 @@ void fp1100_state::fp1100(machine_config &config)
 	m_crtc->set_show_border_area(false);
 	m_crtc->set_char_width(8);
 	m_crtc->set_update_row_callback(FUNC(fp1100_state::crtc_update_row));
+	m_crtc->out_hsync_callback().set(FUNC(fp1100_state::hsync_cb));
 
 	SPEAKER(config, "mono").front_center();
 	BEEP(config, "beeper", 950) // guess
@@ -775,8 +751,15 @@ void fp1100_state::fp1100(machine_config &config)
 // ROM definitions
 
 ROM_START( fp1100 )
-	ROM_REGION( 0x9000, "ipl", ROMREGION_ERASEFF )
+	ROM_REGION( 0x9000, "bios", ROMREGION_ERASEFF )
+	// TODO: split into two roms
 	ROM_LOAD( "basic.rom", 0x0000, 0x9000, BAD_DUMP CRC(7c7dd17c) SHA1(985757b9c62abd17b0bd77db751d7782f2710ec3))
+
+	ROM_REGION( 0x8000, "ipl", ROMREGION_ERASEFF )
+	ROM_COPY( "bios", 0x0000, 0x0000, 0x8000 )
+
+	ROM_REGION( 0x1000, "basic", ROMREGION_ERASEFF )
+	ROM_COPY( "bios", 0x8000, 0x0000, 0x1000 )
 
 	ROM_REGION( 0x3000, "sub_ipl", ROMREGION_ERASEFF )
 	ROM_LOAD( "sub1.rom", 0x0000, 0x1000, CRC(8feda489) SHA1(917d5b398b9e7b9a6bfa5e2f88c5b99923c3c2a3))
@@ -787,7 +770,10 @@ ROM_END
 /* FP-1000 has video RAM locations RAM9 to RAM24 unpopulated (only RAM1 to RAM8 are populated) - needs its own machine configuration.
    PCB parts overlay silkscreen for sub-CPU shows "µPD7801G-101", but all examples seen have chips silksreened "D7108G 118". */
 ROM_START( fp1000 )
-	ROM_REGION( 0x9000, "ipl", ROMREGION_ERASEFF )
+	ROM_REGION( 0x8000, "ipl", ROMREGION_ERASE00 )
+	ROM_LOAD( "ipl.rom", 0x0000, 0x8000, NO_DUMP)
+
+	ROM_REGION( 0x1000, "basic", ROMREGION_ERASEFF )
 	ROM_LOAD( "2l_a10_kkk_fp1000_basic.c1", 0x0000, 0x1000, CRC(9322dedd) SHA1(40a00684ced2b7ead53ca15a915d98f3fe00d3ba))
 
 	ROM_REGION( 0x3000, "sub_ipl", ROMREGION_ERASEFF )
