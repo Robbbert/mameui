@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1816 -->
+<!-- Number of items in this list = 1817 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4409,6 +4409,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Captain Planet and the Planeteers (Europe).bin" size="524288" crc="c939d288" sha1="7f6e2c7111d86c3bd5224c56f2bc399dd3f2d1e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5abe0a6200af7">
+		<description>captainBarrelDemo_MD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3932160">
+				<rom name="captainBarrelDemo_MD.bin" size="3932160" crc="5553abce" sha1="5abe0a6200af7ca8721dd22003a6b9a5ca4190fc"/>
 			</dataarea>
 		</part>
 	</software>
