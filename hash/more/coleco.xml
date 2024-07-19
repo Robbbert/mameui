@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 620 -->
+<!-- Number of items in this list = 619 -->
 <softwarelist name="coleco_cart" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -1159,16 +1159,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="18014">
 				<rom name="Commando Returns (2012 Michel Louvet) [WIP].rom" size="18014" crc="e97a69e1" sha1="2ad1b4ff8d6f8c2cb086530807391c4b4d599619"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="colff986e21014b0">
-		<description>ComputerSpace</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32715">
-				<rom name="ComputerSpace.rom" size="32715" crc="b21f9276" sha1="ff986e21014b08396aaadaf2dba761bc2735fa66"/>
 			</dataarea>
 		</part>
 	</software>

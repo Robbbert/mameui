@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1817 -->
+<!-- Number of items in this list = 1815 -->
 <softwarelist name="megadriv_cart" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -712,16 +712,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="genc885217591999">
-		<description>(demo)Sonic 3  & Knuckles Battle Race</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4174998">
-				<rom name="(demo)Sonic 3  & Knuckles Battle Race.bin" size="4174998" crc="e23dd7c2" sha1="c8852175919990b5917b72c20d51ce24c3f4ae89"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen342696c6bf953">
 		<description>(demo)speckdrumm_bassfish</description>
 		<year>????</year>
@@ -969,6 +959,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="(E)earthworm jim 2 (prototype - 1995-08-24).bin" size="3145728" crc="f92a931d" sha1="f2f1b0c79c972e83b9ec67cbb41007434c02aad9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen39d9b0a877f2f">
+		<description>(E)GoldenAxeIII_New Character_Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(E)GoldenAxeIII_New Character_Hack.bin" size="2097152" crc="b157f06c" sha1="39d9b0a877f2fd14af0f2f29bb31bf5f202984e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1289,6 +1289,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="(E,U)Shinobi 3 - Return of the Ninja Master (E) [c][tr Pt Desc].bin" size="1048576" crc="69c6cd78" sha1="67afeae67cb9c79ebca44f7698dccbccf296e233"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen170ed36af30a2">
+		<description>(J)Bare Knuckle III Project</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3151044">
+				<rom name="(J)Bare Knuckle III Project.bin" size="3151044" crc="5aa71c8b" sha1="170ed36af30a2c5a003f56c5542a7032da935fa4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2032,16 +2042,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen504cc7a948f96">
-		<description>(U)Samurai Shodown</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(U)Samurai Shodown.bin" size="3145728" crc="5bb8b2d4" sha1="504cc7a948f96ce1989f8e91ffb42acc6a956e47"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen43815865697ed">
 		<description>(U)saturday night slammasters (Hack, Spanish)</description>
 		<year>????</year>
@@ -2049,16 +2049,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="(U)saturday night slammasters (Hack, Spanish).bin" size="4194304" crc="c4ebbfa1" sha1="43815865697ed72c9dbda74f4b314f6de1ee867b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen7252006bf41e4">
-		<description>(U)Saturday Night Slammasters</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="(U)Saturday Night Slammasters.bin" size="4194304" crc="2fb4eaba" sha1="7252006bf41e41b92c6261c6722766a1352a6dca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2149,16 +2139,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(U)Shining Force II (USA) [Difficulty Mod v1.01 by Obob] (Challenge Mode).md" size="2097152" crc="c1406ddb" sha1="6b4ac62780f4071a78bf80d1ea0ca3bb3721cc63"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen9f2f635572e67">
-		<description>(U)shining tactics absolute final edition (hack)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="(U)shining tactics absolute final edition (hack).bin" size="4194304" crc="49d556e2" sha1="9f2f635572e6760515e476652bfe8bd190f7df61"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2302,76 +2282,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen96706c28310d6">
-		<description>(U)SoR2_BK3Boss_Hack</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3500098">
-				<rom name="(U)SoR2_BK3Boss_Hack.bin" size="3500098" crc="5c152787" sha1="96706c28310d68eb58acc37ec105fc42db84b859"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gene2c3b991d384c">
-		<description>(U)SoR2_StreetFighter_v1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3395462">
-				<rom name="(U)SoR2_StreetFighter_v1.bin" size="3395462" crc="e03f0c6b" sha1="e2c3b991d384c50e2622f1f15d1279e7c643a95f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gene933a025b76b1">
-		<description>(U)SoR2_StreetFighter_v2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3560088">
-				<rom name="(U)SoR2_StreetFighter_v2.bin" size="3560088" crc="828786e2" sha1="e933a025b76b1f686c0cd2c263b45e3a597572dd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen6b637a9b16648">
-		<description>(U)SoR2_StreetFighter_v3</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3532794">
-				<rom name="(U)SoR2_StreetFighter_v3.bin" size="3532794" crc="d2ecf98f" sha1="6b637a9b16648b9d83364e4aaa9a38f18e3168cc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen48b9ef878d63a">
-		<description>(U)SoR2_StreetFighter_v4</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3757608">
-				<rom name="(U)SoR2_StreetFighter_v4.bin" size="3757608" crc="59aa116d" sha1="48b9ef878d63a3a0271edcf9cf279091bcaf62f1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen8301da859cf33">
-		<description>(U)SoR2_TMNT_Hack</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2903472">
-				<rom name="(U)SoR2_TMNT_Hack.bin" size="2903472" crc="50e3c7c3" sha1="8301da859cf33d5ac4577829f6f96167e97c13af"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genb2f8cc1984d39">
-		<description>(U)SoR3_Extreme_v042_Hack</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(U)SoR3_Extreme_v042_Hack.bin" size="3145728" crc="d2135a13" sha1="b2f8cc1984d396dba4be2f8a921ff2a29ed8c2af"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gena91d435642f70">
 		<description>(U)Street Fighter II REMASTER</description>
 		<year>????</year>
@@ -2402,16 +2312,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen8c19521a9e864">
-		<description>(U)Street Fighter II' - SCE Improvement</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(U)Street Fighter II' - SCE Improvement.bin" size="3145728" crc="293d2cb1" sha1="8c19521a9e864e710d0464ab98875dd67a5f3885"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="genc8774860e9c77">
 		<description>(U)street fighter ii' - special champion edition (Hack, Spanish)</description>
 		<year>????</year>
@@ -2429,16 +2329,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="(U)Street Fighter II' - Special Champion Edition (USA).bin" size="3145728" crc="432beacc" sha1="ab9b9621717260a75533c180e540e7e477824ad8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gena5aad1d108046">
-		<description>(U)Street Fighter II' Special Champion Edition</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(U)Street Fighter II' Special Champion Edition.bin" size="3145728" crc="13fe08a1" sha1="a5aad1d108046d9388e33247610dafb4c6516e0b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2479,16 +2369,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="(U)Streets of Rage 3 Plus hack by Evgeny.bin" size="4194304" crc="9aa3dc9b" sha1="8418be49c3c711b03cb41a600365146aaf49ba0f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen7732017b10a28">
-		<description>(U)Streets of Rage 3 Project</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3150276">
-				<rom name="(U)Streets of Rage 3 Project.bin" size="3150276" crc="06b93815" sha1="7732017b10a288619e6b95fc70356ccafe02b6b0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2542,16 +2422,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen4796ed4f87b8a">
-		<description>(U)Super Street Fighter II Improvement</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="5242880">
-				<rom name="(U)Super Street Fighter II Improvement.bin" size="5242880" crc="021b7403" sha1="4796ed4f87b8ade0da3b4d4ec3d8520e4e5a980c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="genc8f8f60a53585">
 		<description>(U)SUPER STREET FIGHTER2 - NOTSETTLED (hack)</description>
 		<year>????</year>
@@ -2559,16 +2429,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="5242880">
 				<rom name="(U)SUPER STREET FIGHTER2 - NOTSETTLED (hack).bin" size="5242880" crc="9a341f19" sha1="c8f8f60a53585b3c0499fc12ab28072b782a3962"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen769ad7208da7f">
-		<description>(U)Super_Monaco_GP2019</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="(U)Super_Monaco_GP2019.bin" size="524288" crc="12bcabb6" sha1="769ad7208da7f69d0ae83b1592ac268cecde9369"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2639,26 +2499,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="(U)Tiny Toon Adventures - Acme All-Stars (USA, Korea).bin" size="1048576" crc="07b7f6d6" sha1="361cecd745c79ea567a440c67a8e10d05f2c975b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genf440dfa689f65">
-		<description>(U)TMNT The Hyperstone Heist</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="(U)TMNT The Hyperstone Heist.bin" size="1048576" crc="679c41de" sha1="f440dfa689f65e782a150c1686ab90d7e5cc6355"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genb92b4d13293a2">
-		<description>(U)TMNT Tournament Fighters (Hack)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2128916">
-				<rom name="(U)TMNT Tournament Fighters (Hack).bin" size="2128916" crc="8dc38dc4" sha1="b92b4d13293a2098988e1e5925640a942d1752e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2812,16 +2652,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gene6669f16902ca">
-		<description>(U)Zoop</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="(U)Zoop.bin" size="524288" crc="a899befa" sha1="e6669f16902caf35337de60027ed2013deed0d40"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen13c0d47d13190">
 		<description>11S2-FTE-BRE</description>
 		<year>????</year>
@@ -2909,16 +2739,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="20482">
 				<rom name="32tilesdemo.bin" size="20482" crc="3e6d1e06" sha1="09998edb874e1fdcd5ff1337e35caf92d915130e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gended6f8f8e6725">
-		<description>33SFACTOR</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1300053">
-				<rom name="33SFACTOR.bin" size="1300053" crc="366e8cd4" sha1="ded6f8f8e6725b9ebd6177fda3e8698dbd2f9348"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3133,12 +2953,12 @@
 		</part>
 	</software>
 	<software name="gen7398bd6dc7aed">
-		<description>Aladdin Final Cut (Disney Classic Games Aladdin and The Lion King Switch Collection)</description>
+		<description>Aladdin - Final Cut (USA)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2384052">
-				<rom name="Aladdin Final Cut (Disney Classic Games Aladdin and The Lion King Switch Collection).md" size="2384052" crc="dd66b3fa" sha1="7398bd6dc7aed3f1d819f70360593fe50491dac8"/>
+				<rom name="Aladdin - Final Cut (USA).bin" size="2384052" crc="dd66b3fa" sha1="7398bd6dc7aed3f1d819f70360593fe50491dac8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3632,6 +3452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen2838b26cc1ca5">
+		<description>Bare Knuckle 3 Project</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3882698">
+				<rom name="Bare Knuckle 3 Project.bin" size="3882698" crc="aa7e7937" sha1="2838b26cc1ca5e285f2beaf29401b13650ba6d99"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen75157b182e630">
 		<description>Bare Knuckle II (JE) [t+Chi_ken&madcell_2005.09.28]</description>
 		<year>????</year>
@@ -3682,16 +3512,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen40bfbfef1b51f">
-		<description>Bare Knuckle II sw</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3257806">
-				<rom name="Bare Knuckle II sw.bin" size="3257806" crc="b49b4a9b" sha1="40bfbfef1b51f65bdc61a16f2992244b068b3fef"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen0073a7e69f957">
 		<description>Bare Knuckle II</description>
 		<year>????</year>
@@ -3732,26 +3552,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen170ed36af30a2">
-		<description>Bare Knuckle III Project(J)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3151044">
-				<rom name="Bare Knuckle III Project(J).bin" size="3151044" crc="5aa71c8b" sha1="170ed36af30a2c5a003f56c5542a7032da935fa4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen2838b26cc1ca5">
-		<description>Bare Knuckle III Project</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3882698">
-				<rom name="Bare Knuckle III Project.bin" size="3882698" crc="aa7e7937" sha1="2838b26cc1ca5e285f2beaf29401b13650ba6d99"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gend44580ef499d9">
 		<description>Bare Knuckle III RUSSIAN</description>
 		<year>????</year>
@@ -3779,16 +3579,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Bare Knuckle III.gen" size="3145728" crc="2dc70d71" sha1="c06f1b1f3332431cd7f72cbbec01c160b7bb4e2b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genb67ff26c6e003">
-		<description>Bare Knuckle II_pw</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3990600">
-				<rom name="Bare Knuckle II_pw.md" size="3990600" crc="f618ec40" sha1="b67ff26c6e00340501fb37b89a190978de398550"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3882,6 +3672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen2c6f17f0c212b">
+		<description>battle golfer yui (english translation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="battle golfer yui (english translation).md" size="1048576" crc="2d7e868c" sha1="2c6f17f0c212bb51b6ef629b123bae4bd2359816"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen56ae8169ace1a">
 		<description>battle golfer yui (Hack, Spanish)</description>
 		<year>????</year>
@@ -3889,16 +3689,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="battle golfer yui (Hack, Spanish).bin" size="1048576" crc="1ed9c6d0" sha1="56ae8169ace1a8918ac060f07b06e3c1e376deae"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen2c6f17f0c212b">
-		<description>Battle Golfer Yui (Japan)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Battle Golfer Yui (Japan).bin" size="1048576" crc="2d7e868c" sha1="2c6f17f0c212bb51b6ef629b123bae4bd2359816"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3912,6 +3702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen89412d9c5408f">
+		<description>battle mania daiginjou (english translation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="battle mania daiginjou (english translation).bin" size="1048576" crc="fab20c39" sha1="89412d9c5408f26a53560d3eb030a5a75ac5e4e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen12751aba777a3">
 		<description>battle mania daiginjou (Hack, Spanish)</description>
 		<year>????</year>
@@ -3919,16 +3719,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="battle mania daiginjou (Hack, Spanish).bin" size="1048576" crc="9e0ef510" sha1="12751aba777a35bb013246944cc266b277384ee6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen89412d9c5408f">
-		<description>Battle Mania Daiginjou (Japan, Korea)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Battle Mania Daiginjou (Japan, Korea).bin" size="1048576" crc="fab20c39" sha1="89412d9c5408f26a53560d3eb030a5a75ac5e4e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4153,12 +3943,12 @@
 		</part>
 	</software>
 	<software name="gen4a89848f9442c">
-		<description>Bishoujo Senshi Sailor Moon (Japan)</description>
+		<description>bishoujo senshi sailor moon (english translation)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Bishoujo Senshi Sailor Moon (Japan).bin" size="4194304" crc="48778add" sha1="4a89848f9442cb47be6d78c8ca66baa535c3f015"/>
+				<rom name="bishoujo senshi sailor moon (english translation).md" size="4194304" crc="48778add" sha1="4a89848f9442cb47be6d78c8ca66baa535c3f015"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5452,6 +5242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen241d076e6caf0">
+		<description>dynamite headdy (english translation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="dynamite headdy (english translation).bin" size="2097152" crc="003e54e5" sha1="241d076e6caf02496a916af30c009a5279e0832e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3dd63a39d31f4">
 		<description>dynamite headdy (Hack, Spanish)</description>
 		<year>????</year>
@@ -5668,7 +5468,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
-				<rom name="eternal champions (usa).md" size="3145728" crc="48f1a42e" sha1="5e978217c10b679a42d7d2966a4ccb77e1715962"/>
+				<rom name="eternal champions (usa).bin" size="3145728" crc="48f1a42e" sha1="5e978217c10b679a42d7d2966a4ccb77e1715962"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5758,7 +5558,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
-				<rom name="fatal fury (usa).md" size="1572864" crc="98d49170" sha1="48b6277fc73368d8e96ba407a66f908c3bd87c39"/>
+				<rom name="fatal fury (usa).bin" size="1572864" crc="98d49170" sha1="48b6277fc73368d8e96ba407a66f908c3bd87c39"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5813,12 +5613,12 @@
 		</part>
 	</software>
 	<software name="gencbf3b650c541a">
-		<description>Fight for Vengeance - Tournament Edition v3.0 (2022)(GFE)</description>
+		<description>Fight for Vengeance - Tournament Edition (2022)(Genesis Fight Engine)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Fight for Vengeance - Tournament Edition v3.0 (2022)(GFE).bin" size="4194304" crc="813a61a6" sha1="cbf3b650c541ad7ffea7e27d673071ef8fa4e920"/>
+				<rom name="Fight for Vengeance - Tournament Edition (2022)(Genesis Fight Engine).bin" size="4194304" crc="813a61a6" sha1="cbf3b650c541ad7ffea7e27d673071ef8fa4e920"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5958,7 +5758,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
-				<rom name="flashback - the quest for identity (usa).md" size="1572864" crc="23a9616d" sha1="bce40031f6adab48670c8a2d73e42f3a3dcba97c"/>
+				<rom name="flashback - the quest for identity (usa).bin" size="1572864" crc="23a9616d" sha1="bce40031f6adab48670c8a2d73e42f3a3dcba97c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6043,12 +5843,32 @@
 		</part>
 	</software>
 	<software name="gen2b14aebf4510f">
-		<description>Fushigi no Umi no Nadia (Japan)</description>
+		<description>fushigi no umi no nadia (english translation)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
-				<rom name="Fushigi no Umi no Nadia (Japan).bin" size="1572864" crc="8dec9c35" sha1="2b14aebf4510f02c6fe220a32a2f709db91f60c3"/>
+				<rom name="fushigi no umi no nadia (english translation).md" size="1572864" crc="8dec9c35" sha1="2b14aebf4510f02c6fe220a32a2f709db91f60c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2271f25255494">
+		<description>Futbol Argentino 2006 - Torneo Apertura (Beta) (Ver.1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Futbol Argentino 2006 - Torneo Apertura (Beta) (Ver.1).bin" size="2097152" crc="59672973" sha1="2271f2525549496f390c3fee67db1169aa3ef000"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen30ab04a817e66">
+		<description>Futbol Argentino 98 - Version 2022 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Futbol Argentino 98 - Version 2022 (Hack).bin" size="2097152" crc="68aa2492" sha1="30ab04a817e66b485bb945169374c823af2707da"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6589,16 +6409,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="GoldenAxeIII_New Character_Hack (2).bin" size="2097152" crc="29a27509" sha1="a22f993e00af8d0b19d84391f1e6d0de3c5b9bf7"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen39d9b0a877f2f">
-		<description>GoldenAxeIII_New Character_Hack</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="GoldenAxeIII_New Character_Hack.bin" size="2097152" crc="b157f06c" sha1="39d9b0a877f2fd14af0f2f29bb31bf5f202984e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8272,16 +8082,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen01efa0221e6f6">
-		<description>International Super Star Soccer Deluxe_real_hack</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="International Super Star Soccer Deluxe_real_hack.bin" size="2097152" crc="ad08d78e" sha1="01efa0221e6f6997524e9aeef9756efdb94ebc17"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen52af3fc376814">
 		<description>Irena Genesis Metal Fury (World) (Demo) (Unl) (2)</description>
 		<year>????</year>
@@ -8289,6 +8089,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Irena Genesis Metal Fury (World) (Demo) (Unl) (2).bin" size="1048576" crc="02796bba" sha1="52af3fc3768148f67aae50e444aa809e872550b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen01efa0221e6f6">
+		<description>issdx_real_hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="issdx_real_hack.bin" size="2097152" crc="ad08d78e" sha1="01efa0221e6f6997524e9aeef9756efdb94ebc17"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8369,16 +8179,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="james pond ii - codename robocod (usa, europe).md" size="524288" crc="f4abedba" sha1="e00c9ab1f22aeed3031ed9dd985539aa6e31a7a4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen620ecac6c340e">
-		<description>janou touryumon (j) [!]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="janou touryumon (j) [!].md" size="1048576" crc="7011e8eb" sha1="620ecac6c340e617bbde922bf742a9e6d7f8d786"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8882,16 +8682,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen7c397fe46acba">
-		<description>King Colossus (Japan)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="King Colossus (Japan).bin" size="1048576" crc="016afd40" sha1="7c397fe46acba156cc428bbe428c6d5cb8121ff4"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen348a66f00df91">
 		<description>KING COLOSSUS</description>
 		<year>????</year>
@@ -8952,16 +8742,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen8bc0672f95b1d">
-		<description>Knuckles the Echidna in Sonic the Hedgehog Rev 01</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="655232">
-				<rom name="Knuckles the Echidna in Sonic the Hedgehog Rev 01.bin" size="655232" crc="57a6ddb3" sha1="8bc0672f95b1dd0eb16ae0a56483bccdb99c197c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="genda7ee4b6ebf2c">
 		<description>Kromasphere (World) (Unl)</description>
 		<year>????</year>
@@ -8979,6 +8759,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="krusty's super fun house (Hack, Spanish).bin" size="524288" crc="e3a453db" sha1="f36d50dc944abcd3a16115e54760b098aaeed465"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8bc0672f95b1d">
+		<description>ktesonic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="655232">
+				<rom name="ktesonic.bin" size="655232" crc="57a6ddb3" sha1="8bc0672f95b1dd0eb16ae0a56483bccdb99c197c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9922,16 +9712,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen26ad72719991e">
-		<description>Mega Man - The Wily Wars (USA) (Genesis Mini)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Mega Man - The Wily Wars (USA) (Genesis Mini).md" size="2097152" crc="0cd405db" sha1="26ad72719991e94dbe477c78e65d68f4a4fe51e6"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen617bc1ee5f31f">
 		<description>Mega Man - The Wily Wars (USA) (Retro-bit)</description>
 		<year>????</year>
@@ -10398,7 +10178,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Monster World IV (USA, Europe) (En,Ja) (Virtual Console).bin" size="2097152" crc="af050c46" sha1="6c90e14b6dd1ce6fc33f74dc624edc2e00fc5038"/>
+				<rom name="Monster World IV (USA, Europe) (En,Ja) (Virtual Console).md" size="2097152" crc="af050c46" sha1="6c90e14b6dd1ce6fc33f74dc624edc2e00fc5038"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11193,12 +10973,12 @@
 		</part>
 	</software>
 	<software name="gen437a2d2899f18">
-		<description>phantasy star ii - Eusis's adventure (english translation)</description>
+		<description>phantasy star ii - eusis's adventure (english translation)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="phantasy star ii - Eusis's adventure (english translation).bin" size="262144" crc="5395a7e2" sha1="437a2d2899f18544af981be64de23583aaaf352b"/>
+				<rom name="phantasy star ii - eusis's adventure (english translation).bin" size="262144" crc="5395a7e2" sha1="437a2d2899f18544af981be64de23583aaaf352b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11522,16 +11302,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen2ea7befb7e523">
-		<description>psycho pinball (europe) (en,fr,de,es,it) (september 1994)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="psycho pinball (europe) (en,fr,de,es,it) (september 1994).md" size="1572864" crc="11e9c3f2" sha1="2ea7befb7e52334111385667030ceb647157a397"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen699db175ab8a6">
 		<description>Psycho Pinball</description>
 		<year>????</year>
@@ -11552,6 +11322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen451cdab2543b2">
+		<description>pulseman (english translation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="pulseman (english translation).bin" size="2097152" crc="a8e0de99" sha1="451cdab2543b229f00d554f3a4aa01ce5a0cc490"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genecf8ec4fbd4a0">
 		<description>Pulseman (J) [b1]</description>
 		<year>????</year>
@@ -11559,16 +11339,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Pulseman (J) [b1].gen" size="2097152" crc="00e5aa25" sha1="ecf8ec4fbd4a0f57e1d0e980c00c5b38e89f9595"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen451cdab2543b2">
-		<description>Pulseman (J) [T+Eng_MIJET]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Pulseman (J) [T+Eng_MIJET].bin" size="2097152" crc="a8e0de99" sha1="451cdab2543b229f00d554f3a4aa01ce5a0cc490"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11829,16 +11599,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Ristar (USA, Europe) (September 1994).bin" size="2097152" crc="adaf912c" sha1="7a27f5aa98d7834ff9a2fe8efa0960c79364560f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen7c50aa6315ad4">
-		<description>River City Girls of Rage v0.9.82 (2021)(savok)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2889204">
-				<rom name="River City Girls of Rage v0.9.82 (2021)(savok).bin" size="2889204" crc="bea16706" sha1="7c50aa6315ad41106ee1f7224e2b380ec6cc4ea2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12142,6 +11902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gended6f8f8e6725">
+		<description>S Factor - Sonia And Silver (Hack By Aquaslash & Pals)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1300053">
+				<rom name="S Factor - Sonia And Silver (Hack By Aquaslash & Pals).bin" size="1300053" crc="366e8cd4" sha1="ded6f8f8e6725b9ebd6177fda3e8698dbd2f9348"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen444a9adaaac1a">
 		<description>s.s. lucifer - man overboard! (Hack, Spanish)</description>
 		<year>????</year>
@@ -12302,6 +12072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen2e50d04e747e9">
+		<description>s2smtp_v0.5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2073642">
+				<rom name="s2smtp_v0.5.bin" size="2073642" crc="d116fef0" sha1="2e50d04e747e938cd5651fe31a3f581e1bc1718c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen90c34c4d98f02">
 		<description>s2_hadoken</description>
 		<year>????</year>
@@ -12422,6 +12202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen504cc7a948f96">
+		<description>samurai shodown (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="samurai shodown (usa).bin" size="3145728" crc="5bb8b2d4" sha1="504cc7a948f96ce1989f8e91ffb42acc6a956e47"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen03cba061935b6">
 		<description>samurai spirit 2</description>
 		<year>????</year>
@@ -12449,6 +12239,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Sangokushi III hack by yanliang (070328).bin" size="1572864" crc="24450d9b" sha1="b99fae3c869e9f877818ff91e6acf5e3c6d24b39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7252006bf41e4">
+		<description>saturday night slammasters (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="saturday night slammasters (usa).bin" size="4194304" crc="2fb4eaba" sha1="7252006bf41e41b92c6261c6722766a1352a6dca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12702,6 +12502,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen9f2f635572e67">
+		<description>shining tactics absolute final edition (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="shining tactics absolute final edition (hack).bin" size="4194304" crc="49d556e2" sha1="9f2f635572e6760515e476652bfe8bd190f7df61"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genbb9498f75b402">
 		<description>Shining_Force(J)</description>
 		<year>????</year>
@@ -12939,16 +12749,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Sonic 1 code cray.md" size="4194304" crc="b875ae35" sha1="60338d55a03489ba6a558fa196a7d2045666af44"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen26f3c8d2188e4">
-		<description>Sonic 1 Megamix v3.0 (hack)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1283224">
-				<rom name="Sonic 1 Megamix v3.0 (hack).bin" size="1283224" crc="66ecb4f4" sha1="26f3c8d2188e49554d52797ff2892bd9862b0256"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14142,6 +13942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen26f3c8d2188e4">
+		<description>Sonic Megamix V3.0 (Hack By Team Megamix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1283224">
+				<rom name="Sonic Megamix V3.0 (Hack By Team Megamix).bin" size="1283224" crc="66ecb4f4" sha1="26f3c8d2188e49554d52797ff2892bd9862b0256"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen40eb323de9b1e">
 		<description>Sonic Neon (hack)</description>
 		<year>????</year>
@@ -15092,6 +14902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genc885217591999">
+		<description>Sonic3KnucklesBatlleRace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4174998">
+				<rom name="Sonic3KnucklesBatlleRace.bin" size="4174998" crc="e23dd7c2" sha1="c8852175919990b5917b72c20d51ce24c3f4ae89"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7a2405cd338f8">
 		<description>Sonic_1_Megamix_(Hex_Build)</description>
 		<year>????</year>
@@ -15302,6 +15122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen40bfbfef1b51f">
+		<description>sor2 sw</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3257806">
+				<rom name="sor2 sw.bin" size="3257806" crc="b49b4a9b" sha1="40bfbfef1b51f65bdc61a16f2992244b068b3fef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genfc18970be1969">
 		<description>Sor2 Warriors of Fate 1kMansKO</description>
 		<year>????</year>
@@ -15319,6 +15149,86 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3044386">
 				<rom name="Sor2TheNinjaWarriorsOnceAgain.bin" size="3044386" crc="1d6747e9" sha1="b3022bec3163b9bc72563aeee6e5cac8ecf3caf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb67ff26c6e003">
+		<description>sor2u_pw</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3990600">
+				<rom name="sor2u_pw.md" size="3990600" crc="f618ec40" sha1="b67ff26c6e00340501fb37b89a190978de398550"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen96706c28310d6">
+		<description>SoR2_BK3Boss_Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3500098">
+				<rom name="SoR2_BK3Boss_Hack.bin" size="3500098" crc="5c152787" sha1="96706c28310d68eb58acc37ec105fc42db84b859"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene2c3b991d384c">
+		<description>SoR2_StreetFighter_v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3395462">
+				<rom name="SoR2_StreetFighter_v1.bin" size="3395462" crc="e03f0c6b" sha1="e2c3b991d384c50e2622f1f15d1279e7c643a95f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene933a025b76b1">
+		<description>SoR2_StreetFighter_v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3560088">
+				<rom name="SoR2_StreetFighter_v2.bin" size="3560088" crc="828786e2" sha1="e933a025b76b1f686c0cd2c263b45e3a597572dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6b637a9b16648">
+		<description>SoR2_StreetFighter_v3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3532794">
+				<rom name="SoR2_StreetFighter_v3.bin" size="3532794" crc="d2ecf98f" sha1="6b637a9b16648b9d83364e4aaa9a38f18e3168cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen48b9ef878d63a">
+		<description>SoR2_StreetFighter_v4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3757608">
+				<rom name="SoR2_StreetFighter_v4.bin" size="3757608" crc="59aa116d" sha1="48b9ef878d63a3a0271edcf9cf279091bcaf62f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8301da859cf33">
+		<description>SoR2_TMNT_Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2903472">
+				<rom name="SoR2_TMNT_Hack.bin" size="2903472" crc="50e3c7c3" sha1="8301da859cf33d5ac4577829f6f96167e97c13af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb2f8cc1984d39">
+		<description>SoR3_Extreme_v042_Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="SoR3_Extreme_v042_Hack.bin" size="3145728" crc="d2135a13" sha1="b2f8cc1984d396dba4be2f8a921ff2a29ed8c2af"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15492,16 +15402,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gena42fc3b2a4f4c">
-		<description>Splatterhouse Part 3</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Splatterhouse Part 3.bin" size="2097152" crc="ed68373a" sha1="a42fc3b2a4f4c2db2f598244c2b137862b8e79ad"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen24d27506f9e4d">
 		<description>Spot Goes to Hollywood (R)</description>
 		<year>????</year>
@@ -15523,12 +15423,12 @@
 		</part>
 	</software>
 	<software name="gen8404b0008fc17">
-		<description>Star Cruiser (Japan)</description>
+		<description>star cruiser (english translation)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="786432">
-				<rom name="Star Cruiser (Japan).bin" size="786432" crc="53d8b33e" sha1="8404b0008fc1796706b06a3a709bd5c631e31fc4"/>
+				<rom name="star cruiser (english translation).md" size="786432" crc="53d8b33e" sha1="8404b0008fc1796706b06a3a709bd5c631e31fc4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15672,6 +15572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen8c19521a9e864">
+		<description>Street Fighter II' - SCE Improvement</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Street Fighter II' - SCE Improvement.bin" size="3145728" crc="293d2cb1" sha1="8c19521a9e864e710d0464ab98875dd67a5f3885"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2a406e2e4743d">
 		<description>street fighter ii' - special champion edition (europe)</description>
 		<year>????</year>
@@ -15679,6 +15589,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="street fighter ii' - special champion edition (europe).md" size="3145728" crc="56d41136" sha1="2a406e2e4743de98785c85322f858abfb8221ae0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena5aad1d108046">
+		<description>street fighter ii' - special champion edition (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="street fighter ii' - special champion edition (usa).bin" size="3145728" crc="13fe08a1" sha1="a5aad1d108046d9388e33247610dafb4c6516e0b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15772,6 +15692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen7c50aa6315ad4">
+		<description>Streets of Rage 2 River City Girls v0.9.82 (2021)(savok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2889204">
+				<rom name="Streets of Rage 2 River City Girls v0.9.82 (2021)(savok).bin" size="2889204" crc="bea16706" sha1="7c50aa6315ad41106ee1f7224e2b380ec6cc4ea2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend5322bb477eb7">
 		<description>Streets of Rage 2 The World Warrior</description>
 		<year>????</year>
@@ -15789,6 +15719,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="streets of rage 3 (Hack, Spanish).bin" size="3145728" crc="f52d84e0" sha1="2a27cea7bb23a0314a2f262b59b1604c8a4e7e7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7732017b10a28">
+		<description>Streets of Rage 3 Project</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3150276">
+				<rom name="Streets of Rage 3 Project.bin" size="3150276" crc="06b93815" sha1="7732017b10a288619e6b95fc70356ccafe02b6b0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15943,12 +15883,12 @@
 		</part>
 	</software>
 	<software name="gen9e975ba4c3966">
-		<description>Super League</description>
+		<description>super league (jpn)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Super League.bin" size="524288" crc="ea13cb1d" sha1="9e975ba4c396617ff9535d51d0929f6d592478fc"/>
+				<rom name="super league (jpn).bin" size="524288" crc="ea13cb1d" sha1="9e975ba4c396617ff9535d51d0929f6d592478fc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15973,12 +15913,12 @@
 		</part>
 	</software>
 	<software name="gen47fd007173419">
-		<description>super mario world 64 (hacked) (2)</description>
+		<description>super mario world 64 (hacked)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="super mario world 64 (hacked) (2).bin" size="1048576" crc="a20f98aa" sha1="47fd007173419906ecdc7b0efc7d49f42de70c91"/>
+				<rom name="super mario world 64 (hacked).bin" size="1048576" crc="a20f98aa" sha1="47fd007173419906ecdc7b0efc7d49f42de70c91"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16082,6 +16022,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen4796ed4f87b8a">
+		<description>Super Street Fighter II Improvement</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Super Street Fighter II Improvement.bin" size="5242880" crc="021b7403" sha1="4796ed4f87b8ade0da3b4d4ec3d8520e4e5a980c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen461260a04beee">
 		<description>super volley ball (j) [x]</description>
 		<year>????</year>
@@ -16119,6 +16069,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Super_Fantasy_Zone.bin" size="1048576" crc="d97d913d" sha1="71d3816e1fd6d49afb64631605dba40cc7f3b5b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen769ad7208da7f">
+		<description>Super_Monaco_GP2019</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Super_Monaco_GP2019.bin" size="524288" crc="12bcabb6" sha1="769ad7208da7f69d0ae83b1592ac268cecde9369"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16462,13 +16422,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gend21793b66c0bc">
-		<description>Teenage Mutant Ninja Turtles - Shredder's Re-Revenge GlobHack (2022)(savok)</description>
+	<software name="genf440dfa689f65">
+		<description>teenage mutant ninja turtles - the hyperstone heist (usa)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4063356">
-				<rom name="Teenage Mutant Ninja Turtles - Shredder's Re-Revenge GlobHack (2022)(savok).bin" size="4063356" crc="6720cc8a" sha1="d21793b66c0bcf74db972a173c4ec379cd86e02c"/>
+			<dataarea name="rom" size="1048576">
+				<rom name="teenage mutant ninja turtles - the hyperstone heist (usa).bin" size="1048576" crc="679c41de" sha1="f440dfa689f65e782a150c1686ab90d7e5cc6355"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16752,6 +16712,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genb92b4d13293a2">
+		<description>TMNT Tournament Fighters (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2128916">
+				<rom name="TMNT Tournament Fighters (Hack).bin" size="2128916" crc="8dc38dc4" sha1="b92b4d13293a2098988e1e5925640a942d1752e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend21793b66c0bc">
+		<description>TMNT_Shredders_ReRevenge (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063356">
+				<rom name="TMNT_Shredders_ReRevenge (2).md" size="4063356" crc="6720cc8a" sha1="d21793b66c0bcf74db972a173c4ec379cd86e02c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genca322a629a34b">
 		<description>TMNT_Shredders_ReRevenge</description>
 		<year>????</year>
@@ -16839,6 +16819,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="toughman contest (usa, europe).md" size="4194304" crc="e19fbc93" sha1="c7c533b25a50b9c1ccd4c9772bf50957f728c074"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7c397fe46acba">
+		<description>tougiou king colossus (english translation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="tougiou king colossus (english translation).bin" size="1048576" crc="016afd40" sha1="7c397fe46acba156cc428bbe428c6d5cb8121ff4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17203,12 +17193,12 @@
 		</part>
 	</software>
 	<software name="gen734a2aea93109">
-		<description>Undead Line (J) [T+Eng1.0_M.I.J.E.T.]</description>
+		<description>undead line (english translation)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Undead Line (J) [T+Eng1.0_M.I.J.E.T.].bin" size="1048576" crc="53b9e72f" sha1="734a2aea93109a20b805f9255ace5f179adc972e"/>
+				<rom name="undead line (english translation).bin" size="1048576" crc="53b9e72f" sha1="734a2aea93109a20b805f9255ace5f179adc972e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17393,12 +17383,12 @@
 		</part>
 	</software>
 	<software name="gen697fb16505117">
-		<description>vermilion (japan)</description>
+		<description>vermilion (jpn)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="655360">
-				<rom name="vermilion (japan).md" size="655360" crc="e400dfc3" sha1="697fb165051179a2bbca77c8cfd0c929e334f8c1"/>
+				<rom name="vermilion (jpn).bin" size="655360" crc="e400dfc3" sha1="697fb165051179a2bbca77c8cfd0c929e334f8c1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17619,16 +17609,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="786432">
 				<rom name="Wonder Boy in Monster World (UE) [T+Ita_Di Somma Michele].bin" size="786432" crc="2c6e319e" sha1="ea461f6dab40bf799d754c66c4a9282d39714e58"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen87a968f773c7e">
-		<description>wonder boy in monster world (usa, europe)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="786432">
-				<rom name="wonder boy in monster world (usa, europe).md" size="786432" crc="1592f5b0" sha1="87a968f773c7e807e647c0737132457b06b78276"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17933,12 +17913,12 @@
 		</part>
 	</software>
 	<software name="gend881629af139e">
-		<description>Yuu Yuu Hakusho - Makyou Toitsusen (J) [T+Eng1.0_M.I.J.E.T.]</description>
+		<description>yuu yuu hakusho - makyou toitsusen (english translation)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
-				<rom name="Yuu Yuu Hakusho - Makyou Toitsusen (J) [T+Eng1.0_M.I.J.E.T.].bin" size="3145728" crc="0f041d2e" sha1="d881629af139edb6acf36498654401508501ff69"/>
+				<rom name="yuu yuu hakusho - makyou toitsusen (english translation).bin" size="3145728" crc="0f041d2e" sha1="d881629af139edb6acf36498654401508501ff69"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18032,13 +18012,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen723d527c20e3e">
-		<description>Zooming Secretary Going Panic (PD)</description>
+	<software name="gene6669f16902ca">
+		<description>zoop (usa)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="655360">
-				<rom name="Zooming Secretary Going Panic (PD).bin" size="655360" crc="8243dce5" sha1="723d527c20e3ea87480aa4c1d62179ba602a3aa2"/>
+			<dataarea name="rom" size="524288">
+				<rom name="zoop (usa).bin" size="524288" crc="a899befa" sha1="e6669f16902caf35337de60027ed2013deed0d40"/>
 			</dataarea>
 		</part>
 	</software>
