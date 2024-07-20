@@ -1,14 +1,364 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 55 -->
 <softwarelist name="msx_cass_cass" description="msx_cass loose roms">
+	<software name="msx7459cdf749971">
+		<description>30 MSX Hits #01A - Speedboat Racer (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="34985">
+				<rom name="30 MSX Hits #01A - Speedboat Racer (19xx)(Aackosoft)[RUN'CAS-'].cas" size="34985" crc="17879582" sha1="7459cdf749971d06053f47429f06b9852be6b7f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx941a348136fcb">
+		<description>30 MSX Hits #01A - Star Fighter (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="66152">
+				<rom name="30 MSX Hits #01A - Star Fighter (19xx)(Aackosoft)[RUN'CAS-'].cas" size="66152" crc="d6b0c568" sha1="941a348136fcb93c4cd191890bab98c3c1a162d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb7a75cdb905bf">
+		<description>30 MSX Hits #01B - Oh Shit! (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="32800">
+				<rom name="30 MSX Hits #01B - Oh Shit! (19xx)(Aackosoft)[RUN'CAS-'].cas" size="32800" crc="8c204dfb" sha1="b7a75cdb905bf7b751d5748e6873e3c91858420c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5617647324cd1">
+		<description>30 MSX Hits #01B - Spy Story (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="38761">
+				<rom name="30 MSX Hits #01B - Spy Story (19xx)(Aackosoft)[RUN'CAS-'].cas" size="38761" crc="314c2cb2" sha1="5617647324cd167630d61852d8398da15c7ee72c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx6c4de46cee1fb">
+		<description>30 MSX Hits #01B - The Heist (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="28480">
+				<rom name="30 MSX Hits #01B - The Heist (19xx)(Aackosoft)[RUN'CAS-'].cas" size="28480" crc="1d5e71a9" sha1="6c4de46cee1fb3536ee8e6dfdef93c25064511d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9ec17f640eed3">
+		<description>30 MSX Hits #02A - MuSiX (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="49072">
+				<rom name="30 MSX Hits #02A - MuSiX (19xx)(Aackosoft)[RUN'CAS-'].cas" size="49072" crc="8d6f5a4b" sha1="9ec17f640eed318cdb57e9606d7ab26be075d1d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx049bdce79ab68">
+		<description>30 MSX Hits #02B - Hard Boiled (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="48920">
+				<rom name="30 MSX Hits #02B - Hard Boiled (19xx)(Aackosoft)[RUN'CAS-'].cas" size="48920" crc="46ded112" sha1="049bdce79ab685a9d085fcef5d077c6bfbd00b88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5ce3f0b04eb2d">
+		<description>30 MSX Hits #02B - Mazes Unlimited (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="27096">
+				<rom name="30 MSX Hits #02B - Mazes Unlimited (19xx)(Aackosoft)[RUN'CAS-'].cas" size="27096" crc="7d7a8370" sha1="5ce3f0b04eb2d2284a346e963e85a73dbb2bc044"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9bfc1a0285318">
+		<description>30 MSX Hits #02B - Skooter (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="34904">
+				<rom name="30 MSX Hits #02B - Skooter (19xx)(Aackosoft)[RUN'CAS-'].cas" size="34904" crc="fb211a67" sha1="9bfc1a0285318063908c8d73a7cf0058bd201af4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe1c7e9926759c">
+		<description>30 MSX Hits #03A - Break In (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="54017">
+				<rom name="30 MSX Hits #03A - Break In (19xx)(Aackosoft)[RUN'CAS-'].cas" size="54017" crc="cce53956" sha1="e1c7e9926759cef18961577dadff3843cbfc2c99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx36590f963c28f">
+		<description>30 MSX Hits #03A - Chopper (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="56409">
+				<rom name="30 MSX Hits #03A - Chopper (19xx)(Aackosoft)[RUN'CAS-'].cas" size="56409" crc="1087129d" sha1="36590f963c28fb3bd0570ef663fae9d90ebe923a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5d1d0b617ebfd">
+		<description>30 MSX Hits #03A - Mastervoice (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4704">
+				<rom name="30 MSX Hits #03A - Mastervoice (19xx)(Aackosoft)[RUN'CAS-'].cas" size="4704" crc="9bffe531" sha1="5d1d0b617ebfdbdead760557b886cc1e55d25a19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc98ac75aa9686">
+		<description>30 MSX Hits #03B - Pico Pico (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="7560">
+				<rom name="30 MSX Hits #03B - Pico Pico (19xx)(Aackosoft)[RUN'CAS-'].cas" size="7560" crc="a1db472a" sha1="c98ac75aa96865e40ab9f9587e4e435cc1e43bab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7d69373bb24c1">
+		<description>30 MSX Hits #03B - Sorcery (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="50609">
+				<rom name="30 MSX Hits #03B - Sorcery (19xx)(Aackosoft)[RUN'CAS-'].cas" size="50609" crc="67c0e54a" sha1="7d69373bb24c1d0e0e93a82928769e486414b511"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf9f91b296c5ef">
+		<description>30 MSX Hits #03B - The Train Game (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="17088">
+				<rom name="30 MSX Hits #03B - The Train Game (19xx)(Aackosoft)[RUN'CAS-'].cas" size="17088" crc="69502b29" sha1="f9f91b296c5ef05994c6a2366380905a03697acb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4ca60887a6f7b">
+		<description>30 MSX Hits #04A - Boulder Dash (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="18104">
+				<rom name="30 MSX Hits #04A - Boulder Dash (19xx)(Aackosoft)[RUN'CAS-'].cas" size="18104" crc="2036fcee" sha1="4ca60887a6f7b0efee20a6cf778c4219e397c721"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx805593c7bfa3a">
+		<description>30 MSX Hits #04A - Life in the Fast Lane (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="56833">
+				<rom name="30 MSX Hits #04A - Life in the Fast Lane (19xx)(Aackosoft)[RUN'CAS-'].cas" size="56833" crc="70382731" sha1="805593c7bfa3afac8b88d50f22c855aca7d5283a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxad202568269bc">
+		<description>30 MSX Hits #04B - Miner Machine (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="16509">
+				<rom name="30 MSX Hits #04B - Miner Machine (19xx)(Aackosoft)[RUN'CAS-'].cas" size="16509" crc="d8d2cca0" sha1="ad202568269bc7172779c3e58a39d6723fcf4f1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb9244fde84c6a">
+		<description>30 MSX Hits #04B - Police Academy (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="48384">
+				<rom name="30 MSX Hits #04B - Police Academy (19xx)(Aackosoft)[RUN'CAS-'].cas" size="48384" crc="6781a482" sha1="b9244fde84c6ae75de3563f500c6a08f80fcf235"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc9ed163ee13e6">
+		<description>30 MSX Hits #04B - Robot Wars (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="17256">
+				<rom name="30 MSX Hits #04B - Robot Wars (19xx)(Aackosoft)[RUN'CAS-'].cas" size="17256" crc="d8c0c2e5" sha1="c9ed163ee13e66f8e0ed6520c11c750affaccc33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8ffeb5d88ebf4">
+		<description>30 MSX Hits #05A - Jet Bomber (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="46737">
+				<rom name="30 MSX Hits #05A - Jet Bomber (19xx)(Aackosoft)[RUN'CAS-'].cas" size="46737" crc="cb000890" sha1="8ffeb5d88ebf4a923eb2d075f24ecb75c422b7f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxccf5fe3f39501">
+		<description>30 MSX Hits #05A - Spy vs Spy II - The Island Caper (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="40008">
+				<rom name="30 MSX Hits #05A - Spy vs Spy II - The Island Caper (19xx)(Aackosoft)[RUN'CAS-'].cas" size="40008" crc="c0d9caa0" sha1="ccf5fe3f39501bb24419629ac8d0833304f5d2dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1855de304b43e">
+		<description>30 MSX Hits #05B - Boulder Dash II - Rockford's Riot (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="15056">
+				<rom name="30 MSX Hits #05B - Boulder Dash II - Rockford's Riot (19xx)(Aackosoft)[RUN'CAS-'].cas" size="15056" crc="5a2dff97" sha1="1855de304b43ee9b1ce0774250c846a1da139a20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxbdfc1568d95a4">
+		<description>30 MSX Hits #05B - Happy Fret (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="18609">
+				<rom name="30 MSX Hits #05B - Happy Fret (19xx)(Aackosoft)[RUN'CAS-'].cas" size="18609" crc="f5f9b414" sha1="bdfc1568d95a4fc072821a47d2d68587cc735257"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5e43a3eafab56">
+		<description>30 MSX Hits #05B - Polar Star (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="24280">
+				<rom name="30 MSX Hits #05B - Polar Star (19xx)(Aackosoft)[RUN'CAS-'].cas" size="24280" crc="c1207d92" sha1="5e43a3eafab56e823cbc95e8e9e944b78705c5fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5feab1374689f">
+		<description>30 MSX Hits #06A - Boardello (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="33526">
+				<rom name="30 MSX Hits #06A - Boardello (19xx)(Aackosoft)[RUN'CAS-'].cas" size="33526" crc="68a95f10" sha1="5feab1374689f4e3483933749e8c12cc94fd0892"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8923b4e3d8448">
+		<description>30 MSX Hits #06A - Confused (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="27097">
+				<rom name="30 MSX Hits #06A - Confused (19xx)(Aackosoft)[RUN'CAS-'].cas" size="27097" crc="7983b078" sha1="8923b4e3d8448b4bce51db7b3756e5a1e9c1d27a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx86f70691cd54d">
+		<description>30 MSX Hits #06A - Sky Vision (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="22000">
+				<rom name="30 MSX Hits #06A - Sky Vision (19xx)(Aackosoft)[RUN'CAS-'].cas" size="22000" crc="677d1549" sha1="86f70691cd54dbd40daae83fb516e1e2dad2aa95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb4655dc26dc99">
+		<description>30 MSX Hits #06B - Oil's Well (19xx)(Aackosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="20424">
+				<rom name="30 MSX Hits #06B - Oil's Well (19xx)(Aackosoft)[RUN'CAS-'].cas" size="20424" crc="9aad3539" sha1="b4655dc26dc990ad9a65732dc6d5bbd7b4a2d80a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxd96b31abb4bc1">
 		<description>6 Computer Hits - Brian Jacks Superstar Challenge (1985)(Beau-Jolly)[RUN'CAS-']</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cass1" interface="msx_cass_cass">
+		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="36144">
 				<rom name="6 Computer Hits - Brian Jacks Superstar Challenge (1985)(Beau-Jolly)[RUN'CAS-'].cas" size="36144" crc="91b0331e" sha1="d96b31abb4bc13f562f697137fe4c5fe596f3bde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5e34548a078ad">
+		<description>6 Computer Hits - Chuckie Egg (1985)(Beau-Jolly)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="14936">
+				<rom name="6 Computer Hits - Chuckie Egg (1985)(Beau-Jolly)[BLOAD'CAS-',R].cas" size="14936" crc="ee1332f9" sha1="5e34548a078ad788ead832e42d615d4f5eeb3bdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa6ea08c6f0f79">
+		<description>6 Computer Hits - Disc Warrior (1985)(Beau-Jolly)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="53368">
+				<rom name="6 Computer Hits - Disc Warrior (1985)(Beau-Jolly)[RUN'CAS-'].cas" size="53368" crc="e67ae1db" sha1="a6ea08c6f0f797f3512efa9e24e7cbca3e968503"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx13af447516357">
+		<description>6 Computer Hits - Hustler (1985)(Beau-Jolly)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="12328">
+				<rom name="6 Computer Hits - Hustler (1985)(Beau-Jolly)[BLOAD'CAS-',R].cas" size="12328" crc="68bf8b8e" sha1="13af447516357144626a80068fc7a13254f3df24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx47f9c1e321cb2">
+		<description>6 Computer Hits - Menu of Tape (1985)(Beau-Jolly)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="1080">
+				<rom name="6 Computer Hits - Menu of Tape (1985)(Beau-Jolly)[RUN'CAS-'].cas" size="1080" crc="edeb8d75" sha1="47f9c1e321cb28606a07b83b7a7e764bef369de5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe7ddf1bd3a0e0">
+		<description>6 Computer Hits - Special Operations (1985)(Beau-Jolly)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="29758">
+				<rom name="6 Computer Hits - Special Operations (1985)(Beau-Jolly)[RUN'CAS-'].cas" size="29758" crc="fee5b8d3" sha1="e7ddf1bd3a0e0ba2a636e5b81162189d475c22c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc01f826797bbc">
+		<description>Aerial (2021)(Inufuto)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="10508">
+				<rom name="Aerial (2021)(Inufuto)[BLOAD'CAS-',R].cas" size="10508" crc="09bf64c9" sha1="c01f826797bbc774d3be39206bab60c0c04f8880"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16,9 +366,159 @@
 		<description>Alien Bounce (1985)(Soft Pro International)[CLOAD + RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cass1" interface="msx_cass_cass">
+		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="12054">
 				<rom name="Alien Bounce (1985)(Soft Pro International)[CLOAD + RUN].cas" size="12054" crc="09b5095f" sha1="641b0c3e08f750c08984cf49af49e41c18551316"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx05178a0512272">
+		<description>AntiAir (2024)(Inufuto)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="7948">
+				<rom name="AntiAir (2024)(Inufuto)[BLOAD'CAS-',R].cas" size="7948" crc="f7092fb6" sha1="05178a0512272c211c279752bcac966054676fd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx21dedf778abbb">
+		<description>aspar gp master (1989)(dinamic software)(es)(en)[english edition][run'cas-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="39675">
+				<rom name="aspar gp master (1989)(dinamic software)(es)(en)[english edition][run'cas-'].cas" size="39675" crc="bf265f66" sha1="21dedf778abbb12bc02edbb423d4c7d2614de6aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx227d0b7d2b347">
+		<description>booty (1988)(eurosoft)(nl)[run'cas-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="22504">
+				<rom name="booty (1988)(eurosoft)(nl)[run'cas-'].cas" size="22504" crc="c20898f4" sha1="227d0b7d2b3479e8f6e88777068181afddee66ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxcf3ad1874dada">
+		<description>Cracky (2023)(Inufuto)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="7237">
+				<rom name="Cracky (2023)(Inufuto)[BLOAD'CAS-',R].cas" size="7237" crc="8d43ce2a" sha1="cf3ad1874dada69a169e8b8c1127647e40dae609"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7f7f710bcd7fa">
+		<description>Cuby (1985)(Soft Pro International)[CLOAD + RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="14677">
+				<rom name="Cuby (1985)(Soft Pro International)[CLOAD + RUN].cas" size="14677" crc="e6ac95d1" sha1="7f7f710bcd7fabd6650007e4cf8a0561510fc3c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx3fc20f7282ce5">
+		<description>Drakkar ES (1989)(Diabolic Software)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="81353">
+				<rom name="Drakkar ES (1989)(Diabolic Software)[RUN'CAS-'].cas" size="81353" crc="e37e27a0" sha1="3fc20f7282ce53c2ad753217e40fc000a381965f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8a37933ce5bfa">
+		<description>Fharanx (Japan) [T-En by Django] [CLOAD]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="36719">
+				<rom name="Fharanx (Japan) [T-En by Django] [CLOAD].cas" size="36719" crc="50d7a6bb" sha1="8a37933ce5bfa1f52a967a219722d54d91c7ab76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx64312cd848c2a">
+		<description>Games Collection CD, The - Sequential Loader (1988)(Eurosoft)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="8335">
+				<rom name="Games Collection CD, The - Sequential Loader (1988)(Eurosoft)[RUN'CAS-'].cas" size="8335" crc="6ee0b43a" sha1="64312cd848c2aa2c87dc715390af507a3dc5a682"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2958ad169d53c">
+		<description>Hyper Blust (1985)(Soft Pro International)[CLOAD + RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="11926">
+				<rom name="Hyper Blust (1985)(Soft Pro International)[CLOAD + RUN].cas" size="11926" crc="5ce7a576" sha1="2958ad169d53c7f9a68ded1230d5088dd08b337e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx66e77b6820cf2">
+		<description>Jump (1992)(Zigurat Software)[RUN'CAS-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="51413">
+				<rom name="Jump (1992)(Zigurat Software)[RUN'CAS-'].cas" size="51413" crc="daf17d49" sha1="66e77b6820cf2d8258ed5865b07591705a977da7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd062be70d6a41">
+		<description>north sea helicopter (1987)(aackosoft)(nl)[run'cas-']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="62720">
+				<rom name="north sea helicopter (1987)(aackosoft)(nl)[run'cas-'].cas" size="62720" crc="5733cc5c" sha1="d062be70d6a4179577414a5e3cf20be61c664053"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd640f68ff8ce8">
+		<description>Super Cassette - Laser Bykes (1985)(Salasan)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="5256">
+				<rom name="Super Cassette - Laser Bykes (1985)(Salasan)[BLOAD'CAS-',R].cas" size="5256" crc="8a46c608" sha1="d640f68ff8ce8ccd8a49d02813271ae8d6eacefc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx14a0f87f6bcce">
+		<description>Super Cassette - Maxima (1985)(Salasan)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="13672">
+				<rom name="Super Cassette - Maxima (1985)(Salasan)[BLOAD'CAS-',R].cas" size="13672" crc="ce70fc7e" sha1="14a0f87f6bccea2fc87e82a546b21fb165eb26af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4aafd87c8a7c8">
+		<description>Super Cassette - Time Bandits (1985)(Salasan)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="15912">
+				<rom name="Super Cassette - Time Bandits (1985)(Salasan)[BLOAD'CAS-',R].cas" size="15912" crc="19e1a1c1" sha1="4aafd87c8a7c8314dd81cd035325140830b9188a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx85c1d344dfb0c">
+		<description>Super Cassette - Vacuumania (1985)(Salasan)[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="8343">
+				<rom name="Super Cassette - Vacuumania (1985)(Salasan)[BLOAD'CAS-',R].cas" size="8343" crc="b5ee470c" sha1="85c1d344dfb0cac2df925dc43f654314fba03fe3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26,9 +526,29 @@
 		<description>Tenebra Extended (2023)(Hablo)(BLOAD'CAS-',R)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cass1" interface="msx_cass_cass">
+		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="16424">
 				<rom name="Tenebra Extended (2023)(Hablo)(BLOAD'CAS-',R).cas" size="16424" crc="aed8fc21" sha1="7733308b9fafeb61ad22423d9eece27b1a70c46b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2224e05b1371d">
+		<description>Uchusen Gamma[RUN 'CAS-]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="36050">
+				<rom name="Uchusen Gamma[RUN 'CAS-].cas" size="36050" crc="0e62063f" sha1="2224e05b1371dc9c6a56895f6c63ba5d444f278c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9426bf62e8f99">
+		<description>Vilzam - Cosmic Struggle (Japan) [T-En by 232 & BiFi & Takamichi Suzukawa] [BLOAD''CAS'',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="27942">
+				<rom name="Vilzam - Cosmic Struggle (Japan) [T-En by 232 & BiFi & Takamichi Suzukawa] [BLOAD''CAS'',R].cas" size="27942" crc="719be7af" sha1="9426bf62e8f998755bacd4c817ce7025d01c4396"/>
 			</dataarea>
 		</part>
 	</software>
