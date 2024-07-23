@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 462 -->
+<!-- Number of items in this list = 510 -->
 <softwarelist name="samcoupe_flop" description="samcoupe loose roms">
 	<software name="sama71fee3f5df19">
 		<description>(ama13)amiga_mod-arch_v1-3</description>
@@ -172,6 +172,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sam6957fc5411dc4">
+		<description>3d_engine_install</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="3d_engine_install.mgt" size="819200" crc="f99cb924" sha1="6957fc5411dc4bfc59cbcf495f7309b1f4960167"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samecd11e1046f7d">
+		<description>3d_engine_pt1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="3d_engine_pt1.mgt" size="819200" crc="1b8d074c" sha1="ecd11e1046f7dfac1da71ab5e95d3e1e465a5ac5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sambf1940e6c706a">
+		<description>3d_engine_pt2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="3d_engine_pt2.mgt" size="819200" crc="d28d7371" sha1="bf1940e6c706afe3323907f10c9687f14efd1963"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sam701eb1c937996">
 		<description>7 TRILTEX 2</description>
 		<year>????</year>
@@ -199,6 +229,46 @@
 		<part name="flop1" interface="samcoupe_flop">
 			<dataarea name="flop" size="819200">
 				<rom name="B7-mouse-sound machine.mgt" size="819200" crc="ea8ce797" sha1="60adbe7748f8c1be9df2bcc757ea160d12ad6f9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam4c22f4cd86486">
+		<description>Bancdplr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Bancdplr.mgt" size="819200" crc="a0bc08f7" sha1="4c22f4cd864866411d6adfbcda05923d91301305"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sama775004efde93">
+		<description>Basic Scrolly Pokers by Chris White (1992)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Basic Scrolly Pokers by Chris White (1992).mgt" size="819200" crc="d4cf02c4" sha1="a775004efde939463496949d9b243f66acce4b87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam162a64b2eb4ff">
+		<description>bassuite</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="bassuite.mgt" size="819200" crc="3eba1d44" sha1="162a64b2eb4ff97c05d74fec60005418d4152f7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam8ffa9e05d2a29">
+		<description>Bats 'n' Balls by David Gommerman (1992) (Revelation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Bats 'n' Balls by David Gommerman (1992) (Revelation).mgt" size="819200" crc="852b68f0" sha1="8ffa9e05d2a29137aaf04c69656e841fc2019f23"/>
 			</dataarea>
 		</part>
 	</software>
@@ -232,6 +302,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sam15287a865f8da">
+		<description>BestofKapsa</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="BestofKapsa.mgt" size="819200" crc="2289ff43" sha1="15287a865f8dae37aad14ca11ff63d1cad2232e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam868171d222c6d">
+		<description>BEST_OF</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="BEST_OF.mgt" size="819200" crc="6724c57c" sha1="868171d222c6d117be3e5d0495899e10c1686698"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam429bc5a73e5cd">
+		<description>BigScrollerDemoGeoffWinkless</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="BigScrollerDemoGeoffWinkless.mgt" size="819200" crc="50690d6f" sha1="429bc5a73e5cd20eedd222accc40a341fbfff03d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="samd7797498079cd">
 		<description>Blaze(JupiterAce emulator)</description>
 		<year>????</year>
@@ -262,6 +362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sam9b84e95208fa2">
+		<description>blitz3menu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="blitz3menu.mgt" size="819200" crc="160ffb30" sha1="9b84e95208fa275aa5765a90b7f4f8e1ae37f189"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sam740289ee8eab1">
 		<description>Blokker (1995)(Stephen McGreal)</description>
 		<year>????</year>
@@ -269,6 +379,46 @@
 		<part name="flop1" interface="samcoupe_flop">
 			<dataarea name="flop" size="819200">
 				<rom name="Blokker (1995)(Stephen McGreal).mgt" size="819200" crc="462e07d8" sha1="740289ee8eab1fb50e074133a671ae02bd02ee82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sama2aa193d80570">
+		<description>Blue Disk Show, The (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Blue Disk Show, The (19xx).mgt" size="819200" crc="68f81dd7" sha1="a2aa193d805701a6cf266994ee3bf487ac509bbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samff124d03bf267">
+		<description>Boing & Sphera (1992) (Noesis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Boing & Sphera (1992) (Noesis Software).mgt" size="819200" crc="a4c12d32" sha1="ff124d03bf267ca1da2b4b5a36cf2c2291611ce4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam3146357a8f713">
+		<description>Bombed Out,Nuclear Waste,Magic Caves,Blockade (1990) (Enigma)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Bombed Out,Nuclear Waste,Magic Caves,Blockade (1990) (Enigma).mgt" size="819200" crc="05a87fdd" sha1="3146357a8f7139ffc82cd49883edaa105e8a291c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samb91282ebc2fa0">
+		<description>Bowin and the Count Dracula (1991) (Lucosoft and Revelation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Bowin and the Count Dracula (1991) (Lucosoft and Revelation).mgt" size="819200" crc="081d733b" sha1="b91282ebc2fa0543511a7afa86c747b1ce87cfcc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -312,6 +462,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sam80fc990b95d57">
+		<description>clock-mouse-prscr_emu_v1-0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="clock-mouse-prscr_emu_v1-0.mgt" size="819200" crc="dc2cc389" sha1="80fc990b95d57f5e73b47c3d62050f4be22c15d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam1c05d68ae798a">
+		<description>clock</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="clock.mgt" size="819200" crc="6708c71a" sha1="1c05d68ae798a508a1374f187566ae557fe72d06"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sam9c8f1b1a2b0df">
 		<description>coloris</description>
 		<year>????</year>
@@ -339,6 +509,26 @@
 		<part name="flop1" interface="samcoupe_flop">
 			<dataarea name="flop" size="819200">
 				<rom name="Complete Guide to Sam Basic Parts 1 - 7, The (1994)(Relion Software).mgt" size="819200" crc="9d9cd461" sha1="ea55c4e7a815f51070fc717c7f5fd70d8495d4f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam3078eeefdafd4">
+		<description>Compressor Utilities (1993) (ESI) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Compressor Utilities (1993) (ESI) (PD).mgt" size="819200" crc="a727d2fc" sha1="3078eeefdafd4fe50411b394c66e55e51ce56005"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam32be0983714d2">
+		<description>Contact Demos by Chris White (1991) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Contact Demos by Chris White (1991) (PD).mgt" size="819200" crc="3c4d8e3e" sha1="32be0983714d276087ae9f0a2f058087033fe066"/>
 			</dataarea>
 		</part>
 	</software>
@@ -392,6 +582,166 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="samd9ab691c18ad4">
+		<description>Daton MasterBASIC Demos (1991) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Daton MasterBASIC Demos (1991) (PD).mgt" size="819200" crc="9d615379" sha1="d9ab691c18ad44f6cee9d91fca50330feaa384ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam09d6778fd4629">
+		<description>DATON_01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_01.mgt" size="819200" crc="ffd7d7cf" sha1="09d6778fd4629863cdd8687c44798b73118ade25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samf1c8d84aa3f78">
+		<description>DATON_02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_02.mgt" size="819200" crc="7082d1e6" sha1="f1c8d84aa3f78091f2c55ae279235e033005620d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam212a91bf14a24">
+		<description>DATON_03</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_03.mgt" size="819200" crc="e3ac204e" sha1="212a91bf14a240024189a19d435321080a3169b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam6a6f195895b06">
+		<description>DATON_04</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_04.mgt" size="819200" crc="02035ec2" sha1="6a6f195895b063c1af42252989f4ac4bd0cd23ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam604138cc12fff">
+		<description>DATON_05</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_05.mgt" size="819200" crc="805f0309" sha1="604138cc12fff0f607afce13046cd752e5b71801"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam70978e3d77ace">
+		<description>DATON_06</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_06.mgt" size="819200" crc="dac5e81b" sha1="70978e3d77ace060eaf77de17f08b35ae7a68ee6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samc21961df87fef">
+		<description>DATON_07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_07.mgt" size="819200" crc="be0ed4bd" sha1="c21961df87fef35fff0ba63ad689f3cd4eb96f9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam8056531aba20c">
+		<description>DATON_08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_08.mgt" size="819200" crc="b3abde9f" sha1="8056531aba20cbb06d8b848053524c3a0e9680d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samf2b05632ac6bd">
+		<description>DATON_09</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_09.mgt" size="819200" crc="1d36fe25" sha1="f2b05632ac6bddc59264f8173cea23d59bbc28a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samf01409ee7a60b">
+		<description>DATON_10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_10.mgt" size="819200" crc="b1692b0f" sha1="f01409ee7a60bb7368b8b5afe72fd6c197e19949"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam2a5171e7fae88">
+		<description>DATON_11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_11.mgt" size="819200" crc="91ee184d" sha1="2a5171e7fae8819f65b76b586821ab3c2514c101"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam0138940e0d857">
+		<description>DATON_12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_12.mgt" size="819200" crc="a72c32e8" sha1="0138940e0d857d9874dd0b6a5e30c29ebcb6df5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sama13b8e852f2e8">
+		<description>DATON_13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_13.mgt" size="819200" crc="e357a2b3" sha1="a13b8e852f2e8ff79fe7ecf573722ee95181613c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samd6633f2828cbc">
+		<description>DATON_14</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_14.mgt" size="819200" crc="5c138389" sha1="d6633f2828cbcd19fce25b50db6b8815b28ecf41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam7b761ed17441b">
+		<description>DATON_15</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="DATON_15.mgt" size="819200" crc="f21f76ad" sha1="7b761ed17441bed3a0034b7feb3b1384d709a7f4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sam4dba089bc99df">
 		<description>DeadWildCatDemo-MarcBroster</description>
 		<year>????</year>
@@ -409,6 +759,16 @@
 		<part name="flop1" interface="samcoupe_flop">
 			<dataarea name="flop" size="819200">
 				<rom name="defender.mgt" size="819200" crc="63c6e8cc" sha1="ca61982b9a31aca5a6cfe136387cc0529081ddd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samdc5f8f526d24d">
+		<description>devast</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="devast.mgt" size="819200" crc="88b42a0c" sha1="dc5f8f526d24d057d84bf63ff0443be593c3bf4d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -452,6 +812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="samec8408a9e04a0">
+		<description>dos8078</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="dos8078.mgt" size="819200" crc="d2d7eaf0" sha1="ec8408a9e04a03c643bddca5eebf8f0d7c4252f6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="samc18e9b196001b">
 		<description>Driver</description>
 		<year>????</year>
@@ -459,6 +829,16 @@
 		<part name="flop1" interface="samcoupe_flop">
 			<dataarea name="flop" size="819200">
 				<rom name="Driver.mgt" size="819200" crc="aea714b3" sha1="c18e9b196001bf25818e8a3eeadaafbd8464475c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam118aa57c74dd6">
+		<description>Dyzonium, WaterWorks, WOP Gamma, Bugulators (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Dyzonium, WaterWorks, WOP Gamma, Bugulators (19xx).mgt" size="819200" crc="6bd27f66" sha1="118aa57c74dd6c00b32a0d9b402838d79ff5aa9b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -549,6 +929,26 @@
 		<part name="flop1" interface="samcoupe_flop">
 			<dataarea name="flop" size="819200">
 				<rom name="Easydisc v4.9 (1995)(Saturn Software).mgt" size="819200" crc="f9c8c1fd" sha1="599f02e74a45db993846018bbe9d4cee47be5abc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samb181b7972c501">
+		<description>Edwin Blink's Samples (1991) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Edwin Blink's Samples (1991) (PD).mgt" size="819200" crc="fae1dc4b" sha1="b181b7972c5018ce8af465e10fd534b1204bc6e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam2b8620bed05b7">
+		<description>emon_v2-10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="emon_v2-10.mgt" size="819200" crc="b44c52d4" sha1="2b8620bed05b7ca8745a3276cc164406573b10e1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -682,6 +1082,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sameb9df57e3a165">
+		<description>EntropyJokeInfinityCracktro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="EntropyJokeInfinityCracktro.mgt" size="819200" crc="e6bf3e33" sha1="eb9df57e3a165364c9794b01f604e8c66e98d5f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam5a103afd3fa14">
+		<description>ep110</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="ep110.mgt" size="819200" crc="95e2d919" sha1="5a103afd3fa14220f3f7a10133e1eb1df14dc741"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samfb78c06a192db">
+		<description>ep113</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="ep113.mgt" size="819200" crc="5863564b" sha1="fb78c06a192db3ff726de3717c7ec0505270ea47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam4e45eb97abe62">
+		<description>ep150</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="ep150.mgt" size="819200" crc="35945fdd" sha1="4e45eb97abe62ce5456ace18bc88ae1dbc72ced9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam4998b509ccd8a">
+		<description>ep155</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="ep155.mgt" size="819200" crc="3f728acc" sha1="4998b509ccd8af79c46756cbe86731a80adcaf4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam201098529204d">
+		<description>ESI Demos (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="ESI Demos (19xx) (PD).mgt" size="819200" crc="ffa7a74c" sha1="201098529204d7502bfa5443fc85cb6af36cdfc8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sam2ce73be25281a">
 		<description>F-16 Combat Pilot</description>
 		<year>????</year>
@@ -772,6 +1232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sam819f462e11ae0">
+		<description>Font Loader (1991) (Phantom Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="Font Loader (1991) (Phantom Software).mgt" size="819200" crc="41bb6c81" sha1="819f462e11ae03d2f44568b7418c9713bdda818b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sam131dbd7f7a5ef">
 		<description>Football League Manager (1994)(Key Software - FRED Publishing)</description>
 		<year>????</year>
@@ -779,6 +1249,16 @@
 		<part name="flop1" interface="samcoupe_flop">
 			<dataarea name="flop" size="819200">
 				<rom name="Football League Manager (1994)(Key Software - FRED Publishing).mgt" size="819200" crc="4c243eb7" sha1="131dbd7f7a5ef066200d898b69f4557bb04858a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sama705b18ca6e3f">
+		<description>FRED & SamCo Demo Disk (1990) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="samcoupe_flop">
+			<dataarea name="flop" size="819200">
+				<rom name="FRED & SamCo Demo Disk (1990) (PD).mgt" size="819200" crc="650bbda2" sha1="a705b18ca6e3fce0be8760b5dfd03ae86425456b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3808,7 +4288,7 @@
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="samcoupe_flop">
 			<dataarea name="flop" size="871168">
-				<rom name="syncytium.mgt" size="871168" crc="a760795b" sha1="a19aa4dcf9924c7236c9ddb2a3f8255e63663fdf"/>
+				<rom name="syncytium.dsk" size="871168" crc="a760795b" sha1="a19aa4dcf9924c7236c9ddb2a3f8255e63663fdf"/>
 			</dataarea>
 		</part>
 	</software>
