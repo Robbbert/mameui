@@ -84,7 +84,7 @@ private:
 
 void roland_rd500_state::rd500_mem_map(address_map &map)
 {
-	map(0x000000, 0x8fffff).rom().region("progrom", 0);
+	map(0x000000, 0x07ffff).rom().region("progrom", 0);
 	map(0x900000, 0x90ffff).ram();
 	map(0xa00000, 0xa0ffff).rw(m_pcm, FUNC(tc6116_device::read), FUNC(tc6116_device::write));
 	map(0xc00000, 0xc0ffff).rw(FUNC(roland_rd500_state::keyscan_r), FUNC(roland_rd500_state::keyscan_w));
@@ -128,7 +128,7 @@ ROM_START(jv880)
 ROM_END
 
 ROM_START(rd500)
-	ROM_REGION16_BE(0x900000, "progrom", 0)
+	ROM_REGION16_BE(0x80000, "progrom", 0)
 	ROM_LOAD16_WORD_SWAP("rd500_rom.bin", 0x00000, 0x80000, CRC(668fc7e9) SHA1(59e28d3e2190902dd6fd02a9820f96e383781178))
 
 	ROM_REGION(0x800000, "waverom", 0)

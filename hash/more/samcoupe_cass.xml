@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 8 -->
+<softwarelist name="samcoupe_cass_cass" description="samcoupe_cass loose roms">
+	<software name="sam2973b330eb6c5">
+		<description>Batz 'n' Balls demo (uses arrow keys)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="samcoupe_cass">
+			<dataarea name="cass" size="39589">
+				<rom name="Batz 'n' Balls demo (uses arrow keys).tap" size="39589" crc="719ad141" sha1="2973b330eb6c51269091c027b32af2f313214613"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samb513eb796465d">
+		<description>E-Mon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="samcoupe_cass">
+			<dataarea name="cass" size="8440">
+				<rom name="E-Mon.tap" size="8440" crc="1b64a3b0" sha1="b513eb796465dba9dcd703320043869ff9f3af72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam2ce73be25281a">
+		<description>F-16 Combat Pilot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="samcoupe_cass">
+			<dataarea name="cass" size="91347">
+				<rom name="F-16 Combat Pilot.tap" size="91347" crc="ca2102f1" sha1="2ce73be25281a2142ec9824cc57b12979477ad74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam1c866db560c9b">
+		<description>KABOOM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="samcoupe_cass">
+			<dataarea name="cass" size="17525">
+				<rom name="KABOOM.TAP" size="17525" crc="d9fefd49" sha1="1c866db560c9bfb3a231220ed5dd5f5d17b44dc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam5332498b5f068">
+		<description>KREUZEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="samcoupe_cass">
+			<dataarea name="cass" size="37285">
+				<rom name="KREUZEN.TAP" size="37285" crc="7a3da36f" sha1="5332498b5f0687dc87766569d0eddb8fb3b4f1fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samb39815818eaee">
+		<description>Prince of Persia demo(freezes at start)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="samcoupe_cass">
+			<dataarea name="cass" size="138851">
+				<rom name="Prince of Persia demo(freezes at start).tap" size="138851" crc="846d50a3" sha1="b39815818eaeec29930c2e68c9e9da131952b29d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam29f76b2ae037d">
+		<description>sam</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="samcoupe_cass">
+			<dataarea name="cass" size="1600954">
+				<rom name="sam.wav" size="1600954" crc="faa87936" sha1="29f76b2ae037dee6d38562142d77eb45c3adbf75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam4e55a1bf51af9">
+		<description>Shanghai [warez version](controls)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="samcoupe_cass">
+			<dataarea name="cass" size="23568">
+				<rom name="Shanghai [warez version](controls).tap" size="23568" crc="f9217721" sha1="4e55a1bf51af967033ecaeff504f2c24fe3b1c6b"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="cpc_cass_cass" description="cpc_cass loose roms">
+	<software name="cpc82fa11a8ebd7f">
+		<description>aa6a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="128947">
+				<rom name="aa6a.cdt" size="128947" crc="d89504c8" sha1="82fa11a8ebd7faf3f7d59c3a58fc4d8c45a0b3c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc7846577beb21c">
+		<description>betiledv2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="71317">
+				<rom name="betiledv2.cdt" size="71317" crc="9693d766" sha1="7846577beb21c13b110b689b9358b5b635a96db5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc278820c192df5">
+		<description>Brick Rick</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="19071">
+				<rom name="Brick Rick.cdt" size="19071" crc="87b42465" sha1="278820c192df521e07a2c5620950363b9359b474"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc70ca1d0136551">
+		<description>desktop</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="54">
+				<rom name="desktop.ini" size="54" crc="46627eb3" sha1="70ca1d0136551b572e10d754d831abf67909df89"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
