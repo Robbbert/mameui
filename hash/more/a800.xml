@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
 <!-- Number of items in this list = 34 -->
-<softwarelist name="a800_cart" description="a800 loose roms">
+<softwarelist name="a800" description="a800 loose roms">
 	<software name="a880e50c7fcb2e81">
 		<description>(demo)400-800 salt diagnostic cartridge v1.00</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="(demo)400-800 salt diagnostic cartridge v1.00.rom" size="8192" crc="a1e46a0d" sha1="80e50c7fcb2e8106150d90f67fd649b7afe7d524"/>
 			</dataarea>
@@ -16,7 +16,7 @@
 		<description>(demo)400-800 salt diagnostic cartridge v2.04 (a)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="(demo)400-800 salt diagnostic cartridge v2.04 (a).rom" size="8192" crc="6c40248f" sha1="a98671b814ad6ce6f45c17593ab374f1f578bb4c"/>
 			</dataarea>
@@ -26,7 +26,7 @@
 		<description>(demo)810 diagnostic cartridge</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="(demo)810 diagnostic cartridge.rom" size="8192" crc="b61f2a16" sha1="768299b3ca5bf391eeb0ac34dc3d94b5f31c0e91"/>
 			</dataarea>
@@ -36,7 +36,7 @@
 		<description>3d tic-tac-toe</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="3d tic-tac-toe.rom" size="8192" crc="1cf50ebe" sha1="2fd4c292d08d73dad61675206869746f58a401d2"/>
 			</dataarea>
@@ -46,7 +46,7 @@
 		<description>alien ambush</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="alien ambush.rom" size="8192" crc="f7ee09b1" sha1="5d0737d82bf92df8b3496c043d7e8a88e90391a5"/>
 			</dataarea>
@@ -56,7 +56,7 @@
 		<description>alpha shield (2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="alpha shield (2).rom" size="8192" crc="a7ade454" sha1="3ae82c0a2dc39f6e26adfb9bf4b10a3c195a6f1e"/>
 			</dataarea>
@@ -66,7 +66,7 @@
 		<description>alpha shield</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="alpha shield.rom" size="8192" crc="12db4ef9" sha1="801dd49e1d36f7161f723eb4e0cdfa718ca29e03"/>
 			</dataarea>
@@ -76,7 +76,7 @@
 		<description>animated puzzle</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="animated puzzle.rom" size="16384" crc="1a4c75a7" sha1="0c748721fb99d6f069ac263c253af2d13335c958"/>
 			</dataarea>
@@ -86,7 +86,7 @@
 		<description>astro grover</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="astro grover.rom" size="16384" crc="f44a0aeb" sha1="31b052644ca700fb2aa1952ecfd6ab53d0f47da6"/>
 			</dataarea>
@@ -96,7 +96,7 @@
 		<description>atari basketball</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="atari basketball.rom" size="8192" crc="79934851" sha1="639e8f9bf907ed2c46d183f2cdbe33783f6da2fa"/>
 			</dataarea>
@@ -106,7 +106,7 @@
 		<description>atlantis (2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="atlantis (2).rom" size="8192" crc="be0b390c" sha1="86b8be0921ef7250fae57cd459a773bbfa378e36"/>
 			</dataarea>
@@ -116,7 +116,7 @@
 		<description>atlantis (alt)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="atlantis (alt).rom" size="8192" crc="a3bc3eb5" sha1="f9463c75b595882b93f6407b8ce133d7e4ca6530"/>
 			</dataarea>
@@ -126,7 +126,7 @@
 		<description>atlantis</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="atlantis.rom" size="8192" crc="6a9a1405" sha1="e3cb735692e39ebf42f87a58031a0411ee65eb5a"/>
 			</dataarea>
@@ -136,7 +136,7 @@
 		<description>baseball</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="baseball.rom" size="16384" crc="065c3fd2" sha1="79e161cc29cf2e0b8ca1db8f42a8da3f5693254e"/>
 			</dataarea>
@@ -146,7 +146,7 @@
 		<description>basketball</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="basketball.rom" size="8192" crc="230682eb" sha1="36bf8d77751a3dffc2fd192986684a92ad2e67ff"/>
 			</dataarea>
@@ -156,7 +156,7 @@
 		<description>Chuckie Egg</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="21008">
 				<rom name="Chuckie Egg.atr" size="21008" crc="63f76f9f" sha1="88ff66ccfe3d8ecb5fd543f1b84181e63983c319"/>
 			</dataarea>
@@ -166,7 +166,7 @@
 		<description>computer chess</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="computer chess.rom" size="8192" crc="5ce06e94" sha1="94ee63b7d0e65209575f576e78ba320f04c3eb20"/>
 			</dataarea>
@@ -176,7 +176,7 @@
 		<description>da' fuzz</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="da' fuzz.rom" size="16384" crc="b94f66ea" sha1="2385600e69163671c45fdb2e93d8bf20df5d65f3"/>
 			</dataarea>
@@ -186,7 +186,7 @@
 		<description>decathlon (a)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="decathlon (a).rom" size="16384" crc="76845603" sha1="b084f54f142ac9c6e9c010e0ae8d7427dbd5230c"/>
 			</dataarea>
@@ -196,7 +196,7 @@
 		<description>dig dug (alt)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="dig dug (alt).rom" size="16384" crc="29b44ff6" sha1="d4cf273de84e999c8da4148d452e1e62441eed1a"/>
 			</dataarea>
@@ -206,7 +206,7 @@
 		<description>donkey kong jr</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="donkey kong jr.rom" size="16384" crc="a4eb70ef" sha1="7870e05a20765e4536db21239cbffb83590dc706"/>
 			</dataarea>
@@ -216,7 +216,7 @@
 		<description>Donkey Kong</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16912">
 				<rom name="Donkey Kong.atr" size="16912" crc="f0d4bf96" sha1="769fd91884e12acf71342be89be279fb04316ff4"/>
 			</dataarea>
@@ -226,7 +226,7 @@
 		<description>donkey kong</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="donkey kong.rom" size="16384" crc="f2b76a27" sha1="0b081e5447c0a4a24b11c9cec819b5b11b40afff"/>
 			</dataarea>
@@ -236,7 +236,7 @@
 		<description>DOS25</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="92176">
 				<rom name="DOS25.ATR" size="92176" crc="d23da058" sha1="b80a891cb7d25db2936a62b28e84e01151dc4b19"/>
 			</dataarea>
@@ -246,7 +246,7 @@
 		<description>droids</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="droids.rom" size="8192" crc="440082e6" sha1="5c1afe5dc5664b52fef6cf47f0b5a20bc54a79db"/>
 			</dataarea>
@@ -256,7 +256,7 @@
 		<description>educational system master cartridge</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="educational system master cartridge.rom" size="8192" crc="18cc7c94" sha1="9fd7936767b0a193da9b01e27dac78e68b5f52b6"/>
 			</dataarea>
@@ -266,7 +266,7 @@
 		<description>Frogger</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="20368">
 				<rom name="Frogger.atr" size="20368" crc="2fee1575" sha1="9d9daef97672a2b28b808bfdcc37e4b32a1f9c25"/>
 			</dataarea>
@@ -276,7 +276,7 @@
 		<description>hdm1_0</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="133136">
 				<rom name="hdm1_0.atr" size="133136" crc="f72009b0" sha1="6ee949ccdd1d15c41d735f3afd85777aee155fe6"/>
 			</dataarea>
@@ -286,7 +286,7 @@
 		<description>kaboom!</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="kaboom!.rom" size="8192" crc="98772cff" sha1="a1907eb88f5d74472d06016d12fa7aed968af96c"/>
 			</dataarea>
@@ -296,7 +296,7 @@
 		<description>Ms Pac-Man</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="17168">
 				<rom name="Ms Pac-Man.atr" size="17168" crc="0268dfdc" sha1="400ed99e5342c56550d50d2fa42351a6aad679d4"/>
 			</dataarea>
@@ -306,7 +306,7 @@
 		<description>Pac-Man</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="10128">
 				<rom name="Pac-Man.atr" size="10128" crc="d26bc53c" sha1="1f1fc048821278b19f50b41268fd5f373c67af21"/>
 			</dataarea>
@@ -316,7 +316,7 @@
 		<description>princess and the frog</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="princess and the frog.rom" size="8192" crc="dbb30884" sha1="c57a7ff102f67acbe748ac5392ec8b8e1d331097"/>
 			</dataarea>
@@ -326,7 +326,7 @@
 		<description>super breakout</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="super breakout.rom" size="8192" crc="17348643" sha1="a3e27fd8fccaf84e0a017d4c3e83339a8f07d21e"/>
 			</dataarea>
@@ -336,7 +336,7 @@
 		<description>video easel</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a800_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="video easel.rom" size="8192" crc="7dc702a7" sha1="b3ab9bad4b61db1ed3685db5561f8c34aca9dcbf"/>
 			</dataarea>

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
 <!-- Number of items in this list = 50 -->
-<softwarelist name="32x_cart" description="32x loose roms">
+<softwarelist name="32x" description="32x loose roms">
 	<software name="32x524093f7c93f0">
 		<description>32x babe picture by fonzie (32x) (pd) [a1]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="85888">
 				<rom name="32x babe picture by fonzie (32x) (pd) [a1].32x" size="85888" crc="7c0587f6" sha1="524093f7c93f07ec117f2a6c6a61e4da93ea1549"/>
 			</dataarea>
@@ -16,7 +16,7 @@
 		<description>32x babe picture by fonzie (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="85888">
 				<rom name="32x babe picture by fonzie (32x) (pd).32x" size="85888" crc="816b0cb4" sha1="dc16d3170d5809b57192e03864b7136935eada64"/>
 			</dataarea>
@@ -26,7 +26,7 @@
 		<description>32x qinter demo by fonzie (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="381220">
 				<rom name="32x qinter demo by fonzie (32x) (pd).32x" size="381220" crc="93d4b0a3" sha1="128bd0b6e048c749da1a2f4c3abd6a867539a293"/>
 			</dataarea>
@@ -36,7 +36,7 @@
 		<description>32x sample program - pwm sound demo (usa) (sdk build)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="32x sample program - pwm sound demo (usa) (sdk build).32x" size="524288" crc="542ad12e" sha1="b2b7938d5c9a207efecf9f5054308f5772c8c25f"/>
 			</dataarea>
@@ -46,7 +46,7 @@
 		<description>back and forth rotating xor palette by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="4696">
 				<rom name="back and forth rotating xor palette by devster (32x) (pd).32x" size="4696" crc="4e7ac3d4" sha1="87f999f629feb873f8916483ab76152a88a9af53"/>
 			</dataarea>
@@ -56,7 +56,7 @@
 		<description>backward rotating xor palette demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="4648">
 				<rom name="backward rotating xor palette demo by devster (32x) (pd).32x" size="4648" crc="d4ae89da" sha1="58b0e798329df3591a08c21492a8967ad20736c6"/>
 			</dataarea>
@@ -66,7 +66,7 @@
 		<description>BasiEgaXorz 2</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="87892">
 				<rom name="BasiEgaXorz 2.32x" size="87892" crc="fbabb416" sha1="bdf8f7b682e337f3b6842e98daa4f5d5bf05d2d3"/>
 			</dataarea>
@@ -76,7 +76,7 @@
 		<description>doom (europe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="doom (europe).32x" size="3145728" crc="53734e3a" sha1="4ec03c2114ebffbbcd16859583340d4ea4cd8dd5"/>
 			</dataarea>
@@ -86,7 +86,7 @@
 		<description>green rotating no stretching xor palette demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="76376">
 				<rom name="green rotating no stretching xor palette demo by devster (32x) (pd).32x" size="76376" crc="84251f0a" sha1="4582aa4309baffe80a087efe50be4644e7d3b64d"/>
 			</dataarea>
@@ -96,7 +96,7 @@
 		<description>green rotating xor palette demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="4696">
 				<rom name="green rotating xor palette demo by devster (32x) (pd).32x" size="4696" crc="e075ece6" sha1="3c211234782c9e97e76f2dba587e879272b123af"/>
 			</dataarea>
@@ -106,7 +106,7 @@
 		<description>hot chick by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="74588">
 				<rom name="hot chick by devster (32x) (pd).32x" size="74588" crc="da9c93c9" sha1="a62652eb8ad8c62b36f6b1ffb96922d045c4e3ac"/>
 			</dataarea>
@@ -116,7 +116,7 @@
 		<description>hot chick drawn without the sh2s for emulators by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="77788">
 				<rom name="hot chick drawn without the sh2s for emulators by devster (32x) (pd).32x" size="77788" crc="d581910d" sha1="7d488bfd1bbd399d305da1b6cbf87edc882f3ed0"/>
 			</dataarea>
@@ -126,7 +126,7 @@
 		<description>hot chick drawn without the sh2s for hardware by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="77884">
 				<rom name="hot chick drawn without the sh2s for hardware by devster (32x) (pd).32x" size="77884" crc="02d37b32" sha1="c490a19423c609ca3e9f89b21801de2307e4f87a"/>
 			</dataarea>
@@ -136,7 +136,7 @@
 		<description>hot chick in high quality 15bpp by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="148836">
 				<rom name="hot chick in high quality 15bpp by devster (32x) (pd).32x" size="148836" crc="938f4e1d" sha1="ab7270121be53c6c82c4cb45f8f41dd24eb3a2a5"/>
 			</dataarea>
@@ -146,7 +146,7 @@
 		<description>hot chick in vdp mode 2 by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="77144">
 				<rom name="hot chick in vdp mode 2 by devster (32x) (pd).32x" size="77144" crc="cbf2f87e" sha1="376e67044c08373e49fd79892392a6a3a20059ef"/>
 			</dataarea>
@@ -156,7 +156,7 @@
 		<description>hot chick in vdp mode 3 by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="77144">
 				<rom name="hot chick in vdp mode 3 by devster (32x) (pd).32x" size="77144" crc="f2758266" sha1="bc16856dbcd88a2ad742ed636b35f405da8e9af2"/>
 			</dataarea>
@@ -166,7 +166,7 @@
 		<description>hot chick spinning demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="76840">
 				<rom name="hot chick spinning demo by devster (32x) (pd).32x" size="76840" crc="73b25607" sha1="86cf6c88ccedefeb0b691c3f9aab5b624c0120d5"/>
 			</dataarea>
@@ -176,7 +176,7 @@
 		<description>hot chick spinning slower demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="76840">
 				<rom name="hot chick spinning slower demo by devster (32x) (pd).32x" size="76840" crc="3d1d1191" sha1="221a74408653e18cef8ce2f9b4d33ed93e4218b7"/>
 			</dataarea>
@@ -186,7 +186,7 @@
 		<description>hot chick with genesis vdp overlay by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="77144">
 				<rom name="hot chick with genesis vdp overlay by devster (32x) (pd).32x" size="77144" crc="817b7656" sha1="99ee4fded53e4856a633676b0c6f83081186492c"/>
 			</dataarea>
@@ -196,7 +196,7 @@
 		<description>hot chick zoom shot by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="78384">
 				<rom name="hot chick zoom shot by devster (32x) (pd).32x" size="78384" crc="e6dd4f0c" sha1="a7e3eb018063cd9470f25ca74dad6603b913e0c7"/>
 			</dataarea>
@@ -206,7 +206,7 @@
 		<description>optimized rotating xor palette demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="4664">
 				<rom name="optimized rotating xor palette demo by devster (32x) (pd).32x" size="4664" crc="941351aa" sha1="f42d0f5126f17641e59fcb4c18f2cc8d4488a27c"/>
 			</dataarea>
@@ -216,7 +216,7 @@
 		<description>rotating no background fill xor palette demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="4600">
 				<rom name="rotating no background fill xor palette demo by devster (32x) (pd).32x" size="4600" crc="7fce8c27" sha1="a6a0a26f7e0244265948b3360f0a8c37d56846bc"/>
 			</dataarea>
@@ -226,7 +226,7 @@
 		<description>rotating pixel skipping xor palette demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="4648">
 				<rom name="rotating pixel skipping xor palette demo by devster (32x) (pd).32x" size="4648" crc="1b394d4f" sha1="11b9912776e5331c9ffa93d45ca8f91586173b0b"/>
 			</dataarea>
@@ -236,7 +236,7 @@
 		<description>rotating xor palette demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="5688">
 				<rom name="rotating xor palette demo by devster (32x) (pd).32x" size="5688" crc="98c25033" sha1="8d9ab3084bd29e60b8cdf4b9f1cb755eb4c88d29"/>
 			</dataarea>
@@ -246,7 +246,7 @@
 		<description>Sonic in Chaotix - Revision 2</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3519728">
 				<rom name="Sonic in Chaotix - Revision 2.bin" size="3519728" crc="6e99c291" sha1="39651f96784feaea37657fd03687618a91707542"/>
 			</dataarea>
@@ -256,7 +256,7 @@
 		<description>Sonic in Chaotix</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3335370">
 				<rom name="Sonic in Chaotix.bin" size="3335370" crc="6b39e714" sha1="169eb7238d0cca48b4abc5a8ea5e5d61fdb76468"/>
 			</dataarea>
@@ -266,7 +266,7 @@
 		<description>Sonic the Hedgehog 32X by drx (January 11 2007)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="525958">
 				<rom name="Sonic the Hedgehog 32X by drx (January 11 2007).32x" size="525958" crc="b5a34562" sha1="39850c3876541e06d87a86aecca5e76e369d7e2c"/>
 			</dataarea>
@@ -276,7 +276,7 @@
 		<description>Sonic the Hedgehog 32X by drx (November 18 2007)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="464518">
 				<rom name="Sonic the Hedgehog 32X by drx (November 18 2007).32x" size="464518" crc="8024e082" sha1="c65401dcb403fb475ab627435bc2d433853ca37f"/>
 			</dataarea>
@@ -286,7 +286,7 @@
 		<description>Sonic the Hedgehog 32X by drx (Release Candidate 1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="525958">
 				<rom name="Sonic the Hedgehog 32X by drx (Release Candidate 1).32x" size="525958" crc="93bc18ff" sha1="4b15babd87ac2313cab8eb371e7142daf61bf097"/>
 			</dataarea>
@@ -296,7 +296,7 @@
 		<description>Sonic the Hedgehog 32X by drx (Release Candidate 2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="525958">
 				<rom name="Sonic the Hedgehog 32X by drx (Release Candidate 2).32x" size="525958" crc="f79a7182" sha1="9b1952a6833ef8a2ed04ddc2beff707c2edf74b2"/>
 			</dataarea>
@@ -306,7 +306,7 @@
 		<description>Sonic1 (Version 1.0) by drx</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="533958">
 				<rom name="Sonic1 (Version 1.0) by drx.32x" size="533958" crc="2221c701" sha1="6bfe157720429063f3eb0d4dd9d86d9e087ddde3"/>
 			</dataarea>
@@ -316,7 +316,7 @@
 		<description>Sonic1 by drx (Release Candidate 3)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="533958">
 				<rom name="Sonic1 by drx (Release Candidate 3).32x" size="533958" crc="97dbb427" sha1="3c9475909c5363f9e71f11c87c31a866526565eb"/>
 			</dataarea>
@@ -326,7 +326,7 @@
 		<description>Sonic32 (Version 1.0) by drx</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="546246">
 				<rom name="Sonic32 (Version 1.0) by drx.32x" size="546246" crc="3193fb54" sha1="c9b3a2814667979fb46ff7c4fdb94195c8b9fbed"/>
 			</dataarea>
@@ -336,7 +336,7 @@
 		<description>Sonic32 by drx (Release Candidate 3)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="533958">
 				<rom name="Sonic32 by drx (Release Candidate 3).32x" size="533958" crc="c8e826d2" sha1="81a3c5fdb8039ae4a6c8297cde93935d7b8978a2"/>
 			</dataarea>
@@ -346,7 +346,7 @@
 		<description>Soulstar-X-32X-prototype-12megabytes(demo)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Soulstar-X-32X-prototype-12megabytes(demo).bin" size="1572864" crc="c32d34aa" sha1="104f3605b3916686b5c140455476bdc78c742749"/>
 			</dataarea>
@@ -356,7 +356,7 @@
 		<description>Soulstar-X-32X-prototype-24megabytes(demo)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Soulstar-X-32X-prototype-24megabytes(demo).bin" size="3145728" crc="9caa28eb" sha1="c7a566c9311d626564861cf1301087d9a7c48997"/>
 			</dataarea>
@@ -366,7 +366,7 @@
 		<description>Soulstar-X-32X-prototype-32megabytes(demo)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Soulstar-X-32X-prototype-32megabytes(demo).bin" size="4194304" crc="88da5a5c" sha1="26e07a742f680e437e0d50c54a79f5eeb4ef5f80"/>
 			</dataarea>
@@ -376,7 +376,7 @@
 		<description>Soulstar-X-32X-prototype-8megabytes(demo)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Soulstar-X-32X-prototype-8megabytes(demo).bin" size="1048576" crc="797485d8" sha1="b1bfb147530be00b0dedc6207968fc83039c85d3"/>
 			</dataarea>
@@ -386,7 +386,7 @@
 		<description>star wars arcade (europe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="star wars arcade (europe).32x" size="2621440" crc="82e82660" sha1="a877cbf704fe7480966fd88a3c39efb6a39392ac"/>
 			</dataarea>
@@ -396,7 +396,7 @@
 		<description>super-x raycasting engine test 1 by fonzie (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="17128">
 				<rom name="super-x raycasting engine test 1 by fonzie (32x) (pd).32x" size="17128" crc="3316c17b" sha1="cb5d98ec0998c718f0778cc131ebbbbfc72edca7"/>
 			</dataarea>
@@ -406,7 +406,7 @@
 		<description>super-x raycasting engine test 2 by fonzie (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="23208">
 				<rom name="super-x raycasting engine test 2 by fonzie (32x) (pd).32x" size="23208" crc="19f8fa8f" sha1="dec8238b0d5c95bb4c742d5a57ac23d42dd25047"/>
 			</dataarea>
@@ -416,7 +416,7 @@
 		<description>switching cram palettes by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="2252">
 				<rom name="switching cram palettes by devster (32x) (pd).32x" size="2252" crc="007cd5f2" sha1="b28cfbd400e70acf0bee3ba9ee1793f195cfbdd6"/>
 			</dataarea>
@@ -426,7 +426,7 @@
 		<description>toughman contest (usa, europe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="toughman contest (usa, europe).32x" size="4194304" crc="14eac7a6" sha1="7588b0b8f4e93d5fdc920d3ab7e464154e423da9"/>
 			</dataarea>
@@ -436,7 +436,7 @@
 		<description>Virtua Hamster (USA) (Proto) [b]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Virtua Hamster (USA) (Proto) [b].32x" size="1572864" crc="cbd3fc56" sha1="9f344e8dc644e5f6bea3c6a60e9b312f5defa598"/>
 			</dataarea>
@@ -446,7 +446,7 @@
 		<description>virtua racing deluxe (europe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="virtua racing deluxe (europe).32x" size="3145728" crc="27f14b5f" sha1="bb26ddde26cd07191d872e8a76a170ca3326f781"/>
 			</dataarea>
@@ -456,7 +456,7 @@
 		<description>Wolfenstein 3D (Alpha1) by Chilly Willy</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3474596">
 				<rom name="Wolfenstein 3D (Alpha1) by Chilly Willy.32x" size="3474596" crc="1890fee3" sha1="27173eb57f2254ad28c593e9c53c032396b96e9e"/>
 			</dataarea>
@@ -466,7 +466,7 @@
 		<description>Wolfenstein 3D (Alpha2) by Chilly Willy</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3625464">
 				<rom name="Wolfenstein 3D (Alpha2) by Chilly Willy.32x" size="3625464" crc="3adfa7c9" sha1="4f2d05d472073b8229d52e1336ac1b086075efb2"/>
 			</dataarea>
@@ -476,7 +476,7 @@
 		<description>Wolfenstein 3D (Alpha3) by Chilly Willy</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3664972">
 				<rom name="Wolfenstein 3D (Alpha3) by Chilly Willy.32x" size="3664972" crc="711ac299" sha1="7f2e1dd741f5883adf89a9b0224e64f0f7ae5182"/>
 			</dataarea>
@@ -486,7 +486,7 @@
 		<description>Wolfenstein 3D (Alpha4) by Chilly Willy</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3674392">
 				<rom name="Wolfenstein 3D (Alpha4) by Chilly Willy.32x" size="3674392" crc="96918cab" sha1="863572940e25b694700b07f4c7226210337ccc08"/>
 			</dataarea>
@@ -496,7 +496,7 @@
 		<description>xor palette demo by devster (32x) (pd)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="32x_cart">
+		<part name="cart" interface="_32x_cart">
 			<dataarea name="rom" size="3400">
 				<rom name="xor palette demo by devster (32x) (pd).32x" size="3400" crc="c6428bb2" sha1="75fd855f3a70e411ad28a483a3f5fb4da1ebf4b6"/>
 			</dataarea>

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
 <!-- Number of items in this list = 137 -->
-<softwarelist name="a5200_cart" description="a5200 loose roms">
+<softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a52db1ab57771b0f">
 		<description>(demo)Atari PAM Final System Test v1.1 (1982)(Atari)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="(demo)Atari PAM Final System Test v1.1 (1982)(Atari).a52" size="8192" crc="3da972c8" sha1="db1ab57771b0f12adeb3bc155285849070edbbf7"/>
 			</dataarea>
@@ -16,7 +16,7 @@
 		<description>(demo)Lake 7 by Jeffry Johnston (PD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)Lake 7 by Jeffry Johnston (PD).a52" size="32768" crc="307dd28d" sha1="a184bab8b19fde7c14d2b8fca0f76f92ef14c8f8"/>
 			</dataarea>
@@ -26,7 +26,7 @@
 		<description>(demo)Lake 8 by Jeffry Johnston (PD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)Lake 8 by Jeffry Johnston (PD).a52" size="32768" crc="6b3be764" sha1="8dbb453f9f9863ef512afab0c0f579462e648932"/>
 			</dataarea>
@@ -36,7 +36,7 @@
 		<description>(demo)menu</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)menu.bin" size="32768" crc="32e2b062" sha1="c809dccec64e1d1ba1763b1d0c12681daf9f06c6"/>
 			</dataarea>
@@ -46,7 +46,7 @@
 		<description>(demo)menu_wish_list_5200</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)menu_wish_list_5200.bin" size="32768" crc="5972c18e" sha1="c898bbff4ec8f1c334b7e1825230c6132a781c8a"/>
 			</dataarea>
@@ -56,7 +56,7 @@
 		<description>(demo)Missile Command 5200 Hack</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="(demo)Missile Command 5200 Hack.a52" size="16384" crc="b8b6a2fd" sha1="5717dd1cfb0d4faad461b68a3a31a9fc63fe2ae9"/>
 			</dataarea>
@@ -66,7 +66,7 @@
 		<description>(demo)PAM SALT V1.02 (1982) (Atari) [o1]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="(demo)PAM SALT V1.02 (1982) (Atari) [o1].a52" size="16384" crc="a3a8850a" sha1="2071e69941a10ebec44d0f39e9e43c74b6288fee"/>
 			</dataarea>
@@ -76,7 +76,7 @@
 		<description>(demo)pasthip</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)pasthip.bin" size="32768" crc="52763af4" sha1="a339ac7e15f0ace1b430d0ec51a580a4927198d2"/>
 			</dataarea>
@@ -86,7 +86,7 @@
 		<description>(demo)Pete's Diagnostics (1982) (Atari) [o1]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="(demo)Pete's Diagnostics (1982) (Atari) [o1].a52" size="16384" crc="e9f826bd" sha1="e1201a274d41a327fa03b1ad2a72ada97e05f17b"/>
 			</dataarea>
@@ -96,7 +96,7 @@
 		<description>(demo)Player & Missle Graphics Demo by Dan Boris (1998) (PD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)Player & Missle Graphics Demo by Dan Boris (1998) (PD).a52" size="32768" crc="06a35db7" sha1="adfcdaa185c4ace8924f5906683857840188b808"/>
 			</dataarea>
@@ -106,7 +106,7 @@
 		<description>(demo)PONG_5200__EPROM_32k_</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)PONG_5200__EPROM_32k_.bin" size="32768" crc="31e9e833" sha1="de645f03bd035928020bf8c6527f87101edba001"/>
 			</dataarea>
@@ -116,7 +116,7 @@
 		<description>(demo)PONG_PATCHED</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)PONG_PATCHED.bin" size="32768" crc="57050dce" sha1="e77de46f38cd1c324856955d139dfcd87c14b0b5"/>
 			</dataarea>
@@ -126,7 +126,7 @@
 		<description>(demo)Raster Music Tracker demo 5200</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)Raster Music Tracker demo 5200.a52" size="32768" crc="c790a3a0" sha1="e5c192098e5e7d6ebc2b9062065aa585d490277f"/>
 			</dataarea>
@@ -136,7 +136,7 @@
 		<description>(demo)Snow5200(32k)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)Snow5200(32k).a52" size="32768" crc="6af57840" sha1="30ca53950526d1c8b746d9a7209df3bd71884094"/>
 			</dataarea>
@@ -146,7 +146,7 @@
 		<description>(demo)Super Mario Bros (1985) (Nintendo)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)Super Mario Bros (1985) (Nintendo).a52" size="32768" crc="eec0fda7" sha1="42ebf837c5bb5cd1e1dcfffa60ec5357a38521dc"/>
 			</dataarea>
@@ -156,7 +156,7 @@
 		<description>(demo)xmas</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)xmas.bin" size="32768" crc="35562065" sha1="7c8f15ca9d9861c75d8943692f8d6356095ed598"/>
 			</dataarea>
@@ -166,7 +166,7 @@
 		<description>(demo)xmas5200 updated</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="(demo)xmas5200 updated.bin" size="16384" crc="38f4a6a4" sha1="5976a79b11d3c94d0ff29ae8bf616619399b970a"/>
 			</dataarea>
@@ -176,7 +176,7 @@
 		<description>adv2demo final 2007-01-19</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="adv2demo final 2007-01-19.a52" size="32768" crc="fc32e3d5" sha1="fb7b01816f13d60c24890e86b96fcf2b66c4ea36"/>
 			</dataarea>
@@ -186,7 +186,7 @@
 		<description>Adventure II (2005)(Square Trio)[Demo 2006-02-05]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Adventure II (2005)(Square Trio)[Demo 2006-02-05].a52" size="32768" crc="ab4a00a5" sha1="c4fc3a7f5c3bccccf2f2e9aa4d07b5be243315c2"/>
 			</dataarea>
@@ -196,7 +196,7 @@
 		<description>Adventure II - limited-play demo of Adventure II as it was shown at the Oklahoma Video Game Expo 2005</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Adventure II - limited-play demo of Adventure II as it was shown at the Oklahoma Video Game Expo 2005.a52" size="32768" crc="a4496291" sha1="c37ab20829192ec4d9de3e18b0b9b6ec60277b47"/>
 			</dataarea>
@@ -206,7 +206,7 @@
 		<description>Adventure II demo 11-2005</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Adventure II demo 11-2005.a52" size="32768" crc="81e2ec9e" sha1="1367197adc46caceaefc4b66f91ef8084a2712d9"/>
 			</dataarea>
@@ -216,7 +216,7 @@
 		<description>Adventure II Philly Classic 5 demo A5200</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Adventure II Philly Classic 5 demo A5200.a52" size="32768" crc="fac9d90d" sha1="61c76fcfc234f41dea0fc8726b48e6ba13b0f61d"/>
 			</dataarea>
@@ -226,7 +226,7 @@
 		<description>Analog Classics Vol#1 - test demo version</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Analog Classics Vol#1 - test demo version.bin" size="32768" crc="2aabc713" sha1="1d286f2a7c40bf37e7e4728a83da813b59ba0d73"/>
 			</dataarea>
@@ -236,7 +236,7 @@
 		<description>analog5200 v2</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="analog5200 v2.bin" size="32768" crc="3e382e45" sha1="ab5be751dcaee1377859a4655e6556c4583850fc"/>
 			</dataarea>
@@ -246,7 +246,7 @@
 		<description>Archon (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Archon (Conv).bin" size="32768" crc="0db8dd03" sha1="7d679eab8b4e04f22ece5b72059f7903f2cfbc3f"/>
 			</dataarea>
@@ -256,7 +256,7 @@
 		<description>Ballblazer (1984)(Atari)[CX5255]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Ballblazer (1984)(Atari)[CX5255].a52" size="32768" crc="def2a207" sha1="1dfd9cb5eb608590c84e14376291f8c02fb1ab93"/>
 			</dataarea>
@@ -266,7 +266,7 @@
 		<description>Beef Drop (2004)(Ken Siders)[Self-Published][Demo 08-11-04)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef Drop (2004)(Ken Siders)[Self-Published][Demo 08-11-04).a52" size="32768" crc="228cd893" sha1="ccc1dd68399ca279db3186dc947d7b2ec7aee4a3"/>
 			</dataarea>
@@ -276,7 +276,7 @@
 		<description>Beef Drop 5200 demo (20040805)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef Drop 5200 demo (20040805).a52" size="32768" crc="fe4f1bac" sha1="a9bb36d785924a2b76f59e4ab1d3bb0e093a6bf8"/>
 			</dataarea>
@@ -286,7 +286,7 @@
 		<description>Beef Drop 5200 demo (20040811)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef Drop 5200 demo (20040811).a52" size="32768" crc="a3647070" sha1="25de642ac18e21f44ca43f9c14bbe58468b47d65"/>
 			</dataarea>
@@ -296,7 +296,7 @@
 		<description>Beef Drop Plus - The Return of Peter Pepper_demo</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef Drop Plus - The Return of Peter Pepper_demo.bin" size="32768" crc="344132b3" sha1="e67b98544e7a522070cd6cd0433ac6d9fda96b17"/>
 			</dataarea>
@@ -306,7 +306,7 @@
 		<description>Beef Drop Plus - The Return of Peter Pepper_demo2</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef Drop Plus - The Return of Peter Pepper_demo2.bin" size="32768" crc="b99c9a69" sha1="d74723b4c5b6a62f700e83a5f2bf5724e201c44b"/>
 			</dataarea>
@@ -316,7 +316,7 @@
 		<description>Beef Drop Plus - The Return of Peter Pepper_demo3</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef Drop Plus - The Return of Peter Pepper_demo3.bin" size="32768" crc="381179c9" sha1="e6a54eb42e85cc5e07e8d61d07ce458e0081649f"/>
 			</dataarea>
@@ -326,7 +326,7 @@
 		<description>Beef Drop Plus - The Return of Peter Pepper_demo4</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef Drop Plus - The Return of Peter Pepper_demo4.bin" size="32768" crc="be745cd4" sha1="857b832b29e50a46777ba2b6fdd79e5b5ffbc1e6"/>
 			</dataarea>
@@ -336,7 +336,7 @@
 		<description>Beef_Drop__fixed_level3</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef_Drop__fixed_level3.a52" size="32768" crc="48a43bae" sha1="6f37fe8dd4a4a0e9dc2da405b5c4fa2384ce705e"/>
 			</dataarea>
@@ -346,7 +346,7 @@
 		<description>Beef_Drop__fixed_level3_</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef_Drop__fixed_level3_.BIN" size="32768" crc="e7594487" sha1="bfdf989c1eab5320121d6080f4f540231f49ab89"/>
 			</dataarea>
@@ -356,7 +356,7 @@
 		<description>Beef_Drop__fixed_level3_new</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef_Drop__fixed_level3_new.BIN" size="32768" crc="c94c934d" sha1="a18beaa9a8c14dce55032fb55237a9457b88a109"/>
 			</dataarea>
@@ -366,7 +366,7 @@
 		<description>BurgerTime 5200 (early version)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="BurgerTime 5200 (early version).a52" size="16384" crc="0805ddd0" sha1="7df5da4c744d80ce77739dbc93c31b8c072acd71"/>
 			</dataarea>
@@ -376,7 +376,7 @@
 		<description>Burgetime 5200 20040403</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Burgetime 5200 20040403.a52" size="16384" crc="11b68664" sha1="8c4e80916025fabaa2a6e5f87b77d58dadb5c49b"/>
 			</dataarea>
@@ -386,7 +386,7 @@
 		<description>Burgetime 5200 20040408</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Burgetime 5200 20040408.a52" size="16384" crc="f756ea25" sha1="be81d8431e064b21870d38783e07a6a818fc3600"/>
 			</dataarea>
@@ -396,7 +396,7 @@
 		<description>Burgetime 5200 20040422</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040422.a52" size="32768" crc="ad799c55" sha1="f658e7a7ecf50e0e14f92f324c383fb1d18a3de2"/>
 			</dataarea>
@@ -406,7 +406,7 @@
 		<description>Burgetime 5200 20040424</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040424.a52" size="32768" crc="87505be4" sha1="319237bb94c188ebf378e8f0bb8d284b675f7ae8"/>
 			</dataarea>
@@ -416,7 +416,7 @@
 		<description>Burgetime 5200 20040428</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040428.a52" size="32768" crc="c97b35f9" sha1="4b59005c73f9b2c792b2362b620355b2e6428783"/>
 			</dataarea>
@@ -426,7 +426,7 @@
 		<description>Burgetime 5200 20040504</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040504.a52" size="32768" crc="134a914e" sha1="1c7387bc457235302ea4168cab37d7b1981e2dc3"/>
 			</dataarea>
@@ -436,7 +436,7 @@
 		<description>Burgetime 5200 20040507</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040507.a52" size="32768" crc="8f9d7512" sha1="209f9d6055d3a13fb22c04a7dee7a45be67155d0"/>
 			</dataarea>
@@ -446,7 +446,7 @@
 		<description>Burgetime 5200 20040515</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040515.a52" size="32768" crc="6584c27a" sha1="9e1f8d5f91fc57e57501f5e98d010284cea113ec"/>
 			</dataarea>
@@ -456,7 +456,7 @@
 		<description>Burgetime 5200 20040516</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040516.a52" size="32768" crc="642c0b88" sha1="5ca411206330abab839f15e6f3af2a2bcd5fff73"/>
 			</dataarea>
@@ -466,7 +466,7 @@
 		<description>Burgetime 5200 20040519</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040519.a52" size="32768" crc="e86906df" sha1="a09b3a1d6f571ee2875a3c35b0a19ec8381d055d"/>
 			</dataarea>
@@ -476,7 +476,7 @@
 		<description>Burgetime 5200 20040526</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040526.a52" size="32768" crc="17c085ae" sha1="9ad21c000bf6b9ad051c46f43933397f4e9f6178"/>
 			</dataarea>
@@ -486,7 +486,7 @@
 		<description>Burgetime 5200 20040603</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040603.a52" size="32768" crc="da5e088d" sha1="3f5fb93dac44a6486405134ba8fe38fdcf332686"/>
 			</dataarea>
@@ -496,7 +496,7 @@
 		<description>Burgetime 5200 20040623</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040623.a52" size="32768" crc="2cc89920" sha1="258f43011010c9b11fcc2f5a6362c7b5b486f9f7"/>
 			</dataarea>
@@ -506,7 +506,7 @@
 		<description>Burgetime 5200 20040624</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040624.a52" size="32768" crc="55605775" sha1="3036d8cda74484eb795128b8789d2bbc7f75ee61"/>
 			</dataarea>
@@ -516,7 +516,7 @@
 		<description>Burgetime 5200 20040625</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040625.a52" size="32768" crc="27b280c9" sha1="712d63119cc6d9f475c5d4bba6ef495dd8b6faf4"/>
 			</dataarea>
@@ -526,7 +526,7 @@
 		<description>Burgetime 5200 20040627</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040627.a52" size="32768" crc="1085e521" sha1="61ccea551bc26893362c18b37db7b821e10be7cb"/>
 			</dataarea>
@@ -536,7 +536,7 @@
 		<description>Burgetime 5200 20040714</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040714.a52" size="32768" crc="66a566e8" sha1="995b7db087d3c109d7acde450594db513f1b4b8f"/>
 			</dataarea>
@@ -546,7 +546,7 @@
 		<description>Burgetime 5200 20040715</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040715.a52" size="32768" crc="72c49982" sha1="60edf2de26ee57985dc2cd8d2232ce4ea6e40381"/>
 			</dataarea>
@@ -556,7 +556,7 @@
 		<description>Burgetime 5200 20040727</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Burgetime 5200 20040727.a52" size="32768" crc="0563fe93" sha1="add0ee17a338f8bdbd076f0c61121f3f0ae46676"/>
 			</dataarea>
@@ -566,7 +566,7 @@
 		<description>Buried Bucks (XL Conversion)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Buried Bucks (XL Conversion).a52" size="32768" crc="1d161671" sha1="a78702f34cbbeb36f4805603f63ed7aa0464547c"/>
 			</dataarea>
@@ -576,7 +576,7 @@
 		<description>Captain Beeble 5200 (New) Conversion by Kenfuzed (2004) (InHome Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Captain Beeble 5200 (New) Conversion by Kenfuzed (2004) (InHome Software).a52" size="32768" crc="2b760c6e" sha1="d897525afed807580eb7e799115cb4943588b858"/>
 			</dataarea>
@@ -586,7 +586,7 @@
 		<description>Caverns of Mars (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Caverns of Mars (Conv).bin" size="32768" crc="d1b64581" sha1="5a9155cfc456a9ba3282411c750ffe673ce36b7b"/>
 			</dataarea>
@@ -596,7 +596,7 @@
 		<description>Chess (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Chess (Conv).bin" size="32768" crc="0f6c1af4" sha1="ab6780f708455d4ba6aa13d471b1387e1dfbdffe"/>
 			</dataarea>
@@ -606,7 +606,7 @@
 		<description>chess5200</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="chess5200.bin" size="32768" crc="ff9332ba" sha1="2d62209da3a87c8bfebf90bfb705e0adaaffe5f5"/>
 			</dataarea>
@@ -616,7 +616,7 @@
 		<description>chicken</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="chicken.bin" size="32768" crc="b2d018b1" sha1="7fef7c5c07b776cc8f06fc46876b83415ff70d1b"/>
 			</dataarea>
@@ -626,7 +626,7 @@
 		<description>Combat II Advanced (2003)(Mean Hamster Software)[Self-Published][Demo]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Combat II Advanced (2003)(Mean Hamster Software)[Self-Published][Demo].a52" size="32768" crc="2e3d0ad9" sha1="038d0ca61d0e1c17fb322957a2afa91fcca17546"/>
 			</dataarea>
@@ -636,7 +636,7 @@
 		<description>crystal castles (conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="crystal castles (conv).bin" size="32768" crc="596f61d1" sha1="762e2a6f1831d5bc99e01c6418b72370fd7c8985"/>
 			</dataarea>
@@ -646,7 +646,7 @@
 		<description>Dk52(green)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Dk52(green).bin" size="32768" crc="0e06ebd9" sha1="bcfe7f1834adc009b94ba456130cc14b1cb0d539"/>
 			</dataarea>
@@ -656,7 +656,7 @@
 		<description>dkong52</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="dkong52.bin" size="32768" crc="b943bab9" sha1="f0a3679bb0d49cca6472d384d82038bf7494ddc5"/>
 			</dataarea>
@@ -666,7 +666,7 @@
 		<description>Donkey Kong (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Donkey Kong (Conv).bin" size="32768" crc="e902c79e" sha1="8f58772886b2252d7360f1eaa5e5752430c570d8"/>
 			</dataarea>
@@ -676,7 +676,7 @@
 		<description>Donkey Kong Jr (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Donkey Kong Jr (Conv).bin" size="32768" crc="8871b8ed" sha1="a380561f072e58acc8332582cfba1c1fad42f4d7"/>
 			</dataarea>
@@ -686,7 +686,7 @@
 		<description>Donkey Kong Jr - 5200 Game Release #1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Donkey Kong Jr - 5200 Game Release #1.bin" size="32768" crc="b136c3f5" sha1="7bd238483c48cbf75b12a11c17c55aa53518767b"/>
 			</dataarea>
@@ -696,7 +696,7 @@
 		<description>Forbidden Forest</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Forbidden Forest.bin" size="32768" crc="219615d9" sha1="37cf6e29aa4d0ca5e213045c26c9a8d4b01ae375"/>
 			</dataarea>
@@ -706,7 +706,7 @@
 		<description>freecell</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="freecell.a52" size="32768" crc="2d2a2807" sha1="918ee4f66048db8f3f800b6987b123203b4cf53b"/>
 			</dataarea>
@@ -716,7 +716,7 @@
 		<description>Frogger nobutton</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Frogger nobutton.a52" size="16384" crc="70a04f6d" sha1="fe3978cada93a2729dc86c5a9ba63c643d9e44e5"/>
 			</dataarea>
@@ -726,7 +726,7 @@
 		<description>Gateway to Apshai (2006)(classics)[selfpublished]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Gateway to Apshai (2006)(classics)[selfpublished].bin" size="32768" crc="59ec9114" sha1="2c2957d55edd9eb59585bae1ea1fc3b029f197ea"/>
 			</dataarea>
@@ -736,7 +736,7 @@
 		<description>gorfdigj</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="gorfdigj.bin" size="32768" crc="7f732dc9" sha1="1031a452fb942b96bfa01d7e7137ca46045728ed"/>
 			</dataarea>
@@ -746,7 +746,7 @@
 		<description>Hang 5200 (32kb)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Hang 5200 (32kb).a52" size="32768" crc="3465c83d" sha1="982292216a1f29639dc888e541ddd2b08270ce52"/>
 			</dataarea>
@@ -756,7 +756,7 @@
 		<description>Hangly-Man 32k version</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Hangly-Man 32k version.a52" size="32768" crc="c01ef479" sha1="4c53783d9b72eabe3177863d3dec73d57cc8d837"/>
 			</dataarea>
@@ -766,7 +766,7 @@
 		<description>Hangly-Man 5200 32k version (0.5) Complete with 2nd maze</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Hangly-Man 5200 32k version (0.5) Complete with 2nd maze.a52" size="32768" crc="80d98f08" sha1="52516bf56c33e84909489de704e28b2a0eb9fd44"/>
 			</dataarea>
@@ -776,7 +776,7 @@
 		<description>Hangly-Man 5200 32k version Complete with 2nd maze</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Hangly-Man 5200 32k version Complete with 2nd maze.a52" size="32768" crc="6702b13f" sha1="bc31a3aa263b3f2f6849b9d3c9b59bb64e33ce7e"/>
 			</dataarea>
@@ -786,7 +786,7 @@
 		<description>hanglypolluxplus32k</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="hanglypolluxplus32k.a52" size="32768" crc="54b559b6" sha1="8e37452ed4052825f406f98192f4f7265afc8bfc"/>
 			</dataarea>
@@ -796,7 +796,7 @@
 		<description>Jumpman Jr (Conv)(num+1num2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Jumpman Jr (Conv)(num+1num2).bin" size="32768" crc="fb35d43b" sha1="1ae10ca8b85900a25da51916ae28f5f94ad49775"/>
 			</dataarea>
@@ -806,7 +806,7 @@
 		<description>Jumpman Junior - 5200 Game Release #4(num+1num2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Jumpman Junior - 5200 Game Release #4(num+1num2).bin" size="32768" crc="87bba47d" sha1="936665933b3c762a190c7e14c90983fe7a5f20f1"/>
 			</dataarea>
@@ -816,7 +816,7 @@
 		<description>Jumpman Junior 5200b(num+1num2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Jumpman Junior 5200b(num+1num2).bin" size="32768" crc="eca59908" sha1="6d6ec1ce9b6c4136994c98f963cb8fe7e10bbc76"/>
 			</dataarea>
@@ -826,7 +826,7 @@
 		<description>Jumpong v2 (2004)(James Higgs)(PD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Jumpong v2 (2004)(James Higgs)(PD).a52" size="32768" crc="04f870a2" sha1="49a669e8acd854d83300c7f33a7c45e645817429"/>
 			</dataarea>
@@ -836,7 +836,7 @@
 		<description>Kaboom no 1812 overture</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Kaboom no 1812 overture.a52" size="16384" crc="b04635db" sha1="0c3db699375d26d613eb86fbefc61239e322b0d7"/>
 			</dataarea>
@@ -846,7 +846,7 @@
 		<description>Montezuma's Revenge</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Montezuma's Revenge.bin" size="32768" crc="bcf677fb" sha1="f0c3f2189be54914c73aa82a649599432b67b9ff"/>
 			</dataarea>
@@ -856,7 +856,7 @@
 		<description>Otto_5200_throttle (32k)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Otto_5200_throttle (32k).bin" size="32768" crc="90e68296" sha1="e69e692fa8b0cdc25aafbf9e495a05da9f487fc1"/>
 			</dataarea>
@@ -866,7 +866,7 @@
 		<description>Pac Plus 5200 v0.1 (32kb)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pac Plus 5200 v0.1 (32kb).a52" size="32768" crc="d810a8d1" sha1="6f02e73a6811b996c13e4239bdc2d127f4c24b9a"/>
 			</dataarea>
@@ -876,7 +876,7 @@
 		<description>Pac Plus 5200 v0.2 (32kb)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pac Plus 5200 v0.2 (32kb).a52" size="32768" crc="2bc66bc9" sha1="3a4870890f62c3b8a882c4b259e17bbe46ad2b12"/>
 			</dataarea>
@@ -886,7 +886,7 @@
 		<description>Pac Plus 5200 v0.3 (32kb)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pac Plus 5200 v0.3 (32kb).a52" size="32768" crc="cf442f46" sha1="609c853b4c8d663c642849da518b4e02ec665a5a"/>
 			</dataarea>
@@ -896,7 +896,7 @@
 		<description>Pac Plus 5200 v0.4 (32kb)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pac Plus 5200 v0.4 (32kb).a52" size="32768" crc="1c37ea4c" sha1="84e63c3b2112caa439cfbff1f6de896b6eff356b"/>
 			</dataarea>
@@ -906,7 +906,7 @@
 		<description>Pac Plus 5200 v0.5 (32kb)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pac Plus 5200 v0.5 (32kb).a52" size="32768" crc="d3363d1c" sha1="17e069f50cb9e2961944b2658d3a0a8b56bab2ae"/>
 			</dataarea>
@@ -916,7 +916,7 @@
 		<description>Pac Plus 5200 v0.5 fixed (32kb)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pac Plus 5200 v0.5 fixed (32kb).a52" size="32768" crc="f0c015b5" sha1="ee95b1aae11942226bb5723693c66dfbf5fc04c3"/>
 			</dataarea>
@@ -926,7 +926,7 @@
 		<description>Pac-Man (1982) (Atari) [b3]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pac-Man (1982) (Atari) [b3].a52" size="32768" crc="e7952627" sha1="618c91ba081840d54fe205ccd1d8d048af86942b"/>
 			</dataarea>
@@ -936,7 +936,7 @@
 		<description>Pac-Man (1982) (Atari) [b4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pac-Man (1982) (Atari) [b4].a52" size="32768" crc="e270517e" sha1="c96aa5887ceb0a796c9c33345f39b89eb73b2541"/>
 			</dataarea>
@@ -946,7 +946,7 @@
 		<description>pacfx32k(chaser_eyes)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="pacfx32k(chaser_eyes).bin" size="32768" crc="603c9557" sha1="ed409d50266cb5db16e8c9ac807e2f526f32f84d"/>
 			</dataarea>
@@ -956,7 +956,7 @@
 		<description>pacfx32k(ghost-eyes)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="pacfx32k(ghost-eyes).bin" size="32768" crc="e890d540" sha1="5a4e4087c6f225f1be531c600754a5b10beac727"/>
 			</dataarea>
@@ -966,7 +966,7 @@
 		<description>pacmanplus(32k)(chaser_eyes)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="pacmanplus(32k)(chaser_eyes).bin" size="32768" crc="977a8052" sha1="e9091348d7fdf74be305eaa74ea3549a88ac3c2d"/>
 			</dataarea>
@@ -976,7 +976,7 @@
 		<description>pacmanplus(32k)(ghost-eyes)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="pacmanplus(32k)(ghost-eyes).bin" size="32768" crc="44e6121f" sha1="e9a96c9946c5ca398f00a6c7532bb9e08c5b0ab8"/>
 			</dataarea>
@@ -986,7 +986,7 @@
 		<description>PiratePete_vs1 (32k)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="PiratePete_vs1 (32k).bin" size="32768" crc="e11f143e" sha1="dd24c5c9ce4a2d5e11d117f3dedfa4e5e6342588"/>
 			</dataarea>
@@ -996,7 +996,7 @@
 		<description>PiratePete_vs2 (32k)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="PiratePete_vs2 (32k).bin" size="32768" crc="eed37434" sha1="91b908dd0f1bd217eca948914fc654fde53d5282"/>
 			</dataarea>
@@ -1006,7 +1006,7 @@
 		<description>PiratePete_vs2.1 (32k)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="PiratePete_vs2.1 (32k).a52" size="32768" crc="7322db1d" sha1="192db19621061e4c48823a12c9fad669a944d030"/>
 			</dataarea>
@@ -1016,7 +1016,7 @@
 		<description>PiratePete_vs2.2 (32k)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="PiratePete_vs2.2 (32k).bin" size="32768" crc="f4f4fea3" sha1="54ca3601c37fb9f6eee82b3fdd294da877c18523"/>
 			</dataarea>
@@ -1026,7 +1026,7 @@
 		<description>PiratePete_vs2.3 (32k)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="PiratePete_vs2.3 (32k).a52" size="32768" crc="85582743" sha1="a4ba4fe6e91eeb36947e0aad4dd0352c4e51e601"/>
 			</dataarea>
@@ -1036,7 +1036,7 @@
 		<description>pitfall (classics fix)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="pitfall (classics fix).a52" size="32768" crc="78cd4061" sha1="db2d93207cecb92ae19b1686f91828be41386ae6"/>
 			</dataarea>
@@ -1046,7 +1046,7 @@
 		<description>Pitfall II - The Lost Caverns (1984) (Activision) [o1]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pitfall II - The Lost Caverns (1984) (Activision) [o1].a52" size="32768" crc="14db6854" sha1="69e4d56e1b202824f602f5e320dfc5d23cb4ba2e"/>
 			</dataarea>
@@ -1056,7 +1056,7 @@
 		<description>Pitfall! (1982) (Activision) [h1] (Two Port)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Pitfall! (1982) (Activision) [h1] (Two Port).a52" size="8192" crc="17762954" sha1="5b39c6bbff1b5a38236d59e7bf68f9605654d985"/>
 			</dataarea>
@@ -1066,7 +1066,7 @@
 		<description>Pitfall! (1982) (Activision) [o1]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Pitfall! (1982) (Activision) [o1].a52" size="16384" crc="72066f45" sha1="0f355115ee9217bbdfbbb4b2bd4e1366c21654b9"/>
 			</dataarea>
@@ -1076,7 +1076,7 @@
 		<description>Pitfall_II_level2_start__32k</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pitfall_II_level2_start__32k.bin" size="32768" crc="458e51ed" sha1="c797b83a1bbebd136c68a83041657107d6a97925"/>
 			</dataarea>
@@ -1086,7 +1086,7 @@
 		<description>Preppie (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Preppie (Conv).bin" size="16384" crc="f1e21530" sha1="c1030dd6015fe5233a87dccf5577483198f0d47d"/>
 			</dataarea>
@@ -1096,7 +1096,7 @@
 		<description>Preppie 5200 (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Preppie 5200 (Conv).bin" size="16384" crc="47dc1314" sha1="f093bcb5c59eb72ad7a13e0b9369452942bee341"/>
 			</dataarea>
@@ -1106,7 +1106,7 @@
 		<description>rally speedway (2006)(classics)[self-published]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="rally speedway (2006)(classics)[self-published].bin" size="32768" crc="d9e3fb4d" sha1="07332cf54789b59aef77d051ba378664496d63b5"/>
 			</dataarea>
@@ -1116,7 +1116,7 @@
 		<description>Rasteroids 5200</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Rasteroids 5200.bin" size="32768" crc="172ce34b" sha1="695907647e35c7cb17419929f3398f5ed1f982c5"/>
 			</dataarea>
@@ -1126,7 +1126,7 @@
 		<description>Satans Hollow (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Satans Hollow (Conv).bin" size="32768" crc="fdf0f296" sha1="4d4dcbc5ebd57b60ffa8bcf5f7fea7321e01d181"/>
 			</dataarea>
@@ -1136,7 +1136,7 @@
 		<description>Space Invaders (1980) 32k</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Space Invaders (1980) 32k.a52" size="32768" crc="e435f9b2" sha1="de65b9a7a73a2df6b46b3280ba90e53b50c8c7f9"/>
 			</dataarea>
@@ -1146,7 +1146,7 @@
 		<description>Space Invaders (1980)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders (1980).a52" size="16384" crc="967d24dc" sha1="1ae645400cb6cbe9922bd123550a6a740ed15077"/>
 			</dataarea>
@@ -1156,7 +1156,7 @@
 		<description>Space Invaders (1982) (Atari) [o1]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Space Invaders (1982) (Atari) [o1].a52" size="32768" crc="218e1be4" sha1="1daae2688fefb079b1f95efb3efb10385017426c"/>
 			</dataarea>
@@ -1166,7 +1166,7 @@
 		<description>Space Invaders (DX) bw-g</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders (DX) bw-g.a52" size="16384" crc="c172ed23" sha1="e1438d9c03fd5ca339e1006af786d1fec363079a"/>
 			</dataarea>
@@ -1176,7 +1176,7 @@
 		<description>Space Invaders (DX) bw-r</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders (DX) bw-r.a52" size="16384" crc="494ba4eb" sha1="1da5ec139cc4fe82cc34b92aa8db73942781248a"/>
 			</dataarea>
@@ -1186,7 +1186,7 @@
 		<description>Space Invaders (DX)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders (DX).a52" size="16384" crc="7a90fe29" sha1="a551d04b0bdd367b81762c2193528e9ed5280d34"/>
 			</dataarea>
@@ -1196,7 +1196,7 @@
 		<description>Space Invaders (LS) 32k</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Space Invaders (LS) 32k.a52" size="32768" crc="37745dec" sha1="189b967fb22feee17452a0cdedd05e1366af32e6"/>
 			</dataarea>
@@ -1206,7 +1206,7 @@
 		<description>Space Invaders (LS)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders (LS).a52" size="16384" crc="453c8082" sha1="c661b626b8513020249bb3155b50af781d25e488"/>
 			</dataarea>
@@ -1216,7 +1216,7 @@
 		<description>Space Invaders (SB) 32k</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Space Invaders (SB) 32k.a52" size="32768" crc="eec954e4" sha1="a6e2770dfb4b624788a4bf98987bf36943d5f690"/>
 			</dataarea>
@@ -1226,7 +1226,7 @@
 		<description>Space Invaders (SB) b 32k</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Space Invaders (SB) b 32k.a52" size="32768" crc="8eeb76c3" sha1="93d361c78e97054e97e06f999a589af298643863"/>
 			</dataarea>
@@ -1236,7 +1236,7 @@
 		<description>Space Invaders (SB) b</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders (SB) b.a52" size="16384" crc="fca3abad" sha1="bc5220cc364800df6f22371e37abd8a27632322e"/>
 			</dataarea>
@@ -1246,7 +1246,7 @@
 		<description>Space Invaders (SB)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders (SB).a52" size="16384" crc="9c81898a" sha1="98882cf0a8f3bb896e33cb830230efefc7c869ad"/>
 			</dataarea>
@@ -1256,7 +1256,7 @@
 		<description>Space Invaders Arcade (new)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders Arcade (new).a52" size="16384" crc="ec461f56" sha1="cf3dbdd8924f2bbd494c68c623c509d97abd8227"/>
 			</dataarea>
@@ -1266,7 +1266,7 @@
 		<description>Space Invaders Arcade</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Invaders Arcade.a52" size="16384" crc="6f0b4b34" sha1="785f1cb9d3d69f3ebaabd52da052ef6c8c500e21"/>
 			</dataarea>
@@ -1276,7 +1276,7 @@
 		<description>Spy Hunter (XL Conversion)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Spy Hunter (XL Conversion).a52" size="32768" crc="4eff1e32" sha1="e4a6e307865b763f08550596ac058681b8b89e9f"/>
 			</dataarea>
@@ -1286,7 +1286,7 @@
 		<description>super pac-man 32k 2007-04-08</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="super pac-man 32k 2007-04-08.a52" size="32768" crc="3e13908c" sha1="a6080e99e8a47f4c1028b67902a46527b80918b6"/>
 			</dataarea>
@@ -1296,7 +1296,7 @@
 		<description>Superfly 5200</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Superfly 5200.a52" size="16384" crc="549ce415" sha1="b4d6747c953b899ce2b76ede01f208cd2fbb3f94"/>
 			</dataarea>
@@ -1306,7 +1306,7 @@
 		<description>superfly5200</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="superfly5200.bin" size="16384" crc="ec8fd4d8" sha1="ed5b780b95b9d505f3846de20a2a9a6b574d7226"/>
 			</dataarea>
@@ -1316,7 +1316,7 @@
 		<description>Super_Pac_Man__Adj.Bluetime__32k_</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Super_Pac_Man__Adj.Bluetime__32k_.bin" size="32768" crc="7c25c550" sha1="a2db9cdda19bc78cdfd58cd9a197014236e18d8a"/>
 			</dataarea>
@@ -1326,7 +1326,7 @@
 		<description>Tapper (Conv)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Tapper (Conv).bin" size="32768" crc="c18d30fa" sha1="e9fb48a6325b2143895ebe06fd2fedd8f191b9ef"/>
 			</dataarea>
@@ -1336,7 +1336,7 @@
 		<description>tapper</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="tapper.bin" size="32768" crc="82ac1141" sha1="cae8b019808202e28f2208d00cd093538438c659"/>
 			</dataarea>
@@ -1346,7 +1346,7 @@
 		<description>Time Runner 52 (2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Time Runner 52 (2).bin" size="16384" crc="99e9c00b" sha1="70c7676659b75cd5bf271acd603b31f7381ac154"/>
 			</dataarea>
@@ -1356,7 +1356,7 @@
 		<description>Time Runner 52</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Time Runner 52.bin" size="16384" crc="0e80dbb2" sha1="b000ffe9fe1f5cd7d68cf7d2e7fe906b6a0fd668"/>
 			</dataarea>
@@ -1366,7 +1366,7 @@
 		<description>Xagon (XL Conversion)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="cart" interface="a5200_cart">
+		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Xagon (XL Conversion).a52" size="32768" crc="338769e3" sha1="bc3e16417f95f4465b2fc53ad72e86092f8ae990"/>
 			</dataarea>
