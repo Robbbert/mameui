@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1815 -->
+<!-- Number of items in this list = 1818 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5572,6 +5572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genb199fc3f6658d">
+		<description>Fatal Fury One (v.1.5) (Brazil) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fatal Fury One (v.1.5) (Brazil) (Unl).bin" size="4194304" crc="004a99e1" sha1="b199fc3f6658db634616870b5346818627c26430"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen928a1aef009eb">
 		<description>Fatal Smarties (PD)</description>
 		<year>????</year>
@@ -7912,6 +7922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen4d2acae834e81">
+		<description>Hayato's Journey v1_0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Hayato's Journey v1_0.bin" size="4194304" crc="7f54be40" sha1="4d2acae834e81e8d873c133e1e021b4417ca7c30"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen313a678fb5261">
 		<description>Heavy Unit - Mega Drive Special (Japan)</description>
 		<year>????</year>
@@ -8019,6 +8039,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="hybrid front, the (T-Chi).bin" size="2097152" crc="0d6d06f6" sha1="43bcc8f46b80b230bdb8653aae4366fe0b3f3f75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfe84b81ec1d70">
+		<description>I Love Mickey Mouse - Fushigi no Oshiro Daibouken (English v1.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="I Love Mickey Mouse - Fushigi no Oshiro Daibouken (English v1.0).md" size="1048576" crc="c301ae64" sha1="fe84b81ec1d70536348e8f0780247ea0602365d8"/>
 			</dataarea>
 		</part>
 	</software>

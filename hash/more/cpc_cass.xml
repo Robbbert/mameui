@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4 -->
+<!-- Number of items in this list = 5 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc82fa11a8ebd7f">
 		<description>aa6a</description>
@@ -29,6 +29,16 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="19071">
 				<rom name="Brick Rick.cdt" size="19071" crc="87b42465" sha1="278820c192df521e07a2c5620950363b9359b474"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcaeecf2f866afc">
+		<description>dawn-of-kernel</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="38893">
+				<rom name="dawn-of-kernel.cdt" size="38893" crc="4b1211ab" sha1="aeecf2f866afc21573a5e0fa6ce0130f5ed249ec"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 619 -->
+<!-- Number of items in this list = 621 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -849,6 +849,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Cabbage Patch Kids Picture Show (UE).col" size="32768" crc="51deb762" sha1="f64bb97876258f6ff00cf1d4ffc397e29cb5f6b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col7c5b08d1572fe">
+		<description>Camelot Knights (2024)(Nanochess)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="22589">
+				<rom name="Camelot Knights (2024)(Nanochess).rom" size="22589" crc="b551402c" sha1="7c5b08d1572fec23f1bb091fb88f5adfd43b6b86"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5999,6 +6009,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Way of the Exploding Foot (CollectorVision)(2011).rom" size="32768" crc="28e07beb" sha1="83a1cbe39a67d25db714ab61f26ece31f43a6cff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col103d219db1ee7">
+		<description>Whack 'Em Smack 'Em Byrons (2024)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="29800">
+				<rom name="Whack 'Em Smack 'Em Byrons (2024)(Jess Creations).rom" size="29800" crc="a7bb34df" sha1="103d219db1ee7ff4f0b50c4727eb5dbaa06acad0"/>
 			</dataarea>
 		</part>
 	</software>
