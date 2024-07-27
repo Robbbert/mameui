@@ -19831,6 +19831,9 @@ hp9845t_de                      //
 
 @source:hp/hp98x6.cpp
 hp9816a                         //
+hp9826a                         //
+hp9836a                         //
+hp9836c                         //
 
 @source:hp/hp9k.cpp
 hp9816                          //
@@ -34913,6 +34916,13 @@ mustangs                        // UPL-90058 (c) 1990 UPL + Seoul Trading
 nouryoku                        // (c) 1995 Tecmo
 nouryokup                       // (c) 1995 Tecmo
 popspops                        // (c) 1999
+powerins                        // (c) 1993 Atlus (USA)
+powerinsa                       // (c) 1993 Atlus (bootleg of USA version)
+powerinsb                       // (c) 1993 Atlus (bootleg of USA version)
+powerinsc                       // (c) 1993 Atlus (bootleg of USA version)
+powerinsj                       // (c) 1993 Atlus (Japan)
+powerinspj                      // prototype (Japan)
+powerinspu                      // prototype (USA)
 raphero                         // (c) 1994 NMK
 rapheroa                        // (c) 1994 Media Trading Corp
 redfoxwp2                       // (c) 1998 (China)
@@ -34964,15 +34974,6 @@ plpittashi                      // NMK
 sluster2                        // NMK
 sweethrt                        // NMK
 trocana                         // NTC / NMK
-
-@source:nmk/powerins.cpp
-powerins                        // (c) 1993 Atlus (USA)
-powerinsa                       // (c) 1993 Atlus (bootleg of USA version)
-powerinsb                       // (c) 1993 Atlus (bootleg of USA version)
-powerinsc                       // (c) 1993 Atlus (bootleg of USA version)
-powerinsj                       // (c) 1993 Atlus (Japan)
-powerinspj                      // prototype (Japan)
-powerinspu                      // prototype (USA)
 
 @source:nmk/quizdna.cpp
 gakupara                        // (c) 1991 NMK
@@ -41960,6 +41961,7 @@ e100                            //
 
 @source:skeleton/easy_karaoke.cpp
 bkarast
+dks7000c
 easykara
 karams
 karatvst
@@ -42920,6 +42922,7 @@ lastfght                        // (c) 2000 Subsino
 crsbingo                        // (c) 1991 Subsino
 dinofmly                        // (c) 1994 Subsino
 dinofmlya                       // (c) 1995 Subsino (Tangasoft license or hack?)
+grndprix                        // bootleg
 luckyseven                      // bootleg
 mtrainnv                        // (c) 1996 Subsino
 ndongmul                        // (c) 1998 Hyoja Game
