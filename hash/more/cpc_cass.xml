@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5 -->
+<!-- Number of items in this list = 7 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc82fa11a8ebd7f">
 		<description>aa6a</description>
@@ -49,6 +49,26 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="54">
 				<rom name="desktop.ini" size="54" crc="46627eb3" sha1="70ca1d0136551b572e10d754d831abf67909df89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpca38737fe18cbb">
+		<description>Galactic Tomb Cara A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="90921">
+				<rom name="Galactic Tomb Cara A.cdt" size="90921" crc="5b891981" sha1="a38737fe18cbbd5bed12a067d28e629da55ce63a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc06f4e2b2db62f">
+		<description>Galactic Tomb Cara B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="81489">
+				<rom name="Galactic Tomb Cara B.cdt" size="81489" crc="87872a36" sha1="06f4e2b2db62fdd6bad6cddf71b5a42261accde8"/>
 			</dataarea>
 		</part>
 	</software>

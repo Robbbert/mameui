@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1818 -->
+<!-- Number of items in this list = 1820 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4212,6 +4212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genfe84b81ec1d70">
+		<description>Castle of Illusion - Fushigi no Oshiro Daibouken T-Eng (2023)(Radio Tails)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Castle of Illusion - Fushigi no Oshiro Daibouken T-Eng (2023)(Radio Tails).bin" size="1048576" crc="c301ae64" sha1="fe84b81ec1d70536348e8f0780247ea0602365d8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend8fa4c951d0ea">
 		<description>Castle of Illusion Starring Mickey Mouse (UE) [T+Fre1.0_Gen9]</description>
 		<year>????</year>
@@ -6502,6 +6512,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen1cb3b71cee9fb">
+		<description>Grind Stormer Color Hack (2024)(Dolsilwa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Grind Stormer Color Hack (2024)(Dolsilwa).bin" size="1048576" crc="2b609174" sha1="1cb3b71cee9fb31a1a01346855000144d689a428"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3bf86f1df7299">
 		<description>Growl (USA)</description>
 		<year>????</year>
@@ -8039,16 +8059,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="hybrid front, the (T-Chi).bin" size="2097152" crc="0d6d06f6" sha1="43bcc8f46b80b230bdb8653aae4366fe0b3f3f75"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genfe84b81ec1d70">
-		<description>I Love Mickey Mouse - Fushigi no Oshiro Daibouken (English v1.0)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="I Love Mickey Mouse - Fushigi no Oshiro Daibouken (English v1.0).md" size="1048576" crc="c301ae64" sha1="fe84b81ec1d70536348e8f0780247ea0602365d8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15719,6 +15729,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2850706">
 				<rom name="Streets of Rage 2 Final Fight Crossover 2020.bin" size="2850706" crc="8bd9e3e2" sha1="83d033a465ab62537ce6c83033acd9e01955bf02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen373c5229387df">
+		<description>Streets of Rage 2 Restoration (2020)(SCD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2101538">
+				<rom name="Streets of Rage 2 Restoration (2020)(SCD).bin" size="2101538" crc="8d4c9ecc" sha1="373c5229387df74ff90254918eba48064d259747"/>
 			</dataarea>
 		</part>
 	</software>
