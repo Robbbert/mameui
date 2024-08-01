@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7 -->
+<!-- Number of items in this list = 12 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc82fa11a8ebd7f">
 		<description>aa6a</description>
@@ -33,12 +33,12 @@
 		</part>
 	</software>
 	<software name="cpcaeecf2f866afc">
-		<description>dawn-of-kernel</description>
+		<description>Dawn of Kernel</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="38893">
-				<rom name="dawn-of-kernel.cdt" size="38893" crc="4b1211ab" sha1="aeecf2f866afc21573a5e0fa6ce0130f5ed249ec"/>
+				<rom name="Dawn of Kernel.cdt" size="38893" crc="4b1211ab" sha1="aeecf2f866afc21573a5e0fa6ce0130f5ed249ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69,6 +69,56 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="81489">
 				<rom name="Galactic Tomb Cara B.cdt" size="81489" crc="87872a36" sha1="06f4e2b2db62fdd6bad6cddf71b5a42261accde8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc757b29d781b66">
+		<description>Golden Tail</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="22929">
+				<rom name="Golden Tail.cdt" size="22929" crc="55f386f3" sha1="757b29d781b66b0269590a53be2e9e286e02a670"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc16ef82266f941">
+		<description>Heart of Salamanderland</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="26982">
+				<rom name="Heart of Salamanderland.cdt" size="26982" crc="4aa737f2" sha1="16ef82266f941d4be90b4d1c67529ff1d2191ea0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpce0f46cd65c6e9">
+		<description>JUSTIN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="25545">
+				<rom name="JUSTIN.CDT" size="25545" crc="bf1f693c" sha1="e0f46cd65c6e984698d601e149774585429916b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3e287c4c31d1f">
+		<description>Kitsune's Curse</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="26225">
+				<rom name="Kitsune's Curse.cdt" size="26225" crc="b656caa9" sha1="3e287c4c31d1fb90a911c8941461a657999056c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5c9f6986156ab">
+		<description>Magica</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="29148">
+				<rom name="Magica.cdt" size="29148" crc="270ee146" sha1="5c9f6986156aba3b86632fec6f7bb7b74e0c2b3c"/>
 			</dataarea>
 		</part>
 	</software>

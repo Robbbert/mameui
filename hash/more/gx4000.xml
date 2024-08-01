@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 16 -->
+<!-- Number of items in this list = 18 -->
 <softwarelist name="gx4000" description="gx4000 loose roms">
 	<software name="gx4a29573d8d7cee">
 		<description>Abduction of Oscar Z, The (2020)(Dreamin' Bits)</description>
@@ -23,12 +23,12 @@
 		</part>
 	</software>
 	<software name="gx4a6dafd3f7b796">
-		<description>brickr</description>
+		<description>Brick Rick</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gx4000_cart">
 			<dataarea name="rom" size="524556">
-				<rom name="brickr.cpr" size="524556" crc="03a90123" sha1="a6dafd3f7b7960460e94862a8a4725c90087c065"/>
+				<rom name="Brick Rick.cpr" size="524556" crc="03a90123" sha1="a6dafd3f7b7960460e94862a8a4725c90087c065"/>
 			</dataarea>
 		</part>
 	</software>
@@ -49,6 +49,16 @@
 		<part name="cart" interface="gx4000_cart">
 			<dataarea name="rom" size="131148">
 				<rom name="Burnin' Rubber (Europe).cpr" size="131148" crc="3130af05" sha1="23ebe7747263e3a976267ca2465d29fa77c845a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gx47ed067623d6ef">
+		<description>Dawn of Kernel</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gx4000_cart">
+			<dataarea name="rom" size="524556">
+				<rom name="Dawn of Kernel.cpr" size="524556" crc="abb3728d" sha1="7ed067623d6ef70d8bd448034224db88251b7168"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,13 +92,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gx47ed067623d6ef">
-		<description>kernel</description>
+	<software name="gx4bd883c4dbabe6">
+		<description>Heart of Salamanderland</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gx4000_cart">
 			<dataarea name="rom" size="524556">
-				<rom name="kernel.cpr" size="524556" crc="abb3728d" sha1="7ed067623d6ef70d8bd448034224db88251b7168"/>
+				<rom name="Heart of Salamanderland.cpr" size="524556" crc="51202197" sha1="bd883c4dbabe6291d10a0358ad4e293682bd541b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gx425aa100e9b38d">
+		<description>Hyperdrive!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gx4000_cart">
+			<dataarea name="rom" size="524556">
+				<rom name="Hyperdrive!.cpr" size="524556" crc="c42cf962" sha1="25aa100e9b38d3a3ff8a1c4e058a202b6701b16f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -153,12 +173,12 @@
 		</part>
 	</software>
 	<software name="gx4db2d41c0eaed9">
-		<description>Xshoot_gx4000</description>
+		<description>Xshoot</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gx4000_cart">
 			<dataarea name="rom" size="524556">
-				<rom name="Xshoot_gx4000.cpr" size="524556" crc="9bae7b15" sha1="db2d41c0eaed91414fe77c0725d90249da54ba03"/>
+				<rom name="Xshoot.cpr" size="524556" crc="9bae7b15" sha1="db2d41c0eaed91414fe77c0725d90249da54ba03"/>
 			</dataarea>
 		</part>
 	</software>
