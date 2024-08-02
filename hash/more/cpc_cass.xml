@@ -1,24 +1,1144 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 12 -->
+<!-- Number of items in this list = 123 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc82fa11a8ebd7f">
-		<description>aa6a</description>
+		<description>Amstrad Action Covertape 72</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="128947">
-				<rom name="aa6a.cdt" size="128947" crc="d89504c8" sha1="82fa11a8ebd7faf3f7d59c3a58fc4d8c45a0b3c0"/>
+				<rom name="Amstrad Action Covertape 72.cdt" size="128947" crc="d89504c8" sha1="82fa11a8ebd7faf3f7d59c3a58fc4d8c45a0b3c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc6df7e783efa14">
+		<description>Amstrad_Action-Action_Pack_02__Side_A1-Predator_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="57200">
+				<rom name="Amstrad_Action-Action_Pack_02__Side_A1-Predator_2.cdt" size="57200" crc="3f32b694" sha1="6df7e783efa145cfc0f85d415d6541b1b5fa200e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcca82b00f5753b">
+		<description>Amstrad_Action-Action_Pack_02__Side_A2-How_to_be_a_Complete_Bastard</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="48542">
+				<rom name="Amstrad_Action-Action_Pack_02__Side_A2-How_to_be_a_Complete_Bastard.cdt" size="48542" crc="b045c028" sha1="ca82b00f5753bec9e9fb4bae3386b92a93609c74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc462df814a13e7">
+		<description>Amstrad_Action-Action_Pack_02__Side_B1-Biggles</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="94653">
+				<rom name="Amstrad_Action-Action_Pack_02__Side_B1-Biggles.cdt" size="94653" crc="0defcb99" sha1="462df814a13e7c38525f8b4ebd75066c290de6e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc9773154d2bb4c">
+		<description>Amstrad_Action-Action_Pack_02__Side_B2-Type-Writer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="1611">
+				<rom name="Amstrad_Action-Action_Pack_02__Side_B2-Type-Writer.cdt" size="1611" crc="5216d0c9" sha1="9773154d2bb4c1c8ae5e72f87b121db3117b8929"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3338d513d32ff">
+		<description>Amstrad_Action-Action_Pack_02__Side_B3-Glenco_Tape-Disc_Transfer_Utility</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3983">
+				<rom name="Amstrad_Action-Action_Pack_02__Side_B3-Glenco_Tape-Disc_Transfer_Utility.cdt" size="3983" crc="da84ebfd" sha1="3338d513d32ffd3787cd5ccef2db66510e788e14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcd86ea4eab6513">
+		<description>Amstrad_Action-Action_Pack_03__Side_A-Menu-Spindizzy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="47839">
+				<rom name="Amstrad_Action-Action_Pack_03__Side_A-Menu-Spindizzy.cdt" size="47839" crc="dfd0c87f" sha1="d86ea4eab6513b88b992080bc41f87cf14afa47d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcfe7b075acd2c5">
+		<description>Amstrad_Action-Action_Pack_03__Side_B-Wizard_s_Lair-AA_Toolkit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="51127">
+				<rom name="Amstrad_Action-Action_Pack_03__Side_B-Wizard_s_Lair-AA_Toolkit.cdt" size="51127" crc="2612c5f1" sha1="fe7b075acd2c53ab6578bc1e34e87021d63b145f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc513bbcd1b021a">
+		<description>Amstrad_Action-Action_Pack_05__Side_A-Hero_Quest-Technician_Ted</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="85015">
+				<rom name="Amstrad_Action-Action_Pack_05__Side_A-Hero_Quest-Technician_Ted.cdt" size="85015" crc="f26c50f1" sha1="513bbcd1b021af15d7fff95c262e46f1f45f0ae0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc08b91f22272a5">
+		<description>Amstrad_Action-Action_Pack_05__Side_B-3D_Construction_Kit-Devpac</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="73381">
+				<rom name="Amstrad_Action-Action_Pack_05__Side_B-3D_Construction_Kit-Devpac.cdt" size="73381" crc="53a9812b" sha1="08b91f22272a52c3cb624d4ac5eba15b5392c6e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc7cff4fac252ce">
+		<description>Amstrad_Action-Action_Pack_07__Side_A-Turrican_2-Thunderjaws</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="135587">
+				<rom name="Amstrad_Action-Action_Pack_07__Side_A-Turrican_2-Thunderjaws.cdt" size="135587" crc="d4e4e01f" sha1="7cff4fac252cef6ddd56735a3f24a1b0767f0703"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc2618daaa8c916">
+		<description>Amstrad_Action-Action_Pack_07__Side_B-Marsport-XREF</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="65671">
+				<rom name="Amstrad_Action-Action_Pack_07__Side_B-Marsport-XREF.cdt" size="65671" crc="d6e1cc60" sha1="2618daaa8c9169d2f1e62a304533f2fba00e4109"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc5cb2249a5d3b">
+		<description>Amstrad_Action-Action_Pack_09__Side_A-Cisco_Heat-Impossaball-Tir_Na_Nog</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="124867">
+				<rom name="Amstrad_Action-Action_Pack_09__Side_A-Cisco_Heat-Impossaball-Tir_Na_Nog.cdt" size="124867" crc="1d7eb58f" sha1="c5cb2249a5d3be1e358dccf0dde4100cb8ed2866"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc2be31b468530">
+		<description>Amstrad_Action-Action_Pack_09__Side_B-RSX-LIB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="53635">
+				<rom name="Amstrad_Action-Action_Pack_09__Side_B-RSX-LIB.cdt" size="53635" crc="9850d197" sha1="c2be31b46853074bab6c662893f1694e35246e92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4544619b8fa80">
+		<description>Amstrad_Action-Action_Pack_10__Side_A-Graphic_Adventure_Creator-Southern_Belle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="60884">
+				<rom name="Amstrad_Action-Action_Pack_10__Side_A-Graphic_Adventure_Creator-Southern_Belle.cdt" size="60884" crc="c71eb80d" sha1="4544619b8fa8089c30bc6d54297c7a456b1fa104"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcab1ca20bae6ce">
+		<description>Amstrad_Action-Action_Pack_10__Side_B-Pagemaker_Plus-Extended_Basic-Pokes_Galore</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="33223">
+				<rom name="Amstrad_Action-Action_Pack_10__Side_B-Pagemaker_Plus-Extended_Basic-Pokes_Galore.cdt" size="33223" crc="4d81cb30" sha1="ab1ca20bae6ce6318ab1d3fce60ee9a7df602898"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc545b1125ae317">
+		<description>Amstrad_Action-Action_Pack_11__Side_A1-Menu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="2947">
+				<rom name="Amstrad_Action-Action_Pack_11__Side_A1-Menu.cdt" size="2947" crc="448983e6" sha1="545b1125ae3177f00f9e1cb538b1bd1956fe8243"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8418052477cb2">
+		<description>Amstrad_Action-Action_Pack_11__Side_A2-Seymour_Take_One</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="39511">
+				<rom name="Amstrad_Action-Action_Pack_11__Side_A2-Seymour_Take_One.cdt" size="39511" crc="40beb76e" sha1="8418052477cb28f46b23a196194e329267f68474"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcb70fadd3f4756">
+		<description>Amstrad_Action-Action_Pack_11__Side_A3-Firelord</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="43921">
+				<rom name="Amstrad_Action-Action_Pack_11__Side_A3-Firelord.cdt" size="43921" crc="de990959" sha1="b70fadd3f4756bccf34c0275c763a58eb23bba27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc71c7d49da661a">
+		<description>Amstrad_Action-Action_Pack_11__Side_A4-Pokes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="17263">
+				<rom name="Amstrad_Action-Action_Pack_11__Side_A4-Pokes.cdt" size="17263" crc="b97e29a3" sha1="71c7d49da661a7f99cdcfd0ecfbe9021e7e49f29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3033ffda154a2">
+		<description>Amstrad_Action-Action_Pack_11__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="59485">
+				<rom name="Amstrad_Action-Action_Pack_11__Side_B.cdt" size="59485" crc="9aacedaf" sha1="3033ffda154a2729d9cc8b836d7e25fe7c86d864"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3ab9b28727cad">
+		<description>Amstrad_Action-Action_Pack_12__Side_A-Space_Crusade-The_Sphinx_Jinx</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="127430">
+				<rom name="Amstrad_Action-Action_Pack_12__Side_A-Space_Crusade-The_Sphinx_Jinx.cdt" size="127430" crc="21bbdbf8" sha1="3ab9b28727cadc0a932fa49d7c94c0b68db77eae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4373c337db023">
+		<description>Amstrad_Action-Action_Pack_12__Side_B-Shockway_Rider-DiscContent-Pokes_Galore</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="76027">
+				<rom name="Amstrad_Action-Action_Pack_12__Side_B-Shockway_Rider-DiscContent-Pokes_Galore.cdt" size="76027" crc="e3e1a26e" sha1="4373c337db023340f0a51a7c71ecbd2453cc4c6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc32bd60e840706">
+		<description>Amstrad_Action-Action_Pack_13__Side_A-Ranarama-Maze_Mania-Pokes_Galore</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="103201">
+				<rom name="Amstrad_Action-Action_Pack_13__Side_A-Ranarama-Maze_Mania-Pokes_Galore.cdt" size="103201" crc="81ac1a3c" sha1="32bd60e840706071254d724adcaffa83c71b89ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc1b02b906fd4fe">
+		<description>Amstrad_Action-Action_Pack_13__Side_B-Word_Pro-Easi-Sheet-Powerbase_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="70807">
+				<rom name="Amstrad_Action-Action_Pack_13__Side_B-Word_Pro-Easi-Sheet-Powerbase_2.cdt" size="70807" crc="eef24f5d" sha1="1b02b906fd4fee5abca27b8696768a9b45c5b186"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc7e541418359b4">
+		<description>Amstrad_Action-Action_Pack_15__Side_A-Forbidden_Planet-Sprites-Type-Ins-Pokes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="83797">
+				<rom name="Amstrad_Action-Action_Pack_15__Side_A-Forbidden_Planet-Sprites-Type-Ins-Pokes.cdt" size="83797" crc="119cddc8" sha1="7e541418359b4b8a5208b1b61c3f016934401e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcf99fac7f865dd">
+		<description>Amstrad_Action-Action_Pack_15__Side_B-The_Addams_Family</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="126931">
+				<rom name="Amstrad_Action-Action_Pack_15__Side_B-The_Addams_Family.cdt" size="126931" crc="ea4bb6ff" sha1="f99fac7f865dd42e11537ae4bea600894503242f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc54a3b431f7868">
+		<description>Amstrad_Action-Action_Pack_16__Side_A-Lemmings-Type-Ins-Pokes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="110772">
+				<rom name="Amstrad_Action-Action_Pack_16__Side_A-Lemmings-Type-Ins-Pokes.cdt" size="110772" crc="04495c70" sha1="54a3b431f78681c9072547080881ce86d16f4616"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc2d6e39eecf340">
+		<description>Amstrad_Action-Action_Pack_16__Side_B-Dragontorc-Power_Page</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="126733">
+				<rom name="Amstrad_Action-Action_Pack_16__Side_B-Dragontorc-Power_Page.cdt" size="126733" crc="0fb9aa60" sha1="2d6e39eecf340e9e50ca8b46753e9ee2a33db4e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc52460693f761d">
+		<description>Amstrad_Action-Action_Pack_17__Side_A-Defenders_of_the_Earth-Drehdriss</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="84283">
+				<rom name="Amstrad_Action-Action_Pack_17__Side_A-Defenders_of_the_Earth-Drehdriss.cdt" size="84283" crc="5fbbc985" sha1="52460693f761d2ccc5c8f585e4732d5ef90d4376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc7abb4aad59670">
+		<description>Amstrad_Action-Action_Pack_17__Side_B-SuperSonic-Type-Ins-Pokes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="76969">
+				<rom name="Amstrad_Action-Action_Pack_17__Side_B-SuperSonic-Type-Ins-Pokes.cdt" size="76969" crc="d15cc3e6" sha1="7abb4aad59670b2b7d113e7d034eb9a1cfe5cd5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc3f59e55b04de">
+		<description>Amstrad_Action-Action_Pack_18__Side_A-Famous_Five</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="82069">
+				<rom name="Amstrad_Action-Action_Pack_18__Side_A-Famous_Five.cdt" size="82069" crc="8f237a52" sha1="c3f59e55b04defa84d754be4a5105859418daa88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc84ba4eeef42cb">
+		<description>Amstrad_Action-Action_Pack_18__Side_B-City_Slicker-Notepad-Liteprog-Type-Ins-Pokes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="74575">
+				<rom name="Amstrad_Action-Action_Pack_18__Side_B-City_Slicker-Notepad-Liteprog-Type-Ins-Pokes.cdt" size="74575" crc="f8f79a85" sha1="84ba4eeef42cbeb1acfcd065e7f9b4d9b36ba7cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8fe7f7621581b">
+		<description>Amstrad_Action-Action_Pack_19__Side_A-On_the_Run-Link-Pokes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="71624">
+				<rom name="Amstrad_Action-Action_Pack_19__Side_A-On_the_Run-Link-Pokes.cdt" size="71624" crc="deb1e250" sha1="8fe7f7621581b38890bb926fef6dfb2d38ef5ded"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpccf0d0cc1c060c">
+		<description>Amstrad_Action-Action_Pack_19__Side_B-Worktop-Disc_Organiser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="58123">
+				<rom name="Amstrad_Action-Action_Pack_19__Side_B-Worktop-Disc_Organiser.cdt" size="58123" crc="51ad37ec" sha1="cf0d0cc1c060c84c29bddd466db28d18889827a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc6688f3b8a7d6b">
+		<description>Amstrad_Action-Action_Pack_20__Side_A-Glider_Rider-Animator-Screen_Compressor-G-Paint_Utility</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="51553">
+				<rom name="Amstrad_Action-Action_Pack_20__Side_A-Glider_Rider-Animator-Screen_Compressor-G-Paint_Utility.cdt" size="51553" crc="7d7e7ef9" sha1="6688f3b8a7d6ba0eae0a272c9b6a32a890ba6f7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpce8ea44d42a649">
+		<description>Amstrad_Action-Action_Pack_20__Side_B-Type-Ins-Pokes_Galore</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="16795">
+				<rom name="Amstrad_Action-Action_Pack_20__Side_B-Type-Ins-Pokes_Galore.cdt" size="16795" crc="6d1af4c3" sha1="e8ea44d42a64955f2aeefa61c42f362931ac013a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc76962db1bb4ec">
+		<description>Amstrad_Action-Action_Pack_21__Side_A-Nexor-Pakman-MPack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="56947">
+				<rom name="Amstrad_Action-Action_Pack_21__Side_A-Nexor-Pakman-MPack.cdt" size="56947" crc="a82295f7" sha1="76962db1bb4ec18ce93aae4e34f86df3c457d1ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5623ec30c8635">
+		<description>Amstrad_Action-Action_Pack_21__Side_B-Pilot-Type-Ins</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="38077">
+				<rom name="Amstrad_Action-Action_Pack_21__Side_B-Pilot-Type-Ins.cdt" size="38077" crc="36286218" sha1="5623ec30c86350753ef05dbba953c2e9a19971df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc300c0ccdba088">
+		<description>Amstrad_Action-Action_Pack_22__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="38785">
+				<rom name="Amstrad_Action-Action_Pack_22__Side_B.cdt" size="38785" crc="044dc469" sha1="300c0ccdba0889b6e9a0adbc4f453948cc37f641"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc54421f9e0d1f5">
+		<description>Amstrad_Action-Action_Pack_23__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="56593">
+				<rom name="Amstrad_Action-Action_Pack_23__Side_A.cdt" size="56593" crc="21dbb37d" sha1="54421f9e0d1f54c9dbc65384305b384c9799259a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc34a2dcfcacdcb">
+		<description>Amstrad_Action-Action_Pack_23__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="22921">
+				<rom name="Amstrad_Action-Action_Pack_23__Side_B.cdt" size="22921" crc="0ccca1f7" sha1="34a2dcfcacdcb42b25da37a8c30bac0e7521c14a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc9f15087d1828">
+		<description>Amstrad_Action-Action_Pack_24__ENGLISH__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="37981">
+				<rom name="Amstrad_Action-Action_Pack_24__ENGLISH__Side_A.cdt" size="37981" crc="22c8f9f5" sha1="c9f15087d1828fec7cd1bef562a40dfb7d86074a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc2eee1024e58b5">
+		<description>Amstrad_Action-Action_Pack_24__ENGLISH__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="25969">
+				<rom name="Amstrad_Action-Action_Pack_24__ENGLISH__Side_B.cdt" size="25969" crc="cb812369" sha1="2eee1024e58b56fb581d1eb0b25bcf3e967ad308"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcf6fd463cc278b">
+		<description>Amstrad_Action-Action_Pack_25__ENGLISH__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="42205">
+				<rom name="Amstrad_Action-Action_Pack_25__ENGLISH__Side_A.cdt" size="42205" crc="ee5c57c0" sha1="f6fd463cc278b04ea87bb56f557af15f216f699a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc617f40bc0ff42">
+		<description>Amstrad_Action-Action_Pack_25__ENGLISH__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="43801">
+				<rom name="Amstrad_Action-Action_Pack_25__ENGLISH__Side_B.cdt" size="43801" crc="2d78c88d" sha1="617f40bc0ff4216b989a8558d23cd0595a23d7e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcfe78f853e8e60">
+		<description>Amstrad_Action-Action_Pack_51__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="98194">
+				<rom name="Amstrad_Action-Action_Pack_51__Side_A.cdt" size="98194" crc="3f2f6819" sha1="fe78f853e8e60d4c0bfb9aa4f60f3a7ee65b9dfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc11d2c10810a0f">
+		<description>Amstrad_Action-Action_Pack_51__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="96558">
+				<rom name="Amstrad_Action-Action_Pack_51__Side_B.cdt" size="96558" crc="4e8b3efb" sha1="11d2c10810a0f8b82e9d15fdf8cd107a4f59110b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc482355fe41b06">
+		<description>Amstrad_Action-Classic_Collection_27__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="115591">
+				<rom name="Amstrad_Action-Classic_Collection_27__Side_A.cdt" size="115591" crc="9677d66c" sha1="482355fe41b0644d2eec738d83d96be1b23debc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8834d7e76f926">
+		<description>Amstrad_Action-Classic_Collection_27__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="95161">
+				<rom name="Amstrad_Action-Classic_Collection_27__Side_B.cdt" size="95161" crc="b91bea63" sha1="8834d7e76f926e09ce5a9cebe3069e87e1542060"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc319094fbacf4a">
+		<description>Amstrad_Action-Classic_Collection_28__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="18289">
+				<rom name="Amstrad_Action-Classic_Collection_28__Side_A.cdt" size="18289" crc="13b7811b" sha1="319094fbacf4a6937f7fa4964fa833661fe9b0a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc62e60de06cd56">
+		<description>Amstrad_Action-Classic_Collection_28__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="37963">
+				<rom name="Amstrad_Action-Classic_Collection_28__Side_B.cdt" size="37963" crc="a6e1b23b" sha1="62e60de06cd565d05441ebfd3207eac55cb5a79f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcd14163e735b2b">
+		<description>Amstrad_Action-Classic_Collection_29__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="16903">
+				<rom name="Amstrad_Action-Classic_Collection_29__Side_A.cdt" size="16903" crc="ada68950" sha1="d14163e735b2b5b531ba3e9e4a1441bde4ccac22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc939bc5cecd433">
+		<description>Amstrad_Action-Classic_Collection_29__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="36463">
+				<rom name="Amstrad_Action-Classic_Collection_29__Side_B.cdt" size="36463" crc="ee49e4bd" sha1="939bc5cecd43359fe9d8c5144d04d1df1432c876"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcb7e85cbd8b36e">
+		<description>Amstrad_Action-Classic_Collection_31__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="12427">
+				<rom name="Amstrad_Action-Classic_Collection_31__Side_A.cdt" size="12427" crc="4a01eda0" sha1="b7e85cbd8b36eec550c64faa9e6a09f1cd068103"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc916d225fe2748">
+		<description>Amstrad_Action-Classic_Collection_31__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="43687">
+				<rom name="Amstrad_Action-Classic_Collection_31__Side_B.cdt" size="43687" crc="3da0c940" sha1="916d225fe27481e52599751a8ab76a9d41ffad10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc96df3dc92bcd">
+		<description>Amstrad_Action-Serious_Action_30__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="28195">
+				<rom name="Amstrad_Action-Serious_Action_30__Side_A.cdt" size="28195" crc="3ca4cc32" sha1="c96df3dc92bcd63c9ff5da2eaf7d1424e2977fad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8721cbec908e1">
+		<description>Amstrad_Action-Serious_Action_30__Side_B-Neil_Android</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="40591">
+				<rom name="Amstrad_Action-Serious_Action_30__Side_B-Neil_Android.cdt" size="40591" crc="1789fcd8" sha1="8721cbec908e1940771d05dfa3cf7c65fad30ea0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5cead0be0bbc6">
+		<description>Amstrad_Action-Serious_Action_33__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="44575">
+				<rom name="Amstrad_Action-Serious_Action_33__Side_A.cdt" size="44575" crc="48f27800" sha1="5cead0be0bbc64497dcbf1eb93afb872e7e98285"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc7c8853cc1f69f">
+		<description>Amstrad_Action-Serious_Action_33__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="49267">
+				<rom name="Amstrad_Action-Serious_Action_33__Side_B.cdt" size="49267" crc="65bb0a99" sha1="7c8853cc1f69fd11dabffcf1023bbc2080a72e44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc7a3549abc1ad2">
+		<description>Amstrad_Action-Serious_Action_35__Side_A-Exolon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="54103">
+				<rom name="Amstrad_Action-Serious_Action_35__Side_A-Exolon.cdt" size="54103" crc="e9f336d5" sha1="7a3549abc1ad226a1d93ea950e63ca156bdc7f97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc26effa8861a1d">
+		<description>Amstrad_Action-Serious_Action_35__Side_B-Home_Accounts</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="28807">
+				<rom name="Amstrad_Action-Serious_Action_35__Side_B-Home_Accounts.cdt" size="28807" crc="ba361669" sha1="26effa8861a1d302c41fe4ef46e1f0f6aad927f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcbffdd0e5e8a50">
+		<description>Amstrad_Action-Serious_Action_36__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="33481">
+				<rom name="Amstrad_Action-Serious_Action_36__Side_A.cdt" size="33481" crc="5ee2eb07" sha1="bffdd0e5e8a5093b2ff9e3d18a14e12994e0324c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc08c3532f9698">
+		<description>Amstrad_Action-Serious_Action_36__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="66205">
+				<rom name="Amstrad_Action-Serious_Action_36__Side_B.cdt" size="66205" crc="ceb578b0" sha1="c08c3532f969893846a6a37dc1e67fbba997fd6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc794fafeddab9">
+		<description>Amstrad_Action-Serious_Action_37__Side_A-Nebulus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="66697">
+				<rom name="Amstrad_Action-Serious_Action_37__Side_A-Nebulus.cdt" size="66697" crc="bc60f606" sha1="c794fafeddab9568ee085c6f75d1802f65c81243"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc18d69af51af56">
+		<description>Amstrad_Action-Serious_Action_37__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="31693">
+				<rom name="Amstrad_Action-Serious_Action_37__Side_B.cdt" size="31693" crc="fb58a738" sha1="18d69af51af565e27066625cd0f17ee5304d8335"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcf04a31685ab50">
+		<description>Amstrad_Action-Serious_Action_38__Side_A-Uridium</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="50347">
+				<rom name="Amstrad_Action-Serious_Action_38__Side_A-Uridium.cdt" size="50347" crc="bf13335f" sha1="f04a31685ab5085359e21401e9755df649789219"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcdccf6daf5d67c">
+		<description>Amstrad_Action-Serious_Action_38__Side_B-The_AA_Toolbox</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="30355">
+				<rom name="Amstrad_Action-Serious_Action_38__Side_B-The_AA_Toolbox.cdt" size="30355" crc="c8c73b76" sha1="dccf6daf5d67cd2f39815a9384a9c6ce782dd338"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc6b26b412b0e98">
+		<description>Amstrad_Action-Serious_Action_39__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="103911">
+				<rom name="Amstrad_Action-Serious_Action_39__Side_A.cdt" size="103911" crc="f9065f36" sha1="6b26b412b0e9839ab9654e1da71e66de557597af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc974b5a8652437">
+		<description>Amstrad_Action-Serious_Action_39__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="66931">
+				<rom name="Amstrad_Action-Serious_Action_39__Side_B.cdt" size="66931" crc="1341bf17" sha1="974b5a86524373f2d5dd4be34b8a0c0dba70e431"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc1863549d6a9db">
+		<description>Amstrad_Action-Serious_Action_40__Side_A-Zynaps</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="43519">
+				<rom name="Amstrad_Action-Serious_Action_40__Side_A-Zynaps.cdt" size="43519" crc="b92531e3" sha1="1863549d6a9db796212bd66f11d8f22c5f23c42f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpca72a558fa9b47">
+		<description>Amstrad_Action-Serious_Action_40__Side_B-Spriting_Back_Utility</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="5365">
+				<rom name="Amstrad_Action-Serious_Action_40__Side_B-Spriting_Back_Utility.cdt" size="5365" crc="182d6348" sha1="a72a558fa9b47cfa66841a564b80a2bdc5be39f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc946f2996c15ba">
+		<description>Amstrad_Action-Serious_Action_41__Side_A-Ikari_Warriors-Screen_Dump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="44833">
+				<rom name="Amstrad_Action-Serious_Action_41__Side_A-Ikari_Warriors-Screen_Dump.cdt" size="44833" crc="86c15fd0" sha1="946f2996c15ba3a53502d27a03a70a26b214274b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc86ea00ee19c31">
+		<description>Amstrad_Action-Serious_Action_41__Side_B-Picasso</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="81253">
+				<rom name="Amstrad_Action-Serious_Action_41__Side_B-Picasso.cdt" size="81253" crc="1a647c1b" sha1="86ea00ee19c31816b9d11af72b9fef0d2c94f1f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc7caa1d885a2c2">
+		<description>Amstrad_Action-Serious_Action_43__Side_A-Turbo_the_Tortoise</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="88555">
+				<rom name="Amstrad_Action-Serious_Action_43__Side_A-Turbo_the_Tortoise.cdt" size="88555" crc="a43e4c8f" sha1="7caa1d885a2c21693c4b80c89693a6962ee83c89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpccdf7b3a540cbb">
+		<description>Amstrad_Action-Serious_Action_43__Side_B-Crossword_Compiler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="187555">
+				<rom name="Amstrad_Action-Serious_Action_43__Side_B-Crossword_Compiler.cdt" size="187555" crc="5cd55baf" sha1="cdf7b3a540cbb8b057bdcc4de31cfcb15be172ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc472498f5e85cd">
+		<description>Amstrad_Action-Serious_Action_44__Side_A-Crazy_Cars_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="43753">
+				<rom name="Amstrad_Action-Serious_Action_44__Side_A-Crazy_Cars_3.cdt" size="43753" crc="ddca4cd5" sha1="472498f5e85cd7ab6cd59f2d47d838725f05901f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc21d6d5812daa6">
+		<description>Amstrad_Action-Serious_Action_44__Side_B-RTC_Player-Daily_Diary-Crossword_Compiler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="28549">
+				<rom name="Amstrad_Action-Serious_Action_44__Side_B-RTC_Player-Daily_Diary-Crossword_Compiler.cdt" size="28549" crc="875b751e" sha1="21d6d5812daa6dfc18e5fedb5fcf8962c10ff8f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc197a0b577979">
+		<description>Amstrad_Action-Serious_Action_45__Side_A-D.E.S-_Dos_Copy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="54055">
+				<rom name="Amstrad_Action-Serious_Action_45__Side_A-D.E.S-_Dos_Copy.cdt" size="54055" crc="18099fe2" sha1="c197a0b577979ba18696a18b22afdc85a209266b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3152bdcc7562b">
+		<description>Amstrad_Action-Serious_Action_45__Side_B-Breakdown-Minesweeper-Logistic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="50233">
+				<rom name="Amstrad_Action-Serious_Action_45__Side_B-Breakdown-Minesweeper-Logistic.cdt" size="50233" crc="c8779a4c" sha1="3152bdcc7562baf0e39d31d22b9742512e537077"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcaa4be94955cbe">
+		<description>Amstrad_Action-Serious_Action_47__Side_A1-Menu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="1867">
+				<rom name="Amstrad_Action-Serious_Action_47__Side_A1-Menu.cdt" size="1867" crc="8ade367b" sha1="aa4be94955cbe336679276803b8f67cc74f36366"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcd704f2a17324f">
+		<description>Amstrad_Action-Serious_Action_47__Side_A2-Samurai_Trilogy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="90619">
+				<rom name="Amstrad_Action-Serious_Action_47__Side_A2-Samurai_Trilogy.cdt" size="90619" crc="ba67dc77" sha1="d704f2a17324f860764702579da64aa71cb06ddf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc95e153fd6454">
+		<description>Amstrad_Action-Serious_Action_47__Side_B1-Samurai_Trilogy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="35401">
+				<rom name="Amstrad_Action-Serious_Action_47__Side_B1-Samurai_Trilogy.cdt" size="35401" crc="a2e48305" sha1="c95e153fd64548af84a4e09efafe5901b250091c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpca7bb4d400490e">
+		<description>Amstrad_Action-Serious_Action_47__Side_B2-Powerspell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="70129">
+				<rom name="Amstrad_Action-Serious_Action_47__Side_B2-Powerspell.cdt" size="70129" crc="3415be4e" sha1="a7bb4d400490e88da00a1160b24c59781c5e24c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc06334950643c6">
+		<description>Amstrad_Action-Serious_Action_48__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="94117">
+				<rom name="Amstrad_Action-Serious_Action_48__Side_A.cdt" size="94117" crc="e1cb8ce6" sha1="06334950643c619cc148909b86606d5cc1812770"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc65b5b39275f90">
+		<description>Amstrad_Action-Serious_Action_48__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="97003">
+				<rom name="Amstrad_Action-Serious_Action_48__Side_B.cdt" size="97003" crc="11665903" sha1="65b5b39275f90df99bebd767f98599e5245641ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5bb32e7c9ee18">
+		<description>Amstrad_Action-Serious_Action_49__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="58021">
+				<rom name="Amstrad_Action-Serious_Action_49__Side_A.cdt" size="58021" crc="77ece08f" sha1="5bb32e7c9ee1837c11dfb25a5074605018c65157"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcd7970536c70b1">
+		<description>Amstrad_Action-Serious_Action_49__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="67741">
+				<rom name="Amstrad_Action-Serious_Action_49__Side_B.cdt" size="67741" crc="39537d38" sha1="d7970536c70b181efc4572ff96a948b65771e07c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpca55c455adb2d7">
+		<description>Amstrad_Action-Special_32__Side_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="38033">
+				<rom name="Amstrad_Action-Special_32__Side_A.cdt" size="38033" crc="d10f4fde" sha1="a55c455adb2d7a5913ed7fb6251083fcdca1c073"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcb8e002e02bb42">
+		<description>Amstrad_Action-Special_32__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="102961">
+				<rom name="Amstrad_Action-Special_32__Side_B.cdt" size="102961" crc="ba43fb8f" sha1="b8e002e02bb42019593a216a69170dfba69775a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpce9ebcf84b310d">
+		<description>Amstrad_Action_04-Christmas_Gift-Pack__Side_A-Kung-Fu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="36841">
+				<rom name="Amstrad_Action_04-Christmas_Gift-Pack__Side_A-Kung-Fu.cdt" size="36841" crc="892c6541" sha1="e9ebcf84b310d2f46af956fd55499a861a9e9039"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4e2e3e2df2f01">
+		<description>Amstrad_Action_04-Christmas_Gift-Pack__Side_B-Number_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="37656">
+				<rom name="Amstrad_Action_04-Christmas_Gift-Pack__Side_B-Number_1.cdt" size="37656" crc="246eabf4" sha1="4e2e3e2df2f01b587ef0ed8b3934559f4345b133"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc259f5403161ef">
+		<description>Amstrad_Action_16-Christmas_Avalanche__Side_A1-Firebird_Demo_(Hive-Starstrike_2-Heartland)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="65085">
+				<rom name="Amstrad_Action_16-Christmas_Avalanche__Side_A1-Firebird_Demo_(Hive-Starstrike_2-Heartland).cdt" size="65085" crc="80bc2740" sha1="259f5403161ef5fca078ae96588c1df9ef8a55c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc23fbc69a77ad0">
+		<description>Amstrad_Action_16-Christmas_Avalanche__Side_A2-Firebird_Demo_(Druid_1)__(BADDUMP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="46156">
+				<rom name="Amstrad_Action_16-Christmas_Avalanche__Side_A2-Firebird_Demo_(Druid_1)__(BADDUMP).cdt" size="46156" crc="47e56c9c" sha1="23fbc69a77ad05b9b701eaa802cd534f0e563c89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc0c1f88e05d6a8">
+		<description>Amstrad_Action_16-Christmas_Avalanche__Side_B1-Dark_Sceptre_Demo__(Bad)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="42485">
+				<rom name="Amstrad_Action_16-Christmas_Avalanche__Side_B1-Dark_Sceptre_Demo__(Bad).cdt" size="42485" crc="24b88c2c" sha1="0c1f88e05d6a8447e27bea7126ff1df43ce88431"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc0b4554bef25cb">
+		<description>Amstrad_Action_16-Christmas_Avalanche__Side_B2-Ramdisc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="10794">
+				<rom name="Amstrad_Action_16-Christmas_Avalanche__Side_B2-Ramdisc.cdt" size="10794" crc="1ec3e66c" sha1="0b4554bef25cb6010dc0eb7e26b810c7a7f3be30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3333c7a64e115">
+		<description>Amstrad_Action_16-Christmas_Avalanche__Side_B3-Fastform</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="6913">
+				<rom name="Amstrad_Action_16-Christmas_Avalanche__Side_B3-Fastform.cdt" size="6913" crc="2bce3c67" sha1="3333c7a64e1153cc989bb49034a7d5fc9507f07b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc67beb88ec34be">
+		<description>Amstrad_Action_16-Christmas_Avalanche__Side_B4-AMFile</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="15313">
+				<rom name="Amstrad_Action_16-Christmas_Avalanche__Side_B4-AMFile.cdt" size="15313" crc="02780bd7" sha1="67beb88ec34be8197f88309315d08e82edce7a14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc9ba639728e19">
+		<description>Amstrad_Action_16-Christmas_Avalanche__Side_B5-Gigo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="9235">
+				<rom name="Amstrad_Action_16-Christmas_Avalanche__Side_B5-Gigo.cdt" size="9235" crc="c5c8419f" sha1="c9ba639728e19b2ff3b8e1852adb869cfda23de3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc37574bd70f713">
+		<description>Amstrad_Action_16-Christmas_Avalanche__Side_B6-Amstrad_Drumkit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="4237">
+				<rom name="Amstrad_Action_16-Christmas_Avalanche__Side_B6-Amstrad_Drumkit.cdt" size="4237" crc="601d6bf6" sha1="37574bd70f713fd346cf246d33cad5da6cea3556"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc98bea409c26da">
+		<description>Amstrad_Action_28-Christmas_Gift-Pack__Side_A-The_Duct</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="69375">
+				<rom name="Amstrad_Action_28-Christmas_Gift-Pack__Side_A-The_Duct.cdt" size="69375" crc="6c581b0e" sha1="98bea409c26dab1bb4772999297ffecad5ba7440"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc09800003fa7a2">
+		<description>Amstrad_Action_28-Christmas_Gift-Pack__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="53635">
+				<rom name="Amstrad_Action_28-Christmas_Gift-Pack__Side_B.cdt" size="53635" crc="c45efc3e" sha1="09800003fa7a2272d1703335a6110b10c791c49c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4170eddeca903">
+		<description>Amstrad_Action_37-Birthday_Gift_Pack__Side_A-Dizzy-Amstrad_Action_Special_Edition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="61694">
+				<rom name="Amstrad_Action_37-Birthday_Gift_Pack__Side_A-Dizzy-Amstrad_Action_Special_Edition.cdt" size="61694" crc="a6299c16" sha1="4170eddeca9033970715f7e583a6e123ca3f1121"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc0fdb5ba21121d">
+		<description>Amstrad_Action_37-Birthday_Gift_Pack__Side_B1-Micro_Assembler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="11089">
+				<rom name="Amstrad_Action_37-Birthday_Gift_Pack__Side_B1-Micro_Assembler.cdt" size="11089" crc="681a4616" sha1="0fdb5ba21121d899af1a86284a8b516159aa82b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc86b3a5b55613a">
+		<description>Amstrad_Action_37-Birthday_Gift_Pack__Side_B2-Smart_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="24019">
+				<rom name="Amstrad_Action_37-Birthday_Gift_Pack__Side_B2-Smart_2.cdt" size="24019" crc="4c4f9d60" sha1="86b3a5b55613a5019ac37c71efa064d8b14da90f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4dfd4c247aa1d">
+		<description>Amstrad_Action_37-Birthday_Gift_Pack__Side_B3-Disk_Formatter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="5833">
+				<rom name="Amstrad_Action_37-Birthday_Gift_Pack__Side_B3-Disk_Formatter.cdt" size="5833" crc="91496aee" sha1="4dfd4c247aa1db7fe9e92dd372fe501ba197eb56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5c6b4e07e0105">
+		<description>Amstrad_Action_37-Birthday_Gift_Pack__Side_B4-Ondisk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="835">
+				<rom name="Amstrad_Action_37-Birthday_Gift_Pack__Side_B4-Ondisk.cdt" size="835" crc="264af52b" sha1="5c6b4e07e010545c53982c1174fcecc4416b37ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc005ecc0fa541e">
+		<description>Amstrad_Action_40-Christmas_Gift-Pack__Side_A-Total_Eclipse_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="54313">
+				<rom name="Amstrad_Action_40-Christmas_Gift-Pack__Side_A-Total_Eclipse_1.cdt" size="54313" crc="b165e156" sha1="005ecc0fa541e6ddccdc89707bd9091508d76650"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5203fdad06e82">
+		<description>Amstrad_Action_40-Christmas_Gift-Pack__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="42819">
+				<rom name="Amstrad_Action_40-Christmas_Gift-Pack__Side_B.cdt" size="42819" crc="4de0c443" sha1="5203fdad06e82169870b97ccb0067090fa71b55d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc0957cc97bb0dc">
+		<description>Amstrad_Action_49-Birthday_Gift_Pack__Side_A-Shinobi_Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="78777">
+				<rom name="Amstrad_Action_49-Birthday_Gift_Pack__Side_A-Shinobi_Demo.cdt" size="78777" crc="57c83361" sha1="0957cc97bb0dcb3e5181adca21d326c28aa6c9d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpce8a41af59976e">
+		<description>Amstrad_Action_49-Birthday_Gift_Pack__Side_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="38335">
+				<rom name="Amstrad_Action_49-Birthday_Gift_Pack__Side_B.cdt" size="38335" crc="8c305f63" sha1="e8a41af59976ee6248808f059e3eb298315c3f8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc83c21103a1225">
+		<description>Amstrad_Action_61-Birthday_Gift_Pack__Side_A-Ironman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="69106">
+				<rom name="Amstrad_Action_61-Birthday_Gift_Pack__Side_A-Ironman.cdt" size="69106" crc="e62c9947" sha1="83c21103a12251255a5b5a7f1ffd4f30fa372fb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4644ebfb93943">
+		<description>Amstrad_Action_61-Birthday_Gift_Pack__Side_B-Tauceti</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="54874">
+				<rom name="Amstrad_Action_61-Birthday_Gift_Pack__Side_B-Tauceti.cdt" size="54874" crc="8d090f8a" sha1="4644ebfb93943adc9cd0df8d55cb625f4e1fbf5b"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="cpc7846577beb21c">
-		<description>betiledv2</description>
+		<description>Betiled_v2</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="71317">
-				<rom name="betiledv2.cdt" size="71317" crc="9693d766" sha1="7846577beb21c13b110b689b9358b5b635a96db5"/>
+				<rom name="Betiled_v2.cdt" size="71317" crc="9693d766" sha1="7846577beb21c13b110b689b9358b5b635a96db5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39,16 +1159,6 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="38893">
 				<rom name="Dawn of Kernel.cdt" size="38893" crc="4b1211ab" sha1="aeecf2f866afc21573a5e0fa6ce0130f5ed249ec"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpc70ca1d0136551">
-		<description>desktop</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="cpc_cass">
-			<dataarea name="cass" size="54">
-				<rom name="desktop.ini" size="54" crc="46627eb3" sha1="70ca1d0136551b572e10d754d831abf67909df89"/>
 			</dataarea>
 		</part>
 	</software>
