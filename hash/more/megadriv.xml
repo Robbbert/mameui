@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1820 -->
+<!-- Number of items in this list = 1824 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -10772,6 +10772,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen27eca8fbf6a12">
+		<description>Out of the Vortex (Prototype)(2019)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Out of the Vortex (Prototype)(2019).md" size="2097152" crc="3eaab03e" sha1="27eca8fbf6a120d8372bed07b22cbfba951a763a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf8cba37d3c48c">
+		<description>Out of the Vortex (Prototype)(2022)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2084116">
+				<rom name="Out of the Vortex (Prototype)(2022).md" size="2084116" crc="f069238c" sha1="f8cba37d3c48cbfa14b9b19139650e7a1797b2b9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen00987cc9f9222">
 		<description>outrun (arcade colors)(v2.1)</description>
 		<year>????</year>
@@ -13982,6 +14002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genb803a3c4f5453">
+		<description>Sonic Maxidrive (Hack)(2024)(Speems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="852474">
+				<rom name="Sonic Maxidrive (Hack)(2024)(Speems).bin" size="852474" crc="2fbcb6ae" sha1="b803a3c4f5453f76405b544ad6ba0b751052c326"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen26f3c8d2188e4">
 		<description>Sonic Megamix V3.0 (Hack By Team Megamix)</description>
 		<year>????</year>
@@ -14049,6 +14079,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Sonic Ring Rush by Ollie (sonic 1 hack).bin" size="1048576" crc="7f2d76b8" sha1="b216983b7791d69242a2f44a5eaa618352eb2f50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7a2adfb9258f8">
+		<description>Sonic Swift (HACK)(2024)(Timaeus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="879814">
+				<rom name="Sonic Swift (HACK)(2024)(Timaeus).bin" size="879814" crc="c558dfe7" sha1="7a2adfb9258f8954f6c29b0e26ecdd7ca8bf69c0"/>
 			</dataarea>
 		</part>
 	</software>
