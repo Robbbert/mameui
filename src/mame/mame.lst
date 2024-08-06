@@ -581,6 +581,9 @@ altos5                          //
 @source:altos/altos486.cpp
 altos486
 
+@source:altos/altos586.cpp
+altos586
+
 @source:altos/altos8600.cpp
 altos8600
 
@@ -28661,6 +28664,7 @@ amhbattl
 docchift
 mmhammer
 shpchamp
+wwdash
 zenponta
 
 @source:misc/anes.cpp
@@ -30680,7 +30684,17 @@ jubileep                        //
 
 @source:misc/jungleyo.cpp
 frtgenie
+frtgeniea
+frtgenieb
+frtgeniec
+frtgenied
 jungleyo
+magjack
+magjacka
+magjackb
+magjackc
+magjackp
+magjackpa
 
 @source:misc/kas89.cpp
 kas89                           // 1989, SFC S.R.L.
@@ -33933,7 +33947,7 @@ terrafu                         // (c) 1987 Nichibutsu USA
 terrafua                        // (c) 1987 Nichibutsu USA
 
 @source:nichibutsu/cclimber.cpp
-au                              // hack
+au                              // Tehkan
 bagmanf                         // bootleg on Falcon FCK-00 (Falcon Crazy Kong) PCB
 bigkong                         // bootleg
 cannonb                         // (c) 1985 Soft
@@ -41969,8 +41983,10 @@ e100                            //
 @source:skeleton/easy_karaoke.cpp
 bkarast
 dks7000c
+dks7000p
 easykara
 karams
+karamsg
 karatvst
 karatvsta
 mks4001
@@ -42123,6 +42139,9 @@ junior80                        //
 
 @source:skeleton/kkcount.cpp
 kkcount
+
+@source:skeleton/koto_zevio.cpp
+dbzonep                         //
 
 @source:skeleton/kron.cpp
 kron180                         // 1995 Kron Ltd, Ukraine
@@ -45240,6 +45259,7 @@ wrlshunt                        // Wireless: Hunting Video Game System
 
 @source:tvgames/generalplus_gpl16250_spi.cpp
 bkrankp
+prailpls
 
 @source:tvgames/generalplus_gpl16250_spi_direct.cpp
 fixitflx
