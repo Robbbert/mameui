@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 123 -->
+<!-- Number of items in this list = 117 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc82fa11a8ebd7f">
 		<description>Amstrad Action Covertape 72</description>
@@ -229,26 +229,6 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="76027">
 				<rom name="Amstrad_Action-Action_Pack_12__Side_B-Shockway_Rider-DiscContent-Pokes_Galore.cdt" size="76027" crc="e3e1a26e" sha1="4373c337db023340f0a51a7c71ecbd2453cc4c6f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpc32bd60e840706">
-		<description>Amstrad_Action-Action_Pack_13__Side_A-Ranarama-Maze_Mania-Pokes_Galore</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="cpc_cass">
-			<dataarea name="cass" size="103201">
-				<rom name="Amstrad_Action-Action_Pack_13__Side_A-Ranarama-Maze_Mania-Pokes_Galore.cdt" size="103201" crc="81ac1a3c" sha1="32bd60e840706071254d724adcaffa83c71b89ee"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpc1b02b906fd4fe">
-		<description>Amstrad_Action-Action_Pack_13__Side_B-Word_Pro-Easi-Sheet-Powerbase_2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="cpc_cass">
-			<dataarea name="cass" size="70807">
-				<rom name="Amstrad_Action-Action_Pack_13__Side_B-Word_Pro-Easi-Sheet-Powerbase_2.cdt" size="70807" crc="eef24f5d" sha1="1b02b906fd4fee5abca27b8696768a9b45c5b186"/>
 			</dataarea>
 		</part>
 	</software>
@@ -902,26 +882,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cpce9ebcf84b310d">
-		<description>Amstrad_Action_04-Christmas_Gift-Pack__Side_A-Kung-Fu</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="cpc_cass">
-			<dataarea name="cass" size="36841">
-				<rom name="Amstrad_Action_04-Christmas_Gift-Pack__Side_A-Kung-Fu.cdt" size="36841" crc="892c6541" sha1="e9ebcf84b310d2f46af956fd55499a861a9e9039"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpc4e2e3e2df2f01">
-		<description>Amstrad_Action_04-Christmas_Gift-Pack__Side_B-Number_1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="cpc_cass">
-			<dataarea name="cass" size="37656">
-				<rom name="Amstrad_Action_04-Christmas_Gift-Pack__Side_B-Number_1.cdt" size="37656" crc="246eabf4" sha1="4e2e3e2df2f01b587ef0ed8b3934559f4345b133"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="cpc259f5403161ef">
 		<description>Amstrad_Action_16-Christmas_Avalanche__Side_A1-Firebird_Demo_(Hive-Starstrike_2-Heartland)</description>
 		<year>????</year>
@@ -1022,16 +982,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cpc4170eddeca903">
-		<description>Amstrad_Action_37-Birthday_Gift_Pack__Side_A-Dizzy-Amstrad_Action_Special_Edition</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="cpc_cass">
-			<dataarea name="cass" size="61694">
-				<rom name="Amstrad_Action_37-Birthday_Gift_Pack__Side_A-Dizzy-Amstrad_Action_Special_Edition.cdt" size="61694" crc="a6299c16" sha1="4170eddeca9033970715f7e583a6e123ca3f1121"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="cpc0fdb5ba21121d">
 		<description>Amstrad_Action_37-Birthday_Gift_Pack__Side_B1-Micro_Assembler</description>
 		<year>????</year>
@@ -1089,26 +1039,6 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="42819">
 				<rom name="Amstrad_Action_40-Christmas_Gift-Pack__Side_B.cdt" size="42819" crc="4de0c443" sha1="5203fdad06e82169870b97ccb0067090fa71b55d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpc0957cc97bb0dc">
-		<description>Amstrad_Action_49-Birthday_Gift_Pack__Side_A-Shinobi_Demo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="cpc_cass">
-			<dataarea name="cass" size="78777">
-				<rom name="Amstrad_Action_49-Birthday_Gift_Pack__Side_A-Shinobi_Demo.cdt" size="78777" crc="57c83361" sha1="0957cc97bb0dcb3e5181adca21d326c28aa6c9d6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpce8a41af59976e">
-		<description>Amstrad_Action_49-Birthday_Gift_Pack__Side_B</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="cpc_cass">
-			<dataarea name="cass" size="38335">
-				<rom name="Amstrad_Action_49-Birthday_Gift_Pack__Side_B.cdt" size="38335" crc="8c305f63" sha1="e8a41af59976ee6248808f059e3eb298315c3f8b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1229,6 +1159,16 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="29148">
 				<rom name="Magica.cdt" size="29148" crc="270ee146" sha1="5c9f6986156aba3b86632fec6f7bb7b74e0c2b3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4d17941da46bf">
+		<description>Space Pest Control</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="30037">
+				<rom name="Space Pest Control.cdt" size="30037" crc="e42d5f4a" sha1="4d17941da46bf571dbb46c80115b74c6fdc9fd8f"/>
 			</dataarea>
 		</part>
 	</software>

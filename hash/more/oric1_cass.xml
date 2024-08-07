@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 34 -->
+<!-- Number of items in this list = 120 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -332,6 +332,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="orid3b88b5ed91e9">
+		<description>Backgammon (UK) (1983)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="31538">
+				<rom name="Backgammon (UK) (1983).tap" size="31538" crc="ecc15e30" sha1="d3b88b5ed91e95a475298a99c16234c9b351fda8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori5136a1ece4961">
+		<description>Balles (F) (1984)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2949">
+				<rom name="Balles (F) (1984).tap" size="2949" crc="5716d1a2" sha1="5136a1ece49614cb6eb2c2e3726f5e5360954cda"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori20b85099bf942">
 		<description>balles</description>
 		<year>????</year>
@@ -339,6 +359,846 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="2949">
 				<rom name="balles.tap" size="2949" crc="ba7299e8" sha1="20b85099bf9429a51c604c4b68a528ea57067a9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oried3afb0e359a9">
+		<description>Base de Connaissances (F) (1984)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="6789">
+				<rom name="Base de Connaissances (F) (1984).tap" size="6789" crc="ea74bf41" sha1="ed3afb0e359a9b6efd393bb04f8bbfd0a2d4dc2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orid0e33d94420f6">
+		<description>Basic Francais v1.0 (1984)(Loriciels)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="5668">
+				<rom name="Basic Francais v1.0 (1984)(Loriciels)(fr).tap" size="5668" crc="900928da" sha1="d0e33d94420f6388d630379f7eb7abb2eab21eba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori2622824536811">
+		<description>Big Text</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1248">
+				<rom name="Big Text.tap" size="1248" crc="436172e2" sha1="26228245368112b0721341f50f4c705b30527f35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori29609169a5814">
+		<description>Binary2decimal (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="431">
+				<rom name="Binary2decimal (UK) (19xx) (PD).tap" size="431" crc="1408ef58" sha1="29609169a5814a7eebc8d38191d338b1f46019ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriafe4b28bfb813">
+		<description>Blackjack (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1964">
+				<rom name="Blackjack (UK) (19xx) (PD).tap" size="1964" crc="317a5b2b" sha1="afe4b28bfb813fc4a281753d65192f18af0f465b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orif77faa3f1e7df">
+		<description>Boite Noire (F) (1984)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="7532">
+				<rom name="Boite Noire (F) (1984).tap" size="7532" crc="27c8da5c" sha1="f77faa3f1e7df02fb700a575f49148933134f6ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori78b807e6094f3">
+		<description>Bomber (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1860">
+				<rom name="Bomber (UK) (19xx) (PD).tap" size="1860" crc="0bf0f04c" sha1="78b807e6094f359cfa52eb03b0921518061175af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orie2b700c129347">
+		<description>BONUSCOR (1996)(-)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="622">
+				<rom name="BONUSCOR (1996)(-)[b].tap" size="622" crc="6347fb48" sha1="e2b700c1293479de2519d79736975174e1a22c2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori14619da5929ee">
+		<description>Bounce Sound Demo (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="30264">
+				<rom name="Bounce Sound Demo (19xx)(-).tap" size="30264" crc="6f79133e" sha1="14619da5929eee5545b7c8fbb563654cd5c7c113"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orib77b637a2c432">
+		<description>Bouteille (F) (1984)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="7105">
+				<rom name="Bouteille (F) (1984).tap" size="7105" crc="9d13134e" sha1="b77b637a2c432f610ca92c0830df78aca99e80c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori1e436030b76c6">
+		<description>BOUTEILLE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="7105">
+				<rom name="BOUTEILLE.tap" size="7105" crc="05fc606c" sha1="1e436030b76c6dffec1360699fe760fcf3b6f1aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriaf8d60f65cc05">
+		<description>Bowling Master by Ventzislav Tzvetkov (2003) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1024">
+				<rom name="Bowling Master by Ventzislav Tzvetkov (2003) (PD).tap" size="1024" crc="505c3d21" sha1="af8d60f65cc0533c003b121d725ba3ec2ae8b6d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriac81a2753c400">
+		<description>Box 1.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4069">
+				<rom name="Box 1.1.tap" size="4069" crc="486bed39" sha1="ac81a2753c400603361e87f757344b5f967a4c07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori8806277973027">
+		<description>BoxWorld by Stephane Geley (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="23529">
+				<rom name="BoxWorld by Stephane Geley (2004) (PD).tap" size="23529" crc="fe8bfe33" sha1="88062779730279ca4bbb49151321397da94bab68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori913c670ee7ce7">
+		<description>Braque</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1214">
+				<rom name="Braque.tap" size="1214" crc="6f25f364" sha1="913c670ee7ce79e0db6f15190ff3fc30cb001269"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori8597900a59dd9">
+		<description>Braque_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1204">
+				<rom name="Braque_.tap" size="1204" crc="c499bc61" sha1="8597900a59dd9e3136febf4bcc7d19a1ed61d388"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oria33068637bb3b">
+		<description>BREAKMACHI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="9743">
+				<rom name="BREAKMACHI.tap" size="9743" crc="f352c40e" sha1="a33068637bb3b93b18826e9aba73c68401e16e04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori8ff86d595b8b6">
+		<description>BreakOric 1K by Ventzislav Tzvetkov (2003) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1024">
+				<rom name="BreakOric 1K by Ventzislav Tzvetkov (2003) (PD).tap" size="1024" crc="ca13db99" sha1="8ff86d595b8b60dcdc01f0bf7105bd9b017940a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori5f3524e1ab6d8">
+		<description>Breakout (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1500">
+				<rom name="Breakout (UK) (19xx) (PD).tap" size="1500" crc="4b091c5f" sha1="5f3524e1ab6d8734c256a482c8bfd05556d257aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orifcf540f8a6e7a">
+		<description>Breakout by Peter Shaw (UK) (1984) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1382">
+				<rom name="Breakout by Peter Shaw (UK) (1984) (PD).tap" size="1382" crc="13e36ea9" sha1="fcf540f8a6e7afe7a046236fc1bd4f0fea62129a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori0d0f5fa593a69">
+		<description>Bretagne</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="20470">
+				<rom name="Bretagne.tap" size="20470" crc="76faf9c4" sha1="0d0f5fa593a69119f937cd056fbea400c306c61c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriaf1207912c3f4">
+		<description>buccan.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="37906">
+				<rom name="buccan.bas.tap" size="37906" crc="de93be19" sha1="af1207912c3f499e2540d1b5b6986a4ce68a71d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori62a1265561671">
+		<description>buccan</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1112">
+				<rom name="buccan.tap" size="1112" crc="ea318889" sha1="62a12655616717c5bc4c40abd33e8d8d66e82787"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orid136b12964fd0">
+		<description>BULLES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2439">
+				<rom name="BULLES.tap" size="2439" crc="edf1c04e" sha1="d136b12964fd078ca39e8554b9162e1663ba2ae3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori120709ad112b3">
+		<description>Bunker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="13561">
+				<rom name="Bunker.tap" size="13561" crc="44041224" sha1="120709ad112b34d6748d5d74232b599296db9074"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori7bc36ff0bc04b">
+		<description>Byrakrater (19xx)(-)(se)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1385">
+				<rom name="Byrakrater (19xx)(-)(se).tap" size="1385" crc="46e089f8" sha1="7bc36ff0bc04b68867de80dd3a52eed9d262a878"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori2c70ac5cd053d">
+		<description>Calcul Mental (19xx)(-)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1641">
+				<rom name="Calcul Mental (19xx)(-)(fr).tap" size="1641" crc="49c964fb" sha1="2c70ac5cd053daf2f910d5f771f295ae9d022a83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori9418ea404400c">
+		<description>Camemb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="668">
+				<rom name="Camemb.tap" size="668" crc="03674f42" sha1="9418ea404400c82307fdc104b1410cef5bc8c629"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori74d1b934fd376">
+		<description>Camscr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="8185">
+				<rom name="Camscr.tap" size="8185" crc="7f2a80e9" sha1="74d1b934fd37658d20c31a66fe4eec4a9cfc62af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori6c55cad74bd1d">
+		<description>Capitals (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="834">
+				<rom name="Capitals (UK) (19xx) (PD).tap" size="834" crc="8b41cda0" sha1="6c55cad74bd1dada376debfd229e5db93c5ae1d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori9bda458ed6ceb">
+		<description>CARAMBOLAGE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2086">
+				<rom name="CARAMBOLAGE.tap" size="2086" crc="72a23645" sha1="9bda458ed6ceb18b0d659cbf17fb3173f8e509f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriac11d4e2140cb">
+		<description>Cargen (19xx)(-)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4845">
+				<rom name="Cargen (19xx)(-)(fr).tap" size="4845" crc="eb841612" sha1="ac11d4e2140cb77d628c1fd4b2b4bb4390888ef9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori5c74b4f64dc8d">
+		<description>Cargrec (F) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1046">
+				<rom name="Cargrec (F) (19xx).tap" size="1046" crc="219d250f" sha1="5c74b4f64dc8d5c4ecf62a97a483a18a92c4b3be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orida09b7e8caaaf">
+		<description>carmagic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="5921">
+				<rom name="carmagic.tap" size="5921" crc="6a8a7907" sha1="da09b7e8caaafd0a6f74f2a105110da0a28d57d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori4a90e5a5e43ba">
+		<description>carnaval</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="9359">
+				<rom name="carnaval.tap" size="9359" crc="ebfe96a3" sha1="4a90e5a5e43ba7b0f92a497b58d0e0052dd69edc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori5e03b4bbf1e41">
+		<description>Cartoons (1984)(Serge Querne)(fr)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="15973">
+				<rom name="Cartoons (1984)(Serge Querne)(fr)(PD).tap" size="15973" crc="cb70794c" sha1="5e03b4bbf1e41494299ea1eef8ebdb4cc8b88dee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori900d4a275399c">
+		<description>Casse Briques (F) (19xx) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4113">
+				<rom name="Casse Briques (F) (19xx) [a2].tap" size="4113" crc="efc45d71" sha1="900d4a275399c32774671954ce0ff6900085a1b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori82ae645e80dd8">
+		<description>Cassette Mathematique (19xx)(-)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2808">
+				<rom name="Cassette Mathematique (19xx)(-)(fr).tap" size="2808" crc="9c44c93d" sha1="82ae645e80dd8725ece62324a8be0b574b6a09a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orib34656f7a12f0">
+		<description>Caterpillar (UK) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1301">
+				<rom name="Caterpillar (UK) (19xx).tap" size="1301" crc="c7c80e4b" sha1="b34656f7a12f0d3f0173e01236241f8e0756014e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori6d92f214f049d">
+		<description>Cavalier (19xx)(-)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="39958">
+				<rom name="Cavalier (19xx)(-)(fr).tap" size="39958" crc="e31cfbf5" sha1="6d92f214f049dd7fbd1b38463e7af2738b9c04f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori4d2bcabe38099">
+		<description>cenucl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="17675">
+				<rom name="cenucl.tap" size="17675" crc="02857965" sha1="4d2bcabe38099f6b6f1579968c4d9011756f2907"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori9505b7e64a1f9">
+		<description>chameleoric</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="3230">
+				<rom name="chameleoric.tap" size="3230" crc="99831808" sha1="9505b7e64a1f934dbd62e90145ed3c365e5d48bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori5a2064082aac2">
+		<description>Character Define (UK) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="451">
+				<rom name="Character Define (UK) (19xx).tap" size="451" crc="dfeec24b" sha1="5a2064082aac2872008164a07d5cb97f5a77205a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori7087896da0c1e">
+		<description>Character Definition Program (UK) (1983)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4373">
+				<rom name="Character Definition Program (UK) (1983).tap" size="4373" crc="a2ee5514" sha1="7087896da0c1e866ee8620fd0c0dce25f60e0c1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orifaec0cb14250e">
+		<description>Chared by Twilighte (199x) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2886">
+				<rom name="Chared by Twilighte (199x) (PD).tap" size="2886" crc="5473204a" sha1="faec0cb14250e21083ba112b40e7eec2767a8c30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriec3ecebbf80ed">
+		<description>CHARPENTIER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4179">
+				<rom name="CHARPENTIER.tap" size="4179" crc="e5e7c59b" sha1="ec3ecebbf80ed4e2c5c48ffbd184f452143486ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori4a792626ee7e1">
+		<description>Chase (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1136">
+				<rom name="Chase (UK) (19xx) (PD).tap" size="1136" crc="ce3b0f7a" sha1="4a792626ee7e1e641d352d251aab5f72f0d1f977"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori3e6379372f574">
+		<description>Chasse Au Tresor (F) (1983)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="36598">
+				<rom name="Chasse Au Tresor (F) (1983).tap" size="36598" crc="3de69558" sha1="3e6379372f5741931278d9b7684a2a6a4953fa06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orice4195297056b">
+		<description>Ched90 by Twilighte (UK) (1990)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="7126">
+				<rom name="Ched90 by Twilighte (UK) (1990).tap" size="7126" crc="2f6af3dc" sha1="ce4195297056b64ee4807318bf44c0578f0b17b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori2faa6c20b9f1f">
+		<description>Chenille Infernale (F) (1984)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="6500">
+				<rom name="Chenille Infernale (F) (1984).tap" size="6500" crc="6ad94dd9" sha1="2faa6c20b9f1f631418d6c0078a079f43b12930e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori4d85d5db0d3d9">
+		<description>Chequebook (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="509">
+				<rom name="Chequebook (UK) (19xx) (PD).tap" size="509" crc="80f113e0" sha1="4d85d5db0d3d9d60323fa060e7fc0622f9f9c898"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orie3a7b91885aff">
+		<description>Cherveiche</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2475">
+				<rom name="Cherveiche.tap" size="2475" crc="111ded7e" sha1="e3a7b91885affc1d89e815e976fb7f2eda0fe7f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orie48431e2df0ad">
+		<description>Chips (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="6964">
+				<rom name="Chips (PD).tap" size="6964" crc="9395c7fa" sha1="e48431e2df0ad347dbf8147d3e2985801cc240cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori854f6caad42ca">
+		<description>Chopper Bomber By Shingo Sugiura (UK) (1983) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1970">
+				<rom name="Chopper Bomber By Shingo Sugiura (UK) (1983) (PD).tap" size="1970" crc="27f955a4" sha1="854f6caad42ca16d46a3237b71f92d731339be31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori212b86bfd8fe5">
+		<description>Chopsticks (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="312">
+				<rom name="Chopsticks (19xx) (PD).tap" size="312" crc="486dc7e5" sha1="212b86bfd8fe5918c7266bbab485b1918e1a536e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori79ac6b40a8195">
+		<description>CIDRE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2481">
+				<rom name="CIDRE.tap" size="2481" crc="803d986c" sha1="79ac6b40a8195e828567d4b87163c4951e9a925e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori05f4fbd947a71">
+		<description>Citee Interdite, La (F) (19xx) [a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="11509">
+				<rom name="Citee Interdite, La (F) (19xx) [a].tap" size="11509" crc="f6f9f980" sha1="05f4fbd947a71a80aa15817ceae65ffeaa7e450f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori7293d2f93f234">
+		<description>citeinter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="11509">
+				<rom name="citeinter.tap" size="11509" crc="86df7c0d" sha1="7293d2f93f234370f3dfa729c17356f5ed721f1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oricc22131448f3d">
+		<description>City Bomber (UK) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="3100">
+				<rom name="City Bomber (UK) (19xx).tap" size="3100" crc="d2d98052" sha1="cc22131448f3d9032b03b9357e3ca4306463c14d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriee7671d7d5f95">
+		<description>ClasInst</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2074">
+				<rom name="ClasInst.tap" size="2074" crc="308957d7" sha1="ee7671d7d5f9584e0ddad98a4f9ae1b389fa3c3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orie9de456de137c">
+		<description>classicr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="7741">
+				<rom name="classicr.tap" size="7741" crc="c80d4bfe" sha1="e9de456de137cedcaa3212c8d12aa93a9506bb43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orifa28f361a3cb0">
+		<description>Clementine (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="323">
+				<rom name="Clementine (19xx) (PD).tap" size="323" crc="24aab7e3" sha1="fa28f361a3cb09fdfb7d059b8befac38861ecfae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori310edd40b7599">
+		<description>Clock (UK) (199x) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="937">
+				<rom name="Clock (UK) (199x) (PD).tap" size="937" crc="ad936ae3" sha1="310edd40b7599c5ec6845851a35ffa0bb27bfcfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori3e7fa7ffbe3e2">
+		<description>cobra</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="24577">
+				<rom name="cobra.tap" size="24577" crc="af2df711" sha1="3e7fa7ffbe3e2c78cbd118b719a2dfe4c80eca66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oric30029b79c15d">
+		<description>CobraInvader</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4566">
+				<rom name="CobraInvader.tap" size="4566" crc="57ee9352" sha1="c30029b79c15d3783130dc183cef6b3dd4d3669b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orib38dbdc95c6c7">
+		<description>Cocktail Makers, The (19xx)(GPD Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="13307">
+				<rom name="Cocktail Makers, The (19xx)(GPD Software).tap" size="13307" crc="ba357fd6" sha1="b38dbdc95c6c78ec4eacf5e09044739094561d67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori7acf0250b27bd">
+		<description>COLORS2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1764">
+				<rom name="COLORS2.tap" size="1764" crc="beeeed59" sha1="7acf0250b27bd018946605f92eb500c7f62eb536"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori6c1c717a8a6b3">
+		<description>Colour Match Game (UK) (19xx) [a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="3002">
+				<rom name="Colour Match Game (UK) (19xx) [a].tap" size="3002" crc="3bebdc87" sha1="6c1c717a8a6b356f9ac9e7ec27850a29536a150f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori765a657305369">
+		<description>COMBATTANT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4722">
+				<rom name="COMBATTANT.tap" size="4722" crc="690bf41d" sha1="765a6573053691d77b8a14e18f0df1f141c6e3e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori87ae0d67ed66d">
+		<description>Compilateur Lm Plus (1984)(Isosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="8788">
+				<rom name="Compilateur Lm Plus (1984)(Isosoft).tap" size="8788" crc="ceafc8f3" sha1="87ae0d67ed66d8a5ecdfa7c644c61f6dbc5210ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori3519769014734">
+		<description>Composer (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="246">
+				<rom name="Composer (19xx) (PD).tap" size="246" crc="37f70317" sha1="35197690147342dca08fbff47d424313898be105"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori90abf75324439">
+		<description>Contract Bridge (1984)(Alligata Software)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="16564">
+				<rom name="Contract Bridge (1984)(Alligata Software)(GB).tap" size="16564" crc="5c4872d4" sha1="90abf753244392d8cc1079c9c47339c184f91654"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori6afcbb6056123">
+		<description>Contract Bridge (1984)(Alligata Software)(GB)[documentation]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4725">
+				<rom name="Contract Bridge (1984)(Alligata Software)(GB)[documentation].tap" size="4725" crc="66ce657a" sha1="6afcbb60561233f0bb84c308f1919026fca23183"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori74cf259a60906">
+		<description>Corsaires</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="23407">
+				<rom name="Corsaires.tap" size="23407" crc="2ff462d4" sha1="74cf259a609065d2097360251f001496638e3a22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori20910fc265a52">
+		<description>Cosmo1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="7065">
+				<rom name="Cosmo1.tap" size="7065" crc="fffcfd6b" sha1="20910fc265a5254ec99d6d9b78219243da571646"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori8a8ad0f9286a6">
+		<description>Cosmo3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="8180">
+				<rom name="Cosmo3.tap" size="8180" crc="9cd768f9" sha1="8a8ad0f9286a65c870128eb321e038b5dee68820"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriaa93127068743">
+		<description>Courbes (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="312">
+				<rom name="Courbes (19xx) (PD).tap" size="312" crc="68b71783" sha1="aa931270687437cc68fe0aec8c06bbf53c617a50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori0a69762ad7bf9">
+		<description>Cranes Breeding (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="172">
+				<rom name="Cranes Breeding (19xx) (PD).tap" size="172" crc="ea971c02" sha1="0a69762ad7bf96375030571459795208ccd2abf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oricb6715f60097c">
+		<description>Creat by Daniel Duffau (F) (Atmos) (1985)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="6573">
+				<rom name="Creat by Daniel Duffau (F) (Atmos) (1985).tap" size="6573" crc="71a3b4f6" sha1="cb6715f60097c1785ce71b756d5e881fc074e77c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orifc3db5ae3d73e">
+		<description>Crocky (F) (1984)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="30798">
+				<rom name="Crocky (F) (1984).tap" size="30798" crc="37a20559" sha1="fc3db5ae3d73ef741ba99f272f6cd0ff56348d32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orie53a56ac5107a">
+		<description>ct</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1131">
+				<rom name="ct.tap" size="1131" crc="7f5706dc" sha1="e53a56ac5107a536ae1040a10b529bf06241fbd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori69358d2183f20">
+		<description>Cube by Frances (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4096">
+				<rom name="Cube by Frances (PD).tap" size="4096" crc="4021206d" sha1="69358d2183f20174a90df10d173b6e34f28e7fcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori33db607edc9ed">
+		<description>Currency Converter (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="333">
+				<rom name="Currency Converter (UK) (19xx) (PD).tap" size="333" crc="85823144" sha1="33db607edc9eda5078de64e58209071cd1440efb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori03f9e21e823d8">
+		<description>Cyclotron by Dbug (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="4069">
+				<rom name="Cyclotron by Dbug (PD).tap" size="4069" crc="8850ffd0" sha1="03f9e21e823d8b30c94743a4b57bab6e5b456136"/>
 			</dataarea>
 		</part>
 	</software>

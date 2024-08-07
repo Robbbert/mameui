@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 375 -->
+<!-- Number of items in this list = 363 -->
 <softwarelist name="a7800" description="a7800 loose roms">
 	<software name="a78e019c21c536b0">
 		<description>(demo)10 Print Maze Demo (20170826)</description>
@@ -922,16 +922,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a7889bf78a79785d">
-		<description>Apple Snaffle (PD) GroovyBee</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="131200">
-				<rom name="Apple Snaffle (PD) GroovyBee.a78" size="131200" crc="9b40472d" sha1="89bf78a79785d7c44cc255b61bc3bc0ee0d51cc7"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a78284931bab2d13">
 		<description>Arkanoid (Propane13) (20110911)</description>
 		<year>????</year>
@@ -949,16 +939,6 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="16512">
 				<rom name="Armor Attack II (20130416).a78" size="16512" crc="b66ce5a2" sha1="2d5e73df4ed616dc0f7f4dbd7b493efc08f8f4f4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a78afa9457cd3866">
-		<description>Armor Attack II (PD) Bob DeCrescenzo (v20130416_Final)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="16512">
-				<rom name="Armor Attack II (PD) Bob DeCrescenzo (v20130416_Final).a78" size="16512" crc="b9376eef" sha1="afa9457cd38667c1bc09772e87f874281949421c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1142,16 +1122,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a788eabd12465207">
-		<description>Asteroids Deluxe (PD) Bob DeCrescenzo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="32896">
-				<rom name="Asteroids Deluxe (PD) Bob DeCrescenzo.a78" size="32896" crc="6e9b0bd8" sha1="8eabd12465207566499c30ded9a6fda8183de546"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a788b7aee6e97aa7">
 		<description>Asteroids, 3D (NTSC) (Hack) (20131104)</description>
 		<year>????</year>
@@ -1202,16 +1172,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a78762fa119f08ce">
-		<description>Astro Blaster (PD) Bob DeCrescenzo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="49280">
-				<rom name="Astro Blaster (PD) Bob DeCrescenzo.a78" size="49280" crc="bf5b5034" sha1="762fa119f08ce674aaa1ce4f52d64582188b1261"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a780b115a376c045">
 		<description>Astro Fighter (20150726)</description>
 		<year>????</year>
@@ -1219,16 +1179,6 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="Astro Fighter (20150726).a78" size="32896" crc="cd156ec0" sha1="0b115a376c045145618f9bcbd9d55176b2b80ca5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a78b50125bcb747f">
-		<description>Astro Fighter (PD) Bob DeCrescenzo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="32896">
-				<rom name="Astro Fighter (PD) Bob DeCrescenzo.a78" size="32896" crc="b042016c" sha1="b50125bcb747fdba21132b1f393e72ba5dafff7d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2862,16 +2812,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a780a1e7563c5244">
-		<description>Pac-Man Collection (PD) Bob DeCrescenzo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="32896">
-				<rom name="Pac-Man Collection (PD) Bob DeCrescenzo.a78" size="32896" crc="712ef815" sha1="0a1e7563c5244d06ff8e16fe0e6f103eabcf5203"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a78376f4cac37eaf">
 		<description>Pac-Man Collection (Pokey)</description>
 		<year>????</year>
@@ -2879,16 +2819,6 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="Pac-Man Collection (Pokey).a78" size="32896" crc="f8d3b4e8" sha1="376f4cac37eaf3ea15a4461849a02ee52772d2ee"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a789e7d14479d5d3">
-		<description>Pac-Man Collection - 40th Anniversary Edition (PD) Bob DeCrescenzo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="131200">
-				<rom name="Pac-Man Collection - 40th Anniversary Edition (PD) Bob DeCrescenzo.a78" size="131200" crc="71fda604" sha1="9e7d14479d5d34517c433c21024f9ea5508f68c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3262,16 +3192,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a78ae42664106ef2">
-		<description>Rip-Off (PD) Bob DeCrescenzo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="16512">
-				<rom name="Rip-Off (PD) Bob DeCrescenzo.a78" size="16512" crc="e14f228e" sha1="ae42664106ef2793eeae48f89b05bcefbe527beb"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a78131035773a422">
 		<description>robotfindskitten7800</description>
 		<year>????</year>
@@ -3292,16 +3212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a78744c612820221">
-		<description>Scramble</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="49280">
-				<rom name="Scramble.A78" size="49280" crc="f849e59b" sha1="744c612820221ba35ee559dee1d84a4ef8691c2b"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a78bfbf9be9ad078">
 		<description>Sentinel (1990)(Atari)(NTSC)(proto)</description>
 		<year>????</year>
@@ -3319,16 +3229,6 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="131200">
 				<rom name="SIRIUS.A78" size="131200" crc="9d3cd869" sha1="6a3f59a755ad14da44d691fa6f1a4b54be0f7a4c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a78de21b55badd1a">
-		<description>Space Duel (Final)(NTSC)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="32896">
-				<rom name="Space Duel (Final)(NTSC).a78" size="32896" crc="d795b3da" sha1="de21b55badd1a4f0a5117aab0fd57a2b3db72d1d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3412,16 +3312,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a78f04fc68880ba2">
-		<description>Space Invaders 7800</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="16512">
-				<rom name="Space Invaders 7800.A78" size="16512" crc="f2699e24" sha1="f04fc68880ba2d6ec57c39012749e413cca144d1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a78f5ccc364e0fcd">
 		<description>spacewar 2007-03-21</description>
 		<year>????</year>
@@ -3499,16 +3389,6 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="Super Pac-man wip 2008-10-31.a78" size="32896" crc="78b87880" sha1="d66c4e7052833381683681c4e5ad11a94097e5b3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a780927e0ffd2477">
-		<description>Super Pac-man</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="32896">
-				<rom name="Super Pac-man.A78" size="32896" crc="79e2be17" sha1="0927e0ffd2477d7026a1f24a49d8bb89fd475d55"/>
 			</dataarea>
 		</part>
 	</software>

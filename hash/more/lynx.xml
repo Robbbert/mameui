@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 577 -->
+<!-- Number of items in this list = 576 -->
 <softwarelist name="lynx" description="lynx loose roms">
 	<software name="lnx9804fa8b478c3">
 		<description>(demo)Mega Man Plus Demo (199x) (PD).lnx</description>
@@ -5059,16 +5059,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Switchblade II (UE).lnx" size="262208" crc="147c92d5" sha1="2784b6655aee04337458bb9ecea8850921549b40"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxd337d0b38e22f">
-		<description>T-Tris (1993)(Bastian Schick)(PD)[a]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="15700">
-				<rom name="T-Tris (1993)(Bastian Schick)(PD)[a].o" size="15700" crc="a261fcbc" sha1="d337d0b38e22f42c92691ad2a80d48125d908b7f"/>
 			</dataarea>
 		</part>
 	</software>

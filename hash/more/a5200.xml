@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 137 -->
+<!-- Number of items in this list = 135 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a52db1ab57771b0f">
 		<description>(demo)Atari PAM Final System Test v1.1 (1982)(Atari)</description>
@@ -79,16 +79,6 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)pasthip.bin" size="32768" crc="52763af4" sha1="a339ac7e15f0ace1b430d0ec51a580a4927198d2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a52e1201a274d41a">
-		<description>(demo)Pete's Diagnostics (1982) (Atari) [o1]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a8bit_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="(demo)Pete's Diagnostics (1982) (Atari) [o1].a52" size="16384" crc="e9f826bd" sha1="e1201a274d41a327fa03b1ad2a72ada97e05f17b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -749,16 +739,6 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Hang 5200 (32kb).a52" size="32768" crc="3465c83d" sha1="982292216a1f29639dc888e541ddd2b08270ce52"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a524c53783d9b72e">
-		<description>Hangly-Man 32k version</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a8bit_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Hangly-Man 32k version.a52" size="32768" crc="c01ef479" sha1="4c53783d9b72eabe3177863d3dec73d57cc8d837"/>
 			</dataarea>
 		</part>
 	</software>

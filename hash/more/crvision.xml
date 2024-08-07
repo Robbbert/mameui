@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 25 -->
+<!-- Number of items in this list = 23 -->
 <softwarelist name="crvision" description="crvision loose roms">
 	<software name="crv7523b938d2513">
 		<description>BASIC82A</description>
@@ -39,26 +39,6 @@
 		<part name="cart" interface="crvision_cart">
 			<dataarea name="rom" size="12288">
 				<rom name="BASICFV.BIN" size="12288" crc="b8df3b18" sha1="d878f23143e3362d5065550c2e1bd80d8f7c25c0"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="crv22bd3c2db5ec3">
-		<description>bowling_left_channel</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="crvision_cart">
-			<dataarea name="rom" size="6444766">
-				<rom name="bowling_left_channel.wav" size="6444766" crc="9e017d1b" sha1="22bd3c2db5ec35b6ab892c9b80b41e018327fc0e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="crv2bcbed0413389">
-		<description>bships_left_channel</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="crvision_cart">
-			<dataarea name="rom" size="6642954">
-				<rom name="bships_left_channel.wav" size="6642954" crc="29a7f8e0" sha1="2bcbed04133898f906f3f43de47e589d7d1a84f2"/>
 			</dataarea>
 		</part>
 	</software>
