@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 117 -->
+<!-- Number of items in this list = 118 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc82fa11a8ebd7f">
 		<description>Amstrad Action Covertape 72</description>
@@ -1169,6 +1169,16 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="30037">
 				<rom name="Space Pest Control.cdt" size="30037" crc="e42d5f4a" sha1="4d17941da46bf571dbb46c80115b74c6fdc9fd8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc1feb13a624bc1">
+		<description>Traxtor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="28201">
+				<rom name="Traxtor.cdt" size="28201" crc="40be39c4" sha1="1feb13a624bc13050bd00ba483c46149c9ba3deb"/>
 			</dataarea>
 		</part>
 	</software>

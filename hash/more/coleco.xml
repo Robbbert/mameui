@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 621 -->
+<!-- Number of items in this list = 622 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -2222,6 +2222,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colbdbbc14ac9921">
+		<description>Ghost SGM (2019)(Unepic Fran)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Ghost SGM (2019)(Unepic Fran).rom" size="131072" crc="d55bbb66" sha1="bdbbc14ac9921d96a5e635116a16eaf84a978bb8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb9cf419ecb381">
 		<description>Ghostblaster (2006)(Daniel Bienvenu)</description>
 		<year>????</year>
@@ -2953,12 +2963,12 @@
 		</part>
 	</software>
 	<software name="colfc954f67bb92c">
-		<description>Lode Runner</description>
+		<description>Lode Runner (2013)(Collectorvision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32438">
-				<rom name="Lode Runner.rom" size="32438" crc="d679ac52" sha1="fc954f67bb92c93c42afadb066beaf6fb61e68b8"/>
+				<rom name="Lode Runner (2013)(Collectorvision).rom" size="32438" crc="d679ac52" sha1="fc954f67bb92c93c42afadb066beaf6fb61e68b8"/>
 			</dataarea>
 		</part>
 	</software>
