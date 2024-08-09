@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 118 -->
+<!-- Number of items in this list = 119 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc82fa11a8ebd7f">
 		<description>Amstrad Action Covertape 72</description>
@@ -1082,6 +1082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc524612d44034a">
+		<description>Cross Shoot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="27775">
+				<rom name="Cross Shoot.cdt" size="27775" crc="d44f37bd" sha1="524612d44034ae5491cf8f2a706d5bac6aae29b9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcaeecf2f866afc">
 		<description>Dawn of Kernel</description>
 		<year>????</year>
@@ -1133,12 +1143,12 @@
 		</part>
 	</software>
 	<software name="cpce0f46cd65c6e9">
-		<description>JUSTIN</description>
+		<description>Justin</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="25545">
-				<rom name="JUSTIN.CDT" size="25545" crc="bf1f693c" sha1="e0f46cd65c6e984698d601e149774585429916b0"/>
+				<rom name="Justin.cdt" size="25545" crc="bf1f693c" sha1="e0f46cd65c6e984698d601e149774585429916b0"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 6 -->
+<softwarelist name="rx78" description="rx78 loose roms">
+	<software name="rx7a7a0215440bd7">
+		<description>Creative Graphics (IC2_IX0419PA_364C94-3J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Creative Graphics (IC2_IX0419PA_364C94-3J1).BIN" size="16384" crc="a3573787" sha1="a7a0215440bd7ed997bc3d95edf0d3a30bf06786"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx741966f9cdd42c">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio).rom" size="16384" crc="5d2263c7" sha1="41966f9cdd42c6890f3de2c400ff6c73ecc817fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx7ce9e2e00be325">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio).rom" size="16384" crc="42318e6e" sha1="ce9e2e00be3253e689730d2ca1349e5199e0515b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx795c4703dda69a">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).rom" size="16384" crc="51c0eeec" sha1="95c4703dda69ab624f22ceb086bea1e2195776c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx70f3f46bcfd3ad">
+		<description>Master Mind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Master Mind.rom" size="16384" crc="873e6e27" sha1="0f3f46bcfd3add82d5cbb2146eed324b597c5239"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx765ef396e6e099">
+		<description>rx78rengokantai</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="rx78rengokantai.bin" size="32768" crc="d6d8c760" sha1="65ef396e6e09960dbf8181a9a508df9074763b5a"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

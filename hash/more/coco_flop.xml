@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="coco_flop" description="coco_flop loose roms">
+	<software name="coca52f053f41e35">
+		<description>ADOS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="ADOS.DSK" size="161280" crc="4098583b" sha1="a52f053f41e35f8b9815c5f64b64bd07ca98d90d"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

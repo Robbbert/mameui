@@ -1,7 +1,77 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 25 -->
+<!-- Number of items in this list = 32 -->
 <softwarelist name="wswan" description="wswan loose roms">
+	<software name="wsae5e4f06f07fe1">
+		<description>Armored Unit (swj-sum003)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Armored Unit (swj-sum003).bin" size="524288" crc="c11639af" sha1="ae5e4f06f07fe13a48f414a1cd437a816e9ad2e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws6eec04244f4d85">
+		<description>Challenge the World (swj-ccj002)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Challenge the World (swj-ccj002).bin" size="524288" crc="d7438e58" sha1="6eec04244f4d85807988a2331e7031d0c3549646"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsbac3ef43033974">
+		<description>Chocobo no Fushigi na Dungeon for WonderSwan (Japan) (Rev 2) [T-En by Higsby & SpecialAgentApe v1.1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Chocobo no Fushigi na Dungeon for WonderSwan (Japan) (Rev 2) [T-En by Higsby & SpecialAgentApe v1.1].ws" size="2097152" crc="ac2e344c" sha1="bac3ef43033974b6e2d9652a824f5411be0af0e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws4ba44f23d3b43e">
+		<description>Clock Tower (swj-kgt002)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Clock Tower (swj-kgt002).bin" size="2097152" crc="a9936941" sha1="4ba44f23d3b43ee730ce34d56f4cadaf429b6d1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws67a80b7fb00c3a">
+		<description>Crazy Climber (swj-nhb001)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Crazy Climber (swj-nhb001).bin" size="524288" crc="c995274b" sha1="67a80b7fb00c3afe0ce9b0f8975c6d250a2cd49d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws5751825fa08f3a">
+		<description>Digimon 02 - Tag Tamers (Japan) [T-En by NikcDC v1.4.0] [n] [Digimon 01 Diaboromon]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Digimon 02 - Tag Tamers (Japan) [T-En by NikcDC v1.4.0] [n] [Digimon 01 Diaboromon].ws" size="2097152" crc="d146b737" sha1="5751825fa08f3aacf08c569a45d517dadd996396"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsbf7edfdf42b432">
+		<description>Digimon 02 - Tag Tamers (Japan) [T-En by NikcDC v1.4.0] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Digimon 02 - Tag Tamers (Japan) [T-En by NikcDC v1.4.0] [n].ws" size="2097152" crc="7016e98b" sha1="bf7edfdf42b43296cd66c8021876c35b3219c2a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wsbd816b8c55a9c0">
 		<description>Digimon Adventure 02 - Tag Tamers (2000-08-03)(Bandai)[tr de DigitalZero Domain][v0.02-20030415]</description>
 		<year>????</year>
@@ -32,6 +102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wse100d54e5c6351">
+		<description>Glocal Hexite (swj-kgt008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Glocal Hexite (swj-kgt008).bin" size="524288" crc="8fcd6d2c" sha1="e100d54e5c63512dbd655f0439870e08ced439dd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ws1db78ac860652e">
 		<description>Hello World (2001)(Sir Dragoon)(PD)</description>
 		<year>????</year>
@@ -39,6 +119,56 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Hello World (2001)(Sir Dragoon)(PD).ws" size="1048576" crc="f207546c" sha1="1db78ac860652e4a1380f2a850e6e32e992bc3dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws0690e73285e058">
+		<description>Kaze no Klonoa - Moonlight Museum (Japan) [T-En by PowerStone05 v0.511] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kaze no Klonoa - Moonlight Museum (Japan) [T-En by PowerStone05 v0.511] [i].ws" size="1048576" crc="d4e0cb07" sha1="0690e73285e0587e93b1f4c813b3484467d2eaca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws91595cd5d5192d">
+		<description>Lode Runner (swj-bpr004)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Lode Runner (swj-bpr004).bin" size="524288" crc="e407cabf" sha1="91595cd5d5192db50eda883157852ff81994990c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws38e0a889f287fd">
+		<description>Megaman & Bass - Challenger from the Future (Japan) [T-En by NikcDC v1.2.1] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Megaman & Bass - Challenger from the Future (Japan) [T-En by NikcDC v1.2.1] [n].ws" size="2097152" crc="3bcd3422" sha1="38e0a889f287fdb98baa1219c648c031a6682e44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws5a60622180a132">
+		<description>Neon Genesis Evangelion - Angel Raising Project (Japan) [T-En by Anime Game Translations Team v1.0] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Neon Genesis Evangelion - Angel Raising Project (Japan) [T-En by Anime Game Translations Team v1.0] [n].ws" size="2097152" crc="189b7610" sha1="5a60622180a132b01c88c83683c7bc454dc9d513"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsa411ad38d0b6fe">
+		<description>Rockman & Forte - Challenger from the Future (Japan) [T-En by NikcDC v1.2.1] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Rockman & Forte - Challenger from the Future (Japan) [T-En by NikcDC v1.2.1] [n].ws" size="2097152" crc="4dc2ea59" sha1="a411ad38d0b6fe237e19f03f9b50e39b400de034"/>
 			</dataarea>
 		</part>
 	</software>
@@ -92,46 +222,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ws91595cd5d5192d">
-		<description>swj-bpr004</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="swj-bpr004.bin" size="524288" crc="e407cabf" sha1="91595cd5d5192db50eda883157852ff81994990c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="wsab3c925bf1bfd3">
-		<description>swj-btm001</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="swj-btm001.bin" size="524288" crc="07a3b862" sha1="ab3c925bf1bfd36403335af0c0365be8a2950ca8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ws64a3053c0f9268">
-		<description>swj-btm002</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="swj-btm002.bin" size="524288" crc="a18aa7af" sha1="64a3053c0f92681eb514e55adabc8ba0da1cb1a1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ws6eec04244f4d85">
-		<description>swj-ccj002</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="swj-ccj002.bin" size="524288" crc="d7438e58" sha1="6eec04244f4d85807988a2331e7031d0c3549646"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="wsb143cece1e7db9">
 		<description>swj-kex001</description>
 		<year>????</year>
@@ -152,16 +242,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ws4ba44f23d3b43e">
-		<description>swj-kgt002</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="swj-kgt002.bin" size="2097152" crc="a9936941" sha1="4ba44f23d3b43ee730ce34d56f4cadaf429b6d1b"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="ws4504b62212e163">
 		<description>swj-kgt005</description>
 		<year>????</year>
@@ -172,16 +252,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="wse100d54e5c6351">
-		<description>swj-kgt008</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="swj-kgt008.bin" size="524288" crc="8fcd6d2c" sha1="e100d54e5c63512dbd655f0439870e08ced439dd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="ws461f87e6e301b0">
 		<description>swj-mde001</description>
 		<year>????</year>
@@ -189,26 +259,6 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="swj-mde001.bin" size="524288" crc="945fc213" sha1="461f87e6e301b0dbb6324d908d4ca7efd7518e20"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ws67a80b7fb00c3a">
-		<description>swj-nhb001</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="swj-nhb001.bin" size="524288" crc="c995274b" sha1="67a80b7fb00c3afe0ce9b0f8975c6d250a2cd49d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="wsae5e4f06f07fe1">
-		<description>swj-sum003</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="swj-sum003.bin" size="524288" crc="c11639af" sha1="ae5e4f06f07fe13a48f414a1cd437a816e9ad2e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -239,6 +289,26 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="swj-yke001.bin" size="524288" crc="b159c30d" sha1="d70fbc6be9a9a0f12cea8a9f7c98aa415e41aafd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsab3c925bf1bfd3">
+		<description>Trump Collection (swj-btm001)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Trump Collection (swj-btm001).bin" size="524288" crc="07a3b862" sha1="ab3c925bf1bfd36403335af0c0365be8a2950ca8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws64a3053c0f9268">
+		<description>Trump Collection II (swj-btm002)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Trump Collection II (swj-btm002).bin" size="524288" crc="a18aa7af" sha1="64a3053c0f92681eb514e55adabc8ba0da1cb1a1"/>
 			</dataarea>
 		</part>
 	</software>

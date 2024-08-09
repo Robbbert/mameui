@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 46 -->
+<!-- Number of items in this list = 55 -->
 <softwarelist name="wscolor" description="wscolor loose roms">
 	<software name="wscf1ccdb96d67a8">
 		<description>(demo)finally.emu</description>
@@ -98,7 +98,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Dicing Knight. (2004-05-31)(Qute)[tr en Aeon Genesis][v1.00-20070120].bin" size="2097152" crc="56f4e554" sha1="106dca0fd84ba59dd98f13ee5ab6e4832105b8b3"/>
+				<rom name="Dicing Knight. (2004-05-31)(Qute)[tr en Aeon Genesis][v1.00-20070120].wsc" size="2097152" crc="56f4e554" sha1="106dca0fd84ba59dd98f13ee5ab6e4832105b8b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -108,17 +108,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="dicing knight. (japan).bin" size="524288" crc="d28dc930" sha1="79658575c736fcad18e9225aa0e62398b086093b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="wsc0c1d2bad19a0d">
-		<description>DicingKnightPeriod</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="DicingKnightPeriod.sav" size="262144" crc="3256ab27" sha1="0c1d2bad19a0d325110ab478c8311c046bb20c5e"/>
+				<rom name="dicing knight. (japan).wsc" size="524288" crc="d28dc930" sha1="79658575c736fcad18e9225aa0e62398b086093b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -132,13 +122,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsc4ad4642abc8b9">
+		<description>Digimon 02 - D1 Tamers (Japan) [T-En by NikcDC v0.97] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Digimon 02 - D1 Tamers (Japan) [T-En by NikcDC v0.97] [n].wsc" size="4194304" crc="74a1ae86" sha1="4ad4642abc8b97fd9291b90f98f610bc1462d2d6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wscc974f5ce8c7b6">
 		<description>Digimon Adventure 02 - D1 Tamers (2000-12-09)(Bandai)[tr en DigitalZero Domain][v0.1-20060425]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Digimon Adventure 02 - D1 Tamers (2000-12-09)(Bandai)[tr en DigitalZero Domain][v0.1-20060425].bin" size="4194304" crc="a784d126" sha1="c974f5ce8c7b655e892158f22d177e11d5e38fcb"/>
+				<rom name="Digimon Adventure 02 - D1 Tamers (2000-12-09)(Bandai)[tr en DigitalZero Domain][v0.1-20060425].wsc" size="4194304" crc="a784d126" sha1="c974f5ce8c7b655e892158f22d177e11d5e38fcb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -148,7 +148,37 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Digimon Adventure 02 - D1 Tamers (2000-12-09)(Bandai)[tr en PmHacks][v0.05-20031004].bin" size="4194304" crc="9ff6c122" sha1="91b6aeec3b081d9d6c47e3bfbc16029aa29259be"/>
+				<rom name="Digimon Adventure 02 - D1 Tamers (2000-12-09)(Bandai)[tr en PmHacks][v0.05-20031004].wsc" size="4194304" crc="9ff6c122" sha1="91b6aeec3b081d9d6c47e3bfbc16029aa29259be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscb6b96aa1c435c">
+		<description>Digimon Tamers - Battle Spirit Ver. 1.5 (Japan) [T-En by Ashley & Buckwheat v1.0] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Digimon Tamers - Battle Spirit Ver. 1.5 (Japan) [T-En by Ashley & Buckwheat v1.0] [i].wsc" size="8388608" crc="ed05bcd0" sha1="b6b96aa1c435c551167ff31066310e85f44c3cc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscbec86af7eb71c">
+		<description>Digital Monster Card Game - Ver. WonderSwan Color (Japan) [T-En by Kaiisen & Wazzpinator v1.1] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Digital Monster Card Game - Ver. WonderSwan Color (Japan) [T-En by Kaiisen & Wazzpinator v1.1] [i].wsc" size="4194304" crc="5d06ec0f" sha1="bec86af7eb71c81321d4eabac10797c621f58ece"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc016de32719e92">
+		<description>Digital Monster Project (sd32m256s217d.u3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Digital Monster Project (sd32m256s217d.u3).wsc" size="4194304" crc="0e40829c" sha1="016de32719e920fd9996c52d7eb81f2a60a24d7a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -192,13 +222,33 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsc08e70b98918df">
+		<description>Final Fantasy (Japan) [T-En by Kalas v0.91] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fantasy (Japan) [T-En by Kalas v0.91] [i].wsc" size="4194304" crc="df94a149" sha1="08e70b98918df5e5cf2fe057908ce5e8a69e05fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc18f8fd447ff10">
+		<description>Final Fantasy II (Japan) [T-En by RPGOne v0.97]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fantasy II (Japan) [T-En by RPGOne v0.97].wsc" size="4194304" crc="15ec0525" sha1="18f8fd447ff10e2c43b0a649dcd039b7d0f53f0d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wscc8578ef7bd268">
 		<description>Final Fantasy IV (2002-03-28)(Squaresoft)[tr en MottZilla][v0.4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Final Fantasy IV (2002-03-28)(Squaresoft)[tr en MottZilla][v0.4].bin" size="4194304" crc="bbd3ea97" sha1="c8578ef7bd2687df75c39df65a421dc47c2561e0"/>
+				<rom name="Final Fantasy IV (2002-03-28)(Squaresoft)[tr en MottZilla][v0.4].wsc" size="4194304" crc="bbd3ea97" sha1="c8578ef7bd2687df75c39df65a421dc47c2561e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -208,7 +258,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Final Fantasy IV (2002-03-28)(Squaresoft)[tr en MottZilla][v0.5-20040711].bin" size="4194304" crc="e677a591" sha1="1c8bbb23532454103ccecff1542acefc223125ea"/>
+				<rom name="Final Fantasy IV (2002-03-28)(Squaresoft)[tr en MottZilla][v0.5-20040711].wsc" size="4194304" crc="e677a591" sha1="1c8bbb23532454103ccecff1542acefc223125ea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -228,7 +278,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="GunPey EX (2000-12-09)(Bandai)[f EEPROM][SWJ-BANC02].bin" size="1048576" crc="a97dccd9" sha1="c528d02122208a636ab16bd42b2b24d0ac9f2cf7"/>
+				<rom name="GunPey EX (2000-12-09)(Bandai)[f EEPROM][SWJ-BANC02].wsc" size="1048576" crc="a97dccd9" sha1="c528d02122208a636ab16bd42b2b24d0ac9f2cf7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -278,7 +328,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="judgement silversword - rebirth edition (japan) (rev sc21).bin" size="524288" crc="4fce380d" sha1="a1d910123b6be0b941f699ef70c745d16350d029"/>
+				<rom name="judgement silversword - rebirth edition (japan) (rev sc21).wsc" size="524288" crc="4fce380d" sha1="a1d910123b6be0b941f699ef70c745d16350d029"/>
 			</dataarea>
 		</part>
 	</software>
@@ -288,7 +338,17 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Kidou Senshi Gundam Seed (2003-03-15)(Bandai)[tr cn][v.20040120].bin" size="4194304" crc="b338cae2" sha1="be172f59176af9841cc6c2d9fcd019f01f76a265"/>
+				<rom name="Kidou Senshi Gundam Seed (2003-03-15)(Bandai)[tr cn][v.20040120].wsc" size="4194304" crc="b338cae2" sha1="be172f59176af9841cc6c2d9fcd019f01f76a265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc79f7821791d99">
+		<description>Mega Man Battle Network WS (Japan) [T-En by Boco & Greiga Master & Megarockexe v1.0] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mega Man Battle Network WS (Japan) [T-En by Boco & Greiga Master & Megarockexe v1.0] [n].wsc" size="4194304" crc="a8c02e74" sha1="79f7821791d99a4e6a912ff60bb10eb8ccb0bcd0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -298,7 +358,17 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Mr. Driller (2001-04-05)(Namco)[tr en PmHacks][v0.70-20031209].bin" size="2097152" crc="61e7ed03" sha1="a6e40a8aac557c443a241c3cbc83a104e9ce7032"/>
+				<rom name="Mr. Driller (2001-04-05)(Namco)[tr en PmHacks][v0.70-20031209].wsc" size="2097152" crc="61e7ed03" sha1="a6e40a8aac557c443a241c3cbc83a104e9ce7032"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscf800e5305292a">
+		<description>Spirit World Tower Warrior Sa-Ga (Japan) [T-En by Tower Reversed v1.2] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Spirit World Tower Warrior Sa-Ga (Japan) [T-En by Tower Reversed v1.2] [n].wsc" size="4194304" crc="a4308378" sha1="f800e5305292a81be738f15426269329a8d139b1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -313,12 +383,12 @@
 		</part>
 	</software>
 	<software name="wscf0f08b95c7de6">
-		<description>swandriving</description>
+		<description>swandriving(WSC-ONLY)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="65536">
-				<rom name="swandriving.wsc" size="65536" crc="491d7faa" sha1="f0f08b95c7de6aa0616cfcf2cf266e85e25a3783"/>
+				<rom name="swandriving(WSC-ONLY).wsc" size="65536" crc="491d7faa" sha1="f0f08b95c7de6aa0616cfcf2cf266e85e25a3783"/>
 			</dataarea>
 		</part>
 	</software>
@@ -328,7 +398,17 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Uchuu Senkan Yamato (2001-02-08)(Bandai)[b][SWJ-BANC09].bin" size="4194304" crc="d56b4fd8" sha1="b9b9919d6b6f7a4a67accb649ced2f9a869310fb"/>
+				<rom name="Uchuu Senkan Yamato (2001-02-08)(Bandai)[b][SWJ-BANC09].wsc" size="4194304" crc="d56b4fd8" sha1="b9b9919d6b6f7a4a67accb649ced2f9a869310fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc22fca73a28893">
+		<description>Wizardry Scenario 1 - Proving Grounds of the Mad Overlord (Japan) [T-En by Hengki Kusuma Adi v1.1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Wizardry Scenario 1 - Proving Grounds of the Mad Overlord (Japan) [T-En by Hengki Kusuma Adi v1.1].wsc" size="2097152" crc="2c055c98" sha1="22fca73a28893a213f3760f54d3d61a81c95753c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -358,7 +438,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Wondersnake (2001)(Kojote - Slanina, Tomasz)(PD)(beta).bin" size="524288" crc="e529d0c1" sha1="f8e19b686bfc17c97d2a776ef377ef370db000a4"/>
+				<rom name="Wondersnake (2001)(Kojote - Slanina, Tomasz)(PD)(beta).wsc" size="524288" crc="e529d0c1" sha1="f8e19b686bfc17c97d2a776ef377ef370db000a4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -368,7 +448,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Wondersnake (2001-09-11)(Kojote - Slanina, Tomasz)(PD).bin" size="524288" crc="a0591f00" sha1="fec915b4993f2d84ea30bd0fa4d8575e9074d292"/>
+				<rom name="Wondersnake (2001-09-11)(Kojote - Slanina, Tomasz)(PD).wsc" size="524288" crc="a0591f00" sha1="fec915b4993f2d84ea30bd0fa4d8575e9074d292"/>
 			</dataarea>
 		</part>
 	</software>
@@ -378,7 +458,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Wondersnake 2 (2003)(Kojote - Slanina, Tomasz)(PD).bin" size="524288" crc="d93ab792" sha1="4aefebd63691f22e5725d7590f6b971c7b26ae4a"/>
+				<rom name="Wondersnake 2 (2003)(Kojote - Slanina, Tomasz)(PD).wsc" size="524288" crc="d93ab792" sha1="4aefebd63691f22e5725d7590f6b971c7b26ae4a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -459,6 +539,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Wonderwitch Intro v1.x (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="a1f2d257" sha1="979d43f608e6e401a09f896f8fa6a2911b99d832"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc580be88475d0f">
+		<description>Working Chocobo (Japan) [T-En by Higsby & SpecialAgentApe & Sliter v1.01] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Working Chocobo (Japan) [T-En by Higsby & SpecialAgentApe & Sliter v1.01] [n].wsc" size="1048576" crc="b6528093" sha1="580be88475d0fe5acc0629b42278df9e97d9a98f"/>
 			</dataarea>
 		</part>
 	</software>

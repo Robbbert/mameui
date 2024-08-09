@@ -52,6 +52,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gx4db2d41c0eaed9">
+		<description>Cross Shoot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gx4000_cart">
+			<dataarea name="rom" size="524556">
+				<rom name="Cross Shoot.cpr" size="524556" crc="9bae7b15" sha1="db2d41c0eaed91414fe77c0725d90249da54ba03"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gx47ed067623d6ef">
 		<description>Dawn of Kernel</description>
 		<year>????</year>
@@ -169,16 +179,6 @@
 		<part name="cart" interface="gx4000_cart">
 			<dataarea name="rom" size="131148">
 				<rom name="Tintin on the Moon (1989)(Infogrames).cpr" size="131148" crc="a6b5094d" sha1="92c5f229b4d6366611c074a9ca73a1ff1669a679"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gx4db2d41c0eaed9">
-		<description>Xshoot</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gx4000_cart">
-			<dataarea name="rom" size="524556">
-				<rom name="Xshoot.cpr" size="524556" crc="9bae7b15" sha1="db2d41c0eaed91414fe77c0725d90249da54ba03"/>
 			</dataarea>
 		</part>
 	</software>

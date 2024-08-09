@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 8 -->
+<softwarelist name="pv2000" description="pv2000 loose roms">
+	<software name="pv291b3bcb89e411">
+		<description>CasioBasic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="CasioBasic.bin" size="16384" crc="69a92b72" sha1="91b3bcb89e411cf5d13b2be46b48a3a739b8c219"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv295cbabadf3c6a">
+		<description>Cross Chase (2018-07-19)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-07-19)(Caruso, Fabrizio).bin" size="16384" crc="cfbb1e95" sha1="95cbabadf3c6a4a5f9dcf14d2b078a3324d7d01f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv26039e52547d74">
+		<description>Cross Chase (2018-08-04)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-08-04)(Caruso, Fabrizio).rom" size="16384" crc="61a1d5ac" sha1="6039e52547d746e9d8e5cbe7f6a2c45cf46a3dcf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2748dab37a9e34">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio).rom" size="16384" crc="d951598f" sha1="748dab37a9e3486f39838ade96a3d0951e643b7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2e310dcb6b2e12">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).rom" size="16384" crc="6ed15819" sha1="e310dcb6b2e125a313faf88f562083319be8fba9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv290113d7c065a6">
+		<description>Excite Mahjong 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Excite Mahjong 2.bin" size="16384" crc="a2698c56" sha1="90113d7c065a6f12126c03da8ee59185bf60efc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv210773a4834237">
+		<description>Master Mind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Master Mind.rom" size="16384" crc="377fea8b" sha1="10773a483423756f2ff023b1b35535063966815d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv254a543d08e865">
+		<description>Rakugaki Special</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Rakugaki Special.bin" size="16384" crc="a34d1bd1" sha1="54a543d08e865c85c32358edce8a6fcfa3ad9fcc"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

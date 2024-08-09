@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="coco_cass" description="coco_cass loose roms">
+	<software name="coc4ca074876b53c">
+		<description>5000[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9846">
+				<rom name="5000[3].cas" size="9846" crc="92668740" sha1="4ca074876b53c1c06e56acd61ab8d1f964b8a59e"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
