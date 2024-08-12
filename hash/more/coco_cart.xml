@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 7 -->
 <softwarelist name="coco_cart" description="coco_cart loose roms">
 	<software name="cocf27b97b81eccd">
 		<description>Alphabet Zoo (1984) (26-3170) (Spinnaker)</description>
@@ -29,6 +29,46 @@
 		<part name="cart" interface="coco_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="canyon climber (1982)(26-3089)(datasoft)[!].rom" size="8192" crc="aa214e43" sha1="ac5d771b3fd692de72d69945ae1fa4788db54538"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc953f35586b0fc">
+		<description>cyrus chess (1982)(a0108)(dragon data)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coco_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="cyrus chess (1982)(a0108)(dragon data).rom" size="8192" crc="d4c36a96" sha1="953f35586b0fc7c5b1f5ccb9fd20e0e6e1041d9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd6ad52da195a5">
+		<description>Doodle Bug (1982) (Computerware) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Doodle Bug (1982) (Computerware) (Beta).rom" size="16384" crc="42aef070" sha1="d6ad52da195a53ed680f5233210348d32403dd6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc8919922793fd5">
+		<description>Dragon Fire (1984) (26-3098) (Tandy) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coco_cart">
+			<dataarea name="rom" size="16128">
+				<rom name="Dragon Fire (1984) (26-3098) (Tandy) [a1].rom" size="16128" crc="62619a8f" sha1="8919922793fd5a5fae375a9f073af89f3ff66d89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc8b93f09e68d21">
+		<description>Shanghai</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Shanghai.rom" size="16384" crc="3dc0ba73" sha1="8b93f09e68d21509871d67391e0cde4864d5ce28"/>
 			</dataarea>
 		</part>
 	</software>

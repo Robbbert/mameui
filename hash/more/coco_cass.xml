@@ -1,14 +1,2114 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 211 -->
 <softwarelist name="coco_cass" description="coco_cass loose roms">
+	<software name="coce6485ce764766">
+		<description>3D Brickaway[M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11563">
+				<rom name="3D Brickaway[M].cas" size="11563" crc="14c1ed5f" sha1="e6485ce764766b087a1d6cdf7039746d56569915"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc8cef0fed1668d">
+		<description>3D Space Wars[M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="26932">
+				<rom name="3D Space Wars[M].cas" size="26932" crc="d065dcb6" sha1="8cef0fed1668df149637f80be4ad1ffd69633c39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc2b4d3e90e600">
+		<description>3D Tic-Tac-Toe[M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="7887">
+				<rom name="3D Tic-Tac-Toe[M].cas" size="7887" crc="a21cdd82" sha1="c2b4d3e90e6009fc2c906f862df21e4f7a04255b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="coc4ca074876b53c">
-		<description>5000[3]</description>
+		<description>5000[B]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="9846">
-				<rom name="5000[3].cas" size="9846" crc="92668740" sha1="4ca074876b53c1c06e56acd61ab8d1f964b8a59e"/>
+				<rom name="5000[B].cas" size="9846" crc="92668740" sha1="4ca074876b53c1c06e56acd61ab8d1f964b8a59e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc2207d6613c887">
+		<description>8ball[M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11174">
+				<rom name="8ball[M].cas" size="11174" crc="0a576138" sha1="2207d6613c8877d9abfbe1552929de473c035761"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca41668ea1f255">
+		<description>airball[M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="26227">
+				<rom name="airball[M].cas" size="26227" crc="2140eb14" sha1="a41668ea1f25596795e10ffa3e422e8bbeca92cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc7a478621c9154">
+		<description>aircntlr[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="13592">
+				<rom name="aircntlr[B].cas" size="13592" crc="a2735903" sha1="7a478621c9154787ba48fa6928345fa3955fdffb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc7559bd3356700">
+		<description>airline</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9459">
+				<rom name="airline.cas" size="9459" crc="96366052" sha1="7559bd33567000cc75c55d55383f2be0e561d0b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc5854295d6113c">
+		<description>airtraf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="25894">
+				<rom name="airtraf.cas" size="25894" crc="8620bf45" sha1="5854295d6113c5a8f98ef37ff78902daa73517a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc82cf77243997f">
+		<description>alice</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29760">
+				<rom name="alice.cas" size="29760" crc="ccf02d0f" sha1="82cf77243997f31181e9e1b8a06183aa2500e826"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4af2e733b077b">
+		<description>ambush</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="7103">
+				<rom name="ambush.cas" size="7103" crc="8fad5a04" sha1="4af2e733b077b31720fe9e1a11efaa52c366145e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd2b63634ab058">
+		<description>analyzer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5005">
+				<rom name="analyzer.cas" size="5005" crc="d635180f" sha1="d2b63634ab0589e4468bece9a251b399ff2e909d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc9dc2485b90648">
+		<description>andatck</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="26164">
+				<rom name="andatck.cas" size="26164" crc="eb46d660" sha1="9dc2485b90648502b0182904f5f93973a84f9ffd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc488fa9bfd276d">
+		<description>annihila</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5893">
+				<rom name="annihila.cas" size="5893" crc="6d772810" sha1="488fa9bfd276d7ef205c1e701dfb4b8bbfebeda3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca132cdf0fe300">
+		<description>apples</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5976">
+				<rom name="apples.cas" size="5976" crc="dedd37ae" sha1="a132cdf0fe300fe2396c8c2b22e341fdcb3a8b9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocbb295fef00461">
+		<description>arex</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9721">
+				<rom name="arex.cas" size="9721" crc="4cf31d12" sha1="bb295fef00461e88c2edaa7ac60bd34d93bb59d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1503db2942c62">
+		<description>arkanoid[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="35299">
+				<rom name="arkanoid[B].cas" size="35299" crc="15c35b5d" sha1="1503db2942c62b6b3c630aeb939b73f611961940"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc292efec6f16f1">
+		<description>art</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4667">
+				<rom name="art.cas" size="4667" crc="bfa2dddf" sha1="292efec6f16f1915ea154dd39a5f73f9ccdbb2d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc809181e4464f6">
+		<description>arthur</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3359">
+				<rom name="arthur.cas" size="3359" crc="932976f4" sha1="809181e4464f6a1e95be66fdb54ff960bf54cf46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb8e06e00da188">
+		<description>assasin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9722">
+				<rom name="assasin.cas" size="9722" crc="0299e2f1" sha1="b8e06e00da188472a749bf2499e454225e5d82a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc170fe493c29bd">
+		<description>assault</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9292">
+				<rom name="assault.cas" size="9292" crc="c15d4810" sha1="170fe493c29bd3d9f5757f090a5b88f8e75e23b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc6e8214940e0a">
+		<description>astro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="18617">
+				<rom name="astro.cas" size="18617" crc="81c78423" sha1="c6e8214940e0a3455be29401fb5781736056df74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc2783cb6ad196e">
+		<description>athletyx</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="23369">
+				<rom name="athletyx.cas" size="23369" crc="2b5d4669" sha1="2783cb6ad196eea7a42070bab5b316fc9c93d0f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc49f21b065445c">
+		<description>azoo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="15528">
+				<rom name="azoo.cas" size="15528" crc="f161f48c" sha1="49f21b065445c05ad597467d090bc9a4fc16f5ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc03b5e004e5844">
+		<description>aztec</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="49863">
+				<rom name="aztec.cas" size="49863" crc="dffa0bb3" sha1="03b5e004e5844b68bf24c05c11a5469574a866e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc66e666295c077">
+		<description>backgamn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4743">
+				<rom name="backgamn.cas" size="4743" crc="2ff384ec" sha1="66e666295c077f0ddc0270464b21f63e882bd9e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4835970da1a98">
+		<description>ballatck</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="2217">
+				<rom name="ballatck.cas" size="2217" crc="34e42789" sha1="4835970da1a98278650a66a18db53158c8c0cff5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc730bcefef7f2">
+		<description>ballfire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3172">
+				<rom name="ballfire.cas" size="3172" crc="30176f89" sha1="c730bcefef7f2d841f020b5bdea1f890d520c82a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc2c30af3ad27f0">
+		<description>bandit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="18697">
+				<rom name="bandit.cas" size="18697" crc="0ad7855b" sha1="2c30af3ad27f0371f704cc8756eae1550d0fbecb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc88f6e305ba298">
+		<description>bandito</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9179">
+				<rom name="bandito.cas" size="9179" crc="c57c2aa5" sha1="88f6e305ba298f7419cf4768127bb013715528c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc5ff267fcf8d36">
+		<description>baseball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="12864">
+				<rom name="baseball.cas" size="12864" crc="e8c2445e" sha1="5ff267fcf8d36a0eb15fee002963b5304b640ac7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca56783bf07826">
+		<description>bash</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="14063">
+				<rom name="bash.cas" size="14063" crc="073efe04" sha1="a56783bf07826acdf677586ca685c74160308ac7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce86b1560d60d8">
+		<description>bcbill</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="23716">
+				<rom name="bcbill.cas" size="23716" crc="0330074e" sha1="e86b1560d60d803a241382972ee222f95edb5d5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc0308984509c8a">
+		<description>beam</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8936">
+				<rom name="beam.cas" size="8936" crc="cbe76c5d" sha1="0308984509c8a1e106b03b6b6e671ac13a1e3097"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc42630e36efc07">
+		<description>beanstlk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="25874">
+				<rom name="beanstlk.cas" size="25874" crc="30a1f9d9" sha1="42630e36efc0717c4ee39558e7f02749a09e6a4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocdcbf3cb5525e5">
+		<description>bedlam</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="15297">
+				<rom name="bedlam.cas" size="15297" crc="418f9194" sha1="dcbf3cb5525e5d9223fdda7a6dffa6d76eb18656"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coccf1781fa5259e">
+		<description>bedlam_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="15648">
+				<rom name="bedlam_1.cas" size="15648" crc="160ddfb9" sha1="cf1781fa5259e6aff42c29c7f7d5f803424e4499"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc64eae46e9da83">
+		<description>berserk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11328">
+				<rom name="berserk.cas" size="11328" crc="d8b5f07b" sha1="64eae46e9da839d5b040d3f0543ed8f8ae9a943c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc24875bafcebe4">
+		<description>bingo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4480">
+				<rom name="bingo.cas" size="4480" crc="9e5584ad" sha1="24875bafcebe43b41ba864a6b346758d78f2f8ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc581e87e99fe1d">
+		<description>birds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5280">
+				<rom name="birds.cas" size="5280" crc="4ca5472a" sha1="581e87e99fe1dded617ca23cb3e4fe899323745c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb65ac22d9196f">
+		<description>bjr[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="17215">
+				<rom name="bjr[B].cas" size="17215" crc="47fe4301" sha1="b65ac22d9196f9e7188a9be246a91867e7415a53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc0e60572ac7f51">
+		<description>blackjak</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6408">
+				<rom name="blackjak.cas" size="6408" crc="6b65c744" sha1="0e60572ac7f512c3d2f27619b59a0b20e2429c0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc633d5caae1556">
+		<description>blaster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4719">
+				<rom name="blaster.cas" size="4719" crc="937cf3ca" sha1="633d5caae155672ff824997467441b86d096faf9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce361aee58cc67">
+		<description>blochead</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6721">
+				<rom name="blochead.cas" size="6721" crc="590146b8" sha1="e361aee58cc674039fa342464b2cafffe7969fbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocbd5f9fd9aa0b6">
+		<description>BLOCHEAD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="415590">
+				<rom name="BLOCHEAD.WAV" size="415590" crc="350cb589" sha1="bd5f9fd9aa0b6f94a79179ef068b9e47d39a3205"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc02835d5d0c581">
+		<description>blockade</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="2851">
+				<rom name="blockade.cas" size="2851" crc="ca00e40e" sha1="02835d5d0c58106e8662436a22a42803b119948d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1bbe3cb714404">
+		<description>blox</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11392">
+				<rom name="blox.cas" size="11392" crc="9e1ff7f5" sha1="1bbe3cb7144044c484c2561c4ad63b23794edd6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc7738d54dbb15e">
+		<description>bouncer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3900">
+				<rom name="bouncer.cas" size="3900" crc="4aa751f1" sha1="7738d54dbb15e944d5a8e8dd615e337796980ac0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc17b353f0b1045">
+		<description>brewmast</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="14126">
+				<rom name="brewmast.cas" size="14126" crc="7551b887" sha1="17b353f0b104545866ddf3aa00289ea5b6a16b14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6da8cdc140554">
+		<description>bridge</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8859">
+				<rom name="bridge.cas" size="8859" crc="5272d143" sha1="6da8cdc14055402e5b43a8fa32e95324f1cfe6f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc031f802a1de7b">
+		<description>brikpong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3729">
+				<rom name="brikpong.cas" size="3729" crc="11a538cd" sha1="031f802a1de7b64b6749de5e8136a177b0e4a6a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc142f5ddc5147f">
+		<description>bumpers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9460">
+				<rom name="bumpers.cas" size="9460" crc="4f6988f2" sha1="142f5ddc5147f2524e6400f5e356f799f67de28f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocef5f4fefa957f">
+		<description>bustout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4666">
+				<rom name="bustout.cas" size="4666" crc="f11ecf01" sha1="ef5f4fefa957f044f584b07795cf0bf686992743"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc9a4f9396760bf">
+		<description>buzzard</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="26227">
+				<rom name="buzzard.cas" size="26227" crc="b5f3df66" sha1="9a4f9396760bf6809fa175d90f02ad9d36af46f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc09c6b752a8022">
+		<description>buzzworm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11732">
+				<rom name="buzzworm.cas" size="11732" crc="f14f7494" sha1="09c6b752a80223d9003841f0f4b850cd0193c865"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc5b10f1d61cec8">
+		<description>calixto</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29927">
+				<rom name="calixto.cas" size="29927" crc="aef2dc75" sha1="5b10f1d61cec82dff3e3d95f8d3da04b87bb122a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc7e92b3f4545ba">
+		<description>candyco</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29355">
+				<rom name="candyco.cas" size="29355" crc="820fd6e2" sha1="7e92b3f4545bab3cc96cfa8e8ed75226d0fe199f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc2a72b6d3596f8">
+		<description>cashman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="20462">
+				<rom name="cashman.cas" size="20462" crc="fdbc9c0c" sha1="2a72b6d3596f8b6d0f34d496b15441813769c2a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd3aa91cf0fa1b">
+		<description>catacomb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8008">
+				<rom name="catacomb.cas" size="8008" crc="a03021cd" sha1="d3aa91cf0fa1baf9f0e60b753295a9abdcd48cfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc0aaed62df4dea">
+		<description>catalyst</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="12866">
+				<rom name="catalyst.cas" size="12866" crc="1f4a430b" sha1="0aaed62df4dea8383aeac3468816efa88f4c533d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca75dd167095d4">
+		<description>catcave</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="2681">
+				<rom name="catcave.cas" size="2681" crc="60f412ef" sha1="a75dd167095d48595aea56d4fd7f4151dcd74158"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1c40a97a73a2c">
+		<description>catchem</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4339">
+				<rom name="catchem.cas" size="4339" crc="e4a4cfd1" sha1="1c40a97a73a2c7cf2ecabf60a7d89a3aca31f495"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1fa51fe82d3fd">
+		<description>caterdav</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6148">
+				<rom name="caterdav.cas" size="6148" crc="7129554b" sha1="1fa51fe82d3fd783f6a81c728c049d52fae4896d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc25607e5db0d4e">
+		<description>caterpil</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8013">
+				<rom name="caterpil.cas" size="8013" crc="f72ff5b3" sha1="25607e5db0d4e5a83b19cfc6afd2003218410f8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce4daf4287cab9">
+		<description>catrpilr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8474">
+				<rom name="catrpilr.cas" size="8474" crc="1a238945" sha1="e4daf4287cab9559169c4c1ba93f207ff021b743"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocfdb103a54a03a">
+		<description>chambers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="25618">
+				<rom name="chambers.cas" size="25618" crc="5682f7b9" sha1="fdb103a54a03a8022c753eec591a23e604fadcf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca04203dd69efb">
+		<description>checkers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4667">
+				<rom name="checkers.cas" size="4667" crc="d903f759" sha1="a04203dd69efb4b8ecf275b7ab5c44c58338ca3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocdbcacadd2a361">
+		<description>chekrsbw</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4523">
+				<rom name="chekrsbw.cas" size="4523" crc="ddf1d849" sha1="dbcacadd2a361111f6968edf2376a8f4e3e0fa7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1ebe355cc177f">
+		<description>chess</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6577">
+				<rom name="chess.cas" size="6577" crc="d31268af" sha1="1ebe355cc177f6395cac11fc86f0c45670bb5ca5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc3f4aaa6a08ca6">
+		<description>chessbw</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6619">
+				<rom name="chessbw.cas" size="6619" crc="252a68fc" sha1="3f4aaa6a08ca6fe04b3527ef36c645663616a1ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocbcd1c83165cfe">
+		<description>chessset[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3936">
+				<rom name="chessset[B].cas" size="3936" crc="0cc7edf4" sha1="bcd1c83165cfe12a050f3637bd43ad9294ff22ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc279461a55e834">
+		<description>chopper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="18104">
+				<rom name="chopper.cas" size="18104" crc="c7891461" sha1="279461a55e83490de7c3339d1f24aded66084c47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6af5edd0b2d7c">
+		<description>cimeeon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="10110">
+				<rom name="cimeeon.cas" size="10110" crc="ce37d708" sha1="6af5edd0b2d7c33f18f7a0bd2c201f1621dbf1cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc44c68cdd0b5ca">
+		<description>climb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5763">
+				<rom name="climb.cas" size="5763" crc="d6c6747d" sha1="44c68cdd0b5ca3f0ffee2be0d3b538c09eab540f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4f2a29523ff27">
+		<description>clone80c</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1663">
+				<rom name="clone80c.cas" size="1663" crc="493a70b3" sha1="4f2a29523ff27129d61fbe2a3d5827f90972c63c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coccaa09eb158d58">
+		<description>clowns</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8858">
+				<rom name="clowns.cas" size="8858" crc="6c857a3d" sha1="caa09eb158d581197f581d8835380f12e4c18d91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc9f285e72021fc">
+		<description>colorcar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="28727">
+				<rom name="colorcar.cas" size="28727" crc="a5fefed7" sha1="9f285e72021fcf0699ac02f76b5545aa622979c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd22fc864f0330">
+		<description>colordot[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6602">
+				<rom name="colordot[B].cas" size="6602" crc="e78f7211" sha1="d22fc864f033022c4837b95a18304314a0ec888a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca8235fb601a1b">
+		<description>colorzap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="7101">
+				<rom name="colorzap.cas" size="7101" crc="cdea6240" sha1="a8235fb601a1b09007b45ca262d204921e59cb90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1fc05e2417c63">
+		<description>cooler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="21666">
+				<rom name="cooler.cas" size="21666" crc="19160b5b" sha1="1fc05e2417c638bdef067466d26e99de0ff9bc98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc0f94abcecc10">
+		<description>copyany</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1360">
+				<rom name="copyany.cas" size="1360" crc="100765ff" sha1="c0f94abcecc1067f84df562ba8e9e00aa69c67dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc80cfaaee30471">
+		<description>cpede</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9207">
+				<rom name="cpede.cas" size="9207" crc="6fd2e141" sha1="80cfaaee30471102f63cc45a75e316ddb33c3013"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc07a56897f7e9f">
+		<description>crash</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="20719">
+				<rom name="crash.cas" size="20719" crc="4964c605" sha1="07a56897f7e9f7f1a4442e3e618ac5e1f90768b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocee01655f71566">
+		<description>Crazmaze[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5272">
+				<rom name="Crazmaze[B].cas" size="5272" crc="31cc4d60" sha1="ee01655f7156654462e07bc1cb4e9ddefa3edca9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc32c0986f55287">
+		<description>crazpntr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="13389">
+				<rom name="crazpntr.cas" size="13389" crc="38d7c2b8" sha1="32c0986f552879bf915e41d5013fd0d73ae3a572"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1c2d279712c01">
+		<description>creature</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="7887">
+				<rom name="creature.cas" size="7887" crc="e00e0168" sha1="1c2d279712c01f0061197b8341f533cce3abeeb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocf785798822c03">
+		<description>cribbage[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="18647">
+				<rom name="cribbage[B].cas" size="18647" crc="5ba9e8dd" sha1="f785798822c0336ff29311e00f84b59d31d1965e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocdb61f28e72823">
+		<description>cricket</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="21289">
+				<rom name="cricket.cas" size="21289" crc="ae84f091" sha1="db61f28e72823402cba8ac4db853e6a8ad933f37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc255c56bac800e">
+		<description>crosword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4481">
+				<rom name="crosword.cas" size="4481" crc="a5e51da3" sha1="255c56bac800ec7139e2a0163477e63fb25d2638"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocf988c378ab2b8">
+		<description>crystal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="19554">
+				<rom name="crystal.cas" size="19554" crc="3e9dafac" sha1="f988c378ab2b8894d1be4deee40f32d6c6d8e3c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc9fd59b5901692">
+		<description>cuber</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="7460">
+				<rom name="cuber.cas" size="7460" crc="f8dcb912" sha1="9fd59b590169230fa77a715f1aab2394c8b44615"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc530d6593527c3">
+		<description>cubes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4667">
+				<rom name="cubes.cas" size="4667" crc="8775d2cc" sha1="530d6593527c3b39e02f1d8a1ea6aa90ff8108ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc89d5a8c579de2">
+		<description>cubix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="10246">
+				<rom name="cubix.cas" size="10246" crc="83bae686" sha1="89d5a8c579de2f166fab7c266496418cdadbc5c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocf3ecadc6812d2">
+		<description>cuthdig</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11115">
+				<rom name="cuthdig.cas" size="11115" crc="7ee973b0" sha1="f3ecadc6812d2c0f26ea3ec89d6e7c1461d33c5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6e45ad365a4ab">
+		<description>cuthmine</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6886">
+				<rom name="cuthmine.cas" size="6886" crc="d7ba4ad0" sha1="6e45ad365a4ab7c5d8ac1fb95247a23b25f2189e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca77224ebf484a">
+		<description>cyberwar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="13920">
+				<rom name="cyberwar.cas" size="13920" crc="499ef83a" sha1="a77224ebf484afb565f5c8ab3f82d0bf3f55fd8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc90368adaf327">
+		<description>cyrus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="17112">
+				<rom name="cyrus.cas" size="17112" crc="eb6583e0" sha1="c90368adaf3276381ec3d211c3717c368c7ef769"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4e534b8fbdfc4">
+		<description>daggorat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="12966">
+				<rom name="daggorat.cas" size="12966" crc="42924528" sha1="4e534b8fbdfc477062bf2480eee8a8b85f00125e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc3c90e59a82d70">
+		<description>darkpit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="33399">
+				<rom name="darkpit.cas" size="33399" crc="5b2e4c77" sha1="3c90e59a82d70d8aad75bf3da768a0a984df4571"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc681d883128ab5">
+		<description>dblback</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4742">
+				<rom name="dblback.cas" size="4742" crc="85c56d04" sha1="681d883128ab5ab17eee4a1ff3aee7a8610883a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc0cf251a06d6a">
+		<description>DCHS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1879608">
+				<rom name="DCHS.WAV" size="1879608" crc="33ea13c1" sha1="c0cf251a06d6a1183074167256ac32b63e55b1db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc82dd4efa9f3bf">
+		<description>ddevil</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11810">
+				<rom name="ddevil.cas" size="11810" crc="b6fc4120" sha1="82dd4efa9f3bfc44b4e3cfca221f5da2412cd12b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocdb6aaf3cfb034">
+		<description>death</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="15286">
+				<rom name="death.cas" size="15286" crc="14b1c064" sha1="db6aaf3cfb0341473c9ab0b641de9d5689a78aa3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd0535bc83070b">
+		<description>decath</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="28200">
+				<rom name="decath.cas" size="28200" crc="e8ad140c" sha1="d0535bc83070b9ecd588fa93a9d3ccdd6036512c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coceb88d8248f3ce">
+		<description>decipher</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9064">
+				<rom name="decipher.cas" size="9064" crc="f6727647" sha1="eb88d8248f3ceb5c1f44f5c6a055ee8412b798d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca1787ce2b1e14">
+		<description>defense</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="7362">
+				<rom name="defense.cas" size="7362" crc="5e08271a" sha1="a1787ce2b1e145925c1a314eb53d2ecefe6e2d83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4df9184d755bc">
+		<description>demon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="19678">
+				<rom name="demon.cas" size="19678" crc="34c17ce3" sha1="4df9184d755bcc161753daefeedb0155fc18cf4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc84c074d172ce9">
+		<description>derby</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8934">
+				<rom name="derby.cas" size="8934" crc="2ed490cc" sha1="84c074d172ce96b1734a0101c41f81444b71e5f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd5a15acc74b46">
+		<description>desrider</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="13389">
+				<rom name="desrider.cas" size="13389" crc="92cbfd45" sha1="d5a15acc74b46fd0912bcb155d0f4600b5d9b47d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc942b051404bfb">
+		<description>detach</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1471">
+				<rom name="detach.cas" size="1471" crc="25bdabc7" sha1="942b051404bfb5f4baa96aede205462d0e7403b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coccd460a9f9afcd">
+		<description>devilass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8627">
+				<rom name="devilass.cas" size="8627" crc="a0cd5280" sha1="cd460a9f9afcdce78396811e3b7e203c4d3a8fd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc0d5c9e0cd3c83">
+		<description>devious</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11213">
+				<rom name="devious.cas" size="11213" crc="f40dc3ee" sha1="0d5c9e0cd3c836f4a45ab8fb2c13cdf58b954f03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc56e48c590eff9">
+		<description>diablero</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="15467">
+				<rom name="diablero.cas" size="15467" crc="eb740437" sha1="56e48c590eff902a6216371fad86592103bd3ef7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb9d663a5b56e7">
+		<description>dinowars</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6673">
+				<rom name="dinowars.cas" size="6673" crc="93f19313" sha1="b9d663a5b56e72aced6918af9f1ff0f21ec754bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc158897d7e2376">
+		<description>donkey</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="20460">
+				<rom name="donkey.cas" size="20460" crc="5c6f5e1c" sha1="158897d7e23769f659c3ef10313dffabcc06a164"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc3d62f02757ab8">
+		<description>DONKEY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1249668">
+				<rom name="DONKEY.WAV" size="1249668" crc="23d29b6f" sha1="3d62f02757ab8bba37324f68c49d023c71bbc7f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocf1e3e93197dc0">
+		<description>donpan</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8936">
+				<rom name="donpan.cas" size="8936" crc="032533cb" sha1="f1e3e93197dc0edf691e1399e4e3e1d3b32f59ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc9000b911a18d6">
+		<description>donut</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="22195">
+				<rom name="donut.cas" size="22195" crc="cda4709a" sha1="9000b911a18d6eb0d9a523da4a7325dc8a133e74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc514e468444e12">
+		<description>doodle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9119">
+				<rom name="doodle.cas" size="9119" crc="4edf45cf" sha1="514e468444e12456b05591ec711a2e1a7dfe296e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc8033cd4b98031">
+		<description>draco</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="25964">
+				<rom name="draco.cas" size="25964" crc="4c563b60" sha1="8033cd4b98031a73e817df749c51f960a5ef93b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb577247d5b737">
+		<description>dragster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="15155">
+				<rom name="dragster.cas" size="15155" crc="c565ab2b" sha1="b577247d5b737788a88eec73bb91c295dd328b2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocf8c99f80d6124">
+		<description>droidwar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1578">
+				<rom name="droidwar.cas" size="1578" crc="6ee8bdea" sha1="f8c99f80d612478f627b2598f84e1737f0294a73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc261f7bc14dc81">
+		<description>drop</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4458">
+				<rom name="drop.cas" size="4458" crc="c78fdf71" sha1="261f7bc14dc818e38ee3e7fa18e04516174280a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc5d0076ac48a5a">
+		<description>dungraid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9322">
+				<rom name="dungraid.cas" size="9322" crc="88f37b84" sha1="5d0076ac48a5ab1b6cc23aba3cda4c1ac89ebaa3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4858047dd5438">
+		<description>dunkeym</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="13965">
+				<rom name="dunkeym.cas" size="13965" crc="4a1ac09a" sha1="4858047dd5438eb0deb533a3a56f417ab8f3a4ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb502cc727ea18">
+		<description>electron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11055">
+				<rom name="electron.cas" size="11055" crc="d452a1c7" sha1="b502cc727ea18d71ddbf8e07e5821b9b4a81bcd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6102ff9997231">
+		<description>elimnate</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="22298">
+				<rom name="elimnate.cas" size="22298" crc="226d43e7" sha1="6102ff9997231e10da42dcf2df70364639d74c24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6b0c6a4d704e1">
+		<description>escape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6173">
+				<rom name="escape.cas" size="6173" crc="eef757e4" sha1="6b0c6a4d704e15d436565e1f36095119b3e6559e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc38cec4a56f9e">
+		<description>escape2k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="25488">
+				<rom name="escape2k.cas" size="25488" crc="1ecccea3" sha1="c38cec4a56f9e6788a93bcd9cb69dd942ef3a52b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc24b08c2a0dd47">
+		<description>et[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9520">
+				<rom name="et[B].cas" size="9520" crc="40c40ea8" sha1="24b08c2a0dd47e1167c92206966dc00aa0769dbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc9f83091443059">
+		<description>eyespy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4458">
+				<rom name="eyespy.cas" size="4458" crc="f8efc6df" sha1="9f83091443059a2b893f40ac51676df074d00fc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc517f00970bfaf">
+		<description>ezski</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8673">
+				<rom name="ezski.cas" size="8673" crc="28b01c7d" sha1="517f00970bfaf3bba7cd41d876fc56c782ec2264"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc0946e96576479">
+		<description>F-16prt2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="27847">
+				<rom name="F-16prt2.cas" size="27847" crc="19fdb3f8" sha1="0946e965764796f35df1eaedce0e17d0ca4ab509"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc48a7007fe694e">
+		<description>fangman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8661">
+				<rom name="fangman.cas" size="8661" crc="be3abb7f" sha1="48a7007fe694e7b8150cffc5225d592cf4131c09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc82e031efaabdc">
+		<description>fembots</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="15485">
+				<rom name="fembots.cas" size="15485" crc="ef697d3c" sha1="82e031efaabdc00278b0735e01365477c59f477a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc697211ede8b4a">
+		<description>fighter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29894">
+				<rom name="fighter.cas" size="29894" crc="09730924" sha1="697211ede8b4a1726be7cfd6dfefe4744056c185"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4ab217a1b8ea1">
+		<description>firecopt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="7799">
+				<rom name="firecopt.cas" size="7799" crc="1ec0ead5" sha1="4ab217a1b8ea11cef34556c897fe0d02b4774138"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc340b8470551c8">
+		<description>firerunr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5450">
+				<rom name="firerunr.cas" size="5450" crc="578f3228" sha1="340b8470551c80bb57459d859a107dc95a228487"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc886c6f46ade0b">
+		<description>flippy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="13405">
+				<rom name="flippy.cas" size="13405" crc="d35e93b2" sha1="886c6f46ade0b4e12118a30df4918aaa954c3674"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca391bdefe7056">
+		<description>fltsim</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="15698">
+				<rom name="fltsim.cas" size="15698" crc="94af9f1f" sha1="a391bdefe7056aab74ba55db640712433ec3db33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc88aabe694f626">
+		<description>flyby</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4189">
+				<rom name="flyby.cas" size="4189" crc="817d8827" sha1="88aabe694f62606a6d28ee55024a6f537c86558d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc0f6125d9b1ac0">
+		<description>footbal2[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="34801">
+				<rom name="footbal2[B].cas" size="34801" crc="fb34b08f" sha1="0f6125d9b1ac0aca3a46432748508fb889b45dd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4b840ffb45de3">
+		<description>football</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8859">
+				<rom name="football.cas" size="8859" crc="316f4073" sha1="4b840ffb45de3409bde5c73f3efeeeb0a87704be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocad3267163ea52">
+		<description>footrace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4613">
+				<rom name="footrace.cas" size="4613" crc="6a7dd962" sha1="ad3267163ea52fbedbda84bd470193ec8e397d5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc862ab5b84ecb3">
+		<description>force</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6307">
+				<rom name="force.cas" size="6307" crc="0db3e46b" sha1="862ab5b84ecb34091cb924ceec794322c16f3541"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc7368c70b759c">
+		<description>forest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5647">
+				<rom name="forest.cas" size="5647" crc="a6b4670d" sha1="c7368c70b759cd9e2d17ee7dca8136eb07871717"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb54c25192e453">
+		<description>fourcube</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="18424">
+				<rom name="fourcube.cas" size="18424" crc="632ed069" sha1="b54c25192e453e0f2e95029be494dc504a671a92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1a4394299cb10">
+		<description>fraction</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8859">
+				<rom name="fraction.cas" size="8859" crc="b604154d" sha1="1a4394299cb102a667e05605cf04fc811d7c1eb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocaee6d88545a5e">
+		<description>frogger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="13602">
+				<rom name="frogger.cas" size="13602" crc="a9cd288e" sha1="aee6d88545a5e5ee710e541dfcee41bdc5581762"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc9ef4ef2380a9f">
+		<description>frogtrek</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8278">
+				<rom name="frogtrek.cas" size="8278" crc="0e98ee1e" sha1="9ef4ef2380a9f43b9fed4f3d30cd400042de803e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocf03d54d101ac4">
+		<description>fruitbar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="13137">
+				<rom name="fruitbar.cas" size="13137" crc="c751182e" sha1="f03d54d101ac4e41d40f56f97e9c954e52aa0342"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce549b29f269e3">
+		<description>fury</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="17057">
+				<rom name="fury.cas" size="17057" crc="46d716d8" sha1="e549b29f269e374e80a8fced84dc76c22018ae76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc445f6392e8598">
+		<description>galactic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8672">
+				<rom name="galactic.cas" size="8672" crc="302f1f36" sha1="445f6392e859835a89cea7fb448a834157e450af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocac9cacc82cac6">
+		<description>galagon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="21121">
+				<rom name="galagon.cas" size="21121" crc="0136e2da" sha1="ac9cacc82cac6b1a6514ccb9c3d4083fc0e010b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb2cc4027cae29">
+		<description>galax</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9197">
+				<rom name="galax.cas" size="9197" crc="843bd2e5" sha1="b2cc4027cae290096c96a743fad314f4354328ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc180f37b924b75">
+		<description>gazon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5061">
+				<rom name="gazon.cas" size="5061" crc="07024ff6" sha1="180f37b924b750b8d5c27f03db49c0e555afe7ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc3f2ff20a65ed2">
+		<description>germ</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="2452">
+				<rom name="germ.cas" size="2452" crc="ab0df330" sha1="3f2ff20a65ed2efb60b39ca4c446d6ce366ce9fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocac0d3b18eabcc">
+		<description>GERM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="171726">
+				<rom name="GERM.WAV" size="171726" crc="60049763" sha1="ac0d3b18eabcc3f2374b4547f6780203afdbcc63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb50cf0d3b3be1">
+		<description>gfighter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="26752">
+				<rom name="gfighter.cas" size="26752" crc="a9aad3d6" sha1="b50cf0d3b3be1cf72040f7320f1badd4156013d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb8de3528cfd71">
+		<description>ggoblr13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9198">
+				<rom name="ggoblr13.cas" size="9198" crc="1a2c4819" sha1="b8de3528cfd71db45c7761c8d48392a8168f329b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc93c9f2919e8ee">
+		<description>ggoblr14</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="7896">
+				<rom name="ggoblr14.cas" size="7896" crc="9fb317b7" sha1="93c9f2919e8ee7e21994ba4037a3a3e4ea8ebdff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4e3a57ff87305">
+		<description>ginchamp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8859">
+				<rom name="ginchamp.cas" size="8859" crc="ee9b6775" sha1="4e3a57ff8730547c797c1e23883c3486e916ed0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocbdc482fe4c5f7">
+		<description>glaxxons</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="10245">
+				<rom name="glaxxons.cas" size="10245" crc="5cccbeae" sha1="bdc482fe4c5f7b86862f839f1fc526f6072b33ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc3a0514a26760e">
+		<description>GLOVE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3932662">
+				<rom name="GLOVE.WAV" size="3932662" crc="9c5a82f7" sha1="3a0514a26760ef9eca02d9fe54f425fd26200c32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc31d8cc8e74eb0">
+		<description>GLOVE_S2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3992378">
+				<rom name="GLOVE_S2.WAV" size="3992378" crc="8bbe6da9" sha1="31d8cc8e74eb0548ebd234c5c4a2c6be6b67736d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd47962a44bf45">
+		<description>Glove_Side1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29029">
+				<rom name="Glove_Side1.cas" size="29029" crc="3a89ed4e" sha1="d47962a44bf45002dca8a1cbaddcb11abd9920cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc82a20d11391ca">
+		<description>gobbler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6007">
+				<rom name="gobbler.cas" size="6007" crc="9dacd84f" sha1="82a20d11391ca67599ebe991ed081bc95f852b07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd6712c29e86e6">
+		<description>goldrun</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29404">
+				<rom name="goldrun.cas" size="29404" crc="7a6d6d5f" sha1="d6712c29e86e64bff3ba590f4eba75688a2206c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb6783fc94ecee">
+		<description>goldrun2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29895">
+				<rom name="goldrun2.cas" size="29895" crc="4c5ba9cb" sha1="b6783fc94eceeff6d2ed32f431f8534e4e7f796f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc443af5355f9e3">
+		<description>gomoku</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8859">
+				<rom name="gomoku.cas" size="8859" crc="18fe2dd8" sha1="443af5355f9e323c2a9baeb55be96b63635e28bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6d40d8643280a">
+		<description>grabber</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="25704">
+				<rom name="grabber.cas" size="25704" crc="3ee18e1d" sha1="6d40d8643280aa8c1eb7286de1a1204edb69176e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce77f3757c35c4">
+		<description>GRANPRIX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1493720">
+				<rom name="GRANPRIX.WAV" size="1493720" crc="eba50b39" sha1="e77f3757c35c488371999a91a7f452c3c5da9dcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocfa9bf07f90cba">
+		<description>gravitor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8358">
+				<rom name="gravitor.cas" size="8358" crc="8ae24619" sha1="fa9bf07f90cba91bdcc6ec41b228b23c6257d3c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc500a3d701f897">
+		<description>graylady</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="4467">
+				<rom name="graylady.cas" size="4467" crc="ac3bf226" sha1="500a3d701f89733005cd614a14f868326e473ad8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc939e457d32933">
+		<description>gremlin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="2696">
+				<rom name="gremlin.cas" size="2696" crc="af80ba45" sha1="939e457d3293378a027ff3bc969c20746a1c2092"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd4fa46a6361f2">
+		<description>grid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3453">
+				<rom name="grid.cas" size="3453" crc="96787547" sha1="d4fa46a6361f28f2aaba798396160c4c19a4d7fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce8312a54461f3">
+		<description>grprix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8340">
+				<rom name="grprix.cas" size="8340" crc="0efb720b" sha1="e8312a54461f31a4295f7961b4c95eeb47d512d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb90f1b58f889d">
+		<description>guardian</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6055">
+				<rom name="guardian.cas" size="6055" crc="5019b107" sha1="b90f1b58f889d47bbf801d1cd40b74be23a4d88e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocbca31d2368d1d">
+		<description>hawk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3481">
+				<rom name="hawk.cas" size="3481" crc="ad9d4fcc" sha1="bca31d2368d1d96bc101fed9a01256bf236345ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc8d8e1c75cde4a">
+		<description>hockey</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="22822">
+				<rom name="hockey.cas" size="22822" crc="e12f39b2" sha1="8d8e1c75cde4abd8302548fd05addf039159b51e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1571f36f34ad2">
+		<description>hopbop</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11400">
+				<rom name="hopbop.cas" size="11400" crc="2289074d" sha1="1571f36f34ad2826cbee017565986a3cb3c8b9d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc6f73782194bd">
+		<description>horace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="24355">
+				<rom name="horace.cas" size="24355" crc="2826a1bb" sha1="c6f73782194bd368983300a5e48d324641e228b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce9b69d7c2a1ba">
+		<description>horacesk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="21694">
+				<rom name="horacesk.cas" size="21694" crc="95f32d09" sha1="e9b69d7c2a1ba3882dcc9d1fdd7a9ed8a04d2987"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc789396686111e">
+		<description>horsrace[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="21126">
+				<rom name="horsrace[B].cas" size="21126" crc="c3b96c62" sha1="789396686111eb2944b4476d52830c482adc8f62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocbda6084bfc836">
+		<description>hotslot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="21405">
+				<rom name="hotslot.cas" size="21405" crc="f483b55e" sha1="bda6084bfc836e703e32fdcd8a81b2836f6496a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc437a447c29c01">
+		<description>how[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5543">
+				<rom name="how[B].cas" size="5543" crc="c988acce" sha1="437a447c29c01591b0854735f8f0c061096be259"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4106ef3e0f9f5">
+		<description>hyprzone</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="24394">
+				<rom name="hyprzone.cas" size="24394" crc="87527ab8" sha1="4106ef3e0f9f590819c637a2fb75ce0effdce295"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc21dea3c1982aa">
+		<description>icebird</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="10817">
+				<rom name="icebird.cas" size="10817" crc="5fbcdb37" sha1="21dea3c1982aa6d6e272fbccf4394287457ff1c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc78b8a161c3704">
+		<description>icemstr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="14811">
+				<rom name="icemstr.cas" size="14811" crc="502b9912" sha1="78b8a161c3704c6b3a50dde3a7de777a7a399c48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd7198932a0908">
+		<description>interc4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="20143">
+				<rom name="interc4.cas" size="20143" crc="4ebc3ac3" sha1="d7198932a0908bc97f5627925c9feae742907fc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc47d442619d073">
+		<description>invaders</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9197">
+				<rom name="invaders.cas" size="9197" crc="8cab8888" sha1="47d442619d07350dcd049fd5e44bba65f7488502"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6292afbbaa2df">
+		<description>INVADERS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="491510">
+				<rom name="INVADERS.WAV" size="491510" crc="d3523411" sha1="6292afbbaa2dfa28fc4192d74ad254038f439c3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc57586f276b689">
+		<description>invasion</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9706">
+				<rom name="invasion.cas" size="9706" crc="907c62e5" sha1="57586f276b6892624f5c45e90006cda237e9c754"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc5a6bc58b01e83">
+		<description>invrev</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="5362">
+				<rom name="invrev.cas" size="5362" crc="c5466585" sha1="5a6bc58b01e838c2ebff187c4a6ae0805d369856"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1e1fe3084c429">
+		<description>jaws</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="10506">
+				<rom name="jaws.cas" size="10506" crc="351e375a" sha1="1e1fe3084c429696dea17bb0851c2302c8045597"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc33b9a454f3b33">
+		<description>jet-i</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="10769">
+				<rom name="jet-i.cas" size="10769" crc="886bc62a" sha1="33b9a454f3b337644c4003ae176f60fdd83edb3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coccee0099a5e504">
+		<description>juniors</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29372">
+				<rom name="juniors.cas" size="29372" crc="a2a1da72" sha1="cee0099a5e50465bb2a1022f546e83404aee2287"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocb142c7ccd667e">
+		<description>karate</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="29894">
+				<rom name="karate.cas" size="29894" crc="8cbcfc6f" sha1="b142c7ccd667e7734773ef3a51fb2931bc008737"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4f1b6bae1e555">
+		<description>katerpil</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="6577">
+				<rom name="katerpil.cas" size="6577" crc="617ac924" sha1="4f1b6bae1e5559739e7cb056ecba5c39f95ad6d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc102aff06b0cc5">
+		<description>kids</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8859">
+				<rom name="kids.cas" size="8859" crc="2813a58c" sha1="102aff06b0cc5c0b710a829ab8eabee6a9cba25a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocfb00256ed2164">
+		<description>kinder</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8859">
+				<rom name="kinder.cas" size="8859" crc="877aa00e" sha1="fb00256ed2164982b16e5a6f72e63c3df9b7c6bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc028cda922cfe1">
+		<description>kingdom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="16977">
+				<rom name="kingdom.cas" size="16977" crc="27738115" sha1="028cda922cfe151190b41f8d4ab1152c41736583"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocf883107e0235d">
+		<description>kingdong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="21424">
+				<rom name="kingdong.cas" size="21424" crc="fbbb54bf" sha1="f883107e0235dadc0b90df8210ddca7cf65297ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc7a2b23c5118d1">
+		<description>kingtut</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9970">
+				<rom name="kingtut.cas" size="9970" crc="832ccfd7" sha1="7a2b23c5118d143890e3b9a08903e4480bbc6a87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc5363654955892">
+		<description>klendath[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8644">
+				<rom name="klendath[B].cas" size="8644" crc="79974f9f" sha1="53636549558926f3940b8107dde1e9a2b0989956"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc1217feea0e5c8">
+		<description>klondke3[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="10599">
+				<rom name="klondke3[B].cas" size="10599" crc="7056953d" sha1="1217feea0e5c8bb348a29a091189eaac4fd341c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc502d7b93643c4">
+		<description>komet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="8239">
+				<rom name="komet.cas" size="8239" crc="458521ad" sha1="502d7b93643c45fbac4aeca4eb2dc939342c6e0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc08060930b4c40">
+		<description>kraken[B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="10550">
+				<rom name="kraken[B].cas" size="10550" crc="dfc1ee71" sha1="08060930b4c40345c1bd20e7add66226a03c17a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coceed1656981566">
+		<description>kron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="18194">
+				<rom name="kron.cas" size="18194" crc="eed068b7" sha1="eed16569815667ed9b39daf6f19a901838a7192f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocc8a22759aa914">
+		<description>LANCER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1254845">
+				<rom name="LANCER.WAV" size="1254845" crc="7b002e89" sha1="c8a22759aa9141e8df7e120ff8da9b4416b6689c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc0d7542845ef37">
+		<description>LUN-ROV</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="1231398">
+				<rom name="LUN-ROV.WAV" size="1231398" crc="92e69c01" sha1="0d7542845ef37f6891f64cce281c2c17df1aac4a"/>
 			</dataarea>
 		</part>
 	</software>
