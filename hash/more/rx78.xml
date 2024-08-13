@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6 -->
+<!-- Number of items in this list = 5 -->
 <softwarelist name="rx78" description="rx78 loose roms">
 	<software name="rx7a7a0215440bd7">
 		<description>Creative Graphics (IC2_IX0419PA_364C94-3J1)</description>
@@ -29,16 +29,6 @@
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio).rom" size="16384" crc="42318e6e" sha1="ce9e2e00be3253e689730d2ca1349e5199e0515b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="rx795c4703dda69a">
-		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="rx78_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).rom" size="16384" crc="51c0eeec" sha1="95c4703dda69ab624f22ceb086bea1e2195776c6"/>
 			</dataarea>
 		</part>
 	</software>
