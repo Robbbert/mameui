@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 61 -->
+<!-- Number of items in this list = 64 -->
 <softwarelist name="msx_disk" description="msx_disk loose roms">
 	<software name="msxf0ed6e26e4d81">
 		<description>512col</description>
@@ -269,6 +269,36 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="368640">
 				<rom name="new adam & eve (1985)(sony)(jp).dsk" size="368640" crc="32c233b1" sha1="31e2c0b9cfafe425d888fa3c4aadc47737a99be1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb72d945a2d61e">
+		<description>NV Magazine 1996-07 _ #26sp (Syntax, 1996) (Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="NV Magazine 1996-07 _ #26sp (Syntax, 1996) (Disk A).dsk" size="737280" crc="ee7e905c" sha1="b72d945a2d61ecca2defbec273aff6eba3a2ea0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx0ea75565249d8">
+		<description>NV Magazine 1996-07 _ #26sp (Syntax, 1996) (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="NV Magazine 1996-07 _ #26sp (Syntax, 1996) (Disk B).dsk" size="737280" crc="c984a538" sha1="0ea75565249d80512ba3de96e030913e00cf2c21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxdbc817a81ce07">
+		<description>NV Magazine 1996-07 _ #26sp (Syntax, 1996) (Disk C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="NV Magazine 1996-07 _ #26sp (Syntax, 1996) (Disk C).dsk" size="737280" crc="ee527bfd" sha1="dbc817a81ce075c19fbcbd5a02b2d06d7726bf41"/>
 			</dataarea>
 		</part>
 	</software>

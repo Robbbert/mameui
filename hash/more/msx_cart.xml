@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 605 -->
+<!-- Number of items in this list = 609 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -2089,6 +2089,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Gradius. Nemesis (1986)(Konami)[RC-742][SCC+].rom" size="131072" crc="619b4b4a" sha1="1434386454c776800cba3805c4041b0105c2f71f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4a96c5d525a35">
+		<description>Grazers v1.2 (2024)(Arturs Grebstelis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Grazers v1.2 (2024)(Arturs Grebstelis).rom" size="32768" crc="5670651f" sha1="4a96c5d525a3511fc7fa694f0bc6a506869e1abe"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4362,6 +4372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx6a88e58e967a0">
+		<description>Sam.Pr v1.1 (2024)(Fausto Pracek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Sam.Pr v1.1 (2024)(Fausto Pracek).rom" size="32768" crc="2b06bad8" sha1="6a88e58e967a0fbd505c152ac2ad26350321e8d4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx96e2a7163c755">
 		<description>Sangokusi - Romance of Three Kingdoms (1986)(Koei)[kanji]</description>
 		<year>????</year>
@@ -5192,6 +5212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx57f153d67fd79">
+		<description>TRUN (2016)(The Pets Mode)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="TRUN (2016)(The Pets Mode).rom" size="49152" crc="7c48ae05" sha1="57f153d67fd79987e222c053a5d013680628c2bf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxbd4e25b441a34">
 		<description>Tut Tut (2024)(Shieladixon)</description>
 		<year>????</year>
@@ -5263,12 +5293,12 @@
 		</part>
 	</software>
 	<software name="msx761db3d16e6cc">
-		<description>uchusen gamma</description>
+		<description>Uchusen Gamma</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
-				<rom name="uchusen gamma.rom" size="49152" crc="06a85e42" sha1="761db3d16e6cc0622cc856d7fdeeff12c368d224"/>
+				<rom name="Uchusen Gamma.rom" size="49152" crc="06a85e42" sha1="761db3d16e6cc0622cc856d7fdeeff12c368d224"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5399,6 +5429,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="385024">
 				<rom name="Way of the Tiger, The (1986)(Gremlin Graphics).rom" size="385024" crc="884ce9c9" sha1="98d1df8e32a863147832f6800d2d97d0913df521"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8be1235910351">
+		<description>Whack 'Em Smack 'Em Byrons (2024)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Whack 'Em Smack 'Em Byrons (2024)(Jess Creations).rom" size="32768" crc="cd5534d3" sha1="8be12359103511d98a9903a0b5df226624a7b19c"/>
 			</dataarea>
 		</part>
 	</software>

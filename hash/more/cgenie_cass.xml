@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 117 -->
+<!-- Number of items in this list = 205 -->
 <softwarelist name="cgenie_cass" description="cgenie_cass loose roms">
+	<software name="cgef1db75ec0fd0b">
+		<description>3D Haunted House (1984)(Gumboot Software)(GB)[32K][Old ROM]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="23233">
+				<rom name="3D Haunted House (1984)(Gumboot Software)(GB)[32K][Old ROM].cas" size="23233" crc="408561bb" sha1="f1db75ec0fd0baa992abaa77b36ba7e9cd2e4c42"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge6ed44bd8c43dd">
 		<description>abenteue(DE)</description>
 		<year>????</year>
@@ -9,6 +19,26 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="9331">
 				<rom name="abenteue(DE).cas" size="9331" crc="bbf55ff9" sha1="6ed44bd8c43dd8b8c9786ca801942efc5ebcda6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge280e5e36cbd57">
+		<description>Abenteuerland (198x)(-)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="9205">
+				<rom name="Abenteuerland (198x)(-)(de).cas" size="9205" crc="321710b8" sha1="280e5e36cbd578b94d58d152476de1155c282ae3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge032c9f3f84de6">
+		<description>Adressdatei II (198x)(D., Alex)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="10858">
+				<rom name="Adressdatei II (198x)(D., Alex)(DE).cas" size="10858" crc="917a2513" sha1="032c9f3f84de63af59dff0af6b0cc58296387536"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22,6 +52,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cgec4490c1fb92eb">
+		<description>Africa (1989)(Schneider, Marcus)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="6949">
+				<rom name="Africa (1989)(Schneider, Marcus)(DE).cas" size="6949" crc="355dd131" sha1="c4490c1fb92eb64be62c166f77bfc02610b32cf7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cgeff09e04b98cfc">
 		<description>africa(DE)</description>
 		<year>????</year>
@@ -29,6 +69,36 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="7084">
 				<rom name="africa(DE).cas" size="7084" crc="8fac32a5" sha1="ff09e04b98cfc4a1015c6c22f9a0989b3af752a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge5b5ac4372189c">
+		<description>Artist (1985)(Battlesoft)(Part 4 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3799">
+				<rom name="Artist (1985)(Battlesoft)(Part 4 of 4).cas" size="3799" crc="0d180e0e" sha1="5b5ac4372189c8cdc15357b09a665834257f246c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge2a64ac65bd9c8">
+		<description>Bank Planning (1983)(Fowler, M.E.)(GB)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="10810">
+				<rom name="Bank Planning (1983)(Fowler, M.E.)(GB)[32K].cas" size="10810" crc="10e66aee" sha1="2a64ac65bd9c84bbb313cfd77657c2e55988a2e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeff27ff8e012f7">
+		<description>Basicode 2 (1983-08-15)(Liisberg, Frants)(DK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="4514">
+				<rom name="Basicode 2 (1983-08-15)(Liisberg, Frants)(DK).cas" size="4514" crc="798ea494" sha1="ff27ff8e012f7719edff64684d1a6aeb3b54403b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42,6 +112,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cged579a5e298eff">
+		<description>Benchmark Test (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="35">
+				<rom name="Benchmark Test (19xx)(-).cas" size="35" crc="0f490f94" sha1="d579a5e298eff5c3ff3e011fe7318fa48220f120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge613aea5c65a3f">
+		<description>Berliner uhr, Die (19xx)(Toelke, Wilhelm)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="6451">
+				<rom name="Berliner uhr, Die (19xx)(Toelke, Wilhelm)(DE).cas" size="6451" crc="382907d8" sha1="613aea5c65a3ffea2ad5297d3bf80363562b5701"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cgeeb613dbdb52f0">
 		<description>botschaf</description>
 		<year>????</year>
@@ -49,6 +139,26 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="11314">
 				<rom name="botschaf.cas" size="11314" crc="ea935b3c" sha1="eb613dbdb52f06b4c4355802a1e677acbc2639b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge879a00835e4ba">
+		<description>Botschaft (1985-07)(Scholz Baeumner Schaffarzik)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="11130">
+				<rom name="Botschaft (1985-07)(Scholz Baeumner Schaffarzik)(DE).cas" size="11130" crc="46431856" sha1="879a00835e4bae90b04f21228a40e325b46f5487"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgee7e8b6f1588ba">
+		<description>Bumm Bumm (19xx)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3913">
+				<rom name="Bumm Bumm (19xx)(TCS)(DE).cas" size="3913" crc="f94afe05" sha1="e7e8b6f1588baaa2c7ba27cb59950fad1fd2387e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -72,6 +182,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cgea8b413f5a740e">
+		<description>Chemie - Grossprogramm 1 (1981)(-)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="4839">
+				<rom name="Chemie - Grossprogramm 1 (1981)(-)(DE).cas" size="4839" crc="d478a0bd" sha1="a8b413f5a740e56ae8695518eb13a9320003d8e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgee23ad0ee008fd">
+		<description>Chemie - Grossprogramm 2 (1981)(-)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3516">
+				<rom name="Chemie - Grossprogramm 2 (1981)(-)(DE).cas" size="3516" crc="9d90dddc" sha1="e23ad0ee008fde9097d0884f97f713e6c11134eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge72c7871a67125">
+		<description>Chemie - Grossprogramm 4 (1981)(-)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3581">
+				<rom name="Chemie - Grossprogramm 4 (1981)(-)(DE).cas" size="3581" crc="ab3e1133" sha1="72c7871a671257315a9de8e49a6a6a6410893b07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge5267a08c72c27">
+		<description>CIA-Agent (1985-07-22)(Scholz Baeumner Schaffarzik)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="16447">
+				<rom name="CIA-Agent (1985-07-22)(Scholz Baeumner Schaffarzik)(DE).cas" size="16447" crc="9aca41aa" sha1="5267a08c72c273aa2920f05cdaa8ec1f3fcd96da"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge364ebec7a6027">
 		<description>cia</description>
 		<year>????</year>
@@ -82,193 +232,63 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cge54e72e15a16e5">
-		<description>CLOAD_peng</description>
+	<software name="cgefbd1c47000396">
+		<description>Colour Genie - Kopierroutine (19xx)(-)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="332">
-				<rom name="CLOAD_peng.cas" size="332" crc="ff30b3d6" sha1="54e72e15a16e50255f442242dfd612ee1823c153"/>
+			<dataarea name="cass" size="3660">
+				<rom name="Colour Genie - Kopierroutine (19xx)(-).cas" size="3660" crc="d2ee13b0" sha1="fbd1c47000396036e6a5bd987bb3fb120df5b741"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="cge43b01ff87f766">
-		<description>CLOAD_primzahl</description>
+	<software name="cge29e6874686eb0">
+		<description>Colour Genie Demonstration Kassette (198x)(Schmidt, Carsten)(DE)[a]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="375">
-				<rom name="CLOAD_primzahl.cas" size="375" crc="f947d20d" sha1="43b01ff87f7662a6a2f6a3c5c248d3bfaa88964b"/>
+			<dataarea name="cass" size="9002">
+				<rom name="Colour Genie Demonstration Kassette (198x)(Schmidt, Carsten)(DE)[a].cas" size="9002" crc="c70117ee" sha1="29e6874686eb090a3ab3e01787d77e646e2806be"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="cgea7328f0663c5e">
-		<description>CLOAD_Santa Paravia (19xx)(-)(de)</description>
+	<software name="cge74c2df90f18a1">
+		<description>Colours (19xx)(-)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="13824">
-				<rom name="CLOAD_Santa Paravia (19xx)(-)(de).cas" size="13824" crc="4d672a70" sha1="a7328f0663c5ea2beccd57541e4042c274069f55"/>
+			<dataarea name="cass" size="337">
+				<rom name="Colours (19xx)(-).cas" size="337" crc="15d5a05e" sha1="74c2df90f18a132921e6c6bde24a2ea8198a898b"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="cgedbf1742c15cc3">
-		<description>CLOAD_santa</description>
+	<software name="cge77b418750b747">
+		<description>Crazy Chaser (198x)(-)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="13974">
-				<rom name="CLOAD_santa.cas" size="13974" crc="6f5f4ed1" sha1="dbf1742c15cc3f5d13435b9aa053fc2a6e8a124b"/>
+			<dataarea name="cass" size="3841">
+				<rom name="Crazy Chaser (198x)(-).cas" size="3841" crc="4ecf32b0" sha1="77b418750b7476927f17c6fe764e31098bb1aec7"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="cge2196d66dd0a02">
-		<description>CLOAD_Schiff des Grauens (198x)(Sven Schaffarzik-Heiko Scholz)(de)</description>
+	<software name="cgec4558b5568c3a">
+		<description>Decimal - Hex Converter (19xx)(-)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="17705">
-				<rom name="CLOAD_Schiff des Grauens (198x)(Sven Schaffarzik-Heiko Scholz)(de).cas" size="17705" crc="e0f2e0cb" sha1="2196d66dd0a0209cb513549d5952d13a1f16c24a"/>
+			<dataarea name="cass" size="1323">
+				<rom name="Decimal - Hex Converter (19xx)(-).cas" size="1323" crc="4a01f922" sha1="c4558b5568c3a8fcde0f0232fc5043b248f8b4c6"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="cge3cad2b333f6f5">
-		<description>CLOAD_Schnick Schnack Schnuck (1986)(Alexander Drawe)(de)</description>
+	<software name="cge04d22d5d08757">
+		<description>Defender (1983-02-06)(Andreas Goldau Softwareproduction)(DE)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="10630">
-				<rom name="CLOAD_Schnick Schnack Schnuck (1986)(Alexander Drawe)(de).cas" size="10630" crc="846841d3" sha1="3cad2b333f6f55ea4e1af5c1eb2d215ff409ea4f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge8b5efc2c5e97b">
-		<description>CLOAD_schnick</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="10786">
-				<rom name="CLOAD_schnick.cas" size="10786" crc="ceccbf5c" sha1="8b5efc2c5e97b766a6d46c367a67d9904f6e22b7"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge8a303ba08801e">
-		<description>CLOAD_Screen Editor (19xx)(-)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="1665">
-				<rom name="CLOAD_Screen Editor (19xx)(-).cas" size="1665" crc="d038dbb6" sha1="8a303ba08801e77f4415227b7b6f6251569f649d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge48e539bae31ac">
-		<description>CLOAD_screen1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="1827">
-				<rom name="CLOAD_screen1.cas" size="1827" crc="a3b02a58" sha1="48e539bae31ac730aeaab90f44c2ce5a9369c278"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge4defacfc5e17a">
-		<description>CLOAD_shifttra</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="501">
-				<rom name="CLOAD_shifttra.cas" size="501" crc="2073b1bf" sha1="4defacfc5e17a65ba946b0db4b87924775df7c35"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cgef7a3072721845">
-		<description>CLOAD_Sound Editor (1984)(-)(de)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="3625">
-				<rom name="CLOAD_Sound Editor (1984)(-)(de).cas" size="3625" crc="bf667ec4" sha1="f7a307272184599bec74249d8ce80197ee942084"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge9f546bd5266da">
-		<description>CLOAD_Sprite Editor (1983)(Patrick Thomas)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="2232">
-				<rom name="CLOAD_Sprite Editor (1983)(Patrick Thomas).cas" size="2232" crc="97053bbe" sha1="9f546bd5266dac346eda231c9f70a4b9e2ee5d35"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cged4db16e8f5091">
-		<description>CLOAD_spriteed</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="2397">
-				<rom name="CLOAD_spriteed.cas" size="2397" crc="43d6ece5" sha1="d4db16e8f509119bb8d6d74863f00819fcd64151"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cgeec023ea88ac28">
-		<description>CLOAD_startrek</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="16564">
-				<rom name="CLOAD_startrek.cas" size="16564" crc="819d6ab0" sha1="ec023ea88ac2888214729aa58c3ea8a565c33300"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge1e06a739dcc65">
-		<description>CLOAD_Super Star Trek (19xx)(-)(de)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="16437">
-				<rom name="CLOAD_Super Star Trek (19xx)(-)(de).cas" size="16437" crc="0a6a362b" sha1="1e06a739dcc65d173ebf54e36656c4bbeb7c6486"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge43ee9e02a8807">
-		<description>CLOAD_tavern</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="16218">
-				<rom name="CLOAD_tavern.cas" size="16218" crc="b058aeb9" sha1="43ee9e02a880705b3be7b8c6d9e9b42168f6b7fe"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge71def0b00ee91">
-		<description>CLOAD_transist</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="17816">
-				<rom name="CLOAD_transist.cas" size="17816" crc="6ff6b43f" sha1="71def0b00ee914ff5edcd695f6804658106aaf27"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cgeec97b03215ff7">
-		<description>CLOAD_villa</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="18601">
-				<rom name="CLOAD_villa.cas" size="18601" crc="c26fcbc7" sha1="ec97b03215ff7f6f347b67c5c07606aa03bf9abd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cge789472c4227e4">
-		<description>CLOAD_welcome</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="cgenie_cass">
-			<dataarea name="cass" size="1084">
-				<rom name="CLOAD_welcome.cas" size="1084" crc="97aca0cc" sha1="789472c4227e4f2a10b53fce032e6b43fc27c9bf"/>
+			<dataarea name="cass" size="4729">
+				<rom name="Defender (1983-02-06)(Andreas Goldau Softwareproduction)(DE).cas" size="4729" crc="c35f9375" sha1="04d22d5d08757c56238182b66d8da34dad194033"/>
 			</dataarea>
 		</part>
 	</software>
@@ -282,6 +302,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge5d65b4eafca7d">
+		<description>Disastrous Villa (1985-07)(Scholz Baeumner Schaffarzik)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="18413">
+				<rom name="Disastrous Villa (1985-07)(Scholz Baeumner Schaffarzik)(DE).cas" size="18413" crc="1526d46d" sha1="5d65b4eafca7d6fa301d3b8537f5b7ea6851ae35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeb35dfc9892f90">
+		<description>Easycode (1984)(CGUG Auckland)(NZ)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="9047">
+				<rom name="Easycode (1984)(CGUG Auckland)(NZ)[32K].cas" size="9047" crc="64bf2ccb" sha1="b35dfc9892f90031c8ff25b0e936ec425e4e7f28"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge1d8b429bfbf85">
 		<description>eci</description>
 		<year>????</year>
@@ -289,6 +329,56 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="1842">
 				<rom name="eci.cas" size="1842" crc="8bafd051" sha1="1d8b429bfbf85232ffc91f19e5d3d2f57e0e72d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge7027da67f48f9">
+		<description>Editor fuer Definierbare Zeichen (198x)(-)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="7441">
+				<rom name="Editor fuer Definierbare Zeichen (198x)(-)(DE).cas" size="7441" crc="d675af8f" sha1="7027da67f48f98d1e6fc780b31f9013d61ed262b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge349bc0a5b624f">
+		<description>Editor fuer Definierbare Zeichen (198x)(-)(DE)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="6852">
+				<rom name="Editor fuer Definierbare Zeichen (198x)(-)(DE)[a].cas" size="6852" crc="6e658740" sha1="349bc0a5b624fe484904e55c3c41213f3a55b506"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge8a37acc481426">
+		<description>Electric Etch v1.00 (1983-04-02)(Brittain Laboratories)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="6754">
+				<rom name="Electric Etch v1.00 (1983-04-02)(Brittain Laboratories)(GB).cas" size="6754" crc="bd5942d6" sha1="8a37acc481426efeacdda3365a54b2a9a61f0130"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge529797dd37cde">
+		<description>Electronic Desk (19xx)(Jackson, E A)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="9804">
+				<rom name="Electronic Desk (19xx)(Jackson, E A)[32K].cas" size="9804" crc="6582163e" sha1="529797dd37cde75569eb445df84249af18a403d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge673e48d334dd9">
+		<description>Empire (198x)(-)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="22076">
+				<rom name="Empire (198x)(-)(DE).cas" size="22076" crc="3e1415bf" sha1="673e48d334dd95b36bc58d89a101998a36db6964"/>
 			</dataarea>
 		</part>
 	</software>
@@ -302,6 +392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cgeee26649dfe04f">
+		<description>Extra-BASIC (198x)(COco)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1299">
+				<rom name="Extra-BASIC (198x)(COco)(DE).cas" size="1299" crc="935cf22d" sha1="ee26649dfe04fda00545652effa2d2d35064858f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge2870267a7cf46">
 		<description>floh</description>
 		<year>????</year>
@@ -309,6 +409,26 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="828">
 				<rom name="floh.cas" size="828" crc="8856f329" sha1="2870267a7cf4622a4a5a921f160d2a79121ccbbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge7b0b525204848">
+		<description>Flohwalzer, Der (198x)(-)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1054">
+				<rom name="Flohwalzer, Der (198x)(-)(DE).cas" size="1054" crc="8ffb4eea" sha1="7b0b525204848e30b2129a5fe985841c0cfb8970"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgee0e705a5ba182">
+		<description>G-Word (1984)(Gumboot Software)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="5275">
+				<rom name="G-Word (1984)(Gumboot Software)[32K].cas" size="5275" crc="5e597d25" sha1="e0e705a5ba182435d11d8c3e6c0a17f93bda5d0a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -332,6 +452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge3e54bd6763e9e">
+		<description>Horror Castle (198x)(Scholz Baeumner Schaffarzik)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="22199">
+				<rom name="Horror Castle (198x)(Scholz Baeumner Schaffarzik)(DE).cas" size="22199" crc="7f01d3a9" sha1="3e54bd6763e9ef4cbf40d714b4fc28936759cf38"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge1ccdc845e2885">
 		<description>horror</description>
 		<year>????</year>
@@ -342,6 +472,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge01c40d73536a5">
+		<description>House of Death (1985)(Scholz Baeumner Schaffarzik)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="18218">
+				<rom name="House of Death (1985)(Scholz Baeumner Schaffarzik)(DE).cas" size="18218" crc="60b6dc93" sha1="01c40d73536a5ec078f1cc1c2b02143d9b00e785"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgedbc966bee08b6">
+		<description>Input Module (1983-12)(Gumboot Software)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1358">
+				<rom name="Input Module (1983-12)(Gumboot Software)(GB).cas" size="1358" crc="0c4a78ab" sha1="dbc966bee08b605834b27db45c0824ae1d2df64a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge897ec02552475">
+		<description>Intelligent Board Games (1983)(Gumboot Software)(GB)[b][Games Pack 4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="7507">
+				<rom name="Intelligent Board Games (1983)(Gumboot Software)(GB)[b][Games Pack 4].cas" size="7507" crc="95296e94" sha1="897ec025524753d3156b62f68508fe557bb76f32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge0a6f630287c81">
+		<description>Juwelen des Grafen Dracula, Die (1984)(Cooperated Software)(DE)(Part 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3364">
+				<rom name="Juwelen des Grafen Dracula, Die (1984)(Cooperated Software)(DE)(Part 1 of 2).cas" size="3364" crc="91699102" sha1="0a6f630287c814d89cb3572e5df38a8489b80057"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgea900dee4976a6">
+		<description>Juwelen des Grafen Dracula, Die (1984)(Cooperated Software)(DE)(Part 1 of 2)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3601">
+				<rom name="Juwelen des Grafen Dracula, Die (1984)(Cooperated Software)(DE)(Part 1 of 2)[a2].cas" size="3601" crc="b004f3cf" sha1="a900dee4976a688c28da1051badbc89ce7394e59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge4a2b24639f870">
+		<description>Juwelen des Grafen Dracula, Die (1984)(Cooperated Software)(DE)(Part 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="13386">
+				<rom name="Juwelen des Grafen Dracula, Die (1984)(Cooperated Software)(DE)(Part 2 of 2).cas" size="13386" crc="1b9f9ac7" sha1="4a2b24639f870a1be4606f3a8af0f43da0b7cbaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge1469b033489c0">
+		<description>Juwelen des Grafen Dracula, Die (1984)(Cooperated Software)(DE)(Part 2 of 2)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="13623">
+				<rom name="Juwelen des Grafen Dracula, Die (1984)(Cooperated Software)(DE)(Part 2 of 2)[a2].cas" size="13623" crc="63bddce8" sha1="1469b033489c077f24fc0a7741b4699b0d3ae019"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge3094e999f1dda">
+		<description>King (1983)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="10864">
+				<rom name="King (1983)(TCS)(DE).cas" size="10864" crc="5c47368d" sha1="3094e999f1ddaa1525f0f2f3f7e0bd1dc96b1319"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge8f5adc6b5ee50">
 		<description>king</description>
 		<year>????</year>
@@ -349,6 +559,16 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="11060">
 				<rom name="king.cas" size="11060" crc="86d22c35" sha1="8f5adc6b5ee50ec97ce6969a09feba8bb30e3f91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge68615eb116f0b">
+		<description>Kniffel (1985-11-02)(TTS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="10522">
+				<rom name="Kniffel (1985-11-02)(TTS)(DE).cas" size="10522" crc="376b6c9d" sha1="68615eb116f0b12f38c916b9f2f27aafef4bb519"/>
 			</dataarea>
 		</part>
 	</software>
@@ -372,6 +592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge7ab0fb2d98ffd">
+		<description>Las Vergas Spiel-Automat (198x)(Stuchlich, Klaus)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="5578">
+				<rom name="Las Vergas Spiel-Automat (198x)(Stuchlich, Klaus)(DE).cas" size="5578" crc="6df6d464" sha1="7ab0fb2d98ffdf0ec01322758522990798694e3a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cgee5cd966e1341d">
 		<description>lasvegas</description>
 		<year>????</year>
@@ -379,6 +609,66 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="5711">
 				<rom name="lasvegas.cas" size="5711" crc="0e253cc2" sha1="e5cd966e1341dd99c42c66e7ba436bff3afe646a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge12118485405cd">
+		<description>Lineare Gleichungssysteme (19xx)(-)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="2516">
+				<rom name="Lineare Gleichungssysteme (19xx)(-)(DE).cas" size="2516" crc="002e74cc" sha1="12118485405cd4f9ad2c77da612580f24052e6e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge851577cb397f6">
+		<description>Listing Formatierer (19xx)(-)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="633">
+				<rom name="Listing Formatierer (19xx)(-)(DE).cas" size="633" crc="7441ec01" sha1="851577cb397f6f35c4ee8b0d2d6dd0d32c9e8614"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeedeff86dd2409">
+		<description>Machine Monitor (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3664">
+				<rom name="Machine Monitor (19xx)(-).cas" size="3664" crc="72d2610e" sha1="edeff86dd24091bbf08221503554b5013bf56a0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge5472ead6c4980">
+		<description>Maths Magic (1983-07)(Gumboot Software)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="5196">
+				<rom name="Maths Magic (1983-07)(Gumboot Software)(GB).cas" size="5196" crc="f53822f8" sha1="5472ead6c49802e180d9418ca5af3a88e92f5c82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge7ceff5b23feae">
+		<description>Mord im Zeppelin (198x)(Scholz Baeumner Schaffarzik)(DE)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="15973">
+				<rom name="Mord im Zeppelin (198x)(Scholz Baeumner Schaffarzik)(DE)[32K].cas" size="15973" crc="7eb4a417" sha1="7ceff5b23feaef48d2457e503b3a6028302f9463"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge2478072ba53b0">
+		<description>Mord im Zeppelin (198x)(Scholz Baeumner Schaffarzik)(DE)[a2][32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="16163">
+				<rom name="Mord im Zeppelin (198x)(Scholz Baeumner Schaffarzik)(DE)[a2][32K].cas" size="16163" crc="a9dad6ce" sha1="2478072ba53b0d47cd3e39187b6c9d321d764a97"/>
 			</dataarea>
 		</part>
 	</software>
@@ -392,6 +682,186 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge314e75a41a508">
+		<description>Mysterious Tavern (198x)(Scholz Baeumner Schaffarzik)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="16031">
+				<rom name="Mysterious Tavern (198x)(Scholz Baeumner Schaffarzik)(DE).cas" size="16031" crc="57ebd9ba" sha1="314e75a41a5082e6aa931802ebcfd7a5dfb6b0b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge54e72e15a16e5">
+		<description>peng</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="332">
+				<rom name="peng.cas" size="332" crc="ff30b3d6" sha1="54e72e15a16e50255f442242dfd612ee1823c153"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge43b01ff87f766">
+		<description>primzahl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="375">
+				<rom name="primzahl.cas" size="375" crc="f947d20d" sha1="43b01ff87f7662a6a2f6a3c5c248d3bfaa88964b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge4d91fa6163641">
+		<description>PSG Demo (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="773">
+				<rom name="PSG Demo (19xx)(-).cas" size="773" crc="8bffb222" sha1="4d91fa6163641f02fbbfb0b7188ccb5363bfad47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgea7328f0663c5e">
+		<description>Santa Paravia (19xx)(-)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="13824">
+				<rom name="Santa Paravia (19xx)(-)(de).cas" size="13824" crc="4d672a70" sha1="a7328f0663c5ea2beccd57541e4042c274069f55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgedbf1742c15cc3">
+		<description>santa</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="13974">
+				<rom name="santa.cas" size="13974" crc="6f5f4ed1" sha1="dbf1742c15cc3f5d13435b9aa053fc2a6e8a124b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge2196d66dd0a02">
+		<description>Schiff des Grauens (198x)(Sven Schaffarzik-Heiko Scholz)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="17705">
+				<rom name="Schiff des Grauens (198x)(Sven Schaffarzik-Heiko Scholz)(de).cas" size="17705" crc="e0f2e0cb" sha1="2196d66dd0a0209cb513549d5952d13a1f16c24a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge3cad2b333f6f5">
+		<description>Schnick Schnack Schnuck (1986)(Alexander Drawe)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="10630">
+				<rom name="Schnick Schnack Schnuck (1986)(Alexander Drawe)(de).cas" size="10630" crc="846841d3" sha1="3cad2b333f6f55ea4e1af5c1eb2d215ff409ea4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge8b5efc2c5e97b">
+		<description>schnick</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="10786">
+				<rom name="schnick.cas" size="10786" crc="ceccbf5c" sha1="8b5efc2c5e97b766a6d46c367a67d9904f6e22b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge8a303ba08801e">
+		<description>Screen Editor (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1665">
+				<rom name="Screen Editor (19xx)(-).cas" size="1665" crc="d038dbb6" sha1="8a303ba08801e77f4415227b7b6f6251569f649d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge48e539bae31ac">
+		<description>screen1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1827">
+				<rom name="screen1.cas" size="1827" crc="a3b02a58" sha1="48e539bae31ac730aeaab90f44c2ce5a9369c278"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge4defacfc5e17a">
+		<description>shifttra</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="501">
+				<rom name="shifttra.cas" size="501" crc="2073b1bf" sha1="4defacfc5e17a65ba946b0db4b87924775df7c35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgef7a3072721845">
+		<description>Sound Editor (1984)(-)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3625">
+				<rom name="Sound Editor (1984)(-)(de).cas" size="3625" crc="bf667ec4" sha1="f7a307272184599bec74249d8ce80197ee942084"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge9914855855d82">
+		<description>Sound Editor (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="3005">
+				<rom name="Sound Editor (19xx)(-).cas" size="3005" crc="4ebe8580" sha1="9914855855d82cc2c2dd5507667b01c33c25692c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge9f546bd5266da">
+		<description>Sprite Editor (1983)(Patrick Thomas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="2232">
+				<rom name="Sprite Editor (1983)(Patrick Thomas).cas" size="2232" crc="97053bbe" sha1="9f546bd5266dac346eda231c9f70a4b9e2ee5d35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cged4db16e8f5091">
+		<description>spriteed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="2397">
+				<rom name="spriteed.cas" size="2397" crc="43d6ece5" sha1="d4db16e8f509119bb8d6d74863f00819fcd64151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeec023ea88ac28">
+		<description>startrek</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="16564">
+				<rom name="startrek.cas" size="16564" crc="819d6ab0" sha1="ec023ea88ac2888214729aa58c3ea8a565c33300"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge1e06a739dcc65">
+		<description>Super Star Trek (19xx)(-)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="16437">
+				<rom name="Super Star Trek (19xx)(-)(de).cas" size="16437" crc="0a6a362b" sha1="1e06a739dcc65d173ebf54e36656c4bbeb7c6486"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge4527e8571b5cd">
 		<description>SYSTEM_androm</description>
 		<year>????</year>
@@ -399,6 +869,66 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="15082">
 				<rom name="SYSTEM_androm.cas" size="15082" crc="23b1cedd" sha1="4527e8571b5cdbf9637d7e3db02ce4a618555afa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge71c474378582f">
+		<description>SYSTEM_ANDROM_Andromeda (1982)(Buchmuller, Jorgen)(DE)[16K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="14938">
+				<rom name="SYSTEM_ANDROM_Andromeda (1982)(Buchmuller, Jorgen)(DE)[16K].cas" size="14938" crc="be51a28c" sha1="71c474378582f9d522a0047b3d6a83856f5be542"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge65e6679e24bb7">
+		<description>SYSTEM_ANDRO_Andromeda (1982)(Buchmuller, Jorgen)(DE)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="12544">
+				<rom name="SYSTEM_ANDRO_Andromeda (1982)(Buchmuller, Jorgen)(DE)[32K].cas" size="12544" crc="cb10616e" sha1="65e6679e24bb7e946b90961ba20cb522ae29e601"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cged98171f78f2da">
+		<description>SYSTEM_ASTRO_Astronaut (1984)(Taylor, N. A.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="9100">
+				<rom name="SYSTEM_ASTRO_Astronaut (1984)(Taylor, N. A.).cas" size="9100" crc="7e57ada8" sha1="d98171f78f2da39ec7ea7c897a78741f1e926bee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge45c156fa6e402">
+		<description>SYSTEM_ASTRO_Astronaut (1984)(Taylor, N. A.)[a header]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="9248">
+				<rom name="SYSTEM_ASTRO_Astronaut (1984)(Taylor, N. A.)[a header].cas" size="9248" crc="21275916" sha1="45c156fa6e402ec39fc7a8341fdd13e6b969c764"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge3251b987dd5c7">
+		<description>SYSTEM_A_Artist (1985)(Battlesoft)(Part 1 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1324">
+				<rom name="SYSTEM_A_Artist (1985)(Battlesoft)(Part 1 of 4).cas" size="1324" crc="2271b4ba" sha1="3251b987dd5c715b90627f9dfaf908d87ffbd72b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge59191288775bb">
+		<description>SYSTEM_BALLON_Ballon (198x)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="4309">
+				<rom name="SYSTEM_BALLON_Ballon (198x)(-).cas" size="4309" crc="27b668a5" sha1="59191288775bbd63cd9ad01e1c3b4cf2f8d7c419"/>
 			</dataarea>
 		</part>
 	</software>
@@ -422,6 +952,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cgef1b806842c4f0">
+		<description>SYSTEM_BASICO_BasiCode (1983)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="2199">
+				<rom name="SYSTEM_BASICO_BasiCode (1983)(TCS)(DE).cas" size="2199" crc="9da86441" sha1="f1b806842c4f0cfa9b4b69c4e45fae2135925712"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge424c3c5be4d1c">
+		<description>SYSTEM_BFORTH_Colour FORTH v2.0 (1983)(TCS)(DE)[cassette support]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="13132">
+				<rom name="SYSTEM_BFORTH_Colour FORTH v2.0 (1983)(TCS)(DE)[cassette support].cas" size="13132" crc="a2f51fc0" sha1="424c3c5be4d1c205499cea371b0f302f40dbdb60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgec2b98f33c93fc">
+		<description>SYSTEM_BPLUS5_Colour BASIC Plus (1983)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="5250">
+				<rom name="SYSTEM_BPLUS5_Colour BASIC Plus (1983)(TCS)(DE).cas" size="5250" crc="870865de" sha1="c2b98f33c93fc30a2926fb465d2f21b7ae92d9df"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge3c09b17a704a5">
 		<description>SYSTEM_BREAK_break_g</description>
 		<year>????</year>
@@ -429,6 +989,16 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="7367">
 				<rom name="SYSTEM_BREAK_break_g.cas" size="7367" crc="be2540ee" sha1="3c09b17a704a50e1b271e0136513d6e12459e84f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge9c3bfd60776bd">
+		<description>SYSTEM_BRUECK_Brucke (1984-01)(Althaus, Joerg)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="11919">
+				<rom name="SYSTEM_BRUECK_Brucke (1984-01)(Althaus, Joerg)(DE).cas" size="11919" crc="9df6f90f" sha1="9c3bfd60776bd898a210d6960e09f1ca369271b0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -442,6 +1012,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge7d7b90df52ef0">
+		<description>SYSTEM_CAVEMA_Cave Man (198x)(Foerst, Kai)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="15057">
+				<rom name="SYSTEM_CAVEMA_Cave Man (198x)(Foerst, Kai)(DE).cas" size="15057" crc="9b7bb6ba" sha1="7d7b90df52ef08cb8e87bfffb79974243e1fb816"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeaa9ed38060520">
+		<description>SYSTEM_CCCCCC_Compress Utility (1983)(Gumboot Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="475">
+				<rom name="SYSTEM_CCCCCC_Compress Utility (1983)(Gumboot Software).cas" size="475" crc="7057fa2f" sha1="aa9ed38060520fe8e8c74a15075ef6c3a1bc9831"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cgef8141362c87e6">
 		<description>SYSTEM_chars</description>
 		<year>????</year>
@@ -449,6 +1039,16 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="12265">
 				<rom name="SYSTEM_chars.cas" size="12265" crc="bb54c6eb" sha1="f8141362c87e69c4ec7c25e0d97f13866493eff4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgedd6fd4594ccdf">
+		<description>SYSTEM_CHESSM_Chess Machine (1984)(Heinz Hbben Software Verlag)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="13989">
+				<rom name="SYSTEM_CHESSM_Chess Machine (1984)(Heinz Hbben Software Verlag)(DE).cas" size="13989" crc="82fb5a92" sha1="dd6fd4594ccdf942795a99149df40d2e2e3e82d5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -472,6 +1072,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cgef8f3d6280561d">
+		<description>SYSTEM_CHOP83_Chopper (1983)(Buchmller, Jrgen)(DE)[16K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="12034">
+				<rom name="SYSTEM_CHOP83_Chopper (1983)(Buchmller, Jrgen)(DE)[16K].cas" size="12034" crc="190a67fb" sha1="f8f3d6280561d6af2c14feb206d8a55d08948958"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge46e9ce8a093f9">
+		<description>SYSTEM_CHOP_Chopper (198x)(TCS)(DE)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="27969">
+				<rom name="SYSTEM_CHOP_Chopper (198x)(TCS)(DE)[32K].cas" size="27969" crc="5e13a90b" sha1="46e9ce8a093f9735b1a31e874a13b1beb79aadd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgee24ac375399a4">
+		<description>SYSTEM_COLASM_Colour-Assembler v2.12 (1983)(TCS)(DE)[a header]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="6803">
+				<rom name="SYSTEM_COLASM_Colour-Assembler v2.12 (1983)(TCS)(DE)[a header].cas" size="6803" crc="235c3519" sha1="e24ac375399a4f113cc83b7a4f9412e0781dea7f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge4197b67eeca5f">
 		<description>SYSTEM_colcom</description>
 		<year>????</year>
@@ -479,6 +1109,56 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="15534">
 				<rom name="SYSTEM_colcom.cas" size="15534" crc="b21c568a" sha1="4197b67eeca5fe7cd4c4070acbd290f50dd8bb6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge143104b746cd9">
+		<description>SYSTEM_COLCOM_Colour BASIC Compiler v3.05 (1982)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="15340">
+				<rom name="SYSTEM_COLCOM_Colour BASIC Compiler v3.05 (1982)(TCS)(DE).cas" size="15340" crc="2628fe32" sha1="143104b746cd959a0c022bd8a8807ad9875f4d8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeac9bd8ca81036">
+		<description>SYSTEM_COLMON_Colour Monitor v2.0 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="4192">
+				<rom name="SYSTEM_COLMON_Colour Monitor v2.0 (19xx)(-).cas" size="4192" crc="ae8b9163" sha1="ac9bd8ca81036482e73742a2fa1b77747500cf70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgebb5dce66adc62">
+		<description>SYSTEM_COLMON_Colour Monitor v3.0 (1983)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="15091">
+				<rom name="SYSTEM_COLMON_Colour Monitor v3.0 (1983)(TCS)(DE).cas" size="15091" crc="51f27191" sha1="bb5dce66adc62cf7d4460fa93331132f66b0266e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge6f3fe51e94775">
+		<description>SYSTEM_COLMON_Colour Monitor v3.0 (1983)(TCS)(DE)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="15110">
+				<rom name="SYSTEM_COLMON_Colour Monitor v3.0 (1983)(TCS)(DE)[a].cas" size="15110" crc="bd295a3d" sha1="6f3fe51e9477577ff06d83353305d0224072a5f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge6d66db21fb6bf">
+		<description>SYSTEM_COLOFF_Colour Office Tape-Disk Converter v1.11 (198x)(-)[req floppy]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1452">
+				<rom name="SYSTEM_COLOFF_Colour Office Tape-Disk Converter v1.11 (198x)(-)[req floppy].cas" size="1452" crc="88fdad97" sha1="6d66db21fb6bfdd0b339a5e4884a9f014c06eb3a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -492,6 +1172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge8de6c1a26dbc7">
+		<description>SYSTEM_COMP_Super-BASIC v1.2 (198x)(Heinz Hbben Software Verlag)(DE)[a][32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="7555">
+				<rom name="SYSTEM_COMP_Super-BASIC v1.2 (198x)(Heinz Hbben Software Verlag)(DE)[a][32K].cas" size="7555" crc="4b6b04fa" sha1="8de6c1a26dbc7316b842fb637734f0a82a8c421a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge807b2c05cca33">
 		<description>SYSTEM_cosmic</description>
 		<year>????</year>
@@ -499,6 +1189,26 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="9932">
 				<rom name="SYSTEM_cosmic.cas" size="9932" crc="b67d4c00" sha1="807b2c05cca3308bbcd054ab0a0db04372738ece"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge5b9fec64e2f46">
+		<description>SYSTEM_COSMIC_Cosmic Attack (198x)(Kansas Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="9775">
+				<rom name="SYSTEM_COSMIC_Cosmic Attack (198x)(Kansas Software).cas" size="9775" crc="a0231790" sha1="5b9fec64e2f46e8240ed1416c2e3a7c12e489251"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgef92f79d630e32">
+		<description>SYSTEM_COSMIC_Cosmic Attack (198x)(Kansas Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="9755">
+				<rom name="SYSTEM_COSMIC_Cosmic Attack (198x)(Kansas Software)[a].cas" size="9755" crc="3266bd94" sha1="f92f79d630e32287b227e3c9f7c902f9c4d6ba64"/>
 			</dataarea>
 		</part>
 	</software>
@@ -512,6 +1222,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge465b440db5c9a">
+		<description>SYSTEM_CRAZY2_Crazy Paint (1984)(The Colour Connection)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="13654">
+				<rom name="SYSTEM_CRAZY2_Crazy Paint (1984)(The Colour Connection).cas" size="13654" crc="75202477" sha1="465b440db5c9acc46ef5186a5b1cad0f0938d3d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeb628d441fc041">
+		<description>SYSTEM_DEATH_Deathtrap (198x)(Bgeholz, Harald)(DE)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="32012">
+				<rom name="SYSTEM_DEATH_Deathtrap (198x)(Bgeholz, Harald)(DE)(en).cas" size="32012" crc="cd899242" sha1="b628d441fc041c3149645e9b567a107e0e23d4d0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cgead81c5fe7ff6c">
 		<description>SYSTEM_DESIGN_Colour Design v3.0 (19xx)(-)</description>
 		<year>????</year>
@@ -519,6 +1249,16 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="849">
 				<rom name="SYSTEM_DESIGN_Colour Design v3.0 (19xx)(-).cas" size="849" crc="3cade933" sha1="ad81c5fe7ff6ce162f5a5b51234e2dc41421975b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge0178b21bd2117">
+		<description>SYSTEM_DUPTCS_Dupliz fuer TCS-Programme (198x)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="677">
+				<rom name="SYSTEM_DUPTCS_Dupliz fuer TCS-Programme (198x)(TCS)(DE).cas" size="677" crc="b45553ce" sha1="0178b21bd21172a9e6c3b5e602ddc0155ede933e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -532,6 +1272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cgefb4089ad9dc2d">
+		<description>SYSTEM_EAGLE_Eagle (1983)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="14910">
+				<rom name="SYSTEM_EAGLE_Eagle (1983)(TCS)(DE).cas" size="14910" crc="3453cd15" sha1="fb4089ad9dc2df0d5120eae7256b8354cda9696f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge188ec41f1679c">
 		<description>SYSTEM_eatman</description>
 		<year>????</year>
@@ -539,6 +1289,26 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="4156">
 				<rom name="SYSTEM_eatman.cas" size="4156" crc="0df53e9c" sha1="188ec41f1679ce66e9f68eaa88277395b8599988"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge641ee74cf5e19">
+		<description>SYSTEM_EATMAN_Eatman (1983)(Molimerx)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="4003">
+				<rom name="SYSTEM_EATMAN_Eatman (1983)(Molimerx)(GB).cas" size="4003" crc="eaa18750" sha1="641ee74cf5e19dfd69955e153a309030e47b6284"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge8b36cf679591c">
+		<description>SYSTEM_EBASIC_EBASIC (1985)(Jerrentrup, Andreas)[32K version]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1311">
+				<rom name="SYSTEM_EBASIC_EBASIC (1985)(Jerrentrup, Andreas)[32K version].cas" size="1311" crc="db7f4078" sha1="8b36cf679591cde95650aa256631186ceb81797a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -562,6 +1332,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge405e1d9edaf41">
+		<description>SYSTEM_EDITOR_Screen Editor (1984)(Bang, R.J.)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="851">
+				<rom name="SYSTEM_EDITOR_Screen Editor (1984)(Bang, R.J.)[32K].cas" size="851" crc="728562e9" sha1="405e1d9edaf4180915e776ca053acc550c0140e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge6c5727c16ed40">
+		<description>SYSTEM_EEEEEE_Error Handler (1983)(Gumboot Software)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="359">
+				<rom name="SYSTEM_EEEEEE_Error Handler (1983)(Gumboot Software)(GB).cas" size="359" crc="51334e1e" sha1="6c5727c16ed4019f1413de837e334041c5dd6aae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cge5efc2ab9b44da">
 		<description>SYSTEM_EGPROT_Egg Protect (1983)(Harald Boegeholz)(de)[b]</description>
 		<year>????</year>
@@ -569,6 +1359,16 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="978">
 				<rom name="SYSTEM_EGPROT_Egg Protect (1983)(Harald Boegeholz)(de)[b].cas" size="978" crc="4baa38a3" sha1="5efc2ab9b44da3d2c3cf743808e7a20b9e8e595c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge6593014c2e8a4">
+		<description>SYSTEM_EGTEXT_Textbehandlingssystem (1983)(DCA)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="5326">
+				<rom name="SYSTEM_EGTEXT_Textbehandlingssystem (1983)(DCA)(DE).cas" size="5326" crc="290de291" sha1="6593014c2e8a4d98c167512040cc96ff937e9211"/>
 			</dataarea>
 		</part>
 	</software>
@@ -582,6 +1382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cge45046f1ec0b71">
+		<description>SYSTEM_EIS_Eis (1983)(TCS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="14908">
+				<rom name="SYSTEM_EIS_Eis (1983)(TCS)(DE).cas" size="14908" crc="36ae9438" sha1="45046f1ec0b7111179858996d15e3eea6f85f17e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cgee69cc349a13ae">
 		<description>SYSTEM_elimin</description>
 		<year>????</year>
@@ -589,6 +1399,26 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="12679">
 				<rom name="SYSTEM_elimin.cas" size="12679" crc="c0484e8e" sha1="e69cc349a13aee340496d0f9ddf06cc7da03d745"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge86cc1030fc256">
+		<description>SYSTEM_ELIMIN_Eliminator (1984)(TCC)(DE)[32K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="12451">
+				<rom name="SYSTEM_ELIMIN_Eliminator (1984)(TCC)(DE)[32K].cas" size="12451" crc="e1e5e436" sha1="86cc1030fc256cd16149003d5b66725ac0f3da5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge404f0e183de04">
+		<description>SYSTEM_EXCOPY_Extended Copy (198x)(TTS)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="5202">
+				<rom name="SYSTEM_EXCOPY_Extended Copy (198x)(TTS)(DE).cas" size="5202" crc="dc51af08" sha1="404f0e183de04268978e3791d09f900cc094cee0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1169,6 +1999,56 @@
 		<part name="cass1" interface="cgenie_cass">
 			<dataarea name="cass" size="4337">
 				<rom name="SYSTEM_ZALAGA_Galaxy_Invasion.cas" size="4337" crc="d5e5218b" sha1="47b0b57e6ae6d788881129d1a27d48e4abf4d263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge43ee9e02a8807">
+		<description>tavern</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="16218">
+				<rom name="tavern.cas" size="16218" crc="b058aeb9" sha1="43ee9e02a880705b3be7b8c6d9e9b42168f6b7fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge71def0b00ee91">
+		<description>transist</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="17816">
+				<rom name="transist.cas" size="17816" crc="6ff6b43f" sha1="71def0b00ee914ff5edcd695f6804658106aaf27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeb0a0e845a5111">
+		<description>Typing Tutor (1984)(Gumboot Software)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="7468">
+				<rom name="Typing Tutor (1984)(Gumboot Software)(GB).cas" size="7468" crc="5656d48a" sha1="b0a0e845a5111e8d35155bc14b9ee99dcab385b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cgeec97b03215ff7">
+		<description>villa</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="18601">
+				<rom name="villa.cas" size="18601" crc="c26fcbc7" sha1="ec97b03215ff7f6f347b67c5c07606aa03bf9abd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cge789472c4227e4">
+		<description>welcome</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cgenie_cass">
+			<dataarea name="cass" size="1084">
+				<rom name="welcome.cas" size="1084" crc="97aca0cc" sha1="789472c4227e4f2a10b53fce032e6b43fc27c9bf"/>
 			</dataarea>
 		</part>
 	</software>
