@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7599 -->
+<!-- Number of items in this list = 7596 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -3982,26 +3982,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cpc6726e8c71e874">
-		<description>Amstrad_Action_Cover_Tape_077</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3">
-			<dataarea name="flop" size="194816">
-				<rom name="Amstrad_Action_Cover_Tape_077.dsk" size="194816" crc="fdf04f3c" sha1="6726e8c71e8745bd87ce2e5604dbf90b30917995"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpcde8f20f8c503d">
-		<description>Amstrad_Action_Cover_Tape_078</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3">
-			<dataarea name="flop" size="194816">
-				<rom name="Amstrad_Action_Cover_Tape_078.dsk" size="194816" crc="d66554f2" sha1="de8f20f8c503dade334a73579ff42e4032a4e3a9"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="cpc5d6523c5d7f81">
 		<description>Amstrad_Action_Cover_Tape_081__Side_A</description>
 		<year>????</year>
@@ -4069,16 +4049,6 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Amstrad_Action_Cover_Tape_089.dsk" size="194816" crc="cee8bb92" sha1="ac80179effb017922cc2c12637b3c4382c15a259"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpcae073abb32113">
-		<description>Amstrad_Action_Cover_Tape_093</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3">
-			<dataarea name="flop" size="194816">
-				<rom name="Amstrad_Action_Cover_Tape_093.dsk" size="194816" crc="66952500" sha1="ae073abb32113fb5d9e0c43e66d8e5d88a4b3c4c"/>
 			</dataarea>
 		</part>
 	</software>

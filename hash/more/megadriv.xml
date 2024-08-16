@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1824 -->
+<!-- Number of items in this list = 1823 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -10779,16 +10779,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2084116">
 				<rom name="Out of the Vortex (Proto)(1995-2022).bin" size="2084116" crc="f069238c" sha1="f8cba37d3c48cbfa14b9b19139650e7a1797b2b9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen27eca8fbf6a12">
-		<description>Out of the Vortex (Prototype)(2019)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Out of the Vortex (Prototype)(2019).md" size="2097152" crc="3eaab03e" sha1="27eca8fbf6a120d8372bed07b22cbfba951a763a"/>
 			</dataarea>
 		</part>
 	</software>

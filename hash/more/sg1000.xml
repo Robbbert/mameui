@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 27 -->
+<!-- Number of items in this list = 30 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
+	<software name="sg1aadf2b307ff64">
+		<description>Aerial (2022)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="10750">
+				<rom name="Aerial (2022)(Inufuto).sg" size="10750" crc="87e4f535" sha1="aadf2b307ff6426f150209d9b10707ba5b320bab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg10b00cc47f256c">
+		<description>AntiAir (2024)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="8107">
+				<rom name="AntiAir (2024)(Inufuto).sg" size="8107" crc="948599bd" sha1="0b00cc47f256cebe278530a5c3bdce7cd6a837c2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg1445e32896395a">
 		<description>arno dash (2020)(under4mhz)</description>
 		<year>????</year>
@@ -259,6 +279,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Vexed v1.07 (2023)(Under4Mhz).sg" size="32768" crc="432cd0fc" sha1="71c703ef178bc1f057518aa679bb0774b027d716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg10c73a67a13bd9">
+		<description>Whack 'Em Smack 'Em Byrons (2024)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32706">
+				<rom name="Whack 'Em Smack 'Em Byrons (2024)(Jess Creations).sg" size="32706" crc="a444660d" sha1="0c73a67a13bd9cb4872d1f4146514167ee246bbe"/>
 			</dataarea>
 		</part>
 	</software>

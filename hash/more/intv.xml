@@ -1,7 +1,67 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 95 -->
+<!-- Number of items in this list = 144 -->
 <softwarelist name="intv" description="intv loose roms">
+	<software name="intc357bbe817411">
+		<description>1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="26177">
+				<rom name="1.rom" size="26177" crc="068fd6db" sha1="c357bbe8174114cf73ded0fa50d72fe9d32f455d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int8d801bbb0a2bc">
+		<description>10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="5689">
+				<rom name="10.rom" size="5689" crc="e31a8731" sha1="8d801bbb0a2bcf3201effca2fee634dee48d0816"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int89c86c399989d">
+		<description>11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="3129">
+				<rom name="11.rom" size="3129" crc="73943a17" sha1="89c86c399989db390e387cba0696c5e74253f177"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int814df3a9ed277">
+		<description>12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="4153">
+				<rom name="12.rom" size="4153" crc="9736c97d" sha1="814df3a9ed277fb9fd4b3e9c1d48e8fefeba4156"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int873a08b88e667">
+		<description>14</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="16957">
+				<rom name="14.rom" size="16957" crc="334dbc98" sha1="873a08b88e667181b3d5e532b456ae01f4060be0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1f6e4f9ddcc2c">
+		<description>15</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="25153">
+				<rom name="15.rom" size="25153" crc="fe373797" sha1="1f6e4f9ddcc2c662b9f6f51cd811a2f4651d52e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int175f860c164e3">
 		<description>18 - super cobra beta</description>
 		<year>????</year>
@@ -13,12 +73,112 @@
 		</part>
 	</software>
 	<software name="inte13cbb17a2de9">
-		<description>18 - super cobra beta</description>
+		<description>18</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="16957">
-				<rom name="18 - super cobra beta.rom" size="16957" crc="4ffa61cb" sha1="e13cbb17a2de994412e3534c9e5a13b7108335fd"/>
+				<rom name="18.rom" size="16957" crc="4ffa61cb" sha1="e13cbb17a2de994412e3534c9e5a13b7108335fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int07fe4f251d7de">
+		<description>199</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1593">
+				<rom name="199.rom" size="1593" crc="de665520" sha1="07fe4f251d7de1e985bd0ce27e950851f76677b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intfea8beca095b0">
+		<description>2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="20541">
+				<rom name="2.rom" size="20541" crc="86795ea7" sha1="fea8beca095b03a4f30616fc370c9d7295b2bd1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int532b85d31f8ac">
+		<description>21</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1593">
+				<rom name="21.rom" size="1593" crc="3fb521dc" sha1="532b85d31f8acf77e5451fc50f22bccc6231de17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int40ecc74b6f9bd">
+		<description>22</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1593">
+				<rom name="22.rom" size="1593" crc="57c6cf28" sha1="40ecc74b6f9bdfecb95bd50d091d222c64b49a4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int395ad9878404a">
+		<description>27</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1081">
+				<rom name="27.rom" size="1081" crc="285bcc54" sha1="395ad9878404a6e3e640b5c47bd48e74c7c4749e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int09e278d27c8c2">
+		<description>28</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1081">
+				<rom name="28.rom" size="1081" crc="bfe7f431" sha1="09e278d27c8c29c2b6fe17152af77a38b809074b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int3ad85330d852b">
+		<description>29</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="569">
+				<rom name="29.rom" size="569" crc="2ad4ea01" sha1="3ad85330d852b1ab0637fcfef2158f9a5da5ead7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int2c4414c03e9ed">
+		<description>3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="8249">
+				<rom name="3.rom" size="8249" crc="b6f695d8" sha1="2c4414c03e9edbb1fd7ac48c9dda0492d1ec3acb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int8cc1c216eaafd">
+		<description>30</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="16957">
+				<rom name="30.rom" size="16957" crc="cf0274c9" sha1="8cc1c216eaafd1b1e910ead120e97717cf2c7341"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inteafc599f11f50">
+		<description>31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="8249">
+				<rom name="31.rom" size="8249" crc="5bdf9650" sha1="eafc599f11f509e887cb9ce41126a5f26cddc709"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42,6 +202,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int046c1faecc26b">
+		<description>4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="2617">
+				<rom name="4.rom" size="2617" crc="16199970" sha1="046c1faecc26b8e94080a487ab66228c93ca7a54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int9e9a52609d93c">
+		<description>5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="6201">
+				<rom name="5.rom" size="6201" crc="6921ab51" sha1="9e9a52609d93c6aeb39e51e7395442d92c2191a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int2b419165de428">
+		<description>6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="7225">
+				<rom name="6.rom" size="7225" crc="83a269a2" sha1="2b419165de428bb77ef89a0939800b3d2709336c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int6f8a625a460c9">
+		<description>7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="27713">
+				<rom name="7.rom" size="27713" crc="cade278d" sha1="6f8a625a460c9d785e969d89399f1f0f2650a4c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int5b2995554d11e">
+		<description>8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="27713">
+				<rom name="8.rom" size="27713" crc="1b45a3c6" sha1="5b2995554d11ec998085ed5182f98c9b0200077f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inte92aadd1f7e9e">
+		<description>9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="7225">
+				<rom name="9.rom" size="7225" crc="93f8a646" sha1="e92aadd1f7e9e7d58f785ccc86f07d455690587b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intaad282794ca46">
+		<description>ADSR Envelope v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1536">
+				<rom name="ADSR Envelope v1.int" size="1536" crc="b5919338" sha1="aad282794ca467fbd444178fff27cabe5b6dd2b9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int1fde6ba5df4bd">
 		<description>ADSR Envelope v2 demo</description>
 		<year>????</year>
@@ -62,6 +292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intbdf2de8cff669">
+		<description>Astro Invader</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="22081">
+				<rom name="Astro Invader.rom" size="22081" crc="5578c764" sha1="bdf2de8cff669a94f742bb688cec5b3f8a3c6ab3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="intcb1742f0f8846">
 		<description>Astrosmash_(1981)_(Mattel)</description>
 		<year>????</year>
@@ -79,6 +319,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="24576">
 				<rom name="B-17 Bomber (1981) (Mattel) [!].int" size="24576" crc="8ad19ab3" sha1="e1ef8a5102b1fc14321f83864d1f6e0e0ce5acf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int2ebe70dcbcb2f">
+		<description>BC's Quest for Tires</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="48705">
+				<rom name="BC's Quest for Tires.rom" size="48705" crc="05221da5" sha1="2ebe70dcbcb2fb4752c6d5dc94d825f976e50a77"/>
 			</dataarea>
 		</part>
 	</software>
@@ -162,6 +412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int85b5228b844e2">
+		<description>Death Race</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="17469">
+				<rom name="Death Race.rom" size="17469" crc="ba346dbd" sha1="85b5228b844e21776183e39ee8146265c7122eb8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int78056057477a3">
 		<description>Deep Pockets-Super Pro Pool and Billiards(1990)(Realtime)[!]</description>
 		<year>????</year>
@@ -212,6 +472,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int63e4f7dd10bfc">
+		<description>emucheck (2006)(A.Chevallier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1085">
+				<rom name="emucheck (2006)(A.Chevallier).rom" size="1085" crc="be4bdd17" sha1="63e4f7dd10bfc20c43ec194dce113952a75315dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int48c0274a060c5">
+		<description>firegirl-a03</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="4665">
+				<rom name="firegirl-a03.rom" size="4665" crc="6ba94398" sha1="48c0274a060c57539f2bfa9370a6988060b37100"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intf91d4507baf41">
+		<description>Flapee Bird</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="9728">
+				<rom name="Flapee Bird.int" size="9728" crc="9c7de352" sha1="f91d4507baf41626d839308659e68de048c767c8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int76e915a598f7c">
 		<description>Frogger_(1983)_(Parker_Bros)</description>
 		<year>????</year>
@@ -222,6 +512,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intda9669789944f">
+		<description>Geese (2003) (Joseph Zbiciak)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1593">
+				<rom name="Geese (2003) (Joseph Zbiciak).rom" size="1593" crc="960385b3" sha1="da9669789944feae612c73013749f4694e9ec64b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int19e6b7c562cd9">
+		<description>Gooninuff</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="85061">
+				<rom name="Gooninuff.rom" size="85061" crc="54b7818b" sha1="19e6b7c562cd91e675edb28643d7dd2d9d5d1f4c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int9ef42923e2431">
 		<description>Happy Trails (1983) (Activision) [o1]</description>
 		<year>????</year>
@@ -229,6 +539,26 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="16384">
 				<rom name="Happy Trails (1983) (Activision) [o1].int" size="16384" crc="120b53a9" sha1="9ef42923e24319b3713a714e281f6d7ecb403a4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7ff5e6acf090c">
+		<description>helloworld1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="569">
+				<rom name="helloworld1.rom" size="569" crc="bdbf64b3" sha1="7ff5e6acf090c143af78816cf9151638fafe438c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7565fed47a708">
+		<description>helloworld2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="569">
+				<rom name="helloworld2.rom" size="569" crc="913dafab" sha1="7565fed47a7081a5e88b60b295a89f8fbe9ebfca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -292,6 +622,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intb6e90e15b7084">
+		<description>IntyOS v0.3b (2003)(Arnauld Chevallier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="27713">
+				<rom name="IntyOS v0.3b (2003)(Arnauld Chevallier).rom" size="27713" crc="47c24573" sha1="b6e90e15b708469b85dba7b076181a96a8b6eb0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intfe2319132852c">
+		<description>Jungle Hunt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="49217">
+				<rom name="Jungle Hunt.rom" size="49217" crc="d8ff394d" sha1="fe2319132852c603e1e49dd0c1e2952bd807611d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int2c0cb8ff8dfa8">
+		<description>kchess</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="19968">
+				<rom name="kchess.bin" size="19968" crc="9f6fc91c" sha1="2c0cb8ff8dfa822e992d40de47d73fc809393f95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intb4f260386d643">
+		<description>kchess</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="20029">
+				<rom name="kchess.rom" size="20029" crc="c07c3977" sha1="b4f260386d643661a534e296e9e5340a87f44e2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int8600f97020834">
+		<description>kidrobin01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="15929">
+				<rom name="kidrobin01.rom" size="15929" crc="ebc63b6d" sha1="8600f9702083477bfdc2a33bdc81d541b745e17c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int58e86784260bf">
+		<description>kidrobin01b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="15929">
+				<rom name="kidrobin01b.rom" size="15929" crc="05930004" sha1="58e86784260bfe5f1504eda96a27eb21d43bcd4b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int3ef8acbc764f7">
 		<description>King of the Mountain (1982) (Mattel)</description>
 		<year>????</year>
@@ -312,6 +702,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intfd1c2ff57e664">
+		<description>Mad Bomber</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="60489">
+				<rom name="Mad Bomber.rom" size="60489" crc="5f4ee5ed" sha1="fd1c2ff57e664d144406adeebc95e5ebf69e0ceb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intecfcaafc19ae0">
+		<description>Mad Drivin' v0.1b (2003)(Arnauld Chevallier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="4608">
+				<rom name="Mad Drivin' v0.1b (2003)(Arnauld Chevallier).bin" size="4608" crc="7ab439b0" sha1="ecfcaafc19ae0ae2a5d583817299e2f2f693be23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int968352c456e59">
+		<description>Mad Drivin' v0.2b (2003)(Arnauld Chevallier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="5120">
+				<rom name="Mad Drivin' v0.2b (2003)(Arnauld Chevallier).bin" size="5120" crc="64555742" sha1="968352c456e59350348af87c3959cf374a0f2914"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int5c195119b0587">
+		<description>Mad Drivin' v0.3b (2004)(Arnauld Chevallier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="8192">
+				<rom name="Mad Drivin' v0.3b (2004)(Arnauld Chevallier).bin" size="8192" crc="b8fb9325" sha1="5c195119b05871f3f5c92ab3c5cd200316162e93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int63cf0385e63e5">
 		<description>Mad Drivin' v0.4b (2004)(Arnauld Chevallier)</description>
 		<year>????</year>
@@ -319,6 +749,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="9728">
 				<rom name="Mad Drivin' v0.4b (2004)(Arnauld Chevallier).bin" size="9728" crc="a3939afe" sha1="63cf0385e63e5f4b4d4d2e97dbaa2933828895fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intdba29d2f14d68">
+		<description>Mancala</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="35389">
+				<rom name="Mancala.rom" size="35389" crc="77daf7d6" sha1="dba29d2f14d680a967450f212820fb90095b1976"/>
 			</dataarea>
 		</part>
 	</software>
@@ -362,6 +802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intda84b13293293">
+		<description>Mine Hunter (2003) (Ryan Kinnen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="14905">
+				<rom name="Mine Hunter (2003) (Ryan Kinnen).rom" size="14905" crc="09152d55" sha1="da84b1329329352201c0ad0d0f205727c8ac447d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="intfaea2ba326cb8">
 		<description>Minehunter Beta3 (2003) (Ryan Kinnen)</description>
 		<year>????</year>
@@ -369,16 +819,6 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="14848">
 				<rom name="Minehunter Beta3 (2003) (Ryan Kinnen).bin" size="14848" crc="59898803" sha1="faea2ba326cb8f9040093612b2cdeb4491eec80d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="intda84b13293293">
-		<description>minehunter_current</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="intv_cart">
-			<dataarea name="5000" size="14905">
-				<rom name="minehunter_current.rom" size="14905" crc="09152d55" sha1="da84b1329329352201c0ad0d0f205727c8ac447d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -399,6 +839,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="2048">
 				<rom name="MOB Collision Test (2002) (Arnauld Chevallier).bin" size="2048" crc="a4b2afe8" sha1="bbdb5cf3fdeaad581a78f644950c583633b7ae67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int56c56c0591a5c">
+		<description>Moonsweeper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="27201">
+				<rom name="Moonsweeper.rom" size="27201" crc="86c019fb" sha1="56c56c0591a5cbb67e9c406a8013c227f7d1e922"/>
 			</dataarea>
 		</part>
 	</software>
@@ -479,6 +929,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="4096">
 				<rom name="Pong (1999) (Joseph Zbiciak).int" size="4096" crc="a982e8d5" sha1="289aba851714b0959de896167ed236269572cb2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1cbf0c4e28e45">
+		<description>Princess Quest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="76357">
+				<rom name="Princess Quest.rom" size="76357" crc="a3f71d14" sha1="1cbf0c4e28e456a327f75c11b2b782ada052656e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -782,6 +1242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int5b9182537f93e">
+		<description>Space Raid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="15872">
+				<rom name="Space Raid.int" size="15872" crc="241a9a13" sha1="5b9182537f93e823f3b7a9677fd2bc1714eb043e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="intcbc9b04ed5203">
 		<description>Spiker! - Super Pro Volleyball (1988) (Intv Corp)</description>
 		<year>????</year>
@@ -872,6 +1342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int3efa103b206c6">
+		<description>Super Mine-Field</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="16441">
+				<rom name="Super Mine-Field.rom" size="16441" crc="0a6d052d" sha1="3efa103b206c680d2c79507b927349c5d57b1a4e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int51dfca097cf63">
 		<description>Super Pro Decathlon (1988) (Intv Corp)</description>
 		<year>????</year>
@@ -899,6 +1379,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="32768">
 				<rom name="Super Soccer (1983) (Mattel).int" size="32768" crc="51b82eb7" sha1="c96409d50870049e907ff3ae5f43ea6ca63e287e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7cb1b758639b2">
+		<description>Sydney Hunter and the Sacred Tribe</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="84041">
+				<rom name="Sydney Hunter and the Sacred Tribe.rom" size="84041" crc="31badc41" sha1="7cb1b758639b28c7be5df3e7bfbaa0b892c640b8"/>
 			</dataarea>
 		</part>
 	</software>

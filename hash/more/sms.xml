@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 261 -->
+<!-- Number of items in this list = 263 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -919,6 +919,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Gravity Beam Master Gaiden (2013)(Neko-MrD).sms" size="32768" crc="829fd975" sha1="aa2b5edb500cdf5901f7f450ac23ba89efa3c660"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsac021c60e33b5">
+		<description>Grazers v1.2 (2024)(Snauts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Grazers v1.2 (2024)(Snauts).sms" size="32768" crc="d59d25a5" sha1="ac021c60e33b53d74a2658ec89ea6835b3a42059"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2079,6 +2089,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Soul Trials (2021)(Arkia).sms" size="32768" crc="c992d9de" sha1="ca94703958ab75c40d9da19d11e245bcded4fd97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms10e0c10dc9494">
+		<description>Space Tonbow v1.1 (2024)(SteelFinger Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Space Tonbow v1.1 (2024)(SteelFinger Studios).sms" size="131072" crc="4c3d2616" sha1="10e0c10dc9494ae466ee1f0db4e9c6c8c65952f4"/>
 			</dataarea>
 		</part>
 	</software>

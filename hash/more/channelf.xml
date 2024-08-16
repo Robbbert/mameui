@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 31 -->
+<!-- Number of items in this list = 42 -->
 <softwarelist name="channelf" description="channelf loose roms">
 	<software name="chfe8c2a8c960579">
 		<description>(demo)International Karate Beta2 by Fredric Blaoholtz (2009) (PD)</description>
@@ -152,6 +152,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="chf726676f0a204d">
+		<description>2048 (Arlasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="4702">
+				<rom name="2048 (Arlasoft).chf" size="4702" crc="d737aadd" sha1="726676f0a204d05f8c2f754d6369cc384c3b7925"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chfbc2c1f82a6568">
+		<description>3rees (Arlasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="5444">
+				<rom name="3rees (Arlasoft).chf" size="5444" crc="f203f9cf" sha1="bc2c1f82a6568d5724c46e152af1b846b869a3aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chf87353ed1e8794">
+		<description>Centipede (Arlasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="8105">
+				<rom name="Centipede (Arlasoft).chf" size="8105" crc="146e2370" sha1="87353ed1e8794f68378e16634908fe08c215f51c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="chf1f20a5500b51d">
 		<description>Color Organ (19xx)(-)[b]</description>
 		<year>????</year>
@@ -169,6 +199,26 @@
 		<part name="cart" interface="channelf_cart">
 			<dataarea name="rom" size="2048">
 				<rom name="Colortest-Multi (2007) (PD).chf" size="2048" crc="6a33def5" sha1="5e70dda9fed1ac70abf98e22d82cafc34a7b9533"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chfe047f0406b463">
+		<description>Fnvader (Arlasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="4349">
+				<rom name="Fnvader (Arlasoft).chf" size="4349" crc="9e52e997" sha1="e047f0406b46381b1ee94042d89131763daca8e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chffbb48fd5362ce">
+		<description>golf71a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="golf71a.chf" size="16384" crc="ff86607c" sha1="fbb48fd5362ce139324a6dbb3500206d0dc6576e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -209,6 +259,26 @@
 		<part name="cart" interface="channelf_cart">
 			<dataarea name="rom" size="3072">
 				<rom name="Maze & Jailbreak & Blind Man's bluff & Trailblazer (1977) (Fairchild-10) (Multi-Cart Hack).chf" size="3072" crc="b71433af" sha1="64b0218f8279331d022f013cfa12133799d5e8dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chf863236b2d3b54">
+		<description>moving23a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="moving23a.chf" size="2048" crc="c4ea1931" sha1="863236b2d3b5466fb71ad4147458b928a4c98f58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chfe141eac46d62c">
+		<description>moving29</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="moving29.chf" size="2048" crc="015069b0" sha1="e141eac46d62c1da12f8af0899ae0afd084152a2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -292,6 +362,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="chfc171c13eb30f9">
+		<description>quest45</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="quest45.chf" size="8192" crc="ac63327c" sha1="c171c13eb30f9083776291b3142a6da6411c8201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chf0ee6187870744">
+		<description>quest47</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="quest47.chf" size="8192" crc="01788e23" sha1="0ee61878707446e78ccb7e9f41cb28e19c427170"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chff01a3956ec1d3">
+		<description>Tents and Trees (Arlasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="3800">
+				<rom name="Tents and Trees (Arlasoft).chf" size="3800" crc="02257e89" sha1="f01a3956ec1d39018541a7be731776eaee191914"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="chf98f73b2119ec2">
 		<description>Tetris by Peter Trauner (2004) [a1]</description>
 		<year>????</year>
@@ -309,6 +409,16 @@
 		<part name="cart" interface="channelf_cart">
 			<dataarea name="rom" size="3583">
 				<rom name="Tetris by Peter Trauner (2004).chf" size="3583" crc="2b900e96" sha1="8b6cc8f682c49e7ed2e4833333aa4d6c5f9c42d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="chfcbe3eef9b8de7">
+		<description>Wrdl-F (2022)(Arlasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="channelf_cart">
+			<dataarea name="rom" size="8161">
+				<rom name="Wrdl-F (2022)(Arlasoft).chf" size="8161" crc="0ae07b86" sha1="cbe3eef9b8de73f600f704b381b594be29c1f345"/>
 			</dataarea>
 		</part>
 	</software>
