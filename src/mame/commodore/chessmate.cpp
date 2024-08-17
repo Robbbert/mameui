@@ -22,10 +22,6 @@ from the jukebox, but both models have the same ROMs.
 Note that like MK I, although it is a Winkler/Auge production, it doesn't involve
 SciSys company. SciSys was founded by Winkler after MK II.
 
-TODO:
-- is there an older version of chmate? chips on pcb photos are dated 1979, but
-  the game is known to be released in 1978
-
 ================================================================================
 
 Hardware notes:
@@ -33,16 +29,17 @@ Hardware notes:
 MOS MPS 6504 2179
 MOS MPS 6530 024 1879
  layout of 6530 dumped with my adapter
- 0x1300-0x133f io
- 0x1380-0x13bf ram
- 0x1400-0x17ff rom
+ 0x1300-0x133f I/O
+ 0x1380-0x13bf RAM
+ 0x1400-0x17ff ROM
 
 2*MPS6111 RAM (256x4)
 MOS MPS 6332 005 2179
-74145 bcd to decimal encoder
+Older version has 2 2KB ROMs (identical ROM contents)
 
-4x 7 segment led display
-4 single leds
+74145 bcd to decimal encoder
+4*7-segment LED display
+4 single LEDs
 19 buttons (11 on brick model)
 
 *******************************************************************************/
@@ -225,7 +222,7 @@ static INPUT_PORTS_START( chmate )
 	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_N) PORT_CHANGED_MEMBER(DEVICE_SELF, chmate_state, reset_button, 0) PORT_NAME("New Game")
 INPUT_PORTS_END
 
-static INPUT_PORTS_START( mk2 ) // meaning of black/white reversed
+static INPUT_PORTS_START( mk2a ) // meaning of black/white reversed
 	PORT_INCLUDE( chmate )
 
 	PORT_MODIFY("IN.0")
@@ -236,7 +233,7 @@ static INPUT_PORTS_START( mk2 ) // meaning of black/white reversed
 	PORT_BIT(0x20, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_H) PORT_NAME("H / White")
 INPUT_PORTS_END
 
-static INPUT_PORTS_START( mk2a )
+static INPUT_PORTS_START( mk2 )
 	PORT_START("IN.0")
 	PORT_BIT(0x01, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_6) PORT_CODE(KEYCODE_6_PAD) PORT_CODE(KEYCODE_F) PORT_NAME("6 / F / Level")
 	PORT_BIT(0x02, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_5) PORT_CODE(KEYCODE_5_PAD) PORT_CODE(KEYCODE_E) PORT_NAME("5 / E / Stop Clock / Rook")
@@ -326,5 +323,5 @@ ROM_END
 //    YEAR  NAME    PARENT  COMPAT  MACHINE  INPUT   CLASS         INIT        COMPANY, FULLNAME, FLAGS
 SYST( 1978, chmate, 0,      0,      chmate,  chmate, chmate_state, empty_init, "Commodore", "Chessmate", MACHINE_SUPPORTS_SAVE )
 
-SYST( 1979, ccmk2,  chmate, 0,      mk2,     mk2,    chmate_state, empty_init, "Commodore / Novag Industries", "Chess Champion: MK II (set 1)", MACHINE_SUPPORTS_SAVE ) // 1st version (jukebox model), aka version B
-SYST( 1979, ccmk2a, chmate, 0,      mk2a,    mk2a,   chmate_state, empty_init, "Commodore / Novag Industries", "Chess Champion: MK II (set 2)", MACHINE_SUPPORTS_SAVE )
+SYST( 1979, ccmk2,  chmate, 0,      mk2,     mk2,    chmate_state, empty_init, "Commodore / Novag Industries", "Chess Champion: MK II (set 1)", MACHINE_SUPPORTS_SAVE )
+SYST( 1979, ccmk2a, chmate, 0,      mk2a,    mk2a,   chmate_state, empty_init, "Commodore / Novag Industries", "Chess Champion: MK II (set 2)", MACHINE_SUPPORTS_SAVE ) // 1st version (jukebox model), aka version B
