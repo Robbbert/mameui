@@ -411,7 +411,7 @@ TIMER_CALLBACK_MEMBER(pv1000_state::d65010_irq_on_cb)
 		m_fd_buffer_flag |= 1; /* TODO: exact timing of this */
 
 	/* Set IRQ line and schedule release of IRQ line */
-	m_maincpu->set_input_line(0, ASSERT_LINE);
+	m_maincpu->set_input_line(0, HOLD_LINE); // MESSUI cheap hack to fix this system 2024-08-18
 	m_irq_off_timer->adjust(m_screen->time_until_pos(vpos, 380/2));
 
 	/* Schedule next IRQ trigger */
