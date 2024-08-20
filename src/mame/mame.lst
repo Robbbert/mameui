@@ -15117,6 +15117,7 @@ dkbanana                        // (c) 2007 Capcom
 dkbanans                        // (c) 2007 Capcom
 dkjfever                        // (c) 2005 Capcom
 dokodemo                        // (c) 2006 Capcom
+gekimaka                        // (c) 2005 Capcom
 mariojjl                        // (c) 2005 Capcom
 masmario                        // (c) 2004 Capcom
 masmarios                       // (c) 2004 Capcom
@@ -15524,7 +15525,8 @@ hsf2                            // 02/02/2004 (c) 2003, 2004 (USA)
 hsf2a                           // 02/02/2004 (c) 2003, 2004 (Asia)
 hsf2d                           //
 hsf2j                           // 02/02/2004 (c) 2003, 2004 (Japan)
-hsf2j1                          // 22/12/2003 (c) 2003, 2004 (Japan)
+hsf2j1                          // 23/01/2004 (c) 2003, 2004 (Japan)
+hsf2j2                          // 22/12/2003 (c) 2003, 2004 (Japan)
 jyangoku                        // 27/05/1999 (c) 1999 (Japan)
 megaman2                        // 08/07/1996 (c) 1996 (USA)
 megaman2a                       // 08/07/1996 (c) 1996 (Asia)
@@ -15733,10 +15735,11 @@ xmvsfar2                        // 19/09/1996 (c) 1996 (Asia)
 xmvsfar3                        // 10/09/1996 (c) 1996 (Asia)
 xmvsfb                          // 23/10/1996 (c) 1996 (Brazil)
 xmvsfh                          // 04/10/1996 (c) 1996 (Hispanic)
-xmvsfj                          // 23/10/1996 (c) 1996 (Japan)
-xmvsfjr1                        // 04/10/1996 (c) 1996 (Japan)
-xmvsfjr2                        // 10/09/1996 (c) 1996 (Japan)
-xmvsfjr3                        // 09/09/1996 (c) 1996 (Japan)
+xmvsfj                          // 13/01/1997 (c) 1997 (Japan)
+xmvsfjr1                        // 23/10/1996 (c) 1996 (Japan)
+xmvsfjr2                        // 04/10/1996 (c) 1996 (Japan)
+xmvsfjr3                        // 10/09/1996 (c) 1996 (Japan)
+xmvsfjr4                        // 09/09/1996 (c) 1996 (Japan)
 xmvsfr1                         // 10/09/1996 (c) 1996 (Euro)
 xmvsfu                          // 23/10/1996 (c) 1996 (USA)
 xmvsfu1d                        //
@@ -18123,7 +18126,7 @@ fscc9c                          //
 fscc9ps                         //
 
 @source:fidelity/vcc.cpp
-uvc                             //
+avcc                            //
 vcc                             //
 vcca                            //
 
@@ -20194,6 +20197,7 @@ iqblockf                        // (c) 1996
 lhzb2                           // (c) 1998
 lhzb2a                          // (c) 1998
 mgcs                            // (c) 1998
+mgcsa                           // (c) 1998
 mgdh                            // (c) 1997
 mgdha                           // (c) 1997
 sdmg2                           // (c) 1997
@@ -20217,15 +20221,9 @@ amazoni2                        // (c) 2002
 amazonia                        // (c) 1999
 amazonkp                        // (c) 1999
 chessc2                         // (c) 200?
-crzybugs                        // (c) 2009
-crzybugsa                       // (c) 2006
-crzybugsb                       // (c) 2005
-crzybugsj                       // (c) 2007
 extradrw                        // (c) 200?
 fruitpar                        // (c) 200?
 gonefsh2                        // (c) 200?
-haunthig                        // (c) 2008
-haunthiga                       // (c) 2006
 jking02                         // (c) 200?
 klxyj                           // (c) 200?
 lhdmg                           // (c) 1999
@@ -20245,9 +20243,17 @@ qlgs                            // (c) 1999
 sddz                            // (c) 200?
 sdwx                            // (c) 2002
 slqz3                           // (c) 1999
+zhongguo                        // (c) 2000
+
+@source:igs/igs_m027xa.cpp
+crzybugs                        // (c) 2009
+crzybugsa                       // (c) 2006
+crzybugsb                       // (c) 2005
+crzybugsj                       // (c) 2007
+haunthig                        // (c) 2008
+haunthiga                       // (c) 2006
 tripfev                         // (c) 2006
 wldfruit                        // (c) 200?
-zhongguo                        // (c) 2000
 
 @source:igs/igs_m036.cpp
 cjddzsp                         // (c) 200?
@@ -25068,6 +25074,9 @@ jr200u                          //
 myb3k                           //
 jb3000                          //
 stepone                         //
+
+@source:matsushita/kn5000.cpp
+kn5000                          // (c) 199? Technics SX-KN5000 PCM Keyboard
 
 @source:mattel/aquarius.cpp
 aquarius                        // 1983 Aquarius (NTSC)
@@ -42188,6 +42197,10 @@ lms46                           //
 
 @source:skeleton/madmoney2.cpp
 madmoney2                       // (c) 1988 Picmatic
+
+@source:skeleton/marsvending.cpp
+apvm110                         // (c) 1990 Mars Electronics
+apvm110a                        // (c) 1990 Mars Electronics
 
 @source:skeleton/mes.cpp
 mes                             //
