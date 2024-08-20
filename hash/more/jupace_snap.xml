@@ -1,17 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 63 -->
+<!-- Number of items in this list = 61 -->
 <softwarelist name="jupace_snap" description="jupace_snap loose roms">
-	<software name="ace8a0b1f85bcb9d">
-		<description>(32k)SamAndTheBombs</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="snap" interface="jupace_snap">
-			<dataarea name="snap" size="13177">
-				<rom name="(32k)SamAndTheBombs.ace" size="13177" crc="f8a237be" sha1="8a0b1f85bcb9d5ad6c8089b79c6146c9fd756c7f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="acec87bead64b412">
 		<description>3D Maze (2007-05)(Ricardo Fernandes Lopes)(PD)[19K]</description>
 		<year>????</year>
@@ -32,16 +22,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ace3779f0271b348">
-		<description>Ace Invaders (1982)(Hi-Tech Microsoft)[3K]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="snap" interface="jupace_snap">
-			<dataarea name="snap" size="2612">
-				<rom name="Ace Invaders (1982)(Hi-Tech Microsoft)[3K].ace" size="2612" crc="777d7cf2" sha1="3779f0271b348fcfbaab0b665f2611ae934c0a68"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="ace6c1d056e09b78">
 		<description>Ace Mines (2004)(Ricardo Fernandes Lopes)[19K]</description>
 		<year>????</year>
@@ -59,16 +39,6 @@
 		<part name="snap" interface="jupace_snap">
 			<dataarea name="snap" size="2160">
 				<rom name="Acevaders (1983)(Micro Marketing)[3K].ace" size="2160" crc="029d3a4a" sha1="cb0cf9f3c42d4ab7c54d3ff13d703e703fadc5b6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ace1a310db890b96">
-		<description>Adventure A - Planet of Death (2008)(Jupiter Ace Archive Team)(PD)[19K]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="snap" interface="jupace_snap">
-			<dataarea name="snap" size="23579">
-				<rom name="Adventure A - Planet of Death (2008)(Jupiter Ace Archive Team)(PD)[19K].ace" size="23579" crc="52e4032e" sha1="1a310db890b96a47752d0dc09c1edd59ae1e1868"/>
 			</dataarea>
 		</part>
 	</software>
@@ -473,12 +443,12 @@
 		</part>
 	</software>
 	<software name="ace05a9bbff196d7">
-		<description>Minefield (1983)(Micro Marketing)[3K]</description>
+		<description>Minefield (1983)(Micro Marketing)[3K][m]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="jupace_snap">
 			<dataarea name="snap" size="2060">
-				<rom name="Minefield (1983)(Micro Marketing)[3K].ace" size="2060" crc="184431e3" sha1="05a9bbff196d77a41380e2fbe477c241234cb557"/>
+				<rom name="Minefield (1983)(Micro Marketing)[3K][m].ace" size="2060" crc="184431e3" sha1="05a9bbff196d77a41380e2fbe477c241234cb557"/>
 			</dataarea>
 		</part>
 	</software>
@@ -519,6 +489,16 @@
 		<part name="snap" interface="jupace_snap">
 			<dataarea name="snap" size="10108">
 				<rom name="Robohunt (1984)(Plasma Software)[unreleased][19K].ace" size="10108" crc="9f5e2ad7" sha1="a20441aaa9a5d355de2a37a3055322dc0b4ab6cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ace8a0b1f85bcb9d">
+		<description>Sam and the Time Bombs</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="jupace_snap">
+			<dataarea name="snap" size="13177">
+				<rom name="Sam and the Time Bombs.ace" size="13177" crc="f8a237be" sha1="8a0b1f85bcb9d5ad6c8089b79c6146c9fd756c7f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -623,12 +603,12 @@
 		</part>
 	</software>
 	<software name="ace143b04bffacc7">
-		<description>Zombies and Potholes (1983)(Jupiter Cantab)[19K]</description>
+		<description>Zombies and Potholes (1983)(Jupiter Cantab)[19K][zombpot]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="jupace_snap">
 			<dataarea name="snap" size="9354">
-				<rom name="Zombies and Potholes (1983)(Jupiter Cantab)[19K].ace" size="9354" crc="f1dc7a47" sha1="143b04bffacc78ff79221f0a600398ffd4be26a7"/>
+				<rom name="Zombies and Potholes (1983)(Jupiter Cantab)[19K][zombpot].ace" size="9354" crc="f1dc7a47" sha1="143b04bffacc78ff79221f0a600398ffd4be26a7"/>
 			</dataarea>
 		</part>
 	</software>
