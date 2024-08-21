@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8 -->
+<!-- Number of items in this list = 98 -->
 <softwarelist name="mtx_snap" description="mtx_snap loose roms">
+	<software name="mtx64d05624d324e">
+		<description>(demo)Pacman (198x) (unfinished)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="6214">
+				<rom name="(demo)Pacman (198x) (unfinished).mtx" size="6214" crc="8b28101a" sha1="64d05624d324e2f15774542667b5e13cc617164c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mtx1028a9118e320">
 		<description>3D Tachyon Fighter (1984) (Continental Software) [a2]</description>
 		<year>????</year>
@@ -52,6 +62,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mtx9c9c0d5733abf">
+		<description>Arcazions (1985) (Chris Sawyer) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="14664">
+				<rom name="Arcazions (1985) (Chris Sawyer) [a2].mtx" size="14664" crc="e41b2fed" sha1="9c9c0d5733abfddfcc950e1a5ea6d524d6502c30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxd21d6ba9d9d82">
+		<description>Arcazions (1985)(Sawyer, Chris)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="5973">
+				<rom name="Arcazions (1985)(Sawyer, Chris)[a].mtx" size="5973" crc="1663b4c4" sha1="d21d6ba9d9d82a02de8565347d8252d6ef5fd142"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mtxd06624f910b3d">
 		<description>Astro-Pac (1985)(Continental Software)[a]</description>
 		<year>????</year>
@@ -79,6 +109,876 @@
 		<part name="snap" interface="mtx_snap">
 			<dataarea name="snap" size="5193">
 				<rom name="Astromilon (1985) (Continental Software) [a1].mtx" size="5193" crc="411d225a" sha1="4474a05d08a6131c61bb7af5696ebd2a638fa9a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxec38fad4f679d">
+		<description>Backgammon (1984) (Continental Software) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="9834">
+				<rom name="Backgammon (1984) (Continental Software) [a1].mtx" size="9834" crc="6bdec5ce" sha1="ec38fad4f679d11a81035362c5be30c12049c6ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx52deea43ab81c">
+		<description>Backgammon (1984) (Continental Software) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="9834">
+				<rom name="Backgammon (1984) (Continental Software) [a2].mtx" size="9834" crc="f077460a" sha1="52deea43ab81c70911b2fd4ae1399e5c18bab5f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxab32ebf044528">
+		<description>Basic Business BREAKEVEN (19xx) (Memotech) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="4568">
+				<rom name="Basic Business BREAKEVEN (19xx) (Memotech) (2).mtx" size="4568" crc="c22aec12" sha1="ab32ebf044528f2e38958452421208d85e98a715"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa4f6c05f781cd">
+		<description>Basic Business BREAKEVEN (19xx) (Memotech)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="2976">
+				<rom name="Basic Business BREAKEVEN (19xx) (Memotech).mtx" size="2976" crc="70a46f5d" sha1="a4f6c05f781cd35e95100999e988ec39111e8289"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx5c0dd678ab828">
+		<description>Basic Business COMPARISON (19xx) (Memotech)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="5369">
+				<rom name="Basic Business COMPARISON (19xx) (Memotech).mtx" size="5369" crc="d688a603" sha1="5c0dd678ab828802d04443a6547e755db72e22da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxf632712708d26">
+		<description>Basic Business FORECASTING (19xx) (Memotech)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="3780">
+				<rom name="Basic Business FORECASTING (19xx) (Memotech).mtx" size="3780" crc="4b3d462a" sha1="f632712708d2665a40db11695a91921896224167"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx9e52a92cc8ce2">
+		<description>Basic Business PROJECTIONS (19xx) (Memotech)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="4426">
+				<rom name="Basic Business PROJECTIONS (19xx) (Memotech).mtx" size="4426" crc="3a54572e" sha1="9e52a92cc8ce2a34af4e3e8f46604afd482da19d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx43af7b72f1746">
+		<description>Basic Business REPAYMENTS (19xx) (Memotech)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="2135">
+				<rom name="Basic Business REPAYMENTS (19xx) (Memotech).mtx" size="2135" crc="64bf5b70" sha1="43af7b72f174638060a3c6ec50ae50e0ca52d613"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx43c7045fd0046">
+		<description>Blitz (19xx) (Tri-Com Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="32924">
+				<rom name="Blitz (19xx) (Tri-Com Software).mtx" size="32924" crc="9b0d1406" sha1="43c7045fd004606af10a57848f23149607aef397"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx5a4c68317549e">
+		<description>Blobbo (1984) (Continental Software) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="19687">
+				<rom name="Blobbo (1984) (Continental Software) [a2].mtx" size="19687" crc="b355d198" sha1="5a4c68317549e1bc5455774d6d532560b96cf1ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx9a6132262121c">
+		<description>Blobbo (1985)(Continental Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10996">
+				<rom name="Blobbo (1985)(Continental Software)[a].mtx" size="10996" crc="5a462b8f" sha1="9a6132262121c27021333aab42f67ee180fdb6ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe90d2650aef85">
+		<description>Bomber & Etch A Sketch (19xx) (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10933">
+				<rom name="Bomber & Etch A Sketch (19xx) (PD) [a1].mtx" size="10933" crc="bc989c0b" sha1="e90d2650aef8569a559e5797420bc76bd01d5a6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx57f77ddd987a7">
+		<description>Bomber & Etch A Sketch (19xx)(-)(PD)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="11464">
+				<rom name="Bomber & Etch A Sketch (19xx)(-)(PD)[a2].mtx" size="11464" crc="b461e23f" sha1="57f77ddd987a70f86a2f350301c4fe9ab6fcf1c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx701ecd6593032">
+		<description>BOMBER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="3256">
+				<rom name="BOMBER.mtx" size="3256" crc="cf2a2892" sha1="701ecd65930323a946463974690f547605120523"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe378752106d98">
+		<description>Boris and the Bats (1984) (TRi-Com Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="11938">
+				<rom name="Boris and the Bats (1984) (TRi-Com Software).mtx" size="11938" crc="ce3c0f15" sha1="e378752106d98ca7026c9c0e780fba1b62a36812"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxb192a2d1ccbb1">
+		<description>Bouncing Bill (1984) Brian Rogers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="14350">
+				<rom name="Bouncing Bill (1984) Brian Rogers.mtx" size="14350" crc="2038ad53" sha1="b192a2d1ccbb15d49696e1fa36d16f9c1fa38546"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxf9e5bcab1cb48">
+		<description>Brunword (198x) (Brunning Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="6017">
+				<rom name="Brunword (198x) (Brunning Software).mtx" size="6017" crc="f7637687" sha1="f9e5bcab1cb48071ca688e5a9f97f739a17dd9aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxc28a6682cdc42">
+		<description>Brunword (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="6010">
+				<rom name="Brunword (19xx)(-).mtx" size="6010" crc="3d2ce24c" sha1="c28a6682cdc42a1ac29281b32011b22fa5c27af6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx2be2297d2ccbe">
+		<description>Chamberoids (1984)(Megastar Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10856">
+				<rom name="Chamberoids (1984)(Megastar Games)[a].mtx" size="10856" crc="3280d013" sha1="2be2297d2ccbe1ac9aa178bd4262b7d31ef241e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxab015cab8a37b">
+		<description>Chromatography (1984) (SCi Soft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="14350">
+				<rom name="Chromatography (1984) (SCi Soft Ltd).mtx" size="14350" crc="4594faba" sha1="ab015cab8a37b835e9e630153ecd20b5ca0cc2bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxd9e90cfc08fc2">
+		<description>Cobra (19xx) (Xaviersine Audio Products)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="8071">
+				<rom name="Cobra (19xx) (Xaviersine Audio Products).mtx" size="8071" crc="7ae2bee0" sha1="d9e90cfc08fc294791453ef2c83336994c2da0ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx4c8823f35970a">
+		<description>COMBAT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="19408">
+				<rom name="COMBAT.mtx" size="19408" crc="5a5e5baa" sha1="4c8823f35970a4d02d5e1aea4f7a320a7dd38338"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx8edba79b63010">
+		<description>Comic Bakery</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="14599">
+				<rom name="Comic Bakery.mtx" size="14599" crc="35b2a5c2" sha1="8edba79b63010458796e36fdcc80b4ffae118222"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx7a8b4a2c253ed">
+		<description>Composer512-Manuscript</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="19607">
+				<rom name="Composer512-Manuscript.mtx" size="19607" crc="9983480b" sha1="7a8b4a2c253ede582542b3fd9f085109d2ad3da0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa7661903f963b">
+		<description>Composer512</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="37733">
+				<rom name="Composer512.mtx" size="37733" crc="2aee2d62" sha1="a7661903f963b66508509c05f6a085bd1ed1f2aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx7f849258b3a70">
+		<description>Contact Bridge II (1984)(Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="30669">
+				<rom name="Contact Bridge II (1984)(Continental Software).mtx" size="30669" crc="310f0e6c" sha1="7f849258b3a70fba0039b3ad46ef6f459a7cb989"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxf234a6917130b">
+		<description>Contact Bridge II GAME (1984) (Continental Software) [A1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="29218">
+				<rom name="Contact Bridge II GAME (1984) (Continental Software) [A1].mtx" size="29218" crc="aee5bf66" sha1="f234a6917130b147b45639456bec3f301d8911e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxddc81e46fd436">
+		<description>Contact Bridge II LOADER (1985) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="1451">
+				<rom name="Contact Bridge II LOADER (1985) (Continental Software).mtx" size="1451" crc="a0afcc76" sha1="ddc81e46fd4364d5860da87aa038967a878e25b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe9f0838ec97d5">
+		<description>Cosmic Raiders (1984) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="13485">
+				<rom name="Cosmic Raiders (1984) (Continental Software).mtx" size="13485" crc="a3e0dd71" sha1="e9f0838ec97d5799aa864cc9112512be55a5e5dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx143f712d86cec">
+		<description>Crystal (198x) (Megastar Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="23815">
+				<rom name="Crystal (198x) (Megastar Games).mtx" size="23815" crc="ff809eea" sha1="143f712d86cecdeaff68aabbb09f6e4902baa654"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxb6d2e90530c2d">
+		<description>Dennis and the Chickens (1984) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="17502">
+				<rom name="Dennis and the Chickens (1984) (Continental Software).mtx" size="17502" crc="4c819fe7" sha1="b6d2e90530c2dd986d900c42e0aae183d378b27f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx63e88af35d321">
+		<description>Dennis at the circus (198x) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15927">
+				<rom name="Dennis at the circus (198x) (Continental Software).mtx" size="15927" crc="cfc29535" sha1="63e88af35d321bb5e7a7146d89bafb156095dfdd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx181d45c304afd">
+		<description>Dennis Goes Bananas (198x) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15062">
+				<rom name="Dennis Goes Bananas (198x) (Continental Software).mtx" size="15062" crc="8d99a3ed" sha1="181d45c304afde48e5043740ac718b6bb64e48ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx568b28405c2ab">
+		<description>designer512, the (198x) (Halton Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="29840">
+				<rom name="designer512, the (198x) (Halton Software).mtx" size="29840" crc="49c1def3" sha1="568b28405c2ab1dd103a32bc616029f1bafafc1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa29846194b9c4">
+		<description>Downstream Danger (1985) (Megastar Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="33778">
+				<rom name="Downstream Danger (1985) (Megastar Games).mtx" size="33778" crc="deb2f99b" sha1="a29846194b9c4d2571f120b60aa94428d340fa37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx18f58f4144c5a">
+		<description>Draughts (1984)(Continental Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10269">
+				<rom name="Draughts (1984)(Continental Software)[a].mtx" size="10269" crc="78b2ec37" sha1="18f58f4144c5a016df7d8bc56fa4743d14e910fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx0cc9ac64c39b9">
+		<description>Drive the Cee-5 (1985) (Stephen Trinder) (Megastar Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="25919">
+				<rom name="Drive the Cee-5 (1985) (Stephen Trinder) (Megastar Games).mtx" size="25919" crc="6cdbb35e" sha1="0cc9ac64c39b9c7c67af6c4c3496f1d06ee4348f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx424f3ce6b9aa3">
+		<description>Fig Forth (1985) (Syntaxsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="9055">
+				<rom name="Fig Forth (1985) (Syntaxsoft).mtx" size="9055" crc="cbb3cd3f" sha1="424f3ce6b9aa35ce5c09c5e76569323a05e6d029"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx983135d73c469">
+		<description>First Letters Tape (1984) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="22188">
+				<rom name="First Letters Tape (1984) (Continental Software).mtx" size="22188" crc="0a81d911" sha1="983135d73c4699ebb38a15806df391fb778c7344"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxccd6e610e54ce">
+		<description>Flummox (19xx) (Syntaxsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="35875">
+				<rom name="Flummox (19xx) (Syntaxsoft).mtx" size="35875" crc="6435c51b" sha1="ccd6e610e54ce80a27137a1e067b11f9e65ebe27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx8db1fed7b4d8a">
+		<description>frankie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="35137">
+				<rom name="frankie.mtx" size="35137" crc="05852b88" sha1="8db1fed7b4d8a78e2e2a9ef0382addd502ffa37f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx6d70059df3a8e">
+		<description>Fruit Machine (1984) (Marc Teale)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15475">
+				<rom name="Fruit Machine (1984) (Marc Teale).mtx" size="15475" crc="622feab3" sha1="6d70059df3a8ebea93cc1a5a67ef4af3d2ca8baf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx86feb707e4b51">
+		<description>Ghostly Castle (1985) (Pansoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="29378">
+				<rom name="Ghostly Castle (1985) (Pansoft).mtx" size="29378" crc="8c18dd70" sha1="86feb707e4b513ce385fc12da30f4afe5b82ac6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe9959f859e3d9">
+		<description>Glass Designer (1984) (SCi Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="8206">
+				<rom name="Glass Designer (1984) (SCi Soft).mtx" size="8206" crc="fc76f6ff" sha1="e9959f859e3d9f81ac15aa302481d822507438f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe8641731b5d1b">
+		<description>Goldmine (1984) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="32988">
+				<rom name="Goldmine (1984) (Continental Software).mtx" size="32988" crc="0bc00723" sha1="e8641731b5d1bf80b190caf63b40559fe187390a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx6978ead9bd6ee">
+		<description>H & L Dump (1984) (Membrain)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="1356">
+				<rom name="H & L Dump (1984) (Membrain).mtx" size="1356" crc="40c1dde1" sha1="6978ead9bd6ee3b3bded5039c55c865ae178452c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxd9666cff6cfdb">
+		<description>Hawk Wars (1985)(Syntaxsoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="21688">
+				<rom name="Hawk Wars (1985)(Syntaxsoft)[a].mtx" size="21688" crc="58854fff" sha1="d9666cff6cfdb66a5a10322843554d77e46ccc04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxeccfc1898a860">
+		<description>Highway Encounter (19xx) (Syntaxsoft (Vortex))</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="41945">
+				<rom name="Highway Encounter (19xx) (Syntaxsoft (Vortex)).mtx" size="41945" crc="e0e2d668" sha1="eccfc1898a860275ae03ce1fb67bc19370af5364"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxfcceca9388057">
+		<description>Hunchy (P Wood) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="16046">
+				<rom name="Hunchy (P Wood) (19xx).mtx" size="16046" crc="5e080296" sha1="fcceca938805706ec07ffaa76fe92fae6d1db8c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx0d12092f203db">
+		<description>Hustle Chumy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="12179">
+				<rom name="Hustle Chumy.MTX" size="12179" crc="24ae8ac0" sha1="0d12092f203db395a1c5b173aeaa0bb766181083"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx80165d989b689">
+		<description>Iceberg (1985) (Syntaxsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="17779">
+				<rom name="Iceberg (1985) (Syntaxsoft).mtx" size="17779" crc="3125e014" sha1="80165d989b6898fe4ac01bdddfa9a6af42170c6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxee94ac631afc0">
+		<description>Jack Flash (NJ & MI) (1985)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="21773">
+				<rom name="Jack Flash (NJ & MI) (1985).mtx" size="21773" crc="ad93cd8f" sha1="ee94ac631afc0f49b7168771b12975ef5e5fd848"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx33158ac12b713">
+		<description>Jet Bikes (1985)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="22961">
+				<rom name="Jet Bikes (1985).mtx" size="22961" crc="b823589f" sha1="33158ac12b7131d992cbb4baa828be0c4d152df8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxdc93140d3f468">
+		<description>Johnny Rebel (19xx)(-)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="23499">
+				<rom name="Johnny Rebel (19xx)(-)[a].mtx" size="23499" crc="9485dd64" sha1="dc93140d3f468d8824883209411683957a7ab0c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxb27d2c9cb2b9a">
+		<description>K-N-U-C-K-L-E-S (1983)(Continental Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15950">
+				<rom name="K-N-U-C-K-L-E-S (1983)(Continental Software)[a].mtx" size="15950" crc="28e744f2" sha1="b27d2c9cb2b9aace68fb9e78b357ccc12b1c13ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx9d5a9a33b50eb">
+		<description>Land Mines (Jim Wills) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10748">
+				<rom name="Land Mines (Jim Wills) (19xx).mtx" size="10748" crc="9cbc1141" sha1="9d5a9a33b50eb0bdcdf90470b95c7f7addeff606"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx3a834800f0b2a">
+		<description>Man from G.R.A.N.N.Y, The (1985)(Syntaxsoft)[loader]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="8208">
+				<rom name="Man from G.R.A.N.N.Y, The (1985)(Syntaxsoft)[loader].mtx" size="8208" crc="45f24ffe" sha1="3a834800f0b2a810c6110bb682c134df8c3b7eb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa2efb1ce1dd09">
+		<description>mandel</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="1048">
+				<rom name="mandel.mtx" size="1048" crc="1b1276dc" sha1="a2efb1ce1dd093d9c27e4763c77e17c69b4998c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxdde4e53ceb1ba">
+		<description>Manic Miner (Mathrew Smith) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="21232">
+				<rom name="Manic Miner (Mathrew Smith) (19xx).mtx" size="21232" crc="ae988ef1" sha1="dde4e53ceb1ba12daf2fc26d7665337296cb6d45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx85de8cc69e4bd">
+		<description>Marbles (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10775">
+				<rom name="Marbles (19xx).mtx" size="10775" crc="41a17ce8" sha1="85de8cc69e4bdf6e131b6e10cc970594a2267b95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxbf21319f95dd0">
+		<description>Maths-1 H1 (1984) (Memotech)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="33244">
+				<rom name="Maths-1 H1 (1984) (Memotech).mtx" size="33244" crc="d1ac0a95" sha1="bf21319f95dd0cf110fc55b4bc897a9016e96717"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx3d6faee3b1c3b">
+		<description>Mecha 8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="31273">
+				<rom name="Mecha 8.mtx" size="31273" crc="bbcf86e3" sha1="3d6faee3b1c3b9689bfe80b0781a5f589e3e7ccc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx7b98eb3900d0f">
+		<description>Memocheque (198x) (Syntaxsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="31504">
+				<rom name="Memocheque (198x) (Syntaxsoft).mtx" size="31504" crc="3f8701c8" sha1="7b98eb3900d0f03535757430a8cf276d00cc87b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx1a0fc595ded41">
+		<description>Memotech Demo 1 of 3 (198x)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="9111">
+				<rom name="Memotech Demo 1 of 3 (198x).mtx" size="9111" crc="b8156ac4" sha1="1a0fc595ded41d9d52fa310c12bcb4c8201359c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx51822e878058d">
+		<description>Memotech Demo 2 of 3 (198x)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="3733">
+				<rom name="Memotech Demo 2 of 3 (198x).mtx" size="3733" crc="e2b1d34c" sha1="51822e878058d36f86a5fe2e44af054d8b7e3d56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx9b0152de92559">
+		<description>Memotech Demo 3 of 3 (198x)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="4777">
+				<rom name="Memotech Demo 3 of 3 (198x).mtx" size="4777" crc="8df9f68b" sha1="9b0152de925595daebd87c4094357cc9a3a039b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx525de4bc136d1">
+		<description>Missile Kommand (1985)(Chris Sawyer-Syntaxsoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="9078">
+				<rom name="Missile Kommand (1985)(Chris Sawyer-Syntaxsoft)[a].mtx" size="9078" crc="b5bee355" sha1="525de4bc136d1c1dc32c529b9c8d909dd62baa96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx7f0513c485128">
+		<description>Missile Kommand (Chris Sawyer) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10254">
+				<rom name="Missile Kommand (Chris Sawyer) (19xx).mtx" size="10254" crc="3872c339" sha1="7f0513c48512884b0f9df256de3702959ba08738"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx7a3af409f79a3">
+		<description>Mission Alphatron (1985)(Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="12165">
+				<rom name="Mission Alphatron (1985)(Continental Software).mtx" size="12165" crc="7aa5e87b" sha1="7a3af409f79a3a79e28bf6ff0950f21f4dec8229"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx43f7f9eb26949">
+		<description>Ms Snapman (1984) (Johan Meiring)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="17795">
+				<rom name="Ms Snapman (1984) (Johan Meiring).mtx" size="17795" crc="e5e366de" sha1="43f7f9eb269492d2a871b34c31d8f52474c25af1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx43cb05f13bf25">
+		<description>MTX Assembly Language Course PROG1 (Graysoft) (John Grayson) (1986)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="17793">
+				<rom name="MTX Assembly Language Course PROG1 (Graysoft) (John Grayson) (1986).mtx" size="17793" crc="3092565e" sha1="43cb05f13bf2569a9b9ced357a4049101c33feaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx0cbadd5ce09b5">
+		<description>MTX Assembly Language Course PROG2 (Graysoft) (John Grayson) (1986)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15262">
+				<rom name="MTX Assembly Language Course PROG2 (Graysoft) (John Grayson) (1986).mtx" size="15262" crc="322d687a" sha1="0cbadd5ce09b5f0651242255807642c93caaa942"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx617d4280d5f33">
+		<description>MTX Assembly Language Course PROG3 (Graysoft) (John Grayson) (1986)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="13097">
+				<rom name="MTX Assembly Language Course PROG3 (Graysoft) (John Grayson) (1986).mtx" size="13097" crc="5b20ed52" sha1="617d4280d5f33587806ba7542a24ab9c7dd040a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxdfa52bac09e02">
+		<description>MTX Assembly Language Course PROG4 (Graysoft) (John Grayson) (1986)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="16971">
+				<rom name="MTX Assembly Language Course PROG4 (Graysoft) (John Grayson) (1986).mtx" size="16971" crc="774d8fcc" sha1="dfa52bac09e02aebcd9b369ca6691c53dcf931f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa21b6c453e53f">
+		<description>Munch Mania (1984) (B.C.C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="12324">
+				<rom name="Munch Mania (1984) (B.C.C).mtx" size="12324" crc="8cd19733" sha1="a21b6c453e53fb3278e495117aa0b114ca77da1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxf2c363115d0b4">
+		<description>Music Pad (19xx) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="29202">
+				<rom name="Music Pad (19xx) (Continental Software).mtx" size="29202" crc="fb814cab" sha1="f2c363115d0b49ca4221eafdb54e8eff776a7e9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx6b40f98775965">
+		<description>Nemo (1984)(Continental Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="11035">
+				<rom name="Nemo (1984)(Continental Software)[a].mtx" size="11035" crc="0f148a86" sha1="6b40f9877596565971a8093a086995752366775a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx121692ef88330">
+		<description>Obliteration Zone (1985) (A Southgate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="12696">
+				<rom name="Obliteration Zone (1985) (A Southgate).mtx" size="12696" crc="3b82a5d6" sha1="121692ef88330225fb91574508d2a214305c0e5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx077264c7de5e9">
+		<description>Obloids (1984) (Continental Software) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="11085">
+				<rom name="Obloids (1984) (Continental Software) [a1].mtx" size="11085" crc="2eb88e79" sha1="077264c7de5e9991b6290cd95f6697193c79fa9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxed64d76a22218">
+		<description>Old Mac Farmer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="12784">
+				<rom name="Old Mac Farmer.MTX" size="12784" crc="025e77dc" sha1="ed64d76a222185342d6b2b6d3877bd39060cc114"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxf970cd6df834d">
+		<description>Paintbox (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="8534">
+				<rom name="Paintbox (19xx).mtx" size="8534" crc="0bcbfd1d" sha1="f970cd6df834d848f359327786d7e5dd6cd928e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx305efd9900e29">
+		<description>Percentages (19xx) (SCi Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="6158">
+				<rom name="Percentages (19xx) (SCi Soft).mtx" size="6158" crc="ba3ae8f3" sha1="305efd9900e29841db7afe3e971107b7d584952e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxabc0090f80ac9">
+		<description>PeteDraw (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="3207">
+				<rom name="PeteDraw (19xx).mtx" size="3207" crc="c47dbbd8" sha1="abc0090f80ac965d817364e0910d69bbc27000e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx0864f4cea6b7c">
+		<description>Phaid (1995) (Continental Software) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="11973">
+				<rom name="Phaid (1995) (Continental Software) [a1].mtx" size="11973" crc="e29c2bdb" sha1="0864f4cea6b7c989b7ac10e0d9252821b601f9a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxfbca76bb84dc6">
+		<description>Physics-1 H1 (1983) (Memotech)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="32862">
+				<rom name="Physics-1 H1 (1983) (Memotech).mtx" size="32862" crc="e72c8ff7" sha1="fbca76bb84dc6ab187fce50dcebfd554d400f5f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx892a522fc0bd4">
+		<description>Pontoon Blackjack (19xx) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15810">
+				<rom name="Pontoon Blackjack (19xx) (Continental Software).mtx" size="15810" crc="7dc73bb2" sha1="892a522fc0bd4a688e8f21b02cdc4507153b80ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe221d941be945">
+		<description>Power Pac</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="11462">
+				<rom name="Power Pac.MTX" size="11462" crc="b8ed9f9e" sha1="e221d941be945974f98be1a14ffa3a77abf56636"/>
 			</dataarea>
 		</part>
 	</software>
