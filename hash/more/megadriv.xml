@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1823 -->
+<!-- Number of items in this list = 1827 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -2963,12 +2963,12 @@
 		</part>
 	</software>
 	<software name="gen130a89c3f7e1d">
-		<description>Alex Kidd in the Enchanted Castle (Europe) (Rev A)</description>
+		<description>Alex Kidd In The Enchanted Castle T-Spa (2017)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="Alex Kidd in the Enchanted Castle (Europe) (Rev A).bin" size="262144" crc="d2f3a29e" sha1="130a89c3f7e1dbdec9b2e18f1d1e5cbc7bba58f4"/>
+				<rom name="Alex Kidd In The Enchanted Castle T-Spa (2017)(Wave).bin" size="262144" crc="d2f3a29e" sha1="130a89c3f7e1dbdec9b2e18f1d1e5cbc7bba58f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2993,22 +2993,12 @@
 		</part>
 	</software>
 	<software name="gen616b585082c84">
-		<description>Alien 3 (USA, Europe) (Rev A)</description>
+		<description>Alien 3 T-Spa (2020)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Alien 3 (USA, Europe) (Rev A).bin" size="524288" crc="701d308e" sha1="616b585082c8427b519eb2e2bb7be5bf2e0d56ed"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen05bf9c64a2427">
-		<description>alien soldier (Hack, Spanish)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="alien soldier (Hack, Spanish).bin" size="2097152" crc="ab991070" sha1="05bf9c64a2427db0cf69aa052d690e73a0861023"/>
+				<rom name="Alien 3 T-Spa (2020)(Wave).bin" size="524288" crc="701d308e" sha1="616b585082c8427b519eb2e2bb7be5bf2e0d56ed"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3019,6 +3009,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="alien soldier (italian translation).bin" size="2097152" crc="e5e614a5" sha1="3ee5cb67602632cf1c60727c3d2c0bae53493cfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen05bf9c64a2427">
+		<description>Alien Soldier T-Spa (2017)(Wave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Alien Soldier T-Spa (2017)(Wave).bin" size="2097152" crc="ab991070" sha1="05bf9c64a2427db0cf69aa052d690e73a0861023"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3049,6 +3049,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Alien3 - Kinoppi version (2024)(Vikfield).bin" size="524288" crc="477b634b" sha1="379ee737593b6ed59a5167e58ff4a6fa315196bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend36f5448fb0e6">
+		<description>Alien3 Enhanced Colors & SFX v1.3 (2024)(Byros)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Alien3 Enhanced Colors & SFX v1.3 (2024)(Byros).bin" size="524288" crc="51fa2292" sha1="d36f5448fb0e63e01980b35b75058cf373db319c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5132,6 +5142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen0a7cbe196b20b">
+		<description>Double Dragon Arcade Music & SFX (2024)(Segaman, VLD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Double Dragon Arcade Music & SFX (2024)(Segaman, VLD).bin" size="1048576" crc="96a69d33" sha1="0a7cbe196b20b229f1b2cc04f2da11c5212ee13c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen424fd8c478beb">
 		<description>double dragon II - the revenge (Hack, Spanish)</description>
 		<year>????</year>
@@ -5719,6 +5739,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="537694">
 				<rom name="Fist of the North Star Revisited T-Eng v1.2 (2024)(Ermani S. Costa).bin" size="537694" crc="7d424a16" sha1="8d4d238cc304e4d1ec81f8d224418c5c77e72c10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena2e7dd846e801">
+		<description>Fist of the North Star Revisited T-Eng v2.0 (2024)(Ermani S. Costa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="537694">
+				<rom name="Fist of the North Star Revisited T-Eng v2.0 (2024)(Ermani S. Costa).bin" size="537694" crc="26e9b00c" sha1="a2e7dd846e8018c31c5a3344f591345815b3d07f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8912,16 +8942,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="genfe43c51314ed9">
-		<description>langrisser ii (english translation)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="langrisser ii (english translation).bin" size="2097152" crc="e8f28522" sha1="fe43c51314ed902c65ce967f3b181dcefad2d59c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen2b3d55ff469c2">
 		<description>langrisser ii (Hack, Spanish)</description>
 		<year>????</year>
@@ -9099,6 +9119,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Langrisser II hack by yujia (route of magician) (2).bin" size="2097152" crc="44b6a6ce" sha1="76cef0154af3adcfff82a0615d2c6baa2a74036e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfe43c51314ed9">
+		<description>Langrisser II T-Eng (2011)(Jon Najar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Langrisser II T-Eng (2011)(Jon Najar).bin" size="2097152" crc="e8f28522" sha1="fe43c51314ed902c65ce967f3b181dcefad2d59c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16019,6 +16049,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="912072">
 				<rom name="Super Maximum Overkill v1.0 (2022)(Space Pants Games).bin" size="912072" crc="95e07e04" sha1="3748dbcf8cb6b4f0d29d4e6b27eb1be5cea2c70c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="geneb11fe1f18fe6">
+		<description>Super Monaco GP Enhanced Colors v1.32 (2023)(Byros)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Super Monaco GP Enhanced Colors v1.32 (2023)(Byros).bin" size="524288" crc="d7d73d0e" sha1="eb11fe1f18fe698a8e2c6a08e05507937a693db5"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 98 -->
+<!-- Number of items in this list = 141 -->
 <softwarelist name="mtx_snap" description="mtx_snap loose roms">
 	<software name="mtx64d05624d324e">
 		<description>(demo)Pacman (198x) (unfinished)</description>
@@ -979,6 +979,436 @@
 		<part name="snap" interface="mtx_snap">
 			<dataarea name="snap" size="11462">
 				<rom name="Power Pac.MTX" size="11462" crc="b8ed9f9e" sha1="e221d941be945974f98be1a14ffa3a77abf56636"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx83daf77bf220e">
+		<description>Refraction (1984) (SCi Soft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="14350">
+				<rom name="Refraction (1984) (SCi Soft Ltd).mtx" size="14350" crc="df6bee56" sha1="83daf77bf220ebbf45ad4cf570c0b5a0eaf13c12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxf5c912174e584">
+		<description>Reversi (1984)(Continental Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="17996">
+				<rom name="Reversi (1984)(Continental Software)[a].mtx" size="17996" crc="991a6074" sha1="f5c912174e584af961b7badc775df1f7d807bc6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx147f12104db06">
+		<description>Ruthless B. game (1986) (Syntaxsoft (Lifesoft))</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="30824">
+				<rom name="Ruthless B. game (1986) (Syntaxsoft (Lifesoft)).mtx" size="30824" crc="7ea40dd6" sha1="147f12104db06acd39e21ad101a591cad1bfe6c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxca38ca3d6b09e">
+		<description>Ruthless B. game loader (1986) (Syntaxsoft (Lifesoft))</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="1442">
+				<rom name="Ruthless B. game loader (1986) (Syntaxsoft (Lifesoft)).mtx" size="1442" crc="44aaa8cc" sha1="ca38ca3d6b09e2f5530ec558fb2a30bf41f9dacd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxfa24707c5a2e7">
+		<description>Ruthless B. instr loader (1986) (Syntaxsoft (Lifesoft))</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="1440">
+				<rom name="Ruthless B. instr loader (1986) (Syntaxsoft (Lifesoft)).mtx" size="1440" crc="8f854834" sha1="fa24707c5a2e79e9b4e8b022c7470e721726c476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxb5a6118a48bfe">
+		<description>Ruthless B. instructions (1986) (Syntaxsoft (Lifesoft))</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="27393">
+				<rom name="Ruthless B. instructions (1986) (Syntaxsoft (Lifesoft)).mtx" size="27393" crc="8e268052" sha1="b5a6118a48bfe598dfd29756010dfb1fc44481d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx27f9a257438a5">
+		<description>SASA - 1983 Mass Tael Ltd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15227">
+				<rom name="SASA - 1983 Mass Tael Ltd.mtx" size="15227" crc="d73fd8b3" sha1="27f9a257438a581ba27a05bbebba235a5b29ec78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe2a851f16ba56">
+		<description>Sepulcri Scelerati (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="24056">
+				<rom name="Sepulcri Scelerati (19xx)(-).mtx" size="24056" crc="1b312b7b" sha1="e2a851f16ba5613141b34ae49c0dcd111bdfa18a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxbed533f77d93c">
+		<description>Sepulcri Scelerati (SEPULCRI2) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="24065">
+				<rom name="Sepulcri Scelerati (SEPULCRI2) (19xx).mtx" size="24065" crc="57e66b18" sha1="bed533f77d93c58320927b60b6d2e2a750ceb2a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx02f9114959a4b">
+		<description>Show Jump (1984) (Type-In)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="7468">
+				<rom name="Show Jump (1984) (Type-In).mtx" size="7468" crc="41dd44cb" sha1="02f9114959a4b6aeee299aaf001dbd7f26ef31ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx2e26d1fb7a314">
+		<description>Slither LOADER (1985) (Plasmasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="5316">
+				<rom name="Slither LOADER (1985) (Plasmasoft).mtx" size="5316" crc="238de360" sha1="2e26d1fb7a31499fedc70881d23f465010c76236"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx21cdf31d215e3">
+		<description>SLITHER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="17846">
+				<rom name="SLITHER.mtx" size="17846" crc="e76f8710" sha1="21cdf31d215e3762cdfbd9474b9c0c70b4cee171"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa696c45a60777">
+		<description>Sloopys Christmas Part 1 (1984) (Gamesware)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="14591">
+				<rom name="Sloopys Christmas Part 1 (1984) (Gamesware).mtx" size="14591" crc="807eb1ba" sha1="a696c45a6077739f61e84457f580c455f79b32bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx76679a2746b15">
+		<description>Sloopys Christmas Part 2 (1985) (Gamesware)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="12090">
+				<rom name="Sloopys Christmas Part 2 (1985) (Gamesware).mtx" size="12090" crc="ca7b7338" sha1="76679a2746b152fe02c83cc167cd8a691a262bdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx06591da8ac4c4">
+		<description>Sloopys Christmas Part 3 (1985) (Gamesware)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15132">
+				<rom name="Sloopys Christmas Part 3 (1985) (Gamesware).mtx" size="15132" crc="fd70b0f8" sha1="06591da8ac4c4f455033f0d0b747910fe24c0cc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx61cad8590d1ec">
+		<description>SMG (19xx) (Megastar Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="58753">
+				<rom name="SMG (19xx) (Megastar Games).mtx" size="58753" crc="98d899b5" sha1="61cad8590d1ecf26601f29638f1cb7761484b302"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx58feb7c75784e">
+		<description>SMG512 (19xx) (Megastar Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="62834">
+				<rom name="SMG512 (19xx) (Megastar Games).mtx" size="62834" crc="bb8b57ff" sha1="58feb7c75784e7c9a97fbbb5f6e76bc496e158d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx40ce5edec3424">
+		<description>Snappo (1984)(Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="9985">
+				<rom name="Snappo (1984)(Continental Software).mtx" size="9985" crc="7664a5d1" sha1="40ce5edec3424bf9bb538135f9c4fc6ed4d1cd8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa850f0e18d0a8">
+		<description>Snappo (1984)(Continental Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="9999">
+				<rom name="Snappo (1984)(Continental Software)[a].mtx" size="9999" crc="d3ae25e4" sha1="a850f0e18d0a8f9d0286bcb11688c95ed09090fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx46506884f72b4">
+		<description>SNAPPO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10254">
+				<rom name="SNAPPO.mtx" size="10254" crc="3f0c9b86" sha1="46506884f72b4ef49985f8f38476807a1c4ad5a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxf372cc63ae5f8">
+		<description>Son of Pete (19xx) (Megastar Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="30549">
+				<rom name="Son of Pete (19xx) (Megastar Games).mtx" size="30549" crc="859cfff1" sha1="f372cc63ae5f88c189addf64de2192345326e2d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa516dbeceaaa4">
+		<description>Space Invasion (1998) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="17008">
+				<rom name="Space Invasion (1998) (PD).mtx" size="17008" crc="f748acc6" sha1="a516dbeceaaa4053313774a149b60f42ce4c262e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx6087f723962c3">
+		<description>Spectron - 1983 Spectravideo Int'l Ltd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="11149">
+				<rom name="Spectron - 1983 Spectravideo Int'l Ltd.mtx" size="11149" crc="a3c8c8f7" sha1="6087f723962c3a6ab4c523e4faa60531b531c825"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx1cd7e1da7a79d">
+		<description>Speech Synth Asm (198x) (Genpat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="1066">
+				<rom name="Speech Synth Asm (198x) (Genpat).mtx" size="1066" crc="361808cb" sha1="1cd7e1da7a79d736173322cb18a02e2fbd7b3d0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxa95190a27a973">
+		<description>Speech Synth Basic (198x) (Genpat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="3241">
+				<rom name="Speech Synth Basic (198x) (Genpat).mtx" size="3241" crc="92e87470" sha1="a95190a27a9737f9de638c0536fde005b48dd85b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxb0e6a3c6d6671">
+		<description>Star Command (1985)(Continental Software)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="16154">
+				<rom name="Star Command (1985)(Continental Software)[a2].mtx" size="16154" crc="d61b9046" sha1="b0e6a3c6d6671cbee1a8e4a458151cdff9e1cbc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx27f4f002428e3">
+		<description>Super Coda (1984) (Syntaxsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="1527">
+				<rom name="Super Coda (1984) (Syntaxsoft).mtx" size="1527" crc="32593123" sha1="27f4f002428e3d060445db42f1bec4ff043c2550"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx79827e8356466">
+		<description>Target Zone (1986) (Syntaxsoft) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="12647">
+				<rom name="Target Zone (1986) (Syntaxsoft) [a1].mtx" size="12647" crc="bde21de8" sha1="79827e8356466370a6712180edfe41686c15e2a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx42be0fb95225b">
+		<description>Telebunny - 1983 Mass Tael Ltd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="14170">
+				<rom name="Telebunny - 1983 Mass Tael Ltd.mtx" size="14170" crc="cac1f237" sha1="42be0fb95225b0c0e6f561e8bad9dee7704100be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxca6996f08a3c9">
+		<description>Texted (1985) (Starlite Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="3269">
+				<rom name="Texted (1985) (Starlite Software).mtx" size="3269" crc="e34d4eb7" sha1="ca6996f08a3c97202d72dd654fe6b306f92bd2f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxae2a3a7008bc1">
+		<description>Theseus and the Labyrinth (19xx) (Francis Wallinger) (Tri-Com Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="13132">
+				<rom name="Theseus and the Labyrinth (19xx) (Francis Wallinger) (Tri-Com Software Ltd).mtx" size="13132" crc="d0dc8f54" sha1="ae2a3a7008bc15be0a665b89e7b9d664b318f548"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx5ccf94d09e240">
+		<description>Time Bandits (1984) (Mark OHare) (Personal Software Service)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="15187">
+				<rom name="Time Bandits (1984) (Mark OHare) (Personal Software Service).mtx" size="15187" crc="98fb66d3" sha1="5ccf94d09e2406611ea3b5038d5a717e7db6ddf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx0510e9385e8ce">
+		<description>Time Bandits</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="16398">
+				<rom name="Time Bandits.mtx" size="16398" crc="171d12bb" sha1="0510e9385e8ceea764db00ea4bb5f9516a4f5c4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx51749102b5389">
+		<description>Towers of Hanoi (198x) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="7242">
+				<rom name="Towers of Hanoi (198x) (Continental Software).mtx" size="7242" crc="9418261d" sha1="51749102b53899669c45dc5aadedfc8ccea5e954"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxb84229473dad5">
+		<description>Turbo Run (1984)(Continental Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="17355">
+				<rom name="Turbo Run (1984)(Continental Software)[a].mtx" size="17355" crc="3e857cd6" sha1="b84229473dad50a9aa73692cb3c552ec4eebd963"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx89486c4dec103">
+		<description>Universe (1984) (Andrew Key) (Tri-Com Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="40126">
+				<rom name="Universe (1984) (Andrew Key) (Tri-Com Software Ltd).mtx" size="40126" crc="3bd6172c" sha1="89486c4dec1030fbb438bea8389f8e6a29f777ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx7ebc84df62166">
+		<description>Various Utilities - HDB (19xx) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="4550">
+				<rom name="Various Utilities - HDB (19xx) (Continental Software).mtx" size="4550" crc="eb0c3a87" sha1="7ebc84df62166476c90eb21e67ac06a345482123"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx3a1dd1ecf7616">
+		<description>Various Utilities - INSTRUCTIONS (19xx) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="4590">
+				<rom name="Various Utilities - INSTRUCTIONS (19xx) (Continental Software).mtx" size="4590" crc="b6043f74" sha1="3a1dd1ecf761656ecff1a90a588640f54e64290d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxffba40dc3c5c8">
+		<description>Various Utilities - RENUMBER (19xx) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="2129">
+				<rom name="Various Utilities - RENUMBER (19xx) (Continental Software).mtx" size="2129" crc="ad391f0c" sha1="ffba40dc3c5c8bcc609ca261d84ec80c8240e682"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx7bb4412acddf7">
+		<description>Vortex (19xx)(Paul Daniels)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="10024">
+				<rom name="Vortex (19xx)(Paul Daniels)(PD).mtx" size="10024" crc="22f9dd9e" sha1="7bb4412acddf7d2855962fb007f2230336bc24da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx73522f06f46d1">
+		<description>Wall, The (1985)(Syntaxsoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="30144">
+				<rom name="Wall, The (1985)(Syntaxsoft)[a].mtx" size="30144" crc="5a8dd526" sha1="73522f06f46d16292a4f83aa6c12ef5ae951f102"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx0c7e428708045">
+		<description>Word and Picture Matching (1984) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="23298">
+				<rom name="Word and Picture Matching (1984) (Continental Software).mtx" size="23298" crc="2fe31e03" sha1="0c7e4287080459e42fe8999d6b7035d4d83eb95a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxb9afe90ee42ad">
+		<description>Zoo,The (1984) (Continental Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="mtx_snap">
+			<dataarea name="snap" size="41093">
+				<rom name="Zoo,The (1984) (Continental Software).mtx" size="41093" crc="a98e1206" sha1="b9afe90ee42adad98408974f5f5b1a3e5d1f6787"/>
 			</dataarea>
 		</part>
 	</software>
