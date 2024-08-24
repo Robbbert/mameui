@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 50 -->
+<!-- Number of items in this list = 52 -->
 <softwarelist name="camplynx_cass" description="camplynx_cass loose roms">
 	<software name="cly7a6d8b092a027">
 		<description>1(load Q)</description>
@@ -259,6 +259,26 @@
 		<part name="cass1" interface="camplynx_cass">
 			<dataarea name="cass" size="32604204">
 				<rom name="Gobble de Spook(J.Sian)(1983)(mload spook).wav" size="32604204" crc="71686c19" sha1="c0f2fd7d84323d941ed54a36257e3425072d462a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="clya62c26e912707">
+		<description>H-Tron_CamputersLynx[mload htron]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="camplynx_cass">
+			<dataarea name="cass" size="9400">
+				<rom name="H-Tron_CamputersLynx[mload htron].tap" size="9400" crc="4d22b9fa" sha1="a62c26e912707d6fb18bbae8a5fa3c3c498b5b98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cly59c867ae2ea2f">
+		<description>H-Tron_CamputersLynx_StandardConsole[mload htron]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="camplynx_cass">
+			<dataarea name="cass" size="9451">
+				<rom name="H-Tron_CamputersLynx_StandardConsole[mload htron].tap" size="9451" crc="e7651e05" sha1="59c867ae2ea2fa98a947079cd5a8436f158086df"/>
 			</dataarea>
 		</part>
 	</software>

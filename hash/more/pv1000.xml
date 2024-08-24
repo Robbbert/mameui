@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 6 -->
+<softwarelist name="pv1000" description="pv1000 loose roms">
+	<software name="pv12983c60997ee0">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)[full].bin" size="16384" crc="e0283128" sha1="2983c60997ee0aaf22e50a308f1e4db5291fc557"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1e21c40b7de41e">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)[light].bin" size="16384" crc="b1f495e0" sha1="e21c40b7de41ebbc9529c3077e1c30d8c1a17bc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1f39618d7d7612">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio)[full].bin" size="16384" crc="692ef88a" sha1="f39618d7d7612699b3839afbf30614efb781f7de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv191e58b7ffbb2f">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio)[light].bin" size="16384" crc="3574db7a" sha1="91e58b7ffbb2fa5c8fd0c9610dcf847e5b87443c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv189129e92aa160">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).bin" size="16384" crc="55157aa1" sha1="89129e92aa1605aa50d1fc92a062e93c08d356c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1a2fe410e73c95">
+		<description>Master Mind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Master Mind.bin" size="16384" crc="7d4852f0" sha1="a2fe410e73c95ea22a34013508895371663d0382"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

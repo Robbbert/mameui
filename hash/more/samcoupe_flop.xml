@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 687 -->
+<!-- Number of items in this list = 690 -->
 <softwarelist name="samcoupe_flop" description="samcoupe_flop loose roms">
 	<software name="sama71fee3f5df19">
 		<description>(ama13)amiga_mod-arch_v1-3</description>
@@ -1192,6 +1192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sam78210f8fbcc32">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="Deepspace.mgt" size="819200" crc="b219e266" sha1="78210f8fbcc3236831300ac6b6009632e1e4de91"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="samca61982b9a31a">
 		<description>defender</description>
 		<year>????</year>
@@ -1369,6 +1379,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819200">
 				<rom name="Edwin Blink's Samples (1991) (PD).mgt" size="819200" crc="fae1dc4b" sha1="b181b7972c5018ce8af465e10fd534b1204bc6e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samc107789fa1e75">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="Elite Planet Browser.mgt" size="819200" crc="9a754b72" sha1="c107789fa1e752b8da48267b04f45e8013ae237a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3099,6 +3119,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819200">
 				<rom name="Golden Sword of Bhakhor, The (1997)(Persona).mgt" size="819200" crc="0e7046f6" sha1="ca1c05aa6235c099ca50f08f8a56e6fdef57cb2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sama62be01fd9144">
+		<description>H-Tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="H-Tron.mgt" size="819200" crc="08f7808d" sha1="a62be01fd9144a09caff17044385f07098b13c07"/>
 			</dataarea>
 		</part>
 	</software>

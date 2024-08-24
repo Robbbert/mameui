@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 718 -->
+<!-- Number of items in this list = 719 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -5129,6 +5129,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Gunpey (PD) [C].gbc" size="65536" crc="e5ec31a5" sha1="6d5b486dd82ec52459ad5582d59974cfa4c7b6cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4f043fe6156bb">
+		<description>H-Tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="H-Tron.gb" size="32768" crc="ca890acf" sha1="4f043fe6156bb0c14919c6aafa2749ae910e4a0c"/>
 			</dataarea>
 		</part>
 	</software>

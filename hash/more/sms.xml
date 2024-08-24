@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 263 -->
+<!-- Number of items in this list = 266 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -562,6 +562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms4dbdf687d264f">
+		<description>Deepspace_SMS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Deepspace_SMS.sms" size="32768" crc="14d9ad8c" sha1="4dbdf687d264f9e815a086ddb25aef485ed4ea04"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms619d404472085">
 		<description>Do The Same v1.1 (2022)(Ricco59)</description>
 		<year>????</year>
@@ -699,6 +709,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="458752">
 				<rom name="Electronic Dreams v.77 (2023)(MikGames).sms" size="458752" crc="7d49f141" sha1="7320db867d51e9868a0813768b37e512b5d455c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6835a2d35f1a6">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Elite Planet Browser.sms" size="32768" crc="ca940fab" sha1="6835a2d35f1a6a13ad81b20c2d7754b66395fdef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -959,6 +979,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Green Beret Remake (2022)(MikGames).sms" size="131072" crc="529172bd" sha1="2e89689a6b67438bec09897203d9fb7debbfbdc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse150365c59b59">
+		<description>H-Tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="H-Tron.sms" size="32768" crc="21bc71fa" sha1="e150365c59b593383c401510ed2307449d74ba0b"/>
 			</dataarea>
 		</part>
 	</software>

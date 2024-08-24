@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 30 -->
+<!-- Number of items in this list = 33 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -122,6 +122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg134618e1b6d16a">
+		<description>Deepspace_SC3000.rom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Deepspace_SC3000.rom.bin" size="32768" crc="72f1747b" sha1="34618e1b6d16acca7646932d87abd26213850027"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg1c1a39ba36afb8">
 		<description>Doki Doki Penguin Land (1985)(Sega)[b]</description>
 		<year>????</year>
@@ -129,6 +139,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Doki Doki Penguin Land (1985)(Sega)[b].bin" size="32768" crc="ac7f95b4" sha1="c1a39ba36afb89ba3c6734d931205826918f2acd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1f81a6740a71cd">
+		<description>Elite Planet Browser_sc3000.rom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Elite Planet Browser_sc3000.rom.bin" size="32768" crc="69104020" sha1="f81a6740a71cd25acfdb8d75bcc07e3043c517f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -149,6 +169,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Foryster v00.9 (2022)(siudym).bin" size="32768" crc="f8d7fa2c" sha1="6d9ed7208032ad3ec9011bbc999cea426aca46d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1eb4d6b0c684a5">
+		<description>H-Tron_sc3000.rom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="H-Tron_sc3000.rom.bin" size="32768" crc="8ebdc890" sha1="eb4d6b0c684a517f65fdb9df396d78f794535ee8"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7596 -->
+<!-- Number of items in this list = 7601 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -27822,6 +27822,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpca3888266a6c00">
+		<description>Elite Planet Browser_pcw40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Elite Planet Browser_pcw40.dsk" size="194816" crc="2d5843f7" sha1="a3888266a6c002e5159980ec8035376fd41669d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc597fc189c8960">
+		<description>Elite Planet Browser_pcw80</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="778496">
+				<rom name="Elite Planet Browser_pcw80.dsk" size="778496" crc="c2752228" sha1="597fc189c89608c482beb64843af16800c848fa3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc2caf1cd8be90a">
 		<description>elitee</description>
 		<year>????</year>
@@ -34449,6 +34469,36 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="GWMHORRO.dsk" size="194816" crc="9993bd41" sha1="f0a5412fe6348ed2a834fa2f36dcd542d410fb86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc505fa7fb8daa9">
+		<description>H-Tron_cpc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="H-Tron_cpc.dsk" size="194816" crc="ec3ba846" sha1="505fa7fb8daa94e46640f13bfd93992a51f8db87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc540a0bcfebede">
+		<description>H-Tron_pcw40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="H-Tron_pcw40.dsk" size="194816" crc="ca388094" sha1="540a0bcfebede77be70cf80746dc0dc74aafa64e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc30b84b217507c">
+		<description>H-Tron_pcw80</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="778496">
+				<rom name="H-Tron_pcw80.dsk" size="778496" crc="dff76988" sha1="30b84b217507c715baa5011f2cd327aeea4a1872"/>
 			</dataarea>
 		</part>
 	</software>

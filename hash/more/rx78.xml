@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5 -->
+<!-- Number of items in this list = 8 -->
 <softwarelist name="rx78" description="rx78 loose roms">
 	<software name="rx7a7a0215440bd7">
 		<description>Creative Graphics (IC2_IX0419PA_364C94-3J1)</description>
@@ -29,6 +29,36 @@
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio).rom" size="16384" crc="42318e6e" sha1="ce9e2e00be3253e689730d2ca1349e5199e0515b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx713f7c7f7ef100">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Deepspace.rom" size="16384" crc="f8ac751c" sha1="13f7c7f7ef100f48b9b94c607b7116431c130b9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx72ea85565770ff">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Elite Planet Browser.rom" size="16384" crc="ed4f25aa" sha1="2ea85565770ff963d004d1e567f3847072a417c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx70029ad29be4dc">
+		<description>H-Tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="H-Tron.rom" size="16384" crc="c5b1ba3c" sha1="0029ad29be4dcdb30b69273f36d603219ecbd444"/>
 			</dataarea>
 		</part>
 	</software>
