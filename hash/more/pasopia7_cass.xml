@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 5 -->
+<softwarelist name="pasopia7_cass" description="pasopia7_cass loose roms">
+	<software name="pa7538562b9c80f0">
+		<description>3D Golf Simulation (19xx)(T&E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="31821868">
+				<rom name="3D Golf Simulation (19xx)(T&E).WAV" size="31821868" crc="1005e6a0" sha1="538562b9c80f07b8671454cc5a2e270fec7440c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7881de0a1cfabe">
+		<description>Door Door</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="18288684">
+				<rom name="Door Door.wav" size="18288684" crc="5d33ec19" sha1="881de0a1cfabe59ffb744671422e93de2def52f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa701f6c9cbc5043">
+		<description>Fruits_Paradise</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="9560330">
+				<rom name="Fruits_Paradise.wav" size="9560330" crc="c7adb73d" sha1="01f6c9cbc504390b3d4a11d3a00aeeab1523baa0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa756ee3f3a2d8b7">
+		<description>Golf Game</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="11171372">
+				<rom name="Golf Game.wav" size="11171372" crc="9d2df0e9" sha1="56ee3f3a2d8b769583f2a5469de8900c8bd51732"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7e845625ef2fd2">
+		<description>Jan-kyou</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="15097900">
+				<rom name="Jan-kyou.wav" size="15097900" crc="8e6a6258" sha1="e845625ef2fd224cac0942a9de64a99338723129"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

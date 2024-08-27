@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5 -->
+<!-- Number of items in this list = 9 -->
 <softwarelist name="tutor" description="tutor loose roms">
 	<software name="tutaade318f130cf">
 		<description>Car-azy Racer (1991)(TM)</description>
@@ -49,6 +49,46 @@
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Loco-motion (1991)(TM).bin" size="8192" crc="ede5ed83" sha1="6913d4040687485672b03891151b0db9a6bfcd2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut40867a075d5d6">
+		<description>Pooyan (1991)(TM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Pooyan (1991)(TM).bin" size="8192" crc="96f805e4" sha1="40867a075d5d6c2bbcc293200af288b7494a41b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tutcf025d180cec5">
+		<description>Scramble (199x)(TM) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Scramble (199x)(TM) (2).bin" size="8192" crc="3c23d24f" sha1="cf025d180cec5bafbbae9623cd5b6177481478a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tutd75bf8507e5cc">
+		<description>Torpedo Terror (1991)(TM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Torpedo Terror (1991)(TM).bin" size="8192" crc="40f82fb3" sha1="d75bf8507e5ccc5fb42da149b0bed3a810415a4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut3d2fad00cd15e">
+		<description>Traffic Jam (1991)(TM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Traffic Jam (1991)(TM).bin" size="8192" crc="81f529f9" sha1="3d2fad00cd15ee8e72a005f41fc9f96e362324d2"/>
 			</dataarea>
 		</part>
 	</software>
