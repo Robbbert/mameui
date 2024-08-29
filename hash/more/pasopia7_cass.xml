@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5 -->
+<!-- Number of items in this list = 9 -->
 <softwarelist name="pasopia7_cass" description="pasopia7_cass loose roms">
 	<software name="pa7538562b9c80f0">
 		<description>3D Golf Simulation (19xx)(T&E)</description>
@@ -49,6 +49,46 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="15097900">
 				<rom name="Jan-kyou.wav" size="15097900" crc="8e6a6258" sha1="e845625ef2fd224cac0942a9de64a99338723129"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa726ddd2b3998c0">
+		<description>Osaka no Jin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="21613612">
+				<rom name="Osaka no Jin.wav" size="21613612" crc="1d43c60c" sha1="26ddd2b3998c0452c3277e94941a0de8fbf8d979"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7701924ad44305">
+		<description>Shogi tape by Apollo Technica for Pasopia 7 (side 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="8912940">
+				<rom name="Shogi tape by Apollo Technica for Pasopia 7 (side 1).wav" size="8912940" crc="b941a70e" sha1="701924ad44305f4c29d3ddc218124f238993df31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7bd6a29130af17">
+		<description>SPY-0011</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="20684844">
+				<rom name="SPY-0011.wav" size="20684844" crc="44c2f432" sha1="bd6a29130af17c7da2cb0bb417a46b8ab1669894"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa79f7d4024b1177">
+		<description>Tsume Shogi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="9388588">
+				<rom name="Tsume Shogi.wav" size="9388588" crc="3457cc26" sha1="9f7d4024b1177c5185529e529360a25edde68ef7"/>
 			</dataarea>
 		</part>
 	</software>
