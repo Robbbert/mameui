@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 3 -->
+<softwarelist name="tiki100" description="tiki100 loose roms">
+	<software name="tik5b1e5110f279a">
+		<description>Deepspace_Tiki100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="215296">
+				<rom name="Deepspace_Tiki100.dsk" size="215296" crc="030709bb" sha1="5b1e5110f279a007c5af5486f3ca88339e13ffcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tik19ca8155d608b">
+		<description>H-Tron_tiki100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="215296">
+				<rom name="H-Tron_tiki100.dsk" size="215296" crc="11ba501c" sha1="19ca8155d608b7d5e6359993401023835760caba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tik3260da5f6232a">
+		<description>MasterMind_tiki100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="215296">
+				<rom name="MasterMind_tiki100.dsk" size="215296" crc="8c95d363" sha1="3260da5f6232aa12fe9401648dd064736809c21d"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -47,11 +47,7 @@ public:
 		m_igs017_igs031(*this, "igs017_igs031"),
 		m_screen(*this, "screen"),
 		m_oki(*this, "oki"),
-		m_portb(*this, "PORTB"),
-		m_portc(*this, "PORTC"),
-		m_dsw1(*this, "DSW1"),
-		m_dsw2(*this, "DSW2"),
-		m_dsw3(*this, "DSW3")
+		m_dsw(*this, "DSW%u", 1U)
 	{ }
 
 	void igs_mahjong(machine_config &config);
@@ -90,11 +86,7 @@ private:
 	required_device<igs017_igs031_device> m_igs017_igs031;
 	required_device<screen_device> m_screen;
 	required_device<okim6295_device> m_oki;
-	required_ioport m_portb;
-	required_ioport m_portc;
-	required_ioport m_dsw1;
-	required_ioport m_dsw2;
-	required_ioport m_dsw3;
+	required_ioport_array<3> m_dsw;
 
 	u32 unk_r();
 	u32 unk2_r();
@@ -104,8 +96,6 @@ private:
 	void dsw_io_select_w(u32 data);
 
 	u8 ppi_porta_r();
-	u8 ppi_portb_r();
-	u8 ppi_portc_r();
 
 	TIMER_DEVICE_CALLBACK_MEMBER(interrupt);
 
@@ -123,7 +113,7 @@ void igs_m027_state::video_start()
 
 void igs_m027_state::machine_start()
 {
-	m_dsw_io_select = 0;
+	m_dsw_io_select = 7;
 	m_unk2_write_count = 0;
 
 	save_item(NAME(m_dsw_io_select));
@@ -153,7 +143,7 @@ void igs_m027_state::igs_mahjong_map(address_map &map)
 	map(0x4000000c, 0x4000000f).r(FUNC(igs_m027_state::unk2_r));
 	map(0x40000018, 0x4000001b).w(FUNC(igs_m027_state::dsw_io_select_w));
 
-	map(0x70000200, 0x70000203).ram();     //??????????????
+	map(0x70000200, 0x70000203).ram(); // ??????????????
 	map(0x50000000, 0x500003ff).nopw(); // uploads XOR table to external ROM here
 	map(0xf0000000, 0xf000000f).nopw(); // magic registers
 }
@@ -165,7 +155,6 @@ void igs_m027_state::igs_mahjong_map(address_map &map)
 ***************************************************************************/
 
 static INPUT_PORTS_START( base )
-
 	PORT_START("DSW1")
 	PORT_DIPUNKNOWN_DIPLOC( 0x01, 0x01, "SW1:1" )
 	PORT_DIPUNKNOWN_DIPLOC( 0x02, 0x02, "SW1:2" )
@@ -281,7 +270,6 @@ static INPUT_PORTS_START( jking02 )
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_BUTTON1 ) // maybe bet?
 
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_START1 ) // maybe start?
-
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( qlgs )
@@ -291,7 +279,6 @@ static INPUT_PORTS_START( qlgs )
 	PORT_DIPNAME( 0x04, 0x00, "Link Mode" )
 	PORT_DIPSETTING(    0x04, "Linked" )
 	PORT_DIPSETTING(    0x00, "Standalone" )
-
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( amazonia )
@@ -379,22 +366,14 @@ TIMER_DEVICE_CALLBACK_MEMBER(igs_m027_state::interrupt)
 
 u8 igs_m027_state::ppi_porta_r()
 {
-	logerror("%s: ppi_porta_r\n", machine().describe_context());
-	return 0xff;
-}
+	u8 data = 0xff;
 
-u8 igs_m027_state::ppi_portb_r()
-{
-	logerror("%s: ppi_portb_r\n", machine().describe_context());
-	return m_portb->read();
-}
+	for (int i = 0; i < 3; i++)
+		if (!BIT(m_dsw_io_select, i))
+			data &= m_dsw[i]->read();
 
-u8 igs_m027_state::ppi_portc_r()
-{
-	logerror("%s: ppi_portc_r\n", machine().describe_context());
-	return m_portc->read();
+	return data;
 }
-
 
 void igs_m027_state::dsw_io_select_w(u32 data)
 {
@@ -459,8 +438,8 @@ void igs_m027_state::igs_mahjong(machine_config &config)
 
 	I8255A(config, m_ppi);
 	m_ppi->in_pa_callback().set(FUNC(igs_m027_state::ppi_porta_r));
-	m_ppi->in_pb_callback().set(FUNC(igs_m027_state::ppi_portb_r));
-	m_ppi->in_pc_callback().set(FUNC(igs_m027_state::ppi_portc_r));
+	m_ppi->in_pb_callback().set_ioport("PORTB");
+	m_ppi->in_pc_callback().set_ioport("PORTC");
 
 
 	IGS017_IGS031(config, m_igs017_igs031, 0);
