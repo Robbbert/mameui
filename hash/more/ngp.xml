@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 81 -->
+<!-- Number of items in this list = 87 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -48,7 +48,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="(demo)Flight of Ares (2005)(Soldan, Jeffrey)(PD)[a].bin" size="32768" crc="4bc8d1b8" sha1="9ef3e63e3a107dbd6beaa1934113ce4b2acae1d5"/>
+				<rom name="(demo)Flight of Ares (2005)(Soldan, Jeffrey)(PD)[a].ngc" size="32768" crc="4bc8d1b8" sha1="9ef3e63e3a107dbd6beaa1934113ce4b2acae1d5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -162,6 +162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp1b82899da5084">
+		<description>Cool Cool Jam (Japan) [T-En by WyndCrosser v0.01] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Cool Cool Jam (Japan) [T-En by WyndCrosser v0.01] [i].ngc" size="2097152" crc="c9c631ca" sha1="1b82899da5084b31d0df19c740fc5e08bd193176"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpa77237078fdfb">
 		<description>CPU Test by Judge_ (PD)</description>
 		<year>????</year>
@@ -199,6 +209,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Dark Arms [Prototype].ngc" size="2097152" crc="1bab21a4" sha1="2909cf69b42474547726b3e30f1a22ae17f76773"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp92a6efa90e02f">
+		<description>Densetsu no Ogre Battle Gaiden - Zenobia no Ouji (Japan) [T-En by FFaddic v1.0] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Densetsu no Ogre Battle Gaiden - Zenobia no Ouji (Japan) [T-En by FFaddic v1.0] [i].ngc" size="2097152" crc="165fe891" sha1="92a6efa90e02f3f13d0eb946db93bd338f284846"/>
 			</dataarea>
 		</part>
 	</software>
@@ -259,6 +279,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Juno First (PD)(no sound).ngc" size="32768" crc="3ddb25ae" sha1="ec188f3fcbbad354ab47bdb9a0a0634a88d5d52e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp9fc12489baef0">
+		<description>Kikou Seiki Unitron - Sono Tsuide. Hikari Umareru Chi Yori. (Japan) [T-En by WyndCrosser v0.38] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kikou Seiki Unitron - Sono Tsuide. Hikari Umareru Chi Yori. (Japan) [T-En by WyndCrosser v0.38] [i].ngc" size="2097152" crc="364de6b4" sha1="9fc12489baef0e4b4e68267b139276001f252336"/>
 			</dataarea>
 		</part>
 	</software>
@@ -392,6 +422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp21e07e17866f6">
+		<description>Mizuki Shigeru no Youkai Shashinkan (Japan) [T-En by WyndCrosser v0.01] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mizuki Shigeru no Youkai Shashinkan (Japan) [T-En by WyndCrosser v0.01] [i].ngc" size="2097152" crc="7fe6d50e" sha1="21e07e17866f65ed826041c667149068c1fc8d60"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp62115cb513b33">
 		<description>Mr. Do! (PD)(too fast)</description>
 		<year>????</year>
@@ -488,7 +528,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Neotris (200x)(Julien, Loic)(PD).bin" size="524288" crc="1f0db78a" sha1="5b3c02061ae4b64ab2d8e5c9f0534ac7d276674b"/>
+				<rom name="Neotris (200x)(Julien, Loic)(PD).ngc" size="524288" crc="1f0db78a" sha1="5b3c02061ae4b64ab2d8e5c9f0534ac7d276674b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -503,12 +543,12 @@
 		</part>
 	</software>
 	<software name="ngp85bf5be2cce3b">
-		<description>nigeronpa (english translation)</description>
+		<description>Nige-ron-pa (Japan) [T-En by Loc v0.9]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="nigeronpa (english translation).bin" size="2097152" crc="6672d6e6" sha1="85bf5be2cce3b5559fbb68799ac6c15539b87621"/>
+				<rom name="Nige-ron-pa (Japan) [T-En by Loc v0.9].ngc" size="2097152" crc="6672d6e6" sha1="85bf5be2cce3b5559fbb68799ac6c15539b87621"/>
 			</dataarea>
 		</part>
 	</software>
@@ -549,6 +589,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Pocket Reversi (2000)(Itsui - Success).ngc" size="524288" crc="453fa17f" sha1="30949cb7233f5e71aca6b50820c85710410f4c44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp59602e44c631a">
+		<description>pocket tennis - pocket sports series (japan, europe) (en,ja)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="pocket tennis - pocket sports series (japan, europe) (en,ja).ngp" size="524288" crc="89410850" sha1="59602e44c631a00b2db53196204a4bc22ccd7025"/>
 			</dataarea>
 		</part>
 	</software>
@@ -619,6 +669,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Rock-Man Battle and Fighters (ENG).NGC" size="2097152" crc="373e9e15" sha1="bfeede434ac1268c4bb4ae3a4ed762b6f1eb5af5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp2c93c45b5aeda">
+		<description>Rockman - Battle & Fighters (Japan) [T-En by marc_max v0.9] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Rockman - Battle & Fighters (Japan) [T-En by marc_max v0.9] [i].ngc" size="2097152" crc="65985356" sha1="2c93c45b5aeda0eba1ba66b0a56cba86e8f675b8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -703,12 +763,12 @@
 		</part>
 	</software>
 	<software name="ngp5d5c95bad71e3">
-		<description>snk vs. capcom - card fighters 2 - expand edition (english translation)(gfx issues)</description>
+		<description>SNK vs. Capcom - Card Fighters 2 - Expand Edition (Japan) [T-En by CFC2 Translation Team v20170125]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="snk vs. capcom - card fighters 2 - expand edition (english translation)(gfx issues).bin" size="2097152" crc="0cc88d96" sha1="5d5c95bad71e32cd80a9993ed46f621f2df74874"/>
+				<rom name="SNK vs. Capcom - Card Fighters 2 - Expand Edition (Japan) [T-En by CFC2 Translation Team v20170125].ngc" size="2097152" crc="0cc88d96" sha1="5d5c95bad71e32cd80a9993ed46f621f2df74874"/>
 			</dataarea>
 		</part>
 	</software>
