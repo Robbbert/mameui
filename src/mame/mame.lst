@@ -20237,7 +20237,8 @@ amazonia                        // (c) 1999
 amazonkp                        // (c) 1999
 chessc2                         // (c) 200?
 extradrw                        // (c) 200?
-fruitpar                        // (c) 200?
+fruitpar                        // (c) 1999
+fruitpara						// (c) 1999
 gonefsh2                        // (c) 200?
 jking02                         // (c) 200?
 klxyj                           // (c) 200?
@@ -28943,6 +28944,7 @@ blackbdb                        //
 dslayrr                         //
 dslayrra                        //
 hawaii                          //
+hwparty                         //
 oligam                          //
 rasce                           //
 
@@ -32451,6 +32453,9 @@ mekd4                           // 1980 Motorola Evaluation Kit
 
 @source:motorola/mekd5.cpp
 mekd5                           // 1980 Motorola Evaluation Kit
+
+@source:motorola/mex68kecb.cpp
+mex68kecb                       // (c) 1981 Motorola
 
 @source:motorola/mvme162.cpp
 mvme162                         // (c) 1993 Motorola
@@ -42043,6 +42048,11 @@ dsb46                           //
 @source:skeleton/dual68.cpp
 dual68                          //
 
+@source:skeleton/dyna_d0404.cpp
+cm2005
+cm2005a
+cm2005b
+
 @source:skeleton/e100.cpp
 e100                            //
 
@@ -42491,6 +42501,9 @@ systec                          //
 
 @source:skeleton/systel1.cpp
 systel100                       //
+
+@source:skeleton/syvg.cpp
+luckyvl
 
 @source:skeleton/tavernie.cpp
 cpu09                           //
