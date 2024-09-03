@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 9 -->
+<!-- Number of items in this list = 36 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -89,6 +89,276 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="28526">
 				<rom name="5 in 1 Tetris (1995)(Mortal Kombat).z80" size="28526" crc="996128b2" sha1="bf2753cee00482d9080df6a1953f082c74cd3235"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa29d1406c3958">
+		<description>Abu Simbel - Profanation 1987 Gremlin Graphics Software Rerelease (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36276">
+				<rom name="Abu Simbel - Profanation 1987 Gremlin Graphics Software Rerelease (2).z80" size="36276" crc="4faf0859" sha1="a29d1406c39588e44b2380881e45a07e4f8370c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs49a85843b4b92">
+		<description>Abu Simbel Profanation (1985)(Dinamic Software)(es)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36284">
+				<rom name="Abu Simbel Profanation (1985)(Dinamic Software)(es).z80" size="36284" crc="a18b280f" sha1="49a85843b4b92bd4834644200a32712e77dcc13a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs674dac2471a0d">
+		<description>Abu Simbel Profanation (1988)(Gremlin Graphics Software)[re-release]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39605">
+				<rom name="Abu Simbel Profanation (1988)(Gremlin Graphics Software)[re-release].z80" size="39605" crc="54092dfb" sha1="674dac2471a0da7ba3ffcf03560341ff122e5b5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45c49da4d6708">
+		<description>Ace of Aces 128K (1986)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="58746">
+				<rom name="Ace of Aces 128K (1986)(U.S. Gold).z80" size="58746" crc="2bfbb756" sha1="45c49da4d670885014e85c9fd43bcb3dc0d1fbcf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd66e1d43f010f">
+		<description>Addams Family, The (1991)(Ocean)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="122606">
+				<rom name="Addams Family, The (1991)(Ocean)(128k).Z80" size="122606" crc="f4d1671a" sha1="d66e1d43f010faaa31d30cdf92caf557c85afcb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs54b7e49f2fe2c">
+		<description>Adventures of Buratino, The (1993)(Copper Feet)(48k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38636">
+				<rom name="Adventures of Buratino, The (1993)(Copper Feet)(48k).z80" size="38636" crc="3a0cb189" sha1="54b7e49f2fe2cd76afe3c3077df4ac5201e9c3f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdc8cd34eef234">
+		<description>After the War (1989)(Dinamic Software)(Part 1 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37812">
+				<rom name="After the War (1989)(Dinamic Software)(Part 1 of 2)(128k).z80" size="37812" crc="9550b0f4" sha1="dc8cd34eef23453611b592bf2eacffdc2547bced"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs71a8b3e29b6cf">
+		<description>After the War (1989)(Dinamic Software)(Part 2 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37479">
+				<rom name="After the War (1989)(Dinamic Software)(Part 2 of 2)(128k).z80" size="37479" crc="8a306e01" sha1="71a8b3e29b6cf0acc6e0d6a13b19b9694f19e7bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb779eac27e2fe">
+		<description>Aknadach CZ 48K (1990)(Proxima)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40314">
+				<rom name="Aknadach CZ 48K (1990)(Proxima).z80" size="40314" crc="e221fe1b" sha1="b779eac27e2fe8957905b0878ba08f36ab3eca7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs036f9f995a8bf">
+		<description>Aknadach EN 48K (2011)(Softhouse)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40286">
+				<rom name="Aknadach EN 48K (2011)(Softhouse).z80" size="40286" crc="f369810f" sha1="036f9f995a8bf689fb4c02cc2f903d4cf9e66ae1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc97b6fd32acc0">
+		<description>Alien Astro Frenzy (2021)(Vintage Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="27028">
+				<rom name="Alien Astro Frenzy (2021)(Vintage Software).z80" size="27028" crc="4c32aff8" sha1="c97b6fd32acc0f519cf63810e6926624a82367aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs57ecf9487f3af">
+		<description>ALIEN8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38319">
+				<rom name="ALIEN8.Z80" size="38319" crc="2c6b4ca4" sha1="57ecf9487f3af49a60daeea5851174002797a5aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs228cdf8e43137">
+		<description>All Or Nothing</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="32746">
+				<rom name="All Or Nothing.z80" size="32746" crc="65eecb53" sha1="228cdf8e43137549830ca59ca01832df08a4a325"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd5d04892d3218">
+		<description>American Tag-Team Wrestling 48K (1992)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38767">
+				<rom name="American Tag-Team Wrestling 48K (1992)(Zeppelin Games).z80" size="38767" crc="afb4c0cc" sha1="d5d04892d3218e029ce6aed460336b261f7fd8a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe36e85eed0d1">
+		<description>Angel Nieto Pole 500 (1990)(Opera Soft)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37971">
+				<rom name="Angel Nieto Pole 500 (1990)(Opera Soft)(128k).z80" size="37971" crc="cbc4919d" sha1="be36e85eed0d10805b0bb8eb3a7946cc966110a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc51d770c0139e">
+		<description>APB - All Points Bulletin (1989)(Domark)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="80999">
+				<rom name="APB - All Points Bulletin (1989)(Domark)[128K].z80" size="80999" crc="81a2cb39" sha1="c51d770c0139e6731d7c179114eb770c9248bdee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd0b81e8cfd53d">
+		<description>APB - All Points Bulletin (1990)(Domark)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="77181">
+				<rom name="APB - All Points Bulletin (1990)(Domark)[128K].z80" size="77181" crc="6fb0235f" sha1="d0b81e8cfd53de8b651d1b3f31843c36343ed42a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e9adbf278b26">
+		<description>Army Moves (1986)(Imagine Software)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="63797">
+				<rom name="Army Moves (1986)(Imagine Software)(128k).z80" size="63797" crc="c5552b91" sha1="3e9adbf278b263dd780c2c4448a98205106be0ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf055c14d8c627">
+		<description>Aspar GP Master (1988)(Dinamic Software)(es)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38691">
+				<rom name="Aspar GP Master (1988)(Dinamic Software)(es)(128k).z80" size="38691" crc="03627882" sha1="f055c14d8c62795f0544cb3652f87ce4edca0614"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d659804cec78">
+		<description>Astro Phobos v1.3 (2021)(goliat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="131151">
+				<rom name="Astro Phobos v1.3 (2021)(goliat).z80" size="131151" crc="1acd61a3" sha1="5d659804cec788b227a738392941274b42e6d4a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs787a593dfa73c">
+		<description>Astro_Marine_Corps_1989_Dinamic_Software_es_Part_1_of_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34079">
+				<rom name="Astro_Marine_Corps_1989_Dinamic_Software_es_Part_1_of_2.z80" size="34079" crc="0f507e26" sha1="787a593dfa73c5dca9f812371ca83fc936d248fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs978591addc4dc">
+		<description>Astro_Marine_Corps_1989_Dinamic_Software_es_Part_2_of_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="49182">
+				<rom name="Astro_Marine_Corps_1989_Dinamic_Software_es_Part_2_of_2.z80" size="49182" crc="eacc1b5d" sha1="978591addc4dc3c422de8fc6a66e6ad4a90c24c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef4d981d753f1">
+		<description>ATF 128K (1988)(Digital Integration)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43769">
+				<rom name="ATF 128K (1988)(Digital Integration).z80" size="43769" crc="23f0731e" sha1="ef4d981d753f18ec93045370f57d418ee9de4e32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa66aa61d22b4d">
+		<description>ATICATAC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35220">
+				<rom name="ATICATAC.Z80" size="35220" crc="56520bdf" sha1="a66aa61d22b4d77ad3e73413fce41fceefe83f2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs34643c25570cb">
+		<description>Atomic Robo-Kid (demo) (1991)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44259">
+				<rom name="Atomic Robo-Kid (demo) (1991)(Activision).z80" size="44259" crc="2f0c3726" sha1="34643c25570cb921ea9da6bdc604e5497d575ba3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde0944b012e19">
+		<description>Avalon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="33717">
+				<rom name="Avalon.z80" size="33717" crc="ab1d4f7e" sha1="de0944b012e19145a743b075e0454a53ab4322cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb48dabf14194c">
+		<description>Avenger 128K (1986)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="45683">
+				<rom name="Avenger 128K (1986)(Gremlin Graphics).z80" size="45683" crc="8ac4d620" sha1="b48dabf14194c1ab1ab7bb7bdba03e7f462fed69"/>
 			</dataarea>
 		</part>
 	</software>

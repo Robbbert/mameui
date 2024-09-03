@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 107 -->
+<!-- Number of items in this list = 209 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -1069,6 +1069,1026 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="29113">
 				<rom name="99y (1986)(UK Lead).tap" size="29113" crc="6d0cfd7a" sha1="51cc8adac630ded14eec3b50e439d8fa28fddd53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs188d19d21fcda">
+		<description>A.T.R.A.M. (1984)(Websters Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48226">
+				<rom name="A.T.R.A.M. (1984)(Websters Software).tap" size="48226" crc="49080632" sha1="188d19d21fcdaec80d1dea311cc1cb1f7cae88d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc7205edfd4c24">
+		<description>Aaargh! (1989)(Binary Design)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="96865">
+				<rom name="Aaargh! (1989)(Binary Design).tap" size="96865" crc="11417dd7" sha1="c7205edfd4c24a3108ad625a05a028bbee251fc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsafc00323a1fa2">
+		<description>Aaargh! (1989)(Melbourne House)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="107648">
+				<rom name="Aaargh! (1989)(Melbourne House)[a].TAP" size="107648" crc="cd594684" sha1="afc00323a1fa2568376065b60acd4ccf4975a57c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9891c2924bc75">
+		<description>Abadia del Crimen, La 128K (1988)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="99182">
+				<rom name="Abadia del Crimen, La 128K (1988)(Opera Soft).tap" size="99182" crc="7bd1ab11" sha1="9891c2924bc7530959bfeb224d7b5dd8b36bb9a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50530c1a4b044">
+		<description>Abakus (19xx)(Anwi Pjp Tls)(Ru)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22698">
+				<rom name="Abakus (19xx)(Anwi Pjp Tls)(Ru)[a].tap" size="22698" crc="71162923" sha1="50530c1a4b04434cf9012a19672c5190e07a49d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf0d3c44b41657">
+		<description>Abbaye des Morts</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35533">
+				<rom name="Abbaye des Morts.TZX" size="35533" crc="2bdb3db6" sha1="f0d3c44b41657d46944f3ea1a86d8f35c231c98a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs18cd2f72a5c31">
+		<description>Abracadabra (1988)(Odisea Software)(Sp)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48416">
+				<rom name="Abracadabra (1988)(Odisea Software)(Sp)[Part 1 of 2].tap" size="48416" crc="4e3b010e" sha1="18cd2f72a5c3164800607e36e6974dff4d08fe0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbc75d70417553">
+		<description>Abracadabra (1988)(Odisea Software)(Sp)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48416">
+				<rom name="Abracadabra (1988)(Odisea Software)(Sp)[Part 2 of 2].tap" size="48416" crc="3e70e8e2" sha1="bc75d7041755307ca021861aa34d636cedb8777c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba6d491a1ce8b">
+		<description>Abracadabra - Parte 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48474">
+				<rom name="Abracadabra - Parte 1.tzx" size="48474" crc="1f424c76" sha1="ba6d491a1ce8b0b71cb7d18a4e5efbac8fda8ce3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe7173f26d7d7">
+		<description>Abracadabra - Parte 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48474">
+				<rom name="Abracadabra - Parte 2.tzx" size="48474" crc="d5645027" sha1="fe7173f26d7d767271e4362a89fb35beec644a7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e083c8bc5b6a">
+		<description>Abrasco Golf (1983)(Abrasco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19116">
+				<rom name="Abrasco Golf (1983)(Abrasco).tap" size="19116" crc="7c54905f" sha1="3e083c8bc5b6a083a81b949078da6497888048f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdb7d721507955">
+		<description>Abrasco Golf (1983)(Abrasco)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19116">
+				<rom name="Abrasco Golf (1983)(Abrasco)[a].tap" size="19116" crc="7907f924" sha1="db7d72150795503e9624f1f00894ef6dc400ab30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc86449a2672d">
+		<description>Abu Simbel Profanation (1987)(Gremlin Graphics Software)[a2][re-release]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46504">
+				<rom name="Abu Simbel Profanation (1987)(Gremlin Graphics Software)[a2][re-release].tap" size="46504" crc="4e038e7d" sha1="cc86449a2672dcaa0826611cb6e0542e8625f649"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7becfa2cf66c6">
+		<description>Abu Simbel Profanation (1987)(Gremlin Graphics Software)[re-release]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46362">
+				<rom name="Abu Simbel Profanation (1987)(Gremlin Graphics Software)[re-release].tap" size="46362" crc="7849893d" sha1="7becfa2cf66c666953542748f8ef64aa83b1c379"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs21e1215fe4cad">
+		<description>Abu Simbel Profanation (1988)(Gremlin Graphics Software)[rerelease]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46860">
+				<rom name="Abu Simbel Profanation (1988)(Gremlin Graphics Software)[rerelease].tap" size="46860" crc="147d9466" sha1="21e1215fe4cad7e26de940c61776bb0ba3e91fd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9cd0a8789381e">
+		<description>Abu Simbel Profanation (1988)(Gremlin Graphics Software)[t Double Service][re-release]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43188">
+				<rom name="Abu Simbel Profanation (1988)(Gremlin Graphics Software)[t Double Service][re-release].tap" size="43188" crc="ec499cbc" sha1="9cd0a8789381e9a7710c3f108e120a16cb2fcb86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01a51918ee38b">
+		<description>Abu Simbel Profanation (1989)(Gremlin Graphics Software)[a][re-release]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46167">
+				<rom name="Abu Simbel Profanation (1989)(Gremlin Graphics Software)[a][re-release].tap" size="46167" crc="b080d871" sha1="01a51918ee38bd41e21f41df91a8da51b09d9d93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5fccae9afc7b">
+		<description>Abu Simbel Profanation (1989)(Gremlin Graphics Software)[re-release]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47312">
+				<rom name="Abu Simbel Profanation (1989)(Gremlin Graphics Software)[re-release].tap" size="47312" crc="0635946a" sha1="c5fccae9afc7beff567782f09da67ce8d8e741c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs837a36a988815">
+		<description>Abwehr (1983)(Werner Spahl)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3938">
+				<rom name="Abwehr (1983)(Werner Spahl)(De).tap" size="3938" crc="bef7f137" sha1="837a36a9888156632ee03bacda3f908b094e4e74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56d2c680642eb">
+		<description>Abyss (1984)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22565">
+				<rom name="Abyss (1984)(CCS).tap" size="22565" crc="8cf49712" sha1="56d2c680642eb9042dccd9d7382c4f5ff865feac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6842d2203a07a">
+		<description>AB_side</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3841">
+				<rom name="AB_side.tap" size="3841" crc="05d81ddb" sha1="6842d2203a07a59225c20996bbefd9db2153fbd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde3b9372e2b4b">
+		<description>Academial Patience (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10169">
+				<rom name="Academial Patience (19xx)(-).tap" size="10169" crc="ea90ba81" sha1="de3b9372e2b4b8241829c3d1b21fbdb1b8484573"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7630c8190582c">
+		<description>Academy (1986)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48967">
+				<rom name="Academy (1986)(CRL Group).tap" size="48967" crc="fe7218ca" sha1="7630c8190582c6fed2771ec226b643142082a439"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a808117d1a24">
+		<description>ACE (1986)(Cascade Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35703">
+				<rom name="ACE (1986)(Cascade Games Ltd).tap" size="35703" crc="d8a583d6" sha1="0a808117d1a24234e53419e9d326b14176ddb027"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0bef909799dd9">
+		<description>Ace 2 - The Ultimate Head To Head Conflict (1987)(Cascade Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52048">
+				<rom name="Ace 2 - The Ultimate Head To Head Conflict (1987)(Cascade Games).tap" size="52048" crc="4f850b86" sha1="0bef909799dd9b9a017600084389262e62d2e141"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs895f330080abe">
+		<description>Ace 2 - The Ultimate Head To Head Conflict (1987)(Cascade Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46724">
+				<rom name="Ace 2 - The Ultimate Head To Head Conflict (1987)(Cascade Games)[a].tap" size="46724" crc="12394870" sha1="895f330080abe409b7e614d72257b8e24145430a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb673e20c4fcde">
+		<description>Ace 2088 (1988)(Cacade Games)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="131700">
+				<rom name="Ace 2088 (1988)(Cacade Games)(128k).tap" size="131700" crc="6403a717" sha1="b673e20c4fcdef13af16938debeae74b74bcf8a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse119280ec62b1">
+		<description>ACE 2088 128K (1989)(Cascade Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55874">
+				<rom name="ACE 2088 128K (1989)(Cascade Games).tap" size="55874" crc="4ebb46a9" sha1="e119280ec62b14f4e341e94a78df149cc233b5d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa009aa0209e36">
+		<description>Ace In The Hole (1983)(Add-On Electronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24597">
+				<rom name="Ace In The Hole (1983)(Add-On Electronics).tap" size="24597" crc="0b5cc0d3" sha1="a009aa0209e36f1efff16e2a3975b9abc28c20dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs946b8c47b39cd">
+		<description>Ace Low (1983)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24654">
+				<rom name="Ace Low (1983)(CCS).tap" size="24654" crc="ef1de494" sha1="946b8c47b39cd11115af8e1ebc636a70927128a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5e066eebfa81">
+		<description>Ace Of Aces (1986)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="89410">
+				<rom name="Ace Of Aces (1986)(US Gold).tap" size="89410" crc="d8b0115b" sha1="a5e066eebfa81d9aa06aabba93f7bab800d142a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48a29de1f2f2c">
+		<description>Ack Ack Attack (1984)(ZX Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4159">
+				<rom name="Ack Ack Attack (1984)(ZX Computing).tap" size="4159" crc="46854f25" sha1="48a29de1f2f2c06f07228f698cf57f383cb61370"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs63cbb64901249">
+		<description>Acme Glass Cube (1982)(Iolo Davidson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7678">
+				<rom name="Acme Glass Cube (1982)(Iolo Davidson).tap" size="7678" crc="4df4956c" sha1="63cbb64901249b3b5e726804345c11c4163c83db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs77f76ceab7cc4">
+		<description>Acolyte (2009)(Video Images)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54512">
+				<rom name="Acolyte (2009)(Video Images).tap" size="54512" crc="94cd2150" sha1="77f76ceab7cc48df462750c015b60043a8162b53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe3c03ffffb00">
+		<description>Acolyte 2 - The Quest for Celeste (2021)(Deanysoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="101851">
+				<rom name="Acolyte 2 - The Quest for Celeste (2021)(Deanysoft).tap" size="101851" crc="c120c549" sha1="be3c03ffffb004bfbaa0893cc5dbf2697a7c74c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5a228a7e0a1e6">
+		<description>Action Biker - With Clumsy Colin (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63060">
+				<rom name="Action Biker - With Clumsy Colin (1985)(Mastertronic).tap" size="63060" crc="29802b8c" sha1="5a228a7e0a1e6677f2a50de70abb58bdb16fe0b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc4ed9bc39d6cc">
+		<description>Action Biker - With Clumsy Colin (1985)(Mastertronic)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63213">
+				<rom name="Action Biker - With Clumsy Colin (1985)(Mastertronic)[a].tap" size="63213" crc="2ac39a1e" sha1="c4ed9bc39d6ccd21fd8943b349b8a7775fb511df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs238d3ed8a8d25">
+		<description>Action Farce II - Special Crash Edition (1989)(Crash)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48013">
+				<rom name="Action Farce II - Special Crash Edition (1989)(Crash).tap" size="48013" crc="e1f014e8" sha1="238d3ed8a8d25e0403299e94d4daea71beaa6510"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse871a282a1b4e">
+		<description>Action Fighter (1989)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48779">
+				<rom name="Action Fighter (1989)(Firebird).tap" size="48779" crc="996930df" sha1="e871a282a1b4e7fab6a67a677141af212b69d4ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb54b6d7677194">
+		<description>Action Fighter (1989)(Firebird)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41472">
+				<rom name="Action Fighter (1989)(Firebird)[a2].tap" size="41472" crc="272ecf5c" sha1="b54b6d76771941f208a8d7baa37b72461eec73cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf3410b5193343">
+		<description>Action Force (1987)(Virgin Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23725">
+				<rom name="Action Force (1987)(Virgin Mastertronic).tap" size="23725" crc="09212ed1" sha1="f3410b5193343a5d4a8fbd145063e9a02ea8b9f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8eef1d00afa84">
+		<description>Action Force (1987)(Virgin Mastertronic)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47303">
+				<rom name="Action Force (1987)(Virgin Mastertronic)[a].tap" size="47303" crc="3ed87428" sha1="8eef1d00afa84c9613110369f3931c2cf04d30d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb9c101c3a1b8b">
+		<description>Action Force II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46813">
+				<rom name="Action Force II.tap" size="46813" crc="3d4139b7" sha1="b9c101c3a1b8b298e013f5c2057a46b25fc91d8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e12411dfaee3">
+		<description>Action Reflex (1986)(Mirrorsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45761">
+				<rom name="Action Reflex (1986)(Mirrorsoft).tap" size="45761" crc="d0e8d7c5" sha1="7e12411dfaee39dc0e4e5dea979c8c23b6474222"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5d5419fcb28f">
+		<description>Action Reflex</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41597">
+				<rom name="Action Reflex.tap" size="41597" crc="aada6209" sha1="a5d5419fcb28f609e0075e1aa8f12f656399ed4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b082e6e4a007">
+		<description>Ad Astra (1984)(Gargoyle Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45693">
+				<rom name="Ad Astra (1984)(Gargoyle Games).tap" size="45693" crc="057e9bb8" sha1="7b082e6e4a007a0cb52ff8169addb0f6f9b3e8bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs853dd22bbe3c6">
+		<description>Ad Astra (1984)(Gargoyle Games)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45791">
+				<rom name="Ad Astra (1984)(Gargoyle Games)[a2].tap" size="45791" crc="b4ff89d7" sha1="853dd22bbe3c6bdfbaa391aa14041067074718c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4340e7f30bb7">
+		<description>Ad Astra (1984)(Gargoyle Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45791">
+				<rom name="Ad Astra (1984)(Gargoyle Games)[a].tap" size="45791" crc="0971732c" sha1="d4340e7f30bb71953559ad822ec4c313b3890ab2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd5682041c304d">
+		<description>Ad Lunam Plus 128K EN (2020)(Grussu, Alessandro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83541">
+				<rom name="Ad Lunam Plus 128K EN (2020)(Grussu, Alessandro).tap" size="83541" crc="41988944" sha1="d5682041c304da6aeb22201bd9b74387c1254815"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs88c4beb2b782b">
+		<description>Ad Lunam Plus 128K ES (2020)(Grussu, Alessandro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83712">
+				<rom name="Ad Lunam Plus 128K ES (2020)(Grussu, Alessandro).tap" size="83712" crc="1d812053" sha1="88c4beb2b782bdec577482d1aef2803cfafb5732"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67e1820b91371">
+		<description>Ad Lunam Plus 128K IT (2020)(Grussu, Alessandro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83768">
+				<rom name="Ad Lunam Plus 128K IT (2020)(Grussu, Alessandro).tap" size="83768" crc="c27e30a2" sha1="67e1820b913715592c35fc0f57bec7b487212bb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdc03713a62e77">
+		<description>Add Astra 128K (2023)(Joker, Arise Design)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="578887">
+				<rom name="Add Astra 128K (2023)(Joker, Arise Design).tap" size="578887" crc="4f2b48f7" sha1="dc03713a62e77d9a7b1037bcf281604c4ee0a452"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3668823e2e014">
+		<description>Addams Family, The 128K (1991)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="131557">
+				<rom name="Addams Family, The 128K (1991)(Ocean).tap" size="131557" crc="10ca8414" sha1="3668823e2e0140e4e73a143b551332f398375699"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1ea790173b3c3">
+		<description>Addams Family, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="131573">
+				<rom name="Addams Family, The.tzx" size="131573" crc="9ae77015" sha1="1ea790173b3c3a2fe8c3afc26e749982aab42a35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsceca5072eb434">
+		<description>Address Manager (1983)(Oxford Computer Publications)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7746">
+				<rom name="Address Manager (1983)(Oxford Computer Publications).tap" size="7746" crc="51f2e698" sha1="ceca5072eb434041f972c8c1e99e37fa260600ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0e2218c924bd5">
+		<description>Adidas Championship Football (demo) (1990)(Ocean Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49513">
+				<rom name="Adidas Championship Football (demo) (1990)(Ocean Software Ltd)(128K).tap" size="49513" crc="2b8e7ffa" sha1="0e2218c924bd5919e663d46422faf54997ebb83e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44595f0533433">
+		<description>Adidas Championship Football 128K (1990)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="106547">
+				<rom name="Adidas Championship Football 128K (1990)(Ocean).tap" size="106547" crc="2b13ba5a" sha1="44595f0533433a608e54041277f4e0bb055280fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs377a22b1ee050">
+		<description>Adidas Championship Football</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="103207">
+				<rom name="Adidas Championship Football.tap" size="103207" crc="fed77f4e" sha1="377a22b1ee050822a32e5086d8be177b381167de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1e602f4c9c4ad">
+		<description>Adidas Championship Tie Break (1990)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45500">
+				<rom name="Adidas Championship Tie Break (1990)(Ocean Software).tap" size="45500" crc="466d910b" sha1="1e602f4c9c4add9962d583e23a44ceba9b7b3ffe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9c7d113e697a6">
+		<description>Advanced Lawnmower Simulator (1988)(Gardensoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4717">
+				<rom name="Advanced Lawnmower Simulator (1988)(Gardensoft).tap" size="4717" crc="ed1b80ff" sha1="9c7d113e697a6393290e7881a8b3351155615a6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff24f8ad20609">
+		<description>Advanced Lawnmower Simulator II 128K (1990)(J. Aron)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7424">
+				<rom name="Advanced Lawnmower Simulator II 128K (1990)(J. Aron).tap" size="7424" crc="20f80b05" sha1="ff24f8ad206091eb4ff1a2a34ef032d40983d8e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1269714af566a">
+		<description>Advanced Milk Float Sim, The (1998)(Stuart Brady)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16042">
+				<rom name="Advanced Milk Float Sim, The (1998)(Stuart Brady).tap" size="16042" crc="9b0ecbf3" sha1="1269714af566a42b21b8b05602f5172535f90842"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1878f5975cb6c">
+		<description>Advanced Patience (1994)(Tiger's Claw)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21089">
+				<rom name="Advanced Patience (1994)(Tiger's Claw).tap" size="21089" crc="45dd67d0" sha1="1878f5975cb6c263296e474de5014d872efecab7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99ffd9be068a0">
+		<description>Advanced Pinball Simulator (1990)(Codemasters)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51760">
+				<rom name="Advanced Pinball Simulator (1990)(Codemasters)_1.tap" size="51760" crc="fca7d79b" sha1="99ffd9be068a096417c1d027693922d59469483e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsad47a7460f683">
+		<description>Advanced Pinball Simulator</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51788">
+				<rom name="Advanced Pinball Simulator.tzx" size="51788" crc="f9c67412" sha1="ad47a7460f683405b5833e2147185473959f54a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f8494490eb30">
+		<description>Advanced Soccer Simulator 48K (1989)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44780">
+				<rom name="Advanced Soccer Simulator 48K (1989)(Mastertronic).tap" size="44780" crc="4a1eaa7b" sha1="8f8494490eb30b56e4aab3d64ddc7d15d54a3194"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs08e5e26538f4e">
+		<description>Advent (1985)(Quantum Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35174">
+				<rom name="Advent (1985)(Quantum Soft).tap" size="35174" crc="6f5d4c56" sha1="08e5e26538f4e5c45857f806467c9f0484cf7082"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc1783ce59ba8a">
+		<description>Adventure (1982)(Abersoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40458">
+				<rom name="Adventure (1982)(Abersoft).tap" size="40458" crc="005d3307" sha1="c1783ce59ba8a1c4e57e1011ea59fec4f4c1ea2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs37b758a658fe1">
+		<description>Adventure 1 (1983)(D.J. Moody)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="114704">
+				<rom name="Adventure 1 (1983)(D.J. Moody).tap" size="114704" crc="5f1ea39d" sha1="37b758a658fe1874710d3706fe3a6fa8da5746cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs39217cf091771">
+		<description>Adventure 1 - Inka Tempel (1983)(F+K Ware)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14725">
+				<rom name="Adventure 1 - Inka Tempel (1983)(F+K Ware)(De).tap" size="14725" crc="26a72b98" sha1="39217cf091771699aaab87d793d36e85c6608346"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4d7f3fc5bb2c6">
+		<description>Adventure 2 - Politico (1983)(D.J. Moody)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45132">
+				<rom name="Adventure 2 - Politico (1983)(D.J. Moody)(128k).tap" size="45132" crc="486ebc89" sha1="4d7f3fc5bb2c66b9a56cd1bc6cc3b1ac01012104"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf4c0c3fe6ba4e">
+		<description>Adventure 200 (1982)(C.J. Coombs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8561">
+				<rom name="Adventure 200 (1982)(C.J. Coombs).tap" size="8561" crc="9a10c684" sha1="f4c0c3fe6ba4ece1c1374b9c53eee4ed68dcfef5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb570166ee5521">
+		<description>Adventure 3 - The Satan Crystals (1983)(D.J. Moody)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="74812">
+				<rom name="Adventure 3 - The Satan Crystals (1983)(D.J. Moody)(128k).tap" size="74812" crc="83c783b0" sha1="b570166ee552112e0271d2702f264b39d45369ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7677813eaf087">
+		<description>Adventure A - The Planet Of Death (1982)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9135">
+				<rom name="Adventure A - The Planet Of Death (1982)(Artic Computing).tap" size="9135" crc="be094e26" sha1="7677813eaf0878729d94ff669e85fc9994b34cb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs995237124e51f">
+		<description>Adventure A - The Planet Of Death (1982)(Artic Computing)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9145">
+				<rom name="Adventure A - The Planet Of Death (1982)(Artic Computing)[a].tap" size="9145" crc="5a3543bf" sha1="995237124e51f919044c7eb473b96c22540fdf3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6aab7848066da">
+		<description>Adventure B - Inca Curse (1982)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12070">
+				<rom name="Adventure B - Inca Curse (1982)(Artic Computing).tap" size="12070" crc="b42a5f4e" sha1="6aab7848066da9bc0e0c879caa91947574e9b18b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4332aad10dbab">
+		<description>Adventure C - The Ship Of Doom (1982)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12863">
+				<rom name="Adventure C - The Ship Of Doom (1982)(Artic Computing).tap" size="12863" crc="81d6e97d" sha1="4332aad10dbabc81b6155ded67d9d8028a162bcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e2cd0a34fc0b">
+		<description>Adventure C - The Ship Of Doom (1982)(Artic Computing)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12708">
+				<rom name="Adventure C - The Ship Of Doom (1982)(Artic Computing)[a2].tap" size="12708" crc="c477f9c6" sha1="8e2cd0a34fc0bd409a912073beca3d0575bb663a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7ab180fbbee8d">
+		<description>Adventure C - The Ship Of Doom (1982)(Artic Computing)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20855">
+				<rom name="Adventure C - The Ship Of Doom (1982)(Artic Computing)[a].tap" size="20855" crc="468c52bd" sha1="7ab180fbbee8d8d95e91267a581d4c263306e2a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscece65d7f460c">
+		<description>Adventure D - Espionage Island (1982)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17089">
+				<rom name="Adventure D - Espionage Island (1982)(Artic Computing).tap" size="17089" crc="a114bc1f" sha1="cece65d7f460c598dc5c937b60ae02a1fa127148"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e254d25f1460">
+		<description>Adventure Number 01 - Adventureland (1985)(Adventure International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47732">
+				<rom name="Adventure Number 01 - Adventureland (1985)(Adventure International).tap" size="47732" crc="fa4788b2" sha1="8e254d25f14600f5de45446e8ca1ee44e74983b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs58d9f90699692">
+		<description>Adventure Number 01 - Adventureland (1985)(Adventure International)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Adventure Number 01 - Adventureland (1985)(Adventure International)[a].tap" size="49343" crc="d0f7cfc3" sha1="58d9f906996924ab466745e82373a028ac893518"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs248843b0228b2">
+		<description>Adventure Number 03 - Secret Mission (1984)(Adventure International)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Adventure Number 03 - Secret Mission (1984)(Adventure International)[a].tap" size="49343" crc="7a2f5aa8" sha1="248843b0228b2e9c1cbb243afa656a97314dfafd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs236a196a6767c">
+		<description>Adventure Number 13 - Sorcerer Of Claymorgue Castle (1985)(Adventure International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47783">
+				<rom name="Adventure Number 13 - Sorcerer Of Claymorgue Castle (1985)(Adventure International).tap" size="47783" crc="9eaf6bdf" sha1="236a196a6767cd715040377079b5aee3080b94dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfb94e9f09ca52">
+		<description>Adventure Number 13 - Sorcerer Of Claymorgue Castle (1985)(Adventure International)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40809">
+				<rom name="Adventure Number 13 - Sorcerer Of Claymorgue Castle (1985)(Adventure International)[a].tap" size="40809" crc="2bd7f8c4" sha1="fb94e9f09ca528607d878909e99b6e0ccc83154d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5e7d85a9818f5">
+		<description>Adventure Quest (1983)(Level 9 Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25332">
+				<rom name="Adventure Quest (1983)(Level 9 Computing).tap" size="25332" crc="b4547361" sha1="5e7d85a9818f57f90cc89cd9ae618215812f3ef5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs08534dc471589">
+		<description>Adventurer (1991)(Proxima - T & T)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35009">
+				<rom name="Adventurer (1991)(Proxima - T & T).tap" size="35009" crc="6c127d57" sha1="08534dc47158943763009af4dbd307b612c70d81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5427151632cad">
+		<description>Adventurer's Nightmare (19xx)(Roland G. Huelsmann)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36503">
+				<rom name="Adventurer's Nightmare (19xx)(Roland G. Huelsmann)(De).tap" size="36503" crc="f71059b2" sha1="5427151632cad29042ea93e2d06fd39924f3d92b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse0f858daedb2a">
+		<description>ADVENTURES Continue - Side A 128K (2021)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47271">
+				<rom name="ADVENTURES Continue - Side A 128K (2021)(PC NONO Games).tap" size="47271" crc="bbe196d4" sha1="e0f858daedb2a5d93db5814d7d3580ba188a6ec3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8c0ee188f07ee">
+		<description>ADVENTURES Continue - Side B 128K (2021)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47965">
+				<rom name="ADVENTURES Continue - Side B 128K (2021)(PC NONO Games).tap" size="47965" crc="db75b5f9" sha1="8c0ee188f07eeff3054e79ea094caeb42918f5d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7410f2e63a4b7">
+		<description>Adventures Of Barsak The Dwarf, The - The Early Days (1984)(Gilsoft International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33496">
+				<rom name="Adventures Of Barsak The Dwarf, The - The Early Days (1984)(Gilsoft International).tap" size="33496" crc="ddd588b6" sha1="7410f2e63a4b7349c37c9cc7ac28dfe99e1ad7d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse2cbee94049c9">
+		<description>Adventures Of Brian The Bold, The (1985)(Central Solutions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44511">
+				<rom name="Adventures Of Brian The Bold, The (1985)(Central Solutions).tap" size="44511" crc="5bc84f59" sha1="e2cbee94049c97a289f19a8ccbc010e0a1540628"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs10510423acf62">
+		<description>Adventures Of Eric Bean, The - The Lost Gnomes (1984)(Eric Bean Adventures)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40626">
+				<rom name="Adventures Of Eric Bean, The - The Lost Gnomes (1984)(Eric Bean Adventures).tap" size="40626" crc="b5e3949a" sha1="10510423acf6243a2cabe52955fa20f8eeff16a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse8ad27d6f3142">
+		<description>Adventures Of Saint Bernard, The (1983)(Carnell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38281">
+				<rom name="Adventures Of Saint Bernard, The (1983)(Carnell).tap" size="38281" crc="f9d868f4" sha1="e8ad27d6f314215dea6a665f47419a121db28157"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs22055b149890c">
+		<description>Adventures Of Sinbad, The (1983)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54179">
+				<rom name="Adventures Of Sinbad, The (1983)(Atlantis Software).tap" size="54179" crc="66d1d024" sha1="22055b149890c26a3a84de0197fa5c85dc83160a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs52698e17cd73e">
+		<description>Aeon 1 - Arrival at the Planet 128K (2018)(Sunteam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49959">
+				<rom name="Aeon 1 - Arrival at the Planet 128K (2018)(Sunteam).tap" size="49959" crc="9ff27533" sha1="52698e17cd73e0ac9efe86d2da8760bf43f3916c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa3912c18b511d">
+		<description>Aeon 2 - Surveying for Crystals 128K (2018)(Sunteam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49584">
+				<rom name="Aeon 2 - Surveying for Crystals 128K (2018)(Sunteam).tap" size="49584" crc="561d00ad" sha1="a3912c18b511d590fb0060e1b524d8b90e2a6b5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse6ce09aece1fb">
+		<description>Aeon 3 - Communications 128K (2018)(Sunteam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49661">
+				<rom name="Aeon 3 - Communications 128K (2018)(Sunteam).tap" size="49661" crc="883022fd" sha1="e6ce09aece1fbce9982bc86916a994b3cefd4be2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs941ceab129d9d">
+		<description>Aeon 4 - Escape from a Dead World 128K (2018)(Sunteam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51698">
+				<rom name="Aeon 4 - Escape from a Dead World 128K (2018)(Sunteam).tap" size="51698" crc="305dd007" sha1="941ceab129d9db6403b551302c9ac2ebf99af414"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd951a2e76646e">
+		<description>Aeon 5 - The End (2018)(Sunteam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22913">
+				<rom name="Aeon 5 - The End (2018)(Sunteam).tap" size="22913" crc="fd834c20" sha1="d951a2e76646e6e642b2599ad5116c0f8cb8c119"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7419efe08940f">
+		<description>Aerial (2021)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11486">
+				<rom name="Aerial (2021)(Inufuto).tap" size="11486" crc="6a837856" sha1="7419efe08940f69a69c1f8788ec9f713eebe8cec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde8610b98bbed">
+		<description>Aero Pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15425">
+				<rom name="Aero Pal.tap" size="15425" crc="2cb4b2d9" sha1="de8610b98bbed19e4da008de44ce3ee34fdc80b5"/>
 			</dataarea>
 		</part>
 	</software>
