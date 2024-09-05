@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 71 -->
+<!-- Number of items in this list = 77 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -479,6 +479,66 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="5477">
 				<rom name="AX-7 (The Asterodian) {m1p1}.cas" size="5477" crc="8a6ba775" sha1="4dc310922c6c20daa79f324bd2f6a1334e09d886"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p605c77807dbb8bb">
+		<description>BA-maga Daisakusen {m5p3}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="6341">
+				<rom name="BA-maga Daisakusen {m5p3}.p6" size="6341" crc="c6f6bd42" sha1="5c77807dbb8bb1a694190079d6525126d29cfb21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60083a9e245a604">
+		<description>Bakuha Man {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="6286">
+				<rom name="Bakuha Man {m1p1}.cas" size="6286" crc="7db0e1a1" sha1="083a9e245a6049d2632641c3adf3e824fffef7da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p609b28d918e85b6">
+		<description>Bees! {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="412">
+				<rom name="Bees! {m1p2}.p6" size="412" crc="b7326d79" sha1="9b28d918e85b67079ed8918e741a9bb98e941506"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60f2806d4e1e3ad">
+		<description>Bound Ball {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="2543">
+				<rom name="Bound Ball {m1p2}.cas" size="2543" crc="18385973" sha1="f2806d4e1e3adee3165d698a40d6c69e2dfe4cf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60b2ca3d3ef6f35">
+		<description>Bousouzoku {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="624">
+				<rom name="Bousouzoku {m1p2}.p6" size="624" crc="c438db6c" sha1="b2ca3d3ef6f353b4b448dd6d882fd73b9ccc3e98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p608e9d3d90a0c50">
+		<description>Break Through {m2p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="24029">
+				<rom name="Break Through {m2p2}.cas" size="24029" crc="929dd694" sha1="8e9d3d90a0c506cfcde12139258050cd8608bc5d"/>
 			</dataarea>
 		</part>
 	</software>

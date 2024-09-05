@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 62 -->
+<!-- Number of items in this list = 63 -->
 <softwarelist name="pc8801_flop" description="pc8801_flop loose roms">
 	<software name="p88c02eef27c37f7">
 		<description>100 Yen Disk No. 1 [Set 1]</description>
@@ -579,6 +579,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="348848">
 				<rom name="Aggres (Disk B).d88" size="348848" crc="ddb71f21" sha1="5e0ac31949abb2dd1e229804851eb4f7c32f935c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p884c511922c82ae">
+		<description>Akazukin-chan (demo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="Akazukin-chan (demo).d88" size="348848" crc="492436f5" sha1="4c511922c82aefac55951c648375cf5714f0a369"/>
 			</dataarea>
 		</part>
 	</software>
