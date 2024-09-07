@@ -9,6 +9,7 @@ References:
 - https://upload.wikimedia.org/wikipedia/commons/a/a6/Super-ACan-motherboard-flat.jpg
 - https://github.com/angelosa/hw_docs/blob/main/funtech_superacan/pergame.md
 
+
 *******************************************************************************
 
 INFO:
@@ -236,6 +237,8 @@ private:
 	uint16_t m_roz_coeffd = 0;
 	int32_t m_roz_changed = 0;
 	uint16_t m_unk_1d0 = 0;
+	u8 m_pixel_mode = 0;
+	u8 m_gfx_mode = 0;
 
 	uint16_t m_video_regs[256]{};
 
@@ -281,30 +284,24 @@ private:
 
 int supracan_state::get_tilemap_region(int layer)
 {
-	// HACK!!!
-	if (layer == 2)
+	switch(layer)
 	{
-		return 2;
-	}
-
-	if (layer == 3)
-	{
-		// TODO: sonevil wants region 0/8bpp during intro
-		// roz layer
-		static const int s_roz_mode_lut[4] = { 4, 2, 1, 0 };
-		return s_roz_mode_lut[m_roz_mode & 3];
-	}
-	else
-	{
-		// TODO: slghtsag wants region 0/8bpp at character select
-		// normal layers
-		if ((m_tilemap_mode[layer] & 0x7000) == 0x7000)
-		{
+		case 0:
+			static const int layer0_mode[8] = { 2, 1, 0, 1, 0, 0, 0, 0 };
+			return layer0_mode[m_gfx_mode & 7];
+		case 1:
+			static const int layer1_mode[8] = { 2, 1, 1, 1, 2, 2, 2, 2 };
+			return layer1_mode[m_gfx_mode & 7];
+		// HACK: can be 2bpp or 1bpp
+		case 2:
 			return 2;
-		}
-		return 1;
+		case 3:
+			static const int s_roz_mode_lut[4] = { 4, 2, 1, 0 };
+			return s_roz_mode_lut[m_roz_mode & 3];
 	}
 
+	// TODO: 4th layer at $f00160 (gfx mode 0 only, ignored for everything else)
+	throw new emu_fatalerror("Error: layer = %d not defined", layer);
 }
 
 void supracan_state::get_tilemap_info_common(int layer, tile_data &tileinfo, int count)
@@ -351,19 +348,20 @@ void supracan_state::get_tilemap_info_common(int layer, tile_data &tileinfo, int
 		break;
 	}
 
+	if (region == 0)
+		tile_bank >>= 1;
+
+    // speedyd and slghtsag hints that text layer color offsets are in steps of 4
+	if (region == 2)
+		palette_shift = 2;
 
 	if (layer == 2)
-	{
 		tile_bank = (0x1000 | (tile_bank << 1)) & 0x1c00;
-		// speedyd hints that text layer color offsets are in steps of 4
-		// TODO: is this actually selectable with mode bit 14 in this context?
-		// Notice that GFX2 will mask with 0x1fff, making that effectively unused for this calculation.
-		palette_shift = 2;
-	}
 
 	int tile = (vram[count] & 0x03ff) + tile_bank;
 	int flipxy = (vram[count] & 0x0c00) >> 10;
 	int palette = ((vram[count] & 0xf000) >> 12) << palette_shift;
+
 
 	tileinfo.set(region, tile, palette, TILE_FLIPXY(flipxy));
 }
@@ -998,33 +996,29 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 
 	for (int pri = 7; pri >= 0; pri--)
 	{
-		for (int layer = 3; layer >=0; layer--)
+		// Wanted like this by speedyd, formduel and magipool at very least
+		for (int layer = 0; layer < 4; layer ++)
 		{
-		//  popmessage("%04x\n",m_video_flags);
 			int enabled = 0;
 
-			if (m_video_flags & 0x04)
-				if (layer==3) enabled = 1;
-
-			if (m_video_flags & 0x80)
-				if (layer==0) enabled = 1;
-
-			if (m_video_flags & 0x40)
-				if (layer==1) enabled = 1;
-
-			if (m_video_flags & 0x20)
-				if (layer==2) enabled = 1;
-
-
-			if (layer==3)
-				priority = ((m_roz_mode >> 13) & 7); // roz case
+			// ROZ
+			if (layer == 3)
+			{
+				enabled = BIT(m_video_flags, 2);
+				if (!enabled)
+					continue;
+				priority = ((m_roz_mode >> 13) & 7);
+			}
 			else
-				priority = ((m_tilemap_flags[layer] >> 13) & 7); // normal cases
-
+			{
+				enabled = BIT(m_video_flags, 7 - layer);
+				if (!enabled)
+					continue;
+				priority = ((m_tilemap_flags[layer] >> 13) & 7);
+			}
 
 			if (priority == pri)
 			{
-//            tilemap_num = layer;
 				int which_tilemap_size = get_tilemap_dimensions(xsize, ysize, layer);
 				bitmap_ind16 &src_bitmap = m_tilemap_sizes[layer][which_tilemap_size]->pixmap();
 				int gfx_region = get_tilemap_region(layer);
@@ -1039,126 +1033,125 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 					case 4: transmask = 0x01; break;
 				}
 
-				if (enabled)
+				if (layer != 3) // standard layers, NOT roz
 				{
-					if (layer != 3) // standard layers, NOT roz
+					int wrap = (m_tilemap_flags[layer] & 0x20);
+
+					// slghtsag wants a resolution of 12-bits for text and title
+					int scrollx = m_tilemap_scrollx[layer] & 0xfff;
+					int scrolly = m_tilemap_scrolly[layer] & 0xfff;
+
+					if (scrollx & 0x800) scrollx -= 0x1000;
+					if (scrolly & 0x800) scrolly -= 0x1000;
+
+					int mosaic_count = (m_tilemap_flags[layer] & 0x001c) >> 2;
+					int mosaic_mask = 0xffffffff << mosaic_count;
+
+					// yes, it will draw a single line if you specify a cliprect as such (partial updates...)
+
+					for (int y = cliprect.min_y; y <= cliprect.max_y; y++)
 					{
-						int wrap = (m_tilemap_flags[layer] & 0x20);
+						// these will have to change to uint32_t* etc. once alpha blending is supported
+						uint16_t *screen = &bitmap.pix(y);
 
-						int scrollx = m_tilemap_scrollx[layer];
-						int scrolly = m_tilemap_scrolly[layer];
+						int actualy = y & mosaic_mask;
+						int realy = actualy + scrolly;
 
-						if (scrollx & 0x8000) scrollx -= 0x10000;
-						if (scrolly & 0x8000) scrolly -= 0x10000;
+						if (!wrap)
+							if (scrolly + y < 0 || scrolly + y > ((ysize * 8) - 1))
+								continue;
 
-						int mosaic_count = (m_tilemap_flags[layer] & 0x001c) >> 2;
-						int mosaic_mask = 0xffffffff << mosaic_count;
+						uint16_t *src = &src_bitmap.pix(realy & ((ysize * 8) - 1));
+						uint8_t *priop = &m_prio_bitmap.pix(y);
 
-						// yes, it will draw a single line if you specify a cliprect as such (partial updates...)
-
-						for (int y = cliprect.min_y; y <= cliprect.max_y; y++)
+						for (int x = cliprect.min_x; x <= cliprect.max_x; x++)
 						{
-							// these will have to change to uint32_t* etc. once alpha blending is supported
-							uint16_t *screen = &bitmap.pix(y);
-
-							int actualy = y & mosaic_mask;
-							int realy = actualy + scrolly;
+							int actualx = x & mosaic_mask;
+							int realx = actualx + scrollx;
 
 							if (!wrap)
-								if (scrolly + y < 0 || scrolly + y > ((ysize * 8) - 1))
+								if (scrollx + x < 0 || scrollx + x > ((xsize * 8) - 1))
 									continue;
 
-							uint16_t *src = &src_bitmap.pix(realy & ((ysize * 8) - 1));
-							uint8_t *priop = &m_prio_bitmap.pix(y);
+							uint16_t srcpix = src[realx & ((xsize * 8) - 1)];
 
-							for (int x = cliprect.min_x; x <= cliprect.max_x; x++)
+							if ((srcpix & transmask) != 0 && priority < (priop[x] >> 4))
 							{
-								int actualx = x & mosaic_mask;
-								int realx = actualx + scrollx;
-
-								if (!wrap)
-									if (scrollx + x < 0 || scrollx + x > ((xsize * 8) - 1))
-										continue;
-
-								uint16_t srcpix = src[realx & ((xsize * 8) - 1)];
-
-								if ((srcpix & transmask) != 0 && priority < (priop[x] >> 4))
-								{
-									screen[x] = srcpix;
-									priop[x] = (priop[x] & 0x0f) | (priority << 4);
-								}
+								screen[x] = srcpix;
+								priop[x] = (priop[x] & 0x0f) | (priority << 4);
 							}
+						}
+					}
+				}
+				else
+				{
+					int wrap = m_roz_mode & 0x20;
+
+					int incxx = m_roz_coeffa;
+					int incyy = m_roz_coeffd;
+
+					int incxy = m_roz_coeffc;
+					int incyx = m_roz_coeffb;
+
+					int scrollx = m_roz_scrollx;
+					int scrolly = m_roz_scrolly;
+
+					if (incyx & 0x8000) incyx -= 0x10000;
+					if (incxy & 0x8000) incxy -= 0x10000;
+
+					if (incyy & 0x8000) incyy -= 0x10000;
+					if (incxx & 0x8000) incxx -= 0x10000;
+
+					//popmessage("%04x %04x\n",m_video_flags, m_roz_mode);
+
+					// roz mode..
+					//4020 = enabled speedyd
+					//6c22 = enabled speedyd
+					//2c22 = enabled speedyd
+					//4622 = disabled jttlaugh
+					//2602 = disabled monopoly
+					//0402 = disabled (sango title)
+					// or is it always enabled, and only corrupt because we don't clear ram properly?
+					// (probably not this register?)
+
+					if (!(m_roz_mode & 0x0200) && (m_roz_mode & 0xf000)) // HACK - Not trusted: Acan Logo, Speedy Dragon Intro, Speed Dragon Bonus stage need it.  Monopoly and JTT *don't* causes graphical issues
+					{
+						// NOT accurate, causes issues when the attract mode loops and the logo is shown the 2nd time in some games - investigate
+						for (int y = cliprect.min_y; y <= cliprect.max_y; y++)
+						{
+							rectangle clip(cliprect.min_x, cliprect.max_x, y, y);
+
+							scrollx = (m_roz_scrollx);
+							scrolly = (m_roz_scrolly);
+							incxx = (m_roz_coeffa);
+
+							incxx += m_vram[m_roz_unk_base0/2 + y];
+
+							scrollx += m_vram[m_roz_unk_base1/2 + y * 2] << 16;
+							scrollx += m_vram[m_roz_unk_base1/2 + y * 2 + 1];
+
+							scrolly += m_vram[m_roz_unk_base2/2 + y * 2] << 16;
+							scrolly += m_vram[m_roz_unk_base2/2 + y * 2 + 1];
+
+							if (incxx & 0x8000) incxx -= 0x10000;
+
+							if (m_vram[m_roz_unk_base0/2 + y]) // incxx = 0, no draw?
+								draw_roz_layer(bitmap, clip, m_tilemap_sizes[layer][which_tilemap_size], scrollx<<8, scrolly<<8, incxx<<8, incxy<<8, incyx<<8, incyy<<8, wrap, transmask);
 						}
 					}
 					else
 					{
-						int wrap = m_roz_mode & 0x20;
-
-						int incxx = m_roz_coeffa;
-						int incyy = m_roz_coeffd;
-
-						int incxy = m_roz_coeffc;
-						int incyx = m_roz_coeffb;
-
-						int scrollx = m_roz_scrollx;
-						int scrolly = m_roz_scrolly;
-
-						if (incyx & 0x8000) incyx -= 0x10000;
-						if (incxy & 0x8000) incxy -= 0x10000;
-
-						if (incyy & 0x8000) incyy -= 0x10000;
-						if (incxx & 0x8000) incxx -= 0x10000;
-
-						//popmessage("%04x %04x\n",m_video_flags, m_roz_mode);
-
-						// roz mode..
-						//4020 = enabled speedyd
-						//6c22 = enabled speedyd
-						//2c22 = enabled speedyd
-						//4622 = disabled jttlaugh
-						//2602 = disabled monopoly
-						//0402 = disabled (sango title)
-						// or is it always enabled, and only corrupt because we don't clear ram properly?
-						// (probably not this register?)
-
-						if (!(m_roz_mode & 0x0200) && (m_roz_mode & 0xf000)) // HACK - Not trusted: Acan Logo, Speedy Dragon Intro, Speed Dragon Bonus stage need it.  Monopoly and JTT *don't* causes graphical issues
-						{
-							// NOT accurate, causes issues when the attract mode loops and the logo is shown the 2nd time in some games - investigate
-							for (int y = cliprect.min_y; y <= cliprect.max_y; y++)
-							{
-								rectangle clip(cliprect.min_x, cliprect.max_x, y, y);
-
-								scrollx = (m_roz_scrollx);
-								scrolly = (m_roz_scrolly);
-								incxx = (m_roz_coeffa);
-
-								incxx += m_vram[m_roz_unk_base0/2 + y];
-
-								scrollx += m_vram[m_roz_unk_base1/2 + y * 2] << 16;
-								scrollx += m_vram[m_roz_unk_base1/2 + y * 2 + 1];
-
-								scrolly += m_vram[m_roz_unk_base2/2 + y * 2] << 16;
-								scrolly += m_vram[m_roz_unk_base2/2 + y * 2 + 1];
-
-								if (incxx & 0x8000) incxx -= 0x10000;
-
-								if (m_vram[m_roz_unk_base0/2 + y]) // incxx = 0, no draw?
-									draw_roz_layer(bitmap, clip, m_tilemap_sizes[layer][which_tilemap_size], scrollx<<8, scrolly<<8, incxx<<8, incxy<<8, incyx<<8, incyy<<8, wrap, transmask);
-							}
-						}
-						else
-						{
-							draw_roz_layer(bitmap, cliprect, m_tilemap_sizes[layer][which_tilemap_size], scrollx<<8, scrolly<<8, incxx<<8, incxy<<8, incyx<<8, incyy<<8, wrap, transmask);
-						}
+						draw_roz_layer(bitmap, cliprect, m_tilemap_sizes[layer][which_tilemap_size], scrollx<<8, scrolly<<8, incxx<<8, incxy<<8, incyx<<8, incyy<<8, wrap, transmask);
 					}
 				}
+
 			}
 		}
 	}
 
 
 	// combine sprites
-	if (m_video_flags & 0x08)
+	if (BIT(m_video_flags, 3))
 	{
 		for (int y = cliprect.min_y; y <= cliprect.max_y; y++)
 		{
@@ -1366,9 +1359,10 @@ uint8_t supracan_state::_6502_soundmem_r(offs_t offset)
 		break;
 	case 0x411:
 		data = m_soundcpu_irq_source;
-		m_soundcpu_irq_source = 0;
+		// TODO: should really check for further pending irqs before acking
 		if (!machine().side_effects_disabled())
 		{
+			m_soundcpu_irq_source = 0;
 			LOGMASKED(LOG_SOUND, "%s: %s: 6502_soundmem_r: Sound IRQ source read + clear: %02x\n", machine().describe_context(), machine().time().to_string(), data);
 			m_soundcpu->set_input_line(0, CLEAR_LINE);
 		}
@@ -1711,6 +1705,8 @@ uint16_t supracan_state::video_r(offs_t offset, uint16_t mem_mask)
 			LOGMASKED(LOG_TILEMAP1, "read tilemap_flags[1] (%04x)\n", data);
 		}
 		break;
+	case 0x1f0/2:
+		return m_pixel_mode | m_gfx_mode;
 	default:
 		if (!machine().side_effects_disabled())
 		{
@@ -1757,6 +1753,9 @@ TIMER_CALLBACK_MEMBER(supracan_state::scanline_cb)
 		{
 			LOGMASKED(LOG_IRQS, "Triggering VBL IRQ\n\n");
 			m_maincpu->set_input_line(7, HOLD_LINE);
+			// TODO: ack, from $412?
+			// staiwbbl requires this for inputs to work
+			m_soundcpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
 		}
 		break;
 	}
@@ -1946,12 +1945,16 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	case 0x19a/2: m_roz_unk_base1 = data << 2; LOGMASKED(LOG_ROZ, "roz_unk_base1 = %05x\n", data << 2); break;
 	case 0x19e/2: m_roz_unk_base2 = data << 2; LOGMASKED(LOG_ROZ, "roz_unk_base2 = %05x\n", data << 2); break;
 
+	// color mixing stuff goes here
 	case 0x1d0/2: m_unk_1d0 = data; LOGMASKED(LOG_UNKNOWNS, "unk_1d0 = %04x\n", data); break;
 
 	case 0x1f0/2:
-		// FIXME: this register is not understood
-		// can't be irq mask, more likely outbound pins (to cart & UM6619) or color control
-		//m_irq_mask = data;//(data & 8) ? 0 : 1;
+		m_pixel_mode = data & 0x18;
+		m_gfx_mode = data & 0x7;
+		if (m_pixel_mode & 0x10)
+			popmessage("Special pixel mode enabled!");
+		if (m_gfx_mode >= 5)
+			popmessage("Reserved GFX mode set %02x", data);
 		//LOGMASKED(LOG_IRQS, "irq_mask = %04x\n", data);
 		break;
 	default:

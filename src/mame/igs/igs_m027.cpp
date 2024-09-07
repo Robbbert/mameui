@@ -18,6 +18,7 @@
  Hold service on boot to access input test.
 
  TODO:
+ * NVRAM
  * Inputs and DIP switches for most games
  * Hopper for payout
  * Coin lockout (zhongguo displays a coin error on unexpected coins)
@@ -69,6 +70,7 @@ public:
 	void m027_xor(machine_config &config) ATTR_COLD;
 	void lhdmg_xor(machine_config &config) ATTR_COLD;
 	void lhzb4_xor(machine_config &config) ATTR_COLD;
+	void lthy_xor(machine_config &config) ATTR_COLD;
 	void zhongguo_xor(machine_config &config) ATTR_COLD;
 	void mgzz_xor(machine_config &config) ATTR_COLD;
 	void extradraw(machine_config &config) ATTR_COLD;
@@ -137,6 +139,7 @@ private:
 	void igs_mahjong_xor_map(address_map &map) ATTR_COLD;
 	void lhdmg_xor_map(address_map &map) ATTR_COLD;
 	void lhzb4_xor_map(address_map &map) ATTR_COLD;
+	void lthy_xor_map(address_map &map) ATTR_COLD;
 	void zhongguo_xor_map(address_map &map) ATTR_COLD;
 	void mgzz_xor_map(address_map &map) ATTR_COLD;
 	void extradraw_map(address_map &map) ATTR_COLD;
@@ -206,6 +209,14 @@ void igs_m027_state::lhzb4_xor_map(address_map &map)
 
 	map(0x38009000, 0x38009003).umask32(0x000000ff).r(FUNC(igs_m027_state::test_r));
 	map(0x38009000, 0x38009003).umask32(0x00ff0000).w(FUNC(igs_m027_state::io_select_w<0>));
+}
+
+void igs_m027_state::lthy_xor_map(address_map &map)
+{
+	igs_mahjong_xor_map(map);
+
+	map(0x38009000, 0x38009003).umask32(0x000000ff).r(FUNC(igs_m027_state::test_r));
+	map(0x38009000, 0x38009003).umask32(0x0000ff00).r(NAME((&igs_m027_state::kbd_r<1, 0, 2>)));
 }
 
 void igs_m027_state::zhongguo_xor_map(address_map &map)
@@ -355,35 +366,100 @@ INPUT_PORTS_END
 INPUT_PORTS_START( jking02 )
 	PORT_INCLUDE(base)
 
+	PORT_MODIFY("DSW1")
+	PORT_DIPNAME( 0x1f, 0x1f, "ID Number")                 PORT_DIPLOCATION("SW1:1,2,3,4,5")
+	PORT_DIPSETTING(    0x1f, "1" )
+	PORT_DIPSETTING(    0x1e, "2" )
+	PORT_DIPSETTING(    0x1d, "3" )
+	PORT_DIPSETTING(    0x1c, "4" )
+	PORT_DIPSETTING(    0x1b, "5" )
+	PORT_DIPSETTING(    0x1a, "6" )
+	PORT_DIPSETTING(    0x19, "7" )
+	PORT_DIPSETTING(    0x18, "8" )
+	PORT_DIPSETTING(    0x17, "9" )
+	PORT_DIPSETTING(    0x16, "10" )
+	PORT_DIPSETTING(    0x15, "11" )
+	PORT_DIPSETTING(    0x14, "12" )
+	PORT_DIPSETTING(    0x13, "13" )
+	PORT_DIPSETTING(    0x12, "14" )
+	PORT_DIPSETTING(    0x11, "15" )
+	PORT_DIPSETTING(    0x10, "16" )
+	PORT_DIPSETTING(    0x0f, "17" )
+	PORT_DIPSETTING(    0x0e, "18" )
+	PORT_DIPSETTING(    0x0d, "19" )
+	PORT_DIPSETTING(    0x0c, "20" )
+	PORT_DIPSETTING(    0x0b, "20" ) // 20 is maximum no. - all other settings are the same
+	PORT_DIPSETTING(    0x0a, "20" )
+	PORT_DIPSETTING(    0x09, "20" )
+	PORT_DIPSETTING(    0x08, "20" )
+	PORT_DIPSETTING(    0x07, "20" )
+	PORT_DIPSETTING(    0x06, "20" )
+	PORT_DIPSETTING(    0x05, "20" )
+	PORT_DIPSETTING(    0x04, "20" )
+	PORT_DIPSETTING(    0x03, "20" )
+	PORT_DIPSETTING(    0x02, "20" )
+	PORT_DIPSETTING(    0x01, "20" )
+	PORT_DIPSETTING(    0x00, "20" )
+	PORT_DIPNAME( 0x80, 0x80, "PC Board Mode" )            PORT_DIPLOCATION("SW1:8")
+	PORT_DIPSETTING(    0x80, "Single" )
+	PORT_DIPSETTING(    0x00, "Linking" )
+
 	PORT_MODIFY("DSW2")
-	PORT_DIPNAME( 0x01, 0x00, "DSW2" ) // can cause a coin error (sets different inputs?)
-	PORT_DIPSETTING(    0x01, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x01, 0x00, "Wiring Diagram" )           PORT_DIPLOCATION("SW2:1")  // only 28-pin is supported for now
+	PORT_DIPSETTING(    0x01, "36+10" )
+	PORT_DIPSETTING(    0x00, "28-pin" )
+	PORT_DIPNAME( 0x02, 0x02, "Odds Table" )               PORT_DIPLOCATION("SW2:2")
+	PORT_DIPSETTING(    0x02, DEF_STR(No) )
+	PORT_DIPSETTING(    0x00, DEF_STR(Yes) )
+	PORT_DIPNAME( 0x04, 0x04, DEF_STR(Demo_Sounds) )       PORT_DIPLOCATION("SW2:3")
+	PORT_DIPSETTING(    0x04, DEF_STR(Off) )
+	PORT_DIPSETTING(    0x00, DEF_STR(On) )
+	PORT_DIPNAME( 0x08, 0x00, "Back Color" )               PORT_DIPLOCATION("SW2:4")
+	PORT_DIPSETTING(    0x08, "Black" )
+	PORT_DIPSETTING(    0x00, "Color" )
+	PORT_DIPNAME( 0x10, 0x10, "Password" )                 PORT_DIPLOCATION("SW2:5")
+	PORT_DIPSETTING(    0x10, DEF_STR(No) )
+	PORT_DIPSETTING(    0x00, DEF_STR(Yes) )
+	PORT_DIPNAME( 0x20, 0x20, "Double-Up Game" )           PORT_DIPLOCATION("SW2:6")
+	PORT_DIPSETTING(    0x20, DEF_STR(Off) )
+	PORT_DIPSETTING(    0x00, DEF_STR(On) )
+	PORT_DIPNAME( 0x40, 0x40, "Auto Stop" )                PORT_DIPLOCATION("SW2:7")
+	PORT_DIPSETTING(    0x40, DEF_STR(No) )
+	PORT_DIPSETTING(    0x00, DEF_STR(Yes) )
+	PORT_DIPNAME( 0x80, 0x80, "Payout Mode" )              PORT_DIPLOCATION("SW2:8")
+	PORT_DIPSETTING(    0x80, DEF_STR(Normal) )
+	PORT_DIPSETTING(    0x00, "Auto" )
 
 	PORT_MODIFY("DSW3")
-	PORT_DIPNAME( 0x02, 0x00, "Show Odds" )
-	PORT_DIPSETTING(    0x02, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x04, 0x04, DEF_STR( Unknown ) )
+	PORT_DIPNAME( 0x03, 0x03, "Score Box" )                PORT_DIPLOCATION("SW3:1,2")
+	PORT_DIPSETTING(    0x03, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x02, DEF_STR( On ) )
+	PORT_DIPSETTING(    0x01, "10 Times" )
+	PORT_DIPSETTING(    0x00, "10 Times" )
+	PORT_DIPNAME( 0x04, 0x04, "Play Score" )               PORT_DIPLOCATION("SW3:3")
 	PORT_DIPSETTING(    0x04, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x08, 0x00, "Show Title" )
+	PORT_DIPNAME( 0x08, 0x00, "Show Title" )               PORT_DIPLOCATION("SW3:4")
 	PORT_DIPSETTING(    0x08, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x30, 0x20, "Background Type" )
-	PORT_DIPSETTING(    0x20, "Jungle Style" )
-	PORT_DIPSETTING(    0x10, "Casino Style" )
-	PORT_DIPSETTING(    0x00, "Casino Style (duplicate 1)" )
-	PORT_DIPSETTING(    0x30, "Casino Style (duplicate 2)" )
+	PORT_DIPNAME( 0x30, 0x20, "Symbols" )                  PORT_DIPLOCATION("SW3:5,6")
+	PORT_DIPSETTING(    0x30, "Fruit" )                // slot machine symbols
+	PORT_DIPSETTING(    0x20, "Legend" )               // characters from Journey to the West
+	PORT_DIPSETTING(    0x10, "Both" )                 // seems to do the same thing as "Fruit"
+	PORT_DIPSETTING(    0x00, "Both" )                 // seems to do the same thing as "Fruit"
 
 	PORT_MODIFY("PORTB")
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_SERVICE1 ) // shows DIP switches
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_COIN1 ) // maybe service coin?
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_SLOT_STOP4 )    PORT_NAME("Stop Reel 4 / Double Up")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_GAMBLE_BOOK )   // also provides access to game setup (coinage, etc.)
+	PORT_SERVICE_NO_TOGGLE( 0x08, IP_ACTIVE_LOW )      // shows DIP switch settings
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_COIN1 )
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SLOT_STOP3 )    PORT_NAME("Stop Reel 3 / Small")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_SLOT_STOP2 )    PORT_NAME("Stop Reel 2 / Big")
 
 	PORT_MODIFY("PORTC")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_BUTTON1 ) // maybe bet?
-
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_START1 ) // maybe start?
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_GAMBLE_BET )
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_START1 )
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_SLOT_STOP1 )    PORT_NAME("Stop Reel 1 / Take Score")
 INPUT_PORTS_END
 
 INPUT_PORTS_START( qlgs )
@@ -399,62 +475,62 @@ INPUT_PORTS_START( lhdmg )
 	PORT_INCLUDE(mahjong)
 
 	PORT_START("DSW1")
-	PORT_DIPNAME( 0x03, 0x03, DEF_STR(Coin_A) )            PORT_DIPLOCATION("SW1:1,2")  // 投币比率
+	PORT_DIPNAME( 0x03, 0x03, DEF_STR(Coin_A) )            PORT_DIPLOCATION("SW1:1,2")        // 投币比率
 	PORT_DIPSETTING(    0x03, DEF_STR(1C_1C) )
 	PORT_DIPSETTING(    0x02, DEF_STR(1C_2C) )
 	PORT_DIPSETTING(    0x01, DEF_STR(1C_3C) )
 	PORT_DIPSETTING(    0x00, DEF_STR(1C_5C) )
-	PORT_DIPNAME( 0x0c, 0x0c, "Key-In Rate" )              PORT_DIPLOCATION("SW1:3,4")  // 开分比率
+	PORT_DIPNAME( 0x0c, 0x0c, "Key-In Rate" )              PORT_DIPLOCATION("SW1:3,4")        // 开分比率
 	PORT_DIPSETTING(    0x0c, "10" )
 	PORT_DIPSETTING(    0x08, "20" )
 	PORT_DIPSETTING(    0x04, "50" )
 	PORT_DIPSETTING(    0x00, "100" )
-	PORT_DIPNAME( 0x10, 0x10, "Credit Limit" )             PORT_DIPLOCATION("SW1:5")    // 进分上限
+	PORT_DIPNAME( 0x10, 0x10, "Credit Limit" )             PORT_DIPLOCATION("SW1:5")          // 进分上限
 	PORT_DIPSETTING(    0x10, "1000" )
 	PORT_DIPSETTING(    0x00, "2000" )
-	PORT_DIPNAME( 0x20, 0x20, "Credit Mode" )              PORT_DIPLOCATION("SW1:6")    // 进分上方式 (sets coin input function)
-	PORT_DIPSETTING(    0x20, "Coin Acceptor" )                                         // 投币       (uses coin A rate)
-	PORT_DIPSETTING(    0x00, "Key-In" )                                                // 开分       (uses key-in rate)
-	PORT_DIPNAME( 0x40, 0x40, "Payout Mode" )              PORT_DIPLOCATION("SW1:7")    // 退分上方式
-	PORT_DIPSETTING(    0x40, "Return Coins" )                                          // 退币       (uses hopper to pay out credits)
-	PORT_DIPSETTING(    0x00, "Key-Out" )                                               // 洗分       (just clears credits)
-	PORT_DIPNAME( 0x80, 0x80, DEF_STR(Demo_Sounds) )       PORT_DIPLOCATION("SW1:8")    // 示范音乐
-	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                            // 无
-	PORT_DIPSETTING(    0x80, DEF_STR(On) )                                             // 有
+	PORT_DIPNAME( 0x20, 0x20, "Credit Mode" )              PORT_DIPLOCATION("SW1:6")          // 进分上方式 (sets coin input function)
+	PORT_DIPSETTING(    0x20, "Coin Acceptor" )                                               // 投币       (uses coin A rate)
+	PORT_DIPSETTING(    0x00, "Key-In" )                                                      // 开分       (uses key-in rate)
+	PORT_DIPNAME( 0x40, 0x40, "Payout Mode" )              PORT_DIPLOCATION("SW1:7")          // 退分上方式
+	PORT_DIPSETTING(    0x40, "Return Coins" )                                                // 退币       (uses hopper to pay out credits)
+	PORT_DIPSETTING(    0x00, "Key-Out" )                                                     // 洗分       (just clears credits)
+	PORT_DIPNAME( 0x80, 0x80, DEF_STR(Demo_Sounds) )       PORT_DIPLOCATION("SW1:8")          // 示范音乐
+	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                                  // 无
+	PORT_DIPSETTING(    0x80, DEF_STR(On) )                                                   // 有
 
 	PORT_START("DSW2")
-	PORT_DIPNAME( 0x03, 0x03, "Double Up Jackpot" )        PORT_DIPLOCATION("SW2:1,2")  // 比倍爆机
+	PORT_DIPNAME( 0x03, 0x03, "Double Up Jackpot" )        PORT_DIPLOCATION("SW2:1,2")        // 比倍爆机
 	PORT_DIPSETTING(    0x03, "500" )
 	PORT_DIPSETTING(    0x02, "1000" )
 	PORT_DIPSETTING(    0x01, "1500" )
 	PORT_DIPSETTING(    0x00, "2000" )
-	PORT_DIPNAME( 0x0c, 0x0c, "Minimum Bet" )              PORT_DIPLOCATION("SW2:3,4")  // 最小押注   (all settings show 1 in service mode and function identically)
+	PORT_DIPNAME( 0x0c, 0x0c, "Minimum Bet" )              PORT_DIPLOCATION("SW2:3,4")        // 最小押注   (all settings show 1 in service mode and function identically)
 	PORT_DIPSETTING(    0x0c, "1" )
 	PORT_DIPSETTING(    0x08, "1" )
 	PORT_DIPSETTING(    0x04, "1" )
 	PORT_DIPSETTING(    0x00, "1" )
-	PORT_DIPNAME( 0x10, 0x10, "Double Up Game" )           PORT_DIPLOCATION("SW2:5")    // 比倍游戏
-	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                            // 无
-	PORT_DIPSETTING(    0x10, DEF_STR(On) )                                             // 有
-	PORT_DIPNAME( 0x20, 0x20, "Double Up/Continue Play" )  PORT_DIPLOCATION("SW2:6")    // 比倍续玩
-	PORT_DIPSETTING(    0x20, "Double Up" )                                             // 比倍
-	PORT_DIPSETTING(    0x00, "Continue Play" )                                         // 续玩
-	PORT_DIPNAME( 0x40, 0x40, "Number Type" )              PORT_DIPLOCATION("SW2:7")    // 数字型态   (affects credit and bet display)
-	PORT_DIPSETTING(    0x40, "Numbers" )                                               // 数字       (text and digits)
-	PORT_DIPSETTING(    0x00, "Blocks" )                                                // 方块       (pigs for credit, apples for bet, mahjong tong tiles for numbers)
-	PORT_DIPNAME( 0x80, 0x80, "Hidden Function" )          PORT_DIPLOCATION("SW2:8")    // 隐分功能   (hides credits and bets, game plays normally)
-	PORT_DIPSETTING(    0x80, DEF_STR(Off) )                                            // 无
-	PORT_DIPSETTING(    0x00, DEF_STR(On) )                                             // 有
+	PORT_DIPNAME( 0x10, 0x10, "Double Up Game" )           PORT_DIPLOCATION("SW2:5")          // 比倍游戏
+	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                                  // 无
+	PORT_DIPSETTING(    0x10, DEF_STR(On) )                                                   // 有
+	PORT_DIPNAME( 0x20, 0x20, "Double Up/Continue Play" )  PORT_DIPLOCATION("SW2:6")          // 比倍续玩
+	PORT_DIPSETTING(    0x20, "Double Up" )                                                   // 比倍
+	PORT_DIPSETTING(    0x00, "Continue Play" )                                               // 续玩
+	PORT_DIPNAME( 0x40, 0x40, "Number Type" )              PORT_DIPLOCATION("SW2:7")          // 数字型态   (affects credit and bet display)
+	PORT_DIPSETTING(    0x40, "Numbers" )                                                     // 数字       (text and digits)
+	PORT_DIPSETTING(    0x00, "Blocks" )                                                      // 方块       (pigs for credit, apples for bet, mahjong tong tiles for numbers)
+	PORT_DIPNAME( 0x80, 0x80, "Hidden Function" )          PORT_DIPLOCATION("SW2:8")          // 隐分功能   (hides credits and bets, game plays normally)
+	PORT_DIPSETTING(    0x80, DEF_STR(Off) )                                                  // 无
+	PORT_DIPSETTING(    0x00, DEF_STR(On) )                                                   // 有
 INPUT_PORTS_END
 
 INPUT_PORTS_START( lhzb3 )
 	PORT_INCLUDE(lhdmg)
 
 	PORT_MODIFY("DSW2")
-	PORT_DIPNAME( 0x04, 0x04, "Show Title" )               PORT_DIPLOCATION("SW2:3")    // 机种名称
-	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                            // 无         (game title not shown)
-	PORT_DIPSETTING(    0x04, DEF_STR(On) )                                             // 有
-	PORT_DIPUNKNOWN_DIPLOC( 0x08, 0x08, "SW2:4" )                                       // not shown in test mode
+	PORT_DIPNAME( 0x04, 0x04, "Show Title" )               PORT_DIPLOCATION("SW2:3")          // 机种名称
+	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                                  // 无         (game title not shown)
+	PORT_DIPSETTING(    0x04, DEF_STR(On) )                                                   // 有
+	PORT_DIPUNKNOWN_DIPLOC( 0x08, 0x08, "SW2:4" )                                             // not shown in test mode
 INPUT_PORTS_END
 
 INPUT_PORTS_START( lhzb4 )
@@ -478,7 +554,7 @@ INPUT_PORTS_START( lhzb4 )
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_JOYSTICK_RIGHT )
 
 	PORT_START("DSW1")
-	PORT_DIPNAME( 0x01, 0x01, "Control Panel" )  PORT_DIPLOCATION("SW1:1")
+	PORT_DIPNAME( 0x01, 0x01, "Control Panel" )            PORT_DIPLOCATION("SW1:1")
 	PORT_DIPSETTING(    0x01, "JAMMA" )
 	PORT_DIPSETTING(    0x01, "Keyboard" )
 	PORT_DIPUNKNOWN_DIPLOC( 0x02, 0x02, "SW1:2" ) // remaining DIP switches not shown in test mode
@@ -508,6 +584,66 @@ INPUT_PORTS_START( lhzb4 )
 	PORT_DIPUNKNOWN_DIPLOC( 0x20, 0x20, "SW3:6" )
 	PORT_DIPUNKNOWN_DIPLOC( 0x40, 0x40, "SW3:7" )
 	PORT_DIPUNKNOWN_DIPLOC( 0x80, 0x80, "SW3:8" )
+INPUT_PORTS_END
+
+INPUT_PORTS_START( lthy )
+	PORT_INCLUDE(mahjong_joy)
+
+	PORT_START("DSW1")
+	PORT_DIPNAME( 0x1f, 0x1f, "Satellite Machine No." )    PORT_DIPLOCATION("SW1:1,2,3,4,5")  // 副机编号
+	PORT_DIPSETTING(    0x1f, "1" )
+	PORT_DIPSETTING(    0x1e, "2" )
+	PORT_DIPSETTING(    0x1d, "3" )
+	PORT_DIPSETTING(    0x1c, "4" )
+	PORT_DIPSETTING(    0x1b, "5" )
+	PORT_DIPSETTING(    0x1a, "6" )
+	PORT_DIPSETTING(    0x19, "7" )
+	PORT_DIPSETTING(    0x18, "8" )
+	PORT_DIPSETTING(    0x17, "9" )
+	PORT_DIPSETTING(    0x16, "10" )
+	PORT_DIPSETTING(    0x15, "11" )
+	PORT_DIPSETTING(    0x14, "12" )
+	PORT_DIPSETTING(    0x13, "13" )
+	PORT_DIPSETTING(    0x12, "14" )
+	PORT_DIPSETTING(    0x11, "15" )
+	PORT_DIPSETTING(    0x10, "16" )
+	PORT_DIPSETTING(    0x0f, "17" )
+	PORT_DIPSETTING(    0x0e, "18" )
+	PORT_DIPSETTING(    0x0d, "19" )
+	PORT_DIPSETTING(    0x0c, "20" )
+	PORT_DIPSETTING(    0x0b, "20" ) // 20 is maximum no. - all other settings are the same
+	PORT_DIPSETTING(    0x0a, "20" )
+	PORT_DIPSETTING(    0x09, "20" )
+	PORT_DIPSETTING(    0x08, "20" )
+	PORT_DIPSETTING(    0x07, "20" )
+	PORT_DIPSETTING(    0x06, "20" )
+	PORT_DIPSETTING(    0x05, "20" )
+	PORT_DIPSETTING(    0x04, "20" )
+	PORT_DIPSETTING(    0x03, "20" )
+	PORT_DIPSETTING(    0x02, "20" )
+	PORT_DIPSETTING(    0x01, "20" )
+	PORT_DIPSETTING(    0x00, "20" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x20, 0x20, "SW1:6" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x40, 0x40, "SW1:7" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x80, 0x80, "SW1:8" )
+
+	PORT_START("DSW2")
+	PORT_DIPNAME( 0x01, 0x01, "Control Mode" )             PORT_DIPLOCATION("SW2:1")          // 操作模式
+	PORT_DIPSETTING(    0x01, "Buttons" )                                                     // 按键
+	PORT_DIPSETTING(    0x00, "Joystick" )                                                    // 揺杆
+	PORT_DIPNAME( 0x02, 0x02, DEF_STR(Demo_Sounds) )       PORT_DIPLOCATION("SW2:2")          // 示范音乐
+	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                                  // 无
+	PORT_DIPSETTING(    0x02, DEF_STR(On) )                                                   // 有
+	PORT_DIPNAME( 0x04, 0x04, "Show Title" )               PORT_DIPLOCATION("SW2:3")          // 机种名称
+	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                                  // 无         (game title not shown)
+	PORT_DIPSETTING(    0x04, DEF_STR(On) )                                                   // 有
+	PORT_DIPNAME( 0x08, 0x00, "Link Feature" )             PORT_DIPLOCATION("SW2:4")          // 连线功能
+	PORT_DIPSETTING(    0x00, DEF_STR(Off) )                                                  // 关
+	PORT_DIPSETTING(    0x08, DEF_STR(On) )                                                   // 开
+	PORT_DIPUNKNOWN_DIPLOC( 0x10, 0x10, "SW2:5" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x20, 0x20, "SW2:6" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x40, 0x40, "SW2:7" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x80, 0x80, "SW2:8" )
 INPUT_PORTS_END
 
 INPUT_PORTS_START( zhongguo )
@@ -842,6 +978,17 @@ void igs_m027_state::lhzb4_xor(machine_config &config)
 
 	m_ppi->in_pa_callback().set(NAME((&igs_m027_state::dsw_r<1, 0>)));
 	m_ppi->in_pb_callback().set_ioport("TEST");
+	m_ppi->in_pc_callback().set_ioport("JOY");
+}
+
+void igs_m027_state::lthy_xor(machine_config &config)
+{
+	m027_xor(config);
+
+	m_maincpu->set_addrmap(AS_PROGRAM, &igs_m027_state::lthy_xor_map);
+
+	m_ppi->in_pa_callback().set_ioport("DSW1");
+	m_ppi->in_pb_callback().set_ioport("DSW2");
 	m_ppi->in_pc_callback().set_ioport("JOY");
 }
 
@@ -1963,7 +2110,7 @@ GAME( 1999, lhdmg,     0,        lhdmg_xor,    lhdmg,    igs_m027_state, init_lh
 GAME( 1999, lhdmgp,    lhdmg,    lhdmg_xor,    lhdmg,    igs_m027_state, init_lhdmg,    ROT0, "IGS", "Long Hu Da Manguan Plus", MACHINE_NOT_WORKING ) // 龙虎大满贯
 GAME( 1999, lhzb3,     0,        lhdmg_xor,    lhzb3,    igs_m027_state, init_lhdmg,    ROT0, "IGS", "Long Hu Zhengba III", MACHINE_NOT_WORKING ) // 龙虎争霸Ⅲ
 GAME( 2004, lhzb4,     0,        lhzb4_xor,    lhzb4,    igs_m027_state, init_lhzb4,    ROT0, "IGS", "Long Hu Zhengba 4", MACHINE_NOT_WORKING ) // 龙虎争霸4
-GAME( 1999, lthy,      0,        m027_xor,     base,     igs_m027_state, init_lthy,     ROT0, "IGS", "Long Teng Hu Yue", MACHINE_NOT_WORKING )
+GAME( 1999, lthy,      0,        lthy_xor,     lthy,     igs_m027_state, init_lthy,     ROT0, "IGS", "Long Teng Hu Yue", MACHINE_NOT_WORKING ) // 龙腾虎跃
 GAME( 2000, zhongguo,  0,        zhongguo_xor, zhongguo, igs_m027_state, init_zhongguo, ROT0, "IGS", "Zhongguo Chu Da D", MACHINE_NOT_WORKING ) // 中国锄大D
 GAME( 200?, jking02,   0,        m027_xor,     jking02,  igs_m027_state, init_jking02,  ROT0, "IGS", "Jungle King 2002 (V209US)", MACHINE_NOT_WORKING )
 GAME( 2003, mgzz,      0,        mgzz_xor,     mgzz,     igs_m027_state, init_mgzz,     ROT0, "IGS", "Man Guan Zhi Zun (V101CN)", MACHINE_NOT_WORKING )
