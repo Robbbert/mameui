@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 77 -->
+<!-- Number of items in this list = 79 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -539,6 +539,26 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="24029">
 				<rom name="Break Through {m2p2}.cas" size="24029" crc="929dd694" sha1="8e9d3d90a0c506cfcde12139258050cd8608bc5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60f4e2e3d73fac6">
+		<description>canmaker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4221">
+				<rom name="canmaker.p6" size="4221" crc="d4b378a2" sha1="f4e2e3d73fac6c0ee432f28caf4b7ce6eb74e2c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60fe133d3c95c2d">
+		<description>Cunning {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3383">
+				<rom name="Cunning {m1p2}.p6" size="3383" crc="951d9d82" sha1="fe133d3c95c2db95a77628289d265bd08c05b267"/>
 			</dataarea>
 		</part>
 	</software>

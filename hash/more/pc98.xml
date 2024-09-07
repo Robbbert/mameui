@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 28 -->
+<!-- Number of items in this list = 33 -->
 <softwarelist name="pc98" description="pc98 loose roms">
 	<software name="p9851e0ee77253df">
 		<description>31_disk_a</description>
@@ -169,6 +169,56 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1295356">
 				<rom name="Akatsuki no Bizanteira (1994)(ASCII)(JP)(Disk 2 of 2).fdd" size="1295356" crc="c59e7100" sha1="5a7d64d1cc9dfe8c00b082cfee3a3c67bc20a161"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98ff98a621a03e9">
+		<description>alshark_data_disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3435520">
+				<rom name="alshark_data_disk.mfm" size="3435520" crc="ab37b622" sha1="ff98a621a03e96e4570ea2f28b55bf1d6197bb17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98f0809bf4896e2">
+		<description>alshark_ending_disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3234816">
+				<rom name="alshark_ending_disk.mfm" size="3234816" crc="f2030b64" sha1="f0809bf4896e23f05f494a9c38d3ac3169d46a5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p983c2d4f5681c64">
+		<description>alshark_opening_disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3435520">
+				<rom name="alshark_opening_disk.mfm" size="3435520" crc="ebcc2af5" sha1="3c2d4f5681c64134f219d319b8139aca66042ce8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98b300a3bbb8464">
+		<description>alshark_system_disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3276800">
+				<rom name="alshark_system_disk.mfm" size="3276800" crc="1b7534ba" sha1="b300a3bbb846465c1aab5be1979cb00445a2ee6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p9828c717ad9e2c9">
+		<description>alshark_visual_disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3234816">
+				<rom name="alshark_visual_disk.mfm" size="3234816" crc="9dcd543b" sha1="28c717ad9e2c9ff8e4f864a4efa3cecedc7eaba0"/>
 			</dataarea>
 		</part>
 	</software>

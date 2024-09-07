@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="exl100" description="exl100 loose roms">
+	<software name="exlb2938ed7528bf">
+		<description>sokoban_exl100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="exelvision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="sokoban_exl100.rom" size="32768" crc="c63243e5" sha1="b2938ed7528bf80805cf2a01823a869d3f76f10d"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
