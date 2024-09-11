@@ -2010,6 +2010,8 @@ if (BUSES["MSX_SLOT"]~=null) then
 		MAME_DIR .. "src/devices/bus/msx/slot/music.h",
 		MAME_DIR .. "src/devices/bus/msx/slot/panasonic08.cpp",
 		MAME_DIR .. "src/devices/bus/msx/slot/panasonic08.h",
+		MAME_DIR .. "src/devices/bus/msx/slot/panasonic08r.cpp",
+		MAME_DIR .. "src/devices/bus/msx/slot/panasonic08r.h",
 		MAME_DIR .. "src/devices/bus/msx/slot/rom.cpp",
 		MAME_DIR .. "src/devices/bus/msx/slot/rom.h",
 		MAME_DIR .. "src/devices/bus/msx/slot/ram.cpp",
@@ -2573,6 +2575,20 @@ if (BUSES["SS50"]~=null) then
 		MAME_DIR .. "src/devices/bus/ss50/mpt.h",
 		MAME_DIR .. "src/devices/bus/ss50/piaide.cpp",
 		MAME_DIR .. "src/devices/bus/ss50/piaide.h",
+	}
+end
+
+---------------------------------------------------
+--
+--@src/devices/bus/supracan/slot.h,BUSES["SUPRACAN"] = true
+---------------------------------------------------
+
+if (BUSES["SUPRACAN"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/supracan/slot.cpp",
+		MAME_DIR .. "src/devices/bus/supracan/slot.h",
+		MAME_DIR .. "src/devices/bus/supracan/rom.cpp",
+		MAME_DIR .. "src/devices/bus/supracan/rom.h",
 	}
 end
 

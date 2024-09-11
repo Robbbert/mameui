@@ -65,8 +65,8 @@ STATUS:
 
 #include "emu.h"
 
-#include "bus/generic/slot.h"
-#include "bus/generic/carts.h"
+#include "bus/supracan/rom.h"
+#include "bus/supracan/slot.h"
 #include "cpu/m68000/m68000.h"
 #include "cpu/m6502/m65c02.h"
 
@@ -179,7 +179,7 @@ private:
 
 	required_device<cpu_device> m_maincpu;
 	required_device<cpu_device> m_soundcpu;
-	required_device<generic_slot_device> m_cart;
+	required_device<superacan_cart_slot_device> m_cart;
 	required_device<umc6650_device> m_lockout;
 	required_region_ptr<uint16_t> m_internal68;
 	memory_view m_main_loview;
@@ -227,6 +227,12 @@ private:
 	uint16_t m_tilemap_flags[3]{};
 	uint16_t m_tilemap_mode[3]{};
 	uint16_t m_tilemap_tile_mode[3]{};
+	uint16_t m_tilemap_linescrollx_addr[3]{};
+
+	uint16_t m_window_control[2]{};
+	uint16_t m_window_start_addr[2]{};
+	uint16_t m_window_scrollx[2]{};
+	uint16_t m_window_scrolly[2]{};
 
 	uint32_t m_roz_base_addr = 0;
 	uint16_t m_roz_mode = 0;
@@ -242,7 +248,6 @@ private:
 	uint16_t m_roz_coeffc = 0;
 	uint16_t m_roz_coeffd = 0;
 	int32_t m_roz_changed = 0;
-	uint16_t m_unk_1d0 = 0;
 	u8 m_pixel_mode = 0;
 	u8 m_gfx_mode = 0;
 
@@ -265,7 +270,6 @@ private:
 	TIMER_CALLBACK_MEMBER(line_on_cb);
 	TIMER_CALLBACK_MEMBER(line_off_cb);
 	TIMER_CALLBACK_MEMBER(scanline_cb);
-	DECLARE_DEVICE_IMAGE_LOAD_MEMBER(cart_load);
 	int get_tilemap_region(int layer);
 	void get_tilemap_info_common(int layer, tile_data &tileinfo, int count);
 	void get_roz_tilemap_info(int layer, tile_data &tileinfo, int count);
@@ -308,7 +312,7 @@ int supracan_state::get_tilemap_region(int layer)
 	}
 
 	// TODO: 4th layer at $f00160 (gfx mode 0 only, ignored for everything else)
-	throw new emu_fatalerror("Error: layer = %d not defined", layer);
+	throw emu_fatalerror("Error: layer = %d not defined", layer);
 }
 
 void supracan_state::get_tilemap_info_common(int layer, tile_data &tileinfo, int count)
@@ -1015,7 +1019,6 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 	// mix screen
 	int xsize = 0, ysize = 0;
 //  int tilemap_num;
-	int priority = 0;
 
 	for (int pri = 7; pri >= 0; pri--)
 	{
@@ -1023,6 +1026,7 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 		for (int layer = 0; layer < ROZ_LAYER_NUMBER + 1; layer ++)
 		{
 			int enabled = 0;
+			int layer_priority = 0;
 
 			// ROZ
 			if (layer == ROZ_LAYER_NUMBER)
@@ -1030,17 +1034,17 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 				enabled = BIT(m_video_flags, 2);
 				if (!enabled)
 					continue;
-				priority = ((m_roz_mode >> 13) & 7);
+				layer_priority = ((m_roz_mode >> 13) & 7);
 			}
 			else
 			{
 				enabled = BIT(m_video_flags, 7 - layer);
 				if (!enabled)
 					continue;
-				priority = ((m_tilemap_flags[layer] >> 13) & 7);
+				layer_priority = ((m_tilemap_flags[layer] >> 13) & 7);
 			}
 
-			if (priority == pri)
+			if (layer_priority == pri)
 			{
 				int which_tilemap_size = get_tilemap_dimensions(xsize, ysize, layer);
 				bitmap_ind16 &src_bitmap = m_tilemap_sizes[layer][which_tilemap_size]->pixmap();
@@ -1094,22 +1098,30 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 
 						uint16_t *src = &src_bitmap.pix(realy & ((ysize * 8) - 1));
 						uint8_t *priop = &m_prio_bitmap.pix(y);
+						int line_scroll_x = scrollx;
+
+						// formduel main menu
+						if (BIT(m_tilemap_tile_mode[layer], 14))
+						{
+							int16_t linescrollx = (int16_t)m_vram[((m_tilemap_linescrollx_addr[layer] << 1) + y) & 0xffff];
+							line_scroll_x += linescrollx;
+						}
 
 						for (int x = cliprect.min_x; x <= cliprect.max_x; x++)
 						{
 							int actualx = x & mosaic_mask;
-							int realx = actualx + scrollx;
+							int realx = actualx + line_scroll_x;
 
 							if (!wrap)
-								if (scrollx + x < 0 || scrollx + x > ((xsize * 8) - 1))
+								if (line_scroll_x + x < 0 || line_scroll_x + x > ((xsize * 8) - 1))
 									continue;
 
 							uint16_t srcpix = src[realx & ((xsize * 8) - 1)];
 
-							if ((srcpix & transmask) != 0 && priority < (priop[x] >> 4))
+							if ((srcpix & transmask) != 0 && layer_priority < (priop[x] >> 4))
 							{
 								screen[x] = srcpix;
-								priop[x] = (priop[x] & 0x0f) | (priority << 4);
+								priop[x] = (priop[x] & 0x0f) | (layer_priority << 4);
 							}
 						}
 					}
@@ -1176,6 +1188,49 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 					}
 				}
 
+			}
+		}
+
+		// TODO: secondary window control at $1d8-$1df (no SW sets it up so far)
+		if (BIT(m_video_flags, 1))
+		{
+			// bit 15: enabled by magipool at circular intro, will show sprites above it if checked with.
+			int layer_priority = ((m_window_control[0] >> 13) & 3);
+			if (pri != layer_priority)
+				continue;
+			const u8 reverse_clip = BIT(m_window_control[0], 11);
+			// magipool enables this on title screen
+			// (for the white "overlay", revealing Funtech copyright progressively)
+			// TODO: confirm implementation
+			int window_scrollx = m_window_scrollx[0] & 0x3ff;
+			// TODO: window_scrolly
+
+			if (window_scrollx & 0x200)
+				window_scrollx -= 0x400;
+
+			const u8 window_pen = m_window_control[0] & 0xff;
+
+			for (int y = cliprect.min_y; y <= cliprect.max_y; y++)
+			{
+				// bit 8 is unset by sangofgt, where it uses only two entries of the table on transitions.
+				const int ybase = BIT(m_window_control[0], 8) ? (y * 2) : 0;
+				const u32 clip_base = ((m_window_start_addr[0] << 1) + ybase) & 0xffff;
+
+				const int16_t clip_min_x = (m_vram[clip_base + 0] + window_scrollx);
+				const int16_t clip_max_x = (m_vram[clip_base + 1] + window_scrollx);
+				uint8_t *priop = &m_prio_bitmap.pix(y);
+
+				for (int x = cliprect.min_x; x <= cliprect.max_x; x++)
+				{
+					if (layer_priority >= (priop[x] >> 4))
+						continue;
+
+					if ((x >= clip_min_x && x < clip_max_x) ^ reverse_clip)
+					{
+						bitmap.pix(y, x) = window_pen;
+						priop[x] = (priop[x] & 0x0f) | (layer_priority << 4);
+					}
+				}
 			}
 		}
 	}
@@ -1349,9 +1404,9 @@ void supracan_state::vram_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 void supracan_state::main_map(address_map &map)
 {
 	map(0x000000, 0x3fffff).view(m_main_loview);
-	m_main_loview[0](0x000000, 0x3fffff).r(m_cart, FUNC(generic_slot_device::read16_rom));
+	m_main_loview[0](0x000000, 0x3fffff).r(m_cart, FUNC(superacan_cart_slot_device::rom_r)),
 	m_main_loview[0](0x000000, 0x000fff).rom().region(m_internal68, 0);
-	m_main_loview[1](0x000000, 0x3fffff).r(m_cart, FUNC(generic_slot_device::read16_rom));
+	m_main_loview[1](0x000000, 0x3fffff).r(m_cart, FUNC(superacan_cart_slot_device::rom_r));
 	map(0xe80000, 0xe8ffff).rw(FUNC(supracan_state::_68k_soundram_r), FUNC(supracan_state::_68k_soundram_w));
 	map(0xe90000, 0xe9001f).m(*this, FUNC(supracan_state::host_um6619_map));
 	map(0xe90020, 0xe9002f).w(FUNC(supracan_state::dma_w<0>));
@@ -1361,15 +1416,15 @@ void supracan_state::main_map(address_map &map)
 
 	map(0xeb0d00, 0xeb0d03).rw(m_lockout, FUNC(umc6650_device::read), FUNC(umc6650_device::write)).umask16(0x00ff);
 
-//  map(0xec0000, 0xec*fff) Cart NVRAM, 8-bit interface
+	map(0xec0000, 0xecffff).rw(m_cart, FUNC(superacan_cart_slot_device::nvram_r), FUNC(superacan_cart_slot_device::nvram_w)).umask16(0x00ff);
 
 	map(0xf00000, 0xf001ff).rw(FUNC(supracan_state::video_r), FUNC(supracan_state::video_w));
 	map(0xf00200, 0xf003ff).ram().w("palette", FUNC(palette_device::write16)).share("palette");
 	map(0xf40000, 0xf5ffff).ram().w(FUNC(supracan_state::vram_w)).share("vram");
 	map(0xf80000, 0xfbffff).view(m_main_hiview);
-	m_main_hiview[0](0xf80000, 0xfbffff).r(m_cart, FUNC(generic_slot_device::read16_rom));
+	m_main_hiview[0](0xf80000, 0xfbffff).r(m_cart, FUNC(superacan_cart_slot_device::rom_r));
 	m_main_hiview[0](0xf80000, 0xf80fff).rom().region(m_internal68, 0);
-	m_main_hiview[1](0xf80000, 0xfbffff).r(m_cart, FUNC(generic_slot_device::read16_rom));
+	m_main_hiview[1](0xf80000, 0xfbffff).r(m_cart, FUNC(superacan_cart_slot_device::rom_r));
 	map(0xfc0000, 0xfcffff).mirror(0x30000).ram(); /* System work ram */
 }
 
@@ -1830,6 +1885,12 @@ TIMER_CALLBACK_MEMBER(supracan_state::scanline_cb)
 			m_soundcpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
 		}
 		break;
+	default:
+		// Effectively used by sangofgt only for clipping effects
+		// gamblord, monopoly, magipool also enables this but service is rte for all.
+		if (vpos < 240 && BIT(m_irq_mask, 4))
+			m_maincpu->set_input_line(4, HOLD_LINE);
+		break;
 	}
 
 	m_video_timer->adjust(m_screen->time_until_pos((vpos + 1) % 262, 0));
@@ -1944,6 +2005,7 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 
 				visarea.set(0, (h320_mode ? 320 : 256) - 1, 8, 232 - 1);
 				m_screen->configure(htotal, 262, visarea, attotime::from_ticks(htotal * 262, U13_CLOCK / divider).as_attoseconds());
+				//m_screen->reset_origin(0, 0);
 			}
 
 			m_video_flags = data;
@@ -1992,6 +2054,7 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	case 0x106/2: m_tilemap_scrolly[0] = data; LOGMASKED(LOG_TILEMAP0, "tilemap_scrolly[0] = %04x\n", data); break;
 	case 0x108/2: m_tilemap_base_addr[0] = data << 1; LOGMASKED(LOG_TILEMAP0, "tilemap_base_addr[0] = %05x\n", data << 2); break;
 	case 0x10a/2: m_tilemap_mode[0] = data; LOGMASKED(LOG_TILEMAP0, "tilemap_mode[0] = %04x\n", data); break;
+	case 0x10c/2: m_tilemap_linescrollx_addr[0] = data; break;
 
 	/* Tilemap 1 */
 	case 0x120/2: {
@@ -2005,6 +2068,7 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	case 0x126/2: m_tilemap_scrolly[1] = data; LOGMASKED(LOG_TILEMAP1, "tilemap_scrolly[1] = %04x\n", data); break;
 	case 0x128/2: m_tilemap_base_addr[1] = data << 1; LOGMASKED(LOG_TILEMAP1, "tilemap_base_addr[1] = %05x\n", data << 2); break;
 	case 0x12a/2: m_tilemap_mode[1] = data; LOGMASKED(LOG_TILEMAP1, "tilemap_mode[1] = %04x\n", data); break;
+	case 0x12c/2: m_tilemap_linescrollx_addr[1] = data; break;
 
 	/* Tilemap 2 */
 	case 0x140/2: {
@@ -2018,6 +2082,7 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	case 0x146/2: m_tilemap_scrolly[2] = data; LOGMASKED(LOG_TILEMAP2, "tilemap_scrolly[2] = %04x\n", data); break;
 	case 0x148/2: m_tilemap_base_addr[2] = data << 1; LOGMASKED(LOG_TILEMAP2, "tilemap_base_addr[2] = %05x\n", data << 2); break;
 	case 0x14a/2: m_tilemap_mode[2] = data; LOGMASKED(LOG_TILEMAP2, "tilemap_mode[2] = %04x\n", data); break;
+	case 0x14c/2: m_tilemap_linescrollx_addr[2] = data; break;
 
 	/* ROZ */
 	case 0x180/2: {
@@ -2042,7 +2107,14 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	case 0x19e/2: m_roz_unk_base2 = data << 2; LOGMASKED(LOG_ROZ, "roz_unk_base2 = %05x\n", data << 2); break;
 
 	// color mixing stuff goes here
-	case 0x1d0/2: m_unk_1d0 = data; LOGMASKED(LOG_UNKNOWNS, "unk_1d0 = %04x\n", data); break;
+	case 0x1d0/2: COMBINE_DATA(&m_window_control[0]); break;
+	case 0x1d2/2: COMBINE_DATA(&m_window_start_addr[0]); break;
+	case 0x1d4/2: COMBINE_DATA(&m_window_scrollx[0]); break;
+	case 0x1d6/2: COMBINE_DATA(&m_window_scrolly[0]); break;
+	case 0x1d8/2: COMBINE_DATA(&m_window_control[1]); break;
+	case 0x1da/2: COMBINE_DATA(&m_window_start_addr[1]); break;
+	case 0x1dc/2: COMBINE_DATA(&m_window_scrollx[1]); break;
+	case 0x1de/2: COMBINE_DATA(&m_window_scrolly[1]); break;
 
 	case 0x1f0/2:
 		m_pixel_mode = data & 0x18;
@@ -2058,20 +2130,6 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 		break;
 	}
 //  m_video_regs[offset] = data;
-}
-
-
-DEVICE_IMAGE_LOAD_MEMBER(supracan_state::cart_load)
-{
-	uint32_t size = m_cart->common_get_size("rom");
-
-	if (size > 0x40'0000)
-		return std::make_pair(image_error::INVALIDLENGTH, "Unsupported cartridge size (must be no larger than 4M)");
-
-	m_cart->rom_alloc(size, GENERIC_ROM16_WIDTH, ENDIANNESS_BIG);
-	m_cart->common_load_rom(m_cart->get_rom_base(), size, "rom");
-
-	return std::make_pair(std::error_condition(), std::string());
 }
 
 static INPUT_PORTS_START( supracan )
@@ -2155,7 +2213,10 @@ void supracan_state::machine_start()
 	save_item(NAME(m_roz_coeffc));
 	save_item(NAME(m_roz_coeffd));
 	save_item(NAME(m_roz_changed));
-	save_item(NAME(m_unk_1d0));
+	save_item(NAME(m_window_control));
+	save_item(NAME(m_window_start_addr));
+	save_item(NAME(m_window_scrollx));
+	save_item(NAME(m_window_scrolly));
 
 	save_item(NAME(m_video_regs));
 
@@ -2275,6 +2336,12 @@ static GFXDECODE_START( gfx_supracan )
 	GFXDECODE_RAM( "vram", 0, supracan_gfx1bpp_alt, 0, 0x80 )
 GFXDECODE_END
 
+static void superacan_cart_types(device_slot_interface &device)
+{
+	device.option_add_internal("std",      SUPERACAN_ROM_STD);
+}
+
+
 void supracan_state::supracan(machine_config &config)
 {
 	// M68000P10
@@ -2311,11 +2378,8 @@ void supracan_state::supracan(machine_config &config)
 	m_sound->add_route(0, "lspeaker", 1.0);
 	m_sound->add_route(1, "rspeaker", 1.0);
 
-	generic_cartslot_device &cartslot(GENERIC_CARTSLOT(config, "cartslot", generic_plain_slot, "supracan_cart"));
-	cartslot.set_must_be_loaded(true);
-	cartslot.set_width(GENERIC_ROM16_WIDTH);
-	cartslot.set_endian(ENDIANNESS_BIG);
-	cartslot.set_device_load(FUNC(supracan_state::cart_load));
+	// TODO: clock for cart is (again) unconfirmed
+	SUPERACAN_CART_SLOT(config, m_cart, U13_CLOCK / 6, superacan_cart_types, nullptr).set_must_be_loaded(true);
 
 	SOFTWARE_LIST(config, "cart_list").set_original("supracan");
 }
