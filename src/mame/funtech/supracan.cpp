@@ -1,6 +1,6 @@
 // license: BSD-3-Clause
 // copyright-holders: Angelo Salese, Ryan Holtz
-/***************************************************************************
+/**************************************************************************************************
 
 Super A'Can (c) 1995 Funtech
 
@@ -10,7 +10,7 @@ References:
 - https://github.com/angelosa/hw_docs/blob/main/funtech_superacan/pergame.md
 
 
-*******************************************************************************
+===================================================================================================
 
 INFO:
 
@@ -61,19 +61,21 @@ STATUS:
 
     - All: are ALL the layers ROZ capable??
 
-***************************************************************************/
+**************************************************************************************************/
 
 #include "emu.h"
-#include "cpu/m68000/m68000.h"
-#include "cpu/m6502/m65c02.h"
+
 #include "bus/generic/slot.h"
 #include "bus/generic/carts.h"
-#include "acan.h"
+#include "cpu/m68000/m68000.h"
+#include "cpu/m6502/m65c02.h"
+
 #include "emupal.h"
 #include "screen.h"
 #include "softlist_dev.h"
 #include "speaker.h"
 #include "tilemap.h"
+#include "umc6619_sound.h"
 #include "umc6650.h"
 
 #define LOG_UNKNOWNS    (1U << 1)
@@ -102,6 +104,8 @@ namespace {
 
 // NOTE: same as sega/segac2.cpp XL2
 static constexpr XTAL U13_CLOCK = XTAL(53'693'175);
+// TODO: bump to 4 after conversion of video_r/_w to um6618_map
+static constexpr int ROZ_LAYER_NUMBER = 3;
 
 #define DRAW_DEBUG_ROZ          (0)
 
@@ -183,7 +187,7 @@ private:
 
 	required_shared_ptr<uint16_t> m_vram;
 	required_shared_ptr<uint8_t> m_soundram;
-	required_device<acan_sound_device> m_sound;
+	required_device<umc6619_sound_device> m_sound;
 
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<screen_device> m_screen;
@@ -222,9 +226,11 @@ private:
 	uint16_t m_video_flags = 0;
 	uint16_t m_tilemap_flags[3]{};
 	uint16_t m_tilemap_mode[3]{};
+	uint16_t m_tilemap_tile_mode[3]{};
 
 	uint32_t m_roz_base_addr = 0;
 	uint16_t m_roz_mode = 0;
+	uint16_t m_roz_tile_mode = 0;
 	uint32_t m_roz_scrollx = 0;
 	uint32_t m_roz_scrolly = 0;
 	uint16_t m_roz_tile_bank = 0;
@@ -264,6 +270,7 @@ private:
 	void get_tilemap_info_common(int layer, tile_data &tileinfo, int count);
 	void get_roz_tilemap_info(int layer, tile_data &tileinfo, int count);
 	int get_tilemap_dimensions(int &xsize, int &ysize, int layer);
+	void update_tilemap_flags(int layer);
 	void draw_sprite_tile(bitmap_ind16 &dst, bitmap_ind8 &priomap, const rectangle &cliprect, gfx_element *gfx, int tile, int palette, bool xflip, bool yflip, int dstx, int dsty, int prio);
 	void draw_sprite_tile_mask(bitmap_ind8 &dst, const rectangle &cliprect, gfx_element *gfx, int tile, bool xflip, bool yflip, int dstx, int dsty);
 	void draw_sprite_tile_masked(bitmap_ind16 &dst, bitmap_ind8 &mask, bitmap_ind8 &priomap, const rectangle &cliprect, gfx_element *gfx, int tile, int palette, bool xflip, bool yflip, int dstx, int dsty, int prio);
@@ -351,22 +358,30 @@ void supracan_state::get_tilemap_info_common(int layer, tile_data &tileinfo, int
 	if (region == 0)
 		tile_bank >>= 1;
 
-    // speedyd and slghtsag hints that text layer color offsets are in steps of 4
+	// speedyd and slghtsag hints that text layer color offsets in steps of 4
 	if (region == 2)
 		palette_shift = 2;
 
 	if (layer == 2)
 		tile_bank = (0x1000 | (tile_bank << 1)) & 0x1c00;
 
-	int tile = (vram[count] & 0x03ff) + tile_bank;
-	int flipxy = (vram[count] & 0x0c00) >> 10;
-	int palette = ((vram[count] & 0xf000) >> 12) << palette_shift;
+	u8 palette_base = ((vram[count] & 0xf000) >> 12);
 
+	// speedyd gameplay
+	if (BIT(m_tilemap_tile_mode[layer], 9))
+	{
+		tileinfo.category = !BIT(palette_base, 3);
+		palette_base |= 8;
+	}
+
+	u16 tile = (vram[count] & 0x03ff) + tile_bank;
+	u8 flipxy = (vram[count] & 0x0c00) >> 10;
+	u8 palette = palette_base << palette_shift;
 
 	tileinfo.set(region, tile, palette, TILE_FLIPXY(flipxy));
 }
 
-// I wonder how different this really is.. my guess, not at all.
+// TODO: merge with normal layers.
 void supracan_state::get_roz_tilemap_info(int layer, tile_data &tileinfo, int count)
 {
 	uint16_t *vram = m_vram;
@@ -375,7 +390,6 @@ void supracan_state::get_roz_tilemap_info(int layer, tile_data &tileinfo, int co
 
 	int region = 1;
 	uint16_t tile_bank = 0;
-	uint16_t palette_bank = 0;
 
 	region = get_tilemap_region(layer);
 
@@ -410,9 +424,18 @@ void supracan_state::get_roz_tilemap_info(int layer, tile_data &tileinfo, int co
 
 	count += base;
 
-	int tile = (vram[count] & 0x03ff) + tile_bank;
-	int flipxy = (vram[count] & 0x0c00) >> 10;
-	int palette = ((vram[count] & 0xf000) >> 12) + palette_bank;
+	u8 palette_base = ((vram[count] & 0xf000) >> 12);
+
+	// sonevil gameplay
+	if (BIT(m_roz_tile_mode, 9))
+	{
+		tileinfo.category = !BIT(palette_base, 3);
+		palette_base |= 8;
+	}
+
+	u16 tile = (vram[count] & 0x03ff) + tile_bank;
+	u8 flipxy = (vram[count] & 0x0c00) >> 10;
+	u8 palette = palette_base;
 
 	tileinfo.set(region, tile, palette, TILE_FLIPXY(flipxy));
 }
@@ -477,7 +500,7 @@ int supracan_state::get_tilemap_dimensions(int &xsize, int &ysize, int layer)
 	ysize = 32;
 
 	int select;
-	if (layer == 3)
+	if (layer == ROZ_LAYER_NUMBER)
 		select = m_roz_mode & 0x0f00;
 	else
 		select = m_tilemap_flags[layer] & 0x0f00;
@@ -502,6 +525,21 @@ int supracan_state::get_tilemap_dimensions(int &xsize, int &ysize, int layer)
 	default:
 		LOGMASKED(LOG_HFUNKNOWNS, "Unsupported tilemap size for layer %d: %04x\n", layer, select);
 		return 0;
+	}
+}
+
+void supracan_state::update_tilemap_flags(int layer)
+{
+	const u32 attr = layer == ROZ_LAYER_NUMBER ? m_roz_mode : m_tilemap_flags[layer];
+	const u32 flip_x = BIT(attr, 1) ? TILEMAP_FLIPX : 0;
+	const u32 flip_y = BIT(attr, 0) ? TILEMAP_FLIPY : 0;
+
+	// TODO: we should really track what's the current tilemap paging and update only that
+	// Obviously we should also NOT mark all dirty, but just subscribe to what's the effective bank.
+	// is a dynamic mapper even possible with tilemap.h?
+	for (int i = 0; i < 4; i++)
+	{
+		m_tilemap_sizes[layer][i]->set_flip(flip_x | flip_y);
 	}
 }
 
@@ -727,28 +765,27 @@ void supracan_state::draw_sprite_tile_masked(bitmap_ind16 &dst, bitmap_ind8 &mas
 	}
 }
 
+// [0]
+// -e-- ---- ---- ---- sprite enable?
+// ---h hhh- ---- ---- Y size (not always right)
+// ---- ---y yyyy yyyy Y position
+// [1]
+// bbbb ---- ---- ---- Tile bank
+// ---- h--- ---- ---- Horizontal flip
+// ---- -v-- ---- ---- Vertical flip
+// ---- --mm ---- ---- Masking mode
+// ---- ---- ---- -www X size
+// [2]
+// zzz- ---- ---- ---- X scale
+// ---- ???- ---- ---- Unknown, but often written.
+//                     Values include 111 and 110 for the Super A'Can logo, 110 in the Sango Fighter intro, and 101/100 in the Boom Zoo intro.
+// ---- ---x xxxx xxxx X position
+// [3]
+// d--- ---- ---- ---- Direct Sprite (use details from here, not looked up in vram)
+// -ooo oooo oooo oooo Sprite address
 void supracan_state::draw_sprites(bitmap_ind16 &bitmap, bitmap_ind8 &maskmap, bitmap_ind8 &priomap, const rectangle &cliprect)
 {
 	uint16_t *vram = m_vram;
-
-//      [0]
-//      -e-- ---- ---- ---- sprite enable?
-//      ---h hhh- ---- ---- Y size (not always right)
-//      ---- ---y yyyy yyyy Y position
-//      [1]
-//      bbbb ---- ---- ---- Tile bank
-//      ---- h--- ---- ---- Horizontal flip
-//      ---- -v-- ---- ---- Vertical flip
-//      ---- --mm ---- ---- Masking mode
-//      ---- ---- ---- -www X size
-//      [2]
-//      zzz- ---- ---- ---- X scale
-//      ---- ???- ---- ---- Unknown, but often written.
-//                          Values include 111 and 110 for the Super A'Can logo, 110 in the Sango Fighter intro, and 101/100 in the Boom Zoo intro.
-//      ---- ---x xxxx xxxx X position
-//      [3]
-//      d--- ---- ---- ---- Direct Sprite (use details from here, not looked up in vram)
-//      -ooo oooo oooo oooo Sprite address
 
 	uint32_t skip_count = 0;
 	uint32_t start_word = (m_sprite_base_addr >> 1) + skip_count * 4;
@@ -762,13 +799,12 @@ void supracan_state::draw_sprites(bitmap_ind16 &bitmap, bitmap_ind8 &maskmap, bi
 		int x = vram[i + 2] & 0x01ff;
 		int y = vram[i + 0] & 0x01ff;
 
-		int sprite_offset = (vram[i + 3])<< 1;
-
 		int bank = (vram[i + 1] & 0xf000) >> 12;
 		int mask = (vram[i + 1] & 0x0300) >> 8;
 		int sprite_xflip = (vram[i + 1] & 0x0800) >> 11;
 		int sprite_yflip = (vram[i + 1] & 0x0400) >> 10;
 		int prio = (vram[i + 2] >> 9) & 3;
+		const u16 sprite_ptr = vram[i + 3];
 		//int xscale = vram[i + 2] >> 13;
 		gfx_element *gfx = m_gfxdecode->gfx(region);
 
@@ -778,44 +814,31 @@ void supracan_state::draw_sprites(bitmap_ind16 &bitmap, bitmap_ind8 &maskmap, bi
 
 		if ((vram[i + 0] & 0x4000))
 		{
-		#if 0
-			printf("%d (unk %02x) (enable %02x) (unk Y2 %02x, %02x) (y pos %02x) (bank %01x) (flip %01x) (unknown %02x) (x size %02x) (xscale %01x) (unk %01x) (xpos %02x) (code %04x)\n", i,
-				(vram[i + 0] & 0x8000) >> 15,
-				(vram[i + 0] & 0x4000) >> 14,
-				(vram[i + 0] & 0x2000) >> 13,
-				(vram[i + 0] & 0x1e00) >> 8,
-				(vram[i + 0] & 0x01ff),
-				(vram[i + 1] & 0xf000) >> 12,
-				(vram[i + 1] & 0x0c00) >> 10,
-				(vram[i + 1] & 0x03f0) >> 4,
-				(vram[i + 1] & 0x000f),
-				(vram[i + 2] & 0xf000) >> 12,
-				(vram[i + 2] & 0x0e00) >> 8,
-				(vram[i + 2] & 0x01ff) >> 0,
-				(vram[i + 3] & 0xffff));
-		#endif
+			int xsize = 1 << (vram[i + 1] & 7);
+			int ysize = ((vram[i + 0] & 0x1e00) >> 9) + 1;
 
-			if (vram[i + 3] & 0x8000)
+			// HACK: sonevil sets 1x1 tiles, and expecting to take this path.
+			// Most likely former condition is wrong, and it just "direct sprite" when latter occurs.
+			// magipool also wants latter, for the shot markers to work.
+			if (sprite_ptr & 0x8000 || (xsize == 1 && ysize == 1))
 			{
-				uint16_t data = vram[i + 3];
-				int tile = (bank * 0x200) + (data & 0x03ff);
+				int tile = (bank * 0x200) + (sprite_ptr & 0x03ff);
 
-				int palette = (data & 0xf000) >> 12; // this might not be correct, due to the & 0x8000 condition above this would force all single tile sprites to be using palette >= 0x8 only
+				int palette = (sprite_ptr & 0xf000) >> 12; // this might not be correct, due to the & 0x8000 condition above this would force all single tile sprites to be using palette >= 0x8 only
 
-				// printf("sprite data %04x %04x %04x %04x\n", vram[i+0] , vram[i+1] , vram[i+2] ,vram[i+3]  );
+				// sonevil expect to flip X/Y thru the sprite pointer
+				int tile_xflip = sprite_xflip ^ ((sprite_ptr & 0x0800) >> 11);
+				int tile_yflip = sprite_yflip ^ ((sprite_ptr & 0x0400) >> 10);
 
 				if (mask > 1)
-					draw_sprite_tile_mask(maskmap, cliprect, gfx, tile, sprite_xflip, sprite_yflip, x, y);
+					draw_sprite_tile_mask(maskmap, cliprect, gfx, tile, tile_xflip, tile_yflip, x, y);
 				else if (mask == 1)
-					draw_sprite_tile_masked(bitmap, maskmap, priomap, cliprect, gfx, tile, palette, sprite_xflip, sprite_yflip, x, y, prio);
+					draw_sprite_tile_masked(bitmap, maskmap, priomap, cliprect, gfx, tile, palette, tile_xflip, tile_yflip, x, y, prio);
 				else
-					draw_sprite_tile(bitmap, priomap, cliprect, gfx, tile, palette, sprite_xflip, sprite_yflip, x, y, prio);
+					draw_sprite_tile(bitmap, priomap, cliprect, gfx, tile, palette, tile_xflip, tile_yflip, x, y, prio);
 			}
 			else
 			{
-				int xsize = 1 << (vram[i + 1] & 7);
-				int ysize = ((vram[i + 0] & 0x1e00) >> 9) + 1;
-
 				// I think the xsize must influence the ysize somehow, there are too many conflicting cases otherwise
 				// there don't appear to be any special markers in the actual looked up tile data to indicate skip / end of list
 
@@ -823,7 +846,7 @@ void supracan_state::draw_sprites(bitmap_ind16 &bitmap, bitmap_ind8 &maskmap, bi
 				{
 					for (int xtile = 0; xtile < xsize; xtile++)
 					{
-						uint16_t data = vram[(sprite_offset + ytile * xsize + xtile) & VRAM_MASK];
+						uint16_t data = vram[((sprite_ptr << 1) + ytile * xsize + xtile) & VRAM_MASK];
 						int tile = (bank * 0x200) + (data & 0x03ff);
 						int palette = (data & 0xf000) >> 12;
 
@@ -843,6 +866,7 @@ void supracan_state::draw_sprites(bitmap_ind16 &bitmap, bitmap_ind8 &maskmap, bi
 				}
 			}
 
+			// TODO: scaling
 #if 0
 			if (xscale == 0) continue;
 			uint32_t delta = (1 << 17) / xscale;
@@ -979,12 +1003,11 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 	m_sprite_final_bitmap.fill(0x00, cliprect);
 	m_sprite_mask_bitmap.fill(0x00, cliprect);
 	m_prio_bitmap.fill(0xff, cliprect);
-	// TODO: pinpoint back layer color
-	// - A'Can logo wants 0x30
+	// Back layer normally fills with 0x00
 	// - boomzoo (title) wants 0x00
 	// - sangofgt (1st fighter stage) wants 0x00
 	// - sonevil (intro) wants 0x00
-	//bitmap.fill(0x80, cliprect);
+	// TODO: layer overlay happens from mixing registers (A'Can BIOS sets 0x02 there)
 	bitmap.fill(0x00, cliprect);
 
 	draw_sprites(m_sprite_final_bitmap, m_sprite_mask_bitmap, m_prio_bitmap, cliprect);
@@ -997,12 +1020,12 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 	for (int pri = 7; pri >= 0; pri--)
 	{
 		// Wanted like this by speedyd, formduel and magipool at very least
-		for (int layer = 0; layer < 4; layer ++)
+		for (int layer = 0; layer < ROZ_LAYER_NUMBER + 1; layer ++)
 		{
 			int enabled = 0;
 
 			// ROZ
-			if (layer == 3)
+			if (layer == ROZ_LAYER_NUMBER)
 			{
 				enabled = BIT(m_video_flags, 2);
 				if (!enabled)
@@ -1033,7 +1056,7 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 					case 4: transmask = 0x01; break;
 				}
 
-				if (layer != 3) // standard layers, NOT roz
+				if (layer != ROZ_LAYER_NUMBER)
 				{
 					int wrap = (m_tilemap_flags[layer] & 0x20);
 
@@ -1043,6 +1066,14 @@ uint32_t supracan_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 
 					if (scrollx & 0x800) scrollx -= 0x1000;
 					if (scrolly & 0x800) scrolly -= 0x1000;
+
+					// global flips also inverts scroll meanings
+					// cfr. formduel left character and sangofgt 2nd fighter stage.
+					if (BIT(m_tilemap_flags[layer], 1))
+						scrollx ^= ((xsize * 8) - 1);
+
+					if (BIT(m_tilemap_flags[layer], 0))
+						scrolly ^= ((ysize * 8) - 1);
 
 					int mosaic_count = (m_tilemap_flags[layer] & 0x001c) >> 2;
 					int mosaic_mask = 0xffffffff << mosaic_count;
@@ -1221,13 +1252,38 @@ template <unsigned ch> void supracan_state::dma_w(offs_t offset, uint16_t data, 
 		{
 			LOGMASKED(LOG_DMA, "dma_w: Kicking off a DMA from %08x to %08x, %d bytes (%04x)\n", m_dma_regs.source[ch], m_dma_regs.dest[ch], m_dma_regs.count[ch] + 1, data);
 
+			// formduel sets both for gameplay to work
+			// TODO: verify which one is source and which destination
+			const bool dest_dec = BIT(data, 10);
+			const bool src_dec  = BIT(data, 9);
+
+			if (dest_dec ^ src_dec)
+				popmessage("DMA trigger %04x with one increment bit set %04x", data, data & 0x0600);
+
 			for (int i = 0; i <= m_dma_regs.count[ch]; i++)
 			{
-				if (data & 0x1000)
+				// staiwbbl wants to fill both VRAM and work RAM at startup,
+				// and expects to transfer word for VRAM, byte for work RAM.
+				// Not providing this will cause all kinds of video and logic glitches.
+				// TODO: pinpoint DMA modes here (at least upper bits 14-13 should do)
+				if (data == 0xa800)
+				{
+					if ((m_dma_regs.dest[ch] & 0xfe0000) == 0xf40000)
+					{
+						mem.write_word(m_dma_regs.dest[ch], 0);
+						m_dma_regs.dest[ch]   += dest_dec ? -2 : 2;
+					}
+					else
+					{
+						mem.write_byte(m_dma_regs.dest[ch], mem.read_byte(m_dma_regs.source[ch]));
+						m_dma_regs.dest[ch]   += dest_dec ? -1 : 1;
+					}
+				}
+				else if (data & 0x1000)
 				{
 					mem.write_word(m_dma_regs.dest[ch], mem.read_word(m_dma_regs.source[ch]));
-					m_dma_regs.dest[ch] += 2;
-					m_dma_regs.source[ch] += 2;
+					m_dma_regs.dest[ch]   += dest_dec ? -2 : 2;
+					m_dma_regs.source[ch] += src_dec  ? -2 : 2;
 					if (data & 0x0100)
 					{
 						// staiwbbl, indirect transfers towards port $f00010-$1f
@@ -1238,10 +1294,13 @@ template <unsigned ch> void supracan_state::dma_w(offs_t offset, uint16_t data, 
 				else
 				{
 					mem.write_byte(m_dma_regs.dest[ch], mem.read_byte(m_dma_regs.source[ch]));
-					m_dma_regs.dest[ch]++;
-					m_dma_regs.source[ch]++;
+					m_dma_regs.dest[ch]   += dest_dec ? -1 : 1;
+					m_dma_regs.source[ch] += src_dec  ? -1 : 1;
 				}
 			}
+			// TODO: are these DMA cycle steal?
+			// There's no indication of a DMA status read so far that would indicate burst.
+			//m_maincpu->spin_until_time(m_maincpu->cycles_to_attotime(m_dma_regs.count[ch] * 2));
 		}
 		else if (data != 0x0000) // fake DMA, used by C.U.G.
 		{
@@ -1301,6 +1360,8 @@ void supracan_state::main_map(address_map &map)
 	map(0xe90b3c, 0xe90b3d).noprw(); // noisy during lockout checks
 
 	map(0xeb0d00, 0xeb0d03).rw(m_lockout, FUNC(umc6650_device::read), FUNC(umc6650_device::write)).umask16(0x00ff);
+
+//  map(0xec0000, 0xec*fff) Cart NVRAM, 8-bit interface
 
 	map(0xf00000, 0xf001ff).rw(FUNC(supracan_state::video_r), FUNC(supracan_state::video_w));
 	map(0xf00200, 0xf003ff).ram().w("palette", FUNC(palette_device::write16)).share("palette");
@@ -1433,6 +1494,14 @@ void supracan_state::_6502_soundmem_w(offs_t offset, uint8_t data)
 		}
 		break;
 	}
+	case 0x40a:
+		// speedyd/magipool uses this to request main to kickoff a sound DMA.
+		// gamblord/formduel just sets this just to poll a sound command
+		// all sets up 0x40c/0x40d as a buffer, and 0x40a to check if the irq is valid
+		// (does reading from 68k side acknowledges?)
+		m_maincpu->set_input_line(6, HOLD_LINE);
+		m_soundram[0x40a] = data;
+		break;
 	case 0x410:
 		m_soundcpu_irq_enable = data;
 		// gamblord (at least) checks for pending irqs
@@ -1525,6 +1594,8 @@ void supracan_state::update_frc_state()
 {
 	if ((m_frc_control & 0xff00) == 0xa200)
 	{
+		const u32 period = ((m_frc_control & 0xff << 16) | (m_frc_frequency));
+
 		// HACK: handle case by case until we resolve the equation
 		// (particularly with variable frequencies)
 		switch(m_frc_control & 0xf)
@@ -1538,9 +1609,9 @@ void supracan_state::update_frc_state()
 
 			// magipool: sets 0xa201 / 0x0104 at startup, sometimes flips frequency to 0x0046
 			// - causes a crash at boot if too fast;
-			// - takes roughly 6 seconds for a title screen kanji to move right-to-left;
+			// - takes roughly 6 seconds for a title screen individual kanji to move right-to-left;
 			case 1:
-				m_frc_timer->adjust(attotime::from_hz(30));
+				m_frc_timer->adjust(m_maincpu->cycles_to_attotime(1024 * period), 0);
 				break;
 
 			// gamblord: sets 0xa20f normally, plays with frequency register a lot.
@@ -1548,8 +1619,9 @@ void supracan_state::update_frc_state()
 			// - takes ~1 second for character screen to switch;
 			// - during gameplay sometimes switches to 0xa200 / 0xffff;
 			case 0xf:
-				m_frc_timer->adjust(attotime::from_hz(120));
+				m_frc_timer->adjust(m_maincpu->cycles_to_attotime(8192 * period), 0);
 				break;
+
 			default:
 				popmessage("Attempt to fire up FRC with %04x %04x", m_frc_control, m_frc_frequency);
 				break;
@@ -1909,28 +1981,52 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	case 0x26/2: m_sprite_flags = data; LOGMASKED(LOG_SPRITES, "sprite_flags = %04x\n", data); break;
 
 	/* Tilemap 0 */
-	case 0x100/2: m_tilemap_flags[0] = data; LOGMASKED(LOG_TILEMAP0, "tilemap_flags[0] = %04x\n", data); break;
+	case 0x100/2: {
+		m_tilemap_flags[0] = data;
+		LOGMASKED(LOG_TILEMAP0, "tilemap_flags[0] = %04x\n", data);
+		update_tilemap_flags(0);
+		break;
+	}
+	case 0x102/2: m_tilemap_tile_mode[0] = data; break;
 	case 0x104/2: m_tilemap_scrollx[0] = data; LOGMASKED(LOG_TILEMAP0, "tilemap_scrollx[0] = %04x\n", data); break;
 	case 0x106/2: m_tilemap_scrolly[0] = data; LOGMASKED(LOG_TILEMAP0, "tilemap_scrolly[0] = %04x\n", data); break;
 	case 0x108/2: m_tilemap_base_addr[0] = data << 1; LOGMASKED(LOG_TILEMAP0, "tilemap_base_addr[0] = %05x\n", data << 2); break;
 	case 0x10a/2: m_tilemap_mode[0] = data; LOGMASKED(LOG_TILEMAP0, "tilemap_mode[0] = %04x\n", data); break;
 
 	/* Tilemap 1 */
-	case 0x120/2: m_tilemap_flags[1] = data; LOGMASKED(LOG_TILEMAP1, "tilemap_flags[1] = %04x\n", data); break;
+	case 0x120/2: {
+		m_tilemap_flags[1] = data;
+		LOGMASKED(LOG_TILEMAP1, "tilemap_flags[1] = %04x\n", data);
+		update_tilemap_flags(1);
+		break;
+	}
+	case 0x122/2: m_tilemap_tile_mode[1] = data; break;
 	case 0x124/2: m_tilemap_scrollx[1] = data; LOGMASKED(LOG_TILEMAP1, "tilemap_scrollx[1] = %04x\n", data); break;
 	case 0x126/2: m_tilemap_scrolly[1] = data; LOGMASKED(LOG_TILEMAP1, "tilemap_scrolly[1] = %04x\n", data); break;
 	case 0x128/2: m_tilemap_base_addr[1] = data << 1; LOGMASKED(LOG_TILEMAP1, "tilemap_base_addr[1] = %05x\n", data << 2); break;
 	case 0x12a/2: m_tilemap_mode[1] = data; LOGMASKED(LOG_TILEMAP1, "tilemap_mode[1] = %04x\n", data); break;
 
-	/* Tilemap 2? */
-	case 0x140/2: m_tilemap_flags[2] = data; LOGMASKED(LOG_TILEMAP2, "tilemap_flags[2] = %04x\n", data); break;
+	/* Tilemap 2 */
+	case 0x140/2: {
+		m_tilemap_flags[2] = data;
+		LOGMASKED(LOG_TILEMAP2, "tilemap_flags[2] = %04x\n", data);
+		update_tilemap_flags(2);
+		break;
+	}
+	case 0x142/2: m_tilemap_tile_mode[2] = data; break;
 	case 0x144/2: m_tilemap_scrollx[2] = data; LOGMASKED(LOG_TILEMAP2, "tilemap_scrollx[2] = %04x\n", data); break;
 	case 0x146/2: m_tilemap_scrolly[2] = data; LOGMASKED(LOG_TILEMAP2, "tilemap_scrolly[2] = %04x\n", data); break;
 	case 0x148/2: m_tilemap_base_addr[2] = data << 1; LOGMASKED(LOG_TILEMAP2, "tilemap_base_addr[2] = %05x\n", data << 2); break;
 	case 0x14a/2: m_tilemap_mode[2] = data; LOGMASKED(LOG_TILEMAP2, "tilemap_mode[2] = %04x\n", data); break;
 
 	/* ROZ */
-	case 0x180/2: m_roz_mode = data; LOGMASKED(LOG_ROZ, "roz_mode = %04x\n", data); break;
+	case 0x180/2: {
+		m_roz_mode = data;
+		LOGMASKED(LOG_ROZ, "roz_mode = %04x\n", data);
+		//update_tilemap_flags(ROZ_LAYER_NUMBER);
+		break;
+	}
+	case 0x182/2: m_roz_tile_mode = data; break;
 	case 0x184/2: m_roz_scrollx = (data << 16) | (m_roz_scrollx & 0xffff); m_roz_changed |= 1; LOGMASKED(LOG_ROZ, "roz_scrollx = %08x\n", m_roz_scrollx); break;
 	case 0x186/2: m_roz_scrollx = (data) | (m_roz_scrollx & 0xffff0000); m_roz_changed |= 1; LOGMASKED(LOG_ROZ, "roz_scrollx = %08x\n", m_roz_scrollx); break;
 	case 0x188/2: m_roz_scrolly = (data << 16) | (m_roz_scrolly & 0xffff); m_roz_changed |= 2; LOGMASKED(LOG_ROZ, "roz_scrolly = %08x\n", m_roz_scrolly); break;
@@ -2208,7 +2304,7 @@ void supracan_state::supracan(machine_config &config)
 	SPEAKER(config, "rspeaker").front_right();
 
 	// TODO: derive and verify from U13_CLOCK
-	ACANSND(config, m_sound, XTAL(3'579'545));
+	UMC6619_SOUND(config, m_sound, XTAL(3'579'545));
 	m_sound->ram_read().set(FUNC(supracan_state::sound_ram_read));
 	m_sound->timer_irq_handler().set(FUNC(supracan_state::sound_timer_irq));
 	m_sound->dma_irq_handler().set(FUNC(supracan_state::sound_dma_irq));
