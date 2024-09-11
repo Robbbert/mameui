@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 69 -->
+<!-- Number of items in this list = 67 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg5d2e2a0d8d9fa2">
 		<description>Aladdin (UE) [T+Bra_ERTrans]</description>
@@ -199,16 +199,6 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="fantasy zone gear (ju) [a1].gg" size="131072" crc="365b92cf" sha1="002de139e9e330f2811cf56401b9e3cc7f233b91"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ggda53138fa5dc4e">
-		<description>Fire Track(Ben Ryves)(2005)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gamegear_cart">
-			<dataarea name="rom" size="65536">
-				<rom name="Fire Track(Ben Ryves)(2005).gg" size="65536" crc="d6d0a92b" sha1="da53138fa5dc4e253a1ebba50cf59de285c4719e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -479,16 +469,6 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131123">
 				<rom name="OutRun (JUE)[T-BR] {T-Lohan G-Evil Darkness}{100}{2001}.gg" size="131123" crc="00124d63" sha1="431373eea3cdeca9f988d2d33d1e524281b420f1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ggc4d9d3335eb5dd">
-		<description>Pac-Man (J) (GG2SMS V0.91 Hack)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gamegear_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Pac-Man (J) (GG2SMS V0.91 Hack).gg" size="131072" crc="fb7c7bf8" sha1="c4d9d3335eb5ddad6ed2ed3d8c6c0b5440a8dfe4"/>
 			</dataarea>
 		</part>
 	</software>

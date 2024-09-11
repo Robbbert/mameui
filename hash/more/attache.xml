@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 3 -->
+<softwarelist name="attache" description="attache loose roms">
+	<software name="att7e60b18e79fc1">
+		<description>epb_attache</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="430336">
+				<rom name="epb_attache.dsk" size="430336" crc="67f80aab" sha1="7e60b18e79fc187e5bf6bd6f1456b595db87b043"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="att8a7203bffd4e3">
+		<description>htron_attache</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="430336">
+				<rom name="htron_attache.dsk" size="430336" crc="04c91620" sha1="8a7203bffd4e3cd8711c46bdcd2611d84a3f2e18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="att03e4b5a997a83">
+		<description>oattache</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="224444">
+				<rom name="oattache.td0" size="224444" crc="e033ccda" sha1="03e4b5a997a832971b4cb60b00fe451a97531c83"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

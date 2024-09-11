@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 266 -->
+<!-- Number of items in this list = 248 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -29,16 +29,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(U)Acid Reflux v1.1 (2016)(furrtek & robotwo).sms" size="32768" crc="9d9919df" sha1="67ebb8698f196717cf5817e07113c49e3de0db1d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sms80e368e158b56">
-		<description>(U)Wing Warriors (2020)(Kitmaker Ent.)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="(U)Wing Warriors (2020)(Kitmaker Ent.).sms" size="131072" crc="8c384703" sha1="80e368e158b560ccb223f743676daacf47800cf1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -542,16 +532,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sms52382a2c29a89">
-		<description>DARC (PD) v1.0 zipper</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="DARC (PD) v1.0 zipper.sms" size="524288" crc="61b3c657" sha1="52382a2c29a89dbf15467e9b8efe5f92c3cfd970"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sms73d6f05c66037">
 		<description>datastorm</description>
 		<year>????</year>
@@ -762,36 +742,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sms181dd6904dc58">
-		<description>Frogger (2005)(Covell, Chris)[p]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Frogger (2005)(Covell, Chris)[p].bin" size="131072" crc="444abb05" sha1="181dd6904dc58abc20aced3c8177881cbfb5e48d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsf98afe81a8210">
-		<description>Frogger (2005)(Covell, Chris)[p][b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Frogger (2005)(Covell, Chris)[p][b].bin" size="262144" crc="1c6044b0" sha1="f98afe81a82109738305681ff63dd860964ed116"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsc7653e81eec48">
-		<description>Frogger (Prototype) (GG2SMS V0.91 Hack) [o1]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Frogger (Prototype) (GG2SMS V0.91 Hack) [o1].sms" size="262144" crc="9aca67fb" sha1="c7653e81eec482f2adc3dca0a5575da1dd2b24c6"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="smse21805da7ef80">
 		<description>Fushigi no Oshiro Pit Pot [Proto] (JP)</description>
 		<year>????</year>
@@ -992,26 +942,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sms238d71f12bdfe">
-		<description>Hang-On (1985)(Sega)[tr pt]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Hang-On (1985)(Sega)[tr pt].bin" size="32768" crc="cf1d7990" sha1="238d71f12bdfed679875c472f0e5663e651e9d5d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sms9ddebe596f94a">
-		<description>Hang-On (1985)(Sega)[tr pt][a]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Hang-On (1985)(Sega)[tr pt][a].bin" size="32768" crc="303ea475" sha1="9ddebe596f94a02609f07b4706e78769275124a5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sms998723370b3a6">
 		<description>HeroesAgainstDemons_1.03(smsj)</description>
 		<year>????</year>
@@ -1059,36 +989,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="jetpac.sms" size="65536" crc="7598cd63" sha1="c9b499ca43f0fdca2149a6e9afc379184f44de08"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsc9785a84e2fe6">
-		<description>Kenseiden (1988)(Sega)[tr pt]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Kenseiden (1988)(Sega)[tr pt].bin" size="262144" crc="4918d6c0" sha1="c9785a84e2fe6567f1720fd8398760002d21fe32"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsd0381b51aa194">
-		<description>Kenseiden (1988)(Sega)[tr pt][a2]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Kenseiden (1988)(Sega)[tr pt][a2].bin" size="262144" crc="f6915e4b" sha1="d0381b51aa194e63f52d44df5067c8a83af7f8d3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsc03677e7dda5a">
-		<description>Kenseiden (1988)(Sega)[tr pt][a]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Kenseiden (1988)(Sega)[tr pt][a].bin" size="262144" crc="616db05d" sha1="c03677e7dda5a7f495c683df2878fce535a611a6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1312,16 +1212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="smsa016cc692facb">
-		<description>Mecha8 [Demo] (PD) v1.0 îscar Toledo G</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Mecha8 [Demo] (PD) v1.0 îscar Toledo G.sms" size="131072" crc="bc284ae0" sha1="a016cc692facb027ee68818d4674545594cad5fe"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sms0b46e31f656fe">
 		<description>Mickey's Ultimate Challenge (B)</description>
 		<year>????</year>
@@ -1419,16 +1309,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="81920">
 				<rom name="Monaco Master v2.9.2 (2023)(Louis The SEGA Nerd).sms" size="81920" crc="355330b6" sha1="4af5c6b9bbbe9c053a75efe3368693ed964fd917"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sms9c8b2b54c7acf">
-		<description>Monkey Lad (PD) v0.3 Eric Fry</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="147456">
-				<rom name="Monkey Lad (PD) v0.3 Eric Fry.sms" size="147456" crc="ff22dc27" sha1="9c8b2b54c7acf141c4cd05bff2de9c05ecd1cdb0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1612,26 +1492,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sms71bcce9670f2a">
-		<description>Phantasy Star (JP) [tr En090_Z80 Gaiden]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Phantasy Star (JP) [tr En090_Z80 Gaiden].sms" size="524288" crc="1cdd9244" sha1="71bcce9670f2a2b3f28f00e7e00530a16de39c4a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsf93333661a5b5">
-		<description>Phantasy Star (JP) [tr En091_Z80 Gaiden] (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Phantasy Star (JP) [tr En091_Z80 Gaiden] (2).sms" size="524288" crc="0861bb46" sha1="f93333661a5b5b915e971c95f0877a08bfba3c17"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="smsad9ccb28844b0">
 		<description>Phantasy Star (UE) (V1.2) [T+Rus_Chief-Net]</description>
 		<year>????</year>
@@ -1739,36 +1599,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="8019">
 				<rom name="pongmstr.sms" size="8019" crc="82c12e96" sha1="52ff86e9b7723e4f3099c74d5d18522db507cef8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sms891dba3b09faf">
-		<description>Pop Breaker (1990)(Micro Cabin)(Jp) [gg2sms v1.1]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Pop Breaker (1990)(Micro Cabin)(Jp) [gg2sms v1.1].sms" size="131072" crc="bdfb09f6" sha1="891dba3b09faf71679c6a8522cc7279e6d324bc5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sms728c254513920">
-		<description>Pop Breaker v1.0 (2004)(Covell, Chris)[p]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Pop Breaker v1.0 (2004)(Covell, Chris)[p].bin" size="131072" crc="b37c3ea8" sha1="728c2545139200916200a1441974356b8b1bb775"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsc442edad2c1ff">
-		<description>Power Strike II (2004)(Covell, Chris)[p]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Power Strike II (2004)(Covell, Chris)[p].bin" size="262144" crc="979263d8" sha1="c442edad2c1ff9ae6bf646418713aa8c3d34c141"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2139,16 +1969,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Streets of Rage.sms" size="524288" crc="6f2cf48a" sha1="ea4214198a53dbcc0e4df5f1c34530bff5bea1f5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sms32e386a2c8017">
-		<description>Strider (1991)(Sega)[b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Strider (1991)(Sega)[b].bin" size="524288" crc="40760bb3" sha1="32e386a2c801761cdfdc818069b1b0ec5057154c"/>
 			</dataarea>
 		</part>
 	</software>

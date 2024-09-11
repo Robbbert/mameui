@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 18 -->
+<!-- Number of items in this list = 20 -->
 <softwarelist name="nascom_snap" description="nascom_snap loose roms">
 	<software name="nasbe12077995c41">
 		<description>3K Tiny Basic Interpreter (19xx)(-)[E1000]</description>
@@ -102,6 +102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nas8690d04d88c53">
+		<description>Elite Planet Browser[E1000]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="nascom_snap">
+			<dataarea name="snap" size="44363">
+				<rom name="Elite Planet Browser[E1000].nas" size="44363" crc="6902d477" sha1="8690d04d88c53ba09627d80b9f575f06aef69edc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nas8623b2e08a3b6">
 		<description>Eprommer Software for Prommer-80 ECB card (19xx)(-)[start E8000][hw driver]</description>
 		<year>????</year>
@@ -109,6 +119,16 @@
 		<part name="snap" interface="nascom_snap">
 			<dataarea name="snap" size="17923">
 				<rom name="Eprommer Software for Prommer-80 ECB card (19xx)(-)[start E8000][hw driver].nas" size="17923" crc="c0c04911" sha1="8623b2e08a3b6f87dc353feefd75e1ffce23e8bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nasfd40459248dde">
+		<description>H-Tron(nascom2)[E1000]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="nascom_snap">
+			<dataarea name="snap" size="34784">
+				<rom name="H-Tron(nascom2)[E1000].nas" size="34784" crc="513e205f" sha1="fd40459248dde758b599cab2c1b65d4c0cfdd0d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -122,13 +142,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nas07a23e2a8fd40">
-		<description>Master Mind[E1007]</description>
+	<software name="nas86b3ce6a8b828">
+		<description>Master Mind[E1000]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="nascom_snap">
 			<dataarea name="snap" size="30816">
-				<rom name="Master Mind[E1007].nas" size="30816" crc="42e7f1a3" sha1="07a23e2a8fd40481b52bf05c5928f5e9df815235"/>
+				<rom name="Master Mind[E1000].nas" size="30816" crc="64723dba" sha1="86b3ce6a8b82850dbb0863afea488ad8ca814f76"/>
 			</dataarea>
 		</part>
 	</software>

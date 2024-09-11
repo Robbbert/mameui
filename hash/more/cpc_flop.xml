@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7601 -->
+<!-- Number of items in this list = 7600 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -21469,16 +21469,6 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="184832">
 				<rom name="Discology 3.0 (Castellano - J.A. Bueno Medrano).dsk" size="184832" crc="f896f68d" sha1="9037828c76d8115264b327360ad699aeab9468ad"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpc2d93c628112d3">
-		<description>Discology 3.0 (Castellano - Songalax Group)[35]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3">
-			<dataarea name="flop" size="121600">
-				<rom name="Discology 3.0 (Castellano - Songalax Group)[35].dsk" size="121600" crc="2c7e7594" sha1="2d93c628112d374443da7c3cfdd54be5e03c96b0"/>
 			</dataarea>
 		</part>
 	</software>

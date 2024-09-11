@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 213 -->
+<!-- Number of items in this list = 212 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -319,16 +319,6 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="43769">
 				<rom name="ATF 128K (1988)(Digital Integration).z80" size="43769" crc="23f0731e" sha1="ef4d981d753f18ec93045370f57d418ee9de4e32"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsa66aa61d22b4d">
-		<description>ATICATAC</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="snap" interface="spectrum_snap">
-			<dataarea name="snap" size="35220">
-				<rom name="ATICATAC.Z80" size="35220" crc="56520bdf" sha1="a66aa61d22b4d77ad3e73413fce41fceefe83f2d"/>
 			</dataarea>
 		</part>
 	</software>

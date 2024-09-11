@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 3 -->
+<softwarelist name="myvision" description="myvision loose roms">
+	<software name="myvf25f76addf2fc">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="myvision_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Deepspace.bin" size="24576" crc="960df1cf" sha1="f25f76addf2fc1fa821bf7491d146e4531eb9bb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="myv04f1772711606">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="myvision_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Elite Planet Browser.bin" size="24576" crc="2e4f488c" sha1="04f1772711606847d9ba5b2d7c5baa92f8b719ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="myv6511133af0f31">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="myvision_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="H-tron.bin" size="24576" crc="65d32839" sha1="6511133af0f31a66820698af045b514fffc33325"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 38 -->
+<!-- Number of items in this list = 36 -->
 <softwarelist name="sol20_cass" description="sol20_cass loose roms">
 	<software name="sol3772534869151">
 		<description>(demo)Train[XE]</description>
@@ -292,16 +292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sol8e5f0226dde3e">
-		<description>Sol Printer Driver (19xx)(Processor Techonolgy)(need ext hw)[XE]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="sol20_cass">
-			<dataarea name="cass" size="56307">
-				<rom name="Sol Printer Driver (19xx)(Processor Techonolgy)(need ext hw)[XE].svt" size="56307" crc="46a4e367" sha1="8e5f0226dde3ea450077a945f9bf12c3c5b7ede3"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="soldc7c68acf3286">
 		<description>SpaceRaiders[XE]</description>
 		<year>????</year>
@@ -339,16 +329,6 @@
 		<part name="cass1" interface="sol20_cass">
 			<dataarea name="cass" size="2004012">
 				<rom name="TIC_TAC_TOE[XE].WAV" size="2004012" crc="68e0338d" sha1="7c974416595b1180b6e60ca4742d462346e524d7"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sol294487f58ec60">
-		<description>Tiny C - Metron Computerware (1977)(Tiny C Associates)[XE]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="sol20_cass">
-			<dataarea name="cass" size="30719">
-				<rom name="Tiny C - Metron Computerware (1977)(Tiny C Associates)[XE].svt" size="30719" crc="6140c147" sha1="294487f58ec607decb69900b169a6b03208a61b4"/>
 			</dataarea>
 		</part>
 	</software>

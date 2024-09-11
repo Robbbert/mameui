@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 120 -->
+<!-- Number of items in this list = 130 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -269,26 +269,6 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="46606">
 				<rom name="audio tracker 0.2.tap" size="46606" crc="978eb414" sha1="7ed975ee809c3da4aa222c92336ae3b9e23fdedc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori00d737078e7e8">
-		<description>Audio Tracker 0.3</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="46606">
-				<rom name="Audio Tracker 0.3.tap" size="46606" crc="38c1076b" sha1="00d737078e7e8f854a0b37144936a3100e4ae896"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori375a3579a37f6">
-		<description>Audio Tracker 0.4</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="46606">
-				<rom name="Audio Tracker 0.4.tap" size="46606" crc="529d0925" sha1="375a3579a37f6b98e50a60384a34c8faa3eee918"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1199,6 +1179,126 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="4069">
 				<rom name="Cyclotron by Dbug (PD).tap" size="4069" crc="8850ffd0" sha1="03f9e21e823d8b30c94743a4b57bab6e5b456136"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori3443a65b6b01e">
+		<description>Dames Anglaise (F) (19xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="5594">
+				<rom name="Dames Anglaise (F) (19xx).tap" size="5594" crc="ac2a8e60" sha1="3443a65b6b01e0914b8cdf21f543a40149ff8d0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori25cddf8b2ad96">
+		<description>Defense Force (UK) (19xx) [b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="58683">
+				<rom name="Defense Force (UK) (19xx) [b].tap" size="58683" crc="2c70634e" sha1="25cddf8b2ad962041c740f34869fa6cf2691b0f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orid50b3a5e8d96f">
+		<description>detective story jeu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="35081">
+				<rom name="detective story jeu.tap" size="35081" crc="371b80dd" sha1="d50b3a5e8d96f26a440f68b288cbd7d38ad9bd9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oribb7677cd90d54">
+		<description>Diamant De L' Ile Maudite Part 2, Le (1984)(Loriciels)(fr)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="38261">
+				<rom name="Diamant De L' Ile Maudite Part 2, Le (1984)(Loriciels)(fr)[a].tap" size="38261" crc="d3ec1118" sha1="bb7677cd90d54b4b769f160260309bff4548fb0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orid7b08007d8fb8">
+		<description>Dico Chimie (19xx)(-)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="24502">
+				<rom name="Dico Chimie (19xx)(-)(fr).tap" size="24502" crc="31bbcba4" sha1="d7b08007d8fb8e8dc8e7608d1b53f221e4cc41ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori1f6a817b071d9">
+		<description>dimjeu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="90596">
+				<rom name="dimjeu.tap" size="90596" crc="72845560" sha1="1f6a817b071d96ff0beb813f1e1bac9059c6e87a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orie1ce9819ae484">
+		<description>Domino_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="7251">
+				<rom name="Domino_.tap" size="7251" crc="009a5a2c" sha1="e1ce9819ae484e93dca76af3eb2ed624f99f1efc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oricf8abfb5f47b7">
+		<description>Dot-Man (UK) (1998) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="9327">
+				<rom name="Dot-Man (UK) (1998) (PD).tap" size="9327" crc="f1a4972d" sha1="cf8abfb5f47b7f6d876e03d043ce90ea4b582f86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orif1f149ff8f666">
+		<description>dptlq</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="29584">
+				<rom name="dptlq.tap" size="29584" crc="9c49b14a" sha1="f1f149ff8f6668594951b6497cd94721f6fc13e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori3b2553f82c215">
+		<description>Dragon (F) (1986)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="18637">
+				<rom name="Dragon (F) (1986).tap" size="18637" crc="9048ffde" sha1="3b2553f82c215d6064f8a7033707579f999b783e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori4d4b5a63a5324">
+		<description>Draughts V2.48 (UK) (1984)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="12852">
+				<rom name="Draughts V2.48 (UK) (1984).tap" size="12852" crc="3e1e0857" sha1="4d4b5a63a532461202749581941871efb61bd66c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orifb9872a4fb764">
+		<description>Draughtsman by B.D. & S.L. Grayson (1983) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2435">
+				<rom name="Draughtsman by B.D. & S.L. Grayson (1983) (PD).tap" size="2435" crc="eb952982" sha1="fb9872a4fb7644a8dc28eeb33d81ed6d9ef894ed"/>
 			</dataarea>
 		</part>
 	</software>

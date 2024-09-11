@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 42 -->
+<!-- Number of items in this list = 116 -->
 <softwarelist name="exl100_cass" description="exl100_cass loose roms">
 	<software name="exlf734aabaa82df">
 		<description>10.000 (198x)(Minipuce)(FR)</description>
@@ -419,6 +419,746 @@
 		<part name="cass" interface="exelvision_cass">
 			<dataarea name="cass" size="9396908">
 				<rom name="Frises (198x)(Cedic, Nathan)(FR).wav" size="9396908" crc="e50c83d8" sha1="c92b990a09d0777689b676dd2fa5cba6ddc68893"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl11bbe0fa144c3">
+		<description>Generateur de Caracteres en Espagnol (198x)(Exelvision)(FR)(Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="8120312">
+				<rom name="Generateur de Caracteres en Espagnol (198x)(Exelvision)(FR)(Side A).wav" size="8120312" crc="883a0329" sha1="11bbe0fa144c382ebc1d847ab76a41ae29aa67e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlae32c0d6220a0">
+		<description>Generateur de Caracteres en Espagnol (198x)(Exelvision)(FR)(Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="8120240">
+				<rom name="Generateur de Caracteres en Espagnol (198x)(Exelvision)(FR)(Side B).wav" size="8120240" crc="48d8415f" sha1="ae32c0d6220a027e20be42d3545e57342f32f59a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl7461f4c371c79">
+		<description>Geomega le Monde (198x)(Minipuce)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1125808">
+				<rom name="Geomega le Monde (198x)(Minipuce)(FR).wav" size="1125808" crc="be9c925d" sha1="7461f4c371c79245ba563f30abeb8d007842fdec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlf9753f523eddc">
+		<description>Hamburgers (1987)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="2778614">
+				<rom name="Hamburgers (1987)(Edition PUSSY)(FR).wav" size="2778614" crc="254c0e4b" sha1="f9753f523eddc5859e7f2951bdb7a51dca5419aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlc454ffbfe02e0">
+		<description>Initiation a l'EXELBASIC - Volume 1 v1.0 (1985-07)(Exelvision)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="9629838">
+				<rom name="Initiation a l'EXELBASIC - Volume 1 v1.0 (1985-07)(Exelvision)(FR).wav" size="9629838" crc="2edd25ea" sha1="c454ffbfe02e01eeae91bb246a414bb49b8a04ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl1b6524a1815e5">
+		<description>Initiation a l'EXELBASIC - Volume 2 v1.1 (1985-08)(Exelvision)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="8665622">
+				<rom name="Initiation a l'EXELBASIC - Volume 2 v1.1 (1985-08)(Exelvision)(FR).wav" size="8665622" crc="b17c699c" sha1="1b6524a1815e5d7098a0308e93c81b84b0bc1a4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl4e489d9425f8b">
+		<description>Initiation a l'EXELBASIC - Volume 3 v1.1 (1985-08)(Exelvision)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="9393728">
+				<rom name="Initiation a l'EXELBASIC - Volume 3 v1.1 (1985-08)(Exelvision)(FR).wav" size="9393728" crc="7e204b34" sha1="4e489d9425f8bfb1c589ebf05f97a3006398986d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl28eba9a833321">
+		<description>Initiation a l'EXELBASIC - Volume 4 v1.1 (1985-08)(Exelvision)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="10882552">
+				<rom name="Initiation a l'EXELBASIC - Volume 4 v1.1 (1985-08)(Exelvision)(FR).wav" size="10882552" crc="3cc26883" sha1="28eba9a8333217937b4997f4b5f9ca71db71f2e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl75688b74f2057">
+		<description>Initiation au Basic 1 (1985)(Infogrames)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="6488576">
+				<rom name="Initiation au Basic 1 (1985)(Infogrames)(FR).wav" size="6488576" crc="979aac7b" sha1="75688b74f20579922711892e8f69c2f6da47b1e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlf1edd209e71c4">
+		<description>Initiation au Basic 2 (1986)(Infogrames)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="5623604">
+				<rom name="Initiation au Basic 2 (1986)(Infogrames)(FR).wav" size="5623604" crc="bc1c979c" sha1="f1edd209e71c41a7dc1a35f43642a6d0e5d1f58a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl52dcb16084bc3">
+		<description>Initiation au Basic 3 (1986)(Infogrames)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="6722828">
+				<rom name="Initiation au Basic 3 (1986)(Infogrames)(FR).wav" size="6722828" crc="1483fdb5" sha1="52dcb16084bc36599748497bb2efc8f6dd033c63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl25a8a102d25e2">
+		<description>Initiation au Basic 4 (1986)(Infogrames)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="2651408">
+				<rom name="Initiation au Basic 4 (1986)(Infogrames)(FR).wav" size="2651408" crc="cd15a4e0" sha1="25a8a102d25e238b97a689de08ea7d0a0444cd40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlb3d52c621569e">
+		<description>Invasion de Fautes (1985-11)(EH Services)(FR)(beta)[unreleased]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="4760720">
+				<rom name="Invasion de Fautes (1985-11)(EH Services)(FR)(beta)[unreleased].wav" size="4760720" crc="08a21b29" sha1="b3d52c621569e76efa4a70d0f53b8d7a84bc48bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlc5f2b0b392fe9">
+		<description>Keys-Ball III (198x)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="7862712">
+				<rom name="Keys-Ball III (198x)(Edition PUSSY)(FR).wav" size="7862712" crc="dff8556f" sha1="c5f2b0b392fe9004bd39390d209537153f419500"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl81eba29e4f044">
+		<description>Keys-Ball PRO (198x)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="8190118">
+				<rom name="Keys-Ball PRO (198x)(Edition PUSSY)(FR).wav" size="8190118" crc="3111751a" sha1="81eba29e4f044564e4fb524cc04afd8be3e94ea1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exld3c66d886bebe">
+		<description>Kung-Fu (198x)(Exelvision)(FR)[b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="12685472">
+				<rom name="Kung-Fu (198x)(Exelvision)(FR)[b2].wav" size="12685472" crc="7b880d84" sha1="d3c66d886bebe62dde15a04b6462bae98ed5bef3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl709c98ae375aa">
+		<description>Kung-Fu (198x)(Exelvision)(FR)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="12419210">
+				<rom name="Kung-Fu (198x)(Exelvision)(FR)[b].wav" size="12419210" crc="115a813d" sha1="709c98ae375aad0fabb62f353c7c109105613f41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl39ef987ae849c">
+		<description>Labyrinthe in the Pyramide, A (1988)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="6602950">
+				<rom name="Labyrinthe in the Pyramide, A (1988)(Edition PUSSY)(FR).wav" size="6602950" crc="854ec644" sha1="39ef987ae849c914960dbe6b90dc24fcce34dd8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl9094c372605ec">
+		<description>Lecture Rapide Mnemologik (198x)(Minipuce)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="672768">
+				<rom name="Lecture Rapide Mnemologik (198x)(Minipuce)(FR).wav" size="672768" crc="a97895bc" sha1="9094c372605ec3ab8e16f0d371c2a22ef2a40b3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlc704da0f10724">
+		<description>Logiformes (19xx)(Squirelle)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="9589436">
+				<rom name="Logiformes (19xx)(Squirelle)(FR).wav" size="9589436" crc="e615c3fc" sha1="c704da0f10724bd1a8485e114e2c034c4e4a05eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exla625ddfb751b5">
+		<description>Logiphrases (19xx)(Squirelle)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="10401128">
+				<rom name="Logiphrases (19xx)(Squirelle)(FR).wav" size="10401128" crc="d9853f29" sha1="a625ddfb751b52b15353fac5f47f19144cad8690"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlf31a1b6d54c04">
+		<description>Loto (198x)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1223334">
+				<rom name="Loto (198x)(Edition PUSSY)(FR).wav" size="1223334" crc="651e87bd" sha1="f31a1b6d54c04378f81a450b99a95f14fc6a60df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exle09dba4c2375d">
+		<description>M'yams (198x)(Exelvision)(FR)[h Edition PUSSY]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="8200742">
+				<rom name="M'yams (198x)(Exelvision)(FR)[h Edition PUSSY].wav" size="8200742" crc="54cfb853" sha1="e09dba4c2375dff115f17b8fea98f626d49d5a7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl5627502273b52">
+		<description>Mario's Cement Factory (1987)(Exelement Votre)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1587900">
+				<rom name="Mario's Cement Factory (1987)(Exelement Votre)(FR).wav" size="1587900" crc="dd2b22e2" sha1="5627502273b5242bea925a3a66ac69c591cca956"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl2efa667254f55">
+		<description>Maze-Ball (1990)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="4028378">
+				<rom name="Maze-Ball (1990)(Edition PUSSY)(FR).wav" size="4028378" crc="9aef5e41" sha1="2efa667254f5597f8b7c910f945d315aca75099f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl09b53e1ddddd0">
+		<description>Memot (1985)(EH Services)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="26347004">
+				<rom name="Memot (1985)(EH Services)(FR).wav" size="26347004" crc="220b1a3b" sha1="09b53e1ddddd0c9efb86d5d53694a860971074ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl5f187500d99de">
+		<description>Message Defilant (198x)(Minipuce)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="735082">
+				<rom name="Message Defilant (198x)(Minipuce)(FR).wav" size="735082" crc="37931158" sha1="5f187500d99de0c820a34d6c3356c6e0d7740845"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl3a7c5f1f0a9d2">
+		<description>Mesure du Golf (198x)(Cedic, Nathan)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="14034716">
+				<rom name="Mesure du Golf (198x)(Cedic, Nathan)(FR).wav" size="14034716" crc="9d3db342" sha1="3a7c5f1f0a9d2275b6ff8013670cebd8945b0021"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl99892d8a1b93d">
+		<description>Mesure du Temps (198x)(Cedic, Nathan)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="9663236">
+				<rom name="Mesure du Temps (198x)(Cedic, Nathan)(FR).wav" size="9663236" crc="8fca9982" sha1="99892d8a1b93d45d474156ac522c52f176c757b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlff86a478f60a4">
+		<description>Meurtre - A Grande Vitesse (1985-12-21)(Cobra Soft - Minipuce)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="35579924">
+				<rom name="Meurtre - A Grande Vitesse (1985-12-21)(Cobra Soft - Minipuce)(FR).wav" size="35579924" crc="a6333467" sha1="ff86a478f60a43adf9c11f452dfe442b741913eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl2137a24e41b9e">
+		<description>Midway (198x)(Minipuce)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="6364268">
+				<rom name="Midway (198x)(Minipuce)(FR).wav" size="6364268" crc="6aa17b28" sha1="2137a24e41b9e12ce2df815a31abb68bdb101388"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl68ceccdd80a81">
+		<description>Mille Bornes (1985)(Free Game Blot)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1006512">
+				<rom name="Mille Bornes (1985)(Free Game Blot)(FR).wav" size="1006512" crc="e7992cad" sha1="68ceccdd80a812bd6269362c6e7646b4fcf48ed0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl5372b258dbda3">
+		<description>Mille-pattes (1985-07)(Exelvision)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="5453166">
+				<rom name="Mille-pattes (1985-07)(Exelvision)(FR).wav" size="5453166" crc="9d87c69b" sha1="5372b258dbda305c561e5d73d8eaa1de6e712d11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl26905a0419002">
+		<description>Moins Autant Plus (198x)(Cedic, Nathan)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="13219964">
+				<rom name="Moins Autant Plus (198x)(Cedic, Nathan)(FR).wav" size="13219964" crc="7af605d8" sha1="26905a04190029af195a27774e2372b8816fb4d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl45ab8cb9723a9">
+		<description>Monopolic (198x)(Free Game Blot)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1723484">
+				<rom name="Monopolic (198x)(Free Game Blot)(FR).wav" size="1723484" crc="b42f1977" sha1="45ab8cb9723a91cfe5576cbc8134fa10b1101d3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl0d2f381091c93">
+		<description>Monstre du Lac Noir, Le (1988)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="11310210">
+				<rom name="Monstre du Lac Noir, Le (1988)(Edition PUSSY)(FR).wav" size="11310210" crc="4c14f85f" sha1="0d2f381091c9353f40f4393d6123175ac18995d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlf8613a7580df8">
+		<description>Musical (198x)(Paralleles)(FR)(Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="9531800">
+				<rom name="Musical (198x)(Paralleles)(FR)(Side A).wav" size="9531800" crc="eaae02cd" sha1="f8613a7580df8ad369bfa4d918fa400f8aa4a5b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl176934eaba146">
+		<description>Musical (198x)(Paralleles)(FR)(Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="9531008">
+				<rom name="Musical (198x)(Paralleles)(FR)(Side B).wav" size="9531008" crc="02c7d5c3" sha1="176934eaba1464f70ddebce49e5ec1157ad67b67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlae9a73ff2b2f7">
+		<description>Musique 1 (1985)(Techni-musique)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="12042512">
+				<rom name="Musique 1 (1985)(Techni-musique)(FR).wav" size="12042512" crc="b3e7893c" sha1="ae9a73ff2b2f77c5ceb2e716347141c39a6d86f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl252a4daa7e47e">
+		<description>Musique 2 (1985)(Techni-musique)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="8034092">
+				<rom name="Musique 2 (1985)(Techni-musique)(FR).wav" size="8034092" crc="9517973c" sha1="252a4daa7e47ef7f7d7ed36c9cbbc04ae2cda75b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl73c0d8a04a598">
+		<description>Nathan Lecture (198x)(EH Services)(FR)(beta)[unreleased]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="14955452">
+				<rom name="Nathan Lecture (198x)(EH Services)(FR)(beta)[unreleased].wav" size="14955452" crc="94d6985d" sha1="73c0d8a04a598053cff2a2de24a64a144ab15cfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl095762a7713c2">
+		<description>Nimbus (1985)(Micro Scoop)(FR)[h Edition PUSSY]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="11744760">
+				<rom name="Nimbus (1985)(Micro Scoop)(FR)[h Edition PUSSY].wav" size="11744760" crc="c51fe236" sha1="095762a7713c2ce22fda77400b29e1b56bee4b01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl9de19d0b12fae">
+		<description>Nombre Mysterieux, Le (198x)(EH Services)(FR)(beta)[a][unreleased]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="6264224">
+				<rom name="Nombre Mysterieux, Le (198x)(EH Services)(FR)(beta)[a][unreleased].wav" size="6264224" crc="ae7c6ba6" sha1="9de19d0b12faec0e358422e73dae057f98a84a1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl0f6a0bfe3fb9c">
+		<description>Nombre Mysterieux, Le (198x)(EH Services)(FR)(beta)[unreleased]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="32296436">
+				<rom name="Nombre Mysterieux, Le (198x)(EH Services)(FR)(beta)[unreleased].wav" size="32296436" crc="5868fb06" sha1="0f6a0bfe3fb9c97da212ca404024ddc90e01ebb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl39cc53073097e">
+		<description>Operal (198x)(Paralleles)(FR)[req 64kb]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="12608144">
+				<rom name="Operal (198x)(Paralleles)(FR)[req 64kb].wav" size="12608144" crc="6cc8d5ad" sha1="39cc53073097eb4e22d3243c5dfa490aec1e58db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exld6d85d35aad44">
+		<description>Pacific (1988)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="4923700">
+				<rom name="Pacific (1988)(Edition PUSSY)(FR).wav" size="4923700" crc="c1108135" sha1="d6d85d35aad44226b90bab4c0c4d7c31ef92ce47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exleb01771d4b262">
+		<description>Parsec (1989)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="3416266">
+				<rom name="Parsec (1989)(Edition PUSSY)(FR).wav" size="3416266" crc="2fad9ee2" sha1="eb01771d4b262db200b4c2c5b47234f984406adc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlb9ea3fd32b4ea">
+		<description>Pedagogiciel v1.00 (1985-03-25)(JLF Letierce)(FR)(Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="7006868">
+				<rom name="Pedagogiciel v1.00 (1985-03-25)(JLF Letierce)(FR)(Side A).wav" size="7006868" crc="c2b7206f" sha1="b9ea3fd32b4ea054d85390f53d5f3eb56bba69ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl28f1dd7d3dd5d">
+		<description>Pedagogiciel v1.00 (1985-03-25)(JLF Letierce)(FR)(Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="3166712">
+				<rom name="Pedagogiciel v1.00 (1985-03-25)(JLF Letierce)(FR)(Side B).wav" size="3166712" crc="2de25b41" sha1="28f1dd7d3dd5d4702ad02f2403af00cc368653c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl4964eb90a74ae">
+		<description>Petanque (198x)(Minipuce)(FR)[b gfx]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="2321176">
+				<rom name="Petanque (198x)(Minipuce)(FR)[b gfx].wav" size="2321176" crc="1b9db66a" sha1="4964eb90a74ae7968726f69e886363f02372a5b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl38cc168cb3e24">
+		<description>Petit Pendu Junior, Le (198x)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="2261814">
+				<rom name="Petit Pendu Junior, Le (198x)(Edition PUSSY)(FR).wav" size="2261814" crc="61e78869" sha1="38cc168cb3e24cde875eeaf32aef0bd4a3e90365"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl319d4c386714e">
+		<description>Phrase et ses Constituants, La (198x)(EH Services)(FR)(beta)[unreleased][v1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="6457616">
+				<rom name="Phrase et ses Constituants, La (198x)(EH Services)(FR)(beta)[unreleased][v1].wav" size="6457616" crc="82bf96e6" sha1="319d4c386714e3ea5ea3ed57ef5faea90e99fde8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl2336648cb54a6">
+		<description>Phrase et ses Constituants, La (198x)(EH Services)(FR)(beta)[unreleased][v2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="14774084">
+				<rom name="Phrase et ses Constituants, La (198x)(EH Services)(FR)(beta)[unreleased][v2].wav" size="14774084" crc="2b29c0d4" sha1="2336648cb54a64fe8a7e8f93424bca7014359155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlf7e9680dd7271">
+		<description>Phrase et ses Constituants, La (198x)(EH Services)(FR)(beta)[unreleased][v4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="51242732">
+				<rom name="Phrase et ses Constituants, La (198x)(EH Services)(FR)(beta)[unreleased][v4].wav" size="51242732" crc="088940ef" sha1="f7e9680dd7271170c5e0c8a6f59bfbbc6ea1114c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlfcb0f40c950c4">
+		<description>Produits et Surfaces (198x)(Cedic, Nathan)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="12455684">
+				<rom name="Produits et Surfaces (198x)(Cedic, Nathan)(FR).wav" size="12455684" crc="03601389" sha1="fcb0f40c950c45d6a7913b0694ac5157d4f5cb4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlc4d3e1c7252f9">
+		<description>Reperes (198x)(EH Services)(FR)(beta)[unreleased]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="5615576">
+				<rom name="Reperes (198x)(EH Services)(FR)(beta)[unreleased].wav" size="5615576" crc="13b797a1" sha1="c4d3e1c7252f9fdd62e5ab7a933826dcb97cfbad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl8b301570ac3fa">
+		<description>Robix (198x)(Lacral Software)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="14220440">
+				<rom name="Robix (198x)(Lacral Software)(FR).wav" size="14220440" crc="dd81075e" sha1="8b301570ac3fa01cd63670c1734f752d6bf50db3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exle2d514390305e">
+		<description>Show-Note (19xx)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="5996008">
+				<rom name="Show-Note (19xx)(Edition PUSSY)(FR).wav" size="5996008" crc="ba7ee65a" sha1="e2d514390305ebff8b07eb138b600822ad0df1f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl4ac86d56a449b">
+		<description>Sommaire-Games (1988)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="2533512">
+				<rom name="Sommaire-Games (1988)(Edition PUSSY)(FR).wav" size="2533512" crc="7eca55ad" sha1="4ac86d56a449b59b3853f559949783da780b5e64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl93f339ba6c0da">
+		<description>Space Runner (1988)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="3432120">
+				<rom name="Space Runner (1988)(Edition PUSSY)(FR).wav" size="3432120" crc="774759d6" sha1="93f339ba6c0da98b81fbd485f74cee35eef471c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl7ae18bcfcb6f6">
+		<description>Startrek (198x)(Exelement Votre)(FR)(delete 130)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1089988">
+				<rom name="Startrek (198x)(Exelement Votre)(FR)(delete 130).wav" size="1089988" crc="d049ddc7" sha1="7ae18bcfcb6f6f49e0faf79468cd1b794480d525"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl203e78d0733e0">
+		<description>Super Line 4 (198x)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1947292">
+				<rom name="Super Line 4 (198x)(Edition PUSSY)(FR).wav" size="1947292" crc="6c46667a" sha1="203e78d0733e0e81648ec05d09efb58260460578"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl28af127f5cea3">
+		<description>Superbad (1985)(Exelvision)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="4976828">
+				<rom name="Superbad (1985)(Exelvision)(FR).wav" size="4976828" crc="2c6251e2" sha1="28af127f5cea3ffd9a7299f600152f343e6bba8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl8db7e8b6bb018">
+		<description>Symetries Translations (198x)(Cedic, Nathan)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="9851984">
+				<rom name="Symetries Translations (198x)(Cedic, Nathan)(FR).wav" size="9851984" crc="998e5704" sha1="8db7e8b6bb01888f686a05579c22c08fb61c2d85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl2dea240ad51bc">
+		<description>Tarot (1985-12-10)(Exelement Votre)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="13709672">
+				<rom name="Tarot (1985-12-10)(Exelement Votre)(FR).wav" size="13709672" crc="f917f483" sha1="2dea240ad51bcfe7dfa57b4fec95c2accbfe772e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl15fc9a52d9f95">
+		<description>Theme Astral (19xx)(Minipuce)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="3518120">
+				<rom name="Theme Astral (19xx)(Minipuce)(FR).wav" size="3518120" crc="15ac76d2" sha1="15fc9a52d9f9515809c0c13a8c0285e77dcc0eb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl8b750cd1dfc90">
+		<description>Tire Croise (198x)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1165546">
+				<rom name="Tire Croise (198x)(Edition PUSSY)(FR).wav" size="1165546" crc="656482d3" sha1="8b750cd1dfc90db5d1ad4d4f283e08d7e269bcc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl1fcd2463bd74f">
+		<description>Tour d'Europe (1985)(Exelvision)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="9400688">
+				<rom name="Tour d'Europe (1985)(Exelvision)(FR).wav" size="9400688" crc="0eae059a" sha1="1fcd2463bd74f5826753e16c23606f2ab735a2df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl464f4bc604e7c">
+		<description>Track-Ball 5 (1990)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="6085932">
+				<rom name="Track-Ball 5 (1990)(Edition PUSSY)(FR).wav" size="6085932" crc="b48eba5f" sha1="464f4bc604e7c80224be075201315dae68cf94a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl970ea75a3cd5f">
+		<description>Train de la Lecture, Le (198x)(EH Services)(FR)(beta)[unreleased]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="52495496">
+				<rom name="Train de la Lecture, Le (198x)(EH Services)(FR)(beta)[unreleased].wav" size="52495496" crc="5de91c90" sha1="970ea75a3cd5f7294f6ee9be7693378ef7d3632c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl9d3a489c397a0">
+		<description>Une Affaire en Or (198x)(Free Game Blot)(FR)[h Edition PUSSY]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="11697924">
+				<rom name="Une Affaire en Or (198x)(Free Game Blot)(FR)[h Edition PUSSY].wav" size="11697924" crc="ba2cf34c" sha1="9d3a489c397a0c11a17730fb16f4d49c34c5c814"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl6b956f39768fc">
+		<description>une-affaire-en-or_exl100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="1328836">
+				<rom name="une-affaire-en-or_exl100.wav" size="1328836" crc="005d2a26" sha1="6b956f39768fc6aa6f2d071ea94195c8cbcac377"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl6a5413884fc16">
+		<description>Vampire (198x)(Edition PUSSY)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="5000184">
+				<rom name="Vampire (198x)(Edition PUSSY)(FR).wav" size="5000184" crc="7d5e8dfa" sha1="6a5413884fc16b6122a858fb79a42a199252e752"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exla227bb1deaf98">
+		<description>Vega X4 (1986)(Minipuce)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="exelvision_cass">
+			<dataarea name="cass" size="12678452">
+				<rom name="Vega X4 (1986)(Minipuce)(FR).wav" size="12678452" crc="20f191aa" sha1="a227bb1deaf9863b7ebdc7c262dff850e46ece07"/>
 			</dataarea>
 		</part>
 	</software>

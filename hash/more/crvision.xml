@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 23 -->
+<!-- Number of items in this list = 20 -->
 <softwarelist name="crvision" description="crvision loose roms">
 	<software name="crv7523b938d2513">
 		<description>BASIC82A</description>
@@ -49,16 +49,6 @@
 		<part name="cart" interface="crvision_cart">
 			<dataarea name="rom" size="18432">
 				<rom name="CHOPPER.BIN" size="18432" crc="afb482ae" sha1="43dc37755306ac824492e98c9d0e25379ac69672"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="crv5226bc0fa08f1">
-		<description>CreatiVision BASIC Interpreter v1.0 (1981)(VTL)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="crvision_cart">
-			<dataarea name="rom" size="12288">
-				<rom name="CreatiVision BASIC Interpreter v1.0 (1981)(VTL).bin" size="12288" crc="10409a1d" sha1="5226bc0fa08f1046179572ed602ce157959bf92f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -129,26 +119,6 @@
 		<part name="cart" interface="crvision_cart">
 			<dataarea name="rom" size="10240">
 				<rom name="LOCOM10K.BIN" size="10240" crc="81b552ef" sha1="4b383260f8b0db5abe5a0c595f52d3dab55a6fb1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="crv4aa0db7b236ac">
-		<description>Locomotive (1981)(VTL)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="crvision_cart">
-			<dataarea name="rom" size="12288">
-				<rom name="Locomotive (1981)(VTL).bin" size="12288" crc="3618b415" sha1="4aa0db7b236ac512d777cfc811b58d59f9095ab1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="crvd1eb8c679310b">
-		<description>Music Maker (1983)(VTL)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="crvision_cart">
-			<dataarea name="rom" size="12288">
-				<rom name="Music Maker (1983)(VTL).bin" size="12288" crc="f8383d33" sha1="d1eb8c679310b8988ac4d018853b979613508b0e"/>
 			</dataarea>
 		</part>
 	</software>

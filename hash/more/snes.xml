@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3244 -->
+<!-- Number of items in this list = 3243 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -9739,16 +9739,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Jikkyou Powerful Pro Yakyuu 2 (Japan) (Rev A).sfc" size="2621440" crc="ee0c54b5" sha1="51d854f885125e831399e6bdbc3ff6fc726a120f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snse9e87b1459d63">
-		<description>Jim Power The Lost Dimension (USA) (Unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Jim Power The Lost Dimension (USA) (Unl).sfc" size="1048576" crc="929d8d10" sha1="e9e87b1459d63a78fb4865685835dc0ca8c74a53"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 622 -->
+<!-- Number of items in this list = 621 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -2399,16 +2399,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="10881">
 				<rom name="Haunted Caves (2013 Nicolas Campion).rom" size="10881" crc="359f0ae5" sha1="4deb349f4205b8efffd4e7325b76aa00b7c4d32d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col01092a3afacb7">
-		<description>Heist, The (1983) (Micro Fun)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="24576">
-				<rom name="Heist, The (1983) (Micro Fun).rom" size="24576" crc="6f2e2d84" sha1="01092a3afacb7e013c220c1aa6ce3c72ca400b5f"/>
 			</dataarea>
 		</part>
 	</software>

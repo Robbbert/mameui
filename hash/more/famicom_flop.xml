@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 508 -->
+<!-- Number of items in this list = 512 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -49,16 +49,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="(demo)Lutter (1989)(Athena)[ATH-LTD][tr En Mute].fds" size="131016" crc="934cfa97" sha1="c7d0b024b5e666c85dd128005c42e3833a25c261"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds775496d05cd09">
-		<description>(demo)Lutter (Japan)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="(demo)Lutter (Japan).fds" size="131016" crc="54335232" sha1="775496d05cd093521b813cd26e79181e62590af4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1202,6 +1192,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fdsd84cc8a87a9f0">
+		<description>dgolf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="65500">
+				<rom name="dgolf.fds" size="65500" crc="e9e99977" sha1="d84cc8a87a9f078318385632fe91f8b0d36add19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds2bcf3d9836e39">
+		<description>dgolf14</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="65500">
+				<rom name="dgolf14.fds" size="65500" crc="912cd8f8" sha1="2bcf3d9836e390d28371823f4cbcbca09cdb7677"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds55f6a103f34a0">
 		<description>Dig Dug (1990)(Namco Ltd.)</description>
 		<year>????</year>
@@ -1259,16 +1269,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Dirty Pair - Project Eden (J) [b].fds" size="131016" crc="8cfc042b" sha1="c6d96a8c1c4b2a78ef55ffa3403372223d4cc658"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fdsc7770b8e7dc02">
-		<description>Dirty Pair - Project Eden (J) [T+Eng0.9_Ballzysoft][o1]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="Dirty Pair - Project Eden (J) [T+Eng0.9_Ballzysoft][o1].fds" size="131016" crc="f3dc053a" sha1="c7770b8e7dc02160affea47626c83a752e0aeab9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2992,23 +2992,33 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="fdscfbf5b2944e9a">
-		<description>Maerchen Veil (Japan)</description>
+	<software name="fds775496d05cd09">
+		<description>Lutter (Japan)(1989)(Athena)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Maerchen Veil (Japan).fds" size="131016" crc="618d10a2" sha1="cfbf5b2944e9ae868362c889f89271c3f3f831d8"/>
+				<rom name="Lutter (Japan)(1989)(Athena).fds" size="131016" crc="54335232" sha1="775496d05cd093521b813cd26e79181e62590af4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdscfbf5b2944e9a">
+		<description>Maerchen Veil (Japan)(1987)(Sunsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Maerchen Veil (Japan)(1987)(Sunsoft).fds" size="131016" crc="618d10a2" sha1="cfbf5b2944e9ae868362c889f89271c3f3f831d8"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="fdsf010b62ec8f05">
-		<description>Magma Project - Hacker (1989)(Tokuma Shoten)</description>
+		<description>Magma Project - Hacker (Japan)(1989)(Bits Laboratory)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Magma Project - Hacker (1989)(Tokuma Shoten).fds" size="131016" crc="59d51115" sha1="f010b62ec8f0500f567b5839666d8e3606e373ef"/>
+				<rom name="Magma Project - Hacker (Japan)(1989)(Bits Laboratory).fds" size="131016" crc="59d51115" sha1="f010b62ec8f0500f567b5839666d8e3606e373ef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3082,6 +3092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds70c5f191bf714">
+		<description>Matou no Houkai - The Hero of Babel (Japan)(1988)(Pony Canyon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Matou no Houkai - The Hero of Babel (Japan)(1988)(Pony Canyon).fds" size="131016" crc="0596b36a" sha1="70c5f191bf714b627469a8e10e02e3e119afff58"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdsa2ee0ff860c33">
 		<description>Meikyuu Jiin Dababa (1987)(Konami)</description>
 		<year>????</year>
@@ -3113,22 +3133,22 @@
 		</part>
 	</software>
 	<software name="fds7a8b8549151a9">
-		<description>Meikyuu Jiin Dababa (Japan)</description>
+		<description>Meikyuu Jiin Dababa (Japan)(1987)(Konami)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
-				<rom name="Meikyuu Jiin Dababa (Japan).fds" size="131000" crc="1526d32e" sha1="7a8b8549151a9dbf9071690ef11a3dcd5136e899"/>
+				<rom name="Meikyuu Jiin Dababa (Japan)(1987)(Konami).fds" size="131000" crc="1526d32e" sha1="7a8b8549151a9dbf9071690ef11a3dcd5136e899"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="fds7b07d031d8979">
-		<description>Meikyuu Jiin Dababa (T-Eng)</description>
+		<description>Meikyuu Jiin Dababa T-Eng (2017)(FlashPV)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
-				<rom name="Meikyuu Jiin Dababa (T-Eng).fds" size="131000" crc="4d13e6b7" sha1="7b07d031d8979a7dd26a2e682b1967df6681e90f"/>
+				<rom name="Meikyuu Jiin Dababa T-Eng (2017)(FlashPV).fds" size="131000" crc="4d13e6b7" sha1="7b07d031d8979a7dd26a2e682b1967df6681e90f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3153,12 +3173,12 @@
 		</part>
 	</software>
 	<software name="fds741e51b01c3d9">
-		<description>Metroid (Japan) (2)</description>
+		<description>Metroid (Japan)(1986)(Nintendo)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
-				<rom name="Metroid (Japan) (2).fds" size="131000" crc="5e4f013d" sha1="741e51b01c3d9d814ae9acdd4d1ab6d8c34ef446"/>
+				<rom name="Metroid (Japan)(1986)(Nintendo).fds" size="131000" crc="5e4f013d" sha1="741e51b01c3d9d814ae9acdd4d1ab6d8c34ef446"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3169,16 +3189,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Metroid (Japan).fds" size="131016" crc="1b3ee73d" sha1="58fc9e55ca18e2b919473ed14b5ca1c48dbbd6c2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds90ca0c1eb49a9">
-		<description>Metroid (T-Eng)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131000">
-				<rom name="Metroid (T-Eng).fds" size="131000" crc="2711adba" sha1="90ca0c1eb49a9b0ed31e4c73c0725a2f39061d90"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3219,6 +3229,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
 				<rom name="Metroid (v1.2).fds" size="131000" crc="55ea3593" sha1="9478f21c435583fec43635fddecedf9c1ca47600"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds90ca0c1eb49a9">
+		<description>Metroid T-Eng (2016)(Jordiway73)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Metroid T-Eng (2016)(Jordiway73).fds" size="131000" crc="2711adba" sha1="90ca0c1eb49a9b0ed31e4c73c0725a2f39061d90"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3383,12 +3403,12 @@
 		</part>
 	</software>
 	<software name="fds3b32f0a664de5">
-		<description>Michael English Daibouken (Japan)</description>
+		<description>Michael English Daibouken (Japan)(1987)(Scorpion Soft)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
-				<rom name="Michael English Daibouken (Japan).fds" size="131000" crc="e5ab0e6c" sha1="3b32f0a664de501d0986ffa82088d4edb281a3d9"/>
+				<rom name="Michael English Daibouken (Japan)(1987)(Scorpion Soft).fds" size="131000" crc="e5ab0e6c" sha1="3b32f0a664de501d0986ffa82088d4edb281a3d9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3433,12 +3453,12 @@
 		</part>
 	</software>
 	<software name="fds1ad931e533a6d">
-		<description>Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan) (2)</description>
+		<description>Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan)(1986)(Konami)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan) (2).fds" size="131016" crc="0d684aa7" sha1="1ad931e533a6d538556fa0e2b157486c5a1699ed"/>
+				<rom name="Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan)(1986)(Konami).fds" size="131016" crc="0d684aa7" sha1="1ad931e533a6d538556fa0e2b157486c5a1699ed"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3513,12 +3533,12 @@
 		</part>
 	</software>
 	<software name="fdse8fd35e19f38c">
-		<description>Monty on the Run - Monty no Doki Doki Dai Dassou (Japan)</description>
+		<description>Monty on the Run - Monty no Doki Doki Dai Dassou (Japan)(1987)(Jaleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Monty on the Run - Monty no Doki Doki Dai Dassou (Japan).fds" size="131016" crc="bb7ab325" sha1="e8fd35e19f38cf92474e6dd1b9e4153e4befaf1b"/>
+				<rom name="Monty on the Run - Monty no Doki Doki Dai Dassou (Japan)(1987)(Jaleco).fds" size="131016" crc="bb7ab325" sha1="e8fd35e19f38cf92474e6dd1b9e4153e4befaf1b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3533,12 +3553,12 @@
 		</part>
 	</software>
 	<software name="fds629214f1c6e66">
-		<description>Moonball Magic (Japan)</description>
+		<description>Moonball Magic (Japan)(1988)(System Sacom)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Moonball Magic (Japan).fds" size="131016" crc="99a87df8" sha1="629214f1c6e667618bbcb3d4260d10d63262a34c"/>
+				<rom name="Moonball Magic (Japan)(1988)(System Sacom).fds" size="131016" crc="99a87df8" sha1="629214f1c6e667618bbcb3d4260d10d63262a34c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3549,6 +3569,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Mr. Gold - Kinsan in the Space (19xx)(-).fds" size="131016" crc="f795be0d" sha1="201594268416ac3d2bba09ffedbd0f1e1e11fc20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdsa7b612f1943da">
+		<description>Mysterious Murasame Castle T-Eng (2011)(Spinner 8 and friends)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Mysterious Murasame Castle T-Eng (2011)(Spinner 8 and friends).fds" size="131000" crc="5da99951" sha1="a7b612f1943da2d1c4e2eb9328e5825d18563ab5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3589,6 +3619,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Nazo no Kabe - Block Kuzushi (J) [b].fds" size="131016" crc="78cec241" sha1="5a15ba4a4e27b1262cecd5a25e716c0fecb75fc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds2e22b4fb16639">
+		<description>Nazo no Kabe - Block Kuzushi (Japan)(1986)(Konami)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Nazo no Kabe - Block Kuzushi (Japan)(1986)(Konami).fds" size="131000" crc="09292f11" sha1="2e22b4fb1663960dcb3003147d21f31d8a7f8ef6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3652,6 +3692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds3242634b2990d">
+		<description>Nazo no Murasamejou (Japan)(1986)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Nazo no Murasamejou (Japan)(1986)(Nintendo).fds" size="131016" crc="2acde825" sha1="3242634b2990d30a2c9621c6bd7c1b601d1928fe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds931dfbca25fef">
 		<description>ninja bubble (hack)</description>
 		<year>????</year>
@@ -3703,12 +3753,12 @@
 		</part>
 	</software>
 	<software name="fdsf25048640b037">
-		<description>Otocky (Japan)</description>
+		<description>Otocky (Japan)(1987)(ASCII)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Otocky (Japan).fds" size="131016" crc="d7a49861" sha1="f25048640b037e35feb1933d63de024933660e99"/>
+				<rom name="Otocky (Japan)(1987)(ASCII).fds" size="131016" crc="d7a49861" sha1="f25048640b037e35feb1933d63de024933660e99"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3743,12 +3793,12 @@
 		</part>
 	</software>
 	<software name="fdseb77d27e37da1">
-		<description>Patlabor - The Mobile Police - Dai 2 Shoutai Shutsudou Seyo! (Japan)</description>
+		<description>Patlabor - The Mobile Police - Dai 2 Shoutai Shutsudou Seyo! (Japan)(1989)(Bandai)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Patlabor - The Mobile Police - Dai 2 Shoutai Shutsudou Seyo! (Japan).fds" size="131016" crc="b5639859" sha1="eb77d27e37da113041044a7dac85e2adc178ed24"/>
+				<rom name="Patlabor - The Mobile Police - Dai 2 Shoutai Shutsudou Seyo! (Japan)(1989)(Bandai).fds" size="131016" crc="b5639859" sha1="eb77d27e37da113041044a7dac85e2adc178ed24"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3783,12 +3833,12 @@
 		</part>
 	</software>
 	<software name="fds2da43269a4028">
-		<description>Pro Golfer Saru - Kage no Tournament (Japan)</description>
+		<description>Pro Golfer Saru - Kage no Tournament (Japan)(1987)(Bandai)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Pro Golfer Saru - Kage no Tournament (Japan).fds" size="131016" crc="8261910e" sha1="2da43269a40288c7cc92e7e0296f1a7b85b3d559"/>
+				<rom name="Pro Golfer Saru - Kage no Tournament (Japan)(1987)(Bandai).fds" size="131016" crc="8261910e" sha1="2da43269a40288c7cc92e7e0296f1a7b85b3d559"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3823,12 +3873,12 @@
 		</part>
 	</software>
 	<software name="fds47d824a116ddb">
-		<description>Putt Putt Golf (Japan)</description>
+		<description>Putt Putt Golf (Japan)(1989)(Pack-In-Video)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Putt Putt Golf (Japan).fds" size="131016" crc="0ac52ae0" sha1="47d824a116ddb02254820d96c6b7b3bea7e9408e"/>
+				<rom name="Putt Putt Golf (Japan)(1989)(Pack-In-Video).fds" size="131016" crc="0ac52ae0" sha1="47d824a116ddb02254820d96c6b7b3bea7e9408e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3843,12 +3893,12 @@
 		</part>
 	</software>
 	<software name="fdsb0fe8d3acd2cc">
-		<description>Puzzle Boys (T-Eng)</description>
+		<description>Puzzle Boys T-Eng (2011)(DvD Translations)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
-				<rom name="Puzzle Boys (T-Eng).fds" size="131000" crc="fa03eba9" sha1="b0fe8d3acd2ccc145a5b6d254631076c6e5c5f0d"/>
+				<rom name="Puzzle Boys T-Eng (2011)(DvD Translations).fds" size="131000" crc="fa03eba9" sha1="b0fe8d3acd2ccc145a5b6d254631076c6e5c5f0d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3873,12 +3923,12 @@
 		</part>
 	</software>
 	<software name="fdsc3899b8ca0ec8">
-		<description>Radical Bomber!! Jirai-kun (Japan)</description>
+		<description>Radical Bomber!! Jirai-kun (Japan)(1988)(Jaleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Radical Bomber!! Jirai-kun (Japan).fds" size="131016" crc="2b41056b" sha1="c3899b8ca0ec82a199c80583c2d9f598684e1dc3"/>
+				<rom name="Radical Bomber!! Jirai-kun (Japan)(1988)(Jaleco).fds" size="131016" crc="2b41056b" sha1="c3899b8ca0ec82a199c80583c2d9f598684e1dc3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4699,16 +4749,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Wakusei Aton Gaiden (Japan) (National Tax Agency Demo).fds" size="131016" crc="94a825fa" sha1="e0f6d627d91cdbe10382a9dfdcb971897995505c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fdse0fdd1364717c">
-		<description>Wardner_no_Mori_(1988)(Taito_Corp)(J)[b2]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="Wardner_no_Mori_(1988)(Taito_Corp)(J)[b2].fds" size="131016" crc="9d9b3fed" sha1="e0fdd1364717c0cc8013f960cbd39311ca3fb66d"/>
 			</dataarea>
 		</part>
 	</software>

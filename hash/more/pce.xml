@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 164 -->
+<!-- Number of items in this list = 163 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1299,16 +1299,6 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Mashin Eiyuuden Wataru (English v1.0)(2022)(Stardust Crusaders).pce" size="524288" crc="53e14cb5" sha1="be1153f6c951689e59830dc5e1cd25311a1d8cbe"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pce59db3e9d69cf3">
-		<description>Mashin Eiyuuden Wataru (Japan)(1988)(Hudson Soft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pce_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Mashin Eiyuuden Wataru (Japan)(1988)(Hudson Soft).pce" size="262144" crc="2f8935aa" sha1="59db3e9d69cf34f76b6cb599d6c4fe6999162532"/>
 			</dataarea>
 		</part>
 	</software>

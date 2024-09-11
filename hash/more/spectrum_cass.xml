@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 386 -->
+<!-- Number of items in this list = 385 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -2819,16 +2819,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48128">
 				<rom name="Alien 8 (1985)(Ultimate)[t IQ Soft].tap" size="48128" crc="b899216b" sha1="470088af934374243a5fd3ee547bace89172a8bb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsda39a3ee5e6b4">
-		<description>Alien 8</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="0">
-				<rom name="Alien 8.tzx" size="0" crc="00000000" sha1="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
 			</dataarea>
 		</part>
 	</software>
