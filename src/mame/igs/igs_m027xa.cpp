@@ -21,7 +21,14 @@ These games use the IGS027A processor.
 #include "machine/nvram.h"
 #include "machine/timer.h"
 
+#include "sound/okim6295.h"
+
 #include "screen.h"
+#include "speaker.h"
+
+#define LOG_DEBUG       (1U << 1)
+//#define VERBOSE         (LOG_DEBUG)
+#include "logmacro.h"
 
 namespace {
 
@@ -35,10 +42,16 @@ public:
 		m_xa(*this, "xa"),
 		m_ppi(*this, "ppi8255"),
 		m_igs017_igs031(*this, "igs017_igs031"),
-		m_screen(*this, "screen")
+		m_oki(*this, "oki"),
+		m_screen(*this, "screen"),
+		m_external_rom(*this, "user1"),
+		m_io_test(*this, "TEST%u", 0U),
+		m_io_dsw(*this, "DSW%u", 1U)
 	{ }
 
 	void igs_mahjong_xa(machine_config &config);
+	void igs_mahjong_xa_xor(machine_config &config);
+	void igs_mahjong_xa_xor_disable(machine_config &config);
 
 	void init_crzybugs();
 	void init_crzybugsj();
@@ -48,6 +61,7 @@ public:
 
 protected:
 	virtual void machine_start() override;
+	virtual void machine_reset() override;
 	virtual void video_start() override;
 
 private:
@@ -56,27 +70,118 @@ private:
 	required_device<mx10exa_cpu_device> m_xa;
 	required_device<i8255_device> m_ppi;
 	required_device<igs017_igs031_device> m_igs017_igs031;
+	required_device<okim6295_device> m_oki;
 	required_device<screen_device> m_screen;
+	required_region_ptr<u32> m_external_rom;
+
+	optional_ioport_array<3> m_io_test;
+	optional_ioport_array<3> m_io_dsw;
+
+	emu_timer *m_timer0;
+	emu_timer *m_timer1;
+
+	u32 m_xor_table[0x100];
+	u8 m_io_select[2];
+
+	u8 m_port2_latch;
+	u8 m_port0_latch;
+	u32 m_irq_enable;  // m_irq_enable and m_irq_pending are not currently hooked up
+	u32 m_irq_pending; // it appears they will be needed to differentiate between IRQs from the XA and elsewhere though
+	u32 m_xa_cmd;
+	u32 m_xa_ret0;
+	bool irq_from_igs031;
+	bool irq_from_xa;
+	u8 m_port0_dat;
+	s8 m_num_params;
+	u8 m_port1_dat;
+	u8 m_port2_dat;
+	u8 m_port3_dat;
+
+	u32 m_igs_40000014;
 
 	TIMER_DEVICE_CALLBACK_MEMBER(interrupt);
 
 	void pgm_create_dummy_internal_arm_region();
-	void igs_mahjong_map(address_map &map);
+	void main_map(address_map &map);
+	void main_xor_map(address_map &map);
 
-	void igs_70000100_w(u32 data);
-	u32 m_igs_70000100 = 0;
+	void igs027_trigger_irq(int num);
 
-	u32 rnd_r()
-	{
-		return machine().rand();
-	}
+	u32 external_rom_r(offs_t offset);
+
+	void xor_table_w(offs_t offset, u8 data);
+
+	u16 xa_r(offs_t offset, u16 mem_mask);
+	void xa_w(offs_t offset, u16 data, u16 mem_mask);
+
+	void igs_40000014_w(offs_t offset, u32 data, u32 mem_mask);
+
+	u8 mcu_p0_r();
+	u8 mcu_p1_r();
+	u8 mcu_p2_r();
+	u8 mcu_p3_r();
+	void mcu_p0_w(uint8_t data);
+	void mcu_p1_w(uint8_t data);
+	void mcu_p2_w(uint8_t data);
+	void mcu_p3_w(uint8_t data);
+
+	u32 igs027_periph_r(offs_t offset, u32 mem_mask);
+	void igs027_periph_w(offs_t offset, u32 data, u32 mem_mask);
+
+	template <unsigned N>
+	TIMER_CALLBACK_MEMBER(igs027_timer_irq);
+
+	u32 gpio_r();
+	void oki_bank_w(offs_t offset, u8 data);
+	template <unsigned Select, unsigned First> u8 dsw_r();
+	template <unsigned Select> void io_select_w(u8 data);
 };
 
 
+void igs_m027xa_state::machine_reset()
+{
+	m_port2_latch = 0;
+	m_port0_latch = 0;
+	m_irq_enable = 0xff;
+	m_irq_pending = 0xff;
+	m_xa_cmd = 0;
+	m_xa_ret0 = 0;
+	irq_from_igs031 = false;
+	irq_from_xa = false;
+	m_num_params = 0;
+	m_port0_dat = 0;
+	m_port1_dat = 0;
+	m_port2_dat = 0;
+	m_port3_dat = 0;
+
+	m_igs_40000014 = 0;
+}
 
 void igs_m027xa_state::machine_start()
 {
-	save_item(NAME(m_igs_70000100));
+	std::fill(std::begin(m_xor_table), std::end(m_xor_table), 0);
+
+	save_item(NAME(m_xor_table));
+	save_item(NAME(m_io_select));
+
+	save_item(NAME(m_port2_latch));
+	save_item(NAME(m_port0_latch));
+	save_item(NAME(m_irq_enable));
+	save_item(NAME(m_irq_pending));
+	save_item(NAME(m_xa_cmd));
+	save_item(NAME(m_xa_ret0));
+	save_item(NAME(irq_from_igs031));
+	save_item(NAME(irq_from_xa));
+	save_item(NAME(m_num_params));
+	save_item(NAME(m_port0_dat));
+	save_item(NAME(m_port1_dat));
+	save_item(NAME(m_port2_dat));
+	save_item(NAME(m_port3_dat));
+
+	save_item(NAME(m_igs_40000014));
+
+	m_timer0 = timer_alloc(FUNC(igs_m027xa_state::igs027_timer_irq<0>), this);
+	m_timer1 = timer_alloc(FUNC(igs_m027xa_state::igs027_timer_irq<1>), this);
 }
 
 void igs_m027xa_state::video_start()
@@ -84,11 +189,49 @@ void igs_m027xa_state::video_start()
 	m_igs017_igs031->video_start();
 }
 
-void igs_m027xa_state::igs_70000100_w(u32 data)
+template <unsigned N>
+TIMER_CALLBACK_MEMBER(igs_m027xa_state::igs027_timer_irq)
 {
-	m_igs_70000100 = data;
+	igs027_trigger_irq(N);
 }
 
+void igs_m027xa_state::igs027_periph_w(offs_t offset, u32 data, u32 mem_mask)
+{
+	switch (offset * 4)
+	{
+	case 0x100:
+		// TODO: verify the timer interval
+		m_timer0->adjust(attotime::from_hz(data / 2), 0, attotime::from_hz(data / 2));
+		break;
+
+	case 0x104:
+		m_timer1->adjust(attotime::from_hz(data / 2), 0, attotime::from_hz(data / 2));
+		break;
+
+	case 0x200:
+		m_irq_enable = data;
+		break;
+
+	default:
+		LOGMASKED(LOG_DEBUG, "%s: unhandled igs027_periph_w %04x %08x (%08x)\n", machine().describe_context(), offset * 4, data, mem_mask);
+	}
+}
+
+u32 igs_m027xa_state::igs027_periph_r(offs_t offset, u32 mem_mask)
+{
+	u32 data = ~u32(0);
+	switch (offset * 4)
+	{
+	case 0x200:
+		data = m_irq_pending;
+		m_irq_pending = 0xff;
+		break;
+
+	default:
+		LOGMASKED(LOG_DEBUG, "%s: unhandled igs027_periph_r %04x (%08x)\n", machine().describe_context(), offset * 4, mem_mask);
+	}
+	return data;
+}
 
 /***************************************************************************
 
@@ -96,7 +239,7 @@ void igs_m027xa_state::igs_70000100_w(u32 data)
 
 ***************************************************************************/
 
-void igs_m027xa_state::igs_mahjong_map(address_map &map)
+void igs_m027xa_state::main_map(address_map &map)
 {
 	map(0x00000000, 0x00003fff).rom(); // Internal ROM
 	map(0x08000000, 0x0807ffff).rom().region("user1", 0); // Game ROM
@@ -104,49 +247,330 @@ void igs_m027xa_state::igs_mahjong_map(address_map &map)
 	map(0x18000000, 0x18007fff).ram();
 
 	map(0x38000000, 0x38007fff).rw(m_igs017_igs031, FUNC(igs017_igs031_device::read), FUNC(igs017_igs031_device::write));
+	map(0x38008000, 0x38008003).umask32(0x000000ff).rw(m_oki, FUNC(okim6295_device::read), FUNC(okim6295_device::write));
 	map(0x38009000, 0x38009003).rw(m_ppi, FUNC(i8255_device::read), FUNC(i8255_device::write));
-	map(0x4000000c, 0x4000000f).r(FUNC(igs_m027xa_state::rnd_r));
+	map(0x3800c000, 0x3800c003).w(FUNC(igs_m027xa_state::oki_bank_w));
+	map(0x4000000c, 0x4000000f).r(FUNC(igs_m027xa_state::gpio_r));
+	map(0x40000014, 0x40000017).w(FUNC(igs_m027xa_state::igs_40000014_w));
+	map(0x40000018, 0x4000001b).umask32(0x000000ff).w(FUNC(igs_m027xa_state::io_select_w<1>));
 
-	map(0x58000000, 0x580000ff).ram(); // XA?
+	map(0x58000000, 0x580000ff).rw(FUNC(igs_m027xa_state::xa_r), FUNC(igs_m027xa_state::xa_w));
 
-	map(0x70000100, 0x70000103).w(FUNC(igs_m027xa_state::igs_70000100_w));
+	map(0x70000000, 0x700003ff).rw(FUNC(igs_m027xa_state::igs027_periph_r), FUNC(igs_m027xa_state::igs027_periph_w));
 
-	map(0x70000200, 0x70000203).ram();     //??????????????
-	map(0x50000000, 0x500003ff).nopw(); // uploads XOR table to external ROM here
+	map(0x50000000, 0x500003ff).umask32(0x000000ff).w(FUNC(igs_m027xa_state::xor_table_w));
+
 	map(0xf0000000, 0xf000000f).nopw(); // magic registers
+}
+
+void igs_m027xa_state::main_xor_map(address_map &map)
+{
+	main_map(map);
+
+	map(0x08000000, 0x0807ffff).r(FUNC(igs_m027xa_state::external_rom_r)); // Game ROM
 }
 
 static INPUT_PORTS_START( base )
 	PORT_START("TEST0")
-	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_GAMBLE_BET )     PORT_NAME("Play")
+	PORT_SERVICE_NO_TOGGLE( 0x04, IP_ACTIVE_LOW )
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_GAMBLE_BOOK)
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_COIN1 )
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_GAMBLE_HIGH )    PORT_NAME("Big")
 
 	PORT_START("TEST1")
-	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_GAMBLE_KEYIN )
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_GAMBLE_KEYOUT )
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_SLOT_STOP_ALL )  PORT_NAME("Stop All Reels / Start")
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_BUTTON2 )        PORT_NAME("Ticket")
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNKNOWN ) // ticket sw
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN ) // ??
 
 	PORT_START("TEST2")
-	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x0000003f, IP_ACTIVE_LOW, IPT_UNUSED )
+	PORT_BIT( 0x00000040, IP_ACTIVE_LOW, IPT_SLOT_STOP2 ) PORT_NAME("Stop Reel 2 / Small")
+	PORT_BIT( 0x00000080, IP_ACTIVE_LOW, IPT_SLOT_STOP3 ) PORT_NAME("Stop Reel 3 / Take Score")
+	PORT_BIT( 0x00000100, IP_ACTIVE_LOW, IPT_SLOT_STOP1 ) PORT_NAME("Stop Reel 1 / Double Up")
+	PORT_BIT( 0xfffffe00, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("DSW1")
+	PORT_DIPNAME( 0x01, 0x01, DEF_STR(Demo_Sounds) )       PORT_DIPLOCATION("SW1:1")
+	PORT_DIPSETTING(    0x00, DEF_STR(Off) )
+	PORT_DIPSETTING(    0x01, DEF_STR(On) )
+	PORT_DIPNAME( 0x02, 0x02, "Non Stop" )                 PORT_DIPLOCATION("SW1:2")
+	PORT_DIPSETTING(    0x00, DEF_STR(Yes) )
+	PORT_DIPSETTING(    0x02, DEF_STR(No) )
+	PORT_DIPNAME( 0x04, 0x04, "Password" )                 PORT_DIPLOCATION("SW1:3")
+	PORT_DIPSETTING(    0x00, DEF_STR(No) )
+	PORT_DIPSETTING(    0x04, DEF_STR(Yes) )
+	PORT_DIPNAME( 0x08, 0x08, "Odds Table" )               PORT_DIPLOCATION("SW1:4")
+	PORT_DIPSETTING(    0x00, DEF_STR(No) )
+	PORT_DIPSETTING(    0x08, DEF_STR(Yes) )
+	PORT_DIPNAME( 0x10, 0x10, "Double Up Game" )           PORT_DIPLOCATION("SW1:5")
+	PORT_DIPSETTING(    0x00, DEF_STR(Off) )
+	PORT_DIPSETTING(    0x10, DEF_STR(On) )
+	PORT_DIPNAME( 0x60, 0x60, "Symbol" )                   PORT_DIPLOCATION("SW1:6,7")
+	PORT_DIPSETTING(    0x00, "Both" )
+	PORT_DIPSETTING(    0x20, "Both (duplicate)" )
+	PORT_DIPSETTING(    0x40, "Fruit" )
+	PORT_DIPSETTING(    0x60, "Bug" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x80, 0x80, "SW1:8" )
+
+	PORT_START("DSW2")
+	PORT_DIPNAME( 0x03, 0x03, "Score Box" )                PORT_DIPLOCATION("SW2:1,2")
+	PORT_DIPSETTING(    0x00, "10X" )
+	PORT_DIPSETTING(    0x01, "10X (duplicate)" )
+	PORT_DIPSETTING(    0x02, DEF_STR(Yes) )
+	PORT_DIPSETTING(    0x03, DEF_STR(No) )
+	PORT_DIPNAME( 0x04, 0x04, "Play Score" )               PORT_DIPLOCATION("SW2:3")
+	PORT_DIPSETTING(    0x00, DEF_STR(Yes) )
+	PORT_DIPSETTING(    0x04, DEF_STR(No) )
+	PORT_DIPNAME( 0x08, 0x08, "Hand Count" )               PORT_DIPLOCATION("SW2:4")
+	PORT_DIPSETTING(    0x00, DEF_STR(Yes) )
+	PORT_DIPSETTING(    0x08, DEF_STR(No) )
+	PORT_DIPNAME( 0x30, 0x30, "Hold Pair" )                PORT_DIPLOCATION("SW2:5,6")
+	PORT_DIPSETTING(    0x00, "Georgia" )
+	PORT_DIPSETTING(    0x10, "Georgia (duplicate)" )
+	PORT_DIPSETTING(    0x20, "Regular" )
+	PORT_DIPSETTING(    0x30, DEF_STR(Off) )
+	PORT_DIPNAME( 0x40, 0x40, "Auto Hold" )                PORT_DIPLOCATION("SW2:7")
+	PORT_DIPSETTING(    0x00, DEF_STR(Yes) )
+	PORT_DIPSETTING(    0x40, DEF_STR(No) )
+	PORT_DIPUNKNOWN_DIPLOC( 0x80, 0x80, "SW2:8" )
+
+	PORT_START("DSW3")
+	PORT_DIPUNKNOWN_DIPLOC( 0x01, 0x01, "SW3:1" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x02, 0x02, "SW3:2" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x04, 0x04, "SW3:3" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x08, 0x08, "SW3:4" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x10, 0x10, "SW3:5" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x20, 0x20, "SW3:6" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x40, 0x40, "SW3:7" )
+	PORT_DIPUNKNOWN_DIPLOC( 0x80, 0x80, "SW3:8" )
 INPUT_PORTS_END
+
+
+void igs_m027xa_state::igs027_trigger_irq(int num)
+{
+	if (!BIT(m_irq_enable, num))
+	{
+		m_irq_pending &= ~(u32(1) << num);
+		m_maincpu->pulse_input_line(ARM7_IRQ_LINE, m_maincpu->minimum_quantum_time());
+	}
+}
+
+u16 igs_m027xa_state::xa_r(offs_t offset, u16 mem_mask)
+{
+	u32 data = ~u32(0);
+
+	switch (offset * 2)
+	{
+	case 0:
+		data = m_xa_ret0;
+		break;
+	}
+	return data;
+}
+
+void igs_m027xa_state::igs_40000014_w(offs_t offset, u32 data, u32 mem_mask)
+{
+	// sets bit 1 before waiting on FIRQ, maybe it's an enable here?
+	m_igs_40000014 = data;
+}
+
+u32 igs_m027xa_state::gpio_r()
+{
+	u32 ret = m_io_test[2].read_safe(0xffffffff);
+	if (irq_from_igs031)
+		ret ^= 1 << 11;
+	if (irq_from_xa)
+		ret ^= 1 << 12;
+	return ret;
+}
+
+void igs_m027xa_state::oki_bank_w(offs_t offset, u8 data)
+{
+	if (offset == 0)
+		m_oki->set_rom_bank(data & 3);
+}
+
+template <unsigned Select, unsigned First>
+u8 igs_m027xa_state::dsw_r()
+{
+	u8 data = 0xff;
+
+	for (int i = First; i < m_io_dsw.size(); i++)
+		if (!BIT(m_io_select[Select], i - First))
+			data &= m_io_dsw[i].read_safe(0xff);
+	return data;
+}
+
+template <unsigned Select>
+void igs_m027xa_state::io_select_w(u8 data)
+{
+	m_io_select[Select] = data;
+}
+
+void igs_m027xa_state::xa_w(offs_t offset, u16 data, u16 mem_mask)
+{
+	m_xa_cmd = data;
+
+	if (offset == 0)
+	{
+		m_num_params--;
+
+		if (m_num_params <= 0)
+		{
+			LOGMASKED(LOG_DEBUG, "---------------m_xa_cmd is %02x size %02x\n", (data & 0xff00)>>8, data & 0xff);
+			m_num_params = data & 0xff;
+		}
+		else
+		{
+			LOGMASKED(LOG_DEBUG, "-------------------------- param %04x\n", data & 0xffff);
+		}
+		m_xa->set_input_line(XA_EXT_IRQ0, ASSERT_LINE);
+	}
+	else
+	{
+		irq_from_xa = false;
+		LOGMASKED(LOG_DEBUG, "%s: unhandled xa_w %04x %08x (%08x)\n", machine().describe_context(), offset * 2, data, mem_mask);
+	}
+}
+
+
+u8 igs_m027xa_state::mcu_p0_r()
+{
+	u8 ret = m_port0_latch;
+	LOGMASKED(LOG_DEBUG, "%s: COMMAND READ LOWER mcu_p0_r() returning %02x with port3 as %02x\n", machine().describe_context(), ret, m_port3_dat);
+	return ret;
+}
+
+u8 igs_m027xa_state::mcu_p1_r()
+{
+	LOGMASKED(LOG_DEBUG, "%s: mcu_p1_r()\n", machine().describe_context());
+	return m_port1_dat;
+}
+
+u8 igs_m027xa_state::mcu_p2_r()
+{
+	u8 ret = m_port2_latch;
+	LOGMASKED(LOG_DEBUG, "%s: COMMAND READ mcu_p2_r() returning %02x with port3 as %02x\n", machine().describe_context(), ret, m_port3_dat);
+	return m_port2_latch;
+}
+
+u8 igs_m027xa_state::mcu_p3_r()
+{
+	LOGMASKED(LOG_DEBUG, "%s: mcu_p3_r()\n", machine().describe_context());
+	return m_port3_dat;
+}
+
+template <typename T>
+constexpr bool posedge(T oldval, T val, unsigned bit)
+{
+	return BIT(~oldval & val, bit);
+}
+
+template <typename T>
+constexpr bool negedge(T oldval, T val, unsigned bit)
+{
+	return BIT(oldval & ~val, bit);
+}
+
+void igs_m027xa_state::mcu_p0_w(uint8_t data)
+{
+	LOGMASKED(LOG_DEBUG, "%s: mcu_p0_w() %02x with port 3 as %02x and port 1 as %02x\n", machine().describe_context(), data, m_port3_dat, m_port1_dat);
+	m_port0_dat = data;
+}
+
+void igs_m027xa_state::mcu_p1_w(uint8_t data)
+{
+	LOGMASKED(LOG_DEBUG, "%s: mcu_p1_w() %02x\n", machine().describe_context(), data);
+	m_port1_dat = data;
+}
+
+void igs_m027xa_state::mcu_p2_w(uint8_t data)
+{
+	m_port2_dat = data;
+	LOGMASKED(LOG_DEBUG, "%s: mcu_p2_w() %02x with port 3 as %02x\n", machine().describe_context(), data, m_port3_dat);
+}
+
+void igs_m027xa_state::mcu_p3_w(uint8_t data)
+{
+	u8 oldport3 = m_port3_dat;
+	m_port3_dat = data;
+	LOGMASKED(LOG_DEBUG, "%s: mcu_p3_w() %02x - do latches oldport3 %02x newport3 %02x\n", machine().describe_context(), data, oldport3, m_port3_dat);
+
+	if (posedge(oldport3, m_port3_dat, 5))
+	{
+		irq_from_xa = true;
+		igs027_trigger_irq(3);
+	}
+	// high->low transition on bit 0x80 must read into latches!
+	if (negedge(oldport3, m_port3_dat, 7))
+	{
+		LOGMASKED(LOG_DEBUG, "read command [%d] = [%04x]\n", m_port1_dat & 7, m_xa_cmd);
+		m_port2_latch = (m_xa_cmd & 0xff00) >> 8;
+		m_port0_latch = m_xa_cmd & 0x00ff;
+	}
+
+	if (negedge(oldport3, m_port3_dat, 6))
+	{
+		uint32_t dat = (m_port2_dat << 8) | m_port0_dat;
+		LOGMASKED(LOG_DEBUG, "write command [%d] = [%04x]\n", m_port1_dat & 7, dat);
+		m_xa_ret0 = dat;
+	}
+}
+
+u32 igs_m027xa_state::external_rom_r(offs_t offset)
+{
+	return m_external_rom[offset] ^ m_xor_table[offset & 0x00ff];
+}
+
+
+void igs_m027xa_state::xor_table_w(offs_t offset, u8 data)
+{
+	m_xor_table[offset] = (u32(data) << 24) | (u32(data) << 8);
+}
+
+
 
 TIMER_DEVICE_CALLBACK_MEMBER(igs_m027xa_state::interrupt)
 {
 	int scanline = param;
 
-	if (scanline == 240 && m_igs017_igs031->get_irq_enable())
-		m_maincpu->pulse_input_line(ARM7_IRQ_LINE, m_maincpu->minimum_quantum_time()); // source? (can the XA trigger this?)
+	// should be using igs027_trigger_irq with more compelx interrupt logic?
 
-	if (scanline == 0 && m_igs017_igs031->get_nmi_enable())
+	if (scanline == 240 && m_igs017_igs031->get_irq_enable())
+	{
+		irq_from_igs031 = true;
+		igs027_trigger_irq(3);
+	}
+	if (scanline == 0 && (m_igs_40000014 & 1))
 		m_maincpu->pulse_input_line(ARM7_FIRQ_LINE, m_maincpu->minimum_quantum_time()); // vbl?
 }
 
 
 void igs_m027xa_state::igs_mahjong_xa(machine_config &config)
 {
-	ARM7(config, m_maincpu, 22000000); // Crazy Bugs has a 22Mhz Xtal, what about the others?
-	m_maincpu->set_addrmap(AS_PROGRAM, &igs_m027xa_state::igs_mahjong_map);
+	ARM7(config, m_maincpu, 22'000'000); // Crazy Bugs has a 22MHz crystal, what about the others?
+	m_maincpu->set_addrmap(AS_PROGRAM, &igs_m027xa_state::main_map);
 
 //  NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
-	MX10EXA(config, m_xa, 10000000); // MX10EXAQC (Philips 80C51 XA) unknown frequency
+	MX10EXA(config, m_xa, 10'000'000); // MX10EXAQC (Philips 80C51 XA) unknown frequency
+	m_xa->port_in_cb<0>().set(FUNC(igs_m027xa_state::mcu_p0_r));
+	m_xa->port_in_cb<1>().set(FUNC(igs_m027xa_state::mcu_p1_r));
+	m_xa->port_in_cb<2>().set(FUNC(igs_m027xa_state::mcu_p2_r));
+	m_xa->port_in_cb<3>().set(FUNC(igs_m027xa_state::mcu_p3_r));
+	m_xa->port_out_cb<0>().set(FUNC(igs_m027xa_state::mcu_p0_w));
+	m_xa->port_out_cb<1>().set(FUNC(igs_m027xa_state::mcu_p1_w));
+	m_xa->port_out_cb<2>().set(FUNC(igs_m027xa_state::mcu_p2_w));
+	m_xa->port_out_cb<3>().set(FUNC(igs_m027xa_state::mcu_p3_w));
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	m_screen->set_refresh_hz(60);
@@ -163,13 +587,30 @@ void igs_m027xa_state::igs_mahjong_xa(machine_config &config)
 
 	IGS017_IGS031(config, m_igs017_igs031, 0);
 	m_igs017_igs031->set_text_reverse_bits(true);
-	m_igs017_igs031->in_pa_callback().set_ioport("TEST0");
-	m_igs017_igs031->in_pb_callback().set_ioport("TEST1");
-	m_igs017_igs031->in_pc_callback().set_ioport("TEST2");
+	m_igs017_igs031->in_pa_callback().set(NAME((&igs_m027xa_state::dsw_r<1, 0>)));
+	m_igs017_igs031->in_pb_callback().set_ioport("TEST0");
+	m_igs017_igs031->in_pc_callback().set_ioport("TEST1");
 
 	// sound hardware
-	// OK6295
+	SPEAKER(config, "mono").front_center();
+	OKIM6295(config, m_oki, 1000000, okim6295_device::PIN7_HIGH).add_route(ALL_OUTPUTS, "mono", 0.5);
 }
+
+void igs_m027xa_state::igs_mahjong_xa_xor(machine_config &config)
+{
+	igs_mahjong_xa(config);
+
+	m_maincpu->set_addrmap(AS_PROGRAM, &igs_m027xa_state::main_xor_map);
+}
+
+void igs_m027xa_state::igs_mahjong_xa_xor_disable(machine_config &config)
+{
+	igs_mahjong_xa_xor(config);
+
+	m_xa->set_disable();
+}
+
+
 
 // prg at u34
 // text at u15
@@ -195,7 +636,7 @@ ROM_START( haunthig )
 	ROM_LOAD( "haunted-h_cg.u32",  0x000000, 0x400000, BAD_DUMP CRC(e0ea10e6) SHA1(e81be78fea93e72d4b1f4c0b58560bda46cf7948) ) // not dumped for this set, FIXED BITS (xxxxxxx0xxxxxxxx)
 	ROM_LOAD( "haunted-h_ext.u12", 0x400000, 0x400000, BAD_DUMP CRC(662eb883) SHA1(831ebe29e1e7a8b2c2fff7fbc608975771c3486c) ) // not dumped for this set, FIXED BITS (xxxxxxxx0xxxxxxx)
 
-	ROM_REGION( 0x200000, "samples", 0 ) // Oki M6295 samples, missing sample table, bad?
+	ROM_REGION( 0x200000, "oki", 0 ) // Oki M6295 samples, missing sample table, bad?
 	ROM_LOAD( "haunted-h_sp.u3", 0x00000, 0x200000,  BAD_DUMP CRC(fe3fcddf) SHA1(ac57ab6d4e4883747c093bd19d0025cf6588cb2c) ) // not dumped for this set
 
 	ROM_REGION( 0x500, "plds", ROMREGION_ERASE00 )
@@ -222,7 +663,7 @@ ROM_START( haunthiga ) // IGS PCB-0575-04-HU - Has IGS027A, MX10EXAQC, IGS031, O
 	ROM_LOAD( "haunted-h_cg.u32",  0x000000, 0x400000, CRC(e0ea10e6) SHA1(e81be78fea93e72d4b1f4c0b58560bda46cf7948) ) // FIXED BITS (xxxxxxx0xxxxxxxx)
 	ROM_LOAD( "haunted-h_ext.u12", 0x400000, 0x400000, CRC(662eb883) SHA1(831ebe29e1e7a8b2c2fff7fbc608975771c3486c) ) // FIXED BITS (xxxxxxxx0xxxxxxx)
 
-	ROM_REGION( 0x200000, "samples", 0 ) // Oki M6295 samples, missing sample table, bad?
+	ROM_REGION( 0x200000, "oki", 0 ) // Oki M6295 samples, missing sample table, bad?
 	ROM_LOAD( "haunted-h_sp.u3", 0x00000, 0x200000, BAD_DUMP CRC(fe3fcddf) SHA1(ac57ab6d4e4883747c093bd19d0025cf6588cb2c) )
 
 	ROM_REGION( 0x500, "plds", ROMREGION_ERASE00 )
@@ -249,7 +690,7 @@ ROM_START( crzybugs ) // IGS PCB-0447-05-GM - Has IGS027A, MX10EXAQC, IGS031, Ok
 	ROM_LOAD( "crazy_bugs_cg.u19",  0x000000, 0x200000, CRC(9d53ad47) SHA1(46690a37acf8bd88c7fbe973db2faf5ef0cff805) ) // FIXED BITS (xxxxxxx0xxxxxxxx)
 	// u18 not populated
 
-	ROM_REGION( 0x200000, "samples", 0 ) // plain Oki M6295 samples
+	ROM_REGION( 0x200000, "oki", 0 ) // plain Oki M6295 samples
 	ROM_LOAD( "crazybugs_sp.u15", 0x000000, 0x200000, CRC(591b315b) SHA1(fda1816d83e202170dba4afc6e7898b706a76087) ) // M27C160
 ROM_END
 
@@ -272,7 +713,7 @@ ROM_START( crzybugsa )
 	ROM_LOAD( "crazy_bugs_cg.u19",  0x000000, 0x200000, CRC(9d53ad47) SHA1(46690a37acf8bd88c7fbe973db2faf5ef0cff805) ) // M27C160, FIXED BITS (xxxxxxx0xxxxxxxx)
 	// u18 not populated
 
-	ROM_REGION( 0x200000, "samples", 0 ) // plain Oki M6295 samples
+	ROM_REGION( 0x200000, "oki", 0 ) // plain Oki M6295 samples
 	ROM_LOAD( "crazy_bugs_sp.u15", 0x000000, 0x200000, CRC(591b315b) SHA1(fda1816d83e202170dba4afc6e7898b706a76087) ) // M27C160
 ROM_END
 
@@ -295,7 +736,7 @@ ROM_START( crzybugsb )
 	ROM_LOAD( "crazy_bugs_cg.u19",  0x000000, 0x200000, BAD_DUMP CRC(9d53ad47) SHA1(46690a37acf8bd88c7fbe973db2faf5ef0cff805) ) // not dumped for this set, FIXED BITS (xxxxxxx0xxxxxxxx)
 	// u18 not populated
 
-	ROM_REGION( 0x200000, "samples", 0 ) // plain Oki M6295 samples
+	ROM_REGION( 0x200000, "oki", 0 ) // plain Oki M6295 samples
 	ROM_LOAD( "crazy_bugs_sp.u15", 0x000000, 0x200000, BAD_DUMP CRC(591b315b) SHA1(fda1816d83e202170dba4afc6e7898b706a76087) ) // not dumped for this set
 ROM_END
 
@@ -319,7 +760,7 @@ ROM_START( crzybugsj ) // IGS PCB-0575-04-HU - Has IGS027A, MX10EXAQC, IGS031, O
 	ROM_LOAD( "crazy_bugs_ani-cg-u32.u32",  0x000000, 0x200000, CRC(9d53ad47) SHA1(46690a37acf8bd88c7fbe973db2faf5ef0cff805) ) // FIXED BITS (xxxxxxx0xxxxxxxx)
 	// u12 not populated
 
-	ROM_REGION( 0x200000, "samples", 0 ) // plain Oki M6295 samples
+	ROM_REGION( 0x200000, "oki", 0 ) // plain Oki M6295 samples
 	ROM_LOAD( "crazy_bugs_sp_u3.u3", 0x000000, 0x200000,  CRC(b15974a1) SHA1(82509902bbb33a2120d815e7879b9b8591a29976) )
 
 	ROM_REGION( 0x500, "plds", ROMREGION_ERASE00 )
@@ -345,7 +786,7 @@ ROM_START( tripfev ) // IGS PCB-0447-05-GM - Has IGS027A, MX10EXAQC, IGS031, Oki
 	ROM_LOAD( "triple_fever_u19_cg.u19",  0x000000, 0x400000, CRC(cd45bbf2) SHA1(7f1cf270245bbe4604de2cacade279ab13584dbd) ) // M27C322, FIXED BITS (xxxxxxx0xxxxxxxx)
 	// u18 not populated
 
-	ROM_REGION( 0x200000, "samples", 0 ) // plain Oki M6295 samples
+	ROM_REGION( 0x200000, "oki", 0 ) // plain Oki M6295 samples
 	ROM_LOAD( "triplef_sp_u15.u15", 0x000000, 0x200000, CRC(98b9cafd) SHA1(3bf3971f0d9520c98fc6b1c2e77ab9c178d21c62) ) // M27C160
 ROM_END
 
@@ -367,7 +808,7 @@ ROM_START( wldfruit ) // IGS PCB-0447-05-GM - Has IGS027A, MX10EXAQC, IGS031, Ok
 	ROM_LOAD( "wild_fruit_cg.u19",  0x000000, 0x400000, CRC(119686a8) SHA1(22583c1a1018cfdd20f0ef696d91fa1f6e01ab00) ) // M27C322, FIXED BITS (xxxxxxx0xxxxxxxx)
 	// u18 not populated
 
-	ROM_REGION( 0x200000, "samples", 0 ) // plain Oki M6295 samples
+	ROM_REGION( 0x200000, "oki", 0 ) // plain Oki M6295 samples
 	ROM_LOAD( "wild_fruit_sp.u15", 0x000000, 0x200000, CRC(9da3e9dd) SHA1(7e447492713549e6be362d4aca6d223dad20771a) ) // M27C160
 ROM_END
 
@@ -433,13 +874,18 @@ void igs_m027xa_state::init_wldfruit()
 
 } // anonymous namespace
 
-// These use the MX10EXAQC (80c51XA from Philips) and maybe don't belong in here
+// These use the MX10EXAQC (80c51XA from Philips)
 // the PCBs are closer to igs_fear.cpp in terms of layout
-GAME( 2008, haunthig,  0,        igs_mahjong_xa, base,     igs_m027xa_state, init_hauntedh,  ROT0, "IGS", "Haunted House (IGS, V109US)", MACHINE_IS_SKELETON ) // IGS FOR V109US 2008 10 14
-GAME( 2006, haunthiga, haunthig, igs_mahjong_xa, base,     igs_m027xa_state, init_hauntedh,  ROT0, "IGS", "Haunted House (IGS, V101US)", MACHINE_IS_SKELETON ) // IGS FOR V101US 2006 08 23
-GAME( 2009, crzybugs,  0,        igs_mahjong_xa, base,     igs_m027xa_state, init_crzybugs,  ROT0, "IGS", "Crazy Bugs (V204US)", MACHINE_IS_SKELETON ) // IGS FOR V204US 2009 5 19
-GAME( 2006, crzybugsa, crzybugs, igs_mahjong_xa, base,     igs_m027xa_state, init_crzybugs,  ROT0, "IGS", "Crazy Bugs (V202US)", MACHINE_IS_SKELETON ) // IGS FOR V100US 2006 3 29 but also V202US string
-GAME( 2005, crzybugsb, crzybugs, igs_mahjong_xa, base,     igs_m027xa_state, init_crzybugs,  ROT0, "IGS", "Crazy Bugs (V200US)", MACHINE_IS_SKELETON ) // FOR V100US 2005 7 20 but also V200US string
-GAME( 2007, crzybugsj, crzybugs, igs_mahjong_xa, base,     igs_m027xa_state, init_crzybugsj, ROT0, "IGS", "Crazy Bugs (V103JP)", MACHINE_IS_SKELETON ) // IGS FOR V101JP 2007 06 08
-GAME( 2006, tripfev,   0,        igs_mahjong_xa, base,     igs_m027xa_state, init_tripfev,   ROT0, "IGS", "Triple Fever (V107US)", MACHINE_IS_SKELETON ) // IGS FOR V107US 2006 09 07
+GAME( 2008, haunthig,  0,        igs_mahjong_xa,     base,     igs_m027xa_state, init_hauntedh,  ROT0, "IGS", "Haunted House (IGS, V109US)", MACHINE_IS_SKELETON ) // IGS FOR V109US 2008 10 14
+GAME( 2006, haunthiga, haunthig, igs_mahjong_xa,     base,     igs_m027xa_state, init_hauntedh,  ROT0, "IGS", "Haunted House (IGS, V101US)", MACHINE_IS_SKELETON ) // IGS FOR V101US 2006 08 23
+
+GAME( 2009, crzybugs,  0,        igs_mahjong_xa_xor, base,     igs_m027xa_state, init_crzybugs,  ROT0, "IGS", "Crazy Bugs (V204US)", MACHINE_IS_SKELETON ) // IGS FOR V204US 2009 5 19
+GAME( 2006, crzybugsa, crzybugs, igs_mahjong_xa_xor, base,     igs_m027xa_state, init_crzybugs,  ROT0, "IGS", "Crazy Bugs (V202US)", MACHINE_IS_SKELETON ) // IGS FOR V100US 2006 3 29 but also V202US string
+GAME( 2005, crzybugsb, crzybugs, igs_mahjong_xa_xor, base,     igs_m027xa_state, init_crzybugs,  ROT0, "IGS", "Crazy Bugs (V200US)", MACHINE_IS_SKELETON ) // FOR V100US 2005 7 20 but also V200US string
+
+GAME( 2007, crzybugsj, crzybugs, igs_mahjong_xa,     base,     igs_m027xa_state, init_crzybugsj, ROT0, "IGS", "Crazy Bugs (V103JP)", MACHINE_IS_SKELETON ) // IGS FOR V101JP 2007 06 08
+
+// XA dump is missing, so XA CPU will crash, disable for now
+GAME( 2006, tripfev,   0,        igs_mahjong_xa_xor_disable, base,     igs_m027xa_state, init_tripfev,   ROT0, "IGS", "Triple Fever (V107US)", MACHINE_IS_SKELETON ) // IGS FOR V107US 2006 09 07
+
 GAME( 200?, wldfruit,  0,        igs_mahjong_xa, base,     igs_m027xa_state, init_wldfruit,  ROT0, "IGS", "Wild Fruit (V208US)", MACHINE_IS_SKELETON ) // IGS-----97----V208US
