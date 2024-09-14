@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 212 -->
+<!-- Number of items in this list = 213 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -1249,6 +1249,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="96698">
 				<rom name="Espada Sagrada, La (1990)(Topo Soft)(es)(128k).z80" size="96698" crc="9c1cd13d" sha1="29bf04c4b2161a2bd9318a24284da606f26ef6fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs47faa7af6cf03">
+		<description>Espionage Island</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="20787">
+				<rom name="Espionage Island.z80" size="20787" crc="5775ea75" sha1="47faa7af6cf03fb9fe12e163153f2650893943bb"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="multi8" description="multi8 loose roms">
+	<software name="mulfb6af44efd249">
+		<description>Multi-8 Demo (1983)(Mitsubishi)[AP-1,SHUKEI,DEMO]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="multi8_cass">
+			<dataarea name="cass" size="11320024">
+				<rom name="Multi-8 Demo (1983)(Mitsubishi)[AP-1,SHUKEI,DEMO].wav" size="11320024" crc="e8ab5e31" sha1="fb6af44efd24954efa40dbf2a424bfc14b852e73"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

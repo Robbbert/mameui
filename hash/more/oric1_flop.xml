@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 239 -->
+<!-- Number of items in this list = 258 -->
 <softwarelist name="oric1_flop" description="oric1_flop loose roms">
 	<software name="orif92e3eca92d51">
 		<description>3dfongus</description>
@@ -272,6 +272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ori367e506a755ab">
+		<description>BREAKOUT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="1049856">
+				<rom name="BREAKOUT.dsk" size="1049856" crc="a86b5655" sha1="367e506a755ab0e7925187b5939022b7a988228a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori205a2f80a4529">
 		<description>BRIQUES</description>
 		<year>????</year>
@@ -392,6 +402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ori72ac96222a6c2">
+		<description>Chopper (19xx)(-)[b][Sedoric][B- CHOP]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Chopper (19xx)(-)[b][Sedoric][B- CHOP].dsk" size="269056" crc="b0d876c2" sha1="72ac96222a6c2ea3b924f1003f967f64be284737"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="oriab67fd857d123">
 		<description>CIDRE</description>
 		<year>????</year>
@@ -489,6 +509,16 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1049856">
 				<rom name="Creepy Castle (UK) (19xx).dsk" size="1049856" crc="d17a21c4" sha1="216b830b9b9434ff246a6cf9e1fe82b057aef376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori33bb29b365480">
+		<description>Defense Force (19xx)(Tansoft)[Sedoric][noboot]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Defense Force (19xx)(Tansoft)[Sedoric][noboot].dsk" size="269056" crc="acea67d5" sha1="33bb29b365480898bd886a28c3b6d4892f7bef22"/>
 			</dataarea>
 		</part>
 	</software>
@@ -632,6 +662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="oriddcdef5e582b3">
+		<description>Fire Flash (1984)(No Man's Land)[Sedoric][B- FIREFLASH]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Fire Flash (1984)(No Man's Land)[Sedoric][B- FIREFLASH].dsk" size="269056" crc="b2b0e9bc" sha1="ddcdef5e582b346c383831f12577af0dbe782148"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori743b7f767c74d">
 		<description>FONTEDIT</description>
 		<year>????</year>
@@ -682,6 +722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="oric23d6319c70b9">
+		<description>Ghost Gobbler (19xx)(Christophe Devalland)(fr)[Sedoric][B-PACMAN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Ghost Gobbler (19xx)(Christophe Devalland)(fr)[Sedoric][B-PACMAN].dsk" size="269056" crc="7f441eb9" sha1="c23d6319c70b9d42d760f1b6ecfe0b7b118656ae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="oriaafa207897b9a">
 		<description>GoSnow Demo by Twilighte (1991) (PD)</description>
 		<year>????</year>
@@ -712,6 +762,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ori94ccfaf2e1f03">
+		<description>Gubbie (1985)(Alexander Aghassipour)[Sedoric][B- GUBBIE]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Gubbie (1985)(Alexander Aghassipour)[Sedoric][B- GUBBIE].dsk" size="269056" crc="e6158f19" sha1="94ccfaf2e1f0330c9e34a38e76dae088b1646c39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oricb01eb6a1e490">
+		<description>Hellion (1984)(Orpheus)(fr)[Sedoric][B- HELLION]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Hellion (1984)(Orpheus)(fr)[Sedoric][B- HELLION].dsk" size="269056" crc="0e89cdc5" sha1="cb01eb6a1e4907120cb636e277612d422e2410dc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori9552058251e17">
 		<description>Hide (Hires-Inlay Dynamic Editor) V1.1 by Twilighte (PD)</description>
 		<year>????</year>
@@ -719,6 +789,16 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1049856">
 				<rom name="Hide (Hires-Inlay Dynamic Editor) V1.1 by Twilighte (PD).dsk" size="1049856" crc="b4a36e12" sha1="9552058251e176b5f22a5db743541f99b7e28545"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orib39a57c863cf4">
+		<description>Hu-Bert (1984)(Loriciels)(fr)[Sedoric][B- HUB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Hu-Bert (1984)(Loriciels)(fr)[Sedoric][B- HUB].dsk" size="269056" crc="dcbf90b8" sha1="b39a57c863cf4752f7967f2f744a15f54f99cdac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -799,6 +879,26 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1049856">
 				<rom name="INDIANA.dsk" size="1049856" crc="5a478590" sha1="c364369486c7afdcbc2fe80fdcad2b6cce08281d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori60394e272cec0">
+		<description>Insect Insanity (1984)(Tansoft Ltd)[Sedoric][B- INSECT]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Insect Insanity (1984)(Tansoft Ltd)[Sedoric][B- INSECT].dsk" size="269056" crc="00b161bc" sha1="60394e272cec0ba5aa18a640daacdd9adbcfa205"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori166c385d6496c">
+		<description>Invaders (1983)(IJK Software#Barrie Cridland)[Sedoric][B- INV]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Invaders (1983)(IJK Software#Barrie Cridland)[Sedoric][B- INV].dsk" size="269056" crc="fa3de464" sha1="166c385d6496c6562ab632e5b1855e838731a780"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1032,6 +1132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="oric63d419d6bb13">
+		<description>Manic Miner (19xx)(Tina Billett)[Sedoric][B-MANICMNR]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Manic Miner (19xx)(Tina Billett)[Sedoric][B-MANICMNR].dsk" size="269056" crc="96691a34" sha1="c63d419d6bb132069f955ea1e15de8a0b0921fe9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori2e54bd3c0d7dc">
 		<description>Marvel Adventure #1-The Hulk (19xx)(Marvel)</description>
 		<year>????</year>
@@ -1229,6 +1339,16 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1049856">
 				<rom name="MORPION.dsk" size="1049856" crc="2dfc7104" sha1="4366c614fd6e6b1ffbb1ba0730e4981211279a46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori6ff79f5504095">
+		<description>Mr. Wimpy (1984)(Ocean Software Ltd)[Sedoric][B-WIMPY]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Mr. Wimpy (1984)(Ocean Software Ltd)[Sedoric][B-WIMPY].dsk" size="269056" crc="dbfdb910" sha1="6ff79f5504095630a46de9f81bc0a3520ca2102a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1622,6 +1742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="orie4255e58c98b9">
+		<description>Probe 3 (1985)(IJK SoftwarePeps)[Sedoric][B- START]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Probe 3 (1985)(IJK SoftwarePeps)[Sedoric][B- START].dsk" size="269056" crc="f9cf29fc" sha1="e4255e58c98b99c4b326ee4b1611cfef07a1c0b6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori26ade3f60b446">
 		<description>Protopus Boot 1-2 Et 3 Avec Rfm + Objets (1986)(-)(fr)[Sedoric]</description>
 		<year>????</year>
@@ -1679,6 +1809,16 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="256256">
 				<rom name="randos2002.dsk" size="256256" crc="5aaacae6" sha1="cf76b22dc903cc0b5ee4bbdc6b642e73925a23ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori57b721ffa7625">
+		<description>Rat Splat (19xx)(Tansoft - John Marshall)[Sedoric][B-RAT]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Rat Splat (19xx)(Tansoft - John Marshall)[Sedoric][B-RAT].dsk" size="269056" crc="b65bea90" sha1="57b721ffa7625a246fecad6c25ec1fd55018f411"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2062,6 +2202,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ori803327799cc74">
+		<description>Styx (1984)(No Man's Land)[Sedoric][B-STYX2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Styx (1984)(No Man's Land)[Sedoric][B-STYX2].dsk" size="269056" crc="6d889ea2" sha1="803327799cc74ece99cc9c53cfb3c27afef3923a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oric4cbf9120d750">
+		<description>Super Jeep (1984)(Loriciels)[Sedoric][B-JEEP]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Super Jeep (1984)(Loriciels)[Sedoric][B-JEEP].dsk" size="269056" crc="61386890" sha1="c4cbf9120d7505e76b3254ebbc98a72cabe836eb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="orie4936f6e8869c">
 		<description>TANK</description>
 		<year>????</year>
@@ -2222,6 +2382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ori52796c8b38625">
+		<description>Ultra (19xx)(-)[b][Sedoric][B- ULTRA]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Ultra (19xx)(-)[b][Sedoric][B- ULTRA].dsk" size="269056" crc="4f249eaa" sha1="52796c8b386258416650861474bc4fab474e091f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="orie5dadf8cdeb01">
 		<description>Utilitaires Pour Obtf Et Listage Des Objets (1986)(-)(fr)[Sedoric]</description>
 		<year>????</year>
@@ -2299,6 +2469,16 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1024256">
 				<rom name="X-Files, The (UK) (19xx).dsk" size="1024256" crc="c1e9382f" sha1="57231048e4790b1f76a48a5798523fe4cbd82b80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori31919a5fc4477">
+		<description>Xenon 1 (UK) (1983) (Disk Version)[B- XEN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Xenon 1 (UK) (1983) (Disk Version)[B- XEN].dsk" size="269056" crc="2040004d" sha1="31919a5fc4477d0186d6daf7ef87f8125cde8bca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2389,6 +2569,16 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="205056">
 				<rom name="ZODIAC.dsk" size="205056" crc="efa6c1a7" sha1="e0b5518f596a10b642cad2647791df3806b24eb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orid7eacf3642d6a">
+		<description>Zorgon's Revenge (1983)(IJK Software Ltd)[Sedoric][B- ZORG]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Zorgon's Revenge (1983)(IJK Software Ltd)[Sedoric][B- ZORG].dsk" size="269056" crc="448b7b0e" sha1="d7eacf3642d6ad8b84a85776edfe61592f23ecbc"/>
 			</dataarea>
 		</part>
 	</software>

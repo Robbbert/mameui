@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 385 -->
+<!-- Number of items in this list = 400 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -3849,6 +3849,156 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="9122">
 				<rom name="Anyove (19xx)(-).tap" size="9122" crc="31fa4229" sha1="8d64d3cc40ebc2074fcfd13028ac7da113f95048"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc4c25fa20f7dc">
+		<description>APB - All Points Bulletin (1989)(Domark)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="75630">
+				<rom name="APB - All Points Bulletin (1989)(Domark)(128k).tap" size="75630" crc="1d6e4ca9" sha1="c4c25fa20f7dc1d4ee857ae76b9ac503672b8699"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs33fe0099a24d5">
+		<description>Apocalypse (1983)(Red Shift)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83833">
+				<rom name="Apocalypse (1983)(Red Shift).tap" size="83833" crc="2e86a3c3" sha1="33fe0099a24d54855cbe1b4af752731b96a49f92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4e904c96f9358">
+		<description>Apollo 11 (1983)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37625">
+				<rom name="Apollo 11 (1983)(Mastertronic).tap" size="37625" crc="9ab6ec43" sha1="4e904c96f935887c8be190df46ccfa6050188a17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75d7b30dd34cb">
+		<description>Apple Jam (1984)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15859">
+				<rom name="Apple Jam (1984)(DK'Tronics).tap" size="15859" crc="ad204cab" sha1="75d7b30dd34cba84d350cf32e7502355736aecb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsacced996bda07">
+		<description>Apple Jam (1984)(DK'Tronics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15872">
+				<rom name="Apple Jam (1984)(DK'Tronics)[a].tap" size="15872" crc="14fa6304" sha1="acced996bda07b008a19a63ec75c018827c54b92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs39507f0cc34c9">
+		<description>Apple Thief (1983)(Sinclair Programs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4545">
+				<rom name="Apple Thief (1983)(Sinclair Programs).tap" size="4545" crc="366f8973" sha1="39507f0cc34c99f537544c0cfdec0539a8b33d2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7dc7c156c3f0f">
+		<description>Appleman (1984)(Load 'n' Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15591">
+				<rom name="Appleman (1984)(Load 'n' Run)(Sp).tap" size="15591" crc="1f2833c6" sha1="7dc7c156c3f0f1fbdd6caaf6e1f114aec955404c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3d5d1ea5379df">
+		<description>AprSkw (1984)(Polbrit International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3999">
+				<rom name="AprSkw (1984)(Polbrit International).tap" size="3999" crc="e719b608" sha1="3d5d1ea5379df937d5e45f9607b1964b4c13cf1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs68cc1aba83c8b">
+		<description>Aqua Plane (1983)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13553">
+				<rom name="Aqua Plane (1983)(Quicksilva).tap" size="13553" crc="3ef11315" sha1="68cc1aba83c8bca86c76ace411578d4493c2994d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf08ea60fe46f4">
+		<description>Aqua Plane (1984)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13529">
+				<rom name="Aqua Plane (1984)(Quicksilva).tap" size="13529" crc="09d17cca" sha1="f08ea60fe46f425b4ea247f1aadd5cba181ad531"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94d080091cc5b">
+		<description>Aqua Ski (1984)(IDT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20408">
+				<rom name="Aqua Ski (1984)(IDT).tap" size="20408" crc="20bc884f" sha1="94d080091cc5b56d1a31bd96b25ca14308faf635"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs20fdb1033d6ac">
+		<description>Aquaplane (1983)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11947">
+				<rom name="Aquaplane (1983)(Quicksilva).tap" size="11947" crc="f8bfc0aa" sha1="20fdb1033d6acf3792f1440b5946ee89168c29d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs629fe8fac6e32">
+		<description>Aquarius (1983)(Bug-Byte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15585">
+				<rom name="Aquarius (1983)(Bug-Byte Software).tap" size="15585" crc="42287915" sha1="629fe8fac6e32de3d58973fd03c76946fd5dcd21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs315e6bb9f0c04">
+		<description>Aquarius (1983)(Bug-Byte Software)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15585">
+				<rom name="Aquarius (1983)(Bug-Byte Software)[a2].tap" size="15585" crc="ba8890e1" sha1="315e6bb9f0c04604ab9c7b1a2343b616044724f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs239bbb5548339">
+		<description>Aquarius (1983)(Bug-Byte Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15872">
+				<rom name="Aquarius (1983)(Bug-Byte Software)[a].tap" size="15872" crc="62966acd" sha1="239bbb5548339657451b66a00f77903cb2a1de68"/>
 			</dataarea>
 		</part>
 	</software>
