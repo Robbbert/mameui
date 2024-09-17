@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 284 -->
+<!-- Number of items in this list = 289 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -1379,6 +1379,56 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="5649">
 				<rom name="Nonos.tap" size="5649" crc="5a9e2c4f" sha1="d9ef06f4559f1e65c1a1fa433085a5ef15534d01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori510844e7dbbd8">
+		<description>Oric-Mon (1983)(A.J. Clarke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2458">
+				<rom name="Oric-Mon (1983)(A.J. Clarke).tap" size="2458" crc="228f213c" sha1="510844e7dbbd8e8326ac54399d9916a6f52badd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriae2b55156e150">
+		<description>Oric-Musicien (19xx)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="15758">
+				<rom name="Oric-Musicien (19xx)(fr).tap" size="15758" crc="e9d97def" sha1="ae2b55156e1507cc7c114bffb178a1556842d336"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori482e855c705ff">
+		<description>Oricmon (1983)(Tansoft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="37656">
+				<rom name="Oricmon (1983)(Tansoft Ltd).tap" size="37656" crc="839f2bde" sha1="482e855c705ffdf405b0ba0cf6890c8f9b38da20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oric3b5ff8c319ec">
+		<description>OricSound (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="370">
+				<rom name="OricSound (UK) (19xx) (PD).tap" size="370" crc="d33fd264" sha1="c3b5ff8c319ecac84b0b048b4b190fec08311d48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori6ee3ca3b1c4c0">
+		<description>Oricsrule (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="457">
+				<rom name="Oricsrule (UK) (19xx) (PD).tap" size="457" crc="55e9f53d" sha1="6ee3ca3b1c4c0497652050583fa8e2547f8f244d"/>
 			</dataarea>
 		</part>
 	</software>

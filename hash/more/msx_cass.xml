@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 55 -->
+<!-- Number of items in this list = 58 -->
 <softwarelist name="msx_cass" description="msx_cass loose roms">
 	<software name="msx7459cdf749971">
 		<description>30 MSX Hits #01A - Speedboat Racer (19xx)(Aackosoft)[RUN'CAS-']</description>
@@ -422,6 +422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx8e024bb983a25">
+		<description>Deepspace_MSX[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="13209">
+				<rom name="Deepspace_MSX[BLOAD'CAS-',R].cas" size="13209" crc="c2985100" sha1="8e024bb983a2596769699c554f106cc888af733e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx3fc20f7282ce5">
 		<description>Drakkar ES (1989)(Diabolic Software)[RUN'CAS-']</description>
 		<year>????</year>
@@ -429,6 +439,16 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="81353">
 				<rom name="Drakkar ES (1989)(Diabolic Software)[RUN'CAS-'].cas" size="81353" crc="e37e27a0" sha1="3fc20f7282ce53c2ad753217e40fc000a381965f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2621a7ec1e26e">
+		<description>epb_msx[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="15891">
+				<rom name="epb_msx[BLOAD'CAS-',R].cas" size="15891" crc="bf857414" sha1="2621a7ec1e26e50d4d360584a83d8a238e0711df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -449,6 +469,16 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="8335">
 				<rom name="Games Collection CD, The - Sequential Loader (1988)(Eurosoft)[RUN'CAS-'].cas" size="8335" crc="6ee0b43a" sha1="64312cd848c2aa2c87dc715390af507a3dc5a682"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4755e2cfbba29">
+		<description>htron_msx[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="9774">
+				<rom name="htron_msx[BLOAD'CAS-',R].cas" size="9774" crc="cb17bd1f" sha1="4755e2cfbba2940d8bd69df46c10704581944f35"/>
 			</dataarea>
 		</part>
 	</software>

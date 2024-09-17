@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 621 -->
+<!-- Number of items in this list = 627 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -1422,6 +1422,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colb82696c095d8b">
+		<description>Deepspace_Bit90</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Deepspace_Bit90.rom" size="32768" crc="0f9f5572" sha1="b82696c095d8bfd54e75767bb6d9914ed704ef3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col673cb8171941f">
+		<description>Deepspace_Coleco</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Deepspace_Coleco.rom" size="32768" crc="daa1cc87" sha1="673cb8171941f80fbb9d44f39c92a7778ef5d684"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb07f4d6747411">
 		<description>Defender (1983) (Atarisoft)</description>
 		<year>????</year>
@@ -1769,6 +1789,26 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Elevator Action SGM (2021)(Opcode Games).bin" size="32768" crc="cf4bdc75" sha1="499a1731ea16092a4ef2651edc25f08a69d30fa5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cola05a0868fa2f8">
+		<description>Elite Planet Browser_Bit90</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Elite Planet Browser_Bit90.rom" size="32768" crc="ee003e43" sha1="a05a0868fa2f8d134687441e5890b0cd66f1ccd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col5a4cde240194d">
+		<description>Elite Planet Browser_coleco</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Elite Planet Browser_coleco.rom" size="32768" crc="c05d7886" sha1="5a4cde240194de5919721064deb7dd49fb95bbe5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2359,6 +2399,26 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Gyruss (1984)(Parker Brothers).rom" size="16384" crc="b4ef0f1f" sha1="d5890e96cdc1ca8a6a27042bc486ecfbb9ddeca7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col7c7dc0929b855">
+		<description>H-tron_Bit90</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="H-tron_Bit90.rom" size="32768" crc="2f3980bf" sha1="7c7dc0929b8555377493bd17898d85ed0ab3810f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col160d09d75899f">
+		<description>H-tron_coleco</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="H-tron_coleco.rom" size="32768" crc="4ec3f018" sha1="160d09d75899f03d7a2d7f159f8b0c57394d8092"/>
 			</dataarea>
 		</part>
 	</software>

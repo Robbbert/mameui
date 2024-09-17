@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 3 -->
+<softwarelist name="interact" description="interact loose roms">
+	<software name="int28c885a778ae0">
+		<description>asteroides_hector1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="18901">
+				<rom name="asteroides_hector1.k7" size="18901" crc="39237a3f" sha1="28c885a778ae08ef3053dad73930453d9ff13f2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int6e70ff68d191a">
+		<description>dogfight_Q</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="2482765">
+				<rom name="dogfight_Q.WAV" size="2482765" crc="f34d74a6" sha1="6e70ff68d191a186bc1466db3a1eb6cf45c406c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7bfce40996437">
+		<description>microchess_Q</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="2577265">
+				<rom name="microchess_Q.WAV" size="2577265" crc="01acaf6e" sha1="7bfce40996437dd4ced09f35ae7b38b090716cc7"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

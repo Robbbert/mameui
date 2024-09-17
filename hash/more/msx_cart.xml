@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 609 -->
+<!-- Number of items in this list = 610 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1279,6 +1279,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16385">
 				<rom name="David II (1984)(Ample)[o].rom" size="16385" crc="c3e3af2e" sha1="f53fd0b550c437d683668376829fbd7f569f0ee5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf1301bfb15527">
+		<description>Deepspace_MSX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Deepspace_MSX.rom" size="16384" crc="15acb338" sha1="f1301bfb155278f9545739a8e0997f167153e7d9"/>
 			</dataarea>
 		</part>
 	</software>
