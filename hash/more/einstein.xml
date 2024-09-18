@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 3 -->
+<softwarelist name="einstein" description="einstein loose roms">
+	<software name="ein1f3089730ded1">
+		<description>DOS_1.4[256]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="DOS_1.4[256].DSK" size="215296" crc="9cb7e59c" sha1="1f3089730ded1e71697791bf398eda58500c1992"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ein3b837c864ff5d">
+		<description>ELITE-S2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="ELITE-S2.DSK" size="215296" crc="fd44a1b4" sha1="3b837c864ff5d7adb9fa295988ea285c227de003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ein0f60ce3f705af">
+		<description>Xbas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="Xbas.dsk" size="215296" crc="39b426ef" sha1="0f60ce3f705af6074cb79370f08468c1acff1ff4"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

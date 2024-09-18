@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8 -->
+<!-- Number of items in this list = 11 -->
 <softwarelist name="pv2000" description="pv2000 loose roms">
 	<software name="pv291b3bcb89e411">
 		<description>CasioBasic</description>
@@ -52,6 +52,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pv2455af016947bc">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Deepspace.rom" size="16384" crc="91b0a121" sha1="455af016947bcb2626bfc02e3edde7ad7ae64a1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2843988c4b7ee8">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Elite Planet Browser.rom" size="16384" crc="c06fcaeb" sha1="843988c4b7ee84d1790a52858f460f62d83fdf5c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv290113d7c065a6">
 		<description>Excite Mahjong 2</description>
 		<year>????</year>
@@ -59,6 +79,16 @@
 		<part name="cart" interface="pv2000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Excite Mahjong 2.bin" size="16384" crc="a2698c56" sha1="90113d7c065a6f12126c03da8ee59185bf60efc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2cfa8814876a9a">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="H-tron.rom" size="16384" crc="32a665b3" sha1="cfa8814876a9a1d15fe7ef00dbc0ce2617dff49e"/>
 			</dataarea>
 		</part>
 	</software>

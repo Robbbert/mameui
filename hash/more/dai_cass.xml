@@ -2,33 +2,33 @@
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
 <!-- Number of items in this list = 3 -->
 <softwarelist name="dai_cass" description="dai_cass loose roms">
-	<software name="daic07e968f43709">
-		<description>2bis</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="dai_cass">
-			<dataarea name="cass" size="364">
-				<rom name="2bis.txt" size="364" crc="3b3bddcd" sha1="c07e968f4370956ec28f92696d16e80ccf83ed39"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="dai2dd79bd9da4fd">
-		<description>Androidenkaefig</description>
+		<description>Androidenkaefig[LOAD]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="dai_cass">
 			<dataarea name="cass" size="5819090">
-				<rom name="Androidenkaefig.wav" size="5819090" crc="d6065011" sha1="2dd79bd9da4fdef57b92d648ff1b695269c63553"/>
+				<rom name="Androidenkaefig[LOAD].wav" size="5819090" crc="d6065011" sha1="2dd79bd9da4fdef57b92d648ff1b695269c63553"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="dai0920195a55b31">
-		<description>dai</description>
+	<software name="dai07b2e079e42af">
+		<description>HAP MAAR[LOAD]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="dai_cass">
-			<dataarea name="cass" size="319386">
-				<rom name="dai.wav" size="319386" crc="f545c53a" sha1="0920195a55b31b900ef2fb1ca991d355163bfcd3"/>
+			<dataarea name="cass" size="3534988">
+				<rom name="HAP MAAR[LOAD].wav" size="3534988" crc="5beb91d7" sha1="07b2e079e42af96f1bbeeaa4dcbc18e4e2a5181e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="dai0ac181824f362">
+		<description>Xchase_dai_buffered[UT R G800]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="dai_cass">
+			<dataarea name="cass" size="6644465">
+				<rom name="Xchase_dai_buffered[UT R G800].wav" size="6644465" crc="19d2e088" sha1="0ac181824f3620c403b6304222a6f07b1f695bec"/>
 			</dataarea>
 		</part>
 	</software>

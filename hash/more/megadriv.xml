@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1833 -->
+<!-- Number of items in this list = 1831 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -949,16 +949,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(E)daze before christmas (Hack, Spanish).bin" size="2097152" crc="4b061cf5" sha1="7be4ddefb5b74c4d9e70662cfa5a469f59c73622"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genf2f1b0c79c972">
-		<description>(E)earthworm jim 2 (prototype - 1995-08-24)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="(E)earthworm jim 2 (prototype - 1995-08-24).bin" size="3145728" crc="f92a931d" sha1="f2f1b0c79c972e83b9ec67cbb41007434c02aad9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5329,16 +5319,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="earthworm jim (europe).md" size="3145728" crc="1c07b337" sha1="d5dc11009e3a5cc2381dd2a75cb81ce2e7428342"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen606d80bbdddae">
-		<description>Earthworm Jim (Jul 28, 1994 prototype)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="Earthworm Jim (Jul 28, 1994 prototype).gen" size="3145728" crc="24aa391b" sha1="606d80bbdddae0cb84d0d56e7c06660d004ee417"/>
 			</dataarea>
 		</part>
 	</software>

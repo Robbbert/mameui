@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="ibmpcjr_flop" description="ibmpcjr_flop loose roms">
+	<software name="ibmefab42f0b520a">
+		<description>Explore the IBM JR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="163840">
+				<rom name="Explore the IBM JR.IMG" size="163840" crc="c8838e9d" sha1="efab42f0b520a6822c988fbd0099c5697b0ddb28"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

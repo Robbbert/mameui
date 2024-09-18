@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 6 -->
+<softwarelist name="ibmpcjr_cart" description="ibmpcjr_cart loose roms">
+	<software name="ibm8e7c0f247529f">
+		<description>Cross Fire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ibmpcjr_cart">
+			<dataarea name="rom" size="8704">
+				<rom name="Cross Fire.JRC" size="8704" crc="878952c0" sha1="8e7c0f247529f6d5dfce60d6e2c9acefda6af7bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm85bf3439b2f58">
+		<description>Mine Shaft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ibmpcjr_cart">
+			<dataarea name="rom" size="8704">
+				<rom name="Mine Shaft.JRC" size="8704" crc="3d3fc782" sha1="85bf3439b2f584dcfbc19d6ca34e75351aabb20e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmcd762c0aec242">
+		<description>Mouser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ibmpcjr_cart">
+			<dataarea name="rom" size="8704">
+				<rom name="Mouser.JRC" size="8704" crc="17fedf8d" sha1="cd762c0aec2429954c4ca59c7c3100a60297fa71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibma590bf42e0939">
+		<description>Pitfall 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ibmpcjr_cart">
+			<dataarea name="rom" size="16896">
+				<rom name="Pitfall 2.JRC" size="16896" crc="12821b21" sha1="a590bf42e0939b9a708ce900557dca5e759f4dc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm39f0071760bb7">
+		<description>River Raid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ibmpcjr_cart">
+			<dataarea name="rom" size="16896">
+				<rom name="River Raid.JRC" size="16896" crc="ef091859" sha1="39f0071760bb7a7864d9cebec99da55518c21639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmfbb1e369dbb0f">
+		<description>Scuba Venture</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ibmpcjr_cart">
+			<dataarea name="rom" size="8704">
+				<rom name="Scuba Venture.JRC" size="8704" crc="7cd8cf3f" sha1="fbb1e369dbb0fccdd32117b48bb0d906aef441ae"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

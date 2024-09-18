@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6 -->
+<!-- Number of items in this list = 8 -->
 <softwarelist name="pv1000" description="pv1000 loose roms">
 	<software name="pv12983c60997ee0">
 		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[full]</description>
@@ -49,6 +49,26 @@
 		<part name="cart" interface="pv1000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).bin" size="16384" crc="55157aa1" sha1="89129e92aa1605aa50d1fc92a062e93c08d356c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1ce71379f93f95">
+		<description>Elite Plant Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Elite Plant Browser.bin" size="16384" crc="b6dbb402" sha1="ce71379f93f95f0a4c5aad790083de74a9b1063d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv10b83f5e1cf86d">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="H-tron.bin" size="16384" crc="59222195" sha1="0b83f5e1cf86d7cb5bdac265d188801216c8b75b"/>
 			</dataarea>
 		</part>
 	</software>
