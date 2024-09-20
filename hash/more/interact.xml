@@ -1,7 +1,307 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 57 -->
 <softwarelist name="interact" description="interact loose roms">
+	<software name="int4167f2d7bee39">
+		<description>10 - Les Envahisseurs (Hector)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5703">
+				<rom name="10 - Les Envahisseurs (Hector).k7" size="5703" crc="508bb8e3" sha1="4167f2d7bee399d02a1d6a241cf3b42637043ec7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7659dedd30d59">
+		<description>11 - Base Spatiale (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="15219">
+				<rom name="11 - Base Spatiale (Victor Lambda).k7" size="15219" crc="dc6d2779" sha1="7659dedd30d59f08a5b3bfb929f2c3fc3ee82dc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int82c9957206fde">
+		<description>12 - Credits Avec Imprimante (Hector)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="32626">
+				<rom name="12 - Credits Avec Imprimante (Hector).k7" size="32626" crc="89edc932" sha1="82c9957206fdeb9337aba4eaba3eec9f00a3cf19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int93f1b3f245fb3">
+		<description>12 - Grenouille (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9792">
+				<rom name="12 - Grenouille (Victor Lambda).k7" size="9792" crc="38e23440" sha1="93f1b3f245fb34157777dddac354cf9262f062df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intad02735e180bd">
+		<description>13 - Chatbyrinthe (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16368">
+				<rom name="13 - Chatbyrinthe (Victor Lambda).k7" size="16368" crc="24e498d2" sha1="ad02735e180bd1bfc4eaf2d38aea798837d6728f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intdcf85a40d1c14">
+		<description>14 - Le Baroudeur (Algorithme)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="12319">
+				<rom name="14 - Le Baroudeur (Algorithme).k7" size="12319" crc="8f7b6137" sha1="dcf85a40d1c14309eb1a972ab3d97a75422c6f23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int2dd144071977a">
+		<description>14 - Le Glouton (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="25566">
+				<rom name="14 - Le Glouton (Victor Lambda).k7" size="25566" crc="41d88d3e" sha1="2dd144071977a21485ab217a7128caa1aaf4b3fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int50c32f81801ea">
+		<description>15 - Cow-Boys (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8315">
+				<rom name="15 - Cow-Boys (Victor Lambda).k7" size="8315" crc="141d8fc8" sha1="50c32f81801eafa7ee1cb093e54d8436480cc322"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int0a8546750ff3f">
+		<description>15 - Flipper (Algorithme)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8104">
+				<rom name="15 - Flipper (Algorithme).k7" size="8104" crc="24a3213f" sha1="0a8546750ff3f739b85256e64dd149581c6f29f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int2e678b34df9fb">
+		<description>16 - Le Mur de Briques (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7767">
+				<rom name="16 - Le Mur de Briques (Victor Lambda).k7" size="7767" crc="6a5bfa4c" sha1="2e678b34df9fb61b1b37c55785d73c59adcce6f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int60981a0eb3efb">
+		<description>18 - Combat! (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16408">
+				<rom name="18 - Combat! (Victor Lambda).k7" size="16408" crc="e3d66518" sha1="60981a0eb3efb464bbc000980f22004557f316b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int6e675035ac2f7">
+		<description>19 - Sous-Marin (Hector)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9213">
+				<rom name="19 - Sous-Marin (Hector).k7" size="9213" crc="3f5efeec" sha1="6e675035ac2f7fd1df75182bba2a3182c97f854a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inte90f8ad07e7af">
+		<description>20 - Regates (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8178">
+				<rom name="20 - Regates (Victor Lambda).k7" size="8178" crc="f2cf2630" sha1="e90f8ad07e7af07c9e5c9f38ce82417bec7f35c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int8b0fe0f913191">
+		<description>22 - Encerclement (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8369">
+				<rom name="22 - Encerclement (Victor Lambda).k7" size="8369" crc="9da679b6" sha1="8b0fe0f9131911899dd24a58253266e8efdb4251"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int36a37616bfcb2">
+		<description>24 - Goofy Golf (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="15844">
+				<rom name="24 - Goofy Golf (Victor Lambda).k7" size="15844" crc="d3da2d01" sha1="36a37616bfcb2f3079308dc2c69010023f42df7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intbf63a0dbba49d">
+		<description>24 - Le Dsert Des Tartares (Basic Parallel)(Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7311">
+				<rom name="24 - Le Dsert Des Tartares (Basic Parallel)(Victor Lambda).k7" size="7311" crc="3571750b" sha1="bf63a0dbba49d290430df6a95ba72a9194ae33db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int82fe3a91f3ad4">
+		<description>26 - Formule 1 (Hector)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16403">
+				<rom name="26 - Formule 1 (Hector).k7" size="16403" crc="c9409ddd" sha1="82fe3a91f3ad49432f6db3c347be762cb8417f1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int5f3c4fcad0781">
+		<description>27 - Galaxius (Hector)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8189">
+				<rom name="27 - Galaxius (Hector).k7" size="8189" crc="d49f3f3e" sha1="5f3c4fcad0781179120fcdf8d3740488af2dbbea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7d78342cfc283">
+		<description>28 - Centrale D'annonces (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7632">
+				<rom name="28 - Centrale D'annonces (Victor Lambda).k7" size="7632" crc="e5935ac8" sha1="7d78342cfc28370f0ae6c59b05fc107bd0461460"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intfd26b4d536114">
+		<description>40 - Micro-Chess (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8178">
+				<rom name="40 - Micro-Chess (Victor Lambda).k7" size="8178" crc="d6b97af0" sha1="fd26b4d536114f598ff1ae9774b38c78cef45d9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int5cc12a25c6e0f">
+		<description>42 - Reversi - Othello (Hector)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8556">
+				<rom name="42 - Reversi - Othello (Hector).k7" size="8556" crc="aa972b7e" sha1="5cc12a25c6e0f9eb5f1a0adb369bde0595a81939"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intc4e24359d15d1">
+		<description>61 - Le Pendu (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16410">
+				<rom name="61 - Le Pendu (Victor Lambda).k7" size="16410" crc="d2e51733" sha1="c4e24359d15d13d7cbfb96513c8d24e03ccd559e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int179c3ea0175df">
+		<description>66 - La Caverne Des Lutins (Hector)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16408">
+				<rom name="66 - La Caverne Des Lutins (Hector).k7" size="16408" crc="4a563240" sha1="179c3ea0175df186d5bc90ce5cc6bbbaf81114e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1a0b84385fb50">
+		<description>68 - Jeu de la Vie (Victor Lambda)(alt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="3895">
+				<rom name="68 - Jeu de la Vie (Victor Lambda)(alt).k7" size="3895" crc="74e20dfa" sha1="1a0b84385fb50643ae7638ff72d8cf09fdee345b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int0775dcfdcbc50">
+		<description>68 - Jeu de la Vie (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="3895">
+				<rom name="68 - Jeu de la Vie (Victor Lambda).k7" size="3895" crc="04474129" sha1="0775dcfdcbc50736c5f36cfc1de84b355b31c684"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int80553536e7648">
+		<description>8K Graphics Basic (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="13952">
+				<rom name="8K Graphics Basic (1980)(Micro Video).k7" size="13952" crc="7662d0d4" sha1="80553536e7648361a4b5d2a6b3dbe22deb464b4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1e02f78f19613">
+		<description>Alien Invaders (1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5703">
+				<rom name="Alien Invaders (1981)(Micro Video).k7" size="5703" crc="16b69826" sha1="1e02f78f19613b0a9c1bad6ae008c29fcc9cefb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int164c00e45d230">
+		<description>All About Animals (Computer Quiz data tape)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="10525">
+				<rom name="All About Animals (Computer Quiz data tape).k7" size="10525" crc="635e5bdc" sha1="164c00e45d230a9d73bfaba4dec1759fde57dbb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intc674a3cdeae5d">
+		<description>Artillery Command (8K Graphics Basic)(1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8017">
+				<rom name="Artillery Command (8K Graphics Basic)(1980)(Micro Video).k7" size="8017" crc="7a3f7e4b" sha1="c674a3cdeae5da77f52581584946ba8a8a609366"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int13a5700742044">
+		<description>Assemblex (Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7568">
+				<rom name="Assemblex (Micro Video).k7" size="7568" crc="3fcf4f9d" sha1="13a57007420444bd463996c99202e8627736a2c4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int28c885a778ae0">
 		<description>asteroides_hector1</description>
 		<year>????</year>
@@ -12,6 +312,196 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int872bb2bfd6ca0">
+		<description>Attro-Logic (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8170">
+				<rom name="Attro-Logic (1980)(Micro Video).k7" size="8170" crc="0c1e32e9" sha1="872bb2bfd6ca00e44be22114b257904be2cdca2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inte12f42c658173">
+		<description>Basic Parallel Printer (1980)(Micro Video - MHC Soft)(alt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="11659">
+				<rom name="Basic Parallel Printer (1980)(Micro Video - MHC Soft)(alt).k7" size="11659" crc="78d5dc03" sha1="e12f42c658173550cb86d5b8478699e489cdb42d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int3457ba2bd1d60">
+		<description>Basic Parallel Printer (1980)(Micro Video - MHC Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="11659">
+				<rom name="Basic Parallel Printer (1980)(Micro Video - MHC Soft).k7" size="11659" crc="a49b4890" sha1="3457ba2bd1d60531d96ed6d49febc55c127c464a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intc27d943496e8d">
+		<description>Batter-Up (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="15506">
+				<rom name="Batter-Up (1982)(Micro Video).k7" size="15506" crc="60c154cc" sha1="c27d943496e8ddc52b2784a4d9a810a653f425cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int6a23094f75077">
+		<description>Beat The Clock (Level II Basic)(1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="13742">
+				<rom name="Beat The Clock (Level II Basic)(1980)(Micro Video).k7" size="13742" crc="5367f297" sha1="6a23094f75077e8b5228105557dea66e866ee33d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intefac8298b2b7e">
+		<description>Blackjack (1978)(Interact)(alt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7664">
+				<rom name="Blackjack (1978)(Interact)(alt).k7" size="7664" crc="7cc74f41" sha1="efac8298b2b7e5ab0ae381da5eeff5f39ebec8c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intddb905e140a39">
+		<description>Bombs-Away (8K Graphic Basic)(1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8017">
+				<rom name="Bombs-Away (8K Graphic Basic)(1980)(Micro Video).k7" size="8017" crc="cc92e50b" sha1="ddb905e140a399d26d76f865cb717052585ddec3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int403dc1d5f94b6">
+		<description>Bowling (8K Graphic Basic)(1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8017">
+				<rom name="Bowling (8K Graphic Basic)(1980)(Micro Video).k7" size="8017" crc="5b0e2f7f" sha1="403dc1d5f94b6e9966e26bdc890b846346249b6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intab0d45f5a0e6c">
+		<description>CAPIT (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8178">
+				<rom name="CAPIT (1980)(Micro Video).k7" size="8178" crc="d5ac44e2" sha1="ab0d45f5a0e6c2a1e67d564d99ad47375c5226b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intee4d8713b2c64">
+		<description>Castle (Level II Basic)(1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="12232">
+				<rom name="Castle (Level II Basic)(1982)(Micro Video).k7" size="12232" crc="17b3d11f" sha1="ee4d8713b2c64befb37f54f3993b0b810c3e40b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1517830b440cc">
+		<description>Catacombs (1983)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16344">
+				<rom name="Catacombs (1983)(Micro Video).k7" size="16344" crc="750a0b27" sha1="1517830b440cc1d141ad1331df9ef57959ea7f76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intc9cb5e1769d10">
+		<description>Chain Reaction (1983)((Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7927">
+				<rom name="Chain Reaction (1983)((Micro Video).k7" size="7927" crc="24f3f112" sha1="c9cb5e1769d10802ba242c8c444424e47943295d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intbd648d901cc5e">
+		<description>Colorimage (Hector)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9010">
+				<rom name="Colorimage (Hector).k7" size="9010" crc="98d17a66" sha1="bd648d901cc5e06740bf8ad5f2088da669afdc8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int47c5aa3cc882e">
+		<description>Combat! (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="18977">
+				<rom name="Combat! (1980)(Micro Video).k7" size="18977" crc="c7d70af5" sha1="47c5aa3cc882e6bac2534d1042fed6651939626e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1558ce9955aaf">
+		<description>Computer Quiz (1980)(Computer Quiz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8178">
+				<rom name="Computer Quiz (1980)(Computer Quiz).k7" size="8178" crc="23e70c2f" sha1="1558ce9955aaf1516fe187440b1a9dd292d9f088"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int2537eeb44b916">
+		<description>Crazy 8 (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8416">
+				<rom name="Crazy 8 (Victor Lambda).k7" size="8416" crc="019fe0f8" sha1="2537eeb44b916cedc8b98d9917301fbfd9f8bf00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int54204a225c66a">
+		<description>Deathstar (8K Graphics Basic)(1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Deathstar (8K Graphics Basic)(1981)(Micro Video).k7" size="8031" crc="0bfd1865" sha1="54204a225c66a66a7cbdacf35898236134d75a99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta38f6b85c5aef">
+		<description>Decimal Tic-Tac-Toe. (197x)(Interact)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9726">
+				<rom name="Decimal Tic-Tac-Toe. (197x)(Interact).k7" size="9726" crc="6f565cdf" sha1="a38f6b85c5aef4e330dab869ae8764338665db78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intbd06426e7b44d">
+		<description>Depth Charge (1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9308">
+				<rom name="Depth Charge (1981)(Micro Video).k7" size="9308" crc="762f4794" sha1="bd06426e7b44da3753849fa460c32eefe100596d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int6e70ff68d191a">
 		<description>dogfight_Q</description>
 		<year>????</year>
@@ -19,6 +509,56 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="2482765">
 				<rom name="dogfight_Q.WAV" size="2482765" crc="f34d74a6" sha1="6e70ff68d191a186bc1466db3a1eb6cf45c406c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int80bb416917e08">
+		<description>Double Trouble (Level II Basic)(1983)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="6624">
+				<rom name="Double Trouble (Level II Basic)(1983)(Micro Video).k7" size="6624" crc="38a89bd0" sha1="80bb416917e088869dbdc62204cc0fbd7263b21a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intfe6630dd04dba">
+		<description>Dr Doom's Leap For Life (8K Graphics Basic)(1980)(Long Playing Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8017">
+				<rom name="Dr Doom's Leap For Life (8K Graphics Basic)(1980)(Long Playing Software).k7" size="8017" crc="6b68acf5" sha1="fe6630dd04dbafd4aea4ed74bb69ad47f64debef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int94a38fb2f3427">
+		<description>Dreamland (1983)(Micro Video)(alt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9983">
+				<rom name="Dreamland (1983)(Micro Video)(alt).k7" size="9983" crc="e0cd8026" sha1="94a38fb2f342796709da99c16cba29774fb66f45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta309baec352a2">
+		<description>Dreamland (1983)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="10234">
+				<rom name="Dreamland (1983)(Micro Video).k7" size="10234" crc="05620c50" sha1="a309baec352a2095f7f537042fa499ce96a59af5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int41c3ab4f70057">
+		<description>Micro Video 32K Basic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="11894">
+				<rom name="Micro Video 32K Basic.k7" size="11894" crc="fac4c97c" sha1="41c3ab4f70057fc0be48d51af8108a485e61b7ef"/>
 			</dataarea>
 		</part>
 	</software>

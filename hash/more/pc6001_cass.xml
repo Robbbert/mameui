@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 79 -->
+<!-- Number of items in this list = 83 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -559,6 +559,46 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="3383">
 				<rom name="Cunning {m1p2}.p6" size="3383" crc="951d9d82" sha1="fe133d3c95c2db95a77628289d265bd08c05b267"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p603513384817754">
+		<description>Dangerous Jungle {m2p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="14271">
+				<rom name="Dangerous Jungle {m2p2}.cas" size="14271" crc="f8fea055" sha1="351338481775489887dca1c9bace7ed79bf556c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60960dd15a138e6">
+		<description>Debutcho Dragon {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="399">
+				<rom name="Debutcho Dragon {m1p2}.p6" size="399" crc="61f0bbd9" sha1="960dd15a138e693120f22d797c97b6aeb0a69d0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60d11e239900d11">
+		<description>Dirty Room {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3493">
+				<rom name="Dirty Room {m1p1}.cas" size="3493" crc="6830f4c0" sha1="d11e239900d1158af24c0d69b0da541aa891332c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60f89c8ab94cf00">
+		<description>Door Door MkII (1984)(Enix)(Koichi Nakamura)(Mode 2, Page 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="32221">
+				<rom name="Door Door MkII (1984)(Enix)(Koichi Nakamura)(Mode 2, Page 2).p6" size="32221" crc="3bc496a3" sha1="f89c8ab94cf0004303714f605739efc0abf2a608"/>
 			</dataarea>
 		</part>
 	</software>
