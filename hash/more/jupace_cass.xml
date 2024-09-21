@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 42 -->
+<!-- Number of items in this list = 44 -->
 <softwarelist name="jupace_cass" description="jupace_cass loose roms">
 	<software name="acef1896c0d8bc8e">
 		<description>3D Maze (2007-05)(Lopes, Ricardo Fernandes)(PD)[19K][load 3dmaze 3dmaze]</description>
@@ -182,6 +182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="acee7a2fea04bde3">
+		<description>Elite Planet Browser[0 0 bload epb.bin]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="jupace_cass">
+			<dataarea name="cass" size="12072">
+				<rom name="Elite Planet Browser[0 0 bload epb.bin].tap" size="12072" crc="aec378e7" sha1="e7a2fea04bde31ef3356d2da21c17a0777bb55a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="aced12476db04e5c">
 		<description>Firebird (1983)(Voyager Software)[19K][load FIREBIRD run]</description>
 		<year>????</year>
@@ -229,6 +239,16 @@
 		<part name="cass1" interface="jupace_cass">
 			<dataarea name="cass" size="389318">
 				<rom name="Guessing Game (1983-05)(Practical Computing)[3K][load game game].wav" size="389318" crc="92e37635" sha1="03561ae3d3c508689f39d99013793e9b852c50b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ace79609820f2479">
+		<description>H-tron[0 0 bload ht.bin]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="jupace_cass">
+			<dataarea name="cass" size="8816">
+				<rom name="H-tron[0 0 bload ht.bin].tap" size="8816" crc="c7385873" sha1="79609820f247950cc6b80ee677d24d9825e0c245"/>
 			</dataarea>
 		</part>
 	</software>

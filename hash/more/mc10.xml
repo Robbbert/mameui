@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 58 -->
+<!-- Number of items in this list = 142 -->
 <softwarelist name="mc10" description="mc10 loose roms">
 	<software name="mc184f9a0d36ce1d">
 		<description>08SUB</description>
@@ -22,6 +22,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1f7f64a0215a69">
+		<description>1-baton[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10333">
+				<rom name="1-baton[cloadm exec].c10" size="10333" crc="b8c33050" sha1="f7f64a0215a697aa7935d2598c77117989b6c96a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc15dc3f6b5f0532">
+		<description>10-Ten Little Indians[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11169">
+				<rom name="10-Ten Little Indians[cloadm exec].c10" size="11169" crc="c2e55f3e" sha1="5dc3f6b5f0532e033e0f72d388dbc16881edd171"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1452ac5a5ee952">
 		<description>10PRINT</description>
 		<year>????</year>
@@ -29,6 +49,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="396">
 				<rom name="10PRINT.C10" size="396" crc="bf00c7ae" sha1="452ac5a5ee952a2657652c1e762fc4b4f0009fce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e03981460420e">
+		<description>11-waxworks[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12358">
+				<rom name="11-waxworks[cloadm exec].c10" size="12358" crc="c3f8dab0" sha1="e03981460420e515a077ef711aa321d8784eaf46"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42,6 +72,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1203a807ccceb9">
+		<description>2-Time Machine[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10428">
+				<rom name="2-Time Machine[cloadm exec].c10" size="10428" crc="8d2ff1da" sha1="203a807ccceb924615e24f0773d1f16ed7292a50"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1a7b48a879e16a">
 		<description>2048</description>
 		<year>????</year>
@@ -49,6 +89,26 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="2239">
 				<rom name="2048.C10" size="2239" crc="28b22abe" sha1="a7b48a879e16a14a3354a1b6ad76a3dd052be09e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc17f628fbce87f0">
+		<description>3-Arrow of Death Pt1[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10939">
+				<rom name="3-Arrow of Death Pt1[cloadm exec].c10" size="10939" crc="16323fe8" sha1="7f628fbce87f05f22b4add0163d50ab5997b5be2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1117d565e77fbe">
+		<description>3D Labyrinth (2)[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7252">
+				<rom name="3D Labyrinth (2)[cloadm exec].c10" size="7252" crc="4c7ee32e" sha1="117d565e77fbe7979d4bf97a07267eee69f32b9e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,6 +142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1b0fc0f9005eba">
+		<description>4-Arrow of Death Pt2[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11815">
+				<rom name="4-Arrow of Death Pt2[cloadm exec].c10" size="11815" crc="e54b72a8" sha1="b0fc0f9005ebaac43a5959f313486dd529b5728b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1a307cd71a9faa">
 		<description>4MILE</description>
 		<year>????</year>
@@ -89,6 +159,26 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="12432">
 				<rom name="4MILE.C10" size="12432" crc="ff925e90" sha1="a307cd71a9faac746da44d18ed93e1dfb29af588"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc127af1a333b9c4">
+		<description>5-Escape from Pulsar 7[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12529">
+				<rom name="5-Escape from Pulsar 7[cloadm exec].c10" size="12529" crc="12869a48" sha1="27af1a333b9c45f2cad9e941af06c33e91851778"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1c5c72521c966c">
+		<description>6-circus[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10774">
+				<rom name="6-circus[cloadm exec].c10" size="10774" crc="36f964a5" sha1="c5c72521c966c2d383417c4bae3a9877008a3174"/>
 			</dataarea>
 		</part>
 	</software>
@@ -109,6 +199,36 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="11456">
 				<rom name="6KEYS.C10" size="11456" crc="d3da1b8a" sha1="48372c5d437585983fe06799143a6763739684b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d8862a45e4fff">
+		<description>7-Feasibility Experiment[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10736">
+				<rom name="7-Feasibility Experiment[cloadm exec].c10" size="10736" crc="a8085b5d" sha1="d8862a45e4fff3a9d4420673e3635e5ff9351f78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1ea6994c047780">
+		<description>8-wizard[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12829">
+				<rom name="8-wizard[cloadm exec].c10" size="12829" crc="f8abd8ce" sha1="ea6994c04778049158aa05cd64a3aedd8a77c142"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc19d159e610e525">
+		<description>9-Perseus and Andromeda[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12224">
+				<rom name="9-Perseus and Andromeda[cloadm exec].c10" size="12224" crc="cfce3a78" sha1="9d159e610e5252e18938d6eaa4bb52f6549c1a82"/>
 			</dataarea>
 		</part>
 	</software>
@@ -169,6 +289,156 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="1719">
 				<rom name="ADDSUB.C10" size="1719" crc="7af6edf8" sha1="f5304fccf68c54c7f67712a224222979155ba5f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc18e281e2d150f7">
+		<description>adv01 Adventureland[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12898">
+				<rom name="adv01 Adventureland[cloadm exec].c10" size="12898" crc="d2724a24" sha1="8e281e2d150f7ade46c8091553668b617ad7766f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1cdd7c9bacef66">
+		<description>adv02 Pirate Adventure[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12627">
+				<rom name="adv02 Pirate Adventure[cloadm exec].c10" size="12627" crc="124cbe2d" sha1="cdd7c9bacef664face94458ef008c3531ea6e55e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc12627c1b0c45f4">
+		<description>adv03 Mission Impossible[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12581">
+				<rom name="adv03 Mission Impossible[cloadm exec].c10" size="12581" crc="d9c43730" sha1="2627c1b0c45f4c2c45abd821647831272f715918"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1628ae327cab47">
+		<description>adv03-b Mission Impossible[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12600">
+				<rom name="adv03-b Mission Impossible[cloadm exec].c10" size="12600" crc="c6dc2bc6" sha1="628ae327cab471e8ecf01247645a471ec378362d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1dda2538ead9b6">
+		<description>adv04 Voodoo Castle[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12558">
+				<rom name="adv04 Voodoo Castle[cloadm exec].c10" size="12558" crc="cbd0e7ca" sha1="dda2538ead9b67b8383acd45a3ddddc70977a67b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1c334e4606f4c2">
+		<description>adv05 The Count[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12557">
+				<rom name="adv05 The Count[cloadm exec].c10" size="12557" crc="c0b2054e" sha1="c334e4606f4c2a222bb0b1accf73c70665f3572d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14c57cec3c230f">
+		<description>adv07 Mystery Fun House[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12433">
+				<rom name="adv07 Mystery Fun House[cloadm exec].c10" size="12433" crc="8dc4c667" sha1="4c57cec3c230f3f9ee5f51223e099943be8abcfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13db3a477ebdef">
+		<description>adv08 Pyramid of Doom[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12434">
+				<rom name="adv08 Pyramid of Doom[cloadm exec].c10" size="12434" crc="798bb1e1" sha1="3db3a477ebdef43266c5b4f802c050fa8f3491a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1286112052784f">
+		<description>adv09 Ghost Town[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12206">
+				<rom name="adv09 Ghost Town[cloadm exec].c10" size="12206" crc="e5a717e0" sha1="286112052784fbbb3e8927509e1b61493851ca19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc109c8d5fc93312">
+		<description>adv10 Savage Island Pt1[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12137">
+				<rom name="adv10 Savage Island Pt1[cloadm exec].c10" size="12137" crc="4de0e9b0" sha1="09c8d5fc93312d58e152c3883a926194adaabe2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc10586e82ee07b7">
+		<description>adv11 Savage Island Pt2[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12437">
+				<rom name="adv11 Savage Island Pt2[cloadm exec].c10" size="12437" crc="936932b0" sha1="0586e82ee07b7b7ce1936c5da92d786b6e489e20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f1fe7f9478625">
+		<description>adv12 The Golden Voyage[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12491">
+				<rom name="adv12 The Golden Voyage[cloadm exec].c10" size="12491" crc="abcb410b" sha1="f1fe7f947862530e3b753564f4d84fdc85b57cd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc169116580333b9">
+		<description>adv13[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12143">
+				<rom name="adv13[cloadm exec].c10" size="12143" crc="570274f0" sha1="69116580333b9e3eec5d0a1b9cf08464fac050cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1431d9fa6ab00e">
+		<description>adv14a[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12433">
+				<rom name="adv14a[cloadm exec].c10" size="12433" crc="5d3f86dc" sha1="431d9fa6ab00e1dac57b3ed465ebaaf941682cbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f76dfaba67dcf">
+		<description>adv14b Buckaroo Banzai[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11900">
+				<rom name="adv14b Buckaroo Banzai[cloadm exec].c10" size="11900" crc="b8395247" sha1="f76dfaba67dcf3d00f80f93d4e571632f43b8b80"/>
 			</dataarea>
 		</part>
 	</software>
@@ -352,6 +622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc13e20395614df7">
+		<description>annexion-B_alice</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="26361">
+				<rom name="annexion-B_alice.k7" size="26361" crc="2ad3027d" sha1="3e20395614df7dcb554e109414f0b69bb9e3428e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc104b6e759ef568">
 		<description>Annexion</description>
 		<year>????</year>
@@ -492,6 +772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1fe4c7149003c4">
+		<description>Asteroids[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5411">
+				<rom name="Asteroids[cloadm exec].c10" size="5411" crc="c769e2fe" sha1="fe4c7149003c4195d7107ceef9fa595d9be4adfc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1f454bf15dfa65">
 		<description>Astro Storm</description>
 		<year>????</year>
@@ -572,6 +862,546 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc12879ce6893667">
+		<description>BACCARAT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8629">
+				<rom name="BACCARAT.C10" size="8629" crc="c1059394" sha1="2879ce6893667a360c219d2802f5608a4cd38ba3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1416dbb8979498">
+		<description>Backgammon (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8304">
+				<rom name="Backgammon (2).C10" size="8304" crc="88b9b4f9" sha1="416dbb89794987de2caa29964417191a9316b226"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc118132cde91fcf">
+		<description>Backgammon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8057">
+				<rom name="Backgammon.C10" size="8057" crc="07dfe10e" sha1="18132cde91fcfe8e3e56d267fab3a2d895adcf68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1b09a15a70e413">
+		<description>BAGELS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2529">
+				<rom name="BAGELS.C10" size="2529" crc="250c0198" sha1="b09a15a70e413d03e4928d4c14832ba1ed900e9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1cb779b9fc7c3e">
+		<description>Bally Lander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1684">
+				<rom name="Bally Lander.C10" size="1684" crc="50df169b" sha1="cb779b9fc7c3ec3273c8c86f22a7af38cfb52bc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc100d32646250da">
+		<description>BANDIT (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4111">
+				<rom name="BANDIT (2).C10" size="4111" crc="8b84681b" sha1="00d32646250da13aa47a3512f877da7be8eac0d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc12c33ebbf4c71f">
+		<description>BANDIT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4130">
+				<rom name="BANDIT.C10" size="4130" crc="714976e0" sha1="2c33ebbf4c71febd2d039b3c40d04bc956a6ed3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1945a1da5e75b0">
+		<description>Bannochburn Legacy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15520">
+				<rom name="Bannochburn Legacy.C10" size="15520" crc="7a3b1748" sha1="945a1da5e75b0f467738aa4e839ba8dec74da6d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc15570f13837c37">
+		<description>BASE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1064">
+				<rom name="BASE.C10" size="1064" crc="1dfb1ebf" sha1="5570f13837c37d943eb291178c0c800f672a71fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1beed4f73125e8">
+		<description>BASEBALL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11641">
+				<rom name="BASEBALL.C10" size="11641" crc="0bc4b0fb" sha1="beed4f73125e87f5f46504bb7311df3f4a65ebc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1cd48670f46949">
+		<description>Basements and Beasties</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11857">
+				<rom name="Basements and Beasties.C10" size="11857" crc="9db42cb3" sha1="cd48670f469493fa5256306f32c1b9daad310441"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1016055c443924">
+		<description>Batalha No Mar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2191">
+				<rom name="Batalha No Mar.C10" size="2191" crc="e0f294a6" sha1="016055c443924e1e13dd85f04407e3fbaa06eaf3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1b9c318de8b95a">
+		<description>Battle Bots</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7488">
+				<rom name="Battle Bots.C10" size="7488" crc="e77ff9ea" sha1="b9c318de8b95a872d9d83f17c7cd63a1a3a4387d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13903b18cbf50f">
+		<description>Battleship</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5303">
+				<rom name="Battleship.C10" size="5303" crc="e490413c" sha1="3903b18cbf50f73bd8327c394ce789fb9eb55cba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1fd7a9659f6866">
+		<description>Battleships Mk II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3689">
+				<rom name="Battleships Mk II.C10" size="3689" crc="df4201aa" sha1="fd7a9659f686605df11306f9253eafa13cf07f40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1be7a3e2d8b4ba">
+		<description>BAZOOKA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1757">
+				<rom name="BAZOOKA.C10" size="1757" crc="d1a9af0e" sha1="be7a3e2d8b4ba0f929b47f5cc2482a517a53b180"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16f818e0f3bf8a">
+		<description>Bee Trap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2602">
+				<rom name="Bee Trap.C10" size="2602" crc="b8a40dc9" sha1="6f818e0f3bf8afda06a797447c24af6617305a3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc10fa0a101d0aa6">
+		<description>BERZERK (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9225">
+				<rom name="BERZERK (2).C10" size="9225" crc="48fe9b23" sha1="0fa0a101d0aa6f8304c29ef23a25f2419cb238db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1588f9d647c3bf">
+		<description>berzerk[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11821">
+				<rom name="berzerk[cloadm exec].c10" size="11821" crc="02a2af41" sha1="588f9d647c3bfcc7b4824a94b1f9ea0da5d41bac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f49b8353077d1">
+		<description>Bianco Mansion</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10812">
+				<rom name="Bianco Mansion.C10" size="10812" crc="de56f0f2" sha1="f49b8353077d1470450e83dc5f0ac63fbb2f8351"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1b55390a051085">
+		<description>Big Red</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8396">
+				<rom name="Big Red.C10" size="8396" crc="5a8d5a87" sha1="b55390a051085370675fbff5189cf8f0009d7df7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e871746adc6b2">
+		<description>BIGCHARS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1629">
+				<rom name="BIGCHARS.C10" size="1629" crc="f8d6004f" sha1="e871746adc6b286e047291ad5f18c153d8e5a02b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16313e1d821493">
+		<description>Binary Room</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2726">
+				<rom name="Binary Room.C10" size="2726" crc="9b4693c8" sha1="6313e1d821493e20c679f51dfab987efc28c1e33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13e7fce7f56670">
+		<description>Biorhythm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2100">
+				<rom name="Biorhythm.C10" size="2100" crc="049b52ea" sha1="3e7fce7f56670252444e8bfff8bb225e907f07cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f9b611473d637">
+		<description>Blackjack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7259">
+				<rom name="Blackjack.C10" size="7259" crc="9e4326b5" sha1="f9b611473d63731db4db9d95db5128818db73a11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc164f1b09d8026f">
+		<description>BLITZ</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="901">
+				<rom name="BLITZ.C10" size="901" crc="b9b05cee" sha1="64f1b09d8026f2b1390d026c81a6cc3e5afedaf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc188d6041a00aaf">
+		<description>Block Drop-joy_4N</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="709180">
+				<rom name="Block Drop-joy_4N.WAV" size="709180" crc="74c7c4f3" sha1="88d6041a00aaf83ed7d5074ba31bc1bebd4ab959"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc12cf730ecb2f4a">
+		<description>Block Drop</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="419046">
+				<rom name="Block Drop.wav" size="419046" crc="3b616fbf" sha1="2cf730ecb2f4a8330880bd7a0b04c29f9902cb21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13f5e15839b50b">
+		<description>BLOCKOUT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2682">
+				<rom name="BLOCKOUT.C10" size="2682" crc="cac6f8a7" sha1="3f5e15839b50b188f308cd6cf276feb0a1a64e7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e8cda40a3e7d1">
+		<description>BOBO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6613">
+				<rom name="BOBO.C10" size="6613" crc="a3bca6d9" sha1="e8cda40a3e7d1b9fe3e7ac0c604c8811dce41714"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc18edc4db7323b6">
+		<description>Bomb Squad</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8553">
+				<rom name="Bomb Squad.C10" size="8553" crc="ae003c44" sha1="8edc4db7323b6381f3516a58b06691c63bf05dbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc19b943131bd626">
+		<description>BOMBRUN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1559">
+				<rom name="BOMBRUN.C10" size="1559" crc="ca764d8e" sha1="9b943131bd6267a99f9b7c8bd83ecbc3b12913dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc17d2d4a552e393">
+		<description>Bowling Champ</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3344">
+				<rom name="Bowling Champ.C10" size="3344" crc="ca8bafd2" sha1="7d2d4a552e393e4e413ec54e23f610434c18d94b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1c5ffca5ac462b">
+		<description>BOXING</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2422">
+				<rom name="BOXING.C10" size="2422" crc="d8014362" sha1="c5ffca5ac462b15377e45d5e82705590410ad1c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13e5e52a750339">
+		<description>BREAKOUT-joy_4N</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="604964">
+				<rom name="BREAKOUT-joy_4N.WAV" size="604964" crc="5687c36e" sha1="3e5e52a7503396615b6bd5c632fef0d20e563d1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1df391f03f6e1f">
+		<description>breakout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="809508">
+				<rom name="breakout.wav" size="809508" crc="81493c40" sha1="df391f03f6e1fb62136b9f85d78e892b1e9afbe7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc112f497d5220cb">
+		<description>BRICKOUT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2204">
+				<rom name="BRICKOUT.C10" size="2204" crc="7b636275" sha1="12f497d5220cbd179c9d2ddebac858e22972a7d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1a977be8fb037c">
+		<description>BRICKS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1967">
+				<rom name="BRICKS.C10" size="1967" crc="9f41984c" sha1="a977be8fb037ccb06b68610a94ae6387db6d5a77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d593dca07f358">
+		<description>Bulls and Bears</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6947">
+				<rom name="Bulls and Bears.C10" size="6947" crc="4c9815c5" sha1="d593dca07f3583d4dc6f4497a4c9d9d627c98dd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d569ed0004cd9">
+		<description>calc-80_alice</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12113">
+				<rom name="calc-80_alice.k7" size="12113" crc="998ed85b" sha1="d569ed0004cd99872e215cdecfcfb014ac9b55bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14fb2ffc8dee38">
+		<description>Castle Bally</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2497">
+				<rom name="Castle Bally.C10" size="2497" crc="184d25cd" sha1="4fb2ffc8dee38c365e93c6a29ed3e63d6f969e51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc113f0aeed0767a">
+		<description>Dam Busters</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5602">
+				<rom name="Dam Busters.C10" size="5602" crc="71746738" sha1="13f0aeed0767a873040866216ee55246ac6a4b77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16da5dee6ff09b">
+		<description>Dash (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2303">
+				<rom name="Dash (2).C10" size="2303" crc="3357a147" sha1="6da5dee6ff09bb3baa144085c9d78b2ad6608881"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1379efe80ca02f">
+		<description>faire-le-point-bac-francais1-B_alice</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="75111">
+				<rom name="faire-le-point-bac-francais1-B_alice.k7" size="75111" crc="d478d7b8" sha1="379efe80ca02f17668e4971af6e61459c258ade3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc100fac0174baed">
+		<description>Halloween Boogaloo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3276">
+				<rom name="Halloween Boogaloo.C10" size="3276" crc="bde17a1c" sha1="00fac0174baede2fb99c2c2d456efcfee4722f2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1b710482debc5c">
+		<description>Hamburger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8367">
+				<rom name="Hamburger.C10" size="8367" crc="9734b7f4" sha1="b710482debc5ced7f2b7940cc1608170bd6e99ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc10babdd779a5e7">
+		<description>Mission Defeat the Alpha Force (2)[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9512">
+				<rom name="Mission Defeat the Alpha Force (2)[cloadm exec].c10" size="9512" crc="6f907fdf" sha1="0babdd779a5e7b7ed38e4adbb36e71ea3a136e88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13ba6cfbc899b7">
+		<description>Mission Defeat the Alpha Force[cloadm exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9459">
+				<rom name="Mission Defeat the Alpha Force[cloadm exec].C10" size="9459" crc="753d2a9d" sha1="3ba6cfbc899b7694912cd90b6519d7a650f107be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14cdca1661339f">
+		<description>Night of the Vampire Bunnies</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="17583">
+				<rom name="Night of the Vampire Bunnies.C10" size="17583" crc="f086cdf5" sha1="4cdca1661339f1bc6fa13bcaab7b73333a266557"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1a74d3924d924f">
+		<description>programme-de-demonstration_alice</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3181">
+				<rom name="programme-de-demonstration_alice.k7" size="3181" crc="57d0e141" sha1="a74d3924d924fa09f3ea2574f1107aa7d237a259"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc131c2c18591545">
+		<description>road-race_mc10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2536">
+				<rom name="road-race_mc10.k7" size="2536" crc="17642d4d" sha1="31c2c18591545fe292effa42b758af6b1bb558ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11537591d64148">
+		<description>Snowboarder</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4252">
+				<rom name="Snowboarder.C10" size="4252" crc="5d13896f" sha1="1537591d641489e0e1fefa7aab5158702cf0bd27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1070230c4fd54c">
+		<description>Snowboarder_4N</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1155412">
+				<rom name="Snowboarder_4N.WAV" size="1155412" crc="71d30a35" sha1="070230c4fd54c245de22896f1ccfc92818210afc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1008ba3b4b3f49">
+		<description>Treasures of Barsoom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11665">
+				<rom name="Treasures of Barsoom.C10" size="11665" crc="dfb63329" sha1="008ba3b4b3f4930a85280068c54081a619447a93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1bdb682d54369b">
 		<description>Voyage to Atlantis</description>
 		<year>????</year>
@@ -579,6 +1409,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="14585">
 				<rom name="Voyage to Atlantis.C10" size="14585" crc="818d6f54" sha1="bdb682d54369b8b7ab5777454a02cc4c11809d01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc138fefd1476d28">
+		<description>Year at the Races</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12844">
+				<rom name="Year at the Races.C10" size="12844" crc="4132d725" sha1="38fefd1476d28f2735cf867b50e1f7abd3446456"/>
 			</dataarea>
 		</part>
 	</software>

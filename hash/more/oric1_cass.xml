@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 289 -->
+<!-- Number of items in this list = 304 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -1202,6 +1202,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="orif0907236f1889">
+		<description>Danger Zone (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1654">
+				<rom name="Danger Zone (UK) (19xx) (PD).tap" size="1654" crc="7cfe7a3c" sha1="f0907236f1889d313789430a91153931f157d515"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori5d47405444cb0">
+		<description>dbug_circles</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="250">
+				<rom name="dbug_circles.tap" size="250" crc="25c8f960" sha1="5d47405444cb006dc2a7044cbd9a87a66628f884"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori78702a4d6d546">
+		<description>Deblock 1.1 (19xx)(Liberge Stephane)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="2633">
+				<rom name="Deblock 1.1 (19xx)(Liberge Stephane)(fr).tap" size="2633" crc="ecd3275d" sha1="78702a4d6d546d7c818cc627d5657481edca2799"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori25cddf8b2ad96">
 		<description>Defense Force (UK) (19xx) [b]</description>
 		<year>????</year>
@@ -1242,6 +1272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ori17d0ae914e264">
+		<description>Digital Clock (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1029">
+				<rom name="Digital Clock (UK) (19xx) (PD).tap" size="1029" crc="3e36efc2" sha1="17d0ae914e264541ed4915855e2004cc8db38bbb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori1f6a817b071d9">
 		<description>dimjeu</description>
 		<year>????</year>
@@ -1269,6 +1309,26 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="9327">
 				<rom name="Dot-Man (UK) (1998) (PD).tap" size="9327" crc="f1a4972d" sha1="cf8abfb5f47b7f6d876e03d043ce90ea4b582f86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori57f9c4f40669f">
+		<description>Dot-Man Loader (UK) (1998) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1502">
+				<rom name="Dot-Man Loader (UK) (1998) (PD).tap" size="1502" crc="18e14ec0" sha1="57f9c4f40669fd9428f9fea23d42f68e90f4d5d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori952b4c8e60508">
+		<description>DOTSRECORD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="34697">
+				<rom name="DOTSRECORD.tap" size="34697" crc="563e7f28" sha1="952b4c8e60508d9ec3a9644f5570fcf7d2da20b4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1309,6 +1369,96 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="2435">
 				<rom name="Draughtsman by B.D. & S.L. Grayson (1983) (PD).tap" size="2435" crc="eb952982" sha1="fb9872a4fb7644a8dc28eeb33d81ed6d9ef894ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori8577b0ec68869">
+		<description>Dungeon Master Preview (UK) (1986) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="22356">
+				<rom name="Dungeon Master Preview (UK) (1986) (PD).tap" size="22356" crc="94576aaf" sha1="8577b0ec688699333299025eb03136d88ab31f8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori611e5961e25b0">
+		<description>durendal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="29661">
+				<rom name="durendal.tap" size="29661" crc="0883d32c" sha1="611e5961e25b0ca2f2670df4776768994e41b2fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori7b52e81d63be9">
+		<description>EcrEvol</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="5262">
+				<rom name="EcrEvol.tap" size="5262" crc="1e4e6472" sha1="7b52e81d63be9d7178967e8cf61845d5bb229665"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori0a20844e92177">
+		<description>Egg Timer (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="637">
+				<rom name="Egg Timer (UK) (19xx) (PD).tap" size="637" crc="696b90c0" sha1="0a20844e92177d8d22b6c306cb67904d9706b4e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oria9fb1a7d8affa">
+		<description>ElDuet_BAS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="904">
+				<rom name="ElDuet_BAS.tap" size="904" crc="bbea8ad1" sha1="a9fb1a7d8affabeb311d515144cc72963069c18a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori002a19a560846">
+		<description>Electronic Organ (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="655">
+				<rom name="Electronic Organ (UK) (19xx) (PD).tap" size="655" crc="f0f4da67" sha1="002a19a5608460f6b641cb221b1f07b99a4ed26b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori18fc056606201">
+		<description>Ellipse by Peter TheSpider (UK) (2002) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="606">
+				<rom name="Ellipse by Peter TheSpider (UK) (2002) (PD).tap" size="606" crc="9d5f48b7" sha1="18fc05660620116e9e18c8b2be639451fef6d1ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori5aea178d5d802">
+		<description>ENTER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1984">
+				<rom name="ENTER.tap" size="1984" crc="7c893249" sha1="5aea178d5d80232c82eea80fe813d59d0f30a592"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori696cbd8a13a22">
+		<description>Entrapment (UK) (19xx) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1258">
+				<rom name="Entrapment (UK) (19xx) (PD).tap" size="1258" crc="967e57d5" sha1="696cbd8a13a2256c23bf9a84512f10b3e2f4a739"/>
 			</dataarea>
 		</part>
 	</software>

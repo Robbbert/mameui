@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 57 -->
+<!-- Number of items in this list = 112 -->
 <softwarelist name="interact" description="interact loose roms">
 	<software name="int4167f2d7bee39">
 		<description>10 - Les Envahisseurs (Hector)</description>
@@ -532,6 +532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int6615c0185acea">
+		<description>Dragon's Dungeon (8K Graphics Basic)(1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Dragon's Dungeon (8K Graphics Basic)(1982)(Micro Video).k7" size="8031" crc="088141e1" sha1="6615c0185acea3d5d83078501c8f512f4a3beba9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int94a38fb2f3427">
 		<description>Dreamland (1983)(Micro Video)(alt)</description>
 		<year>????</year>
@@ -552,6 +562,186 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intc38fab9a4efbe">
+		<description>Editex (1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5449">
+				<rom name="Editex (1981)(Micro Video).k7" size="5449" crc="b91f0790" sha1="c38fab9a4efbe702868355b4737ef4609349567a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int5519fd2494862">
+		<description>EDU-Basic (Lambda Systemes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7664">
+				<rom name="EDU-Basic (Lambda Systemes).k7" size="7664" crc="7331160d" sha1="5519fd24948621ed91ec55958ccc59201df76917"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int3ebbe96ce77b7">
+		<description>ESP Master (Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="10497">
+				<rom name="ESP Master (Micro Video).k7" size="10497" crc="2fcfeab0" sha1="3ebbe96ce77b724bc038389ecf6a86e3f0f92723"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int3e3875133e67e">
+		<description>EZedit (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="11123">
+				<rom name="EZedit (1980)(Micro Video).k7" size="11123" crc="caf3e7a6" sha1="3e3875133e67ed459c2fb16c7dbafcd8b8927d8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int0ff5da99af34c">
+		<description>Football (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16407">
+				<rom name="Football (1980)(Micro Video).k7" size="16407" crc="cd0c965b" sha1="0ff5da99af34c2dd58aadba97df57fd61dcab126"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int0b432550e2e6e">
+		<description>Hammurabi (Level II Basic)(197x)(Interact)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="13742">
+				<rom name="Hammurabi (Level II Basic)(197x)(Interact).k7" size="13742" crc="7059571e" sha1="0b432550e2e6e5639f1633d7a6c9c8a8fe6a5825"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intbf642c421e053">
+		<description>Heads-Up-Pinball (Microvideo)(1982)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="17538">
+				<rom name="Heads-Up-Pinball (Microvideo)(1982).k7" size="17538" crc="c282b767" sha1="bf642c421e0533c3d14b4544f0447ee66cd2794b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta37e84a8d13a7">
+		<description>Hot Rocks (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16247">
+				<rom name="Hot Rocks (1982)(Micro Video).k7" size="16247" crc="017bca20" sha1="a37e84a8d13a739ae90108302161a83b58b06056"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta39e931b5f1ef">
+		<description>Human Canonball (8K Graphics Basic)(1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Human Canonball (8K Graphics Basic)(1982)(Micro Video).k7" size="8031" crc="42ca53c9" sha1="a39e931b5f1eff49b0ff72bc84961b71752588d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int93ab566dab5da">
+		<description>Jumping-Jack (1983)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="13677">
+				<rom name="Jumping-Jack (1983)(Micro Video).k7" size="13677" crc="17db1654" sha1="93ab566dab5dac9288ffb32ae439c1cf83112082"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int6989b03287a15">
+		<description>King Of The Road (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="31818">
+				<rom name="King Of The Road (1982)(Micro Video).k7" size="31818" crc="3092b06e" sha1="6989b03287a15890b4473be2b443ca8313cbf528"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intff49c89c72cf9">
+		<description>Knockdown (1978)(Interact)(alt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7664">
+				<rom name="Knockdown (1978)(Interact)(alt).k7" size="7664" crc="9febdf07" sha1="ff49c89c72cf97179247b2dc1bab229b07cabf04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int3dbb26339737c">
+		<description>Le Donjon Hante</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="12195">
+				<rom name="Le Donjon Hante.k7" size="12195" crc="5a7968cf" sha1="3dbb26339737cce4a1512aa8456b90f9bf95044f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int559ff9288cb9d">
+		<description>Life (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16408">
+				<rom name="Life (1980)(Micro Video).k7" size="16408" crc="a7187bfa" sha1="559ff9288cb9d2252bcbe55146c29a3861cc4a82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int5c6436deaee84">
+		<description>Math Flash (8K Graphics Basic)(1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="6489">
+				<rom name="Math Flash (8K Graphics Basic)(1982)(Micro Video).k7" size="6489" crc="f23eda0a" sha1="5c6436deaee846b43d403f9be9f107c22bfba1fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int97275c62ecf0e">
+		<description>Mega Volts II (1983)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="6218">
+				<rom name="Mega Volts II (1983)(Micro Video).k7" size="6218" crc="edca0f6b" sha1="97275c62ecf0e72916be116ba8e4a81d05a697d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intba22115512646">
+		<description>Mega-Volts (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="15763">
+				<rom name="Mega-Volts (1982)(Micro Video).k7" size="15763" crc="9d904ba0" sha1="ba221155126465b8235ea4aa8d0553dc4ac834fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intea81584beb9ec">
+		<description>Micro Golf (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="31628">
+				<rom name="Micro Golf (1982)(Micro Video).k7" size="31628" crc="48fa0865" sha1="ea81584beb9ecb2e5285b21720b9d1512e5fe614"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int41c3ab4f70057">
 		<description>Micro Video 32K Basic</description>
 		<year>????</year>
@@ -562,6 +752,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="inteeab9a25e4039">
+		<description>Micro Video Communicator (1980)(Micro Video - Long Playing Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5470">
+				<rom name="Micro Video Communicator (1980)(Micro Video - Long Playing Software).k7" size="5470" crc="5ccdeb40" sha1="eeab9a25e4039fb6bb841b0b84eaebbc830bf092"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int812ee9da7e290">
+		<description>Micro Video Disassembler (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5005">
+				<rom name="Micro Video Disassembler (1980)(Micro Video).k7" size="5005" crc="d76a38bc" sha1="812ee9da7e290a7b462bb4ee36d2e316da3f04eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta6b2ad2a8c159">
+		<description>Micro Video Disassembler Plus (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5283">
+				<rom name="Micro Video Disassembler Plus (1982)(Micro Video).k7" size="5283" crc="f05436d2" sha1="a6b2ad2a8c159b5a2d4775acc3a94cda27b8f121"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int488d4e86da95e">
+		<description>Micro Video Monitor (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="4530">
+				<rom name="Micro Video Monitor (1980)(Micro Video).k7" size="4530" crc="2429b69a" sha1="488d4e86da95ebc1ac120eb06b620a41709d6c3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1311d6416d5f3">
+		<description>Micro Video Monitor Plus (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="4938">
+				<rom name="Micro Video Monitor Plus (1982)(Micro Video).k7" size="4938" crc="039c704e" sha1="1311d6416d5f31e52541382d0cfd9f2f66264905"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int110077d78385b">
+		<description>Micro Yahtzee (8K Graphics Basic)(Micro Video)(1981)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Micro Yahtzee (8K Graphics Basic)(Micro Video)(1981).k7" size="8031" crc="a0a2defa" sha1="110077d78385be3e641936ee8d9e3ddf6c13df9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int93d098f2d0e6c">
+		<description>Micro-Yathzee (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="6107">
+				<rom name="Micro-Yathzee (Victor Lambda).k7" size="6107" crc="af89f07a" sha1="93d098f2d0e6c5d673d70afe27395a9535b3d98b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int7bfce40996437">
 		<description>microchess_Q</description>
 		<year>????</year>
@@ -569,6 +829,296 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="2577265">
 				<rom name="microchess_Q.WAV" size="2577265" crc="01acaf6e" sha1="7bfce40996437dd4ced09f35ae7b38b090716cc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intc7d61e6ddc35d">
+		<description>Mind Bender (Micro Video)(1980)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7503">
+				<rom name="Mind Bender (Micro Video)(1980).k7" size="7503" crc="d3f8a5e0" sha1="c7d61e6ddc35d9b40ffc66edd756bc5c68f1b8f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int796793db5c088">
+		<description>Morse Code Trainer (Micro Video)(1981)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5190">
+				<rom name="Morse Code Trainer (Micro Video)(1981).k7" size="5190" crc="a91a01be" sha1="796793db5c08843a869fe8e09402dc07cbca395a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int8ee998b323529">
+		<description>Mysterious Mansion Adventure (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="32752">
+				<rom name="Mysterious Mansion Adventure (1982)(Micro Video).k7" size="32752" crc="edaa8153" sha1="8ee998b323529c0bc07c827f7124e1c41228b446"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intaf62da5b55db2">
+		<description>Pack Wars (Micro Video)(1982)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="12135">
+				<rom name="Pack Wars (Micro Video)(1982).k7" size="12135" crc="d2d8bd2f" sha1="af62da5b55db226e716db46431dad2a6a7f7efde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int10da96a12081f">
+		<description>Packrat (1981)(Micro Video)(alt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="12263">
+				<rom name="Packrat (1981)(Micro Video)(alt).k7" size="12263" crc="ac7b83e5" sha1="10da96a12081f65db05f4ebbdd0f8403446b236c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intc8dd4cfffa417">
+		<description>Packrat (1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="12263">
+				<rom name="Packrat (1981)(Micro Video).k7" size="12263" crc="1f8c791d" sha1="c8dd4cfffa417d5ec3b7d02cdc01ca3ed4b2ca81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1264d89fbdc91">
+		<description>Packrat Multimaze Overlay (1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="4973">
+				<rom name="Packrat Multimaze Overlay (1981)(Micro Video).k7" size="4973" crc="16bbf5c1" sha1="1264d89fbdc91082d767fcdb29613c9bfaed2474"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1e356a7a7578a">
+		<description>Pinball (alt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9309">
+				<rom name="Pinball (alt).k7" size="9309" crc="4e5bbfaf" sha1="1e356a7a7578af9d6f6d4a92f7b2144148325077"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intff84b55b71488">
+		<description>Pinball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="10588">
+				<rom name="Pinball.k7" size="10588" crc="33a90ab1" sha1="ff84b55b71488a688b6642fbe569de537626ed5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intbad571493690a">
+		<description>Piranhas (Victor Lambda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7621">
+				<rom name="Piranhas (Victor Lambda).k7" size="7621" crc="65f92c7a" sha1="bad571493690a8ccb67d92674c22de3df0c79ab1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7dc67efa47491">
+		<description>Pseudonyms (Computer Quiz data tape)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="10525">
+				<rom name="Pseudonyms (Computer Quiz data tape)(Micro Video).k7" size="10525" crc="4a3c0916" sha1="7dc67efa47491dabf6b258045b6cb2196578c2d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta0552157b7c98">
+		<description>RS232 Basic (Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="11616">
+				<rom name="RS232 Basic (Micro Video).k7" size="11616" crc="b763c3de" sha1="a0552157b7c9835b645439ea411aadd0e3422101"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int14a9c1b6f5b39">
+		<description>Safecracker (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="11621">
+				<rom name="Safecracker (1982)(Micro Video).k7" size="11621" crc="083c902f" sha1="14a9c1b6f5b3934db75f9b59d677571ffe402dea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int0b13992cbec1c">
+		<description>Scooter (8K Graphics Basic)(1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Scooter (8K Graphics Basic)(1982)(Micro Video).k7" size="8031" crc="3b59eb89" sha1="0b13992cbec1ce20c9c9c60e0fd6544d93e7ac6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int8a255e24d197f">
+		<description>Speed Reader (1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8146">
+				<rom name="Speed Reader (1981)(Micro Video).k7" size="8146" crc="772bed66" sha1="8a255e24d197fa1dc0e27e8c35342adc8b49b34e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int11027bdf43660">
+		<description>Steinberg Text Processor (1983)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="6267">
+				<rom name="Steinberg Text Processor (1983)(Micro Video).k7" size="6267" crc="ebab8fe3" sha1="11027bdf4366058de393c70f03cad41449fe4753"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intdf6d125de6ada">
+		<description>Sub Search (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8618">
+				<rom name="Sub Search (1982)(Micro Video).k7" size="8618" crc="b3922ea3" sha1="df6d125de6adafd2007895224663ccbc2e805a65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int99e2f57039124">
+		<description>Superbowl (1980)(Superbowl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="32392">
+				<rom name="Superbowl (1980)(Superbowl).k7" size="32392" crc="0071cb42" sha1="99e2f570391241e30a03252bfa9364c13b8d51cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int25bc8c96b8097">
+		<description>Target Practice (8K Graphics Basic)(1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Target Practice (8K Graphics Basic)(1981)(Micro Video).k7" size="8031" crc="30f9518a" sha1="25bc8c96b8097f2186c7bb051d764c59aefb0409"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int867595543b91f">
+		<description>Tatooine Travels (8K Graphics Basic)(1981)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Tatooine Travels (8K Graphics Basic)(1981)(Micro Video).k7" size="8031" crc="97e592a3" sha1="867595543b91faa9e50f70649c4da36d0bc87c26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intd47a346bf6f3f">
+		<description>Tic-Tac-Cube (8K Graphics Basic)(1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Tic-Tac-Cube (8K Graphics Basic)(1982)(Micro Video).k7" size="8031" crc="50624c82" sha1="d47a346bf6f3f30a78f87e3d9e34308c66cf14c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int51615f3924c84">
+		<description>Troll Hole Adventure (1980)(Long Playing Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="37954">
+				<rom name="Troll Hole Adventure (1980)(Long Playing Software).k7" size="37954" crc="dd042b97" sha1="51615f3924c84b823b8efb92e8d171b14b096a94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intce07393c03c66">
+		<description>TV Trivia (Computer Quiz data tape)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="10525">
+				<rom name="TV Trivia (Computer Quiz data tape).k7" size="10525" crc="34ab99de" sha1="ce07393c03c661a373930b3c884cd6e14b4857fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intf14b739776eab">
+		<description>Vector Graphics Subroutines (1980)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8017">
+				<rom name="Vector Graphics Subroutines (1980)(Micro Video).k7" size="8017" crc="fdb646b4" sha1="f14b739776eab0095753c53c8e1d21b86188ad4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intec159aea8f0bb">
+		<description>Vicious Fishes (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="15769">
+				<rom name="Vicious Fishes (1982)(Micro Video).k7" size="15769" crc="49c1acf5" sha1="ec159aea8f0bba070285734fac868ccccfba362f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intfc010acd6032c">
+		<description>Video Derby (8K Graphics Basic)(1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8031">
+				<rom name="Video Derby (8K Graphics Basic)(1982)(Micro Video).k7" size="8031" crc="cef45ea7" sha1="fc010acd6032c15d359e5e801a91385f837cb272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int3ce1484d18373">
+		<description>Volleyball (1978)(Interact)(alt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8178">
+				<rom name="Volleyball (1978)(Interact)(alt).k7" size="8178" crc="9dd2ce82" sha1="3ce1484d18373d7d727400408e2cd782990f56d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int94171a99e3151">
+		<description>Wing It! (1982)(Micro Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16247">
+				<rom name="Wing It! (1982)(Micro Video).k7" size="16247" crc="9d543309" sha1="94171a99e3151f8c67a89846bd9131fcb5aacc7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int14eb4facc9f5b">
+		<description>World of Books (Computer Quiz data tape)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="10525">
+				<rom name="World of Books (Computer Quiz data tape).k7" size="10525" crc="facb9653" sha1="14eb4facc9f5b8011f802614ff9e8f9cee14179b"/>
 			</dataarea>
 		</part>
 	</software>
