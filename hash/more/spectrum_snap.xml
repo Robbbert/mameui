@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 213 -->
+<!-- Number of items in this list = 212 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -1739,16 +1739,6 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="42655">
 				<rom name="Impossaball (1987)(Hewson Consultants).z80" size="42655" crc="96bad912" sha1="0740a93ec47d0e3e9bbe34cfe98cbae6258e23ba"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs00d9453b608b3">
-		<description>Impossible Mission II (1988)(U.S. Gold)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="snap" interface="spectrum_snap">
-			<dataarea name="snap" size="44256">
-				<rom name="Impossible Mission II (1988)(U.S. Gold).z80" size="44256" crc="ea95490a" sha1="00d9453b608b36a4ac21a5104c2667c5fa3ec154"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3243 -->
+<!-- Number of items in this list = 3241 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3119,16 +3119,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Batman Returns (beta).sfc" size="1048576" crc="9ce7d5ba" sha1="3bea4be499657acc2aeb0090fa9a00e4b15a7430"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snscfcc60d398754">
-		<description>Battle Blaze (USA) (Beta)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Battle Blaze (USA) (Beta).sfc" size="1048576" crc="9f2ba6a9" sha1="cfcc60d3987545429c2196acecb1b3d1f7e56015"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7969,16 +7959,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Fireteam Rogue (U) (beta) [T+Fre_Generation IX].sfc" size="2097152" crc="0e58b44e" sha1="95a429d877e2fb59c11e04d83c17e79f04bece7c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns9a1b37955e5a8">
-		<description>Fireteam Rogue (USA) (Proto)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Fireteam Rogue (USA) (Proto).sfc" size="2097152" crc="00f67ba2" sha1="9a1b37955e5a8b01a40b0dc35454d4fb9f99f34f"/>
 			</dataarea>
 		</part>
 	</software>

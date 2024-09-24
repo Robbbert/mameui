@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 979 -->
+<!-- Number of items in this list = 978 -->
 <softwarelist name="a7800" description="a7800 loose roms">
 	<software name="a78e019c21c536b0">
 		<description>(demo)10 Print Maze Demo (20170826)</description>
@@ -3619,16 +3619,6 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="49280">
 				<rom name="Desert Falcon X (PAL) (20130805).a78" size="49280" crc="c60aea48" sha1="b77d7dc2e8c16e615841367baa31a9848820a052"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a78065f0a9e759fb">
-		<description>Diagnostic Test Cartridge (19xx) (Atari)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a7800_cart">
-			<dataarea name="rom" size="32896">
-				<rom name="Diagnostic Test Cartridge (19xx) (Atari).a78" size="32896" crc="69b477ae" sha1="065f0a9e759fb1f02b1c95960b166187c10e6abe"/>
 			</dataarea>
 		</part>
 	</software>

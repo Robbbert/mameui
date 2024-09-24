@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 400 -->
+<!-- Number of items in this list = 398 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -19,26 +19,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="84661">
 				<rom name="(demo)70908 128K (2019)(Scopex).tap" size="84661" crc="e2268f42" sha1="4c55e94884563ba91cfe0375c03c8d85dff63668"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs51ff809719537">
-		<description>007 - Live and Let Die (1988)(Domark)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="62379">
-				<rom name="007 - Live and Let Die (1988)(Domark).tap" size="62379" crc="5f21da6b" sha1="51ff809719537458f988e20a6c4cb0bcb4949ed6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs33ae593e7a9d6">
-		<description>007 - The Spy Who Loved Me (1990)(Domark)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="129851">
-				<rom name="007 - The Spy Who Loved Me (1990)(Domark).tap" size="129851" crc="629c140c" sha1="33ae593e7a9d603b98b59c53425d79e203aee4a8"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 93 -->
+<!-- Number of items in this list = 91 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -422,16 +422,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gba3d554e4e33563">
-		<description>cthd</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="3353604">
-				<rom name="cthd.bin" size="3353604" crc="a1d2d006" sha1="3d554e4e33563211865b9c5481444b0b8b4e6127"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gba3df43aaabc0e8">
 		<description>Daleks</description>
 		<year>????</year>
@@ -479,16 +469,6 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Duel Masters 3 (Japan) (Rev 1).gba" size="8388608" crc="d2b9cfb6" sha1="05ad843564c663a050e137ae0ec07d09f585c714"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gbae6dab28aa3e9a">
-		<description>fuzz050118</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="4124984">
-				<rom name="fuzz050118.bin" size="4124984" crc="fd239437" sha1="e6dab28aa3e9a5b1417bbf3929c45ff7260803b0"/>
 			</dataarea>
 		</part>
 	</software>

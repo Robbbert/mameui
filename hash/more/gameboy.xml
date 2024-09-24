@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 719 -->
+<!-- Number of items in this list = 717 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -3602,16 +3602,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gbc8db42a6518670">
-		<description>Carillon Editor V1.2 by Alexsi Eeben (PD) [C]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gameboy_cart">
-			<dataarea name="rom" size="65536">
-				<rom name="Carillon Editor V1.2 by Alexsi Eeben (PD) [C].gbc" size="65536" crc="a55838f4" sha1="8db42a6518670a6434ca49a0b54a3e09ada1a998"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gbcaaff201cbb0a6">
 		<description>Carillon Player & FX Hammer V1.0 - 7645HZ Sample Player (PD)[C]</description>
 		<year>????</year>
@@ -4849,16 +4839,6 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="GB Cart Mag-E-Zine Vol 1 Issue 2 November 3rd, 2000 (PD) [C].gbc" size="32768" crc="291d001a" sha1="eaa3735de06bf441e4fafb5b3250d76e9bf7be4c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gbc8e078212a0331">
-		<description>GB Clock V1.0 (PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gameboy_cart">
-			<dataarea name="rom" size="65536">
-				<rom name="GB Clock V1.0 (PD).gb" size="65536" crc="b21d7bcd" sha1="8e078212a033144a7edf081dbee4f1e4f9988e87"/>
 			</dataarea>
 		</part>
 	</software>

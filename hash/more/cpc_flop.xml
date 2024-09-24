@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7600 -->
+<!-- Number of items in this list = 7672 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -172,6 +172,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc20a9e1a118699">
+		<description>1st Division Manager (1991)(Codemasters)[cr The Equalizor][a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="1st Division Manager (1991)(Codemasters)[cr The Equalizor][a2].dsk" size="194816" crc="751d21a8" sha1="20a9e1a1186996fed19de1a4fc394e295875d85e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc06884dd5e9d62">
+		<description>1st Division Manager (1991)(Codemasters)[cr The Equalizor][a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="1st Division Manager (1991)(Codemasters)[cr The Equalizor][a].dsk" size="204544" crc="93d19541" sha1="06884dd5e9d621db79d8d71303c5740915f3dc43"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc5c757688efcef">
 		<description>1st Intro (Guild Of Cracker)</description>
 		<year>????</year>
@@ -189,6 +209,36 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="204544">
 				<rom name="1stDemos-Sourcen.dsk" size="204544" crc="c448bcac" sha1="5635a1fecd279e7dae1e1f3d0a3665933742c5d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc79d364aba39e7">
+		<description>2 Player Soccer Squad (1986)(Cult Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="2 Player Soccer Squad (1986)(Cult Games)[a].dsk" size="204544" crc="fedcc224" sha1="79d364aba39e7663603c1d561cd7a0f56640f72c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4d3cbca2029dc">
+		<description>2 Player Super League (1989)(Womack, R.)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="2 Player Super League (1989)(Womack, R.)[a].dsk" size="194816" crc="5da89e79" sha1="4d3cbca2029dc9697f9e496ba8b94e562c6839c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc84ace57d6ba99">
+		<description>2 Player Super League (1990)(Womack, R.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="2 Player Super League (1990)(Womack, R.).dsk" size="204544" crc="44e1f457" sha1="84ace57d6ba997331f8b5a7074fc93eb461c5b82"/>
 			</dataarea>
 		</part>
 	</software>
@@ -412,13 +462,103 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cpcb3a55b8765f39">
-		<description>3D Grand Prix (1985)(Amsoft)</description>
+	<software name="cpc5c2e5d9a7ff36">
+		<description>3D Boxing (1985)(Amsoft)(fr)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Boxing (1985)(Amsoft)(fr)[a].dsk" size="204544" crc="5f79b977" sha1="5c2e5d9a7ff3613a1705e78e054c4ee3813da01f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc29a666f501954">
+		<description>3D Chateau (1986)(Brogniart, Philippe)(fr)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
-				<rom name="3D Grand Prix (1985)(Amsoft).dsk" size="194816" crc="bdd9a37e" sha1="b3a55b8765f39987dc4a33ac1db45bf9f194669e"/>
+				<rom name="3D Chateau (1986)(Brogniart, Philippe)(fr).dsk" size="194816" crc="05efd3be" sha1="29a666f5019541a9f3f8f5fffbf386d534b940e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcdd5f2752f9066">
+		<description>3D Fight (1986)(Loriciels)(fr)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Fight (1986)(Loriciels)(fr)[a2].dsk" size="204544" crc="3ca6891c" sha1="dd5f2752f906648eeade331c7e01e353d97d223a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc32bd3af187aaa">
+		<description>3D Fight (1986)(Loriciels)(fr)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="195635">
+				<rom name="3D Fight (1986)(Loriciels)(fr)[a3].dsk" size="195635" crc="9cee0fb7" sha1="32bd3af187aaa585acad90ad3f5e6b1c2525f1cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcbb92e81091c23">
+		<description>3D Fight (1986)(Loriciels)(fr)[a4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="3D Fight (1986)(Loriciels)(fr)[a4].dsk" size="194816" crc="1b383cc7" sha1="bb92e81091c23660037925e93d2c59432fcee058"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc517c8ccfaedff">
+		<description>3D Fight (1986)(Loriciels)(fr)[a5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="3D Fight (1986)(Loriciels)(fr)[a5].dsk" size="194816" crc="eb382d8c" sha1="517c8ccfaedfff796c3074d84d416ea72a9cdc70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcf28773f937efe">
+		<description>3D Fight (1986)(Loriciels)(fr)[h Abraxas]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Fight (1986)(Loriciels)(fr)[h Abraxas].dsk" size="204544" crc="2dad3a9a" sha1="f28773f937efec7d4f152d7d05169b304e0bf2f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcb3a55b8765f39">
+		<description>3D Grand Prix (1985)(Amsoft)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="3D Grand Prix (1985)(Amsoft)[a3].dsk" size="194816" crc="bdd9a37e" sha1="b3a55b8765f39987dc4a33ac1db45bf9f194669e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4db51411bf090">
+		<description>3D Grand Prix (1985)(Amsoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="3D Grand Prix (1985)(Amsoft)[a].dsk" size="194816" crc="fae95f65" sha1="4db51411bf090ba188f976fdfd3a24337aa82a66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc527aec23a65e5">
+		<description>3D Grand Prix (1986)(Amsoft)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Grand Prix (1986)(Amsoft)[a2].dsk" size="204544" crc="b6389e21" sha1="527aec23a65e5cce91a62f0bfde8b38042be2e75"/>
 			</dataarea>
 		</part>
 	</software>
@@ -432,6 +572,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcfecb2b0b117b9">
+		<description>3D Monster Chase (1984)(Romik Software)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="3D Monster Chase (1984)(Romik Software)[a2].dsk" size="194816" crc="95ad5338" sha1="fecb2b0b117b96c33789720c1c2eba2a64aee6b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc88dde94eb8949">
+		<description>3D Monster Chase (1984)(Romik Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Monster Chase (1984)(Romik Software)[a].dsk" size="204544" crc="9f03d8b5" sha1="88dde94eb8949c37886a4611e83cf4591630e7a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcac4dd08e804cd">
+		<description>3D Morpion (1985)(Lanne, R.)(fr)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Morpion (1985)(Lanne, R.)(fr)[a].dsk" size="204544" crc="61452ad6" sha1="ac4dd08e804cd32d9a2130fc7233504c8bb0e00a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc95c621d62e077">
+		<description>3D Noughts and Crosses (1985)(Reynolds, W.J.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Noughts and Crosses (1985)(Reynolds, W.J.).dsk" size="204544" crc="e0c61dc9" sha1="95c621d62e077afe349454c7d17c86010bc23f35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc082a91056c5fe">
+		<description>3D Noughts and Crosses (1992)(Artificial Intelligence)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Noughts and Crosses (1992)(Artificial Intelligence).dsk" size="204544" crc="434d4b5e" sha1="082a91056c5fe46e44cc07753293e0e62c487248"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcd91862a560ed1">
+		<description>3D Noughts and Crosses (1992)(Artificial Intelligence)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="3D Noughts and Crosses (1992)(Artificial Intelligence)[a].dsk" size="194816" crc="9d8e3e58" sha1="d91862a560ed1edba877517734eae292e2e26e7b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcc31919e86f14a">
 		<description>3D Pool (1989)(Firebird Software)</description>
 		<year>????</year>
@@ -442,6 +642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc359a1b29d57c8">
+		<description>3D Quark Invaders (1985)(Quark Data - Amsoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Quark Invaders (1985)(Quark Data - Amsoft)[a].dsk" size="204544" crc="e13fa2bc" sha1="359a1b29d57c8901eb41f91fae95e6960ad6215c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc3609f1c3c3cf0">
 		<description>3D Snooker (1990)(Players Software)</description>
 		<year>????</year>
@@ -449,6 +659,36 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="3D Snooker (1990)(Players Software).dsk" size="194816" crc="587ba241" sha1="3609f1c3c3cf0a1eb8c60bd0c4b21e3c9fc0690a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc787470dfe2a2c">
+		<description>3D Starfighter (1988)(Codemasters)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Starfighter (1988)(Codemasters)[b].dsk" size="204544" crc="53e36bf4" sha1="787470dfe2a2c875970c49b2b3db38d66b26807c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc382dd2001fbd5">
+		<description>3D Starfighter (1988)(Codemasters)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="3D Starfighter (1988)(Codemasters)[t].dsk" size="194816" crc="c1d12519" sha1="382dd2001fbd592083101745a67214cd3744227f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8de9510c2b6d7">
+		<description>3D Starfighter (1989)(Codemasters)[t][b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="3D Starfighter (1989)(Codemasters)[t][b].dsk" size="204544" crc="50b5f621" sha1="8de9510c2b6d7064fd2b9adad6c2e849e7b2bc9a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1272,6 +1512,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc4a0679dfd89ec">
+		<description>A1RL0CK (2023-06-06)(Innocenti, Marco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="A1RL0CK (2023-06-06)(Innocenti, Marco).dsk" size="194816" crc="4610e78a" sha1="4a0679dfd89ece3169062048af253c79e7ca6e3d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc832b54c6e44b4">
 		<description>A320__Side_A__CHANY-NPS</description>
 		<year>????</year>
@@ -1752,6 +2002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc78179e583282f">
+		<description>Acid Music Box 2 (1995)(Benediction - Ast - Arkos - Condense)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Acid Music Box 2 (1995)(Benediction - Ast - Arkos - Condense).dsk" size="204544" crc="aca63c73" sha1="78179e583282f873e5d9d4f8d9768ba317da4064"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpccef77834bf34e">
 		<description>AcidMusicBox2</description>
 		<year>????</year>
@@ -1759,16 +2019,6 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="204544">
 				<rom name="AcidMusicBox2.dsk" size="204544" crc="06fe2940" sha1="cef77834bf34eea157eedc32ac1a5b27829c00b9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpc78179e583282f">
-		<description>Acid_MusicBox_2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3">
-			<dataarea name="flop" size="204544">
-				<rom name="Acid_MusicBox_2.dsk" size="204544" crc="aca63c73" sha1="78179e583282f873e5d9d4f8d9768ba317da4064"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7912,6 +8162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc6bd1492e17b8f">
+		<description>Betasoft (1986)(BSC)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Betasoft (1986)(BSC)(DE).dsk" size="204544" crc="427d2572" sha1="6bd1492e17b8fefe551c4aa9788762de3494d0ba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc807d9356e826e">
 		<description>Betiled!</description>
 		<year>????</year>
@@ -8919,6 +9179,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Blood_Brother__MAZESOFTS-GPA.dsk" size="194816" crc="7074c35d" sha1="99ce67b819c3cb6601aed3563edfe87fe996778e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcabbaada21d465">
+		<description>Blorp! (2023-06-06)(Sijnstra, Shawn)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Blorp! (2023-06-06)(Sijnstra, Shawn).dsk" size="194816" crc="a8c3f7ed" sha1="abbaada21d465242d65b4dfc06c04734bf45322e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12582,6 +12852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpca017c989bb35a">
+		<description>Chernobyl Z86 (2024-02)(m_dr_m)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Chernobyl Z86 (2024-02)(m_dr_m).dsk" size="204544" crc="c6fe8685" sha1="a017c989bb35af2b075c01e536429c8431a4021d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc40a430c22aafe">
 		<description>Chevy Chase (UK) (1991)</description>
 		<year>????</year>
@@ -13149,6 +13429,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="204544">
 				<rom name="Claudia_BMP_Convert_First-version.dsk" size="204544" crc="d68c037b" sha1="d43b70095d03e7f2618484272c228f3832b89988"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc08e3f7dec9f84">
+		<description>Clean Getaway, A (2023-06-06)(Bub, Michael)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Clean Getaway, A (2023-06-06)(Bub, Michael).dsk" size="194816" crc="96ddd1e5" sha1="08e3f7dec9f84444545bc689f113efbb632a27d0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14202,6 +14492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc8d93c0fd3dd05">
+		<description>Conscience (2024-02)(Kris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Conscience (2024-02)(Kris).dsk" size="204544" crc="1d6c8da8" sha1="8d93c0fd3dd05a662233eefb295f62e1fb204a72"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcd5e2ad20f6294">
 		<description>conspir1</description>
 		<year>????</year>
@@ -14259,6 +14559,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Conspiracy_Television.dsk" size="194816" crc="31c6f853" sha1="a105b8ebffa21e9372152fc9b891a8e8d9900a60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc959991ddc7bdc">
+		<description>Contabilidad Domestica (1984)(Pack, A.J & S.E.)(ES)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="189952">
+				<rom name="Contabilidad Domestica (1984)(Pack, A.J & S.E.)(ES).dsk" size="189952" crc="9765cb8e" sha1="959991ddc7bdc0834bb04fe4860c1f45ad327bb5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15502,6 +15812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcb57a0121aa5ab">
+		<description>Crabes (1984)(-)(fr)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Crabes (1984)(-)(fr)[a].dsk" size="194816" crc="0b17a7b8" sha1="b57a0121aa5ab8bbfde80307a223fa021f65bbd1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc36f87352bfbc2">
 		<description>CRACK SRC INTRO</description>
 		<year>????</year>
@@ -15672,6 +15992,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc8478efb87ee05">
+		<description>Crash Course (1985)(Emmett, Danny)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Crash Course (1985)(Emmett, Danny).dsk" size="204544" crc="7b82b20b" sha1="8478efb87ee0588f2d32958076bea683b7396ff5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5ace0490d1284">
+		<description>Crash Course (1985)(Emmett, Danny)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Crash Course (1985)(Emmett, Danny)[a].dsk" size="194816" crc="7c80cb1e" sha1="5ace0490d1284602edcd2843376dad3f8108f3c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4f41d94daaf39">
+		<description>Crash Garrett (1987)(ERE Informatique)(fr)(Disk 1 of 2)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="201049">
+				<rom name="Crash Garrett (1987)(ERE Informatique)(fr)(Disk 1 of 2)[a2].dsk" size="201049" crc="9f208b99" sha1="4f41d94daaf391a8a2bc81757bd06e2c15599302"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc4a3691efc3ba2">
+		<description>Crash Garrett (1987)(ERE Informatique)(fr)(Disk 1 of 2)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Crash Garrett (1987)(ERE Informatique)(fr)(Disk 1 of 2)[a3].dsk" size="194816" crc="520ddc9e" sha1="4a3691efc3ba2628130cd38a2dad3a61dc4250dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc9f0c2667682e2">
+		<description>Crash Garrett (1987)(ERE Informatique)(fr)(Disk 1 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Crash Garrett (1987)(ERE Informatique)(fr)(Disk 1 of 2)[a].dsk" size="194816" crc="2278095f" sha1="9f0c2667682e268ac0d6d9a6516cfb12f2f4432c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc47061648aca78">
+		<description>Crash Garrett (1987)(ERE Informatique)(fr)(Disk 2 of 2)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="200517">
+				<rom name="Crash Garrett (1987)(ERE Informatique)(fr)(Disk 2 of 2)[a2].dsk" size="200517" crc="b266188b" sha1="47061648aca78b79e39a0ec8735a07c47a1dcc28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc74dac5cca6aa7">
+		<description>Crash Garrett (1987)(ERE Informatique)(fr)(Disk 2 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="199680">
+				<rom name="Crash Garrett (1987)(ERE Informatique)(fr)(Disk 2 of 2)[a].dsk" size="199680" crc="9768f32f" sha1="74dac5cca6aa79f447c3fa15a0e545ae2357d8f2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc288991febbd59">
 		<description>Crash_Garrett__Side_A__CHANY-NPS</description>
 		<year>????</year>
@@ -15722,6 +16112,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpccfd868f7fb023">
+		<description>Crazy Cars (1987)(Titus)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Crazy Cars (1987)(Titus)[b].dsk" size="204544" crc="27c0e1d7" sha1="cfd868f7fb0232b90866b01a3e2b910c6f6ec1e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc47d69e000e067">
+		<description>Crazy Cars (1987)(Titus)[cr Abraxas]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Crazy Cars (1987)(Titus)[cr Abraxas].dsk" size="204544" crc="bd5276a1" sha1="47d69e000e067d16809449abcbc98d5db9084b50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8015afc9d16e4">
+		<description>Crazy Cars (1987)(Titus)[cr Best - Chris][b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Crazy Cars (1987)(Titus)[cr Best - Chris][b].dsk" size="204544" crc="2bd2cac5" sha1="8015afc9d16e42c8cf6aed7856a86d29a810a294"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8168346cf5088">
+		<description>Crazy Cars (1987)(Titus)[h3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="201049">
+				<rom name="Crazy Cars (1987)(Titus)[h3].dsk" size="201049" crc="b6467745" sha1="8168346cf5088a29910e5f787e40e6f6828f4937"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc72fab618eeffa">
+		<description>Crazy Cars (1987)(Titus)[t CNG][b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="29440">
+				<rom name="Crazy Cars (1987)(Titus)[t CNG][b2].dsk" size="29440" crc="2db6f200" sha1="72fab618eeffa90d4294870a7041d9b0892acee2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc5426c87fd7ac0">
 		<description>Crazy Cars (1988)(Titus Software)</description>
 		<year>????</year>
@@ -15729,6 +16169,46 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Crazy Cars (1988)(Titus Software).dsk" size="194816" crc="f1e4c594" sha1="5426c87fd7ac032e1ec268ddf7a4425979bd92ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpce4e5a01c65a69">
+		<description>Crazy Cars (1988)(Titus)[cr Abraxas][a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Crazy Cars (1988)(Titus)[cr Abraxas][a].dsk" size="204544" crc="59a70059" sha1="e4e5a01c65a69646a8d118ac6a85cdbe9d592693"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc59db4c9d54943">
+		<description>Crazy Cars (1988)(Titus)[t CNG]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Crazy Cars (1988)(Titus)[t CNG].dsk" size="204544" crc="4f2a3ca6" sha1="59db4c9d549431bbdf40ba1a8761f39ecd1f3db9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc6cd5b2089bb63">
+		<description>Crazy Cars (1988)(Titus)[t CNG][b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="34304">
+				<rom name="Crazy Cars (1988)(Titus)[t CNG][b].dsk" size="34304" crc="0987b71b" sha1="6cd5b2089bb639cdea532815f3f3fe90580da808"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc94a47767de709">
+		<description>Crazy Cars (1988)(Titus)[t Hermol - CPCRulez]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Crazy Cars (1988)(Titus)[t Hermol - CPCRulez].dsk" size="204544" crc="d0f28f79" sha1="94a47767de7094978e51a41ab10e2fabafe280db"/>
 			</dataarea>
 		</part>
 	</software>
@@ -25812,16 +26292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cpc959991ddc7bdc">
-		<description>domestic</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3">
-			<dataarea name="flop" size="189952">
-				<rom name="domestic.dsk" size="189952" crc="9765cb8e" sha1="959991ddc7bdc0834bb04fe4860c1f45ad327bb5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="cpc6ebcc7ee31c8c">
 		<description>dominato</description>
 		<year>????</year>
@@ -29252,6 +29722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcefad2f06a191d">
+		<description>Falling to Pieces (2023-06-06)(Girelli, Gianluca)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Falling to Pieces (2023-06-06)(Girelli, Gianluca).dsk" size="194816" crc="4c38be62" sha1="efad2f06a191dc4bf0945c333361560cb35dad62"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc9a73971fafda2">
 		<description>fallout</description>
 		<year>????</year>
@@ -29439,6 +29919,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Fantasy Demo 1 (Magic Software).dsk" size="194816" crc="2616b6ed" sha1="be4971c238f98019d57120b4f1c1b5eb72fb226a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc032da3cd7dd80">
+		<description>Fantasy Dimension, The (2023-06-06)(Berntsson, Johan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Fantasy Dimension, The (2023-06-06)(Berntsson, Johan).dsk" size="194816" crc="d885b393" sha1="032da3cd7dd80d2f7cf7fb9444ab259e3936de88"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29772,6 +30262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcae4a1ffac2612">
+		<description>FatMag2 (2023-11)(Praline)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="226048">
+				<rom name="FatMag2 (2023-11)(Praline).dsk" size="226048" crc="2e350d2e" sha1="ae4a1ffac26123d101f50ce76ec67406bc2cb3df"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc38afbfbf45216">
 		<description>FCC Demo 1 (FCC)</description>
 		<year>????</year>
@@ -30059,6 +30559,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Fiber07CPC.dsk" size="194816" crc="9fadc8c1" sha1="99316f44db52f12a5daf4553459881a3384f7f38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc958c7cba6394e">
+		<description>Fichero Empresarial (1985)(RPA Systems)(ES)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Fichero Empresarial (1985)(RPA Systems)(ES).dsk" size="194816" crc="6e0a5af4" sha1="958c7cba6394e626b55ec93a84c9d2e1255a2f24"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30429,6 +30939,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Five-a-Side Soccer (1986)(Mastertronic Added Dimension).dsk" size="194816" crc="61ef4e8a" sha1="51f0c85c43501c7709aa59d510908ca227e4ec9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc89264b235152">
+		<description>Fizzy (2024-02)(Optimus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Fizzy (2024-02)(Optimus).dsk" size="194816" crc="3934d057" sha1="c89264b235152d5c59bbe54a77a5474784688726"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38092,6 +38612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc2c3591cae8dd2">
+		<description>Joyeux Noel (2023-12)(Team Galaxy)(FR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Joyeux Noel (2023-12)(Team Galaxy)(FR).dsk" size="204544" crc="24415eeb" sha1="2c3591cae8dd28f8bedf56808c61296ceaa5d2ff"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc34d0ce31acc33">
 		<description>Joystrad_2</description>
 		<year>????</year>
@@ -39802,6 +40332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpca49828ee2144e">
+		<description>Laberinto Tridimensional (1992)(Automatic Crown)(ES)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Laberinto Tridimensional (1992)(Automatic Crown)(ES).dsk" size="204544" crc="8ccc1298" sha1="a49828ee2144e6758fce13b08c9875b0f52911ff"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc5365169b045c5">
 		<description>labybi</description>
 		<year>????</year>
@@ -40439,6 +40979,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="LE CRIME DU PARKING DISK A.dsk" size="194816" crc="1fba9fdd" sha1="5d87c2b4658d2e96b6c822e4ec525938addbb5d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc9f4e269e388c2">
+		<description>Least I Can Do, The (2024-02)(m_dr_m)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Least I Can Do, The (2024-02)(m_dr_m).dsk" size="204544" crc="f9bb6c4c" sha1="9f4e269e388c24037d0a0348fe6023c765bd71e2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -41992,6 +42542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc1a6f525b295d2">
+		<description>Logonite (2024-02)(Logon System)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Logonite (2024-02)(Logon System).dsk" size="194816" crc="00954c58" sha1="1a6f525b295d28ed2882e95e1f5f4e3350e54b65"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc663e7a74ea7e6">
 		<description>Logon_ACPC_Demo [a]</description>
 		<year>????</year>
@@ -42039,6 +42599,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Logon_Phoenix_Part.dsk" size="194816" crc="c1e31224" sha1="d9f83bc55a50461f50414b98a1ffd0512fcfea97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc6e420c05f6fa8">
+		<description>LOGXMAS (2023-12)(Logon System)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="LOGXMAS (2023-12)(Logon System).dsk" size="194816" crc="45361ca8" sha1="6e420c05f6fa89426ef9629b66680e33b55ee6c6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42369,6 +42939,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="ltpdemo2_.dsk" size="194816" crc="e3112a4a" sha1="a0852c23c7d86cb76dc5eed19c6f6d1aa3382ab0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc67cb23faff633">
+		<description>Lucid Knight (2023-06-06)(Cooke, Dee)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Lucid Knight (2023-06-06)(Cooke, Dee).dsk" size="194816" crc="3d0fd832" sha1="67cb23faff633709444645ce4f145b61b945d0d1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52572,6 +53152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcb14cd6121e539">
+		<description>Pattern Mash (2024-02)(Symbiosis - Godless Cracking Service)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Pattern Mash (2024-02)(Symbiosis - Godless Cracking Service).dsk" size="204544" crc="2e22d56c" sha1="b14cd6121e53997d0a898cb456b7ccf4f4958fc1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc7b8cd8df2a89a">
 		<description>PAWS-CPC</description>
 		<year>????</year>
@@ -52849,6 +53439,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="pepebequ.dsk" size="194816" crc="8790d005" sha1="4c48632deef1ccd5550d8dc6d1dab105cccfca66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc40e972cec07a6">
+		<description>Periergoid (2024-02)(Optimus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Periergoid (2024-02)(Optimus).dsk" size="194816" crc="3ead127e" sha1="40e972cec07a6a0288d5c46a26d527b4ff1f7337"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53452,6 +54052,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcbf1545b7c6129">
+		<description>Pinball Power (1989)(Mastertronic Plus)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Pinball Power (1989)(Mastertronic Plus)[t].dsk" size="204544" crc="9a85837e" sha1="bf1545b7c6129a62e487b38a6455e310d3224990"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc2c148ffcd2ed1">
+		<description>Pinball Power (1990)(Mastertronic Plus)[t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Pinball Power (1990)(Mastertronic Plus)[t2].dsk" size="194816" crc="22e481af" sha1="2c148ffcd2ed10b20f1794f49e303f7a84d5a001"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpce1357b944d24d">
 		<description>Pinball_Dreams__PREVIEW</description>
 		<year>????</year>
@@ -53622,6 +54242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc64d3510b6c120">
+		<description>Plasmine (2024-02)(Logon System)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Plasmine (2024-02)(Logon System).dsk" size="194816" crc="dd65d012" sha1="64d3510b6c120d6ac828105b13edb7b81f45b261"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcd8440eba0d0b5">
 		<description>platinu1</description>
 		<year>????</year>
@@ -53789,6 +54419,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Poli Diaz (1990)(Opera Soft).dsk" size="194816" crc="bf23b0ad" sha1="d9820ed6f5df7b1425c218d70950096608c33f0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc79c2873fa1115">
+		<description>Pond (2024-02)(Optimus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Pond (2024-02)(Optimus).dsk" size="194816" crc="73805fbe" sha1="79c2873fa1115e649dcc721385b7f09498ee750c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -61772,6 +62412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc9a2286deeebd6">
+		<description>Sea Pyra (2024-02)(Optimus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Sea Pyra (2024-02)(Optimus).dsk" size="194816" crc="b8a6c264" sha1="9a2286deeebd6185ce5a3c7698268bb1d3ff26ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc8fb57e0b6df91">
 		<description>Seablood__ENGLISH</description>
 		<year>????</year>
@@ -63562,6 +64212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpce167cc8de53e1">
+		<description>Small Demo (1991)(DragonBreed)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Small Demo (1991)(DragonBreed).dsk" size="194816" crc="cdc70012" sha1="e167cc8de53e10dcdf99b61fc301edc488959616"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcaabc834a1079e">
 		<description>Small_Games_for_Smart_Minds</description>
 		<year>????</year>
@@ -63969,6 +64629,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Sooty and Sweep (1990)(Alternative Software).dsk" size="194816" crc="aacacde5" sha1="a79bce7b42fafc191eb4231630c0cce3701e4483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc0dca6a0db2d5a">
+		<description>Sophos (198x)(Mister Chip)(ES)(Side B)[CPM]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="74752">
+				<rom name="Sophos (198x)(Mister Chip)(ES)(Side B)[CPM].dsk" size="74752" crc="e6f6e2c8" sha1="0dca6a0db2d5a76def77b59fd0b4358d88998094"/>
 			</dataarea>
 		</part>
 	</software>
@@ -65552,6 +66222,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc6ee0ad3530120">
+		<description>stars (2023-12)(Nesu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="stars (2023-12)(Nesu).dsk" size="204544" crc="5dab7767" sha1="6ee0ad353012064a9116f8bacdc72e2a0c73a64c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc33ab6e19817dd">
 		<description>Stars</description>
 		<year>????</year>
@@ -66402,6 +67082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc8c3a0281f09fd">
+		<description>Submarine Sabotage (2023-06-06)(Francis, Garry)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Submarine Sabotage (2023-06-06)(Francis, Garry).dsk" size="194816" crc="c705152e" sha1="8c3a0281f09fd3d7e41f0e9571ae45f6b66bba80"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc1cd6e32e9c480">
 		<description>subtstry (2)</description>
 		<year>????</year>
@@ -67052,6 +67742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc07b5d4b6bad93">
+		<description>Swab Meeting '93 (1993)(Rebels)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="209408">
+				<rom name="Swab Meeting '93 (1993)(Rebels).dsk" size="209408" crc="a136db2c" sha1="07b5d4b6bad935b5bc357e0147c78a17110d45b6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc6edd94f13b635">
 		<description>Swab Meeting (Rebels)</description>
 		<year>????</year>
@@ -67369,6 +68069,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="SymDev2.dsk" size="194816" crc="825bbbd2" sha1="07e3bc8b5bc18e610c10a2cd6ce8cd762c32d49e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc2de725df65fd">
+		<description>Symfonee (2024-02)(Symbiosis - Godless Cracking Service)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Symfonee (2024-02)(Symbiosis - Godless Cracking Service).dsk" size="204544" crc="e24b6a6f" sha1="c2de725df65fd0d79cb8818e47bd04e2f0c6add9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69949,6 +70659,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="toiacidg.dsk" size="194816" crc="972c3d27" sha1="f51c5166644daa9df7bfdb45e6ac932a14586c2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc471536c04732a">
+		<description>Toki Demo (2020-05)(Praline)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Toki Demo (2020-05)(Praline).dsk" size="194816" crc="05621cb6" sha1="471536c04732a70b2dd06a27f1f94d816d663467"/>
 			</dataarea>
 		</part>
 	</software>

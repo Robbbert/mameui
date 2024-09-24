@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 512 -->
+<!-- Number of items in this list = 509 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -3092,16 +3092,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="fds70c5f191bf714">
-		<description>Matou no Houkai - The Hero of Babel (Japan)(1988)(Pony Canyon)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="Matou no Houkai - The Hero of Babel (Japan)(1988)(Pony Canyon).fds" size="131016" crc="0596b36a" sha1="70c5f191bf714b627469a8e10e02e3e119afff58"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="fdsa2ee0ff860c33">
 		<description>Meikyuu Jiin Dababa (1987)(Konami)</description>
 		<year>????</year>
@@ -3572,16 +3562,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="fdsa7b612f1943da">
-		<description>Mysterious Murasame Castle T-Eng (2011)(Spinner 8 and friends)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131000">
-				<rom name="Mysterious Murasame Castle T-Eng (2011)(Spinner 8 and friends).fds" size="131000" crc="5da99951" sha1="a7b612f1943da2d1c4e2eb9328e5825d18563ab5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="fds4650f8574a10f">
 		<description>Namida no Soukoban Special (1986)(ASCII Corp.)</description>
 		<year>????</year>
@@ -3689,16 +3669,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
 				<rom name="Nazo no Magazine Disk - Nazoraa Land Zoukan Gou - Quiz Ou wo Sagase! [1-a6c446da] [2-17f76c75].fds" size="131000" crc="e4b56e69" sha1="066a7711f72bc06b5fb88d5b258f2eb0a7d1e434"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds3242634b2990d">
-		<description>Nazo no Murasamejou (Japan)(1986)(Nintendo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="Nazo no Murasamejou (Japan)(1986)(Nintendo).fds" size="131016" crc="2acde825" sha1="3242634b2990d30a2c9621c6bd7c1b601d1928fe"/>
 			</dataarea>
 		</part>
 	</software>
