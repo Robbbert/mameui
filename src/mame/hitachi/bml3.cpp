@@ -2,7 +2,7 @@
 // copyright-holders: Angelo Salese, Jonathan Edwards, Christopher Edwards, Robbbert
 /**************************************************************************************************
 
-Basic Master Level 3 (MB-689x) (c) 1980 Hitachi
+Basic Master Level 3 (MB-689x) "Peach" (c) 1980 Hitachi
 ベーシックマスターレベル3
 
 References:
@@ -16,7 +16,8 @@ TODO:
 - Cassette relay doesn't work properly, issuing a LOAD won't autostart a load;
 - Cassette baud rate bump (can switch from 600 to 1200 bauds thru $ffd7);
 - implement sound as a bus slot device;
-- implement RAM expansion as (extra?) bus slots, thru $ffe8;
+- implement RAM expansion as bus slots (RAM3 at 0x8000-0xbfff, RAM4 at 0xc000-0xefff);
+- bml3mk5: BANK REG $ffe8 (applies EMS for the RAM expansion?);
 - soft reset will hang the machine;
 - Hitachi MB-S1 support (bumps memory map, adds an extra I/O layer);
 
@@ -38,9 +39,10 @@ TODO:
 #include "sound/spkrdev.h"
 #include "sound/ymopn.h"
 #include "video/mc6845.h"
-#include "emupal.h"
 
+#include "emupal.h"
 #include "screen.h"
+#include "softlist_dev.h"
 #include "speaker.h"
 
 
@@ -184,7 +186,7 @@ private:
 	bool m_cassbit = 0;
 	bool m_cassold = 0;
 	u8 m_cass_data[4]{};
-	void crtc_change_clock(u8 setting);
+	void crtc_change_clock();
 	u8 m_crtc_index = 0U;
 	std::unique_ptr<u8[]> m_vram;
 	std::unique_ptr<u8[]> m_aram;
@@ -223,7 +225,7 @@ protected:
 	virtual u8 get_attr_mask() override { return 0x3f; }
 	virtual u8 get_ig_mode(u8 attr) override { return BIT(attr, 5); }
 	// NOTE: if IG attribute is enabled then the rest of attribute byte is ignored (no reverse etc.).
-    // TODO: if IGMODREG is 1 then the resulting tile will be a white square
+	// TODO: if IGMODREG is 1 then the resulting tile will be a white square
 	virtual u8 get_ig_dots(u8 tile, u8 ra, u8 xi) override {
 		u16 base_offset = tile << 3;
 		u8 res = 0;
@@ -386,19 +388,13 @@ void bml3_state::kb_sel_w(u8 data)
 	m_keyb_nmi_disabled = !BIT(data, 7);
 }
 
-void bml3_state::crtc_change_clock(u8 setting)
+void bml3_state::crtc_change_clock()
 {
-	int m6845_clock = CPU_CLOCK.value();    // CRTC and MPU are synchronous by default
-
-	switch(setting & 0x88)
-	{
-		case 0x00: m6845_clock = C40_CLOCK.value(); break; //320 x 200
-		case 0x08: m6845_clock = C40_CLOCK.value(); break; //320 x 200, interlace
-		case 0x80: m6845_clock = C80_CLOCK.value(); break; //640 x 200
-		case 0x88: m6845_clock = C80_CLOCK.value(); break; //640 x 200, interlace
-	}
-
-	m_crtc->set_unscaled_clock(m6845_clock);
+	const u8 width80 = BIT(m_hres_reg, 7);
+	const u8 interlace = BIT(m_vres_reg, 3);
+	// CRTC and MPU are synchronous by default
+	int clock = (width80 ? C80_CLOCK : C40_CLOCK).value() << interlace;
+	m_crtc->set_unscaled_clock(clock);
 }
 
 /*
@@ -413,7 +409,7 @@ void bml3_state::mode_sel_w(u8 data)
 {
 	m_hres_reg = data;
 
-	crtc_change_clock((m_hres_reg & 0x80) | (m_vres_reg & 0x08));
+	crtc_change_clock();
 }
 
 // INTERLACE_SEL - Interlaced video mode
@@ -421,7 +417,7 @@ void bml3_state::interlace_sel_w(u8 data)
 {
 	m_vres_reg = data;
 
-	crtc_change_clock((m_hres_reg & 0x80) | (m_vres_reg & 0x08));
+	crtc_change_clock();
 }
 
 
@@ -438,6 +434,8 @@ void bml3_state::vram_w(offs_t offset, u8 data)
 {
 	m_vram[offset] = data;
 	// color ram is 5-bit
+	// NOTE: will break hiwriter with this, "write enable" only on reads!?
+	//if (!BIT(m_attr_latch, 7))
 	m_aram[offset] = m_attr_latch & get_attr_mask();
 }
 
@@ -603,7 +601,7 @@ void bml3mk5_state::ig_ram_w(offs_t offset, u8 data)
 		if (BIT(m_igen, i))
 			m_ig_ram[offset + 0x800 * i] = data;
 	}
-	m_gfxdecode->gfx(0)->mark_dirty(offset / 8);
+	m_gfxdecode->gfx(0)->mark_dirty(offset >> 3);
 }
 
 void bml3mk5_state::main_map(address_map &map)
@@ -644,29 +642,29 @@ static INPUT_PORTS_START( bml3 )
 	// DIP switches (service manual p.88)
 	// Note the NEWON command reboots with a soft override for the DIP switch
 	PORT_START("DIPSW")
-	PORT_DIPNAME( 0x01, 0x01, "BASIC/terminal mode")
+	PORT_DIPNAME( 0x01, 0x01, "BASIC/terminal mode") PORT_DIPLOCATION("SW:!1")
 	PORT_DIPSETTING(0x00, "Terminal mode")
 	PORT_DIPSETTING(0x01, "BASIC mode")
-	PORT_DIPNAME( 0x02, 0x02, "Interlaced video")
+	PORT_DIPNAME( 0x02, 0x02, "Interlaced video") PORT_DIPLOCATION("SW:!2")
 	PORT_DIPSETTING(0x00, DEF_STR( Off ) )
 	PORT_DIPSETTING(0x02, DEF_STR( On ))
 	// This is overridden by the 'Mode' toggle button
-	PORT_DIPNAME( 0x04, 0x04, "40-/80-column")
+	PORT_DIPNAME( 0x04, 0x04, "40-/80-column") PORT_DIPLOCATION("SW:!3")
 	PORT_DIPSETTING(0x00, "40 chars/line")
 	PORT_DIPSETTING(0x04, "80 chars/line")
-	PORT_DIPNAME( 0x08, 0x00, "Video resolution")
+	PORT_DIPNAME( 0x08, 0x00, "Video resolution") PORT_DIPLOCATION("SW:!4")
 	PORT_DIPSETTING(0x00, "High")
 	PORT_DIPSETTING(0x08, "Low")
-	PORT_DIPNAME( 0x10, 0x00, "Show PF key content")
+	PORT_DIPNAME( 0x10, 0x00, "Show PF key content") PORT_DIPLOCATION("SW:!5")
 	PORT_DIPSETTING(0x00, DEF_STR ( Off ) )
 	PORT_DIPSETTING(0x10, DEF_STR ( On ))
-	PORT_DIPNAME( 0x20, 0x00, "Terminal duplex")
+	PORT_DIPNAME( 0x20, 0x00, "Terminal duplex") PORT_DIPLOCATION("SW:!6")
 	PORT_DIPSETTING(0x00, "Full duplex")
 	PORT_DIPSETTING(0x20, "Half duplex")
-	PORT_DIPNAME( 0x40, 0x00, "Terminal bits")
+	PORT_DIPNAME( 0x40, 0x00, "Terminal bits") PORT_DIPLOCATION("SW:!7")
 	PORT_DIPSETTING(0x00, "8 bits/char")
 	PORT_DIPSETTING(0x40, "7 bits/char")
-	PORT_DIPNAME( 0x80, 0x00, "Hiragana->Katakana")
+	PORT_DIPNAME( 0x80, 0x00, "Hiragana->Katakana") PORT_DIPLOCATION("SW:!8")
 	PORT_DIPSETTING( 0x00, DEF_STR( Off ) )
 	PORT_DIPSETTING( 0x80, DEF_STR( On ) )
 
@@ -775,6 +773,16 @@ static INPUT_PORTS_START( bml3 )
 
 	PORT_START("X3")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("Break") PORT_CODE(KEYCODE_END) PORT_CHAR(UCHAR_MAMEKEY(END)) PORT_CHANGED_MEMBER(DEVICE_SELF, bml3_state, nmi_button, 0)
+INPUT_PORTS_END
+
+static INPUT_PORTS_START( bml3mk5 )
+	PORT_INCLUDE( bml3 )
+	// No dipswitches on Mark 5
+	PORT_MODIFY("DIPSW")
+	PORT_BIT( 0x03, IP_ACTIVE_LOW, IPT_UNUSED )
+	// TODO: add MODE front panel button here, in place of dipswitch
+	// On regular bml3 there's an extra button that xor content, that is directly routed here
+	PORT_BIT( 0xf8, IP_ACTIVE_HIGH, IPT_UNUSED )
 INPUT_PORTS_END
 
 TIMER_DEVICE_CALLBACK_MEMBER(bml3_state::keyboard_callback)
@@ -915,6 +923,11 @@ void bml3_state::machine_reset()
 	m_cassold = 0;
 	m_nmi = 0;
 	m_kbt = 0;
+
+	// NOTE: bml3 do not bother with CRTC on soft resets (which is physically tied to front panel).
+	//m_hres_reg = 0;
+	//m_vres_reg = 0;
+	//crtc_change_clock();
 }
 
 void bml3mk5_state::machine_start()
@@ -1015,16 +1028,16 @@ TIMER_DEVICE_CALLBACK_MEMBER( bml3_state::kansas_w )
 static const gfx_layout ig_charlayout =
 {
 	8, 8,
-	RGN_FRAC(1,3),
+	0x100,
 	3,
-	{ RGN_FRAC(0, 3), RGN_FRAC(1, 3), RGN_FRAC(2, 3) },
+	{ 0x1000*8, 0x800*8, 0 },
 	{ STEP8(0, 1) },
 	{ STEP8(0, 8) },
 	8*8
 };
 
 static GFXDECODE_START( gfx_bml3mk5 )
-	GFXDECODE_ENTRY( nullptr, 0x1800, ig_charlayout, 0, 1 )
+	GFXDECODE_ENTRY( nullptr, 0, ig_charlayout, 0, 1 )
 GFXDECODE_END
 
 
@@ -1065,12 +1078,13 @@ void bml3_state::bml3(machine_config &config)
 	CASSETTE(config, m_cassette);
 	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_SPEAKER_ENABLED | CASSETTE_MOTOR_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cassette->set_interface("bml3_cass");
 
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_refresh_hz(60);
-	screen.set_vblank_time(ATTOSECONDS_IN_USEC(2400)); /* Service manual specifies "Raster return period" as 2.4 ms (p.64), although the total vertical non-displaying time seems to be 4 ms. */
-	screen.set_size(640, 400);
-	screen.set_visarea(0, 320-1, 0, 200-1);
+	// Service manual specifies "Raster return period" as 2.4 ms (p.64),
+	// although the total vertical non-displaying time seems to be 4 ms.
+	// NOTE: D80_CLOCK x 2 as per MAME interlace limitation
+	screen.set_raw(D80_CLOCK * 2, 1024, 0, 640 - 1, 518, 0, 400 - 1);
 	screen.set_screen_update("crtc", FUNC(mc6845_device::screen_update));
 	PALETTE(config, m_palette, palette_device::BRG_3BIT);
 
@@ -1101,6 +1115,8 @@ void bml3_state::bml3(machine_config &config)
 	BML3BUS_SLOT(config, "sl4", m_bml3bus, bml3_cards, nullptr);
 	BML3BUS_SLOT(config, "sl5", m_bml3bus, bml3_cards, nullptr);
 	BML3BUS_SLOT(config, "sl6", m_bml3bus, bml3_cards, "kanji");
+
+	SOFTWARE_LIST(config, "cass_list").set_original("bml3_cass");
 
 #if 0
 	// TODO: slot device for sound card
@@ -1171,6 +1187,6 @@ ROM_END
 } // anonymous namespace
 
 
-COMP( 1980, bml3,    0,     0,      bml3,    bml3,  bml3_state,    empty_init, "Hitachi", "Basic Master Level 3 (MB-6890)",        MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE )
-COMP( 1982, bml3mk2, bml3,  0,      bml3mk2, bml3,  bml3mk2_state, empty_init, "Hitachi", "Basic Master Level 3 Mark II (MB-6891)", MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE )
-COMP( 1983, bml3mk5, bml3,  0,      bml3mk5, bml3,  bml3mk5_state, empty_init, "Hitachi", "Basic Master Level 3 Mark 5 (MB-6892)", MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE )
+COMP( 1980, bml3,    0,     0,      bml3,    bml3,     bml3_state,    empty_init, "Hitachi", "Basic Master Level 3 (MB-6890)",        MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE )
+COMP( 1982, bml3mk2, bml3,  0,      bml3mk2, bml3,     bml3mk2_state, empty_init, "Hitachi", "Basic Master Level 3 Mark II (MB-6891)", MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE )
+COMP( 1983, bml3mk5, bml3,  0,      bml3mk5, bml3mk5,  bml3mk5_state, empty_init, "Hitachi", "Basic Master Level 3 Mark 5 (MB-6892)", MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE )
