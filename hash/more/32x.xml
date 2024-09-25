@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 50 -->
+<!-- Number of items in this list = 52 -->
 <softwarelist name="32x" description="32x loose roms">
+	<software name="32xc486bf92868cd">
+		<description>(demo)OpenLara (2024-01-03)(XProger)(BSD-2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="_32x_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(demo)OpenLara (2024-01-03)(XProger)(BSD-2).bin" size="2097152" crc="bdd512bd" sha1="c486bf92868cd24b49cf27b101989c51420c80a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="32xea90ef24caeea">
+		<description>(E)After Burner Complete (1994)(Sega)(EU)(en)[tr pt Nenhum][pt-br]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="_32x_cart">
+			<dataarea name="rom" size="2097154">
+				<rom name="(E)After Burner Complete (1994)(Sega)(EU)(en)[tr pt Nenhum][pt-br].bin" size="2097154" crc="8adb5f6e" sha1="ea90ef24caeea5c5e38130b239ecf2e58f7696be"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="32x524093f7c93f0">
 		<description>32x babe picture by fonzie (32x) (pd) [a1]</description>
 		<year>????</year>

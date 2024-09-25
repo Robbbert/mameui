@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 91 -->
+<!-- Number of items in this list = 223 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -422,6 +422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba3d554e4e33563">
+		<description>Crouching Tiger, Hidden Dragon (2002-02-20)(Ubi Soft)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3353604">
+				<rom name="Crouching Tiger, Hidden Dragon (2002-02-20)(Ubi Soft)(US)(proto).bin" size="3353604" crc="a1d2d006" sha1="3d554e4e33563211865b9c5481444b0b8b4e6127"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba3df43aaabc0e8">
 		<description>Daleks</description>
 		<year>????</year>
@@ -462,6 +472,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba58875496c9ab8">
+		<description>Dragon Ball GT - Transformation (2004-04-27)(Atari)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Dragon Ball GT - Transformation (2004-04-27)(Atari)(proto).bin" size="8388608" crc="431bc807" sha1="58875496c9ab89ba3b769dc47d89ac2839b7cb7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae668f1635b88c">
+		<description>Dragon Ball Z - Buu's Fury (2003)(Infogrames)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Dragon Ball Z - Buu's Fury (2003)(Infogrames)(proto).bin" size="33554432" crc="b4f2fef8" sha1="e668f1635b88ccf343419f6ca265aec3d4cbe42d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae87ab2c3a66ef">
+		<description>Dragon Ball Z - Buu's Fury (2004)(Infogrames)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Dragon Ball Z - Buu's Fury (2004)(Infogrames)(proto).bin" size="33554432" crc="db52bdbb" sha1="e87ab2c3a66ef7d3b775b5b0c7b0bb9c799f17e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba16f4c593a0ab0">
+		<description>Dragon Ball Z - The Legacy of Goku II (2003-01-25)(Atari)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="7282372">
+				<rom name="Dragon Ball Z - The Legacy of Goku II (2003-01-25)(Atari)(proto).bin" size="7282372" crc="3c30f5b3" sha1="16f4c593a0ab0e243fbeca7cc1033ac88501e387"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbafc76f3477f19a">
+		<description>Dragon Ball Z - The Legacy of Goku II (2003-01-31)(Atari)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="7279012">
+				<rom name="Dragon Ball Z - The Legacy of Goku II (2003-01-31)(Atari)(proto).bin" size="7279012" crc="25f34dbc" sha1="fc76f3477f19af7415a42a6f38bd5bda43c640d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba7fa9822e6e4eb">
+		<description>Drake's Adventure (2020-05-30)(Zuccardi, Marco)(IT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1124596">
+				<rom name="Drake's Adventure (2020-05-30)(Zuccardi, Marco)(IT).gba" size="1124596" crc="85295236" sha1="7fa9822e6e4eb1c6403df79c76283eef73d57fc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba079575312e207">
+		<description>Drake's Adventure (2020-05-30)(Zuccardi, Mario)(IT)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1124596">
+				<rom name="Drake's Adventure (2020-05-30)(Zuccardi, Mario)(IT)(en).gba" size="1124596" crc="18e482fd" sha1="079575312e20721594e295741c5a64b90ff8115e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba05ad843564c66">
 		<description>Duel Masters 3 (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -469,6 +549,26 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Duel Masters 3 (Japan) (Rev 1).gba" size="8388608" crc="d2b9cfb6" sha1="05ad843564c663a050e137ae0ec07d09f585c714"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae6dab28aa3e9a">
+		<description>Fuzz & Rocket (2005-01-18)(HalfBrick Studios)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4124984">
+				<rom name="Fuzz & Rocket (2005-01-18)(HalfBrick Studios)(proto).bin" size="4124984" crc="fd239437" sha1="e6dab28aa3e9a5b1417bbf3929c45ff7260803b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba53354866d87c7">
+		<description>GBA Jam 24 Invitro (2024-05)(exelotl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3934516">
+				<rom name="GBA Jam 24 Invitro (2024-05)(exelotl).gba" size="3934516" crc="382dd09a" sha1="53354866d87c7bf718950bd9a6839a3619877143"/>
 			</dataarea>
 		</part>
 	</software>
@@ -552,6 +652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba634e3735ad686">
+		<description>Junction Jive (2024-05)(Solar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3901312">
+				<rom name="Junction Jive (2024-05)(Solar).gba" size="3901312" crc="0cfcad33" sha1="634e3735ad68686dcac6048e8a2508d9e23c88d5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaa3d14cfde55ec">
 		<description>Kirby's Nightmare in Dreamland</description>
 		<year>????</year>
@@ -632,6 +742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba7fe080bf9cc11">
+		<description>Minicraft v1.3 (2024-02-09)(Vulcalien)(GPLv3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Minicraft v1.3 (2024-02-09)(Vulcalien)(GPLv3).gba" size="131072" crc="cc48e03a" sha1="7fe080bf9cc110aa78ce7248ff92ff3185083247"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba25c3c9a3f2584">
 		<description>Minna no Soft Series - Numpla Advance (J) [T+Chs_mobile&PGCG]</description>
 		<year>????</year>
@@ -649,6 +769,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Minna no Soft Series - Shanghai (Japan) (Rev 1).gba" size="4194304" crc="28a8dc30" sha1="2d2ef5fc8131178106af2be5358b318d981344bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbac17986f45c824">
+		<description>Mirror Chip v0.4.9.i.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="377664">
+				<rom name="Mirror Chip v0.4.9.i.a (demo-playable) (201x)(Arky750)(BO).gba" size="377664" crc="267e6ab5" sha1="c17986f45c82435668e135c89b12a34cf708db45"/>
 			</dataarea>
 		</part>
 	</software>
@@ -782,6 +912,646 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbada768537959d5">
+		<description>Rayman 3 (2002-01-18)(Ubi Soft)(proto)[France Committee Presentation]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1627308">
+				<rom name="Rayman 3 (2002-01-18)(Ubi Soft)(proto)[France Committee Presentation].bin" size="1627308" crc="d82490b3" sha1="da768537959d505b404e3a8c0962b36731c64e05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba60a74b0a78929">
+		<description>Rayman 3 (2002-03-01)(Ubi Soft)(alpha)[PreAlpha]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2227428">
+				<rom name="Rayman 3 (2002-03-01)(Ubi Soft)(alpha)[PreAlpha].bin" size="2227428" crc="a1e4f8c1" sha1="60a74b0a78929bb50efb0d421d08c5daa72560ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaea3326731089d">
+		<description>Rayman 3 (2002-03-08)(Ubi Soft)(alpha)[PreAlpha]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2273420">
+				<rom name="Rayman 3 (2002-03-08)(Ubi Soft)(alpha)[PreAlpha].bin" size="2273420" crc="06e5bf87" sha1="ea3326731089d1010f9596a4d6a3ae70cfbb6122"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba848ff2bb1b453">
+		<description>Rayman 3 (2002-03-18)(Ubi Soft)(alpha)[FocusGroup]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1879888">
+				<rom name="Rayman 3 (2002-03-18)(Ubi Soft)(alpha)[FocusGroup].bin" size="1879888" crc="acc69290" sha1="848ff2bb1b45316e86a0d0a13ca3babead3692f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba3d7217f4e0cf8">
+		<description>Rayman 3 (2002-04-18)(Ubi Soft)(proto)[Nintendo E3 Approval]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2768568">
+				<rom name="Rayman 3 (2002-04-18)(Ubi Soft)(proto)[Nintendo E3 Approval].bin" size="2768568" crc="0a75f859" sha1="3d7217f4e0cf85907660b5efce554fcb35f92d38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba180ec6e5bebc5">
+		<description>Rayman 3 (2002-05-13)(Ubi Soft)(proto)[E3 GameCube]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3674712">
+				<rom name="Rayman 3 (2002-05-13)(Ubi Soft)(proto)[E3 GameCube].bin" size="3674712" crc="a1270577" sha1="180ec6e5bebc549593ef2d8baf1075403aa2d18e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba880331376d3ff">
+		<description>Rayman 3 (2002-05-13)(Ubi Soft)(proto)[E3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3589480">
+				<rom name="Rayman 3 (2002-05-13)(Ubi Soft)(proto)[E3].bin" size="3589480" crc="96fbfc3b" sha1="880331376d3ff6d43d9124a92a0c6c1a0afb523b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba1a53ce380014f">
+		<description>Rayman 3 (2002-07-19)(Ubi Soft)(proto)[La Ronde]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="7872840">
+				<rom name="Rayman 3 (2002-07-19)(Ubi Soft)(proto)[La Ronde].bin" size="7872840" crc="87c722d2" sha1="1a53ce380014f896a36bb6fea0ebc1791792621f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba026fdf53bcdde">
+		<description>Rayman 3 (2002-08-09)(Ubi Soft)(proto)[ECTS]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="9220084">
+				<rom name="Rayman 3 (2002-08-09)(Ubi Soft)(proto)[ECTS].bin" size="9220084" crc="f8e4e55c" sha1="026fdf53bcdde57945e9ffb7e1553693795c3bb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5fe3909b1bf07">
+		<description>Rayman 3 (2002-10-07)(Ubi Soft)(EU)(M6)(proto)[Proto A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="9932600">
+				<rom name="Rayman 3 (2002-10-07)(Ubi Soft)(EU)(M6)(proto)[Proto A].bin" size="9932600" crc="996113f9" sha1="5fe3909b1bf073927fee4137e9ac529da5afb9fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba97351671d3dfb">
+		<description>Rayman 3 (2002-10-07)(Ubi Soft)(EU)(M6)(proto)[Proto B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="9908796">
+				<rom name="Rayman 3 (2002-10-07)(Ubi Soft)(EU)(M6)(proto)[Proto B].bin" size="9908796" crc="dc675323" sha1="97351671d3dfb385084c80cc721e2bf1c6d62fe9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba322b96c91f146">
+		<description>Rayman 3 (2002-10-08)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="9934712">
+				<rom name="Rayman 3 (2002-10-08)(Ubi Soft)(EU)(M6)(proto).bin" size="9934712" crc="1d42c307" sha1="322b96c91f146204a82e22c53f4bd2a37e08093e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba07e0df2a4a832">
+		<description>Rayman 3 (2002-10-09)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="9924420">
+				<rom name="Rayman 3 (2002-10-09)(Ubi Soft)(EU)(M6)(proto).bin" size="9924420" crc="3a60a163" sha1="07e0df2a4a832b62b2eb7bce0a127104cb172b73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba192d6e940961d">
+		<description>Rayman 3 (2002-10-10)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10097016">
+				<rom name="Rayman 3 (2002-10-10)(Ubi Soft)(EU)(M6)(proto).bin" size="10097016" crc="b4af172e" sha1="192d6e940961d8aaf3c6b90b0b27db7cde1124b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba78b71004f0118">
+		<description>Rayman 3 (2002-10-14)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10142312">
+				<rom name="Rayman 3 (2002-10-14)(Ubi Soft)(EU)(M6)(proto).bin" size="10142312" crc="a990a556" sha1="78b71004f01186de913e89684f1b5d38ae746e3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba78d59a404d4c5">
+		<description>Rayman 3 (2002-10-15)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10192356">
+				<rom name="Rayman 3 (2002-10-15)(Ubi Soft)(EU)(M6)(proto).bin" size="10192356" crc="becbb918" sha1="78d59a404d4c595078bdd32f7c0e09072470bb73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba1486cca1793b2">
+		<description>Rayman 3 (2002-10-16)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10196404">
+				<rom name="Rayman 3 (2002-10-16)(Ubi Soft)(EU)(M6)(proto).bin" size="10196404" crc="df94398e" sha1="1486cca1793b2bf765ad3bf39aaf6cae706ba548"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba3a44c30ac74a2">
+		<description>Rayman 3 (2002-10-17)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10217872">
+				<rom name="Rayman 3 (2002-10-17)(Ubi Soft)(EU)(M6)(proto).bin" size="10217872" crc="d0bbbbf1" sha1="3a44c30ac74a2e107128334b5dabb48e1c62719e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2236c88e09c4e">
+		<description>Rayman 3 (2002-10-20)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10254428">
+				<rom name="Rayman 3 (2002-10-20)(Ubi Soft)(EU)(M6)(proto).bin" size="10254428" crc="58502e44" sha1="2236c88e09c4e2f1fa20928a6d9bef87ac871040"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba67b53aa33d962">
+		<description>Rayman 3 (2002-10-21)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10260636">
+				<rom name="Rayman 3 (2002-10-21)(Ubi Soft)(EU)(M6)(proto).bin" size="10260636" crc="84f0792c" sha1="67b53aa33d9629ed87058e214494ddd60c7e7511"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba73e9b027b7c25">
+		<description>Rayman 3 (2002-10-22)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10271756">
+				<rom name="Rayman 3 (2002-10-22)(Ubi Soft)(EU)(M6)(proto).bin" size="10271756" crc="8ba4a981" sha1="73e9b027b7c255385d537dee8c7266fd04019951"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaf3967ad3b1d1b">
+		<description>Rayman 3 (2002-10-23)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10297520">
+				<rom name="Rayman 3 (2002-10-23)(Ubi Soft)(EU)(M6)(proto).bin" size="10297520" crc="168103be" sha1="f3967ad3b1d1bd61170266dfe7dbd19e07c8eeac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaaffe129ba87c7">
+		<description>Rayman 3 (2002-10-24)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10320308">
+				<rom name="Rayman 3 (2002-10-24)(Ubi Soft)(EU)(M6)(proto).bin" size="10320308" crc="e0fdeb74" sha1="affe129ba87c7c350193f030bb90652cda308764"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad529ecc7bee69">
+		<description>Rayman 3 (2002-10-27)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10472612">
+				<rom name="Rayman 3 (2002-10-27)(Ubi Soft)(EU)(M6)(proto).bin" size="10472612" crc="9db472e8" sha1="d529ecc7bee693dfc6d256e0062daf4775a2925e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5486280f92f4c">
+		<description>Rayman 3 (2002-10-28)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10461080">
+				<rom name="Rayman 3 (2002-10-28)(Ubi Soft)(EU)(M6)(proto).bin" size="10461080" crc="e24aae9e" sha1="5486280f92f4c82394137c3bfbe8afaf7ea2e2b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba40eff517d33fe">
+		<description>Rayman 3 (2002-10-29)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10486920">
+				<rom name="Rayman 3 (2002-10-29)(Ubi Soft)(EU)(M6)(proto).bin" size="10486920" crc="fb69b9e7" sha1="40eff517d33fe8a123e91c19e818228d42dc2d40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9308bba6aa436">
+		<description>Rayman 3 (2002-10-30)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10506892">
+				<rom name="Rayman 3 (2002-10-30)(Ubi Soft)(EU)(M6)(proto).bin" size="10506892" crc="bc5bfe20" sha1="9308bba6aa4362dc53d4599e33d98ae59b1d227a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaab77cd464b1b0">
+		<description>Rayman 3 (2002-10-31)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10639300">
+				<rom name="Rayman 3 (2002-10-31)(Ubi Soft)(EU)(M6)(proto).bin" size="10639300" crc="b51d09f3" sha1="ab77cd464b1b0f2171de5dcc1754f41f2509fefc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba64870ec36f617">
+		<description>Rayman 3 (2002-11-05)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10837612">
+				<rom name="Rayman 3 (2002-11-05)(Ubi Soft)(EU)(M10)(proto).bin" size="10837612" crc="c42d9d65" sha1="64870ec36f6174c503cb65771e26315299e5153a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6bd9bfbd28e37">
+		<description>Rayman 3 (2002-11-06)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10843292">
+				<rom name="Rayman 3 (2002-11-06)(Ubi Soft)(EU)(M10)(proto).bin" size="10843292" crc="e02f58ed" sha1="6bd9bfbd28e37eb3aff03c605a6d66f39fd98e7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaab13482693b89">
+		<description>Rayman 3 (2002-11-07)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10864304">
+				<rom name="Rayman 3 (2002-11-07)(Ubi Soft)(EU)(M10)(proto).bin" size="10864304" crc="cd9c50af" sha1="ab13482693b8957dca92065fbc6cdea967e3ddc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba701e439b86a84">
+		<description>Rayman 3 (2002-11-10)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10776572">
+				<rom name="Rayman 3 (2002-11-10)(Ubi Soft)(EU)(M10)(proto).bin" size="10776572" crc="2dd7d9b6" sha1="701e439b86a84450ea05f5433e5fe225569fe8cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaedd8c1ac91c10">
+		<description>Rayman 3 (2002-11-11)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10797864">
+				<rom name="Rayman 3 (2002-11-11)(Ubi Soft)(EU)(M10)(proto).bin" size="10797864" crc="555e24d8" sha1="edd8c1ac91c103473484cd96aca2002e5f59cc82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbacaa210d13d7a5">
+		<description>Rayman 3 (2002-11-12)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10826240">
+				<rom name="Rayman 3 (2002-11-12)(Ubi Soft)(EU)(M10)(proto).bin" size="10826240" crc="aa4970e8" sha1="caa210d13d7a55f9f4399e6b2afb854e199d19dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba20b29d093bee0">
+		<description>Rayman 3 (2002-11-13)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10830764">
+				<rom name="Rayman 3 (2002-11-13)(Ubi Soft)(EU)(M10)(proto).bin" size="10830764" crc="cc487994" sha1="20b29d093bee01c01e964d4f7b40265900a4ba51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba29ddfeb489901">
+		<description>Rayman 3 (2002-11-14)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="11004524">
+				<rom name="Rayman 3 (2002-11-14)(Ubi Soft)(EU)(M10)(proto).bin" size="11004524" crc="fca14aa4" sha1="29ddfeb489901cd382b2629fb99f274cac5cee2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba364e6112bbbbd">
+		<description>Rayman 3 (2002-11-15)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10980708">
+				<rom name="Rayman 3 (2002-11-15)(Ubi Soft)(EU)(M10)(proto).bin" size="10980708" crc="6d7a87bb" sha1="364e6112bbbbd09e8b9bd035344a0882131d133a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba58834828cf317">
+		<description>Rayman 3 (2002-11-18)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10995636">
+				<rom name="Rayman 3 (2002-11-18)(Ubi Soft)(EU)(M10)(proto).bin" size="10995636" crc="0d4c83d5" sha1="58834828cf317a6929508ca997c49ac9e6b1e7c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba99e6cfc0d0b72">
+		<description>Rayman 3 (2002-11-19)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8370960">
+				<rom name="Rayman 3 (2002-11-19)(Ubi Soft)(EU)(M10)(proto).bin" size="8370960" crc="6ca24576" sha1="99e6cfc0d0b72797a051fa9859077098769384dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaf8e6472e0a777">
+		<description>Rayman 3 (2002-11-20)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8371944">
+				<rom name="Rayman 3 (2002-11-20)(Ubi Soft)(EU)(M10)(proto).bin" size="8371944" crc="8fbb2b7b" sha1="f8e6472e0a777c99815d541cda6b5b3acac10633"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbacb7c05e4ac2b3">
+		<description>Rayman 3 (2002-11-21)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8375524">
+				<rom name="Rayman 3 (2002-11-21)(Ubi Soft)(EU)(M10)(proto).bin" size="8375524" crc="e4bbde62" sha1="cb7c05e4ac2b3eca5683e608ad174b0359b8b231"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab3929dbafb764">
+		<description>Rayman 3 (2002-11-22)(Ubi Soft)(EU)(M10)(proto)[Proto A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8375524">
+				<rom name="Rayman 3 (2002-11-22)(Ubi Soft)(EU)(M10)(proto)[Proto A].bin" size="8375524" crc="25603f1d" sha1="b3929dbafb76403ef84b8eb932c095901d8ff1c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6d64606c19211">
+		<description>Rayman 3 (2002-11-22)(Ubi Soft)(EU)(M10)(proto)[Proto B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8375448">
+				<rom name="Rayman 3 (2002-11-22)(Ubi Soft)(EU)(M10)(proto)[Proto B].bin" size="8375448" crc="ee11d090" sha1="6d64606c19211ad0b9ee28749a94a59e225c4546"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba25119e0884bdd">
+		<description>Rayman 3 (2002-11-22)(Ubi Soft)(US)(M3)(proto)[Proto B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8375248">
+				<rom name="Rayman 3 (2002-11-22)(Ubi Soft)(US)(M3)(proto)[Proto B].bin" size="8375248" crc="10bc8496" sha1="25119e0884bdd4a054341f924a1897b273b3df44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba08889038a7fc1">
+		<description>Rayman 3 (2002-11-23)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376500">
+				<rom name="Rayman 3 (2002-11-23)(Ubi Soft)(EU)(M10)(proto).bin" size="8376500" crc="b8f3225e" sha1="08889038a7fc169dacca31c14bd92ca7ed7e7087"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2f2002d50e241">
+		<description>Rayman 3 (2002-11-23)(Ubi Soft)(US)(M3)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376372">
+				<rom name="Rayman 3 (2002-11-23)(Ubi Soft)(US)(M3)(proto).bin" size="8376372" crc="861734cf" sha1="2f2002d50e241ab63fac4be12fcd65baeaea180e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8299a6b5b05da">
+		<description>Rayman 3 (2002-11-24)(Ubi Soft)(EU)(M10)(proto)[Proto A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376948">
+				<rom name="Rayman 3 (2002-11-24)(Ubi Soft)(EU)(M10)(proto)[Proto A].bin" size="8376948" crc="c74fd053" sha1="8299a6b5b05da3a27b55621c7c3050c81c57677d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae44fb8b4b2c1a">
+		<description>Rayman 3 (2002-11-24)(Ubi Soft)(EU)(M10)(proto)[Proto B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376864">
+				<rom name="Rayman 3 (2002-11-24)(Ubi Soft)(EU)(M10)(proto)[Proto B].bin" size="8376864" crc="4ca5cca0" sha1="e44fb8b4b2c1a0b1fc0df840c0599fb269283e2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba889421c82eb2a">
+		<description>Rayman 3 (2002-11-24)(Ubi Soft)(EU)(M10)(proto)[Proto C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376984">
+				<rom name="Rayman 3 (2002-11-24)(Ubi Soft)(EU)(M10)(proto)[Proto C].bin" size="8376984" crc="b23c8536" sha1="889421c82eb2ad9dff167fe64eb86eb0e423a95d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba225a67093747d">
+		<description>Rayman 3 (2002-11-24)(Ubi Soft)(EU)(M10)(proto)[Proto D]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376832">
+				<rom name="Rayman 3 (2002-11-24)(Ubi Soft)(EU)(M10)(proto)[Proto D].bin" size="8376832" crc="1f7ed346" sha1="225a67093747df52931e1da7f0572557c0554dff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba75867fcea0a81">
+		<description>Rayman 3 (2002-11-24)(Ubi Soft)(US)(M3)(proto)[Proto A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376796">
+				<rom name="Rayman 3 (2002-11-24)(Ubi Soft)(US)(M3)(proto)[Proto A].bin" size="8376796" crc="bb2aa4f0" sha1="75867fcea0a81c591e54b6af9ee5c354fbfa830c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2bac65e7499e0">
+		<description>Rayman 3 (2002-11-24)(Ubi Soft)(US)(M3)(proto)[Proto B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376780">
+				<rom name="Rayman 3 (2002-11-24)(Ubi Soft)(US)(M3)(proto)[Proto B].bin" size="8376780" crc="be52305b" sha1="2bac65e7499e002f7b85e506bf20f678c7a141b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadf6dee5868f97">
+		<description>Rayman 3 (2002-11-24)(Ubi Soft)(US)(M3)(proto)[Proto C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376832">
+				<rom name="Rayman 3 (2002-11-24)(Ubi Soft)(US)(M3)(proto)[Proto C].bin" size="8376832" crc="ec40fafd" sha1="df6dee5868f97902f12c64f07911bacfd7651768"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9b27073a8df41">
+		<description>Rayman 3 (2002-11-24)(Ubi Soft)(US)(M3)(proto)[Proto D]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376680">
+				<rom name="Rayman 3 (2002-11-24)(Ubi Soft)(US)(M3)(proto)[Proto D].bin" size="8376680" crc="c26277c4" sha1="9b27073a8df41d677100d68d6390d199f7343944"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba7482825ca5b4e">
+		<description>Rayman 3 (2002-11-25)(Ubi Soft)(EU)(M10)(proto)[Proto B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8377084">
+				<rom name="Rayman 3 (2002-11-25)(Ubi Soft)(EU)(M10)(proto)[Proto B].bin" size="8377084" crc="dfcf79f0" sha1="7482825ca5b4e2ebf8c3738bd0672d4ffe91bdd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8a894838b2d2a">
+		<description>Rayman 3 (2002-11-25)(Ubi Soft)(EU)(M10)(proto)[Proto C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8377704">
+				<rom name="Rayman 3 (2002-11-25)(Ubi Soft)(EU)(M10)(proto)[Proto C].bin" size="8377704" crc="c43de78c" sha1="8a894838b2d2ac0c9a1b7185223dbc1bffde94fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2083879fdfe43">
+		<description>Rayman 3 (2002-11-25)(Ubi Soft)(US)(M3)(proto)[Proto A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376784">
+				<rom name="Rayman 3 (2002-11-25)(Ubi Soft)(US)(M3)(proto)[Proto A].bin" size="8376784" crc="17297b26" sha1="2083879fdfe43933476af194de622dc9e5b688bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba16a80956e9429">
+		<description>Rayman 3 (2002-11-25)(Ubi Soft)(US)(M3)(proto)[Proto B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8376932">
+				<rom name="Rayman 3 (2002-11-25)(Ubi Soft)(US)(M3)(proto)[Proto B].bin" size="8376932" crc="f1197150" sha1="16a80956e9429e6de51b55d1905519acc02e2a50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba0c8d0ab23b25e">
+		<description>Rayman 3 (2002-11-25)(Ubi Soft)(US)(M3)(proto)[Proto C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8377552">
+				<rom name="Rayman 3 (2002-11-25)(Ubi Soft)(US)(M3)(proto)[Proto C].bin" size="8377552" crc="e3cb054d" sha1="0c8d0ab23b25eae766c02c6f16993b37b3f3ee69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadf5e5f1877794">
+		<description>Rayman 3 (2002-11-26)(Ubi Soft)(US)(M3)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8377656">
+				<rom name="Rayman 3 (2002-11-26)(Ubi Soft)(US)(M3)(proto).bin" size="8377656" crc="a2bc18cd" sha1="df5e5f1877794c5de5b3075f120286e54be5daad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab5e603ee2736c">
+		<description>Rayman 3 (2002-11-27)(Ubi Soft)(US)(M3)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8377916">
+				<rom name="Rayman 3 (2002-11-27)(Ubi Soft)(US)(M3)(proto).bin" size="8377916" crc="c4c939f3" sha1="b5e603ee2736c646e76366bbf5e4751c94c94ee2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba04a09fef7051a">
+		<description>Rayman 3 (2002-11-28)(Ubi Soft)(US)(M3)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8378284">
+				<rom name="Rayman 3 (2002-11-28)(Ubi Soft)(US)(M3)(proto).bin" size="8378284" crc="3320dee5" sha1="04a09fef7051abc6ea42e38f1806be65cb9c76d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5b8c54c209bea">
+		<description>Rayman 3 (2002-11-29)(Ubi Soft)(EU)(M10)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8378464">
+				<rom name="Rayman 3 (2002-11-29)(Ubi Soft)(EU)(M10)(proto).bin" size="8378464" crc="3b4b0e5e" sha1="5b8c54c209beaf30e732d12bc488d1201c8d39df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab5d299663bf1a">
+		<description>Rayman 3 (2002-11-29)(Ubi Soft)(US)(M3)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8378312">
+				<rom name="Rayman 3 (2002-11-29)(Ubi Soft)(US)(M3)(proto).bin" size="8378312" crc="4549f9b3" sha1="b5d299663bf1ac4a50ced1a572dcef5d31d807f6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbad842602253714">
 		<description>roguespear_v23</description>
 		<year>????</year>
@@ -809,6 +1579,546 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Shin Sangoku Musou Advance (Japan) (Rev 1).gba" size="16777216" crc="7ceded10" sha1="be2bfa709478dc482e80fb476c1ee846b703bcbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbac54b337be0277">
+		<description>Skyland v2023.11.16.0 (2023-11-16)(Bowman, Evan)(MIT)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16124944">
+				<rom name="Skyland v2023.11.16.0 (2023-11-16)(Bowman, Evan)(MIT)(beta).gba" size="16124944" crc="f097fd7b" sha1="c54b337be027704af80e5e78ef2cc42a0d4b07f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbade7bf90f6ae1f">
+		<description>Skyland v2023.11.17.0 (2023-11-17)(Bowman, Evan)(MIT)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16134340">
+				<rom name="Skyland v2023.11.17.0 (2023-11-17)(Bowman, Evan)(MIT)(beta).gba" size="16134340" crc="fc641bea" sha1="de7bf90f6ae1f37890dfb5552e42cdcc9beb0935"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa066d4331dda7">
+		<description>Skyland v2023.11.26.0 (2023-11-26)(Bowman, Evan)(MIT)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16141528">
+				<rom name="Skyland v2023.11.26.0 (2023-11-26)(Bowman, Evan)(MIT)(beta).gba" size="16141528" crc="63ef562a" sha1="a066d4331dda7819affbb8e7649fea983959a868"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6c47792b35d25">
+		<description>Skyland v2023.11.28.0 (2023-11-28)(Bowman, Evan)(MIT)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16081092">
+				<rom name="Skyland v2023.11.28.0 (2023-11-28)(Bowman, Evan)(MIT)(beta).gba" size="16081092" crc="1beb58f1" sha1="6c47792b35d257950bb4e4b0721ac0c235629e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2def789396893">
+		<description>Skyland v2023.11.28.1 (2023-11-28)(Bowman, Evan)(MIT)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16081100">
+				<rom name="Skyland v2023.11.28.1 (2023-11-28)(Bowman, Evan)(MIT)(beta).gba" size="16081100" crc="8eb6cd3a" sha1="2def7893968938f33deec6e12a537cb89465e3c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae43848f71c03c">
+		<description>Skyland v2023.11.29.0 (2023-11-29)(Bowman, Evan)(MIT)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16078052">
+				<rom name="Skyland v2023.11.29.0 (2023-11-29)(Bowman, Evan)(MIT)(beta).gba" size="16078052" crc="8615a340" sha1="e43848f71c03c8d3ad5b55101197420cc736d435"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaadf96dbab66c2">
+		<description>Skyland v2023.12.1.0 (2023-12-01)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16064996">
+				<rom name="Skyland v2023.12.1.0 (2023-12-01)(Bowman, Evan)(FW)(beta).gba" size="16064996" crc="e9b75458" sha1="adf96dbab66c2671b64e9dc37c1fbfe1bbee925e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbac6bae8feef1ae">
+		<description>Skyland v2023.12.11.0 (2023-12-11)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16104384">
+				<rom name="Skyland v2023.12.11.0 (2023-12-11)(Bowman, Evan)(FW)(beta).gba" size="16104384" crc="7500eb89" sha1="c6bae8feef1ae9341f17d92aadca0d7d8fd2ddab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab8192c3805fea">
+		<description>Skyland v2023.12.11.1 (2023-12-11)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16113268">
+				<rom name="Skyland v2023.12.11.1 (2023-12-11)(Bowman, Evan)(FW)(beta).gba" size="16113268" crc="fa1a94ac" sha1="b8192c3805feaf2a45147f757d256d95ab3471d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba1f61204a05aeb">
+		<description>Skyland v2023.12.12.0 (2023-12-12)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16120812">
+				<rom name="Skyland v2023.12.12.0 (2023-12-12)(Bowman, Evan)(FW)(beta).gba" size="16120812" crc="8cd34a24" sha1="1f61204a05aeb120bc63f83e45a9c10333e8fe3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae36230df11fea">
+		<description>Skyland v2023.12.12.1 (2023-12-12)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16122008">
+				<rom name="Skyland v2023.12.12.1 (2023-12-12)(Bowman, Evan)(FW)(beta).gba" size="16122008" crc="12ae7a10" sha1="e36230df11feaae92bb83128fb585a1f915a7a7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba14c13f1bd4879">
+		<description>Skyland v2023.12.13.0 (2023-12-13)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16123000">
+				<rom name="Skyland v2023.12.13.0 (2023-12-13)(Bowman, Evan)(FW)(beta).gba" size="16123000" crc="30a967db" sha1="14c13f1bd48790ec669ebded9e8200e427237234"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9334efd3b7069">
+		<description>Skyland v2023.12.14.0 (2023-12-14)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16124104">
+				<rom name="Skyland v2023.12.14.0 (2023-12-14)(Bowman, Evan)(FW)(beta).gba" size="16124104" crc="8ad4c394" sha1="9334efd3b70694d21f7219607d3f47d0f58a99f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae6a75fe248689">
+		<description>Skyland v2023.12.14.1 (2023-12-14)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16126404">
+				<rom name="Skyland v2023.12.14.1 (2023-12-14)(Bowman, Evan)(FW)(beta).gba" size="16126404" crc="affcdfc4" sha1="e6a75fe2486898392863206262baca9c650e1224"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbacbad0670a336b">
+		<description>Skyland v2023.12.14.2 (2023-12-14)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16126312">
+				<rom name="Skyland v2023.12.14.2 (2023-12-14)(Bowman, Evan)(FW)(beta).gba" size="16126312" crc="1cc9edc8" sha1="cbad0670a336b4d66b089358101840e9b14f7fe6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbabb4a362080e33">
+		<description>Skyland v2023.12.25.1 (2023-12-25)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16152912">
+				<rom name="Skyland v2023.12.25.1 (2023-12-25)(Bowman, Evan)(FW)(beta).gba" size="16152912" crc="6d206967" sha1="bb4a362080e33d4e17e147a4b6b43f4ca0283e97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbabef532147c255">
+		<description>Skyland v2023.12.26.1 (2023-12-26)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16152368">
+				<rom name="Skyland v2023.12.26.1 (2023-12-26)(Bowman, Evan)(FW)(beta).gba" size="16152368" crc="06bbfb99" sha1="bef532147c2557c23a848f9f1fcb7074e66d70b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba54dc9730080f1">
+		<description>Skyland v2023.12.27.0 (2023-12-27)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16076424">
+				<rom name="Skyland v2023.12.27.0 (2023-12-27)(Bowman, Evan)(FW)(beta).gba" size="16076424" crc="2d109e22" sha1="54dc9730080f1a80154e9eb1359d4c3edc9acae8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba77277a5e057a1">
+		<description>Skyland v2023.12.28.0 (2023-12-28)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16079248">
+				<rom name="Skyland v2023.12.28.0 (2023-12-28)(Bowman, Evan)(FW)(beta).gba" size="16079248" crc="de456d4c" sha1="77277a5e057a15d4e8006c9729952cac5d463a71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba609d3b880de9c">
+		<description>Skyland v2023.12.29.0 (2023-12-29)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16081280">
+				<rom name="Skyland v2023.12.29.0 (2023-12-29)(Bowman, Evan)(FW)(beta).gba" size="16081280" crc="605fcd8c" sha1="609d3b880de9cf3fbcc426f6d3477830f4d2025b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9402a1febb533">
+		<description>Skyland v2023.12.29.2 (2023-12-29)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16082032">
+				<rom name="Skyland v2023.12.29.2 (2023-12-29)(Bowman, Evan)(FW)(beta).gba" size="16082032" crc="46287afa" sha1="9402a1febb533f998c91ee46f4705e6ed83057c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba292167568e61d">
+		<description>Skyland v2023.12.3.0 (2023-12-03)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16077784">
+				<rom name="Skyland v2023.12.3.0 (2023-12-03)(Bowman, Evan)(FW)(beta).gba" size="16077784" crc="e50e1d1f" sha1="292167568e61d18cca9fd660f69d614946d4b113"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba01b553f5d1bb5">
+		<description>Skyland v2023.12.4.0 (2023-12-04)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16081408">
+				<rom name="Skyland v2023.12.4.0 (2023-12-04)(Bowman, Evan)(FW)(beta).gba" size="16081408" crc="0f2e6eb9" sha1="01b553f5d1bb55da74d0ea67d32f11e9c26b1d58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8e58826f04807">
+		<description>Skyland v2023.12.6.0 (2023-12-06)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16098596">
+				<rom name="Skyland v2023.12.6.0 (2023-12-06)(Bowman, Evan)(FW)(beta).gba" size="16098596" crc="07dba6e2" sha1="8e58826f04807c12f56b0fa631fecec0b21faf67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8c0d0b2235a02">
+		<description>Skyland v2023.12.8.0 (2023-12-08)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16098120">
+				<rom name="Skyland v2023.12.8.0 (2023-12-08)(Bowman, Evan)(FW)(beta).gba" size="16098120" crc="406f8433" sha1="8c0d0b2235a02920028e7b357d0cc43c80a9b916"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa6f5e75e391de">
+		<description>Skyland v2024.1.11.0 (2024-01-11)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16098700">
+				<rom name="Skyland v2024.1.11.0 (2024-01-11)(Bowman, Evan)(FW)(beta).gba" size="16098700" crc="70d60e23" sha1="a6f5e75e391de1f17f6b473fd6f6a21679166a34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbacdf5a8a59baed">
+		<description>Skyland v2024.1.14.0 (2024-01-14)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16218552">
+				<rom name="Skyland v2024.1.14.0 (2024-01-14)(Bowman, Evan)(FW)(beta).gba" size="16218552" crc="0903f2ab" sha1="cdf5a8a59baedbfea6d78b16359b75095788f347"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa6a2dab02baf2">
+		<description>Skyland v2024.1.15.0 (2024-01-15)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16215852">
+				<rom name="Skyland v2024.1.15.0 (2024-01-15)(Bowman, Evan)(FW)(beta).gba" size="16215852" crc="6aa14afd" sha1="a6a2dab02baf22e45d18e4485339bd472ca2cf91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba00d05d5be5ddc">
+		<description>Skyland v2024.1.18.0 (2024-01-18)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16217112">
+				<rom name="Skyland v2024.1.18.0 (2024-01-18)(Bowman, Evan)(FW)(beta).gba" size="16217112" crc="c66f5f1a" sha1="00d05d5be5ddc810e0416b6384060d3f5f8ce1b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba547970536f1c6">
+		<description>Skyland v2024.1.29.0 (2024-01-29)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16219164">
+				<rom name="Skyland v2024.1.29.0 (2024-01-29)(Bowman, Evan)(FW)(beta).gba" size="16219164" crc="5a947bf7" sha1="547970536f1c6207fd863e22e3b75fbd519896d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba96af9138b20f0">
+		<description>Skyland v2024.1.29.1 (2024-01-29)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16219212">
+				<rom name="Skyland v2024.1.29.1 (2024-01-29)(Bowman, Evan)(FW)(beta).gba" size="16219212" crc="e5c1fcf7" sha1="96af9138b20f0495c664e4a35e948fe64e6fbd45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab5ea8a5c9949b">
+		<description>Skyland v2024.1.3.0 (2024-01-03)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16084964">
+				<rom name="Skyland v2024.1.3.0 (2024-01-03)(Bowman, Evan)(FW)(beta).gba" size="16084964" crc="d07b462b" sha1="b5ea8a5c9949b76e2cee44c2d595627729982e39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba36ed63a1a9595">
+		<description>Skyland v2024.1.3.1 (2024-01-03)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16082888">
+				<rom name="Skyland v2024.1.3.1 (2024-01-03)(Bowman, Evan)(FW)(beta).gba" size="16082888" crc="e184d723" sha1="36ed63a1a9595229dedb2b0d22613615e12758c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba930f0856fc768">
+		<description>Skyland v2024.1.4.0 (2024-01-04)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16098148">
+				<rom name="Skyland v2024.1.4.0 (2024-01-04)(Bowman, Evan)(FW)(beta).gba" size="16098148" crc="222b65ef" sha1="930f0856fc7687e0fbe39ca910dd48e5689b1bcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab5a63bca0ed7c">
+		<description>Skyland v2024.1.7.0 (2024-01-07)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16099112">
+				<rom name="Skyland v2024.1.7.0 (2024-01-07)(Bowman, Evan)(FW)(beta).gba" size="16099112" crc="9315ad77" sha1="b5a63bca0ed7cc70a5cf8cab7ed269611fc5710c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadbc2d619a8270">
+		<description>Skyland v2024.2.1.0 (2024-02-01)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16221016">
+				<rom name="Skyland v2024.2.1.0 (2024-02-01)(Bowman, Evan)(FW)(beta).gba" size="16221016" crc="18a8541a" sha1="dbc2d619a82702aca442a76c66c89f956bb6f578"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab3d4dca272ce7">
+		<description>Skyland v2024.2.11.0 (2024-02-11)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16202948">
+				<rom name="Skyland v2024.2.11.0 (2024-02-11)(Bowman, Evan)(FW)(beta).gba" size="16202948" crc="a5bc6b9a" sha1="b3d4dca272ce7700a1c586bd80207a90e5cb4941"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae181717e2d535">
+		<description>Skyland v2024.2.13.0 (2024-02-13)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16219224">
+				<rom name="Skyland v2024.2.13.0 (2024-02-13)(Bowman, Evan)(FW)(beta).gba" size="16219224" crc="648168cf" sha1="e181717e2d5356b5f79f33b43414f1acc9f9a044"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5bf4c8279e21b">
+		<description>Skyland v2024.2.15.0 (2024-02-15)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16219196">
+				<rom name="Skyland v2024.2.15.0 (2024-02-15)(Bowman, Evan)(FW)(beta).gba" size="16219196" crc="580ec69e" sha1="5bf4c8279e21bab9e14954c67ca1c5e1bc2637a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbac8d67bd03c249">
+		<description>Skyland v2024.2.16.0 (2024-02-16)(Bowman, Evan)(en-es)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16305204">
+				<rom name="Skyland v2024.2.16.0 (2024-02-16)(Bowman, Evan)(en-es)(FW)(beta).gba" size="16305204" crc="9a64095d" sha1="c8d67bd03c24926d76050042090b8feef884bb1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaae6a06eb50d1b">
+		<description>Skyland v2024.2.17.0 (2024-02-17)(Bowman, Evan)(en-es)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16305372">
+				<rom name="Skyland v2024.2.17.0 (2024-02-17)(Bowman, Evan)(en-es)(FW)(beta).gba" size="16305372" crc="6646f465" sha1="ae6a06eb50d1b8a6ef51568cb98bac529f1b368c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadf6163af28108">
+		<description>Skyland v2024.2.18.1 (2024-02-18)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16222108">
+				<rom name="Skyland v2024.2.18.1 (2024-02-18)(Bowman, Evan)(FW)(beta).gba" size="16222108" crc="86cbd833" sha1="df6163af281085a53fb120aff5cc07bcdb572a54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbac71bf632c2798">
+		<description>Skyland v2024.2.19.0 (2024-02-19)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16222192">
+				<rom name="Skyland v2024.2.19.0 (2024-02-19)(Bowman, Evan)(FW)(beta).gba" size="16222192" crc="c166b0c6" sha1="c71bf632c2798ca399bde84fc6bd01c58cc4ec97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba03e3fd6700a9e">
+		<description>Skyland v2024.2.19.1 (2024-02-19)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16224536">
+				<rom name="Skyland v2024.2.19.1 (2024-02-19)(Bowman, Evan)(FW)(beta).gba" size="16224536" crc="392c9147" sha1="03e3fd6700a9ee7ca8ad1376b457ff7700769550"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba1fb1bca0a6995">
+		<description>Skyland v2024.2.21.0 (2024-02-21)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16231888">
+				<rom name="Skyland v2024.2.21.0 (2024-02-21)(Bowman, Evan)(FW)(beta).gba" size="16231888" crc="3e1635f3" sha1="1fb1bca0a699556a1470321aa86ef1a14113e169"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadd5e3f254a92d">
+		<description>Skyland v2024.2.22.0 (2024-02-22)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16231000">
+				<rom name="Skyland v2024.2.22.0 (2024-02-22)(Bowman, Evan)(FW)(beta).gba" size="16231000" crc="8fce113f" sha1="dd5e3f254a92d0fb28600afca8668bf8c6702580"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba67ca97c30978b">
+		<description>Skyland v2024.2.23.0 (2024-02-23)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16230952">
+				<rom name="Skyland v2024.2.23.0 (2024-02-23)(Bowman, Evan)(FW)(beta).gba" size="16230952" crc="d8f8a780" sha1="67ca97c30978b3f522b8066b52875ca7ffbc8dc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad98cb7166968b">
+		<description>Skyland v2024.2.7.0 (2024-02-07)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16204596">
+				<rom name="Skyland v2024.2.7.0 (2024-02-07)(Bowman, Evan)(FW)(beta).gba" size="16204596" crc="53710cf1" sha1="d98cb7166968bc65af4d519423273c782aba498e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba19fb0496e5886">
+		<description>Skyland v2024.3.19.0 (2024-03-19)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16230964">
+				<rom name="Skyland v2024.3.19.0 (2024-03-19)(Bowman, Evan)(FW)(beta).gba" size="16230964" crc="a133fcc5" sha1="19fb0496e58868f32490bced564c656306f9d851"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba004eeb80f09c5">
+		<description>Skyland v2024.3.20.0 (2024-03-20)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16247932">
+				<rom name="Skyland v2024.3.20.0 (2024-03-20)(Bowman, Evan)(FW)(beta).gba" size="16247932" crc="49ec61f1" sha1="004eeb80f09c51b8ae6911b08a7d23c181646642"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa346d1844e81b">
+		<description>Skyland v2024.4.23.0 (2024-03-20)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16250376">
+				<rom name="Skyland v2024.4.23.0 (2024-03-20)(Bowman, Evan)(FW)(beta).gba" size="16250376" crc="ab2c86ed" sha1="a346d1844e81bbdeb7504ecf34ec44421624483a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad9936c4a776ce">
+		<description>Skyland v2024.5.24.0 (2024-05-24)(Bowman, Evan)(FW)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16250380">
+				<rom name="Skyland v2024.5.24.0 (2024-05-24)(Bowman, Evan)(FW)(beta).gba" size="16250380" crc="4cfb40d2" sha1="d9936c4a776ce61ede6241a018683e3efc0fe12b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9c3f18112c126">
+		<description>Sonic Advance 3 (demo-playable) (2004-04-28)(Sega)(JP)[kiosk demo]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Sonic Advance 3 (demo-playable) (2004-04-28)(Sega)(JP)[kiosk demo].bin" size="16777216" crc="0594d496" sha1="9c3f18112c126ca08403408a844a3a83967eb4dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba72d84f52c796c">
+		<description>SpongeBob SquarePants - Lights, Camera, Pants! (2005-08-03)(THQ)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4291500">
+				<rom name="SpongeBob SquarePants - Lights, Camera, Pants! (2005-08-03)(THQ)(proto).bin" size="4291500" crc="52fd3771" sha1="72d84f52c796cbb06c2cd9291ca7952093d9b7dc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -899,6 +2209,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="547772">
 				<rom name="Xmas Crazy Shift.bin" size="547772" crc="34b87ca1" sha1="863eab366f2a48fcbe8e3a33aac254b3b0feed30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba47dabc2d526ae">
+		<description>xniq (2021-07)(exelotl - PyroPyro)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1436448">
+				<rom name="xniq (2021-07)(exelotl - PyroPyro)(alpha).gba" size="1436448" crc="ddb5205d" sha1="47dabc2d526aefc41cc82eeec315c986e3a9b8bc"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1831 -->
+<!-- Number of items in this list = 1835 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -7982,6 +7982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen97452c8c90ca9">
+		<description>Hellfire (1990-07-10)(Seismic)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Hellfire (1990-07-10)(Seismic)(US)(proto).bin" size="524288" crc="772cbd90" sha1="97452c8c90ca9f180280138eb41c8da52fdfb32d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen6278a88814d7d">
 		<description>Hellfire (U) [T+Fre_terminus]</description>
 		<year>????</year>
@@ -10202,6 +10212,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen52f59d2f931bf">
+		<description>Monster Hunter (1992-12-28)(FutureScape)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="50346">
+				<rom name="Monster Hunter (1992-12-28)(FutureScape)(proto).bin" size="50346" crc="9e0c61e6" sha1="52f59d2f931bfabca97107d4a77dba0a3580253b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genbd9e35bbc9cc7">
+		<description>Monster Hunter (199x)(FutureScape)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="33830">
+				<rom name="Monster Hunter (199x)(FutureScape)(proto).bin" size="33830" crc="952eeb19" sha1="bd9e35bbc9cc7c23a168becf76676582c9c3c6f6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen992c2c0035764">
 		<description>monster world iv (Hack, Spanish)</description>
 		<year>????</year>
@@ -10709,6 +10739,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="NHL 94 - 2023 Edition hack v1.1 (2023)(Adam Catalyst).bin" size="2097152" crc="ee39cee0" sha1="e681163e729a4df206601424f62f9730f13d385e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencfaf9e405ff76">
+		<description>NHL Hockey (1991-09-18)(Electronic Arts)(US)[unreleased Rev 1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="523942">
+				<rom name="NHL Hockey (1991-09-18)(Electronic Arts)(US)[unreleased Rev 1].bin" size="523942" crc="010d8735" sha1="cfaf9e405ff76727358a34e8e524d644f1b7d1d7"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 248 -->
+<!-- Number of items in this list = 258 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -9,6 +9,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="(demo)rambo iii (fm-mod).sms" size="262144" crc="c2073674" sha1="ed4754923cdb1ca31af9b9ae79d1c3f7bf0eb4e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms81bdb7ec1572c">
+		<description>(demo)Rise and Sine (2024-02)(Darklite)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="255">
+				<rom name="(demo)Rise and Sine (2024-02)(Darklite).bin" size="255" crc="a4522b68" sha1="81bdb7ec1572c75ddca4f541be86a4f716827a31"/>
 			</dataarea>
 		</part>
 	</software>
@@ -289,6 +299,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Bitlogic MSX2SMS (2023)(OXiAB Studio).sms" size="65536" crc="7145271f" sha1="1e0155474b2c3c7eeb4dc16a21408ec09d893099"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms85a9662ea0fed">
+		<description>Blade Eagle (1988)(Sega)(proto)[AKA Blade Eagle 3-D]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Blade Eagle (1988)(Sega)(proto)[AKA Blade Eagle 3-D].bin" size="262144" crc="c127cc9c" sha1="85a9662ea0feda492e91e5069941eadc0efaed91"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1469,6 +1489,86 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pegged v1.02 (2021)(Under4Mhz).sms" size="32768" crc="ac08cf7e" sha1="cdc064faba261653498152403ba07b8402d224b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsbae5db53f4a0b">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr ca SMS Power! - kusfo][v2.4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr ca SMS Power! - kusfo][v2.4].bin" size="524288" crc="e44b4478" sha1="bae5db53f4a0b0ddc6a608af3320c4d54bb68c12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms5660cd923bd0a">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr de SMS Power! - Popfan][v2.4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr de SMS Power! - Popfan][v2.4].bin" size="524288" crc="9efa8451" sha1="5660cd923bd0ad333f54854d2f952ae97cbee34a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0524657a81477">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.4].bin" size="524288" crc="21bbb498" sha1="0524657a814771d478cf274c00275269175ec642"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms5c952f0a56ad5">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.4][literal]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.4][literal].bin" size="524288" crc="bb39f472" sha1="5c952f0a56ad5d2d019c9d3e330ec3eddc9d85b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsd926deddfc043">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr es SMS Power! - kusfo][v2.4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr es SMS Power! - kusfo][v2.4].bin" size="524288" crc="096f3048" sha1="d926deddfc04362f26631346b356f21788cfefef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsbdda3f68a3f1b">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr fr SMS Power! - cleem - mastersystem-france][v2.4.1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr fr SMS Power! - cleem - mastersystem-france][v2.4.1].bin" size="524288" crc="dff63d25" sha1="bdda3f68a3f1b11fb08e0b1a39406e14d5a0a9f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms61041d594eb79">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr fr SMS Power! - cleem - mastersystem-france][v2.4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr fr SMS Power! - cleem - mastersystem-france][v2.4].bin" size="524288" crc="ee169a92" sha1="61041d594eb79492ef732bd0a998565175143909"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0951f9e954f1e">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr pt SMS Power! - ajkmetiuk][v2.4][pt-br]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr pt SMS Power! - ajkmetiuk][v2.4][pt-br].bin" size="524288" crc="0c899526" sha1="0951f9e954f1e7145de1383b1ef367cf27351c8f"/>
 			</dataarea>
 		</part>
 	</software>

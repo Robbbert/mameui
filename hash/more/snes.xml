@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3241 -->
+<!-- Number of items in this list = 3253 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3102,6 +3102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsdce344a59155e">
+		<description>Batman Forever (1995)(Acclaim)(JP)(en)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Batman Forever (1995)(Acclaim)(JP)(en)(beta).sfc" size="3145728" crc="4967e667" sha1="dce344a59155e0bb76abfcfae05237a3c5e00ebe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns4d5fd806a67ee">
 		<description>Batman Forever (USA) (Rev 1)</description>
 		<year>????</year>
@@ -3119,6 +3129,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Batman Returns (beta).sfc" size="1048576" crc="9ce7d5ba" sha1="3bea4be499657acc2aeb0090fa9a00e4b15a7430"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscfcc60d398754">
+		<description>Battle Blaze (1992)(Sammy)(US)(proto)[Proto A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Battle Blaze (1992)(Sammy)(US)(proto)[Proto A].sfc" size="1048576" crc="9f2ba6a9" sha1="cfcc60d3987545429c2196acecb1b3d1f7e56015"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4469,6 +4489,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Choplifter III (U) (30545) [T+Por_Monkey].sfc" size="524288" crc="1ff9ebbd" sha1="0897a38ee07753c36c2f06b3784c3857b2157c8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8dabc8d3867a2">
+		<description>Choplifter III - Rescue-Survive (1994)(Beam)(US)(beta)[Prototype B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Choplifter III - Rescue-Survive (1994)(Beam)(US)(beta)[Prototype B].sfc" size="524288" crc="227e2d1f" sha1="8dabc8d3867a2429c79c3352d4efd8f6cb27c852"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7952,6 +7982,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9a1b37955e5a8">
+		<description>Fireteam Rogue (1994)(Accolade)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Fireteam Rogue (1994)(Accolade)(US)(proto).sfc" size="2097152" crc="00f67ba2" sha1="9a1b37955e5a8b01a40b0dc35454d4fb9f99f34f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7692442f132a6">
+		<description>Fireteam Rogue (1995-01-16)(Accolade)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Fireteam Rogue (1995-01-16)(Accolade)(US)(proto).sfc" size="2097152" crc="4f659fd5" sha1="7692442f132a67e44b6842c0c97362a624453bf8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns95a429d877e2f">
 		<description>Fireteam Rogue (U) (beta) [T+Fre_Generation IX]</description>
 		<year>????</year>
@@ -9172,6 +9222,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns1844122bbe054">
+		<description>Human Grand Prix II (1993)(Human Entertainment)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Human Grand Prix II (1993)(Human Entertainment)(JP)(proto).sfc" size="1048576" crc="b62236a9" sha1="1844122bbe0548c786bc7a078bdf3369c1c98e93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns40456bbcf270b">
 		<description>Hunter & Scorpion's Bet Saga - Scorpion's Ravage (SMW1 hack)</description>
 		<year>????</year>
@@ -9719,6 +9779,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Jikkyou Powerful Pro Yakyuu 2 (Japan) (Rev A).sfc" size="2621440" crc="ee0c54b5" sha1="51d854f885125e831399e6bdbc3ff6fc726a120f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse9e87b1459d63">
+		<description>Jim Power The Lost Dimension (USA) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Jim Power The Lost Dimension (USA) (Unl).sfc" size="1048576" crc="929d8d10" sha1="e9e87b1459d63a78fb4865685835dc0ca8c74a53"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15099,6 +15169,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="NewDinosaurIsland (SMW1 Hack).sfc" size="2097152" crc="d7914032" sha1="285cfcb01e3a1c961e058d17bde0854cde0d5b82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns564a0fe893b63">
+		<description>Newman-Haas IndyCar featuring Nigel Mansell (1994)(Acclaim)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Newman-Haas IndyCar featuring Nigel Mansell (1994)(Acclaim)(US)(proto).sfc" size="2097152" crc="5f5c3285" sha1="564a0fe893b639f0f56db22e3d723e5335db8a40"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28482,6 +28562,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns06fb1286af285">
+		<description>Tony Meola's Sidekicks Soccer (1993)(Electro Brain)(US)(proto)[b][Proto A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tony Meola's Sidekicks Soccer (1993)(Electro Brain)(US)(proto)[b][Proto A].sfc" size="1048576" crc="7a021e12" sha1="06fb1286af285b6d0b4323daeb58590c22e1119b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf9453d3429b79">
+		<description>Tony Meola's Sidekicks Soccer (1993)(Electro Brain)(US)(proto)[Proto B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tony Meola's Sidekicks Soccer (1993)(Electro Brain)(US)(proto)[Proto B].sfc" size="1048576" crc="dbea7c40" sha1="f9453d3429b79477d91e5df236081f14c8f5ecc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns27473dc403105">
+		<description>Tony Meola's Sidekicks Soccer (1993)(Electro Brain)(US)(proto)[Proto C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tony Meola's Sidekicks Soccer (1993)(Electro Brain)(US)(proto)[Proto C].sfc" size="1048576" crc="70935c01" sha1="27473dc403105b4238b78859488add1bae6caa2d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb97d6fe3caa4a">
 		<description>Top Gear (U) [T+Por_Magoo]</description>
 		<year>????</year>
@@ -29419,6 +29529,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Way to world youth.sfc" size="2097152" crc="53a2ca6a" sha1="dee1c806d4e11612c7a950c6f0a71ea328bded58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf918aa709c685">
+		<description>We're Back! A Dinosaur's Story (1993)(Hi-Tech Expressions)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="We're Back! A Dinosaur's Story (1993)(Hi-Tech Expressions)(proto).sfc" size="1048576" crc="b3925716" sha1="f918aa709c685e2d278447f712030a8260f1cdc9"/>
 			</dataarea>
 		</part>
 	</software>

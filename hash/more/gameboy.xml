@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 717 -->
+<!-- Number of items in this list = 1085 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -2672,6 +2672,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc7b33642a04c24">
+		<description>-New- Story of the Mist Prince, The v0.1 (2023-12-20)(RainBowChild)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="-New- Story of the Mist Prince, The v0.1 (2023-12-20)(RainBowChild)(alpha).gb" size="524288" crc="83564380" sha1="7b33642a04c24a0a4d907a02f907d7b062b0619c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd99dcb76aa2be">
+		<description>-New- Story of the Mist Prince, The v0.2 (2024-01-01)(RainBowChild)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="-New- Story of the Mist Prince, The v0.2 (2024-01-01)(RainBowChild)(alpha).gb" size="524288" crc="67e6c534" sha1="d99dcb76aa2beef09609a3092d5ed79a4ea24dcf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc137ec8356fd62">
 		<description>2nd Space [MBC1]</description>
 		<year>????</year>
@@ -2679,6 +2699,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="2nd Space [MBC1].gbc" size="65536" crc="d3a40bdb" sha1="137ec8356fd627768dec25fd7680198cbbe35d42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc72b40eadebc98">
+		<description>3D Maze (2021-02-27)(Shimada, Fernanda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="3D Maze (2021-02-27)(Shimada, Fernanda).gb" size="1048576" crc="409b9a52" sha1="72b40eadebc98b1d496fcfd5c35342d105afaad6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2702,6 +2732,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc3133b652bed21">
+		<description>60 in deep space (2020-01-05)(Arky750)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="60 in deep space (2020-01-05)(Arky750).gb" size="32768" crc="92809200" sha1="3133b652bed21e0dea9a0f1e5c55538af942d4ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9eb3b85ae6029">
+		<description>6ROOMS (2019-07-19)(Bland, Emberlynn)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="6ROOMS (2019-07-19)(Bland, Emberlynn)[a].gb" size="1048576" crc="cd6638f0" sha1="9eb3b85ae60295c8a00a1175d09b8c5450ebc83c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcfb2bad93aa6ef">
 		<description>Akumajou Dracula - Shikkokutaru Zensoukyoku by Silver X (Speed (V1.1) Hack) [S]</description>
 		<year>????</year>
@@ -2709,6 +2759,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Akumajou Dracula - Shikkokutaru Zensoukyoku by Silver X (Speed (V1.1) Hack) [S].gb" size="262144" crc="edb6c3d3" sha1="fb2bad93aa6efbab6918de365bdb71e65ef89124"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc26f7949d6ca4b">
+		<description>Alette If (2023-09-08)(Neuromage Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Alette If (2023-09-08)(Neuromage Studio).gb" size="262144" crc="21e22773" sha1="26f7949d6ca4b3599850b99f863f8bb6294de61d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2729,6 +2789,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Alien Planet (PD) [C][a1].gbc" size="65536" crc="0bdb010d" sha1="7272a6d9225ac2bb7bd63532b33accd9e31d1615"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc239e79281faac">
+		<description>All Star Tennis 2000 (1999-09-13)(THQ)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="All Star Tennis 2000 (1999-09-13)(THQ)(US)(proto).gbc" size="1048576" crc="e1b17e76" sha1="239e79281faacf7df2abfb527e6e2adfb58b0bc3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2782,6 +2852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc1374d43871beb">
+		<description>Amelia the Witch v0.0.6 (2021-03-29)(Owl Head Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Amelia the Witch v0.0.6 (2021-03-29)(Owl Head Games).gb" size="262144" crc="ddf738bc" sha1="1374d43871bebc874fb26972df3139c9eb61b790"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc5836a6ed99e72">
 		<description>Amingo's Wild Journey (Bung V4) (PD) [C]</description>
 		<year>????</year>
@@ -2799,6 +2879,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="AN AWESOME HACK by Smallhacker (pokemon gold hack).gbc" size="2097152" crc="a25228f2" sha1="5e75d6a85aa78e08827d2ad81a918c6891b8c0de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca745b4245d3ee">
+		<description>Animal Crossing GB Studio Demo + Tutorial (demo-playable) (2019-05-29)(MortMort)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Animal Crossing GB Studio Demo + Tutorial (demo-playable) (2019-05-29)(MortMort).gb" size="1048576" crc="fc0e2157" sha1="a745b4245d3eecc697ef837d7c5e993052e90161"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2829,6 +2919,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Another Bible (J) [S][T+Fre(final)_GIX].gb" size="524288" crc="beba3424" sha1="b833869cefb1025ea3a962f70ac75a4fd10f99e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc94156e088cb7d">
+		<description>Another fu##in day at NABA2 (2019-11-11)(Francio_87)(IT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Another fu##in day at NABA2 (2019-11-11)(Francio_87)(IT).gb" size="1048576" crc="0daf1e4c" sha1="94156e088cb7d7dde0dfb623bc073011b676fb5a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2892,6 +2992,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc1d042025f5acc">
+		<description>Art School Pocket (2021-09-30)(The Flying Cortijo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Art School Pocket (2021-09-30)(The Flying Cortijo).gb" size="1048576" crc="e26657ac" sha1="1d042025f5accff5ded50ca1d1fb97afbf252baf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc34ae5758b9c36">
+		<description>Art School Pocket (2023-02-28)(The Flying Cortijo)(es)[Andalh]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Art School Pocket (2023-02-28)(The Flying Cortijo)(es)[Andalh].gb" size="262144" crc="5288ac2d" sha1="34ae5758b9c36918adfba2d509d890924348ef2e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc94ffc543684cd">
 		<description>ASCII Wars (V1.1) (PD)</description>
 		<year>????</year>
@@ -2909,6 +3029,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Backgammon (Europe) (En,Fr,De,Es) (GB Compatible) [b].gbc" size="1048576" crc="9615be9f" sha1="36abdb778aa4121204cf52be031bcb4f086a0d8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc43e1bd9e302d6">
+		<description>Bakelite (2019-11-07)(Mingucci, Giulia - Petrone, Marco - Turco, Ginevra)(IT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Bakelite (2019-11-07)(Mingucci, Giulia - Petrone, Marco - Turco, Ginevra)(IT).gb" size="1048576" crc="d0bac198" sha1="43e1bd9e302d6bf9130b5a4c2e7b0a826992a6e8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3582,6 +3712,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc8db42a6518670">
+		<description>Carillion Editor v1.2 (2001)(Eeben, Aleksi)(FI)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Carillion Editor v1.2 (2001)(Eeben, Aleksi)(FI)(en).gb" size="65536" crc="a55838f4" sha1="8db42a6518670a6434ca49a0b54a3e09ada1a998"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc363920d4a8186">
 		<description>Carillon Editor V1.0 by Alexsi Eeben (PD) [C]</description>
 		<year>????</year>
@@ -3719,6 +3859,516 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Channel 49 - First Strike (Freedom GB Contest 2001) (PD) [C].gbc" size="65536" crc="d0fd44c4" sha1="df931143b7b6e92243f50e469bb4b9d8312bdbc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc679feef3572e3">
+		<description>Chicken Run (2000-03-20)(THQ)(proto)[CR2003A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-03-20)(THQ)(proto)[CR2003A].gbc" size="1048576" crc="0e855935" sha1="679feef3572e3b3807b1edbcc5c00209273066e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0fbd2b44718c3">
+		<description>Chicken Run (2000-04-10)(THQ)(proto)[Cr_1004a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-04-10)(THQ)(proto)[Cr_1004a].gbc" size="1048576" crc="da72736b" sha1="0fbd2b44718c3298d26adfaca5ba542916f1db6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0089d047310df">
+		<description>Chicken Run (2000-04-25)(THQ)(proto)[CR_2404A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-04-25)(THQ)(proto)[CR_2404A].gbc" size="1048576" crc="7347cfc1" sha1="0089d047310dfb54eb6508c755bbc15a6e0e6bb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2932dd2f8a101">
+		<description>Chicken Run (2000-05-04)(THQ)(proto)[CR_0405A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-05-04)(THQ)(proto)[CR_0405A].gbc" size="1048576" crc="0eb58bed" sha1="2932dd2f8a1017b90f490960441d8a9ff80ccf5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfe55a17af4067">
+		<description>Chicken Run (2000-05-04)(THQ)(proto)[CR_0805A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-05-04)(THQ)(proto)[CR_0805A].gbc" size="1048576" crc="795fb7f6" sha1="fe55a17af4067a272806a82449d313633d4e9ee2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc595eb26ef1236">
+		<description>Chicken Run (2000-05-17)(THQ)(proto)[COOP1705]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-05-17)(THQ)(proto)[COOP1705].gbc" size="1048576" crc="d45e1ae4" sha1="595eb26ef1236505a87d60d3e95483f892444d04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb7ac5ae4f6a03">
+		<description>Chicken Run (2000-05-17)(THQ)(proto)[COOPFAST]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-05-17)(THQ)(proto)[COOPFAST].gbc" size="1048576" crc="eff09bfe" sha1="b7ac5ae4f6a03c8ccd97e233b87f07ad9d710ade"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4d450af01bc11">
+		<description>Chicken Run (2000-05-17)(THQ)(proto)[PIE1705]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-05-17)(THQ)(proto)[PIE1705].gbc" size="1048576" crc="b81d1392" sha1="4d450af01bc111f28bc1d41eb21b1fb3cb669617"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc79c2fe3e26e5">
+		<description>Chicken Run (2000-05-17)(THQ)(proto)[PIEFAST]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-05-17)(THQ)(proto)[PIEFAST].gbc" size="1048576" crc="257969be" sha1="c79c2fe3e26e5b4b02a0489e79a868a4164995f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8bc9f621487fa">
+		<description>Chicken Run (2000-05-22)(THQ)(proto)[CHICKEN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-05-22)(THQ)(proto)[CHICKEN].gbc" size="1048576" crc="ebb9eae9" sha1="8bc9f621487fa91a802ed8b2255a69492596e0d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2a114279b53c4">
+		<description>Chicken Run (2000-05-24)(THQ)(proto)[CHICKEN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-05-24)(THQ)(proto)[CHICKEN].gbc" size="1048576" crc="df529927" sha1="2a114279b53c4ac7f8e4577f0529ad5e26411cca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc177070a81d1be">
+		<description>Chicken Run (2000-06-12)(THQ)(proto)[Cr_calm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-06-12)(THQ)(proto)[Cr_calm].gbc" size="1048576" crc="1ada8d74" sha1="177070a81d1be3f68950d4c6505b672f9d312e5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc12ab85a2df3c">
+		<description>Chicken Run (2000-06-12)(THQ)(proto)[Cr_rowdy]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-06-12)(THQ)(proto)[Cr_rowdy].gbc" size="1048576" crc="348c5d93" sha1="c12ab85a2df3c3f722f02eb03c8091819617ff30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc64841b68ae479">
+		<description>Chicken Run (2000-06-15)(THQ)(proto)[CR_1506]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-06-15)(THQ)(proto)[CR_1506].gbc" size="1048576" crc="d71a98e7" sha1="64841b68ae47940b5471c9e3ea33c87a98b45538"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5c25b55e7d04a">
+		<description>Chicken Run (2000-06-29)(THQ)(proto)[CHICKEN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-06-29)(THQ)(proto)[CHICKEN].gbc" size="1048576" crc="a2c4c0f5" sha1="5c25b55e7d04a2bd169a253b14315d751757d7de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5c0a99a0098f0">
+		<description>Chicken Run (2000-07-10)(THQ)(proto)[CR_1007]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-10)(THQ)(proto)[CR_1007].gbc" size="1048576" crc="d5c17366" sha1="5c0a99a0098f0a471cf460dde79721b27305c385"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7b96275a17e4d">
+		<description>Chicken Run (2000-07-12)(THQ)(proto)[CH_TEST]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-12)(THQ)(proto)[CH_TEST].gbc" size="1048576" crc="0462bf0b" sha1="7b96275a17e4d1e862cb9ba9d97d80929999fc3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0c175041d59d6">
+		<description>Chicken Run (2000-07-14)(THQ)(M5)(proto)[CR_1407]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-14)(THQ)(M5)(proto)[CR_1407].gbc" size="1048576" crc="5997e105" sha1="0c175041d59d6c48bf8d5f6e6dd7ece0e63fd312"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7e10377f5542d">
+		<description>Chicken Run (2000-07-17)(THQ)(M5)(proto)[Cr_1707]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-17)(THQ)(M5)(proto)[Cr_1707].gbc" size="1048576" crc="3df2f4d6" sha1="7e10377f5542d6e0c715e27594066d591075d369"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcdfc8481fc412d">
+		<description>Chicken Run (2000-07-20)(THQ)(M5)(proto)[CR_2007]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-20)(THQ)(M5)(proto)[CR_2007].gbc" size="1048576" crc="ed38c060" sha1="dfc8481fc412d66cfa68aba37e9f67c182853d79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6a7e8997fea26">
+		<description>Chicken Run (2000-07-21)(THQ)(M5)(proto)[CHICKEN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-21)(THQ)(M5)(proto)[CHICKEN].gbc" size="1048576" crc="aac7a3b1" sha1="6a7e8997fea2676a694e0b2156227a209ad28dd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcefc60acd79163">
+		<description>Chicken Run (2000-07-24)(THQ)(M5)(proto)[CR_2407]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-24)(THQ)(M5)(proto)[CR_2407].gbc" size="1048576" crc="fd2f387c" sha1="efc60acd79163e0a81b911068dda06adfc73f2f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2f349b008e0fb">
+		<description>Chicken Run (2000-07-26)(THQ)(M5)(proto)[CR_2607]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-26)(THQ)(M5)(proto)[CR_2607].gbc" size="1048576" crc="630a13d0" sha1="2f349b008e0fbe15ef376d84634c25a9fa2acc7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd7d1e319ad65f">
+		<description>Chicken Run (2000-07-27)(THQ)(M5)(proto)[CR_2707]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-27)(THQ)(M5)(proto)[CR_2707].gbc" size="1048576" crc="bf41c46f" sha1="d7d1e319ad65f1c644946253b2b500f670fcd075"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcff64dd584a1d4">
+		<description>Chicken Run (2000-07-31)(THQ)(M5)(proto)[CR_3107]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-07-31)(THQ)(M5)(proto)[CR_3107].gbc" size="1048576" crc="1d8018bf" sha1="ff64dd584a1d4e49087a39ff5f0335722da3db51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7f963a57fdfe7">
+		<description>Chicken Run (2000-08-01)(THQ)(M5)(proto)[CR_0108]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-01)(THQ)(M5)(proto)[CR_0108].gbc" size="1048576" crc="beaa11a5" sha1="7f963a57fdfe772d5da598513b8efbd955658ba5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4cffee5511c57">
+		<description>Chicken Run (2000-08-03)(THQ)(M5)(proto)[CR_0308]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-03)(THQ)(M5)(proto)[CR_0308].gbc" size="1048576" crc="e547a1a6" sha1="4cffee5511c57ab2e30799bfea195ecfc210b989"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc3cfdcbea612f">
+		<description>Chicken Run (2000-08-07)(THQ)(M5)(proto)[CR_0708]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-07)(THQ)(M5)(proto)[CR_0708].gbc" size="1048576" crc="4fe6bfc2" sha1="c3cfdcbea612f36b555b6ce0a64c1b991745dba7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce5b8dd8a5a7b4">
+		<description>Chicken Run (2000-08-09)(THQ)(M5)(proto)[CR_0908]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-09)(THQ)(M5)(proto)[CR_0908].gbc" size="1048576" crc="a9a7ede8" sha1="e5b8dd8a5a7b484d008c9bc80b2e4b427741918f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6068eb274deb8">
+		<description>Chicken Run (2000-08-10)(THQ)(M5)(proto)[CR_1008A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-10)(THQ)(M5)(proto)[CR_1008A].gbc" size="1048576" crc="2221616c" sha1="6068eb274deb88b972194dcec321eb60336716cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcaf7c53548a8c1">
+		<description>Chicken Run (2000-08-10)(THQ)(M5)(proto)[CR_1008B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-10)(THQ)(M5)(proto)[CR_1008B].gbc" size="1048576" crc="77064542" sha1="af7c53548a8c1c669d1bc10593390574a05fe9a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2d7bdcaab9f3b">
+		<description>Chicken Run (2000-08-10)(THQ)(M5)(proto)[CR_1008]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-10)(THQ)(M5)(proto)[CR_1008].gbc" size="1048576" crc="fa704f78" sha1="2d7bdcaab9f3bf48a1e25ffe99555f90386c0909"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd4de135acab41">
+		<description>Chicken Run (2000-08-11)(THQ)(M5)(proto)[CR_TEST1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-11)(THQ)(M5)(proto)[CR_TEST1].gbc" size="1048576" crc="5cb1509e" sha1="d4de135acab41e19fcc65df35fdc5733d7a40376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc522ccd074850e">
+		<description>Chicken Run (2000-08-14)(THQ)(M5)(proto)[CR_1408A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-14)(THQ)(M5)(proto)[CR_1408A].gbc" size="1048576" crc="5d51e2a8" sha1="522ccd074850e2055a2b6bdb56d776de777f9ea8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc77dfd31bdf2c7">
+		<description>Chicken Run (2000-08-14)(THQ)(M5)(proto)[CR_1408B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-14)(THQ)(M5)(proto)[CR_1408B].gbc" size="1048576" crc="8fa8fc0f" sha1="77dfd31bdf2c74ab16fd2ba57e3f6310afc59979"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc49cb5d60412ae">
+		<description>Chicken Run (2000-08-14)(THQ)(M5)(proto)[CR_1408]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-14)(THQ)(M5)(proto)[CR_1408].gbc" size="1048576" crc="b698e9d8" sha1="49cb5d60412ae08335af498a7cc78e51155ac38a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc35286fe675dcc">
+		<description>Chicken Run (2000-08-15)(THQ)(M5)(proto)[CR_1508]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-15)(THQ)(M5)(proto)[CR_1508].gbc" size="1048576" crc="9a814e4a" sha1="35286fe675dcc977e5da64ce9748536236ff0267"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc5cc9d338bd1f">
+		<description>Chicken Run (2000-08-16)(THQ)(M5)(proto)[CR_1608]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-16)(THQ)(M5)(proto)[CR_1608].gbc" size="1048576" crc="07c829ad" sha1="c5cc9d338bd1fb4e145a487ad5f7423853aac3c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc29232e381dd0">
+		<description>Chicken Run (2000-08-17)(THQ)(M5)(proto)[CR_1708A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-17)(THQ)(M5)(proto)[CR_1708A].gbc" size="1048576" crc="97ade1d7" sha1="c29232e381dd0bc9c503f2437b00565a89785363"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb016916c83034">
+		<description>Chicken Run (2000-08-17)(THQ)(M5)(proto)[CR_1708]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-17)(THQ)(M5)(proto)[CR_1708].gbc" size="1048576" crc="75e32f18" sha1="b016916c830348cadf93b16aff863162c4b0fdd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce046772c2dfa0">
+		<description>Chicken Run (2000-08-18)(THQ)(M5)(proto)[CR_1808A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-18)(THQ)(M5)(proto)[CR_1808A].gbc" size="1048576" crc="a554268d" sha1="e046772c2dfa0656c4a09521c3827a9fd37c38b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc370d99316b76e">
+		<description>Chicken Run (2000-08-18)(THQ)(M5)(proto)[CR_1808]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-18)(THQ)(M5)(proto)[CR_1808].gbc" size="1048576" crc="22d49267" sha1="370d99316b76e35805fda3204c862a3b2354ecbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc06698c6594e23">
+		<description>Chicken Run (2000-08-19)(THQ)(M5)(proto)[CR_1908A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-19)(THQ)(M5)(proto)[CR_1908A].gbc" size="1048576" crc="f611842a" sha1="06698c6594e234239a8299d28b1a7edee989da16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc07ac9d464152f">
+		<description>Chicken Run (2000-08-19)(THQ)(M5)(proto)[CR_1908]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-19)(THQ)(M5)(proto)[CR_1908].gbc" size="1048576" crc="aa65c38c" sha1="07ac9d464152fb572327216fe950a2047b3ba522"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4945750148670">
+		<description>Chicken Run (2000-08-20)(THQ)(M5)(proto)[CR_2008]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-20)(THQ)(M5)(proto)[CR_2008].gbc" size="1048576" crc="0ffa77e9" sha1="49457501486706ef278eb871450ad496ce078e55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc853024fc77cca">
+		<description>Chicken Run (2000-08-21)(THQ)(M5)(proto)[CR_2108A]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-21)(THQ)(M5)(proto)[CR_2108A].gbc" size="1048576" crc="a565feb3" sha1="853024fc77cca0ce7f1737da7fe37c613694a9f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf3c6b45e7e562">
+		<description>Chicken Run (2000-08-21)(THQ)(M5)(proto)[CR_2108B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-21)(THQ)(M5)(proto)[CR_2108B].gbc" size="1048576" crc="a4a36459" sha1="f3c6b45e7e5623a6b5cddaef11d28f481e442422"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6b22e24004b9b">
+		<description>Chicken Run (2000-08-21)(THQ)(M5)(proto)[CR_2108C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-21)(THQ)(M5)(proto)[CR_2108C].gbc" size="1048576" crc="882fe248" sha1="6b22e24004b9bf21f1ff218e3410f0780f1402c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7b65ccb3416ff">
+		<description>Chicken Run (2000-08-21)(THQ)(M5)(proto)[CR_2108]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-21)(THQ)(M5)(proto)[CR_2108].gbc" size="1048576" crc="716bee6c" sha1="7b65ccb3416ff7f2e7cc76bc673e125fbd920557"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbafebaf3f90dc">
+		<description>Chicken Run (2000-08-22)(THQ)(M5)(proto)[CR_2208]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-22)(THQ)(M5)(proto)[CR_2208].gbc" size="1048576" crc="5251cd50" sha1="bafebaf3f90dccc0c1a45159bec0bd87e3fd12e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc43a6cf4f0d93c">
+		<description>Chicken Run (2000-08-25)(THQ)(M5)(proto)[CR_2508]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chicken Run (2000-08-25)(THQ)(M5)(proto)[CR_2508].gbc" size="1048576" crc="9410b9a1" sha1="43a6cf4f0d93c9ce2dc687193faf313b4104a3e9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4072,6 +4722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc7a39a84d9bc38">
+		<description>Danielle Gaiden (2019-09-28)(earthpainting)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Danielle Gaiden (2019-09-28)(earthpainting).gb" size="1048576" crc="508989d6" sha1="7a39a84d9bc388da99961124b9876b9cf527ae73"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcc277db63aea22">
 		<description>debitiru (CHT)</description>
 		<year>????</year>
@@ -4079,6 +4739,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="debitiru (CHT).gbc" size="4194304" crc="feabd27e" sha1="c277db63aea2249652e4ac69fcf6309d8c48e53a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2899075f4aacb">
+		<description>Deep Forest v1.1 (2020-03-08)(Small is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Deep Forest v1.1 (2020-03-08)(Small is Beautiful).gb" size="1048576" crc="b82458d5" sha1="2899075f4aacbac3720f810e4d9716913a6310f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc517302d20cb51">
+		<description>Deep Forest v1.1 (2020-03-11)(Small is Beautiful)[gold]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Deep Forest v1.1 (2020-03-11)(Small is Beautiful)[gold].gb" size="1048576" crc="3ddf177d" sha1="517302d20cb5140975e6cd1b3c495786b6390aaf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4112,6 +4792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbca3207bba8a98a">
+		<description>Desert Machine (demo-playable) (2019-06-26)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Desert Machine (demo-playable) (2019-06-26)(Toxworks).gb" size="1048576" crc="7038f620" sha1="a3207bba8a98a2dabe90c1e9691606403c877f44"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcddd5f81acb4b1">
 		<description>Dice Square [MBC1]</description>
 		<year>????</year>
@@ -4122,6 +4812,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc20e62595a416a">
+		<description>Dizzy and the Mushroom Pie (2020-10-06)(Toxa)[itch.io]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Dizzy and the Mushroom Pie (2020-10-06)(Toxa)[itch.io].gb" size="131072" crc="e4beff45" sha1="20e62595a416a88420f11c32e0a0e6db76fb6578"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6dde71bbec8b8">
+		<description>Do I Pass v1.4 (2019-11-04)(McCue, Taylor)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Do I Pass v1.4 (2019-11-04)(McCue, Taylor).gb" size="1048576" crc="cfb44d68" sha1="6dde71bbec8b807af5132d1ef2e99c6bb6af3a1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd45dfcab4a76b">
+		<description>Do I Pass v1.4.2 (2019-11-04)(McCue, Taylor)(fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Do I Pass v1.4.2 (2019-11-04)(McCue, Taylor)(fr).gb" size="1048576" crc="e393d4aa" sha1="d45dfcab4a76b62ea1e10730d01f755e12137484"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1ffc8d3ef4a07">
+		<description>Do I Pass v1.5 (2019-11-04)(McCue, Taylor)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Do I Pass v1.5 (2019-11-04)(McCue, Taylor)[a].gb" size="1048576" crc="7555a818" sha1="1ffc8d3ef4a07e5f3f02e2a65a1c7772837df89e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc76f801d88a3c2">
+		<description>Doctor How (2017-08-23)(ProGM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Doctor How (2017-08-23)(ProGM).gb" size="131072" crc="42932259" sha1="76f801d88a3c265b22c6d30e121abc0d3b9b542f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce13fa551f4458">
+		<description>Dog v1.4 (2019-12-07)(Chocoffet)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dog v1.4 (2019-12-07)(Chocoffet).gb" size="1048576" crc="1b3f8381" sha1="e13fa551f4458ac8ddc9a3a2223a80cc679542d8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc884bcb4043742">
 		<description>Don Quixote by Miguel Cervantes (Polish) (PD) [C]</description>
 		<year>????</year>
@@ -4129,6 +4879,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Don Quixote by Miguel Cervantes (Polish) (PD) [C].gb" size="1048576" crc="3d05bc36" sha1="884bcb4043742f904cd7c2b670772c1071fdc355"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc09abf91a7567d">
+		<description>Don't Call Me Mama But Yes I Am Your Mama (2019-10-03)(KyleBosman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Don't Call Me Mama But Yes I Am Your Mama (2019-10-03)(KyleBosman).gb" size="1048576" crc="6d9de004" sha1="09abf91a7567d50172197e9317c133451270d2b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4252,6 +5012,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc7fe2fc40b8631">
+		<description>Drake's Adventure (2020-05-30)(Zuccardi, Marco)(IT)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Drake's Adventure (2020-05-30)(Zuccardi, Marco)(IT)(en).gb" size="1048576" crc="689622be" sha1="7fe2fc40b8631fdd37de81fdc481c0c790224229"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc117065532cf4b">
+		<description>Drake's Adventure (2020-05-30)(Zuccardi, Marco)(IT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Drake's Adventure (2020-05-30)(Zuccardi, Marco)(IT).gb" size="1048576" crc="6d094d68" sha1="117065532cf4b2bc783bdf861e59d489624061db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc4ea34f2b55a6">
+		<description>DrawCircles (2018-11-11)(Tambalaya)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="DrawCircles (2018-11-11)(Tambalaya).gb" size="32768" crc="3fe2d6f2" sha1="c4ea34f2b55a6934798348a656cd5678ef22d0ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc816428183e308">
 		<description>Drunken Pooper (Y2kode) (PD) [C]</description>
 		<year>????</year>
@@ -4282,6 +5072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbceae872c3f3e0d">
+		<description>Duck Adventures (1993)(Commin)(en)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Duck Adventures (1993)(Commin)(en)[p].gb" size="131072" crc="d25f3b3c" sha1="eae872c3f3e0d29dd18bc5c82f248e09af7a5888"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcebd4255956f03">
 		<description>Duel, The (Bung) (PD) [C]</description>
 		<year>????</year>
@@ -4289,6 +5089,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Duel, The (Bung) (PD) [C].gbc" size="32768" crc="060e74a8" sha1="ebd4255956f036089080548d631357f837a7f009"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca36ee9facb08a">
+		<description>Dungeon Ball (2018-09-03)(sergeeo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Dungeon Ball (2018-09-03)(sergeeo).gb" size="65536" crc="853bb933" sha1="a36ee9facb08a0346e1abac1d0bd2a98cdcc3a2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc84c823376ef9b">
+		<description>Dungeon Crawler System for GB Studio (2019-06-23)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dungeon Crawler System for GB Studio (2019-06-23)(Toxworks).gb" size="1048576" crc="c82ffac4" sha1="84c823376ef9b70554e402274afd09ce6659307b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4312,6 +5132,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcc8299f8629fe7">
+		<description>Dunkin's Adventure (2020-05-16)(kicdo games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dunkin's Adventure (2020-05-16)(kicdo games).gb" size="1048576" crc="0dc08800" sha1="c8299f8629fe7c59d80516e30ca31bdf6cb7a126"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcedee3f19835fe">
+		<description>Dunkin's Adventure (2020-05-16)(kicdo games)[web]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dunkin's Adventure (2020-05-16)(kicdo games)[web].gb" size="1048576" crc="f8ae09fb" sha1="edee3f19835fe526345bf870192da57ba3cb0bbf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc8226992c1fd96">
 		<description>Duux (Bung) (PD) [C]</description>
 		<year>????</year>
@@ -4329,6 +5169,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Dynamite!! (Quang2000) (PD) [C].gbc" size="32768" crc="78bbf938" sha1="9bf927f0135ee8dd527bd1bb1d7ebc5bf32cbf14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcde02a34675a57">
+		<description>Eclipse v1c (199x)(Argonaut Software)(GB)(proto)[AKA X]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Eclipse v1c (199x)(Argonaut Software)(GB)(proto)[AKA X].gbc" size="65536" crc="6b507efd" sha1="de02a34675a57d450284103681951436a4c830cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4359,6 +5209,36 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Elemental Fighter (USA) (Proto).gbc" size="262144" crc="03fc3d03" sha1="92cce7614474d3f9ed9e3fdbd2e2bb434e074565"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc07a3acea41abc">
+		<description>Encuentra las 7 diferencias (2019-10-21)(Monicapo)(es)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Encuentra las 7 diferencias (2019-10-21)(Monicapo)(es)(proto).gb" size="1048576" crc="a5dbabd9" sha1="07a3acea41abc826b11404a6dcc87df6b6cb6062"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce60529dedcef7">
+		<description>Espadazo (2019-10-29)(Monicapo)(es)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Espadazo (2019-10-29)(Monicapo)(es)(proto).gb" size="1048576" crc="7751b2b1" sha1="e60529dedcef7637e7303c585668d99f8f1e30d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc335812ea54c5d">
+		<description>Espeto Blast! (2019-07-28)(sergeeo)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Espeto Blast! (2019-07-28)(sergeeo)(proto).gb" size="131072" crc="ae421239" sha1="335812ea54c5d21d4c7e094215bd74086e63f0d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4399,6 +5279,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="F-1 World Grand Prix (Europe) (Beta).gbc" size="2097152" crc="d6496fe9" sha1="9285bb4fbab8678b65cc8736f43e4ea3895c1cf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6d85c7cc2de57">
+		<description>F-Zero Project (2020-12-31)(suitNtie)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="F-Zero Project (2020-12-31)(suitNtie).gb" size="1048576" crc="08b2b887" sha1="6d85c7cc2de57240f37fdbbae5db05d3907b077d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca9f7a41da30a5">
+		<description>Fairy Without Wings, A v1.3.0 (2020-01-24)(Nekete)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Fairy Without Wings, A v1.3.0 (2020-01-24)(Nekete).gb" size="131072" crc="84ec7e22" sha1="a9f7a41da30a574aab91a15fc530fbd0a0aafe9c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4459,6 +5359,36 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="FGB-Demo vx.xx (PD) [C].gbc" size="131072" crc="c551b678" sha1="d887fbe3cc25400f6c665f8ffeaffd1cbc8ca269"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf1b2c28c7931f">
+		<description>Fields of Eutomia (demo-playable) (2020)(SōdoDev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Fields of Eutomia (demo-playable) (2020)(SōdoDev).gb" size="524288" crc="9a903b33" sha1="f1b2c28c7931f8ff2f81097dc7312a1fcbf42df9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce42f5d89ac604">
+		<description>Fields of Eutomia (demo-playable) (2021)(SōdoDev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Fields of Eutomia (demo-playable) (2021)(SōdoDev).gbc" size="1048576" crc="a589cdcf" sha1="e42f5d89ac60460444eef098798664c3ad9328c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc04e7be6f8ba9c">
+		<description>Fields of Eutomia (demo-playable) (2022-10-30)(SōdoDev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Fields of Eutomia (demo-playable) (2022-10-30)(SōdoDev).gbc" size="1048576" crc="5efa71fe" sha1="04e7be6f8ba9c9120ae4e1976965c048f40e3863"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4912,6 +5842,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc0014c58f134f7">
+		<description>GB Rubik's Cubes (2019-03-01)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GB Rubik's Cubes (2019-03-01)(Arky750)(BO).gb" size="32768" crc="74c4744c" sha1="0014c58f134f7ddc23f8ac4de7ed33011f713f17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcabf0228645596">
+		<description>GB Rubik's Slide (2019-03-01)(Arky750)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GB Rubik's Slide (2019-03-01)(Arky750)(GB).gb" size="32768" crc="da4c7b4f" sha1="abf0228645596008d2c5be72ede95d45548d3349"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcd5d7d92f62d8d">
 		<description>GB-FLIP Beta (Bung) (PD) [C]</description>
 		<year>????</year>
@@ -4969,6 +5919,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="gb240p_1.gb" size="32768" crc="2646935d" sha1="56cdf3c2f4eeb19e02dd9af1c00bf905fa22d980"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8e078212a0331">
+		<description>GBClock v1.0 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBClock v1.0 (19xx)(-).gb" size="65536" crc="b21d7bcd" sha1="8e078212a033144a7edf081dbee4f1e4f9988e87"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5139,6 +6099,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Harry Potter and The Sorcerer's Stone (UE) (M13) [C][T+Chi].gbc" size="4194304" crc="3d0ca659" sha1="ea1f7ced59ad290e06df0083db67781aa11e0b59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb35e955a29c5c">
+		<description>Heartbeat for Barney (2016-10-19)(Tambalaya)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Heartbeat for Barney (2016-10-19)(Tambalaya).gb" size="32768" crc="38b99f14" sha1="b35e955a29c5c2a1c8cfe7168151f1e291ee3831"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5332,6 +6302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc72bba94c8d80c">
+		<description>Initial D (2018-09-29)(ggracia10)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Initial D (2018-09-29)(ggracia10).gbc" size="131072" crc="dec475e1" sha1="72bba94c8d80cd346ca5f28429cfed27777d5cb6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc261761da24bdc">
 		<description>Invasion DX (Bung) (PD) [C]</description>
 		<year>????</year>
@@ -5369,6 +6349,46 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Iron Hike (Bung) (PD) [C].gbc" size="262144" crc="22a891ee" sha1="94119d3529782549f22a1ae5e241f1265a39a203"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc60cd9680960ad">
+		<description>Island Life (2020-03-22)(Polydeuces)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Island Life (2020-03-22)(Polydeuces)(proto).gb" size="1048576" crc="2ab7e079" sha1="60cd9680960ad4049d3ff4d9ad5a1551635b3b9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4b4eac14d2364">
+		<description>Island Life (2022-01-09)(Polydeuces)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Island Life (2022-01-09)(Polydeuces)(proto).gb" size="1048576" crc="c600cdec" sha1="4b4eac14d2364f2bebcc61f3a6ff16a5b623c7d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb4e447f219768">
+		<description>Jabberwocky (2019-12-01)(Polyducks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Jabberwocky (2019-12-01)(Polyducks).gb" size="1048576" crc="cfc51717" sha1="b4e447f2197688c740a45dce27879a62c742fb96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc099e76fd2bb78">
+		<description>Jabberwocky (2019-12-01)(Polyducks)[web version]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Jabberwocky (2019-12-01)(Polyducks)[web version].gb" size="1048576" crc="14ab4f44" sha1="099e76fd2bb78031cf527d2726e072702bd120a3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5462,6 +6482,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc4727f162606d2">
+		<description>Kaboom! (2019-09-21)(Fantasy Software Designs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Kaboom! (2019-09-21)(Fantasy Software Designs).gb" size="32768" crc="3c649497" sha1="4727f162606d23794654110902f7df577f1fd1c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd8b2f010a3e8c">
+		<description>KaijuFeeder (2019-08-03)(Zalo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="KaijuFeeder (2019-08-03)(Zalo).gb" size="65536" crc="1586619e" sha1="d8b2f010a3e8c62406ea0d1fbd2d81138b4dd302"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc9582914d0e23">
+		<description>KaijuFeeder (2020-09-09)(Zalo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="KaijuFeeder (2020-09-09)(Zalo).gb" size="65536" crc="56ec96fd" sha1="c9582914d0e237568a8b88893f8a7c6977f563c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf8b34e0834c7b">
+		<description>Kanji Boy 3 (2003)(J-Wing)(JP)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Kanji Boy 3 (2003)(J-Wing)(JP)(beta).gbc" size="4194304" crc="2ce7d758" sha1="f8b34e0834c7bff5bb06587e932dff2036d86c6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8cd4be6772c59">
+		<description>Katakis 3D (2001)(Similis)(EU)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Katakis 3D (2001)(Similis)(EU)(proto).gbc" size="2097152" crc="7c4b3795" sha1="8cd4be6772c592bbc2908fa826c090ec122e384c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc69e56fd73eb36">
+		<description>Kawa no Nushi Tsuri 4 Rev 1 (1999)(Victor Interactive)(JP)[GBC][SGB][Rumble][Nintendo Power][possible proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kawa no Nushi Tsuri 4 Rev 1 (1999)(Victor Interactive)(JP)[GBC][SGB][Rumble][Nintendo Power][possible proto].gbc" size="1048576" crc="456d4dfc" sha1="69e56fd73eb365dba87713c2a3ea2e74bd63f63c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6d15b5bc33d7c">
+		<description>Kenzie's Birthday Dash (2020-04-15)(OmniRetro Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kenzie's Birthday Dash (2020-04-15)(OmniRetro Games).gb" size="1048576" crc="986bfd75" sha1="6d15b5bc33d7c7771ba62d56ae7f25fa081bc564"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2f1b907f24955">
+		<description>Kenzie's Birthday Dash (2020-04-15)(OmniRetro Games)[web]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kenzie's Birthday Dash (2020-04-15)(OmniRetro Games)[web].gb" size="1048576" crc="a771c591" sha1="2f1b907f249557e27fc36db4bf37e3feeaa87893"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc75a28111cc8bb">
 		<description>Kid Icarus - Of Myths and Monsters (UE) [T+Fre_KS151]</description>
 		<year>????</year>
@@ -5482,6 +6582,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc31c059ba02f47">
+		<description>King Lion Advance III, The (2003)(Sintax)(US)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="King Lion Advance III, The (2003)(Sintax)(US)[f taizou][p].gbc" size="4194304" crc="e6b3d907" sha1="31c059ba02f47991185f8a3d486dd2981139447b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbca30a98ccddec0">
 		<description>King of Fighters 98 (UNL)</description>
 		<year>????</year>
@@ -5489,6 +6599,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="King of Fighters 98 (UNL).gb" size="1048576" crc="c99dfe6f" sha1="a30a98ccddec00823c1cf12ad8c75f7af7550fcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9c60c858f647b">
+		<description>Klustar (1999-09-28)(Sammy)(JP)(proto)[gbc]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Klustar (1999-09-28)(Sammy)(JP)(proto)[gbc].gbc" size="262144" crc="65da9075" sha1="9c60c858f647b42007fc27c5d21f3f57923c4cda"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5512,6 +6632,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc3c130359bcc6c">
+		<description>Kou Dai Guai Shou - Lan Bao Shi (2003)(-)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Kou Dai Guai Shou - Lan Bao Shi (2003)(-)(TW)[f taizou][p].gbc" size="4194304" crc="3a08c8eb" sha1="3c130359bcc6c4bd9a1d698793642f1b6de3c761"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc7a1020797b57">
+		<description>Koudai Guaishou - Dongzuo Pian (19xx)(-)(TW)[p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Koudai Guaishou - Dongzuo Pian (19xx)(-)(TW)[p][multicart rip].gbc" size="1048576" crc="ec2fbdfd" sha1="c7a1020797b57d292e16c5297199d977e025256b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0e7085a7ea8c1">
+		<description>Koudai Yaoguai - Baijin Ban (2005)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Koudai Yaoguai - Baijin Ban (2005)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="936682e2" sha1="0e7085a7ea8c1dd31cf1eeab6c27a3ecca3a0cb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9bf2bc5815de5">
+		<description>Langrsr II (20xx)(Sintax)(TW)[p][AKA Fantastic Simulated Battle]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Langrsr II (20xx)(Sintax)(TW)[p][AKA Fantastic Simulated Battle].gbx" size="2097216" crc="37d6b056" sha1="9bf2bc5815de5f6a29be2f819f66195b4e8c1442"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce737cad6f752e">
+		<description>Laofuzi Chuanqi (19xx)(Sintax)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Laofuzi Chuanqi (19xx)(Sintax)(TW)[f][p].gbc" size="4194304" crc="0e732071" sha1="e737cad6f752ee60e20c4af4f832b211b02b5207"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc306f4798837ad">
 		<description>Las_Vegas_Cool_Hand_(U)_[C][o1]</description>
 		<year>????</year>
@@ -5522,6 +6692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcf7b19c1501d32">
+		<description>Laura (2000)(Ubi Soft)(EU)(M8)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Laura (2000)(Ubi Soft)(EU)(M8)(proto).gbc" size="1048576" crc="cf8e2371" sha1="f7b19c1501d325dd8ee219ccae2eaca130a5a21b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc26da9ebdcec6f">
 		<description>Legend of zelda - link's awakening</description>
 		<year>????</year>
@@ -5529,6 +6709,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Legend of zelda - link's awakening.gb" size="524288" crc="0c77d5e9" sha1="26da9ebdcec6f1a8079d4ffef0697052a489a76c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6bcd23a3a8afd">
+		<description>Legend of Zelda, The - Link's Awakening DX (1998-12-11)(Nintendo)(DE)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX (1998-12-11)(Nintendo)(DE)(beta)[GBC][SGB].gbc" size="1048576" crc="be5e366e" sha1="6bcd23a3a8afde7c220bc1da4e32d47749139305"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5562,6 +6752,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc6daa7e77b0f32">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-08-19)(Nintendo)(DE)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-08-19)(Nintendo)(DE)(beta)[GBC][SGB].gbc" size="1048576" crc="fdccc2bd" sha1="6daa7e77b0f329da5641e61bcdb0fecf941437f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca3f5445fcb463">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-08-19)(Nintendo)(FR)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-08-19)(Nintendo)(FR)(beta)[GBC][SGB].gbc" size="1048576" crc="05f23861" sha1="a3f5445fcb463e801b70466e736fe2d495581289"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb76adb353acf5">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-09-04)(Nintendo)(DE)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-09-04)(Nintendo)(DE)(beta)[GBC][SGB].gbc" size="1048576" crc="33c65722" sha1="b76adb353acf520084529c4f9c9cd137b07016c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7d78f4bda653f">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-09-04)(Nintendo)(FR)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-09-04)(Nintendo)(FR)(beta)[GBC][SGB].gbc" size="1048576" crc="865cc1ed" sha1="7d78f4bda653ff76618a38f33444602d1b54b206"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1cbca5313b1c0">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-09-22)(Nintendo)(DE)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 1 (1999-09-22)(Nintendo)(DE)(beta)[GBC][SGB].gbc" size="1048576" crc="3e88a24a" sha1="1cbca5313b1c0163620d7d81b649f158ba59e6b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca86161ca5ce9e">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 2 (1999-08-19)(Nintendo)(EU-US)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 2 (1999-08-19)(Nintendo)(EU-US)(beta)[GBC][SGB].gbc" size="1048576" crc="a8855c67" sha1="a86161ca5ce9e1e8c7a6ab0931edb12a1ace5f39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc95417ae15e0b8">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 2 (1999-09-04)(Nintendo)(EU-US)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 2 (1999-09-04)(Nintendo)(EU-US)(beta)[GBC][SGB].gbc" size="1048576" crc="84415b28" sha1="95417ae15e0b89c918d97e2e658056a6869eb0ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8b8eeb368dfad">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 2 (1999-09-07)(Nintendo)(EU-US)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 2 (1999-09-07)(Nintendo)(EU-US)(beta)[GBC][SGB].gbc" size="1048576" crc="5715d896" sha1="8b8eeb368dfadc73e4f051fb53134974d688491d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbceb862e0ab4d04">
+		<description>Legend of Zelda, The - Link's Awakening DX Rev 2 (1999-09-19)(Nintendo)(FR)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Legend of Zelda, The - Link's Awakening DX Rev 2 (1999-09-19)(Nintendo)(FR)(beta)[GBC][SGB].gbc" size="1048576" crc="f9a66cda" sha1="eb862e0ab4d0456d98187ddfb4948cd45d923f6d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcd241ae0908d42">
 		<description>LEGO Stunt Rally (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da) [b]</description>
 		<year>????</year>
@@ -5569,6 +6849,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="LEGO Stunt Rally (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da) [b].gbc" size="1048576" crc="81acfb80" sha1="d241ae0908d42200a5f725a1bf2c8e9ab565ff9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf1f9ab3878c60">
+		<description>Lemmings (2000)(J-Wing)(EU)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lemmings (2000)(J-Wing)(EU)(proto).gbc" size="4194304" crc="5ea0796b" sha1="f1f9ab3878c606b488e89c24068af10060b1640f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5652,6 +6942,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbced001b5792e1a">
+		<description>Little Mermaid II, The - Pinball Frenzy (2001)(Nintendo)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Little Mermaid II, The - Pinball Frenzy (2001)(Nintendo)(JP)(proto).gbc" size="1048576" crc="6b974b2d" sha1="ed001b5792e1afb35178e22d3adf45bbf0c4d721"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2e12b645b0911">
+		<description>Little Sound DJ v1.4.3B (demo-playable) (2002)(Kotlinski, Johan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Little Sound DJ v1.4.3B (demo-playable) (2002)(Kotlinski, Johan).gb" size="524288" crc="d31fb4a0" sha1="2e12b645b091178758caf55ad86e71c6c458893a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4c05c1a15bb90">
+		<description>Looney Tunes Collector - Martian Alert! (1999-10-28)(Infogrames)(EU)(fr)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Looney Tunes Collector - Martian Alert! (1999-10-28)(Infogrames)(EU)(fr)(beta).gbc" size="2097152" crc="3acb4840" sha1="4c05c1a15bb90feb09fbc2d8dfbfb42794313936"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc49a63339bc253">
+		<description>Loppi Puzzle Magazine - Kangaeru Puzzle Dai-2-gou Rev 1 (2001)(Success)(JP)[GBC][SGB][NP]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Loppi Puzzle Magazine - Kangaeru Puzzle Dai-2-gou Rev 1 (2001)(Success)(JP)[GBC][SGB][NP].gbc" size="262144" crc="27ab2187" sha1="49a63339bc253d1bd55f6db75f7324980572925a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca3ddd9794e05f">
+		<description>Loppi Puzzle Magazine - Kangaeru Puzzle Dai-3-gou Rev 1 (2001)(Success)(JP)[GBC][SGB][NP]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Loppi Puzzle Magazine - Kangaeru Puzzle Dai-3-gou Rev 1 (2001)(Success)(JP)[GBC][SGB][NP].gbc" size="262144" crc="62d3f1e5" sha1="a3ddd9794e05f2962481b802f84e783495e853b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7e493878e0b75">
+		<description>Loppi Puzzle Magazine - Kangaeru Puzzle Soukangou Rev 1 (2001)(Success)(JP)[GBC][SGB][NP]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Loppi Puzzle Magazine - Kangaeru Puzzle Soukangou Rev 1 (2001)(Success)(JP)[GBC][SGB][NP].gbc" size="262144" crc="88ce5c13" sha1="7e493878e0b755df3c6d6ab93c7b15b4b10a0896"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc414baeb05a9e2">
+		<description>Lord of the Rings, The - The Fellowship of the Ring (19xx)(Sintax)(TW)(en)[f][p][AKA King of Ring]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lord of the Rings, The - The Fellowship of the Ring (19xx)(Sintax)(TW)(en)[f][p][AKA King of Ring].gbc" size="4194304" crc="5fded510" sha1="414baeb05a9e276c1ddf5f2e9889f0180a164d43"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcd9538a2c4a0bb">
 		<description>Lucky Luke - Desperado Train (Europe) (En,Fr,De,Es,It,Nl) [b]</description>
 		<year>????</year>
@@ -5662,6 +7022,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcf130ba54da95e">
+		<description>Luke Yingxiong 2 - Zook Hero 2 (19xx)(Vast Fame)(TW)[f header][p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Luke Yingxiong 2 - Zook Hero 2 (19xx)(Vast Fame)(TW)[f header][p][multicart rip].gbc" size="524288" crc="31f9e371" sha1="f130ba54da95e734c0ed224a627d862a6979dc32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4bf85d9641e3b">
+		<description>Luke Yingxiong 2 - Zook Hero 2 (19xx)(Vast Fame)(TW)[p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Luke Yingxiong 2 - Zook Hero 2 (19xx)(Vast Fame)(TW)[p][multicart rip].gbc" size="524288" crc="59822b31" sha1="4bf85d9641e3b842a917474dcb49a8b7f282711b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc271097c99be5f">
+		<description>Luke Yingxiong Z (19xx)(Vast Fame)(TW)[p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Luke Yingxiong Z (19xx)(Vast Fame)(TW)[p][multicart rip].gbc" size="1048576" crc="8ced0c21" sha1="271097c99be5f60fbdb561875d006a622093fe70"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcf71105a3e058a">
 		<description>Lunar (PD)</description>
 		<year>????</year>
@@ -5669,6 +7059,36 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Lunar (PD).gb" size="32768" crc="01581674" sha1="f71105a3e058a16e9b3bbc184b8f71c321acffdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1ab872c9491fb">
+		<description>Luoke Ren DX6 (19xx)(Vast Fame)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Luoke Ren DX6 (19xx)(Vast Fame)(TW)[f][p].gbc" size="1048576" crc="2011d94c" sha1="1ab872c9491fbd5b88f7ac9db86de502c48a2333"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce59f3f14e5e36">
+		<description>Luoke Yingxiong EXE5 (19xx)(Sintax)(TW)[f][p][AKA Luo Ke Ren X5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Luoke Yingxiong EXE5 (19xx)(Sintax)(TW)[f][p][AKA Luo Ke Ren X5].gbc" size="1048576" crc="ff5b985b" sha1="e59f3f14e5e368472f8d6b7956cf218ea36d98e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7c6b427810be2">
+		<description>Magi-Nation - Keeper's Quest (2001)(Interactive Imagination)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Magi-Nation - Keeper's Quest (2001)(Interactive Imagination)(US)(proto).gbc" size="1048576" crc="89de57b7" sha1="7c6b427810be2f0d7496ccb5eff2226d3ed1194e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5712,6 +7132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc826576dc73c36">
+		<description>Marron Helps a Friend (demo-playable) (2024-01-29)(npckc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Marron Helps a Friend (demo-playable) (2024-01-29)(npckc).gbc" size="262144" crc="1ba1f513" sha1="826576dc73c3691cf14c551b7101f0218cfb2c81"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc620e7e82db6d6">
 		<description>Marvin Strikes Back! (USA) (En,Fr,Es) [b]</description>
 		<year>????</year>
@@ -5729,6 +7159,46 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="mastermind_gameboy.gb" size="32768" crc="074763ec" sha1="97a02faa5efbb292ae3c517182aba768810e36cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfaa4a6907227f">
+		<description>Matel Gear II (19xx)(Sintax)(TW)(en)[cr taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Matel Gear II (19xx)(Sintax)(TW)(en)[cr taizou][p].gbc" size="4194304" crc="89ae4102" sha1="faa4a6907227f5b6e9523522d34a79a5739d6424"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbceb77dc54dc284">
+		<description>Matel Gear II (19xx)(Sintax)(TW)(en)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Matel Gear II (19xx)(Sintax)(TW)(en)[p].gbx" size="2097216" crc="3285b0c2" sha1="eb77dc54dc2840e3d685555995fb6ba670adbbb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc050a3f0413280">
+		<description>Max Steel - Covert Missions (2000)(Mattel Interactive)(US)(M4)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Max Steel - Covert Missions (2000)(Mattel Interactive)(US)(M4)(proto).gbc" size="1048576" crc="57b1e978" sha1="050a3f041328016c433d923b213674014546db6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc35f9784f0d609">
+		<description>MaxPirate v1.0 (2024-05-04)(Wehrstedt, Marcel)(DE)(en)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MaxPirate v1.0 (2024-05-04)(Wehrstedt, Marcel)(DE)(en)(MIT).gb" size="32768" crc="7d469b66" sha1="35f9784f0d6093f2411c3265198c940645f4d065"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5852,6 +7322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc1f2524b452c67">
+		<description>Megaman X4 (2000)(NT)(TW)(en)[h MBC5 taizou][p][AKA Rockman X4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Megaman X4 (2000)(NT)(TW)(en)[h MBC5 taizou][p][AKA Rockman X4].gbc" size="524288" crc="d8ebee7e" sha1="1f2524b452c6714b89c0bdce8ed28028dd239141"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcf7b99a3090fe7">
 		<description>Megaman Xtreme 2 (U) [tr Sp1.0_lukas]</description>
 		<year>????</year>
@@ -5882,6 +7362,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcc8d74af474631">
+		<description>Memory Mania Challenge v1.3 (2020-05-04)(OmniRetro Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Memory Mania Challenge v1.3 (2020-05-04)(OmniRetro Games).gb" size="1048576" crc="50618f4b" sha1="c8d74af4746313800df3a23c1ad01f931e0e2eca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc13f22cfb78ffa">
+		<description>Menghuan Moni Zhan II (19xx)(Sintax)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Menghuan Moni Zhan II (19xx)(Sintax)(TW)[p].gbx" size="2097216" crc="4783006f" sha1="13f22cfb78ffa9eaba847b849d220bffc2b098d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5e24d964a80ea">
+		<description>Menu-Inventory System for GB Studio (2019-06-06)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Menu-Inventory System for GB Studio (2019-06-06)(Toxworks).gb" size="1048576" crc="03e3f414" sha1="5e24d964a80ea7d37fd91839c3b20af3173972dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc042c455e17df3">
+		<description>Menu-Inventory System for GB Studio (2019-06-28)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Menu-Inventory System for GB Studio (2019-06-28)(Toxworks).gb" size="1048576" crc="c6e8b529" sha1="042c455e17df365103e4c43f92651f21ac7c51f5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc345b2fbfaa99c">
 		<description>Metroid II - Return of Samus (World) [Graphic Hack by Shaktool v1.0] (~Metroid II - Justin Bailey)</description>
 		<year>????</year>
@@ -5902,6 +7422,226 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc9441269512663">
+		<description>MindOut (2020-03-31)(SidikRizal)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="MindOut (2020-03-31)(SidikRizal).gb" size="1048576" crc="37e36e61" sha1="94412695126633d7cce3385c6af46c8168960f52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1d866a8bcab96">
+		<description>Mingzhu Koudai Guaishou 2 (19xx)(Li Cheng)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mingzhu Koudai Guaishou 2 (19xx)(Li Cheng)(TW)[f taizou][p].gbc" size="2097152" crc="f1f794da" sha1="1d866a8bcab96c2a957c5ffdc4f4028cbda7827d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9bb1fd9d6ab51">
+		<description>Mirror Chip v0.1.9.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mirror Chip v0.1.9.a (demo-playable) (201x)(Arky750)(BO).gb" size="131072" crc="2724026f" sha1="9bb1fd9d6ab514457a9025aa40e21257cf846262"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd84d04c8a16b3">
+		<description>Mirror Chip v0.2.3 (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mirror Chip v0.2.3 (demo-playable) (201x)(Arky750)(BO).gb" size="131072" crc="d8570c76" sha1="d84d04c8a16b3a63b1d7477923c14c2ac883fc48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc70bfe3ad9429c">
+		<description>Mirror Chip v0.2.5 (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mirror Chip v0.2.5 (demo-playable) (201x)(Arky750)(BO).gb" size="131072" crc="57e143d9" sha1="70bfe3ad9429c529e74b514e4d15abe07c347098"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfcac17dbad2bc">
+		<description>Mirror Chip v0.2.6.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mirror Chip v0.2.6.a (demo-playable) (201x)(Arky750)(BO).gb" size="131072" crc="bc90ed2d" sha1="fcac17dbad2bcc9332c555665115e992bba554bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd550af9a0ebb3">
+		<description>Mirror Chip v0.2.8.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mirror Chip v0.2.8.a (demo-playable) (201x)(Arky750)(BO).gb" size="131072" crc="eda83f70" sha1="d550af9a0ebb32d0e9066fdb020da5c4ec6204ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcaa4c8b6cbb0d2">
+		<description>Mirror Chip v0.2.9.6.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mirror Chip v0.2.9.6.a (demo-playable) (201x)(Arky750)(BO).gb" size="131072" crc="0743bcd1" sha1="aa4c8b6cbb0d27a203405d9cbdb39801d5821fc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7a9e73512ba30">
+		<description>Mirror Chip v0.2.9.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mirror Chip v0.2.9.a (demo-playable) (201x)(Arky750)(BO).gb" size="131072" crc="1fe4fa63" sha1="7a9e73512ba30243fafd11e653b4deda68f273b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6765b6e3ee1c5">
+		<description>Mirror Chip v0.3.0.3.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.3.0.3.a (demo-playable) (201x)(Arky750)(BO).gb" size="262144" crc="e24761f2" sha1="6765b6e3ee1c5affdd1efe588e01a8085534b5d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc44293089b8f1b">
+		<description>Mirror Chip v0.3.6.2.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.3.6.2.a (demo-playable) (201x)(Arky750)(BO).gb" size="262144" crc="370a8d57" sha1="44293089b8f1b587d6991524afc9d047ec40ad4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2bc59f453465b">
+		<description>Mirror Chip v0.3.9.8.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.3.9.8.a (demo-playable) (201x)(Arky750)(BO).gb" size="262144" crc="bdfb660a" sha1="2bc59f453465be81eed278b48bbaf376bf72f43f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9bdf629372b4f">
+		<description>Mirror Chip v0.3.9.9.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.3.9.9.a (demo-playable) (201x)(Arky750)(BO).gb" size="262144" crc="9de54422" sha1="9bdf629372b4f1c87e7e3a26cead8e8828e4eb1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcee33b4cf48b5d">
+		<description>Mirror Chip v0.4.3.0.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.4.3.0.a (demo-playable) (201x)(Arky750)(BO).gb" size="262144" crc="02062975" sha1="ee33b4cf48b5d26afa7eb5fd4f85055d96b5f3ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6006ec3568e8e">
+		<description>Mirror Chip v0.4.9.8i.a (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.4.9.8i.a (demo-playable) (201x)(Arky750)(BO).gb" size="262144" crc="8c49fde1" sha1="6006ec3568e8ee2adfb9e39c6c11d09c1c49ecad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc91cdcfa99ee6f">
+		<description>Mirror Chip v0.4.9.9.a (demo-playable) (2018-11-16)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.4.9.9.a (demo-playable) (2018-11-16)(Arky750)(BO).gb" size="262144" crc="6f05dc6b" sha1="91cdcfa99ee6fabca2d7851da7972f739a9f6054"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccf5caa0d027bd">
+		<description>Mirror Chip v0.5.4.0.a (demo-playable) (2019-03-01)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.5.4.0.a (demo-playable) (2019-03-01)(Arky750)(BO).gb" size="262144" crc="1a2d1b2e" sha1="cf5caa0d027bda25fd9012ee5e32dd49eb115d0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc66e9f637ff6df">
+		<description>Mirror Chip v0.5.8 (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.5.8 (demo-playable) (201x)(Arky750)(BO).gb" size="262144" crc="6816aab4" sha1="66e9f637ff6dfa9d459697557561baedceb213ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2e8d7434f44ad">
+		<description>Mirror Chip v0.5.9 (demo-playable) (201x)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mirror Chip v0.5.9 (demo-playable) (201x)(Arky750)(BO).gb" size="262144" crc="d1fbcc04" sha1="2e8d7434f44ad6aea16143749a2df1a35a00766d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2833855bb2b9f">
+		<description>Mission Bravo (2000)(Mattel)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mission Bravo (2000)(Mattel)(US)(proto).gbc" size="1048576" crc="b8fc72b6" sha1="2833855bb2b9fde988f8efcac3e357ef9f0f4f50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb622ec531befa">
+		<description>Mo Jie 3-bu Wanme de Shijie (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mo Jie 3-bu Wanme de Shijie (19xx)(Li Cheng)(TW)[f][p].gbc" size="524288" crc="d827d37e" sha1="b622ec531befa882493a88577f901c5f4bd1d5b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2125bdb9b22e8">
+		<description>Mojie Chuanshuo (19xx)(Vast Fame)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524352">
+				<rom name="Mojie Chuanshuo (19xx)(Vast Fame)(TW)[p].gbx" size="524352" crc="07a51031" sha1="2125bdb9b22e866e16ccedc597439ac80e51245d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc339b09f4e10e9">
 		<description>Monkey Puncher (Europe) (SGB Enhanced) (GB Compatible) [b]</description>
 		<year>????</year>
@@ -5912,6 +7652,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc51e499df0b787">
+		<description>Mooby's Misadventures (2020-06-21)(Quintuple)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mooby's Misadventures (2020-06-21)(Quintuple).gb" size="1048576" crc="566acd48" sha1="51e499df0b78774e4e26c04620e18d98fd37059f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc014f2778fd8a1">
+		<description>Mooby's Misadventures (2020-06-21)(Quintuple)[web]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mooby's Misadventures (2020-06-21)(Quintuple)[web].gb" size="1048576" crc="c612178b" sha1="014f2778fd8a17b09d9e344759663da626a59263"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbceee87cceccd06">
 		<description>Moomin no Daibouken (Japan) [b]</description>
 		<year>????</year>
@@ -5919,6 +7679,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Moomin no Daibouken (Japan) [b].gbc" size="2097152" crc="cb3bbd15" sha1="eee87cceccd0656a8fcf964d94847f112407ce8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd4d94415e60e4">
+		<description>Mori Story (demo-playable) (2020-05-11)(Shy Gecko Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mori Story (demo-playable) (2020-05-11)(Shy Gecko Games).gb" size="1048576" crc="a54fa0f4" sha1="d4d94415e60e4a7ad4608208697381c0004bbc80"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5952,6 +7722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc0e7132e06d47e">
+		<description>Moshou Shiji - Zhanshen (19xx)(Sintax)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Moshou Shiji - Zhanshen (19xx)(Sintax)(TW)[f][p].gbc" size="4194304" crc="4d2bf2ee" sha1="0e7132e06d47e8897723172622f52deecedd2544"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcaf0ea0b39051c">
 		<description>Mr. Driller (Japan) [b]</description>
 		<year>????</year>
@@ -5962,6 +7742,156 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc6f4d11f34d750">
+		<description>Muchang Wuyu GB 6 (19xx)(Vast Fame)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Muchang Wuyu GB 6 (19xx)(Vast Fame)(TW)[p].gbx" size="2097216" crc="b8743db2" sha1="6f4d11f34d750c38e8df3c571b8e8dc3012f87c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc8dd5c8994425">
+		<description>Murder Mansion (2020-04-05)(Schneider, Jan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Murder Mansion (2020-04-05)(Schneider, Jan).gb" size="1048576" crc="5a3bd92b" sha1="c8dd5c89944255412f9bbfa3c69b7e0228ed147d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf7f26ffdc3eed">
+		<description>Murder Mansion (2020-06-16)(Schneider, Jan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Murder Mansion (2020-06-16)(Schneider, Jan).gb" size="1048576" crc="213fd097" sha1="f7f26ffdc3eed3a843bce94d6926bab00c933c51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4261734a236da">
+		<description>Music Box v1.3 (2001)(Black Box)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Music Box v1.3 (2001)(Black Box).gb" size="32768" crc="0e28ab97" sha1="4261734a236da1e15aa95b137eea6cbb7b98644a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc621c28dc622a9">
+		<description>Mythri (2000)(Team XKalibur)(US)(proto)[f modern emulators]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mythri (2000)(Team XKalibur)(US)(proto)[f modern emulators].gbc" size="524288" crc="62a9f308" sha1="621c28dc622a9372ac46cda4bbd272169817f11f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6b25555a2ddbf">
+		<description>N Wang Ge Dou 2000 (2000)(Vast Fame)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="N Wang Ge Dou 2000 (2000)(Vast Fame)(TW)[p].gbx" size="2097216" crc="d325e8d2" sha1="6b25555a2ddbf3b6391ed6d4bd75d5616f1e15fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6e01897661958">
+		<description>NABA Red Escape (2019-11-09)(Piccolo, Elisabeta Sveva - Wu, Davide - Etori, Alessandra)(IT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="NABA Red Escape (2019-11-09)(Piccolo, Elisabeta Sveva - Wu, Davide - Etori, Alessandra)(IT).gb" size="1048576" crc="5d69fa76" sha1="6e018976619581f86964b61b993784931b606103"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcdf98eed187a36">
+		<description>Nakayoshi Cooking Series 5 - Cake o Tsukurou (2002)(MTO)(JP)(beta)[Beta 1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Nakayoshi Cooking Series 5 - Cake o Tsukurou (2002)(MTO)(JP)(beta)[Beta 1].gbc" size="4194304" crc="b65a9fb6" sha1="df98eed187a3691ff7fe07619bab1d01072daec6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcaa5e2dd4590bb">
+		<description>Nakayoshi Cooking Series 5 - Cake o Tsukurou (2002)(MTO)(JP)(beta)[Beta 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Nakayoshi Cooking Series 5 - Cake o Tsukurou (2002)(MTO)(JP)(beta)[Beta 2].gbc" size="4194304" crc="f4e674be" sha1="aa5e2dd4590bbe9d20c76d8fb1ed408cfdc7350b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfd4bb16f306e3">
+		<description>NBA Show Time - NBA on NBC Rev 1 (2000)(Midway Games)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="NBA Show Time - NBA on NBC Rev 1 (2000)(Midway Games)(US)(proto).gbc" size="1048576" crc="8bc9be45" sha1="fd4bb16f306e309834e276ed768e8e2ed402e138"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca45f8e183c6e1">
+		<description>New Abnormal Banal Adventure (2019-12-13)(De Guio, Laura - Negri-Clementi, Giovanni Francesco - Magnaghi, Sofia)(IT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="New Abnormal Banal Adventure (2019-12-13)(De Guio, Laura - Negri-Clementi, Giovanni Francesco - Magnaghi, Sofia)(IT).gb" size="1048576" crc="b1c2eec9" sha1="a45f8e183c6e1168d5369f3eb64e4a8057b6bbc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc0582e350ade5">
+		<description>New Addams Family Series, The Rev 1 (2002)(Microids)(EU)(M5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="New Addams Family Series, The Rev 1 (2002)(Microids)(EU)(M5).gbc" size="2097152" crc="910df34b" sha1="c0582e350ade53908a9f091a4796d58b3c1806f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfcfd48708378e">
+		<description>New Super Color 145 in 1 (199x)(JY Company)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="16777280">
+				<rom name="New Super Color 145 in 1 (199x)(JY Company)(TW)[p].gbx" size="16777280" crc="8ef22535" sha1="fcfd48708378e20b5eec2e7f233dd4133900b071"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccb8d24c16ee32">
+		<description>Nightfall v1 (2019-06-18)(McMillan, Joshua)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Nightfall v1 (2019-06-18)(McMillan, Joshua).gb" size="1048576" crc="eeb6706e" sha1="cb8d24c16ee32bdaaf488ff75fd2d682784cea76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5680db04a54c5">
+		<description>Nightfall v2 (2019-06-18)(McMillan, Joshua)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Nightfall v2 (2019-06-18)(McMillan, Joshua).gb" size="1048576" crc="a61e3a25" sha1="5680db04a54c5f7ec01bdcede92156a8f896fb3c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcfb9ed96aaa067">
 		<description>Ninja Gaiden Shadow (U) [T+Bra_Emu Brasil]</description>
 		<year>????</year>
@@ -5969,6 +7899,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Ninja Gaiden Shadow (U) [T+Bra_Emu Brasil].gb" size="131072" crc="7a9c76fe" sha1="fb9ed96aaa06748b8e250ce41e9896c89b74951a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc73efaca14c998">
+		<description>Ninja JaJaMaru - The Great World Adventure DX (2023-02-21)(ININ)(EU-US)[Ninja JaJaMaru Retro Collection][Switch]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Ninja JaJaMaru - The Great World Adventure DX (2023-02-21)(ININ)(EU-US)[Ninja JaJaMaru Retro Collection][Switch].gbc" size="262144" crc="b5af4ca5" sha1="73efaca14c998dd6790e08f2ce2b6f73e7909ce4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6022,6 +7962,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc233c87368fcb2">
+		<description>Penalty Kick '91 (2019-09-09)(Mega-Phoenix)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Penalty Kick '91 (2019-09-09)(Mega-Phoenix)(beta).gb" size="1048576" crc="5f5b6165" sha1="233c87368fcb238b4e146e3589ff8415c977f493"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc21cba82142b8a">
+		<description>Persecucin en laberinto (2019-09-18)(Monicapo)(es)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Persecucin en laberinto (2019-09-18)(Monicapo)(es)(proto).gb" size="1048576" crc="d6a3b5d5" sha1="21cba82142b8abeab33c02eb7bf73a3cac0bf6cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf7d99d6efd498">
+		<description>Pian Wai Zhang - Huangjin Taiyang - Fengyin de Yuangu Lianjin Shu (19xx)(Sintax)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Pian Wai Zhang - Huangjin Taiyang - Fengyin de Yuangu Lianjin Shu (19xx)(Sintax)(TW)[f][p].gbc" size="1048576" crc="be02aac9" sha1="f7d99d6efd4980ee6b881f8421584f0a51f375a5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc9f5244f61a979">
 		<description>Pile Wonder [ROM]</description>
 		<year>????</year>
@@ -6029,6 +7999,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pile Wonder [ROM].gb" size="32768" crc="7567e2f6" sha1="9f5244f61a97937c306d9e9fbe002e3388bf68ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc94e4a44220507">
+		<description>Pluto's Corner (2019-10-14)(bbbbbr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Pluto's Corner (2019-10-14)(bbbbbr).gb" size="65536" crc="21fc06b3" sha1="94e4a442205079d85d5ca37042eaec555f7f49db"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6049,6 +8029,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Pocket Bomberman (U) [tr Fr1.0_g9].gbc" size="1048576" crc="a73ffadd" sha1="46cbef92be4f93f8546d3a017ba14c21b0a9312b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbbe2651547c1f">
+		<description>Pocket Golf! (1999)(Agetec)(US)(proto)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pocket Golf! (1999)(Agetec)(US)(proto)[GBC][SGB].gbc" size="2097152" crc="d06ecb1f" sha1="bbe2651547c1f3c79bbf822b41ddbb54133a489f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc48f302009c40">
+		<description>Pocket GT (2000)(Interplay)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Pocket GT (2000)(Interplay)(US)(proto).gbc" size="1048576" crc="9e120d94" sha1="c48f302009c405aa379ebf048bc46a284a74c84c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6079,6 +8079,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Pocket Monsters Silver (V1.1) (J) [T+Por_TraduRoms].gbc" size="1048576" crc="5cdebe81" sha1="6d4e1d49debdb5dcf2b2f790d15dddba226452e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcad547a79af864">
+		<description>Pocket Music (2002)(Rage Software)(US)(M5)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Pocket Music (2002)(Rage Software)(US)(M5)(proto).gbc" size="1048576" crc="c4387812" sha1="ad547a79af864eb56a18e1c2ad4346eb35df41ed"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6122,6 +8132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc2bbfaf8abac92">
+		<description>Pokemon - Mewtwo Strikes Back (19xx)(Makon)(TW)(en)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524352">
+				<rom name="Pokemon - Mewtwo Strikes Back (19xx)(Makon)(TW)(en)[p].gbx" size="524352" crc="10d85f8b" sha1="2bbfaf8abac92fb046d183a2039f25746806ccba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc0df64a2714c33">
 		<description>Pokemon - Red Version (USA, Europe) [Hack by Koolboyman v4.0Final] (~Pokemon - Brown)</description>
 		<year>????</year>
@@ -6149,6 +8169,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Pokemon - Rote Edition (G) [S][b1][BF].gb" size="1048576" crc="19873916" sha1="4daf074138c71f7c616b6fc4ebe428c8a2af6905"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9fa7da61c61d6">
+		<description>Pokemon - Sapphire Version (19xx)(Sintax)(US)[f][p][AKA Pocket Monster Saphire]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Pokemon - Sapphire Version (19xx)(Sintax)(US)[f][p][AKA Pocket Monster Saphire].gbc" size="4194304" crc="81d1e6ff" sha1="9fa7da61c61d684f39e43d6899a68309ba8607b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc76fa60d66b2f2">
+		<description>Pokemon - Silberne Edition (2001)(Nintendo)(DE)(beta)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pokemon - Silberne Edition (2001)(Nintendo)(DE)(beta)[GBC][SGB].gbc" size="2097152" crc="576f5ced" sha1="76fa60d66b2f22a035adc54c61aad9a415c894cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6252,6 +8292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc6c3710ef2d158">
+		<description>Pokemon Diamond (2001)(Makon)(TW)(en)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524352">
+				<rom name="Pokemon Diamond (2001)(Makon)(TW)(en)[p].gbx" size="524352" crc="0888f330" sha1="6c3710ef2d158cc3cbddd456119b7d6e00d6b640"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc278de943f632b">
 		<description>Pokemon Generations (Hack)</description>
 		<year>????</year>
@@ -6312,6 +8362,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc5f91654b5d96e">
+		<description>Pokemon Jade (19xx)(-)(TW)(de)[f header][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pokemon Jade (19xx)(-)(TW)(de)[f header][p].gbc" size="2097152" crc="a1c1183a" sha1="5f91654b5d96e33b4d593db520e475264a4232d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6e66f300bfad4">
+		<description>Pokemon Jade (19xx)(-)(TW)(de)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Pokemon Jade (19xx)(-)(TW)(de)[p].gbx" size="2097216" crc="48b921b9" sha1="6e66f300bfad412454444a83c7f478d831ccdf79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc502f9fbf687a9">
+		<description>Pokemon Jade (19xx)(-)(TW)(en)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Pokemon Jade (19xx)(-)(TW)(en)[p].gbx" size="2097216" crc="e52aeeea" sha1="502f9fbf687a96c8f8fcd063dec33749010d5bc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce84d6fdce662c">
+		<description>Pokemon Jade Version - Special Pikachu Edition (2001)(Makon)(US)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524352">
+				<rom name="Pokemon Jade Version - Special Pikachu Edition (2001)(Makon)(US)[p].gbx" size="524352" crc="2255ec33" sha1="e84d6fdce662c0e94e797e57cc83f2e69c774a43"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc488a24c225483">
 		<description>Pokemon of the Past DX (Zelda hack)</description>
 		<year>????</year>
@@ -6339,6 +8429,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Pokemon Orange Islands - Islas Naranja by BG and Neo (Hack).gb" size="1048576" crc="f61c6069" sha1="3fb86fd4c2418629dd9d0a64cedcb99e2f7f7867"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8204064b71493">
+		<description>Pokemon Picross (1999)(Nintendo)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pokemon Picross (1999)(Nintendo)(JP)(proto).gbc" size="2097152" crc="cf647f4b" sha1="8204064b7149357939b57342820e7955749183b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6452,6 +8552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc7ee368d656145">
+		<description>Polka Sheep (2017)(Monis Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Polka Sheep (2017)(Monis Games).gb" size="131072" crc="9e6a87b4" sha1="7ee368d656145647ed2a2e800c897c63739bbf2e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcc0190261488c0">
 		<description>Pop'n Pop (Europe) [b]</description>
 		<year>????</year>
@@ -6462,6 +8572,186 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcd20ddb6f7f077">
+		<description>Portal Gun System for GB Studio (2019-07-01)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Portal Gun System for GB Studio (2019-07-01)(Toxworks).gb" size="1048576" crc="6f3436ce" sha1="d20ddb6f7f077e8d6ceede9bac4aba0ff36a1ef0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccffa029b5aa51">
+		<description>Powerpuff Girls, The - Bad Mojo Jojo (2000)(Bam! Entertainment)(EU)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Powerpuff Girls, The - Bad Mojo Jojo (2000)(Bam! Entertainment)(EU)(proto).gbc" size="2097152" crc="24b23af1" sha1="cffa029b5aa51b2ce1c192e66bd2881eddd532fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5ca8376329306">
+		<description>Powerpuff Girls, The - Il Terribile Mojo Jojo (2000)(Bam! Entertainment)(IT)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Powerpuff Girls, The - Il Terribile Mojo Jojo (2000)(Bam! Entertainment)(IT)(proto).gbc" size="2097152" crc="5c265103" sha1="5ca837632930689fad9086b772928bf5995193f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6522029f585c6">
+		<description>Powerpuff Girls, The - Paint the Townsville Green (2000)(Bam! Entertainment)(EU)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Powerpuff Girls, The - Paint the Townsville Green (2000)(Bam! Entertainment)(EU)(proto).gbc" size="2097152" crc="310b52f7" sha1="6522029f585c6ab4b5ca342e2127f6403e735222"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc314ccf3d079e8">
+		<description>Pretty Princess' Castle Escape (2016-07-26)(sergeeo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Pretty Princess' Castle Escape (2016-07-26)(sergeeo).gb" size="65536" crc="444e752f" sha1="314ccf3d079e8bdef814c18cb235d3c384180543"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcea2c721c90540">
+		<description>Primera Division Stars 2001 (2000)(EA Sports)(ES)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Primera Division Stars 2001 (2000)(EA Sports)(ES)(proto).gbc" size="1048576" crc="ce3a1022" sha1="ea2c721c905404a5a90e12eca598570d95e2812f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6fd97e1f75570">
+		<description>Prince of Persia (1999)(Sunsoft)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Prince of Persia (1999)(Sunsoft)(JP)(proto).gbc" size="1048576" crc="d7dbbe1e" sha1="6fd97e1f75570e7568b3dc4ab28834813afb4484"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb982d629f997e">
+		<description>Professor S and the Mysterious Labyrinth (2019-10-15)(moon works)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Professor S and the Mysterious Labyrinth (2019-10-15)(moon works).gb" size="1048576" crc="23abe031" sha1="b982d629f997e3da6b340048bba837e2d335f5f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc045648b8f0537">
+		<description>Professor S and the Mysterious Labyrinth (2019-10-15)(moon works)[web rom]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Professor S and the Mysterious Labyrinth (2019-10-15)(moon works)[web rom].gb" size="1048576" crc="20d08d2b" sha1="045648b8f0537af86521dbe72c8add3e2c596d4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3d9ac84d33127">
+		<description>Project Trap (2020-04-25)(Elvies)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Project Trap (2020-04-25)(Elvies).gb" size="1048576" crc="ccd7b87f" sha1="3d9ac84d33127b920c71ca1216167e42e4e4d7e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb7bdd380dc496">
+		<description>Project Trap (2022-03-25)(Elvies)[final version]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Project Trap (2022-03-25)(Elvies)[final version].gb" size="1048576" crc="5add03d0" sha1="b7bdd380dc496ec59b76edda0d7e0f065e40d57f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc73c148d14cca0">
+		<description>Project Trap the Radio Event (2020-04-25)(Elvies)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Project Trap the Radio Event (2020-04-25)(Elvies).gb" size="1048576" crc="1b69b627" sha1="73c148d14cca0204a8b3b53311fc9b47e93b5659"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc26858e6ccc340">
+		<description>Project Trap v4 (2020-04-25)(Elvies)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Project Trap v4 (2020-04-25)(Elvies).gb" size="1048576" crc="06d361a2" sha1="26858e6ccc3407446f68e857dad71993ec6f0ed0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccae3f7d21b901">
+		<description>Project Trap v4.1 (2020-05-03)(Elvies)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Project Trap v4.1 (2020-05-03)(Elvies).gb" size="1048576" crc="11a8a780" sha1="cae3f7d21b9016c7697131742f17b273498dc579"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8f282ae7320c4">
+		<description>Push to Live (2019-09-13)(Monicapo)(es)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Push to Live (2019-09-13)(Monicapo)(es)(proto).gb" size="1048576" crc="123509c7" sha1="8f282ae7320c47c76230c0098ce599215c95b911"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0621c866fed36">
+		<description>Puzzle de cerradura (2019-06-19)(Monicapo)(es)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Puzzle de cerradura (2019-06-19)(Monicapo)(es)(proto).gb" size="1048576" crc="df110134" sha1="0621c866fed3669b5ef9c877a6095df4584558d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc21d25ffd8d049">
+		<description>Qilongzhu Z3 (19xx)(Sintax)(TW)[f][p][AKA Dragon Ball - Advance Adventure]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Qilongzhu Z3 (19xx)(Sintax)(TW)[f][p][AKA Dragon Ball - Advance Adventure].gbc" size="4194304" crc="994b5e99" sha1="21d25ffd8d049cfd62734a3037a57fa6d2c6d0e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc43ebf78cf1ce4">
+		<description>Qix Adventure (2000)(Natsume)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Qix Adventure (2000)(Natsume)(US)(proto).gbc" size="1048576" crc="bb3744a9" sha1="43ebf78cf1ce4024d23a211a8dfb006b16c1a168"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc11ad0e6f53fb7">
 		<description>Qix Adventure (Europe) [b]</description>
 		<year>????</year>
@@ -6469,6 +8759,36 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Qix Adventure (Europe) [b].gbc" size="1048576" crc="b053ab1f" sha1="11ad0e6f53fb7cc23d3a309f9956e191291e5681"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc05e2cb94bcda3">
+		<description>Quan Ba Tianxia (19xx)(Sintax)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Quan Ba Tianxia (19xx)(Sintax)(TW)[f][p].gbc" size="4194304" crc="5bcf90fa" sha1="05e2cb94bcda33380a94415631687d1e6acf4ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6ad4748405ea3">
+		<description>Quest Arrest (2020-02-29)(The Retro Room)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Quest Arrest (2020-02-29)(The Retro Room).gb" size="1048576" crc="7089bf5f" sha1="6ad4748405ea302d59063b2121eee9af9fdd3266"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc25b3a21135bfc">
+		<description>Quest Arrest v1.1 (2020-05-27)(The Retro Room)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Quest Arrest v1.1 (2020-05-27)(The Retro Room).gb" size="1048576" crc="9ac546d5" sha1="25b3a21135bfc7587c096b10f4a20d8b3095d721"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6492,6 +8812,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc0370d41a9f5b4">
+		<description>Re-Pear it Peary v9 (2023-05-14)(puggsoy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Re-Pear it Peary v9 (2023-05-14)(puggsoy).gb" size="1048576" crc="a7e633d0" sha1="0370d41a9f5b423a5c26c4e74daa142abe163c6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb7515f63e8b2d">
+		<description>Reckoning, The - 20XX (2019-10-06)(kovalok - Jamideus - Maevie - borbware)(FI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Reckoning, The - 20XX (2019-10-06)(kovalok - Jamideus - Maevie - borbware)(FI).gb" size="65536" crc="a162b25d" sha1="b7515f63e8b2d009da943ae8732755953bc0a758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbec002e2d9e78">
+		<description>Resident Evil (19xx)(Climax Entertainment)(proto)[Climax Game Boy proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Resident Evil (19xx)(Climax Entertainment)(proto)[Climax Game Boy proto].gbc" size="524288" crc="1a921065" sha1="bec002e2d9e7852cd85b720b570f4ae73453b756"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc027e614d0c47b">
+		<description>Riparian Harvest (2019-11-14)(TPZD)(SK)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Riparian Harvest (2019-11-14)(TPZD)(SK)(en).gb" size="1048576" crc="b914852e" sha1="027e614d0c47b17219cebaeb22a66bc254f0c7ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc54e064a24cd50">
+		<description>Robopon - Star Version (2000)(Atlus)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Robopon - Star Version (2000)(Atlus)(US)(proto).gbc" size="1048576" crc="cf5f0a63" sha1="54e064a24cd50b7e25df5c827c54a20643ec314a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc30f36f420bec7">
+		<description>Robopon - Sun Version (2000)(Atlus)(US)(proto)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Robopon - Sun Version (2000)(Atlus)(US)(proto)[GBC][SGB].gbc" size="1048576" crc="0b6985e4" sha1="30f36f420bec76126171b1139538de4017ed75ac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcb23d2768814e9">
 		<description>Rolan's Curse (U) [T+Spa_lukas]</description>
 		<year>????</year>
@@ -6512,6 +8892,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcf4c36b3cbb13d">
+		<description>RPG Tsukuru GB Rev 1 (2000)(ASCII Entertainment)(JP)[NP][possible proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="RPG Tsukuru GB Rev 1 (2000)(ASCII Entertainment)(JP)[NP][possible proto].gbc" size="2097152" crc="57f82031" sha1="f4c36b3cbb13d3cbaaa81e97b0636c4515ce501e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2bdcf8208cd05">
+		<description>Runelords (2001)(Kemco)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Runelords (2001)(Kemco)(US)(proto).gbc" size="4194304" crc="392af730" sha1="2bdcf8208cd0530c75195fd23f2f7839a3480bff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2adf0cca27e06">
+		<description>Sailor Moon Demo (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Sailor Moon Demo (19xx)(-).gb" size="32768" crc="97279f9a" sha1="2adf0cca27e06ad6ca59bd2b117d0d4e28f8559f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3ba0e406632d1">
+		<description>Sailor Super V (19xx)(adf cyt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Sailor Super V (19xx)(adf cyt).gb" size="262144" crc="5fd5b876" sha1="3ba0e406632d18ee3b9447e19a9b7e70e1118f63"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc211c85ead9dde">
 		<description>Samurai Shodown (U) [tr Sp1.0_lukas]</description>
 		<year>????</year>
@@ -6529,6 +8949,56 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="San Francisco Rush 2049 (U) [C][!].gbc" size="1048576" crc="ed23e73a" sha1="3843f7b76be2cce94c46363a717e38143064eb12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3ec4d2e8b6bfa">
+		<description>San Guo Wushang 5 (19xx)(Sintax)(TW)[f][p][AKA Bynasty Warriors Advance 5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="San Guo Wushang 5 (19xx)(Sintax)(TW)[f][p][AKA Bynasty Warriors Advance 5].gbc" size="4194304" crc="9d332731" sha1="3ec4d2e8b6bfa72465bf79cea6643e30d8b38eb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0c70e784f672a">
+		<description>Sanguozhi - Aoshi Tianxia (19xx)(Vast Fame)(TW)[f header][p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sanguozhi - Aoshi Tianxia (19xx)(Vast Fame)(TW)[f header][p][multicart rip].gbc" size="1048576" crc="9edadba8" sha1="0c70e784f672a6116d2a534971b8c189903c7d91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd9a978c6b4745">
+		<description>Sanguozhi - Aoshi Tianxia (19xx)(Vast Fame)(TW)[p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sanguozhi - Aoshi Tianxia (19xx)(Vast Fame)(TW)[p][multicart rip].gbc" size="1048576" crc="728255e5" sha1="d9a978c6b4745d964128eb0eced022337849467c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbceb4de913d6ca9">
+		<description>Sanguozhi Wudai (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Sanguozhi Wudai (19xx)(Li Cheng)(TW)[f][p].gbc" size="2097152" crc="8f533e07" sha1="eb4de913d6ca99ecb5b8fba01a20b54bd1b3dd3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc04fc22c60d279">
+		<description>SCHRODINGIRL (2019-05-20)(Arky750)(BO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="SCHRODINGIRL (2019-05-20)(Arky750)(BO).gb" size="32768" crc="6614309f" sha1="04fc22c60d279301a8f28bd56e82c5faf3b56cd0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6582,6 +9052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc3612e549ba2a7">
+		<description>Sea-Doo HydroCross (2000)(Vatical Entertainment)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sea-Doo HydroCross (2000)(Vatical Entertainment)(US)(proto).gbc" size="1048576" crc="fb1783f3" sha1="3612e549ba2a71585fc9a57033c97562386cdea4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcd75c374754c4e">
 		<description>Seaquest DSV Proto 5.4 (U) [S] dedup+header fix [TamB]</description>
 		<year>????</year>
@@ -6589,6 +9069,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Seaquest DSV Proto 5.4 (U) [S] dedup+header fix [TamB].GB" size="262144" crc="7ab9664d" sha1="d75c374754c4e78c313d5412e5bfda6f06cdbfa9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcaf84f87663aa7">
+		<description>Second Edition Harry Boy, The - The Secret of the Chamber of Secrets (19xx)(Sintax)(US)[f][p][AKA Harry Boy and the Chamber of Secrets]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Second Edition Harry Boy, The - The Secret of the Chamber of Secrets (19xx)(Sintax)(US)[f][p][AKA Harry Boy and the Chamber of Secrets].gbc" size="4194304" crc="9dc18a00" sha1="af84f87663aa75822af6a8b22c68a91e2f71bf36"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6602,6 +9092,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc728acaaa8d747">
+		<description>Serpedelic (2018-11-11)(Tambalaya)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Serpedelic (2018-11-11)(Tambalaya).gb" size="32768" crc="3128ac04" sha1="728acaaa8d747d5fbec56ea95a133c54482e987f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc35d242fbbde2f">
+		<description>Sewing Machine Operation Software (2000)(Natsume)(EU)(M4)(proto)[GBC][en-de-it-nl]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sewing Machine Operation Software (2000)(Natsume)(EU)(M4)(proto)[GBC][en-de-it-nl].gbc" size="1048576" crc="9f1dbedd" sha1="35d242fbbde2f6f1fb869fd68396e6be4aad8f9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc500439c5e1440">
+		<description>Sewing Machine Operation Software (2000)(Natsume)(EU)(M4)(proto)[GBC][en-fr-es-pt]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sewing Machine Operation Software (2000)(Natsume)(EU)(M4)(proto)[GBC][en-fr-es-pt].gbc" size="1048576" crc="e34b5ce8" sha1="500439c5e14400ef2bc45cacf5ff834b70c2acd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb36edbb0721fb">
+		<description>Shanghai Pocket Rev 1 (1998)(Sunsoft)(US)(proto)[GBC][SGB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Shanghai Pocket Rev 1 (1998)(Sunsoft)(US)(proto)[GBC][SGB].gbc" size="1048576" crc="d529dafd" sha1="b36edbb0721fb71aafecd6f48609c14c1107e3f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc450bba2a190ce">
+		<description>Shaolin Legend - Hero, the Saver (19xx)(Sintax)(TW)(en)[f][p][AKA Fantasic ShaoLin Kungfu]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Shaolin Legend - Hero, the Saver (19xx)(Sintax)(TW)(en)[f][p][AKA Fantasic ShaoLin Kungfu].gbc" size="4194304" crc="88ba4490" sha1="450bba2a190ced8c6dc33b7205dc643158ef1310"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca2341e89b5bcb">
+		<description>Shaolin Shisan Gun - Ying Xiong Jiu Zhu (19xx)(Sintax)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Shaolin Shisan Gun - Ying Xiong Jiu Zhu (19xx)(Sintax)(TW)[f][p].gbc" size="4194304" crc="91160598" sha1="a2341e89b5bcb7535cf35f7fc1a9462ea561d02a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc9ad365ed7d4e0">
 		<description>Sheep It Up</description>
 		<year>????</year>
@@ -6609,6 +9159,216 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Sheep It Up.gb" size="32768" crc="fa6de2e4" sha1="9ad365ed7d4e07041c0147831a9bb1c496ea0bc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf2eace930bda0">
+		<description>Sheng Shou Wuyu - Shenlong Chuanshuo (2001)(Vast Fame)(TW)[f][p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sheng Shou Wuyu - Shenlong Chuanshuo (2001)(Vast Fame)(TW)[f][p][multicart rip].gbc" size="1048576" crc="10cb82a3" sha1="f2eace930bda00f60fa753b12208e9cdfde622a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb7fce68e03dba">
+		<description>Shengui Diguo Zhi Emo Cheng (2003)(Sintax)(TW)[cr taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Shengui Diguo Zhi Emo Cheng (2003)(Sintax)(TW)[cr taizou][p].gbc" size="4194304" crc="516dd4f8" sha1="b7fce68e03dba0d39e0b9d669036f34c1fd47154"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1698df60112d2">
+		<description>Shengui Diguo Zhi Emo Cheng (2003)(Sintax)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Shengui Diguo Zhi Emo Cheng (2003)(Sintax)(TW)[p].gbx" size="2097216" crc="77481493" sha1="1698df60112d2683151d50974332edd9d80f8685"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc67e6d18e20347">
+		<description>Shi Mian Maifu - Fengyun Pian (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Shi Mian Maifu - Fengyun Pian (19xx)(Li Cheng)(TW)[f][p].gbc" size="1048576" crc="7cdf4636" sha1="67e6d18e20347b57ef58aef566be54e8dae916f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc610c402007143">
+		<description>Shield Bouncer (2018-07-29)(Zalo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Shield Bouncer (2018-07-29)(Zalo).gb" size="65536" crc="f4869538" sha1="610c402007143c2144fa8edf0e8876f30194a7bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcea8f2646128ba">
+		<description>Shikong Xing Shou (2001)(Vast Fame)(TW)[f header][p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shikong Xing Shou (2001)(Vast Fame)(TW)[f header][p][multicart rip].gbc" size="2097152" crc="ca02413b" sha1="ea8f2646128ba38993efe9855edc0cd3dedf9a2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6ba2a43d69753">
+		<description>Shin Megami Tensei Devil Children - Shiro no Sho Rev 1 (2001)(Atlus)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shin Megami Tensei Devil Children - Shiro no Sho Rev 1 (2001)(Atlus)(JP)(proto).gbc" size="2097152" crc="79ea53f4" sha1="6ba2a43d6975340852eb2ce85f36f35855b36eaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2ef22870cd869">
+		<description>Shuihu Shenshou (19xx)(Li Cheng)(TW)[f header][p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shuihu Shenshou (19xx)(Li Cheng)(TW)[f header][p][multicart rip].gbc" size="2097152" crc="549ed08c" sha1="2ef22870cd869b99699632edb8eaffe947ef9653"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcaac1698860298">
+		<description>Shuihu Shenshou (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shuihu Shenshou (19xx)(Li Cheng)(TW)[f][p].gbc" size="2097152" crc="88e3f911" sha1="aac169886029820c36cd70c24d509ecb1a7b0728"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcca240c132de7a">
+		<description>Shuihu Shenshou (19xx)(Li Cheng)(TW)[p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shuihu Shenshou (19xx)(Li Cheng)(TW)[p][multicart rip].gbc" size="2097152" crc="ef18774d" sha1="ca240c132de7a56d037776a85e2d2bba1037924e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc699b3843df5cb">
+		<description>Shuihu Zhuan - Jingdian Ban (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Shuihu Zhuan - Jingdian Ban (19xx)(Li Cheng)(TW)[f][p].gbc" size="1048576" crc="33bf192c" sha1="699b3843df5cb7391bbd57f5647ece8a9976995a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5d31ce8df76dc">
+		<description>Shuma Baobei - Chao Mengmeng Fanji Zhan (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Shuma Baobei - Chao Mengmeng Fanji Zhan (19xx)(Li Cheng)(TW)[f][p].gbc" size="524288" crc="f6dc0c54" sha1="5d31ce8df76dc2d7e1f216ce246915ffa1c78cbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6ada3bb5e0e18">
+		<description>Shuma Baobei - Hai Zhi Shen (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Shuma Baobei - Hai Zhi Shen (19xx)(Li Cheng)(TW)[f][p].gbc" size="524288" crc="c465d53c" sha1="6ada3bb5e0e183be07d2e24031165f0d905e0a64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0212fd0e302f4">
+		<description>Shuma Baobei - Huojian Bingtuan (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Shuma Baobei - Huojian Bingtuan (19xx)(Li Cheng)(TW)[f][p].gbc" size="524288" crc="f4d16e93" sha1="0212fd0e302f41b9ed27ff472b00f6f3e55a9872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc96b1d968fa8b6">
+		<description>Shuma Baobei DX6 (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shuma Baobei DX6 (19xx)(Li Cheng)(TW)[f][p].gbc" size="2097152" crc="59dad4c9" sha1="96b1d968fa8b66b3e0d5c21f723fafed06474d52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc80ac87fc5bd79">
+		<description>Shuma Baolong - Diannao Pian (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Shuma Baolong - Diannao Pian (19xx)(Li Cheng)(TW)[f][p].gbc" size="1048576" crc="e34edd08" sha1="80ac87fc5bd792b2eb92d0c5565d652d85bd3af8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0ee49f5a94916">
+		<description>Shuma Baolong - Koudai Ban (19xx)(Vast Fame)(TW)[f header][p][multicart rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Shuma Baolong - Koudai Ban (19xx)(Vast Fame)(TW)[f header][p][multicart rip].gbc" size="524288" crc="3c1d7ad8" sha1="0ee49f5a9491643856124ab493b5c9c9a9883b20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfda0f21fff5d0">
+		<description>Shuma Baolong - Koudai Ban (19xx)(Vast Fame)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524352">
+				<rom name="Shuma Baolong - Koudai Ban (19xx)(Vast Fame)(TW)[p].gbx" size="524352" crc="f1eeca60" sha1="fda0f21fff5d0be95fea28151b60caef884f8af7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc154892154c6db">
+		<description>Shuma Baolong - Shuijing Ban (19xx)(Li Cheng)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Shuma Baolong - Shuijing Ban (19xx)(Li Cheng)(TW)[f][p].gbc" size="1048576" crc="be72cdef" sha1="154892154c6dbc1f456786caa944f5aeaa343b16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce5c10615aeb60">
+		<description>Shuma Baolong - Shuijing Ban II (19xx)(Sintax)(TW)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Shuma Baolong - Shuijing Ban II (19xx)(Sintax)(TW)[f][p].gbc" size="4194304" crc="5f2472ad" sha1="e5c10615aeb608c08cc2519f20b2138301cfc568"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc65448ff2cb4be">
+		<description>Shuma Baolong 02 4 (19xx)(Makon)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048640">
+				<rom name="Shuma Baolong 02 4 (19xx)(Makon)(TW)[p].gbx" size="1048640" crc="ec449679" sha1="65448ff2cb4bedbb2c73473cf91fc3dd4be608a5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6672,6 +9432,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc22db7c6096f28">
+		<description>Soccer Boy (1990)(CBS - Sony)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Soccer Boy (1990)(CBS - Sony)(JP)(proto).gb" size="65536" crc="a46f98d1" sha1="22db7c6096f285222aefbfe413efa1d21de59731"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9abe845bd4e1d">
+		<description>Sonic Adventure 8 (2000)(Makon - NT)(TW)[h MBC5][p][rumble]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Sonic Adventure 8 (2000)(Makon - NT)(TW)[h MBC5][p][rumble].gbc" size="524288" crc="0aa22226" sha1="9abe845bd4e1df5b04bec8e4dfe9d1fb0ce4e915"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3b10f6bae11da">
+		<description>Soul Void Redux (2023-07-17)(Kadabura)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Soul Void Redux (2023-07-17)(Kadabura).gbc" size="1048576" crc="b6f5f372" sha1="3b10f6bae11dab5bb6106d0a6e4e80a3fbd0fa7a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcad9240b30e381">
 		<description>South Park (USA) (Proto)</description>
 		<year>????</year>
@@ -6682,6 +9472,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcddcf6ea0eade0">
+		<description>Space Baby (19xx)(Sintax)(US)[f][p][AKA The Firmament Baby]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Space Baby (19xx)(Sintax)(US)[f][p][AKA The Firmament Baby].gbc" size="4194304" crc="66539153" sha1="ddcf6ea0eade0d3c17c746d136e4f74b573c35ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc077006fce2305">
+		<description>Space-Net - Cosmo Neo (2001)(Imagineer)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Space-Net - Cosmo Neo (2001)(Imagineer)(JP)(proto).gbc" size="2097152" crc="3a9d791b" sha1="077006fce23059c40bc7135d195766504e376aa8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbccd4b246c0710c">
 		<description>Spanky's Quest (U) [T+Fre_KS151]</description>
 		<year>????</year>
@@ -6689,6 +9499,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Spanky's Quest (U) [T+Fre_KS151].gb" size="65536" crc="b1392a05" sha1="cd4b246c0710c4a988034d82cc1dbe00013a5c52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb65cd4a60014e">
+		<description>Speedy Gonzales - Aztec Adventure (2000)(Sunsoft)(JP)(proto)[GBC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Speedy Gonzales - Aztec Adventure (2000)(Sunsoft)(JP)(proto)[GBC].gbc" size="1048576" crc="c97d74f5" sha1="b65cd4a60014ecef55b1daca7e17379987f1d983"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6712,6 +9532,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcf8e2965b7f6ff">
+		<description>Spider-Man 3 - Movie Version (19xx)(Sintax)(US)[f][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Spider-Man 3 - Movie Version (19xx)(Sintax)(US)[f][p].gbc" size="4194304" crc="b26703d0" sha1="f8e2965b7f6ffd082e4906a6478354d6c10109da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcec249546a4652">
+		<description>Spy vs Spy Rev 1 (1999)(Kemco)(EU)(M7)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Spy vs Spy Rev 1 (1999)(Kemco)(EU)(M7)(proto).gbc" size="1048576" crc="6ca71209" sha1="ec249546a4652ef9375b67ddbac882b13ed4a807"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc38dd0c729c0d8">
+		<description>Spy vs Spy Rev 1 (1999)(Vatical Entertainment)(US)(M7)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Spy vs Spy Rev 1 (1999)(Vatical Entertainment)(US)(M7)(proto).gbc" size="1048576" crc="549bf1e4" sha1="38dd0c729c0d878ea05df7de0b3aba2d098d2975"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc6eb2c27e2eedb">
 		<description>Star Heritage (Europe) (Proto) (Password Version)</description>
 		<year>????</year>
@@ -6732,6 +9582,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc8f708ef7249a7">
+		<description>Star Trek (1999)(Aqua Pacific)(EU)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Star Trek (1999)(Aqua Pacific)(EU)(proto).gbc" size="65536" crc="4d423347" sha1="8f708ef7249a72f27a7037651f588fb5daf4c8fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4b8a41102a089">
+		<description>StarFox - Grounded (2020-12-31)(suitNtie)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="StarFox - Grounded (2020-12-31)(suitNtie).gb" size="524288" crc="3d31c5d6" sha1="4b8a41102a089c4b990ba92c39f3909b69bbbb76"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc3bf401e9584b4">
 		<description>STARTUP</description>
 		<year>????</year>
@@ -6749,6 +9619,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Store Tris 2[MBC1].gb" size="65536" crc="a0f22191" sha1="5a8ed4541cc5b5ae43c53d1c232471b1d55d27e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5f39b72476520">
+		<description>Stranded Pirates (2020-04-20)(Nawreua)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Stranded Pirates (2020-04-20)(Nawreua).gb" size="1048576" crc="cbaf2648" sha1="5f39b72476520a319eedae9411fee2659ee1322f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6782,6 +9662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcb7c04a24e7f03">
+		<description>Street Fighter Alpha - Warriors' Dreams Rev 1 (1999)(Virgin Interactive)(EU)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Street Fighter Alpha - Warriors' Dreams Rev 1 (1999)(Virgin Interactive)(EU)(proto).gbc" size="1048576" crc="cdf56f1a" sha1="b7c04a24e7f0355a0113109b5e97ad044057a006"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc37fccc8860a51">
 		<description>Street Rider [ROM]</description>
 		<year>????</year>
@@ -6799,6 +9689,36 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Stunt Race 3D Demo.gb" size="524288" crc="0310cb54" sha1="b727aa9e27c98709e8884c41311f2fec58bf6178"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb2814aa03eba1">
+		<description>Super Donkey Kong 5 (19xx)(Makon)(TW)(en)[h MBC5 taizou][a][rumble]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Super Donkey Kong 5 (19xx)(Makon)(TW)(en)[h MBC5 taizou][a][rumble].gbc" size="524288" crc="04a52e0c" sha1="b2814aa03eba1736cd20a129e4f63fe5fb2425f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2f135165ad873">
+		<description>Super Donkey Kong 5 (19xx)(Makon)(TW)(en)[h MBC5 taizou][rumble]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Super Donkey Kong 5 (19xx)(Makon)(TW)(en)[h MBC5 taizou][rumble].gbc" size="524288" crc="64eef4e9" sha1="2f135165ad873218a3896e0d03dce08997e2f0d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb1a88a43ae4b0">
+		<description>Super GBCrawler (2021-02-27)(Shimada, Fernanda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super GBCrawler (2021-02-27)(Shimada, Fernanda).gb" size="1048576" crc="dd61ec40" sha1="b1a88a43ae4b0ac87f78b85042640d015bcda31b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6882,6 +9802,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcb4ce387fc88b4">
+		<description>Super Marrio Sunshine (19xx)(Sintax)(TW)(en)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Marrio Sunshine (19xx)(Sintax)(TW)(en)[f taizou][p].gbc" size="4194304" crc="2c0a6c90" sha1="b4ce387fc88b49c8dbab96a3aa6f4d101455bb2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8e20f817636c9">
+		<description>Super Princess' 2092 Exodus (2017-01-02)(sergeeo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Super Princess' 2092 Exodus (2017-01-02)(sergeeo).gb" size="131072" crc="e05c8c7d" sha1="8e20f817636c9f8cfab129e0c85f8474a3cb0c1c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc89873fddc4250">
 		<description>Super Robot Taisen (J) [T+Eng_agtp]</description>
 		<year>????</year>
@@ -6899,6 +9839,76 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Super Robot Wars 2 G (J) [T+Chi].gb" size="524288" crc="1132194b" sha1="19455c8152f93512d1d6c11b67522c2a8d96f3f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4d9a17deefaf0">
+		<description>Superman - Battle for Metropolis (2001-01-12)(Infogrames)(EU)(proto)[GBC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Superman - Battle for Metropolis (2001-01-12)(Infogrames)(EU)(proto)[GBC].gbc" size="2097152" crc="6606382c" sha1="4d9a17deefaf03532e952cd909584fca2d3cdd09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcaa1447d78e380">
+		<description>Supershot Golf Robot (2000)(Crave Entertainment)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Supershot Golf Robot (2000)(Crave Entertainment)(US)(proto).gbc" size="2097152" crc="b6a7f781" sha1="aa1447d78e380d2a936fb5f713521e34420fe68c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc505ffc9300577">
+		<description>Survival Kids 2 - Dasshutsu!! Futago-Jima! Rev 1 (2000)(Konami)(JP)[GBC][SGB][NP][possible proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Survival Kids 2 - Dasshutsu!! Futago-Jima! Rev 1 (2000)(Konami)(JP)[GBC][SGB][NP][possible proto].gbc" size="1048576" crc="bd366d22" sha1="505ffc930057719cf28560333342dfd6944c15da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6efd637f039d4">
+		<description>Sutte Hakkun GB (1999)(Nintendo)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Sutte Hakkun GB (1999)(Nintendo)(JP)(proto).gbc" size="524288" crc="e0386f84" sha1="6efd637f039d4f3a2240640921724a69a2844cc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb2816e8585e03">
+		<description>Suzuki Alstare Extreme Racing (1999)(Ubi Soft)(US)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Suzuki Alstare Extreme Racing (1999)(Ubi Soft)(US).gbc" size="524288" crc="a13cf42e" sha1="b2816e8585e03b7d547e8acfda716b7adddf3b41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc576d4338665f1">
+		<description>Swing (1999)(Software 2000)(EU)(M5)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Swing (1999)(Software 2000)(EU)(M5)(proto).gbc" size="1048576" crc="60d06df9" sha1="576d4338665f159a88875819f0681fdc49443fe4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4e4347be42051">
+		<description>Sword of Eutomia v2 (demo-playable) (2020)(SōdoDev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sword of Eutomia v2 (demo-playable) (2020)(SōdoDev).gb" size="1048576" crc="6ab2e271" sha1="4e4347be42051c10cc466798aeb2da3eb20e8d79"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6932,6 +9942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcc96044d57a236">
+		<description>Sylvanian Families 2 - Irozuku Mori no Fantasy Rev 1 (2000)(Epoch)(JP)[possible proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Sylvanian Families 2 - Irozuku Mori no Fantasy Rev 1 (2000)(Epoch)(JP)[possible proto].gbc" size="2097152" crc="ad6f3bdf" sha1="c96044d57a2367ffb7b2325aa8d0c9b659e0aaba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbce18d40cc2447d">
 		<description>Sylvanian Melodies - Mori no Nakama to Odori Mashi! (Japan) [En by Watercrown v1.0] (2)</description>
 		<year>????</year>
@@ -6942,6 +9962,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbca0f88e6f43be2">
+		<description>Taikong Baobei (19xx)(Li Cheng)(TW)[f header taizou][p][CBA083]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Taikong Baobei (19xx)(Li Cheng)(TW)[f header taizou][p][CBA083].gbc" size="4194304" crc="f0034568" sha1="a0f88e6f43be29deacb36327e6071c0728caedd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7c50486fb8718">
+		<description>Taikong Baobei (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Taikong Baobei (19xx)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="5b49af92" sha1="7c50486fb8718ea5526e6ca5b66b431e4871b505"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3b0617eeeb454">
+		<description>Taikong Zhanshi - Jingdian Ban (19xx)(Li Cheng)(TW)[f taizou][p][CBA063]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Taikong Zhanshi - Jingdian Ban (19xx)(Li Cheng)(TW)[f taizou][p][CBA063].gbc" size="1048576" crc="7c6ae6da" sha1="3b0617eeeb45450abdae5353adbe75f5e00dadda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc17a5dc916660d">
+		<description>Taikong Zhanshi DX3 - Zuizhong Huanxiang (19xx)(Li Cheng)(TW)[f taizou][p][CBA145]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Taikong Zhanshi DX3 - Zuizhong Huanxiang (19xx)(Li Cheng)(TW)[f taizou][p][CBA145].gbc" size="2097152" crc="b28a34d2" sha1="17a5dc916660de6bed25e7899e4027a5bfc5dd47"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc4fa0256df504c">
 		<description>Taiwan 16 Tiles Mahjung [MBC1]</description>
 		<year>????</year>
@@ -6949,6 +10009,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Taiwan 16 Tiles Mahjung [MBC1].gb" size="65536" crc="999b84d8" sha1="4fa0256df504c1b530142af3e9c4199f02a12201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc28d245a650469">
+		<description>Taxi 2 (2000)(Ubi Soft)(EU)(M6)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Taxi 2 (2000)(Ubi Soft)(EU)(M6)(proto).gbc" size="1048576" crc="288bef6e" sha1="28d245a6504694443ddff5f85ba2bfaecf794ff1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6972,6 +10042,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcf9519940ed05b">
+		<description>Test Drive 6 Rev 1 (1999)(Infogrames)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Test Drive 6 Rev 1 (1999)(Infogrames)(US)(proto).gbc" size="1048576" crc="5333c5db" sha1="f9519940ed05bdb59cd3878db8c479760d93a5bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc766b5dbfc8932">
+		<description>Text-Input System for GB Studio (2019-06-28)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Text-Input System for GB Studio (2019-06-28)(Toxworks).gb" size="1048576" crc="1d09ba59" sha1="766b5dbfc8932cddff2da3fd87364097d48a086a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcac7ee07bb0531">
+		<description>Tezhong Budui (19xx)(Li Cheng)(TW)[f header taizou][p][CBA100]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tezhong Budui (19xx)(Li Cheng)(TW)[f header taizou][p][CBA100].gbc" size="1048576" crc="c88e25a6" sha1="ac7ee07bb0531eea9a81ff9889f56df2a900487d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd1fdd5b289165">
+		<description>Tezhong Budui 2 - Jidi (19xx)(Li Cheng)(TW)[f taizou][p][CBA146]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Tezhong Budui 2 - Jidi (19xx)(Li Cheng)(TW)[f taizou][p][CBA146].gbc" size="2097152" crc="0d17e940" sha1="d1fdd5b289165126091f5fba3da05903198a8620"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4eb0359a27817">
+		<description>Tiny Toon Adventures - Dizzy's Candy Quest (2001)(Conspiracy Entertainment)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tiny Toon Adventures - Dizzy's Candy Quest (2001)(Conspiracy Entertainment)(US)(proto).gbc" size="1048576" crc="23bb87a5" sha1="4eb0359a278173ae6c12e9452a7a2a9573a58c77"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcfe6eef70d48dd">
 		<description>Tobu Tobu Girl Deluxe (PD)</description>
 		<year>????</year>
@@ -6992,6 +10112,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbca4728de236856">
+		<description>Tomb Raider (19xx)(-)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Tomb Raider (19xx)(-)(TW)[p].gbc" size="4194304" crc="269f0852" sha1="a4728de2368561ffeb8ecec6077494df64b463d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5b9325b6e322a">
+		<description>Tomb Raider 2 (19xx)(-)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Tomb Raider 2 (19xx)(-)(TW)[p].gbc" size="4194304" crc="717a5d19" sha1="5b9325b6e322a806677c6ea37a0054381609b99e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc16fc094ef9a0a">
+		<description>Tonka Construction Site (2002)(TDK Mediactive)(US)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tonka Construction Site (2002)(TDK Mediactive)(US)(beta).gbc" size="1048576" crc="901faa34" sha1="16fc094ef9a0af8376fedd6b7e6179d33c4f78bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce399c7d67e3bb">
+		<description>Tony Hawk's Pro Skater (2000)(Success)(JP)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tony Hawk's Pro Skater (2000)(Success)(JP)(proto).gbc" size="1048576" crc="48f17f97" sha1="e399c7d67e3bb1f466002f24f60b9c036e234c4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc52354d36a301b">
+		<description>Top Gear Pocket 2 Rev 1 (1999)(Kemco)(JP)(proto)[rumble]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Top Gear Pocket 2 Rev 1 (1999)(Kemco)(JP)(proto)[rumble].gbc" size="1048576" crc="fc680273" sha1="52354d36a301b26895eb26ecf152bf696656f4b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5d2ea0b976833">
+		<description>Top Gear Pocket 2 Rev 1 (2000)(Vatical Entertainment)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Top Gear Pocket 2 Rev 1 (2000)(Vatical Entertainment)(US)(proto).gbc" size="1048576" crc="eb0838d6" sha1="5d2ea0b976833f2e3866214e602993ee4653ab96"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc1e758ba0550fc">
 		<description>Top Gun - Fire Storm (U) (M6) [C][!]</description>
 		<year>????</year>
@@ -6999,6 +10179,36 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Top Gun - Fire Storm (U) (M6) [C][!].gbc" size="1048576" crc="283cf13a" sha1="1e758ba0550fc8d392b3726a9085aa6cf5455e3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8072c36e198bd">
+		<description>Towers II - Plight of the Stargazer (2000-05-07)(Telegames)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Towers II - Plight of the Stargazer (2000-05-07)(Telegames)(US)(proto).gbc" size="1048576" crc="5784bce0" sha1="8072c36e198bd5d102052d5175b88e1a45cca9e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce9db495992490">
+		<description>Towers II - Plight of the Stargazer (2000-08-05)(Telegames)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Towers II - Plight of the Stargazer (2000-08-05)(Telegames)(US)(proto).gbc" size="1048576" crc="39e4bfd0" sha1="e9db495992490d88a65df1741f0294357bb96998"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcda80a51109134">
+		<description>Towers II - Plight of the Stargazer (2001-12-09)(Telegames)(US)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Towers II - Plight of the Stargazer (2001-12-09)(Telegames)(US)(proto).gbc" size="1048576" crc="909143c0" sha1="da80a5110913422d48dd8d316fcfb9c8310e4501"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7022,6 +10232,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcda7e36f4b2a02">
+		<description>Turn-Battle System (2019-06-20)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Turn-Battle System (2019-06-20)(Toxworks).gb" size="1048576" crc="574ddcdc" sha1="da7e36f4b2a02676b49a45f126bcdfdfb138718f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcba010e303eb89">
+		<description>Turn-Battle System (2019-06-28)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Turn-Battle System (2019-06-28)(Toxworks).gb" size="1048576" crc="0a468450" sha1="ba010e303eb891a3e3eef940f421b1b24994c333"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc886c73348f4dd">
+		<description>Turok 2 - Seeds of Evil (1998)(Acclaim Entertainment)(EU-US)(M4)(proto)[GBC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Turok 2 - Seeds of Evil (1998)(Acclaim Entertainment)(EU-US)(M4)(proto)[GBC].gbc" size="1048576" crc="dae30864" sha1="886c73348f4dd50e3ea916f96b8daa2451997dcc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc51883c4cc1469">
 		<description>Tutty (Europe) (Demo)</description>
 		<year>????</year>
@@ -7039,6 +10279,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Ultimate Bugs Bunny Crazy Castle by Frank Maggiore (hack).gb" size="65536" crc="cc5725f3" sha1="9458424d8cac203e99df3b3e7e0422475082ef68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc658cc13bc436a">
+		<description>Vegas Games Rev 1 (2000)(3DO)(US)(M3)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Vegas Games Rev 1 (2000)(3DO)(US)(M3)(proto).gbc" size="1048576" crc="4167cf29" sha1="658cc13bc436a9ec613400b91288831900e3443e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7062,6 +10312,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc1f47b4622b32f">
+		<description>Virus Strike (2020-04-16)(it2)[web]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Virus Strike (2020-04-16)(it2)[web].gb" size="1048576" crc="e2bee580" sha1="1f47b4622b32f94c53b1511d55eebe0cd323ac9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9e70327173354">
+		<description>Wai Xing Tanxian Zhi Xingqiu Dazhan (19xx)(Sintax)(TW)[cr taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Wai Xing Tanxian Zhi Xingqiu Dazhan (19xx)(Sintax)(TW)[cr taizou][p].gbc" size="2097152" crc="21f84bf8" sha1="9e70327173354424229dde1edcdf763eb0687cd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc58bd186f4c8a0">
+		<description>Wai Xing Tanxian Zhi Xingqiu Dazhan (19xx)(Sintax)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Wai Xing Tanxian Zhi Xingqiu Dazhan (19xx)(Sintax)(TW)[p].gbx" size="2097216" crc="083c583b" sha1="58bd186f4c8a0b968054a18783cdae4462d7db10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4cf97ae41dac4">
+		<description>Wangzu Tiantang (19xx)(Sintax)(TW)[cr taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Wangzu Tiantang (19xx)(Sintax)(TW)[cr taizou][p].gbc" size="2097152" crc="ed67adac" sha1="4cf97ae41dac423fde7c725eb2a0c418ee811627"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc62969ca8ee21a">
+		<description>Wangzu Tiantang (19xx)(Sintax)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Wangzu Tiantang (19xx)(Sintax)(TW)[p].gbx" size="2097216" crc="f3e25fa3" sha1="62969ca8ee21a04a2e8a29c19caf8c78f50d2086"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc7f3c281cce36c">
 		<description>Wario Land 3 (JU) (M2) [C][T+Fre90_YF06]</description>
 		<year>????</year>
@@ -7069,6 +10369,76 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Wario Land 3 (JU) (M2) [C][T+Fre90_YF06].gbc" size="2097152" crc="96bcf3d4" sha1="7f3c281cce36c6e02a701ba76cd98a1baf961926"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc384f1f68e7331">
+		<description>Watashi no Restaurant (2002)(Kirat)(JP)(beta)[Beta 1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Watashi no Restaurant (2002)(Kirat)(JP)(beta)[Beta 1].gbc" size="1048576" crc="5ff6b852" sha1="384f1f68e7331f992f1d311f1433ea9f205eddcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc98ff6b68b7c79">
+		<description>Watashi no Restaurant (2002)(Kirat)(JP)(beta)[Beta 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Watashi no Restaurant (2002)(Kirat)(JP)(beta)[Beta 2].gbc" size="1048576" crc="8571099f" sha1="98ff6b68b7c79229100f58311ee41e3fec4802e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc343bf8ebb6fa3">
+		<description>Watashi no Restaurant (2002)(Kirat)(JP)(beta)[Beta 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Watashi no Restaurant (2002)(Kirat)(JP)(beta)[Beta 3].gbc" size="1048576" crc="a0ed2859" sha1="343bf8ebb6fa3ce89501f7c4c219fb7e864c38a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfd39cb84f71ea">
+		<description>Wendy - Der Traum von Arizona (2002)(Kiddinx)(DE)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Wendy - Der Traum von Arizona (2002)(Kiddinx)(DE)(beta).gbc" size="2097152" crc="20bdca55" sha1="fd39cb84f71ea414c0165a58bac98357739bc406"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2183208ce59ac">
+		<description>Will & Alyssa's Wedding - The Game (2019-12-11)(Game Buoy Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Will & Alyssa's Wedding - The Game (2019-12-11)(Game Buoy Games).gb" size="1048576" crc="4f6fafe7" sha1="2183208ce59acdcd4c72febec6a64b57d7bb4e47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc575b8b0f6fdb2">
+		<description>Wishing Sarah v1.1 (2020-06-10)(Asteristic Game Studio)(pt)[pt-br]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wishing Sarah v1.1 (2020-06-10)(Asteristic Game Studio)(pt)[pt-br].gb" size="524288" crc="ab6cf21e" sha1="575b8b0f6fdb2d41623e7f2fe9902c87236f1a36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0e32eb4ef5cc3">
+		<description>Wishing Sarah v1.1 (2020-06-10)(Asteristic Game Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wishing Sarah v1.1 (2020-06-10)(Asteristic Game Studio).gb" size="524288" crc="efa345cd" sha1="0e32eb4ef5cc3c456072892c376c5ee5d4fc78f1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7092,6 +10462,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbca5faa70adc93a">
+		<description>Xian Dan Chaoren - Ultraman (19xx)(Sintax)(TW)[cr taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Xian Dan Chaoren - Ultraman (19xx)(Sintax)(TW)[cr taizou][p].gbc" size="2097152" crc="fda80268" sha1="a5faa70adc93aedc0edbea1f026ef63d25e3e05d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfb0ea6ebcb1c4">
+		<description>Xian Dan Chaoren - Ultraman (19xx)(Sintax)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Xian Dan Chaoren - Ultraman (19xx)(Sintax)(TW)[p].gbx" size="2097216" crc="1ef8d5d6" sha1="fb0ea6ebcb1c496fad634d42e15108b27607823f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc51150a295d9eb">
+		<description>Xiao Taiji - Shenhua Lixian (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Xiao Taiji - Shenhua Lixian (19xx)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="fab140ab" sha1="51150a295d9eb840efaa1f67dba94c4bf57a7f5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc78ad577c4bb27">
+		<description>Xin Fengshenbang (2002)(Vast Fame)(TW)[f header taizou][p][Multicart Rip]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Xin Fengshenbang (2002)(Vast Fame)(TW)[f header taizou][p][Multicart Rip].gbc" size="2097152" crc="8c66647d" sha1="78ad577c4bb2791646186b7c197ffb678e856a90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8fc17199206e8">
+		<description>Xin Guangming Yu Hei'an 2 - Zhushen de Yichan (19xx)(Li Cheng)(TW)[f taizou][p][CBA095]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Xin Guangming Yu Hei'an 2 - Zhushen de Yichan (19xx)(Li Cheng)(TW)[f taizou][p][CBA095].gbc" size="1048576" crc="3e6213a0" sha1="8fc17199206e8f4f3e82e01c9a6f0bcf3da989c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2b8aa8b7d6d4f">
+		<description>Xin Shediao Yingxiong Chuan (19xx)(Li Cheng)(TW)[f taizou][p][CBA090]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Xin Shediao Yingxiong Chuan (19xx)(Li Cheng)(TW)[f taizou][p][CBA090].gbc" size="1048576" crc="c8cbb920" sha1="2b8aa8b7d6d4f960cc1526b17fb7c9a15efc94bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc31de5b7ad8530">
+		<description>Xingqiu Dazhan II - Kelong Ren Zhanyi (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Xingqiu Dazhan II - Kelong Ren Zhanyi (19xx)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="e8fd000f" sha1="31de5b7ad853002be1a79c97370cb1c8a4c0b467"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc86e2b619976d2">
+		<description>Xintiao Huiyi (19xx)(-)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Xintiao Huiyi (19xx)(-)(TW)[p].gbc" size="4194304" crc="104968e7" sha1="86e2b619976d22818e4a7c23d7f8a97e9358e51e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfbe9be0231eae">
+		<description>Xiyou Ji (19xx)(Vast Fame)(TW)[f taizou][p][CBA076]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Xiyou Ji (19xx)(Vast Fame)(TW)[f taizou][p][CBA076].gbc" size="524288" crc="552715dc" sha1="fbe9be0231eae7e802dcfec1b2c1babb9e951134"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbce235bd380a11f">
 		<description>Xshoot_gb</description>
 		<year>????</year>
@@ -7102,6 +10562,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc5da3ad1c5354f">
+		<description>Xtreme Sports (2023-08-15)(WayForward)[Switch]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Xtreme Sports (2023-08-15)(WayForward)[Switch].gbc" size="4194304" crc="c0437e08" sha1="5da3ad1c5354f29a74c571c2b598da96213afbe1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca9f67640d2077">
+		<description>Xtreme Wheels (2000)(Spike)(JP)[NP][poss proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Xtreme Wheels (2000)(Spike)(JP)[NP][poss proto].gbc" size="1048576" crc="30132ab8" sha1="a9f67640d20771e64b1474144fcca9beebdde85d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcd2c2b8a3905ad">
 		<description>Xtreme Wheels (Europe) [b]</description>
 		<year>????</year>
@@ -7109,6 +10589,46 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Xtreme Wheels (Europe) [b].gbc" size="1048576" crc="b4ba03e6" sha1="d2c2b8a3905add30dd5baa673817e57ce985d160"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1f82018ff27ea">
+		<description>Yingxiong Jian 2 (19xx)(Li Cheng)(TW)[f taizou][p][CBA075]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Yingxiong Jian 2 (19xx)(Li Cheng)(TW)[f taizou][p][CBA075].gbc" size="2097152" crc="33670bc2" sha1="1f82018ff27eaab8883bdee5bd11f5ba981448d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd393e35f4fdb6">
+		<description>Yixing VS Tiexue Zhanshi (19xx)(Sintax)(TW)[cr taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Yixing VS Tiexue Zhanshi (19xx)(Sintax)(TW)[cr taizou][p].gbc" size="4194304" crc="db8c4c3d" sha1="d393e35f4fdb68b919bfb74de7ac0b8a68e43fc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf6e5b5c464769">
+		<description>Yixing VS Tiexue Zhanshi (19xx)(Sintax)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097216">
+				<rom name="Yixing VS Tiexue Zhanshi (19xx)(Sintax)(TW)[p].gbx" size="2097216" crc="ef55f44d" sha1="f6e5b5c464769028fbd8e21597bbe628609e528b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3139d90613af0">
+		<description>Yongzhe Dou E Long VIII (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Yongzhe Dou E Long VIII (19xx)(Sintax)(TW)[f taizou][p].gbc" size="1048576" crc="3a35118c" sha1="3139d90613af07cee195ba06d522ce116abef790"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7132,6 +10652,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcf16e2d8d2ce20">
+		<description>Yu-Gi-Oh! - Dark Duel Stories (2003)(Konami)(EU)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Yu-Gi-Oh! - Dark Duel Stories (2003)(Konami)(EU)(beta).gbc" size="4194304" crc="1a60f198" sha1="f16e2d8d2ce20149c208621c3aa1309f80ce2390"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7b44bee756fa5">
+		<description>Yu-Gi-Oh! - Duel des Tenebres (2003)(Konami)(FR)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Yu-Gi-Oh! - Duel des Tenebres (2003)(Konami)(FR)(beta).gbc" size="4194304" crc="c0dd1b26" sha1="7b44bee756fa5c81e050438f81f97fe56884a45d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc62ddca80f1a55">
 		<description>Yu-Gi-Oh! Duel Monsters (J) [S][T+Chi][b1]</description>
 		<year>????</year>
@@ -7139,6 +10679,136 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Yu-Gi-Oh! Duel Monsters (J) [S][T+Chi][b1].gb" size="2097152" crc="5092be10" sha1="62ddca80f1a5528239245146c010838d738f4a6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc09b0f8fe8c794">
+		<description>Yuenan Zhanyi - Chong Jian Tian Ri (19xx)(BBD)(TW)[p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Yuenan Zhanyi - Chong Jian Tian Ri (19xx)(BBD)(TW)[p].gbc" size="2097152" crc="c19b912a" sha1="09b0f8fe8c7948e847ad01f24d05513c49b77ad5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc57a4d83ab811d">
+		<description>Yuenan Zhanyi 3 (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Yuenan Zhanyi 3 (19xx)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="f4e99056" sha1="57a4d83ab811d71848e181abbc26965fc8fd674d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8899e286f702e">
+		<description>Yuenan Zhanyi X - Shenru Dihou (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Yuenan Zhanyi X - Shenru Dihou (19xx)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="019d51e1" sha1="8899e286f702e766c256baae93bf42a5f0fa7489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce765d6915f543">
+		<description>Yuuto Ichika Makes Friends (2019-05-18)(Lame Dimension)(en-ja)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Yuuto Ichika Makes Friends (2019-05-18)(Lame Dimension)(en-ja).gb" size="524288" crc="8a667058" sha1="e765d6915f543a5a65e8be440b3f29eb674a5448"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc99d587b4baf36">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (1998-06-30)(Nintendo)(JP)(beta)[GBC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zelda no Densetsu - Yume o Miru Shima DX (1998-06-30)(Nintendo)(JP)(beta)[GBC].gbc" size="1048576" crc="f46f0ced" sha1="99d587b4baf363a798fdb8c1fca42fe1be061c2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8d7ab85686ced">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (1998-07-05)(Nintendo)(JP)(beta)[GBC][18.00.56]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zelda no Densetsu - Yume o Miru Shima DX (1998-07-05)(Nintendo)(JP)(beta)[GBC][18.00.56].gbc" size="1048576" crc="11290c31" sha1="8d7ab85686ced1642b9519bcb6a3e157c6bd8938"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca068abd403a1d">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (1998-07-05)(Nintendo)(JP)(beta)[GBC][21.55.32]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zelda no Densetsu - Yume o Miru Shima DX (1998-07-05)(Nintendo)(JP)(beta)[GBC][21.55.32].gbc" size="1048576" crc="3c63e083" sha1="a068abd403a1dad70bd9b53d215995f8159aea47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0b6f595e5f306">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (1998-07-07)(Nintendo)(JP)(beta)[GBC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zelda no Densetsu - Yume o Miru Shima DX (1998-07-07)(Nintendo)(JP)(beta)[GBC].gbc" size="1048576" crc="879cdf7d" sha1="0b6f595e5f306099d5c1bd7aab1156c2a9c917a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc08dea3565740a">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (1998-07-14)(Nintendo)(JP)(beta)[GBC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zelda no Densetsu - Yume o Miru Shima DX (1998-07-14)(Nintendo)(JP)(beta)[GBC].gbc" size="1048576" crc="13c76902" sha1="08dea3565740a4b5bd5c13e82adb61e3d5669a31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc0348d41ab8e0">
+		<description>Zhen Sanguo Wushuang 2 - Shin Sangokumusou (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Zhen Sanguo Wushuang 2 - Shin Sangokumusou (19xx)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="8de5f8d5" sha1="c0348d41ab8e0c33a214907616463236aa4ad4db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8c8adfbebad81">
+		<description>Zhihuan Wang - Shoubu Qu (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Zhihuan Wang - Shoubu Qu (19xx)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="49e77dd9" sha1="8c8adfbebad81038795e30c778382ffb80e0d88d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2775044c3a854">
+		<description>Zhizhu Xia III - Dianying Ban (19xx)(Sintax)(TW)[f taizou][p]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Zhizhu Xia III - Dianying Ban (19xx)(Sintax)(TW)[f taizou][p].gbc" size="4194304" crc="66442e7d" sha1="2775044c3a8547b13e2d934418045ab7eeb70906"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccba5d2fc5dbbe">
+		<description>Zidane - Football Generation (2001)(Cryo Interactive)(EU)(M5)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zidane - Football Generation (2001)(Cryo Interactive)(EU)(M5)(beta).gbc" size="1048576" crc="c2fde3c4" sha1="cba5d2fc5dbbe184e9ed58afe8525044bd8ea040"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7169,6 +10839,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Zoo Block [ROM].gb" size="32768" crc="2b435bc9" sha1="9425bad5ee6a373a473672cffbf10b8df34fe62e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc76cae65f17be4">
+		<description>Zoomar (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Zoomar (19xx)(-).gb" size="32768" crc="76d26c54" sha1="76cae65f17be4ee8dd5417134c838e829d2e7c34"/>
 			</dataarea>
 		</part>
 	</software>
