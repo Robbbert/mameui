@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 9 -->
+<!-- Number of items in this list = 12 -->
 <softwarelist name="pasopia7_cass" description="pasopia7_cass loose roms">
 	<software name="pa7538562b9c80f0">
 		<description>3D Golf Simulation (19xx)(T&E)</description>
@@ -12,6 +12,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pa7d4fd798a2e68f">
+		<description>Chuuichiyou Suugaku (1984-12)(Oota, Hidek)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="1797861">
+				<rom name="Chuuichiyou Suugaku (1984-12)(Oota, Hidek)(JP)[Micom BASIC].wav" size="1797861" crc="9521b181" sha1="d4fd798a2e68f83fdf01b5ac997cb84099a08988"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pa7881de0a1cfabe">
 		<description>Door Door</description>
 		<year>????</year>
@@ -19,6 +29,26 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="18288684">
 				<rom name="Door Door.wav" size="18288684" crc="5d33ec19" sha1="881de0a1cfabe59ffb744671422e93de2def52f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7b4fe5ccf76b2c">
+		<description>Fighting Heri (1984-12)(Keroyon Soft)(JP)[f][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="1406227">
+				<rom name="Fighting Heri (1984-12)(Keroyon Soft)(JP)[f][Micom BASIC].wav" size="1406227" crc="9b95dff7" sha1="b4fe5ccf76b2c9ef4d21af910b846f0d7e062a76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7b2c5a15a3555e">
+		<description>Fighting Heri (1984-12)(Keroyon Soft)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="1408078">
+				<rom name="Fighting Heri (1984-12)(Keroyon Soft)(JP)[Micom BASIC].wav" size="1408078" crc="9745bed6" sha1="b2c5a15a3555e7528acb369a4e0482e24152d6be"/>
 			</dataarea>
 		</part>
 	</software>

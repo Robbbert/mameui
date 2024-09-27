@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 258 -->
+<!-- Number of items in this list = 259 -->
 <softwarelist name="oric1_flop" description="oric1_flop loose roms">
 	<software name="orif92e3eca92d51">
 		<description>3dfongus</description>
@@ -499,6 +499,16 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="192256">
 				<rom name="COSMOS99.dsk" size="192256" crc="477b81ba" sha1="0bf2c7d4ce58b9c5d72210b3fbcdb4163aa622c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orie495b8dfc23fa">
+		<description>CPM-65 (2024-05-03)(Given, David)(CH)(en)(BSD-2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="512256">
+				<rom name="CPM-65 (2024-05-03)(Given, David)(CH)(en)(BSD-2).dsk" size="512256" crc="9de08e3d" sha1="e495b8dfc23fa7f75951abc584a779388976b869"/>
 			</dataarea>
 		</part>
 	</software>

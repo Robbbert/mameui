@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 15 -->
+<!-- Number of items in this list = 16 -->
 <softwarelist name="pasopia_cass" description="pasopia_cass loose roms">
 	<software name="pas113043eab3479">
 		<description>2001Nen Uchu no Tabi Part II</description>
@@ -49,6 +49,16 @@
 		<part name="cass" interface="pasopia_cass">
 			<dataarea name="cass" size="31960108">
 				<rom name="Catch Baby.wav" size="31960108" crc="1a3f0166" sha1="c25f70e9efc1f4e7c4493640b87f6815db906853"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas8876046e974a9">
+		<description>Caterpillar in the Amida, The (1984-12)(Iwanaga, Toshihide)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="3365211">
+				<rom name="Caterpillar in the Amida, The (1984-12)(Iwanaga, Toshihide)(JP)[Micom BASIC].wav" size="3365211" crc="56d57215" sha1="8876046e974a91cf284e6f916307d89fa8070ed6"/>
 			</dataarea>
 		</part>
 	</software>
