@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 135 -->
+<!-- Number of items in this list = 136 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a52db1ab57771b0f">
 		<description>(demo)Atari PAM Final System Test v1.1 (1982)(Atari)</description>
@@ -1349,6 +1349,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Xagon (XL Conversion).a52" size="32768" crc="338769e3" sha1="bc3e16417f95f4465b2fc53ad72e86092f8ae990"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52f2c2e5fff6209">
+		<description>Xshoot_atari5200</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Xshoot_atari5200.rom" size="32768" crc="719ba5cf" sha1="f2c2e5fff620954240ddc7c07602bb7cc984b0c5"/>
 			</dataarea>
 		</part>
 	</software>

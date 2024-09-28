@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="qx10_flop" description="qx10_flop loose roms">
+	<software name="eqxb8a4d5ab8821b">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="430336">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio).dsk" size="430336" crc="1ddd8faf" sha1="b8a4d5ab8821b66293903ead42668762fb2c5b70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxebb01fe70bef8">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)[turn-based]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="430336">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[turn-based].dsk" size="430336" crc="4ab7920a" sha1="ebb01fe70bef89f1c89ab9087ab0b414b0919251"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx46563b9b42278">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="430336">
+				<rom name="Elite Planet Browser.dsk" size="430336" crc="58ee0346" sha1="46563b9b42278b448c5816d343aea352c2ad3f15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx367b62aefec3f">
+		<description>MasterMind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="430336">
+				<rom name="MasterMind.dsk" size="430336" crc="76c778b6" sha1="367b62aefec3f4cc1d7797220353c6f551d27f34"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

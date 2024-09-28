@@ -1,7 +1,47 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 576 -->
+<!-- Number of items in this list = 591 -->
 <softwarelist name="lynx" description="lynx loose roms">
+	<software name="lnx2a1c742ad70b9">
+		<description>(demo)3Days (2024-02)(42Bastian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="(demo)3Days (2024-02)(42Bastian).lnx" size="262208" crc="dd3d9229" sha1="2a1c742ad70b9e48e37e25d6170940bb8c9780e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxb34c54df36d32">
+		<description>(demo)BubbleUniverse4Lynx (2024-01)(42Bastian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="(demo)BubbleUniverse4Lynx (2024-01)(42Bastian).lnx" size="262208" crc="37e7b0ff" sha1="b34c54df36d3202d6c17d5d82571b68aaf7087ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx0cd5636c83695">
+		<description>(demo)BubbleUniverse4LynxV2 (2024-02)(42Bastian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="(demo)BubbleUniverse4LynxV2 (2024-02)(42Bastian).lnx" size="262208" crc="b3280dce" sha1="0cd5636c8369574600ad696d7e2be236662e1a6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxdcda94de29d63">
+		<description>(demo)lynxYARC512 (2024-02)(42Bastian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="(demo)lynxYARC512 (2024-02)(42Bastian).lnx" size="262208" crc="f2fa2c28" sha1="dcda94de29d639cb2d520413dd1a2bf26d5c07a5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lnx9804fa8b478c3">
 		<description>(demo)Mega Man Plus Demo (199x) (PD)</description>
 		<year>????</year>
@@ -89,6 +129,36 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="524352">
 				<rom name="(demo)othello_advert.lnx" size="524352" crc="7ee610f6" sha1="3b5259b0669c10e177870d02e2fbd80fe12ad1b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx1938db7750d22">
+		<description>(demo)schiebefix (2024-02)(42Bastian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="(demo)schiebefix (2024-02)(42Bastian).lnx" size="262208" crc="684f78c4" sha1="1938db7750d2285100810b653dc69116ea425eb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx5ea11fedccdc4">
+		<description>(demo)starfield (2024-02)(42Bastian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="(demo)starfield (2024-02)(42Bastian).lnx" size="262208" crc="4cbadae2" sha1="5ea11fedccdc47fbfebd051b3c7f6d51d329d35b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx84be0608adf61">
+		<description>(demo)Twister249 (2023-12)(42Bastian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="(demo)Twister249 (2023-12)(42Bastian).lnx" size="262208" crc="fdd44c11" sha1="84be0608adf615b6363385aab1fad77cf585c7c6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1469,6 +1539,66 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="8527">
 				<rom name="Corridor Routine (1998)(Domin, Matthias)(PD).o" size="8527" crc="14631a57" sha1="5f4f768d077e04545e32d593babab00894895c3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx7166a739b84e2">
+		<description>Cross Bomber (2024-02-27)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="8936">
+				<rom name="Cross Bomber (2024-02-27)(Caruso, Fabrizio).lnx" size="8936" crc="355d17e7" sha1="7166a739b84e26c7b8f09be3e0c739d30742d0c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxce4f73aee8b94">
+		<description>Cross Chase (2024-02-27)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="15597">
+				<rom name="Cross Chase (2024-02-27)(Caruso, Fabrizio).lnx" size="15597" crc="5d05c2ac" sha1="ce4f73aee8b94db6b00bc91cc696645f03d4d68f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx7f0eb791c92a8">
+		<description>Cross Horde (2024-02-27)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="12667">
+				<rom name="Cross Horde (2024-02-27)(Caruso, Fabrizio).lnx" size="12667" crc="714a1052" sha1="7f0eb791c92a80d716bbbdb8233d9d43ebe93114"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxde4abfe2b1158">
+		<description>Cross Shoot (2024-02-27)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="20992">
+				<rom name="Cross Shoot (2024-02-27)(Caruso, Fabrizio).lnx" size="20992" crc="219903fb" sha1="de4abfe2b11586ffe9b9c775f8b4583474df2752"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxd888ca495fa5a">
+		<description>Cross Snake (2024-02-27)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="14264">
+				<rom name="Cross Snake (2024-02-27)(Caruso, Fabrizio).lnx" size="14264" crc="84481120" sha1="d888ca495fa5ad90858e3008b457cd80767b3195"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxcea62298ddb95">
+		<description>Cross Verbix (2024-02-27)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="16061">
+				<rom name="Cross Verbix (2024-02-27)(Caruso, Fabrizio).lnx" size="16061" crc="a3f336e1" sha1="cea62298ddb951ffdae03779e0ce1121e5528556"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4592,6 +4722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lnx78451c0d3e5c3">
+		<description>Shuriken (2024-02-27)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="14875">
+				<rom name="Shuriken (2024-02-27)(Caruso, Fabrizio).lnx" size="14875" crc="c0bec79a" sha1="78451c0d3e5c3d13c97df4777ee8137ec9e9f7af"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lnx0e840afd99761">
 		<description>shuttle_pal_8_83</description>
 		<year>????</year>
@@ -4909,6 +5049,16 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Steel Talons (UE).lnx" size="262208" crc="5c3aed3d" sha1="7a7a59a8c7d0a79005feeb97aca1782be606a9bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx4305babdf7882">
+		<description>Stinger (2024-02-27)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="15497">
+				<rom name="Stinger (2024-02-27)(Caruso, Fabrizio).lnx" size="15497" crc="904cc3b1" sha1="4305babdf78824b1d47d8217ab283efda57a4484"/>
 			</dataarea>
 		</part>
 	</software>

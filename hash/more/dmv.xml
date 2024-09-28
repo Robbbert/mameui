@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="dmv" description="dmv loose roms">
+	<software name="dmv3f5749d9ac7fa">
+		<description>580TEST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="799655">
+				<rom name="580TEST.mfi" size="799655" crc="0fb67996" sha1="3f5749d9ac7fa3fc42703fd15097f357bd2851d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="dmv794eccd3d450e">
+		<description>580TEST_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="572920">
+				<rom name="580TEST_1.mfi" size="572920" crc="6fb8a3c9" sha1="794eccd3d450ec4d8515bd34a6196ae09b605d8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="dmvcd1c686d522b4">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348416">
+				<rom name="Elite Planet Browser.dsk" size="348416" crc="fbd47225" sha1="cd1c686d522b461117050ffce7e2e7cf7ad7be29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="dmveec10c5d53700">
+		<description>MasterMind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348416">
+				<rom name="MasterMind.dsk" size="348416" crc="5ba3b017" sha1="eec10c5d5370081679bcbf65920e819bd78dacab"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 167 -->
+<!-- Number of items in this list = 177 -->
 <softwarelist name="coco_flop" description="coco_flop loose roms">
+	<software name="coce2238f4876cf6">
+		<description>(demo)Rotag (2024-02)(Desire)(CoCo 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="(demo)Rotag (2024-02)(Desire)(CoCo 3).dsk" size="161280" crc="69ef7641" sha1="e2238f4876cf65e4cab6061eaaf7c23f410b0745"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="coc11192fa2fc0fd">
 		<description>6847bug</description>
 		<year>????</year>
@@ -9,6 +19,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="6847bug.dsk" size="161280" crc="21a93968" sha1="11192fa2fc0fd33d983112eabf60fe7facec2080"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce70f154aa7e11">
+		<description>A1RL0CK (2023-06-06)(Innocenti, Marco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="A1RL0CK (2023-06-06)(Innocenti, Marco).dsk" size="161280" crc="f84b4e45" sha1="e70f154aa7e11af12c7b6390ad4f74ac9834d035"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39,6 +59,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="AIR-WOLF-DEMO.dsk" size="161280" crc="1fcaa00f" sha1="b476d3164792d911fedf13b1bb3db65e2d1c39d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc873d0f70861ed">
+		<description>Apple2CoCo v1.0 (2024-02-20)(Wallace, Todd)(CoCo 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="Apple2CoCo v1.0 (2024-02-20)(Wallace, Todd)(CoCo 3).dsk" size="161280" crc="1d3ffbfe" sha1="873d0f70861edd8258e87df0c6ff0c380418b6b8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -152,6 +182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="coc7fa01c032e4a9">
+		<description>Blorp! (2023-06-06)(Sijnstra, Shawn)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="Blorp! (2023-06-06)(Sijnstra, Shawn).dsk" size="161280" crc="f84cf973" sha1="7fa01c032e4a9000ceea97215902768e9b14ab8a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cocacedea394e95c">
 		<description>CBASIC3</description>
 		<year>????</year>
@@ -159,6 +199,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="CBASIC3.dsk" size="161280" crc="6ac12d94" sha1="acedea394e95c97f48a235bcf704c19b8d2a0e92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc82609825f7d33">
+		<description>Clean Getaway, A (2023-06-06)(Bub, Michael)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="Clean Getaway, A (2023-06-06)(Bub, Michael).dsk" size="161280" crc="9807fdf1" sha1="82609825f7d33758f76c3b35c3d3f7500d83f219"/>
 			</dataarea>
 		</part>
 	</software>
@@ -452,6 +502,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="coca5b7c9663898c">
+		<description>Falling to Pieces (2023-06-06)(Girelli, Gianluca)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="Falling to Pieces (2023-06-06)(Girelli, Gianluca).dsk" size="161280" crc="133b0845" sha1="a5b7c9663898c64e50ee4addec09d2566bfa62a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocd398e58f3f1fa">
+		<description>Fantasy Dimension, The (2023-06-06)(Berntsson, Johan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="Fantasy Dimension, The (2023-06-06)(Berntsson, Johan).dsk" size="161280" crc="dfb7f95a" sha1="d398e58f3f1fa9b7989b3ccc6f74b9791330a18c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cocd0f2368c69c6c">
 		<description>FLIGHT-SIM-I</description>
 		<year>????</year>
@@ -509,6 +579,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="GAMES.dsk" size="161280" crc="f5aa0626" sha1="21a61e95f8f672d0ea60b7cd69720eef83544476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6cde1127f935e">
+		<description>Gfx Launcher v1.0 (2022-11-03)(Wallace, Todd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="Gfx Launcher v1.0 (2022-11-03)(Wallace, Todd).dsk" size="161280" crc="a7795e07" sha1="6cde1127f935e536747fcbf545fb74a909ed41a7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -599,6 +679,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="KC-COCO-DISK.dsk" size="161280" crc="59c20dda" sha1="1bb9ab80f5a1f765ad9e21ce002a85f83d141f98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc7d479969b6c96">
+		<description>Lucid Night (2023-06-06)(Cooke, Dee)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="Lucid Night (2023-06-06)(Cooke, Dee).dsk" size="161280" crc="7816ee42" sha1="7d479969b6c968817e82acb60ad4f9bf1821e7a6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1369,6 +1459,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="ST-GRAPHICS-FILES.dsk" size="161280" crc="c69057ba" sha1="dc0351a5a6e6c0f8208b91cb940267b7889aa68c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc80f297bc67933">
+		<description>Submarine Sabotage (2023-06-06)(Francis, Garry)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="Submarine Sabotage (2023-06-06)(Francis, Garry).dsk" size="161280" crc="344c3ee1" sha1="80f297bc67933c70259ce560bf43076c905e6a3a"/>
 			</dataarea>
 		</part>
 	</software>

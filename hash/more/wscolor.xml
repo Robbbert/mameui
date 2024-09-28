@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 55 -->
+<!-- Number of items in this list = 56 -->
 <softwarelist name="wscolor" description="wscolor loose roms">
 	<software name="wscf1ccdb96d67a8">
 		<description>(demo)finally.emu</description>
@@ -19,6 +19,26 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(demo)finally.hw.wsc" size="2097152" crc="4c75cad7" sha1="a3b5642be39bbbd9fc85ce596f8b5d3bf6503cb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscc373437699371">
+		<description>(demo)Girl Demo (2001)(Tomasz Slanina)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(demo)Girl Demo (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="eaadc794" sha1="c3734376993719a8d35c45663978d4872eb3b8d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscc50abf0b9db7e">
+		<description>(demo)HBlank Interrupt Demo (19xx)(-)(PD)[wsc-only]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(demo)HBlank Interrupt Demo (19xx)(-)(PD)[wsc-only].wsc" size="1048576" crc="cf0366ff" sha1="c50abf0b9db7ef5a84f9b56da037aae04ab63c89"/>
 			</dataarea>
 		</part>
 	</software>
@@ -259,16 +279,6 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Final Fantasy IV (2002-03-28)(Squaresoft)[tr en MottZilla][v0.5-20040711].wsc" size="4194304" crc="e677a591" sha1="1c8bbb23532454103ccecff1542acefc223125ea"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="wscc373437699371">
-		<description>Girl Demo (2001)(Tomasz Slanina)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Girl Demo (2001)(Tomasz Slanina)(PD).wsc" size="524288" crc="eaadc794" sha1="c3734376993719a8d35c45663978d4872eb3b8d1"/>
 			</dataarea>
 		</part>
 	</software>

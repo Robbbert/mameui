@@ -46,7 +46,7 @@ public:
 		, m_slave_tx(1)
 		, m_slave_flag(1)
 		, m_rtc_irq(CLEAR_LINE)
-		, m_kbrequest(1)
+		//, m_kbrequest(1)
 	{ }
 
 	void hx20(machine_config &config);
