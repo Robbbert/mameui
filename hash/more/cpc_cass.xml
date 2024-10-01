@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 119 -->
+<!-- Number of items in this list = 121 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc82fa11a8ebd7f">
 		<description>Amstrad Action Covertape 72</description>
@@ -1169,6 +1169,26 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="29148">
 				<rom name="Magica.cdt" size="29148" crc="270ee146" sha1="5c9f6986156aba3b86632fec6f7bb7b74e0c2b3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5f7552926263c">
+		<description>Snake v1.0 (2021-02-06)(Berge, Edouard)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="2125">
+				<rom name="Snake v1.0 (2021-02-06)(Berge, Edouard).cdt" size="2125" crc="0bdcd394" sha1="5f7552926263c7df109fe9c3e341fdef49763e76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc37820f2a694d6">
+		<description>snake</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="2125">
+				<rom name="snake.cdt" size="2125" crc="3116a589" sha1="37820f2a694d6d800f1a66c7d8535b1657a71e77"/>
 			</dataarea>
 		</part>
 	</software>

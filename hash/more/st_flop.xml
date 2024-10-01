@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 90 -->
+<!-- Number of items in this list = 91 -->
 <softwarelist name="st_flop" description="st_flop loose roms">
 	<software name="st2a56c837389d2a">
 		<description>12 Days of Christmas (19xx)(Effect)(Disk 1 of 2)</description>
@@ -549,6 +549,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="931924">
 				<rom name="Rampage (1986)(Activision) & Wizball (1987)(Ocean).stx" size="931924" crc="94879aed" sha1="5557c9bee1d8b8cbd6ed787b2ae539db8f21f0cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="stf4723c03c74a3a">
+		<description>RANDOMAZER 1.02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="RANDOMAZER 1.02.st" size="819200" crc="293423cc" sha1="f4723c03c74a3ae293152016ace75f9cd641b260"/>
 			</dataarea>
 		</part>
 	</software>

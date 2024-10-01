@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7672 -->
+<!-- Number of items in this list = 7674 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -46812,6 +46812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc9c87219f2dea2">
+		<description>Mini Snake v1.1 (UK) (2021)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Mini Snake v1.1 (UK) (2021).dsk" size="194816" crc="196d34e0" sha1="9c87219f2dea2e9fb3eb4904748126f3540c2c1f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc4144f52f6c0b0">
 		<description>MINIMEE1</description>
 		<year>????</year>
@@ -64299,6 +64309,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="SML.dsk" size="194816" crc="5c9807ea" sha1="5f3149fc7d2cb7968bbcf9e799597d57d3b6fad4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc2040dbe2d1bd3">
+		<description>snake</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="snake.dsk" size="194816" crc="4fbd83d5" sha1="2040dbe2d1bd3a60eeac4c118f2d384a9e6887c3"/>
 			</dataarea>
 		</part>
 	</software>

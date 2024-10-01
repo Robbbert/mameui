@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 627 -->
+<!-- Number of items in this list = 630 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -9,16 +9,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="20416">
 				<rom name="(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP].rom" size="20416" crc="304026cf" sha1="972638a188b4ab13633be02decd20f49a581373d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="colb3f191439440e">
-		<description>(demo)Air Battle (2000 Daniel Bienvenu) [DEMO]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="23808">
-				<rom name="(demo)Air Battle (2000 Daniel Bienvenu) [DEMO].rom" size="23808" crc="7c66aba6" sha1="b3f191439440e9682183e703f9018f29fd1355f0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -59,6 +49,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="12725">
 				<rom name="(demo)Robobug (2012 Nicolas Campion).rom" size="12725" crc="334d491e" sha1="7a31ed81c072cef7c7f0fdac81236929a6e87042"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col6a8ac08fac29d">
+		<description>(demo)Search for the Stolen Crown Jewels 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="31249">
+				<rom name="(demo)Search for the Stolen Crown Jewels 3.rom" size="31249" crc="81a8def4" sha1="6a8ac08fac29d535aaffae31b776c1a85c8e8e19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -129,6 +129,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="AE (2012)(Team Pixelboy).rom" size="32768" crc="85f2c3ff" sha1="bb119fb08df7a5e1bc8752de82dd247a5815fb8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colb3f191439440e">
+		<description>Air Battle V0.4 by Daniel Bienvenu (July 10) (2000) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="23808">
+				<rom name="Air Battle V0.4 by Daniel Bienvenu (July 10) (2000) (PD).rom" size="23808" crc="7c66aba6" sha1="b3f191439440e9682183e703f9018f29fd1355f0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1619,6 +1629,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Donuts Man (2021)(Cote Gamers).bin" size="32768" crc="517314b1" sha1="0e2bce2fc19383b9c8b1a428fba4ae8d9d96d052"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col699915e4158b2">
+		<description>doublebreakout_23_03_2001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="doublebreakout_23_03_2001.rom" size="32768" crc="1229e811" sha1="699915e4158b2c3d127e5924a14146a3c71d6a8e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3779,6 +3799,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="One on One Basketball (1984) (Micro Fun).rom" size="24576" crc="17c77c3a" sha1="71689ef2af8351bbe70b66dbb89cd252f276e6cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col7b6b2a2f75c30">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="9398">
+				<rom name="osotos.rom" size="9398" crc="8c5b9d1f" sha1="7b6b2a2f75c30cd07b56d03d11f8022748abddc8"/>
 			</dataarea>
 		</part>
 	</software>

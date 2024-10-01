@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="fm7_flop" description="fm7_flop loose roms">
+	<software name="fm7cd3e7cd136d1c">
+		<description>Front Line (1983)(Nidecom Carry Soft)(Taito)(Hiroshi Hasegawa)(Tetsuya Sasaki)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="Front Line (1983)(Nidecom Carry Soft)(Taito)(Hiroshi Hasegawa)(Tetsuya Sasaki).D77" size="348848" crc="d26b00ec" sha1="cd3e7cd136d1cce093f4d301ac2b5118680c15d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7ac884805a4df2">
+		<description>Jelda (1984)(Carry Lab)(Zero Soft)(Hiroto Sasaki)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="Jelda (1984)(Carry Lab)(Zero Soft)(Hiroto Sasaki).D77" size="348848" crc="7c32128e" sha1="ac884805a4df248a1a4c7435cff68b72c698ce85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7700f442416bfd">
+		<description>lupin_the_third_the_castle_of_cagliostro_(1985)(toho)(jp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="697696">
+				<rom name="lupin_the_third_the_castle_of_cagliostro_(1985)(toho)(jp).d77" size="697696" crc="ca22a873" sha1="700f442416bfd2a97cf5a8521d6111fe2bf7e76b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm770057ed747161">
+		<description>Space Bee (1983)(Carry Lab)(Zero Soft)(Hiroshi Hasegawa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="Space Bee (1983)(Carry Lab)(Zero Soft)(Hiroshi Hasegawa).D77" size="348848" crc="b7a3f132" sha1="70057ed7471613a8e5c2ca978220e920855b108d"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
