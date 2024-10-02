@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 258 -->
+<!-- Number of items in this list = 261 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -759,6 +759,36 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="felipe em acao (b).sms" size="32768" crc="ccb2cab4" sha1="b7601ff0116490b85c9bd50109db175ce2dd9104"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms28af0d81b2aea">
+		<description>Frontier Force (Alpha Demo V0.1.1)(2024)(badcomputer0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Frontier Force (Alpha Demo V0.1.1)(2024)(badcomputer0).sms" size="262144" crc="9e01f15d" sha1="28af0d81b2aeae49971f7c4d355296b5a04cf5f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms518364a8f2ae6">
+		<description>Frontier Force (Alpha Demo V0.1.2.2)(2024)(badcomputer0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Frontier Force (Alpha Demo V0.1.2.2)(2024)(badcomputer0).sms" size="262144" crc="aba14731" sha1="518364a8f2ae62b47ecd65c3bd7e4661d3046020"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smseb347f7a60126">
+		<description>Frontier Force (Alpha Demo v0.1.2.3)(2024)(helpcomputer0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Frontier Force (Alpha Demo v0.1.2.3)(2024)(helpcomputer0).sms" size="262144" crc="def51eb0" sha1="eb347f7a601267bacd50c241ef339019e33bb334"/>
 			</dataarea>
 		</part>
 	</software>

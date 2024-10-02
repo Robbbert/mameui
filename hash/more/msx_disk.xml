@@ -1,7 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 63 -->
+<!-- Number of items in this list = 101 -->
 <softwarelist name="msx_disk" description="msx_disk loose roms">
+	<software name="msx5d68acb2b56ed">
+		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="fbd10842" sha1="5d68acb2b56edee636def515034219c3afc4121b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx42ec3f6c67ea8">
+		<description>34 -Tsuruma-san Shitou-hen- (1985-01)(Godai, Yuusaku)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="34 -Tsuruma-san Shitou-hen- (1985-01)(Godai, Yuusaku)(JP)[Micom BASIC].dsk" size="737280" crc="20d5aacc" sha1="42ec3f6c67ea86274e8e9914d3957d8bceb6cbc0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx65365093ca0bc">
+		<description>3D ALIEN TOWN (1985-01)(KIMCO)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="3D ALIEN TOWN (1985-01)(KIMCO)(JP)[Micom BASIC].dsk" size="737280" crc="35a00593" sha1="65365093ca0bc3b4099e65b9ae9b939f27f5f630"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxf0ed6e26e4d81">
 		<description>512col</description>
 		<year>????</year>
@@ -9,6 +39,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="512col.dsk" size="737280" crc="09f3d131" sha1="f0ed6e26e4d81f0879603cf3ddda3af65a25fd31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9471dcba6e3cd">
+		<description>A1RL0CK (2023-06-06)(Innocenti, Marco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="A1RL0CK (2023-06-06)(Innocenti, Marco).dsk" size="737280" crc="6eb7e436" sha1="9471dcba6e3cd7be22b4ceac3f9d9c6cae8c4575"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32,6 +72,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx61d33c5bfeb91">
+		<description>BATTLE SUGOROKU (1996-04)(Yasuda, Takanori)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="BATTLE SUGOROKU (1996-04)(Yasuda, Takanori)(JP)[Micom BASIC].dsk" size="737280" crc="2a527d1c" sha1="61d33c5bfeb915af75519a251c5ab18eb99be19e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxaf3d7e63b2ff7">
+		<description>Blorp! (2023-06-06)(Sijnstra, Shawn)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Blorp! (2023-06-06)(Sijnstra, Shawn).dsk" size="737280" crc="5e72f571" sha1="af3d7e63b2ff7d6dd58f93ee03a5b3991f1f8de4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4cbe54cf482d7">
+		<description>Boomerang GAME (1985-02)(Kouji, Tsujii)(JP)[f][tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Boomerang GAME (1985-02)(Kouji, Tsujii)(JP)[f][tr en][Micom BASIC].dsk" size="737280" crc="3d64c802" sha1="4cbe54cf482d748a6cced1c0d081c75d1bed0665"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx1921916142c26">
 		<description>boulder dash ii - rockford's riot (1986)(databyte)(gb)</description>
 		<year>????</year>
@@ -39,6 +109,36 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="boulder dash ii - rockford's riot (1986)(databyte)(gb).dsk" size="737280" crc="f8ad6e11" sha1="1921916142c26cbfc171501dbf31fdbb7797dc05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxcd289f9653ded">
+		<description>BOUND RESCUE (1984-09)(Ogawa, Shouji)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="BOUND RESCUE (1984-09)(Ogawa, Shouji)(JP)[Micom BASIC].dsk" size="737280" crc="65949bcf" sha1="cd289f9653ded69eca65311e6fbd1196b37846cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1743f5cd8b562">
+		<description>CARD, THE (1996-04)(Hashimoto, Isaoki)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="CARD, THE (1996-04)(Hashimoto, Isaoki)(JP)[Micom BASIC].dsk" size="737280" crc="028eac50" sha1="1743f5cd8b562d33fa8dbbd290015ae697b7bb28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx46111df3b277a">
+		<description>Clean Getaway, A (2023-06-06)(Bub, Michael)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Clean Getaway, A (2023-06-06)(Bub, Michael).dsk" size="737280" crc="f4ea8dd8" sha1="46111df3b277a8a01fd96f0c35d7f7a890c9095f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -59,6 +159,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="1049616">
 				<rom name="Crazy Fruit (1992) (Fairytale)(ja) (Disk 1 of 4).dmk" size="1049616" crc="95fcab92" sha1="188e6d25a0befbbe0d3bdd9c4e80a41cfa42e7cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe16fd95f696bb">
+		<description>DEEPGON (1985-06)(Tanaken)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="DEEPGON (1985-06)(Tanaken)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="c46afcf2" sha1="e16fd95f696bbdbaaccc273afe675bcd2d257342"/>
 			</dataarea>
 		</part>
 	</software>
@@ -102,6 +212,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx3e931000f514a">
+		<description>EATER vs WATCHERS (1985-02)(Narumi, Tetsuya)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="EATER vs WATCHERS (1985-02)(Narumi, Tetsuya)(JP)[Micom BASIC].dsk" size="737280" crc="c457b588" sha1="3e931000f514a93b7777e0ed312637826740ae06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc3b9c0b5915ee">
+		<description>Falling to Pieces (2023-06-06)(Girelli, Gianluca)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Falling to Pieces (2023-06-06)(Girelli, Gianluca).dsk" size="737280" crc="52adf90a" sha1="c3b9c0b5915ee422223236524734c0c64db90b7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf297b4394bfa4">
+		<description>Fantasy Dimension, The (2023-06-06)(Berntsson, Johan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Fantasy Dimension, The (2023-06-06)(Berntsson, Johan).dsk" size="737280" crc="fa31b657" sha1="f297b4394bfa48ac122025b56c7a012f5b47a1d8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx08eb221562308">
 		<description>FS-IFA03</description>
 		<year>????</year>
@@ -129,6 +269,66 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Golvellius (Japan) (Opening Disk) [T-En].dsk" size="737280" crc="473980bf" sha1="7d3b2f6724577a0f6f3c4c0c8daa16b760602a4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf0c2495ec1e6c">
+		<description>GREEN HAT (1985)(Suzuki, Kazuteru)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="GREEN HAT (1985)(Suzuki, Kazuteru)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="5795e686" sha1="f0c2495ec1e6ccb8421551f1b4f661b685a073b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa17f5927d18d9">
+		<description>Hanbusshitsu Seimeitai Kage (1985-04)(YAMI)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Hanbusshitsu Seimeitai Kage (1985-04)(YAMI)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="f08acbbd" sha1="a17f5927d18d9e63c28f8d0999a7dda70e4da8a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx3ce29338b7f1f">
+		<description>HAPPY COIN (1984-11)(Takahara, Yasunori)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="HAPPY COIN (1984-11)(Takahara, Yasunori)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="52f0b9f2" sha1="3ce29338b7f1f0fb1e568cc20b57fd124fa26aa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd2784f4561b33">
+		<description>HEXERION (1985-05)(Kitano, Takayuki)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="HEXERION (1985-05)(Kitano, Takayuki)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="d6db7d97" sha1="d2784f4561b33af2c6df12a3edd7ef7566ab3077"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb13a087d38af3">
+		<description>Hitsuji Kai (1985-06)(Fujimori, Norio)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Hitsuji Kai (1985-06)(Fujimori, Norio)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="91bfdc39" sha1="b13a087d38af38cdcebe8a8c8acf265422410750"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxbf4271dea2f85">
+		<description>Hungry Spider (1984-10)(Kobayashi, Akihito)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Hungry Spider (1984-10)(Kobayashi, Akihito)(JP)[Micom BASIC].dsk" size="737280" crc="3c50d52e" sha1="bf4271dea2f8526cd0ed25655ffad3820493cabd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -212,6 +412,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx14d9d978f42c0">
+		<description>JETHERI (1985-04)(Fujimoto, Eiichi)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="JETHERI (1985-04)(Fujimoto, Eiichi)(JP)[Micom BASIC].dsk" size="737280" crc="aa047645" sha1="14d9d978f42c0f3d5015e3ead79193e8be919a7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx871d242b54920">
+		<description>JUMP! (1984-11)(Yoshida, Takeshi)(JP)[f][tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="JUMP! (1984-11)(Yoshida, Takeshi)(JP)[f][tr en][Micom BASIC].dsk" size="737280" crc="e71294b9" sha1="871d242b54920c0472fd34c94e9932c0efa27489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx526daf3276c71">
+		<description>Kani Catch (1985-05)(Fujimoto, Eiichi)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Kani Catch (1985-05)(Fujimoto, Eiichi)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="dad5d139" sha1="526daf3276c712f24cbdfb4378bf98549d01c787"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx520ce23fea0a9">
+		<description>Kimco no Bucchigiri Technic-Kou 1 - BOUND WAR (1985-06)(Oobayashi, Yuiharu)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Kimco no Bucchigiri Technic-Kou 1 - BOUND WAR (1985-06)(Oobayashi, Yuiharu)(JP)[Micom BASIC].dsk" size="737280" crc="6845fec3" sha1="520ce23fea0a9b2585927e92dbfbf03b60ea4d23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx29142ef8a35e9">
+		<description>Kondate Game (1985-02)(Sakurai, Mayumi)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Kondate Game (1985-02)(Sakurai, Mayumi)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="68c377cd" sha1="29142ef8a35e970071b6cdbcb1592f999f8311a0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx960c2ec8a4719">
 		<description>Laser Squad(en)(012)</description>
 		<year>????</year>
@@ -219,6 +469,36 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Laser Squad(en)(012).dsk" size="737280" crc="638ed58c" sha1="960c2ec8a47192a9a78a6a86d7b16a2485ad5f3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd382f44c3bdf0">
+		<description>Lucid Night (2023-06-06)(Cooke, Dee)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Lucid Night (2023-06-06)(Cooke, Dee).dsk" size="737280" crc="3a4ba7f0" sha1="d382f44c3bdf08924794518dcbe0f7aa66dcdd94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxbe36119a0b4ed">
+		<description>Masaru-kun Patchi Shiyou (1985-03)(Yasuda, Mitsuru)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Masaru-kun Patchi Shiyou (1985-03)(Yasuda, Mitsuru)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="535292d8" sha1="be36119a0b4ed95eab02391f2569d7110d44a0cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2ce3806edeadd">
+		<description>Matsuda Hiroshi no Character Dancing Part 3 - Character no Kousoku Idou to Gamen no Ichibu Hyouji (1985-03)(Matsuda, Hiroshi)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Matsuda Hiroshi no Character Dancing Part 3 - Character no Kousoku Idou to Gamen no Ichibu Hyouji (1985-03)(Matsuda, Hiroshi)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="0516c249" sha1="2ce3806edeadd389c91898a28a30c72208bbb19f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -342,6 +622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx6a75fc68a7a12">
+		<description>Policenauts - Call Your Name (1996-04)(Yuhei, Ogota)(JP)[req MSX-MUSIC][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Policenauts - Call Your Name (1996-04)(Yuhei, Ogota)(JP)[req MSX-MUSIC][Micom BASIC].dsk" size="737280" crc="efd8fff7" sha1="6a75fc68a7a12ea1e19e5b59e701257f78d2d2ad"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxa0ac1e0174df5">
 		<description>poyopoyolife1</description>
 		<year>????</year>
@@ -389,6 +679,26 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="puyo puyo (1991)(compile)(jp)[a].dsk" size="737280" crc="01dd4460" sha1="2aa78778bd77c4cb26f93ec5359693ceadc527a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx00e7e7b4a777b">
+		<description>RESCUE (1984-10)(RAN RAN)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="RESCUE (1984-10)(RAN RAN)(JP)[Micom BASIC].dsk" size="737280" crc="9f737aa8" sha1="00e7e7b4a777b9cb8fac3bc2fb55e60228e5d33f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc1504be6a616a">
+		<description>RESCUE, THE (1985-03)(MONO)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="RESCUE, THE (1985-03)(MONO)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="55faec67" sha1="c1504be6a616aa219c5144136f9df810600eac5c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -462,6 +772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx53f59f161f3de">
+		<description>Submarine Sabotage (2023-06-06)(Francis, Garry)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Submarine Sabotage (2023-06-06)(Francis, Garry).dsk" size="737280" crc="0dde7fbc" sha1="53f59f161f3de76a00263b08499a4ca97e3e48ad"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx32229235366d7">
 		<description>Super Cooks (1989)(Compile)(ja)</description>
 		<year>????</year>
@@ -509,6 +829,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Super Deform Snatcher (Disk 3).dsk" size="737280" crc="51d1199a" sha1="3383a02b01d04f88ff707b878c9b75c76dbd873b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxeec312ca45309">
+		<description>Super JANKEN (1985-03)(Yokota, Hiroshi)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Super JANKEN (1985-03)(Yokota, Hiroshi)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="a7ecb8a0" sha1="eec312ca453093f69139900b6bc05d6c2689dfef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -582,6 +912,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxb28dcd807f0a6">
+		<description>Tiny CRNSK (1985-04)(Kimco)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Tiny CRNSK (1985-04)(Kimco)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="94d1539d" sha1="b28dcd807f0a61b025e0cebeb18194fd48950325"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8f76c540fa67a">
+		<description>Tori (1984-09)(Tatsuoka, Satoshi)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Tori (1984-09)(Tatsuoka, Satoshi)(JP)[Micom BASIC].dsk" size="737280" crc="cf4a0c15" sha1="8f76c540fa67adcbdcb0457d938450a3570fe36f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe06afdf2c5427">
+		<description>Tsuki no Michi Kake (1984-10)(Matsumoto, Takuya)(JP)[tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Tsuki no Michi Kake (1984-10)(Matsumoto, Takuya)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="fc51198d" sha1="e06afdf2c54276fe17b9c61cacc7b53abe3a5894"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx9d622dc148586">
 		<description>tt racer (1987)(methodic solutions)(nl)</description>
 		<year>????</year>
@@ -612,6 +972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx7819e989514ac">
+		<description>WHITE & BLACK (1985-03)(Ouyam, Takahiro)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="WHITE & BLACK (1985-03)(Ouyam, Takahiro)(JP)[Micom BASIC].dsk" size="737280" crc="d551727e" sha1="7819e989514ac5d951f2c95ae7e55933d16fdd1b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx4357c1e0f7ae5">
 		<description>Zeeslag (1994) (MCWF)</description>
 		<year>????</year>
@@ -619,6 +989,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="368640">
 				<rom name="Zeeslag (1994) (MCWF).DSK" size="368640" crc="bb4ff65b" sha1="4357c1e0f7ae559ab8ceb8169a689fb4cd0d8f1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx0e60b7609732d">
+		<description>ZIRAI AREA (1985-01)(Yasukawa-kumichou)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="ZIRAI AREA (1985-01)(Yasukawa-kumichou)(JP)[Micom BASIC].dsk" size="737280" crc="617a8fe0" sha1="0e60b7609732d6b1e70dc16d31c7b128b76f0990"/>
 			</dataarea>
 		</part>
 	</software>
