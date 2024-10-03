@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 398 -->
+<!-- Number of items in this list = 461 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -3979,6 +3979,636 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15872">
 				<rom name="Aquarius (1983)(Bug-Byte Software)[a].tap" size="15872" crc="62966acd" sha1="239bbb5548339657451b66a00f77903cb2a1de68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs86850bc0e201a">
+		<description>Z (1987)(Rino Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48311">
+				<rom name="Z (1987)(Rino Software).tap" size="48311" crc="bbebab87" sha1="86850bc0e201ae0c59d12b7f9e6610aad71e8a8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8983d4ce3673b">
+		<description>Z-Fred (1984)(AK Wood)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8774">
+				<rom name="Z-Fred (1984)(AK Wood).tap" size="8774" crc="93495ed2" sha1="8983d4ce3673b64de921b4a96f86fa3f31f4fbcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1baaf63baddef">
+		<description>Z-Man (1983)(DJL Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16530">
+				<rom name="Z-Man (1983)(DJL Software).tap" size="16530" crc="2e708d72" sha1="1baaf63baddef7e693e43664888161915283fcdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19ab0587e9bfc">
+		<description>Zaxxan (1983)(Starzone Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40675">
+				<rom name="Zaxxan (1983)(Starzone Software).tap" size="40675" crc="c2afeda1" sha1="19ab0587e9bfc0bd2ea0516ad6275c5ae8d66335"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc1d8ac9624166">
+		<description>Zaxxon (19xx)(D. Boettcher)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7402">
+				<rom name="Zaxxon (19xx)(D. Boettcher)(De).tap" size="7402" crc="3a00c504" sha1="c1d8ac962416661b2d4073da557676ffe4a84708"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc8d8f4b8f3616">
+		<description>ZAZRAKY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7660">
+				<rom name="ZAZRAKY.TAP" size="7660" crc="74c97952" sha1="c8d8f4b8f361691473056a6606f10e1c1ddc1a11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs37757354f408f">
+		<description>zblastsd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4107">
+				<rom name="zblastsd.tap" size="4107" crc="4844363e" sha1="37757354f408f00fc23addaee9f53947718fd595"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscbf03168f8a7a">
+		<description>zblastsdp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17833">
+				<rom name="zblastsdp.tap" size="17833" crc="156cf152" sha1="cbf03168f8a7af9a7918259f916b09893df13ea7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5201cb4dbf08">
+		<description>Zebbedy (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4037">
+				<rom name="Zebbedy (19xx)(-).tap" size="4037" crc="024272d5" sha1="a5201cb4dbf0840e899edbbe1b01714b7c04a300"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8b44f0753e535">
+		<description>Zed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3095">
+				<rom name="Zed.tzx" size="3095" crc="04fb7e05" sha1="8b44f0753e535b83e90ad3e7b48cc8c0efe39f7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef8ad7ce303bd">
+		<description>Zedex_Tanks_1_2_TAP_v1_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72623">
+				<rom name="Zedex_Tanks_1_2_TAP_v1_2.tap" size="72623" crc="33f2e7b8" sha1="ef8ad7ce303bd6a3ae03e241a6150d826a48e458"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsea0a437b7f994">
+		<description>ZEN 48K (2014)(Einar Saukas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40412">
+				<rom name="ZEN 48K (2014)(Einar Saukas).tap" size="40412" crc="3a9f650e" sha1="ea0a437b7f994db541ce51c4521ff0ce40e9eb87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb6ec5948c41c2">
+		<description>ZEN II 48K (2015)(Einar Saukas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35732">
+				<rom name="ZEN II 48K (2015)(Einar Saukas).tap" size="35732" crc="3e1fb513" sha1="b6ec5948c41c23df0152e25c6c855d295b6d2161"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs59336ac11b92c">
+		<description>Zig Zag (1984)(DK'Tronics Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32436">
+				<rom name="Zig Zag (1984)(DK'Tronics Ltd).tap" size="32436" crc="89fccf38" sha1="59336ac11b92c99502a31a3a2dc3f5f120b9b718"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7d7c79e4dc0e">
+		<description>Zig-Zag</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32734">
+				<rom name="Zig-Zag.tap" size="32734" crc="5a26691d" sha1="f7d7c79e4dc0ea405dacd2050d921e3d2f9651e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbb0e396cbbf8e">
+		<description>Ziggurat - The Temple Of Doom (1984)(Software Super Savers Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47884">
+				<rom name="Ziggurat - The Temple Of Doom (1984)(Software Super Savers Ltd).tap" size="47884" crc="4601618c" sha1="bb0e396cbbf8e8f8cded961aef2c5e1c41140b5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs79498b449cd83">
+		<description>Ziona Quest - GAME - ZX Spectrum TAPE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1865565">
+				<rom name="Ziona Quest - GAME - ZX Spectrum TAPE.tzx" size="1865565" crc="6dda1c6a" sha1="79498b449cd83d177ca819979ec2b3c9d74792c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfa2f9eb349aed">
+		<description>Ziona Quest - Game 128K (2023)(Iamai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57048">
+				<rom name="Ziona Quest - Game 128K (2023)(Iamai).tap" size="57048" crc="8ff580cd" sha1="fa2f9eb349aed840fcf26f9f4eb2deb796f5e557"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscfd28a1d5e7c0">
+		<description>Ziona Quest - Training - ZX Spectrum TAPE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1830111">
+				<rom name="Ziona Quest - Training - ZX Spectrum TAPE.tzx" size="1830111" crc="ad59c542" sha1="cfd28a1d5e7c05976ef2c3d798fb58793d27c096"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5be5fbcbec7de">
+		<description>Ziona Quest - Training 128K (2023)(Iamai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55749">
+				<rom name="Ziona Quest - Training 128K (2023)(Iamai).tap" size="55749" crc="a614eac8" sha1="5be5fbcbec7de65c24df78ef71c482b1db78b183"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ff2f1746bcc3">
+		<description>Zip-Zap 48K (1983)(Imagine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37207">
+				<rom name="Zip-Zap 48K (1983)(Imagine).tap" size="37207" crc="fcb30933" sha1="3ff2f1746bcc3f014e306edfed67a934d789d6b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92b17c3bdd947">
+		<description>Zipper Flipper (1984)(R.E.D.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25237">
+				<rom name="Zipper Flipper (1984)(R.E.D.).tap" size="25237" crc="0e0c4e88" sha1="92b17c3bdd9473ce9ecb86dd5a10d941d3b78faf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfaac28aa5940e">
+		<description>ZNAKY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="613">
+				<rom name="ZNAKY.TAP" size="613" crc="ccdda26f" sha1="faac28aa5940efdc187cb2d99160f0337f03e6d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs984ac8164ca62">
+		<description>Zodiac Strip (1984)(Suzy Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49259">
+				<rom name="Zodiac Strip (1984)(Suzy Soft).tap" size="49259" crc="a50e8bc2" sha1="984ac8164ca62aec4bc815671eee0c1b841282fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs64a9a49838a55">
+		<description>Zoids (1985)(Martech Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50194">
+				<rom name="Zoids (1985)(Martech Games Ltd).tap" size="50194" crc="518f451f" sha1="64a9a49838a552a04bc508ad8eb1825efb4428de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsca1b9d2a1cf0d">
+		<description>Zoinho 48K (2021)(Bitnamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29137">
+				<rom name="Zoinho 48K (2021)(Bitnamic).tap" size="29137" crc="a64d5e5a" sha1="ca1b9d2a1cf0dc70e6ef541471fefe4f7777bd42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7cfc8f1f5888">
+		<description>Zolyx (1988)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14953">
+				<rom name="Zolyx (1988)(Firebird Software Ltd).tap" size="14953" crc="972dbfb3" sha1="f7cfc8f1f588863c5fc866dcdeda60273c936798"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsecbd9cb09f2aa">
+		<description>Zombi (1990)(Ubi Soft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54754">
+				<rom name="Zombi (1990)(Ubi Soft Ltd).tap" size="54754" crc="dfbf73a1" sha1="ecbd9cb09f2aa5339fb510ab72dbfbc83f125db6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde6ea21b1711f">
+		<description>Zombi Mall EN (2022)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44766">
+				<rom name="Zombi Mall EN (2022)(The Mojon Twins).tap" size="44766" crc="c0591dbf" sha1="de6ea21b1711f289de14757541ee6dfa7d93b37b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8932f2b35bc6d">
+		<description>Zombi Mall ES (2022)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44764">
+				<rom name="Zombi Mall ES (2022)(The Mojon Twins).tap" size="44764" crc="5deb94ed" sha1="8932f2b35bc6dd6512593730500c96e06f58d5d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1e20f746cda8f">
+		<description>Zombi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54785">
+				<rom name="Zombi.tzx" size="54785" crc="b7f92638" sha1="1e20f746cda8fdd6405c5a799fb9c4fe45349608"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d85e0f206a53">
+		<description>Zombie Calavera Prologue 48K (2010)(Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37966">
+				<rom name="Zombie Calavera Prologue 48K (2010)(Mojon Twins).tap" size="37966" crc="9eaf2b79" sha1="7d85e0f206a5383c4b7eeb4d71468a8e2b329275"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7459070f2d096">
+		<description>Zombie Zombie (1984)(Quicksilva Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44514">
+				<rom name="Zombie Zombie (1984)(Quicksilva Ltd).tap" size="44514" crc="ccd52c9e" sha1="7459070f2d096547663c4eed4db0f85cd537a9d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c26095023ff7">
+		<description>Zombies (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7357">
+				<rom name="Zombies (19xx)(-).tap" size="7357" crc="24dcde3b" sha1="0c26095023ff7022600a73bfe7d6c5b41ece6b4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8972bb8352abc">
+		<description>Zona 0 (1991)(Topo Soft)(es)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="76676">
+				<rom name="Zona 0 (1991)(Topo Soft)(es).tap" size="76676" crc="df7e9568" sha1="8972bb8352abc368c1eebd71ad6c08da20751a13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2d6a0a83ba2ce">
+		<description>Zona 0 (1991)(Topo Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="76419">
+				<rom name="Zona 0 (1991)(Topo Soft)(Sp).tap" size="76419" crc="613d32b6" sha1="2d6a0a83ba2ce022f1a294aea2fc8760a9e63f18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4d373b417c91">
+		<description>Zone M (1986)(Zuheir Urwani)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3831">
+				<rom name="Zone M (1986)(Zuheir Urwani).tap" size="3831" crc="13f1a726" sha1="d4d373b417c91ca781267e7ef0d4f2982ab7491d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0dcc8d5b3818d">
+		<description>Zooming Secretary 128K (2021)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47173">
+				<rom name="Zooming Secretary 128K (2021)(PC NONO Games).tap" size="47173" crc="d612501b" sha1="0dcc8d5b3818d55060f8219dc624004835913b55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsca772c1e44eda">
+		<description>Zoot & The Mankins (1985)(Bug-Byte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42714">
+				<rom name="Zoot & The Mankins (1985)(Bug-Byte Software).tap" size="42714" crc="fd29a7e6" sha1="ca772c1e44eda8c3f29ab9bd8ea67ed4236f1a46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd9ecf855ca64a">
+		<description>Zoot & The Mankins (1985)(Bug-Byte Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49478">
+				<rom name="Zoot & The Mankins (1985)(Bug-Byte Software)[a].tap" size="49478" crc="5aba5c50" sha1="d9ecf855ca64a03beea0484ca32136d8a95c96c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs36ccefbd867d8">
+		<description>Zorro (1986)(US Gold Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47699">
+				<rom name="Zorro (1986)(US Gold Ltd).tap" size="47699" crc="f5253470" sha1="36ccefbd867d8323206ee85a8271912556711682"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf66b602d0761a">
+		<description>ztrack1k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1015">
+				<rom name="ztrack1k.tap" size="1015" crc="7110d205" sha1="f66b602d0761a670e884a1f3c8bab9556c591692"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d28f1144e156">
+		<description>Zub (1986)(Mastertronic Added Dimension)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="62034">
+				<rom name="Zub (1986)(Mastertronic Added Dimension).tap" size="62034" crc="e48404af" sha1="8d28f1144e156ac9b0a2b84ff5e33aecf776e8f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf1c6835b791fa">
+		<description>Zulu Wars (1987)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48482">
+				<rom name="Zulu Wars (1987)(CCS).tap" size="48482" crc="fd87a03f" sha1="f1c6835b791fa067ed1c63558e05e2e427e3189b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6248d2ebae07d">
+		<description>Zulu Wars (1987)(CCS)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48482">
+				<rom name="Zulu Wars (1987)(CCS)[a].tap" size="48482" crc="fc9ea687" sha1="6248d2ebae07d303b763140a05d70af0c77fd889"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7e7e1cf9d64d">
+		<description>ZX Defender (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4957">
+				<rom name="ZX Defender (19xx)(-).tap" size="4957" crc="f249e891" sha1="a7e7e1cf9d64d91e51e60b1f2d70f24e80642cc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs807989e01e91d">
+		<description>ZX Enigma Machine (2021)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28003">
+				<rom name="ZX Enigma Machine (2021)(Menyiques).tap" size="28003" crc="c5bbd1e3" sha1="807989e01e91d7294b1f68cdbd5b3dad296fb086"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9617f4e9104bc">
+		<description>ZX Football Manager 2005 (2004)(Cronosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80114">
+				<rom name="ZX Football Manager 2005 (2004)(Cronosoft).tap" size="80114" crc="ec86d147" sha1="9617f4e9104bc2e81f10620338922a5fd48e97a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a555154156d5">
+		<description>ZX Frogger 48K (2021)(ref)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22766">
+				<rom name="ZX Frogger 48K (2021)(ref).tap" size="22766" crc="12907894" sha1="9a555154156d5699e8e8e2a9585934534e9a21ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ab351a60c193">
+		<description>ZX Larry 128K (2019)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48364">
+				<rom name="ZX Larry 128K (2019)(Rafal Miazga).tap" size="48364" crc="d4a981d5" sha1="2ab351a60c193d243a316a5ec6882d7d4ef3b045"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs783a371ac2576">
+		<description>ZX Oil Panic G&W 48K (2021)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24803">
+				<rom name="ZX Oil Panic G&W 48K (2021)(Menyiques).tap" size="24803" crc="5cc0012c" sha1="783a371ac2576d10c16284da15c01e66495edd73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfd15e915c8cc7">
+		<description>ZX Oil Panic Game & Watch v2 48K (2024)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31702">
+				<rom name="ZX Oil Panic Game & Watch v2 48K (2024)(Menyiques).tap" size="31702" crc="7aceda1b" sha1="fd15e915c8cc72be8e577393d3db54f42bcc4beb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse7fd474356ba4">
+		<description>ZX Parachute 16K (2020)(Carles Oriol)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12897">
+				<rom name="ZX Parachute 16K (2020)(Carles Oriol).tap" size="12897" crc="c82e385e" sha1="e7fd474356ba472badbe93b12ab6a6be5c99ed14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8cb66f858cd57">
+		<description>ZX Robots 48K (2023)(Skult)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37038">
+				<rom name="ZX Robots 48K (2023)(Skult).tap" size="37038" crc="94e4578d" sha1="8cb66f858cd575657ff0a8b19ea1b0a9ad49380f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb4b5a9e7e8af2">
+		<description>ZX Spectrum Grail (1983)(Severn Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8755">
+				<rom name="ZX Spectrum Grail (1983)(Severn Soft).tap" size="8755" crc="b4beba33" sha1="b4b5a9e7e8af2467a0245f48b8da71c538038d4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs700285bb102ec">
+		<description>ZX Trek (1982)(Impact Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34856">
+				<rom name="ZX Trek (1982)(Impact Software).tap" size="34856" crc="8cf3f4c3" sha1="700285bb102ec9dbcd588d21c35effe1ebc56aa2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs194a7bfd4392e">
+		<description>ZX-ECHO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1147">
+				<rom name="ZX-ECHO.TAP" size="1147" crc="b6e9e0e5" sha1="194a7bfd4392ebf05689c50bbb542587c7105dc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd0ca1408d389d">
+		<description>Zybex (1989)(Zeppelin Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31232">
+				<rom name="Zybex (1989)(Zeppelin Games Ltd).tap" size="31232" crc="d7c83b9a" sha1="d0ca1408d389d191cb6f02ec49cf34613ae858fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs396db259d8e4f">
+		<description>Zybex (1989)(Zeppelin Games Ltd)[t +1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30722">
+				<rom name="Zybex (1989)(Zeppelin Games Ltd)[t +1].tap" size="30722" crc="129c5428" sha1="396db259d8e4ff4b89568e37128d81beab88dc81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs946ffe6758c2c">
+		<description>Zynaps (1987)(Hewson Consultants Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42473">
+				<rom name="Zynaps (1987)(Hewson Consultants Ltd).tap" size="42473" crc="2e272efc" sha1="946ffe6758c2cba0a90c83ee7adf0690127021bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80580c99491c0">
+		<description>Zzoom (1983)(Imagine Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22605">
+				<rom name="Zzoom (1983)(Imagine Software Ltd).tap" size="22605" crc="52d3fb7b" sha1="80580c99491c07c183aa4e23a1b7d536e2e15637"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7420bf3aa8b1">
+		<description>Zzoom 48K (1983)(Imagine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22601">
+				<rom name="Zzoom 48K (1983)(Imagine).tap" size="22601" crc="88263d9c" sha1="f7420bf3aa8b1c0525a1f466515aad7d49aea60c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5da79b4c12c7b">
+		<description>Zzzz (19xx)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47703">
+				<rom name="Zzzz (19xx)(Mastertronic Ltd).tap" size="47703" crc="642db73a" sha1="5da79b4c12c7bfa8bc1c315d9e6c51715206ec78"/>
 			</dataarea>
 		</part>
 	</software>

@@ -8212,6 +8212,7 @@ v4bulblx                        // Bullion Blox
 v4bulblxa
 v4bulblxb
 v4bulblxc
+v4bulblxd
 v4cmaze                         // The Crystal Maze (v1.3)
 v4cmaze2                        // The New Crystal Maze Featuring Ocean Zone
 v4cmaze2_amld                   //
@@ -16238,6 +16239,9 @@ tascr30g
 @source:chessking/master.cpp
 master
 
+@source:chessking/pmicrodx.cpp
+pmicrodx
+
 @source:chessking/triomphe.cpp
 triomphe
 
@@ -19024,6 +19028,9 @@ newbrainmd                      //
 @source:handheld/chessking.cpp
 chesskng                        //
 
+@source:handheld/dbridgec.cpp
+dbridgec
+
 @source:handheld/gameking.cpp
 gamekin3                        //
 gameking                        //
@@ -19983,6 +19990,7 @@ rtpc025                         // IBM RT PC Model 025
 rtpca25                         // IBM RT PC Model A25
 
 @source:ibm/thinkpad600.cpp
+thinkpad600                     // IBM Thinkpad 600
 thinkpad600e                    // IBM Thinkpad 600E
 
 @source:ibm/thinkpad8xx.cpp
@@ -31020,8 +31028,9 @@ fiches                          //
 fiches12                        //
 
 @source:misc/mirax.cpp
-mirax                           // (c) 1985 Current Technologies
-miraxa                          // (c) 1985 Current Technologies
+mirax                           // (c) 1985 Current Technology, Inc.
+miraxa                          // (c) 1985 Current Technology, Inc.
+miraxb                          // (c) 1985 Current Technology, Inc.
 
 @source:misc/mirderby.cpp
 mirderby                        // (c) 1988 Home Data?

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 105 -->
+<!-- Number of items in this list = 127 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -622,13 +622,233 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="x680fc466837f8bc">
-		<description>Twin Bee (y) (Konami) [xdf]</description>
+	<software name="x68f5833db3f1c64">
+		<description>Teleportion (Sample disk)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Twin Bee (y) (Konami) [xdf].xdf" size="1261568" crc="7626b8f6" sha1="0fc466837f8bca6c1d2c612ca25cf1fa05d6645b"/>
+				<rom name="Teleportion (Sample disk).hdm" size="1261568" crc="0cff87b3" sha1="f5833db3f1c64342f650c0388f8c8a286dd41b93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684f2d7f1718546">
+		<description>Teleportion (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Teleportion (System disk).hdm" size="1261568" crc="32c8c72a" sha1="4f2d7f1718546a20a48bf2a886802067c9ff5f42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d3308393976e0">
+		<description>Terazzo Sprite Editor Pro-68K (Sample disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Terazzo Sprite Editor Pro-68K (Sample disk).hdm" size="1261568" crc="47fd3267" sha1="d3308393976e01f386d052fd1008688dd51de1fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6847cd4f9174a97">
+		<description>Terazzo Sprite Editor Pro-68K (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Terazzo Sprite Editor Pro-68K (System disk).hdm" size="1261568" crc="3ee24f16" sha1="47cd4f9174a9702cf39a73619e3187b8e3bf5dcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x681959ce88c4dcb">
+		<description>Terazzo Sprite Editor Pro-68K (User disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Terazzo Sprite Editor Pro-68K (User disk).hdm" size="1261568" crc="368c4581" sha1="1959ce88c4dcb9b103dc4ce37a381c63b8fefa27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6897fe0dc407f9f">
+		<description>Terminoru 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Terminoru 2.hdm" size="1261568" crc="f84d47d2" sha1="97fe0dc407f9f0d98c0cfcb41835b2d89291a73d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d7ac84b7db876">
+		<description>Terminoru</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Terminoru.hdm" size="1261568" crc="656a82a7" sha1="d7ac84b7db876681baef9cd1be819bbf4d803661"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f7975463abf4d">
+		<description>The File Master X68000 (v1.13) (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="The File Master X68000 (v1.13) (Disk 1).hdm" size="1261568" crc="13d30a4b" sha1="f7975463abf4d61c8bd64dddfc0d173585b2bda9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68a697824388d19">
+		<description>The File Master X68000 (v1.13) (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="The File Master X68000 (v1.13) (Disk 2).hdm" size="1261568" crc="6866e6ad" sha1="a697824388d19a8d9e560f3937a781aa7ff22f26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68dc9bdbba73ec5">
+		<description>The File Master X68000 (v1.13) (Disk 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="The File Master X68000 (v1.13) (Disk 3).hdm" size="1261568" crc="ef46f679" sha1="dc9bdbba73ec590e590c4ae54b93048b9f03dd10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688a1c962ffff1a">
+		<description>The Fukubukuro (v2.0) (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="The Fukubukuro (v2.0) (System disk).hdm" size="1261568" crc="8627a7b6" sha1="8a1c962ffff1a62852529e381fac420a6996253e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688b81a2ffe9afd">
+		<description>ThunderWord Nihongo Word Processor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="ThunderWord Nihongo Word Processor.hdm" size="1261568" crc="6db50f3c" sha1="8b81a2ffe9afdc5b7d675f5a25cde08cd45d94f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68fd1a90df253c9">
+		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(0).hdm" size="1261568" crc="ece1fb8f" sha1="fd1a90df253c9f9cdb3b7105e44c8d801cf281c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6863dc69c549c10">
+		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(1).hdm" size="1261568" crc="8bb6a3fa" sha1="63dc69c549c10d07c960a74e5e5b5133b800d87a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68905801b38f947">
+		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(2).hdm" size="1261568" crc="e9663a67" sha1="905801b38f9472579e97e397ea9404c973b25009"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682bca6cd0aa2be">
+		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(0).hdm" size="1261568" crc="59ca2311" sha1="2bca6cd0aa2be46ce1fe2ed7558b31d6def625e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x681a2ce0eb42574">
+		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(1).hdm" size="1261568" crc="cdda9247" sha1="1a2ce0eb42574b4f543cc9f0dfd0ce48a3eadb03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68fae0b64f8ad8a">
+		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(2).hdm" size="1261568" crc="daeb7c4c" sha1="fae0b64f8ad8a8236e04c0316ffa2afc56a03fcf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x687ba08129ec167">
+		<description>Toys & Tools</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Toys & Tools.hdm" size="1261568" crc="ba3598a3" sha1="7ba08129ec16771ec839435c8d051de269a72cea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68314cc7252c9a0">
+		<description>Trilogy - Ayakashiden (1991)(Gundeck)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Trilogy - Ayakashiden (1991)(Gundeck)(1).hdm" size="1261568" crc="55f7d10b" sha1="314cc7252c9a08f26d474fafbcc3b53e0d908fc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x683e758ed0bfc02">
+		<description>Trilogy - Ayakashiden (1991)(Gundeck)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Trilogy - Ayakashiden (1991)(Gundeck)(2).hdm" size="1261568" crc="ba175164" sha1="3e758ed0bfc0224effeeef395b4e8f3c47b69a70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680fc466837f8bc">
+		<description>Twin Bee (y) (Konami)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Twin Bee (y) (Konami).xdf" size="1261568" crc="7626b8f6" sha1="0fc466837f8bca6c1d2c612ca25cf1fa05d6645b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680c5c01aa42a1c">
+		<description>Twin Soul</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Twin Soul.hdm" size="1261568" crc="02b7fa63" sha1="0c5c01aa42a1c5d0732388c778474af9dadf00fe"/>
 			</dataarea>
 		</part>
 	</software>

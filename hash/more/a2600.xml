@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4083 -->
+<!-- Number of items in this list = 4125 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -40822,6 +40822,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26d0bdd609ebc6e">
+		<description>Z-Tack (1983) (Bomb)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Z-Tack (1983) (Bomb).a26" size="4096" crc="0a14f24c" sha1="d0bdd609ebc6e69fb351ba469ff322406bcbab50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26888f552a7cdb7">
+		<description>Zartog</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zartog.a26" size="4096" crc="43bf5bfd" sha1="888f552a7cdb78597dffc60f79f3208f9359897a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0a09e22dcf16">
+		<description>zaxxon2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="zaxxon2.a26" size="8192" crc="e67eabb6" sha1="a0a09e22dcf1682dabe84785737d2b2a390aef6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26819288f5c1931">
+		<description>Zblocks</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zblocks.a26" size="4096" crc="18ab024b" sha1="819288f5c19311b23cec430a0691826ac77ebe13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bcdbbb6f3858f">
+		<description>Zelda (2003) (Kyle Pittman) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zelda (2003) (Kyle Pittman) (Adventure Hack).a26" size="4096" crc="a04be62a" sha1="bcdbbb6f3858fe59cd429aea98ca83f085411d50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26533a5c90839dd">
+		<description>Zero Patrol by Charles Morgan (Moon Patrol Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Zero Patrol by Charles Morgan (Moon Patrol Hack).a26" size="8192" crc="982a463a" sha1="533a5c90839ddb9d78d785026bf10e7c314b6cbf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a267e6292a1988b0">
 		<description>ZeroPage Homebrew - The Game (L.Camara)(2022-05-27)</description>
 		<year>????</year>
@@ -40829,6 +40889,366 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="ZeroPage Homebrew - The Game (L.Camara)(2022-05-27).bin" size="4096" crc="5ba2fd9c" sha1="7e6292a1988b080a1016f37d97e965c34e71cd8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ccce1d87dc5fa">
+		<description>Zeroplayer (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Zeroplayer (PD).a26" size="2048" crc="0b661dd7" sha1="ccce1d87dc5fa7cc9a36ccb6fc7be2c36b36e844"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26354f46932058c">
+		<description>ZETA (2007) (Matthew J. Risch) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="ZETA (2007) (Matthew J. Risch) (Prototype).a26" size="32768" crc="c00b75e7" sha1="354f46932058cdf913c4e28fb7f1f4cc1c1466f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2601fd8003f6089">
+		<description>ZETA 1a 20071223</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="ZETA 1a 20071223.a26" size="32768" crc="0a8b3e93" sha1="01fd8003f608969c708fc0781d550a91da3740e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696359f5df8991">
+		<description>zflicker bullet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="zflicker bullet.a26" size="8192" crc="63958111" sha1="96359f5df8991f2354bc270977641e942710f67a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a790aee6292a">
+		<description>zflicker jumpman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="zflicker jumpman.a26" size="8192" crc="66688e03" sha1="6a790aee6292a9ac37aaa574003f9c6c8af421a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f7b5b51f65ba9">
+		<description>zflicker liana</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="zflicker liana.a26" size="8192" crc="c179cd34" sha1="f7b5b51f65ba941de7e7fee628826f225c163801"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26722b2c2f93f1f">
+		<description>zflicker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="zflicker.a26" size="8192" crc="5eec7de8" sha1="722b2c2f93f1fdaa5c3bded6b3ff8b16aae5516b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d765aaaf0910">
+		<description>zflicker1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="zflicker1.a26" size="8192" crc="019cbdf3" sha1="1d765aaaf09101d0b837607e1e2e059f322037fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2634e15e0474854">
+		<description>zflickerNTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="zflickerNTSC.bin" size="8192" crc="4c871c33" sha1="34e15e0474854e084981e818c597d9f3a871ec5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26096c97edd8143">
+		<description>zflickerPAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="zflickerPAL.bin" size="8192" crc="0af5fbff" sha1="096c97edd8143a63ecdf6b8752da2b0813a88a33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26230453ffbefb6">
+		<description>Zi - The Flie Buster (2002) (Fernando Mora) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zi - The Flie Buster (2002) (Fernando Mora) (PD).a26" size="4096" crc="97bcdfcb" sha1="230453ffbefb68a47da686f92bfb4ed470537f93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cc98f6848205d">
+		<description>Zilch 20070928</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Zilch 20070928.a26" size="16384" crc="8a29679f" sha1="cc98f6848205d3b060e11e364fa5c420d828fe38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aedd9480e5bbd">
+		<description>Zilch 20071001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Zilch 20071001.a26" size="16384" crc="c13a80f0" sha1="aedd9480e5bbd7e418a5169b0134186b8d795444"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265da7d05d8112f">
+		<description>Zippy [Demo 01] (Sonic The Hedgehog) [NTSC].bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Zippy [Demo 01] (Sonic The Hedgehog) [NTSC].bas.bin" size="32768" crc="4d37ab54" sha1="5da7d05d8112f93db541e9ebcb66d9f619291aaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db3aaed79e655">
+		<description>Zirconium 2005-05-06</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Zirconium 2005-05-06.a26" size="2048" crc="450fd40f" sha1="db3aaed79e6558460e3aac0319232510c6098c48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c32a76d3370e6">
+		<description>Zirconium 2005-10-28</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Zirconium 2005-10-28.a26" size="2048" crc="2ebf10d0" sha1="c32a76d3370e689ecd0bd23fa12a0085eb698362"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262704ef5677dc5">
+		<description>Zkeep! (2023-12)(Altair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Zkeep! (2023-12)(Altair).bin" size="32768" crc="9889a6a8" sha1="2704ef5677dc517b269477ce5953d51cc32d0ed7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2682b2b9e7faf42">
+		<description>ZLoc4 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ZLoc4 (PD).a26" size="4096" crc="37d17fa3" sha1="82b2b9e7faf42588527b29326421e282193c79e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec8fba0151987">
+		<description>ZNoTimer (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ZNoTimer (PD).a26" size="4096" crc="a2ec160b" sha1="ec8fba01519877e929516d93f01a2007a04fe238"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260c13968b9826c">
+		<description>zodzone2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="zodzone2.a26" size="4096" crc="e00527d6" sha1="0c13968b9826c3667586dda19968f2a4b60ad706"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b55eb973b9185">
+		<description>Zombies (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zombies (PD).a26" size="4096" crc="f9196714" sha1="b55eb973b9185ef3e455dd65916aef1fd410bead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fddb5e8a87930">
+		<description>zombie_chase</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="zombie_chase.a26" size="4096" crc="98b4005d" sha1="fddb5e8a8793023ca9a0f92dd761acea0c126c10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c0e2ab9ad64c2">
+		<description>Zoop (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zoop (PD).a26" size="4096" crc="1f40f138" sha1="c0e2ab9ad64c2f71bae4946cd8293d71a83a4b76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f3f2dd27a984c">
+		<description>zr (Beta 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="zr (Beta 1).a26" size="2048" crc="8bb4e7b1" sha1="f3f2dd27a984ce58901b714498b16e7b4ec8f899"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2663ffb9775b481">
+		<description>zr (Beta 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="zr (Beta 2).a26" size="2048" crc="de8b4ed1" sha1="63ffb9775b481972391de2ae786f39c4cef3676c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268b8d2388fd79d">
+		<description>ZWithTim (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ZWithTim (PD).a26" size="4096" crc="2fac002c" sha1="8b8d2388fd79d5c8307fcd7c03eb983be381792a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d46affd0b916d">
+		<description>Zyx & Jittery Jim (2007-10-03)(atari2600world)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zyx & Jittery Jim (2007-10-03)(atari2600world)(NTSC)(PD).bin" size="4096" crc="b2defa9e" sha1="d46affd0b916ddd5263afc5a27df3e9586e353e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260a7a245012a80">
+		<description>Zyx & Stickman (2007-10-02)(atari2600world)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zyx & Stickman (2007-10-02)(atari2600world)(NTSC)(PD).bin" size="4096" crc="a670226a" sha1="0a7a245012a80af1719b8e168649dc0bf24ff5ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d57aa25f18364">
+		<description>Zyx (2006-06-08)(atari2600world)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zyx (2006-06-08)(atari2600world)(NTSC)(PD).bin" size="4096" crc="55c7c6f6" sha1="d57aa25f18364682ac8bf5b8965375d0da642288"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269600522978f7a">
+		<description>Zyx (2006-06-11)(atari2600world)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Zyx (2006-06-11)(atari2600world)(NTSC)(PD).bin" size="4096" crc="170b7b60" sha1="9600522978f7abb3344715f9a8973a416d1df376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265cfaac2b9843f">
+		<description>Zyx (2007-09-30)(atari2600world)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Zyx (2007-09-30)(atari2600world)(NTSC)(PD).bin" size="2048" crc="416e9d37" sha1="5cfaac2b9843f986156927fdac777b21a0c9bdd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26842721df4aacd">
+		<description>ZYX 2006 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ZYX 2006 (Chris Read).a26" size="4096" crc="ff4529a8" sha1="842721df4aacd9e5cc2decc3da2bb43f4174523b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26706169bdea63c">
+		<description>Zyx 2k 20070903</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Zyx 2k 20070903.a26" size="2048" crc="dc80e84c" sha1="706169bdea63c213bd1988f18b4471acd7860ca5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fa0b96c3f2f79">
+		<description>ZYX beta1 (Chris Read) (2006 Minigame Compo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ZYX beta1 (Chris Read) (2006 Minigame Compo).a26" size="4096" crc="b0026ecd" sha1="fa0b96c3f2f79910b48083773d86a5a012cff1b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cbc0185630a0e">
+		<description>ZYX v2 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ZYX v2 (Chris Read).a26" size="4096" crc="c03a9a20" sha1="cbc0185630a0e0b8e65266678e78279918ec4e63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2644de4a3da579d">
+		<description>ZYX2 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="ZYX2 (Chris Read).a26" size="2048" crc="b9a8209b" sha1="44de4a3da579d030030c0fe5f23c02f45b03ba0d"/>
 			</dataarea>
 		</part>
 	</software>

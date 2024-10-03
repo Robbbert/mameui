@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 212 -->
+<!-- Number of items in this list = 423 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -292,6 +292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse958e88257a93">
+		<description>Astronut 48K (1984)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="25056">
+				<rom name="Astronut 48K (1984)(Software Projects).z80" size="25056" crc="876f4184" sha1="e958e88257a938916f1b557b9f9f376dd75b1821"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs787a593dfa73c">
 		<description>Astro_Marine_Corps_1989_Dinamic_Software_es_Part_1_of_2</description>
 		<year>????</year>
@@ -439,6 +449,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="38283">
 				<rom name="Battle Ships 48K (1987)(Hit-Pak).z80" size="38283" crc="fb32ab1a" sha1="a031f044561f07398e40029eff659d433aa14dc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc3441e5decc2c">
+		<description>Beaky and the Egg Snatchers 48K (1984)(Fantasy Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40787">
+				<rom name="Beaky and the Egg Snatchers 48K (1984)(Fantasy Software).z80" size="40787" crc="c145a40c" sha1="c3441e5decc2c15edcc3fa236363df95297d2e1f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -719,6 +739,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="17611">
 				<rom name="changeit.z80" size="17611" crc="893965a1" sha1="788b6e1a020f29c85d616b1048ac367e2e1f1fae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5b22531f530dd">
+		<description>Cherils Perils 48K (2010)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38505">
+				<rom name="Cherils Perils 48K (2010)(The Mojon Twins).z80" size="38505" crc="bf144935" sha1="5b22531f530ddd3e38eb64877045286a768a1cae"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1742,6 +1772,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs00d9453b608b3">
+		<description>Impossible Mission II 48K (1988)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44256">
+				<rom name="Impossible Mission II 48K (1988)(U.S. Gold).z80" size="44256" crc="ea95490a" sha1="00d9453b608b36a4ac21a5104c2667c5fa3ec154"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs550ce241eab56">
+		<description>Indoor Soccer 48K (1986)(Magnificent 7 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="28909">
+				<rom name="Indoor Soccer 48K (1986)(Magnificent 7 Software).z80" size="28909" crc="85a1a21f" sha1="550ce241eab564a157e66a5556deef573910092e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3c98f25eebaee">
 		<description>International Speedway (1988)(Silverbird)</description>
 		<year>????</year>
@@ -2119,6 +2169,2066 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="88502">
 				<rom name="Lotus Esprit Turbo Challenge (1990)(Gremlin Graphics Software)(128k).z80" size="88502" crc="e2a3503d" sha1="d5049653463a56bedcc1205dfade8bbe5ebc9cc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaadda4e292f0a">
+		<description>Mad Mix Game (1988)(Topo Soft)(es)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43437">
+				<rom name="Mad Mix Game (1988)(Topo Soft)(es)(128k).z80" size="43437" crc="c35eb329" sha1="aadda4e292f0a4d1f94173d0261394f21866a393"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50a0b9f9ccc3a">
+		<description>Magic Carpet 16K (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="11221">
+				<rom name="Magic Carpet 16K (1985)(Mastertronic).z80" size="11221" crc="05e22cf1" sha1="50a0b9f9ccc3adbeba26315334cdb11040b8c6a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba10e8dea3170">
+		<description>MARTIAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35177">
+				<rom name="MARTIAN.Z80" size="35177" crc="7ebc30a4" sha1="ba10e8dea3170947b6c9e5f72315cde9c6dbe539"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs220e3eb6a2d9f">
+		<description>Masters of the Universe - The Super Adventure 48K (1987)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42460">
+				<rom name="Masters of the Universe - The Super Adventure 48K (1987)(U.S. Gold).z80" size="42460" crc="504d562f" sha1="220e3eb6a2d9fad24a571fab9499432f81170d12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d96c1d9ad61e">
+		<description>Masterword 48K (Proto)(1989)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="32357">
+				<rom name="Masterword 48K (Proto)(1989)(Atlantis Software).z80" size="32357" crc="b285c847" sha1="7d96c1d9ad61e80e61d2ac5cdc16251f88352206"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99e4d6ba59d23">
+		<description>Merlin (1987)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38609">
+				<rom name="Merlin (1987)(Firebird).z80" size="38609" crc="1c2945a1" sha1="99e4d6ba59d239a87ec5398f0397015d72fb0179"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf3cd322ec448">
+		<description>Merlin 48K (1988)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41557">
+				<rom name="Merlin 48K (1988)(Firebird).z80" size="41557" crc="a37c1a27" sha1="bf3cd322ec448d2b53b99330900ade479ee341ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse19ac3a92216a">
+		<description>Metal Army (1988)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34452">
+				<rom name="Metal Army (1988)(Players Premier).z80" size="34452" crc="b8b894c5" sha1="e19ac3a92216aeabd911bd51076a8d2860a09a30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6602f565bb5bd">
+		<description>Michel Futbol Master - Championship (1989)(Dinamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41534">
+				<rom name="Michel Futbol Master - Championship (1989)(Dinamic).z80" size="41534" crc="893f9bf7" sha1="6602f565bb5bd6d369caf31cb16e90872aba7da2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07b00ec223316">
+		<description>Michel Futbol Master - Super Skills (1989)(Dinamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42768">
+				<rom name="Michel Futbol Master - Super Skills (1989)(Dinamic).z80" size="42768" crc="66b32077" sha1="07b00ec2233167b94faae471870ceeb328593797"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75e3ddd7e704f">
+		<description>Mickey Mouse - The Computer Game 128K (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44794">
+				<rom name="Mickey Mouse - The Computer Game 128K (1988)(Gremlin Graphics).z80" size="44794" crc="2dce1ffe" sha1="75e3ddd7e704f5fff5e7a7c22685696487264535"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsceebb5ad712bd">
+		<description>Mickey Mouse - The Computer Game 48K (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43296">
+				<rom name="Mickey Mouse - The Computer Game 48K (1988)(Gremlin Graphics).z80" size="43296" crc="aa993b54" sha1="ceebb5ad712bd3b17faaa9dab67276d111c4de31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d352f2c8ea8c">
+		<description>Micro Profanation 48K v1.1 (2022)(Ivan Gomez Marquez)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="6912">
+				<rom name="Micro Profanation 48K v1.1 (2022)(Ivan Gomez Marquez).z80" size="6912" crc="067f74cd" sha1="5d352f2c8ea8c80593e26bd18ee8e30e0b1e88f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs65632e1b5ab59">
+		<description>Mojon_Twins-sampler-biniax2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="24220">
+				<rom name="Mojon_Twins-sampler-biniax2.z80" size="24220" crc="36c683ef" sha1="65632e1b5ab5971e68c48f27ca936f4add94e247"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfb99be25471ea">
+		<description>Mojon_Twins_Phantomas_Tales_1-sampler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="24293">
+				<rom name="Mojon_Twins_Phantomas_Tales_1-sampler.z80" size="24293" crc="f11e03c9" sha1="fb99be25471ea40111af33471b4ad027c8dc0b47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56034fae34ae0">
+		<description>Monty Mole (1984)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40056">
+				<rom name="Monty Mole (1984)(Gremlin Graphics).z80" size="40056" crc="2e7a94b2" sha1="56034fae34ae08e76f5f407c8d6d5ae60d676194"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3bc47a782c3c5">
+		<description>Monty on the Run (1985)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39369">
+				<rom name="Monty on the Run (1985)(Gremlin Graphics).z80" size="39369" crc="8d143cdd" sha1="3bc47a782c3c5c3118b801303361db58da4677db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs063c5502c18d2">
+		<description>Moon Torc (1991)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41296">
+				<rom name="Moon Torc (1991)(Atlantis Software).z80" size="41296" crc="8c9406a0" sha1="063c5502c18d2a3254e12fb9f2f0746a5a21a95e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2b92f031abdd5">
+		<description>Moonsweeper (1983)(CheetahSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="26570">
+				<rom name="Moonsweeper (1983)(CheetahSoft).z80" size="26570" crc="71b11ba8" sha1="2b92f031abdd5bd7a9ea3b5c32494d2d5b02ef5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsffdad24da07d9">
+		<description>Moritz 48k (2017)(Sebastian Braunert)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39114">
+				<rom name="Moritz 48k (2017)(Sebastian Braunert).z80" size="39114" crc="f0f22000" sha1="ffdad24da07d959c84d3ed6074c6aecfef5091b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb44b8f4844883">
+		<description>Mot (1989)(Opera Soft)(Part 1 of 3)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40386">
+				<rom name="Mot (1989)(Opera Soft)(Part 1 of 3)(128k).z80" size="40386" crc="b7787839" sha1="b44b8f4844883ed48c373c3a00433897472191b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf9bef5ae4527">
+		<description>Mot (1989)(Opera Soft)(Part 2 of 3)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39460">
+				<rom name="Mot (1989)(Opera Soft)(Part 2 of 3)(128k).z80" size="39460" crc="d1c50f2c" sha1="bf9bef5ae4527466ef07561906a636016f67366c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0fd29ff2b52da">
+		<description>Mot (1989)(Opera Soft)(Part 3 of 3)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38487">
+				<rom name="Mot (1989)(Opera Soft)(Part 3 of 3)(128k).z80" size="38487" crc="dcf09507" sha1="0fd29ff2b52dafc71707e9993d4618cd7f29c287"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs10667122fc0f2">
+		<description>motor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="10508">
+				<rom name="motor.z80" size="10508" crc="62c70aec" sha1="10667122fc0f2269c85ed5ce4040f3516e45bdf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf924a3ee87a02">
+		<description>Mundial de Futbol (1990)(Opera Soft)(es)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37130">
+				<rom name="Mundial de Futbol (1990)(Opera Soft)(es).z80" size="37130" crc="493c7bf9" sha1="f924a3ee87a024fb6d2c24cf0c4ad8d479f9c47e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsebe80d5b1f487">
+		<description>Mutan Zone (1989)(Opera Soft)(es)(Part 1 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44567">
+				<rom name="Mutan Zone (1989)(Opera Soft)(es)(Part 1 of 2)(128k).z80" size="44567" crc="c83a4c4d" sha1="ebe80d5b1f487abc6c447421eec63bb6b627da53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf9b4f44be7b37">
+		<description>Mutan Zone (1989)(Opera Soft)(es)(Part 2 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44529">
+				<rom name="Mutan Zone (1989)(Opera Soft)(es)(Part 2 of 2)(128k).z80" size="44529" crc="24ee7c22" sha1="f9b4f44be7b37cbb4fad2dbdcfd7c13e71c7d37a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseb14af51280b2">
+		<description>Mystery of the Nile, The (1987)(Firebird Software)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46080">
+				<rom name="Mystery of the Nile, The (1987)(Firebird Software)(128k).z80" size="46080" crc="ba505791" sha1="eb14af51280b283e344582f5471586696b4927dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa8a7e6efd8f48">
+		<description>Nanako in Classic Japanese Monster Castle 48K (2007)(Computer Emuzone)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34742">
+				<rom name="Nanako in Classic Japanese Monster Castle 48K (2007)(Computer Emuzone).z80" size="34742" crc="89eca399" sha1="a8a7e6efd8f4874028d2396d5d611875c28a56f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs03ecaf64833fb">
+		<description>Navy Moves (1988)(Dinamic Software)(Part 1 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43731">
+				<rom name="Navy Moves (1988)(Dinamic Software)(Part 1 of 2)(128k).z80" size="43731" crc="7761958a" sha1="03ecaf64833fbe45a41f6ad0089d0f30b9a0a227"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs076760b80f9a1">
+		<description>Navy Moves (1988)(Dinamic Software)(Part 2 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43851">
+				<rom name="Navy Moves (1988)(Dinamic Software)(Part 2 of 2)(128k).z80" size="43851" crc="0739a125" sha1="076760b80f9a1c9428c79ac1e1f513187ec3aff1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc8a23c6eb162b">
+		<description>Nebulus (1987)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="33525">
+				<rom name="Nebulus (1987)(Hewson Consultants).z80" size="33525" crc="a66c873b" sha1="c8a23c6eb162bd899f014acfd87399b9f384d5ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs14c8800916c80">
+		<description>Nebulus (1988)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="33530">
+				<rom name="Nebulus (1988)(Hewson Consultants).z80" size="33530" crc="9f58dc8a" sha1="14c8800916c80e74aaf049214407ad3496fa0b47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf4eed955ea7c4">
+		<description>Nemesis (1987)(The Hit Squad)[re-release]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42781">
+				<rom name="Nemesis (1987)(The Hit Squad)[re-release].z80" size="42781" crc="ad42684d" sha1="f4eed955ea7c4f386b7b4883afe752309f67a415"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs745bc87a4992e">
+		<description>Night Breed (1990)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38560">
+				<rom name="Night Breed (1990)(Ocean).z80" size="38560" crc="521f143e" sha1="745bc87a4992ec7207fd180b5d99463c8c197d66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19044a8446c9b">
+		<description>Night Breed (1990)(Ocean)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="24434">
+				<rom name="Night Breed (1990)(Ocean)[128K].z80" size="24434" crc="95a8d043" sha1="19044a8446c9bc94166c72e8a963c86d5c80df1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs30d26ac06c3f7">
+		<description>NISHADE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38736">
+				<rom name="NISHADE.Z80" size="38736" crc="b3927e5d" sha1="30d26ac06c3f7f70b91b34abbd08c115a9538f88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd8e128280cf08">
+		<description>NUPAGADI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="16967">
+				<rom name="NUPAGADI.Z80" size="16967" crc="ebb9e7e2" sha1="d8e128280cf08c3368ae92ba4b92dd9191b69e44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse18e1fb7c481e">
+		<description>OLDDEMO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="27227">
+				<rom name="OLDDEMO.Z80" size="27227" crc="eec8c79e" sha1="e18e1fb7c481eff199cc7112bc1f0420f7eaa9ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0b0f82e055a71">
+		<description>Olli & Lissa - The Ghost Of Shilmoore Castle (1986)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40792">
+				<rom name="Olli & Lissa - The Ghost Of Shilmoore Castle (1986)(Firebird).z80" size="40792" crc="ed38d8ad" sha1="0b0f82e055a715c42965fb1e131e447a7059b7c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd52e60bda9786">
+		<description>Olli & Lissa II - Halloween (1987)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42673">
+				<rom name="Olli & Lissa II - Halloween (1987)(Firebird).z80" size="42673" crc="99e59116" sha1="d52e60bda97860c442012be0beeabf1ad581f3f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcb4a0c28a790">
+		<description>Olli & Lissa III - The Candlelight Adventure (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41814">
+				<rom name="Olli & Lissa III - The Candlelight Adventure (1989)(Codemasters).z80" size="41814" crc="7b22d37c" sha1="bcb4a0c28a790ca3d3ac541e1c6722bddee9a51a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1642e834884b2">
+		<description>Out Run (1988)(U.S. Gold)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="31692">
+				<rom name="Out Run (1988)(U.S. Gold)[128K].z80" size="31692" crc="7cc211cf" sha1="1642e834884b2a1ec83b6d9c09ac1f688a746f43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56920f367d475">
+		<description>Pac-Man - Arcade 48K (2023)(Marco Leal)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="20746">
+				<rom name="Pac-Man - Arcade 48K (2023)(Marco Leal).z80" size="20746" crc="f5a3d72a" sha1="56920f367d475ee367e93b8e09c3cbb47662d184"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5eb5da932e834">
+		<description>Pakacuda 16K (1983)(Rabbit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="12033">
+				<rom name="Pakacuda 16K (1983)(Rabbit).z80" size="12033" crc="d873a9bc" sha1="5eb5da932e8343576bcd10220bcae91743548027"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee01838c6d4f6">
+		<description>Paradise Cafe PT (1985)(Damatta)[adult]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36975">
+				<rom name="Paradise Cafe PT (1985)(Damatta)[adult].z80" size="36975" crc="d0016cf2" sha1="ee01838c6d4f690df051f44e1ae1f4d2f4bde167"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsea9493c1561b8">
+		<description>Pentagram</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38913">
+				<rom name="Pentagram.Z80" size="38913" crc="76f6f6ec" sha1="ea9493c1561b8150802cdc1f61e795f09d3c8149"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfc32e5514b5c1">
+		<description>PlanetOfShades</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="21750">
+				<rom name="PlanetOfShades.z80" size="21750" crc="0534341d" sha1="fc32e5514b5c13fabd17c48fe9a978c0be668e21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd7ed39b4f939">
+		<description>players</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35553">
+				<rom name="players.z80" size="35553" crc="382b0733" sha1="cd7ed39b4f939b02414086d46d76b92d041a7452"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e361516794ff">
+		<description>PODRAZ6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34980">
+				<rom name="PODRAZ6.Z80" size="34980" crc="b911473f" sha1="7e361516794ff325810aac8fa2dbd2500ad4f841"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse53dd5dbaacd1">
+		<description>Poli Diaz (1990)(Opera Soft)(es)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="45618">
+				<rom name="Poli Diaz (1990)(Opera Soft)(es)(128k).z80" size="45618" crc="635c6283" sha1="e53dd5dbaacd143eb6daefb8309d635808846d15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs477fd56187e84">
+		<description>Popeye (1985)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="30572">
+				<rom name="Popeye (1985)(DK'Tronics).z80" size="30572" crc="8582b9b7" sha1="477fd56187e8410eb10d31bc3994f2b3087f94a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c92d4d3063f8">
+		<description>Poradce</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="20069">
+				<rom name="Poradce.z80" size="20069" crc="c9e0411d" sha1="1c92d4d3063f84e03209f84667521af83e950ba7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb932a72a49ad3">
+		<description>Poseidon - Planet Eleven 48K (1990)(Hi-Tec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35217">
+				<rom name="Poseidon - Planet Eleven 48K (1990)(Hi-Tec).z80" size="35217" crc="73a2cdf2" sha1="b932a72a49ad3fce933688715ffe0bee45c90497"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs340d448bf5592">
+		<description>Postman Pat - The Computer Game 48K (1989)(Alternative)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43141">
+				<rom name="Postman Pat - The Computer Game 48K (1989)(Alternative).z80" size="43141" crc="c991a405" sha1="340d448bf5592d7bbc44cec15b08d3724534039b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3cacdb5a7569a">
+		<description>Prince Clumsy (1990)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36725">
+				<rom name="Prince Clumsy (1990)(Codemasters).z80" size="36725" crc="c5ab98f3" sha1="3cacdb5a7569ab5d1ce728020cf1df026ca06298"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs91281e721b98e">
+		<description>Pro Skateboard Simulator (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43055">
+				<rom name="Pro Skateboard Simulator (1989)(Codemasters).z80" size="43055" crc="128b51fb" sha1="91281e721b98ee88a14fa7dc388fb4d6fe3cab0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a65440eb4cb1">
+		<description>Pro Tennis Simulator (1990)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="27039">
+				<rom name="Pro Tennis Simulator (1990)(Codemasters).z80" size="27039" crc="9e79b85c" sha1="0a65440eb4cb13c4220040a04b6bc58f11a11f67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94382eb339be8">
+		<description>Professional Snooker Simulator (1987)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="22455">
+				<rom name="Professional Snooker Simulator (1987)(Codemasters).z80" size="22455" crc="1265eecd" sha1="94382eb339be83201b86fc90d9175c178ee7de02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb0805cb1d6d90">
+		<description>PSSST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="11155">
+				<rom name="PSSST.Z80" size="11155" crc="f8b00adb" sha1="b0805cb1d6d90306bc2e197714aa2b84be853baa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9819e0c994f6e">
+		<description>Pub Trivia (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="100743">
+				<rom name="Pub Trivia (1989)(Codemasters).z80" size="100743" crc="bafbf528" sha1="9819e0c994f6e3c7de205c5c84639d9ccada2702"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5e53f50c8000">
+		<description>R-Type (1988)(Electric Dreams Software)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="31937">
+				<rom name="R-Type (1988)(Electric Dreams Software)[b].z80" size="31937" crc="7db5c98f" sha1="a5e53f50c800051275a31472f9125da14ace00f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7994e1318026f">
+		<description>Race Against Time, The (1988)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44167">
+				<rom name="Race Against Time, The (1988)(Codemasters).z80" size="44167" crc="fe86ca68" sha1="7994e1318026f9d2977e252695e36ebb626e5c81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6da535abed414">
+		<description>Race, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="31160">
+				<rom name="Race, The.z80" size="31160" crc="a1538f66" sha1="6da535abed4141c7df898aa88cfa6d31226ac029"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs29a1af5af309e">
+		<description>RAM (1990)(Topo Soft)(es)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44592">
+				<rom name="RAM (1990)(Topo Soft)(es)(128k).z80" size="44592" crc="c81e6097" sha1="29a1af5af309efdac1e844cfe38f460d9298041f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs53573f9ff78f2">
+		<description>Rat-A-Tat (2020)(Joesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="48861">
+				<rom name="Rat-A-Tat (2020)(Joesoft).z80" size="48861" crc="39227a8c" sha1="53573f9ff78f2a51e3cbf74607c7a958489af4c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4957b64d98986">
+		<description>Rescate Atlantida ES 128K (1989)(Dinamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="109724">
+				<rom name="Rescate Atlantida ES 128K (1989)(Dinamic).z80" size="109724" crc="c437d0e7" sha1="4957b64d98986b73213133a12ea04367dabcf969"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfec82a314c744">
+		<description>Rescate en el Golfo (1990)(Opera Soft)(Part 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34779">
+				<rom name="Rescate en el Golfo (1990)(Opera Soft)(Part 1 of 2).z80" size="34779" crc="d7add860" sha1="fec82a314c744275cbee40237309549419bf42b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d9695a578bd5">
+		<description>Rescate en el Golfo (1990)(Opera Soft)(Part 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37620">
+				<rom name="Rescate en el Golfo (1990)(Opera Soft)(Part 2 of 2).z80" size="37620" crc="370d2085" sha1="8d9695a578bd58c82000110eeaca9134bad7f09e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs71e8b7025c1e5">
+		<description>Rex (1988)(Martech Games)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="55347">
+				<rom name="Rex (1988)(Martech Games)(128k).z80" size="55347" crc="f5fc8541" sha1="71e8b7025c1e5942c7374ffe36c67bab60e7e0f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc34f823fed593">
+		<description>Rex (1988)(Martech Games)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43703">
+				<rom name="Rex (1988)(Martech Games)[Part 1 of 2].z80" size="43703" crc="ecb7d3dc" sha1="c34f823fed593b99de3452038779145a3dfa9102"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1b957319a28b4">
+		<description>Rex (1988)(Martech Games)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40762">
+				<rom name="Rex (1988)(Martech Games)[Part 2 of 2].z80" size="40762" crc="51130dc0" sha1="1b957319a28b4f80884c36d6ba70ef5cc0039bc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfced04ff023bc">
+		<description>Road Blasters 128K (1988)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="99688">
+				<rom name="Road Blasters 128K (1988)(U.S. Gold).z80" size="99688" crc="64455e8a" sha1="fced04ff023bc5eed52e98f7ddc999089fa7a629"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a840ac1c472b">
+		<description>Road Runner 48K (1987)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="45123">
+				<rom name="Road Runner 48K (1987)(U.S. Gold).z80" size="45123" crc="4b781d7c" sha1="0a840ac1c472bd94102d36a21f8f9666307d2b41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1ac3306480d1b">
+		<description>Road Runner and Wile E. Coyote 48K (1991)(Hi-Tec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="32844">
+				<rom name="Road Runner and Wile E. Coyote 48K (1991)(Hi-Tec).z80" size="32844" crc="68c9c307" sha1="1ac3306480d1b3e0986165d6ee2ebfd210b67c1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseb577dc6dd5e3">
+		<description>Rocco 48K (1985)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38035">
+				<rom name="Rocco 48K (1985)(Gremlin Graphics).z80" size="38035" crc="dae7f761" sha1="eb577dc6dd5e3c8b5a2aa8ac8fc31b91718a0c81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd9c0796c18c14">
+		<description>Rock 'n Roller (1988)(Topo Soft)(es)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46090">
+				<rom name="Rock 'n Roller (1988)(Topo Soft)(es)(128k).z80" size="46090" crc="df57dab8" sha1="d9c0796c18c1474fb833b90da5982a542103b544"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs429d207db4648">
+		<description>Rock'n Roller ES (1988)(Topo Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43965">
+				<rom name="Rock'n Roller ES (1988)(Topo Soft).z80" size="43965" crc="16da9309" sha1="429d207db4648f625baa5528d68744264eddaeca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd8e65ab8f94fb">
+		<description>Rocky 48K (1985)(Dinamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38026">
+				<rom name="Rocky 48K (1985)(Dinamic).z80" size="38026" crc="79a0f6b2" sha1="d8e65ab8f94fba590ecc74fb6c91a34b5d13fefe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs064de6dee1e5a">
+		<description>Run the Gauntlet (1989)(Ocean)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="98833">
+				<rom name="Run the Gauntlet (1989)(Ocean)[128K].z80" size="98833" crc="c3aef7d9" sha1="064de6dee1e5aa6801b38157df8f549a06d2599c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6aac47a55fe1e">
+		<description>S.I.P. - Special Intergalactic Painter 48K (2014)(Gamemaster)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="24836">
+				<rom name="S.I.P. - Special Intergalactic Painter 48K (2014)(Gamemaster).z80" size="24836" crc="aeda6d62" sha1="6aac47a55fe1e9673d1b459f512eaa2bd0b37eec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs806b9046f0e7d">
+		<description>Saboteur (1986)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38331">
+				<rom name="Saboteur (1986)(Durell).z80" size="38331" crc="d08cf864" sha1="806b9046f0e7d2b0a87f3c41d80862de3985103e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs25aefbc8a4984">
+		<description>Saboteur 48K (1985)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39664">
+				<rom name="Saboteur 48K (1985)(Durell).z80" size="39664" crc="a7a89067" sha1="25aefbc8a4984c3801682196136390810b52c986"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs61f3ec203fd91">
+		<description>Saboteur II - Avenging Angel (1987)(Durell)(128k)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46992">
+				<rom name="Saboteur II - Avenging Angel (1987)(Durell)(128k)_2.z80" size="46992" crc="7aad77db" sha1="61f3ec203fd91db75249599ab03c7f238f0556ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3dd842dbe7ab1">
+		<description>Saboteur II - Avenging Angel (1987)(Durell)(Standard)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39605">
+				<rom name="Saboteur II - Avenging Angel (1987)(Durell)(Standard).z80" size="39605" crc="8904b9ba" sha1="3dd842dbe7ab134594b5545bd160b46e96f69676"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46ec33f519feb">
+		<description>Saboteur II - Avenging Angel (1987)(Durell)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43414">
+				<rom name="Saboteur II - Avenging Angel (1987)(Durell)_1.z80" size="43414" crc="4f0d8f73" sha1="46ec33f519feb207c51b262b9bf31e727cf4d7b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2a0b8298c4c04">
+		<description>Saboteur_II_Avenging_Angel_1987_Durell_Software</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42809">
+				<rom name="Saboteur_II_Avenging_Angel_1987_Durell_Software.z80" size="42809" crc="497dcf1c" sha1="2a0b8298c4c04fb16ac74ba6ee5826d82f39b6a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0df3c8afefec4">
+		<description>Sabre Wulf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39518">
+				<rom name="Sabre Wulf.Z80" size="39518" crc="309a9d4f" sha1="0df3c8afefec48e39ae4467c9cc9c6f59aa11f03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef87fc8dbb9d4">
+		<description>Sabrina ES 48K (1989)(Iber Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35718">
+				<rom name="Sabrina ES 48K (1989)(Iber Soft).z80" size="35718" crc="04ffed4b" sha1="ef87fc8dbb9d485ecc31018d85e00e45565436c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfd9871d0181dd">
+		<description>Sacred Armour of Antiriad, The (1986)(Palace)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41012">
+				<rom name="Sacred Armour of Antiriad, The (1986)(Palace).z80" size="41012" crc="1abe0529" sha1="fd9871d0181dd7d1e04ebac059beb431961adacb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs877c5603b151c">
+		<description>Samurai Warrior - Usagi Yojimbo (1988)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44210">
+				<rom name="Samurai Warrior - Usagi Yojimbo (1988)(Firebird).z80" size="44210" crc="0b36f4a1" sha1="877c5603b151c2b8fed7fc11001a778b49169f63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdeac0af3d890f">
+		<description>Sanxion - The Spectrum Remix (1989)(Thalamus)(48K-128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="19615">
+				<rom name="Sanxion - The Spectrum Remix (1989)(Thalamus)(48K-128K).z80" size="19615" crc="97a506fa" sha1="deac0af3d890f9827e38bc95bacce3876ed4a3be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs84e706457d6b5">
+		<description>Satan (1989)(Dinamic Software)(Part 1 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35210">
+				<rom name="Satan (1989)(Dinamic Software)(Part 1 of 2)(128k).z80" size="35210" crc="d0116da2" sha1="84e706457d6b5efb67ce21b386b18f459eb5f5e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse966b389faa53">
+		<description>Satan (1989)(Dinamic Software)(Part 2 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36685">
+				<rom name="Satan (1989)(Dinamic Software)(Part 2 of 2)(128k).z80" size="36685" crc="d8e20890" sha1="e966b389faa53c85fd7ee6ee5311781994d11130"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44a6b8181b8a4">
+		<description>Savage (1988)(Firebird)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37289">
+				<rom name="Savage (1988)(Firebird)(128k).z80" size="37289" crc="09aef12f" sha1="44a6b8181b8a46aee818724574a66206353ce230"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07cdb1cc7948a">
+		<description>Savage, The (1988)(Firebird)[intro]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="31023">
+				<rom name="Savage, The (1988)(Firebird)[intro].z80" size="31023" crc="e606ebf0" sha1="07cdb1cc7948a599405d1317dbd93837283dce23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc1aeecf08b33d">
+		<description>Savage, The (1988)(Firebird)[Part 1 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37404">
+				<rom name="Savage, The (1988)(Firebird)[Part 1 of 3].z80" size="37404" crc="f8071892" sha1="c1aeecf08b33d162713cc5564ce09154d71bd44b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3561d903180ff">
+		<description>Savage, The (1988)(Firebird)[Part 1 of 3]_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37764">
+				<rom name="Savage, The (1988)(Firebird)[Part 1 of 3]_1.z80" size="37764" crc="3db88855" sha1="3561d903180ff97e6c1011f1b235be39e2d01aaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbec6980430f20">
+		<description>Savage, The (1988)(Firebird)[Part 2 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39456">
+				<rom name="Savage, The (1988)(Firebird)[Part 2 of 3].z80" size="39456" crc="4f8ddec1" sha1="bec6980430f2039aa948e4469077ebd5ff9d13a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc8c5ca391acb3">
+		<description>Savage, The (1988)(Firebird)[Part 3 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="33909">
+				<rom name="Savage, The (1988)(Firebird)[Part 3 of 3].z80" size="33909" crc="e994f627" sha1="c8c5ca391acb34455be8eb6e15fff9ca4d905117"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs18c3577d4e977">
+		<description>Score 3020 ES 48K (1989)(Topo Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35177">
+				<rom name="Score 3020 ES 48K (1989)(Topo Soft).z80" size="35177" crc="3f505d11" sha1="18c3577d4e977fc34a2628fb4b8cba0af3a38114"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9afafb53dc756">
+		<description>Scuba Dive (1983)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="28778">
+				<rom name="Scuba Dive (1983)(Durell).z80" size="28778" crc="fc1543e0" sha1="9afafb53dc756782234f14539fd689ac4bd33558"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19c7e3eb63e69">
+		<description>Sea Dragon (2010)(Andrew Zhiglov)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="80723">
+				<rom name="Sea Dragon (2010)(Andrew Zhiglov)(128k).z80" size="80723" crc="f9fe097c" sha1="19c7e3eb63e6968bf0c9ff95bb38ecd89ba4d03d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb8c7dba886016">
+		<description>Sector (2013)(RetroSouls)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="27939">
+				<rom name="Sector (2013)(RetroSouls).z80" size="27939" crc="103cfccf" sha1="b8c7dba8860165039ff600c7b8567cd6ab94340c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3cdf65b84474d">
+		<description>Sentinel, The (1987)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39141">
+				<rom name="Sentinel, The (1987)(Firebird Software).z80" size="39141" crc="716e7ebf" sha1="3cdf65b84474df1dd962ebe67d76abeab3b5b860"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd0b1d8ff869f8">
+		<description>Seymour At The Movies (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46023">
+				<rom name="Seymour At The Movies (1991)(Codemasters).z80" size="46023" crc="c91a5fa5" sha1="d0b1d8ff869f8537913c7fc9fe998d618fb1c906"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c8d84d7ab915">
+		<description>Seymour Take One (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34186">
+				<rom name="Seymour Take One (1991)(Codemasters).z80" size="34186" crc="21645f38" sha1="1c8d84d7ab9156c726072268fd7e0bd7bbc572b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs710502412fccb">
+		<description>Shadow Of The Beast (1990)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="114104">
+				<rom name="Shadow Of The Beast (1990)(Gremlin Graphics).z80" size="114104" crc="0507010d" sha1="710502412fccbe48656fd9910d57b369c34fca3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e98a2dec6f52">
+		<description>Sherlock 48K (1984)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43891">
+				<rom name="Sherlock 48K (1984)(Melbourne House).z80" size="43891" crc="91d7e211" sha1="8e98a2dec6f529760fd0db51461da5a465d005c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ba5f06837e47">
+		<description>Side Arms 48K (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="47259">
+				<rom name="Side Arms 48K (1988)(Go!).z80" size="47259" crc="cb9fcf76" sha1="5ba5f06837e47259f83974498245b92fc05de647"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9f495859b2a86">
+		<description>Sidewize_1987_Firebird_Software</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42367">
+				<rom name="Sidewize_1987_Firebird_Software.z80" size="42367" crc="21fba6ed" sha1="9f495859b2a867e73783dcb888ee3ed1d8f2dc8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50047e631cf0f">
+		<description>Silent Service 48K (1986)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40554">
+				<rom name="Silent Service 48K (1986)(U.S. Gold).z80" size="40554" crc="1822026f" sha1="50047e631cf0f6ed0d2e310838f63816badeb0c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab74184e4f750">
+		<description>Sim City (1989)(Infogrames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34657">
+				<rom name="Sim City (1989)(Infogrames).z80" size="34657" crc="d7281b2e" sha1="ab74184e4f750ead70111cad9c53af7d6ea6f115"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1ec25146dfd89">
+		<description>Simulador Profesional de Tenis (1990)(Dinamic Software)(es)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44573">
+				<rom name="Simulador Profesional de Tenis (1990)(Dinamic Software)(es)(128k).z80" size="44573" crc="dc939284" sha1="1ec25146dfd8954f465a53e422b92e0a3a6b7658"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc3a8406843ad5">
+		<description>Sirwood (1990)(Opera Soft)(Part 1 of 3)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39314">
+				<rom name="Sirwood (1990)(Opera Soft)(Part 1 of 3)(128k).z80" size="39314" crc="afd2f222" sha1="c3a8406843ad5b00f860a7d68e90cd9a172d83c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4785aabf5fcac">
+		<description>Sirwood (1991)(Opera Soft)(Part 2 of 3)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39092">
+				<rom name="Sirwood (1991)(Opera Soft)(Part 2 of 3)(128k).z80" size="39092" crc="21ead039" sha1="4785aabf5fcacab08f9128e217cfa3dbf682d341"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4ad0b5a039eb3">
+		<description>Sirwood (1991)(Opera Soft)(Part 3 of 3)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39175">
+				<rom name="Sirwood (1991)(Opera Soft)(Part 3 of 3)(128k).z80" size="39175" crc="65a3d717" sha1="4ad0b5a039eb3bd02ad45c96a864d1599a54481b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs326dd0c8175f7">
+		<description>Sito Pons 500cc Grand Prix (1990)(Zigurat Software)(es)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40559">
+				<rom name="Sito Pons 500cc Grand Prix (1990)(Zigurat Software)(es)(128k).z80" size="40559" crc="1f9a9466" sha1="326dd0c8175f70b48abb38098555bf14c817241d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa6fb5a601195c">
+		<description>Skate Crazy - Part 1 (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="50655">
+				<rom name="Skate Crazy - Part 1 (1988)(Gremlin Graphics).z80" size="50655" crc="16add75c" sha1="a6fb5a601195c09a4cc4274fcaf97433ce1c5883"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5a2daa9ea22c">
+		<description>Skate Crazy - Part 2 (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35524">
+				<rom name="Skate Crazy - Part 2 (1988)(Gremlin Graphics).z80" size="35524" crc="82d5426e" sha1="a5a2daa9ea22c4b41ef2eada90a59241441f5493"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd489f71bb1a2d">
+		<description>Skladacka (1989)(Deltasoft)(SK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38806">
+				<rom name="Skladacka (1989)(Deltasoft)(SK).z80" size="38806" crc="243e4f5b" sha1="d489f71bb1a2de5206487dffc43f7d77df612e19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50ccee71d75ad">
+		<description>Soko-BanEditor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="12598">
+				<rom name="Soko-BanEditor.z80" size="12598" crc="46a704bc" sha1="50ccee71d75ad530025fb5321cb34328d356025e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs36eef827534d5">
+		<description>Sol Negro (1989)(Opera Soft)(es)(Part 1 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39768">
+				<rom name="Sol Negro (1989)(Opera Soft)(es)(Part 1 of 2)(128k).z80" size="39768" crc="7061e8bc" sha1="36eef827534d52b83ded1c503969f1f5326b3a66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse8845b68419b7">
+		<description>Sol Negro (1989)(Opera Soft)(es)(Part 2 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37998">
+				<rom name="Sol Negro (1989)(Opera Soft)(es)(Part 2 of 2)(128k).z80" size="37998" crc="539534b1" sha1="e8845b68419b785d96f7d949dab5798f727a3021"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f39a6cb6e0c3">
+		<description>Sol Negro - Special Edition - Part 1 (1989)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42525">
+				<rom name="Sol Negro - Special Edition - Part 1 (1989)(Opera Soft).z80" size="42525" crc="27b7e34f" sha1="0f39a6cb6e0c3c80835a4bc4498cdb60655b3b0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5170d3f5a2921">
+		<description>Sol Negro - Special Edition - Part 2 (1989)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37075">
+				<rom name="Sol Negro - Special Edition - Part 2 (1989)(Opera Soft).z80" size="37075" crc="af912284" sha1="5170d3f5a292185ddd62e25b5f68bfbcee6521e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc208ecaffa04a">
+		<description>Soldier Of Fortune (1988)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44543">
+				<rom name="Soldier Of Fortune (1988)(Firebird).z80" size="44543" crc="c3dc26df" sha1="c208ecaffa04a24384094b1901efb87788539953"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc904aba9002bc">
+		<description>SOLITER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="11450">
+				<rom name="SOLITER.Z80" size="11450" crc="ea1ce350" sha1="c904aba9002bc88644fe3875c841587661985313"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs991900e6ce7db">
+		<description>Souls ES (2013)(Retrobytes Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36726">
+				<rom name="Souls ES (2013)(Retrobytes Productions).z80" size="36726" crc="99ce519b" sha1="991900e6ce7db7414dd6624a93534a9e3e4e2c53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c8f7a3f0d188">
+		<description>Spooky Castle 48K (1990)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38671">
+				<rom name="Spooky Castle 48K (1990)(Atlantis Software).z80" size="38671" crc="fad004e5" sha1="0c8f7a3f0d188231be2c42f28bdad8f473d7fc44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscda7fd60c55cf">
+		<description>Stalker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="49247">
+				<rom name="Stalker.z80" size="49247" crc="e67248f9" sha1="cda7fd60c55cf290af4bb5710d7103ed547dc300"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf1ac7ba4eaf84">
+		<description>Star Blade (1995)(Barry Addams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38880">
+				<rom name="Star Blade (1995)(Barry Addams).z80" size="38880" crc="96e096c6" sha1="f1ac7ba4eaf841224f975c91d43d8e0305b328d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs79ed147f6306a">
+		<description>Star Paws (1988)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="50264">
+				<rom name="Star Paws (1988)(Software Projects).z80" size="50264" crc="14d2c355" sha1="79ed147f6306ac569132a7b7a7cbcfaea86814fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs275300e10985d">
+		<description>Starfox</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37085">
+				<rom name="Starfox.z80" size="37085" crc="89d74256" sha1="275300e10985d2b5d047abee61a659f4241082a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d3f298948aa4">
+		<description>Stonava1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42731">
+				<rom name="Stonava1.z80" size="42731" crc="02f2f8be" sha1="1d3f298948aa4a25fd879a191b6259db1ab41da8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb4c0f578e6231">
+		<description>Stonava2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34399">
+				<rom name="Stonava2.z80" size="34399" crc="50e4ee44" sha1="b4c0f578e623151fc0ca20d16df439fdf416b792"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe93a3def4cc6">
+		<description>Stonava3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="30754">
+				<rom name="Stonava3.z80" size="30754" crc="a65634c0" sha1="fe93a3def4cc66cbc4d5e8ee24e765a4294f7a38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs266fa1fa5fd24">
+		<description>Stop The Express (1983)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="21700">
+				<rom name="Stop The Express (1983)(Hudson Soft).z80" size="21700" crc="56a42e2e" sha1="266fa1fa5fd244da8c0f2accef913c9a326317ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs804b7424fa55d">
+		<description>Stormlord (1989)(Hewson Consultants)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37190">
+				<rom name="Stormlord (1989)(Hewson Consultants)[t].z80" size="37190" crc="95529c30" sha1="804b7424fa55d5059ddccc2db06941b13cd4465f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfa89b3f36aaa5">
+		<description>Stormlord_II_Deliverance_1990_Hewson_Consultants_Part_1_of_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36795">
+				<rom name="Stormlord_II_Deliverance_1990_Hewson_Consultants_Part_1_of_3.z80" size="36795" crc="ba505b37" sha1="fa89b3f36aaa53459aed8a8692aab49e5b1230af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff662ac64c6db">
+		<description>Stormlord_II_Deliverance_1990_Hewson_Consultants_Part_2_of_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35579">
+				<rom name="Stormlord_II_Deliverance_1990_Hewson_Consultants_Part_2_of_3.z80" size="35579" crc="251305b5" sha1="ff662ac64c6db3c6730e133fc8c66c4bdea87474"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8661d06efd082">
+		<description>Stormlord_II_Deliverance_1990_Hewson_Consultants_Part_3_of_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35067">
+				<rom name="Stormlord_II_Deliverance_1990_Hewson_Consultants_Part_3_of_3.z80" size="35067" crc="4e7492c8" sha1="8661d06efd082d7b59d42c1c3496d4f4b1c12489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66e8a1cff7401">
+		<description>Street Hassle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38429">
+				<rom name="Street Hassle.z80" size="38429" crc="adccc4fe" sha1="66e8a1cff74011472e5b9aa16557f952973b483a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs34483ff25dc43">
+		<description>Strider II (1990)(U.S. Gold)[needs tape load]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="28999">
+				<rom name="Strider II (1990)(U.S. Gold)[needs tape load].z80" size="28999" crc="63f5426d" sha1="34483ff25dc43858fb7455c33d939ad4bbc5d10b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse5634cad1ae21">
+		<description>Stunt Car Racer (1989)(Micro Style)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36727">
+				<rom name="Stunt Car Racer (1989)(Micro Style).z80" size="36727" crc="c02a3c1f" sha1="e5634cad1ae21bac80d8efe1d3e006819daa4772"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscfcea8d00c8b4">
+		<description>Subbuteo - The Computer Game (1990)(Electronic Zoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="33758">
+				<rom name="Subbuteo - The Computer Game (1990)(Electronic Zoo).z80" size="33758" crc="31346a92" sha1="cfcea8d00c8b46a99b0836e961b26c4cddd4503b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbbfab00d379cd">
+		<description>Subbuteo - The Computer Game (1990)(Electronic Zoo)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="60190">
+				<rom name="Subbuteo - The Computer Game (1990)(Electronic Zoo)[128K].z80" size="60190" crc="37c72d4c" sha1="bbfab00d379cda74e8125cdc0dbe87cde31c42f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs631361f0e46bb">
+		<description>Super Alien Blast 48K (2021)(Vintage Software Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="26442">
+				<rom name="Super Alien Blast 48K (2021)(Vintage Software Systems).z80" size="26442" crc="a4b43504" sha1="631361f0e46bb722c98826d3a0d2e0091fc14809"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd2bf9bc471ac2">
+		<description>Super Meteor Blast 48K (2021)(Vintage Software Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="26792">
+				<rom name="Super Meteor Blast 48K (2021)(Vintage Software Systems).z80" size="26792" crc="9198c2de" sha1="d2bf9bc471ac22dcfb19151bf16c1166169d4f43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb44682aa4f44d">
+		<description>Super Monaco GP (1991)(U.S. Gold)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="57484">
+				<rom name="Super Monaco GP (1991)(U.S. Gold)[128K].z80" size="57484" crc="6a1dcc87" sha1="b44682aa4f44d58c0d86c103e096e735446a89dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa6c5f8ce1dc45">
+		<description>Super Space Invaders 128K (1991)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="104637">
+				<rom name="Super Space Invaders 128K (1991)(Domark).z80" size="104637" crc="2a36ad52" sha1="a6c5f8ce1dc45bd34491881dd963e3b4809896cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4e8dde2b824e3">
+		<description>Superbike Trans-Am (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40870">
+				<rom name="Superbike Trans-Am (1989)(Codemasters).z80" size="40870" crc="28322d99" sha1="4e8dde2b824e3f114aa711c7b3039eb6a70f0876"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs750391d38a428">
+		<description>SuperDiskus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="18052">
+				<rom name="SuperDiskus.z80" size="18052" crc="58b40ab3" sha1="750391d38a428ad8ca1a502c05edc4c242543fb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs69b94dbf4100f">
+		<description>SWIV (1991)(Storm Software)(Block1)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="104051">
+				<rom name="SWIV (1991)(Storm Software)(Block1)(128k).z80" size="104051" crc="92a3c4e7" sha1="69b94dbf4100f4726ce40cd19972a3572a65a472"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs08b2a0159d25c">
+		<description>SWIV (1991)(Storm Software)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="103579">
+				<rom name="SWIV (1991)(Storm Software)[128K].z80" size="103579" crc="edc341d5" sha1="08b2a0159d25cabc13cb0b049e590407e557b45a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66f6558f3fbf5">
+		<description>S_Quest1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="16679">
+				<rom name="S_Quest1.z80" size="16679" crc="ea28f08c" sha1="66f6558f3fbf5104aa2113ea1c45abcf2f42e47f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs607daba4aff56">
+		<description>S_Quest2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="25903">
+				<rom name="S_Quest2.z80" size="25903" crc="4b2ca8a8" sha1="607daba4aff56eb0a36acc53ce1f6e2ed102a24c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6cfc813909561">
+		<description>Tai-Pan (1987)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="81683">
+				<rom name="Tai-Pan (1987)(Ocean).z80" size="81683" crc="0ba89514" sha1="6cfc813909561780a649cf451df96f5924b9db14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d552e5ce6fd7">
+		<description>Tai-Pan 128K (1987)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="82362">
+				<rom name="Tai-Pan 128K (1987)(Ocean).z80" size="82362" crc="3a80cd98" sha1="6d552e5ce6fd7168735bf4a16711a63a67b77ebf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse43565d1621a8">
+		<description>Technician Ted</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="120705">
+				<rom name="Technician Ted.z80" size="120705" crc="4ff68f33" sha1="e43565d1621a8c50e783ce79b457c918e73b0c72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7686bf1ec777b">
+		<description>Teenage Mutant Hero Turtles (1990)(Image Works)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46364">
+				<rom name="Teenage Mutant Hero Turtles (1990)(Image Works).z80" size="46364" crc="fa454654" sha1="7686bf1ec777b73d0277cd00729fcbc27bd8add9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75237663a1676">
+		<description>Terra Cresta (1986)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36850">
+				<rom name="Terra Cresta (1986)(Imagine Software).z80" size="36850" crc="a28b1755" sha1="75237663a1676732160fa40bded97ddd34caf436"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0ab220441eba3">
+		<description>Terra Cresta (1986)(Imagine Software)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38038">
+				<rom name="Terra Cresta (1986)(Imagine Software)[128K].z80" size="38038" crc="6f15fad6" sha1="0ab220441eba33422a366aa8a7c2ab06beddb9b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs104c323bc9265">
+		<description>Test_Drive_II_The_Duel_1989_Accolade</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41515">
+				<rom name="Test_Drive_II_The_Duel_1989_Accolade.z80" size="41515" crc="b7dfa96d" sha1="104c323bc926512fbdc748d3217f682fc4df913a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb62e94fa39ba5">
+		<description>Tetris (1988)(Mirrorsoft)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="30129">
+				<rom name="Tetris (1988)(Mirrorsoft)(128k).z80" size="30129" crc="ca758c04" sha1="b62e94fa39ba588caf3877505687e7542b88c79f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs11930f276e4bd">
+		<description>Tetris (1988)(Mirrorsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="27770">
+				<rom name="Tetris (1988)(Mirrorsoft).z80" size="27770" crc="1226181e" sha1="11930f276e4bd9a5aa80cf223b32cf4237ed8223"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd123311654907">
+		<description>Tetris2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="24464">
+				<rom name="Tetris2.z80" size="24464" crc="2d885135" sha1="d12331165490739a2cf5f31b0b330ebd2b2d232e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ace7869431e7">
+		<description>Thundercats 128K (1987)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="81713">
+				<rom name="Thundercats 128K (1987)(Elite Systems).z80" size="81713" crc="e6b612c8" sha1="5ace7869431e7bd5aecbf14ca7045db2cddcc9b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff50e67d3cd40">
+		<description>Thundercats 48K (1987)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39679">
+				<rom name="Thundercats 48K (1987)(Elite Systems).z80" size="39679" crc="2812ba20" sha1="ff50e67d3cd404efd9f9e6a85e10302a198e5553"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa94db4df2729a">
+		<description>Tiger Road (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40859">
+				<rom name="Tiger Road (1988)(Go!).z80" size="40859" crc="04767cb9" sha1="a94db4df2729a6ea5bce31ca8b7bd77c9b0a8fdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsad0a113158f7d">
+		<description>Tiger Road (1988)(Go!)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46886">
+				<rom name="Tiger Road (1988)(Go!)[128K].z80" size="46886" crc="ede04afd" sha1="ad0a113158f7d8c39d2a40c26375b981b9516a71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb18ddea67f2d9">
+		<description>Time Machine 48K (1990)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41590">
+				<rom name="Time Machine 48K (1990)(Activision).z80" size="41590" crc="5cf41e5c" sha1="b18ddea67f2d9d6f5274c060522841e6195d8946"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e729177c28b7">
+		<description>Titanic (1988)(Topo Soft)(Part 1 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38257">
+				<rom name="Titanic (1988)(Topo Soft)(Part 1 of 2)(128k).z80" size="38257" crc="c91e3859" sha1="3e729177c28b724cfb6e4ab5ec84cb830c3bd43f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd96f170a47d2c">
+		<description>Titanic (1988)(Topo Soft)(Part 2 of 2)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40854">
+				<rom name="Titanic (1988)(Topo Soft)(Part 2 of 2)(128k).z80" size="40854" crc="138225dd" sha1="d96f170a47d2c81402fc424a0887bb7b5e844977"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5f325e8b8e44d">
+		<description>Top Cat in Beverly Hills Cats 48K (1991)(Hi-Tec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43855">
+				<rom name="Top Cat in Beverly Hills Cats 48K (1991)(Hi-Tec).z80" size="43855" crc="08eb7b04" sha1="5f325e8b8e44de1887461b47725c7d2eac22a60b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2f752cc16d90e">
+		<description>Total Recall (1991)(Ocean)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="94615">
+				<rom name="Total Recall (1991)(Ocean)[128K].z80" size="94615" crc="ab3503be" sha1="2f752cc16d90e74aee46cc59870c6a0dfcd14120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd7f78e3c4d08c">
+		<description>Trantor The Last Stormtrooper (1987)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39785">
+				<rom name="Trantor The Last Stormtrooper (1987)(Go!).z80" size="39785" crc="bad682da" sha1="d7f78e3c4d08cc2d094a6d541324c9b7073205a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e8a5191ec0a7">
+		<description>Tranz Am (1983)(Ultimate Play The Game)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="14205">
+				<rom name="Tranz Am (1983)(Ultimate Play The Game).z80" size="14205" crc="00eaadb6" sha1="9e8a5191ec0a76e419e5bde8439210b984e61b70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff7c130367fbe">
+		<description>Trapdoor, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42876">
+				<rom name="Trapdoor, The.z80" size="42876" crc="9a026b88" sha1="ff7c130367fbec49a4401879bc3329ea7083444a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb4c22a29d77aa">
+		<description>Treinador de Futebol PT (1983)(Microbyte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34576">
+				<rom name="Treinador de Futebol PT (1983)(Microbyte Software).z80" size="34576" crc="49dbc0b8" sha1="b4c22a29d77aaf7341ffb9a374bc41f3ad95099b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse04481a15bac5">
+		<description>Tus Juegos Single 1 - Tape 1 - Incursion Aerea (19xx)(Monser)(es)[aka Harrier Attack!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="11080">
+				<rom name="Tus Juegos Single 1 - Tape 1 - Incursion Aerea (19xx)(Monser)(es)[aka Harrier Attack!].z80" size="11080" crc="3f730589" sha1="e04481a15bac5c47d3a94e3e4dc8945feda3f6bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf479cd5b7eb28">
+		<description>Tus Juegos Single 1 - Tape 4 - Gusiloc (19xx)(Monser)(es)[aka Millipede]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="9320">
+				<rom name="Tus Juegos Single 1 - Tape 4 - Gusiloc (19xx)(Monser)(es)[aka Millipede].z80" size="9320" crc="249b4758" sha1="f479cd5b7eb28f920eedff67eaed0b9a6c124e11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd52a55bfd32f9">
+		<description>Underwurlde</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="38837">
+				<rom name="Underwurlde.Z80" size="38837" crc="63b5f5a7" sha1="d52a55bfd32f96d32546587a52b8035aa8ae09f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa75afdd3bd924">
+		<description>UPIR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39617">
+				<rom name="UPIR.Z80" size="39617" crc="2e41e7a2" sha1="a75afdd3bd924106a33110116d8de99443872297"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6698086069220">
+		<description>Valley of Rains (2019)(Zosya Entertainment)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46663">
+				<rom name="Valley of Rains (2019)(Zosya Entertainment)(128k).z80" size="46663" crc="7a79ca09" sha1="66980860692203e29e22c9ddd40502b9877d889b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc75c08822fde4">
+		<description>Vindicator, The (1988)(Imagine Software)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="112274">
+				<rom name="Vindicator, The (1988)(Imagine Software)[128K].z80" size="112274" crc="57c8a81d" sha1="c75c08822fde4da8b8628c404fb37e661b24c3f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaad372624ff1b">
+		<description>Vindicators (1989)(Domark)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43616">
+				<rom name="Vindicators (1989)(Domark)[128K].z80" size="43616" crc="6c4dbbe3" sha1="aad372624ff1b58710412ba0cf72cafd18643b23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbc9016ffb0bb6">
+		<description>Way of the Exploding Fist, The (1985)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="42718">
+				<rom name="Way of the Exploding Fist, The (1985)(Melbourne House).z80" size="42718" crc="f73f3022" sha1="bc9016ffb0bb6409226d8bf0a0516760adf56436"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd5306b6ce9dd9">
+		<description>WEC Le Mans (1988)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41534">
+				<rom name="WEC Le Mans (1988)(Imagine Software).z80" size="41534" crc="83a8e1f7" sha1="d5306b6ce9dd91363f7ef06ab2bde8f94217f068"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs61c987fc77f2a">
+		<description>WEC Le Mans (1988)(Imagine Software)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="55566">
+				<rom name="WEC Le Mans (1988)(Imagine Software)[128K].z80" size="55566" crc="a77096e2" sha1="61c987fc77f2a2629af6d33d77b4b3baec2ab427"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8c9ee7a90a968">
+		<description>Welltris</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41461">
+				<rom name="Welltris.z80" size="41461" crc="ce656b18" sha1="8c9ee7a90a968e3287bbe4682815bb33a7c677f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b432a1136d63">
+		<description>whb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39295">
+				<rom name="whb.z80" size="39295" crc="98d261cb" sha1="7b432a1136d63d660a0094e6467e8fd3c6955163"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsce5ffcd5e8494">
+		<description>Wild West Seymour (1992)(Codemasters)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="82374">
+				<rom name="Wild West Seymour (1992)(Codemasters)(128k).z80" size="82374" crc="01dc3cee" sha1="ce5ffcd5e8494d08073291e58a775fa04a8ff221"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07da4222f0825">
+		<description>Wild West Seymour (1992)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46251">
+				<rom name="Wild West Seymour (1992)(Codemasters).z80" size="46251" crc="bf324d91" sha1="07da4222f0825f51aa39c674bbb62b1e97f483a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd112727f9e210">
+		<description>Wonder Boy (1987)(Activision)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="70035">
+				<rom name="Wonder Boy (1987)(Activision)[128K].z80" size="70035" crc="b492a055" sha1="d112727f9e2101690b21052fe7c27cced9aa7704"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee37fcbe3553c">
+		<description>World Series Basketball (1985)(Imagine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40058">
+				<rom name="World Series Basketball (1985)(Imagine).z80" size="40058" crc="611090db" sha1="ee37fcbe3553c2dbd850c3f7cee89f60530ccd4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa4069f15cfc9c">
+		<description>Wrestling Superstars (1993)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41173">
+				<rom name="Wrestling Superstars (1993)(Codemasters).z80" size="41173" crc="0b21ab8e" sha1="a4069f15cfc9c2bcdfd84f243c9e050cf96924a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse1176172f4ecb">
+		<description>wriggler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40502">
+				<rom name="wriggler.z80" size="40502" crc="4b493a36" sha1="e1176172f4ecbbbc3f042699dc97da46a8964466"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5de6a033ea28f">
+		<description>Xecutor - Remix (1987)(ACE Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="77548">
+				<rom name="Xecutor - Remix (1987)(ACE Software).z80" size="77548" crc="97ef7538" sha1="5de6a033ea28f802891ed1ef91a5a1f7b6b83ccc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseeb69b9162293">
+		<description>Xeno II 16K (1983)(Anirog)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="23368">
+				<rom name="Xeno II 16K (1983)(Anirog).z80" size="23368" crc="0406cb03" sha1="eeb69b916229331f3b43882ff2aa54ac56c364aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf110c35770ef4">
+		<description>Yie Ar Kung-Fu (1985)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41264">
+				<rom name="Yie Ar Kung-Fu (1985)(Imagine Software).z80" size="41264" crc="23da9f6d" sha1="f110c35770ef424ed3a502e8f70cd7fb96dba96c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs55aaa7584c3c7">
+		<description>Yie Ar Kung-Fu (1985)(Imagine Software)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="88055">
+				<rom name="Yie Ar Kung-Fu (1985)(Imagine Software)[128K].z80" size="88055" crc="f7c52002" sha1="55aaa7584c3c7dfab86386d2e5414cb5fb0d5758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9dbc5b71e70ec">
+		<description>Zombo's Christmas Capers (2016)(Monsterbytes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39448">
+				<rom name="Zombo's Christmas Capers (2016)(Monsterbytes).z80" size="39448" crc="c3992bbe" sha1="9dbc5b71e70ec93fc570c93da1eb606ee4b92668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs36ca1890a86af">
+		<description>Zooming Secretary (2021)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="50763">
+				<rom name="Zooming Secretary (2021)(PC NONO Games).z80" size="50763" crc="21027efa" sha1="36ca1890a86af5bb53ee7f64a5e5f4cea06d82ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab2c7b989018b">
+		<description>Zorro (1986)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37618">
+				<rom name="Zorro (1986)(U.S. Gold).z80" size="37618" crc="9f7b2443" sha1="ab2c7b989018b6027fbdb8c2c22271c06fbb98b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs06464e62acd94">
+		<description>Zybex 48K (1989)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34544">
+				<rom name="Zybex 48K (1989)(Zeppelin Games).z80" size="34544" crc="a79c6137" sha1="06464e62acd9441149a1afa6b9abfdd858d463bb"/>
 			</dataarea>
 		</part>
 	</software>
