@@ -841,7 +841,7 @@ QUICKLOAD_LOAD_MEMBER(homelab_state::quickload_cb)
 	address_space &space = m_maincpu->space(AS_PROGRAM);
 	int block_counter = 0;
 	char block_last_character = 1;
-	char pgmname[256];
+	char pgmname[256] {};
 	u16 args[2];
 
 	image.fseek(0, SEEK_SET);
@@ -858,10 +858,10 @@ QUICKLOAD_LOAD_MEMBER(homelab_state::quickload_cb)
 		}
 
 		if (bytes != 1 || ch != 0xa5)
-			return std::make_pair(image_error::INVALIDIMAGE, "Invalid header");
+			return std::make_pair(image_error::INVALIDIMAGE, "Invalid header in block " + std::to_string(block_counter));
 
 		int i = 0;
-		while ((bytes = image.fread(&ch, 1)) != 0 && (ch != 0))
+		while (((image.fread(&ch, 1)) != 0) && (ch != 0))
 		{
 			if (i >= (std::size(pgmname) - 1))
 			{
@@ -871,7 +871,6 @@ QUICKLOAD_LOAD_MEMBER(homelab_state::quickload_cb)
 			pgmname[i] = BIT(ch, 7) ? 0x3f : ch; // build program description
 			i++;
 		}
-		pgmname[i] = '\0'; /* terminate string with a null */
 
 		if (image.fread(args, sizeof(args)) != sizeof(args))
 		{
@@ -896,8 +895,11 @@ QUICKLOAD_LOAD_MEMBER(homelab_state::quickload_cb)
 			}
 			space.write_byte(j, ch);
 		}
-		image.fread(&ch, 1); // Read crc
-		image.fread(&block_last_character, 1);
+		block_last_character = 0;
+		if (image.fread(&ch, 1) != 1) // Skip unused crc
+			if (image.fread(&ch, 1) != 1) // see if another block
+				block_last_character = ch;
+
 		/* display a message about the loaded quickload */
 		image.message(" %s\nsize=%04X : start=%04X : end=%04X : block_counter=%d", pgmname, quick_length, quick_addr, quick_end, block_counter);
 	}
