@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 5 -->
+<softwarelist name="mikro80" description="mikro80 loose roms">
+	<software name="m80f53432a0a4541">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mikro80_cass">
+			<dataarea name="cass" size="13972">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio).rk8" size="13972" crc="5fe20c01" sha1="f53432a0a45417184ee6e29862012b5b5643c7b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m8030c668f9f4c70">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mikro80_cass">
+			<dataarea name="cass" size="13576">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).rk8" size="13576" crc="c82c1be7" sha1="30c668f9f4c7036344584c94d98379793bd9c141"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m80cfd6b64ca197a">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mikro80_cass">
+			<dataarea name="cass" size="13134">
+				<rom name="Elite Planet Browser.rk8" size="13134" crc="a510099d" sha1="cfd6b64ca197a22b0df162d007233cecf521d872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m802a6f78a8b0cef">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mikro80_cass">
+			<dataarea name="cass" size="8730">
+				<rom name="H-tron.rk8" size="8730" crc="63a11c5a" sha1="2a6f78a8b0cef53f617ecc0fe2fdf06624221fe0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m8082113061348b0">
+		<description>MasterMind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mikro80_cass">
+			<dataarea name="cass" size="9514">
+				<rom name="MasterMind.rk8" size="9514" crc="0338a239" sha1="82113061348b01817ea7128066ba0f673a05baf1"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
