@@ -27,6 +27,8 @@ public:
 		, m_ram(*this, RAM_TAG)
 		, m_fdc(*this, "fdc")
 		, m_bank(*this, "bank%u", 1U)
+		, m_floppy0(*this, "fdc:0")
+		, m_floppy1(*this, "fdc:1")
 	{ }
 
 	void init_partner();
@@ -59,6 +61,8 @@ private:
 	required_device<ram_device> m_ram;
 	required_device<fd1793_device> m_fdc;
 	required_memory_bank_array<13> m_bank;
+	required_device<floppy_connector> m_floppy0;
+	required_device<floppy_connector> m_floppy1;
 };
 
 

@@ -76,26 +76,32 @@ void partner_state::floppy_w(offs_t offset, u8 data)
 		}
 	else
 	{
-		floppy_image_device *floppy0 = m_fdc->subdevice<floppy_connector>("0")->get_device();
-		floppy_image_device *floppy1 = m_fdc->subdevice<floppy_connector>("1")->get_device();
+		floppy_image_device *floppy0 = m_floppy0->get_device();
+		floppy_image_device *floppy1 = m_floppy1->get_device();
 
-		if (BIT(data, 6))
+		if (floppy0)
 		{
-			m_fdc->set_floppy(floppy0);
-			floppy0->mon_w(0);
-			floppy0->ss_w(BIT(data, 7));
+			if (BIT(data, 6))
+			{
+				m_fdc->set_floppy(floppy0);
+				floppy0->mon_w(0);
+				floppy0->ss_w(BIT(data, 7));
+			}
+			else
+				floppy0->mon_w(1);
 		}
-		else
-			floppy0->mon_w(1);
 
-		if (BIT(data, 3))
+		if (floppy1)
 		{
-			m_fdc->set_floppy(floppy1);
-			floppy1->mon_w(0);
-			floppy1->ss_w(BIT(data, 7));
+			if (BIT(data, 3))
+			{
+				m_fdc->set_floppy(floppy1);
+				floppy1->mon_w(0);
+				floppy1->ss_w(BIT(data, 7));
+			}
+			else
+				floppy1->mon_w(1);
 		}
-		else
-			floppy1->mon_w(1);
 	}
 }
 

@@ -217,8 +217,8 @@ void partner_state::partner(machine_config &config)
 
 	FD1793(config, "fdc", 16_MHz_XTAL / 16);
 
-	FLOPPY_CONNECTOR(config, "fd0", "525qd", FLOPPY_525_QD, true, floppy_formats).enable_sound(true);
-	FLOPPY_CONNECTOR(config, "fd1", "525qd", FLOPPY_525_QD, true, floppy_formats).enable_sound(true);
+	FLOPPY_CONNECTOR(config, "fdc:0", "525qd", FLOPPY_525_QD, true, floppy_formats).enable_sound(true);
+	FLOPPY_CONNECTOR(config, "fdc:1", "525qd", FLOPPY_525_QD, true, floppy_formats).enable_sound(true);
 
 	SOFTWARE_LIST(config, "flop_list").set_original("partner_flop");
 
