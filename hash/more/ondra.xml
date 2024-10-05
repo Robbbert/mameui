@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 7 -->
+<softwarelist name="ondra" description="ondra loose roms">
+	<software name="ond8dd476c10e6ae">
+		<description>COPYFILE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="ondra_cass">
+			<dataarea name="cass" size="450724">
+				<rom name="COPYFILE.WAV" size="450724" crc="c05643cd" sha1="8dd476c10e6aea811e51776da91b6d7349d3eda5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ondfa55e136998ca">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="ondra_cass">
+			<dataarea name="cass" size="2924007">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).wav" size="2924007" crc="b23ff844" sha1="fa55e136998caf8405d1715e97b29fd59cd98d8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ond07064e717ff16">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="ondra_cass">
+			<dataarea name="cass" size="2039727">
+				<rom name="Deepspace.wav" size="2039727" crc="303393ec" sha1="07064e717ff16575d8aafb94825a47cdc7c3ef71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ond0820f64d28eb0">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="ondra_cass">
+			<dataarea name="cass" size="3276147">
+				<rom name="Elite Planet Browser.wav" size="3276147" crc="b0883a5a" sha1="0820f64d28eb0856417efd5bea0b8a4a978af870"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ond87cc46fbfee47">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="ondra_cass">
+			<dataarea name="cass" size="1984647">
+				<rom name="H-tron.wav" size="1984647" crc="ef3d9059" sha1="87cc46fbfee47e0b37ba1afd0e744b2683fc7e30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ond4c41c7e1514b8">
+		<description>KAREL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="ondra_cass">
+			<dataarea name="cass" size="1540260">
+				<rom name="KAREL.WAV" size="1540260" crc="94130522" sha1="4c41c7e1514b8009072e0ff4b0cf262f58637530"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="onde81f377b4e248">
+		<description>Mastermind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="ondra_cass">
+			<dataarea name="cass" size="2151807">
+				<rom name="Mastermind.wav" size="2151807" crc="6b4f0926" sha1="e81f377b4e2480ed7461b8055c74e9bda12aefa8"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 17 -->
+<!-- Number of items in this list = 20 -->
 <softwarelist name="mikrosha_cass" description="mikrosha_cass loose roms">
+	<software name="mikac128b9fba10e">
+		<description>ASM_V2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="4870">
+				<rom name="ASM_V2.RKM" size="4870" crc="38aa5098" sha1="ac128b9fba10eaee0c4248d63eb6eac27afc3d19"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mika0cf5facb19e2">
 		<description>Ball Game, The (1990-02)(Sandy Pat Corp)</description>
 		<year>????</year>
@@ -9,6 +19,26 @@
 		<part name="cass" interface="mikrosha_cass">
 			<dataarea name="cass" size="2619">
 				<rom name="Ball Game, The (1990-02)(Sandy Pat Corp).rkm" size="2619" crc="d381a51f" sha1="a0cf5facb19e2c5cf1d627f7906bde74c8c8257c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikf2e41d9ac7e11">
+		<description>BASICBEST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="14342">
+				<rom name="BASICBEST.RKM" size="14342" crc="db225e21" sha1="f2e41d9ac7e11f38694a3c9aea2a48278a0a1fad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikd773bc14c6bb8">
+		<description>BASICM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="6599">
+				<rom name="BASICM.RKM" size="6599" crc="ba7b9134" sha1="d773bc14c6bb8addd282740f051b4c7d48b5606f"/>
 			</dataarea>
 		</part>
 	</software>
