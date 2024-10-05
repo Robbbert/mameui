@@ -841,13 +841,13 @@ QUICKLOAD_LOAD_MEMBER(homelab_state::quickload_cb)
 	address_space &space = m_maincpu->space(AS_PROGRAM);
 	int block_counter = 0;
 	char block_last_character = 1;
-	char pgmname[256] {};
-	u16 args[2];
 
 	image.fseek(0, SEEK_SET);
 
 	while (block_last_character != 0)
 	{
+		char pgmname[256] = {};
+		u16 args[2];
 		u8 ch = 0;
 		u32 bytes = 0;
 
