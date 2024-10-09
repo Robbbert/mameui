@@ -527,7 +527,7 @@ static void InitDriversInfo(void)
 		if (gamedrv->ipt)
 		{
 			ioport_list portlist;
-			std::string errors;
+			std::ostringstream errors;
 			for (device_t &cfg : device_enumerator(config.root_device()))
 				if (cfg.input_ports())
 					portlist.append(cfg, errors);
@@ -801,42 +801,50 @@ HANDLE win_create_file_utf8(const char* filename, DWORD desiredmode, DWORD share
 	return result;
 }
 
-//============================================================
+//=================================================================
 //  win_get_current_directory_utf8
-//============================================================
+//  return value: 0 for failure, otherwise size of returned string
+//=================================================================
 
-DWORD win_get_current_directory_utf8(DWORD bufferlength, char* buffer)
+DWORD win_get_current_directory_utf8(size_t bufferlength, char* buffer)
 {
-	DWORD result = 0;
-	TCHAR* t_buffer = NULL;
+	buffer = 0;
+	if (!bufferlength)
+		return 0;
 
-	if( bufferlength > 0 )
+	TCHAR* t_buffer = NULL;
+	t_buffer = (TCHAR*)malloc((bufferlength * sizeof(TCHAR)) + 1);
+	if( !t_buffer )
+		return 0;
+
+	DWORD result = GetCurrentDirectory(bufferlength, t_buffer);
+
+	if (result == 0)
 	{
-		t_buffer = (TCHAR*)malloc((bufferlength * sizeof(TCHAR)) + 1);
-		if( !t_buffer )
-			return result;
+		printf("ERROR: win_get_current_directory_utf8: GetCurrentDirectory failed\n");
+		free (t_buffer);
+		return 0;
 	}
 
-	result = GetCurrentDirectory(bufferlength, t_buffer);
+	if (result > bufferlength)
+	{
+		printf("ERROR: win_get_current_directory_utf8: Need buffer size of %d\n",int(result));
+		free (t_buffer);
+		return 0;
+	}
 
 	char* utf8_buffer = NULL;
-	if( bufferlength > 0 )
-	{
-		utf8_buffer = ui_utf8_from_wstring(t_buffer);
-		if( !utf8_buffer )
-		{
-			free(t_buffer);
-			return result;
-		}
-	}
+	utf8_buffer = ui_utf8_from_wstring(t_buffer);
+
+	free(t_buffer);
+
+	if( !utf8_buffer )
+		return 0;
 
 	strncpy(buffer, utf8_buffer, bufferlength);
 
 	if( utf8_buffer )
 		free(utf8_buffer);
-
-	if( t_buffer )
-		free(t_buffer);
 
 	return result;
 }

@@ -64,7 +64,7 @@ TCHAR* win_tstring_strdup(LPCTSTR str);
 HANDLE win_create_file_utf8(const char* filename, DWORD desiredmode, DWORD sharemode,
 							LPSECURITY_ATTRIBUTES securityattributes, DWORD creationdisposition,
 							DWORD flagsandattributes, HANDLE templatehandle);
-DWORD win_get_current_directory_utf8(DWORD bufferlength, char* buffer);
+DWORD win_get_current_directory_utf8(size_t bufferlength, char* buffer);
 HANDLE win_find_first_file_utf8(const char* filename, LPWIN32_FIND_DATA findfiledata);
 void ErrorMessageBox(const char *fmt, ...);
 
