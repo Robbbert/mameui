@@ -78,6 +78,7 @@ private:
 	std::unique_ptr<uint8_t[]> m_charram;           /* character generator ROM */
 	bool m_reset = false;                /* CPU mode */
 	bool m_dma = false;              /* memory refresh DMA */
+	bool m_videoram = false;
 
 	/* timers */
 	emu_timer *m_reset_timer = nullptr;   /* power on reset timer */
@@ -120,6 +121,8 @@ void pecom_state::bank_w(uint8_t data)
 	address_space &space = m_maincpu->space(AS_PROGRAM);
 	m_bank1->set_entry(0);
 
+	m_videoram = (data == 2);
+
 	if (data==2)
 	{
 		space.install_read_handler (0xf000, 0xf7ff, read8sm_delegate(m_cdp1869, FUNC(cdp1869_device::char_ram_r)));
@@ -161,9 +164,12 @@ int pecom_state::clear_r()
 int pecom_state::ef2_r()
 {
 	bool shift = BIT(m_io_cnt->read(), 1);
-	double cas = false;//m_cassette->input();
+	double cas = m_cassette->input();
 
-	return (cas < -0.02) | shift; // touching shift kills cassette load
+	if (m_videoram)
+		return (cas < 0.02);
+	else
+		return shift;
 }
 
 void pecom_state::q_w(int state)
@@ -419,7 +425,7 @@ INPUT_PORTS_END
 void pecom_state::pecom64(machine_config &config)
 {
 	/* basic machine hardware */
-	CDP1802(config, m_maincpu, cdp1869_device::DOT_CLK_PAL);
+	CDP1802(config, m_maincpu, 2e6);  //cdp1869_device::DOT_CLK_PAL/2);  // supposed to be 2.813MHz, but then it can't read tapes.
 	m_maincpu->set_addrmap(AS_PROGRAM, &pecom_state::mem_map);
 	m_maincpu->set_addrmap(AS_IO, &pecom_state::io_map);
 	m_maincpu->wait_cb().set_constant(1);
