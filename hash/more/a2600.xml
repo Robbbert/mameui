@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4125 -->
+<!-- Number of items in this list = 4157 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -40819,6 +40819,326 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="wwm29.bin" size="8192" crc="2367b1bc" sha1="d90b678432622fcfd51dae0ccda99fabf0181e3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26801241d72c7bd">
+		<description>X-Doom V.26 (Megamania Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="X-Doom V.26 (Megamania Hack).a26" size="4096" crc="0c61f4ec" sha1="801241d72c7bda1b0d1ce36e53fdbf5d3cda3bb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3de75aa3f2c5">
+		<description>X-Doom V.27 (Megamania Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="X-Doom V.27 (Megamania Hack).a26" size="4096" crc="cfb621ca" sha1="d3de75aa3f2c5dc6fdcde628ae9014224a9079d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c9ce0614bee49">
+		<description>X-Man (1983) (CosmoVision-Universal Gamex) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="X-Man (1983) (CosmoVision-Universal Gamex) [a1].a26" size="4096" crc="ce15d81d" sha1="c9ce0614bee494efd28ca5b717fb4accb9e67d6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265aa043c1200f0">
+		<description>X-Man (1983)(Universal Gamex)(NTSC)[f Supercharger Nukey Shay]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="X-Man (1983)(Universal Gamex)(NTSC)[f Supercharger Nukey Shay].bin" size="4096" crc="32264bcf" sha1="5aa043c1200f0adf700f1f7c3205a1c901a039b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a9760f718cf9">
+		<description>X-Man (1983)(Universal Gamex)(PAL-60)[f Supercharger Nukey Shay]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="X-Man (1983)(Universal Gamex)(PAL-60)[f Supercharger Nukey Shay].bin" size="4096" crc="fd6346b0" sha1="6a9760f718cf91e330b10e638cff67403a85ee3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267220d51b3e6e7">
+		<description>x-wing patrol</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="x-wing patrol.a26" size="4096" crc="97ea08be" sha1="7220d51b3e6e7b9d5c1a1641331b3e6706064137"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262df11f6574aa8">
+		<description>x-wing patrol2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="x-wing patrol2.a26" size="4096" crc="4f963447" sha1="2df11f6574aa89737da77288205a1ee568300f3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c8aa4f2061e28">
+		<description>Xaxyrax Road by Charles Morgan (Freeway Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Xaxyrax Road by Charles Morgan (Freeway Hack).a26" size="2048" crc="ffc0fe59" sha1="c8aa4f2061e28514b0af051aca8a4a7c56521504"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be5faae07302a">
+		<description>xbert</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="xbert.a26" size="4096" crc="12733263" sha1="be5faae07302a8460abcb8adaf495e9316c0bf82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2624f16ccc28896">
+		<description>Xela (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Xela (PD).a26" size="4096" crc="aca8f36f" sha1="24f16ccc28896c8eb15305fdeceba34cb8f0143f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c6e354ce773f">
+		<description>Xeno Plus (Xenophone Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Xeno Plus (Xenophone Hack).a26" size="16384" crc="f3622839" sha1="9c6e354ce773fa44d5a4eeb9a0a480c392264d82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bd305f7a2edd0">
+		<description>Xenophobe Arcade by Larry Petit (2003) (Xenophobe Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Xenophobe Arcade by Larry Petit (2003) (Xenophobe Hack).a26" size="16384" crc="b53c480a" sha1="bd305f7a2edd0dd486f6e0defd33faf61fe1f1cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d093b706817e8">
+		<description>xente</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="xente.a26" size="8192" crc="48210552" sha1="d093b706817e8300168d607af1da5b6ce1d609eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cbcb8fbe1cab2">
+		<description>Xevious 2 (Xevious Hack) (2006) (Fred Quimby)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Xevious 2 (Xevious Hack) (2006) (Fred Quimby).a26" size="8192" crc="ea8937ef" sha1="cbcb8fbe1cab2985c0e14ec81a42892270a9f2cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2637a9759035864">
+		<description>xevious</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="xevious.a26" size="8192" crc="3dbe445a" sha1="37a9759035864ad7e4665bd2e2e0d802b4698968"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ee00ec4b6ed4">
+		<description>xmasdp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="xmasdp.a26" size="4096" crc="604dc86c" sha1="2ee00ec4b6ed4a667cc39a6ea9b7e9df6bfb91b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260dd0ad23cc26d">
+		<description>Xmas_game.bin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Xmas_game.bin.a26" size="8192" crc="57696418" sha1="0dd0ad23cc26d2fedfe79974493486d054dc0e89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623082d7d5a139">
+		<description>Xmas_game6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Xmas_game6.a26" size="8192" crc="380572ed" sha1="23082d7d5a139f2bf8296c6ad54a488c8b98e0a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d1aaf92aa0331">
+		<description>Xwing (Space Attack Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Xwing (Space Attack Hack).a26" size="4096" crc="33b1661f" sha1="d1aaf92aa0331635a4fa025806bf44fb45547f96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a1e0142c6886">
+		<description>Yahtzee (2000) (Hozer Video Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yahtzee (2000) (Hozer Video Games).a26" size="4096" crc="5c93f4d0" sha1="6a1e0142c6886a6589a58e029e5aec6b72f7d27f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6a042fed61e6">
+		<description>yankeemania_final</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="yankeemania_final.a26" size="4096" crc="258deec1" sha1="d6a042fed61e6328a6a1f7f96847081b70a2bcf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2665299012535c6">
+		<description>Yar Vs. Yar (2002) (Justin J. Scott) (Yars' Revenge Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yar Vs. Yar (2002) (Justin J. Scott) (Yars' Revenge Hack).a26" size="4096" crc="9bc04da8" sha1="65299012535c662bff023c0725c62dded4ad7b8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261dbc42723946c">
+		<description>Yars' Defeat (2002) (Justin J. Scott) (Yars' Revenge Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yars' Defeat (2002) (Justin J. Scott) (Yars' Revenge Hack).a26" size="4096" crc="29d5bedc" sha1="1dbc42723946ca79c5d54c66c7221e4f5171382e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de898d05bbd58">
+		<description>Yars' FastMissile 4Lives (Yars' Revenge Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yars' FastMissile 4Lives (Yars' Revenge Hack).a26" size="4096" crc="3e2c3107" sha1="de898d05bbd58a0abd4ca536e37b52bcd50e6a99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26522461d3dbc99">
+		<description>Yars' NoNeutralZone 4Lives (Yars' Revenge Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yars' NoNeutralZone 4Lives (Yars' Revenge Hack).a26" size="4096" crc="c676225b" sha1="522461d3dbc99a8431c6f99f117d7f29c5302344"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c827bb8a1730d">
+		<description>Yars' Return (Flashback 2 Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Yars' Return (Flashback 2 Version).a26" size="8192" crc="c38fc407" sha1="c827bb8a1730d0ec701e19c2b453fa964d4f5ef7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dae93f03a1ccd">
+		<description>Yars' Revenge (1981) (Atari) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yars' Revenge (1981) (Atari) [a1][!].a26" size="4096" crc="62b31baf" sha1="dae93f03a1ccdab6f3296c7409fcc7402566ccba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2667ac41bd2b9e1">
+		<description>Yars' Revenge (1981) (Atari) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yars' Revenge (1981) (Atari) [t1].a26" size="4096" crc="9217deeb" sha1="67ac41bd2b9e1c6fa40ea8298ce8decd1bbada9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262bb4ec8de90f0">
+		<description>Yars_FastMissile_NoNeutralZone_4Lives</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yars_FastMissile_NoNeutralZone_4Lives.a26" size="4096" crc="27fbdb79" sha1="2bb4ec8de90f076e3f961e190ecd8f2463bcc0e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a753d767c0e00">
+		<description>Yar_rev</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yar_rev.bin" size="4096" crc="220bdb2e" sha1="a753d767c0e00404076524c2ca9f1e1642d347f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267646a7e50ab49">
+		<description>Yellow Submarine (Bermuda Triangle Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yellow Submarine (Bermuda Triangle Hack).a26" size="4096" crc="d3bfdcbe" sha1="7646a7e50ab49637454f704d955e2f333c9f3189"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261ed3ad409d366">
+		<description>Yellow Submarine (Cody Pittman) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Yellow Submarine (Cody Pittman) (PD).a26" size="4096" crc="31e060a8" sha1="1ed3ad409d366eab4ea050caac76a07b90cb1747"/>
 			</dataarea>
 		</part>
 	</software>

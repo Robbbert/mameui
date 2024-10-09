@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 332 -->
+<!-- Number of items in this list = 362 -->
 <softwarelist name="mc10" description="mc10 loose roms">
 	<software name="mc1e0150629f92ff">
 		<description>(demo)dypp[cloadm]</description>
@@ -29,6 +29,36 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="710">
 				<rom name="(demo)EYESMOV1.C10" size="710" crc="d948d192" sha1="6acfad1a68ad57253daa5c93b6ec87f42d2e027c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13530140518aee">
+		<description>(demo)FINECAR2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1443">
+				<rom name="(demo)FINECAR2.C10" size="1443" crc="7fb20c75" sha1="3530140518aee24745ad287ef4bf01e28fee0c28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc18948a03109c9a">
+		<description>(demo)FIREPLACE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1481">
+				<rom name="(demo)FIREPLACE.C10" size="1481" crc="9d282448" sha1="8948a03109c9aea1b83b167e3c58d1825a7f872c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1899d1dde9d21e">
+		<description>(demo)Fire[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1204">
+				<rom name="(demo)Fire[cloadm].c10" size="1204" crc="b966a17c" sha1="899d1dde9d21e50127a33d144832d1b1ef3839d6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2722,6 +2752,196 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1634093e80bd3b">
+		<description>FARFAL4K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1142">
+				<rom name="FARFAL4K.C10" size="1142" crc="df34ea21" sha1="634093e80bd3bd2448d317880480968f8195db0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11d70874bf193f">
+		<description>FARFALL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1174">
+				<rom name="FARFALL.C10" size="1174" crc="52a3fef0" sha1="1d70874bf193fe0681577656b7d5414448409069"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e33195bbc14b6">
+		<description>Fest Quest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="17335">
+				<rom name="Fest Quest.C10" size="17335" crc="d4966f80" sha1="e33195bbc14b6bdfd337cb6666f245bfbadaa77c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16360acd080da2">
+		<description>Financial Computations</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5336">
+				<rom name="Financial Computations.C10" size="5336" crc="f2125792" sha1="6360acd080da2ac27682531527a456fd33eed722"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc173cfa935a7905">
+		<description>fire_4N[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="374940">
+				<rom name="fire_4N[cloadm].WAV" size="374940" crc="23e1a83c" sha1="73cfa935a79054d1ad21c7f5dc93854d3a8005e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13ffedf474ffc3">
+		<description>FLANDERS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2158">
+				<rom name="FLANDERS.C10" size="2158" crc="32f9b877" sha1="3ffedf474ffc3fce8e28d6c745a96e7ebc11d321"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11affa27b09a21">
+		<description>Flight Simulation</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7041">
+				<rom name="Flight Simulation.C10" size="7041" crc="08514d9d" sha1="1affa27b09a218d52f499092614392db65fe972c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1232ad82adabf1">
+		<description>Flight Simulator</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6873">
+				<rom name="Flight Simulator.C10" size="6873" crc="9b32ac3a" sha1="232ad82adabf1f2eca8b81b0866d93ae832052e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1dd82ca7270652">
+		<description>FLIPULL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8836">
+				<rom name="FLIPULL.C10" size="8836" crc="987fac8b" sha1="dd82ca72706527c8b7f88516802c154a7e49f865"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1bfdf0ca426481">
+		<description>FLOOD-IT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="FLOOD-IT.C10" size="1280" crc="28c479ea" sha1="bfdf0ca4264814df640476711ae84e6918cb2eb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1eae7e7ea98370">
+		<description>FLOOD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1415">
+				<rom name="FLOOD.C10" size="1415" crc="857d7038" sha1="eae7e7ea98370e80a4da501fda86dfba3bc1eeea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d3ee64c411cc9">
+		<description>FLYWHEEL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11463">
+				<rom name="FLYWHEEL.C10" size="11463" crc="762b69b0" sha1="d3ee64c411cc9f435f1c0f59dd9c02cad109e8fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1dc85755d11dbb">
+		<description>Four in a Row[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7241">
+				<rom name="Four in a Row[cloadm].c10" size="7241" crc="377fb3e7" sha1="dc85755d11dbbb0a40fead0b243c4665377ce2dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1c63073fa3f923">
+		<description>FREEWAY-joy_4N</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="630964">
+				<rom name="FREEWAY-joy_4N.WAV" size="630964" crc="bfb25f88" sha1="c63073fa3f92301c00f4d8fd6d4126b8d1d16edc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1ed18ad0bce005">
+		<description>FREEWAY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="625644">
+				<rom name="FREEWAY.WAV" size="625644" crc="94c80fd8" sha1="ed18ad0bce005afadfe97fec71e13c1fff729323"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14e81829c4f350">
+		<description>Frog (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2854">
+				<rom name="Frog (2).C10" size="2854" crc="ab6e95d9" sha1="4e81829c4f3505fde3ee51f878ade5e624aaf825"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1939d65bdbc234">
+		<description>FROG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7342">
+				<rom name="FROG.C10" size="7342" crc="a8844d99" sha1="939d65bdbc234e6be6a98c2affadeaf74d069520"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc152d1a110b597a">
+		<description>Fruit Panic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8333">
+				<rom name="Fruit Panic.C10" size="8333" crc="fa6c73d3" sha1="52d1a110b597ae18a20e2280133262d494737612"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14099bf985a2ee">
+		<description>Fur Trader</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6822">
+				<rom name="Fur Trader.C10" size="6822" crc="a5b3ef7b" sha1="4099bf985a2ee751efb7be325902705b5fda9027"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc12f21b2314f450">
 		<description>German Flag</description>
 		<year>????</year>
@@ -2729,6 +2949,26 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="995">
 				<rom name="German Flag.C10" size="995" crc="fc391d09" sha1="2f21b2314f450fb257747b0c9d402fa9bb7c7cea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc19896c2537e53e">
+		<description>Go Fish</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3021">
+				<rom name="Go Fish.C10" size="3021" crc="280daf34" sha1="9896c2537e53e29173989ad7398a897b46c01f59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d0b968a76bff6">
+		<description>Gone Fishin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15021">
+				<rom name="Gone Fishin.C10" size="15021" crc="2259abda" sha1="d0b968a76bff6fb82754a088fa4de236db0c30d1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2769,6 +3009,46 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="4909">
 				<rom name="In the Woods.C10" size="4909" crc="6669ce5e" sha1="60de2d380d364fff0f21f2d9157f760a247e8a66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1238050e0f8d8c">
+		<description>Interplanetary Fruit Fly (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1636">
+				<rom name="Interplanetary Fruit Fly (2).C10" size="1636" crc="958fcf97" sha1="238050e0f8d8cb84881a4051e56146cb41574ae3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc114212fa94b5a8">
+		<description>Interplanetary Fruit Fly</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1618">
+				<rom name="Interplanetary Fruit Fly.C10" size="1618" crc="ff0805c8" sha1="14212fa94b5a8409e5e5e2f893041341fe9d23aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1b78039a3283d4">
+		<description>Madam Fifi's Whore House Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8594">
+				<rom name="Madam Fifi's Whore House Adventure.C10" size="8594" crc="80cf6b9f" sha1="b78039a3283d4f05d5ee02cb8ea909168af48279"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc121584e6a7cb2c">
+		<description>MC Flappy Bird</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2011">
+				<rom name="MC Flappy Bird.C10" size="2011" crc="197d4d34" sha1="21584e6a7cb2cea85c624de228749561643ea947"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2882,6 +3162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1a056fa33d85de">
+		<description>Secret of Flagstone Manor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15271">
+				<rom name="Secret of Flagstone Manor.C10" size="15271" crc="4aaa8547" sha1="a056fa33d85de9472dcf65280e4a119f5c1ce7f5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc11537591d64148">
 		<description>Snowboarder</description>
 		<year>????</year>
@@ -2909,6 +3199,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="2565">
 				<rom name="Stronghold of the Dwarven Lords.C10" size="2565" crc="beafb630" sha1="fbbc41fd2b0ac6838330bd79cde7a555257fb7cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16774e50ae83a0">
+		<description>Sword of Fargoal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="13399">
+				<rom name="Sword of Fargoal.C10" size="13399" crc="c6310d08" sha1="6774e50ae83a0c0f256b67d5009ab78b98ec509a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 20 -->
+<!-- Number of items in this list = 74 -->
 <softwarelist name="mikrosha_cass" description="mikrosha_cass loose roms">
 	<software name="mikac128b9fba10e">
 		<description>ASM_V2</description>
@@ -42,6 +42,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mik484997e18cf62">
+		<description>BASICM2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="6662">
+				<rom name="BASICM2.RKM" size="6662" crc="93d9f3e6" sha1="484997e18cf62e1ced61d68b531f2f880c6de44c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik0175ee2a22708">
+		<description>BASICMPC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="8198">
+				<rom name="BASICMPC.RKM" size="8198" crc="5068783e" sha1="0175ee2a2270825e81f2fa5b65fd748b1459a56a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mika6cd087699efb">
+		<description>BASICPLUS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="8198">
+				<rom name="BASICPLUS.RKM" size="8198" crc="db14ea3d" sha1="a6cd087699efbe49206b5b801a5b045996094934"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik98a80c9b872d0">
+		<description>BASMICRON11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="8198">
+				<rom name="BASMICRON11.RKM" size="8198" crc="34144190" sha1="98a80c9b872d0e4b82e76b96238d1b06301a58b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik6239615cc1cb9">
+		<description>BASMICRON13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="8198">
+				<rom name="BASMICRON13.RKM" size="8198" crc="92e87d39" sha1="6239615cc1cb9c5ddfb6cd39a67504894d3a6cbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikb81a8ec9bdcd6">
+		<description>BASPSFQIO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="7174">
+				<rom name="BASPSFQIO.RKM" size="7174" crc="4c985072" sha1="b81a8ec9bdcd6304cbe07b0075fc86ddaff6c703"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik42e807087ef75">
+		<description>BESTC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="18438">
+				<rom name="BESTC.RKM" size="18438" crc="34147218" sha1="42e807087ef7542db6d5dd3e08818cfc95c22bf0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mik4f16bad022490">
 		<description>Bomber Aircraft (1990-05-08)(Jup Corp)</description>
 		<year>????</year>
@@ -49,6 +119,86 @@
 		<part name="cass" interface="mikrosha_cass">
 			<dataarea name="cass" size="4626">
 				<rom name="Bomber Aircraft (1990-05-08)(Jup Corp).rkm" size="4626" crc="88715d84" sha1="4f16bad02249070fc093c89a119eb4f64b4cbd9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik788ae87e1ed34">
+		<description>BSEARCH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="652">
+				<rom name="BSEARCH.RKM" size="652" crc="99191491" sha1="788ae87e1ed34e1c0f4dd9422fcd2b535b911d74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik49d3c77a693e0">
+		<description>COMGAMES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="14310">
+				<rom name="COMGAMES.RKM" size="14310" crc="7259fc3d" sha1="49d3c77a693e08b5f678ed57f3693db13fc9f6a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik22a354cf75591">
+		<description>CRC_86RK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="262">
+				<rom name="CRC_86RK.RKM" size="262" crc="b5189c33" sha1="22a354cf75591729388c94ff709e848f2b8396cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik6388791f3e663">
+		<description>CURSASM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="8198">
+				<rom name="CURSASM.RKM" size="8198" crc="cb78c733" sha1="6388791f3e663e0fbf499f349305a106cd75f47d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik632ca47489d87">
+		<description>DASM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="2054">
+				<rom name="DASM.RKM" size="2054" crc="d1dbdc90" sha1="632ca47489d876e831f2489b72164015487b7272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik2853793045b11">
+		<description>DATATRANS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="613">
+				<rom name="DATATRANS.RKM" size="613" crc="95bcc634" sha1="2853793045b11b091efe5d7909759852a12e341b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik1761fe4d26bbb">
+		<description>DEBUGER0100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="4870">
+				<rom name="DEBUGER0100.RKM" size="4870" crc="f1d33f6a" sha1="1761fe4d26bbb9b223c5bd0f446a983f4f336218"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik4ff4c2690dcfe">
+		<description>DEBUGER6100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="4870">
+				<rom name="DEBUGER6100.RKM" size="4870" crc="e5f35e3f" sha1="4ff4c2690dcfe3f792cd4f3f03edc15d8a251016"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,6 +232,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mik6436e01ededb4">
+		<description>DISMICRON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="2054">
+				<rom name="DISMICRON.RKM" size="2054" crc="d45c778f" sha1="6436e01ededb47e2279ad0358c1e22d5491f7588"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikb54c8abcf6d01">
+		<description>DUMPCOR_RK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="1222">
+				<rom name="DUMPCOR_RK.RKM" size="1222" crc="ff16d51b" sha1="b54c8abcf6d013b3242e7d904388bf49f3375737"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikc4c3805bdf80d">
+		<description>EDMICRON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="3335">
+				<rom name="EDMICRON.RKM" size="3335" crc="270b1e10" sha1="c4c3805bdf80d7f4a84024278aed4237f2989277"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik25a040a358ae9">
+		<description>EDMICRONEW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="4102">
+				<rom name="EDMICRONEW.RKM" size="4102" crc="6b84a2b7" sha1="25a040a358ae993a062cdac14949a2b5a5aba9f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik313af8a567581">
+		<description>EDMICSORT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="3750">
+				<rom name="EDMICSORT.RKM" size="3750" crc="4676d032" sha1="313af8a56758176e98c0caea98038fad81dd6c11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik303d84c3153ac">
+		<description>EDTMICRON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="2054">
+				<rom name="EDTMICRON.RKM" size="2054" crc="10d1ba20" sha1="303d84c3153acd736944797ae74e39e3e54adc40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik5f996e0e006c3">
+		<description>FORTHED</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="15478">
+				<rom name="FORTHED.RKM" size="15478" crc="acedaa0e" sha1="5f996e0e006c37b989a1162d3fa5b4da1bac37ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikcc7e37ca99acb">
+		<description>FORTHLS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="17878">
+				<rom name="FORTHLS.RKM" size="17878" crc="6ef2a940" sha1="cc7e37ca99acbd3052b19d3596c9258e1465694d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik0c9e1b9e79d8a">
+		<description>FORTHMIC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="12294">
+				<rom name="FORTHMIC.RKM" size="12294" crc="d57eb8b0" sha1="0c9e1b9e79d8a9795278f4c07352e7be5d2236d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik08001961cbdee">
+		<description>FORTHSYS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="15462">
+				<rom name="FORTHSYS.RKM" size="15462" crc="163d546f" sha1="08001961cbdeed7438cf7a489bf18a259e3fb3d1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mike583377d9afcc">
 		<description>Froggi 15 (1989)(STF)[b]</description>
 		<year>????</year>
@@ -89,6 +339,116 @@
 		<part name="cass" interface="mikrosha_cass">
 			<dataarea name="cass" size="3544">
 				<rom name="Froggi 15 (1989)(STF)[b].rkm" size="3544" crc="0213ff0e" sha1="e583377d9afcc3e1c56c2ce9c9ee20028f41cdb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mike6c3ea4b48c1a">
+		<description>INTERPCOD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="1958">
+				<rom name="INTERPCOD.RKM" size="1958" crc="97229672" sha1="e6c3ea4b48c1af0c7ab270fd77df3291e4eb3a9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik69d07ab6dc0ba">
+		<description>LABIRINT2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="1430">
+				<rom name="LABIRINT2.RKM" size="1430" crc="92c557ec" sha1="69d07ab6dc0ba059d3c0847007e1f701700b8c01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik43113a4daf65e">
+		<description>LASM0000</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="249">
+				<rom name="LASM0000.RKM" size="249" crc="39656260" sha1="43113a4daf65e9a45d428c578e9b0ffe36e56e08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik61e912c8f7b58">
+		<description>LASM7400</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="249">
+				<rom name="LASM7400.RKM" size="249" crc="fd43af57" sha1="61e912c8f7b58cae7f8618325ce168576e5be57b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik804f22e1528ba">
+		<description>LAZUTCHIKI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="3156">
+				<rom name="LAZUTCHIKI.RKM" size="3156" crc="f4369fdf" sha1="804f22e1528baf0cdd77699a62fd1125f3c48857"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik401fd1086d339">
+		<description>MONMIC6800</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="2054">
+				<rom name="MONMIC6800.RKM" size="2054" crc="b0d069f8" sha1="401fd1086d339d52ccba2393de14344f18858ad9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik98c06c1b4586d">
+		<description>MONRK86EMU</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="2054">
+				<rom name="MONRK86EMU.RKM" size="2054" crc="3294f5b6" sha1="98c06c1b4586daeda9781c99ef4438d1b7b0f9a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik152cc1eebe843">
+		<description>MUSSYSTEM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="4678">
+				<rom name="MUSSYSTEM.RKM" size="4678" crc="364a695b" sha1="152cc1eebe843602a15366482f7e60d276de94b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik178736e62f4cb">
+		<description>OTELLO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="26118">
+				<rom name="OTELLO.RKM" size="26118" crc="ee08c2a8" sha1="178736e62f4cbc49b2fc8395832944f25b196f04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikc4f3133f2d951">
+		<description>PASCALLS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="13526">
+				<rom name="PASCALLS.RKM" size="13526" crc="56ba550c" sha1="c4f3133f2d951e634d67e9d815d7932970a6d483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mika3a28c4d9ddf0">
+		<description>PDECODER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="3356">
+				<rom name="PDECODER.RKM" size="3356" crc="1b97904b" sha1="a3a28c4d9ddf0f9aed5f5f19c7384eec58184f71"/>
 			</dataarea>
 		</part>
 	</software>
@@ -102,6 +462,126 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mike8aba0ce7255c">
+		<description>PITON2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="406">
+				<rom name="PITON2.RKM" size="406" crc="a2873fad" sha1="e8aba0ce7255c6e241986f6294cf49451d936862"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik8e64383566251">
+		<description>PROGCOPYER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="1031">
+				<rom name="PROGCOPYER.RKM" size="1031" crc="89f7e350" sha1="8e64383566251dd80dabb05eef9f85a557c9ebda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikc38d93b8ad39d">
+		<description>PROGRPZU (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="2582">
+				<rom name="PROGRPZU (2).RKM" size="2582" crc="c758a4de" sha1="c38d93b8ad39d30610e327af99654e82bc07ac0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikdf63a1fb83ba5">
+		<description>PROGRPZU</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="4054">
+				<rom name="PROGRPZU.RKM" size="4054" crc="34295944" sha1="df63a1fb83ba5f4bf30d0fe4012210d220220201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik61b11191a8fdc">
+		<description>RAMDISK1E</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="12815">
+				<rom name="RAMDISK1E.RKM" size="12815" crc="151241a2" sha1="61b11191a8fdc056a3bfe22f39c799c8546e96ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikfc56e1268ec6b">
+		<description>RAMDISK2E</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="13641">
+				<rom name="RAMDISK2E.RKM" size="13641" crc="b3d0f404" sha1="fc56e1268ec6b602d55322bc185a19be0bd9338e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik18ce9c82d8ca1">
+		<description>RAMDISK3E</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="11970">
+				<rom name="RAMDISK3E.RKM" size="11970" crc="e59b7241" sha1="18ce9c82d8ca18c5bd4924bb2988bb794d66b38e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik78bf83e15fd5b">
+		<description>RAMDOS202</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="5318">
+				<rom name="RAMDOS202.RKM" size="5318" crc="0f4e8764" sha1="78bf83e15fd5b09ad41fc385642cc4cca43eada4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik8eb8d9f587a0e">
+		<description>RAMEDITOR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="3750">
+				<rom name="RAMEDITOR.RKM" size="3750" crc="5cc8e418" sha1="8eb8d9f587a0e86b9389404f2c579bfd08089e97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikb6795363466d2">
+		<description>RENUMBB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="1200">
+				<rom name="RENUMBB.RKM" size="1200" crc="6a7405d0" sha1="b6795363466d2e0c044b351b365d61eb288dc695"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik3c5300349b9b2">
+		<description>RENUMBM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="1200">
+				<rom name="RENUMBM.RKM" size="1200" crc="d98585da" sha1="3c5300349b9b2fed673226b06073ac37460bfd55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik8e1739ddd54d5">
+		<description>RENUMPM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="1200">
+				<rom name="RENUMPM.RKM" size="1200" crc="f0ff4205" sha1="8e1739ddd54d577ee394f604e63a6a6c7bbcc2b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mik63a77a5e5f0ee">
 		<description>Saratov Best-C Compiler (1989)(Kovalenko D.I.)</description>
 		<year>????</year>
@@ -109,6 +589,26 @@
 		<part name="cass" interface="mikrosha_cass">
 			<dataarea name="cass" size="18438">
 				<rom name="Saratov Best-C Compiler (1989)(Kovalenko D.I.).rkm" size="18438" crc="cae66d55" sha1="63a77a5e5f0ee8cc1d47702ba6b32d793fc304d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mike4053820b6927">
+		<description>SCALE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="3398">
+				<rom name="SCALE.RKM" size="3398" crc="64d504c2" sha1="e4053820b6927b29082a8050fc5cf6dddb27b938"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik6bcf79ccf5eef">
+		<description>SCALE1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="7718">
+				<rom name="SCALE1.RKM" size="7718" crc="d74b1e5d" sha1="6bcf79ccf5eefc96300ceaa43e1c006a9cd76da3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -172,6 +672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mikb7be04fa92be1">
+		<description>TEXTPROC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="5532">
+				<rom name="TEXTPROC.RKM" size="5532" crc="d7fe3633" sha1="b7be04fa92be1de4e7ef787217ae0e1f0a314124"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mikea0c3ba240df5">
 		<description>Udav (1986)(Sedov E.A.)</description>
 		<year>????</year>
@@ -179,6 +689,26 @@
 		<part name="cass" interface="mikrosha_cass">
 			<dataarea name="cass" size="2054">
 				<rom name="Udav (1986)(Sedov E.A.).rkm" size="2054" crc="dc29dcbd" sha1="ea0c3ba240df5810a42be5aa897dd1c67348b7ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mikf3fd95a4fa7bf">
+		<description>UTKI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="1446">
+				<rom name="UTKI.RKM" size="1446" crc="38daa6c7" sha1="f3fd95a4fa7bfa3dc12900f07853417e60bf4061"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mika3e41f9b9b37f">
+		<description>VERIFY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="182">
+				<rom name="VERIFY.RKM" size="182" crc="e75c9356" sha1="a3e41f9b9b37f608b4a4de163e2e2e67009c95de"/>
 			</dataarea>
 		</part>
 	</software>
@@ -199,6 +729,16 @@
 		<part name="cass" interface="mikrosha_cass">
 			<dataarea name="cass" size="2310">
 				<rom name="Zhizn (1989)(ZD Corp).rkm" size="2310" crc="9c5e5567" sha1="f0804df6caac35edd40c0fbf0a30e3bb93142c3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mik7bfb72f00d8d7">
+		<description>ZMEYGOR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mikrosha_cass">
+			<dataarea name="cass" size="4247">
+				<rom name="ZMEYGOR.RKM" size="4247" crc="32787632" sha1="7bfb72f00d8d7d3838534c0fe9a1d417fc636f72"/>
 			</dataarea>
 		</part>
 	</software>

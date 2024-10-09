@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 34 -->
+<!-- Number of items in this list = 41 -->
 <softwarelist name="a800" description="a800 loose roms">
 	<software name="a880e50c7fcb2e81">
 		<description>(demo)400-800 salt diagnostic cartridge v1.00</description>
@@ -82,6 +82,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a8fe35eb3de67cec">
+		<description>Arcadia - Xmas Quest v1.0 (2022-12-18)(amarok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="92176">
+				<rom name="Arcadia - Xmas Quest v1.0 (2022-12-18)(amarok).atr" size="92176" crc="481cbe10" sha1="fe35eb3de67cec0749e5342c74324d651a01f330"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a80639d7768ed294">
+		<description>Arcadia v1.0 (2022-07-09)(amarok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="92176">
+				<rom name="Arcadia v1.0 (2022-07-09)(amarok).atr" size="92176" crc="58d25a61" sha1="0639d7768ed294e21dfe179ba24344177bee54af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a8945695b644cd90">
+		<description>Arcadia v1.1 (2022-12-14)(amarok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="92176">
+				<rom name="Arcadia v1.1 (2022-12-14)(amarok).atr" size="92176" crc="d4162278" sha1="945695b644cd9072a093c965f1dfffe4ef1910d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a8ce3e10eb62373d">
+		<description>Arcadia v1.2 (2022-12-15)(amarok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="92176">
+				<rom name="Arcadia v1.2 (2022-12-15)(amarok).atr" size="92176" crc="a5b5258c" sha1="ce3e10eb62373d387b9ab39892125bd35181fa35"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a831b052644ca700">
 		<description>astro grover</description>
 		<year>????</year>
@@ -152,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a81641c65e5e4439">
+		<description>Bohater Ery Burzy (2023)(mgr inż - Rafał - Alex_D)(PL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="92176">
+				<rom name="Bohater Ery Burzy (2023)(mgr inż - Rafał - Alex_D)(PL).atr" size="92176" crc="0d2095a9" sha1="1641c65e5e4439075b7204855593ee07b42e7d53"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a888ff66ccfe3d8e">
 		<description>Chuckie Egg</description>
 		<year>????</year>
@@ -189,6 +239,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="decathlon (a).rom" size="16384" crc="76845603" sha1="b084f54f142ac9c6e9c010e0ae8d7427dbd5230c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a8d91a922aee2759">
+		<description>Diamond (2023-12)(dmsc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="92176">
+				<rom name="Diamond (2023-12)(dmsc).atr" size="92176" crc="b29959a4" sha1="d91a922aee2759d078b1549fc9ba622767987704"/>
 			</dataarea>
 		</part>
 	</software>
@@ -329,6 +389,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="super breakout.rom" size="8192" crc="17348643" sha1="a3e27fd8fccaf84e0a017d4c3e83339a8f07d21e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a8e81d58e3405364">
+		<description>Udder (2017)(XXL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="92176">
+				<rom name="Udder (2017)(XXL).atr" size="92176" crc="3e6df680" sha1="e81d58e3405364a814d7c08b89110f9238cf0fb4"/>
 			</dataarea>
 		</part>
 	</software>

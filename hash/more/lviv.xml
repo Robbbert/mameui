@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 98 -->
+<!-- Number of items in this list = 113 -->
 <softwarelist name="lviv" description="lviv loose roms">
 	<software name="lvi4db823995f61f">
 		<description>AEROCOB1[bload]</description>
@@ -872,6 +872,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lvi944c6b2221d7f">
+		<description>MARS[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="6472">
+				<rom name="MARS[cload].LVT" size="6472" crc="7795f07f" sha1="944c6b2221d7f06f4448f537c321395be2c75ed3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lvifc97834315262">
 		<description>Mastermind(JCUKEN)[bload]</description>
 		<year>????</year>
@@ -889,6 +899,146 @@
 		<part name="cass" interface="lviv_cass">
 			<dataarea name="cass" size="10794">
 				<rom name="Mastermind(QWERTY)[bload].lvt" size="10794" crc="20f415fc" sha1="cf70fa1d25a84814384f79d3a2255265808a1909"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi613d03ad6deeb">
+		<description>MAXI[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="4650">
+				<rom name="MAXI[cload].LVT" size="4650" crc="52128205" sha1="613d03ad6deebc8e7649030db6e7f5fc30fb394b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi2177afc05bd26">
+		<description>MINES[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="1815">
+				<rom name="MINES[bload].LVT" size="1815" crc="b2f7fd19" sha1="2177afc05bd268114ada76e364d5790504cb3618"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi53739e8a70182">
+		<description>MINY-2[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="8470">
+				<rom name="MINY-2[bload].LVT" size="8470" crc="fde62165" sha1="53739e8a70182ea7f176b39758c22886b2224cc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi3453c658c1765">
+		<description>MISSION[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="36297">
+				<rom name="MISSION[bload].LVT" size="36297" crc="153595aa" sha1="3453c658c176528e6e29de966cf7b9c6b3899d68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi787a5161166ad">
+		<description>MIXER[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="26390">
+				<rom name="MIXER[bload].LVT" size="26390" crc="23ce927d" sha1="787a5161166adf8f31d8438718a3e9e204d88494"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi8d8834597af68">
+		<description>MONEY[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="8214">
+				<rom name="MONEY[bload].LVT" size="8214" crc="d7db4ed3" sha1="8d8834597af687ca126198458d81c5ec9bdc65e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvieb025928ac10a">
+		<description>MOON44[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="6023">
+				<rom name="MOON44[bload].LVT" size="6023" crc="b3808a78" sha1="eb025928ac10a10dbc1b13a2dcb36e4f8db11938"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvieb7bdcda56626">
+		<description>MORBOY[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="11549">
+				<rom name="MORBOY[cload].LVT" size="11549" crc="0ccd4b6f" sha1="eb7bdcda566262750563272eaecff686c5a5a16d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvic887c2628c873">
+		<description>MRAK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="38678">
+				<rom name="MRAK.LV0" size="38678" crc="1d5930c4" sha1="c887c2628c8737584535d2c58da59eff8f2de855"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi5c78395335878">
+		<description>MRAK[bload uses LV0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="278">
+				<rom name="MRAK[bload uses LV0].LVT" size="278" crc="3e9aff02" sha1="5c78395335878f8c59d7ba2417d368f2b68a9a25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi8bb6f5fc4be3b">
+		<description>NINJA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="12473">
+				<rom name="NINJA.LVT" size="12473" crc="4c4cec2d" sha1="8bb6f5fc4be3b52bfd3d90079a213028f9ab4617"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvida4d0fde8c547">
+		<description>OCHKO[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="12621">
+				<rom name="OCHKO[cload].LVT" size="12621" crc="7c82e940" sha1="da4d0fde8c547619e7f1d5729c1b7f83614f7da8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi3b4e393342e70">
+		<description>OPIROG[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="4294">
+				<rom name="OPIROG[bload].LVT" size="4294" crc="79616d01" sha1="3b4e393342e7052c9ad6fec557cce24033f5be61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvide54f756c7617">
+		<description>ORAKUL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="8325">
+				<rom name="ORAKUL.LVT" size="8325" crc="d1fc9a83" sha1="de54f756c7617e777cddcb9d3c3c712f0402574b"/>
 			</dataarea>
 		</part>
 	</software>
