@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 162 -->
+<!-- Number of items in this list = 182 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -929,6 +929,206 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Far Side Moon - The Earth Self-Defense Force (1 of 3) (System Disk).2HD" size="1261568" crc="cdb22dcc" sha1="b6d8b2e2bd81eb07ea5d67d0a298bb96202d6232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6881aa8327f11cf">
+		<description>Intro Pro 68K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Intro Pro 68K.hdm" size="1261568" crc="418280a0" sha1="81aa8327f11cfd56038cba52cb9c89e4ba11ab54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6835d827f805a4f">
+		<description>IOCS Font 200 Shotai</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="IOCS Font 200 Shotai.hdm" size="1261568" crc="33d31146" sha1="35d827f805a4f74da7497e66476a9dd555aeaec1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e7dff6414b67c">
+		<description>Jammes (1993)(Dream Staff)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Jammes (1993)(Dream Staff).dim" size="1261824" crc="96b1e913" sha1="e7dff6414b67c477efb0a596d30b3040134e3133"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d99141998f4f7">
+		<description>Japan 2136 Nihon Gokei (1990)(Login)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Japan 2136 Nihon Gokei (1990)(Login).dim" size="1261824" crc="71c281a6" sha1="d99141998f4f79be787b94dd6edeacb265533894"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686ecbaab7719f7">
+		<description>Jeena No Taibouken (1990)(T&H Project)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Jeena No Taibouken (1990)(T&H Project).dim" size="1261824" crc="6e4b3f0c" sha1="6ecbaab7719f78dcb4bfb9d01dcd29a23971cdf3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6802723df004672">
+		<description>Jotei Senki - Queen Edition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Jotei Senki - Queen Edition.hdm" size="1261568" crc="9c7caffc" sha1="02723df004672caf5f67e7a8290053f8e40505b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686e180d0b32a5e">
+		<description>Jotei Senki 2 - Legend of Heroines (Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Jotei Senki 2 - Legend of Heroines (Disk A).hdm" size="1261568" crc="12e57719" sha1="6e180d0b32a5e8ec59aaf9881d5ab492fe38eb71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6855d4682753c23">
+		<description>Jotei Senki 2 - Legend of Heroines (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Jotei Senki 2 - Legend of Heroines (Disk B).hdm" size="1261568" crc="78afd726" sha1="55d4682753c2357337b4d214415376b602bd6d7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682bd17da6171df">
+		<description>Kamikaze - Choukoukinou Sougougata Spreadsheet (Runtime disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Kamikaze - Choukoukinou Sougougata Spreadsheet (Runtime disk).hdm" size="1261568" crc="1c10edd7" sha1="2bd17da6171df4c66ae7c25acec3d6e3cefb0cac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68cf32d347283d5">
+		<description>Kamikaze - Choukoukinou Sougougata Spreadsheet (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Kamikaze - Choukoukinou Sougougata Spreadsheet (System disk).hdm" size="1261568" crc="b9540bc8" sha1="cf32d347283d56a373eec6cf6a581819e4c919da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e528e1701e1da">
+		<description>Kensou Sono Yon (1992)(Zoom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Kensou Sono Yon (1992)(Zoom).dim" size="1261824" crc="b51f6867" sha1="e528e1701e1da8b6c288cd660b6244038bfd52b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e001628c2e6a6">
+		<description>Kick Ou II - The Kick Master</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Kick Ou II - The Kick Master.hdm" size="1261568" crc="0977a13b" sha1="e001628c2e6a603adad176694f8792586cd49673"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e0a00eda8acf8">
+		<description>King's Dungeon (1992)(Soft Plan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="King's Dungeon (1992)(Soft Plan).hdm" size="1261568" crc="72285b3b" sha1="e0a00eda8acf87c7941d4157f5352bccc58297a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680a27772bdf8c3">
+		<description>Klax</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Klax.dim" size="1261824" crc="b2481027" sha1="0a27772bdf8c3e2f899fc1be316a9ca6e1d1d2b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68fd5cd607d4b1f">
+		<description>Ko-Window Application Shuu 1 (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ko-Window Application Shuu 1 (Disk 1).hdm" size="1261568" crc="9b81f901" sha1="fd5cd607d4b1f7ae39787142d06b8ceb300c2515"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x683ace752d50e7f">
+		<description>Ko-Window Application Shuu 1 (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ko-Window Application Shuu 1 (Disk 2).hdm" size="1261568" crc="58c10669" sha1="3ace752d50e7fc60298d200fecd89fc359475962"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688b967e9f25534">
+		<description>Ko-Window Application Shuu 2 (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ko-Window Application Shuu 2 (Disk 1).hdm" size="1261568" crc="fce15bf6" sha1="8b967e9f255347793b7bb088b25c479dd3c08dc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x683ae1af7481cea">
+		<description>Ko-Window Application Shuu 2 (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ko-Window Application Shuu 2 (Disk 2).hdm" size="1261568" crc="6119ae72" sha1="3ae1af7481cea38911e65870506a16e2054d1cab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x689e8ecdfee9b6d">
+		<description>Ko-Window Application Shuu 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ko-Window Application Shuu 3.hdm" size="1261568" crc="f453c665" sha1="9e8ecdfee9b6d143c547536818a3310552a5a09e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6880572f1f86be2">
+		<description>Ko-Window Application Shuu 4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ko-Window Application Shuu 4.hdm" size="1261568" crc="298d963b" sha1="80572f1f86be23e153228d6949bf54b5f9f26c04"/>
 			</dataarea>
 		</part>
 	</software>

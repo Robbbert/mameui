@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 37 -->
+<!-- Number of items in this list = 35 -->
 <softwarelist name="pmd85_cass" description="pmd85_cass loose roms">
 	<software name="pmd74034aabb847a">
 		<description>Arkanoid[04]</description>
@@ -9,26 +9,6 @@
 		<part name="cass1" interface="pmd85_cass">
 			<dataarea name="cass" size="39636">
 				<rom name="Arkanoid[04].ptp" size="39636" crc="ee497fcd" sha1="74034aabb847af163025e5ebe84974dcb52e0550"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pmd2103aff29c652">
-		<description>BLACK[01,b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="pmd85_cass">
-			<dataarea name="cass" size="4315">
-				<rom name="BLACK[01,b].PMD" size="4315" crc="48d3d4e0" sha1="2103aff29c652e83778c2778e62d1b24688041f5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pmdd3bdf41046aa0">
-		<description>BOMBARDE[02,b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="pmd85_cass">
-			<dataarea name="cass" size="2944">
-				<rom name="BOMBARDE[02,b].PMD" size="2944" crc="0373943b" sha1="d3bdf41046aa096abaed44a584fd0b118eac3802"/>
 			</dataarea>
 		</part>
 	</software>
@@ -363,12 +343,12 @@
 		</part>
 	</software>
 	<software name="pmdd84b1aebd4441">
-		<description>Vegrap3_[41]</description>
+		<description>Vegrap3[41]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="pmd85_cass">
 			<dataarea name="cass" size="8257">
-				<rom name="Vegrap3_[41].tap" size="8257" crc="fd015a7f" sha1="d84b1aebd444108fb39421f4382fb914369c8498"/>
+				<rom name="Vegrap3[41].tap" size="8257" crc="fd015a7f" sha1="d84b1aebd444108fb39421f4382fb914369c8498"/>
 			</dataarea>
 		</part>
 	</software>

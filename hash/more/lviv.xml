@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 113 -->
+<!-- Number of items in this list = 134 -->
 <softwarelist name="lviv" description="lviv loose roms">
 	<software name="lvi4db823995f61f">
 		<description>AEROCOB1[bload]</description>
@@ -1039,6 +1039,216 @@
 		<part name="cass" interface="lviv_cass">
 			<dataarea name="cass" size="8325">
 				<rom name="ORAKUL.LVT" size="8325" crc="d1fc9a83" sha1="de54f756c7617e777cddcb9d3c3c712f0402574b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi830a0c9383dff">
+		<description>Pacman1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="725">
+				<rom name="Pacman1.lv0" size="725" crc="aa8b244b" sha1="830a0c9383dff622aa8c4f4cf7f69109f1c470b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi7ab347e5e9fcd">
+		<description>Pacman1[cload, uses LV0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="2242">
+				<rom name="Pacman1[cload, uses LV0].lvt" size="2242" crc="c30128d9" sha1="7ab347e5e9fcde1a65af26e42d5fe02271f36f67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi73567bba96f78">
+		<description>PACMAN[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="6523">
+				<rom name="PACMAN[bload].LVT" size="6523" crc="25b64d82" sha1="73567bba96f78ecbf98570311b83bc3187236102"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi5280e1ecc27e2">
+		<description>PAIRS[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="16918">
+				<rom name="PAIRS[bload].LVT" size="16918" crc="b4f6eb92" sha1="5280e1ecc27e26b748d77f58a86075b543454c6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi0a016d3766179">
+		<description>PJATN[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="6381">
+				<rom name="PJATN[bload].LVT" size="6381" crc="28a98b86" sha1="0a016d37661797b1ee2252fd5799d41ed50b8817"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi2303aca8bd197">
+		<description>PLANET[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5967">
+				<rom name="PLANET[cload].LVT" size="5967" crc="5f8f42f2" sha1="2303aca8bd197ac43dbe915c24cc4b7b3e9cefc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi3e0b56c3ec199">
+		<description>PODLOD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="2071">
+				<rom name="PODLOD.LV0" size="2071" crc="dc4c37f0" sha1="3e0b56c3ec199b56c690e0fd2e908322cff32fcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi766f734835520">
+		<description>PODLOD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="1023">
+				<rom name="PODLOD.LV1" size="1023" crc="586e4f2d" sha1="766f734835520cfc5288c502ef53239c7ac56df3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi7e25567dc8ee8">
+		<description>PODLOD[cload uses LV0,1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="3219">
+				<rom name="PODLOD[cload uses LV0,1].LVT" size="3219" crc="374937d1" sha1="7e25567dc8ee81565c2ee2ca789e1a93306d775d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi8a5d7e926eb8d">
+		<description>PODZEM[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5142">
+				<rom name="PODZEM[bload].LVT" size="5142" crc="c3f0f06c" sha1="8a5d7e926eb8d79c1d93f8922309c804611abaca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvid07d465bd58e3">
+		<description>POPCORN[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="10740">
+				<rom name="POPCORN[bload].LVT" size="10740" crc="42d98a43" sha1="d07d465bd58e3f0a768ba6b082e980e7f23fb2dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvibd7a6a17d3534">
+		<description>PRYGUN2[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5951">
+				<rom name="PRYGUN2[bload].LVT" size="5951" crc="44dae463" sha1="bd7a6a17d3534a24cb2f40ca6dd52ec869632c15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi7f713e1e619a7">
+		<description>PRYGUN[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="8023">
+				<rom name="PRYGUN[bload].LVT" size="8023" crc="646e15ef" sha1="7f713e1e619a7803595fdc86f3e6826c84d1c056"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi98c317ec95f1b">
+		<description>PRYG_I[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="1914">
+				<rom name="PRYG_I[cload].LVT" size="1914" crc="08e67259" sha1="98c317ec95f1bddc6ea2b7d097995e1f1b05bfb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi928cb7c42fdbb">
+		<description>PSST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="2070">
+				<rom name="PSST.LV0" size="2070" crc="804ee34c" sha1="928cb7c42fdbb834c3182be5767f54a9b72ad434"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvica345e4c6c12d">
+		<description>PSST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="799">
+				<rom name="PSST.LV1" size="799" crc="21e2e14a" sha1="ca345e4c6c12d888cd38544ec275c39d9ab00824"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi9a05265a4a87f">
+		<description>PSST[cload uses LV0,1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5139">
+				<rom name="PSST[cload uses LV0,1].LVT" size="5139" crc="e962bd15" sha1="9a05265a4a87f855628e0d897d7226a4e498f337"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvie8f836eb46663">
+		<description>PUSH[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="3720">
+				<rom name="PUSH[bload].LVT" size="3720" crc="87217179" sha1="e8f836eb4666355cd58166c834db54a6607ee5bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi30bce183e4a12">
+		<description>PUTUP[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="11798">
+				<rom name="PUTUP[bload].LVT" size="11798" crc="135b4a3c" sha1="30bce183e4a122a0f4ca63004e93be897948d991"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi0d9634b8279dd">
+		<description>P_PONG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="1302">
+				<rom name="P_PONG.LV0" size="1302" crc="07fc2ed2" sha1="0d9634b8279dd9ec35be61f6d7ece7c4bde9054e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi1ef1c67f0965e">
+		<description>P_PONG[bload uses LV0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="965">
+				<rom name="P_PONG[bload uses LV0].LVT" size="965" crc="d086bafa" sha1="1ef1c67f0965ef9ccf18424c339c3092c31a9a68"/>
 			</dataarea>
 		</part>
 	</software>

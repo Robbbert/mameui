@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4157 -->
+<!-- Number of items in this list = 4232 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -40812,13 +40812,763 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a26d90b678432622">
-		<description>wwm29</description>
+	<software name="a2686283d7e1c579">
+		<description>Wac-Man (2003) (Snailsoft) (Ms. Pac-Man Hack)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
-				<rom name="wwm29.bin" size="8192" crc="2367b1bc" sha1="d90b678432622fcfd51dae0ccda99fabf0181e3b"/>
+				<rom name="Wac-Man (2003) (Snailsoft) (Ms. Pac-Man Hack).a26" size="8192" crc="ab82dd72" sha1="86283d7e1c5799ff672aa2a63cddad234c35be80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2649463c01b4426">
+		<description>Walls (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Walls (Jumpman Selected Levels) (PD).a26" size="4096" crc="e5fbe53e" sha1="49463c01b4426d1bfcb90048ab79ccd65f988873"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260432a50bd776a">
+		<description>War of the Worlds by Kyle Pittman (Defender Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="War of the Worlds by Kyle Pittman (Defender Hack).a26" size="4096" crc="9ef4559e" sha1="0432a50bd776a4cfdccf514d5a7875bd5d9f2293"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e3721eb532853">
+		<description>War of the Worlds v0.46</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="War of the Worlds v0.46.a26" size="4096" crc="5fe127a2" sha1="e3721eb5328534a56dbf7c03e7f47b7295630f9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26506ba22f2e5bb">
+		<description>War of the Worlds v0.47</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="War of the Worlds v0.47.a26" size="4096" crc="01cd25c4" sha1="506ba22f2e5bb816529e2afbb3084b5890f4d5e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e67fe20051ab6">
+		<description>Warring Worms (07-02-2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (07-02-2002) (Billy Eno).a26" size="4096" crc="a62e2817" sha1="e67fe20051ab6d473f1719aeb7539283a4581c00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267a1a939bc149f">
+		<description>Warring Worms (17-02-2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (17-02-2002) (Billy Eno).a26" size="4096" crc="60ce80d7" sha1="7a1a939bc149f97b46a0b9aa8da712807246f795"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ba05f404a5bb2">
+		<description>Warring Worms (19-01-2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (19-01-2002) (Billy Eno).a26" size="4096" crc="d8c016e7" sha1="ba05f404a5bb2f76b11d2cfac5454a8b9914be19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e325c5c0501ff">
+		<description>Warring Worms (2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (2002) (Billy Eno).a26" size="4096" crc="e203b5b6" sha1="e325c5c0501ff527f06e6518526f9eefed309e89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc5cdb90c1f7d">
+		<description>Warring Worms (28-01-2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (28-01-2002) (Billy Eno).a26" size="4096" crc="7dba9cd5" sha1="dc5cdb90c1f7df2ac76553d96019a815dbc2634b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26353a56e3a5965">
+		<description>Warring Worms (Beta 1) (2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (Beta 1) (2002) (Billy Eno).a26" size="4096" crc="61758e92" sha1="353a56e3a5965f44d372cae796b18880969b3cbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26da2f601ec556e">
+		<description>Warring Worms (Beta 2) (2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (Beta 2) (2002) (Billy Eno).a26" size="4096" crc="ae81cbe8" sha1="da2f601ec556ec42ce8abe18281b6b10643b1b8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264edc4980278da">
+		<description>Warring Worms (Beta 3) (2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (Beta 3) (2002) (Billy Eno).a26" size="4096" crc="e988f676" sha1="4edc4980278dac4d054665f583ab9b30bf2c65f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f6a925df8a0ce">
+		<description>Warring Worms (Midwest Classic Edition) (08-06-2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (Midwest Classic Edition) (08-06-2002) (Billy Eno).a26" size="4096" crc="36b0eb21" sha1="f6a925df8a0ce0ab9b4f69d3c29c99ef871bd6d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26046f12c1e0ee8">
+		<description>Warring Worms (Tim Strauss Edition) (20-12-2002) (Billy Eno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Warring Worms (Tim Strauss Edition) (20-12-2002) (Billy Eno).a26" size="4096" crc="911c0ba1" sha1="046f12c1e0ee8eb9a82cb22f6719efa7911a0476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26244c7c9a6c466">
+		<description>WarringWorms</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="WarringWorms.a26" size="4096" crc="284c63f9" sha1="244c7c9a6c466b2effab353ba03497490834e869"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bedf3c23665a8">
+		<description>Waterskier (2007) (Fort Apocalypse) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Waterskier (2007) (Fort Apocalypse) (Prototype).a26" size="8192" crc="7dca7f3c" sha1="bedf3c23665a8f87bd89ebaba8b06e13f1d19e37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e5bdb0f186801">
+		<description>Waterskier v0.6 (2007-12-29)(Fort Apocalypse)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Waterskier v0.6 (2007-12-29)(Fort Apocalypse)(NTSC)(PD).bin" size="8192" crc="c7a4eb82" sha1="e5bdb0f186801e2b8923a3a8702b330efa7f1c14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2622b89dbee1c96">
+		<description>Waterskier v1.0 (2007-12-29)(Fort Apocalypse)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Waterskier v1.0 (2007-12-29)(Fort Apocalypse)(NTSC)(PD).bin" size="8192" crc="b781ab3d" sha1="22b89dbee1c967614664d94c055c08b638a7c134"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696c7358f4840b">
+		<description>Waterskier v1.1 (2007-12-29)(Fort Apocalypse)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Waterskier v1.1 (2007-12-29)(Fort Apocalypse)(NTSC)(PD).bin" size="8192" crc="6f844357" sha1="96c7358f4840b89fbd15e741eb58e1153ead0089"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268ecd54788ab7a">
+		<description>Waterskier v1.2 (2007-12-30)(Fort Apocalypse)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Waterskier v1.2 (2007-12-30)(Fort Apocalypse)(NTSC)(PD).bin" size="8192" crc="22bc1c98" sha1="8ecd54788ab7a0e95048b5b00d54c3d4b08c151c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2621b1e76d0f691">
+		<description>waterskier0.1.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="waterskier0.1.bas.a26" size="4096" crc="f6509337" sha1="21b1e76d0f69170a9ec973009d8be774277d85ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26795adcb885bf6">
+		<description>waterskier0.2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="waterskier0.2.bas.a26" size="4096" crc="e7831555" sha1="795adcb885bf6ec01db008d3ae49de5150091a14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be479cdd3d362">
+		<description>waterskier0.3.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="waterskier0.3.bas.a26" size="4096" crc="ee6eeb0c" sha1="be479cdd3d362862a1f74d0b8c1a49817db8dfc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26505865a7a8bd0">
+		<description>waterskier0.4.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="waterskier0.4.bas.a26" size="8192" crc="be30ae37" sha1="505865a7a8bd06f34cfceb617fe612e5fa6ec413"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f13513197d79e">
+		<description>waterskier0.5.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="waterskier0.5.bas.a26" size="8192" crc="a5d46b23" sha1="f13513197d79eb23816a80bb465b786cf5b3d66b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262f03167c4afd8">
+		<description>waterwar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="waterwar.a26" size="8192" crc="b3a49de3" sha1="2f03167c4afd80be8d90bd6eab5889b6de3aa1ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f27d2b8d0f898">
+		<description>Wavy Line Test (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wavy Line Test (PD).a26" size="4096" crc="03d4021d" sha1="f27d2b8d0f89884788c1ecebe25b2afc8c206c5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e60deaab43b70">
+		<description>Wavy Line Test 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wavy Line Test 2 (PD).a26" size="4096" crc="ab3aaf10" sha1="e60deaab43b702db24d57329e1dec244556b7584"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f7431b8afa2a9">
+		<description>We Will Rock You. 20070302 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="We Will Rock You. 20070302 (PD).a26" size="2048" crc="91262594" sha1="f7431b8afa2a9b292f806b02625c2c8a668a4d96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26325235fa6cd92">
+		<description>We Will Rock You. 20070303 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="We Will Rock You. 20070303 (PD).a26" size="2048" crc="18408555" sha1="325235fa6cd923d10ce1f2e5b737c82f0fc4ff20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cf1105d468367">
+		<description>Weapons of Past Distractions (Thom Uliasz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Weapons of Past Distractions (Thom Uliasz).a26" size="4096" crc="316d9522" sha1="cf1105d46836729e4836d5c67aa95cb3a94b03d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260fe18babb804d">
+		<description>wedneday5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="wedneday5.a26" size="8192" crc="c9bc3cbf" sha1="0fe18babb804d061b8c7f57fcc69f9d01e5ff1c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb658865b35c4">
+		<description>wedneday6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="wedneday6.a26" size="8192" crc="73519996" sha1="bb658865b35c4a6f02fc01b3753d6d984d062c76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260cc0cc6052a08">
+		<description>wedneday7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="wedneday7.a26" size="8192" crc="ec7db2de" sha1="0cc0cc6052a088a1219117acdc69e1b45a325a49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26726c18ab0ce1c">
+		<description>weightman.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="weightman.bas.a26" size="4096" crc="7b6cd51b" sha1="726c18ab0ce1c3dce6960f9bca54c84b894d19dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26423682a055c1b">
+		<description>Westworld A (Bezerk Hack) [h neotokeo2001 + Out of Gas]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Westworld A (Bezerk Hack) [h neotokeo2001 + Out of Gas].a26" size="4096" crc="e71f4f2c" sha1="423682a055c1b3f9502b18717fe624d5f715746d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a1549fcbdb011">
+		<description>Westworld Berzerk E (Berzerk Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Westworld Berzerk E (Berzerk Hack).a26" size="4096" crc="3c05ed2f" sha1="a1549fcbdb011d1df2e36cff7a19a2ef54e8caf9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d0bb8e9c39d60">
+		<description>Westworld C (Bezerk Hack) [h neotokeo2001 + Out of Gas]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Westworld C (Bezerk Hack) [h neotokeo2001 + Out of Gas].a26" size="4096" crc="c8a344b3" sha1="d0bb8e9c39d60e88b6f48972ffe2e4097d5be3c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d38a5893ea8fe">
+		<description>Whale (Sub Scan Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Whale (Sub Scan Hack).a26" size="4096" crc="58bd2f26" sha1="d38a5893ea8fe9853819c4fd8eaf90f40dda3e72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263e145602b1cee">
+		<description>White Thong Pic (2003) (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="White Thong Pic (2003) (Snailsoft).a26" size="4096" crc="43b0db31" sha1="3e145602b1cee2d094558f6c0e13e1a6823b4648"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d90b678432622">
+		<description>White Water Madness29</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="White Water Madness29.bin" size="8192" crc="2367b1bc" sha1="d90b678432622fcfd51dae0ccda99fabf0181e3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26157884b9c0fed">
+		<description>White Xmess (2023-12)(Janes OnderGrond)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="White Xmess (2023-12)(Janes OnderGrond).a26" size="4096" crc="abd6d33e" sha1="157884b9c0feda25ba18bf45e001d7981aaea483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2628bc799a4397d">
+		<description>Who Wants to Rule the World (Domination Map Editor) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Who Wants to Rule the World (Domination Map Editor) (PD).a26" size="4096" crc="95d3e5e0" sha1="28bc799a4397d0cf018b19fdcad9145ee180c60d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616df34446af2e">
+		<description>Wing War (1983) (Imagic) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Wing War (1983) (Imagic) (PAL) [a1][!].a26" size="8192" crc="8a38509e" sha1="16df34446af2e6035ca871a00e1e8a008cfb8df4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26229b84a7544cf">
+		<description>Wing War (1983) (Imagic) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Wing War (1983) (Imagic) [f1] (NTSC by TJ).a26" size="8192" crc="1386559e" sha1="229b84a7544cf9207f072003504ed8e65ce8498e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26765831a6ad76a">
+		<description>Wings of Death (Seaquest Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wings of Death (Seaquest Hack).a26" size="4096" crc="aafaac4c" sha1="765831a6ad76a47a3094d481b7f727211f64f02f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e4b0f68abff32">
+		<description>Wizard (Atari) (Prototype) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wizard (Atari) (Prototype) [o1].a26" size="4096" crc="be8ca7d0" sha1="e4b0f68abff3273cdd2b973639d607ae4a700adc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268045e31838807">
+		<description>Wizard of Wor (SuperCharger) (Nukey Shay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wizard of Wor (SuperCharger) (Nukey Shay).a26" size="4096" crc="0b1cdde9" sha1="8045e31838807a2a878e3a711127ac73590c203b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2699f7c70c6166d">
+		<description>wizard02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="wizard02.a26" size="2048" crc="9cba5d4d" sha1="99f7c70c6166db16db2737a118e4c0df256afb14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263c15c9af23956">
+		<description>Wizards & Warriors Theme 20060925a (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wizards & Warriors Theme 20060925a (Bob Montgomery).a26" size="4096" crc="1bbef023" sha1="3c15c9af23956619203b8197936cb606145c1de6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267a8aae4159b76">
+		<description>Wizard_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wizard_Overdump.a26" size="4096" crc="903563c7" sha1="7a8aae4159b7686ae2172d1b9588c95898dd02fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c6a23452b7d7e">
+		<description>Wolfenstein 2600 (Venture Hack) Real Final Version</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) Real Final Version.a26" size="4096" crc="cd823663" sha1="c6a23452b7d7ea32798f90d0eca355da536b3d30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2627f6d7c663c4f">
+		<description>Wolfenstein 2600 (Venture Hack) WIP 2004-01-03</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) WIP 2004-01-03.a26" size="4096" crc="af0a522d" sha1="27f6d7c663c4f4835949bea5c155488909dfe322"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad165a6e6e843">
+		<description>Wolfenstein 2600 (Venture Hack) WIP 2004-03-30</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) WIP 2004-03-30.a26" size="4096" crc="f40115a9" sha1="ad165a6e6e843ac87379e1e1a4077e2537e3ce31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2609bb7bec06a63">
+		<description>Wolfenstein 2600 (Venture Hack) WIP 2004-10-11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) WIP 2004-10-11.a26" size="4096" crc="cac8e319" sha1="09bb7bec06a635e3cf90aa98c7c411c19e2e38bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a63f67e0c6064">
+		<description>Wolfenstein 2600 (Venture Hack) WIP 2004-11-11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) WIP 2004-11-11.a26" size="4096" crc="4eb9b478" sha1="a63f67e0c6064594504faab3e3b5970def503b0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a2aa09582a6da">
+		<description>Wolfenstein 2600 (Venture Hack) WIP 2004-11-19</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) WIP 2004-11-19.a26" size="4096" crc="2ed37584" sha1="a2aa09582a6dadb5d73d16648cce892e3d6e2391"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264d089ab058af1">
+		<description>Wolfenstein 2600 (Venture Hack) WIP 2004-11-27</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) WIP 2004-11-27.a26" size="4096" crc="112a7156" sha1="4d089ab058af137d9aecc7b9342cc6acc9cfe053"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d7f97eb466f5">
+		<description>Wolfenstein 2600 (Venture Hack) WIP 2004-11-29</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) WIP 2004-11-29.a26" size="4096" crc="b10a44cf" sha1="5d7f97eb466f555fabfda468e0524f4639dc140c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cef4edd03e0e5">
+		<description>Wolfenstein 2600 (Venture Hack) WIP 2004-11-30</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein 2600 (Venture Hack) WIP 2004-11-30.a26" size="4096" crc="e5e80cd7" sha1="cef4edd03e0e59685c27324e1e4ed08960b54b05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b5bcad7f423a6">
+		<description>Wolfenstein New (Venture Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein New (Venture Hack).a26" size="4096" crc="903c2774" sha1="b5bcad7f423a67daf7187cca52d515f3d1ed7899"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2664e6843422f4a">
+		<description>Wolfenstein Proposed Final Release (Venture Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein Proposed Final Release (Venture Hack).a26" size="4096" crc="e365ce4d" sha1="64e6843422f4a773446e5299d794923c4bbf9a74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267e7ec0ae74d21">
+		<description>Wolfenstein Proposed Final Release 1 (Venture Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein Proposed Final Release 1 (Venture Hack).a26" size="4096" crc="c8286f78" sha1="7e7ec0ae74d21c9a8c8ee01ff35d0430f85ed3b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2693ff8e3382a57">
+		<description>Wolfenstein test</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Wolfenstein test.a26" size="8192" crc="41ac37be" sha1="93ff8e3382a5744d272f957abdf22d95a04c6e4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a94e5a7c5a7bc">
+		<description>Wolfenstein ver 3a (Venture Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wolfenstein ver 3a (Venture Hack).a26" size="4096" crc="3367e83c" sha1="a94e5a7c5a7bc55af5416506a7f89e10cddcada9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267b90cbd32c858">
+		<description>wolfzerk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="wolfzerk.a26" size="4096" crc="cfd5f99c" sha1="7b90cbd32c858e9954031fde3f8c2812e6c9290e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632f717cbe1c30">
+		<description>Working-Game (2005) (Doug Dingus) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Working-Game (2005) (Doug Dingus) (Prototype).a26" size="4096" crc="be3ae059" sha1="32f717cbe1c3068fd3c4689a7da14b607eb9f301"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2610d7b1c2adba6">
+		<description>Worm Raid by fabventure (Worm War I Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Worm Raid by fabventure (Worm War I Hack).a26" size="4096" crc="251ef818" sha1="10d7b1c2adba66c298bc9c5d0646e41108d42ea7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2603402a7b3a1f5">
+		<description>Worm War II prototype</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Worm War II prototype.a26" size="4096" crc="3a3cbcc7" sha1="03402a7b3a1f52d566bccdfc336e9fc2276649f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dfe9c89767172">
+		<description>Worm Whompers (A2600 Techdemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Worm Whompers (A2600 Techdemo).a26" size="4096" crc="730827c9" sha1="dfe9c89767172fddb37725e241f896abaa7d5f54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a82569731656">
+		<description>WORSTIX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="WORSTIX.a26" size="4096" crc="f5a79489" sha1="9a82569731656db14399a89d7cbbecab7657e8d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3dd3e2fc8869">
+		<description>wowiecrunch wip</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="wowiecrunch wip.a26" size="4096" crc="4374e398" sha1="d3dd3e2fc88697a243f92a25d6822f573418f191"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c4238ca5f8b5">
+		<description>wowiecrunch</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="wowiecrunch.a26" size="4096" crc="9dd9b8ea" sha1="7c4238ca5f8b5b1140694c84d2ae9a0569959e70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2699292ac81c82c">
+		<description>wscroll (2004)(Alex Herbert)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="wscroll (2004)(Alex Herbert).a26" size="4096" crc="6f18f03d" sha1="99292ac81c82c021c8bc629030372ee2b31adb44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d8bab420d4276">
+		<description>Wumpus Hunt (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Wumpus Hunt (PD).a26" size="4096" crc="82bd73d1" sha1="d8bab420d427600380a9a384b31d0f9656c44767"/>
 			</dataarea>
 		</part>
 	</software>

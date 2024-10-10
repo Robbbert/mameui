@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 2 -->
+<softwarelist name="tim011" description="tim011 loose roms">
+	<software name="tim95e89f9bfbaa0">
+		<description>TIM011</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="630395">
+				<rom name="TIM011.IMD" size="630395" crc="7a5da322" sha1="95e89f9bfbaa06ff5cad25c3cd3bbd4f9c13b2b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tim69c1d3db0de80">
+		<description>tim011orig</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="tim011orig.img" size="819200" crc="7ea9be97" sha1="69c1d3db0de80c31cbc71bfef2b770bfc55bb83c"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

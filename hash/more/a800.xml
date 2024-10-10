@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 41 -->
+<!-- Number of items in this list = 42 -->
 <softwarelist name="a800" description="a800 loose roms">
 	<software name="a880e50c7fcb2e81">
 		<description>(demo)400-800 salt diagnostic cartridge v1.00</description>
@@ -219,6 +219,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="computer chess.rom" size="8192" crc="5ce06e94" sha1="94ee63b7d0e65209575f576e78ba320f04c3eb20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a8831d3718ae1307">
+		<description>CPM-65 (2024-05-03)(Given, David)(CH)(en)(BSD-2)[HD]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="1048336">
+				<rom name="CPM-65 (2024-05-03)(Given, David)(CH)(en)(BSD-2)[HD].atr" size="1048336" crc="cc0d81cd" sha1="831d3718ae130790580ccf4806b46fad51df1c14"/>
 			</dataarea>
 		</part>
 	</software>

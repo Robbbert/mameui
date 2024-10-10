@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1835 -->
+<!-- Number of items in this list = 1836 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5709,6 +5709,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Fire Shark (USA).bin" size="524288" crc="5412cbfc" sha1="c8f3f98790b837a128f4743d85b26e7b3793a40d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene97f850048497">
+		<description>Firebird, the_v06</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Firebird, the_v06.bin" size="4194304" crc="1b1cabdf" sha1="e97f85004849776a2c5547949d4a2c597f1109c7"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 451 -->
+<!-- Number of items in this list = 471 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx1978d77c2f97f3">
 		<description>(demo)8WAY-SCR</description>
@@ -2602,6 +2602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1584aab088f743">
+		<description>DEHEXCHAR-DUMP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3841">
+				<rom name="DEHEXCHAR-DUMP.P" size="3841" crc="86be5770" sha1="584aab088f74361189065cf3a57f2628b2cb7ac1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx183aeaca25f374">
 		<description>DEMO-LEV</description>
 		<year>????</year>
@@ -4442,6 +4452,186 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx16f40d1850fad9">
+		<description>IMPICCA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1498">
+				<rom name="IMPICCA.P" size="1498" crc="83a8b57a" sha1="6f40d1850fad9f6f7ca252e6788b5a2f2aaa8dab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e1134fdc95929">
+		<description>INCA-TOM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10850">
+				<rom name="INCA-TOM.P" size="10850" crc="e93ee232" sha1="e1134fdc959294adfe61fa9aa0b0df64f1a37a6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1de818ad408125">
+		<description>INDEX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7704">
+				<rom name="INDEX.P" size="7704" crc="342cfa72" sha1="de818ad4081258e75a03bb6d88b9dc795b3fe3d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx19537381269317">
+		<description>INTERNAA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14876">
+				<rom name="INTERNAA.P" size="14876" crc="1468f5f7" sha1="9537381269317d9804f5a523bb11e0a8b59f3342"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ac65199f39eea">
+		<description>INTERPRI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15031">
+				<rom name="INTERPRI.P" size="15031" crc="89fae023" sha1="ac65199f39eea52cae6f4c20c436a185dcd9cde4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx10b7760124a469">
+		<description>INV1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8298">
+				<rom name="INV1.P" size="8298" crc="3a175347" sha1="0b7760124a469647e7144477ded5d40c0bcfe0e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1a59a01eddd75e">
+		<description>INV2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7608">
+				<rom name="INV2.P" size="7608" crc="31cddd45" sha1="a59a01eddd75ef9b80567ae0e906a520a34c022f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e259400f16153">
+		<description>INVADER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7580">
+				<rom name="INVADER.P" size="7580" crc="775f9ee3" sha1="e259400f16153ef00e7a096ff2d56e8e337988be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx15a13a019b465b">
+		<description>INVADERS (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3067">
+				<rom name="INVADERS (3).P" size="3067" crc="000e2ac3" sha1="5a13a019b465bf5ea41f7c9f985aafe51cc73d0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1226a23aa8ffcc">
+		<description>INVADERS (4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2130">
+				<rom name="INVADERS (4).P" size="2130" crc="18f70b80" sha1="226a23aa8ffcc36abb0fd94270b2beebacd943ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1292ae192c979b">
+		<description>INVADERS (7)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4310">
+				<rom name="INVADERS (7).P" size="4310" crc="98b562de" sha1="292ae192c979b35e14bb2185e0f3272ae56b4394"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1605e3c590497b">
+		<description>Invasion Force</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7692">
+				<rom name="Invasion Force.P" size="7692" crc="894b5795" sha1="605e3c590497bc74082834cbd42277b4783dc045"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx199c811c53ed2f">
+		<description>INVASION</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2874">
+				<rom name="INVASION.P" size="2874" crc="7de82f7b" sha1="99c811c53ed2f65bb56098a1258c5eaf10ef8653"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13899f510016c8">
+		<description>INVERSION</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14483">
+				<rom name="INVERSION.P" size="14483" crc="0db0f6bd" sha1="3899f510016c80eed7e8e9f9eafe01d483667ece"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f8f0e825f0aa8">
+		<description>IRA-PLAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8254">
+				<rom name="IRA-PLAN.P" size="8254" crc="21976d0c" sha1="f8f0e825f0aa874350c08dc7b9e6cb6630cd3a97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13b36bedb0a756">
+		<description>IRRGARTEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5618">
+				<rom name="IRRGARTEN.P" size="5618" crc="167038a5" sha1="3b36bedb0a756a28928abd2e0e0f4b17793caf1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx18eafcd05ceb3d">
+		<description>Island Kingdom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="13164">
+				<rom name="Island Kingdom.P" size="13164" crc="14bee768" sha1="8eafcd05ceb3d5934de3c89b4b7eb3778e9ecbc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx124c2ddde2df06">
+		<description>Microvaders</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6292">
+				<rom name="Microvaders.P" size="6292" crc="224eebce" sha1="24c2ddde2df069ff8e4fcfe96617ab8811d75b18"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1ea6955bbeede0">
 		<description>Poker Machine</description>
 		<year>????</year>
@@ -4459,6 +4649,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="1751">
 				<rom name="Psion Dice.P" size="1751" crc="e85c0c96" sha1="d050f6783b492b82d1c21122d3a4e974e3dc85da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1941c29f9ca619">
+		<description>Space Invaders</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3072">
+				<rom name="Space Invaders.P" size="3072" crc="66e266ab" sha1="941c29f9ca6195c895ecbdb6125d13b7164164ac"/>
 			</dataarea>
 		</part>
 	</software>

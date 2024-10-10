@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 5 -->
+<softwarelist name="tvc_cass" description="tvc_cass loose roms">
+	<software name="tvca6c21abcc22a9">
+		<description>Astro Blaster (1991)(Quicksilva - STV)[h]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="13425">
+				<rom name="Astro Blaster (1991)(Quicksilva - STV)[h].cas" size="13425" crc="3351b7cd" sha1="a6c21abcc22a9f2da5a95560eb5f856c119c877f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc0f511dab4d9ca">
+		<description>Awari-jatek (198x)(-)(hu)[h]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="10698">
+				<rom name="Awari-jatek (198x)(-)(hu)[h].cas" size="10698" crc="02498617" sha1="0f511dab4d9ca244ab4dd6934cd8bcc533813e5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvcc9739ed3e9b7f">
+		<description>berygolf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="26138">
+				<rom name="berygolf.cas" size="26138" crc="5a822c93" sha1="c9739ed3e9b7fe4c5122e8451e54e2c50cdd15dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvcd5c4b18e68420">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)[buffered]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="11698">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[buffered].cas" size="11698" crc="7b692544" sha1="d5c4b18e6842054a63f8225c1a3498059e2c2757"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc070f2e0b50ddf">
+		<description>TV-computer faltoro jatek (198x)(-)(hu)[h]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="3328">
+				<rom name="TV-computer faltoro jatek (198x)(-)(hu)[h].cas" size="3328" crc="42bfa364" sha1="070f2e0b50ddf7baa24c0f84692cf968940e167f"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
