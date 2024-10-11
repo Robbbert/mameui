@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 182 -->
+<!-- Number of items in this list = 221 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -1169,6 +1169,396 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="R+R (1995) (NIN-NIKI).HDM" size="1261568" crc="5d6c7356" sha1="68ae5ec54fa1b863e46f691758494a8dd4fe6cc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x681fc82aec7c84e">
+		<description>S.V.S - Side View Shooting (1994)(Fujino Toshiaki)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="S.V.S - Side View Shooting (1994)(Fujino Toshiaki).xdf" size="1261568" crc="0b72245c" sha1="1fc82aec7c84e7a0b5fb2fe2d9317647328e2be3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c93f506aa7188">
+		<description>Sampling Pro-68K (Data disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sampling Pro-68K (Data disk).hdm" size="1261568" crc="88024830" sha1="c93f506aa7188b8cbf6dcbdfb8a7864539314af6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x681398487e5043a">
+		<description>Sampling Pro-68K (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sampling Pro-68K (System disk).hdm" size="1261568" crc="2098009f" sha1="1398487e5043ae9b247db920af40ad6837202b4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x689f141196b00fc">
+		<description>SAP - Tokushu KK (1991)(Great)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="SAP - Tokushu KK (1991)(Great)(1).hdm" size="1261568" crc="603fe579" sha1="9f141196b00fc0047c24df4d361b6f416e1aa9e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682f6246a33fdda">
+		<description>SAP - Tokushu KK (1991)(Great)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="SAP - Tokushu KK (1991)(Great)(2).hdm" size="1261568" crc="3053d0c7" sha1="2f6246a33fdda0c84b2534b85710dad7fbb6a337"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680f083df285726">
+		<description>SAP - Tokushu KK (1991)(Great)(Game)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="SAP - Tokushu KK (1991)(Great)(Game).hdm" size="1261568" crc="2c41ddeb" sha1="0f083df285726b71d4ef770875a7deab5dc1b7bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6886e73ce297230">
+		<description>Scorpius (1991)(Shinseisha)[new version]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Scorpius (1991)(Shinseisha)[new version].dim" size="1261824" crc="273f5233" sha1="86e73ce29723064c519f31abcf2b7a84a03868a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b28c54c6690e4">
+		<description>Sharp X68000 Disk Backup Tool Messiah-68K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sharp X68000 Disk Backup Tool Messiah-68K.hdm" size="1261568" crc="e4fdccbc" sha1="b28c54c6690e4dd307fd99e956230406d874f263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6884a5a027f9b1b">
+		<description>Sharp X68000 Nihongo Word Processor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sharp X68000 Nihongo Word Processor.hdm" size="1261568" crc="375dec9b" sha1="84a5a027f9b1b7034305897af1abc4fa9b020611"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688b8dd37ac0bbd">
+		<description>Shougi Seiten (1992)(HomeData)(Data)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Shougi Seiten (1992)(HomeData)(Data).hdm" size="1261568" crc="bbbca8b2" sha1="8b8dd37ac0bbdf4bb1cd787db21178b6969e9716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c8d29f2dfcbb9">
+		<description>Shougi Seiten (1992)(HomeData)(System)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Shougi Seiten (1992)(HomeData)(System).hdm" size="1261568" crc="1b519995" sha1="c8d29f2dfcbb994b0f1b4aa594efe2ea92167f91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6846d86082eeee7">
+		<description>Sion (J. Yamada)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sion (J. Yamada).hdm" size="1261568" crc="c103ac53" sha1="46d86082eeee7c9830a0fd5e8e512a63175509d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6837d0fcd0c0b23">
+		<description>Sol-Feace (1 of 3) (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sol-Feace (1 of 3) (Disk 1).2HD" size="1261568" crc="a75e3c35" sha1="37d0fcd0c0b237dfc2f540805dc68a837301a61b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68eb460ea4118f2">
+		<description>Sol-Feace (2 of 3) (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sol-Feace (2 of 3) (Disk 2).2HD" size="1261568" crc="a24fa6e1" sha1="eb460ea4118f28d3665355f56e1ad50b5004432e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680f81dfcd5301f">
+		<description>Sol-Feace (3 of 3) (Disk 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sol-Feace (3 of 3) (Disk 3).2HD" size="1261568" crc="6a384eb2" sha1="0f81dfcd5301fbd705ae32f89ab6cdaad20d38a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68601702790b468">
+		<description>Sound Pro-68K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sound Pro-68K.hdm" size="1261568" crc="d1798742" sha1="601702790b4689f84e95c908ebe7ffd29b1d5582"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684f237f8450f42">
+		<description>Space Harrier School Girls (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Space Harrier School Girls (19xx)(-).XDF" size="1261568" crc="9bdea551" sha1="4f237f8450f42ada1034e498f4c842463cb145b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682b28b802b7130">
+		<description>Space Soldier II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Space Soldier II.XDF" size="1261568" crc="5e854323" sha1="2b28b802b71301824fd36491a045dbc37b280989"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d8375e1543c1e">
+		<description>Space War Simulation Ginga Eiyuu Densetsu II (1 of 4) (Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Space War Simulation Ginga Eiyuu Densetsu II (1 of 4) (Disk A).2HD" size="1261568" crc="337d993f" sha1="d8375e1543c1ea19f7a6f679335c09f8848b2c95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6841d8ac3200040">
+		<description>Space War Simulation Ginga Eiyuu Densetsu II (2 of 4) (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Space War Simulation Ginga Eiyuu Densetsu II (2 of 4) (Disk B).2HD" size="1261568" crc="cc7a9d10" sha1="41d8ac3200040b5c2f1fa714dd5ca032918add6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x683c0ea76614106">
+		<description>Space War Simulation Ginga Eiyuu Densetsu II (3 of 4) (Disk C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Space War Simulation Ginga Eiyuu Densetsu II (3 of 4) (Disk C).2HD" size="1261568" crc="ba2fcf1e" sha1="3c0ea766141069368fe6c0d56d0caccc891fb851"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c31a931ac1029">
+		<description>Space War Simulation Ginga Eiyuu Densetsu II (4 of 4) (Disk D)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Space War Simulation Ginga Eiyuu Densetsu II (4 of 4) (Disk D).2HD" size="1261568" crc="7e52ce66" sha1="c31a931ac1029833195d2dfdee1d7b6bfd34c1dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68007426e52975d">
+		<description>Spacial Harrier</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Spacial Harrier.XDF" size="1261568" crc="aa701861" sha1="007426e52975d9f27a9af5311e9b408d926b601f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b1ceb284289e9">
+		<description>Special Harrier (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Special Harrier (19xx)(-).XDF" size="1261568" crc="24a7f631" sha1="b1ceb284289e94f6dd0d99bb928b9da568f47ddc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6860e78621715d6">
+		<description>Sprite Editor E68k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sprite Editor E68k.hdm" size="1261568" crc="e9559889" sha1="60e78621715d682571523648a1ff048353403e70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6878078ca862f2e">
+		<description>Star Cruiser (1989)(Arsys)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Star Cruiser (1989)(Arsys)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="57a87ce6" sha1="78078ca862f2e18c189c0b66e850b4d32bebd64f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6853fb1b8d5f79a">
+		<description>Star Cruiser (1989)(Arsys)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Star Cruiser (1989)(Arsys)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="a808c28b" sha1="53fb1b8d5f79a65135d64b8f35919fa1077b330a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6868f9b5e446b80">
+		<description>Stationery Pro-68K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Stationery Pro-68K.hdm" size="1261568" crc="44874ad9" sha1="68f9b5e446b806f500ffe75a901aacbe1a63d789"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6814d5510d5fafc">
+		<description>Street Harrier</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Street Harrier.XDF" size="1261568" crc="914b063d" sha1="14d5510d5fafcfaedaa5114e91c0234a6cb375db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6867255fb2ec048">
+		<description>Sunspine v0.22 (2009)(Yumiwa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Sunspine v0.22 (2009)(Yumiwa).XDF" size="1261568" crc="c0baf4dd" sha1="67255fb2ec048a8bc4634b93452ed775585b0e93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688f803abb735cb">
+		<description>Super Artemis (Disk A) [X68030]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Artemis (Disk A) [X68030].hdm" size="1261568" crc="b1852fc5" sha1="8f803abb735cbab57cd8596828aa0f24963887b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6895cffe60fabf7">
+		<description>Super Artemis (Disk B) [X68030]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Artemis (Disk B) [X68030].hdm" size="1261568" crc="4413ee00" sha1="95cffe60fabf76d3bf8ad82faaedfdf0f2c5ed53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68197281b82eddc">
+		<description>Super Disk Backup Tool Formula-68K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Disk Backup Tool Formula-68K.hdm" size="1261568" crc="a17e2373" sha1="197281b82eddc307c1306cf386d0e15834a7e59c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680604341046d7f">
+		<description>Super Moon Fighter v1.02 (1994)(Sprite)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Moon Fighter v1.02 (1994)(Sprite).hdm" size="1261568" crc="437b596e" sha1="0604341046d7f8266948b9f7005ab12d74560ef0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68eac39b9b3e1b0">
+		<description>Super Moon Fighter X (1995)(Sprite)(A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Moon Fighter X (1995)(Sprite)(A).hdm" size="1261568" crc="88f1c917" sha1="eac39b9b3e1b05464d26e2aec758ffacef669321"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b60c8dfde965e">
+		<description>Super Moon Fighter X (1995)(Sprite)(B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Moon Fighter X (1995)(Sprite)(B).hdm" size="1261568" crc="d04ab83b" sha1="b60c8dfde965e27db2a5c56395c2d7a9a61f0883"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b3c9c00ad1eab">
+		<description>Super Star Shooter (v2.00)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Star Shooter (v2.00).hdm" size="1261568" crc="2668dc58" sha1="b3c9c00ad1eab50e3eb5ec557968ad39be3c8c59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68edad65f76e6a7">
+		<description>Super Surgeon-68K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Surgeon-68K.hdm" size="1261568" crc="1d1f4250" sha1="edad65f76e6a76bef46e621da4a247df384456ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x681f6fcd74c2e58">
+		<description>Super Tiny Phalanx</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Super Tiny Phalanx.hdm" size="1261568" crc="99b62b95" sha1="1f6fcd74c2e58b9bb12328f9c050a1ca80a82e29"/>
 			</dataarea>
 		</part>
 	</software>

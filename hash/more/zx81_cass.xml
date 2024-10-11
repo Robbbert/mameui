@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 471 -->
+<!-- Number of items in this list = 492 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx1978d77c2f97f3">
 		<description>(demo)8WAY-SCR</description>
@@ -2322,6 +2322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1730ecd352adfd">
+		<description>Crazy Kong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6972">
+				<rom name="Crazy Kong.P" size="6972" crc="730ba893" sha1="730ecd352adfdaf59b6ddb3efb09bd4eeb1edb05"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1a0dad33be4e57">
 		<description>CRAZYBAL</description>
 		<year>????</year>
@@ -4619,6 +4629,206 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="13164">
 				<rom name="Island Kingdom.P" size="13164" crc="14bee768" sha1="8eafcd05ceb3d5934de3c89b4b7eb3778e9ecbc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ed7a13b892358">
+		<description>JUL-FFP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14209">
+				<rom name="JUL-FFP.P" size="14209" crc="c556b084" sha1="ed7a13b892358e048654f24b53bdc51365fc162e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx11f4b5a3c33370">
+		<description>JULIET</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8150">
+				<rom name="JULIET.P" size="8150" crc="76782c70" sha1="1f4b5a3c3337015f468df82a7ee609b8f37d8926"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ed4f4e6f32dba">
+		<description>JUMP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4888">
+				<rom name="JUMP.P" size="4888" crc="fc9f612c" sha1="ed4f4e6f32dba0ee375494d24d9449950dfd006d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d53d5f70b9759">
+		<description>KAARTSPE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3611">
+				<rom name="KAARTSPE.P" size="3611" crc="fb738ded" sha1="d53d5f70b9759a923f1bd78a72840cb8220f8250"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1b698feba661d6">
+		<description>KALABRIA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="13472">
+				<rom name="KALABRIA.P" size="13472" crc="1c880471" sha1="b698feba661d67009384f1109bb948a7d8d1c516"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13d7739574ce55">
+		<description>kaleido</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1184">
+				<rom name="kaleido.p" size="1184" crc="b1f89a3e" sha1="3d7739574ce55d94a7ce97b574cc5ee6eba8541f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13cf594acfa147">
+		<description>KAMEL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8414">
+				<rom name="KAMEL.P" size="8414" crc="7466782c" sha1="3cf594acfa1477a3aeeba2e7c2058b563af302d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1096b4070d67cb">
+		<description>KAUFHAUS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1318">
+				<rom name="KAUFHAUS.81" size="1318" crc="2372836d" sha1="096b4070d67cbd0e0b1aab8271b8de2128f05624"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d9d300bfcc65d">
+		<description>KEGELEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5800">
+				<rom name="KEGELEN.P" size="5800" crc="f1d5411e" sha1="d9d300bfcc65da95f7bab7b149ede0401896920e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx100bb96abd41e0">
+		<description>KIMCALC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7084">
+				<rom name="KIMCALC.P" size="7084" crc="8b662f5b" sha1="00bb96abd41e0b3e49bb932ca72c1841c9c21981"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1a3ea830310559">
+		<description>KLEURCOD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4315">
+				<rom name="KLEURCOD.P" size="4315" crc="88ad9b2a" sha1="a3ea8303105593af8ee24dda7043a968c7f997a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx17cef7d7cc99cd">
+		<description>KLOK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1347">
+				<rom name="KLOK.P" size="1347" crc="1a5a6bab" sha1="7cef7d7cc99cdbad18cabbcd564c83a5f7f7ae46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f13d4b51deabd">
+		<description>KNIKKERS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4069">
+				<rom name="KNIKKERS.P" size="4069" crc="3d532bec" sha1="f13d4b51deabde854a3725151cb3c2ff105fc24c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx18eb53551eb99a">
+		<description>KNOOP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2863">
+				<rom name="KNOOP.P" size="2863" crc="38812def" sha1="8eb53551eb99abcc5035cde91594c48919bdd05c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx19a8581666b15b">
+		<description>KOLENMIJ (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10772">
+				<rom name="KOLENMIJ (3).P" size="10772" crc="a7ada9aa" sha1="9a8581666b15b9ce3957ba77a93e3a00cfce0340"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ebb2de6d26eca">
+		<description>KOLENMIJ</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10945">
+				<rom name="KOLENMIJ.P" size="10945" crc="db792eb4" sha1="ebb2de6d26eca39cebfb0c5116a168b3ed396ccb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx19040fb0042685">
+		<description>KOSTEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10638">
+				<rom name="KOSTEN.P" size="10638" crc="1e1738a9" sha1="9040fb00426850a9fc7f7a3f6eadbc3e1c25cb5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ee6dd1bdb6245">
+		<description>KRAZY-KO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8250">
+				<rom name="KRAZY-KO.P" size="8250" crc="892ff2bb" sha1="ee6dd1bdb6245f24fbeb478a408369a27f47e4a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1849be357e4cab">
+		<description>KRZYKONG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8238">
+				<rom name="KRZYKONG.P" size="8238" crc="59b1f51a" sha1="849be357e4cab0092899eb23c05844c92542e380"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ff387cea6027b">
+		<description>KUNST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1647">
+				<rom name="KUNST.P" size="1647" crc="b5fe2a25" sha1="ff387cea6027bd9a31cdf3139f851efccb0bebd4"/>
 			</dataarea>
 		</part>
 	</software>

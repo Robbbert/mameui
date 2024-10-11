@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 519 -->
+<!-- Number of items in this list = 558 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -3979,6 +3979,396 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15872">
 				<rom name="Aquarius (1983)(Bug-Byte Software)[a].tap" size="15872" crc="62966acd" sha1="239bbb5548339657451b66a00f77903cb2a1de68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse471a705849ca">
+		<description>Weird Science Megademo 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26198">
+				<rom name="Weird Science Megademo 1.tap" size="26198" crc="c3ff4880" sha1="e471a705849ca3ee232f6c427938f685d4366476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf6d80d9ba0cf">
+		<description>Wolfman (1988)(CRL Group PLC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="143443">
+				<rom name="Wolfman (1988)(CRL Group PLC).tap" size="143443" crc="e63f7fe5" sha1="bf6d80d9ba0cfe766cdaf837eb219df00ca41294"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs17e27eb7f5ae1">
+		<description>Wombles, The (1990)(Alternative Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47868">
+				<rom name="Wombles, The (1990)(Alternative Software Ltd).tap" size="47868" crc="e535cbfc" sha1="17e27eb7f5ae17ad40998ebf6865f91500babd4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs371976cd37663">
+		<description>Wonder Boy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="102264">
+				<rom name="Wonder Boy.tzx" size="102264" crc="0e2557be" sha1="371976cd376636bb38f2db1da9c5c65b54296af5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs74291dad555f1">
+		<description>Wonderboy (1987)(Activision Inc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="102126">
+				<rom name="Wonderboy (1987)(Activision Inc).tap" size="102126" crc="b0fbcc6c" sha1="74291dad555f1e9d194882579f5a2a6f2fbe19e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd28960deb28f2">
+		<description>Wonderboy In Monster Land</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="183411">
+				<rom name="Wonderboy In Monster Land.tzx" size="183411" crc="6fb1f0d4" sha1="d28960deb28f202d13d2e9ebe534a7f627848843"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbeecb6127fc22">
+		<description>Wonky Chateau (1985)(Wildest Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23140">
+				<rom name="Wonky Chateau (1985)(Wildest Dreams).tap" size="23140" crc="1bb208f6" sha1="beecb6127fc224deeb503d7000eac01ddd869f21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80cfc6f62e7f4">
+		<description>Woods Of Winter, The (1984)(CRL Group PLC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46283">
+				<rom name="Woods Of Winter, The (1984)(CRL Group PLC).tap" size="46283" crc="bf5f3e5c" sha1="80cfc6f62e7f4e9175bde39dc95f63a8a041b43c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc39ccd5a1c718">
+		<description>Wordsearch (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26738">
+				<rom name="Wordsearch (19xx)(-).tap" size="26738" crc="968d8694" sha1="c39ccd5a1c7183a1048f3831e726261d0e136200"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsacdad45fa4b08">
+		<description>World Champions (1986)(E&J Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48326">
+				<rom name="World Champions (1986)(E&J Software).tap" size="48326" crc="03384d58" sha1="acdad45fa4b08ffe75b3623d7b6fe53f6ea55543"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7018685fbc0a9">
+		<description>World Class Darts (1983)(Alphasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23311">
+				<rom name="World Class Darts (1983)(Alphasoft).tap" size="23311" crc="4143ccc4" sha1="7018685fbc0a915e8838dc5fc489c53c46ad347a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48a14dbafd7c5">
+		<description>World Class Leaderboard (1987)(US Gold Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="167410">
+				<rom name="World Class Leaderboard (1987)(US Gold Ltd).tap" size="167410" crc="c6954233" sha1="48a14dbafd7c5b9f8b13b2040b365425ced87895"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5a7195c6840af">
+		<description>World Class Rugby (1991)(Audiogenic Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="179783">
+				<rom name="World Class Rugby (1991)(Audiogenic Software Ltd)(128K).tap" size="179783" crc="bc6ec980" sha1="5a7195c6840afd14079b6afbb37776208fecfa05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs705c1de05f619">
+		<description>World Class Rugby (1991)(Audiogenic Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49086">
+				<rom name="World Class Rugby (1991)(Audiogenic Software Ltd).tap" size="49086" crc="248a34fc" sha1="705c1de05f619075777a9aeb9663bcf07d833e5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6cd3ee5f86638">
+		<description>World Cup (1990)(Stephen Cory)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36823">
+				<rom name="World Cup (1990)(Stephen Cory).tap" size="36823" crc="7e5a71ce" sha1="6cd3ee5f86638bcab8e01628b2d8005af4fb6003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81054580975f1">
+		<description>World Cup Challenge (1990)(Players Premier Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52416">
+				<rom name="World Cup Challenge (1990)(Players Premier Software).tap" size="52416" crc="550b41b0" sha1="81054580975f11c505ce6467829109515d075b2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d9770e5c6fba">
+		<description>World Cup Manager (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33743">
+				<rom name="World Cup Manager (19xx)(-).tap" size="33743" crc="e34aa483" sha1="1d9770e5c6fba4f2da9d75ae7305b4c2d84122ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7760e1b666be6">
+		<description>World Cup Soccer '90 (1990)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40262">
+				<rom name="World Cup Soccer '90 (1990)(Virgin Games).tap" size="40262" crc="854a7269" sha1="7760e1b666be63801481aafad44edae80cc15e59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs63c51a55626d9">
+		<description>World Cup Soccer '90 (1990)(Virgin Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33797">
+				<rom name="World Cup Soccer '90 (1990)(Virgin Games)[a].tap" size="33797" crc="5b00bb39" sha1="63c51a55626d982209f201b48e1b27499495fb2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs70287cdc53cc1">
+		<description>World Cup Soccer (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42801">
+				<rom name="World Cup Soccer (19xx)(-).tap" size="42801" crc="6774897b" sha1="70287cdc53cc1bb08c37feb7e8027b9d7a10d778"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa890c92847935">
+		<description>World Destruction (19xx)(Ventamatic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29541">
+				<rom name="World Destruction (19xx)(Ventamatic Software)(Sp).tap" size="29541" crc="1b516c80" sha1="a890c92847935ee31911ffd89a022594d7ff5e2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2f6f77a5c76b6">
+		<description>World Games (1987)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="224518">
+				<rom name="World Games (1987)(U.S. Gold).tap" size="224518" crc="ab9ccddb" sha1="2f6f77a5c76b6c59a7a2dbcd460279f403b567f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a78f7950d224">
+		<description>World Rally (1988)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4082">
+				<rom name="World Rally (1988).tap" size="4082" crc="e132603a" sha1="8a78f7950d2243da8ccfde26b677f782878aac44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs04be94b7cfb95">
+		<description>World Rugby (1993)(Zeppelin Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48077">
+				<rom name="World Rugby (1993)(Zeppelin Games Ltd).tap" size="48077" crc="cf57d524" sha1="04be94b7cfb95f2258882778ca21d3560916883e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs30aa56360f68f">
+		<description>World Series Basketball (1985)(Imagine Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50127">
+				<rom name="World Series Basketball (1985)(Imagine Software Ltd).tap" size="50127" crc="7ff67369" sha1="30aa56360f68ff8cc6e9f8b2ea6f1b9614455f37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcce0d3ed3f4d">
+		<description>World Soccer League (1989)(E&J Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36004">
+				<rom name="World Soccer League (1989)(E&J Software).tap" size="36004" crc="12a98643" sha1="bcce0d3ed3f4dbaa41bb6331afb89134bdf0ac61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b5b5b184b380">
+		<description>World War 1 (1987)(MC Lothlorien Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29265">
+				<rom name="World War 1 (1987)(MC Lothlorien Ltd).tap" size="29265" crc="a43c82f6" sha1="6b5b5b184b38013992c3553f37080a5a0297b0c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc3ce7df872ccc">
+		<description>World War Simulator - PART 1, The 48K (2012)(Retrobytes Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36335">
+				<rom name="World War Simulator - PART 1, The 48K (2012)(Retrobytes Productions).tap" size="36335" crc="893ed613" sha1="c3ce7df872cccaad8d4f3f12643e064632addf32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscee70ee3c227c">
+		<description>Worm (1982)(Michael Anderson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8313">
+				<rom name="Worm (1982)(Michael Anderson).tap" size="8313" crc="8bb4faf6" sha1="cee70ee3c227cfba2c95fcad165f847df15fca33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse75610c52aa4d">
+		<description>Worm (19xx)(Polarsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16431">
+				<rom name="Worm (19xx)(Polarsoft).tap" size="16431" crc="37e8b947" sha1="e75610c52aa4d7185835d22d9fb24920b2fe6525"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs90f6026308b43">
+		<description>Worm In Paradise, The (1985)(Level 9 Computing)[Text Version]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41984">
+				<rom name="Worm In Paradise, The (1985)(Level 9 Computing)[Text Version].tap" size="41984" crc="c32f39af" sha1="90f6026308b430964866d8e3698396150f1df698"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf0c9ea716e761">
+		<description>Worm In Paradise, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41665">
+				<rom name="Worm In Paradise, The.tzx" size="41665" crc="85e77d33" sha1="f0c9ea716e761f7fe089210083235cfd278c6b39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf798ba2a787d2">
+		<description>Wreckage (1984)(Unique - Ventamatic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15831">
+				<rom name="Wreckage (1984)(Unique - Ventamatic Software)(Sp).tap" size="15831" crc="a4bbdc40" sha1="f798ba2a787d2133f3d859bfd421a48f26a5d3db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs47afaf70ca70f">
+		<description>Wriggler (1985)(Romantic Robot UK Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49030">
+				<rom name="Wriggler (1985)(Romantic Robot UK Ltd).tap" size="49030" crc="d61b27c9" sha1="47afaf70ca70fd17718bbdc653bfc57e36610997"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6223056d7ce68">
+		<description>Wriggler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51211">
+				<rom name="Wriggler.tap" size="51211" crc="aaefe987" sha1="6223056d7ce688c621b402bca5ec8348a440a407"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4cf92208a3f24">
+		<description>Wulfan The Barbarian (1987)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49205">
+				<rom name="Wulfan The Barbarian (1987)(Mastertronic Ltd).tap" size="49205" crc="a58336d9" sha1="4cf92208a3f24d6914f61d37dee4074f40ecb6cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdfa5356c5dbae">
+		<description>Wulfpack (1988)(Blue Ribbon Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46572">
+				<rom name="Wulfpack (1988)(Blue Ribbon Software).tap" size="46572" crc="5b356787" sha1="dfa5356c5dbaeb6cd528d236570b1c1e1d77cdbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa3815053b8c23">
+		<description>WWF Wrestle Mania (1991)(Ocean Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="209329">
+				<rom name="WWF Wrestle Mania (1991)(Ocean Software Ltd)(128K).tap" size="209329" crc="b377350f" sha1="a3815053b8c23f5dd88bf727fbdb443264e19837"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs392f1144db313">
+		<description>Wycheweald 128K (2023)(Red Zebra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60543">
+				<rom name="Wycheweald 128K (2023)(Red Zebra).tap" size="60543" crc="2ab6e85c" sha1="392f1144db3136969b6a1a6357ad3b066f834347"/>
 			</dataarea>
 		</part>
 	</software>

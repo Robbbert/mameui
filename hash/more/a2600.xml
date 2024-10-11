@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4232 -->
+<!-- Number of items in this list = 4371 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -40809,6 +40809,1396 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Track&Field(PAL60).bin" size="16384" crc="eb31b373" sha1="9faa26d3f0599bc1cbe968dda3bd8b56b0454a57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661a39f459a3d2">
+		<description>UCAdventure (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="UCAdventure (Adventure Hack).a26" size="4096" crc="d3aaeffb" sha1="61a39f459a3d2b65b2309133b52d878b5630f8f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632bb31d50aad5">
+		<description>UFO #6 by Charles Morgan (Pepsi Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="UFO #6 by Charles Morgan (Pepsi Invaders Hack).a26" size="4096" crc="e7f04bab" sha1="32bb31d50aad58fec8dcb996957d0c74de2ad02c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2675680d2194ec3">
+		<description>UFO Traffic v1.15 (2008-02-28)(Fort Apocalypse)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="UFO Traffic v1.15 (2008-02-28)(Fort Apocalypse)(NTSC)(PD).bin" size="4096" crc="57919e98" sha1="75680d2194ec34bc7b0b309a3827ef8240a54616"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2697e197bbb8d89">
+		<description>UFO Traffic v1.7 (2008-02-11)(Fort Apocalypse)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="UFO Traffic v1.7 (2008-02-11)(Fort Apocalypse)(NTSC)(PD).bin" size="4096" crc="97ebc7cd" sha1="97e197bbb8d896ed5597ac299079e783706395e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b7c326087779a">
+		<description>UFO Traffic v1.9 (2008-02-28)(Fort Apocalypse)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="UFO Traffic v1.9 (2008-02-28)(Fort Apocalypse)(NTSC)(PD).bin" size="4096" crc="77812b3a" sha1="b7c326087779a3c0e9b4f312e0e215ac52517aa2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26993238e501524">
+		<description>UFO Wars (Space Jockey Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="UFO Wars (Space Jockey Hack).a26" size="2048" crc="7a78e565" sha1="993238e501524603d791048a4c090aabce6955e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264e8bce1206260">
+		<description>ufotraffic0.3.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ufotraffic0.3.bas.a26" size="4096" crc="f123814f" sha1="4e8bce12062606a44c7200cdc93d41af5e6038eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ea8b1becbd17b">
+		<description>ufotraffic1.0.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ufotraffic1.0.bas.a26" size="4096" crc="bd8d8a48" sha1="ea8b1becbd17b882c55ca113f77c12bebadd7afe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d08286cd42c5d">
+		<description>ufotraffic1.5.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ufotraffic1.5.bas.a26" size="4096" crc="1e87604d" sha1="d08286cd42c5d83635e63eb98148c085025bb652"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ab9106eda5b9b">
+		<description>ufotraffic1.8.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ufotraffic1.8.bas.a26" size="4096" crc="fe30d6d6" sha1="ab9106eda5b9bcab6992c4c62d715cd0d0b29033"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26363cc227de564">
+		<description>Ultimate Indy 500 v0.1 (2007-09-26)(Fort Apocalypse)(NTSC)(PD)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.1 (2007-09-26)(Fort Apocalypse)(NTSC)(PD)(alpha).bin" size="4096" crc="29cd3025" sha1="363cc227de564aab24428627ca54297a26ee6c13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268b0170964de15">
+		<description>Ultimate Indy 500 v0.2 (2007-09-27)(Fort Apocalypse)(NTSC)(PD)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.2 (2007-09-27)(Fort Apocalypse)(NTSC)(PD)(alpha).bin" size="4096" crc="ab3182f1" sha1="8b0170964de15a1227e4f5ba2048e5e07b414b19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267b325c1381d07">
+		<description>Ultimate Indy 500 v0.2 20070928</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.2 20070928.a26" size="4096" crc="97a98134" sha1="7b325c1381d07ae3f5e981f752df3ff11d946516"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d4142c4efea4f">
+		<description>Ultimate Indy 500 v0.3 (2007-09-28)(Fort Apocalypse)(NTSC)(PD)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.3 (2007-09-28)(Fort Apocalypse)(NTSC)(PD)(alpha).bin" size="4096" crc="d8c65f80" sha1="d4142c4efea4f27e505cdd73e267f0e54c6c00f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e987ede72cdcc">
+		<description>Ultimate Indy 500 v0.3a 20071001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.3a 20071001.a26" size="4096" crc="65dbff28" sha1="e987ede72cdcccd8e151d6efc1ba13bef540405f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2678f5fca3e2f39">
+		<description>Ultimate Indy 500 v0.3b 20071002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.3b 20071002.a26" size="4096" crc="15186387" sha1="78f5fca3e2f3948ecc651f6693e1c3ad04bded3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26849ef03b05eeb">
+		<description>Ultimate Indy 500 v0.3b 20071003</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.3b 20071003.a26" size="4096" crc="1b9fc3f8" sha1="849ef03b05eeb25ace2b46f3d1a633220c19ed18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264927d87d65f5d">
+		<description>Ultimate Indy 500 v0.4 (2007-10-29)(Fort Apocalypse)(NTSC)(PD)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.4 (2007-10-29)(Fort Apocalypse)(NTSC)(PD)(alpha).bin" size="4096" crc="1efb53ee" sha1="4927d87d65f5dd289836b901b58d76a10964174b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a9bcf157ecc1">
+		<description>Ultimate Indy 500 v0.5 20071031</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.5 20071031.a26" size="4096" crc="f17a9a70" sha1="4a9bcf157ecc1cdc033f409c07d261906f67d167"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d7323d44ad3c5">
+		<description>Ultimate Indy 500 v0.6 20071101</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.6 20071101.a26" size="4096" crc="65fd86a8" sha1="d7323d44ad3c501f32d6bf5934a9b891710d6105"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262d911cce03af9">
+		<description>Ultimate Indy 500 v0.7 20071101</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.7 20071101.a26" size="4096" crc="1716aef2" sha1="2d911cce03af92372bf0da2131cb75619646aebf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2669786b7655341">
+		<description>Ultimate Indy 500 v0.8 (2007-11-03)(Fort Apocalypse)(NTSC)(PD)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ultimate Indy 500 v0.8 (2007-11-03)(Fort Apocalypse)(NTSC)(PD)(alpha).bin" size="4096" crc="6716c6cf" sha1="69786b7655341b1d9024773c745e7c142ea975fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26288e1e5abc386">
+		<description>ultindy500_0.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ultindy500_0.1.a26" size="4096" crc="de6fea21" sha1="288e1e5abc386638db3ce0893c7fc98fcde0fc04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2683abb69c7f24e">
+		<description>UltraSCSIcide_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="UltraSCSIcide_NTSC.a26" size="4096" crc="6c8eb07a" sha1="83abb69c7f24e989e67257d25c8cd4808028385b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f16a0fa03987a">
+		<description>UltraSCSIcide_PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="UltraSCSIcide_PAL.a26" size="4096" crc="80c09bd8" sha1="f16a0fa03987acf8087e625fdad586e96e43bda2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26563750257cbd5">
+		<description>Under Sea Adventure v2 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Under Sea Adventure v2 (Adventure Hack).a26" size="4096" crc="a586397c" sha1="563750257cbd571a23fd91182d2082120c0605c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26803bcd1c56c12">
+		<description>Underwater Final Combined Test. Music 20071126</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Underwater Final Combined Test. Music 20071126.a26" size="4096" crc="bdcd4c59" sha1="803bcd1c56c12497f46137dfc7d8302411cefdac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26019f141a095ec">
+		<description>Underwater Sounds 20071123</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Underwater Sounds 20071123.a26" size="4096" crc="f6a771e4" sha1="019f141a095ec6d92fdc310f996c9a9d2b77f677"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265e66f6cc3f08b">
+		<description>Unknown Activision1 PAL (Activision Proto) [f]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unknown Activision1 PAL (Activision Proto) [f].a26" size="4096" crc="9e6503c6" sha1="5e66f6cc3f08b97ca76487a207c7bdec986c782d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269bffd6b845900">
+		<description>Unknown Activision2 PAL (Activision Proto) [f]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unknown Activision2 PAL (Activision Proto) [f].a26" size="4096" crc="98f169c0" sha1="9bffd6b845900037d62ec5a96dda73c2728bc643"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265112edc18885b">
+		<description>Unknown Game #2 (1983) (Datatech)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unknown Game #2 (1983) (Datatech).a26" size="4096" crc="95c37983" sha1="5112edc18885b2fbde4adc2111176c87b41f0352"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad9b7a80a59e7">
+		<description>Unknown Title (bin00003 (200206)) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Unknown Title (bin00003 (200206)) (PD).a26" size="8192" crc="e85d7348" sha1="ad9b7a80a59e79e9cdf490f02625a0a246491894"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f50aa38e72bcf">
+		<description>Unknown Title (bin00007 (200102)) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unknown Title (bin00007 (200102)) (PD).a26" size="4096" crc="279c7d6d" sha1="f50aa38e72bcf1ee443a051cb53e5f56059bbeee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26896475b165266">
+		<description>Unknown Title (bin00016 (200110)) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unknown Title (bin00016 (200110)) (PD).a26" size="4096" crc="adbff3dc" sha1="896475b165266957fbd56b72b42c5a2402a3afa5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641cb7060c375c">
+		<description>Unknown Title (xxx00000 (200203)) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unknown Title (xxx00000 (200203)) (PD).a26" size="4096" crc="f0349cbb" sha1="41cb7060c375c53c072ff0c90ebec3aec77b3d05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267cc127158706e">
+		<description>UNKNOWNACTIVISION2_activ_proto</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="UNKNOWNACTIVISION2_activ_proto.a26" size="4096" crc="3f805ade" sha1="7cc127158706e46fa5d71c15537a30484531eb41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c9a6a448d3b1">
+		<description>Unnamed Race 112606</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unnamed Race 112606.a26" size="4096" crc="f1c771a2" sha1="7c9a6a448d3b122161c684fa689398746e458302"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d813bd054f1a5">
+		<description>unnamedrace.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="unnamedrace.bas.a26" size="4096" crc="a14f9fd8" sha1="d813bd054f1a53b7d3a8c476fa281b0b5c57b98e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263784e16707343">
+		<description>Unodance (2023-12)(Mayday)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unodance (2023-12)(Mayday).a26" size="4096" crc="f888ca72" sha1="3784e1670734397d19200c07c0ea4ac650d76460"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659532cd62d8a2">
+		<description>Unodance (2023-12)(Mayday)[sbe]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Unodance (2023-12)(Mayday)[sbe].a26" size="4096" crc="c00c4742" sha1="59532cd62d8a286fedecf8ea39de5fc4c04c5f5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26da3e4e1257c6d">
+		<description>Vader vs Luke (Dodge 'Em Hack) NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke (Dodge 'Em Hack) NTSC.a26" size="4096" crc="4830751a" sha1="da3e4e1257c6db7c41d89a01b93dc3771b4a3f0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa702f387c09c">
+		<description>Vader vs Luke (Dodge 'Em Hack) PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke (Dodge 'Em Hack) PAL.a26" size="4096" crc="6abc1fa7" sha1="aa702f387c09cd5751250413148ce7c12c1322da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2695d31d5a516f8">
+		<description>Vader vs Luke v2 (Dodge 'Em Hack) NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v2 (Dodge 'Em Hack) NTSC.a26" size="4096" crc="af461dee" sha1="95d31d5a516f87653fba47f56a442e5760debaee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d2b6ac1e0f6c1">
+		<description>Vader vs Luke v2 (Dodge 'Em Hack) PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v2 (Dodge 'Em Hack) PAL.a26" size="4096" crc="15a8c8e7" sha1="d2b6ac1e0f6c1d5b55dc9dff8c82c9db703ec8f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266b26fb0129e89">
+		<description>Vader vs Luke v3 (Dodge 'em Hack) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v3 (Dodge 'em Hack) (PAL).a26" size="4096" crc="8d34f865" sha1="6b26fb0129e89fabfbed92f3f3380238609ea1bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260ebe5e1389058">
+		<description>Vader vs Luke v3 (Dodge 'Em Hack) NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v3 (Dodge 'Em Hack) NTSC.a26" size="4096" crc="ca248aa8" sha1="0ebe5e1389058cd225debd184829e35bd505476e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266735c2499f95a">
+		<description>Vader vs Luke v4 (Dodge 'em Hack) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v4 (Dodge 'em Hack) (PAL).a26" size="4096" crc="3b7ee1d0" sha1="6735c2499f95a584eb56519edcf78bc7eaf1103b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626a5975eb1945">
+		<description>Vader vs Luke v4 ND (Dodge 'Em Hack) NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v4 ND (Dodge 'Em Hack) NTSC.a26" size="4096" crc="55df4719" sha1="26a5975eb194530fb2161dd3d1f270989d677aa5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d99bb0cbc485d">
+		<description>Vader vs Luke v5 final (Dodge 'Em Hack) NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v5 final (Dodge 'Em Hack) NTSC.a26" size="4096" crc="08d070a9" sha1="d99bb0cbc485d151fe791adabdf9ad128e916387"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2620a8ea8a38956">
+		<description>Vader vs Luke v5 final (Dodge 'Em Hack) PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v5 final (Dodge 'Em Hack) PAL.a26" size="4096" crc="2a14ddc5" sha1="20a8ea8a3895678026b2f4c3a547d8b1cd3e74d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c87ed7fc301ad">
+		<description>Vader vs Luke v6 (Dodge 'Em Hack) PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v6 (Dodge 'Em Hack) PAL.a26" size="4096" crc="582fc23c" sha1="c87ed7fc301ad60b70532ece885a20da4358ffd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e0e92312ba670">
+		<description>Vader vs Luke v6 (Dodge 'em Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v6 (Dodge 'em Hack).a26" size="4096" crc="aab312d7" sha1="e0e92312ba67002620366f92f876b03ae257279f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661011343e4366">
+		<description>Vader vs Luke v7 (Dodge 'Em Hack) PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v7 (Dodge 'Em Hack) PAL.a26" size="4096" crc="13c06487" sha1="61011343e4366124c9e6dad148295803bbe4f1e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26306cfb08b1182">
+		<description>Vader vs Luke v7 (Dodge 'em Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v7 (Dodge 'em Hack).a26" size="4096" crc="0f08adbf" sha1="306cfb08b11827312cfc5f2361b8c0915ef957f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2691b1ecde5c361">
+		<description>Vader vs Luke v8 (Dodge 'em Hack) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v8 (Dodge 'em Hack) (PAL).a26" size="4096" crc="b081b088" sha1="91b1ecde5c361134682a7b10d3d81d5b25963221"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26301930adc3c30">
+		<description>Vader vs Luke v8 (Dodge 'Em Hack) NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vader vs Luke v8 (Dodge 'Em Hack) NTSC.a26" size="4096" crc="95037ab2" sha1="301930adc3c30558a1dafd53eb28f01ccd2e8263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2619d5aa8ca34e6">
+		<description>Vadermatic_beta_1_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vadermatic_beta_1_by_SnailSoft.a26" size="4096" crc="2882adc5" sha1="19d5aa8ca34e663444277d1ffca4b5c38bd055eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2622ed3b6f24b66">
+		<description>Vadermatic_Holy_Invaders_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vadermatic_Holy_Invaders_by_SnailSoft.a26" size="4096" crc="bd1dbb9b" sha1="22ed3b6f24b669706240387edccce0d3f5745aad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2695781491fee94">
+		<description>Vampire (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vampire (Jumpman Selected Levels) (PD).a26" size="4096" crc="6fbcf976" sha1="95781491fee94bcf886f228f6b1f73796613715a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266476bdd80a499">
+		<description>Vanguard (1982) (Atari - GCC, Dave Payne) (CX2669) [a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Vanguard (1982) (Atari - GCC, Dave Payne) (CX2669) [a].a26" size="8192" crc="505a10cb" sha1="6476bdd80a4995e77485071dd7b0c85141040a66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26425d27685c786">
+		<description>Vanguard (1982) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Vanguard (1982) (Atari) (PAL) [a1][!].a26" size="8192" crc="aa7648f3" sha1="425d27685c78667f0e7500595b6cc2e36149538c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d86e127aa878d">
+		<description>Vanguard Black (Vanguard Hack) (2005) (Scott Dayton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Vanguard Black (Vanguard Hack) (2005) (Scott Dayton).a26" size="8192" crc="98ab4c20" sha1="d86e127aa878d683f3bcef6cbef6b6e68c176dbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26217e64af541df">
+		<description>Vanguard Black Fast (Vanguard Hack) (2005) (Scott Dayton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Vanguard Black Fast (Vanguard Hack) (2005) (Scott Dayton).a26" size="8192" crc="0e441072" sha1="217e64af541dfc29db4944e76df92e025fafca2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2668c820995e09a">
+		<description>Vanguard Fast (Vanguard Hack) (2005) (Scott Dayton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Vanguard Fast (Vanguard Hack) (2005) (Scott Dayton).a26" size="8192" crc="52519973" sha1="68c820995e09ab5794885b19ae800d93748a14b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dce98883e813d">
+		<description>Vault Assault (2001) (Brian Prescott)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vault Assault (2001) (Brian Prescott).a26" size="4096" crc="856a6efb" sha1="dce98883e813d77e03a5de975d4c52bfb34e7f77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2618555aad1adfc">
+		<description>VBLANK Test 20040412 (Christian Bogey)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="VBLANK Test 20040412 (Christian Bogey).a26" size="4096" crc="f665f652" sha1="18555aad1adfc25e341701dd4573bcf44b537a19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2690afa3ea9de16">
+		<description>VCS_BASIC_Compiler_Demo_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="VCS_BASIC_Compiler_Demo_by_SnailSoft.a26" size="4096" crc="dd37b0be" sha1="90afa3ea9de16e2651a7c47ef574dbf2e65105bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f7bfa6959a078">
+		<description>VCS_BASIC_Compiler_Test2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="VCS_BASIC_Compiler_Test2.a26" size="4096" crc="6925aebe" sha1="f7bfa6959a0788bbeb61653de5da25c1f5df0ed2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261bf1aab746556">
+		<description>VECJOUST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="VECJOUST.a26" size="8192" crc="981f61f9" sha1="1bf1aab7465563c4398c53c74d94cc28a816b953"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bf9050e725bf2">
+		<description>Vector Ms</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Vector Ms.a26" size="8192" crc="23f9ecce" sha1="bf9050e725bf23a7e51b822badc94ee48dedf7eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266d0ba0c2f955b">
+		<description>Vector Space Invaders (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vector Space Invaders (Hack).a26" size="4096" crc="2653ee76" sha1="6d0ba0c2f955b58af8fc9a84b42c3ea0dec20f00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2677a41635f3e84">
+		<description>Vector Vaders</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vector Vaders.a26" size="4096" crc="9940c3b3" sha1="77a41635f3e8478c72913089b5e0ff0b74cf0bb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b6f811c705744">
+		<description>Venetian Blinds Demo (Activision) [f1] (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Venetian Blinds Demo (Activision) [f1] (PAL).a26" size="2048" crc="f7fb29dd" sha1="b6f811c705744697e0c34739359e62da0c07c959"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641e070cdcd030">
+		<description>Ventrra Invaders 2002 by Charles Morgan (Megamania Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ventrra Invaders 2002 by Charles Morgan (Megamania Hack).a26" size="4096" crc="a3cbc098" sha1="41e070cdcd030a0b1e512c900451e8ab2a5cd22b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260549c7e69645f">
+		<description>Venture 8k [2005-05-15]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Venture 8k [2005-05-15].a26" size="8192" crc="5acbf736" sha1="0549c7e69645f2e2b82fa78f29234c1741bb7a28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e59dcc18886b4">
+		<description>Venture 8k [2005-05-16]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Venture 8k [2005-05-16].a26" size="8192" crc="8ad8bcf0" sha1="e59dcc18886b43a5684c49a36c0516424113d8fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2617626ae7bfd10">
+		<description>Venture II by Tim Snider (Venture Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Venture II by Tim Snider (Venture Hack).a26" size="4096" crc="ae961885" sha1="17626ae7bfd10bcde14903040baee0923ecf41dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b70f3e3909bb4">
+		<description>Venture Trainer (Venture Hack) (2007) (Kurt Howe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Venture Trainer (Venture Hack) (2007) (Kurt Howe).a26" size="4096" crc="5a78dcd7" sha1="b70f3e3909bb4ef8fafa05ab0aa694ecf9277475"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2677b1f528edb85">
+		<description>Venture_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Venture_NTSC(Supercharger).a26" size="4096" crc="a9da8a85" sha1="77b1f528edb8578a431e922db2deea9c1caf1e31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262e51b75c42044">
+		<description>Venture_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Venture_PAL60(Supercharger).a26" size="4096" crc="8f2a6fe4" sha1="2e51b75c4204408f1c31424f7101c50154c921f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263d021726537a4">
+		<description>Vertical Playfield Demo 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vertical Playfield Demo 1 (PD).a26" size="4096" crc="aefcf384" sha1="3d021726537a4597bca641b76941fb197d643c61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cd3445321b3d9">
+		<description>Vertical Playfield Demo 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vertical Playfield Demo 2 (PD).a26" size="4096" crc="32009f23" sha1="cd3445321b3d927cd8769c6f952b7b90080f45b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26082a7bc7d0fdb">
+		<description>Vertical Ship Demo 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vertical Ship Demo 1 (PD).a26" size="4096" crc="726399d7" sha1="082a7bc7d0fdbf307501cd146e18ed3d03b9ec0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264dba32def0e5e">
+		<description>Vertical Shooter (2007)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vertical Shooter (2007).a26" size="4096" crc="06881818" sha1="4dba32def0e5e36d47cdafd7aac0bc059a160c08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6a5cb1b2d6d1">
+		<description>Vertical Shooter 003 (2007)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vertical Shooter 003 (2007).a26" size="4096" crc="385ece3f" sha1="d6a5cb1b2d6d199d6de4e73c200cf0e7d42c2ba5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2601e153b07114a">
+		<description>Vertical Shooter 004 (2007)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vertical Shooter 004 (2007).a26" size="4096" crc="cdca9b2c" sha1="01e153b07114ad20583801bbcbee70ce1bad0951"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d641abfb95e3">
+		<description>Vertically Scrolling Playfield (02-02-2003) (Aaron Bergstrom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Vertically Scrolling Playfield (02-02-2003) (Aaron Bergstrom).a26" size="4096" crc="0d120b99" sha1="1d641abfb95e3b4b7abaad42a8760c8c9ce993a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26331849a40bb07">
+		<description>Very incomplete Arkanoid demo test 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Very incomplete Arkanoid demo test 1.a26" size="4096" crc="9748f3ac" sha1="331849a40bb071fa8d7b2a7fc388e0758783f1c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263641e8dbb4043">
+		<description>Very incomplete Arkanoid demo test 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Very incomplete Arkanoid demo test 2.a26" size="4096" crc="445958f7" sha1="3641e8dbb4043a8bae894ff4e485f6c7520c8fb5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268962a80695dbc">
+		<description>Very incomplete Arkanoid demo test 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Very incomplete Arkanoid demo test 3.a26" size="4096" crc="b6d6e205" sha1="8962a80695dbc05e4b0503586f63323843c63072"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26782d4609c12af">
+		<description>Video Chess Black (Video Chess Hack) (2005) (Scott Dayton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Video Chess Black (Video Chess Hack) (2005) (Scott Dayton).a26" size="4096" crc="66bc9c40" sha1="782d4609c12af67c55150c27a645004805a28796"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26256eccaf49707">
+		<description>Video Invaders (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Video Invaders (Space Invaders Hack).a26" size="4096" crc="1c852da9" sha1="256eccaf497079fa796ede9ef469c2e355c95e91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b3b5adc147bab">
+		<description>Video Olympics (1978) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Video Olympics (1978) (Atari) [o1].a26" size="4096" crc="b37eec6c" sha1="b3b5adc147bab544168e57968d63e45a41cb4643"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dabaa958f4d40">
+		<description>Video Olympics Black by neotokeo2001 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Video Olympics Black by neotokeo2001 (Hack).a26" size="2048" crc="5a614d4f" sha1="dabaa958f4d40fe11431933d4a7ca4d18ed46aeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cabc8082a35b7">
+		<description>Video Pinbal - Infinite Lives Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Video Pinbal - Infinite Lives Hack.a26" size="4096" crc="3dd86e80" sha1="cabc8082a35b76901f4548c5c09978c9067e16b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a345a5696f1d6">
+		<description>Video Simon (Mark De Smet)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Video Simon (Mark De Smet).a26" size="4096" crc="c3a4bd27" sha1="a345a5696f1d63a879e7bb7e3a74c825e97ef7c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e1eadbe786411">
+		<description>Video Time Machine (Chris Cracknell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Video Time Machine (Chris Cracknell).a26" size="4096" crc="37355a23" sha1="e1eadbe7864110418815d027a07946b2712a3139"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a07c2a34757c9">
+		<description>VideoLife_CommaVid_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="VideoLife_CommaVid_Overdump.a26" size="4096" crc="928f02c5" sha1="a07c2a34757c9fb1a70d84c6709f9452841efecd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2601e835814756b">
+		<description>VideoOlympics-PongSports_1977_Atari_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="VideoOlympics-PongSports_1977_Atari_PAL_Overdump.a26" size="4096" crc="8d11ec0b" sha1="01e835814756b0a342a8375be3a55d773a436239"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a93ac8c66f17">
+		<description>Video_Pinball(Palette_select)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Video_Pinball(Palette_select).a26" size="4096" crc="c778ff46" sha1="5a93ac8c66f171b4e09965a2cc1f865786ff9627"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261783f15f1b4ff">
+		<description>Virtual Dieter 110206</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Virtual Dieter 110206.a26" size="4096" crc="87e102ed" sha1="1783f15f1b4ff0796b931a74712712a74804e679"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a31e4b114518">
+		<description>virtual dieter 8 by Chris Read 2008</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="virtual dieter 8 by Chris Read 2008.a26" size="2048" crc="c6b0ac3b" sha1="6a31e4b11451826e768f26a83a5a51bd47ea9cf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615159b5d3b8d0">
+		<description>Virtual Pet (V007) (after Demo 2) (CRACKERS) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Virtual Pet (V007) (after Demo 2) (CRACKERS) (PD).a26" size="4096" crc="1c81a12e" sha1="15159b5d3b8d07e209c12d48f5d26d6b4aba7ff5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2684c3de27269c7">
+		<description>Virtual Pet - Demo 1 (demo-rolling) (1997-09-26)(Cracknell, Chris 'Crackers')(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Virtual Pet - Demo 1 (demo-rolling) (1997-09-26)(Cracknell, Chris 'Crackers')(NTSC)(PD).bin" size="4096" crc="1763d3e7" sha1="84c3de27269c71007ea68ee05fb4c1cfe09bbc72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2692dcd47405316">
+		<description>Virtual Pet - Demo 2 (demo-rolling) (1997-09-30)(Cracknell, Chris 'Crackers')(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Virtual Pet - Demo 2 (demo-rolling) (1997-09-30)(Cracknell, Chris 'Crackers')(NTSC)(PD).bin" size="4096" crc="017f14fd" sha1="92dcd47405316212b0bf1904a56ac952987a1a25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bfc2902ad025c">
+		<description>virtualdieter2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="virtualdieter2.bas.a26" size="2048" crc="92085822" sha1="bfc2902ad025c3a1b9e32751ac26969fe3fcba90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2631bbaddcd667d">
+		<description>virtualdieter2008.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="virtualdieter2008.bas.a26" size="2048" crc="c4c98189" sha1="31bbaddcd667df06a97e4f20c9af7280300a44d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bef67dafeb87f">
+		<description>virtualdieter4.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="virtualdieter4.bas.a26" size="2048" crc="ebcca844" sha1="bef67dafeb87fe545f7e664978f4a01fb96f574a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b178c11dbaf18">
+		<description>virtualdieter6.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="virtualdieter6.bas.a26" size="2048" crc="92daecbd" sha1="b178c11dbaf188fcf9e134a365506723499386ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f15e25dda931">
+		<description>virtualdieter7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="virtualdieter7.a26" size="2048" crc="2461a122" sha1="1f15e25dda9314d0ff1a029e1ec53105241d5762"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2644faa47eb4170">
+		<description>vong20080328</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080328.a26" size="4096" crc="a678b845" sha1="44faa47eb417096babea1926267a6bf7d934abdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2671aff178c2452">
+		<description>vong20080329</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080329.a26" size="4096" crc="e5eb1711" sha1="71aff178c2452b29721e608c1e1874e66179b47d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26805041615f5dd">
+		<description>vong200803292</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong200803292.a26" size="4096" crc="3e5566c3" sha1="805041615f5dde3719333ca2171fa303a06d9272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a08833bdf3530">
+		<description>vong20080404 new</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080404 new.a26" size="4096" crc="e875b4de" sha1="a08833bdf3530eca6cc5d9e51b81ded0a1cf0970"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ca262e7be443">
+		<description>vong20080404</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080404.a26" size="4096" crc="d5b48497" sha1="2ca262e7be44308afa405becad013f1a8772d25b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fb6022a04c1db">
+		<description>vong20080411</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080411.a26" size="4096" crc="8b8b0776" sha1="fb6022a04c1dbc5e0ef5aea7655f1eaed4706a70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267cd2e0febe2ff">
+		<description>vong20080416</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080416.a26" size="4096" crc="91d2d749" sha1="7cd2e0febe2ffd82169fc67c39390483ce2920b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b8df5fd80e661">
+		<description>vong20080417</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080417.a26" size="4096" crc="6ba75339" sha1="b8df5fd80e6611537c0e50f85764b4212dc95f17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f172784bce144">
+		<description>vong20080613</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080613.a26" size="4096" crc="b57491d0" sha1="f172784bce14421b3c40548ec4411ad4fd43c715"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2629085e5e36dac">
+		<description>vong20080616</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080616.a26" size="4096" crc="d51fbce4" sha1="29085e5e36dacbdb0567fa6533727ca86acaaea4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e595fe8ea6f3b">
+		<description>vong20080617</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080617.a26" size="4096" crc="4d4100b0" sha1="e595fe8ea6f3be226253219776eef7910dae783c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ab62feda51c93">
+		<description>vong20080621</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080621.a26" size="4096" crc="22f67113" sha1="ab62feda51c93b14d7db8ed44a041bc1e579df31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f9b0e346eba1b">
+		<description>vong20080622</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080622.a26" size="4096" crc="f900d31c" sha1="f9b0e346eba1b49a4e47e0ccca767244bf4fd445"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3efc5c28c5bd">
+		<description>vong200806282</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong200806282.a26" size="4096" crc="a0e7e290" sha1="d3efc5c28c5bd2fd5d62516047cdac46da85e878"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de77415da88c6">
+		<description>vong20080629</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080629.a26" size="4096" crc="220db910" sha1="de77415da88c6dc3dac8d2dce89cdb88d030907a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268d0b7b87b27a7">
+		<description>vong20080630</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080630.a26" size="4096" crc="4f2ec05c" sha1="8d0b7b87b27a7e7636b799117c25943f259c6aeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e040522d3d1f7">
+		<description>vong20080702</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080702.a26" size="4096" crc="08a5f1df" sha1="e040522d3d1f72a5a915cd98a7e3423e3a6d049c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f6bd187c4d1d5">
+		<description>vong20080707</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080707.a26" size="4096" crc="3b0f4ae0" sha1="f6bd187c4d1d58fa73564f3f7cb77db8b27d96f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262244e4633b974">
+		<description>vong20080707pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080707pal.a26" size="4096" crc="7d043d80" sha1="2244e4633b974b15400dac85ccf5958957ee4ee5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2645173b321c0a6">
+		<description>vong20080709pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080709pal.a26" size="4096" crc="711459a7" sha1="45173b321c0a683edb197e9e641a83ca912b9166"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26800e50f0a3297">
+		<description>vong20080710</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080710.a26" size="4096" crc="a9f42b90" sha1="800e50f0a329709f6457c1dfd38eed1143d23d85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26759013c8cce5a">
+		<description>vong20080710pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080710pal.a26" size="4096" crc="4f8e575b" sha1="759013c8cce5ad008a042e8a5db11300acd0ea65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2607013d32cc27b">
+		<description>vong20080717</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080717.a26" size="4096" crc="a564c1ba" sha1="07013d32cc27b4e815295300ac342c9285b705cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f504597ecdb0">
+		<description>vong200807184</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong200807184.a26" size="4096" crc="96e0b727" sha1="4f504597ecdb0f5beed166a0f77a78b6aec56796"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26868d25c0e4871">
+		<description>vong200807184pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong200807184pal.a26" size="4096" crc="454b49cb" sha1="868d25c0e4871bd2bba28174a8c919aa095e9c3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e39057ef91e36">
+		<description>vong20080720</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080720.a26" size="4096" crc="802a588a" sha1="e39057ef91e366444c0b28daa49b5216d9cfb2ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e03f2b28980a6">
+		<description>vong20080720pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080720pal.a26" size="4096" crc="cab08332" sha1="e03f2b28980a634a22f2f8a6e52a37cfccc53ef8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c6a4cf34fac11">
+		<description>vong200807222</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong200807222.a26" size="4096" crc="506049f8" sha1="c6a4cf34fac11946b1327516583845bc7995f19d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26733ef74929cf2">
+		<description>vong20080723pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="vong20080723pal.a26" size="4096" crc="1351b331" sha1="733ef74929cf28c3062a2e5be96397961e6dd7ae"/>
 			</dataarea>
 		</part>
 	</software>

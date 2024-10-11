@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 35 -->
+<!-- Number of items in this list = 58 -->
 <softwarelist name="pmd85_cass" description="pmd85_cass loose roms">
 	<software name="pmd74034aabb847a">
 		<description>Arkanoid[04]</description>
@@ -32,6 +32,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pmdb4e6a11954151">
+		<description>CERES-1[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="5965">
+				<rom name="CERES-1[00].pmd" size="5965" crc="81e9c69a" sha1="b4e6a119541514dda952b076742401e8e497fd48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd9a11f1469c028">
+		<description>cobra[05]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="9537">
+				<rom name="cobra[05].PMD" size="9537" crc="737d5eb6" sha1="9a11f1469c028a58166c4a5158bebdf6c05127af"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pmd6163c0462454a">
 		<description>Convert PMD to MATO-1[15]</description>
 		<year>????</year>
@@ -49,6 +69,26 @@
 		<part name="cass1" interface="pmd85_cass">
 			<dataarea name="cass" size="2113">
 				<rom name="copyhelp[08].PMD" size="2113" crc="de1bc5ec" sha1="489a4edc929afae64fae5cef98722e2ac382db45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd7c554c9a509c6">
+		<description>Copyplus[06]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="913">
+				<rom name="Copyplus[06].pmd" size="913" crc="b7724ca2" sha1="7c554c9a509c6e866e12acac2ffd1d4fc3e2c398"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd915332bbeb4d1">
+		<description>Copy[05]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="993">
+				<rom name="Copy[05].pmd" size="993" crc="5ddbf642" sha1="915332bbeb4d19a8f7d74b0abba836e0b1b517a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -132,6 +172,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pmd8d4a68c5142d5">
+		<description>GLUTTON[14]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="12433">
+				<rom name="GLUTTON[14].pmd" size="12433" crc="0c034341" sha1="8d4a68c5142d5c19e4f85e014138a4202b29eaf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd667e4f1ced15d">
+		<description>GREP[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="6369">
+				<rom name="GREP[00].pmd" size="6369" crc="cfe3cd2f" sha1="667e4f1ced15d19a845d664506cf31f3d16a4864"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pmd377bb63abc844">
 		<description>H-tron[00]</description>
 		<year>????</year>
@@ -172,6 +232,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pmd3380ddb341ffd">
+		<description>HORAC[16]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="10562">
+				<rom name="HORAC[16].pmd" size="10562" crc="2ce61e5d" sha1="3380ddb341ffdcf8483d743ff57362d2f6b06bb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmdcb7c3e6f6a20e">
+		<description>INVADERS[17]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="1601">
+				<rom name="INVADERS[17].pmd" size="1601" crc="835bfded" sha1="cb7c3e6f6a20e9b6d4914c839344fcdeb0a92d44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd8d2f1e591222a">
+		<description>INVAZE[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="1601">
+				<rom name="INVAZE[00].pmd" size="1601" crc="bfbbaa74" sha1="8d2f1e591222a12fbf1a338d99e5e0ab2600bc94"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pmdac9bbe793bc6b">
 		<description>Jet Set Willy[08]</description>
 		<year>????</year>
@@ -189,6 +279,46 @@
 		<part name="cass1" interface="pmd85_cass">
 			<dataarea name="cass" size="30787">
 				<rom name="Jet Set Wily[15].pmd" size="30787" crc="995b08b0" sha1="ad727290b74b7ea24cf4796c0640e9d51fa3bf17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmdfddf79edba43f">
+		<description>Karel3D0[17]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="10513">
+				<rom name="Karel3D0[17].pmd" size="10513" crc="591afc08" sha1="fddf79edba43fcef1c9c3a8c97ae42e5bc6528ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmdf709807db746e">
+		<description>Karel3D2[18]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="11569">
+				<rom name="Karel3D2[18].pmd" size="11569" crc="2bdaecdd" sha1="f709807db746e64c6f4c66e0c1968c082cd8549b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd18ae7b204873e">
+		<description>Karel3_2[19]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="11841">
+				<rom name="Karel3_2[19].pmd" size="11841" crc="3fc72660" sha1="18ae7b204873e275504b50c0b985640753182b8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd0e69e5aa3f091">
+		<description>KASWORD[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="6205">
+				<rom name="KASWORD[00].pmd" size="6205" crc="761a2c7a" sha1="0e69e5aa3f0918ff09e12a7ac3d67bea92ec93c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -242,6 +372,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pmdd7fbd1994cf79">
+		<description>MRS2sam[27]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="8000">
+				<rom name="MRS2sam[27].pmd" size="8000" crc="2ec8e69e" sha1="d7fbd1994cf79ce69f73035a3b86e04eae4ed990"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd0f7e62adf5b30">
+		<description>MRSnove[29]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="8241">
+				<rom name="MRSnove[29].pmd" size="8241" crc="56d9380f" sha1="0f7e62adf5b3064a04d8c281ebcf841caaa4d2ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd2e454b5fa0c98">
+		<description>MRS[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="7978">
+				<rom name="MRS[00].pmd" size="7978" crc="89a361ec" sha1="2e454b5fa0c981803f890a0fdddfa24e778b3c40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmdf50d0fae10bc4">
+		<description>mrs_[28]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="8241">
+				<rom name="mrs_[28].pmd" size="8241" crc="e002140d" sha1="f50d0fae10bc4ea3d6ddf405b5399357d67ac334"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmda28726c2f6ec4">
+		<description>MTRON-1[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="37291">
+				<rom name="MTRON-1[00].pmd" size="37291" crc="e84f5e51" sha1="a28726c2f6ec4ffa6cc2986b8ac420f9d4c77f85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd58d5323669ebc">
+		<description>MTRON-2[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="37501">
+				<rom name="MTRON-2[00].pmd" size="37501" crc="198a9332" sha1="58d5323669ebcc187d236f6435fa0884a3be444c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd6665c7914d4eb">
+		<description>MTRON-3[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="38881">
+				<rom name="MTRON-3[00].pmd" size="38881" crc="c945d6c1" sha1="6665c7914d4eb66aeea2e6a61996c4ae3fe5e309"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pmdf0f67bfa9856b">
 		<description>Penetrator[28]</description>
 		<year>????</year>
@@ -262,6 +462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pmda6472490da396">
+		<description>ROBOTIK[11]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="28739">
+				<rom name="ROBOTIK[11].pmd" size="28739" crc="cdb769bd" sha1="a6472490da396c0d2ad19b0496a4da214213dbd3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pmdfeb2b23cb3102">
 		<description>Saboter[33]</description>
 		<year>????</year>
@@ -269,6 +479,16 @@
 		<part name="cass1" interface="pmd85_cass">
 			<dataarea name="cass" size="30540">
 				<rom name="Saboter[33].tap" size="30540" crc="3765bf91" sha1="feb2b23cb3102a3d1c29881c7b671cd4d52db44b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd93722adf8f73c">
+		<description>Tankova bitka[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="3729">
+				<rom name="Tankova bitka[00].pmd" size="3729" crc="efdb77e6" sha1="93722adf8f73c32bdb139903993e582dc7b972c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -349,6 +569,16 @@
 		<part name="cass1" interface="pmd85_cass">
 			<dataarea name="cass" size="8257">
 				<rom name="Vegrap3[41].tap" size="8257" crc="fd015a7f" sha1="d84b1aebd444108fb39421f4382fb914369c8498"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmd94666743ec573">
+		<description>Willy Walker[00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="pmd85_cass">
+			<dataarea name="cass" size="20793">
+				<rom name="Willy Walker[00].pmd" size="20793" crc="db6030c4" sha1="94666743ec5736f00e3f62ef2d4b027aeb5cc0f2"/>
 			</dataarea>
 		</part>
 	</software>
