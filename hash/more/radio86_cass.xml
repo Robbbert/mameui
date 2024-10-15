@@ -1,7 +1,87 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 14 -->
+<!-- Number of items in this list = 22 -->
 <softwarelist name="radio86_cass" description="radio86_cass loose roms">
+	<software name="r8613dbd0dc9b5a8">
+		<description>Assembler Mikron (19xx)(-)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="4105">
+				<rom name="Assembler Mikron (19xx)(-)[a].rkr" size="4105" crc="660b1760" sha1="13dbd0dc9b5a83ac38ea94c56123592da2648ccc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r867680bf2ee66e0">
+		<description>Barmen v1.5 (1988)(ALG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="4105">
+				<rom name="Barmen v1.5 (1988)(ALG).rkr" size="4105" crc="b339097e" sha1="7680bf2ee66e0bdad1b874857141b0d18c7a49d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86ac2af6eb9f6a4">
+		<description>bulnik</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="1289">
+				<rom name="bulnik.rkr" size="1289" crc="80b1cf00" sha1="ac2af6eb9f6a4c90c2018557ef6fbb031d78dde4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r861fa72d5473eb9">
+		<description>Chervyak (1987)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="2169">
+				<rom name="Chervyak (1987)(-).rkr" size="2169" crc="509b92fb" sha1="1fa72d5473eb9710b12b608465b4b5e1acd07f98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86d24dd1395e36d">
+		<description>Chervyak (1987)(-)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="2313">
+				<rom name="Chervyak (1987)(-)[a].rkr" size="2313" crc="40279c79" sha1="d24dd1395e36d12bba704c8e5e7fd05c1a98d633"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86a93d35f52717b">
+		<description>Dump Editor (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="649">
+				<rom name="Dump Editor (19xx)(-).rkr" size="649" crc="530f4607" sha1="a93d35f52717b3df9015de5625ea7b17569f7791"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r8670b66b5c1716e">
+		<description>kakvas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="197">
+				<rom name="kakvas.rkr" size="197" crc="cb167861" sha1="70b66b5c1716e55bf476be04b1c1ff169c452973"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r868e7323c8dabde">
+		<description>Ksoniks (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="1919">
+				<rom name="Ksoniks (19xx)(-).rkr" size="1919" crc="24a47696" sha1="8e7323c8dabde6e14b719e2647695ec0506fe448"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="r86976aaf6be5a7e">
 		<description>Pacman-87 (19xx)(-)</description>
 		<year>????</year>

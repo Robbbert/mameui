@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 221 -->
+<!-- Number of items in this list = 236 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -1169,6 +1169,156 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="R+R (1995) (NIN-NIKI).HDM" size="1261568" crc="5d6c7356" sha1="68ae5ec54fa1b863e46f691758494a8dd4fe6cc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6879e8c58525864">
+		<description>Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 1 of 6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 1 of 6).dim" size="1261824" crc="0672fd8a" sha1="79e8c58525864fcad76a1121c980fe6ee1efb46d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68210c9b5b6fd60">
+		<description>Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 2 of 6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 2 of 6).dim" size="1261824" crc="56f18384" sha1="210c9b5b6fd6020b92f42dc3c055ac6cf7c34adf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68a895cab9d73f3">
+		<description>Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 3 of 6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 3 of 6).dim" size="1261824" crc="d4d50188" sha1="a895cab9d73f31495c9bd259abb6d56fe86c563c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6832318f17675a3">
+		<description>Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 4 of 6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 4 of 6).dim" size="1261824" crc="2ba07271" sha1="32318f17675a3ffd58c4b3b9af0547337a5dd18e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f5eb88ada5079">
+		<description>Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 5 of 6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 5 of 6).dim" size="1261824" crc="4cd24886" sha1="f5eb88ada5079902d61289035b758a96dac8d94e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684a75624d28a2d">
+		<description>Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 6 of 6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Rance 2 Hangyaku No Shoujotachi (1990)(Alice Soft)(Disk 6 of 6).dim" size="1261824" crc="9e758605" sha1="4a75624d28a2d0d7a302c14dc183fbfc087d2640"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c2e6a6e7b66d1">
+		<description>Red Arms v6 (1990)(Nishi Yoshit.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Red Arms v6 (1990)(Nishi Yoshit.).hdm" size="1261568" crc="fbac2d96" sha1="c2e6a6e7b66d12082a684968db56c36705f21f8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686ae86433e4cd8">
+		<description>Reitore Anime 09 (Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Reitore Anime 09 (Disk A).hdm" size="1261568" crc="e2a7d315" sha1="6ae86433e4cd8534eb91b13361fa514b05612496"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68a761364ef9ed4">
+		<description>Reitore Anime 09 (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Reitore Anime 09 (Disk B).hdm" size="1261568" crc="edc66dc7" sha1="a761364ef9ed4957aabb0184db34ef7b2d541301"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68902e066e37fcc">
+		<description>Reitore Anime 10 (Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Reitore Anime 10 (Disk A).hdm" size="1261568" crc="4de6c4ac" sha1="902e066e37fccf28bc50cc318493efc6b7eb4f75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68635b7d97c26fd">
+		<description>Reitore Anime 10 (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Reitore Anime 10 (Disk B).hdm" size="1261568" crc="60dfc7be" sha1="635b7d97c26fde3530e4f446c1e78f6d2fb16dac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ac6459bb60c1c">
+		<description>Rogue Alliance (1989)(Starcr.)(Boot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Rogue Alliance (1989)(Starcr.)(Boot).hdm" size="1261568" crc="949ede19" sha1="ac6459bb60c1c7879d500cb3a3584a5e29449281"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b1565b0122033">
+		<description>Rogue Alliance (1989)(Starcr.)(Player)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1086448">
+				<rom name="Rogue Alliance (1989)(Starcr.)(Player).d88" size="1086448" crc="48eb8a39" sha1="b1565b0122033d940defc2dbc74ee33cc355cdaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68324278e36c3c3">
+		<description>Rogue Alliance (1989)(Starcr.)(Progr.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1086448">
+				<rom name="Rogue Alliance (1989)(Starcr.)(Progr.).d88" size="1086448" crc="9a8e7410" sha1="324278e36c3c3a5d9358c4aa65c2776bdb2bf0a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x687835583d0c89a">
+		<description>Rumic Harrier</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Rumic Harrier.XDF" size="1261568" crc="d1a66866" sha1="7835583d0c89a329aaa4a564127f87b9c0a1bb9c"/>
 			</dataarea>
 		</part>
 	</software>

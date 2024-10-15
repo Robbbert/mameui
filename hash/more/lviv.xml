@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 134 -->
+<!-- Number of items in this list = 149 -->
 <softwarelist name="lviv" description="lviv loose roms">
 	<software name="lvi4db823995f61f">
 		<description>AEROCOB1[bload]</description>
@@ -1249,6 +1249,156 @@
 		<part name="cass" interface="lviv_cass">
 			<dataarea name="cass" size="965">
 				<rom name="P_PONG[bload uses LV0].LVT" size="965" crc="d086bafa" sha1="1ef1c67f0965ef9ccf18424c339c3092c31a9a68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi39730ca400894">
+		<description>RAIDERS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="16407">
+				<rom name="RAIDERS.LV0" size="16407" crc="2fff05b0" sha1="39730ca400894e9ac8a1212fe5509a4d79a6b586"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi51c599a1ad946">
+		<description>RAIDERS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="2327">
+				<rom name="RAIDERS.LV1" size="2327" crc="925cb0f8" sha1="51c599a1ad946bb47dc3481c83c9707712285eda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi1863721582b88">
+		<description>RAIDERS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="11287">
+				<rom name="RAIDERS.LV2" size="11287" crc="0d0f3d5b" sha1="1863721582b8832aa948ec26ef5c261f30b77db2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvif181de0b59155">
+		<description>RAIDERS[bload uses LV0,1,2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="1815">
+				<rom name="RAIDERS[bload uses LV0,1,2].LVT" size="1815" crc="074980f8" sha1="f181de0b59155783f8f43eb2d719ef39a2a74565"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvif050be33d6665">
+		<description>RALLY[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5747">
+				<rom name="RALLY[cload].LVT" size="5747" crc="cd016d65" sha1="f050be33d66654e423f1d2c5efd1e719de7a9c7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi17d01081ea51a">
+		<description>ROCKET[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5016">
+				<rom name="ROCKET[cload].LVT" size="5016" crc="a7deb525" sha1="17d01081ea51ab3d6e88efd6180d90956a555f21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvic092b19533b33">
+		<description>ROCKMAN[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="36631">
+				<rom name="ROCKMAN[bload].LVT" size="36631" crc="bc13069a" sha1="c092b19533b335ee54ec777b8a61b31a2b9aba11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi3ef9797234d60">
+		<description>ROTORS[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="12310">
+				<rom name="ROTORS[bload].LVT" size="12310" crc="097f8f3b" sha1="3ef9797234d605d7442e500ac18c58edc742ad65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi87e4299ef8427">
+		<description>SEYMOUR[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="36631">
+				<rom name="SEYMOUR[bload].LVT" size="36631" crc="b8fb566c" sha1="87e4299ef84277c107d76dbe3e5878be0a45acbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi4cd31cf00ca9a">
+		<description>SLALOM[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="12054">
+				<rom name="SLALOM[bload].LVT" size="12054" crc="cf69b8e7" sha1="4cd31cf00ca9ae027d1d4ea67293df21114f0f19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi3c7fd7e8e7d2e">
+		<description>SLALOM[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="4508">
+				<rom name="SLALOM[cload].LVT" size="4508" crc="0aad9f72" sha1="3c7fd7e8e7d2eb22742987da04d3dbee6a8bd0af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi97576c6cce0c6">
+		<description>SLOVA[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="6430">
+				<rom name="SLOVA[cload].LVT" size="6430" crc="fe06ddc6" sha1="97576c6cce0c68a4fa894d0e49d1fde6f74d9a7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvia58c80aed035c">
+		<description>Space Shock[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="14271">
+				<rom name="Space Shock[bload].LVT" size="14271" crc="91aa2721" sha1="a58c80aed035cf057231a82c8d50a9dcc9c1abef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lviec22a2138f0cb">
+		<description>SQUASH[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5183">
+				<rom name="SQUASH[bload].LVT" size="5183" crc="e9886000" sha1="ec22a2138f0cb6e6314c4d358bd5b3e50868b0f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvic6fe8f93e765e">
+		<description>Star-Fighter[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="20807">
+				<rom name="Star-Fighter[bload].LVT" size="20807" crc="719f4483" sha1="c6fe8f93e765e79f167320ec462cf7d7c29c873e"/>
 			</dataarea>
 		</part>
 	</software>

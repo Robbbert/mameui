@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5 -->
+<!-- Number of items in this list = 10 -->
 <softwarelist name="tvc_cass" description="tvc_cass loose roms">
 	<software name="tvca6c21abcc22a9">
 		<description>Astro Blaster (1991)(Quicksilva - STV)[h]</description>
@@ -39,6 +39,56 @@
 		<part name="cass1" interface="tvc_cass">
 			<dataarea name="cass" size="11698">
 				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[buffered].cas" size="11698" crc="7b692544" sha1="d5c4b18e6842054a63f8225c1a3498059e2c2757"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc9adf424a2630d">
+		<description>fbdoc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="16607">
+				<rom name="fbdoc.cas" size="16607" crc="d4b02730" sha1="9adf424a2630d769aad61f0d30ddaff99acc9b57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc2902ace4a0193">
+		<description>fbleiras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="5580">
+				<rom name="fbleiras.cas" size="5580" crc="d2e51519" sha1="2902ace4a01938add4f4828093cd3939c7ec9754"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc25312330c6129">
+		<description>felderit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="3752">
+				<rom name="felderit.cas" size="3752" crc="1917fb13" sha1="25312330c612929faa6c340163cde489b2f4feae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc1aa218969303f">
+		<description>firebow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="16607">
+				<rom name="firebow.cas" size="16607" crc="9a637e4a" sha1="1aa218969303f0f9bc62e53a90a5cf28069ec4a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvcc0d30b2b5fa59">
+		<description>heartdoc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="8866">
+				<rom name="heartdoc.cas" size="8866" crc="a7feb99e" sha1="c0d30b2b5fa59201b07bb6c542f47340da9b638a"/>
 			</dataarea>
 		</part>
 	</software>

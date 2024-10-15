@@ -777,5 +777,5 @@ void i8275_device::recompute_parameters()
 	m_scanline = y;
 	m_scanline_timer->adjust(screen().time_until_pos((y + 1) % vert_pix_total, 0), 0, screen().scan_period());
 
-	if (double_spaced_rows()) fatalerror("Double spaced rows not supported!");
+	//if (double_spaced_rows()) fatalerror("Double spaced rows not supported!");
 }

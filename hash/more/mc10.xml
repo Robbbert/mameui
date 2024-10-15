@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 455 -->
+<!-- Number of items in this list = 487 -->
 <softwarelist name="mc10" description="mc10 loose roms">
 	<software name="mc1e0150629f92ff">
 		<description>(demo)dypp[cloadm]</description>
@@ -69,6 +69,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="10231">
 				<rom name="(demo)Globe[cloadm].c10" size="10231" crc="d0a1fd56" sha1="0ea1f23854a794b76fb44e18c4fc9a955480bbd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1af46f79880382">
+		<description>(demo)JMAN[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12714">
+				<rom name="(demo)JMAN[cloadm].c10" size="12714" crc="605771e9" sha1="af46f79880382eed3a77e721ccb498c4d657775e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -552,6 +562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc12ca230a35cfb1">
+		<description>Adventure in Jerusalem</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10319">
+				<rom name="Adventure in Jerusalem.C10" size="10319" crc="3bf56e37" sha1="2ca230a35cfb1f9841a47e4efe784bfee21a6468"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc122b42d2373b17">
 		<description>AERIEN</description>
 		<year>????</year>
@@ -569,6 +589,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="9689">
 				<rom name="AEROJAM.C10" size="9689" crc="872d3f34" sha1="2cfb114c42f23c10c2f06311b0ed7faf9c05ab29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1718a8b811566a">
+		<description>Afrika Korps</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="13775">
+				<rom name="Afrika Korps.C10" size="13775" crc="f1be9f97" sha1="718a8b811566a2104ff94cf8fa240aa894409940"/>
 			</dataarea>
 		</part>
 	</software>
@@ -952,6 +982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1c2731d6aea417">
+		<description>Attack of the Killer Tomatoes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4232">
+				<rom name="Attack of the Killer Tomatoes.C10" size="4232" crc="ff34ee2b" sha1="c2731d6aea41785b61d6503316c102dc4bea036c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1e88165a8500f8">
 		<description>AUSFLAG</description>
 		<year>????</year>
@@ -999,6 +1039,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="8629">
 				<rom name="BACCARAT.C10" size="8629" crc="c1059394" sha1="2879ce6893667a360c219d2802f5608a4cd38ba3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1a0f993e0db21e">
+		<description>Back from the Klondike</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4186">
+				<rom name="Back from the Klondike.C10" size="4186" crc="83bc71ab" sha1="a0f993e0db21ecc72c6257eea335e744dbcb70f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3222,6 +3272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1eaf11b0b3a0ae">
+		<description>Galaxy Jailbreak[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7350">
+				<rom name="Galaxy Jailbreak[cloadm].c10" size="7350" crc="c823acb8" sha1="eaf11b0b3a0aeb439741237cf2f8329f43082301"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc164d394c794fa1">
 		<description>GALAXY</description>
 		<year>????</year>
@@ -3829,6 +3889,266 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="3415">
 				<rom name="ISOLA.C10" size="3415" crc="5dbf3016" sha1="ebe7c1e8f8042bda767b32842f26f37dac79c94e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc163f6828f57e16">
+		<description>JACK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="829">
+				<rom name="JACK.C10" size="829" crc="c0450729" sha1="63f6828f57e1679c02ee585c703e5ec78b58c305"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1ccadd446b8b45">
+		<description>Jayzinc's Sound Routine Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3805">
+				<rom name="Jayzinc's Sound Routine Demo.C10" size="3805" crc="1461352a" sha1="ccadd446b8b45dab7d56154d1d20c242530bb80b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e6c89b6d3a6c6">
+		<description>JET</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5913">
+				<rom name="JET.C10" size="5913" crc="41c267e1" sha1="e6c89b6d3a6c6c33bdb8a7e5e31da61c094335c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc108287249e5c45">
+		<description>JETPAC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2353">
+				<rom name="JETPAC.C10" size="2353" crc="5460b3cd" sha1="08287249e5c450f7a2df6b5d2a6cfe5abab9e0fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14867db5103403">
+		<description>JEWELER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4452">
+				<rom name="JEWELER.C10" size="4452" crc="1ce78e07" sha1="4867db510340345a9193d26358f3ef9da27fd688"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1618672856c0a4">
+		<description>JEWELER2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4452">
+				<rom name="JEWELER2.C10" size="4452" crc="e1aa7fba" sha1="618672856c0a41b0d81aa34f807feec33a830432"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1b891cd8e045f1">
+		<description>JIMCHKRS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2604">
+				<rom name="JIMCHKRS.C10" size="2604" crc="19af3408" sha1="b891cd8e045f1fd51f0aaaa48ae92cb74cc6747a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11b29560fc42dc">
+		<description>JIMVAD4K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1524">
+				<rom name="JIMVAD4K.C10" size="1524" crc="26a1ea68" sha1="1b29560fc42dc1b060ff849ec506e0f05f184f39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc156f76dc38e5b4">
+		<description>JIMVADER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1520">
+				<rom name="JIMVADER.C10" size="1520" crc="6b6e767e" sha1="56f76dc38e5b4e9cecf1054c2a8f90d681761bde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e818da3835bfa">
+		<description>Journey to the Centre of the Earth Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15741">
+				<rom name="Journey to the Centre of the Earth Adventure.C10" size="15741" crc="a018bfe7" sha1="e818da3835bfaf29e929e98e69032412fb940d32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d25b208f1a164">
+		<description>JOUST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2654">
+				<rom name="JOUST.C10" size="2654" crc="537d6d04" sha1="d25b208f1a1649abfe31087bca05ba5060345052"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14022490c8d06d">
+		<description>Jungle Raoul in Quest for the Sapphire Ampersand</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10509">
+				<rom name="Jungle Raoul in Quest for the Sapphire Ampersand.C10" size="10509" crc="096023e2" sha1="4022490c8d06da33b1cc625407428462e32efb17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1949ef741fb41e">
+		<description>Kaleido (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="894">
+				<rom name="Kaleido (19xx)(-).c10" size="894" crc="7ce66d5b" sha1="949ef741fb41e0fde4d4ef17199625ada5731792"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc134bee11e2b763">
+		<description>KALEIDO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="564">
+				<rom name="KALEIDO.C10" size="564" crc="66c78d99" sha1="34bee11e2b76384d57d0494c8062b27d2344868b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f1f38d932bbe1">
+		<description>kaleidoa</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="829">
+				<rom name="kaleidoa.c10" size="829" crc="8485fff8" sha1="f1f38d932bbe1286ffcf49b8ad271a27ba91e1b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f04c9685d2123">
+		<description>Kaleidoscope[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1173">
+				<rom name="Kaleidoscope[cloadm].c10" size="1173" crc="c616cf5a" sha1="f04c9685d2123ffcef5849c47ddf97dbb27934a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1fa37c349b8548">
+		<description>Kaliedoscope</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2836">
+				<rom name="Kaliedoscope.C10" size="2836" crc="90dd7093" sha1="fa37c349b854814aa17b6b37905feaec27a56022"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc147a01c6d35669">
+		<description>KEYPOLL1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="503">
+				<rom name="KEYPOLL1.C10" size="503" crc="dec89afd" sha1="47a01c6d356695cd11b9f60fa624884d0fd840d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1c840f96d0175e">
+		<description>Killer Satellite</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3341">
+				<rom name="Killer Satellite.C10" size="3341" crc="da50f8e0" sha1="c840f96d0175e6836dd21ef1452f6a9b12a0c4fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d556100e0e7b5">
+		<description>Kinder Morgan</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15733">
+				<rom name="Kinder Morgan.C10" size="15733" crc="f5d60125" sha1="d556100e0e7b588ad52b849f2e6732d58534139f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1ef7eba907ac60">
+		<description>Kings and Castles</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="17963">
+				<rom name="Kings and Castles.C10" size="17963" crc="3cd4a8ef" sha1="ef7eba907ac60eba1b9e59ab17b107db6f90da43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1885baee525590">
+		<description>Klondike Solitaire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10175">
+				<rom name="Klondike Solitaire.C10" size="10175" crc="853b931c" sha1="885baee525590700905654cef4ee4d07af701fa1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16fc6ba0881247">
+		<description>Knights and Demons</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6610">
+				<rom name="Knights and Demons.C10" size="6610" crc="6a927ca3" sha1="6fc6ba08812471a09e4a2518020a5833ee09e1cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc17e996fd066d99">
+		<description>KONG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1679">
+				<rom name="KONG.C10" size="1679" crc="1fbd7a37" sha1="7e996fd066d99108e002c642c29c449ec41a5b68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1eec3624273d93">
+		<description>Kuiper Belt Objects</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3557">
+				<rom name="Kuiper Belt Objects.C10" size="3557" crc="e0e78f8c" sha1="eec3624273d930c9542968b80fc03e27865eb08e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d1d85c8b106d7">
+		<description>KURSK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8730">
+				<rom name="KURSK.C10" size="8730" crc="7e58e926" sha1="d1d85c8b106d70d51fd7dbd2351817a226ab6440"/>
 			</dataarea>
 		</part>
 	</software>

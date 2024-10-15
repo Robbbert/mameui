@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4371 -->
+<!-- Number of items in this list = 4407 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -40809,6 +40809,366 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Track&Field(PAL60).bin" size="16384" crc="eb31b373" sha1="9faa26d3f0599bc1cbe968dda3bd8b56b0454a57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26870dc372602a1">
+		<description>tsm_ballblazer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="tsm_ballblazer.bin" size="4096" crc="afbfc29a" sha1="870dc372602a1768c26a41ef91b40425471f2bf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262deebe07c7c8c">
+		<description>tsm_boulder_dash</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="tsm_boulder_dash.a26" size="4096" crc="c932d605" sha1="2deebe07c7c8ccd09ae7298d02003ee40659a482"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267b0063837035b">
+		<description>Tubetest3 (Tempest Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Tubetest3 (Tempest Hack).a26" size="8192" crc="49d56582" sha1="7b0063837035bf1ddaa045c67bd5f5c709dc7bf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d7bbf7a373c24">
+		<description>Tumble Temple v2.5 (2019-02-02)(bluswimmer)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tumble Temple v2.5 (2019-02-02)(bluswimmer)(NTSC).bin" size="4096" crc="43717104" sha1="d7bbf7a373c24f0a1432ef493c6c770c50bc4400"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ee4b717f9f855">
+		<description>Tumble Temple v2.5 (2019-02-02)(bluswimmer)(PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tumble Temple v2.5 (2019-02-02)(bluswimmer)(PAL60).bin" size="4096" crc="8d51e5a9" sha1="ee4b717f9f85510b4b63d80663ec207aa9147a6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a8f51f7464604">
+		<description>Tumble Temple v2.5 (2019-02-02)(bluswimmer)(SECAM60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tumble Temple v2.5 (2019-02-02)(bluswimmer)(SECAM60).bin" size="4096" crc="df5e41b1" sha1="a8f51f7464604eb52d3e695802c965f6a83f06c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d76bf62f3be0">
+		<description>Tunes20060925</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tunes20060925.a26" size="4096" crc="98c54dec" sha1="1d76bf62f3be05a1e0ed144bc43c044d1c3793df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c55797e07f73">
+		<description>Tunnel Demo (27-03-2003) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tunnel Demo (27-03-2003) (CT).a26" size="4096" crc="3c447436" sha1="9c55797e07f73b20494bdf2f316cd85b6d7005c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ccf422636180f">
+		<description>Tunnel Demo (28-03-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tunnel Demo (28-03-2003) (AD).a26" size="4096" crc="2abb201e" sha1="ccf422636180f24becaa8af0cc391f95e599a330"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260f6552a0afe40">
+		<description>Tunnel Demo (Cycling Colours 2) (29-03-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tunnel Demo (Cycling Colours 2) (29-03-2003) (AD).a26" size="4096" crc="483b015d" sha1="0f6552a0afe40cc1c448313569db8c9a8cda6d21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2693dc46ab7b22b">
+		<description>Tunnel Demo (Cycling Colours) (29-03-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tunnel Demo (Cycling Colours) (29-03-2003) (AD).a26" size="4096" crc="a84f7e0c" sha1="93dc46ab7b22bbd53a3dc1cb6cd46a5e8d6d65ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268dad50a3918c7">
+		<description>Tunnel Demo (Red Spiral) (30-03-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tunnel Demo (Red Spiral) (30-03-2003) (AD).a26" size="4096" crc="1aa68d35" sha1="8dad50a3918c7462811c2def42f289cd123822af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264df103678f9c8">
+		<description>Tunnel Demo 2 (27-03-2003) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tunnel Demo 2 (27-03-2003) (CT).a26" size="4096" crc="7d0e54c5" sha1="4df103678f9c88b017e64f1e14e741fc6e15340c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad34267b1cfe8">
+		<description>Tunnel v0.01 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Tunnel v0.01 (PD).a26" size="2048" crc="051b7816" sha1="ad34267b1cfe81fbad6a6f17893ecfeb10d602cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267de162c59b607">
+		<description>Tunnel v0.03 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Tunnel v0.03 (PD).a26" size="2048" crc="5d3953a5" sha1="7de162c59b607898d53ab5d0b08e1570d8ecc594"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260921fab66ce4b">
+		<description>Turbo (Coleco) Prototype Fake v0.1 (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Turbo (Coleco) Prototype Fake v0.1 (TJ).a26" size="2048" crc="d2a0efd1" sha1="0921fab66ce4b712701326ce105e1a84ac47b497"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d5aef146ad3d6">
+		<description>Turbo Demo 8k v0.07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Turbo Demo 8k v0.07.a26" size="8192" crc="7e470045" sha1="d5aef146ad3d60eee1124b79557f69e0ed1c7d4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2656523eb27826a">
+		<description>Turbo Demo 8k v0.08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Turbo Demo 8k v0.08.a26" size="8192" crc="0fcf903b" sha1="56523eb27826a14b9da32def49c014130a20b0be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261e1d024ba8c27">
+		<description>Turbo Demo 8k v0.09</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Turbo Demo 8k v0.09.a26" size="8192" crc="3d8a9e25" sha1="1e1d024ba8c27fb8f263af314729702caf8bba0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26856ed3638bd07">
+		<description>Turbo Demo 8k v0.13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Turbo Demo 8k v0.13.a26" size="8192" crc="479869db" sha1="856ed3638bd07bc11bb48499b22137d9c10da9cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26af02d6ed8dd75">
+		<description>Turbo Demo 8k v0.16 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Turbo Demo 8k v0.16 (Atarius Maximus).a26" size="16384" crc="1baac618" sha1="af02d6ed8dd75eeaec8cd9e75483683e473a4305"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268d40ba4ef68d9">
+		<description>Turbo Demo 8k v0.17 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Turbo Demo 8k v0.17 (Atarius Maximus).a26" size="16384" crc="949f05b5" sha1="8d40ba4ef68d979b9fbadb943bf18a95900f8274"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269014c88ac7884">
+		<description>Turbo Demo 8k v0.24 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Turbo Demo 8k v0.24 (Atarius Maximus).a26" size="16384" crc="45f7c34c" sha1="9014c88ac78841ac3ed987376b0c6f268b03f863"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c76d01ca412fc">
+		<description>Turbo Demo 8k v0.25 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Turbo Demo 8k v0.25 (Atarius Maximus).a26" size="16384" crc="8bb57d1a" sha1="c76d01ca412fc10d1d2143fb538adb07b3fd46a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265c937fdad1810">
+		<description>Turbo Demo 8k v0.28 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Turbo Demo 8k v0.28 (Atarius Maximus).a26" size="16384" crc="3b78978f" sha1="5c937fdad1810ae1b094c884dc1656c9f01531bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b594a9acedd47">
+		<description>Turbo WIP (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Turbo WIP (TJ).a26" size="8192" crc="31ab7985" sha1="b594a9acedd4734070776bf69d0f08abb5c261bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261a6f2f86cb884">
+		<description>Turmoil (1982) (Activision) [p1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Turmoil (1982) (Activision) [p1].a26" size="4096" crc="cf593c4f" sha1="1a6f2f86cb8843bf1754aaa97cb613a48a5f11cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26757bc79fbae06">
+		<description>Turmoil(NTSC_Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Turmoil(NTSC_Supercharger).a26" size="4096" crc="cf6f72ef" sha1="757bc79fbae065b2fa6c9bd816a821fdab4917f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b64028647a0b0">
+		<description>Turmoil(PAL60_Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Turmoil(PAL60_Supercharger).a26" size="4096" crc="e465e8f5" sha1="b64028647a0b0bec5d51dc089a8747f5ddca57d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a4a1fc5aa53a7">
+		<description>Tutankham F4 (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Tutankham F4 (PAL).a26" size="32768" crc="a9cffb48" sha1="a4a1fc5aa53a76faa1b3d1ee64b81438b3f2da35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263a68bd36baddf">
+		<description>Tutankham F4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Tutankham F4.a26" size="32768" crc="f757216e" sha1="3a68bd36baddfd0edf63cbe26710d168550e8239"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261311318764441">
+		<description>Tutankham Trainer (Tutankham Hack) (2007) (Kurt Howe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Tutankham Trainer (Tutankham Hack) (2007) (Kurt Howe).a26" size="8192" crc="27a4885d" sha1="13113187644413c94b395e8278449180f733266a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2656a3ee392c6f9">
+		<description>Tutankham(Infinite_Lives_Flash)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Tutankham(Infinite_Lives_Flash).a26" size="32768" crc="1df22c98" sha1="56a3ee392c6f977c301145bc93c4542a19f04b2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ee76f07788815">
+		<description>Tux in Danger (Berzek Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Tux in Danger (Berzek Hack).a26" size="4096" crc="7bdb3c08" sha1="ee76f077888158bad41abe009bdbc04e0c5e09ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2679a2ed1a4c964">
+		<description>Twird (attendo) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Twird (attendo) (PD).a26" size="4096" crc="ae260445" sha1="79a2ed1a4c964ce523f334fe2ef4c1295abfe0cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e7e953454c0da">
+		<description>twofield.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="twofield.bas.a26" size="32768" crc="ff86d793" sha1="e7e953454c0dad9130163698fecfb5e3ecb077dc"/>
 			</dataarea>
 		</part>
 	</software>
