@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 236 -->
+<!-- Number of items in this list = 253 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -1149,6 +1149,176 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Mad Stalker - Full Metal Forth (2 of 2) (Disk B).2HD" size="1261568" crc="7ecd33f7" sha1="b44b58f0236ef9bc10d0fe3af1f52d9a7305b6b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ee81ea706e1c6">
+		<description>Oedo Hanjouki (1989)(Panther)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Oedo Hanjouki (1989)(Panther)(1).hdm" size="1261568" crc="621ced9b" sha1="ee81ea706e1c6c06da41c8a31aa622df28c6c5f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6804687d9966be6">
+		<description>Oedo Hanjouki (1989)(Panther)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Oedo Hanjouki (1989)(Panther)(2).hdm" size="1261568" crc="e8a02a06" sha1="04687d9966be6bbe77e42b5adc3a685770ede0a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6843f36b505e012">
+		<description>Oedo Hanjouki (1989)(Panther)(3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Oedo Hanjouki (1989)(Panther)(3).hdm" size="1261568" crc="267ba513" sha1="43f36b505e012f7df4ae411eb3f012852cb30d68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b4f1443c3d22b">
+		<description>Otaku Harrier (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Otaku Harrier (19xx)(-).2HD" size="1261568" crc="fc3fa0a7" sha1="b4f1443c3d22ba11ef0b7c0625c78e757d2d0b71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684c957262ed71a">
+		<description>Otoko Dama (1999)(Mitsuky)[music][hdm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Otoko Dama (1999)(Mitsuky)[music][hdm].hdm" size="1261568" crc="cf79b934" sha1="4c957262ed71a91c019e326e25723cece775b415"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6853c41ce3ed703">
+		<description>Overdriver (D1)[new dump - music req XM6G]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Overdriver (D1)[new dump - music req XM6G].xdf" size="1261568" crc="fe42c07a" sha1="53c41ce3ed703a9ac0f594e7088c0d6561631cbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68a5ab562dd0cea">
+		<description>Overdriver (D2)[new dump - music req XM6G]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Overdriver (D2)[new dump - music req XM6G].xdf" size="1261568" crc="c031abd0" sha1="a5ab562dd0ceade78b2177481645d98e8c44ef15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684f0ca23afa2b4">
+		<description>Personal Workstation X68000 Color Image Tutankamen Demo (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Personal Workstation X68000 Color Image Tutankamen Demo (Disk 1).hdm" size="1261568" crc="7fe54ef0" sha1="4f0ca23afa2b4b9c205a380181f125cac572da76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684bc553b00c948">
+		<description>Personal Workstation X68000 Color Image Tutankamen Demo (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Personal Workstation X68000 Color Image Tutankamen Demo (Disk 2).hdm" size="1261568" crc="07c24137" sha1="4bc553b00c9480c7ed4f3e472dc8053573a7994a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c6e78274231f1">
+		<description>pretty doll (1991)(system house oh)(disk 1 of 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="pretty doll (1991)(system house oh)(disk 1 of 3).dim" size="1261824" crc="65d34713" sha1="c6e78274231f19225632a1e6657eee8cd4120542"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682d08d95804530">
+		<description>pretty doll (1991)(system house oh)(disk 2 of 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="pretty doll (1991)(system house oh)(disk 2 of 3).dim" size="1261824" crc="0624a794" sha1="2d08d95804530874798aeafc0698353fd78a388f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68124fe85889282">
+		<description>pretty doll (1991)(system house oh)(disk 3 of 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="pretty doll (1991)(system house oh)(disk 3 of 3).dim" size="1261824" crc="f53d16f2" sha1="124fe85889282d5a663b6fde9bd332e930eae9ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6821e25fe2eabc8">
+		<description>Pretty Harrier</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Pretty Harrier.XDF" size="1261568" crc="df8a513b" sha1="21e25fe2eabc869a2c2d70e97cc19c4dd03df89e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6889d7036bcc5d0">
+		<description>Prism 68K (Sample disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Prism 68K (Sample disk).hdm" size="1261568" crc="439fb682" sha1="89d7036bcc5d0dcbf4c77229839aa385b925ed92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6859f07c8d971f5">
+		<description>Prism 68K (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Prism 68K (System disk).hdm" size="1261568" crc="e710641b" sha1="59f07c8d971f560f89bf26ee5c5d8c340fce53be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x685534f5095c22d">
+		<description>Project Moon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Project Moon.XDF" size="1261568" crc="aa3f2883" sha1="5534f5095c22d9478b86d4cfa855ae9368245b57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c0b134359272c">
+		<description>Push Bon!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Push Bon!.hdm" size="1261568" crc="fa66a537" sha1="c0b134359272c94528d13e01090854e9e090078d"/>
 			</dataarea>
 		</part>
 	</software>

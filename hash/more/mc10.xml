@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 487 -->
+<!-- Number of items in this list = 510 -->
 <softwarelist name="mc10" description="mc10 loose roms">
 	<software name="mc1e0150629f92ff">
 		<description>(demo)dypp[cloadm]</description>
@@ -1462,6 +1462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc18a56aa5afa801">
+		<description>Breakout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2148">
+				<rom name="Breakout.C10" size="2148" crc="11c5cd60" sha1="8a56aa5afa8016d5f78a5f2547dabed673fd19ea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1df391f03f6e1f">
 		<description>breakout</description>
 		<year>????</year>
@@ -2639,6 +2649,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="2919">
 				<rom name="DOTS.C10" size="2919" crc="7b8757c6" sha1="3a91b83d318366ed5815e8289a7df6bf3bcc3977"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14ab94ae7addf0">
+		<description>Dr Livingston in search of</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="16604">
+				<rom name="Dr Livingston in search of.C10" size="16604" crc="d9345d59" sha1="4ab94ae7addf01c9c212e47fccc2b8297c9527da"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3982,6 +4002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1596f553e3afbb">
+		<description>John Conway's Life</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2096">
+				<rom name="John Conway's Life.C10" size="2096" crc="0351f838" sha1="596f553e3afbb1439736f4070fbba39efb3c3bbd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1e818da3835bfa">
 		<description>Journey to the Centre of the Earth Adventure</description>
 		<year>????</year>
@@ -4152,6 +4182,196 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc127ff9f1f92bf8">
+		<description>Labyrinth</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8164">
+				<rom name="Labyrinth.C10" size="8164" crc="0e017c03" sha1="27ff9f1f92bf8b919aa8ff7bc1ce92259d43a9d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc154f44fde6eb8e">
+		<description>Lander (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1190">
+				<rom name="Lander (19xx)(-).c10" size="1190" crc="e557ff52" sha1="54f44fde6eb8ebbb861bc99788cf36d26e7dad60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1da6c2ca0e2b24">
+		<description>Lander (19xx)(James)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1190">
+				<rom name="Lander (19xx)(James).c10" size="1190" crc="8aab62bd" sha1="da6c2ca0e2b24c28c0562e56e0107657467d0ffe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d808d4f250924">
+		<description>lander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="625540">
+				<rom name="lander.wav" size="625540" crc="c06f05de" sha1="d808d4f2509246f5367b37775e2b7fa9123aa4e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc155e09271f34b4">
+		<description>LANDER4K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2199">
+				<rom name="LANDER4K.C10" size="2199" crc="29683639" sha1="55e09271f34b40c2f08b32eda027b203de9c1f36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc192c838055bfef">
+		<description>Lawn Mower Simulator</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3776">
+				<rom name="Lawn Mower Simulator.C10" size="3776" crc="096fdd80" sha1="92c838055bfef71be637dfdd426890a8bc3ecf6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1868c37b853a88">
+		<description>Lemonade Stand</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11255">
+				<rom name="Lemonade Stand.C10" size="11255" crc="0665f9c8" sha1="868c37b853a88b700730f4c350fb2443e622c9a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1c160e283126bc">
+		<description>LETTERD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4168">
+				<rom name="LETTERD.C10" size="4168" crc="8a4e151b" sha1="c160e283126bcb532a983693735d0af02a2df1e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1503d97540ead3">
+		<description>LETTERD_4N</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1151536">
+				<rom name="LETTERD_4N.WAV" size="1151536" crc="c634ee8b" sha1="503d97540ead330049373a6256f78b33ed36b347"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f5ee3433f6b57">
+		<description>Lighthouse Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11476">
+				<rom name="Lighthouse Adventure.C10" size="11476" crc="2528facf" sha1="f5ee3433f6b570169ae458367fb1b67195d5d918"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc15d3497780a751">
+		<description>Limerick</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5080">
+				<rom name="Limerick.C10" size="5080" crc="5b1443a5" sha1="5d3497780a751742c7c6c70539ec3bf74966aecc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc18720666a8ba2c">
+		<description>Lissajous</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2642">
+				<rom name="Lissajous.C10" size="2642" crc="506169c8" sha1="8720666a8ba2c2a5f13d757ee23946fdc69e1b9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1be8bf2558d2b4">
+		<description>Lost Dutchmans Gold</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="14446">
+				<rom name="Lost Dutchmans Gold.C10" size="14446" crc="5df25e9b" sha1="be8bf2558d2b4b4133209a30f86635348816dcdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc15c3087373a65b">
+		<description>Lost World Pinball[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12478">
+				<rom name="Lost World Pinball[cloadm].k7" size="12478" crc="abb85b14" sha1="5c3087373a65b86e11433ab7b5fbb078a4a0036d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc10d0b5b8ee71f3">
+		<description>LRI Editor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2277">
+				<rom name="LRI Editor.C10" size="2277" crc="413f41fc" sha1="0d0b5b8ee71f34f5d2f274d24efd968d9b8bba47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc170f1b594b33ba">
+		<description>Lumpies of Lotis IV</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9396">
+				<rom name="Lumpies of Lotis IV.C10" size="9396" crc="68e39135" sha1="70f1b594b33baab36408b4e0b285e6a377ad675e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1399cd9318e163">
+		<description>Lunar Lander Rescue</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3397">
+				<rom name="Lunar Lander Rescue.C10" size="3397" crc="19c4b267" sha1="399cd9318e163814ceb8a6cf9b7dce1a8e026174"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16fe2ff432ce1a">
+		<description>Lunar Lander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1953">
+				<rom name="Lunar Lander.C10" size="1953" crc="eb42047f" sha1="6fe2ff432ce1ae307e8c22c3e1719e1803786b31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1fff767edba9b2">
+		<description>Lunar Landing Program</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6106">
+				<rom name="Lunar Landing Program.C10" size="6106" crc="b5a819ef" sha1="fff767edba9b2bbe6db73ce203b6c23f496ec8a5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1b78039a3283d4">
 		<description>Madam Fifi's Whore House Adventure</description>
 		<year>????</year>
@@ -4169,6 +4389,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="2011">
 				<rom name="MC Flappy Bird.C10" size="2011" crc="197d4d34" sha1="21584e6a7cb2cea85c624de228749561643ea947"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1bf455f5017709">
+		<description>MC-Load Runner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12084">
+				<rom name="MC-Load Runner.C10" size="12084" crc="49b79721" sha1="bf455f5017709c60127d77df11559166c79f7ad3"/>
 			</dataarea>
 		</part>
 	</software>
