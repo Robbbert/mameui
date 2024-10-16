@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="primo_quik" description="primo_quik loose roms">
+	<software name="prif6bee15ecb4cc">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="primo_quik">
+			<dataarea name="quik" size="10436">
+				<rom name="Deepspace.pp" size="10436" crc="323d8630" sha1="f6bee15ecb4ccd67465a082978b7d615b7a3e7f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri9712500c6c1e0">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="primo_quik">
+			<dataarea name="quik" size="14054">
+				<rom name="Elite Planet Browser.pp" size="14054" crc="eb0bd900" sha1="9712500c6c1e06aa387b6c5e578207d1672d31f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pric23ce4d71959d">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="primo_quik">
+			<dataarea name="quik" size="8603">
+				<rom name="H-tron.pp" size="8603" crc="d31d4a54" sha1="c23ce4d71959d51d84dcedb2c7e6a5ee66c25fd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="priadeb0ee18181f">
+		<description>Mastermind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="primo_quik">
+			<dataarea name="quik" size="9412">
+				<rom name="Mastermind.pp" size="9412" crc="91caf535" sha1="adeb0ee18181f180c447e1f64c4854072bdca3a2"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

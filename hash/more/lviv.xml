@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 149 -->
+<!-- Number of items in this list = 178 -->
 <softwarelist name="lviv" description="lviv loose roms">
 	<software name="lvi4db823995f61f">
 		<description>AEROCOB1[bload]</description>
@@ -1302,6 +1302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lvie30cb701d4239">
+		<description>RAND[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="856">
+				<rom name="RAND[bload].LVT" size="856" crc="9d44b4ae" sha1="e30cb701d423983e4d75ad86718d47bcef1e13cd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lvi17d01081ea51a">
 		<description>ROCKET[cload]</description>
 		<year>????</year>
@@ -1329,6 +1339,16 @@
 		<part name="cass" interface="lviv_cass">
 			<dataarea name="cass" size="12310">
 				<rom name="ROTORS[bload].LVT" size="12310" crc="097f8f3b" sha1="3ef9797234d605d7442e500ac18c58edc742ad65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi8d10f078290de">
+		<description>SCREEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="12745">
+				<rom name="SCREEN.LVT" size="12745" crc="ae9861f6" sha1="8d10f078290de204417ad98ee11084ae190b32bc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1399,6 +1419,276 @@
 		<part name="cass" interface="lviv_cass">
 			<dataarea name="cass" size="20807">
 				<rom name="Star-Fighter[bload].LVT" size="20807" crc="719f4483" sha1="c6fe8f93e765e79f167320ec462cf7d7c29c873e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvib45fd14fe8595">
+		<description>STARWARS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="2071">
+				<rom name="STARWARS.LV0" size="2071" crc="24770cfc" sha1="b45fd14fe85953743a1f12af0303cdfe03041602"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvifa448d7a5a983">
+		<description>STARWARS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="16406">
+				<rom name="STARWARS.LV1" size="16406" crc="5c8eb7f7" sha1="fa448d7a5a9833c8b10bb22479d1ebb3b98f12aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvibf0a116ad0eee">
+		<description>STARWARS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="73">
+				<rom name="STARWARS.LV2" size="73" crc="de150202" sha1="bf0a116ad0eeef8020272ab9bc9941460cafaeac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi77fbe83850e1c">
+		<description>STARWARS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="3847">
+				<rom name="STARWARS.LV3" size="3847" crc="56df83ab" sha1="77fbe83850e1c2e9aa2a0a3c7d056ae8c60083b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi50d562ee5010d">
+		<description>STARWARS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="799">
+				<rom name="STARWARS.LV4" size="799" crc="8d7912b9" sha1="50d562ee5010d698e09fbeeb7ac1d5bd727bede3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi8d7a65253dc0c">
+		<description>STARWARS[cload uses LV0,1,2,3,4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="4393">
+				<rom name="STARWARS[cload uses LV0,1,2,3,4].LVT" size="4393" crc="33e17aa3" sha1="8d7a65253dc0c6ab9eac7e431cbf8c0859e48ddc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi41c09648288a1">
+		<description>STEP[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="4375">
+				<rom name="STEP[bload].LVT" size="4375" crc="1f166e0a" sha1="41c09648288a1e710403e151685f87155b640213"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi586e368be2221">
+		<description>STORM[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="16615">
+				<rom name="STORM[bload].LVT" size="16615" crc="fbdde09a" sha1="586e368be2221eecfe20374900ee38e5a162b78a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi5ee452ad905a9">
+		<description>SU1990[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="11929">
+				<rom name="SU1990[cload].LVT" size="11929" crc="2c55f8eb" sha1="5ee452ad905a98c30a63705ec15376ac2d070019"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi0ac2c6f3c6320">
+		<description>SUNDUK[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="10067">
+				<rom name="SUNDUK[cload].LVT" size="10067" crc="54818020" sha1="0ac2c6f3c6320e9a9a030250fa1c5330cbf90efb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi55fbe5dc2e628">
+		<description>SUND_I[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="1988">
+				<rom name="SUND_I[cload].LVT" size="1988" crc="69c30fdb" sha1="55fbe5dc2e62865c3e58f843f7eee0236fc61f39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi6a284f3d69161">
+		<description>SYSCH[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5242">
+				<rom name="SYSCH[cload].LVT" size="5242" crc="bd0209a4" sha1="6a284f3d69161192bdf6ae7d2f004856cbdf9465"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi9e31af513fb8f">
+		<description>TAIPEI[bload uses XBASIC,RAND,SCREEN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="19994">
+				<rom name="TAIPEI[bload uses XBASIC,RAND,SCREEN].LVT" size="19994" crc="4749404e" sha1="9e31af513fb8fb9f66633a3819636acd5b6f2542"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvieff6635698fa2">
+		<description>TARABEG[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="3270">
+				<rom name="TARABEG[cload].LVT" size="3270" crc="87026445" sha1="eff6635698fa273cfce517c702622c5da3dd5528"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi664f0e431b034">
+		<description>TARAK[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="3190">
+				<rom name="TARAK[cload].LVT" size="3190" crc="ed264484" sha1="664f0e431b034b28c1580247372a8d44a5a23b23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi9af3d438cbd82">
+		<description>TETR2[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="3511">
+				<rom name="TETR2[bload].LVT" size="3511" crc="3843a6ef" sha1="9af3d438cbd829595f92fdb61f3731229a8444b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi9cf44528f7a1c">
+		<description>TETRIS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="7348">
+				<rom name="TETRIS.LVT" size="7348" crc="dc997eb8" sha1="9cf44528f7a1c403678d3c60331f07d5436399c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi2475c16bea2fe">
+		<description>TETRIS2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="4619">
+				<rom name="TETRIS2.LVT" size="4619" crc="6e962b74" sha1="2475c16bea2feef3c3f5c397b39b22ce102f3795"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi06967362216a5">
+		<description>TIGRY[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="7761">
+				<rom name="TIGRY[bload].LVT" size="7761" crc="211f8ffe" sha1="06967362216a568239a6e98a4f62172705a3cbe4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvifaa9b689aa78a">
+		<description>TIR[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="7871">
+				<rom name="TIR[cload].LVT" size="7871" crc="6aeecb29" sha1="faa9b689aa78a5a93522c55b9c7bc07c2b145a1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi0625172945b9f">
+		<description>TI_XI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="7575">
+				<rom name="TI_XI.LV0" size="7575" crc="3dd334f6" sha1="0625172945b9f74a0e8241a533723dc0c35159e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi2bf4473f00401">
+		<description>TI_XI[cload uses LV0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="4245">
+				<rom name="TI_XI[cload uses LV0].LVT" size="4245" crc="9f87346b" sha1="2bf4473f00401cc7b0aec3597b483dd3e2401cb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi8598b837e4a56">
+		<description>TRIAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="2070">
+				<rom name="TRIAL.LV0" size="2070" crc="abca2b30" sha1="8598b837e4a56b2b7cca07fa0fabb508ca06675d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvif4360803b468c">
+		<description>TRIAL[cload uses LV0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="5009">
+				<rom name="TRIAL[cload uses LV0].LVT" size="5009" crc="e45ede79" sha1="f4360803b468ce6f9dce038afa849133ba84c731"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvic189689f46526">
+		<description>TUPLAT[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="2517">
+				<rom name="TUPLAT[cload].LVT" size="2517" crc="9753cbbe" sha1="c189689f46526ae15ff6738f4b200da738e5badb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi332a56b84977e">
+		<description>TYSIACHA[cload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="18234">
+				<rom name="TYSIACHA[cload].LVT" size="18234" crc="ddf3fcd6" sha1="332a56b84977e5a8cf1e3ed02c3b0e8f87cbed3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lvi5418c56db2c84">
+		<description>T_OF_D[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="lviv_cass">
+			<dataarea name="cass" size="30231">
+				<rom name="T_OF_D[bload].LVT" size="30231" crc="f6344d41" sha1="5418c56db2c84a09fd64bd77cfd7b5d35d031641"/>
 			</dataarea>
 		</part>
 	</software>
