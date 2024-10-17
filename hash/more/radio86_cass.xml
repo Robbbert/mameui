@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 22 -->
+<!-- Number of items in this list = 27 -->
 <softwarelist name="radio86_cass" description="radio86_cass loose roms">
 	<software name="r8613dbd0dc9b5a8">
 		<description>Assembler Mikron (19xx)(-)[a]</description>
@@ -82,6 +82,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="r86b22130d736627">
+		<description>Lestnica (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="1641">
+				<rom name="Lestnica (19xx)(-).rkr" size="1641" crc="64d1389c" sha1="b22130d736627350799df847d5693aa04c35bfdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86ad4a1a52b0741">
+		<description>morse16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="745">
+				<rom name="morse16.rkr" size="745" crc="b6030b3b" sha1="ad4a1a52b07413c02b71d4cc576e9fa3290f958b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86eeec6f1b50dc5">
+		<description>Muzykalnaya Sistema MC v3.2 (1987)(ALAN)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="4681">
+				<rom name="Muzykalnaya Sistema MC v3.2 (1987)(ALAN)[a2].rkr" size="4681" crc="de7a62ad" sha1="eeec6f1b50dc58400f7d2cdaeb8ac0594696a915"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="r86976aaf6be5a7e">
 		<description>Pacman-87 (19xx)(-)</description>
 		<year>????</year>
@@ -99,6 +129,26 @@
 		<part name="cass" interface="radio86_cass">
 			<dataarea name="cass" size="521">
 				<rom name="Piton (19xx)(-).rkr" size="521" crc="9ac337aa" sha1="a6f637d6019b8e545a77d75b760e1250c86e89f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r864c5d0486b8aab">
+		<description>Pusher v1.0 (1991-05-18)(AYL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="1199">
+				<rom name="Pusher v1.0 (1991-05-18)(AYL).rkr" size="1199" crc="238bb0a2" sha1="4c5d0486b8aab8eccc18d1663804fb876d1e5483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r862533cf39218c8">
+		<description>rdisk7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="4098">
+				<rom name="rdisk7.rkr" size="4098" crc="29bb4f35" sha1="2533cf39218c892fdc2c2024365675b58aad9d3e"/>
 			</dataarea>
 		</part>
 	</software>

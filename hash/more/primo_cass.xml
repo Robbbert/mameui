@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 67 -->
+<!-- Number of items in this list = 90 -->
 <softwarelist name="primo_cass" description="primo_cass loose roms">
 	<software name="priafc59e35b4372">
 		<description>PC-Man</description>
@@ -9,6 +9,236 @@
 		<part name="cass" interface="primo_cass">
 			<dataarea name="cass" size="9147">
 				<rom name="PC-Man.ptp" size="9147" crc="7a51ce63" sha1="afc59e35b43723e82cc5b3dbc9bf745ab2187a8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="prid285e98ffc6f4">
+		<description>R.S.S. loader v 1.2 (1987)(Sandor Repas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="602">
+				<rom name="R.S.S. loader v 1.2 (1987)(Sandor Repas).ptp" size="602" crc="ca483e03" sha1="d285e98ffc6f43438389580b793b27c2303035e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri9d2ceb342481c">
+		<description>R.S.S. loader v 1.2 leiras (1987)(Sandor Repas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="1045">
+				<rom name="R.S.S. loader v 1.2 leiras (1987)(Sandor Repas).ptp" size="1045" crc="444dc14e" sha1="9d2ceb342481c37176629fd35ea6f244fb5e5562"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri9b73f56ba0739">
+		<description>Reaktor (1985)(Robert Miszlai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="8338">
+				<rom name="Reaktor (1985)(Robert Miszlai).ptp" size="8338" crc="4c5e0d6d" sha1="9b73f56ba0739a64249456f8a85465ee09779437"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pria7596a30d287e">
+		<description>Reaktor (1985)(Robert Miszlai)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="8016">
+				<rom name="Reaktor (1985)(Robert Miszlai)[a].ptp" size="8016" crc="c008b4c9" sha1="a7596a30d287ef40e5e98dee5ef103ee3ba1e9c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri3d104fc329ff3">
+		<description>Reaktor (198x)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="6416">
+				<rom name="Reaktor (198x)(-).ptp" size="6416" crc="1697489f" sha1="3d104fc329ff3acbb43026cd43cd8b5c57e45733"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="prica703914d708e">
+		<description>Reflex jatekok (198x)(BG PRIMO Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2459">
+				<rom name="Reflex jatekok (198x)(BG PRIMO Software).ptp" size="2459" crc="38a0401b" sha1="ca703914d708e4dbd09f4e9d2809ab5d51ea6e5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri4116884524411">
+		<description>Reflexjatek (1987)(Gyorgy Kiss)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="1735">
+				<rom name="Reflexjatek (1987)(Gyorgy Kiss).ptp" size="1735" crc="769b9bf4" sha1="411688452441163de29ad03fc3f4fdfd03ddf160"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri9ba03e5bd942b">
+		<description>Renumber (1987)(Vilmos Koszper)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2143">
+				<rom name="Renumber (1987)(Vilmos Koszper).ptp" size="2143" crc="4783e458" sha1="9ba03e5bd942b3b3c246de0a41e7a3af12c3490b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="prib8f1dc284ed22">
+		<description>Renumber (198x)(-)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2179">
+				<rom name="Renumber (198x)(-)[a].ptp" size="2179" crc="bae72c0e" sha1="b8f1dc284ed2221121fcdb792167acc8965c1612"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="prid2cb19cc268c9">
+		<description>Roncsderbi (198x)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="1037">
+				<rom name="Roncsderbi (198x)(-).ptp" size="1037" crc="e4db65f6" sha1="d2cb19cc268c97e9d2d3acd824ba70ad90b45b7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri5d68fbefb27f1">
+		<description>Rotary (198x)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="1215">
+				<rom name="Rotary (198x)(-).ptp" size="1215" crc="eaa5e5d1" sha1="5d68fbefb27f1c9cbf89d274253a8d3ba87a27a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri212f706e916c7">
+		<description>Rulett (1988)(Robert Miszlai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="6874">
+				<rom name="Rulett (1988)(Robert Miszlai).ptp" size="6874" crc="cc4a9f51" sha1="212f706e916c73824a4554a89e600e1af3200e61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri34220f197bf4e">
+		<description>Rulett (198x)(Gyorgy Kormendi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="8020">
+				<rom name="Rulett (198x)(Gyorgy Kormendi).ptp" size="8020" crc="9e13ed1e" sha1="34220f197bf4ee97959b3c7537fd85d1dd644b1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri9f352bac21fc1">
+		<description>Sakktabla (198x)(Gyorgy Fekete)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="1722">
+				<rom name="Sakktabla (198x)(Gyorgy Fekete).ptp" size="1722" crc="70932975" sha1="9f352bac21fc178ab84c17505c80cd1633438cbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri8a2e4512c38ba">
+		<description>Satirozas (1986)(DGT Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="5271">
+				<rom name="Satirozas (1986)(DGT Software).ptp" size="5271" crc="66664aa7" sha1="8a2e4512c38ba6a243ba3d4a8682e28b16b08767"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri7ce25100bd524">
+		<description>Satirozas (1986)(DGT Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="4995">
+				<rom name="Satirozas (1986)(DGT Software)[a].ptp" size="4995" crc="dcf4e3c5" sha1="7ce25100bd52420011244e3fccce7c6388927459"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri66fa027f2c9f4">
+		<description>Scillful es a szkitak (198x)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2740">
+				<rom name="Scillful es a szkitak (198x)(-).ptp" size="2740" crc="574774d6" sha1="66fa027f2c9f40982ab5075f9dd907a47d377b7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri2c400398c6964">
+		<description>Screen nagyito (1987)(Tamas Olah)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2030">
+				<rom name="Screen nagyito (1987)(Tamas Olah).ptp" size="2030" crc="f0d3b6c9" sha1="2c400398c696459c0ad233157d96875f9f6b2d49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri98a7fd249fe95">
+		<description>Si-csel (198x)(BG PRIMO Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2834">
+				<rom name="Si-csel (198x)(BG PRIMO Software).ptp" size="2834" crc="15408ee2" sha1="98a7fd249fe95b2c4a6e53699a1b71ed74c195e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri59b0bb9f3da64">
+		<description>Sicsel (1985)(ERKEL Software House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="1583">
+				<rom name="Sicsel (1985)(ERKEL Software House).ptp" size="1583" crc="662ef4ca" sha1="59b0bb9f3da64e9486f0d0d3874a9408929eded2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri798f877522a81">
+		<description>Sieles (198x)(Karoly Eberli)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="7227">
+				<rom name="Sieles (198x)(Karoly Eberli).ptp" size="7227" crc="aa780c22" sha1="798f877522a81ece5ac9cf49b9a641201ef910c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri95e07fc247cae">
+		<description>Skramble Daymon (1985)(HSFT Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="6993">
+				<rom name="Skramble Daymon (1985)(HSFT Software).ptp" size="6993" crc="baa54141" sha1="95e07fc247cae93e54ff996ac67fca64bac00ac0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri8764d4d8c16bd">
+		<description>Skramble Daymon (1985)(HSFT Software)[Primo B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="6996">
+				<rom name="Skramble Daymon (1985)(HSFT Software)[Primo B].ptp" size="6996" crc="5d3db4a6" sha1="8764d4d8c16bd8b731913275487a1f80ce0a2f15"/>
 			</dataarea>
 		</part>
 	</software>

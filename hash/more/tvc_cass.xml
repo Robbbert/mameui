@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10 -->
+<!-- Number of items in this list = 13 -->
 <softwarelist name="tvc_cass" description="tvc_cass loose roms">
 	<software name="tvca6c21abcc22a9">
 		<description>Astro Blaster (1991)(Quicksilva - STV)[h]</description>
@@ -89,6 +89,36 @@
 		<part name="cass1" interface="tvc_cass">
 			<dataarea name="cass" size="8866">
 				<rom name="heartdoc.cas" size="8866" crc="a7feb99e" sha1="c0d30b2b5fa59201b07bb6c542f47340da9b638a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc6e769115ef353">
+		<description>Kigyos jatek (198x)(-)(hu)[h]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="3911">
+				<rom name="Kigyos jatek (198x)(-)(hu)[h].cas" size="3911" crc="df0a9643" sha1="6e769115ef3531954eec76226e0480f69c53675c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc4fc497659e776">
+		<description>mt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="18057">
+				<rom name="mt.cas" size="18057" crc="b5a8f088" sha1="4fc497659e7765beba0095fed4fcff6924e5c542"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvcbc02d1213146d">
+		<description>nimcode</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="22178">
+				<rom name="nimcode.cas" size="22178" crc="5ae30549" sha1="bc02d1213146de0ff99fb5da9cfcb8aff7b9e74d"/>
 			</dataarea>
 		</part>
 	</software>

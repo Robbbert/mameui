@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 294 -->
+<!-- Number of items in this list = 308 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -1149,6 +1149,146 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Mad Stalker - Full Metal Forth (2 of 2) (Disk B).2HD" size="1261568" crc="7ecd33f7" sha1="b44b58f0236ef9bc10d0fe3af1f52d9a7305b6b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6868ca228f2c8bc">
+		<description>Magic Palette</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Magic Palette.hdm" size="1261568" crc="0ca05713" sha1="68ca228f2c8bc6ebc6ade6a52098a774ed9c4db9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e4e2f2799220f">
+		<description>Moon Fighter (v2.11)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Moon Fighter (v2.11).hdm" size="1261568" crc="bc51a36d" sha1="e4e2f2799220fef0b5db10ad46452754f65eb3b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b06b114f2042f">
+		<description>Mu-1 Super (Data disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Mu-1 Super (Data disk).hdm" size="1261568" crc="42e6b19d" sha1="b06b114f2042ffc1624982cb64667c979dfeb05e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6869edf1fd9f701">
+		<description>Mu-1 Super (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Mu-1 Super (System disk).hdm" size="1261568" crc="e068c1a3" sha1="69edf1fd9f701880cafbd79d0973d6b9d2782151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x685972cdb7b9046">
+		<description>Mugen Senshi Valis II (1989)(Telenet)(Disk 1 of 5)(Disk A)(tr En MIJET v0910011)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Mugen Senshi Valis II (1989)(Telenet)(Disk 1 of 5)(Disk A)(tr En MIJET v0910011).XDF" size="1261568" crc="ef9e5684" sha1="5972cdb7b9046555932fc4f0029ca21911f77dd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d0f3c704c0191">
+		<description>Multi-Window Screen Editor Final</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multi-Window Screen Editor Final.hdm" size="1261568" crc="ffe0303b" sha1="d0f3c704c0191daac779f2de3de36a7459355aed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e432d2178a5b2">
+		<description>Multiword (Bunshou disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (Bunshou disk).hdm" size="1261568" crc="6c53041e" sha1="e432d2178a5b243835cda3fc046f3d6209386e00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f662da6c14dcf">
+		<description>Multiword (Graphic disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (Graphic disk).hdm" size="1261568" crc="3ca7c9f3" sha1="f662da6c14dcf6f3a1f2e8efdc1ae38498980796"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c7871d65f73a0">
+		<description>Multiword (Runtime disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (Runtime disk).hdm" size="1261568" crc="173e392f" sha1="c7871d65f73a0d33228b9e548c28dc541d1b180a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684b428a484d13d">
+		<description>Multiword (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (System disk).hdm" size="1261568" crc="1325ed3d" sha1="4b428a484d13d020e5e5f68734c686ddd44c1f14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f10d2713d2c16">
+		<description>Multiword (Update disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (Update disk).hdm" size="1261568" crc="5d17217b" sha1="f10d2713d2c16ba90cf3147bacee5de549aac119"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68a340d3cebcfcb">
+		<description>Music Box 68K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Music Box 68K.hdm" size="1261568" crc="cdcbf4ea" sha1="a340d3cebcfcbd485a8c95cc1b6d1273829653ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c3ddb3807e342">
+		<description>Music Studio Pro-68K (Data disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Music Studio Pro-68K (Data disk).hdm" size="1261568" crc="41583d5e" sha1="c3ddb3807e3423f579150be0a2cffd065b530ce2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684e25c7c808d11">
+		<description>Music Studio Pro-68K (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Music Studio Pro-68K (System disk).hdm" size="1261568" crc="9b38b337" sha1="4e25c7c808d114bceebfd04e03e6e79bce46dfdb"/>
 			</dataarea>
 		</part>
 	</software>

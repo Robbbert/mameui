@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 656 -->
+<!-- Number of items in this list = 692 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -3979,6 +3979,366 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15872">
 				<rom name="Aquarius (1983)(Bug-Byte Software)[a].tap" size="15872" crc="62966acd" sha1="239bbb5548339657451b66a00f77903cb2a1de68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdde4ccfb33af1">
+		<description>Viaje al Centro de la Tierra (1989)(Topo Soft)(Sp)[cr [Cr California](128K)[Cr California]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="89412">
+				<rom name="Viaje al Centro de la Tierra (1989)(Topo Soft)(Sp)[cr [Cr California](128K)[Cr California].tap" size="89412" crc="a2d10073" sha1="dde4ccfb33af16733eab61c550ec564cd652ef2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a56646ba7603">
+		<description>Victory Road (1989)(Imagine Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47710">
+				<rom name="Victory Road (1989)(Imagine Software Ltd).tap" size="47710" crc="0613c95a" sha1="9a56646ba7603f210863d2b1fe72af473aa8420c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc7a496e874806">
+		<description>Video Card Arcade (1988)(CDS Microsystems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34129">
+				<rom name="Video Card Arcade (1988)(CDS Microsystems).tap" size="34129" crc="11d7cf57" sha1="c7a496e8748069160df1fe9e471485daa2db2a05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs756de4d081fe3">
+		<description>Video Olympics (1986)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44986">
+				<rom name="Video Olympics (1986)(Mastertronic Ltd).tap" size="44986" crc="a33fddb6" sha1="756de4d081fe346b33b00c426146c21ae9dfc5a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsffb7be57e0ca9">
+		<description>Video Poker (1986)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30085">
+				<rom name="Video Poker (1986)(Mastertronic Ltd).tap" size="30085" crc="e67c72e3" sha1="ffb7be57e0ca926d5e6988457a7c28596daa9956"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3672394a38ff5">
+		<description>Video Pool (1985)(Oxford Computer Publishing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25212">
+				<rom name="Video Pool (1985)(Oxford Computer Publishing).tap" size="25212" crc="f58d9f17" sha1="3672394a38ff51a6cd9b2f47876831adfbd3c8ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3f4a56fdb351f">
+		<description>Vier Op Enn Rij (19xx)(-)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7687">
+				<rom name="Vier Op Enn Rij (19xx)(-)(Unk-Lang).tap" size="7687" crc="00a246f3" sha1="3f4a56fdb351f68aac46a17b8da001ee1f9a7bc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66ffae706943b">
+		<description>View To A Kill (1985)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="215322">
+				<rom name="View To A Kill (1985)(Domark).tap" size="215322" crc="2face3c3" sha1="66ffae706943b644efb02ebb2aad9d4afa3424c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb24a00336444a">
+		<description>View To A Kill (1985)(Domark)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="237009">
+				<rom name="View To A Kill (1985)(Domark)[a].tap" size="237009" crc="72d2e80e" sha1="b24a00336444ab8713a6d3abfa58c22d80d982b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs35e4ff18e2fc1">
+		<description>View To A Kill- Part 1 (1985)(Domark Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47668">
+				<rom name="View To A Kill- Part 1 (1985)(Domark Ltd).tap" size="47668" crc="5504164c" sha1="35e4ff18e2fc1c6a4d8acdc6150ee6841f56caae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e984eace044a">
+		<description>View To A Kill- Part 2 (1985)(Domark Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47104">
+				<rom name="View To A Kill- Part 2 (1985)(Domark Ltd).tap" size="47104" crc="6b54a5ca" sha1="9e984eace044ade659dd09b6cb4e1c24cf7761b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs636074b66612b">
+		<description>View To A Kill- Part 3 (1985)(Domark Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48533">
+				<rom name="View To A Kill- Part 3 (1985)(Domark Ltd).tap" size="48533" crc="885498fd" sha1="636074b66612bce6ca50adde1d70417d838d9a95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73c6db5546e08">
+		<description>View To A Kill- Part 4 (1985)(Domark Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47104">
+				<rom name="View To A Kill- Part 4 (1985)(Domark Ltd).tap" size="47104" crc="6cf61b9c" sha1="73c6db5546e08616b33c5f916c9ae8802d243c85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0793116b7bf82">
+		<description>View To A Kill- Part 5 (1985)(Domark Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46686">
+				<rom name="View To A Kill- Part 5 (1985)(Domark Ltd).tap" size="46686" crc="ef239865" sha1="0793116b7bf82ec55cb8ac9f3accd8603865cb8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e42aa69cff2d">
+		<description>Vigilante (1989)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="110650">
+				<rom name="Vigilante (1989)(U.S. Gold).tap" size="110650" crc="372bf21f" sha1="2e42aa69cff2dd47d86b6ae794aec9615aac9131"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2bae077e033c6">
+		<description>Vigilante (1989)(US Gold Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="109688">
+				<rom name="Vigilante (1989)(US Gold Ltd)[a].tap" size="109688" crc="5d270097" sha1="2bae077e033c6ab06d850b1c472cb21127337d72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd3e371bb0f974">
+		<description>Vigilante Patrol (1989)(Grafix Wizards)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41171">
+				<rom name="Vigilante Patrol (1989)(Grafix Wizards).tap" size="41171" crc="66c7670d" sha1="d3e371bb0f974d1a315f209ca308d84d12ba7c43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99b9d4bad14f1">
+		<description>Vikings, The (1989)(Challenge Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48433">
+				<rom name="Vikings, The (1989)(Challenge Software).tap" size="48433" crc="01766bec" sha1="99b9d4bad14f1c9f3f3a1fd3b9a1f6f3ce2b683b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6c3a53200d861">
+		<description>Vikings, The (1989)(Challenge Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48433">
+				<rom name="Vikings, The (1989)(Challenge Software)[a].tap" size="48433" crc="d43f28a0" sha1="6c3a53200d86151d4422ff0e9699311b1a0e8823"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4b8afba48e2c9">
+		<description>Vindicator (1989)(Imagine Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="126996">
+				<rom name="Vindicator (1989)(Imagine Software Ltd)(128K).tap" size="126996" crc="38b2641e" sha1="4b8afba48e2c970c29c4353b54ed488c2e2a63cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46cc43d0c6b5e">
+		<description>Vindicator (1989)(Imagine Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122766">
+				<rom name="Vindicator (1989)(Imagine Software Ltd).tap" size="122766" crc="06d37396" sha1="46cc43d0c6b5ed7d704bb80aae8aee6e45b252ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa2aeb0636514">
+		<description>Vindicator, The (1988)(Imagine Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="127047">
+				<rom name="Vindicator, The (1988)(Imagine Software Ltd).tap" size="127047" crc="8d363757" sha1="aa2aeb0636514252b7763c08fe55d2c58c249843"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs404054d91a949">
+		<description>Vindicators (1989)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65476">
+				<rom name="Vindicators (1989)(Domark).tap" size="65476" crc="c4b6502e" sha1="404054d91a94941ac4284eda6a779566aae7c48e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc38971e9ee26">
+		<description>Violent Universe (1983)(Quest Microsoftware)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8878">
+				<rom name="Violent Universe (1983)(Quest Microsoftware).tap" size="8878" crc="68823a77" sha1="cc38971e9ee26a8d8de8525bb17fd0829ee3c745"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs54710fba5a44a">
+		<description>Viper 3 (1984)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18658">
+				<rom name="Viper 3 (1984)(Mastertronic Ltd).tap" size="18658" crc="47fecc59" sha1="54710fba5a44a5a87d2137a39c05766b4b4f7ecb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc96f5f4219494">
+		<description>Virgil's Purgatory 2.0 - Chapter 1 EN (2023)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45477">
+				<rom name="Virgil's Purgatory 2.0 - Chapter 1 EN (2023)(Amaweks).tap" size="45477" crc="82c3fd88" sha1="c96f5f4219494dfeb1eedad1da1b646a90947391"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1e28dc5ad3e46">
+		<description>Virgil's Purgatory 2.0 - Chapter 2 EN (2023)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46411">
+				<rom name="Virgil's Purgatory 2.0 - Chapter 2 EN (2023)(Amaweks).tap" size="46411" crc="d4121d1c" sha1="1e28dc5ad3e463ca762ccf808ec90cf72daaee47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1e5e7fed24d72">
+		<description>Virgil's Purgatory ZX 128K EN (2021)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45165">
+				<rom name="Virgil's Purgatory ZX 128K EN (2021)(Amaweks).tap" size="45165" crc="acf1905a" sha1="1e5e7fed24d72d0cb27926047b09d24e4a64083f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1b493bb83da8d">
+		<description>Virgil's Purgatory ZX 128K PT (2021)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45165">
+				<rom name="Virgil's Purgatory ZX 128K PT (2021)(Amaweks).tap" size="45165" crc="0d5942d0" sha1="1b493bb83da8d6f20c4a6770987a6d18a09b6e4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff977b73a13c3">
+		<description>Virgin Atlantic Challenge (1986)(Virgin Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39845">
+				<rom name="Virgin Atlantic Challenge (1986)(Virgin Games Ltd).tap" size="39845" crc="13061ad7" sha1="ff977b73a13c315687008b6d7cf60268de60905b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd5c75841f91d6">
+		<description>Virus (1988)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42183">
+				<rom name="Virus (1988)(Firebird Software Ltd).tap" size="42183" crc="7a2c590b" sha1="d5c75841f91d6502ee6352dceca022c767e4e638"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2592acd135753">
+		<description>Vixen - Part 1 (1988)(Martech Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49543">
+				<rom name="Vixen - Part 1 (1988)(Martech Games Ltd).tap" size="49543" crc="e5d1c4a9" sha1="2592acd135753a3e39f0191fa863891f14b9c40e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46ea8d8f3fe01">
+		<description>Vixen - Part 2 (1988)(Martech Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49547">
+				<rom name="Vixen - Part 2 (1988)(Martech Games).tap" size="49547" crc="ba54ec0b" sha1="46ea8d8f3fe0143c6063a5fc2a712fe3c807921a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8802c56bf58d3">
+		<description>Vixen - Part 3 (1989)(Martech Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49547">
+				<rom name="Vixen - Part 3 (1989)(Martech Games).tap" size="49547" crc="1d0845d9" sha1="8802c56bf58d31db3287ec0a4a3ebe8d0d2515c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs828853b977e3e">
+		<description>Vixen Enhanced Version 128K (2024)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42263">
+				<rom name="Vixen Enhanced Version 128K (2024)(Rafal Miazga).tap" size="42263" crc="4d018fae" sha1="828853b977e3e0a2adda9141ed774f7b0d07ddfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ce0d9d5ca966">
+		<description>Viz - The Computer Game (1991)(Virgin Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="167642">
+				<rom name="Viz - The Computer Game (1991)(Virgin Games Ltd).tap" size="167642" crc="005482f2" sha1="3ce0d9d5ca96679bd89876a5b6be948ef2d6f063"/>
 			</dataarea>
 		</part>
 	</software>

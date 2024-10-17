@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 588 -->
+<!-- Number of items in this list = 614 -->
 <softwarelist name="mc10" description="mc10 loose roms">
 	<software name="mc1e0150629f92ff">
 		<description>(demo)dypp[cloadm]</description>
@@ -4722,6 +4722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc17382e6fe5bdb1">
+		<description>MCNYAN (Nyan Cat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2450">
+				<rom name="MCNYAN (Nyan Cat).C10" size="2450" crc="d28683fc" sha1="7382e6fe5bdb140ea8c1d7c2cf19b8dc4de3aec5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc11f5b4f06143a4">
 		<description>MCOS - 6803 Monitor (19xx)(-)[cloadm]</description>
 		<year>????</year>
@@ -5212,6 +5222,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc10aee34a18d0cc">
+		<description>NECMAZE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2448">
+				<rom name="NECMAZE.C10" size="2448" crc="9d72477d" sha1="0aee34a18d0cc27f204e6e202989948e60c3d712"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11adf126a865c7">
+		<description>Neptune's Caverns</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9263">
+				<rom name="Neptune's Caverns.C10" size="9263" crc="369827ef" sha1="1adf126a865c7448e6ec6fa3c8f64d49dbb258b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11d117b8d11c7e">
+		<description>NEWPOKER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8531">
+				<rom name="NEWPOKER.C10" size="8531" crc="231a91b0" sha1="1d117b8d11c7ef9c3d196f94c261194d2249e638"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d55f207e09f7a">
+		<description>Night Blitz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2270">
+				<rom name="Night Blitz.C10" size="2270" crc="43544702" sha1="d55f207e09f7adf4f7b82cbb4d5feb0ee05be3fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc193fc640c54e6d">
+		<description>Night Flight</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12022">
+				<rom name="Night Flight.C10" size="12022" crc="ed203134" sha1="93fc640c54e6d8c2774ed3e1afee6a72e8964c07"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc14cdca1661339f">
 		<description>Night of the Vampire Bunnies</description>
 		<year>????</year>
@@ -5219,6 +5279,186 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="17583">
 				<rom name="Night of the Vampire Bunnies.C10" size="17583" crc="f086cdf5" sha1="4cdca1661339f1bc6fa13bcaab7b73333a266557"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1a95caa7300855">
+		<description>Nightmare Park</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8748">
+				<rom name="Nightmare Park.C10" size="8748" crc="5bc9456d" sha1="a95caa7300855c83244fed27c22eab9408a7435e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16ee97c214f649">
+		<description>NINJA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11437">
+				<rom name="NINJA.C10" size="11437" crc="65cbb004" sha1="6ee97c214f649f93676bb4c2c56fda8223e26e7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc10ed931b5718d0">
+		<description>NOSTROMO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4857">
+				<rom name="NOSTROMO.C10" size="4857" crc="8d45de4d" sha1="0ed931b5718d08e50f895e072ede49de6ec1f9b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc10026efcffd357">
+		<description>NOTETEST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1028">
+				<rom name="NOTETEST.C10" size="1028" crc="021422ae" sha1="0026efcffd357577aaaa91d6d2814e33c3a0f563"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13e141b15b5c37">
+		<description>Nuclear Submarine Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9707">
+				<rom name="Nuclear Submarine Adventure.C10" size="9707" crc="d3c2230a" sha1="3e141b15b5c375789f6c7ff25476ebc1955272a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11607d41cf9c7c">
+		<description>NUKEWAR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8945">
+				<rom name="NUKEWAR.C10" size="8945" crc="c243115e" sha1="1607d41cf9c7c51823644c1b168c3cbc0141af22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13471d612264bf">
+		<description>Nutroid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5904">
+				<rom name="Nutroid.C10" size="5904" crc="3682f012" sha1="3471d612264bfdf3345d2fe5fa4baa6938001fdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f108568292a36">
+		<description>One Room Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="17350">
+				<rom name="One Room Adventure.C10" size="17350" crc="3517f04f" sha1="f108568292a36d11ab25ade6c25c84cb85e2db8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1918c00dc80c14">
+		<description>ONO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8561">
+				<rom name="ONO.C10" size="8561" crc="55edd575" sha1="918c00dc80c14f1aa50a0a26c48bc1ca1bd0291d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1bc7a34114fd44">
+		<description>Orange Trap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1429">
+				<rom name="Orange Trap.C10" size="1429" crc="c2d2d0ea" sha1="bc7a34114fd44ef0185f93b242f41b29de1a8444"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1ab8a0166eff4f">
+		<description>ORBIT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="971">
+				<rom name="ORBIT.C10" size="971" crc="fca0896f" sha1="ab8a0166eff4faceba93414f25512aa6e013a4a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d0df92502c101">
+		<description>Oregon Trail</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15742">
+				<rom name="Oregon Trail.C10" size="15742" crc="ed1118ba" sha1="d0df92502c101c7aa2ed703348afd670b4a01650"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f57d2f18467f1">
+		<description>Orient Express 1923</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="17059">
+				<rom name="Orient Express 1923.C10" size="17059" crc="7261e64b" sha1="f57d2f18467f1fed8e8cda9c5ade48c6af88510c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc134ec12aa23c5a">
+		<description>Otho (v3.6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11051">
+				<rom name="Otho (v3.6).C10" size="11051" crc="aa6ea38e" sha1="34ec12aa23c5a5baa7d8c634a7f90fcbcc1521f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11ecda5910c7dc">
+		<description>OURANOS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5060">
+				<rom name="OURANOS.C10" size="5060" crc="a3d1018a" sha1="1ecda5910c7dcf3be33839ef6e6b8a715caadb24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc131802c5083435">
+		<description>OUTHOUSE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1382">
+				<rom name="OUTHOUSE.C10" size="1382" crc="3b81d525" sha1="31802c5083435bacae02e633248f381484156eac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1ff901636340b4">
+		<description>OVERTAKE (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1214">
+				<rom name="OVERTAKE (2).C10" size="1214" crc="5adfae1b" sha1="ff901636340b4255385e278512a8a2dd972c2be8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc136aee540dfd6e">
+		<description>OVERTAKE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1185">
+				<rom name="OVERTAKE.C10" size="1185" crc="4a833c15" sha1="36aee540dfd6eb860fca840895a2acc92fb5eea2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5359,6 +5599,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="2565">
 				<rom name="Shepherd Dog.C10" size="2565" crc="0fbf3385" sha1="7dface4326430f0f649f49f7b70278b712528529"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc183647465eb037">
+		<description>Shield of Oran</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="13412">
+				<rom name="Shield of Oran.C10" size="13412" crc="655e08f0" sha1="83647465eb0377089f3534d5d9ce73252fd59b79"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5519,6 +5769,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="16839">
 				<rom name="U-boat.C10" size="16839" crc="86b8eb45" sha1="6a8cb35f9b93c638a9050ddae8f6045a0ae7ddea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1a9ce878103f0c">
+		<description>Uchuu Yusousen Nostromo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10425">
+				<rom name="Uchuu Yusousen Nostromo.C10" size="10425" crc="012cdf3d" sha1="a9ce878103f0ca10bca753d6654966c2a8429da1"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 147 -->
+<!-- Number of items in this list = 211 -->
 <softwarelist name="xegs_flop" description="xegs_flop loose roms">
 	<software name="xega737384411f64">
 		<description>Ali Baba and the Forty Thieves</description>
@@ -442,6 +442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="xegc7c3806b9edc2">
+		<description>flop_10b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="flop_10b.atr" size="133136" crc="0606a331" sha1="c7c3806b9edc27c627c310374ab6b65933d66b72"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="xeg1917ff0665766">
 		<description>flop_11a</description>
 		<year>????</year>
@@ -449,6 +459,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="133136">
 				<rom name="flop_11a.atr" size="133136" crc="e203b0e0" sha1="1917ff06657665e1aa583c3c4c2b85299bc1369c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xega935ef5cc096b">
+		<description>flop_11b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="flop_11b.atr" size="133136" crc="49ae77c0" sha1="a935ef5cc096bcf8041e23b809f517515fa09071"/>
 			</dataarea>
 		</part>
 	</software>
@@ -832,6 +852,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="xeg64f55f4db4531">
+		<description>FLOP_31A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_31A.ATR" size="133136" crc="e072c456" sha1="64f55f4db4531c220bbe35dcd03c484d4735f48d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegdeb694f2d6d19">
+		<description>FLOP_31B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_31B.ATR" size="133136" crc="38125bd8" sha1="deb694f2d6d1956e97a4464167b582533c760874"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="xege448059194bd3">
 		<description>FLOP_32A</description>
 		<year>????</year>
@@ -932,6 +972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="xega63dbcc9adb87">
+		<description>FLOP_37A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_37A.ATR" size="133136" crc="df7fcc00" sha1="a63dbcc9adb8721e91708789c6a998a7ae0c65a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="xeg9d8f107ec5eae">
 		<description>FLOP_37B</description>
 		<year>????</year>
@@ -979,6 +1029,596 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="133136">
 				<rom name="FLOP_39B.ATR" size="133136" crc="6df5e395" sha1="b41580e75f11d3c45f4037d307429f33689ff90d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg12a3d744d86c1">
+		<description>FLOP_40A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_40A.ATR" size="133136" crc="8250665f" sha1="12a3d744d86c166b2620fc39cbd30068b169c188"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xega51eb97c5e747">
+		<description>FLOP_40B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_40B.ATR" size="133136" crc="2ac96e17" sha1="a51eb97c5e7477685213cbd4a53030f0f2bb92f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg793f549f83731">
+		<description>FLOP_41A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_41A.ATR" size="133136" crc="e63923f5" sha1="793f549f8373111e70bcddd10a20c89a9257ce2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xega92739f2eed70">
+		<description>FLOP_41B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_41B.ATR" size="133136" crc="2640daaa" sha1="a92739f2eed70960d6811e4482884a457f746e84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg059ddece5408c">
+		<description>FLOP_41C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_41C.ATR" size="133136" crc="a2fc8521" sha1="059ddece5408c2ec9bb182e51cc88026e2113d34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg7cb537460babc">
+		<description>FLOP_41D</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_41D.ATR" size="133136" crc="a594fdd5" sha1="7cb537460babca0a382b326edfec5eafd1211477"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg743925892372e">
+		<description>FLOP_43A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_43A.ATR" size="133136" crc="e1b75c8e" sha1="743925892372e6d9d333439fbfe274661680bd6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg2617fecda5ec3">
+		<description>FLOP_43B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_43B.ATR" size="133136" crc="ceab5003" sha1="2617fecda5ec3363454e4f5cab1711b258a237b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegc7bd058503847">
+		<description>FLOP_44A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_44A.ATR" size="133136" crc="659345df" sha1="c7bd0585038475715c1523ba3f1a8e41184a57f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg3a2916009ee76">
+		<description>FLOP_44B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_44B.ATR" size="133136" crc="e4d424dd" sha1="3a2916009ee76706d704e30414a3c25f0f12cb68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg5fdc1ed6a3245">
+		<description>FLOP_45A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_45A.ATR" size="133136" crc="ba51c04f" sha1="5fdc1ed6a32450af3b3dbf933221a765751dedfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegfbf73c50b9413">
+		<description>FLOP_45B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_45B.ATR" size="133136" crc="b57e9528" sha1="fbf73c50b94132929b374393a9e1918ec73baec4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg2509841976bd9">
+		<description>FLOP_46A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_46A.ATR" size="133136" crc="132f7556" sha1="2509841976bd9ed18fabb68e4c8c90147abcdd6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegd4584767ba2b7">
+		<description>FLOP_46B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_46B.ATR" size="133136" crc="80d2ba3b" sha1="d4584767ba2b7877d6e1133933f63c6c6d294f9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegc3f9f941a7519">
+		<description>FLOP_47A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_47A.ATR" size="133136" crc="693c04ee" sha1="c3f9f941a7519b446bfd24d2ad2e2a81e2c22e23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg038133cc218bf">
+		<description>FLOP_47B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_47B.ATR" size="133136" crc="7905feef" sha1="038133cc218bfc0cff825604a762239e332f8de3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg7bf76068a1b80">
+		<description>FLOP_48A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_48A.ATR" size="133136" crc="4304b1c0" sha1="7bf76068a1b80b7d619d70c0be8f20912607783c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegbfdc8a2c415dd">
+		<description>FLOP_48B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_48B.ATR" size="133136" crc="54ff32d5" sha1="bfdc8a2c415dd8aaad41f196e19540f4268c67eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg7ace87a84e71f">
+		<description>FLOP_49A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_49A.ATR" size="133136" crc="4f1f60d5" sha1="7ace87a84e71fc13601f846684149218d9cc978c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg35e019d2dd9c6">
+		<description>FLOP_49B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_49B.ATR" size="133136" crc="2861a6f1" sha1="35e019d2dd9c67ed79565b737454f1896120a056"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg86804fb993e5e">
+		<description>FLOP_50A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_50A.ATR" size="133136" crc="3f612eb0" sha1="86804fb993e5e70e41bb352913f8a44881417d76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegb492f1c10daf9">
+		<description>FLOP_50B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="183952">
+				<rom name="FLOP_50B.ATR" size="183952" crc="63cc4fac" sha1="b492f1c10daf9c7c2f10424712b8b8e427d9d003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegaa27264423cd0">
+		<description>FLOP_51A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_51A.ATR" size="133136" crc="f49dc8a4" sha1="aa27264423cd0b5a011e8bf1f151952895644389"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg8a32440a88cd7">
+		<description>FLOP_51B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_51B.ATR" size="133136" crc="e5fb05c7" sha1="8a32440a88cd750ffecd94c1ab8742859803c943"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg969d716a6dd7c">
+		<description>FLOP_52A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_52A.ATR" size="133136" crc="716d8e17" sha1="969d716a6dd7c4ceda77dd7d8b9dd26048cac19a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegedccd822121ed">
+		<description>FLOP_52B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="183952">
+				<rom name="FLOP_52B.ATR" size="183952" crc="bffab3d3" sha1="edccd822121ed61987779b488a967f9c81b08c8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg534577229c604">
+		<description>FLOP_53A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_53A.ATR" size="133136" crc="1b5f53fa" sha1="534577229c604e7b953c3715919ed4a0b72aa259"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg39cd0683c5c74">
+		<description>FLOP_53B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_53B.ATR" size="133136" crc="ab423121" sha1="39cd0683c5c7440f853cdebce87337dc75a63d4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg6388696085987">
+		<description>FLOP_54A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_54A.ATR" size="133136" crc="519ccf0c" sha1="63886960859875fad1573ef86d2f081262b7823b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg0c7789ab56146">
+		<description>FLOP_54B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_54B.ATR" size="133136" crc="6f000b70" sha1="0c7789ab56146253acd3cf60be4269e94ca828d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg170f7ad55ec10">
+		<description>FLOP_55A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_55A.ATR" size="133136" crc="6302ca8f" sha1="170f7ad55ec104e90417366b4c5378436402b2aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg329abeac943b0">
+		<description>FLOP_55B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_55B.ATR" size="133136" crc="54e1769f" sha1="329abeac943b093e9d3e125be91a311cf02d9084"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg41b4dad509334">
+		<description>FLOP_56A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_56A.ATR" size="133136" crc="38818ff0" sha1="41b4dad509334d3952cf21d7d6fc6bbe6917dc2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg5db0eb5d8b1c4">
+		<description>FLOP_56B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_56B.ATR" size="133136" crc="2cd3c953" sha1="5db0eb5d8b1c470ed97a0be6b3baca7f593f8758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg141f5a07032df">
+		<description>FLOP_57A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_57A.ATR" size="133136" crc="93f5a3d3" sha1="141f5a07032dfdad9363b382a3b6b228db783347"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg64b991d63d1f3">
+		<description>FLOP_57B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_57B.ATR" size="133136" crc="6aa34815" sha1="64b991d63d1f351a4fb32a38914ceff5dd7c7dfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg5ba177926915a">
+		<description>FLOP_57C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_57C.ATR" size="133136" crc="42b1612c" sha1="5ba177926915ab7f65456d095aff1d0608976afa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg9dacb7188cc31">
+		<description>FLOP_58A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_58A.ATR" size="133136" crc="600c5485" sha1="9dacb7188cc31be6d05fca22a5c5a245ccaf7395"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xege691f01d54648">
+		<description>FLOP_58B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_58B.ATR" size="133136" crc="142dbe8e" sha1="e691f01d5464843f75168f9203720141f3ca6e27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg9c6c7b452b267">
+		<description>FLOP_59A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_59A.ATR" size="133136" crc="c8fa58a7" sha1="9c6c7b452b267d94e8251a8e6a185fd237f04511"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegbb80f0cbbb2d9">
+		<description>FLOP_59B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_59B.ATR" size="133136" crc="0d9eaae6" sha1="bb80f0cbbb2d9955cadea49ab8c8c97dc7e4983d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegc258d5228bdae">
+		<description>FLOP_60A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_60A.ATR" size="133136" crc="3894f77e" sha1="c258d5228bdaeff264d1a8981120b18abc108d7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegd0e2cb9020084">
+		<description>FLOP_60B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_60B.ATR" size="133136" crc="c001ca3f" sha1="d0e2cb9020084cb9396a390f34342d01daa7994d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegb4698e6fbe2a0">
+		<description>FLOP_61A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_61A.ATR" size="133136" crc="27d64e22" sha1="b4698e6fbe2a07b1b48a8c74469d95d881ce1120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg7525fbf54cb47">
+		<description>FLOP_61B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_61B.ATR" size="133136" crc="f9052ffc" sha1="7525fbf54cb475a89f97ab30091225623ffbe34a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg0740066deb879">
+		<description>FLOP_61C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_61C.ATR" size="133136" crc="3d6e756a" sha1="0740066deb8795e407a9ae4239a960050b6643d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegee38aa2498dfc">
+		<description>FLOP_62A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_62A.ATR" size="133136" crc="df7d03ba" sha1="ee38aa2498dfc01dc943437cfbcf6fa9cac0ba9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegc693f6334215a">
+		<description>FLOP_62B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_62B.ATR" size="133136" crc="77a5326c" sha1="c693f6334215a2aa27ab16e598d37b276cfa7f96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg3bfb3d0023ecd">
+		<description>FLOP_63A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_63A.ATR" size="133136" crc="924b4797" sha1="3bfb3d0023ecd3519b25ce06e95f9929f9df2415"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegc971df0a8f6f5">
+		<description>FLOP_63B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_63B.ATR" size="133136" crc="77d5cb6e" sha1="c971df0a8f6f5f264636386b57b71421d583e134"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg886902af52fae">
+		<description>FLOP_63C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="92176">
+				<rom name="FLOP_63C.ATR" size="92176" crc="7ae2da12" sha1="886902af52fae1396229cd6b788a6880a95d4604"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegb8f33141730fe">
+		<description>FLOP_64A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_64A.ATR" size="133136" crc="43f0c96d" sha1="b8f33141730fec8f04af78bff9a0c586addd8153"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg5bbfa2d67673d">
+		<description>FLOP_64B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_64B.ATR" size="133136" crc="6b5691ec" sha1="5bbfa2d67673d1ec0d554c57f44c7350d121df31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegd2884ed80a7f8">
+		<description>FLOP_64C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="92176">
+				<rom name="FLOP_64C.ATR" size="92176" crc="45d7b8c7" sha1="d2884ed80a7f809581ca46b55520a892c9081c29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg02b630eccbd79">
+		<description>FLOP_64D</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_64D.ATR" size="133136" crc="bf92ffa0" sha1="02b630eccbd799ff185d14b01235e8cf74809c89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg9c124f7418c33">
+		<description>FLOP_65A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_65A.ATR" size="133136" crc="d3a056e5" sha1="9c124f7418c33cb7b45ee65513b7ecfb3e90aff2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xeg7439f52531726">
+		<description>FLOP_65B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133136">
+				<rom name="FLOP_65B.ATR" size="133136" crc="eace1a83" sha1="7439f52531726f41ad2f9371288d71e4c774a56d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xegda6dcc3b92e19">
+		<description>FLOP_65C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="183952">
+				<rom name="FLOP_65C.ATR" size="183952" crc="7d539342" sha1="da6dcc3b92e199f6fa34fd2f4251d24d8e9e2d84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="xege8ea3dbe65ade">
+		<description>FLOP_65D</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="92176">
+				<rom name="FLOP_65D.ATR" size="92176" crc="c5c453fb" sha1="e8ea3dbe65ade37f0e2c65f5d373094eb77e2c07"/>
 			</dataarea>
 		</part>
 	</software>
