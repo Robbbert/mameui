@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 27 -->
+<!-- Number of items in this list = 35 -->
 <softwarelist name="radio86_cass" description="radio86_cass loose roms">
 	<software name="r8613dbd0dc9b5a8">
 		<description>Assembler Mikron (19xx)(-)[a]</description>
@@ -149,6 +149,86 @@
 		<part name="cass" interface="radio86_cass">
 			<dataarea name="cass" size="4098">
 				<rom name="rdisk7.rkr" size="4098" crc="29bb4f35" sha1="2533cf39218c892fdc2c2024365675b58aad9d3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86f7d528e11ec61">
+		<description>Sad (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="2778">
+				<rom name="Sad (19xx)(-).rkr" size="2778" crc="f0984432" sha1="f7d528e11ec6111d9ec3d058ef846d5909d2ff85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86b01c32208ec5c">
+		<description>Saratov Best-C Compiler (1989)(Kovalenko D.I.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="18441">
+				<rom name="Saratov Best-C Compiler (1989)(Kovalenko D.I.).rkr" size="18441" crc="e4a5c5bd" sha1="b01c32208ec5cbd08730a0cae0c9c584ff15aaf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86da7a1dd2bb33d">
+		<description>Skachki (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="1289">
+				<rom name="Skachki (19xx)(-).rkr" size="1289" crc="ed1fef2c" sha1="da7a1dd2bb33d0624b0144d4401f5e971c652473"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r863488e0eacc072">
+		<description>SOS (1988)(Sterlikov S.A.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="3306">
+				<rom name="SOS (1988)(Sterlikov S.A.).rkr" size="3306" crc="f3ece512" sha1="3488e0eacc0726cba3c9ac360d1f97c4699c9c58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86913488e0fb8c1">
+		<description>Stakan (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="2314">
+				<rom name="Stakan (19xx)(-).rkr" size="2314" crc="99e5d87e" sha1="913488e0fb8c1179038a78a9412647acf13edbb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r863c547ecf0618f">
+		<description>Stakan v3.1 (1988)(ALG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="1545">
+				<rom name="Stakan v3.1 (1988)(ALG).rkr" size="1545" crc="1a5b17ba" sha1="3c547ecf0618f0705f147c05b1608ca2cd660821"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r86edadf29c9b2c7">
+		<description>Super Piton (1988)(Personal Computers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="16153">
+				<rom name="Super Piton (1988)(Personal Computers).rkr" size="16153" crc="c7aeb727" sha1="edadf29c9b2c75edac50ee0a4f4ea874e7b10a04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="r862c57e5ea6a66c">
+		<description>Tetris (19xx)(-)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="radio86_cass">
+			<dataarea name="cass" size="1641">
+				<rom name="Tetris (19xx)(-)[a].rkr" size="1641" crc="a440d65e" sha1="2c57e5ea6a66cd77712ffee76fc9999929bd524f"/>
 			</dataarea>
 		</part>
 	</software>

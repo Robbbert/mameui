@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 13 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="tvc_cass" description="tvc_cass loose roms">
 	<software name="tvca6c21abcc22a9">
 		<description>Astro Blaster (1991)(Quicksilva - STV)[h]</description>
@@ -119,6 +119,86 @@
 		<part name="cass1" interface="tvc_cass">
 			<dataarea name="cass" size="22178">
 				<rom name="nimcode.cas" size="22178" crc="5ae30549" sha1="bc02d1213146de0ff99fb5da9cfcb8aff7b9e74d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvcd2eb313b696ff">
+		<description>pento</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="10880">
+				<rom name="pento.cas" size="10880" crc="ec7101d9" sha1="d2eb313b696ff17eb555a1b129c0d0645a20650e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc9dfb9c7891705">
+		<description>pentodoc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="1920">
+				<rom name="pentodoc.cas" size="1920" crc="2ac0a8e8" sha1="9dfb9c789170565e21f9ef69078f8ab32988b8b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc358368a73810e">
+		<description>pottomp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="1238">
+				<rom name="pottomp.cas" size="1238" crc="2a30db93" sha1="358368a73810ee475329a5fe15514655179a8517"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc5b204f9fa26a1">
+		<description>raceace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="451">
+				<rom name="raceace.cas" size="451" crc="10d6d192" sha1="5b204f9fa26a185aca33fd231496862638eac6d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc777b086887880">
+		<description>sapper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="6400">
+				<rom name="sapper.cas" size="6400" crc="0df8d625" sha1="777b08688788087080108a702eac78de4eac8b6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvcd6d14802e7859">
+		<description>sp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="9984">
+				<rom name="sp.cas" size="9984" crc="d7b9a5f4" sha1="d6d14802e78599842a9cdd488450b27edecfab73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvcd50405689cb28">
+		<description>torpe ismerteto</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="4993">
+				<rom name="torpe ismerteto.cas" size="4993" crc="fcca796c" sha1="d50405689cb288402d2d0c44f7306b156fa337bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tvc4630d92533a2a">
+		<description>torpe</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="tvc_cass">
+			<dataarea name="cass" size="20736">
+				<rom name="torpe.cas" size="20736" crc="ebe079ff" sha1="4630d92533a2aef1a76d654eee348307de0c3e23"/>
 			</dataarea>
 		</part>
 	</software>

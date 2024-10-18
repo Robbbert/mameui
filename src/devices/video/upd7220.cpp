@@ -320,6 +320,12 @@ inline void upd7220_device::dequeue(uint8_t *data, int *flag)
 		if (m_fifo_ptr == -1)
 			m_sr &= ~UPD7220_SR_DATA_READY;
 	}
+	else
+	{
+		// TODO: underflow details
+		// pc9821:skinpan does SR checks over the wrong port during intro ...
+		*data = 0xff;
+	}
 }
 
 
@@ -329,7 +335,7 @@ inline void upd7220_device::dequeue(uint8_t *data, int *flag)
 
 inline void upd7220_device::update_vsync_timer(int state)
 {
-	int next_y = state ? m_vs : 0;
+	int next_y = state ? (m_vs + m_vbp) : 0;
 
 	attotime duration = screen().time_until_pos(next_y, 0);
 

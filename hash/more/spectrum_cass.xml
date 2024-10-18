@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 692 -->
+<!-- Number of items in this list = 726 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -3979,6 +3979,346 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15872">
 				<rom name="Aquarius (1983)(Bug-Byte Software)[a].tap" size="15872" crc="62966acd" sha1="239bbb5548339657451b66a00f77903cb2a1de68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8722f5fef3ce9">
+		<description>Usi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5028">
+				<rom name="Usi.tzx" size="5028" crc="57bd1f15" sha1="8722f5fef3ce9daf79e69bc0a445f6a8de0e02d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0e06696b1235f">
+		<description>Uve Atac (1985)(Microhobby Cassette)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17979">
+				<rom name="Uve Atac (1985)(Microhobby Cassette)(Sp).tap" size="17979" crc="78f60aea" sha1="0e06696b1235f633c5eb47ce1acedd43544b8e64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd84cc1ec03fdd">
+		<description>UV_retro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19934">
+				<rom name="UV_retro.tap" size="19934" crc="89020713" sha1="d84cc1ec03fdd37d429d445dff92e6b9c8b117ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfec94c66edf0a">
+		<description>UV_retro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19959">
+				<rom name="UV_retro.tzx" size="19959" crc="584993f7" sha1="fec94c66edf0a0dab02c470d1dacd5ca46e0d9b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbb8cbcd686211">
+		<description>Uwol 128K (2010)(Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50254">
+				<rom name="Uwol 128K (2010)(Mojon Twins).tap" size="50254" crc="4fee82ec" sha1="bb8cbcd6862115bb1bf51e34fc2f6af906761cc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs487b0d873c7eb">
+		<description>V (1986)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49840">
+				<rom name="V (1986)(Ocean Software Ltd).tap" size="49840" crc="60ebac1f" sha1="487b0d873c7ebd66c53e7431139886290bd7171c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb206bb274dd71">
+		<description>V (1986)(Ocean Software)[b][c Superfish]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50176">
+				<rom name="V (1986)(Ocean Software)[b][c Superfish].tap" size="50176" crc="14534db4" sha1="b206bb274dd719c59dc023e50440720b89c747bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9c966370e3732">
+		<description>Valley, The (1982)(ASP Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32806">
+				<rom name="Valley, The (1982)(ASP Software Ltd).tap" size="32806" crc="2a833047" sha1="9c966370e373218db47fd6fbf3f3ab54ad19104f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbef9acc3bb310">
+		<description>Valley, The (19xx)(Chezron Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49783">
+				<rom name="Valley, The (19xx)(Chezron Software).tap" size="49783" crc="889cb25b" sha1="bef9acc3bb310e242b5aa4b175473a7e69ece7e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2cb5260aad34d">
+		<description>Vampire Killer (1986)(Firecracker Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42429">
+				<rom name="Vampire Killer (1986)(Firecracker Software).tap" size="42429" crc="d498437b" sha1="2cb5260aad34d644565adec16602bb0afed7a0cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1bebe90cf5aea">
+		<description>Vampire's Empire (1988)(Magic Bytes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="111612">
+				<rom name="Vampire's Empire (1988)(Magic Bytes).tap" size="111612" crc="a11ba780" sha1="1bebe90cf5aea4c5d4348b657eb7fc8cb8df7cf5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd2c6edca9f2fa">
+		<description>Van Drivers (1984)(Profisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23739">
+				<rom name="Van Drivers (1984)(Profisoft).tap" size="23739" crc="019aab33" sha1="d2c6edca9f2faad6f113fc8d8c55b49bac23f08f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6103adc1db59c">
+		<description>Vanganza</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40284">
+				<rom name="Vanganza.tap" size="40284" crc="b56bbcfa" sha1="6103adc1db59c13d6d43891e80b789faa3040ee0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a5e6618c9080">
+		<description>Vector Ball (1987)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46823">
+				<rom name="Vector Ball (1987)(Mastertronic).tap" size="46823" crc="e9f1beb3" sha1="8a5e6618c90805dd53cbc61dc88e4bc98b9c8e48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb87f8d6130d0c">
+		<description>Vectornauts, The 128K (2018)(Dom Reardon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43878">
+				<rom name="Vectornauts, The 128K (2018)(Dom Reardon).tap" size="43878" crc="79bd68c7" sha1="b87f8d6130d0c95e378326630d875ae908dbef65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8295f7aad6f51">
+		<description>Vectron (19xx)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Vectron (19xx)(Firebird Software).tap" size="49343" crc="ec6217eb" sha1="8295f7aad6f51590253c5890a79d8b168081721b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b891972f4c19">
+		<description>Vegetables Deluxe 48K + PSG (2021)(Mike Richmond)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40589">
+				<rom name="Vegetables Deluxe 48K + PSG (2021)(Mike Richmond).tap" size="40589" crc="4c7d2616" sha1="7b891972f4c19270ac5b2298e970e79aacddcc39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1fa1a330ec5b9">
+		<description>Velnor's Lair (1983)(Quicksilva Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41252">
+				<rom name="Velnor's Lair (1983)(Quicksilva Software).tap" size="41252" crc="d5d93809" sha1="1fa1a330ec5b975004e0b6012d2a70efea5e7d8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbc8c60632d1f2">
+		<description>Velnor's Lair (1983)(Quicksilva Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41252">
+				<rom name="Velnor's Lair (1983)(Quicksilva Software)[a].tap" size="41252" crc="c45901f7" sha1="bc8c60632d1f228852c1b13a25b13b4ba4e0f652"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd43dbbde940c7">
+		<description>Vendetta (1990)(System 3 Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="165768">
+				<rom name="Vendetta (1990)(System 3 Software Ltd).tap" size="165768" crc="8992478a" sha1="d43dbbde940c733024d8b960a6c4dcc299713f6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc160f0adfdfb3">
+		<description>Venom (1988)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46808">
+				<rom name="Venom (1988)(Mastertronic Ltd).tap" size="46808" crc="2b8bff46" sha1="c160f0adfdfb3cb447303ad2a6263b66ed14cb5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs364d740a8bfea">
+		<description>Venture (1982)(Protek Computing Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17090">
+				<rom name="Venture (1982)(Protek Computing Ltd).tap" size="17090" crc="04b7893f" sha1="364d740a8bfeae543432fd488d978fe4b44f089a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a7945102400d">
+		<description>Venture (1983)(Protek Computing Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16523">
+				<rom name="Venture (1983)(Protek Computing Ltd).tap" size="16523" crc="b2734788" sha1="8a7945102400d250294a1e7008187daf39e8727c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc946fda4f3432">
+		<description>Vera Cruz Affair, The (1985)(Infogrames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="98686">
+				<rom name="Vera Cruz Affair, The (1985)(Infogrames).tap" size="98686" crc="e7a01ca4" sha1="c946fda4f34328dae45a176248cf7366ad76afee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf31353c9b1f11">
+		<description>Vera Cruz Affair, The (1985)(Infogrames)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53085">
+				<rom name="Vera Cruz Affair, The (1985)(Infogrames)[a].tap" size="53085" crc="f012971b" sha1="f31353c9b1f11bfdeda25b93c3a57465d52bbda2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs28419e8f730f7">
+		<description>Vera Cruz Affair, The (1985)(Infogrames)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53248">
+				<rom name="Vera Cruz Affair, The (1985)(Infogrames)[Part 1 of 2].tap" size="53248" crc="4265f58b" sha1="28419e8f730f7ccb7b8caacca657a05fafe40869"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs736b01f682ea2">
+		<description>Very Big Cave Adventure, The (1986)(CLR Group)[Part 1-2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="105620">
+				<rom name="Very Big Cave Adventure, The (1986)(CLR Group)[Part 1-2 of 2].tap" size="105620" crc="d82d1131" sha1="736b01f682ea2190693ac0de8c642070da42030a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9c69dab696125">
+		<description>Very Sheepy Christmas (2020)(Quantum Sheep)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27498">
+				<rom name="Very Sheepy Christmas (2020)(Quantum Sheep).tap" size="27498" crc="94185496" sha1="9c69dab69612529eeaf6a47bc2a4d4baa226bd5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfbb8136c8dfb0">
+		<description>Vexed 128K (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19699">
+				<rom name="Vexed 128K (2023)(Under4Mhz).tap" size="19699" crc="4847c86f" sha1="fbb8136c8dfb0ad7b67c99ea54c8983a6e2ff8f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5b09bd87e502e">
+		<description>Vexed 128K v1.07 (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18619">
+				<rom name="Vexed 128K v1.07 (2023)(Under4Mhz).tap" size="18619" crc="64bdf56b" sha1="5b09bd87e502e15a9094d20c2d030fe2410c0963"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe90906f34724">
+		<description>Vexed 128K v1.08 (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18657">
+				<rom name="Vexed 128K v1.08 (2023)(Under4Mhz).tap" size="18657" crc="44fd70ed" sha1="be90906f3472425866237edd89e9234ebd541f98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd79dda41c43f6">
+		<description>Vexed 48K (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17509">
+				<rom name="Vexed 48K (2023)(Under4Mhz).tap" size="17509" crc="18aa8b4a" sha1="d79dda41c43f6e7d73870e54088015feb05f61db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5417f2dfd6d75">
+		<description>Vexed 48K v1.07 (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17827">
+				<rom name="Vexed 48K v1.07 (2023)(Under4Mhz).tap" size="17827" crc="04e59624" sha1="5417f2dfd6d75979580fb9380a245855cfcf56d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs759f5a7a0337c">
+		<description>Vexed 48K v1.08 (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17352">
+				<rom name="Vexed 48K v1.08 (2023)(Under4Mhz).tap" size="17352" crc="ada67981" sha1="759f5a7a0337c1c04126f054c264404d90b06891"/>
 			</dataarea>
 		</part>
 	</software>

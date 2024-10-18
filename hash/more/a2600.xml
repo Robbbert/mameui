@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4987 -->
+<!-- Number of items in this list = 5034 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -42089,6 +42089,476 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Rime Of The Ancient Mariner (1999).a26" size="4096" crc="3735e82e" sha1="20349c2891ffafc2cf1e44011e237836905d05c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fadde76e61462">
+		<description>Steam Tunnel Bob_v58</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Steam Tunnel Bob_v58.a26" size="32768" crc="8b0aa0ba" sha1="fadde76e614621806b4192f3cb01c46fa7881c9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265735a3d2f8218">
+		<description>Steam Tunnel Bob_v59</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Steam Tunnel Bob_v59.a26" size="32768" crc="ee2176e5" sha1="5735a3d2f821817da0758ae0658306b8c4c94b86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263de483420de1b">
+		<description>Steam Tunnel Bob_v63</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Steam Tunnel Bob_v63.a26" size="32768" crc="4648b444" sha1="3de483420de1b080b4b9351500255153976093fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d76c40f08ec46">
+		<description>Steam Tunnel Bob_v64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Steam Tunnel Bob_v64.a26" size="32768" crc="a95118c8" sha1="d76c40f08ec46b5d17ca9301c14b1f525ca98792"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6df2d5d1cc3e">
+		<description>Steam Tunnel Bob_v65</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Steam Tunnel Bob_v65.a26" size="32768" crc="542b9f16" sha1="d6df2d5d1cc3ea6fe46f7528eddea61932dccf40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266be356b975bc6">
+		<description>Steam Tunnel Bob_v66_pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Steam Tunnel Bob_v66_pal.a26" size="32768" crc="24976623" sha1="6be356b975bc60adb8b9591419a76478620f92cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2625e76f485c9b9">
+		<description>Steam Tunnel Bob_v68_ntsc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Steam Tunnel Bob_v68_ntsc.a26" size="32768" crc="10bc24bd" sha1="25e76f485c9b933a4214f844d3b014a2625e697f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262d9c4802786b4">
+		<description>Steeple Chase (1983) (Video Gems) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Steeple Chase (1983) (Video Gems) [f1] (NTSC by TJ).a26" size="4096" crc="832156a7" sha1="2d9c4802786b4f27e04d9495c7c23a3dc77c9f23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2637c1e7eda714f">
+		<description>Steeplechase (1980) (Sears) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Steeplechase (1980) (Sears) [o1].a26" size="4096" crc="775463a9" sha1="37c1e7eda714ff0294935a6ca7dfe139d93fed4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2644cf65c1950a7">
+		<description>Stellar Fortress 0.21 2008 Bill Collins</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Stellar Fortress 0.21 2008 Bill Collins.a26" size="8192" crc="fc58ae55" sha1="44cf65c1950a7bcd4e52dcdbc5b515038ff222ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261df0d46805d8e">
+		<description>Stellar Fortress 0.23 2008 Bill Collins</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Stellar Fortress 0.23 2008 Bill Collins.a26" size="8192" crc="57bd4787" sha1="1df0d46805d8e86aac32f4c573573da971ac02cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269f75d7e4e3ec6">
+		<description>Stellar Fortress v0.06</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.06.a26" size="4096" crc="386b152d" sha1="9f75d7e4e3ec666b361109859a1196f92a0148c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d57763e859459">
+		<description>Stellar Fortress v0.07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.07.a26" size="4096" crc="9de644fa" sha1="d57763e859459a6cc8e1ec9d639655a924665945"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e5ccca57a1730">
+		<description>Stellar Fortress v0.08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.08.a26" size="4096" crc="69dfcb50" sha1="e5ccca57a1730d6b8977b48892c89e33e52d80e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cf23f1da191fe">
+		<description>Stellar Fortress v0.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.1.a26" size="4096" crc="6a42d5db" sha1="cf23f1da191fe64edae33acf016f6f65ec58adc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2630e7ae5457004">
+		<description>Stellar Fortress v0.10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.10.a26" size="4096" crc="88009562" sha1="30e7ae545700404f7f2ea31119497ca0a5233631"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0c3fefcac8ba">
+		<description>Stellar Fortress v0.11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.11.a26" size="4096" crc="bd4802e8" sha1="b0c3fefcac8ba77d5ed5518fe6bf9fa3126ede61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26911a882a700db">
+		<description>Stellar Fortress v0.15</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.15.a26" size="4096" crc="26691de5" sha1="911a882a700db923c1ee2fb89f5c0862cb4fd054"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a741a38092145">
+		<description>Stellar Fortress v0.17</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.17.a26" size="4096" crc="8077a5dc" sha1="a741a38092145f06a98b6065d07364f117b4009d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26070e38678b218">
+		<description>Stellar Fortress v0.19</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Stellar Fortress v0.19.a26" size="8192" crc="c5d96b23" sha1="070e38678b218f8f8389f0660887d86c38f4cb4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e3a1fcb633028">
+		<description>Stellar Fortress v0.2 (Bill Collins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.2 (Bill Collins).a26" size="4096" crc="95234d58" sha1="e3a1fcb6330289c90c654fb1bcbc7ed753513f8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260de0181066c38">
+		<description>Stellar Fortress v0.20</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Stellar Fortress v0.20.a26" size="8192" crc="daaab323" sha1="0de0181066c3879b11e1e14f32d4afba92b64554"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2656103ba059994">
+		<description>Stellar Fortress v0.3_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.3_2.a26" size="4096" crc="643b2088" sha1="56103ba059994f8f5503098548bd939e963216c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ac01fc4fca49f">
+		<description>Stellar Fortress v0.4 (Bill Collins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.4 (Bill Collins).a26" size="4096" crc="67de0937" sha1="ac01fc4fca49f4bb27ef09bb260a1c0406b20c3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2652bbd2313a5e4">
+		<description>Stellar Fortress v0.5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Fortress v0.5.a26" size="4096" crc="2b3d0746" sha1="52bbd2313a5e49c14567faa0b1e9247078bc11c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268e5c7fee5a6f0">
+		<description>Stellar Overlord 0.90 2008 Bill Collins</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stellar Overlord 0.90 2008 Bill Collins.a26" size="4096" crc="9a539a9e" sha1="8e5c7fee5a6f02062278bafa78a39d6fdc5453b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c8a4d51d0380">
+		<description>STEP ON IT Chris Read 2008</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="STEP ON IT Chris Read 2008.a26" size="2048" crc="46075d7c" sha1="6c8a4d51d03805687373e1b660a7d023e2de3b32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fd765dfe1975b">
+		<description>steps.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="steps.bas.bin" size="4096" crc="8762f21d" sha1="fd765dfe1975b7d379de407f1b449bf1fc832f78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b5d1989d1b11d">
+		<description>stest.txt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stest.txt.a26" size="4096" crc="e649c7c6" sha1="b5d1989d1b11df54013c4cdb28f43133dfbeb35e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f0e205100bce8">
+		<description>stickman.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stickman.bas.a26" size="4096" crc="7930ea90" sha1="f0e205100bce84d5303b6a59333ff43a1b310d0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623c3f5c51e6ac">
+		<description>Strat-O-Gems (2005)(Supercat) 2005-10-21</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Strat-O-Gems (2005)(Supercat) 2005-10-21.a26" size="4096" crc="01915211" sha1="23c3f5c51e6acad0d554c20d3fc7b4491e474329"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262a850fb8742fe">
+		<description>Strat-O-Gems (2005)(Supercat) 2005-10-22</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Strat-O-Gems (2005)(Supercat) 2005-10-22.a26" size="4096" crc="9efc0e3b" sha1="2a850fb8742fe81d5e218ade775ab172d3298b42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d1bba204fe6c2">
+		<description>Strat-O-Gems (2005)(Supercat) 2005-10-23</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Strat-O-Gems (2005)(Supercat) 2005-10-23.a26" size="4096" crc="df933fcc" sha1="d1bba204fe6c26c550e860996fc26dd310cf1285"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26296736a0a4ab6">
+		<description>Strat-O-Gems (2005)(Supercat) 2005-10-24</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Strat-O-Gems (2005)(Supercat) 2005-10-24.a26" size="4096" crc="9d0f7a08" sha1="296736a0a4ab6f228173197a4a025354ee812735"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26694d1615de754">
+		<description>Strat-O-Gems (2005)(Supercat) 2005-10-26</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Strat-O-Gems (2005)(Supercat) 2005-10-26.a26" size="4096" crc="c240f4b9" sha1="694d1615de754b86cfcc9f6466d2a2cb416d43fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267fb2f6072e6a0">
+		<description>Strat-O-Gems (2005)(Supercat) 2005-10-27</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Strat-O-Gems (2005)(Supercat) 2005-10-27.a26" size="4096" crc="66ff74c5" sha1="7fb2f6072e6a082d716906b2f3a858003062d46e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688e08ef08c1f7">
+		<description>Strat-O-Gems (2005)(Supercat) 2005-10-29 new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Strat-O-Gems (2005)(Supercat) 2005-10-29 new 2.a26" size="4096" crc="92a0ec63" sha1="88e08ef08c1f70980926c73b87f9d819f61e0656"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f7cd77377ef02">
+		<description>Strat-O-Gems 2005-10-29 (John Payson) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Strat-O-Gems 2005-10-29 (John Payson) [a1].a26" size="4096" crc="8181c93e" sha1="f7cd77377ef0274061edb54adafe4ac00e2ac0d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2663ea939c2c927">
+		<description>Strat-O-Gems Deluxe 2005-12-04 (John Payson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Strat-O-Gems Deluxe 2005-12-04 (John Payson).a26" size="8192" crc="dcdddbd4" sha1="63ea939c2c9270255427b132fc8c454d4b140595"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c7b1cc68ea90a">
+		<description>Stratogems Deluxe 051204 PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Stratogems Deluxe 051204 PAL.a26" size="8192" crc="74b5649b" sha1="c7b1cc68ea90af0fe9eef39d79b2a321903703ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26860296e662191">
+		<description>Streaker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Streaker.a26" size="4096" crc="9d3641d6" sha1="860296e662191d144840d7a8f7c6cb30ef8bbc22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696c5784274e2c">
+		<description>Street Racer (1978) (Atari) (PAL) [p1][o1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Street Racer (1978) (Atari) (PAL) [p1][o1][!].a26" size="4096" crc="f1e727b0" sha1="96c5784274e2ccc6ebd9ca4a76d9d2e907011c63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2689ce8dcd230ef">
+		<description>Street Racer (AKA Speedway II) (1978) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Street Racer (AKA Speedway II) (1978) (Atari) [o1].a26" size="4096" crc="3f666a73" sha1="89ce8dcd230efefc2277d6c2b8528b6f06624c40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260304ac52f86cd">
+		<description>Street Racer (Black)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Street Racer (Black).a26" size="2048" crc="e609b1d0" sha1="0304ac52f86cd1906fccf95e1cbae4db7774a949"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267fc5e0db65982">
+		<description>Stunt Cycle '76 v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Stunt Cycle '76 v1.a26" size="2048" crc="53fcb204" sha1="7fc5e0db6598281b7d2e433d156b229d67ac66fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2622833179cff70">
+		<description>Stunt Cycle '76 v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Stunt Cycle '76 v2.a26" size="2048" crc="7f343125" sha1="22833179cff703e4d740bbccc0bbd4a33a505802"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2621428a5150349">
+		<description>StuntCycle_Atari_Prototype_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="StuntCycle_Atari_Prototype_Overdump.a26" size="4096" crc="70096bf7" sha1="21428a5150349caacbaf82a3e8f0dc0830c9333b"/>
 			</dataarea>
 		</part>
 	</software>
