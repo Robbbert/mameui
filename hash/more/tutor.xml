@@ -1,7 +1,67 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 9 -->
+<!-- Number of items in this list = 27 -->
 <softwarelist name="tutor" description="tutor loose roms">
+	<software name="tut520aa0b12259f">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="aerial.bin" size="32768" crc="8a1c35b5" sha1="520aa0b12259fd4297c909057f84be3b02d77947"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tuta0898b0f9860a">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="11962">
+				<rom name="antiair.bin" size="11962" crc="d6140615" sha1="a0898b0f9860a236399dd9cab6517e04e813ef9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut5c861e32bc7fa">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="16160">
+				<rom name="ascend.bin" size="16160" crc="d6437b54" sha1="5c861e32bc7fa734ee3bfe39cae30d3af1fe1f81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tute9e840849e5f8">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="16268">
+				<rom name="battlot.bin" size="16268" crc="6aed1786" sha1="e9e840849e5f858f3006d492fe7a7bcb34a4d565"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut2405482e6bcf6">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="15168">
+				<rom name="bootskell.bin" size="15168" crc="f0542cf8" sha1="2405482e6bcf665563e003dc13652164f146d750"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tutf9670e4ebecea">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="13016">
+				<rom name="cacorm.bin" size="13016" crc="631157ce" sha1="f9670e4ebeceac1371cf93fae94b408d7d20d3ea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="tutaade318f130cf">
 		<description>Car-azy Racer (1991)(TM)</description>
 		<year>????</year>
@@ -22,6 +82,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="tutca98a36b789ac">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="cavit.bin" size="32768" crc="55972de7" sha1="ca98a36b789ac8b6fedd1d39a8989ce62a17e550"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tuta16c21234984e">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="10642">
+				<rom name="cracky.bin" size="10642" crc="f1dfae4d" sha1="a16c21234984edcfea250eba0f9bc1e5dc010d75"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="tutf127f6641f818">
 		<description>Deep Six (1991)(TM)</description>
 		<year>????</year>
@@ -29,6 +109,36 @@
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Deep Six (1991)(TM).bin" size="8192" crc="6b8a878f" sha1="f127f6641f8187ada313ebb5a6b87cd61d27f019"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut41a53df585a7a">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="guntus.bin" size="32768" crc="efd827b4" sha1="41a53df585a7a46086d2f2a2d5bfe38b5f82ffb5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tutcdac6aca19663">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="14164">
+				<rom name="hopman.bin" size="14164" crc="62b901e5" sha1="cdac6aca19663346805611cf70631f942b260908"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tutfc2e753074ade">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="impetus.bin" size="32768" crc="7d624c4f" sha1="fc2e753074adeaeb13c6ccc7db99dfaaa0ecf39f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42,6 +152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="tut93c1d420cf8bb">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="13606">
+				<rom name="lift.bin" size="13606" crc="aef342f5" sha1="93c1d420cf8bb0187da0454819c305e6e9294def"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="tut6913d40406874">
 		<description>Loco-motion (1991)(TM)</description>
 		<year>????</year>
@@ -49,6 +169,36 @@
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Loco-motion (1991)(TM).bin" size="8192" crc="ede5ed83" sha1="6913d4040687485672b03891151b0db9a6bfcd2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut4c57e853a6124">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="8922">
+				<rom name="mazy.bin" size="8922" crc="b079d40c" sha1="4c57e853a612420becccf28f1be1ff57f4172aac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut15e7457969c19">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="12624">
+				<rom name="neuras.bin" size="12624" crc="5d7ba8ed" sha1="15e7457969c19411b9e37e3a450c809fc7f4ff0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut28b6822f030b4">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="14318">
+				<rom name="osotos.bin" size="14318" crc="23c6327a" sha1="28b6822f030b46a4cc441aa60ddd31b1b2c785e6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -62,6 +212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="tut298776b296e45">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="ruptus.bin" size="32768" crc="62b6915f" sha1="298776b296e45d56c795aea8f433fe56f1a27de0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="tutcf025d180cec5">
 		<description>Scramble (199x)(TM) (2)</description>
 		<year>????</year>
@@ -69,6 +229,16 @@
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Scramble (199x)(TM) (2).bin" size="8192" crc="3c23d24f" sha1="cf025d180cec5bafbbae9623cd5b6177481478a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut8922605582926">
+		<description>tomy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="2169618">
+				<rom name="tomy.wav" size="2169618" crc="e899ddcd" sha1="89226055829269afa2415c6c01c2138721abfa6e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -89,6 +259,16 @@
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Traffic Jam (1991)(TM).bin" size="8192" crc="81f529f9" sha1="3d2fad00cd15ee8e72a005f41fc9f96e362324d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tutaf0ffdf9342e8">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="13634">
+				<rom name="yewdow.bin" size="13634" crc="0e241ee6" sha1="af0ffdf9342e8dac1c64f0bd5f60cb0d83535824"/>
 			</dataarea>
 		</part>
 	</software>

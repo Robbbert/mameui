@@ -1,7 +1,147 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 29 -->
 <softwarelist name="ibmpcjr_flop" description="ibmpcjr_flop loose roms">
+	<software name="ibm3788ed7f9e1cf">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="aerial.d88" size="380848" crc="e9f9648d" sha1="3788ed7f9e1cf36fc1af6e9a6e000174727deec3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibma31691704500f">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="aerial.img" size="368640" crc="76bf6a0d" sha1="a31691704500f15bf6950015f14d86988a4bb155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmd35006a109cac">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="antiair.d88" size="380848" crc="6c42b812" sha1="d35006a109cac4d12fcc4a09db57a12e3aa99677"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm3d20145ba4e3a">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="antiair.img" size="368640" crc="29282c86" sha1="3d20145ba4e3a096ce669dc4488f987944a6e611"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm219caa2e2484c">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="ascend.d88" size="380848" crc="a8daf462" sha1="219caa2e2484c44f5401a7973a9f7876aea0129c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmabc4ee09069c9">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="ascend.img" size="368640" crc="3cd7b46c" sha1="abc4ee09069c9c1c72440d6c6269559ed232a404"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmb65d3d9e42fb1">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="battlot.d88" size="380848" crc="5f6b72d2" sha1="b65d3d9e42fb1d7b3156fd8b176bb25af423afd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm9d128bc85f4ea">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="battlot.img" size="368640" crc="bbab788f" sha1="9d128bc85f4ea78a90b24d01bb1831d0987c6a13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibma8242033ab3d2">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="bootskell.d88" size="380848" crc="6a48b0cc" sha1="a8242033ab3d266573f11abdb90ac44f23e26caa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm270393ce71d16">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="bootskell.img" size="368640" crc="64017105" sha1="270393ce71d169f5f5d3e4f761ea5fcab048a7e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm41c4af19ca809">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="cacorm.d88" size="380848" crc="79ecea19" sha1="41c4af19ca809a216f286601036a4dcfceaff63b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm7c9a057a7548f">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="cavit.d88" size="380848" crc="9cf5ad2d" sha1="7c9a057a7548f9fec22c3ca8e4fddaffb42f68be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm3dc4b5334259b">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="cavit.img" size="368640" crc="70dcbe03" sha1="3dc4b5334259b9b5b35a65a9b1b02b6eff96c532"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm8251f8c9d339f">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="cracky.d88" size="380848" crc="ea7b8114" sha1="8251f8c9d339fa142d79775ee4556ae52a1e86d1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ibmefab42f0b520a">
 		<description>Explore the IBM JR</description>
 		<year>????</year>
@@ -9,6 +149,146 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="163840">
 				<rom name="Explore the IBM JR.IMG" size="163840" crc="c8838e9d" sha1="efab42f0b520a6822c988fbd0099c5697b0ddb28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmbf152735bb349">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="guntus.d88" size="380848" crc="c9fc1785" sha1="bf152735bb34905f6b47da68e9550ef47a3e0ddc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibma75238d961764">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="guntus.img" size="368640" crc="1db0d8b9" sha1="a75238d961764d2c92f8b07f422d88d28dfef264"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmd5be7d25cbac7">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="hopman.d88" size="380848" crc="c9dda78a" sha1="d5be7d25cbac7c3e4d72719893bd24bb63150488"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm4d92893e98e78">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="hopman.img" size="368640" crc="bdad3d42" sha1="4d92893e98e78a46edfcf526cfd12fb30e73c746"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmb3608a86e92d5">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="impetus.d88" size="380848" crc="d8dba045" sha1="b3608a86e92d529c3e4e1c381050a940a99f6c9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm65ec0ea450521">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="impetus.img" size="368640" crc="5d0afa1d" sha1="65ec0ea45052189f9b9a8955b5f276b04854aa15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm9c6e76b1401ee">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="lift.d88" size="380848" crc="31a64ab2" sha1="9c6e76b1401eeb9a6c854768b7440a84999b5f8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibma156cd4f321a9">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="neuras.d88" size="380848" crc="f516005f" sha1="a156cd4f321a91609b3a5a68d7ca1bbbc0a5502a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm23ed199e57583">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="osotos.d88" size="380848" crc="ef933501" sha1="23ed199e5758345c385ca4912acca418c7acc8e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibme4aeabbd51287">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="osotos.img" size="368640" crc="a31e5b38" sha1="e4aeabbd512876135333abf3c49afe82aa712733"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmf87aba634b458">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="ruptus.d88" size="380848" crc="cc2ef94d" sha1="f87aba634b458f44d3555898f6608cc2b21ec0c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm18270a0173f1e">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="ruptus.img" size="368640" crc="289d33ba" sha1="18270a0173f1e36f21e1b8e263b825b42f7943d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm6297cc3c0b860">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="yewdow.d88" size="380848" crc="1460291a" sha1="6297cc3c0b860cc05526eba670cab65628dd07a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm04fd6a8f614e5">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="yewdow.img" size="368640" crc="36d7206a" sha1="04fd6a8f614e58696a10d51e069f1a1dde4aabe5"/>
 			</dataarea>
 		</part>
 	</software>

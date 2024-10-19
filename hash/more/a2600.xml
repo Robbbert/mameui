@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5034 -->
+<!-- Number of items in this list = 5205 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -12442,6 +12442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26624dc2dd2bb79">
+		<description>Baby (2018-04-03)(Robsome Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Baby (2018-04-03)(Robsome Studios).bin" size="4096" crc="0d43ea80" sha1="624dc2dd2bb79851ee19a15c3d6a5e9ec560e8e3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26928b094759286">
 		<description>Baby Center Animation (AD)</description>
 		<year>????</year>
@@ -12449,6 +12459,26 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Baby Center Animation (AD).a26" size="32768" crc="2d4bc9b3" sha1="928b09475928699d9d4959e448e6d64ca3d8b80a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a71d4e731cc38">
+		<description>Baby v2 (2018-03-29)(Robsome Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Baby v2 (2018-03-29)(Robsome Studios).bin" size="4096" crc="bd1f26a0" sha1="a71d4e731cc3833535c10df0db603ba2e5ca7b42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e4fd953bb42de">
+		<description>Baby v3 (2018-03-29)(Robsome Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Baby v3 (2018-03-29)(Robsome Studios).bin" size="4096" crc="bffe982e" sha1="e4fd953bb42de4906586222e4a622f369e9c5d58"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13042,6 +13072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2617d939127a9a9">
+		<description>Bank Heist (1983)(20th Century Fox)(NTSC)[f Supercharger Nukey Shay]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Bank Heist (1983)(20th Century Fox)(NTSC)[f Supercharger Nukey Shay].bin" size="4096" crc="d5af8a8e" sha1="17d939127a9a9f0bdc8903315f6413a8e0673a83"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a263fc2bc08711a8">
 		<description>Bar-Score Demo (2001) (Roger Williams)</description>
 		<year>????</year>
@@ -13219,6 +13259,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Basketball_1978_Atari_PAL_Overdump_2.a26" size="4096" crc="d51c82c9" sha1="7001a926bb75f0d4c508d6af830dd5c7cbf5b0cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26461b015c1aa50">
+		<description>Batari BASIC Sample Program (200x)(Quimby, Fred)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Batari BASIC Sample Program (200x)(Quimby, Fred)(NTSC)(PD).a26" size="4096" crc="ad1ac837" sha1="461b015c1aa50c39d718dd65a9df9622a111a7b0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13682,6 +13732,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26f8f260a5afc71">
+		<description>Because It's There (200x)(atari2600land)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Because It's There (200x)(atari2600land)(NTSC)(PD).bin" size="4096" crc="6c62592d" sha1="f8f260a5afc71abc9be10af06adb2c3a641c2645"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d182f4e5f4239">
+		<description>Bee-Ball (2007)(Machado, Ivan)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Bee-Ball (2007)(Machado, Ivan)(NTSC).bin" size="4096" crc="eb4b9ca9" sha1="d182f4e5f42398871fe00f28a570566442184c66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26154aaf601c794">
+		<description>Bee-Ball (2007)(Machado, Ivan)(PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Bee-Ball (2007)(Machado, Ivan)(PAL).bin" size="4096" crc="3c513b77" sha1="154aaf601c79461f387045eede54c0e715c7b9be"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2680516da875c9a">
 		<description>BeeBall4.0_1P_vs_6507</description>
 		<year>????</year>
@@ -14032,6 +14112,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a266e7599ced2246">
+		<description>Berta & Butterflies v0.50 (2024-04-18)(Krysztowiak, Sławomir)(NTSC)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berta & Butterflies v0.50 (2024-04-18)(Krysztowiak, Sławomir)(NTSC)(MIT).bin" size="4096" crc="774295c5" sha1="6e7599ced22468821a30461e2e7c06158993bf88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ae789efea7af5">
+		<description>Berta & Butterflies v0.50 (2024-04-18)(Krysztowiak, Sławomir)(NTSC)(pl)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berta & Butterflies v0.50 (2024-04-18)(Krysztowiak, Sławomir)(NTSC)(pl)(MIT).bin" size="4096" crc="6b32e560" sha1="ae789efea7af5458c1ece61fcf80a43f0d28abf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ac2bb91ac8a75">
+		<description>Berta & Butterflies v0.50 (2024-04-18)(Krysztowiak, Sławomir)(PAL60)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berta & Butterflies v0.50 (2024-04-18)(Krysztowiak, Sławomir)(PAL60)(MIT).bin" size="4096" crc="8b9b3b63" sha1="ac2bb91ac8a75ae8fa24a9ddfaf2c54396b1ea5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262d41fddfdcef5">
+		<description>Berta & Butterflies v0.50 (2024-04-18)(Krysztowiak, Sławomir)(PAL60)(pl)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berta & Butterflies v0.50 (2024-04-18)(Krysztowiak, Sławomir)(PAL60)(pl)(MIT).bin" size="4096" crc="97eb4bc6" sha1="2d41fddfdcef56360d02398b79efebc82668577f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262f22f0b07604c">
+		<description>Berta & Butterflies v1.00 (2024-06-06)(Krysztowiak, Sławomir)(NTSC)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berta & Butterflies v1.00 (2024-06-06)(Krysztowiak, Sławomir)(NTSC)(MIT).bin" size="4096" crc="778ec227" sha1="2f22f0b07604cca25d4367740d1178aa8621c533"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d1c2457a263bf">
+		<description>Berta & Butterflies v1.00 (2024-06-06)(Krysztowiak, Sławomir)(NTSC)(pl)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berta & Butterflies v1.00 (2024-06-06)(Krysztowiak, Sławomir)(NTSC)(pl)(MIT).bin" size="4096" crc="4a82e584" sha1="d1c2457a263bf64b0748e53a20e4419e6153f76c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26011e84d11e38a">
+		<description>Berta & Butterflies v1.00 (2024-06-06)(Krysztowiak, Sławomir)(PAL60)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berta & Butterflies v1.00 (2024-06-06)(Krysztowiak, Sławomir)(PAL60)(MIT).bin" size="4096" crc="7d13277b" sha1="011e84d11e38af911d5380e236a9a77a605df4c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626ffe49fdd79f">
+		<description>Berta & Butterflies v1.00 (2024-06-06)(Krysztowiak, Sławomir)(PAL60)(pl)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berta & Butterflies v1.00 (2024-06-06)(Krysztowiak, Sławomir)(PAL60)(pl)(MIT).bin" size="4096" crc="401f00d8" sha1="26ffe49fdd79f251fb1eb5e8e8aa92007baf21b0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2641bacfb18708d">
 		<description>Berzerk (Voice Enhanced) (Berzerk Hack)</description>
 		<year>????</year>
@@ -14199,6 +14359,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Berzerk Renegade (2002) (Steve Engelhardt) (Room of Doom Hack).a26" size="4096" crc="7f7e26a8" sha1="d67fce8be01060ecbdbd6fa14efa6d726f9442bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264d638544bd812">
+		<description>Berzerk Sadistic (2005-12-29)(Engelhardt, Steve)(NTSC)[h][Berzerk]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Berzerk Sadistic (2005-12-29)(Engelhardt, Steve)(NTSC)[h][Berzerk].bin" size="4096" crc="bde73795" sha1="4d638544bd812160d03fc72743cf6ab2664c86c4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14562,6 +14732,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26caa40f2c91834">
+		<description>Big Bucket Kaboom (2005-12-29)(Engelhardt, Steve)(NTSC)[h][Kaboom]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Big Bucket Kaboom (2005-12-29)(Engelhardt, Steve)(NTSC)[h][Kaboom].bin" size="2048" crc="9f35618f" sha1="caa40f2c91834dd0ee1c412b20d5c764314f4bd9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26fb5cf0883301e">
 		<description>Big Dig (2003-04-04) (CT)</description>
 		<year>????</year>
@@ -14702,6 +14882,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2609ef5db40a9ed">
+		<description>Bird Brain (200x)(atari2600land)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Bird Brain (200x)(atari2600land)(NTSC)(PD).bin" size="4096" crc="f23b5ba6" sha1="09ef5db40a9ed05ac61ce6634fdc5f4d176fbfe0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26ae682e751f1e3">
 		<description>bj</description>
 		<year>????</year>
@@ -14812,6 +15002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2690a4ee1240d5a">
+		<description>BLiP Football (2006)(Galloway, David - Montgomery, Bob)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="BLiP Football (2006)(Galloway, David - Montgomery, Bob)(NTSC).bin" size="8192" crc="4fee07b9" sha1="90a4ee1240d5ac08848e59eea698c3fc2ec6915b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26df3474cd397b0">
 		<description>Blob 20070425</description>
 		<year>????</year>
@@ -14859,6 +15059,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="blockavd.a26" size="4096" crc="bb7470f2" sha1="4e7f92f732aff3c2c182b47e19d11e36ed4570bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f9973812dc16d">
+		<description>BloK (2016-09-12)(Lee, Bill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="BloK (2016-09-12)(Lee, Bill).bin" size="8192" crc="1f1c59f8" sha1="f9973812dc16df3e27d060e6f8ebd2feaa65a4b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15032,6 +15242,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a266dd11aadd8d76">
+		<description>Bob and the Alien Fire Flies v1.00 (2023-10-25)(8bitsinthebasement)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Bob and the Alien Fire Flies v1.00 (2023-10-25)(8bitsinthebasement)(NTSC).bin" size="4096" crc="d17d4ce0" sha1="6dd11aadd8d76d5c47387429a35d52bd0b8ff0df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260df1112787d07">
+		<description>Bob and the Alien Fire Flies v1.00 (2023-10-25)(8bitsinthebasement)(PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Bob and the Alien Fire Flies v1.00 (2023-10-25)(8bitsinthebasement)(PAL60).bin" size="4096" crc="47a4eb4d" sha1="0df1112787d07bb0726cba67b417fde77e3a6229"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266852ed4ba2b65">
+		<description>Bob and the Alien Fire Flies v1.00 (2023-10-25)(8bitsinthebasement)(SECAM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Bob and the Alien Fire Flies v1.00 (2023-10-25)(8bitsinthebasement)(SECAM).bin" size="4096" crc="95608c88" sha1="6852ed4ba2b65b405de24bb1d9e057a95634aab6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26da008c93a8071">
 		<description>bobanoid</description>
 		<year>????</year>
@@ -15142,6 +15382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a267dac41ea3bb41">
+		<description>Bogey '77 (2023-02-26)(Stranger Tides)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Bogey '77 (2023-02-26)(Stranger Tides).bin" size="4096" crc="7d119425" sha1="7dac41ea3bb41f7f03af37f998ef2aa59ee569c4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26f5599bc626eb0">
 		<description>boing (invincible hack)</description>
 		<year>????</year>
@@ -15192,6 +15442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26950fd5c1eb400">
+		<description>Bomber (200x)(atari2600land)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Bomber (200x)(atari2600land)(NTSC)(PD).bin" size="2048" crc="a6d61304" sha1="950fd5c1eb40065670505d8f958e129b54cafad9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26fce6d903f9e4d">
 		<description>Bomber4.bas</description>
 		<year>????</year>
@@ -15239,6 +15499,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Bombs Away (Jumpman Selected Levels) (PD).a26" size="4096" crc="4518634c" sha1="16a516e47ad1c100fd3abb1d2629dbe64f426e5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dfb780906a799">
+		<description>Bombs Away! v0.45 (2010)(Engelhardt, Steve)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Bombs Away! v0.45 (2010)(Engelhardt, Steve)(NTSC).bin" size="16384" crc="5bc89cb8" sha1="dfb780906a79963a37b3d4bcdab26d6df4c82906"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16789,6 +17059,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Burning_Desire-PAL60(Supercharger).bin" size="4096" crc="be1c03e6" sha1="e09eaff714a7eabf9a00dc22de720f944de86313"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cff888c3c4906">
+		<description>Burying E.T. (2024-01-23)(Deloison, Florent)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Burying E.T. (2024-01-23)(Deloison, Florent).bin" size="8192" crc="d2a620c9" sha1="cff888c3c49065d5380c83007d73b718099875f3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42089,6 +42369,1436 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Rime Of The Ancient Mariner (1999).a26" size="4096" crc="3735e82e" sha1="20349c2891ffafc2cf1e44011e237836905d05c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26200337607fb15">
+		<description>Stack16(rev3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stack16(rev3).a26" size="4096" crc="6c629794" sha1="200337607fb15e68a964d20afe28533f53145d53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aed5b0ebdcb48">
+		<description>Stack16(rev3c)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stack16(rev3c).a26" size="4096" crc="17620912" sha1="aed5b0ebdcb48b154e23add77e9f329903be25f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a89faca28d4de">
+		<description>stacker10.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker10.bas.a26" size="4096" crc="d534b6d1" sha1="a89faca28d4debb4837014f912e55666f07014a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2694bc8c270206c">
+		<description>stacker10b.txt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker10b.txt.a26" size="4096" crc="19043554" sha1="94bc8c270206cffadc237de232ba0c346f061f54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c6cb06fc75e87">
+		<description>stacker10c.txt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker10c.txt.a26" size="4096" crc="18dce722" sha1="c6cb06fc75e8731715590b801a2ee1ae11d7e2eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26105721b13fcea">
+		<description>stacker11.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker11.bas.a26" size="4096" crc="43df2dce" sha1="105721b13fcea51f67a1f97da3c4a017978959c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e0bb4ee1bf767">
+		<description>stacker13.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker13.bas.a26" size="4096" crc="16ff687c" sha1="e0bb4ee1bf767ea4eab77fc460f9259ae5719c14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2690086f6aa27b2">
+		<description>stacker16.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker16.bas.bin" size="4096" crc="eb6ac79c" sha1="90086f6aa27b27541b73717a437be4418e268476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2612c614074be85">
+		<description>stacker16b2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker16b2.bas.a26" size="4096" crc="63635a50" sha1="12c614074be8598726ecc89ba80ecd952837733a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f62f89092f83">
+		<description>stacker3a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker3a.bas.bin" size="4096" crc="cce50bda" sha1="8f62f89092f837a928bed2656a332c79f449cce8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e728ddd9a148d">
+		<description>stacker4.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker4.bas.bin" size="4096" crc="ccec93f4" sha1="e728ddd9a148de325f91792c2f24387a130f3777"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b133f29795cfd">
+		<description>stacker5.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker5.bas.a26" size="4096" crc="f57bb0b3" sha1="b133f29795cfda06bdb90e9766fe9001efc80d8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d7ec347efd356">
+		<description>stacker7.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker7.bas.a26" size="4096" crc="5c4875f5" sha1="d7ec347efd356645dbea789a2aab30a4ad1db327"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bcecd3eb7e98a">
+		<description>stacker8.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker8.bas.a26" size="4096" crc="c1fc7c99" sha1="bcecd3eb7e98ab6d3a3b1f95b47fa0e7d9b9c44a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266bd4a14970282">
+		<description>stacker9.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="stacker9.bas.a26" size="4096" crc="8423827c" sha1="6bd4a149702821e3852e7ea59fd330d1e5dc5d2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2642a341f6df919">
+		<description>stamhack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="stamhack.a26" size="2048" crc="281cc462" sha1="42a341f6df919cfc72d0747934892f81aeda2b58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a39d2133ecf0a">
+		<description>Stampede (1981) (Activision) (PAL) [p1][o1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stampede (1981) (Activision) (PAL) [p1][o1][!].a26" size="4096" crc="adcc00a2" sha1="a39d2133ecf0aff48afbae21661e4050f4f21f61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c72af293dc223">
+		<description>Stampede (1981) (Activision) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stampede (1981) (Activision) [o1].a26" size="4096" crc="b8ba939c" sha1="c72af293dc2235d36640865fb01438219efd0d92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec267a72dc967">
+		<description>Stampede (1981) (Activision) [o2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Stampede (1981) (Activision) [o2].a26" size="16384" crc="abc37ba5" sha1="ec267a72dc9675be6032edcfa30524158b5a2063"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e013dec038bdb">
+		<description>Stampede (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Stampede (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="8780b26e" sha1="e013dec038bdb0e2b57c4730e964e54999d6425a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2602f2cd6c2834a">
+		<description>Stampede (Canal 3 - Intellivision) (16K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Stampede (Canal 3 - Intellivision) (16K).a26" size="16384" crc="bdd7512e" sha1="02f2cd6c2834a6593b6800ada58856bc5173a175"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d665b6bc31c37">
+		<description>Stampede (Hack) (2600 Screen Search Console) (Jone Yuan Telephonic Enterprise Co)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Stampede (Hack) (2600 Screen Search Console) (Jone Yuan Telephonic Enterprise Co).bin" size="2048" crc="143ecd4d" sha1="d665b6bc31c370b7ebb15bca44f35168262de81e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b8dff2cc1f72">
+		<description>Stampede (Hack) (Jone Yuan Telephonic Enterprise Co) [p1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Stampede (Hack) (Jone Yuan Telephonic Enterprise Co) [p1].a26" size="2048" crc="0c90bcf8" sha1="9b8dff2cc1f7212285bebf5e529ec3c7ec971017"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264d5ce832327c5">
+		<description>Stampede (Hack) (Jone Yuan Telephonic Enterprise Co) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stampede (Hack) (Jone Yuan Telephonic Enterprise Co) [p1][o1].a26" size="4096" crc="8ca3f60a" sha1="4d5ce832327c50f7df7bd0a2ba745485ea12b7d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2679d96347dc0b1">
+		<description>Stampede_32-in-1_Atari_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stampede_32-in-1_Atari_PAL_Overdump.a26" size="4096" crc="b1384b17" sha1="79d96347dc0b16ab088cb694368c81fd7e0e3931"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2606460b2ddb571">
+		<description>Stampede_4k_PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stampede_4k_PAL.a26" size="4096" crc="eea193e4" sha1="06460b2ddb571798259cacfc7fdb16c3a4ab9b48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263d43ab62bb50d">
+		<description>Stampede_PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Stampede_PAL.a26" size="8192" crc="7d5fdcb5" sha1="3d43ab62bb50dae5ec6662ab5a0a671e5ae7f9f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26521ec04baa3bd">
+		<description>Stand Alone Test Cart (SALT) Diagnostics V2.6 (1982) (Atari) [a1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stand Alone Test Cart (SALT) Diagnostics V2.6 (1982) (Atari) [a1][o1].a26" size="4096" crc="78463edc" sha1="521ec04baa3bdc6b21ffb5eab62b7299e8126dc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f7aba95a24b21">
+		<description>Stand Alone Test Cart (SALT) Diagnostics V2.6 (1982) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Stand Alone Test Cart (SALT) Diagnostics V2.6 (1982) (Atari) [o1].a26" size="4096" crc="7f6cf9bf" sha1="f7aba95a24b211d1a5d74723f6e85ed298b711ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26538108ca98212">
+		<description>Stand Alone Test Cart (SALT) Diagnostics V2.6 (1982) (Atari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Stand Alone Test Cart (SALT) Diagnostics V2.6 (1982) (Atari).a26" size="2048" crc="4a08b986" sha1="538108ca9821265e23f06fa7672965631bdf8175"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2600bbd0ec4d513">
+		<description>Star Box beta4 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Star Box beta4 (Chris Read).a26" size="2048" crc="ba26ff58" sha1="00bbd0ec4d5133779015153e84ae2daf7bc25cdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec3d07e9403fb">
+		<description>star castle fixed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="star castle fixed.a26" size="4096" crc="1e5fcce1" sha1="ec3d07e9403fbcc4e06668d37b09a499980fc3cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce6d53d5672d0">
+		<description>Star Fire (01-05-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire (01-05-2002) (MP).a26" size="4096" crc="60c83b28" sha1="ce6d53d5672d087090f54866d11b585486fabb07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26021d22b3fd3a7">
+		<description>Star Fire (07-01-2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire (07-01-2003) (MP).a26" size="8192" crc="4f035b11" sha1="021d22b3fd3a7a6e365a31cc4e852088a08e43ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262e8b89e83194e">
+		<description>Star Fire (07-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire (07-10-2002) (MP).a26" size="8192" crc="8d005075" sha1="2e8b89e83194e571d6b10122fed17e4b6d9da191"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b59b0d291215d">
+		<description>Star Fire (08-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire (08-10-2002) (MP).a26" size="8192" crc="72709e93" sha1="b59b0d291215dcbd0f4f1075b352389bbbf03b61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26edb4b4fa7608e">
+		<description>Star Fire (10-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire (10-10-2002) (MP).a26" size="8192" crc="0aebc10e" sha1="edb4b4fa7608e26f2c6a770401d00f2bdbfac5e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265f7afc46ba82d">
+		<description>Star Fire (17-02-2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire (17-02-2003) (MP).a26" size="8192" crc="0be91006" sha1="5f7afc46ba82da9709cee00ee3b786b9c2fc5222"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2611305688f9f25">
+		<description>Star Fire (20-02-2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire (20-02-2003) (MP).a26" size="4096" crc="4f6c5332" sha1="11305688f9f251ef5f64c0bb3ae796932910e67a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26586b1929308c1">
+		<description>Star Fire (23-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire (23-10-2002) (MP).a26" size="8192" crc="dde4130c" sha1="586b1929308c179a43d1e0465223a030cd5c5101"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261526fab82bd77">
+		<description>Star Fire (25-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire (25-10-2002) (MP).a26" size="4096" crc="3655fb87" sha1="1526fab82bd77a4a280f0c0c1dedce0758903a94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b25c0c41f912b">
+		<description>Star Fire (28-11-2002) (MP) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire (28-11-2002) (MP) [a1].a26" size="8192" crc="f6a60e61" sha1="b25c0c41f912b00fda8484de91a7be9d7670f542"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2604b118e2c9c3e">
+		<description>Star Fire (28-11-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire (28-11-2002) (MP).a26" size="8192" crc="86fdbb04" sha1="04b118e2c9c3e8749718dbaf035076da5df49454"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263ecb25747c449">
+		<description>Star Fire (MP) (2002) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire (MP) (2002) (PD).a26" size="4096" crc="8fa340c7" sha1="3ecb25747c449558357a88abb803db525ba345a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d61e07de9a73">
+		<description>Star Fire - 1LK Intro (13-11-2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Star Fire - 1LK Intro (13-11-2002) (TJ).a26" size="2048" crc="7bf5f53f" sha1="1d61e07de9a7313a92b5308736bc915cc48716a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26112c79a223347">
+		<description>Star Fire - 4K Version (25-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - 4K Version (25-10-2002) (MP).a26" size="4096" crc="e7a5f071" sha1="112c79a22334717074b9f564fd5f374429616904"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ed190cf15afae">
+		<description>Star Fire - Advice on radar needed (16-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Advice on radar needed (16-10-2002) (MP).a26" size="8192" crc="f7cb615f" sha1="ed190cf15afae3d6c008039eaa86f72d11469f44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c32a197a306e7">
+		<description>Star Fire - Animated Patricles (06-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Animated Patricles (06-10-2002) (MP).a26" size="8192" crc="e4818afc" sha1="c32a197a306e7112ea5b1447bdd015178cd938f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260e8a8bc9a166b">
+		<description>Star Fire - Cockpit View (10-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Cockpit View (10-10-2002) (MP).a26" size="8192" crc="ca56a21d" sha1="0e8a8bc9a166bd39b3a8ae887183d0351de43b2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2694e16b1f49f5c">
+		<description>Star Fire - Crash Scene (04-11-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Crash Scene (04-11-2002) (MP).a26" size="8192" crc="6b01ddbf" sha1="94e16b1f49f5c72f459ca3c3cf22bc0455352607"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a02a3a7282b14">
+		<description>Star Fire - Creating a Universe (09-09-2002) (MP) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Creating a Universe (09-09-2002) (MP) [a1].a26" size="4096" crc="17172d88" sha1="a02a3a7282b144e0cc86046ddd3bf44b4135e008"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d914ab9f6a3b">
+		<description>Star Fire - Creating a Universe (09-09-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Creating a Universe (09-09-2002) (MP).a26" size="4096" crc="6402221a" sha1="5d914ab9f6a3b1847119691cc63d8392b18548f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cca64ac1abaae">
+		<description>Star Fire - Crosshair (12-02-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Crosshair (12-02-2002) (MP).a26" size="4096" crc="537b3baf" sha1="cca64ac1abaae1d1f4f7a6b84d6acebd7e87f714"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265db902219a192">
+		<description>Star Fire - Eckhard WIP (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Eckhard WIP (MP).a26" size="4096" crc="ee0b1705" sha1="5db902219a192ee7441806ec4618621c1e427e9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262dbadd0a43359">
+		<description>Star Fire - Enemy Mine (2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Enemy Mine (2002) (MP).a26" size="4096" crc="4dec3f93" sha1="2dbadd0a433597242f40309d625344ce4ba8bd77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262c8ed062875b3">
+		<description>Star Fire - Explosions! (10-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Explosions! (10-10-2002) (MP).a26" size="8192" crc="e7f6d24b" sha1="2c8ed062875b31edafd2a894edb195bde652ee54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce7d4eb667023">
+		<description>Star Fire - Faster Skipping 1 (24-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Faster Skipping 1 (24-10-2002) (MP).a26" size="8192" crc="58fe0c95" sha1="ce7d4eb6670237e0b4ed5023f307a89eaba46481"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659dc3106fc564">
+		<description>Star Fire - Faster Skipping 2 (24-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Faster Skipping 2 (24-10-2002) (MP).a26" size="8192" crc="27e48c8b" sha1="59dc3106fc564154ea95bf2fea27560a0d349dee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26517809e59599c">
+		<description>Star Fire - Framework Done (30-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Framework Done (30-10-2002) (MP).a26" size="8192" crc="68cd4756" sha1="517809e59599ce57945172b6ff8db185b74c8586"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f51103ab16423">
+		<description>Star Fire - Kernel Done (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Kernel Done (MP).a26" size="4096" crc="85b3763d" sha1="f51103ab16423f08ab9ef5c7ebe80ed42e85e6cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26378be46e6b112">
+		<description>Star Fire - Meteor Dance (13-11-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Meteor Dance (13-11-2002) (MP).a26" size="8192" crc="819ab26d" sha1="378be46e6b112b3fc3ce2d9c183dcb432da7c2a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2630606e6c4bca9">
+		<description>Star Fire - Meteor Dance 2 (18-11-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Meteor Dance 2 (18-11-2002) (MP).a26" size="8192" crc="0c72c620" sha1="30606e6c4bca9a1fc77b224f9fd7deb13630865d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ada6b432c68a4">
+		<description>Star Fire - New Paulstar WIP (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - New Paulstar WIP (MP).a26" size="4096" crc="a911ec59" sha1="ada6b432c68a44b25a9f7c3a1fcfc2feb75ac038"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c236ba9d909c7">
+		<description>Star Fire - New Shields (03-04-2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - New Shields (03-04-2003) (MP).a26" size="8192" crc="be41838f" sha1="c236ba9d909c729f2471ff0c1ae0e118c4043905"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c78c4cba74bb5">
+		<description>Star Fire - Paulstar WIP (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Paulstar WIP (MP).a26" size="4096" crc="1d044a6d" sha1="c78c4cba74bb52f3820d499b10cc606634b1190c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268e221a008f900">
+		<description>Star Fire - Radar Completed (22-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Radar Completed (22-10-2002) (MP).a26" size="8192" crc="7e28c88f" sha1="8e221a008f900366e53b17f32f3e52676d666010"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2648a082d59af12">
+		<description>Star Fire - Reduced Flickering (06-10-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Reduced Flickering (06-10-2002) (MP).a26" size="8192" crc="3ed0d9ea" sha1="48a082d59af128bac88e8b8a442871564f3452b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26317554f54c4df">
+		<description>Star Fire - Return of the Crosshair (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Return of the Crosshair (MP).a26" size="4096" crc="851089e6" sha1="317554f54c4df0d4b665dea1aa89528d2d19a0c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c4cc7f5e10c82">
+		<description>Star Fire - Return of the Starfield (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Return of the Starfield (MP).a26" size="4096" crc="719f458a" sha1="c4cc7f5e10c82b764011b35bf0f9a6ae7a89616b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263234e78a1876e">
+		<description>Star Fire - Shootable (26-09-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Shootable (26-09-2002) (MP).a26" size="8192" crc="953bd39c" sha1="3234e78a1876e396aea4a184cb92b12260cbfb4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265854d0ba175a3">
+		<description>Star Fire - Shootable (Friendlier Collision Detection) (26-09-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Shootable (Friendlier Collision Detection) (26-09-2002) (MP).a26" size="8192" crc="8f281abf" sha1="5854d0ba175a300e65ab7dbefd0665b1f03955d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a4ab3f955af2">
+		<description>Star Fire - Sorting Fixed (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Sorting Fixed (MP).a26" size="4096" crc="5bcad2dd" sha1="6a4ab3f955af28fc7afdd24af079225478801dc0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b6bdf61d34d3a">
+		<description>Star Fire - Star Background (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Fire - Star Background (MP).a26" size="4096" crc="fa322acf" sha1="b6bdf61d34d3a31886a5d446c7c82838d3e23cfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264fd91ae4ea808">
+		<description>Star Fire - Warping Star (13-04-2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Warping Star (13-04-2003) (MP).a26" size="8192" crc="6fbca91b" sha1="4fd91ae4ea8080e4fa662abe4e73a00c52060417"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608687ff875df1">
+		<description>Star Fire - Warping!! (10-04-2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire - Warping!! (10-04-2003) (MP).a26" size="8192" crc="98d04e17" sha1="08687ff875df1883c1e08d261912027b0e33bc7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267f2bcdc66a5ae">
+		<description>Star Fire - Warping!! (13-04-2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Star Fire - Warping!! (13-04-2003) (MP).a26" size="2048" crc="81c8bd7f" sha1="7f2bcdc66a5ae72284b2dfc9e4b0cfe67729f36d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261db5271e6005e">
+		<description>Star Fire RC #01 (2002) (XYPE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire RC #01 (2002) (XYPE).a26" size="8192" crc="ca611bca" sha1="1db5271e6005e2287b61bb641e4a3645e8fe5b76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e5301c0ec6afc">
+		<description>Star Fire RC #03 (2002) (XYPE) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire RC #03 (2002) (XYPE) (PAL).a26" size="8192" crc="d5e9e8a5" sha1="e5301c0ec6afc733f5f28511705b0e77d2dde8a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb9e97a3f0432">
+		<description>Star Fire RC #03 (2002) (XYPE) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire RC #03 (2002) (XYPE) [a1].a26" size="8192" crc="d46a68e5" sha1="bb9e97a3f0432b54267c0b3eefbfb5d5fb53f68a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268ccd675a76714">
+		<description>Star Fire RC #04 (2002) (XYPE) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire RC #04 (2002) (XYPE) (PAL).a26" size="8192" crc="a5ba042d" sha1="8ccd675a7671414657d29b11235e67020925a66f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26df1722bd21817">
+		<description>Star Fire RC3a (2002) (XYPE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire RC3a (2002) (XYPE).a26" size="8192" crc="8fffa1ca" sha1="df1722bd21817152dac72190ff2e093ec420ffe9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2662821b5573609">
+		<description>Star Fire RC5_Mac (2002) (XYPE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire RC5_Mac (2002) (XYPE).a26" size="8192" crc="8838092a" sha1="62821b557360924a8fea8916b77f108a6cc9457f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db3cfd1a81703">
+		<description>Star Fire Release candidate #02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire Release candidate #02.a26" size="8192" crc="8cbd2ff5" sha1="db3cfd1a8170395ec69dcba28bd8bc1e1464ca8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262e29955e58de8">
+		<description>Star Fire Release Candidate #04 Bugfix #01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire Release Candidate #04 Bugfix #01.a26" size="8192" crc="4c35514e" sha1="2e29955e58de87bccc04bdbef266e2eb5374ccbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f1f4b2cf9b604">
+		<description>Star Fire Release Candidate #04 NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire Release Candidate #04 NTSC.a26" size="8192" crc="9f6a1f31" sha1="f1f4b2cf9b60421a9563df17705a02fbb6ccc802"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b9492807619a8">
+		<description>Star Fire Release Candidate #05 NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire Release Candidate #05 NTSC.a26" size="8192" crc="a10dadf9" sha1="b9492807619a8f73e1deb2f2f30eccf778f33242"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa82d5378f2c4">
+		<description>Star Fire Release Candidate #05 PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Fire Release Candidate #05 PAL.a26" size="8192" crc="b89152fc" sha1="aa82d5378f2c476717a34392a20fb96281781e6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2680e8e821d5ca6">
+		<description>Star Hawk 4k 20070929</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Hawk 4k 20070929.a26" size="4096" crc="fe2a2526" sha1="80e8e821d5ca67c968fead1724d89d67926496e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f480f798f3afa">
+		<description>Star Master new</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Master new.a26" size="4096" crc="adfcb11d" sha1="f480f798f3afab7437b936bbbf50083aa4beb650"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263554a66080cb8">
+		<description>Star Master old</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Master old.a26" size="4096" crc="2661a731" sha1="3554a66080cb8df2e44411f9ade4118fcce01d11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d2b6290afb81b">
+		<description>Star Ship (AKA Outer Space) (1977) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Ship (AKA Outer Space) (1977) (Atari) [o1].a26" size="4096" crc="f9182266" sha1="d2b6290afb81bad126321d923d222c26e2de5fa8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e80eaaf4b2942">
+		<description>Star Voyager (1982)(Imagic)(NTSC)[f Supercharger-PAL switch Nukey Shay]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Voyager (1982)(Imagic)(NTSC)[f Supercharger-PAL switch Nukey Shay].bin" size="4096" crc="e60d435b" sha1="e80eaaf4b2942bcccd7b98237a429fe23fd69f11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d915c2ce465a">
+		<description>Star Wars (Space Invaders Hack) 20031220</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Wars (Space Invaders Hack) 20031220.a26" size="4096" crc="e88a07b0" sha1="7d915c2ce465a141a10269a3b731f90b895e581b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dfcb4c2f58c34">
+		<description>Star Wars - Return of the Jedi - Death Star Battle (1983) (Parker Bros) [hMF6][a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars - Return of the Jedi - Death Star Battle (1983) (Parker Bros) [hMF6][a1].a26" size="16384" crc="824d35ff" sha1="dfcb4c2f58c34536591b38a5e426553a0295cb01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265ed259e15f9f6">
+		<description>Star Wars - Return of the Jedi - Ewok Adventure (1983) (Parker Bros) (Prototype) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Wars - Return of the Jedi - Ewok Adventure (1983) (Parker Bros) (Prototype) [f1] (NTSC by TJ).a26" size="8192" crc="6ee8e4e1" sha1="5ed259e15f9f6f6b7ffe2987be4bb341acc78af9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a4b957969c51">
+		<description>Star Wars - Return of the Jedi - Ewok Adventure (1983) (Parker Brothers) (Prototype) (PAL) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars - Return of the Jedi - Ewok Adventure (1983) (Parker Brothers) (Prototype) (PAL) [a1].a26" size="16384" crc="513cc101" sha1="6a4b957969c514fc23af047b89a67a05dd564244"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2611aabc95bbfea">
+		<description>Star Wars - Return of the Jedi - Ewok Adventure (1983) (Parker Brothers) (Prototype) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars - Return of the Jedi - Ewok Adventure (1983) (Parker Brothers) (Prototype) [a1].a26" size="16384" crc="5ecb6202" sha1="11aabc95bbfead632089d35ca974eb384206d4a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26375be0a27f660">
+		<description>Star Wars - The Arcade Game (1983) (Parker Bros) [hMF6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars - The Arcade Game (1983) (Parker Bros) [hMF6].a26" size="16384" crc="cbbe2266" sha1="375be0a27f6603605c9587c2fafc8ce0f241f40e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b0142f850ac7">
+		<description>Star Wars - The Arcade Game - Reversed Control Scheme (Hack) [hMF6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars - The Arcade Game - Reversed Control Scheme (Hack) [hMF6].a26" size="16384" crc="2ff94118" sha1="9b0142f850ac7ab924e7a66d5dbd143d161354da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264be17e5d9e3da">
+		<description>Star Wars - The Battle of Alderaan by Barry Laws Jr. (Star Strike Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Wars - The Battle of Alderaan by Barry Laws Jr. (Star Strike Hack).a26" size="4096" crc="97403039" sha1="4be17e5d9e3dab73053bbf1aa74ec4d861cb61be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f43a599baa139">
+		<description>Star Wars - The Empire Strikes Back (SuperCharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Wars - The Empire Strikes Back (SuperCharger).a26" size="4096" crc="48b05d9c" sha1="f43a599baa139f4b990b6adbf69a45e3e825a0da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ef1cb21c18569">
+		<description>Star Wars - The Empire Strikes Back - Crappy Scout Walker Attack!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star Wars - The Empire Strikes Back - Crappy Scout Walker Attack!.a26" size="4096" crc="e033641e" sha1="ef1cb21c185699640fdfe9529363261dcee07c81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2674675b7e25bbf">
+		<description>Star Wars 2005-05-20old (Star Ship Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Star Wars 2005-05-20old (Star Ship Hack).a26" size="2048" crc="04513ed7" sha1="74675b7e25bbfa1f4c5c0ee3c07469c0453d333d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c2fa97cd83e4c">
+		<description>Star Wars Arcade Game Hack - Reversed Control Scheme</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Wars Arcade Game Hack - Reversed Control Scheme.a26" size="8192" crc="ad7645a6" sha1="c2fa97cd83e4c17741efecc7bfd44ea9de5615af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c3e8665a64ff4">
+		<description>Star Wars Death Star Battle (NTSC, F6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars Death Star Battle (NTSC, F6).a26" size="16384" crc="b1c3c01c" sha1="c3e8665a64ff42e5af99461687b312fa5019095a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262d23aa0ecb888">
+		<description>Star Wars Deathstar F6 (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars Deathstar F6 (PAL).a26" size="16384" crc="157d995c" sha1="2d23aa0ecb88836a561957ee90af6065a7ef68d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c5487a2e2d780">
+		<description>Star Wars Escape from Hoth (Asteroids Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Wars Escape from Hoth (Asteroids Hack) [a1].a26" size="8192" crc="8fa3eccc" sha1="c5487a2e2d78090fdc47e953c95ff21eb47424f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2600bcd75088111">
+		<description>Star Wars F6 (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars F6 (PAL).a26" size="16384" crc="8cddb92e" sha1="00bcd750881110dcebb0971f3d1f28c036d16705"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a882beb10ac76">
+		<description>Star Wars F6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars F6.a26" size="16384" crc="b3d2838c" sha1="a882beb10ac76f927ca16f4eff3b9f3d9ed21c43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26186e6bbaf6633">
+		<description>Star Wars Galaxian by Jamcat (Galaxian Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star Wars Galaxian by Jamcat (Galaxian Hack).a26" size="8192" crc="84bcf391" sha1="186e6bbaf6633a1019f40125b651816e9aa294e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be80329219022">
+		<description>Star Wars Hack [2005-05-19]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Star Wars Hack [2005-05-19].a26" size="2048" crc="6c04dfce" sha1="be8032921902289d680857984cb1a3ec2d645526"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d96ea2bc02068">
+		<description>Star Wars Hack [2005-05-20]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Star Wars Hack [2005-05-20].a26" size="2048" crc="ee62b0ea" sha1="d96ea2bc020681ea506c14bff2b5fe810789cad9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2646c8ac7a02c67">
+		<description>Star3 (Star Ship Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Star3 (Star Ship Hack).a26" size="2048" crc="2ae380e2" sha1="46c8ac7a02c67eaf14d42162ffba37285390780f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f5156dfc4a57">
+		<description>starbox</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="starbox.a26" size="4096" crc="53e4cbf5" sha1="6f5156dfc4a5786b9ae8e5c7782e813df86e7823"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f4c15091e2bd">
+		<description>starbox2k.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="starbox2k.bas.a26" size="2048" crc="136b6085" sha1="6f4c15091e2bdc4e066c65813b9058b249196192"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261bb04551220dd">
+		<description>starbox2ks</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="starbox2ks.a26" size="2048" crc="47e93395" sha1="1bb04551220dd726481dc0488beea673ab212aa3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2638389f796d471">
+		<description>Starbox_beta1_(BAtari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starbox_beta1_(BAtari).bin" size="4096" crc="9fe0f4a7" sha1="38389f796d471875707acd848ccb61d7525dce97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2611897de386035">
+		<description>Starfield (V1.0) (2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starfield (V1.0) (2002) (MP).a26" size="4096" crc="df27ab6c" sha1="11897de3860354694f01c0c4ac0ee06254b8d728"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267874b012393c9">
+		<description>Starfield Demo 1 (20-12-2002) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starfield Demo 1 (20-12-2002) (CT).a26" size="4096" crc="9e2aa517" sha1="7874b012393c9e7ee5cda0012594219d642a048d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f85047d253d91">
+		<description>Starfield Demo 2 (20-12-2002) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starfield Demo 2 (20-12-2002) (CT).a26" size="4096" crc="50074969" sha1="f85047d253d91316af1f2637e6999b6d4a27d6ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ffab698505de9">
+		<description>Starfire (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Starfire (PD).a26" size="8192" crc="ea5dab80" sha1="ffab698505de911906c38d22e22eae062040c96c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260161a0716d216">
+		<description>StarFireReleaseCandidate_03_starRC3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="StarFireReleaseCandidate_03_starRC3.a26" size="8192" crc="dc59bb3a" sha1="0161a0716d2161a13892d4663e7a335ab140e5e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263cfe3db8d7041">
+		<description>Starfire_PAL_Beta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Starfire_PAL_Beta.a26" size="8192" crc="0948ad28" sha1="3cfe3db8d7041b8fb6621c240b424f4050403140"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fc4aae338a32a">
+		<description>Starfleet Academy (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starfleet Academy (Space Invaders Hack).a26" size="4096" crc="9009e343" sha1="fc4aae338a32a1d3156f5a10d14cfc07903c1b53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267a926378be44b">
+		<description>starhawk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="starhawk.a26" size="2048" crc="0cdaaefc" sha1="7a926378be44bce7146c89abd56f598674097146"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26df47f7bae4f47">
+		<description>starhawk_pal60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="starhawk_pal60.a26" size="2048" crc="09d2bb35" sha1="df47f7bae4f4703f668797f21f6673bcbf649e63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265cffcfea52d3d">
+		<description>Starmaster_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starmaster_NTSC(Supercharger).a26" size="4096" crc="95b645d0" sha1="5cffcfea52d3d5212b1104d51b63c1df65a99657"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b880cb90aedd8">
+		<description>Starmaster_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starmaster_PAL60(Supercharger).a26" size="4096" crc="df3d394a" sha1="b880cb90aedd84ee574ad26061455cbd280f7671"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bfa157ac17547">
+		<description>Starship 2 continued</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starship 2 continued.a26" size="4096" crc="71f61971" sha1="bfa157ac175479189b159a491935dd7d1ce83398"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26854d7da6068cd">
+		<description>Starship Proof of Concept (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Starship Proof of Concept (PD).a26" size="4096" crc="a285764b" sha1="854d7da6068cdd226f798f011222ab2a37d498a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ee00a4cb63fb">
+		<description>StarWars_DroidWorld</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="StarWars_DroidWorld.a26" size="4096" crc="3b2ce6e0" sha1="2ee00a4cb63fb04014ee94b41953012de9330f0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2631ad09273cf46">
+		<description>Star_Fox(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Fox(Supercharger).a26" size="4096" crc="57884b2b" sha1="31ad09273cf46a7b17aa994a4059fcdf879e38b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2662ceb0a814a0c">
+		<description>Star_Strike-NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Strike-NTSC(Supercharger).a26" size="4096" crc="c892557c" sha1="62ceb0a814a0c7090c9441a5d591899e56eaa3fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26214425b5f79e8">
+		<description>Star_Trek_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star_Trek_3.a26" size="8192" crc="58fd671c" sha1="214425b5f79e8951a04e6e391e52ec58f5c6df4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26259d51fefa2e4">
+		<description>Star_Trek_Journey_Dalo4_Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Trek_Journey_Dalo4_Hack.a26" size="4096" crc="1a33bb2c" sha1="259d51fefa2e43ac92f8618304162e9abde0123c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261dbbde939b9a2">
+		<description>Star_Wars-Jedi_Arena_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Wars-Jedi_Arena_NTSC(Supercharger).a26" size="4096" crc="22f84a13" sha1="1dbbde939b9a2341d94b4ade24fd1d19931f83ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266b2ebe989fbef">
+		<description>Star_Wars_Dark_Empire_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Wars_Dark_Empire_1.a26" size="4096" crc="b4ee7664" sha1="6b2ebe989fbef94d328d704362a318a3bd1416ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261426e239b046b">
+		<description>Star_Wars_Dark_Empire_1a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Wars_Dark_Empire_1a.a26" size="4096" crc="eab23392" sha1="1426e239b046be7fa4a39e6462d7b3a73d66181d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266eec4bff15b46">
+		<description>Star_Wars_Empire__s_missing_ship_Hack_Fabventure_2600</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Wars_Empire__s_missing_ship_Hack_Fabventure_2600.a26" size="4096" crc="9be2f5ca" sha1="6eec4bff15b4655b2df16d3916956147ecf4b862"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2638c6869e05ccb">
+		<description>Star_Wars_Invaders_Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Wars_Invaders_Hack.a26" size="4096" crc="6d03e6bb" sha1="38c6869e05ccb614ab010f3ebd52da6dff96d11c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263e18cd0c0e8d5">
+		<description>Star_Wars___Dark_Empire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Wars___Dark_Empire.a26" size="4096" crc="35c0fea8" sha1="3e18cd0c0e8d560299b690911fb48af841c3137c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260388927e1fab5">
+		<description>Star_Wars___Episode_2_Clone_Wars</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Star_Wars___Episode_2_Clone_Wars.a26" size="4096" crc="81ed7e20" sha1="0388927e1fab5e03f788aff30780d0fef9af6e2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b923023018705">
+		<description>Star_Wars___Escape_from_Hoth</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Star_Wars___Escape_from_Hoth.a26" size="8192" crc="355bbab8" sha1="b923023018705a7651109599bcba007a19f95cae"/>
 			</dataarea>
 		</part>
 	</software>

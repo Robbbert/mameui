@@ -1,7 +1,67 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 11 -->
+<!-- Number of items in this list = 28 -->
 <softwarelist name="pv2000" description="pv2000 loose roms">
+	<software name="pv2381f7efd9582d">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="aerial.rom" size="16384" crc="e3026aab" sha1="381f7efd9582d2984fb58da9b6ff63d92cc537ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv223e9626a9e876">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="antiair.rom" size="8192" crc="f8672e01" sha1="23e9626a9e876b35732648c1726d40e358f46bd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv28f47f12c8e281">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ascend.rom" size="16384" crc="174db04c" sha1="8f47f12c8e28152460ef021c499cbe8d9b99782b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv22c647e455c570">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="battlot.rom" size="16384" crc="ba3daa47" sha1="2c647e455c570f5a02f6c5b89aa740dc9d83c9d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2736b928771c4a">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="bootskell.rom" size="16384" crc="4a5c930c" sha1="736b928771c4abcc8ec3e68bf80c05cda7b90608"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2d1c4e058b623e">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cacorm.rom" size="16384" crc="c92810f8" sha1="d1c4e058b623e3e94a84dd4b7b13036a2b2a345f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv291b3bcb89e411">
 		<description>CasioBasic</description>
 		<year>????</year>
@@ -9,6 +69,26 @@
 		<part name="cart" interface="pv2000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="CasioBasic.bin" size="16384" crc="69a92b72" sha1="91b3bcb89e411cf5d13b2be46b48a3a739b8c219"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2145ace0108607">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cavit.rom" size="16384" crc="7f3acd9f" sha1="145ace0108607df1399f3dbc9840c10c96ad3764"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv200caef61ebdca">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="cracky.rom" size="8192" crc="72803684" sha1="00caef61ebdcac13b84265d933aef0b4db36fabc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,6 +162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pv264c823a26d0e0">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="guntus.rom" size="16384" crc="15e42ae0" sha1="64c823a26d0e093c7d2fd708efcd1cadec4c77a4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv2cfa8814876a9a">
 		<description>H-tron</description>
 		<year>????</year>
@@ -89,6 +179,36 @@
 		<part name="cart" interface="pv2000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="H-tron.rom" size="16384" crc="32a665b3" sha1="cfa8814876a9a1d15fe7ef00dbc0ce2617dff49e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv267f0186f8d81c">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="hopman.rom" size="16384" crc="42b2487e" sha1="67f0186f8d81ccf70af139a24df00c31d7f45afc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv287c0212ebbf63">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="impetus.rom" size="16384" crc="10feb626" sha1="87c0212ebbf63f898555141ff8c007ef14f254b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2a1ff4c3c0bff6">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lift.rom" size="8192" crc="3430f9b1" sha1="a1ff4c3c0bff67e39821800dd9e74e723485b6a7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -102,6 +222,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pv2ba276a8d40455">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="mazy.rom" size="8192" crc="e62deaf8" sha1="ba276a8d404551322faf873ff3bd088b5d28b453"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv29804289045422">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="neuras.rom" size="16384" crc="94271d03" sha1="9804289045422e70a953fadfaeaf5acbf63908be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv277941648dfec0">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="osotos.rom" size="16384" crc="32b1ca8c" sha1="77941648dfec08a726c97fbeb30f7a3513b9b957"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv254a543d08e865">
 		<description>Rakugaki Special</description>
 		<year>????</year>
@@ -109,6 +259,26 @@
 		<part name="cart" interface="pv2000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Rakugaki Special.bin" size="16384" crc="a34d1bd1" sha1="54a543d08e865c85c32358edce8a6fcfa3ad9fcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2081faaceef6c5">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ruptus.rom" size="16384" crc="e35a4a1e" sha1="081faaceef6c57ede06dfb0ab649ab7bc21bdf77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2d0904d0d92225">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="yewdow.rom" size="16384" crc="2eaba24a" sha1="d0904d0d922255d4c0e34953e302a690327602ba"/>
 			</dataarea>
 		</part>
 	</software>

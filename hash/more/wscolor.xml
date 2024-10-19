@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 56 -->
+<!-- Number of items in this list = 73 -->
 <softwarelist name="wscolor" description="wscolor loose roms">
 	<software name="wscf1ccdb96d67a8">
 		<description>(demo)finally.emu</description>
@@ -42,6 +42,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsc99c6fdc0c621c">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="aerial.wsc" size="65536" crc="bf82e724" sha1="99c6fdc0c621c6d687cd3e0c9911d929e494009a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscdd9b7c873493b">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="antiair.wsc" size="65536" crc="74d335ff" sha1="dd9b7c873493b0658fcc4cf28ae68f3d3c0f249d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc60a1948214b3f">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="ascend.wsc" size="65536" crc="c8c85ce9" sha1="60a1948214b3fd31944f64f752151c988d20a012"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc2217da1ed2030">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="battlot.wsc" size="65536" crc="71ae7cfa" sha1="2217da1ed2030e916ff395bc99992ac800f11eb1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wscad9add88bedf7">
 		<description>BG1 + BG2 + Sprite Test (200x)(-)(PD)</description>
 		<year>????</year>
@@ -49,6 +89,36 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="BG1 + BG2 + Sprite Test (200x)(-)(PD).wsc" size="1048576" crc="bf8e0ebc" sha1="ad9add88bedf7c5faece6d8ccc009c91b6d8f34e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc156dbda1d6dee">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="bootskell.wsc" size="65536" crc="e1e77041" sha1="156dbda1d6deebc5a8cf5b3e6eb51d29dc2001e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc8f1ddb6676798">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="cacorm.wsc" size="65536" crc="e070c5b7" sha1="8f1ddb66767980edf7fbf10c7cf5206e0ab34f6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscc0ecaa38eb578">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="cavit.wsc" size="65536" crc="935569b7" sha1="c0ecaa38eb57815a4b1ff44748bb38cee6ef85d5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -99,6 +169,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Color Test Demo (2001)(Sir Dragoon)(PD).wsc" size="1048576" crc="318f11ad" sha1="14db0ccad4d823a1043f694b2df383a92be49fc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscf0d2686ecc9ce">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="cracky.wsc" size="65536" crc="ea2b2b74" sha1="f0d2686ecc9ce0fc614d1b7b32fab6a4d6db8f24"/>
 			</dataarea>
 		</part>
 	</software>
@@ -292,6 +372,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsc92ed4976f6e62">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="guntus.wsc" size="65536" crc="3a7477a0" sha1="92ed4976f6e62aaacbbaaae4afce02d19654e1ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscdf0bb453c6659">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="hopman.wsc" size="65536" crc="98a64a76" sha1="df0bb453c6659799f97812cc309b00cd7dd69036"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc57c8642f1ef7b">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="impetus.wsc" size="65536" crc="c1742dcf" sha1="57c8642f1ef7b564c4c508f7e89ed42d65c389bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wscf966518b23b68">
 		<description>Jbkun Test 16 for WWWLib (2004)(Jbkun)(PD)</description>
 		<year>????</year>
@@ -352,6 +462,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsc4f84aa82640f2">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="lift.wsc" size="65536" crc="2e2bc476" sha1="4f84aa82640f230b2178fed800e5543f5b8f434a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscd7dd04a77d8c0">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="mazy.wsc" size="65536" crc="2620c258" sha1="d7dd04a77d8c0edee79df61a3cd7f308fdde611d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wsc79f7821791d99">
 		<description>Mega Man Battle Network WS (Japan) [T-En by Boco & Greiga Master & Megarockexe v1.0] [n]</description>
 		<year>????</year>
@@ -369,6 +499,36 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Mr. Driller (2001-04-05)(Namco)[tr en PmHacks][v0.70-20031209].wsc" size="2097152" crc="61e7ed03" sha1="a6e40a8aac557c443a241c3cbc83a104e9ce7032"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc9295781440ccc">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="neuras.wsc" size="65536" crc="6034ae09" sha1="9295781440ccc9d2b2c18475cc6e200557667d03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscf4bc63759b0be">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="osotos.wsc" size="65536" crc="94346aa3" sha1="f4bc63759b0be66713ea54ec6e478fdd48b119a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsceb06bf6ca0166">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="ruptus.wsc" size="65536" crc="8dd1bd8a" sha1="eb06bf6ca0166287a065cc34606735ca2b3f4813"/>
 			</dataarea>
 		</part>
 	</software>
@@ -559,6 +719,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Working Chocobo (Japan) [T-En by Higsby & SpecialAgentApe & Sliter v1.01] [n].wsc" size="1048576" crc="b6528093" sha1="580be88475d0fe5acc0629b42278df9e97d9a98f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc9c596cef11309">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="yewdow.wsc" size="65536" crc="d402cc7c" sha1="9c596cef113098a49d16ddded15b62b0f823d958"/>
 			</dataarea>
 		</part>
 	</software>

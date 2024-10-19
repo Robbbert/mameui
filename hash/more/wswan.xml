@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 32 -->
+<!-- Number of items in this list = 49 -->
 <softwarelist name="wswan" description="wswan loose roms">
+	<software name="wsa98a210fce5762">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="aerial.ws" size="65536" crc="beb77475" sha1="a98a210fce57624940c8350ea6f445cf6d98297b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws745f7c8629b60b">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="antiair.ws" size="65536" crc="90940ec3" sha1="745f7c8629b60bd2fd7115ab220aad86ce1456ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wsae5e4f06f07fe1">
 		<description>Armored Unit (swj-sum003)</description>
 		<year>????</year>
@@ -9,6 +29,56 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Armored Unit (swj-sum003).bin" size="524288" crc="c11639af" sha1="ae5e4f06f07fe13a48f414a1cd437a816e9ad2e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsea93b045de1850">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="ascend.ws" size="65536" crc="b38a3274" sha1="ea93b045de18506962f1c6248b75dc5b2c058d6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws1d978ebe1fcca4">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="battlot.ws" size="65536" crc="46e849bc" sha1="1d978ebe1fcca41f1157dbfbba29c5919ae0cc53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws1c85323da90c41">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="bootskell.ws" size="65536" crc="f229179a" sha1="1c85323da90c41c00bf21328a9d14404f7e09801"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsa40cb8d579a1bc">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="cacorm.ws" size="65536" crc="e9c24868" sha1="a40cb8d579a1bc88dbb1e4a19efa666b86776ce7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws040da5f5239134">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="cavit.ws" size="65536" crc="1923533c" sha1="040da5f5239134a0840b4b2234012433e677e3b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39,6 +109,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Clock Tower (swj-kgt002).bin" size="2097152" crc="a9936941" sha1="4ba44f23d3b43ee730ce34d56f4cadaf429b6d1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws0323adb8a74046">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="cracky.ws" size="65536" crc="3071302b" sha1="0323adb8a740466f7d2b6f29dc55acaee357be48"/>
 			</dataarea>
 		</part>
 	</software>
@@ -112,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsce210bb3cd1af1">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="guntus.ws" size="65536" crc="73606df2" sha1="ce210bb3cd1af115bd0ac85b4ad3c73370657fc0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ws1db78ac860652e">
 		<description>Hello World (2001)(Sir Dragoon)(PD)</description>
 		<year>????</year>
@@ -119,6 +209,26 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Hello World (2001)(Sir Dragoon)(PD).ws" size="1048576" crc="f207546c" sha1="1db78ac860652e4a1380f2a850e6e32e992bc3dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws031a46a15f82fb">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="hopman.ws" size="65536" crc="6940f266" sha1="031a46a15f82fb724f69d56b8303d0045e1341c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws4088379081b5eb">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="impetus.ws" size="65536" crc="e1805452" sha1="4088379081b5eb9f08699daacc204d9e7170bfc1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -132,6 +242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsedc10910b11585">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="lift.ws" size="65536" crc="f0f01d44" sha1="edc10910b115854777daa40bdc9a79882f490c16"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ws91595cd5d5192d">
 		<description>Lode Runner (swj-bpr004)</description>
 		<year>????</year>
@@ -139,6 +259,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Lode Runner (swj-bpr004).bin" size="524288" crc="e407cabf" sha1="91595cd5d5192db50eda883157852ff81994990c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws913560fe992c99">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="mazy.ws" size="65536" crc="1fb6fa7a" sha1="913560fe992c99fb8cd3ddfa44ed3cacaa2569d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -162,6 +292,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ws9f24f9aa6a53d8">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="neuras.ws" size="65536" crc="23d4662e" sha1="9f24f9aa6a53d876059bccccd3fe81abd0aca51b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws243a1f1a23a4c8">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="osotos.ws" size="65536" crc="c6f9c2ba" sha1="243a1f1a23a4c85009e195c71a7d158aa751b028"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wsa411ad38d0b6fe">
 		<description>Rockman & Forte - Challenger from the Future (Japan) [T-En by NikcDC v1.2.1] [n]</description>
 		<year>????</year>
@@ -179,6 +329,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Rockman & Forte - Mirai Kara no Chousensha (1999-10-28)(Bandai)[t +5 Sekret][f SRAM Sekret][SWJ-BAN013].bin" size="2097152" crc="4288fca5" sha1="7fff4d4143da31c73a4b2ffde0dfcd5286fa1c24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ws1e124324233c66">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="ruptus.ws" size="65536" crc="f9711735" sha1="1e124324233c66a9f916a3ad5a1ce3f04a001a25"/>
 			</dataarea>
 		</part>
 	</software>
@@ -319,6 +479,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Walking Dudes Demo v1 (2002)(zalas)(PD).ws" size="1048576" crc="a1fa7eff" sha1="f7916aca81d957ad76e9b57d7f04ac10583ab318"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsdc17ed7a081085">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="yewdow.ws" size="65536" crc="3d97d31b" sha1="dc17ed7a081085089cfd1f1baba4e4047a111ae9"/>
 			</dataarea>
 		</part>
 	</software>

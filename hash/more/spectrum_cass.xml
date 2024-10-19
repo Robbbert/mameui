@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 726 -->
+<!-- Number of items in this list = 789 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -19,6 +19,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="84661">
 				<rom name="(demo)70908 128K (2019)(Scopex).tap" size="84661" crc="e2268f42" sha1="4c55e94884563ba91cfe0375c03c8d85dff63668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs51ff809719537">
+		<description>007 - Live and Let Die 128K (1988)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="62379">
+				<rom name="007 - Live and Let Die 128K (1988)(Domark).tap" size="62379" crc="5f21da6b" sha1="51ff809719537458f988e20a6c4cb0bcb4949ed6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs33ae593e7a9d6">
+		<description>007 - The Spy Who Loved Me 128K (1990)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="129851">
+				<rom name="007 - The Spy Who Loved Me 128K (1990)(Domark).tap" size="129851" crc="629c140c" sha1="33ae593e7a9d603b98b59c53425d79e203aee4a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2062,6 +2082,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs371b8fb228cb1">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11508">
+				<rom name="aerial.tzx" size="11508" crc="34f17339" sha1="371b8fb228cb1883961e2624a1eeefe20db0b5b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs25adbba6e0f2e">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3647501">
+				<rom name="aerial.wav" size="3647501" crc="4ad74495" sha1="25adbba6e0f2e6ed19e8e45158de4d6414607240"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsde8610b98bbed">
 		<description>Aero Pal</description>
 		<year>????</year>
@@ -3782,6 +3822,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs141704427f738">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7591">
+				<rom name="antiair.tzx" size="7591" crc="88f9e21d" sha1="141704427f73888074e5c44f80e2626f7ca46538"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44ef1f30040db">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2651165">
+				<rom name="antiair.wav" size="2651165" crc="97a46153" sha1="44ef1f30040dbbf6cf73c0ac0fc6dec8fdbdd83d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs45408a78596fe">
 		<description>Antiquity Jones 48K (2012)(Paul Jenkinson)</description>
 		<year>????</year>
@@ -3979,6 +4039,556 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15872">
 				<rom name="Aquarius (1983)(Bug-Byte Software)[a].tap" size="15872" crc="62966acd" sha1="239bbb5548339657451b66a00f77903cb2a1de68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs05c89d1dbd11a">
+		<description>Arc Of Yesod, The (1985)(Odin Computer Graphics)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="74016">
+				<rom name="Arc Of Yesod, The (1985)(Odin Computer Graphics)(128k).tap" size="74016" crc="b4c5351b" sha1="05c89d1dbd11afbf697bdc82ef6f35d862377fc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb9c4432b17d75">
+		<description>Arc Of Yesod, The (1985)(Odin Computer Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37857">
+				<rom name="Arc Of Yesod, The (1985)(Odin Computer Graphics).tap" size="37857" crc="7c8c1e4f" sha1="b9c4432b17d7577322e34f8a39c6d15faabb47a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse14179326a170">
+		<description>Arcade Flight Simulator (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48526">
+				<rom name="Arcade Flight Simulator (1989)(Codemasters).tap" size="48526" crc="834a6586" sha1="e14179326a17093bbf2e7bc67250f9abe0ba6265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f6da74ed474a">
+		<description>Arcade Fruit Machine (1990)(Zeppelin Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51425">
+				<rom name="Arcade Fruit Machine (1990)(Zeppelin Games)[a].tap" size="51425" crc="0311292f" sha1="0f6da74ed474acf431ccd79a1581093d0e19692d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9d8f70d37e630">
+		<description>Arcade Trivia Quiz (1989)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="109610">
+				<rom name="Arcade Trivia Quiz (1989)(Zeppelin Games).tap" size="109610" crc="0cba3a49" sha1="9d8f70d37e630fdefcb6d676dabf68a8161875f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs676823641b425">
+		<description>Arcade ZX Collection - Botanic 48K (2022)(Bubu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26024">
+				<rom name="Arcade ZX Collection - Botanic 48K (2022)(Bubu).tap" size="26024" crc="a4ac4eef" sha1="676823641b4259cfc7af98dcf6e2b16d6dfdcbff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaffadef10c564">
+		<description>Arcade ZX Collection - Tetris 48K (2021)(Bubu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37111">
+				<rom name="Arcade ZX Collection - Tetris 48K (2021)(Bubu).tap" size="37111" crc="c1896fba" sha1="affadef10c56442ad1ae5614417cf00432d193af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs588e08d2ba346">
+		<description>Arcadia (1982)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8498">
+				<rom name="Arcadia (1982)(Imagine Software).tap" size="8498" crc="eea25dcb" sha1="588e08d2ba3466eb71c87486aea4f3482739e2e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsac423c88e5b9e">
+		<description>Arcadia (1982)(Imagine Software)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8382">
+				<rom name="Arcadia (1982)(Imagine Software)[a2].tap" size="8382" crc="580559f5" sha1="ac423c88e5b9e7073f6cf2e18eedde3a504b899d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3868d4c091fec">
+		<description>Arcadia (1982)(Imagine Software)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8498">
+				<rom name="Arcadia (1982)(Imagine Software)[a3].tap" size="8498" crc="b5d98e98" sha1="3868d4c091feca012092266082731143ed76ab78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2944ce7b2d9fb">
+		<description>Arcadia (1982)(Imagine Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8498">
+				<rom name="Arcadia (1982)(Imagine Software)[a].tap" size="8498" crc="46ad1553" sha1="2944ce7b2d9fbe0317266a07943371359f11395a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5414640b18afd">
+		<description>Arcadia (1982)(J.K. Greye Enterprises)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34308">
+				<rom name="Arcadia (1982)(J.K. Greye Enterprises).tap" size="34308" crc="81399fbe" sha1="5414640b18afdd35e9d5b07eb3773658c7119bdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscda51b6139893">
+		<description>Arcadia</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8576">
+				<rom name="Arcadia.tzx" size="8576" crc="3ee5b5f9" sha1="cda51b6139893cd2855c70269962d1516818c7d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a31e01c49231">
+		<description>Archaic (1988)(Spectraxx Tape Magazine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24461">
+				<rom name="Archaic (1988)(Spectraxx Tape Magazine).tap" size="24461" crc="ef4e4c6a" sha1="0a31e01c492315df2008188805ceafa32d6414a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67080d3fd5d77">
+		<description>Archeologist, The (19xx)(Sneesby Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27136">
+				<rom name="Archeologist, The (19xx)(Sneesby Software).tap" size="27136" crc="42aee51d" sha1="67080d3fd5d77faaabc0502954ce6bac196a15bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8814dee926f53">
+		<description>Archeologist, The (19xx)(Sneesby Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26738">
+				<rom name="Archeologist, The (19xx)(Sneesby Software)[a].tap" size="26738" crc="08307eb0" sha1="8814dee926f53825a494b13664185300998cf2f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6db357f17e6fe">
+		<description>Archeomania (2014)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26567">
+				<rom name="Archeomania (2014)(Rafal Miazga).tap" size="26567" crc="15340561" sha1="6db357f17e6fe1caa2d7e14ec2a0344b7c342722"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5a57b3fbb6392">
+		<description>Archon (1983)(Ariolasoft UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36212">
+				<rom name="Archon (1983)(Ariolasoft UK).tap" size="36212" crc="0f401582" sha1="5a57b3fbb6392e0afccff17591b941653c3f46ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81d55bc77af0d">
+		<description>Archon (1983)(Electronic Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50271">
+				<rom name="Archon (1983)(Electronic Arts).tap" size="50271" crc="97a9d660" sha1="81d55bc77af0d29aaefd0987a2e284d2c7ce7eb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb90dd567f2237">
+		<description>Archon 2 - Adept (1983)(Electronic Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32348">
+				<rom name="Archon 2 - Adept (1983)(Electronic Arts).tap" size="32348" crc="9e5430be" sha1="b90dd567f2237762d2e35db44a64447f88ef13b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01c53ffcc6439">
+		<description>Arcturus (1984)(Visions Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49351">
+				<rom name="Arcturus (1984)(Visions Software).tap" size="49351" crc="4b0e93a7" sha1="01c53ffcc64397713f7187d3f062f18afa970186"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs208a4d24147da">
+		<description>tvgame</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33152">
+				<rom name="tvgame.tzx" size="33152" crc="3b14a54a" sha1="208a4d24147da1ba26383ad894a3433d54e2eb80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e530b13ee59c">
+		<description>U.N Squadron (1990)(US Gold Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="303274">
+				<rom name="U.N Squadron (1990)(US Gold Ltd).tap" size="303274" crc="12571e3a" sha1="7e530b13ee59cce9d09a2b846c25841bcc55dce2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse670a7a881582">
+		<description>Uchi Mata 2 (1988)(Martech Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47931">
+				<rom name="Uchi Mata 2 (1988)(Martech Games Ltd).tap" size="47931" crc="a272cc89" sha1="e670a7a881582f8131272553592bab2faf5e48f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscab4a9edd8a06">
+		<description>Uchi Mata 2 (1988)(Martech Games Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48128">
+				<rom name="Uchi Mata 2 (1988)(Martech Games Ltd)[a].tap" size="48128" crc="8eef5de2" sha1="cab4a9edd8a06969af6701084135f20262a0ca53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaca8b2fbd6a2e">
+		<description>UFO (1982)(J.K. Greye Enterprises Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5242">
+				<rom name="UFO (1982)(J.K. Greye Enterprises Ltd).tap" size="5242" crc="bbe83710" sha1="aca8b2fbd6a2e212a174885cf0b55de7f8ca69e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs673acd4fe3b73">
+		<description>UFO (19xx)(MCT)(Yu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2373">
+				<rom name="UFO (19xx)(MCT)(Yu).tap" size="2373" crc="53a895f6" sha1="673acd4fe3b73f1ee6e8793d2533d35c603368a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66f7a18330002">
+		<description>UFO Adventure (19xx)(Joachin Glaubercht)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12666">
+				<rom name="UFO Adventure (19xx)(Joachin Glaubercht)(De).tap" size="12666" crc="5896536f" sha1="66f7a18330002ac88307800fb1369f69609a2b99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd813aa2fb1ce9">
+		<description>UGH! (1984)(Softek Software International Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47840">
+				<rom name="UGH! (1984)(Softek Software International Ltd).tap" size="47840" crc="d47064bf" sha1="d813aa2fb1ce9fffc72e85b9722dd3817545522f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdafe81903a64f">
+		<description>Uk_verbs</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16179">
+				<rom name="Uk_verbs.tap" size="16179" crc="edaaab2c" sha1="dafe81903a64fe593248433d2a71118503a450ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1fbbbd34f7ca4">
+		<description>Ulises (1989)(Opera Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48329">
+				<rom name="Ulises (1989)(Opera Soft)(Sp).tap" size="48329" crc="f9dd1a98" sha1="1fbbbd34f7ca445593111f4f41e09f306f5739e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6ead38548e96f">
+		<description>Ultimate Combat Mission (1987)(Mastertronic Added Dimension)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44912">
+				<rom name="Ultimate Combat Mission (1987)(Mastertronic Added Dimension)(128K).tap" size="44912" crc="b5e049bf" sha1="6ead38548e96f589390509feb8af9b652e31c9e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2b9c16ff8e728">
+		<description>Ultra Reflect (1995)(Tiger's Claw)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13801">
+				<rom name="Ultra Reflect (1995)(Tiger's Claw).tap" size="13801" crc="3281b4b6" sha1="2b9c16ff8e728ac04cd151bb7377b2d45bd89c6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs794fce1d55a0b">
+		<description>Ultraform 208 (1990)(Digital Reality)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1604">
+				<rom name="Ultraform 208 (1990)(Digital Reality).tap" size="1604" crc="43bacb8b" sha1="794fce1d55a0b5ef0c5e6d5e9b64f33d87129c84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e36b910a1089">
+		<description>UN Squadron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="303395">
+				<rom name="UN Squadron.tzx" size="303395" crc="56b8e80e" sha1="7e36b910a1089c4727a7690858e513fb0c3decaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2a77596866704">
+		<description>Uncle Jack (1984)(J.J. Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22162">
+				<rom name="Uncle Jack (1984)(J.J. Soft).tap" size="22162" crc="ab527424" sha1="2a7759686670456ebbd15c170fbd234df15c92be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e2c84be21eb8">
+		<description>Underground (1988)(System 4)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49575">
+				<rom name="Underground (1988)(System 4)(Sp).tap" size="49575" crc="0470e56c" sha1="8e2c84be21eb8b2ba5296475b5b61df92dcde4c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2313db2239fec">
+		<description>Underground (19xx)(Skorpyo)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49664">
+				<rom name="Underground (19xx)(Skorpyo)(Sp).tap" size="49664" crc="4e9db555" sha1="2313db2239fec0299ea5684d818cee91510c06fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8575d20e84665">
+		<description>Undersea Colossus, The 128K (2024)(TokuSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60058">
+				<rom name="Undersea Colossus, The 128K (2024)(TokuSoft).tap" size="60058" crc="6947495c" sha1="8575d20e846651d2f1fc8379025578e893339cda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs21d670abf3a69">
+		<description>Unicorn, The 48K (2023)(UriS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28858">
+				<rom name="Unicorn, The 48K (2023)(UriS).tap" size="28858" crc="d7d33b1e" sha1="21d670abf3a69fb7cccaa9aff748d630450ba40a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscff808af59988">
+		<description>Unitrax (1987)(Streetwise)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47682">
+				<rom name="Unitrax (1987)(Streetwise).tap" size="47682" crc="44e3154c" sha1="cff808af59988890c402862b3240f63b7a06e224"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e706250ddc09">
+		<description>Universa (1991)(Tawkeht)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27215">
+				<rom name="Universa (1991)(Tawkeht)(Ru).tap" size="27215" crc="01765803" sha1="3e706250ddc091adbebe5b5a5d1663bcc0d42d07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ce335518c71d">
+		<description>Universal Hero (1986)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53283">
+				<rom name="Universal Hero (1986)(Mastertronic Ltd).tap" size="53283" crc="14379a3e" sha1="5ce335518c71d708018aa4565e2e407eedbc1f0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4204334dfca70">
+		<description>Universal Hero (1986)(Mastertronic Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53096">
+				<rom name="Universal Hero (1986)(Mastertronic Ltd)[a].tap" size="53096" crc="9d46b070" sha1="4204334dfca701091cd7cece4134ce0b6dd92cf3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1042a33f79134">
+		<description>Unknown (1991)(Wolforce Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22291">
+				<rom name="Unknown (1991)(Wolforce Soft).tap" size="22291" crc="ce5fe1a4" sha1="1042a33f7913442e6aa9a0d51c2c12c0c908342b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb57414c2ef552">
+		<description>Up For Grabs (1988)(Alternative Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31606">
+				<rom name="Up For Grabs (1988)(Alternative Software Ltd).tap" size="31606" crc="a0828999" sha1="b57414c2ef5525fe2349d66b248aefdece3630c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa39ccb26653f2">
+		<description>Upir (19xx)(-)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49297">
+				<rom name="Upir (19xx)(-)(Unk-Lang).tap" size="49297" crc="74201fc0" sha1="a39ccb26653f2616c49f34ac4d2f4ac3f0725c01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse233cba4cb9c4">
+		<description>upto10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8478">
+				<rom name="upto10.tap" size="8478" crc="12162170" sha1="e233cba4cb9c4bee67308e22fe4a745705d21db7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9b8c035e88863">
+		<description>upto5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8503">
+				<rom name="upto5.tap" size="8503" crc="f3164bf6" sha1="9b8c035e88863418b03d5a3e8f246c67f36e1d33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7a7f73f37a79">
+		<description>Urban Upstart (1983)(Richard Shepherd Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47934">
+				<rom name="Urban Upstart (1983)(Richard Shepherd Software Ltd).tap" size="47934" crc="7e0d3d25" sha1="f7a7f73f37a79aa775317a97b1108d0bb3e886e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07061478b34d5">
+		<description>Uridium (1985)(Hewson Consultants Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47591">
+				<rom name="Uridium (1985)(Hewson Consultants Ltd).tap" size="47591" crc="02cd5713" sha1="07061478b34d57768663561f66732e3c8ee46767"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdef5f8ad27088">
+		<description>Uridium (1986)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27747">
+				<rom name="Uridium (1986)(Hewson Consultants).tap" size="27747" crc="28bdbbfc" sha1="def5f8ad270887be94759cae1ea322966011ba5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5edb8b03bedd">
+		<description>Uroboros (2015)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20267">
+				<rom name="Uroboros (2015)(Rafal Miazga).tap" size="20267" crc="9d288091" sha1="a5edb8b03bedd4b195b976dd54bf8b46b78c2318"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs095801b7a1a9c">
+		<description>Urok EN 128K (2024)(Tartessos Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="81964">
+				<rom name="Urok EN 128K (2024)(Tartessos Games).tap" size="81964" crc="17df69f5" sha1="095801b7a1a9c8f986cd50190cf183b12b2b5e1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs513857d1c6b5a">
+		<description>Urok ES 128K (2024)(Tartessos Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="82115">
+				<rom name="Urok ES 128K (2024)(Tartessos Games).tap" size="82115" crc="f8349f90" sha1="513857d1c6b5aa04028422a4d49a5ae97ac290d5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6499,6 +7109,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="9818">
 				<rom name="Yewdow 48K (2023)(Inufuto).tap" size="9818" crc="faf70151" sha1="5265242c66b3067e73de37bedcf3e4792cd4c92b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9c7cdeede3775">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9840">
+				<rom name="yewdow.tzx" size="9840" crc="eec1f4d4" sha1="9c7cdeede377594652fb6fb44d9a00d6a7cf38cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6475ac1c66e76">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3179473">
+				<rom name="yewdow.wav" size="3179473" crc="b366a392" sha1="6475ac1c66e76f14ac70a78aad951a6c2253c646"/>
 			</dataarea>
 		</part>
 	</software>

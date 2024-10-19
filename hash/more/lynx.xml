@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 591 -->
+<!-- Number of items in this list = 599 -->
 <softwarelist name="lynx" description="lynx loose roms">
 	<software name="lnx2a1c742ad70b9">
 		<description>(demo)3Days (2024-02)(42Bastian)</description>
@@ -272,6 +272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lnx0830ff0432d29">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="18820">
+				<rom name="aerial.o" size="18820" crc="e0ad693f" sha1="0830ff0432d2990ac3c01d386f531bbf6283e314"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lnx860a73b9484c7">
 		<description>Alien vs Predator (1994)(Images)(proto)</description>
 		<year>????</year>
@@ -299,6 +309,16 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="36359">
 				<rom name="Anti A-Bomb Aircraft Artillery (2005) (Sampo).o" size="36359" crc="d0177377" sha1="637d816b367dd6879342b5714820e18034ff754d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxf41a48bc4329d">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="12870">
+				<rom name="antiair.o" size="12870" crc="8ed75705" sha1="f41a48bc4329d3adbab363f5fc5e428fc57ee660"/>
 			</dataarea>
 		</part>
 	</software>
@@ -339,6 +359,16 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="4541">
 				<rom name="arkanoid alpha test.o" size="4541" crc="b275877c" sha1="ad5d3bfe2763b3a94992c5c8a5904d98ed392307"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxf73da33bf62c0">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="16731">
+				<rom name="ascend.o" size="16731" crc="301dfa6d" sha1="f73da33bf62c0368bdb759f5a9c50538847e5bdc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2512,6 +2542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lnxd9eafb289e62c">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="20112">
+				<rom name="guntus.o" size="20112" crc="82bf0348" sha1="d9eafb289e62c242341b7e3b4e13c985490ead8c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lnxcb90292ff1bec">
 		<description>Hallo Welt! (1996) by Bjoern Spruck (PD)</description>
 		<year>????</year>
@@ -2572,6 +2612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lnxbff67a5f3c1b8">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="14496">
+				<rom name="hopman.o" size="14496" crc="3606c3df" sha1="bff67a5f3c1b886bfa90e759603237940d14df8c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lnx5ceb3ad748cd4">
 		<description>Hydra (1992)(Tengen Inc)</description>
 		<year>????</year>
@@ -2599,6 +2649,16 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="3966">
 				<rom name="I2C EEPROM Test by Schick, Bastian (1996) (PD).o" size="3966" crc="0a6c3580" sha1="b4e54e980835695527b099895ef99605c65302ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxdcc4c84b82922">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="20032">
+				<rom name="impetus.o" size="20032" crc="f25d38eb" sha1="dcc4c84b829227a849c17e606f4516f961e62c08"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3852,6 +3912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lnxe647ab11b919f">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="18109">
+				<rom name="osotos.o" size="18109" crc="e1dfd626" sha1="e647ab11b919f425edeeb37b9bfc1a794e317e1e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lnx8080497c6b2a8">
 		<description>othello (playable)</description>
 		<year>????</year>
@@ -4569,6 +4639,16 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Robotron 2084 (UE).lnx" size="131136" crc="6a634fa9" sha1="1e42a3b68ba586984512b75e93201c0f6a53b787"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx36deb89ce0fd1">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="22579">
+				<rom name="ruptus.o" size="22579" crc="3eeb2e90" sha1="36deb89ce0fd1206a518cacc8bc3267a38929856"/>
 			</dataarea>
 		</part>
 	</software>

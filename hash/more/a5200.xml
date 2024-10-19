@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 136 -->
+<!-- Number of items in this list = 153 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a52db1ab57771b0f">
 		<description>(demo)Atari PAM Final System Test v1.1 (1982)(Atari)</description>
@@ -212,6 +212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a5208810cefa65cd">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="aerial.rom" size="16384" crc="5cebceaf" sha1="08810cefa65cda6a52693a925b5e075b847d6e84"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a521d286f2a7c40b">
 		<description>Analog Classics Vol#1 - test demo version</description>
 		<year>????</year>
@@ -232,6 +242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a526f02163a0e9da">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="antiair.rom" size="16384" crc="8166bdc9" sha1="6f02163a0e9dab5f5e052558ad7a91990e3ff8ce"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a527d679eab8b4e0">
 		<description>Archon (Conv)</description>
 		<year>????</year>
@@ -242,6 +262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a5278bf55b14d8c0">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ascend.rom" size="16384" crc="d7717b04" sha1="78bf55b14d8c02f5ba99a7f8f7e1aeac20d2fae6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a521dfd9cb5eb608">
 		<description>Ballblazer (1984)(Atari)[CX5255]</description>
 		<year>????</year>
@@ -249,6 +279,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Ballblazer (1984)(Atari)[CX5255].a52" size="32768" crc="def2a207" sha1="1dfd9cb5eb608590c84e14376291f8c02fb1ab93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52c436dcd9d4b43">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="battlot.rom" size="16384" crc="9e9574ee" sha1="c436dcd9d4b43376b97f26388966818561b1e92c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -349,6 +389,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beef_Drop__fixed_level3_new.BIN" size="32768" crc="c94c934d" sha1="a18beaa9a8c14dce55032fb55237a9457b88a109"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a524b85cbbc9b32d">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="bootskell.rom" size="16384" crc="4feb7214" sha1="4b85cbbc9b32d1fbe38886ffcfc7a0923b981a36"/>
 			</dataarea>
 		</part>
 	</software>
@@ -562,6 +612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a52c1f588d7bb6fe">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cacorm.rom" size="16384" crc="b83a910a" sha1="c1f588d7bb6fe93a708a63c53acc68ed0267922a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a52d897525afed80">
 		<description>Captain Beeble 5200 (New) Conversion by Kenfuzed (2004) (InHome Software)</description>
 		<year>????</year>
@@ -579,6 +639,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Caverns of Mars (Conv).bin" size="32768" crc="d1b64581" sha1="5a9155cfc456a9ba3282411c750ffe673ce36b7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52b8db4e282c6b7">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cavit.rom" size="16384" crc="e3c2fbbd" sha1="b8db4e282c6b7d23d518df1c0517ca211aeeb70e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -619,6 +689,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Combat II Advanced (2003)(Mean Hamster Software)[Self-Published][Demo].a52" size="32768" crc="2e3d0ad9" sha1="038d0ca61d0e1c17fb322957a2afa91fcca17546"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a5246b7032b4011b">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cracky.rom" size="16384" crc="e3a6c486" sha1="46b7032b4011b914f89eb18222892a8e68c3c355"/>
 			</dataarea>
 		</part>
 	</software>
@@ -732,6 +812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a5295818d722775f">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="guntus.rom" size="16384" crc="716447b9" sha1="95818d722775f5f511a8c5d41639dc9ded28d914"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a52982292216a1f2">
 		<description>Hang 5200 (32kb)</description>
 		<year>????</year>
@@ -769,6 +859,26 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="hanglypolluxplus32k.a52" size="32768" crc="54b559b6" sha1="8e37452ed4052825f406f98192f4f7265afc8bfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52929963e121082">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="hopman.rom" size="16384" crc="f6634966" sha1="929963e1210829f511ac9cc5e6c4cd9ce0196263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a5238dcfe1c43896">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="impetus.rom" size="32768" crc="e31b4a44" sha1="38dcfe1c43896eb98bf425c86c5fdcf0d0b57652"/>
 			</dataarea>
 		</part>
 	</software>
@@ -822,6 +932,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a52b23084866e1ed">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="lift.rom" size="16384" crc="a1f98ebf" sha1="b23084866e1eded7048264494f945bbf59189513"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a5294443fc03cfc0">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mazy.rom" size="16384" crc="f2850a1e" sha1="94443fc03cfc079a822452f3561c3b72bbdb2ccf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a52f0c3f2189be54">
 		<description>Montezuma's Revenge</description>
 		<year>????</year>
@@ -829,6 +959,26 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Montezuma's Revenge.bin" size="32768" crc="bcf677fb" sha1="f0c3f2189be54914c73aa82a649599432b67b9ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a5207f1b11447c2a">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="neuras.rom" size="16384" crc="04688003" sha1="07f1b11447c2a07cd1b053021bb7700107e4ce55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a525e6935f711327">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="osotos.rom" size="16384" crc="593c8df9" sha1="5e6935f71132705a0abbae51a8e9fbb24501fb2e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1102,6 +1252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a5297d7c587cbc92">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ruptus.rom" size="16384" crc="88cc3d0d" sha1="97d7c587cbc920591ebc9f45a6a59e07de9ff23a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a524d4dcbc5ebd57">
 		<description>Satans Hollow (Conv)</description>
 		<year>????</year>
@@ -1359,6 +1519,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Xshoot_atari5200.rom" size="32768" crc="719ba5cf" sha1="f2c2e5fff620954240ddc7c07602bb7cc984b0c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a527274693b762ee">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="yewdow.rom" size="16384" crc="c2de3812" sha1="7274693b762ee8e82865eb191f95912910649f5d"/>
 			</dataarea>
 		</part>
 	</software>

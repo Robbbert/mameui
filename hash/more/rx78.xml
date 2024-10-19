@@ -1,7 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8 -->
+<!-- Number of items in this list = 15 -->
 <softwarelist name="rx78" description="rx78 loose roms">
+	<software name="rx7a2248efe65cf5">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="antiair.rom" size="8192" crc="126b98f9" sha1="a2248efe65cf50b25ca9a550d858c1623b5fd022"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx75ff6f5fa71085">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cacorm.rom" size="16384" crc="5d224a6a" sha1="5ff6f5fa710859b105351aedf46c1b15730544ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx779b2134cf65ee">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cracky.rom" size="16384" crc="0830e9b6" sha1="79b2134cf65ee41525d805a38735f46810da985c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="rx7a7a0215440bd7">
 		<description>Creative Graphics (IC2_IX0419PA_364C94-3J1)</description>
 		<year>????</year>
@@ -52,6 +82,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="rx71b7aebcb51c2c">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="guntus.rom" size="16384" crc="eadeed26" sha1="1b7aebcb51c2c196a9166040bc2deedd4d904ec9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="rx70029ad29be4dc">
 		<description>H-Tron</description>
 		<year>????</year>
@@ -59,6 +99,16 @@
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="H-Tron.rom" size="16384" crc="c5b1ba3c" sha1="0029ad29be4dcdb30b69273f36d603219ecbd444"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx73604275b1350c">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="hopman.rom" size="16384" crc="1c733346" sha1="3604275b1350c3427e872dfbe013ef0be6889f70"/>
 			</dataarea>
 		</part>
 	</software>
@@ -72,6 +122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="rx7c412646bf4710">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="osotos.rom" size="16384" crc="28d0223e" sha1="c412646bf471038ab0feaf18d12bf0753651c6a9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="rx765ef396e6e099">
 		<description>rx78rengokantai</description>
 		<year>????</year>
@@ -79,6 +139,16 @@
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="rx78rengokantai.bin" size="32768" crc="d6d8c760" sha1="65ef396e6e09960dbf8181a9a508df9074763b5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx74f61a8b57ab65">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="yewdow.rom" size="16384" crc="912ff65f" sha1="4f61a8b57ab6512d5318b117acd7783a756c4e6a"/>
 			</dataarea>
 		</part>
 	</software>

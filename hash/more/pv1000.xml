@@ -1,7 +1,87 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8 -->
+<!-- Number of items in this list = 24 -->
 <softwarelist name="pv1000" description="pv1000 loose roms">
+	<software name="pv142f711db7c6b1">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="aerial.bin" size="16384" crc="2013d34f" sha1="42f711db7c6b10c114bf6806d92e35f3cea6806e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv150db198b0c202">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="antiair.bin" size="16384" crc="e059fc6f" sha1="50db198b0c202c574fe096d676cdeb587626192d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1061fb5e3ca0f8">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ascend.bin" size="16384" crc="59ed8967" sha1="061fb5e3ca0f81ddde4412b08bf1d78b07ab4635"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1d219dd4aa4b9f">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="battlot.bin" size="16384" crc="cda2d0a1" sha1="d219dd4aa4b9f95bd8ee09752be654fea5881427"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv14588d56170721">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="bootskell.bin" size="16384" crc="13400321" sha1="4588d561707212a0a7be744b88641ec600c67763"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv16e6e4bf437691">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cacorm.bin" size="16384" crc="12905fe0" sha1="6e6e4bf43769144c32961a812162c8e2870ab15c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv13884a82e9ebae">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cavit.bin" size="16384" crc="ffb5bc4f" sha1="3884a82e9ebae72852562084895a4ac345707f4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1b1d7c0a416d73">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="cracky.bin" size="16384" crc="8dc598bf" sha1="b1d7c0a416d732baae6fd5b6f743f50a72351355"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv12983c60997ee0">
 		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[full]</description>
 		<year>????</year>
@@ -62,6 +142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pv1534a3d0ec20db">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="guntus.bin" size="16384" crc="282d520a" sha1="534a3d0ec20dba4d729a1bd34cbb11abc2785593"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv10b83f5e1cf86d">
 		<description>H-tron</description>
 		<year>????</year>
@@ -72,6 +162,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pv15c5327df677b1">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="hopman.bin" size="16384" crc="2e93b3e1" sha1="5c5327df677b15591e156537493368d96a0a1183"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv19f1d9a701a824">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="lift.bin" size="16384" crc="5379cb46" sha1="9f1d9a701a8245f969c71cb9deefde24c2739e17"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv1a2fe410e73c95">
 		<description>Master Mind</description>
 		<year>????</year>
@@ -79,6 +189,56 @@
 		<part name="cart" interface="pv1000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Master Mind.bin" size="16384" crc="7d4852f0" sha1="a2fe410e73c95ea22a34013508895371663d0382"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1c009fc3898eee">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mazy.bin" size="16384" crc="894d30c7" sha1="c009fc3898eee3735d61f99b2d92fb4e0804ccf3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv1d49f4c1400786">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="neuras.bin" size="16384" crc="960fc22e" sha1="d49f4c14007861d54c26780a8a5453992d4ffdea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv10a103683bf4a1">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="osotos.bin" size="16384" crc="2839b2d9" sha1="0a103683bf4a1eb61e29c0d68212dce154af8854"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv17f4a62f4bd777">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ruptus.bin" size="16384" crc="3445a5bc" sha1="7f4a62f4bd7776c086a892217d2187c98b9a747c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv11cdf117ab9ca1">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="yewdow.bin" size="16384" crc="1bb67ca9" sha1="1cdf117ab9ca15dff1d67ed3551a2567fb375a0b"/>
 			</dataarea>
 		</part>
 	</software>
