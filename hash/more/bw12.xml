@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="bw12" description="bw12 loose roms">
+	<software name="bw10b9d1c1617690">
+		<description>Deepspace_bw12[Bdrive]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="194816">
+				<rom name="Deepspace_bw12[Bdrive].dsk" size="194816" crc="3ab79352" sha1="0b9d1c161769093ca61bb502402f84d9a1ba2778"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bw12037d5be7e4b4">
+		<description>Elite Planet Browser_bw12[Bdrive]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="194816">
+				<rom name="Elite Planet Browser_bw12[Bdrive].dsk" size="194816" crc="c0baa10c" sha1="2037d5be7e4b4b82606906e68932dd0f73ac6e22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bw155295d608ee0d">
+		<description>H-Tron_bw12[Bdrive]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="194816">
+				<rom name="H-Tron_bw12[Bdrive].dsk" size="194816" crc="65531330" sha1="55295d608ee0de32d8847efc69edd5cb1ce65cc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bw1c1f31b177283c">
+		<description>MasterMind_bw12[Bdrive]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="194816">
+				<rom name="MasterMind_bw12[Bdrive].dsk" size="194816" crc="5f95b4ed" sha1="c1f31b177283c0e7163a116414e9aabb6bb309bb"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

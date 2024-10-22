@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 630 -->
+<!-- Number of items in this list = 634 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -622,6 +622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col299033917ae7e">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="9283">
+				<rom name="bootskell.rom" size="9283" crc="46f2cea5" sha1="299033917ae7e0c4f9667b406644e6180dca1958"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cole818bfb31fa57">
 		<description>Bosconian SGM (2016)(Opcode Games)</description>
 		<year>????</year>
@@ -939,6 +949,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="23680">
 				<rom name="Cavern Fighter (2021)(Electric Adventures).rom" size="23680" crc="846faf14" sha1="a6e6d0e13ad51aa0e6c9de9feb30e04f3e6eea3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cole9822ee24c72c">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="9824">
+				<rom name="cavit.rom" size="9824" crc="8d3e9de3" sha1="e9822ee24c72c24418288f15096a6e160e8a1a80"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3152,6 +3172,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cold5d8ffa4271b8">
+		<description>Mastermind_Bit90</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mastermind_Bit90.rom" size="32768" crc="7ee64cc3" sha1="d5d8ffa4271b83e375571cca3ac5836d79723399"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colb1277ea753d57">
+		<description>Mastermind_coleco</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mastermind_coleco.rom" size="32768" crc="19728774" sha1="b1277ea753d57f8ecf2b247d95b79e2b98550619"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cold5ea5aa25fa07">
+		<description>Masters of the Universe - The Power of He-man</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Masters of the Universe - The Power of He-man.rom" size="32768" crc="838a9742" sha1="d5ea5aa25fa074dce0a4f871e0f9f45887938c54"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col8a1e2db621b84">
 		<description>Matt Patrol (1982-84)(Billiams-Irata)(proto)</description>
 		<year>????</year>
@@ -3179,6 +3229,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="MazezaM1.1.rom" size="16384" crc="150006fc" sha1="5ff0e43757f0d1230ea61de27c4efa5af1cfb2c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col4d78c023369ac">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="6967">
+				<rom name="mazy.rom" size="6967" crc="02ef2836" sha1="4d78c023369acd6148735de9f72f64b447cb8af1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3289,26 +3349,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Miner 2049er (1983)(Livesay Computer Games, Inc)[a].rom" size="24576" crc="b24f10fd" sha1="b29cd441e9edebc37abc08c3fd932f1d4185bacd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cold5d8ffa4271b8">
-		<description>mm_Bit90</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="mm_Bit90.rom" size="32768" crc="7ee64cc3" sha1="d5d8ffa4271b83e375571cca3ac5836d79723399"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="colb1277ea753d57">
-		<description>mm_coleco</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="mm_coleco.rom" size="32768" crc="19728774" sha1="b1277ea753d57f8ecf2b247d95b79e2b98550619"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3429,16 +3469,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Motocross Racer (1984)(Xonox)[a].rom" size="16384" crc="0f4d800a" sha1="89b6f5f482f8f79c10ef9d3ffdeac1ded47a2362"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cold5ea5aa25fa07">
-		<description>MOTU</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="MOTU.rom" size="32768" crc="838a9742" sha1="d5ea5aa25fa074dce0a4f871e0f9f45887938c54"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4399,6 +4429,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="20218">
 				<rom name="Runaway Train SGM (2023)(8 bit Milli Games).rom" size="20218" crc="08fef448" sha1="8348f138922e0057e7c5e92295fdfbdb11313abb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col42343aa73acdb">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="12302">
+				<rom name="ruptus.rom" size="12302" crc="9aac320b" sha1="42343aa73acdb6f4ce4bd776019589c1bdf283ca"/>
 			</dataarea>
 		</part>
 	</software>

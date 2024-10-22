@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 7 -->
+<softwarelist name="excalibur64_cass" description="excalibur64_cass loose roms">
+	<software name="exc4c01d456f253b">
+		<description>faceone</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="excali64_cass">
+			<dataarea name="cass" size="1935578">
+				<rom name="faceone.wav" size="1935578" crc="1f3bb171" sha1="4c01d456f253b6f9df2a3a38b50cf2a020c5e323"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exc7a24380cf53ce">
+		<description>mosaic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="excali64_cass">
+			<dataarea name="cass" size="2153964">
+				<rom name="mosaic.wav" size="2153964" crc="e60658bb" sha1="7a24380cf53ce14cf99c7c42ab580c30d128af84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exc0bc68c9207fbe">
+		<description>octants</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="excali64_cass">
+			<dataarea name="cass" size="1764744">
+				<rom name="octants.wav" size="1764744" crc="00daea99" sha1="0bc68c9207fbeb1db1d2c06bc1672c3b6843b396"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exc527b070ce0925">
+		<description>octants1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="excali64_cass">
+			<dataarea name="cass" size="1873936">
+				<rom name="octants1.wav" size="1873936" crc="1218b4a2" sha1="527b070ce09257c4bf26189e931daff6774a292d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exc00a953fcf07ec">
+		<description>pcgens_galore</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="excali64_cass">
+			<dataarea name="cass" size="1764744">
+				<rom name="pcgens_galore.wav" size="1764744" crc="d4b0b784" sha1="00a953fcf07ecee84c700f2e1ae45f031593583e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exccdb38544395eb">
+		<description>tape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="excali64_cass">
+			<dataarea name="cass" size="1856326">
+				<rom name="tape.wav" size="1856326" crc="0820f50b" sha1="cdb38544395ebc84b181eaebb8a3646bb079bdc0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="excc439cd2f7394d">
+		<description>triangle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="excali64_cass">
+			<dataarea name="cass" size="1586866">
+				<rom name="triangle.wav" size="1586866" crc="01136710" sha1="c439cd2f7394dd1233beabca25e28e22b64ce909"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
