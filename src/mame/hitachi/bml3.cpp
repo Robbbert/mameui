@@ -868,7 +868,7 @@ void bml3_state::bml3(machine_config &config)
 	acia_clock.signal_handler().append(m_acia, FUNC(acia6850_device::write_rxc));
 
 	CASSETTE(config, m_cassette);
-	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_SPEAKER_ENABLED | CASSETTE_MOTOR_ENABLED);
+	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_SPEAKER_ENABLED | CASSETTE_MOTOR_DISABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("bml3_cass");
 
