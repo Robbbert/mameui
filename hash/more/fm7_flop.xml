@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4 -->
+<!-- Number of items in this list = 5 -->
 <softwarelist name="fm7_flop" description="fm7_flop loose roms">
+	<software name="fm726f256ef122b9">
+		<description>FM7DEMO_YS_V1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="349424">
+				<rom name="FM7DEMO_YS_V1.D77" size="349424" crc="5e1006d4" sha1="26f256ef122b9c8d68b4c20e9682eeb69c369d4f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fm7cd3e7cd136d1c">
 		<description>Front Line (1983)(Nidecom Carry Soft)(Taito)(Hiroshi Hasegawa)(Tetsuya Sasaki)</description>
 		<year>????</year>
@@ -23,12 +33,12 @@
 		</part>
 	</software>
 	<software name="fm7700f442416bfd">
-		<description>lupin_the_third_the_castle_of_cagliostro_(1985)(toho)(jp)</description>
+		<description>Lupin_the_third_the_castle_of_cagliostro_(1985)(toho)(jp)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="697696">
-				<rom name="lupin_the_third_the_castle_of_cagliostro_(1985)(toho)(jp).d77" size="697696" crc="ca22a873" sha1="700f442416bfd2a97cf5a8521d6111fe2bf7e76b"/>
+				<rom name="Lupin_the_third_the_castle_of_cagliostro_(1985)(toho)(jp).d77" size="697696" crc="ca22a873" sha1="700f442416bfd2a97cf5a8521d6111fe2bf7e76b"/>
 			</dataarea>
 		</part>
 	</software>

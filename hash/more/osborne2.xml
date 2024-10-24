@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 7 -->
+<softwarelist name="osborne2" description="osborne2 loose roms">
+	<software name="osbbd4f0c01d250d">
+		<description>exec-1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="119631">
+				<rom name="exec-1.td0" size="119631" crc="6d635a91" sha1="bd4f0c01d250dcd909a778abe762ff393ac7025f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="osb7b4af9b7bcf2c">
+		<description>exec-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="173335">
+				<rom name="exec-2.td0" size="173335" crc="a18a4066" sha1="7b4af9b7bcf2cb34bb9b0ffb0a4a3742d0fcfd0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="osbbb1678c5eebb4">
+		<description>exec-3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="111318">
+				<rom name="exec-3.td0" size="111318" crc="c65f7f78" sha1="bb1678c5eebb40e89f35c07a6f5dddcb680afd63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="osb6696ac1db5cfb">
+		<description>executiv</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="66610">
+				<rom name="executiv.td0" size="66610" crc="5ec1a3c7" sha1="6696ac1db5cfb5e756e784969e2871fb2ddde607"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="osb0d5a11eb46429">
+		<description>osbexec_CPM_PLUS_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="133972">
+				<rom name="osbexec_CPM_PLUS_1.IMD" size="133972" crc="4062e70c" sha1="0d5a11eb46429dc3a78457700a42625280815710"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="osb00a3a83a08bc7">
+		<description>osbexec_CPM_PLUS_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="191321">
+				<rom name="osbexec_CPM_PLUS_2.IMD" size="191321" crc="fbb377bc" sha1="00a3a83a08bc7e9d5ea2ef99b6d5b7a7ce9433c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="osb3f86758d50908">
+		<description>osbexec_CPM_PLUS_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="195406">
+				<rom name="osbexec_CPM_PLUS_3.IMD" size="195406" crc="08bb45e5" sha1="3f86758d509087b80fec8d98dc19c023c21e003c"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

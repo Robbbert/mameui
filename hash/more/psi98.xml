@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 3 -->
+<softwarelist name="psi98" description="psi98 loose roms">
+	<software name="psi556a33b22021d">
+		<description>edas-os</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="378283">
+				<rom name="edas-os.td0" size="378283" crc="5fcc5da0" sha1="556a33b22021dfb50797727d8d4688b884de99a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="psi70c9c07a18450">
+		<description>psi80_cp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="347641">
+				<rom name="psi80_cp.td0" size="347641" crc="e7939c28" sha1="70c9c07a18450222ac5e0cc991fc865cdb12465d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="psi17b0be76f9bb9">
+		<description>psi_util</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="347649">
+				<rom name="psi_util.td0" size="347649" crc="b95b675d" sha1="17b0be76f9bb96f7a7b7127b203452d1e8dab72c"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

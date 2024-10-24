@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 610 -->
+<!-- Number of items in this list = 620 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -149,6 +149,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Adventure_Kid (ASCII 16).rom" size="131072" crc="cd8b5dd6" sha1="07df8a02b98b8a1d27a3e139fe6605eea17f35f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx0767db5ed50ca">
+		<description>Aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="10486">
+				<rom name="Aerial.rom" size="10486" crc="8914ddbb" sha1="0767db5ed50ca1c0edbe4ec0de16441002b9cebc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -402,6 +412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx4193a7226ee1a">
+		<description>Antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="7926">
+				<rom name="Antiair.rom" size="7926" crc="b4d74588" sha1="4193a7226ee1a913a86c03fe0b71ef49466ae22e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx4b6147172c12f">
 		<description>Anty</description>
 		<year>????</year>
@@ -443,12 +463,12 @@
 		</part>
 	</software>
 	<software name="msx36aa0c2ff918d">
-		<description>Ascend (2022)(Inufuto)</description>
+		<description>Ascend</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="9528">
-				<rom name="Ascend (2022)(Inufuto).rom" size="9528" crc="81ee38e6" sha1="36aa0c2ff918dc7618030ba68fb66c3e5b640db9"/>
+				<rom name="Ascend.rom" size="9528" crc="81ee38e6" sha1="36aa0c2ff918dc7618030ba68fb66c3e5b640db9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -553,12 +573,12 @@
 		</part>
 	</software>
 	<software name="msxe078e8788d8e8">
-		<description>Battlot (2021)(Inufuto)</description>
+		<description>Battlot</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="9662">
-				<rom name="Battlot (2021)(Inufuto).rom" size="9662" crc="4f14d982" sha1="e078e8788d8e861418b0865aded1c01859a393c7"/>
+				<rom name="Battlot.rom" size="9662" crc="4f14d982" sha1="e078e8788d8e861418b0865aded1c01859a393c7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -729,6 +749,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="boogaboo - indescomp (1986).rom" size="16384" crc="8cb9d82a" sha1="8fe21e5ff12cbd52e379bfc1feaf9f560289ba42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx80d3f4f851490">
+		<description>Bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="9256">
+				<rom name="Bootskell.rom" size="9256" crc="8700f875" sha1="80d3f4f85149075cf7ecf6f12e11c0365a240e7a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -912,6 +942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxffc83fc674ccb">
+		<description>Cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="8357">
+				<rom name="Cacorm.rom" size="8357" crc="d32b2732" sha1="ffc83fc674ccb1279e0cc436006503d9274a5453"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxec22cfe2be6fc">
 		<description>Campanera - Jozelito's Adventure EN (2022)(Physical Dreams)</description>
 		<year>????</year>
@@ -1003,12 +1043,12 @@
 		</part>
 	</software>
 	<software name="msx52b13d087e4ea">
-		<description>Cavit (2021)(Inufuto)</description>
+		<description>Cavit</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="9791">
-				<rom name="Cavit (2021)(Inufuto).rom" size="9791" crc="32ad4281" sha1="52b13d087e4ea383918a296016dc504150e28403"/>
+				<rom name="Cavit.rom" size="9791" crc="32ad4281" sha1="52b13d087e4ea383918a296016dc504150e28403"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1159,6 +1199,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Cornelius in the Forbidden Zone ES (2023)(Physical Dreams).rom" size="49152" crc="86ff7f06" sha1="d72cd7e4928954f752efce75ba3090b38bf1b1e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9b3dc6cd372d6">
+		<description>Cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="7215">
+				<rom name="Cracky.rom" size="7215" crc="727c758a" sha1="9b3dc6cd372d6394229436bde0d4f0cd78b10967"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2272,6 +2322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxd53117eef2e42">
+		<description>Hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="9803">
+				<rom name="Hopman.rom" size="9803" crc="d262daa4" sha1="d53117eef2e42055ff3a7a87836840dd57ec4b00"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxdd9a41e4c8802">
 		<description>Hopper (Euro)(1986)(Eaglesoft)</description>
 		<year>????</year>
@@ -2413,12 +2473,12 @@
 		</part>
 	</software>
 	<software name="msx4deabbbe2f9c4">
-		<description>Impetus (2021)(Inufuto)</description>
+		<description>Impetus</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16352">
-				<rom name="Impetus (2021)(Inufuto).rom" size="16352" crc="6f7e32ca" sha1="4deabbbe2f9c4b1e7893ab1b75311839115d271e"/>
+				<rom name="Impetus.rom" size="16352" crc="6f7e32ca" sha1="4deabbbe2f9c4b1e7893ab1b75311839115d271e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3052,6 +3112,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx73b19950dc6d9">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="8150">
+				<rom name="Lift.rom" size="8150" crc="353f3295" sha1="73b19950dc6d95f104f42f91574587f2a0d3c804"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx2b9ab44526a19">
 		<description>Limaribu - Arnold Metselaar (2009) [original] [1357]</description>
 		<year>????</year>
@@ -3219,6 +3289,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Mayhem (19xx)(Mr. Micro)[cr Magic].rom" size="16384" crc="b0b90a4d" sha1="fafd58ec55b2e1e84255036a3cdf2de87d348942"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx6a141f68444dc">
+		<description>Mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="6875">
+				<rom name="Mazy.rom" size="6875" crc="81007d2a" sha1="6a141f68444dc10a65ddda18b78782651fab3250"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3663,12 +3743,12 @@
 		</part>
 	</software>
 	<software name="msx09203847c1093">
-		<description>Neuras (2021)(mxb03523)</description>
+		<description>Neuras</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="8760">
-				<rom name="Neuras (2021)(mxb03523).rom" size="8760" crc="27b5df15" sha1="09203847c1093d78e971b39a6bb0b3eedbcec166"/>
+				<rom name="Neuras.rom" size="8760" crc="27b5df15" sha1="09203847c1093d78e971b39a6bb0b3eedbcec166"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3799,6 +3879,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Operation Crossbow - Karoshi Corporation (2011) [unfinished game] [original] [2629].rom" size="16384" crc="9a4e65f9" sha1="4ac0b569ddd4ea74d5eef4f4574e5ef9759f66c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx29e5679bbcb42">
+		<description>Osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="9306">
+				<rom name="Osotos.rom" size="9306" crc="8b937785" sha1="29e5679bbcb427c0339c872eba2182890adf0e68"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4349,6 +4439,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="753664">
 				<rom name="runner.rom" size="753664" crc="ea7efb90" sha1="85ab18d4d3d849234117940b7b33d53fd0333164"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa2418ad9bf80d">
+		<description>Ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="12268">
+				<rom name="Ruptus.rom" size="12268" crc="9d04917f" sha1="a2418ad9bf80d585d09dfff33d69e686c9a75855"/>
 			</dataarea>
 		</part>
 	</software>

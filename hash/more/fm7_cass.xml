@@ -1,7 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 24 -->
+<!-- Number of items in this list = 59 -->
 <softwarelist name="fm7_cass" description="fm7_cass loose roms">
+	<software name="fm79548371981ae4">
+		<description>(demo)FM7_YS[run'']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="6709387">
+				<rom name="(demo)FM7_YS[run''].wav" size="6709387" crc="d55c45f7" sha1="9548371981ae43ceb295995b4ec6687569906135"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm778b12f41e67f5">
+		<description>Aerial[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="635076">
+				<rom name="Aerial[loadm'',,R].t77" size="635076" crc="8230da88" sha1="78b12f41e67f52753aed89825977cc09bf805aa2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm73961a871efb07">
+		<description>Aerial[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="4715292">
+				<rom name="Aerial[loadm'',,R].wav" size="4715292" crc="5f24b807" sha1="3961a871efb07f2e954d686fc67bd976417c6ebb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fm78ba34432f2284">
 		<description>Ame No Hi Wa Ooisogashi (1983)(Hudson Soft)(Yoshio Motosako)[loadm]</description>
 		<year>????</year>
@@ -9,6 +39,26 @@
 		<part name="cass1" interface="fm7_cass">
 			<dataarea name="cass" size="851232">
 				<rom name="Ame No Hi Wa Ooisogashi (1983)(Hudson Soft)(Yoshio Motosako)[loadm].t77" size="851232" crc="4ec14b04" sha1="8ba34432f22847eb2be95ecf8efcc9abb262d921"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm797619e179803d">
+		<description>Antiair[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="427880">
+				<rom name="Antiair[loadm'',,R].t77" size="427880" crc="89cca7c3" sha1="97619e179803d9613867c123d2d9381ff7ae41b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm735fdc2387f0ac">
+		<description>Antiair[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="3194859">
+				<rom name="Antiair[loadm'',,R].wav" size="3194859" crc="294a07f7" sha1="35fdc2387f0acfd8822b7010a7eae25f42393239"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22,6 +72,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fm70dda18fa40f10">
+		<description>Ascend[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="460352">
+				<rom name="Ascend[loadm'',,R].t77" size="460352" crc="39b347e0" sha1="0dda18fa40f10e73a64b10de5cd0533e948ccf18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm739eb1341e17b8">
+		<description>Ascend[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="3453948">
+				<rom name="Ascend[loadm'',,R].wav" size="3453948" crc="116a001f" sha1="39eb1341e17b8fa80cbfbc00b5f3cfb4e01dbe28"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fm76d773f8a24ac1">
 		<description>Attack on Pearl Harbor[load]</description>
 		<year>????</year>
@@ -32,6 +102,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fm79ac86c8bcb353">
+		<description>Battlot[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="635604">
+				<rom name="Battlot[loadm'',,R].t77" size="635604" crc="283ca851" sha1="9ac86c8bcb353726f3627f9dda42e434e2e83889"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm70062be447d62b">
+		<description>Battlot[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="4675684">
+				<rom name="Battlot[loadm'',,R].wav" size="4675684" crc="979093f9" sha1="0062be447d62bf0b0887d68fc099a3d153bae2fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7b67cc074c1346">
+		<description>Bootskell[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="656900">
+				<rom name="Bootskell[loadm'',,R].t77" size="656900" crc="a7edcc95" sha1="b67cc074c134643d9c5f2a2cf243dc3c08554299"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm728caaaef69286">
+		<description>Bootskell[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="4810870">
+				<rom name="Bootskell[loadm'',,R].wav" size="4810870" crc="6affc9ca" sha1="28caaaef69286ac6771bc0f8ea0467169b64ad49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7e87debf6bcf69">
+		<description>Cacorm[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="526440">
+				<rom name="Cacorm[loadm'',,R].t77" size="526440" crc="096bd055" sha1="e87debf6bcf69a8376a5bc527c885ae24d7d7f80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7faab4afe03207">
+		<description>Cacorm[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="3926548">
+				<rom name="Cacorm[loadm'',,R].wav" size="3926548" crc="d0958c1c" sha1="faab4afe03207b51a767ce48cc4a1098ea9a9b59"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fm70d93d451b8104">
 		<description>Cannon Ball (1983)(Hudson Soft)(Shinichi Nakamoto)[loadm]</description>
 		<year>????</year>
@@ -39,6 +169,46 @@
 		<part name="cass1" interface="fm7_cass">
 			<dataarea name="cass" size="440262">
 				<rom name="Cannon Ball (1983)(Hudson Soft)(Shinichi Nakamoto)[loadm].t77" size="440262" crc="996a1191" sha1="0d93d451b8104c59488735961d955ea36834a2d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm74546b89d02787">
+		<description>Cavit[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="696368">
+				<rom name="Cavit[loadm'',,R].t77" size="696368" crc="671187d9" sha1="4546b89d02787ce60ff688bb7345b7b2a43f83d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7351438231aa06">
+		<description>Cavit[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="5144250">
+				<rom name="Cavit[loadm'',,R].wav" size="5144250" crc="18acef07" sha1="351438231aa06282139c5880f89254604c8d0f8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm71b43c9f04d4cc">
+		<description>Cracky[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="488600">
+				<rom name="Cracky[loadm'',,R].t77" size="488600" crc="298e2f0f" sha1="1b43c9f04d4ccd4a8d32c76d4defa34565709732"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7a299af25bb133">
+		<description>Cracky[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="3638085">
+				<rom name="Cracky[loadm'',,R].wav" size="3638085" crc="30b7207e" sha1="a299af25bb1334014ee7af910c2d5cf069cf1e3e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,6 +252,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fm77b9799c2203d7">
+		<description>FM7DEMO_YS_V1[run'']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="1170912">
+				<rom name="FM7DEMO_YS_V1[run''].T77" size="1170912" crc="95dba593" sha1="7b9799c2203d72e4250df94ebbe1b42e1239e6fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm71beb6ff9d7f1a">
+		<description>FM7DEMO_YS_V1[run'']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="9085914">
+				<rom name="FM7DEMO_YS_V1[run''].wav" size="9085914" crc="08298220" sha1="1beb6ff9d7f1a09fef37b3c7252dadb805daa3e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7ea4ae6af33829">
+		<description>Guntus[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="695136">
+				<rom name="Guntus[loadm'',,R].t77" size="695136" crc="5fe19742" sha1="ea4ae6af33829558af9a0262f228ca5055deb2b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm791c13c2a2af9a">
+		<description>Guntus[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="5071322">
+				<rom name="Guntus[loadm'',,R].wav" size="5071322" crc="caa21305" sha1="91c13c2a2af9a84df8b51bd8dc50e6978eae8e08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7ead168d21a46a">
+		<description>Hopman[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="533876">
+				<rom name="Hopman[loadm'',,R].t77" size="533876" crc="09a6af43" sha1="ead168d21a46a6da0893d5a7089fb8da2e11606b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7c11ef6d0d458e">
+		<description>Hopman[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="3907600">
+				<rom name="Hopman[loadm'',,R].wav" size="3907600" crc="1ae3bf5c" sha1="c11ef6d0d458e3f51617f660969158b6206a15f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fm7731b621cf9aed">
 		<description>I wa Sanjutsu Nari[load]</description>
 		<year>????</year>
@@ -89,6 +319,26 @@
 		<part name="cass1" interface="fm7_cass">
 			<dataarea name="cass" size="9584172">
 				<rom name="I wa Sanjutsu Nari[load].wav" size="9584172" crc="427bd922" sha1="731b621cf9aed66bd5afcd1d810fa4cbf9bf4b2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7ad41349201afb">
+		<description>Impetus[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="907568">
+				<rom name="Impetus[loadm'',,R].t77" size="907568" crc="22ac40ed" sha1="ad41349201afb7bca3111a114f88619a659318cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7ecf863c8eb944">
+		<description>Impetus[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="6632760">
+				<rom name="Impetus[loadm'',,R].wav" size="6632760" crc="d3425819" sha1="ecf863c8eb944efdcd932e42bfa9b469187ce76f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -132,6 +382,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fm720981bd8e7c5a">
+		<description>Lift[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="509192">
+				<rom name="Lift[loadm'',,R].t77" size="509192" crc="de17d913" sha1="20981bd8e7c5a8443c183addfda90f796e88423e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm74f655e4c9d8b9">
+		<description>Lift[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="3739985">
+				<rom name="Lift[loadm'',,R].wav" size="3739985" crc="fb087053" sha1="4f655e4c9d8b96a1b1bf35702aa2a34909ada480"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fm774fd2192e0399">
 		<description>Marine Attack[load]</description>
 		<year>????</year>
@@ -159,6 +429,46 @@
 		<part name="cass1" interface="fm7_cass">
 			<dataarea name="cass" size="1879014">
 				<rom name="Mobile Suit Gundam Luna Two No Tatakai (1984)(Bandai)[load].t77" size="1879014" crc="adba5569" sha1="b633593a5d0d59de1bf615a820ec8bd25004479e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm79e83fe620adc9">
+		<description>Neuras[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="622360">
+				<rom name="Neuras[loadm'',,R].t77" size="622360" crc="11e1ef9f" sha1="9e83fe620adc98e0048c3231e550af38b0ebd4b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm778694d5dea546">
+		<description>Neuras[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="18554444">
+				<rom name="Neuras[loadm'',,R].wav" size="18554444" crc="75607251" sha1="78694d5dea54664706733a8bd3e47b5def8c097c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7d4bfd423587c4">
+		<description>Osotos[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="583156">
+				<rom name="Osotos[loadm'',,R].t77" size="583156" crc="7314f1ca" sha1="d4bfd423587c4663c1a19a54ee31e8c673223577"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7047fa67af4a70">
+		<description>Osotos[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="4314485">
+				<rom name="Osotos[loadm'',,R].wav" size="4314485" crc="0ad6d48b" sha1="047fa67af4a7023876b9cd1cabfac7685a6296d2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -202,6 +512,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fm7ec1cf4709844f">
+		<description>Ruptus[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="746660">
+				<rom name="Ruptus[loadm'',,R].t77" size="746660" crc="9d9b8257" sha1="ec1cf4709844fd3afaaf02f6d066fe6b47581be3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7dbdce3c242d7e">
+		<description>Ruptus[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="5518321">
+				<rom name="Ruptus[loadm'',,R].wav" size="5518321" crc="152fc569" sha1="dbdce3c242d7efe81a14dd2542b269c56e1d9c47"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fm7caa741bf78bdc">
 		<description>Sea Bomber (1983)(Hudson Soft)[loadm]</description>
 		<year>????</year>
@@ -239,6 +569,26 @@
 		<part name="cass1" interface="fm7_cass">
 			<dataarea name="cass" size="2031090">
 				<rom name="The Great Adventures of The Three Little Pigs STEP2 (1983)(Honey Bee Soft)(Masaaki Kikuta)[loadm].t77" size="2031090" crc="74c0cc02" sha1="6008b4c508e85ef2e4bc32b045df9736c19cb4c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7732f5489f45a3">
+		<description>Yewdow[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="598072">
+				<rom name="Yewdow[loadm'',,R].t77" size="598072" crc="f5412027" sha1="732f5489f45a3271cccb9f1b255de10bcd653a75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm793555689f0d46">
+		<description>Yewdow[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="4384147">
+				<rom name="Yewdow[loadm'',,R].wav" size="4384147" crc="400ec457" sha1="93555689f0d462ecee1d72d0f3a553174ffeb0c8"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="slicer" description="slicer loose roms">
+	<software name="sli08a5672453f5e">
+		<description>dos211</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="313831">
+				<rom name="dos211.imd" size="313831" crc="e38bfc4d" sha1="08a5672453f5e6e0f066c8dbb22864625c0b3de9"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 89 -->
+<!-- Number of items in this list = 117 -->
 <softwarelist name="msx_cass" description="msx_cass loose roms">
 	<software name="msxeadb9d14766b7">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[Micom BASIC][cload]</description>
@@ -383,12 +383,22 @@
 		</part>
 	</software>
 	<software name="msxc01f826797bbc">
-		<description>Aerial (2021)(Inufuto)[BLOAD'CAS-',R]</description>
+		<description>Aerial[BLOAD'CAS-',R]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="10508">
-				<rom name="Aerial (2021)(Inufuto)[BLOAD'CAS-',R].cas" size="10508" crc="09bf64c9" sha1="c01f826797bbc774d3be39206bab60c0c04f8880"/>
+				<rom name="Aerial[BLOAD'CAS-',R].cas" size="10508" crc="09bf64c9" sha1="c01f826797bbc774d3be39206bab60c0c04f8880"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7944136f9548e">
+		<description>Aerial[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4644476">
+				<rom name="Aerial[BLOAD'CAS-',R].wav" size="4644476" crc="7906f45d" sha1="7944136f9548e67ad0db3c9e616cbd1409dc8341"/>
 			</dataarea>
 		</part>
 	</software>
@@ -403,12 +413,42 @@
 		</part>
 	</software>
 	<software name="msx05178a0512272">
-		<description>AntiAir (2024)(Inufuto)[BLOAD'CAS-',R]</description>
+		<description>Antiair[BLOAD'CAS-',R]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="7948">
-				<rom name="AntiAir (2024)(Inufuto)[BLOAD'CAS-',R].cas" size="7948" crc="f7092fb6" sha1="05178a0512272c211c279752bcac966054676fd5"/>
+				<rom name="Antiair[BLOAD'CAS-',R].cas" size="7948" crc="f7092fb6" sha1="05178a0512272c211c279752bcac966054676fd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd7e55735c9981">
+		<description>Antiair[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="3630716">
+				<rom name="Antiair[BLOAD'CAS-',R].wav" size="3630716" crc="26d7afa4" sha1="d7e55735c99810df55eb60ab53b937c85ef67ad1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxeb620abeac16f">
+		<description>Ascend[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="9550">
+				<rom name="Ascend[BLOAD'CAS-',R].cas" size="9550" crc="810f6c05" sha1="eb620abeac16f5956506bec8bffd511d35a286d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx81447b38f58cb">
+		<description>Ascend[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4265108">
+				<rom name="Ascend[BLOAD'CAS-',R].wav" size="4265108" crc="bd09e905" sha1="81447b38f58cb532a32f35fac743269257fa3a85"/>
 			</dataarea>
 		</part>
 	</software>
@@ -432,6 +472,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx0042f02f14a46">
+		<description>Battlot[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="9771">
+				<rom name="Battlot[BLOAD'CAS-',R].cas" size="9771" crc="f29c8e55" sha1="0042f02f14a46c7c070998aa426eb828c84322fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa08a531c48b85">
+		<description>Battlot[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4352624">
+				<rom name="Battlot[BLOAD'CAS-',R].wav" size="4352624" crc="e1c21b4f" sha1="a08a531c48b851cb95cfd40e8db967f7cbbe54f1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx73ef878e0f8fa">
 		<description>Boomerang GAME (1985-02)(Kouji, Tsujii)(JP)[f][Micom BASIC][cload]</description>
 		<year>????</year>
@@ -449,6 +509,26 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="1721018">
 				<rom name="Boomerang GAME (1985-02)(Kouji, Tsujii)(JP)[Micom BASIC][cload].wav" size="1721018" crc="db4ea22b" sha1="4b2ab71c5d00a3d6c927b983f9ababa7db63e1ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa4912dc215e9f">
+		<description>Bootskell[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="9278">
+				<rom name="Bootskell[BLOAD'CAS-',R].cas" size="9278" crc="54cae7b8" sha1="a4912dc215e9fb471b0a396b1d0146fc6ca07bdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7dc53a9723b9c">
+		<description>Bootskell[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4157396">
+				<rom name="Bootskell[BLOAD'CAS-',R].wav" size="4157396" crc="b6759a33" sha1="7dc53a9723b9c269a134bae761d2b2a424cafb19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -472,6 +552,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxea23ce68739c5">
+		<description>Cacorm[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="8379">
+				<rom name="Cacorm[BLOAD'CAS-',R].cas" size="8379" crc="02b3c131" sha1="ea23ce68739c5cca6499cb766eb6495f08b5f3dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa23c8ac5f61e2">
+		<description>Cacorm[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="3801392">
+				<rom name="Cacorm[BLOAD'CAS-',R].wav" size="3801392" crc="cfb9c52d" sha1="a23c8ac5f61e22ce69b66d83d31ff6456950a238"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxd9729c679a1fc">
 		<description>CARD, THE (1996-04)(Hashimoto, Isaoki)(JP)[Micom BASIC][cload]</description>
 		<year>????</year>
@@ -482,6 +582,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx29c1410a174bd">
+		<description>Cavit[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="9892">
+				<rom name="Cavit[BLOAD'CAS-',R].cas" size="9892" crc="fc10fe98" sha1="29c1410a174bdccbc84d77130f3afbcc2effdab7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx19d7c474a1701">
+		<description>Cavit[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4400540">
+				<rom name="Cavit[BLOAD'CAS-',R].wav" size="4400540" crc="57fb7066" sha1="19d7c474a17011920accacf09adf5827f4fd4223"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxcf3ad1874dada">
 		<description>Cracky (2023)(Inufuto)[BLOAD'CAS-',R]</description>
 		<year>????</year>
@@ -489,6 +609,16 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="7237">
 				<rom name="Cracky (2023)(Inufuto)[BLOAD'CAS-',R].cas" size="7237" crc="8d43ce2a" sha1="cf3ad1874dada69a169e8b8c1127647e40dae609"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2723717cc85b5">
+		<description>Cracky[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="3349160">
+				<rom name="Cracky[BLOAD'CAS-',R].wav" size="3349160" crc="06f6d868" sha1="2723717cc85b594b90eb88b82dd9992cedd544ad"/>
 			</dataarea>
 		</part>
 	</software>
@@ -543,12 +673,12 @@
 		</part>
 	</software>
 	<software name="msx2621a7ec1e26e">
-		<description>epb_msx[BLOAD'CAS-',R]</description>
+		<description>Elite Planet Browser_msx[BLOAD'CAS-',R]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="15891">
-				<rom name="epb_msx[BLOAD'CAS-',R].cas" size="15891" crc="bf857414" sha1="2621a7ec1e26e50d4d360584a83d8a238e0711df"/>
+				<rom name="Elite Planet Browser_msx[BLOAD'CAS-',R].cas" size="15891" crc="bf857414" sha1="2621a7ec1e26e50d4d360584a83d8a238e0711df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -579,6 +709,36 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="3385060">
 				<rom name="GREEN HAT (1985)(Suzuki, Kazuteru)(JP)[Micom BASIC][cload].wav" size="3385060" crc="48fbbb5f" sha1="9a55d3f8af796c4d31ad1f92ccde72bd019a40e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe34aa5616c284">
+		<description>Guntus[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="11755">
+				<rom name="Guntus[BLOAD'CAS-',R].cas" size="11755" crc="38f7d711" sha1="e34aa5616c284fb28de3003ec727c62f33b2bc7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2bf92352ef257">
+		<description>Guntus[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="5138288">
+				<rom name="Guntus[BLOAD'CAS-',R].wav" size="5138288" crc="edfb2327" sha1="2bf92352ef2576eab954ff9d2b3899f2f77f73db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4755e2cfbba29">
+		<description>H-tron_msx[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="9774">
+				<rom name="H-tron_msx[BLOAD'CAS-',R].cas" size="9774" crc="cb17bd1f" sha1="4755e2cfbba2940d8bd69df46c10704581944f35"/>
 			</dataarea>
 		</part>
 	</software>
@@ -622,13 +782,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="msx4755e2cfbba29">
-		<description>htron_msx[BLOAD'CAS-',R]</description>
+	<software name="msxf69e7ae3f3fe9">
+		<description>Hopman[BLOAD'CAS-',R]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="msx_cass">
-			<dataarea name="cass" size="9774">
-				<rom name="htron_msx[BLOAD'CAS-',R].cas" size="9774" crc="cb17bd1f" sha1="4755e2cfbba2940d8bd69df46c10704581944f35"/>
+			<dataarea name="cass" size="9825">
+				<rom name="Hopman[BLOAD'CAS-',R].cas" size="9825" crc="a2b74631" sha1="f69e7ae3f3fe96d296e9f2a800ec5537ad5ccf23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxabf4486ea5840">
+		<description>Hopman[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4374008">
+				<rom name="Hopman[BLOAD'CAS-',R].wav" size="4374008" crc="663ce99d" sha1="abf4486ea58402011cd450b6d01814ba4aee09a1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -649,6 +819,26 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="11926">
 				<rom name="Hyper Blust (1985)(Soft Pro International)[CLOAD + RUN].cas" size="11926" crc="5ce7a576" sha1="2958ad169d53c7f9a68ded1230d5088dd08b337e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx427f5abe88af6">
+		<description>Impetus[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="16374">
+				<rom name="Impetus[BLOAD'CAS-',R].cas" size="16374" crc="038bc2db" sha1="427f5abe88af68a4be0084ae3f9e7f13b02d5b69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx67477fa7e9d24">
+		<description>Impetus[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="6967412">
+				<rom name="Impetus[BLOAD'CAS-',R].wav" size="6967412" crc="178c1f79" sha1="67477fa7e9d241ed0a9683dfe7609365cdf5439b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -712,6 +902,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxa8d4b23b5df0d">
+		<description>Lift[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="8172">
+				<rom name="Lift[BLOAD'CAS-',R].cas" size="8172" crc="8b345043" sha1="a8d4b23b5df0d96886511eedee19063788a179fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9b86cc2fea4ba">
+		<description>Lift[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="3719420">
+				<rom name="Lift[BLOAD'CAS-',R].wav" size="3719420" crc="59dc528e" sha1="9b86cc2fea4ba3cf53a18f8766ff5f197f980df9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx8d2466e46eb2b">
 		<description>Masaru-kun Patchi Shiyou (1985-03)(Yasuda, Mitsuru)(JP)[Micom BASIC][cload]</description>
 		<year>????</year>
@@ -732,6 +942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx1ec9b1dad1fa7">
+		<description>Neuras[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="16209196">
+				<rom name="Neuras[BLOAD'CAS-',R].wav" size="16209196" crc="600551a4" sha1="1ec9b1dad1fa75bdc25f124b96d4fcf4dbcedc96"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxd062be70d6a41">
 		<description>north sea helicopter (1987)(aackosoft)(nl)[run'cas-']</description>
 		<year>????</year>
@@ -739,6 +959,26 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="62720">
 				<rom name="north sea helicopter (1987)(aackosoft)(nl)[run'cas-'].cas" size="62720" crc="5733cc5c" sha1="d062be70d6a4179577414a5e3cf20be61c664053"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7ea32f57aeea8">
+		<description>Osotos[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="9328">
+				<rom name="Osotos[BLOAD'CAS-',R].cas" size="9328" crc="73c6a289" sha1="7ea32f57aeea8de1f6083b7ea762095487adfcde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4549978c970c7">
+		<description>Osotos[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4177196">
+				<rom name="Osotos[BLOAD'CAS-',R].wav" size="4177196" crc="27115ee0" sha1="4549978c970c71ac765de3ac8f977ef530b58fbe"/>
 			</dataarea>
 		</part>
 	</software>
@@ -759,6 +999,26 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="4020244">
 				<rom name="RESCUE, THE (1985-03)(MONO)(JP)[Micom BASIC][cload].wav" size="4020244" crc="b6c38fd4" sha1="e8fd174841108a8abfd09ea092a8de9c45115d57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxeee214ef849d0">
+		<description>Ruptus[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="12711">
+				<rom name="Ruptus[BLOAD'CAS-',R].cas" size="12711" crc="7a9e2f94" sha1="eee214ef849d0910dfca805818c96d98167e1a62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc63c23cf4cdca">
+		<description>Ruptus[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="5516864">
+				<rom name="Ruptus[BLOAD'CAS-',R].wav" size="5516864" crc="a011c6db" sha1="c63c23cf4cdcaa6506d49b67a61ad28f0bee9fdb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -879,6 +1139,26 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="1556348">
 				<rom name="WHITE & BLACK (1985-03)(Ouyam, Takahiro)(JP)[Micom BASIC][cload].wav" size="1556348" crc="02a8dc69" sha1="8bcc033fb922f40935c6cdaf7aba24f0bb2b2d57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd6f0593d52c6f">
+		<description>Yewdow[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="8949">
+				<rom name="Yewdow[BLOAD'CAS-',R].cas" size="8949" crc="553c9a0e" sha1="d6f0593d52c6f98770f4974515f4547e12f11bae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf8fa96ec6296e">
+		<description>Yewdow[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="4027112">
+				<rom name="Yewdow[BLOAD'CAS-',R].wav" size="4027112" crc="7001346e" sha1="f8fa96ec6296e8da7ae5901ccd8e6584f9f52368"/>
 			</dataarea>
 		</part>
 	</software>

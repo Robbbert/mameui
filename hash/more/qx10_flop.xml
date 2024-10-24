@@ -1,44 +1,204 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4 -->
+<!-- Number of items in this list = 20 -->
 <softwarelist name="qx10_flop" description="qx10_flop loose roms">
+	<software name="eqxbb30477091f8e">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="aerial.d88" size="348848" crc="21ba14d9" sha1="bb30477091f8e9dd49eb91a5ac2d34e0954f0222"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx73207c27ad80c">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="antiair.d88" size="348848" crc="78c4157f" sha1="73207c27ad80cd09a28dec40e2af9aa4f65153e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx103be1f6ef92a">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="ascend.d88" size="348848" crc="006c54fb" sha1="103be1f6ef92a0be5e90b63ff4c2305ce99a5a09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx21ad9f9fa7bdd">
+		<description>Battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="Battlot.d88" size="348848" crc="41270958" sha1="21ad9f9fa7bddc3c65a8c2099d325c47950e6dd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxbf9ac6957d299">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="bootskell.d88" size="348848" crc="da2a648c" sha1="bf9ac6957d299fcbad82f2e1d21d01b2233309bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxd372196ad727d">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="cacorm.d88" size="348848" crc="be591834" sha1="d372196ad727ded904abac248a99e75795913665"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx8fefa9bd0fd8a">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="cavit.d88" size="348848" crc="5f6a04d8" sha1="8fefa9bd0fd8a35544c155c08edd427a0bafa343"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxf34ae49b654b6">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="cracky.d88" size="348848" crc="397851a7" sha1="f34ae49b654b672a00a35b9b490e193417dbf067"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="eqxb8a4d5ab8821b">
-		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)</description>
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)[Bdrive]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop" interface="floppy_5_25">
 			<dataarea name="flop" size="430336">
-				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio).dsk" size="430336" crc="1ddd8faf" sha1="b8a4d5ab8821b66293903ead42668762fb2c5b70"/>
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio)[Bdrive].dsk" size="430336" crc="1ddd8faf" sha1="b8a4d5ab8821b66293903ead42668762fb2c5b70"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="eqxebb01fe70bef8">
-		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)[turn-based]</description>
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)[turn-based][Bdrive]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop" interface="floppy_5_25">
 			<dataarea name="flop" size="430336">
-				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[turn-based].dsk" size="430336" crc="4ab7920a" sha1="ebb01fe70bef89f1c89ab9087ab0b414b0919251"/>
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[turn-based][Bdrive].dsk" size="430336" crc="4ab7920a" sha1="ebb01fe70bef89f1c89ab9087ab0b414b0919251"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="eqx46563b9b42278">
-		<description>Elite Planet Browser</description>
+		<description>Elite Planet Browser[Bdrive]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop" interface="floppy_5_25">
 			<dataarea name="flop" size="430336">
-				<rom name="Elite Planet Browser.dsk" size="430336" crc="58ee0346" sha1="46563b9b42278b448c5816d343aea352c2ad3f15"/>
+				<rom name="Elite Planet Browser[Bdrive].dsk" size="430336" crc="58ee0346" sha1="46563b9b42278b448c5816d343aea352c2ad3f15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx16393415da45a">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="guntus.d88" size="348848" crc="b48b670c" sha1="16393415da45a9ea781675072db859d2a8cbf631"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx701c5b739bbae">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="hopman.d88" size="348848" crc="5a02a5de" sha1="701c5b739bbae6b469294b1ea15a7d15a6ec6ccb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxe60723ee8ac06">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="impetus.d88" size="348848" crc="89fdfef8" sha1="e60723ee8ac06316269eebcfb236f03f42aaa310"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxfb7e9c6276b38">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="lift.d88" size="348848" crc="1577b0ef" sha1="fb7e9c6276b3807172dfe9adb70de99b12ae7e7a"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="eqx367b62aefec3f">
-		<description>MasterMind</description>
+		<description>MasterMind[Bdrive]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop" interface="floppy_5_25">
 			<dataarea name="flop" size="430336">
-				<rom name="MasterMind.dsk" size="430336" crc="76c778b6" sha1="367b62aefec3f4cc1d7797220353c6f551d27f34"/>
+				<rom name="MasterMind[Bdrive].dsk" size="430336" crc="76c778b6" sha1="367b62aefec3f4cc1d7797220353c6f551d27f34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxebe64d8129176">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="neuras.d88" size="348848" crc="7ce5c334" sha1="ebe64d812917641d549043828ac8693014c75521"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqx47a38466f8a19">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="osotos.d88" size="348848" crc="3272f2af" sha1="47a38466f8a196d65492420eda3152326dace36f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxbd503f0852540">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="ruptus.d88" size="348848" crc="7373b9d8" sha1="bd503f0852540cddcc4d76451cab82f84331351c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxd09f4ea59388a">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="yewdow.d88" size="348848" crc="f8a8d015" sha1="d09f4ea59388aacda0af794caac680ac191181b0"/>
 			</dataarea>
 		</part>
 	</software>
