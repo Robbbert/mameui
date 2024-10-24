@@ -1904,7 +1904,7 @@ void fm7_state::fm7(machine_config &config)
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_formats(fm7_cassette_formats);
-	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("fm7_cass");
 
@@ -1957,7 +1957,7 @@ void fm7_state::fm8(machine_config &config)
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_formats(fm7_cassette_formats);
-	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("fm7_cass");
 
@@ -2017,7 +2017,7 @@ void fm77_state::fm77av(machine_config &config)
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_formats(fm7_cassette_formats);
-	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("fm7_cass");
 
@@ -2079,7 +2079,7 @@ void fm11_state::fm11(machine_config &config)
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_formats(fm7_cassette_formats);
-	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("fm7_cass");
 
@@ -2126,7 +2126,7 @@ void fm7_state::fm16beta(machine_config &config)
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_formats(fm7_cassette_formats);
-	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("fm7_cass");
 
