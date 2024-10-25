@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 782 -->
+<!-- Number of items in this list = 778 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx1978d77c2f97f3">
 		<description>(demo)8WAY-SCR</description>
@@ -139,16 +139,6 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="473">
 				<rom name="3.P" size="473" crc="e0032615" sha1="d1dd73f7830ffcffde32381e8a743cd7793424eb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx1738ad81449bfa">
-		<description>3D-3D</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="12366">
-				<rom name="3D-3D.P" size="12366" crc="572b34bb" sha1="738ad81449bfa32fd05bc0da3a7035f7c9a9728d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -989,16 +979,6 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="5191">
 				<rom name="AUTOMAT.81" size="5191" crc="1567abbd" sha1="0397f1a78dbbab4bb9fc42ab4ee2f64797c1cfcd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx1aed759d4dbcad">
-		<description>Avalanche (2011) - Full Version</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="15433">
-				<rom name="Avalanche (2011) - Full Version.p" size="15433" crc="2702a73c" sha1="aed759d4dbcadf89bd24769a5e1c2e3d19074bad"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3039,16 +3019,6 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="2486">
 				<rom name="DOORZAKK.P" size="2486" crc="efc795a5" sha1="ac128edb32c003f4be577ec5e58bdb0284800dbd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx1e048c10af990f">
-		<description>Down (2012) - Full Version</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="16189">
-				<rom name="Down (2012) - Full Version.p" size="16189" crc="11b509f9" sha1="e048c10af990ff2ef9086962b89801911e1e8106"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5739,16 +5709,6 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="2814">
 				<rom name="MAYDAY.P" size="2814" crc="e3c54d96" sha1="2e0abe3516c2a27681a00e1c78dda15f04f13c40"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx1ba54287b132a4">
-		<description>Mayhem (2011) - Full Version</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="15580">
-				<rom name="Mayhem (2011) - Full Version.p" size="15580" crc="df06cb6d" sha1="ba54287b132a40b02e14b1a5bac085588410edb6"/>
 			</dataarea>
 		</part>
 	</software>

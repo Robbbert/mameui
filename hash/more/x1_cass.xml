@@ -1,7 +1,47 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 33 -->
+<!-- Number of items in this list = 50 -->
 <softwarelist name="x1_cass" description="x1_cass loose roms">
+	<software name="x1f8854ea363a35e">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2284508">
+				<rom name="aerial.wav" size="2284508" crc="ca16079a" sha1="f8854ea363a35e6b6d080ddcc660467a007829ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1f49967a8aa278d">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1584740">
+				<rom name="antiair.wav" size="1584740" crc="e5de821a" sha1="f49967a8aa278ddd3bebd278a8ac12a8d38886c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1c1ef0d0abe22fb">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1950488">
+				<rom name="ascend.wav" size="1950488" crc="bc492ecf" sha1="c1ef0d0abe22fb2f1f2dd76621bd874fbff1d048"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1ae211a847dac5b">
+		<description>Battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2253092">
+				<rom name="Battlot.wav" size="2253092" crc="cf4aec7c" sha1="ae211a847dac5bfe7eeacd140d454853ed7684c1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x10f354c3cf5d275">
 		<description>Binary Land (1983)(Hudson Soft)(H. Konno)</description>
 		<year>????</year>
@@ -52,6 +92,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x1859b459965b258">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2318228">
+				<rom name="bootskell.wav" size="2318228" crc="874948af" sha1="859b459965b258c8b5e7e378022bd92a13cd44b8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x1964fd62d19ab46">
 		<description>Bousou Tokkyuu SOS (1983)(Hudson Soft)(Fumihiko Itagaki)</description>
 		<year>????</year>
@@ -69,6 +119,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="81575">
 				<rom name="Bubble Kund 1999 (1983)(Hudson Soft).tap" size="81575" crc="eb4dc887" sha1="c547c567b225c4d700c400c055359451e112720f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x18e78fa2b02adb2">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1935272">
+				<rom name="cacorm.wav" size="1935272" crc="86b4a807" sha1="8e78fa2b02adb215434388eb3ef56515d1b07796"/>
 			</dataarea>
 		</part>
 	</software>
@@ -92,6 +152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x13637de3770cc2a">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2435072">
+				<rom name="cavit.wav" size="2435072" crc="d185358a" sha1="3637de3770cc2abbb6cd48a753ffcdeacfe5da6d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x1a4b2edade0999a">
 		<description>Championship Load Runner</description>
 		<year>????</year>
@@ -99,6 +169,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="600004">
 				<rom name="Championship Load Runner.tap" size="600004" crc="631e361f" sha1="a4b2edade0999a37575c27adcbaf4bbc002139ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x16fcdc41e41639c">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1784528">
+				<rom name="cracky.wav" size="1784528" crc="36cc873c" sha1="6fcdc41e41639c870ee5fa6392969fe6f2b8b09a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -122,6 +202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x16f0b99293b1393">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2572880">
+				<rom name="guntus.wav" size="2572880" crc="ff2a8f7d" sha1="6f0b99293b13931c069c68659354af200aa78b1c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x12c9edfaabb08f7">
 		<description>Hitsuji-Yaai (1983)(Hudson Soft)(Masaaki Kikuta)</description>
 		<year>????</year>
@@ -139,6 +229,26 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="1751804">
 				<rom name="Hitsuji-Yaai (1983)(Hudson Soft)(Masaaki Kikuta).wav" size="1751804" crc="417a9c4d" sha1="f0cf3a967b0e88558f7b703d7aee7ea18fd9d780"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x10830026b6d065a">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1986380">
+				<rom name="hopman.wav" size="1986380" crc="92469cc0" sha1="0830026b6d065ae615211469048ed08f6435ab32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x149dbca2e890b8d">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="3548396">
+				<rom name="impetus.wav" size="3548396" crc="e1901423" sha1="49dbca2e890b8d8198b121ae2c0bebc7b6192229"/>
 			</dataarea>
 		</part>
 	</software>
@@ -162,6 +272,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x137b52f23f0f806">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1858352">
+				<rom name="lift.wav" size="1858352" crc="b2d563ce" sha1="37b52f23f0f8062955c26a78070efdfc21e9d910"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1712f778288934d">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="6152116">
+				<rom name="mazy.wav" size="6152116" crc="42f0abae" sha1="712f778288934d29997d4799f15eeb401bfedc12"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x193e76963d08cb9">
 		<description>Medaka No Kyoudai (1983)(Hudson Soft)(TV Asahi Music)(Masaaki Kikuta)</description>
 		<year>????</year>
@@ -169,6 +299,36 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="190334">
 				<rom name="Medaka No Kyoudai (1983)(Hudson Soft)(TV Asahi Music)(Masaaki Kikuta).tap" size="190334" crc="b13d5764" sha1="93e76963d08cb9e3011e8692b05f41c753ed093e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x18cc7b814f67a4b">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="8242956">
+				<rom name="neuras.wav" size="8242956" crc="c99ef416" sha1="8cc7b814f67a4b3226fa99b03eb66eee7d4fe554"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1acc4c944f861f9">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2198168">
+				<rom name="osotos.wav" size="2198168" crc="380055f3" sha1="acc4c944f861f9af7964be99fa2051c1cd1fcb97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x11aca835fef6afe">
+		<description>Ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="3004232">
+				<rom name="Ruptus.wav" size="3004232" crc="80150051" sha1="1aca835fef6afe72665e4c07e1b1905bf6903ca7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -299,6 +459,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="333066">
 				<rom name="Super Phobos (1982)(DB-Soft).tap" size="333066" crc="9f00e8d4" sha1="0eef12ce5d4911f2e0c1234978fe5823f3b6e19e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1d365c75f7b8a3a">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2186408">
+				<rom name="yewdow.wav" size="2186408" crc="1097e0ba" sha1="d365c75f7b8a3a476cbaf6b9a1d0902540b2e266"/>
 			</dataarea>
 		</part>
 	</software>

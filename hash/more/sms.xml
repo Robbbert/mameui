@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 261 -->
+<!-- Number of items in this list = 278 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -89,6 +89,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="acalvo_1.sms" size="65536" crc="b3440203" sha1="3ba79c93e54d85f0bfea64113f05bae873c88434"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms7b8a6f4193f37">
+		<description>Aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="15943">
+				<rom name="Aerial.sms" size="15943" crc="bc64b967" sha1="7b8a6f4193f37525c7cd76c1d2ad2c3c0626d1e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -182,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsc79426c8541c4">
+		<description>Antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Antiair.sms" size="16384" crc="e49dfb4e" sha1="c79426c8541c4226fd7be2ef1a0df4b3b7e96a52"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms06566e2970fca">
 		<description>Arno Dash 2 v1.03 (2021)(Under4Mhz)</description>
 		<year>????</year>
@@ -199,6 +219,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Arno Dash v1.03 (2021)(Under4Mhz).sms" size="32768" crc="3dcdb2e0" sha1="0a91b78a43a20604fee016511676335f99ba0a3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsace9eae888ef5">
+		<description>Ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="14122">
+				<rom name="Ascend.sms" size="14122" crc="ffa79dc0" sha1="ace9eae888ef57f740e45be2d535dd61aea27fdb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -269,6 +299,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="battle out run (fm mod).sms" size="262144" crc="7c849999" sha1="74c198cf6cac10d65b54fa2a9a5c7b3808545724"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms76f346e12a522">
+		<description>Battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="14536">
+				<rom name="Battlot.sms" size="14536" crc="e31f01d6" sha1="76f346e12a522da6875d14c2385cb46decfab267"/>
 			</dataarea>
 		</part>
 	</software>
@@ -452,6 +492,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms3173aa1f61152">
+		<description>Bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="14884">
+				<rom name="Bootskell.sms" size="14884" crc="e12c3c4c" sha1="3173aa1f611524a86872fe189dbf8eae0a57251e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms358f5a2d00a17">
+		<description>Cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="12593">
+				<rom name="Cacorm.sms" size="12593" crc="78a26f50" sha1="358f5a2d00a17a84ed96e6b52e8a185102e0ece0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsbb6dc8612deb4">
 		<description>California Games [tr Pt G-TMT]</description>
 		<year>????</year>
@@ -502,6 +562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms1a2eb9af18222">
+		<description>Cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="15990">
+				<rom name="Cavit.sms" size="15990" crc="0c1674da" sha1="1a2eb9af182229bc52acc3e616107553a1075f0b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms62e9dae23d305">
 		<description>Choplifter [HTH] [SMS-GG] (TW)</description>
 		<year>????</year>
@@ -542,6 +612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsaec51f62487cb">
+		<description>Cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="11098">
+				<rom name="Cracky.sms" size="11098" crc="d45f865c" sha1="aec51f62487cbeb07e82d485484dcef74c015a39"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms9b42c796f3e89">
 		<description>Crazy Pinball (2024)(MikGames)</description>
 		<year>????</year>
@@ -563,12 +643,12 @@
 		</part>
 	</software>
 	<software name="sms4dbdf687d264f">
-		<description>Deepspace_SMS</description>
+		<description>Deepspace</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Deepspace_SMS.sms" size="32768" crc="14d9ad8c" sha1="4dbdf687d264f9e815a086ddb25aef485ed4ea04"/>
+				<rom name="Deepspace.sms" size="32768" crc="14d9ad8c" sha1="4dbdf687d264f9e815a086ddb25aef485ed4ea04"/>
 			</dataarea>
 		</part>
 	</software>
@@ -982,6 +1062,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms6ff0b1abafa82">
+		<description>Guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16727">
+				<rom name="Guntus.sms" size="16727" crc="691635e3" sha1="6ff0b1abafa82523dcc73976f28bbffdeaaa9309"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smse150365c59b59">
 		<description>H-Tron</description>
 		<year>????</year>
@@ -1012,6 +1102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsc7fda14ba3e88">
+		<description>Hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="13037">
+				<rom name="Hopman.sms" size="13037" crc="06090a9a" sha1="c7fda14ba3e888a1a29bc14bfb2788f12e2d966d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms552fa36607e82">
 		<description>Ice Force (2021)(Alex1975Br)</description>
 		<year>????</year>
@@ -1019,6 +1119,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Ice Force (2021)(Alex1975Br).sms" size="65536" crc="da5f2e58" sha1="552fa36607e82e95e73af98919309f6f43daa3f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms441d333c8cb80">
+		<description>Impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="22208">
+				<rom name="Impetus.sms" size="22208" crc="0172e6f9" sha1="441d333c8cb8097daa1ec63263ae52be50ecd3f2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1089,6 +1199,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="KunKun & KokoKun 2 - Return of the Kun [v0.92].sms" size="65536" crc="857c53e7" sha1="a3dda7c03b737bd05057afbc7375ce591b510e81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms9f0a778d29dbd">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="12705">
+				<rom name="Lift.sms" size="12705" crc="2c5420a9" sha1="9f0a778d29dbde6d6a2d4458b4ebd1315671ac70"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1233,12 +1353,12 @@
 		</part>
 	</software>
 	<software name="smsc5e78f61e8ca1">
-		<description>mastermind_SMS</description>
+		<description>Mastermind</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="mastermind_SMS.sms" size="32768" crc="7f6a8a92" sha1="c5e78f61e8ca15d2596ffbbf5cba8991d7d7166e"/>
+				<rom name="Mastermind.sms" size="32768" crc="7f6a8a92" sha1="c5e78f61e8ca15d2596ffbbf5cba8991d7d7166e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1259,6 +1379,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="maze3d-2008-01-16.sms" size="32768" crc="64f7f933" sha1="a7326ae14465d81ff1496ab72f3dfd3c33f54c8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0e1632b4ac51a">
+		<description>Mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="10992">
+				<rom name="Mazy.sms" size="10992" crc="cb5c20fd" sha1="0e1632b4ac51abe98fe8ffa93a2f8f70a39d44a1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1402,6 +1532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms56289737252cf">
+		<description>Neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="12920">
+				<rom name="Neuras.sms" size="12920" crc="9b229f4d" sha1="56289737252cf47f2503d5b26e9505d56909aae7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsa6622cb10f16f">
 		<description>Ninja Gaiden (E) [T+Por_POBRE]</description>
 		<year>????</year>
@@ -1449,6 +1589,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Ninja, The [HTH] [SMS-GG] (TW).sms" size="131072" crc="2cd62dca" sha1="5ba2588533375a2c36ea31e352a3ec3ca755a4a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms23c4d46c72285">
+		<description>Osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Osotos.sms" size="16384" crc="b8569995" sha1="23c4d46c722852f6b639009b8129648df1c50fe1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1849,6 +1999,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Rayman Retro Rumble v1.3 (2022)(Maxim).sms" size="524288" crc="932c57d5" sha1="ae852cef94927d876ef95d1099bbc8edb7a71b42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms16ae8129f7daf">
+		<description>Ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="17461">
+				<rom name="Ruptus.sms" size="17461" crc="f4e44d46" sha1="16ae8129f7daf0eedaac16dd8cf64d6455d97833"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2559,6 +2719,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Woody Pop - Shinjinrui no Block Kuzushi (pad hack).sms" size="32768" crc="145b574f" sha1="9b1e7522a722803e54ab0f18b384992a6bebae1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms8600b30b736b6">
+		<description>Yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Yewdow.sms" size="16384" crc="07302dd3" sha1="8600b30b736b66b9e032fea8ca7bc012a8f5ee6e"/>
 			</dataarea>
 		</part>
 	</software>

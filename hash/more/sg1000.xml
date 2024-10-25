@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 33 -->
+<!-- Number of items in this list = 47 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -42,6 +42,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg114e8396f2663f">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="9451">
+				<rom name="ascend.sg" size="9451" crc="69e60ce5" sha1="14e8396f2663ff50f61d177255c207ff7dca1262"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1f66932832acd5">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="9745">
+				<rom name="battlot.sg" size="9745" crc="90532d80" sha1="f66932832acd5b11ba5d7c1bdaff1021a4b01294"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg15c46089a417ad">
 		<description>Black Onyx Enhanced, the (T-Eng)(2010)(SSTranslations)</description>
 		<year>????</year>
@@ -69,6 +89,36 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="49152">
 				<rom name="Bloktris (2023)(Under4Mhz).sg" size="49152" crc="7febcd40" sha1="f3e175320da83ab1452e71402f69bc6926bd5f22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1f44c2912e4a9f">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="9448">
+				<rom name="bootskell.sg" size="9448" crc="c2413720" sha1="f44c2912e4a9ff580a4a3cd7837c7ceece2b8da3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1ea673d5b760ad">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="8550">
+				<rom name="cacorm.sg" size="8550" crc="26d37da3" sha1="ea673d5b760ad804f531a6f2082db6b2074a1901"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg15c494bfcdf22f">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="9984">
+				<rom name="cavit.sg" size="9984" crc="421d3f26" sha1="5c494bfcdf22fb6a8aef78b4227ab6b01f639196"/>
 			</dataarea>
 		</part>
 	</software>
@@ -122,6 +172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg1795b1ae0d1d6b">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="7390">
+				<rom name="cracky.sg" size="7390" crc="34517b4c" sha1="795b1ae0d1d6b8fbde5f39b7a41cee214d157996"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg134618e1b6d16a">
 		<description>Deepspace_SC3000.rom</description>
 		<year>????</year>
@@ -172,6 +232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg162b0c36e65596">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="11885">
+				<rom name="guntus.sg" size="11885" crc="c23f2f57" sha1="62b0c36e65596a24a4d5163b98c6ae0af08ef08f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg1eb4d6b0c684a5">
 		<description>H-Tron_sc3000.rom</description>
 		<year>????</year>
@@ -179,6 +249,26 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="H-Tron_sc3000.rom.bin" size="32768" crc="8ebdc890" sha1="eb4d6b0c684a517f65fdb9df396d78f794535ee8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1b9ca846d0dbdb">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="9958">
+				<rom name="hopman.sg" size="9958" crc="8bc01dd6" sha1="b9ca846d0dbdbd32ed00fa106fb162a0aceda259"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg111f995fb7e9e9">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="16624">
+				<rom name="impetus.sg" size="16624" crc="42179ce3" sha1="11f995fb7e9e93ffc53a5fdab083731b35eb9c16"/>
 			</dataarea>
 		</part>
 	</software>
@@ -192,6 +282,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg1586a5cbd351f7">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="8297">
+				<rom name="lift.sg" size="8297" crc="f5e62875" sha1="586a5cbd351f7bd878ac17148cecdec4d4723b16"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg18f52987b16fa1">
 		<description>Mahjong Solitaire v1.07 (2020)(Under4Mhz)</description>
 		<year>????</year>
@@ -199,6 +299,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Mahjong Solitaire v1.07 (2020)(Under4Mhz).sg" size="32768" crc="1b14b1c2" sha1="8f52987b16fa1148a2da5b2e8b8ca491ba1d95fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1d261c253a83e0">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="7058">
+				<rom name="mazy.sg" size="7058" crc="8f972417" sha1="d261c253a83e020835ac128dbb497d378ebc8329"/>
 			</dataarea>
 		</part>
 	</software>
@@ -212,6 +322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg1feae43ba860a5">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="8373">
+				<rom name="neuras.sg" size="8373" crc="beb45e42" sha1="feae43ba860a55adf5c1d7adf185eb990a6f0eae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg10473f6ca89948">
 		<description>Ninja Princess (T-Eng)(2010)(goldenband)</description>
 		<year>????</year>
@@ -219,6 +339,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Ninja Princess (T-Eng)(2010)(goldenband).bin" size="32768" crc="bdb6cf0e" sha1="0473f6ca89948f08f504c634e00cf2cf72f94fc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg185a56a6db9a64">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="16384">
+				<rom name="osotos.sg" size="16384" crc="5e4238de" sha1="85a56a6db9a646eba45cc174919263a719b5641a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -249,6 +379,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Pitman v1.03 (2021)(Under4Mhz).sg" size="32768" crc="e325f022" sha1="22b6c05f186bc87bfbeb734e8ef107d314f6825d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg15ccb666ee0d1a">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="12455">
+				<rom name="ruptus.sg" size="12455" crc="61b4a940" sha1="5ccb666ee0d1a29615e46eba2d7d66ee714b4f74"/>
 			</dataarea>
 		</part>
 	</software>

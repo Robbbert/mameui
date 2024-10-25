@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1836 -->
+<!-- Number of items in this list = 1839 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4469,6 +4469,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3807254">
 				<rom name="Citadel of Chaos, The v2.1 (2021)(Studio Vetea).bin" size="3807254" crc="bfe255e3" sha1="dcad8680f0aef9bcc37804c645bb6cdb4f5d09ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene459ff92f6014">
+		<description>Citadel of Chaos, The v2.23 (2021)(Studio Vetea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3809298">
+				<rom name="Citadel of Chaos, The v2.23 (2021)(Studio Vetea).bin" size="3809298" crc="fac49e30" sha1="e459ff92f601477b60a28e220be3e853784a87a9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9212,6 +9222,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genb0644ea905409">
+		<description>Lemmings - Colour Palette & Level Title Fix v1.3 (Euro)(2024)(J. Russell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lemmings - Colour Palette & Level Title Fix v1.3 (Euro)(2024)(J. Russell).bin" size="1048576" crc="08bf475c" sha1="b0644ea90540942c19b54cdc61864ff756a10cd2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genfe6533d013100">
 		<description>Lethal Wedding (USA, Japan) (Demo) (Unl)</description>
 		<year>????</year>
@@ -13799,6 +13819,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2073642">
 				<rom name="Sonic 2 SMTP v0.5 (2007)(SMTP).bin" size="2073642" crc="d116fef0" sha1="2e50d04e747e938cd5651fe31a3f581e1bc1718c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9c68857a30ed4">
+		<description>Sonic 2 VS (2024)(Sock Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4038681">
+				<rom name="Sonic 2 VS (2024)(Sock Team).bin" size="4038681" crc="e4de765a" sha1="9c68857a30ed4aa2653a0c8283924c6e11357748"/>
 			</dataarea>
 		</part>
 	</software>

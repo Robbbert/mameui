@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 620 -->
+<!-- Number of items in this list = 619 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -939,16 +939,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Cabbage Patch Kids.rom" size="16384" crc="297d8460" sha1="286094c7127bf98d53d8862427487b49132b16da"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msxffc83fc674ccb">
-		<description>Cacorm</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="8357">
-				<rom name="Cacorm.rom" size="8357" crc="d32b2732" sha1="ffc83fc674ccb1279e0cc436006503d9274a5453"/>
 			</dataarea>
 		</part>
 	</software>

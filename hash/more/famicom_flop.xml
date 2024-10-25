@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 510 -->
+<!-- Number of items in this list = 508 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -1189,26 +1189,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Deep Dungeon II - Yuushi no Monshou (J) (v1.0).fds" size="131016" crc="481d1b2f" sha1="7a3365450e77964dfb76f240bbec6231f268e055"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fdsd84cc8a87a9f0">
-		<description>dgolf</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="65500">
-				<rom name="dgolf.fds" size="65500" crc="e9e99977" sha1="d84cc8a87a9f078318385632fe91f8b0d36add19"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds2bcf3d9836e39">
-		<description>dgolf14</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="65500">
-				<rom name="dgolf14.fds" size="65500" crc="912cd8f8" sha1="2bcf3d9836e390d28371823f4cbcbca09cdb7677"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 16 -->
+<!-- Number of items in this list = 40 -->
 <softwarelist name="pasopia_cass" description="pasopia_cass loose roms">
 	<software name="pas113043eab3479">
 		<description>2001Nen Uchu no Tabi Part II</description>
@@ -22,6 +22,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pasb607e44e3caea">
+		<description>antiair01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226353">
+				<rom name="antiair01.wav" size="226353" crc="a7b496c1" sha1="b607e44e3caea0b7e4f0a0c4b86914cc8cc128ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas47cfa08e373b7">
+		<description>antiair02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="2369117">
+				<rom name="antiair02.wav" size="2369117" crc="d9103e64" sha1="47cfa08e373b7e8fa3cdf78890ee211580ce6f1e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pas265b026052a2f">
 		<description>Balloon Bomber</description>
 		<year>????</year>
@@ -32,6 +52,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pasd5d9e42ca33bc">
+		<description>battlot_01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226353">
+				<rom name="battlot_01.wav" size="226353" crc="c0a69b0c" sha1="d5d9e42ca33bca2627c06fec88ce6a95581e6bf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas753a03c386b72">
+		<description>battlot_02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="3210115">
+				<rom name="battlot_02.wav" size="3210115" crc="73f5ebd3" sha1="753a03c386b7254e5e7c72592016c2156b7bf60c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pas3ec4b8b4e017b">
 		<description>Block Kuzushi</description>
 		<year>????</year>
@@ -39,6 +79,46 @@
 		<part name="cass" interface="pasopia_cass">
 			<dataarea name="cass" size="4740140">
 				<rom name="Block Kuzushi.wav" size="4740140" crc="67616b4f" sha1="3ec4b8b4e017b12279614b7391d471049af49faa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas2d10c34d9b39c">
+		<description>bootskell01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226433">
+				<rom name="bootskell01.wav" size="226433" crc="2cd830b5" sha1="2d10c34d9b39c2baa522c8feed3e308b00c41b87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasffca58cf2dd23">
+		<description>bootskell02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="3084015">
+				<rom name="bootskell02.wav" size="3084015" crc="f3e06ae0" sha1="ffca58cf2dd238727232dbb4a17d33519883fd1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasb57d6f137e4a0">
+		<description>cacorm01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226433">
+				<rom name="cacorm01.wav" size="226433" crc="3320ccd1" sha1="b57d6f137e4a0f78981d7bb79db786bf2d6c470c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas1067bbd865ef5">
+		<description>cacorm02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="2718656">
+				<rom name="cacorm02.wav" size="2718656" crc="74c1aee2" sha1="1067bbd865ef58168b5a6e888b3b4e3938d52b93"/>
 			</dataarea>
 		</part>
 	</software>
@@ -62,6 +142,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pas6c46b82388434">
+		<description>cavit01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226393">
+				<rom name="cavit01.wav" size="226393" crc="61187109" sha1="6c46b823884347bc32849666918075fbf92cbb9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasca2e18373cd45">
+		<description>cavit02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="3406535">
+				<rom name="cavit02.wav" size="3406535" crc="f935557f" sha1="ca2e18373cd45e68169acd16ff4039188ccd0a0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas7633979b62974">
+		<description>cracky01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226393">
+				<rom name="cracky01.wav" size="226393" crc="03710c70" sha1="7633979b62974fefbb770619320ecbba9939f2a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas1e3b687d93624">
+		<description>cracky02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="2554437">
+				<rom name="cracky02.wav" size="2554437" crc="043af7d2" sha1="1e3b687d93624f031af2279a36c9243c9c2653d1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pasa4d48815cc647">
 		<description>Daisensha Toppa Sakusen</description>
 		<year>????</year>
@@ -69,6 +189,46 @@
 		<part name="cass" interface="pasopia_cass">
 			<dataarea name="cass" size="28137516">
 				<rom name="Daisensha Toppa Sakusen.wav" size="28137516" crc="5ac4872a" sha1="a4d48815cc647bc600567f46ea7899ef03cf1297"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pascea70e4ca59c1">
+		<description>guntus01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="367258">
+				<rom name="guntus01.wav" size="367258" crc="2d633e41" sha1="cea70e4ca59c184ad3f3ccea40d02711096780fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas69d71c6016559">
+		<description>guntus02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="3545634">
+				<rom name="guntus02.wav" size="3545634" crc="7f1f66be" sha1="69d71c6016559fb70ad4885bbffa9e96ff80ccad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas971207abd450e">
+		<description>hopman01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226393">
+				<rom name="hopman01.wav" size="226393" crc="af2e707a" sha1="971207abd450e01bc41381accf85fcaab7a72d62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas7ef99e4851dd5">
+		<description>hopman02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="2741916">
+				<rom name="hopman02.wav" size="2741916" crc="6baab69c" sha1="7ef99e4851dd57d1cfbc5c77c7cbd0d806167e4b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -89,6 +249,66 @@
 		<part name="cass" interface="pasopia_cass">
 			<dataarea name="cass" size="32033836">
 				<rom name="Kyuketsuki Bokumetsu Sakusen.wav" size="32033836" crc="58cde27a" sha1="9c0b09c671efb4960039d8e263b6afdc5db4623b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasab56c8ca33e81">
+		<description>lift01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226273">
+				<rom name="lift01.wav" size="226273" crc="81cbea1a" sha1="ab56c8ca33e813d3efe5056c50be38f9cda781a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas6e6a3eb147ee8">
+		<description>lift02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="2596557">
+				<rom name="lift02.wav" size="2596557" crc="c6ffffe5" sha1="6e6a3eb147ee8304b53ff1b75d46adb4f77755b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas8852aa554a2db">
+		<description>neuras_01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226393">
+				<rom name="neuras_01.wav" size="226393" crc="2a2017e6" sha1="8852aa554a2db7b4807c7ac91cfadea0b8822c29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas4e90312fae382">
+		<description>neuras_02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="3018615">
+				<rom name="neuras_02.wav" size="3018615" crc="04cee1c7" sha1="4e90312fae3824d1524562b883d2f3bdd615c50a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasd1a819b1ae807">
+		<description>osotos01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226553">
+				<rom name="osotos01.wav" size="226553" crc="21e708e8" sha1="d1a819b1ae80703d2f07065d95383c0641e13489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasaa3fb9a090860">
+		<description>osotos02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="3199495">
+				<rom name="osotos02.wav" size="3199495" crc="05486ed6" sha1="aa3fb9a09086065110dd9081df7d452f2141374a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -159,6 +379,26 @@
 		<part name="cass" interface="pasopia_cass">
 			<dataarea name="cass" size="25494572">
 				<rom name="Uchiwa de Hoi Hoi.wav" size="25494572" crc="5b36776a" sha1="4fb849a1c3dda57debec6e6c0e524c359db98c16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasfa775207cc390">
+		<description>yewdow01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226473">
+				<rom name="yewdow01.wav" size="226473" crc="b14435ec" sha1="fa775207cc390780285ca2f796704f5fdea032d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas4f98fe9ebcd72">
+		<description>yewdow02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="2977176">
+				<rom name="yewdow02.wav" size="2977176" crc="66e3693c" sha1="4f98fe9ebcd72f266723b5ffe9cc58a3d002db7a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 634 -->
+<!-- Number of items in this list = 616 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -49,16 +49,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="12725">
 				<rom name="(demo)Robobug (2012 Nicolas Campion).rom" size="12725" crc="334d491e" sha1="7a31ed81c072cef7c7f0fdac81236929a6e87042"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col6a8ac08fac29d">
-		<description>(demo)Search for the Stolen Crown Jewels 3</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="31249">
-				<rom name="(demo)Search for the Stolen Crown Jewels 3.rom" size="31249" crc="81a8def4" sha1="6a8ac08fac29d535aaffae31b776c1a85c8e8e19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -129,16 +119,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="AE (2012)(Team Pixelboy).rom" size="32768" crc="85f2c3ff" sha1="bb119fb08df7a5e1bc8752de82dd247a5815fb8c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="colb3f191439440e">
-		<description>Air Battle V0.4 by Daniel Bienvenu (July 10) (2000) (PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="23808">
-				<rom name="Air Battle V0.4 by Daniel Bienvenu (July 10) (2000) (PD).rom" size="23808" crc="7c66aba6" sha1="b3f191439440e9682183e703f9018f29fd1355f0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -482,16 +462,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col031dc3902f688">
-		<description>Bejeweled Demo (Daniel Bienvenu)(2001) (PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="16640">
-				<rom name="Bejeweled Demo (Daniel Bienvenu)(2001) (PD).rom" size="16640" crc="1ba0688f" sha1="031dc3902f6880e3b6ca043c74de6ba1f306237c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col4cb20f83e4b6d">
 		<description>Berzerk (2022)(CollectorVision)</description>
 		<year>????</year>
@@ -619,16 +589,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Boot Hill (2018)(Leo Brophy).bin" size="32768" crc="59e22170" sha1="b7a78920fa37177dc5f9a1105961ded4bd58e832"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col299033917ae7e">
-		<description>bootskell</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="9283">
-				<rom name="bootskell.rom" size="9283" crc="46f2cea5" sha1="299033917ae7e0c4f9667b406644e6180dca1958"/>
 			</dataarea>
 		</part>
 	</software>
@@ -782,26 +742,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cold12f48fa0352c">
-		<description>BUsTin-Out Volume 1 (2000 Daniel Bienvenu)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="BUsTin-Out Volume 1 (2000 Daniel Bienvenu).rom" size="32768" crc="97b601a2" sha1="d12f48fa0352c57deeb4aec9790f6af2ab50afca"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="colde429b3e17d1d">
-		<description>BUsTin-Out Volume 2 (2000 Daniel Bienvenu)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32640">
-				<rom name="BUsTin-Out Volume 2 (2000 Daniel Bienvenu).rom" size="32640" crc="e12ccc1e" sha1="de429b3e17d1dd8f3c3172490de669b10a89a3e5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="colb365850d7247d">
 		<description>BUsTin-Out Volume 3 (2000 Daniel Bienvenu)</description>
 		<year>????</year>
@@ -952,16 +892,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cole9822ee24c72c">
-		<description>cavit</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="9824">
-				<rom name="cavit.rom" size="9824" crc="8d3e9de3" sha1="e9822ee24c72c24418288f15096a6e160e8a1a80"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col9364f62967e27">
 		<description>ccjvq07</description>
 		<year>????</year>
@@ -999,16 +929,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="29232">
 				<rom name="Challenger.rom" size="29232" crc="37265d37" sha1="2572dd33110edf0e74f4beeaecf0823082cd6260"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col0029fe1516516">
-		<description>Chateau Du Dragon (2001 Daniel Bienvenu) [WIP]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="9088">
-				<rom name="Chateau Du Dragon (2001 Daniel Bienvenu) [WIP].rom" size="9088" crc="43478adf" sha1="0029fe15165165e95db2a5702cb162c770170637"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1189,16 +1109,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="10860">
 				<rom name="Colored gravity.rom" size="10860" crc="785409e6" sha1="b59a00a0cd449cffd4912175e182ca4bdfe44f52"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col2ad1b4ff8d6f8">
-		<description>Commando Returns (2012 Michel Louvet) [WIP]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="18014">
-				<rom name="Commando Returns (2012 Michel Louvet) [WIP].rom" size="18014" crc="e97a69e1" sha1="2ad1b4ff8d6f8c2cb086530807391c4b4d599619"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1652,16 +1562,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col699915e4158b2">
-		<description>doublebreakout_23_03_2001</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="doublebreakout_23_03_2001.rom" size="32768" crc="1229e811" sha1="699915e4158b2c3d127e5924a14146a3c71d6a8e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col003f07fa755f6">
 		<description>DP's Valentine Game (2002 Daniel Bienvenu) [No Alien]</description>
 		<year>????</year>
@@ -1789,16 +1689,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="5888">
 				<rom name="Easter Bunny (2007 Daniel Bienvenu) [Title Screen].rom" size="5888" crc="5c494be5" sha1="1e9c583fb812e99fb50875858035b41d8dcb497d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col7cdb1b050f3ef">
-		<description>Easter Bunny (2007 Daniel Bienvenu)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="4096">
-				<rom name="Easter Bunny (2007 Daniel Bienvenu).rom" size="4096" crc="fd27e856" sha1="7cdb1b050f3ef25ab048ee1d64e99f1c5493fbea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2319,16 +2209,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Ghostblaster (2006)(Daniel Bienvenu).rom" size="32768" crc="7e93e6f3" sha1="b9cf419ecb38191394eb083969467004bd136a57"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col7f2e577f2144e">
-		<description>GhostBlaster (2009 Daniel Bienvenu) [Rev.B PAL]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32563">
-				<rom name="GhostBlaster (2009 Daniel Bienvenu) [Rev.B PAL].rom" size="32563" crc="cf4ed5e0" sha1="7f2e577f2144e1a457d0f65500a2370566ee8b56"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3232,16 +3112,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col4d78c023369ac">
-		<description>mazy</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="6967">
-				<rom name="mazy.rom" size="6967" crc="02ef2836" sha1="4d78c023369acd6148735de9f72f64b447cb8af1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col91ba9d9b13298">
 		<description>mecha_8</description>
 		<year>????</year>
@@ -3832,16 +3702,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col7b6b2a2f75c30">
-		<description>osotos</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="9398">
-				<rom name="osotos.rom" size="9398" crc="8c5b9d1f" sha1="7b6b2a2f75c30cd07b56d03d11f8022748abddc8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col90d7d226ebfe7">
 		<description>Ostrich Farmer0_1</description>
 		<year>????</year>
@@ -4212,16 +4072,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col89753ab9ba96b">
-		<description>Quiz Wiz ColecoVision 30th Anniversary (2012 CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="13288">
-				<rom name="Quiz Wiz ColecoVision 30th Anniversary (2012 CollectorVision).rom" size="13288" crc="1beb45b5" sha1="89753ab9ba96b82a65e470b61c26510182df0f60"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col373f4abb62cff">
 		<description>R-Type SGM (2020)(Team Pixelboy)</description>
 		<year>????</year>
@@ -4432,16 +4282,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col42343aa73acdb">
-		<description>ruptus</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="12302">
-				<rom name="ruptus.rom" size="12302" crc="9aac320b" sha1="42343aa73acdb6f4ce4bd776019589c1bdf283ca"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col2209b59b7fea0">
 		<description>Safari Race</description>
 		<year>????</year>
@@ -4552,16 +4392,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col1e2e883604e3b">
-		<description>Search for the stolen Crown Jewels 1.0 Demo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="29013">
-				<rom name="Search for the stolen Crown Jewels 1.0 Demo.rom" size="29013" crc="e339d9cc" sha1="1e2e883604e3b8559bd36c88313567dabd8444ac"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col209663db69182">
 		<description>Search for the Stolen Crown Jewels 2 (2007)(Philipp Klaus Krause)</description>
 		<year>????</year>
@@ -4569,16 +4399,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Search for the Stolen Crown Jewels 2 (2007)(Philipp Klaus Krause).rom" size="32768" crc="a883fa9a" sha1="209663db6918207ed76cc83dda4fb356d0bb4053"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col0d144f1916295">
-		<description>Search for the stolen Crown Jewels 2.0 Demo (2007)(Philipp Klaus Krause)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="29256">
-				<rom name="Search for the stolen Crown Jewels 2.0 Demo (2007)(Philipp Klaus Krause).rom" size="29256" crc="eaf7d6dc" sha1="0d144f191629570213694fd63b54e651338c89e3"/>
 			</dataarea>
 		</part>
 	</software>

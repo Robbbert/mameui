@@ -1,24 +1,44 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2 -->
+<!-- Number of items in this list = 4 -->
 <softwarelist name="fm8_cass" description="fm8_cass loose roms">
-	<software name="fm82b601c60056d4">
-		<description>E:\\0</description>
+	<software name="fm8cd0c0afccd3ec">
+		<description>Antiair[loadm'',,r]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="fm7_cass">
-			<dataarea name="cass" size="432254">
-				<rom name="E:\\0.ico" size="432254" crc="c54a0bb8" sha1="2b601c60056d42c3f5df8f954af9dcfcd2a920d9"/>
+			<dataarea name="cass" size="2968198">
+				<rom name="Antiair[loadm'',,r].wav" size="2968198" crc="a9cf48fa" sha1="cd0c0afccd3ec27e265cfb5f3e00d987487a4d9e"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="fm84a8936b2455af">
-		<description>E:\\autorun</description>
+	<software name="fm862f5e9b20cb23">
+		<description>Cavit[loadm'',,r]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="fm7_cass">
-			<dataarea name="cass" size="51">
-				<rom name="E:\\autorun.inf" size="51" crc="aba7921a" sha1="4a8936b2455afa7e852ac708d925dbe64ea5f8de"/>
+			<dataarea name="cass" size="660156">
+				<rom name="Cavit[loadm'',,r].t77" size="660156" crc="30fd33bd" sha1="62f5e9b20cb237ef25f63a59c4455ee743f32c2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm8971f0ccd2b404">
+		<description>Neuras[loadm'',,r]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="551916">
+				<rom name="Neuras[loadm'',,r].t77" size="551916" crc="b902bbdf" sha1="971f0ccd2b404ca7874af6bc8e4bf9a22ba68089"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm805040ccd5f58e">
+		<description>Neuras[loadm'',,r]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="4147987">
+				<rom name="Neuras[loadm'',,r].wav" size="4147987" crc="15b9a8b9" sha1="05040ccd5f58e9e3cbe215903bbe1cc7497f2a91"/>
 			</dataarea>
 		</part>
 	</software>

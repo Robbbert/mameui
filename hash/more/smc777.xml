@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 100 -->
+<!-- Number of items in this list = 117 -->
 <softwarelist name="smc777" description="smc777 loose roms">
 	<software name="smce4f91de7fe532">
 		<description>123</description>
@@ -42,6 +42,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smc3bb8fabab41b0">
+		<description>Aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Aerial.1dd" size="305328" crc="3b4a5b03" sha1="3bb8fabab41b010618044b3d79d179db0fac01f8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smcedf46ea59b8ed">
 		<description>Amazon1</description>
 		<year>????</year>
@@ -59,6 +69,26 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="362048">
 				<rom name="Amazon2.1DD" size="362048" crc="7853dee0" sha1="04b08c53e54acb4ab9427a80769dee4982d22717"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc5432d2edeadef">
+		<description>Antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Antiair.1dd" size="305328" crc="10e32e34" sha1="5432d2edeadefdc374f7b72af2663419253bb682"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc8197efe7e88c8">
+		<description>Ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Ascend.1dd" size="305328" crc="60461c35" sha1="8197efe7e88c89c58ce957834d1501b1b5716fb0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -122,6 +152,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smc25e3001f38368">
+		<description>Battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Battlot.1dd" size="305328" crc="6099a47c" sha1="25e3001f3836821b35f7ebfaab50791d031863fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smcfe6897c93a879">
+		<description>Bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Bootskell.1dd" size="305328" crc="4d471eea" sha1="fe6897c93a879fcaa78ab608e1ec2831c6cb2ace"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smc2482f258b4b73">
 		<description>Bug Attack (1983)(Cavalier Computer)(Sony)(Bear's)(James Nitchals)</description>
 		<year>????</year>
@@ -129,6 +179,26 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
 				<rom name="Bug Attack (1983)(Cavalier Computer)(Sony)(Bear's)(James Nitchals).1DD" size="305328" crc="8ca2bd31" sha1="2482f258b4b7384f8a8e5b24b32fcf74952a5c58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc7e0fbff08b3f5">
+		<description>Cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Cacorm.1dd" size="305328" crc="0c92773c" sha1="7e0fbff08b3f52a0ae871d88664e61f15a829c40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smcd0b0b3c3aaba9">
+		<description>Cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Cavit.1dd" size="305328" crc="6887ccac" sha1="d0b0b3c3aaba9b598750e7d7cbc05d6a5861c436"/>
 			</dataarea>
 		</part>
 	</software>
@@ -159,6 +229,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="270512">
 				<rom name="COREWARS.1DD" size="270512" crc="d0eb8d2c" sha1="4b61e9263f690c6a518c494b74034ade43b0333e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc5fd51c26fcbe1">
+		<description>Cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Cracky.1dd" size="305328" crc="5b68737f" sha1="5fd51c26fcbe1167d84b1577cffa1f3cbde8347e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -462,6 +542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smcb556dd0190b58">
+		<description>Guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Guntus.1dd" size="305328" crc="6fddd9b9" sha1="b556dd0190b58ff4a85dd4f7ed5a54f2bba82aac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smc2a8d4d79dfb65">
 		<description>Hanafuda</description>
 		<year>????</year>
@@ -479,6 +569,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
 				<rom name="HelloBASIC.1DD" size="305328" crc="7fb1e857" sha1="78980379ef0080c49c72bc536126601281a6d5d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc410fdeab1ebac">
+		<description>Hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Hopman.1dd" size="305328" crc="775fc17d" sha1="410fdeab1ebac5e04cd857de32af4afc4d1ff05a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -552,6 +652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smc8a721da70c35d">
+		<description>Impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Impetus.1dd" size="305328" crc="7c55726e" sha1="8a721da70c35d978dbb8749ab4b4c869f3261722"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smca5d8907d59213">
 		<description>Invader</description>
 		<year>????</year>
@@ -602,6 +712,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smc808a79baca21a">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Lift.1dd" size="305328" crc="51146eeb" sha1="808a79baca21abf2d9e6781b04f6d9e48cd472fc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smc92f15afe46484">
 		<description>Lode Runner (1983)(Broderbund Software)(Sony)(Douglas Smith)</description>
 		<year>????</year>
@@ -649,6 +769,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
 				<rom name="Mario Bros. Special (1984)(Hudson Soft)(Nintendo).1DD" size="305328" crc="5899a674" sha1="5d597223828011f01ceb77b6f5376239cee406e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc67b7328c580e3">
+		<description>Mazy (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Mazy (2).1dd" size="305328" crc="6644ad35" sha1="67b7328c580e335c2259229850da953311325712"/>
 			</dataarea>
 		</part>
 	</software>
@@ -712,6 +842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smce45cdc2d595c4">
+		<description>Neuras (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Neuras (2).1dd" size="305328" crc="bbd4d061" sha1="e45cdc2d595c49e87a389554564f8ed92335ded8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smce71ad901db942">
 		<description>neuras</description>
 		<year>????</year>
@@ -739,6 +879,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
 				<rom name="Nobunaga.1DD" size="305328" crc="c6eb782a" sha1="975604ebfe1347f690074e4fc232690abb2bb819"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc0c6795419b78e">
+		<description>Osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Osotos.1dd" size="305328" crc="818a0136" sha1="0c6795419b78eca5251784a10be7a56725f58d7a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -789,6 +939,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="352848">
 				<rom name="ROCKFURY.1DD" size="352848" crc="493b5f93" sha1="8ee94baf7a3d373eef3523de6be676c4d25878bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smca9535dfa70298">
+		<description>Ruptus (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Ruptus (2).1dd" size="305328" crc="943bdbb2" sha1="a9535dfa7029826cca6bf1659cc291ad9b4fe89a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -959,6 +1119,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="322208">
 				<rom name="YakyuKyo.1DD" size="322208" crc="e8258ba8" sha1="b0e3c64abf8e14961e429d38e184b12df339399b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smcff5747d04c240">
+		<description>Yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Yewdow.1dd" size="305328" crc="afa34733" sha1="ff5747d04c2401075bacb88bd0ce78f0cb00b19b"/>
 			</dataarea>
 		</part>
 	</software>
