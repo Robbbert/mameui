@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5205 -->
+<!-- Number of items in this list = 5299 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -42369,6 +42369,946 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Rime Of The Ancient Mariner (1999).a26" size="4096" crc="3735e82e" sha1="20349c2891ffafc2cf1e44011e237836905d05c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261751fb48144ae">
+		<description>SPCEBROS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="SPCEBROS.a26" size="8192" crc="180128e5" sha1="1751fb48144ae88cfffdc4e29c935f5347a9bba7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2658868dc06f568">
+		<description>Spectrum Color Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spectrum Color Demo (PD).a26" size="4096" crc="f2e30a68" sha1="58868dc06f568c8b46b4c17b9f1f677f678bda3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266ee028c8eab39">
+		<description>SpeechTester20070802</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SpeechTester20070802.a26" size="4096" crc="bfd7518f" sha1="6ee028c8eab391badae918891afead0b3c295766"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f32363eca652d">
+		<description>Spellbound (Jumpman Jr. Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spellbound (Jumpman Jr. Selected Levels) (PD).a26" size="4096" crc="487dd711" sha1="f32363eca652d3bf48f1b0cd7d2b150b47ad0feb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ae75465d75ee7">
+		<description>sphinx</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="sphinx.a26" size="4096" crc="419f0a8f" sha1="ae75465d75ee7fd2010bb29be4a28c0249176ca2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c5531e6398f5c">
+		<description>Spice Girls Rule Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spice Girls Rule Demo (PD).a26" size="4096" crc="0819ac0e" sha1="c5531e6398f5c80bc8e5acf9a16db9e3b32c6297"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ed86df83230b">
+		<description>Spice Invaders by Franklin Cruz (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spice Invaders by Franklin Cruz (Space Invaders Hack).a26" size="4096" crc="c1d6c63c" sha1="7ed86df83230b38e911c9a1b7ae44b5a060092ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26429a837f57f87">
+		<description>Spider-Man - The Scorpion Strikes!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spider-Man - The Scorpion Strikes!.a26" size="4096" crc="dc269c28" sha1="429a837f57f87467b945304d6ff4fa41bf66d2b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2683032c2101283">
+		<description>Spider-Man_2_The_Movie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spider-Man_2_The_Movie.a26" size="4096" crc="20043f0b" sha1="83032c210128390c4216971eb93976e9c1ba6d00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2676c82411be682">
+		<description>Spider-Man_The_Movie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spider-Man_The_Movie.a26" size="4096" crc="7b689ab7" sha1="76c82411be682c51c0434625cb9084bbef56732b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cec87353638fd">
+		<description>Spiderdroid_DS_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spiderdroid_DS_NTSC(Supercharger).a26" size="4096" crc="bae2cd0a" sha1="cec87353638fd647a0feac3f8c4bb5d09c095503"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2663ab34419d92a">
+		<description>Spiderdroid_DS_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spiderdroid_DS_PAL60(Supercharger).a26" size="4096" crc="dba93142" sha1="63ab34419d92a0d9b6a0ea0b7112785e75d29d01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263a77ed5bdef19">
+		<description>Spiderdroid_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spiderdroid_NTSC(Supercharger).a26" size="4096" crc="5ff57515" sha1="3a77ed5bdef19d4f96641f91db33c10c10090dbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266adff9199ea15">
+		<description>Spiderdroid_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spiderdroid_PAL60(Supercharger).a26" size="4096" crc="3ebe895d" sha1="6adff9199ea15da7035be14a306a917801ccf9e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262feca4ab24865">
+		<description>Spiderman_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spiderman_NTSC(Supercharger).a26" size="4096" crc="2010a1d2" sha1="2feca4ab24865c42750e3a7c3a6a9fa23de0a9e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2656c862f7c5a28">
+		<description>Spiderman_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spiderman_PAL60(Supercharger).a26" size="4096" crc="70e58262" sha1="56c862f7c5a28c805b242bc8f2e96bb5060c7a39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b258bf29d62c6">
+		<description>spider_v0.3_Dez2008</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="spider_v0.3_Dez2008.a26" size="4096" crc="435cfc58" sha1="b258bf29d62c69a94530ded36c252d85a7aa256a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263df1ee2c24e1d">
+		<description>spider_v0.4c_Feb08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="spider_v0.4c_Feb08.a26" size="4096" crc="0a18e4de" sha1="3df1ee2c24e1d0034c755eb1396e7d6710a9fe3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ec87728945d0">
+		<description>spider_v0.4c_Feb08_cutscene</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="spider_v0.4c_Feb08_cutscene.a26" size="4096" crc="1058dccb" sha1="7ec87728945d03dd327cf1f2b589d803b4aed6ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266bf52bd85e251">
+		<description>Spike's Peak (1983) (Xonox) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Spike's Peak (1983) (Xonox) (PAL) [a1][!].a26" size="8192" crc="7ef3236a" sha1="6bf52bd85e251bed8aa8e04e2fd2f1bcc41ea986"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2637189a4e19e9a">
+		<description>spin16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="spin16.a26" size="4096" crc="f9b06ccc" sha1="37189a4e19e9a4366b06d76ea726b498bc7b62ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b8fbe04583eb">
+		<description>Spitfire Attack (1983) (Milton Bradley) [h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spitfire Attack (1983) (Milton Bradley) [h1].a26" size="4096" crc="d3f21a48" sha1="4b8fbe04583ebb8cc206ed669b338d54f4482a07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f9b8f10111225">
+		<description>Spitfire_Attack-NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spitfire_Attack-NTSC(Supercharger).bin" size="4096" crc="37bd418a" sha1="f9b8f10111225b196a8ecdfdd9cdaa2e99d198d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2628fd6ee892369">
+		<description>Spitfire_Attack-PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spitfire_Attack-PAL60(Supercharger).bin" size="4096" crc="edf810df" sha1="28fd6ee892369442b87f62cdd6e32c401bfadf2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fb1453e5403a1">
+		<description>Splatform 2600 (NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (NTSC).a26" size="2048" crc="190572e3" sha1="fb1453e5403a1ca957a5460aa36ee9ba8bb8df89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263097e9e4af6ab">
+		<description>Splatform 2600 (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (PAL).a26" size="2048" crc="26e2c245" sha1="3097e9e4af6ab103d6ad34ca7f64eb8e671b7d8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266639cc92251e5">
+		<description>Splatform 2600 (v0.90) by Robin Harbron (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v0.90) by Robin Harbron (PD).a26" size="2048" crc="27f3c4b4" sha1="6639cc92251e536c9314a27dbcacf2be53a2cca2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fe721b4424de8">
+		<description>Splatform 2600 (v0.91) by Robin Harbron (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v0.91) by Robin Harbron (PD).a26" size="2048" crc="1554169a" sha1="fe721b4424de8f0fe979d88a443800e3978780df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fbc33fcf0eaea">
+		<description>Splatform 2600 (v0.95) by Robin Harbron (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v0.95) by Robin Harbron (PD).a26" size="2048" crc="accc4d33" sha1="fbc33fcf0eaead46bc3f328e34ed3a3563654acb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608ec1a7d0466c">
+		<description>Splatform 2600 (v0.96) (TJ) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v0.96) (TJ) [a1].a26" size="2048" crc="6a0760d1" sha1="08ec1a7d0466cc00b3cf114bc132cc640ae7a061"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d445ef36d5208">
+		<description>Splatform 2600 (v0.96) by Robin Harbron (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v0.96) by Robin Harbron (PD).a26" size="2048" crc="3ec84bea" sha1="d445ef36d5208a5c7d5097f196318fc1c9e65c39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633632b3bd2db2">
+		<description>Splatform 2600 (v0.97) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v0.97) (TJ).a26" size="2048" crc="e3ec99da" sha1="33632b3bd2db2b16af5ec35e14fc9cd8169064a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2667a7a2836f378">
+		<description>Splatform 2600 (v0.99) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v0.99) (TJ).a26" size="2048" crc="c385456e" sha1="67a7a2836f3785fd3c43210c5bc102fdab896cea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d8b7032d04181">
+		<description>Splatform 2600 (v1.01) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v1.01) (TJ).a26" size="2048" crc="646f8511" sha1="d8b7032d0418143e53f49ae36bcfe23d2364251e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262363f4583f9b0">
+		<description>Splatform 2600 (v1.02)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v1.02).a26" size="2048" crc="f45d3e47" sha1="2363f4583f9b0a98ed365e08dcaf5e5810e4e871"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26555d1d73fc5e7">
+		<description>Splatform 2600 (v1.03) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 (v1.03) (TJ).a26" size="2048" crc="567fdbf2" sha1="555d1d73fc5e717ca1c6398ad3e18df6225d7278"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0ffa9bdc4284">
+		<description>Splatform 2600 1.03 (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Splatform 2600 1.03 (PAL).a26" size="2048" crc="f416d5b1" sha1="a0ffa9bdc428434c479b7e3797f6a0779a39410c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266679a393fabf6">
+		<description>Sponge Bob WIP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Sponge Bob WIP.a26" size="16384" crc="376a38d4" sha1="6679a393fabf64a57cd03c6ffd9131b16121c9af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26156dd8b8a1a89">
+		<description>SpongeBob SquarePants (2003) (Kyle Pittman) (Revenge of the Beefsteak Tomatoes Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="SpongeBob SquarePants (2003) (Kyle Pittman) (Revenge of the Beefsteak Tomatoes Hack).a26" size="16384" crc="9d1d12a5" sha1="156dd8b8a1a89085599d1c410221a6e8d80c149a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c20b193e0fb9c">
+		<description>spongebob.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="spongebob.bas.a26" size="8192" crc="c3bc5d28" sha1="c20b193e0fb9c317febb97c9f08396cafd01e9b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d0b728d29627f">
+		<description>spongebob022007.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="spongebob022007.bas.a26" size="8192" crc="e3a358a9" sha1="d0b728d29627fd4e7a79f93c1165340661d486bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265b4ade3b75a23">
+		<description>spongebob4K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="spongebob4K.a26" size="4096" crc="c87a1a52" sha1="5b4ade3b75a23f86e5ae665549400ae0d19ec2ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b488a95a5909c">
+		<description>Sports Action Pak - Enduro, Ice Hockey, Fishing Derby, Dragster (1988) (HES - Activision) (PAL) [a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Sports Action Pak - Enduro, Ice Hockey, Fishing Derby, Dragster (1988) (HES - Activision) (PAL) [a].a26" size="16384" crc="a9965980" sha1="b488a95a5909c10786ef1476215807ae771dc622"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26769096bd2fd81">
+		<description>Sprint Master DC by TJ (Sprint Master Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Sprint Master DC by TJ (Sprint Master Hack).a26" size="16384" crc="127d8176" sha1="769096bd2fd813c54af5b985f4797cbe25e14a04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261a54a59392fcf">
+		<description>SprintmasterDC__v1.1_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="SprintmasterDC__v1.1_.bin" size="16384" crc="67221db3" sha1="1a54a59392fcf3d073d37995338ae8447c800376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26df323d04386ca">
+		<description>Sprite Color Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Color Demo (PD).a26" size="4096" crc="e55460fb" sha1="df323d04386ca7d1c2f9a1f1482cb89f26e7b5a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265b65b083acdbd">
+		<description>Sprite Demo (1997) (Bob Colbert) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo (1997) (Bob Colbert) (PD).a26" size="4096" crc="b1e49dcc" sha1="5b65b083acdbd62d079f33a576a24428a8fb7e62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f0bbbab27816">
+		<description>Sprite Demo 0 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo 0 (PD).a26" size="4096" crc="0a754997" sha1="1f0bbbab278165986ed7ea305af6ab4a59524934"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263653e75228f6d">
+		<description>Sprite Demo 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo 1 (PD).a26" size="4096" crc="783ba67f" sha1="3653e75228f6d3a6371ba9274e0058950969285d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c830ab635443">
+		<description>Sprite Demo 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo 2 (PD).a26" size="4096" crc="7161c616" sha1="9c830ab6354432ad38aac16bc4b002714d22b54e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264248b538e92bc">
+		<description>Sprite Demo 3 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo 3 (PD).a26" size="4096" crc="ef6774ab" sha1="4248b538e92bcff89e66f8e415c7748941005250"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264d47ebbb15336">
+		<description>Sprite Demo 4 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo 4 (PD).a26" size="4096" crc="065569af" sha1="4d47ebbb15336fd1c6cf98eff06b2671d78e979e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2664adf3ac8f404">
+		<description>Sprite Demo 5 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo 5 (PD).a26" size="4096" crc="6a3feaff" sha1="64adf3ac8f40472a22617728ec77e308de96e649"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268ae12f926c4ef">
+		<description>Sprite Demo 6 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo 6 (PD).a26" size="4096" crc="44f66a04" sha1="8ae12f926c4ef33839fb24f9fa06fe83fb344d9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2672f1d904d26b1">
+		<description>Sprite Demo 7 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Demo 7 (PD).a26" size="4096" crc="d5ed5faa" sha1="72f1d904d26b1abf984e00ec306e0d8cef9b60a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d514debc64229">
+		<description>Sprite Movement Demo 1 (2001) (Roger Williams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Movement Demo 1 (2001) (Roger Williams).a26" size="4096" crc="6d53b623" sha1="d514debc64229f70c243cc1c7407caa02f3576fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b321f97cc8cd0">
+		<description>Sprite Movement Demo 2 (2001) (Roger Williams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprite Movement Demo 2 (2001) (Roger Williams).a26" size="4096" crc="92868a20" sha1="b321f97cc8cd0eb96f994e6045c2db2046b0c1ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b5921f28bb2f5">
+		<description>Sprite Test (29-11-2002) (Eric Ball)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Sprite Test (29-11-2002) (Eric Ball).a26" size="2048" crc="361ad380" sha1="b5921f28bb2f5be8f3be9deb26b8b6741903c55f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb04ff42e93dc">
+		<description>sprite.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="sprite.bas.a26" size="4096" crc="6ce2c738" sha1="eb04ff42e93dc2eac2c5b6a38e1615534215e158"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c1792c213b935">
+		<description>SpriteAnimationHelp_smash0803</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SpriteAnimationHelp_smash0803.a26" size="4096" crc="b8482c31" sha1="c1792c213b9357caddf09c0c691ac0454966730f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261c9e740cfc199">
+		<description>Sprites Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sprites Demo (PD).a26" size="4096" crc="e63c3819" sha1="1c9e740cfc199927fb5bb4c40bdcec1de70ed767"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26640e4e3b2c69c">
+		<description>Spy vs. Spy (Chopper Command Hack) (2005) (Fabrizio Zavagli)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Spy vs. Spy (Chopper Command Hack) (2005) (Fabrizio Zavagli).a26" size="4096" crc="9a07ae4a" sha1="640e4e3b2c69c27b0b0276aea90d85a55d21f9ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264458af16236ae">
+		<description>SpyBob (Kabobber Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SpyBob (Kabobber Hack).a26" size="4096" crc="e2d78f4b" sha1="4458af16236ae6d7e0958a1035500e23ffb47da4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be764ade29d01">
+		<description>square.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="square.bas.bin" size="4096" crc="bd9ca6ee" sha1="be764ade29d011f33584afa474474fe6e0dd4cf9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c34b72a18e749">
+		<description>square2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="square2.bas.bin" size="4096" crc="6c7e41af" sha1="c34b72a18e749283e5955f877521256b209eb8ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f2da86ea5bc2">
+		<description>squaredaway001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="squaredaway001.a26" size="8192" crc="e3670e9f" sha1="6f2da86ea5bc276c85c1aa81f3924ca845621cfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b01b90428d374">
+		<description>squaredaway002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="squaredaway002.a26" size="8192" crc="150f1fe9" sha1="b01b90428d37430e45ad76bd04070fd39abb3e34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ee56b7598130">
+		<description>squaredaway003</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="squaredaway003.a26" size="8192" crc="b0fe42d5" sha1="2ee56b7598130581c0eabcbdee2362bac0b2696a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266bbfe06a385d3">
+		<description>Squeeze_Box-NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squeeze_Box-NTSC(Supercharger).a26" size="4096" crc="2dd51f1c" sha1="6bbfe06a385d3a382352713c234490fdd5b882b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2682d86eb8ad908">
+		<description>Squeeze_Box-PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squeeze_Box-PAL60(Supercharger).a26" size="4096" crc="4082d101" sha1="82d86eb8ad908740f4a9fcd220d2030952966ea1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e58223677d077">
+		<description>squirrel.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="squirrel.bas.bin" size="4096" crc="239ecb36" sha1="e58223677d0773f6ca81d2ab63cf46c0c4188f9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266e150f0846b16">
+		<description>Squish 'Em 20071202</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squish 'Em 20071202.a26" size="4096" crc="ff17af49" sha1="6e150f0846b168cb29da8b32ef0770b859ffc464"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268073458723eaf">
+		<description>Squish 'Em 20071203</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squish 'Em 20071203.a26" size="4096" crc="2e5f09be" sha1="8073458723eaf3304c8f240579028dc8f87daad4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263a9cae8894489">
+		<description>Squish 'Em 20071206</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squish 'Em 20071206.a26" size="4096" crc="0b8a108a" sha1="3a9cae88944891e742b5885dc7bac6bf2e33dabd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269d015ea22c2ae">
+		<description>Squish 'Em 20071210 (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squish 'Em 20071210 (PAL).a26" size="4096" crc="6ab9cf8e" sha1="9d015ea22c2ae825d5bf97d41dd4a684659a8641"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c0b6da2e584e">
+		<description>Squish 'Em 20071210</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squish 'Em 20071210.a26" size="4096" crc="613aaa9d" sha1="9c0b6da2e584e1df8e8779e1dd5e2a4524ace1d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268a77dc291543c">
+		<description>Squish 'Em 20071212 (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squish 'Em 20071212 (PAL).a26" size="4096" crc="c40947c0" sha1="8a77dc291543c0deae12cc6a0b472844a522f466"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263579713581879">
+		<description>Squish 'Em 20071212</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Squish 'Em 20071212.a26" size="4096" crc="ed0263cd" sha1="35797135818790092dcf390c0ea810f8f5a4728f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264d68d45e4448c">
+		<description>SquishEm20071028</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071028.a26" size="4096" crc="08fe17dc" sha1="4d68d45e4448c19587472301ddc5dc324547eccf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263bd435e3e22c2">
+		<description>SquishEm20071106</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071106.a26" size="4096" crc="7c389adb" sha1="3bd435e3e22c2a831c26cdfb00525c0bd2e4f283"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2664e196cfbc2ef">
+		<description>SquishEm20071119</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071119.a26" size="4096" crc="cd7ce916" sha1="64e196cfbc2efae5e8e5bbfc8ccd6eba23497e8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c9549749168a5">
+		<description>SquishEm20071120</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071120.a26" size="4096" crc="63a993b8" sha1="c9549749168a51ff2cd2d4f53d75ed3931f7f647"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ba29bb39c889">
+		<description>SquishEm20071126</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071126.a26" size="4096" crc="0bae9002" sha1="2ba29bb39c8891615b02232a20dc323c62b10099"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26229fe2dd672ce">
+		<description>SquishEm20071127</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071127.a26" size="4096" crc="280c18ec" sha1="229fe2dd672ce9d9380d093049d3b903b7a67589"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2603bdfe9bf921e">
+		<description>SquishEm20071209NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071209NTSC.a26" size="4096" crc="a0e1238e" sha1="03bdfe9bf921e716f6d7ebfb39fbb77be05806a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c2c2a71af64c3">
+		<description>SquishEm20071209PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071209PAL.a26" size="4096" crc="144354f4" sha1="c2c2a71af64c3a1e2c4ef0924876f77cccbdf9db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26098d87b8e21a8">
+		<description>SquishEm20071211NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071211NTSC.a26" size="4096" crc="0ee0f752" sha1="098d87b8e21a8bd523e511e26eec8c246d1a2865"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d1da1c3a6225">
+		<description>SquishEm20071211PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="SquishEm20071211PAL.a26" size="4096" crc="2cad1baa" sha1="1d1da1c3a6225522e1267a556ed49fea4add4b3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260c53e2df83fbc">
+		<description>squishem20071213NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="squishem20071213NTSC.a26" size="4096" crc="f34fc22c" sha1="0c53e2df83fbc954a2b1829e688fb3f204f1c4d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d11124cc6e81">
+		<description>squishem20071213PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="squishem20071213PAL60.a26" size="4096" crc="779bc2b9" sha1="1d11124cc6e812e83a64da4b9af71abfbfe3a71b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263dfe91f8e6285">
+		<description>squishem20071214NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="squishem20071214NTSC.a26" size="4096" crc="bddc0a59" sha1="3dfe91f8e6285c1c096bacc7a21de307512b6e6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260ad043f519189">
+		<description>squishem20071214PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="squishem20071214PAL.a26" size="4096" crc="b963500c" sha1="0ad043f519189b47e9f4db62f04928c8706605ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266b3413ee6e403">
+		<description>squishem20071215NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="squishem20071215NTSC.a26" size="4096" crc="bcf9a418" sha1="6b3413ee6e403585c4b4393f25de55a566c9a1cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26267cc3b03f9fd">
+		<description>squishem20071215PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="squishem20071215PAL60.a26" size="4096" crc="42db35da" sha1="267cc3b03f9fdb6ee57a461ae5a66c9159d0f80d"/>
 			</dataarea>
 		</part>
 	</software>
