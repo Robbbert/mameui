@@ -691,6 +691,8 @@ end
 
 if CPUS["H8"] then
 	files {
+		MAME_DIR .. "src/devices/cpu/h8/c77.cpp",
+		MAME_DIR .. "src/devices/cpu/h8/c77.h",
 		MAME_DIR .. "src/devices/cpu/h8/h8.cpp",
 		MAME_DIR .. "src/devices/cpu/h8/h8.h",
 		MAME_DIR .. "src/devices/cpu/h8/h8h.cpp",
@@ -3630,8 +3632,26 @@ if CPUS["F2MC16"] then
 	files {
 		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16.cpp",
 		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16.h",
-		MAME_DIR .. "src/devices/cpu/f2mc16/mb9061x.cpp",
-		MAME_DIR .. "src/devices/cpu/f2mc16/mb9061x.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_adc.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_adc.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_clock.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_clock.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_intc.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_intc.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_port.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_port.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_ppg.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_ppg.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_reload.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_reload.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_uart.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/f2mc16_uart.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/mb90570.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/mb90570.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/mb90610a.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/mb90610a.h",
+		MAME_DIR .. "src/devices/cpu/f2mc16/mb90640a.cpp",
+		MAME_DIR .. "src/devices/cpu/f2mc16/mb90640a.h",
 	}
 end
 
