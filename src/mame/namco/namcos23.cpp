@@ -6288,8 +6288,8 @@ void namcos23_state::configure_jvs(device_jvs_interface &io)
 	io.analog_input<6>().set_ioport("^^JVS_ANALOG_INPUT7");
 	io.analog_input<7>().set_ioport("^^JVS_ANALOG_INPUT8");
 	io.rotary_input<0>().set_ioport("^^JVS_ROTARY_INPUT1");
-	io.screen_position_x<0>().set_ioport("^^JVS_SCREEN_POSITION_X0");
-	io.screen_position_y<0>().set_ioport("^^JVS_SCREEN_POSITION_Y0");
+	io.screen_position_x<0>().set_ioport("^^JVS_SCREEN_POSITION_INPUT_X1");
+	io.screen_position_y<0>().set_ioport("^^JVS_SCREEN_POSITION_INPUT_Y1");
 }
 
 void namcos23_state::downhill(machine_config &config)
@@ -6374,8 +6374,7 @@ void crszone_state::crszone(machine_config &config)
 	m_maincpu->set_clock(BUSCLOCK * 6);
 	m_maincpu->set_addrmap(AS_PROGRAM, &crszone_state::mips_map);
 
-	//m_jvs->set_default_option("namco_csz1"); // TODO: fix foot pedal & gun trigger when using csz1
-	m_jvs->set_default_option("namco_tssio");
+	m_jvs->set_default_option("namco_csz1");
 
 	/* debug hardware */
 	ACIA6850(config, m_acia, 0);
@@ -6490,10 +6489,10 @@ static INPUT_PORTS_START(s23)
 	PORT_START("JVS_ROTARY_INPUT1")
 	PORT_BIT(0xffff, 0x0000, IPT_UNUSED)
 
-	PORT_START("JVS_SCREEN_POSITION_X0")
+	PORT_START("JVS_SCREEN_POSITION_INPUT_X1")
 	PORT_BIT(0xffff, 0x0000, IPT_UNUSED)
 
-	PORT_START("JVS_SCREEN_POSITION_Y0")
+	PORT_START("JVS_SCREEN_POSITION_INPUT_Y1")
 	PORT_BIT(0xffff, 0x0000, IPT_UNUSED)
 INPUT_PORTS_END
 
@@ -6786,15 +6785,24 @@ static INPUT_PORTS_START(timecrs2)
 	PORT_CONFSETTING(         0x00000000, "Left/Red" )
 	PORT_BIT(0x00e03f00, IP_ACTIVE_HIGH, IPT_UNUSED) // BUTTON5/BUTTON6/BUTTON7/BUTTON8/BUTTON9/BUTTON10/BUTTON11/BUTTON12/BUTTON13
 
-	PORT_MODIFY("JVS_SCREEN_POSITION_X0") // tuned for CRT
+	PORT_MODIFY("JVS_SCREEN_POSITION_INPUT_X1") // tuned for CRT
 	PORT_BIT(0xfff, 91 + 733 / 2, IPT_LIGHTGUN_X) PORT_CROSSHAIR(X, 1.0, 0.0, 0) PORT_MINMAX(91, 91 + 733) PORT_SENSITIVITY(100) PORT_KEYDELTA(12)
 
-	PORT_MODIFY("JVS_SCREEN_POSITION_Y0") // tuned for CRT - can't shoot below the statusbar?
+	PORT_MODIFY("JVS_SCREEN_POSITION_INPUT_Y1") // tuned for CRT - can't shoot below the statusbar?
 	PORT_BIT(0xfff, 38 + 247 / 2, IPT_LIGHTGUN_Y) PORT_CROSSHAIR(Y, 1.0, 0.0, 0) PORT_MINMAX(38, 38 + 247) PORT_SENSITIVITY(100) PORT_KEYDELTA(4)
 INPUT_PORTS_END
 
 static INPUT_PORTS_START(crszone)
 	PORT_INCLUDE(timecrs2)
+
+	PORT_MODIFY("JVS_PLAYER1")
+	PORT_BIT(0x00002000, IP_ACTIVE_LOW, IPT_UNUSED) // BUTTON5 (Motor test shows NG if this is not pressed)
+
+	PORT_MODIFY("JVS_SCREEN_POSITION_INPUT_X1")
+	PORT_BIT(0xfff, 0x1bf, IPT_LIGHTGUN_X) PORT_CROSSHAIR(X, 1.0, 0.0, 0) PORT_MINMAX(0x040, 0x33f) PORT_SENSITIVITY(100) PORT_KEYDELTA(12)
+
+	PORT_MODIFY("JVS_SCREEN_POSITION_INPUT_Y1")
+	PORT_BIT(0xfff, 0x08f, IPT_LIGHTGUN_Y) PORT_CROSSHAIR(Y, 1.0, 0.0, 0) PORT_MINMAX(0x020, 0x0ff) PORT_SENSITIVITY(100) PORT_KEYDELTA(4)
 INPUT_PORTS_END
 
 // a note about "user1" ROMs:
@@ -8152,7 +8160,6 @@ ROM_END
 ROM_START( crszonev3b )
 	ROM_REGION32_BE( 0x800000, "user1", 0 ) /* 8 megs for main R4650 code */
 	ROM_LOAD16_WORD_SWAP( "cszo3verb.ic4", 0x000000, 0x800000, CRC(4cb26465) SHA1(078dfd0d8c920707df14e9a26658fa63421fcb0b) )
-	ROM_CONTINUE( 0x000000, 0x400000 )
 
 	ROM_REGION( 0x80000, "subcpu", 0 )  /* Hitachi H8/3002 MCU code */
 	ROM_LOAD16_WORD_SWAP( "cszo3verb.ic1", 0x000000, 0x080000, CRC(c790743b) SHA1(5fa7b83a7a1b1105a3aa0870b782cf2741b7d11c) )
