@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 619 -->
+<!-- Number of items in this list = 622 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1089,6 +1089,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Chess Master.rom" size="32768" crc="ab0ba6a6" sha1="4075ef9f51b4e010bd2481a648e05b2c29b3329d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc404efd26b167">
+		<description>ChimneyMan v1.5 (2024)(Gamecast Ent.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="ChimneyMan v1.5 (2024)(Gamecast Ent.).rom" size="753664" crc="3a36ef6a" sha1="c404efd26b167a40405d577084214270be1eca75"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2419,6 +2429,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Hyper Sports 3.rom" size="32768" crc="a8d113c9" sha1="3d45014accbee7c0df798a7c77771666f863dfd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2af51fef11c0b">
+		<description>I-Logic (2024)(Platty Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="I-Logic (2024)(Platty Soft).rom" size="49152" crc="142db92f" sha1="2af51fef11c0bc9af96643abb3117dba6d0897cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4209,6 +4229,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="psychedelia (europe) (program).rom" size="16384" crc="9d89337a" sha1="fae437072234c65bca174db9aefd2107a53c358a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx886afc527452a">
+		<description>Pyjamarama (2024)(Fregarni)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Pyjamarama (2024)(Fregarni).rom" size="131072" crc="b6ec9180" sha1="886afc527452a77536b08050df028d5b6a9affe9"/>
 			</dataarea>
 		</part>
 	</software>

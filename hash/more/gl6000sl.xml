@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 3 -->
+<softwarelist name="gl6000sl" description="gl6000sl loose roms">
+	<software name="gl6f3c7f9c11359c">
+		<description>Deepspace(6000SL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="rom" interface="genius_cart">
+			<dataarea name="rom" size="9029">
+				<rom name="Deepspace(6000SL).bin" size="9029" crc="791c613d" sha1="f3c7f9c11359cf97a5fe6c8a948e04fc72c15d78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gl62aee71126a834">
+		<description>Elite Planet Browser(6000SL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="rom" interface="genius_cart">
+			<dataarea name="rom" size="13790">
+				<rom name="Elite Planet Browser(6000SL).bin" size="13790" crc="fef0d19d" sha1="2aee71126a83401bdd52db6a21a12cd90e95be65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gl658796c4700bd8">
+		<description>H-tron(6000SL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="rom" interface="genius_cart">
+			<dataarea name="rom" size="8503">
+				<rom name="H-tron(6000SL).bin" size="8503" crc="716fc14f" sha1="58796c4700bd849103785e5889de0c196bafd615"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

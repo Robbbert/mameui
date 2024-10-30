@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 44 -->
+<!-- Number of items in this list = 45 -->
 <softwarelist name="jupace_cass" description="jupace_cass loose roms">
 	<software name="acef1896c0d8bc8e">
 		<description>3D Maze (2007-05)(Lopes, Ricardo Fernandes)(PD)[19K][load 3dmaze 3dmaze]</description>
@@ -282,13 +282,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="acecd540e11c0c5b">
+		<description>Magic Floor[0 0 bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="jupace_cass">
+			<dataarea name="cass" size="2972">
+				<rom name="Magic Floor[0 0 bload].TAP" size="2972" crc="ccd81a6e" sha1="cd540e11c0c5ba446d0a718f5f0e175b105e587f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="acefd712da75774e">
-		<description>Master Mind[0 0 bload mm.bin]</description>
+		<description>Mastermind[0 0 bload mm.bin]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="jupace_cass">
 			<dataarea name="cass" size="8654">
-				<rom name="Master Mind[0 0 bload mm.bin].tap" size="8654" crc="7e2f1298" sha1="fd712da75774e8e02589520e24c1fe406f4398ed"/>
+				<rom name="Mastermind[0 0 bload mm.bin].tap" size="8654" crc="7e2f1298" sha1="fd712da75774e8e02589520e24c1fe406f4398ed"/>
 			</dataarea>
 		</part>
 	</software>

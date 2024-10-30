@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="svi318_cass" description="svi318_cass loose roms">
+	<software name="svi10ef662ce547e">
+		<description>htron_svi[bload]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="25633">
+				<rom name="htron_svi[bload].cas" size="25633" crc="5efa0f43" sha1="10ef662ce547e5745b060c92214dfe14525e46e5"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

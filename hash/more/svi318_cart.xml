@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 2 -->
+<softwarelist name="svi318_cart" description="svi318_cart loose roms">
+	<software name="svi44a73d0e81399">
+		<description>Deepspace_SVI318</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Deepspace_SVI318.rom" size="32768" crc="a6e2a1c5" sha1="44a73d0e81399f1c323aec02a6ec6171d4a6cc9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sviad0c3a57f97d5">
+		<description>Deepspace_SVI328</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Deepspace_SVI328.rom" size="32768" crc="c71aa999" sha1="ad0c3a57f97d5a5133f7d1713557c2d24182a838"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 762 -->
+<!-- Number of items in this list = 806 -->
 <softwarelist name="mc10" description="mc10 loose roms">
 	<software name="mc1e0150629f92ff">
 		<description>(demo)dypp[cloadm]</description>
@@ -169,6 +169,56 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="810772">
 				<rom name="(demo)Rotozoom_4N[cloadm].WAV" size="810772" crc="5af62cc9" sha1="88de6183da230523808bd6db4cf749d1459a0c7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1088af4ad2d3ee">
+		<description>(demo)Terraspin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3491">
+				<rom name="(demo)Terraspin.C10" size="3491" crc="31bd1e56" sha1="088af4ad2d3ee04ad98f53752dfc5b948274aa07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc12b39b7359b59d">
+		<description>(demo)Torus60[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8443">
+				<rom name="(demo)Torus60[cloadm].c10" size="8443" crc="2c53ef0c" sha1="2b39b7359b59d9fd48223257b3593bcd62ca780c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13e0298f4eee75">
+		<description>(demo)Tunnel[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1862">
+				<rom name="(demo)Tunnel[cloadm].c10" size="1862" crc="4a727f3e" sha1="3e0298f4eee75d6584c42d96f547caedaf97f35e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e6816209caf8a">
+		<description>(demo)Tunnel_4N[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="538688">
+				<rom name="(demo)Tunnel_4N[cloadm].WAV" size="538688" crc="7bd275c8" sha1="e6816209caf8ada5a63a967f60e954993715a08b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc18700e6bc35bb3">
+		<description>(demo)TURKEY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1480">
+				<rom name="(demo)TURKEY.C10" size="1480" crc="b1d0db25" sha1="8700e6bc35bb36fe2380313b3e9d2e2f05a40af2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3732,6 +3782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1ce2e9409ca753">
+		<description>Halifax Tail Gunner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6417">
+				<rom name="Halifax Tail Gunner.C10" size="6417" crc="1eaad673" sha1="ce2e9409ca7539cced2930cc6038f5aceca322cb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc100fac0174baed">
 		<description>Halloween Boogaloo</description>
 		<year>????</year>
@@ -4229,6 +4289,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="15733">
 				<rom name="Kinder Morgan.C10" size="15733" crc="f5d60125" sha1="d556100e0e7b588ad52b849f2e6732d58534139f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc152c1c05f20f50">
+		<description>King Tut's Tomb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="16013">
+				<rom name="King Tut's Tomb.C10" size="16013" crc="7b258e4d" sha1="52c1c05f20f50bbe6bfea221ad69c18b8cf0f565"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4769,6 +4839,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="8959">
 				<rom name="MC-scramble[cloadm].c10" size="8959" crc="d6b743d5" sha1="86d8172311f9cb0835d305f41fbaf3e337fd816a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1fa025a78363fc">
+		<description>MC-Timberman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5229">
+				<rom name="MC-Timberman.C10" size="5229" crc="636d96f4" sha1="fa025a78363fc856df862fa2c1fef3ef53011515"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5629,6 +5709,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="9829">
 				<rom name="Pharaoh's Curse.C10" size="9829" crc="ac483ef6" sha1="2645faa6486b2067a7f0fb63a796e4ac3732c516"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc18775b2a845416">
+		<description>Pharaoh's Tomb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11301">
+				<rom name="Pharaoh's Tomb.C10" size="11301" crc="7583624e" sha1="8775b2a84541621e79362e2824498cf4a2dc6672"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6942,6 +7032,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1515da62f1f4da">
+		<description>Star Trek Encounter in the Near Tholian Sector</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="14256">
+				<rom name="Star Trek Encounter in the Near Tholian Sector.C10" size="14256" crc="f0f9b1e6" sha1="515da62f1f4dad26cc3074fbed76af88fd789127"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1dda04e1bd6fb1">
 		<description>Star Trek</description>
 		<year>????</year>
@@ -7132,6 +7232,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc14e5d6241f2dd6">
+		<description>Tablets of Hippocrates</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15347">
+				<rom name="Tablets of Hippocrates.C10" size="15347" crc="2b916b65" sha1="4e5d6241f2dd6230db139465cce8df008aba22e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc14e5e8358d17b6">
+		<description>Tackle Penguin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7118">
+				<rom name="Tackle Penguin.C10" size="7118" crc="f717b215" sha1="4e5e8358d17b606d7e75d5fa8c268b73db3833c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc118f9c6ca96807">
+		<description>TAIPAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12941">
+				<rom name="TAIPAN.C10" size="12941" crc="78c9fd2b" sha1="18f9c6ca9680704cc7ff013a1f3fa19d59bf51e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc19015fbafb4fd6">
+		<description>Tank (search and capture)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="5443">
+				<rom name="Tank (search and capture).C10" size="5443" crc="b3b75283" sha1="9015fbafb4fd6ba99df779ad5b79a168840c080c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e9e7d5622a926">
+		<description>TANK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4326">
+				<rom name="TANK.C10" size="4326" crc="a118e21d" sha1="e9e7d5622a9263dbecfc37768676f68abe5f7a8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11dc885d0a2a86">
+		<description>Tape Index</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="262868">
+				<rom name="Tape Index.wav" size="262868" crc="e3d9f0c1" sha1="1dc885d0a2a86c1716939f6487d827be806a4d7f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1f3bb3bb3f59bd">
 		<description>Tays House Adventure</description>
 		<year>????</year>
@@ -7139,6 +7299,26 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="13308">
 				<rom name="Tays House Adventure.C10" size="13308" crc="365619d8" sha1="f3bb3bb3f59bda253a51677e84bd3fd428d9881a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc188742cc558135">
+		<description>Teeny Tiny Text Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11622">
+				<rom name="Teeny Tiny Text Adventure.C10" size="11622" crc="59f8b56e" sha1="88742cc55813586963d3ca9cf27911c75d7220a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1e84ef1beb4b58">
+		<description>TELENGRD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="17904">
+				<rom name="TELENGRD.C10" size="17904" crc="2cf58a0d" sha1="e84ef1beb4b58397f5c98dbb394e67207843a943"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7162,6 +7342,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc163ec2d2ae7711">
+		<description>TETRIS10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1936">
+				<rom name="TETRIS10.C10" size="1936" crc="8785061b" sha1="63ec2d2ae7711cef7a4ff574ffd946136ffc7712"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc12db3823d1ee88">
+		<description>TETRIS4K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1776">
+				<rom name="TETRIS4K.C10" size="1776" crc="92f44994" sha1="2db3823d1ee8815d94cf0824f41d48f6be3cf537"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc113aba78051aa1">
+		<description>TEXTED</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15873">
+				<rom name="TEXTED.C10" size="15873" crc="369af11a" sha1="13aba78051aa17cf4585a834b8ac23509fd71fd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc175125ad295f35">
+		<description>Thunderbird</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3217">
+				<rom name="Thunderbird.C10" size="3217" crc="4e9f24a4" sha1="75125ad295f3591013b780e0fe67d351cebb5f07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13ce45cab0bc7b">
+		<description>Tim Hartnell Checkers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3553">
+				<rom name="Tim Hartnell Checkers.C10" size="3553" crc="be9d840f" sha1="3ce45cab0bc7bfb982562fa00cfebf22830c670c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1f6dbdbcf20464">
+		<description>Tim Hartnell Chess</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8491">
+				<rom name="Tim Hartnell Chess.C10" size="8491" crc="62a73e84" sha1="f6dbdbcf20464a8627ecd09659b86e7b0b9a1e23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1022b7512eb112">
+		<description>Time Machine, the</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="16623">
+				<rom name="Time Machine, the.C10" size="16623" crc="3698915c" sha1="022b7512eb112c11d8a04d324c2b37f7d2fd2eb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1803f0ba4110a8">
+		<description>Time Machine</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="17542">
+				<rom name="Time Machine.C10" size="17542" crc="a935d148" sha1="803f0ba4110a8b239f60941a42c89a72f2f3e28a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1a85a0f47f4faa">
 		<description>Time Switch</description>
 		<year>????</year>
@@ -7169,6 +7429,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="7544">
 				<rom name="Time Switch.C10" size="7544" crc="7005a8ba" sha1="a85a0f47f4faaa5e03049f4a812653bf3d052d15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1645df5550067b">
+		<description>TIMEBOMB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3241">
+				<rom name="TIMEBOMB.C10" size="3241" crc="9bbe2083" sha1="645df5550067b832cfa598c3833b04868c24d7b9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7182,6 +7452,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1b7bbdd8b628dc">
+		<description>Torpedo Attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4736">
+				<rom name="Torpedo Attack.C10" size="4736" crc="c3a361e8" sha1="b7bbdd8b628dc81d9d94eb315bbaf9178204fc4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1592f74fff5178">
+		<description>TOUCHDN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1847">
+				<rom name="TOUCHDN.C10" size="1847" crc="2f9bddcf" sha1="592f74fff5178af3a04962c93e0586444463d5c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1a9c323a06351e">
+		<description>Tourist Trap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="4133">
+				<rom name="Tourist Trap.C10" size="4133" crc="e20eb803" sha1="a9c323a06351e35310ae8382df1ee0af538331f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1a87d1d31febf2">
 		<description>Tower Dodge</description>
 		<year>????</year>
@@ -7189,6 +7489,36 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="5265">
 				<rom name="Tower Dodge.C10" size="5265" crc="238c6dfb" sha1="a87d1d31febf2304a829cb951694fa8092b2fd5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1606a6075b33f4">
+		<description>TOWER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7398">
+				<rom name="TOWER.C10" size="7398" crc="b14d1b7e" sha1="606a6075b33f488ffb49743ddf8fa6f05a6f94b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1412a1aa0c953c">
+		<description>TRADE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="1987">
+				<rom name="TRADE.C10" size="1987" crc="58534972" sha1="412a1aa0c953c051e4449f2d59ac62b53c4fd2e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc19cf1dec5ee3c7">
+		<description>Treasure Dungeon 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="12042">
+				<rom name="Treasure Dungeon 2.C10" size="12042" crc="330461f5" sha1="9cf1dec5ee3c763c5420999cb1b81d77442d8555"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7212,6 +7542,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc1089745cee3e07">
+		<description>Trebuchet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="3314">
+				<rom name="Trebuchet.C10" size="3314" crc="8d642142" sha1="089745cee3e078ba3a9f3ca3b4bfab783f06a694"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc109b5f082f9cf0">
+		<description>Trek Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7715">
+				<rom name="Trek Adventure.C10" size="7715" crc="3ff9eba3" sha1="09b5f082f9cf092029266a0d5a5a649070ab4918"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13420e3e061742">
+		<description>Trek III</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="15623">
+				<rom name="Trek III.C10" size="15623" crc="b897789f" sha1="3420e3e0617426c3e7694e658e93ba0bc4f9dbc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc13b2dfe051a271">
+		<description>Trench Fire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2242">
+				<rom name="Trench Fire.C10" size="2242" crc="6290f002" sha1="3b2dfe051a271d4acdeb155d8d0e4c8a91d16521"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc10393d3c00d99a">
+		<description>Tron-ish Game</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2583">
+				<rom name="Tron-ish Game.C10" size="2583" crc="366d2d63" sha1="0393d3c00d99a9854102282aef3ca2e8376fe659"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1c0521ecbe64b8">
+		<description>TTREK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6867">
+				<rom name="TTREK.C10" size="6867" crc="6133252a" sha1="c0521ecbe64b8e213d02494da7242bd5fafec3d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1086205da1c5eb">
+		<description>Tug-a-war</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="6656">
+				<rom name="Tug-a-war.C10" size="6656" crc="42eef21c" sha1="086205da1c5ebaf20bc7ee6080dfbb8f753f9ac7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc16813214b2b168">
+		<description>Tunnel Jumper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="7131">
+				<rom name="Tunnel Jumper.C10" size="7131" crc="5e96c955" sha1="6813214b2b168eb88f8829216fb92a31b37f8b4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc19d51b6d268185">
+		<description>Tut-Tut</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="10104">
+				<rom name="Tut-Tut.C10" size="10104" crc="404488eb" sha1="9d51b6d268185b86c007d6813bdc526a3a37952f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc192d3abe37ddba">
 		<description>Two Player Risk</description>
 		<year>????</year>
@@ -7219,6 +7639,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="9956">
 				<rom name="Two Player Risk.C10" size="9956" crc="590f3091" sha1="92d3abe37ddba44300852f188ad49862568d8e4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1d33456f8615fb">
+		<description>TYCOON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="11830">
+				<rom name="TYCOON.C10" size="11830" crc="c47947d3" sha1="d33456f8615fb0effcd94e2971bd16a1bb2b8091"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7279,6 +7709,16 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="13953">
 				<rom name="Unexplored Mansion, An.C10" size="13953" crc="aed43845" sha1="32a53ba98817cdc493b81295dd281eb311a4adc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1224ace643898f">
+		<description>Usage</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="339">
+				<rom name="Usage.txt" size="339" crc="bb609d60" sha1="224ace643898f0c61c1097eebd95b244c55df528"/>
 			</dataarea>
 		</part>
 	</software>

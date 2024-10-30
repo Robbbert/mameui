@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 508 -->
+<!-- Number of items in this list = 514 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -2102,6 +2102,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds865b36424c6af">
+		<description>Ginga Denshou - Galaxy Odyssey (Japan)(1986)(Imagineer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Ginga Denshou - Galaxy Odyssey (Japan)(1986)(Imagineer).fds" size="131016" crc="d38240da" sha1="865b36424c6afecdaa3888c432dd45db5be5c9b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds3abb511b81516">
+		<description>Ginga Denshou - Galaxy Odyssey T-Eng (2015)(Chris M. Covell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Ginga Denshou - Galaxy Odyssey T-Eng (2015)(Chris M. Covell).fds" size="131000" crc="f9534dda" sha1="3abb511b815169f054cc425f9822fd95ec1e0312"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds7db5fa55f94e8">
 		<description>Golf (1984)(Nintendo)</description>
 		<year>????</year>
@@ -4012,6 +4032,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds163b500a0d4d6">
+		<description>Santa Claus no Takarabako (Japan)(1987)(Data East)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Santa Claus no Takarabako (Japan)(1987)(Data East).fds" size="131000" crc="645b2ec7" sha1="163b500a0d4d616926270277d79138a3ecd646a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds2ff6bec2ff51f">
+		<description>Santa Claus' Toybox T-Eng v1.01 (2003)(Gil Galad)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Santa Claus' Toybox T-Eng v1.01 (2003)(Gil Galad).fds" size="131000" crc="d58bb23a" sha1="2ff6bec2ff51f1a94d56a8b9434493da64272b47"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdsd275eb9935e07">
 		<description>Section-Z (1987)(Capcom)</description>
 		<year>????</year>
@@ -4129,6 +4169,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="65516">
 				<rom name="Solomon no Kagi (1987)(Tecmo Ltd.).fds" size="65516" crc="fe281a8e" sha1="9cdd258d3e268d5b1da0df9b5495981576b1e24b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdscd9f19a072109">
+		<description>Suishou no Dragon (Japan)(1986)(Squaresoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Suishou no Dragon (Japan)(1986)(Squaresoft).fds" size="131000" crc="6b56808b" sha1="cd9f19a0721099601197c99b732cfe052ddf0543"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdsa5c678542e770">
+		<description>Suishou no Dragon - Crystal Dragon T-Eng (2003)(Mute)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Suishou no Dragon - Crystal Dragon T-Eng (2003)(Mute).fds" size="131000" crc="f106f568" sha1="a5c678542e770fad449e2e25f55b2128f3b12b19"/>
 			</dataarea>
 		</part>
 	</software>

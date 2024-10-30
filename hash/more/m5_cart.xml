@@ -1,7 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 27 -->
+<!-- Number of items in this list = 44 -->
 <softwarelist name="m5_cart" description="m5_cart loose roms">
+	<software name="m51017b98d9a193f">
+		<description>Aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="10423">
+				<rom name="Aerial.rom" size="10423" crc="67fe42be" sha1="1017b98d9a193f4ba2804f962975757d66c9d7c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m51749d9a4cb5496">
+		<description>Antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="7922">
+				<rom name="Antiair.rom" size="7922" crc="3c72ad1f" sha1="1749d9a4cb5496d9ef7e24ea18db88b6b32617cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5ca2e4d5f51b5b3">
+		<description>Ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9245">
+				<rom name="Ascend.rom" size="9245" crc="f608887b" sha1="ca2e4d5f51b5b31b4a23d9d725a2386741dfe1bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m59e5d70f4f649df">
 		<description>BASIC-G (198x)(Sord)(JP)[alt][_]</description>
 		<year>????</year>
@@ -9,6 +39,56 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="BASIC-G (198x)(Sord)(JP)[alt][_].bin" size="16384" crc="f6b70925" sha1="9e5d70f4f649df323048162f15d913df62ef78aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m570d578a147ed69">
+		<description>Battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9554">
+				<rom name="Battlot.rom" size="9554" crc="c013e34c" sha1="70d578a147ed69b23d93d1201afb269b6e28d048"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m504ab7f9b39067b">
+		<description>Bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9253">
+				<rom name="Bootskell.rom" size="9253" crc="6851ca52" sha1="04ab7f9b39067bb1ccea7928ead1a714346d3939"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5ab029a7f28bbb5">
+		<description>Cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8360">
+				<rom name="Cacorm.rom" size="8360" crc="75041b09" sha1="ab029a7f28bbb51e19c73ef118fe29b8aac89acb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5ed1a644a34461a">
+		<description>Cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9796">
+				<rom name="Cavit.rom" size="9796" crc="442601a4" sha1="ed1a644a34461abf42e35a252f1410101d30c975"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m57f0b37ca912654">
+		<description>Cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="7169">
+				<rom name="Cracky.rom" size="7169" crc="ae7f6791" sha1="7f0b37ca912654a8756693e22f5248aa8640b2fd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -112,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m5cd7f017a3e5928">
+		<description>Guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="11700">
+				<rom name="Guntus.rom" size="11700" crc="2f2352f8" sha1="cd7f017a3e59282e086a99a52b094c867dea0b38"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m5e5d328fa276553">
 		<description>guttanggottong</description>
 		<year>????</year>
@@ -132,6 +222,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m54174827961b99c">
+		<description>Hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9773">
+				<rom name="Hopman.rom" size="9773" crc="9c1b251f" sha1="4174827961b99cc58c209a08a6dfbbd83e78bb4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5c5c52be058ebec">
+		<description>Impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="16294">
+				<rom name="Impetus.rom" size="16294" crc="23d163f3" sha1="c5c52be058ebecaa3089ea39cb6dab425351a32a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m568a47f54c30a34">
 		<description>Life (19xx)(Hedisoft & Conway)(cs)</description>
 		<year>????</year>
@@ -139,6 +249,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="1070">
 				<rom name="Life (19xx)(Hedisoft & Conway)(cs).bin" size="1070" crc="3014dfad" sha1="68a47f54c30a34f15d70927896ef40370e9e1398"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m53146c9ca82a538">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8125">
+				<rom name="Lift.rom" size="8125" crc="3edf0075" sha1="3146c9ca82a53834d015499502467642a33405eb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -182,6 +302,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m5b00a877c653327">
+		<description>Mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="6830">
+				<rom name="Mazy.rom" size="6830" crc="c04f53c1" sha1="b00a877c65332723c896e57df76059e97d7aec77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m57ad55c1776e24a">
+		<description>Neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8191">
+				<rom name="Neuras.rom" size="8191" crc="97e7c64c" sha1="7ad55c1776e24a1ad44c0a391b056a8810deadae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5d09424f9c39c19">
+		<description>Osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9355">
+				<rom name="Osotos.rom" size="9355" crc="4c3790e3" sha1="d09424f9c39c1984cf4748ef009757473a7fd46f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m57ecf2660a38a5e">
 		<description>Power Pac (1982)(Namco)[h]</description>
 		<year>????</year>
@@ -209,6 +359,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="powerpacpal.rom" size="8192" crc="2b98a05d" sha1="679481b80f9aa7eeaaf0203b9cb872362663c71c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m596d0c195e93006">
+		<description>Ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="12170">
+				<rom name="Ruptus.rom" size="12170" crc="d3c0c580" sha1="96d0c195e93006b17b80708caad94ff0d5cf3188"/>
 			</dataarea>
 		</part>
 	</software>
@@ -269,6 +429,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="wonderhole.bin" size="8192" crc="4a7613e6" sha1="dd0e732f121b904bc12a6a5a30e3f9fd40d03afd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5e7edca17c28d0a">
+		<description>Yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8950">
+				<rom name="Yewdow.rom" size="8950" crc="3f3aa574" sha1="e7edca17c28d0abc109245394b45388a602cc64e"/>
 			</dataarea>
 		</part>
 	</software>

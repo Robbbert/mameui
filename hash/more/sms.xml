@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 278 -->
+<!-- Number of items in this list = 281 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -299,6 +299,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="battle out run (fm mod).sms" size="262144" crc="7c849999" sha1="74c198cf6cac10d65b54fa2a9a5c7b3808545724"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms99fef1cca416d">
+		<description>Battle Wings [Proto]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Battle Wings [Proto].sms" size="262144" crc="fae0ade7" sha1="99fef1cca416df8586d3aaf76d147e86e69dbdad"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1109,6 +1119,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="13037">
 				<rom name="Hopman.sms" size="13037" crc="06090a9a" sha1="c7fda14ba3e888a1a29bc14bfb2788f12e2d966d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms641ae3eb1cb47">
+		<description>Hoshi wo Sagasite... T-Eng (2009)(filler, SSTranslations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Hoshi wo Sagasite... T-Eng (2009)(filler, SSTranslations).sms" size="262144" crc="b5ce862f" sha1="641ae3eb1cb476359a0a0ade2f45437d47e24361"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2329,6 +2349,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="sudoku_1.sms" size="131072" crc="814c08d1" sha1="8d865f82ec8c7731bd9acd0275257cdd876654e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms79590e6232c14">
+		<description>Sukeban Deka II T-Eng (2010)(SSTranslations, enigmaopoeia)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Sukeban Deka II T-Eng (2010)(SSTranslations, enigmaopoeia).sms" size="262144" crc="0950a312" sha1="79590e6232c14c2577e346391d7c1db481c824c2"/>
 			</dataarea>
 		</part>
 	</software>

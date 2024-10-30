@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 616 -->
+<!-- Number of items in this list = 618 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -309,6 +309,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Armageddon.rom" size="16384" crc="adf04191" sha1="344c967ec6004b9185c98eded30957aeefa283ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col647259250d707">
+		<description>Arno Dash</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Arno Dash.col" size="32768" crc="ead5e824" sha1="647259250d7079ca171ea1f2d47636e810768ade"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3092,6 +3102,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col5ff0e43757f0d">
+		<description>MazezaM (2004)(Ventzislav Tzvetkov)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="MazezaM (2004)(Ventzislav Tzvetkov).rom" size="16384" crc="150006fc" sha1="5ff0e43757f0d1230ea61de27c4efa5af1cfb2c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coldd9a3f4c45663">
+		<description>MazezaM Challenge (2016)(Collectorvision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MazezaM Challenge (2016)(Collectorvision).bin" size="32768" crc="8eded0e2" sha1="dd9a3f4c456633eba0e67877cf071ec8b884a6d1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colede4e925757b8">
 		<description>Mazezam Challenge</description>
 		<year>????</year>
@@ -3099,16 +3129,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32767">
 				<rom name="Mazezam Challenge.rom" size="32767" crc="6f556b44" sha1="ede4e925757b89f7a40ed77de2ae6fd85f0d62ab"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col5ff0e43757f0d">
-		<description>MazezaM1.1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="MazezaM1.1.rom" size="16384" crc="150006fc" sha1="5ff0e43757f0d1230ea61de27c4efa5af1cfb2c5"/>
 			</dataarea>
 		</part>
 	</software>

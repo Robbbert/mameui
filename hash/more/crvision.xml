@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 20 -->
+<!-- Number of items in this list = 46 -->
 <softwarelist name="crvision" description="crvision loose roms">
 	<software name="crv7523b938d2513">
 		<description>BASIC82A</description>
@@ -49,6 +49,256 @@
 		<part name="cart" interface="crvision_cart">
 			<dataarea name="rom" size="18432">
 				<rom name="CHOPPER.BIN" size="18432" crc="afb482ae" sha1="43dc37755306ac824492e98c9d0e25379ac69672"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv5226bc0fa08f1">
+		<description>CreatiVision BASIC Interpreter v1.0 (1981)(VTL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="12288">
+				<rom name="CreatiVision BASIC Interpreter v1.0 (1981)(VTL).bin" size="12288" crc="10409a1d" sha1="5226bc0fa08f1046179572ed602ce157959bf92f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv2cecec42b4728">
+		<description>Cross Bomber (2020-08-26)(Caruso, Fabrizio)[16K][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Bomber (2020-08-26)(Caruso, Fabrizio)[16K][swapped].bin" size="16384" crc="ebd420d6" sha1="2cecec42b47282ba86c050e9fd68ce8db7af00c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvbdbd27f62065c">
+		<description>Cross Bomber (2021-05-13)(Caruso, Fabrizio)[16K][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Bomber (2021-05-13)(Caruso, Fabrizio)[16K][swapped].bin" size="16384" crc="61b63a76" sha1="bdbd27f62065c654c85c46886ea3952a5769f213"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv6b54b88ec4ae7">
+		<description>Cross Chase (2017-12-10)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2017-12-10)(Caruso, Fabrizio)[8K][tiny].bin" size="8192" crc="8e8093f2" sha1="6b54b88ec4ae7e1410061b8478c0e89dcaf7dadb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv43920781675bc">
+		<description>Cross Chase (2018-02-03)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-02-03)(Caruso, Fabrizio)[8K][tiny].bin" size="8192" crc="f7dc58cf" sha1="43920781675bc3a81a950a439d006154b0088bef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv415ba14fde473">
+		<description>Cross Chase (2018-04-15)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-04-15)(Caruso, Fabrizio)[8K][tiny].bin" size="8192" crc="85ac1ce4" sha1="415ba14fde473f37964634d5ff54253c24186847"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvb74978b2411bf">
+		<description>Cross Chase (2018-04-15)(Caruso, Fabrizio)[full][16K][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-04-15)(Caruso, Fabrizio)[full][16K][swapped].bin" size="16384" crc="d7111e78" sha1="b74978b2411bfb42ef5af8c1b1522bd7869b4fc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv0facfdd39166f">
+		<description>Cross Chase (2018-05-19)(Caruso, Fabrizio)[16K][full][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-05-19)(Caruso, Fabrizio)[16K][full][swapped].bin" size="16384" crc="e9202979" sha1="0facfdd39166f618d7e5d7412dc9e246c824aa19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvd705f341aab5a">
+		<description>Cross Chase (2018-05-19)(Caruso, Fabrizio)[8K][light][less text]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-05-19)(Caruso, Fabrizio)[8K][light][less text].bin" size="8192" crc="db04ab24" sha1="d705f341aab5a4962fbb121193d4f8f24dd3739d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv0a50dcbf80672">
+		<description>Cross Chase (2018-05-19)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-05-19)(Caruso, Fabrizio)[8K][tiny].bin" size="8192" crc="46021aa9" sha1="0a50dcbf806720796f9863c25840b92fac887199"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crve3308bdb2da0b">
+		<description>Cross Chase (2018-07-19)(Caruso, Fabrizio)[16K][full][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-07-19)(Caruso, Fabrizio)[16K][full][swapped].bin" size="16384" crc="99438235" sha1="e3308bdb2da0b92e3192d48f7312cd3d70c8521e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvef06878e95fe3">
+		<description>Cross Chase (2018-07-19)(Caruso, Fabrizio)[8K][light][less text]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-07-19)(Caruso, Fabrizio)[8K][light][less text].bin" size="8192" crc="c9a8f0d5" sha1="ef06878e95fe3c4f2afbf68984932dfa14d46617"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvb37814658c6e8">
+		<description>Cross Chase (2018-07-19)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-07-19)(Caruso, Fabrizio)[8K][tiny].bin" size="8192" crc="9f1d2be9" sha1="b37814658c6e857de0fac51373e21b955a12b245"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvbef6994206181">
+		<description>Cross Chase (2018-08-04)(Caruso, Fabrizio)[16K][full][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-08-04)(Caruso, Fabrizio)[16K][full][swapped].bin" size="16384" crc="e5fba262" sha1="bef699420618147650ec6275650340a299871bc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvd070fac9a7f37">
+		<description>Cross Chase (2018-08-04)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-08-04)(Caruso, Fabrizio)[8K][tiny].bin" size="8192" crc="79121da5" sha1="d070fac9a7f37ead6ceb60dd2a7fc6d4a985a2d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv98f0392ee5a8d">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[16K][full][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)[16K][full][swapped].bin" size="16384" crc="93c75373" sha1="98f0392ee5a8d89a0a167a01b64577b1f1417b84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvddd8836fc6b64">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[8K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)[8K].bin" size="8192" crc="a46922e7" sha1="ddd8836fc6b6408a83b824ed2648ea48e6a233c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv52fa8d55e31c7">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[8K][light][less text]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)[8K][light][less text].bin" size="8192" crc="47709c22" sha1="52fa8d55e31c7dc898473c2330e4cbcc5c17a3c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv0f5f1a02f27e5">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)[16K][full][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio)[16K][full][swapped].bin" size="16384" crc="401dcab7" sha1="0f5f1a02f27e5a2fe1cc6001e84b4d228d09124f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv5016c9d5514f6">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)[8K][light][less text]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio)[8K][light][less text].bin" size="8192" crc="178df16c" sha1="5016c9d5514f6267ecf9a89abfb25c6e40c4deec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv6a815f59e2ea1">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio)[8K][tiny].bin" size="8192" crc="569d14e7" sha1="6a815f59e2ea18507be40b0fd5b8a1f642e8cc50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvfea747563ee25">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)[16K][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[16K][swapped].bin" size="16384" crc="126840ae" sha1="fea747563ee25d394ec5be71ae0aa80c0fba7613"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv0ebeef87ffc00">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)[8K][light][less text]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[8K][light][less text].bin" size="8192" crc="12b4c993" sha1="0ebeef87ffc008907dc42642060292f78853cf45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv1868c737683dd">
+		<description>Cross Horde v1.0 (2021-05-01)(Caruso, Fabrizio)[16K][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Horde v1.0 (2021-05-01)(Caruso, Fabrizio)[16K][swapped].bin" size="16384" crc="fe368b2e" sha1="1868c737683ddcc28c0a73c9885bfa977d330d48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv4db0c1ee26d9c">
+		<description>Cross Snake v2.0 (2020-12-31)(Caruso, Fabrizio)[16K][swapped]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cross Snake v2.0 (2020-12-31)(Caruso, Fabrizio)[16K][swapped].bin" size="16384" crc="6115732d" sha1="4db0c1ee26d9cc94dddf9ca2ccc1757e4a243e1a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -102,16 +352,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="crvcf54091e260d9">
-		<description>joytest</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="crvision_cart">
-			<dataarea name="rom" size="968808">
-				<rom name="joytest.wav" size="968808" crc="4f1ac6b0" sha1="cf54091e260d9fc6b901d9edc7e03484e0d494dd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="crv4b383260f8b0d">
 		<description>LOCOM10K</description>
 		<year>????</year>
@@ -119,6 +359,26 @@
 		<part name="cart" interface="crvision_cart">
 			<dataarea name="rom" size="10240">
 				<rom name="LOCOM10K.BIN" size="10240" crc="81b552ef" sha1="4b383260f8b0db5abe5a0c595f52d3dab55a6fb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crv4aa0db7b236ac">
+		<description>Locomotive (1981)(VTL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="12288">
+				<rom name="Locomotive (1981)(VTL).bin" size="12288" crc="3618b415" sha1="4aa0db7b236ac512d777cfc811b58d59f9095ab1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="crvd1eb8c679310b">
+		<description>Music Maker (1983)(VTL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="crvision_cart">
+			<dataarea name="rom" size="12288">
+				<rom name="Music Maker (1983)(VTL).bin" size="12288" crc="f8383d33" sha1="d1eb8c679310b8988ac4d018853b979613508b0e"/>
 			</dataarea>
 		</part>
 	</software>
