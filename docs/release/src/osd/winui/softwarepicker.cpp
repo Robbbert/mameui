@@ -90,6 +90,10 @@ static const TCHAR software_picker_property_name[] = TEXT("SWPICKER");
 
 
 //============================================================
+// To Do: win_get_current_directory_utf8 returns a value:
+//         0 for failure, or the length of the returned string
+//         This needs to be incorporated into the code.
+//============================================================
 
 static LPCSTR NormalizePath(LPCSTR pszPath, LPSTR pszBuffer, size_t nBufferSize)
 {

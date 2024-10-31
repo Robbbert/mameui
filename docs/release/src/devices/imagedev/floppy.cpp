@@ -20,6 +20,7 @@
 #include "formats/dsk_dsk.h"
 #include "formats/pc_dsk.h"
 #include "formats/ipf_dsk.h"
+#include "formats/86f_dsk.h"
 
 #include "formats/fs_unformatted.h"
 #include "formats/fsblk_vec.h"
@@ -164,6 +165,7 @@ void format_registration::add_fm_containers()
 	add(FLOPPY_MFM_FORMAT);
 	add(FLOPPY_TD0_FORMAT);
 	add(FLOPPY_IMD_FORMAT);
+	add(FLOPPY_86F_FORMAT);
 }
 
 void format_registration::add_mfm_containers()
@@ -890,18 +892,16 @@ bool floppy_image_device::floppy_is_hd()
 {
 	if (!m_image)
 		return false;
-	u32 variant = m_image->get_variant();
+	u32 const variant = m_image->get_variant();
 	return variant == floppy_image::DSHD;
-
 }
 
 bool floppy_image_device::floppy_is_ed()
 {
 	if (!m_image)
 		return false;
-	u32 variant = m_image->get_variant();
+	u32 const variant = m_image->get_variant();
 	return variant == floppy_image::DSED;
-
 }
 
 void floppy_image_device::track_changed()
