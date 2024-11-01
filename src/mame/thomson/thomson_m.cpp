@@ -1265,7 +1265,7 @@ MACHINE_RESET_MEMBER( mo5_state, mo5 )
 
 MACHINE_START_MEMBER( mo5_state, mo5 )
 {
-	uint8_t* mem = memregion("maincpu")->base();
+	uint8_t* mem = memregion("basic")->base();
 	uint8_t* cartmem = &m_cart_rom[0];
 	uint8_t* ram = m_ram->pointer();
 
@@ -1283,7 +1283,7 @@ MACHINE_START_MEMBER( mo5_state, mo5 )
 	m_mo5_reg_cart = 0;
 	m_thom_vram = ram;
 	m_basebank->configure_entry( 0, ram + 0x4000);
-	m_cartbank->configure_entry( 0, mem + 0x10000);
+	m_cartbank->configure_entry( 0, mem );
 	m_cartbank->configure_entries( 1, 3, cartmem + 0x4000, 0x4000 );
 	m_cartbank->configure_entries( 4, 4, ram + 0xc000, 0x4000 );
 	m_vrambank->configure_entries( 0, 2, m_thom_vram, 0x2000 );
@@ -1728,6 +1728,33 @@ void to9_state::to9_timer_port_out(uint8_t data)
 }
 
 
+
+/* ------------ WD disk controller ------------ */
+
+
+
+void to9_state::to9_floppy_control_w(u8 data)
+{
+	m_to9_floppy_control = data;
+
+	floppy_image_device *floppy = nullptr;
+	if (BIT(m_to9_floppy_control, 1))
+		floppy = m_floppy[0]->get_device();
+	else if (BIT(m_to9_floppy_control, 2))
+		floppy = m_floppy[1]->get_device();
+	if (floppy)
+		floppy->ss_w(BIT(m_to9_floppy_control, 0));
+	m_fdc->set_floppy(floppy);
+
+	m_fdc->dden_w(BIT(m_to9_floppy_control, 7));
+}
+
+uint8_t to9_state::to9_floppy_control_r()
+{
+	return m_to9_floppy_control & 0x80;
+}
+
+
 /* ------------ init / reset ------------ */
 
 
@@ -1767,7 +1794,7 @@ MACHINE_RESET_MEMBER( to9_state, to9 )
 
 MACHINE_START_MEMBER( to9_state, to9 )
 {
-	uint8_t* mem = memregion("maincpu")->base();
+	uint8_t* basic = memregion("basic")->base();
 	uint8_t* cartmem = &m_cart_rom[0];
 	uint8_t* ram = m_ram->pointer();
 
@@ -1780,12 +1807,16 @@ MACHINE_START_MEMBER( to9_state, to9 )
 	m_extension->rom_map(m_maincpu->space(AS_PROGRAM), 0xe000, 0xe7bf);
 	m_extension->io_map (m_maincpu->space(AS_PROGRAM), 0xe7c0, 0xe7ff);
 
+	m_to9_floppy_control = 0;
+	m_fdc->set_floppy(nullptr);
+	m_fdc->dden_w(0);
+
 	/* memory */
 	m_thom_vram = ram;
 	m_thom_cart_bank = 0;
 	m_vrambank->configure_entries( 0,  2, m_thom_vram, 0x2000 );
 	m_cartbank->configure_entries( 0,  4, cartmem, 0x4000 );
-	m_cartbank->configure_entries( 4,  8, mem + 0x10000, 0x4000 );
+	m_cartbank->configure_entries( 4,  8, basic, 0x4000 );
 	m_basebank->configure_entry( 0,  ram + 0x4000);
 	m_rambank->configure_entries( 0, 10, ram + 0x8000, 0x4000 );
 	m_vrambank->set_entry( 0 );
@@ -1799,6 +1830,7 @@ MACHINE_START_MEMBER( to9_state, to9 )
 	save_item(NAME(m_to7_lightpen));
 	save_item(NAME(m_to7_lightpen_step));
 	save_item(NAME(m_to9_soft_bank));
+	save_item(NAME(m_to9_floppy_control));
 	save_pointer(NAME(cartmem), 0x10000 );
 	machine().save().register_postload(save_prepost_delegate(FUNC(to9_state::to9_update_ram_bank_postload), this));
 	machine().save().register_postload(save_prepost_delegate(FUNC(to9_state::to9_update_cart_bank_postload), this));
@@ -2365,7 +2397,8 @@ MACHINE_RESET_MEMBER( to9_state, to8 )
 
 MACHINE_START_MEMBER( to9_state, to8 )
 {
-	uint8_t* mem = memregion("maincpu")->base();
+	uint8_t* basic = memregion("basic")->base();
+	uint8_t* monitor = memregion("monitor")->base();
 	uint8_t* cartmem = &m_cart_rom[0];
 	uint8_t* ram = m_ram->pointer();
 
@@ -2382,7 +2415,7 @@ MACHINE_START_MEMBER( to9_state, to8 )
 	m_thom_cart_bank = 0;
 	m_thom_vram = ram;
 	m_cartbank->configure_entries( 0, 4, cartmem, 0x4000 );
-	m_cartbank->configure_entries( 4, 4, mem + 0x10000, 0x4000 );
+	m_cartbank->configure_entries( 4, 4, basic, 0x4000 );
 	if ( m_ram->size() == 256*1024 )
 	{
 		m_cartbank->configure_entries( 8,    16, ram, 0x4000 );
@@ -2401,7 +2434,7 @@ MACHINE_START_MEMBER( to9_state, to8 )
 	m_vrambank->configure_entries( 0,  2, ram, 0x2000 );
 	m_syslobank->configure_entry( 0,  ram + 0x6000);
 	m_syshibank->configure_entry( 0,  ram + 0x4000);
-	m_biosbank->configure_entries( 0,  2, mem + 0x20000, 0x2000 );
+	m_biosbank->configure_entries( 0,  2, monitor, 0x2000 );
 	m_cartbank->set_entry( 0 );
 	m_vrambank->set_entry( 0 );
 	m_syslobank->set_entry( 0 );
@@ -2507,7 +2540,8 @@ MACHINE_RESET_MEMBER( to9_state, to9p )
 
 MACHINE_START_MEMBER( to9_state, to9p )
 {
-	uint8_t* mem = memregion("maincpu")->base();
+	uint8_t* basic = memregion("basic")->base();
+	uint8_t* monitor = memregion("monitor")->base();
 	uint8_t* cartmem = &m_cart_rom[0];
 	uint8_t* ram = m_ram->pointer();
 
@@ -2524,14 +2558,14 @@ MACHINE_START_MEMBER( to9_state, to9p )
 	m_thom_cart_bank = 0;
 	m_thom_vram = ram;
 	m_cartbank->configure_entries( 0,  4, cartmem, 0x4000 );
-	m_cartbank->configure_entries( 4,  4, mem + 0x10000, 0x4000 );
+	m_cartbank->configure_entries( 4,  4, basic, 0x4000 );
 	m_cartbank->configure_entries( 8, 32, ram, 0x4000 );
 	m_vrambank->configure_entries( 0,  2, ram, 0x2000 );
 	m_syslobank->configure_entry( 0,  ram + 0x6000 );
 	m_syshibank->configure_entry( 0,  ram + 0x4000 );
 	m_datalobank->configure_entries( 0, 32, ram + 0x2000, 0x4000 );
 	m_datahibank->configure_entries( 0, 32, ram + 0x0000, 0x4000 );
-	m_biosbank->configure_entries( 0,  2, mem + 0x20000, 0x2000 );
+	m_biosbank->configure_entries( 0,  2, monitor, 0x2000 );
 	m_cartbank->set_entry( 0 );
 	m_vrambank->set_entry( 0 );
 	m_syslobank->set_entry( 0 );
@@ -3173,7 +3207,7 @@ MACHINE_RESET_MEMBER( mo6_state, mo6 )
 
 MACHINE_START_MEMBER( mo6_state, mo6 )
 {
-	uint8_t* mem = memregion("maincpu")->base();
+	uint8_t* mem = memregion("basic")->base();
 	uint8_t* cartmem = &m_cart_rom[0];
 	uint8_t* ram = m_ram->pointer();
 
@@ -3193,19 +3227,19 @@ MACHINE_START_MEMBER( mo6_state, mo6 )
 	m_thom_vram = ram;
 	m_cartlobank->configure_entries( 0, 4, cartmem, 0x4000 );
 	m_cartlobank->configure_entry( 4, cartmem + 0xf000 ); // FIXME: this is wrong
-	m_cartlobank->configure_entry( 5, mem + 0x13000 ); // FIXME: this is wrong
-	m_cartlobank->configure_entries( 6, 2, mem + 0x18000, 0x4000 );
+	m_cartlobank->configure_entry( 5, mem + 0x3000 ); // FIXME: this is wrong
+	m_cartlobank->configure_entries( 6, 2, mem + 0x8000, 0x4000 );
 	m_cartlobank->configure_entries( 8, 8, ram + 0x3000, 0x4000 );
 	m_carthibank->configure_entries( 0, 4, cartmem + 0x1000, 0x4000 );
-	m_carthibank->configure_entries( 4, 2, mem + 0x10000, 0x4000 );
-	m_carthibank->configure_entries( 6, 2, mem + 0x18000 + 0x1000, 0x4000 );
+	m_carthibank->configure_entries( 4, 2, mem, 0x4000 );
+	m_carthibank->configure_entries( 6, 2, mem + 0x8000 + 0x1000, 0x4000 );
 	m_carthibank->configure_entries( 8, 8, ram, 0x4000 );
 	m_vrambank->configure_entries( 0, 2, ram, 0x2000 );
 	m_syslobank->configure_entry( 0, ram + 0x6000);
 	m_syshibank->configure_entry( 0, ram + 0x4000);
 	m_datalobank->configure_entries( 0, 8, ram + 0x2000, 0x4000 );
 	m_datahibank->configure_entries( 0, 8, ram + 0x0000, 0x4000 );
-	m_biosbank->configure_entries( 0, 2, mem + 0x13000, 0x4000 );
+	m_biosbank->configure_entries( 0, 2, mem + 0x3000, 0x4000 );
 	m_cartlobank->set_entry( 0 );
 	m_carthibank->set_entry( 0 );
 	m_vrambank->set_entry( 0 );
@@ -3346,7 +3380,7 @@ MACHINE_RESET_MEMBER( mo5nr_state, mo5nr )
 
 MACHINE_START_MEMBER( mo5nr_state, mo5nr )
 {
-	uint8_t* mem = memregion("maincpu")->base();
+	uint8_t* mem = memregion("basic")->base();
 	uint8_t* cartmem = &m_cart_rom[0];
 	uint8_t* ram = m_ram->pointer();
 
@@ -3369,19 +3403,19 @@ MACHINE_START_MEMBER( mo5nr_state, mo5nr )
 
 	m_cartlobank->configure_entries( 0, 4, cartmem, 0x4000 );
 	m_cartlobank->configure_entry( 4, cartmem + 0xf000 ); // FIXME: this is wrong
-	m_cartlobank->configure_entry( 5, mem + 0x13000 ); // FIXME: this is wrong
-	m_cartlobank->configure_entries( 6, 2, mem + 0x18000, 0x4000 );
+	m_cartlobank->configure_entry( 5, mem + 0x3000 ); // FIXME: this is wrong
+	m_cartlobank->configure_entries( 6, 2, mem + 0x8000, 0x4000 );
 	m_cartlobank->configure_entries( 8, 8, ram + 0x3000, 0x4000 );
 	m_carthibank->configure_entries( 0, 4, cartmem + 0x1000, 0x4000 );
-	m_carthibank->configure_entries( 4, 2, mem + 0x10000, 0x4000 );
-	m_carthibank->configure_entries( 6, 2, mem + 0x18000 + 0x1000, 0x4000 );
+	m_carthibank->configure_entries( 4, 2, mem, 0x4000 );
+	m_carthibank->configure_entries( 6, 2, mem + 0x8000 + 0x1000, 0x4000 );
 	m_carthibank->configure_entries( 8, 8, ram, 0x4000 );
 	m_vrambank->configure_entries( 0, 2, ram, 0x2000 );
 	m_syslobank->configure_entry( 0, ram + 0x6000);
 	m_syshibank->configure_entry( 0, ram + 0x4000);
 	m_datalobank->configure_entries( 0, 8, ram + 0x2000, 0x4000 );
 	m_datahibank->configure_entries( 0, 8, ram + 0x0000, 0x4000 );
-	m_biosbank->configure_entries( 0, 2, mem + 0x13000, 0x4000 );
+	m_biosbank->configure_entries( 0, 2, mem + 0x3000, 0x4000 );
 	m_cartlobank->set_entry( 0 );
 	m_carthibank->set_entry( 0 );
 	m_vrambank->set_entry( 0 );

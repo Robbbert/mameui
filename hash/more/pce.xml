@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 163 -->
+<!-- Number of items in this list = 180 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -712,6 +712,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pcee508569966cc5">
+		<description>Aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Aerial.pce" size="24576" crc="99092cc8" sha1="e508569966cc5999b662ca978a2fc85b99ce6c6b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcefad79ed9ecb31">
 		<description>After Burner II (1990)(NEC Avenue)(Jp)[b]</description>
 		<year>????</year>
@@ -762,6 +772,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce1cb9088d1fd98">
+		<description>Antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Antiair.pce" size="32768" crc="cfc00e80" sha1="1cb9088d1fd98cd1a8305731f492937017129626"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce361233d268c20">
+		<description>Ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Ascend.pce" size="24576" crc="91f6da4c" sha1="361233d268c20954e1dfc6fea387a85c67c00204"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pced76f867256c3f">
 		<description>Atlantean (Unl) Aetherbyte</description>
 		<year>????</year>
@@ -802,6 +832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pcec1839842038de">
+		<description>Battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Battlot.pce" size="24576" crc="59470436" sha1="c1839842038dea9fca2b09b389cc2eefb8da7cc6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce14163a792777c">
 		<description>be ball (japan)</description>
 		<year>????</year>
@@ -832,6 +872,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce3ea6168a31576">
+		<description>Bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Bootskell.pce" size="24576" crc="10d45094" sha1="3ea6168a31576d258d8cc3852d4750bc328d0e77"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce6e01316b47795">
 		<description>BubbleGum Crash (J) [T+Eng_Dave Shadoff&others]</description>
 		<year>????</year>
@@ -859,6 +909,26 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="196608">
 				<rom name="Bug Hunt.pce" size="196608" crc="c15a2b45" sha1="c011b2754de3983e339f48366cc5d7e64a18331b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce59475aa8e0f3f">
+		<description>Cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cacorm.pce" size="16384" crc="c337f34d" sha1="59475aa8e0f3f5de2425949c89e201585382a9c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce96c4e6cadf782">
+		<description>Cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Cavit.pce" size="24576" crc="c8743919" sha1="96c4e6cadf78262b83fe5687ab4fefbab4bd5d0c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -929,6 +999,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="City Hunter (T-Eng v1.1)(2022)(filler, cabbage).pce" size="393216" crc="23f3df33" sha1="b92baeda4e71a0f348e2294a9deaa6fafa7bef6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce1dee5ceaef700">
+		<description>Cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cracky.pce" size="16384" crc="0d08f1c1" sha1="1dee5ceaef7004cf5887eee97a49d98bbfd39161"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1142,6 +1222,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce73dd77b8f2526">
+		<description>Guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Guntus.pce" size="24576" crc="0cf9ec88" sha1="73dd77b8f2526efb26a42b4de95c7559ece7b2d7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pceef3e666d73293">
 		<description>Honey in the Sky (T-Eng)(2022)(filler)</description>
 		<year>????</year>
@@ -1152,6 +1242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce77b7665c6883f">
+		<description>Hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Hopman.pce" size="32768" crc="56a888f6" sha1="77b7665c6883ff3850fa69f8aa46a263a987b2bd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce4328878a56f4c">
 		<description>HuZERO_by_Chris_Covell</description>
 		<year>????</year>
@@ -1159,6 +1259,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="HuZERO_by_Chris_Covell.pce" size="262144" crc="2871c4c0" sha1="4328878a56f4cf34a9b62f6a4a2982bb57d695e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce22995a3a2698d">
+		<description>Impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Impetus.pce" size="32768" crc="395cac23" sha1="22995a3a2698de6bf91fecbf8178489a69712c43"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1229,6 +1339,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="1049088">
 				<rom name="Lady Sword T-Eng(2010)(EsperKnight, filler, Grant Laughlin, Tomaitheous).pce" size="1049088" crc="c556aa43" sha1="a8909a9ed7e1621aeb0c757c6544d7a65055c594"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcee2e568c0f26c3">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lift.pce" size="16384" crc="79485e46" sha1="e2e568c0f26c3eade1bcdab69e742f9fc2352313"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1312,13 +1432,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pceb5b5e32ff6399">
+		<description>Mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mazy.pce" size="16384" crc="bc6173b9" sha1="b5b5e32ff6399a9cd87fb3b7a44e1249e6b55639"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcee1288b2ba9875">
-		<description>moto roader ii (japan) [a]</description>
+		<description>Moto Roader II (1991-03-29)(Masiya)(JP)(en)[a][NCS91002]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="393216">
-				<rom name="moto roader ii (japan) [a].pce" size="393216" crc="4ba525ba" sha1="e1288b2ba9875be14cd16ad7e590fc002a42290e"/>
+				<rom name="Moto Roader II (1991-03-29)(Masiya)(JP)(en)[a][NCS91002].pce" size="393216" crc="4ba525ba" sha1="e1288b2ba9875be14cd16ad7e590fc002a42290e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1332,6 +1462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pcec1f55cd457564">
+		<description>Neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Neuras.pce" size="16384" crc="92f1095a" sha1="c1f55cd457564a70bc742b2fe9504d975ee766bf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce29bca6afcf1d7">
 		<description>Off the Wall [Proto 1] (2)</description>
 		<year>????</year>
@@ -1339,6 +1479,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524800">
 				<rom name="Off the Wall [Proto 1] (2).pce" size="524800" crc="40f04a7c" sha1="29bca6afcf1d7555723cbd774a6e46f48ff1f67b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce2ad4186166dd4">
+		<description>Osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Osotos.pce" size="32768" crc="010df1c7" sha1="2ad4186166dd48b7844086cf66ac63b3d81df05e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1439,6 +1589,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Reflectron (Unl) Aetherbyte.pce" size="262144" crc="6a3727e2" sha1="982a7627233c30cc23b85c666536d69faf3c2dbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce9981619b80471">
+		<description>Ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Ruptus.pce" size="24576" crc="9644bc92" sha1="9981619b804712b9bf5766a4e9f19abc78659fdb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1619,6 +1779,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Xshoot_PCE_SWAPPED.pce" size="32768" crc="e02e441c" sha1="925bb57964fdfa7ef7ff1524de1d46132bf7d9ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce0602b7935f933">
+		<description>Yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Yewdow.pce" size="32768" crc="00214908" sha1="0602b7935f933ad406ab70ccda32a5600b58807f"/>
 			</dataarea>
 		</part>
 	</software>

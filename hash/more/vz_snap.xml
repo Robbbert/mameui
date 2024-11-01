@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 24 -->
+<!-- Number of items in this list = 68 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
 	<software name="vt165f42c0d46598">
 		<description>BAT Hunter</description>
@@ -19,6 +19,436 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="1419">
 				<rom name="Extended VZ Basic V2.5.vz" size="1419" crc="c7cc5d87" sha1="a166085d024c64b1ccc026fefaa39043ade37c65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1522d67880f153">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8164">
+				<rom name="osotos.vz" size="8164" crc="326308ab" sha1="522d67880f153dc1b855772fadbf13fd6e519232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ee84d830a8ef8">
+		<description>painter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="493">
+				<rom name="painter.vz" size="493" crc="4d9d2736" sha1="ee84d830a8ef8f42fc7e845f5abb352ac7d17d55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1fe74ad1b14136">
+		<description>pharoah2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="20472">
+				<rom name="pharoah2.vz" size="20472" crc="e692162f" sha1="fe74ad1b1413653f9a13663e11bef3d38912c79b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1d7464509af683">
+		<description>pharoahs</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="2292">
+				<rom name="pharoahs.vz" size="2292" crc="cb7b86c9" sha1="d7464509af68325aeb263740cdd09c3246d5d7c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt17eecc40dc203d">
+		<description>Ping (2002)(Lindstroem, Jesper)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="911">
+				<rom name="Ping (2002)(Lindstroem, Jesper)(PD).vz" size="911" crc="3466f5bf" sha1="7eecc40dc203ddfb9facbe0da381223d6eebdf1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1c090908b9f614">
+		<description>pipes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="18794">
+				<rom name="pipes.vz" size="18794" crc="af6e5594" sha1="c090908b9f614b20d6443a321abd34fc47769c84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1826c1e0cdf7a3">
+		<description>Pokies</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="730">
+				<rom name="Pokies.vz" size="730" crc="30712630" sha1="826c1e0cdf7a3282e48b7c949251cd299787f743"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt15514094302557">
+		<description>pong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="545">
+				<rom name="pong.vz" size="545" crc="8b90c7b3" sha1="551409430255780e7e0f8c8a65968f3d538eb132"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1154bf41be1090">
+		<description>pyramids</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="796">
+				<rom name="pyramids.vz" size="796" crc="a0060e92" sha1="154bf41be10906bdff12f63178806f41426f8459"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10e9f8de6b16d4">
+		<description>PYRAMID_ADV</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13648">
+				<rom name="PYRAMID_ADV.VZ" size="13648" crc="2c0df669" sha1="0e9f8de6b16d4cb4504888b1d6232992e7a995aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a572e86c5db42">
+		<description>R O A D</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4178">
+				<rom name="R O A D.vz" size="4178" crc="2bb1df93" sha1="a572e86c5db4274865abfce583785cf7b9738dea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1971c5dc9edc5b">
+		<description>robotmissile</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="477">
+				<rom name="robotmissile.vz" size="477" crc="bda37655" sha1="971c5dc9edc5b5c2effd1c9a2b8afce05bbb9caf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt17a3a9180a7f29">
+		<description>rubicon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="29787">
+				<rom name="rubicon.vz" size="29787" crc="2edc9b96" sha1="7a3a9180a7f29a837631281a4d0dac8762e2c08d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1470a1ec3b64b4">
+		<description>RUNME</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="349">
+				<rom name="RUNME.VZ" size="349" crc="7d2e5a8c" sha1="470a1ec3b64b4552223a73053628575ed8a9019e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt138a9666b71bd0">
+		<description>RUNNER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4075">
+				<rom name="RUNNER.vz" size="4075" crc="6fe49ad6" sha1="38a9666b71bd044b67c6094b0e573e1fbb1eed1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10f18f12283501">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="9934">
+				<rom name="ruptus.vz" size="9934" crc="6c9fb5d0" sha1="0f18f12283501ebe5e434836f16bffae9befdb92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt180d6c3a68f6a3">
+		<description>Rural_Pursuits</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="2269">
+				<rom name="Rural_Pursuits.vz" size="2269" crc="22cadc89" sha1="80d6c3a68f6a32381c3eedef3365b6063b6602d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1cc76a78c7195f">
+		<description>scorched</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="430">
+				<rom name="scorched.vz" size="430" crc="3567a699" sha1="cc76a78c7195ff799d1f10c2473b07f1ecc93c21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt11b6ccef342c60">
+		<description>scrod-1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="5928">
+				<rom name="scrod-1.vz" size="5928" crc="436749f9" sha1="1b6ccef342c60e013eeaa26f06f2935068a311dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt156b91c0739d06">
+		<description>SCROD-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="17756">
+				<rom name="SCROD-2.VZ" size="17756" crc="79431fff" sha1="56b91c0739d06a2bb5d17c2a5a920c74ef19f775"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10ec536f355241">
+		<description>SETUP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="2930">
+				<rom name="SETUP.VZ" size="2930" crc="14ea9497" sha1="0ec536f355241e35496015d46ec8a8ce8da68e96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt159d7cff034703">
+		<description>shootout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="344">
+				<rom name="shootout.vz" size="344" crc="5a86660a" sha1="59d7cff034703ed684a50da14aac659936921c95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1f34c38f3bec50">
+		<description>side 1 index</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="752">
+				<rom name="side 1 index.vz" size="752" crc="f067d998" sha1="f34c38f3bec5063227ddeae0df7c623a144db0c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1da36fc697dc23">
+		<description>SILVERM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="18730">
+				<rom name="SILVERM.VZ" size="18730" crc="72e7af8d" sha1="da36fc697dc231fada4a4951951c665fdece914b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt198b09611035dc">
+		<description>sinking</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="24569">
+				<rom name="sinking.vz" size="24569" crc="adf8ed3e" sha1="98b09611035dc66c10579e763db23a074c0b50fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt17a0b9d60ed1b0">
+		<description>sketcher1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="285">
+				<rom name="sketcher1.vz" size="285" crc="993bed2f" sha1="7a0b9d60ed1b0bb99aced9a12ee4d621f6e1d301"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1e729968df4f26">
+		<description>snake pit2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="3721">
+				<rom name="snake pit2.vz" size="3721" crc="17cd5c56" sha1="e729968df4f263c59c2b31d8b7db68695db91a02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1d5a0c91a110ad">
+		<description>snake</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="483">
+				<rom name="snake.vz" size="483" crc="3102423a" sha1="d5a0c91a110ad8849562f670d4766d771b6810fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1cece109070316">
+		<description>SNAKEPIT2-INSTRUCTIONS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="1397">
+				<rom name="SNAKEPIT2-INSTRUCTIONS.VZ" size="1397" crc="deec98e8" sha1="cece1090703160947e33dcf8b9507393dd8d3f37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt106cf3bf0855bb">
+		<description>snakes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="1919">
+				<rom name="snakes.vz" size="1919" crc="31a8e91b" sha1="06cf3bf0855bbbe37eba3f2391ee26699364f012"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1203a8225a4031">
+		<description>soundtestgame</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="481">
+				<rom name="soundtestgame.vz" size="481" crc="3f2e2522" sha1="203a8225a40316735db9e1523126b2bf5a6f09f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt14ef617c1d8494">
+		<description>Space 3 (2002)(-)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="1044">
+				<rom name="Space 3 (2002)(-)(PD).vz" size="1044" crc="a7a4d4c6" sha1="4ef617c1d8494d9dfbc4f069d27426db90be98cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt15a0fdffed1ef0">
+		<description>space battle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="518">
+				<rom name="space battle.vz" size="518" crc="7da86ac7" sha1="5a0fdffed1ef072b84f81bc66ba2c63abffba339"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ed540c3a0cee0">
+		<description>space mines</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="1377">
+				<rom name="space mines.vz" size="1377" crc="088bb6dd" sha1="ed540c3a0cee070d678b95dd2001b41ab8bb72b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt15e98c56e06ba7">
+		<description>SPDM01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="2830">
+				<rom name="SPDM01.VZ" size="2830" crc="70a109f0" sha1="5e98c56e06ba73954c6cb6cbc402fecd11e27942"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt144ed2caef9758">
+		<description>SPECISPICE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="25048">
+				<rom name="SPECISPICE.VZ" size="25048" crc="d11ea5db" sha1="44ed2caef9758f7c49ed0609bffbddb6d18e305e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ebbf998ff44e7">
+		<description>SPEEDREA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8105">
+				<rom name="SPEEDREA.VZ" size="8105" crc="5aec05b4" sha1="ebbf998ff44e7e3c76fcb404148b6d284dbe97e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt199c465ddc0fc3">
+		<description>SQUASH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="588">
+				<rom name="SQUASH.vz" size="588" crc="792134c1" sha1="99c465ddc0fc3b1696d9c0aa42d36a73e8a89df5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt155892a1c98103">
+		<description>Starship</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="10410">
+				<rom name="Starship.vz" size="10410" crc="aad4a140" sha1="55892a1c981038cbfe7c8f2b04dedba825bb852e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1e57a90f2a02af">
+		<description>startrek-list</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="15974">
+				<rom name="startrek-list.vz" size="15974" crc="99626f0c" sha1="e57a90f2a02afb5ccb9a14c2eb2e6d77625014b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1f3b0d6d4c8839">
+		<description>suzanah (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="528">
+				<rom name="suzanah (2).vz" size="528" crc="693ed551" sha1="f3b0d6d4c8839a7ed02c92960c0ea7abf2de75d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10f5bb006a9699">
+		<description>SUZANAH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="528">
+				<rom name="SUZANAH.VZ" size="528" crc="fbfe96b8" sha1="0f5bb006a9699410c837bcf6e7212cda7614ca81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt12e870170eda99">
+		<description>sympathy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="11157">
+				<rom name="sympathy.vz" size="11157" crc="95938b1c" sha1="2e870170eda990d55f1e8009739240534205546d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -109,6 +539,16 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="1884">
 				<rom name="VZ FLAPPY.VZ" size="1884" crc="74633771" sha1="b97b3b773a76081f9cdb6cad96a4147dfdda5050"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a25344dff7a82">
+		<description>VZ Super Sprite Editor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4369">
+				<rom name="VZ Super Sprite Editor.vz" size="4369" crc="ae49dc86" sha1="a25344dff7a82d533da17d2cfda1b279b606359c"/>
 			</dataarea>
 		</part>
 	</software>

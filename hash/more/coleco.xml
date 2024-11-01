@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 618 -->
+<!-- Number of items in this list = 617 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -309,16 +309,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Armageddon.rom" size="16384" crc="adf04191" sha1="344c967ec6004b9185c98eded30957aeefa283ee"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col647259250d707">
-		<description>Arno Dash</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Arno Dash.col" size="32768" crc="ead5e824" sha1="647259250d7079ca171ea1f2d47636e810768ade"/>
 			</dataarea>
 		</part>
 	</software>

@@ -923,9 +923,11 @@ macpb140                        // 1991 Apple Macintosh PowerBook 140
 macpb145                        // 1992 Apple Macintosh PowerBook 145
 macpb145b                       // 1993 Apple Macintosh PowerBook 145B
 macpb160                        // 1992 Apple Macintosh PowerBook 160
+macpb165                        // 1993 Apple Macintosh PowerBook 165
+macpb165c                       // 1993 Apple Macintosh PowerBook 165c
 macpb170                        // 1991 Apple Macintosh PowerBook 170
 macpb180                        // 1992 Apple Macintosh PowerBook 180
-macpb180c                       // 1992 Apple Macintosh PowerBook 180c
+macpb180c                       // 1993 Apple Macintosh PowerBook 180c
 macpd210                        // 1992 Apple Macintosh PowerBook Duo 210
 
 @source:apple/macquadra605.cpp
@@ -2245,6 +2247,7 @@ agalletaj                       // (c) 1996 Banpresto / Gazelle (country is in E
 agalletak                       // (c) 1996 Banpresto / Gazelle (country is in EEPROM)
 agalletat                       // (c) 1996 Banpresto / Gazelle (country is in EEPROM)
 agalletau                       // (c) 1996 Banpresto / Gazelle (country is in EEPROM)
+cellage                         // (c) 1996 Yujin/Namco
 crusherm                        // (c) 1999 Takumi
 ddonpach                        // (c) 1997 Atlus/Cave
 ddonpacha                       // hack
@@ -21644,6 +21647,7 @@ bowmen                          // (c) 1994 Ten-Level
 buccanrs                        // (c) 1989 Duintronic
 buccanrsa                       // (c) 1989 Duintronic
 buccanrsb                       // (c) 1989 Duintronic
+captainx                        // bootleg
 kikcubic                        // (c) 1988 (Japan)
 kikcubicb                       // bootleg
 vigilant                        // (c) 1988 (World Rev E)
@@ -29253,6 +29257,7 @@ castrev                         // Revolution
 @source:misc/cb2001.cpp
 cb2001                          // (c) 2000 Dyna Electronics
 cb5                             // (c) 1997 Dyna Electronics
+dynastye                        // (c) 2002 Dyna Electronics
 mystjb                          // (c) 1998 Dyna Electronics
 ndongmul2                       // (c) 1999 Dyna Electronics
 scherrym                        // (c) 1993 Dyna Electronics
@@ -36706,6 +36711,7 @@ bmf_fr                          //
 bmf_it                          //
 bmf_jp                          //
 bmf_nl                          //
+bmf_nl302                       //
 bmf_no                          //
 bmf_sp                          //
 bmf_sv                          //
@@ -39051,6 +39057,7 @@ exechess
 centurion
 cougar
 gk2000
+gk2000a
 gk2100
 
 @source:saitek/intchess.cpp

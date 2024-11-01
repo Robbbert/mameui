@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 379 -->
+<!-- Number of items in this list = 388 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -1152,6 +1152,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68f9d0a037eb198">
+		<description>EEL - Edit Elements v2.00A (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EEL - Edit Elements v2.00A (Disk 1).hdm" size="1261568" crc="a6544c0f" sha1="f9d0a037eb198f86e980623cfebb75e6e87aa514"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e8b354b53b589">
+		<description>EEL - Edit Elements v2.00A (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EEL - Edit Elements v2.00A (Disk 2).hdm" size="1261568" crc="d90b77f9" sha1="e8b354b53b5890df861a621c3a2c7342bbd9c119"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x681eb6082c6f7c4">
 		<description>Emerald Dragon (1 of 6) (Opening Disk)</description>
 		<year>????</year>
@@ -1179,6 +1199,76 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Emerald Dragon (5 of 6) (Visual Disk B).2HD" size="1261568" crc="4beb13ba" sha1="baedbd8006c63641c239ea67bf078593659a9efc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f86d197374799">
+		<description>Endan Genpei Souranki - Irowanioedo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Endan Genpei Souranki - Irowanioedo.hdm" size="1261568" crc="d40ed7dd" sha1="f86d1973747998a19daf7480d3d344ac4890e1e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d6b02ade60c09">
+		<description>Endan Tokugawa K. - G. (19xx)(Zenry.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Endan Tokugawa K. - G. (19xx)(Zenry.).hdm" size="1261568" crc="aef856ab" sha1="d6b02ade60c09e19b0c50c809aefaa593ca6e491"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6857a725a1fd2d4">
+		<description>EW X68000 Word Processor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EW X68000 Word Processor.hdm" size="1261568" crc="8b744359" sha1="57a725a1fd2d4652ad34c94f9c0643bc374b8489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e8be5ad68b850">
+		<description>EX-System (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EX-System (Disk 1).hdm" size="1261568" crc="6a0d2a93" sha1="e8be5ad68b85064744d5ee11cff1d462500dd481"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68cdea56739f6c6">
+		<description>EX-System (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EX-System (Disk 2).hdm" size="1261568" crc="de9c4c7c" sha1="cdea56739f6c62905f392406f33a400a508c230c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6828de581716cde">
+		<description>Expansion Floppy Disk Driver (v0.3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Expansion Floppy Disk Driver (v0.3).hdm" size="1261568" crc="2d1e64e2" sha1="28de581716cde92c4bc74982c86d4baa42772e6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68933b1c013e749">
+		<description>Ezoris</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ezoris.hdm" size="1261568" crc="3763566b" sha1="933b1c013e7492de0496ff86dc97c3d3633f131e"/>
 			</dataarea>
 		</part>
 	</software>

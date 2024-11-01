@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 514 -->
+<!-- Number of items in this list = 513 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -4029,16 +4029,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Samurai Sword (Jap)(1988)(Capcom).fds" size="131016" crc="5ca021ff" sha1="6f13e448fb0b731cd1da0492822a2510c9a40ad5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds163b500a0d4d6">
-		<description>Santa Claus no Takarabako (Japan)(1987)(Data East)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131000">
-				<rom name="Santa Claus no Takarabako (Japan)(1987)(Data East).fds" size="131000" crc="645b2ec7" sha1="163b500a0d4d616926270277d79138a3ecd646a7"/>
 			</dataarea>
 		</part>
 	</software>
