@@ -336,7 +336,8 @@ void hec2hrp_state::color_a_w(uint8_t data)
 	}
 	else
 	{   /* stop motor*/
-		m_cassette->set_state(CASSETTE_STOPPED);
+		//m_cassette->set_state(CASSETTE_STOPPED);
+		m_cassette->change_state(CASSETTE_MOTOR_DISABLED, CASSETTE_MASK_MOTOR);
 		m_write_cassette = false;
 		m_counter_write =0;
 	}

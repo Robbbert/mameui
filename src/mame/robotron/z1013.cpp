@@ -434,7 +434,7 @@ SNAPSHOT_LOAD_MEMBER(z1013_state::snapshot_cb)
 		m_maincpu->set_state_int(Z80_PC, runaddr);
 	else
 	{
-		osd_printf_error("%s: Loaded but cannot run due to zero entry point\n", image.basename());
+		//osd_printf_error("%s: Loaded but cannot run due to zero entry point\n", image.basename());
 		image.message(" Loaded but cannot run due to zero entry point");
 	}
 
