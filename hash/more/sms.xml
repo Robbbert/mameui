@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 280 -->
+<!-- Number of items in this list = 282 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -1002,6 +1002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms5060d051620ff">
+		<description>Grail of The Gods v0.46 (2023)(Guydebaville)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Grail of The Gods v0.46 (2023)(Guydebaville).sms" size="65536" crc="8bf946b5" sha1="5060d051620ff8a9a10f6304d740897f4040b014"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsd9cc3803cbd0a">
 		<description>Grail of The Gods v0.47 (2023-24)(Guydebaville)</description>
 		<year>????</year>
@@ -1619,6 +1629,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="output PauseTest.sms" size="32768" crc="592b8297" sha1="7634806e12b6b222fbc214712cd49226fe43bf3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6a29d47fb8190">
+		<description>OutRun (Color Hack)(2023)(Slogra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="OutRun (Color Hack)(2023)(Slogra).sms" size="262208" crc="0fc1cf7a" sha1="6a29d47fb81904f838aa767680b12c425c2e7d86"/>
 			</dataarea>
 		</part>
 	</software>

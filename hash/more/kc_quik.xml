@@ -1,84 +1,654 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8 -->
+<!-- Number of items in this list = 65 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
+	<software name="kc8c9f5f42b3b63b">
+		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13568">
+				<rom name="3 Spiele (1988)(Holger Knablowski)[3].kcc" size="13568" crc="923ac367" sha1="c9f5f42b3b63b43445ee0273955a690af4c92ac6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="kc846a1335fb441b">
-		<description>3 Spiele (19xx)(-)[b]</description>
+		<description>3 Spiele (19xx)(-)[b][2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="6528">
-				<rom name="3 Spiele (19xx)(-)[b].kcc" size="6528" crc="a798eabd" sha1="46a1335fb441b15725e14b230f5982bd4fe1c12d"/>
+				<rom name="3 Spiele (19xx)(-)[b][2].kcc" size="6528" crc="a798eabd" sha1="46a1335fb441b15725e14b230f5982bd4fe1c12d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d9d5a40b1a87a">
+		<description>3 Spiele 2 (1988)(Holger Knablowski)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9856">
+				<rom name="3 Spiele 2 (1988)(Holger Knablowski)[3].kcc" size="9856" crc="8f1e846b" sha1="d9d5a40b1a87a1a7cbc7f4eae522f5b3ab8ecd02"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc892048f9f34a07">
-		<description>3D-Othello (1988)(-)[a2]</description>
+		<description>3D-Othello (1988)(-)[a2][2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="4608">
-				<rom name="3D-Othello (1988)(-)[a2].kcc" size="4608" crc="5bdaa9cf" sha1="92048f9f34a07f074425fa2bbc31391f9750c70c"/>
+				<rom name="3D-Othello (1988)(-)[a2][2].kcc" size="4608" crc="5bdaa9cf" sha1="92048f9f34a07f074425fa2bbc31391f9750c70c"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc868cc9a6aa33f9">
-		<description>3D-Othello (1988)(-)[a]</description>
+		<description>3D-Othello (1988)(-)[a][2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="4608">
-				<rom name="3D-Othello (1988)(-)[a].kcc" size="4608" crc="fb742e79" sha1="68cc9a6aa33f9d9ccce030e55b0ddcc7a371aef7"/>
+				<rom name="3D-Othello (1988)(-)[a][2].kcc" size="4608" crc="fb742e79" sha1="68cc9a6aa33f9d9ccce030e55b0ddcc7a371aef7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b09a5afb42f2f">
+		<description>4 Action Games (1986)(B. Boettner)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="20224">
+				<rom name="4 Action Games (1986)(B. Boettner)[4].kcc" size="20224" crc="155d384b" sha1="b09a5afb42f2fcc9626b863e2f4e724eb8c61421"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8421f30b1f506e">
+		<description>Aktie (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6144">
+				<rom name="Aktie (19xx)(-)[4].kcc" size="6144" crc="296e5f2f" sha1="421f30b1f506e8c124f17e0706ad35289c5f8184"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e6db727f26603">
+		<description>Ali (1986)(VEB Mikroelektronik)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7168">
+				<rom name="Ali (1986)(VEB Mikroelektronik)[4].kcc" size="7168" crc="ccdc0ecf" sha1="e6db727f2660326c7f091b531faab2f95ddd8c81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8564c45b2d3ecf">
+		<description>Allerlei (19xx)(-)[4-in-one][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5376">
+				<rom name="Allerlei (19xx)(-)[4-in-one][4].kcc" size="5376" crc="519b974a" sha1="564c45b2d3ecf7400733b3e50d551d0063ba6eab"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc8ce3826a8d063d">
-		<description>Alliens (1987)(Axel Dienemann)</description>
+		<description>Alliens (1987)(Axel Dienemann)[2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="3200">
-				<rom name="Alliens (1987)(Axel Dienemann).kcc" size="3200" crc="930b37ea" sha1="ce3826a8d063d76f461af2905db1b58ae315a175"/>
+				<rom name="Alliens (1987)(Axel Dienemann)[2].kcc" size="3200" crc="930b37ea" sha1="ce3826a8d063d76f461af2905db1b58ae315a175"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bebcc5398bbf0">
+		<description>Angeln (19xx)(VEB Mikroelektronik)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6144">
+				<rom name="Angeln (19xx)(VEB Mikroelektronik)[4].kcc" size="6144" crc="2b55b48d" sha1="bebcc5398bbf01c8060d2924e637b0e091b993b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8700628c90db1f">
+		<description>Artstudio, The (1990)(Alexander Lang)[only a picture][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10496">
+				<rom name="Artstudio, The (1990)(Alexander Lang)[only a picture][4].kcc" size="10496" crc="8705bc5d" sha1="700628c90db1f28948b8e2281267c9c8877451cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc85efb157d6d5c9">
+		<description>Atlantis (1985)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16384">
+				<rom name="Atlantis (1985)(-)[4].kcc" size="16384" crc="37adf74f" sha1="5efb157d6d5c9e8cfca00ceff992c2bbdb16a5f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc835e2fb0da3d2d">
+		<description>Attack and Defence (19xx)(HB Soft)(en)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4736">
+				<rom name="Attack and Defence (19xx)(HB Soft)(en)[4].kcc" size="4736" crc="d5fe4f7c" sha1="35e2fb0da3d2d17a0e7fb43ed2f3cfd73bf1d520"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89af4b1b8a5a2f">
+		<description>AUSWAHL[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1024">
+				<rom name="AUSWAHL[3].kcc" size="1024" crc="727f89af" sha1="9af4b1b8a5a2f8b3d63b586a8b1829582f2cbe53"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc8f54251082208d">
-		<description>Auto Mounting (19xx)(Markus Lemke)[a2]</description>
+		<description>Auto Mounting (19xx)(Markus Lemke)[a2][2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="6016">
-				<rom name="Auto Mounting (19xx)(Markus Lemke)[a2].kcc" size="6016" crc="45e923a1" sha1="f54251082208d70847286ab351233f6e3fa6c9e8"/>
+				<rom name="Auto Mounting (19xx)(Markus Lemke)[a2][2].kcc" size="6016" crc="45e923a1" sha1="f54251082208d70847286ab351233f6e3fa6c9e8"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc862a8399164e5d">
-		<description>Auto Mounting (19xx)(Markus Lemke)[a3]</description>
+		<description>Auto Mounting (19xx)(Markus Lemke)[a3][2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="6016">
-				<rom name="Auto Mounting (19xx)(Markus Lemke)[a3].kcc" size="6016" crc="0cea5516" sha1="62a8399164e5d49f9cb43d5b99948168b16118d0"/>
+				<rom name="Auto Mounting (19xx)(Markus Lemke)[a3][2].kcc" size="6016" crc="0cea5516" sha1="62a8399164e5d49f9cb43d5b99948168b16118d0"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc83f95fdff8fbce">
-		<description>Auto Mounting (19xx)(Markus Lemke)[a4]</description>
+		<description>Auto Mounting (19xx)(Markus Lemke)[a4][2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="6016">
-				<rom name="Auto Mounting (19xx)(Markus Lemke)[a4].kcc" size="6016" crc="46e98187" sha1="3f95fdff8fbceaa6d40fda3f5f4d49a77da4e823"/>
+				<rom name="Auto Mounting (19xx)(Markus Lemke)[a4][2].kcc" size="6016" crc="46e98187" sha1="3f95fdff8fbceaa6d40fda3f5f4d49a77da4e823"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc8ff587c78bb25d">
-		<description>Auto Mounting (19xx)(Markus Lemke)[a]</description>
+		<description>Auto Mounting (19xx)(Markus Lemke)[a][2]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="6016">
-				<rom name="Auto Mounting (19xx)(Markus Lemke)[a].kcc" size="6016" crc="ca14045a" sha1="ff587c78bb25d562a043f1d5ebe161dc4b21b4fc"/>
+				<rom name="Auto Mounting (19xx)(Markus Lemke)[a][2].kcc" size="6016" crc="ca14045a" sha1="ff587c78bb25d562a043f1d5ebe161dc4b21b4fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bf75689d19905">
+		<description>Babylon (1991)(B. Wohlf)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4480">
+				<rom name="Babylon (1991)(B. Wohlf)[4].kcc" size="4480" crc="e2bf37ed" sha1="bf75689d19905241fe8e8e5c74754cee26a492a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c857957ea5929">
+		<description>Backgammon (1992)(Frank Fecher)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16896">
+				<rom name="Backgammon (1992)(Frank Fecher)[4].kcc" size="16896" crc="56c832de" sha1="c857957ea59299051517d23717d439494b633124"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8aeac617956074">
+		<description>Ball (19xx)(Rene Rolfinke)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3712">
+				<rom name="Ball (19xx)(Rene Rolfinke)[4].kcc" size="3712" crc="375902a8" sha1="aeac617956074990bfe889472c5eab3ee82526c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8da7dd10f001ab">
+		<description>BASIC komprimieren (1987)(L. Boltze)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="BASIC komprimieren (1987)(L. Boltze)[4].kcc" size="1664" crc="67ea8656" sha1="da7dd10f001ab5fb6b6a12f4725e31a058d040eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc85b58140f261e8">
+		<description>BASIC Tools 3 (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="BASIC Tools 3 (19xx)(-)[4].kcc" size="1664" crc="cbce2792" sha1="5b58140f261e87494fc1255f9431c3f1af7e4ed8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ee9a577f23849">
+		<description>BASIC v3.3 (1987)(Frank Klemm)[Caos][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="17024">
+				<rom name="BASIC v3.3 (1987)(Frank Klemm)[Caos][4].kcc" size="17024" crc="fe15d8ad" sha1="ee9a577f23849e0f51646e88f25ccc91215819cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc805e317e5eec79">
+		<description>Bellum (19xx)(Paulin)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9088">
+				<rom name="Bellum (19xx)(Paulin)[a2][4].kcc" size="9088" crc="e1cfb6e7" sha1="05e317e5eec79882904ed24794840ef4638a8bb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc81b9418f40454f">
+		<description>Bellum (19xx)(Paulin)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9088">
+				<rom name="Bellum (19xx)(Paulin)[a][4].kcc" size="9088" crc="82b97bf5" sha1="1b9418f40454f0b8f0aa14d5ffd029e9bc35d348"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e9b5c86d62a23">
+		<description>Bennion Geppy v1.0 (1989)(RB Software)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="22272">
+				<rom name="Bennion Geppy v1.0 (1989)(RB Software)[a2][4].kcc" size="22272" crc="a86bad27" sha1="e9b5c86d62a23f537a0c50544c58e43eb5fb9b32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc80309570f4f992">
+		<description>Bennion Geppy v1.0 (1989)(RB Software)[a3][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="21888">
+				<rom name="Bennion Geppy v1.0 (1989)(RB Software)[a3][4].kcc" size="21888" crc="7a36d89e" sha1="0309570f4f992bfd20da823664fd716453cf9a85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bcebb94f3bb6d">
+		<description>Bennion Geppy v1.0 (1989)(RB Software)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="21888">
+				<rom name="Bennion Geppy v1.0 (1989)(RB Software)[a][4].kcc" size="21888" crc="a417da90" sha1="bcebb94f3bb6d7254336bac69a78755860c50652"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8205ba5e241e5d">
+		<description>Bergung von Sonden (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5632">
+				<rom name="Bergung von Sonden (19xx)(-)[4].kcc" size="5632" crc="11fc40ba" sha1="205ba5e241e5dc1fc82d56af0a84af7e9ba6df4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc894707dbd96190">
+		<description>Big Fun (1990)(AP - Advanced Programmers)(en)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="29312">
+				<rom name="Big Fun (1990)(AP - Advanced Programmers)(en)[a2][4].kcc" size="29312" crc="024d9f22" sha1="94707dbd96190fbabfbf921440704d2071ce7a0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8f13dc789fbc5a">
+		<description>Big Fun (1990)(AP - Advanced Programmers)(en)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="29312">
+				<rom name="Big Fun (1990)(AP - Advanced Programmers)(en)[a][4].kcc" size="29312" crc="e9cab6b9" sha1="f13dc789fbc5ad4181b5e0866b3ab4999bb0d2e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8eaefc145f1d64">
+		<description>Big Garden (19xx)(Frank-Reiner Woermann)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="29568">
+				<rom name="Big Garden (19xx)(Frank-Reiner Woermann)[a2][4].kcc" size="29568" crc="79801920" sha1="eaefc145f1d644d9ecd75d424565d5cd146385ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc819ee3cdf6fa30">
+		<description>Big Garden (19xx)(Frank-Reiner Woermann)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="29568">
+				<rom name="Big Garden (19xx)(Frank-Reiner Woermann)[a][4].kcc" size="29568" crc="a3415814" sha1="19ee3cdf6fa30df88884c4789df6afe1c931ba82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b67fc0e0e88d2">
+		<description>Bomb Jack (1991)(Stefan Scholz)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9728">
+				<rom name="Bomb Jack (1991)(Stefan Scholz)[4].kcc" size="9728" crc="290a55de" sha1="b67fc0e0e88d2a3564f4b341c654b2756c2680d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c34ca5f683152">
+		<description>Bombsweeper (19xx)(Starsoft)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7808">
+				<rom name="Bombsweeper (19xx)(Starsoft)[3].kcc" size="7808" crc="baad1bc3" sha1="c34ca5f683152d3ac62410306ccaa2c9e043d5e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88fd802acdfaa5">
+		<description>Boulder Dash (1988)(Frank Klemm)[a3][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="28800">
+				<rom name="Boulder Dash (1988)(Frank Klemm)[a3][4].kcc" size="28800" crc="e930910c" sha1="8fd802acdfaa53bf3528e8f7b3a2745f91ef9b4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88d76c70a4be96">
+		<description>Boulder Dash (1988)(Frank Klemm)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="31360">
+				<rom name="Boulder Dash (1988)(Frank Klemm)[a][4].kcc" size="31360" crc="d59a6172" sha1="8d76c70a4be962b3451bad458ef33182c045cfe5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8cbd6bcdb3bd7d">
+		<description>Boulder Dash (1988)(Frank Klemm)[a][Diskversion, only Gamepictures][3][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12928">
+				<rom name="Boulder Dash (1988)(Frank Klemm)[a][Diskversion, only Gamepictures][3][4].kcc" size="12928" crc="51598802" sha1="cbd6bcdb3bd7dbb32d9cf33803197f2cf5835aed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc82460ddbbef82f">
+		<description>Boulder Dash (1989)(Frank Klemm)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="32128">
+				<rom name="Boulder Dash (1989)(Frank Klemm)[a2][4].kcc" size="32128" crc="13b59090" sha1="2460ddbbef82fc16a4093ae70f7ef1bfb57db7db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d2b1e30e873c7">
+		<description>Boulder Dash 1 (1988)(Mike Mueller)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16000">
+				<rom name="Boulder Dash 1 (1988)(Mike Mueller)[4].kcc" size="16000" crc="045c0ac5" sha1="d2b1e30e873c75faabab367e773761a0f107b42b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc817aaeb2c09561">
+		<description>Break Out (19xx)(SOWACO)(en)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11904">
+				<rom name="Break Out (19xx)(SOWACO)(en)[a2][3].kcc" size="11904" crc="9bc72ed3" sha1="17aaeb2c095613d3381117c53f553805b7285ed1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc852e9f29efaa17">
+		<description>Break Out (19xx)(SOWACO)(en)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11904">
+				<rom name="Break Out (19xx)(SOWACO)(en)[a][4].kcc" size="11904" crc="9ec4132d" sha1="52e9f29efaa172c8186b8bcc91eae46e1d188439"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8778a2ce50bc1d">
+		<description>Break Out (19xx)(SOWACO)(en)[b][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11904">
+				<rom name="Break Out (19xx)(SOWACO)(en)[b][4].kcc" size="11904" crc="03084184" sha1="778a2ce50bc1d148d09bb8bd0aece347fab5e19f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bfb92f8f75fd3">
+		<description>BSAVE (19xx)(-)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="BSAVE (19xx)(-)[a2][4].kcc" size="1664" crc="a5fb3583" sha1="bfb92f8f75fd3368c1396afbdea6cb216ad256eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc856b3866e1c0a2">
+		<description>BSAVE (19xx)(-)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="256">
+				<rom name="BSAVE (19xx)(-)[a][4].kcc" size="256" crc="36b2a291" sha1="56b3866e1c0a2566069ef9a33312a13307daf3ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc811a250924dd1e">
+		<description>Buchhaltung 4D (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7808">
+				<rom name="Buchhaltung 4D (19xx)(-)[3].kcc" size="7808" crc="20086245" sha1="11a250924dd1e8ce8aa01edd46efaad86c532163"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc895e4d23859d4b">
+		<description>Bustle (19xx)(R. Gilgen & S. Christiansen)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13952">
+				<rom name="Bustle (19xx)(R. Gilgen & S. Christiansen)[3].kcc" size="13952" crc="10597e77" sha1="95e4d23859d4bb0c75adb1b0dae9e46a081b14b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87abfaccd38ca1">
+		<description>Busymole (1988)(O. Lehm)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="15360">
+				<rom name="Busymole (1988)(O. Lehm)[3].kcc" size="15360" crc="0d3893fc" sha1="7abfaccd38ca10f7f1e4f82adadf614da719b3f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc847276e9b3b06b">
+		<description>W. A. Mozart (1990)(Andreas & Uwe Zierott)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14592">
+				<rom name="W. A. Mozart (1990)(Andreas & Uwe Zierott)[a2][3].kcc" size="14592" crc="1490b05c" sha1="47276e9b3b06b98a1852ac5604ef62698cd1a48c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc815f86ba3110ea">
+		<description>W. A. Mozart (1990)(Andreas & Uwe Zierott)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13440">
+				<rom name="W. A. Mozart (1990)(Andreas & Uwe Zierott)[a][3].kcc" size="13440" crc="434307e8" sha1="15f86ba3110eabded03be750b1f8feda1def2c16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc823e4d053f8c17">
+		<description>Wein (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3072">
+				<rom name="Wein (19xx)(-)[4].kcc" size="3072" crc="c6ce1795" sha1="23e4d053f8c17a2c1f1f56e4dcec94cd634e441b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ded5dc7b186a9">
+		<description>Weltraumspiele (19xx)(-)[a2][6-in-one][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="27136">
+				<rom name="Weltraumspiele (19xx)(-)[a2][6-in-one][4].kcc" size="27136" crc="eb2834da" sha1="ded5dc7b186a9de2f20e0d5a016f6564b48612b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b9adec9ee7fd9">
+		<description>Wer hat die Vorfahrt (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13696">
+				<rom name="Wer hat die Vorfahrt (19xx)(-)[4].kcc" size="13696" crc="214bf66b" sha1="b9adec9ee7fd9f72c21fabfb00afcbee96ef3952"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8f8cd01afd943f">
+		<description>Willi Stromschlag (1987)(Ralf Mueller)[b][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7296">
+				<rom name="Willi Stromschlag (1987)(Ralf Mueller)[b][3].kcc" size="7296" crc="b9a18477" sha1="f8cd01afd943f44e94ef39f86bcb0dc6cc1c6453"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc838a692432d3dd">
+		<description>Windows Logo, The (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10496">
+				<rom name="Windows Logo, The (19xx)(-)[4].kcc" size="10496" crc="94cfaa9f" sha1="38a692432d3dd85d84a032a7654e910733beae2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc872aca38aa433b">
+		<description>WordPro 96 (1996)(W. Schaetze)[64k][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11648">
+				<rom name="WordPro 96 (1996)(W. Schaetze)[64k][3].kcc" size="11648" crc="9f06db5e" sha1="72aca38aa433b9df5243c0f4e5b041824190f13c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8aef751673742c">
+		<description>WordPro 97 (1996)(W. Schaetze)[64k][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11776">
+				<rom name="WordPro 97 (1996)(W. Schaetze)[64k][3].kcc" size="11776" crc="8fc1dd16" sha1="aef751673742c5165fab05fe5382ed207fd0008e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc85678cd97c210f">
+		<description>WordPro 97-B (1996)(W. Schaetze)[64k][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11648">
+				<rom name="WordPro 97-B (1996)(W. Schaetze)[64k][3].kcc" size="11648" crc="894e858d" sha1="5678cd97c210fa69531b5b96ee667e9efa05f4bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88b3a971d16568">
+		<description>Wuestenplanet, Der (1987)(Flat Games - F. Lauenroth)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13056">
+				<rom name="Wuestenplanet, Der (1987)(Flat Games - F. Lauenroth)[4].kcc" size="13056" crc="84af0d46" sha1="8b3a971d165682069ff5f5206c21be44489d775e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc829f714ac22f57">
+		<description>XCOPY (19xx)(HFR)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2304">
+				<rom name="XCOPY (19xx)(HFR)[4].kcc" size="2304" crc="1eed9e27" sha1="29f714ac22f57e3d2a720ab9eb821071a5941148"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc898b3af4690e47">
+		<description>Xonix (19xx)(-)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4864">
+				<rom name="Xonix (19xx)(-)[a2][4].kcc" size="4864" crc="8fecddca" sha1="98b3af4690e47412b5095ee1d8fef90517e7a3d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87f35b5337c073">
+		<description>Xonix (19xx)(-)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4736">
+				<rom name="Xonix (19xx)(-)[a][4].kcc" size="4736" crc="50dc137a" sha1="7f35b5337c073b8fe195cbeaeedbc95cd5f4d6b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8344a65b1c3459">
+		<description>Zahnarzt (19xx)(Omega-Software)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7424">
+				<rom name="Zahnarzt (19xx)(Omega-Software)[4].kcc" size="7424" crc="5db1c557" sha1="344a65b1c3459a509a2d3d731a5e645448c6e22a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,7 +1,97 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 202 -->
+<!-- Number of items in this list = 211 -->
 <softwarelist name="primo_cass" description="primo_cass loose roms">
+	<software name="pri210765395861f">
+		<description>AMON v1.1 (1988)(Gabor Paller)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="6973">
+				<rom name="AMON v1.1 (1988)(Gabor Paller).ptp" size="6973" crc="eca891f3" sha1="210765395861f83c526d96904a8f604d1d5c6c6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri858e3b5e83a3f">
+		<description>Automat (1985)(Tik-Tak Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2148">
+				<rom name="Automat (1985)(Tik-Tak Software).ptp" size="2148" crc="27df8e18" sha1="858e3b5e83a3f139cc4ce41ae14b1f9e16c4b254"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri32cb538d56ea7">
+		<description>Basik Help (198x)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="1571">
+				<rom name="Basik Help (198x)(-).ptp" size="1571" crc="bccf0ca9" sha1="32cb538d56ea773fe580a794127e621c3b8ce725"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri77fd0cd091585">
+		<description>Bator lovag, a (198x)(Zoltan Szarka)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="18536">
+				<rom name="Bator lovag, a (198x)(Zoltan Szarka)[b].ptp" size="18536" crc="6b4c52ea" sha1="77fd0cd09158508e99de2e62ae0ec929817fa237"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="prid738ae9338d15">
+		<description>Bemutato kazetta (1984)(Microkey Cosy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="49536">
+				<rom name="Bemutato kazetta (1984)(Microkey Cosy).ptp" size="49536" crc="72d6894d" sha1="d738ae9338d156d14dc66a626f26d508abc7f374"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri23b168b2c9937">
+		<description>Data sorok keszitese (1987)(Antal Szekeres)[Primo B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2839">
+				<rom name="Data sorok keszitese (1987)(Antal Szekeres)[Primo B].ptp" size="2839" crc="aebc453e" sha1="23b168b2c993767df76744beb3ece1b7aca9f7cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri675e1f2e51b3d">
+		<description>Demo Sakk Primo Version (1985)(-)[DE-HU]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="28117">
+				<rom name="Demo Sakk Primo Version (1985)(-)[DE-HU].ptp" size="28117" crc="ba2cad69" sha1="675e1f2e51b3d50b90892b5bfad8350058a44210"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="prib12f0a69dce04">
+		<description>Demo Sakk Primo Version (1985)(-)[DE]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="29018">
+				<rom name="Demo Sakk Primo Version (1985)(-)[DE].ptp" size="29018" crc="d43f7c7e" sha1="b12f0a69dce04180331189db9428d3179b86ed8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pri2853ad68bedb8">
+		<description>DGT masolo (1987)(DGT Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="primo_cass">
+			<dataarea name="cass" size="2834">
+				<rom name="DGT masolo (1987)(DGT Software).ptp" size="2834" crc="e1dc5c4d" sha1="2853ad68bedb8a5dc2c5137bed4e113300d836cc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="prie575dd25b0192">
 		<description>Enterprise (1988)(Robert Miszlai)</description>
 		<year>????</year>

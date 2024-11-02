@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1839 -->
+<!-- Number of items in this list = 1842 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3612,6 +3612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genfc17be45c5fab">
+		<description>Barver Battle Saga (Chinese)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Barver Battle Saga (Chinese).bin" size="2097152" crc="5c70016a" sha1="fc17be45c5fabe1d4a9744c931ab81e6c2c0218c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7cdc423a90cfa">
 		<description>barver battle saga - tai kong zhan shi (english translation)</description>
 		<year>????</year>
@@ -5609,6 +5619,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="352256">
 				<rom name="Fatal Smarties (PD).bin" size="352256" crc="79d461b6" sha1="928a1aef009eb4d01957f3285884dbf9ff348013"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen79c30ccc84d73">
+		<description>Feng Shen Ying Jie Zhuan (Chinese)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Feng Shen Ying Jie Zhuan (Chinese).bin" size="2097152" crc="88664e2f" sha1="79c30ccc84d7351fec2a31ec81069074def13de9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12662,6 +12682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen60408056d4376">
+		<description>Shui Hu Zhuan (Chinese)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shui Hu Zhuan (Chinese).bin" size="2097152" crc="84c2f352" sha1="60408056d437683200e5cc5b200600181566df5b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genab6888852ae6e">
 		<description>Shylax v0.1 (2023)(manu2097)</description>
 		<year>????</year>
@@ -13903,12 +13933,12 @@
 		</part>
 	</software>
 	<software name="genfc611dd3f988f">
-		<description>Sonic 3 Complete - Emerald Safari v1.0a (2024)(BillyTime! Games)</description>
+		<description>Sonic 3 Complete - Emerald Safari v1.0a (2023)(BillyTime! Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3932160">
-				<rom name="Sonic 3 Complete - Emerald Safari v1.0a (2024)(BillyTime! Games).bin" size="3932160" crc="9df80fed" sha1="fc611dd3f988fae5990c5a42988ce746efa14527"/>
+				<rom name="Sonic 3 Complete - Emerald Safari v1.0a (2023)(BillyTime! Games).bin" size="3932160" crc="9df80fed" sha1="fc611dd3f988fae5990c5a42988ce746efa14527"/>
 			</dataarea>
 		</part>
 	</software>
