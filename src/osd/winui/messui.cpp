@@ -452,7 +452,7 @@ static string ProcessSWDir(int drvindex)
 	}
 
 	BOOL b_dir = false;
-	char dir0[2048];
+	char dir0[2048] = { };
 	char *t0 = 0;
 	printf("ProcessSWDir: A\n");fflush(stdout);
 	string t = dir_get_value(13);
@@ -469,7 +469,7 @@ static string ProcessSWDir(int drvindex)
 	printf("ProcessSWDir: C\n");fflush(stdout);
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex, 0);
-	char dir1[2048];
+	char dir1[2048] = { };
 	strcpy(dir1, o.value(OPTION_SWPATH));
 	char* t1 = strtok(dir1, ";");
 	printf("ProcessSWDir: D=%s=%s\n",t1,o.value(OPTION_SWPATH));fflush(stdout);
@@ -538,23 +538,27 @@ static string ProcessSWDir(int drvindex)
 // pszSubDir path not used by any caller.
 static BOOL AddSoftwarePickerDirs(HWND hwndPicker, LPCSTR pszDirectories, LPCSTR pszSubDir)
 {
+	printf("AddSoftwarePickerDirs: Begin\n");fflush(stdout);
 	if (!pszDirectories)
 		return false;
 
-	char s[2048];
+	char s[2048] = { };
 	string pszNewString;
 	strcpy(s, pszDirectories);
 	LPSTR t1 = strtok(s,";");
 	while (t1)
 	{
+		printf("AddSoftwarePickerDirs: Folder %s\n",t1);fflush(stdout);
 		if (pszSubDir)
 			pszNewString = t1 + string("\\") + pszSubDir;
 		else
 			pszNewString = t1;
 
+		printf("AddSoftwarePickerDirs: newstring %s\n",pszNewString.c_str());fflush(stdout);
 		if (!SoftwarePicker_AddDirectory(hwndPicker, pszNewString.c_str()))
 			return false;
 
+		printf("AddSoftwarePickerDirs: On to the next\n");fflush(stdout);
 		t1 = strtok (NULL, ";");
 	}
 	return true;
