@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 68 -->
+<!-- Number of items in this list = 83 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
 	<software name="vt165f42c0d46598">
 		<description>BAT Hunter</description>
@@ -19,6 +19,156 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="1419">
 				<rom name="Extended VZ Basic V2.5.vz" size="1419" crc="c7cc5d87" sha1="a166085d024c64b1ccc026fefaa39043ade37c65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt19a05abf7a6dc0">
+		<description>M-plus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4688">
+				<rom name="M-plus.vz" size="4688" crc="b433a58e" sha1="9a05abf7a6dc0a6a8e64e3f1753cb0f72fb901d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1fb37c5d959826">
+		<description>marbles</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="496">
+				<rom name="marbles.vz" size="496" crc="201479ce" sha1="fb37c5d9598269d36e2b7ac7f8d167d0596d22d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1649c0cf3fb6db">
+		<description>mastermind 5co</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="1058">
+				<rom name="mastermind 5co.vz" size="1058" crc="81ec713d" sha1="649c0cf3fb6db60368def01f16a0e9b82f905f75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1b82f4f271f20f">
+		<description>mastermind 8nu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="908">
+				<rom name="mastermind 8nu.vz" size="908" crc="c9dbd49d" sha1="b82f4f271f20ff98f6890cdd72340a9d96205045"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ba24b9e5ff090">
+		<description>Mastermind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8700">
+				<rom name="Mastermind.vz" size="8700" crc="9cb4b4fd" sha1="ba24b9e5ff09020f016d525678b66ce5ba41fbe2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1b7802964ab9d4">
+		<description>maze</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="10347">
+				<rom name="maze.vz" size="10347" crc="ff684c9b" sha1="b7802964ab9d46de8f5916b2e3544a4c6338ad06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1372adb22f2808">
+		<description>MAZEOFARGON1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="3119">
+				<rom name="MAZEOFARGON1.VZ" size="3119" crc="973d87c6" sha1="372adb22f2808322a611690851d3eede5e585d3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt175ef8a275be26">
+		<description>MAZEOFARGONUNPROT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="9775">
+				<rom name="MAZEOFARGONUNPROT.VZ" size="9775" crc="b22d79eb" sha1="75ef8a275be2692bc33bc3db935146d8ce734a4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt195358e5ef65cf">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="6999">
+				<rom name="mazy.vz" size="6999" crc="818c16a9" sha1="95358e5ef65cf6f1b7c7780d980d0ceaa8e1ce3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1dd886ef097e03">
+		<description>memory</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="464">
+				<rom name="memory.vz" size="464" crc="4fb98826" sha1="dd886ef097e03a59db876bd5402b6736e10c4973"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt153f55ba35e328">
+		<description>millipede</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="431">
+				<rom name="millipede.vz" size="431" crc="c4e48396" sha1="53f55ba35e32821f459629ef641a9b34583eb262"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1dcdb5b754ccb9">
+		<description>minipac</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="537">
+				<rom name="minipac.vz" size="537" crc="97c88bba" sha1="dcdb5b754ccb980886e6f06d2a21646976d11436"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1595ec2c3ff0eb">
+		<description>mPacman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="11302">
+				<rom name="mPacman.vz" size="11302" crc="c8f74c77" sha1="595ec2c3ff0eb342b8bd94e163493ec2cf1dd294"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt16de70831e2a26">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7795">
+				<rom name="neuras.vz" size="7795" crc="7c392221" sha1="6de70831e2a26af57ca4d219b82ed5adb3cda5b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a6b905d71120e">
+		<description>New CLS (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="156">
+				<rom name="New CLS (19xx)(-).vz" size="156" crc="74bdda7d" sha1="a6b905d71120efc86bd9370a97069d96f6a121ce"/>
 			</dataarea>
 		</part>
 	</software>

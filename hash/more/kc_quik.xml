@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 65 -->
+<!-- Number of items in this list = 85 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -499,6 +499,206 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="15360">
 				<rom name="Busymole (1988)(O. Lehm)[3].kcc" size="15360" crc="0d3893fc" sha1="7abfaccd38ca10f7f1e4f82adadf614da719b3f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8162d5ddc8f39f">
+		<description>C Pascal v2.1 (1989)(Burmeister, Lehmann, Vetters)(en)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11648">
+				<rom name="C Pascal v2.1 (1989)(Burmeister, Lehmann, Vetters)(en)[4].kcc" size="11648" crc="f83391da" sha1="162d5ddc8f39fad3af7a3b630daad1ba8e2e579a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc896b19f377ef6f">
+		<description>CAD (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14208">
+				<rom name="CAD (19xx)(-)[4].kcc" size="14208" crc="936740de" sha1="96b19f377ef6f3162134b63a28b9f182b67e9f4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e0ad6b47ce931">
+		<description>Cass (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3072">
+				<rom name="Cass (19xx)(-)[3].kcc" size="3072" crc="2379664d" sha1="e0ad6b47ce93156004ab01f323d24808bbbbc329"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e56048321655b">
+		<description>Cassmod (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1536">
+				<rom name="Cassmod (19xx)(-)[3].kcc" size="1536" crc="8f18d328" sha1="e56048321655b74e31d66a669506d5f21ffde517"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc805b783a78fc28">
+		<description>Castle, The (1989)(Kingsoft)(en)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11392">
+				<rom name="Castle, The (1989)(Kingsoft)(en)[3].kcc" size="11392" crc="c181d855" sha1="05b783a78fc28126b696c4c55125a24f60b7c964"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b88ef2e5086cb">
+		<description>Cave (19xx)(-)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6272">
+				<rom name="Cave (19xx)(-)[a2][4].kcc" size="6272" crc="11084372" sha1="b88ef2e5086cbe00bcd09190c6d8091513877bb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc82f7e38df58cb7">
+		<description>Cave (19xx)(-)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6400">
+				<rom name="Cave (19xx)(-)[a][4].kcc" size="6400" crc="8617f6e7" sha1="2f7e38df58cb71824e11ebfa7ac05caba7452549"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86622c0c02662f">
+		<description>CCopy v1.3 (19xx)(R. Schindler)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2432">
+				<rom name="CCopy v1.3 (19xx)(R. Schindler)[4].kcc" size="2432" crc="d5d66313" sha1="6622c0c02662f062608b6d61033f26afd8d5e7db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a538588b373d3">
+		<description>Chsum (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="256">
+				<rom name="Chsum (19xx)(-)[3].kcc" size="256" crc="33e48e11" sha1="a538588b373d31d5fae7a9dd57ac21ac2d92474b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc85b79b31a0db47">
+		<description>Cokadi (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="Cokadi (19xx)(-)[4].kcc" size="1664" crc="ca97f74a" sha1="5b79b31a0db47e4b255cc25643ba3a528f686109"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8641495019acde">
+		<description>Computer Kartei (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3712">
+				<rom name="Computer Kartei (19xx)(-)[3].kcc" size="3712" crc="52bcc52f" sha1="641495019acde20a60840086f9f4f7911719d296"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89e7757d5fcbc9">
+		<description>Computer Kartei - Druck (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3584">
+				<rom name="Computer Kartei - Druck (19xx)(-)[3].kcc" size="3584" crc="0eb32611" sha1="9e7757d5fcbc9e1ac4274c02145265ce9f156f94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc816bd347811bd1">
+		<description>Copy (1987)(A. Friedrich)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="768">
+				<rom name="Copy (1987)(A. Friedrich)[3].kcc" size="768" crc="cbc7d2f0" sha1="16bd347811bd1f56ec87a748e1c68fdddba63dd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc83167e996356b7">
+		<description>Copy (1988)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="896">
+				<rom name="Copy (1988)(-)[3].kcc" size="896" crc="0c0184ab" sha1="3167e996356b7db1b27d4a3d369a084c4b216965"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8696e6aae5ee6c">
+		<description>Copy (1988)(-)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="896">
+				<rom name="Copy (1988)(-)[a2][3].kcc" size="896" crc="5c1dd5e0" sha1="696e6aae5ee6c81a102f49d1cc921cb9b142646c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a97b721c2d4f8">
+		<description>Copy (19xx)(-)[a3][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="896">
+				<rom name="Copy (19xx)(-)[a3][3].kcc" size="896" crc="2b372a12" sha1="a97b721c2d4f83e75fa243af3f019e65be8c2c41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e1c09267fdeb5">
+		<description>Copy (19xx)(-)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="896">
+				<rom name="Copy (19xx)(-)[a][3].kcc" size="896" crc="37d3e3b5" sha1="e1c09267fdeb58f630418817da0f8a3bc562fc71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc866dbfa1b3951e">
+		<description>Cracker v1.3 (19xx)(Ralle & Peko)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2560">
+				<rom name="Cracker v1.3 (19xx)(Ralle & Peko)[3].kcc" size="2560" crc="6c60df5a" sha1="66dbfa1b3951ef2ec2cd160b5a18aa38fb29c1dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e3b32cd1a75b5">
+		<description>Ctc (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8448">
+				<rom name="Ctc (19xx)(-)[3].kcc" size="8448" crc="4df91bed" sha1="e3b32cd1a75b5d59bad64a845b89aa1bfde9aab2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b80a538d5d3db">
+		<description>CVX-MC-Editor (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="CVX-MC-Editor (19xx)(-)[4].kcc" size="1664" crc="e64b141a" sha1="b80a538d5d3db2504ea7796b1895d691495630ce"/>
 			</dataarea>
 		</part>
 	</software>
