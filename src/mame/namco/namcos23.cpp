@@ -1702,6 +1702,7 @@ protected:
 
 	void irq_update_common(u32 cause);
 	virtual void irq_update(u32 cause);
+	void subcpu_irq1_update(int state);
 
 	void textram_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 	void textchar_w(offs_t offset, u32 data, u32 mem_mask = ~0);
@@ -4638,6 +4639,12 @@ void crszone_state::irq_update(u32 cause)
 	}
 }
 
+void namcos23_state::subcpu_irq1_update(int state)
+{
+	m_subcpu->set_input_line(INPUT_LINE_IRQ1, state ? ASSERT_LINE : CLEAR_LINE);
+	m_sub_port8 = state ? (m_sub_port8 & ~0x02) : (m_sub_port8 | 0x02); // IRQ1 pin
+}
+
 void namcos23_state::vblank(int state)
 {
 	if (state)
@@ -4656,23 +4663,18 @@ void namcos23_state::vblank(int state)
 void gorgon_state::vblank(int state)
 {
 	namcos23_state::vblank(state);
-	m_subcpu->set_input_line(INPUT_LINE_IRQ1, state);
-	m_sub_port8 = m_sub_port8 & ~0x02; // IRQ1 pin
+	subcpu_irq1_update(state);
 }
 
 TIMER_CALLBACK_MEMBER(namcos23_state::subcpu_scanline_on_tick)
 {
 	if (m_screen->vpos() < 72)
-	{
-		m_subcpu->set_input_line(INPUT_LINE_IRQ1, ASSERT_LINE);
-	}
-	m_sub_port8 = m_sub_port8 & ~0x02; // IRQ1 pin
+		subcpu_irq1_update(ASSERT_LINE);
 }
 
 TIMER_CALLBACK_MEMBER(namcos23_state::subcpu_scanline_off_tick)
 {
-	m_sub_port8 |= 0x02; // IRQ1 pin
-	m_subcpu->set_input_line(INPUT_LINE_IRQ1, CLEAR_LINE);
+	subcpu_irq1_update(CLEAR_LINE);
 }
 
 
@@ -5332,7 +5334,7 @@ u32 crszone_state::irq_lv5_status_r()
 	if (m_main_irqcause & MAIN_C361_IRQ)
 	{
 		data |= 2;
-		irq_update(m_main_irqcause & ~MAIN_C451_IRQ);
+		irq_update(m_main_irqcause & ~MAIN_C361_IRQ);
 	}
 	LOGMASKED(LOG_IRQ_STATUS, "%s: LV5 IRQ status read: %08x\n", machine().describe_context(), data);
 	return data;
@@ -6050,28 +6052,6 @@ TIMER_CALLBACK_MEMBER(namcos23_gmen_state::sh2_irq_off)
 
 
 #define XOR(a) WORD2_XOR_BE(a)
-
-static const gfx_layout namcos23_sprite_layout =
-{
-	32,32,
-	RGN_FRAC(1,1),
-	8,
-	{ 0,1,2,3,4,5,6,7 },
-	{
-		0*8,1*8,2*8,3*8,4*8,5*8,6*8,7*8,
-		8*8,9*8,10*8,11*8,12*8,13*8,14*8,15*8,
-		16*8,17*8,18*8,19*8,20*8,21*8,22*8,23*8,
-		24*8,25*8,26*8,27*8,28*8,29*8,30*8,31*8
-	},
-	{
-		0*32*8,1*32*8,2*32*8,3*32*8,4*32*8,5*32*8,6*32*8,7*32*8,
-		8*32*8,9*32*8,10*32*8,11*32*8,12*32*8,13*32*8,14*32*8,15*32*8,
-		16*32*8,17*32*8,18*32*8,19*32*8,20*32*8,21*32*8,22*32*8,23*32*8,
-		24*32*8,25*32*8,26*32*8,27*32*8,28*32*8,29*32*8,30*32*8,31*32*8
-	},
-	32*32*8
-};
-
 static const gfx_layout namcos23_cg_layout =
 {
 	16,16,
@@ -6084,43 +6064,19 @@ static const gfx_layout namcos23_cg_layout =
 	64*16
 }; /* cg_layout */
 
-static const gfx_layout namcos23_textile_layout =
-{
-	16,16,
-	RGN_FRAC(1,1),
-	8,
-	{ 0,1,2,3,4,5,6,7 },
-	{
-		0*8,1*8,2*8,3*8,4*8,5*8,6*8,7*8,8*8,9*8,10*8,11*8,12*8,13*8,14*8,15*8
-	},
-	{
-		0*16*8,1*16*8,2*16*8,3*16*8,4*16*8,5*16*8,6*16*8,7*16*8,
-		8*16*8,9*16*8,10*16*8,11*16*8,12*16*8,13*16*8,14*16*8,15*16*8
-	},
-	16*16*8
-}; /* textile_layout */
+#undef XOR
 
-static const gfx_layout namcos23_texram_layout =
-{
-	16,16,
-	0x400, /* 0x3c0 */
-	4,
-	{ 0,1,2,3 },
-	{ XOR(0)*4, XOR(1)*4,  XOR(2)*4,  XOR(3)*4,  XOR(4)*4,  XOR(5)*4,  XOR(6)*4,  XOR(7)*4,
-		XOR(8)*4, XOR(9)*4, XOR(10)*4, XOR(11)*4, XOR(12)*4, XOR(13)*4, XOR(14)*4, XOR(15)*4 },
-	{ 64*0,64*1,64*2,64*3,64*4,64*5,64*6,64*7,64*8,64*9,64*10,64*11,64*12,64*13,64*14,64*15 },
-	64*16
-}; /* cg_layout */
+static GFXLAYOUT_RAW(namcos23_sprite_layout, 32, 32, 32*8, 32*32*8)
 
 static GFXDECODE_START( gfx_namcos23 )
-	GFXDECODE_ENTRY( nullptr, 0, namcos23_cg_layout, 0, 0x800 )
-	GFXDECODE_ENTRY( "textile", 0, namcos23_textile_layout,  0, 0x80 )
+	GFXDECODE_ENTRY( nullptr,   0, namcos23_cg_layout, 0, 0x800 )
+	GFXDECODE_ENTRY( "textile", 0, gfx_16x16x8_raw,    0, 0x80 )
 GFXDECODE_END
 
 static GFXDECODE_START( gfx_gorgon )
 	GFXDECODE_ENTRY( nullptr,   0, namcos23_cg_layout,     0, 0x800 )
-	GFXDECODE_ENTRY( "textile", 0, namcos23_textile_layout,  0, 0x80 )
-	GFXDECODE_ENTRY( "sprites", 0, namcos23_sprite_layout, 0,  0x80 )
+	GFXDECODE_ENTRY( "textile", 0, gfx_16x16x8_raw,        0, 0x80 )
+	GFXDECODE_ENTRY( "sprites", 0, namcos23_sprite_layout, 0, 0x80 )
 GFXDECODE_END
 
 void gorgon_state::gorgon(machine_config &config)
@@ -7723,14 +7679,15 @@ ROM_START( finfurl2j )
 	ROM_LOAD( "ffs1ccrh.7e",  0x000000, 0x200000, CRC(8be4aeb4) SHA1(ec344f6fba42092083e737e436451f5d7be12c15) )
 
 	ROM_REGION32_LE( 0x2000000, "pointrom", 0 ) /* 3D model data */
-	ROM_LOAD32_WORD_SWAP( "ffs1pt0h.7a",  0x0000000, 0x400000, CRC(79b9b019) SHA1(ca2bbabd949fec91001a30b63f7343520028cde0) )
-	ROM_LOAD32_WORD_SWAP( "ffs1pt0l.7c",  0x0000002, 0x400000, CRC(383cbfba) SHA1(0784ac2d709bee6653c95f80fedf7f98ca79357f) )
-	ROM_LOAD32_WORD_SWAP( "ffs1pt1h.5a",  0x0800000, 0x400000, CRC(2dba59d0) SHA1(34d4c415b5635338511ff3578eb3c00e2b6cd7d4) )
-	ROM_LOAD32_WORD_SWAP( "ffs1pt1l.5c",  0x0800002, 0x400000, CRC(ba0fff5b) SHA1(d5a6db4de60657d46228e85ed09ed7f0ecbc7975) )
-	ROM_LOAD32_WORD_SWAP( "ffs1pt2h.4a",  0x1000000, 0x400000, CRC(26ea01e8) SHA1(9af096c99e6835e21b1b78dfce07040f50f8c922) )
-	ROM_LOAD32_WORD_SWAP( "ffs1pt2l.4c",  0x1000002, 0x400000, CRC(c5199c1b) SHA1(8f1a70c8edb2791a099b4911353af6250a5d0e8a) )
-	ROM_LOAD32_WORD_SWAP( "ffs1pt3h.3a",  0x1800000, 0x400000, CRC(48226e9f) SHA1(f099b2929d49903a33b4dab80972c3ce0ddb6ca2) )
-	ROM_LOAD32_WORD_SWAP( "ffs1pt3l.3c",  0x1800002, 0x400000, CRC(2381611a) SHA1(a3d948bf910dcfd9f47c65c56b9920f58c42fed5) )
+	ROM_LOAD32_WORD_SWAP( "ffs1pt0h.7a",  0x0000000, 0x400000, CRC(6f9da966) SHA1(97ed7eba833d6c6065bb8cbb4673dd09abe20b21) )
+	ROM_LOAD32_WORD_SWAP( "ffs1pt0l.7c",  0x0000002, 0x400000, CRC(63d80064) SHA1(d4c08fc0baca9b1d9f1203673acb6830a2d5e4b0) )
+	ROM_LOAD32_WORD_SWAP( "ffs1pt1h.5a",  0x0800000, 0x400000, CRC(180edc67) SHA1(7c8e0266cf3481eea5416100a913eda046d30185) )
+	ROM_LOAD32_WORD_SWAP( "ffs1pt1l.5c",  0x0800002, 0x400000, CRC(21948286) SHA1(e4185eeb78195f2f691bad7c54b30a40718bf3b2) )
+	ROM_LOAD32_WORD_SWAP( "ffs1pt2h.4a",  0x1000000, 0x400000, CRC(f5664030) SHA1(0444ec9780417cff35404b961a75a49461fc1c50) )
+	ROM_LOAD32_WORD_SWAP( "ffs1pt2l.4c",  0x1000002, 0x400000, CRC(8cf96442) SHA1(1ccbe5cf700a63adc06e8c6afe4527d27942207d) )
+	ROM_LOAD32_WORD_SWAP( "ffs1pt3h.3a",  0x1800000, 0x400000, CRC(81c675ee) SHA1(4417862f481ace6152762634a3a012161829501e) )
+	ROM_LOAD32_WORD_SWAP( "ffs1pt3l.3c",  0x1800002, 0x400000, CRC(a3541604) SHA1(dffec3756051773bd1110d98463eb3282834b00c) )
+
 	ROM_REGION( 0x1000000, "c352", 0 ) /* C352 PCM samples */
 	ROM_LOAD( "ffs1wavel.2c", 0x000000, 0x800000, CRC(67ba16cf) SHA1(00b38617c2185b9a3bf279962ad0c21a7287256f) )
 	ROM_LOAD( "ffs1waveh.2a", 0x800000, 0x800000, CRC(178e8bd3) SHA1(8ab1a97003914f70b09e96c5924f3a839fe634c7) )
