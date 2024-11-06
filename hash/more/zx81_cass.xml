@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 981 -->
+<!-- Number of items in this list = 1008 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx1978d77c2f97f3">
 		<description>(demo)8WAY-SCR</description>
@@ -9732,6 +9732,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx194302adda7fb7">
+		<description>TOMBOLA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3679">
+				<rom name="TOMBOLA.P" size="3679" crc="dd0ca1c6" sha1="94302adda7fb758de58e4fe2d722661780b4ffc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1774e5efcc807f">
+		<description>TOTOMAAT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3780">
+				<rom name="TOTOMAAT.P" size="3780" crc="7cd35fa8" sha1="774e5efcc807f6f29a92d368f49773b55cc0712f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1f23e6b33154db">
 		<description>Towns in England and Wales</description>
 		<year>????</year>
@@ -9739,6 +9759,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="9377">
 				<rom name="Towns in England and Wales.P" size="9377" crc="349b1aeb" sha1="f23e6b33154db214e0d454f396d2e6a86f8810cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx18c82960e8e9e0">
+		<description>TRACE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1410">
+				<rom name="TRACE.P" size="1410" crc="117e80f9" sha1="8c82960e8e9e0c1e04897a11eb8a37682977fb88"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9782,6 +9812,126 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx159ef4b76d2338">
+		<description>TRADER-I</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1494">
+				<rom name="TRADER-I.P" size="1494" crc="dc9bc19e" sha1="59ef4b76d233891cc250b5cba2934d9b635a4dd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d7211fccf499c">
+		<description>TRAIN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2370">
+				<rom name="TRAIN.P" size="2370" crc="c3a0bc12" sha1="d7211fccf499c559eda5af6a09f0791098f7d5e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx14a2072b4ce142">
+		<description>TRANSCOD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="11523">
+				<rom name="TRANSCOD.P" size="11523" crc="bd1c3d3b" sha1="4a2072b4ce1428b5b179bf1fdb44f64969c8d008"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f73724f4e6d2d">
+		<description>TRAP (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3523">
+				<rom name="TRAP (2).P" size="3523" crc="c432e820" sha1="f73724f4e6d2d04d0d7667e861afa68177969fb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e00bd0ef883db">
+		<description>TRAP (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3317">
+				<rom name="TRAP (3).P" size="3317" crc="8f2a485d" sha1="e00bd0ef883db651e067e47ca32b218a86e17b45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx129390066141c8">
+		<description>TRAP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2633">
+				<rom name="TRAP.P" size="2633" crc="258c0878" sha1="29390066141c8499fe35d0be3440f2dc581198d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx186d8e7758f516">
+		<description>trapped</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2090">
+				<rom name="trapped.p" size="2090" crc="2fee7f66" sha1="86d8e7758f51603f9a619b82bb6af7a305df64d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ff22e19ada69b">
+		<description>TREIBJAG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1815">
+				<rom name="TREIBJAG.P" size="1815" crc="d2221e18" sha1="ff22e19ada69be077a6e32e9ec19e19dbbc3062c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1a8b54b6d03e19">
+		<description>TREINRAC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2662">
+				<rom name="TREINRAC.P" size="2662" crc="b9b0f76b" sha1="a8b54b6d03e19f0b6dd032510445b2d0c9c78184"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx111754fe22b581">
+		<description>TRIANGLE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15996">
+				<rom name="TRIANGLE.P" size="15996" crc="3ff91d02" sha1="11754fe22b5818e1c29bc2bda274d0a6cc695634"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1b08772086de96">
+		<description>TRIGONOM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4717">
+				<rom name="TRIGONOM.P" size="4717" crc="bc298796" sha1="b08772086de96220968c3ff0602889af59461eef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13aeb584a7e84d">
+		<description>TROJAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15859">
+				<rom name="TROJAN.P" size="15859" crc="cf628959" sha1="3aeb584a7e84dd63c5ba7a63e712e9f5ce60868a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1c6458180ea3ad">
 		<description>TS Destroyer</description>
 		<year>????</year>
@@ -9789,6 +9939,96 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="1961">
 				<rom name="TS Destroyer.P" size="1961" crc="c8555348" sha1="c6458180ea3ad56da1447ca1650ddc04a82592aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx16b4e81fae87e9">
+		<description>TSBANNER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1920">
+				<rom name="TSBANNER.P" size="1920" crc="5ccf6880" sha1="6b4e81fae87e9484ffe51aa09debabd035d51389"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1b020809ce2150">
+		<description>TSBAR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2126">
+				<rom name="TSBAR.P" size="2126" crc="f69a4ea7" sha1="b020809ce21504bb59aaef9bb23c8000deba11bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx17e5137ebacbf9">
+		<description>TSCALC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1560">
+				<rom name="TSCALC.P" size="1560" crc="b0e4822c" sha1="7e5137ebacbf94c93607d28256ef4242e7c3affb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f47cec8e1b572">
+		<description>TSGRAPH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1995">
+				<rom name="TSGRAPH.P" size="1995" crc="4148d893" sha1="f47cec8e1b572847b415439c15b41731138611d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx157ea2db65f80b">
+		<description>tugboat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1753">
+				<rom name="tugboat.p" size="1753" crc="cea898f7" sha1="57ea2db65f80b5e97dd3229f0b13f63f92fb7940"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx10d39654be895d">
+		<description>TUNNEL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4881">
+				<rom name="TUNNEL.P" size="4881" crc="0c0a0169" sha1="0d39654be895d2c4c3c19275e8ac07ad7696bb9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e10823399168e">
+		<description>TURBO (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2071">
+				<rom name="TURBO (2).P" size="2071" crc="f6987c5f" sha1="e10823399168e4dfba0f6a7ef0b7875c9142d7ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1c2c187c99ec10">
+		<description>TURBO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2162">
+				<rom name="TURBO.P" size="2162" crc="cd8375fe" sha1="c2c187c99ec10f19753a276bc461619eedb36166"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1416e51c3aa0eb">
+		<description>TWENTY-O</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2917">
+				<rom name="TWENTY-O.P" size="2917" crc="86c59164" sha1="416e51c3aa0eb002ead1f0ccbb2ae084f2774193"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9802,6 +10042,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx15523eec88d177">
+		<description>Twirl Demo (Revival Studios, 2010)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="12711">
+				<rom name="Twirl Demo (Revival Studios, 2010).p" size="12711" crc="9faf1b03" sha1="5523eec88d177a819380bec7460740ce187c40c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1019fedda61de5">
+		<description>twister</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2529">
+				<rom name="twister.p" size="2529" crc="8f667671" sha1="019fedda61de58109518c0422103f87c6007002e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1c45c3eabebca9">
 		<description>Two Stroke Engine</description>
 		<year>????</year>
@@ -9809,6 +10069,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="3137">
 				<rom name="Two Stroke Engine.P" size="3137" crc="a38ee836" sha1="c45c3eabebca9dfb77933b96b63206f57863d070"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx19fc8d3833d39a">
+		<description>TYPEWRIT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6562">
+				<rom name="TYPEWRIT.P" size="6562" crc="f9169ed5" sha1="9fc8d3833d39ac274c395fa12bed5f4e2516e0c8"/>
 			</dataarea>
 		</part>
 	</software>

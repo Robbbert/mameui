@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 105 -->
+<!-- Number of items in this list = 127 -->
 <softwarelist name="interact" description="interact loose roms">
 	<software name="intb28c3cd61db34">
 		<description>10000[hr+]</description>
@@ -342,6 +342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int179c3ea0175df">
+		<description>Caverne des Lutins[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16408">
+				<rom name="Caverne des Lutins[hec1].k7" size="16408" crc="4a563240" sha1="179c3ea0175df186d5bc90ce5cc6bbbaf81114e6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="intc9cb5e1769d10">
 		<description>Chain Reaction (1983)((Micro Video)</description>
 		<year>????</year>
@@ -409,6 +419,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="8416">
 				<rom name="crazy8[hec1].k7" size="8416" crc="019fe0f8" sha1="2537eeb44b916cedc8b98d9917301fbfd9f8bf00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int82c9957206fde">
+		<description>Credits-avec-imprimante[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="32626">
+				<rom name="Credits-avec-imprimante[hec1].k7" size="32626" crc="89edc932" sha1="82c9957206fdeb9337aba4eaba3eec9f00a3cf19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -512,6 +532,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int8b0fe0f913191">
+		<description>Encerclement[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8369">
+				<rom name="Encerclement[hec1].k7" size="8369" crc="9da679b6" sha1="8b0fe0f9131911899dd24a58253266e8efdb4251"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int4167f2d7bee39">
+		<description>Envahisseurs[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5703">
+				<rom name="Envahisseurs[hec1].k7" size="5703" crc="508bb8e3" sha1="4167f2d7bee399d02a1d6a241cf3b42637043ec7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int3ebbe96ce77b7">
 		<description>ESP Master (Micro Video)</description>
 		<year>????</year>
@@ -532,6 +572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int0a8546750ff3f">
+		<description>Flipper[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8104">
+				<rom name="Flipper[hec1].k7" size="8104" crc="24a3213f" sha1="0a8546750ff3f739b85256e64dd149581c6f29f8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int0ff5da99af34c">
 		<description>Football (1980)(Micro Video)</description>
 		<year>????</year>
@@ -542,6 +592,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int82fe3a91f3ad4">
+		<description>Formule1[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="16403">
+				<rom name="Formule1[hec1].k7" size="16403" crc="c9409ddd" sha1="82fe3a91f3ad49432f6db3c347be762cb8417f1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int5f3c4fcad0781">
+		<description>Galaxius[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8189">
+				<rom name="Galaxius[hec1].k7" size="8189" crc="d49f3f3e" sha1="5f3c4fcad0781179120fcdf8d3740488af2dbbea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="inte5df8644855dc">
 		<description>Geston Budget[hr+]</description>
 		<year>????</year>
@@ -549,6 +619,26 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="14599">
 				<rom name="Geston Budget[hr+].K7" size="14599" crc="33d68187" sha1="e5df8644855dca4638429cf41ae4db09cb12296b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int36a37616bfcb2">
+		<description>Goofygolf[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="15844">
+				<rom name="Goofygolf[hec1].k7" size="15844" crc="d3da2d01" sha1="36a37616bfcb2f3079308dc2c69010023f42df7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int93f1b3f245fb3">
+		<description>Grenouille[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9792">
+				<rom name="Grenouille[hec1].k7" size="9792" crc="38e23440" sha1="93f1b3f245fb34157777dddac354cf9262f062df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -572,6 +662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="inta8653b8e46a2b">
+		<description>Hep-taxi[hrx]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5378">
+				<rom name="Hep-taxi[hrx].k7" size="5378" crc="599403ec" sha1="a8653b8e46a2b7a277b0d787df8753d308c5d89a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="inta37e84a8d13a7">
 		<description>Hot Rocks (1982)(Micro Video)</description>
 		<year>????</year>
@@ -589,6 +689,26 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="8031">
 				<rom name="Human Canonball (8K Graphics Basic)(1982)(Micro Video).k7" size="8031" crc="42ca53c9" sha1="a39e931b5f1eff49b0ff72bc84961b71752588d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta1bc3de927ab1">
+		<description>Jeep-lunaire[hr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="17556">
+				<rom name="Jeep-lunaire[hr].k7" size="17556" crc="99edd52d" sha1="a1bc3de927ab15345e3b8d32c79a5b2fbc15b703"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int0775dcfdcbc50">
+		<description>Jeu-de-la-vie[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="3895">
+				<rom name="Jeu-de-la-vie[hec1].k7" size="3895" crc="04474129" sha1="0775dcfdcbc50736c5f36cfc1de84b355b31c684"/>
 			</dataarea>
 		</part>
 	</software>
@@ -629,6 +749,26 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="12195">
 				<rom name="Le Donjon Hante.k7" size="12195" crc="5a7968cf" sha1="3dbb26339737cce4a1512aa8456b90f9bf95044f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intdcf85a40d1c14">
+		<description>le-baroudeur[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="12319">
+				<rom name="le-baroudeur[hec1].k7" size="12319" crc="8f7b6137" sha1="dcf85a40d1c14309eb1a972ab3d97a75422c6f23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int2dd144071977a">
+		<description>le-glouton[hec1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="25566">
+				<rom name="le-glouton[hec1].k7" size="25566" crc="41d88d3e" sha1="2dd144071977a21485ab217a7128caa1aaf4b3fd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -772,6 +912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int610596bee39bb">
+		<description>Mission_2HR+[hr+]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="5649">
+				<rom name="Mission_2HR+[hr+].k7" size="5649" crc="52f86050" sha1="610596bee39bbba3a71c1ebbff2752a5d0d331a6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int796793db5c088">
 		<description>Morse Code Trainer (Micro Video)(1981)</description>
 		<year>????</year>
@@ -832,6 +982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intec36c7a081929">
+		<description>Pengo[hrx]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="35274">
+				<rom name="Pengo[hrx].k7" size="35274" crc="70dea70e" sha1="ec36c7a08192957ca3a64951bdcc01526d79de61"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int1e356a7a7578a">
 		<description>Pinball (alt)</description>
 		<year>????</year>
@@ -859,6 +1019,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="7621">
 				<rom name="Piranhas (Victor Lambda).k7" size="7621" crc="65f92c7a" sha1="bad571493690a8ccb67d92674c22de3df0c79ab1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int03942e73e5689">
+		<description>Poker-elan[hr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="21025">
+				<rom name="Poker-elan[hr].k7" size="21025" crc="1813206e" sha1="03942e73e5689ec90297c5af20fb4c8d651331b1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -902,6 +1072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intf511b37861b35">
+		<description>Space Opera[hrx]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="33812">
+				<rom name="Space Opera[hrx].k7" size="33812" crc="2b9bcec7" sha1="f511b37861b35149645d24bf5d6b4b06f810bc17"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int8a255e24d197f">
 		<description>Speed Reader (1981)(Micro Video)</description>
 		<year>????</year>
@@ -922,6 +1102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="inte776033d8b657">
+		<description>Stramble[hr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="21060">
+				<rom name="Stramble[hr].k7" size="21060" crc="ddcd413f" sha1="e776033d8b65740214beb3eb23e35be1d1a3d8e6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="intdf6d125de6ada">
 		<description>Sub Search (1982)(Micro Video)</description>
 		<year>????</year>
@@ -929,6 +1119,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="8618">
 				<rom name="Sub Search (1982)(Micro Video).k7" size="8618" crc="b3922ea3" sha1="df6d125de6adafd2007895224663ccbc2e805a65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intd513dbe17cb8c">
+		<description>Super Poke[hr+]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="6436">
+				<rom name="Super Poke[hr+].K7" size="6436" crc="5629e539" sha1="d513dbe17cb8c68eaac8b92902eedbb4c120518b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -969,6 +1169,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="8031">
 				<rom name="Tic-Tac-Cube (8K Graphics Basic)(1982)(Micro Video).k7" size="8031" crc="50624c82" sha1="d47a346bf6f3f30a78f87e3d9e34308c66cf14c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1537b223e98b6">
+		<description>Topkapi[HR+]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="4659">
+				<rom name="Topkapi[HR+].k7" size="4659" crc="4a114753" sha1="1537b223e98b62df902033dda740546325cbc453"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1019,6 +1229,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="8031">
 				<rom name="Video Derby (8K Graphics Basic)(1982)(Micro Video).k7" size="8031" crc="cef45ea7" sha1="fc010acd6032c15d359e5e801a91385f837cb272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int4b6e5b4446e69">
+		<description>videograph[hr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="17950">
+				<rom name="videograph[hr].k7" size="17950" crc="b6d2f9e2" sha1="4b6e5b4446e69512b8a36eb46e3335082f8767b6"/>
 			</dataarea>
 		</part>
 	</software>

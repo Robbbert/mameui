@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5975 -->
+<!-- Number of items in this list = 6197 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -47369,6 +47369,2226 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Kung Fu Sprite Demo 2 (PD).a26" size="4096" crc="52a5701c" sha1="d8fec876c84423b86abc9154836f2b6a768f5b77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c72a18adb5bd">
+		<description>Label_art Pic (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Label_art Pic (PD).a26" size="4096" crc="93423a16" sha1="9c72a18adb5bd1d95eacdedb8391bba7d612091b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0c5f38b741e8">
+		<description>Labyrinth v08 (2006) (Bill Collins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Labyrinth v08 (2006) (Bill Collins).a26" size="4096" crc="7d980d11" sha1="b0c5f38b741e81961486c36e6a0727e759297d1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2693787028de30b">
+		<description>Ladder Challenge (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ladder Challenge (Jumpman Selected Levels) (PD).a26" size="4096" crc="bb286c97" sha1="93787028de30b53703183beb8a9ddd6d990125dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263cf8ea7d16d68">
+		<description>Lady Bug 2006-08-07 (John W. Champeau) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-08-07 (John W. Champeau) [a1].a26" size="16384" crc="8dae0850" sha1="3cf8ea7d16d6876de3a0ec132eb6550b6d810775"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d4aef0f2b0b7">
+		<description>Lady Bug 2006-12-08 (John W. Champeau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-12-08 (John W. Champeau).a26" size="16384" crc="752a3c59" sha1="1d4aef0f2b0b75e872851fbd8c49d725e6a9deea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cca8fdd1f15a2">
+		<description>Lady Bug 2006-14-08 (John W. Champeau) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-14-08 (John W. Champeau) [a2].a26" size="16384" crc="5ee65337" sha1="cca8fdd1f15a2d99cd2d62e1ea7f521830c345fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268333581ed5374">
+		<description>Lady Bug 2006-16-08 slow (John W. Champeau) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-16-08 slow (John W. Champeau) (PAL60).a26" size="16384" crc="5e0d6cf3" sha1="8333581ed5374d2bc4674fb6d539581f0d469f88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268257f1803a59d">
+		<description>Lady Bug 2006-17-08 (John W. Champeau) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-17-08 (John W. Champeau) (PAL60).a26" size="16384" crc="22570b68" sha1="8257f1803a59dcb945fe2095d7515e3f3d22a832"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c24e886ea38d2">
+		<description>Lady Bug 2006-17-08 (John W. Champeau) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-17-08 (John W. Champeau) [a1].a26" size="16384" crc="4954c1e4" sha1="c24e886ea38d2fa88d1247b2de354051d269e93e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad475d6cf3103">
+		<description>Lady Bug 2006-17-08 (John W. Champeau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-17-08 (John W. Champeau).a26" size="16384" crc="108c0068" sha1="ad475d6cf310387f7e807b6dae06ec5d72f01c14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b8ec898f52835">
+		<description>Lady Bug 2006-18-08 (John W. Champeau) (PAL60) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-18-08 (John W. Champeau) (PAL60) [a1].a26" size="16384" crc="75303a25" sha1="b8ec898f5283584150199c0331693ed7f8f14304"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2653a9edcc12218">
+		<description>Lady Bug 2006-18-08 (John W. Champeau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-18-08 (John W. Champeau).a26" size="16384" crc="d3856b77" sha1="53a9edcc1221879eb965a78662e2c43f5f9fa686"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265569d226a81ad">
+		<description>Lady Bug 2006-19-08 (John W. Champeau) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-19-08 (John W. Champeau) (PAL60).a26" size="16384" crc="a75d95f7" sha1="5569d226a81ad2b3a055092849ce34cde1be117b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fac7b3f05171d">
+		<description>Lady Bug 2006-19-08 (John W. Champeau) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-19-08 (John W. Champeau) [a1].a26" size="16384" crc="58523c81" sha1="fac7b3f05171d563e10be6a502a861e89f9e57d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267cb5f54692ee8">
+		<description>Lady Bug 2006-20-08 (John W. Champeau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug 2006-20-08 (John W. Champeau).a26" size="16384" crc="2d15f8c1" sha1="7cb5f54692ee83e06405959b4eecc754f98a0355"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2648e1502bf4c97">
+		<description>Lady Bug Final (John W. Champeau) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug Final (John W. Champeau) (PAL60).a26" size="16384" crc="e10619b2" sha1="48e1502bf4c97eccdf05b05871682a77144567b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650c83ec5dee44">
+		<description>Lady Bug Final 2007-01-28 (John W. Champeau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug Final 2007-01-28 (John W. Champeau).a26" size="16384" crc="622d813a" sha1="50c83ec5dee444952340f36649632178b339922c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b40dcd78dd05a">
+		<description>Lady Bug old (John W. Champeau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug old (John W. Champeau).a26" size="16384" crc="b558428f" sha1="b40dcd78dd05ac2435ed0986e9bbdbfdc27a41da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262f93d2e30df03">
+		<description>Lady Bug Playfield Demo 2 (2006-01-13) (John W. Champeau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Lady Bug Playfield Demo 2 (2006-01-13) (John W. Champeau).a26" size="8192" crc="a35272dc" sha1="2f93d2e30df03c3dab4cbcb26ecab12010d40c18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ffa922fa261d">
+		<description>Lady Bug RC2 (John W. Champeau) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug RC2 (John W. Champeau) (PAL60).a26" size="16384" crc="d60c5d8a" sha1="7ffa922fa261dcc6088d706a8313cdc4de3d9147"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26556e34f17f0b9">
+		<description>Lady Bug RC4 (John W. Champeau) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug RC4 (John W. Champeau) (PAL60).a26" size="16384" crc="557a7627" sha1="556e34f17f0b953211782b35dcfc6295e251438c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260a4568e425406">
+		<description>Lady Bug RC4 (John W. Champeau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug RC4 (John W. Champeau).a26" size="16384" crc="3863c6b5" sha1="0a4568e425406bdb279779bd2a40945b18d5b3d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266e2a6940317bb">
+		<description>ladybug 01-08 new 1_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 01-08 new 1_2.a26" size="16384" crc="4778a357" sha1="6e2a6940317bb884160ecbb1f2faf8c3e15c8e5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d362166137fd">
+		<description>ladybug 01-08 new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 01-08 new 2.a26" size="16384" crc="8bdde566" sha1="7d362166137fd0ddc2a981852a34211c820b50d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c8eba43dc8ba">
+		<description>ladybug 03-08_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 03-08_1.a26" size="16384" crc="eacae2f3" sha1="6c8eba43dc8ba979042b5baae0751d78943ef3c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a69ec7d639f38">
+		<description>ladybug 10-07-2006_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 10-07-2006_1.a26" size="16384" crc="9846b643" sha1="a69ec7d639f381cd956ec5949a19a004b4907479"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f7f619dd7986">
+		<description>ladybug 11-07-2006 new2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 11-07-2006 new2.a26" size="16384" crc="2b41775b" sha1="6f7f619dd7986c81995fb74b6508191f76429eb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c62a7dcdfce2">
+		<description>ladybug 11-07-2006 new_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 11-07-2006 new_2.a26" size="16384" crc="27579ad4" sha1="9c62a7dcdfce243a6325579ec5ea97cf8f66616e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d086f96c1fc4f">
+		<description>ladybug 11-07-2006_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 11-07-2006_2.a26" size="16384" crc="ff73c26f" sha1="d086f96c1fc4feec340392abf2329a05cca9e353"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c8f3ea0680729">
+		<description>ladybug 12-07-2006</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 12-07-2006.a26" size="16384" crc="d471f2fc" sha1="c8f3ea0680729831d1ef5d69875722a2f929ef76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264c5a5937845b8">
+		<description>ladybug 13-08_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 13-08_1.a26" size="16384" crc="c37d9e74" sha1="4c5a5937845b8f7b92c11f33ee2fa1d5d672fefc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262426dd97e9a18">
+		<description>ladybug 2006-02-05</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="ladybug 2006-02-05.a26" size="8192" crc="9e242d6b" sha1="2426dd97e9a18880d7836124f11435115c1deb56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b71d7a1fa132">
+		<description>ladybug 30-08_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 30-08_2.a26" size="16384" crc="6802d31a" sha1="4b71d7a1fa1324d7b4e155ac247ea001ec57a2ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268dc315e63a9a8">
+		<description>ladybug 31-08 new 1_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 31-08 new 1_1.a26" size="16384" crc="e01eb801" sha1="8dc315e63a9a80c68c00998c5b64774f1dbc09cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cad3230cd4292">
+		<description>ladybug 31-08 new 2_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 31-08 new 2_1.a26" size="16384" crc="be8d5475" sha1="cad3230cd429221d37a45f4a7d8f530e077ca3f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659f61bb0dfe6e">
+		<description>ladybug 8-7-2006</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 8-7-2006.a26" size="16384" crc="578ec2a8" sha1="59f61bb0dfe6e5ecb040ad2616e7a13f876df81d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264881734011f6f">
+		<description>ladybug 9-7-2006 new</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 9-7-2006 new.a26" size="16384" crc="33bcb7be" sha1="4881734011f6f6755f9fe4309de63eb21120218a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2657974afc61517">
+		<description>ladybug 9-7-2006_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug 9-7-2006_1.a26" size="16384" crc="e776b6cd" sha1="57974afc6151754b70208413edc7f007c5b3ad9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267bb6bbcede396">
+		<description>Ladybug Playfield Demo - Alternate Colors (demo) (2006-01-13)(johnnywc)(NTSC)[!]_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ladybug Playfield Demo - Alternate Colors (demo) (2006-01-13)(johnnywc)(NTSC)[!]_2.a26" size="8192" crc="1477428c" sha1="7bb6bbcede396bf09692ef570bf43d372b82d859"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a205fac6c73f7">
+		<description>Ladybug Playfield Demo - Alternate Colors 2 (demo) (2006-01-13)(johnnywc)(NTSC)[!]_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ladybug Playfield Demo - Alternate Colors 2 (demo) (2006-01-13)(johnnywc)(NTSC)[!]_1.a26" size="8192" crc="19fb03dd" sha1="a205fac6c73f70b222f6e92ca84c9f4822b12716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a27be20e43bf9">
+		<description>Ladybug Playfield Demo 1 (demo) (2006-01-13)(johnnywc)(NTSC)[!]_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ladybug Playfield Demo 1 (demo) (2006-01-13)(johnnywc)(NTSC)[!]_2.a26" size="8192" crc="17ec9164" sha1="a27be20e43bf9eb04e73d1743f565b451d4805d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d2edcf0f855f7">
+		<description>ladybug(3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="ladybug(3).a26" size="8192" crc="49eb5747" sha1="d2edcf0f855f78b56eecd10c01a2c49ffd0b657c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26320627fcb8ebe">
+		<description>ladybug(7)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug(7).a26" size="16384" crc="94370003" sha1="320627fcb8ebeee51e3e7f590f880033062b764b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ffd3505c32bf8">
+		<description>ladybug2006-06-02_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug2006-06-02_1.a26" size="16384" crc="d0a37f4a" sha1="ffd3505c32bf8bf20be834f1427d82a71d22c998"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263dd2a96ba5bab">
+		<description>ladybug2006-06-04_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug2006-06-04_2.a26" size="16384" crc="c9f1e163" sha1="3dd2a96ba5babf92858015b0eddfa33b7124aaf3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26152c8f8b22c4e">
+		<description>ladybug_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_2.a26" size="16384" crc="d6eb1c15" sha1="152c8f8b22c4e7439077f7d712bc83f530bc0ff4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b93fb0eb7b4d">
+		<description>ladybug_fast_NTSC 16-08_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_fast_NTSC 16-08_1.a26" size="16384" crc="5971d9eb" sha1="1b93fb0eb7b4dbb9f1485df787e8e982416ea1a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cbbef230c820d">
+		<description>ladybug_fast_PAL60 16-08_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_fast_PAL60 16-08_2.a26" size="16384" crc="9266e3b2" sha1="cbbef230c820d8fc23410cc534da3ac59bbd2186"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2601cc67dd931ea">
+		<description>ladybug_FINAL_NTSC 2006-08-29</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_FINAL_NTSC 2006-08-29.a26" size="16384" crc="1bc8f442" sha1="01cc67dd931ea18790d6a314f1061f1c2919a9c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2617bc38a0e2568">
+		<description>ladybug_FINAL_PAL60 2007-01-28</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_FINAL_PAL60 2007-01-28.a26" size="16384" crc="98e36cca" sha1="17bc38a0e2568bd3568cc20699d141bcdfca71a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266228f9f16256e">
+		<description>ladybug_NTSC 13-08_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 13-08_2.a26" size="16384" crc="8a6636a0" sha1="6228f9f16256e6f3480d933eecfec03393fc1197"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7b8aeee2ff76">
+		<description>ladybug_NTSC 14-08 new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 14-08 new 2.a26" size="16384" crc="c562fcd9" sha1="a7b8aeee2ff7684801c14421a7563026ba91c439"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a1a99785cd6b">
+		<description>ladybug_NTSC 14-08 new 3_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 14-08 new 3_2.a26" size="16384" crc="66a55a18" sha1="6a1a99785cd6b6d8f6313409bc603b1c0eb7dcbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268daf6662323b6">
+		<description>ladybug_NTSC 15-08 new 1_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 15-08 new 1_2.a26" size="16384" crc="1b32070a" sha1="8daf6662323b6968fa2e50900c6cfe6ae7d58668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fd61cb9296f2e">
+		<description>ladybug_NTSC 15-08 new 2_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 15-08 new 2_2.a26" size="16384" crc="c4c64698" sha1="fd61cb9296f2e5ef21fad9c9c5dada0cd5d6c567"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261faf14813a243">
+		<description>ladybug_NTSC 16-08_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 16-08_2.a26" size="16384" crc="c6e73591" sha1="1faf14813a243e9a133eac8c2bc9e66224a79b29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a98bec3676406">
+		<description>ladybug_NTSC 17-08 new 1_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 17-08 new 1_1.a26" size="16384" crc="4058a4b5" sha1="a98bec367640667c5018e1f303e35f98da841803"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b19871a10c97f">
+		<description>ladybug_NTSC 19-08 new 1_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 19-08 new 1_2.a26" size="16384" crc="633ec84d" sha1="b19871a10c97f12a14ba31b00768f2e583dedf22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ba6bab3f32b9d">
+		<description>ladybug_NTSC 20-08 new 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC 20-08 new 1.a26" size="16384" crc="3ffaeee0" sha1="ba6bab3f32b9d66de4429b2340e9057660b8ccf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26289cc26eb89d5">
+		<description>ladybug_NTSC old new2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_NTSC old new2.a26" size="16384" crc="6e8bee95" sha1="289cc26eb89d57e13a6880089c81f1eb4c65b4d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267168483b641b5">
+		<description>ladybug_PAL60 04-08_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 04-08_1.a26" size="16384" crc="1a87e1bd" sha1="7168483b641b572fe396107d164632c377f9c10e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ea42501453804">
+		<description>ladybug_PAL60 12-08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 12-08.a26" size="16384" crc="a76935d3" sha1="ea42501453804aac113c1206241687f1b854378d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262019ef8f3750d">
+		<description>ladybug_PAL60 13-08_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 13-08_2.a26" size="16384" crc="46a5bb2d" sha1="2019ef8f3750da2ade733ffb864f6c0a30ee3c54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265cde384f26a7d">
+		<description>ladybug_PAL60 14-08 new 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 14-08 new 1.a26" size="16384" crc="47561db5" sha1="5cde384f26a7dea6ba71c5f79c8368285db3d8c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263c28575a55e1b">
+		<description>ladybug_PAL60 14-08 new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 14-08 new 2.a26" size="16384" crc="dcd2b25b" sha1="3c28575a55e1b2ff8c90174e6500455dd3ef953a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263efe91611a819">
+		<description>ladybug_PAL60 14-08 new 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 14-08 new 3.a26" size="16384" crc="7f15149a" sha1="3efe91611a8190599a315e00e00fc5844980fda4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26733e2a144e25e">
+		<description>ladybug_PAL60 15-08 new 1_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 15-08 new 1_2.a26" size="16384" crc="02824988" sha1="733e2a144e25ebfc465251ff4bbfe69d1b9d9f4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265845da0a572ea">
+		<description>ladybug_PAL60 15-08 new 2_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 15-08 new 2_2.a26" size="16384" crc="dd76081a" sha1="5845da0a572ea9c34ce317ea122e1d60934d0752"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2667be147348cc8">
+		<description>ladybug_PAL60 16-08_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 16-08_2.a26" size="16384" crc="37e9bf38" sha1="67be147348cc8349f262c493ecbce8c286e4f1f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a881fb0482a18">
+		<description>ladybug_PAL60 17-08 new 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 17-08 new 1.a26" size="16384" crc="59d9995c" sha1="a881fb0482a18e8169ff5ff3ff42afab6629c994"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262f442d7e82924">
+		<description>ladybug_PAL60 17-08 new 2_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 17-08 new 2_1.a26" size="16384" crc="7b8fcae4" sha1="2f442d7e82924958b65c032e895bd1521bb72a0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ccf65a9a6f879">
+		<description>ladybug_PAL60 18-08 new 2_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 18-08 new 2_2.a26" size="16384" crc="220a5f6f" sha1="ccf65a9a6f879d479a81889388a23e13a0f83be2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260912b094cdabd">
+		<description>ladybug_PAL60 18-08 new 3_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 18-08 new 3_1.a26" size="16384" crc="aae8b32f" sha1="0912b094cdabd08e7819b4afd96c322dce9b627d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26afa9e614b53fb">
+		<description>ladybug_PAL60 19-08 new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 19-08 new 2.a26" size="16384" crc="9c31613b" sha1="afa9e614b53fb2611a5b0578231bbb6f5249b9bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2699ba4d5104f28">
+		<description>ladybug_PAL60 20-08 new_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 20-08 new_1.a26" size="16384" crc="7850abc9" sha1="99ba4d5104f283f6f32f41c28a77bd75047292f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26732935d545e59">
+		<description>ladybug_PAL60 20-08_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_PAL60 20-08_2.a26" size="16384" crc="fb99b35a" sha1="732935d545e592d48ba40bd0b71bde70be287a34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e07a167bcc5d9">
+		<description>ladybug_RC1_NTSC_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_RC1_NTSC_1.a26" size="16384" crc="2f0b0214" sha1="e07a167bcc5d9d379f69c65ca2d435f1809cbb33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266aa200220728a">
+		<description>ladybug_RC1_PAL60_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_RC1_PAL60_1.a26" size="16384" crc="2dc406ff" sha1="6aa200220728a504aad2bed6a2e9ac52712e53c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2689f9866118f54">
+		<description>ladybug_RC2_NTSC_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_RC2_NTSC_1.a26" size="16384" crc="6d6d02db" sha1="89f9866118f545bc3d82b0c7c37df64842b9a688"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608b66b2ce2af9">
+		<description>ladybug_RC3_NTSC_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_RC3_NTSC_1.a26" size="16384" crc="68573009" sha1="08b66b2ce2af9ce42e466b7f382f756f41804e1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2619cca02168edb">
+		<description>ladybug_RC3_PAL60_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_RC3_PAL60_1.a26" size="16384" crc="3478ed75" sha1="19cca02168edbff030b027cf6f12ad082a979e2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613fd50153d243">
+		<description>ladybug_RC5_NTSC_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_RC5_NTSC_1.a26" size="16384" crc="dad1ac41" sha1="13fd50153d24344d861d1cc14499db0bb4fba4aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bf44b3a42765c">
+		<description>ladybug_RC5_PAL60_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_RC5_PAL60_1.a26" size="16384" crc="201f41b1" sha1="bf44b3a42765c5e3d3bdafc803196e6bbe07bbe6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f2f9c09f1ab52">
+		<description>ladybug_slow_NTSC 16-08_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="ladybug_slow_NTSC 16-08_1.a26" size="16384" crc="951a56aa" sha1="f2f9c09f1ab526b16b6ea9631a926ca637f4dcd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613c13a6e43dc3">
+		<description>Lady_In_Wading-NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lady_In_Wading-NTSC(Supercharger).bin" size="4096" crc="3cd56722" sha1="13c13a6e43dc3f94c2f811668a7a54f7bc7e80bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264ecf10c07b472">
+		<description>Lady_In_Wading-PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lady_In_Wading-PAL60(Supercharger).bin" size="4096" crc="d2c0cf01" sha1="4ecf10c07b472a39ce841a9406e989992a16535b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26588d7e0b6a4ff">
+		<description>lander color.bas_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="lander color.bas_1.a26" size="4096" crc="e205d40f" sha1="588d7e0b6a4ff5935432e387cf4b846962413eee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ae07898e36641">
+		<description>lander Monochrome.bas_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="lander Monochrome.bas_2.a26" size="4096" crc="a0330126" sha1="ae07898e36641caa2daf2af86269f67589cd053e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2675b9cc7f59f53">
+		<description>Laser Base (AKA World End) (1983) (ITT Family Games) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laser Base (AKA World End) (1983) (ITT Family Games) [f1] (NTSC by TJ).a26" size="4096" crc="29eeac94" sha1="75b9cc7f59f5304edd77a6a8a4cea3dbbc1f7975"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632e2f2992db4e">
+		<description>Laser Blast (1981) (Activision) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laser Blast (1981) (Activision) [o1].a26" size="4096" crc="f870e4eb" sha1="32e2f2992db4eb752e8a240b80c09f10673a3abb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f14cd01c48c70">
+		<description>Laser Blast (1981) (Activision) [o2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Laser Blast (1981) (Activision) [o2].a26" size="16384" crc="49e98973" sha1="f14cd01c48c70245069e745ddb5f9d6ee139c4a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661e73aa82367a">
+		<description>Laser Blast (1981) (Activision) [o3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Laser Blast (1981) (Activision) [o3].a26" size="8192" crc="a74b9d89" sha1="61e73aa82367aefd8cfc1e3b2b9ac14ce72cd82f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a68a16cdfa2b">
+		<description>Laser Blast (1982) (Activision) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laser Blast (1982) (Activision) (PAL) [o1].a26" size="4096" crc="2eadfbcb" sha1="9a68a16cdfa2b6dfaa9f0dd366b432c48af2dabd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d76cd958e92a5">
+		<description>Laser Blast (1982) (Activision) (PAL) [p1][o1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laser Blast (1982) (Activision) (PAL) [p1][o1][!].a26" size="4096" crc="41866183" sha1="d76cd958e92a5cf833ada0860561a5389c94d91d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cc45af0a45a6e">
+		<description>Laser Blast (1983) (Jone Yuan Telephonic Enterprise Co) [p1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Laser Blast (1983) (Jone Yuan Telephonic Enterprise Co) [p1].a26" size="2048" crc="1db9fdb1" sha1="cc45af0a45a6e5d0581683c3589476c0da4b5600"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26483ff595754e4">
+		<description>Laser Blast (1983) (Jone Yuan Telephonic Enterprise Co) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laser Blast (1983) (Jone Yuan Telephonic Enterprise Co) [p1][o1].a26" size="4096" crc="5194beec" sha1="483ff595754e4d038ae4aef181dd9dc94663eb16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c7df5904cdc6a">
+		<description>Laser Blast (2600 Screen Search Console) (Jone Yuan Telephonic Enterprise Co)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Laser Blast (2600 Screen Search Console) (Jone Yuan Telephonic Enterprise Co).bin" size="2048" crc="0e780c3f" sha1="c7df5904cdc6a1658cad89b83e3e523b42a2b45d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c01dc0bc9f87">
+		<description>Laser Blast (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Laser Blast (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="5c32a0f0" sha1="7c01dc0bc9f87c01dc93f68b3cc9bfabeda77f83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264212e9a28145e">
+		<description>Laser Demo (B. Watson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laser Demo (B. Watson).a26" size="4096" crc="562220af" sha1="4212e9a28145e7239abe32e180cef83fed240e12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267bba178bc1252">
+		<description>laser.bas(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laser.bas(2).a26" size="4096" crc="9daa87fa" sha1="7bba178bc12520733732f8b0bf3e9ccb2ef32d38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2691a2337fcf207">
+		<description>laser2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laser2.bas.a26" size="4096" crc="cbe75b4b" sha1="91a2337fcf207643dc3ca0a0bafb5e8b24eeb6c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2677a2aaa47d8b0">
+		<description>Laserblast 2007 Nick Poirier David Poore Jenny Rainwater.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laserblast 2007 Nick Poirier David Poore Jenny Rainwater.bas.a26" size="4096" crc="91367e3e" sha1="77a2aaa47d8b0d70f06c731cbff6aecca06b57a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26068764f73e708">
+		<description>LaserBlast_CCE_Overdump_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="LaserBlast_CCE_Overdump_2.a26" size="4096" crc="4e782d90" sha1="068764f73e7088c3cf1bf8dba3d7af90230a0bad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261ce56032cae02">
+		<description>LaserBlast_Redux_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="LaserBlast_Redux_1.a26" size="4096" crc="7ced3887" sha1="1ce56032cae0255c6c08f9ededdf50a4de1784ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26900737efd3258">
+		<description>Laseresal 2002 (PD) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laseresal 2002 (PD) (PAL).a26" size="4096" crc="ec6fd7af" sha1="900737efd3258720af9e4fb59e9c5e02655965e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6a84ce2dfbf0">
+		<description>Laseresal 2002 (PD) (PAL49)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laseresal 2002 (PD) (PAL49).a26" size="4096" crc="d0376855" sha1="d6a84ce2dfbf08837d17b7b9dd067eba9005cf20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2612b762b447dd9">
+		<description>Laseresal 2002 (PD) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laseresal 2002 (PD) (PAL60).a26" size="4096" crc="2f5799e6" sha1="12b762b447dd91fe2be7aaec4d06750d4bf2fd0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26372c2eb08a00c">
+		<description>Laseresal 2002 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laseresal 2002 (PD).a26" size="4096" crc="4e3a1888" sha1="372c2eb08a00c68a7d5c09c8caa9c33e8ae73d9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266ed5f4176be89">
+		<description>Laseresal 2600 (16-12-2001) (Andrew Wallace) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laseresal 2600 (16-12-2001) (Andrew Wallace) (PD).a26" size="4096" crc="92967d84" sha1="6ed5f4176be89471bfa28014f2414b92028ed3e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cbd1c9819ebee">
+		<description>Laserman 2k3 (Keystone Kapers Hack) 4096 version_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laserman 2k3 (Keystone Kapers Hack) 4096 version_2.a26" size="4096" crc="a8143d22" sha1="cbd1c9819ebee2c07433b2837bbec90c16774708"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2601a5c52e28e22">
+		<description>laserman 3.4.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laserman 3.4.bas.a26" size="4096" crc="fc4cfcde" sha1="01a5c52e28e22ea50f3c7bd7af4f341aefaf28e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268a0c9592db518">
+		<description>laserman rev 3.2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laserman rev 3.2.bas.a26" size="4096" crc="477651fc" sha1="8a0c9592db51887e61ce5ed446068ec74d661f0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c615e78bd14a0">
+		<description>laserman stage1.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laserman stage1.bas.a26" size="4096" crc="6b3ddd8d" sha1="c615e78bd14a050c23510ea041c47618e1f43872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f4ece644d30fd">
+		<description>laserman stage2.1.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laserman stage2.1.bas.a26" size="4096" crc="6c94d193" sha1="f4ece644d30fd4b0e0e49f9184294c574068cf96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2671bd8b8ef2154">
+		<description>laserman stage2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laserman stage2.bas.a26" size="4096" crc="bc3b5802" sha1="71bd8b8ef21542663b2b207708fe9c1eb1aba946"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26188947168192f">
+		<description>Laserman Stage3 (Dan Iacovelli)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laserman Stage3 (Dan Iacovelli).a26" size="4096" crc="9f4fc637" sha1="188947168192f9349c877f63a22e7c5353bba8c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26389285806e725">
+		<description>laserman stage3.1.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laserman stage3.1.bas.a26" size="4096" crc="3c5161bc" sha1="389285806e725f038a168f5255a8fdbafa868e0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a3c7bc6f080c9">
+		<description>laserman4.2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="laserman4.2.bas.a26" size="4096" crc="7b7d5d57" sha1="a3c7bc6f080c9e43edbf26292cb292f5a0e7b02e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c59352c91e97">
+		<description>Lasertime by wAMMA (2007) (PD) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lasertime by wAMMA (2007) (PD) (PAL).a26" size="4096" crc="4820c51a" sha1="6c59352c91e972928db2df76f73e7dd7622c9c2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c835055a8984">
+		<description>Laser_Gates_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Laser_Gates_NTSC(Supercharger).a26" size="4096" crc="caeedfd1" sha1="6c835055a8984326498f23faebf589337a61557f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260a00ae2d7bc3c">
+		<description>Last Mobile Space Battalion (binary #9)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Last Mobile Space Battalion (binary #9).a26" size="4096" crc="469bb983" sha1="0a00ae2d7bc3c4f0fcc99ac67af83382711461f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c00731d8e1a2a">
+		<description>Last Mobile Space Battalion bin#2 2002 By Phillip Sassano</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Last Mobile Space Battalion bin#2 2002 By Phillip Sassano.a26" size="4096" crc="3e3ce2ea" sha1="c00731d8e1a2ac72c9a2f665db21dfac36d9c72b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260c262ee3115de">
+		<description>Last Mobile Space Battalion bin#3 2002 By Phillip Sassano</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Last Mobile Space Battalion bin#3 2002 By Phillip Sassano.a26" size="4096" crc="1151c4f1" sha1="0c262ee3115de899d9c91dbae33c13a68b76a91c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2606dc338c91dac">
+		<description>LasVizca Chase beta by BAtari (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="LasVizca Chase beta by BAtari (PD).a26" size="4096" crc="83b72ddf" sha1="06dc338c91daca52f63bcd60617a22325f4a0d69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f57c55f4573bb">
+		<description>lawnmow.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="lawnmow.bas.bin" size="4096" crc="413b3cea" sha1="f57c55f4573bb2a90c82c2c9087d9770182db3f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26351c9c0ea78b2">
+		<description>Lead (2007) (Simone Serra) (Prototype) (8K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Lead (2007) (Simone Serra) (Prototype) (8K).a26" size="8192" crc="00758197" sha1="351c9c0ea78b25a2fc2f186d2a335d765108aff1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2625070284f7824">
+		<description>Lead 1k 20070128b (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070128b (seemo).a26" size="2048" crc="b11d2222" sha1="25070284f7824e8ba204d9d1ba73fea2daf97fe0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26792e6352249ff">
+		<description>Lead 1k 20070129 (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070129 (seemo).a26" size="2048" crc="c984eff0" sha1="792e6352249ffab28a1c9d7e828fd532f7852da8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bf558cd098fe1">
+		<description>Lead 1k 20070130 (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070130 (seemo).a26" size="2048" crc="c8582775" sha1="bf558cd098fe1e6c242090f0d22335d4984afbf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f3037721d727">
+		<description>Lead 1k 20070131 (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070131 (seemo).a26" size="2048" crc="858ed3bc" sha1="1f3037721d7279e5c2fcac9ad899acfae0bef16b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c5e5d3159de7c">
+		<description>Lead 1k 20070206 (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070206 (seemo).a26" size="2048" crc="dcb1d2d1" sha1="c5e5d3159de7ccc3846c2403e077b1d6ea8dbe8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264cc6158df24b9">
+		<description>Lead 1k 20070206b (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070206b (seemo).a26" size="2048" crc="0caf9c5e" sha1="4cc6158df24b972bffc1a3769fb4100cdadd5459"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2657519cfd18aaa">
+		<description>Lead 1k 20070209 (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070209 (seemo).a26" size="2048" crc="a1b0b5e9" sha1="57519cfd18aaadb14fca61cb5d6a2bf4e5c487d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db93905b7dfb5">
+		<description>Lead 1k 20070210c (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070210c (seemo).a26" size="2048" crc="a2c84e69" sha1="db93905b7dfb53c3ba8098790d8895433b7d2c8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bdc71d890d389">
+		<description>Lead 1k 20070214 (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070214 (seemo).a26" size="2048" crc="e2a57b6d" sha1="bdc71d890d389a1f636e09eaf0ef9f1dfd7b8215"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264eb40207ebedc">
+		<description>Lead 1k 20070224 (seemo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lead 1k 20070224 (seemo).a26" size="2048" crc="5664d4b2" sha1="4eb40207ebedc2f751911b77d508dc7db7f0e92c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26682b148642e80">
+		<description>Lead 8k 20071004</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Lead 8k 20071004.a26" size="8192" crc="ce3f3c80" sha1="682b148642e800941cdcfa23272a1e94e5e80ab6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26320c1a95930c8">
+		<description>Lead 8k 20071201</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Lead 8k 20071201.a26" size="8192" crc="b21e0a70" sha1="320c1a95930c8b0d43b888ef5facd344e60f1bf9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269983000edd4f7">
+		<description>Lead 8k 20071203</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Lead 8k 20071203.a26" size="8192" crc="a69c0d63" sha1="9983000edd4f70f61a16d064dbf81e2c0fef9dd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263e821771abf17">
+		<description>lead_16k_rc_20080908</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="lead_16k_rc_20080908.bin" size="16384" crc="848d4059" sha1="3e821771abf172e3391a14fd03fdbae67a6c4bce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c8dee71218914">
+		<description>lead_16k_rc_20080909</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="lead_16k_rc_20080909.bin" size="16384" crc="6d494ece" sha1="c8dee712189145ab8347ade69b31b6689e1e4e7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dcd7ca829ba17">
+		<description>lead_1k 20070124 updated_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k 20070124 updated_2.a26" size="2048" crc="f7a1b266" sha1="dcd7ca829ba17847527bfd5521a293d938abe9df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e1482f507da69">
+		<description>lead_1k 20070124_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k 20070124_2.a26" size="2048" crc="a65b15ff" sha1="e1482f507da69a56cd83765bb5236097675c0d2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2678746285bcc0f">
+		<description>lead_1k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k.a26" size="2048" crc="4f8ea34b" sha1="78746285bcc0f1fb703ab7c35e6d1696f0da969e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b41286d2f6f3e">
+		<description>lead_1k_20070125b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070125b.a26" size="2048" crc="b0c6fbb7" sha1="b41286d2f6f3e3191066aff7e9e0e557af0b1b03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cb40ae5df9c84">
+		<description>lead_1k_20070126_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070126_2.a26" size="2048" crc="37e12892" sha1="cb40ae5df9c84a5a4f0396a99d10183562bedd84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc8985a742b48">
+		<description>lead_1k_20070128_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070128_1.a26" size="2048" crc="bf2f6b4d" sha1="bc8985a742b486c5e7f69a3def8f12c2c4c4e517"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26093ed9c7da6b8">
+		<description>lead_1k_20070202</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070202.a26" size="2048" crc="7e4a7d53" sha1="093ed9c7da6b848f99de547917dc99eeca1fca19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659c06c073dc00">
+		<description>lead_1k_20070207</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070207.a26" size="2048" crc="93c3de7e" sha1="59c06c073dc00a35dee63e999f7e12b2ac68ca5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608f976081b487">
+		<description>lead_1k_20070210</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070210.a26" size="2048" crc="f8ba3a0a" sha1="08f976081b487b49c47c55d1f738f537b9ee574c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263e5fa28efae40">
+		<description>lead_1k_20070210b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070210b.a26" size="2048" crc="3fcd8414" sha1="3e5fa28efae408f0f5d188724077f9f1450a5475"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb89c2f1ede81">
+		<description>lead_1k_20070213</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070213.a26" size="2048" crc="76f28c52" sha1="bb89c2f1ede811313f0659469ff259ef36dd72a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f7907ca55378f">
+		<description>lead_1k_20070218</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lead_1k_20070218.a26" size="2048" crc="3cb2b09b" sha1="f7907ca55378fd0d911a6688a3c3e8e10fabf25b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb853eb69f53b">
+		<description>lead_20070611</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="lead_20070611.a26" size="4096" crc="cd6cc560" sha1="eb853eb69f53bd8859fac937ce746c325f06d975"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e74aac9d5993d">
+		<description>lead_8k_20070624</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070624.a26" size="8192" crc="634ea940" sha1="e74aac9d5993dc031e1e44420536e72b5a9fe03c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f42c45daeab9c">
+		<description>lead_8k_20070626</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070626.a26" size="8192" crc="d687db7c" sha1="f42c45daeab9ccfb955f6562f75f5248961324a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26daa8856e61eb2">
+		<description>lead_8k_20070626_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070626_2.a26" size="8192" crc="df13bda3" sha1="daa8856e61eb2d5a9fe49539cc523b992680b6d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4972efabf7b9">
+		<description>lead_8k_20070629</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070629.a26" size="8192" crc="7fe58371" sha1="b4972efabf7b9e0cc715f180855f63ed0bb88427"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261cebf203e701d">
+		<description>lead_8k_20070630</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070630.a26" size="8192" crc="aeb5c6b3" sha1="1cebf203e701d0f61280c26270db9365aa59a740"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263bf1457e6040b">
+		<description>lead_8k_20070730</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070730.a26" size="8192" crc="8c5002aa" sha1="3bf1457e6040b46da06708e7bdc1f38eaf6913ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26623776f77372a">
+		<description>lead_8k_20070812</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070812.a26" size="8192" crc="68becb8e" sha1="623776f77372afbdcf9b9a85bc7e03ad7a194a81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268e435f2cba46b">
+		<description>lead_8k_20070908</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070908.a26" size="8192" crc="ebb5901c" sha1="8e435f2cba46b311cc1ba0654a559f44eb8179be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26734526eee7049">
+		<description>lead_8k_20070916</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_20070916.a26" size="8192" crc="fb328a28" sha1="734526eee7049d01f814800ea7171220b3b55745"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2602e6c778a6dbd">
+		<description>lead_8k_final</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lead_8k_final.a26" size="8192" crc="7311483c" sha1="02e6c778a6dbda1e6bf55aaeb1db23f57367dee8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a237e39bb6511">
+		<description>Left Scrolling Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Left Scrolling Demo (PD).a26" size="4096" crc="2aa8f530" sha1="a237e39bb6511731de40f36d0ae64d84320f0bb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ef3bc7416a9a8">
+		<description>Legend of Zelda 2600 (Tutankham Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Legend of Zelda 2600 (Tutankham Hack).a26" size="8192" crc="c5baae6f" sha1="ef3bc7416a9a8f1e7c7a9c19f78130cbdb920884"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2637413ee51271c">
+		<description>Legendary Warrior (Forest Hack)_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Legendary Warrior (Forest Hack)_3.a26" size="4096" crc="3ff7a902" sha1="37413ee51271c3e81901dad8d98062503e4dcd3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e817c6a1e5ec9">
+		<description>LEHMAN BROS 0.01 2008 Bill Collins</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="LEHMAN BROS 0.01 2008 Bill Collins.a26" size="8192" crc="0153efcb" sha1="e817c6a1e5ec97b84fe82e82df6c170b4904e7d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2648036495fbf3d">
+		<description>Less Ugly Donkey Kong Junior - Final (Donkey Kong Junior Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Less Ugly Donkey Kong Junior - Final (Donkey Kong Junior Hack).a26" size="8192" crc="5f52fc24" sha1="48036495fbf3d52252fdf529d07c324ae8484e10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d0fadec0f5685">
+		<description>level1music.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="level1music.bas.a26" size="2048" crc="ecb35b22" sha1="d0fadec0f56859274744bee24bd7115c17311970"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ef3fb941cd1a8">
+		<description>level3music.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="level3music.bas.a26" size="4096" crc="0bcf7f2d" sha1="ef3fb941cd1a82e66e5a7ea05127fc4eed0d0fbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2601c8441bf07ba">
+		<description>lflicker2NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lflicker2NTSC.bin" size="8192" crc="b1055029" sha1="01c8441bf07ba703640707ba207e7efb811a72ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26502a5e7f62326">
+		<description>lflicker2PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lflicker2PAL.bin" size="8192" crc="c0430b8d" sha1="502a5e7f62326c8e7583bc29a6d1ad434f432c6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2625cb147628bd6">
+		<description>lflickerNTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lflickerNTSC.bin" size="8192" crc="cf43a01f" sha1="25cb147628bd6544db95f176174263647a6df970"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26685815a2ba3a2">
+		<description>lflickerPAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="lflickerPAL.bin" size="8192" crc="be05fbbb" sha1="685815a2ba3a278f932e7efc9755af0db9cd74f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613bb68c44c134">
+		<description>Library of Doom 1 April 21, 2008 by Chris Read</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Library of Doom 1 April 21, 2008 by Chris Read.a26" size="4096" crc="b194a6e7" sha1="13bb68c44c134c8a21f94f5baa6ca20c2e231bb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261501a80a8608f">
+		<description>Library of Doom 2 April 21, 2008 by Chris Read</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Library of Doom 2 April 21, 2008 by Chris Read.a26" size="4096" crc="9b727493" sha1="1501a80a8608f10ffc41a4aaa63425a5422a9a6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26466a60d22e5c7">
+		<description>Library of Doom 3 April 20, 2008 by Chris Read</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Library of Doom 3 April 20, 2008 by Chris Read.a26" size="4096" crc="f652dd5e" sha1="466a60d22e5c7e2606147fd1ab0333a0c1f96277"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f01acdd5affc9">
+		<description>Library of Doom 4 April 21, 2008 by Chris Read</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Library of Doom 4 April 21, 2008 by Chris Read.a26" size="4096" crc="aa738ea2" sha1="f01acdd5affc9128c9b76e0b1c3467d2004617ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b052211229c82">
+		<description>Library of Doom 5 April 21, 2008 by Chris Read</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Library of Doom 5 April 21, 2008 by Chris Read.a26" size="4096" crc="aa391302" sha1="b052211229c8294fd68b81122796bf3398382495"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a9126757afa9">
+		<description>Lightbulb Lightens, The (Speech) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lightbulb Lightens, The (Speech) (PD).a26" size="4096" crc="edda7054" sha1="9a9126757afa9bc4b45df91331ff84d569c0cabc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f3e51f68c10d">
+		<description>Lilly Adventure (AKA Alice's Abenteuer) (1983) (Starsoft) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lilly Adventure (AKA Alice's Abenteuer) (1983) (Starsoft) [f1] (NTSC by TJ).a26" size="4096" crc="b1b05d65" sha1="4f3e51f68c10d2fa7c4b9764b0cb81fdded0fde4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268ff6b530c0208">
+		<description>Lilly Adventure (Jone Yuan Telephonic Enterprise Co)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lilly Adventure (Jone Yuan Telephonic Enterprise Co).a26" size="4096" crc="c6d30567" sha1="8ff6b530c0208defac18c96a51de95fda7228be8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c2fc630400a44">
+		<description>Lily's Woods WIP_A (Pitfall! Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lily's Woods WIP_A (Pitfall! Hack).a26" size="4096" crc="120e2c36" sha1="c2fc630400a44c67f82ca2a5fe346ed0b09258ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2691123a84090cb">
+		<description>Lily's Woods WIP_B (Pitfall! Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lily's Woods WIP_B (Pitfall! Hack).a26" size="4096" crc="792cd720" sha1="91123a84090cb8bad1888bda19aabc9b574e6e45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265425578808363">
+		<description>Lines Demo (Eckhard Stolberg) (PAL) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Lines Demo (Eckhard Stolberg) (PAL) (PD).a26" size="2048" crc="bbb67165" sha1="5425578808363ee72dbba6195533549679137777"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26339690c0178dc">
+		<description>LinesDemo_PAL_PD_Overdump_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="LinesDemo_PAL_PD_Overdump_2.a26" size="4096" crc="44252040" sha1="339690c0178dcfd5035b23b3e3329c776bf04c73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a2f214e21f139">
+		<description>LIT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="LIT.a26" size="4096" crc="ba9d22b3" sha1="a2f214e21f139fed9ae4f0a9a445ab46eedb565b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267639760248ec3">
+		<description>Little Man Project (2006) (Robert Mundschau) (Protoytype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Little Man Project (2006) (Robert Mundschau) (Protoytype).a26" size="4096" crc="610c52a6" sha1="7639760248ec30868064ce981470f11817c85914"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d12db591a1a2">
+		<description>Little Seven Color Paint Program (John Payson) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Little Seven Color Paint Program (John Payson) [a1].a26" size="2048" crc="ead8d0ae" sha1="5d12db591a1a2ee4bbae1a6a0268128f30561da2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aedcb73522454">
+		<description>Lock 'N' Chase (1982) (Mattel) [b1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lock 'N' Chase (1982) (Mattel) [b1].a26" size="4096" crc="8219f0ca" sha1="aedcb735224549a8cde1855e42d1f3a46880be25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26006fe72ecd20a">
+		<description>Lock 'N' Chase 3 (Lock 'N' Chase Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lock 'N' Chase 3 (Lock 'N' Chase Hack).a26" size="4096" crc="d4361226" sha1="006fe72ecd20abf2e59b65ec495ea8db745ceca2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26941e8f19a9ce0">
+		<description>Lock1 (Lock 'N' Chase Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lock1 (Lock 'N' Chase Hack).a26" size="4096" crc="f2bbe9d6" sha1="941e8f19a9ce0c4d87610545004a1f8a9e7c081c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26096726c50815f">
+		<description>LocoRobo (Alien Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="LocoRobo (Alien Hack).a26" size="4096" crc="7f04ceba" sha1="096726c50815fe4382a98d4149e26ec2d771f3e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641c4a8a271fcf">
+		<description>loderunner2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="loderunner2.bas.a26" size="4096" crc="fff7f24e" sha1="41c4a8a271fcf544736a54c04243734b59a1bec6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e2e77a27bb603">
+		<description>logo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="logo.a26" size="4096" crc="239305b5" sha1="e2e77a27bb603c6b34827cd8f6ee873bb3b4e1e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2609c76ba8a956d">
+		<description>loop cart (alpha version)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="loop cart (alpha version)_1.a26" size="4096" crc="2f02ba8e" sha1="09c76ba8a956dafe2866d7abfbbea6f8922a3c18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fba7ede2012cf">
+		<description>loopcart latest alpha here (updated 6-13-05)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="loopcart latest alpha here (updated 6-13-05)_2.a26" size="4096" crc="315cb177" sha1="fba7ede2012cf487917192f90e05680f134dd7c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268eb09893eabe0">
+		<description>loopcart</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="loopcart.a26" size="4096" crc="7e2fa59f" sha1="8eb09893eabe0631c560e1d578af62e617f77b39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26721514e5c31c8">
+		<description>Lord of The Rings - Fellowship of the Ring by Adam Thornton (Dark Mage Hack) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lord of The Rings - Fellowship of the Ring by Adam Thornton (Dark Mage Hack) (PD).a26" size="4096" crc="9104ca48" sha1="721514e5c31c8f2b30b4a2bf2cda69a810cac75b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696e71c1749735">
+		<description>Lord of the Rings Fences, The (The Lord of the Rings Hack) (2007) (Thomas Jentzsch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Lord of the Rings Fences, The (The Lord of the Rings Hack) (2007) (Thomas Jentzsch).a26" size="8192" crc="59a19d76" sha1="96e71c1749735262520c7ffc6b6cf6ff9953867a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2643575ed97f8a5">
+		<description>Lord of the Rings, The - The Fellowship of the Ring (2002)(Thornton, Adam)(NTSC)[h][Dark Mage]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lord of the Rings, The - The Fellowship of the Ring (2002)(Thornton, Adam)(NTSC)[h][Dark Mage].bin" size="4096" crc="75633f22" sha1="43575ed97f8a585c5bae6fb1a7b2133c87b4d256"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d5f13793368f">
+		<description>Lordi Metalwars 666 V1.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lordi Metalwars 666 V1.0.a26" size="4096" crc="d70061d1" sha1="5d5f13793368f670d2a2379db4b996e51c16ced6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26877d8c4aea761">
+		<description>lordi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="lordi.a26" size="4096" crc="500c06b6" sha1="877d8c4aea76192b7f71f3a62f0805fb0ef52a75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bdae1b7f676ed">
+		<description>lordi2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="lordi2.a26" size="4096" crc="57936502" sha1="bdae1b7f676ed17b1cc213b7634227ca024085c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f057279bb8c3e">
+		<description>Lovezerk Beta 07 by Retrofans (Bezerk Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lovezerk Beta 07 by Retrofans (Bezerk Hack).a26" size="4096" crc="996c369c" sha1="f057279bb8c3e47544c77c74ef21e667c2aa3748"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267bc6fc62fa50f">
+		<description>LS Color Mixer (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="LS Color Mixer (PD).a26" size="4096" crc="44123cb8" sha1="7bc6fc62fa50fed751e55c6b560da4c502b4fa8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26131367a66ce71">
+		<description>LS Color Mixer 20061218 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="LS Color Mixer 20061218 (PD).a26" size="4096" crc="d7cd8593" sha1="131367a66ce71c6e4b409044d2f09e842f77dc3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c4775dd5c57b3">
+		<description>LSTPYR1H</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="LSTPYR1H.a26" size="16384" crc="7ea3097f" sha1="c4775dd5c57b3d3b8e13223eb73add23f5e7f5bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26652cd8ef06a96">
+		<description>luigi's lunchbreak (Final version)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="luigi's lunchbreak (Final version)_1.a26" size="4096" crc="f9ee0702" sha1="652cd8ef06a9612eaaa4d2f963c841c6bdd63811"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f15ae5e99c325">
+		<description>luigi's lunchbreak (WIP)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="luigi's lunchbreak (WIP)_2.a26" size="4096" crc="ef5808fc" sha1="f15ae5e99c3250cbdc50be49941430e3715a52ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca78a32f77a36">
+		<description>Luigi's Lunchbreak binary (new version)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Luigi's Lunchbreak binary (new version)_1.a26" size="4096" crc="086b7cf0" sha1="ca78a32f77a36af224c11fbb8ba69d7042dc81a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca61ce9bb2a5c">
+		<description>Luigi's Lunchbreak_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Luigi's Lunchbreak_1.a26" size="4096" crc="0dde203c" sha1="ca61ce9bb2a5c918d48938e59b639a9701f39ab5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f8cbca9b7a5c6">
+		<description>Lukio Bros (Mario Bros. Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Lukio Bros (Mario Bros. Hack).a26" size="8192" crc="49a2b6a8" sha1="f8cbca9b7a5c6af2878d2a417a15c5bacbb50378"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661873d48c9939">
+		<description>Lumberman by Cracker Jack Productions (Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lumberman by Cracker Jack Productions (Pac-Man Hack).a26" size="4096" crc="cfbf0165" sha1="61873d48c9939bf09adb540a77f08f1f8a7f83a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260cb7020d772ed">
+		<description>Lunar Attack (2002) (Steve Engelhardt) (Z-Tack Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lunar Attack (2002) (Steve Engelhardt) (Z-Tack Hack).a26" size="4096" crc="f0274a58" sha1="0cb7020d772ed9dd564fbb8487a6f10360507a05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d9b0ec5a8f3f0">
+		<description>Lunar Lander (Flashback 2 Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lunar Lander (Flashback 2 Version).a26" size="16384" crc="5134a871" sha1="d9b0ec5a8f3f014db12a96169b091d6bc9c599a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f2da0d2df65a6">
+		<description>Lunar Lander (Flashback 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lunar Lander (Flashback 2).a26" size="16384" crc="b22f2b6e" sha1="f2da0d2df65a661f53e12de513c90d1fcddf4612"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265cf057d587dd9">
+		<description>Lunar Lander - Super kernel demo_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lunar Lander - Super kernel demo_1.a26" size="4096" crc="5ee5ac3a" sha1="5cf057d587dd980dcf9b61ed77cf45d3968fa6c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26196ce67b94c31">
+		<description>Lunar Lander kernel demo0060115 (Supercat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Lunar Lander kernel demo0060115 (Supercat).a26" size="4096" crc="ffe2637d" sha1="196ce67b94c31dc5985920486d5ac5ddda0fa4bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e05ff1a40b1e3">
+		<description>lxa test 1 20040126 (Dennis Debro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lxa test 1 20040126 (Dennis Debro).a26" size="2048" crc="fd9941c1" sha1="e05ff1a40b1e32781c17031899fc40e3bafe954b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260e8831635dcd0">
+		<description>lxa test 2 20040126 (Dennis Debro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="lxa test 2 20040126 (Dennis Debro).a26" size="2048" crc="45cc8035" sha1="0e8831635dcd0250fbb1c55c1d755384a3d4cb73"/>
 			</dataarea>
 		</part>
 	</software>

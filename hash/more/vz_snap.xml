@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 83 -->
+<!-- Number of items in this list = 106 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
+	<software name="vt11c424670e7bd1">
+		<description>Attack of the Killer Tomatoes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="2033">
+				<rom name="Attack of the Killer Tomatoes.vz" size="2033" crc="d324dddd" sha1="1c424670e7bd1889e764c33a681867d7518d62e9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="vt165f42c0d46598">
 		<description>BAT Hunter</description>
 		<year>????</year>
@@ -19,6 +29,226 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="1419">
 				<rom name="Extended VZ Basic V2.5.vz" size="1419" crc="c7cc5d87" sha1="a166085d024c64b1ccc026fefaa39043ade37c65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1bb7920ea928ad">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="9747">
+				<rom name="guntus.vz" size="9747" crc="13b83017" sha1="bb7920ea928ad66dbe05fac34aae36408e7c3a1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10b41f3afaf976">
+		<description>HACK32(del 180)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="23105">
+				<rom name="HACK32(del 180).VZ" size="23105" crc="6897df3e" sha1="0b41f3afaf976a99755f1d9c4f8db553c69cf081"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt185836a18e98a3">
+		<description>HACKERS(del 180)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="23106">
+				<rom name="HACKERS(del 180).VZ" size="23106" crc="a65eb76b" sha1="85836a18e98a3899e79687abe4797523261c3b10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1c096b62259ebd">
+		<description>HANGMAN2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="9828">
+				<rom name="HANGMAN2.VZ" size="9828" crc="f4015cf3" sha1="c096b62259ebd2b33b1893fdc83966aa2508ce0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt19aaabf695755d">
+		<description>HEX-CONS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="814">
+				<rom name="HEX-CONS.VZ" size="814" crc="f0d11869" sha1="9aaabf695755d996cb8a61780e01d74ad657ae29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt152ce4ff57b4b5">
+		<description>Hexidecimal List (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="531">
+				<rom name="Hexidecimal List (19xx)(-).vz" size="531" crc="cf8f99f4" sha1="52ce4ff57b4b5b27eec0174161e6121515294bee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1eeaca99c6e1d2">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7363">
+				<rom name="hopman.vz" size="7363" crc="8b326c3c" sha1="eeaca99c6e1d25cca9fefedfcd7040d6522a2e6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1f0d7ec6553f9c">
+		<description>HTRON_VZ200</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7416">
+				<rom name="HTRON_VZ200.VZ" size="7416" crc="89dfdd6e" sha1="f0d7ec6553f9c8f8f3f962f713969ce69afa7d2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt18fb1e6d181544">
+		<description>HTRON_VZ200_LGFX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7954">
+				<rom name="HTRON_VZ200_LGFX.VZ" size="7954" crc="7b8dffa4" sha1="8fb1e6d181544eb7dc2cd5ff44793ef500509e85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt187cd0e50ac459">
+		<description>hunter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="536">
+				<rom name="hunter.vz" size="536" crc="dcdf8125" sha1="87cd0e50ac4597714033607e52f88cb047806d45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ab09002769404">
+		<description>hurkle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="574">
+				<rom name="hurkle.vz" size="574" crc="a14c725b" sha1="ab09002769404d761063a0aa769c4d227ad6def9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt194c95b051f389">
+		<description>I1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="396">
+				<rom name="I1.VZ" size="396" crc="9b45c848" sha1="94c95b051f3899dd1db2343e5c2fa7326e774c2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt129c0f3b404973">
+		<description>iceberg</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="809">
+				<rom name="iceberg.vz" size="809" crc="d989ff08" sha1="29c0f3b4049733b8a9410a4723c4e5164a2757b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1568f74effe435">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13052">
+				<rom name="impetus.vz" size="13052" crc="0ad7ddfe" sha1="568f74effe43512b3c286af842aab23be2dc84d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1eb347e3b72d22">
+		<description>JUMPCAR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="3069">
+				<rom name="JUMPCAR.VZ" size="3069" crc="ab7ed655" sha1="eb347e3b72d220ca9b5f4529575c345dbf0bdb46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt158a68b87bf824">
+		<description>keyboard</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="260">
+				<rom name="keyboard.vz" size="260" crc="94c53dfc" sha1="58a68b87bf8246e46ce58de87b74c6c08aa642cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1f2329c19d33df">
+		<description>Label (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="562">
+				<rom name="Label (19xx)(-).vz" size="562" crc="262b0d9b" sha1="f2329c19d33df8e3f019dc49edad2aa69ad9e885"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt171428cd1da6dd">
+		<description>Label 2 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="1107">
+				<rom name="Label 2 (19xx)(-).vz" size="1107" crc="d8658b68" sha1="71428cd1da6dd713060f881caa580bbc6359cd85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt19680217d2d3d7">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="6709">
+				<rom name="lift.vz" size="6709" crc="567af474" sha1="9680217d2d3d72315b29b2cd98b4e67bf4680a27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ffc20ed2ff29f">
+		<description>LOST (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="17644">
+				<rom name="LOST (2).VZ" size="17644" crc="3cf774f9" sha1="ffc20ed2ff29ff5943c7559313e7b82f2af3bf84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1f78b4b8d181b2">
+		<description>lost</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="17656">
+				<rom name="lost.vz" size="17656" crc="a3e427b8" sha1="f78b4b8d181b2a6c91c68519842e02b521f1658c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt18e7d415f00a92">
+		<description>lostswd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="9684">
+				<rom name="lostswd.vz" size="9684" crc="254771f5" sha1="8e7d415f00a92149536f96688ea43540e1307ced"/>
 			</dataarea>
 		</part>
 	</software>

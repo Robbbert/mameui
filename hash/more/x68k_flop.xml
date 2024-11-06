@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 413 -->
+<!-- Number of items in this list = 429 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -1529,6 +1529,166 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261824">
 				<rom name="Fortress Attack (1993)(Shibahara A.)(Disk 2 of 2).dim" size="1261824" crc="ebbf3a16" sha1="28db90ef8a65d405243bf7a43a235ad1a0c5938b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e8ba919eccb58">
+		<description>G68K Easy Graphic Tool for X68000 (Sample Pictures disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="G68K Easy Graphic Tool for X68000 (Sample Pictures disk).hdm" size="1261568" crc="e75bfce3" sha1="e8ba919eccb58b4a3c8357e1bc36e828845d73b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68687682aa0e139">
+		<description>G68K Easy Graphic Tool for X68000 (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="G68K Easy Graphic Tool for X68000 (System disk).hdm" size="1261568" crc="392d3750" sha1="687682aa0e139c99736dff826161336dd293bc54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x689f1e4a3d64b38">
+		<description>Gaia Fighter v2.5 (1991)(Hong Kong Project)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gaia Fighter v2.5 (1991)(Hong Kong Project).dim" size="1261824" crc="0d285801" sha1="9f1e4a3d64b382fb6ea455f66faaa60b0bc81df2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684b70b9241eddf">
+		<description>Gaiarm (1991)(Violet Heart Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gaiarm (1991)(Violet Heart Software).dim" size="1261824" crc="cf7c04b4" sha1="4b70b9241eddfd11e297470a75a5140aa0ac4bfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6859085ef58261b">
+		<description>Galseed (1991)(Login)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Galseed (1991)(Login)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="3f8172f5" sha1="59085ef58261b1e129863e267deb1d8744c1ebfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c85ae598d44a3">
+		<description>Galseed (1991)(Login)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Galseed (1991)(Login)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="1caf5275" sha1="c85ae598d44a3517b6f935f0c858f676c9ac179a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e4d45eb5f4b90">
+		<description>Galseed 2 (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Galseed 2 (Disk 1).XDF" size="1261568" crc="5c0349a5" sha1="e4d45eb5f4b90f3a488c017b99455784dc2c0a3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68dd3b16ed4972f">
+		<description>Galseed 2 (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Galseed 2 (Disk 2).XDF" size="1261568" crc="c070a5fa" sha1="dd3b16ed4972f9b2531192ef4003d2c90243f50d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b0c5e32f0e68d">
+		<description>Game.x (PDS version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Game.x (PDS version).dim" size="1261824" crc="5897549d" sha1="b0c5e32f0e68ddf6724d4f81fa741c3cc824f90e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682b9f915bf7bc6">
+		<description>Game.x</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Game.x .dim" size="1261824" crc="72c3bf35" sha1="2b9f915bf7bc64f9511fcbbede17d5f391e49307"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d3eaf33caf784">
+		<description>GCC ni Yoru X680x0 Game Programming (Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="GCC ni Yoru X680x0 Game Programming (Disk A).hdm" size="1261568" crc="1b9109fc" sha1="d3eaf33caf7844884e43fdbba4bc3ee7a76ba67c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684ce2fb2889068">
+		<description>GCC ni Yoru X680x0 Game Programming (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="GCC ni Yoru X680x0 Game Programming (Disk B).hdm" size="1261568" crc="74dd0f9e" sha1="4ce2fb28890687e528ca3eb217f8140fdc518422"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6864ac3cff4a88e">
+		<description>Gedou Densetsu (1993)(MIX)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gedou Densetsu (1993)(MIX)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="d1d576cb" sha1="64ac3cff4a88ea5562c085033991a0728d10971c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680c97b229ca6dd">
+		<description>Gedou Densetsu (1993)(MIX)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gedou Densetsu (1993)(MIX)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="16b67efa" sha1="0c97b229ca6ddb0771ecb0e1d45f060e9ef39d7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68286c2fdf9f6ee">
+		<description>Gedou Retsuden (1993)(MIX)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gedou Retsuden (1993)(MIX)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="ea4c5a76" sha1="286c2fdf9f6ee6fa24d336c46e89208b768de4b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680dfea67496ed2">
+		<description>Gedou Retsuden (1993)(MIX)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gedou Retsuden (1993)(MIX)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="03bbb7e2" sha1="0dfea67496ed28a9172c108d0c52761eeb59a6ac"/>
 			</dataarea>
 		</part>
 	</software>

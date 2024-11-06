@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 195 -->
+<!-- Number of items in this list = 194 -->
 <softwarelist name="zx80_cass" description="zx80_cass loose roms">
 	<software name="zx0e8091d85eaeda">
 		<description>1KCHESSplusKa</description>
@@ -179,16 +179,6 @@
 		<part name="cass1" interface="zx80_cass">
 			<dataarea name="cass" size="661">
 				<rom name="BeanCup(patched).O" size="661" crc="3088ebac" sha1="4f0d69efa1ecca4a1d767120af67e8935fd47e30"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx0da39a3ee5e6b4">
-		<description>blacjack</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx80_cass">
-			<dataarea name="cass" size="0">
-				<rom name="blacjack.o" size="0" crc="00000000" sha1="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
 			</dataarea>
 		</part>
 	</software>

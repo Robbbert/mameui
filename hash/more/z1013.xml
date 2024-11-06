@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 28 -->
+<!-- Number of items in this list = 43 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -259,6 +259,156 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="5088">
 				<rom name="auto_laby(900).z80" size="5088" crc="bab6301c" sha1="095da6d74fe027b192374ce25ee6545741cff67c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1080f9b812b771a">
+		<description>bascoder+demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="22528">
+				<rom name="bascoder+demo.z80" size="22528" crc="4ef10d64" sha1="80f9b812b771afe22bf2b355ce7a6d3af589891b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1006cc1fde8456d">
+		<description>basic 3_75k v4_0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3872">
+				<rom name="basic 3_75k v4_0.z80" size="3872" crc="2e2f4595" sha1="06cc1fde8456d37f62d7f2870ee03b1acb127825"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z105adb2bf1838c4">
+		<description>Basic.C (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10865">
+				<rom name="Basic.C (19xx)(-).z80" size="10865" crc="d45176b6" sha1="5adb2bf1838c431d2f06e0062ba27b5085b53f74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ff870596a6a39">
+		<description>Basicode-3 (1989)(Mainsoft)(beta)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3616">
+				<rom name="Basicode-3 (1989)(Mainsoft)(beta)[a2].z80" size="3616" crc="35a9ccd6" sha1="ff870596a6a39a2e7c2736efbbaff672aadb6723"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1067b671e403959">
+		<description>Basicode-3 (1989)(Mainsoft)(beta)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3616">
+				<rom name="Basicode-3 (1989)(Mainsoft)(beta)[a].z80" size="3616" crc="7dec1de6" sha1="67b671e403959eef4465600eb83e5cb257c9497e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z105370f977be831">
+		<description>Basicode-3 (1989)(Martin Duchrow)[a2][Beta 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10784">
+				<rom name="Basicode-3 (1989)(Martin Duchrow)[a2][Beta 2].z80" size="10784" crc="7fde8dad" sha1="5370f977be8315b9f19d9400f3983ddc763b6d90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ec271a530f1d2">
+		<description>Basicode-3 (1989)(Martin Duchrow)[a][Beta 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10784">
+				<rom name="Basicode-3 (1989)(Martin Duchrow)[a][Beta 2].z80" size="10784" crc="7f3a7093" sha1="ec271a530f1d26ebf9da6a511122c229d42318e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100f30ee4430f5b">
+		<description>basicode_mod</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16416">
+				<rom name="basicode_mod.z80" size="16416" crc="79215939" sha1="0f30ee4430f5b561e5f12fe23fb368c22d1f8f59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10572a7848c494b">
+		<description>basic_comp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10016">
+				<rom name="basic_comp.z80" size="10016" crc="2e816856" sha1="572a7848c494bb89ca5fa7721386196d5f94a2c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100d9df7e16b719">
+		<description>beschr edas t1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="15904">
+				<rom name="beschr edas t1.z80" size="15904" crc="13d8ac7f" sha1="0d9df7e16b7199ba13a09c3363c0bb3a353e3eeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z107b5aa252c3a09">
+		<description>beschr edas t2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="15904">
+				<rom name="beschr edas t2.z80" size="15904" crc="215d6f89" sha1="7b5aa252c3a0972ac814c42b534a8f44fb2754d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100670e667ea03e">
+		<description>Bildschirmtext (19xx)(Peter Schellin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3104">
+				<rom name="Bildschirmtext (19xx)(Peter Schellin).z80" size="3104" crc="bc24d124" sha1="0670e667ea03e0915de1ba6991d6db1582aa4a73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f9373bc9ce371">
+		<description>boerse 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16960">
+				<rom name="boerse 3.z80" size="16960" crc="74709400" sha1="f9373bc9ce371e85f76b026291f6f336d047f01d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108c7f3c7435245">
+		<description>Boulderdash v1.0 (19xx)(Hannes Brandenburg)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="5920">
+				<rom name="Boulderdash v1.0 (19xx)(Hannes Brandenburg)[a2].z80" size="5920" crc="677e5b45" sha1="8c7f3c74352457066b6c1489b16be31d31cbb6b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ab98de058ee97">
+		<description>Boulderdash v1.0 (19xx)(Hannes Brandenburg)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="5920">
+				<rom name="Boulderdash v1.0 (19xx)(Hannes Brandenburg)[a].z80" size="5920" crc="bb3dc39a" sha1="ab98de058ee9706f2b4be71c1127286fe927c02c"/>
 			</dataarea>
 		</part>
 	</software>
