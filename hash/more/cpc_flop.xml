@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7674 -->
+<!-- Number of items in this list = 7675 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -62529,6 +62529,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Sector_Demo.dsk" size="194816" crc="2a41eb20" sha1="21c5d567828997557b6a2f2ecd53a8f19b6031ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc2830bebd17e2a">
+		<description>Self Destruction</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Self Destruction.dsk" size="194816" crc="8f9c6723" sha1="2830bebd17e2aec0c901a9c7eabfda9a9ee677fe"/>
 			</dataarea>
 		</part>
 	</software>

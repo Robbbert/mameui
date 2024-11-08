@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 84 -->
+<!-- Number of items in this list = 100 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -612,6 +612,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p60939fed7e55a94">
+		<description>F-Dot 2 (preview ver.) {m2p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1400">
+				<rom name="F-Dot 2 (preview ver.) {m2p2}.p6" size="1400" crc="6d73f25f" sha1="939fed7e55a94bb70911b78042159d96cc20f99b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6022df40a7da0a9">
+		<description>F-Dot {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3231">
+				<rom name="F-Dot {m1p2}.cas" size="3231" crc="36dcc14b" sha1="22df40a7da0a9a661746e128d60438f1a5983838"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p605084d448b2e46">
+		<description>Flat Puzzle 2 {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="5200">
+				<rom name="Flat Puzzle 2 {m1p2}.p6" size="5200" crc="2675722f" sha1="5084d448b2e4672612cf5d34f587d75aaf825b37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6002e5964e7fe73">
+		<description>Flat Puzzle {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4295">
+				<rom name="Flat Puzzle {m1p2}.p6" size="4295" crc="d8dadc8d" sha1="02e5964e7fe73344958461430f71c0b5ff57878c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6008dcb69297571">
+		<description>Flight Simulator {m2p3}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="2786">
+				<rom name="Flight Simulator {m2p3}.cas" size="2786" crc="593e4272" sha1="08dcb69297571d811718fd54caead9dbac2f53b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p600d4a26ad87e64">
+		<description>Fruit Labyrinth (2006 ver.) {m2p2}[alter10]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="6701">
+				<rom name="Fruit Labyrinth (2006 ver.) {m2p2}[alter10].p6" size="6701" crc="234a6b85" sha1="0d4a26ad87e64070230566c8d6692a195b4e3504"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p608185e51b24bd7">
+		<description>Fruit Labyrinth {m2p2}[alter10]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="6701">
+				<rom name="Fruit Labyrinth {m2p2}[alter10].p6" size="6701" crc="32f1833a" sha1="8185e51b24bd7cff6e6dfead5c83b2855d4d3874"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60875aa64d5c32a">
+		<description>Graphic Maze (graphic mode 2) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="957">
+				<rom name="Graphic Maze (graphic mode 2) {m1p2}.p6" size="957" crc="8ef5cd7e" sha1="875aa64d5c32a2f3c748406c6150b34eff24f110"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60952a0c3e4ccd3">
+		<description>Graphic Maze (graphic mode 4) [Alt 1] {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="702">
+				<rom name="Graphic Maze (graphic mode 4) [Alt 1] {m1p2}.p6" size="702" crc="c2cd5794" sha1="952a0c3e4ccd3478d9f7bde90a3014b0b4959bd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6017348ad542548">
+		<description>Graphic Maze (graphic mode 4) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="667">
+				<rom name="Graphic Maze (graphic mode 4) {m1p2}.p6" size="667" crc="f34443b3" sha1="17348ad542548a2d0686121db10bb812a742c675"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p60b0a6a142cf9c2">
 		<description>Graphic_Test</description>
 		<year>????</year>
@@ -619,6 +719,66 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="95">
 				<rom name="Graphic_Test.p6" size="95" crc="95598304" sha1="b0a6a142cf9c2485b1375deb2d61077f1d39bc0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60d28c619f3d5fd">
+		<description>Gundam vs. Dopp-tai {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1795">
+				<rom name="Gundam vs. Dopp-tai {m1p1}.cas" size="1795" crc="77574733" sha1="d28c619f3d5fde2f4a492f9018c745ed51162e6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60348da165cf613">
+		<description>Hamburger Shop {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3538">
+				<rom name="Hamburger Shop {m1p2}.cas" size="3538" crc="61742201" sha1="348da165cf613ba60fd68958b5b5d7be8b71095e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60bbde38ac56e00">
+		<description>Hanabi {m1p2}[del220]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1577">
+				<rom name="Hanabi {m1p2}[del220].p6" size="1577" crc="3a5487bf" sha1="bbde38ac56e00d2eb6f9baa3a7301a09b4682d42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p602a5d2e148afff">
+		<description>Harapeko Hebi-san {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="2085">
+				<rom name="Harapeko Hebi-san {m1p2}.p6" size="2085" crc="134ba104" sha1="2a5d2e148afff0955ebd698e13bd2a2ca42537fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6059211e17ffc3e">
+		<description>Hitofudegaki Game {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="2905">
+				<rom name="Hitofudegaki Game {m1p2}.p6" size="2905" crc="b88af541" sha1="59211e17ffc3e86f030c5da7d33abe16eb2e226a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60df470de4f4df0">
+		<description>Holy Sword {m2p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="18167">
+				<rom name="Holy Sword {m2p2}.cas" size="18167" crc="6a84aa38" sha1="df470de4f4df0f5b935877500f7b8d72c359a4c8"/>
 			</dataarea>
 		</part>
 	</software>

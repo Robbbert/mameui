@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 113 -->
+<!-- Number of items in this list = 143 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -979,6 +979,306 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="15872">
 				<rom name="Duesen-Kahle (1987)(Raimo Bunsen)[4].kcc" size="15872" crc="7228a44d" sha1="f26749b9271b030091c3bb08af950dd161bb3801"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8590fa37b601c8">
+		<description>EDAS v1.2 (19xx)(-)[RAM-Version][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5248">
+				<rom name="EDAS v1.2 (19xx)(-)[RAM-Version][3].kcc" size="5248" crc="8a967846" sha1="590fa37b601c804b3230c78c01bb1aa0b39c2349"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86a0d20c7aa498">
+		<description>Edipic v3.3 (1990)(R. Kaestner, W. Schuetze)[64K][Loader][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="Edipic v3.3 (1990)(R. Kaestner, W. Schuetze)[64K][Loader][4].kcc" size="1664" crc="5df2f023" sha1="6a0d20c7aa498e828c3fb58e26e548b35bb4d012"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc859407369c0ea3">
+		<description>einarmige Bandit, Der (1991)(Juergen Ziergiebel)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12544">
+				<rom name="einarmige Bandit, Der (1991)(Juergen Ziergiebel)[4].kcc" size="12544" crc="4968efa8" sha1="59407369c0ea3328e031dce46aa19b61666910b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8455ae806766fb">
+		<description>Elisa (1990)(REM - Das Computermagazin)[Vic - Interview][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11008">
+				<rom name="Elisa (1990)(REM - Das Computermagazin)[Vic - Interview][4].kcc" size="11008" crc="b1d2124c" sha1="455ae806766fb32de1219f13432d03a8a17ab6f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc80bf316b3a0bc1">
+		<description>Elite Planet Browser_KC85_2-5[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14848">
+				<rom name="Elite Planet Browser_KC85_2-5[4].KCC" size="14848" crc="89807ec0" sha1="0bf316b3a0bc1b04c8d28090b9809a107d30897c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86adbd2bed640f">
+		<description>Eliza (19xx)(-)(en)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14976">
+				<rom name="Eliza (19xx)(-)(en)[4].kcc" size="14976" crc="e02b8cc6" sha1="6adbd2bed640f554a1ff99623e3526eac580c723"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c51ab20e913dc">
+		<description>English for you (1988)(H. Knablowski)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6912">
+				<rom name="English for you (1988)(H. Knablowski)[3].kcc" size="6912" crc="9be1a5b7" sha1="c51ab20e913dc003bd8bf88b2ef0134bf59156d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8671727841ea49">
+		<description>Enterprise (1985)(B. Boettner)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="20736">
+				<rom name="Enterprise (1985)(B. Boettner)[4].kcc" size="20736" crc="e0541d0d" sha1="671727841ea49df535173af8d5ee5e392b076eb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d58be527c002a">
+		<description>EPROM-Brand v1.2 Plus (19xx)(H. Haftmann)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3584">
+				<rom name="EPROM-Brand v1.2 Plus (19xx)(H. Haftmann)[3].kcc" size="3584" crc="e0f05cbd" sha1="d58be527c002ae5edf5983261f4e4a4ee2369214"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e65eeb8382aee">
+		<description>EPROM-Brand v1.3 (19xx)(H. Haftmann)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4096">
+				<rom name="EPROM-Brand v1.3 (19xx)(H. Haftmann)[3].kcc" size="4096" crc="34319ab8" sha1="e65eeb8382aeeb3189e6d6ccb72d9a006317a7c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8099d40937e90b">
+		<description>EPROM-Programmierer 2716-27512 (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="EPROM-Programmierer 2716-27512 (19xx)(-)[4].kcc" size="1664" crc="d4be3a09" sha1="099d40937e90bb48ea5f67ca4ac689607021f31a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc821de6cf03deb3">
+		<description>Eule (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2816">
+				<rom name="Eule (19xx)(-)[4].kcc" size="2816" crc="53a6af8c" sha1="21de6cf03deb3d0b83202bacb2bf1c0c5fdfa004"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8fd7437f71af8f">
+		<description>Extra RAM (19xx)(-)[need M011][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="384">
+				<rom name="Extra RAM (19xx)(-)[need M011][4].kcc" size="384" crc="d559d079" sha1="fd7437f71af8f6f6f7c61b19581fb3437e6c050d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a67498fdab740">
+		<description>Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9600">
+				<rom name="Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a2][4].kcc" size="9600" crc="73f028d8" sha1="a67498fdab7407ea5f17a564903613a3d8673419"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a4a0af5a46ec9">
+		<description>Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a3][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9600">
+				<rom name="Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a3][4].kcc" size="9600" crc="818a7ac2" sha1="a4a0af5a46ec9b6a9db84d39672e91282134f952"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8125d6f72f0cd6">
+		<description>Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a4][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9600">
+				<rom name="Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a4][4].kcc" size="9600" crc="e6b9350b" sha1="125d6f72f0cd68472aded0b842086979eb391eda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8516acd1723910">
+		<description>Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9600">
+				<rom name="Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a][4].kcc" size="9600" crc="f80be1ab" sha1="516acd17239104c60da5d192fcb10733398decc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8fec322da8927e">
+		<description>Farb-Fraktal (1991)(Mario Leubner)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13440">
+				<rom name="Farb-Fraktal (1991)(Mario Leubner)[4].kcc" size="13440" crc="3d420f6e" sha1="fec322da8927ead3676dd5e39cdfa89f0f7dc9ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ebf0ca60a58f2">
+		<description>Fastcopy v1.0 (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="Fastcopy v1.0 (19xx)(-)[3].kcc" size="1664" crc="12e6580e" sha1="ebf0ca60a58f2f475e82dbfa56a9c16aed4cac97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86b23433df50b3">
+		<description>FFT2[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="FFT2[4].kcc" size="1152" crc="8eac8ec8" sha1="6b23433df50b3f9ab4a0edd1facb51c128daca13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89bc78f62ef33e">
+		<description>FFT[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="FFT[4].kcc" size="1152" crc="648bd662" sha1="9bc78f62ef33e799b4e58dcdec34862b786813e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b1dfeaee52c59">
+		<description>Find (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="768">
+				<rom name="Find (19xx)(-)[4].kcc" size="768" crc="1d410a83" sha1="b1dfeaee52c59efc93b6d09c2c63a6c1e9aa4ebe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8874f7b419fd71">
+		<description>Flatter (19xx)(EJ Soft)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="Flatter (19xx)(EJ Soft)[3].kcc" size="3968" crc="5e315cfb" sha1="874f7b419fd7185ef25513f52ddb16c6b73fdb04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d01486483149b">
+		<description>Flatter (19xx)(EJ Soft)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="Flatter (19xx)(EJ Soft)[a2][4].kcc" size="3968" crc="ae7112eb" sha1="d01486483149bec8a13d65e23b6ed821772093c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8214e4e4d95a55">
+		<description>Flatter (19xx)(EJ Soft)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="Flatter (19xx)(EJ Soft)[a][4].kcc" size="3968" crc="0728cc68" sha1="214e4e4d95a55806da40b0599b7e95884590ee53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8eda353f871d7b">
+		<description>Flipper (19xx)(RJ-Soft - Ralf Jakob)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8576">
+				<rom name="Flipper (19xx)(RJ-Soft - Ralf Jakob)[a2][4].kcc" size="8576" crc="248dd94f" sha1="eda353f871d7b90ce5f02581525053c863cb396e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8093e58205784f">
+		<description>Flipper (19xx)(RJ-Soft - Ralf Jakob)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8576">
+				<rom name="Flipper (19xx)(RJ-Soft - Ralf Jakob)[a][4].kcc" size="8576" crc="120e4c7a" sha1="093e58205784f62470f62230c24e86a91e2f4a50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8266eb406f0ee1">
+		<description>Frequenztest fuer BASICODE (19xx)(A. Zierott)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2432">
+				<rom name="Frequenztest fuer BASICODE (19xx)(A. Zierott)[3].kcc" size="2432" crc="c5c5c764" sha1="266eb406f0ee1228df6d1e54f5360b6fe268279d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a11871ff7d114">
+		<description>Frosch (1986)(VEB Mikroelektronik)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6144">
+				<rom name="Frosch (1986)(VEB Mikroelektronik)[4].kcc" size="6144" crc="b8c62b13" sha1="a11871ff7d11498d869035d3caeba1803ccbcd12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88a159fae3ca3a">
+		<description>Fussball Manager (19xx)(-)[b][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="32000">
+				<rom name="Fussball Manager (19xx)(-)[b][4].kcc" size="32000" crc="3ed95a08" sha1="8a159fae3ca3acfeab991f1cedd1a7f7c0d51b4a"/>
 			</dataarea>
 		</part>
 	</software>

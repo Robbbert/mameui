@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 622 -->
+<!-- Number of items in this list = 629 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -242,6 +242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxb72b0ea620804">
+		<description>Alien Escape EN (2022)(Physical Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Alien Escape EN (2022)(Physical Dreams).rom" size="49152" crc="ac6a6c30" sha1="b72b0ea620804186631b0686a58a94c927403134"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxfdcf1c8edc026">
 		<description>Alien Escape ES (2022)(Physical Dreams)</description>
 		<year>????</year>
@@ -249,6 +259,36 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="86016">
 				<rom name="Alien Escape ES (2022)(Physical Dreams).rom" size="86016" crc="ad406e52" sha1="fdcf1c8edc0266c65644e548e13b1b3241448dc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe12215bce413e">
+		<description>Alien Escape ES (2023)(Physical Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Alien Escape ES (2023)(Physical Dreams).rom" size="49152" crc="c6991b1f" sha1="e12215bce413ee1ff770fdcdeda282729ee9109c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx3012d4c7c3e80">
+		<description>Alien Escape IT (2022)(Physical Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Alien Escape IT (2022)(Physical Dreams).rom" size="49152" crc="a9b02956" sha1="3012d4c7c3e806331264084b10ffcdc078377ced"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1b7d50ff53152">
+		<description>Alien Escape JP (2022)(Physical Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Alien Escape JP (2022)(Physical Dreams).rom" size="49152" crc="49120e56" sha1="1b7d50ff53152bf74ad40fb419ed6bf804fd378f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1192,6 +1232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx8d12869633024">
+		<description>Cornelius in the Forbidden Zone EN (2023)(Physical Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Cornelius in the Forbidden Zone EN (2023)(Physical Dreams).rom" size="49152" crc="a0e98b45" sha1="8d1286963302417febf4be004f1618ed2aec6aef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxd72cd7e492895">
 		<description>Cornelius in the Forbidden Zone ES (2023)(Physical Dreams)</description>
 		<year>????</year>
@@ -1199,6 +1249,26 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Cornelius in the Forbidden Zone ES (2023)(Physical Dreams).rom" size="49152" crc="86ff7f06" sha1="d72cd7e4928954f752efce75ba3090b38bf1b1e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4b687b8727a34">
+		<description>Cornelius in the Forbidden Zone FR (2023)(Physical Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Cornelius in the Forbidden Zone FR (2023)(Physical Dreams).rom" size="49152" crc="68d06be5" sha1="4b687b8727a34d1d8943950b1cbe766fc4fb39be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2e98cbabcf176">
+		<description>Cornelius in the Forbidden Zone IT (2023)(Physical Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Cornelius in the Forbidden Zone IT (2023)(Physical Dreams).rom" size="49152" crc="d8571230" sha1="2e98cbabcf1763c797186c2136ad50bf3b544802"/>
 			</dataarea>
 		</part>
 	</software>

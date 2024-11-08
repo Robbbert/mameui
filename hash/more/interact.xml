@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 127 -->
+<!-- Number of items in this list = 132 -->
 <softwarelist name="interact" description="interact loose roms">
 	<software name="intb28c3cd61db34">
 		<description>10000[hr+]</description>
@@ -352,6 +352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int7d78342cfc283">
+		<description>centraledannonce_part2[int]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7632">
+				<rom name="centraledannonce_part2[int].k7" size="7632" crc="e5935ac8" sha1="7d78342cfc28370f0ae6c59b05fc107bd0461460"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="intc9cb5e1769d10">
 		<description>Chain Reaction (1983)((Micro Video)</description>
 		<year>????</year>
@@ -459,6 +469,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="9308">
 				<rom name="Depth Charge (1981)(Micro Video).k7" size="9308" crc="762f4794" sha1="bd06426e7b44da3753849fa460c32eefe100596d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intcd5be91951acc">
+		<description>dogfight[int]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8316">
+				<rom name="dogfight[int].k7" size="8316" crc="852576ea" sha1="cd5be91951acc14c92537a0baf5f414f19396f9b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -772,6 +792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int2e678b34df9fb">
+		<description>lemurdebriques[int]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="7767">
+				<rom name="lemurdebriques[int].k7" size="7767" crc="6a5bfa4c" sha1="2e678b34df9fb61b1b37c55785d73c59adcce6f6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int559ff9288cb9d">
 		<description>Life (1980)(Micro Video)</description>
 		<year>????</year>
@@ -1042,6 +1072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int361d4e6cb5f4e">
+		<description>reglageazimut[int]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="6803">
+				<rom name="reglageazimut[int].k7" size="6803" crc="91abdd3c" sha1="361d4e6cb5f4ea04a6d63b887c362db5a69e5fae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="inta0552157b7c98">
 		<description>RS232 Basic (Micro Video)</description>
 		<year>????</year>
@@ -1139,6 +1179,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="32392">
 				<rom name="Superbowl (1980)(Superbowl).k7" size="32392" crc="0071cb42" sha1="99e2f570391241e30a03252bfa9364c13b8d51cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intab9093d7e536d">
+		<description>superinfo[int]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9356">
+				<rom name="superinfo[int].k7" size="9356" crc="0957668b" sha1="ab9093d7e536d37c5ef681b81766520feca8be2b"/>
 			</dataarea>
 		</part>
 	</software>

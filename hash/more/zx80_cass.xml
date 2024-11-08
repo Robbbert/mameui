@@ -442,6 +442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx0010db3fc7ef44">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx80_cass">
+			<dataarea name="cass" size="11517">
+				<rom name="Elite Planet Browser.O" size="11517" crc="6e1e99de" sha1="010db3fc7ef44bc80f7a09755e3711f083953cf4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx086fe683eac04c">
 		<description>eliza</description>
 		<year>????</year>
@@ -479,16 +489,6 @@
 		<part name="cass1" interface="zx80_cass">
 			<dataarea name="cass" size="312118">
 				<rom name="engulf_ZX80.wav" size="312118" crc="38e8b0c1" sha1="11e41831c552022e8a20265efb811d79a9717824"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx0010db3fc7ef44">
-		<description>epb_ZX80</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx80_cass">
-			<dataarea name="cass" size="11517">
-				<rom name="epb_ZX80.O" size="11517" crc="6e1e99de" sha1="010db3fc7ef44bc80f7a09755e3711f083953cf4"/>
 			</dataarea>
 		</part>
 	</software>

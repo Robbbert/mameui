@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 26 -->
+<!-- Number of items in this list = 27 -->
 <softwarelist name="pc8001mk2_flop" description="pc8001mk2_flop loose roms">
+	<software name="p8007de83b9403db">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="antiair.d88" size="348848" crc="c033d53e" sha1="07de83b9403db003ab28c9328e93ab307f0a557b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p8056c50652bbef8">
 		<description>AS</description>
 		<year>????</year>

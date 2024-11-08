@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 43 -->
+<!-- Number of items in this list = 63 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -409,6 +409,206 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="5920">
 				<rom name="Boulderdash v1.0 (19xx)(Hannes Brandenburg)[a].z80" size="5920" crc="bb3dc39a" sha1="ab98de058ee9706f2b4be71c1127286fe927c02c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10b210123ab468a">
+		<description>call_rst_a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="288">
+				<rom name="call_rst_a.z80" size="288" crc="50a9081c" sha1="b210123ab468a544fdea3484ed799b3acf25d5a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1042ff5f3181099">
+		<description>call_rst_f</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="288">
+				<rom name="call_rst_f.z80" size="288" crc="4625ad05" sha1="42ff5f3181099226f41e369afcafaa63677731b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10b45ef68e7507e">
+		<description>caps min</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="14912">
+				<rom name="caps min.z80" size="14912" crc="44a1d378" sha1="b45ef68e7507ed9a8d8e9314e421da35c60002bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10e1cdc558ca438">
+		<description>ccl epromer_pio</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="ccl epromer_pio.z80" size="2080" crc="b5070ba6" sha1="e1cdc558ca438b40cc7574b0b682669f9f587ce0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10cd0884a0d0227">
+		<description>Chess-Master (19xx)(R. Brosig)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="13185">
+				<rom name="Chess-Master (19xx)(R. Brosig)[a2].z80" size="13185" crc="b5781c42" sha1="cd0884a0d0227fdb3aa9c76d623ea600ca893d86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104b8b37cd58360">
+		<description>Chess-Master (19xx)(R. Brosig)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="13216">
+				<rom name="Chess-Master (19xx)(R. Brosig)[a3].z80" size="13216" crc="c7794212" sha1="4b8b37cd583602fce0115dd4c6533536d8b1540b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z109f88e1566b0a8">
+		<description>Chess-Master (19xx)(R. Brosig)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="13216">
+				<rom name="Chess-Master (19xx)(R. Brosig)[a].z80" size="13216" crc="0c832eaf" sha1="9f88e1566b0a8d82c724c47752bc6a4f0a3ccfc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z109a48cfd61ce28">
+		<description>Codieren & Decodieren (19xx)(D. Ambras)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="448">
+				<rom name="Codieren & Decodieren (19xx)(D. Ambras).z80" size="448" crc="fd6217cd" sha1="9a48cfd61ce289f516622999ac1df43d40ee388e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104f3fbc1ef6d78">
+		<description>COMP-OSZI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="960">
+				<rom name="COMP-OSZI.z80" size="960" crc="3faac48a" sha1="4f3fbc1ef6d7854e2ae753bb33fffcc1ae4e2a1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d0a0e91ee55f9">
+		<description>Compact (1986)(EH-Soft, SCI)[4-in-one]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="11808">
+				<rom name="Compact (1986)(EH-Soft, SCI)[4-in-one].z80" size="11808" crc="0ba835b7" sha1="d0a0e91ee55f9d0939c8153f6d78aa979202d4b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1054de34962ca0f">
+		<description>Cowboy (19xx)(D. Ambras)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1056">
+				<rom name="Cowboy (19xx)(D. Ambras).z80" size="1056" crc="e4b10f0d" sha1="54de34962ca0f54de08a9c5193e51caf878c2e0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1093aa53f000cc4">
+		<description>CP-M v2.2 (19xx)(Digital Research Inc)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7200">
+				<rom name="CP-M v2.2 (19xx)(Digital Research Inc)[a2].z80" size="7200" crc="580684ee" sha1="93aa53f000cc41a5207bff8e3bdfc5d8a2c8d78e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d2379b42a1ee2">
+		<description>CRC-D 7D (19xx)(D. Ambras)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="557">
+				<rom name="CRC-D 7D (19xx)(D. Ambras).z80" size="557" crc="d1518e54" sha1="d2379b42a1ee2130be5885c109352130b9f3b277"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d512fe9c9527a">
+		<description>CRC-Disp (19xx)(D. Ambras)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="400">
+				<rom name="CRC-Disp (19xx)(D. Ambras).z80" size="400" crc="6f61ecda" sha1="d512fe9c9527acd3863d0d60a7779d6dbcd7dd6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10625cd35d2e906">
+		<description>Cyrus Schacheuropameister 1981 (1987)(SCI)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16256">
+				<rom name="Cyrus Schacheuropameister 1981 (1987)(SCI)[a2].z80" size="16256" crc="597d27f7" sha1="625cd35d2e9065c8b8146d619c4775b9b38132b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z109bb32ee55dee5">
+		<description>Cyrus Schacheuropameister 1981 (1987)(SCI)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16640">
+				<rom name="Cyrus Schacheuropameister 1981 (1987)(SCI)[a3].z80" size="16640" crc="a0773559" sha1="9bb32ee55dee5ff35d356283011b29779787c6bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z101b4d2a3352846">
+		<description>Cyrus Schacheuropameister 1981 (1987)(SCI)[a4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16672">
+				<rom name="Cyrus Schacheuropameister 1981 (1987)(SCI)[a4].z80" size="16672" crc="07aa7884" sha1="1b4d2a33528464cf37588cbe91519f42c9e070b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104f9eec203acf3">
+		<description>Cyrus Schacheuropameister 1981 (1987)(SCI)[a5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16672">
+				<rom name="Cyrus Schacheuropameister 1981 (1987)(SCI)[a5].z80" size="16672" crc="b9beb3de" sha1="4f9eec203acf32ec049372de969f3e806e39d08b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z107f8bee71bde05">
+		<description>Cyrus Schacheuropameister 1981 (1987)(SCI)[a]_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16576">
+				<rom name="Cyrus Schacheuropameister 1981 (1987)(SCI)[a]_2.z80" size="16576" crc="544d5ccd" sha1="7f8bee71bde056ba9587dae0a3aef7c047884d5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104186dcbdd4b03">
+		<description>cyrus v_2_dt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16672">
+				<rom name="cyrus v_2_dt.z80" size="16672" crc="10c81929" sha1="4186dcbdd4b03cbac56a32e28356e70b2bd1ed53"/>
 			</dataarea>
 		</part>
 	</software>
