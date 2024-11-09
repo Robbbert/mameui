@@ -529,6 +529,9 @@ void SetSelectedSoftware(int driver_index, string opt_name, const char *software
 	else
 	{
 		// Loose software, we write the filename to the requested image device
+		char endch = opt_name.back();
+		if (endch > '9')
+			opt_name += "1";
 		const char *s = opt_name.c_str();
 
 		printf("SetSelectedSoftware(): slot=%s driver=%s software='%s'\n", s, driver_list::driver(driver_index).name, software);

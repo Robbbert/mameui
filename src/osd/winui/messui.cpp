@@ -929,17 +929,19 @@ void MessUpdateSoftwareList(void)
 // Places the specified image in the specified slot - MUST be a valid filename, not blank
 static void MessSpecifyImage(int drvindex, const device_image_interface *dev, LPCSTR pszFilename)
 {
+	printf("MessSpecifyImage: Begin\n");fflush(stdout);
 	if (dev)
 	{
 		SetSelectedSoftware(drvindex, dev->instance_name(), pszFilename);
 		return;
 	}
 
+	// dev is null now
 	string opt_name;
 	device_image_interface* img = 0;
 
 	if (LOG_SOFTWARE)
-		printf("MessSpecifyImage(): device=%p pszFilename='%s'\n", dev, pszFilename);
+		printf("MessSpecifyImage: pszFilename='%s'\n", pszFilename);
 
 	// identify the file extension
 	const char *file_extension = strrchr(pszFilename, '.'); // find last period
@@ -971,6 +973,7 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *dev, LP
 		if (LOG_SOFTWARE)
 			printf("MessSpecifyImage(): Failed to place image '%s'\n", pszFilename);
 	}
+	printf("MessSpecifyImage: End\n");fflush(stdout);
 }
 
 
@@ -1035,7 +1038,7 @@ static void MessRefreshPicker(void)
 		string opt_name = dev.instance_name(); // get name of device slot
 		s = o.value(opt_name.c_str()); // get name of software in the slot
 
-		if (s[0]) // if software is loaded
+		if (s) // if software is loaded
 		{
 			i = SoftwarePicker_LookupIndex(hwndSoftware, s); // see if its in the picker
 			if (i < 0) // not there

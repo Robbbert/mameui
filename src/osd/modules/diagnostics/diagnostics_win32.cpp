@@ -978,7 +978,8 @@ private:
 			{ 0,                                "UNKNOWN EXCEPTION" }
 		};
 		static int already_hit = 0;
-		int i;
+		int i = 0;
+		printf("START OF CRASH DUMP\n");fflush(stdout);
 
 		// if we're hitting this recursively, just exit
 		if (already_hit)
@@ -994,103 +995,103 @@ private:
 				break;
 
 		// print the exception type and address
-		fprintf(stderr, "\n-----------------------------------------------------\n");
+		printf( "\n-----------------------------------------------------\n");fflush(stdout);
 
 		auto diagnostics = downcast<diagnostics_win32 *>(get_instance());
 
-		fprintf(stderr, "Exception at EIP=%p%s: %s\n", info->ExceptionRecord->ExceptionAddress,
-			diagnostics->m_symbols->symbol_for_address((uintptr_t)info->ExceptionRecord->ExceptionAddress), exception_table[i].string);
+		printf( "Exception at EIP=%p%s: %s\n", info->ExceptionRecord->ExceptionAddress,
+			diagnostics->m_symbols->symbol_for_address((uintptr_t)info->ExceptionRecord->ExceptionAddress), exception_table[i].string);fflush(stdout);
 
 		// for access violations, print more info
 		if (info->ExceptionRecord->ExceptionCode == EXCEPTION_ACCESS_VIOLATION)
-			fprintf(stderr, "While attempting to %s memory at %p\n",
+			printf( "While attempting to %s memory at %p\n",
 				info->ExceptionRecord->ExceptionInformation[0] ? "write" : "read",
-				(void *)info->ExceptionRecord->ExceptionInformation[1]);
+				(void *)info->ExceptionRecord->ExceptionInformation[1]);fflush(stdout);
 
 		// print the state of the CPU
-		fprintf(stderr, "-----------------------------------------------------\n");
+		printf( "-----------------------------------------------------\n");fflush(stdout);
 #if defined(__x86_64__) || defined(_M_X64)
-		fprintf(stderr, "RAX=%p RBX=%p RCX=%p RDX=%p\n",
+		printf( "RAX=%p RBX=%p RCX=%p RDX=%p\n",
 			(void *)info->ContextRecord->Rax,
 			(void *)info->ContextRecord->Rbx,
 			(void *)info->ContextRecord->Rcx,
-			(void *)info->ContextRecord->Rdx);
-		fprintf(stderr, "RSI=%p RDI=%p RBP=%p RSP=%p\n",
+			(void *)info->ContextRecord->Rdx);fflush(stdout);
+		printf( "RSI=%p RDI=%p RBP=%p RSP=%p\n",
 			(void *)info->ContextRecord->Rsi,
 			(void *)info->ContextRecord->Rdi,
 			(void *)info->ContextRecord->Rbp,
-			(void *)info->ContextRecord->Rsp);
-		fprintf(stderr, " R8=%p  R9=%p R10=%p R11=%p\n",
+			(void *)info->ContextRecord->Rsp);fflush(stdout);
+		printf( " R8=%p  R9=%p R10=%p R11=%p\n",
 			(void *)info->ContextRecord->R8,
 			(void *)info->ContextRecord->R9,
 			(void *)info->ContextRecord->R10,
-			(void *)info->ContextRecord->R11);
-		fprintf(stderr, "R12=%p R13=%p R14=%p R15=%p\n",
+			(void *)info->ContextRecord->R11);fflush(stdout);
+		printf( "R12=%p R13=%p R14=%p R15=%p\n",
 			(void *)info->ContextRecord->R12,
 			(void *)info->ContextRecord->R13,
 			(void *)info->ContextRecord->R14,
-			(void *)info->ContextRecord->R15);
+			(void *)info->ContextRecord->R15);fflush(stdout);
 #elif defined(__i386__) || defined(_M_IX86)
-		fprintf(stderr, "EAX=%p EBX=%p ECX=%p EDX=%p\n",
+		printf( "EAX=%p EBX=%p ECX=%p EDX=%p\n",
 			(void *)info->ContextRecord->Eax,
 			(void *)info->ContextRecord->Ebx,
 			(void *)info->ContextRecord->Ecx,
-			(void *)info->ContextRecord->Edx);
-		fprintf(stderr, "ESI=%p EDI=%p EBP=%p ESP=%p\n",
+			(void *)info->ContextRecord->Edx);fflush(stdout);
+		printf( "ESI=%p EDI=%p EBP=%p ESP=%p\n",
 			(void *)info->ContextRecord->Esi,
 			(void *)info->ContextRecord->Edi,
 			(void *)info->ContextRecord->Ebp,
-			(void *)info->ContextRecord->Esp);
+			(void *)info->ContextRecord->Esp);fflush(stdout);
 #elif defined(__aarch64__) || defined(_M_ARM64)
-		fprintf(stderr, " X0=%p  X1=%p  X2=%p  X3=%p\n",
+		printf( " X0=%p  X1=%p  X2=%p  X3=%p\n",
 			(void *)info->ContextRecord->X0,
 			(void *)info->ContextRecord->X1,
 			(void *)info->ContextRecord->X2,
-			(void *)info->ContextRecord->X3);
-		fprintf(stderr, " X4=%p  X5=%p  X6=%p  X7=%p\n",
+			(void *)info->ContextRecord->X3);fflush(stdout);
+		printf( " X4=%p  X5=%p  X6=%p  X7=%p\n",
 			(void *)info->ContextRecord->X4,
 			(void *)info->ContextRecord->X5,
 			(void *)info->ContextRecord->X6,
-			(void *)info->ContextRecord->X7);
-		fprintf(stderr, " X8=%p  X9=%p X10=%p X11=%p\n",
+			(void *)info->ContextRecord->X7);fflush(stdout);
+		printf( " X8=%p  X9=%p X10=%p X11=%p\n",
 			(void *)info->ContextRecord->X8,
 			(void *)info->ContextRecord->X9,
 			(void *)info->ContextRecord->X10,
-			(void *)info->ContextRecord->X11);
-		fprintf(stderr, "X12=%p X13=%p X14=%p X15=%p\n",
+			(void *)info->ContextRecord->X11);fflush(stdout);
+		printf( "X12=%p X13=%p X14=%p X15=%p\n",
 			(void *)info->ContextRecord->X12,
 			(void *)info->ContextRecord->X13,
 			(void *)info->ContextRecord->X14,
-			(void *)info->ContextRecord->X15);
-		fprintf(stderr, "X16=%p X17=%p X18=%p X19=%p\n",
+			(void *)info->ContextRecord->X15);fflush(stdout);
+		printf( "X16=%p X17=%p X18=%p X19=%p\n",
 			(void *)info->ContextRecord->X16,
 			(void *)info->ContextRecord->X17,
 			(void *)info->ContextRecord->X18,
-			(void *)info->ContextRecord->X19);
-		fprintf(stderr, "X20=%p X21=%p X22=%p X23=%p\n",
+			(void *)info->ContextRecord->X19);fflush(stdout);
+		printf( "X20=%p X21=%p X22=%p X23=%p\n",
 			(void *)info->ContextRecord->X20,
 			(void *)info->ContextRecord->X21,
 			(void *)info->ContextRecord->X22,
-			(void *)info->ContextRecord->X23);
-		fprintf(stderr, "X24=%p X25=%p X26=%p X27=%p\n",
+			(void *)info->ContextRecord->X23);fflush(stdout);
+		printf( "X24=%p X25=%p X26=%p X27=%p\n",
 			(void *)info->ContextRecord->X24,
 			(void *)info->ContextRecord->X25,
 			(void *)info->ContextRecord->X26,
-			(void *)info->ContextRecord->X27);
-		fprintf(stderr, "X28=%p  FP=%p  LR=%p  SP=%p\n",
+			(void *)info->ContextRecord->X27);fflush(stdout);
+		printf( "X28=%p  FP=%p  LR=%p  SP=%p\n",
 			(void *)info->ContextRecord->X28,
 			(void *)info->ContextRecord->Fp,
 			(void *)info->ContextRecord->Lr,
-			(void *)info->ContextRecord->Sp);
+			(void *)info->ContextRecord->Sp);fflush(stdout);
 #endif
 
 		// reprint the actual exception address
-		fprintf(stderr, "-----------------------------------------------------\n");
-		fprintf(stderr, "Stack crawl:\n");
+		printf( "-----------------------------------------------------\n");fflush(stdout);
+		printf( "Stack crawl:\n");fflush(stdout);
 		diagnostics->print_stacktrace(info->ContextRecord, GetCurrentThread());
 
 		// flush stderr, so the data is actually written when output is being redirected
-		fflush(stderr);
+		fflush(stdout);
 
 		// exit
 		return EXCEPTION_CONTINUE_SEARCH;
@@ -1116,11 +1117,11 @@ private:
 		// walk the stack
 		while (walker.unwind())
 			fprintf(
-				stderr,
+				stdout,
 				"  %p: %p%s\n",
 				reinterpret_cast<void *>(walker.frame()),
 				reinterpret_cast<void *>(walker.ip()),
-				m_symbols == nullptr ? "" : m_symbols->symbol_for_address(walker.ip()));
+				m_symbols == nullptr ? "" : m_symbols->symbol_for_address(walker.ip()));fflush(stdout);
 	}
 
 	void ensure_symbols()

@@ -62,6 +62,7 @@
 #include "messui.h"
 #include "drivenum.h"
 #include "mameopts.h"
+#include "modules/diagnostics/diagnostics_module.h"
 #include <fstream>
 
 #ifdef _MSC_VER
@@ -1068,6 +1069,7 @@ int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	printf("MAMEUI starting\n");fflush(stdout);
 
+	diagnostics_module::get_instance()->init_crash_diagnostics();
 	hSplash = CreateDialog(hInstance, MAKEINTRESOURCE(IDD_STARTUP), hMain, StartupProc);
 	SetActiveWindow(hSplash);
 	SetForegroundWindow(hSplash);
