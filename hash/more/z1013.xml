@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 63 -->
+<!-- Number of items in this list = 80 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -609,6 +609,176 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="16672">
 				<rom name="cyrus v_2_dt.z80" size="16672" crc="10c81929" sha1="4186dcbdd4b03cbac56a32e28356e70b2bd1ed53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ee133ac672b1a">
+		<description>DATENBANK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1344">
+				<rom name="DATENBANK.z80" size="1344" crc="ef070960" sha1="ee133ac672b1aa85ac05d3920aa657734ab4d610"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ff110eb89efae">
+		<description>DATEX Datei-Programm (1987)(SCI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3680">
+				<rom name="DATEX Datei-Programm (1987)(SCI).z80" size="3680" crc="9ebd9392" sha1="ff110eb89efaeb10fc257621cb484b7c16b910dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10b3abbf35e5f17">
+		<description>datex</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3680">
+				<rom name="datex.z80" size="3680" crc="ff684b58" sha1="b3abbf35e5f17e56781b25101b7f19625ea3e99e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10cef1efa37f4d7">
+		<description>Debugger (19xx)(-)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="6387">
+				<rom name="Debugger (19xx)(-)[a2].z80" size="6387" crc="a80e5165" sha1="cef1efa37f4d7e3401d736c01405d32e0cfb9450"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d162170c4a594">
+		<description>Debugger (19xx)(-)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="6387">
+				<rom name="Debugger (19xx)(-)[a].z80" size="6387" crc="52e5978c" sha1="d162170c4a594c92ea31a0aca0bc67dcdaf79785"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10bd562c282b988">
+		<description>Debugger 2 (19xx)(R. Kubetzka)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="6432">
+				<rom name="Debugger 2 (19xx)(R. Kubetzka)[a2].z80" size="6432" crc="b8dd6d61" sha1="bd562c282b988fe823de33caf5097155444213d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1011ffd63505062">
+		<description>Debugger 2 (19xx)(R. Kubetzka)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="6432">
+				<rom name="Debugger 2 (19xx)(R. Kubetzka)[a].z80" size="6432" crc="e49e656c" sha1="11ffd6350506253cefc4e86763fd129528523c2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f76a3b70523d8">
+		<description>debugger_a-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8768">
+				<rom name="debugger_a-2.z80" size="8768" crc="64cf3697" sha1="f76a3b70523d89a6b5196ea6ec66db9d289223e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z106573e0229adea">
+		<description>debug_3_02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4640">
+				<rom name="debug_3_02.z80" size="4640" crc="78a785af" sha1="6573e0229adeadf4cc380d80a59a7601c12a9e45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z105b736a889c27d">
+		<description>demo 2 z1013</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="11840">
+				<rom name="demo 2 z1013.z80" size="11840" crc="de1b815b" sha1="5b736a889c27db9a28606a90ba46ece98ab61ac9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ba7dcbf2cf352">
+		<description>Demolation (19xx)(Gera-Soft)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2720">
+				<rom name="Demolation (19xx)(Gera-Soft)[a2].z80" size="2720" crc="b1feefc3" sha1="ba7dcbf2cf352c3fc88c12a0ce9dd9a2b0f579bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1005f1cfd8c82b2">
+		<description>demo_z1013</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16160">
+				<rom name="demo_z1013.z80" size="16160" crc="2e89dc73" sha1="05f1cfd8c82b268e65d212f3a734e71abbaeb267"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z106a3910aa9ad7d">
+		<description>Digger (1990)(F. Benditz)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="17136">
+				<rom name="Digger (1990)(F. Benditz)[a].z80" size="17136" crc="a602a4cf" sha1="6a3910aa9ad7d24bf954a815c0133fff3617ad82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f6a2b03fe79cf">
+		<description>digger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="23157">
+				<rom name="digger.z80" size="23157" crc="c2c16bd7" sha1="f6a2b03fe79cfd4f89b35f137b45d9be7b9e9d40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10063b185c22c21">
+		<description>disassembler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2560">
+				<rom name="disassembler.z80" size="2560" crc="d0ce4e72" sha1="063b185c22c211eabbbabd4ff0317833d1fde8fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10e65b26abbd930">
+		<description>Display</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="224">
+				<rom name="Display.z80" size="224" crc="ad211e63" sha1="e65b26abbd9303a9603273f6b0d973d092b5753b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10482defe8f9630">
+		<description>DumpX (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="192">
+				<rom name="DumpX (19xx)(-).z80" size="192" crc="fcec3c24" sha1="482defe8f9630b493e0053e4a12f401cc0921a37"/>
 			</dataarea>
 		</part>
 	</software>

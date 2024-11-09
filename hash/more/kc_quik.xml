@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 143 -->
+<!-- Number of items in this list = 165 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -1279,6 +1279,226 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="32000">
 				<rom name="Fussball Manager (19xx)(-)[b][4].kcc" size="32000" crc="3ed95a08" sha1="8a159fae3ca3acfeab991f1cedd1a7f7c0d51b4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a286f867a1b7a">
+		<description>Galtonsches Brett (19xx)(Ralph Schmidt)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2048">
+				<rom name="Galtonsches Brett (19xx)(Ralph Schmidt)[4].kcc" size="2048" crc="9fe8e8cc" sha1="a286f867a1b7a6ceecebee41399976be9895a7de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8fbaeb7257de52">
+		<description>Gate-Crasher (19xx)(VEB Mikroelektronik)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7296">
+				<rom name="Gate-Crasher (19xx)(VEB Mikroelektronik)[a][3].kcc" size="7296" crc="a137a522" sha1="fbaeb7257de520f4f65a140eedca06b90ed5ea9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86e0f7a6ee03c5">
+		<description>Gate-Crasher (19xx)(VEB-Mikroelektronik)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7296">
+				<rom name="Gate-Crasher (19xx)(VEB-Mikroelektronik)[a2][3].kcc" size="7296" crc="9eb74b10" sha1="6e0f7a6ee03c517b2913ccb3ffd242cee1d39f1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8cbfa42388a46a">
+		<description>Gegner (1991)(D. Wodzitzka GmbH)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="Gegner (1991)(D. Wodzitzka GmbH)[4].kcc" size="3968" crc="c1572bad" sha1="cbfa42388a46acd601815947a3fd531a004b71bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc882125711147d9">
+		<description>Geister-Fahrer (19xx)(-)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5248">
+				<rom name="Geister-Fahrer (19xx)(-)[a2][3].kcc" size="5248" crc="722bb8f2" sha1="82125711147d922e3b878e258cea25b450a17df9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc857e9e8ae5b1e6">
+		<description>Geister-Fahrer (19xx)(-)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5504">
+				<rom name="Geister-Fahrer (19xx)(-)[a][3].kcc" size="5504" crc="20eb8052" sha1="57e9e8ae5b1e6534bf4d137fdf132bd5f5a0f3a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8826ce4a143de7">
+		<description>Goff (1987)(Andre Fraenzel)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5504">
+				<rom name="Goff (1987)(Andre Fraenzel)[3].kcc" size="5504" crc="c3a18785" sha1="826ce4a143de7eeda3bea2766d58abdfdf0140e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc83abccc369f14f">
+		<description>Goldrush (1990)(DM-Software)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14848">
+				<rom name="Goldrush (1990)(DM-Software)[4].kcc" size="14848" crc="e5c1e390" sha1="3abccc369f14f43293576b2ae6c90f3c948131ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8989e05cde0c32">
+		<description>Goldrush (19xx)(Aliwe-Software-Leipzig)[b][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8832">
+				<rom name="Goldrush (19xx)(Aliwe-Software-Leipzig)[b][3].kcc" size="8832" crc="00219798" sha1="989e05cde0c32807947059f82d47ec76898bd8a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e9754c0854f6f">
+		<description>Gourmand (19xx)(Detlef Poehnert)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="20608">
+				<rom name="Gourmand (19xx)(Detlef Poehnert)[4].kcc" size="20608" crc="3a892630" sha1="e9754c0854f6f107d60ad683ad9c6c8e23413a59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b958d019ce15b">
+		<description>Graf (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8576">
+				<rom name="Graf (19xx)(-)[3].kcc" size="8576" crc="98e05e53" sha1="b958d019ce15b5733e941ea4bdda2567c4d3e5a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8718dd191eae07">
+		<description>Grafik (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5760">
+				<rom name="Grafik (19xx)(-)[4].kcc" size="5760" crc="2441209b" sha1="718dd191eae0710e68c91a0a195093b1305143a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86fb80a36690bf">
+		<description>Grafik Programm (1986)(MF-Soft)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10240">
+				<rom name="Grafik Programm (1986)(MF-Soft)[a2][3].kcc" size="10240" crc="489e08c8" sha1="6fb80a36690bf01a239a982c287fa6cb59e97261"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8583ed7afc1649">
+		<description>Grafik Programm (1986)(MF-Soft)[a3][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10368">
+				<rom name="Grafik Programm (1986)(MF-Soft)[a3][3].kcc" size="10368" crc="96f421ff" sha1="583ed7afc1649cad8c6d6d659911a2325f07b9d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87728b04dc8209">
+		<description>Grafik Programm (1986)(MF-Soft)[a4][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10112">
+				<rom name="Grafik Programm (1986)(MF-Soft)[a4][3].kcc" size="10112" crc="fb351980" sha1="7728b04dc82099fffbe558f8d807736bede75984"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d9a638fff60b2">
+		<description>Grafik Programm (1986)(MF-Soft)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9984">
+				<rom name="Grafik Programm (1986)(MF-Soft)[a][3].kcc" size="9984" crc="8c3ba0c7" sha1="d9a638fff60b252236338a15c3b8b87c04054236"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc82dabe1502c7cb">
+		<description>Grosse Draisinenrennen, Das (19xx)(Paulin)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6656">
+				<rom name="Grosse Draisinenrennen, Das (19xx)(Paulin)[a2][4].kcc" size="6656" crc="7f91c119" sha1="2dabe1502c7cbbaf23ee6bf78797de1a184f9a70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b32f45aa2f6a1">
+		<description>Grosse Draisinenrennen, Das (19xx)(Paulin)[a3][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6656">
+				<rom name="Grosse Draisinenrennen, Das (19xx)(Paulin)[a3][3].kcc" size="6656" crc="51053348" sha1="b32f45aa2f6a1cc0b0ae601210ef0b0b4e6df1e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8f74f36b486288">
+		<description>Grosse Draisinenrennen, Das (19xx)(Paulin)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6656">
+				<rom name="Grosse Draisinenrennen, Das (19xx)(Paulin)[a][4].kcc" size="6656" crc="68a17976" sha1="f74f36b486288ba0dc9df8a2f2902cc4df777696"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87ecd2577b655e">
+		<description>GST Minitext (1988)(J. Werner)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="GST Minitext (1988)(J. Werner)[4].kcc" size="3968" crc="c2d3f0f2" sha1="7ecd2577b655e297b85043f29316b7c890cf95f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c4301591f5579">
+		<description>Gunship 3000 (1991)(S. Scholz)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7552">
+				<rom name="Gunship 3000 (1991)(S. Scholz)[a2][4].kcc" size="7552" crc="260f8417" sha1="c4301591f5579f29566fa6a47a819147555e8d1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc851b0deca7e9de">
+		<description>Gunship 3000 (1991)(S. Scholz)[a][2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7552">
+				<rom name="Gunship 3000 (1991)(S. Scholz)[a][2].kcc" size="7552" crc="a6d61a3a" sha1="51b0deca7e9dee5c9cb8973e95fc29a687e2a3de"/>
 			</dataarea>
 		</part>
 	</software>
