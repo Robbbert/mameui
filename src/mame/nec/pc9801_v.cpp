@@ -24,6 +24,7 @@ void pc9801_state::video_start()
 	std::fill(std::begin(m_ex_video_ff), std::end(m_ex_video_ff), 0);
 	std::fill(std::begin(m_video_ff), std::end(m_video_ff), 0);
 	save_pointer(NAME(m_video_ff), 8);
+	save_pointer(NAME(m_ex_video_ff), 128);
 }
 
 uint32_t pc9801_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
@@ -474,6 +475,7 @@ void pc9801_state::pc9801_a0_w(offs_t offset, uint8_t data)
 				pcg_offset = (m_font_addr & 0x7fff) << 5;
 				pcg_offset|= m_font_line;
 				pcg_offset|= m_font_lr;
+
 				//logerror("%04x %02x %02x %08x\n",m_font_addr,m_font_line,m_font_lr,pcg_offset);
 				if((m_font_addr & 0xff00) == 0x5600 || (m_font_addr & 0xff00) == 0x5700)
 				{
@@ -578,7 +580,7 @@ uint16_t pc9801vm_state::upd7220_grcg_r(offs_t offset, uint16_t mem_mask)
 	{
 		int i;
 
-		offset &= 0x13fff;
+		offset = (offset & 0x3fff) +  m_vram_bank * 0x10000;
 		res = 0;
 		for(i=0;i<4;i++)
 		{
@@ -604,7 +606,7 @@ void pc9801vm_state::upd7220_grcg_w(offs_t offset, uint16_t data, uint16_t mem_m
 	{
 		int i;
 		uint8_t *vram = (uint8_t *)m_video_ram[1].target();
-		offset = (offset << 1) & 0x27fff;
+		offset = ((offset & 0x3fff) +  m_vram_bank * 0x10000) << 1;
 
 		if(m_grcg.mode & 0x40) // RMW
 		{
@@ -721,13 +723,12 @@ void pc9801vm_state::egc_blit_w(uint32_t offset, uint16_t data, uint16_t mem_mas
 	uint16_t mask = m_egc.regs[4] & mem_mask, out = 0;
 	bool dir = !(m_egc.regs[6] & 0x1000);
 	int dst_off = (m_egc.regs[6] >> 4) & 0xf, src_off = m_egc.regs[6] & 0xf;
-	offset &= 0x13fff;
+	offset = (offset & 0x3fff) +  m_vram_bank * 0x10000;
 
 	if(!m_egc.init && (src_off > dst_off))
 	{
 		if(BIT(m_egc.regs[2], 10))
 		{
-			m_egc.leftover[0] = 0;
 			egc_shift(0, data);
 			// leftover[0] is inited above, set others to same
 			m_egc.leftover[1] = m_egc.leftover[2] = m_egc.leftover[3] = m_egc.leftover[0];
@@ -740,8 +741,6 @@ void pc9801vm_state::egc_blit_w(uint32_t offset, uint16_t data, uint16_t mem_mas
 	if(m_egc.first)
 	{
 		mask &= dir ? ~((1 << dst_off) - 1) : ((1 << (16 - dst_off)) - 1);
-		if(BIT(m_egc.regs[2], 10) && !m_egc.init)
-			m_egc.leftover[0] = m_egc.leftover[1] = m_egc.leftover[2] = m_egc.leftover[3] = 0;
 		m_egc.init = true;
 	}
 
@@ -760,6 +759,15 @@ void pc9801vm_state::egc_blit_w(uint32_t offset, uint16_t data, uint16_t mem_mas
 		mask &= end_mask;
 	}
 
+	// load all the plane pattern regs
+	if((m_egc.regs[2] & 0x300) == 0x200)
+	{
+		m_egc.pat[0] = m_video_ram[1][offset + 0x4000];
+		m_egc.pat[1] = m_video_ram[1][offset + (0x4000 * 2)];
+		m_egc.pat[2] = m_video_ram[1][offset + (0x4000 * 3)];
+		m_egc.pat[3] = m_video_ram[1][offset];
+	}
+
 	for(int i = 0; i < 4; i++)
 	{
 		if(!BIT(m_egc.regs[0], i))
@@ -767,9 +775,6 @@ void pc9801vm_state::egc_blit_w(uint32_t offset, uint16_t data, uint16_t mem_mas
 			uint16_t src = m_egc.src[i], pat = egc_color_pat(i);
 			if(BIT(m_egc.regs[2], 10))
 				src = egc_shift(i, data);
-
-			if((m_egc.regs[2] & 0x300) == 0x200)
-				pat = m_video_ram[1][offset + (((i + 1) & 3) * 0x4000)];
 
 			switch((m_egc.regs[2] >> 11) & 3)
 			{
@@ -818,7 +823,7 @@ void pc9801vm_state::egc_blit_w(uint32_t offset, uint16_t data, uint16_t mem_mas
 
 uint16_t pc9801vm_state::egc_blit_r(uint32_t offset, uint16_t mem_mask)
 {
-	uint32_t plane_off = offset & 0x13fff;
+	uint32_t plane_off = (offset & 0x3fff) +  m_vram_bank * 0x10000;
 	if((m_egc.regs[2] & 0x300) == 0x100)
 	{
 		m_egc.pat[0] = m_video_ram[1][plane_off + 0x4000];
