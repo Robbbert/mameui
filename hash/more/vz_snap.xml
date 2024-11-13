@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 158 -->
+<!-- Number of items in this list = 177 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
 	<software name="vt11c424670e7bd1">
 		<description>Attack of the Killer Tomatoes</description>
@@ -19,6 +19,196 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="1672">
 				<rom name="BAT Hunter.vz" size="1672" crc="b0165cee" sha1="65f42c0d46598fc87692d444e434ca3ae6dc85e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10cc96fba6db72">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7411">
+				<rom name="cacorm.vz" size="7411" crc="3ce20b70" sha1="0cc96fba6db727a9ba333beea5be5fa8996a58bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt18303191d53cf8">
+		<description>CASINH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="3138">
+				<rom name="CASINH.VZ" size="3138" crc="bfa2c563" sha1="8303191d53cf8dc8556e5a82d9fe17f100806b20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1d27928aab9cd0">
+		<description>Cat, The (2002-07-12)(Maunder, Dave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="18635">
+				<rom name="Cat, The (2002-07-12)(Maunder, Dave).vz" size="18635" crc="3e0f9488" sha1="d27928aab9cd01f8b2248bec8ca0d6dcf4d06ff7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt18b8de82bd6d21">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8827">
+				<rom name="cavit.vz" size="8827" crc="6e6bf8a3" sha1="8b8de82bd6d21533c2e00763eabba0fa3bbd7ebc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ab9db2c39009b">
+		<description>chainsaw</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="403">
+				<rom name="chainsaw.vz" size="403" crc="cd5bf142" sha1="ab9db2c39009b56e2693a472cf58528d8d27c8b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt18bd91d2c38b55">
+		<description>Check Disk (19xx)(Mitchell, Dave)(File 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="137">
+				<rom name="Check Disk (19xx)(Mitchell, Dave)(File 2 of 2).vz" size="137" crc="f157fd91" sha1="8bd91d2c38b556c440d6e0b714d727e6b681b058"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt11c9e0740f81b1">
+		<description>checkers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="2740">
+				<rom name="checkers.vz" size="2740" crc="daa440af" sha1="1c9e0740f81b13b5d0201c38ea451896f2965724"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ba9f58fbe5536">
+		<description>CHKSUM3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="776">
+				<rom name="CHKSUM3.VZ" size="776" crc="fc858246" sha1="ba9f58fbe5536c80ef259ee2ef4f32129214ac44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt14c5546c5c92ab">
+		<description>Circle 9C (2002-08-22)(Maunder, Dave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="5549">
+				<rom name="Circle 9C (2002-08-22)(Maunder, Dave).vz" size="5549" crc="0faeabf1" sha1="4c5546c5c92ab5c8c04188a736f0edf8c0f35a1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt142690d2a690b8">
+		<description>Circle 9D (2002-08-22)(Maunder, Dave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="5561">
+				<rom name="Circle 9D (2002-08-22)(Maunder, Dave).vz" size="5561" crc="23feae0d" sha1="42690d2a690b8ade9c085e9dc8b43d1a53cb9a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt161630f85e8694">
+		<description>circle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="464">
+				<rom name="circle.vz" size="464" crc="f5d69f35" sha1="61630f85e86942ff38b4481257c8d455a79a305b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1f2f64b92c5251">
+		<description>CIRCUS2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4143">
+				<rom name="CIRCUS2.VZ" size="4143" crc="ce2e9f81" sha1="f2f64b92c5251e931b8f5f17ff012562d31b12a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1401cb720512f9">
+		<description>code breaker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="785">
+				<rom name="code breaker.vz" size="785" crc="8ec0c7e7" sha1="401cb720512f9dcb6bc0db6ef4d0bea2ebc6ac68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10c641cdc60a57">
+		<description>Color Pictures (19xx)(Boyce, Dave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7091">
+				<rom name="Color Pictures (19xx)(Boyce, Dave).vz" size="7091" crc="89d84b10" sha1="0c641cdc60a57505caa8ec1f9a60818a3f5dc40c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1520f597854c8b">
+		<description>connect4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="967">
+				<rom name="connect4.vz" size="967" crc="9e1057ea" sha1="520f597854c8ba2b6ab849ff49aefe85c18ff22a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1dde455b98c045">
+		<description>connect6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="484">
+				<rom name="connect6.vz" size="484" crc="210acccd" sha1="dde455b98c045941c630b72774b290da6fef5818"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a80710ab115b7">
+		<description>copypro5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="3140">
+				<rom name="copypro5.vz" size="3140" crc="865e2389" sha1="a80710ab115b7e5897570afbc74bd09863ab41db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1bef06de7654cb">
+		<description>counter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="945">
+				<rom name="counter.vz" size="945" crc="06423379" sha1="bef06de7654cb4c627b3cb040566b9f7d6d658a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt14e184494cb7b6">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="6519">
+				<rom name="cracky.vz" size="6519" crc="7fe5cfe1" sha1="4e184494cb7b6580eee802b2686f68aee99fbc07"/>
 			</dataarea>
 		</part>
 	</software>

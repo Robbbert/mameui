@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1842 -->
+<!-- Number of items in this list = 1843 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5439,6 +5439,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Escape 2042 PT v1.1 (2022)(Afsblood).bin" size="4194304" crc="f6fc656a" sha1="b7f5462fd1d9f6454b4ac7a4a35dbc63eb282eb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencfd65e3ffb17e">
+		<description>espn national hockey night (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="espn national hockey night (usa).bin" size="2097152" crc="1d08828c" sha1="cfd65e3ffb17e1718356ef8de7c527e2c9fd8940"/>
 			</dataarea>
 		</part>
 	</software>

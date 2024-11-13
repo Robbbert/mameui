@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6513 -->
+<!-- Number of items in this list = 6645 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -52749,6 +52749,1326 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Metroid20060303.a26" size="32768" crc="342e8857" sha1="aaac621fd0ca0660d37c51f064b8e7814b9d957f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264dd4ea5850d8f">
+		<description>MIDNIGHT MAGIC 3D - Midnight Magic gfx hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="MIDNIGHT MAGIC 3D - Midnight Magic gfx hack.a26" size="16384" crc="79036964" sha1="4dd4ea5850d8f734e7da45adff4c8d70aaf52bb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261e39ae225ed04">
+		<description>Midnight Magic+</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Midnight Magic+.a26" size="16384" crc="faad0429" sha1="1e39ae225ed0461010dffbcae376b20fce3820cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d69caef612ce5">
+		<description>Mike the Headless Chicken 102606</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mike the Headless Chicken 102606.a26" size="4096" crc="a47c2a16" sha1="d69caef612ce5ed13e418471656c7a275f569d03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a433b0f70f39">
+		<description>mine008</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="mine008.a26" size="8192" crc="ae3e0124" sha1="5a433b0f70f392b496359b1f7faad32ecfc33ba5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26743aca93c0db1">
+		<description>minestorm 001_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="minestorm 001_2.a26" size="8192" crc="cb080ccd" sha1="743aca93c0db112190094f86ed76ded48656f747"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2639cbdda6bbc0c">
+		<description>Minesweeper (V.90) (Soren Gust) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minesweeper (V.90) (Soren Gust) (PD).a26" size="4096" crc="b01f99bd" sha1="39cbdda6bbc0cddf471b20fc6c020bfaa330fa5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261e57986f44c23">
+		<description>Minesweeper (V.99) (Soren Gust) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minesweeper (V.99) (Soren Gust) (PD).a26" size="4096" crc="7c5bdcf2" sha1="1e57986f44c23e75f1183beacaae895b934884ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a2bd16333cd7a">
+		<description>Mini Golf V812631 (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mini Golf V812631 (Miniature Golf Hack).a26" size="4096" crc="51560b79" sha1="a2bd16333cd7aec5ce1b0ed92a70d3d08c9c1758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264e6e1ea84355d">
+		<description>Miniature Golf (1979) (Atari) (PAL) [p1][o1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Miniature Golf (1979) (Atari) (PAL) [p1][o1][!].a26" size="4096" crc="8a8eeba2" sha1="4e6e1ea84355dc84b789595ca6e0179bc67b95f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc7325211c324">
+		<description>Miniature Golf (1979) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Miniature Golf (1979) (Atari) [o1].a26" size="4096" crc="4b9cc8c3" sha1="bc7325211c324b2a182c0d9d07a0c2a37bf9c7d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26277396e0d4fe8">
+		<description>Miniature Golf (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Miniature Golf (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="fcc7a662" sha1="277396e0d4fe82512d994c77e539bf06310bd8f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f9a26f41e1fa1">
+		<description>Miniature Golf 4k hack by Nukey Shay 2009-03-22</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Miniature Golf 4k hack by Nukey Shay 2009-03-22.a26" size="4096" crc="5fbe3bbf" sha1="f9a26f41e1fa162ee2693aa0b50bcf2e5c383a44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260b2d9fbe00ab9">
+		<description>Miniature Golf 4k hack by Nukey Shay 2009-03-24</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Miniature Golf 4k hack by Nukey Shay 2009-03-24.a26" size="4096" crc="3d4f18b9" sha1="0b2d9fbe00ab94ddfb77b55dc4b5329cdc496e27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261389a842384c1">
+		<description>Miniature Golf High Rez (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Miniature Golf High Rez (2).a26" size="4096" crc="1275ebeb" sha1="1389a842384c1b89fd58ca06fb401569bfe29af8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e501fbc87288f">
+		<description>Miniature Golf High Rez easy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Miniature Golf High Rez easy.a26" size="4096" crc="c0501edd" sha1="e501fbc87288f115759cd55559e55b7c7f4fa37a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc00f5023ef4f">
+		<description>Miniature Golf Plus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Miniature Golf Plus.a26" size="4096" crc="fd22737a" sha1="dc00f5023ef4f2b2ddefb98078a6c62d71d6bea4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688e6fff6319a1">
+		<description>MiniatureGolf_32-in-1_Atari_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="MiniatureGolf_32-in-1_Atari_PAL_Overdump.a26" size="4096" crc="58c7d56e" sha1="88e6fff6319a1a7d7c5690ac18eecae159ab406a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ac0020900b7de">
+		<description>minigame (2005-10-23) (David Weavil)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="minigame (2005-10-23) (David Weavil).a26" size="2048" crc="a7db06fb" sha1="ac0020900b7de6e4d41dc99e5a4703d402c5e306"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268a544adc2cf9d">
+		<description>Minigolf - Bat by Snailsoft (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Bat by Snailsoft (Miniature Golf Hack).a26" size="4096" crc="b6a59ba5" sha1="8a544adc2cf9d98dbd6d1faadc05095266d9ce7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261abcd6903fbd9">
+		<description>Minigolf - Bear Trap by djdsl (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Bear Trap by djdsl (Miniature Golf Hack).a26" size="4096" crc="7cf45e87" sha1="1abcd6903fbd95bf580538ff2eccc9edc2eebb50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c18ae65975ab0">
+		<description>Minigolf - CX40 by NoahsMyBro (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - CX40 by NoahsMyBro (Miniature Golf Hack).a26" size="4096" crc="1b6739e5" sha1="c18ae65975ab0806d6cf5c873523c10fa046be73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b2446b4fb4c41">
+		<description>Minigolf - Eyelet by Stilphen (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Eyelet by Stilphen (Miniature Golf Hack).a26" size="4096" crc="00f96456" sha1="b2446b4fb4c416085e063c451d7f6e6fe5ec6450"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265b46511fc4fef">
+		<description>Minigolf - Frogger by VeganJay (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Frogger by VeganJay (Miniature Golf Hack).a26" size="4096" crc="97a70a0d" sha1="5b46511fc4fefe71d37bb425ecff93d7ea413cfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26efe1799cb31e5">
+		<description>Minigolf - Frustration by Snailsoft (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Frustration by Snailsoft (Miniature Golf Hack).a26" size="4096" crc="9045d143" sha1="efe1799cb31e534d9c23a097b33d6d6b8ccaeda7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f817df45669c6">
+		<description>Minigolf - Insanity by CX2K (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Insanity by CX2K (Miniature Golf Hack).a26" size="4096" crc="f2263ce3" sha1="f817df45669c66ba5b2dac26c377d560efb8e261"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be2992faccf8b">
+		<description>Minigolf - Knight Industries Two Thousand by SnalSoft (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Knight Industries Two Thousand by SnalSoft (Miniature Golf Hack).a26" size="4096" crc="e3ac5647" sha1="be2992faccf8ba23e6afdb373041f7d9a38e88a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d348fbddb2092">
+		<description>Minigolf - Shredder by djdsl (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Shredder by djdsl (Miniature Golf Hack).a26" size="4096" crc="8ff39720" sha1="d348fbddb209270ab45cd00e3f5cbcfcf3ab8eef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aba634d9fa788">
+		<description>Minigolf - Tee for Two by Snailsoft (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Tee for Two by Snailsoft (Miniature Golf Hack).a26" size="4096" crc="bdd1f6f6" sha1="aba634d9fa788ca6a17f08c1ec86f928178016c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616e465f28f941">
+		<description>Minigolf - Twin Peaks by CX2k (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Twin Peaks by CX2k (Miniature Golf Hack).a26" size="4096" crc="1a4a9a8f" sha1="16e465f28f941909cb99bd10789376d17eb342a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2649d316481b9d4">
+		<description>Minigolf - Wilson by Goochman (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf - Wilson by Goochman (Miniature Golf Hack).a26" size="4096" crc="a54901fd" sha1="49d316481b9d4cb2868325b22fa8ade898aaf848"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0264c17d388f">
+		<description>Minigolf-AtariAge_01_by_MattyXB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-AtariAge_01_by_MattyXB.a26" size="4096" crc="a36b555b" sha1="b0264c17d388fb307cd93a3c41f09d9b15e81fec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26da99704bf0eb2">
+		<description>Minigolf-AtariAge_02_by_MattyXB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-AtariAge_02_by_MattyXB.a26" size="4096" crc="70ac7999" sha1="da99704bf0eb2a1213352b2bebfad4207ff937f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269922c2b70a838">
+		<description>Minigolf-Basic_Math_by_djdsl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Basic_Math_by_djdsl.a26" size="4096" crc="6c803db1" sha1="9922c2b70a838d82f62dbaa18f975108d4770a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2686794933ac849">
+		<description>Minigolf-Bats_Revenge_by_Goochman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Bats_Revenge_by_Goochman.a26" size="4096" crc="9ea59c7f" sha1="86794933ac8495e9b50903d0296c6081c0d8d93c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad1a2e2c94f9b">
+		<description>Minigolf-Berzerk_by_Mandelbrotjulia</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Berzerk_by_Mandelbrotjulia.a26" size="4096" crc="c7f6073a" sha1="ad1a2e2c94f9b72e7493cbcc335ebe5fdaf665da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc7dba6e6e0aa">
+		<description>Minigolf-Boo_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Boo_by_SnailSoft.a26" size="4096" crc="645e8cfe" sha1="bc7dba6e6e0aa35234db6af9fe5d85b67ed4527f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec6caa1c00c00">
+		<description>Minigolf-BreakOut_by_NoahsMyBro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-BreakOut_by_NoahsMyBro.a26" size="4096" crc="3b571a57" sha1="ec6caa1c00c0073e47439a27eba88a1e336d7efe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260bbf465211428">
+		<description>Minigolf-Butterfly_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Butterfly_by_SnailSoft.a26" size="4096" crc="deb39c58" sha1="0bbf465211428387d4a20d168190ccb41996d15e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ded04932c3b2">
+		<description>Minigolf-Castle-Riddle_by_Riddle_the_Red</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Castle-Riddle_by_Riddle_the_Red.a26" size="4096" crc="ebae0149" sha1="2ded04932c3b2f6bd77375eca7e35d98c362b1b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2667831f1ba2c74">
+		<description>Minigolf-Combat_by_PacManPlus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Combat_by_PacManPlus.a26" size="4096" crc="1c8d7d8f" sha1="67831f1ba2c747ca0550ebd3def651e939fd0cce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265302fb41c9bbc">
+		<description>Minigolf-Crocodiles_by_Goochman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Crocodiles_by_Goochman.a26" size="4096" crc="1ef9c0a9" sha1="5302fb41c9bbcc3c16e206777eb9333b4c0d34b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2655588c8ad69a9">
+		<description>Minigolf-Cylon_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Cylon_by_SnailSoft.a26" size="4096" crc="71c198d7" sha1="55588c8ad69a91a782ab2dc55ff0b0ca8ce96265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261efc84265f6d6">
+		<description>Minigolf-Dinosaur_by_Volleyball_djdsl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Dinosaur_by_Volleyball_djdsl.a26" size="4096" crc="0daf3208" sha1="1efc84265f6d6112b395f8e87c10eceea0474e25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f0dfb35845ece">
+		<description>Minigolf-Easter_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Easter_by_SnailSoft.a26" size="4096" crc="aea2155a" sha1="f0dfb35845ece485131a202a5351d5ebd55c1a9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e8211988ffaac">
+		<description>Minigolf-ET_by_Mandelbrotjulia</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-ET_by_Mandelbrotjulia.a26" size="4096" crc="e93f7ee7" sha1="e8211988ffaacbd204e402db200465d765532ad1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263c24d8755bb1b">
+		<description>Minigolf-Face_by_Mandelbrotjulia</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Face_by_Mandelbrotjulia.a26" size="4096" crc="a7158b72" sha1="3c24d8755bb1b7e99d65fe727efbd315a14518f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26939a99957150a">
+		<description>Minigolf-GunFighter_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-GunFighter_by_SnailSoft.a26" size="4096" crc="84d67f53" sha1="939a99957150ab826de08572159f5be41de9dfac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d7422a03a3382">
+		<description>Minigolf-Happy_Mothers_Day_by_CX2k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Happy_Mothers_Day_by_CX2k.a26" size="4096" crc="07b0ad5c" sha1="d7422a03a3382e679adb51a66493bed91d83341e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c72c53e74f9fc">
+		<description>Minigolf-Have_You_Played_Atari_Today_by_Mindfield</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Have_You_Played_Atari_Today_by_Mindfield.a26" size="4096" crc="84acd6ac" sha1="c72c53e74f9fc01e105529e16542b4428d5f446f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2644079f8b7ce4b">
+		<description>Minigolf-Hills_and_Valeys_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Hills_and_Valeys_by_SnailSoft.a26" size="4096" crc="185d5593" sha1="44079f8b7ce4be7b8926b29b6c4cbcc73aeb9c2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a90e5c7e855f2">
+		<description>Minigolf-HourGlass_by_veganjay</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-HourGlass_by_veganjay.a26" size="4096" crc="9ad6a298" sha1="a90e5c7e855f2719db8a3bba72b92139aec1ef5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266da58d892ca8b">
+		<description>Minigolf-Inconceivable_by-Gateway-to-Aphsai</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Inconceivable_by-Gateway-to-Aphsai.a26" size="4096" crc="e90c5f6c" sha1="6da58d892ca8b1db370f43f20477dcd520a7c355"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26652693e844b9b">
+		<description>Minigolf-Indy_500_by_CX2K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Indy_500_by_CX2K.a26" size="4096" crc="892d742f" sha1="652693e844b9bcb32bb7b442414499d23dc547df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615e5850acce59">
+		<description>Minigolf-Insanity_Too_by_CX2K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Insanity_Too_by_CX2K.a26" size="4096" crc="2bd7b113" sha1="15e5850acce59f0c2a46e2ed73006a5c47dfa2b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f756d39fa3444">
+		<description>Minigolf-MadHouse_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-MadHouse_by_SnailSoft.a26" size="4096" crc="cd3f8770" sha1="f756d39fa34447191a192190d039775be86af0d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265c99e578b0948">
+		<description>Minigolf-Mailbock_by_Mailbock</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Mailbock_by_Mailbock.a26" size="4096" crc="4c7f6e89" sha1="5c99e578b09487c3e184fdddac684f11ce11743d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa176cae9460e">
+		<description>Minigolf-One_Way_by_MattyXP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-One_Way_by_MattyXP.a26" size="4096" crc="f328e932" sha1="aa176cae9460e3e40ae7650802977194732382a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26159c8b9dfed42">
+		<description>Minigolf-Outlaw_by_ScooterB23</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Outlaw_by_ScooterB23.a26" size="4096" crc="235c9097" sha1="159c8b9dfed427a744040e91ee0520df54988e24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2684b306e62a907">
+		<description>Minigolf-Pac-Golf_V1_by_VeganJay</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Pac-Golf_V1_by_VeganJay.a26" size="4096" crc="8e2b3503" sha1="84b306e62a907384bf27e0db0cbe637d92c00c3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ef3340be1d514">
+		<description>Minigolf-Pac-Golf_V2_by_VeganJay</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Pac-Golf_V2_by_VeganJay.a26" size="4096" crc="1f93f9a3" sha1="ef3340be1d514e104457580a8e2a4c370ce096cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26291740b733c6e">
+		<description>Minigolf-Pac-Golf_V3_by_VeganJay</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Pac-Golf_V3_by_VeganJay.a26" size="4096" crc="9bd0a01a" sha1="291740b733c6e97c4e3122982f6edfd07b9cfff8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26da576a4fddd0a">
+		<description>Minigolf-Pegged_by-Gateway-to-Aphsai</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Pegged_by-Gateway-to-Aphsai.a26" size="4096" crc="712d3618" sha1="da576a4fddd0ac33cfe86c5d8294f1c5c8224160"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2651ab8af0b013d">
+		<description>Minigolf-Reverse_Goals_by_CX2k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Reverse_Goals_by_CX2k.a26" size="4096" crc="68f94b39" sha1="51ab8af0b013dbabc8839904d9564fbd02b7d3f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dada3f6cfdb0a">
+		<description>Minigolf-Sentinel_by_TJentzsch</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Sentinel_by_TJentzsch.a26" size="4096" crc="c6f8a4d5" sha1="dada3f6cfdb0a03c2788054d01feaab2e43d13bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fc4b24c4e3000">
+		<description>Minigolf-Shamrock_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Shamrock_by_SnailSoft.a26" size="4096" crc="41ef1676" sha1="fc4b24c4e3000b67b99d4962beda3290e1913316"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ff9e685769ce5">
+		<description>Minigolf-Smiley_Face_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Smiley_Face_by_SnailSoft.a26" size="4096" crc="5e355c7d" sha1="ff9e685769ce5bad0ae2575c0b5a3a4fe1826a24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2627fcad687eb0a">
+		<description>Minigolf-Street_Racer_by_Stilphen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Street_Racer_by_Stilphen.a26" size="4096" crc="8d7f52f7" sha1="27fcad687eb0ac5283caef9048bdbfc33daa501a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267efd1f2010fb9">
+		<description>Minigolf-Sweater_From_Nana_by_djdsl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Sweater_From_Nana_by_djdsl.a26" size="4096" crc="9a783212" sha1="7efd1f2010fb9538b2f1996fd09c23896f684fb5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262fdcab82d0425">
+		<description>Minigolf-The_Maze_by_PacManPlus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-The_Maze_by_PacManPlus.a26" size="4096" crc="bc1c70ca" sha1="2fdcab82d0425bad691fe13050140d267d180b34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f409dbc2c816">
+		<description>Minigolf-Title_by_Scott_Stilphen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Title_by_Scott_Stilphen.a26" size="4096" crc="a8cec1bd" sha1="8f409dbc2c8161bd78248df6a7415e4a1c218968"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26649c3bf2e832b">
+		<description>Minigolf-Towers_by-Gateway-to-Aphsai</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Towers_by-Gateway-to-Aphsai.a26" size="4096" crc="2116dbea" sha1="649c3bf2e832b2ef0a713d4a1a366088a5c07012"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de0e6e6a55579">
+		<description>Minigolf-Up_n_Down_by_CX2K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Up_n_Down_by_CX2K.a26" size="4096" crc="9215d1ea" sha1="de0e6e6a55579bda3f08d22613e3165118c34907"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269e081c8d2f27f">
+		<description>Minigolf-Video_Pinball_by_MattyXP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Video_Pinball_by_MattyXP.a26" size="4096" crc="d5a03635" sha1="9e081c8d2f27fb16a6edd2e02ffe201fe4c18c0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d45fe77159f2">
+		<description>Minigolf-Windmill_by_Riddle_the_Red</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Windmill_by_Riddle_the_Red.a26" size="4096" crc="4863a08e" sha1="7d45fe77159f2ede45b9f710a5943937bd0df862"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2671e79e520107e">
+		<description>Minigolf-XMas_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-XMas_by_SnailSoft.a26" size="4096" crc="7f048194" sha1="71e79e520107ed14fef027cacb0d3832c97181c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261e7a51f54e04e">
+		<description>Minigolf-Yars_Among_Us_by_CX2K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Minigolf-Yars_Among_Us_by_CX2K.a26" size="4096" crc="effd7b32" sha1="1e7a51f54e04e5d28b5e26458f741c2000cf2637"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b38aea76c3ee8">
+		<description>minotaur</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="minotaur.bin" size="4096" crc="d90d224f" sha1="b38aea76c3ee86822f392e89181d396fc8efb1d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661961bc9d3d3a">
+		<description>MisAdRev</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="MisAdRev.a26" size="8192" crc="8dd2818f" sha1="61961bc9d3d3aa65fdf1db2f14ce9e777c56319e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d83c11726d7ae">
+		<description>Missadventure Revised (Adventure hack) fast</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Missadventure Revised (Adventure hack) fast.a26" size="8192" crc="c91c72e4" sha1="d83c11726d7ae35a9fd0266f945c9edce9e52285"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2625f64f1563dde">
+		<description>missadventure_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="missadventure_2.a26" size="8192" crc="b9e602dc" sha1="25f64f1563dde7068461089faf2585e07f893e86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2655c6a02eab65b">
+		<description>Missile Command (Amiga Mouse) (2002) (TJ) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command (Amiga Mouse) (2002) (TJ) (PAL).a26" size="4096" crc="510ac8fa" sha1="55c6a02eab65bf64ba8bfcea3d35896579d7baa2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dec34347c78a6">
+		<description>Missile Command (Amiga Mouse) (2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command (Amiga Mouse) (2002) (TJ).a26" size="4096" crc="0c6f621a" sha1="dec34347c78a6d3158b199bf964e26370e65f5fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d1ea230bc283b">
+		<description>Missile Command (CX-22 Trackball) (2002) (TJ) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command (CX-22 Trackball) (2002) (TJ) (PAL).a26" size="4096" crc="142547e2" sha1="d1ea230bc283bb375b470fcfedf3bae94e85af0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632bb96d00d16f">
+		<description>Missile Command (CX-22 Trackball) (2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command (CX-22 Trackball) (2002) (TJ).a26" size="4096" crc="7ef0f74c" sha1="32bb96d00d16f3c5a0d43da0e30957386fcd0128"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f09931f86bc34">
+		<description>Missile Command (CX-80 Trackball) (2002) (TJ) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command (CX-80 Trackball) (2002) (TJ) (PAL).a26" size="4096" crc="6beba9c9" sha1="f09931f86bc3404cbeaaa952ecbb762d75a4f23d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261c143c9e4dddf">
+		<description>Missile Command (CX-80 Trackball) (2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command (CX-80 Trackball) (2002) (TJ).a26" size="4096" crc="013e1967" sha1="1c143c9e4dddfeb9d9cac9295304581f76213d7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e3aab900a7c28">
+		<description>Missile Command Arcade (2005) Kurt Howe 2005-11-17</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command Arcade (2005) Kurt Howe 2005-11-17.a26" size="4096" crc="25cc2986" sha1="e3aab900a7c281fc182018af38a4ba4b3a7417a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c128cbd1e6bb">
+		<description>Missile Command Arcade (2005)(Nukey Shay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command Arcade (2005)(Nukey Shay).a26" size="4096" crc="170bd0d2" sha1="9c128cbd1e6bb163ee8b862b0f43143a11c47408"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2629d626548e639">
+		<description>Missile Command Arcade (Nukey Shay) (2006-07-11)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command Arcade (Nukey Shay) (2006-07-11).a26" size="4096" crc="974f96f2" sha1="29d626548e639a5519d326560dd292a9ee8cb6ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a4f9765a973ad">
+		<description>Missile Command Arcade (Nukey Shay) (2006-07-27)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Missile Command Arcade (Nukey Shay) (2006-07-27).a26" size="8192" crc="675ec2b5" sha1="a4f9765a973addc751e4e12cf7c5b7f33189ce5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c6dacc6bbebd">
+		<description>Missile Command Arcade 2006-07-24 (Nukey Shay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Missile Command Arcade 2006-07-24 (Nukey Shay).a26" size="8192" crc="c025bd07" sha1="6c6dacc6bbebde3ba2083231664bc9118f5c557e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265ae2b3a420908">
+		<description>Missile Command Black (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command Black (Hack).a26" size="4096" crc="d9649bdf" sha1="5ae2b3a420908e90409f9978507edee76ddab816"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261012e8f79101e">
+		<description>Missile Command TB V1.2 (Amiga Mouse) (TJ) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Command TB V1.2 (Amiga Mouse) (TJ) (PAL).a26" size="4096" crc="7c8a573f" sha1="1012e8f79101e867fc12783b5861fc0af010b0ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2671480b2d2da33">
+		<description>Missile Control (AKA Raketen-Angriff) (1983) (Ariola) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Missile Control (AKA Raketen-Angriff) (1983) (Ariola) [f1] (NTSC by TJ).a26" size="4096" crc="decc7482" sha1="71480b2d2da336648f1e03c1f607b813743d2efa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a120662ba5b01">
+		<description>Missile Sprite Demo (2005)(Chris Walton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Missile Sprite Demo (2005)(Chris Walton).a26" size="2048" crc="62d98189" sha1="a120662ba5b010db2604418b16543e7265086c44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cb7ec37eb6fa6">
+		<description>missile0.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="missile0.bas.a26" size="4096" crc="48bc104c" sha1="cb7ec37eb6fa64d3914bf204284a2d5ccc579891"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dfde899db49dd">
+		<description>Mission Survive (1983) (Video Gems) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mission Survive (1983) (Video Gems) [f1] (NTSC by TJ).a26" size="4096" crc="7879e5b6" sha1="dfde899db49dd02dc2bfe800d79e1e2aaa2ee6f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2699b8425578451">
+		<description>MMetall (Miniature Golf Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="MMetall (Miniature Golf Hack).a26" size="4096" crc="8782da76" sha1="99b8425578451c93510a14b3d7efbf6063d23254"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2654d8a92458e7b">
+		<description>Mobile 48 Sprite Kernel (04-01-2003) (Eric Ball)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Mobile 48 Sprite Kernel (04-01-2003) (Eric Ball).a26" size="2048" crc="9fd982ac" sha1="54d8a92458e7b59e7833f5dd02811c122ed8392f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d43506e0363ef">
+		<description>Mobile 48 Sprite Kernel (Bug Fixed) (10-01-2003) (Eric Ball)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Mobile 48 Sprite Kernel (Bug Fixed) (10-01-2003) (Eric Ball).a26" size="2048" crc="042f9883" sha1="d43506e0363efded025f4b4ffb2a851734bd4fb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c36dec91c88fe">
+		<description>Moby Blues by ATARITALIA (2002) (Mario Bros. Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Moby Blues by ATARITALIA (2002) (Mario Bros. Hack).a26" size="8192" crc="e90da3b7" sha1="c36dec91c88feda012cd67db1b381474b4dfbc23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26097137382d62c">
+		<description>MoleTank (Thunderground Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="MoleTank (Thunderground Hack).a26" size="4096" crc="4c0af864" sha1="097137382d62ce42de68c5972c9a62b7ac11221d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265317219957ab5">
+		<description>Mondo Pong V1 (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mondo Pong V1 (Piero Cavina) (PD).a26" size="4096" crc="27cff7c9" sha1="5317219957ab5613fba409a3fbf9ae05ddcc7a11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2619e684877a4c8">
+		<description>Mondo Pong V2 (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mondo Pong V2 (Piero Cavina) (PD).a26" size="4096" crc="2a6e0a08" sha1="19e684877a4c89ec977c2d52fd981d0d7dea56a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a96010f103478">
+		<description>Monkey Love (2007) (Lost Monkey) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Monkey Love (2007) (Lost Monkey) (Prototype).a26" size="8192" crc="6aea5f39" sha1="a96010f103478859fd53fe44ee957dd733f8f85a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26000e80582dc8d">
+		<description>Monkey Love 20071221</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Monkey Love 20071221.a26" size="8192" crc="f5914ae2" sha1="000e80582dc8dc719f5112798208ae9db74700f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26177cefb938044">
+		<description>Monkeyshines!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Monkeyshines!.a26" size="16384" crc="f5985390" sha1="177cefb938044e858d015bc4bde451fe3e779a85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26602f243d84c4e">
+		<description>monster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="monster.a26" size="4096" crc="12549204" sha1="602f243d84c4e4a166b5c1f1235cca5bb6fc4761"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263a998dcffef52">
+		<description>Montezuma's Revenge - Starring Panama Joe (1983) (Parker Bros) [f1] (PAL by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Montezuma's Revenge - Starring Panama Joe (1983) (Parker Bros) [f1] (PAL by TJ).a26" size="8192" crc="329cd897" sha1="3a998dcffef52d3c808a74c42e4fb218008dd96a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2617b12e1c84cdd">
+		<description>Montezuma_Trainer__use__type_e0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Montezuma_Trainer__use__type_e0.a26" size="8192" crc="b687a91f" sha1="17b12e1c84cdd6c643e61ef0a149b3209d3611a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266db689a568b7f">
+		<description>Monthy's Tennis by Atari Troll (Tennis Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Monthy's Tennis by Atari Troll (Tennis Hack).a26" size="2048" crc="ecf96f20" sha1="6db689a568b7f991b22b57377484b190427b67d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b867f98fbfed9">
+		<description>Moon Patrol (1983) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Moon Patrol (1983) (Atari) (PAL) [a1][!].a26" size="8192" crc="72ef8582" sha1="b867f98fbfed95ec7b5171edd783e7dfb62f9782"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26141f9f3e74710">
+		<description>Moon Patrol Plus by GDG (Moon Patrol Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Moon Patrol Plus by GDG (Moon Patrol Hack).a26" size="8192" crc="1162f4a6" sha1="141f9f3e747100bd8bf58e4bdd9512fc9872dea5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265599f71539443">
+		<description>moon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="moon.a26" size="4096" crc="a0783956" sha1="5599f7153944379eba9868fde56de61ae7755768"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cfa8f08bbfdd2">
+		<description>Moonbase One (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Moonbase One (PD).a26" size="4096" crc="69a373b1" sha1="cfa8f08bbfdd2819475206d49c6f2852c31daee1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2642e0083557ff5">
+		<description>Moonsweeper (1983) (Imagic) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Moonsweeper (1983) (Imagic) (PAL) [a1][!].a26" size="8192" crc="f2fc776a" sha1="42e0083557ff540524f3a68eb062d045ed9a7f41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269bf92ae415632">
+		<description>Mortal Kurling (02-01-2003) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mortal Kurling (02-01-2003) (CT).a26" size="4096" crc="0d5fd6b9" sha1="9bf92ae415632954996e64c3c772384817e87b3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26081a82bd31734">
+		<description>moth (old version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="moth (old version).a26" size="4096" crc="eeb10b7f" sha1="081a82bd31734e5e5b65128da6d1db11ece646a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2669ba789dc454b">
+		<description>Moth 2006-08-16 (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Moth 2006-08-16 (Simone Serra).a26" size="4096" crc="a9d9eac3" sha1="69ba789dc454bd49782f47ba2eb7dee345586f6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262223070b2e320">
+		<description>moth7.2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="moth7.2.bin" size="4096" crc="069a6227" sha1="2223070b2e320e39351eec5dc3f18f3002074c4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268dada422596eb">
+		<description>moth7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="moth7.a26" size="4096" crc="79efdc1a" sha1="8dada422596eb465677326e7bf50d5a69e586a56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b26c1e0d898eb">
+		<description>Motocross (NTSC Conversion) (2006) (Thomas Jentzsch) [a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Motocross (NTSC Conversion) (2006) (Thomas Jentzsch) [a].a26" size="4096" crc="4e7fc327" sha1="b26c1e0d898ebe1ad65a4f456c93f73fc6ed989b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2684d740a5c285c">
+		<description>Motocross (NTSC Conversion) (2006) (Thomas Jentzsch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Motocross (NTSC Conversion) (2006) (Thomas Jentzsch).a26" size="4096" crc="101c34e3" sha1="84d740a5c285ca2ad84c5a4a2e7c4e519436a201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a5c52b75bb065">
+		<description>Motocross and Pole Position (1983) (JVP) (PAL-M) [p1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Motocross and Pole Position (1983) (JVP) (PAL-M) [p1].a26" size="16384" crc="1e1c5927" sha1="a5c52b75bb065ad6cfeda07b82f5a22f89b776ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0b26e77dd007">
+		<description>Movable Grid Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Movable Grid Demo (PD).a26" size="4096" crc="a5eec659" sha1="a0b26e77dd0073539f5908bc6b8ab02e479dc972"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d16a0650d1eb">
+		<description>Move a Blue Blob Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Move a Blue Blob Demo (PD).a26" size="4096" crc="00cf1396" sha1="0d16a0650d1eb16673da6dd25a398e51be041dea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267f0b5b9d45797">
+		<description>Move a Blue Blob Demo 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Move a Blue Blob Demo 2 (PD).a26" size="4096" crc="fbdf8193" sha1="7f0b5b9d45797fe3964ab8b693c637226c760a63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26444b537b4757e">
+		<description>Move Around Rooms (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Move Around Rooms (PD).a26" size="4096" crc="c7b75163" sha1="444b537b4757ef1a252d0c177a2ff20308d06d56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cca2b930290a7">
+		<description>Moving Blue Ladder Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Moving Blue Ladder Demo (PD).a26" size="4096" crc="ad7948c9" sha1="cca2b930290a78d31c8afd1fbed2d1ea1545e3b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa3d4cc13c2e0">
+		<description>Moving Maze Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Moving Maze Demo (PD).a26" size="4096" crc="f399a0bd" sha1="aa3d4cc13c2e0cc844350d5dfb145fce0dcc6437"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a02144f7f3484">
+		<description>MovingShip</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="MovingShip.a26" size="4096" crc="e58369bf" sha1="a02144f7f34844d30e07216cee0a335578b58bb5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264bdd3ecfa32a4">
+		<description>mphack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mphack.a26" size="16384" crc="869777e5" sha1="4bdd3ecfa32a44036a187e45206490d4c2aef2f9"/>
 			</dataarea>
 		</part>
 	</software>
