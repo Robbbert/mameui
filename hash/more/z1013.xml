@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 80 -->
+<!-- Number of items in this list = 100 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -779,6 +779,206 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="192">
 				<rom name="DumpX (19xx)(-).z80" size="192" crc="fcec3c24" sha1="482defe8f9630b493e0053e4a12f401cc0921a37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f05d59799e2c9">
+		<description>ED 81 (19xx)(B. Wilske)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8992">
+				<rom name="ED 81 (19xx)(B. Wilske).z80" size="8992" crc="917557a4" sha1="f05d59799e2c9947b987035a0d279aa161f81800"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z107d9e21c3711bf">
+		<description>ED 81 v2.2 (1989)(B. Wilske)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8992">
+				<rom name="ED 81 v2.2 (1989)(B. Wilske).z80" size="8992" crc="7232d37d" sha1="7d9e21c3711bfcf2dc3548cc8c4a8806f421cebf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1095a4533493ebe">
+		<description>ed81  v2_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8992">
+				<rom name="ed81  v2_1.z80" size="8992" crc="728e7e23" sha1="95a4533493ebe63dbcf2b8bcf12f009ebc5e0a5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1085a57a63f08bc">
+		<description>Edas H+D v1.0 (1989)(U. Beckmann)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8224">
+				<rom name="Edas H+D v1.0 (1989)(U. Beckmann).z80" size="8224" crc="46c4ed95" sha1="85a57a63f08bc4425f503ace16b82396895ff860"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108f2acace1a518">
+		<description>Edas v1.01 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="5376">
+				<rom name="Edas v1.01 (19xx)(-).z80" size="5376" crc="14c5062c" sha1="8f2acace1a518868c21306de660184852e580960"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z105089328794a97">
+		<description>Edas v3.1 (19xx)(-)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8480">
+				<rom name="Edas v3.1 (19xx)(-)(en).z80" size="8480" crc="f86eb637" sha1="5089328794a97626047edcf7e7511221f0db2ce8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10597fe021f660b">
+		<description>editex+header</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4736">
+				<rom name="editex+header.z80" size="4736" crc="4618d11c" sha1="597fe021f660b1e557e44ec93a2887755215e1e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z101c1be4d23a768">
+		<description>EditX + Header (1988)(SCI, P. Schellin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4736">
+				<rom name="EditX + Header (1988)(SCI, P. Schellin).z80" size="4736" crc="dbd8b287" sha1="1c1be4d23a76824e69996bb1fdc724161ee037f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f2348c72a732f">
+		<description>Eidechse (19xx)(N.aC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="6688">
+				<rom name="Eidechse (19xx)(N.aC).z80" size="6688" crc="c447f8aa" sha1="f2348c72a732f38efeb569c346ebbc651ea3cc2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1005d263a7cf3f3">
+		<description>EMR-Reassembler (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="EMR-Reassembler (19xx)(-).z80" size="2080" crc="c4e7f81b" sha1="05d263a7cf3f346712da3616b79ef7d64a1b3e1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ae2a25002bcc2">
+		<description>eprom prog</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="eprom prog.z80" size="2080" crc="18d2b76f" sha1="ae2a25002bcc2bedc5902c9019f908883683868a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108dd097b5851b8">
+		<description>EPROM-Handler v2.7 (19xx)(R. Brosig)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2081">
+				<rom name="EPROM-Handler v2.7 (19xx)(R. Brosig).z80" size="2081" crc="ed1693c2" sha1="8dd097b5851b821de2314083bdd9f990c1d8977f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10990ef0a84f61d">
+		<description>EPROM-Handler v2.9 (19xx)(R. Brosig)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="EPROM-Handler v2.9 (19xx)(R. Brosig)[a2].z80" size="2080" crc="54b6fb34" sha1="990ef0a84f61d42c5a8b1069299f0fbdcd21d9ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d54cb07f473a4">
+		<description>EPROM-Handler v2.9 (19xx)(R. Brosig)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="EPROM-Handler v2.9 (19xx)(R. Brosig)[a3].z80" size="2080" crc="59796b29" sha1="d54cb07f473a49428004b482c5ba19dc2a8b8ca8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z106645ab975eedf">
+		<description>EPROM-Handler v2.9 (19xx)(R. Brosig)[a4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="EPROM-Handler v2.9 (19xx)(R. Brosig)[a4].z80" size="2080" crc="7f971333" sha1="6645ab975eedf304a03c5bbaa9a0c1c8bbf9fb12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1052d757ea64a45">
+		<description>EPROM-Handler v2.9 (19xx)(R. Brosig)[a5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="EPROM-Handler v2.9 (19xx)(R. Brosig)[a5].z80" size="2080" crc="6895a812" sha1="52d757ea64a4574045879d305adfa697b906f462"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10348eb5db7cc98">
+		<description>EPROM-Handler v2.9 (19xx)(R. Brosig)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="EPROM-Handler v2.9 (19xx)(R. Brosig)[a].z80" size="2080" crc="45b84749" sha1="348eb5db7cc98ab7de203964b3d28530c5ab9252"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f3b038d9226b7">
+		<description>epromer 2_9_igd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="epromer 2_9_igd.z80" size="2080" crc="7e2b6a7b" sha1="f3b038d9226b7bea7fcfa5b4f36800fed78f4f1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10c42603930cdef">
+		<description>EXREAS 2.01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3104">
+				<rom name="EXREAS 2.01.Z80" size="3104" crc="c9782fe2" sha1="c42603930cdef3dfb8b2bb020334ce7a3791e3ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10e7751f8bd2b49">
+		<description>exreas_2_01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3104">
+				<rom name="exreas_2_01.z80" size="3104" crc="b2bde581" sha1="e7751f8bd2b495c3444d1db07eec54a916e40db9"/>
 			</dataarea>
 		</part>
 	</software>

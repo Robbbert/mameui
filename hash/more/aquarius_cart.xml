@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 4 -->
 <softwarelist name="aquarius_cart" description="aquarius_cart loose roms">
+	<software name="caqea38ce45628c9">
+		<description>DOS basic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="aquarius_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="DOS basic.bin" size="16384" crc="10fb3dca" sha1="ea38ce45628c9d9e4e633c7638e8d860a40c3ffa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="caq1be1da17cd6c7">
 		<description>htron_aquarius</description>
 		<year>????</year>

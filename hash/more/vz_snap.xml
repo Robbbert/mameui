@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 177 -->
+<!-- Number of items in this list = 205 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
 	<software name="vt11c424670e7bd1">
 		<description>Attack of the Killer Tomatoes</description>
@@ -209,6 +209,286 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="6519">
 				<rom name="cracky.vz" size="6519" crc="7fe5cfe1" sha1="4e184494cb7b6580eee802b2686f68aee99fbc07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt14e751c57dcb51">
+		<description>Cross Bomber (2021-05-13)(Caruso, Fabrizio)[24K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="6312">
+				<rom name="Cross Bomber (2021-05-13)(Caruso, Fabrizio)[24K].vz" size="6312" crc="e28732df" sha1="4e751c57dcb51fa2c7651861805cc7e614365b9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt16db0224efff18">
+		<description>Cross Chase (2017-09-15)(Caruso, Fabrizio)[full][experimental]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="15186">
+				<rom name="Cross Chase (2017-09-15)(Caruso, Fabrizio)[full][experimental].vz" size="15186" crc="c9e22ab6" sha1="6db0224efff1837624411b1d5a2c276ae70695f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt15a8161b98b09b">
+		<description>Cross Chase (2017-09-15)(Caruso, Fabrizio)[minimal][experimental]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="10173">
+				<rom name="Cross Chase (2017-09-15)(Caruso, Fabrizio)[minimal][experimental].vz" size="10173" crc="aabe0abf" sha1="5a8161b98b09b1372e9495958ed2281bb2fee8c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1555b74b10d293">
+		<description>Cross Chase (2017-10-11)(Caruso, Fabrizio)[16K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="12700">
+				<rom name="Cross Chase (2017-10-11)(Caruso, Fabrizio)[16K][full].vz" size="12700" crc="6f1a8997" sha1="555b74b10d293e46185a6439337c7a75d0b02b87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1f1b7bdff4082c">
+		<description>Cross Chase (2017-10-11)(Caruso, Fabrizio)[32K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="17098">
+				<rom name="Cross Chase (2017-10-11)(Caruso, Fabrizio)[32K][full].vz" size="17098" crc="89dd2e4f" sha1="f1b7bdff4082c24e7bc8c06b348a77ad3fe60839"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ebdf16bbb59ee">
+		<description>Cross Chase (2017-10-30)(Caruso, Fabrizio)[16K][light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="12139">
+				<rom name="Cross Chase (2017-10-30)(Caruso, Fabrizio)[16K][light].vz" size="12139" crc="eccb7370" sha1="ebdf16bbb59eeb0f2e8ad8f24b907297d7c52e20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10cda736e8bb2a">
+		<description>Cross Chase (2017-10-30)(Caruso, Fabrizio)[32K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="17016">
+				<rom name="Cross Chase (2017-10-30)(Caruso, Fabrizio)[32K][full].vz" size="17016" crc="04bb7a99" sha1="0cda736e8bb2a1306f0a60e80b9d4e3e0a671016"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1380e05a9573c6">
+		<description>Cross Chase (2017-12-10)(Caruso, Fabrizio)[16K][light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="11481">
+				<rom name="Cross Chase (2017-12-10)(Caruso, Fabrizio)[16K][light].vz" size="11481" crc="89ef1508" sha1="380e05a9573c6c3e82a42eb2eb02007823954d7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a1726286267e7">
+		<description>Cross Chase (2017-12-10)(Caruso, Fabrizio)[32K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="16497">
+				<rom name="Cross Chase (2017-12-10)(Caruso, Fabrizio)[32K][full].vz" size="16497" crc="b296ec42" sha1="a1726286267e7ea9e504b06543e163bd662ad771"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a95995ea813bc">
+		<description>Cross Chase (2018-02-03)(Caruso, Fabrizio)[16K][light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="10919">
+				<rom name="Cross Chase (2018-02-03)(Caruso, Fabrizio)[16K][light].vz" size="10919" crc="ea56b116" sha1="a95995ea813bcae4b047532bb2bb0b28e7f2067d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1b4ec32f15d65d">
+		<description>Cross Chase (2018-02-03)(Caruso, Fabrizio)[32K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="16670">
+				<rom name="Cross Chase (2018-02-03)(Caruso, Fabrizio)[32K][full].vz" size="16670" crc="f2196a97" sha1="b4ec32f15d65d6ede768767a84707a79c63f81aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt17e55973c7167c">
+		<description>Cross Chase (2018-04-15)(Caruso, Fabrizio)[18K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13654">
+				<rom name="Cross Chase (2018-04-15)(Caruso, Fabrizio)[18K][full].vz" size="13654" crc="ae781678" sha1="7e55973c7167c7927091038be952c82de9510ff6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt18a951a06a9f43">
+		<description>Cross Chase (2018-04-15)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4877">
+				<rom name="Cross Chase (2018-04-15)(Caruso, Fabrizio)[8K][tiny].vz" size="4877" crc="a451c675" sha1="8a951a06a9f430d3b557768c47e6ae2c03376580"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a439c360cf2a8">
+		<description>Cross Chase (2018-05-19)(Caruso, Fabrizio)[18K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13607">
+				<rom name="Cross Chase (2018-05-19)(Caruso, Fabrizio)[18K][full].vz" size="13607" crc="4bbd3573" sha1="a439c360cf2a8a449c6ae1af724cac10cd13f3f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1e1f138d0d3e7f">
+		<description>Cross Chase (2018-05-19)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4851">
+				<rom name="Cross Chase (2018-05-19)(Caruso, Fabrizio)[8K][tiny].vz" size="4851" crc="9ca23ecf" sha1="e1f138d0d3e7fb03f858feafb1b2bcda53418c29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1824c16104e467">
+		<description>Cross Chase (2018-07-19)(Caruso, Fabrizio)[18K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13590">
+				<rom name="Cross Chase (2018-07-19)(Caruso, Fabrizio)[18K][full].vz" size="13590" crc="3aadd02d" sha1="824c16104e46733bb4f2a91615afbee561581bf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1b2319ef82e66c">
+		<description>Cross Chase (2018-07-19)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4894">
+				<rom name="Cross Chase (2018-07-19)(Caruso, Fabrizio)[8K][tiny].vz" size="4894" crc="11abe7d7" sha1="b2319ef82e66c0c603fca05bfad9f8c4c43c42e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a7b36d3e8fdfe">
+		<description>Cross Chase (2018-08-04)(Caruso, Fabrizio)[18K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13526">
+				<rom name="Cross Chase (2018-08-04)(Caruso, Fabrizio)[18K][full].vz" size="13526" crc="93722c05" sha1="a7b36d3e8fdfe9dd836aff8938c03c60aa6b0eb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt115c3ee4e6669c">
+		<description>Cross Chase (2018-08-04)(Caruso, Fabrizio)[8K][tiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="4857">
+				<rom name="Cross Chase (2018-08-04)(Caruso, Fabrizio)[8K][tiny].vz" size="4857" crc="f9864f0e" sha1="15c3ee4e6669c090d25c0188cd245e4bb3d0f7c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt13e42995c06dfe">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[18K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13243">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)[18K][full].vz" size="13243" crc="ff48af2e" sha1="3e42995c06dfef02363d00adb388dd1d63659c16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt13bf2911eb9636">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)[18K][full][sprites]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="14350">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)[18K][full][sprites].vz" size="14350" crc="d10dbda7" sha1="3bf2911eb9636d48940bc3ca26ddfeb4102ee9e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt119dee06b0133b">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)[18K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13363">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio)[18K][full].vz" size="13363" crc="c3651787" sha1="19dee06b0133b6407107cb86d8c032157991ad99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1b4849e90095fb">
+		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)[18K][full][sprites]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="15498">
+				<rom name="Cross Chase (2020-04-02)(Caruso, Fabrizio)[18K][full][sprites].vz" size="15498" crc="7854ee4f" sha1="b4849e90095fb7bfb03fac4656b411bb7d6d0ba6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt14cd09221d3480">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)[18K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13592">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[18K].vz" size="13592" crc="e0116f8e" sha1="4cd09221d34808e5b13d506a653ec933f0fac96f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt109b70073de204">
+		<description>Cross Horde v1.0 (2021-05-01)(Caruso, Fabrizio)[24K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="12116">
+				<rom name="Cross Horde v1.0 (2021-05-01)(Caruso, Fabrizio)[24K].vz" size="12116" crc="97b53040" sha1="09b70073de20426bf06afae5751b94f1830fb9e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt13d2cbef40223e">
+		<description>Cross Shoot (2020-07-03)(Caruso, Fabrizio)[24K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="20372">
+				<rom name="Cross Shoot (2020-07-03)(Caruso, Fabrizio)[24K].vz" size="20372" crc="4398a179" sha1="3d2cbef40223e993955576b5617b26d1efa92319"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1e8d3518e3f0c9">
+		<description>Cross Snake v1.0 (2020-12-12)(Caruso, Fabrizio)[18K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="14242">
+				<rom name="Cross Snake v1.0 (2020-12-12)(Caruso, Fabrizio)[18K].vz" size="14242" crc="7a9cda29" sha1="e8d3518e3f0c9a4f4dd4fc718a163796cf9aac0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt11560c059f58fb">
+		<description>Cross Snake v2.0 (2020-12-31)(Caruso, Fabrizio)[24K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="13803">
+				<rom name="Cross Snake v2.0 (2020-12-31)(Caruso, Fabrizio)[24K].vz" size="13803" crc="7ac3aa39" sha1="1560c059f58fbd28f9cc25b4fba9ab4f2fc25902"/>
 			</dataarea>
 		</part>
 	</software>

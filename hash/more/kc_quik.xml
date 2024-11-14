@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 165 -->
+<!-- Number of items in this list = 191 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -832,6 +832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="kc8489582ad708c0">
+		<description>Dieintimstatistik[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6784">
+				<rom name="Dieintimstatistik[4].kcc" size="6784" crc="02a72344" sha1="489582ad708c07725ca9c17795429faafd084030"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="kc86287d19d41ee4">
 		<description>Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a2][4]</description>
 		<year>????</year>
@@ -1499,6 +1509,256 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="7552">
 				<rom name="Gunship 3000 (1991)(S. Scholz)[a][2].kcc" size="7552" crc="a6d61a3a" sha1="51b0deca7e9dee5c9cb8973e95fc29a687e2a3de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc839d6e0ce777a4">
+		<description>Hase und Wolf (19xx)(-)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13824">
+				<rom name="Hase und Wolf (19xx)(-)[a2][3].kcc" size="13824" crc="6f68dbe2" sha1="39d6e0ce777a4bcc8f03bf8bc501f5a828e4f37d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc864f5feddf37a9">
+		<description>Hase und Wolf (19xx)(-)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12672">
+				<rom name="Hase und Wolf (19xx)(-)[a][4].kcc" size="12672" crc="216e637e" sha1="64f5feddf37a92e179a40288f2f74d5b67f57263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ef1aeb7e30b90">
+		<description>Hase und Wolf (19xx)(Andreas Hakel)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5504">
+				<rom name="Hase und Wolf (19xx)(Andreas Hakel)[a2][4].kcc" size="5504" crc="780524a7" sha1="ef1aeb7e30b903093b6a89d574a5f877b945f6a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b06699d523f8d">
+		<description>Hase und Wolf (19xx)(Andreas Hakel)[a3][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5504">
+				<rom name="Hase und Wolf (19xx)(Andreas Hakel)[a3][3].kcc" size="5504" crc="33744d64" sha1="b06699d523f8d2298bbad9c9901ea0763917ad22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc897bc1656a6c22">
+		<description>Hase und Wolf (19xx)(Andreas Hakel)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13184">
+				<rom name="Hase und Wolf (19xx)(Andreas Hakel)[a][3].kcc" size="13184" crc="2c2381a7" sha1="97bc1656a6c22fad4603beaba741172fee096a1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b99e7891ccb15">
+		<description>Hauptstaedteraten (1985)(VEB Mikroelektronik)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13440">
+				<rom name="Hauptstaedteraten (1985)(VEB Mikroelektronik)[a][4].kcc" size="13440" crc="94c4f8b3" sha1="b99e7891ccb150ae9b0523a37540242c7e7bbe47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87eaa1a9ddb1bd">
+		<description>HC BASIC - Graphic v2.0 (19xx)(-)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11904">
+				<rom name="HC BASIC - Graphic v2.0 (19xx)(-)[a2][4].kcc" size="11904" crc="16772fe2" sha1="7eaa1a9ddb1bd9ba945934457adc30dc59109a9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8028b75bf3087a">
+		<description>HC BASIC - Graphic v2.0 (19xx)(-)[a][2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11904">
+				<rom name="HC BASIC - Graphic v2.0 (19xx)(-)[a][2].kcc" size="11904" crc="d6871c21" sha1="028b75bf3087a8e10dcc8f18b68b54a657c6879f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc858c9ea729416e">
+		<description>HC-Forth (19xx)(-)[RAM-Version][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7936">
+				<rom name="HC-Forth (19xx)(-)[RAM-Version][3].kcc" size="7936" crc="37c09a7f" sha1="58c9ea729416ef4ce7bc1f83eabb74a5685024b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d0a4f1c7ed092">
+		<description>Helicopter (19xx)(D. Schmelter)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7808">
+				<rom name="Helicopter (19xx)(D. Schmelter)[a2][3].kcc" size="7808" crc="b9b272c0" sha1="d0a4f1c7ed09216aa09716f421a2eed6ff955012"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc844d88a4fdfb6d">
+		<description>Helicopter (19xx)(D. Schmelter)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6400">
+				<rom name="Helicopter (19xx)(D. Schmelter)[a][4].kcc" size="6400" crc="606b95c2" sha1="44d88a4fdfb6d8dc6d76c9f20d9af10e5b373c93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ea9dda6880967">
+		<description>Helicopter (19xx)(D. Schmelter)[b][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6272">
+				<rom name="Helicopter (19xx)(D. Schmelter)[b][3].kcc" size="6272" crc="a2dc0c38" sha1="ea9dda68809676c8ecd85143377c1720f7d0cf15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc878f1fd3f977bb">
+		<description>Hier bin Ich (19xx)(Frank Doehler)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6656">
+				<rom name="Hier bin Ich (19xx)(Frank Doehler)[a][4].kcc" size="6656" crc="777fc4e4" sha1="78f1fd3f977bbf6bc15e4c72620d2c11e1fd7d8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc84c055d86da413">
+		<description>Hier bin Ich (19xx)(Frank Doehler)[b2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6656">
+				<rom name="Hier bin Ich (19xx)(Frank Doehler)[b2][4].kcc" size="6656" crc="c0dd556f" sha1="4c055d86da4137830c52ebb17ef52dc994afdc99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a59fffad46d42">
+		<description>Hisoft for KC85 (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2432">
+				<rom name="Hisoft for KC85 (19xx)(-)[4].kcc" size="2432" crc="ae486f2e" sha1="a59fffad46d42523628accb64ea6c63049b47c44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc81a896c03bde9c">
+		<description>Hisoft Pascal v1.7 (1990)(Burmeister, Lehmann, Vetters)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16000">
+				<rom name="Hisoft Pascal v1.7 (1990)(Burmeister, Lehmann, Vetters)[4].kcc" size="16000" crc="456c6bdc" sha1="1a896c03bde9c0361f66d376f04b814e6a810924"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a31e521ed287f">
+		<description>Hit (1989)(Michael Engel)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13696">
+				<rom name="Hit (1989)(Michael Engel)[4].kcc" size="13696" crc="53e3b6bd" sha1="a31e521ed287fbe924ddf23f3a89f35f5e3e9ac9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ca536755c8cbc">
+		<description>House (1988)(Sowago - A. Weissflog)[t Brain & Co][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12928">
+				<rom name="House (1988)(Sowago - A. Weissflog)[t Brain & Co][3].kcc" size="12928" crc="3732ca9c" sha1="ca536755c8cbce2f6a845ae04409743f0a187005"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d60f16dab0b61">
+		<description>House (19xx)(Sowago - A. Weissflog)[a3][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12672">
+				<rom name="House (19xx)(Sowago - A. Weissflog)[a3][4].kcc" size="12672" crc="b174fb08" sha1="d60f16dab0b613c7c65a6625328157d254b86df9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89095b65dec2f4">
+		<description>HTAPE301#TT (19xx)(Haftmann Software)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="HTAPE301#TT (19xx)(Haftmann Software)[3].kcc" size="1152" crc="deed0897" sha1="9095b65dec2f4a0fe5d8f015db479a1e2c3a7c88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8aec1737cb6208">
+		<description>HTRON_KC85_2-5[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8946">
+				<rom name="HTRON_KC85_2-5[4].KCC" size="8946" crc="6001f1b1" sha1="aec1737cb6208deabc97571c7bb492c2b7ee252c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8af841cb058a31">
+		<description>hungrige Goff, Der (1989)(M. Leubner)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5504">
+				<rom name="hungrige Goff, Der (1989)(M. Leubner)[4].kcc" size="5504" crc="fbeab13c" sha1="af841cb058a318e7b9bd1b119ec7150b63ed9591"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8eaa16f979f106">
+		<description>Intelligenztest (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="19456">
+				<rom name="Intelligenztest (19xx)(-)[4].kcc" size="19456" crc="789cd450" sha1="eaa16f979f10688fc20a84d15317f4b6cd244fb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc816528ec6cef27">
+		<description>Invaders (19xx)(A. Zierott)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2688">
+				<rom name="Invaders (19xx)(A. Zierott)[a2][3].kcc" size="2688" crc="03c0d770" sha1="16528ec6cef279ae7642abae4a590cf333754c73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d74986ddee293">
+		<description>Invaders (19xx)(A. Zierott)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2688">
+				<rom name="Invaders (19xx)(A. Zierott)[a][4].kcc" size="2688" crc="1a799428" sha1="d74986ddee2936b073f0ef60e1618b8f90e9531f"/>
 			</dataarea>
 		</part>
 	</software>

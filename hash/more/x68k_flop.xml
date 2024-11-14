@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 485 -->
+<!-- Number of items in this list = 560 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x6845edd6a2d6443">
 		<description>177 (unofficial port)</description>
@@ -2249,6 +2249,756 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Gekkan Dennou Club (Vol. 049).hdm" size="1261568" crc="cfaab79d" sha1="800b7fc7ef0a98632fde98d6baa472070f4aaef8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d08953c1360b9">
+		<description>Gekkan Dennou Club (Vol. 050)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 050).hdm" size="1261568" crc="a1d5f52a" sha1="d08953c1360b942f98cf9f6c4f4b413da7df00cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68240071e61c0d7">
+		<description>Gekkan Dennou Club (Vol. 051)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 051).hdm" size="1261568" crc="b0263ec9" sha1="240071e61c0d7e9c554c7e4f2c5af62e712a98b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68696f683861f1e">
+		<description>Gekkan Dennou Club (Vol. 052)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 052).hdm" size="1261568" crc="2dd9ba4f" sha1="696f683861f1e50168a7b3b2b96dd0bd7e84e164"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68bd84525ecce3c">
+		<description>Gekkan Dennou Club (Vol. 053)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 053).hdm" size="1261568" crc="cb871c02" sha1="bd84525ecce3c68e14ee437e63d209b205181bb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f881de9eb8dc1">
+		<description>Gekkan Dennou Club (Vol. 054)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 054).hdm" size="1261568" crc="ca9c1c82" sha1="f881de9eb8dc1f5801709c30b6cc75078483af0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68acd4a49d2c13c">
+		<description>Gekkan Dennou Club (Vol. 055)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 055).hdm" size="1261568" crc="6dd1451c" sha1="acd4a49d2c13c47ef15a583eea573d05228af461"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6884589e1958ec3">
+		<description>Gekkan Dennou Club (Vol. 056)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 056)(1).hdm" size="1261568" crc="a38a9612" sha1="84589e1958ec3b6f591b47b26b8fed57ee1dacf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68869114de8e7ed">
+		<description>Gekkan Dennou Club (Vol. 056)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 056)(2).hdm" size="1261568" crc="980b9b7b" sha1="869114de8e7eda055a5e5053c078e686144029af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6884dc4d89d3823">
+		<description>Gekkan Dennou Club (Vol. 057)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 057).hdm" size="1261568" crc="c2910c49" sha1="84dc4d89d3823c4eaa818d90dcce212b22558d28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b06701aaafa41">
+		<description>Gekkan Dennou Club (Vol. 059)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 059).hdm" size="1261568" crc="3517e0e8" sha1="b06701aaafa4165b46bdb774f007e45e32e3bae5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684bea436dea7b2">
+		<description>Gekkan Dennou Club (Vol. 060)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 060).hdm" size="1261568" crc="5de93bb6" sha1="4bea436dea7b23f00426030dc1787530eef06c41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c94bebb4bc375">
+		<description>Gekkan Dennou Club (Vol. 061)(Ni-gou)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 061)(Ni-gou).hdm" size="1261568" crc="6995efbf" sha1="c94bebb4bc37554f4ce9fc89a0eef7d85765dcc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68afb79538c6403">
+		<description>Gekkan Dennou Club (Vol. 061)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 061).hdm" size="1261568" crc="632564ca" sha1="afb79538c64039f52bd79c89983fe8490ccabacc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x685f1de61cf65a2">
+		<description>Gekkan Dennou Club (Vol. 062)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 062).hdm" size="1261568" crc="6cb25808" sha1="5f1de61cf65a2e1e6146f704c34b1de92542b758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686566dcff00bbf">
+		<description>Gekkan Dennou Club (Vol. 063)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 063).hdm" size="1261568" crc="0b9f50a0" sha1="6566dcff00bbfbda59ad28c1d5df64ced172c0db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d1dd6c51b6eac">
+		<description>Gekkan Dennou Club (Vol. 064)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 064).hdm" size="1261568" crc="f4ccac9e" sha1="d1dd6c51b6eac37a5235273f12a3bede91d0d83d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684a415fe56de02">
+		<description>Gekkan Dennou Club (Vol. 065)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 065).hdm" size="1261568" crc="26e69b68" sha1="4a415fe56de02ab921b203045de34be6773b7b52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682854092bec0ed">
+		<description>Gekkan Dennou Club (Vol. 066)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 066).hdm" size="1261568" crc="a9e8b1d8" sha1="2854092bec0ed28c4e61f2a0627e5140241a9efc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d3bb538e65f90">
+		<description>Gekkan Dennou Club (Vol. 067)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 067).hdm" size="1261568" crc="2996ea80" sha1="d3bb538e65f90af95cdf4053e6bc8264dc2d52e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x681aa3eaaa68a4d">
+		<description>Gekkan Dennou Club (Vol. 068)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 068).hdm" size="1261568" crc="ae464b69" sha1="1aa3eaaa68a4d255e356df9e1d47e74b0de85afa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68156046bd8b764">
+		<description>Gekkan Dennou Club (Vol. 069)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 069).hdm" size="1261568" crc="e09f83e2" sha1="156046bd8b764c0f1546fd02e4c33f7306f0409a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68eba57f5c48709">
+		<description>Gekkan Dennou Club (Vol. 070)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 070).hdm" size="1261568" crc="ab226fe8" sha1="eba57f5c48709980b77227da34032ccc4ad61d7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6809079f45d9ce9">
+		<description>Gekkan Dennou Club (Vol. 071)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 071).hdm" size="1261568" crc="4e1c1c2c" sha1="09079f45d9ce93377030d48a771e579594f76758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6833953e8f45d74">
+		<description>Gekkan Dennou Club (Vol. 072)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 072).hdm" size="1261568" crc="cdf22cbc" sha1="33953e8f45d747ff41660fb0589a776feaa6a72e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ed776ba55a3d0">
+		<description>Gekkan Dennou Club (Vol. 073)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 073).hdm" size="1261568" crc="0836d0f3" sha1="ed776ba55a3d06e1401dc4f9e24e144665bf12cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x681b6044913acc1">
+		<description>Gekkan Dennou Club (Vol. 074)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 074).hdm" size="1261568" crc="8dc039d1" sha1="1b6044913acc199429ef4300f07a38094b5f4579"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b6489378ab229">
+		<description>Gekkan Dennou Club (Vol. 075)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 075).hdm" size="1261568" crc="51a68e75" sha1="b6489378ab22907577d8826441f303b63168e4ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68034117f18d43f">
+		<description>Gekkan Dennou Club (Vol. 076)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 076)(1).hdm" size="1261568" crc="c016bb0c" sha1="034117f18d43f48c389d767d83e1a391f3bc2622"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d32a80fa86ab2">
+		<description>Gekkan Dennou Club (Vol. 076)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 076)(2).hdm" size="1261568" crc="470e1968" sha1="d32a80fa86ab287247befb9921b6f12788919c37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68efe17a7409821">
+		<description>Gekkan Dennou Club (Vol. 077)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 077)(1).hdm" size="1261568" crc="6233ce5f" sha1="efe17a7409821793fc61b12469b6aad8ad3847ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68620b4a951ba7d">
+		<description>Gekkan Dennou Club (Vol. 077)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 077)(2).hdm" size="1261568" crc="4a87c217" sha1="620b4a951ba7d4cfcf468e189955b1124a6ab816"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68dfd12758071d1">
+		<description>Gekkan Dennou Club (Vol. 078)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 078)(1).hdm" size="1261568" crc="7c913a36" sha1="dfd12758071d1b25253ee4c9916f4cacefbb2f31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6871ce0c62128b9">
+		<description>Gekkan Dennou Club (Vol. 078)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 078)(2).hdm" size="1261568" crc="5f00b8bb" sha1="71ce0c62128b90b68f896d69e9782101a87f7fdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e32c38667416d">
+		<description>Gekkan Dennou Club (Vol. 079)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 079)(1).hdm" size="1261568" crc="d3ea378b" sha1="e32c38667416d60671aff16ff057b7eeb45728e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d9777c9130e93">
+		<description>Gekkan Dennou Club (Vol. 079)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 079)(2).hdm" size="1261568" crc="685a3c55" sha1="d9777c9130e93af39be62c9c2452eef6961cd6e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68270c9009c2ecf">
+		<description>Gekkan Dennou Club (Vol. 080)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 080)(1).hdm" size="1261568" crc="7698a159" sha1="270c9009c2ecf1045e5a87233356b2ec30867c97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b5fbfe12ca30a">
+		<description>Gekkan Dennou Club (Vol. 080)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 080)(2).hdm" size="1261568" crc="a88ee7b8" sha1="b5fbfe12ca30a9fa95f143be434c0a9fe1975481"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c7c4ceb96f9cd">
+		<description>Gekkan Dennou Club (Vol. 081)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 081)(1).hdm" size="1261568" crc="e7da29db" sha1="c7c4ceb96f9cd6aa4dfa956837d92208db98d6ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682910291e92e44">
+		<description>Gekkan Dennou Club (Vol. 081)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 081)(2).hdm" size="1261568" crc="54d4b74e" sha1="2910291e92e44b0400a3e7df0ea8273db56cbc6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f0d110462f705">
+		<description>Gekkan Dennou Club (Vol. 082)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 082)(1).hdm" size="1261568" crc="8cd92fe6" sha1="f0d110462f7056edf2f7ed41e34497befc5cb13c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e385bdabf9524">
+		<description>Gekkan Dennou Club (Vol. 082)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 082)(2).hdm" size="1261568" crc="39d229a4" sha1="e385bdabf952419b361dd78c98fd7f54aa9cf582"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6833532ef9c9728">
+		<description>Gekkan Dennou Club (Vol. 083)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 083)(1).hdm" size="1261568" crc="8d721387" sha1="33532ef9c972810857ba9306cb2704949f80ae42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x685043e1ef3f2a4">
+		<description>Gekkan Dennou Club (Vol. 083)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 083)(2).hdm" size="1261568" crc="23e8838d" sha1="5043e1ef3f2a42f026bc0ea2b1371fea04c964be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688c916ddc0c197">
+		<description>Gekkan Dennou Club (Vol. 084)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 084)(1).hdm" size="1261568" crc="7a6f3d76" sha1="8c916ddc0c1970b4e60a3586d6beb10abcdd1631"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6897c41e17d4aac">
+		<description>Gekkan Dennou Club (Vol. 084)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 084)(2).hdm" size="1261568" crc="62e0ffc2" sha1="97c41e17d4aacdc3e636bd885aaa0b90a2e2dbd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68db018c5922ea9">
+		<description>Gekkan Dennou Club (Vol. 085)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 085)(1).hdm" size="1261568" crc="66c2fbc6" sha1="db018c5922ea98e85fbf28f81cb1d11dbe3ead8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6849949dfd1ae65">
+		<description>Gekkan Dennou Club (Vol. 085)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 085)(2).hdm" size="1261568" crc="595eed34" sha1="49949dfd1ae65b731fd4f662f1c3751b6307ced6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f2fc1ea5459ad">
+		<description>Gekkan Dennou Club (Vol. 086)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 086)(1).hdm" size="1261568" crc="f5fe5fd5" sha1="f2fc1ea5459ad7f45d9d768c0139de78cd21411b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682c656c5fa894e">
+		<description>Gekkan Dennou Club (Vol. 086)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 086)(2).hdm" size="1261568" crc="cd1baa2d" sha1="2c656c5fa894e1b560a9881065814147b44cde9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x687862f7b9346bf">
+		<description>Gekkan Dennou Club (Vol. 087)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 087)(1).hdm" size="1261568" crc="aafd2b81" sha1="7862f7b9346bf2bb94183169ea80dd58b85ae6ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6860356d240a37d">
+		<description>Gekkan Dennou Club (Vol. 087)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 087)(2).hdm" size="1261568" crc="afd035a8" sha1="60356d240a37d39e7657c072b7dafd1fd80c1070"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e5e372f9d26e3">
+		<description>Gekkan Dennou Club (Vol. 088)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 088)(1).hdm" size="1261568" crc="92973c97" sha1="e5e372f9d26e392a5d5aee9c8178e0fb93495af0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b4aac1967273d">
+		<description>Gekkan Dennou Club (Vol. 088)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 088)(2).hdm" size="1261568" crc="8c94a5ae" sha1="b4aac1967273d808a45d4334a9c4b0bd0039103b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d8a3b33ac883f">
+		<description>Gekkan Dennou Club (Vol. 089)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 089)(1).hdm" size="1261568" crc="cf73b1f8" sha1="d8a3b33ac883f6e2980f43b1bd21f90bcd7bd41c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68130c80fc70a37">
+		<description>Gekkan Dennou Club (Vol. 089)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 089)(2).hdm" size="1261568" crc="56c00545" sha1="130c80fc70a370ca817be6af1b23b1b76e4364d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6886ff7b9453223">
+		<description>Gekkan Dennou Club (Vol. 090)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 090)(1).hdm" size="1261568" crc="72abb7d6" sha1="86ff7b9453223086295d20f9cf72bd664707b4f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68aebe70935df49">
+		<description>Gekkan Dennou Club (Vol. 090)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 090)(2).hdm" size="1261568" crc="bd6f05e1" sha1="aebe70935df493aea679861d2dfacfe950b348c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68bc9eb70a04720">
+		<description>Gekkan Dennou Club (Vol. 091)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 091)(1).hdm" size="1261568" crc="a7b4c100" sha1="bc9eb70a04720ccb2630e2cdc06cdd95aa0ede6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6828b01fc83299f">
+		<description>Gekkan Dennou Club (Vol. 091)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 091)(2).hdm" size="1261568" crc="334fcf8e" sha1="28b01fc83299fcc2b68ece8289d67d2fb20df04f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682bb27ef460061">
+		<description>Gekkan Dennou Club (Vol. 092)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 092)(1).hdm" size="1261568" crc="502952d7" sha1="2bb27ef4600616b1bde48d68987c1fa0e0a4d7af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68501060367fc62">
+		<description>Gekkan Dennou Club (Vol. 092)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 092)(2).hdm" size="1261568" crc="b5ece9df" sha1="501060367fc6261920448733a0c7a9d22460d807"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b720dd2870017">
+		<description>Gekkan Dennou Club (Vol. 093)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 093)(1).hdm" size="1261568" crc="ca683ea3" sha1="b720dd2870017d92064c8bc9f1e698464e619176"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x685d35ea8699bbe">
+		<description>Gekkan Dennou Club (Vol. 093)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 093)(2).hdm" size="1261568" crc="c4f58def" sha1="5d35ea8699bbe489beab7b2d6df211b17db6833c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68dd3c8f4b83b60">
+		<description>Gekkan Dennou Club (Vol. 094)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 094)(1).hdm" size="1261568" crc="7fae1704" sha1="dd3c8f4b83b60f5a15eb7b24711ea3abab5e19aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68683cf6e84fbe8">
+		<description>Gekkan Dennou Club (Vol. 094)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 094)(2).hdm" size="1261568" crc="b13a0921" sha1="683cf6e84fbe889073cc192ba9707438c7d1d800"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686ccfa762e14bd">
+		<description>Gekkan Dennou Club (Vol. 095)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 095)(1).hdm" size="1261568" crc="48343096" sha1="6ccfa762e14bd7f58a1ad35b5c3762cd9e67c32c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68a0ab175e078cb">
+		<description>Gekkan Dennou Club (Vol. 095)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 095)(2).hdm" size="1261568" crc="3fb976f9" sha1="a0ab175e078cba1c11fe682d362b44389ab183ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68718dba80097af">
+		<description>Gekkan Dennou Club (Vol. 096)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 096)(1).hdm" size="1261568" crc="85b8902c" sha1="718dba80097afc3e4c4134b94656ce793488856b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b44e7bfa45cae">
+		<description>Gekkan Dennou Club (Vol. 096)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 096)(2).hdm" size="1261568" crc="f7cca650" sha1="b44e7bfa45cae964362c577129d87851d2cace90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680d9b317a139c5">
+		<description>Gekkan Dennou Club (Vol. 097)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 097)(1).hdm" size="1261568" crc="27aaa939" sha1="0d9b317a139c59607ddfe4bfc912990b8091508c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682b2ade59be8f7">
+		<description>Gekkan Dennou Club (Vol. 097)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 097)(2).hdm" size="1261568" crc="7da3d7fc" sha1="2b2ade59be8f7ff7fb1f283784046ede6f36e24d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682c7b64ddaf3f9">
+		<description>Gekkan Dennou Club (Vol. 098)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 098)(1).hdm" size="1261568" crc="fc744af2" sha1="2c7b64ddaf3f928fe3b6cc34f2b924cbc5428696"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d318f5bcc3a3d">
+		<description>Gekkan Dennou Club (Vol. 098)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 098)(2).hdm" size="1261568" crc="dbb0119a" sha1="d318f5bcc3a3d307740273e6fcbfed56c42eb1c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d7cc768bfd3bc">
+		<description>Gekkan Dennou Club (Vol. 099)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 099)(1).hdm" size="1261568" crc="05916bc4" sha1="d7cc768bfd3bcf3e39f9f7f7195a54dd83879d75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ba0fbe8d5324c">
+		<description>Gekkan Dennou Club (Vol. 099)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 099)(2).hdm" size="1261568" crc="e6ad4b60" sha1="ba0fbe8d5324cdb6714696ecb219b4d7bd8501ed"/>
 			</dataarea>
 		</part>
 	</software>
