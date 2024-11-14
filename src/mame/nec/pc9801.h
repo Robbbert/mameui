@@ -494,9 +494,11 @@ private:
 		uint16_t pat[4]{};
 		uint16_t src[4]{};
 		int16_t count = 0;
+		uint16_t mask;
 		uint16_t leftover[4]{};
 		bool first = false;
-		bool init = false;
+		bool start = false;
+		bool loaded = false;
 	} m_egc;
 
 protected:
