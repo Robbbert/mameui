@@ -1,7 +1,187 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 205 -->
+<!-- Number of items in this list = 236 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
+	<software name="vt102f00f5ea4ffb">
+		<description>A-plus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="5599">
+				<rom name="A-plus.vz" size="5599" crc="4aa09ff7" sha1="02f00f5ea4ffbda705ed1eea9cbbc85fc5f66012"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt10fe82d8f8769f">
+		<description>adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="521">
+				<rom name="adventure.vz" size="521" crc="d254c949" sha1="0fe82d8f8769f3ba3ddd330deddc738e54b1f68a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt13adceab0a7ca9">
+		<description>aeon1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="19173">
+				<rom name="aeon1.vz" size="19173" crc="1884af07" sha1="3adceab0a7ca916ab85cf834e25df701298cf958"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1269f43bf33bcf">
+		<description>aeon2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="21389">
+				<rom name="aeon2.vz" size="21389" crc="9f599b4d" sha1="269f43bf33bcf52476a94e5a90b090f310888cf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt11667c04b08346">
+		<description>aeon3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="20057">
+				<rom name="aeon3.vz" size="20057" crc="91aa0ad6" sha1="1667c04b083468581a43728d7811212087e0051b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1efe1a47faab5f">
+		<description>aeon4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="23161">
+				<rom name="aeon4.vz" size="23161" crc="e7b5f7cb" sha1="efe1a47faab5f9e26edf6bb3706fa2d15fc91157"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt174b7fc360a825">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8794">
+				<rom name="aerial.vz" size="8794" crc="23484d8d" sha1="74b7fc360a8251592facbce8e2c0ddd92ce63629"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt17272d7a05e079">
+		<description>agdcode(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7039">
+				<rom name="agdcode(1).vz" size="7039" crc="d7971b51" sha1="7272d7a05e079da77cf5724efac8d1598a7ad7d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1688fa0f5df7de">
+		<description>agdcode(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8015">
+				<rom name="agdcode(2).vz" size="8015" crc="2bb1427c" sha1="688fa0f5df7decc2f3d0a8f68f1bfeb736293cd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1915ca3a133ba1">
+		<description>agdcode</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7047">
+				<rom name="agdcode.vz" size="7047" crc="c51e051c" sha1="915ca3a133ba1d3eb68d7c7b10413c23c17c75f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt18b0e3412270d3">
+		<description>agdcode2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="11306">
+				<rom name="agdcode2.vz" size="11306" crc="9de21d28" sha1="8b0e3412270d374fa4973ab6cf1856488000e463"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt19fef73ab3dab7">
+		<description>Alien Attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="913">
+				<rom name="Alien Attack.vz" size="913" crc="340807c8" sha1="9fef73ab3dab766ad23998fbd21fce019cf8074b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt13737cc14440fe">
+		<description>alien01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="288">
+				<rom name="alien01.vz" size="288" crc="73218f27" sha1="3737cc14440fef1ca165850992bb37d331d19ba2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1d9184a55d66f2">
+		<description>alien02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="323">
+				<rom name="alien02.vz" size="323" crc="07528369" sha1="d9184a55d66f238562a0c2cc34fe631314a63356"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt16223c5fee7f14">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="5604">
+				<rom name="antiair.vz" size="5604" crc="183739d5" sha1="6223c5fee7f140c8e7abd433bd6b91a75b8cedfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt106752aaded76c">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7167">
+				<rom name="ascend.vz" size="7167" crc="cdbd2c9b" sha1="06752aaded76cfb907c671121cdae86a18b70b56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt11c634ef206066">
+		<description>asteroids</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="483">
+				<rom name="asteroids.vz" size="483" crc="64ae4764" sha1="1c634ef206066e77d197e9c7a7715ad3f53b67d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ec4776b77b952">
+		<description>Attack of the Killer Tomatoes (1984-01)(Apolon Ivankovic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="3900">
+				<rom name="Attack of the Killer Tomatoes (1984-01)(Apolon Ivankovic).vz" size="3900" crc="91c13637" sha1="ec4776b77b95281e4f315509f56c172616539a6c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="vt11c424670e7bd1">
 		<description>Attack of the Killer Tomatoes</description>
 		<year>????</year>
@@ -12,6 +192,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="vt10f2cda0918335">
+		<description>Auto Lissajouse (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="227">
+				<rom name="Auto Lissajouse (19xx)(-).vz" size="227" crc="50b8f527" sha1="0f2cda0918335784c39fb136b43fffe74b8a8e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt14c4c8c70da270">
+		<description>baldy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="25713">
+				<rom name="baldy.vz" size="25713" crc="38948ce1" sha1="4c4c8c70da27025b3c2ee1dd468add500cd89b39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt14e80265b773d5">
+		<description>baldy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="25769">
+				<rom name="baldy2.vz" size="25769" crc="7d284439" sha1="4e80265b773d5ac249d00ded6d84ce9cd86bfae8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt195c2dca7b792e">
+		<description>Barbarian Music (2002-09-29)(Maunder, Dave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="2034">
+				<rom name="Barbarian Music (2002-09-29)(Maunder, Dave).vz" size="2034" crc="2c53e530" sha1="95c2dca7b792e1bc248ecf66e2f293aed43843c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt124489daa66527">
+		<description>BASIC_P1.5C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="1161">
+				<rom name="BASIC_P1.5C.vz" size="1161" crc="10da9be0" sha1="24489daa66527be89377907eda57c0c3289c10c9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="vt165f42c0d46598">
 		<description>BAT Hunter</description>
 		<year>????</year>
@@ -19,6 +249,86 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="1672">
 				<rom name="BAT Hunter.vz" size="1672" crc="b0165cee" sha1="65f42c0d46598fc87692d444e434ca3ae6dc85e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1ab11671afa953">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8299">
+				<rom name="battlot.vz" size="8299" crc="2ce2554a" sha1="ab11671afa953baca0707ef4c595ad1207b8fbf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1cf9f089116ce7">
+		<description>BENNY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="16487">
+				<rom name="BENNY.VZ" size="16487" crc="4f2b838e" sha1="cf9f089116ce7a07e2b306a8ca6f0c1fab95985a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1cc6c324d650ec">
+		<description>BENNY_LVL1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="16495">
+				<rom name="BENNY_LVL1.VZ" size="16495" crc="5da4fb27" sha1="cc6c324d650ecf42ad42eb18ae1305378f01bbc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1465ab19a45214">
+		<description>blitz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="428">
+				<rom name="blitz.vz" size="428" crc="c0162fdb" sha1="465ab19a45214f0478a199edd7375e3d1e389e2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt19b850c0019f0b">
+		<description>bob1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="25429">
+				<rom name="bob1.vz" size="25429" crc="1eb4c304" sha1="9b850c0019f0be63b2c9c1d19442686a130cf360"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1e06a728575bee">
+		<description>bombdrop</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="474">
+				<rom name="bombdrop.vz" size="474" crc="3bb458c1" sha1="e06a728575bee959e1342624de93ac7aeef6076d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt18c9ef12bf4009">
+		<description>booklist</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="595">
+				<rom name="booklist.vz" size="595" crc="daba4fcc" sha1="8c9ef12bf4009026a1e8962426e2de5b9dfbeb38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt16e30a6de9f06c">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8026">
+				<rom name="bootskell.vz" size="8026" crc="c5d68d45" sha1="6e30a6de9f06c81c6424695836e963036434714a"/>
 			</dataarea>
 		</part>
 	</software>

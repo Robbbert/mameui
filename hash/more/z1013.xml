@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 100 -->
+<!-- Number of items in this list = 105 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -979,6 +979,56 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="3104">
 				<rom name="exreas_2_01.z80" size="3104" crc="b2bde581" sha1="e7751f8bd2b495c3444d1db07eec54a916e40db9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1003a2793f8d24a">
+		<description>f83 1_3 bcb2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10304">
+				<rom name="f83 1_3 bcb2.z80" size="10304" crc="33d39642" sha1="03a2793f8d24af8764371d5a92a6d61ec13bde02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10da7244d5811d6">
+		<description>Flipper (1987)(Hepprich)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3616">
+				<rom name="Flipper (1987)(Hepprich).z80" size="3616" crc="32f67223" sha1="da7244d5811d6cbfab96d023ef4058349662a5a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10961b4fac92a7e">
+		<description>forth_c.com</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10016">
+				<rom name="forth_c.com.z80" size="10016" crc="dbc62e42" sha1="961b4fac92a7e7705fa806c0ff6ec437c0d5fb3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1058acacffe8c6a">
+		<description>Fussball (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="960">
+				<rom name="Fussball (19xx)(-).z80" size="960" crc="5b28f4b1" sha1="58acacffe8c6a9c354b0c57d7a27f75c7c210982"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f1cf939f5395f">
+		<description>fussball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="960">
+				<rom name="fussball.z80" size="960" crc="2cf85f31" sha1="f1cf939f5395fac1415adbe9db25aa70c7af5dae"/>
 			</dataarea>
 		</part>
 	</software>

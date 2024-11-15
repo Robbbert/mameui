@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 191 -->
+<!-- Number of items in this list = 213 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -1759,6 +1759,226 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="2688">
 				<rom name="Invaders (19xx)(A. Zierott)[a][4].kcc" size="2688" crc="1a799428" sha1="d74986ddee2936b073f0ef60e1618b8f90e9531f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc862f0f7d9cd04d">
+		<description>Joystick driver (19xx)(-)[Driver][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="384">
+				<rom name="Joystick driver (19xx)(-)[Driver][4].kcc" size="384" crc="b55d9f84" sha1="62f0f7d9cd04db58b82c9190b503a47112e359b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8473bed8bbcde6">
+		<description>Jumping Jack (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="Jumping Jack (19xx)(-)[4].kcc" size="2176" crc="6a4b5724" sha1="473bed8bbcde65c900a2d821843828ff60fb53dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b09d7fb0699a8">
+		<description>Jungle v1.4 (1989)(Sowako)(en)(beta)[cr CL90-Software][a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="32384">
+				<rom name="Jungle v1.4 (1989)(Sowako)(en)(beta)[cr CL90-Software][a][4].kcc" size="32384" crc="e5628ade" sha1="b09d7fb0699a8aa592921f48069baf8aa0a3f82b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8eb19b0ce18f4f">
+		<description>Jungle v2.0 (1989)(Sowako)(en)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="28032">
+				<rom name="Jungle v2.0 (1989)(Sowako)(en)[4].kcc" size="28032" crc="57b5c561" sha1="eb19b0ce18f4f558284d98d7156d7c9dd1c554a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88f60c6f1f3976">
+		<description>K6313 (1988)(A. Zierott)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4352">
+				<rom name="K6313 (1988)(A. Zierott)[3].kcc" size="4352" crc="27f58057" sha1="8f60c6f1f3976b4b61f3298c130eb3ddd08fca67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc895edb18a5c3df">
+		<description>K6313 (1989)(A. Zierott)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4224">
+				<rom name="K6313 (1989)(A. Zierott)[3].kcc" size="4224" crc="68686528" sha1="95edb18a5c3df8d6b8c20b41541574de88b54509"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc839a4fe7979ca4">
+		<description>Karate v2.8 (1991)(Stefan Scholz)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="19456">
+				<rom name="Karate v2.8 (1991)(Stefan Scholz)[4].kcc" size="19456" crc="b1bcde0f" sha1="39a4fe7979ca4a4351cd04989fafbd2daeca2354"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc83fac2a34a3b64">
+		<description>KC 85 2-4 Tools (19xx)(Wega-Soft, CL-90)[a2][64k][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9856">
+				<rom name="KC 85 2-4 Tools (19xx)(Wega-Soft, CL-90)[a2][64k][4].kcc" size="9856" crc="5f129161" sha1="3fac2a34a3b646c8f86a394921e465f5599eaf73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc82cc9fd9149001">
+		<description>KC 85 2-4 Tools (19xx)(Wega-Soft, CL-90)[a][64k][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10112">
+				<rom name="KC 85 2-4 Tools (19xx)(Wega-Soft, CL-90)[a][64k][3].kcc" size="10112" crc="35987f4d" sha1="2cc9fd914900117473a88598187c0fe292f0270f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8dd3132a7e1cc7">
+		<description>KC 85 2-4 Tools v3.1 (19xx)(Wega-Soft)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9856">
+				<rom name="KC 85 2-4 Tools v3.1 (19xx)(Wega-Soft)[3].kcc" size="9856" crc="9b799d8d" sha1="dd3132a7e1cc79704dba53ebb48ec05db3511fcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89b0d256dae609">
+		<description>KC PLus Paint v4.0 (1991)(Torsten Baumbach)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16512">
+				<rom name="KC PLus Paint v4.0 (1991)(Torsten Baumbach)[4].kcc" size="16512" crc="120accfc" sha1="9b0d256dae60955db9675ed132464749200eca0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8aafbcaa57e474">
+		<description>KC-COPY (19xx)(-)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="KC-COPY (19xx)(-)[a2][4].kcc" size="1152" crc="c65ba44e" sha1="aafbcaa57e474d24917bb3ef36ba5dff0ffaf9d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d98287b44f8aa">
+		<description>KC-COPY (19xx)(-)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="896">
+				<rom name="KC-COPY (19xx)(-)[a][4].kcc" size="896" crc="2cee37d0" sha1="d98287b44f8aacee3ae40d6b65d4e14556b0cebc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc85706c0c71bf42">
+		<description>KC-Kupfer (1987)(J. Kirmsse)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4224">
+				<rom name="KC-Kupfer (1987)(J. Kirmsse)[3].kcc" size="4224" crc="c893816c" sha1="5706c0c71bf4235a2a4e2f47c912ac8d0e70f7e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8740dbd15e07a1">
+		<description>KC85-4 Line-Demo (demo) (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6400">
+				<rom name="KC85-4 Line-Demo (demo) (19xx)(-)[4].kcc" size="6400" crc="c8d794dc" sha1="740dbd15e07a1133a19cf1029c93edd2d42b1450"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c58cf6ba73d71">
+		<description>Kettenreaktion (1992)(ML-Soft)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2560">
+				<rom name="Kettenreaktion (1992)(ML-Soft)[4].kcc" size="2560" crc="ee95e543" sha1="c58cf6ba73d718152f32eff02be9fe3756e240c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc84c434b5994b96">
+		<description>Kettenreaktion (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2304">
+				<rom name="Kettenreaktion (19xx)(-)[3].kcc" size="2304" crc="42926472" sha1="4c434b5994b963c8786726c504de39394b197b7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc85436a9624f3a4">
+		<description>Kex (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2304">
+				<rom name="Kex (19xx)(-)[3].kcc" size="2304" crc="c00a10d9" sha1="5436a9624f3a44da946b3c025369a6668d651c14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8aea81b496bb5c">
+		<description>Key (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1920">
+				<rom name="Key (19xx)(-)[4].kcc" size="1920" crc="0348b815" sha1="aea81b496bb5c70f9098200342fb165a10ef861f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc80124b26a4acf1">
+		<description>King 1 (1990)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="King 1 (1990)(-)[4].kcc" size="3968" crc="2fddf66f" sha1="0124b26a4acf1c9969afe00e34b96fb3dc6b83d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc842ebca5ec2ea4">
+		<description>King 2 (1989)(Detlef Koenig & J. Harnisch)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14080">
+				<rom name="King 2 (1989)(Detlef Koenig & J. Harnisch)[4].kcc" size="14080" crc="d8d53be4" sha1="42ebca5ec2ea4077e1ac4d8433e6d11456d8e8f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc81f4ca62299422">
+		<description>Kiste (1988)(Rene Leupold)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10112">
+				<rom name="Kiste (1988)(Rene Leupold)[a][4].kcc" size="10112" crc="4f058886" sha1="1f4ca62299422f3a0401632db0829a1245289c4a"/>
 			</dataarea>
 		</part>
 	</software>
