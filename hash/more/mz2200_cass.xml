@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 22 -->
+<!-- Number of items in this list = 39 -->
 <softwarelist name="mz2200_cass" description="mz2200_cass loose roms">
+	<software name="m2230f3f8c7b34f9">
+		<description>Aerial_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1308770">
+				<rom name="Aerial_BW.wav" size="1308770" crc="03013391" sha1="30f3f8c7b34f9a1922222836fea637284aae48a7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m225427c15ba6b0f">
 		<description>Aerial_mz2000</description>
 		<year>????</year>
@@ -9,6 +19,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1436542">
 				<rom name="Aerial_mz2000.wav" size="1436542" crc="00ee6c4b" sha1="5427c15ba6b0f907ee5acc49bd926adbf891308f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m22a025121ec7c8d">
+		<description>Antiair_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="944357">
+				<rom name="Antiair_BW.wav" size="944357" crc="34f62994" sha1="a025121ec7c8dcbb8b7961fe1482926a1d9199e5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22,6 +42,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m227805a05e39f76">
+		<description>Ascend_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1117383">
+				<rom name="Ascend_BW.wav" size="1117383" crc="4b977fe0" sha1="7805a05e39f76b40b4e481da6fc61c5f457d026b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m2202d66d62f59ba">
 		<description>Ascend_mz2000</description>
 		<year>????</year>
@@ -29,6 +59,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1257731">
 				<rom name="Ascend_mz2000.wav" size="1257731" crc="d6cb8ac7" sha1="02d66d62f59bad892b7ba04f825cf8f78602224d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m222fe3f4472947f">
+		<description>Battlot_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1262788">
+				<rom name="Battlot_BW.wav" size="1262788" crc="594af0a9" sha1="2fe3f4472947f21ecfed7ca4c2a32153bc86129b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42,6 +82,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m2209a8fa2586e7e">
+		<description>Bootskell_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1260179">
+				<rom name="Bootskell_BW.wav" size="1260179" crc="530a8f73" sha1="09a8fa2586e7ee288052fe5fcfdef68e299d6f5d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m22e53fcb3b9d341">
 		<description>Bootskell_mz2000</description>
 		<year>????</year>
@@ -52,6 +102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m2208c7657ce9903">
+		<description>Cacorm_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1115450">
+				<rom name="Cacorm_BW.wav" size="1115450" crc="847ec8ad" sha1="08c7657ce9903bc7ea026b7c05f1baa2c035a526"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m22f310f65a6782f">
 		<description>Cacorm_mz2000</description>
 		<year>????</year>
@@ -59,6 +119,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1240885">
 				<rom name="Cacorm_mz2000.wav" size="1240885" crc="202e5cda" sha1="f310f65a6782f1c2693f083871f4313fbb1c0165"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m220545ba57ec862">
+		<description>Cavit_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1351341">
+				<rom name="Cavit_BW.wav" size="1351341" crc="f77bbb44" sha1="0545ba57ec862299b6f2a93862a0f74874b3d149"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,6 +152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m223a3f02b08b915">
+		<description>Cracky_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1060369">
+				<rom name="Cracky_BW.wav" size="1060369" crc="f298f174" sha1="3a3f02b08b915b8e3ec2f2e324902a2994bc44cd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m225037b74aedd86">
 		<description>Cracky_mz2000</description>
 		<year>????</year>
@@ -102,6 +182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m226b51f55b0a0d2">
+		<description>Guntus_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1388664">
+				<rom name="Guntus_BW.wav" size="1388664" crc="ac4531c6" sha1="6b51f55b0a0d21ff76f5ff054f535593e6106a6f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m22f39ba4edf8199">
 		<description>Guntus_mz2000</description>
 		<year>????</year>
@@ -112,6 +202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m2255863ce112161">
+		<description>Hopman_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1112010">
+				<rom name="Hopman_BW.wav" size="1112010" crc="95a1238f" sha1="55863ce112161aeb3685bc12e2f4f25b56b4bdd2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m224e170c973b81f">
 		<description>Hopman_mz2000</description>
 		<year>????</year>
@@ -119,6 +219,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1260355">
 				<rom name="Hopman_mz2000.wav" size="1260355" crc="2df0da07" sha1="4e170c973b81f278e6073a9fcc4eb85d7bd1848c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m227bc2c16ca244c">
+		<description>Impetus_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1723501">
+				<rom name="Impetus_BW.wav" size="1723501" crc="116e3737" sha1="7bc2c16ca244ce54e22448605b17e2ad31a04924"/>
 			</dataarea>
 		</part>
 	</software>
@@ -142,6 +252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m22abe4ae19b816c">
+		<description>Lift_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1088079">
+				<rom name="Lift_BW.wav" size="1088079" crc="2efd49cf" sha1="abe4ae19b816c8f9433dbea1108e70cf37e9cf10"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m22e016642567061">
 		<description>Lift_mz2000</description>
 		<year>????</year>
@@ -149,6 +269,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1236901">
 				<rom name="Lift_mz2000.wav" size="1236901" crc="aefe4a3b" sha1="e016642567061d5d6b952ed69f656cf2d0808b22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m22457ebf1e04176">
+		<description>Mazy_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1129084">
+				<rom name="Mazy_BW.wav" size="1129084" crc="6687918e" sha1="457ebf1e04176e5d7dd62228ea5a1ed9b0769c35"/>
 			</dataarea>
 		</part>
 	</software>
@@ -162,6 +292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m22f729311b40735">
+		<description>Neuras_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1174346">
+				<rom name="Neuras_BW.wav" size="1174346" crc="50d1ae25" sha1="f729311b40735b0562fb03701b1e8d6f1894c8ba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m22bdacd8f5244fc">
 		<description>Neuras_mz2000</description>
 		<year>????</year>
@@ -172,6 +312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m22003bc29465798">
+		<description>Osotos_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1225472">
+				<rom name="Osotos_BW.wav" size="1225472" crc="d759ca58" sha1="003bc29465798023b032c839f4bcb9103a93ea3a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m22be7749145d595">
 		<description>Osotos_mz2000</description>
 		<year>????</year>
@@ -179,6 +329,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1400645">
 				<rom name="Osotos_mz2000.wav" size="1400645" crc="9f4c2490" sha1="be7749145d595a8e6a432d63dee5c5107f5a954b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m22e13caf76f9212">
+		<description>Ruptus_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1429288">
+				<rom name="Ruptus_BW.wav" size="1429288" crc="644c973f" sha1="e13caf76f921231471da5a460da12c71d5d29fb1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -199,6 +359,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="2992512">
 				<rom name="Super Doors (1983)(Hudson Soft)(TNT) [CT].wav" size="2992512" crc="638e1cb9" sha1="4de8ad5e0543cd487b820e242684f8fff101a2e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m22a70420a5e6cdd">
+		<description>Yewdow_BW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1157904">
+				<rom name="Yewdow_BW.wav" size="1157904" crc="779ab096" sha1="a70420a5e6cdd754c3eadb28d2f197722f9c0981"/>
 			</dataarea>
 		</part>
 	</software>

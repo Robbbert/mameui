@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 12 -->
+<!-- Number of items in this list = 33 -->
 <softwarelist name="mz700_cass" description="mz700_cass loose roms">
 	<software name="mz71cc6fd0565142">
 		<description>ADVOKA</description>
@@ -119,6 +119,216 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="2871994">
 				<rom name="Bootskell.wav" size="2871994" crc="3379b628" sha1="eb75f59159c69089956448348bd9d44650b45f94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz798df86d0bca53">
+		<description>Cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="6924">
+				<rom name="Cacorm.mzt" size="6924" crc="25ac689b" sha1="98df86d0bca53b6bfcbb58654744ea5253eea04f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz76f3a02a0fa67a">
+		<description>Cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2438818">
+				<rom name="Cacorm.wav" size="2438818" crc="e5ebf12b" sha1="6f3a02a0fa67a4b18832fa00dda286ff9070ba9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7507a60205d02d">
+		<description>Cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="8501">
+				<rom name="Cavit.mzt" size="8501" crc="2b65b24e" sha1="507a60205d02d3b9c75a6ec8fd6d202dd21e5547"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz729e4815235419">
+		<description>Cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2998474">
+				<rom name="Cavit.wav" size="2998474" crc="1f27e125" sha1="29e48152354193a4b3bc57e0a9d47acd87204083"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz717d1a00814933">
+		<description>Cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="6265">
+				<rom name="Cracky.mzt" size="6265" crc="54cc6727" sha1="17d1a008149333ad2d7feb00b82921de34b87e7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7dac10e89ca0ce">
+		<description>Cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2269090">
+				<rom name="Cracky.wav" size="2269090" crc="c80f7037" sha1="dac10e89ca0cea344c359edf44d5f03766cab2d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7697e45dd5f506">
+		<description>Devil Schach 700 (19xx)(Devil Soft)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="20112">
+				<rom name="Devil Schach 700 (19xx)(Devil Soft)(de).mzf" size="20112" crc="27a422c5" sha1="697e45dd5f506d829e2920409f210ebb36fec86c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz70b2d39e4bf71c">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="12473">
+				<rom name="Elite Planet Browser.mzt" size="12473" crc="4a2b764a" sha1="0b2d39e4bf71cfa033786e3ad7ba81b9cf964ef6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz76b37bbe6784b0">
+		<description>Flugsimulator (1984)(HOBRA Soft)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="11920">
+				<rom name="Flugsimulator (1984)(HOBRA Soft)(de).mzf" size="11920" crc="6dd0076e" sha1="6b37bbe6784b0485898ae3a366a89ae66def08df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz77f13ba5cdb5a6">
+		<description>Guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="9000">
+				<rom name="Guntus.mzt" size="9000" crc="b872a2dc" sha1="7f13ba5cdb5a681302cb563c82e2d65d8b0358d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz75da505a751cb5">
+		<description>Guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3127018">
+				<rom name="Guntus.wav" size="3127018" crc="ee18abb0" sha1="5da505a751cb5585b2cc5eff16d8093ddf426f89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7a7da74103edcc">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="9183">
+				<rom name="H-tron.mzt" size="9183" crc="0948fd65" sha1="a7da74103edccf2c1135de26199d484acf05af90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7eb56bcfddb4c6">
+		<description>Head Driver.PRG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="13920">
+				<rom name="Head Driver.PRG.mzf" size="13920" crc="aadc5e48" sha1="eb56bcfddb4c6e662295743ae7e088b87d0ff366"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7cb663d00cd9e8">
+		<description>Hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="7155">
+				<rom name="Hopman.mzt" size="7155" crc="6933091f" sha1="cb663d00cd9e8fdbee11efb9efcbab40d33afe15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz700273ae0a9789">
+		<description>Hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2482858">
+				<rom name="Hopman.wav" size="2482858" crc="5d9651c2" sha1="00273ae0a9789909b833bcdbe77cd0a159d9236b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz728775c2f704ee">
+		<description>IBASCOMP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="17217">
+				<rom name="IBASCOMP.mzf" size="17217" crc="e949395b" sha1="28775c2f704ee096f8a59364a78c9485429209ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7cf276d084c45c">
+		<description>Impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="13258">
+				<rom name="Impetus.mzt" size="13258" crc="3e049ef9" sha1="cf276d084c45c181aadadb887a746b2e1175a0b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz77680a1c9dabd3">
+		<description>Knights Wee Pascal v7.00 (19xx)(Knights)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="5507">
+				<rom name="Knights Wee Pascal v7.00 (19xx)(Knights).mzf" size="5507" crc="a3dc7360" sha1="7680a1c9dabd33001d7f960f3fb23b718344e00c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz79038f733e16bd">
+		<description>Lady Bug (1982)(-)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="18049">
+				<rom name="Lady Bug (1982)(-)(de).mzf" size="18049" crc="6a3e508e" sha1="9038f733e16bda4f03768ccbc4126ac01ccb39ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7d8ce07fa3c41b">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="6183">
+				<rom name="Lift.mzt" size="6183" crc="bd927270" sha1="d8ce07fa3c41b3d9a5d88cac92d64638110ff3bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7b31a073a5a0dd">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2243026">
+				<rom name="Lift.wav" size="2243026" crc="78f6497e" sha1="b31a073a5a0dddfda2126c54b486543321d93079"/>
 			</dataarea>
 		</part>
 	</software>

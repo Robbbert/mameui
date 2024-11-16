@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 5 -->
+<softwarelist name="sorcerer_cart" description="sorcerer_cart loose roms">
+	<software name="sorcc21fddcccc70">
+		<description>Basic Mod 1.01 (1980)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sorcerer_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Basic Mod 1.01 (1980).ROM" size="8192" crc="638ee239" sha1="cc21fddcccc7005f1a4390448897f7250a965f62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sorebf00fdcf028c">
+		<description>Basic Revision B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sorcerer_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Basic Revision B.ROM" size="8192" crc="792ce8ad" sha1="ebf00fdcf028ce9131ca62d81b8fd80a9055d114"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sord9e6d50b97b67">
+		<description>Exidy Standard Basic Ver 1.0 (1978)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sorcerer_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Exidy Standard Basic Ver 1.0 (1978).ROM" size="8192" crc="3468d561" sha1="d9e6d50b97b6777720ca32c31760ed3d62dbe3fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sorf934b80d9b64e">
+		<description>Exidy Standard Basic Ver 1.1 (1980)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sorcerer_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Exidy Standard Basic Ver 1.1 (1980).rom" size="8192" crc="bce6ad43" sha1="f934b80d9b64e0c28903ecf917b0921e689bb35a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sor6acd340b4030c">
+		<description>Exidy Word Processor Pac (1979)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sorcerer_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Exidy Word Processor Pac (1979).ROM" size="8192" crc="da999745" sha1="6acd340b4030c42f2292568a097aea11c7f17152"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

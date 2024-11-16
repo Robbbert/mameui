@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3324 -->
+<!-- Number of items in this list = 3361 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -6042,6 +6042,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsc8965fd570d89">
+		<description>Daikaijuu Monogatari (J)(1994)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Daikaijuu Monogatari (J)(1994)(Hudson Soft).sfc" size="3145728" crc="39ca5291" sha1="c8965fd570d8986c43496a85697a6bea652a4655"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns673c48a373b7d">
+		<description>Daikaijuu Monogatari II (J)(1996)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Daikaijuu Monogatari II (J)(1996)(Hudson Soft).sfc" size="5242880" crc="a6c98ffe" sha1="673c48a373b7da7e0e934c55f7182587e07bb9ab"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns41e30847caf65">
 		<description>DaKingSampler (SMW1 Hack)</description>
 		<year>????</year>
@@ -6059,6 +6079,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="Dan's Adventure (SMW1 hack).sfc" size="2097664" crc="c5618fb1" sha1="5a9e6a2d875c69a6b497fafdc3e438af0cb29906"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8567b555a998a">
+		<description>Dark Half T-Eng (2015)(Aeon Genesis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dark Half T-Eng (2015)(Aeon Genesis).sfc" size="4194304" crc="18877841" sha1="8567b555a998aa3df29bd2fc7f6c83c296cd9366"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsed4e739984c96">
+		<description>Dark Half T-Spa (2024)(Max1323)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dark Half T-Spa (2024)(Max1323).sfc" size="4194304" crc="a9d6e96f" sha1="ed4e739984c962657f7fd95175d54f0c35670f7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns81fcca101b137">
+		<description>Dark Law - Meaning of Death T-Eng (2007)(Aeon Genesis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dark Law - Meaning of Death T-Eng (2007)(Aeon Genesis).sfc" size="4194304" crc="c383a51c" sha1="81fcca101b13713b4a822062fd3452d7f5b059cc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6122,6 +6172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5e17e18650d04">
+		<description>Dead Dance (J)(1993)(Jaleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dead Dance (J)(1993)(Jaleco).sfc" size="2097152" crc="7019b1f1" sha1="5e17e18650d046301b7579bcb0667f3f9b9c37c9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns35744f69b542e">
 		<description>death muncher's valley (SMW1 Hack)</description>
 		<year>????</year>
@@ -6169,6 +6229,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="DEBUG Patch (SMW1 Hack).sfc" size="524288" crc="da50315f" sha1="61ca66479f02457ab9c98969d02489cf3e7c8a14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscd6be2389d668">
+		<description>Deflektor v1.1 (2019)(Alekmaul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Deflektor v1.1 (2019)(Alekmaul).sfc" size="524288" crc="5a1f9d11" sha1="cd6be2389d668c0e8c28e86e559c933465d04b8b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6222,6 +6292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsba7f015e5e24b">
+		<description>Demon Child Zenki - Battle Raiden T-Eng (2016)(Dynamic-Designs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Demon Child Zenki - Battle Raiden T-Eng (2016)(Dynamic-Designs).sfc" size="2097152" crc="6bbcf578" sha1="ba7f015e5e24b9717d122e36d57a0aa5b4104c90"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse9e60ec0a3f68">
 		<description>Demon's Crest (E) [T+Spa_Lukas]</description>
 		<year>????</year>
@@ -6259,6 +6339,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="DemoWorld (SMW1 Hack).sfc" size="2097152" crc="d13989af" sha1="d2c361f6bb5a4ce5aa7e8d6f69e4b293d15dcd31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse7403a677e261">
+		<description>Dennis the Menace (U)(1993)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dennis the Menace (U)(1993)(Ocean).sfc" size="1048576" crc="8ee7faa5" sha1="e7403a677e26134f4d5c1d10908d5f138e9c2b44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6362,6 +6452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3abca6dc1b773">
+		<description>Dezaemon T-Eng (2018)(Aeon Genesis).</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Dezaemon T-Eng (2018)(Aeon Genesis)..sfc" size="524288" crc="32f9c958" sha1="3abca6dc1b7731f46ca27f07705294c7011a871b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0ded8acadc49c">
 		<description>dieforwin (SMW1 Hack)</description>
 		<year>????</year>
@@ -6412,6 +6512,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb100940f9e1bc">
+		<description>Dinowars - A Great Dino Odyssey - T-Eng v2.0 (2021)(Backlog Odyssey)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dinowars - A Great Dino Odyssey - T-Eng v2.0 (2021)(Backlog Odyssey).sfc" size="1048576" crc="e4dd8edb" sha1="b100940f9e1bce9161480c7e67d0a2ffdfd19f66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa9fc2e46a38fd">
+		<description>Disney's Aladdin (J)(1993)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Disney's Aladdin (J)(1993)(Capcom).sfc" size="1310720" crc="1aeb696b" sha1="a9fc2e46a38fd51ebdc25f6f261925f7cb6754f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbd5fea18ce745">
+		<description>Disney's Aladdin (U)(1993)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Disney's Aladdin (U)(1993)(Capcom).sfc" size="1310720" crc="124d8e4d" sha1="bd5fea18ce7456cc0231a39473927d8ea9c6589b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns79d2dbbd7ee61">
 		<description>dm (SMW1 Hack)</description>
 		<year>????</year>
@@ -6439,6 +6569,46 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Doctor Strangelove (SMW1 Hack).sfc" size="2097152" crc="9fae4e72" sha1="42032679bc85ec96592964ed2a4609b488897dc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9343ca8d3161d">
+		<description>Dokapon 3-2-1 - Arashi o Yobu Yuujou (J)(1994)(Asmik)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Dokapon 3-2-1 - Arashi o Yobu Yuujou (J)(1994)(Asmik).sfc" size="1572864" crc="fc353400" sha1="9343ca8d3161dea847e0369a4a91cd7f8dc2d3ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8e8f8b7a88783">
+		<description>Dokapon 3-2-1 - Arashi o Yobu Yuujou T-Eng v1.4 (2023)(Krokodyl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dokapon 3-2-1 - Arashi o Yobu Yuujou T-Eng v1.4 (2023)(Krokodyl).sfc" size="2097152" crc="4fe9b036" sha1="8e8f8b7a88783969983f9d2f69eab5cc734971ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa8e19971f8f34">
+		<description>Dolucky no Kusayakiu (J)(1993)(Imagineer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dolucky no Kusayakiu (J)(1993)(Imagineer).sfc" size="2097152" crc="c2d2150c" sha1="a8e19971f8f341e6398415877a2cab0ef9d1f48a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0f95d2e462973">
+		<description>Donald Duck and the Magical Hat T-Eng (2016)(gorgyrip)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Donald Duck and the Magical Hat T-Eng (2016)(gorgyrip).sfc" size="2097152" crc="df450dd2" sha1="0f95d2e4629737b39a686cd05fc931cddfc7fc8c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6492,6 +6662,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns34680c83d64bb">
+		<description>Doraemon 3 - Nobita to Toki no Hougyoku (J)(1994)(Epoch Co.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Doraemon 3 - Nobita to Toki no Hougyoku (J)(1994)(Epoch Co.).sfc" size="1572864" crc="560c5eab" sha1="34680c83d64bbff58aaab4b6d7029aef8a1cd558"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse9c04238c1024">
+		<description>Doraemon 4 - Nobita to Tsuki no Oukoku (J)(1995)(Epoch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Doraemon 4 - Nobita to Tsuki no Oukoku (J)(1995)(Epoch).sfc" size="1572864" crc="4097bc01" sha1="e9c04238c10240a2c9f8dbd7cf1e3021f01c9c6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns359d763d5e265">
+		<description>Doraemon 4 - Nobita to Tsuki no Oukoku T-Eng v0.94b (1998)(Sgt. Bow Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1573376">
+				<rom name="Doraemon 4 - Nobita to Tsuki no Oukoku T-Eng v0.94b (1998)(Sgt. Bow Hack).sfc" size="1573376" crc="e6b89f12" sha1="359d763d5e2657e070e5c7c47ba9699d8ebb595d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1fd07d960432f">
+		<description>DoReMi Fantasy - La Busqueda de Milon T-Spa v1.2 (2018)(Crimental)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="DoReMi Fantasy - La Busqueda de Milon T-Spa v1.2 (2018)(Crimental).sfc" size="2621440" crc="b54b37dc" sha1="1fd07d960432f6527b18cda38df91227af0e2983"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns345e32fda9ee9">
+		<description>DoReMi Fantasy - Milon's Quest T-Eng v1.3 (2019)(Gaijin, RPGONE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="DoReMi Fantasy - Milon's Quest T-Eng v1.3 (2019)(Gaijin, RPGONE).sfc" size="2621440" crc="aa378e8c" sha1="345e32fda9ee9da42b96b50e9f3e89a506c5f03f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc3756e73028e9">
+		<description>DoReMi Fantasy - Milons Abenteuer T-Ger v1.3 (2019)(Ghettoyouth)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="DoReMi Fantasy - Milons Abenteuer T-Ger v1.3 (2019)(Ghettoyouth).sfc" size="2621440" crc="4557f89e" sha1="c3756e73028e91406d6e8b82540c9abb070a3945"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snscd8ea5ccda423">
 		<description>Dorke & Imp (USA) (Unl)</description>
 		<year>????</year>
@@ -6499,6 +6729,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Dorke & Imp (USA) (Unl).sfc" size="4194304" crc="6e3a0485" sha1="cd8ea5ccda423927950d37f15a63f8054b9794d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns95dd00232b92e">
+		<description>Dossun! Ganseki Battle T-Eng (2000)(Aeon Genesis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dossun! Ganseki Battle T-Eng (2000)(Aeon Genesis).sfc" size="1048576" crc="223d17d0" sha1="95dd00232b92ede517e6ea671c5942acc4a63b82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7896b2eb89eb3">
+		<description>Dottie Flowers (2023)(Goldlocke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dottie Flowers (2023)(Goldlocke).sfc" size="1048576" crc="14172273" sha1="7896b2eb89eb385378ad96b94e14411f637b9908"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6612,6 +6862,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5839f0e8b24e2">
+		<description>Dragon Ball Z - Chou Gokuuden - Totsugeki Hen T-Eng v0.98 (2016)(Kakkoii Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Ball Z - Chou Gokuuden - Totsugeki Hen T-Eng v0.98 (2016)(Kakkoii Translations).sfc" size="2097152" crc="3561ff9d" sha1="5839f0e8b24e2aac366ccc902ca1d9e7338b7480"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8f13c3a71e7ad">
+		<description>Dragon Ball Z - Hyper Dimension T-Eng (2010)(Twilight Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Dragon Ball Z - Hyper Dimension T-Eng (2010)(Twilight Translations).sfc" size="3145728" crc="971c9513" sha1="8f13c3a71e7ad6122432cf2100e6ac86b9484e94"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns34d4e1d211279">
 		<description>Dragon Ball Z - La Legende Saien (France) [En v20010305 by Ginew] (Incomplete) (~Dragon Ball Z - Super Butouden 2)</description>
 		<year>????</year>
@@ -6642,6 +6912,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns1c0c6d78bf2bc">
+		<description>Dragon Quest I & II (J)(1993)(Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Dragon Quest I & II (J)(1993)(Enix).sfc" size="1572864" crc="98bb6853" sha1="1c0c6d78bf2bc29160adf48b17ebf5a5bc46230e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns77a76fc6ab696">
+		<description>Dragon Quest I & II T-Eng v1.053rtm (2021)(RPGONE - Rod Merida)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Quest I & II T-Eng v1.053rtm (2021)(RPGONE - Rod Merida).sfc" size="2097152" crc="59e27f1a" sha1="77a76fc6ab696279c5dbfdd4ad8a52eb6e8f16bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc510e79203905">
+		<description>Dragon Quest I & II T-Spa v1.2a (2023)(Rod Merida)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Quest I & II T-Spa v1.2a (2023)(Rod Merida).sfc" size="2097152" crc="e8c748bc" sha1="c510e792039058f2e6ec0f44a9e333d55f98bcc9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb0ff88c6b9929">
 		<description>Dragon Quest III - 007 V0.99.2</description>
 		<year>????</year>
@@ -6659,6 +6959,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="6291456">
 				<rom name="Dragon Quest III - Soshite Densetsu he (J) [T+Eng_DaMarsMan].sfc" size="6291456" crc="391cbf6a" sha1="bb653ba9ab3c2e75323126fb60f69e346e524cba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns692db88fa2738">
+		<description>Dragon Quest III T-Eng v1.0c (2022)(DQ Translations - Rod Merida)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Dragon Quest III T-Eng v1.0c (2022)(DQ Translations - Rod Merida).sfc" size="6291456" crc="7a1f8f09" sha1="692db88fa2738d5c434848976f0eef7d916a02a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns28b3f75f55b51">
+		<description>Dragon Quest III T-Spa v1.05rtm (2021)(Rod Merida)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Dragon Quest III T-Spa v1.05rtm (2021)(Rod Merida).sfc" size="6291456" crc="a4de7f68" sha1="28b3f75f55b516a5ea077a86298f14c75f10117c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6689,6 +7009,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Dread Machine (Caracc) (SMW1 Hack).sfc" size="2097152" crc="a1d033c3" sha1="4b96ecbe2f2ac623f4f485f60d2a03c5d34c739a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6819d7353f168">
+		<description>Dream Maze - Kigurumi Daibouken T-Eng v1.0b (2004)(KingMike's Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dream Maze - Kigurumi Daibouken T-Eng v1.0b (2004)(KingMike's Translations).sfc" size="1048576" crc="c5fcafa0" sha1="6819d7353f168fad73b18d4edbf76d5de30fdbd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns719599ce4acbc">
+		<description>Drift King Shutokou Battle '94 (J)(1994)(Bullet Proof Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Drift King Shutokou Battle '94 (J)(1994)(Bullet Proof Software).sfc" size="1572864" crc="33ce298f" sha1="719599ce4acbc1b790cb09506183bc2a9121671f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6759,6 +7099,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194816">
 				<rom name="Dual Orb II (J) [T+Kor_cyjzero60].sfc" size="4194816" crc="9cccdcfa" sha1="237a1e4879e9d30ab0b0f482e92aa9ceeea4ddb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns584936399e04c">
+		<description>Dual Orb II T-Eng v1.7 (2016)(Translation Corp.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dual Orb II T-Eng v1.7 (2016)(Translation Corp.).sfc" size="4194304" crc="06770592" sha1="584936399e04c135406ff058b2a7769676ed98de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9940b28b6ddcf">
+		<description>Dual Orb II T-Spa v1.1 (2019-23)(semco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dual Orb II T-Spa v1.1 (2019-23)(semco).sfc" size="4194304" crc="9c27bec7" sha1="9940b28b6ddcfad5b0bbaa17c3200eef54771849"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns038bac2a85d32">
+		<description>Duel, The - Test Drive II (U)(1992)(Ballistic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Duel, The - Test Drive II (U)(1992)(Ballistic).sfc" size="1048576" crc="1cc662cd" sha1="038bac2a85d323c6e1950344d6bbc86c6173e293"/>
 			</dataarea>
 		</part>
 	</software>
