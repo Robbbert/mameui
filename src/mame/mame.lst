@@ -17731,6 +17731,7 @@ draco                           // (c) 1981 Cidelsa
 
 @source:efo/nightmare.cpp
 nightmare                       // (c) 1982 E.F.O.
+nightmarea                      // (c) 1982 E.F.O.
 
 @source:elektor/avrmax.cpp
 atm18mcc
@@ -36126,6 +36127,8 @@ compc1                          // 1984 Commodore PC-1
 onlinertp                       // (c) 200? Comatel / Atata Systems
 
 @source:pc/ct486.cpp
+ast6000                         // 1994
+ast611                          // 1994
 ct486                           // 1993? 486 with CS4031
 
 @source:pc/cuttherope.cpp
@@ -39502,6 +39505,7 @@ twinktmb
 
 @source:sega/megadriv_rad.cpp
 dgunl3227
+dgunl3227a
 mdtvp1j
 mdtvp2j
 mdtvp3j
@@ -40102,6 +40106,11 @@ sderby2                         // (c) 1985
 beena                           //
 tvochken                        //
 carbeena                        //
+
+@source:sega/sega_ferie.cpp
+ferieki                         //
+feriepu                         //
+feriewt                         //
 
 @source:sega/sega_sawatte.cpp
 sawatte                         //
@@ -41919,6 +41928,7 @@ sushimar                        // b9803 (c) 1997 Sigma
 tbeastw2                        // b9808 (c) 1998 Sigma / Transformer Production Company / Takara
 tdoboon                         // (c) 2000 Sammy
 ucytokyu                        // b9809 (c) 1997 Sigma
+wantouch                        // (c) 2003 Sammy
 
 @source:sigma/spiders.cpp
 spiders                         // (c) 1981 Sigma Ent. Inc.
@@ -42441,9 +42451,6 @@ jade                            //
 
 @source:skeleton/jonos.cpp
 jonos                           //
-
-@source:skeleton/juku.cpp
-juku                            //
 
 @source:skeleton/junior80.cpp
 junior80                        //
@@ -46303,6 +46310,9 @@ irisha                          //
 istreb                          //
 motogonki                       //
 
+@source:ussr/juku.cpp
+juku                            // (c) 1988 EKTA
+
 @source:ussr/krokha.cpp
 krokha                          // 1990 SKB Kontur, USSR
 
@@ -46867,7 +46877,10 @@ lucky74b                        // (c) 1988 Wing Co. Ltd
 janshi                          //
 pinkiri8                        //
 ronjan                          //
+ronjana                         //
 ronjans                         //
+ronjansa                        //
+ronjansb                        //
 
 @source:wing/slotcarn.cpp
 slotcarn                        // (c) 1985 Wing Co. Ltd

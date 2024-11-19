@@ -1071,6 +1071,12 @@ uint16_t pc9801vm_state::timestamp_r(offs_t offset)
 	return (m_maincpu->total_cycles() >> (16 * offset));
 }
 
+void pc9801vm_state::artic_wait_w(u8 data)
+{
+	// 0.6 μsec
+	m_maincpu->spin_until_time(attotime::from_nsec(600));
+}
+
 uint8_t pc9801vm_state::midi_r()
 {
 	/* unconnect, needed by Amaranth KH to boot */
@@ -1107,7 +1113,8 @@ void pc9801vm_state::pc9801ux_io(address_map &map)
 	pc9801_common_io(map);
 	map(0x0020, 0x002f).w(FUNC(pc9801vm_state::dmapg8_w)).umask16(0xff00);
 //  map(0x0050, 0x0057).noprw(); // 2dd ppi?
-	map(0x005c, 0x005f).r(FUNC(pc9801vm_state::timestamp_r)).nopw(); // artic
+	map(0x005c, 0x005f).r(FUNC(pc9801vm_state::timestamp_r)); // artic
+	map(0x005f, 0x005f).w(FUNC(pc9801vm_state::artic_wait_w));
 	map(0x0068, 0x006b).w(FUNC(pc9801vm_state::pc9801rs_video_ff_w)).umask16(0x00ff); //mode FF / <undefined>
 	map(0x0070, 0x007f).rw(FUNC(pc9801vm_state::grcg_r), FUNC(pc9801vm_state::grcg_w)).umask16(0x00ff); //display registers "GRCG" / i8253 pit
 	map(0x0090, 0x0090).r(m_fdc_2hd, FUNC(upd765a_device::msr_r));
@@ -1929,6 +1936,7 @@ static void pc9801_cbus_devices(device_slot_interface &device)
 //  Spark Board
 	device.option_add("amd98",      AMD98);
 	device.option_add("mpu_pc98",   MPU_PC98);
+	device.option_add("sb16",       SB16_CT2720);
 
 	// doujinshi HW
 // MAD Factory / Doujin Hard (同人ハード)
