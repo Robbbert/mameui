@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 105 -->
+<!-- Number of items in this list = 115 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -1029,6 +1029,106 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="960">
 				<rom name="fussball.z80" size="960" crc="2cf85f31" sha1="f1cf939f5395fac1415adbe9db25aa70c7af5dae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1073126a34b1a36">
+		<description>Galactica (19xx)(W. Prengel)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4160">
+				<rom name="Galactica (19xx)(W. Prengel)[a2].z80" size="4160" crc="356a5918" sha1="73126a34b1a3662edd3d2aa0e6b5d88e02e9b4e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1062d828f44722c">
+		<description>Galactica (19xx)(W. Prengel)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4128">
+				<rom name="Galactica (19xx)(W. Prengel)[a3].z80" size="4128" crc="b0881ad5" sha1="62d828f44722c622e84b7995222d5e972c42236e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1038f3c2f8d2a4b">
+		<description>Galactica (19xx)(W. Prengel)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4129">
+				<rom name="Galactica (19xx)(W. Prengel)[a].z80" size="4129" crc="0969d9cc" sha1="38f3c2f8d2a4bd504a15471d56cc85923b699d8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z102df37d639db63">
+		<description>Galactica (19xx)(W. Prengel)[without Titelscreen][Joysticksupport]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4160">
+				<rom name="Galactica (19xx)(W. Prengel)[without Titelscreen][Joysticksupport].z80" size="4160" crc="fb97a5b7" sha1="2df37d639db6347c0e440c5a3f6f7666d59b237c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10c6a59ac388f24">
+		<description>Galactica</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4128">
+				<rom name="Galactica.z80" size="4128" crc="c4d86d98" sha1="c6a59ac388f24b753543e65728b149093d50292e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1016042b76f5872">
+		<description>Galaxis (19xx)(U. Beckmann)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3104">
+				<rom name="Galaxis (19xx)(U. Beckmann).z80" size="3104" crc="09adc967" sha1="16042b76f58726792c58a9861cb4db3abad8ec4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1098ae50d9155e2">
+		<description>Go (Basic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="17568">
+				<rom name="Go (Basic).z80" size="17568" crc="9c0fbb12" sha1="98ae50d9155e26547d7fd2c82427aa2b62b71996"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1011834a56a8501">
+		<description>goldkeller</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10080">
+				<rom name="goldkeller.z80" size="10080" crc="17ea1f61" sha1="11834a56a8501f6e01747bf54857223ceec07742"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1072f61e2498c94">
+		<description>graverobber(j)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10080">
+				<rom name="graverobber(j).z80" size="10080" crc="f6d25340" sha1="72f61e2498c942b7b8eba522d0004fafbd7b2cca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ab96046092337">
+		<description>graverobber</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10080">
+				<rom name="graverobber.z80" size="10080" crc="fd86e5ae" sha1="ab96046092337f3352c9eb13a753b116e4e5d10e"/>
 			</dataarea>
 		</part>
 	</software>

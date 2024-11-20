@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 213 -->
+<!-- Number of items in this list = 231 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -1979,6 +1979,186 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="10112">
 				<rom name="Kiste (1988)(Rene Leupold)[a][4].kcc" size="10112" crc="4f058886" sha1="1f4ca62299422f3a0401632db0829a1245289c4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc824d31ad4bfba6">
+		<description>Labyrinth (19xx)(Sowaco)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9856">
+				<rom name="Labyrinth (19xx)(Sowaco)[a2][3].kcc" size="9856" crc="5e26769d" sha1="24d31ad4bfba685b49a75360fbba24d924dca493"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc833db3985d8085">
+		<description>Labyrinth (19xx)(Sowaco)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9856">
+				<rom name="Labyrinth (19xx)(Sowaco)[a][3].kcc" size="9856" crc="0ede22b2" sha1="33db3985d808552ce96560f0ce644d0dfffb2870"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc815e76ed81ae74">
+		<description>Ladder (19xx)(EJ Soft)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10880">
+				<rom name="Ladder (19xx)(EJ Soft)[3].kcc" size="10880" crc="d2252674" sha1="15e76ed81ae74bf7e735703b26d07a76d452e4d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc815834acb84bd5">
+		<description>Ladder (19xx)(EJ Soft)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10880">
+				<rom name="Ladder (19xx)(EJ Soft)[4].kcc" size="10880" crc="bc4a153c" sha1="15834acb84bd58c73b25ddbaa3671fc324f1b6ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87007e07a51ae7">
+		<description>Ladder (19xx)(EJTB)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11136">
+				<rom name="Ladder (19xx)(EJTB)[4].kcc" size="11136" crc="48bb3e05" sha1="7007e07a51ae781d169305d7a5b86fa17d3b0491"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88be8568de1aad">
+		<description>Ladder v1.0 (19xx)(HHL-ORZ)(en)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="19456">
+				<rom name="Ladder v1.0 (19xx)(HHL-ORZ)(en)[4].kcc" size="19456" crc="cae543f0" sha1="8be8568de1aadfd2e0bd716b0f42facb3df0a802"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8fb073c8d85849">
+		<description>Ladder v1.3 (19xx)(A. Zerbst)(en)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="21504">
+				<rom name="Ladder v1.3 (19xx)(A. Zerbst)(en)[a2][3].kcc" size="21504" crc="8f97ab6d" sha1="fb073c8d85849ad214f4961679aae8c1b9136556"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c937d062e23a0">
+		<description>Ladder v1.3 (19xx)(A. Zerbst)(en)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="21504">
+				<rom name="Ladder v1.3 (19xx)(A. Zerbst)(en)[a][4].kcc" size="21504" crc="18dcd3aa" sha1="c937d062e23a02dda4370bec9052b5fcfa67f0f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8dff49d58400a7">
+		<description>Ladder v2.0 (19xx)(EPC)(en)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="19712">
+				<rom name="Ladder v2.0 (19xx)(EPC)(en)[4].kcc" size="19712" crc="2592de29" sha1="dff49d58400a7bea3aea8ec03e4906f776152954"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc888886b8c1acf4">
+		<description>Lander (1986)(VEB Mikroelektronik)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5888">
+				<rom name="Lander (1986)(VEB Mikroelektronik)[4].kcc" size="5888" crc="351667f0" sha1="88886b8c1acf4b156617c9cde1028eefe2046a28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc862bcf610de5d6">
+		<description>Legacy, The (19xx)(HS-Soft - H. Schroeder)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12544">
+				<rom name="Legacy, The (19xx)(HS-Soft - H. Schroeder)[4].kcc" size="12544" crc="79caec19" sha1="62bcf610de5d6e261ebd4ce619e6c08a62c67c6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bcb212ec8be57">
+		<description>Life (1986)(Bisoft)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1408">
+				<rom name="Life (1986)(Bisoft)[4].kcc" size="1408" crc="a1426b54" sha1="bcb212ec8be570307fef8a727a0363cabc262195"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a226b1ca85bb2">
+		<description>Loc (1988)(O. Gries)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="15616">
+				<rom name="Loc (1988)(O. Gries)[a2][4].kcc" size="15616" crc="90c2f9ee" sha1="a226b1ca85bb2c0a5b7da44e19c6e8d1ff39a8c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8856f9882d18da">
+		<description>Loc (1988)(O. Gries)[a3][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="15616">
+				<rom name="Loc (1988)(O. Gries)[a3][3].kcc" size="15616" crc="2146f451" sha1="856f9882d18daa0d738396d0a26865936688b4f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86d3a073de550f">
+		<description>Loc (1988)(O. Gries)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="15616">
+				<rom name="Loc (1988)(O. Gries)[a][4].kcc" size="15616" crc="1bf1aff6" sha1="6d3a073de550f9708bf9295edc3d4a10c562f72d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8cdbacf672d97d">
+		<description>Logik Master (1990)(ML-Soft)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2688">
+				<rom name="Logik Master (1990)(ML-Soft)[4].kcc" size="2688" crc="9b87a3be" sha1="cdbacf672d97d3da6fc5e51270445900593a77e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc84a81f9c7aea9d">
+		<description>Logo KMU (1986)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11264">
+				<rom name="Logo KMU (1986)(-)[3].kcc" size="11264" crc="618acf36" sha1="4a81f9c7aea9d93114c288f8604018394f5a7062"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ac83b3e3f11e7">
+		<description>LP-Graf (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2048">
+				<rom name="LP-Graf (19xx)(-)[4].kcc" size="2048" crc="33d5bae0" sha1="ac83b3e3f11e7b1a079a9df5e4d66124c22e199f"/>
 			</dataarea>
 		</part>
 	</software>

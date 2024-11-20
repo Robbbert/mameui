@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 236 -->
+<!-- Number of items in this list = 237 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
+	<software name="vt1dbb8f6a5ec6f6">
+		<description>3D Pyramids (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="841">
+				<rom name="3D Pyramids (19xx)(-).vz" size="841" crc="48a4b091" sha1="dbb8f6a5ec6f6c0e2fc455da830e0ec05a8103ad"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="vt102f00f5ea4ffb">
 		<description>A-plus</description>
 		<year>????</year>

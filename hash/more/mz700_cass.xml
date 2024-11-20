@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 33 -->
+<!-- Number of items in this list = 48 -->
 <softwarelist name="mz700_cass" description="mz700_cass loose roms">
+	<software name="mz748dba064d098a">
+		<description>(sound)Plusminus-20 (19xx)(-)(de)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="591">
+				<rom name="(sound)Plusminus-20 (19xx)(-)(de)(PD).mzf" size="591" crc="6741cc6c" sha1="48dba064d098af0724613098016ee9c1c830cb98"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mz71cc6fd0565142">
 		<description>ADVOKA</description>
 		<year>????</year>
@@ -329,6 +339,146 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="2243026">
 				<rom name="Lift.wav" size="2243026" crc="78f6497e" sha1="b31a073a5a0dddfda2126c54b486543321d93079"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz79417125203649">
+		<description>Mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="5128">
+				<rom name="Mazy.mzt" size="5128" crc="68f69dad" sha1="9417125203649af77901bccd2584ac31f0595bc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz706d7d9eabfcff">
+		<description>Mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="15067380">
+				<rom name="Mazy.wav" size="15067380" crc="0545dfa3" sha1="06d7d9eabfcff1e70fc86bc8881b8552de303c51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7968c020c42285">
+		<description>MZ-700 Schach (19xx)(Devil Soft)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="9679">
+				<rom name="MZ-700 Schach (19xx)(Devil Soft)(de).mzf" size="9679" crc="6c8ee063" sha1="968c020c4228586cae4d0b3212ebbe5884a4db47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7841da322e8469">
+		<description>Neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="7017">
+				<rom name="Neuras.mzt" size="7017" crc="e5378ff9" sha1="841da322e8469d7a2703d6c8cba3c9cec8fe43a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz704abac5e9777a">
+		<description>Neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2534482">
+				<rom name="Neuras.wav" size="2534482" crc="a4389aaa" sha1="04abac5e9777ab149892272f80537e1e26143248"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7a94d90fb327de">
+		<description>Osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="7601">
+				<rom name="Osotos.mzt" size="7601" crc="e20c590b" sha1="a94d90fb327deb8566b93dcd3bfbbf7b204f8403"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7f0f5290ca4107">
+		<description>Osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2701282">
+				<rom name="Osotos.wav" size="2701282" crc="e240b9ac" sha1="f0f5290ca4107f6cb5c9a58c7ea702bead6f90e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz71fcfbb6a3bf96">
+		<description>Ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="10182">
+				<rom name="Ruptus.mzt" size="10182" crc="60683cab" sha1="1fcfbb6a3bf96b4c0146b93f510b641e3ecb8a55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz789c0f3e70ccd7">
+		<description>Ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3561130">
+				<rom name="Ruptus.wav" size="3561130" crc="51893be3" sha1="89c0f3e70ccd78ef0c3d1d234b2b7b6005c8eda9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7274bbac9c08a8">
+		<description>Serpents (19xx)(Devil Soft)(de)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="7057">
+				<rom name="Serpents (19xx)(Devil Soft)(de).mzf" size="7057" crc="9b4b0d9c" sha1="274bbac9c08a824f1de31aeab7cf63e549b694a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz75f966ba8700c6">
+		<description>SOLO BASIC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="17792">
+				<rom name="SOLO BASIC.mzf" size="17792" crc="c61dcf14" sha1="5f966ba8700c6740d41cdadaf8ea0e8b145539d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz746f1d4f7f5ed1">
+		<description>Ufo (19xx)(Solo Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="8050">
+				<rom name="Ufo (19xx)(Solo Software).mzf" size="8050" crc="3a95eebe" sha1="46f1d4f7f5ed1d2227108574ff9936dd3017dc5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7d5e56780a92b8">
+		<description>Yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="7152">
+				<rom name="Yewdow.mzt" size="7152" crc="853062a5" sha1="d5e56780a92b8e4e4eef52b0ef2a7b0d2c06ba3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz725f730a97a44b">
+		<description>Yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2514298">
+				<rom name="Yewdow.wav" size="2514298" crc="30d6d460" sha1="25f730a97a44b3361bef51da37bb8c703aa4b9c6"/>
 			</dataarea>
 		</part>
 	</software>

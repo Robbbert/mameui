@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6740 -->
+<!-- Number of items in this list = 6795 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -499,6 +499,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="(demo)nepharious_atarious.bin" size="4096" crc="0ea4747f" sha1="7259090ce9ea3b7e9b009420609c3f379ac2298f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ff21e07d97822">
+		<description>(sound)New Theme 20071123</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="(sound)New Theme 20071123.a26" size="4096" crc="6563d2d2" sha1="ff21e07d97822e5c8da1d3ec5c783bd12cb1b758"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55022,6 +55032,536 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2636eb9787eec24">
+		<description>Nactar The Barbarian 1 by Out of Gas (Pac Kong Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nactar The Barbarian 1 by Out of Gas (Pac Kong Hack).a26" size="4096" crc="185a0fe5" sha1="36eb9787eec2407a2c7891e5e9f7f027722e003b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26faf6058353fef">
+		<description>NanoManBETA1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="NanoManBETA1.a26" size="32768" crc="9f20eda5" sha1="faf6058353fefed28d7533f2eb21ee008704a849"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2681251303581fd">
+		<description>NanoManC.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="NanoManC.bas.a26" size="32768" crc="b797eacc" sha1="81251303581fd036373427da2600d0f81e8156f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ffc73024858a">
+		<description>Narnia by Glenn Saunders (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Narnia by Glenn Saunders (Adventure Hack).a26" size="4096" crc="27a36397" sha1="2ffc73024858ae0bd7129402bb43e945975cb09b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d05fe97c6e55b">
+		<description>NECG Drumma (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="NECG Drumma (PD).a26" size="4096" crc="720e9889" sha1="d05fe97c6e55bef07070f14f838162bc8ddcf31d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26160c13e241e2f">
+		<description>Nepharious_Atarious_Keponic_Remix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nepharious_Atarious_Keponic_Remix.a26" size="4096" crc="56e92620" sha1="160c13e241e2f15a5a3df91732a3870588dcf887"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a87e1dc8a08f2">
+		<description>New Cave (2003) (Christopher Tumber) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="New Cave (2003) (Christopher Tumber) (Prototype).a26" size="4096" crc="f1bdc2fb" sha1="a87e1dc8a08f249a784400944591ff6dbfa2b595"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a21a69bc0328">
+		<description>New Cave Lines (2003) (Christopher Tumber) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="New Cave Lines (2003) (Christopher Tumber) (Prototype).a26" size="4096" crc="c6edde17" sha1="5a21a69bc032809798b28389148789d875266a11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a88f96f904ca1">
+		<description>New Cave Raster (2003) (Christopher Tumber) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="New Cave Raster (2003) (Christopher Tumber) (Prototype).a26" size="4096" crc="44b6f25b" sha1="a88f96f904ca16ad3f473ff5c770dbb8d2af9e7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be67c3def0020">
+		<description>New Video Pinball (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="New Video Pinball (Hack).a26" size="4096" crc="6be711f9" sha1="be67c3def0020578b381766bd3be16ffedfd20db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2625902a7155342">
+		<description>newdigger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="newdigger.a26" size="8192" crc="122edb6a" sha1="25902a7155342e990055e1abc6121d0eb0b3c53b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261761bd42532c7">
+		<description>New_Kookley_Kong_V4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="New_Kookley_Kong_V4.a26" size="4096" crc="75a2cc88" sha1="1761bd42532c73697787424ddf400dd4a79c4da9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265911f2e6f8230">
+		<description>New_Popeye_Hack(2008-03-15)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="New_Popeye_Hack(2008-03-15).a26" size="4096" crc="bef48aea" sha1="5911f2e6f82309f816d8f0067a5cd6082681e28c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260bb62201e587e">
+		<description>nhra6.txt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="nhra6.txt.a26" size="8192" crc="09a4446b" sha1="0bb62201e587e787c5584de833545c7824feb58f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cd807df380e01">
+		<description>nhra7.txt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="nhra7.txt.a26" size="16384" crc="00d2301f" sha1="cd807df380e01306ad24df6dcad5b9652a4e1e12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26806a9dabd5fe2">
+		<description>nhra9.txt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="nhra9.txt.a26" size="16384" crc="08e0fa07" sha1="806a9dabd5fe2c6266364e7aa3a711a2d31ba5f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b3e5f5bede857">
+		<description>niagra.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="niagra.bas.a26" size="4096" crc="c8215604" sha1="b3e5f5bede857ca7e89853963770ddcce3d6ed0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26688ab18497096">
+		<description>niagra040307.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="niagra040307.bas.a26" size="8192" crc="24938763" sha1="688ab18497096a95f88d87a30f5f2eb8ea4a6f93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2673f754f295e3b">
+		<description>niagra040407nontest.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="niagra040407nontest.bas.a26" size="8192" crc="1b359190" sha1="73f754f295e3bb9e28347df6e4c9d3e10d275f12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633529e4ad2ff4">
+		<description>niagra8k.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="niagra8k.bas.a26" size="8192" crc="076b212d" sha1="33529e4ad2ff482e0064d9513b5eb7bcc3ec63ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce1dc0332091e">
+		<description>Nibbles 82406</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nibbles 82406.a26" size="4096" crc="738cccac" sha1="ce1dc0332091ed1e46528060b8214358319fa8b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26360682a1722e2">
+		<description>Nick Bensema Demo (Nick Bensema)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nick Bensema Demo (Nick Bensema).a26" size="4096" crc="5af875a8" sha1="360682a1722e223af9e80b74a8cb86b01de65024"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a01388d79aed">
+		<description>Night Driver (1978) (Atari) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Night Driver (1978) (Atari) (PAL) [o1].a26" size="4096" crc="ad254812" sha1="5a01388d79aedbe1aef70a7692de1ec1f2435844"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2687866d05cf232">
+		<description>Night Driver (1978) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Night Driver (1978) (Atari) [o1].a26" size="4096" crc="8fef8a64" sha1="87866d05cf2325199b4ebb77900e6aced81ecc7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2640e103f072cc8">
+		<description>Night Rider v0.1 (2005)(Chris Walton)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Night Rider v0.1 (2005)(Chris Walton)(NTSC).a26" size="2048" crc="28586588" sha1="40e103f072cc8151d54ea72fc8ca2ae10e2d476a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263fd6331eb17f5">
+		<description>Night Rider v0.1 (2005)(Chris Walton)(PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Night Rider v0.1 (2005)(Chris Walton)(PAL).a26" size="2048" crc="700194b0" sha1="3fd6331eb17f54c246ce8584956876987eba0cd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d563dfcc33943">
+		<description>Night Rider v0.2 (2005)(Chris Walton)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Night Rider v0.2 (2005)(Chris Walton)(NTSC).a26" size="2048" crc="c85812c8" sha1="d563dfcc33943408b42462c1f5d7ba35a4a3a471"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fa7ad1f123883">
+		<description>Night Rider v0.2 (2005)(Chris Walton)(PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Night Rider v0.2 (2005)(Chris Walton)(PAL).a26" size="2048" crc="16a9c0e5" sha1="fa7ad1f12388337d2254042868cd5824254f6f22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626e1309bc848c">
+		<description>Night Stalker (1989) (Telegames) (PAL) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Night Stalker (1989) (Telegames) (PAL) [a1].a26" size="4096" crc="bd102620" sha1="26e1309bc848cf5880b831d7566488ec5b3db58c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3d553084ac3a">
+		<description>nightrider (2005) (Chris Walton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="nightrider (2005) (Chris Walton).a26" size="2048" crc="efe19ac9" sha1="d3d553084ac3afa7cacdbdd22fe2b8fe3b5ca545"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261c947a0b4e15e">
+		<description>Ninja Cowboy Duelist (Outlaw Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Ninja Cowboy Duelist (Outlaw Hack).a26" size="2048" crc="5a5aa688" sha1="1c947a0b4e15e3a4e698f7d243ea07f1a2ed220d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2602420b3ce8054">
+		<description>Nitemare at Sunshine Bowl-a-Rama beta 1 by Atari Freak 1 (Jr. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Nitemare at Sunshine Bowl-a-Rama beta 1 by Atari Freak 1 (Jr. Pac-Man Hack).a26" size="16384" crc="7dc20693" sha1="02420b3ce8054f59c50e69dc7973bd7ce37851c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26278ed5a5d6e7b">
+		<description>Nitemare at Sunshine Bowl-a-Rama beta 2 by Atari Freak 1 (Jr. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Nitemare at Sunshine Bowl-a-Rama beta 2 by Atari Freak 1 (Jr. Pac-Man Hack).a26" size="16384" crc="9b08660c" sha1="278ed5a5d6e7bc3478efed3f0e9e1a33310efa14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2665a83be1a7541">
+		<description>Nitemare Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nitemare Hack.a26" size="4096" crc="16badc1e" sha1="65a83be1a754165badbe32848220649f7d0f5d2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e26a0f6dcd52c">
+		<description>Nitemare Pinball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nitemare Pinball.a26" size="4096" crc="d4ce7d26" sha1="e26a0f6dcd52c21d618d6e2baf58428c9a30836b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266997a7ff9375a">
+		<description>No Escape! (1983) (Imagic) (PAL) [b1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="No Escape! (1983) (Imagic) (PAL) [b1].a26" size="4096" crc="abc56e61" sha1="6997a7ff9375ad0b7f62c984f63523139bfbea78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26172ee0d08c878">
+		<description>No Escape! (1983) (Imagic) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="No Escape! (1983) (Imagic) [a1].a26" size="4096" crc="460b6821" sha1="172ee0d08c8780df9f70d3d9a5551c4c20f1a40c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b1308cfbecdc">
+		<description>No Escape! (1983)(Imagic)(NTSC)[f Supercharger Nukey Shay]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="No Escape! (1983)(Imagic)(NTSC)[f Supercharger Nukey Shay].bin" size="4096" crc="62ebdbbe" sha1="9b1308cfbecdcd7de32cd12ed8e22369ea626026"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26477d982af72ba">
+		<description>No Escape! (1983)(Imagic)(PAL-60)[f Supercharger Nukey Shay]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="No Escape! (1983)(Imagic)(PAL-60)[f Supercharger Nukey Shay].bin" size="4096" crc="c3e6d91d" sha1="477d982af72ba3b140a76c0a299465fb1cf1e320"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a07d44aeef07">
+		<description>NObeta1b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="NObeta1b.a26" size="8192" crc="6e11dd19" sha1="6a07d44aeef07ba01d405f082eea5ba2f4846225"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613d123190337e">
+		<description>noflick</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="noflick.a26" size="4096" crc="55eb69b6" sha1="13d123190337e214c1cf48680109ab763009bfbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b92e503b0abc5">
+		<description>Noice 2600 (2009-09-28)(Noice)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Noice 2600 (2009-09-28)(Noice)(PD).a26" size="4096" crc="7dbeb0b4" sha1="b92e503b0abc5d2e65641d1e767e2c1dd0251049"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26840ab19d2d6c2">
+		<description>NOIZ Invaders by SPIKE the Percussionist (2002) (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="NOIZ Invaders by SPIKE the Percussionist (2002) (Space Invaders Hack).a26" size="4096" crc="66fb1be7" sha1="840ab19d2d6c272f05dd2cf25df9559453607231"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a14261a7f1366">
+		<description>Nolan_Photo_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nolan_Photo_by_SnailSoft.a26" size="4096" crc="f3220f7e" sha1="a14261a7f136690c1c702c1bfe7717e8096b8a6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261828f99b6a88f">
+		<description>Nothern Alliance (Aaron Bergstrom) (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nothern Alliance (Aaron Bergstrom) (Space Invaders Hack).a26" size="4096" crc="83e3f338" sha1="1828f99b6a88f40cfeb18ef5e817ca2f1659d589"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268082d3b43f27a">
+		<description>Nothing to It (Jumpman Jr. Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nothing to It (Jumpman Jr. Selected Levels) (PD).a26" size="4096" crc="63c1db3d" sha1="8082d3b43f27a8b5d5f2a4f5a922378ebb833a9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262b91982a76f0a">
+		<description>NTSC Interlaced Mario (2003-12-29)(Davie, Andrew)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="NTSC Interlaced Mario (2003-12-29)(Davie, Andrew)(NTSC)(PD).a26" size="4096" crc="a3f4c8e5" sha1="2b91982a76f0af9824f2158f5fac6d3fcd92dabf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2683adca3728195">
+		<description>Nuke-a-Mole by Feralstorm (Missile Command Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Nuke-a-Mole by Feralstorm (Missile Command Hack).a26" size="4096" crc="9aa4e303" sha1="83adca3728195fb84606706e71459e088ef273f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26790a7853365fc">
+		<description>NUNCHAKU-MANIA-GATOR7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="NUNCHAKU-MANIA-GATOR7.a26" size="4096" crc="f8a33807" sha1="790a7853365fc34a7c2ec1c647052756376fa50c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a4d1f4bdc95e6">
+		<description>NUNCHAKU_MANIA_WA-TAA1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="NUNCHAKU_MANIA_WA-TAA1.a26" size="4096" crc="9b8dcd12" sha1="a4d1f4bdc95e6702d5fa92f5188aaacf9b7dba0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f38c0331d6470">
+		<description>NUNCHAKU_MANIA_WA-TAA2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="NUNCHAKU_MANIA_WA-TAA2.a26" size="4096" crc="468e6655" sha1="f38c0331d647045fe39b4334a2f2f0dd8cfc7623"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dadceafa57600">
+		<description>NUNCHAKU_MANIA_WA-TAA3_CRAZY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="NUNCHAKU_MANIA_WA-TAA3_CRAZY.a26" size="4096" crc="d9836518" sha1="dadceafa576008e359bdf96b3d71325a9a24f2ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7067f2092b4f">
+		<description>nybbles.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="nybbles.bas.a26" size="4096" crc="a704acfa" sha1="a7067f2092b4f85a3378543d4d9bbcfb1acd7d6a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26172bb339f8b31">
 		<description>Pixelated Man in Blue (2007 Edgefire Ent.).bas</description>
 		<year>????</year>
@@ -59539,6 +60079,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Strat-O-Gems Deluxe 2005-12-04 (John Payson).a26" size="8192" crc="dcdddbd4" sha1="63ea939c2c9270255427b132fc8c454d4b140595"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613528254eafb9">
+		<description>Stratogems Deluxe (n051207 beta ntsc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Stratogems Deluxe (n051207 beta ntsc).a26" size="16384" crc="11ea6961" sha1="13528254eafb9ad1e967cfce056248caa99cc374"/>
 			</dataarea>
 		</part>
 	</software>

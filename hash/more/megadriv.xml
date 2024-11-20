@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1843 -->
+<!-- Number of items in this list = 1846 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3959,6 +3959,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="bishoujo senshi sailor moon (english translation).md" size="4194304" crc="48778add" sha1="4a89848f9442cb47be6d78c8ca66baa535c3f015"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen04e427343af13">
+		<description>Bishoujo Super Street Fighter II - Glamor Queen v1.6 (2024)(Yoni Arousement)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v1.6 (2024)(Yoni Arousement).bin" size="5242880" crc="87a6c750" sha1="04e427343af13baf4d3184ab6116407fe0933b8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen00a4101756086">
+		<description>Bishoujo Super Street Fighter II - Glamor Queen v1.6 (2024)(Yoni Arousement)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v1.6 (2024)(Yoni Arousement)_1.bin" size="5242880" crc="f8aab4d4" sha1="00a4101756086706793598f094e14b0c46c9435f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10519,6 +10539,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mortal Kombat Arcade Edition (Hack)(2021).bin" size="4194304" crc="aa8fb151" sha1="15d7f038d5cd76c3279c7ee81edff54e8a3be825"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen92583ab717982">
+		<description>Mortal Kombat Arcade Edition Enhanced v2.1 (2024)(Rael G.C.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat Arcade Edition Enhanced v2.1 (2024)(Rael G.C.).bin" size="4194304" crc="486979c5" sha1="92583ab71798235e3b0b95f0bb34d0c0558d7410"/>
 			</dataarea>
 		</part>
 	</software>
