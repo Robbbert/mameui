@@ -155,6 +155,28 @@ void seicross_state::nvram_init(nvram_device &nvram, void *data, size_t size)
 
 void seicross_state::machine_start()
 {
+	// install MCU waitstates
+	address_space &space = m_mcu->space(AS_PROGRAM);
+
+	// MR is asserted when it does an access with A15 is high
+	space.install_read_tap(
+			0x8000, 0xffff,
+			"mcu_mr_r",
+			[this] (offs_t offset, u8 &data, u8 mem_mask)
+			{
+				if (!machine().side_effects_disabled())
+					m_mcu->adjust_icount(-1);
+			});
+	space.install_write_tap(
+			0x8000, 0xffff,
+			"mcu_mr_w",
+			[this] (offs_t offset, u8 &data, u8 mem_mask)
+			{
+				if (!machine().side_effects_disabled())
+					m_mcu->adjust_icount(-1);
+			});
+
+	// register for savestates
 	save_item(NAME(m_portb));
 	save_item(NAME(m_irq_mask));
 }
@@ -589,12 +611,12 @@ INTERRUPT_GEN_MEMBER(seicross_state::vblank_irq)
 void seicross_state::no_nvram(machine_config &config)
 {
 	// Basic machine hardware
-	Z80(config, m_maincpu, 4'000'000); // D780C, 4MHz?
+	Z80(config, m_maincpu, 18.432_MHz_XTAL / 6); // D780C, 3.072MHz
 	m_maincpu->set_addrmap(AS_PROGRAM, &seicross_state::main_map);
 	m_maincpu->set_addrmap(AS_IO, &seicross_state::main_portmap);
 	m_maincpu->set_vblank_int("screen", FUNC(seicross_state::vblank_irq));
 
-	NSC8105(config, m_mcu, 2'000'000); // 2MHz? matches PCB DAC sound pitch
+	NSC8105(config, m_mcu, 18.432_MHz_XTAL / 6); // 3.072MHz
 	m_mcu->set_addrmap(AS_PROGRAM, &seicross_state::mcu_no_nvram_map);
 
 	config.set_maximum_quantum(attotime::from_hz(1200)); // 20 CPU slices per frame, a high value to ensure proper synchronization of the CPUs
@@ -635,14 +657,14 @@ void seicross_state::nvram(machine_config &config)
 void seicross_state::friskytb(machine_config &config)
 {
 	nvram(config);
-	M6802(config.replace(), m_mcu, 2'000'000); // presumed to be an HD46802P or compatible
+	M6802(config.replace(), m_mcu, 18.432_MHz_XTAL / 6); // presumed to be an HD46802P or compatible
 	m_mcu->set_addrmap(AS_PROGRAM, &seicross_state::mcu_nvram_map);
 }
 
 void seicross_state::sectznt(machine_config &config)
 {
 	no_nvram(config);
-	M6802(config.replace(), m_mcu, 2'000'000); // actually HD46802P
+	M6802(config.replace(), m_mcu, 18.432_MHz_XTAL / 6); // actually HD46802P
 	m_mcu->set_addrmap(AS_PROGRAM, &seicross_state::mcu_no_nvram_map);
 }
 
@@ -873,7 +895,7 @@ ROM_END
 
 // Based on sectrzona set, with obviously patched MCU program to make it work on a standard 6802.
 ROM_START( sectrzont )
-	ROM_REGION( 0x8000, "maincpu", 0 )
+	ROM_REGION( 0x7800, "maincpu", 0 )
 	ROM_LOAD( "czt_1.bin",  0x0000, 0x1000, CRC(f0a45cb4) SHA1(ab3b8d78e25cdbb2fd6a6c0718ae13767364994d) )
 	ROM_LOAD( "czt_2.bin",  0x1000, 0x1000, CRC(fea68ddb) SHA1(b9ed0cad9a2ded04bcc7042d975b77be63313070) )
 	ROM_LOAD( "czt_3.bin",  0x2000, 0x1000, CRC(baad4294) SHA1(e7fc3ccc940de6df8d786c986b602127c9db9ebb) )
