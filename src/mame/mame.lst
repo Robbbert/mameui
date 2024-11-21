@@ -17623,6 +17623,7 @@ cafetime                        // "63" (c) 1992 Dynax
 chalgirl                        // bootleg
 daisyari                        // (c) 1989 Best System
 dondenmj                        // "03" (c) 1986 Dyna Electronics
+dragonmj                        // OCT
 ichiban                         // (c) 1993 Excel
 ippatsu                         // 01? (c) 1986 Dyna Electronics
 jangtaku                        // (c) 1986 Dyna Computer
@@ -17631,9 +17632,11 @@ janoha                          // (c) 1984 Toaplan
 janptr96                        // "503" (c) 1996 Dynax
 janptrsp                        // "511" (c) 1997 Dynax
 janputer                        // bootleg
+janputera                       // bootleg
 jansou                          // (c) 1985 Dyna
 jansoua                         // (c) 1985 Dyna
 janyoup2                        // Falcon bootleg
+janyoup2a                       // Cosmo
 jongshin                        // (c) 1986 Dyna
 majrjh                          // "105" (c) 1996 Dynax
 majrjhdx                        // "105" (c) 1996 Dynax
@@ -17731,7 +17734,6 @@ draco                           // (c) 1981 Cidelsa
 
 @source:efo/nightmare.cpp
 nightmare                       // (c) 1982 E.F.O.
-nightmarea                      // (c) 1982 E.F.O.
 
 @source:elektor/avrmax.cpp
 atm18mcc
@@ -24317,6 +24319,7 @@ tdbingo                         //
 
 @source:konami/konmedal.cpp
 buttobi
+chusenoh                        // 1992 Konami
 ddboy
 ddboya
 fuusenpn
@@ -30545,6 +30548,7 @@ falcnwld                        // 1991, TVG
 falcnwlda                       // (c) 1990, Video Klein
 falcnwldb                       // (c) 1990, Video Klein
 falcnwldc                       // (c) 1983, Falcon
+falcnwldd                       // (c) 1983, Falcon
 genie                           // (c) 198? Video Fun Games Ltd.
 geniea                          // 198?, Unknown
 goldnpkb                        // (c) 1981 Bonanza
@@ -32651,7 +32655,8 @@ sshot                           // (c) 1979 Model Racing
 subhuntr                        // 1979 Model Racing
 
 @source:msx/big10.cpp
-big10                           // (c) 198? Unknown
+big10                           //
+big10a                          // (c) 1986 System Make
 
 @source:msx/forte2.cpp
 pesadelo                        // (c) 1989 Forte II Games
@@ -33688,6 +33693,7 @@ androidpo                       // (c) 198? Nasco
 albatross                       //
 suprgolf                        // (c) 1989 Nasco
 suprgolfj                       // (c) 1989 Nasco
+suprgolfja                      // (c) 1989 Nasco
 
 @source:nascom/nascom1.cpp
 nascom1                         // 1978 Nascom 1
@@ -41941,6 +41947,9 @@ atm                             //
 atmtb2                          //
 atmtb2plus                      //
 
+@source:sinclair/byte.cpp
+byte                            // 1990 Byte
+
 @source:sinclair/chloe.cpp
 chloe                           // 1999 Chloe Corporation
 
@@ -41991,7 +42000,6 @@ specpls3                        // 1987 ZX Spectrum +3
 @source:sinclair/spectrum.cpp
 bk08                            // Orel BK-08
 blitzs                          // 1990 Blic
-byte                            // 1990 Byte
 cip01                           // 1987 CIP-01
 cip03                           // 1988 CIP-03
 cobra80                         //
@@ -42106,6 +42114,17 @@ attache816                      // (c) 1983 Otrona
 
 @source:skeleton/ax20.cpp
 ax20                            //
+
+@source:skeleton/banpresto_tomy_h8s.cpp
+cmcwa
+cscaoysd
+dbzbgck
+gyakyu
+satoyama
+unkbpmed
+youkai
+yujogs
+zoids
 
 @source:skeleton/basf7100.cpp
 basf7120                        //
