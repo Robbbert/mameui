@@ -1,7 +1,247 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 25 -->
 <softwarelist name="svi318_cass" description="svi318_cass loose roms">
+	<software name="svice207a1f6dc1d">
+		<description>Cross Chase (2017-09-15)(Caruso, Fabrizio)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="30071">
+				<rom name="Cross Chase (2017-09-15)(Caruso, Fabrizio)[full].cas" size="30071" crc="5619edfe" sha1="ce207a1f6dc1d039dcd0eb2911d1d4879dd6a79d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sviac5d5e3423c4b">
+		<description>Cross Chase (2017-09-15)(Caruso, Fabrizio)[minimal]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="25320">
+				<rom name="Cross Chase (2017-09-15)(Caruso, Fabrizio)[minimal].cas" size="25320" crc="bc96a729" sha1="ac5d5e3423c4beaaacecd0e35b96bf54a639bea6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi8fe61604f5758">
+		<description>Cross Chase (2017-10-11)(Caruso, Fabrizio)[16K][light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="26045">
+				<rom name="Cross Chase (2017-10-11)(Caruso, Fabrizio)[16K][light].cas" size="26045" crc="880ae65f" sha1="8fe61604f575882a717f8e4ff5ff824c25801609"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi0578fe173c886">
+		<description>Cross Chase (2017-10-11)(Caruso, Fabrizio)[32K][full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="30929">
+				<rom name="Cross Chase (2017-10-11)(Caruso, Fabrizio)[32K][full].cas" size="30929" crc="3faeeafc" sha1="0578fe173c88684c9c2843bca5c6d63cb6ce618d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi18dfb36cd869c">
+		<description>Cross Chase (2017-10-30)(Caruso, Fabrizio)(318)[light][mode0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="25754">
+				<rom name="Cross Chase (2017-10-30)(Caruso, Fabrizio)(318)[light][mode0].cas" size="25754" crc="2ecd7b87" sha1="18dfb36cd869c98ff7f70241725c45a4e62f8e9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi0a96e2a1a1283">
+		<description>Cross Chase (2017-10-30)(Caruso, Fabrizio)(328)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="36128">
+				<rom name="Cross Chase (2017-10-30)(Caruso, Fabrizio)(328)[full].cas" size="36128" crc="c807b104" sha1="0a96e2a1a1283afcde04867da68b39dc6fa7e0ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sviec1de35fae0a4">
+		<description>Cross Chase (2017-12-10)(Caruso, Fabrizio)(318)[light][mode0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="25320">
+				<rom name="Cross Chase (2017-12-10)(Caruso, Fabrizio)(318)[light][mode0].cas" size="25320" crc="3a1f14ff" sha1="ec1de35fae0a44fcd0aecd6ffb6fc4d65f7c41f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svidf0c4d7dc00e6">
+		<description>Cross Chase (2017-12-10)(Caruso, Fabrizio)(328)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="35647">
+				<rom name="Cross Chase (2017-12-10)(Caruso, Fabrizio)(328)[full].cas" size="35647" crc="5d57bb75" sha1="df0c4d7dc00e66dc53f539c7f5a013ee72de0983"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi6252e66778a9e">
+		<description>Cross Chase (2018-02-03)(Caruso, Fabrizio)(318)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="28805">
+				<rom name="Cross Chase (2018-02-03)(Caruso, Fabrizio)(318)[light].cas" size="28805" crc="713152a6" sha1="6252e66778a9e1aa960b1301c108f881e8a12967"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svif8b0991916688">
+		<description>Cross Chase (2018-02-03)(Caruso, Fabrizio)(318)[light][mode0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="25501">
+				<rom name="Cross Chase (2018-02-03)(Caruso, Fabrizio)(318)[light][mode0].cas" size="25501" crc="66b835fc" sha1="f8b09919166887fd926d18f3fa274fcce6024377"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi77e56d3e84a6c">
+		<description>Cross Chase (2018-02-03)(Caruso, Fabrizio)(328)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="35896">
+				<rom name="Cross Chase (2018-02-03)(Caruso, Fabrizio)(328)[full].cas" size="35896" crc="ce0811d0" sha1="77e56d3e84a6c559ff7cd8f1269b279c97d0e047"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi2974a9a3f0d81">
+		<description>Cross Chase (2018-04-15)(Caruso, Fabrizio)(318)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="28632">
+				<rom name="Cross Chase (2018-04-15)(Caruso, Fabrizio)(318)[light].cas" size="28632" crc="5d2323e2" sha1="2974a9a3f0d815cfde2d5b1abe83193dd4756046"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi9db5796942659">
+		<description>Cross Chase (2018-04-15)(Caruso, Fabrizio)(318)[light][mode0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="25298">
+				<rom name="Cross Chase (2018-04-15)(Caruso, Fabrizio)(318)[light][mode0].cas" size="25298" crc="93c59bb2" sha1="9db5796942659687d513ed1b65f199a8eefbd62f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svif84ad4ee32fe4">
+		<description>Cross Chase (2018-04-15)(Caruso, Fabrizio)(328)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="35758">
+				<rom name="Cross Chase (2018-04-15)(Caruso, Fabrizio)(328)[full].cas" size="35758" crc="ad80dbd4" sha1="f84ad4ee32fe463bc86627401360b0394d7143e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svic82ea1c710055">
+		<description>Cross Chase (2018-05-19)(Caruso, Fabrizio)(318)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="28448">
+				<rom name="Cross Chase (2018-05-19)(Caruso, Fabrizio)(318)[light].cas" size="28448" crc="93b398fc" sha1="c82ea1c710055980987832472613847be42cc6e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svia0eec18280387">
+		<description>Cross Chase (2018-05-19)(Caruso, Fabrizio)(318)[light][mode0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="25132">
+				<rom name="Cross Chase (2018-05-19)(Caruso, Fabrizio)(318)[light][mode0].cas" size="25132" crc="1c854851" sha1="a0eec182803877fb43917e2b5be97442897686d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi77090d1bdc545">
+		<description>Cross Chase (2018-05-19)(Caruso, Fabrizio)(328)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="35990">
+				<rom name="Cross Chase (2018-05-19)(Caruso, Fabrizio)(328)[full].cas" size="35990" crc="5c02b2d2" sha1="77090d1bdc5451d2e0a2e6c15d2cc4434092090d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svicc4b90971da8c">
+		<description>Cross Chase (2018-07-19)(Caruso, Fabrizio)(318)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="28444">
+				<rom name="Cross Chase (2018-07-19)(Caruso, Fabrizio)(318)[light].cas" size="28444" crc="764a1afa" sha1="cc4b90971da8c14a607e5f1c2fe844b24b978f04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svid4dbd8c972f97">
+		<description>Cross Chase (2018-07-19)(Caruso, Fabrizio)(328)[full]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="35683">
+				<rom name="Cross Chase (2018-07-19)(Caruso, Fabrizio)(328)[full].cas" size="35683" crc="60626d36" sha1="d4dbd8c972f97554317dd363e28c3d19d64d6add"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svia1ec98ca08aa7">
+		<description>Cross Chase (2018-08-04)(Caruso, Fabrizio)(318)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="28214">
+				<rom name="Cross Chase (2018-08-04)(Caruso, Fabrizio)(318)[light].cas" size="28214" crc="545e8ccb" sha1="a1ec98ca08aa76daeee2b746b905432e9a01187e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi1280554504839">
+		<description>Cross Chase (2018-08-04)(Caruso, Fabrizio)(328)[full][UDG]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="33751">
+				<rom name="Cross Chase (2018-08-04)(Caruso, Fabrizio)(328)[full][UDG].cas" size="33751" crc="697b0534" sha1="1280554504839655efa888bcfbeaa8914572d2d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi41f1f78b37c17">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)(318)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="28518">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)(318)[light].cas" size="28518" crc="e9abf544" sha1="41f1f78b37c17bf33a8105608cf6c06955194081"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi02992dde29d1f">
+		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)(328)[full][udg]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="33334">
+				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio)(328)[full][udg].cas" size="33334" crc="0f7ce6a2" sha1="02992dde29d1f00f1e5cfe3ac247dcede72de787"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi3b4076b42ec54">
+		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)(318)[light]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="svi318_cass">
+			<dataarea name="cass" size="30687">
+				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)(318)[light].cas" size="30687" crc="1772120b" sha1="3b4076b42ec543af649c575cc4db3eeb4c761e3b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="svi10ef662ce547e">
 		<description>htron_svi[bload]</description>
 		<year>????</year>

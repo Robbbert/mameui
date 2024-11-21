@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6795 -->
+<!-- Number of items in this list = 6882 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -55559,6 +55559,876 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="nybbles.bas.a26" size="4096" crc="a704acfa" sha1="a7067f2092b4f85a3378543d4d9bbcfb1acd7d6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be3f4beeb322c">
+		<description>Obelix (1983) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Obelix (1983) (Atari) (PAL) [a1][!].a26" size="8192" crc="ede66ac2" sha1="be3f4beeb322cddc7223d6d77e17302aa811e43a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263c2e2b5319767">
+		<description>Obelix (1983) (Atari) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Obelix (1983) (Atari) [f1] (NTSC by TJ).a26" size="8192" crc="7423f640" sha1="3c2e2b53197674e169ea0a0e095e4afd0506fb05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f238d39a080d0">
+		<description>ocanada.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ocanada.bas.a26" size="4096" crc="c8ffd61a" sha1="f238d39a080d0509b67e2e29904266f404428237"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce70adba01995">
+		<description>Ocean City (1983) (Funvision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ocean City (1983) (Funvision).a26" size="4096" crc="784015c1" sha1="ce70adba0199509caaabc5068016c10517c3b8ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267a804d16af8e5">
+		<description>Ocean_City_Defender_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ocean_City_Defender_NTSC(Supercharger).a26" size="4096" crc="f8241b8f" sha1="7a804d16af8e567d6ffba337c9e57a8e8fa6bbe6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d752cd21182d6">
+		<description>Ocean_City_Defender_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ocean_City_Defender_PAL60(Supercharger).a26" size="4096" crc="a758fdc5" sha1="d752cd21182d68151927552dd5c909a2987c123e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e20070b7dc4de">
+		<description>octopus.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="octopus.bas.a26" size="4096" crc="d55719f7" sha1="e20070b7dc4de9a1d09cee612c98b40739c2c2d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659a0b37060582">
+		<description>OdysseyInv</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="OdysseyInv.a26" size="4096" crc="74f360c6" sha1="59a0b37060582e98928e26f12cb496cc6725c8ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2653da0bf924acf">
+		<description>Oh No! (Version 1) (17-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Oh No! (Version 1) (17-01-2003) (AD).a26" size="32768" crc="747344a9" sha1="53da0bf924acf7a9ff25dd117c0de634311e9155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26848a8fd2e7cb3">
+		<description>Oh No! (Version 3) (18-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Oh No! (Version 3) (18-01-2003) (AD).a26" size="32768" crc="101de6de" sha1="848a8fd2e7cb345b71359ebbc9573197e7c44b4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26115ca9a4c4e80">
+		<description>Oh No! (Version 4) (22-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Oh No! (Version 4) (22-01-2003) (AD).a26" size="32768" crc="031240aa" sha1="115ca9a4c4e80e910f1fabaf7c3086aa9b0bf777"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f90812a0d4135">
+		<description>Oh No! Colour (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Oh No! Colour (AD).a26" size="32768" crc="f57da33c" sha1="f90812a0d4135165c0b9a7df5fb46306d763f211"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bf7b4e8453701">
+		<description>Oink! (1983) (Activision) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Oink! (1983) (Activision) [o1].a26" size="16384" crc="f953dbb9" sha1="bf7b4e84537013593e2197fefa2b59d657ed8cdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262a6556041f7a9">
+		<description>Oink! (1983) (Activision) [o2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Oink! (1983) (Activision) [o2].a26" size="8192" crc="b5c03f08" sha1="2a6556041f7a9d081c23b61cae522aa69386df1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267feef3965706b">
+		<description>Okie Dokie (4K) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Okie Dokie (4K) (PD).a26" size="4096" crc="06dc4834" sha1="7feef3965706bc64f0f0a940149b2523e0735ce6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267bd1cbddefcf3">
+		<description>Okie Dokie (Older) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Okie Dokie (Older) (PD).a26" size="2048" crc="5aa23b4c" sha1="7bd1cbddefcf3bd24da570be015234d0c444a7e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268a47b1930971f">
+		<description>Okie Dokie (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Okie Dokie (PD).a26" size="2048" crc="72449331" sha1="8a47b1930971f271a935c50d423e152aaea6ac59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263b7b90a1db974">
+		<description>OkieDokie_Older_PD_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="OkieDokie_Older_PD_Overdump.a26" size="4096" crc="bb5c9b6a" sha1="3b7b90a1db9741de01ab717ef9d9b0dd69092c84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26939e37be9cd0f">
+		<description>OkieDokie_PD_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="OkieDokie_PD_Overdump.a26" size="4096" crc="cb74043f" sha1="939e37be9cd0f3e8bc4bdc4fcee844bf1518ffe1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265307d34da673f">
+		<description>Old_West_Shootout_beta_by_Snail</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Old_West_Shootout_beta_by_Snail.a26" size="4096" crc="a59f7c92" sha1="5307d34da673f534d82e0798c2eb56fe982fdd66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b2ccaa408ccb7">
+		<description>OMG!! (2004) (Csonicgo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="OMG!! (2004) (Csonicgo).a26" size="2048" crc="ec436a44" sha1="b2ccaa408ccb7b2ac0395ec681db81b8f1d5334b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2668cc06b68fb32">
+		<description>Omicron 2k 20080113</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Omicron 2k 20080113.a26" size="2048" crc="7d70ca89" sha1="68cc06b68fb323acfbdcc948ab3fe68d14250be0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cd081083527d6">
+		<description>omicron_2k_20080229</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080229.a26" size="2048" crc="ee28a746" sha1="cd081083527d6b7e88306e95fb1e2a5f31947216"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269f321e9f17d5a">
+		<description>omicron_2k_20080302</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080302.a26" size="2048" crc="27e7e9c8" sha1="9f321e9f17d5a2ecd94721c6c09bc1f73eae4175"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e017d13b6815b">
+		<description>omicron_2k_20080303</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080303.a26" size="2048" crc="b5cbfb18" sha1="e017d13b6815b3fd976e8f7b59ffbe0848996608"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a759f51d1386d">
+		<description>omicron_2k_20080306</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080306.a26" size="2048" crc="c8ab94aa" sha1="a759f51d1386d9b6c0ee7f19f7081a3bbf7c630c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c06f5ed0cd7da">
+		<description>omicron_2k_20080307</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080307.a26" size="2048" crc="d9e2e8fd" sha1="c06f5ed0cd7da2fe1f85ac7071617020df220ec1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260562585d0ea12">
+		<description>omicron_2k_20080308</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080308.a26" size="2048" crc="670911d9" sha1="0562585d0ea12b095ba0d17ad3e39b5ba7b25c09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26368e0dca235a9">
+		<description>omicron_2k_20080309</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080309.a26" size="2048" crc="6c90b528" sha1="368e0dca235a9bdf6c730e32e3e1e925389de17d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2647984bec59114">
+		<description>omicron_2k_20080310</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080310.a26" size="2048" crc="2829c88d" sha1="47984bec5911458febbf3370633470a25523338a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b80f08d7beb82">
+		<description>omicron_2k_20080311</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080311.a26" size="2048" crc="9d27ec2d" sha1="b80f08d7beb82f2d59dc3ad189d0211611423d8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659d70981730fa">
+		<description>omicron_2k_20080315</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080315.a26" size="2048" crc="c8987e23" sha1="59d70981730fa2c11f240e81223ce5b99a2de672"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263ed0b5557835d">
+		<description>omicron_2k_20080318</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080318.a26" size="2048" crc="feee5e75" sha1="3ed0b5557835d481428445e64f558b3341b28883"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262e3e60c37d8e6">
+		<description>omicron_2k_20080319</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_20080319.a26" size="2048" crc="6824ae51" sha1="2e3e60c37d8e659567d899efe6f16df540f4220b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262dbb39f6c5594">
+		<description>omicron_2k_final</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_final.a26" size="2048" crc="f6b9f358" sha1="2dbb39f6c55946cad55e29620866a4e0d0a83f03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260b325f57c792f">
+		<description>omicron_2k_final_compo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="omicron_2k_final_compo.a26" size="2048" crc="4c65d39b" sha1="0b325f57c792f87236d8586a374e008d957809bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fbf180f8f3517">
+		<description>One Blue Bar Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="One Blue Bar Demo (PD).a26" size="4096" crc="11ce44e9" sha1="fbf180f8f35178099244bc1ae341ccff87838907"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e52ca6e73c931">
+		<description>One On One by Angelino (Basketball Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="One On One by Angelino (Basketball Hack).a26" size="2048" crc="7d4a2bd2" sha1="e52ca6e73c931ef71c63e164704fb398086e4308"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e39c2fb78b3fa">
+		<description>Only Good Clown Is a Dead Clown, The (Texas Chainsaw Massacre Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Only Good Clown Is a Dead Clown, The (Texas Chainsaw Massacre Hack).a26" size="4096" crc="088bca94" sha1="e39c2fb78b3fa43a059a28156f986d07f2398bd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266d4a583d02c52">
+		<description>Ooze (200x)(potatohead)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ooze (200x)(potatohead)(NTSC)(PD).bin" size="4096" crc="eb7d1405" sha1="6d4a583d02c52811b2986e04821deb099e764e89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c5d24f1a81a03">
+		<description>Ooze - title-bug by potatohead (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ooze - title-bug by potatohead (PD).a26" size="4096" crc="61266958" sha1="c5d24f1a81a034a7828a68f87ad299026e85cd7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c41d5a5a54e4">
+		<description>Ooze by potatohead (2005 Minigame Compo) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ooze by potatohead (2005 Minigame Compo) (PD).a26" size="4096" crc="7be8b061" sha1="6c41d5a5a54e40452e38f1e1ded0b52e086890c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e14ddec3d03e9">
+		<description>ooze v0.5 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v0.5 (2005) (Doug Dingus).a26" size="4096" crc="6d3ef3a5" sha1="e14ddec3d03e944d76e08f0c7b7bcc2fb4417dcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd867529e55e8">
+		<description>ooze v0.55 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v0.55 (2005) (Doug Dingus).a26" size="4096" crc="ce4c639c" sha1="dd867529e55e86fd1516d75f8a79387e33078bf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2685cd3b7f4fc62">
+		<description>ooze v0.6 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v0.6 (2005) (Doug Dingus).a26" size="4096" crc="8a3f3080" sha1="85cd3b7f4fc629a6b42d897178190da86ca0875a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26216a3c91a1122">
+		<description>ooze v0.7 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v0.7 (2005) (Doug Dingus).a26" size="4096" crc="03baa917" sha1="216a3c91a1122368fa4e49499410670938c4af01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2672f9f672ee0f8">
+		<description>ooze v0.85 (2005) (Doug Dingus) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v0.85 (2005) (Doug Dingus) (PD).a26" size="4096" crc="8be4ea52" sha1="72f9f672ee0f836efe8f2f93c3fe6eaf07ae3117"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26982390cbd997a">
+		<description>Ooze v0.9 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ooze v0.9 (2005) (Doug Dingus).a26" size="4096" crc="047fc408" sha1="982390cbd997a93b202b69365a8e63e2595b4c50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26976dead3eddcd">
+		<description>ooze v1 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v1 (2005) (Doug Dingus).a26" size="4096" crc="0cbe9422" sha1="976dead3eddcd77bbe537258fec315e0657d64fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca2cd16fbf1ed">
+		<description>ooze v1.0 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v1.0 (2005) (Doug Dingus).a26" size="4096" crc="a6ebefcb" sha1="ca2cd16fbf1ed1445c721237ebfd47424fd1998f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26843e005a91625">
+		<description>ooze v1.1 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v1.1 (2005) (Doug Dingus).a26" size="4096" crc="242134d6" sha1="843e005a916254781a5c2db7eb3d3c3ee6875f4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb08c16d83371">
+		<description>ooze v1.1a (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v1.1a (2005) (Doug Dingus).a26" size="4096" crc="6d2536bf" sha1="eb08c16d83371d44e008ddc5ef49c7707d2e0e90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260870ebb0889aa">
+		<description>ooze v2 (2005) (Doug Dingus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze v2 (2005) (Doug Dingus).a26" size="4096" crc="96729bd5" sha1="0870ebb0889aa3015b2448b56e99787aba04ba0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e3fd5ec191666">
+		<description>ooze</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ooze.a26" size="4096" crc="27ffef2f" sha1="e3fd5ec191666526edebdc99d5ddde57e1e15b21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26539d49c3bcff3">
+		<description>OpenSourcePong 2008-03-31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="OpenSourcePong 2008-03-31.a26" size="2048" crc="417729df" sha1="539d49c3bcff36660bea27c3281287680d845b77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2694c7b07cf2011">
+		<description>OpenSourcePong 2008-04-11 now Bong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="OpenSourcePong 2008-04-11 now Bong.a26" size="2048" crc="01614899" sha1="94c7b07cf20115e10f183f32a1df04825d6ae8be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26175ccaca45ee2">
+		<description>opensourcepong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="opensourcepong.a26" size="2048" crc="566dd851" sha1="175ccaca45ee294c7ae6923d2ee6473befaf7109"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262e019277e8255">
+		<description>OpenSourcePong.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="OpenSourcePong.bas.a26" size="4096" crc="b5009294" sha1="2e019277e8255082ca813797c83164b80c433e2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ef6ed09031799">
+		<description>OSU UM Football (Football Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="OSU UM Football (Football Hack).a26" size="2048" crc="478efbc8" sha1="ef6ed09031799d2064404c1ce12b11e122e11733"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d961da2cc5a7">
+		<description>Othello (1978) (Atari) (PAL) [p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Othello (1978) (Atari) (PAL) [p1][!].a26" size="4096" crc="e9b1cf7e" sha1="7d961da2cc5a7fd9e8b13136db93ccd7d61e9373"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26153e01badcc77">
+		<description>Othello (1978) (Atari) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Othello (1978) (Atari) [p1][o1].a26" size="4096" crc="f79b012c" sha1="153e01badcc77ef75b1781fd26aaa0fce1ebb6f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263073c74a37563">
+		<description>Othello (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Othello (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="58e1f930" sha1="3073c74a375635946482f657d36719df1164444d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2639f156f5abb92">
+		<description>Othello_1978_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Othello_1978_Overdump.a26" size="4096" crc="0882234c" sha1="39f156f5abb925db657f32bddc414b938457984f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c19f5c94cdd28">
+		<description>Othello_Atari_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Othello_Atari_PAL_Overdump.a26" size="4096" crc="234c0962" sha1="c19f5c94cdd283de4a30df992e3ed0f8f923ea47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f8a673170f3d6">
+		<description>Otto's Revenge (Berzerk Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Otto's Revenge (Berzerk Hack).a26" size="4096" crc="67a3d2dd" sha1="f8a673170f3d6526e5cabd46842d382393770f9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b61073bc30a92">
+		<description>Outlaw (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Outlaw (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="b6b28725" sha1="b61073bc30a9285d4fa21e66d06f525361ce05d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260eeccf48cb219">
+		<description>Outlaw (AKA Gunslinger) (1978) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Outlaw (AKA Gunslinger) (1978) (Atari) [o1].a26" size="4096" crc="f862f63f" sha1="0eeccf48cb219b595942679bd703ebd0616da492"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267183f86721561">
+		<description>Outlaw (AKA Gunslinger) (1978) (Atari) [o2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Outlaw (AKA Gunslinger) (1978) (Atari) [o2].a26" size="4096" crc="8648d3c8" sha1="7183f86721561081a734b48ede2ff875474fbd76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c61b7946abcb8">
+		<description>Outlaw (Black)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Outlaw (Black).a26" size="2048" crc="55063c17" sha1="c61b7946abcb814b5ec2fdeded8cdc1c7edcc6d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264399d836ad3cc">
+		<description>Outlaw-GunSlinger_1978_Atari_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Outlaw-GunSlinger_1978_Atari_PAL_Overdump.a26" size="4096" crc="ddbf5607" sha1="4399d836ad3cc9400a32a1f41c22453ca9d2d8a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2624fd245aca5f3">
+		<description>Outlaw_32-in-1_Atari_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Outlaw_32-in-1_Atari_PAL_Overdump.a26" size="4096" crc="2f235006" sha1="24fd245aca5f355e0a93569759e56371469dd97d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a8aab38513c7">
+		<description>Outta My Way (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Outta My Way (Chris Read).a26" size="2048" crc="104a85dd" sha1="4a8aab38513c7d08c2c09b943320c29030441f6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a2c8af5265ed">
+		<description>Overhead Adventure Demo 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Overhead Adventure Demo 1 (PD).a26" size="4096" crc="6356c18b" sha1="9a2c8af5265ed38b86997b22caa5d8d91e20d317"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c1d096efb14b4">
+		<description>Overhead Adventure Demo 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Overhead Adventure Demo 2 (PD).a26" size="4096" crc="cb44dcf5" sha1="c1d096efb14b4da860d3ce8a991f758e5e1804a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26abb264e82721d">
+		<description>Overhead Adventure Demo 3 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Overhead Adventure Demo 3 (PD).a26" size="4096" crc="9876a070" sha1="abb264e82721da429f4e7a8bef2baf9785eb3136"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c2bc9c0e81957">
+		<description>Overhead Adventure Demo 4 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Overhead Adventure Demo 4 (PD).a26" size="4096" crc="9b47eeb0" sha1="c2bc9c0e819570e9226f774a23992cc4b47381ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e6f756bdbe33c">
+		<description>Overhead Adventure Demo 5 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Overhead Adventure Demo 5 (PD).a26" size="4096" crc="660393f9" sha1="e6f756bdbe33c3e8bfc1907b4102187e5626f177"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26302fccf05989f">
+		<description>Overhead Adventure Demo 6 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Overhead Adventure Demo 6 (PD).a26" size="4096" crc="fc8df4ee" sha1="302fccf05989fe9c361ff5a134ffba5261dd8e35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266428662a9b10b">
+		<description>Oystron (V2.6) (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron (V2.6) (Piero Cavina) (PD).a26" size="4096" crc="7e52e0c5" sha1="6428662a9b10b9af6ad2a7a4b7d3773bbcd4cac4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec90ed048e74b">
+		<description>Oystron (V2.7) (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron (V2.7) (Piero Cavina) (PD).a26" size="4096" crc="f2b55578" sha1="ec90ed048e74b6be316b821d8453e1ee161057d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a9d6bcb99e5e6">
+		<description>Oystron (V2.8) (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron (V2.8) (Piero Cavina) (PD).a26" size="4096" crc="feb47234" sha1="a9d6bcb99e5e6840b18b0fff5de7e72229cb3c06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626f3d7822cc55">
+		<description>Oystron (V2.82) (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron (V2.82) (Piero Cavina) (PD).a26" size="4096" crc="923e2202" sha1="26f3d7822cc55a76cba5d717632522c2d1c53855"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad7e6ef4500f0">
+		<description>Oystron (V2.85) (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron (V2.85) (Piero Cavina) (PD).a26" size="4096" crc="bfa66cd7" sha1="ad7e6ef4500f0ce3e0b92ca5e6cd644666d611d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb94b8fb21c76">
+		<description>Oystron beta (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron beta (Piero Cavina) (PD).a26" size="4096" crc="a0bdd409" sha1="eb94b8fb21c768aa7d5395d530d12bdace2e6151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a3939b20e2e15">
+		<description>Oystron X (Piero Cavina) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron X (Piero Cavina) (PD).a26" size="4096" crc="97d2f10f" sha1="a3939b20e2e1570427336507116cb6ebbfcb6cbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2691251e7827304">
+		<description>Oystron_beta52</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron_beta52.a26" size="4096" crc="d1eada0e" sha1="91251e78273049668a088b5fa75104a6c1646a02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268dfc6feab6e75">
+		<description>Oystron_collision</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Oystron_collision.a26" size="4096" crc="e75b93ac" sha1="8dfc6feab6e7554c142c87277867c0e0e10cd329"/>
 			</dataarea>
 		</part>
 	</software>
