@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 442 -->
+<!-- Number of items in this list = 471 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -1662,6 +1662,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68f9d0a037eb198">
+		<description>EEL - Edit Elements v2.00A (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EEL - Edit Elements v2.00A (Disk 1).hdm" size="1261568" crc="a6544c0f" sha1="f9d0a037eb198f86e980623cfebb75e6e87aa514"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e8b354b53b589">
+		<description>EEL - Edit Elements v2.00A (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EEL - Edit Elements v2.00A (Disk 2).hdm" size="1261568" crc="d90b77f9" sha1="e8b354b53b5890df861a621c3a2c7342bbd9c119"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x681eb6082c6f7c4">
 		<description>Emerald Dragon (1 of 6) (Opening Disk)</description>
 		<year>????</year>
@@ -1692,6 +1712,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68f86d197374799">
+		<description>Endan Genpei Souranki - Irowanioedo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Endan Genpei Souranki - Irowanioedo.hdm" size="1261568" crc="d40ed7dd" sha1="f86d1973747998a19daf7480d3d344ac4890e1e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d6b02ade60c09">
+		<description>Endan Tokugawa K. - G. (19xx)(Zenry.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Endan Tokugawa K. - G. (19xx)(Zenry.).hdm" size="1261568" crc="aef856ab" sha1="d6b02ade60c09e19b0c50c809aefaa593ca6e491"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x6857a725a1fd2d4">
 		<description>EW X68000 Word Processor</description>
 		<year>????</year>
@@ -1699,6 +1739,86 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="EW X68000 Word Processor.hdm" size="1261568" crc="8b744359" sha1="57a725a1fd2d4652ad34c94f9c0643bc374b8489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e8be5ad68b850">
+		<description>EX-System (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EX-System (Disk 1).hdm" size="1261568" crc="6a0d2a93" sha1="e8be5ad68b85064744d5ee11cff1d462500dd481"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68cdea56739f6c6">
+		<description>EX-System (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="EX-System (Disk 2).hdm" size="1261568" crc="de9c4c7c" sha1="cdea56739f6c62905f392406f33a400a508c230c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6828de581716cde">
+		<description>Expansion Floppy Disk Driver (v0.3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Expansion Floppy Disk Driver (v0.3).hdm" size="1261568" crc="2d1e64e2" sha1="28de581716cde92c4bc74982c86d4baa42772e6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68933b1c013e749">
+		<description>Ezoris</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ezoris.hdm" size="1261568" crc="3763566b" sha1="933b1c013e7492de0496ff86dc97c3d3633f131e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688a1edb3f3ddea">
+		<description>F-1 Fastest Lap (1991)(Michael Company)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="F-1 Fastest Lap (1991)(Michael Company).dim" size="1261824" crc="f999464b" sha1="8a1edb3f3ddead45fb5f01a9dd50243d9e3a6579"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d91ae2e2f314b">
+		<description>F-Calc for X680x0 (Data disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="F-Calc for X680x0 (Data disk).hdm" size="1261568" crc="ad8cd620" sha1="d91ae2e2f314bb4db522f0a4aba555eadd058a5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x689918a41d5748a">
+		<description>F-Calc for X680x0 (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="F-Calc for X680x0 (System disk).hdm" size="1261568" crc="b621c0e5" sha1="9918a41d5748a56c30d21f42850a0cc0ea604d27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f9c5833cb62cb">
+		<description>F-Card GT (Data disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="F-Card GT (Data disk).hdm" size="1261568" crc="29dd919b" sha1="f9c5833cb62cb2797ecf8ec1f2da2ebf110eaa1a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1712,6 +1832,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x688c59e269eb301">
+		<description>F1 (19xx)(Amiba)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="F1 (19xx)(Amiba).XDF" size="1261568" crc="3f3ff1bd" sha1="8c59e269eb3018491d5a1f879034e0c4185bdb7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e35157f9085b6">
+		<description>Fancy Qix (1990)(A.H.S.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Fancy Qix (1990)(A.H.S.).dim" size="1261824" crc="26955b09" sha1="e35157f9085b679e815195cfdf78c1de8a530168"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ed369255697c6">
+		<description>Fantasy Shooting (1989)(Michael Company)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Fantasy Shooting (1989)(Michael Company).dim" size="1261824" crc="9a1c5bc4" sha1="ed369255697c618066eae78223b1af9b5276c548"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x6871c3ec5d3a7c9">
 		<description>Far Side Moon - The Earth Self-Defense Force (1 of 3) (System Disk)</description>
 		<year>????</year>
@@ -1719,6 +1869,46 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Far Side Moon - The Earth Self-Defense Force (1 of 3) (System Disk).2HD" size="1261568" crc="53f9e609" sha1="71c3ec5d3a7c962972437f544e5ae8e7be11ff8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68691624856eb77">
+		<description>Fifteen All (1993)(Binboo Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Fifteen All (1993)(Binboo Soft).hdm" size="1261568" crc="758bb4a8" sha1="691624856eb772efc6add0d956e01bdad0d1b4cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f7975463abf4d">
+		<description>File Master X68000 (v1.13) (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="File Master X68000 (v1.13) (Disk 1).hdm" size="1261568" crc="13d30a4b" sha1="f7975463abf4d61c8bd64dddfc0d173585b2bda9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68a697824388d19">
+		<description>File Master X68000 (v1.13) (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="File Master X68000 (v1.13) (Disk 2).hdm" size="1261568" crc="6866e6ad" sha1="a697824388d19a8d9e560f3937a781aa7ff22f26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68dc9bdbba73ec5">
+		<description>File Master X68000 (v1.13) (Disk 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="File Master X68000 (v1.13) (Disk 3).hdm" size="1261568" crc="ef46f679" sha1="dc9bdbba73ec590e590c4ae54b93048b9f03dd10"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1732,13 +1922,153 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="x68fd1adbf002f02">
+	<software name="x685701b0d364757">
+		<description>Firia (1991)(Scuderia Phantom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Firia (1991)(Scuderia Phantom).dim" size="1261824" crc="84bfab69" sha1="5701b0d36475712cc8305b2adac1680e3b509973"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6845068e137c875">
+		<description>First Mission (1989)(YOH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="First Mission (1989)(YOH).dim" size="1261824" crc="6aaf974d" sha1="45068e137c87534831b4be0cd38b7d8e374d74a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68471fef09a1330">
+		<description>First Mission II Final Mission (1990)(YOH)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="First Mission II Final Mission (1990)(YOH)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="69c7d87e" sha1="471fef09a1330fb190823b3d3be1d99f1bc15925"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68068c8e8412026">
+		<description>First Mission II Final Mission (1990)(YOH)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="First Mission II Final Mission (1990)(YOH)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="4215c5d9" sha1="068c8e8412026898d22b85bef6776de94e495167"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68fab032a4fac08">
+		<description>Flame Wing v1.02 (1994)(Itasenpara)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Flame Wing v1.02 (1994)(Itasenpara).dim" size="1261824" crc="0ef20454" sha1="fab032a4fac0804e0345be4059836a781877600b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682bd70e9061860">
+		<description>Flip Flop (1990)(Maitake)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Flip Flop (1990)(Maitake).dim" size="1261824" crc="87df0cd6" sha1="2bd70e90618605c4bac38b56a730d6839a6db74f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x681b53ef9a9f994">
+		<description>Fly Shooters (1991)(Pineapple)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Fly Shooters (1991)(Pineapple).dim" size="1261824" crc="3fa33933" sha1="1b53ef9a9f994877eacdcbe8f90a64891cb9f4fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68811a245f8a534">
+		<description>Flying Shark (1991) (Toaplan)[xdf]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Flying Shark (1991) (Toaplan)[xdf].xdf" size="1261568" crc="6240375e" sha1="811a245f8a534227b5882cf352b05e852133381e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68687f002f2c2ef">
 		<description>Flying Squirrel (1997)(PenPe Projects)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Flying Squirrel (1997)(PenPe Projects).xdf" size="1261568" crc="0f473684" sha1="fd1adbf002f0243d865b5b994ed8a106134442bd"/>
+				<rom name="Flying Squirrel (1997)(PenPe Projects).xdf" size="1261568" crc="7a7c609c" sha1="687f002f2c2ef0c4d6e4bf36dd598e636e9b4a03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6853325b0225b12">
+		<description>Flying Squirrel (1998)(PenPe Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Flying Squirrel (1998)(PenPe Projects).xdf" size="1261568" crc="dc478d5b" sha1="53325b0225b124e271b975207a465348ef2bcc43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68234bd88c108a0">
+		<description>Formula X (1992)(Hayab. Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Formula X (1992)(Hayab. Soft).XDF" size="1261568" crc="2b6e6aca" sha1="234bd88c108a0879114e351eda5a6542e0d8b385"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ad7a2a1400c2b">
+		<description>Fortress Attack (1993)(Shibahara A.)(Disk 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Fortress Attack (1993)(Shibahara A.)(Disk 1 of 2).dim" size="1261824" crc="a919b870" sha1="ad7a2a1400c2bc9106021370f9d959f11e96d56e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6828db90ef8a65d">
+		<description>Fortress Attack (1993)(Shibahara A.)(Disk 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Fortress Attack (1993)(Shibahara A.)(Disk 2 of 2).dim" size="1261824" crc="ebbf3a16" sha1="28db90ef8a65d405243bf7a43a235ad1a0c5938b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688a1c962ffff1a">
+		<description>Fukubukuro (v2.0) (System disk) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Fukubukuro (v2.0) (System disk) (2).hdm" size="1261568" crc="8627a7b6" sha1="8a1c962ffff1a62852529e381fac420a6996253e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684a31b06ffb90a">
+		<description>Fukubukuro (v2.0) (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Fukubukuro (v2.0) (System disk).hdm" size="1261568" crc="8cc2c5f4" sha1="4a31b06ffb90ac8a84676d2b134c84fd398cef23"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3842,46 +4172,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="x68f7975463abf4d">
-		<description>The File Master X68000 (v1.13) (Disk 1)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="1261568">
-				<rom name="The File Master X68000 (v1.13) (Disk 1).hdm" size="1261568" crc="13d30a4b" sha1="f7975463abf4d61c8bd64dddfc0d173585b2bda9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="x68a697824388d19">
-		<description>The File Master X68000 (v1.13) (Disk 2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="1261568">
-				<rom name="The File Master X68000 (v1.13) (Disk 2).hdm" size="1261568" crc="6866e6ad" sha1="a697824388d19a8d9e560f3937a781aa7ff22f26"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="x68dc9bdbba73ec5">
-		<description>The File Master X68000 (v1.13) (Disk 3)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="1261568">
-				<rom name="The File Master X68000 (v1.13) (Disk 3).hdm" size="1261568" crc="ef46f679" sha1="dc9bdbba73ec590e590c4ae54b93048b9f03dd10"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="x688a1c962ffff1a">
-		<description>The Fukubukuro (v2.0) (System disk)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="1261568">
-				<rom name="The Fukubukuro (v2.0) (System disk).hdm" size="1261568" crc="8627a7b6" sha1="8a1c962ffff1a62852529e381fac420a6996253e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="x688b81a2ffe9afd">
 		<description>ThunderWord Nihongo Word Processor</description>
 		<year>????</year>
@@ -3953,12 +4243,12 @@
 		</part>
 	</software>
 	<software name="x687ba08129ec167">
-		<description>Toys & Tools</description>
+		<description>Toys &amp; Tools</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Toys & Tools.hdm" size="1261568" crc="ba3598a3" sha1="7ba08129ec16771ec839435c8d051de269a72cea"/>
+				<rom name="Toys &amp; Tools.hdm" size="1261568" crc="ba3598a3" sha1="7ba08129ec16771ec839435c8d051de269a72cea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4203,22 +4493,22 @@
 		</part>
 	</software>
 	<software name="x682bc2543c82c86">
-		<description>Wind Trooper (1993)(Earth&Moon)(1)</description>
+		<description>Wind Trooper (1993)(Earth&amp;Moon)(1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Wind Trooper (1993)(Earth&Moon)(1).xdf" size="1261568" crc="b7e55167" sha1="2bc2543c82c86ad82e894dcb12f5b15499443dc4"/>
+				<rom name="Wind Trooper (1993)(Earth&amp;Moon)(1).xdf" size="1261568" crc="b7e55167" sha1="2bc2543c82c86ad82e894dcb12f5b15499443dc4"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x6875e0ce2a276dc">
-		<description>Wind Trooper (1993)(Earth&Moon)(2)</description>
+		<description>Wind Trooper (1993)(Earth&amp;Moon)(2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Wind Trooper (1993)(Earth&Moon)(2).xdf" size="1261568" crc="26f7595d" sha1="75e0ce2a276dcdcd5d7ba4b7db0b04a9961af3a5"/>
+				<rom name="Wind Trooper (1993)(Earth&amp;Moon)(2).xdf" size="1261568" crc="26f7595d" sha1="75e0ce2a276dcdcd5d7ba4b7db0b04a9961af3a5"/>
 			</dataarea>
 		</part>
 	</software>

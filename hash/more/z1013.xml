@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 115 -->
+<!-- Number of items in this list = 157 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -283,12 +283,12 @@
 		</part>
 	</software>
 	<software name="z105adb2bf1838c4">
-		<description>Basic.C (19xx)(-)</description>
+		<description>Basic C (19xx)(-)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="10865">
-				<rom name="Basic.C (19xx)(-).z80" size="10865" crc="d45176b6" sha1="5adb2bf1838c431d2f06e0062ba27b5085b53f74"/>
+				<rom name="Basic C (19xx)(-).z80" size="10865" crc="d45176b6" sha1="5adb2bf1838c431d2f06e0062ba27b5085b53f74"/>
 			</dataarea>
 		</part>
 	</software>
@@ -483,12 +483,12 @@
 		</part>
 	</software>
 	<software name="z109a48cfd61ce28">
-		<description>Codieren & Decodieren (19xx)(D. Ambras)</description>
+		<description>Codieren &amp; Decodieren (19xx)(D Ambras)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="448">
-				<rom name="Codieren & Decodieren (19xx)(D. Ambras).z80" size="448" crc="fd6217cd" sha1="9a48cfd61ce289f516622999ac1df43d40ee388e"/>
+				<rom name="Codieren &amp; Decodieren (19xx)(D Ambras).z80" size="448" crc="fd6217cd" sha1="9a48cfd61ce289f516622999ac1df43d40ee388e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1129,6 +1129,426 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="10080">
 				<rom name="graverobber.z80" size="10080" crc="fd86e5ae" sha1="ab96046092337f3352c9eb13a753b116e4e5d10e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10a561f2ba87cb9">
+		<description>hacker_com</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="50176">
+				<rom name="hacker_com.z80" size="50176" crc="5ad6d50d" sha1="a561f2ba87cb9ee0dfde0d50d363272b4dab96f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1035248d8205b13">
+		<description>Hardcopy (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2240">
+				<rom name="Hardcopy (19xx)(-).z80" size="2240" crc="ca2148b4" sha1="35248d8205b13d3ebfbe119f4e841cf6db2d9a5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10383cb36e303b1">
+		<description>hase &amp; wolf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="9888">
+				<rom name="hase &amp; wolf.z80" size="9888" crc="20900329" sha1="383cb36e303b1191c77eeb4175caf8906c0fe1c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ed4c5eff84a3d">
+		<description>hase+wolf+joy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16160">
+				<rom name="hase+wolf+joy.z80" size="16160" crc="2493ecfc" sha1="ed4c5eff84a3d3b7bdc31ea81cd0e3337f825639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d21d2fc881762">
+		<description>hase_wolf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16160">
+				<rom name="hase_wolf.z80" size="16160" crc="0ca1ae5e" sha1="d21d2fc8817620a9793945dfd42277ae7bac339d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108bcc75ccfb5c9">
+		<description>HC Basic (19xx)(-)(en)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="11296">
+				<rom name="HC Basic (19xx)(-)(en)[a3].z80" size="11296" crc="54068fa2" sha1="8bcc75ccfb5c9dda9b08b5dff157bf279d0aedbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104925cbfa427b1">
+		<description>HC Basic Pset-Sound (19xx)(-)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10912">
+				<rom name="HC Basic Pset-Sound (19xx)(-)(en).z80" size="10912" crc="d92e8bf2" sha1="4925cbfa427b1c7664ce374ae6be243e6e55010a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100cb781ff17bce">
+		<description>hc-basic+hedi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10784">
+				<rom name="hc-basic+hedi.z80" size="10784" crc="d2bb8ef6" sha1="0cb781ff17bcecf7aa16f996211b31682063b651"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104c04f83609565">
+		<description>HC-BI v4.1 (19xx)(NH)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="11584">
+				<rom name="HC-BI v4.1 (19xx)(NH)[a2].z80" size="11584" crc="202c528c" sha1="4c04f836095652d1ef1cbedbef4c0d3657b7794e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10e5754f142bba2">
+		<description>HC-BI v4.1 (19xx)(NH)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="11584">
+				<rom name="HC-BI v4.1 (19xx)(NH)[a].z80" size="11584" crc="a3e0291d" sha1="e5754f142bba2625faa20df1351413daf05532e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10111b36ba52ec0">
+		<description>header-bank +</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3040">
+				<rom name="header-bank +.z80" size="3040" crc="136543a5" sha1="111b36ba52ec023dd35883c527e85951953b7ef8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1065146bb06fa1a">
+		<description>Header-Bank-Copy (19xx)(I. Neumann)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1664">
+				<rom name="Header-Bank-Copy (19xx)(I. Neumann)[a2].z80" size="1664" crc="919f3ab5" sha1="65146bb06fa1aa955174de6f71557cd6e7c1d519"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108c07407038d9d">
+		<description>Header-Bank-Copy (19xx)(I. Neumann)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1664">
+				<rom name="Header-Bank-Copy (19xx)(I. Neumann)[a].z80" size="1664" crc="2dba41c7" sha1="8c07407038d9d7e01129c484a17d8c416bf3d40d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1036d549dd21647">
+		<description>header-bank-copy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3040">
+				<rom name="header-bank-copy.z80" size="3040" crc="57b31794" sha1="36d549dd2164718197beb03440f7fb8eb0656f87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10255e3c3ff71b2">
+		<description>Header-Menue 4 (19xx)(Joerg Diestel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2336">
+				<rom name="Header-Menue 4 (19xx)(Joerg Diestel).z80" size="2336" crc="f07b0cf0" sha1="255e3c3ff71b2d402016fc927d1a1d4e0237e9e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f57bbb829c204">
+		<description>header-menue 4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2336">
+				<rom name="header-menue 4.z80" size="2336" crc="d2a01d98" sha1="f57bbb829c2041f85eb125abd2c1c73382c4be38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z105da2089855917">
+		<description>header-menue</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2336">
+				<rom name="header-menue.z80" size="2336" crc="e14f8c7b" sha1="5da208985591750b05ccd3f8b1d9009e20ec046d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z102555a7456b9c6">
+		<description>HEADER-Soft 2 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3104">
+				<rom name="HEADER-Soft 2 (19xx)(-).z80" size="3104" crc="3f5e9c6c" sha1="2555a7456b9c622347b272966fdc98ba4bc24519"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10578ca6a53f139">
+		<description>headerbank zeit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1664">
+				<rom name="headerbank zeit.z80" size="1664" crc="2f1e3c83" sha1="578ca6a53f139531b84efa23ea5b03157d96a030"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10de364a09c1f60">
+		<description>headerbank_zeit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1664">
+				<rom name="headerbank_zeit.z80" size="1664" crc="f556ed8b" sha1="de364a09c1f60f44f96a1a20f17f10d27e511cfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1030c173d4eb54e">
+		<description>headerwrite 1_0 (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1280">
+				<rom name="headerwrite 1_0 (2).z80" size="1280" crc="31df75e2" sha1="30c173d4eb54e263be78157bffadd70e8698f46e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z105171acdea93df">
+		<description>Headerwrite v1.0 (19xx)(A. Ziermann)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1280">
+				<rom name="Headerwrite v1.0 (19xx)(A. Ziermann).z80" size="1280" crc="f2bcfc2b" sha1="5171acdea93dfbcc083a6b4fb9e40645792f41d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z101b8d6e68c2e5a">
+		<description>Heartrunner (1986)(SCI - G. Fischer, J. Israel)[Joysticksupport]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1888">
+				<rom name="Heartrunner (1986)(SCI - G. Fischer, J. Israel)[Joysticksupport].z80" size="1888" crc="9ab5a175" sha1="1b8d6e68c2e5aac9ac48b6d206a050891efc5c3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10875a8f4aecf10">
+		<description>heartrunner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1824">
+				<rom name="heartrunner.z80" size="1824" crc="0343121c" sha1="875a8f4aecf10a7380b5b0a6718025e7464b059f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1096fcd81eb4a65">
+		<description>heartrunner__bro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1824">
+				<rom name="heartrunner__bro.z80" size="1824" crc="eb92b7d6" sha1="96fcd81eb4a65c5181a48f71076bd65c0be7c151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z102fa2c889981ff">
+		<description>Hex-ASCII-Dump (1988)(W. Bernhardt)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2368">
+				<rom name="Hex-ASCII-Dump (1988)(W. Bernhardt)[a2].z80" size="2368" crc="d4ad7a7f" sha1="2fa2c889981ff08e4f41ce2379a04376d77e387c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ebcdd48d66046">
+		<description>Hex-ASCII-Dump (1988)(W. Bernhardt)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2368">
+				<rom name="Hex-ASCII-Dump (1988)(W. Bernhardt)[a].z80" size="2368" crc="8722b5fa" sha1="ebcdd48d66046c0fc68cdaef5c607cbbf1d2bbd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100ff9d5e110c72">
+		<description>HEX-Data (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="224">
+				<rom name="HEX-Data (19xx)(-).z80" size="224" crc="edf98da5" sha1="0ff9d5e110c72f0c209e109eea02d77038b78acd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10601479aa8f907">
+		<description>hex_ascii_dump_u</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2368">
+				<rom name="hex_ascii_dump_u.z80" size="2368" crc="c44b42cb" sha1="601479aa8f907a5bd34be655eee6110082c3614c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10bbc42bdc0e95a">
+		<description>Hindernislauf (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1088">
+				<rom name="Hindernislauf (19xx)(-).z80" size="1088" crc="0b91e7fa" sha1="bbc42bdc0e95a193d0b4423be6440df8c94ad4fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1085820bed7aec4">
+		<description>Hindernislauf (19xx)(-)[Joysticksupport]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1088">
+				<rom name="Hindernislauf (19xx)(-)[Joysticksupport].z80" size="1088" crc="e4141782" sha1="85820bed7aec40c9f66101d2e59d64c6ae7d8e95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10281331e5dcfc1">
+		<description>hindernislauf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1088">
+				<rom name="hindernislauf.z80" size="1088" crc="e418a9ab" sha1="281331e5dcfc1b432cc56b40d8bc803fee8eab49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10b184faa5d2e00">
+		<description>Hisoft Gens3M Assembler (1983)(B. Arning)(en)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7712">
+				<rom name="Hisoft Gens3M Assembler (1983)(B. Arning)(en)[a3].z80" size="7712" crc="cb513f9c" sha1="b184faa5d2e00a9e0b09d8e6f053f1ab6835c2d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10174f9646fe168">
+		<description>Hisoft Gens3M Assembler (1983)(B. Arning)(en)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7712">
+				<rom name="Hisoft Gens3M Assembler (1983)(B. Arning)(en)[a].z80" size="7712" crc="182610fb" sha1="174f9646fe168ed9cae7bdad1ec3f2034e236332"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f74a9bf4f99b3">
+		<description>Hisoft-Pascal v1.04 (1983)(Hisoft)[h N.H. &amp; U.G.][a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16209">
+				<rom name="Hisoft-Pascal v1.04 (1983)(Hisoft)[h N.H. &amp; U.G.][a2].z80" size="16209" crc="b35093f6" sha1="f74a9bf4f99b39a4e6b975f623cfb615247dd70f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ac984db9e24bd">
+		<description>Hisoft-Pascal v1.04 (1983)(Hisoft)[h N.H. &amp; U.G.][a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16209">
+				<rom name="Hisoft-Pascal v1.04 (1983)(Hisoft)[h N.H. &amp; U.G.][a3].z80" size="16209" crc="b43c4736" sha1="ac984db9e24bdff0480ca8f38ec98c6f4af08515"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104a562f0952be6">
+		<description>Hisoft-Pascal v1.04 (1983)(Hisoft)[h N.H. &amp; U.G.][a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16320">
+				<rom name="Hisoft-Pascal v1.04 (1983)(Hisoft)[h N.H. &amp; U.G.][a].z80" size="16320" crc="55f7c99f" sha1="4a562f0952be6815584702b2abd57363d9dd1fec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ffc586baa284c">
+		<description>HRamdiskauto 18.5 (1989)(Sieghard Howitz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="704">
+				<rom name="HRamdiskauto 18.5 (1989)(Sieghard Howitz).z80" size="704" crc="d024bd58" sha1="ffc586baa284c9e23b2b35d7cc54bf6e42e0654c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100c37d541dcebc">
+		<description>Huby Flie (1989)(Flu Soft - U. Beckmann)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2336">
+				<rom name="Huby Flie (1989)(Flu Soft - U. Beckmann).z80" size="2336" crc="5b3bb16b" sha1="0c37d541dcebcd49b4662c500df13de72441dcd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10304c79a75ec06">
+		<description>hund 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7744">
+				<rom name="hund 1.z80" size="7744" crc="9137300b" sha1="304c79a75ec062e08ed449b19a33e989205665c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108d30a92613b64">
+		<description>Hundi (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7264">
+				<rom name="Hundi (19xx)(-).z80" size="7264" crc="c04196a2" sha1="8d30a92613b643d943458f420c2719d438e5245c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1069431c376cbc6">
+		<description>Hundi (19xx)(D. Ambras)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3441">
+				<rom name="Hundi (19xx)(D. Ambras).z80" size="3441" crc="bffdb829" sha1="69431c376cbc6a3a0d2926cf054f77a12d7f3921"/>
 			</dataarea>
 		</part>
 	</software>

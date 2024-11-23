@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 231 -->
+<!-- Number of items in this list = 257 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -483,12 +483,22 @@
 		</part>
 	</software>
 	<software name="kc895e4d23859d4b">
-		<description>Bustle (19xx)(R. Gilgen & S. Christiansen)[3]</description>
+		<description>Bustle (19xx)(R. Gilgen &amp; S. Christiansen)[3]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="13952">
-				<rom name="Bustle (19xx)(R. Gilgen & S. Christiansen)[3].kcc" size="13952" crc="10597e77" sha1="95e4d23859d4bb0c75adb1b0dae9e46a081b14b0"/>
+				<rom name="Bustle (19xx)(R. Gilgen &amp; S. Christiansen)[3].kcc" size="13952" crc="10597e77" sha1="95e4d23859d4bb0c75adb1b0dae9e46a081b14b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc85806eecefd28f">
+		<description>Busy Molec (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="20096">
+				<rom name="Busy Molec (19xx)(-)[4].kcc" size="20096" crc="e1476438" sha1="5806eecefd28f241f74426909cadf1b181c4288b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -673,12 +683,12 @@
 		</part>
 	</software>
 	<software name="kc866dbfa1b3951e">
-		<description>Cracker v1.3 (19xx)(Ralle & Peko)[3]</description>
+		<description>Cracker v1.3 (19xx)(Ralle &amp; Peko)[3]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="2560">
-				<rom name="Cracker v1.3 (19xx)(Ralle & Peko)[3].kcc" size="2560" crc="6c60df5a" sha1="66dbfa1b3951ef2ec2cd160b5a18aa38fb29c1dd"/>
+				<rom name="Cracker v1.3 (19xx)(Ralle &amp; Peko)[3].kcc" size="2560" crc="6c60df5a" sha1="66dbfa1b3951ef2ec2cd160b5a18aa38fb29c1dd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -843,42 +853,42 @@
 		</part>
 	</software>
 	<software name="kc86287d19d41ee4">
-		<description>Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a2][4]</description>
+		<description>Digger (1988)(Alexander Lang &amp; Stefan Dahlke)(en)[a2][4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="28544">
-				<rom name="Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a2][4].kcc" size="28544" crc="04a4b724" sha1="6287d19d41ee435f7e72e1e21269694a934c7a8a"/>
+				<rom name="Digger (1988)(Alexander Lang &amp; Stefan Dahlke)(en)[a2][4].kcc" size="28544" crc="04a4b724" sha1="6287d19d41ee435f7e72e1e21269694a934c7a8a"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc874370670abe8e">
-		<description>Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a4][4]</description>
+		<description>Digger (1988)(Alexander Lang &amp; Stefan Dahlke)(en)[a4][4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="32384">
-				<rom name="Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a4][4].kcc" size="32384" crc="ab5c1b2e" sha1="74370670abe8ec482a7b1ac6af290ff3fc4fddf9"/>
+				<rom name="Digger (1988)(Alexander Lang &amp; Stefan Dahlke)(en)[a4][4].kcc" size="32384" crc="ab5c1b2e" sha1="74370670abe8ec482a7b1ac6af290ff3fc4fddf9"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc82f628f72d3a59">
-		<description>Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a5][3]</description>
+		<description>Digger (1988)(Alexander Lang &amp; Stefan Dahlke)(en)[a5][3]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="16000">
-				<rom name="Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a5][3].kcc" size="16000" crc="681d7958" sha1="2f628f72d3a599f9ff1c068f6186a38e4e02ceda"/>
+				<rom name="Digger (1988)(Alexander Lang &amp; Stefan Dahlke)(en)[a5][3].kcc" size="16000" crc="681d7958" sha1="2f628f72d3a599f9ff1c068f6186a38e4e02ceda"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc8cf9320d3919a6">
-		<description>Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a][4]</description>
+		<description>Digger (1988)(Alexander Lang &amp; Stefan Dahlke)(en)[a][4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="16384">
-				<rom name="Digger (1988)(Alexander Lang & Stefan Dahlke)(en)[a][4].kcc" size="16384" crc="cf0451b0" sha1="cf9320d3919a64392c0df1c027c2604ffffc6bc0"/>
+				<rom name="Digger (1988)(Alexander Lang &amp; Stefan Dahlke)(en)[a][4].kcc" size="16384" crc="cf0451b0" sha1="cf9320d3919a64392c0df1c027c2604ffffc6bc0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1123,42 +1133,42 @@
 		</part>
 	</software>
 	<software name="kc8a67498fdab740">
-		<description>Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a2][4]</description>
+		<description>Fang die Eier (19xx)(U. Schaetzing &amp; H. Bachmann)[a2][4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="9600">
-				<rom name="Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a2][4].kcc" size="9600" crc="73f028d8" sha1="a67498fdab7407ea5f17a564903613a3d8673419"/>
+				<rom name="Fang die Eier (19xx)(U. Schaetzing &amp; H. Bachmann)[a2][4].kcc" size="9600" crc="73f028d8" sha1="a67498fdab7407ea5f17a564903613a3d8673419"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc8a4a0af5a46ec9">
-		<description>Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a3][4]</description>
+		<description>Fang die Eier (19xx)(U. Schaetzing &amp; H. Bachmann)[a3][4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="9600">
-				<rom name="Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a3][4].kcc" size="9600" crc="818a7ac2" sha1="a4a0af5a46ec9b6a9db84d39672e91282134f952"/>
+				<rom name="Fang die Eier (19xx)(U. Schaetzing &amp; H. Bachmann)[a3][4].kcc" size="9600" crc="818a7ac2" sha1="a4a0af5a46ec9b6a9db84d39672e91282134f952"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc8125d6f72f0cd6">
-		<description>Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a4][4]</description>
+		<description>Fang die Eier (19xx)(U. Schaetzing &amp; H. Bachmann)[a4][4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="9600">
-				<rom name="Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a4][4].kcc" size="9600" crc="e6b9350b" sha1="125d6f72f0cd68472aded0b842086979eb391eda"/>
+				<rom name="Fang die Eier (19xx)(U. Schaetzing &amp; H. Bachmann)[a4][4].kcc" size="9600" crc="e6b9350b" sha1="125d6f72f0cd68472aded0b842086979eb391eda"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc8516acd1723910">
-		<description>Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a][4]</description>
+		<description>Fang die Eier (19xx)(U. Schaetzing &amp; H. Bachmann)[a][4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="9600">
-				<rom name="Fang die Eier (19xx)(U. Schaetzing & H. Bachmann)[a][4].kcc" size="9600" crc="f80be1ab" sha1="516acd17239104c60da5d192fcb10733398decc1"/>
+				<rom name="Fang die Eier (19xx)(U. Schaetzing &amp; H. Bachmann)[a][4].kcc" size="9600" crc="f80be1ab" sha1="516acd17239104c60da5d192fcb10733398decc1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1683,12 +1693,12 @@
 		</part>
 	</software>
 	<software name="kc8ca536755c8cbc">
-		<description>House (1988)(Sowago - A. Weissflog)[t Brain & Co][3]</description>
+		<description>House (1988)(Sowago - A. Weissflog)[t Brain &amp; Co][3]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="12928">
-				<rom name="House (1988)(Sowago - A. Weissflog)[t Brain & Co][3].kcc" size="12928" crc="3732ca9c" sha1="ca536755c8cbce2f6a845ae04409743f0a187005"/>
+				<rom name="House (1988)(Sowago - A. Weissflog)[t Brain &amp; Co][3].kcc" size="12928" crc="3732ca9c" sha1="ca536755c8cbce2f6a845ae04409743f0a187005"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1963,12 +1973,12 @@
 		</part>
 	</software>
 	<software name="kc842ebca5ec2ea4">
-		<description>King 2 (1989)(Detlef Koenig & J. Harnisch)[4]</description>
+		<description>King 2 (1989)(Detlef Koenig &amp; J. Harnisch)[4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="14080">
-				<rom name="King 2 (1989)(Detlef Koenig & J. Harnisch)[4].kcc" size="14080" crc="d8d53be4" sha1="42ebca5ec2ea4077e1ac4d8433e6d11456d8e8f9"/>
+				<rom name="King 2 (1989)(Detlef Koenig &amp; J. Harnisch)[4].kcc" size="14080" crc="d8d53be4" sha1="42ebca5ec2ea4077e1ac4d8433e6d11456d8e8f9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2162,23 +2172,273 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="kc85c1a33acd6a5f">
+		<description>Mach 1 (19xx)(Paulin)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14720">
+				<rom name="Mach 1 (19xx)(Paulin)[a2][3].kcc" size="14720" crc="c4e726ec" sha1="5c1a33acd6a5f18028d8548da986b863181ca68f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc81f362651874fa">
+		<description>Mach 1 (19xx)(Paulin)[a3][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12672">
+				<rom name="Mach 1 (19xx)(Paulin)[a3][3].kcc" size="12672" crc="79639ada" sha1="1f362651874fa04d2dd372c22f729a8f6f94dd8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a4aaa109fc61a">
+		<description>Mach 1 (19xx)(Paulin)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14720">
+				<rom name="Mach 1 (19xx)(Paulin)[a][4].kcc" size="14720" crc="4a67bc8f" sha1="a4aaa109fc61ad4dc316bd233d9c21eb6b81a40e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89f1984a3d4722">
+		<description>Mastermind_KC85_2-5[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9600">
+				<rom name="Mastermind_KC85_2-5[4].KCC" size="9600" crc="feec3de9" sha1="9f1984a3d472287dde21e42c49018887314e4029"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc833f3dc4afe146">
+		<description>Maus (1991)(Uwe Felgentreu)[doc][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6656">
+				<rom name="Maus (1991)(Uwe Felgentreu)[doc][3].kcc" size="6656" crc="a34dd89f" sha1="33f3dc4afe146c29b5507a67313cadfc3b493226"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8eddc2b32beca9">
+		<description>Max im All (1989)(Paulin)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12416">
+				<rom name="Max im All (1989)(Paulin)[a2][3].kcc" size="12416" crc="5d6bfe03" sha1="eddc2b32beca944371653c6c0f24b580cb668210"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ebee5a009dfd7">
+		<description>Max im All (1989)(Paulin)[a3][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12416">
+				<rom name="Max im All (1989)(Paulin)[a3][3].kcc" size="12416" crc="4afef4a2" sha1="ebee5a009dfd79c9333b8ff9680e2733bc92fb36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8753676b4c1764">
+		<description>Max im All (1989)(Paulin)[a4][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12416">
+				<rom name="Max im All (1989)(Paulin)[a4][4].kcc" size="12416" crc="30729c1b" sha1="753676b4c17649ae8181c9c266aa7ec0ac221bbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b7aaec2900025">
+		<description>Max im All (1989)(Paulin)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12416">
+				<rom name="Max im All (1989)(Paulin)[a][4].kcc" size="12416" crc="d365f33f" sha1="b7aaec29000255947654f9f61937dbfea2e4493f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc80f2c9a415cc1a">
+		<description>Max v2.0 (1988)(CVS-Inc. - Andreas Piesk)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4992">
+				<rom name="Max v2.0 (1988)(CVS-Inc. - Andreas Piesk)[4].kcc" size="4992" crc="addad31f" sha1="0f2c9a415cc1ad5a7c2dd1782f7e9d5f3cec3868"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87904919a6dbc5">
+		<description>Mazes (19xx)(Andre Fraenzel)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11264">
+				<rom name="Mazes (19xx)(Andre Fraenzel)[4].kcc" size="11264" crc="639ff3fc" sha1="7904919a6dbc51f106bdb83d10ec56f47cb58d88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89850056de41fb">
+		<description>Mazes (19xx)(Andre Fraenzel)[b][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11136">
+				<rom name="Mazes (19xx)(Andre Fraenzel)[b][3].kcc" size="11136" crc="c8433698" sha1="9850056de41fb2c3f77c49192a7cf5527feb2bfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8984102159c545">
+		<description>Mazog (19xx)(Michael Waesche)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7808">
+				<rom name="Mazog (19xx)(Michael Waesche)[3].kcc" size="7808" crc="443c75c1" sha1="984102159c5450f6f5372fd8c6c16512e1d44a19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc81c32710c12d78">
+		<description>Mc-Copy 4 (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1408">
+				<rom name="Mc-Copy 4 (19xx)(-)[3].kcc" size="1408" crc="defa52d2" sha1="1c32710c12d786803509b19de774b1e192f31de4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc848de2bd9e03d9">
+		<description>Memory v2.0 (1991)(-)[b][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="Memory v2.0 (1991)(-)[b][3].kcc" size="1152" crc="0245f9c4" sha1="48de2bd9e03d9e1acf6757137d6bf00c77e89a02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8565d0a079992a">
+		<description>Mensch Aergere dich nicht (1986)(A. Hinz)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8320">
+				<rom name="Mensch Aergere dich nicht (1986)(A. Hinz)[4].kcc" size="8320" crc="7890b4cd" sha1="565d0a079992aef5a2bbf7cfec95aba40d984c3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b5d7e34ecab8f">
+		<description>Meteor v2.7 (1988)(J. S. - Firmsoft)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2688">
+				<rom name="Meteor v2.7 (1988)(J. S. - Firmsoft)[4].kcc" size="2688" crc="ab52fa8d" sha1="b5d7e34ecab8f07f1b8089e9b7bb4be0da6d49d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8578bbcf7be2cd">
+		<description>MHTEST2[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="640">
+				<rom name="MHTEST2[3].kcc" size="640" crc="235ffbc2" sha1="578bbcf7be2cd891fc53fe3a1443f4c64951f903"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86f632549b233a">
+		<description>MIG-29 (1989)(T. Hein &amp; F. Ihme)[doc][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16896">
+				<rom name="MIG-29 (1989)(T. Hein &amp; F. Ihme)[doc][4].kcc" size="16896" crc="569540a0" sha1="6f632549b233ac6e2105f14ba1ee033dc17e572a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88750437e25add">
+		<description>Mine 2 (19xx)(Stefan Scholz)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="28288">
+				<rom name="Mine 2 (19xx)(Stefan Scholz)[4].kcc" size="28288" crc="118b0e8b" sha1="8750437e25adde8d79fffadff129a63d32679429"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc871391122d9621">
+		<description>Minensuche (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5504">
+				<rom name="Minensuche (19xx)(-)[4].kcc" size="5504" crc="d09b7dda" sha1="71391122d96213af57ea30423ff9cfebfe379f0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87e546baaebb6e">
+		<description>Minni Manacala (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4096">
+				<rom name="Minni Manacala (19xx)(-)[4].kcc" size="4096" crc="30de5e7e" sha1="7e546baaebb6e304bb5c5e294e0375df1c0e9d72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e01663f243429">
+		<description>Mr Globe (19xx)(Gerrit Einert)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10880">
+				<rom name="Mr Globe (19xx)(Gerrit Einert)[4].kcc" size="10880" crc="30953af9" sha1="e01663f2434298216a211d426af2ecded0ced0d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc865e43d9621b0c">
+		<description>Netz (1990)(A. Guettler)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12416">
+				<rom name="Netz (1990)(A. Guettler)[4].kcc" size="12416" crc="e9ad7c21" sha1="65e43d9621b0c389aefff1dcca48f99e915c6d71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc809c81cb1dd1e3">
+		<description>Neun (19xx)(E. Behrend)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8448">
+				<rom name="Neun (19xx)(E. Behrend)[4].kcc" size="8448" crc="eb128c77" sha1="09c81cb1dd1e399a21a40b1770d59ad9e6604f03"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="kc847276e9b3b06b">
-		<description>W. A. Mozart (1990)(Andreas & Uwe Zierott)[a2][3]</description>
+		<description>W. A. Mozart (1990)(Andreas &amp; Uwe Zierott)[a2][3]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="14592">
-				<rom name="W. A. Mozart (1990)(Andreas & Uwe Zierott)[a2][3].kcc" size="14592" crc="1490b05c" sha1="47276e9b3b06b98a1852ac5604ef62698cd1a48c"/>
+				<rom name="W. A. Mozart (1990)(Andreas &amp; Uwe Zierott)[a2][3].kcc" size="14592" crc="1490b05c" sha1="47276e9b3b06b98a1852ac5604ef62698cd1a48c"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="kc815f86ba3110ea">
-		<description>W. A. Mozart (1990)(Andreas & Uwe Zierott)[a][3]</description>
+		<description>W. A. Mozart (1990)(Andreas &amp; Uwe Zierott)[a][3]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="13440">
-				<rom name="W. A. Mozart (1990)(Andreas & Uwe Zierott)[a][3].kcc" size="13440" crc="434307e8" sha1="15f86ba3110eabded03be750b1f8feda1def2c16"/>
+				<rom name="W. A. Mozart (1990)(Andreas &amp; Uwe Zierott)[a][3].kcc" size="13440" crc="434307e8" sha1="15f86ba3110eabded03be750b1f8feda1def2c16"/>
 			</dataarea>
 		</part>
 	</software>

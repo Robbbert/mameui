@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 513 -->
+<!-- Number of items in this list = 514 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -1369,6 +1369,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
 				<rom name="Dracula II - Noroi no Fuuin [1-4e0d79ee].fds" size="131000" crc="a7d0814d" sha1="730e07d8698e4172fe3dd9bd6b9aaa668019419d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds0279a49122b25">
+		<description>Dracula II - The Cursed Seal T-Eng v1.0 (2024)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Dracula II - The Cursed Seal T-Eng v1.0 (2024)(BlackPaladin).fds" size="131016" crc="3251423f" sha1="0279a49122b25600e1b37bc65efb621cc1afdeb4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4333,22 +4343,22 @@
 		</part>
 	</software>
 	<software name="fdsb9e13f970ddca">
-		<description>Tama & Friends - 3 Choume Dai Bouken (1989)(Bandai)</description>
+		<description>Tama &amp; Friends - 3 Choume Dai Bouken (1989)(Bandai)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Tama & Friends - 3 Choume Dai Bouken (1989)(Bandai).fds" size="131016" crc="4c6af0c5" sha1="b9e13f970ddcaab953240896f9d06f4966bb8d5a"/>
+				<rom name="Tama &amp; Friends - 3 Choume Dai Bouken (1989)(Bandai).fds" size="131016" crc="4c6af0c5" sha1="b9e13f970ddcaab953240896f9d06f4966bb8d5a"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="fdsb8e471c2a7b0a">
-		<description>Tama & Friends - 3 Choume Dai Bouken (1989)(Bandai)[a]</description>
+		<description>Tama &amp; Friends - 3 Choume Dai Bouken (1989)(Bandai)[a]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Tama & Friends - 3 Choume Dai Bouken (1989)(Bandai)[a].fds" size="131016" crc="5823dbd0" sha1="b8e471c2a7b0ad4b8b810e67b844a934ec8f5dd7"/>
+				<rom name="Tama &amp; Friends - 3 Choume Dai Bouken (1989)(Bandai)[a].fds" size="131016" crc="5823dbd0" sha1="b8e471c2a7b0ad4b8b810e67b844a934ec8f5dd7"/>
 			</dataarea>
 		</part>
 	</software>
