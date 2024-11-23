@@ -49,6 +49,7 @@ public:
 
 	void dogfgt(machine_config &config);
 
+	// refresh flipscreen when the dipswitch is changed
 	DECLARE_INPUT_CHANGED_MEMBER(flipscreen_switch) { control_w(m_control); }
 
 protected:
@@ -199,6 +200,7 @@ void dogfgt_state::draw_sprites(bitmap_ind16 &bitmap, const rectangle &cliprect)
 			int sy = (241 - m_spriteram[offs + 2]) & 0xff;
 			int flipx = m_spriteram[offs] & 0x04;
 			int flipy = m_spriteram[offs] & 0x02;
+
 			if (flip_screen())
 			{
 				sx = 240 - sx;
@@ -686,6 +688,6 @@ ROM_END
 
 ***************************************************************************/
 
-GAME( 1984, dogfgt,  0,      dogfgt, dogfgt, dogfgt_state, empty_init, ROT0, "Technos Japan",                               "Acrobatic Dog-Fight",                               MACHINE_SUPPORTS_SAVE )
-GAME( 1985, dogfgtu, dogfgt, dogfgt, dogfgt, dogfgt_state, empty_init, ROT0, "Technos Japan (Data East USA, Inc. license)", "Acrobatic Dog-Fight (USA)",                         MACHINE_SUPPORTS_SAVE )
-GAME( 1984, dogfgtj, dogfgt, dogfgt, dogfgt, dogfgt_state, empty_init, ROT0, "Technos Japan",                               "But-ten Ohara's Suit-Cha Luck-a Dog-Fight (Japan)", MACHINE_SUPPORTS_SAVE )
+GAME( 1984, dogfgt,  0,      dogfgt, dogfgt, dogfgt_state, empty_init, ROT0, "Technos Japan",                         "Acrobatic Dog-Fight",                               MACHINE_SUPPORTS_SAVE )
+GAME( 1985, dogfgtu, dogfgt, dogfgt, dogfgt, dogfgt_state, empty_init, ROT0, "Technos Japan (Data East USA license)", "Acrobatic Dog-Fight (USA)",                         MACHINE_SUPPORTS_SAVE )
+GAME( 1984, dogfgtj, dogfgt, dogfgt, dogfgt, dogfgt_state, empty_init, ROT0, "Technos Japan",                         "But-ten Ohara's Suit-Cha Luck-a Dog-Fight (Japan)", MACHINE_SUPPORTS_SAVE )
