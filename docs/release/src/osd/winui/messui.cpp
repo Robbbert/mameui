@@ -452,7 +452,7 @@ static string ProcessSWDir(int drvindex)
 	}
 
 	BOOL b_dir = false;
-	char dir0[2048];
+	char dir0[2048] = { };
 	char *t0 = 0;
 	printf("ProcessSWDir: A\n");fflush(stdout);
 	string t = dir_get_value(13);
@@ -469,7 +469,7 @@ static string ProcessSWDir(int drvindex)
 	printf("ProcessSWDir: C\n");fflush(stdout);
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex, 0);
-	char dir1[2048];
+	char dir1[2048] = { };
 	strcpy(dir1, o.value(OPTION_SWPATH));
 	char* t1 = strtok(dir1, ";");
 	printf("ProcessSWDir: D=%s=%s\n",t1,o.value(OPTION_SWPATH));fflush(stdout);
@@ -538,23 +538,27 @@ static string ProcessSWDir(int drvindex)
 // pszSubDir path not used by any caller.
 static BOOL AddSoftwarePickerDirs(HWND hwndPicker, LPCSTR pszDirectories, LPCSTR pszSubDir)
 {
+	printf("AddSoftwarePickerDirs: Begin\n");fflush(stdout);
 	if (!pszDirectories)
 		return false;
 
-	char s[2048];
+	char s[2048] = { };
 	string pszNewString;
 	strcpy(s, pszDirectories);
 	LPSTR t1 = strtok(s,";");
 	while (t1)
 	{
+		printf("AddSoftwarePickerDirs: Folder %s\n",t1);fflush(stdout);
 		if (pszSubDir)
 			pszNewString = t1 + string("\\") + pszSubDir;
 		else
 			pszNewString = t1;
 
+		printf("AddSoftwarePickerDirs: newstring %s\n",pszNewString.c_str());fflush(stdout);
 		if (!SoftwarePicker_AddDirectory(hwndPicker, pszNewString.c_str()))
 			return false;
 
+		printf("AddSoftwarePickerDirs: On to the next\n");fflush(stdout);
 		t1 = strtok (NULL, ";");
 	}
 	return true;
@@ -925,17 +929,19 @@ void MessUpdateSoftwareList(void)
 // Places the specified image in the specified slot - MUST be a valid filename, not blank
 static void MessSpecifyImage(int drvindex, const device_image_interface *dev, LPCSTR pszFilename)
 {
+	printf("MessSpecifyImage: Begin\n");fflush(stdout);
 	if (dev)
 	{
 		SetSelectedSoftware(drvindex, dev->instance_name(), pszFilename);
 		return;
 	}
 
+	// dev is null now
 	string opt_name;
 	device_image_interface* img = 0;
 
 	if (LOG_SOFTWARE)
-		printf("MessSpecifyImage(): device=%p pszFilename='%s'\n", dev, pszFilename);
+		printf("MessSpecifyImage: pszFilename='%s'\n", pszFilename);
 
 	// identify the file extension
 	const char *file_extension = strrchr(pszFilename, '.'); // find last period
@@ -967,6 +973,7 @@ static void MessSpecifyImage(int drvindex, const device_image_interface *dev, LP
 		if (LOG_SOFTWARE)
 			printf("MessSpecifyImage(): Failed to place image '%s'\n", pszFilename);
 	}
+	printf("MessSpecifyImage: End\n");fflush(stdout);
 }
 
 
@@ -1031,7 +1038,7 @@ static void MessRefreshPicker(void)
 		string opt_name = dev.instance_name(); // get name of device slot
 		s = o.value(opt_name.c_str()); // get name of software in the slot
 
-		if (s[0]) // if software is loaded
+		if (s) // if software is loaded
 		{
 			i = SoftwarePicker_LookupIndex(hwndSoftware, s); // see if its in the picker
 			if (i < 0) // not there

@@ -121,6 +121,7 @@ static int is_double_click_start(int argc);
 //MESSUI start
 int main_(int argc, char *argv[])
 {
+	printf("main_ Begin\n");fflush(stdout);
 	std::vector<std::string> args = osd_get_command_line(argc, argv);
 
 	// use small output buffers on non-TTYs (i.e. pipes)
@@ -159,6 +160,7 @@ int main_(int argc, char *argv[])
 		osd_output::pop(&winerror);
 	}
 
+	printf("main_ End\n");fflush(stdout);
 	return result;
 }
 //MESSUI end

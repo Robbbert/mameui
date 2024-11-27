@@ -388,7 +388,7 @@ char * ConvertToWindowsNewlines(const char *source)
  */
 const char * GetDriverFilename(uint32_t nIndex)
 {
-	static char tmp[2048];
+	static char tmp[2048] = { };
 	string driver = string(core_filename_extract_base(driver_list::driver(nIndex).type.source()));
 	strcpy(tmp, driver.c_str());
 	return tmp;
@@ -808,7 +808,6 @@ HANDLE win_create_file_utf8(const char* filename, DWORD desiredmode, DWORD share
 
 DWORD win_get_current_directory_utf8(size_t bufferlength, char* buffer)
 {
-	buffer = 0;
 	if (!bufferlength)
 		return 0;
 

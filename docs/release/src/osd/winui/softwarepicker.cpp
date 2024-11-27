@@ -536,7 +536,7 @@ static BOOL SoftwarePicker_InternalAddFile(HWND hwndPicker, LPCSTR pszFilename, 
 
 BOOL SoftwarePicker_AddFile(HWND hwndPicker, LPCSTR pszFilename, bool check)
 {
-	char szBuffer[2048] = {0,};
+	char szBuffer[2048] = { };
 
 	Picker_ResetIdle(hwndPicker);
 	pszFilename = NormalizePath(pszFilename, szBuffer, std::size(szBuffer));
@@ -552,7 +552,7 @@ BOOL SoftwarePicker_AddDirectory(HWND hwndPicker, LPCSTR pszDirectory)
 	directory_search_info *pSearchInfo;
 	directory_search_info **ppLast;
 	size_t nSearchInfoSize;
-	char szBuffer[2048] = {0,};
+	char szBuffer[2048] = { };
 
 	pszDirectory = NormalizePath(pszDirectory, szBuffer, std::size(szBuffer));
 
