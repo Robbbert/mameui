@@ -64,10 +64,11 @@ HSOURCEINFO;
 
 /*************************** START CONFIGURABLE AREA *******************************/
 // number of dats we support
-#define MAX_HFILES 5
+#define MAX_HFILES 6
 // The order of these is the order they are displayed
 const HGAMEINFO m_gameInfo[MAX_HFILES] =
 {
+	{ "startup.dat",  "\n**** :STARTUP: ****\n\n",          "$mame",  1 },
 	{ "history.xml",  "\n**** :HISTORY: ****\n\n",          "<text>",   1 },
 //	{ "sysinfo.dat",  "\n**** :SYSINFO: ****\n\n",          "$bio",   1 },
 	{ "messinfo.dat", "\n**** :MESSINFO: ****\n\n",         "$mame",  1 },
@@ -81,6 +82,7 @@ const HGAMEINFO m_gameInfo[MAX_HFILES] =
 const HSOURCEINFO m_sourceInfo[MAX_HFILES] =
 {
 	{ NULL },
+	{ NULL },
 //	{ NULL },
 	{ "messinfo.dat", "\n***:MESSINFO DRIVER: ",  "$drv" },
 	{ "mameinfo.dat", "\n***:MAMEINFO DRIVER: ",  "$drv" },
@@ -92,6 +94,7 @@ const HSOURCEINFO m_sourceInfo[MAX_HFILES] =
 
 const HSOURCEINFO m_swInfo[MAX_HFILES] =
 {
+	{ NULL },
 	{ "history.xml",  "\n**** :HISTORY item: ",     "<text>" },
 //	{ NULL },
 	{ NULL },
@@ -104,7 +107,7 @@ const HSOURCEINFO m_swInfo[MAX_HFILES] =
 
 /*************************** END CONFIGURABLE AREA *******************************/
 
-int file_sizes[MAX_HFILES] = { 0, };
+int file_sizes[MAX_HFILES] = { };
 std::map<std::string, std::streampos> mymap[MAX_HFILES];
 const size_t npos = std::string::npos;
 
@@ -269,7 +272,7 @@ static bool create_index(const char* datsdir, std::ifstream &fp, int filenum)
 	fp.seekg(0);
 	std::string file_line;
 	std::getline(fp, file_line);
-	if (filenum == 0)
+	if (filenum == 1)
 		create_index_history(datsdir, fp, file_line, filenum);
 	else
 	{
