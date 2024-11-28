@@ -3,7 +3,7 @@
 #ifndef WINUI_MESSUI_H
 #define WINUI_MESSUI_H
 
-extern char g_szSelectedItem[MAX_PATH];
+extern string g_szSelectedItem;
 
 void InitMessPicker(void);
 void MessUpdateSoftwareList(void);

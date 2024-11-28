@@ -696,7 +696,7 @@ HBITMAP DIBToDDB(HDC hDC, HANDLE hDIB, LPMYBITMAPINFO desc)
 
 
 // main call from winui to display a picture
-BOOL LoadScreenShot(int nGame, LPCSTR lpSoftwareName, int nType)
+BOOL LoadScreenShot(int nGame, string lpSoftwareName, int nType)
 {
 	/* Delete the last ones */
 	//printf("LoadScreenShot: A\n");fflush(stdout);
@@ -711,8 +711,8 @@ BOOL LoadScreenShot(int nGame, LPCSTR lpSoftwareName, int nType)
 
 	// If software item, see if picture exist (correct parent is passed in lpSoftwareName)
 	//printf("LoadScreenShot: C\n");fflush(stdout);
-	if (lpSoftwareName)
-		loaded = LoadDIB(lpSoftwareName, &m_hDIB, &m_hPal, nType);
+	if (!lpSoftwareName.empty())
+		loaded = LoadDIB(lpSoftwareName.c_str(), &m_hDIB, &m_hPal, nType);
 
 	// If game, see if picture exist. Or, if no picture for the software, use game's picture.
 	//printf("LoadScreenShot: D\n");fflush(stdout);

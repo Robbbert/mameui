@@ -12,7 +12,7 @@ typedef struct _mybitmapinfo
 	int bmColors;
 } MYBITMAPINFO, *LPMYBITMAPINFO;
 
-extern BOOL LoadScreenShot(int nGame, LPCSTR lpSoftwareName, int nType);
+extern BOOL LoadScreenShot(int nGame, std::string lpSoftwareName, int nType);
 extern HANDLE GetScreenShotHandle(void);
 extern int GetScreenShotWidth(void);
 extern int GetScreenShotHeight(void);

@@ -1383,7 +1383,7 @@ void UpdateSoftware(void)
 
 
 /* Adjust the list view and screenshot button based on GetShowScreenShot() */
-void UpdateScreenShot(void)
+void UpdateScreenShot()
 {
 	/* first time through can't do this stuff */
 	//printf("Update Screenshot: A\n");fflush(stdout);
@@ -1414,16 +1414,15 @@ void UpdateScreenShot(void)
 	//printf("Update Screenshot: H\n");fflush(stdout);
 	if (have_selection)
 	{
-		if (g_szSelectedItem[0])
+		if (!g_szSelectedItem.empty())
 			LoadScreenShot(Picker_GetSelectedItem(hwndList), g_szSelectedItem, TabView_GetCurrentTab(hTabCtrl));
 		else
-			LoadScreenShot(Picker_GetSelectedItem(hwndList), NULL, TabView_GetCurrentTab(hTabCtrl));
+			LoadScreenShot(Picker_GetSelectedItem(hwndList), "", TabView_GetCurrentTab(hTabCtrl));
 	}
 
 	// figure out if we have a history or not, to place our other windows properly
 	//printf("Update Screenshot: I\n");fflush(stdout);
-	string t_software = string(g_szSelectedItem);
-	UpdateHistory(t_software);
+	UpdateHistory(g_szSelectedItem);
 
 	// setup the picture area
 
@@ -4906,7 +4905,7 @@ static const TCHAR *GamePicker_GetItemString(HWND hwndPicker, int nItem, int nCo
 static void GamePicker_LeavingItem(HWND hwndPicker, int nItem)
 {
 	// leaving item
-	g_szSelectedItem[0] = 0;
+	g_szSelectedItem.clear();
 }
 
 

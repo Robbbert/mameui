@@ -67,7 +67,7 @@ struct _device_entry
 //  GLOBAL VARIABLES
 //============================================================
 
-char g_szSelectedItem[MAX_PATH];
+string g_szSelectedItem;
 
 
 //============================================================
@@ -277,19 +277,6 @@ static const struct TabViewCallbacks s_softwareTabViewCallbacks =
 //============================================================
 //  IMPLEMENTATION
 //============================================================
-static char *strncpyz(char *dest, const char *source, size_t len)
-{
-	char *s;
-	if (len) {
-		s = strncpy(dest, source, len - 1);
-		dest[len-1] = '\0';
-	}
-	else {
-		s = dest;
-	}
-	return s;
-}
-
 
 static const device_entry *lookupdevice(string d)
 {
@@ -1518,7 +1505,7 @@ static void SoftwarePicker_EnteringItem(HWND hwndSoftwarePicker, int nItem)
 		int drvindex = Picker_GetSelectedItem(hwndList);
 		if (drvindex < 0)
 		{
-			g_szSelectedItem[0] = 0;
+			g_szSelectedItem.clear();
 			return;
 		}
 
@@ -1531,10 +1518,10 @@ static void SoftwarePicker_EnteringItem(HWND hwndSoftwarePicker, int nItem)
 		MessSpecifyImage(drvindex, NULL, pszFullName);
 
 		// Set up g_szSelectedItem, for the benefit of UpdateScreenShot()
-		strncpyz(g_szSelectedItem, pszName, std::size(g_szSelectedItem));
-		LPSTR s = strrchr(g_szSelectedItem, '.');
-		if (s)
-			*s = '\0';
+		g_szSelectedItem = pszName;
+		size_t t = g_szSelectedItem.find_last_of(".");
+		if (t != string::npos)
+			g_szSelectedItem.erase(t);
 
 		UpdateScreenShot();
 	}
@@ -1583,7 +1570,7 @@ static int SoftwareList_GetItemImage(HWND hwndPicker, int nItem)
 static void SoftwareList_LeavingItem(HWND hwndSoftwareList, int nItem)
 {
 	if (!s_bIgnoreSoftwarePickerNotifies)
-		g_szSelectedItem[0] = 0;
+		g_szSelectedItem.clear();
 }
 
 
@@ -1597,7 +1584,7 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem)
 		int drvindex = Picker_GetSelectedItem(hwndList);
 		if (drvindex < 0)
 		{
-			g_szSelectedItem[0] = 0;
+			g_szSelectedItem.clear();
 			return;
 		}
 
@@ -1605,7 +1592,7 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem)
 		LPCSTR pszFullName = SoftwareList_LookupFullname(hwndSoftwareList, nItem); // for the screenshot and SetSoftware.
 
 		// For UpdateScreenShot()
-		strncpyz(g_szSelectedItem, pszFullName, std::size(g_szSelectedItem));
+		g_szSelectedItem = pszFullName;
 		UpdateScreenShot();
 		// use SOFTWARENAME option to properly load a multipart set
 		SetSelectedSoftware(drvindex, "", pszFullName);
