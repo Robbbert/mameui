@@ -1413,12 +1413,7 @@ void UpdateScreenShot()
 
 	//printf("Update Screenshot: H\n");fflush(stdout);
 	if (have_selection)
-	{
-		if (!g_szSelectedItem.empty())
-			LoadScreenShot(Picker_GetSelectedItem(hwndList), g_szSelectedItem, TabView_GetCurrentTab(hTabCtrl));
-		else
-			LoadScreenShot(Picker_GetSelectedItem(hwndList), "", TabView_GetCurrentTab(hTabCtrl));
-	}
+		LoadScreenShot(Picker_GetSelectedItem(hwndList), g_szSelectedItem, TabView_GetCurrentTab(hTabCtrl));
 
 	// figure out if we have a history or not, to place our other windows properly
 	//printf("Update Screenshot: I\n");fflush(stdout);

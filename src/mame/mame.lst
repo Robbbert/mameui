@@ -788,13 +788,19 @@ apple1                          // Jul 1976 Apple 1
 @source:apple/apple2.cpp
 ace100                          // ??? 1982 Franklin Ace 100
 ace1000                         // 1982 Franklin ACE 1000
+albert                          // Albert
+am100                           // ASEM AM100
 am64                            // 1985 ASEM AM 64 (motherboard is marked AM-100 but it boots as "AM 64")
 apple2                          // Apr 1977 Apple ][
 apple2jp                        // ??? ???? Apple ][j+
 apple2p                         // Jun 1979 Apple ][+
 basis108                        // 1982 Germany Basis 108
+craft2p                         // 1982 Craft?
+dodo                            // GTAC Do-Do
 elppa                           // 198? Victor do Brasil Elppa II+
+hkc8800a                        // 1984 HKC 8800A
 ivelultr                        // Ivasim Ivel Ultra
+laser2c                         // 1985? Laser //c (Brazil)
 maxxi                           // 1982 Polymax Maxxi
 microeng                        // 1982 Micro Engenho (Brazilian Apple2 clone) - Spectrum/SCOPUS
 prav82                          // Pravetz 82
@@ -803,51 +809,56 @@ space84                         // 1985 IBS/ComputerTechnik Space 84
 uniap2en                        // 1982 Unitron AP II (in English)
 uniap2pt                        // 1982 Unitron AP II (in Brazilian Portuguese)
 uniap2ti                        // 1982 Unitron AP II+ (Teclado Inteligente)
-craft2p                         // 1982 Craft?
-laser2c                         // 1985? Laser //c (Brazil)
-hkc8800a                        // 1984 HKC 8800A
-albert                          // Albert
-am100                           // ASEM AM100
-dodo                            // GTAC Do-Do
 
 @source:apple/apple2e.cpp
+ace2200                         // 1985 Franklin Ace 2200
+ace500                          // 1986 Franklin Ace 500
 apple2c                         // Apr 1984 Apple //c
 apple2c0                        // ??? 1985 Apple //c (3.5 ROM)
+apple2c0uk                      // ??? 1985 Apple //c (3.5 ROM) (UK)
+apple2c0fr                      // ??? 1985 Apple //c (3.5 ROM) (France)
 apple2c3                        // Sep 1986 Apple //c (Original Mem. Exp.)
+apple2c3uk                      // Sep 1986 Apple //c (Original Mem. Exp.) (UK)
+apple2c3fr                      // Sep 1986 Apple //c (Original Mem. Exp.) (France)
 apple2c4                        // ??? 198? Apple //c (rev 4)
+apple2c4uk                      // ??? 198? Apple //c (rev 4) (UK)
+apple2c4fr                      // ??? 198? Apple //c (rev 4) (France)
+apple2cfr                       // Apr 1984 Apple //c (France)
 apple2cp                        // Sep 1988 Apple //c+
+apple2cuk                       // Apr 1984 Apple //c (UK)
 apple2e                         // Jan 1983 Apple //e
 apple2ee                        // Mar 1985 Apple //e Enhanced
-apple2eeuk                      // Mar 1985 Apple //e Enhanced (UK)
 apple2eefr                      // Mar 1985 Apple //e Enhanced (France)
 apple2ees                       // Mar 1985 Apple //e Enhanced (Spain)
+apple2eeuk                      // Mar 1985 Apple //e Enhanced (UK)
+apple2efr                       // Jan 1983 Apple //e (France)
 apple2ep                        // Jan 1987 Apple //e Platinum
+apple2epfr                      // Jan 1987 Apple //e Platinum (France)
+apple2epuk                      // Jan 1987 Apple //e Platinum (UK)
 apple2euk                       // Jan 1983 Apple //e (UK)
+cec2000                         // China Education Computer-2000
+cece                            // China Education Computer-E
+cecg                            // China Education Computer-G
+ceci                            // China Education Computer-I
+cecm                            // China Education Computer-M
 las128e2                        // ??? Laser 128 EX2
 las128ex                        // ??? 1988 Laser 128 EX
 laser128                        // ??? 1987 Laser 128
 laser128o                       //
 mprof3                          // Microprofessor III
 prav8c                          // Pravetz 8C
-tk3000                          // Microdigital TK3000
 spectred
-ceci                            // China Education Computer-I
-cece                            // China Education Computer-E
-cecg                            // China Education Computer-G
-cecm                            // China Education Computer-M
-cec2000                         // China Education Computer-2000
+tk3000                          // Microdigital TK3000
 zijini                          // 1989 Zi Jin I
-ace2200                         // 1985 Franklin Ace 2200
-ace500                          // 1986 Franklin Ace 500
 
 @source:apple/apple2gs.cpp
 apple2gs                        // Aug 1989 Apple IIgs ROM03
+apple2gsmt                      // 1991 "Mark Twain" prototype
 apple2gsr0                      // Sep 1986 Apple IIgs ROM00
 apple2gsr0p                     // June 19, 1986 Apple IIgs ROM00 prototype
 apple2gsr0p2                    // March 10, 1986 Apple IIgs ROM00 prototype
 apple2gsr1                      // Sep 1987 Apple IIgs ROM01
 apple2gsr3p                     // ??? 198? Apple IIgs ROM03 prototype
-apple2gsmt                      // 1991 "Mark Twain" prototype
 
 @source:apple/apple3.cpp
 apple3                          // May 1980 Apple ///
@@ -15250,6 +15261,7 @@ cawingr1                        // 09/10/1990 (c) 1990 (World)
 cawingu                         // 30/11/1990 (c) 1990 (USA)
 cawingur1                       // 12/10/1990 (c) 1990 (USA)
 chikij                          // 19/06/1990 (c) 1990 (Japan)
+cps1mult                        // bootleg
 cworld2j                        // 11/06/1992 (c) 1992 (Japan)
 cworld2ja                       // 11/06/1992 (c) 1992 (Japan)
 cworld2jb                       // 11/06/1992 (c) 1992 (Japan)
@@ -15537,8 +15549,8 @@ ddsomar1                        // 08/02/1996 (c) 1996 (Asia)
 ddsomb                          // 23/02/1996 (c) 1996 (Brazil)
 ddsomh                          // 23/02/1996 (c) 1996 (Hispanic)
 ddsomj                          // 19/06/1996 (c) 1996 (Japan)
-ddsomjr1                        // 06/02/1996 (c) 1996 (Japan)
-ddsomjr2                        // 23/02/1996 (c) 1996 (Japan)
+ddsomjr1                        // 23/02/1996 (c) 1996 (Japan)
+ddsomjr2                        // 06/02/1996 (c) 1996 (Japan)
 ddsomr1                         // 23/02/1996 (c) 1996 (Euro)
 ddsomr2                         // 09/02/1996 (c) 1996 (Euro)
 ddsomr3                         // 08/02/1996 (c) 1996 (Euro)
@@ -16126,7 +16138,13 @@ pb1000                          // Casio PB-1000
 pb2000c                         // Casio PB-2000C
 
 @source:casio/pickytlk.cpp
-pickytlk                        // Casio Picky Talk
+jd363                           // Casio Picky Talk - Super Denshi Techou
+jd364                           // Casio Color Picky Talk - Super Denshi Techou
+jd368                           // Casio Super Picky Talk - Access Pet
+mk300                           // Casio Plet's (MK-300)
+mk350                           // Casio Plet's (MK-350)
+pickydis                        // Tsukuda Original Disney Characters - Tegaki Electronic Note
+pickytlk                        // Casio Super Picky Talk - Forest of Gurutan
 
 @source:casio/pv1000.cpp
 pv1000                          // Casio PV-1000
@@ -16626,42 +16644,6 @@ c10                             //
 cb308                           //
 mcb216                          //
 
-@source:cvs/cvs.cpp
-8ball                           // (c) 1982 Century
-8ball1                          // (c) 1982 Century
-cosmos                          // (c) 1981 Century
-darkwar                         // (c) 1981 Century
-dazzler                         // (c) 1982 Century
-diggerc                         // (c) 1982 Century
-goldbug                         // (c) 1982 Century
-heartatk                        // (c) 1983 Century Electronics
-hero                            // (c) 1983 Seatongrove (c) 1984 CVS
-hunchbak                        // (c) 1983 Century
-hunchbaka                       // (c) 1983 Century
-huncholy                        // (c) 1984 Seatongrove (c) CVS
-logger                          // (c) 1982 Century (rev 3)
-loggerr2                        // (c) 1982 E T Marketing (rev 2)
-outline                         // (c) 1982 Century
-radarzon                        // (c) 1982 Century
-radarzon1                       // (c) 1982 Century
-radarzont                       // (c) 1982 Tuni Electro Service
-raiders                         // (c) 1983 Century Electronics UK
-raidersr3                       // (c) 1983 Century Electronics UK
-spacefrt                        // (c) 1981 Century
-superbik                        // (c) 1983 Century
-wallst                          // (c) 1982 Century
-
-@source:cvs/galaxia.cpp
-astrowar                        // (c) 1980
-galaxia                         // (c) 1979
-galaxiaa                        // (c) 1979
-galaxiab                        // (c) 1979
-galaxiac                        // (c) 1979
-
-@source:cvs/quasar.cpp
-quasar                          // (c) 1980 Zelco Games Italy
-quasara                         // (c) 1980 Zelco Games Italy
-
 @source:cxg/chess2001.cpp
 ch2001
 
@@ -16920,6 +16902,7 @@ oscaru                          // (c) 1987 Data East USA (US)
 shackled                        // (c) 1986 Data East USA (US)
 srdarwin                        // (c) 1987 Data East Corporation (World)
 srdarwinj                       // (c) 1987 Data East Corporation (Japan)
+srdarwinb                       // bootleg
 
 @source:dataeast/deco156.cpp
 hvysmsh                         // MBG (c) 1993 Data East Corporation (World)
@@ -17501,6 +17484,7 @@ animaljr                        // "75" (c) 1993 Nakanihon/Taito (USA)
 animaljrj                       // "75" (c) 1993 Nakanihon/Taito (Japan)
 animaljrs                       // "75" (c) 1993 Nakanihon/Taito (Spanish version)
 daimyojn                        // "017" 2002 Dynax / Techno-Top
+daireach                        // Mahjong Dai-Reach (C) 2001 Techno-Top
 ddenlovj                        // "112" (c) 1995 Dynax (Japan)
 ddenlovr                        // "113" (c) 1996 Dynax (Hong Kong)
 ddenlovrb                       // bootleg
@@ -17855,6 +17839,9 @@ touryuu                         // (c) 200? Yuki Enterprise
 
 @source:eolith/vegaeo.cpp
 crazywar                        // (c) 2002 Eolith
+
+@source:epoch/cassvisn.cpp
+cassvisn
 
 @source:epoch/gamepock.cpp
 gamepock                        // Epoch Game Pocket Computer
@@ -18286,6 +18273,7 @@ funquizb                        // (c) 1990 Fun World
 gratispk                        // (c) 1995 Mega Soft
 gratispka                       // (c) 1995 Mega Soft
 jokercrd                        // (c) 1993 Vesely Svet
+jokercrdf                       // (c) 1993 Fun World
 jollycrd                        // (c) 1985 TAB-Austria
 jollycrda                       // (c) 1985 TAB-Austria
 jolyc3x3                        // (c) 1985 TAB-Austria
@@ -29153,6 +29141,7 @@ fairyl2bl                       //
 ldrink                          //
 ldrinka                         //
 merryjn                         //
+unkbel                          //
 
 @source:misc/bingoman.cpp
 bingoman                        //
@@ -29429,6 +29418,31 @@ funnyfmb                        //
 gangrose                        //
 tsarevna                        //
 tsarevnaa                       //
+
+@source:misc/cvs.cpp
+8ball                           // (c) 1982 Century
+8ball1                          // (c) 1982 Century
+cosmos                          // (c) 1981 Century
+darkwar                         // (c) 1981 Century
+dazzler                         // (c) 1982 Century
+diggerc                         // (c) 1982 Century
+goldbug                         // (c) 1982 Century
+heartatk                        // (c) 1983 Century Electronics
+hero                            // (c) 1983 Seatongrove (c) 1984 CVS
+hunchbak                        // (c) 1983 Century
+hunchbaka                       // (c) 1983 Century
+huncholy                        // (c) 1984 Seatongrove (c) CVS
+logger                          // (c) 1982 Century (rev 3)
+loggerr2                        // (c) 1982 E T Marketing (rev 2)
+outline                         // (c) 1982 Century
+radarzon                        // (c) 1982 Century
+radarzon1                       // (c) 1982 Century
+radarzont                       // (c) 1982 Tuni Electro Service
+raiders                         // (c) 1983 Century Electronics UK
+raidersr3                       // (c) 1983 Century Electronics UK
+spacefrt                        // (c) 1981 Century
+superbik                        // (c) 1983 Century
+wallst                          // (c) 1982 Century
 
 @source:misc/cwheel.cpp
 cwheel                          // (c) 19?? Gamebar
@@ -30914,6 +30928,7 @@ touchemea                       //
 
 @source:misc/laserbas.cpp
 futflash                        // (c) 1981 HOEI (Arcade TV Game List - P.96, Right, 18 from top)
+futflasha                       // (c) 1981 HOEI "
 laserbas                        // (c) 1981 Amstar/HOEI
 laserbasa                       // (c) 1981 Amstar/HOEI
 
@@ -32582,6 +32597,20 @@ multi16                         //
 @source:mitsubishi/trium.cpp
 triumec                         //
 
+@source:modelracing/dribling.cpp
+dribling                        // (c) 1983 Model Racing
+driblinga                       // (c) 1983 Model Racing
+driblingam                      // bootleg (Automave)
+driblingo                       // (c) 1983 Olympia
+driblingvm                      // bootleg (Videomac)
+
+@source:modelracing/sshot.cpp
+gunchamps                       // (c) 1980 Model Racing (sshot.cpp)
+sshot                           // (c) 1979 Model Racing
+
+@source:modelracing/subhuntr.cpp
+subhuntr                        // 1979 Model Racing
+
 @source:morrow/microdec.cpp
 md2                             //
 md3                             //
@@ -32642,20 +32671,6 @@ sys1121                         // (c) 1984 Motorola
 
 @source:motorola/uchroma68.cpp
 uchroma68                       // 1980 Motorola evaluation board for the MC6847
-
-@source:mr/dribling.cpp
-dribling                        // (c) 1983 Model Racing
-driblinga                       // (c) 1983 Model Racing
-driblingam                      // bootleg (Automave)
-driblingo                       // (c) 1983 Olympia
-driblingvm                      // bootleg (Videomac)
-
-@source:mr/sshot.cpp
-gunchamps                       // (c) 1980 Model Racing (sshot.cpp)
-sshot                           // (c) 1979 Model Racing
-
-@source:mr/subhuntr.cpp
-subhuntr                        // 1979 Model Racing
 
 @source:msx/big10.cpp
 big10                           //
@@ -38742,6 +38757,12 @@ soldividk                       // (c) 1997 (Korea)
 tgm2                            // (c) 2000
 tgm2p                           // (c) 2000
 
+@source:psion/mc400.cpp
+mc200                           // 1989 Psion MC 200
+mc400                           // 1989 Psion MC 400
+mcword                          // 1992 Psion MC Word
+mcword_de                       // 1992 Psion MC Word (German)
+
 @source:psion/psion.cpp
 psion1                          //
 psioncm                         //
@@ -39004,6 +39025,7 @@ mc50mk2                         //
 
 @source:roland/roland_mt32.cpp
 cm32l                           //
+mt100                           //
 mt32                            //
 
 @source:roland/roland_mt80s.cpp
@@ -40773,7 +40795,7 @@ strkfgtrj                       // 1991.06 Strike Fighter (Japan)
 omv1000                         // Tsukuda Original Othello Multivision FG-1000
 omv2000                         // Tsukuda Original Othello Multivision FG-2000
 sc3000                          // Sega SC-3000 (Japan)
-sc3000h                         // Sega SC-3000H (Japan)
+sc3000pal                       // Sega SC-3000 (Europe/Australia/New Zealand)
 sf7000                          // Sega SC-3000 w/ SF-7000 (Japan)
 sg1000                          // Sega SG-1000 (Japan)
 sg1000m2                        // Sega SG-1000 Mark II (Japan)
@@ -45217,8 +45239,99 @@ gizmondo                        //
 kontiki                         //
 tiki100                         //
 
+@source:toaplan/batsugun.cpp
+batsugun                        // TP-030 (c) 1993 Toaplan
+batsuguna                       // TP-030 (c) 1993 Toaplan
+batsugunb                       //
+batsugunc                       // TP-030 (c) 1993 Toaplan
+batsugunbl                      // bootleg
+batsugunsp                      // TP-030 (c) 1993 Toaplan
+
+@source:toaplan/dogyuun.cpp
+dogyuun                         // TP-022 (c) 1992 Toaplan
+dogyuuna                        // TP-022 (c) 1992 Toaplan
+dogyuunb                        // TP-022 (c) 1992 Toaplan
+dogyuunt                        // TP-022 (c) 1992 Toaplan
+dogyuunto                       // TX-022 (c) 1992 Toaplan
+
+@source:toaplan/dt7.cpp
+dt7
+
+@source:toaplan/enmadaio.cpp
+enmadaio                        // TP-031
+
+@source:toaplan/fixeight.cpp
+fixeight                        // TP-026 (c) 1992 + Taito license
+fixeighta                       // TP-026 (c) 1992 + Taito license
+fixeightat                      // TP-026 (c) 1992 + Taito license
+fixeightbl                      // bootleg
+fixeighth                       // TP-026 (c) 1992 + Taito license
+fixeightht                      // TP-026 (c) 1992 + Taito license
+fixeightj                       // TP-026 (c) 1992 + Taito license
+fixeightjt                      // TP-026 (c) 1992 + Taito license
+fixeightk                       // TP-026 (c) 1992 + Taito license
+fixeightkt                      // TP-026 (c) 1992 + Taito license
+fixeightt                       // TP-026 (c) 1992 + Taito license
+fixeighttw                      // TP-026 (c) 1992 + Taito license
+fixeighttwt                     // TP-026 (c) 1992 + Taito license
+fixeightu                       // TP-026 (c) 1992 + Taito license
+fixeightut                      // TP-026 (c) 1992 + Taito license
+
+@source:toaplan/ghox.cpp
+ghox                            // TP-021 (c) 1991 Toaplan
+ghoxj                           // TP-021 (c) 1991 Toaplan
+ghoxjo                          // TP-021 (c) 1991 Toaplan
+
+@source:toaplan/kbash.cpp
+kbash                           // TP-023 (c) 1993 Toaplan
+kbash2                          // bootleg
+kbashk                          // TP-023 (c) 1993 Toaplan
+kbashp                          // TP-023 (c) 1993 Toaplan
+
 @source:toaplan/mjsister.cpp
 mjsister                        // (c) 1986 Toaplan
+
+@source:toaplan/pipibibi.cpp
+pipibibs                        // TP-025
+pipibibsa                       // TP-025
+pipibibsbl                      // (c) 1991 Ryouta Kikaku (bootleg)
+pipibibsbl2                     // bootleg
+pipibibsbl3                     // (c) 1991 Ryouta Kikaku (bootleg)
+pipibibsp                       // TP-025
+
+@source:toaplan/raizing.cpp
+bgaregga                        // (c) 1996 Raizing/8ing
+bgareggabl                      // hack
+bgareggabla                     // hack
+bgareggablj                     // hack
+bgareggacn                      // (c) 1996 Raizing/8ing
+bgareggahk                      // (c) 1996 Raizing/8ing
+bgareggak                       // (c) 1996 Raizing/8ing
+bgaregganv                      // (c) 1996 Raizing/8ing
+bgareggat                       // (c) 1996 Raizing/8ing
+bgareggat2                      // (c) 1996 Raizing/8ing
+bgareggatw                      // (c) 1996 Raizing/8ing
+kingdmgp                        // (c) 1994 Raizing/8ing
+mahoudai                        // (c) 1993 Raizing + Able license
+shippumd                        // (c) 1994 Raizing/8ing
+sstriker                        // (c) 1993 Raizing
+sstrikerk                       // (c) 1993 Raizing
+
+@source:toaplan/raizing_batrider.cpp
+batrider                        // (c) 1998 Raizing/8ing
+batriderc                       // (c) 1998 Raizing/8ing
+batriderhk                      // (c) 1998 Raizing/8ing
+batriderj                       // (c) 1998 Raizing/8ing
+batriderja                      // (c) 1998 Raizing/8ing
+batriderk                       // (c) 1998 Raizing/8ing
+batridert                       // (c) 1998 Raizing/8ing
+batrideru                       // (c) 1998 Raizing/8ing
+bbakraid                        // (c) 1999 8ing
+bbakraidc                       // (c) 1999 8ing
+bbakraidj                       // (c) 1999 8ing
+bbakraidja                      // (c) 1999 8ing
+nprobowl                        // (c) 1996 Zuck + Able license
+probowl2                        // (c) 1996 Zuck + Able license
 
 @source:toaplan/slapfght.cpp
 alcon                           // A77 / TP-???
@@ -45242,6 +45355,23 @@ tigerhj                         // A47 (c) 1985 Taito Corporation   GX-551 [not 
 
 @source:toaplan/slapfght_ms.cpp
 slapfighm
+
+@source:toaplan/snowbro2.cpp
+snowbro2                        // TP-033 (c) 1994 Hanafram
+snowbro2b                       //
+snowbro2b2                      //
+snowbro2b3                      //
+snowbro2ny                      // TP-033 (c) 1994 Nyanko
+
+@source:toaplan/sunwise.cpp
+burgkids                        // (c) 1995 Sunwise
+othldrby                        // (c) 1995 Sunwise
+pwrkick                         // (c) 1994 Sunwise
+
+@source:toaplan/tekipaki.cpp
+tekipaki                        // TP-020 (c) 1991 Toaplan
+tekipakit                       // TP-020 (c) 1991 Toaplan (location test)
+whoopee                         // TP-025 (on TP-020)
 
 @source:toaplan/toaplan1.cpp
 demonwld                        // TP-O16 (c) 1990 Toaplan (+ Taito license when set to Japan)
@@ -45277,92 +45407,8 @@ zerowing                        // TP-O15 (c) 1989 Toaplan
 zerowing1                       // TP-O15 (c) 1989 Toaplan
 zerowingw                       // TP-O15 (c) 1989 Williams Electronics
 
-@source:toaplan/toaplan2.cpp
-batrider                        // (c) 1998 Raizing/8ing
-batriderc                       // (c) 1998 Raizing/8ing
-batriderhk                      // (c) 1998 Raizing/8ing
-batriderj                       // (c) 1998 Raizing/8ing
-batriderja                      // (c) 1998 Raizing/8ing
-batriderk                       // (c) 1998 Raizing/8ing
-batridert                       // (c) 1998 Raizing/8ing
-batrideru                       // (c) 1998 Raizing/8ing
-batsugun                        // TP-030 (c) 1993 Toaplan
-batsuguna                       // TP-030 (c) 1993 Toaplan
-batsugunb                       //
-batsugunc                       // TP-030 (c) 1993 Toaplan
-batsugunbl                      // bootleg
-batsugunsp                      // TP-030 (c) 1993 Toaplan
-bbakraid                        // (c) 1999 8ing
-bbakraidc                       // (c) 1999 8ing
-bbakraidj                       // (c) 1999 8ing
-bbakraidja                      // (c) 1999 8ing
-bgaregga                        // (c) 1996 Raizing/8ing
-bgareggabl                      // hack
-bgareggabla                     // hack
-bgareggablj                     // hack
-bgareggacn                      // (c) 1996 Raizing/8ing
-bgareggahk                      // (c) 1996 Raizing/8ing
-bgareggak                       // (c) 1996 Raizing/8ing
-bgaregganv                      // (c) 1996 Raizing/8ing
-bgareggat                       // (c) 1996 Raizing/8ing
-bgareggat2                      // (c) 1996 Raizing/8ing
-bgareggatw                      // (c) 1996 Raizing/8ing
-burgkids                        // (c) 1995 Sunwise
-dogyuun                         // TP-022 (c) 1992 Toaplan
-dogyuuna                        // TP-022 (c) 1992 Toaplan
-dogyuunb                        // TP-022 (c) 1992 Toaplan
-dogyuunt                        // TP-022 (c) 1992 Toaplan
-dogyuunto                       // TX-022 (c) 1992 Toaplan
-fixeight                        // TP-026 (c) 1992 + Taito license
-fixeighta                       // TP-026 (c) 1992 + Taito license
-fixeightat                      // TP-026 (c) 1992 + Taito license
-fixeightbl                      // bootleg
-fixeighth                       // TP-026 (c) 1992 + Taito license
-fixeightht                      // TP-026 (c) 1992 + Taito license
-fixeightj                       // TP-026 (c) 1992 + Taito license
-fixeightjt                      // TP-026 (c) 1992 + Taito license
-fixeightk                       // TP-026 (c) 1992 + Taito license
-fixeightkt                      // TP-026 (c) 1992 + Taito license
-fixeightt                       // TP-026 (c) 1992 + Taito license
-fixeighttw                      // TP-026 (c) 1992 + Taito license
-fixeighttwt                     // TP-026 (c) 1992 + Taito license
-fixeightu                       // TP-026 (c) 1992 + Taito license
-fixeightut                      // TP-026 (c) 1992 + Taito license
-ghox                            // TP-021 (c) 1991 Toaplan
-ghoxj                           // TP-021 (c) 1991 Toaplan
-ghoxjo                          // TP-021 (c) 1991 Toaplan
-grindstm                        // TP-027 (c) 1993 Toaplan + Unite Trading license (Korea)
-grindstma                       // TP-027 (c) 1993 Toaplan + Unite Trading license (Korea)
-kbash                           // TP-023 (c) 1993 Toaplan
-kbash2                          // bootleg
-kbashk                          // TP-023 (c) 1993 Toaplan
-kbashp                          // TP-023 (c) 1993 Toaplan
-kingdmgp                        // (c) 1994 Raizing/8ing
-mahoudai                        // (c) 1993 Raizing + Able license
-nprobowl                        // (c) 1996 Zuck + Able license
-othldrby                        // (c) 1995 Sunwise
-pipibibs                        // TP-025
-pipibibsa                       // TP-025
-pipibibsbl                      // (c) 1991 Ryouta Kikaku (bootleg)
-pipibibsbl2                     // bootleg
-pipibibsbl3                     // (c) 1991 Ryouta Kikaku (bootleg)
-pipibibsp                       // TP-025
-probowl2                        // (c) 1996 Zuck + Able license
-pwrkick                         // (c) 1994 Sunwise
-shippumd                        // (c) 1994 Raizing/8ing
-snowbro2                        // TP-033 (c) 1994 Hanafram
-snowbro2b                       //
-snowbro2b2                      //
-snowbro2b3                      //
-snowbro2ny                      // TP-033 (c) 1994 Nyanko
-sstriker                        // (c) 1993 Raizing
-sstrikerk                       // (c) 1993 Raizing
-tekipaki                        // TP-020 (c) 1991 Toaplan
-tekipakit                       // TP-020 (c) 1991 Toaplan (location test)
+@source:toaplan/truxton2.cpp
 truxton2                        // TP-024 (c) 1992 Toaplan
-vfive                           // TP-027 (c) 1993 Toaplan (Japan)
-whoopee                         // TP-025
-enmadaio                        // TP-031
 
 @source:toaplan/twincobr.cpp
 fnshark                         // bootleg
@@ -45383,6 +45429,11 @@ twincobru                       // B30 / TP-011 (c) 1987 Taito America Corporati
 
 @source:toaplan/twincobr_ms.cpp
 twincobrm                       // bootleg (Modular System)
+
+@source:toaplan/vfive.cpp
+grindstm                        // TP-027 (c) 1993 Toaplan + Unite Trading license (Korea)
+grindstma                       // TP-027 (c) 1993 Toaplan + Unite Trading license (Korea)
+vfive                           // TP-027 (c) 1993 Toaplan (Japan)
 
 @source:toaplan/wardner.cpp
 pyros                           // B25 / TP-009 (c) 1987 Taito America Corporation (US)
@@ -46880,6 +46931,7 @@ wicat                           //
 @source:wing/luckgrln.cpp
 7smash                          // (c) 1993 Sovic
 luckgrln                        // (c) 1991 Wing Co. Ltd
+luckstrn                        // (c) 1991 Wing Co. Ltd
 
 @source:wing/lucky37.cpp
 bingo75                         // (c) 199? Wing Co. Ltd
@@ -46895,6 +46947,7 @@ excitbj                         // (c) 1992 Wing Co. Ltd
 lucky74                         // (c) 1988 Wing Co. Ltd
 lucky74a                        // (c) 1988 Wing Co. Ltd
 lucky74b                        // (c) 1988 Wing Co. Ltd
+lucky88w                        // (c) 1988 Wing Co. Ltd
 
 @source:wing/pinkiri8.cpp
 janshi                          //
@@ -47148,11 +47201,21 @@ magix                           // (c) 1995 Yun Sung
 magixb                          // bootleg
 rocktris                        // (c) 1994? Yun Sung
 
+@source:zaccaria/galaxia.cpp
+astrowar                        // (c) 1980
+galaxia                         // (c) 1979
+galaxiaa                        // (c) 1979
+galaxiab                        // (c) 1979
+
 @source:zaccaria/laserbat.cpp
 catnmous                        // (c) 1982
 catnmousa                       // (c) 1982
 laserbat                        // (c) 1981
 lazarian                        // (c) 1981
+
+@source:zaccaria/quasar.cpp
+quasar                          // (c) 1980 Zelco Games Italy
+quasara                         // (c) 1980 Zelco Games Italy
 
 @source:zaccaria/seabattl.cpp
 armada                          //

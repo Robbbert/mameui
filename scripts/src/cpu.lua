@@ -2575,7 +2575,6 @@ if CPUS["S2650"] then
 	files {
 		MAME_DIR .. "src/devices/cpu/s2650/s2650.cpp",
 		MAME_DIR .. "src/devices/cpu/s2650/s2650.h",
-		MAME_DIR .. "src/devices/cpu/s2650/s2650cpu.h",
 	}
 end
 
@@ -4134,6 +4133,23 @@ end
 if opt_tool(CPUS, "HT1130") then
 	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/ht1130/ht1130d.cpp")
 	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/ht1130/ht1130d.h")
+end
+
+--------------------------------------------------
+-- UPD777
+--@src/devices/cpu/upd777/upd777.h,CPUS["UPD777"] = true
+--------------------------------------------------
+
+if CPUS["UPD777"] then
+	files {
+		MAME_DIR .. "src/devices/cpu/upd777/upd777.cpp",
+		MAME_DIR .. "src/devices/cpu/upd777/upd777.h",
+	}
+end
+
+if opt_tool(CPUS, "UPD777") then
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/upd777/upd777dasm.cpp")
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/upd777/upd777dasm.h")
 end
 
 --------------------------------------------------
