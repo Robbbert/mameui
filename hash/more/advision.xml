@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 8 -->
 <softwarelist name="advision" description="advision loose roms">
 	<software name="advc8cc31f925bab">
 		<description>code_red_final_stop</description>
@@ -12,6 +12,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="advdbf8045e89579">
+		<description>helloworld</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="advision_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="helloworld.bin" size="4096" crc="637b65fc" sha1="dbf8045e895796e132dbe8a34a732492f7317608"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="adv9320ee2792f0f">
+		<description>pac-man (slydc - hack - 2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="advision_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="pac-man (slydc - hack - 2008).bin" size="4096" crc="a176fb62" sha1="9320ee2792f0f6383e355befd2b2f3e80b669ac9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="advc49deef8b7240">
 		<description>TableTennis</description>
 		<year>????</year>
@@ -19,6 +39,36 @@
 		<part name="cart" interface="advision_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="TableTennis.bin" size="4096" crc="d34231c5" sha1="c49deef8b724040d7bb22e4e315bc3fc60d1feed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="adv7fc8cb2ec6a01">
+		<description>tabletennis_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="advision_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="tabletennis_1.bin" size="4096" crc="12edf088" sha1="7fc8cb2ec6a011b1a25fe94f67a5a5cb68026d59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="adv9217e9710ede7">
+		<description>tabletennis_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="advision_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="tabletennis_2.bin" size="4096" crc="7577d430" sha1="9217e9710ede75227019fd409caff7612ac78053"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="adv1fe33a98cae6f">
+		<description>tabletennis_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="advision_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="tabletennis_3.bin" size="4096" crc="dbcde4dc" sha1="1fe33a98cae6fe2ff7c4c458a9e335697be0880a"/>
 			</dataarea>
 		</part>
 	</software>

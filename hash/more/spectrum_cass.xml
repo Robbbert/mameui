@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1189 -->
+<!-- Number of items in this list = 1196 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -7782,6 +7782,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs35acb37ac66e6">
+		<description>Bloody Eyes (19xx)(-)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27648">
+				<rom name="Bloody Eyes (19xx)(-)(Sp)[a].tap" size="27648" crc="6d086e90" sha1="35acb37ac66e6ab1558cc581f95ba5d1b30def4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6dbb67904ab08">
+		<description>Bloody Paws ES Part1 (1990)(G.LL.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35835">
+				<rom name="Bloody Paws ES Part1 (1990)(G.LL.).tap" size="35835" crc="65d44dab" sha1="6dbb67904ab08a71aab0e2665a5395fff957716a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19b9d1037f8d7">
+		<description>Bloody Paws ES Part2 (1990)(G.LL.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37263">
+				<rom name="Bloody Paws ES Part2 (1990)(G.LL.).tap" size="37263" crc="97af0b3a" sha1="19b9d1037f8d7464163db2f710037aa43a0373f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb700695b9ad78">
+		<description>Blue Max (1984)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42721">
+				<rom name="Blue Max (1984)(US Gold).tap" size="42721" crc="13b6bc71" sha1="b700695b9ad784723e07e24bad1001db6c032fc0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6955c3d44830b">
+		<description>Blue Riband (1984)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36240">
+				<rom name="Blue Riband (1984)(CCS).tap" size="36240" crc="6d6f3a92" sha1="6955c3d44830b67ca4e098ed90235357f03edf97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa246cc11152d">
+		<description>Blue Thunder (1984)(Richard Wilcox Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46941">
+				<rom name="Blue Thunder (1984)(Richard Wilcox Software).tap" size="46941" crc="9870d4ed" sha1="aa246cc11152de5e26f694e8de932df91f4e52de"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf13d36a9b8411">
 		<description>Cross Chase (2018-10-29)(Caruso, Fabrizio)</description>
 		<year>????</year>
@@ -7809,6 +7869,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="19618">
 				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).tap" size="19618" crc="7483f365" sha1="944d7657ee8b787e1a54d29ef5bc1a89c6a5befd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs342cc9ad4e1f9">
+		<description>Orel BK08 demo tape-reklama</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5286032">
+				<rom name="Orel BK08 demo tape-reklama.wav" size="5286032" crc="15016920" sha1="342cc9ad4e1f9d4612297225b8fa1d4c252ecc0a"/>
 			</dataarea>
 		</part>
 	</software>
