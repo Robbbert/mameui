@@ -433,7 +433,7 @@ void i8244_device::write_cx(int x, bool cx)
 {
 	if (cx)
 	{
-		u8 colx = m_collision_map[x] & 0x3f;
+		u8 colx = m_collision_map[x];
 
 		// check if we collide with an already drawn source object
 		if (colx)
@@ -451,9 +451,7 @@ void i8244_device::write_cx(int x, bool cx)
 
 		// check if an already drawn object would collide with us
 		if (m_vdc.s.collision & 0x40)
-		{
 			m_collision_status |= colx;
-		}
 	}
 }
 
@@ -662,13 +660,13 @@ void i8244_device::draw_minor(int scanline, bitmap_ind16 &bitmap, const rectangl
 
 			switch (m_vdc.s.sprites[i].color & 0x03)
 			{
-				case 1: // Xg attribute set
+				case 1: // X9 attribute set
 					x_shift = 1;
 					break;
 				case 2: // S attribute set
 					x_shift = (((scanline - y) / zoom_px) & 0x01) ^ 0x01;
 					break;
-				case 3: // Xg and S attributes set
+				case 3: // X9 and S attributes set
 					x_shift = ((scanline - y) / zoom_px) & 0x01;
 					break;
 				default:
