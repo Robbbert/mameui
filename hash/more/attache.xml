@@ -1,24 +1,34 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 4 -->
 <softwarelist name="attache" description="attache loose roms">
 	<software name="att7e60b18e79fc1">
-		<description>Elite Planet Browser_attache[Bdrive]</description>
+		<description>Elite Planet Browser[Bdrive]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="430336">
-				<rom name="Elite Planet Browser_attache[Bdrive].dsk" size="430336" crc="67f80aab" sha1="7e60b18e79fc187e5bf6bd6f1456b595db87b043"/>
+				<rom name="Elite Planet Browser[Bdrive].dsk" size="430336" crc="67f80aab" sha1="7e60b18e79fc187e5bf6bd6f1456b595db87b043"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="att8a7203bffd4e3">
-		<description>H-tron_attache[Bdrive]</description>
+		<description>H-tron[Bdrive]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="430336">
-				<rom name="H-tron_attache[Bdrive].dsk" size="430336" crc="04c91620" sha1="8a7203bffd4e3cd8711c46bdcd2611d84a3f2e18"/>
+				<rom name="H-tron[Bdrive].dsk" size="430336" crc="04c91620" sha1="8a7203bffd4e3cd8711c46bdcd2611d84a3f2e18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atta442a7e544c98">
+		<description>MastermindRK[Bdrive]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="430336">
+				<rom name="MastermindRK[Bdrive].dsk" size="430336" crc="4fab354d" sha1="a442a7e544c9871baf05267abc88ea784b4eeff4"/>
 			</dataarea>
 		</part>
 	</software>

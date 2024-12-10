@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1853 -->
+<!-- Number of items in this list = 1857 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3989,6 +3989,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="5242880">
 				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v1.7 (2024)(Yoni Arousement).bin" size="5242880" crc="6ed2530f" sha1="69a681196a06162e626032f9f9d3eae7268f4858"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen160eeec07d3f7">
+		<description>Black Jewel Reborn (World) (v2.1) (Demo) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3407872">
+				<rom name="Black Jewel Reborn (World) (v2.1) (Demo) (Aftermarket) (Unl).md" size="3407872" crc="2961fcb6" sha1="160eeec07d3f75c2e77f3a14048b170f2afad480"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17492,6 +17502,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen9e2d1211981af">
+		<description>Ultimate Marvel Quiz Quest (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="679460">
+				<rom name="Ultimate Marvel Quiz Quest (World) (Aftermarket) (Unl).md" size="679460" crc="49e25733" sha1="9e2d1211981af92f53edecc6b60ed32418c13725"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3b8cf4c87f653">
+		<description>Ultimate Marvel Quiz Quest (World) (v1.1) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="679464">
+				<rom name="Ultimate Marvel Quiz Quest (World) (v1.1) (Aftermarket) (Unl).md" size="679464" crc="e0c62dce" sha1="3b8cf4c87f6532e13ee96f28e1631fa67803e87c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend5a8b74ad0ef8">
 		<description>Ultimate Mortal Kombat 3 Mini-V13</description>
 		<year>????</year>
@@ -17769,6 +17799,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Virtua Fighter 2 vs Tekken 2 (Unl) [b2].bin" size="2097152" crc="96095911" sha1="2be3810607dab9d048da3bad1e7ff507bbcb4b91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1fb2556142610">
+		<description>Virtua Fish (World) (v1.0) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2359296">
+				<rom name="Virtua Fish (World) (v1.0) (Aftermarket) (Unl).md" size="2359296" crc="dc0f4aa9" sha1="1fb2556142610d49282dc19127e7ac8b6a06901c"/>
 			</dataarea>
 		</part>
 	</software>

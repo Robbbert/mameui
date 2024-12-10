@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 52 -->
+<!-- Number of items in this list = 51 -->
 <softwarelist name="camplynx_cass" description="camplynx_cass loose roms">
 	<software name="cly7a6d8b092a027">
 		<description>1(load Q)</description>
@@ -359,16 +359,6 @@
 		<part name="cass1" interface="camplynx_cass">
 			<dataarea name="cass" size="15786">
 				<rom name="PANIK.TAP" size="15786" crc="1ea01d4a" sha1="860964fbea329c87be03d7895a15abdf9b563d0b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="clyb5823163de4b7">
-		<description>PANIK</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="camplynx_cass">
-			<dataarea name="cass" size="125">
-				<rom name="PANIK.TXT" size="125" crc="53a308d1" sha1="b5823163de4b7f11b670ebaca7c39b0acff3a332"/>
 			</dataarea>
 		</part>
 	</software>

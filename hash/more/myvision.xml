@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 4 -->
 <softwarelist name="myvision" description="myvision loose roms">
 	<software name="myvf25f76addf2fc">
 		<description>Deepspace</description>
@@ -29,6 +29,16 @@
 		<part name="cart" interface="myvision_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="H-tron.bin" size="24576" crc="65d32839" sha1="6511133af0f31a66820698af045b514fffc33325"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="myv8a502c60c932e">
+		<description>MastermindRK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="myvision_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="MastermindRK.bin" size="24576" crc="d21bef74" sha1="8a502c60c932e9df6d2759d1f6a0c5c57849a2f5"/>
 			</dataarea>
 		</part>
 	</software>

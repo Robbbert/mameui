@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3527 -->
+<!-- Number of items in this list = 3548 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -9742,6 +9742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns765e5367f081c">
+		<description>Front Mission - Gun Hazard T-Eng (2004)(Aeon Genesis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Front Mission - Gun Hazard T-Eng (2004)(Aeon Genesis).sfc" size="3145728" crc="e4628064" sha1="765e5367f081ca24bcdc6884f8ca39e3880e2b75"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd93475f62e31c">
 		<description>Front Mission T-Eng v1.02 (2023)(mteam, F.H.)</description>
 		<year>????</year>
@@ -9929,16 +9939,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Ganbare Goemon 3 - Shishi Juurokubee no Karakuri Manjigatame (J) [T+Eng] DDSTranslation v3.1.sfc" size="4194304" crc="574bc5b2" sha1="a07b2b3124d20e92c75da49a99dd52bd290a3a7e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns3bca946ebb5a4">
-		<description>Ganbare Goemon Kirakira Douchuu - Boku ga Dancer ni Natta Wake (J) [T+Eng] DDSTranslation v3.0</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Ganbare Goemon Kirakira Douchuu - Boku ga Dancer ni Natta Wake (J) [T+Eng] DDSTranslation v3.0.sfc" size="4194304" crc="a3334a66" sha1="3bca946ebb5a4875fe9271738ac1c5238a65f3d2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10142,6 +10142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3bca946ebb5a4">
+		<description>Go for it! Goemon - The Twinkling Journey T-Eng v3.0 (2020)(DDSTranslation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Go for it! Goemon - The Twinkling Journey T-Eng v3.0 (2020)(DDSTranslation).sfc" size="4194304" crc="a3334a66" sha1="3bca946ebb5a4875fe9271738ac1c5238a65f3d2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa9829fe31edd9">
 		<description>Go for it! Goemon 2 - The Strange General McGuinness T-Eng v3.0 (2020)(DDSTranslation)</description>
 		<year>????</year>
@@ -10159,6 +10169,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Go for it! Goemon 3 - The Mecha Leg Hold of Jurokube Shishi T-Eng v4.0 (2020)(DDSTranslation).sfc" size="4194304" crc="74bbe6a0" sha1="eccaa92db4be995b6d32dd4eca67b8c02ea47a9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns218fd7ca43e58">
+		<description>Go for it! Goemon 4 - Time Pilot (2022)(Svambo, Nokia3310)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Go for it! Goemon 4 - Time Pilot (2022)(Svambo, Nokia3310).smc" size="2097152" crc="eef6d15a" sha1="218fd7ca43e58ef586f5465b4118db2df9842a32"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13563,12 +13583,12 @@
 		</part>
 	</software>
 	<software name="snsc9fb230785bae">
-		<description>lll (2009) (SMW1 Hack)</description>
+		<description>LLL (2009) (SMW1 Hack)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="lll (2009) (SMW1 Hack).sfc" size="2097152" crc="d35702e0" sha1="c9fb230785baec7eb53fd5384d0b9a43cfffa304"/>
+				<rom name="LLL (2009) (SMW1 Hack).sfc" size="2097152" crc="d35702e0" sha1="c9fb230785baec7eb53fd5384d0b9a43cfffa304"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18772,6 +18792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns15997c3202e2b">
+		<description>Pitfall - Atari VCS 2600 (2022)(Nokia3310)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pitfall - Atari VCS 2600 (2022)(Nokia3310).sfc" size="2097152" crc="12c81eda" sha1="15997c3202e2b1dc503d8bceb4163a4648b4cc90"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns28a0f8e3d978e">
 		<description>Pit_of_Death (SMW1 Hack)</description>
 		<year>????</year>
@@ -19143,12 +19173,12 @@
 		</part>
 	</software>
 	<software name="sns8dca2a3e28131">
-		<description>Quinty (1999)(Game Freak)</description>
+		<description>Quinty (Proto)(1999)(Game Freak)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Quinty (1999)(Game Freak).sfc" size="2097152" crc="1225927b" sha1="8dca2a3e28131ef3db3f6b1bfb5bc3393c2d27be"/>
+				<rom name="Quinty (Proto)(1999)(Game Freak).sfc" size="2097152" crc="1225927b" sha1="8dca2a3e28131ef3db3f6b1bfb5bc3393c2d27be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19179,6 +19209,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="R-Type 3 BJZ.sfc" size="2097664" crc="b95c7e51" sha1="ab50893f2ecf80298a7dea20c487de7b07e234b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6c00c082ae7ba">
+		<description>Raccoon Rascal T-Eng (2024)(Zarby89)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Raccoon Rascal T-Eng (2024)(Zarby89).sfc" size="2097152" crc="274b9bf2" sha1="6c00c082ae7ba0761830932183813d5f94a721e1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19269,6 +19309,86 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Randor2_demo_1.9 (SMW1 Hack).sfc" size="2097152" crc="470138e8" sha1="706c3b3981f6e3014c70df57eec9672035d893c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf852d5312fb22">
+		<description>Ranma 1-2 (E, France)(1993)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Ranma 1-2 (E, France)(1993)(Ocean).sfc" size="1572864" crc="3fe1854a" sha1="f852d5312fb2290049cdc76b9e902c02c5e5fdb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0688c92e57a68">
+		<description>Ranma 1-2 - Bakuretsu Rantou Hen (J)(1992)(NCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Ranma 1-2 - Bakuretsu Rantou Hen (J)(1992)(NCS).sfc" size="1572864" crc="053b2615" sha1="0688c92e57a68424fdd08ef4d506cd3cf0d8386a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf4fcf5bc7f28e">
+		<description>Ranma 1-2 - Chougi Ranbu Hen frameratehack v1.3 (2024)(Upsilandre)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Ranma 1-2 - Chougi Ranbu Hen frameratehack v1.3 (2024)(Upsilandre).sfc" size="4194304" crc="71aaff40" sha1="f4fcf5bc7f28e2422598bf15ca708831b4e6150e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns363bb441173ce">
+		<description>Ranma 1-2 - Chougi Ranbu Hen frameratehack v1.4 (2024)(Upsilandre)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Ranma 1-2 - Chougi Ranbu Hen frameratehack v1.4 (2024)(Upsilandre).sfc" size="4194304" crc="1705415f" sha1="363bb441173cebb299a8e784101c964a30dcbc8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5b4e21090f0da">
+		<description>Ranma 1-2 - Hard Battle II - Super Move Hustle T-Eng + frameratehack v1.3 (2024)(Upsilandre)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Ranma 1-2 - Hard Battle II - Super Move Hustle T-Eng + frameratehack v1.3 (2024)(Upsilandre).sfc" size="4194304" crc="4401b68c" sha1="5b4e21090f0da43a1d80921f414c4ce66080f074"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5b1b9a1b9a53b">
+		<description>Ranma 1-2 - Hard Battle II - Super Move Hustle T-Eng + frameratehack v1.4 (2024)(Upsilandre)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Ranma 1-2 - Hard Battle II - Super Move Hustle T-Eng + frameratehack v1.4 (2024)(Upsilandre).sfc" size="4194304" crc="22ae0893" sha1="5b1b9a1b9a53b6da18ac5b473451a8142f2bdd16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns289d13de1030e">
+		<description>Ranma 1-2 - Hard Battle II - Super Move Hustle T-Eng v1.10 (2018)(Dynamic-Designs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2686976">
+				<rom name="Ranma 1-2 - Hard Battle II - Super Move Hustle T-Eng v1.10 (2018)(Dynamic-Designs).sfc" size="2686976" crc="d1a35227" sha1="289d13de1030ec64705e8dc9fb713b6f93a7acce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns94a8b3b7116d6">
+		<description>Ranma 1-2 - Treasure of the Red Cat Gang T-Eng (2000)(Dynamic-Designs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Ranma 1-2 - Treasure of the Red Cat Gang T-Eng (2000)(Dynamic-Designs).sfc" size="1572864" crc="9c79c3b8" sha1="94a8b3b7116d6b96de12389921ff7c07cbb3f647"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19462,6 +19582,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns49e06c1b2235a">
+		<description>Rise of the Robots (U)(1994)(Acclaim Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Rise of the Robots (U)(1994)(Acclaim Entertainment).sfc" size="4194304" crc="83ba0ac0" sha1="49e06c1b2235a1c6465de665028f1c4aeda6eeb2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns02a0e2b59ebb1">
 		<description>Rise To The Challenge (SMW1 hack)</description>
 		<year>????</year>
@@ -19572,6 +19702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns86c18ba1fc762">
+		<description>Rockman X (J)(1993)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Rockman X (J)(1993)(Capcom).sfc" size="1572864" crc="6a1b6926" sha1="86c18ba1fc762b6d0bcdee7314a29b5c97cac082"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns1c35b593338de">
 		<description>Rockman X</description>
 		<year>????</year>
@@ -19582,6 +19722,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns34dc37c8a1905">
+		<description>Rockman X2 (J)(1994)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Rockman X2 (J)(1994)(Capcom).sfc" size="1572864" crc="299d7a89" sha1="34dc37c8a1905ec5631fa666eba84bb78f9c5bdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8d9ba291a86a3">
+		<description>Rockman's Soccer (J)(1994)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Rockman's Soccer (J)(1994)(Capcom).sfc" size="1310720" crc="a3277c10" sha1="8d9ba291a86a3588823d8ced0f28742b5754c789"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc5051c6dfc40f">
+		<description>Rocko's Modern Life - Spunky's Dangerous Day (U)(1994)(Viacom New Media)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Rocko's Modern Life - Spunky's Dangerous Day (U)(1994)(Viacom New Media).sfc" size="1572864" crc="197b4cba" sha1="c5051c6dfc40f5894d17e2b757261cd6d75c7dfe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd9f92d9c60d8d">
 		<description>Rocky Hollow (SMW1 Hack)</description>
 		<year>????</year>
@@ -19589,6 +19759,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Rocky Hollow (SMW1 Hack).sfc" size="2097152" crc="cf7964ba" sha1="d9f92d9c60d8d437bf07f6a776a4680caf85a01e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns651f6a21f8a50">
+		<description>Romancing Sa-Ga T-Eng v1.2 (2016)(DDSTranslation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1376256">
+				<rom name="Romancing Sa-Ga T-Eng v1.2 (2016)(DDSTranslation).sfc" size="1376256" crc="98d5e423" sha1="651f6a21f8a50d6fc846bcdec8d16736cc903326"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19662,6 +19842,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5fba73777acdd">
+		<description>Run Saber (U)(1993)(Atlus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Run Saber (U)(1993)(Atlus).sfc" size="1048576" crc="8708e5bb" sha1="5fba73777acdd5b8bdb6ef429effcf6034c88072"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb499b534ba56f">
+		<description>Rushing Beat T-Eng (2016)(FlashPV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rushing Beat T-Eng (2016)(FlashPV).sfc" size="1048576" crc="e50381bf" sha1="b499b534ba56fe2856c64cc462fdda6ab636caec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7a803471b7b28">
 		<description>s diary (DEMO 3.0) by -kamek productions- (SMW1 Hack)</description>
 		<year>????</year>
@@ -19669,6 +19869,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="s diary (DEMO 3.0) by -kamek productions- (SMW1 Hack).sfc" size="3145728" crc="f3f6d1dc" sha1="7a803471b7b28b0b66e78d6a1eb73bda264d4f35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2f2f061ee81ba">
+		<description>SA-1 Speed Test v5.1 (2018)(Vitor Vilela)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="SA-1 Speed Test v5.1 (2018)(Vitor Vilela).sfc" size="65536" crc="8beffd94" sha1="2f2f061ee81bafb4c48b83993a56969012162d68"/>
 			</dataarea>
 		</part>
 	</software>

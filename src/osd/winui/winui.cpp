@@ -978,7 +978,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 
 	// redirect messages to our handler
 	mameui_output_error winerror;
-	printf("********** STARTING %s **********\n", name);
+	printf("********** STARTING %s **********\n", name);fflush(stdout);
 	osd_output::push(&winerror);
 	osd_printf_verbose("********** STARTING %s **********\n", name);
 	osd_printf_info("********** STARTING %s **********\n", name);

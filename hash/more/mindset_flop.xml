@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 22 -->
+<!-- Number of items in this list = 23 -->
 <softwarelist name="mindset_flop" description="mindset_flop loose roms">
 	<software name="mnd769a2ca3083f6">
 		<description>01BOOT</description>
@@ -199,6 +199,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="228477">
 				<rom name="MS211.IMD" size="228477" crc="0fe36dbf" sha1="ce4a9fd1dad0f11abe218a75ab20c16cce11b060"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mnd460e6d13914e6">
+		<description>plato-20190926</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="plato-20190926.img" size="368640" crc="aa6b7bdc" sha1="460e6d13914e692c1caf40b287f9738f26878dd6"/>
 			</dataarea>
 		</part>
 	</software>
