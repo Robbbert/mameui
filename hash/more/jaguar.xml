@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 133 -->
+<!-- Number of items in this list = 139 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag1516859334668">
 		<description>8biteer</description>
@@ -199,6 +199,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="BinaryLand (2023-12)(Rutledge, Rich)[compo version].j64" size="1048576" crc="cf2151c3" sha1="fd3b8b4741e1af0f48c557364d98c0671d58a6a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag47dd70bf0349f">
+		<description>BlackJag (2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="BlackJag (2008).j64" size="524288" crc="d8dd7787" sha1="47dd70bf0349fefe0379cd83f01a4bd70f8f7178"/>
 			</dataarea>
 		</part>
 	</software>
@@ -802,6 +812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag104476a48d870">
+		<description>Mad_Bodies_(2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mad_Bodies_(2008).j64" size="2097152" crc="a7e01fef" sha1="104476a48d8705f78b95eb73cce967aca8239599"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jage3beb1a9568d3">
 		<description>Mandelbrot Demo (2008)</description>
 		<year>????</year>
@@ -1002,6 +1022,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag5a0a2c2174dd0">
+		<description>Project One (The Level One demo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1894859">
+				<rom name="Project One (The Level One demo).j64" size="1894859" crc="1c737431" sha1="5a0a2c2174dd061082b6d42a4bc0271c5d9f7ece"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jageaca103055d0b">
+		<description>Project One DEMO (2009)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Project One DEMO (2009).j64" size="2097152" crc="a00c6406" sha1="eaca103055d0b643955f162b3b22d962ed719ac1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag4e99d3df1e9aa">
 		<description>ProjectW (2008)</description>
 		<year>????</year>
@@ -1109,6 +1149,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="RGC DEMO (2006).j64" size="524288" crc="be2c959e" sha1="84c70d541152acb52b1d584590d43068024b9543"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag507074b1c3ebe">
+		<description>Robbig DEMO (1993)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Robbig DEMO (1993).j64" size="524288" crc="a091fc29" sha1="507074b1c3ebe005b76ac8851f0583e0ae63ab86"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1329,6 +1379,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Trojan (2023-12)(Rutledge, Rich).j64" size="2097152" crc="6f6331f1" sha1="005d9a88e1a2628b93b509b4a7a6ba3374b42f46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag6cc18917b3b05">
+		<description>Yakbig DEMO (1993)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Yakbig DEMO (1993).j64" size="1048576" crc="96400cf6" sha1="6cc18917b3b0564e0d6215f60dca1a0a95352361"/>
 			</dataarea>
 		</part>
 	</software>
