@@ -1361,7 +1361,7 @@ void jaguar_cpu_device::pc_w(offs_t offset, u32 data, u32 mem_mask)
 	if (m_go == false)
 		m_pc = m_io_pc & 0xffffff;
 	else
-		throw emu_fatalerror("%s: inflight PC write %08x", this->tag(), m_pc);
+		logerror("%s: inflight PC write %08x", this->tag(), m_pc);
 }
 
 /*
@@ -1378,7 +1378,7 @@ void jaguar_cpu_device::end_w(offs_t offset, u32 data, u32 mem_mask)
 	COMBINE_DATA(&m_io_end);
 	// sburnout sets bit 1 == 0
 	if ((m_io_end & 0x7) != 0x7)
-		throw emu_fatalerror("%s: fatal endian setup %08x", this->tag(), m_io_end);
+		logerror("%s: fatal endian setup %08x", this->tag(), m_io_end);
 }
 
 void jaguardsp_cpu_device::dsp_end_w(offs_t offset, u32 data, u32 mem_mask)
@@ -1386,7 +1386,7 @@ void jaguardsp_cpu_device::dsp_end_w(offs_t offset, u32 data, u32 mem_mask)
 	COMBINE_DATA(&m_io_end);
 	// wolfn3d writes a '0' to bit 1 (which is a NOP for DSP)
 	if ((m_io_end & 0x5) != 0x5)
-		throw emu_fatalerror("%s: fatal endian setup %08x", this->tag(), m_io_end);
+		logerror("%s: fatal endian setup %08x", this->tag(), m_io_end);
 }
 
 /*

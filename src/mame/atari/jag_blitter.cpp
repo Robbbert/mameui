@@ -113,7 +113,7 @@ void jag_blitter_device::op_nop()
 // common cases for unhandled, will be removed once everything is set
 void jag_blitter_device::op_unemulated()
 {
-	throw emu_fatalerror("%s: unhandled step with command latch %08x",m_command_latch);
+	logerror("%s: unhandled step with command latch %08x",m_command_latch);
 }
 
 void jag_blitter_device::op_upda1()
@@ -125,7 +125,7 @@ void jag_blitter_device::op_upda1()
 inline void jag_blitter_device::command_start()
 {
 	if (m_status_idle == false)
-		throw emu_fatalerror("%s: inflight blitter trigger %08x", this->tag(), m_command_latch);
+		logerror("%s: inflight blitter trigger %08x", this->tag(), m_command_latch);
 	m_status_idle = false;
 	// TODO: to be removed, see below
 	m_command_timer->adjust(attotime::from_ticks(m_count_lines * m_count_pixels, this->clock()));
@@ -138,7 +138,7 @@ TIMER_CALLBACK_MEMBER(jag_blitter_device::command_run)
 	// take more time by virtue of using additional steps, be a civilian or not depending
 	// of BUSHI setting
 
-	printf("%08x\n",m_command_latch);
+	logerror("%08x\n",m_command_latch);
 	// init
 	m_a1.ptr = m_a1.base;
 

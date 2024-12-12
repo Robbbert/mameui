@@ -439,7 +439,7 @@ void jaguar_state::set_palette(uint16_t vmode)
 		/* others */
 		default:
 			logerror("Can't handle mode %X\n", vmode);
-			fprintf(stderr, "Can't handle mode %X\n", vmode);
+			//fprintf(stderr, "Can't handle mode %X\n", vmode);
 			break;
 	}
 }
@@ -638,7 +638,7 @@ void jaguar_state::tom_regs_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 		{
 			case MEMCON1:
 				if((m_gpu_regs[offset] & 1) == 0)
-					printf("Warning: ROMHI = 0!\n");
+					logerror("Warning: ROMHI = 0!\n");
 
 				break;
 			case PIT0:
