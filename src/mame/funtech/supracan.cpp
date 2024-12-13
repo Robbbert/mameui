@@ -1336,8 +1336,8 @@ template <unsigned ch> void supracan_state::dma_w(offs_t offset, uint16_t data, 
 			const bool dest_dec = BIT(data, 10);
 			const bool src_dec  = BIT(data, 9);
 
-			if (dest_dec ^ src_dec)
-				popmessage("DMA trigger %04x with one increment bit set %04x", data, data & 0x0600);
+			//if (dest_dec ^ src_dec)
+				//popmessage("DMA trigger %04x with one increment bit set %04x", data, data & 0x0600);
 
 			for (int i = 0; i <= m_dma_regs.count[ch]; i++)
 			{
@@ -1711,7 +1711,7 @@ void supracan_state::update_frc_state()
 				break;
 
 			default:
-				popmessage("Attempt to fire up FRC with %04x %04x", m_frc_control, m_frc_frequency);
+				//popmessage("Attempt to fire up FRC with %04x %04x", m_frc_control, m_frc_frequency);
 				break;
 		}
 	}
@@ -2026,8 +2026,8 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 		{
 			LOGMASKED(LOG_VIDEO, "video_flags = %04x\n", data);
 
-			if (data & 0xc00)
-				popmessage("Interlace enable %04x", data & 0xc00);
+			//if (data & 0xc00)
+				//popmessage("Interlace enable %04x", data & 0xc00);
 
 			// TODO: verify if this support midframe switching
 			if ((data & 0x300) != (m_video_flags & 0x300))
@@ -2163,10 +2163,10 @@ void supracan_state::video_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	case 0x1f0/2:
 		m_pixel_mode = data & 0x18;
 		m_gfx_mode = data & 0x7;
-		if (m_pixel_mode & 0x10)
-			popmessage("Special pixel mode enabled!");
-		if (m_gfx_mode >= 5)
-			popmessage("Reserved GFX mode set %02x", data);
+		//if (m_pixel_mode & 0x10)
+			//popmessage("Special pixel mode enabled!");
+		//if (m_gfx_mode >= 5)
+			//popmessage("Reserved GFX mode set %02x", data);
 		//LOGMASKED(LOG_IRQS, "irq_mask = %04x\n", data);
 		break;
 	default:
