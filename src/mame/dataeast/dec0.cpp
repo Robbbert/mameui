@@ -370,7 +370,7 @@ Notes:
 #include "dec0.h"
 
 #include "cpu/m68000/m68000.h"
-#include "cpu/m6502/m6502.h"
+#include "cpu/m6502/r65c02.h"
 #include "cpu/z80/z80.h"
 #include "cpu/m6805/m68705.h"
 #include "machine/input_merger.h"
@@ -1772,14 +1772,17 @@ static GFXDECODE_START( gfx_secretab )
 	GFXDECODE_ENTRY( "tiles2",  0, automat_tilelayout2,  0x300, 0x10 )
 GFXDECODE_END
 
+
 /******************************************************************************/
 
-
-
 // DECO video CRTC, pixel clock is unverified (actually 24MHz/4?)
-void dec0_state::set_screen_raw_params_data_east(machine_config &config)
+void dec0_state::set_screen_raw_params(machine_config &config)
 {
-	m_screen->set_raw(XTAL(12'000'000)/2,384,0,256,272,8,248);
+//  m_screen->set_refresh_hz(57.41);
+//  m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(529)); / 57.41 Hz, 529us Vblank
+//  m_screen->set_size(32*8, 32*8);
+//  m_screen->set_visarea(0*8, 32*8-1, 1*8, 31*8-1);
+	m_screen->set_raw(XTAL(12'000'000) / 2, 384, 0, 256, 272, 8, 248);
 }
 
 void dec0_state::dec0_base(machine_config &config)
@@ -1788,12 +1791,7 @@ void dec0_state::dec0_base(machine_config &config)
 	BUFFERED_SPRITERAM16(config, m_spriteram);
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	set_screen_raw_params_data_east(config);
-	//m_screen->set_refresh_hz(57.41);
-	//m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(529)); /* 57.41 Hz, 529us Vblank */
-	//m_screen->set_size(32*8, 32*8);
-	//m_screen->set_visarea(0*8, 32*8-1, 1*8, 31*8-1);
-	//screen update callback differs per game
+	set_screen_raw_params(config);
 	m_screen->set_palette(m_palette);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_dec0);
@@ -1826,7 +1824,7 @@ void dec0_state::dec0(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &dec0_state::dec0_map);
 	m_maincpu->set_vblank_int("screen", FUNC(dec0_state::irq6_line_assert)); /* VBL */
 
-	M6502(config, m_audiocpu, XTAL(12'000'000) / 8);
+	R65C02(config, m_audiocpu, XTAL(12'000'000) / 8);
 	m_audiocpu->set_addrmap(AS_PROGRAM, &dec0_state::dec0_s_map);
 
 	input_merger_device &audio_irq(INPUT_MERGER_ANY_HIGH(config, "audio_irq"));
@@ -1930,9 +1928,7 @@ void dec0_automat_state::automat(machine_config &config)
 	BUFFERED_SPRITERAM16(config, m_spriteram);
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-//  m_screen->set_refresh_hz(57.41);
-//  m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(529)); /* 57.41 Hz, 529us Vblank */
-	set_screen_raw_params_data_east(config);
+	set_screen_raw_params(config);
 	m_screen->set_screen_update(FUNC(dec0_automat_state::screen_update_automat));
 	m_screen->set_palette(m_palette);
 
@@ -2006,9 +2002,7 @@ void dec0_automat_state::secretab(machine_config &config) // all clocks verified
 	BUFFERED_SPRITERAM16(config, m_spriteram);
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-//  m_screen->set_refresh_hz(57.41);
-//  m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(529)); // 57.41 Hz, 529us Vblank
-	set_screen_raw_params_data_east(config);
+	set_screen_raw_params(config);
 	m_screen->set_screen_update(FUNC(dec0_automat_state::screen_update_secretab));
 	m_screen->set_palette(m_palette);
 
@@ -2289,7 +2283,7 @@ void dec0_state::midresb(machine_config &config)
 	midres(config);
 	m_maincpu->set_addrmap(AS_PROGRAM, &dec0_state::midresb_map);
 
-	M6502(config.replace(), m_audiocpu, 1500000);
+	R65C02(config.replace(), m_audiocpu, 1500000);
 	m_audiocpu->set_addrmap(AS_PROGRAM, &dec0_state::dec0_s_map);
 
 	M68705R3(config, m_mcu, XTAL(3'579'545));

@@ -58,6 +58,9 @@ TODO:
 
 - mjtensin: random crashes, interrupts related
 
+- janoh, janohb: they do the same bank switching calls as mjsiyoub and kiwako/jongkyo.cpp
+  but there's no ROM to map there. Missing on the dumped PCBs or something else going on?
+
 Stephh's notes (based on the games Z80 code and some tests) :
 
 1) 'royalmah'
@@ -4456,6 +4459,17 @@ ROM_START( janyoup2a )
 	ROM_LOAD( "n82s123n.c98", 0x0000, 0x0020, CRC(d3007282) SHA1(e4d863ab193e49208ed0f59dcddb1da0492314f6) )
 ROM_END
 
+ROM_START( janyoup2702 )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "1.11a", 0x0000, 0x2000, CRC(d51d8525) SHA1(46a181141c6a64114bf025e6ea5f2e2e23f8ce62) )
+	ROM_LOAD( "2.10a", 0x2000, 0x2000, CRC(324426d4) SHA1(409244c8458d9bafa325746c37de9e7b955b3787) )
+	ROM_LOAD( "3.8a",  0x4000, 0x2000, CRC(cc4fed44) SHA1(11362654f8a40f594f90b84abf24e624c3e83eb0) )
+	ROM_LOAD( "4.7a",  0x6000, 0x1000, CRC(377b8ce9) SHA1(a5efc517ae975e54af5325b8b3f4867e9f449d4c) )
+
+	ROM_REGION( 0x0020, "proms", 0 )
+	ROM_LOAD( "n82s123n.c98", 0x0000, 0x0020, CRC(d3007282) SHA1(e4d863ab193e49208ed0f59dcddb1da0492314f6) )
+ROM_END
+
 ROM_START( seljan ) // Z80A + HD46505SP + AY891X (a sticker covers the chip type)
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "2",       0x0000, 0x2000, CRC(8d26d334) SHA1(4ac0f0961f666954caf59336f8389312db9dc263) ) // ok
@@ -5490,7 +5504,21 @@ ROM_START( janoh )
 	ROM_LOAD( "rom7.p6",  0x6000, 0x1000, NO_DUMP )
 
 	ROM_REGION( 0x20, "proms", 0 )
-	ROM_LOAD( "janho.color", 0x00, 0x20, NO_DUMP )
+	ROM_LOAD( "janoh.color", 0x00, 0x20, NO_DUMP )
+ROM_END
+
+ROM_START( janohb ) // same set was also found with the first 6 ROMs combined in 3 bigger capacity ROMs
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "jo1.1", 0x0000, 0x1000, CRC(8fc19963) SHA1(309e941c059a97b117090fd9dd69a00031aa6109) )    // "1984 JAN OH"
+	ROM_LOAD( "jo2.2", 0x1000, 0x1000, CRC(13b44a7d) SHA1(30ed6bda1597fb123e0e6104ef87cef48f3039a3) )
+	ROM_LOAD( "jo3.3", 0x2000, 0x1000, CRC(6efcaf89) SHA1(e7a8035b1ecd468a6054926a263f22741635e0df) )    // "JANOH TOAPLAN 84"
+	ROM_LOAD( "jo4.4", 0x3000, 0x1000, CRC(9186f02c) SHA1(b7dc2d6c19e67dd3f841cbb56df9589e3e6941f7) )
+	ROM_LOAD( "jo5.5", 0x4000, 0x1000, CRC(3c8d1f2a) SHA1(9e05f310a6d8a485a1005fc35ac2e3a79410a507) )
+	ROM_LOAD( "jo6.6", 0x5000, 0x1000, CRC(92687327) SHA1(4fafba5881dca2a147616d94dd055eba6aa3c653) )
+	ROM_LOAD( "jo7.7", 0x6000, 0x1000, CRC(774cb324) SHA1(930d6643fcd7e479a68811e775144d46f0183636) )
+
+	ROM_REGION( 0x20, "proms", 0 )
+	ROM_LOAD( "janoh.color", 0x00, 0x20, CRC(74a53e94) SHA1(ca9114bd9b2b07f5abe82616b41ae9fdb9537a4f) )
 ROM_END
 
 /***************************************************************************
@@ -5896,14 +5924,12 @@ ROM_START( jangtaku )
 	ROM_LOAD( "82s123a.6k", 0x0000, 0x0020, CRC(e9598146) SHA1(619e7eb76cc3e882b5b3e55cdd23fe00b0a1fe45) )
 ROM_END
 
-ROM_START( rkjanoh2 )
+ROM_START( rkjanoh2 ) // dump confirmed from 2 PCBs, only difference being 0x4b instead of 0x46 at 0x2a22
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "pf_1",         0x000000, 0x001000, CRC(582e7eda) SHA1(96578b6142051d9452f23c8c1b674e2d8a4c3b62) )
 	ROM_LOAD( "pf_2",         0x001000, 0x001000, CRC(49e7dc40) SHA1(d6232a82b6927c79dd47884e5e2a6589c5524424) )
 	ROM_LOAD( "pf_3_1",       0x002000, 0x001000, CRC(a1fdc929) SHA1(27cab4da2365bcf311d7f00d75e8db150183b108) )
 	ROM_LOAD( "pf_4l",        0x003000, 0x001000, CRC(c9ccdfa0) SHA1(ce6f2df7fb6739ddf0529bcae0596e4593ecc3e0) )
-	//ROM_LOAD( "pf_4_fewest",  0x003000, 0x001000, CRC(9a1650a0) SHA1(2da5957879d9f207721fc2f0d63dccc32850cbe2) )
-	//ROM_LOAD( "pf_4_middle",  0x003000, 0x001000, CRC(b1a721d8) SHA1(de24ec4bac7ec761c7b25a7ba62b850006444bbc) )
 	ROM_LOAD( "pf_5",         0x004000, 0x001000, CRC(8a858464) SHA1(55c71ce1c30e908dfc8c21237256dfbb75c55363) )
 	ROM_LOAD( "pf_6",         0x005000, 0x001000, CRC(5b649918) SHA1(191a221a515c261d90d7432443a7fbc8da71e7ac) )
 	ROM_LOAD( "pf_7",         0x006000, 0x001000, CRC(c4fdd2ac) SHA1(76c5645534b87dde87acfb4140d0f3ba18c95cd2) )
@@ -6245,6 +6271,7 @@ GAME( 1984?, chalgirl,    0,        chalgirl, royalmah, royalmah_prgbank_state, 
 GAME( 1983,  seljan,      0,        seljan,   seljan,   royalmah_state,         empty_init,    ROT0,   "Jem / Dyna Corp",            "Sel-Jan (Japan)",                       0 )
 GAME( 1983,  janyoup2,    royalmj,  janyoup2, janyoup2, royalmah_state,         empty_init,    ROT0,   "Cosmo Denshi",               "Janyou Part II (ver 7.03, July 1 1983)",0 )
 GAME( 1983,  janyoup2a,   royalmj,  janyoup2, janyoup2, royalmah_state,         empty_init,    ROT0,   "Cosmo Denshi",               "Janyou Part II (ver 7.03, July 1 1983, no title screen)",0 )
+GAME( 1983,  janyoup2702, royalmj,  janyoup2, janyoup2, royalmah_state,         empty_init,    ROT0,   "Cosmo Denshi",               "Janyou Part II (ver 7.02, July 1 1983)",0 )
 GAME( 1985,  tahjong,     royalmj,  tahjong,  tahjong,  royalmah_prgbank_state, init_tahjong,  ROT0,   "Bally Pond / Nasco",         "Tahjong Yakitori (ver. 2-1)",           0 ) // 1985 Jun. 17
 GAME( 1981,  janputer,    0,        royalmah, royalmah, royalmah_state,         empty_init,    ROT0,   "bootleg (Paradise Denshi Ltd. / Mes)", "New Double Bet Mahjong (bootleg of Royal Mahjong, set 1)", 0 ) // MT #05392
 GAME( 1981,  janputera,   janputer, royalmah, royalmah, royalmah_state,         empty_init,    ROT0,   "bootleg (Paradise Denshi Ltd. / Ever Denshi)", "New Double Bet Mahjong (bootleg of Royal Mahjong, set 2)", 0 )
@@ -6252,6 +6279,7 @@ GAME( 1990,  akamj,       0,        ippatsu,  ippatsu,  royalmah_state,         
 GAME( 1984,  rkjanoh2,    0,        rkjanoh2, royalmah, royalmah_prgbank_state, init_chalgirl, ROT0,   "SNK / Dyna Corp",            "Royal King Jang Oh 2 (v4.00 1984 Jun 10th)", MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING ) // never seems to set the palette bank?
 GAME( 1984,  janoh,       0,        janoh,    royalmah, royalmah_state,         empty_init,    ROT0,   "Toaplan",                    "Jan Oh (set 1)",                        MACHINE_NOT_WORKING )
 GAME( 1984,  janoha,      janoh,    janoha,   royalmah, royalmah_state,         empty_init,    ROT0,   "Toaplan",                    "Jan Oh (set 2)",                        MACHINE_NOT_WORKING ) // this one is complete?
+GAME( 1984,  janohb,      janoh,    janoh,    royalmah, royalmah_state,         empty_init,    ROT0,   "Toaplan",                    "Jan Oh (set 3)",                        MACHINE_NOT_WORKING )
 GAME( 1985,  jansou,      0,        jansou,   jansou,   royalmah_state,         init_jansou,   ROT0,   "Dyna Computer",              "Jansou (set 1)",                        MACHINE_NOT_WORKING | MACHINE_NO_SOUND )
 GAME( 1985,  jansoua,     jansou,   jansou,   jansou,   royalmah_state,         init_jansou,   ROT0,   "Dyna Computer",              "Jansou (V 1.1)",                        0 )
 GAME( 1986,  jangtaku,    0,        jansou,   jansou,   royalmah_state,         init_jansou,   ROT0,   "Dyna Computer",              "Jang Taku (V 1.3)",                     0 )

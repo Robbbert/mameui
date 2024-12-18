@@ -17,6 +17,7 @@
   * Golden Poker Double Up (bootleg, set 3),           1983, Intercoast (bootleg).
   * Golden Poker Double Up (bootleg, set 4),           1983, Intercoast (bootleg).
   * Golden Poker Double Up (bootleg, set 5),           198?, Bootleg.
+  * Golden Poker Double Up (tearoom*sara hack),        1981, Bonanza Enterprises, Ltd.
   * Videotron Poker (cards selector, set 1),           198?, Unknown.
   * Videotron Poker (cards selector, set 2),           198?, Unknown.
   * Videotron Poker (normal controls),                 198?, Unknown.
@@ -33,8 +34,10 @@
   * Jack Potten's Poker (set 11, German, W.W.),        198?, Bootleg.
   * Jack Potten's Poker (set 12, no Double-Up),        198?, Bootleg.
   * Jack Potten's Poker (set 13, ICP-1 PCB),           198?, Unknown.
-  * Jack Potten's Poker (set 14, ICP-1 PCB),           198?, Bootleg (PED).
-  * Jack Potten's Poker (w/fever, ICP-1 PCB),          198?, Bootleg.
+  * Jack Potten's Poker (set 14, ICP-1 PCB),           198?, Bootleg.
+  * Jack Potten's Poker (set 15, w/fever, ICP-1 PCB),  198?, Bootleg (PED).
+  * Jack Potten's Poker (set 16, ICP-1 PCB),           1987, Bootleg (PED).
+  * Jack Potten's Poker (set 17, ICP-1 PCB),           1987, Bootleg (PED).
   * Jack Potten's Poker (NGold, set 1),                198?, Unknown.
   * Jack Potten's Poker (NGold, set 2),                198?, Unknown.
   * Jack Potten's Poker (NGold, set 3),                198?, Unknown.
@@ -163,9 +166,6 @@
   * Maxi Double Poker (version 1.8),                   1990, Blitz System Inc.
   * Wild Card (Olympic Games, v2.0),                   1989, Olympic Video Gaming PTY LTD.
   * Black jack (Olympic Games, v5.04, upgrade for WC), 1989, Olympic Video Gaming PTY LTD.
-
-
-  Total: 153 sets.
 
 
 ************************************************************************************
@@ -982,7 +982,7 @@
   TODO:
 
   - Missing PIA connections.
-  - Final cleanup and split the driver.
+  - Final cleanup.
 
 
 ************************************************************************************/
@@ -4537,6 +4537,25 @@ static INPUT_PORTS_START( glfever )
 INPUT_PORTS_END
 
 
+static INPUT_PORTS_START( potnpkro )  // ICP-1 w/daughterboard
+	PORT_INCLUDE( goldnpkr )
+
+	PORT_MODIFY("SW1")
+	PORT_DIPNAME( 0x10, 0x00, "Coinage Sensitivity" )  PORT_DIPLOCATION("SW1:1")
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x10, DEF_STR( On ) )
+	PORT_DIPNAME( 0x20, 0x20, DEF_STR( Unknown ) )  PORT_DIPLOCATION("SW1:2")
+	PORT_DIPSETTING(    0x20, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x40, 0x40, DEF_STR( Unknown ) )  PORT_DIPLOCATION("SW1:3")
+	PORT_DIPSETTING(    0x40, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )  PORT_DIPLOCATION("SW1:4")
+	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+INPUT_PORTS_END
+
+
 /*********************************************
 *              Graphics Layouts              *
 *********************************************/
@@ -5576,6 +5595,30 @@ ROM_START( goldnpkg )
 ROM_END
 
 
+/* Bonanza Golden Poker Double Up.
+   Original hardware, with tearoom*sara text hack.
+
+   You can play 1-50 credits.
+   So the hackers removed the "PLAY 1 TO 50" string to put "TEAROOM*SARA" instead.
+*/
+ROM_START( goldnpkh )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "spf.12a", 0x4000, 0x4000, CRC(22963c83) SHA1(ac9e66f0c548011aac88b9f32a924995ba3651e4) )
+
+	ROM_REGION( 0x6000, "gfx1", 0 )
+	ROM_FILL(               0x0000, 0x4000, 0x0000 ) // filling the R-G bitplanes
+	ROM_LOAD( "u38_5a.bin", 0x4000, 0x2000, CRC(32705e1d) SHA1(84f9305af38179985e0224ae2ea54c01dfef6e12) )    // char ROM
+
+	ROM_REGION( 0x6000, "gfx2", 0 )
+	ROM_LOAD( "u43_2a.bin", 0x0000, 0x2000, CRC(10b34856) SHA1(52e4cc81b36b4c807b1d4471c0f7bea66108d3fd) )    // cards deck gfx, bitplane1
+	ROM_LOAD( "u40_4a.bin", 0x2000, 0x2000, CRC(5fc965ef) SHA1(d9ecd7e9b4915750400e76ca604bec8152df1fe4) )    // cards deck gfx, bitplane2
+	ROM_COPY( "gfx1",   0x4800, 0x4000, 0x0800 )    // cards deck gfx, bitplane3. found in the 2nd quarter of the char rom
+
+	ROM_REGION( 0x0100, "proms", 0 )
+	ROM_LOAD( "tbp24s10n.7d",       0x0000, 0x0100, CRC(7f31066b) SHA1(15420780ec6b2870fc4539ec3afe4f0c58eedf12) )
+ROM_END
+
+
 /*  Videotron Poker.
     Alternative controls set, with cards selector...
 */
@@ -6002,6 +6045,58 @@ ROM_START( potnpkrn )
 
 	ROM_REGION( 0x0100, "proms", 0 )
 	ROM_LOAD( "tbp24s10n.7d",       0x0000, 0x0100, CRC(7f31066b) SHA1(15420780ec6b2870fc4539ec3afe4f0c58eedf12) )
+ROM_END
+
+
+/*
+  Golden/Potten's Poker
+  1986 0415 VER 7.0 1987 06-03 BY PED.
+
+  ICP-1 hardware with modifications.
+  The first set has bookkeeping with DSW test.
+  The second set is a hack of the first with unknown mods.
+
+*/
+ROM_START( potnpkro ) // ICP-1 wires hack set. 
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "7.16a", 0x6000, 0x1000, CRC(2dc5e372) SHA1(70a251efe879bc1122baa78984251041a355c895) )
+	ROM_LOAD( "x.17a", 0x7000, 0x1000, CRC(1694a0d8) SHA1(bb1132d1e75347ad5156d2b3866aad255f7d53ca) )
+
+	ROM_REGION( 0x1800, "gfx1", 0 )
+	ROM_FILL(          0x0000, 0x1000, 0x0000 ) // filling the R-G bitplanes
+	ROM_LOAD( "0.9a",  0x1000, 0x0800, CRC(1090e7f0) SHA1(26a7fc8853debb9a759811d7fee39410614c3895) )    // char ROM
+	ROM_IGNORE(                0x0800)  // identical halves, discarding the 2nd half
+
+	ROM_REGION( 0x1800, "gfx2", 0 )
+	ROM_LOAD( "7.4a", 0x0000, 0x0800, CRC(f2f94661) SHA1(f37f7c0dff680fd02897dae64e13e297d0fdb3e7) )    // cards deck gfx, bitplane1
+	ROM_LOAD( "8.6a", 0x0800, 0x0800, CRC(6bbb1e2d) SHA1(51ee282219bf84218886ad11a24bc6a8e7337527) )    // cards deck gfx, bitplane2
+	ROM_LOAD( "9.7a", 0x1000, 0x0800, CRC(907b21df) SHA1(a6a3968b2ee23ef15ecc8c3b2afbe1b2cc5f42e7) )    // cards deck gfx, bitplane3
+
+	ROM_REGION( 0x0100, "proms", 0 )  // same as common golden poker
+	ROM_LOAD( "tbp24s10n_wh.bin", 0x0000, 0x0100, CRC(7f31066b) SHA1(15420780ec6b2870fc4539ec3afe4f0c58eedf12) )
+ROM_END
+
+ROM_START( potnpkrp ) // ICP-1 PROM mod set. 
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "6.16a",            0x6000, 0x1000, CRC(2dc5e372) SHA1(70a251efe879bc1122baa78984251041a355c895) )
+	ROM_LOAD( "95_09_hn71_7.17a", 0x7000, 0x1000, CRC(2353317a) SHA1(18bf8cfe30aaa4b05207cc250ec1c024bc19ed56) )
+
+	ROM_REGION( 0x1800, "gfx1", 0 )
+	ROM_FILL(          0x0000, 0x1000, 0x0000 ) // filling the R-G bitplanes
+	ROM_LOAD( "4.9a",  0x1000, 0x0800, CRC(1c080c35) SHA1(cb3ed14973029b3891635a4b05d8d2b9dae8aea8) )    // char ROM
+	ROM_IGNORE(                0x0800)  // identical halves, discarding the 2nd half
+
+	ROM_REGION( 0x1800, "gfx2", 0 )
+	ROM_LOAD( "1.4a", 0x0000, 0x0800, CRC(f2f94661) SHA1(f37f7c0dff680fd02897dae64e13e297d0fdb3e7) )    // cards deck gfx, bitplane1
+	ROM_LOAD( "2.6a", 0x0800, 0x0800, CRC(6bbb1e2d) SHA1(51ee282219bf84218886ad11a24bc6a8e7337527) )    // cards deck gfx, bitplane2
+	ROM_LOAD( "3.7a", 0x1000, 0x0800, CRC(77143e12) SHA1(b459f704d89be1dd64de3514c0adc6a5d5364749) )    // cards deck gfx, bitplane3
+	ROM_IGNORE(               0x0800)  // identical halves, discarding the 2nd half
+
+	ROM_REGION( 0x0100, "proms", 0 )  // high addressing pin tied to GND. the unused second half turns the background color to magenta.
+	ROM_LOAD( "tbp24s10n_pm.bin", 0x0000, 0x0080, CRC(1e79c53d) SHA1(8aa5ae1b82c6e8277427a53a54718f72737e4ec3) )
+	ROM_IGNORE(                           0x0080)
+	ROM_RELOAD(                   0x0080, 0x0080)
+	ROM_IGNORE(                           0x0080)
 ROM_END
 
 
@@ -11266,6 +11361,7 @@ ROM_START( jkrbonus ) // PC0-009-31 PCB with sub PCB with CPU, its ROM and RAM, 
 	ROM_LOAD( "tbp24sa10.bin", 0x0000, 0x0100, BAD_DUMP CRC(7f31066b) SHA1(15420780ec6b2870fc4539ec3afe4f0c58eedf12) ) // not dumped for this set
 ROM_END
 
+
 /***************************************************************
 
   Casino Poker.
@@ -13075,6 +13171,7 @@ GAMEL( 198?, goldnpkd,  goldnpkr, goldnpkr, goldnpkr, goldnpkr_state, empty_init
 GAMEL( 1983, goldnpke,  goldnpkr, goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "Intercoast (bootleg)",     "Golden Poker Double Up (bootleg, set 3)",    0,                layout_goldnpkr )
 GAMEL( 1983, goldnpkf,  goldnpkr, goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "Intercoast (bootleg)",     "Golden Poker Double Up (bootleg, set 4)",    0,                layout_goldnpkr )
 GAMEL( 1983, goldnpkg,  goldnpkr, goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "bootleg",                  "Golden Poker Double Up (bootleg, set 5)",    0,                layout_goldnpkr )
+GAMEL( 1983, goldnpkh,  goldnpkr, goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "Bonanza Enterprises, Ltd", "Golden Poker Double Up (tearoom*sara hack)", 0,                layout_goldnpkr )
 
 GAMEL( 198?, videtron,  0,        goldnpkr, videtron, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Videotron Poker (cards selector, set 1)",    0,                layout_goldnpkr )
 GAMEL( 198?, videtron2, videtron, goldnpkr, videtron, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Videotron Poker (cards selector, set 2)",    0,                layout_goldnpkr )
@@ -13093,8 +13190,10 @@ GAMEL( 198?, potnpkri,  pottnpkr, pottnpkr, goldnpkr, goldnpkr_state, empty_init
 GAMEL( 198?, potnpkrj,  pottnpkr, goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "bootleg",                  "Jack Potten's Poker (set 11, German, W.W.)", 0,                layout_goldnpkr )
 GAMEL( 198?, potnpkrk,  pottnpkr, goldnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "bootleg",                  "Jack Potten's Poker (set 12, no Double-Up)", 0,                layout_goldnpkr )
 GAMEL( 198?, potnpkrl,  pottnpkr, pottnpkr, potnpkra, goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Jack Potten's Poker (set 13, ICP-1 PCB)",    0,                layout_goldnpkr )  // unencrypted IPC-1 PCB.
-GAMEL( 1988, potnpkrm,  pottnpkr, pottnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "bootleg (PED)",            "Jack Potten's Poker (set 14, ICP-1 PCB)",    0,                layout_goldnpkr )  // unencrypted IPC-1 PCB.
-GAME ( 198?, potnpkrn,  pottnpkr, glfever,  glfever,  goldnpkr_state, init_glfev,    ROT0,   "bootleg",                  "Jack Potten's Poker (w/fever, ICP-1 PCB)",   0 )
+GAMEL( 1988, potnpkrm,  pottnpkr, pottnpkr, goldnpkr, goldnpkr_state, empty_init,    ROT0,   "bootleg",                  "Jack Potten's Poker (set 14, ICP-1 PCB)",    0,                layout_goldnpkr )  // unencrypted IPC-1 PCB.
+GAME ( 198?, potnpkrn,  pottnpkr, glfever,  glfever,  goldnpkr_state, init_glfev,    ROT0,   "bootleg (PED)",            "Jack Potten's Poker (set 15, w/fever, ICP-1 PCB)", 0 )
+GAMEL( 1987, potnpkro,  pottnpkr, goldnpkr, potnpkro, goldnpkr_state, empty_init,    ROT0,   "bootleg (PED)",            "Jack Potten's Poker (set 16, ICP-1 PCB)",    0,                layout_goldnpkr ) // ICP-1 with mods, 1986 0415 VER 7.0 1987 06-03 BY PED. (wires hack)
+GAMEL( 1987, potnpkrp,  pottnpkr, goldnpkr, potnpkro, goldnpkr_state, empty_init,    ROT0,   "bootleg (PED)",            "Jack Potten's Poker (set 17, ICP-1 PCB)",    0,                layout_goldnpkr ) // ICP-1 with mods, 1986 0415 VER 7.0 1987 06-03 BY PED. (PROM mod)
 GAMEL( 198?, ngold,     pottnpkr, pottnpkr, ngold,    goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Jack Potten's Poker (NGold, set 1)",         0,                layout_goldnpkr )
 GAMEL( 198?, ngolda,    pottnpkr, pottnpkr, ngold,    goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Jack Potten's Poker (NGold, set 2)",         0,                layout_goldnpkr )
 GAMEL( 198?, ngoldb,    pottnpkr, pottnpkr, ngoldb,   goldnpkr_state, empty_init,    ROT0,   "<unknown>",                "Jack Potten's Poker (NGold, set 3)",         0,                layout_goldnpkr )
