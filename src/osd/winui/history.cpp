@@ -64,16 +64,15 @@ HSOURCEINFO;
 
 /*************************** START CONFIGURABLE AREA *******************************/
 // number of dats we support
-#define MAX_HFILES 6
+#define MAX_HFILES 5
 // The order of these is the order they are displayed
 const HGAMEINFO m_gameInfo[MAX_HFILES] =
 {
-	{ "startup.dat",  "\n**** :STARTUP: ****\n\n",          "$mame",  1 },
+	{ "gameinit.dat", "\n**** :GAMEINIT: ****\n\n",         "$mame",  1 },
 	{ "history.xml",  "\n**** :HISTORY: ****\n\n",          "<text>",   1 },
 //	{ "sysinfo.dat",  "\n**** :SYSINFO: ****\n\n",          "$bio",   1 },
 	{ "messinfo.dat", "\n**** :MESSINFO: ****\n\n",         "$mame",  1 },
 	{ "mameinfo.dat", "\n**** :MAMEINFO: ****\n\n",         "$mame",  1 },
-	{ "gameinit.dat", "\n**** :GAMEINIT: ****\n\n",         "$mame",  1 },
 	{ "command.dat",  "\n**** :COMMANDS: ****\n\n",         "$cmd",   1 },
 //	{ "story.dat",    "\n**** :HIGH SCORES: ****\n\n",      "$story", 0 },
 //	{ "marp.dat",     "\n**** :MARP HIGH SCORES: ****\n\n", "$marp",  0 },
@@ -87,7 +86,6 @@ const HSOURCEINFO m_sourceInfo[MAX_HFILES] =
 	{ "messinfo.dat", "\n***:MESSINFO DRIVER: ",  "$drv" },
 	{ "mameinfo.dat", "\n***:MAMEINFO DRIVER: ",  "$drv" },
 	{ NULL },
-	{ NULL },
 //	{ NULL },
 //	{ NULL },
 };
@@ -97,7 +95,6 @@ const HSOURCEINFO m_swInfo[MAX_HFILES] =
 	{ NULL },
 	{ "history.xml",  "\n**** :HISTORY item: ",     "<text>" },
 //	{ NULL },
-	{ NULL },
 	{ NULL },
 	{ NULL },
 	{ NULL },
