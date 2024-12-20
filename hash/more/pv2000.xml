@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 28 -->
+<!-- Number of items in this list = 27 -->
 <softwarelist name="pv2000" description="pv2000 loose roms">
 	<software name="pv2381f7efd9582d">
 		<description>aerial</description>
@@ -119,16 +119,6 @@
 		<part name="cart" interface="pv2000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Cross Chase (2018-10-29)(Caruso, Fabrizio).rom" size="16384" crc="d951598f" sha1="748dab37a9e3486f39838ade96a3d0951e643b7a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pv2e310dcb6b2e12">
-		<description>Cross Chase (2021-05-13)(Caruso, Fabrizio)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pv2000_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).rom" size="16384" crc="6ed15819" sha1="e310dcb6b2e125a313faf88f562083319be8fba9"/>
 			</dataarea>
 		</part>
 	</software>

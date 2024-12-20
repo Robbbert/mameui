@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 139 -->
+<!-- Number of items in this list = 138 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag1516859334668">
 		<description>8biteer</description>
@@ -239,16 +239,6 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="brazer.j64" size="4194304" crc="106cef87" sha1="739dce043a498c7babee44a3e4d7cc9ce7df881b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="jagcdfefdf28dd91">
-		<description>Brutal Sports Football</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Brutal Sports Football.j64" size="2097152" crc="bcb1a4bf" sha1="cdfefdf28dd9127f7a9425088a1ee3ea88dfb618"/>
 			</dataarea>
 		</part>
 	</software>

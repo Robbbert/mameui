@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1857 -->
+<!-- Number of items in this list = 1855 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5829,26 +5829,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="537838">
 				<rom name="Fist of the North Star T-Eng (2017)(Ermani S. Costa).bin" size="537838" crc="9ec420cc" sha1="6afe36cbe2257b3dbc3ecc5d11ed73dc20d7ac64"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen2bad4a0db0f95">
-		<description>Fix it Felix Jr. (PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="601870">
-				<rom name="Fix it Felix Jr. (PD).bin" size="601870" crc="424ff451" sha1="2bad4a0db0f95a7588e75f344c25427a6e83522b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genc097b6dda7c00">
-		<description>Fix It Felix Jr</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Fix It Felix Jr.md" size="131072" crc="0b3ab7e9" sha1="c097b6dda7c0014e269884602bacd0eaff02d005"/>
 			</dataarea>
 		</part>
 	</software>
