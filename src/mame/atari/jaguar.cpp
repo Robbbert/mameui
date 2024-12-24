@@ -1866,7 +1866,7 @@ void jaguar_state::jaguar(machine_config &config)
 	DAC_16BIT_R2R_TWOS_COMPLEMENT(config, m_rdac, 0).add_route(ALL_OUTPUTS, "rspeaker", 1.0); // unknown DAC
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "abs,bin,cof,jag,prg,rom", attotime::from_seconds(1)).set_load_callback(FUNC(jaguar_state::quickload_cb));
+	QUICKLOAD(config, "quickload", "abs,bin,cof,jag,prg,rom", attotime::from_seconds(2)).set_load_callback(FUNC(jaguar_state::quickload_cb));
 
 	/* cartridge */
 	generic_cartslot_device &cartslot(GENERIC_CARTSLOT(config, "cartslot", generic_plain_slot, "jaguar_cart", "j64"));
@@ -1994,8 +1994,8 @@ std::pair<std::error_condition, std::string> jaguar_state::quickload_cb(snapshot
 	m_shared_ram[0]=0x1000;
 
 	/* Transfer control to image */
-	m_maincpu->set_pc(quickload_begin);
-	m_shared_ram[1]=quickload_begin;
+	m_maincpu->set_pc(start);
+	m_shared_ram[1]=start;
 	return std::make_pair(std::error_condition(), std::string());
 }
 
