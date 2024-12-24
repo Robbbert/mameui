@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1085 -->
+<!-- Number of items in this list = 1086 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -6309,6 +6309,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Initial D (2018-09-29)(ggracia10).gbc" size="131072" crc="dec475e1" sha1="72bba94c8d80cd346ca5f28429cfed27777d5cb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcafe34da00f3d1">
+		<description>Inspector Waffles Early Days (World) (Digital) (GB Compatible) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Inspector Waffles Early Days (World) (Digital) (GB Compatible) (Aftermarket) (Unl).gbc" size="2097152" crc="b01db7d0" sha1="afe34da00f3d169029b4962f3b1732488668b984"/>
 			</dataarea>
 		</part>
 	</software>

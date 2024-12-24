@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 33 -->
+<!-- Number of items in this list = 52 -->
 <softwarelist name="pc98" description="pc98 loose roms">
 	<software name="p9851e0ee77253df">
 		<description>31_disk_a</description>
@@ -152,6 +152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p98f1805250dcbd8">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="697008">
+				<rom name="aerial.d88" size="697008" crc="dd09e5c4" sha1="f1805250dcbd87e521f90b39300fefe38cf2b319"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p98914443b8c3c4d">
 		<description>Akatsuki no Bizanteira (1994)(ASCII)(JP)(Disk 1 of 2)</description>
 		<year>????</year>
@@ -222,6 +232,176 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p986608a51e5110f">
+		<description>alvaleak_boukenki_data_disk_a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3443747">
+				<rom name="alvaleak_boukenki_data_disk_a.mfm" size="3443747" crc="19e184fb" sha1="6608a51e5110ff0bdf285943bc2b6249c60f83d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p982e09cecac4619">
+		<description>alvaleak_boukenki_data_disk_b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3444210">
+				<rom name="alvaleak_boukenki_data_disk_b.mfm" size="3444210" crc="252bdabb" sha1="2e09cecac4619944cff9135a0e85c452cccfcf89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p985339f89a45a5b">
+		<description>alvaleak_boukenki_data_disk_c</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3375217">
+				<rom name="alvaleak_boukenki_data_disk_c.mfm" size="3375217" crc="3e0ae47a" sha1="5339f89a45a5be1db4f0b8c6c898db38465ecb7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98fb6085f267078">
+		<description>alvaleak_boukenki_opening_disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3443699">
+				<rom name="alvaleak_boukenki_opening_disk.mfm" size="3443699" crc="66fbffcf" sha1="fb6085f2670780c3707f9108947dce8d2ceda91e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98602e75bc2215a">
+		<description>alvaleak_boukenki_system_disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3428276">
+				<rom name="alvaleak_boukenki_system_disk.mfm" size="3428276" crc="c008e0a1" sha1="602e75bc2215a0ce74272411564838d4e886d2e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98785dd5b1a5f41">
+		<description>amaranth3_disk_a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3373799">
+				<rom name="amaranth3_disk_a.mfm" size="3373799" crc="d32c190d" sha1="785dd5b1a5f41dc3d9d86b916bca42fff45d360c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98dfb29179e08e4">
+		<description>amaranth3_disk_b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3399618">
+				<rom name="amaranth3_disk_b.mfm" size="3399618" crc="14967c3c" sha1="dfb29179e08e4099276e77832d443fa05d408d44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p9860e153c46480f">
+		<description>amaranth3_disk_c</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3417211">
+				<rom name="amaranth3_disk_c.mfm" size="3417211" crc="29ec3a43" sha1="60e153c46480fdffae3a8727b77a2af961c96b47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98a56cff446757e">
+		<description>amaranth3_disk_d</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3390845">
+				<rom name="amaranth3_disk_d.mfm" size="3390845" crc="ee4007b8" sha1="a56cff446757e8df998a87e6ed41ab38e0f516e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p9839432fc81413d">
+		<description>amaranth3_system_disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3449475">
+				<rom name="amaranth3_system_disk.mfm" size="3449475" crc="7d65841d" sha1="39432fc81413d96dcf61723ea11ca53754ec3a2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p981934b5720b75f">
+		<description>Angel Hearts (19xx)(Elf)(JP)(Disk 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="908284">
+				<rom name="Angel Hearts (19xx)(Elf)(JP)(Disk 1 of 2).fdd" size="908284" crc="88324405" sha1="1934b5720b75f8f049c25f6b98a6418d7995ae34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p981be21e203da23">
+		<description>Angel Hearts (19xx)(Elf)(JP)(Disk 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="863228">
+				<rom name="Angel Hearts (19xx)(Elf)(JP)(Disk 2 of 2).fdd" size="863228" crc="99f28037" sha1="1be21e203da23afa8a5a8ed937446ac5bde06bdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98d4e9010260a8b">
+		<description>angel_disk_a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3443764">
+				<rom name="angel_disk_a.mfm" size="3443764" crc="347ed990" sha1="d4e9010260a8b835f66f5e910ef63fbb6556ae03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p987be4dcb0e4ec9">
+		<description>angel_disk_b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3443813">
+				<rom name="angel_disk_b.mfm" size="3443813" crc="3b0e3e22" sha1="7be4dcb0e4ec9393472f8d82de7c9e8cfff80dc0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p98a191889404287">
+		<description>angel_disk_c</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3443784">
+				<rom name="angel_disk_c.mfm" size="3443784" crc="983e8a12" sha1="a19188940428716d545df84c409007245039b9e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p980971dd069d501">
+		<description>angel_disk_d</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="3444420">
+				<rom name="angel_disk_d.mfm" size="3444420" crc="3d3c3dc5" sha1="0971dd069d5012719c5569cef0d94f32615770a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p9889dc49e3f10eb">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="697008">
+				<rom name="antiair.d88" size="697008" crc="e51b9f5f" sha1="89dc49e3f10eb49baf58b3a7a90844190e755840"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p98aa23aa0c46680">
 		<description>area_88_ikkakujuu_no_kiseki_disk_a</description>
 		<year>????</year>
@@ -259,6 +439,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1165308">
 				<rom name="Arrow Gunner EX (1994)(Studio Ray)(JP).fdd" size="1165308" crc="ad4e1d5b" sha1="7a02df496c7640f1b33b75a3c456def41cb5ef31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p985f8e2942891ea">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="697008">
+				<rom name="ascend.d88" size="697008" crc="8da0d67b" sha1="5f8e2942891ea415cb92a79218e966c8325ea938"/>
 			</dataarea>
 		</part>
 	</software>

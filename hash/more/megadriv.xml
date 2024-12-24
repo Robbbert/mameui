@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1855 -->
+<!-- Number of items in this list = 1856 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -18389,6 +18389,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Zero Wing(F).bin" size="1048576" crc="237759c4" sha1="923e33c533e263a75cd6f1e24ac81d2f05c60151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen62bc26db0df31">
+		<description>Zombies Ate My Neighbors (World) (Limited Run Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zombies Ate My Neighbors (World) (Limited Run Games).md" size="1048576" crc="583db890" sha1="62bc26db0df31eab4938aa86162be2c55aeb6970"/>
 			</dataarea>
 		</part>
 	</software>

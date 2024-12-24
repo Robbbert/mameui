@@ -153,17 +153,22 @@ private:
 
 	uint8_t spibuf_r()
 	{
-		return m_cart->read();
+		if (memregion("cartslot:rom"))
+			return m_cart->read();
+		else
+			return 0xff;
 	}
 
 	void spidir_w(int state)
 	{
-		m_cart->dir_w(state);
+		if (memregion("cartslot:rom"))
+			m_cart->dir_w(state);
 	}
 
 	void spibuf_w(uint8_t data)
 	{
-		m_cart->write(data);
+		if (memregion("cartslot:rom"))
+			m_cart->write(data);
 	}
 
 	void get_music_command_bit(uint8_t bit);
@@ -625,6 +630,7 @@ void monon_color_state::out2_w(uint8_t data)
 			// nothing?
 		}
 		else
+		if (memregion("cartslot:rom"))
 		{
 			m_cart->set_ready();
 		}

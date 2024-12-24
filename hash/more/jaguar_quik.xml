@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 161 -->
+<!-- Number of items in this list = 162 -->
 <softwarelist name="jaguar_quik" description="jaguar_quik loose roms">
 	<software name="jagb5460c28eb636">
 		<description>8biteer</description>
@@ -309,6 +309,16 @@
 		<part name="quik" interface="jaguar_quik">
 			<dataarea name="quik" size="460756">
 				<rom name="Blue Lightning Alphas_Demos - DEMOMock.ABS" size="460756" crc="e259de6a" sha1="e4312bd95cccd26d7468b4cc35785c03d568af2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagf06dfbd214a85">
+		<description>Breakout2000 (Prototype) 3-27 (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="2097152">
+				<rom name="Breakout2000 (Prototype) 3-27 (2).rom" size="2097152" crc="b50fcbfa" sha1="f06dfbd214a851ed369e937c501dbc9b89e86831"/>
 			</dataarea>
 		</part>
 	</software>
