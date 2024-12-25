@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 162 -->
+<!-- Number of items in this list = 163 -->
 <softwarelist name="jaguar_quik" description="jaguar_quik loose roms">
 	<software name="jagb5460c28eb636">
 		<description>8biteer</description>
@@ -312,13 +312,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="jagf06dfbd214a85">
-		<description>Breakout2000 (Prototype) 3-27 (2)</description>
+	<software name="jagdd0505579035f">
+		<description>Breakout2000 (Prototype) 3-27</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="jaguar_quik">
-			<dataarea name="quik" size="2097152">
-				<rom name="Breakout2000 (Prototype) 3-27 (2).rom" size="2097152" crc="b50fcbfa" sha1="f06dfbd214a851ed369e937c501dbc9b89e86831"/>
+			<dataarea name="quik" size="2088960">
+				<rom name="Breakout2000 (Prototype) 3-27.rom" size="2088960" crc="d8696f23" sha1="dd0505579035fd4b402be64d975b41496fcfb4ee"/>
 			</dataarea>
 		</part>
 	</software>
@@ -529,6 +529,16 @@
 		<part name="quik" interface="jaguar_quik">
 			<dataarea name="quik" size="1470240">
 				<rom name="downfall.bin" size="1470240" crc="b6bd78e8" sha1="9589697d06e3cd2278c0cf4e6ff479f99466068c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagfb7ed8d7766fb">
+		<description>DRAGON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="2088960">
+				<rom name="DRAGON.ROM" size="2088960" crc="7b743c7c" sha1="fb7ed8d7766fb097860951b3975d7e30e7ff4b0f"/>
 			</dataarea>
 		</part>
 	</software>

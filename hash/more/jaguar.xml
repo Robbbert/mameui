@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 138 -->
+<!-- Number of items in this list = 139 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag1516859334668">
 		<description>8biteer</description>
@@ -269,6 +269,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="BuggyBoy.j64" size="1048576" crc="95e3fc74" sha1="4c758bb2cd0a655fa32ffc44f480df427fce34ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagee5fea3b99177">
+		<description>Burn Out [Prototype]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Burn Out [Prototype].j64" size="2097152" crc="0f698fb3" sha1="ee5fea3b99177d9e88aeedcad8f01173f1062b87"/>
 			</dataarea>
 		</part>
 	</software>

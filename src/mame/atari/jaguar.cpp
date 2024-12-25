@@ -1974,7 +1974,7 @@ std::pair<std::error_condition, std::string> jaguar_state::quickload_cb(snapshot
 	/* Now that we have the info, reload the file */
 	if ((start + quickload_size) < 0x200000)
 	{
-		memset(m_shared_ram, 0, 0x200000);
+		//memset(m_shared_ram, 0, 0x200000);
 		image.fseek(skip, SEEK_SET);
 		image.fread( &m_shared_ram[start/4], quickload_size-skip);
 		fix_endian(&m_shared_ram[start/4], quickload_size-skip);

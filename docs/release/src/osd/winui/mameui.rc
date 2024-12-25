@@ -127,7 +127,7 @@ BEGIN
     POPUP "&Options"
     BEGIN
         MENUITEM "System List &Font...",        ID_OPTIONS_FONT
-        MENUITEM "System List &Clone Color...", ID_OPTIONS_CLONE_COLOR
+//        MENUITEM "System List &Clone Color...", ID_OPTIONS_CLONE_COLOR
         MENUITEM "&Directories...",             ID_OPTIONS_DIR
         MENUITEM "Default System &Options...",  ID_OPTIONS_DEFAULTS
         MENUITEM "&Reset to Default...",        ID_OPTIONS_RESET_DEFAULTS

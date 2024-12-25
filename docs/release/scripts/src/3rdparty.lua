@@ -29,7 +29,7 @@ project "expat"
 		"PACKAGE=\"expat\"",
 		"PACKAGE_BUGREPORT=\"expat-bugs@libexpat.org\"",
 		"PACKAGE_NAME=\"expat\"",
-		"PACKAGE_STRING=\"expat 2.2.10\"",
+		"PACKAGE_STRING=\"expat-2.2.10\"",
 		"PACKAGE_TARNAME=\"expat\"",
 		"PACKAGE_URL=\"\"",
 		"PACKAGE_VERSION=\"2.2.10\"",
@@ -1499,7 +1499,7 @@ end
 			MAME_DIR .. "3rdparty/bx/include/compat/freebsd",
 		}
 
-	configuration { "linux*" }
+	configuration { "linux*", "not mingw*" }
 		includedirs {
 			MAME_DIR .. "3rdparty/bgfx/3rdparty/directx-headers/include/wsl/stubs",
 			MAME_DIR .. "3rdparty/bx/include/compat/linux",
