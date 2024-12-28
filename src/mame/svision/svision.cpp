@@ -50,6 +50,7 @@ public:
 		, m_joy(*this, "JOY")
 		, m_palette(*this, "palette")
 		, m_bank(*this, "bank%u", 1U)
+		, m_memview(*this, "memview")
 	{ }
 
 	void svisionp(machine_config &config);
@@ -70,6 +71,7 @@ protected:
 	required_device<palette_device> m_palette;
 
 	required_memory_bank_array<2> m_bank;
+	memory_view m_memview;
 
 	memory_region *m_cart_rom = nullptr;
 
@@ -435,8 +437,10 @@ void svision_state::program_map(address_map &map)
 	map(0x2000, 0x3fff).rw(FUNC(svision_state::regs_r), FUNC(svision_state::regs_w)).share(m_reg);
 	map(0x4000, 0x5fff).ram().share(m_videoram);
 	map(0x6000, 0x7fff).noprw();
-	map(0x8000, 0xbfff).bankr(m_bank[0]);
-	map(0xc000, 0xffff).bankr(m_bank[1]);
+	map(0x8000, 0xffff).view(m_memview);
+	m_memview[0](0x8000, 0xffff).nopr();
+	m_memview[1](0x8000, 0xbfff).bankr(m_bank[0]);
+	m_memview[1](0xc000, 0xffff).bankr(m_bank[1]);
 }
 
 void svisions_state::program_map(address_map &map)
@@ -629,6 +633,7 @@ DEVICE_IMAGE_LOAD_MEMBER(svision_state::cart_load)
 
 void svision_state::machine_start()
 {
+	m_memview.select(0);
 	m_timer1 = timer_alloc(FUNC(svision_state::timer), this);
 	m_dma_finished = false;
 
@@ -641,6 +646,7 @@ void svision_state::machine_start()
 		const int num_banks = m_cart_rom->bytes() / 0x4000;
 		m_bank[0]->configure_entries(0, num_banks, m_cart_rom->base(), 0x4000);
 		m_bank[1]->set_base(m_cart_rom->base() + (num_banks - 1) * 0x4000); // bank2 is set to the last bank
+		m_memview.select(1);
 	}
 
 	save_item(NAME(m_timer_shot));
