@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 629 -->
+<!-- Number of items in this list = 640 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -193,12 +193,12 @@
 		</part>
 	</software>
 	<software name="msx4b506234dfd3b">
-		<description>Aleste (1988)(Compile)(JP)</description>
+		<description>Aleste (1988)(Compile)(jp)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="Aleste (1988)(Compile)(JP).rom" size="262144" crc="62b1f1df" sha1="4b506234dfd3b6aa1c315b40cd8ddca024dd15c9"/>
+				<rom name="Aleste (1988)(Compile)(jp).rom" size="262144" crc="62b1f1df" sha1="4b506234dfd3b6aa1c315b40cd8ddca024dd15c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -892,6 +892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx93ad00f4baba7">
+		<description>Breaker (1987)[KONAMISCC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="139264">
+				<rom name="Breaker (1987)[KONAMISCC].rom" size="139264" crc="ca6317e4" sha1="93ad00f4baba76565621e904c8156d553e82016e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxc28a6f9204bf1">
 		<description>brnstorm</description>
 		<year>????</year>
@@ -1069,6 +1079,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="cat (2018)(cobinee).rom" size="32768" crc="4b20796b" sha1="8c9a982bc7c96db8a3470c403d45384e8f1b6d42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb6a62b828ec20">
+		<description>Catbox v1.3 (2024)(Gamecast Ent.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Catbox v1.3 (2024)(Gamecast Ent.).rom" size="753664" crc="11e3133a" sha1="b6a62b828ec208aba41090903854328e2d6e4082"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1612,6 +1632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxdd91d781f7a0f">
+		<description>Drop of Abu-Cymbel, The (2024)(joesg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Drop of Abu-Cymbel, The (2024)(joesg).rom" size="32768" crc="1b20ae22" sha1="dd91d781f7a0f1c302fceb208788aa42d5182454"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx261b805cd2ae7">
 		<description>Duckstroma pt.2 (2023)(UltraNarwhal)</description>
 		<year>????</year>
@@ -1819,6 +1849,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="fire rescue (japan) (alt 1).rom" size="16384" crc="7b2ef621" sha1="ec0320eda10bf6bbee8081f6672a7bf9d858c1bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7b0b379c6f465">
+		<description>Firebird (1987)(Konami)[RC-747]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Firebird (1987)(Konami)[RC-747].rom" size="131072" crc="6aa2737b" sha1="7b0b379c6f46552a6f5a0408b8182e8e79540f7f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2152,6 +2192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxb7b4d5c83d8c3">
+		<description>Goonies, The (1986)(Konami)[RC-734]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Goonies, The (1986)(Konami)[RC-734].rom" size="32768" crc="38f04741" sha1="b7b4d5c83d8c336dbfe32833bba974cea7f0cb8d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx250d0d6e646ea">
 		<description>goonies, the (japan) (alt 1)</description>
 		<year>????</year>
@@ -2162,16 +2212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="msxb7b4d5c83d8c3">
-		<description>goonies, the (japan) (alt 2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="goonies, the (japan) (alt 2).rom" size="32768" crc="38f04741" sha1="b7b4d5c83d8c336dbfe32833bba974cea7f0cb8d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="msxe0fd133eb7f64">
 		<description>goonies</description>
 		<year>????</year>
@@ -2179,6 +2219,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="goonies.rom" size="32768" crc="07bcce4e" sha1="e0fd133eb7f645238b3ec546624c2d12b8a913f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxec78a2228d146">
+		<description>Gota de Abu-Cymbel, La (2024)(joesg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Gota de Abu-Cymbel, La (2024)(joesg).rom" size="32768" crc="51c192e6" sha1="ec78a2228d1466b3bf893b45da829c39e4e1b2f1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2199,6 +2249,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Gradius 2. Nemesis 2 (1987)(Konami)[t][RC-751].rom" size="131072" crc="850e9770" sha1="4127844955388f812e33437f618936dc98944c0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx522ae88b30c07">
+		<description>Gradius 2[KonamiSCC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Gradius 2[KonamiSCC].rom" size="262144" crc="8bcac639" sha1="522ae88b30c072fafe40c262da56bd26e8008608"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2273,12 +2333,12 @@
 		</part>
 	</software>
 	<software name="msx5e28fa0cd90bc">
-		<description>guardic (japan) (alt 1)</description>
+		<description>Guardic (1986)(Compile)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="guardic (japan) (alt 1).rom" size="32768" crc="106230b8" sha1="5e28fa0cd90bcfb7995acb025a22f6f556ccac08"/>
+				<rom name="Guardic (1986)(Compile).rom" size="32768" crc="106230b8" sha1="5e28fa0cd90bcfb7995acb025a22f6f556ccac08"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2309,6 +2369,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Gun Fright (1986)(Sammi).rom" size="32768" crc="c5b0227c" sha1="f76e7e4ccca2a77a13d9a2d5198667ba810491f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe20d2576c2ef0">
+		<description>Gyruss[KonamiSCC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Gyruss[KonamiSCC].rom" size="65536" crc="c0657261" sha1="e20d2576c2ef0edb33cae2796dbb14d5c4ab1e94"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2472,6 +2542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx6842fb21abb25">
+		<description>Hyper Sports 3 (1985)(Konami)[RC-733]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Hyper Sports 3 (1985)(Konami)[RC-733].rom" size="32768" crc="b615c709" sha1="6842fb21abb2531c17fe0687d77e012348d3dc2c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxec76d4d9b61bd">
 		<description>hyper sports 3 (japan) (alt 1)</description>
 		<year>????</year>
@@ -2479,16 +2559,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="hyper sports 3 (japan) (alt 1).rom" size="32768" crc="9f47e445" sha1="ec76d4d9b61bdbde9a4b5be082dbdae96321a591"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msx6842fb21abb25">
-		<description>hyper sports 3 (japan) (alt 2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="hyper sports 3 (japan) (alt 2).rom" size="32768" crc="b615c709" sha1="6842fb21abb2531c17fe0687d77e012348d3dc2c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2822,6 +2892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxa4383f789482a">
+		<description>King's Valley (1985)(Konami)[RC-727]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="King's Valley (1985)(Konami)[RC-727].rom" size="16384" crc="201d7691" sha1="a4383f789482a9e868a9f136aa722129673c2a81"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx43dc3911b9a33">
 		<description>king's valley (japan, europe) (alt 2)</description>
 		<year>????</year>
@@ -2829,16 +2909,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="king's valley (japan, europe) (alt 2).rom" size="16384" crc="e7c3e1b7" sha1="43dc3911b9a336bb7b17bdbe6e48464e01f2c425"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msxa4383f789482a">
-		<description>king's valley (japan, europe) (alt 3)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="king's valley (japan, europe) (alt 3).rom" size="16384" crc="201d7691" sha1="a4383f789482a9e868a9f136aa722129673c2a81"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3033,22 +3103,22 @@
 		</part>
 	</software>
 	<software name="msx5c7971aa8688f">
-		<description>konami's golf (japan) (alt 2)</description>
+		<description>Konami's Golf (1985)(Konami)[RC-723]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="konami's golf (japan) (alt 2).rom" size="16384" crc="f06befd3" sha1="5c7971aa8688ffc429a3e315dd3d45c38f72ddeb"/>
+				<rom name="Konami's Golf (1985)(Konami)[RC-723].rom" size="16384" crc="f06befd3" sha1="5c7971aa8688ffc429a3e315dd3d45c38f72ddeb"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="msx5e1a50affe1fa">
-		<description>konami's ping-pong (japan) (alt 2)</description>
+		<description>Konami's Ping Pong (1985)(Konami)[RC-731]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="konami's ping-pong (japan) (alt 2).rom" size="16384" crc="a4d465a4" sha1="5e1a50affe1fa973f69e423a8827751b93fc53ee"/>
+				<rom name="Konami's Ping Pong (1985)(Konami)[RC-731].rom" size="16384" crc="a4d465a4" sha1="5e1a50affe1fa973f69e423a8827751b93fc53ee"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3062,6 +3132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx79c1bf77c08b7">
+		<description>Konami's Soccer (1985)(Konami)[RC-732]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Konami's Soccer (1985)(Konami)[RC-732].rom" size="32768" crc="ccfb0ca2" sha1="79c1bf77c08b733ae04e069deaf25fd24b28beb7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxa0ed2c50e5524">
 		<description>konami's soccer (japan) (alt 2)</description>
 		<year>????</year>
@@ -3069,16 +3149,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="konami's soccer (japan) (alt 2).rom" size="32768" crc="e861d2bd" sha1="a0ed2c50e55241d23bb5d12cb6528a2a0c3bc156"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msx79c1bf77c08b7">
-		<description>konami's soccer (japan) (alt 3)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="konami's soccer (japan) (alt 3).rom" size="32768" crc="ccfb0ca2" sha1="79c1bf77c08b733ae04e069deaf25fd24b28beb7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3322,16 +3392,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="msx00a81872d548a">
-		<description>MANBOW2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="MANBOW2.ROM" size="524288" crc="9b0da83e" sha1="00a81872d548a7278b8901608bf12e8f79009bee"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="msx1f76460a1050c">
 		<description>Mandarin 2, The - Limoncello's Revenge (2024)(Mananuk)</description>
 		<year>????</year>
@@ -3379,6 +3439,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="6875">
 				<rom name="Mazy.rom" size="6875" crc="81007d2a" sha1="6a141f68444dc10a65ddda18b78782651fab3250"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7be2f14fd0df5">
+		<description>Metal Gear 2 - Solid Snake (1990)(Konami)[RC-767]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Metal Gear 2 - Solid Snake (1990)(Konami)[RC-767].rom" size="524288" crc="0ffe4568" sha1="7be2f14fd0df5718cdb69b972c5f7c1f284b03e6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3702,16 +3772,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="msxdcfd673926a1c">
-		<description>Mr. Micro (19xx)(-)[b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Mr. Micro (19xx)(-)[b].rom" size="16384" crc="e834f167" sha1="dcfd673926a1c10cf4bada731d072d3f6ce29c44"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="msx158cc62b46b51">
 		<description>MSX Baseball (1983)(Matsushita)[b](badgfx)</description>
 		<year>????</year>
@@ -3809,6 +3869,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Nemesis.rom" size="131072" crc="42bd7751" sha1="6b42315eddefa0a33ea0c4510d6a4bc1086a5163"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxcb42bebed357f">
+		<description>Nemesis[KonamiSCC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Nemesis[KonamiSCC].rom" size="262144" crc="2d7aed82" sha1="cb42bebed357fc949577bca39680f766533f4c65"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4032,16 +4102,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="msx04e4eb1cae7cf">
-		<description>Parodius (1988) (Konami) (J) [english patch]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Parodius (1988) (Konami) (J) [english patch].rom" size="131072" crc="68dea3f0" sha1="04e4eb1cae7cf379977d238b74d727bb929c8d23"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="msx7c066cb763f7a">
 		<description>Parodius - Tako Saves Earth (1988)(Konami)[SCC][RC-759]</description>
 		<year>????</year>
@@ -4069,6 +4129,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Parodius - Tako Saves Earth (1988)(Konami)[t][RC-759].rom" size="131072" crc="f0687da5" sha1="2111cec4b5ea698d772bb80664f6be690b47391c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx04e4eb1cae7cf">
+		<description>Parodius</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Parodius.ROM" size="131072" crc="68dea3f0" sha1="04e4eb1cae7cf379977d238b74d727bb929c8d23"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4299,6 +4369,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="psychedelia (europe) (program).rom" size="16384" crc="9d89337a" sha1="fae437072234c65bca174db9aefd2107a53c358a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxdcfd673926a1c">
+		<description>Punchy (1984)(Mr. Micro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Punchy (1984)(Mr. Micro).rom" size="16384" crc="e834f167" sha1="dcfd673926a1c10cf4bada731d072d3f6ce29c44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4572,6 +4652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxc1a41b603da04">
+		<description>Salamander[KonamiSCC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Salamander[KonamiSCC].rom" size="262144" crc="5e444435" sha1="c1a41b603da044ab34f85dc77e86c9c2f2d86222"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx6a88e58e967a0">
 		<description>Sam.Pr v1.1 (2024)(Fausto Pracek)</description>
 		<year>????</year>
@@ -4819,6 +4909,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Solitario_8kb.rom" size="8192" crc="2d8d43ae" sha1="45e72004565ea1af837f4f181d7da215ca81a965"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb89c846d4330c">
+		<description>Sorcerer Kid Adventure v1.02 (2024)(VidaExtraRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Sorcerer Kid Adventure v1.02 (2024)(VidaExtraRetro).rom" size="49152" crc="52747abb" sha1="b89c846d4330c8ecb89270f88a7ff1b3ac5e4eeb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5319,6 +5419,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Top Roller (1984)(Jaleco).rom" size="16384" crc="ca28cbb2" sha1="174437bfb20e2895f0f552602da823ca17b2fe93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2300aa82bfcbc">
+		<description>Topple Zip (1987)(Bothtec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Topple Zip (1987)(Bothtec).rom" size="131072" crc="5da0f013" sha1="2300aa82bfcbcf95329eb04e58bcd7e4ca0a7889"/>
 			</dataarea>
 		</part>
 	</software>

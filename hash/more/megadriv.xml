@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1856 -->
+<!-- Number of items in this list = 1861 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3112,6 +3112,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen672c35736000b">
+		<description>Amy Rose's Island Adventure (2024)(9923812)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Amy Rose's Island Adventure (2024)(9923812).bin" size="1048576" crc="91e27ed9" sha1="672c35736000bf5b16106877dc2c931986c57568"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2910b28d25fb1">
+		<description>Amy Rose's Island Adventure (2024)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Amy Rose's Island Adventure (2024).bin" size="1048576" crc="1d202f9d" sha1="2910b28d25fb1ca52a1593ce3bfc1031531fb372"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genaaef7bdcdcb40">
 		<description>Angry Birds - Star Wars</description>
 		<year>????</year>
@@ -4239,6 +4259,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="captain america and the avengers (enhanced colors).md" size="1048576" crc="23109899" sha1="13c80e65fbf16389eef94426dcfca1515c05cfb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen30ccd6bbb350f">
+		<description>Captain Barrel (2024)(Ozzy Ouzo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Captain Barrel (2024)(Ozzy Ouzo).bin" size="4063232" crc="efc68ae6" sha1="30ccd6bbb350ff2ec317a0cef0aa37f4c01bc352"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6272,23 +6302,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="genaab6d20f01db5">
-		<description>ghouls 'n ghosts (usa, europe) (rev a)</description>
+	<software name="gen3a3e9eb5caaf6">
+		<description>Ghouls'n Ghosts (USA, Euro, Rev 1)(1989)(Sega)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="655360">
-				<rom name="ghouls 'n ghosts (usa, europe) (rev a).md" size="655360" crc="4f2561d5" sha1="aab6d20f01db51576b1d7cafab46e613dddf7f8a"/>
+				<rom name="Ghouls'n Ghosts (USA, Euro, Rev 1)(1989)(Sega).bin" size="655360" crc="d31bd910" sha1="3a3e9eb5caaf6cfb75e99ed2843d58b3dda7284f"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen3a3e9eb5caaf6">
-		<description>ghouls 'n ghosts (usa, europe)</description>
+	<software name="genaab6d20f01db5">
+		<description>Ghouls'n Ghosts (USA, Euro, Rev 2)(1989)(Sega)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="655360">
-				<rom name="ghouls 'n ghosts (usa, europe).md" size="655360" crc="d31bd910" sha1="3a3e9eb5caaf6cfb75e99ed2843d58b3dda7284f"/>
+				<rom name="Ghouls'n Ghosts (USA, Euro, Rev 2)(1989)(Sega).bin" size="655360" crc="4f2561d5" sha1="aab6d20f01db51576b1d7cafab46e613dddf7f8a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17199,6 +17229,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Tougiou King Colossus (Japan) [En by MIJET v20061030] (Family Friendly Edition).md" size="1048576" crc="f5a08f7e" sha1="27391fbade87dc26552ae2b86e37d8c67d2e5118"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc789b3a876455">
+		<description>Touhou - An Aftermath of the Index (2024)(9923812)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2103290">
+				<rom name="Touhou - An Aftermath of the Index (2024)(9923812).bin" size="2103290" crc="a63fd886" sha1="c789b3a876455333dd0e240a0d8cb6754e6ad27e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genff541e9aa5a8d">
+		<description>Touhou - An Aftermath of the Index (2024)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2155958">
+				<rom name="Touhou - An Aftermath of the Index (2024).bin" size="2155958" crc="fc677d8a" sha1="ff541e9aa5a8d6e03cb88263278686816b66f1f6"/>
 			</dataarea>
 		</part>
 	</software>

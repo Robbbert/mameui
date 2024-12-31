@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 101 -->
+<!-- Number of items in this list = 125 -->
 <softwarelist name="msx_disk" description="msx_disk loose roms">
 	<software name="msx5d68acb2b56ed">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[tr en][Micom BASIC]</description>
@@ -52,6 +52,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx05373b43d2b81">
+		<description>Affaire(uk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="368640">
+				<rom name="Affaire(uk).dsk" size="368640" crc="73a28836" sha1="05373b43d2b8119dc68e73b32c6b703cb1c4ed5d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx3534694a67096">
 		<description>astrost</description>
 		<year>????</year>
@@ -79,6 +89,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="BATTLE SUGOROKU (1996-04)(Yasuda, Takanori)(JP)[Micom BASIC].dsk" size="737280" crc="2a527d1c" sha1="61d33c5bfeb915af75519a251c5ab18eb99be19e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx0f21bb62b0db8">
+		<description>Beamrider (1984)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Beamrider (1984)(Activision).dsk" size="737280" crc="45cdf95f" sha1="0f21bb62b0db8f61332d28cc2496c3fb31872da0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -122,6 +142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx16e7753341846">
+		<description>CAPTAIN AKAMARU (1985-05)(Suzuki, Kazuteru)(JP)[f][tr en][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="CAPTAIN AKAMARU (1985-05)(Suzuki, Kazuteru)(JP)[f][tr en][Micom BASIC].dsk" size="737280" crc="c22b515a" sha1="16e7753341846a60ce3a6ff4c23c6f49371e6e2e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx1743f5cd8b562">
 		<description>CARD, THE (1996-04)(Hashimoto, Isaoki)(JP)[Micom BASIC]</description>
 		<year>????</year>
@@ -129,6 +159,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="CARD, THE (1996-04)(Hashimoto, Isaoki)(JP)[Micom BASIC].dsk" size="737280" crc="028eac50" sha1="1743f5cd8b562d33fa8dbbd290015ae697b7bb28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxab9df7d5b7f79">
+		<description>Catbox v1.3 (2024)(Gamecast Entertainment)[CTRL]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Catbox v1.3 (2024)(Gamecast Entertainment)[CTRL].dsk" size="737280" crc="f66860ac" sha1="ab9df7d5b7f794e1b0af09f0956ecf834235c690"/>
 			</dataarea>
 		</part>
 	</software>
@@ -169,6 +209,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="DEEPGON (1985-06)(Tanaken)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="c46afcf2" sha1="e16fd95f696bbdbaaccc273afe675bcd2d257342"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd4a3650642ded">
+		<description>Dip Dip (1985)(Indescomp)(es)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Dip Dip (1985)(Indescomp)(es).dsk" size="737280" crc="b5325fbf" sha1="d4a3650642ded7a784d2de126b4f32d43eb4d352"/>
 			</dataarea>
 		</part>
 	</software>
@@ -222,6 +272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx02fa2d6495483">
+		<description>Erfenis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Erfenis.dsk" size="737280" crc="039fa830" sha1="02fa2d64954830c4f7300f77a2a7a09584a7fa21"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxc3b9c0b5915ee">
 		<description>Falling to Pieces (2023-06-06)(Girelli, Gianluca)</description>
 		<year>????</year>
@@ -239,6 +299,26 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Fantasy Dimension, The (2023-06-06)(Berntsson, Johan).dsk" size="737280" crc="fa31b657" sha1="f297b4394bfa48ac122025b56c7a012f5b47a1d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx18481e8629b57">
+		<description>FDD1.DSK_SCC_PATCH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="368640">
+				<rom name="FDD1.DSK_SCC_PATCH.dsk" size="368640" crc="b612130b" sha1="18481e8629b575cc877235532deb3bc4bae3adf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx098678d3a6095">
+		<description>fdd2prom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="fdd2prom.dsk" size="737280" crc="a885d7e7" sha1="098678d3a609568f726e3fddea1778a99ee07290"/>
 			</dataarea>
 		</part>
 	</software>
@@ -279,6 +359,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="GREEN HAT (1985)(Suzuki, Kazuteru)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="5795e686" sha1="f0c2495ec1e6ccb8421551f1b4f661b685a073b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa9fd19d599df0">
+		<description>H.E.R.O. (1984)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="H.E.R.O. (1984)(Activision).dsk" size="737280" crc="107b8515" sha1="a9fd19d599df0992c89784922141a3ae73c00a3f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -402,6 +492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx60167714d4ab3">
+		<description>International Karate (1986)(Endurance Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="International Karate (1986)(Endurance Games)[a].dsk" size="737280" crc="13e8b81a" sha1="60167714d4ab3599d6d0f1fa3d869bd837655d69"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx80c9d7d113acb">
 		<description>jet set willy ii - the final frontier (1985)(software projects)(gb)[t]</description>
 		<year>????</year>
@@ -472,6 +572,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx9e579752d716b">
+		<description>Lazy Jones (1985)(Terminal Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Lazy Jones (1985)(Terminal Software).dsk" size="737280" crc="43cf5ee9" sha1="9e579752d716ba54cdda0f3bf4174c75fda38319"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxffaf7fc9232cc">
+		<description>Lola</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="368640">
+				<rom name="Lola.dsk" size="368640" crc="b21e6f21" sha1="ffaf7fc9232cc00560c8b1f6c0ffc164115a5599"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxd382f44c3bdf0">
 		<description>Lucid Night (2023-06-06)(Cooke, Dee)</description>
 		<year>????</year>
@@ -529,6 +649,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="MSXDOS23.DSK" size="737280" crc="24cf4425" sha1="0424574ce7271051bd562f226b792f91ede53fa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx213ceab87d833">
+		<description>Munchy (19xx)(Tyfoon Software)(Nl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Munchy (19xx)(Tyfoon Software)(Nl).dsk" size="737280" crc="fab6d369" sha1="213ceab87d83310f8017e786a0cd8940a2aa50e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -682,6 +812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxb45d0bc0f8e69">
+		<description>Red Lights of Amsterdam (UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Red Lights of Amsterdam (UK).dsk" size="737280" crc="7d74c2b0" sha1="b45d0bc0f8e69e7cf2360d08359175bbe4dccfcd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx00e7e7b4a777b">
 		<description>RESCUE (1984-10)(RAN RAN)(JP)[Micom BASIC]</description>
 		<year>????</year>
@@ -699,6 +839,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="RESCUE, THE (1985-03)(MONO)(JP)[tr en][Micom BASIC].dsk" size="737280" crc="55faec67" sha1="c1504be6a616aa219c5144136f9df810600eac5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxecf0744c0f9c0">
+		<description>river_raid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="368640">
+				<rom name="river_raid.dsk" size="368640" crc="79b43241" sha1="ecf0744c0f9c0aa5100212c53827d94c94a22d70"/>
 			</dataarea>
 		</part>
 	</software>
@@ -729,6 +879,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Runem Master III (Disk 3).dsk" size="737280" crc="b0f20854" sha1="03f6a013b5577129c9f6bd91d146c1c694106bbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2a9a67e728c41">
+		<description>SKYFIGHT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="SKYFIGHT.dsk" size="737280" crc="45413212" sha1="2a9a67e728c41fcfc9a97e3c25075bebc4b73646"/>
 			</dataarea>
 		</part>
 	</software>
@@ -769,6 +929,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Sony HBP-F1C Disk.dsk" size="737280" crc="489d45cc" sha1="2840906d037a9514e1a53c48bc84a541ff969376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx0849fd82a4418">
+		<description>Starquake (1986)(Bubblebus Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Starquake (1986)(Bubblebus Software).dsk" size="737280" crc="53b19228" sha1="0849fd82a441899c8068bfda48a3be1c32fa21fa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -912,6 +1082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx7d1f7517b15ea">
+		<description>Time Trax (1986)(Bug-Byte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Time Trax (1986)(Bug-Byte Software).dsk" size="737280" crc="9b8f22b2" sha1="7d1f7517b15ea7191aabee66734680477a74ef93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxb28dcd807f0a6">
 		<description>Tiny CRNSK (1985-04)(Kimco)(JP)[tr en][Micom BASIC]</description>
 		<year>????</year>
@@ -952,6 +1132,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx296d5bc1c7991">
+		<description>Valkyr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Valkyr.dsk" size="737280" crc="208e91ad" sha1="296d5bc1c7991638d0d69171efa64e6435898b7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc6b632f794c67">
+		<description>Vallende Sterren</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Vallende Sterren.dsk" size="737280" crc="577d5912" sha1="c6b632f794c6737cfa501a8f10c93229c5ba0df4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx816ea85708c36">
 		<description>Veldslag (1994) (MCWF)</description>
 		<year>????</year>
@@ -982,6 +1182,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxa54ae5d9e9dc7">
+		<description>Wind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="368640">
+				<rom name="Wind.dsk" size="368640" crc="302e8244" sha1="a54ae5d9e9dc7fdd5bd218cd09483fea14d41a8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx0070acb118f0c">
+		<description>writing_SCC_PATCH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="writing_SCC_PATCH.dsk" size="737280" crc="952dce6e" sha1="0070acb118f0c0b46f7e9d340a2d4f6250f05150"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxddd4b677002d5">
+		<description>Yellow Alert demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Yellow Alert demo.dsk" size="737280" crc="e4fbb083" sha1="ddd4b677002d55257c2893871641bf3f2d12c4df"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx4357c1e0f7ae5">
 		<description>Zeeslag (1994) (MCWF)</description>
 		<year>????</year>
@@ -1009,6 +1239,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Zoo (1989)RadarSoft)(en)(Freesoft).dsk" size="737280" crc="370ba756" sha1="d963fbf94b1a3f478f924bbb0223f21f597cecd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx528288874f2da">
+		<description>Zoo (uk) Radarsoft 1997</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Zoo (uk) Radarsoft 1997.dsk" size="737280" crc="2fe42c5e" sha1="528288874f2daeaba956258285d2e055a5468523"/>
 			</dataarea>
 		</part>
 	</software>

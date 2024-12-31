@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 48 -->
+<!-- Number of items in this list = 49 -->
 <softwarelist name="mz700_cass" description="mz700_cass loose roms">
 	<software name="mz748dba064d098a">
 		<description>(sound)Plusminus-20 (19xx)(-)(de)(PD)</description>
@@ -129,6 +129,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="2871994">
 				<rom name="Bootskell.wav" size="2871994" crc="3379b628" sha1="eb75f59159c69089956448348bd9d44650b45f94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz74b1d519aad6dd">
+		<description>building hopper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="40479">
+				<rom name="building hopper.mzt" size="40479" crc="30a48932" sha1="4b1d519aad6dd943b0a90ee11795afc95f253dd3"/>
 			</dataarea>
 		</part>
 	</software>
