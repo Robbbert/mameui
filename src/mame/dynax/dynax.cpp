@@ -82,6 +82,8 @@ TODO:
 #include "emu.h"
 #include "dynax.h"
 
+#include "mjdipsw.h"
+
 #include "mahjong.h"
 
 #include "cpu/tlcs90/tlcs90.h"
@@ -1576,13 +1578,6 @@ INPUT_PORTS_END
 		PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BILL1 )         PORT_CODE(KEYCODE_6)                                     /* Note         */ \
 		PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_COIN1 )                                                                  /* Coin         */ \
 		PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_SERVICE1 )                                                               /* Service      */
-
-#define MAHJONG_ODDS_RATE(shift, loc) \
-		PORT_DIPNAME( 0x03 << shift, 0x00 << shift, "Odds Rate" ) PORT_DIPLOCATION(loc) \
-		PORT_DIPSETTING(             0x03 << shift, "1 2 4 8 12 16 24 32" ) \
-		PORT_DIPSETTING(             0x00 << shift, "1 2 3 5 8 15 30 50" ) \
-		PORT_DIPSETTING(             0x01 << shift, "1 2 3 5 10 25 50 100" ) \
-		PORT_DIPSETTING(             0x02 << shift, "1 2 3 5 10 50 100 200" )
 
 static INPUT_PORTS_START( cdracula )
 	PORT_START("P1")
@@ -3492,7 +3487,7 @@ static INPUT_PORTS_START( tenkai )
 
 	PORT_START("DSW4")  /* (top) */
 	MAHJONG_NOTE_CREDITS(0, "SW 1:9", "DSW1", 0)                                                  // ＮＯＴＥ　ＲＡＴＥ
-	PORT_DIPNAME( 0x02, 0x02, DEF_STR( Flip_Screen ) )          PORT_DIPLOCATION("SW 1:10")       // モニター画面反転
+	PORT_DIPNAME( 0x02, 0x02, DEF_STR(Flip_Screen) )            PORT_DIPLOCATION("SW 1:10")       // モニター画面反転
 	PORT_DIPSETTING(    0x02, DEF_STR(Off) )                                                      // 通常
 	PORT_DIPSETTING(    0x00, DEF_STR(On) )                                                       // 反転
 	PORT_DIPNAME( 0x04, 0x00, "Computer Strength" )             PORT_DIPLOCATION("SW 2:9")        // コンピューターの強さ
@@ -4354,12 +4349,12 @@ void jantouki_state::machine_reset()
 void jantouki_state::jantouki(machine_config &config)
 {
 	/* basic machine hardware */
-	Z80(config, m_maincpu, 22000000 / 4);   /* 5.5MHz */
+	Z80(config, m_maincpu, 22000000 / 8);   /* 2.75MHz */
 	m_maincpu->set_addrmap(AS_PROGRAM, &jantouki_state::jantouki_mem_map);
 	m_maincpu->set_addrmap(AS_IO, &jantouki_state::jantouki_io_map);
 	m_maincpu->set_irq_acknowledge_callback("mainirq", FUNC(rst_pos_buffer_device::inta_cb));   // IM 0 needs an opcode on the data bus
 
-	Z80(config, m_soundcpu, 22000000 / 4);  /* 5.5MHz */
+	Z80(config, m_soundcpu, 22000000 / 8);  /* 2.75MHz */
 	m_soundcpu->set_addrmap(AS_PROGRAM, &jantouki_state::jantouki_sound_mem_map);
 	m_soundcpu->set_addrmap(AS_IO, &jantouki_state::jantouki_sound_io_map);
 	m_soundcpu->set_irq_acknowledge_callback("soundirq", FUNC(rst_pos_buffer_device::inta_cb)); // IM 0 needs an opcode on the data bus
