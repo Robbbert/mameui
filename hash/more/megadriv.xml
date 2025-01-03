@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1861 -->
+<!-- Number of items in this list = 1864 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -2702,6 +2702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen7bd413437359b">
+		<description>240pSuite-1.17</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="240pSuite-1.17.bin" size="262144" crc="032cbae0" sha1="7bd413437359bb2c1326014881062f399212c6d2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen1d2d80d277ffd">
 		<description>240pSuite-1.23</description>
 		<year>????</year>
@@ -2709,6 +2719,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="240pSuite-1.23.bin" size="262144" crc="439fe2f4" sha1="1d2d80d277ffd6ec9e8b7a624d511f7891c8100c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7ac0acda15435">
+		<description>240pSuite-1.30</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="240pSuite-1.30.bin" size="262144" crc="a7ceb1b5" sha1="7ac0acda154359418d15a5e034a7c5777e6a6111"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2648a05d6a441">
+		<description>240pSuite-1.30_emu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="240pSuite-1.30_emu.bin" size="262144" crc="81777e15" sha1="2648a05d6a44192360a28b5837f921c802f589e8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12073,12 +12103,12 @@
 		</part>
 	</software>
 	<software name="genccb9fb368d28a">
-		<description>Rocket Panda (World) (Aftermarket) (Unl)</description>
+		<description>Rocket Panda (2024)(Mega Cat Studios)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Rocket Panda (World) (Aftermarket) (Unl).md" size="2097152" crc="ecbd5ba8" sha1="ccb9fb368d28ab8e5dccd5722e5f0e470f8ab639"/>
+				<rom name="Rocket Panda (2024)(Mega Cat Studios).bin" size="2097152" crc="ecbd5ba8" sha1="ccb9fb368d28ab8e5dccd5722e5f0e470f8ab639"/>
 			</dataarea>
 		</part>
 	</software>

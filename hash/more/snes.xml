@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3667 -->
+<!-- Number of items in this list = 3673 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -1982,6 +1982,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsa0060b866551e">
+		<description>240pSuite-PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="240pSuite-PAL.sfc" size="524288" crc="45dfef5f" sha1="a0060b866551eb03281b0ea06d429ce0d3e14b3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsdf4376aa9583f">
+		<description>240pSuite</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="240pSuite.sfc" size="524288" crc="d34e753c" sha1="df4376aa9583fe7be097560c192a1f9bf15b314d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7cacfa3a5ca8a">
 		<description>2nd Annual SMWC Level Design Challenge! Curse of the Golden Mushroom (SMW1 Hack)</description>
 		<year>????</year>
@@ -3059,6 +3079,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Angel_Poon.sfc" size="2097152" crc="966573a8" sha1="433eca629c17fc2d24b1298ece74d21f4557825c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5944df6bfa0e9">
+		<description>Another Challenge With Mario</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Another Challenge With Mario.sfc" size="1048576" crc="de6247fb" sha1="5944df6bfa0e93d0121da9aa5fecfc70ca126467"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7052,6 +7082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsc3c6cd0613abe">
+		<description>Dragon Quest III</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dragon Quest III.sfc" size="4194304" crc="df69d806" sha1="c3c6cd0613abed5b066ba398196ddc84b2c59c4e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb07e10c97c594">
 		<description>Dragon Quest V - Tenkuu no Hanayome (Japan) [T+Eng] DeJap v2.01F [deSplash]</description>
 		<year>????</year>
@@ -8809,6 +8849,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="FinalBattlePT3 (SMW1 Hack).sfc" size="4194304" crc="854f3e16" sha1="bc7ffd157eb88a87a25bf8791343f3f107d44b74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7d19a5734ed98">
+		<description>Find Luigi (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Find Luigi (World) (Aftermarket) (Unl).sfc" size="262144" crc="fd2a2284" sha1="7d19a5734ed9847165e6401f30af17ab803ca1d1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11989,6 +12039,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Justice League Task Force (U) (Beta).sfc" size="2621440" crc="50224767" sha1="2893dd99da821d391d5fb1a76630e92cd14952a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa74b5c528eea8">
+		<description>K-fet Invaders (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="K-fet Invaders (World) (Aftermarket) (Unl).sfc" size="262144" crc="67397d0d" sha1="a74b5c528eea85cfe3573d706fec53d1a03ebaaa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15432,6 +15492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns04bbeca1a2d6e">
+		<description>Mario Yosamikalo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mario Yosamikalo.sfc" size="1048576" crc="558059a2" sha1="04bbeca1a2d6eca4f6cc12d74c80789badf23afd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns9e420a4bba770">
 		<description>Mario! A New Era DEmo 1 (SMW1 Hack)</description>
 		<year>????</year>
@@ -15872,6 +15942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsdcda1fb231b86">
+		<description>Mario, Luigi and the 7 eggs demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mario, Luigi and the 7 eggs demo.sfc" size="1048576" crc="ef0f343b" sha1="dcda1fb231b864078ecc24be5376fc47aead1401"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns43f23c3217750">
 		<description>Mario, The</description>
 		<year>????</year>
@@ -16089,6 +16169,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="MATHF2 Kamek's Return (SMW1 Hack).sfc" size="2097152" crc="d83a07dd" sha1="ac2e80ac5e7e4eef00229fcc8496d9ea8a27485d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc50aadfd7d08f">
+		<description>Matsumura Kunihiro Den - Saikyou no Rekishi o Nurikaero! (Japan) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Matsumura Kunihiro Den - Saikyou no Rekishi o Nurikaero! (Japan) (Beta).sfc" size="3145728" crc="d379085b" sha1="c50aadfd7d08f7140e6b22b2d81235f2b3bba82d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -25032,16 +25122,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsc3c6cd0613abe">
-		<description>sn_dq3pe</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="sn_dq3pe.sfc" size="4194304" crc="df69d806" sha1="c3c6cd0613abed5b066ba398196ddc84b2c59c4e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns4c854a99a1f5b">
 		<description>sn_fe12f</description>
 		<year>????</year>
@@ -25119,96 +25199,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="sn_fewig.sfc" size="4194304" crc="ead9b626" sha1="44116dd33801ccdde2aabff8428fb4b11f951c23"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snseeae2b6fd80fe">
-		<description>sn_sm12c</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="sn_sm12c.sfc" size="4194304" crc="05cd0379" sha1="eeae2b6fd80fe4553ecb1292866d957fdbe3b3ce"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snscb5491ac42652">
-		<description>sn_sm213</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="sn_sm213.sfc" size="1048576" crc="97f39873" sha1="cb5491ac42652aed085e2798f04286484524bd12"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsa5455f90b1dad">
-		<description>sn_sm2hc</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="sn_sm2hc.sfc" size="2097152" crc="48999406" sha1="a5455f90b1dad1d05e4a260116518e2ff31c6021"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsde672dcdead7e">
-		<description>sn_sm2m2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="sn_sm2m2.sfc" size="2097152" crc="dc63ec8f" sha1="de672dcdead7e116608106df4eaa92b231490dfc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsb465b7960a301">
-		<description>sn_sm300</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="sn_sm300.sfc" size="524288" crc="6e2ff8ec" sha1="b465b7960a301f620a3551d073b753d252e0d455"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns7fe72933245c4">
-		<description>sn_sm7eg</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="sn_sm7eg.sfc" size="1048576" crc="5aecdec0" sha1="7fe72933245c48daa76df5f11521d7c9ce979574"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsdcda1fb231b86">
-		<description>sn_sm7ep</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="sn_sm7ep.sfc" size="1048576" crc="ef0f343b" sha1="dcda1fb231b864078ecc24be5376fc47aead1401"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns8ec854b3e1e92">
-		<description>sn_sm898</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="sn_sm898.sfc" size="2097152" crc="6369ad3c" sha1="8ec854b3e1e922754931a425f7c98ff02e137784"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns5944df6bfa0e9">
-		<description>sn_smac</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="sn_smac.sfc" size="1048576" crc="de6247fb" sha1="5944df6bfa0e93d0121da9aa5fecfc70ca126467"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28652,46 +28642,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns9f5f4f85f8fa3">
-		<description>sn_smyim</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="sn_smyim.sfc" size="2097152" crc="105b792f" sha1="9f5f4f85f8fa396b882425703831275a1a6728f8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns6b22f0f9b953f">
-		<description>sn_smyq1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="sn_smyq1.sfc" size="4194304" crc="95086b17" sha1="6b22f0f9b953f5f246c01f8b583a96d452f0ba28"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns04bbeca1a2d6e">
-		<description>sn_smyus</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="sn_smyus.sfc" size="1048576" crc="558059a2" sha1="04bbeca1a2d6eca4f6cc12d74c80789badf23afd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snscb4df247757a0">
-		<description>sn_smzxe</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="sn_smzxe.sfc" size="2097152" crc="50898b10" sha1="cb4df247757a0065196d256ddf9724c908176ace"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns2b361feb7b075">
 		<description>sn_t5hbk</description>
 		<year>????</year>
@@ -29452,6 +29402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns102b4625abcc0">
+		<description>Super Combo Man (World) (Demo) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Super Combo Man (World) (Demo) (Aftermarket) (Unl).sfc" size="262144" crc="e5b8e01b" sha1="102b4625abcc0f8b1ad065fc99907a8fbabac4f8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsab1936df7c380">
 		<description>Super Demo World (2001) demo (SMW Hack)</description>
 		<year>????</year>
@@ -29979,6 +29939,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1049088">
 				<rom name="Super mario - the last showdown (SMW1 hack).sfc" size="1049088" crc="cfd91860" sha1="d35bddbc33d085f6a55ee483e28fb63d01d757b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snseeae2b6fd80fe">
+		<description>Super Mario 12 the cool stars</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Mario 12 the cool stars.sfc" size="4194304" crc="05cd0379" sha1="eeae2b6fd80fe4553ecb1292866d957fdbe3b3ce"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31942,6 +31912,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsa5455f90b1dad">
+		<description>Super Mario World 2 the hangover chaos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Mario World 2 the hangover chaos.sfc" size="2097152" crc="48999406" sha1="a5455f90b1dad1d05e4a260116518e2ff31c6021"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsde672dcdead7e">
+		<description>Super Mario World 2000</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Mario World 2000.sfc" size="2097152" crc="dc63ec8f" sha1="de672dcdead7e116608106df4eaa92b231490dfc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsaed8bb9331b53">
 		<description>Super Mario World 20th Anniversary Edition by Camerin Neede (8 exits) (SMW1 Hack)</description>
 		<year>????</year>
@@ -32659,6 +32649,56 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Mario.sfc" size="2097152" crc="a6b2ab67" sha1="d51fdb88251b1dcc97c0c6d96e9d5fdd8279b2d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7fe72933245c4">
+		<description>Super Marioworld (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Marioworld (2).sfc" size="1048576" crc="5aecdec0" sha1="7fe72933245c48daa76df5f11521d7c9ce979574"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscb5491ac42652">
+		<description>Super Marioworld (night-213)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Marioworld (night-213).sfc" size="1048576" crc="97f39873" sha1="cb5491ac42652aed085e2798f04286484524bd12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscb4df247757a0">
+		<description>Super Marioworld Xerox Edition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Marioworld Xerox Edition.sfc" size="2097152" crc="50898b10" sha1="cb4df247757a0065196d256ddf9724c908176ace"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9f5f4f85f8fa3">
+		<description>Super Marioworld Yoshi is Missing</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Marioworld Yoshi is Missing.sfc" size="2097152" crc="105b792f" sha1="9f5f4f85f8fa396b882425703831275a1a6728f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb465b7960a301">
+		<description>Super Marioworld</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Super Marioworld.sfc" size="524288" crc="6e2ff8ec" sha1="b465b7960a301f620a3551d073b753d252e0d455"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35382,6 +35422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns8ec854b3e1e92">
+		<description>Unnamed (SMW hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Unnamed (SMW hack).sfc" size="2097152" crc="6369ad3c" sha1="8ec854b3e1e922754931a425f7c98ff02e137784"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snscdb48cf9b9dd2">
 		<description>unnamed smw1 hack by 1PfJGxh2</description>
 		<year>????</year>
@@ -36499,6 +36549,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Yoshi's Island Forlorn Lands by S.N.N. (Demo Final Release) (SMW2 Hack).sfc" size="4194304" crc="dad1f286" sha1="ece6b9507b35af8592d93b0ed20b22092b066efd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6b22f0f9b953f">
+		<description>Yoshi's Quest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Yoshi's Quest.sfc" size="4194304" crc="95086b17" sha1="6b22f0f9b953f5f246c01f8b583a96d452f0ba28"/>
 			</dataarea>
 		</part>
 	</software>

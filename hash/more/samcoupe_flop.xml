@@ -4422,16 +4422,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sam102dd537cf001">
-		<description>Master Mind</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3_5">
-			<dataarea name="flop" size="819200">
-				<rom name="Master Mind.mgt" size="819200" crc="9756d47d" sha1="102dd537cf001fe54c1a61e8468ea57a04dbba98"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sam1f0f1936931a9">
 		<description>MasterBASIC Maker (1994)(Betasoft)[DSK]</description>
 		<year>????</year>
@@ -4479,6 +4469,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819200">
 				<rom name="masterdosfilemanager.mgt" size="819200" crc="e1e358e0" sha1="850ff1ce0df8725d69c1d25711b575d3ec80c035"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam102dd537cf001">
+		<description>MastermindRK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="MastermindRK.mgt" size="819200" crc="9756d47d" sha1="102dd537cf001fe54c1a61e8468ea57a04dbba98"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 282 -->
+<!-- Number of items in this list = 283 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -1092,6 +1092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsdb5ab91e2660e">
+		<description>H-tron_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="H-tron_1.sms" size="32768" crc="842f6c19" sha1="db5ab91e2660edec32f23774c39e8ab9ac2f3d69"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms998723370b3a6">
 		<description>HeroesAgainstDemons_1.03(smsj)</description>
 		<year>????</year>
@@ -1373,12 +1383,12 @@
 		</part>
 	</software>
 	<software name="smsc5e78f61e8ca1">
-		<description>Mastermind</description>
+		<description>MastermindRK</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Mastermind.sms" size="32768" crc="7f6a8a92" sha1="c5e78f61e8ca15d2596ffbbf5cba8991d7d7166e"/>
+				<rom name="MastermindRK.sms" size="32768" crc="7f6a8a92" sha1="c5e78f61e8ca15d2596ffbbf5cba8991d7d7166e"/>
 			</dataarea>
 		</part>
 	</software>

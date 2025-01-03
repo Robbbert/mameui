@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 47 -->
+<!-- Number of items in this list = 48 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -183,12 +183,12 @@
 		</part>
 	</software>
 	<software name="sg134618e1b6d16a">
-		<description>Deepspace_SC3000.rom</description>
+		<description>Deepspace_SC3000</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
-				<rom name="Deepspace_SC3000.rom.bin" size="32768" crc="72f1747b" sha1="34618e1b6d16acca7646932d87abd26213850027"/>
+				<rom name="Deepspace_SC3000.sg" size="32768" crc="72f1747b" sha1="34618e1b6d16acca7646932d87abd26213850027"/>
 			</dataarea>
 		</part>
 	</software>
@@ -203,12 +203,12 @@
 		</part>
 	</software>
 	<software name="sg1f81a6740a71cd">
-		<description>Elite Planet Browser_sc3000.rom</description>
+		<description>Elite Planet Browser_sc3000</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
-				<rom name="Elite Planet Browser_sc3000.rom.bin" size="32768" crc="69104020" sha1="f81a6740a71cd25acfdb8d75bcc07e3043c517f4"/>
+				<rom name="Elite Planet Browser_sc3000.sg" size="32768" crc="69104020" sha1="f81a6740a71cd25acfdb8d75bcc07e3043c517f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -248,7 +248,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
-				<rom name="H-Tron_sc3000.bin" size="32768" crc="8ebdc890" sha1="eb4d6b0c684a517f65fdb9df396d78f794535ee8"/>
+				<rom name="H-Tron_sc3000.sg" size="32768" crc="8ebdc890" sha1="eb4d6b0c684a517f65fdb9df396d78f794535ee8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -299,6 +299,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Mahjong Solitaire v1.07 (2020)(Under4Mhz).sg" size="32768" crc="1b14b1c2" sha1="8f52987b16fa1148a2da5b2e8b8ca491ba1d95fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1b6bc31f554835">
+		<description>MastermindRK_sg1000</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="MastermindRK_sg1000.sg" size="32768" crc="5b4004f4" sha1="b6bc31f5548353372edf8ebb2293961cb5d3ecb1"/>
 			</dataarea>
 		</part>
 	</software>
