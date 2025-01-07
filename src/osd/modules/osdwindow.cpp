@@ -41,7 +41,7 @@ osd_window::osd_window(
 					? "%3$s [%4$s] screen %5$d - %1$s %2$s (%6$s%7$sP%8$d)"
 					: "%3$s [%4$s] - %1$s %2$s (%6$s%7$sP%8$d)",
 				emulator_info::get_appname(),
-				emulator_info::get_bare_build_version(),
+				emulator_info::get_long_build_version(),
 				machine.system().type.fullname(),
 				machine.system().name,
 				index,

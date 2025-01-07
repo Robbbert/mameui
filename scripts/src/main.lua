@@ -263,7 +263,8 @@ if (STANDALONE~=true) then
 	end
 	files {
 		mainfile,
-		MAME_DIR .. "src/version.cpp",
+--		MAME_DIR .. "src/version.cpp",
+		GEN_DIR .. "version.cpp",
 		GEN_DIR  .. _target .. "/" .. _subtarget .."/drivlist.cpp",
 	}
 
@@ -306,8 +307,16 @@ if (STANDALONE~=true) then
 
 	configuration { "mingw*" }
 		custombuildtask {
---			{ GEN_DIR .. "version.cpp" ,  GEN_DIR  .. "resource/" .. rctarget .. "vers.rc",    {  MAME_DIR .. "scripts/build/verinfo.py" }, {"@echo Emitting " .. rctarget .. "vers.rc" .. "...",    PYTHON .. " $(1)  -r -b " .. rctarget .. " $(<) > $(@)" }},
-			{ MAME_DIR .. "src/version.cpp" ,  GEN_DIR  .. "resource/" .. rctarget .. "vers.rc",    {  MAME_DIR .. "scripts/build/verinfo.py" }, {"@echo Emitting " .. rctarget .. "vers.rc" .. "...",    PYTHON .. " $(1)  -r -b " .. rctarget .. " $(<) > $(@)" }},
+			{
+--				MAME_DIR .. "src/version.cpp" ,
+				GEN_DIR .. "version.cpp" ,
+				GEN_DIR  .. "resource/" .. rctarget .. "vers.rc",
+				{ MAME_DIR .. "scripts/build/verinfo.py" },
+				{
+					"@echo Emitting " .. rctarget .. "vers.rc" .. "...",
+					PYTHON .. " $(1)  -r -b " .. rctarget .. " $(<) > $(@)"
+				}
+			},
 		}
 
 	configuration { "vs20*" }

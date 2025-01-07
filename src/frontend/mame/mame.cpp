@@ -436,6 +436,7 @@ std::vector<std::reference_wrapper<const std::string>> mame_machine_manager::mis
 }
 
 const char * emulator_info::get_bare_build_version() { return bare_build_version; }
+const char * emulator_info::get_long_build_version() { return long_build_version; }
 const char * emulator_info::get_build_version() { return build_version; }
 
 void emulator_info::display_ui_chooser(running_machine& machine)

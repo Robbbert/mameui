@@ -903,7 +903,7 @@ bool menu_select_game::load_available_machines()
 	file.gets(rbuf, MAX_CHAR_INFO);
 	file.gets(rbuf, MAX_CHAR_INFO);
 	readbuf = chartrimcarriage(rbuf);
-	std::string a_rev = string_format("%s%s", UI_VERSION_TAG, bare_build_version);
+	std::string a_rev = string_format("%s%s", UI_VERSION_TAG, long_build_version);
 
 	// version not matching ? exit
 	if (a_rev != readbuf)
@@ -1017,7 +1017,7 @@ void menu_select_game::make_topbox_text(std::string &line0, std::string &line1, 
 {
 	line0 = string_format(_("%1$s %2$s ( %3$d / %4$d systems (%5$d BIOS) )"),
 			emulator_info::get_appname(),
-			bare_build_version,
+			long_build_version,
 			m_available_items,
 			(driver_list::total() - 1),
 			m_persistent_data.bios_count());

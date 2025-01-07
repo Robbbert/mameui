@@ -240,7 +240,7 @@ void menu_audit::save_available_machines()
 	if (!file.open(std::string(emulator_info::get_configname()) + "_avail.ini"))
 	{
 		// generate header
-		file.printf("#\n%s%s\n#\n\n", UI_VERSION_TAG, emulator_info::get_bare_build_version());
+		file.printf("#\n%s%s\n#\n\n", UI_VERSION_TAG, emulator_info::get_long_build_version());
 
 		// generate available list
 		for (ui_system_info const &info : m_availablesorted)
