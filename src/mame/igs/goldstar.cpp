@@ -11863,6 +11863,20 @@ ROM_START( moonlghtc )
 	ROM_LOAD( "moon-sound.bin",  0x0000, 0x20000, CRC(9d58960f) SHA1(c68edf95743e146398aabf6b9617d18e1f9bf25b) )
 ROM_END
 
+ROM_START( gregular )
+	ROM_REGION( 0x20000, "maincpu", 0 )
+	ROM_LOAD( "30.prg", 0x00000, 0x20000, CRC(7219d1c1) SHA1(8d17f29f94f50db952a1dd144c971b2e3be2dad3) ) // 1ST AND 2ND HALF IDENTICAL
+
+	ROM_REGION( 0x20000, "gfx1", 0 )
+	ROM_LOAD( "28.gfx", 0x00000, 0x20000, CRC(dfd27fa2) SHA1(408ae9de1d6e869c6dc5daa073b845081204624b) ) // FIXED BITS (00xxxxxx), but correct
+
+	ROM_REGION( 0x20000, "gfx2", 0 )
+	ROM_LOAD( "29.gfx", 0x00000, 0x20000, CRC(8a5f274d) SHA1(0f2ad61b00e220fc509c01c11c1a8f4e47b54f2a) ) // 00xxxxxxxxxxxxxxx = 0xFF
+
+	ROM_REGION( 0x40000, "oki", 0 )
+	ROM_LOAD( "27.oki", 0x00000, 0x20000, CRC(9d58960f) SHA1(c68edf95743e146398aabf6b9617d18e1f9bf25b) )
+ROM_END
+
 
 /* Gold Fruit
 
@@ -12165,6 +12179,34 @@ ROM_START( cb3g )
 
 	ROM_REGION( 0x20, "unkprom2", 0 )
 	ROM_LOAD( "dm74s288.d12", 0x0000, 0x0020, BAD_DUMP CRC(6df3f972) SHA1(0096a7f7452b70cac6c0752cb62e24b643015b5c) )
+ROM_END
+
+
+ROM_START( cb3h ) // very similar to the cb3 set, but changes are legit
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "sub.u6", 0x00000, 0x10000, CRC(e154a31d) SHA1(18a7d36563ed914207100286fd6ad75e6180bae8) ) // encrypted, on subboard
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "5.7h",  0x00000, 0x08000, CRC(83650a94) SHA1(e79420ab559d3f74013708767ca3f238fd333fb7) )
+	ROM_LOAD( "6.8h",  0x08000, 0x08000, CRC(2f46a3f5) SHA1(3e6022ee8f84039e48f41aea5e68ee28aabdc556) )
+	ROM_LOAD( "7.10h", 0x10000, 0x08000, CRC(dcf97517) SHA1(0a29696e0464c8878c499b1786a17080fd088a72) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "1.1h", 0x00000, 0x02000, CRC(7cc6d26b) SHA1(de33e8985affce7bd3ead89463117c9aaa93d5e4) )
+	ROM_LOAD( "2.3h", 0x02000, 0x02000, CRC(e73ea4e3) SHA1(c9fd56461f6986d6bc170403d298fcc408a524e9) )
+	ROM_LOAD( "3.4h", 0x04000, 0x02000, CRC(91162010) SHA1(3acc21e7074602b247f2f392eb181802092d2f21) )
+	ROM_LOAD( "4.5h", 0x06000, 0x02000, CRC(cbcc6bfb) SHA1(5bafc934fef1f50d8c182c39d3a7ce795c89d175) )
+
+	ROM_REGION( 0x0200, "proms", 0 )
+	ROM_LOAD_NIB_LOW(  "n82s129.13g",  0x0000, 0x0100, CRC(59ac98e4) SHA1(5fc0f1a48c49c956cdb8826e20663dc57a9175e4) )   // 1st bank colors, low 4 bits.
+	ROM_LOAD_NIB_HIGH( "n82s129.14g",  0x0000, 0x0100, CRC(0d8f35bd) SHA1(0c2a0145cdaaf9beabdce241731a36b0c65f18a2) )   // 1st bank colors, high 4 bits.
+	ROM_LOAD(          "dm74s288.13d", 0x0080, 0x0020, CRC(77a85e21) SHA1(3b41e0ab7cc55c5d78914d23e8289383f5bd5654) )   // 2nd bank colors
+
+	ROM_REGION( 0x100, "unkprom", 0 )
+	ROM_LOAD( "82s129.f3", 0x0000, 0x0100, CRC(1d668d4a) SHA1(459117f78323ea264d3a29f1da2889bbabe9e4be) )
+
+	ROM_REGION( 0x20, "unkprom2", 0 )
+	ROM_LOAD( "dm74s288.d12", 0x0000, 0x0020, CRC(6df3f972) SHA1(0096a7f7452b70cac6c0752cb62e24b643015b5c) )
 ROM_END
 
 /* Cherry Gold I (bootleg)
@@ -13223,6 +13265,39 @@ ROM_START( cmasterk )
 
 	ROM_REGION( 0x100, "proms2", 0 )
 	ROM_LOAD( "prom3.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( cmasterl ) // most similar to cmasterbv but without the extra ROM
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "sc9.16f", 0x0000, 0x1000, CRC(9b305a27) SHA1(7ab27f3ea1c0fd71ebaa54fc3d60d43cf6ab7c8b) )
+	ROM_CONTINUE(        0x4000, 0x1000 )
+	ROM_CONTINUE(        0x3000, 0x1000 )
+	ROM_CONTINUE(        0x7000, 0x1000 )
+	ROM_CONTINUE(        0x1000, 0x1000 )
+	ROM_CONTINUE(        0x6000, 0x1000 )
+	ROM_CONTINUE(        0x2000, 0x1000 )
+	ROM_CONTINUE(        0x5000, 0x1000 )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "5.1e", 0x00000, 0x8000, CRC(19cc1d67) SHA1(47487f9362bfb36a32100ed772960628844462bf) )
+	ROM_LOAD( "6.2e", 0x08000, 0x8000, CRC(63b3df4e) SHA1(9bacd23da598805ec18ec5ad15cab95d71eb9262) )
+	ROM_LOAD( "7.3e", 0x10000, 0x8000, CRC(e39fff9c) SHA1(22fdc517fa478441622c6245cecb5728c5595757) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "3.2f", 0x0000, 0x2000, CRC(8607ffd9) SHA1(9bc94715554aa2473ae2ed249a47f29c7886b3dc) )
+	ROM_LOAD( "4.3f", 0x2000, 0x2000, CRC(c32367be) SHA1(ff217021b9c58e23b2226f8b0a7f5da966225715) )
+	ROM_LOAD( "1.2h", 0x4000, 0x2000, CRC(6dfcb188) SHA1(22430429c798954d9d979e62699b58feae7fdbf4) )
+	ROM_LOAD( "2.3h", 0x6000, 0x2000, CRC(9678ead2) SHA1(e80aefa98b2363fe9e6b2415762695ace272e4d3) )
+
+	ROM_REGION( 0x10000, "user1", 0 ) // girl bitmaps
+	ROM_LOAD( "1.10c", 0x0000, 0x10000, CRC(e92443d3) SHA1(4b6ca4521841610054165f085ae05510e77af191) )
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
 ROM_END
 
 ROM_START( srmagic )
@@ -18528,6 +18603,18 @@ ROM_START( cmast97 )
 	ROM_LOAD( "82s135.c9",  0x100, 0x100, CRC(85883486) SHA1(adcee60f6fc1e8a75c529951df9e5e1ee277e131) )
 ROM_END
 
+ROM_START( cmast97a ) // D9503 DYNA
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD16_WORD( "c97.f10", 0x00000, 0x10000, CRC(fa0a6e69) SHA1(6d75cb4b4d16ae84dab55433d439f5d24fd52ed9) )
+
+	ROM_REGION( 0x080000, "gfx", 0 )
+	ROM_LOAD( "c97.d9", 0x000000, 0x80000, CRC(c2c14738) SHA1(dd378cb77a7214ffe5fd9ba1dcbc54f6802b0e41) )
+
+	ROM_REGION( 0x200, "proms", 0 ) // bad decoded
+	ROM_LOAD( "82s135.c8",  0x000, 0x100, CRC(4b715969) SHA1(9429dc8698f4ff9195e5e975e62546b7b7e2f856) )
+	ROM_LOAD( "82s135.c9",  0x100, 0x100, CRC(85883486) SHA1(adcee60f6fc1e8a75c529951df9e5e1ee277e131) )
+ROM_END
+
 ROM_START( cmast97i ) // D9503 DYNA
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD16_WORD( "c97_14i.f10", 0x00000, 0x10000, CRC(db5132ba) SHA1(5635bf0fc959cbc9b305de31fdd004458338dae7) )
@@ -22426,6 +22513,7 @@ GAME(  199?, moonlght,   goldstar, moonlght, goldstar, goldstar_state, empty_ini
 GAME(  199?, moonlghta,  goldstar, moonlght, goldstar, goldstar_state, empty_init,     ROT0, "bootleg",           "Moon Light (v.0629, high program)",           0 )
 GAME(  199?, moonlghtb,  goldstar, moonlght, goldstar, goldstar_state, empty_init,     ROT0, "bootleg",           "Moon Light (v.02L0A, low program)",           MACHINE_IMPERFECT_COLORS )  // need to check the odd palette value at 0xc780. should be black.
 GAME(  199?, moonlghtc,  goldstar, moonlght, goldstar, goldstar_state, empty_init,     ROT0, "bootleg",           "Moon Light (v.02L0A, high program, alt gfx)", MACHINE_IMPERFECT_COLORS )  // need to check the odd palette value at 0xc780. should be black.
+GAME(  199?, gregular,   goldstar, moonlght, goldstar, goldstar_state, empty_init,     ROT0, "bootleg (Playmark)","Golden Regular (version 388/2000)",           MACHINE_NOT_WORKING | MACHINE_IMPERFECT_COLORS ) // I/O needs checking
 GAMEL( 199?, chrygld,    0,        chrygld,  chrygld,  cb3_state,      init_chrygld,   ROT0, "bootleg",           "Cherry Gold I (set 1)",                       0,                 layout_chrygld )
 GAMEL( 199?, chry10,     0,        chrygld,  chry10,   cb3_state,      init_chry10,    ROT0, "bootleg",           "Cherry 10 (bootleg with PIC16F84)",           0,                 layout_chrygld )
 GAME(  199?, goldfrui,   goldstar, goldfrui, goldstar, goldstar_state, empty_init,     ROT0, "bootleg",           "Gold Fruit",                                  0 )                  // maybe fullname should be 'Gold Fruit (main 40%)'
@@ -22444,6 +22532,7 @@ GAMEL( 199?, cb3d,       ncb3,     ncb3,     ncb3,     cb3_state,      empty_ini
 GAMEL( 199?, cb3e,       ncb3,     cb3e,     chrygld,  cb3_state,      init_cb3e,      ROT0, "bootleg",           "Cherry Bonus III (set 4, encrypted bootleg)", 0,                 layout_chrygld )
 GAMEL( 199?, cb3f,       ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3f,      ROT0, "bootleg (Cleco)",   "Cherry Bonus III (set 5, encrypted bootleg)", MACHINE_NOT_WORKING, layout_chrygld ) // partially decrypted, stops at 'call attendant'
 GAMEL( 199?, cb3g,       ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3g,      ROT0, "Dyna",              "Cherry Bonus III (ver.1.40, set 6)",          0,                 layout_cherryb3 )
+GAMEL( 199?, cb3h,       ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3,       ROT0, "Dyna",              "Cherry Bonus III (ver.1.40, set 7)",          0,                 layout_cherryb3 )
 GAMEL( 199?, chryglda,   ncb3,     cb3e,     chrygld,  cb3_state,      init_cb3e,      ROT0, "bootleg",           "Cherry Gold I (set 2, encrypted bootleg)",    0,                 layout_chrygld )  // Runs in CB3e hardware.
 GAME(  1994, chryangla,  ncb3,     chryangla,ncb3,     cb3_state,      init_chryangl,  ROT0, "bootleg (G.C.I.)",  "Cherry Angel (encrypted, W-4 hardware)",      MACHINE_NOT_WORKING ) // DYNA CB3  V1.40 string, decrypted but only test screens work
 
@@ -22482,6 +22571,7 @@ GAMEL( 1991, cmasterh,   cmaster,  cm,       cmasterh, cmaster_state,  init_cmv4
 GAMEL( 1991, cmasteri,   cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master I (ver.1.01, set 9)",           0,                 layout_cmasterb ) // NMC27CP128Q being 32k x8 instead of 16k x8...
 GAMEL( 1991, cmasterj,   cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master I (ver.1.01, set 10, BET stops all)",  0,          layout_cmasterb )
 GAMEL( 1991, cmasterk,   cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master I (ver.1.01, set 11, TAKE stops all)", 0,          layout_cmasterb )
+GAMEL( 1991, cmasterl,   cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master I (ver.1.01, set 12)",          0,                 layout_cmasterb )
 GAMEL( 199?, super7,     cmaster,  super7,   cmaster,  cmaster_state,  init_super7,    ROT0, "bootleg",           "Super Seven",                                 MACHINE_NOT_WORKING, layout_cmasterb ) // bad palette, no reels, decryption might be missing something, too
 GAME ( 199?, wcat3a,     wcat3,    chryangl, cmaster,  cmaster_state,  init_wcat3a,    ROT0, "E.A.I.",            "Wild Cat 3 (CMV4 hardware)",                  MACHINE_NOT_WORKING ) // does not boot. Wrong decryption, wrong machine or wrong what?
 GAMEL( 199?, ll3,        cmaster,  cm,       cmasterb, cmaster_state,  init_ll3,       ROT0, "bootleg",           "Lucky Line III",                              MACHINE_NOT_WORKING, layout_cmasterb )  // not looked at yet
@@ -22507,7 +22597,8 @@ GAME(  1992, cmast92a,   cmast92,  eldoradd, cmast91,  cmaster_state,  init_cmas
 GAME(  1991, eldoradd,   0,        eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V5.1DR)",                          MACHINE_NOT_WORKING ) // different GFX hw? Game is running and sounds play
 GAME(  1991, eldoraddo,  eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V1.1TA)",                          MACHINE_NOT_WORKING ) // different GFX hw?
 GAME(  1991, eldoraddob, eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V2.0D)",                           MACHINE_NOT_WORKING ) // different GFX hw?
-GAME(  1996, cmast97,    0,        cm97,     cmv801,   cmaster_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7)",                    MACHINE_NOT_WORKING ) // fix prom decode, reels
+GAME(  1996, cmast97,    0,        cm97,     cmv801,   cmaster_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 1)",             MACHINE_NOT_WORKING ) // fix prom decode, reels
+GAME(  1996, cmast97a,   cmast97,  cm97,     cmv801,   cmaster_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 2)",             MACHINE_NOT_WORKING ) // fix prom decode, reels
 GAME(  1996, cmast97i,   cmast97,  cm97,     cmv801,   cmaster_state,  empty_init,     ROT0, "Dyna",              "Cheri Mondo '97 (V1.4I)",                     MACHINE_NOT_WORKING ) // fix prom decode, reels
 GAME(  1999, cmast99,    0,        cm,       cmast99,  cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master '99 (V9B.00)",                  MACHINE_NOT_WORKING )
 GAME(  1999, cmast99b,   cmast99,  cm,       cmast99,  cmaster_state,  init_cmv4,      ROT0, "bootleg",           "Cherry Master '99 (V9B.00 bootleg / hack)",   MACHINE_NOT_WORKING )
