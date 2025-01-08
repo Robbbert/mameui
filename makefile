@@ -6,7 +6,8 @@
 #
 ###########################################################################
 
-
+BARE_VERS := 0.273
+LONG_VERS := $(BARE_VERS).x
 
 ###########################################################################
 #################   BEGIN USER-CONFIGURABLE OPTIONS   #####################
@@ -1081,7 +1082,7 @@ endif
 ifneq ($(IGNORE_GIT),1)
 NEW_GIT_VERSION := $(shell git describe --dirty)
 else
-NEW_GIT_VERSION := $(shell cmd /c date /T)
+NEW_GIT_VERSION := $(strip $(shell cmd /c date /T))
 endif
 ifeq ($(NEW_GIT_VERSION),)
 NEW_GIT_VERSION := unknown
@@ -1573,8 +1574,8 @@ endif
 
 ifeq (posix,$(SHELLTYPE))
 $(GENDIR)/version.cpp: makefile $(GENDIR)/git_desc | $(GEN_FOLDERS)
-	@echo '#define LONG_BUILD_VERSION "0.273.x"' > $@
-	@echo '#define BARE_BUILD_VERSION "0.273"' >> $@
+	@echo '#define LONG_BUILD_VERSION "$(LONG_VERS)"' > $@
+	@echo '#define BARE_BUILD_VERSION "$(BARE_VERS)"' >> $@
 	@echo '#define BARE_VCS_REVISION "$(NEW_GIT_VERSION)"' >> $@
 	@echo 'extern const char bare_build_version[];' >> $@
 	@echo 'extern const char long_build_version[];' >> $@
@@ -1586,8 +1587,8 @@ $(GENDIR)/version.cpp: makefile $(GENDIR)/git_desc | $(GEN_FOLDERS)
 	@echo 'const char build_version[] = LONG_BUILD_VERSION " (" BARE_VCS_REVISION ")";' >> $@
 else
 $(GENDIR)/version.cpp: makefile $(GENDIR)/git_desc | $(GEN_FOLDERS)
-	@echo #define LONG_BUILD_VERSION "0.273.x" > $@
-	@echo #define BARE_BUILD_VERSION "0.273" >> $@
+	@echo #define LONG_BUILD_VERSION "$(LONG_VERS)" > $@
+	@echo #define BARE_BUILD_VERSION "$(BARE_VERS)" >> $@
 	@echo #define BARE_VCS_REVISION "$(NEW_GIT_VERSION)" >> $@
 	@echo extern const char bare_build_version[]; >> $@
 	@echo extern const char long_build_version[]; >> $@
