@@ -11,11 +11,11 @@ copy %from%\src\emu\emuopts.cpp                     %to%\src\emu
 copy %from%\src\emu\gamedrv.h                       %to%\src\emu
 copy %from%\src\emu\inpttype.ipp                    %to%\src\emu
 copy %from%\src\emu\ioport.*                        %to%\src\emu
+copy %from%\src\emu\main.h                          %to%\src\emu
 copy %from%\src\emu\mconfig.cpp                     %to%\src\emu
 copy %from%\src\emu\softlist.cpp                    %to%\src\emu
 copy %from%\src\emu\softlist_dev.cpp                %to%\src\emu
 copy %from%\src\emu\video.*                         %to%\src\emu
-copy %from%\src\version.cpp                         %to%\src
 copy    %from%\src\makefile                         %to%
 
 md %to%\src\devices\bus\nes
@@ -31,8 +31,11 @@ copy %from%\src\devices\imagedev\floppy.cpp         %to%\src\devices\imagedev
 md %to%\src\frontend\mame\ui
 copy %from%\src\frontend\mame\mameopts.*            %to%\src\frontend\mame
 copy %from%\src\frontend\mame\audit.*               %to%\src\frontend\mame
-copy %from%\src\frontend\mame\mame.cpp              %to%\src\frontend\mame
+copy %from%\src\frontend\mame\mame.*                %to%\src\frontend\mame
 copy %from%\src\frontend\mame\ui\about.cpp          %to%\src\frontend\mame\ui
+copy %from%\src\frontend\mame\ui\auditmenu.cpp      %to%\src\frontend\mame\ui
+copy %from%\src\frontend\mame\ui\selgame.cpp        %to%\src\frontend\mame\ui
+copy %from%\src\frontend\mame\ui\selsoft.cpp        %to%\src\frontend\mame\ui
 copy %from%\src\frontend\mame\ui\ui.cpp             %to%\src\frontend\mame\ui
 
 md %to%\src\lib\util
@@ -40,10 +43,12 @@ copy %from%\src\lib\util\options.*                  %to%\src\lib\util
 copy %from%\src\lib\util\chdcd.cpp                  %to%\src\lib\util
 
 md %to%\src\mame\nintendo
+copy %from%\src\mame\mame.cpp                       %to%\src\mame
 copy %from%\src\mame\nintendo\snes.cpp              %to%\src\mame\nintendo
 
 md %to%\src\osd\modules\lib
 md %to%\src\osd\modules\render
+copy %from%\src\osd\modules\osdwindow.cpp           %to%\src\osd\modules
 copy %from%\src\osd\modules\lib\osdobj_common.cpp   %to%\src\osd\modules\lib
 copy %from%\src\osd\modules\render\drawd3d.cpp      %to%\src\osd\modules\render
 

@@ -4,7 +4,6 @@ set MINGW64=c:\Mingw\13-2\mingw64
 set minpath=%MINGW64%\bin
 set oldpath=%Path%
 set Path=%minpath%;%oldpath%
-touch src\version.cpp
 echo.|time
 %MINGW64%\bin\make PTR64=1 OSD=messui DEPRECATED=0 SYMBOLS=0 NO_SYMBOLS=1 %1 %2 %3 %4
 echo.|time
