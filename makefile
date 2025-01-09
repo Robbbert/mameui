@@ -1079,11 +1079,13 @@ OLD_GIT_VERSION := $(shell cat $(GENDIR)/git_desc 2> /dev/null)
 else
 OLD_GIT_VERSION := $(shell cat $(GENDIR)/git_desc 2> NUL)
 endif
-
 ifneq ($(IGNORE_GIT),1)
 NEW_GIT_VERSION := $(shell git describe --dirty)
 else
 NEW_GIT_VERSION := $(strip $(shell date /T))
+endif
+ifeq ($(NEW_GIT_VERSION),)
+NEW_GIT_VERSION := automated
 endif
 
 GENIE := 3rdparty/genie/bin/$(GENIEOS)/genie$(EXE)
