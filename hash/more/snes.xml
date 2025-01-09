@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3673 -->
+<!-- Number of items in this list = 3683 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -4262,6 +4262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf378c73e59ef5">
+		<description>Brandish 2 - Expert (J)(1996)(Koei)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Brandish 2 - Expert (J)(1996)(Koei).sfc" size="3145728" crc="ab43e910" sha1="f378c73e59ef54bbed156d5cbc8a506923c32bd0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7336158cbea3f">
 		<description>Brandish 2 - The Planet Buster T+Eng (2009)(Synchronicity]</description>
 		<year>????</year>
@@ -6472,6 +6482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snse2cb4935cfb5b">
+		<description>Der Langrisser (J, Rev 1)(1995)(NCS - Masaya)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Der Langrisser (J, Rev 1)(1995)(NCS - Masaya).sfc" size="2097152" crc="35f9eecc" sha1="e2cb4935cfb5b442928ecad43da8b59ee5b159e4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns4c9835836522c">
 		<description>Der Langrisser evil clan edition by tianxiayumian (hack)</description>
 		<year>????</year>
@@ -6519,6 +6539,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Der Langrisser hack by yiyun930 v1.5.sfc" size="2097152" crc="91faa0e9" sha1="2a590b7e26fbe3e6ac2adc4cfae0a62445e160e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns844324d1a16b3">
+		<description>Der Langrisser T-Eng v1.3.1 (2022)(Near, D)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Der Langrisser T-Eng v1.3.1 (2022)(Near, D).sfc" size="4194304" crc="a55f6086" sha1="844324d1a16b3a6022eac7d5ff697bb2a79338f3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7092,6 +7122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns1c47ed62c561d">
+		<description>Dragon Quest V - Tenkuu no Hanayome (J)(1992)(Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Dragon Quest V - Tenkuu no Hanayome (J)(1992)(Enix).sfc" size="1572864" crc="bc955f3b" sha1="1c47ed62c561d7965fe5dc2a03f4c37feb4a46b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb07e10c97c594">
 		<description>Dragon Quest V - Tenkuu no Hanayome (Japan) [T+Eng] DeJap v2.01F [deSplash]</description>
 		<year>????</year>
@@ -7099,6 +7139,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Dragon Quest V - Tenkuu no Hanayome (Japan) [T+Eng] DeJap v2.01F [deSplash].sfc" size="2097152" crc="7b37cfda" sha1="b07e10c97c594e86bf0fed23d4aa0d5a30aecc5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7eb872685fb14">
+		<description>Dragon Quest V - Tenkuu no Hanayome T-Eng v2.01 Final (2002)(DeJap Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Quest V - Tenkuu no Hanayome T-Eng v2.01 Final (2002)(DeJap Translations).sfc" size="2097152" crc="9400cb3c" sha1="7eb872685fb1428aa81b2ae8eaa5d82db88c14e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3e699dc7e064d">
+		<description>Dragon Quest VI - Maboroshi no Daichi (J)(1995)(Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dragon Quest VI - Maboroshi no Daichi (J)(1995)(Enix).sfc" size="4194304" crc="33304519" sha1="3e699dc7e064d6ac84b1981aa150fdf1672b5456"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns30c3ee0ada934">
+		<description>Dragon Quest VI - Maboroshi no Daichi T+Eng v0.90 (2001)(NoPrgress)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dragon Quest VI - Maboroshi no Daichi T+Eng v0.90 (2001)(NoPrgress).smc" size="4194304" crc="276d9893" sha1="30c3ee0ada93480af2ce0e7ab691f8f2d505f70d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11739,6 +11809,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="J League Super Soccer (J)(1994)(Hudson Soft).sfc" size="1572864" crc="1d20cac2" sha1="c6a42f7240ef8898bfedfe0f938f9d86cfdaaee5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns03ea00083dccb">
+		<description>Jelly Boy 2 T-Eng (2006)(KingMike's Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Jelly Boy 2 T-Eng (2006)(KingMike's Translations).sfc" size="1572864" crc="a42d70a8" sha1="03ea00083dccbf013306281cfec0a72cbdd3cfd6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20649,6 +20729,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Shin Megami Tensei (J)(1992)(Atlus).sfc" size="1572864" crc="90de2c78" sha1="f765341b62ff3e7d119e8185be51c6f0757a86c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsfb8a7005b6254">
+		<description>Shin Megami Tensei if (J)(1994)(Atlus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shin Megami Tensei if (J)(1994)(Atlus).sfc" size="2097152" crc="4dd73cba" sha1="fb8a7005b62549a09de00ca83a795ca1a1560a7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns069dfb12d312d">
+		<description>Shin Megami Tensei If T-Eng (2018)(Aeon Genesis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Shin Megami Tensei If T-Eng (2018)(Aeon Genesis).sfc" size="2621440" crc="031f11b7" sha1="069dfb12d312d114a83e6b27c4c7d1f01f3d4e02"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 177 -->
+<!-- Number of items in this list = 185 -->
 <softwarelist name="coco_flop" description="coco_flop loose roms">
 	<software name="coce2238f4876cf6">
 		<description>(demo)Rotag (2024-02)(Desire)(CoCo 3)</description>
@@ -29,6 +29,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="A1RL0CK (2023-06-06)(Innocenti, Marco).dsk" size="161280" crc="f84b4e45" sha1="e70f154aa7e11af12c7b6390ad4f74ac9834d035"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc6d51e97cc7ea7">
+		<description>A1RL0CK_dragon64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="184576">
+				<rom name="A1RL0CK_dragon64.vdk" size="184576" crc="9d93e614" sha1="6d51e97cc7ea73dfee0965890fac09fe588d7082"/>
 			</dataarea>
 		</part>
 	</software>
@@ -192,6 +202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="coc9c20280f4801a">
+		<description>blorp_dragon64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="184576">
+				<rom name="blorp_dragon64.vdk" size="184576" crc="172fa6a1" sha1="9c20280f4801a704bfa4ba0938b5c982363545de"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cocacedea394e95c">
 		<description>CBASIC3</description>
 		<year>????</year>
@@ -209,6 +229,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="Clean Getaway, A (2023-06-06)(Bub, Michael).dsk" size="161280" crc="9807fdf1" sha1="82609825f7d33758f76c3b35c3d3f7500d83f219"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc7a642780f4381">
+		<description>clean_dragon64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="184576">
+				<rom name="clean_dragon64.vdk" size="184576" crc="ac0c05db" sha1="7a642780f43813da08b5cd647c14369040bdeebd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -482,6 +512,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="coc99819cb356f42">
+		<description>DRAGON64_LOADER[D64]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="184576">
+				<rom name="DRAGON64_LOADER[D64].vdk" size="184576" crc="bc050025" sha1="99819cb356f42258630c10ff5fae94c908d7310d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="coc4645f6424477f">
 		<description>ELITE-FILE-V1.0</description>
 		<year>????</year>
@@ -509,6 +549,26 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="Falling to Pieces (2023-06-06)(Girelli, Gianluca).dsk" size="161280" crc="133b0845" sha1="a5b7c9663898c64e50ee4addec09d2566bfa62a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc617766cf148c3">
+		<description>falling_dragon64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="184576">
+				<rom name="falling_dragon64.vdk" size="184576" crc="107c86b0" sha1="617766cf148c3f7246c8fd714e6ead0509c96265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc3c7c46871d7f5">
+		<description>fantadim_dragon64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="184576">
+				<rom name="fantadim_dragon64.vdk" size="184576" crc="5330672a" sha1="3c7c46871d7f5a819493f5db9f1beb5ae0d85fb2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -689,6 +749,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="Lucid Night (2023-06-06)(Cooke, Dee).dsk" size="161280" crc="7816ee42" sha1="7d479969b6c968817e82acb60ad4f9bf1821e7a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocbc2103ea4a2a5">
+		<description>lucid_dragon64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="184576">
+				<rom name="lucid_dragon64.vdk" size="184576" crc="c9819f3d" sha1="bc2103ea4a2a50d050a6c8655a4498d3087c16cb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1469,6 +1539,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="Submarine Sabotage (2023-06-06)(Francis, Garry).dsk" size="161280" crc="344c3ee1" sha1="80f297bc67933c70259ce560bf43076c905e6a3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc577cc6ce973d1">
+		<description>subsabot_dragon64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="184576">
+				<rom name="subsabot_dragon64.vdk" size="184576" crc="257a2824" sha1="577cc6ce973d1dbc58cf73345445a0a840bb23a2"/>
 			</dataarea>
 		</part>
 	</software>

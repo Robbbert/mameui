@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4 -->
+<!-- Number of items in this list = 5 -->
 <softwarelist name="attache" description="attache loose roms">
+	<software name="att48c739d45bf2a">
+		<description>Deepspace[Bdrive]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="430336">
+				<rom name="Deepspace[Bdrive].dsk" size="430336" crc="6c1e6086" sha1="48c739d45bf2a401c33f4288ceab35419cf19201"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="att7e60b18e79fc1">
 		<description>Elite Planet Browser[Bdrive]</description>
 		<year>????</year>

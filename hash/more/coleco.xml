@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 617 -->
+<!-- Number of items in this list = 618 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -339,6 +339,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Astrododge (2012) (Revival Studios).rom" size="32768" crc="1a29dfd1" sha1="8a9ec107cfef2df9e5509ea853674c262767e207"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colb3ee673e595c2">
+		<description>Aztec Challenge - Dragonfly Amusement (2024 XMAS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Aztec Challenge - Dragonfly Amusement (2024 XMAS).rom" size="32768" crc="b931416a" sha1="b3ee673e595c2ded34c98d469642affe57864f51"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3053,22 +3063,22 @@
 		</part>
 	</software>
 	<software name="cold5d8ffa4271b8">
-		<description>Mastermind_Bit90</description>
+		<description>MastermindRK_Bit90</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Mastermind_Bit90.rom" size="32768" crc="7ee64cc3" sha1="d5d8ffa4271b83e375571cca3ac5836d79723399"/>
+				<rom name="MastermindRK_Bit90.rom" size="32768" crc="7ee64cc3" sha1="d5d8ffa4271b83e375571cca3ac5836d79723399"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="colb1277ea753d57">
-		<description>Mastermind_coleco</description>
+		<description>MastermindRK_coleco</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Mastermind_coleco.rom" size="32768" crc="19728774" sha1="b1277ea753d57f8ecf2b247d95b79e2b98550619"/>
+				<rom name="MastermindRK_coleco.rom" size="32768" crc="19728774" sha1="b1277ea753d57f8ecf2b247d95b79e2b98550619"/>
 			</dataarea>
 		</part>
 	</software>
