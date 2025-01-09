@@ -1083,7 +1083,7 @@ endif
 ifneq ($(IGNORE_GIT),1)
 NEW_GIT_VERSION := $(shell git describe --dirty)
 else
-NEW_GIT_VERSION := $(strip $(shell cmd /c date /T))
+NEW_GIT_VERSION := $(strip $(shell date /T))
 endif
 
 GENIE := 3rdparty/genie/bin/$(GENIEOS)/genie$(EXE)
