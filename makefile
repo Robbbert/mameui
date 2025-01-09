@@ -16,7 +16,7 @@ LONG_VERS := $(BARE_VERS).x
 # REGENIE = 1
 # VERBOSE = 1
 # NOWERROR = 1
-# IGNORE_GIT = 1
+IGNORE_GIT = 1
 
 # TARGET = mame
 # SUBTARGET = tiny
@@ -1079,13 +1079,11 @@ OLD_GIT_VERSION := $(shell cat $(GENDIR)/git_desc 2> /dev/null)
 else
 OLD_GIT_VERSION := $(shell cat $(GENDIR)/git_desc 2> NUL)
 endif
+
 ifneq ($(IGNORE_GIT),1)
 NEW_GIT_VERSION := $(shell git describe --dirty)
 else
 NEW_GIT_VERSION := $(strip $(shell cmd /c date /T))
-endif
-ifeq ($(NEW_GIT_VERSION),)
-NEW_GIT_VERSION := unknown
 endif
 
 GENIE := 3rdparty/genie/bin/$(GENIEOS)/genie$(EXE)
