@@ -1166,11 +1166,12 @@ inline void cosmac_device::dma_input()
 
 	m_icount -= CLOCKS_DMA;
 
-	if (m_dmain)
-	{
-		m_state = cosmac_state::STATE_2_DMA_IN;
-	}
-	else if (m_dmaout)
+	//if (m_dmain)
+	//{
+		//m_state = cosmac_state::STATE_2_DMA_IN;
+	//}
+	//else if (m_dmaout)
+	if (m_dmaout)
 	{
 		m_state = cosmac_state::STATE_2_DMA_OUT;
 	}

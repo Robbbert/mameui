@@ -49,6 +49,18 @@ uint8_t elf2_state::data_r()
 	return m_data;
 }
 
+void elf2_state::status_w()
+{
+	u8 data = m_special->read();
+	if (data != m_status)
+	{
+		m_text[m_status&7] = 0;
+		m_text[data&7] = 1;
+		m_status = data;
+		output().set_value("led1", BIT(data, 3));
+	}
+}
+
 void elf2_state::data_w(uint8_t data)
 {
 	m_led_l->a_w(data & 0x0f);
@@ -73,6 +85,8 @@ void elf2_state::memory_w(offs_t offset, uint8_t data)
 		/* write data to 7 segment displays */
 		m_led_l->a_w(data & 0x0f);
 		m_led_h->a_w(data >> 4);
+		m_adr_l->a_w(offset & 0x0f);
+		m_adr_h->a_w(offset >> 4);
 	}
 }
 
@@ -96,7 +110,13 @@ void elf2_state::elf2_io(address_map &map)
 
 INPUT_CHANGED_MEMBER(elf2_state::input_w)
 {
-	if (newval && ~m_sc & 2)
+	if ((m_status & 3) == 0)
+	{
+		m_adr_l->a_w(0);
+		m_adr_h->a_w(0);
+	}
+
+	if (newval == 0)
 	{
 		/* assert DMAIN */
 		m_maincpu->set_input_line(COSMAC_INPUT_LINE_DMAIN, ASSERT_LINE);
@@ -143,6 +163,7 @@ INPUT_PORTS_END
 
 int elf2_state::wait_r()
 {
+	status_w();
 	return !LOAD;
 }
 
@@ -166,8 +187,6 @@ void elf2_state::sc_w(uint8_t data)
 	/* DMAIN is reset while SC1 is high */
 	if (data & 2)
 		m_maincpu->set_input_line(COSMAC_INPUT_LINE_DMAIN, CLEAR_LINE);
-
-	m_sc = data;
 }
 
 /* MM74C923 Interface */
@@ -193,6 +212,7 @@ void elf2_state::da_w(int state)
 
 void elf2_state::machine_start()
 {
+	m_text.resolve();
 	address_space &program = m_maincpu->space(AS_PROGRAM);
 
 	/* setup memory banking */
@@ -201,7 +221,6 @@ void elf2_state::machine_start()
 
 	/* register for state saving */
 	save_item(NAME(m_data));
-	save_item(NAME(m_sc));
 }
 
 /* Machine Driver */
@@ -255,6 +274,8 @@ void elf2_state::elf2(machine_config &config)
 
 	DM9368(config, m_led_h).update_cb().set_output("digit0");
 	DM9368(config, m_led_l).update_cb().set_output("digit1");
+	DM9368(config, m_adr_h).update_cb().set_output("digit2");
+	DM9368(config, m_adr_l).update_cb().set_output("digit3");
 
 	SPEAKER(config, "mono").front_center();
 

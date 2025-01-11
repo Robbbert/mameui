@@ -3,32 +3,71 @@
 license:CC0-1.0
 -->
 <mamelayout version="2">
-	<element name="digit" defstate="0">
+	<element name="r_digit">
 		<led7seg>
-			<color red="0.75" green="0" blue="0.0" />
+			<color red="0.75" green="0.0" blue="0.0" />
 		</led7seg>
 	</element>
-
+	<element name="g_digit" defstate="0">
+		<led7seg>
+			<color red="0.75" green="0.5" blue="0.0" />
+		</led7seg>
+	</element>
 	<element name="red_led" defstate="0">
 		<disk state="1">
 			<color red="0.75" green="0.0" blue="0.0" />
 		</disk>
 		<disk state="0">
-			<color red="0.09375" green="0.0" blue="0.0" />
+			<color red="0.0" green="0.0" blue="0.2" />
 		</disk>
 	</element>
+	<element name="background">
+		<rect>
+			<bounds left="0" top="0" right="1" bottom="1" />
+			<color red="0.0" green="0.0" blue="0.0" />
+		</rect>
+	</element>
+	<element name="T0"><text state="1" string="RESET"><color red="1.0" green="1.0" blue="1.0" /></text></element>
+	<element name="T1"><text state="1" string="RUN R/W"><color red="1.0" green="1.0" blue="1.0" /></text></element>
+	<element name="T2"><text state="1" string="WRITE"><color red="1.0" green="1.0" blue="1.0" /></text></element>
+	<element name="T3"><text state="1" string="PAUSE"><color red="1.0" green="1.0" blue="1.0" /></text></element>
+	<element name="T4"><text state="1" string="RESET"><color red="1.0" green="1.0" blue="1.0" /></text></element>
+	<element name="T5"><text state="1" string="RUN R/O"><color red="1.0" green="1.0" blue="1.0" /></text></element>
+	<element name="T6"><text state="1" string="READ"><color red="1.0" green="1.0" blue="1.0" /></text></element>
+	<element name="T7"><text state="1" string="PAUSE"><color red="1.0" green="1.0" blue="1.0" /></text></element>
 
-	<view name="Standard">
-		<!-- Led address display -->
-		<element name="digit0" ref="digit">
-			<bounds x="0" y="0" width="18" height="24" />
+	<view name="Default Layout">
+		<!-- Black background -->
+		<element ref="background">
+			<bounds left="97" top="65" right="308" bottom="156" />
 		</element>
-		<element name="digit1" ref="digit">
-			<bounds x="18" y="0" width="18" height="24" />
+		<element name="digit2" ref="r_digit">
+			<bounds left="107" top="075" right="154" bottom="146" />
+		</element>
+		<element name="digit3" ref="r_digit">
+			<bounds left="155" top="075" right="202" bottom="146" />
+		</element>
+		<element name="digit0" ref="g_digit">
+			<bounds left="203" top="075" right="250" bottom="146" />
+		</element>
+		<element name="digit1" ref="g_digit">
+			<bounds left="251" top="075" right="298" bottom="146" />
 		</element>
 		<!-- OUT led -->
 		<element name="led0" ref="red_led">
-			<bounds x="40" y="5" width="5" height="5" />
+			<bounds x="128" y="152" width="5" height="5" />
+		</element>
+		<element name="text0" ref="T0"><bounds left="155" right="200" top="150" bottom="160"/></element>
+		<element name="text1" ref="T1"><bounds left="155" right="200" top="150" bottom="160"/></element>
+		<element name="text2" ref="T2"><bounds left="155" right="200" top="150" bottom="160"/></element>
+		<element name="text3" ref="T3"><bounds left="155" right="200" top="150" bottom="160"/></element>
+		<element name="text4" ref="T4"><bounds left="155" right="200" top="150" bottom="160"/></element>
+		<element name="text5" ref="T5"><bounds left="155" right="200" top="150" bottom="160"/></element>
+		<element name="text6" ref="T6"><bounds left="155" right="200" top="150" bottom="160"/></element>
+		<element name="text7" ref="T7"><bounds left="155" right="200" top="150" bottom="160"/></element>
+		<!-- INPUT led -->
+		<element name="led1" ref="red_led">
+			<bounds x="220" y="152" width="5" height="5" />
 		</element>
 	</view>
 
