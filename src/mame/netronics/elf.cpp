@@ -110,12 +110,10 @@ void elf2_state::elf2_io(address_map &map)
 
 INPUT_CHANGED_MEMBER(elf2_state::input_w)
 {
-	if ((m_status & 3) == 0)
-	{
-		m_adr_l->a_w(0);
-		m_adr_h->a_w(0);
-	}
-
+	// Don't DMA while LOAD is off
+	if (BIT(~m_status, 1))
+		return;
+	// DMA when button released
 	if (newval == 0)
 	{
 		/* assert DMAIN */
@@ -156,7 +154,7 @@ static INPUT_PORTS_START( elf2 )
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("RUN") PORT_CODE(KEYCODE_R) PORT_TOGGLE
 	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("LOAD") PORT_CODE(KEYCODE_L) PORT_TOGGLE
 	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("M/P") PORT_CODE(KEYCODE_M) PORT_TOGGLE
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("INPUT") PORT_CODE(KEYCODE_ENTER) PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(elf2_state::input_w), 0)
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("INPUT") PORT_CODE(KEYCODE_ENTER) PORT_CHAR('^') PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(elf2_state::input_w), 0)
 INPUT_PORTS_END
 
 /* CDP1802 Configuration */
