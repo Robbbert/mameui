@@ -312,19 +312,21 @@ int agnus_copper_device::execute_next(int xpos, int ypos, bool is_blitter_busy, 
 		if (word0 >= m_cdang_setting)
 		{
 			// SKIP applies to valid MOVEs only
-			// - apocalyps (gameplay)
+			// - apocalyps (gameplay, chain of SKIPs & WAIT)
+			// - rbisland (loading screen at least, tries to SKIP a CDANG MOVE)
 			if (m_state_skipping)
 			{
 				LOGINST("  (Ignored)\n");
 				m_state_skipping = false;
 				// TODO: verify timings
-                // may depend on num of planes enabled (move_offset) or opcode fetch above is enough.
+				// may depend on num of planes enabled (move_offset) or opcode fetch above is enough.
 				xpos += COPPER_CYCLES_TO_PIXELS(2);
 				return xpos;
 			}
 			// delay write to the next available DMA slot if not in blanking area
-			// - bchvolly (title), suprfrog & abreed (bottom playfield rows)
-			const bool horizontal_blank = xpos < 0x47;
+			// - suprfrog & abreed (bottom playfield rows).
+			// - beast, biochall and cd32 bios wants this to be 0x5c
+			const bool horizontal_blank = xpos <= 0x5c;
 			const int move_offset = horizontal_blank ? 0 : std::max(num_planes - 4, 0);
 
 			m_pending_offset = word0;
@@ -357,7 +359,7 @@ int agnus_copper_device::execute_next(int xpos, int ypos, bool is_blitter_busy, 
 		/* handle a wait */
 		if ((word1 & 1) == 0)
 		{
-			const bool horizontal_blank = xpos < 0x47;
+			const bool horizontal_blank = xpos <= 0x5c;
 			const int wait_offset = horizontal_blank ? 0 : std::max(num_planes - 4, 0) + 1;
 
 			LOGINST("  WAIT %04x & %04x (currently %04x, num planes %d +%d)\n",

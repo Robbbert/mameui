@@ -8,7 +8,7 @@
 
     Games supported:
         * F-15 Strike Eagle [3 sets]
-        * B.O.T.S.S. - Battle of the Solar System [2 sets]
+        * B.O.T.S.S.: Battle of the Solar System [2 sets]
         * Tank Battle (prototype)
         * Super Tank Attack (prototype)
 
@@ -327,7 +327,7 @@ void micro3d_state::micro3d(machine_config &config)
 	m_drmath->set_addrmap(AS_PROGRAM, &micro3d_state::drmath_prg);
 	m_drmath->set_addrmap(AS_DATA, &micro3d_state::drmath_data);
 
-	scc8530_device &scc(SCC8530N(config, "scc", 32_MHz_XTAL / 2 / 2));
+	scc8530_device &scc(SCC8530(config, "scc", 32_MHz_XTAL / 2 / 2));
 	scc.out_txdb_callback().set("monitor_drmath", FUNC(rs232_port_device::write_txd));
 
 	I8051(config, m_audiocpu, 11.0592_MHz_XTAL);
@@ -339,7 +339,7 @@ void micro3d_state::micro3d(machine_config &config)
 	m_audiocpu->port_out_cb<3>().set(FUNC(micro3d_state::sound_p3_w));
 
 	MC68681(config, m_duart, 3.6864_MHz_XTAL);
-	m_duart->irq_cb().set(FUNC(micro3d_state::duart_irq_handler));
+	m_duart->irq_cb().set_inputline("maincpu", M68K_IRQ_3);
 	m_duart->a_tx_cb().set("monitor_host", FUNC(rs232_port_device::write_txd));
 	m_duart->b_tx_cb().set(FUNC(micro3d_state::duart_txb));
 	m_duart->inport_cb().set(FUNC(micro3d_state::duart_input_r));
