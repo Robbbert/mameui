@@ -524,10 +524,7 @@ void galaxold_state::drivfrcg_program(address_map &map)
 	map(0x1500, 0x1500).mirror(0x6000).portr("IN0");
 	map(0x1503, 0x1503).mirror(0x6000).w(FUNC(galaxold_state::galaxold_coin_counter_w));
 	map(0x1580, 0x1580).mirror(0x6000).portr("IN1");
-	map(0x1580, 0x1582).mirror(0x6000).w("cust", FUNC(galaxian_sound_device::background_enable_w));
-	map(0x1583, 0x1583).mirror(0x6000).nopw();
-	map(0x1585, 0x1585).mirror(0x6000).nopw();
-	map(0x1586, 0x1587).mirror(0x6000).w("cust", FUNC(galaxian_sound_device::lfo_freq_w));
+	map(0x1580, 0x1587).mirror(0x6000).w("cust", FUNC(galaxian_sound_device::sound_w));
 	map(0x1600, 0x1600).mirror(0x6000).portr("DSW0").w("cust", FUNC(galaxian_sound_device::pitch_w));
 	map(0x1700, 0x1700).mirror(0x6000).portr("DSW1").nopw();
 	map(0x1701, 0x1701).mirror(0x6000).nopw();
