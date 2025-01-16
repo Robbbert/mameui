@@ -535,6 +535,13 @@ VIDEO_START_MEMBER(galaxold_state,pisces)
 	m_modify_spritecode = &galaxold_state::pisces_modify_spritecode;
 }
 
+VIDEO_START_MEMBER(galaxold_state,4in1)
+{
+	VIDEO_START_CALL_MEMBER(pisces);
+
+	m_leftclip = 0;
+}
+
 #ifdef UNUSED_FUNCTION
 void galaxold_state::theend_draw_bullets(bitmap_ind16 &bitmap, const rectangle &cliprect, int offs, int x, int y)
 {
