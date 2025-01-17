@@ -499,7 +499,7 @@ void drcbe_arm64::get_imm_relative(a64::Assembler &a, const a64::Gp &reg, const 
 		const uint64_t targetpage = (uint64_t)ptr & ~make_bitmask<uint64_t>(12);
 		const uint64_t pageoffs = (uint64_t)ptr & util::make_bitmask<uint64_t>(12);
 
-		a.adrp(reg, targetpage);
+		a.adrp(reg.x(), targetpage);
 		if (pageoffs != 0)
 			a.add(reg, reg, pageoffs);
 
@@ -1625,6 +1625,7 @@ void drcbe_arm64::op_recover(a64::Assembler &a, const uml::instruction &inst)
 
 	get_imm_relative(a, REG_PARAM1, m_drcmap_get_value.obj);
 	a.ldr(REG_PARAM2, arm::Mem(a64::x29, -8)); // saved LR (x30) from first level CALLH/EXH or failed hash jump
+	a.sub(REG_PARAM2, REG_PARAM2, 4);
 	a.mov(REG_PARAM3, inst.param(1).mapvar());
 
 	call_arm_addr(a, m_drcmap_get_value.func);
