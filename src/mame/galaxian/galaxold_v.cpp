@@ -539,7 +539,7 @@ VIDEO_START_MEMBER(galaxold_state,4in1)
 {
 	VIDEO_START_CALL_MEMBER(pisces);
 
-	m_leftclip = 0;
+	m_leftclip = 1;
 }
 
 #ifdef UNUSED_FUNCTION

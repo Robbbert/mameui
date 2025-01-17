@@ -2578,6 +2578,8 @@ void galaxian_state::jumpbugbrf_map(address_map &map)
 	map(0x7007, 0x7007).mirror(0x07f8).w(FUNC(galaxian_state::galaxian_flip_screen_y_w));
 	map(0x8000, 0xafff).rom();
 	map(0xb000, 0xbfff).r(FUNC(galaxian_state::jumpbug_protection_r));
+	map(0x6800,0x6807).mirror(0x07f8).w("cust",FUNC(galaxian_sound_device::sound_w));  // MAMEFX, Robbbert 2022-09-09, from HBMAME
+	map(0x7800,0x7800).mirror(0x07ff).w("cust",FUNC(galaxian_sound_device::pitch_w));  // MAMEFX
 }
 
 /* changes from jumpbugbrf map:
@@ -7964,6 +7966,8 @@ void galaxian_state::jumpbug(machine_config &config)
 
 	// sound hardware
 	AY8910(config, m_ay8910[0], GALAXIAN_PIXEL_CLOCK/3/2/2).add_route(ALL_OUTPUTS, "speaker", 0.5); // matches PCB video - unconfirmed
+
+	GALAXIAN_SOUND(config, "cust", 0);  // MAMEFX Robbbert 2022-09-09 extra sounds for jumpbug
 }
 
 
@@ -9076,6 +9080,8 @@ void galaxian_state::init_pacmanbl()
 
 	// ...but coin lockout disabled/disconnected
 	space.install_write_handler(0x6002, 0x6002, 0, 0x7f8, 0, write8smo_delegate(*this, FUNC(galaxian_state::artic_gfxbank_w)));
+
+	m_leftspriteclip = 8;
 }
 
 void galaxian_state::init_devilfshg()
@@ -9645,6 +9651,8 @@ void galaxian_state::init_crazym()
 			case 0x38: (i & 0x01) ? rom[i] ^= 0x30 : rom[i] ^= 0x20; break;
 		}
 	}
+
+	m_leftspriteclip = 8;
 }
 
 void galaxian_state::init_froggrs()
@@ -16816,8 +16824,8 @@ GAME( 198?, timefgtr,    0,        timefgtr,   timefgtr,   galaxian_state, init_
 // Extra ROMs, protection, and sound hardware replaced with AY8910
 GAME( 1981, jumpbug,     0,        jumpbug,    jumpbug,    galaxian_state, init_jumpbug,    ROT90,  "Hoei (Rock-Ola license)",      "Jump Bug",                      MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND ) // or by Alpha Denshi Co. under contract from Hoei?
 GAME( 1981, jumpbugb,    jumpbug,  jumpbug,    jumpbug,    galaxian_state, init_jumpbug,    ROT90,  "bootleg",                      "Jump Bug (bootleg, set 1)",     MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND ) // bootleg of Sega license
-GAME( 1982, jumpbugbrf,  jumpbug,  jumpbugbrf, jumpbug,    galaxian_state, init_jumpbug,    ROT90,  "bootleg (Recreativos Franco)", "Jump Bug (bootleg, set 2)",     MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE ) // bootleg from Recreativos Franco, without AY-8910
-GAME( 1982, jumpbugbc,   jumpbug,  jumpbugbrf, jumpbug,    galaxian_state, init_jumpbugbc,  ROT90,  "bootleg (Cirsa)",              "Jump Bug (bootleg, set 3)",     MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )// bootleg on Cirsa PCB, without AY-8910
+GAME( 1982, jumpbugbrf,  jumpbug,  jumpbug,    jumpbug,    galaxian_state, init_jumpbug,    ROT90,  "bootleg (Recreativos Franco)", "Jump Bug (bootleg, set 2)",     MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE ) // bootleg from Recreativos Franco, without AY-8910
+GAME( 1982, jumpbugbc,   jumpbug,  jumpbug,    jumpbug,    galaxian_state, init_jumpbugbc,  ROT90,  "bootleg (Cirsa)",              "Jump Bug (bootleg, set 3)",     MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )// bootleg on Cirsa PCB, without AY-8910
 GAME( 1982, olibug,      jumpbug,  jumpbug,    jumpbug,    galaxian_state, init_jumpbug,    ROT90,  "bootleg",                      "Oli Bug (bootleg of Jump Bug)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND | MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING ) // one bad GFX ROM, uses Galaxian color PROM?
 GAME( 1983, levers,      0,        jumpbug,    levers,     galaxian_state, init_jumpbug,    ROT90,  "Rock-Ola",                     "Levers",                        MACHINE_SUPPORTS_SAVE )
 
