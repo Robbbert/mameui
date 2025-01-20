@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 259 -->
+<!-- Number of items in this list = 248 -->
 <softwarelist name="oric1_flop" description="oric1_flop loose roms">
 	<software name="orif92e3eca92d51">
 		<description>3dfongus</description>
@@ -79,56 +79,6 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1049856">
 				<rom name="ALTITUDE0.dsk" size="1049856" crc="f60ea9ef" sha1="acab3f4d24bea80cd4a67acfe3ef7db0c5aa94ab"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="oriaf611a4987093">
-		<description>Am-1 A Amnukor Travail (19xx)(-)(fr)[Sedoric]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="269056">
-				<rom name="Am-1 A Amnukor Travail (19xx)(-)(fr)[Sedoric].dsk" size="269056" crc="3ea122d6" sha1="af611a49870931bcc9ae77dea07971aa3f46844f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori40a17e42400b7">
-		<description>Ammnukor Utilitaires (19xx)(-)(fr)(Side A)[Sedoric]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="269056">
-				<rom name="Ammnukor Utilitaires (19xx)(-)(fr)(Side A)[Sedoric].dsk" size="269056" crc="2c302d14" sha1="40a17e42400b76a72e8f6de86c3b616254f51350"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="orib540ac377d93b">
-		<description>Ammnukor Utilitaires (19xx)(-)(fr)(Side B)[Sedoric]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="269056">
-				<rom name="Ammnukor Utilitaires (19xx)(-)(fr)(Side B)[Sedoric].dsk" size="269056" crc="d8f5d25b" sha1="b540ac377d93be2be6dc02624437d63c16a2f867"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori4de55a640680a">
-		<description>Amnukor Master Prg Princip (19xx)(-)(fr)[Sedoric]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="269056">
-				<rom name="Amnukor Master Prg Princip (19xx)(-)(fr)[Sedoric].dsk" size="269056" crc="cfee8743" sha1="4de55a640680a99b5e36e90ca77bab8c7fb730a4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori70763ac3dfc72">
-		<description>Amnukor Master Utilitaires (19xx)(-)(fr)[Sedoric]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="269056">
-				<rom name="Amnukor Master Utilitaires (19xx)(-)(fr)[Sedoric].dsk" size="269056" crc="6e6d0c74" sha1="70763ac3dfc72511cef4a6a2aa787b9a65b1db8d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -402,16 +352,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ori72ac96222a6c2">
-		<description>Chopper (19xx)(-)[b][Sedoric][B- CHOP]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="269056">
-				<rom name="Chopper (19xx)(-)[b][Sedoric][B- CHOP].dsk" size="269056" crc="b0d876c2" sha1="72ac96222a6c2ea3b924f1003f967f64be284737"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="oriab67fd857d123">
 		<description>CIDRE</description>
 		<year>????</year>
@@ -482,26 +422,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ori7f28475a0b600">
-		<description>COSMOS99 1.00</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="192256">
-				<rom name="COSMOS99 1.00.dsk" size="192256" crc="a1999968" sha1="7f28475a0b600a3cc182da4b81b898da0cadc5ba"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori0bf2c7d4ce58b">
-		<description>COSMOS99</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="192256">
-				<rom name="COSMOS99.dsk" size="192256" crc="477b81ba" sha1="0bf2c7d4ce58b9c5d72210b3fbcdb4163aa622c1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="orie495b8dfc23fa">
 		<description>CPM-65 (2024-05-03)(Given, David)(CH)(en)(BSD-2)</description>
 		<year>????</year>
@@ -519,26 +439,6 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1049856">
 				<rom name="Creepy Castle (UK) (19xx).dsk" size="1049856" crc="d17a21c4" sha1="216b830b9b9434ff246a6cf9e1fe82b057aef376"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori33bb29b365480">
-		<description>Defense Force (19xx)(Tansoft)[Sedoric][noboot]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="269056">
-				<rom name="Defense Force (19xx)(Tansoft)[Sedoric][noboot].dsk" size="269056" crc="acea67d5" sha1="33bb29b365480898bd886a28c3b6d4892f7bef22"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori519e86ab12f2a">
-		<description>Demo Mag (19xx)(-)(PD)[a][Sedoric]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="537856">
-				<rom name="Demo Mag (19xx)(-)(PD)[a][Sedoric].dsk" size="537856" crc="92da62f0" sha1="519e86ab12f2a0feb3754348bd9bf6c24590bf86"/>
 			</dataarea>
 		</part>
 	</software>
@@ -579,16 +479,6 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1049856">
 				<rom name="DOMINO.dsk" size="1049856" crc="3d001e0d" sha1="365608c176441453aada1d0251f5a2c4b3350012"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="orid353946d26214">
-		<description>Don't Panic (1992)(Mirage Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop" interface="oric1_flop">
-			<dataarea name="flop" size="1049856">
-				<rom name="Don't Panic (1992)(Mirage Software).dsk" size="1049856" crc="a8e6182e" sha1="d353946d262142ad86eb2c61862b4f76002f8936"/>
 			</dataarea>
 		</part>
 	</software>

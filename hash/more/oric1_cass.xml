@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 466 -->
+<!-- Number of items in this list = 457 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -262,16 +262,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ori68bdfdd5abd73">
-		<description>Assemblermonitor Wap v2.3 (1983)(Anders Bostrom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="5547">
-				<rom name="Assemblermonitor Wap v2.3 (1983)(Anders Bostrom).tap" size="5547" crc="455c4d95" sha1="68bdfdd5abd73dafd6a5ace35cc1273bd0824653"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="ori7ed975ee809c3">
 		<description>Audio tracker 0.2</description>
 		<year>????</year>
@@ -289,16 +279,6 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="5264">
 				<rom name="Auloup (F) (19xx).tap" size="5264" crc="d66eb961" sha1="539dbf101f528ea9d2d811a47671b154ca46b98d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori501e024a08658">
-		<description>Author v201 (1983)(Tansoft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="10256">
-				<rom name="Author v201 (1983)(Tansoft).tap" size="10256" crc="5137e977" sha1="501e024a0865890db87058bd199451a35a9e2cfc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -362,16 +342,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="orid0e33d94420f6">
-		<description>Basic Francais v1.0 (1984)(Loriciels)(fr)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="5668">
-				<rom name="Basic Francais v1.0 (1984)(Loriciels)(fr).tap" size="5668" crc="900928da" sha1="d0e33d94420f6388d630379f7eb7abb2eab21eba"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="ori2622824536811">
 		<description>Big Text</description>
 		<year>????</year>
@@ -429,16 +399,6 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="622">
 				<rom name="BONUSCOR (1996)(-)[b].tap" size="622" crc="6347fb48" sha1="e2b700c1293479de2519d79736975174e1a22c2a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori14619da5929ee">
-		<description>Bounce Sound Demo (19xx)(-)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="30264">
-				<rom name="Bounce Sound Demo (19xx)(-).tap" size="30264" crc="6f79133e" sha1="14619da5929eee5545b7c8fbb563654cd5c7c113"/>
 			</dataarea>
 		</part>
 	</software>
@@ -602,26 +562,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ori7bc36ff0bc04b">
-		<description>Byrakrater (19xx)(-)(se)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="1385">
-				<rom name="Byrakrater (19xx)(-)(se).tap" size="1385" crc="46e089f8" sha1="7bc36ff0bc04b68867de80dd3a52eed9d262a878"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori2c70ac5cd053d">
-		<description>Calcul Mental (19xx)(-)(fr)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="1641">
-				<rom name="Calcul Mental (19xx)(-)(fr).tap" size="1641" crc="49c964fb" sha1="2c70ac5cd053daf2f910d5f771f295ae9d022a83"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="ori9418ea404400c">
 		<description>Camemb</description>
 		<year>????</year>
@@ -662,16 +602,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="oriac11d4e2140cb">
-		<description>Cargen (19xx)(-)(fr)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="4845">
-				<rom name="Cargen (19xx)(-)(fr).tap" size="4845" crc="eb841612" sha1="ac11d4e2140cb77d628c1fd4b2b4bb4390888ef9"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="ori5c74b4f64dc8d">
 		<description>Cargrec (F) (19xx)</description>
 		<year>????</year>
@@ -702,16 +632,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ori5e03b4bbf1e41">
-		<description>Cartoons (1984)(Serge Querne)(fr)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="15973">
-				<rom name="Cartoons (1984)(Serge Querne)(fr)(PD).tap" size="15973" crc="cb70794c" sha1="5e03b4bbf1e41494299ea1eef8ebdb4cc8b88dee"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="ori900d4a275399c">
 		<description>Casse Briques (F) (19xx) [a2]</description>
 		<year>????</year>
@@ -719,16 +639,6 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="4113">
 				<rom name="Casse Briques (F) (19xx) [a2].tap" size="4113" crc="efc45d71" sha1="900d4a275399c32774671954ce0ff6900085a1b1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori82ae645e80dd8">
-		<description>Cassette Mathematique (19xx)(-)(fr)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="2808">
-				<rom name="Cassette Mathematique (19xx)(-)(fr).tap" size="2808" crc="9c44c93d" sha1="82ae645e80dd8725ece62324a8be0b574b6a09a1"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 514 -->
+<!-- Number of items in this list = 513 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -2109,16 +2109,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Ginga Denshou - Galaxy Odyssey (1986)(Imagineer Co.).fds" size="131016" crc="fd0384be" sha1="3df06de4c19e848b060cd16eeab954864d85166e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds865b36424c6af">
-		<description>Ginga Denshou - Galaxy Odyssey (Japan)(1986)(Imagineer)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="Ginga Denshou - Galaxy Odyssey (Japan)(1986)(Imagineer).fds" size="131016" crc="d38240da" sha1="865b36424c6afecdaa3888c432dd45db5be5c9b8"/>
 			</dataarea>
 		</part>
 	</software>

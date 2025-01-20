@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 599 -->
+<!-- Number of items in this list = 539 -->
 <softwarelist name="lynx" description="lynx loose roms">
 	<software name="lnx2a1c742ad70b9">
 		<description>(demo)3Days (2024-02)(42Bastian)</description>
@@ -109,16 +109,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="4432">
 				<rom name="(demo)Mini Demo 05 by Bastian Schick (1998) (PD).o" size="4432" crc="c9b906bb" sha1="d9b7eae2d2f637b8a39426fa13992400f13bb0c3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx0a2f8a150aebb">
-		<description>(demo)Mini Demo 06 by Bastian Schick (1998) (PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="18022">
-				<rom name="(demo)Mini Demo 06 by Bastian Schick (1998) (PD).o" size="18022" crc="ef71c010" sha1="0a2f8a150aebb98cad3f64f6d35f22617b7436d2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -262,6 +252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lnx8f9d2f1426e70">
+		<description>A.P.B. - All Points Bulletin (UE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="A.P.B. - All Points Bulletin (UE).lnx" size="262208" crc="f1e2ad2b" sha1="8f9d2f1426e7072935075e051ecfac1ccf01683f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lnxa013b51195564">
 		<description>abc music creator</description>
 		<year>????</year>
@@ -332,13 +332,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx8f9d2f1426e70">
-		<description>APB All Points Bulletin (UE)</description>
+	<software name="lnx06a384102a109">
+		<description>APFEL_2A</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="APB All Points Bulletin (UE).lnx" size="262208" crc="f1e2ad2b" sha1="8f9d2f1426e7072935075e051ecfac1ccf01683f"/>
+			<dataarea name="rom" size="4952">
+				<rom name="APFEL_2A.O" size="4952" crc="a6491136" sha1="06a384102a1092b9345a3f8474bdd30943e16294"/>
 			</dataarea>
 		</part>
 	</software>
@@ -532,16 +532,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxa8a288dadfb5e">
-		<description>Basketbrawl (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Basketbrawl (UE).lnx" size="131136" crc="5162bd56" sha1="a8a288dadfb5eadd4469028438999e21d5e35b6c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx45df55597bae8">
 		<description>Batman Returns (1992)(DC Comics Inc)</description>
 		<year>????</year>
@@ -549,16 +539,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Batman Returns (1992)(DC Comics Inc).lnx" size="262208" crc="68cd6dcb" sha1="45df55597bae86b9184861d64d1a1d770f1e8c40"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxd7cd14a1ac056">
-		<description>Batman Returns (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Batman Returns (UE).lnx" size="262208" crc="20666712" sha1="d7cd14a1ac0569f038b9447ce9a4310d70c78cbb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -592,16 +572,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx0baee82ab11bf">
-		<description>Battle Wheels (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Battle Wheels (UE).lnx" size="131136" crc="679ca8d2" sha1="0baee82ab11bff0c6872dbcfce764e979e99615f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx772d4b35c1717">
 		<description>Battlezone 2000 (1993)(Atari Corp)</description>
 		<year>????</year>
@@ -619,16 +589,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Battlezone 2000 (1993)(Atari Corp)[a].lnx" size="262208" crc="414bda9a" sha1="7edfa01096a61f681dd4bf217ab1f0281c3b33b0"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxf401496c3f0e9">
-		<description>Battlezone 2000 (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Battlezone 2000 (UE).lnx" size="262208" crc="37e702f6" sha1="f401496c3f0e9fc438ed32070e142dc5829787b4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -672,16 +632,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx7c48ed3931213">
-		<description>Bill &amp; Ted's Excellent Adventure (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Bill &amp; Ted's Excellent Adventure (UE).lnx" size="262208" crc="1323d4ee" sha1="7c48ed39312138f40fd845b9626cdfb31c12fb26"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx6e4b0ee8ff3ea">
 		<description>bitchin</description>
 		<year>????</year>
@@ -722,16 +672,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx10002fdea38d2">
-		<description>Block Out (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Block Out (UE).lnx" size="131136" crc="2cd45bef" sha1="10002fdea38d2616957ca00f1f9de74e4ea9c861"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx00db17da5a4c2">
 		<description>Blue Lightning (1989) [a1]</description>
 		<year>????</year>
@@ -769,26 +709,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Blue Lightning (demo) (1989)(Epyx Inc)[a].lnx" size="131136" crc="0bd1b69c" sha1="d95653027c1956085a01541e3164ea637b52f100"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx493e0efd1f098">
-		<description>Blue Lightning (U) (Demo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Blue Lightning (U) (Demo).lnx" size="131136" crc="afe06339" sha1="493e0efd1f0985be04e9216ae477c85afce10ad3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxcf183398642cc">
-		<description>Blue Lightning (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Blue Lightning (UE).lnx" size="131136" crc="caf681ad" sha1="cf183398642cc8ef7465218db845e572c16ae8ce"/>
 			</dataarea>
 		</part>
 	</software>
@@ -872,16 +792,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx361b9250130ed">
-		<description>Bouncing Balls &amp; Input Test (199x)(-)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="3490">
-				<rom name="Bouncing Balls &amp; Input Test (199x)(-)(PD).o" size="3490" crc="a4eb2f3c" sha1="361b9250130ed31db9bb28db727d6807ff51e15d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx7e62e7f2c5559">
 		<description>Bubble Bobble Demo v0.2 (199x)(-)[p]</description>
 		<year>????</year>
@@ -889,16 +799,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="10791">
 				<rom name="Bubble Bobble Demo v0.2 (199x)(-)[p].o" size="10791" crc="44c347a5" sha1="7e62e7f2c5559b5baa508fc06a9b9a6389eea164"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx9fb0ccec1fb3b">
-		<description>Bubble Trouble (1993) (Telegames)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Bubble Trouble (1993) (Telegames).lnx" size="262208" crc="fccfac57" sha1="9fb0ccec1fb3b00d36adc5e5b11f387f93e6ae7d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -929,16 +829,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Bubble Trouble (Euro, USA).lnx" size="262208" crc="96df6fa0" sha1="b5c4824271e4a86052d65e0dfeb01b0ada1f3600"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxf01d83b1fb40e">
-		<description>Bubble Trouble (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Bubble Trouble (UE).lnx" size="262208" crc="34244b1e" sha1="f01d83b1fb40e6231622f26491c6b6c5c1add685"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1162,16 +1052,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx11838318e66f9">
-		<description>California Games (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="California Games (UE).lnx" size="131136" crc="b08c0d45" sha1="11838318e66f9e4c5591f73b3e3dfd328c428219"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx56320b664711d">
 		<description>cape4_pal_8_83</description>
 		<year>????</year>
@@ -1209,26 +1089,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Centipede (198x)(Shadowsoft Inc)[a].lnx" size="131136" crc="70cc4ae8" sha1="9954707eeba52904533cef59e5aae6e196434534"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxe9f3d8868b764">
-		<description>Centipede (Prototype) (1987) (Shadowsoft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Centipede (Prototype) (1987) (Shadowsoft).lnx" size="131136" crc="bf4fdd20" sha1="e9f3d8868b764f635f522e748f837bb4584f7cb9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx9151f07e26717">
-		<description>Centipede (U) (Beta)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Centipede (U) (Beta).lnx" size="131136" crc="071a2e46" sha1="9151f07e267170c55d22bbb2418c5fd37bf86794"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1282,16 +1142,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxf543f020fb265">
-		<description>Check EEPROM Demo (199x) (PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="4212">
-				<rom name="Check EEPROM Demo (199x) (PD).o" size="4212" crc="81547c50" sha1="f543f020fb265534b9ebad7a5f51ebab36160039"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx8486947151359">
 		<description>Checkered Flag (1991)(Atari Corp)</description>
 		<year>????</year>
@@ -1299,16 +1149,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Checkered Flag (1991)(Atari Corp).lnx" size="262208" crc="6687f846" sha1="848694715135979c022561ef9e4da58b8a67c4f3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxb0d1ca1d6844a">
-		<description>Checkered Flag (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Checkered Flag (UE).lnx" size="262208" crc="1edc4275" sha1="b0d1ca1d6844a69b50b6983e7676e5e7bdfc936b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1339,26 +1179,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Chip's Challenge (1989)(Epyx Inc)[a].lnx" size="131136" crc="f45f784a" sha1="92af2d566c6bbf626a21dbfa41af16d73e0a774d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx6cf70e3cc59f1">
-		<description>Chip's Challenge (1989)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Chip's Challenge (1989).lnx" size="131136" crc="073a0499" sha1="6cf70e3cc59f11e92b9eea2b7906750338093e1a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxcd0e82d241ff2">
-		<description>Chip's Challenge (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Chip's Challenge (UE).lnx" size="131136" crc="7a5c55f1" sha1="cd0e82d241ff2f7618f4f7b0a27d08c7f6e25d69"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1462,26 +1282,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx7a6b8516ac4be">
-		<description>Circle and Tunnel Demo (199x) (PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="9339">
-				<rom name="Circle and Tunnel Demo (199x) (PD).o" size="9339" crc="be9578da" sha1="7a6b8516ac4befec815a339f88c0c9a3733ea8c4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx36b2ca3e4a8aa">
-		<description>Circle Draw Routine 2 (199x)(-)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="7924">
-				<rom name="Circle Draw Routine 2 (199x)(-)(PD).o" size="7924" crc="1d2409d7" sha1="36b2ca3e4a8aa426f558ff37d741dd0f684d0cee"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnxc7358ebc5deaa">
 		<description>Circle Tunnel by Schick, Bastian (1996) (PD)</description>
 		<year>????</year>
@@ -1529,16 +1329,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="12383">
 				<rom name="columns.o" size="12383" crc="77b9b738" sha1="87f2f41d742c80bb64c702119726f8091dcbfbd6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx3f69275634918">
-		<description>Conquest of Zow (1996)(Dodgson, Harry)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Conquest of Zow (1996)(Dodgson, Harry)(PD).lnx" size="262208" crc="625d44db" sha1="3f69275634918fde50be9f81cda7eda75bc0513f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1632,16 +1422,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx9c46ac3f86f56">
-		<description>Crystal Mines II (1990) [o]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Crystal Mines II (1990) [o].lnx" size="262208" crc="b76e1ee1" sha1="9c46ac3f86f56d31b86485fbc5db392a18d28970"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnxe8d6a939a2020">
 		<description>Crystal Mines II (1991)(Atari Corp)</description>
 		<year>????</year>
@@ -1659,16 +1439,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Crystal Mines II (1991)(Atari Corp)[a].lnx" size="131136" crc="0535e6c9" sha1="c3b7e7fe892068bf4b58aec85181f6b00693b47d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxb3ee526041fe1">
-		<description>Crystal Mines II (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Crystal Mines II (UE).lnx" size="131136" crc="bec772d4" sha1="b3ee526041fe1db6b6421d1fdb543208ce093d7a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1792,16 +1562,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxbf9e9e475a5a8">
-		<description>Dinolympics (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Dinolympics (UE).lnx" size="262208" crc="5721892a" sha1="bf9e9e475a5a8245fad949ee1fe10cd5a9e86916"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnxc1d62142fc509">
 		<description>Dirty Larry - Renegade Cop (1992)(Atari Corp)</description>
 		<year>????</year>
@@ -1829,16 +1589,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Dirty Larry - Renegade Cop (1992)(Atari Corp)[a].lnx" size="262208" crc="8953dfca" sha1="5c0a524fd55c1048c1e6202d5a0bdba2ed335ecf"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxe8c1307313f2f">
-		<description>Dirty Larry - Renegade Cop (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Dirty Larry - Renegade Cop (UE).lnx" size="262208" crc="d27c1e67" sha1="e8c1307313f2fb2dbf4d510a1004be1adcf90f78"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1872,16 +1622,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx8ec29459ca92f">
-		<description>Double Dragon (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Double Dragon (UE).lnx" size="262208" crc="fce5ead5" sha1="8ec29459ca92fd8ed0e9c549d232330f7650f6af"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx824f245004a77">
 		<description>Dracula the Undead (1991)(Atari Corp)</description>
 		<year>????</year>
@@ -1889,26 +1629,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Dracula the Undead (1991)(Atari Corp).lnx" size="262208" crc="0f4b4071" sha1="824f245004a778613c85d40c9a2785a8cefe4181"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxba884a2633c78">
-		<description>Dracula the Undead (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Dracula the Undead (UE).lnx" size="262208" crc="34a29117" sha1="ba884a2633c78067000e183d84339f9268dfb810"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxc70dc8f670fd7">
-		<description>Dragnet Music (1994)(Schick, Bastian)[p](music-only)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Dragnet Music (1994)(Schick, Bastian)[p](music-only).lnx" size="262208" crc="2043d783" sha1="c70dc8f670fd73e58945ec93fe69a868a5ea8138"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1982,16 +1702,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxc83b84f139dff">
-		<description>EEPROM Routine 2 (199x)(-)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="4043">
-				<rom name="EEPROM Routine 2 (199x)(-)(PD).o" size="4043" crc="fd057217" sha1="c83b84f139dff8aeb2151b3254cd4377a25c2535"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx5c3fa6a1daed6">
 		<description>Electrocop (1989)(Atari Corp)</description>
 		<year>????</year>
@@ -2009,16 +1719,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Electrocop (1989)(Atari Corp)[a].lnx" size="131136" crc="765d742d" sha1="c06e983638b4466322a15a367cdaeb56fc2486e6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxa776c2961eeeb">
-		<description>Electrocop (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Electrocop (UE).lnx" size="131136" crc="ad941777" sha1="a776c2961eeebfece9606b3b6538c4d2246023a3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2052,16 +1752,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx98a8de4bfe48b">
-		<description>European Soccer Challenge (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="European Soccer Challenge (UE).lnx" size="131136" crc="e83091e5" sha1="98a8de4bfe48b919efd8f9d36836a1f9b203d249"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx6c37e1f220e73">
 		<description>Eye of the Beholder (1990)(Atari Corp)(proto)</description>
 		<year>????</year>
@@ -2079,16 +1769,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Eye of the Beholder (demo256).lyx" size="262144" crc="84f905ee" sha1="834af01d394665438dfb07460b202093845f11a6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxfb8a6abd922ca">
-		<description>Eye of the Beholder (U) (Beta)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Eye of the Beholder (U) (Beta).lnx" size="131136" crc="7bcdac80" sha1="fb8a6abd922cad9151ea75010018e18a9950d05b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2122,16 +1802,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxa90e83762d3f3">
-		<description>Fat Bobby (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Fat Bobby (UE).lnx" size="262208" crc="972d0bf7" sha1="a90e83762d3f38d93406015e73e687bf68a022e8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx80b9c2e4da2be">
 		<description>Fidelity Ultimate Chess Challenge (1991)(Telegames)</description>
 		<year>????</year>
@@ -2159,16 +1829,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Fidelity Ultimate Chess Challenge (1991)(Telegames)[a].lnx" size="131136" crc="96643baa" sha1="051f95a0c5b60e8c517b8df08f449110ed2bca68"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx654e9f864e7fe">
-		<description>Fidelity Ultimate Chess Challenge (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Fidelity Ultimate Chess Challenge (UE).lnx" size="131136" crc="6e485f59" sha1="654e9f864e7fecdb4f78890a94895a4033cde928"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2242,16 +1902,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxef5148f94cf25">
-		<description>Font Routine (199x)(Schick, Bastian)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="1939">
-				<rom name="Font Routine (199x)(Schick, Bastian)(PD).o" size="1939" crc="9fb5ff3a" sha1="ef5148f94cf250e89d84707a402a6fc187fb9d3b"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx7a4a404596cf3">
 		<description>fruitbasket_pal_8_83</description>
 		<year>????</year>
@@ -2302,16 +1952,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxb71a9abc3672e">
-		<description>Gates of Zendocon, The (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Gates of Zendocon, The (UE).lnx" size="131136" crc="594fc374" sha1="b71a9abc3672e2d55be48699e7409b71d6b2390f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnxc6abb87eb1eb5">
 		<description>Gauntlet - The Third Encounter (1989)(Tengen Inc)</description>
 		<year>????</year>
@@ -2329,16 +1969,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Gauntlet - The Third Encounter (1989)(Tengen Inc)[a].lnx" size="131136" crc="8e0908e5" sha1="7cf7d08b52784e13d8278d249dcd8975d3714da4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx04fa51694e124">
-		<description>Gauntlet - The Third Encounter (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Gauntlet - The Third Encounter (UE).lnx" size="131136" crc="c291dd38" sha1="04fa51694e124143731fb2c8c1b026b542792e2f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2472,16 +2102,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx3a15180d99283">
-		<description>Gordo 106 - The Mutated Lab Monkey (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Gordo 106 - The Mutated Lab Monkey (UE).lnx" size="262208" crc="d513602c" sha1="3a15180d99283e102a747cea2eba6f43d897789f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx5f550a5c318ff">
 		<description>Gotballs (demo)</description>
 		<year>????</year>
@@ -2592,16 +2212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxea9a005e0e0b0">
-		<description>Hard Drivin' (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Hard Drivin' (UE).lnx" size="131136" crc="7df53e28" sha1="ea9a005e0e0b04f17df71a97aee2c3082bc73af8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx956638a8f3121">
 		<description>Hard Drivin' (USA, Europe)</description>
 		<year>????</year>
@@ -2629,16 +2239,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Hydra (1992)(Tengen Inc).lnx" size="262208" crc="8980a322" sha1="5ceb3ad748cd42e181067a191e2b0dccc0325057"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxdbb84f5a3ce79">
-		<description>Hydra (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Hydra (UE).lnx" size="262208" crc="e41df9bc" sha1="dbb84f5a3ce7996a3dfc8a7a8de5a3ccaea3c061"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2692,16 +2292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx34aabab3ef092">
-		<description>Ishido - The Way of Stones (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Ishido - The Way of Stones (UE).lnx" size="131136" crc="4cfbbdec" sha1="34aabab3ef0922904c089eeb4790d80b957e6b92"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx03892fea81b8a">
 		<description>Ishido - The Way of Stones (USA, Europe)</description>
 		<year>????</year>
@@ -2732,26 +2322,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx080205e111930">
-		<description>Ishido - The Way of the Stones (1991)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Ishido - The Way of the Stones (1991).lnx" size="131136" crc="28bf6bf8" sha1="080205e1119300a52baf60e0606e9b712ea9ede5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxff01ea8e715e3">
-		<description>Jimmy Conners Tennis (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="524352">
-				<rom name="Jimmy Conners Tennis (UE).lnx" size="524352" crc="41b8d581" sha1="ff01ea8e715e3264b5b0a11410f02701a8693093"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnxeb53241c8cac2">
 		<description>Jimmy Connors Tennis (1993)(Atari Corp)</description>
 		<year>????</year>
@@ -2759,16 +2329,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="524352">
 				<rom name="Jimmy Connors Tennis (1993)(Atari Corp).lnx" size="524352" crc="fdd6536d" sha1="eb53241c8cac2456684c4b1fe86aa8c90e765d91"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxec0cc1ed2ee26">
-		<description>Joust (1993) (Williams)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Joust (1993) (Williams).lnx" size="131136" crc="2f17bd9b" sha1="ec0cc1ed2ee26ab965c3b4c378434e83f419f7e1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2799,16 +2359,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Joust (1993)(Shadowsoft Inc)[a].lnx" size="262208" crc="9f7662c2" sha1="9a72b390ce25ffe8400b7abdedd2ca61d3957cc3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx7734f59475a3e">
-		<description>Joust (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Joust (UE).lnx" size="131136" crc="4db97f36" sha1="7734f59475a3e78217af0eac2b1ece919ec2989c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3192,16 +2742,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx62ca2ae3278a5">
-		<description>Klax (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Klax (UE).lnx" size="262208" crc="de2551db" sha1="62ca2ae3278a520a4390a887d8944fce828b6b2a"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx4818b273b7a4a">
 		<description>Knight Moves</description>
 		<year>????</year>
@@ -3242,16 +2782,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxb34275c62c92e">
-		<description>Krazy Ace Miniature Golf (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Krazy Ace Miniature Golf (UE).lnx" size="262208" crc="b9cc5ffb" sha1="b34275c62c92e1d3b3a9ae0cdae3f108e9875147"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnxd57d7ddb5daff">
 		<description>Krazy Ace Miniature Golf (USA, Europe)</description>
 		<year>????</year>
@@ -3272,16 +2802,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxc9014753fa38e">
-		<description>Kung Food (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Kung Food (UE).lnx" size="262208" crc="ca0231d5" sha1="c9014753fa38e0a6fbf7529259d2be32d712293d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx49431bee2f346">
 		<description>La marche de l alien</description>
 		<year>????</year>
@@ -3299,16 +2819,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Lemmings (1993)(Atari Corp).lnx" size="262208" crc="a77b6b64" sha1="e61c173116eacecf90d0296c03d8c216be57400c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx44f5b43a2a3bf">
-		<description>Lemmings (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Lemmings (UE).lnx" size="262208" crc="3ea05d1c" sha1="44f5b43a2a3bfb03097e754eda8f2a110a0d3f3d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3352,16 +2862,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxf49152c2a8bf1">
-		<description>Lexis (1999) (Songbird)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Lexis (1999) (Songbird).lnx" size="262208" crc="6e93fcfd" sha1="f49152c2a8bf1bce68bc68cd971bba2cdda4557c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx86c0bf4dd5464">
 		<description>Lexis (Euro, USA)</description>
 		<year>????</year>
@@ -3369,16 +2869,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Lexis (Euro, USA).lnx" size="262208" crc="57bd4b4c" sha1="86c0bf4dd546426b844b628cd8f847f3e5e2107b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxe17980d33b447">
-		<description>Lexis (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Lexis (UE).lnx" size="262208" crc="fd7da8cd" sha1="e17980d33b447d7436c839f57bcb960ca74699de"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3399,16 +2889,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="4890">
 				<rom name="Logon by Schick, Bastian (1996) (PD).o" size="4890" crc="88a0a9c8" sha1="d6a2f9ced89b82c213106ae999648bc22d71f209"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx3ddfb9050b859">
-		<description>Loopz (U) (Beta) (v0.06)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Loopz (U) (Beta) (v0.06).lnx" size="262208" crc="b6dbbb21" sha1="3ddfb9050b859e8f8ec46b93e1c22736e547021f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3469,16 +2949,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Lynx Casino (1992)(Atari Corp).lnx" size="262208" crc="5539baf4" sha1="a5fb943e2eeece25bc3aaf1e9f6ae5c030672193"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxff5eb2ba2cce2">
-		<description>Lynx Casino (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Lynx Casino (UE).lnx" size="262208" crc="178847b8" sha1="ff5eb2ba2cce2cbf61c87154c49ba31c09300694"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3622,26 +3092,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxec8681527aa22">
-		<description>Malibu Bikini Volleyball (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Malibu Bikini Volleyball (UE).lnx" size="262208" crc="acbf3fed" sha1="ec8681527aa225ff4ec53d012b6b635a791dfa7e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx06a384102a109">
-		<description>Mandelbrot Demo (1993)(Schick, Bastian)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="4952">
-				<rom name="Mandelbrot Demo (1993)(Schick, Bastian)(PD).o" size="4952" crc="a6491136" sha1="06a384102a1092b9345a3f8474bdd30943e16294"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx2a5ce00756ace">
 		<description>MandelBrot Demo by Schick, Bastian (1996) (PD)</description>
 		<year>????</year>
@@ -3699,16 +3149,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Marlboro Go! (1993)(Digital Image)(proto)[a].lnx" size="262208" crc="8d484e65" sha1="3d0ee922c3572c9a861fc250082e659e6ebd4c8c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnx4516b22476bd3">
-		<description>Marlboro Go! (E) (Promo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Marlboro Go! (E) (Promo).lnx" size="262208" crc="c4e3e89d" sha1="4516b22476bd3d03eaa017d32f777db4a2688a56"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3792,16 +3232,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnxc09ca036a5c86">
-		<description>Ms. Pac-Man (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="131136">
-				<rom name="Ms. Pac-Man (UE).lnx" size="131136" crc="6de07e26" sha1="c09ca036a5c862a81df96b390c6fcbc9092f994d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx22735fcd59eb0">
 		<description>NFL Football (1990)(Atari Corp)</description>
 		<year>????</year>
@@ -3809,16 +3239,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="NFL Football (1990)(Atari Corp).lnx" size="262208" crc="c398359e" sha1="22735fcd59eb028a4041027a369602b0bd968eb5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxf4f9e31712b5f">
-		<description>NFL Football (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="NFL Football (UE).lnx" size="262208" crc="ff63cdbc" sha1="f4f9e31712b5f00fbceb93295579b1eb825743cb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3832,16 +3252,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="lnx8e8dc0d743b79">
-		<description>Ninja Gaiden (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="262208">
-				<rom name="Ninja Gaiden (UE).lnx" size="262208" crc="25cd9881" sha1="8e8dc0d743b79c882cc4d3ce46bedf80aecd821d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="lnx70f4115a92e3f">
 		<description>Ninja Gaiden III - The Ancient Ship of Doom (1993)(Atari Corp)</description>
 		<year>????</year>
@@ -3849,16 +3259,6 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="524352">
 				<rom name="Ninja Gaiden III - The Ancient Ship of Doom (1993)(Atari Corp).lnx" size="524352" crc="cd2ffbcc" sha1="70f4115a92e3fdc4c93339ac801976a7697397ba"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="lnxcc71d40f4933d">
-		<description>Ninja Gaiden III - The Ancient Ship of Doom (UE)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="lynx_cart">
-			<dataarea name="rom" size="524352">
-				<rom name="Ninja Gaiden III - The Ancient Ship of Doom (UE).lnx" size="524352" crc="960e9b5f" sha1="cc71d40f4933d39bb57676231c25226983711b33"/>
 			</dataarea>
 		</part>
 	</software>

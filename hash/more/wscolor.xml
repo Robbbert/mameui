@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 73 -->
+<!-- Number of items in this list = 72 -->
 <softwarelist name="wscolor" description="wscolor loose roms">
 	<software name="wscf1ccdb96d67a8">
 		<description>(demo)finally.emu</description>
@@ -192,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsc8128e90361bc1">
+		<description>Dicing Knight Period (J) [T+Eng1.0_AGTP]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Dicing Knight Period (J) [T+Eng1.0_AGTP].wsc" size="524288" crc="9cfe14f8" sha1="8128e90361bc1a6aeddfea6099d617c29a35c1df"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wsc106dca0fd84ba">
 		<description>Dicing Knight. (2004-05-31)(Qute)[tr en Aeon Genesis][v1.00-20070120]</description>
 		<year>????</year>
@@ -209,16 +219,6 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="dicing knight. (japan).wsc" size="524288" crc="d28dc930" sha1="79658575c736fcad18e9225aa0e62398b086093b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="wsc8128e90361bc1">
-		<description>DicingKnightPeriod</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="DicingKnightPeriod.wsc" size="524288" crc="9cfe14f8" sha1="8128e90361bc1a6aeddfea6099d617c29a35c1df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -582,23 +582,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="wsc21bd907ed9dce">
-		<description>WonderPong</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="WonderPong.wsc" size="524288" crc="e50f306b" sha1="21bd907ed9dce2e11625e51be8d0be61ff55b605"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="wsce1fef3ce7371f">
-		<description>WonderProject Intro (2006)(Orion)(PD)</description>
+		<description>WonderProject First Demo by Orion_ (PD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="WonderProject Intro (2006)(Orion)(PD).wsc" size="1048576" crc="fdc25231" sha1="e1fef3ce7371fdb65ead1fd7023b2e31b323356f"/>
+				<rom name="WonderProject First Demo by Orion_ (PD).wsc" size="1048576" crc="fdc25231" sha1="e1fef3ce7371fdb65ead1fd7023b2e31b323356f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -612,16 +602,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="wscfec915b4993f2">
-		<description>Wondersnake (2001-09-11)(Kojote - Slanina, Tomasz)(PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="wswan_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Wondersnake (2001-09-11)(Kojote - Slanina, Tomasz)(PD).wsc" size="524288" crc="a0591f00" sha1="fec915b4993f2d84ea30bd0fa4d8575e9074d292"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="wsc4aefebd63691f">
 		<description>Wondersnake 2 (2003)(Kojote - Slanina, Tomasz)(PD)</description>
 		<year>????</year>
@@ -629,6 +609,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Wondersnake 2 (2003)(Kojote - Slanina, Tomasz)(PD).wsc" size="524288" crc="d93ab792" sha1="4aefebd63691f22e5725d7590f6b971c7b26ae4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wscfec915b4993f2">
+		<description>Wondersnake</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wondersnake.wsc" size="524288" crc="a0591f00" sha1="fec915b4993f2d84ea30bd0fa4d8575e9074d292"/>
 			</dataarea>
 		</part>
 	</software>

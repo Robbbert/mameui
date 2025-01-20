@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 27 -->
+<!-- Number of items in this list = 26 -->
 <softwarelist name="tutor" description="tutor loose roms">
 	<software name="tut520aa0b12259f">
 		<description>aerial</description>
@@ -223,22 +223,12 @@
 		</part>
 	</software>
 	<software name="tutcf025d180cec5">
-		<description>Scramble (199x)(TM) (2)</description>
+		<description>Scramble (199x)(TM)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="8192">
-				<rom name="Scramble (199x)(TM) (2).bin" size="8192" crc="3c23d24f" sha1="cf025d180cec5bafbbae9623cd5b6177481478a9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="tut8922605582926">
-		<description>tomy</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="tutor_cart">
-			<dataarea name="rom" size="2169618">
-				<rom name="tomy.wav" size="2169618" crc="e899ddcd" sha1="89226055829269afa2415c6c01c2138721abfa6e"/>
+				<rom name="Scramble (199x)(TM).bin" size="8192" crc="3c23d24f" sha1="cf025d180cec5bafbbae9623cd5b6177481478a9"/>
 			</dataarea>
 		</part>
 	</software>

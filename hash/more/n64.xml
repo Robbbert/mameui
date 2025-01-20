@@ -402,16 +402,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="n64c9e89577a0f30">
-		<description>(demo)NDDT MONITOR 1.0.0</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="n64_cart">
-			<dataarea name="rom" size="1052672">
-				<rom name="(demo)NDDT MONITOR 1.0.0.z64" size="1052672" crc="fb570c56" sha1="c9e89577a0f30bb92a161eabe5b9989c4e3ea90b"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="n64b5f06476b5525">
 		<description>(demo)NEO_Myth_N64_Menu_demo_0.1</description>
 		<year>????</year>
@@ -792,16 +782,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="n648aedab517053c">
-		<description>Animal Forest - Doubutsu no Mori (2001)(Nintendo)(Jp)[tr En Brandon Dixon 2007-08-10]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="n64_cart">
-			<dataarea name="rom" size="16777216">
-				<rom name="Animal Forest - Doubutsu no Mori (2001)(Nintendo)(Jp)[tr En Brandon Dixon 2007-08-10].z64" size="16777216" crc="22deaced" sha1="8aedab517053c24452695bc8bc28da4f9b3ec90f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="n642c7fac37ff723">
 		<description>Banjo-Kazooie (E) (M3) [T-Spa]</description>
 		<year>????</year>
@@ -909,6 +889,16 @@
 		<part name="cart" interface="n64_cart">
 			<dataarea name="rom" size="67108864">
 				<rom name="Dinosaur Planet - cracked.z64" size="67108864" crc="704c0012" sha1="7bf9b36c44609396cb7d5b45d85561dbbe239116"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n648aedab517053c">
+		<description>Doubutsu no Mori (2001)(Nintendo)(Jp)[tr En Brandon Dixon 2007-08-10]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Doubutsu no Mori (2001)(Nintendo)(Jp)[tr En Brandon Dixon 2007-08-10].z64" size="16777216" crc="22deaced" sha1="8aedab517053c24452695bc8bc28da4f9b3ec90f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1199,6 +1189,16 @@
 		<part name="cart" interface="n64_cart">
 			<dataarea name="rom" size="12582912">
 				<rom name="Mortal Kombat Trilogy (USA) (Rev A).z64" size="12582912" crc="ba64f824" sha1="2a10cb20332beaa067d61e5923cd18bedd6436d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n64c9e89577a0f30">
+		<description>NDDT MONITOR 1.0.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="1052672">
+				<rom name="NDDT MONITOR 1.0.0.z64" size="1052672" crc="fb570c56" sha1="c9e89577a0f30bb92a161eabe5b9989c4e3ea90b"/>
 			</dataarea>
 		</part>
 	</software>

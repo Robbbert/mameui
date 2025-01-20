@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 40 -->
+<!-- Number of items in this list = 41 -->
 <softwarelist name="pokemini" description="pokemini loose roms">
 	<software name="pmi0ab8396c43e8f">
 		<description>3Dballtest</description>
@@ -149,6 +149,16 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="44736">
 				<rom name="life.min" size="44736" crc="a55ec511" sha1="256da5ad6008574641f04058b6363313dd7980ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmicc98b80a98890">
+		<description>lightsout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="69376">
+				<rom name="lightsout.min" size="69376" crc="a504bd34" sha1="cc98b80a9889044e80b408d79d42e4037130b439"/>
 			</dataarea>
 		</part>
 	</software>

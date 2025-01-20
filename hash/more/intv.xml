@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 144 -->
+<!-- Number of items in this list = 171 -->
 <softwarelist name="intv" description="intv loose roms">
 	<software name="intc357bbe817411">
 		<description>1</description>
@@ -283,12 +283,22 @@
 		</part>
 	</software>
 	<software name="intc1add941f0041">
-		<description>Advanced Dungeons and Dragons (1982)(Mattel)</description>
+		<description>Advanced Dungeons and Dragons (1982) (Mattel)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="16384">
-				<rom name="Advanced Dungeons and Dragons (1982)(Mattel).bin" size="16384" crc="f8b1f2b7" sha1="c1add941f004130ee613dd73524afa67432d75e0"/>
+				<rom name="Advanced Dungeons and Dragons (1982) (Mattel).int" size="16384" crc="f8b1f2b7" sha1="c1add941f004130ee613dd73524afa67432d75e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta843b831f9b49">
+		<description>All-Star Major League Baseball (1983) (Mattel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="24576">
+				<rom name="All-Star Major League Baseball (1983) (Mattel).int" size="24576" crc="b45633cf" sha1="a843b831f9b49ef88dd99414fdb56a0c71bf01b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -322,6 +332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intea16ee6edae38">
+		<description>Bankswitch Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="2113">
+				<rom name="Bankswitch Demo.rom" size="2113" crc="d4ce598a" sha1="ea16ee6edae3877593ad0f82e039b7334c7f57fc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int2ebe70dcbcb2f">
 		<description>BC's Quest for Tires</description>
 		<year>????</year>
@@ -329,6 +349,46 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="48705">
 				<rom name="BC's Quest for Tires.rom" size="48705" crc="05221da5" sha1="2ebe70dcbcb2fb4752c6d5dc94d825f976e50a77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int49b474d0317cc">
+		<description>Body Slam - Super Pro Wrestling (1988) (Intv Corp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="32768">
+				<rom name="Body Slam - Super Pro Wrestling (1988) (Intv Corp).int" size="32768" crc="515e1d7e" sha1="49b474d0317cc0e6c83ce77ba46d5ded2ec56005"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intbc19d31e771ea">
+		<description>Bomb Squad (1982) (Mattel) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="24576">
+				<rom name="Bomb Squad (1982) (Mattel) [!].int" size="24576" crc="32697b72" sha1="bc19d31e771ea3b99aa2e2326da540057e54703c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7d24a706ffb69">
+		<description>Bouncing Pixels (1999) (JRMZ Electronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1028">
+				<rom name="Bouncing Pixels (1999) (JRMZ Electronics).int" size="1028" crc="18e08520" sha1="7d24a706ffb69911c6513d3c1ebbfc69c4af9c38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1d33d8726ee8f">
+		<description>Bouncing Pixels</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1593">
+				<rom name="Bouncing Pixels.rom" size="1593" crc="b6686209" sha1="1d33d8726ee8fb5ddcc5c41f8b342edbb4b2e371"/>
 			</dataarea>
 		</part>
 	</software>
@@ -363,12 +423,12 @@
 		</part>
 	</software>
 	<software name="int3ad84b137002e">
-		<description>Castle (demo)</description>
+		<description>Castle</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="11833">
-				<rom name="Castle (demo).rom" size="11833" crc="71594ab3" sha1="3ad84b137002ea26a42df872a8552ee211b63a86"/>
+				<rom name="Castle.rom" size="11833" crc="71594ab3" sha1="3ad84b137002ea26a42df872a8552ee211b63a86"/>
 			</dataarea>
 		</part>
 	</software>
@@ -423,12 +483,12 @@
 		</part>
 	</software>
 	<software name="int78056057477a3">
-		<description>Deep Pockets-Super Pro Pool and Billiards(1990)(Realtime)[!]</description>
+		<description>Deep Pockets-Super Pro Pool and Billiards (1990) (Realtime) [!]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="32768">
-				<rom name="Deep Pockets-Super Pro Pool and Billiards(1990)(Realtime)[!].int" size="32768" crc="6802b191" sha1="78056057477a3d7b3eeb663ad9aa7735ee9197a6"/>
+				<rom name="Deep Pockets-Super Pro Pool and Billiards (1990) (Realtime) [!].int" size="32768" crc="6802b191" sha1="78056057477a3d7b3eeb663ad9aa7735ee9197a6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -462,6 +522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int1a93ab23daef8">
+		<description>Doom (2002) (Joseph Zbiciak)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="65536">
+				<rom name="Doom (2002) (Joseph Zbiciak).int" size="65536" crc="b81b422d" sha1="1a93ab23daef8711a94179297aa04a2c93bc11bf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int4da7b8ad3575a">
 		<description>Duncan's Thin Ice (1983) (Mattel)</description>
 		<year>????</year>
@@ -469,6 +539,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="32768">
 				<rom name="Duncan's Thin Ice (1983) (Mattel).int" size="32768" crc="f3df94e0" sha1="4da7b8ad3575a8d036a38bcc2c70903a443da602"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intb1d63f902a6d8">
+		<description>Eggs 'n' Eyes by Scott Nudds (1996) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1286">
+				<rom name="Eggs 'n' Eyes by Scott Nudds (1996) (PD).int" size="1286" crc="ade6ab82" sha1="b1d63f902a6d883e0e8dea8566f546b402b6ed54"/>
 			</dataarea>
 		</part>
 	</software>
@@ -513,12 +593,12 @@
 		</part>
 	</software>
 	<software name="intda9669789944f">
-		<description>Geese (2003) (Joseph Zbiciak)</description>
+		<description>Geese</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="1593">
-				<rom name="Geese (2003) (Joseph Zbiciak).rom" size="1593" crc="960385b3" sha1="da9669789944feae612c73013749f4694e9ec64b"/>
+				<rom name="Geese.rom" size="1593" crc="960385b3" sha1="da9669789944feae612c73013749f4694e9ec64b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -532,6 +612,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int780d832083bee">
+		<description>Gram Scroll 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1081">
+				<rom name="Gram Scroll 1.rom" size="1081" crc="65763de0" sha1="780d832083bee557d2aac8f246d4a3299a9c35fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int14af746002a7e">
+		<description>Gram Scroll 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1593">
+				<rom name="Gram Scroll 2.rom" size="1593" crc="5e8183e0" sha1="14af746002a7e12b32a1e548899f1b38358b3199"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int6b5e9609e59b9">
+		<description>Groovy! (1999) (JRMZ Electronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="15504">
+				<rom name="Groovy! (1999) (JRMZ Electronics).int" size="15504" crc="e573863a" sha1="6b5e9609e59b97cc9b85f20b30e414eceacc40c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intcfbff138d07eb">
+		<description>Hand Comtroller Scanning Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="3129">
+				<rom name="Hand Comtroller Scanning Demo.rom" size="3129" crc="18a4e19e" sha1="cfbff138d07eb76ccb772b6049c07571e3287906"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int9ef42923e2431">
 		<description>Happy Trails (1983) (Activision) [o1]</description>
 		<year>????</year>
@@ -539,6 +659,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="16384">
 				<rom name="Happy Trails (1983) (Activision) [o1].int" size="16384" crc="120b53a9" sha1="9ef42923e24319b3713a714e281f6d7ecb403a4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int0b988381c3e78">
+		<description>Hello World</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="569">
+				<rom name="Hello World.rom" size="569" crc="6c82f452" sha1="0b988381c3e78cd8a7e14667ffb704ecf2eb2a5f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -602,16 +732,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="inta259585a4f6b3">
-		<description>Intellivision - Intelligent Television Demo #5853 (1983) (Mattel)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="intv_cart">
-			<dataarea name="5000" size="32768">
-				<rom name="Intellivision - Intelligent Television Demo #5853 (1983) (Mattel).int" size="32768" crc="a3acd160" sha1="a259585a4f6b32952f2b3db9a932057171accd61"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="intbaf51811e8238">
 		<description>Intellivision Test Cartridge and Baseball (1978) (Mattel)</description>
 		<year>????</year>
@@ -622,6 +742,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="inta515842845eb0">
+		<description>INTV - Intelligent TV Demo #5853 (1983) (Mattel) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="32770">
+				<rom name="INTV - Intelligent TV Demo #5853 (1983) (Mattel) [o1].int" size="32770" crc="d5f038b6" sha1="a515842845eb0cf5d4b1acdc8ce74ee7cea1185a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inta259585a4f6b3">
+		<description>INTV - Intelligent TV Demo #5853 (1983) (Mattel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="32768">
+				<rom name="INTV - Intelligent TV Demo #5853 (1983) (Mattel).int" size="32768" crc="a3acd160" sha1="a259585a4f6b32952f2b3db9a932057171accd61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int769275b5b833c">
+		<description>INTV - Intelligent TV Demo #5932 Revised (1978) (Mattel)[o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="16386">
+				<rom name="INTV - Intelligent TV Demo #5932 Revised (1978) (Mattel)[o1].int" size="16386" crc="8401f0db" sha1="769275b5b833cb3fc10da479b0c3fb1a652d7973"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int4e245f579c161">
+		<description>INTV - Intelligent TV Demo (1978) (Mattel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="16384">
+				<rom name="INTV - Intelligent TV Demo (1978) (Mattel).int" size="16384" crc="02919024" sha1="4e245f579c161e55da55d3cfe8cdf632d279204b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inte15c58d9c6645">
+		<description>INTV - Intelligent TV Demo Intl. #5859 (1982) (Mattel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="24576">
+				<rom name="INTV - Intelligent TV Demo Intl. #5859 (1982) (Mattel).int" size="24576" crc="6a02c7e8" sha1="e15c58d9c6645076bff545c790227d66d4da925f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="intb6e90e15b7084">
 		<description>IntyOS v0.3b (2003)(Arnauld Chevallier)</description>
 		<year>????</year>
@@ -629,6 +799,26 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="27713">
 				<rom name="IntyOS v0.3b (2003)(Arnauld Chevallier).rom" size="27713" crc="47c24573" sha1="b6e90e15b708469b85dba7b076181a96a8b6eb0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int9b41596eb1855">
+		<description>Jetsons, The - Ways With Words (1983) (Mattel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="24576">
+				<rom name="Jetsons, The - Ways With Words (1983) (Mattel).int" size="24576" crc="ee5f1be2" sha1="9b41596eb18554675068b0377acf83a970bb8dc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intf176c8fc180be">
+		<description>Joe's MOB Test</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="3129">
+				<rom name="Joe's MOB Test.rom" size="3129" crc="4665ee4d" sha1="f176c8fc180bed76dd634f27cd463a2e1402a542"/>
 			</dataarea>
 		</part>
 	</software>
@@ -689,6 +879,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="32768">
 				<rom name="King of the Mountain (1982) (Mattel).int" size="32768" crc="4422868e" sha1="3ef8acbc764f7916337a07407222c0bce092a058"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int4b05fc2144ac8">
+		<description>Life Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="2105">
+				<rom name="Life Demo.rom" size="2105" crc="400f093b" sha1="4b05fc2144ac86b97793533ff8e1699ecf8debd7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -773,42 +973,52 @@
 		</part>
 	</software>
 	<software name="int2137565416e3b">
-		<description>Maze Demo #1 (2000) (JRMZ Electronics)</description>
+		<description>Maze Demo 1 (2000) (JRMZ Electronics)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="732">
-				<rom name="Maze Demo #1 (2000) (JRMZ Electronics).int" size="732" crc="7d0f8162" sha1="2137565416e3b0f29f5fb4e2f06878ae777dba61"/>
+				<rom name="Maze Demo 1 (2000) (JRMZ Electronics).int" size="732" crc="7d0f8162" sha1="2137565416e3b0f29f5fb4e2f06878ae777dba61"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="int662198b4c204c">
-		<description>Maze Demo #2 (2000) (JRMZ Electronics)</description>
+		<description>Maze Demo 2 (2000) (JRMZ Electronics)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="746">
-				<rom name="Maze Demo #2 (2000) (JRMZ Electronics).int" size="746" crc="2138dad4" sha1="662198b4c204c6dda96969c8f4ee4ded50eb8e58"/>
+				<rom name="Maze Demo 2 (2000) (JRMZ Electronics).int" size="746" crc="2138dad4" sha1="662198b4c204c6dda96969c8f4ee4ded50eb8e58"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="int1803d28388a7e">
-		<description>Mem Test (2003) (Joseph Zbiciak)</description>
+	<software name="int45faf124fc910">
+		<description>Maze Demo</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
-			<dataarea name="5000" size="3641">
-				<rom name="Mem Test (2003) (Joseph Zbiciak).rom" size="3641" crc="bb9b01b4" sha1="1803d28388a7eaa2ca1dec224fa5c16d1427f6c7"/>
+			<dataarea name="5000" size="1081">
+				<rom name="Maze Demo.rom" size="1081" crc="5fffa3a3" sha1="45faf124fc9104fa7bc7ce2dc66c6b88fdcb3757"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="intda84b13293293">
-		<description>Mine Hunter (2003) (Ryan Kinnen)</description>
+	<software name="int31592917ca773">
+		<description>Mickey's Hello World (1999) (PD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
-			<dataarea name="5000" size="14905">
-				<rom name="Mine Hunter (2003) (Ryan Kinnen).rom" size="14905" crc="09152d55" sha1="da84b1329329352201c0ad0d0f205727c8ac447d"/>
+			<dataarea name="5000" size="222">
+				<rom name="Mickey's Hello World (1999) (PD).int" size="222" crc="e00e23e7" sha1="31592917ca773c9d1f36bc823cb81d8e4e0638c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="intfcb2e2dd2bacb">
+		<description>Mind Strike! (1982) (Mattel) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="24576">
+				<rom name="Mind Strike! (1982) (Mattel) [!].int" size="24576" crc="9d57498f" sha1="fcb2e2dd2bacbe08c6e04c6460e574e1014b4331"/>
 			</dataarea>
 		</part>
 	</software>
@@ -822,13 +1032,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intda84b13293293">
+		<description>Minehunter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="14905">
+				<rom name="Minehunter.rom" size="14905" crc="09152d55" sha1="da84b1329329352201c0ad0d0f205727c8ac447d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int9595805acb2c6">
-		<description>Minotaur</description>
+		<description>Minotaur (Treasure of Tarmin hack) (1982) (Mattel)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="16384">
-				<rom name="Minotaur.bin" size="16384" crc="2f9c93fc" sha1="9595805acb2c6d8df9670ec78267dcc0fa6eec4a"/>
+				<rom name="Minotaur (Treasure of Tarmin hack) (1982) (Mattel).int" size="16384" crc="2f9c93fc" sha1="9595805acb2c6d8df9670ec78267dcc0fa6eec4a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -962,6 +1182,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="int5fb442958ecae">
+		<description>Psycho Balls 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="1593">
+				<rom name="Psycho Balls 1.rom" size="1593" crc="93280819" sha1="5fb442958ecaea20d817fb605844a475659cb91d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int710c488ace3b7">
+		<description>Psycho Balls 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="2105">
+				<rom name="Psycho Balls 2.rom" size="2105" crc="a831a89f" sha1="710c488ace3b7558ab352a776ea6de63a1a053ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int89eaaa118dab4">
+		<description>RAM BANKSW Test</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="4665">
+				<rom name="RAM BANKSW Test.rom" size="4665" crc="5ffa78ac" sha1="89eaaa118dab4e14469e449bff3ad115c918ca9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int1803d28388a7e">
+		<description>RAM Tester</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="3641">
+				<rom name="RAM Tester.rom" size="3641" crc="bb9b01b4" sha1="1803d28388a7eaa2ca1dec224fa5c16d1427f6c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="intd82cfb5c6e6e1">
 		<description>Robot Rubble V1 (Prototype) (1984) (Activision) [o1]</description>
 		<year>????</year>
@@ -969,6 +1229,16 @@
 		<part name="cart" interface="intv_cart">
 			<dataarea name="5000" size="8194">
 				<rom name="Robot Rubble V1 (Prototype) (1984) (Activision) [o1].int" size="8194" crc="1682d0b4" sha1="d82cfb5c6e6e1faa36064d4b1e6897783782c87a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int7c52c2c2a01ab">
+		<description>ROM Checksummer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="intv_cart">
+			<dataarea name="5000" size="2617">
+				<rom name="ROM Checksummer.rom" size="2617" crc="b9cf1334" sha1="7c52c2c2a01ab0e8730e636ea1266ea59f00100e"/>
 			</dataarea>
 		</part>
 	</software>

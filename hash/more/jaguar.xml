@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 139 -->
+<!-- Number of items in this list = 141 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag1516859334668">
 		<description>8biteer</description>
@@ -9,6 +9,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="8biteer.j64" size="2097152" crc="bb293ea7" sha1="15168593346687a2ceb685e0d2711eafa132ebde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag162de3abfc73d">
+		<description>96Kb Demo (19xx)(Mr Spock)(PD)[$8000]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="96544">
+				<rom name="96Kb Demo (19xx)(Mr Spock)(PD)[$8000].j64" size="96544" crc="be28c374" sha1="162de3abfc73dbffa357838fe9acc46627663d03"/>
 			</dataarea>
 		</part>
 	</software>
@@ -23,12 +33,12 @@
 		</part>
 	</software>
 	<software name="jag343e04689d75a">
-		<description>Alien vs Predator (Alpha)</description>
+		<description>Alien vs Predator alpha</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1635476">
-				<rom name="Alien vs Predator (Alpha).j64" size="1635476" crc="4242dfa7" sha1="343e04689d75abfe9e6d24b126b65fea80ef15a7"/>
+				<rom name="Alien vs Predator alpha.j64" size="1635476" crc="4242dfa7" sha1="343e04689d75abfe9e6d24b126b65fea80ef15a7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -769,6 +779,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Joust.j64" size="4194304" crc="5f00a265" sha1="4beeeca2008a1fcab175712d59ebaa4587b54aee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag805678f570d9d">
+		<description>Joypad-TeamTap Test Program (2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Joypad-TeamTap Test Program (2008).j64" size="262144" crc="64b51dca" sha1="805678f570d9daf54dc6d2c76ffa7e0c8119d792"/>
 			</dataarea>
 		</part>
 	</software>

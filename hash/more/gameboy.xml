@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1086 -->
+<!-- Number of items in this list = 1332 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -519,16 +519,6 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="(demo)Bomber (Bung V4) (PD) [C].gbc" size="32768" crc="1e5d5ecc" sha1="3c6b1b3fe78cb46fa6c13614af68e1277f08248f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gbc11bf7af89663f">
-		<description>(demo)Bomberman Max - Red Challenger Trainer Menu by TRSI (PD) [C]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gameboy_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="(demo)Bomberman Max - Red Challenger Trainer Menu by TRSI (PD) [C].gbc" size="32768" crc="12b2e8e6" sha1="11bf7af89663fd9aefd226c2f4a244ce2b21da39"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1742,16 +1732,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gbcf3d015c39d34f">
-		<description>(demo)GBPIC Demo1 (PD)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gameboy_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="(demo)GBPIC Demo1 (PD).gb" size="32768" crc="bc786cbe" sha1="f3d015c39d34fda30edd57432b389739cbd5b5cd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gbca0f34632ced46">
 		<description>(demo)GB_Elite</description>
 		<year>????</year>
@@ -2372,16 +2352,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gbc23109c4b11770">
-		<description>(demo)Little Sound Dj V1.41b Player by Johan Kotlinski (PD) [C]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gameboy_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="(demo)Little Sound Dj V1.41b Player by Johan Kotlinski (PD) [C].gbc" size="524288" crc="d6de5afa" sha1="23109c4b11770187af5f1d159b9224677245381d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gbc9bfd13cd0fb0b">
 		<description>(demo)Man meets machine - Alternative Party 2009</description>
 		<year>????</year>
@@ -2843,12 +2813,12 @@
 		</part>
 	</software>
 	<software name="gbcd4737ce2e6582">
-		<description>Amazing Tater (U) [T+Spa_lukas] (2)</description>
+		<description>Amazing Tater (U) [T+Spa_lukas]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
-				<rom name="Amazing Tater (U) [T+Spa_lukas] (2).gb" size="65536" crc="2af99808" sha1="d4737ce2e6582874acf524db28960b48695c98c8"/>
+				<rom name="Amazing Tater (U) [T+Spa_lukas].gb" size="65536" crc="2af99808" sha1="d4737ce2e6582874acf524db28960b48695c98c8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3459,6 +3429,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Bomb Disposer [ROM].gb" size="32768" crc="d30d9ad9" sha1="25f6a27863031cf951d1564b3cb5178eb9bb18c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc11bf7af89663f">
+		<description>Bomberman Max - Red Challenger Trainer Menu by TRSI (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Bomberman Max - Red Challenger Trainer Menu by TRSI (PD) [C].gbc" size="32768" crc="12b2e8e6" sha1="11bf7af89663fd9aefd226c2f4a244ce2b21da39"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5932,6 +5912,2496 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcf3d015c39d34f">
+		<description>GBPIC Demo1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBPIC Demo1 (PD).gb" size="32768" crc="bc786cbe" sha1="f3d015c39d34fda30edd57432b389739cbd5b5cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0824beb19fcca">
+		<description>GBS Player V1.02 - 102 Dalmatians - Puppies to the Rescue (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - 102 Dalmatians - Puppies to the Rescue (PD) [C].gb" size="32768" crc="46dfcc06" sha1="0824beb19fcca53de805600eb7f63c471b83337f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcce7c459675fdf">
+		<description>GBS Player V1.02 - 3-D Ultra Pinball - Thrillride (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - 3-D Ultra Pinball - Thrillride (PD) [C].gb" size="32768" crc="0a33a0e0" sha1="ce7c459675fdfb2af2c3b56d04ff3011eedfb8d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc37d1f655ea201">
+		<description>GBS Player V1.02 - Action Man - Search for Base X (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Action Man - Search for Base X (PD) [C].gb" size="65536" crc="e17bef9f" sha1="37d1f655ea201fe82a9e982b13a7ae054c7b74c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcde3808a2e2d08">
+		<description>GBS Player V1.02 - Aero Star (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Aero Star (PD) [C].gb" size="32768" crc="bceb5c23" sha1="de3808a2e2d087f54c69f12a65303d72c6398634"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc674e350ac32db">
+		<description>GBS Player V1.02 - AirForce Delta (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - AirForce Delta (PD) [C].gb" size="131072" crc="9fca254f" sha1="674e350ac32db0ce7517a4c23079362a8b939fa7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc66d5bce8cb485">
+		<description>GBS Player V1.02 - Akazukin Chacha (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Akazukin Chacha (PD) [C].gb" size="32768" crc="a6dcf926" sha1="66d5bce8cb4852981eeff755c5e694967e5fa754"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1e9a76ae22e4d">
+		<description>GBS Player V1.02 - Animaniacs (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Animaniacs (PD) [C].gb" size="32768" crc="19218c02" sha1="1e9a76ae22e4da20b6525bd3ceb12a31af1affcf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf52045c1fb1a1">
+		<description>GBS Player V1.02 - Another Bible (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Another Bible (PD) [C].gb" size="32768" crc="22447b4a" sha1="f52045c1fb1a1265c34d9a9d4374c726597fa50c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf30a2f60f77a3">
+		<description>GBS Player V1.02 - Arle no Bouken - Mahou no Jewel (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Arle no Bouken - Mahou no Jewel (PD) [C].gb" size="65536" crc="1fc8ec0e" sha1="f30a2f60f77a3b71d8b1bd35a739650e29e89580"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc71b3a78de52f3">
+		<description>GBS Player V1.02 - Army Men - Air Combat (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Army Men - Air Combat (PD) [C].gb" size="32768" crc="6383fdd3" sha1="71b3a78de52f3a66a1def0ff2b012a60f6821717"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf73aaa8209b04">
+		<description>GBS Player V1.02 - Asterix - Search for Dogmatix (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Asterix - Search for Dogmatix (PD) [C].gb" size="65536" crc="2d1685da" sha1="f73aaa8209b04a4b9caf7983f34c4adcdd1aebce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca283622814969">
+		<description>GBS Player V1.02 - Atlantis - The Lost Empire (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Atlantis - The Lost Empire (PD) [C].gb" size="262144" crc="ef0a896d" sha1="a283622814969468ebda0f9a5198a3277aaf4c13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc673b4cd3536c">
+		<description>GBS Player V1.02 - Avenging Spirit (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Avenging Spirit (PD) [C].gb" size="32768" crc="dded4fe8" sha1="c673b4cd3536c529a075ae7376c173a6392e09b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd087110355b63">
+		<description>GBS Player V1.02 - Azure Dreams (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Azure Dreams (PD) [C].gb" size="65536" crc="156cfb61" sha1="d087110355b6367b7fbf334766f67a4090724f42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc128ddf9c29109">
+		<description>GBS Player V1.02 - Baby Felix - Halloween (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Baby Felix - Halloween (PD) [C].gb" size="32768" crc="ffe4d31e" sha1="128ddf9c29109deccb740e5b8fb6c35dda57b8ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbceac85af280a7c">
+		<description>GBS Player V1.02 - Barbie - Magical Genie Adventure (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Barbie - Magical Genie Adventure (PD) [C].gb" size="32768" crc="980a5e71" sha1="eac85af280a7c98ac94e3beea00e9f5fbd57534a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8de619f59d631">
+		<description>GBS Player V1.02 - Barca Total 2000 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Barca Total 2000 (PD) [C].gb" size="32768" crc="a435b5e2" sha1="8de619f59d631d8d726fb8efb083d42ab9bde3f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc652a7b6f7f449">
+		<description>GBS Player V1.02 - Battle Bull (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Battle Bull (PD) [C].gb" size="65536" crc="7a45168c" sha1="652a7b6f7f4496d8683d5cdfd826e38916a5b654"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcdea7ce2b97bed">
+		<description>GBS Player V1.02 - Battle Unit Zeoth (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Battle Unit Zeoth (PD) [C].gb" size="32768" crc="a48aa733" sha1="dea7ce2b97bedab37735c53871cb1903c66a6fff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc49a091d318007">
+		<description>GBS Player V1.02 - Benjamin Blumchen - Ein Verruckter Tag Im Zoo (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Benjamin Blumchen - Ein Verruckter Tag Im Zoo (PD) [C].gb" size="32768" crc="c8b3fce3" sha1="49a091d3180077765f56771b3bdd0eeb1676a633"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcdef5a5e05b6cf">
+		<description>GBS Player V1.02 - Bibi Blocksberg - Im Bann Der Hexenkugel (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Bibi Blocksberg - Im Bann Der Hexenkugel (PD) [C].gb" size="32768" crc="0348bdf0" sha1="def5a5e05b6cf133ae75aaf7f954295528d2148a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc591b3391695ce">
+		<description>GBS Player V1.02 - Blade (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Blade (PD) [C].gb" size="32768" crc="e9e05aa1" sha1="591b3391695ced4129f441a43360dcf2edeec77d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc929aa149baf16">
+		<description>GBS Player V1.02 - Blue's Clues - Blue's Alphabet Book (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Blue's Clues - Blue's Alphabet Book (PD) [C].gb" size="32768" crc="6e8ca641" sha1="929aa149baf1609f1881ab89c2abf09b9bf9491d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc495c0d23206b5">
+		<description>GBS Player V1.02 - Boarder Zone (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Boarder Zone (PD) [C].gb" size="32768" crc="1630964f" sha1="495c0d23206b5196ed5d58a32ac496784debff51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcac77ddeb7b245">
+		<description>GBS Player V1.02 - Bomb Jack (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Bomb Jack (PD) [C].gb" size="32768" crc="7ee1536e" sha1="ac77ddeb7b2452e0c19369cf65bc8ac5cdf756c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb9211fb6db7a2">
+		<description>GBS Player V1.02 - Booby Boys (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Booby Boys (PD) [C].gb" size="32768" crc="66e49c12" sha1="b9211fb6db7a2215819f19bcaa208391cf8836fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6706723ccbc69">
+		<description>GBS Player V1.02 - Bram Stoker's Dracula (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Bram Stoker's Dracula (PD) [C].gb" size="32768" crc="23ce7fd5" sha1="6706723ccbc695cfc5920da277dc5aae81f63aa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0002001c8089d">
+		<description>GBS Player V1.02 - Carl Lewis Athletics 2000 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Carl Lewis Athletics 2000 (PD) [C].gb" size="32768" crc="a080706b" sha1="0002001c8089d2297b3dfae774f386c78a806bae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce501fea0be9e3">
+		<description>GBS Player V1.02 - Carmageddon (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Carmageddon (PD) [C].gb" size="32768" crc="8d5a5246" sha1="e501fea0be9e37f0367ba757e00c05f1577c8b1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7da8254bc4ce9">
+		<description>GBS Player V1.02 - Carrot Crazy (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Carrot Crazy (PD) [C].gb" size="32768" crc="e603053f" sha1="7da8254bc4ce9bdf7148bee82a12f25b151925b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcaf28d53c390d9">
+		<description>GBS Player V1.02 - Casper (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Casper (PD) [C].gb" size="32768" crc="33a7da97" sha1="af28d53c390d929c1894bb857f9de7d4c76c1b6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9cca68cbb1398">
+		<description>GBS Player V1.02 - Catrap (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Catrap (PD) [C].gb" size="32768" crc="d2f4747d" sha1="9cca68cbb13980423bc726ee2cece67b1add48dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccb0dab35767c7">
+		<description>GBS Player V1.02 - Cave Noire (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Cave Noire (PD) [C].gb" size="32768" crc="df7a973a" sha1="cb0dab35767c7e7ddc10d0fc41956d78213814d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc00d72df7b9a97">
+		<description>GBS Player V1.02 - Centipede (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Centipede (PD) [C].gb" size="32768" crc="0d0babd6" sha1="00d72df7b9a97220807a80ce76bdf011a54248cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd4b27d047906e">
+		<description>GBS Player V1.02 - Chicken Run (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Chicken Run (PD) [C].gb" size="32768" crc="7bc24198" sha1="d4b27d047906e0631359e3ab205999b6b91306f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc35876264b1e08">
+		<description>GBS Player V1.02 - Cliffhanger (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Cliffhanger (PD) [C].gb" size="32768" crc="dcb65132" sha1="35876264b1e08e13dfc34ac9dff7315d9aa06066"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc53d45c99ae47e">
+		<description>GBS Player V1.02 - Contra - The Alien Wars (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Contra - The Alien Wars (PD) [C].gb" size="32768" crc="ae1b645d" sha1="53d45c99ae47e10a7d0fc5c57e2fab404a217cb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc731345873829b">
+		<description>GBS Player V1.02 - Cool Bricks (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Cool Bricks (PD) [C].gb" size="32768" crc="e55f2798" sha1="731345873829bfa79de6c0c962a493a042464ac0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc19eaf42ec63da">
+		<description>GBS Player V1.02 - Cosmo Tank (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Cosmo Tank (PD) [C].gb" size="32768" crc="9af0ad16" sha1="19eaf42ec63da41e396d2c0a0a8320d9417d7655"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc28db02ead718a">
+		<description>GBS Player V1.02 - Cutthroat Island (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Cutthroat Island (PD) [C].gb" size="32768" crc="2db003a3" sha1="28db02ead718a5e55d1bfab6eac9cdbee74bf5ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2fb2931059fc6">
+		<description>GBS Player V1.02 - Daedalian Opus (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Daedalian Opus (PD) [C].gb" size="32768" crc="e7942adc" sha1="2fb2931059fc6da1770dd030ca44a2d6fa65e0f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7db06086e1d6d">
+		<description>GBS Player V1.02 - Daikatana (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Daikatana (PD) [C].gb" size="65536" crc="d9d03ae1" sha1="7db06086e1d6d192c3eb86e04648132c2be42616"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc62b6380aa8aa">
+		<description>GBS Player V1.02 - Daiku no Gensan (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Daiku no Gensan (PD) [C].gb" size="65536" crc="e910513f" sha1="c62b6380aa8aa38fa01ec451164dbd941611fbce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc355bee22f13af">
+		<description>GBS Player V1.02 - Darkman (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Darkman (PD) [C].gb" size="32768" crc="83520cf2" sha1="355bee22f13afbbbebb9de970ba68e8347212010"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8431815d3f00b">
+		<description>GBS Player V1.02 - Das Geheimnis der Happy Hippo-Insel (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Das Geheimnis der Happy Hippo-Insel (PD) [C].gb" size="131072" crc="866b5cc3" sha1="8431815d3f00ba591caf0c0f95fe3988ce29da78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc04ccc10015c6e">
+		<description>GBS Player V1.02 - Dave Mirra Freestyle BMX (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Dave Mirra Freestyle BMX (PD) [C].gb" size="32768" crc="e5340182" sha1="04ccc10015c6e1e349339f384e03daf8fee1cd34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf1785fe5768cc">
+		<description>GBS Player V1.02 - Defender-Joust (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Defender-Joust (PD) [C].gb" size="32768" crc="026c399e" sha1="f1785fe5768ccb09ad8b9de12b8272b25a831815"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc728784414596d">
+		<description>GBS Player V1.02 - Die Maus (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Die Maus (PD) [C].gb" size="32768" crc="565d71f4" sha1="728784414596d7d851ab55668316bb525215f24b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcac39195b52449">
+		<description>GBS Player V1.02 - Dragon Dance (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Dragon Dance (PD) [C].gb" size="32768" crc="be12a883" sha1="ac39195b5244963e038425053ac6cd302ec4c09f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb549b5beb893a">
+		<description>GBS Player V1.02 - Dragon Quest Monsters (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Dragon Quest Monsters (PD) [C].gb" size="131072" crc="45836d2b" sha1="b549b5beb893a6343f88d1b4e042a836a6bcb8fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb1411ecadda4e">
+		<description>GBS Player V1.02 - Draogn Quest Monsters 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Draogn Quest Monsters 2 (PD) [C].gb" size="131072" crc="1a68ce6d" sha1="b1411ecadda4ed96b9725b7616bb40d6b6973682"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc304bf1c975c2">
+		<description>GBS Player V1.02 - Dukes of Hazzard, The - Racing for Home (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Dukes of Hazzard, The - Racing for Home (PD) [C].gb" size="32768" crc="c6b043e7" sha1="c304bf1c975c2c80579a8d54c07955de805833b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfbbf048b6955b">
+		<description>GBS Player V1.02 - Earthworm Jim (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Earthworm Jim (PD) [C].gb" size="32768" crc="663ab11d" sha1="fbbf048b6955b6e98419233ce05e5c59afd49ac7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce1595af0804d0">
+		<description>GBS Player V1.02 - Elie no Atelier GB (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Elie no Atelier GB (PD) [C].gb" size="262144" crc="ccc1e53a" sha1="e1595af0804d0ca16461e307374895b1aa80cb60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbdb832f818d0a">
+		<description>GBS Player V1.02 - Extreme Ghostbustsers (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Extreme Ghostbustsers (PD) [C].gb" size="32768" crc="4918b456" sha1="bdb832f818d0aa343c49bc7f4607cacd56c21b18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2463f9e667df4">
+		<description>GBS Player V1.02 - Faceball 2000 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Faceball 2000 (PD) [C].gb" size="32768" crc="22b76858" sha1="2463f9e667df4d8fd6ea9cee21819a87d082a58c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc38eb0c55efcae">
+		<description>GBS Player V1.02 - Fish Files, The (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Fish Files, The (PD) [C].gb" size="32768" crc="52f08728" sha1="38eb0c55efcaec233d11bf7b9b0662479420df6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc30dfd99c5a403">
+		<description>GBS Player V1.02 - Fix &amp; Foxi - Episode 1 Lupo (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Fix &amp; Foxi - Episode 1 Lupo (PD) [C].gb" size="32768" crc="4388d412" sha1="30dfd99c5a403e68b4ba27cf2e8521c273457b88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd99899c3730ce">
+		<description>GBS Player V1.02 - Flintstones - Burgertime in Bedrock (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Flintstones - Burgertime in Bedrock (PD) [C].gb" size="65536" crc="a51b2d8f" sha1="d99899c3730cea8b159301c14d71fc61b76ad207"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc8232a94e7280">
+		<description>GBS Player V1.02 - Fortress of Fear, The (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Fortress of Fear, The (PD) [C].gb" size="32768" crc="69547f73" sha1="c8232a94e72802605bea239199395ecb299f6080"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca0df9360e2299">
+		<description>GBS Player V1.02 - Fushigi no Dungeon - Furai no Shiren GB2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Fushigi no Dungeon - Furai no Shiren GB2 (PD) [C].gb" size="131072" crc="76b6b073" sha1="a0df9360e2299885498006f7f48d9ebe0ba1e731"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc93043d815fb5">
+		<description>GBS Player V1.02 - G1 King - 3 Biki no Yosouya (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - G1 King - 3 Biki no Yosouya (PD) [C].gb" size="32768" crc="1e7e5661" sha1="c93043d815fb5997942c7c61dca3917940b8c53e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc836b76b0730be">
+		<description>GBS Player V1.02 - Ganbare Goemon (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Ganbare Goemon (PD) [C].gb" size="131072" crc="0015582f" sha1="836b76b0730be167384d54ed9efeb49d6eb43d71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcadbf9932b157d">
+		<description>GBS Player V1.02 - GB Genjin 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - GB Genjin 2 (PD) [C].gb" size="32768" crc="ab85b204" sha1="adbf9932b157d4d92d73d66c8de6b9c3c944dbb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5f3a6bdeaeada">
+		<description>GBS Player V1.02 - GB Genjin Land - Viva Chikkun Oukoku (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - GB Genjin Land - Viva Chikkun Oukoku (PD) [C].gb" size="32768" crc="79e41dc4" sha1="5f3a6bdeaeada90683017a650954c006e73c6db1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc37e3b89ca0d50">
+		<description>GBS Player V1.02 - Gem Gem (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Gem Gem (PD) [C].gb" size="32768" crc="1d6010de" sha1="37e3b89ca0d50347d8f6b357fe7222a62081df61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc17fa5a428d1ce">
+		<description>GBS Player V1.02 - Gex 3 - Deep Cover Gecko (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Gex 3 - Deep Cover Gecko (PD) [C].gb" size="65536" crc="a7c2bd83" sha1="17fa5a428d1ced81263f60e2a6049f3f93347b6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca472e0048ae8d">
+		<description>GBS Player V1.02 - Ghosts 'n Goblins (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Ghosts 'n Goblins (PD) [C].gb" size="32768" crc="b01881a6" sha1="a472e0048ae8d098f7598e27ab24ce9271deeb1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9ef867ec0773c">
+		<description>GBS Player V1.02 - God Medicine FB (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - God Medicine FB (PD) [C].gb" size="65536" crc="11bc8978" sha1="9ef867ec0773c3e28aa8a313ed528c08aeb7f804"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3dbdfbad61048">
+		<description>GBS Player V1.02 - Gold and Glory - The Road to El Dorado (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Gold and Glory - The Road to El Dorado (PD) [C].gb" size="32768" crc="127c3f13" sha1="3dbdfbad61048be09ea66bd18034dd5f80395663"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd95c1d676a62a">
+		<description>GBS Player V1.02 - Great Greed (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Great Greed (PD) [C].gb" size="65536" crc="e723c755" sha1="d95c1d676a62ad320d9786fb73c917c65ec0bc00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf408092824943">
+		<description>GBS Player V1.02 - Harvest Moon GB (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Harvest Moon GB (PD) [C].gb" size="32768" crc="77770105" sha1="f408092824943aec5e8415830c60e2add1b09a9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc24ef7168fbe7c">
+		<description>GBS Player V1.02 - Hero Shuugou!! Pinball Party (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Hero Shuugou!! Pinball Party (PD) [C].gb" size="32768" crc="87b57be6" sha1="24ef7168fbe7cc40fdd8e20f4dcf4e35daafd72e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc775b2a1db5a05">
+		<description>GBS Player V1.02 - Hiryuu no Ken Gaiden (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Hiryuu no Ken Gaiden (PD) [C].gb" size="32768" crc="0a934edb" sha1="775b2a1db5a05f1a39e07d31b3caf9ff645761c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc368432990ffab">
+		<description>GBS Player V1.02 - Hole in One Golf (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Hole in One Golf (PD) [C].gb" size="32768" crc="f612196e" sha1="368432990ffab702dbd8fc89a0b60a4e73c70bde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce3b68ff56c22d">
+		<description>GBS Player V1.02 - Holy Magic Century (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Holy Magic Century (PD) [C].gb" size="32768" crc="20c7f9c2" sha1="e3b68ff56c22d01005c8dbd6234992b1122f14d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc15a24a902101d">
+		<description>GBS Player V1.02 - Hook (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Hook (PD) [C].gb" size="32768" crc="fbe7c934" sha1="15a24a902101dc0fe393b0e48685525a6006375d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc14439335d4adf">
+		<description>GBS Player V1.02 - Hudson Hawk (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Hudson Hawk (PD) [C].gb" size="32768" crc="ff764a25" sha1="14439335d4adf5c4cdc4497b7fc4556ec671c0ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcac61c9a12f742">
+		<description>GBS Player V1.02 - Hugo 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Hugo 2 (PD) [C].gb" size="32768" crc="4be2d552" sha1="ac61c9a12f742cd53942d479ab85050a85717628"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcda21864d8202c">
+		<description>GBS Player V1.02 - Hype - The Time Quest (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Hype - The Time Quest (PD) [C].gb" size="65536" crc="d8a3d21a" sha1="da21864d8202c93c95e32003b7571be355d99a33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6dc634db86027">
+		<description>GBS Player V1.02 - Incredible Crash Dummies (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Incredible Crash Dummies (PD) [C].gb" size="32768" crc="958e2969" sha1="6dc634db860274a1e0d16ace8cd2b85b3c0494b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1e047324a10b8">
+		<description>GBS Player V1.02 - International Karate (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - International Karate (PD) [C].gb" size="65536" crc="96fda786" sha1="1e047324a10b8add8ddb6e4dcf750c846f370899"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc331b156d25206">
+		<description>GBS Player V1.02 - J League Fighting Soccer (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - J League Fighting Soccer (PD) [C].gb" size="32768" crc="ae122d23" sha1="331b156d25206137369f3f992f161406c5a4dd68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb14f5760771af">
+		<description>GBS Player V1.02 - Jay und die Spielzeugdiebe (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Jay und die Spielzeugdiebe (PD) [C].gb" size="65536" crc="78964ed8" sha1="b14f5760771afccbc9960326f94dc91a7090d6d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc49e28e0c86e23">
+		<description>GBS Player V1.02 - Jeremy McGrath Supercross 2000 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Jeremy McGrath Supercross 2000 (PD) [C].gb" size="65536" crc="36857cc6" sha1="49e28e0c86e230008efa82de3ef8f4a2c3fc27bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce7e7420462ea8">
+		<description>GBS Player V1.02 - Jida Igeki (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Jida Igeki (PD) [C].gb" size="32768" crc="a0cc3930" sha1="e7e7420462ea864a2705fcee05b2ade3224745a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc7c78eff669af">
+		<description>GBS Player V1.02 - Jimmy White's Cueball (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Jimmy White's Cueball (PD) [C].gb" size="32768" crc="7ba35c8f" sha1="c7c78eff669afe0999fe7b21e4aafdf2a215c52c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc0d8bd9d30b42">
+		<description>GBS Player V1.02 - Jurassic Park 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Jurassic Park 2 (PD) [C].gb" size="32768" crc="cc05db9f" sha1="c0d8bd9d30b42ceaab82a47f6b85c30c3d357548"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcde0f3c2f061a4">
+		<description>GBS Player V1.02 - Juukou Senki Bullet Battler (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Juukou Senki Bullet Battler (PD) [C].gb" size="262144" crc="df0ede30" sha1="de0f3c2f061a4f138816a4b23394de8c3f40e3ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc47c189526c981">
+		<description>GBS Player V1.02 - Kaept'n Blaubaer - Die verrueckte Schatzsuche (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Kaept'n Blaubaer - Die verrueckte Schatzsuche (PD) [C].gb" size="32768" crc="f713f73a" sha1="47c189526c981f8b8fb5e8b9670b11a80fe4c543"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1b0f20c5b1e41">
+		<description>GBS Player V1.02 - Keep the Balance (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Keep the Balance (PD) [C].gb" size="262144" crc="a20e426f" sha1="1b0f20c5b1e41a72ea2083ece697f424816f2172"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5f84116a5a613">
+		<description>GBS Player V1.02 - Keitai Denjuu Telefang (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Keitai Denjuu Telefang (PD) [C].gb" size="131072" crc="c6852cd1" sha1="5f84116a5a613160acbc3e706ab9705095f51426"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc01b33937320a0">
+		<description>GBS Player V1.02 - Kelly Club - Clubhouse Fun (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Kelly Club - Clubhouse Fun (PD) [C].gb" size="32768" crc="e0fa6f4f" sha1="01b33937320a0026896b6c2c37196d7def192526"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc06cde669fd1d8">
+		<description>GBS Player V1.02 - Ken Griffey Jr's Slugfest (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Ken Griffey Jr's Slugfest (PD) [C].gb" size="32768" crc="85969d82" sha1="06cde669fd1d86895d96eeb21622521be2aa5325"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc25216d37c5cf5">
+		<description>GBS Player V1.02 - Kesamaru (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Kesamaru (PD) [C].gb" size="32768" crc="708d9d83" sha1="25216d37c5cf5424b6c8b20d81aa178317d75153"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc227ecf8494be9">
+		<description>GBS Player V1.02 - Kid Icarus - of Myths and Monsters (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Kid Icarus - of Myths and Monsters (PD) [C].gb" size="32768" crc="1774091e" sha1="227ecf8494be9fb018b0ebe875f96ffe3c0cb42d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb483be0dc3b1f">
+		<description>GBS Player V1.02 - Kinnikuman - The Dream Match (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Kinnikuman - The Dream Match (PD) [C].gb" size="32768" crc="28d189d2" sha1="b483be0dc3b1fc69b39ec4dc3835eefceec19b46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8f14cebdaf42f">
+		<description>GBS Player V1.02 - Kirby's Block Ball (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Kirby's Block Ball (PD) [C].gb" size="65536" crc="33650baf" sha1="8f14cebdaf42f4d10866e4a83545117af6deb14d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd4f818084c297">
+		<description>GBS Player V1.02 - Koi Wa Kakehiki (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Koi Wa Kakehiki (PD) [C].gb" size="32768" crc="d376a379" sha1="d4f818084c2978e08de3d242861caac0531e1713"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbf25e62173630">
+		<description>GBS Player V1.02 - Konamic Sports in Barcelona (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Konamic Sports in Barcelona (PD) [C].gb" size="32768" crc="1be2f3d6" sha1="bf25e62173630f54ec5a87db041f6b03e6ca7d4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1f9965b7ecd88">
+		<description>GBS Player V1.02 - Laura (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Laura (PD) [C].gb" size="32768" crc="43090638" sha1="1f9965b7ecd8876a60260adf266e4a20fa758677"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6bda4d4aeb93c">
+		<description>GBS Player V1.02 - Legend of Prince Valiant, The (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Legend of Prince Valiant, The (PD) [C].gb" size="32768" crc="0ca4a2fa" sha1="6bda4d4aeb93c263b278155c9c502cf18384ae21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce94b14d9c8b6a">
+		<description>GBS Player V1.02 - LEGO Stunt Rally (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - LEGO Stunt Rally (PD) [C].gb" size="65536" crc="e7184b87" sha1="e94b14d9c8b6a2944e70b2f981d789f4cb9e3f8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc54bebd37ace30">
+		<description>GBS Player V1.02 - Lion King, The (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Lion King, The (PD) [C].gb" size="32768" crc="ba1ba7e3" sha1="54bebd37ace309c91ccb0534752566686a36a67c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc749f8170b7461">
+		<description>GBS Player V1.02 - Little Magic (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Little Magic (PD) [C].gb" size="131072" crc="7c652e8a" sha1="749f8170b74618f2e27691a8ac113a1af1542694"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfa6bd8e222790">
+		<description>GBS Player V1.02 - Logical (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Logical (PD) [C].gb" size="32768" crc="e8e8733c" sha1="fa6bd8e22279073a848d520e2dcd363477d1f8b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf9b076ee44257">
+		<description>GBS Player V1.02 - Lucky Luke (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Lucky Luke (PD) [C].gb" size="65536" crc="f2116872" sha1="f9b076ee44257cbcd5c337f0f283023f71af360b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc220d569e6fc95">
+		<description>GBS Player V1.02 - Lucle (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Lucle (PD) [C].gb" size="32768" crc="6090b7fb" sha1="220d569e6fc956875060886cef9b08e97a355910"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd8a7eb1591d89">
+		<description>GBS Player V1.02 - Lufia - The Legend Returns (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Lufia - The Legend Returns (PD) [C].gb" size="262144" crc="e3d41acb" sha1="d8a7eb1591d89bfef92a84500f42e9edfbe9723a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc06d431f9b1851">
+		<description>GBS Player V1.02 - M&amp;M's Mini Madness (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - M&amp;M's Mini Madness (PD) [C].gb" size="131072" crc="f4fc517d" sha1="06d431f9b18510e6edc43ed7f2f7db2c6890b4a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2a48c1c6dcc4f">
+		<description>GBS Player V1.02 - Magic Drop (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Magic Drop (PD) [C].gb" size="32768" crc="8d1e4e59" sha1="2a48c1c6dcc4ff861309f1043715a0a15a77f4bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8b379465107c9">
+		<description>GBS Player V1.02 - Magical Chase GB (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Magical Chase GB (PD) [C].gb" size="131072" crc="b378db7b" sha1="8b379465107c97f5bfb19934800c2b57c17e3639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9db25db2afeb5">
+		<description>GBS Player V1.02 - Marie no Atelier GB (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Marie no Atelier GB (PD) [C].gb" size="262144" crc="7d9664f1" sha1="9db25db2afeb5bcb61cba626fa2586112e376481"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc14797c5d247a7">
+		<description>GBS Player V1.02 - Mario Golf (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Mario Golf (PD) [C].gb" size="131072" crc="17829d21" sha1="14797c5d247a76b3aa796a6e19514df17c8fd389"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc487d88f3b21e6">
+		<description>GBS Player V1.02 - Marvin Strikes Back! (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Marvin Strikes Back! (PD) [C].gb" size="32768" crc="007c6bed" sha1="487d88f3b21e639ba439ad22afac9542336e9026"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1b740dd01c55a">
+		<description>GBS Player V1.02 - Megami Tensei Gaiden - Last Bible (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Megami Tensei Gaiden - Last Bible (PD) [C].gb" size="32768" crc="81d6c1ac" sha1="1b740dd01c55a5c68b92f3defa90d7462f2e5a22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd2aad3e14ba82">
+		<description>GBS Player V1.02 - Megami Tensei Gaiden - Last Bible 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Megami Tensei Gaiden - Last Bible 2 (PD) [C].gb" size="32768" crc="3e46d773" sha1="d2aad3e14ba82584a61043fb7dcd31dac52c904c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5dadc6e0695a9">
+		<description>GBS Player V1.02 - Men In Black 2 - The Series (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Men In Black 2 - The Series (PD) [C].gb" size="32768" crc="b7311c1b" sha1="5dadc6e0695a952aef77012cd9a456629b57e647"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb5ee8ca41c26b">
+		<description>GBS Player V1.02 - Metal Masters (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Metal Masters (PD) [C].gb" size="32768" crc="2fec3622" sha1="b5ee8ca41c26b3b8a49198d202b1efdc2873ab20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb993a0dd53277">
+		<description>GBS Player V1.02 - Mia Hamm Soccer Shootout (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Mia Hamm Soccer Shootout (PD) [C].gb" size="65536" crc="53154375" sha1="b993a0dd5327711a7c317d41128569c2a627facb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3196cb9334bdb">
+		<description>GBS Player V1.02 - Micro Machines V3 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Micro Machines V3 (PD) [C].gb" size="65536" crc="9207d31a" sha1="3196cb9334bdb4d7b21abf9c75d27e622c643803"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0384c09588aee">
+		<description>GBS Player V1.02 - Micro Maniacs (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Micro Maniacs (PD) [C].gb" size="65536" crc="5400a0fe" sha1="0384c09588aeefe0356fde5f2ce313ee583271e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7f22f4f3aad31">
+		<description>GBS Player V1.02 - Mission Impossible (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Mission Impossible (PD) [C].gb" size="65536" crc="1dfea463" sha1="7f22f4f3aad31ddb94e803601942b25fb8eccabd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcacce4e36001b8">
+		<description>GBS Player V1.02 - Mole Mania (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Mole Mania (PD) [C].gb" size="65536" crc="bb2b8b3b" sha1="acce4e36001b8ab63c32485d72d9eb358ae39a4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcecc4e32b3b05d">
+		<description>GBS Player V1.02 - Moorhuhn 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Moorhuhn 2 (PD) [C].gb" size="32768" crc="5d6117c5" sha1="ecc4e32b3b05d745234d9e03cd753bbe3b48b22f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcff6a8d29e78f9">
+		<description>GBS Player V1.02 - Moorhuhn Jagd (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Moorhuhn Jagd (PD) [C].gb" size="32768" crc="7548887b" sha1="ff6a8d29e78f97fcff7bcd434ab96d2cd50df1bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6f0ba3dfded21">
+		<description>GBS Player V1.02 - Mr. Do! (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Mr. Do! (PD) [C].gb" size="32768" crc="b78c5e7f" sha1="6f0ba3dfded21dc694ec08701a525067aa7dae5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc23be627591cd5">
+		<description>GBS Player V1.02 - Mummy, The (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Mummy, The (PD) [C].gb" size="131072" crc="1220282f" sha1="23be627591cd5238c21a0fb6434849c9eb804736"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc48b69f4cfc338">
+		<description>GBS Player V1.02 - Mysterium (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Mysterium (PD) [C].gb" size="32768" crc="4958f21e" sha1="48b69f4cfc3389cdff86a7ec9e5bda4898b19bf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd3c7c3d6601b3">
+		<description>GBS Player V1.02 - NASCAR Heat (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - NASCAR Heat (PD) [C].gb" size="32768" crc="c584bca5" sha1="d3c7c3d6601b38269c09007a58333ca18228b865"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc52e73862a2e48">
+		<description>GBS Player V1.02 - Nations, The - Land of Legends (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Nations, The - Land of Legends (PD) [C].gb" size="32768" crc="dd91ed19" sha1="52e73862a2e48868671d7ba5105a193c6b716bce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc35c0bef918f72">
+		<description>GBS Player V1.02 - NBA Jam 2001 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - NBA Jam 2001 (PD) [C].gb" size="32768" crc="4249edb2" sha1="35c0bef918f72bdc53d8526ae861c5c2dd96386d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7314cae3cfc12">
+		<description>GBS Player V1.02 - Nekketsu Koukou Dodgeball-bu (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Nekketsu Koukou Dodgeball-bu (PD) [C].gb" size="32768" crc="cd8c3ff1" sha1="7314cae3cfc12617c842d7a53f26e4ea9b38f863"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc4592c042e777">
+		<description>GBS Player V1.02 - Neo-Racer (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Neo-Racer (PD) [C].gb" size="32768" crc="73974ab8" sha1="c4592c042e777a2a0c6e643a382f25065233fcfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7704dbf748ce3">
+		<description>GBS Player V1.02 - NSYNC - Get to the Show (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - NSYNC - Get to the Show (PD) [C].gb" size="32768" crc="eac1f651" sha1="7704dbf748ce35e344c7428203c7de2131ac14a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc50f2839691176">
+		<description>GBS Player V1.02 - Obelix (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Obelix (PD) [C].gb" size="32768" crc="03e6693f" sha1="50f2839691176ec3847382bc2cfa158baa4a0c01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcff62dd3f1d61a">
+		<description>GBS Player V1.02 - Ohasuta Yamachan &amp; Raymond (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Ohasuta Yamachan &amp; Raymond (PD) [C].gb" size="131072" crc="67429b68" sha1="ff62dd3f1d61adde3dd288de87d6aafbf610be47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc062ab71c5ed5b">
+		<description>GBS Player V1.02 - Oni (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Oni (PD) [C].gb" size="65536" crc="1f3d9986" sha1="062ab71c5ed5bc73860b99558df2680fff0080d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc18a5d46c0bb56">
+		<description>GBS Player V1.02 - Oni 2 - Innin Densetsu (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Oni 2 - Innin Densetsu (PD) [C].gb" size="65536" crc="c484b295" sha1="18a5d46c0bb56c8336fdedecc7b02e7e151555d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb5cb37a0ad828">
+		<description>GBS Player V1.02 - Oni 3 - Kuro no Hakaishin (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Oni 3 - Kuro no Hakaishin (PD) [C].gb" size="65536" crc="6a0c5fc5" sha1="b5cb37a0ad82879285439929b286a31cc4a75f12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc293df23d75683">
+		<description>GBS Player V1.02 - Oni 4 - Kishin no Ketsuzoku (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Oni 4 - Kishin no Ketsuzoku (PD) [C].gb" size="32768" crc="09388554" sha1="293df23d75683914db146acab7fac1d4e03d9425"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc24f097820876b">
+		<description>GBS Player V1.02 - Oni 5 - Innin wo Tsugumono (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Oni 5 - Innin wo Tsugumono (PD) [C].gb" size="65536" crc="1985cc57" sha1="24f097820876bd623d2ca271a8d1fbcfd75817ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc93cfd0aee484f">
+		<description>GBS Player V1.02 - Ottifanten - Kommando Stoertebeker (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Ottifanten - Kommando Stoertebeker (PD) [C].gb" size="131072" crc="9c088bb2" sha1="93cfd0aee484f48c860389c51aa10a0a3f5b181a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcab5c0af5a1d02">
+		<description>GBS Player V1.02 - Otto's Ottifanten (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Otto's Ottifanten (PD) [C].gb" size="32768" crc="e9c4abfb" sha1="ab5c0af5a1d027eeb7f8c5859cb1f6cc6a199f3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcce6c5765842b8">
+		<description>GBS Player V1.02 - Out to Lunch (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Out to Lunch (PD) [C].gb" size="32768" crc="aecd7642" sha1="ce6c5765842b83a74e19a392d3f1d67dc9a761f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4b2a5697e9621">
+		<description>GBS Player V1.02 - Painter (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Painter (PD) [C].gb" size="32768" crc="56a386eb" sha1="4b2a5697e9621b9d4d09afea15093a46727e217d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb201a271cb06e">
+		<description>GBS Player V1.02 - Papyrus (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Papyrus (PD) [C].gb" size="32768" crc="3b8756a2" sha1="b201a271cb06e9144a946de1cccc11e6de589c14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca4eaf8f90a40f">
+		<description>GBS Player V1.02 - Penguin Land (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Penguin Land (PD) [C].gb" size="32768" crc="c7d13942" sha1="a4eaf8f90a40fc71ce1fee193d494dd82df3710d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0d1d7fe59146d">
+		<description>GBS Player V1.02 - Pia Carrot e Youkoso!! 2.2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Pia Carrot e Youkoso!! 2.2 (PD) [C].gb" size="65536" crc="eaf78e50" sha1="0d1d7fe59146d9edce080815a32fe42793c1133c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7aebcd9d09bfc">
+		<description>GBS Player V1.02 - Pokemon Crystal (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Pokemon Crystal (PD) [C].gb" size="131072" crc="f567b346" sha1="7aebcd9d09bfc4104b2c3bc5d3233cdc6204f4d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7f2f604407b2b">
+		<description>GBS Player V1.02 - Pokemon Pinball (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Pokemon Pinball (PD) [C].gb" size="131072" crc="53fd38ea" sha1="7f2f604407b2b89a7ec85c24255ab3e1c6fbc072"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0742ba08dc8b5">
+		<description>GBS Player V1.02 - Pokemon Yellow (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Pokemon Yellow (PD) [C].gb" size="131072" crc="889d5f51" sha1="0742ba08dc8b53724edd7af45aa1e3ef7915fdac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbceb6d54fb83ac6">
+		<description>GBS Player V1.02 - Polaris SnoCross (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Polaris SnoCross (PD) [C].gb" size="32768" crc="25cc1c20" sha1="eb6d54fb83ac62c2db71c6c7c73f1c55daabe251"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccb175b9e8b0bf">
+		<description>GBS Player V1.02 - Pop Up (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Pop Up (PD) [C].gb" size="32768" crc="9d8c8075" sha1="cb175b9e8b0bf767702ee526d711b0bacca4312e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb306ab2f90425">
+		<description>GBS Player V1.02 - Power Quest (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Power Quest (PD) [C].gb" size="131072" crc="0076539e" sha1="b306ab2f904255db6e61a90feba3770459457235"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfd82135f719a7">
+		<description>GBS Player V1.02 - Power Rangers - Time Force (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Power Rangers - Time Force (PD) [C].gb" size="65536" crc="5458f9c2" sha1="fd82135f719a72151b1dfc6ee1829f6014f8f120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc12e83a26e46bd">
+		<description>GBS Player V1.02 - Power Spike - Pro Beach Volleyball (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Power Spike - Pro Beach Volleyball (PD) [C].gb" size="32768" crc="213e4b05" sha1="12e83a26e46bd058d1cb755a6e0da6b1e967b629"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce6fb82935ff11">
+		<description>GBS Player V1.02 - Prehistorik Man (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Prehistorik Man (PD) [C].gb" size="65536" crc="8a6f475e" sha1="e6fb82935ff11c6caea2261c615e7ed27fe9aec8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc58b1aaea80782">
+		<description>GBS Player V1.02 - Prince Naseem Boxing (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Prince Naseem Boxing (PD) [C].gb" size="32768" crc="daa1bbf7" sha1="58b1aaea807824d108788e2446dd18d4021e2baf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf6ca63782b677">
+		<description>GBS Player V1.02 - Pro Darts (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Pro Darts (PD) [C].gb" size="32768" crc="3d639e6c" sha1="f6ca63782b677ea56fc618521b34e6262f6e3ca6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce5fd2cb2ad6e9">
+		<description>GBS Player V1.02 - Project S-11 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="GBS Player V1.02 - Project S-11 (PD) [C].gb" size="524288" crc="d4acd2b1" sha1="e5fd2cb2ad6e9ffc7256ead8f8f4fb360b425435"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5c8b23663faf7">
+		<description>GBS Player V1.02 - Puzzled (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Puzzled (PD) [C].gb" size="65536" crc="8a42d796" sha1="5c8b23663faf7667fd79d30d7b9b0177a507bdcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc381f29a79e348">
+		<description>GBS Player V1.02 - Pyramids of Ra (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Pyramids of Ra (PD) [C].gb" size="32768" crc="a9dbef7f" sha1="381f29a79e348ec40f0a2b1a5478bd5913b51e83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc3e7ab9889f78">
+		<description>GBS Player V1.02 - Q-Bert (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Q-Bert (PD) [C].gb" size="131072" crc="32e3a1ac" sha1="c3e7ab9889f786be19af5e863135c0759dab6ddb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcdbd2748c2c5e0">
+		<description>GBS Player V1.02 - Radikal Bikers (Prototype) (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Radikal Bikers (Prototype) (PD) [C].gb" size="32768" crc="967c24c9" sha1="dbd2748c2c5e088e1865fa3d17f93c63fd31347e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf2f5f462b239f">
+		<description>GBS Player V1.02 - Raging Fighter (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Raging Fighter (PD) [C].gb" size="65536" crc="1a193c7e" sha1="f2f5f462b239f713e5f5d82437cd17fcd51d1f6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1902b2800cd20">
+		<description>GBS Player V1.02 - Ray-Thunder (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Ray-Thunder (PD) [C].gb" size="32768" crc="4609c87c" sha1="1902b2800cd20f55ad5ea1d79276d88e403f9fdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb390f1535cd35">
+		<description>GBS Player V1.02 - Real Pro Yakyuu! (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Real Pro Yakyuu! (PD) [C].gb" size="32768" crc="ed2219bb" sha1="b390f1535cd35b2f2bce3e7581f7fa88d8dc65b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc28a17655b2a9c">
+		<description>GBS Player V1.02 - Rescue Heroes - Fire Frenzy (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Rescue Heroes - Fire Frenzy (PD) [C].gb" size="32768" crc="af4ca678" sha1="28a17655b2a9c6371eb6b72e4bf39eed5372df23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcab1460e476338">
+		<description>GBS Player V1.02 - Return of the Ninja (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Return of the Ninja (PD) [C].gb" size="65536" crc="f04ef006" sha1="ab1460e476338d9602b3106c3b4d6ae2b2cd9dba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4ce7849d437aa">
+		<description>GBS Player V1.02 - Rip-Tide Racer (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Rip-Tide Racer (PD) [C].gb" size="32768" crc="2873b774" sha1="4ce7849d437aab1c0c7459da384bf998bcc0c09d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc15239a4a02105">
+		<description>GBS Player V1.02 - Road Rash (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Road Rash (PD) [C].gb" size="32768" crc="e541b3c9" sha1="15239a4a02105be517069edebcbc10717b531c40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1c5b35b16be44">
+		<description>GBS Player V1.02 - Robin Hood (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Robin Hood (PD) [C].gb" size="65536" crc="c3e23245" sha1="1c5b35b16be4494dd6aae18d237565b47dfdd275"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc69907c874e196">
+		<description>GBS Player V1.02 - Robocop (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Robocop (PD) [C].gb" size="32768" crc="2133cd52" sha1="69907c874e1965e264043658cace29f4bb963d99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8f00b95c2873f">
+		<description>GBS Player V1.02 - Robocop 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Robocop 2 (PD) [C].gb" size="32768" crc="97136f26" sha1="8f00b95c2873f7f629d79dc9d9935592f7a53b66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf434d7cc478e6">
+		<description>GBS Player V1.02 - Ronaldo V.Football (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Ronaldo V.Football (PD) [C].gb" size="32768" crc="789e278d" sha1="f434d7cc478e69a1566ac1849cf9fe7fead29c1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc01f2e00c0626a">
+		<description>GBS Player V1.02 - Sakura Taisen GB (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Sakura Taisen GB (PD) [C].gb" size="131072" crc="07adf5b2" sha1="01f2e00c0626abbdd4c7694b084f38733f20d02f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4cc9830ac11fc">
+		<description>GBS Player V1.02 - Sakura Taisen GB2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Sakura Taisen GB2 (PD) [C].gb" size="131072" crc="25ade4e0" sha1="4cc9830ac11fcab9d13c6b6f0f2ebf5b6a0ea418"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4a20b1723b80f">
+		<description>GBS Player V1.02 - Samurai Kid (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Samurai Kid (PD) [C].gb" size="65536" crc="7e7e20c5" sha1="4a20b1723b80f76379c0b7e7c7a9cc767b6993e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc71467c91f6118">
+		<description>GBS Player V1.02 - Samurai Shodown (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Samurai Shodown (PD) [C].gb" size="65536" crc="b8f67275" sha1="71467c91f611869bae25c145222e06c29ffb0bfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8d2b69b0990a3">
+		<description>GBS Player V1.02 - Santa Claus Junior (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Santa Claus Junior (PD) [C].gb" size="32768" crc="b94c0eaf" sha1="8d2b69b0990a308e1b5a395d0ee50725ef63cefe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcefd052c7da977">
+		<description>GBS Player V1.02 - Sea Battle (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Sea Battle (PD) [C].gb" size="32768" crc="aaa10459" sha1="efd052c7da977173e9b7ee64fc36c46abdbb84d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2812e9a413b12">
+		<description>GBS Player V1.02 - Shantae (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="GBS Player V1.02 - Shantae (PD) [C].gb" size="524288" crc="853647af" sha1="2812e9a413b1213bed4d488ac89f811514612071"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5610345746bb9">
+		<description>GBS Player V1.02 - Simpsons, The - Night of the Living Treehouse of Horror (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Simpsons, The - Night of the Living Treehouse of Horror (PD) [C].gb" size="65536" crc="aa2921d5" sha1="5610345746bb996b608a93dbb304db24d76fcc6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3ed7e2ec502f8">
+		<description>GBS Player V1.02 - Smurfs, The (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Smurfs, The (PD) [C].gb" size="32768" crc="bbd56fcc" sha1="3ed7e2ec502f827df173b7217c3f863b48169a8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb543d5a82f592">
+		<description>GBS Player V1.02 - Solitaire (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Solitaire (PD) [C].gb" size="32768" crc="1ffdcccb" sha1="b543d5a82f592394198c2cc550deef8af259a80d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc94d5e537d64b2">
+		<description>GBS Player V1.02 - Soul Getter - Houkago Bouken RPG (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Soul Getter - Houkago Bouken RPG (PD) [C].gb" size="131072" crc="37f97bea" sha1="94d5e537d64b2bb9ef5b057e753da5a1589582c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc27cc3f34e76db">
+		<description>GBS Player V1.02 - Space Invasion (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Space Invasion (PD) [C].gb" size="32768" crc="8fcb93d5" sha1="27cc3f34e76db137e3df60fc515389f86babadc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3e58dbe52fddd">
+		<description>GBS Player V1.02 - Spanky's Quest (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Spanky's Quest (PD) [C].gb" size="32768" crc="00444568" sha1="3e58dbe52fddd785a45745e88b5f7d5b8ba39e09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc163a8bf3d678b">
+		<description>GBS Player V1.02 - Spider-Man (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Spider-Man (PD) [C].gb" size="65536" crc="b4d35a53" sha1="163a8bf3d678b8e89433fa1a6ef9a314470e829c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8814fc0703405">
+		<description>GBS Player V1.02 - Spider-Man 2 - The Sinister Six (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Spider-Man 2 - The Sinister Six (PD) [C].gb" size="32768" crc="04b76107" sha1="8814fc070340555998b6bf9b24611c99ca199a28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc897b56625a569">
+		<description>GBS Player V1.02 - Spirou (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Spirou (PD) [C].gb" size="32768" crc="c6653ed6" sha1="897b56625a569143ed9a04ff17b9993f6a4b9a1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0facbc67801f8">
+		<description>GBS Player V1.02 - SpongeBob SquarePants - Legend of the Lost Spatula (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - SpongeBob SquarePants - Legend of the Lost Spatula (PD) [C].gb" size="32768" crc="6bc339d5" sha1="0facbc67801f8474bd672d0140fd01f647dae6c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc45da6b82015f2">
+		<description>GBS Player V1.02 - Spot (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Spot (PD) [C].gb" size="65536" crc="df4a8f84" sha1="45da6b82015f2ce5e24691efb6e3256647554d67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccdd1a6c87abd2">
+		<description>GBS Player V1.02 - Star Heritage (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Star Heritage (PD) [C].gb" size="32768" crc="a79b4662" sha1="cdd1a6c87abd242e25aef375f1c693288ad15ffd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce6f8c713956f1">
+		<description>GBS Player V1.02 - Street Racer (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Street Racer (PD) [C].gb" size="32768" crc="daa610c2" sha1="e6f8c713956f18e3698120cb77bd59418b28f3e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce84f924710415">
+		<description>GBS Player V1.02 - SubMission (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - SubMission (PD) [C].gb" size="65536" crc="4bb629cb" sha1="e84f9247104158361bdd64a4df219f24398a0fe0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5328ceb67fa2a">
+		<description>GBS Player V1.02 - Super James Pond (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Super James Pond (PD) [C].gb" size="32768" crc="924d1b06" sha1="5328ceb67fa2a48c0c92012e277fc83cf2d7ccc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7a6c5738db8c9">
+		<description>GBS Player V1.02 - Super Robot Pinball (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Super Robot Pinball (PD) [C].gb" size="65536" crc="fdefacdb" sha1="7a6c5738db8c9a29245873a6c8c7e05d98747960"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1866716acba18">
+		<description>GBS Player V1.02 - Super Robot Taisen - Link Battler (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Super Robot Taisen - Link Battler (PD) [C].gb" size="131072" crc="055d636b" sha1="1866716acba18261028a2ea975ac42522513700c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbccaae9b142b3">
+		<description>GBS Player V1.02 - Supercross Freestyle (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Supercross Freestyle (PD) [C].gb" size="65536" crc="558558ae" sha1="bccaae9b142b33d91d160b9dde7f25027b76072a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc58b828d190e9d">
+		<description>GBS Player V1.02 - Survival Kids (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Survival Kids (PD) [C].gb" size="65536" crc="8fdb9674" sha1="58b828d190e9da38fcf7f59bf89531a32cbe1fbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf60c0273405ba">
+		<description>GBS Player V1.02 - Survival Kids 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Survival Kids 2 (PD) [C].gb" size="65536" crc="78e45415" sha1="f60c0273405ba2e4bb9732421ac9fa58561e8852"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcdf62de6c0b7f1">
+		<description>GBS Player V1.02 - Sweet Ange (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Sweet Ange (PD) [C].gb" size="65536" crc="c5256bac" sha1="df62de6c0b7f155e17acfe9d31e23b0ba94d70c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2f121c68cfc72">
+		<description>GBS Player V1.02 - SWIV (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - SWIV (PD) [C].gb" size="32768" crc="62a8e4bb" sha1="2f121c68cfc7230cd2cb2bde3f16d3b7be6d0c9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbfe979484a4d1">
+		<description>GBS Player V1.02 - Sword of Hope 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Sword of Hope 2 (PD) [C].gb" size="32768" crc="2d0aee68" sha1="bfe979484a4d14fb8415915922bfd6365eacfea5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3f41afd296367">
+		<description>GBS Player V1.02 - Sylvester and Tweety (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Sylvester and Tweety (PD) [C].gb" size="32768" crc="eb0d08f4" sha1="3f41afd296367ddf39d574e24756f50e5fc00741"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9940af38e9758">
+		<description>GBS Player V1.02 - Test Drive Le Mans (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Test Drive Le Mans (PD) [C].gb" size="65536" crc="997b35ab" sha1="9940af38e975841b12bf1511bc6714471b26ca63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8aaf4f80dc88c">
+		<description>GBS Player V1.02 - Thunderbirds (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Thunderbirds (PD) [C].gb" size="32768" crc="5b979e09" sha1="8aaf4f80dc88c787da0592224d8dcac6d1c72222"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4ae8248db36bf">
+		<description>GBS Player V1.02 - Tintin - Le Temple du Soleil (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Tintin - Le Temple du Soleil (PD) [C].gb" size="32768" crc="3ba938b1" sha1="4ae8248db36bfc7121cc514b1221a550192e831e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc3128e64956301">
+		<description>GBS Player V1.02 - Tiny Toon Adventures - Dizzy's Candy Quest (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Tiny Toon Adventures - Dizzy's Candy Quest (PD) [C].gb" size="262144" crc="0f7f2408" sha1="3128e64956301f3dbe593f2bb4acb508e6df301a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1320fc2c2a3f0">
+		<description>GBS Player V1.02 - TOCA Touring Car Championship (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - TOCA Touring Car Championship (PD) [C].gb" size="32768" crc="509914a8" sha1="1320fc2c2a3f08a54d92735f103f8b4cb526aed5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc7e746af79fb6b">
+		<description>GBS Player V1.02 - Toki Tori (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Toki Tori (PD) [C].gb" size="131072" crc="ea1e71e5" sha1="7e746af79fb6bc323f8ffe841dff865a079b5051"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc28865635848a2">
+		<description>GBS Player V1.02 - Tokimeki Memorial Pocket - Culture Hen (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Tokimeki Memorial Pocket - Culture Hen (PD) [C].gb" size="262144" crc="e39cf71f" sha1="28865635848a216ba429306f6d147e9a551eb4e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc93ffe5f41a36d">
+		<description>GBS Player V1.02 - Tokimeki Memorial Pocket - Sports Hen (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GBS Player V1.02 - Tokimeki Memorial Pocket - Sports Hen (PD) [C].gb" size="262144" crc="4c7e5348" sha1="93ffe5f41a36dc5eb5830e65020c8ed11d2420b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc242ce8850dc5f">
+		<description>GBS Player V1.02 - Tom and Jerry - Mouse Hunt (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="GBS Player V1.02 - Tom and Jerry - Mouse Hunt (PD) [C].gb" size="524288" crc="f04d5baf" sha1="242ce8850dc5fe8524d710316aea1f6857e909e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc26f630f2829b4">
+		<description>GBS Player V1.02 - Tom and Jerry in Mouse Attacks! (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Tom and Jerry in Mouse Attacks! (PD) [C].gb" size="32768" crc="881c649e" sha1="26f630f2829b4d33d936fd43ad0f0b9c4b06b39e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc398f5189f6660">
+		<description>GBS Player V1.02 - Tomb Raider (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Tomb Raider (PD) [C].gb" size="32768" crc="d8bc8380" sha1="398f5189f6660fe172aff0c7ba54ce598600456d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4be34015b99c7">
+		<description>GBS Player V1.02 - Tomb Raider - Curse of the Sword (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Tomb Raider - Curse of the Sword (PD) [C].gb" size="32768" crc="f5334a1c" sha1="4be34015b99c7c02a913708ffc154fae4ec7f0d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0ccd4dc2162f1">
+		<description>GBS Player V1.02 - Tony Hawk's Pro Skater 3 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Tony Hawk's Pro Skater 3 (PD) [C].gb" size="32768" crc="91399f6d" sha1="0ccd4dc2162f1e2e7e5d2094424135f9aa0c583c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfd576dda98f01">
+		<description>GBS Player V1.02 - Toobin' (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Toobin' (PD) [C].gb" size="65536" crc="1a7b7cc3" sha1="fd576dda98f01dabe0c3574428ce154c230bc230"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcdf8029b0eede1">
+		<description>GBS Player V1.02 - Tootuff (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Tootuff (PD) [C].gb" size="32768" crc="ed851a6c" sha1="df8029b0eede108de3e934e45b04d33d54a2a0a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9e42f7a960250">
+		<description>GBS Player V1.02 - Trouballs (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Trouballs (PD) [C].gb" size="131072" crc="527cc05c" sha1="9e42f7a9602501102cbb099c377fbd169a756a55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc76555a0174313">
+		<description>GBS Player V1.02 - Turok - Battle of the Bionosaurs (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Turok - Battle of the Bionosaurs (PD) [C].gb" size="32768" crc="e5ca1d74" sha1="76555a0174313f967989b498b766a004656549ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbfeb0af702f21">
+		<description>GBS Player V1.02 - Turok - Rage Wars (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Turok - Rage Wars (PD) [C].gb" size="32768" crc="390fc4cc" sha1="bfeb0af702f2142b631656463f3bb6fe298baed7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1af775a35a3f2">
+		<description>GBS Player V1.02 - Turok 2 - Seeds of Evil (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Turok 2 - Seeds of Evil (PD) [C].gb" size="32768" crc="2964a193" sha1="1af775a35a3f26cb2ab160e03364aaaab91b3d65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc81271489a5d77">
+		<description>GBS Player V1.02 - Turok 3 - Shadow of Oblivion (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Turok 3 - Shadow of Oblivion (PD) [C].gb" size="32768" crc="8eed6d7c" sha1="81271489a5d77bc321dad81edd226332009b0dc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5b7b4c1c70b32">
+		<description>GBS Player V1.02 - UEFA 2000 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - UEFA 2000 (PD) [C].gb" size="32768" crc="13583015" sha1="5b7b4c1c70b32e31abb349d435ea8a52380c34ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8cea264c71472">
+		<description>GBS Player V1.02 - UGB Player Demo (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - UGB Player Demo (PD) [C].gb" size="32768" crc="deb7c87e" sha1="8cea264c714724cac333a8a04e4128565eb0918b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc539e6f63b1c59">
+		<description>GBS Player V1.02 - Ultima - Runes of Virtue 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Ultima - Runes of Virtue 2 (PD) [C].gb" size="32768" crc="36b1ccbe" sha1="539e6f63b1c596433d4544753f69b294bc8ea457"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbf770a0f246fa">
+		<description>GBS Player V1.02 - Ultimate Fighting Championship (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Ultimate Fighting Championship (PD) [C].gb" size="32768" crc="5092f360" sha1="bf770a0f246faa145f232536c60858ea6d0cee5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1ea3ee5dc054b">
+		<description>GBS Player V1.02 - VIP (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - VIP (PD) [C].gb" size="65536" crc="db1c087d" sha1="1ea3ee5dc054ba7bb165252910f978cb2ef234b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf0b391ffef4a3">
+		<description>GBS Player V1.02 - Wacky Races (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Wacky Races (PD) [C].gb" size="65536" crc="2f3d95a7" sha1="f0b391ffef4a34e35b364138ac706efb813d28c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2a9710a015ecf">
+		<description>GBS Player V1.02 - Warlocked (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Warlocked (PD) [C].gb" size="32768" crc="a3e0afff" sha1="2a9710a015ecff31519d91953b2b2c87363f87d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc44283428d0154">
+		<description>GBS Player V1.02 - Warriors of Might and Magic (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Warriors of Might and Magic (PD) [C].gb" size="131072" crc="f042b15d" sha1="44283428d0154bf00e8effdccbf1c6312eae75ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc742f15ca286ab">
+		<description>GBS Player V1.02 - Wendy - Der Traum Von Arizona (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Wendy - Der Traum Von Arizona (PD) [C].gb" size="32768" crc="54b16d06" sha1="742f15ca286abfee3abe410d863922a9afadd62a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb8c5f83055fb2">
+		<description>GBS Player V1.02 - Who Wants to Be a Millionaire (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Who Wants to Be a Millionaire (PD) [C].gb" size="131072" crc="d4af0171" sha1="b8c5f83055fb298d384eb0bb870a963da22e1799"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc0c741ce8688e3">
+		<description>GBS Player V1.02 - Wild Thornberrys, The - Rambler (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Wild Thornberrys, The - Rambler (PD) [C].gb" size="32768" crc="b5f91670" sha1="0c741ce8688e35c8fdf61138b84f4e15ddd4b973"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbce9d3726e9ba1a">
+		<description>GBS Player V1.02 - Wizardry I - Proving Grounds of the Mad Overlord (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Wizardry I - Proving Grounds of the Mad Overlord (PD) [C].gb" size="65536" crc="ddd7ee94" sha1="e9d3726e9ba1ac59024ebb9cc56f0ac68da0ae89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfcf770ee6af70">
+		<description>GBS Player V1.02 - Wizardry II - Legacy of Llylgamyn (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Wizardry II - Legacy of Llylgamyn (PD) [C].gb" size="65536" crc="ec0beb5a" sha1="fcf770ee6af70b7d52bc0c36a5466685003e1d1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcae02c5d46794f">
+		<description>GBS Player V1.02 - Wizardry III - Knights of Diamonds (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="GBS Player V1.02 - Wizardry III - Knights of Diamonds (PD) [C].gb" size="65536" crc="36f2dfb9" sha1="ae02c5d46794ff089340620f9da3a58b67a8145e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccfe9d2b8701d7">
+		<description>GBS Player V1.02 - Worms Armageddon (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Worms Armageddon (PD) [C].gb" size="32768" crc="91ba7a32" sha1="cfe9d2b8701d71852d53e762f7bfe88ab4adeba6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcbcfd655eff252">
+		<description>GBS Player V1.02 - WWF Warzone (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - WWF Warzone (PD) [C].gb" size="32768" crc="590d1cf3" sha1="bcfd655eff252f11a3510b5534a618337f5cc52c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc40376564a9b08">
+		<description>GBS Player V1.02 - WWF Wrestlemania 2000 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - WWF Wrestlemania 2000 (PD) [C].gb" size="32768" crc="6fe1ea44" sha1="40376564a9b080681cc6dca88a47d7e78c4dd878"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc144e511e19bf4">
+		<description>GBS Player V1.02 - X - Xekkusu (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - X - Xekkusu (PD) [C].gb" size="32768" crc="f6469407" sha1="144e511e19bf43fbc73cbf795a3efdbbaa8afd47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc45471b43780ce">
+		<description>GBS Player V1.02 - X-Men - Mutant Wars (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - X-Men - Mutant Wars (PD) [C].gb" size="32768" crc="c05de14c" sha1="45471b43780ce1bc5e3b1269fe63ab7275056ad1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcec6c4f839cbdc">
+		<description>GBS Player V1.02 - Xerd no Densetsu (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GBS Player V1.02 - Xerd no Densetsu (PD) [C].gb" size="32768" crc="aa0f41a0" sha1="ec6c4f839cbdc8d18d645a152fc5c949ae0a7e9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc1aacfbbe8af97">
+		<description>GBS Player V1.02 - Xerd no Densetsu 2 (PD) [C]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="GBS Player V1.02 - Xerd no Densetsu 2 (PD) [C].gb" size="131072" crc="11c2a6a9" sha1="1aacfbbe8af97ca4a1bf2bfb508e349d8770c0f7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc258cc2c4960d3">
 		<description>God Save The Queen (PD) [C]</description>
 		<year>????</year>
@@ -6639,6 +9109,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Konami GB Collection Vol.3 by Silver X (CV2 (V1.1) Speed Hack) [C].gb" size="524288" crc="2d7bb6a5" sha1="5eaf60b58afa904cc4a84b6e996ab97b4d110184"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcfc6af981be773">
+		<description>Konami GB Collection Vol.4 (E) [C] - Castlevania 2 Speed Hack v1.1 by Silver X</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Konami GB Collection Vol.4 (E) [C] - Castlevania 2 Speed Hack v1.1 by Silver X.gbc" size="1048576" crc="199fe3ad" sha1="fc6af981be77367128399cf57bd8b03100ad24e9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7709,26 +10189,6 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Mortal Kombat (U) [T+Fre_Arkames].gb" size="262144" crc="99ac23aa" sha1="6ed0c2b90455fb209fe1748061b89bc70d605b6a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gbc9439122f384dd">
-		<description>Mortal Kombat 3 (U) [T+Fre90_Arkames]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gameboy_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Mortal Kombat 3 (U) [T+Fre90_Arkames].gb" size="524288" crc="358570cc" sha1="9439122f384dd25287e8d2a3930f4f53e385411f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gbc9a822e9872ee1">
-		<description>Mortal Kombat 4 (U) [C][T+Fre80_Arkames]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gameboy_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Mortal Kombat 4 (U) [C][T+Fre80_Arkames].gbc" size="1048576" crc="7b57adff" sha1="9a822e9872ee1d37be57746ea7a2d0129369fdcb"/>
 			</dataarea>
 		</part>
 	</software>
