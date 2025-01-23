@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 580 -->
+<!-- Number of items in this list = 622 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -1392,6 +1392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colb07f4d6747411">
+		<description>Defender</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Defender.rom" size="24576" crc="ffd16997" sha1="b07f4d6747411d3df5819735c7bf051f902cbf0f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb1fdcf7bb50eb">
 		<description>Demon Attack - New Atlantis (2023)(Cote Gamers)</description>
 		<year>????</year>
@@ -1429,6 +1439,26 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="3858">
 				<rom name="Diamond Dash (2011)(NewColeco).rom" size="3858" crc="e386b1b7" sha1="b065a584b63812e7974e632ca7af248315fa07cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col223b74dd9b1fc">
+		<description>diamond8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="diamond8.rom" size="8192" crc="836dccaf" sha1="223b74dd9b1fcda30359d072a1a93a5079f72880"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colfe20a68bac37e">
+		<description>diamondd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="diamondd.rom" size="4096" crc="54fa098a" sha1="fe20a68bac37e2336c21c92a81ba8b110a7ec0d0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1492,6 +1522,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col113c1ead67b26">
+		<description>Donkey Kong jr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Donkey Kong jr.rom" size="16384" crc="fd11508d" sha1="113c1ead67b2679ddad9b99506e801526245af05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col46b7aa1cedac2">
+		<description>Donkey Kong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Donkey Kong.rom" size="16384" crc="3c77198c" sha1="46b7aa1cedac273f2b96bad4a0768554733972bf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col7b0c5c85f58b7">
 		<description>Donkey_Kong_Jr_SGM</description>
 		<year>????</year>
@@ -1542,6 +1592,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col978eb1bf1a039">
+		<description>Dr Seuss</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Dr Seuss.rom" size="16384" crc="109699e2" sha1="978eb1bf1a0393087cb639adbd4e6575d1725581"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colb623a970164d9">
+		<description>Dragon Fire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Dragon Fire.rom" size="16384" crc="dcb8f9e8" sha1="b623a970164d9739c0135d0cf37f9f0b3c67b17c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col2c7c0d1f74a22">
 		<description>Drol (2016)(CollectorVision Games)</description>
 		<year>????</year>
@@ -1549,6 +1619,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Drol (2016)(CollectorVision Games).col" size="32768" crc="8331d147" sha1="2c7c0d1f74a2211f559622971ca3a92379ad34c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col162c7ad3266e0">
+		<description>Dukes of Hazzard</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Dukes of Hazzard.rom" size="32768" crc="4025ac94" sha1="162c7ad3266e02aa88983fa4ece7a77bc1cb9c7a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1692,6 +1772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colacc3f1f3a7c12">
+		<description>Evolution</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Evolution.rom" size="16384" crc="dff01cf7" sha1="acc3f1f3a7c129d736c3625667a3c1d942f12bbe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col4ac1b2b462aeb">
 		<description>Facemaker (U)</description>
 		<year>????</year>
@@ -1762,6 +1852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col3b5823bd966e0">
+		<description>Flipper Slipper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Flipper Slipper.rom" size="16384" crc="7e97a22e" sha1="3b5823bd966e042df81cf42dc07aef990e41fd88"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col40e85b474db95">
 		<description>Flora and the Ghost Mirror (2013) (NewColeco)</description>
 		<year>????</year>
@@ -1812,6 +1912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col4f4ef29dbb730">
+		<description>Frantic Freddy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Frantic Freddy.rom" size="16384" crc="8615c6e8" sha1="4f4ef29dbb730583bdf6da75aa7fe7b4f144216a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colf0d0a7d96edf7">
 		<description>FRANTIC</description>
 		<year>????</year>
@@ -1839,6 +1949,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Frenzy! (UE).col" size="24576" crc="0522ebdd" sha1="f8a7bbff1dfc19b85428206522c0ab73d0d628e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col77da39d6fa64e">
+		<description>Frenzy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Frenzy.rom" size="24576" crc="bf1ccf04" sha1="77da39d6fa64e1b3849f61967f148dfe846a32b2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1912,6 +2032,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col932e0776b861b">
+		<description>Frogger 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Frogger 2.rom" size="16384" crc="04405423" sha1="932e0776b861b9d927bc7c86440517ebfa90c8af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cold33dbb600b0a9">
+		<description>Frogger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Frogger.rom" size="16384" crc="32b95be0" sha1="d33dbb600b0a948ad2c5a2df7fc8ca7e86b753c4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col2d61d96fd15c6">
 		<description>From Out of the Jungle Tarzan (1982)(Coleco)</description>
 		<year>????</year>
@@ -1942,6 +2082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cola2b35d87f13ce">
+		<description>Frontline</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Frontline.rom" size="32768" crc="08990b8f" sha1="a2b35d87f13ceb790a99f20bab43d4548d3c6587"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col7564cb4ccd006">
 		<description>Galaxian (1983)(Atari)</description>
 		<year>????</year>
@@ -1969,6 +2119,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Galaxian (U).col" size="32768" crc="fe1d0b6a" sha1="82052a190b21c73f06a676fad3d2e30a2cc9b952"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colcb389e5719aba">
+		<description>Galaxian</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Galaxian.rom" size="32768" crc="987bc7ac" sha1="cb389e5719aba0186f93643e75d5ffb3bf339f9d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2029,6 +2189,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Gateway to Apshai (1984)(Epyx).rom" size="16384" crc="0726b64d" sha1="6970f6043adaeae0bf0a1bdf431b12807be87b58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colf4182b3a69043">
+		<description>Get Booty</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="3047">
+				<rom name="Get Booty.rom" size="3047" crc="cd5d3736" sha1="f4182b3a690437bb36cdf184ee458634718f2489"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2152,6 +2322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cold5890e96cdc1c">
+		<description>Gyruss</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Gyruss.rom" size="16384" crc="b4ef0f1f" sha1="d5890e96cdc1ca8a6a27042bc486ecfbb9ddeca7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col7c7dc0929b855">
 		<description>H-tron_Bit90</description>
 		<year>????</year>
@@ -2232,6 +2412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col1febd0de03140">
+		<description>Hero</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Hero.rom" size="16384" crc="685ab9b5" sha1="1febd0de031402c2d2dc88f0c60d18c35feee6f3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cole8d46ef058782">
 		<description>Hole in One SGM (2017)(CollectorVision)</description>
 		<year>????</year>
@@ -2302,6 +2492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col314be140b495d">
+		<description>Illusions</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Illusions.rom" size="16384" crc="2787516d" sha1="314be140b495de538ffdf01c9faee4aeef1ecb83"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col9cdc5c63ee8c2">
 		<description>Insane Pickin' Sticks VIII (2009 Daniel Bienvenu) [4K]</description>
 		<year>????</year>
@@ -2329,6 +2529,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="13184">
 				<rom name="Jack B. Quick, side scrolling demo.rom" size="13184" crc="83055158" sha1="7a179f52a58b3f7d9f36183d0e9cf7c0e53d0566"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colb9e6675950285">
+		<description>James Bond</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="James Bond.rom" size="16384" crc="3004a253" sha1="b9e66759502856e9341ba0a2f350c94faf29cca1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2402,6 +2612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col7fcaef64fa7fc">
+		<description>jod</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="2432">
+				<rom name="jod.rom" size="2432" crc="edb051fd" sha1="7fcaef64fa7fc142a358ce34bfbe04d29085d11b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col551a87b925595">
 		<description>Joust (1983) (Atarisoft) (Prototype)</description>
 		<year>????</year>
@@ -2469,6 +2689,26 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Jumpman Junior (1984)(Epyx)[a].rom" size="16384" crc="9528949a" sha1="b9c4b8a6d5921927ba200e1f4efe0caaf82802c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colb79d4312e2d5f">
+		<description>Jumpman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jumpman.rom" size="16384" crc="060c69e8" sha1="b79d4312e2d5fc30e37ee46916dc31908c84590e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cold41bec8f571f3">
+		<description>Jungle Hunt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Jungle Hunt.rom" size="24576" crc="e8858484" sha1="d41bec8f571f3250668bb1cec5dc0bf7de74bb7d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2612,6 +2852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colafa8e2f119d63">
+		<description>Lady Bug</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Lady Bug.rom" size="16384" crc="2c3097b8" sha1="afa8e2f119d63463dbdd0c88be6873b0c6a27594"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col1d4ed31131f64">
 		<description>Learning with FuzzyWOMP</description>
 		<year>????</year>
@@ -2702,6 +2952,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colc5a4d39c1aa5a">
+		<description>Logic Levels</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Logic Levels.rom" size="16384" crc="c28d7062" sha1="c5a4d39c1aa5a643daabc9a163f366f9ba5afef2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col83ee624c22dd4">
 		<description>Looping (1983)(Ventureline)</description>
 		<year>????</year>
@@ -2749,6 +3009,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="3570">
 				<rom name="Maid Of The Mist (2007 Dale Wick).rom" size="3570" crc="2a1ba55c" sha1="3a86a06586264aff59053bb9c11fa73e3b7e305d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colccd06c8f8056b">
+		<description>Maid of the Mist</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="3562">
+				<rom name="Maid of the Mist.rom" size="3562" crc="a7c54759" sha1="ccd06c8f8056baa3917811cfd36ed89dcfa6a46a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2882,6 +3152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colb5bd18379236c">
+		<description>Memory Manor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Memory Manor.rom" size="16384" crc="861c9825" sha1="b5bd18379236c40b2341c9550b45e3295a8fc990"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col6ab484f0cb022">
 		<description>Memotech vol 1</description>
 		<year>????</year>
@@ -2902,6 +3182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col92cf04a5346a4">
+		<description>Meteoric Shower</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Meteoric Shower.rom" size="16384" crc="3beffc06" sha1="92cf04a5346a409be51d1f728c4f734e3a5446ef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col75db8737324fc">
 		<description>Mindwalls (2013)(CollectorVision Games)</description>
 		<year>????</year>
@@ -2909,6 +3199,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32755">
 				<rom name="Mindwalls (2013)(CollectorVision Games).rom" size="32755" crc="7b61b12e" sha1="75db8737324fc320ba73dbeee7a7c5306dfdbbce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colb29cd441e9ede">
+		<description>Miner 2049</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Miner 2049.rom" size="24576" crc="b24f10fd" sha1="b29cd441e9edebc37abc08c3fd932f1d4185bacd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2992,6 +3292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colb0c02e594dd96">
+		<description>Montezuma's Revenge</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Montezuma's Revenge.rom" size="16384" crc="0bd9d073" sha1="b0c02e594dd965af5045d4e3de19c61fa5b6d0ca"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cola801f58736078">
 		<description>Moon Patrol (1984) (Atarisoft) (Prototype)</description>
 		<year>????</year>
@@ -3009,6 +3319,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Moon Patrol Harder.rom" size="32768" crc="6a672443" sha1="a0bcdc726369b97044a07590fac097f29d062f69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coleeccf73225e03">
+		<description>Moon Sweeper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Moon Sweeper.rom" size="16384" crc="8a303f5a" sha1="eeccf73225e03ce10f6f6a02a808dc04f5bb0242"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3032,6 +3352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col89b6f5f482f8f">
+		<description>Motocross Racer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Motocross Racer.rom" size="16384" crc="0f4d800a" sha1="89b6f5f482f8f79c10ef9d3ffdeac1ded47a2362"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colfaa3301b9758c">
 		<description>Mountain King (1983-84) (Sunrise) [!]</description>
 		<year>????</year>
@@ -3039,6 +3369,26 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Mountain King (1983-84) (Sunrise) [!].rom" size="16384" crc="d8d73246" sha1="faa3301b9758c5c4a218b7ce1cbb760c26daee10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col46602df461175">
+		<description>Mountain King</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mountain King.rom" size="16384" crc="c173bbec" sha1="46602df46117513d7166eba81e2e3546246adf94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colbde8f3e4be86d">
+		<description>Mouse Trap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mouse Trap.rom" size="16384" crc="fd8b79b3" sha1="bde8f3e4be86d175b544225b129b9bd41dce0d78"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3302,6 +3652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cold42f8620c9c7b">
+		<description>Nova Blast</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Nova Blast.rom" size="16384" crc="ea06f585" sha1="d42f8620c9c7bc099ed0f4005f989189c766f57f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cola081cf3378541">
 		<description>Oil's Well (1984)(Sierra On-Line Inc)[a]</description>
 		<year>????</year>
@@ -3309,6 +3669,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Oil's Well (1984)(Sierra On-Line Inc)[a].rom" size="16384" crc="d2256b6c" sha1="a081cf337854139e87952a03e463438720330aba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col779e43f183dbd">
+		<description>Oil's Well</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Oil's Well.rom" size="16384" crc="add10242" sha1="779e43f183dbdb692dc26ae41dde6b35891f8f8b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5799,6 +6169,56 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Zombie Near (2012)(CollectorVision).col" size="32768" crc="c36c017e" sha1="aaa24419466c7bd4252f4166bbaf9f9935fc682c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col01092a3afacb7">
+		<description>[adam]Heist, The (1983)(Livesay Computers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="[adam]Heist, The (1983)(Livesay Computers).rom" size="24576" crc="6f2e2d84" sha1="01092a3afacb7e013c220c1aa6ce3c72ca400b5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coldd5949e331f70">
+		<description>[adam]Heist, The (1983)(Livesay Computers, Inc.)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="[adam]Heist, The (1983)(Livesay Computers, Inc.)[a].rom" size="32768" crc="866849d1" sha1="dd5949e331f70bca313422a527091c2bd30b50a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colaa0069dbb9bc5">
+		<description>[adam]Heist, The (1983)(Micro Fun) [t1] (50 Men)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="[adam]Heist, The (1983)(Micro Fun) [t1] (50 Men).rom" size="24576" crc="bc3b9f78" sha1="aa0069dbb9bc5c4d0ea04941c51f19587a9c6e40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col08352200cfae2">
+		<description>[adam]Heist, The (1983)(Micro Fun) [t2] (8 Men)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="[adam]Heist, The (1983)(Micro Fun) [t2] (8 Men).rom" size="24576" crc="b0f5dcb4" sha1="08352200cfae252a69e83b55f1590e5f75739d18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col5de6442754c63">
+		<description>[adam]Monkey Academy (1984)(Konami)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="[adam]Monkey Academy (1984)(Konami)(proto).rom" size="16384" crc="d1e8df85" sha1="5de6442754c639c77045ce9f18d1b59f38ab07b3"/>
 			</dataarea>
 		</part>
 	</software>
