@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 2 -->
+<softwarelist name="comx35_flop" description="comx35_flop loose roms">
+	<software name="cmx56f9f5ee95699">
+		<description>Games</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Games.img" size="143360" crc="94fc6366" sha1="56f9f5ee95699c7b757f55940492b8e4427505e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cmxce01f7e43d217">
+		<description>hit.it</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="hit.it.img" size="143360" crc="473c0905" sha1="ce01f7e43d21717d9f49d43795b9644389edece8"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

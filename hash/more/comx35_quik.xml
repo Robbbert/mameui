@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 8 -->
+<softwarelist name="comx35_quik" description="comx35_quik loose roms">
+	<software name="cmx708b926825381">
+		<description>Diver</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="comx35_quik">
+			<dataarea name="quik" size="27058">
+				<rom name="Diver.comx" size="27058" crc="1f319658" sha1="708b926825381a67e1261fa5d0a24180bf7ee4dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cmxe1628c2d61c93">
+		<description>GateMaster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="comx35_quik">
+			<dataarea name="quik" size="9021">
+				<rom name="GateMaster.comx" size="9021" crc="ec71efa9" sha1="e1628c2d61c93a0b47023ca7b25eee56914137ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cmxd2c9bc8132419">
+		<description>Hit and Run</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="comx35_quik">
+			<dataarea name="quik" size="4890">
+				<rom name="Hit and Run.comx" size="4890" crc="2fa0d5c7" sha1="d2c9bc813241941eb6c2eaef548a9eb0c1bf0bf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cmx0f1617890b33c">
+		<description>Killerwatt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="comx35_quik">
+			<dataarea name="quik" size="27208">
+				<rom name="Killerwatt.comx" size="27208" crc="feec2eca" sha1="0f1617890b33ccbe22e0e1450c5447643ad0f4c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cmx78751cacc00d3">
+		<description>Marketing Game 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="comx35_quik">
+			<dataarea name="quik" size="27918">
+				<rom name="Marketing Game 2.comx" size="27918" crc="6fd2190e" sha1="78751cacc00d3b1a1e3235a8d54f458658af30c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cmx298bca77de7c2">
+		<description>Preposition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="comx35_quik">
+			<dataarea name="quik" size="9080">
+				<rom name="Preposition.comx" size="9080" crc="fd59301b" sha1="298bca77de7c26d95c729020fe30151bad0e3c6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cmx2aab05d3e873a">
+		<description>Raider</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="comx35_quik">
+			<dataarea name="quik" size="27282">
+				<rom name="Raider.comx" size="27282" crc="eb4da09d" sha1="2aab05d3e873a3b1f936daf6268b4a1cf78e51d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cmx91e11cdc4c862">
+		<description>Space Invaders</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="comx35_quik">
+			<dataarea name="quik" size="8085">
+				<rom name="Space Invaders.comx" size="8085" crc="67ea5467" sha1="91e11cdc4c86282e3f78209e5cc6297b1315f146"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
