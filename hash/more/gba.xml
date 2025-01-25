@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 223 -->
+<!-- Number of items in this list = 225 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -332,6 +332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaf5b6e4da35f90">
+		<description>Barnyard (USA) (En,Fr,De,Es,It,Nl) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Barnyard (USA) (En,Fr,De,Es,It,Nl) (Beta).gba" size="8388608" crc="178cae0d" sha1="f5b6e4da35f904a2b290d9852babb9b2346d63b1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba38f38fb5644ae">
 		<description>Blast Arena Advance (PD)</description>
 		<year>????</year>
@@ -469,6 +479,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="11800016">
 				<rom name="DoAGBA.gba" size="11800016" crc="b13962d0" sha1="e6ba49e4528c4b2357db06c861551815bad0f907"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5418a9f4be35d">
+		<description>Dora the Explorer Double Pack (USA) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Dora the Explorer Double Pack (USA) (Beta).gba" size="8388608" crc="185f34f5" sha1="5418a9f4be35df3b26b448042755af69ed7f2305"/>
 			</dataarea>
 		</part>
 	</software>

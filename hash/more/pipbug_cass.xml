@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 8 -->
+<softwarelist name="pipbug_cass" description="pipbug_cass loose roms">
+	<software name="pip9b0a03b6a77d7">
+		<description>chomp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pipbug_cass">
+			<dataarea name="cass" size="2085882">
+				<rom name="chomp.wav" size="2085882" crc="bf409198" sha1="9b0a03b6a77d7f919f47ba7062318e1aa4622f2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pipa43ea02c878fd">
+		<description>guessing_game</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pipbug_cass">
+			<dataarea name="cass" size="1358574">
+				<rom name="guessing_game.wav" size="1358574" crc="a96a1ccb" sha1="a43ea02c878fd19a6af23b391e589ba4c0373ece"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pip4d130ad077c57">
+		<description>luner_lander_110baud</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pipbug_cass">
+			<dataarea name="cass" size="3695036">
+				<rom name="luner_lander_110baud.wav" size="3695036" crc="aa77707b" sha1="4d130ad077c5780cf33d4bdbf0fb5e4cc81249e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pip929012ed73ec0">
+		<description>nim</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pipbug_cass">
+			<dataarea name="cass" size="1298480">
+				<rom name="nim.wav" size="1298480" crc="63e0ab58" sha1="929012ed73ec06129ab2eefac6205851051186f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pip26115b896acf2">
+		<description>poker_machine</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pipbug_cass">
+			<dataarea name="cass" size="1309104">
+				<rom name="poker_machine.wav" size="1309104" crc="98f0c200" sha1="26115b896acf20f700164f7c0a337027348e8008"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pip021b3f474a556">
+		<description>rotate</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pipbug_cass">
+			<dataarea name="cass" size="1376516">
+				<rom name="rotate.wav" size="1376516" crc="e9fe09a6" sha1="021b3f474a556b577eb03e9c903aeb40e130ad18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pipa5f8ef1e7fd08">
+		<description>russian_roulette</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pipbug_cass">
+			<dataarea name="cass" size="1332832">
+				<rom name="russian_roulette.wav" size="1332832" crc="45f86bf1" sha1="a5f8ef1e7fd08fe21fb42d15ef8141f6450e6cf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pip364e2f426bc98">
+		<description>target_shoot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pipbug_cass">
+			<dataarea name="cass" size="1274938">
+				<rom name="target_shoot.wav" size="1274938" crc="eef5ee00" sha1="364e2f426bc98869bb6cabb093519e67b10824bc"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

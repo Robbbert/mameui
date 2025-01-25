@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 48 -->
+<!-- Number of items in this list = 47 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -153,12 +153,12 @@
 		</part>
 	</software>
 	<software name="sg196dd55a63bae0">
-		<description>Congo Bongo (1983)(Sega)</description>
+		<description>Congo Bongo # SG-1000</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
-				<rom name="Congo Bongo (1983)(Sega).bin" size="32768" crc="dc4383cc" sha1="96dd55a63bae0abc666fe317d50612116100d7b1"/>
+				<rom name="Congo Bongo # SG-1000.SG" size="32768" crc="dc4383cc" sha1="96dd55a63bae0abc666fe317d50612116100d7b1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -302,16 +302,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sg1b6bc31f554835">
-		<description>MastermindRK_sg1000</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sg1000_cart">
-			<dataarea name="cart" size="32768">
-				<rom name="MastermindRK_sg1000.sg" size="32768" crc="5b4004f4" sha1="b6bc31f5548353372edf8ebb2293961cb5d3ecb1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sg1d261c253a83e0">
 		<description>Mazy</description>
 		<year>????</year>
@@ -323,12 +313,12 @@
 		</part>
 	</software>
 	<software name="sg16476bc0fc1608">
-		<description>Monaco GP (1983)(Sega)</description>
+		<description>Monaco GP # SG-1000</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="40960">
-				<rom name="Monaco GP (1983)(Sega).bin" size="40960" crc="72542786" sha1="6476bc0fc1608dd69a1ae62617ea4719bc7eaa50"/>
+				<rom name="Monaco GP # SG-1000.SG" size="40960" crc="72542786" sha1="6476bc0fc1608dd69a1ae62617ea4719bc7eaa50"/>
 			</dataarea>
 		</part>
 	</software>

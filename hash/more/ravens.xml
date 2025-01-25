@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 7 -->
+<softwarelist name="ravens" description="ravens loose roms">
+	<software name="rav4c90a338013fc">
+		<description>Blinklicht</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="ravens_quik">
+			<dataarea name="quik" size="2330">
+				<rom name="Blinklicht.pgm" size="2330" crc="1cb47fbc" sha1="4c90a338013fc361c13984a8057b983656932314"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rav52e4e0c85ed6c">
+		<description>Denkzeitbegrenzer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="ravens_quik">
+			<dataarea name="quik" size="2341">
+				<rom name="Denkzeitbegrenzer.pgm" size="2341" crc="3fa8e95f" sha1="52e4e0c85ed6c2c56254793675821509ee7fa6fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rav87bcd0433c57e">
+		<description>Ferien</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="ravens_quik">
+			<dataarea name="quik" size="2329">
+				<rom name="Ferien.pgm" size="2329" crc="be7f9655" sha1="87bcd0433c57e824080a7f5f825532e13d73ecd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rav4c094932ef7d4">
+		<description>Laufschrift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="ravens_quik">
+			<dataarea name="quik" size="2599">
+				<rom name="Laufschrift.pgm" size="2599" crc="b810199b" sha1="4c094932ef7d4f839dcb644b90cdf852f4479936"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rav3dc473b13c1fc">
+		<description>Metronom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="ravens_quik">
+			<dataarea name="quik" size="2333">
+				<rom name="Metronom.pgm" size="2333" crc="905b7950" sha1="3dc473b13c1fcd010533ed8cd33a869bb077c29d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rav2cc7197f7352d">
+		<description>TrafficLights1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="ravens_quik">
+			<dataarea name="quik" size="2322">
+				<rom name="TrafficLights1.pgm" size="2322" crc="a3f5f5b2" sha1="2cc7197f7352d6a794240c6963bb126fe80b35fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rave76e8ebf7242c">
+		<description>TrafficLights2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="ravens_quik">
+			<dataarea name="quik" size="2349">
+				<rom name="TrafficLights2.pgm" size="2349" crc="a7b4f63f" sha1="e76e8ebf7242c2b9a4d094c81a8669ff379ed613"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 283 -->
+<!-- Number of items in this list = 286 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -392,16 +392,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sms8e1bdca7cf02f">
-		<description>Bock's Birthday 2007</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="49152">
-				<rom name="Bock's Birthday 2007.sms" size="49152" crc="b80a74a1" sha1="8e1bdca7cf02f2713c034c3edae88e112f1fb742"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sms94255ae6844c1">
 		<description>bolcor</description>
 		<year>????</year>
@@ -569,6 +559,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="15990">
 				<rom name="Cavit.sms" size="15990" crc="0c1674da" sha1="1a2eb9af182229bc52acc3e616107553a1075f0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms63a4602c404de">
+		<description>chicken</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="2149">
+				<rom name="chicken.sms" size="2149" crc="382cb128" sha1="63a4602c404de8421d2bdc8641ed175744ad9642"/>
 			</dataarea>
 		</part>
 	</software>
@@ -778,7 +778,7 @@
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="EDUSOFT_HAX2.SMS" size="262144" crc="9cc4ae7c" sha1="c1dab46c2f1b71cefba67045f04ec561e348ad21"/>
+				<rom name="EDUSOFT_HAX2.sms" size="262144" crc="9cc4ae7c" sha1="c1dab46c2f1b71cefba67045f04ec561e348ad21"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1102,6 +1102,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsb573a3bb6f156">
+		<description>happy 10!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="happy 10!.sms" size="32768" crc="bc05774f" sha1="b573a3bb6f1563270e9fcad8faf4491044565de6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb06146c8ca83e">
+		<description>Headless Ninja Volley v0.9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="12453">
+				<rom name="Headless Ninja Volley v0.9.sms" size="12453" crc="31b392c4" sha1="b06146c8ca83e79eac62f827bb16d2289e8fc755"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms998723370b3a6">
 		<description>HeroesAgainstDemons_1.03(smsj)</description>
 		<year>????</year>
@@ -1389,26 +1409,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="MastermindRK.sms" size="32768" crc="7f6a8a92" sha1="c5e78f61e8ca15d2596ffbbf5cba8991d7d7166e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sms6b06863c579ea">
-		<description>maze3d-2008-01-14</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="maze3d-2008-01-14.sms" size="32768" crc="5bbb64da" sha1="6b06863c579eac2c6fe0318dbca38bd838387331"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsa7326ae14465d">
-		<description>maze3d-2008-01-16</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="maze3d-2008-01-16.sms" size="32768" crc="64f7f933" sha1="a7326ae14465d81ff1496ab72f3dfd3c33f54c8b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1812,6 +1812,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms71bcce9670f2a">
+		<description>Phantasy Star (JP) [tr En090_Z80 Gaiden]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (JP) [tr En090_Z80 Gaiden].sms" size="524288" crc="1cdd9244" sha1="71bcce9670f2a2b3f28f00e7e00530a16de39c4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsf93333661a5b5">
+		<description>Phantasy Star (JP) [tr En091_Z80 Gaiden]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (JP) [tr En091_Z80 Gaiden].sms" size="524288" crc="0861bb46" sha1="f93333661a5b5b915e971c95f0877a08bfba3c17"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsad9ccb28844b0">
 		<description>Phantasy Star (UE) (V1.2) [T+Rus_Chief-Net]</description>
 		<year>????</year>
@@ -1919,6 +1939,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="8019">
 				<rom name="pongmstr.sms" size="8019" crc="82c12e96" sha1="52ff86e9b7723e4f3099c74d5d18522db507cef8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms891dba3b09faf">
+		<description>Pop Breaker (1990)(Micro Cabin)(Jp) [gg2sms v1.1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Pop Breaker (1990)(Micro Cabin)(Jp) [gg2sms v1.1].sms" size="131072" crc="bdfb09f6" sha1="891dba3b09faf71679c6a8522cc7279e6d324bc5"/>
 			</dataarea>
 		</part>
 	</software>

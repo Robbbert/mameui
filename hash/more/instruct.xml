@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 7 -->
+<softwarelist name="instruct" description="instruct loose roms">
+	<software name="ins0d2bde925876b">
+		<description>bounce</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="instruct_quik">
+			<dataarea name="quik" size="342">
+				<rom name="bounce.PGM" size="342" crc="8713ee17" sha1="0d2bde925876b6341eb4e2b65b21cf8da45d143e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="insdc345bfcf28bc">
+		<description>checksum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="instruct_quik">
+			<dataarea name="quik" size="361">
+				<rom name="checksum.PGM" size="361" crc="16942a01" sha1="dc345bfcf28bc873fe300d7e6d8297b96643cfa8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ins838efd4c57acf">
+		<description>DISLSD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="instruct_quik">
+			<dataarea name="quik" size="6080">
+				<rom name="DISLSD.PGM" size="6080" crc="6f4d74bb" sha1="838efd4c57acfeb7f315864fb26bbc7b24987bcf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ins17fde6dded1b3">
+		<description>mirror</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="instruct_quik">
+			<dataarea name="quik" size="285">
+				<rom name="mirror.PGM" size="285" crc="93489164" sha1="17fde6dded1b3db93455d485a609fa16dcb31625"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ins1669de63c701a">
+		<description>scroller(pressUP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="instruct_quik">
+			<dataarea name="quik" size="6080">
+				<rom name="scroller(pressUP).PGM" size="6080" crc="c9fa8274" sha1="1669de63c701a60df43bf07612a8432fcfc3b96c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="insa4bcf9283b296">
+		<description>scroller</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="instruct_quik">
+			<dataarea name="quik" size="432">
+				<rom name="scroller.PGM" size="432" crc="0b5ee1fc" sha1="a4bcf9283b296c0f33ccd98331b69017d58b763e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="insfda798275599a">
+		<description>showkeys</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="instruct_quik">
+			<dataarea name="quik" size="472">
+				<rom name="showkeys.PGM" size="472" crc="0f454be7" sha1="fda798275599a63af2bbd1b777391a70e444bcf5"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

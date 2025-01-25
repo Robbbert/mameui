@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 690 -->
+<!-- Number of items in this list = 691 -->
 <softwarelist name="samcoupe_flop" description="samcoupe_flop loose roms">
 	<software name="sama71fee3f5df19">
 		<description>(ama13)amiga_mod-arch_v1-3</description>
@@ -4819,6 +4819,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819200">
 				<rom name="pro-dos boot disk.mgt" size="819200" crc="68ba6e66" sha1="88a23f4d9c9db07fbdc918bdc7124a78904ab8a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sam1698a60944b89">
+		<description>Pro-DOS-v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="Pro-DOS-v2.dsk" size="819200" crc="658656bc" sha1="1698a60944b893c1285db42645e1a12a47b26407"/>
 			</dataarea>
 		</part>
 	</software>

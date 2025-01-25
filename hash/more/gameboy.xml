@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1332 -->
+<!-- Number of items in this list = 1334 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -5353,22 +5353,22 @@
 		</part>
 	</software>
 	<software name="gbce42f5d89ac604">
-		<description>Fields of Eutomia (demo-playable) (2021)(SōdoDev)</description>
+		<description>Fields of Eutomia (demo-playable) (2021)(SodoDev)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Fields of Eutomia (demo-playable) (2021)(SōdoDev).gbc" size="1048576" crc="a589cdcf" sha1="e42f5d89ac60460444eef098798664c3ad9328c6"/>
+				<rom name="Fields of Eutomia (demo-playable) (2021)(SodoDev).gbc" size="1048576" crc="a589cdcf" sha1="e42f5d89ac60460444eef098798664c3ad9328c6"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="gbc04e7be6f8ba9c">
-		<description>Fields of Eutomia (demo-playable) (2022-10-30)(SōdoDev)</description>
+		<description>Fields of Eutomia (demo-playable) (2022-10-30)(SodoDev)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Fields of Eutomia (demo-playable) (2022-10-30)(SōdoDev).gbc" size="1048576" crc="5efa71fe" sha1="04e7be6f8ba9c9120ae4e1976965c048f40e3863"/>
+				<rom name="Fields of Eutomia (demo-playable) (2022-10-30)(SodoDev).gbc" size="1048576" crc="5efa71fe" sha1="04e7be6f8ba9c9120ae4e1976965c048f40e3863"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10189,6 +10189,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Mortal Kombat (U) [T+Fre_Arkames].gb" size="262144" crc="99ac23aa" sha1="6ed0c2b90455fb209fe1748061b89bc70d605b6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9439122f384dd">
+		<description>Mortal Kombat 3 (U) [T+Fre90_Arkames]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mortal Kombat 3 (U) [T+Fre90_Arkames].gb" size="524288" crc="358570cc" sha1="9439122f384dd25287e8d2a3930f4f53e385411f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9a822e9872ee1">
+		<description>Mortal Kombat 4 (U) [C][T+Fre80_Arkames]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mortal Kombat 4 (U) [C][T+Fre80_Arkames].gbc" size="1048576" crc="7b57adff" sha1="9a822e9872ee1d37be57746ea7a2d0129369fdcb"/>
 			</dataarea>
 		</part>
 	</software>

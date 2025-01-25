@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3496 -->
+<!-- Number of items in this list = 3531 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3542,6 +3542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3bea4be499657">
+		<description>Batman Returns (Japan) (Sample)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Batman Returns (Japan) (Sample).sfc" size="1048576" crc="9ce7d5ba" sha1="3bea4be499657acc2aeb0090fa9a00e4b15a7430"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns2a1c91b6a9ffd">
 		<description>Battle Blaze (U)(1993)(Sammy)</description>
 		<year>????</year>
@@ -3549,6 +3559,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Battle Blaze (U)(1993)(Sammy).sfc" size="1048576" crc="d933bd8d" sha1="2a1c91b6a9ffd5b8d01e388c1322341216021a02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscfcc60d398754">
+		<description>Battle Blaze (USA) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Battle Blaze (USA) (Beta).smc" size="1048576" crc="9f2ba6a9" sha1="cfcc60d3987545429c2196acecb1b3d1f7e56015"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3599,6 +3619,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Battle Soccer T-Eng (2002)(Hurkey!! Translations).sfc" size="1048576" crc="21b6a036" sha1="1b6e4b07f2491e334e640da83b1235cc7f53c3f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8e300b7959c18">
+		<description>Battle Tycoon (J) (V1.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Battle Tycoon (J) (V1.0).smc" size="3146240" crc="e198e786" sha1="8e300b7959c1817897a7f8273d90c607ba060de6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3689,6 +3719,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="Big Boo's Legion (SMW1 hack).sfc" size="2097664" crc="004885ba" sha1="a2c3a674031111f92864ad221308f4e035d4ac9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1aed1182ae177">
+		<description>Big Fish Chrisis (smw1 hack) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Big Fish Chrisis (smw1 hack) (2).smc" size="4194816" crc="ab101732" sha1="1aed1182ae1770e60ac31b5e5af6941198c23dc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd90ade09d4512">
+		<description>Big Fish Chrisis (smw1 hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Big Fish Chrisis (smw1 hack).smc" size="4194304" crc="199dcc76" sha1="d90ade09d45122d709912f7669caa8739ee00bed"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3792,6 +3842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns6ff09d060a144">
+		<description>Black Yoshi's ExGFx Hack of Super Mario World</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Black Yoshi's ExGFx Hack of Super Mario World.smc" size="2097664" crc="0a220e0b" sha1="6ff09d060a144d0ac3d9bec330d56dcdcf7bc17a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns1473606dd62d2">
 		<description>Blackhole - C3 (SMW1 Hack)</description>
 		<year>????</year>
@@ -3829,6 +3889,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="BlatantWorld (SMW1 Hack).sfc" size="1048576" crc="1c2e9c94" sha1="4a8e14fbc554e768cb0a5c7d90620ffe45ecc4fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns802d61fdae004">
+		<description>Blind Boos Wrath (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Blind Boos Wrath (SMW1 Hack).smc" size="1048576" crc="26ef058d" sha1="802d61fdae004502be358c3041e617d7503c4e78"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3872,6 +3942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns734cd8cce3cc9">
+		<description>bobby's world (U) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="bobby's world (U) [T+Fre_Generation IX].smc" size="1048576" crc="80081eea" sha1="734cd8cce3cc95eff318d1cbbcc1c802756d3230"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb29931a09f986">
 		<description>Bobby's World (U) [T+Por_Emunow]</description>
 		<year>????</year>
@@ -3879,6 +3959,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Bobby's World (U) [T+Por_Emunow].sfc" size="1048576" crc="f95dc6bc" sha1="b29931a09f986446383517423dcf8fd8d71f1d50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsee6b28382cd7c">
+		<description>Boing's Untitled Demo (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Boing's Untitled Demo (SMW1 Hack).smc" size="2097152" crc="6f55aacf" sha1="ee6b28382cd7ccfd9be9e6f7b6383884860f91de"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3922,6 +4012,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns961932f606c4a">
+		<description>Bowser Forest (SMW1 hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Bowser Forest (SMW1 hack).smc" size="2097664" crc="8dccf20b" sha1="961932f606c4a7adcbc97dce40f293bb7adbbaf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns512f0b49e1f45">
+		<description>Bowser Strikes Back (Jimmy52905) (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bowser Strikes Back (Jimmy52905) (SMW1 Hack).smc" size="2097152" crc="838847d2" sha1="512f0b49e1f45bde3ea3bfdc3dcd90ee1b53eddf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa7a0446c65335">
 		<description>Bowser's Dangerous Castle 2 (SMW1 hack)</description>
 		<year>????</year>
@@ -3929,6 +4039,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Bowser's Dangerous Castle 2 (SMW1 hack).sfc" size="2097152" crc="ac2430e8" sha1="a7a0446c653352d7066f1c988b5ae0892aa85800"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8148b6005815f">
+		<description>Bowser's Dangerous Castle 2 (SMW1 hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Bowser's Dangerous Castle 2 (SMW1 hack).smc" size="2097664" crc="cd5eafbc" sha1="8148b6005815f68fad2aeee1e30fde2985a8cfcc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4042,6 +4162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns90e2c18264307">
+		<description>Bowsers Mercenaries (8 level demo) (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bowsers Mercenaries (8 level demo) (SMW1 Hack).smc" size="2097152" crc="c12df099" sha1="90e2c18264307fcd3279b2977a5b4643f2b13839"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns40199e7d4749d">
 		<description>Bowsers Valley (10 levels) by reghrhre (SMW1 Hack)</description>
 		<year>????</year>
@@ -4049,6 +4179,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Bowsers Valley (10 levels) by reghrhre (SMW1 Hack).sfc" size="2621440" crc="af509949" sha1="40199e7d4749d1003637d1b320177d0ecc8e5924"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf93dadd2b203c">
+		<description>Bowsers world! (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Bowsers world! (SMW1 Hack).smc" size="4194304" crc="5bd55ae3" sha1="f93dadd2b203c3095c99b1332819cfd856bcc6ac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4252,6 +4392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns60f35db144c83">
+		<description>Breath of Fire II (USA) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Breath of Fire II (USA) (Beta).smc" size="3145728" crc="f44859af" sha1="60f35db144c838b4c6df30661e6a8334a7e60af0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6485a2fe67982">
 		<description>Breath of Fire II (USA) [En+Hack by d4s+Watercrown v1.0]</description>
 		<year>????</year>
@@ -4342,6 +4492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns385af40120ced">
+		<description>Brutal Mario demo 7 (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Brutal Mario demo 7 (SMW1 Hack).smc" size="4194304" crc="25f6f871" sha1="385af40120ced61ff97866ad653437a0baa5f435"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd91bc627dc9d4">
 		<description>Brutal Mario English</description>
 		<year>????</year>
@@ -4392,6 +4552,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf1c096a6804f0">
+		<description>BS Radical Dreamers (Japan) [En v1.2 by Demiforce] [Repair by Radical R] (~Radical Dreamers - Le Tresor Interdit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BS Radical Dreamers (Japan) [En v1.2 by Demiforce] [Repair by Radical R] (~Radical Dreamers - Le Tresor Interdit).sfc" size="2097152" crc="2a8f2092" sha1="f1c096a6804f058e5f02beb8498065f4b04825e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd06a13524a907">
+		<description>BS Radical Dreamers (Japan) [En v1.4 by Demiforce] (~Radical Dreamers - Le Tresor Interdit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BS Radical Dreamers (Japan) [En v1.4 by Demiforce] (~Radical Dreamers - Le Tresor Interdit).sfc" size="2097152" crc="a2664b10" sha1="d06a13524a907e5834a755e3a710fb30adb33c49"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns507b6e959ecdd">
 		<description>BS The Legend of Zelda - Ancient Stone Tablets Chapter 1</description>
 		<year>????</year>
@@ -4432,6 +4612,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsfc47b2aa6bb79">
+		<description>BS Zelda no Densetsu (Japan) [b] [BS Zelda Map1 En-Hacks v20080917 by BS Zelda HomePage] (~BS The Legend of Zelda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="BS Zelda no Densetsu (Japan) [b] [BS Zelda Map1 En-Hacks v20080917 by BS Zelda HomePage] (~BS The Legend of Zelda).sfc" size="2621440" crc="0575916d" sha1="fc47b2aa6bb7990ecc3226765f6e2666588809bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns282dc64a6be20">
+		<description>BS Zelda no Densetsu (Japan) [b] [Map1 Link Version En-Hacks v20080917 by BS Zelda HomePage] (~BS The Legend of Zelda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BS Zelda no Densetsu (Japan) [b] [Map1 Link Version En-Hacks v20080917 by BS Zelda HomePage] (~BS The Legend of Zelda).sfc" size="2097152" crc="bf7f9878" sha1="282dc64a6be20e18c804cc63ce78fdeca394af09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns40123e505dda4">
+		<description>BS Zelda no Densetsu (Japan) [b] [Real Hardware En-Hacks v20080624 by BS Zelda HomePage] (~BS The Legend of Zelda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="BS Zelda no Densetsu (Japan) [b] [Real Hardware En-Hacks v20080624 by BS Zelda HomePage] (~BS The Legend of Zelda).sfc" size="1572864" crc="835f825f" sha1="40123e505dda494d1ae3f8752ca25493d268f92b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsad733f3d471b8">
+		<description>BS Zelda no Densetsu (Japan) [b] [Third Quest En-Hacks v20080917 by BS Zelda HomePage] (~Legend of Zelda, The - Third Quest)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BS Zelda no Densetsu (Japan) [b] [Third Quest En-Hacks v20080917 by BS Zelda HomePage] (~Legend of Zelda, The - Third Quest).sfc" size="2097152" crc="a456d41a" sha1="ad733f3d471b8b8c1d2371792ddd079bbbe9ccd5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb555bd337361a">
 		<description>BS Zelda no Densetsu - Kodai no Sekiban - Dai-1-wa (Japan) (BS) [En+Fix by BSZHP v20090614] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 1)</description>
 		<year>????</year>
@@ -4449,6 +4669,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="BS Zelda no Densetsu - Kodai no Sekiban - Dai-1-wa (Japan) (BS) [En+Hack by BSZHP v20090614] (~BS The Legend of Zelda - Ancient Stone Tablets - Master Quest 1).sfc" size="2097152" crc="a3d06e15" sha1="d2f0673f66a316bd4ac389a41a7c4f9a4ddfe242"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7dfa19b9f007a">
+		<description>BS Zelda no Densetsu - Kodai no Sekiban - Dai-1-wa (Japan) [En-Hacks v20071225 by BS Zelda HomePage] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BS Zelda no Densetsu - Kodai no Sekiban - Dai-1-wa (Japan) [En-Hacks v20071225 by BS Zelda HomePage] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 1).sfc" size="2097152" crc="4ecfaec3" sha1="7dfa19b9f007a41869e056afb0a0d27b87e82636"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4472,6 +4702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns4c21be1b3e443">
+		<description>BS Zelda no Densetsu - Kodai no Sekiban - Dai-2-wa (Japan) [En-Hacks v20071225 by BS Zelda HomePage] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BS Zelda no Densetsu - Kodai no Sekiban - Dai-2-wa (Japan) [En-Hacks v20071225 by BS Zelda HomePage] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 2).sfc" size="2097152" crc="6a346b5e" sha1="4c21be1b3e443c7e019f5e4607a5410e444d18f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns8d0bc531809af">
 		<description>BS Zelda no Densetsu - Kodai no Sekiban - Dai-3-wa (Japan) (BS) [En+Fix by BSZHP v20090613] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 3)</description>
 		<year>????</year>
@@ -4492,6 +4732,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf61791395083e">
+		<description>BS Zelda no Densetsu - Kodai no Sekiban - Dai-3-wa (Japan) [En-Hacks v20071225 by BS Zelda HomePage] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BS Zelda no Densetsu - Kodai no Sekiban - Dai-3-wa (Japan) [En-Hacks v20071225 by BS Zelda HomePage] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 3).sfc" size="2097152" crc="25c5ccf7" sha1="f61791395083eeb4343aa23e8d10704c42bec066"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf98506a8c4564">
 		<description>BS Zelda no Densetsu - Kodai no Sekiban - Dai-4-wa (Japan) (BS) [En+Fix by BSZHP v20090629] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 4)</description>
 		<year>????</year>
@@ -4509,6 +4759,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="BS Zelda no Densetsu - Kodai no Sekiban - Dai-4-wa (Japan) (BS) [En+Hack by BSZHP v20090629] (~BS The Legend of Zelda - Ancient Stone Tablets - Master Quest 4).sfc" size="2097152" crc="f23c655e" sha1="3d45114102d0fd7b3ea32aac4d474406f9d5442f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns38929d93c7c92">
+		<description>BS Zelda no Densetsu - Kodai no Sekiban - Dai-4-wa (Japan) [En-Hacks v20071225 by BS Zelda HomePage] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BS Zelda no Densetsu - Kodai no Sekiban - Dai-4-wa (Japan) [En-Hacks v20071225 by BS Zelda HomePage] (~BS The Legend of Zelda - Ancient Stone Tablets - Week 4).sfc" size="2097152" crc="c12b76ba" sha1="38929d93c7c92b495ec27ee7a5d02194016e79ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4559,6 +4819,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="BS Zelda no Densetsu Kodai no Sekiban Dai 4 Hanashi fix by Con &amp; others.sfc" size="2097664" crc="240a892f" sha1="7cfe473d6d4f1187f4c45ba8af7610f5b2787e9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsea18fabe363ce">
+		<description>BSB Demo (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="BSB Demo (SMW1 Hack).smc" size="2097152" crc="d480d761" sha1="ea18fabe363ced3f72f521db2a9eccd69c5764f3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4749,6 +5019,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Capcom's Soccer Shootout (U)(1994)(Capcom).sfc" size="1572864" crc="ee314ae5" sha1="630d8a2d25f7caa8dbb5c317c1f35707094538ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7166c05333c85">
+		<description>Capcom's Soccer Shootout (USA) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Capcom's Soccer Shootout (USA) (Beta).smc" size="1572864" crc="89178bc0" sha1="7166c05333c85375cd1bf6ca2392b338fb7397f2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5172,6 +5452,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns59ff19d0a9d37">
+		<description>Chrono Trigger (U) [T+Rus_chief-net]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Chrono Trigger (U) [T+Rus_chief-net].smc" size="4194816" crc="f2bb30da" sha1="59ff19d0a9d37ed75265a8f9fccb0a83a74b0be3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd0b41fd54bdde">
+		<description>Chrono Trigger (USA) [En v1.01 by Doctor L]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Chrono Trigger (USA) [En v1.01 by Doctor L].sfc" size="6291456" crc="0eb4d818" sha1="d0b41fd54bdde17d6691234761facb7f1047600d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsccf087a5a3fa6">
 		<description>Chrono Trigger (USA) [Text Hack v1.0 by ManuLoewe] (Translation Fix)</description>
 		<year>????</year>
@@ -5262,6 +5562,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snse7e01d34eb60e">
+		<description>Classic's Super Mario Brothers (smw1 hack) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Classic's Super Mario Brothers (smw1 hack) (2).smc" size="4194816" crc="3115e105" sha1="e7e01d34eb60e0f76c3cd4e89d98b726770ab86a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse6368ef448ed1">
+		<description>Classic's Super Mario Brothers (smw1 hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Classic's Super Mario Brothers (smw1 hack).smc" size="4194304" crc="83983a41" sha1="e6368ef448ed1aab6c13c9ea929d8559c689020e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa7d9a90f792c9">
 		<description>Clay Fighter - Tournament Edition (U)(1994)(Interplay)</description>
 		<year>????</year>
@@ -5279,6 +5599,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="clickclockwood (SMW1 Hack).sfc" size="2097152" crc="d8a0bae7" sha1="609fc1ac29a8d80cbf02ae28b2a5b4d31862b43b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb916aa0cbc1b6">
+		<description>Cliffhanger (E) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1064960">
+				<rom name="Cliffhanger (E) [T+Fre_Generation IX].smc" size="1064960" crc="95381dea" sha1="b916aa0cbc1b6ac0674c1b6582be7c48025aa67a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5392,6 +5722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns30183bd8de2e9">
+		<description>Congo The Movie - Secret of Zinj (Beta) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Congo The Movie - Secret of Zinj (Beta) [T+Fre_Generation IX].smc" size="2097152" crc="525dc0a5" sha1="30183bd8de2e921d1a84201e60ecb985d4927dc1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsbedcfbf510aac">
 		<description>contest (SMW1 Hack)</description>
 		<year>????</year>
@@ -5499,6 +5839,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524800">
 				<rom name="Copa Libertadores 3 (Super Formation Soccer 2 hack).sfc" size="524800" crc="0fdeeed0" sha1="6b6f9163093c4a5fb89ab7ae0f6a8915b488a5fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9818fe70abce1">
+		<description>Copy of smw32</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Copy of smw32.smc" size="1048576" crc="d9f89275" sha1="9818fe70abce16d516e3320a4920fb0075e05d7a"/>
 			</dataarea>
 		</part>
 	</software>
