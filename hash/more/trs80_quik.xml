@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 2 -->
+<softwarelist name="trs80_quik" description="trs80_quik loose roms">
+	<software name="trsc257910c02835">
+		<description>[1]defuse</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="trs80_quik">
+			<dataarea name="quik" size="4485">
+				<rom name="[1]defuse.cmd" size="4485" crc="8170c4a2" sha1="c257910c02835cb42e3e0f764905174e9b5fe3db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs9d0ffcdae757b">
+		<description>[1]venture</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="trs80_quik">
+			<dataarea name="quik" size="16640">
+				<rom name="[1]venture.cmd" size="16640" crc="792b43ea" sha1="9d0ffcdae757bd87bfab60d2eb7b05b5417b5319"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

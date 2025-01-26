@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 248 -->
+<!-- Number of items in this list = 252 -->
 <softwarelist name="oric1_flop" description="oric1_flop loose roms">
 	<software name="orif92e3eca92d51">
 		<description>3dfongus</description>
@@ -79,6 +79,46 @@
 		<part name="flop" interface="oric1_flop">
 			<dataarea name="flop" size="1049856">
 				<rom name="ALTITUDE0.dsk" size="1049856" crc="f60ea9ef" sha1="acab3f4d24bea80cd4a67acfe3ef7db0c5aa94ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori40a17e42400b7">
+		<description>Ammnukor Utilitaires (19xx)(-)(fr)(Side A)[Sedoric]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Ammnukor Utilitaires (19xx)(-)(fr)(Side A)[Sedoric].dsk" size="269056" crc="2c302d14" sha1="40a17e42400b76a72e8f6de86c3b616254f51350"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="orib540ac377d93b">
+		<description>Ammnukor Utilitaires (19xx)(-)(fr)(Side B)[Sedoric]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Ammnukor Utilitaires (19xx)(-)(fr)(Side B)[Sedoric].dsk" size="269056" crc="d8f5d25b" sha1="b540ac377d93be2be6dc02624437d63c16a2f867"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori4de55a640680a">
+		<description>Amnukor Master Prg Princip (19xx)(-)(fr)[Sedoric]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Amnukor Master Prg Princip (19xx)(-)(fr)[Sedoric].dsk" size="269056" crc="cfee8743" sha1="4de55a640680a99b5e36e90ca77bab8c7fb730a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori70763ac3dfc72">
+		<description>Amnukor Master Utilitaires (19xx)(-)(fr)[Sedoric]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="oric1_flop">
+			<dataarea name="flop" size="269056">
+				<rom name="Amnukor Master Utilitaires (19xx)(-)(fr)[Sedoric].dsk" size="269056" crc="6e6d0c74" sha1="70763ac3dfc72511cef4a6a2aa787b9a65b1db8d"/>
 			</dataarea>
 		</part>
 	</software>
