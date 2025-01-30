@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 9528 -->
+<!-- Number of items in this list = 9765 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -12982,6 +12982,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes3445042019b4c">
+		<description>Cabal (U) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Cabal (U) [t1].nes" size="131088" crc="d0256077" sha1="3445042019b4c286b95d772d176b38d1e8c41c9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes05ee195078d74">
+		<description>Cabal (U) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Cabal (U) [t2].nes" size="131088" crc="81485d19" sha1="05ee195078d74b8fde3516bc446e80ed541f9368"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese682cc0913e2c">
 		<description>Cabal (USA) (2)</description>
 		<year>????</year>
@@ -13039,6 +13059,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
 				<rom name="Cadillac (Japan).nes" size="65552" crc="48323c10" sha1="66b02f0f6d95fb236aebc527f8d860d2de35b723"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes71de4525a232f">
+		<description>CAE 2005 (R.B.I. Baseball Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="CAE 2005 (R.B.I. Baseball Hack) [a1].nes" size="262160" crc="0a454998" sha1="71de4525a232f5b1fb91e83cc88f4414fc3ad98c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb0e53a0887ce7">
+		<description>CAE 2005 (R.B.I. Baseball Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="98320">
+				<rom name="CAE 2005 (R.B.I. Baseball Hack).nes" size="98320" crc="21e53133" sha1="b0e53a0887ce741b84af586c65380d0a1bd92616"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13139,6 +13179,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="California Raisins - The Grape Escape (USA) (Proto 2).nes" size="131088" crc="d572ad39" sha1="f815a370ab0d3726b89447cb476de5ca1d3b4a72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6bfc9e046ddc1">
+		<description>California Raisins - The Grape Escape (USA) (Proto1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="California Raisins - The Grape Escape (USA) (Proto1).nes" size="131088" crc="c100bea8" sha1="6bfc9e046ddc1be1f8b4b1e5372b4eabe04e3b87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbf97dd2e43f0e">
+		<description>California Raisins - The Grape Escape (USA) (Proto2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="California Raisins - The Grape Escape (USA) (Proto2).nes" size="131088" crc="be9ec668" sha1="bf97dd2e43f0ec9690a15ad3d42060d9490ccad1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13262,6 +13322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes63a66b2353f45">
+		<description>Captain America and the Avengers (Europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Captain America and the Avengers (Europe).nes" size="262160" crc="876a3a30" sha1="63a66b2353f45caf655b5a00b775d36e1593b969"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesc2c8e6c0adf02">
 		<description>Captain America and the Avengers (T-Chi)</description>
 		<year>????</year>
@@ -13269,6 +13339,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain America and the Avengers (T-Chi).nes" size="393232" crc="cfdf0dc5" sha1="c2c8e6c0adf023dfa2546e75c43206ea96bfc246"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesac33896bd11a3">
+		<description>Captain America and The Avengers (U) [o1][t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262288">
+				<rom name="Captain America and The Avengers (U) [o1][t1].nes" size="262288" crc="cae1eedf" sha1="ac33896bd11a305723645ea52c6b829257a26610"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes92925dbc20fcf">
+		<description>Captain America and The Avengers (U) [T+Fre_Generation IX+BESSAB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain America and The Avengers (U) [T+Fre_Generation IX+BESSAB].nes" size="393232" crc="77b76b11" sha1="92925dbc20fcf9fe008b3f4140cd85cad6abeb25"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13299,6 +13389,46 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Captain America and The Avengers (U) [T+Rus_Shinigami].nes" size="262160" crc="d90aa08b" sha1="aa5e20fb46fee31ef2f2710d4a203f51a7a43636"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3643a6290fd34">
+		<description>Captain America and The Avengers (U) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Captain America and The Avengers (U) [t1].nes" size="262160" crc="ba285202" sha1="3643a6290fd34fee4a6caddba96a94cbb6b24b76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb061e44c0d0b9">
+		<description>Captain America and The Avengers (U) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Captain America and The Avengers (U) [t2].nes" size="262160" crc="37bcbf67" sha1="b061e44c0d0b91890f5900bf7b675bab0148f815"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes401a837a23981">
+		<description>Captain America and The Avengers (U) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Captain America and The Avengers (U) [t3].nes" size="262160" crc="03e3289c" sha1="401a837a23981a81d6e0aa82f6ac1b5859ed2202"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb38cc4f85896e">
+		<description>Captain America and The Avengers (U) [t4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Captain America and The Avengers (U) [t4].nes" size="262160" crc="d509f57e" sha1="b38cc4f85896e232b6fd89d121d82b6c1ad27e3c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13552,6 +13682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes868d18e66e565">
+		<description>Captain SkyHawk (E) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Captain SkyHawk (E) [!].nes" size="131088" crc="ee5150b4" sha1="868d18e66e56586dcf40f82ea8165520e668454b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes58e01f4e1261a">
 		<description>Captain Skyhawk (Europe)</description>
 		<year>????</year>
@@ -13612,6 +13752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesfe057377871d1">
+		<description>Captain Tsubasa (J) [T+Kor_88ktt]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Captain Tsubasa (J) [T+Kor_88ktt].nes" size="262160" crc="ea88edcf" sha1="fe057377871d1fed5c6c5f1a86a884f67613be0c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes07732ad46025f">
 		<description>Captain Tsubasa (Japan) (2)</description>
 		<year>????</year>
@@ -13652,6 +13802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes290bbfec82a70">
+		<description>Captain Tsubasa gaiden - super shooter (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa gaiden - super shooter (hack).nes" size="393232" crc="6c8dee8b" sha1="290bbfec82a70337a94d07ba3a70135a2289c649"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesd63bfe4759a8e">
 		<description>Captain Tsubasa II - Super Striker (Japan)</description>
 		<year>????</year>
@@ -13662,6 +13822,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes509f625621004">
+		<description>Captain Tsubasa Vol. II (v071103) by RUI (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II (v071103) by RUI (Hack).nes" size="393232" crc="90c21b9d" sha1="509f6256210049d730719f86852393dd51459352"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes46c57c547fdf6">
 		<description>Captain Tsubasa Vol. II - 285C8 ofseti ile ilgili hack</description>
 		<year>????</year>
@@ -13669,6 +13839,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - 285C8 ofseti ile ilgili hack.nes" size="393232" crc="fb9c0f34" sha1="46c57c547fdf6406251de1e5a3c04e9a7bc22684"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8cb23ab1ee521">
+		<description>Captain Tsubasa Vol. II - advent of demon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - advent of demon.nes" size="393232" crc="9892fb6a" sha1="8cb23ab1ee52177a8b1c6cb388f22242a45093ab"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13739,6 +13919,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - Amerika Karmasi vs Avrupa Karmasi (hack).nes" size="393232" crc="499275da" sha1="0648565c30900c8580f181351993274c024eec21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2abacca908933">
+		<description>Captain Tsubasa Vol. II - Argentine Chapter (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Argentine Chapter (Hack).nes" size="393232" crc="0bd32e19" sha1="2abacca9089334f0bb41ec4a91eaa1cc11360dd5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13852,6 +14042,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesfd48b854b4b14">
+		<description>Captain Tsubasa Vol. II - chapter of naiyi (easier) (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - chapter of naiyi (easier) (hack).nes" size="393232" crc="7b3450e5" sha1="fd48b854b4b1421950d8dd73692a0840987dcafc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes27dd37d7ba838">
+		<description>Captain Tsubasa Vol. II - chapter of naiyi (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - chapter of naiyi (hack).nes" size="393232" crc="eea978f9" sha1="27dd37d7ba838492849e8efb907687874c38cb80"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes770823389f4c0">
 		<description>Captain Tsubasa Vol. II - chapter of twin</description>
 		<year>????</year>
@@ -13879,6 +14089,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="captain Tsubasa Vol. II - Chile al Mundial (hack).nes" size="393232" crc="5b2227bc" sha1="4ae3670a69bda2bd6590fa275b5b9c61bdf7ae7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd9d049618757d">
+		<description>Captain Tsubasa Vol. II - Chinese team going forward in rainstorm (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Chinese team going forward in rainstorm (hack).nes" size="393232" crc="d14de9b7" sha1="d9d049618757de596a2e3230726cf7c4a099c961"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb915156298b2e">
+		<description>captain Tsubasa Vol. II - Club Plus &amp; Fix Edition (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="captain Tsubasa Vol. II - Club Plus &amp; Fix Edition (Hack).nes" size="393232" crc="8e32c1ba" sha1="b915156298b2e589b7fa1711a19fb61d19f9ff8b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13932,6 +14162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesf648c034da810">
+		<description>Captain Tsubasa Vol. II - Dong Bang Team (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Dong Bang Team (Hack).nes" size="393232" crc="bfaf6c29" sha1="f648c034da8101d15123398033c9a7f4c3e5fadd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes9afbea478fd68">
 		<description>Captain Tsubasa Vol. II - Dragon Warrior IV</description>
 		<year>????</year>
@@ -13939,6 +14179,56 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - Dragon Warrior IV.nes" size="393232" crc="8bbebca0" sha1="9afbea478fd68e88a987d92ae983caecae48ff78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa25e41108fd14">
+		<description>Captain Tsubasa Vol. II - dream Holland (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - dream Holland (hack).nes" size="393232" crc="2e53349d" sha1="a25e41108fd14d814eae5034d48d93a5c91f81c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes38c14775ee029">
+		<description>Captain Tsubasa Vol. II - dream in World Cup (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - dream in World Cup (hack).nes" size="393232" crc="40674a02" sha1="38c14775ee029c598882a76f842f86ca2d31e8fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes56fee44bcbfab">
+		<description>Captain Tsubasa Vol. II - excellent killer (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - excellent killer (Hack).nes" size="393232" crc="58920a0a" sha1="56fee44bcbfab56d3feef7d8f7fe6d1b06313697"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9d0cec6481bd9">
+		<description>Captain Tsubasa Vol. II - excellent killer with stronger SenQi (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - excellent killer with stronger SenQi (Hack).nes" size="393232" crc="efe11320" sha1="9d0cec6481bd9d0243e3d44c96135645a3b09e1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6397a768b4d12">
+		<description>Captain Tsubasa Vol. II - fated battle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - fated battle.nes" size="393232" crc="4c81eaa9" sha1="6397a768b4d1239fc392b2698150107db3cb1ba2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13992,6 +14282,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes93abb8178b5b9">
+		<description>Captain Tsubasa Vol. II - Gale of Japan (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Gale of Japan (Hack).nes" size="393232" crc="8e2ef278" sha1="93abb8178b5b9303293635546a51053702eb3cb5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesa9e9b00b8412e">
 		<description>Captain Tsubasa Vol. II - genius Dias by hy1897</description>
 		<year>????</year>
@@ -13999,6 +14299,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - genius Dias by hy1897.nes" size="393232" crc="2dcab767" sha1="a9e9b00b8412e3a7994474cbb46af648e5074bad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes08cfd04bcad25">
+		<description>Captain Tsubasa Vol. II - German Chapter IV (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - German Chapter IV (Hack).nes" size="393232" crc="4087d838" sha1="08cfd04bcad2578d289f67c96806a368d723d1b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf85217151ac47">
+		<description>Captain Tsubasa Vol. II - German Chapter V (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - German Chapter V (Hack).nes" size="393232" crc="cd7579a0" sha1="f85217151ac47ef3450fecf7234aaade095c356b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14042,6 +14362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes5921492663cf5">
+		<description>Captain Tsubasa Vol. II - Golden Partners (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Golden Partners (Hack).nes" size="393232" crc="e78328dc" sha1="5921492663cf5f75b6fdf7384ba45009df6dee11"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes34375ea835844">
 		<description>Captain Tsubasa Vol. II - good luck (hack)</description>
 		<year>????</year>
@@ -14062,6 +14392,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes7535f2150e3b6">
+		<description>Captain Tsubasa Vol. II - Honor of Brazil v2.1 by mazong1123 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Honor of Brazil v2.1 by mazong1123 (Hack).nes" size="393232" crc="09a17234" sha1="7535f2150e3b68d0472d6d0a9416a1e597e8e067"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes93dadb19e8ac5">
+		<description>Captain Tsubasa Vol. II - Honor of China (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Honor of China (Hack).nes" size="393232" crc="edac83b8" sha1="93dadb19e8ac52810939a394bc5f091cea3460a2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes12f1dcd7d65fc">
 		<description>Captain Tsubasa Vol. II - Honor of France (hack)</description>
 		<year>????</year>
@@ -14079,6 +14429,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="captain Tsubasa Vol. II - Jairo the Golden Age (hack).nes" size="524304" crc="2208da23" sha1="5230aa8d5747691be22cf04a33f6b8bf39585f8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesdb85c7cfe1581">
+		<description>Captain Tsubasa Vol. II - Japanese youth team</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Captain Tsubasa Vol. II - Japanese youth team.nes" size="786448" crc="1361528b" sha1="db85c7cfe158148d3b1f088e37006fba01107f71"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14119,6 +14479,36 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - king fight.nes" size="393232" crc="30cca182" sha1="c007ad8d3381c0d12149f1dc9fdd7f51462afc51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4d696b09199e4">
+		<description>Captain Tsubasa Vol. II - Kingliness (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Kingliness (Hack).nes" size="393232" crc="f53f164b" sha1="4d696b09199e4d93a0d217942f0bb1354b34fc00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes80169eb54e731">
+		<description>Captain Tsubasa Vol. II - kingliness return (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - kingliness return (hack).nes" size="393232" crc="31200aca" sha1="80169eb54e731586aa67e6aae1789f694d08bb1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes873a4ed904c82">
+		<description>Captain Tsubasa Vol. II - Kui Xin Wu (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Kui Xin Wu (Hack).nes" size="393232" crc="31d289bf" sha1="873a4ed904c8231c53e50caa62f09800f8f7001e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14212,6 +14602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes1ec9c79306c63">
+		<description>Captain Tsubasa Vol. II - more hard by yyhxyr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - more hard by yyhxyr.nes" size="393232" crc="e7242182" sha1="1ec9c79306c63bf443345a15ec849e4be23d7fc3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes67672576e27b2">
 		<description>Captain Tsubasa Vol. II - most powerful goalkeeper (hack)</description>
 		<year>????</year>
@@ -14242,6 +14642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesf2fdff8b2964e">
+		<description>Captain Tsubasa Vol. II - Nan ge Team (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Nan ge Team (Hack).nes" size="393232" crc="d5651799" sha1="f2fdff8b2964e2270df26aa7c86d2c1eb7d68a26"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesa5e18f181471e">
 		<description>captain Tsubasa Vol. II - Nange the world's Japanese youth term</description>
 		<year>????</year>
@@ -14262,6 +14672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesc4947d4d58cff">
+		<description>Captain Tsubasa Vol. II - Orbit of Honor (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Orbit of Honor (Hack).nes" size="393232" crc="08fdfcb7" sha1="c4947d4d58cffc8d80e6b3240e0f2e775d0e6a92"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes8b72e7fae0a48">
 		<description>Captain Tsubasa Vol. II - Oyuncular Degisiyor (hack)</description>
 		<year>????</year>
@@ -14269,6 +14689,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - Oyuncular Degisiyor (hack).nes" size="393232" crc="ec1356c2" sha1="8b72e7fae0a48a176caa9496cdf0d67d21fcebd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2025ce107819e">
+		<description>Captain Tsubasa Vol. II - prince with unlimited allure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - prince with unlimited allure.nes" size="393232" crc="d4ba50c6" sha1="2025ce107819e051765845e15bdabbdcabb2450b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14302,6 +14732,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesa0759a83d1699">
+		<description>Captain Tsubasa Vol. II - Relin Edition v1.1 by mazong1123 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Relin Edition v1.1 by mazong1123 (Hack).nes" size="393232" crc="dc19132b" sha1="a0759a83d16996fc6084eb95af2f0db1b2f345e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes17ae333c7db5c">
+		<description>Captain Tsubasa Vol. II - Relin Edition v1.1 Plus by mazong1123 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Relin Edition v1.1 Plus by mazong1123 (Hack).nes" size="393232" crc="b551f7a8" sha1="17ae333c7db5cca129fc33aba78130e582f504d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb64a82668dfca">
+		<description>Captain Tsubasa Vol. II - remade edition by zha zha</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - remade edition by zha zha.nes" size="393232" crc="f6027b28" sha1="b64a82668dfca4a26ae346e5c6176651b2b5a068"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nescffa843cd94e8">
 		<description>Captain Tsubasa Vol. II - Revenge in World Youth Cup</description>
 		<year>????</year>
@@ -14309,6 +14769,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - Revenge in World Youth Cup.nes" size="393232" crc="2ef89964" sha1="cffa843cd94e8f13669beb356d3653eb82632b42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb5bb3335ab5fd">
+		<description>Captain Tsubasa Vol. II - rixiang edition (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - rixiang edition (hack).nes" size="393232" crc="78fed642" sha1="b5bb3335ab5fdcf54a17b9aa7f8888ec425a5abe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5dd67b42a408f">
+		<description>Captain Tsubasa Vol. II - road of heros (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - road of heros (hack).nes" size="393232" crc="72bf50ec" sha1="5dd67b42a408f88406d8815c98901b5bbc558414"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14332,6 +14812,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes155e87aa452a8">
+		<description>Captain Tsubasa Vol. II - Road of New King PK Edition (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Road of New King PK Edition (Hack).nes" size="393232" crc="129eb2f2" sha1="155e87aa452a82204edb30b07af6dd74548fea1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes18ddec337e6fa">
+		<description>Captain Tsubasa Vol. II - Round of San Shan (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Round of San Shan (Hack).nes" size="393232" crc="5d4ad5ad" sha1="18ddec337e6fae1046f0c78d247db296f7049cd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa0dfab15e58ca">
+		<description>Captain Tsubasa Vol. II - Royal Medal of Swedish Team by Wingsla (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Royal Medal of Swedish Team by Wingsla (Hack).nes" size="393232" crc="e359ea1d" sha1="a0dfab15e58cabc33749e9be6219b8d1fa6d1e2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesdd3c274ada1cb">
+		<description>Captain Tsubasa Vol. II - Running Uruguay (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Running Uruguay (Hack).nes" size="393232" crc="4d03891f" sha1="dd3c274ada1cb6bb3e9e708d20f5b7b1a0bca2b9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesfe9dc6baa8921">
 		<description>Captain Tsubasa Vol. II - Secret Weapons (Gun Batm)</description>
 		<year>????</year>
@@ -14339,6 +14859,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - Secret Weapons (Gun Batm).nes" size="393232" crc="6c9c8e87" sha1="fe9dc6baa8921759f16712fdcc9def86c470d56e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes80af5c7ff8236">
+		<description>Captain Tsubasa Vol. II - Secret Weapons</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Secret Weapons.nes" size="393232" crc="74fdfba7" sha1="80af5c7ff8236659e84e8ad08989b900a44e718a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14362,6 +14892,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes153391b0c5276">
+		<description>Captain Tsubasa Vol. II - Snowslide of China (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Snowslide of China (Hack).nes" size="393232" crc="946ed04b" sha1="153391b0c5276eb13c3d6dcebd849dc1d91ecd83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes07ff0cbe7b70e">
+		<description>Captain Tsubasa Vol. II - Snowslide of Japan (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Snowslide of Japan (Hack).nes" size="393232" crc="fa670dd6" sha1="07ff0cbe7b70e47f2f8b9127a97c7ffb490ffbc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8193d55e12554">
+		<description>Captain Tsubasa Vol. II - Soar of China (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Soar of China (Hack).nes" size="393232" crc="0ea5b20f" sha1="8193d55e12554f656f9346ece311d725fab8391f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes15a5fc93c408c">
 		<description>Captain Tsubasa Vol. II - sonunda basardim ilk hackim (hack)</description>
 		<year>????</year>
@@ -14369,6 +14929,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - sonunda basardim ilk hackim (hack).nes" size="393232" crc="0edceb1b" sha1="15a5fc93c408ca75e9c7af3ec20355b101566941"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesdacfa7746cd97">
+		<description>Captain Tsubasa Vol. II - speed of ball controlable &amp; all footballer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - speed of ball controlable &amp; all footballer.nes" size="393232" crc="9b00c9e9" sha1="dacfa7746cd9772000bf7a7797727bf69003b447"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesae4dcc4971b09">
+		<description>Captain Tsubasa Vol. II - speed of ball controlable</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - speed of ball controlable.nes" size="393232" crc="4bdfa09d" sha1="ae4dcc4971b095da02cdd15506a95a848ad0994e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14402,6 +14982,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes713e80cfada09">
+		<description>Captain Tsubasa Vol. II - Super Dream Team by Whipon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Dream Team by Whipon.nes" size="393232" crc="b295aa58" sha1="713e80cfada094993cdbdbaf3ef5085c064b48f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc0713cd58440d">
+		<description>Captain Tsubasa Vol. II - Super Star Seam (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Star Seam (Hack).nes" size="393232" crc="398308e0" sha1="c0713cd58440dc22aabf62c44f9e7323ae42f0bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5638051f23b16">
+		<description>Captain Tsubasa Vol. II - Super Striker (Arabic) (Unl) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Striker (Arabic) (Unl) [!].nes" size="393232" crc="d6a61ad0" sha1="5638051f23b163cc8b01fea2f0baa854ac9d0535"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes773ec8eb9801e">
+		<description>Captain Tsubasa Vol. II - Super Striker (J) [b5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Striker (J) [b5].nes" size="393232" crc="7d3ae083" sha1="773ec8eb9801e14b13d14ed4076459fd18f7056c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes09fba09ae2a9f">
+		<description>Captain Tsubasa Vol. II - Super Striker (J) [h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Striker (J) [h1].nes" size="393232" crc="ec42f669" sha1="09fba09ae2a9f5a2f43976be4e020744bf0b8ed9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes707bd785ea94e">
+		<description>Captain Tsubasa Vol. II - Super Striker (J) [T+Ara_Mahmood S. Lattouf]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Captain Tsubasa Vol. II - Super Striker (J) [T+Ara_Mahmood S. Lattouf].nes" size="524304" crc="adb6e791" sha1="707bd785ea94e21af31a66ce81ddf206236067ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0c4fabd344236">
+		<description>Captain Tsubasa Vol. II - Super Striker (J) [T+Chi20060406_Kanou]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Captain Tsubasa Vol. II - Super Striker (J) [T+Chi20060406_Kanou].nes" size="786448" crc="7e13935c" sha1="0c4fabd344236a1e98b922f026a9dbd9eb225227"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes48186aad6ecd0">
+		<description>Captain Tsubasa Vol. II - Super Striker (J) [T+Chi][a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Striker (J) [T+Chi][a1].nes" size="393232" crc="1abc53ba" sha1="48186aad6ecd0d0fba9a99589da3b1994b9708b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa081364d15aa6">
+		<description>Captain Tsubasa Vol. II - Super Striker (J) [T+Eng_hayabusa]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Striker (J) [T+Eng_hayabusa].nes" size="393232" crc="465917f7" sha1="a081364d15aa651a3a30477b7f8b7115a1060c8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesca24cd8e871c4">
+		<description>Captain Tsubasa Vol. II - Super Striker (J) [T+Spa_Nicogalan]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Striker (J) [T+Spa_Nicogalan].nes" size="393232" crc="a86000a3" sha1="ca24cd8e871c41c7f3b60d9bb82ace2990795ae9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes43c26781d88e0">
 		<description>Captain Tsubasa Vol. II - Super Striker (Japan)</description>
 		<year>????</year>
@@ -14409,6 +15089,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - Super Striker (Japan).nes" size="393232" crc="14a366bb" sha1="43c26781d88e062afa81c1a32f8345011fe53b8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4b6bdc7655ac0">
+		<description>Captain Tsubasa Vol. II - Super Striker by mazong1123 (070220) (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Striker by mazong1123 (070220) (Hack).nes" size="393232" crc="a25b88ca" sha1="4b6bdc7655ac09b1eebf6666ffc8a1e8ebafe466"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb50e5ad7f2038">
+		<description>Captain Tsubasa Vol. II - Super Striker [T+Tur_knighTeen87]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Super Striker [T+Tur_knighTeen87].nes" size="393232" crc="83ca8926" sha1="b50e5ad7f20386ea4084a7714977be924d70caea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14442,6 +15142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes7e521c0b206f7">
+		<description>Captain Tsubasa Vol. II - tiger coming</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - tiger coming.nes" size="393232" crc="5e1b8ffd" sha1="7e521c0b206f7af457825bd86523b31203e1e9fe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesc379ec6aa525c">
 		<description>Captain Tsubasa Vol. II - tiger threaten the border A edition</description>
 		<year>????</year>
@@ -14462,6 +15172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesabcc4f5e5956b">
+		<description>Captain Tsubasa Vol. II - To Cleave a Path Toward the World (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - To Cleave a Path Toward the World (Hack).nes" size="393232" crc="b58061fd" sha1="abcc4f5e5956bd4b81907417f9c9449627cbb209"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes4b938a7c14041">
 		<description>Captain Tsubasa Vol. II - Tong's final perfect edition</description>
 		<year>????</year>
@@ -14472,6 +15192,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesc56e2fc9b792d">
+		<description>Captain Tsubasa Vol. II - Two Brothers Edition (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Two Brothers Edition (Hack).nes" size="393232" crc="cd6ed352" sha1="c56e2fc9b792d1d4955f09d9406645f4dda3b422"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes909592b6fa254">
+		<description>Captain Tsubasa Vol. II - two dragons among sky &amp; land (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - two dragons among sky &amp; land (hack).nes" size="393232" crc="d1213f4f" sha1="909592b6fa254e85e6dfdd39450602ccd087d337"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3ce8b238c3112">
+		<description>Captain Tsubasa Vol. II - Two Stars (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - Two Stars (Hack).nes" size="393232" crc="846d4b9b" sha1="3ce8b238c3112085e1c8fb7803c37dfeeb5121c0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesebb9f0ef8ccc6">
 		<description>Captain Tsubasa Vol. II - whirling wings (hack)</description>
 		<year>????</year>
@@ -14479,6 +15229,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II - whirling wings (hack).Nes" size="393232" crc="cf6ff930" sha1="ebb9f0ef8ccc69ff3988163e0fda0ea455e1c7c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nescc1faf0d75229">
+		<description>Captain Tsubasa Vol. II - wind and cloud moving</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II - wind and cloud moving.nes" size="393232" crc="54ed97d5" sha1="cc1faf0d7522974bbfa1799aa858c1a3e5c953b5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14542,6 +15302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes60f8815c361c5">
+		<description>Captain Tsubasa Vol. II equally upgrade edition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Captain Tsubasa Vol. II equally upgrade edition.nes" size="786448" crc="7708eb56" sha1="60f8815c361c5bfb2f65b3077b262dc07ae0750e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesd78d1b5a76ba5">
 		<description>Captain Tsubasa Vol. II hack by EricPonti (090718)</description>
 		<year>????</year>
@@ -14569,6 +15339,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa Vol. II hack by kral 89 &amp; sisqo (090823).nes" size="393232" crc="522caaa1" sha1="ece3a2266a8274efcae34d605821c526573418a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf895c25e33012">
+		<description>Captain Tsubasa Vol. II hack by xiangfuxi (081104)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Vol. II hack by xiangfuxi (081104).nes" size="393232" crc="32289875" sha1="f895c25e330122f9d848bc3c19dbec92c0fa6a9c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14699,6 +15479,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Captain Tsubasa Vol. II unknown title by farouk.nes" size="524304" crc="287d1313" sha1="fc72f4d7e9b57f86d30510db962162cee3d81ad7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6ca1157898097">
+		<description>CardCaptor Sakura by Mogemogesama (Athena Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="CardCaptor Sakura by Mogemogesama (Athena Hack) [a1].nes" size="131088" crc="8770ec2d" sha1="6ca11578980970184d9831b50f503f6091ef5aa1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14922,6 +15712,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes7bb8383bbb771">
+		<description>Castlequest (U) [T+Rus_Guyver]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Castlequest (U) [T+Rus_Guyver].nes" size="65552" crc="306c8346" sha1="7bb8383bbb771ce4ebc7db8c0fd53e3e718502b2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes600b0d2ae7672">
 		<description>Castlequest (U)(1989)(Nexoft)</description>
 		<year>????</year>
@@ -14992,6 +15792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes36cf24bab0038">
+		<description>Castlevania (U) (PRG1) [T+Ser_Cole Dog Prevodi]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Castlevania (U) (PRG1) [T+Ser_Cole Dog Prevodi].nes" size="131088" crc="9a765adb" sha1="36cf24bab0038dd558105ff58268e14dc5f8d124"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes48ad27d5e6e0c">
 		<description>Castlevania (USA) (2)</description>
 		<year>????</year>
@@ -15052,6 +15862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesaf27ff849208f">
+		<description>Castlevania - Blood Moon (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Castlevania - Blood Moon (Hack).nes" size="131088" crc="0e3bf357" sha1="af27ff849208fbaef36476c6e52be9c285a64cd5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesdde6ba25043e6">
 		<description>Castlevania - Caress Of Death</description>
 		<year>????</year>
@@ -15089,6 +15909,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Castlevania - Castlevania Retold.nes" size="131088" crc="a32fec34" sha1="1ad4a450d94498b34ae4d2d0f40ea102f1e762b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb0814a53e4430">
+		<description>Castlevania - Chorus of Mysteries (Castlevania Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Castlevania - Chorus of Mysteries (Castlevania Hack).nes" size="131088" crc="7c2fd777" sha1="b0814a53e443082b8fec15efd7c3f16e07295c8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="neseb9fd2007e223">
+		<description>CastleVania - Chorus of Mysteries v2 (Castlevania Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="CastleVania - Chorus of Mysteries v2 (Castlevania Hack).nes" size="131088" crc="bad05634" sha1="eb9fd2007e22394c4f649a2fe80345565d7193ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15179,6 +16019,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Castlevania - Opposing Bloodlines.nes" size="131088" crc="a26b15bd" sha1="ccc12d8c57091fec9f98196f36150c4d31047c4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5c0da5bdd67ca">
+		<description>Castlevania - Orchestra of Despair (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Castlevania - Orchestra of Despair (Hack).nes" size="131088" crc="5471c9eb" sha1="5c0da5bdd67caf779f3dcae9bb48b06d035cdadf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb814e98f64076">
+		<description>Castlevania - Orchestra of Despair v2 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Castlevania - Orchestra of Despair v2 (Hack).nes" size="131088" crc="45c269f2" sha1="b814e98f64076010864309ab05ba3babeb8d3699"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15382,6 +16242,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nescd1d56a2629fb">
+		<description>Castlevania II - Simon's Quest (U) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Castlevania II - Simon's Quest (U) [t1].nes" size="262160" crc="7dbb000b" sha1="cd1d56a2629fbb9fdd1101acc802689ff89846e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd5ec019bc36f7">
+		<description>Castlevania II - Simon's Quest (U) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Castlevania II - Simon's Quest (U) [t2].nes" size="262160" crc="0a2afa0d" sha1="d5ec019bc36f71e80ec6bc84b4f7d76486966dd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0bded37d76c53">
+		<description>Castlevania II - Simon's Quest (U) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Castlevania II - Simon's Quest (U) [t3].nes" size="262160" crc="7c8f0542" sha1="0bded37d76c53cee2081939d22651df9ad2ea8a6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes8b547adb68128">
 		<description>Castlevania II - Simon's Quest (USA) (2)</description>
 		<year>????</year>
@@ -15522,6 +16412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes17cf8f6c648c8">
+		<description>Castlevania</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Castlevania.nes" size="131088" crc="8aa58fb4" sha1="17cf8f6c648c8a3220c96c7fc0c49cac0a4cf8c4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes3cf526aaa338f">
 		<description>Cat Ninden Teyandee (Japan) (2)</description>
 		<year>????</year>
@@ -15539,6 +16439,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Cat Ninden Teyandee (Japan) [En by D v0.45] (~Samurai Pizza Cats) (Incomplete).nes" size="262160" crc="73251243" sha1="8d2fd70f0ae875b3b954b4df3fcbf8e0bf9e41dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4366aa9d91adc">
+		<description>Cat Ninden Teyandee (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Cat Ninden Teyandee (Japan).nes" size="262160" crc="6f1485ed" sha1="4366aa9d91adc80ec063667c59421b6245b0b786"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15659,6 +16569,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Challenge of the Dragon (USA)(1990)(Color Dreams).nes" size="131088" crc="e737a11f" sha1="0c150d01f7344775358d2fdd40c494fb39ba7548"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes80c982170c98c">
+		<description>Challenging Lolo 2 (Lolo2 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Challenging Lolo 2 (Lolo2 Hack).nes" size="65552" crc="3a6487e7" sha1="80c982170c98ceff111a090b0bc267c3dfcc5d47"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15982,6 +16902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="neseddec9aa66b95">
+		<description>Chester Field - Ankoku Shin heno Chousen (J) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Chester Field - Ankoku Shin heno Chousen (J) (Beta).nes" size="131088" crc="603b5cf0" sha1="eddec9aa66b950c05abcad57531cf13e1929694c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes5269b4662e264">
 		<description>Chevaliers du Zodiaque, Les - La Legende d'Or (France) (2)</description>
 		<year>????</year>
@@ -16072,6 +17002,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes8ec07a2841d3f">
+		<description>Chik Bik Ji Jin - Saam Gwok Ji (CN-20) (Tw) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Chik Bik Ji Jin - Saam Gwok Ji (CN-20) (Tw) [!].nes" size="393232" crc="78ebe3f7" sha1="8ec07a2841d3fb671afd11013643063bda9fa7f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="neseff7624a299de">
+		<description>Chiki Chiki Machine Mou Race (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chiki Chiki Machine Mou Race (J) [t1].nes" size="262160" crc="8fb6cd01" sha1="eff7624a299dee947c9598258b8cd939b0e83284"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8f474b81fd0a1">
+		<description>Chiki Chiki Machine Mou Race (J) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chiki Chiki Machine Mou Race (J) [t2].nes" size="262160" crc="1f2511ce" sha1="8f474b81fd0a159a14c237a82cbaa12224ef895c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes3f1389e38c7da">
 		<description>Chiki Chiki Machine Mou Race (Japan) (2)</description>
 		<year>????</year>
@@ -16109,6 +17069,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Chiki Chiki Machine Mou Race (T-Chi).nes" size="393232" crc="37e57151" sha1="1cc4be668a99deeaed1c93cefd1b194e1e8b06a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8e12f9dcebddc">
+		<description>Chiller (AGCI) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Chiller (AGCI) [a1][!].nes" size="65552" crc="920123eb" sha1="8e12f9dcebddc2bbe109b551ea526448eb49a6e5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16239,6 +17209,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Chinese KungFu (Asia) (Ja) (Unl).nes" size="262160" crc="70d9410f" sha1="c21fd0f22cb476c83c15b350dc8bc30fea2daa49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes980cda14f0fba">
+		<description>Chinese Kungfu (Sachen-JAP) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chinese Kungfu (Sachen-JAP) [!].nes" size="262160" crc="76f83bad" sha1="980cda14f0fbac0394e513f564f71a6d78b39915"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16472,6 +17452,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes2e140edbbd6be">
+		<description>Chip 'n Dale Rescue Rangers 2 (E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chip 'n Dale Rescue Rangers 2 (E).nes" size="262160" crc="6216efde" sha1="2e140edbbd6be832462b9833a1a593d5c901bf5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5d6ecd441a305">
+		<description>Chip 'n Dale Rescue Rangers 2 (USA) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chip 'n Dale Rescue Rangers 2 (USA) (Beta).nes" size="262160" crc="5644462f" sha1="5d6ecd441a305affa396d2be0a6e4fa084ab03f1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesf51114dd775fa">
 		<description>Chip 'n Dale Rescue Rangers Sound hack</description>
 		<year>????</year>
@@ -16479,6 +17479,46 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Chip 'n Dale Rescue Rangers Sound hack.nes" size="262160" crc="ee6f51d7" sha1="f51114dd775fa255044214a7cf35b231b148b4e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0d732d7ceb6b6">
+		<description>Chip to Dale no Daisakusen (J) [b3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chip to Dale no Daisakusen (J) [b3].nes" size="262160" crc="cf9e2961" sha1="0d732d7ceb6b62d9a6bed344e5633c597154c89a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa56c7f18cd422">
+		<description>Chip to Dale no Daisakusen (J) [T+Kor_eastwind]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chip to Dale no Daisakusen (J) [T+Kor_eastwind].nes" size="262160" crc="f1844688" sha1="a56c7f18cd4221ec706a9d7150f021938e77fb0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd7f045b286fb5">
+		<description>Chip to Dale no Daisakusen (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chip to Dale no Daisakusen (J) [t1].nes" size="262160" crc="91a4292e" sha1="d7f045b286fb546be628bfc817789a9992ebc94c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfed3a14c1e564">
+		<description>Chip to Dale no Daisakusen (J) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chip to Dale no Daisakusen (J) [t2].nes" size="262160" crc="eaaaca3a" sha1="fed3a14c1e5640df9f831280100ee0db4e0a4717"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16499,6 +17539,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Chip to Dale no Daisakusen (Japan).nes" size="262160" crc="b490ca75" sha1="f1cd0ca95ba9b169d2a34e1f83e148f698d7837e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2ee5be9a8c52c">
+		<description>Chip to Dale no Daisakusen 2 (J) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chip to Dale no Daisakusen 2 (J) [t2].nes" size="262160" crc="4c179fee" sha1="2ee5be9a8c52c9d1aa04390db53edf47c6e9889e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes87c4cad7b4c56">
+		<description>Chip to Dale no Daisakusen 2 (J) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chip to Dale no Daisakusen 2 (J) [t3].nes" size="262160" crc="a04cffc1" sha1="87c4cad7b4c560bef2082fcd8e4a6b8ee27f4dfa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16592,6 +17652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesaa4ebf1e4dfb6">
+		<description>Choplifter (J) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="49168">
+				<rom name="Choplifter (J) [!].nes" size="49168" crc="3b629df8" sha1="aa4ebf1e4dfb6677d548d5e21254b6c74f76fa71"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese20eddc505c32">
 		<description>Choplifter (Japan) (En) (Rev 1)</description>
 		<year>????</year>
@@ -16619,6 +17689,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="49168">
 				<rom name="Choplifter (Japan) (Rev 1).nes" size="49168" crc="8bb9afa7" sha1="1ab7d674fa4f086ef7083820abfa6285ab7da165"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3330613816a50">
+		<description>Chou-Wakusei Senki - MetaFight (J) [T+Chi]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chou-Wakusei Senki - MetaFight (J) [T+Chi].nes" size="262160" crc="06595e90" sha1="3330613816a50ab107aa245b31cf687a28fc5e10"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16682,6 +17762,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesbe0106c14f854">
+		<description>Choujin Ookami Senki - Warwolf (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Choujin Ookami Senki - Warwolf (J) [t1].nes" size="262160" crc="b95d54d8" sha1="be0106c14f854118ce95979c9c558aa304b477ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes88e1de719a3b3">
+		<description>Choujin Ookami Senki - Warwolf (J) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Choujin Ookami Senki - Warwolf (J) [t2].nes" size="262160" crc="9a50f086" sha1="88e1de719a3b3513545a88bb89ee0f45bc3ac417"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesecc047fc9b9c5">
 		<description>Choujin Ookami Senki - Warwolf (Japan)</description>
 		<year>????</year>
@@ -16699,6 +17799,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Choujin Sentai - Jetman (J) [T+Rus_Chief-Net].nes" size="262160" crc="e12c37de" sha1="db3b6cd63a9f1a9590d024446ac5dee895c6f57e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes858f144c00650">
+		<description>Choujin Sentai - Jetman (J) [T+Rus_Guyver]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Choujin Sentai - Jetman (J) [T+Rus_Guyver].nes" size="262160" crc="8c39b496" sha1="858f144c0065093c981c0ade810aa9c5e1f56394"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16802,6 +17912,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes1d2d06206cd3c">
+		<description>Chrono Trigger (NJ038) (C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="2097168">
+				<rom name="Chrono Trigger (NJ038) (C).NES" size="2097168" crc="382f65cc" sha1="1d2d06206cd3c6df36d1fd1add4210e494912758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf69a7ff64f4f2">
+		<description>Chu Liu Xiang (Ch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Chu Liu Xiang (Ch).nes" size="524304" crc="78cb8899" sha1="f69a7ff64f4f2c6f6ab89925b267e199152c00cd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes681f4869dbee1">
 		<description>ChuChu Rocket! (v.alpha)(2010)(Dwedit)</description>
 		<year>????</year>
@@ -16869,6 +17999,36 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Chuugoku Senseijutsu (Japan).nes" size="131088" crc="35bbdf97" sha1="65ae48629db725710cc5cae4435aa411bd0567c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf8c2a5e4387b1">
+		<description>Chuuka Taisen (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chuuka Taisen (J) [t1].nes" size="262160" crc="e56dd91c" sha1="f8c2a5e4387b1503c6221056ea73538eea9c8aec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="neseb869821b224d">
+		<description>Chuuka Taisen (J) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chuuka Taisen (J) [t2].nes" size="262160" crc="c218ed25" sha1="eb869821b224d3f91768acb957af89068e8e3aeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa6e05e32d8071">
+		<description>Chuuka Taisen (J) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Chuuka Taisen (J) [t3].nes" size="262160" crc="82e6fca7" sha1="a6e05e32d8071fba1a202e30fd9609b3dd83e4be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16942,6 +18102,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes82bcc1bccdcf3">
+		<description>City Adventure Touch - Mystery of Triangle (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="City Adventure Touch - Mystery of Triangle (Japan).nes" size="131088" crc="8b3d3804" sha1="82bcc1bccdcf3cc393a22c9e3016d03faf5a41bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfe187ce4f25bb">
+		<description>City Connection (E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="City Connection (E).nes" size="65552" crc="273c82b4" sha1="fe187ce4f25bb438e6128b6563c9809bd09ad9cb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesaa3a937ffabc5">
 		<description>City Connection (Europe) (Virtual Console)</description>
 		<year>????</year>
@@ -16979,6 +18159,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="49168">
 				<rom name="City Connection (Japan) (Virtual Console).nes" size="49168" crc="6e3b8b76" sha1="26e262587d30bfff71fdc835ead57492547e3d91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesae1b368365279">
+		<description>City Connection (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="32784">
+				<rom name="City Connection (Japan).nes" size="32784" crc="6c6c39cd" sha1="ae1b36836527902467a0a2c1f5c94177fa5d7e79"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17052,6 +18242,526 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes4a49fdf3c30d9">
+		<description>Classic Tecmo League '93 Week 1 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 1 (Tecmo Super Bowl Hack).nes" size="393232" crc="ecf23a44" sha1="4a49fdf3c30d901d8a80b6ec0f63055af03a4d48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese68383a962f34">
+		<description>Classic Tecmo League '93 Week 1 Fixed (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 1 Fixed (Tecmo Super Bowl Hack).nes" size="393232" crc="2a880d2b" sha1="e68383a962f34c7e8e41de3a4f5e0f47c0e2345a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes63e19f072dd55">
+		<description>Classic Tecmo League '93 Week 10 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 10 (Tecmo Super Bowl Hack).nes" size="393232" crc="857c98a1" sha1="63e19f072dd55cd57b4be70f2a4bf804f22e45d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes74fee48a7b66a">
+		<description>Classic Tecmo League '93 Week 11 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 11 (Tecmo Super Bowl Hack).nes" size="393232" crc="843f39f2" sha1="74fee48a7b66a20572606a409d9589ee683abd5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes167e6812765d9">
+		<description>Classic Tecmo League '93 Week 12 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 12 (Tecmo Super Bowl Hack).nes" size="393232" crc="6ccdbff1" sha1="167e6812765d933e489ff7cb43b109f23ae34910"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8d94b12b493b6">
+		<description>Classic Tecmo League '93 Week 13 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 13 (Tecmo Super Bowl Hack).nes" size="393232" crc="386166c4" sha1="8d94b12b493b60d98e6ad84bd2b9b8bf5f52cedf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes53c131b1df34f">
+		<description>Classic Tecmo League '93 Week 2 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 2 (Tecmo Super Bowl Hack).nes" size="393232" crc="a55aa9f6" sha1="53c131b1df34f214c59d4867abf052fb751eab09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb6886b65a2926">
+		<description>Classic Tecmo League '93 Week 3 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 3 (Tecmo Super Bowl Hack).nes" size="393232" crc="86eba49a" sha1="b6886b65a29263590a2203767abd73124c50181c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes75831a12ef24f">
+		<description>Classic Tecmo League '93 Week 4 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 4 (Tecmo Super Bowl Hack).nes" size="393232" crc="c5155e9b" sha1="75831a12ef24f3d544c23aa96a8a3b7b509f7f92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa271f4fff97bd">
+		<description>Classic Tecmo League '93 Week 5 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 5 (Tecmo Super Bowl Hack).nes" size="393232" crc="52758f3d" sha1="a271f4fff97bd42be1d895e274808da88d866614"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes24687b7ad572b">
+		<description>Classic Tecmo League '93 Week 6 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 6 (Tecmo Super Bowl Hack).nes" size="393232" crc="3fa65c20" sha1="24687b7ad572bea2012e3926d38c6f753dcfe832"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes876f916c0e81f">
+		<description>Classic Tecmo League '93 Week 7 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 7 (Tecmo Super Bowl Hack).nes" size="393232" crc="500cbdd7" sha1="876f916c0e81f25e146449a07a1304dfe3efa3d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes668b8a9fc0867">
+		<description>Classic Tecmo League '93 Week 8 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 8 (Tecmo Super Bowl Hack).nes" size="393232" crc="c5a784e5" sha1="668b8a9fc0867afa9fb1330ab34ba99ecf36d320"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes66bd4056d53cd">
+		<description>Classic Tecmo League '93 Week 9 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League '93 Week 9 (Tecmo Super Bowl Hack).nes" size="393232" crc="f86e9a06" sha1="66bd4056d53cdcb3224ab172e458d39df0ef2e3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes47246e14cdfd4">
+		<description>Classic Tecmo League S1 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 (Tecmo Super Bowl Hack).nes" size="393232" crc="7a2df5e9" sha1="47246e14cdfd463d2a5d5c3c22219ccf92169cfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8030acace2c11">
+		<description>Classic Tecmo League S1 Champ (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Champ (Tecmo Super Bowl Hack).nes" size="393232" crc="01b843c9" sha1="8030acace2c110c13d0a86d3b11334603457a08a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes90e8fb167b633">
+		<description>Classic Tecmo League S1 Playoffs R1 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Playoffs R1 (Tecmo Super Bowl Hack).nes" size="393232" crc="9e9c1a35" sha1="90e8fb167b6330cc1f430359efee7eb45186e32f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9de20ecd2c840">
+		<description>Classic Tecmo League S1 Playoffs R2 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Playoffs R2 (Tecmo Super Bowl Hack).nes" size="393232" crc="ebdce8e1" sha1="9de20ecd2c8405068ee06928b484533a8d7c8f97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes496b1c901a9b9">
+		<description>Classic Tecmo League S1 vXFA (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 vXFA (Tecmo Super Bowl Hack).nes" size="393232" crc="bf5a4e57" sha1="496b1c901a9b9fffc8b00697bb5026aded3b62e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesffd553acbcac6">
+		<description>Classic Tecmo League S1 vXw0 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 vXw0 (Tecmo Super Bowl Hack).nes" size="393232" crc="1bb953d2" sha1="ffd553acbcac671563b4fa7a5a3d1027e39f2ed2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nescd56357d902ae">
+		<description>Classic Tecmo League S1 Week 0 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 0 (Tecmo Super Bowl Hack).nes" size="393232" crc="a62da5f5" sha1="cd56357d902ae1109ecfc56e8ea23ab872e695eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesae274e54beb08">
+		<description>Classic Tecmo League S1 Week 1 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 1 (Tecmo Super Bowl Hack).nes" size="393232" crc="0caa5b34" sha1="ae274e54beb088945d1d2adee6d22085f02aa4f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesaf2a3ca9664c6">
+		<description>Classic Tecmo League S1 Week 11 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 11 (Tecmo Super Bowl Hack).nes" size="393232" crc="c7e9c30c" sha1="af2a3ca9664c69eebffddd44d376f9e03c800cd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0afdcad116ce7">
+		<description>Classic Tecmo League S1 Week 2 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 2 (Tecmo Super Bowl Hack).nes" size="393232" crc="a7184599" sha1="0afdcad116ce7b11317183aef0527e5e4abe5991"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd7f73160dd284">
+		<description>Classic Tecmo League S1 Week 20 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 20 (Tecmo Super Bowl Hack).nes" size="393232" crc="6b2d6141" sha1="d7f73160dd284f175839d79534e01aed7581eaad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf0ea776da7925">
+		<description>Classic Tecmo League S1 Week 21 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 21 (Tecmo Super Bowl Hack).nes" size="393232" crc="aebd86a0" sha1="f0ea776da7925c9086f568cc1fe8d40499eb72fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes45788c5e0f0a2">
+		<description>Classic Tecmo League S1 Week 3 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 3 (Tecmo Super Bowl Hack).nes" size="393232" crc="fe210805" sha1="45788c5e0f0a2df43dbcc8f4275f3e576f35aa8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese8c60342d997a">
+		<description>Classic Tecmo League S1 Week 4 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 4 (Tecmo Super Bowl Hack).nes" size="393232" crc="15c4d0d4" sha1="e8c60342d997acb69f0728f5d3cb4c2c4b17150c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2896087297371">
+		<description>Classic Tecmo League S1 Week 5 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 5 (Tecmo Super Bowl Hack).nes" size="393232" crc="b65d84fd" sha1="2896087297371a73e68f7adb6a905c36e413b5b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes00aeb16362ef7">
+		<description>Classic Tecmo League S1 Week 6 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 6 (Tecmo Super Bowl Hack).nes" size="393232" crc="88d1fdab" sha1="00aeb16362ef77cf96397b35c486c5271cbd5d98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc60ab5e194853">
+		<description>Classic Tecmo League S1 Week 7 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 7 (Tecmo Super Bowl Hack).nes" size="393232" crc="e36736db" sha1="c60ab5e1948530f6562b8507d5caf38e0af223a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6add900a97c0f">
+		<description>Classic Tecmo League S1 Week 8 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 8 (Tecmo Super Bowl Hack).nes" size="393232" crc="4bee1311" sha1="6add900a97c0fd3d425aa88fa71458bb344bce3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2a7293d686dee">
+		<description>Classic Tecmo League S1 Week 9 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S1 Week 9 (Tecmo Super Bowl Hack).nes" size="393232" crc="d8a5ed58" sha1="2a7293d686dee06e03dfe51d40ab717841d56528"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9014349ed75b7">
+		<description>Classic Tecmo League S2 Playoffs R1 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Playoffs R1 (Tecmo Super Bowl Hack).nes" size="393232" crc="cac0add9" sha1="9014349ed75b749e863b95fa0f0a37c2a625e702"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese9a2f29967b7e">
+		<description>Classic Tecmo League S2 Playoffs R2 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Playoffs R2 (Tecmo Super Bowl Hack).nes" size="393232" crc="d1ba03f9" sha1="e9a2f29967b7e518a44530905ea642e9840b5e31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes29d1db0a9a857">
+		<description>Classic Tecmo League S2 Week 0 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 0 (Tecmo Super Bowl Hack).nes" size="393232" crc="c5cc8eb5" sha1="29d1db0a9a857dfceb16726bcdce18c73c13fa67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf672bbeb6704f">
+		<description>Classic Tecmo League S2 Week 01 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 01 (Tecmo Super Bowl Hack).nes" size="393232" crc="38e8abfa" sha1="f672bbeb6704f57fc62db74d51e7f1032f23cf36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes57fd91936ada9">
+		<description>Classic Tecmo League S2 Week 02 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 02 (Tecmo Super Bowl Hack).nes" size="393232" crc="919f1002" sha1="57fd91936ada9a850e2b4f1af7c620c58197fa05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5459d0e7ea206">
+		<description>Classic Tecmo League S2 Week 03 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 03 (Tecmo Super Bowl Hack).nes" size="393232" crc="6c172cfe" sha1="5459d0e7ea206b74b6befb5d05bda60da8475acf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes66cf65d613d14">
+		<description>Classic Tecmo League S2 Week 04 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 04 (Tecmo Super Bowl Hack).nes" size="393232" crc="1cdfb458" sha1="66cf65d613d14aaa3f42b15ba5ead815cc1bb53d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7455c4409a0b7">
+		<description>Classic Tecmo League S2 Week 05 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 05 (Tecmo Super Bowl Hack).nes" size="393232" crc="52edff7f" sha1="7455c4409a0b74e15e898d94c20694722e1c93da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc0436367aebcb">
+		<description>Classic Tecmo League S2 Week 06 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 06 (Tecmo Super Bowl Hack).nes" size="393232" crc="9989c707" sha1="c0436367aebcb249432e1a97a27a451e6bee3f0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0749ce59f3ca9">
+		<description>Classic Tecmo League S2 Week 07 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 07 (Tecmo Super Bowl Hack).nes" size="393232" crc="6c7c1867" sha1="0749ce59f3ca9c734bb67aae8a729d386850f664"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes593acda1bc669">
+		<description>Classic Tecmo League S2 Week 08 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 08 (Tecmo Super Bowl Hack).nes" size="393232" crc="e228b741" sha1="593acda1bc6697a38bc20d70adf6537c38206686"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8eeb3d3ea96fb">
+		<description>Classic Tecmo League S2 Week 09 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 09 (Tecmo Super Bowl Hack).nes" size="393232" crc="fa565e76" sha1="8eeb3d3ea96fb99ebf08aaee489ee013b18f4ea6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesba3ecd6e96a2c">
+		<description>Classic Tecmo League S2 Week 0v2 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 0v2 (Tecmo Super Bowl Hack).nes" size="393232" crc="280a7074" sha1="ba3ecd6e96a2ca2bd6c1035735f03dff17f770a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb5d83ade47d1b">
+		<description>Classic Tecmo League S2 Week 10 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League S2 Week 10 (Tecmo Super Bowl Hack).nes" size="393232" crc="57626c73" sha1="b5d83ade47d1b1e6ef05e7bde88d40f68bb5c297"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa75a1bd7bad78">
+		<description>Classic Tecmo League Season Unk (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League Season Unk (Tecmo Super Bowl Hack).nes" size="393232" crc="29c4298e" sha1="a75a1bd7bad7893dba174a4bf5cfdbc5c309e917"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes019449d8ba3b8">
+		<description>Classic Tecmo League Season Unk PreSeason 1 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League Season Unk PreSeason 1 (Tecmo Super Bowl Hack).nes" size="393232" crc="53e30a48" sha1="019449d8ba3b8db748b04c4f11115e663b17752e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nescf848e3253b65">
+		<description>Classic Tecmo League Season Unk PreSeason 2 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League Season Unk PreSeason 2 (Tecmo Super Bowl Hack).nes" size="393232" crc="fa647a79" sha1="cf848e3253b655435b64c0a2360e61645c4169ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes084b8a7b1a66c">
+		<description>Classic Tecmo League Season Unk PreSeason 3 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Classic Tecmo League Season Unk PreSeason 3 (Tecmo Super Bowl Hack).nes" size="393232" crc="a9aa9481" sha1="084b8a7b1a66ca6dbea581fd174bcab27ab94b5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese3b1b7440d8d8">
+		<description>Cliffhanger (U) [T+Rus_magic team]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Cliffhanger (U) [T+Rus_magic team].nes" size="262160" crc="2cd89722" sha1="e3b1b7440d8d81b435070d98c8bc64c9022b32e3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes72da4d68fc464">
 		<description>Cliffhanger (USA) (2)</description>
 		<year>????</year>
@@ -17079,6 +18789,136 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="16400">
 				<rom name="Clik! (2008 Sly Dog Studios).nes" size="16400" crc="f6a204a0" sha1="2d5b194357b46ad993a6ac716949fb1688a46939"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes192801fc1357b">
+		<description>Coaching Institute of America S1 Week 00 - PreSeason (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 00 - PreSeason (Tecmo Super Bowl Hack).nes" size="393232" crc="42ea0aa5" sha1="192801fc1357baef4d0f018d3f104edbdb232a3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf9c2856f88288">
+		<description>Coaching Institute of America S1 Week 01 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 01 (Tecmo Super Bowl Hack).nes" size="393232" crc="6652fdb6" sha1="f9c2856f88288f589a68e77ce6000f788b03c857"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbd230deb289a0">
+		<description>Coaching Institute of America S1 Week 02 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 02 (Tecmo Super Bowl Hack).nes" size="393232" crc="70cf3ce7" sha1="bd230deb289a0dfaadea1f06147f78726cdcc036"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesebe1d05d7c018">
+		<description>Coaching Institute of America S1 Week 03 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 03 (Tecmo Super Bowl Hack).nes" size="393232" crc="34e9fe20" sha1="ebe1d05d7c018c956378122cae7f18bc6f705a92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes11df5ac22b445">
+		<description>Coaching Institute of America S1 Week 04 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 04 (Tecmo Super Bowl Hack).nes" size="393232" crc="6980468f" sha1="11df5ac22b44541613913841380a4e337205c9fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb73ad0546d484">
+		<description>Coaching Institute of America S1 Week 05 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 05 (Tecmo Super Bowl Hack).nes" size="393232" crc="0df0536a" sha1="b73ad0546d48467387b023cb0b72b8aaebd546f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nescca3d5ebd3106">
+		<description>Coaching Institute of America S1 Week 06 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 06 (Tecmo Super Bowl Hack).nes" size="393232" crc="a8b27351" sha1="cca3d5ebd3106196af48cc53c55fe21e86e7eeb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2934c20230ddc">
+		<description>Coaching Institute of America S1 Week 07 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 07 (Tecmo Super Bowl Hack).nes" size="393232" crc="5f791781" sha1="2934c20230ddc64792dedd580848de912b48567d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5600ddb14b5ac">
+		<description>Coaching Institute of America S1 Week 08 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 08 (Tecmo Super Bowl Hack).nes" size="393232" crc="6ff78085" sha1="5600ddb14b5ac598078d6426f04a480b43c3f0db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8a25389ffa7ca">
+		<description>Coaching Institute of America S1 Week 09 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 09 (Tecmo Super Bowl Hack).nes" size="393232" crc="a4a6e0a4" sha1="8a25389ffa7caba73461bda970848012738007a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd9f0d9b3323ee">
+		<description>Coaching Institute of America S1 Week 10 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 10 (Tecmo Super Bowl Hack).nes" size="393232" crc="2992049e" sha1="d9f0d9b3323eefaea2a6968f2bff46c6e28330cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc937b28cf63ea">
+		<description>Coaching Institute of America S1 Week 11 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 11 (Tecmo Super Bowl Hack).nes" size="393232" crc="1874bb8f" sha1="c937b28cf63ea18255ef59af26e24f7d69754222"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes49ab233735e61">
+		<description>Coaching Institute of America S1 Week 12 (Tecmo Super Bowl Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Coaching Institute of America S1 Week 12 (Tecmo Super Bowl Hack).nes" size="393232" crc="b88b1dca" sha1="49ab233735e61f341cd61f1aafec67c670ebfebd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17149,6 +18989,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Cobra Mission (Asia) (Ja) (Unl).nes" size="131088" crc="6487ab3d" sha1="18b2e519f2534f480194b1f858362ba31facbadc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesef3e0ddfc6b2f">
+		<description>Cobra Mission (CN-27) (Ch) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Cobra Mission (CN-27) (Ch) [!].nes" size="131088" crc="0f6bc06c" sha1="ef3e0ddfc6b2ff81c8349f223f59c650656807eb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17252,6 +19102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nese73db9800ac90">
+		<description>Code Name - Viper - Girl by AmidE (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Code Name - Viper - Girl by AmidE (Hack).nes" size="262160" crc="240d77b0" sha1="e73db9800ac90921688c5a72ff727db332d6e428"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes742891405f934">
 		<description>Coke Head Junkie (Code Name Viper Hack)</description>
 		<year>????</year>
@@ -17322,6 +19182,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes05693b8c1e176">
+		<description>Columbus - Ougon no Yoake (Ch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Columbus - Ougon no Yoake (Ch).nes" size="524304" crc="1999b1ab" sha1="05693b8c1e1767e0e94124993bd823168ee0bfac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesaa97c38d8f615">
+		<description>Columbus - Ougon no Yoake (J) [T+Eng_aishsha]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Columbus - Ougon no Yoake (J) [T+Eng_aishsha].nes" size="262160" crc="2c49cb25" sha1="aa97c38d8f615ce5d8a229cc577eca91e55e7c2e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes0b506929a6058">
 		<description>Columbus - Ougon no Yoake (J)</description>
 		<year>????</year>
@@ -17379,6 +19259,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Commando (USA).nes" size="131088" crc="41492df6" sha1="b665b128215f7cf0dcdf91e7ba75fc406885216c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes373daa6497f3d">
+		<description>Commandos (Ch) [f1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Commandos (Ch) [f1].nes" size="524304" crc="b1119802" sha1="373daa6497f3dbc70b040779dde779a45f69c484"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17522,6 +19412,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes7face8702e483">
+		<description>Contra (J) [hM04] (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra (J) [hM04] (PAL).nes" size="262160" crc="cb7258bd" sha1="7face8702e48350da7335fb0d514b66862966a8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd0e831474aeee">
+		<description>Contra (J) [hM04]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra (J) [hM04].nes" size="262160" crc="e45075f7" sha1="d0e831474aeeed9a55edb01512cf4cb780ee7ffa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes50f235a39be5e">
+		<description>Contra (J) [T+Chi][a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra (J) [T+Chi][a1].nes" size="262160" crc="d482e94d" sha1="50f235a39be5eaff1c14cf64d289e71a4e573d4a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesbfe42fea5b46f">
 		<description>Contra (J) [T+Eng_S.Crusaders]</description>
 		<year>????</year>
@@ -17529,6 +19449,66 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Contra (J) [T+Eng_S.Crusaders].nes" size="262160" crc="646191b6" sha1="bfe42fea5b46f51123f78ec9a47cfad8c14edf7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese796f405d6817">
+		<description>Contra (J) [T+Pol1.0_Dr00id88]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra (J) [T+Pol1.0_Dr00id88].nes" size="262160" crc="6504deb6" sha1="e796f405d68175bf1021df396250d3dfcbb128cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd28f86f89c05b">
+		<description>Contra (J) [T+Pol1.0_Dr00id88][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262174">
+				<rom name="Contra (J) [T+Pol1.0_Dr00id88][o1].nes" size="262174" crc="705f86f4" sha1="d28f86f89c05bf6a7b9f4ad73e80fdf514a9f143"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes29b885b945fd1">
+		<description>Contra (J) [t4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra (J) [t4].nes" size="262160" crc="1a70e1e2" sha1="29b885b945fd14de8f1974e0056f90b88939cc90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes00eda561bf84d">
+		<description>Contra (J) [t5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra (J) [t5].nes" size="262160" crc="7fad80ba" sha1="00eda561bf84dd5bc219d6880b612d9e1983c6df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes668943641316f">
+		<description>Contra (J) [t6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra (J) [t6].nes" size="262160" crc="775873fd" sha1="668943641316fe136a189cb7c7d6b5ed48820d01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6d13417d9b447">
+		<description>Contra (J) [t7]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra (J) [t7].nes" size="262160" crc="cdb99ac3" sha1="6d13417d9b4474d9832cc51f6d81c8005f9070ef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17602,6 +19582,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes32b9fbad6387a">
+		<description>Contra (U) [T+Tur_knighTeen87] (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131127">
+				<rom name="Contra (U) [T+Tur_knighTeen87] (2).nes" size="131127" crc="5d7fe09e" sha1="32b9fbad6387a9aed49ab9bc0ec5de58d8d4c181"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa63cae86c84a1">
+		<description>Contra (U) [T+Tur_knighTeen87]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Contra (U) [T+Tur_knighTeen87].nes" size="131088" crc="81a1b4f0" sha1="a63cae86c84a190b262976b09260bc4c612b7bfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0c104de27a4b4">
+		<description>Contra (U) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Contra (U) [t1].nes" size="131088" crc="1308088a" sha1="0c104de27a4b466bc0739ad646bbe214b4981717"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8dc1a9e7ae087">
+		<description>Contra (U) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Contra (U) [t2].nes" size="131088" crc="a378b2a2" sha1="8dc1a9e7ae087d62e033256765537bed2b0a9496"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd32cc647728c7">
+		<description>Contra (U) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Contra (U) [t3].nes" size="131088" crc="dd8c569c" sha1="d32cc647728c73d75e0de4c2fdfbc3b0c5584cfb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese0d3d483ada0b">
 		<description>Contra (USA) (2)</description>
 		<year>????</year>
@@ -17622,6 +19652,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes581a42d6050b1">
+		<description>Contra (With +4 Menu) (Unl) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Contra (With +4 Menu) (Unl) [a1].nes" size="131088" crc="07686308" sha1="581a42d6050b1e02ba1aeba7a86228bafa7708f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes71040792de96f">
+		<description>Contra (With +4 Menu) (Unl) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Contra (With +4 Menu) (Unl) [t1].nes" size="131088" crc="4145010e" sha1="71040792de96f99f2d1fedaa1c0de5d5d38357c5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes2c652ec100de8">
 		<description>Contra - Red Falcon War (2019)(AzStar)</description>
 		<year>????</year>
@@ -17639,6 +19689,36 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Contra - Revenge of the Red Falcon (2016)(Trax).nes" size="262160" crc="fa28193b" sha1="17ef24121d2d4095dcdfab38f90aa021f9b58ebb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7a4772c949f3d">
+		<description>Contra Fighter (Unl) [U][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393317">
+				<rom name="Contra Fighter (Unl) [U][!].unf" size="393317" crc="7edb7450" sha1="7a4772c949f3d7de9f9ebefdbb0092ff773d997b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes35346a5d91e46">
+		<description>Contra Fighter (Unl) [U][t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393317">
+				<rom name="Contra Fighter (Unl) [U][t1].unf" size="393317" crc="80758ac3" sha1="35346a5d91e46a2478fedb0dd42dd43e4189b5bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes852cd65e3eae0">
+		<description>Contra Fighter (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Contra Fighter (Unl).nes" size="393232" crc="629c46e7" sha1="852cd65e3eae0d4bfa87ce865ffc64378c0c3e5b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17672,6 +19752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes590fb532ec86d">
+		<description>Contra Force (U) [p1][t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra Force (U) [p1][t2].nes" size="262160" crc="878689f7" sha1="590fb532ec86dde362bf3eaf6e2a2a554a08dcfe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes9f438b439ade4">
 		<description>Contra Force (U) [T+Chi_xingkong]</description>
 		<year>????</year>
@@ -17682,6 +19772,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesc2e237e1f95de">
+		<description>Contra Force (U) [T+Pol_Dark Archon]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra Force (U) [T+Pol_Dark Archon].nes" size="262160" crc="6ee2b571" sha1="c2e237e1f95ded50d357ecd67d148de283354849"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5108fd17b240d">
+		<description>Contra Force (U) [T+Rus_magic team]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra Force (U) [T+Rus_magic team].nes" size="262160" crc="ab4b91a7" sha1="5108fd17b240d4dea79b1169f1d4082434b5a24c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesb47a2d8d53da9">
 		<description>Contra Force (U) [T+Rus_Yoshi]</description>
 		<year>????</year>
@@ -17689,6 +19799,46 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Contra Force (U) [T+Rus_Yoshi].nes" size="262160" crc="8a40a0c0" sha1="b47a2d8d53da9254f405bba17482dd2ff32126d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesdbf210002e042">
+		<description>Contra Force (U) [t4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra Force (U) [t4].nes" size="262160" crc="bc456174" sha1="dbf210002e04215b5fe93cf9410b90dcb425c3fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes10bb75d05d4ff">
+		<description>Contra Force (U) [t5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra Force (U) [t5].nes" size="262160" crc="4e06a270" sha1="10bb75d05d4ff8a211fd032a4bf27fe7f7759952"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2916c4ec8bb72">
+		<description>Contra Force (U) [t6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Contra Force (U) [t6].nes" size="262160" crc="9885b5e2" sha1="2916c4ec8bb72ad4bbe8566a35051c90a7a7b185"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes17e39becbd264">
+		<description>Contra Force (U) [t7]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262288">
+				<rom name="Contra Force (U) [t7].nes" size="262288" crc="9a27742b" sha1="17e39becbd264674bfb0606e49fe492d606cdcff"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17752,6 +19902,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes8e6944b74a9b8">
+		<description>Contra Spirits (1995) (Unl) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Contra Spirits (1995) (Unl) [a1].nes" size="524304" crc="13c88fc6" sha1="8e6944b74a9b88f28e3d65bc12dcac431c02fcbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfc670c39dedb5">
+		<description>Contra Spirits (1996) (Unl) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Contra Spirits (1996) (Unl) [a1].nes" size="524304" crc="03049b09" sha1="fc670c39dedb5611a31805b803e7dd6300b5825d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesc8805d0b3428d">
 		<description>Contra Spirits (As) [!]</description>
 		<year>????</year>
@@ -17792,6 +19962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes27480013adcfb">
+		<description>CONTRA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="CONTRA.nes" size="131088" crc="a0e82a5d" sha1="27480013adcfbe1ab6aa23a7ab9459ab05b41aac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nescf8d4cdb6ebb9">
 		<description>contramdl</description>
 		<year>????</year>
@@ -17829,6 +20009,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
 				<rom name="Copper Jacket - Digital Release (2023)(Monsoon Studios).nes" size="65552" crc="f88202b0" sha1="8f2c1dba57681b014f29cb78236926b799811f1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes91795369ce66d">
+		<description>Cornfed The Monkey Santa's Last Hope (Megaman V Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Cornfed The Monkey Santa's Last Hope (Megaman V Hack).nes" size="524304" crc="9b7f0350" sha1="91795369ce66dc35705353e85903cf8654cb6132"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17882,6 +20072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes795267c955b67">
+		<description>Cosmic Epsilon (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Cosmic Epsilon (J) [t1].nes" size="393232" crc="b9f2e559" sha1="795267c955b67f0fb6baa95ffe4bba1b09c8b6e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesa368932da3228">
 		<description>Cosmic Epsilon (Japan) (2)</description>
 		<year>????</year>
@@ -17909,6 +20109,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Cosmic Epsilon (Japan).nes" size="393232" crc="f817328a" sha1="6d596473086af6ec2f80102bfd3b9677ebf53dc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes98f476c44ab67">
+		<description>Cosmic Spacehead (Europe) (En,Fr,De,Es) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Cosmic Spacehead (Europe) (En,Fr,De,Es) (Unl).nes" size="262160" crc="1139542d" sha1="98f476c44ab67ca804f667a43da4e66cdd61a436"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18002,6 +20212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesec493cbab694b">
+		<description>Cosmos Cop (CN-08) (Unl) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Cosmos Cop (CN-08) (Unl) [!].nes" size="65552" crc="db736b4b" sha1="ec493cbab694b87477ff240d3b86bca0c4e62451"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesf85eb97b07c21">
 		<description>Cosmos Cop (Spain) (Gluk Video) (Unl)</description>
 		<year>????</year>
@@ -18089,6 +20309,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Crackout (USA) (Proto) (2).nes" size="131088" crc="d680cb86" sha1="432ef829c95d517f8eade41940728f0c8f382d84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbc05cede19941">
+		<description>Crackout (USA) (Proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Crackout (USA) (Proto).nes" size="131088" crc="bd6ca0d7" sha1="bc05cede199417f4f30758b2181cf60fec3cbdd3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18232,6 +20462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes6a6568bbe5db9">
+		<description>Creatom (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="98320">
+				<rom name="Creatom (Unl).nes" size="98320" crc="7d43d880" sha1="6a6568bbe5db9a6cfa554c736ec259eee6a59b5d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes1f3f44653dbcf">
 		<description>Creeping It Reel (USA) (Aftermarket) (Unl)</description>
 		<year>????</year>
@@ -18262,6 +20502,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes434341fd20b21">
+		<description>Crime Busters (Unl) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="163856">
+				<rom name="Crime Busters (Unl) [!].nes" size="163856" crc="86c7d81e" sha1="434341fd20b215ebf4ebf9d6d9ca51345079d33a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc4861fe8bc8b5">
+		<description>Crisis Force (J) [b1][t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Crisis Force (J) [b1][t1].nes" size="262160" crc="c90abe55" sha1="c4861fe8bc8b5d0b875a8a25d01966feae73fdd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes54c73b96ca00e">
+		<description>Crisis Force (J) [T+Kor_dkny94]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Crisis Force (J) [T+Kor_dkny94].nes" size="262160" crc="1a7f5026" sha1="54c73b96ca00e43936d583640bf06c7977914d89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa3929eb231946">
+		<description>Crisis Force (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Crisis Force (J) [t1].nes" size="262160" crc="c3160a7d" sha1="a3929eb2319464fad1d10e97eef2a9043b1a05e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa7987daa44527">
+		<description>Crisis Force (J) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Crisis Force (J) [t2].nes" size="262160" crc="dae28863" sha1="a7987daa44527374864a251eb8d83e7a56013553"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4e0a7430e264b">
+		<description>Crisis Force (J) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Crisis Force (J) [t3].nes" size="262160" crc="c8629ddd" sha1="4e0a7430e264bebcd0630bb1c8d852c1f48a91f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes84404eae29d73">
 		<description>Crisis Force (Japan) (Sample)</description>
 		<year>????</year>
@@ -18279,6 +20579,56 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Crisis Force (Japan).nes" size="262160" crc="c4520781" sha1="9603210def5a0fe251d0dd48ebb82728ad626d88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes14454f62fb956">
+		<description>Cross Fire (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Cross Fire (J) [t1].nes" size="262160" crc="3eced5f1" sha1="14454f62fb956156c3af31901846a2c80bb62770"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7391032852a1e">
+		<description>Cross Fire (J) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Cross Fire (J) [t2].nes" size="262160" crc="38ffefda" sha1="7391032852a1e6bf734ba9a8e8ae37f2f295c82f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5b5472a37f9dd">
+		<description>Cross Fire (J) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Cross Fire (J) [t3].nes" size="262160" crc="6aac40ca" sha1="5b5472a37f9dd4ba3e05d4fb7e296eef0fb2e8d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese6a1e9d2ac37e">
+		<description>Cross Fire (J) [t4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Cross Fire (J) [t4].nes" size="262160" crc="f0d27438" sha1="e6a1e9d2ac37ee96a0eba9b70aaac4aa41397c32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes590730bec1e5b">
+		<description>Cross Fire (J) [t5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Cross Fire (J) [t5].nes" size="262160" crc="98159aa2" sha1="590730bec1e5b3544c0a7c00cfda211ed51f572b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18632,6 +20982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes90874069a8d8b">
+		<description>CV2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="CV2.nes" size="262160" crc="b6a51072" sha1="90874069a8d8b54d1c96a7b4bd0242b97e8f9f4b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes73ab011b310b3">
 		<description>Cvetnie Linii (Color Lines) (Russian)(PAL)[!]</description>
 		<year>????</year>
@@ -18719,6 +21079,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Cycle Race - Road Man (Japan).nes" size="262160" crc="899ad1fd" sha1="5de36e49150826eea6185c27628c09f292109988"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb01a1519ad786">
+		<description>Cynthi (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="24592">
+				<rom name="Cynthi (PD).nes" size="24592" crc="7473b43a" sha1="b01a1519ad78640860e134ca0897270470078726"/>
 			</dataarea>
 		</part>
 	</software>

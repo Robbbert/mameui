@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2846 -->
+<!-- Number of items in this list = 3153 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -2092,6 +2092,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26272eb359d084d">
+		<description>A Game of 2600 Concentration (2004)(Snorlaxnut)(NTSC)[h][!][Concentration]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="A Game of 2600 Concentration (2004)(Snorlaxnut)(NTSC)[h][!][Concentration].a26" size="2048" crc="b6454f6c" sha1="272eb359d084da2ad59aab63eafca34f1a8d7e91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2689a697d6cbd4e">
+		<description>A Wee Hack Gorf Arcade 1.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="A Wee Hack Gorf Arcade 1.0.a26" size="4096" crc="1c22afa2" sha1="89a697d6cbd4e9a1cee8fac8ac398c620bca2b42"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26c513eb36e9229">
 		<description>a1wwins</description>
 		<year>????</year>
@@ -2099,6 +2119,26 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="a1wwins.a26" size="4096" crc="15e354b9" sha1="c513eb36e922918fddb806b7013ad754ff10d194"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a72941da61b2">
+		<description>AA (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AA (Indy 500 Hack).a26" size="4096" crc="9ebdafd9" sha1="5a72941da61b285dd31e3056ac59cca3407583b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a35eb50781ad">
+		<description>aaa1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="aaa1.a26" size="4096" crc="fb17dcd9" sha1="5a35eb50781ad6f2ae0687aad52cc41059005e64"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2112,6 +2152,406 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a269c62f7a073fe0">
+		<description>AB.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AB.bas.a26" size="4096" crc="fc5af368" sha1="9c62f7a073fe03a421a5661f799876753f843492"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268827caa9ac915">
+		<description>Aborigines Revenge (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Aborigines Revenge (PD).a26" size="4096" crc="e08971d0" sha1="8827caa9ac91506c3f6cb304185987a6ee18ce96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c80f6833c8f24">
+		<description>Ace (2003)(Manuel Rotschkar)(NTSC)[h Driving Controller][!][Combat]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Ace (2003)(Manuel Rotschkar)(NTSC)[h Driving Controller][!][Combat].a26" size="2048" crc="abcc15dc" sha1="c80f6833c8f24b204f51e8ba0230ffb83c12081f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26631ce6470efb8">
+		<description>ace2600final</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="ace2600final.a26" size="8192" crc="1d95445f" sha1="631ce6470efb8b3700af9adf7ee5d2792254eae5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2666216ed98295f">
+		<description>Acid Drop (1994) (Salu) (PAL) [b1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Acid Drop (1994) (Salu) (PAL) [b1].a26" size="8192" crc="95601a5f" sha1="66216ed98295f3fde35a0cc9398b4f2fc79f2375"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ad5e47e36084">
+		<description>Acid Drop (1994) (Salu) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Acid Drop (1994) (Salu) [f1] (NTSC by TJ).a26" size="8192" crc="13160630" sha1="2ad5e47e360842bb5f9c23bbe2c19866d890f427"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2675a19da40518f">
+		<description>acidfishv101.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="acidfishv101.bas.a26" size="8192" crc="4f0c7fe8" sha1="75a19da40518f831b13eb35d8ea32d8892ec7fe6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b5497c54fb9c1">
+		<description>acidfishv106.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="acidfishv106.bas.a26" size="8192" crc="9961e582" sha1="b5497c54fb9c1d2fbed9db015f9436627f937f9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26924ca836aa08e">
+		<description>Action Force (1985) (Parker Bros) (PAL) [h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action Force (1985) (Parker Bros) (PAL) [h1].a26" size="4096" crc="303dcaf5" sha1="924ca836aa08eeffc141d487ac6b9b761b2f8ed5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c5e4a8bb79e0">
+		<description>Action RPG (bug)_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG (bug)_4.a26" size="8192" crc="93ddc701" sha1="9c5e4a8bb79e09297b3b08482862c93318c19d37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b194e10a06277">
+		<description>Action RPG alpha (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG alpha (PD).a26" size="8192" crc="efffdafd" sha1="b194e10a0627731985b436005e20a6818bcd9c1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26553996c099d7b">
+		<description>Action RPG v0009_wtf2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v0009_wtf2.a26" size="4096" crc="46ba3c6d" sha1="553996c099d7ba98340b3c409316a75a81ee3b50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26745bac6d0d7d4">
+		<description>Action RPG v005 beta (PD) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v005 beta (PD) (2).a26" size="4096" crc="6ccdad43" sha1="745bac6d0d7d4db6a4062244b774103473bbd87e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267192c71d9df6c">
+		<description>Action RPG v006</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v006.a26" size="4096" crc="b00a7560" sha1="7192c71d9df6cfd9dba85a1514a7ac1f0332a786"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26afe757dd57f5d">
+		<description>Action RPG v007</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v007.a26" size="4096" crc="b876fcfc" sha1="afe757dd57f5d65a23365f8b508b7ccae748afbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268ed80bd5c3406">
+		<description>Action RPG v008</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v008.a26" size="4096" crc="96de7bf6" sha1="8ed80bd5c34067941f5126f13452fb84a4df05c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f6aa7c898431">
+		<description>Action RPG v008beta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v008beta.a26" size="4096" crc="2b0b772d" sha1="8f6aa7c898431ef11239215939cbcaf3015f12f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d329683485df7">
+		<description>Action RPG v008beta2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v008beta2.a26" size="4096" crc="9ebc6809" sha1="d329683485df750417119f681fe051493e846ab6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261fa367452f81d">
+		<description>Action RPG v009</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v009.a26" size="4096" crc="c84bffea" sha1="1fa367452f81db596894eae930e0f2dde7bd2153"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26686d2a057b882">
+		<description>Action RPG v009beta2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v009beta2.a26" size="4096" crc="40e6e448" sha1="686d2a057b882b0c468b6995fef903e43e262553"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c80b7d4c8af1">
+		<description>Action RPG v009wtf1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v009wtf1.a26" size="4096" crc="5dca94aa" sha1="7c80b7d4c8af1ee02ceb3e80d76305c707e6c83d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ff8ceacbf1ae">
+		<description>Action RPG v009_beta2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v009_beta2.a26" size="4096" crc="0156917e" sha1="7ff8ceacbf1ae9de6c85b96f154ab7bd4d888116"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268976e0750d4ea">
+		<description>Action RPG v010 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v010 (PD).a26" size="4096" crc="bac0111c" sha1="8976e0750d4eab5349367ecdf462907c61add27e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0bb084f879ca">
+		<description>Action RPG v010_beta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Action RPG v010_beta.a26" size="4096" crc="b6a6d434" sha1="a0bb084f879ca331847ac207fe466887e97859fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dec24b2e35844">
+		<description>Action RPG v013</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG v013.a26" size="8192" crc="4b20b023" sha1="dec24b2e35844f5c05a36f23cc85675281f0c27a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c52eb12b3c8fd">
+		<description>Action RPG v013_beta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG v013_beta.a26" size="8192" crc="fed7cc97" sha1="c52eb12b3c8fd0a0846b68a297fbc9b2b291142d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f174e9c3bacac">
+		<description>Action RPG v014</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG v014.a26" size="8192" crc="105ab949" sha1="f174e9c3bacac53c29017644f2ead8c39f311611"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d7e8d6293c3d">
+		<description>Action RPG v015</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG v015.a26" size="8192" crc="187a1650" sha1="1d7e8d6293c3d4ac1e19f247587900690ee66a0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2645689915bebc3">
+		<description>Action RPG v016</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG v016.a26" size="8192" crc="11bfcd27" sha1="45689915bebc3a00d09db820dfad14aff287614c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e3aa8d569bd91">
+		<description>Action RPG v017</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG v017.a26" size="8192" crc="480ee8f0" sha1="e3aa8d569bd91480858279673799e69d61d46dea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613f156aab25dc">
+		<description>Action RPG v017_beta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG v017_beta.a26" size="8192" crc="248c2fe3" sha1="13f156aab25dcaaafdbf2a29d2c299b6df1d87a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2603563562e7f18">
+		<description>Action RPG v018</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Action RPG v018.a26" size="16384" crc="6f8e70ee" sha1="03563562e7f18d47ae036b0b0bb315079b13cd20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260da109f1be568">
+		<description>Action RPG v018_beta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Action RPG v018_beta.a26" size="8192" crc="a364a5ad" sha1="0da109f1be5685c9f7c04a6eaf2aa9dd7599dfbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688036586c4def">
+		<description>Action Version of Simon Says, An (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Action Version of Simon Says, An (PD).a26" size="2048" crc="e82121bf" sha1="88036586c4defa045bd395fbae698d88bad927c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec99f5fe526cb">
+		<description>action_rpg_v005</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="action_rpg_v005.a26" size="4096" crc="d0cc4fe9" sha1="ec99f5fe526cb61847834c8dfda66a1964c7044f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26784b7490c3d38">
+		<description>action_rpg_v011</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="action_rpg_v011.a26" size="4096" crc="9e9bdb8b" sha1="784b7490c3d383ae88775a1aa50a4c4320534232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260a367ffa60564">
+		<description>action_rpg_v011_TestRealm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="action_rpg_v011_TestRealm.a26" size="4096" crc="b61af70d" sha1="0a367ffa60564f363cdc1ab882a331782c44acca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2635a643c38e5de">
+		<description>Ad (Adventure Hack) (2004) (Kurt Howe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ad (Adventure Hack) (2004) (Kurt Howe).a26" size="4096" crc="bd9576e5" sha1="35a643c38e5dec7b35034046593302a84b7bcf6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2666cbdfd5104d2">
+		<description>Ad 2 (Adventure Hack) (2004) (Kurt Howe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ad 2 (Adventure Hack) (2004) (Kurt Howe).a26" size="4096" crc="d0ad8199" sha1="66cbdfd5104d2443cd4fa71e8e0a049447babcc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267f9676e4b9976">
+		<description>Adam King_1 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adam King_1 (Indy 500 Hack).a26" size="4096" crc="d3d18378" sha1="7f9676e4b9976e115360bdd5af538b1814bb6ef5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26305ad7a5ecfd8">
 		<description>adam1</description>
 		<year>????</year>
@@ -2119,6 +2559,456 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="adam1.a26" size="4096" crc="f58fbd0b" sha1="305ad7a5ecfd8ef94afa66992fb31a09a5563218"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2600bae585f61cd">
+		<description>Adrian M_1 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Adrian M_1 (Combat Hack).a26" size="2048" crc="3dd023b5" sha1="00bae585f61cd3684cb8caf4f48c8ff92fae3c0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2690235fa987879">
+		<description>Adrian M_2 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Adrian M_2 (Combat Hack).a26" size="2048" crc="43a6b09e" sha1="90235fa987879e8561f7b971c9e7ebf2fe5dcd19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2672e0b95cecb9e">
+		<description>Adrian M_3 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Adrian M_3 (Combat Hack).a26" size="2048" crc="96185401" sha1="72e0b95cecb9e9a39aa4c0f6b268009c8d1f59bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261eb697eed3ea5">
+		<description>adv.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="adv.bas.a26" size="4096" crc="b8fa6fa2" sha1="1eb697eed3ea5ad999a4e2ed763d1756eea37b9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267b77774570a25">
+		<description>adv134</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv134.a26" size="32768" crc="66f35389" sha1="7b77774570a25632b055745bdff68036b50a1478"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fbf2c3a86f3fd">
+		<description>adv134cheat_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv134cheat_4.a26" size="32768" crc="16a97cb3" sha1="fbf2c3a86f3fdb7197bd0348941d1610272a3ef6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e1654e4590277">
+		<description>adv136.txt_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv136.txt_4.a26" size="32768" crc="100d4917" sha1="e1654e4590277e7b364cd4e5241823f11f07d852"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ff05345c180c4">
+		<description>adv137</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv137.a26" size="32768" crc="91d92b56" sha1="ff05345c180c41a79ff49b79d9e5c1d07f5d94aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267fe80bd384d53">
+		<description>adv150</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv150.a26" size="32768" crc="91a4581c" sha1="7fe80bd384d53a84abacda54f1343d878d92a11d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623176a9fcfb1e">
+		<description>adv151</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv151.a26" size="32768" crc="0c7157f5" sha1="23176a9fcfb1e79b7b69da7e9399b670da6c16f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263b6524e13cd2e">
+		<description>adv153</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv153.a26" size="32768" crc="ac3c3cf3" sha1="3b6524e13cd2e4cb0749a0b7ef436083cc6f6ddb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2634e8b03288ed3">
+		<description>adv154</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv154.a26" size="32768" crc="fdcb1043" sha1="34e8b03288ed384ddf5475cb6bf277decda89379"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265e94bad2d6f3e">
+		<description>adv156</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv156.a26" size="32768" crc="f0673c0d" sha1="5e94bad2d6f3e79f1d0652028dae78f071c182e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696f79d5ea790d">
+		<description>adv163</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adv163.a26" size="32768" crc="bc26f742" sha1="96f79d5ea790d44489e040ca899acb583c890b97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2635cebb5ea1d17">
+		<description>adv35_indy_v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="adv35_indy_v2.a26" size="16384" crc="228c0b86" sha1="35cebb5ea1d17c729d48be1a145c82b0ad960e4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2643ddfff2d3bfa">
+		<description>AdvCntry</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="AdvCntry.a26" size="8192" crc="39705387" sha1="43ddfff2d3bfa9a224268777190b4631dc3636ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a251e6fad5829">
+		<description>Adventure (1978) (Atari) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure (1978) (Atari) [t1].a26" size="4096" crc="992ba79b" sha1="a251e6fad58296444f9ac3427986e71426e08b34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260cd5c1f28f480">
+		<description>Adventure (2007) (Steve Engelhardt) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (2007) (Steve Engelhardt) (Prototype).a26" size="32768" crc="bf29bb3d" sha1="0cd5c1f28f4804da811e5e5f4c870a28b561049a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ab50312606440">
+		<description>Adventure (Adventure Hack) (2001) (Stirling Newberry)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure (Adventure Hack) (2001) (Stirling Newberry).a26" size="4096" crc="a6dee195" sha1="ab50312606440f76ea54fc537b2e8b879e1b3530"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fe675d91b15d2">
+		<description>Adventure (Cave In) Cobra Boss Hack 20070816</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) Cobra Boss Hack 20070816.a26" size="32768" crc="52ed3ed7" sha1="fe675d91b15d2692491ff0263271f026451cd01b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26551b953d5a4c2">
+		<description>Adventure (Cave In) Song 20070817</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure (Cave In) Song 20070817.a26" size="4096" crc="074dcecb" sha1="551b953d5a4c2d179a35d398b7fa018f9acfa3c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26744e42e70d22b">
+		<description>Adventure (Cave In) Title Hack 20070716</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Adventure (Cave In) Title Hack 20070716.a26" size="16384" crc="9586a43f" sha1="744e42e70d22b1934b962cbc3fd8643f0624acaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623b073cffe11f">
+		<description>Adventure (Cave In) v115 20070809</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v115 20070809.a26" size="32768" crc="4311730e" sha1="23b073cffe11f7a3032645463da4a0f6acb5951a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a9149aaf59a57">
+		<description>Adventure (Cave In) v115 Boss Hack 20070813</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v115 Boss Hack 20070813.a26" size="32768" crc="5d709026" sha1="a9149aaf59a57c5e24583dbee2275f6153574389"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268dece44dc3eb8">
+		<description>Adventure (Cave In) v115 Cheat 20070809</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v115 Cheat 20070809.a26" size="32768" crc="094bce74" sha1="8dece44dc3eb8eb8c71e8d9e2fc7ff10fab1999e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266e8cc1ceae720">
+		<description>Adventure (Cave In) v116 20070809</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v116 20070809.a26" size="32768" crc="6a9ce4fc" sha1="6e8cc1ceae7203e01ecbdac78bbbe9d9b26b3a26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26016689257298d">
+		<description>Adventure (Cave In) v117 20070810</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v117 20070810.a26" size="32768" crc="cc0cdafc" sha1="016689257298dfc7d8c0fad47df67242e48aaadb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c164eae3f49c2">
+		<description>Adventure (Cave In) v118 20070810</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v118 20070810.a26" size="32768" crc="f880b0f6" sha1="c164eae3f49c2b9489660028d11e82810de77e6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269285de04b89fd">
+		<description>Adventure (Cave In) v118 Boss Hack 20070814</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v118 Boss Hack 20070814.a26" size="32768" crc="91135f95" sha1="9285de04b89fd2b472b3092e52a357e5572803be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26000626f132c83">
+		<description>Adventure (Cave In) v119 20070814</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v119 20070814.a26" size="32768" crc="17874c15" sha1="000626f132c83edb824a332715024e50bb2ac318"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26080c823a70030">
+		<description>Adventure (Cave In) v120 20070814</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v120 20070814.a26" size="32768" crc="e70ad40c" sha1="080c823a700303a1d6a1f6588d3f9d554f3812ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26164cd9021ee21">
+		<description>Adventure (Cave In) v124 20070816</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v124 20070816.a26" size="32768" crc="f7cd0f0d" sha1="164cd9021ee21a50ac30a97acfef36410d86855e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266747467a44d3c">
+		<description>Adventure (Cave In) v128 20070817</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v128 20070817.a26" size="32768" crc="af2cb8fa" sha1="6747467a44d3c89e1e665a3330cb7e0300703784"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262901b109ca086">
+		<description>Adventure (Cave In) v154 Deathframes Hack 20070925</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v154 Deathframes Hack 20070925.a26" size="32768" crc="ebf6f4be" sha1="2901b109ca08679245651b4f920fb136205b4688"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650040b61b2abf">
+		<description>Adventure (Cave In) v155 20070926</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v155 20070926.a26" size="32768" crc="93597479" sha1="50040b61b2abf0f2538d0e8aaa151ddfe26caf83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264490ddb58231e">
+		<description>Adventure (Cave In) v161 20071009</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v161 20071009.a26" size="32768" crc="87d194f0" sha1="4490ddb58231e8cf9228ce6b0a80af48d3226ab1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26223c3000bb3a7">
+		<description>Adventure (Cave In) v164 20071018</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v164 20071018.a26" size="32768" crc="fe1b1987" sha1="223c3000bb3a7974ea915a0a6b3e5670ecb61b84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ae86714ec59e3">
+		<description>Adventure (Cave In) v177 20071029</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v177 20071029.a26" size="32768" crc="a5b8af91" sha1="ae86714ec59e35ac151fd5850c7d9fde8e144064"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b1303f4928b55">
+		<description>Adventure (Cave In) v177 Test 20071029</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v177 Test 20071029.a26" size="32768" crc="de609aba" sha1="b1303f4928b55412fe51b6241d07ec75e5b5af21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2686954f92a1ed5">
+		<description>Adventure (Cave In) v179 20071029</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v179 20071029.a26" size="32768" crc="b2f7e47a" sha1="86954f92a1ed5ee5734548139554fbef28ffa9ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d057a1fa4fd2d">
+		<description>Adventure (Cave In) v180 20071030</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v180 20071030.a26" size="32768" crc="9c75504c" sha1="d057a1fa4fd2d6b573852f30595cb98f82975265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e113413825efd">
+		<description>Adventure (Cave In) v182 20071030</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v182 20071030.a26" size="32768" crc="e14e2edd" sha1="e113413825efd27267c50e1558ef7f7848df4c8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d01e19cf78e7d">
+		<description>Adventure (Cave In) v210 20071207</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v210 20071207.a26" size="32768" crc="35e99ea0" sha1="d01e19cf78e7d5a9e9f547c0a1647618b313137d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2658c36001ae162">
+		<description>Adventure (Cave In) v211 20071208</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure (Cave In) v211 20071208.a26" size="32768" crc="b30b4b9c" sha1="58c36001ae1628f27e0a09e9899852c3306e968d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26317a7b8693af4">
+		<description>Adventure (Color Scrolling Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure (Color Scrolling Hack).a26" size="4096" crc="991e5f08" sha1="317a7b8693af44095c23437253a32cc748824ccf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2132,6 +3022,996 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a264ffe36c511330">
+		<description>Adventure (New Graphics Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure (New Graphics Hack).a26" size="4096" crc="d2f65abf" sha1="4ffe36c5113305714e27c72d7f3abecc9b08a630"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26888b047b2b481">
+		<description>Adventure - Haunted House rc02 (Old graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure - Haunted House rc02 (Old graphics).a26" size="4096" crc="0cbe7b63" sha1="888b047b2b481c1e0432003897b846543fe6bd53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f7c38d39e77c">
+		<description>Adventure - Odyssey 2600 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure - Odyssey 2600 (Adventure Hack).a26" size="4096" crc="6b75db45" sha1="4f7c38d39e77cb892f431aa49f74e48f12196a0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260f1b5873f9be6">
+		<description>Adventure - Odyssey 2600 fixed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure - Odyssey 2600 fixed.a26" size="4096" crc="98e30f6e" sha1="0f1b5873f9be6679d1b1a4e62adcd87f3aa8cd77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26194d7289c5c61">
+		<description>Adventure - Timed (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Adventure - Timed (Adventure Hack).a26" size="8192" crc="9134d997" sha1="194d7289c5c618800f1ee49888ed1c16cc08bc8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e78c37984e8e3">
+		<description>Adventure 2 Player (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure 2 Player (Adventure Hack).a26" size="4096" crc="e05f4b5d" sha1="e78c37984e8e366d5d5fdc859b375eb76cd3c15a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260b0875ad1bd49">
+		<description>Adventure 34 by Kurt Howe (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure 34 by Kurt Howe (Adventure Hack).a26" size="4096" crc="554d9f11" sha1="0b0875ad1bd494c9dd8de4ff0a06938e699f60d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26673173beee056">
+		<description>Adventure 4k (Timed) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure 4k (Timed) (Adventure Hack).a26" size="4096" crc="603fad5c" sha1="673173beee05674b0bb6e8929d9797f5dd0284a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2640beac6344ea5">
+		<description>Adventure 5 Levels (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure 5 Levels (Adventure Hack).a26" size="4096" crc="d128ca1d" sha1="40beac6344ea590ae663777177cd31a5d157b269"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c15ec475c9915">
+		<description>Adventure Black_dfd (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Black_dfd (Adventure Hack).a26" size="4096" crc="e006de65" sha1="c15ec475c99155fca7d64a38d6f794d14b60f39f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2679e1c69079883">
+		<description>Adventure Country (Adventure hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Adventure Country (Adventure hack).bin" size="8192" crc="011ed3eb" sha1="79e1c69079883f663ec7098f6259bcdcdbc63263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267830cb3a8cc54">
+		<description>Adventure Drop (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Drop (Adventure Hack).a26" size="4096" crc="af2490fd" sha1="7830cb3a8cc54a81fe27f4107a886a22cd5df4d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26141eadce04bb7">
+		<description>Adventure FREE by Nukey Shay (Adventure Plus Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure FREE by Nukey Shay (Adventure Plus Hack).a26" size="4096" crc="f9b34420" sha1="141eadce04bb7d4b0837e6d9e7cb32ff73bc138f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e1b7a882149e2">
+		<description>adventure game preview v213</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="adventure game preview v213.a26" size="32768" crc="7114e565" sha1="e1b7a882149e2432e91854889506816187aebff5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ab91d05d57266">
+		<description>Adventure game preview v215</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure game preview v215.a26" size="32768" crc="c6574ed6" sha1="ab91d05d572666150103bb3396cf16259981ad14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26421eb42456625">
+		<description>Adventure game preview v217</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Adventure game preview v217.a26" size="32768" crc="142eb88a" sha1="421eb42456625999b0a97c839c8b7ade7ef88bae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265b4be0edad75f">
+		<description>Adventure Hack2 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Hack2 (Adventure Hack).a26" size="4096" crc="45552029" sha1="5b4be0edad75f37d5626938a5c3db58c112d7fd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262bc855a1db2f8">
+		<description>Adventure Hack3 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Hack3 (Adventure Hack).a26" size="4096" crc="0ceba2ea" sha1="2bc855a1db2f8074dd035606821bf6a53ef0dc93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261589c2806c00d">
+		<description>Adventure Hack6 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Hack6 (Adventure Hack).a26" size="4096" crc="d1f383fc" sha1="1589c2806c00d39933f87a4fae355d563a03edb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265533ad43d0596">
+		<description>Adventure Hack9 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Hack9 (Adventure Hack).a26" size="4096" crc="7bb3bf22" sha1="5533ad43d0596e5102928fa780b7342771b975f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a7df0b59bfb6">
+		<description>Adventure Hack99 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Hack99 (Adventure Hack).a26" size="4096" crc="b43ee0d9" sha1="5a7df0b59bfb68d7650d373a932efe50492463a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cf63e26aa0e14">
+		<description>Adventure Hell v1 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Hell v1 (Adventure Hack).a26" size="4096" crc="ee63c7b4" sha1="cf63e26aa0e14c7525ec6cc0dd8e0dda039c978b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262afdfde63f3e4">
+		<description>Adventure Hell v2 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Hell v2 (Adventure Hack).a26" size="4096" crc="5103d492" sha1="2afdfde63f3e47fc4426155adf8824b5ae7b4094"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266eeb651594261">
+		<description>Adventure Hell v3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Hell v3.a26" size="4096" crc="077f5e1c" sha1="6eeb6515942611b79e953cf87b233e14eb280430"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268501444b12f7f">
+		<description>Adventure II (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure II (Adventure Hack).a26" size="4096" crc="368eb47b" sha1="8501444b12f7f9e2103cd2bcf0c8d3f5b7536569"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268fefd25a85f4b">
+		<description>Adventure II Test 20060921 (espire8)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure II Test 20060921 (espire8).a26" size="4096" crc="933712f5" sha1="8fefd25a85f4b1cb1b98b5cbc084cfbe18aa7795"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0db54dcd5f46">
+		<description>Adventure Invaders by Krytol (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Invaders by Krytol (Space Invaders Hack).a26" size="4096" crc="c712f040" sha1="b0db54dcd5f462bd3c2ea949fa1d13c047794694"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263809114e568e1">
+		<description>Adventure New (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure New (Adventure Hack).a26" size="4096" crc="38062a33" sha1="3809114e568e1ffb46e01adf00a082f107317f0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266bf8be2c499cb">
+		<description>Adventure Plus 01 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 01 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="f1a310b7" sha1="6bf8be2c499cbfac5fbd9b15f714b58b1771acce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263e07be4a5756c">
+		<description>Adventure Plus 03 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 03 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="4eb7ca56" sha1="3e07be4a5756cd95b1c22cef65e7a98011b85bd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688f761a2e9dae">
+		<description>Adventure Plus 04 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 04 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="6f898042" sha1="88f761a2e9daecc38b463a4781702a5824ddb765"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aea3111479edc">
+		<description>Adventure Plus 05 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 05 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="d5ef8621" sha1="aea3111479edcab2406b3f4d60f17592a79cb8cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6fee4e705f66">
+		<description>Adventure Plus 09 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 09 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="7387e8d7" sha1="d6fee4e705f66982b54c4d28418114cd10f6fa5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f8c7cf788153">
+		<description>Adventure Plus 10 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 10 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="83da92f3" sha1="6f8c7cf788153e1715652e9eefc5abd1311b1c88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0938e4946325">
+		<description>Adventure Plus 11 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 11 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="ecb7b5ce" sha1="b0938e4946325e9441f7993f4a28487b9202006f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d2c8402ab14c5">
+		<description>Adventure Plus 14 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 14 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="225efaa0" sha1="d2c8402ab14c5321676fb91bb85ce689ab27beaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260b709a51a4356">
+		<description>Adventure Plus 15 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 15 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="832ef4e1" sha1="0b709a51a4356655b6dbd7384c844c762807a745"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fd7e4b38574f9">
+		<description>Adventure Plus 17 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 17 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="91cb7417" sha1="fd7e4b38574f97642bb9378c4f0a531f5a705d5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f7d0b835cfc25">
+		<description>Adventure Plus 18 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 18 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="d4aa5065" sha1="f7d0b835cfc25dc82e1ef163daec919811356493"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262832814e2cb38">
+		<description>Adventure Plus 19 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 19 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="5011f487" sha1="2832814e2cb3808438170aa574ca1c5dd6ac59a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e5bf06a297e1f">
+		<description>Adventure Plus 20 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 20 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="4fa9216b" sha1="e5bf06a297e1fa5c48ab2063880a995d8d7797e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2693308ecab3d29">
+		<description>Adventure Plus 2005 (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 2005 (Adventure Hack).a26" size="4096" crc="a04fd749" sha1="93308ecab3d291de7fa4ffbcd0c807f0c5074a7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26729f28175f115">
+		<description>Adventure Plus 2005 Invis (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 2005 Invis (Adventure Hack).a26" size="4096" crc="0e9f24ab" sha1="729f28175f1154fd51012bd5327bdc20d28c5153"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26663c584de832a">
+		<description>Adventure Plus 22 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 22 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="d2f30866" sha1="663c584de832af86a9a6ae630a0215ecbb4cc51c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260f5a1ef3c9653">
+		<description>Adventure Plus 24 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 24 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="b8687ced" sha1="0f5a1ef3c9653f4aee1e8bdaba049caa95e23507"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2664325e372fbf7">
+		<description>Adventure Plus 26 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 26 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="baa3baea" sha1="64325e372fbf716c790be6f695016178964bf29c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26629daaf0e9102">
+		<description>Adventure Plus 27 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 27 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="68dea653" sha1="629daaf0e91028207b247f7599a593804c87483e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2675fee5fddfac0">
+		<description>Adventure Plus 29 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 29 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="e0e0c753" sha1="75fee5fddfac04418542ca624e13d5fee4bacaf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c023a3f726500">
+		<description>Adventure Plus 30 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 30 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="4841bd5e" sha1="c023a3f726500fb92cce3ed15c0669143bacf317"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267735848dadc14">
+		<description>Adventure Plus 31 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 31 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="4e2d5a91" sha1="7735848dadc143fc61a635d0bca24c9c64d6b867"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f2a0e339bc913">
+		<description>Adventure Plus 34 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 34 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="b6566587" sha1="f2a0e339bc91348325533e91a45c014b23eefd7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2629ca2ef2b2d4b">
+		<description>Adventure Plus 35 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 35 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="f4bece21" sha1="29ca2ef2b2d4be5e683dc6ffaa61b5f49b6a9993"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d444f29866d96">
+		<description>Adventure Plus 36 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 36 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="fdfd5dd4" sha1="d444f29866d969d99846d82762978a79324273ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263b74e11476159">
+		<description>Adventure Plus 37 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 37 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="d9604852" sha1="3b74e114761595d40913a553c69004768d29b072"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26173875dedb982">
+		<description>Adventure Plus 39 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 39 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="7a637861" sha1="173875dedb982a535cdfe7892fae6e1302e7629c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2629ebc243e0aa3">
+		<description>Adventure Plus 40 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 40 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="e12af715" sha1="29ebc243e0aa37dd5039ba68cdc507ec193cbf7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7cfb517aa8ed">
+		<description>Adventure Plus 42 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 42 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="fc34c27a" sha1="a7cfb517aa8ed4000989f62ceb0807bb2ca63527"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca8f093356f96">
+		<description>Adventure Plus 43 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 43 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="a84f7dac" sha1="ca8f093356f96564dc9e7f2bed674ea605950693"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c70ca9d3e191d">
+		<description>Adventure Plus 44 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 44 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="417c8571" sha1="c70ca9d3e191d263d66436e34566077344ef939a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269875b8860c205">
+		<description>Adventure Plus 45 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 45 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="860b570b" sha1="9875b8860c2058d91c2bc7fabe8ea611bc4075a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26128de55b02b6d">
+		<description>Adventure Plus 46 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 46 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="3fdfde52" sha1="128de55b02b6d8b505f879b9c4cc9456731c4481"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262c217794c0f14">
+		<description>Adventure Plus 47 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 47 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="8895ed5b" sha1="2c217794c0f14239ca5447304733c071698dba65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26629e66012cb7f">
+		<description>Adventure Plus 48 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 48 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="36319523" sha1="629e66012cb7f5cc6ac6f4c575a4a5a9e4dbd1c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c6b841ae930bf">
+		<description>Adventure Plus 52 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 52 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="12f8d27f" sha1="c6b841ae930bfd8952e5b02bf3ff2d8dc2462a71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eed3608f1de38">
+		<description>Adventure Plus 53 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 53 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="204d42fa" sha1="eed3608f1de38cf18911cb29cf25a7c3f8bd6dad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263f6378e3b886e">
+		<description>Adventure Plus 54 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 54 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="281b958d" sha1="3f6378e3b886eeb96eb7094b0c18a0ce393da3f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b6fd568a93b88">
+		<description>Adventure Plus 55 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 55 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="1d8f1bdd" sha1="b6fd568a93b888a09e07bf3b4c23a451f6c28692"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262a818e6341ed6">
+		<description>Adventure Plus 57 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 57 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="201522e8" sha1="2a818e6341ed61df031a594984bc6636248cc98b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266ebdc63891986">
+		<description>Adventure Plus 58 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 58 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="0323dd1c" sha1="6ebdc63891986b96f1fd8c0fca7b8d2ab81312b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f830ea8357fc0">
+		<description>Adventure Plus 60 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 60 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="d4c48e25" sha1="f830ea8357fc0382f2b358de3f31977ea60b8955"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2604bb3821148f7">
+		<description>Adventure Plus 61 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 61 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="56de097b" sha1="04bb3821148f787caedcd503991edfae911f0169"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2690ffa2e66588c">
+		<description>Adventure Plus 63 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 63 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="14784b1d" sha1="90ffa2e66588ce8783ec4339bd58e58d29ae06ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f4a76936b4126">
+		<description>Adventure Plus 65 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 65 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="cf1166a2" sha1="f4a76936b41266f70d93e56db05a54ac55bfcc97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2681c404ae16f98">
+		<description>Adventure Plus 66 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 66 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="8b83a6dd" sha1="81c404ae16f9884e078ebb7e74981b1e17733bce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268e9621ec3f53f">
+		<description>Adventure Plus 67 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 67 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="70795127" sha1="8e9621ec3f53f78097af69dd5aec84fa2c6b758a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f9b0504e11af0">
+		<description>Adventure Plus 68 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 68 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="562af7c6" sha1="f9b0504e11af00d0be841348bd2ff001467b02bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268985025dcc110">
+		<description>Adventure Plus 70 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 70 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="04327997" sha1="8985025dcc110d4e14df00453049be4bc54867c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ea8b9fa7beb38">
+		<description>Adventure Plus 71 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 71 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="7229f66b" sha1="ea8b9fa7beb38a18cde583999d74a65ccc19caf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ab23b18a9b9a1">
+		<description>Adventure Plus 72 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 72 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="25fce891" sha1="ab23b18a9b9a1c533750c9445c02ca1106bfa768"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263e62a9c9bc660">
+		<description>Adventure Plus 73 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 73 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="5327085e" sha1="3e62a9c9bc6604b3b09519877372e4c95147f1fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e748129fb0af9">
+		<description>Adventure Plus 77 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 77 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="392c0d2f" sha1="e748129fb0af9b5d57af126bb9198902f310718d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263ab4271659ac1">
+		<description>Adventure Plus 78 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 78 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="ec895b67" sha1="3ab4271659ac1b3f8080185ff2825976c9752cc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269844a910b78f4">
+		<description>Adventure Plus 79 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 79 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="4fd1aece" sha1="9844a910b78f4ee00dfb4e005d963275123379a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2644b774de2185d">
+		<description>Adventure Plus 80 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 80 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="ae10e32c" sha1="44b774de2185dd44955e09c95ba4867b7fe537da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260de2fe3743805">
+		<description>Adventure Plus 81 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 81 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="f25bec2b" sha1="0de2fe37438050e6764706bee6c93b33a36d255c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260908a27770727">
+		<description>Adventure Plus 82 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 82 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="93282fcb" sha1="0908a2777072713ac8813f640b5c5c9384bb0ffb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db1c932611a6b">
+		<description>Adventure Plus 83 (2004) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 83 (2004) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="e04c2a7f" sha1="db1c932611a6baa9f308b1435e15bd30f86b63f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661338e94ae2b1">
+		<description>Adventure Plus 84 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 84 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="a7bc4817" sha1="61338e94ae2b17c52864409a9d6f1248a88b95b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e59781ac34bba">
+		<description>Adventure Plus 86 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 86 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="f4f5b82b" sha1="e59781ac34bba1a041e852228556590ad64d8fa2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262162360060104">
+		<description>Adventure Plus 87 (2005) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 87 (2005) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="c8c04116" sha1="2162360060104cb3a358874dedb490a3968fb56b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696b2f9e79db6a">
+		<description>Adventure Plus 89 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 89 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="0cc268f9" sha1="96b2f9e79db6a25f7aa7736f66d5fe5e56d04bd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dcff68684f9a7">
+		<description>Adventure Plus 91 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 91 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="674b7b42" sha1="dcff68684f9a7dc8c9845f0ceafc2a13f74b5a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26866319fffeba4">
+		<description>Adventure Plus 92 (2003) (Steve Engelhardt) (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus 92 (2003) (Steve Engelhardt) (Adventure Hack).a26" size="4096" crc="e6a12250" sha1="866319fffeba4a667c211c1305056f8ccc7a2f1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2663e833d22e642">
+		<description>Adventure Plus Flashing Warrior Sword (Adventure Hack) (2005) (Raiu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus Flashing Warrior Sword (Adventure Hack) (2005) (Raiu).a26" size="4096" crc="32b04596" sha1="63e833d22e6426fe05bc27e83b5e653947642a02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269ba2d0d39e23e">
+		<description>Adventure Plus Warrior Sword (Adventure Hack) (2005) (Raiu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Plus Warrior Sword (Adventure Hack) (2005) (Raiu).a26" size="4096" crc="1f5da001" sha1="9ba2d0d39e23e8b722d92b33786d822ff83fe50c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2686c7d74beba34">
+		<description>Adventure Test (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Test (Adventure Hack).a26" size="4096" crc="2c30e707" sha1="86c7d74beba34bf7d7c185babf50388d06df17da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268af51d87bd0ec">
+		<description>Adventure Tough Dragons (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure Tough Dragons (Adventure Hack).a26" size="4096" crc="7ac1a5c8" sha1="8af51d87bd0eca47a619ae23086cc97c923eeab1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267cccc70552bb6">
+		<description>Adventure WIP (Black)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure WIP (Black).a26" size="4096" crc="4abfee94" sha1="7cccc70552bb6ed2446663a191817cbd09ec8b5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266ce7a5e32683c">
+		<description>Adventure with Fixed Bat (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure with Fixed Bat (Adventure Hack).a26" size="4096" crc="e3f81e61" sha1="6ce7a5e32683cd2a12d2a587e5ac4fd9415aa6b8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a267f372fc4b3c63">
 		<description>Adventure with invisible dragons 4k (2)</description>
 		<year>????</year>
@@ -2142,6 +4022,316 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a267362b7eedc548">
+		<description>Adventure(Palette_select)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure(Palette_select).a26" size="4096" crc="4602504c" sha1="7362b7eedc548b680721a8d8c77becb1349205f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dcad67cda9bf7">
+		<description>Adventure4WI (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure4WI (Adventure Hack).a26" size="4096" crc="0739b17f" sha1="dcad67cda9bf709b72eae8873d234916ce5bbf05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26377968be80a99">
+		<description>Adventure_Plus_02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_02.a26" size="4096" crc="dfe80f22" sha1="377968be80a998f19d71d8194f7afd0640cd2ad7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26459b78a8ef956">
+		<description>Adventure_Plus_06</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_06.a26" size="4096" crc="abd4a8b8" sha1="459b78a8ef956f97bc19e95f09476d7e48be0f0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd0a4bc9a7c76">
+		<description>Adventure_Plus_07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_07.a26" size="4096" crc="2571521a" sha1="dd0a4bc9a7c7694e2be723abc7dc4f947b85bf56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26569c40effdc24">
+		<description>Adventure_Plus_08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_08.a26" size="4096" crc="c9b0841d" sha1="569c40effdc249edd1f888012b0155b789c1cd29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2664fda9a6afc99">
+		<description>Adventure_Plus_12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_12.a26" size="4096" crc="6ca6fbde" sha1="64fda9a6afc9903aac82572634ab822ef5afc289"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad9b27b123b0e">
+		<description>Adventure_Plus_13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_13.a26" size="4096" crc="4dbdbf61" sha1="ad9b27b123b0e718c7d58d0893d1a88dc5872f43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623ce8b3600939">
+		<description>Adventure_Plus_16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_16.a26" size="4096" crc="f2980f11" sha1="23ce8b3600939fdfd4589c338bd67f4039447942"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261991f1092f2da">
+		<description>Adventure_Plus_21</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_21.a26" size="4096" crc="21723e33" sha1="1991f1092f2da9dcc55af8ec3cf2b4cf1de84d6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a8ff7e84937f">
+		<description>Adventure_Plus_23</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_23.a26" size="4096" crc="051868e5" sha1="4a8ff7e84937f565a39de232ac57c8fc6f380456"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2603c025ae90f66">
+		<description>Adventure_Plus_25</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_25.a26" size="4096" crc="f962dedf" sha1="03c025ae90f6607d1a47fdae6012c432f63b95f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a877e49d06c5">
+		<description>Adventure_Plus_28</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_28.a26" size="4096" crc="53e90d1d" sha1="4a877e49d06c5afd69ea8809264a30257aeaea55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262d379d18b6ce3">
+		<description>Adventure_Plus_32</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_32.a26" size="4096" crc="8e1b89a6" sha1="2d379d18b6ce326a650507d3ca17946066e3b2c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f8595b7876a2f">
+		<description>Adventure_Plus_33</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_33.a26" size="4096" crc="6f62ad96" sha1="f8595b7876a2f55825fed6b87a48e0533942f45f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262b60c61638f9d">
+		<description>Adventure_Plus_41</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_41.a26" size="4096" crc="13d00fd7" sha1="2b60c61638f9da09fa6cfab4517b2f146a1cd987"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f85831c2af08">
+		<description>Adventure_Plus_49</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_49.a26" size="4096" crc="0ee8aa58" sha1="4f85831c2af0887ff435bf37fcceb92e399e2f2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262bb74dd47fa14">
+		<description>Adventure_Plus_50</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_50.a26" size="4096" crc="c56438e3" sha1="2bb74dd47fa14441deacbfb0797a00caed42303f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fe21015f1aa6f">
+		<description>Adventure_Plus_51</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_51.a26" size="4096" crc="dcf225d8" sha1="fe21015f1aa6fe2057a741c05f692b7a057db56b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f06c5a176448b">
+		<description>Adventure_Plus_56</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_56.a26" size="4096" crc="eaa5b2d2" sha1="f06c5a176448b0b479645f84866b3af3b1719732"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26167290eee5ed6">
+		<description>Adventure_Plus_59</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_59.a26" size="4096" crc="fde86af7" sha1="167290eee5ed60e2444640a5621e4d876996d606"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2628964eff36b68">
+		<description>Adventure_Plus_62</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_62.a26" size="4096" crc="4bb128ee" sha1="28964eff36b689893d144e331bdbaf0543f90a6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f0128009d9213">
+		<description>Adventure_Plus_69</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_69.a26" size="4096" crc="7793daeb" sha1="f0128009d921394fba8ae06aab3787282632036e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de689f7c77a61">
+		<description>Adventure_Plus_74</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_74.a26" size="4096" crc="a3d80e7c" sha1="de689f7c77a61b2bf9f5e91093cfb43324970d76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d81308a426b81">
+		<description>Adventure_Plus_75</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_75.a26" size="4096" crc="fd13fd4d" sha1="d81308a426b817be28466f8f66aa4a7d8ad97d66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26acc7b9bbc177b">
+		<description>Adventure_Plus_76</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_76.a26" size="4096" crc="3016d9e3" sha1="acc7b9bbc177b9096ef40bdec7ff84387bb4ac9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d4fdd63667404">
+		<description>Adventure_Plus_85</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_85.a26" size="4096" crc="799929dc" sha1="d4fdd636674049f2ff6679c409b959fef6af28f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269919c02f9b9cb">
+		<description>Adventure_Plus_88</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_88.a26" size="4096" crc="ba280769" sha1="9919c02f9b9cba40c4ff5addff4b85489dff5af7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2677d17a3d86f72">
+		<description>Adventure_Plus_90</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Plus_90.a26" size="4096" crc="6feaaf16" sha1="77d17a3d86f72157e677bd3698e05f4830fa7383"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260359654e20630">
+		<description>Adventure_Tom2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Tom2.a26" size="4096" crc="f14f7f98" sha1="0359654e20630f1d4796af7eba1dc01c42bda5b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d4cc8fb81c397">
+		<description>Adventure_Tom3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Adventure_Tom3.a26" size="4096" crc="a91e0498" sha1="d4cc8fb81c397475621c0383a6e448fd1752a6a1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2684727d20f78de">
 		<description>adv_net</description>
 		<year>????</year>
@@ -2149,6 +4339,126 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="adv_net.a26" size="4096" crc="1177a78e" sha1="84727d20f78de7facef8df6d4d432851867b6261"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26756ad60f69cbe">
+		<description>Agenteqze (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Agenteqze (Combat Hack).a26" size="2048" crc="b99ef10d" sha1="756ad60f69cbeeea3b91ec7ea88cd628eae93c3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2605e200acd52be">
+		<description>Air Raid (NTSC Conversion) (2005) (Peter Rittwage)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air Raid (NTSC Conversion) (2005) (Peter Rittwage)_2.a26" size="4096" crc="c5391fa9" sha1="05e200acd52bea478cad32417a481f96ffce5471"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a9a51405b521a">
+		<description>Air Raiders (1983) (Mattel) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air Raiders (1983) (Mattel) [a1][!].a26" size="4096" crc="618ee89c" sha1="a9a51405b521ae0b465f521fa098e8b3aedd018b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2639a98b42f0670">
+		<description>Air Raiders (1984) (Mattel) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air Raiders (1984) (Mattel) [t1].a26" size="4096" crc="0ecf1e45" sha1="39a98b42f0670dfe6a842645f09f24583ae8ee60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b6541e2b3a60">
+		<description>Air Theme 20071123</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air Theme 20071123.a26" size="4096" crc="9e264ad8" sha1="4b6541e2b3a6026e3a483278ccc297eb5d8bd1ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26055c7e4186626">
+		<description>Air-Sea Battle (1978) (Atari) (PAL) [p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air-Sea Battle (1978) (Atari) (PAL) [p1][!].a26" size="4096" crc="b090c2ec" sha1="055c7e4186626fdb022a89eb8d8c3078acb58112"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3897fc60585e">
+		<description>Air-Sea Battle (1978) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air-Sea Battle (1978) (Atari) [o1].a26" size="4096" crc="284b3a2c" sha1="d3897fc60585e420ae816a2db909400f6cbadd88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26af5b9f33ccb77">
+		<description>Air-Sea Battle (1978) (Atari) [o1][h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air-Sea Battle (1978) (Atari) [o1][h1].a26" size="4096" crc="2a765130" sha1="af5b9f33ccb7778b42957da4f20f2bc000992366"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eac7d1fb227d2">
+		<description>Air-Sea Battle (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Air-Sea Battle (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="5865356e" sha1="eac7d1fb227d257a206a60da4bf76ee5e571b394"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad9d8ea61e0c8">
+		<description>Air-Sea Battle (32-in-1) (Atari) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air-Sea Battle (32-in-1) (Atari) (PAL) [o1].a26" size="4096" crc="403a4354" sha1="ad9d8ea61e0c87caeb004e631733e56b65d1d502"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615ba14e3b3cf7">
+		<description>Air-Sea Battle - Black (Air-Sea Battle Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Air-Sea Battle - Black (Air-Sea Battle Hack).a26" size="2048" crc="8065b981" sha1="15ba14e3b3cf7cd1cf93d49380c71851141598ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d4e690914ee15">
+		<description>Air-Sea_Battle(palette_select)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Air-Sea_Battle(palette_select).a26" size="2048" crc="2c3266d9" sha1="d4e690914ee15a7d2244e65c3df8d5505f0fab2a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2182,6 +4492,286 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26e0596805d6f22">
+		<description>Airwolf Second Season by fbventure (Laser Blast Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Airwolf Second Season by fbventure (Laser Blast Hack).a26" size="2048" crc="8196ddd5" sha1="e0596805d6f22209236e7e1179dec2274d99baa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f352a0c0f96c3">
+		<description>AIRWOLF3_fabventure_hack_2006_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AIRWOLF3_fabventure_hack_2006_.a26" size="4096" crc="c6c80abb" sha1="f352a0c0f96c3004081f785b75821e029cd51df1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260b2b129136580">
+		<description>AIRWOLF_fbventure_Hack_2006_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AIRWOLF_fbventure_Hack_2006_.a26" size="4096" crc="3444c9a7" sha1="0b2b12913658013a6f2c2548b7dc990702f95313"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b2d8845abfd64">
+		<description>Air_Raiders_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Air_Raiders_NTSC(Supercharger).a26" size="4096" crc="e3a1a9c1" sha1="b2d8845abfd64fe9509a22e331fc20fc487a0a2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262418799b1f2ad">
+		<description>Al Eufrasio_1 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Al Eufrasio_1 (Combat Hack).a26" size="2048" crc="4a362b3b" sha1="2418799b1f2ad3a6af4d7aa3ca4765eff7c327b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a8dface510147">
+		<description>Al Eufrasio_2 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Al Eufrasio_2 (Combat Hack).a26" size="2048" crc="e2024b15" sha1="a8dface5101476babe2e67410e060b4f6884444e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696c892d557dd2">
+		<description>Al Eufrasio_3 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Al Eufrasio_3 (Combat Hack).a26" size="2048" crc="b0f86f9f" sha1="96c892d557dd2ba59cb4606f33b6b7acc0a0d074"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260417eba084c7c">
+		<description>Al Kuester_1 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Al Kuester_1 (Combat Hack).a26" size="2048" crc="bc97f3a1" sha1="0417eba084c7c01933061a9b5c3868175353558e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26137471bc62fa5">
+		<description>Al Kuester_2 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Al Kuester_2 (Combat Hack).a26" size="2048" crc="4d254d43" sha1="137471bc62fa5bc3c7eb6d1c1ffce9dd45e1ce21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26638aeabc37012">
+		<description>Al Kuester_3 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Al Kuester_3 (Combat Hack).a26" size="2048" crc="cd75231f" sha1="638aeabc370125197b7694b465a6bed0eef1d8cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fec46b2ad614e">
+		<description>Al Kuester_4 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Al Kuester_4 (Combat Hack).a26" size="2048" crc="33513c47" sha1="fec46b2ad614e0205ea26987d53cb242eea3e1a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d57ec980998a">
+		<description>Alex Grosholz_1 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alex Grosholz_1 (Indy 500 Hack).a26" size="4096" crc="add8e6af" sha1="0d57ec980998a7e4a002deef4464639c0b5cba16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d77d9de93242b">
+		<description>Alex Grosholz_2 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alex Grosholz_2 (Indy 500 Hack).a26" size="4096" crc="5853c7d6" sha1="d77d9de93242ba495cfdd0929ab29249b93974bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c28c6a2dd8b0c">
+		<description>alfred</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="alfred.a26" size="4096" crc="9f8c676e" sha1="c28c6a2dd8b0cc051115b9ed65be84537398f30e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2634ad05f170efe">
+		<description>Alien (SuperCharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien (SuperCharger).a26" size="4096" crc="cd72c0a9" sha1="34ad05f170efe9eec29b84bcad30f99f3ce703f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26722d323150ceb">
+		<description>Alien 8k (WIP) mod by Kurt Howe 2005-12-10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alien 8k (WIP) mod by Kurt Howe 2005-12-10.a26" size="8192" crc="db56540a" sha1="722d323150cebc30d9c25124afa0c6e903dc606e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261e5a355b19390">
+		<description>Alien 8k 2005-12-04 (Kurt Howe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alien 8k 2005-12-04 (Kurt Howe).a26" size="8192" crc="5883f6a4" sha1="1e5a355b19390f995b9c30bee600b7b4f6a39b01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e4647614abdfd">
+		<description>Alien 8k 2005-12-28 (Kurt Howe) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alien 8k 2005-12-28 (Kurt Howe) (PAL).a26" size="8192" crc="142273ba" sha1="e4647614abdfdc57d08774f9cc2da7679638aad2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c7da711941fbb">
+		<description>Alien 8k 2005-12-28 (MYSC) (Kurt Howe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alien 8k 2005-12-28 (MYSC) (Kurt Howe).a26" size="8192" crc="315d9fe1" sha1="c7da711941fbb9833330cd34f2500be84f3a7683"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26252bbf5450114">
+		<description>Alien 8k 2006-01-04 (Kurt Howe) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alien 8k 2006-01-04 (Kurt Howe) (PAL).a26" size="8192" crc="cdf405ab" sha1="252bbf54501143182675aa7c628cc42037873b97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260349da67a0c22">
+		<description>Alien 8k 2006-01-04 (Kurt Howe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alien 8k 2006-01-04 (Kurt Howe).a26" size="8192" crc="a56b9fb0" sha1="0349da67a0c2207735d0ba6d06d70fdf0121e73e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2674ffba732ff20">
+		<description>Alien Ants by neotokeo2001 (Thunderground Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien Ants by neotokeo2001 (Thunderground Hack).a26" size="4096" crc="ec18b7ca" sha1="74ffba732ff20424c56356318becf3848cb0738f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2678d44d38f4830">
+		<description>Alien Attack by neotokeo2001 (Gremlins Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alien Attack by neotokeo2001 (Gremlins Hack).a26" size="8192" crc="0984e8e3" sha1="78d44d38f4830df0b246c091bc6d811600f5c250"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26da491c547f262">
+		<description>Alien Battle (Air-Sea Battle Hack) (PAL) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Alien Battle (Air-Sea Battle Hack) (PAL) [a1].a26" size="2048" crc="5bba6ef1" sha1="da491c547f2629cfe31e23317fb9d182f7606f19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267299dd38f6f9f">
+		<description>Alien Battle (Air-Sea Battle Hack) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Alien Battle (Air-Sea Battle Hack) (PAL).a26" size="2048" crc="d2543ef0" sha1="7299dd38f6f9f0358b32005e72f48a8cb73877ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26190076d873b47">
+		<description>Alien Battle (Air-Sea Battle Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Alien Battle (Air-Sea Battle Hack) [a1].a26" size="2048" crc="ce53499f" sha1="190076d873b47c824f9e46adc00e5c9973f784a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26964027a45df76">
+		<description>Alien Battle V1.2WIP (Air-Sea Battle Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Alien Battle V1.2WIP (Air-Sea Battle Hack).a26" size="2048" crc="ad55c0fe" sha1="964027a45df76fc047018e5bade3a53b7b584231"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265f7ce46efbac9">
+		<description>Alien Black (Alien Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien Black (Alien Hack) [a1].a26" size="4096" crc="d888c678" sha1="5f7ce46efbac942d01c14c21660cc44c49be001b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2620dda56848916">
 		<description>Alien Holocaust (demo-playable) (2023-12-24)(Teknamic Software)(BR)</description>
 		<year>????</year>
@@ -2199,6 +4789,486 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Alien Holocaust II - Invasion Earth (demo-playable) (2024-02-06)(Teknamic Software)(BR).bin" size="32768" crc="2cbe6bb6" sha1="61bb02aa16c6e26f84fd874f0d2b9f9de2915d7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b99d5850bec87">
+		<description>Alien Menace (2005)(neotokeo2001)(NTSC)(beta)[h][River Raid]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien Menace (2005)(neotokeo2001)(NTSC)(beta)[h][River Raid].a26" size="4096" crc="821d9ea4" sha1="b99d5850bec875cdc522fc7eb6de5a67b791cfec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262164209efd0f5">
+		<description>Alien Menace (2005)(neotokeo2001)(NTSC)[h][!][River Raid]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien Menace (2005)(neotokeo2001)(NTSC)[h][!][River Raid].a26" size="4096" crc="4fe6957b" sha1="2164209efd0f5acdbddb2a5c3cb0148eb73c3d4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2680e140cb66a0e">
+		<description>Alien Pac-Man (Rev 2) by PacManPlus (Alien Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien Pac-Man (Rev 2) by PacManPlus (Alien Hack).a26" size="4096" crc="4e707625" sha1="80e140cb66a0e93eba562d0bf302ffa1b9bf9782"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262a9272106bd90">
+		<description>Alien Planet (2004)(neotokeo2001)(NTSC)[h][!][Pitfall!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien Planet (2004)(neotokeo2001)(NTSC)[h][!][Pitfall!].a26" size="4096" crc="6a67803e" sha1="2a9272106bd9027f50bc95ec3ff3cfbda879e842"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26288319af655a1">
+		<description>Alien Planet WIP by neotokeo2001 (Pitfall! Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien Planet WIP by neotokeo2001 (Pitfall! Hack).a26" size="4096" crc="b1fc1cf1" sha1="288319af655a19747f57521565a7e1b70ff572b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266ada5ffc9bee1">
+		<description>Alien Wolf Squisher (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Alien Wolf Squisher (PD).a26" size="2048" crc="f2cecf3f" sha1="6ada5ffc9bee1e2648510835a26802c2d107b2e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268955e91e05871">
+		<description>Alienated Level Balloons and Umbrellas (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alienated Level Balloons and Umbrellas (Space Invaders Hack).a26" size="4096" crc="318d7248" sha1="8955e91e0587174812da7109f4452f9144af4314"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26986e09c878f6e">
+		<description>Alienated Level Bricks and Saucers (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alienated Level Bricks and Saucers (Space Invaders Hack).a26" size="4096" crc="b7245716" sha1="986e09c878f6e8bbc05eca5eede91f37fe997e03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c18736b7a3224">
+		<description>AlienBattle_Hack (NTSC) 2006-01-31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AlienBattle_Hack (NTSC) 2006-01-31.a26" size="2048" crc="463d2a8f" sha1="c18736b7a3224a5e70b4e1de7e44bb3cce6dd030"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266e202ca1a477a">
+		<description>aliengreedii011608a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="aliengreedii011608a.bas.a26" size="8192" crc="3d367332" sha1="6e202ca1a477a0203c80f46b09d41c4e476c26f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260630194afd6b0">
+		<description>aliengreedii011808a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="aliengreedii011808a.bas.a26" size="8192" crc="901b0fd1" sha1="0630194afd6b0363d22cafcc12bc95359f0bd0bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b5729e5f25eac">
+		<description>aliengreedii011908c.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="aliengreedii011908c.bas.a26" size="8192" crc="a233eb8a" sha1="b5729e5f25eacc1ddc8e80de76ca9895c365a4da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262973fbb1bf23e">
+		<description>aliengreedii012208.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="aliengreedii012208.bas.a26" size="8192" crc="0a9e7bf3" sha1="2973fbb1bf23e90d60543638757f7f0aded9fac8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2642232db2b0993">
+		<description>Aliens vs The Killer Bees by Michael Biggs (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Aliens vs The Killer Bees by Michael Biggs (PD).a26" size="4096" crc="d443be7d" sha1="42232db2b0993cb9e57a81a8e3f90462aecbaab7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260f4b9cff5598e">
+		<description>Alien_Ants(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien_Ants(Supercharger).a26" size="4096" crc="94b10091" sha1="0f4b9cff5598e2a5f05c4d3024b78abd3ef59d6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c873cf65f4d25">
+		<description>Alien_Black</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien_Black.a26" size="4096" crc="3d957606" sha1="c873cf65f4d25ab7e1abda43b770691c551fbb18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26924e95a58c66f">
+		<description>Alien_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien_NTSC(Supercharger).a26" size="4096" crc="8aade3ce" sha1="924e95a58c66fd44e0a27bd949b7aa330e3722b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26018475a0c5616">
+		<description>Alien_NTSC(Supercharger-Black)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien_NTSC(Supercharger-Black).a26" size="4096" crc="3f442029" sha1="018475a0c561609753c63244e364362aa0d10dc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262673f42197589">
+		<description>Alien_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien_PAL60(Supercharger).a26" size="4096" crc="0d1435b1" sha1="2673f421975890b8e0ee2f889d2183b354e2ae6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26945ab89ae50c9">
+		<description>Alien_PAL60(Supercharger-Black)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alien_PAL60(Supercharger-Black).a26" size="4096" crc="aafaee15" sha1="945ab89ae50c9db66ca9ef424e8234f8849f699d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26acd249590ca93">
+		<description>All-terrain Combat (2005-05-18) (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="All-terrain Combat (2005-05-18) (Combat Hack).a26" size="4096" crc="932a05f2" sha1="acd249590ca9326bc9347f0b50916dc09f5e3073"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268de85354d9da5">
+		<description>All-terrain tank_jul9 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="All-terrain tank_jul9 (PD).a26" size="4096" crc="0301c4de" sha1="8de85354d9da5d9a97e13aa07ad9b0205f3079d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265380da200d62a">
+		<description>Allen Manley_1 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Allen Manley_1 (Indy 500 Hack).a26" size="4096" crc="e4d1a404" sha1="5380da200d62aed20974375258a5437f45853c6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca78964520fd5">
+		<description>Allen Manley_2 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Allen Manley_2 (Indy 500 Hack).a26" size="4096" crc="7d88a28f" sha1="ca78964520fd57e2d5fae22d3b2ad9f1f1641e1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268c48bcfa9a315">
+		<description>Allen Manley_3 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Allen Manley_3 (Indy 500 Hack).a26" size="4096" crc="27e29991" sha1="8c48bcfa9a31551c8346bee01e3e96f89fb9b7f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2673e713505cb78">
+		<description>allia</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="allia.a26" size="4096" crc="0d6c9729" sha1="73e713505cb7834ce26e02992ce896eda9629f23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632c615956879d">
+		<description>Alpha Beam with Ernie (1985) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alpha Beam with Ernie (1985) (Atari) (PAL) [a1][!].a26" size="8192" crc="943e8e12" sha1="32c615956879dae5ac2a13976c9be72829e9e483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f70de77afbbe">
+		<description>Alpha Demo - The Beta Demo (2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Alpha Demo - The Beta Demo (2002) (MP).a26" size="2048" crc="b6b4da71" sha1="8f70de77afbbe8b6359135e323d429f2c0f70056"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f22872b1a1d61">
+		<description>Alpha Demo - The Beta Demo 2 (2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alpha Demo - The Beta Demo 2 (2002) (MP).a26" size="4096" crc="e6f91e80" sha1="f22872b1a1d6156f81335e605b83c180faae6209"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a12e2c08d7b09">
+		<description>Alpine_Ski_PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Alpine_Ski_PAL.a26" size="8192" crc="be381530" sha1="a12e2c08d7b09d1383e0e92a3dee579270cb54d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b6e52169f400e">
+		<description>Alternate Adventure by PacManPlus (Adventure Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Alternate Adventure by PacManPlus (Adventure Hack).a26" size="4096" crc="74a6c354" sha1="b6e52169f400e0a6217755825ed9e829636b0b1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26316c851551956">
+		<description>Amanda Invaders (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amanda Invaders (Space Invaders Hack).a26" size="4096" crc="0b092152" sha1="316c851551956c8e73956ee073f918380b9fa778"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2679032164eb8e7">
+		<description>AmericanGladiatorAssault.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AmericanGladiatorAssault.bas.a26" size="4096" crc="fa4ffe41" sha1="79032164eb8e705d8f0c6288290b26862c81ef84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659657177bc7e2">
+		<description>Amidar DS (2005) (TJ) (Amidar Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amidar DS (2005) (TJ) (Amidar Hack).a26" size="4096" crc="0cc5f499" sha1="59657177bc7e2eaf7736ac121defdd891328ae00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f4688fc8278a2">
+		<description>Amidar DS (Fast Enemies) (2004) (TJ) (Amidar Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amidar DS (Fast Enemies) (2004) (TJ) (Amidar Hack).a26" size="4096" crc="851ccf3d" sha1="f4688fc8278a2c2040b3eaf90ef7323f6523555a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a94b6a65f3474">
+		<description>Amidar-DS_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amidar-DS_NTSC(Supercharger).a26" size="4096" crc="593de0b4" sha1="a94b6a65f3474b52ca29c98fe48da578bf697d8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2676d687861de5f">
+		<description>Amidar-DS_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amidar-DS_PAL60(Supercharger).a26" size="4096" crc="7216c472" sha1="76d687861de5f2cb85674bb6285eaac80a5884d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c9eb5557a2cce">
+		<description>Amidar_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amidar_NTSC(Supercharger).a26" size="4096" crc="bc2a58ab" sha1="c9eb5557a2cce4d1dc0cee98f51104e191e348d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265f778b1086b29">
+		<description>Amidar_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amidar_PAL60(Supercharger).a26" size="4096" crc="97017c6d" sha1="5f778b1086b297707d83b17a073f97f51f4eec6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e26aac3d08e2f">
+		<description>Amiga Bigger Boing 2600 Demo by David Galloway (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Amiga Bigger Boing 2600 Demo by David Galloway (PD).a26" size="8192" crc="f10644d8" sha1="e26aac3d08e2fe79fe07b881db0dc20510409bf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cff48aac36a10">
+		<description>Amiga Boing 2600! - Bigger Boing (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Amiga Boing 2600! - Bigger Boing (PD).a26" size="8192" crc="f79fbc60" sha1="cff48aac36a102aa19223dba6738ea53d4bc1e35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd75d2d70bc53">
+		<description>Amiga Boing! (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amiga Boing! (PD) [a1].a26" size="4096" crc="dde8d9aa" sha1="dd75d2d70bc53ef334e9eafaa8fca9b902ad9d16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266fdc66e9d6b2a">
+		<description>Amiga Boing! (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amiga Boing! (PD).a26" size="4096" crc="b225234c" sha1="6fdc66e9d6b2a7669b729f200031b630afc2e737"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0096bc12878d">
+		<description>Amiga Boing! 2.0 - RC2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Amiga Boing! 2.0 - RC2 (PD).a26" size="32768" crc="910aacbe" sha1="b0096bc12878d35cc016a211d14128f5af945268"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cdd34f3591cc4">
+		<description>Amiga Boing! 2.0Flicker (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Amiga Boing! 2.0Flicker (PD).a26" size="16384" crc="d4141ac6" sha1="cdd34f3591cc4b22cb45ce6be069115fda2cf8ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f56efc2674e8">
+		<description>AmigaBoing2_0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="AmigaBoing2_0.a26" size="8192" crc="e7f7f719" sha1="6f56efc2674e82846923ac49d3cfc367a146541a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2671168786a3a96">
+		<description>Amityville Horror, The (Haunted House Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amityville Horror, The (Haunted House Hack).a26" size="4096" crc="7aec34cd" sha1="71168786a3a9695a334324afbaa84077286b7585"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269919f5f359d47">
+		<description>Amoebaoids by Jamcat (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Amoebaoids by Jamcat (Asteroids Hack).a26" size="8192" crc="1c2bb11b" sha1="9919f5f359d474317b5676e624f18628fb7a27ca"/>
 			</dataarea>
 		</part>
 	</software>

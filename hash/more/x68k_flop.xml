@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 471 -->
+<!-- Number of items in this list = 472 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -4293,22 +4293,32 @@
 		</part>
 	</software>
 	<software name="x68a42f0d10c05b5">
-		<description>Valist Leznalt (1992)(Amorphous)(1)</description>
+		<description>Valist Leznalt (1992)(Amorphous)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Valist Leznalt (1992)(Amorphous)(1).xdf" size="1261568" crc="22eafcc8" sha1="a42f0d10c05b5731f88635c38e31bb4f00e06f7d"/>
+				<rom name="Valist Leznalt (1992)(Amorphous)(d1).xdf" size="1261568" crc="22eafcc8" sha1="a42f0d10c05b5731f88635c38e31bb4f00e06f7d"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x68ed4bfc69412c6">
-		<description>Valist Leznalt (1992)(Amorphous)(2)</description>
+		<description>Valist Leznalt (1992)(Amorphous)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Valist Leznalt (1992)(Amorphous)(2).xdf" size="1261568" crc="0fcc248a" sha1="ed4bfc69412c68ef60fee2c658e3fd35d624264f"/>
+				<rom name="Valist Leznalt (1992)(Amorphous)(d2).xdf" size="1261568" crc="0fcc248a" sha1="ed4bfc69412c68ef60fee2c658e3fd35d624264f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f1f9730717194">
+		<description>Valist Leznalt (1992)_(Amorphous)(d1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Valist Leznalt (1992)_(Amorphous)(d1).xdf" size="1261568" crc="0b09176f" sha1="f1f973071719461251631bebe62b40f1873c91b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4463,52 +4473,52 @@
 		</part>
 	</software>
 	<software name="x68114c9dae89445">
-		<description>Will no Dengon (19xx)(Cocktail)(1)</description>
+		<description>Will no Dengon (19xx)(Cocktail)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Will no Dengon (19xx)(Cocktail)(1).hdm" size="1261568" crc="b141c83b" sha1="114c9dae89445fb7fb318be7d29f883b587dc0ef"/>
+				<rom name="Will no Dengon (19xx)(Cocktail)(d1).hdm" size="1261568" crc="b141c83b" sha1="114c9dae89445fb7fb318be7d29f883b587dc0ef"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x6896004d004c532">
-		<description>Will no Dengon (19xx)(Cocktail)(2)</description>
+		<description>Will no Dengon (19xx)(Cocktail)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Will no Dengon (19xx)(Cocktail)(2).hdm" size="1261568" crc="fbcb6166" sha1="96004d004c5325e0119f4e91f0c7e69002f3dbf8"/>
+				<rom name="Will no Dengon (19xx)(Cocktail)(d2).hdm" size="1261568" crc="fbcb6166" sha1="96004d004c5325e0119f4e91f0c7e69002f3dbf8"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x688edd5713bc1ad">
-		<description>Will no Dengon (19xx)(Cocktail)(3)</description>
+		<description>Will no Dengon (19xx)(Cocktail)(d3)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Will no Dengon (19xx)(Cocktail)(3).hdm" size="1261568" crc="2feb1086" sha1="8edd5713bc1ad7fc6ff51fd45d3c7bce60e81297"/>
+				<rom name="Will no Dengon (19xx)(Cocktail)(d3).hdm" size="1261568" crc="2feb1086" sha1="8edd5713bc1ad7fc6ff51fd45d3c7bce60e81297"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x682bc2543c82c86">
-		<description>Wind Trooper (1993)(Earth&amp;Moon)(1)</description>
+		<description>Wind Trooper (1993)(Earth&amp;Moon)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Wind Trooper (1993)(Earth&amp;Moon)(1).xdf" size="1261568" crc="b7e55167" sha1="2bc2543c82c86ad82e894dcb12f5b15499443dc4"/>
+				<rom name="Wind Trooper (1993)(Earth&amp;Moon)(d1).xdf" size="1261568" crc="b7e55167" sha1="2bc2543c82c86ad82e894dcb12f5b15499443dc4"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x6875e0ce2a276dc">
-		<description>Wind Trooper (1993)(Earth&amp;Moon)(2)</description>
+		<description>Wind Trooper (1993)(Earth&amp;Moon)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Wind Trooper (1993)(Earth&amp;Moon)(2).xdf" size="1261568" crc="26f7595d" sha1="75e0ce2a276dcdcd5d7ba4b7db0b04a9961af3a5"/>
+				<rom name="Wind Trooper (1993)(Earth&amp;Moon)(d2).xdf" size="1261568" crc="26f7595d" sha1="75e0ce2a276dcdcd5d7ba4b7db0b04a9961af3a5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4523,42 +4533,42 @@
 		</part>
 	</software>
 	<software name="x681e14fea1542fb">
-		<description>World Court (1990)(SPS)(1)</description>
+		<description>World Court (1990)(SPS)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="World Court (1990)(SPS)(1).hdm" size="1261568" crc="8276e65b" sha1="1e14fea1542fb5d61c059a8ca679be71e05df126"/>
+				<rom name="World Court (1990)(SPS)(d1).hdm" size="1261568" crc="8276e65b" sha1="1e14fea1542fb5d61c059a8ca679be71e05df126"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x6846ffdd494164a">
-		<description>World Court (1990)(SPS)(2)</description>
+		<description>World Court (1990)(SPS)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="World Court (1990)(SPS)(2).hdm" size="1261568" crc="0a4de675" sha1="46ffdd494164a7845b63feeb1679ac43fdf29325"/>
+				<rom name="World Court (1990)(SPS)(d2).hdm" size="1261568" crc="0a4de675" sha1="46ffdd494164a7845b63feeb1679ac43fdf29325"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x68ec5578a151140">
-		<description>World Stadium (1987)(SPS)(1)</description>
+		<description>World Stadium (1987)(SPS)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="World Stadium (1987)(SPS)(1).hdm" size="1261568" crc="195e2014" sha1="ec5578a1511402a75e32440bac7defe3bde68f3b"/>
+				<rom name="World Stadium (1987)(SPS)(d1).hdm" size="1261568" crc="195e2014" sha1="ec5578a1511402a75e32440bac7defe3bde68f3b"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x686f23b19308af4">
-		<description>World Stadium (1987)(SPS)(2)</description>
+		<description>World Stadium (1987)(SPS)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="World Stadium (1987)(SPS)(2).hdm" size="1261568" crc="bfc9c4fa" sha1="6f23b19308af4a8faebea74b2220065ca304c8c0"/>
+				<rom name="World Stadium (1987)(SPS)(d2).hdm" size="1261568" crc="bfc9c4fa" sha1="6f23b19308af4a8faebea74b2220065ca304c8c0"/>
 			</dataarea>
 		</part>
 	</software>

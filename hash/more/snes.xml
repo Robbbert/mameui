@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3560 -->
+<!-- Number of items in this list = 3647 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -8002,6 +8002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns4716e9f59df3e">
+		<description>F-Mario (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="F-Mario (SMW1 Hack).smc" size="2097664" crc="9a48fe27" sha1="4716e9f59df3ef446efe8e01e6ebb7fccaa4d263"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns4ced7dfee5dca">
 		<description>fadefix (SMW1 Hack)</description>
 		<year>????</year>
@@ -8119,6 +8129,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Feda - The Emblem of Justice (Japan) [En by Magic Destiny+Stealth v1.01].sfc" size="3145728" crc="b1d0c736" sha1="9ceea4e3e978639bfe3f4fe343323d0374081c1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4e25a7ebbb695">
+		<description>Feda - The Emblem of Justice (Japan)[En v0.95 by Stealth]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Feda - The Emblem of Justice (Japan)[En v0.95 by Stealth].sfc" size="3145728" crc="8a9c36a3" sha1="4e25a7ebbb695af523763f7757355df0a4217754"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8339,6 +8359,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Final Fantasy II (USA) [Enhancement Hack v1.0Beta by SirRob] (Balance+Name Modernization).sfc" size="1048576" crc="763cf28e" sha1="9fad5613f2cf9d4c84a26a13061a551ee97dd7b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6343ece5fe21f">
+		<description>Final Fantasy II is Easy Type (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Final Fantasy II is Easy Type (hack).smc" size="1048576" crc="e1af9f55" sha1="6343ece5fe21f2ae485dfac39ef1fb3da12b843e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns63c717847b7d8">
+		<description>Final Fantasy II is Easy Type (hack)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Final Fantasy II is Easy Type (hack)_1.smc" size="1049088" crc="634a53ab" sha1="63c717847b7d8a6360972647c4e91d43132d2159"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8572,6 +8612,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb8907041a3f20">
+		<description>Final Fantasy III - The Eternal Crystals (hack) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Final Fantasy III - The Eternal Crystals (hack) (2).smc" size="4194816" crc="ffe7b71c" sha1="b8907041a3f20092c7cbaf9d831ced86bb54ad0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8094bb5e5403f">
+		<description>Final Fantasy III - The Eternal Crystals (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fantasy III - The Eternal Crystals (hack).smc" size="4194304" crc="8d82b7f9" sha1="8094bb5e5403fe26ad78f3f50ecbb11f2f0df651"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse58339f844273">
 		<description>Final Fantasy III v1.0 (U) [Final Fantasy III AI script mover]</description>
 		<year>????</year>
@@ -8702,6 +8762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsd7a0a5d4a19b8">
+		<description>Final Fantasy Super Moogle World (demo2) (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Final Fantasy Super Moogle World (demo2) (SMW1 Hack).smc" size="2097152" crc="6d07f988" sha1="d7a0a5d4a19b822feee46489f01bb3f1472ceb73"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns877eca985bfab">
 		<description>Final Fantasy V (J) [T+Chi(Simp)_Boco]</description>
 		<year>????</year>
@@ -8789,6 +8859,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Final Fantasy VI (J)(1994)(Squaresoft).sfc" size="3145728" crc="45ef5ac8" sha1="1c6a6dd90d3463f4532202199885a2c0e9a485f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2773801e44947">
+		<description>Final Fantasy VI (Japan) [En v1.2b by RPGOne] [All Bug Fixes]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fantasy VI (Japan) [En v1.2b by RPGOne] [All Bug Fixes].sfc" size="4194304" crc="7ec72a6c" sha1="2773801e44947f78e444705aaa9d301e2be6ba36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1d0d8739e706d">
+		<description>Final Fantasy VI (Japan) [En v1.2b by RPGOne]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fantasy VI (Japan) [En v1.2b by RPGOne].sfc" size="4194304" crc="bb80a273" sha1="1d0d8739e706d3f5fb41a4c0cd03774961354d39"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8962,6 +9052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns23a0cfdcc2628">
+		<description>Final Fight 2 (U) [T+Fre_terminus]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Final Fight 2 (U) [T+Fre_terminus].smc" size="1572864" crc="2d879048" sha1="23a0cfdcc262876712d56cb028e5934fc17f8ff1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns462ce5dc82a54">
 		<description>Final Fight 2 (U)(1993)(Capcom)</description>
 		<year>????</year>
@@ -9062,6 +9162,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsce791339b3b0a">
+		<description>Fire Emblem - Marusu no Keifu (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Marusu no Keifu (hack).smc" size="4194816" crc="3c244f90" sha1="ce791339b3b0a09b4bd68022b2a18c17c9b1bb0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1dba5f6ec775c">
+		<description>Fire Emblem - Monshou no Nazo (Japan) [En v0.98 by RPGuy96] (~Fire Emblem - Mystery of the Emblem)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Monshou no Nazo (Japan) [En v0.98 by RPGuy96] (~Fire Emblem - Mystery of the Emblem).sfc" size="4194304" crc="3e9aa21a" sha1="1dba5f6ec775c3393d4ad981d828a91f56c2372d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf0784078d9cef">
 		<description>Fire Emblem - Monshou no Nazo hard edition (080315)</description>
 		<year>????</year>
@@ -9069,6 +9189,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Fire Emblem - Monshou no Nazo hard edition (080315).sfc" size="3145728" crc="8cf873a9" sha1="f0784078d9cefcb830c8001a53b4b05ce4295608"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb52ff99f3ff33">
+		<description>Fire Emblem - Monshou no Nazo hard edition (080315)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Fire Emblem - Monshou no Nazo hard edition (080315).smc" size="3146240" crc="1ce868c7" sha1="b52ff99f3ff338073569a0bdc9bfc374aaf2a2b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9132,6 +9262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns2681f824b5e8d">
+		<description>Fire Emblem - narga no Keifu (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - narga no Keifu (hack).smc" size="4194816" crc="71e78383" sha1="2681f824b5e8d65ec1ca01dd89ea60ba5bcf9816"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snscf310f73e45b8">
 		<description>Fire Emblem - narga no Keifu with another map (hack) (2)</description>
 		<year>????</year>
@@ -9139,6 +9279,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fire Emblem - narga no Keifu with another map (hack) (2).sfc" size="4194304" crc="729acc89" sha1="cf310f73e45b8ddb1fb60719e08898423b65e1a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf0cebe0be59f5">
+		<description>Fire Emblem - narga no Keifu with another map (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - narga no Keifu with another map (hack).smc" size="4194816" crc="fd4ec2bf" sha1="f0cebe0be59f5b022869771a54c99ae9d939d8f8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9152,6 +9302,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns8a0c5ededfb06">
+		<description>Fire Emblem - pedigree of frog V1.2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - pedigree of frog V1.2.smc" size="4194816" crc="e8783743" sha1="8a0c5ededfb06dc61ffd736588e63583c79a2803"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4c854a99a1f5b">
+		<description>Fire Emblem - Seisen no Keifu (12 holy fighters edition)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Seisen no Keifu (12 holy fighters edition).smc" size="4194304" crc="3c0696fb" sha1="4c854a99a1f5bf2fff58123a2a7013970189013b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5047825db0f95">
+		<description>Fire Emblem - Seisen no Keifu (12 holy fighters edition)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu (12 holy fighters edition)_1.smc" size="4194816" crc="ff1ef79d" sha1="5047825db0f95416dfa5360c778954b18083a43a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns564dc25ca43c6">
 		<description>Fire Emblem - Seisen no Keifu (balance adjusted edition) (2)</description>
 		<year>????</year>
@@ -9159,6 +9339,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fire Emblem - Seisen no Keifu (balance adjusted edition) (2).sfc" size="4194304" crc="4c75abba" sha1="564dc25ca43c639682a2a06f9f0e008c318b3281"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb11a185632851">
+		<description>Fire Emblem - Seisen no Keifu (balance adjusted edition)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu (balance adjusted edition).smc" size="4194816" crc="0d043382" sha1="b11a18563285100bc94865e705efec97dc26835e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse84da53aa2c98">
+		<description>Fire Emblem - Seisen no Keifu (crazy edtiion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu (crazy edtiion).smc" size="4194816" crc="4b7b9588" sha1="e84da53aa2c98b7e9dadce090f5b964851e9e3ca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9172,6 +9372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb3d4f94740cf0">
+		<description>Fire Emblem - Seisen no Keifu (fala edtiion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu (fala edtiion).smc" size="4194816" crc="464358d8" sha1="b3d4f94740cf0e5af4e7d234e266873124b60a81"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns52d7526f99a45">
 		<description>Fire Emblem - Seisen no Keifu (HP80 edition) (2)</description>
 		<year>????</year>
@@ -9179,6 +9389,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fire Emblem - Seisen no Keifu (HP80 edition) (2).sfc" size="4194304" crc="3e09032b" sha1="52d7526f99a45855aaa97ad3af39c08077b1358b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns85dee92d4e209">
+		<description>Fire Emblem - Seisen no Keifu (HP80 edition)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu (HP80 edition).smc" size="4194816" crc="7f789b13" sha1="85dee92d4e209b13e88285c7dfc63e48aeda3e37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8e9eef474d91e">
+		<description>Fire Emblem - Seisen no Keifu (J) [T+Chi_fire] (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu (J) [T+Chi_fire] (2).smc" size="4194816" crc="02750028" sha1="8e9eef474d91e6dfd346fc6fcacb0168485db12b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa3df6792a2506">
+		<description>Fire Emblem - Seisen no Keifu (J) [T+Chi_fire]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Seisen no Keifu (J) [T+Chi_fire].smc" size="4194304" crc="c16d614e" sha1="a3df6792a2506fb14ddeb64024661dba06c3ca91"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9202,6 +9442,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns022dd8c7b6c30">
+		<description>Fire Emblem - Seisen no Keifu (Japan) [En v0.87d by Dark Twilkitri Net] (~Fire Emblem - Genealogy of the Holy War)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Seisen no Keifu (Japan) [En v0.87d by Dark Twilkitri Net] (~Fire Emblem - Genealogy of the Holy War).sfc" size="4194304" crc="653e31fc" sha1="022dd8c7b6c30d5d3171166229fc0436262f7ae0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb8989d0795ead">
+		<description>Fire Emblem - Seisen no Keifu (Mach II) by Arch</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu (Mach II) by Arch.smc" size="4194816" crc="85877d33" sha1="b8989d0795eade6a71352744502b0630ce544baa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscfd58dd0c341b">
+		<description>Fire Emblem - Seisen no Keifu (with Camus' Hard Mode patch) [T+Chi_fire] (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu (with Camus' Hard Mode patch) [T+Chi_fire] (2).smc" size="4194816" crc="8d4e88d2" sha1="cfd58dd0c341b38f324e334d5881edb78d4f519f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd77525adf67fe">
+		<description>Fire Emblem - Seisen no Keifu (with Camus' Hard Mode patch) [T+Chi_fire]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Seisen no Keifu (with Camus' Hard Mode patch) [T+Chi_fire].smc" size="4194304" crc="4e56e9b4" sha1="d77525adf67fe7e94edec67bf13fce06396f9a53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsedc4b4805e9c8">
+		<description>Fire Emblem - Seisen no Keifu - 13 holy weapons by Triple-E</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu - 13 holy weapons by Triple-E.smc" size="4194816" crc="0ba78ad5" sha1="edc4b4805e9c8fb083616b6d190669c0f012169a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6224fb9aea014">
+		<description>Fire Emblem - Seisen no Keifu binary (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu binary (hack).smc" size="4194816" crc="f32bcc23" sha1="6224fb9aea01438324544b65155afa0ac3e5bef4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns20865b876ff7e">
 		<description>Fire Emblem - Seisen no Keifu easy edition v2.5 (2)</description>
 		<year>????</year>
@@ -9209,6 +9509,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fire Emblem - Seisen no Keifu easy edition v2.5 (2).sfc" size="4194304" crc="e1728f37" sha1="20865b876ff7e5eba798d1027e0a2d508d526f4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns329fbfd34f1f4">
+		<description>Fire Emblem - Seisen no Keifu easy edition v2.5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu easy edition v2.5.smc" size="4194816" crc="6ea68101" sha1="329fbfd34f1f485024aea17d3bf29605a9ffe707"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9242,6 +9552,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsaba0a5a5efb01">
+		<description>Fire Emblem - Seisen no Keifu hack (FE0125)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu hack (FE0125).smc" size="4194816" crc="5fa0c508" sha1="aba0a5a5efb017178699e71f95bafc17a6721f2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns176b184256187">
+		<description>Fire Emblem - Seisen no Keifu hack by Triple-E (080713)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Seisen no Keifu hack by Triple-E (080713).smc" size="4194304" crc="6bae9ae8" sha1="176b18425618731bfbbc628e592b34f4d64911c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf1fc5c01aa9e2">
+		<description>Fire Emblem - Seisen no Keifu hack by Triple-E (080713)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu hack by Triple-E (080713)_1.smc" size="4194816" crc="a8b6fb8e" sha1="f1fc5c01aa9e2057121969a3a6e86306143a253e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4ad0e4d1e22b3">
+		<description>Fire Emblem - Seisen no Keifu hack by walking in galaxy (080803)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Seisen no Keifu hack by walking in galaxy (080803)(2).smc" size="4194816" crc="aba82e1e" sha1="4ad0e4d1e22b30754614b683b024995482ee1fcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns44116dd33801c">
+		<description>Fire Emblem - Seisen no Keifu hack by walking in galaxy (080803)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Seisen no Keifu hack by walking in galaxy (080803).smc" size="4194304" crc="ead9b626" sha1="44116dd33801ccdde2aabff8428fb4b11f951c23"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns68c721dc4ec3c">
 		<description>Fire Emblem - Seisen no Keifu region edition by churches (060529)</description>
 		<year>????</year>
@@ -9249,6 +9609,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fire Emblem - Seisen no Keifu region edition by churches (060529).sfc" size="4194304" crc="b80cdb93" sha1="68c721dc4ec3c27281f30c8cc250a0b2d8c567d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns36d5208a8e520">
+		<description>Fire Emblem - Thracia 776 (Japan) [En v0.05 by Shaya] (Incomplete)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Thracia 776 (Japan) [En v0.05 by Shaya] (Incomplete).sfc" size="4194304" crc="1ce1e722" sha1="36d5208a8e520cbfb09c8111bb132d7a6b55e0b8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9292,6 +9662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns38e8e3172f995">
+		<description>Fire Emblem - Thraki 776 hack by TS v2.6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291968">
+				<rom name="Fire Emblem - Thraki 776 hack by TS v2.6.smc" size="6291968" crc="bd2e8216" sha1="38e8e3172f9953388648fa5248a3976f204df183"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snscca005610159b">
 		<description>Fire Emblem - Thraki 776 new animation added by TS (2)</description>
 		<year>????</year>
@@ -9302,6 +9682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns7a5ce9075c2a9">
+		<description>Fire Emblem - Thraki 776 new animation added by TS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291968">
+				<rom name="Fire Emblem - Thraki 776 new animation added by TS.smc" size="6291968" crc="356ea5db" sha1="7a5ce9075c2a9ba8ee1d56d9820073503c48d2a8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsbeb6bca52648c">
 		<description>Fire Emblem - Thraki 776 ZC v1.7 (hack) (2)</description>
 		<year>????</year>
@@ -9309,6 +9699,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fire Emblem - Thraki 776 ZC v1.7 (hack) (2).sfc" size="4194304" crc="2bd2c7aa" sha1="beb6bca52648c946a202b9014ee32d703767003d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns090fdeec2779a">
+		<description>Fire Emblem - Thraki 776 ZC v1.7 (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Fire Emblem - Thraki 776 ZC v1.7 (hack).smc" size="4194816" crc="4261d725" sha1="090fdeec2779a54b5bef2b70abc25e8f4e1425a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9472,6 +9872,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns344a57713b069">
+		<description>Firemen, The (U) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Firemen, The (U) (Beta).smc" size="1049088" crc="13f0d963" sha1="344a57713b069bc6dc3253a4e19c2a30da495cea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb1ccfb0b09c08">
+		<description>Firemen, The (USA) (Proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Firemen, The (USA) (Proto).smc" size="1048576" crc="b9c82442" sha1="b1ccfb0b09c08edf992d65b531e8be9290194057"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7692442f132a6">
 		<description>Fireteam Rogue (1995-01-16)(Accolade)(US)(proto)</description>
 		<year>????</year>
@@ -9479,6 +9899,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Fireteam Rogue (1995-01-16)(Accolade)(US)(proto).sfc" size="2097152" crc="4f659fd5" sha1="7692442f132a67e44b6842c0c97362a624453bf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns95a429d877e2f">
+		<description>Fireteam Rogue (U) (beta) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Fireteam Rogue (U) (beta) [T+Fre_Generation IX].smc" size="2097152" crc="0e58b44e" sha1="95a429d877e2fb59c11e04d83c17e79f04bece7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9a1b37955e5a8">
+		<description>Fireteam Rogue (USA) (Proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Fireteam Rogue (USA) (Proto).smc" size="2097152" crc="00f67ba2" sha1="9a1b37955e5a8b01a40b0dc35454d4fb9f99f34f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9519,6 +9959,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="flashing fest (SMW1 Hack).sfc" size="4194304" crc="b7de77ee" sha1="e9245b5b2389e304727b2ed4ffa401b6fadc9f83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsafa18fcea3932">
+		<description>Flintstones, The (USA) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Flintstones, The (USA) (Beta).smc" size="1048576" crc="cc3e9c19" sha1="afa18fcea3932022084af6097e7a3914e9efff89"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9802,6 +10252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb4a58d5efb7f1">
+		<description>Funaki Masakatsu Hybrid Wrestler - Tougi Denshou (Japan) [En v1.0 by Phil]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Funaki Masakatsu Hybrid Wrestler - Tougi Denshou (Japan) [En v1.0 by Phil].sfc" size="2097152" crc="69911d2d" sha1="b4a58d5efb7f1872354a04624f58cebd9f4bf8ff"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd7d60f5d26be4">
 		<description>Futbol Peruano 97</description>
 		<year>????</year>
@@ -9809,6 +10269,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2098176">
 				<rom name="Futbol Peruano 97.sfc" size="2098176" crc="f2a403c7" sha1="d7d60f5d26be41ca016abc9501fc57a4a9852952"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1bbec2d101cbc">
+		<description>Futebol Brasileiro 2007 (Criado por Teg Brasil Remakes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2295552">
+				<rom name="Futebol Brasileiro 2007 (Criado por Teg Brasil Remakes).smc" size="2295552" crc="d8950696" sha1="1bbec2d101cbcd5f69a3592b2402a0056948efc3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9912,6 +10382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns4f0bc39552a92">
+		<description>Ganpuru - Gunman's Proof (J) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Ganpuru - Gunman's Proof (J) [T+Fre_Generation IX].smc" size="3145728" crc="ac18450f" sha1="4f0bc39552a92f14daa21761d384c8b1c387e2a4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsc3cd8c6ce8b3d">
 		<description>Ganpuru - Gunman's Proof (J) [T+Por_ E2P]</description>
 		<year>????</year>
@@ -9982,6 +10462,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snse2c0b5665ba6b">
+		<description>Gekitou Burning Pro Wrestling (J) [T+Eng_Phil]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Gekitou Burning Pro Wrestling (J) [T+Eng_Phil].smc" size="3146240" crc="328330fb" sha1="e2c0b5665ba6b968df8e1926249616981835ec92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns61d82ca197be1">
+		<description>Gekitou Burning Pro Wrestling (Japan) [En v1.0 by Phil]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Gekitou Burning Pro Wrestling (Japan) [En v1.0 by Phil].sfc" size="3145728" crc="318129bf" sha1="61d82ca197be1f59170b8a0b19d32f20a3f1bd3c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns249e880aaa616">
 		<description>Geno's Level (SMW1 Hack)</description>
 		<year>????</year>
@@ -10009,6 +10509,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Ghost Chaser Densei - Brightness Fix (2023)(Mister Man).sfc" size="2097152" crc="ff1c3c53" sha1="dd2938f50f3af14df450f022c83db70949cd59f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa382555a14b38">
+		<description>Ginga Sengoku Gunyuuden Rai (J) [T+Chi(simp)_cslrxyz]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Ginga Sengoku Gunyuuden Rai (J) [T+Chi(simp)_cslrxyz].smc" size="2097152" crc="ef957a1f" sha1="a382555a14b387036d4688c37b9d40beacf147f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns876a6d4f4f696">
+		<description>Ginga Sengoku Gunyuuden Rai (J) [T+Chi(trad)_cslrxyz]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Ginga Sengoku Gunyuuden Rai (J) [T+Chi(trad)_cslrxyz].smc" size="2097152" crc="47f7ed25" sha1="876a6d4f4f696104f39fb8bc93895c80b7a9514b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10552,6 +11072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9c063ee178a8b">
+		<description>Haou Taikei Ryuu Knight - Lord of Paladin (Japan) (Rev A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Haou Taikei Ryuu Knight - Lord of Paladin (Japan) (Rev A).sfc" size="1572864" crc="2740560b" sha1="9c063ee178a8b142a10bc7fbfc3661fa6f4278c5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns207cb8813e37c">
 		<description>HAPPY-GO-LUCKY (SMW1 Hack)</description>
 		<year>????</year>
@@ -10582,6 +11112,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns83eaa9fce915f">
+		<description>Hard Secret of Mana + VWF Edition V1.0 (U) (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Hard Secret of Mana + VWF Edition V1.0 (U) (Hack).smc" size="3145728" crc="5c110345" sha1="83eaa9fce915f986548d3e616dd41f870e90c352"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1137a33ad9c9b">
+		<description>Hard Secret of Mana by Masterflow (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Hard Secret of Mana by Masterflow (hack).smc" size="3146240" crc="fc86186d" sha1="1137a33ad9c9bff18eee142e3fa7eec3d6b1ea6c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsc92e354717c9f">
 		<description>Hard Secret of Mana</description>
 		<year>????</year>
@@ -10599,6 +11149,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Haunt, the (SMW1 Hack) (2).sfc" size="2097152" crc="27a52868" sha1="bf48df954cf385c42334aee6acbd80c5d86fd69b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns26af5022f87d9">
+		<description>Haunt, the (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Haunt, the (SMW1 Hack).smc" size="2097664" crc="9987016c" sha1="26af5022f87d96e27e68d761361d9d435815bee8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11012,6 +11572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9659627950774">
+		<description>Hurricanes, The (U) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Hurricanes, The (U) [T+Fre_Generation IX].smc" size="1049088" crc="34a3c046" sha1="96596279507746fea16fb74ab44d2901af81e9df"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7e003f631477e">
 		<description>hurtfix (SMW1 Hack)</description>
 		<year>????</year>
@@ -11262,6 +11832,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsfbade23944774">
+		<description>impossibleworld (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="impossibleworld (2).smc" size="1048576" crc="2b7a486c" sha1="fbade239447748376539ae9ddc3087385a5605da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf73e6c5cd7d74">
+		<description>impossibleworld-old</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="impossibleworld-old.smc" size="1048576" crc="10eeb3a0" sha1="f73e6c5cd7d74f28934cb4b973c444e20c52b70c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7284ad3eef868">
+		<description>impossibleworld</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="impossibleworld.smc" size="1048576" crc="25c604f9" sha1="7284ad3eef868be1651a8eceae17361808603f96"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns39a662a1f5c8b">
 		<description>Inaduma Serve da Super Beach Volley (J) [T+Por_IPS HP]</description>
 		<year>????</year>
@@ -11299,6 +11899,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Insane World.sfc" size="2097152" crc="09c2bf0c" sha1="59a9dc3ff0f48d2b6b40789f25af8b909835359d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4f68b0bb3bd02">
+		<description>Inspector Gadget (U) [T+Por_POBRE]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Inspector Gadget (U) [T+Por_POBRE].smc" size="1572864" crc="0b293632" sha1="4f68b0bb3bd0222a0521f075d2cd730229ae2364"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11379,6 +11989,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="633939">
 				<rom name="ips patch for the contest2 (SMW1 Hack).sfc" size="633939" crc="2bcea601" sha1="cf92dd7aabfc67f9ccdb7edb700aa72c1b523151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns484b6bcd89d18">
+		<description>Iron Commando (E) (NG-Dump Known) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Iron Commando (E) (NG-Dump Known) [T+Fre_Generation IX].smc" size="1572864" crc="06679649" sha1="484b6bcd89d188d6ce61786e4761da8418cdc9ef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11512,6 +12132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9f29d5d32108e">
+		<description>Jelly Boy 2 (Japan) (Proto) [En v1.0Final by KingMike]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Jelly Boy 2 (Japan) (Proto) [En v1.0Final by KingMike].sfc" size="1572864" crc="d581d4c6" sha1="9f29d5d32108edf86cd7604eebe2545a9db62976"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns03ea00083dccb">
 		<description>Jelly Boy 2 T-Eng (2006)(KingMike's Translations)</description>
 		<year>????</year>
@@ -11552,6 +12182,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsd25d4aa0a3684">
+		<description>Jikkyou Power Pro Wrestling '96 - Max Voltage (J) [T+Eng_Phil]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Jikkyou Power Pro Wrestling '96 - Max Voltage (J) [T+Eng_Phil].smc" size="4194816" crc="2618e3a5" sha1="d25d4aa0a36844ee11160eb0d08338ef901334ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns480986448dfc7">
+		<description>Jikkyou Power Pro Wrestling '96 - Max Voltage (Japan) [En v1.0 by Phil] (Incomplete)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Jikkyou Power Pro Wrestling '96 - Max Voltage (Japan) [En v1.0 by Phil] (Incomplete).sfc" size="4194304" crc="8d4c08e6" sha1="480986448dfc76de102c95337de3817c37a9a34b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns51d854f885125">
 		<description>Jikkyou Powerful Pro Yakyuu 2 (Japan) (Rev A)</description>
 		<year>????</year>
@@ -11579,6 +12229,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Joe &amp; Mac (U) [h1C].sfc" size="1048576" crc="3386584b" sha1="c4c873c0c1dc954dba6e36d1f0a7dd543df1c083"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc5fcea2f2f825">
+		<description>Joe &amp; Mac (U) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048584">
+				<rom name="Joe &amp; Mac (U) [T+Fre_Generation IX].smc" size="1048584" crc="34df4924" sha1="c5fcea2f2f825515c45061418a2eeabe5deaefa9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11649,6 +12309,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Joe &amp; Mac - Tatakae Genshijin (J) [t1].sfc" size="1048576" crc="49c5f045" sha1="46ab6e081b9a3c15f1ce66d1994bc3346a703144"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc82123ff0b90e">
+		<description>Joe &amp; Mac 2 - Lost in the Tropics (U) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Joe &amp; Mac 2 - Lost in the Tropics (U) [T+Fre_Generation IX].smc" size="1572864" crc="0b05f9b4" sha1="c82123ff0b90ebdd49b3ce1dfcaaff7c8ef0818b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11772,6 +12442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns2893dd99da821">
+		<description>Justice League Task Force (USA) (Beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Justice League Task Force (USA) (Beta).smc" size="2621440" crc="50224767" sha1="2893dd99da821d391d5fb1a76630e92cd14952a4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa74b5c528eea8">
 		<description>K-fet Invaders (World) (Aftermarket) (Unl)</description>
 		<year>????</year>
@@ -11799,6 +12479,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Kain's Quest Demo 1.1 (SMW1 Hack).sfc" size="4194304" crc="f370614c" sha1="3dae21abc34ad09da7b705af995db616976c77c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1d0c1a691ddca">
+		<description>Kaite Tsukutte Asoberu Dezaemon (Japan) [b] [En v1.0 by Aeon Genesis]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Kaite Tsukutte Asoberu Dezaemon (Japan) [b] [En v1.0 by Aeon Genesis].sfc" size="524288" crc="df3c62dd" sha1="1d0c1a691ddcaeb228b252c214171bc30175cc43"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12092,6 +12782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns0c33200b6d232">
+		<description>Kid Adventure (English version) by Lunartoad (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kid Adventure (English version) by Lunartoad (SMW1 Hack).smc" size="2097152" crc="97ffa670" sha1="0c33200b6d232b5a3551f550667e1a88e4cd6b68"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns31ad8f7478798">
 		<description>Kid Adventure 2 (SMW1 hack)</description>
 		<year>????</year>
@@ -12149,6 +12849,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Kidou Senshi V Gundam (J) [T+Eng_Twilight].sfc" size="1572864" crc="47d88587" sha1="6e6eecaa79191a0b2855b4652af6d6a4c1fca8d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6819d7353f168">
+		<description>Kigurumi Daibouken - Dream Maze (Japan) [En v1.0b by KingMike] (~Dream Maze - The Kigurumi Adventure)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kigurumi Daibouken - Dream Maze (Japan) [En v1.0b by KingMike] (~Dream Maze - The Kigurumi Adventure).sfc" size="1048576" crc="c5fcafa0" sha1="6819d7353f168fad73b18d4edbf76d5de30fdbd0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12342,6 +13052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5641df100c14c">
+		<description>Kouryuu Densetsu Villgust - Kieta Shoujo (Japan) [En v1.0 by Magic Destiny]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kouryuu Densetsu Villgust - Kieta Shoujo (Japan) [En v1.0 by Magic Destiny].sfc" size="1048576" crc="ec4aaad8" sha1="5641df100c14ca267a5a27fb6276e1bb84adc106"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns1bda0ff52b98e">
 		<description>Kouryuuki (J)(1994)(Koei)</description>
 		<year>????</year>
@@ -12382,6 +13102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns00f1444a3e07e">
+		<description>Kung-Fu Master (1984)(Irem Corp.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Kung-Fu Master (1984)(Irem Corp.).smc" size="524288" crc="23563378" sha1="00f1444a3e07e88bd0b9e424e54112432b1a6d63"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns8a813a7fce3ab">
 		<description>Kuribo_Shoe - The Adventure v.1 (SMW1 Hack)</description>
 		<year>????</year>
@@ -12389,6 +13119,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Kuribo_Shoe - The Adventure v.1 (SMW1 Hack).sfc" size="2097152" crc="09de03d2" sha1="8a813a7fce3ab12fcc8a0c23ea61f70a8a3cb270"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsfd4bbdd606aca">
+		<description>Kurushi Seiken Densetsu V1.0 (J) (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Kurushi Seiken Densetsu V1.0 (J) (Hack).smc" size="3145728" crc="8566c16a" sha1="fd4bbdd606acaff13ec23a9cbd28d9e722e15c90"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12469,6 +13209,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Lagoon T-Spa v1.1 (2023)(semco).sfc" size="2097152" crc="be762286" sha1="c526105e2f21eb47bc4af11aba7443960a85f0b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns532071e03ae92">
+		<description>Langrisser, Der (Japan) (Rev A) [En v1.02 by Byuu+D]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Langrisser, Der (Japan) (Rev A) [En v1.02 by Byuu+D].sfc" size="3145728" crc="43c0caa9" sha1="532071e03ae92adc616de1ffbb07351b90a94e5e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12882,6 +13632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns76d90525821ab">
+		<description>Legend of Zelda, The - A Swear To The Past (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Legend of Zelda, The - A Swear To The Past (hack).smc" size="4194816" crc="d2bb6fcc" sha1="76d90525821ab2cb42b88e5cf4765afa93ff63b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns2937534d20954">
 		<description>Legend of Zelda, The - Parallel Worlds v1.23 (2016-17)(Euclid, SePH)</description>
 		<year>????</year>
@@ -12909,6 +13669,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Lemmy'sFantasyFortress (SMW1 Hack).sfc" size="2097152" crc="9403b4b9" sha1="38e58bae45f122784344d43be5e147607e207a14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns651c19f21b5d4">
+		<description>Lennus II - Fuuin no Shito (J) [T+Eng1.02_Magic Destiny, Stealth Translations]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lennus II - Fuuin no Shito (J) [T+Eng1.02_Magic Destiny, Stealth Translations].smc" size="4194304" crc="af4de796" sha1="651c19f21b5d4e26c217b78eabe92df0f4da6864"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa89bdc2c47ae4">
+		<description>Lennus II - Fuuin no Shito (J) [T+Eng_Magic Destiny+Stealth]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lennus II - Fuuin no Shito (J) [T+Eng_Magic Destiny+Stealth].smc" size="4194304" crc="fb561d6b" sha1="a89bdc2c47ae44960faeaf3647830edf05364c50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0000322aa5c21">
+		<description>Lennus II - Fuuin no Shito (Japan) [En v1.03 by Magic Destiny+Stealth] (~Lennus II - The Apostles of the Seals)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lennus II - Fuuin no Shito (Japan) [En v1.03 by Magic Destiny+Stealth] (~Lennus II - The Apostles of the Seals).sfc" size="4194304" crc="f90fb374" sha1="0000322aa5c21ef934c795f71087b04812128077"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13302,6 +14092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9d7c5bdcc7f6f">
+		<description>Links Adventure by CharMixa64 (5 level demo) (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Links Adventure by CharMixa64 (5 level demo) (SMW1 Hack).smc" size="2097152" crc="5ab25f5a" sha1="9d7c5bdcc7f6fe219be6d1024605a50bded41afd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0ad4da6caab10">
 		<description>Little Magic T-Eng v1.00B (2001)(Aeon Genesis)</description>
 		<year>????</year>
@@ -13309,6 +14109,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524800">
 				<rom name="Little Magic T-Eng v1.00B (2001)(Aeon Genesis).sfc" size="524800" crc="b73ec805" sha1="0ad4da6caab100a772ffd9c362b74852a7dcb6e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa4fd4324f36f7">
+		<description>Live A Live (Japan) [En v2.0Deluxe by Aeon Genesis]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Live A Live (Japan) [En v2.0Deluxe by Aeon Genesis].sfc" size="2621440" crc="5ad071f3" sha1="a4fd4324f36f73f953f42f1677a75b1608b14c9a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13359,6 +14169,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="LoadLev2b.sfc" size="1048576" crc="c5052114" sha1="828ce76c43f9e53c465eca2a450ffc328c0be0c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5a185dee0cb22">
+		<description>Lodoss-tou Senki (Japan) [En v0.90 by LNF] (Incomplete) (~Record of Lodoss War)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lodoss-tou Senki (Japan) [En v0.90 by LNF] (Incomplete) (~Record of Lodoss War).sfc" size="4194304" crc="fe117c8f" sha1="5a185dee0cb22d48f8e02ebfed13568525e2588d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13502,6 +14322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns27c0882b340d9">
+		<description>Lufia &amp; The Fortress of Doom (U) [T+Ger_FloBo]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Lufia &amp; The Fortress of Doom (U) [T+Ger_FloBo].smc" size="1049088" crc="57d58617" sha1="27c0882b340d99ff2d149eefed4df008c2a14956"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns17947c8fdf08c">
 		<description>Lufia &amp; The Fortress of Doom Restored v3.1 (2022)(FlamePurge)</description>
 		<year>????</year>
@@ -13589,6 +14419,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="LUIGI (SMW1 Hack).sfc" size="2097152" crc="56724d14" sha1="4b0aa7c88692a3b0ece8a61e85191be0342d8db1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3dfb3020342fd">
+		<description>Luigi GFX Change (Final Version) (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Luigi GFX Change (Final Version) (SMW1 Hack).smc" size="4194304" crc="f64457d9" sha1="3dfb3020342fd478bca7f33e51b2bc8b6bbd3e57"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13762,6 +14602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns01609359e930c">
+		<description>Luigi's Last Desire Demo (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Luigi's Last Desire Demo (SMW1 Hack).smc" size="2097152" crc="9cc088c6" sha1="01609359e930cd3128fe3c892d2f73b2b0e39fd9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa6195c5347921">
 		<description>Luigi's Life Story (SMW1 Hack)</description>
 		<year>????</year>
@@ -13779,6 +14629,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Luigi's Superstar Search Demo 1.1 (SMW1 Hack).sfc" size="2097152" crc="1adb5253" sha1="5e62c151a5f45291f320cefc89c447d0a4895f6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3255223b7f4c3">
+		<description>Luigi's Traid (demo1) (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Luigi's Traid (demo1) (SMW1 Hack).smc" size="4194304" crc="a676e9e6" sha1="3255223b7f4c362a060fc4a020d0e813bdcb777c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13859,6 +14719,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="lunatic wolf's submap OW (SMW1 Hack).sfc" size="1048576" crc="6d03d394" sha1="eaf10502f178210720063fcf312c134da334e93e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2a6c0cf13a564">
+		<description>Luster (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Luster (SMW1 Hack).smc" size="2097152" crc="8df7805c" sha1="2a6c0cf13a5645a43afbce520e95310a14e68ef7"/>
 			</dataarea>
 		</part>
 	</software>
