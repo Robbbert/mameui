@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1334 -->
+<!-- Number of items in this list = 1336 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -9889,6 +9889,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Menu-Inventory System for GB Studio (2019-06-28)(Toxworks).gb" size="1048576" crc="c6e8b529" sha1="042c455e17df365103e4c43f92651f21ac7c51f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc6ca5c69ff59f9">
+		<description>Metamorphosis Collection (World) (Demo) (GB Compatible) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Metamorphosis Collection (World) (Demo) (GB Compatible) (Aftermarket) (Unl).gbc" size="1048576" crc="3b83f236" sha1="6ca5c69ff59f9bf8dce3cfc765c26a0077f0452c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2549eb41c13cd">
+		<description>Metamorphosis Collection (World) (Digital) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Metamorphosis Collection (World) (Digital) (Aftermarket) (Unl).gbc" size="2097152" crc="b4025ee2" sha1="2549eb41c13cd8f6cb8b498ee844457f8df54ac6"/>
 			</dataarea>
 		</part>
 	</software>

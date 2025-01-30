@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3531 -->
+<!-- Number of items in this list = 3560 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -6092,6 +6092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns27c1ce8afaba9">
+		<description>Daffy Duck - The Marvin Missions (E) [T+Fre_Generation IX]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Daffy Duck - The Marvin Missions (E) [T+Fre_Generation IX].smc" size="1049088" crc="579c6bbc" sha1="27c1ce8afaba940e502ab9d9e7020ec605b9d0a4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns52c218e6ea55a">
 		<description>Dai 4 Ji Super Robot Taisen hack by kaizi78 (2006-08-08)</description>
 		<year>????</year>
@@ -6099,6 +6109,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Dai 4 Ji Super Robot Taisen hack by kaizi78 (2006-08-08).sfc" size="3145728" crc="940ffa22" sha1="52c218e6ea55ad459c73f967eca976cf8fc6a303"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5e59151e364d7">
+		<description>Dai-3-ji Super Robot Taisen (Japan) (Rev B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Dai-3-ji Super Robot Taisen (Japan) (Rev B).smc" size="1572864" crc="c577d666" sha1="5e59151e364d73db030744d2a8b2355bb6fe1e7f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6122,6 +6142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3a2e5843be62d">
+		<description>Dai-3-Ji Super Robot Taisen NT edition v2.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Dai-3-Ji Super Robot Taisen NT edition v2.1.smc" size="1572864" crc="ad78ad33" sha1="3a2e5843be62d1272435cd2339167ddc1eacc5e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns735f6ae657307">
 		<description>Dai-4-Ji Super Robot Taisen hack by goobai (2007-10-17)</description>
 		<year>????</year>
@@ -6132,6 +6162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns48c468eedf7d0">
+		<description>Dai-4-Ji Super Robot Taisen hack by pklun (070915)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Dai-4-Ji Super Robot Taisen hack by pklun (070915).smc" size="3146240" crc="99a658d3" sha1="48c468eedf7d0bf348357e5d5f148f0ad52b1ace"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsae3727c8bd0de">
 		<description>Dai-4-Ji Super Robot Taisen hack by pklun (2007-09-16) (2)</description>
 		<year>????</year>
@@ -6139,6 +6179,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Dai-4-Ji Super Robot Taisen hack by pklun (2007-09-16) (2).sfc" size="3145728" crc="ea5d9db0" sha1="ae3727c8bd0de506d032ec72aa6427902b5da240"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns93c3fa172d88c">
+		<description>Dai-4-Ji Super Robot Taisen hack by wgf (071211)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Dai-4-Ji Super Robot Taisen hack by wgf (071211).smc" size="3146240" crc="631b10e8" sha1="93c3fa172d88c5b992093c9b3c69c7b28dd4ae45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa565e5adb5bad">
+		<description>Dai-4-Ji Super Robot Taisen hack by wgf (080101)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Dai-4-Ji Super Robot Taisen hack by wgf (080101).smc" size="3146240" crc="506df9ba" sha1="a565e5adb5bad2d1c11194309b747f23b77eb141"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6172,6 +6232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns2426cdccd0768">
+		<description>Dai-4-Ji Super Robot Taisen hack by wgf (with GP-02)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Dai-4-Ji Super Robot Taisen hack by wgf (with GP-02).smc" size="3146240" crc="1185728f" sha1="2426cdccd07681bba9d25fadcc77a1f2c610fc26"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0d88f23adc2e4">
 		<description>Dai-4-Ji Super Robot Taisen Mobile suit strengthened edition (2)</description>
 		<year>????</year>
@@ -6179,6 +6249,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Dai-4-Ji Super Robot Taisen Mobile suit strengthened edition (2).sfc" size="3145728" crc="02e384d4" sha1="0d88f23adc2e4fe8d886cc0ab6e34c4b735c0940"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsee9702e89c4cf">
+		<description>Dai-4-Ji Super Robot Taisen Mobile suit strengthened edition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Dai-4-Ji Super Robot Taisen Mobile suit strengthened edition.smc" size="3146240" crc="711841b7" sha1="ee9702e89c4cf6609cb63353806dfa21b697a6b2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6412,6 +6492,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsc3c07058536e3">
+		<description>Demo World-bu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Demo World-bu.smc" size="2097152" crc="3256a33f" sha1="c3c07058536e36c6a8563359150de4b3bd432742"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbb05ba51bf758">
+		<description>Demo World</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Demo World.smc" size="2097152" crc="f871c859" sha1="bb05ba51bf75876c5cc26805800edbc4476bd89a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns44ec3d7fda3fc">
 		<description>demo001 (SMW1 Hack)</description>
 		<year>????</year>
@@ -6519,6 +6619,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Der Langrisser evil clan edition by tianxiayumian (hack).sfc" size="2097152" crc="5e7aea7a" sha1="4c9835836522ca328a88c9308ba919779a25e0d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf45d40f9d0cee">
+		<description>Der Langrisser hack by bt1733 (071227)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Der Langrisser hack by bt1733 (071227).smc" size="2097664" crc="ac8064df" sha1="f45d40f9d0cee1e809f83d912242595419272809"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf1ad98a64dab7">
+		<description>Der Langrisser hack by superljy01 (081211)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Der Langrisser hack by superljy01 (081211).smc" size="2097664" crc="5586e04e" sha1="f1ad98a64dab7d3ad9314d83af1d7dc0d27fef66"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6649,6 +6769,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Dinowars - A Great Dino Odyssey - T-Eng v2.0 (2021)(Backlog Odyssey).sfc" size="1048576" crc="e4dd8edb" sha1="b100940f9e1bce9161480c7e67d0a2ffdfd19f66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0da069520869f">
+		<description>dino_world (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="dino_world (SMW1 Hack).smc" size="1048576" crc="f70b7155" sha1="0da069520869fe406d670d36b535a5bd4cbfa43c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6812,6 +6942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns0c655f317ffce">
+		<description>Doraemon 4 - Nobita to Tsuki no Oukoku (Japan) [En v0.94b by Sgt. Bow] (~Doraemon 4 - In the Moon Kingdom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Doraemon 4 - Nobita to Tsuki no Oukoku (Japan) [En v0.94b by Sgt. Bow] (~Doraemon 4 - In the Moon Kingdom).sfc" size="1572864" crc="d44eb94b" sha1="0c655f317ffce133fac714d8a80a0ed93f9aa5fa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns359d763d5e265">
 		<description>Doraemon 4 - Nobita to Tsuki no Oukoku T-Eng v0.94b (1998)(Sgt. Bow Hack)</description>
 		<year>????</year>
@@ -6952,6 +7092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns34911a41db9f3">
+		<description>Dr. Mario World Redrawn (demo 2) (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dr. Mario World Redrawn (demo 2) (SMW1 Hack).smc" size="2097152" crc="b54a19aa" sha1="34911a41db9f33efcd7597a188f2422c07d83ce6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns4e656da62cefc">
 		<description>Dragon - The Bruce Lee Story (US) (BR)</description>
 		<year>????</year>
@@ -6959,6 +7109,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Dragon - The Bruce Lee Story (US) (BR).sfc" size="2097152" crc="9d2e0900" sha1="4e656da62cefc0d003e11fa888832034612a0035"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb43627b4f3aca">
+		<description>Dragon Ball Z - Chou Gokuuden - Kakusei Hen (Japan) [En v20010405 by Ginew] (Incomplete) (~Dragon Ball Z - The Legend of Goku 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Ball Z - Chou Gokuuden - Kakusei Hen (Japan) [En v20010405 by Ginew] (Incomplete) (~Dragon Ball Z - The Legend of Goku 2).sfc" size="2097152" crc="9f493a99" sha1="b43627b4f3aca2b187e7911a7f45528059afcd76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns033c4c17a3480">
+		<description>Dragon Ball Z - Chou Gokuuden - Totsugeki Hen (Japan) [En v0.313 by Kakkoii] (Incomplete) (~Dragon Ball Z - The Legend of Goku 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Ball Z - Chou Gokuuden - Totsugeki Hen (Japan) [En v0.313 by Kakkoii] (Incomplete) (~Dragon Ball Z - The Legend of Goku 1).sfc" size="2097152" crc="0f62f2fc" sha1="033c4c17a3480bbf0ecd744bbde41a41498b44e4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6972,6 +7142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3e268078684d3">
+		<description>Dragon Ball Z - Hyper Dimension (Japan) [En v1.0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Dragon Ball Z - Hyper Dimension (Japan) [En v1.0].sfc" size="3145728" crc="95f3132f" sha1="3e268078684d363b9aefe79667cdf5d1d389f1ca"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns8f13c3a71e7ad">
 		<description>Dragon Ball Z - Hyper Dimension T-Eng (2010)(Twilight Translations)</description>
 		<year>????</year>
@@ -6979,6 +7159,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Dragon Ball Z - Hyper Dimension T-Eng (2010)(Twilight Translations).sfc" size="3145728" crc="971c9513" sha1="8f13c3a71e7ad6122432cf2100e6ac86b9484e94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns34d4e1d211279">
+		<description>Dragon Ball Z - La Legende Saien (France) [En v20010305 by Ginew] (Incomplete) (~Dragon Ball Z - Super Butouden 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Ball Z - La Legende Saien (France) [En v20010305 by Ginew] (Incomplete) (~Dragon Ball Z - Super Butouden 2).sfc" size="2097152" crc="54cb175f" sha1="34d4e1d211279f7554e3d0513d2104ef008f5af6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7049,6 +7239,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="6291456">
 				<rom name="Dragon Quest III - Soshite Densetsu he (J) [T+Eng_DaMarsMan].sfc" size="6291456" crc="391cbf6a" sha1="bb653ba9ab3c2e75323126fb60f69e346e524cba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns82b133bbe9f22">
+		<description>Dragon Quest III - Soshite Densetsu he... (Japan) [En v0.12 by RPGOne] (Incomplete) (~Dragon Quest III - Into the Legend)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dragon Quest III - Soshite Densetsu he... (Japan) [En v0.12 by RPGOne] (Incomplete) (~Dragon Quest III - Into the Legend).sfc" size="4194304" crc="9d88d0f2" sha1="82b133bbe9f224604e8b6adbb220f3cd8c0f8749"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns45bdf443ff080">
+		<description>Dragon Quest III - Soshite Densetsu he... (Japan) [En v0.14 by DeJap] (Incomplete) (~Dragon Quest III - Into the Legend)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dragon Quest III - Soshite Densetsu he... (Japan) [En v0.14 by DeJap] (Incomplete) (~Dragon Quest III - Into the Legend).sfc" size="4194304" crc="8c5244f2" sha1="45bdf443ff080874f3d60cda60a243a44adf01f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7209,6 +7419,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Dual Orb II (J) [T+Kor_cyjzero60] (2).sfc" size="4194304" crc="7e859241" sha1="27129b2aecbf90d71c86c08928c58f4b4d9c11d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns237a1e4879e9d">
+		<description>Dual Orb II (J) [T+Kor_cyjzero60]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Dual Orb II (J) [T+Kor_cyjzero60].smc" size="4194816" crc="9cccdcfa" sha1="237a1e4879e9d30ab0b0f482e92aa9ceeea4ddb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2f39d912fd3bd">
+		<description>Dual Orb II (Japan) [En v1.5 by TransCorp]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dual Orb II (Japan) [En v1.5 by TransCorp].sfc" size="4194304" crc="3e3fb1bd" sha1="2f39d912fd3bdb1477c21f235a5d1254fbc1513a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7382,6 +7612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns00b7a5aa8e32e">
+		<description>Eggs of Saear (Demo 4) (SMW Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Eggs of Saear (Demo 4) (SMW Hack).smc" size="2097152" crc="61a1a945" sha1="00b7a5aa8e32ef21c0640e8ff5f7da301f73e118"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns81e5c89c1a6d2">
 		<description>Eien no Filerna (Japan) [En by Satsu v0.98] (~Eternal Filena)</description>
 		<year>????</year>
@@ -7389,6 +7629,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Eien no Filerna (Japan) [En by Satsu v0.98] (~Eternal Filena).sfc" size="3145728" crc="26a60ed9" sha1="81e5c89c1a6d24ed2fb3c56ceb193b28b6a2024d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbf4dc82dc579d">
+		<description>Eien no Filerna (Japan) [En v0.30 by Satsu] (Incomplete)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Eien no Filerna (Japan) [En v0.30 by Satsu] (Incomplete).sfc" size="3145728" crc="dd42eb9d" sha1="bf4dc82dc579dc2bb87ec9871e5abf404532ed7a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7419,6 +7669,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="el_nuevo_y_mejorado_super_mario_world.sfc" size="4194304" crc="4eb4cd8e" sha1="22d86ebef9e95203b6bc35757da2c916d13408ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns149c1d51e0f0f">
+		<description>Emerald Dragon (J) [T+Eng1.0_Translation Corporation</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Emerald Dragon (J) [T+Eng1.0_Translation Corporation.smc" size="3145728" crc="584dfe2c" sha1="149c1d51e0f0f6153a74654ff691bfb4dfce1b1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5e4b0012b62d3">
+		<description>Emerald Dragon (J) [T+Eng1.1_Translation Corporation]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Emerald Dragon (J) [T+Eng1.1_Translation Corporation].smc" size="3145728" crc="6ad33dc6" sha1="5e4b0012b62d3af9f9f57ba5143b4cac6b184b00"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7532,6 +7802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsc99e51c4d64a5">
+		<description>Eurit (USA) (Proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Eurit (USA) (Proto).smc" size="2097152" crc="78bcd558" sha1="c99e51c4d64a5f7edaf1cbfe4146b8f6821f1f09"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns12da4fdbd76cb">
 		<description>Evermore</description>
 		<year>????</year>
@@ -7539,6 +7819,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Evermore.sfc" size="3145728" crc="bd7d849b" sha1="12da4fdbd76cb2653e48580e787aafe3fd9326f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6f797d3705973">
+		<description>EVERY LEVEL IGGY! by Snowcario (SMW1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="EVERY LEVEL IGGY! by Snowcario (SMW1 Hack).smc" size="2097152" crc="f1b8a371" sha1="6f797d37059736631a630bcd9badb5a851a3dc61"/>
 			</dataarea>
 		</part>
 	</software>
