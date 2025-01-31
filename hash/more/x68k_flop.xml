@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 472 -->
+<!-- Number of items in this list = 476 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -1139,16 +1139,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261824">
 				<rom name="Cube Gradius 3 Cube Simulation (1991)(Fukuiinchou).dim" size="1261824" crc="a68a07cd" sha1="f5d898a51f712a7430015090af4b8213fe82c4f0"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="x682c958479d1e83">
-		<description>Cyber Vaccine Itekomashi</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="1261568">
-				<rom name="Cyber Vaccine Itekomashi.hdm" size="1261568" crc="5df7fb1a" sha1="2c958479d1e83104d598e5095dab8e338fc1ed1e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3393,12 +3383,32 @@
 		</part>
 	</software>
 	<software name="x68ee81ea706e1c6">
-		<description>Oedo Hanjouki (1989)(Panther)(1)</description>
+		<description>Oedo Hanjouki (1989)(Panther)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Oedo Hanjouki (1989)(Panther)(1).hdm" size="1261568" crc="621ced9b" sha1="ee81ea706e1c6c06da41c8a31aa622df28c6c5f9"/>
+				<rom name="Oedo Hanjouki (1989)(Panther)(d1).hdm" size="1261568" crc="621ced9b" sha1="ee81ea706e1c6c06da41c8a31aa622df28c6c5f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6804687d9966be6">
+		<description>Oedo Hanjouki (1989)(Panther)(d2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Oedo Hanjouki (1989)(Panther)(d2).hdm" size="1261568" crc="e8a02a06" sha1="04687d9966be6bbe77e42b5adc3a685770ede0a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6843f36b505e012">
+		<description>Oedo Hanjouki (1989)(Panther)(d3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Oedo Hanjouki (1989)(Panther)(d3).hdm" size="1261568" crc="267ba513" sha1="43f36b505e012f7df4ae411eb3f012852cb30d68"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3743,22 +3753,22 @@
 		</part>
 	</software>
 	<software name="x689f141196b00fc">
-		<description>SAP - Tokushu KK (1991)(Great)(1)</description>
+		<description>SAP - Tokushu KK (1991)(Great)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="SAP - Tokushu KK (1991)(Great)(1).hdm" size="1261568" crc="603fe579" sha1="9f141196b00fc0047c24df4d361b6f416e1aa9e2"/>
+				<rom name="SAP - Tokushu KK (1991)(Great)(d1).hdm" size="1261568" crc="603fe579" sha1="9f141196b00fc0047c24df4d361b6f416e1aa9e2"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x682f6246a33fdda">
-		<description>SAP - Tokushu KK (1991)(Great)(2)</description>
+		<description>SAP - Tokushu KK (1991)(Great)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="SAP - Tokushu KK (1991)(Great)(2).hdm" size="1261568" crc="3053d0c7" sha1="2f6246a33fdda0c84b2534b85710dad7fbb6a337"/>
+				<rom name="SAP - Tokushu KK (1991)(Great)(d2).hdm" size="1261568" crc="3053d0c7" sha1="2f6246a33fdda0c84b2534b85710dad7fbb6a337"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3812,13 +3822,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="x68c8d29f2dfcbb9">
+	<software name="x688c3d349eeed98">
 		<description>Shougi Seiten (1992)(HomeData)(System)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Shougi Seiten (1992)(HomeData)(System).hdm" size="1261568" crc="1b519995" sha1="c8d29f2dfcbb994b0f1b4aa594efe2ea92167f91"/>
+				<rom name="Shougi Seiten (1992)(HomeData)(System).hdm" size="1261568" crc="3890cfca" sha1="8c3d349eeed980a5a5905584c8cd556e2129e4c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6866c12b5d68536">
+		<description>Shougi Seiten (1993)(HomeData)(System)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Shougi Seiten (1993)(HomeData)(System).hdm" size="1261568" crc="9017ee6d" sha1="66c12b5d68536d6f12c094d3df820cfd1be63c0e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4102,6 +4122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68ddd4bc254dabf">
+		<description>Teleportion (Sample disk) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Teleportion (Sample disk) (2).hdm" size="1261568" crc="251c6c14" sha1="ddd4bc254dabfb179f5f265f80bca8b4766d3514"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68f5833db3f1c64">
 		<description>Teleportion (Sample disk)</description>
 		<year>????</year>
@@ -4109,6 +4139,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Teleportion (Sample disk).hdm" size="1261568" crc="0cff87b3" sha1="f5833db3f1c64342f650c0388f8c8a286dd41b93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6860bb46d2f4b8e">
+		<description>Teleportion (System disk) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Teleportion (System disk) (2).hdm" size="1261568" crc="1b2b2c8d" sha1="60bb46d2f4b8e3fef41c8de4f120a2ee14b48834"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4183,62 +4223,62 @@
 		</part>
 	</software>
 	<software name="x68fd1a90df253c9">
-		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(0)</description>
+		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(d0)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(0).hdm" size="1261568" crc="ece1fb8f" sha1="fd1a90df253c9f9cdb3b7105e44c8d801cf281c7"/>
+				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(d0).hdm" size="1261568" crc="ece1fb8f" sha1="fd1a90df253c9f9cdb3b7105e44c8d801cf281c7"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x6863dc69c549c10">
-		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(1)</description>
+		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(1).hdm" size="1261568" crc="8bb6a3fa" sha1="63dc69c549c10d07c960a74e5e5b5133b800d87a"/>
+				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(d1).hdm" size="1261568" crc="8bb6a3fa" sha1="63dc69c549c10d07c960a74e5e5b5133b800d87a"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x68905801b38f947">
-		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(2)</description>
+		<description>Tokyo Joshikou Pt 1 (1988)(SystHOh)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(2).hdm" size="1261568" crc="e9663a67" sha1="905801b38f9472579e97e397ea9404c973b25009"/>
+				<rom name="Tokyo Joshikou Pt 1 (1988)(SystHOh)(d2).hdm" size="1261568" crc="e9663a67" sha1="905801b38f9472579e97e397ea9404c973b25009"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x682bca6cd0aa2be">
-		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(0)</description>
+		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(d0)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(0).hdm" size="1261568" crc="59ca2311" sha1="2bca6cd0aa2be46ce1fe2ed7558b31d6def625e7"/>
+				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(d0).hdm" size="1261568" crc="59ca2311" sha1="2bca6cd0aa2be46ce1fe2ed7558b31d6def625e7"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x681a2ce0eb42574">
-		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(1)</description>
+		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(1).hdm" size="1261568" crc="cdda9247" sha1="1a2ce0eb42574b4f543cc9f0dfd0ce48a3eadb03"/>
+				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(d1).hdm" size="1261568" crc="cdda9247" sha1="1a2ce0eb42574b4f543cc9f0dfd0ce48a3eadb03"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x68fae0b64f8ad8a">
-		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(2)</description>
+		<description>Tokyo Joshikou Pt 2 (1988)(SystHOh)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(2).hdm" size="1261568" crc="daeb7c4c" sha1="fae0b64f8ad8a8236e04c0316ffa2afc56a03fcf"/>
+				<rom name="Tokyo Joshikou Pt 2 (1988)(SystHOh)(d2).hdm" size="1261568" crc="daeb7c4c" sha1="fae0b64f8ad8a8236e04c0316ffa2afc56a03fcf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4253,22 +4293,22 @@
 		</part>
 	</software>
 	<software name="x68314cc7252c9a0">
-		<description>Trilogy - Ayakashiden (1991)(Gundeck)(1)</description>
+		<description>Trilogy - Ayakashiden (1991)(Gundeck)(d1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Trilogy - Ayakashiden (1991)(Gundeck)(1).hdm" size="1261568" crc="55f7d10b" sha1="314cc7252c9a08f26d474fafbcc3b53e0d908fc9"/>
+				<rom name="Trilogy - Ayakashiden (1991)(Gundeck)(d1).hdm" size="1261568" crc="55f7d10b" sha1="314cc7252c9a08f26d474fafbcc3b53e0d908fc9"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="x683e758ed0bfc02">
-		<description>Trilogy - Ayakashiden (1991)(Gundeck)(2)</description>
+		<description>Trilogy - Ayakashiden (1991)(Gundeck)(d2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Trilogy - Ayakashiden (1991)(Gundeck)(2).hdm" size="1261568" crc="ba175164" sha1="3e758ed0bfc0224effeeef395b4e8f3c47b69a70"/>
+				<rom name="Trilogy - Ayakashiden (1991)(Gundeck)(d2).hdm" size="1261568" crc="ba175164" sha1="3e758ed0bfc0224effeeef395b4e8f3c47b69a70"/>
 			</dataarea>
 		</part>
 	</software>

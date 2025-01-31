@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 874 -->
+<!-- Number of items in this list = 1003 -->
 <softwarelist name="a7800" description="a7800 loose roms">
 	<software name="a78e019c21c536b0">
 		<description>(demo)10 Print Maze Demo (20170826)</description>
@@ -2002,6 +2002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78329782dd80a7e">
+		<description>Ballblazer (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Ballblazer (1987)(Atari)(NTSC).a78" size="32896" crc="5b635cb6" sha1="329782dd80a7ef88b81ab348aba4a0d478f0432f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a784e296807b098c">
 		<description>Ballblazer (NTSC) (Atari-Lucasfilm) (1987)</description>
 		<year>????</year>
@@ -2019,6 +2029,26 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="Ballblazer (PAL) (Atari-Lucasfilm) (1987).a78" size="32896" crc="e4725a46" sha1="031c3cdeda552674ab09cbd878f20ba3ea4795cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78a2d94c79b8673">
+		<description>balldem2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="8320">
+				<rom name="balldem2.a78" size="8320" crc="763dfb96" sha1="a2d94c79b86739fa2fa74296df5f1ee8aa002bb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78ebc08fbff47e7">
+		<description>Barnyard Blaster (1988)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Barnyard Blaster (1988)(Atari)(NTSC).a78" size="131200" crc="36a9f2a5" sha1="ebc08fbff47e727d3f87b8e838e4e81257a79804"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2092,6 +2122,126 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78398c7603eea04">
+		<description>BD7800</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="BD7800.a78" size="32896" crc="334f0fbb" sha1="398c7603eea0415f46b5d2494df912dbab9130a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7895492b6c32f43">
+		<description>bd7800demo (2006-10-15)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo (2006-10-15).a78" size="32896" crc="6ac2cd60" sha1="95492b6c32f431c3a062838399da2b67bf9791f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78c3ff403ce7d2b">
+		<description>bd7800demo 2006-06-29 new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-06-29 new 2.a78" size="32896" crc="f2769d4b" sha1="c3ff403ce7d2b3a14dd3c6ba71fbf53526f319c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a782127770fd5970">
+		<description>bd7800demo 2006-06-29</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-06-29.a78" size="32896" crc="33dff89a" sha1="2127770fd5970b3aad14215e957a3863e1f50f49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78125f4a8303313">
+		<description>bd7800demo 2006-07-01 new 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-07-01 new 1.a78" size="32896" crc="1c454288" sha1="125f4a8303313fe7865b51345e510bfd7cae5171"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78113fbf85f1fd5">
+		<description>bd7800demo 2006-07-01 new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-07-01 new 2.a78" size="32896" crc="6e86deb9" sha1="113fbf85f1fd5ab3207bbb40563c41b14be59ca1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78eb91ddc7d68aa">
+		<description>bd7800demo 2006-07-02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-07-02.a78" size="32896" crc="086d7d7d" sha1="eb91ddc7d68aa660de7538e72e22ed472a439737"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a781d1b7b7cb4179">
+		<description>bd7800demo 2006-07-03</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-07-03.a78" size="32896" crc="c26c1fc3" sha1="1d1b7b7cb4179f84d2326fb0e97a7f02a2028021"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78d3cfb8226e6e1">
+		<description>bd7800demo 2006-07-04 new 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-07-04 new 1.a78" size="32896" crc="33911898" sha1="d3cfb8226e6e1e40d61710de0bb2551116514529"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a787f616d96d90f7">
+		<description>bd7800demo 2006-07-04 new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-07-04 new 2.a78" size="32896" crc="d7b460b1" sha1="7f616d96d90f7dfeedff1c2d133ecfdbe7547242"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a787a1b2db20226f">
+		<description>bd7800demo 2006-07-04</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-07-04.a78" size="32896" crc="f7126e9b" sha1="7a1b2db20226f8731006f69db015b23d10e7d0cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78398a2f30cf486">
+		<description>bd7800demo 2006-07-18 final version</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bd7800demo 2006-07-18 final version.a78" size="32896" crc="4ed4b7c0" sha1="398a2f30cf486fa09b9dc8f2113fb03a9f1cfee2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78fff8771ffd6c0">
 		<description>Bear Arms (Alpha) (20140523)</description>
 		<year>????</year>
@@ -2122,6 +2272,336 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78370fe4a60bf81">
+		<description>Beef Drop 7800 (Dec 22-Rev xx) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Dec 22-Rev xx) (2004) (PD).a78" size="32896" crc="beb7272c" sha1="370fe4a60bf810db2c6a3ddf81d2943a166e7fef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78dba0b7bc55002">
+		<description>Beef Drop 7800 (Dic 04-Rev xx) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Dic 04-Rev xx) (2004) (PD).a78" size="32896" crc="148dd938" sha1="dba0b7bc55002ee400444303b5273cb96df2a6d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78f1ee63bee8755">
+		<description>Beef Drop 7800 (Dic 05-Rev xx) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Dic 05-Rev xx) (2004) (PD).a78" size="32896" crc="5f34ee45" sha1="f1ee63bee875517536543e1f30a1eb03e3dd4201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78f3b0dfd629096">
+		<description>Beef Drop 7800 (Dic 07-Rev xx0) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Dic 07-Rev xx0) (2004) (PD).a78" size="32896" crc="b5da18d0" sha1="f3b0dfd6290962990ba49e4f3532a9493de1f1e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78c582e3feaac18">
+		<description>Beef Drop 7800 (Dic 07-Rev xx1) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Dic 07-Rev xx1) (2004) (PD).a78" size="32896" crc="2e4aafc5" sha1="c582e3feaac1868798866b2ee27ed3c92b390759"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78a85bd67402642">
+		<description>Beef Drop 7800 (Dic 10-Rev xx) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Dic 10-Rev xx) (2004) (PD).a78" size="32896" crc="545007a0" sha1="a85bd67402642b53cddfeeb0b3e7313f0bbe0b04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a788255363227124">
+		<description>Beef Drop 7800 (Dic 12-Rev xx) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Dic 12-Rev xx) (2004) (PD).a78" size="32896" crc="80dc9605" sha1="825536322712474b991770813436d82143753d98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a784741cdf3f8aab">
+		<description>Beef Drop 7800 (Feb 23-Rev xx) (2005) (PD) new</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Feb 23-Rev xx) (2005) (PD) new.a78" size="32896" crc="47c10fbc" sha1="4741cdf3f8aaba6ec7e1f0142fee06147644d56a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78ff38157a30c8d">
+		<description>Beef Drop 7800 (Feb 23-Rev xx) (2005) (PD) old</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Feb 23-Rev xx) (2005) (PD) old.a78" size="32896" crc="46cbe39d" sha1="ff38157a30c8df0a9c20adeb321229e92c40691e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78d51ecbcd6531e">
+		<description>Beef Drop 7800 (Feb 24-Rev xx) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Feb 24-Rev xx) (2005) (PD).a78" size="32896" crc="c01ca95f" sha1="d51ecbcd6531e3656a84a245c2d949426cb62770"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78eb972e4b6e82f">
+		<description>Beef Drop 7800 (Feb 25-Rev xx) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Feb 25-Rev xx) (2005) (PD).a78" size="32896" crc="98e7bd46" sha1="eb972e4b6e82f3a9764dec2ea61ac1a44ec8c5d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a781f2f0ccb5f54a">
+		<description>Beef Drop 7800 (Jan 01-Rev xx) (Nopo) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 01-Rev xx) (Nopo) (2005) (PD).a78" size="32896" crc="3fd0ccb1" sha1="1f2f0ccb5f54a92ae74e7fc05faf8099bf79d2e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78b39dcd50307e9">
+		<description>Beef Drop 7800 (Jan 01-Rev xx) (Pok) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 01-Rev xx) (Pok) (2005) (PD).a78" size="32896" crc="f683f6cc" sha1="b39dcd50307e94ec4e4d310e731ee9590c02664c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78cff94abdbb206">
+		<description>Beef Drop 7800 (Jan 03-Rev xx) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 03-Rev xx) (2005) (PD).a78" size="32896" crc="fa95213f" sha1="cff94abdbb20679817757d99781ad3e104bdcdfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a784f385a64a1e8c">
+		<description>Beef Drop 7800 (Jan 05-Rev xx) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 05-Rev xx) (2005) (PD).a78" size="32896" crc="68c5033d" sha1="4f385a64a1e8cbc9b6929c8ce49689fbe625624b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7870e4e1ca9827a">
+		<description>Beef Drop 7800 (Jan 05-Rev xxx) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 05-Rev xxx) (2005) (PD).a78" size="32896" crc="cbbadd08" sha1="70e4e1ca9827ae6bee26f5bc34f6b4203b09cd13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a784cae4bf1bbcbe">
+		<description>Beef Drop 7800 (Jan 08-Rev 33 POKEY OFF) (2005) (PD) (a78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 08-Rev 33 POKEY OFF) (2005) (PD) (a78).a78" size="32896" crc="3fd055eb" sha1="4cae4bf1bbcbe6879cf163a56c9efb40820e88ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78c159d273ffb20">
+		<description>Beef Drop 7800 (Jan 08-Rev 33 POKEY ON) (2005) (PD) (a78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 08-Rev 33 POKEY ON) (2005) (PD) (a78).a78" size="32896" crc="d80ec1b8" sha1="c159d273ffb20f9d843b038f6a830576c6d85013"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78374d61a3ff2a0">
+		<description>Beef Drop 7800 (Jan 08-Rev 33) (2005) (PD) (a78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 08-Rev 33) (2005) (PD) (a78).a78" size="32896" crc="c8c55001" sha1="374d61a3ff2a09bef7358b884ccec796848e58d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7817c63cb795cdf">
+		<description>Beef Drop 7800 (Jan 08-Rev 34 POKEY OFF) (2005) (PD) (a78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 08-Rev 34 POKEY OFF) (2005) (PD) (a78).a78" size="32896" crc="b6b278df" sha1="17c63cb795cdfc1c06fc045ec4dfeaccbb992603"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78e1e487fb47c16">
+		<description>Beef Drop 7800 (Jan 08-Rev 34 POKEY ON) (2005) (PD) (a78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 08-Rev 34 POKEY ON) (2005) (PD) (a78).a78" size="32896" crc="087cd232" sha1="e1e487fb47c1608b320258f822853055805d62da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78aab50199dac7f">
+		<description>Beef Drop 7800 (Jan 08-Rev 34) (2005) (PD) (a78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 08-Rev 34) (2005) (PD) (a78).a78" size="32896" crc="72ecb67a" sha1="aab50199dac7fa7c9060ea6bd5529e75baf28cfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7822f60f9ab424f">
+		<description>Beef Drop 7800 (Jan 10-Rev xx) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Jan 10-Rev xx) (2005) (PD).a78" size="32896" crc="c62fe6f6" sha1="22f60f9ab424ff9106d04bdac191ae0b781e7bbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a786df3dbf42bcfa">
+		<description>Beef Drop 7800 (Mar 08-Rev xx) (2005) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Mar 08-Rev xx) (2005) (PD).a78" size="32896" crc="d62b7f2b" sha1="6df3dbf42bcfa9c66fe94173f9b4338bbb5effd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78004bcad83c2a6">
+		<description>Beef Drop 7800 (Nov 10-Rev 15) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Nov 10-Rev 15) (2004) (PD).a78" size="32896" crc="d3d11356" sha1="004bcad83c2a62880cfb119f325c4c996aac5bbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78275f8354c388d">
+		<description>Beef Drop 7800 (Nov 11-Rev 16) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Nov 11-Rev 16) (2004) (PD).a78" size="32896" crc="010e3c23" sha1="275f8354c388dd52ba9915e4694cacf199e0cf07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78a79c9231a2a93">
+		<description>Beef Drop 7800 (Nov 16-Rev 16) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Nov 16-Rev 16) (2004) (PD).a78" size="32896" crc="cf26fec7" sha1="a79c9231a2a93a94a2f19f6fd283b14cb51941d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78bc4caab510688">
+		<description>Beef Drop 7800 (Nov 17-Rev 17) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Nov 17-Rev 17) (2004) (PD).a78" size="32896" crc="7156d588" sha1="bc4caab510688e63bd70c332b51dd125d8dc6623"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78827ef5711add2">
+		<description>Beef Drop 7800 (Nov 19-Rev 18) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Nov 19-Rev 18) (2004) (PD).a78" size="32896" crc="d44a8500" sha1="827ef5711add202337cbbd5fd3e50c7814341c90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78356993ebd89aa">
+		<description>Beef Drop 7800 (Nov 19-Rev 19) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Nov 19-Rev 19) (2004) (PD).a78" size="32896" crc="a27b0847" sha1="356993ebd89aa816fed5e22abf7d01f7503c4719"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a781ba027dc92aed">
+		<description>Beef Drop 7800 (Nov 23-Rev 21) (2004) (PD) (a78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Nov 23-Rev 21) (2004) (PD) (a78).a78" size="32896" crc="30e749c4" sha1="1ba027dc92aedc9773f0930cc3d31e56e480af9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78de7057f75c15d">
+		<description>Beef Drop 7800 (Nov 30-Rev xx) (2004) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop 7800 (Nov 30-Rev xx) (2004) (PD).a78" size="32896" crc="914a2332" sha1="de7057f75c15d80366f8ad65a07b144b20ddea69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a784119308900bf3">
+		<description>Beef Drop demo (2006-01-08) (Ken Siders)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Beef Drop demo (2006-01-08) (Ken Siders).a78" size="32896" crc="85bf1280" sha1="4119308900bf39c313ac89f7031e232e0b4456d0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78992d0db39826e">
 		<description>Bentley Bear's Crystal Quest (20151220)</description>
 		<year>????</year>
@@ -2149,6 +2629,26 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="147584">
 				<rom name="Bentley Bear's Crystal Quest (Wonder Hack) (20170820).a78" size="147584" crc="f960bf8c" sha1="ba30565a27c4ad8bbad4c066ba0fabe38c7f9e20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78e534a5385c0dd">
+		<description>bero test B&amp;W</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bero test B&amp;W.a78" size="32896" crc="b240c426" sha1="e534a5385c0dd8819739a988ce8f5e111c456ecc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78992a48143196a">
+		<description>bero test</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bero test.a78" size="32896" crc="854b0241" sha1="992a48143196a195a9a9678942ce902cfc09aa79"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2212,6 +2712,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78ee6a50310c655">
+		<description>bonQ 2006-07-22</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bonQ 2006-07-22.a78" size="32896" crc="46054836" sha1="ee6a50310c655cf5929f278077ee4551d07fb508"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7837f3c87974104">
+		<description>bonQ 2006-08-12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="bonQ 2006-08-12.a78" size="32896" crc="069e4f52" sha1="37f3c8797410464060b0c3b0e92b08be8cd1f627"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a788c68f82860494">
+		<description>bonQ 2006-08-13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="bonQ 2006-08-13.a78" size="49280" crc="4f75e7e5" sha1="8c68f828604942aab0dd6844ebcf86cb31438b34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a783360108adcb01">
+		<description>bonQ 2006-08-15</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="bonQ 2006-08-15.a78" size="49280" crc="e2e6e1b1" sha1="3360108adcb0175bd6a3a52846b873990ebefb16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a784844cc219b790">
+		<description>bonQ 2006-08-18</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="bonQ 2006-08-18.a78" size="49280" crc="8b1fdf7d" sha1="4844cc219b790f9fa3a7f4bf1a7b5d82efc92f03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78d9ea93793dfb1">
+		<description>bonQ 2006-08-26</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="bonQ 2006-08-26.a78" size="49280" crc="ef7b9f6d" sha1="d9ea93793dfb17be3628389e0ffe5a2a667418c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7805f6231573f0b">
+		<description>bonQ 2006-10-31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="bonQ 2006-10-31.a78" size="49280" crc="6fd4c3f4" sha1="05f6231573f0b8d743675dcd817c06a7705b89ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a788cd527d2e5072">
+		<description>bonQ 2007-05-21</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="bonQ 2007-05-21.a78" size="49280" crc="a71489e4" sha1="8cd527d2e5072da66d69db68142243278b5d2f61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78ba493e783db07">
+		<description>bonQ 2007-06-16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="bonQ 2007-06-16.a78" size="49280" crc="cc71caa1" sha1="ba493e783db0768e79a11759d03cb219adc048d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a782b96968fb1461">
+		<description>bonQ_Demo_05Feb_08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="bonQ_Demo_05Feb_08.a78" size="49280" crc="b08668b0" sha1="2b96968fb1461b587b1b5ec92227e7607b68c56b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a7801ba06d126b0c">
 		<description>Boom (v1_5) (20150526)</description>
 		<year>????</year>
@@ -2229,6 +2829,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="16512">
 				<rom name="bootskell.a78" size="16512" crc="0461ba2a" sha1="117b1654d7f156dbe9023a25d3412bc0fd6afba1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a788214c72f2f981">
+		<description>Bouncing Balls Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="8320">
+				<rom name="Bouncing Balls Demo (PD).a78" size="8320" crc="b73bf85d" sha1="8214c72f2f9811bdb17877ac10a466f26bc0eeb7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2279,6 +2889,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="cavit.a78" size="32896" crc="6cbbe21e" sha1="ee5a059390069737a875902f80a960bc02ce5e22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a782717f81ca9987">
+		<description>Centipede (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Centipede (1987)(Atari)(NTSC).a78" size="16512" crc="7ca3ec6b" sha1="2717f81ca998714edfcc8e8a7cbab452b865c170"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2522,6 +3142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a7834f4e33c4d395">
+		<description>Choplifter! (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Choplifter! (1987)(Atari)(NTSC).a78" size="32896" crc="0b0d05d4" sha1="34f4e33c4d395f3d06197f96fb3e190c72e96f1f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78d9f7a603119fe">
 		<description>Christmas Jr Pac-Man (C64 Mazes) (Hack) (20091224)</description>
 		<year>????</year>
@@ -2649,6 +3279,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="Clobberman (Invincible) (Hack) (20181210).a78" size="32896" crc="f1831157" sha1="a6c1b73e93f2e40c3ee99a7ea705228bb60aab11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a780d623df344364">
+		<description>Commando (1989)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Commando (1989)(Atari)(NTSC).a78" size="131200" crc="e9bd1c75" sha1="0d623df344364a5a7db7f4d2409afe4523d7ea08"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2832,6 +3472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78deb4c5ac02898">
+		<description>Crossbow 4-18-88</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="147584">
+				<rom name="Crossbow 4-18-88.a78" size="147584" crc="da9568cf" sha1="deb4c5ac0289817944a11a30e466ccf23908cddd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a783b9fa10882bca">
 		<description>CRZYOTTO</description>
 		<year>????</year>
@@ -2942,6 +3592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a7830d214753b89b">
+		<description>Desert Falcon (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="Desert Falcon (1987)(Atari)(NTSC).a78" size="49280" crc="5ff04461" sha1="30d214753b89b13455830b5d99aacd926127d63a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a787aba38a5e19ff">
 		<description>Desert Falcon (HSC Support) (Hack) (20040616)</description>
 		<year>????</year>
@@ -3002,6 +3662,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a7880b83372433f1">
+		<description>Diagnostic Cartridge rom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Diagnostic Cartridge rom.a78" size="16512" crc="71ea0e62" sha1="80b83372433f17c20f7a7390dd096065e3f88424"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7888cdff3f0dc80">
+		<description>Diagnostic Test Cartridge (1984)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Diagnostic Test Cartridge (1984)(Atari)(NTSC).a78" size="32896" crc="491c2055" sha1="88cdff3f0dc80433fd5df86e4aa093faa36d34f5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78e6314fd4caaef">
 		<description>Dig Dog (NTSC) (Harp) (Hack) (20130103)</description>
 		<year>????</year>
@@ -3042,6 +3722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78a60b690351ccc">
+		<description>Dig Dug (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Dig Dug (1987)(Atari)(NTSC).a78" size="16512" crc="a6da053d" sha1="a60b690351ccc1b03de6f4b8945eb54f2dee762e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78375f4b41e1082">
 		<description>Dig Dug (NTSC) (Atari) (1987)</description>
 		<year>????</year>
@@ -3079,6 +3769,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="147584">
 				<rom name="dkxm_demo_v12_pal.a78" size="147584" crc="b0ae4e3a" sha1="1a3b4ebe68c811606eda48dc711f1d6f230e85da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78cc6feb8236776">
+		<description>Donkey Kong (1988)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="Donkey Kong (1988)(Atari)(NTSC).a78" size="49280" crc="24afb84f" sha1="cc6feb8236776c49cb57875130c1c3b5e984253e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3129,6 +3829,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="49280">
 				<rom name="Donkey Kong Jr (PAL) (Atari) (1988).a78" size="49280" crc="8decbfa0" sha1="decf96df9e6ee7cde5f00f0f754f902126ad43d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78f1e66a300bbb2">
+		<description>Donkey Kong Junior (1988)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="Donkey Kong Junior (1988)(Atari)(NTSC).a78" size="49280" crc="812457fb" sha1="f1e66a300bbb2e52c52f180ae15e5e6024323d6d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3222,6 +3932,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78680561bc4e702">
+		<description>DUALPAC v.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="DUALPAC v.1.a78" size="32896" crc="af9ab436" sha1="680561bc4e7028b36b239aa8383f2fab4439d63f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78192602a7e76f7">
+		<description>DUALPAC v.2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="DUALPAC v.2.a78" size="32896" crc="c5e1bba8" sha1="192602a7e76f7ce7ca41839ef6167c18f5e1fdb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a784285268bc6f7c">
+		<description>DUALPAC v.3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="DUALPAC v.3.a78" size="32896" crc="fd3d0306" sha1="4285268bc6f7cb368fe135fbaefa1c908d9f1bcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7822a7780be76b7">
+		<description>Dualpacman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Dualpacman.a78" size="32896" crc="b7fbecb3" sha1="22a7780be76b77a4062896884ffbbf953fca6ca9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78688900cd1b213">
 		<description>Dungeon Stalker (20151022)</description>
 		<year>????</year>
@@ -3239,6 +3989,36 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="524416">
 				<rom name="E X O (Alpha 12) (20201231).a78" size="524416" crc="52d77c1e" sha1="743302c2921363fe7993756456b7f94585fb3240"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78346011fc6a2b0">
+		<description>Expensive Planetarium 7800 2007-03-08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Expensive Planetarium 7800 2007-03-08.a78" size="32896" crc="d7dd78b3" sha1="346011fc6a2b04bec21adfd5e70dd97a7f69d49a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a781670664051c92">
+		<description>Expensive Planetarium 7800 2007-03-09</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Expensive Planetarium 7800 2007-03-09.a78" size="32896" crc="fe27dc60" sha1="1670664051c9219afa37801707fe2cd95de95574"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78c6176d479b3e5">
+		<description>Expensive Planetarium 7800 2007-03-15</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Expensive Planetarium 7800 2007-03-15.a78" size="32896" crc="c37f3ee1" sha1="c6176d479b3e53cfbea2afbdf7eb823437dc09fd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3392,6 +4172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78289726184c13e">
+		<description>Food Fight (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Food Fight (1987)(Atari)(NTSC).a78" size="32896" crc="db5b7d3f" sha1="289726184c13ef554d3e806cf907165206e86945"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a7822c5d183d349b">
 		<description>Food Fight (NTSC) (Atari) (1987)</description>
 		<year>????</year>
@@ -3452,6 +4242,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a784c9b88092b4ce">
+		<description>frogger (2005-08-13)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="frogger (2005-08-13).a78" size="32896" crc="1c85941c" sha1="4c9b88092b4ce80ca7db098609a6fe556132748b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78bf599f32d1a86">
+		<description>frogger 2005-10-03</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="frogger 2005-10-03.a78" size="32896" crc="8fe967e4" sha1="bf599f32d1a86ee6a4a8b33db6092ccae1e6636b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a786596bc38a6140">
+		<description>frogger 2005-10-08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="frogger 2005-10-08.a78" size="32896" crc="b94b49b7" sha1="6596bc38a61405c3c363cee29ac2b0b39a1b814a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7825abb96d0295e">
+		<description>frogger 2007-06-06</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="frogger 2007-06-06.a78" size="32896" crc="f90bd80a" sha1="25abb96d0295eea1cf78b1aec9ab1989d68a505e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a783243dcda384b5">
+		<description>frogger tia 2006-10-02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="frogger tia 2006-10-02.a78" size="32896" crc="b88bea47" sha1="3243dcda384b5e773bedda0220e550832c465a35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78cc958a718e2e7">
+		<description>FROGGER [2005-05-04]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="FROGGER [2005-05-04].a78" size="49280" crc="f24dae0c" sha1="cc958a718e2e7ee3e5c246978c233f90cdfbdffb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78a1d63eea76d24">
+		<description>FROGGER [2005-05-05]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="FROGGER [2005-05-05].a78" size="49280" crc="b540b1c7" sha1="a1d63eea76d2418a3da0389544ae39a8c09c2b0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78ed4d876963fa5">
+		<description>FROGGER [2005-05-24]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="FROGGER [2005-05-24].a78" size="49280" crc="5483f950" sha1="ed4d876963fa5e85cba654b5a3c3d671d0c32035"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78146515912f3bc">
+		<description>frogger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="frogger.a78" size="32896" crc="c7813272" sha1="146515912f3bc03a4fb973deb76b129bccab8f4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78613e5017ec867">
+		<description>Frogger_pokey 2006-11-26</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Frogger_pokey 2006-11-26.a78" size="32896" crc="c00c1b57" sha1="613e5017ec867aa79e28eb968aa96b13c2513765"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a782078d9218bdc4">
 		<description>Froggie (NTSC) (Final Release) (20180920)</description>
 		<year>????</year>
@@ -3472,6 +4362,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a783142d676284ed">
+		<description>froggie 2003-06-04</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="froggie 2003-06-04.a78" size="32896" crc="f868a0de" sha1="3142d676284ed664998051b4345d2af3bb29d588"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78480578aec188f">
+		<description>froggie 2006-04-17 old</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="froggie 2006-04-17 old.a78" size="32896" crc="5ffeec92" sha1="480578aec188f736da3e4030bbd3222bef099a7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78cdbb14bfd9697">
+		<description>froggie 2006-04-17</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="froggie 2006-04-17.a78" size="32896" crc="f8a45915" sha1="cdbb14bfd969739d47745ea3ac4fd055f28b6de9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78df3830b80bb59">
+		<description>froggie 2007-01-07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="froggie 2007-01-07.a78" size="32896" crc="bd980371" sha1="df3830b80bb599844dce917c22f89ce91a0c68f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78f6149c68e3844">
+		<description>froggie_pokey_2006-12-31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="froggie_pokey_2006-12-31.a78" size="32896" crc="b4f53053" sha1="f6149c68e38441f2373585c9ce110ee5647cb47b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a785efe63fd5ae8c">
+		<description>froggie_tia_2006-11-26</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="froggie_tia_2006-11-26.a78" size="32896" crc="bcb591fd" sha1="5efe63fd5ae8cc3f261b84f911215c30a0fb7ef6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a780345b1474c6b6">
 		<description>Frogus (20190804)</description>
 		<year>????</year>
@@ -3489,6 +4439,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="Fuzzipede (NTSC) (Hack) (20150919).a78" size="32896" crc="955b12e2" sha1="fb849eba332e86f6907300d82b7d36930d38c43a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7896515fd5d0c7b">
+		<description>Galaga (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Galaga (1987)(Atari)(NTSC).a78" size="32896" crc="0a174f9b" sha1="96515fd5d0c7b3ec507469d5f47d377bdb1ab6fe"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3772,6 +4732,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78164e5e3ad4bdc">
+		<description>HANGLY78 (2005-05-30)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="HANGLY78 (2005-05-30).a78" size="16512" crc="f527e0c3" sha1="164e5e3ad4bdc05ec7a1e96320080e88a0a268a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78965f6eb54292b">
+		<description>HANGLY78 (2005-05-31)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="HANGLY78 (2005-05-31).a78" size="16512" crc="ea0ea9e6" sha1="965f6eb54292b9e391dd0efc28174da54f63517e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7844dd74f75f57d">
+		<description>HANGLY78 hsc fixed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="HANGLY78 hsc fixed.a78" size="16512" crc="eb39b0ce" sha1="44dd74f75f57def23dce2b14595c673bdb0e1532"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7806c26370bb632">
+		<description>Hanglyman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Hanglyman.a78" size="16512" crc="f4f5d06f" sha1="06c26370bb632de16c9b187fc08c1d3a6dd565b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7865430d1ba835f">
+		<description>HAPPYHALLOWIN7800final</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="HAPPYHALLOWIN7800final.a78" size="32896" crc="87f047b7" sha1="65430d1ba835fa6f29197c6f7e05429034f63bc2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a7872912fdc3a0e4">
 		<description>Harry's Hen House (1_07F) (20100117)</description>
 		<year>????</year>
@@ -3779,6 +4789,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="Harry's Hen House (1_07F) (20100117).a78" size="32896" crc="890b51c2" sha1="72912fdc3a0e4465484c6fef739a642639e77cd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78d419772b1aa40">
+		<description>Hat Trick (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="Hat Trick (1987)(Atari)(NTSC).a78" size="49280" crc="e293793e" sha1="d419772b1aa40cb4c62faea904000fbb243c0b46"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3902,6 +4922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a781ee0d1876d6f1">
+		<description>Impossible Mission (1987) (Atari) (Fixed NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Impossible Mission (1987) (Atari) (Fixed NTSC).a78" size="131200" crc="46613ddc" sha1="1ee0d1876d6f140d6f38f2209b85630c1b1e976e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78bdbc60df4fe04">
 		<description>Impossible Mission (1987)(Atari)(NTSC)</description>
 		<year>????</year>
@@ -3909,6 +4939,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="131200">
 				<rom name="Impossible Mission (1987)(Atari)(NTSC).a78" size="131200" crc="fa0a683e" sha1="bdbc60df4fe04072f41b408d5ed97487db9abe34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7857ddbc1da7d8c">
+		<description>Impossible Mission (1987)(Atari)(NTSC)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Impossible Mission (1987)(Atari)(NTSC)[a].a78" size="131200" crc="0b0bbe47" sha1="57ddbc1da7d8c91a6a2d3d80af7db98f0daa05e6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3979,6 +5019,26 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="131200">
 				<rom name="Impossible Mission (Red Graphics Hack) (20160905).a78" size="131200" crc="ed79c691" sha1="913b7d614b1b09e14d9b7da70222417e402187bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a7857c876f0b7235">
+		<description>Impossible mission hacked</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Impossible mission hacked.a78" size="131200" crc="05a35a6e" sha1="57c876f0b72356344a37d0a8aa2a907f6f37ebad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78c14562eeffb1e">
+		<description>Impossible Mission [f]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Impossible Mission [f].a78" size="131200" crc="068d9f0d" sha1="c14562eeffb1e82a5bdf1e8667f4f3c4a71e6292"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4119,6 +5179,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="49280">
 				<rom name="Journey to the West (20190303).a78" size="49280" crc="fdbbbed2" sha1="0fb6686c6e8a4f7c71d01ef82a41a44666df402c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78625829093ce07">
+		<description>Joust (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="Joust (1987)(Atari)(NTSC).a78" size="32896" crc="1646ec7c" sha1="625829093ce079c88a9c9129c0dab709311ff7a0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4422,6 +5492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a7832b5ddc7bef1b">
+		<description>Karateka (1988)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="Karateka (1988)(Atari)(NTSC).a78" size="49280" crc="be689aea" sha1="32b5ddc7bef1b140e94b17ce002809cf4566929f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78835ab6f30cc2d">
 		<description>Karateka (NTSC) (Atari) (1987)</description>
 		<year>????</year>
@@ -4479,6 +5559,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="49280">
 				<rom name="Kid Icarus (Screen Image) (20190220).a78" size="49280" crc="730a48a9" sha1="6cb97672e83b66b6aa9b3091cc10446f4a6d7779"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78cf1edf5e8728c">
+		<description>Klax (1992)(Atari)(NTSC)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Klax (1992)(Atari)(NTSC)(proto).a78" size="131200" crc="729f4b1c" sha1="cf1edf5e8728c0a9bb688ed9fe28994881e081bd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4662,6 +5752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a7818b1645a76cf7">
+		<description>Mario Bros. (1988)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="49280">
+				<rom name="Mario Bros. (1988)(Atari)(NTSC).a78" size="49280" crc="fcffc04a" sha1="18b1645a76cf72ccc9ecfc582f02425daf410004"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78b5ee1409872ef">
 		<description>MarioBros(ICE)</description>
 		<year>????</year>
@@ -4679,6 +5779,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="16512">
 				<rom name="Mastersoft Munch (Hack) (20130420).a78" size="16512" crc="61598057" sha1="684c59fe78bb34e0921120f54063a7f3843cc49e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78ab08f92c6a9a3">
+		<description>Mat Mania Challenge (1990)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Mat Mania Challenge (1990)(Atari)(NTSC).a78" size="131200" crc="a902f3e6" sha1="ab08f92c6a9a3346cce40958ad6492e6af00acf1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4719,6 +5829,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="mazy.a78" size="32896" crc="f7c88b3a" sha1="1ee3a9f68c337300dae85d9349f3e705327039b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a785a3de17714b24">
+		<description>Mean 18 Ultimate Golf (1989)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="131200">
+				<rom name="Mean 18 Ultimate Golf (1989)(Atari)(NTSC).a78" size="131200" crc="517d1986" sha1="5a3de17714b24eb526d0ec62b327f4bc66a7fe9f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4892,6 +6012,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a787bb3d227add3d">
+		<description>Miss Pac Attack final version HSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Miss Pac Attack final version HSC.a78" size="16512" crc="3f60a4da" sha1="7bb3d227add3dc0bcc0cba54b0f01e17988919aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78e074870bffe2d">
+		<description>Miss Pac Attack final version</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Miss Pac Attack final version.a78" size="16512" crc="da0c6518" sha1="e074870bffe2d1427e4443a09a1dff85a6fcb6e2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78da3ad40f21bec">
 		<description>Missing In Action (TNT Games) (Prototype)</description>
 		<year>????</year>
@@ -4969,6 +6109,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="More Beef Drop (Hack) (20060901).a78" size="32896" crc="a24b307a" sha1="e1dcefe6e6a5ac83b81f3580a8811677da86c4f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a786f6d2ed49cf92">
+		<description>moreBeefDrop (hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="moreBeefDrop (hack).a78" size="32896" crc="7e81ca47" sha1="6f6d2ed49cf9277da5c513b03262cf9787d8c701"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5302,6 +6452,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a7838f044a7267e6">
+		<description>Ms. Pac-Man (1987)(Atari)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Ms. Pac-Man (1987)(Atari)(NTSC).a78" size="16512" crc="2b11d9f2" sha1="38f044a7267e6beac17f0824325bda3cd2ec3b9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a780a22396628c6c">
+		<description>MSPACATK (2005-05-27) new</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="MSPACATK (2005-05-27) new.a78" size="16512" crc="1ab321e6" sha1="0a22396628c6c2433543a5941e77bb7f9c28ba87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78922211a118f29">
+		<description>MSPACATK (2005-05-27)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="MSPACATK (2005-05-27).a78" size="16512" crc="7dbea0b6" sha1="922211a118f2978df09658eecb1148f3d65ddd3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78eb9b0a8598c55">
+		<description>MSPACATK (2005-09-27) Fast version</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="MSPACATK (2005-09-27) Fast version.a78" size="16512" crc="dee887cf" sha1="eb9b0a8598c55c1efed94fda247d6fd9210f7597"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78fcd99d6b377ae">
+		<description>Mspacattack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Mspacattack.a78" size="16512" crc="64b15d30" sha1="fcd99d6b377aed6d694f8a9c8891289b9b6d97ba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78883f0dcbe875a">
 		<description>mspacman 2009-04-27</description>
 		<year>????</year>
@@ -5362,6 +6562,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a786d6a2fb99a15f">
+		<description>Mspacmanfast</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="Mspacmanfast.a78" size="16512" crc="de3f7589" sha1="6d6a2fb99a15fa38d86f60738664f71e2b1d796d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78d1436a7803f88">
+		<description>MSPCFAST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="MSPCFAST.A78" size="16512" crc="73325ea5" sha1="d1436a7803f88975c9bc921c2dfab911b0fb3927"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a7804538ee7f2c59">
 		<description>Munch Man 64 (Hack) (20160206)</description>
 		<year>????</year>
@@ -5409,6 +6629,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="neuras.a78" size="32896" crc="c85e14d2" sha1="ee54d7d52d5133667219701c7664002d4a1a9722"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78c566a2085f7f4">
+		<description>NEWMSPAC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="NEWMSPAC.A78" size="16512" crc="4bbd0228" sha1="c566a2085f7f4ab1e447b1517ec881dba5f40cbf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5739,6 +6969,26 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="16512">
 				<rom name="PAC-Man 7800 v0.2.a78" size="16512" crc="ed8b2003" sha1="9ccc58d4e2353babb1895a380d85fdec83e97c57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78b5d8894304dde">
+		<description>PAC-Man 7800 v0.3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="PAC-Man 7800 v0.3.a78" size="16512" crc="1431d21e" sha1="b5d8894304dde486eebcd30cdd638bd3398e72c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78a6039eaf23814">
+		<description>PAC-Man 7800 v0.4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="16512">
+				<rom name="PAC-Man 7800 v0.4.a78" size="16512" crc="42a75268" sha1="a6039eaf2381481c5393a658465a05829e312645"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6802,6 +8052,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a7838e52e084cb44">
+		<description>qbert (2005-06-15) old</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="qbert (2005-06-15) old.a78" size="32896" crc="a2678052" sha1="38e52e084cb447f863666ee101057637c57ef097"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78ebb45888e9fc4">
+		<description>qbert (2005-06-15)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="qbert (2005-06-15).a78" size="32896" crc="98424fc3" sha1="ebb45888e9fc49c94574fab895f044e232896f3b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a78a84f772931f27">
 		<description>qbert - avox version</description>
 		<year>????</year>
@@ -6989,6 +8259,26 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="qbert 2006-05-30.a78" size="32896" crc="9ecc2f97" sha1="555d8fb02a9c3be0a08239ee6b797b093a55df54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78853b072542101">
+		<description>qbert [2005-04-26]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="qbert [2005-04-26].a78" size="32896" crc="d3a139d0" sha1="853b0725421017be82e21736f89d9ca51afeaf8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a782e9407f74dabd">
+		<description>qbert [2005-05-10]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="qbert [2005-05-10].a78" size="32896" crc="937e5863" sha1="2e9407f74dabdbfe937751c8e7a9d583548cfdb7"/>
 			</dataarea>
 		</part>
 	</software>

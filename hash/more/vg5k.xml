@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 20 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="vg5k" description="vg5k loose roms">
 	<software name="vg5a254a16e9bffd">
 		<description>(demo)Demo 27 Couleurs (2005-12-10)(Daniel Coulom)</description>
@@ -99,6 +99,16 @@
 		<part name="cass" interface="vg5k_cass">
 			<dataarea name="cass" size="936">
 				<rom name="Formule Brute (1985)(Carl Hervier).k7" size="936" crc="f3fe5e46" sha1="240a883f9636538a40e36bd3119b1d394a385ad6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vg55e1572371232d">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="vg5k_cass">
+			<dataarea name="cass" size="7833">
+				<rom name="H-tron.k7" size="7833" crc="663ba968" sha1="5e1572371232d28f340a216742acfde6b8f8cde0"/>
 			</dataarea>
 		</part>
 	</software>

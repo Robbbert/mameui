@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3153 -->
+<!-- Number of items in this list = 3280 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -5272,6 +5272,136 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a263ad5c5a35f5e1">
+		<description>Analog Clock (Additional Frame Info) (V0.0) (20-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Analog Clock (Additional Frame Info) (V0.0) (20-01-2003) (AD).a26" size="32768" crc="24d00967" sha1="3ad5c5a35f5e198f35de6066df6c0d15e7b89e02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e04d76aa0e550">
+		<description>Analog Clock (V0.0) (20-01-2003) (AD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Analog Clock (V0.0) (20-01-2003) (AD) [a1].a26" size="32768" crc="c0c98576" sha1="e04d76aa0e55009db9d00c85c160ada1478b3e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2656606dc01392d">
+		<description>Analog Clock (V0.0) (20-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Analog Clock (V0.0) (20-01-2003) (AD).a26" size="32768" crc="2a664018" sha1="56606dc01392dcfbcef1fd13c8d8e64d33cdec18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c159e3a65597a">
+		<description>Analog Clock (V0.1) (20-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Analog Clock (V0.1) (20-01-2003) (AD).a26" size="32768" crc="baea0b4e" sha1="c159e3a65597a4ccc141ef449f44d35b2a1719bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a147bbed14e52">
+		<description>ANCIPITAL - Ode to Yak the Hairy (Berzerk Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ANCIPITAL - Ode to Yak the Hairy (Berzerk Hack).a26" size="4096" crc="32fc4255" sha1="a147bbed14e5286da026a7a29769b462e99507ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bd1bad4f591a9">
+		<description>Andalusian Dog 20071130</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Andalusian Dog 20071130.a26" size="4096" crc="61bf8c20" sha1="bd1bad4f591a939a2eebcbe149d7897d61d2d003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ea5c80db17fba">
+		<description>Andy Kovacs_1 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Andy Kovacs_1 (Combat Hack).a26" size="2048" crc="0df73df2" sha1="ea5c80db17fba83886fd967524293b227860e594"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262671df825f194">
+		<description>Andy Kovacs_1 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Andy Kovacs_1 (Indy 500 Hack).a26" size="4096" crc="71dd533e" sha1="2671df825f19419001e321a8018c4eede8892594"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26582fad1eefedc">
+		<description>Andy Kovacs_2 (Combat Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Andy Kovacs_2 (Combat Hack).a26" size="2048" crc="c23a55ca" sha1="582fad1eefedc2d79811bf969211f25a7ed28a2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d21bbae6a3d28">
+		<description>Andy Kovacs_2 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Andy Kovacs_2 (Indy 500 Hack).a26" size="4096" crc="5f22fecc" sha1="d21bbae6a3d28b1d3a2167661deef04c156a8d6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2670bad80428286">
+		<description>Andy Kovacs_3 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Andy Kovacs_3 (Indy 500 Hack).a26" size="4096" crc="843e3129" sha1="70bad8042828654d06197282520e2f891f70d747"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0f271f846eba">
+		<description>Andy Kovacs_4 (Indy 500 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Andy Kovacs_4 (Indy 500 Hack).a26" size="4096" crc="fb6573ee" sha1="b0f271f846eba68a704ba113a4c407593cc1552a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268578a37d3acc0">
+		<description>Angling (Ariola) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Angling (Ariola) (PAL) [o1].a26" size="4096" crc="6cb4739b" sha1="8578a37d3acc0df1472933fb4b3f9c4bcb4d140e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26e9cbd1348c7c2">
 		<description>Angry Video Game Nerd K.O. Boxing_2009_08_16_NTSC</description>
 		<year>????</year>
@@ -5289,6 +5419,376 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Angry Video Game Nerd K.O. Boxing_2009_08_16_PAL60.bin" size="32768" crc="70dbc8e9" sha1="080deaf5fe7c0e3b132365bfe9e8003becf3498d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ed7a6a0b277f0">
+		<description>Another Space Game (BAtari) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Another Space Game (BAtari) (PD).a26" size="4096" crc="63ce1ca0" sha1="ed7a6a0b277f0e0b14632e0d4ba8012d09e2ba6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a8164ca762fc5">
+		<description>AnotherPong (vs CPU) 2004-10-17 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AnotherPong (vs CPU) 2004-10-17 (PD).a26" size="4096" crc="30f52d95" sha1="a8164ca762fc56481b58c4580d36c83348b05691"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268cea0ae114902">
+		<description>AnotherPong (vs CPU) 2004-10-28 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AnotherPong (vs CPU) 2004-10-28 (PD).a26" size="4096" crc="e5522912" sha1="8cea0ae114902fdc7080ca664ececb21ef5ae4a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f85edcebfa23">
+		<description>AnotherPong 2004-10-17 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AnotherPong 2004-10-17 (PD).a26" size="4096" crc="2ff3699e" sha1="1f85edcebfa239fc311319b0a5d49991780e318f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2692cee73dd7b72">
+		<description>AnotherPong 2004-10-28 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AnotherPong 2004-10-28 (PD).a26" size="4096" crc="56263a3a" sha1="92cee73dd7b72b237192b4d5684516b7f1bef8fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260093be602df04">
+		<description>Ant Attack by neotokeo2001 (Pepsi Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ant Attack by neotokeo2001 (Pepsi Invaders Hack).a26" size="4096" crc="0a52fe53" sha1="0093be602df04fb110312add97c29449ba537237"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608e2fc2922a87">
+		<description>Anti-Hero.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Anti-Hero.bas.a26" size="4096" crc="05c57aaa" sha1="08e2fc2922a87f3533a4f18594783f8879c0220a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2622c506c5851c6">
+		<description>Ants 2k - Star Box Multicart 4k (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ants 2k - Star Box Multicart 4k (Chris Read).a26" size="4096" crc="fe594047" sha1="22c506c5851c6021b7c651baf5b559d7eb373a2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b29a0ea657a5">
+		<description>Ants 2k - Star Box Multicart 8k (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ants 2k - Star Box Multicart 8k (Chris Read).a26" size="8192" crc="6c54d0e4" sha1="4b29a0ea657a5839689cbd83cc48cd007d47aa18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26315f7a6f319e4">
+		<description>Ants 2k Bomb Bot WIP (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Ants 2k Bomb Bot WIP (Chris Read).a26" size="2048" crc="27a00fed" sha1="315f7a6f319e4dc54680feb5295ac0c148f31587"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26458f79437a3b1">
+		<description>Ants 2k Bubba (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ants 2k Bubba (Chris Read).a26" size="4096" crc="e252a04f" sha1="458f79437a3b12c6cc3680be6b3ef9fc9f603acd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26959963031d6bc">
+		<description>Ants 2k Bubba Prototype (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ants 2k Bubba Prototype (Chris Read).a26" size="4096" crc="4df0a55c" sha1="959963031d6bc01495e4d9a70f46730acfc4597f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26109c77a0ba6bf">
+		<description>Ants 2k Final Version (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ants 2k Final Version (Chris Read).a26" size="4096" crc="af55c838" sha1="109c77a0ba6bfb0d313c3bd3f4e6e4229119d1be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696b62643e5b55">
+		<description>Ants 2k Final Version 16-06-2006 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ants 2k Final Version 16-06-2006 (Chris Read).a26" size="4096" crc="315e3b43" sha1="96b62643e5b55ca532668046b0447167244ec4f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb6e609804ff2">
+		<description>Ants 2k Final Version Real 16-06-2006 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ants 2k Final Version Real 16-06-2006 (Chris Read).a26" size="4096" crc="804b347f" sha1="eb6e609804ff297afe3ec2ff7c7b6513970ff4b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260023e67b9d9cb">
+		<description>ants 2k v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="ants 2k v1.a26" size="2048" crc="ee8cd3e0" sha1="0023e67b9d9cbc715e0ae09775aeffb9b1a78dc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2604dda739248a7">
+		<description>ants 2k v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="ants 2k v2.a26" size="2048" crc="7a63918f" sha1="04dda739248a7546047d6547b046ff0ef5bd6bad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ebb793fc4bced">
+		<description>ants 2k v6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="ants 2k v6.a26" size="2048" crc="6d5ce0f9" sha1="ebb793fc4bcede0fb63aaa491bd1f2ef0584e0f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b1ad985f9286f">
+		<description>ants 2k v7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="ants 2k v7.a26" size="2048" crc="3fab5f8d" sha1="b1ad985f9286f2aebc7b8e49f410cd3236efa812"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266dc7db4ec152e">
+		<description>ants2kversion4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="ants2kversion4.a26" size="2048" crc="78481612" sha1="6dc7db4ec152e42364222d142ecb1f08a6aa650d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c1c478432125b">
+		<description>ants2kversion5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="ants2kversion5.a26" size="2048" crc="42924ee4" sha1="c1c478432125bbdd1aa0feaae10de085cd4dedd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26481f26a5df6a7">
+		<description>antvaders</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="antvaders.a26" size="4096" crc="b94f8231" sha1="481f26a5df6a7182d6a1d37566ca23d7e959bad2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fe5d3020a3d5c">
+		<description>Anzac Day 2UP Demo - Cointoss (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Anzac Day 2UP Demo - Cointoss (PD).a26" size="2048" crc="c3f35e8a" sha1="fe5d3020a3d5c93a677ba6c5dd975d20e5b42ca2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e0cd0834e8f23">
+		<description>Anzac Day 2UP Demo 2 - Cointoss (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Anzac Day 2UP Demo 2 - Cointoss (PD).a26" size="2048" crc="8794cd41" sha1="e0cd0834e8f2314413f1985bff598ed981efa1f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f19958e735eea">
+		<description>aotm1k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="aotm1k.a26" size="2048" crc="7dff7d08" sha1="f19958e735eea4d74e0a22504edd6ba0f37dfd61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a29c2a2449e28">
+		<description>APACHE Attack Chopper (Spitfire Attack Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="APACHE Attack Chopper (Spitfire Attack Hack).a26" size="4096" crc="214b6645" sha1="a29c2a2449e28ba96af0cc4847969113baa123f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ec5f60916408">
+		<description>Aphex Invaders (Pepsi Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Aphex Invaders (Pepsi Invaders Hack).a26" size="4096" crc="fe661675" sha1="7ec5f609164088a906ea503378fa2ee53c49bf9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c6498154225a4">
+		<description>apong 2005-10-04</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="apong 2005-10-04.a26" size="4096" crc="7cc8bbc5" sha1="c6498154225a4e7f15d450519eaf8dbbda39bc18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ba8b80d2b0ef1">
+		<description>APong 2006-07-13 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="APong 2006-07-13 (PD).a26" size="4096" crc="6c8dff96" sha1="ba8b80d2b0ef1db0429d14bea7271c73f004a0b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26892d5f84d2c44">
+		<description>APong 20060224 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="APong 20060224 (PD).a26" size="4096" crc="ca40188f" sha1="892d5f84d2c44f6d23078555c47eda476f5283b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26632b2ca91ffeb">
+		<description>APong July03_B (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="APong July03_B (PD).a26" size="4096" crc="7d542b1b" sha1="632b2ca91ffebddebe81d41275da20ea8a5a7d87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e6ece324a855b">
+		<description>APong July04_A (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="APong July04_A (PD).a26" size="4096" crc="9ac4c822" sha1="e6ece324a855b0a45447fedd2638ffcd96cdf8c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26330e91b673ebe">
+		<description>APongJuly02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="APongJuly02.a26" size="4096" crc="1b476528" sha1="330e91b673ebee559779a1945bd0fa2efc1265e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bdcf3d1bcbfc4">
+		<description>Apples &amp; Oranges (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Apples &amp; Oranges (PD).a26" size="4096" crc="4aba3d99" sha1="bdcf3d1bcbfc4877eeea2b0b11beb2eb67497493"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2691690fa8b3330">
+		<description>AquaHeroHL1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="AquaHeroHL1.a26" size="16384" crc="82dddc54" sha1="91690fa8b3330a95d6435fcaa7a24ec022013c75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b38eb1d5b71f5">
+		<description>AquaHeroWip1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="AquaHeroWip1.a26" size="16384" crc="3e974eb8" sha1="b38eb1d5b71f5c7df2cb605cc4052d4e3e60b08a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26791a811b7a583">
+		<description>Aquarium (WIP) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Aquarium (WIP) (PD).a26" size="4096" crc="dbeaedf7" sha1="791a811b7a5833bf82b7b4e7556d6bddf4b2647a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5352,6 +5852,466 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2611564fc83734e">
+		<description>Arcade Asteroids (Flashback 2 Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Arcade Asteroids (Flashback 2 Version).a26" size="8192" crc="7188cb03" sha1="11564fc83734e9a751771c733623f4d79745277d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26acf0a7812305c">
+		<description>Arcade Pong (Flashback 2 Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Arcade Pong (Flashback 2 Version).a26" size="4096" crc="764b8ba3" sha1="acf0a7812305c923761a91193f1aea8c3a32812f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec4415599cdac">
+		<description>Arcade Warlords test</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Arcade Warlords test.a26" size="4096" crc="8243862e" sha1="ec4415599cdac00042516d823117b394ee825ea3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2679a3fe6633c96">
+		<description>Archon (2004) (Christopher Tumber) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Archon (2004) (Christopher Tumber) (Prototype).a26" size="4096" crc="4d308bed" sha1="79a3fe6633c968f473f428f870d6fbc7248a6748"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d43045dc2d456">
+		<description>Archon Demo 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Archon Demo 1 (PD).a26" size="32768" crc="6384feb4" sha1="d43045dc2d45608270c1960e701083c5f843ade7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d69316cd7b09e">
+		<description>Archon Demo 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Archon Demo 2 (PD).a26" size="32768" crc="cdd3dbd0" sha1="d69316cd7b09e2d881844e9e1bd68ca424545c02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be2c62a8335c7">
+		<description>Archon Demo 3 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Archon Demo 3 (PD).a26" size="32768" crc="60d9ca77" sha1="be2c62a8335c712d2f6e2826bc6f852c1c4b9537"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a1f4268638e95">
+		<description>arctic_landtran_rc1a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="arctic_landtran_rc1a.bas.a26" size="8192" crc="ed47d6d9" sha1="a1f4268638e95d47fabf5a5fdfc8672685a43e71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b6c11cbe3a129">
+		<description>argh2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="argh2.bas.a26" size="8192" crc="d53d6419" sha1="b6c11cbe3a1299032bb21040a0f9ea1c2cad86ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659179c69beb29">
+		<description>Armageddon Complex Build 0.1.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Armageddon Complex Build 0.1.bas.bin" size="16384" crc="9e35bf15" sha1="59179c69beb297fb4b8e9c275bf3a216147339e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b0c43b2a25e5">
+		<description>Armageddon Complex Build 0.2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Armageddon Complex Build 0.2.bas.bin" size="32768" crc="22ff5263" sha1="1b0c43b2a25e5b935069eb48468a60f9b1ffce96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266aa5419b13a7a">
+		<description>Armageddon Complex Build 0.3.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Armageddon Complex Build 0.3.bas.bin" size="32768" crc="edbb0efc" sha1="6aa5419b13a7a0c91968bf73a6bf349f5a8d6665"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2636f9b37e6ff2c">
+		<description>Armageddon Complex Build 0.4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Armageddon Complex Build 0.4.bin" size="32768" crc="f8b77b27" sha1="36f9b37e6ff2c422c17af154c49505640981bb5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bed72bc13d66f">
+		<description>Armageddon Complex Build 0.5.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Armageddon Complex Build 0.5.bas.bin" size="32768" crc="77c48800" sha1="bed72bc13d66f3327907ef00286ada6bdbc915bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26878f3a70bf6d5">
+		<description>Armageddon Complex Build 0.6.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Armageddon Complex Build 0.6.bas.bin" size="32768" crc="6512207e" sha1="878f3a70bf6d512364c1e781da3f38b91098937a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626dd940f2dfb5">
+		<description>Armageddon Complex_8dir</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Armageddon Complex_8dir.bin" size="32768" crc="faf8fd90" sha1="26dd940f2dfb59229a0c5ee68778d0871f91e272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2651f3c3afaf090">
+		<description>ArmageddonComplex_a0_2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="ArmageddonComplex_a0_2.bas.a26" size="32768" crc="6ce8c9c1" sha1="51f3c3afaf0902aae8d64d1dfe601a64447ea7a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6100de20023a">
+		<description>Armageddon_Complex_teleport_and_climb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Armageddon_Complex_teleport_and_climb.bin" size="32768" crc="04dd2b8c" sha1="d6100de20023a92aa43dcef6c705812332cfafb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267e6184dd2d697">
+		<description>Artificial Lifeform 1 by neotokeo2001 (King Kong Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Artificial Lifeform 1 by neotokeo2001 (King Kong Hack).a26" size="4096" crc="5ac74718" sha1="7e6184dd2d69728e3ddb1358913c0b4a572eb9e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb27866f2af80">
+		<description>Artillery Duel (1985) (Xonox) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Artillery Duel (1985) (Xonox) (PAL) [a1][!].a26" size="8192" crc="cb6bb2af" sha1="eb27866f2af80d9f2e047cfbd88d59e042f08bc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268b51a97b3a286">
+		<description>Artillery Duel (1985) (Xonox) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Artillery Duel (1985) (Xonox) [a1][!].a26" size="8192" crc="e5fc5599" sha1="8b51a97b3a28686db6f1fcd7ae07580258608346"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c03ef936e4cbf">
+		<description>Artillery2006_Fabventure_Hack_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Artillery2006_Fabventure_Hack_.a26" size="8192" crc="94006443" sha1="c03ef936e4cbfd57bce53f6e9d3a6dfa41f5d7f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c7ae5721f7fec">
+		<description>ArtilleryDuel-LikeGame</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ArtilleryDuel-LikeGame.a26" size="4096" crc="9f799ace" sha1="c7ae5721f7fec33d4624f26b6b94452f32e4335f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0e0e50e83a2e">
+		<description>Asif Hack 2 by JE (Journey - Escape Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Asif Hack 2 by JE (Journey - Escape Hack).a26" size="4096" crc="96e95990" sha1="a0e0e50e83a2ee845edb7f1b57218701c6ac6e62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc49169f61bb8">
+		<description>Assault on Precinct 13 hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Assault on Precinct 13 hack.a26" size="4096" crc="af14c186" sha1="bc49169f61bb8d72eb4e67193b6ac69c689b7f8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623573988f6126">
+		<description>assult13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="assult13.a26" size="4096" crc="da9d23c4" sha1="23573988f612639bdf914db92bdd90f2755fbbf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2649b8b10135f32">
+		<description>assult132</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="assult132.a26" size="4096" crc="4e590066" sha1="49b8b10135f327baae12fed00b06c3f4f8319a4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f524f65aa1e70">
+		<description>assult1323</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="assult1323.a26" size="4096" crc="f4203af3" sha1="f524f65aa1e7004f3e09a35a6be372bccb1cc1a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a636151230c4b">
+		<description>assult13234</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="assult13234.a26" size="4096" crc="680c31df" sha1="a636151230c4b1047926314c53e7820b9e6b9131"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269495ce40cd45a">
+		<description>assult132345</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="assult132345.a26" size="4096" crc="0d91709d" sha1="9495ce40cd45a9c2c7a9092272cc169cd3b0aae5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a2acfbb2fe22a">
+		<description>assult1323456</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="assult1323456.a26" size="4096" crc="5c37bebe" sha1="a2acfbb2fe22a52ffc1be6c8f64ce2f9c24d9a27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d225a3e0f74c8">
+		<description>assult13234567</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="assult13234567.a26" size="4096" crc="9d152a77" sha1="d225a3e0f74c8e9d9be33c311d0f809e1b8da7f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26df1955901d0d1">
+		<description>assult132345678</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="assult132345678.a26" size="4096" crc="6d80397d" sha1="df1955901d0d1e83f9879e453321cd06c5564e34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c27a1544e423f">
+		<description>Assymetrical Playfield Demo 20040418 (Christian Bogey)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Assymetrical Playfield Demo 20040418 (Christian Bogey).a26" size="4096" crc="4975c74d" sha1="c27a1544e423f87a3c0e59544b0d0e93d93de266"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eabb50049c410">
+		<description>AStar (2005-07-18) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar (2005-07-18) (Aaron Curtis).a26" size="4096" crc="a7e0fe2a" sha1="eabb50049c4106cb6a252c108fb7caf5e9f47d35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2691fa9187bac18">
+		<description>astar (2005-07-22)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="astar (2005-07-22).a26" size="4096" crc="3781ae56" sha1="91fa9187bac1863e1832cb80d95917362687cdf5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260673d5478c919">
+		<description>AStar (2005-07-30) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar (2005-07-30) (Aaron Curtis).a26" size="4096" crc="422b59a7" sha1="0673d5478c919c6fbbcb23d78d81c6df73b78c92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fa131060f3972">
+		<description>AStar (2006-02-06) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar (2006-02-06) (Aaron Curtis) (PAL).a26" size="4096" crc="aad52c2e" sha1="fa131060f39723457fc018941541670075adfa8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2681f0010e37b1b">
+		<description>AStar (2006-02-06) (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar (2006-02-06) (Aaron Curtis) (PAL60).a26" size="4096" crc="29247171" sha1="81f0010e37b1b32d523ae62dc5b0997ef36ceaa1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2612f812d693bba">
+		<description>AStar (2006-02-06) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar (2006-02-06) (Aaron Curtis).a26" size="4096" crc="c748cbe7" sha1="12f812d693bbabe8e05154c162b3593b1c0e4b32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bf844960c9757">
+		<description>AStar (2006-10-30) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar (2006-10-30) (Aaron Curtis).a26" size="4096" crc="b0d54959" sha1="bf844960c9757909444f55f5bebc4e11dcac7c17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e43d7c38cc682">
+		<description>AStar SP (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar SP (Aaron Curtis) (PAL).a26" size="4096" crc="d8ba90ff" sha1="e43d7c38cc682295381de2c26b4ddf00f144de35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268aa62dd4597db">
+		<description>AStar SP (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar SP (Aaron Curtis) (PAL60).a26" size="4096" crc="79fc45b2" sha1="8aa62dd4597dbde5dcb0989bfde011726a90c879"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f5de65f920f62">
+		<description>AStar SP (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AStar SP (Aaron Curtis).a26" size="4096" crc="054710b7" sha1="f5de65f920f628b39c728a6e64b4d57d5909bc1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696a1f325787fa">
+		<description>Aster-Hawk (2002) (Charles Morgan) (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Aster-Hawk (2002) (Charles Morgan) (Asteroids Hack).a26" size="8192" crc="375fa1f3" sha1="96a1f325787fafab489b6ceda0418566e1557c7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f14408429a911">
+		<description>Asterix (1989) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asterix (1989) (Atari) (PAL) [a1][!].a26" size="8192" crc="6bee5479" sha1="f14408429a911854ec76a191ad64231cc2ed7d11"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a267728987c75084">
 		<description>Asterix+</description>
 		<year>????</year>
@@ -5359,6 +6319,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Asterix+.a26" size="8192" crc="4f70a653" sha1="7728987c75084c60fee5924c6b0df877f5e618ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fb5a6b5feca4b">
+		<description>Asteroid 2 by Atari Freak 1 and Franklin Cruz (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroid 2 by Atari Freak 1 and Franklin Cruz (Asteroids Hack).a26" size="8192" crc="94cacd1f" sha1="fb5a6b5feca4bd64e39c18696d5469ead8b4b826"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5372,6 +6342,136 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26a7ddce3cbe0e2">
+		<description>Asteroids (1981) (Atari) [a3][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids (1981) (Atari) [a3][!].a26" size="8192" crc="16bfdc15" sha1="a7ddce3cbe0e2f15728162eb0a589a4e46d839bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263f291e362c41c">
+		<description>Asteroids (1982) (Atari) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids (1982) (Atari) [a1][!].a26" size="8192" crc="908a459c" sha1="3f291e362c41c34be375002e460fa05e83bcabf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2692358e4e9ccd1">
+		<description>Asteroids 2 (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids 2 (Asteroids Hack).a26" size="8192" crc="0267f7ed" sha1="92358e4e9ccd1d36992561d095a7079ab9e0b128"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f5deaac7a4c37">
+		<description>Asteroids 2600 (Asteroids Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids 2600 (Asteroids Hack) [a1].a26" size="8192" crc="038e050f" sha1="f5deaac7a4c3725faad8b12252905547b63d65db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26621d21c6e8d34">
+		<description>Asteroids 2600 (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids 2600 (Asteroids Hack).a26" size="8192" crc="665db578" sha1="621d21c6e8d34782c633c8d9b1a86898d011e50f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e4cc1135c0827">
+		<description>Asteroids Arcade (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids Arcade (Asteroids Hack).a26" size="8192" crc="223c5889" sha1="e4cc1135c0827002a5c6bc185891a19d8169fa0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633ee35a5979bc">
+		<description>Asteroids DC+ by Thomas Jentzsch (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids DC+ by Thomas Jentzsch (Asteroids Hack).a26" size="8192" crc="290aed4f" sha1="33ee35a5979bc17902dfbdea58af95b1c70980f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0a520111b051">
+		<description>Asteroids Deluxe (Flashback 2 Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Asteroids Deluxe (Flashback 2 Version).a26" size="16384" crc="4eb33d38" sha1="a0a520111b05162b06dcb612c71e8dfe32dd1d40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266d535f7a148b8">
+		<description>Asteroids SS (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids SS (Asteroids Hack).a26" size="8192" crc="e9218d80" sha1="6d535f7a148b857e07315058590e40e0f5056b1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2693c5d6735cb89">
+		<description>Asteroids Vector Green (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids Vector Green (Asteroids Hack).a26" size="8192" crc="f70902b4" sha1="93c5d6735cb8935e5bdd86d14c1d2ad9367326b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267a5eb5d58c391">
+		<description>Asteroids Vector White (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids Vector White (Asteroids Hack).a26" size="8192" crc="0f929bbc" sha1="7a5eb5d58c3917eaf5c72a9ef0ecd095c0896edf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26081df2a3e0879">
+		<description>AsteroidsDC plus_DCLOGO (Asteroids Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="AsteroidsDC plus_DCLOGO (Asteroids Hack).a26" size="8192" crc="1baf3304" sha1="081df2a3e0879f09cbfd4905dd083b5dd38162b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26279332c2ba9ed">
+		<description>Asteroids_(1979)_(Atari)_[a2][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroids_(1979)_(Atari)_[a2][!].a26" size="8192" crc="c6fdd4bc" sha1="279332c2ba9ed8bf2c3d6236a335ec531b0d576b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2619c2015a616c3">
 		<description>asteroids_ugly</description>
 		<year>????</year>
@@ -5379,6 +6479,86 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="asteroids_ugly.a26" size="8192" crc="026f0f12" sha1="19c2015a616c32b6d07ddaa7e1e221e57f5b602f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2666165e9a43c4f">
+		<description>Asteroid_Chase+_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroid_Chase+_NTSC.a26" size="8192" crc="3e302c06" sha1="66165e9a43c4f79a9e4c179b9e5ae6323dd1d955"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264c1da02ef8a40">
+		<description>Asteroid_Chase+_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroid_Chase+_PAL60.a26" size="8192" crc="7cf3e2df" sha1="4c1da02ef8a40c609ffcbbe6247b19b0c5e0a85c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269dde36a314d78">
+		<description>Asteroid_Chase+_SECAM60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroid_Chase+_SECAM60.a26" size="8192" crc="e7a2f557" sha1="9dde36a314d78601757750f20b477f0a2b0dd179"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26679d39864147f">
+		<description>Asteroid_Chase_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroid_Chase_NTSC.a26" size="8192" crc="405e2f73" sha1="679d39864147f2158e5cdd50e4bf2be5a524382b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ccfaa848c861a">
+		<description>Asteroid_Chase_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroid_Chase_PAL60.a26" size="8192" crc="209a38a0" sha1="ccfaa848c861a5dbad15cf060383bdebdca99006"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dee7a5ced9933">
+		<description>Asteroid_Chase_SECAM60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Asteroid_Chase_SECAM60.a26" size="8192" crc="fb0f552d" sha1="dee7a5ced9933f3107135f4609e14c785ca7aca0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a15c3f32cbcfe">
+		<description>Astro Man in Psychedelic Land (Test) (Alien Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Astro Man in Psychedelic Land (Test) (Alien Hack).a26" size="4096" crc="2c2ba570" sha1="a15c3f32cbcfeec335a1532fb5bdde17b7c8e5a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263bbb361a1e9d7">
+		<description>Astroblast- Infinite Lives Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Astroblast- Infinite Lives Hack.a26" size="4096" crc="3b0a9ede" sha1="3bbb361a1e9d79d748811c9531c02e01e11d999f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5429,6 +6609,96 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="astroblast_ugly_invincible hack_1.a26" size="4096" crc="7f705d23" sha1="1e9cb36afda367bf4ff0e2834293b347eeaf5a15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260888250f80a53">
+		<description>Astroshoot r2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Astroshoot r2 (PD).a26" size="4096" crc="a0ea3258" sha1="0888250f80a53c3d862e991153afb257c44c59ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269891c6c515a2c">
+		<description>Astroshoot r3 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Astroshoot r3 (PD).a26" size="4096" crc="a42e14fa" sha1="9891c6c515a2c7f5e6acdb4ef37c7b5191caa7b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e12d9add16b13">
+		<description>astroshoot4.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="astroshoot4.bas.a26" size="4096" crc="6a29fa1c" sha1="e12d9add16b13b5cbc49128325e5b45ad7acc72e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6eeff2c1f73f">
+		<description>Astrowar (Hack) (2004) (Charles F. Gray)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Astrowar (Hack) (2004) (Charles F. Gray).a26" size="4096" crc="40a308b1" sha1="d6eeff2c1f73f8f4e32e3686c07aed1cd93bea0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c324a227e581">
+		<description>Asymmetric Playfield (Roger Williams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Asymmetric Playfield (Roger Williams).a26" size="4096" crc="7b124f9d" sha1="7c324a227e58108e2740e4d14cf751d75310e6df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f6dfefb0496e1">
+		<description>Asymmetric Reflected Playfield (Glenn Saunders and Roger Williams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Asymmetric Reflected Playfield (Glenn Saunders and Roger Williams).a26" size="4096" crc="9b8f535c" sha1="f6dfefb0496e169ab664a9e7799bf6e5f29174bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26098678bc0ac83">
+		<description>Asymmetrical Playfield - 2 Scrolls (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Asymmetrical Playfield - 2 Scrolls (PD).a26" size="4096" crc="836dba02" sha1="098678bc0ac8302d6ae8eb8db813bfb9891dff2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26038d3d7304b4b">
+		<description>Asymmetrical Playfields 02a commented 20030707</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Asymmetrical Playfields 02a commented 20030707.a26" size="4096" crc="406cfec3" sha1="038d3d7304b4b56d83fa39f9892a9687b89dc207"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261ed9ea9990e0a">
+		<description>Asymmetrical Playfields 03 20030707</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Asymmetrical Playfields 03 20030707.a26" size="4096" crc="6044f4a1" sha1="1ed9ea9990e0a819a217b72b6c66a2d062bc865a"/>
 			</dataarea>
 		</part>
 	</software>
