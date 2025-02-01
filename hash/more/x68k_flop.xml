@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 476 -->
+<!-- Number of items in this list = 524 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -2062,6 +2062,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68e8ba919eccb58">
+		<description>G68K Easy Graphic Tool for X68000 (Sample Pictures disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="G68K Easy Graphic Tool for X68000 (Sample Pictures disk).hdm" size="1261568" crc="e75bfce3" sha1="e8ba919eccb58b4a3c8357e1bc36e828845d73b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6802a9fcfce5b7f">
+		<description>G68K Easy Graphic Tool for X68000 (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="G68K Easy Graphic Tool for X68000 (System disk).hdm" size="1261568" crc="33c85512" sha1="02a9fcfce5b7f6259c98446f2e92e581239fc4e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x689f1e4a3d64b38">
+		<description>Gaia Fighter v2.5 (1991)(Hong Kong Project)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gaia Fighter v2.5 (1991)(Hong Kong Project).dim" size="1261824" crc="0d285801" sha1="9f1e4a3d64b382fb6ea455f66faaa60b0bc81df2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684b70b9241eddf">
+		<description>Gaiarm (1991)(Violet Heart Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gaiarm (1991)(Violet Heart Software).dim" size="1261824" crc="cf7c04b4" sha1="4b70b9241eddfd11e297470a75a5140aa0ac4bfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6859085ef58261b">
+		<description>Galseed (1991)(Login)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Galseed (1991)(Login)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="3f8172f5" sha1="59085ef58261b1e129863e267deb1d8744c1ebfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c85ae598d44a3">
+		<description>Galseed (1991)(Login)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Galseed (1991)(Login)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="1caf5275" sha1="c85ae598d44a3517b6f935f0c858f676c9ac179a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68e4d45eb5f4b90">
 		<description>Galseed 2 (Disk 1)</description>
 		<year>????</year>
@@ -2069,6 +2129,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Galseed 2 (Disk 1).XDF" size="1261568" crc="5c0349a5" sha1="e4d45eb5f4b90f3a488c017b99455784dc2c0a3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68831b384c721d0">
+		<description>Galseed 2 (Disk 2) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Galseed 2 (Disk 2) (2).XDF" size="1261568" crc="ca95c7b8" sha1="831b384c721d0cc452c04f388e3eb8a0912b9c2a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2082,6 +2152,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68b0c5e32f0e68d">
+		<description>Game.x (PDS version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Game.x (PDS version).dim" size="1261824" crc="5897549d" sha1="b0c5e32f0e68ddf6724d4f81fa741c3cc824f90e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682b9f915bf7bc6">
+		<description>Game.x</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Game.x .dim" size="1261824" crc="72c3bf35" sha1="2b9f915bf7bc64f9511fcbbede17d5f391e49307"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68d3eaf33caf784">
 		<description>GCC ni Yoru X680x0 Game Programming (Disk A)</description>
 		<year>????</year>
@@ -2092,6 +2182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68995a3f47c7568">
+		<description>GCC ni Yoru X680x0 Game Programming (Disk B) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="GCC ni Yoru X680x0 Game Programming (Disk B) (2).hdm" size="1261568" crc="b20ff9a3" sha1="995a3f47c75681244afe31185d6f1b24fe67f421"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x684ce2fb2889068">
 		<description>GCC ni Yoru X680x0 Game Programming (Disk B)</description>
 		<year>????</year>
@@ -2099,6 +2199,46 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="GCC ni Yoru X680x0 Game Programming (Disk B).hdm" size="1261568" crc="74dd0f9e" sha1="4ce2fb28890687e528ca3eb217f8140fdc518422"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6864ac3cff4a88e">
+		<description>Gedou Densetsu (1993)(MIX)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gedou Densetsu (1993)(MIX)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="d1d576cb" sha1="64ac3cff4a88ea5562c085033991a0728d10971c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680c97b229ca6dd">
+		<description>Gedou Densetsu (1993)(MIX)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gedou Densetsu (1993)(MIX)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="16b67efa" sha1="0c97b229ca6ddb0771ecb0e1d45f060e9ef39d7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68286c2fdf9f6ee">
+		<description>Gedou Retsuden (1993)(MIX)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gedou Retsuden (1993)(MIX)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="ea4c5a76" sha1="286c2fdf9f6ee6fa24d336c46e89208b768de4b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680dfea67496ed2">
+		<description>Gedou Retsuden (1993)(MIX)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Gedou Retsuden (1993)(MIX)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="03bbb7e2" sha1="0dfea67496ed28a9172c108d0c52761eeb59a6ac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3292,6 +3432,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68affc3e933bb03">
+		<description>Nbee</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Nbee.hdm" size="1261568" crc="bcbed7fa" sha1="affc3e933bb030801b3b037737ddacdab767e492"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68aaafc19009d3f">
+		<description>Neji Shiki (1989)(Zeit)(Data1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neji Shiki (1989)(Zeit)(Data1).hdm" size="1261568" crc="a43ddc1f" sha1="aaafc19009d3f8f03587cf22fa9931188530ba6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b9127da8fdf9d">
+		<description>Neji Shiki (1989)(Zeit)(Data2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neji Shiki (1989)(Zeit)(Data2).hdm" size="1261568" crc="78a92a6b" sha1="b9127da8fdf9dc856986f75ff5dadc9b0c828af9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6820a0bc263dfe2">
+		<description>Neji Shiki (1989)(Zeit)(Demo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neji Shiki (1989)(Zeit)(Demo).hdm" size="1261568" crc="928c92ad" sha1="20a0bc263dfe276750a9fb3901a6a80c0f7eff8b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68bbbe6dae86250">
 		<description>Neji Shiki (1989)(Zeit)(SystDsk)</description>
 		<year>????</year>
@@ -3299,6 +3479,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Neji Shiki (1989)(Zeit)(SystDsk).hdm" size="1261568" crc="daeba380" sha1="bbbe6dae8625012d25c023fd354f5ba90626bd8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f050e232042db">
+		<description>Nemesis '95 Gradius 2 (1994)(Gra2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Nemesis '95 Gradius 2 (1994)(Gra2).hdm" size="1261568" crc="1db19ef6" sha1="f050e232042db4b9e8e22a1addca3c39b20d63a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c60d6fa0ea8fb">
+		<description>Nereid Driver Disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Nereid Driver Disk.hdm" size="1261568" crc="c8a8c2f5" sha1="c60d6fa0ea8fb8d604453fca9da145f47978fa1b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3312,6 +3512,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68a766aae619b66">
+		<description>Neutrino ph.1 (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.1 (Disk B).hdm" size="1261568" crc="63d9b404" sha1="a766aae619b66ec7ffe38c0bb3cb911d087f1d2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b63597b4a5a87">
+		<description>Neutrino ph.1 (Disk C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.1 (Disk C).hdm" size="1261568" crc="cdfd1b30" sha1="b63597b4a5a873ee551de8e95ca027d1217a33a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x685004c9177ece3">
+		<description>Neutrino ph.1 (Disk D)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.1 (Disk D).hdm" size="1261568" crc="ed15245e" sha1="5004c9177ece3137dcc385e29c8f701b70f7499d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b7fe7276edd28">
+		<description>Neutrino ph.1 (Disk E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.1 (Disk E).hdm" size="1261568" crc="27ec35c4" sha1="b7fe7276edd284020f56a881b8ede4ec5a599842"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x685e0d249ee965e">
 		<description>Neutrino ph.2 (Disk A)</description>
 		<year>????</year>
@@ -3319,6 +3559,46 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Neutrino ph.2 (Disk A).hdm" size="1261568" crc="d599926b" sha1="5e0d249ee965eaf2689914459d441f498fd6f0cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68eebeba7d53d18">
+		<description>Neutrino ph.2 (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.2 (Disk B).hdm" size="1261568" crc="c1de5aa7" sha1="eebeba7d53d18b5508a0fb0f04f253b4facbf7b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b60ca6865d40e">
+		<description>Neutrino ph.2 (Disk C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.2 (Disk C).hdm" size="1261568" crc="8e522466" sha1="b60ca6865d40ee7322bbcdeec52a19b0f9bbaf1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682bcd7532b2f81">
+		<description>Neutrino ph.2 (Disk D)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.2 (Disk D).hdm" size="1261568" crc="4c740f08" sha1="2bcd7532b2f81e3d9c12d64b9cdd1d92a926c7d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6886790b3f86b8a">
+		<description>Neutrino ph.2 (Disk E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.2 (Disk E).hdm" size="1261568" crc="51ed17b3" sha1="86790b3f86b8a9363a60e9898c2c766591c2371d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3332,6 +3612,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68f8e579b4a2084">
+		<description>Neutrino ph.3 (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.3 (Disk B).hdm" size="1261568" crc="54a0018f" sha1="f8e579b4a2084207dcce79701839bdc8d8998258"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6889d54e16bcf79">
+		<description>Neutrino ph.3 (Disk C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.3 (Disk C).hdm" size="1261568" crc="39e49228" sha1="89d54e16bcf79529a1b70e150feda18ca78c5247"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x685af40476f380f">
+		<description>Neutrino ph.3 (Disk D)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.3 (Disk D).hdm" size="1261568" crc="8db73802" sha1="5af40476f380f2ddf35dca8b9373d67aa8f1b988"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6847edb5142aa72">
+		<description>Neutrino ph.3 (Disk E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.3 (Disk E).hdm" size="1261568" crc="30f44ccb" sha1="47edb5142aa7232f57145b165bd1386e6c593ff7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x681578c7dbe1492">
 		<description>Neutrino ph.4 (Disk A)</description>
 		<year>????</year>
@@ -3339,6 +3659,56 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Neutrino ph.4 (Disk A).hdm" size="1261568" crc="44128dc3" sha1="1578c7dbe149201e1d2155f9a14b1eeee4b302f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688b376f69f71bc">
+		<description>Neutrino ph.4 (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.4 (Disk B).hdm" size="1261568" crc="cfb6a748" sha1="8b376f69f71bc013ef7963e1f67cf6a680ad1cbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6848aa6727057da">
+		<description>Neutrino ph.4 (Disk C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.4 (Disk C).hdm" size="1261568" crc="c0e88ddc" sha1="48aa6727057daad1ae64e7d69ec0270c8d565e1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686c3d32c8e7412">
+		<description>Neutrino ph.4 (Disk D)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.4 (Disk D).hdm" size="1261568" crc="dd6075f5" sha1="6c3d32c8e7412362653af076dc4a7febd1be3004"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ad1614ca4f3b6">
+		<description>Neutrino ph.4 (Disk E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.4 (Disk E).hdm" size="1261568" crc="6c10c3ed" sha1="ad1614ca4f3b6d2aa3c32100496ec381a3c6f8a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6810047da3a32f5">
+		<description>Neutrino ph.4 (Disk F)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.4 (Disk F).hdm" size="1261568" crc="e68c49ed" sha1="10047da3a32f5028606a8d43c6899894f598451e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3352,6 +3722,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x684850f82831926">
+		<description>Neutrino ph.5 (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.5 (Disk B).hdm" size="1261568" crc="44cb3ed7" sha1="4850f82831926b0e48c3c52a3308c4c1dc26704f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68739fad5902b3f">
+		<description>Neutrino ph.5 (Disk C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.5 (Disk C).hdm" size="1261568" crc="8bc180e8" sha1="739fad5902b3fd4ceaf4cde5bc6b8664961a1716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688d8652a98ebaf">
+		<description>Neutrino ph.5 (Disk D)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.5 (Disk D).hdm" size="1261568" crc="c65bff62" sha1="8d8652a98ebaf25b27a900c8faf8f70bc2c838fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d00eead09fb8a">
+		<description>Neutrino ph.5 (Disk E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.5 (Disk E).hdm" size="1261568" crc="f2a2dcbd" sha1="d00eead09fb8a52b84da2ffe15eace9edb11c385"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686023bfb74fede">
+		<description>Neutrino ph.5 (Disk F)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.5 (Disk F).hdm" size="1261568" crc="bc1e7886" sha1="6023bfb74fedeb819b361d88c8f3bfc311789cb7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x680c65301bddef6">
 		<description>Neutrino ph.6 (Disk A)</description>
 		<year>????</year>
@@ -3362,6 +3782,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68341cde2fe2c51">
+		<description>Neutrino ph.6 (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Neutrino ph.6 (Disk B).hdm" size="1261568" crc="3a98c33a" sha1="341cde2fe2c5129863df89d441c9cb165f545668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d1ea8c9788c38">
+		<description>New Print Shop Pro-68K (v2.0) (Data 1 disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="New Print Shop Pro-68K (v2.0) (Data 1 disk).hdm" size="1261568" crc="5ba881ef" sha1="d1ea8c9788c38cd7515f9003ec551f1f51904e5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682aa291d364313">
+		<description>New Print Shop Pro-68K (v2.0) (Data 2 disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="New Print Shop Pro-68K (v2.0) (Data 2 disk).hdm" size="1261568" crc="a3b68dc3" sha1="2aa291d36431396cc310cd2ac5859298e0227488"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x687ea0e2b1289ad">
+		<description>New Print Shop Pro-68K (v2.0) (Runtime disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="New Print Shop Pro-68K (v2.0) (Runtime disk).hdm" size="1261568" crc="7b2c6c66" sha1="7ea0e2b1289ade731b336ddfb71cf5ee08837991"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x689d4bc0d012ffd">
 		<description>New Print Shop Pro-68K (v2.0) (System disk)</description>
 		<year>????</year>
@@ -3369,6 +3829,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="New Print Shop Pro-68K (v2.0) (System disk).hdm" size="1261568" crc="d8345f5a" sha1="9d4bc0d012ffded8fac4f05177c65fa025331d95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b2b1596018a49">
+		<description>Ninin Battle (1990)(Takeru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Ninin Battle (1990)(Takeru).dim" size="1261824" crc="9b5c5804" sha1="b2b1596018a496e15bde6659b1aed79d4693fcfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684a51ff5dc5d38">
+		<description>Ninja Seventh Game (1996)(Nami)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Ninja Seventh Game (1996)(Nami).XDF" size="1261568" crc="70856d71" sha1="4a51ff5dc5d38244f543910af0e8e4f01e4e97e1"/>
 			</dataarea>
 		</part>
 	</software>

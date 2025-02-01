@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 157 -->
+<!-- Number of items in this list = 161 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -1549,6 +1549,46 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="3441">
 				<rom name="Hundi (19xx)(D. Ambras).z80" size="3441" crc="bffdb829" sha1="69431c376cbc6a3a0d2926cf054f77a12d7f3921"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1020beb48740c2c">
+		<description>Idas v1.1 (19xx)(D. Ambras)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7024">
+				<rom name="Idas v1.1 (19xx)(D. Ambras)(en).z80" size="7024" crc="5135c219" sha1="20beb48740c2c4b5923648ae4ff61a973dd8a0f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100ac03caec0736">
+		<description>irrgarten</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2592">
+				<rom name="irrgarten.z80" size="2592" crc="252bf64e" sha1="0ac03caec07366dd9a34adcfbb8eb6f30a67b0ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ebd690c395d2c">
+		<description>joker(m) 2_02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="9536">
+				<rom name="joker(m) 2_02.z80" size="9536" crc="3ca1a1f3" sha1="ebd690c395d2c162bdbc9e7a1740e96baf7008d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10db943d58fa388">
+		<description>jumping-jack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3360">
+				<rom name="jumping-jack.z80" size="3360" crc="2c38f790" sha1="db943d58fa38842424f7164ae461cde26279af3e"/>
 			</dataarea>
 		</part>
 	</software>

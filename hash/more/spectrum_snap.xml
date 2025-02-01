@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 424 -->
+<!-- Number of items in this list = 433 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -472,6 +472,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa28bc1a63a4f5">
+		<description>Bionic Commando 128K (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="91893">
+				<rom name="Bionic Commando 128K (1988)(Go!).z80" size="91893" crc="8eb507eb" sha1="a28bc1a63a4f5f9513fecd940a82e549f19f8c9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2dfd81b8ce64a">
+		<description>Bionic Commando 48K (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39846">
+				<rom name="Bionic Commando 48K (1988)(Go!).z80" size="39846" crc="69a1c19d" sha1="2dfd81b8ce64a936d89c440d8b2214d92a53b2f6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs774d3d419aa93">
 		<description>Black Horse (2009)(Digital Brains)</description>
 		<year>????</year>
@@ -933,12 +953,12 @@
 		</part>
 	</software>
 	<software name="zxs7610642293987">
-		<description>Cosmic Space Attack (2021)(Vintage Software)</description>
+		<description>Cosmic Space Attack 48K (2021)(Vintage Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="26629">
-				<rom name="Cosmic Space Attack (2021)(Vintage Software).z80" size="26629" crc="90ba6366" sha1="761064229398738f2f47787aa7dc4053e4b4df94"/>
+				<rom name="Cosmic Space Attack 48K (2021)(Vintage Software).z80" size="26629" crc="90ba6366" sha1="761064229398738f2f47787aa7dc4053e4b4df94"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1212,6 +1232,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6327fed80ba29">
+		<description>Elite 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43252">
+				<rom name="Elite 128K (1985)(Firebird Software).z80" size="43252" crc="d914f0df" sha1="6327fed80ba29023e4bcaf59df66b1779e6d0215"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee507e01e2bdd">
+		<description>Elite 128K (1985)(www.elitehomepage.org-archive-index.htm)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43323">
+				<rom name="Elite 128K (1985)(www.elitehomepage.org-archive-index.htm).z80" size="43323" crc="7ee10a6d" sha1="ee507e01e2bdd988f08ecfc9c671dede10064987"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs47d13c7f20d7a">
 		<description>Elven Warrior (1989)(Players Premier)</description>
 		<year>????</year>
@@ -1349,6 +1389,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="72704">
 				<rom name="Fairlight II (1986)(The Edge).z80" size="72704" crc="28eb4e46" sha1="91f9e8c97bbd3ca055d6319d2b53bf12ec6174c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7371a9dba8d0a">
+		<description>Fantasy Zone - Escape from the Pyramid 128K (2016)(GreenWebSevilla)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="23660">
+				<rom name="Fantasy Zone - Escape from the Pyramid 128K (2016)(GreenWebSevilla).z80" size="23660" crc="e09d79d8" sha1="7371a9dba8d0a6d229bc14c6afddb912f265c34d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1523,12 +1573,22 @@
 		</part>
 	</software>
 	<software name="zxs8294dc53d2f8c">
-		<description>Ghosts 'n' Goblins (1986)(Elite Systems)</description>
+		<description>Ghosts 'n' Goblins 48K (1986)(Elite Systems)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="47109">
-				<rom name="Ghosts 'n' Goblins (1986)(Elite Systems).z80" size="47109" crc="dc252529" sha1="8294dc53d2f8ce78ecb02d1591002e1f82c55af7"/>
+				<rom name="Ghosts 'n' Goblins 48K (1986)(Elite Systems).z80" size="47109" crc="dc252529" sha1="8294dc53d2f8ce78ecb02d1591002e1f82c55af7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs511c495dfd48b">
+		<description>Ghouls 'n' Ghosts 128K (1989)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="108754">
+				<rom name="Ghouls 'n' Ghosts 128K (1989)(U.S. Gold).z80" size="108754" crc="1b626fe8" sha1="511c495dfd48bce7dccb0f9abc7b0bf8710e8c3c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1572,13 +1632,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxscc50e07db9ba3">
+		<description>Green Beret 128K (1986)(Imagine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="46515">
+				<rom name="Green Beret 128K (1986)(Imagine).z80" size="46515" crc="1b61d4ab" sha1="cc50e07db9ba3bf88da914c9cf38ba6018980aee"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf85504e434de4">
-		<description>Green Beret (1986)(Imagine Software)</description>
+		<description>Green Beret 48K (1986)(Imagine)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="44371">
-				<rom name="Green Beret (1986)(Imagine Software).z80" size="44371" crc="55f36544" sha1="f85504e434de4630bbad776569370c8f5d3db6f4"/>
+				<rom name="Green Beret 48K (1986)(Imagine).z80" size="44371" crc="55f36544" sha1="f85504e434de4630bbad776569370c8f5d3db6f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2792,6 +2862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs70accdc79198c">
+		<description>Quartet 48K (1987)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35486">
+				<rom name="Quartet 48K (1987)(Activision).z80" size="35486" crc="45711e73" sha1="70accdc79198c3bb274f34997ecf1fcb6ec0241b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa5e53f50c8000">
 		<description>R-Type (1988)(Electric Dreams Software)[b]</description>
 		<year>????</year>
@@ -3812,6 +3892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs744d3553d3e8f">
+		<description>Test Drive II - The Duel 128K (1989)(Accolade)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43213">
+				<rom name="Test Drive II - The Duel 128K (1989)(Accolade).z80" size="43213" crc="4047f7de" sha1="744d3553d3e8f24406aab7a46e3fb6aa94af8816"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs104c323bc9265">
 		<description>Test_Drive_II_The_Duel_1989_Accolade</description>
 		<year>????</year>
@@ -4143,12 +4233,12 @@
 		</part>
 	</software>
 	<software name="zxsa4069f15cfc9c">
-		<description>Wrestling Superstars (1993)(Codemasters)</description>
+		<description>Wrestling Superstars 128K (1993)(Codemasters)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="41173">
-				<rom name="Wrestling Superstars (1993)(Codemasters).z80" size="41173" crc="0b21ab8e" sha1="a4069f15cfc9c2bcdfd84f243c9e050cf96924a1"/>
+				<rom name="Wrestling Superstars 128K (1993)(Codemasters).z80" size="41173" crc="0b21ab8e" sha1="a4069f15cfc9c2bcdfd84f243c9e050cf96924a1"/>
 			</dataarea>
 		</part>
 	</software>

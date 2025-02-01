@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3280 -->
+<!-- Number of items in this list = 3597 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -2109,6 +2109,66 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="A Wee Hack Gorf Arcade 1.0.a26" size="4096" crc="1c22afa2" sha1="89a697d6cbd4e9a1cee8fac8ac398c620bca2b42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b58156b5d356">
+		<description>A-Team by Manuel Polik and Fabrizio Zavagli (2003) (A-Team Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="A-Team by Manuel Polik and Fabrizio Zavagli (2003) (A-Team Hack).a26" size="8192" crc="1089196a" sha1="9b58156b5d356b14006d0c9df8a63afbdc0a7928"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26821cffe5f5940">
+		<description>A-Team, The (Atari) (Prototype) (PAL60) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="A-Team, The (Atari) (Prototype) (PAL60) [!].a26" size="8192" crc="ea7df47f" sha1="821cffe5f5940b2951f280d07d2691e140f54ad2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263607f46475f4b">
+		<description>A-VCS-tec Challenge (beta 5) (Simon Quernhorst)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="A-VCS-tec Challenge (beta 5) (Simon Quernhorst).a26" size="8192" crc="b469dfdc" sha1="3607f46475f4b1b8989f7327f90ca53a4ac0e9fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f8ab705fcc46">
+		<description>A-VCS-tec Challenge 12grzprv (Simon Quernhorst)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="A-VCS-tec Challenge 12grzprv (Simon Quernhorst).a26" size="4096" crc="8a517d26" sha1="8f8ab705fcc4608c44ab0c9cafa037c8ce7878c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2607a68475edbf3">
+		<description>A-VCS-tec Challenge 23grzdmo (Simon Quernhorst)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="A-VCS-tec Challenge 23grzdmo (Simon Quernhorst).a26" size="4096" crc="acdf6f7d" sha1="07a68475edbf38166db3a53553fc028ee1662d78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263d6b3e49d7df0">
+		<description>A-VCS-tec Challenge 25grzprv</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="A-VCS-tec Challenge 25grzprv.a26" size="4096" crc="f650c4ce" sha1="3d6b3e49d7df0b9e79419ddccd2c0685019fdbc4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6702,6 +6762,376 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26dcc57dec6b6cd">
+		<description>atar0.2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="atar0.2.bas.a26" size="4096" crc="d0092c7d" sha1="dcc57dec6b6cdd7fe89520008056ee5c17dcabdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26720a4ba1085ae">
+		<description>atar0.3.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="atar0.3.bas.a26" size="4096" crc="b34911de" sha1="720a4ba1085ae06622a21262c3e82818f2ffb003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b70c04b9aa461">
+		<description>Atari 2600 Clock 20061229</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari 2600 Clock 20061229.a26" size="4096" crc="5f421e57" sha1="b70c04b9aa4610e9c3166b16081f045adceffa3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ab1c1899f50d3">
+		<description>Atari 2600 Golf V2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Atari 2600 Golf V2.a26" size="2048" crc="1df48d1f" sha1="ab1c1899f50d38528228fb3421ab9fdf41ccea16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c7a55a23604f3">
+		<description>Atari 2600 Invaders (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari 2600 Invaders (Space Invaders Hack).a26" size="4096" crc="b1687782" sha1="c7a55a23604f3607a7891176bef88b342cfe9b05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2684f8f7ecf272e">
+		<description>Atari 2600 Soccer v0.9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari 2600 Soccer v0.9.a26" size="4096" crc="7f5515c6" sha1="84f8f7ecf272e3316c1a7c065ae01e76be53ae46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26036a601c079b5">
+		<description>Atari Buzzer 20070202 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Atari Buzzer 20070202 (PD).a26" size="2048" crc="be40fe22" sha1="036a601c079b5c8a1e24afd6e9758cd4237ad629"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2630cfcdd19146e">
+		<description>Atari Invaders by Ataripoll (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Invaders by Ataripoll (Space Invaders Hack).a26" size="4096" crc="c41f33ca" sha1="30cfcdd19146ef848e29480b03d0e43147d58b02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc976d16515ea">
+		<description>Atari Logo Demo (PD) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Logo Demo (PD) (PAL).a26" size="4096" crc="9e04eba6" sha1="dc976d16515ea4b9dd5c2cfb76f95620b3090845"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262c3d778d64969">
+		<description>Atari Logo Demo 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Logo Demo 1 (PD).a26" size="4096" crc="54ff8ad2" sha1="2c3d778d649694632a4edfddd6fa36bb13d79868"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641a18e87a38fd">
+		<description>Atari Logo Demo 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Logo Demo 2 (PD).a26" size="4096" crc="20bdc974" sha1="41a18e87a38fde323db057451607921f637f48d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f50dbdd95425">
+		<description>Atari Logo Demo 3 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Logo Demo 3 (PD).a26" size="4096" crc="9293d901" sha1="4f50dbdd95425bcfb5464fcf1176c4800ba6c73f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2624d18f9a15f55">
+		<description>Atari Logo Demo 5 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Logo Demo 5 (PD).a26" size="4096" crc="8273b84e" sha1="24d18f9a15f55aa134697afe8258a7e0bb07888e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dcb709ac052f5">
+		<description>Atari Logo Demo 6 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Logo Demo 6 (PD).a26" size="4096" crc="aa9f25c6" sha1="dcb709ac052f59624d8f4658fdb55c6bb9bf06d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268ffc7c4aa2ebe">
+		<description>Atari Logo Playfield Demo (2001) (Eric Ball) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Atari Logo Playfield Demo (2001) (Eric Ball) (PD).a26" size="2048" crc="50594ad6" sha1="8ffc7c4aa2ebe230f333e838ee765eb563a527b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2624148342cdc74">
+		<description>Atari logo v2 for the 2600 VCS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Atari logo v2 for the 2600 VCS.a26" size="2048" crc="059f1efc" sha1="24148342cdc746522a671d09bf8e4c1a0478e46a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d9af6c8f11a7b">
+		<description>Atari OS (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS (PD).a26" size="4096" crc="0113eea1" sha1="d9af6c8f11a7bff9055123e336c14f151731cf74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263b9e22a48437d">
+		<description>Atari OS 2006-07-18 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 2006-07-18 (PD).a26" size="4096" crc="c3eb8901" sha1="3b9e22a48437da764995ec835e08a6c21be9b8a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db23ca96621c2">
+		<description>Atari OS 2006-17-07 (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 2006-17-07 (PD) [a1].a26" size="4096" crc="99d15bb2" sha1="db23ca96621c2d016bcd0608e3ee1cc99f14a3cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261170ed77dea4c">
+		<description>Atari OS 2006-17-07 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 2006-17-07 (PD).a26" size="4096" crc="db423c62" sha1="1170ed77dea4c84af09c870684b1482af76721a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2621cf92f9ee224">
+		<description>Atari OS 2006-19-07 calc (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 2006-19-07 calc (PD).a26" size="4096" crc="6efa3133" sha1="21cf92f9ee224bb77c45a0cd73f9d4967558ac2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e2a41c6ffcbee">
+		<description>Atari OS 2006-26-07 (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 2006-26-07 (PD) [a1].a26" size="4096" crc="1fad2c59" sha1="e2a41c6ffcbee4634696b7f3bb20ba5e4ac57f6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2655e2dc9e0a0d6">
+		<description>Atari OS 2006-26-07 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 2006-26-07 (PD).a26" size="4096" crc="1f029bc9" sha1="55e2dc9e0a0d6f14c25bb79bec1614e0e58cf484"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ca40b034f036">
+		<description>Atari OS 9206 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 9206 (PD).a26" size="4096" crc="8342920c" sha1="7ca40b034f0363fc0663df41119007cd91ec7219"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2670a8ee2cff7ca">
+		<description>Atari OS 9206_v2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 9206_v2 (PD).a26" size="4096" crc="26079a02" sha1="70a8ee2cff7ca4f8f5f257082d73d53181924ce1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2648d46ed05afe3">
+		<description>Atari OS 9206_v3 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 9206_v3 (PD).a26" size="4096" crc="4bed9521" sha1="48d46ed05afe316a00a2df28e85715f4e6eff825"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f2aedf9cf5387">
+		<description>Atari OS 9306 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 9306 (PD).a26" size="4096" crc="120f411d" sha1="f2aedf9cf53879552458e0b06f8cd1129cbe2a98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26980e78cd43fbd">
+		<description>Atari OS 9406 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS 9406 (PD).a26" size="4096" crc="3745e5e2" sha1="980e78cd43fbd87c8c8b837d39785166ac0852fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b5396d3c37dc">
+		<description>Atari OS Final (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS Final (PD) [a1].a26" size="4096" crc="810f887e" sha1="1b5396d3c37dc9d68cc737662b89ceac4c180093"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2695c0a43bb6d4e">
+		<description>Atari OS Final (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS Final (PD).a26" size="4096" crc="a304e1ec" sha1="95c0a43bb6d4e924669b140c883af2a7d0707444"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa25d38310f43">
+		<description>Atari OS Pong 2006-24-07 final 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS Pong 2006-24-07 final 1 (PD).a26" size="4096" crc="a220d67c" sha1="aa25d38310f4325909ebd19098d0b03355c50863"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26664737ab5c658">
+		<description>Atari OS Pong 2006-24-07 final 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS Pong 2006-24-07 final 2 (PD).a26" size="4096" crc="2fc86bbb" sha1="664737ab5c658f274ea4afc37816024b2c53c235"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2602a7b1c889d69">
+		<description>Atari OS v1.0 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS v1.0 (PD).a26" size="4096" crc="df0c4efa" sha1="02a7b1c889d692c53e9a37413257335c3e3f0ade"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26988f107c5bdce">
+		<description>Atari OS v1.0 real final (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari OS v1.0 real final (PD).a26" size="4096" crc="f7e4df7b" sha1="988f107c5bdceee4c0e08f6c4bf195f151cd9514"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6196c90836b6">
+		<description>Atari Os_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Os_3.a26" size="4096" crc="124cc60e" sha1="d6196c90836b6980a99037841383f231d1f67a0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f46a376d066f9">
+		<description>Atari Pac-Man wip 12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Atari Pac-Man wip 12.a26" size="8192" crc="3e447730" sha1="f46a376d066f98de28d4ae0ab32e2e5ab846ee62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cf8d71cb9cb52">
+		<description>Atari PF (2001) (Brian Watson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari PF (2001) (Brian Watson).a26" size="4096" crc="e009bdfc" sha1="cf8d71cb9cb520dc0dfb55020c6dc4cfc18f3419"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26a3df5943a822c">
 		<description>Atari shooter (2022-02-20)(ORartgames)</description>
 		<year>????</year>
@@ -6712,6 +7142,2726 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2615069192e42bc">
+		<description>Atari Shot 2005 (2005)(neotokeo2001)(NTSC)[h][!][Carnival]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Shot 2005 (2005)(neotokeo2001)(NTSC)[h][!][Carnival].a26" size="4096" crc="e054b5b2" sha1="15069192e42bcc3ecf6f8d8f33c6f8c5a5ef9a77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e96c283d7f514">
+		<description>Atari Shot by neotokeo2001 (Carnival Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Shot by neotokeo2001 (Carnival Hack).a26" size="4096" crc="08587d4b" sha1="e96c283d7f514b9ed07d003cbf823c2ec43e3155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b48ac3790ec35">
+		<description>Atari Shot Remix by neotokeo2001 (Carnival Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari Shot Remix by neotokeo2001 (Carnival Hack).a26" size="4096" crc="8c2defb5" sha1="b48ac3790ec353aef4535ddb1b9c2d60d841b8f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce15ddaf29b05">
+		<description>Atari Softball (2004)(OutofGas)(NTSC)[h][!][Home Run]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Atari Softball (2004)(OutofGas)(NTSC)[h][!][Home Run].a26" size="2048" crc="9bcd383a" sha1="ce15ddaf29b0572dc609ee6c6b53e0f33d5fd930"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ffec1e03d4780">
+		<description>Atari2600_Football__2008</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Atari2600_Football__2008.a26" size="2048" crc="2a63697b" sha1="ffec1e03d47803f6c701b57a2b882e39b319cd64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26391d7b5a04306">
+		<description>AtariAge Christmas Card (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="AtariAge Christmas Card (PD).a26" size="4096" crc="ad43d70b" sha1="391d7b5a04306da67db73d05af435a4cb6b35764"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2620b83b203e1f6">
+		<description>AtariAge Combat Redux Design Contest - BillLoguidice_1 (2004)(Bill Loguidice)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - BillLoguidice_1 (2004)(Bill Loguidice)(NTSC).a26" size="2048" crc="4329902f" sha1="20b83b203e1f685f909ebe8e225ea17b98c6efe5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a4b16e380d598">
+		<description>AtariAge Combat Redux Design Contest - BillLoguidice_2 (2004)(Bill Loguidice)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - BillLoguidice_2 (2004)(Bill Loguidice)(NTSC).a26" size="2048" crc="2f5bd45e" sha1="a4b16e380d5988ea0a1605ab384d3f29050e4884"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb6b9f8076a47">
+		<description>AtariAge Combat Redux Design Contest - BillLoguidice_3 (2004)(Bill Loguidice)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - BillLoguidice_3 (2004)(Bill Loguidice)(NTSC).a26" size="2048" crc="5a6b5f31" sha1="bb6b9f8076a47fbc58181dffe2757814f50efb8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce385b2d7b227">
+		<description>AtariAge Combat Redux Design Contest - BillLoguidice_4 (2004)(Bill Loguidice)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - BillLoguidice_4 (2004)(Bill Loguidice)(NTSC).a26" size="2048" crc="a0dd263b" sha1="ce385b2d7b2272c4d4317db179c9cbac51098f6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2635ac098197ff3">
+		<description>AtariAge Combat Redux Design Contest - BillLoguidice_5 (2004)(Bill Loguidice)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - BillLoguidice_5 (2004)(Bill Loguidice)(NTSC).a26" size="2048" crc="1b8be34c" sha1="35ac098197ff32bab8dcb0888b67e3c2373e1720"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261debfb41f1731">
+		<description>AtariAge Combat Redux Design Contest - BillLoguidice_6 (2004)(Bill Loguidice)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - BillLoguidice_6 (2004)(Bill Loguidice)(NTSC).a26" size="2048" crc="24d04a85" sha1="1debfb41f17312ab86724a810e7ae381dfae4174"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615937ac14d300">
+		<description>AtariAge Combat Redux Design Contest - BillLoguidice_7 (2004)(Bill Loguidice)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - BillLoguidice_7 (2004)(Bill Loguidice)(NTSC).a26" size="2048" crc="1cbf3076" sha1="15937ac14d30054129f388c9a488a63a53423c38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f3e9201551b3">
+		<description>AtariAge Combat Redux Design Contest - BrianPrescott_1 (2004)(Brian Prescott)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - BrianPrescott_1 (2004)(Brian Prescott)(NTSC).a26" size="2048" crc="8430773c" sha1="4f3e9201551b38f360424e80aee3263ccc8775ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615650904506a1">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_1 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_1 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="0a516184" sha1="15650904506a14c67704011d41da08c05a474150"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2689ed7ba0c7f21">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_10 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_10 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="74b36699" sha1="89ed7ba0c7f2136dac0f0ee9c28eaffb9c8f92d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260b9b18c31ed1f">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_11 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_11 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="f5e149e1" sha1="0b9b18c31ed1f24f072498aa23d1698e4a3fc258"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269ebae2b5ba6e2">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_12 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_12 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="ea0513b4" sha1="9ebae2b5ba6e2b0addc3f529f87395f416c4b02f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a3e4e35aaafdb">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_2 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_2 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="b15aebe1" sha1="a3e4e35aaafdb564d3f11d9fa6f662aea72909dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dde12ca14435f">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_3 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_3 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="fec0454c" sha1="dde12ca14435f7f8f3042b82ecfcb4814fc28f55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2604cc9b080f3f9">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_4 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_4 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="30d7cdf0" sha1="04cc9b080f3f9063586d959d71415e14a66f4ec0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269786a4e3be9e6">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_5 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_5 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="ab6960ac" sha1="9786a4e3be9e69faefec3eb6e877dffe1c452145"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2681482a0063ac1">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_6 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_6 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="3361e17a" sha1="81482a0063ac1b26552ee1e618083b9dc181e2ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cff5fd6350cdd">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_7 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_7 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="c6f0c4ac" sha1="cff5fd6350cdda3df026394e21541a5f51d410c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc366cfdb45ba">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_8 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_8 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="f04bc789" sha1="bc366cfdb45ba1ca016aac9c911b617ff3f83a94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b3594bf8e9d9f">
+		<description>AtariAge Combat Redux Design Contest - ChrisJohnson_9 (2004)(Chris Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChrisJohnson_9 (2004)(Chris Johnson)(NTSC).a26" size="2048" crc="9db0a18a" sha1="b3594bf8e9d9f89ba1659a46941d727d2b012f14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2651bc31a85c651">
+		<description>AtariAge Combat Redux Design Contest - ChristopherAbles_1 (2004)(Christopher Ables)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChristopherAbles_1 (2004)(Christopher Ables)(NTSC).a26" size="2048" crc="02206c22" sha1="51bc31a85c6512e412b5285953a8861aea000f70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b7ab8b405eb5">
+		<description>AtariAge Combat Redux Design Contest - ChristopherAbles_2 (2004)(Christopher Ables)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChristopherAbles_2 (2004)(Christopher Ables)(NTSC).a26" size="2048" crc="82087c45" sha1="4b7ab8b405eb51a5e855182c19710a47ef7e21a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263d6e8776f878d">
+		<description>AtariAge Combat Redux Design Contest - ChristopherAbles_3 (2004)(Christopher Ables)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChristopherAbles_3 (2004)(Christopher Ables)(NTSC).a26" size="2048" crc="3776de72" sha1="3d6e8776f878dc0e05c2ae4e0c9d982c7f458902"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262964be5a7dfe0">
+		<description>AtariAge Combat Redux Design Contest - ChristopherAbles_4 (2004)(Christopher Ables)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChristopherAbles_4 (2004)(Christopher Ables)(NTSC).a26" size="2048" crc="6cd291c0" sha1="2964be5a7dfe062ae6b57368967100a6e09ba79c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26da847d938a73d">
+		<description>AtariAge Combat Redux Design Contest - ChristopherAbles_5 (2004)(Christopher Ables)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - ChristopherAbles_5 (2004)(Christopher Ables)(NTSC).a26" size="2048" crc="56547a9e" sha1="da847d938a73dc5e92d52bef03aeaae311788ba9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260e0c327d57dce">
+		<description>AtariAge Combat Redux Design Contest - Compacho_1 (2004)(Compacho)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Compacho_1 (2004)(Compacho)(NTSC).a26" size="2048" crc="c09f4084" sha1="0e0c327d57dce5ffe7d46d553c243c32751ecd50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260a1a241f206c7">
+		<description>AtariAge Combat Redux Design Contest - Compacho_2 (2004)(Compacho)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Compacho_2 (2004)(Compacho)(NTSC).a26" size="2048" crc="01aecfca" sha1="0a1a241f206c7fe735b06fae2cd977fd7e2b8d67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2629a9bdc6df41b">
+		<description>AtariAge Combat Redux Design Contest - Csonicgo_1 (2004)(Csonicgo)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Csonicgo_1 (2004)(Csonicgo)(NTSC).a26" size="2048" crc="ee695ba6" sha1="29a9bdc6df41bf716f35cbf56071174992a806b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce21913ca617f">
+		<description>AtariAge Combat Redux Design Contest - DDCecil_1 (2004)(DDCecil)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - DDCecil_1 (2004)(DDCecil)(NTSC).a26" size="2048" crc="24c00b41" sha1="ce21913ca617f9dde9d011d97428d3ce7266e965"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b7c19206ab39">
+		<description>AtariAge Combat Redux Design Contest - DionTorraville_1 (2004)(Dion Torraville)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - DionTorraville_1 (2004)(Dion Torraville)(NTSC).a26" size="2048" crc="f70e0516" sha1="1b7c19206ab39d7796a1da3f1d11351a4673a1b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262e1eb6a4da12f">
+		<description>AtariAge Combat Redux Design Contest - DionTorraville_2 (2004)(Dion Torraville)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - DionTorraville_2 (2004)(Dion Torraville)(NTSC).a26" size="2048" crc="fc2f346d" sha1="2e1eb6a4da12fe1c5a9e0e8b16738cfbd1ea12b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267074a8d24bcaf">
+		<description>AtariAge Combat Redux Design Contest - DiscoSnorlax_1 (2004)(Disco Snorlax)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - DiscoSnorlax_1 (2004)(Disco Snorlax)(NTSC).a26" size="2048" crc="a2d0bd7b" sha1="7074a8d24bcaf7e97971dba95a076c40fcf26920"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cb4fe8ccd41ab">
+		<description>AtariAge Combat Redux Design Contest - DiscoSnorlax_2 (2004)(DiscoSnorlax)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - DiscoSnorlax_2 (2004)(DiscoSnorlax)(NTSC).a26" size="2048" crc="7d36ec1b" sha1="cb4fe8ccd41abd0f46b514b60e0553c4c4df2edc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26900ac1ec6a377">
+		<description>AtariAge Combat Redux Design Contest - dor-x_1 (2004)(dor-x)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - dor-x_1 (2004)(dor-x)(NTSC).a26" size="2048" crc="2b2da39e" sha1="900ac1ec6a37799b1a024f884ebdaf43289832ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263c513b104c220">
+		<description>AtariAge Combat Redux Design Contest - dor-x_2 (2004)(dor-x)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - dor-x_2 (2004)(dor-x)(NTSC).a26" size="2048" crc="25416696" sha1="3c513b104c220a1abfe3315d6162a4b7c0d5ed71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261242405bd188c">
+		<description>AtariAge Combat Redux Design Contest - dor-x_3 (2004)(dor-x)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - dor-x_3 (2004)(dor-x)(NTSC).a26" size="2048" crc="04c8b394" sha1="1242405bd188cfdf545963f33648fd78a63e8cde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264864918040023">
+		<description>AtariAge Combat Redux Design Contest - dor-x_4 (2004)(dor-x)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - dor-x_4 (2004)(dor-x)(NTSC).a26" size="2048" crc="d6343b99" sha1="4864918040023855a2245af23c13d5c9acca9a11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e86b27312df77">
+		<description>AtariAge Combat Redux Design Contest - dor-x_5 (2004)(dor-x)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - dor-x_5 (2004)(dor-x)(NTSC).a26" size="2048" crc="1566f735" sha1="e86b27312df77be9451bccdee4bba321d32d1645"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f222f755c31f9">
+		<description>AtariAge Combat Redux Design Contest - dor-x_6 (2004)(dor-x)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - dor-x_6 (2004)(dor-x)(NTSC).a26" size="2048" crc="9de57617" sha1="f222f755c31f9c8e6035c98b862e01922b871d71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2634a29329c1875">
+		<description>AtariAge Combat Redux Design Contest - DougMandeville_1 (2004)(Doug Mandeville)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - DougMandeville_1 (2004)(Doug Mandeville)(NTSC).a26" size="2048" crc="3bf7c4c3" sha1="34a29329c1875e97d44c60444aee28f87d70c656"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa4f2f00b7900">
+		<description>AtariAge Combat Redux Design Contest - DougMandeville_2 (2004)(Doug Mandeville)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - DougMandeville_2 (2004)(Doug Mandeville)(NTSC).a26" size="2048" crc="2d7bf622" sha1="aa4f2f00b7900fc8bf82f1427e987eab2bef7161"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268feb548602759">
+		<description>AtariAge Combat Redux Design Contest - FrankBailey_1 (2004)(Frank Bailey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - FrankBailey_1 (2004)(Frank Bailey)(NTSC).a26" size="2048" crc="55f4a2c0" sha1="8feb548602759677a49a229a828c239437565183"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cd88a0a26fa17">
+		<description>AtariAge Combat Redux Design Contest - FrankBailey_2 (2004)(Frank Bailey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - FrankBailey_2 (2004)(Frank Bailey)(NTSC).a26" size="2048" crc="69ceec79" sha1="cd88a0a26fa17a8c763eeb0823356c53a523d085"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26568c9e892bddb">
+		<description>AtariAge Combat Redux Design Contest - FrankBailey_3 (2004)(Frank Bailey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - FrankBailey_3 (2004)(Frank Bailey)(NTSC).a26" size="2048" crc="71002dae" sha1="568c9e892bddb97fba94b943407a5e85ec47191e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f14ce7580642">
+		<description>AtariAge Combat Redux Design Contest - FrankBailey_4 (2004)(Frank Bailey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - FrankBailey_4 (2004)(Frank Bailey)(NTSC).a26" size="2048" crc="c33a8740" sha1="1f14ce7580642eb8bbb3a1905c3a7e17a5e223b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269e0c0a40f2bc9">
+		<description>AtariAge Combat Redux Design Contest - FredrikAberg_1 (2004)(Fredrik Aberg)(NTSC)(SW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - FredrikAberg_1 (2004)(Fredrik Aberg)(NTSC)(SW).a26" size="2048" crc="f6d0f1ed" sha1="9e0c0a40f2bc9d9719d2beb1209e7a41f77057dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2698c016e368b26">
+		<description>AtariAge Combat Redux Design Contest - FredrikAberg_2 (2004)(Fredrik Aberg)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - FredrikAberg_2 (2004)(Fredrik Aberg)(NTSC).a26" size="2048" crc="759659b1" sha1="98c016e368b26a2a8d1c5e2954cd1536137a2389"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2609153c908a7ef">
+		<description>AtariAge Combat Redux Design Contest - GregoryDGeorge_1 (2004)(Gregory D George)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - GregoryDGeorge_1 (2004)(Gregory D George)(NTSC).a26" size="2048" crc="318d679b" sha1="09153c908a7ef35113f0a2396675a19a4de7c65b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c38d2b32b217">
+		<description>AtariAge Combat Redux Design Contest - GregoryDGeorge_2 (2004)(Gregory D George)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - GregoryDGeorge_2 (2004)(Gregory D George)(NTSC).a26" size="2048" crc="0dd0c505" sha1="6c38d2b32b217afdede14808e8dfe82fb571dd7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aaf4464bad878">
+		<description>AtariAge Combat Redux Design Contest - GregoryDGeorge_3 (2004)(Gregory D George)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - GregoryDGeorge_3 (2004)(Gregory D George)(NTSC).a26" size="2048" crc="52aa5698" sha1="aaf4464bad87894a095a5f2e45c906370d833cbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264edd04cf2196f">
+		<description>AtariAge Combat Redux Design Contest - GregoryDGeorge_4 (2004)(Gregory D George)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - GregoryDGeorge_4 (2004)(Gregory D George)(NTSC).a26" size="2048" crc="2d07f470" sha1="4edd04cf2196fd5f11854b1b42f937ffa0922006"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260bc8fd489d1f2">
+		<description>AtariAge Combat Redux Design Contest - GregoryDGeorge_5 (2004)(Gregory D George)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - GregoryDGeorge_5 (2004)(Gregory D George)(NTSC).a26" size="2048" crc="1acd04e4" sha1="0bc8fd489d1f296210563707d61981b565783f98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b2d819f12b9b">
+		<description>AtariAge Combat Redux Design Contest - GregoryDGeorge_6 (2004)(Gregory D George)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - GregoryDGeorge_6 (2004)(Gregory D George)(NTSC).a26" size="2048" crc="9e7950d9" sha1="1b2d819f12b9b35b4f9eff26a2db2c77190b112e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a50f3541cbd79">
+		<description>AtariAge Combat Redux Design Contest - GregThompson_1 (2004)(Greg Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - GregThompson_1 (2004)(Greg Thompson)(NTSC).a26" size="2048" crc="e7222e9e" sha1="a50f3541cbd79836528756a2325a8c4ba3119899"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc140f53499d5">
+		<description>AtariAge Combat Redux Design Contest - JamesHiggs_1 (2004)(James Higgs)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JamesHiggs_1 (2004)(James Higgs)(NTSC).a26" size="2048" crc="6540da20" sha1="dc140f53499d5218fdc6328f0be94a7f6cf2d803"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264e8f3894ded78">
+		<description>AtariAge Combat Redux Design Contest - JamesHiggs_2 (2004)(James Higgs)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JamesHiggs_2 (2004)(James Higgs)(NTSC).a26" size="2048" crc="a299189a" sha1="4e8f3894ded78577cd8386568b8a22902a1681e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b611ec8035f7">
+		<description>AtariAge Combat Redux Design Contest - JamesHiggs_3 (2004)(James Higgs)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JamesHiggs_3 (2004)(James Higgs)(NTSC).a26" size="2048" crc="be33c786" sha1="4b611ec8035f79c3d6c2f432a62fc48a1105b42b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615319566b61f1">
+		<description>AtariAge Combat Redux Design Contest - JamesHiggs_4 (2004)(James Higgs)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JamesHiggs_4 (2004)(James Higgs)(NTSC).a26" size="2048" crc="d843d3a4" sha1="15319566b61f14d573008c034bb1cbe4b761510c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262237c071ac094">
+		<description>AtariAge Combat Redux Design Contest - JamesHiggs_5 (2004)(James Higgs)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JamesHiggs_5 (2004)(James Higgs)(NTSC).a26" size="2048" crc="a5bebaf2" sha1="2237c071ac09407c9cac474a2584f8cbd38e6b18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f00cac14fa1f6">
+		<description>AtariAge Combat Redux Design Contest - JamesHiggs_6 (2004)(James Higgs)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JamesHiggs_6 (2004)(James Higgs)(NTSC).a26" size="2048" crc="92c7fa0a" sha1="f00cac14fa1f631f646ac0c25491fdd47aff77ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265f05038410bbc">
+		<description>AtariAge Combat Redux Design Contest - JamesHiggs_7 (2004)(James Higgs)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JamesHiggs_7 (2004)(James Higgs)(NTSC).a26" size="2048" crc="ebbe1fcd" sha1="5f05038410bbc28b2d79dc64c865104c8e99e201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266341c70403930">
+		<description>AtariAge Combat Redux Design Contest - JamesHiggs_8 (2004)(James Higgs)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JamesHiggs_8 (2004)(James Higgs)(NTSC).a26" size="2048" crc="a91fe0a0" sha1="6341c704039305ad689a4a5092f03757ec6d292f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b438a0842153">
+		<description>AtariAge Combat Redux Design Contest - JanHagelskamp_1 (2004)(Jan Hagelskamp)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JanHagelskamp_1 (2004)(Jan Hagelskamp)(NTSC).a26" size="2048" crc="c08c4f60" sha1="1b438a0842153f4ddcae9f33fdf5724183924a65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2668ec7d1f960d5">
+		<description>AtariAge Combat Redux Design Contest - JanHagelskamp_2 (2004)(Jan Hagelskamp)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JanHagelskamp_2 (2004)(Jan Hagelskamp)(NTSC).a26" size="2048" crc="7a5ad919" sha1="68ec7d1f960d585335f55c3a335bacf422768af5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265aed4ce7fc37b">
+		<description>AtariAge Combat Redux Design Contest - JanHagelskamp_3 (2004)(Jan Hagelskamp)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JanHagelskamp_3 (2004)(Jan Hagelskamp)(NTSC).a26" size="2048" crc="e9261b9b" sha1="5aed4ce7fc37bd1dc248c5e6c93bd43c884068e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2687fc902a7ebcb">
+		<description>AtariAge Combat Redux Design Contest - JanHagelskamp_4 (2004)(Jan Hagelskamp)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JanHagelskamp_4 (2004)(Jan Hagelskamp)(NTSC).a26" size="2048" crc="c4bf3df0" sha1="87fc902a7ebcb2090f6b6131d27afbccf225f6fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2635b313f216e68">
+		<description>AtariAge Combat Redux Design Contest - JanHagelskamp_5 (2004)(Jan Hagelskamp)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JanHagelskamp_5 (2004)(Jan Hagelskamp)(NTSC).a26" size="2048" crc="e13f241f" sha1="35b313f216e68d7a5bacdd30dfe4aa7e9d0ed953"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a3aefe9dad9a">
+		<description>AtariAge Combat Redux Design Contest - JanHagelskamp_6 (2004)(Jan Hagelskamp)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JanHagelskamp_6 (2004)(Jan Hagelskamp)(NTSC).a26" size="2048" crc="d759fb7c" sha1="4a3aefe9dad9ab628b12a758988d375247f50b41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261005fa9acca33">
+		<description>AtariAge Combat Redux Design Contest - JanHagelskamp_7 (2004)(Jan Hagelskamp)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JanHagelskamp_7 (2004)(Jan Hagelskamp)(NTSC).a26" size="2048" crc="381c8f8d" sha1="1005fa9acca334e7b0b7ac93d91b30f6aa1e1a79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266b0851a6e394a">
+		<description>AtariAge Combat Redux Design Contest - JasonTorchinsky_1 (2004)(Jason Torchinsky)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JasonTorchinsky_1 (2004)(Jason Torchinsky)(NTSC).a26" size="2048" crc="02e747ad" sha1="6b0851a6e394a4153edf8fa37c5749a5a0a51ab6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ee1aae44b4c5c">
+		<description>AtariAge Combat Redux Design Contest - JasonTorchinsky_2 (2004)(Jason Torchinsky)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JasonTorchinsky_2 (2004)(Jason Torchinsky)(NTSC).a26" size="2048" crc="b1797ddf" sha1="ee1aae44b4c5cbced38c901a19104dcfa801de61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26179a04624908e">
+		<description>AtariAge Combat Redux Design Contest - JefferyGrajkowski_1 (2004)(Jeffery Grajkowski)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JefferyGrajkowski_1 (2004)(Jeffery Grajkowski)(NTSC).a26" size="2048" crc="5dca21bc" sha1="179a04624908ec5afa950bbc61549dafefa113c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ac1a2cd444b36">
+		<description>AtariAge Combat Redux Design Contest - JefferyGrajkowski_2 (2004)(Jeffery Grajkowski)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JefferyGrajkowski_2 (2004)(Jeffery Grajkowski)(NTSC).a26" size="2048" crc="f7dce1ef" sha1="ac1a2cd444b36193f481674ff969a8e1d2ec03b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263115db0f95405">
+		<description>AtariAge Combat Redux Design Contest - JefferyGrajkowski_3 (2004)(Jeffery Grajkowski)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JefferyGrajkowski_3 (2004)(Jeffery Grajkowski)(NTSC).a26" size="2048" crc="6dd710e8" sha1="3115db0f95405ffa3282fc4fb913116c15459f97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261895557a02a7a">
+		<description>AtariAge Combat Redux Design Contest - JefferyGrajkowski_4 (2004)(Jeffery Grajkowski)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JefferyGrajkowski_4 (2004)(Jeffery Grajkowski)(NTSC).a26" size="2048" crc="8459da2e" sha1="1895557a02a7a9db5c08010b5e345acc3a72d8a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26acc6d10e6a962">
+		<description>AtariAge Combat Redux Design Contest - JefferyGrajkowski_5 (2004)(Jeffery Grajkowski)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JefferyGrajkowski_5 (2004)(Jeffery Grajkowski)(NTSC).a26" size="2048" crc="cc3914fb" sha1="acc6d10e6a9624691a6b5477357a765752cfeb99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26edd7ccf8b0b92">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_1 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_1 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="2d8c0012" sha1="edd7ccf8b0b92f4296ff65c0289347ad8c1ed5a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260e45aa7fcfee2">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_10 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_10 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="06add998" sha1="0e45aa7fcfee220177ba00b780459fb278dc86c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268619ed5b945e5">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_11 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_11 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="e75c3da4" sha1="8619ed5b945e5064d3ec21d20a64e3e3d944e8dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632bec45e81465">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_12 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_12 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="c4705ba8" sha1="32bec45e81465a378db5490daa94e0e1b6de38d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c0ab67f021fed">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_13 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_13 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="b3451114" sha1="c0ab67f021fed0102ba7d785417ad11dd28b8f11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e29eea601db5a">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_14 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_14 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="ca70fe7b" sha1="e29eea601db5a2cd8532d533257527b156187653"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6e3ba819fc08">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_15 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_15 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="34da8f7f" sha1="d6e3ba819fc08d79b03e26da47374e46568a3eaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261791a6b9527c5">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_16 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_16 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="1f09c6bc" sha1="1791a6b9527c5ee73a216e67ec46d4f48db0f316"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f831e797d1c0c">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_17 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_17 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="2c065d2c" sha1="f831e797d1c0c1e6df6adddd0f7e146f82bb656c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263d587e9301376">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_18 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_18 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="0f1cb26d" sha1="3d587e9301376ebe2c87536f1786296d4b623381"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267aa241084bf09">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_19 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_19 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="8b0e521a" sha1="7aa241084bf09f5f3d3b081e598ad8da7de0d12a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f6f545cddd8c5">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_2 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_2 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="9c047402" sha1="f6f545cddd8c568499ad787c0ca35f90c24957be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267636a381555a9">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_20 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_20 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="f7db3ae7" sha1="7636a381555a9f43432294953773c45d3143cd25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2677f44bbfa9e54">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_21 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_21 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="29c72864" sha1="77f44bbfa9e542f7af30fa645c8de8bf337bc041"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2654149ed2ad299">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_3 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_3 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="2605e8d4" sha1="54149ed2ad2995e240c9c697061740cc17b63135"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2682f683fc57c34">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_4 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_4 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="39fa27d3" sha1="82f683fc57c34c74b53c9dbd3e498990ed7ba67e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b36ecdd8f9c2c">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_5 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_5 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="c758b75a" sha1="b36ecdd8f9c2c6efbb0880f42dfe40ebdbf8bdb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268d51f7a12123b">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_6 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_6 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="e406b3cf" sha1="8d51f7a12123bfda7ca6764a013571c35e2e4eb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260a66d6944439e">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_7 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_7 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="4c84d572" sha1="0a66d6944439ee1dd1e9fcc8b984c94549aa2176"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be0bb1c8cf830">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_8 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_8 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="0728d545" sha1="be0bb1c8cf830688cbfe609af9c206e4c842c5f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c61d882bd8e59">
+		<description>AtariAge Combat Redux Design Contest - JeffThompson_9 (2004)(Jeff Thompson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JeffThompson_9 (2004)(Jeff Thompson)(NTSC).a26" size="2048" crc="be5af692" sha1="c61d882bd8e597783bc71d20232d4d2cc6cee06b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26faff7d1214ab4">
+		<description>AtariAge Combat Redux Design Contest - JoeGrand_1 (2004)(Joe Grand)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JoeGrand_1 (2004)(Joe Grand)(NTSC).a26" size="2048" crc="617548ba" sha1="faff7d1214ab4714e3be0e17f0223267ec4a0af7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262bd9eecbd5d5f">
+		<description>AtariAge Combat Redux Design Contest - JohnTielli_1 (2004)(Jerky)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JohnTielli_1 (2004)(Jerky)(NTSC).a26" size="2048" crc="bf6cea34" sha1="2bd9eecbd5d5f219840ec67b252d12f781c4c187"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2605940055f6dfb">
+		<description>AtariAge Combat Redux Design Contest - JohnTielli_2 (2004)(Jerky)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JohnTielli_2 (2004)(Jerky)(NTSC).a26" size="2048" crc="03e140dd" sha1="05940055f6dfb5f763e5f4fa05db5d729eb57673"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633f88f3c8c6de">
+		<description>AtariAge Combat Redux Design Contest - JohnTielli_3 (2004)(Jerky)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JohnTielli_3 (2004)(Jerky)(NTSC).a26" size="2048" crc="cdd17a1e" sha1="33f88f3c8c6de021e3c84311140bf1f67ba2b99a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615dfbfabc9515">
+		<description>AtariAge Combat Redux Design Contest - JohnTielli_4 (2004)(Jerky)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JohnTielli_4 (2004)(Jerky)(NTSC).a26" size="2048" crc="d3160f44" sha1="15dfbfabc95156c4e0093d51920c5b23bcb7a3c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b059d045c168d">
+		<description>AtariAge Combat Redux Design Contest - JordanBienkowski_1 (2004)(Jordan Bienkowski)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JordanBienkowski_1 (2004)(Jordan Bienkowski)(NTSC).a26" size="2048" crc="fca4ea96" sha1="b059d045c168d82f91d9befba1ecbec604b5525e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266b47323ed7ac1">
+		<description>AtariAge Combat Redux Design Contest - JordanBienkowski_2 (2004)(Jordan Bienkowski)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - JordanBienkowski_2 (2004)(Jordan Bienkowski)(NTSC).a26" size="2048" crc="eb680783" sha1="6b47323ed7ac13f5e3db12bca0836218b682d0ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a249b4d566262">
+		<description>AtariAge Combat Redux Design Contest - KyleClark_1 (2004)(Kyle Clark)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - KyleClark_1 (2004)(Kyle Clark)(NTSC).a26" size="2048" crc="114742ed" sha1="a249b4d566262c337791b3a5707912ca0fba4170"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b107b93a1c20a">
+		<description>AtariAge Combat Redux Design Contest - KyleClark_2 (2004)(Kyle Clark)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - KyleClark_2 (2004)(Kyle Clark)(NTSC).a26" size="2048" crc="fb8dc140" sha1="b107b93a1c20a9055e5db746a7ad760418788d4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268af664839972a">
+		<description>AtariAge Combat Redux Design Contest - KyleClark_3 (2004)(Kyle Clark)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - KyleClark_3 (2004)(Kyle Clark)(NTSC).a26" size="2048" crc="57484d89" sha1="8af664839972a8e3b8a85aa93a67748752323b81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d4129739915a">
+		<description>AtariAge Combat Redux Design Contest - LeeBolton_1 (2004)(Lee Bolton)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - LeeBolton_1 (2004)(Lee Bolton)(NTSC).a26" size="2048" crc="1d7eae69" sha1="7d4129739915a3492079d5c7c7fbee0d5bd8a5ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263d70664df8532">
+		<description>AtariAge Combat Redux Design Contest - LeeBolton_2 (2004)(Lee Bolton)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - LeeBolton_2 (2004)(Lee Bolton)(NTSC).a26" size="2048" crc="66b20a2f" sha1="3d70664df853286720aefcee2aa3b37c7952179b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c10d4d95cf58">
+		<description>AtariAge Combat Redux Design Contest - LincolnBraun_1 (2004)(Lincoln Braun)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - LincolnBraun_1 (2004)(Lincoln Braun)(NTSC).a26" size="2048" crc="1b1b9d32" sha1="7c10d4d95cf58bd48c5af8a15b0999cee55b34c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2674146a1da4d12">
+		<description>AtariAge Combat Redux Design Contest - LincolnBraun_2 (2004)(LincolnBraun)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - LincolnBraun_2 (2004)(LincolnBraun)(NTSC).a26" size="2048" crc="c552ec44" sha1="74146a1da4d123516345f49d0a4af49c5c8c18cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26916d4aa1b0891">
+		<description>AtariAge Combat Redux Design Contest - max-t_1 (2004)(max-t)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - max-t_1 (2004)(max-t)(NTSC).a26" size="2048" crc="7888f3fe" sha1="916d4aa1b089166f03ba814950f1739975f86735"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26724a6ba30fc1f">
+		<description>AtariAge Combat Redux Design Contest - max-t_2 (2004)(max-t)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - max-t_2 (2004)(max-t)(NTSC).a26" size="2048" crc="d169ae70" sha1="724a6ba30fc1f54afdaa043692d0e7222b956750"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265bb9cd0623e55">
+		<description>AtariAge Combat Redux Design Contest - max-t_3 (2004)(max-t)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - max-t_3 (2004)(max-t)(NTSC).a26" size="2048" crc="c42be71c" sha1="5bb9cd0623e55bc5669889483380512260daa5bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d9cb0ab190860">
+		<description>AtariAge Combat Redux Design Contest - max-t_4 (2004)(max-t)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - max-t_4 (2004)(max-t)(NTSC).a26" size="2048" crc="1628b2b6" sha1="d9cb0ab190860f45b5f55bc957e024ec9454fd9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b6ca2dae3c743">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_1 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_1 (2004)(Mechanized)(NTSC).a26" size="2048" crc="ebd46d3b" sha1="b6ca2dae3c7434a718d6958204eb7474031e5a40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2603ff7c7bf7041">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_10 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_10 (2004)(Mechanized)(NTSC).a26" size="2048" crc="ed814e54" sha1="03ff7c7bf7041d9171baa4de095b4bb30553c0a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2671e9c2c4efc0f">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_11 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_11 (2004)(Mechanized)(NTSC).a26" size="2048" crc="e46d5531" sha1="71e9c2c4efc0fad069241a9eabd489b969e2cb88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa697cbea6a8a">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_12 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_12 (2004)(Mechanized)(NTSC).a26" size="2048" crc="fa2d827a" sha1="aa697cbea6a8a9018d85c02ce83dd2e80be1a509"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2668534b4151ed3">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_13 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_13 (2004)(Mechanized)(NTSC).a26" size="2048" crc="cd9e782c" sha1="68534b4151ed3c624b640742bb73bdfc82d92f1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b3d09ad8405de">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_14 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_14 (2004)(Mechanized)(NTSC).a26" size="2048" crc="736d0de7" sha1="b3d09ad8405dec4bac5496668cbad39ca60c944a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267dbdc865d2690">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_15 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_15 (2004)(Mechanized)(NTSC).a26" size="2048" crc="017a290b" sha1="7dbdc865d26903d41f4a92db0b5ca958c9ad70b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26edb179b07e21c">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_16 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_16 (2004)(Mechanized)(NTSC).a26" size="2048" crc="098c1ac0" sha1="edb179b07e21ceb1c4a45fb37e86171f8153bdee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659af174732399">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_2 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_2 (2004)(Mechanized)(NTSC).a26" size="2048" crc="cb2361e6" sha1="59af17473239921b87610d584d38aadded632c27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26716f508ce538e">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_3 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_3 (2004)(Mechanized)(NTSC).a26" size="2048" crc="25da874b" sha1="716f508ce538e7ddcb7acdefb03026843ba661ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262a4486a880907">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_4 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_4 (2004)(Mechanized)(NTSC).a26" size="2048" crc="ab82a073" sha1="2a4486a88090750c0198c90f1572668ee1a9ab0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e709dae43ef80">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_5 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_5 (2004)(Mechanized)(NTSC).a26" size="2048" crc="6538f4cc" sha1="e709dae43ef8077b765e2b55487fc99dc7e530cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26470288ed88bd1">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_6 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_6 (2004)(Mechanized)(NTSC).a26" size="2048" crc="d64be980" sha1="470288ed88bd1c6eae0dde1ed3fc680eec5b8ae5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c9739cd6b53ec">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_7 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_7 (2004)(Mechanized)(NTSC).a26" size="2048" crc="9c278ecc" sha1="c9739cd6b53ec0486aac3d646ccfab302f20de84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266597e2f38163e">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_8 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_8 (2004)(Mechanized)(NTSC).a26" size="2048" crc="bd556594" sha1="6597e2f38163ed363d38250e75d4ceba14bd8100"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2669368dad673c5">
+		<description>AtariAge Combat Redux Design Contest - Mechanized_9 (2004)(Mechanized)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Mechanized_9 (2004)(Mechanized)(NTSC).a26" size="2048" crc="a5cdb519" sha1="69368dad673c58f36efbdb3f2fc912b726f656a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26abdc2760d0bb3">
+		<description>AtariAge Combat Redux Design Contest - NelsonRamirez_1 (2004)(Nelson Ramirez)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - NelsonRamirez_1 (2004)(Nelson Ramirez)(NTSC).a26" size="2048" crc="eb0be20b" sha1="abdc2760d0bb37a830b478b94ad3c1a1d7595c91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265fec04dc97d36">
+		<description>AtariAge Combat Redux Design Contest - NelsonRamirez_2 (2004)(Nelson Ramirez)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - NelsonRamirez_2 (2004)(Nelson Ramirez)(NTSC).a26" size="2048" crc="239c73bf" sha1="5fec04dc97d3689d64d4ee57840e562e18890f64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f11aff9974ef5">
+		<description>AtariAge Combat Redux Design Contest - NelsonRamirez_3 (2004)(Nelson Ramirez)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - NelsonRamirez_3 (2004)(Nelson Ramirez)(NTSC).a26" size="2048" crc="ef11a9bc" sha1="f11aff9974ef587201ed7774ce52da2021134760"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26271d42b734abc">
+		<description>AtariAge Combat Redux Design Contest - NelsonRamirez_4 (2004)(Nelson Ramirez)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - NelsonRamirez_4 (2004)(Nelson Ramirez)(NTSC).a26" size="2048" crc="57617cb6" sha1="271d42b734abc785f69bd002264182a1d1d23631"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266e51435cd810f">
+		<description>AtariAge Combat Redux Design Contest - NelsonRamirez_5 (2004)(Nelson Ramirez)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - NelsonRamirez_5 (2004)(Nelson Ramirez)(NTSC).a26" size="2048" crc="3d5a391a" sha1="6e51435cd810f437c0e824ea930083ae27138a64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260c8614319ba70">
+		<description>AtariAge Combat Redux Design Contest - NelsonRamirez_6 (2004)(Nelson Ramirez)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - NelsonRamirez_6 (2004)(Nelson Ramirez)(NTSC).a26" size="2048" crc="d123c436" sha1="0c8614319ba704fe4f31f12900321948027ebc23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2656d6782b9b74d">
+		<description>AtariAge Combat Redux Design Contest - NelsonRamirez_7 (2004)(Nelson Ramirez)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - NelsonRamirez_7 (2004)(Nelson Ramirez)(NTSC).a26" size="2048" crc="5d39e7a9" sha1="56d6782b9b74d86e0feb56e00e0edacbc82d2889"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26318c0b1929b75">
+		<description>AtariAge Combat Redux Design Contest - PhilipRFrey_1 (2004)(Philip R Frey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - PhilipRFrey_1 (2004)(Philip R Frey)(NTSC).a26" size="2048" crc="251cca7f" sha1="318c0b1929b7507feeb7fea5f509e728ba15f0b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a55695cace876">
+		<description>AtariAge Combat Redux Design Contest - PhilipRFrey_2 (2004)(Philip R Frey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - PhilipRFrey_2 (2004)(Philip R Frey)(NTSC).a26" size="2048" crc="9a931429" sha1="a55695cace876d1c51f7d44b480b432eb11de68d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265bc84cddfd4c6">
+		<description>AtariAge Combat Redux Design Contest - PhilipRFrey_3 (2004)(Philip R Frey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - PhilipRFrey_3 (2004)(Philip R Frey)(NTSC).a26" size="2048" crc="a3a1be80" sha1="5bc84cddfd4c6a727aebc217479a6ab32e43c3bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2680bb51d394e5d">
+		<description>AtariAge Combat Redux Design Contest - PhilipRFrey_4 (2004)(Philip R Frey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - PhilipRFrey_4 (2004)(Philip R Frey)(NTSC).a26" size="2048" crc="64f53c37" sha1="80bb51d394e5d401c8ab275b3d0bb53c63563345"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268fa1cf23baa2c">
+		<description>AtariAge Combat Redux Design Contest - PhilipRFrey_5 (2004)(Philip R Frey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - PhilipRFrey_5 (2004)(Philip R Frey)(NTSC).a26" size="2048" crc="1950968d" sha1="8fa1cf23baa2c56b02c289c5c227b8f7c1303d04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce4aa32469357">
+		<description>AtariAge Combat Redux Design Contest - PhilipRFrey_6 (2004)(Philip R Frey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - PhilipRFrey_6 (2004)(Philip R Frey)(NTSC).a26" size="2048" crc="84efa913" sha1="ce4aa3246935708f9ffb37aae9b2c87102b47ba2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269748f14940dda">
+		<description>AtariAge Combat Redux Design Contest - PhilipRFrey_7 (2004)(Philip R Frey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - PhilipRFrey_7 (2004)(Philip R Frey)(NTSC).a26" size="2048" crc="8c7eab27" sha1="9748f14940ddae00b7e05fdf2cbcea26edd4704a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260146c6b7e56de">
+		<description>AtariAge Combat Redux Design Contest - PhilipRFrey_8 (2004)(Philip R Frey)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - PhilipRFrey_8 (2004)(Philip R Frey)(NTSC).a26" size="2048" crc="45ed06c5" sha1="0146c6b7e56de38a1867ed72799a60b75b586387"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688e20bf4e13b8">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_1 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_1 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="afb6c24a" sha1="88e20bf4e13b8561e7926f4a17a2f03a9033d5e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cbd8c547389f5">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_10 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_10 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="c1e7532c" sha1="cbd8c547389f5e13ed53eb928de18294cef1f505"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26df73cb4b82192">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_11 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_11 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="29a3c002" sha1="df73cb4b821928c8b1c9acb7cbc95212d22b5582"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26910179b3de062">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_12 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_12 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="d68bd8d7" sha1="910179b3de06239d2aa695a318c9e1a66141ea84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f047b16611257">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_13 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_13 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="c0d8ddb0" sha1="f047b16611257b50b34b4a627fccbccaa65927b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263a2b96eb18e2b">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_14 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_14 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="b153b5fd" sha1="3a2b96eb18e2bfbcacdf3f95409a3f49e858cab7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26118c2f09c49e8">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_15 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_15 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="7726899b" sha1="118c2f09c49e89d90d3d6b2db50955aa2de8aae3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d63797faa2890">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_16 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_16 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="a3fd7526" sha1="d63797faa2890900912a4191e3215ae798e2dab0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ba9a7d2308dfe">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_17 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_17 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="7a8124e3" sha1="ba9a7d2308dfef8b5783b0d3685442e673c34441"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267bdb6e102c463">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_18 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_18 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="7ed07b4b" sha1="7bdb6e102c46313b8a1eb3f105bd778800b31e1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263624546258e2d">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_2 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_2 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="a33a5e66" sha1="3624546258e2d727b12220a3a72afd5e5fbd0454"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d2b4fb21111f8">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_3 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_3 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="cc6e0450" sha1="d2b4fb21111f87e743cd8e6abf001d66331ea249"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2698b90a29a50ab">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_4 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_4 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="9735fc2d" sha1="98b90a29a50ab4c5efa220332c03629e76d61f3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2664151ae8bed65">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_5 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_5 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="1516f008" sha1="64151ae8bed6504e08f82468c86498f3ce192c9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269461a55e1eb21">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_6 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_6 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="7492d22b" sha1="9461a55e1eb21e82e65c8be3b158ccd2cc6f2bed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b03e41eb5ec6f">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_7 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_7 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="8cbd9b2d" sha1="b03e41eb5ec6f6b37fc89b6d73341742343eef7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2691be72cf1bcc4">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_8 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_8 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="6d2afc88" sha1="91be72cf1bcc4a6ea70979129f15d21f9b153e31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2646e741bdd2cd1">
+		<description>AtariAge Combat Redux Design Contest - pmitch_3m_9 (2004)(pmitch_3m)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - pmitch_3m_9 (2004)(pmitch_3m)(NTSC).a26" size="2048" crc="1e39e697" sha1="46e741bdd2cd1cf7b3a10f3b7354dcffbe921412"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c4152f6b03cb">
+		<description>AtariAge Combat Redux Design Contest - RobertJohnson_1 (2004)(Robert Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RobertJohnson_1 (2004)(Robert Johnson)(NTSC).a26" size="2048" crc="41c858c9" sha1="7c4152f6b03cb0222ce7631a05acebbf94f25f86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a113addb2eb0c">
+		<description>AtariAge Combat Redux Design Contest - RobertJohnson_2 (2004)(Robert Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RobertJohnson_2 (2004)(Robert Johnson)(NTSC).a26" size="2048" crc="28d175b1" sha1="a113addb2eb0c2e4e10299a2a8022c7a79c137b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26666a12edaae63">
+		<description>AtariAge Combat Redux Design Contest - RobertJohnson_3 (2004)(Robert Johnson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RobertJohnson_3 (2004)(Robert Johnson)(NTSC).a26" size="2048" crc="3e49fba1" sha1="666a12edaae634c72531115266306136f2a7cd5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623b1d059d99e8">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_1 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_1 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="7b5da726" sha1="23b1d059d99e801faf8eb9417ef4557db2b355b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269494badf39043">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_10 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_10 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="989310cc" sha1="9494badf390439dbe15b15404e9e24f6eb85c3ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c5cf2d45ab1e5">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_2 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_2 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="e8a17584" sha1="c5cf2d45ab1e518b6bee2eb61dc81be1258f0c95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263f0d47e2c7852">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_3 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_3 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="86bdaf71" sha1="3f0d47e2c785285c355f269743a8961559306bfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26297f3fba043b8">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_4 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_4 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="3c8176cf" sha1="297f3fba043b8d1db75afef3365f7daa63e1c667"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26388011c4234d5">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_5 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_5 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="a24f10ce" sha1="388011c4234d5ec5010e1616b05d0422243e96a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266418697c19335">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_6 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_6 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="82b3f3f8" sha1="6418697c193351c52951109a381d9b22a10023e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26410b642fc3db3">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_7 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_7 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="9673a7fd" sha1="410b642fc3db36824fc6b68b9339d5c0ff83eb4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26690aa0915877e">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_8 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_8 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="739a83d6" sha1="690aa0915877e22c351e923aba94e4e8b7d74983"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f865aa8af52e9">
+		<description>AtariAge Combat Redux Design Contest - RonCorcoran_9 (2004)(Ron Corcoran)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RonCorcoran_9 (2004)(Ron Corcoran)(NTSC).a26" size="2048" crc="ab2e8371" sha1="f865aa8af52e943cf1987fd07caef08a5da47808"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26879a354f66b3a">
+		<description>AtariAge Combat Redux Design Contest - RyanWinchester_1 (2004)(Ryan Winchester)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RyanWinchester_1 (2004)(Ryan Winchester)(NTSC).a26" size="2048" crc="d55ee8ad" sha1="879a354f66b3af088c3e1375b1638a089b129b12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca5e4fd5ab588">
+		<description>AtariAge Combat Redux Design Contest - RyanWinchester_2 (2004)(Ryan Winchester)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RyanWinchester_2 (2004)(Ryan Winchester)(NTSC).a26" size="2048" crc="e4969aaf" sha1="ca5e4fd5ab588691820978c4dd6c101067d060fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265f566e53c80bb">
+		<description>AtariAge Combat Redux Design Contest - RyanWinchester_3 (2004)(Ryan Winchester)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RyanWinchester_3 (2004)(Ryan Winchester)(NTSC).a26" size="2048" crc="6889c9ad" sha1="5f566e53c80bb76b147d3dc600ea11eace696a27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264677601e62f6b">
+		<description>AtariAge Combat Redux Design Contest - RyanWinchester_4 (2004)(Ryan Winchester)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - RyanWinchester_4 (2004)(Ryan Winchester)(NTSC).a26" size="2048" crc="c36137f5" sha1="4677601e62f6bc03be4e1438be893d8f63dfee76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d7a1e3d5b7ee6">
+		<description>AtariAge Combat Redux Design Contest - SalManfredonia_1 (2004)(Sal Manfredonia)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SalManfredonia_1 (2004)(Sal Manfredonia)(NTSC).a26" size="2048" crc="de2cc28e" sha1="d7a1e3d5b7ee6c2dccd86e42ce5f5e677d41c382"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c4b58f49f9402">
+		<description>AtariAge Combat Redux Design Contest - SalManfredonia_2 (2004)(Sal Manfredonia)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SalManfredonia_2 (2004)(Sal Manfredonia)(NTSC).a26" size="2048" crc="d6de3a1e" sha1="c4b58f49f9402a8639fc89ace00abd48e2eb2938"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ccfda7ac30689">
+		<description>AtariAge Combat Redux Design Contest - SalManfredonia_3 (2004)(Sal Manfredonia)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SalManfredonia_3 (2004)(Sal Manfredonia)(NTSC).a26" size="2048" crc="0be7f5da" sha1="ccfda7ac3068903c18e43c3dda04df402471a201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c4c07508eebf3">
+		<description>AtariAge Combat Redux Design Contest - SeanCrooks_1 (2004)(Sean Crooks)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SeanCrooks_1 (2004)(Sean Crooks)(NTSC).a26" size="2048" crc="7dd078f7" sha1="c4c07508eebf3718c60e4aa585777ff037913cca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26753f5e104520b">
+		<description>AtariAge Combat Redux Design Contest - SeanCrooks_2 (2004)(Sean Crooks)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SeanCrooks_2 (2004)(Sean Crooks)(NTSC).a26" size="2048" crc="95403f69" sha1="753f5e104520b82504f58b5706b73d4de8040086"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260e1738a67b926">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_1 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_1 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="e7ffb05c" sha1="0e1738a67b926f84c1a4917e18423e5ee235055f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262c9cc27d67e46">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_10 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_10 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="738547fc" sha1="2c9cc27d67e4698c1c9653768c672e3319b353ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc4df3117d6c3">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_11 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_11 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="0fbfccf6" sha1="bc4df3117d6c315638ba5a7f05f68920c8e23c4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26147d5fb41c3d3">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_12 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_12 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="76521aa0" sha1="147d5fb41c3d346b8291c05d56daa1a3dbad3554"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267bfd431d2809f">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_13 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_13 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="1a728d56" sha1="7bfd431d2809f4c704697748d1a350b915f4cae7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ac2079cbc1d24">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_14 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_14 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="631b6b5e" sha1="ac2079cbc1d248c88dba0d550db74675a908f506"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c713aae36a0d5">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_15 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_15 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="f5e05547" sha1="c713aae36a0d54531702f3e8e69179ce4410fee9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2698ab0d2f574ee">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_16 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_16 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="4640686f" sha1="98ab0d2f574ee5e360d50d477da927351193ba58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2622847b84ef810">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_2 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_2 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="f17aa4a3" sha1="22847b84ef81077e67132cd1b1a676a02d06b493"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a748d8cb5dd84">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_3 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_3 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="4d0c2eb0" sha1="a748d8cb5dd847a087388e71bdcaa3778e55c3e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263713713087833">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_4 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_4 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="aacd0b84" sha1="37137130878338a45713007043d494a16859c3c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2680d1874329132">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_5 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_5 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="0cba4201" sha1="80d1874329132e257dc8faf2ce679df1c318544e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26654ddb70c5426">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_6 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_6 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="ad95c3fc" sha1="654ddb70c5426445a67c279225a8548957970a2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e52ce5c33955f">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_7 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_7 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="152708ab" sha1="e52ce5c33955fa9273e10bcd09660c917bfbf027"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd59b7f0b06c4">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_8 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_8 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="96a112ca" sha1="dd59b7f0b06c46a41b32671f6da401d6cb3152ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c1e5b9ff1c04">
+		<description>AtariAge Combat Redux Design Contest - SheldonSims_9 (2004)(Sheldon Sims)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SheldonSims_9 (2004)(Sheldon Sims)(NTSC).a26" size="2048" crc="fabc3b20" sha1="7c1e5b9ff1c04ca267c037a101afe1281cdd1ac0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2676802169e186b">
+		<description>AtariAge Combat Redux Design Contest - Spike_1 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_1 (2004)(SPIKE)(NTSC).a26" size="2048" crc="24684839" sha1="76802169e186bf6822f8fb52e34b52822d1f6328"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2619be36c663adf">
+		<description>AtariAge Combat Redux Design Contest - Spike_10 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_10 (2004)(SPIKE)(NTSC).a26" size="2048" crc="1b7f915e" sha1="19be36c663adfff364a5fe12c839d99e9e21652d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26219695452e67f">
+		<description>AtariAge Combat Redux Design Contest - Spike_11 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_11 (2004)(SPIKE)(NTSC).a26" size="2048" crc="5576b7a6" sha1="219695452e67f8f1ec6a960c7018c1719263f814"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26583d06497ff41">
+		<description>AtariAge Combat Redux Design Contest - Spike_12 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_12 (2004)(SPIKE)(NTSC).a26" size="2048" crc="dc3fae02" sha1="583d06497ff41adf952e5d4dcc6f4473e6a320dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260e4989ababc54">
+		<description>AtariAge Combat Redux Design Contest - Spike_13 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_13 (2004)(SPIKE)(NTSC).a26" size="2048" crc="29513ca5" sha1="0e4989ababc54bdb1bbabdc220fffd847eaa19c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26611e183b7f03f">
+		<description>AtariAge Combat Redux Design Contest - Spike_14 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_14 (2004)(SPIKE)(NTSC).a26" size="2048" crc="bfd3e7b3" sha1="611e183b7f03f9747a3bb0799250bcf18a255a42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a2deb86942784">
+		<description>AtariAge Combat Redux Design Contest - Spike_15 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_15 (2004)(SPIKE)(NTSC).a26" size="2048" crc="e6fce2a1" sha1="a2deb86942784ff07c518057ee4a4b0d34e413d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d18f2f37452c1">
+		<description>AtariAge Combat Redux Design Contest - Spike_16 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_16 (2004)(SPIKE)(NTSC).a26" size="2048" crc="f2421562" sha1="d18f2f37452c1ce284cf383f737660b97f182223"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e64104976eaa1">
+		<description>AtariAge Combat Redux Design Contest - Spike_17 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_17 (2004)(SPIKE)(NTSC).a26" size="2048" crc="e30b9a15" sha1="e64104976eaa19529c9f1c97ef4bae50f7dacdd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f8669208ff2bf">
+		<description>AtariAge Combat Redux Design Contest - Spike_18 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_18 (2004)(SPIKE)(NTSC).a26" size="2048" crc="be061605" sha1="f8669208ff2bf0ff53360d7c9967fd7afd3b17ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2653dc7cf3317d4">
+		<description>AtariAge Combat Redux Design Contest - Spike_19 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_19 (2004)(SPIKE)(NTSC).a26" size="2048" crc="45c1b203" sha1="53dc7cf3317d4dd89e20ac7604c312f9f5704592"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d40405ee58d82">
+		<description>AtariAge Combat Redux Design Contest - Spike_2 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_2 (2004)(SPIKE)(NTSC).a26" size="2048" crc="0fb1212d" sha1="d40405ee58d8231c2ba469bb5b7c2cd15bb2ae55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268dfe7ee4aab10">
+		<description>AtariAge Combat Redux Design Contest - Spike_20 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_20 (2004)(SPIKE)(NTSC).a26" size="2048" crc="9e615aea" sha1="8dfe7ee4aab10363d8dcc115ded7eefeaab2bd3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d89ba15c66eb6">
+		<description>AtariAge Combat Redux Design Contest - Spike_21 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_21 (2004)(SPIKE)(NTSC).a26" size="2048" crc="2f30e3d6" sha1="d89ba15c66eb684589342218a61c08d3d5776511"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26077d4886fa092">
+		<description>AtariAge Combat Redux Design Contest - Spike_22 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_22 (2004)(SPIKE)(NTSC).a26" size="2048" crc="9ce55438" sha1="077d4886fa092dbee1fa3fe355bd155b5a621290"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ed5b7a3fa89e5">
+		<description>AtariAge Combat Redux Design Contest - Spike_23 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_23 (2004)(SPIKE)(NTSC).a26" size="2048" crc="733cbceb" sha1="ed5b7a3fa89e56171588b36e2df84a2c13a7361c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26385412175469f">
+		<description>AtariAge Combat Redux Design Contest - Spike_24 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_24 (2004)(SPIKE)(NTSC).a26" size="2048" crc="bd977f6e" sha1="385412175469fb40f09013b071f4f26e2acf7b09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26980ef742e5c93">
+		<description>AtariAge Combat Redux Design Contest - Spike_25 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_25 (2004)(SPIKE)(NTSC).a26" size="2048" crc="f1a46331" sha1="980ef742e5c938a86e11c87170cb4dbefe9caa7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c49fce5a849e4">
+		<description>AtariAge Combat Redux Design Contest - Spike_26 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_26 (2004)(SPIKE)(NTSC).a26" size="2048" crc="2d87bb49" sha1="c49fce5a849e4847a72f61cc62674e576533db20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269e6af11cd747c">
+		<description>AtariAge Combat Redux Design Contest - Spike_27 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_27 (2004)(SPIKE)(NTSC).a26" size="2048" crc="d665ec83" sha1="9e6af11cd747c7bf07f2a7b6f55cc779b53c03f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264dc05ad9c4e2d">
+		<description>AtariAge Combat Redux Design Contest - Spike_28 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_28 (2004)(SPIKE)(NTSC).a26" size="2048" crc="ee189d54" sha1="4dc05ad9c4e2d2a899ab78b46fbb8febebe51a71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261c6b50b76116f">
+		<description>AtariAge Combat Redux Design Contest - Spike_29 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_29 (2004)(SPIKE)(NTSC).a26" size="2048" crc="d3c57f83" sha1="1c6b50b76116fb06229b449b4de4987225a00e69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269434ac74f1647">
+		<description>AtariAge Combat Redux Design Contest - Spike_3 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_3 (2004)(SPIKE)(NTSC).a26" size="2048" crc="57d11a3a" sha1="9434ac74f1647555c0d9fb62b961b0555fb98c98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2654c2e2deb8c5c">
+		<description>AtariAge Combat Redux Design Contest - Spike_30 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_30 (2004)(SPIKE)(NTSC).a26" size="2048" crc="e06df499" sha1="54c2e2deb8c5c5ea081d25701ab6ce9cd0882082"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265f93602f5283b">
+		<description>AtariAge Combat Redux Design Contest - Spike_31 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_31 (2004)(SPIKE)(NTSC).a26" size="2048" crc="8e751fcf" sha1="5f93602f5283bb2afe9a6ef91aa57c683b41ec69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a6e053d52073f">
+		<description>AtariAge Combat Redux Design Contest - Spike_4 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_4 (2004)(SPIKE)(NTSC).a26" size="2048" crc="40594106" sha1="a6e053d52073f5127ce0422c65f2166f48472131"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dbbafe7ff5a0d">
+		<description>AtariAge Combat Redux Design Contest - Spike_5 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_5 (2004)(SPIKE)(NTSC).a26" size="2048" crc="b3f06534" sha1="dbbafe7ff5a0d7fc4b399e307c8edb223ff23aa0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262388f118322bd">
+		<description>AtariAge Combat Redux Design Contest - Spike_6 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_6 (2004)(SPIKE)(NTSC).a26" size="2048" crc="e4b6dfa8" sha1="2388f118322bda43ce46db715cffc04f01f5e7ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cb4fd62537c76">
+		<description>AtariAge Combat Redux Design Contest - Spike_7 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_7 (2004)(SPIKE)(NTSC).a26" size="2048" crc="b71b505b" sha1="cb4fd62537c76a5a6917bf86b546ce6bfc570596"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26289bc36353f80">
+		<description>AtariAge Combat Redux Design Contest - Spike_8 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_8 (2004)(SPIKE)(NTSC).a26" size="2048" crc="4b5c45fa" sha1="289bc36353f80f63ebe8833e586d172d83e0b9f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b7a0ef36d5ace">
+		<description>AtariAge Combat Redux Design Contest - Spike_9 (2004)(SPIKE)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Spike_9 (2004)(SPIKE)(NTSC).a26" size="2048" crc="72e4043e" sha1="b7a0ef36d5aceb28933ee11a26f81016e57c4f43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26845d2ff4b748d">
+		<description>AtariAge Combat Redux Design Contest - SteveJuon_1 (2004)(Steve Juon)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SteveJuon_1 (2004)(Steve Juon)(NTSC).a26" size="2048" crc="cbb676fd" sha1="845d2ff4b748d13a2be2b424e23f4dedbddf4d29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ff511abd463a8">
+		<description>AtariAge Combat Redux Design Contest - SteveJuon_2 (2004)(Steve Juon)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SteveJuon_2 (2004)(Steve Juon)(NTSC).a26" size="2048" crc="f3c4386d" sha1="ff511abd463a8318922dfa222e15be1618950a16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2625506b437a5e4">
+		<description>AtariAge Combat Redux Design Contest - SteveJuon_3 (2004)(Steve Juon)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SteveJuon_3 (2004)(Steve Juon)(NTSC).a26" size="2048" crc="88cd4b83" sha1="25506b437a5e4114e2fa0da8e147f5a96df45abb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26abf8960419816">
+		<description>AtariAge Combat Redux Design Contest - SteveJuon_4 (2004)(Steve Juon)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SteveJuon_4 (2004)(Steve Juon)(NTSC).a26" size="2048" crc="b8b4e012" sha1="abf896041981639acb7018fd33fffa1bf13f1cf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e0919c74008cf">
+		<description>AtariAge Combat Redux Design Contest - SteveKnox_1 (2004)(Steve Knox)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - SteveKnox_1 (2004)(Steve Knox)(NTSC).a26" size="2048" crc="1e671c58" sha1="e0919c74008cfb59b10c2e5587d25301866251c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de8a3cb8037b9">
+		<description>AtariAge Combat Redux Design Contest - StevePierson_1 (2004)(Steve Pierson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - StevePierson_1 (2004)(Steve Pierson)(NTSC).a26" size="2048" crc="5ed34668" sha1="de8a3cb8037b948de4e38a85d4bdecafe1b96c75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c24b44d6cfb2">
+		<description>AtariAge Combat Redux Design Contest - StevePierson_2 (2004)(Steve Pierson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - StevePierson_2 (2004)(Steve Pierson)(NTSC).a26" size="2048" crc="eab4ad7b" sha1="7c24b44d6cfb242d02a85fb49a090a80e935fb28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec81a984a8929">
+		<description>AtariAge Combat Redux Design Contest - StevePierson_3 (2004)(Steve Pierson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - StevePierson_3 (2004)(Steve Pierson)(NTSC).a26" size="2048" crc="d7fed486" sha1="ec81a984a8929aaefea1df097b7928a00378d8f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c91adf7da8617">
+		<description>AtariAge Combat Redux Design Contest - StevePierson_4 (2004)(Steve Pierson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - StevePierson_4 (2004)(Steve Pierson)(NTSC).a26" size="2048" crc="5700ebfd" sha1="c91adf7da86177a84421a90d2876f97916fb9786"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26766b154fbfaee">
+		<description>AtariAge Combat Redux Design Contest - StevePierson_5 (2004)(Steve Pierson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - StevePierson_5 (2004)(Steve Pierson)(NTSC).a26" size="2048" crc="d43577c2" sha1="766b154fbfaee668ecc27296154187fed8125083"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f96c2697e29fa">
+		<description>AtariAge Combat Redux Design Contest - StevePierson_6 (2004)(Steve Pierson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - StevePierson_6 (2004)(Steve Pierson)(NTSC).a26" size="2048" crc="4c14a083" sha1="f96c2697e29fac685a6192694797d3da2689acfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2689f75d4b93afc">
+		<description>AtariAge Combat Redux Design Contest - StevePierson_7 (2004)(Steve Pierson)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - StevePierson_7 (2004)(Steve Pierson)(NTSC).a26" size="2048" crc="11b5c3a0" sha1="89f75d4b93afcbc7ac4c485198b9ecb3fd55afaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2684556e523a2f6">
+		<description>AtariAge Combat Redux Design Contest - Steve_1 (2004)(Steve)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Steve_1 (2004)(Steve)(NTSC).a26" size="2048" crc="d4490231" sha1="84556e523a2f6cfb5837443b43366f4c5cb092fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e7594a618772b">
+		<description>AtariAge Combat Redux Design Contest - Steve_2 (2004)(Steve)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Steve_2 (2004)(Steve)(NTSC).a26" size="2048" crc="ac846d45" sha1="e7594a618772ba0c0e26c08b1f2019ce34189fc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26883d6dc214f7b">
+		<description>AtariAge Combat Redux Design Contest - Steve_3 (2004)(Steve)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Steve_3 (2004)(Steve)(NTSC).a26" size="2048" crc="73d428f6" sha1="883d6dc214f7b4409e6f0ed9c58c622d3e78817a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c45ebf1585eb0">
+		<description>AtariAge Combat Redux Design Contest - Steve_4 (2004)(Steve)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - Steve_4 (2004)(Steve)(NTSC).a26" size="2048" crc="11e51a8d" sha1="c45ebf1585eb0ca58d4cad140632002a09aa9b6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4fd10463325a">
+		<description>AtariAge Combat Redux Design Contest - TonyMason_1 (2004)(Tony Mason)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - TonyMason_1 (2004)(Tony Mason)(NTSC).a26" size="2048" crc="26e7cc4f" sha1="b4fd10463325a098918703b56d986e4360ae41db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b453f1850ed52">
+		<description>AtariAge Combat Redux Design Contest - TroyWhelan_1 (2004)(Troy Whelan)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - TroyWhelan_1 (2004)(Troy Whelan)(NTSC).a26" size="2048" crc="573c5af3" sha1="b453f1850ed52c3a98c189a2e7ecf8c25ba880be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266e0bef41b6d38">
+		<description>AtariAge Combat Redux Design Contest - TroyWhelan_2 (2004)(Troy Whelan)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - TroyWhelan_2 (2004)(Troy Whelan)(NTSC).a26" size="2048" crc="9c3951ca" sha1="6e0bef41b6d38db554bef3ed62d8dc975596b60b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266ba40bd7c1932">
+		<description>AtariAge Combat Redux Design Contest - TroyWhelan_3 (2004)(Troy Whelan)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - TroyWhelan_3 (2004)(Troy Whelan)(NTSC).a26" size="2048" crc="df22017f" sha1="6ba40bd7c1932e4b78608620647a23e236436c6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f51133a9a5f26">
+		<description>AtariAge Combat Redux Design Contest - TroyWhelan_4 (2004)(Troy Whelan)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - TroyWhelan_4 (2004)(Troy Whelan)(NTSC).a26" size="2048" crc="eea3fe36" sha1="f51133a9a5f2634cf88b9c7d1db882629dd847a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26701f483573963">
+		<description>AtariAge Combat Redux Design Contest - TroyWhelan_5 (2004)(Troy Whelan)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - TroyWhelan_5 (2004)(Troy Whelan)(NTSC).a26" size="2048" crc="97285c21" sha1="701f4835739634082d438f99941648973f8c569d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26103ab8e290afa">
+		<description>AtariAge Combat Redux Design Contest - TroyWhelan_6 (2004)(Troy Whelan)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - TroyWhelan_6 (2004)(Troy Whelan)(NTSC).a26" size="2048" crc="b7443320" sha1="103ab8e290afaa1df3a9ba83b012f9e637082057"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3c61b074bb17">
+		<description>AtariAge Combat Redux Design Contest - WalterLauer_1 (2004)(WalterLauer)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - WalterLauer_1 (2004)(WalterLauer)(NTSC).a26" size="2048" crc="eb10f0a8" sha1="d3c61b074bb1769b50dd87a9e0a0e38171e89b52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267277ee626a8d7">
+		<description>AtariAge Combat Redux Design Contest - WalterLauer_2 (2004)(WalterLauer)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - WalterLauer_2 (2004)(WalterLauer)(NTSC).a26" size="2048" crc="525a7500" sha1="7277ee626a8d7897ea61087d5c56cdf79cdc7901"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd04135ed66fa">
+		<description>AtariAge Combat Redux Design Contest - WesMorrison_1 (2004)(Wes Morrison)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - WesMorrison_1 (2004)(Wes Morrison)(NTSC).a26" size="2048" crc="51fa64eb" sha1="dd04135ed66fa3b357376baa54934baa4a1ebaf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264197c1086d4f6">
+		<description>AtariAge Combat Redux Design Contest - WestonDHilton_1 (2004)(Weston D Hilton)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - WestonDHilton_1 (2004)(Weston D Hilton)(NTSC).a26" size="2048" crc="3522ce84" sha1="4197c1086d4f6f7e55114fd172dff44807746c3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a9e8c8fc0ad04">
+		<description>AtariAge Combat Redux Design Contest - WestonDHilton_2 (2004)(Weston D Hilton)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - WestonDHilton_2 (2004)(Weston D Hilton)(NTSC).a26" size="2048" crc="7c162a34" sha1="a9e8c8fc0ad0474d93cb6e0a2fd733c8a98607eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2646ed5a7744ae3">
+		<description>AtariAge Combat Redux Design Contest - WestonDHilton_3 (2004)(Weston D Hilton)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - WestonDHilton_3 (2004)(Weston D Hilton)(NTSC).a26" size="2048" crc="2d015969" sha1="46ed5a7744ae3ca55868c1467d86dccd756d0a94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2693f28d4322e0e">
+		<description>AtariAge Combat Redux Design Contest - WestonDHilton_4 (2004)(Weston D Hilton)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="AtariAge Combat Redux Design Contest - WestonDHilton_4 (2004)(Weston D Hilton)(NTSC).a26" size="2048" crc="139837f3" sha1="93f28d4322e0e5a70e33089c3f6d22b4463ac033"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e3392663291a6">
+		<description>Atari_OS_83106</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari_OS_83106.a26" size="4096" crc="48ad4691" sha1="e3392663291a64f42bc6b17f557de956c259df67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269787cdf96b8b1">
+		<description>Atari_OS_9106</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari_OS_9106.a26" size="4096" crc="8672a2c2" sha1="9787cdf96b8b1c1548b45b43cdb5c3f47e0665d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be5fca56d0312">
+		<description>Atari_OS_version_1.0a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari_OS_version_1.0a.bas.a26" size="4096" crc="04ae3c26" sha1="be5fca56d03125ced16a465cb4f115fc630b5171"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26b9679de0a5c00">
 		<description>atari_video_cube_cheat_1</description>
 		<year>????</year>
@@ -6719,6 +9869,26 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="atari_video_cube_cheat_1.a26" size="4096" crc="9d5a4265" sha1="b9679de0a5c00ecc95d90e99594149f264703563"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d345e2ea04c2">
+		<description>Atari_Video_Cube_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari_Video_Cube_NTSC(Supercharger).a26" size="4096" crc="b03f06a0" sha1="5d345e2ea04c218882b1878e18173e97e918be6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263fcebcbff3942">
+		<description>Atari_Video_Cube_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Atari_Video_Cube_PAL60(Supercharger).a26" size="4096" crc="9a600b73" sha1="3fcebcbff39423bef7070ff386da6a8c4e3eb37b"/>
 			</dataarea>
 		</part>
 	</software>

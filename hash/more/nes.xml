@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 9882 -->
+<!-- Number of items in this list = 9962 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -28492,6 +28492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesccd116b4453b3">
+		<description>F-15 Strike Eagle (E) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="F-15 Strike Eagle (E) [!].nes" size="524304" crc="f842d560" sha1="ccd116b4453b36a7a4bada20123d23817f5d0d95"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesacdfa9b5a748a">
 		<description>F-15 Strike Eagle (Europe)</description>
 		<year>????</year>
@@ -28542,6 +28552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes99b98000e1bb1">
+		<description>F-15 Strike Eagle (I) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="F-15 Strike Eagle (I) [!].nes" size="524304" crc="145e8bef" sha1="99b98000e1bb1c9cb45338874e18b58da6d18992"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesed58d5fef2f0c">
 		<description>F-15 Strike Eagle (Italy)</description>
 		<year>????</year>
@@ -28552,6 +28572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nese9e6e45666ba0">
+		<description>F-15 Strike Eagle (Sw) (M3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="F-15 Strike Eagle (Sw) (M3).nes" size="524304" crc="69079a1b" sha1="e9e6e45666ba082e2d9093848b8e6333e3bc125e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesb40936d284053">
 		<description>F-15 Strike Eagle (Sweden) (Sv,Da,Fi)</description>
 		<year>????</year>
@@ -28559,6 +28589,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="F-15 Strike Eagle (Sweden) (Sv,Da,Fi).nes" size="524304" crc="ac30420e" sha1="b40936d2840537079b1f60332c3f6b8bfb7cc8c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc85dd32800616">
+		<description>F-15 Strike Eagle (U) [b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="F-15 Strike Eagle (U) [b2].nes" size="524304" crc="5675b64d" sha1="c85dd3280061601db124e82c47df9048cd6e5f40"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28709,6 +28749,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Famicom Jump - Eiyuu Retsuden (Japan).nes" size="393232" crc="12546b9f" sha1="f2d78e0fd74db52c752a193706f6ccb8c748667b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9c5381325383b">
+		<description>Famicom Meijin Sen (J) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Famicom Meijin Sen (J) [!].nes" size="262160" crc="c50ff532" sha1="9c5381325383bf6c074b2c3cdcc825e138615a19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29072,6 +29122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes5fa6ab5ca513a">
+		<description>Family Mahjong (Japan) (Rev A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="196624">
+				<rom name="Family Mahjong (Japan) (Rev A).nes" size="196624" crc="821cf9d0" sha1="5fa6ab5ca513a953c73d2a39919d9313ea210a7a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese9e5da0a5ccff">
 		<description>Family Mahjong (Japan)</description>
 		<year>????</year>
@@ -29172,6 +29232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes9db1284c7f244">
+		<description>Family Stadium 2006 by Clambutt (Famista '90 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Family Stadium 2006 by Clambutt (Famista '90 Hack).nes" size="262160" crc="40bc3979" sha1="9db1284c7f2440d5630f26cf4a39ca03a25f9dd3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes7182fdee9df89">
 		<description>Family Tennis (Japan) (2)</description>
 		<year>????</year>
@@ -29189,6 +29259,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Family Tennis (Japan).nes" size="131088" crc="7aa1f905" sha1="4cc665d594864b8ac1d8b3b7401ce8b4721a7983"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9db00caed0b32">
+		<description>Family Trainer - Fuuun!! Takeshi Jou 2 (J)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="163856">
+				<rom name="Family Trainer - Fuuun!! Takeshi Jou 2 (J).nes" size="163856" crc="48dd5ed6" sha1="9db00caed0b32e0e826a45f59f2cea145b292a12"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29432,6 +29512,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes4069d8d02fec7">
+		<description>Famista '89 - Kaimaku Ban!! (J) [b3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="196624">
+				<rom name="Famista '89 - Kaimaku Ban!! (J) [b3].nes" size="196624" crc="35400241" sha1="4069d8d02fec7d67b69b2cc3d3b9410e0fe8e9d7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesdb8677cc91000">
 		<description>Famista '89 - Kaimaku Ban!! (Japan) (2)</description>
 		<year>????</year>
@@ -29439,6 +29529,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="196624">
 				<rom name="Famista '89 - Kaimaku Ban!! (Japan) (2).nes" size="196624" crc="51de3d0f" sha1="db8677cc910000b7ed73d0fa4b3f9494fe7b3983"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes56245e690a231">
+		<description>Famista '89 - Kaimaku Ban!! (Japan) (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="196624">
+				<rom name="Famista '89 - Kaimaku Ban!! (Japan) (3).nes" size="196624" crc="62b90039" sha1="56245e690a231eb014ff13fc81b4b9f128598bc1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29632,6 +29732,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes76398dfac078b">
+		<description>Fantastic Adventures of Dizzy, The (Unl) [T+Rus_Shedevr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Fantastic Adventures of Dizzy, The (Unl) [T+Rus_Shedevr].nes" size="262160" crc="a720a6a0" sha1="76398dfac078bfaaae9e6fb6dbdc4133b8952ad1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes1703ff03bc242">
 		<description>Fantasy Zone (Japan) (2)</description>
 		<year>????</year>
@@ -29752,6 +29862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes4fea51cada09a">
+		<description>Fatal Fury 2 (Unl) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Fatal Fury 2 (Unl) [!].nes" size="393232" crc="defb8282" sha1="4fea51cada09ac241da2704c4ed93106d8990e1f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes90049a195c639">
 		<description>Faxanadu (Europe) (2)</description>
 		<year>????</year>
@@ -29809,6 +29929,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Faxanadu (U) (vA).nes" size="262160" crc="b6f4f544" sha1="c01f1019626519187290d9dea1e7a1af57273cfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc1003f865669b">
+		<description>Faxanadu (U) [T+Dut_Ok Impala!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Faxanadu (U) [T+Dut_Ok Impala!].nes" size="262160" crc="97aa4d3a" sha1="c1003f865669b97fd0df4e08f10afff6bab874e4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29879,6 +30009,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Faxanadu T-Spa v1.0 (2021)(Wave).nes" size="262160" crc="4e31a801" sha1="b48ee523316e2e3b1dddbb8eefadccf4d592399d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes00346e21a4338">
+		<description>FC Genjin - Freakthoropus Computerus (J) [T+Chi_MS emumax]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="FC Genjin - Freakthoropus Computerus (J) [T+Chi_MS emumax].nes" size="393232" crc="8840abf1" sha1="00346e21a4338770515237c5a84f609442215a50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0db354cc152ff">
+		<description>FC Genjin - Freakthoropus Computerus (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="FC Genjin - Freakthoropus Computerus (J) [t1].nes" size="393232" crc="c546f436" sha1="0db354cc152ff3413e401160d5f51871326628aa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29982,6 +30132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes656a60672e045">
+		<description>FC25</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="327696">
+				<rom name="FC25.nes" size="327696" crc="2c6b70bc" sha1="656a60672e04504bd0bbd87552e4528310b0f8a1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes55cab8a40657a">
 		<description>FC_CH_HACK007</description>
 		<year>????</year>
@@ -29992,6 +30152,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nese0d0eaaf0523d">
+		<description>Fedsvd MLB (R.B.I. Baseball Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Fedsvd MLB (R.B.I. Baseball Hack) [a1].nes" size="262160" crc="ae8c14fc" sha1="e0d0eaaf0523d3442072134667198ea5ee342934"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6411512f09c63">
+		<description>Fedsvd MLB (R.B.I. Baseball Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="98320">
+				<rom name="Fedsvd MLB (R.B.I. Baseball Hack).nes" size="98320" crc="e29a4663" sha1="6411512f09c63c6679c258b9c8cbd87791581f1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes396aa3132ee9b">
+		<description>Felix the Cat (E) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Felix the Cat (E) [!].nes" size="262160" crc="26dc493b" sha1="396aa3132ee9b3924b0efdbd209e92cc42e63aa6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes41ce207316c0a">
 		<description>Felix the Cat (Europe)</description>
 		<year>????</year>
@@ -29999,6 +30189,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Felix the Cat (Europe).nes" size="262160" crc="a3fb6e31" sha1="41ce207316c0a814f234275280423e24a4fa2e75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes98c73163d994f">
+		<description>Felix the Cat (U) [T+Bra_tradu-gamex]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Felix the Cat (U) [T+Bra_tradu-gamex].nes" size="262160" crc="da30719a" sha1="98c73163d994f5e4b0266b74775a71981886f4b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30062,6 +30262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes0e37dcc96c20f">
+		<description>Felix vs Jerry (Unl) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Felix vs Jerry (Unl) [!].nes" size="262160" crc="05b7bc7c" sha1="0e37dcc96c20f16e4844033175b4bec1c028069b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes1a734f847bd10">
 		<description>Feng Shen Bang (Asia) (Ja) (Unl)</description>
 		<year>????</year>
@@ -30082,6 +30292,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes38805b78fe4e1">
+		<description>Feng Yin Dao (NJ072) (Ch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Feng Yin Dao (NJ072) (Ch).nes" size="524304" crc="5f57410c" sha1="38805b78fe4e12af93fd906cb696403ed35199ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8008cd3ff792a">
+		<description>Fengli Dance 12 in 1 &amp; 24 in 1(C)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Fengli Dance 12 in 1 &amp; 24 in 1(C).nes" size="524304" crc="ba3f83d7" sha1="8008cd3ff792a2c7e5e34c34543394d6ffbf48b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes861c41574b510">
 		<description>Ferrari (Japan) (2)</description>
 		<year>????</year>
@@ -30099,6 +30329,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Ferrari (Japan).nes" size="262160" crc="c9368ac3" sha1="146e39e962c6fff24724fe55d632ba4217cc3b67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8689c376c29d7">
+		<description>Ferrari - Grand Prix Challenge (Europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Ferrari - Grand Prix Challenge (Europe).nes" size="262160" crc="c98157c9" sha1="8689c376c29d705fddb6f2d130340e1bc32908e3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30152,6 +30392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nescf6574bfaf0dc">
+		<description>Fester's Quest (E) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Fester's Quest (E) [!].nes" size="262160" crc="057cba56" sha1="cf6574bfaf0dc87a47af76149f3554c09a839e93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese8f0813213e79">
 		<description>Fester's Quest (Europe) (Rev 1)</description>
 		<year>????</year>
@@ -30202,6 +30452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesbde9ad5d81f90">
+		<description>FF1 or FF6 (FF1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="FF1 or FF6 (FF1 Hack).nes" size="262160" crc="753f773e" sha1="bde9ad5d81f90b67d710cccbbb27e857b800dade"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nescb91b9429cf10">
 		<description>Field Combat (J) [T+Chi_NOKOH]</description>
 		<year>????</year>
@@ -30232,6 +30492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesb461389b8b1a1">
+		<description>FIFA International 2' 96 (Unl) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="FIFA International 2' 96 (Unl) [!].nes" size="262160" crc="a6614897" sha1="b461389b8b1a196f5dd91a70a929cfb1147f3cc9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes41e712d4b6d4d">
 		<description>Fighting Golf (Japan) (2)</description>
 		<year>????</year>
@@ -30259,6 +30529,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Fighting Hero (Asia) (Ja) (Unl).nes" size="393232" crc="b24d9017" sha1="58aebd183ac928617ab68079cab81ac32971ca4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes50015c16d5ab4">
+		<description>Fighting Hero (Asia) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Fighting Hero (Asia) (Unl).nes" size="393232" crc="dbd3cb35" sha1="50015c16d5ab42f13b52ae60adef2dbf918bdbbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes22a5e8db9c639">
+		<description>Fighting Hero III (Unl) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Fighting Hero III (Unl) [!].nes" size="786448" crc="52b2045f" sha1="22a5e8db9c6395edf0e31df6872a3012cf2c9267"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30402,6 +30692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes0d4f34ada26db">
+		<description>Final Fantasy (Japan) (Rev B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy (Japan) (Rev B).nes" size="262160" crc="92b1b80a" sha1="0d4f34ada26dbe20f6d6372f9b72980df455121e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes2b86d638d58af">
 		<description>Final Fantasy (Japan)</description>
 		<year>????</year>
@@ -30429,6 +30729,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Final Fantasy (U) [T+Rus_ConsolGames].nes" size="262160" crc="d5fda0dd" sha1="d53e8f96592528206e73b3063fe5463f3dad09fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6aa887aa7564c">
+		<description>Final Fantasy (U) [T+Spa100_Chilensis]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy (U) [T+Spa100_Chilensis].nes" size="262160" crc="3d21844c" sha1="6aa887aa7564c6b06a88ce35f99d2b99a30d1869"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesdd2612b71966d">
+		<description>Final Fantasy (U) [T+Spa100_ereza]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy (U) [T+Spa100_ereza].nes" size="262160" crc="fc85882e" sha1="dd2612b71966d1a9a228a99deccb35201dea7ea4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30532,6 +30852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes3d0bfe28374b3">
+		<description>Final Fantasy - Chaos Realm or Something (Metroid Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Final Fantasy - Chaos Realm or Something (Metroid Hack).nes" size="131088" crc="e32f3e91" sha1="3d0bfe28374b3f811b3c5fb0801f77492db71e70"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes257a972a17e1f">
 		<description>Final Fantasy - no menu music by Bregalad (FF1 Hack)</description>
 		<year>????</year>
@@ -30539,6 +30869,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Final Fantasy - no menu music by Bregalad (FF1 Hack).nes" size="262160" crc="073163ef" sha1="257a972a17e1f7b3951d5082a5176dffde968818"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8c212510317d4">
+		<description>Final Fantasy - Spiritua Rising V2.0 (FF1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy - Spiritua Rising V2.0 (FF1 Hack).nes" size="262160" crc="14a1ffbf" sha1="8c212510317d4f2d021c1bf0ab2c334c4945c00a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30572,6 +30912,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes485823c74d6fc">
+		<description>Final Fantasy 99 (DQ3 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy 99 (DQ3 Hack).nes" size="262160" crc="1555de57" sha1="485823c74d6fcfb9fe92bf19689e7d05776247f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese28392eb48d59">
+		<description>Final Fantasy Double-Plus - World of Chaos v1.1 (FF1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy Double-Plus - World of Chaos v1.1 (FF1 Hack).nes" size="262160" crc="d22c9411" sha1="e28392eb48d592882eec218c7f5693a1b0401706"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes452492c0dd10f">
+		<description>Final Fantasy Double-Plus v1.45 (FF1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy Double-Plus v1.45 (FF1 Hack).nes" size="262160" crc="b31f9885" sha1="452492c0dd10fdf910d57e044b84af80b7fc7190"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes704d46eb311a7">
 		<description>Final Fantasy I &amp; II (Japan) [En by Demiforce v1.0] [Hack by Grond v1.0] (Unofficial Update)</description>
 		<year>????</year>
@@ -30589,6 +30959,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Final Fantasy I, II (Japan) (2).nes" size="524304" crc="6f458613" sha1="5b5079241541ef8bcc76aeaa426e5150431f65ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf53ef4ed1ee5b">
+		<description>Final Fantasy II (J) [T+Swe_cyndeline]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy II (J) [T+Swe_cyndeline].nes" size="262160" crc="78b03c39" sha1="f53ef4ed1ee5bde0b5431f473560852dbc2a9201"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30669,6 +31049,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Final Fantasy II (USA) (Proto) (3).nes" size="262160" crc="f60d282c" sha1="2c16ba1f094f895359e95bad8a841e7f7ea7236c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes29e6587692f86">
+		<description>Final Fantasy II (USA) (Proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Fantasy II (USA) (Proto).nes" size="262160" crc="0196ebf1" sha1="29e6587692f8652ecb636d16f031a103ac915602"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30782,6 +31172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nese4439cf42d0ee">
+		<description>Final Fantasy VII (NJ063) (Ch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="2097168">
+				<rom name="Final Fantasy VII (NJ063) (Ch).nes" size="2097168" crc="e5bf8f0c" sha1="e4439cf42d0ee0500fd7fa97c9d7fbac5c1a454d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes02e2aa8ec6c14">
 		<description>Final Fantasy X1 (Ch)[!]</description>
 		<year>????</year>
@@ -30832,6 +31232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes571d11c932612">
+		<description>Final Lap (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Lap (J) [t1].nes" size="262160" crc="aa48db2e" sha1="571d11c9326120440b324f07f559c887b3c6c810"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes34e133d733415">
 		<description>Final Lap (Japan) (2)</description>
 		<year>????</year>
@@ -30862,6 +31272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesd1c0d89f14f75">
+		<description>Final Mission (J) [T+Chi][t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Mission (J) [T+Chi][t1].nes" size="262160" crc="9d89afea" sha1="d1c0d89f14f751484826471237be5d89ff1708b8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesdfc97a819418b">
 		<description>Final Mission (J) [T+Chi_xingkong]</description>
 		<year>????</year>
@@ -30869,6 +31289,56 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Final Mission (J) [T+Chi_xingkong].nes" size="262160" crc="dc386335" sha1="dfc97a819418b287c4a2311fcb31fb34c5fedad9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb8c2101938ab2">
+		<description>Final Mission (J) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Mission (J) [t2].nes" size="262160" crc="216bf5d0" sha1="b8c2101938ab270b85bf61a57ac5186ac5315d56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc912efe18b2e0">
+		<description>Final Mission (J) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Mission (J) [t3].nes" size="262160" crc="972c93bc" sha1="c912efe18b2e00d1af8f1c1a3ad418ccaf4e02ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3603174b6b4ed">
+		<description>Final Mission (J) [t4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Mission (J) [t4].nes" size="262160" crc="800fd040" sha1="3603174b6b4ed0ad2140dc313e89f5c09bbb7196"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3d4dec73461b3">
+		<description>Final Mission (J) [t5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Mission (J) [t5].nes" size="262160" crc="3b35bede" sha1="3d4dec73461b3e846aa857887cabe8000c95e246"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa32f7acb1def2">
+		<description>Final Mission (J) [t6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Final Mission (J) [t6].nes" size="262160" crc="acc385a2" sha1="a32f7acb1def2f7e0131d379b2d823b9dfe3d8fb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31032,6 +31502,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesfe75d73b3da07">
+		<description>Fire Emblem - new challenge by shinwa (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Fire Emblem - new challenge by shinwa (Hack).nes" size="393232" crc="20f8db41" sha1="fe75d73b3da0750931d59dc3fa0aff76891b1c4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2ecb9a88ca06e">
+		<description>Fire Emblem Gaiden (Ch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="655376">
+				<rom name="Fire Emblem Gaiden (Ch).nes" size="655376" crc="d9ce1737" sha1="2ecb9a88ca06e5dd6704cb7c4a7d23cdcb171de6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesaf69b369c63b0">
+		<description>Fire Emblem Gaiden (J) [T+Eng97b2-Repair110206_J2e+Starwolf]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Fire Emblem Gaiden (J) [T+Eng97b2-Repair110206_J2e+Starwolf].nes" size="393232" crc="5212ef61" sha1="af69b369c63b0b6cf7f85f968dfb2488087dfad3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes46ac2ea9e6ec9">
 		<description>Fire Emblem Gaiden (J) [T+Eng_Artemis251]</description>
 		<year>????</year>
@@ -31092,6 +31592,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesde04536e3fa70">
+		<description>Fire Emblem Gaiden by jibo818 (070502) (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Fire Emblem Gaiden by jibo818 (070502) (Hack).nes" size="393232" crc="4cc259a7" sha1="de04536e3fa70d9dbccf62e0dc2e58bf02ac94f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesead6701e3998c">
+		<description>Fire Emblem Gaiden hack by Lewis GT (070806)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Fire Emblem Gaiden hack by Lewis GT (070806).nes" size="524304" crc="85404d69" sha1="ead6701e3998cd7f81c8e8fccd1bb12a0bd90169"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesefa0e83b2bcb0">
+		<description>Fire Emblem Two Dragon Edition (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="655376">
+				<rom name="Fire Emblem Two Dragon Edition (Hack).nes" size="655376" crc="6f5a5a0c" sha1="efa0e83b2bcb0f02fc81fc7b434ffe56209d3d67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes209f7ca3f4f9e">
+		<description>Fire Emblem two dragon edition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="655376">
+				<rom name="Fire Emblem two dragon edition.nes" size="655376" crc="d4e612db" sha1="209f7ca3f4f9e179881aa9387dc6ad5dea4f4575"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes22caba9793c06">
 		<description>Fire Hawk (PAL)[!]</description>
 		<year>????</year>
@@ -31109,6 +31649,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Fire n Ice - The Lost Levels v1.1.nes" size="262160" crc="99e61dff" sha1="332c1502a08f1a47cc630ab933b3029d3291b197"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes89e3201608c66">
+		<description>Firefly Demo by Loopy (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="24592">
+				<rom name="Firefly Demo by Loopy (PD).nes" size="24592" crc="94b969c0" sha1="89e3201608c6628844f6d7271c74a7a2f8589100"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31149,6 +31699,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="fishfall.nes" size="131088" crc="8173b886" sha1="78fe10d8400e5288b49c6cf5b2803d647382b850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9d495b3eb8d65">
+		<description>Fist of the North Star (U) [T+Fre]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Fist of the North Star (U) [T+Fre].nes" size="131088" crc="8c1fc59e" sha1="9d495b3eb8d65dbb4b4a5b6fc32edd7517da03d1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31342,6 +31902,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes805737b473814">
+		<description>Flintstones, The - The Rescue of Dino &amp; Hoppy (U) [p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Flintstones, The - The Rescue of Dino &amp; Hoppy (U) [p1][!].nes" size="393232" crc="7d556bc5" sha1="805737b473814baeeaf98bdacd2de810dae5c8e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesdeb230107c878">
+		<description>Flintstones, The - The Rescue of Dino &amp; Hoppy (U) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Flintstones, The - The Rescue of Dino &amp; Hoppy (U) [t1].nes" size="393232" crc="0768aef0" sha1="deb230107c87863a7226d4466470aa5b824d6d0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4c2199ab578fa">
+		<description>Flintstones, The - The Rescue of Dino &amp; Hoppy (U) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Flintstones, The - The Rescue of Dino &amp; Hoppy (U) [t2].nes" size="393232" crc="8ea684c4" sha1="4c2199ab578faf2cb1f244e5a562ecc0918f27ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa81a9b39e1599">
+		<description>Flintstones, The - The Rescue of Dino &amp; Hoppy (U) [t3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Flintstones, The - The Rescue of Dino &amp; Hoppy (U) [t3].nes" size="393232" crc="1b42f310" sha1="a81a9b39e15995e0bb2e6db60b02c2b6b9331b7d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes420474f659e69">
 		<description>Flintstones, The - The Rescue of Dino &amp; Hoppy (USA) (2)</description>
 		<year>????</year>
@@ -31382,6 +31982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes354415e5472c4">
+		<description>Flintstones, The - The Surprise at Dinosaur Peak! (E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Flintstones, The - The Surprise at Dinosaur Peak! (E).nes" size="393232" crc="945772f1" sha1="354415e5472c4cbf4978744c97a9a53c6b61cb49"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesb084c58458a1c">
 		<description>Flintstones, The - The Surprise at Dinosaur Peak! (U) [T+Rus_Magicteam]</description>
 		<year>????</year>
@@ -31389,6 +31999,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Flintstones, The - The Surprise at Dinosaur Peak! (U) [T+Rus_Magicteam].nes" size="393232" crc="3d8c494a" sha1="b084c58458a1c06ea90d4aa97a222500c40be874"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7622ed6376d11">
+		<description>Flintstones, The - The Surprise at Dinosaur Peak! (U) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Flintstones, The - The Surprise at Dinosaur Peak! (U) [t1].nes" size="393232" crc="698eaf70" sha1="7622ed6376d110621f4ee0fa761f51ec81054f10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc54d69a4e767a">
+		<description>Flintstones, The - The Surprise at Dinosaur Peak! (U) [t2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Flintstones, The - The Surprise at Dinosaur Peak! (U) [t2].nes" size="393232" crc="8fd4eb85" sha1="c54d69a4e767a35338825dcfede9eeb58eaabd6b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31449,6 +32079,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
 				<rom name="Flipull - An Exciting Cube Game (Japan)(1989)(Taito).nes" size="65552" crc="b0e199e3" sha1="e92b8e1d869c2f334b152a3a09829696337a91e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbd6be9647749f">
+		<description>Flipull - An Exciting Cube Game (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Flipull - An Exciting Cube Game (Japan).nes" size="65552" crc="5858ed71" sha1="bd6be9647749fb7dfe7760d557e94df605cd3c1f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31579,6 +32219,36 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Foals Creek RU (2023)(Guyver).nes" size="262160" crc="0f549415" sha1="8ea42a024a7670250db79e7f43ae92004b8ba6da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb51fd46813d63">
+		<description>Fong Shen Bang - Zhu Lu Zhi Zhan (Ch) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="Fong Shen Bang - Zhu Lu Zhi Zhan (Ch) [a1].nes" size="1048592" crc="77017a8f" sha1="b51fd46813d638e7696b86fce52287550cf48050"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfdfcc6f3a0be6">
+		<description>Fong Shen Bang - Zhu Lu Zhi Zhan (Ch) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="Fong Shen Bang - Zhu Lu Zhi Zhan (Ch) [a2].nes" size="1048592" crc="f63197ab" sha1="fdfcc6f3a0be6dfca3d1ee334796d3d40b241487"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfff40bbc8a13c">
+		<description>Fong Shen Bang - Zhu Lu Zhi Zhan (Ch) [T+Chi(Simp)20060423]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="1048592">
+				<rom name="Fong Shen Bang - Zhu Lu Zhi Zhan (Ch) [T+Chi(Simp)20060423].nes" size="1048592" crc="740dd023" sha1="fff40bbc8a13c4fd9a6165b04dc0dbafac0d2c61"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31772,6 +32442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesb8131fa7a051b">
+		<description>Free Fall (USA) (Proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Free Fall (USA) (Proto).nes" size="131088" crc="913ec888" sha1="b8131fa7a051bd1f4589118b1c9cb09a7efb59c2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes4aa3bbf53869e">
 		<description>Free Fall</description>
 		<year>????</year>
@@ -31882,6 +32562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes794d30faa4ba8">
+		<description>Fucker's Quest by Shitdic (Fester's Quest Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Fucker's Quest by Shitdic (Fester's Quest Hack).nes" size="262160" crc="fb9e1273" sha1="794d30faa4ba81046405f3c6599b73c3a297b2ad"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes0f52630ddc310">
 		<description>Fudou Myouou Den (J) [T+Eng_S.Crusaders]</description>
 		<year>????</year>
@@ -31889,6 +32579,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Fudou Myouou Den (J) [T+Eng_S.Crusaders].nes" size="393232" crc="0439b8a6" sha1="0f52630ddc31027f17341a09c6d46b1793c69708"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3e93ca14936f1">
+		<description>Fudou Myouou Den (J) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Fudou Myouou Den (J) [t1].nes" size="393232" crc="003f8aaa" sha1="3e93ca14936f15075e09e617a84f809c9609776f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31969,6 +32669,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="49168">
 				<rom name="Fullscreen Interlace Demo - Zelda Picture (PD).nes" size="49168" crc="1f8dd529" sha1="5889ffade8aaec57ab7dd2bc38f4df2f531d8dfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes619a5ae9b4c99">
+		<description>Fun Blaster Pak (HES) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Fun Blaster Pak (HES) [!].nes" size="262160" crc="17e3acd1" sha1="619a5ae9b4c99af4760fea5db02ebb8cea9ebcb5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32059,6 +32769,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="98320">
 				<rom name="Futebol (Brazil) (Unl) (3).nes" size="98320" crc="8123ce3a" sha1="390853d9af894dc48a6265852271a235ed7ce927"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4e44e95920127">
+		<description>Futebol (Unl) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="99344">
+				<rom name="Futebol (Unl) [o1].nes" size="99344" crc="53266db8" sha1="4e44e95920127aa41dd822f6fead21c353696f85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4416cb92dd7dd">
+		<description>Futebol (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="98320">
+				<rom name="Futebol (Unl).nes" size="98320" crc="991c5d81" sha1="4416cb92dd7dd5118b934782d1112766978b21c7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53992,6 +54722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesdd2d02739ba9a">
+		<description>Nobunaga no Yabou - Zenkoku Ban (J) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Nobunaga no Yabou - Zenkoku Ban (J) [!].nes" size="262160" crc="5ad512c2" sha1="dd2d02739ba9af9c837325944b944c495754d98f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes7ae6ca2027aaa">
 		<description>Nobunaga no Yabou - Zenkoku Ban (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -54072,6 +54812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes4e48b65b60f94">
+		<description>Normal (Lolo1 Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Normal (Lolo1 Hack).nes" size="65552" crc="60184a62" sha1="4e48b65b60f94a054b865f9e1cb3fd47cf9b4949"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesb9f4569bb5555">
 		<description>North &amp; South (Europe) (2)</description>
 		<year>????</year>
@@ -54079,6 +54829,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="North &amp; South (Europe) (2).nes" size="262160" crc="4a2bef65" sha1="b9f4569bb5555ddc1e0508de190e314715377abf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3f2d93f3ac2ac">
+		<description>North &amp; South (Europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="North &amp; South (Europe).nes" size="262160" crc="92edb21a" sha1="3f2d93f3ac2aca32084c975ef81a54b2e040fed6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -54579,6 +55339,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Oeka Kids - Anpanman to Oekaki Shiyou!! (Japan).nes" size="131088" crc="ddc24674" sha1="003c3acea2548443038cea925f18687266767ca4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc2dbb77abf9da">
+		<description>Oishinbo (J) [T+Eng_snark]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Oishinbo (J) [T+Eng_snark].nes" size="262160" crc="cfae54f6" sha1="c2dbb77abf9dabf7b982c212cb7e2a8c0639f6de"/>
 			</dataarea>
 		</part>
 	</software>
@@ -66642,6 +67412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesc8c29a018854d">
+		<description>Return to Anctrayl (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Return to Anctrayl (World) (Aftermarket) (Unl).nes" size="131088" crc="0083ded5" sha1="c8c29a018854dcbf575bf78bdd8354b043c30028"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesd5028e1ffce66">
 		<description>RevolvingGems</description>
 		<year>????</year>
@@ -69599,6 +70379,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Rygar (USA).nes" size="131088" crc="8071ec1e" sha1="8d0db0ee8ca975ffae848b161a041440cf20daf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes33197a6da3969">
+		<description>s+-+-exile+-</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="s+-+-exile+-.nes" size="262160" crc="3fb08838" sha1="33197a6da3969072058d1c40bb68bdaf4e6b11a2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -79149,6 +79939,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Super Contra 6 [p1].nes" size="262160" crc="77cf9075" sha1="d25b12c3350aa8b68b51a2603b9cca7ecbe09d10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes366b2697b78f4">
+		<description>Super Contra 7 (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Super Contra 7 (2).nes" size="262160" crc="8e0cb3e2" sha1="366b2697b78f4ebef24c3c44717e797672320d57"/>
 			</dataarea>
 		</part>
 	</software>

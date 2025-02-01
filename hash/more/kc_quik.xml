@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 257 -->
+<!-- Number of items in this list = 290 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -2203,12 +2203,12 @@
 		</part>
 	</software>
 	<software name="kc89f1984a3d4722">
-		<description>Mastermind_KC85_2-5[4]</description>
+		<description>MastermindRK_KC85_2-5[4]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="9600">
-				<rom name="Mastermind_KC85_2-5[4].KCC" size="9600" crc="feec3de9" sha1="9f1984a3d472287dde21e42c49018887314e4029"/>
+				<rom name="MastermindRK_KC85_2-5[4].KCC" size="9600" crc="feec3de9" sha1="9f1984a3d472287dde21e42c49018887314e4029"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2419,6 +2419,336 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="8448">
 				<rom name="Neun (19xx)(E. Behrend)[4].kcc" size="8448" crc="eb128c77" sha1="09c81cb1dd1e399a21a40b1770d59ad9e6604f03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a5a8de90f6216">
+		<description>Pac-Man (19xx)(-)(en)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4224">
+				<rom name="Pac-Man (19xx)(-)(en)[a2][4].kcc" size="4224" crc="f4215980" sha1="a5a8de90f621637a838a476b247dad8afc482e84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8598cf9f987d62">
+		<description>Pac-Man (19xx)(-)(en)[a3][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11904">
+				<rom name="Pac-Man (19xx)(-)(en)[a3][4].kcc" size="11904" crc="248b99a1" sha1="598cf9f987d62faeb5ce0ffbdd63e16727b93307"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc814b8aabf4f383">
+		<description>Pac-Man (19xx)(-)(en)[a4][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11904">
+				<rom name="Pac-Man (19xx)(-)(en)[a4][3].kcc" size="11904" crc="d6f8fe56" sha1="14b8aabf4f3833a60f2bf8cb08accd59eb9e3afb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc880fc89989bdbc">
+		<description>Pac-Man (19xx)(-)(en)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4224">
+				<rom name="Pac-Man (19xx)(-)(en)[a][3].kcc" size="4224" crc="57ec294b" sha1="80fc89989bdbcb7260b031602b88fc5b119b8a4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc80217b6b746aa0">
+		<description>Painters Nr. 2 (19xx)(-)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3072">
+				<rom name="Painters Nr. 2 (19xx)(-)[a2][3].kcc" size="3072" crc="e5c4533d" sha1="0217b6b746aa0307e6d37d4c2f7a3f6ad4c7d966"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89f0b2e84ad21e">
+		<description>Painters Nr. 2 (19xx)(-)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3072">
+				<rom name="Painters Nr. 2 (19xx)(-)[a][4].kcc" size="3072" crc="f02172df" sha1="9f0b2e84ad21e6a43f25bf7f4c54e6ed6657980c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc832879be45f95a">
+		<description>Parcour (19xx)(Wega-Soft)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1792">
+				<rom name="Parcour (19xx)(Wega-Soft)[4].kcc" size="1792" crc="f1b6bf1a" sha1="32879be45f95a12a4d35d2a699286cec2f9a2fe0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8f1644568c1252">
+		<description>Patience (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8064">
+				<rom name="Patience (19xx)(-)[4].kcc" size="8064" crc="ebba79a7" sha1="f1644568c12526a5f86f92f6154720b4254e91f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8f52dd3183d61d">
+		<description>Pegasus (19xx)(TL-Soft)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="10496">
+				<rom name="Pegasus (19xx)(TL-Soft)[4].kcc" size="10496" crc="2586c7d1" sha1="f52dd3183d61d401338a08f7560e31d32dc4a3b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b807d2dd5b902">
+		<description>Peng (19xx)(Paulin)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4608">
+				<rom name="Peng (19xx)(Paulin)[4].kcc" size="4608" crc="efb43291" sha1="b807d2dd5b9021c54448d6f9265876fe8e3f1f8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88cd58982e0a0c">
+		<description>Pengo (1988)(Sowago - A. Weissflog)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13568">
+				<rom name="Pengo (1988)(Sowago - A. Weissflog)[3].kcc" size="13568" crc="f82e1ec8" sha1="8cd58982e0a0c9d7a214135283da7e77f02fc1fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c3fe067fc26ad">
+		<description>Pengo (1988)(Sowago - A. Weissflog)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16000">
+				<rom name="Pengo (1988)(Sowago - A. Weissflog)[a2][4].kcc" size="16000" crc="f430beb9" sha1="c3fe067fc26ad3bc21f52a036008cb6eaa4460fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc83d80bc62cc2e1">
+		<description>Perestroika (1991)(Stefan Scholz)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Perestroika (1991)(Stefan Scholz)[a2][4].kcc" size="12288" crc="5c4f0ce5" sha1="3d80bc62cc2e1e171abb79e3b9b1c0a157fabe13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc81a1e81c708fe2">
+		<description>Perestroika (1991)(Stefan Scholz)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Perestroika (1991)(Stefan Scholz)[a][3].kcc" size="12288" crc="377fa20f" sha1="1a1e81c708fe223084eeb07e480a8c3cbe32cc87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b79b782816226">
+		<description>Perlen (1988)(VEB Mikroelektronik)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6400">
+				<rom name="Perlen (1988)(VEB Mikroelektronik)[4].kcc" size="6400" crc="b9bd11ac" sha1="b79b782816226c84584707ae387f9c1dfb1aa3e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc849f6572256ef4">
+		<description>Pferderennen (1987)(Lars Collin Software)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4352">
+				<rom name="Pferderennen (1987)(Lars Collin Software)[4].kcc" size="4352" crc="1b2b917e" sha1="49f6572256ef4bd57e75105eb7c833fcc22fd0b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8652b0a0b4d27d">
+		<description>Pharao (1989)(S. Wendt)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="20096">
+				<rom name="Pharao (1989)(S. Wendt)[a2][4].kcc" size="20096" crc="7e3e07fd" sha1="652b0a0b4d27d11764b743a3b55acffc5420457a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c2e4b989827bc">
+		<description>Pharao (1989)(S. Wendt)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="20096">
+				<rom name="Pharao (1989)(S. Wendt)[a][4].kcc" size="20096" crc="d6372320" sha1="c2e4b989827bc49f2cb1cad41b6324164d36c477"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8233fcb7881634">
+		<description>Pinball (1986)(B. Boettner)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9344">
+				<rom name="Pinball (1986)(B. Boettner)[4].kcc" size="9344" crc="70fc5f71" sha1="233fcb788163459797b3cdd10940f3967f993100"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ff751619217f6">
+		<description>Pinguin (1986)(VEB Mikroelektronik)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5760">
+				<rom name="Pinguin (1986)(VEB Mikroelektronik)[4].kcc" size="5760" crc="b7e1a486" sha1="ff751619217f6f08be2e3ad783d3416b99f04fc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc811a9726aab090">
+		<description>Pipeline (1991)(Stefan Scholz)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8576">
+				<rom name="Pipeline (1991)(Stefan Scholz)[3].kcc" size="8576" crc="6befd720" sha1="11a9726aab09039ea00625760110a5469d32cd4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88f2c319765ee7">
+		<description>Planet (1988)(Detlef Koenig)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12800">
+				<rom name="Planet (1988)(Detlef Koenig)[4].kcc" size="12800" crc="3cd4eb43" sha1="8f2c319765ee724e99c348723f84dc4cf3da9062"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc80bc868e73f75f">
+		<description>Plot 16 (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="Plot 16 (19xx)(-)[4].kcc" size="1664" crc="d5738b32" sha1="0bc868e73f75fab213f048efca44167193000b02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8503c9c3791246">
+		<description>Pool-Billard (19xx)(J. Arndt)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="15232">
+				<rom name="Pool-Billard (19xx)(J. Arndt)[4].kcc" size="15232" crc="882dca2d" sha1="503c9c379124627ea33fb7a671e87c0aa2d72568"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8506ad0718ac1e">
+		<description>Programm Wordpro (1989)(-)[Service routine RS232C-Modify][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="640">
+				<rom name="Programm Wordpro (1989)(-)[Service routine RS232C-Modify][4].kcc" size="640" crc="d26959aa" sha1="506ad0718ac1e2205f0f54d0931e660667123796"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8cf8987270c826">
+		<description>Pursuit (19xx)(Christian Lang &amp; Thomas Heynig)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13824">
+				<rom name="Pursuit (19xx)(Christian Lang &amp; Thomas Heynig)[a2][4].kcc" size="13824" crc="198bba88" sha1="cf8987270c826515ad552cf5885b7892e521eb62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8e2a1eb74b7f80">
+		<description>Pursuit (19xx)(Christian Lang &amp; Thomas Heynig)[a3][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="13824">
+				<rom name="Pursuit (19xx)(Christian Lang &amp; Thomas Heynig)[a3][4].kcc" size="13824" crc="edf84ae5" sha1="e2a1eb74b7f80b381ab3692555bda4be9e9b775f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8dc806205e924d">
+		<description>Pursuit (19xx)(Christian Lang &amp; Thomas Heynig)[b][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16000">
+				<rom name="Pursuit (19xx)(Christian Lang &amp; Thomas Heynig)[b][3].kcc" size="16000" crc="c8e10c1d" sha1="dc806205e924d010ab59d37747e075b78c0df9d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ad6879cf9c3eb">
+		<description>Puzzle (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3712">
+				<rom name="Puzzle (19xx)(-)[4].kcc" size="3712" crc="57965dfe" sha1="ad6879cf9c3eb77379a0826fff0af9f37cd89dc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc83c3211911f3cc">
+		<description>PUZZLE (19XX)(N. BRENNICKE)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4992">
+				<rom name="PUZZLE (19XX)(N. BRENNICKE)[4].kcc" size="4992" crc="5c266884" sha1="3c3211911f3ccdcd5725145b10e8eb042ac20f54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8eca4d2ce10c55">
+		<description>Pyramide v1.5 (1987)(RCS-Software)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8576">
+				<rom name="Pyramide v1.5 (1987)(RCS-Software)[4].kcc" size="8576" crc="f672a50b" sha1="eca4d2ce10c554b1bd04ee3ca60d18b154702593"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8704802cb91154">
+		<description>Pyramide v2.0 (1987)(Jan Bochmann)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8576">
+				<rom name="Pyramide v2.0 (1987)(Jan Bochmann)[4].kcc" size="8576" crc="af8f7b86" sha1="704802cb911548b41b890219d351215fa5495a8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8fc96838588e58">
+		<description>QDOS v3.1 (1991)(JC-Soft)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="8320">
+				<rom name="QDOS v3.1 (1991)(JC-Soft)[3].kcc" size="8320" crc="55825066" sha1="fc96838588e584436524bca457f9cc8eeefb3e18"/>
 			</dataarea>
 		</part>
 	</software>
