@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 663 -->
+<!-- Number of items in this list = 700 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx13e7d1225a731f">
 		<description>10</description>
@@ -412,6 +412,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx169e26bab83088">
+		<description>AARDRIJK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="12244">
+				<rom name="AARDRIJK.P" size="12244" crc="cd4685b4" sha1="69e26bab8308806097ce21dc913683c7fafacb75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13bf4b05f6e22c">
+		<description>ABC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="16242">
+				<rom name="ABC.P" size="16242" crc="dc399f52" sha1="3bf4b05f6e22c8f58cffe87676a132f0e3c34283"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx11e4ffffb75f9e">
+		<description>ADD-SUB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4965">
+				<rom name="ADD-SUB.P" size="4965" crc="7b518b8f" sha1="1e4ffffb75f9ef27c503d9976215b8df576980a0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx11c71081641906">
 		<description>ADDING_MACHINE</description>
 		<year>????</year>
@@ -419,6 +449,36 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="1725">
 				<rom name="ADDING_MACHINE.P" size="1725" crc="ee4f8545" sha1="1c71081641906a1ded402c31cb57e952a3f1f63d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1cb818a46c508d">
+		<description>ADRESBES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4320">
+				<rom name="ADRESBES.P" size="4320" crc="9b122e26" sha1="cb818a46c508da5c21401aa91721ca9b8cc79557"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1786c7deff6544">
+		<description>ADRESBES_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6136">
+				<rom name="ADRESBES_1.P" size="6136" crc="f27cb476" sha1="786c7deff654428f32c632779e2142a0cde7a6bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx180146ab030e72">
+		<description>ADRESSEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="11539">
+				<rom name="ADRESSEN.P" size="11539" crc="9f8f8b96" sha1="80146ab030e72e07aab6ae6f65cb478950909c19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -462,6 +522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1b7fdea76e78a9">
+		<description>ADVENTUR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6522">
+				<rom name="ADVENTUR.P" size="6522" crc="eedfd4c3" sha1="b7fdea76e78a911cb73eec1edffb0b020c0909a6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1bce6cd13f9755">
 		<description>Advert (2)</description>
 		<year>????</year>
@@ -502,6 +572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1c565e01579e7d">
+		<description>AIR-ATTA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2599">
+				<rom name="AIR-ATTA.P" size="2599" crc="e15c4e89" sha1="c565e01579e7df87140c9d558db2486dcb7505b7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1c7db39437f74e">
 		<description>AIR-RAID</description>
 		<year>????</year>
@@ -509,6 +589,86 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="7028">
 				<rom name="AIR-RAID.P" size="7028" crc="889c8e7c" sha1="c7db39437f74e88ef6f4c462cb6c530b077e9a0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx14c5bd57e01e55">
+		<description>AIRLINE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15823">
+				<rom name="AIRLINE.P" size="15823" crc="03b055aa" sha1="4c5bd57e01e550ff96208c3f19d6e06142d480c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx104ef61a7fd956">
+		<description>ALERT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6131">
+				<rom name="ALERT.P" size="6131" crc="455c79c6" sha1="04ef61a7fd956b9274d1f7d15f6088faa19a36c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx140dff1847af03">
+		<description>ALGEBRA1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1731">
+				<rom name="ALGEBRA1.P" size="1731" crc="6b0f6b4d" sha1="40dff1847af0395dec0e59292fee903aa93f4a9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1edbc4ff8396b4">
+		<description>ALGEBRA2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1788">
+				<rom name="ALGEBRA2.P" size="1788" crc="b6e58bbe" sha1="edbc4ff8396b4ebd94bac1aebb447e55d436ae55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13690671f61fee">
+		<description>ALGEBRA3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1494">
+				<rom name="ALGEBRA3.P" size="1494" crc="c3d4932d" sha1="3690671f61feedd20de12d9b4c0d48d84f693afe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f4e2aadd0ace1">
+		<description>ALGEBRA4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1532">
+				<rom name="ALGEBRA4.P" size="1532" crc="7b85caaa" sha1="f4e2aadd0ace18a65df8df43aff05abf20620a92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx107fe537b6afd0">
+		<description>ALIEN-AT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1810">
+				<rom name="ALIEN-AT.P" size="1810" crc="dc34db5d" sha1="07fe537b6afd0c260d4eb3dab5cc8d9573766b00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1984fe9eb7fd87">
+		<description>ALIEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7121">
+				<rom name="ALIEN.P" size="7121" crc="e11612b0" sha1="984fe9eb7fd875f1b0e39ae7b5212f585829f15f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -562,6 +722,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx175cbf4a29a345">
+		<description>ANALISER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1133">
+				<rom name="ANALISER.P" size="1133" crc="6e544e35" sha1="75cbf4a29a3452e689b86e91897ec8f52e9da2d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1fff5aa6bde3ac">
+		<description>ANALYSER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5213">
+				<rom name="ANALYSER.P" size="5213" crc="f9bb6783" sha1="fff5aa6bde3ac4716ff163fb9de5627741bb611d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ec3219d929e30">
+		<description>ANGSTTUI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15064">
+				<rom name="ANGSTTUI.P" size="15064" crc="9ce3cf1f" sha1="ec3219d929e305c87ff6e19c00201158251f3798"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1aaef49c60df2d">
+		<description>ANIMALS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3860">
+				<rom name="ANIMALS.P" size="3860" crc="91d4f60d" sha1="aaef49c60df2d1a2620668177282b722fb261641"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx11e4a0c90b717d">
+		<description>ANIMATIO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7234">
+				<rom name="ANIMATIO.P" size="7234" crc="73fc9508" sha1="1e4a0c90b717d7c6a8878107433071a56764ebe5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1e71b40ba0bc9a">
 		<description>antiair</description>
 		<year>????</year>
@@ -572,6 +782,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1df1ffe20fbc42">
+		<description>APOLLO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="11333">
+				<rom name="APOLLO.P" size="11333" crc="d0075801" sha1="df1ffe20fbc42be157edd3ec949caee9f68193ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx16fa36da72f888">
+		<description>ARCHERY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1401">
+				<rom name="ARCHERY.P" size="1401" crc="5a310459" sha1="6fa36da72f888e1826dad89d3931bc28f52ca101"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1508a34fdaf699">
 		<description>archive</description>
 		<year>????</year>
@@ -579,6 +809,66 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="8596">
 				<rom name="archive.p" size="8596" crc="dc1a7869" sha1="508a34fdaf6992234eb37dc4f66295b4d110e15d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d20e9fe7b3a1c">
+		<description>AREA1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1026">
+				<rom name="AREA1.P" size="1026" crc="7f011023" sha1="d20e9fe7b3a1c9ed29b3370a382a58f732cbf7a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1442bca18ef07d">
+		<description>AREA2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1132">
+				<rom name="AREA2.P" size="1132" crc="f131009e" sha1="442bca18ef07dad7bebea2538e012a314b50e8f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ddd01371af718">
+		<description>AREA3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1162">
+				<rom name="AREA3.P" size="1162" crc="a3c00852" sha1="ddd01371af7189010acdd5eb0fb2e158dca1cee1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx18091b219d5e0b">
+		<description>ARMADA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6071">
+				<rom name="ARMADA.P" size="6071" crc="012c359c" sha1="8091b219d5e0b26ac0f176f1028dcc4911cca11f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx115aac76869879">
+		<description>ARTILLER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3364">
+				<rom name="ARTILLER.P" size="3364" crc="a67faa09" sha1="15aac768698795e6bb1de4b206dd528a3dbc9c4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1645c848bd3463">
+		<description>ARTIST_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10967">
+				<rom name="ARTIST_.P" size="10967" crc="c75b39fd" sha1="645c848bd34639b85aef07a92840856edf2a784b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -632,6 +922,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx18de3e0a00257a">
+		<description>ASTEROID</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3890">
+				<rom name="ASTEROID.P" size="3890" crc="71e80845" sha1="8de3e0a00257a04772e4466f85be2cb96b502bcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d3e46a94d0cdc">
+		<description>ASTEROID_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5656">
+				<rom name="ASTEROID_1.P" size="5656" crc="9918da4f" sha1="d3e46a94d0cdccfc13ed7dee3b42c843d1df0bb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx15ede1981bd72a">
+		<description>ASTR-CON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="9155">
+				<rom name="ASTR-CON.P" size="9155" crc="0411cf5f" sha1="5ede1981bd72a8ddaf80d331380515c47c3aaf44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d337610b4a797">
+		<description>ASTROID</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3457">
+				<rom name="ASTROID.P" size="3457" crc="1c45b63c" sha1="d337610b4a79766a8d268fe663a33442c314547a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1613950d51b340">
 		<description>AUTO</description>
 		<year>????</year>
@@ -642,6 +972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx138b87eb715b94">
+		<description>AUTOCHEF</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15463">
+				<rom name="AUTOCHEF.P" size="15463" crc="34290b41" sha1="38b87eb715b948c2b2b75b6747e12f0d82150ec0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx10397f1a78dbba">
 		<description>AUTOMAT</description>
 		<year>????</year>
@@ -649,6 +989,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="5191">
 				<rom name="AUTOMAT.81" size="5191" crc="1567abbd" sha1="0397f1a78dbbab4bb9fc42ab4ee2f64797c1cfcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx14f410fb80a267">
+		<description>AVERAGES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1492">
+				<rom name="AVERAGES.P" size="1492" crc="75a1b37a" sha1="4f410fb80a267443c94bc130c6f2c4b8520a7554"/>
 			</dataarea>
 		</part>
 	</software>
@@ -699,6 +1049,26 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="13741">
 				<rom name="AVVMARTE.P" size="13741" crc="7928d1c1" sha1="9cdd6ddb71220217972df13102cb7e8c35635824"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13fb954cc75c09">
+		<description>AWARI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8221">
+				<rom name="AWARI.P" size="8221" crc="0c6a777d" sha1="3fb954cc75c0981ccbbbd862ba83cbd91342cc26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx11b9a0ff615204">
+		<description>AZTEC-TO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="9666">
+				<rom name="AZTEC-TO.P" size="9666" crc="430a5a0c" sha1="1b9a0ff61520440b71cf1e830f7b89f712093d0b"/>
 			</dataarea>
 		</part>
 	</software>

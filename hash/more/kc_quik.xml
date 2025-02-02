@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 290 -->
+<!-- Number of items in this list = 300 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -2749,6 +2749,106 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="8320">
 				<rom name="QDOS v3.1 (1991)(JC-Soft)[3].kcc" size="8320" crc="55825066" sha1="fc96838588e584436524bca457f9cc8eeefb3e18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8180cfed84d6a7">
+		<description>Rallye (19xx)(Paulin)[a2][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6016">
+				<rom name="Rallye (19xx)(Paulin)[a2][3].kcc" size="6016" crc="4c2e2c0f" sha1="180cfed84d6a772978a745979827c6cc406ce8eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a8c8e11298ec0">
+		<description>Rallye (19xx)(Paulin)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6016">
+				<rom name="Rallye (19xx)(Paulin)[a][4].kcc" size="6016" crc="2e9ab09d" sha1="a8c8e11298ec08551c6402e1805d7e5eec3d3f31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc852c68e4721af6">
+		<description>RamDOS RAM-Disk-System (19xx)(VEB Mikroelektronik)[Loader][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="512">
+				<rom name="RamDOS RAM-Disk-System (19xx)(VEB Mikroelektronik)[Loader][4].kcc" size="512" crc="325796cd" sha1="52c68e4721af648678712a747c61e4bd40ef1fe9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc824c4fc88e68f7">
+		<description>Rattenjagt (19xx)(MM-Soft)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="Rattenjagt (19xx)(MM-Soft)[3].kcc" size="2176" crc="0eb10600" sha1="24c4fc88e68f7b68931a61e981c4c138b489e91f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bbcbd68368abb">
+		<description>Rattenjagt (19xx)(MM-Soft)[more Color Version][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="Rattenjagt (19xx)(MM-Soft)[more Color Version][4].kcc" size="2176" crc="09e8eae6" sha1="bbcbd68368abb3a63eaba2dd77f795d2c3089289"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8224698c58f4e1">
+		<description>Raumschiff (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3584">
+				<rom name="Raumschiff (19xx)(-)[4].kcc" size="3584" crc="2ff89cd5" sha1="224698c58f4e1e3aee5283ad8cce6c83825e3154"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc858be402e06385">
+		<description>Recorder-Justage (1988)(Joerg Schulenburg)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1024">
+				<rom name="Recorder-Justage (1988)(Joerg Schulenburg)[4].kcc" size="1024" crc="33d7d1df" sha1="58be402e063853efb91cca616b95aa69238a0a03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8cf6ae6d4a805c">
+		<description>Reise zum Mittelpunkt der Erde, Die (19xx)(Harry Roder)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16384">
+				<rom name="Reise zum Mittelpunkt der Erde, Die (19xx)(Harry Roder)[a2][4].kcc" size="16384" crc="da5342b0" sha1="cf6ae6d4a805cf9e4be386380a8c2b15ed9cf730"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8c890baa2d79fa">
+		<description>Reise zum Mittelpunkt der Erde, Die (19xx)(Harry Roder)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16384">
+				<rom name="Reise zum Mittelpunkt der Erde, Die (19xx)(Harry Roder)[a][4].kcc" size="16384" crc="21e6af3e" sha1="c890baa2d79fa51ee4098b34bb95bcd3b762ee89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc841b09730112d5">
+		<description>Roesselsprung (1986)(A Rosenthal)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2048">
+				<rom name="Roesselsprung (1986)(A Rosenthal)[4].kcc" size="2048" crc="bcc5115b" sha1="41b09730112d542dae0243b7aff8433d2a041117"/>
 			</dataarea>
 		</part>
 	</software>

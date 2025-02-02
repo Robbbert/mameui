@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 524 -->
+<!-- Number of items in this list = 544 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -2242,16 +2242,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="x68cdec8c81e8c7e">
-		<description>Gekkan Dennou Club (Bes. Ichi-gou)(1)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="1261568">
-				<rom name="Gekkan Dennou Club (Bes. Ichi-gou)(1).hdm" size="1261568" crc="a280e739" sha1="cdec8c81e8c7e36ead579bf1c128860a266d0cb6"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="x686365f211a009b">
 		<description>Gekkan Dennou Club (Bes. Ichi-gou)(2)</description>
 		<year>????</year>
@@ -2269,6 +2259,36 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Gekkan Dennou Club (Bes. Ichi-gou)(3).hdm" size="1261568" crc="0bb09fd7" sha1="aad977f42e7c4be86c98c14727d4de9d65a7cb43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68cdec8c81e8c7e">
+		<description>Gekkan Dennou Club (Bes. Ichi-gou)(d1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Bes. Ichi-gou)(d1).hdm" size="1261568" crc="a280e739" sha1="cdec8c81e8c7e36ead579bf1c128860a266d0cb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x683aabf31cb2546">
+		<description>Gekkan Dennou Club (Bes. Ichi-gou)(d2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Bes. Ichi-gou)(d2).hdm" size="1261568" crc="718b27be" sha1="3aabf31cb25467ec723aaf5d70944ddbb24a76c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6892410bfcfa45b">
+		<description>Gekkan Dennou Club (Bes. Ichi-gou)(d3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Bes. Ichi-gou)(d3).hdm" size="1261568" crc="22537470" sha1="92410bfcfa45b92c0879c2ec4a3ec5d6e428d470"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2399,6 +2419,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Gekkan Dennou Club (Vol. 013) (Disk A).hdm" size="1261568" crc="04bd120a" sha1="32c58227ba17f8220d6ba5f98b397a133ca7698e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688efca63bcef4a">
+		<description>Gekkan Dennou Club (Vol. 013) (Disk B) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 013) (Disk B) (2).hdm" size="1261568" crc="bb60bdf2" sha1="8efca63bcef4afba68e1782b70a1f533da44d2fe"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2559,6 +2589,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Gekkan Dennou Club (Vol. 028) (Disk A).hdm" size="1261568" crc="e23f716a" sha1="ddd199c6dffce1dafecd30f49375fb75e58b95db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x689fb03f61e7029">
+		<description>Gekkan Dennou Club (Vol. 028) (Disk B) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 028) (Disk B) (2).hdm" size="1261568" crc="dffca9a4" sha1="9fb03f61e7029782d56ca0e565daa52fa55b0a0f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3342,6 +3382,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x686d6ddd552daef">
+		<description>Magical Whipplu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Magical Whipplu.hdm" size="1261568" crc="152456d4" sha1="6d6ddd552daefd0a47740786f2961d6151636c20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c7f3d6f55b542">
+		<description>Matier - Hyper Image Processor (v2.11b) (Data disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Matier - Hyper Image Processor (v2.11b) (Data disk).hdm" size="1261568" crc="344775f5" sha1="c7f3d6f55b5427b777990df89d1ea87c87a48b15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68710d90486ef35">
+		<description>Matier - Hyper Image Processor (v2.11b) (System disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Matier - Hyper Image Processor (v2.11b) (System disk).hdm" size="1261568" crc="1e5904b9" sha1="710d90486ef354a5db0214d96faba142970e5bf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68710caf175c681">
+		<description>Midare</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Midare.hdm" size="1261568" crc="46968b42" sha1="710caf175c68135b3968d89a6cc845375eb11ba2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6808ee0f25c85a0">
+		<description>Might and Magic (Boot disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Might and Magic (Boot disk).hdm" size="1261568" crc="07d11231" sha1="08ee0f25c85a04fb239b0bc6e4b4bc8f4fb0305f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b00b1ad169010">
+		<description>Might and Magic (Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1086448">
+				<rom name="Might and Magic (Disk A).d88" size="1086448" crc="a5842a6a" sha1="b00b1ad1690108a4ff5f8aa7f4adf7798235d51a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d5a14d889c018">
+		<description>Might and Magic (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1086448">
+				<rom name="Might and Magic (Disk B).d88" size="1086448" crc="f2db85e5" sha1="d5a14d889c0181f13a6d8f8ef5c4caec9f0de6c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68bee971a14ccad">
+		<description>Mine Sweeper Hexa (1997)(TAU)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Mine Sweeper Hexa (1997)(TAU).XDF" size="1261568" crc="bd1e2715" sha1="bee971a14ccadd8799022aa4d77f733cc37059eb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68e4e2f2799220f">
 		<description>Moon Fighter (v2.11)</description>
 		<year>????</year>
@@ -3349,6 +3469,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Moon Fighter (v2.11).hdm" size="1261568" crc="bc51a36d" sha1="e4e2f2799220fef0b5db10ad46452754f65eb3b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b06b114f2042f">
+		<description>Mu-1 Super (Data disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Mu-1 Super (Data disk).hdm" size="1261568" crc="42e6b19d" sha1="b06b114f2042ffc1624982cb64667c979dfeb05e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3372,6 +3502,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x683b6435d7f4ed8">
+		<description>Multi Music Status Display MMDSP (v0.29 Rel.31)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multi Music Status Display MMDSP (v0.29 Rel.31).hdm" size="1261568" crc="cdde86b9" sha1="3b6435d7f4ed8d387786f8e18093dae412d74894"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68d0f3c704c0191">
 		<description>Multi-Window Screen Editor Final</description>
 		<year>????</year>
@@ -3379,6 +3519,36 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Multi-Window Screen Editor Final.hdm" size="1261568" crc="ffe0303b" sha1="d0f3c704c0191daac779f2de3de36a7459355aed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e432d2178a5b2">
+		<description>Multiword (Bunshou disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (Bunshou disk).hdm" size="1261568" crc="6c53041e" sha1="e432d2178a5b243835cda3fc046f3d6209386e00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f662da6c14dcf">
+		<description>Multiword (Graphic disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (Graphic disk).hdm" size="1261568" crc="3ca7c9f3" sha1="f662da6c14dcf6f3a1f2e8efdc1ae38498980796"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c7871d65f73a0">
+		<description>Multiword (Runtime disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (Runtime disk).hdm" size="1261568" crc="173e392f" sha1="c7871d65f73a0d33228b9e548c28dc541d1b180a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3392,6 +3562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68f10d2713d2c16">
+		<description>Multiword (Update disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Multiword (Update disk).hdm" size="1261568" crc="5d17217b" sha1="f10d2713d2c16ba90cf3147bacee5de549aac119"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68a340d3cebcfcb">
 		<description>Music Box 68K</description>
 		<year>????</year>
@@ -3402,6 +3582,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68c3ddb3807e342">
+		<description>Music Studio Pro-68K (Data disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Music Studio Pro-68K (Data disk).hdm" size="1261568" crc="41583d5e" sha1="c3ddb3807e3423f579150be0a2cffd065b530ce2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x684e25c7c808d11">
 		<description>Music Studio Pro-68K (System disk)</description>
 		<year>????</year>
@@ -3409,6 +3599,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Music Studio Pro-68K (System disk).hdm" size="1261568" crc="9b38b337" sha1="4e25c7c808d114bceebfd04e03e6e79bce46dfdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6861110c33c16a4">
+		<description>My Today's Job (19xx)(Tatsuya Matsue)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="My Today's Job (19xx)(Tatsuya Matsue).xdf" size="1261568" crc="1941351d" sha1="61110c33c16a48829a3c0d157149069cde94e092"/>
 			</dataarea>
 		</part>
 	</software>

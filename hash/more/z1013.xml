@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 161 -->
+<!-- Number of items in this list = 177 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -1589,6 +1589,166 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="3360">
 				<rom name="jumping-jack.z80" size="3360" crc="2c38f790" sha1="db943d58fa38842424f7164ae461cde26279af3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10917d6e2c9361e">
+		<description>KC Basic (19xx)(-)(en)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="11008">
+				<rom name="KC Basic (19xx)(-)(en)[a3].z80" size="11008" crc="cde69c9f" sha1="917d6e2c9361e404acc374537659c3d0fcc309b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1017b72b517c325">
+		<description>KC Basic (19xx)(-)(en)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10784">
+				<rom name="KC Basic (19xx)(-)(en)[a].z80" size="10784" crc="75533cef" sha1="17b72b517c325b33819c4eb63bdb11d5f044509b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1081cc680bc44c6">
+		<description>KC Basic (19xx)(-)(en)[o]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="60192">
+				<rom name="KC Basic (19xx)(-)(en)[o].z80" size="60192" crc="fd429976" sha1="81cc680bc44c6b475d3ba69b967cf7b80d40b94c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z107324517a9cf5f">
+		<description>kc basic pctrans</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="11936">
+				<rom name="kc basic pctrans.z80" size="11936" crc="75aa4459" sha1="7324517a9cf5fec1f17c7b8fb92120485080f548"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10edc781ce8aa7c">
+		<description>KC Basic Plus (19xx)(-)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10784">
+				<rom name="KC Basic Plus (19xx)(-)(en).z80" size="10784" crc="761888f8" sha1="edc781ce8aa7cedd44c35cf0338628e5e2361af3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1010f7633959578">
+		<description>KC Basic Plus v1.0 (19xx)(-)(en)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10880">
+				<rom name="KC Basic Plus v1.0 (19xx)(-)(en).z80" size="10880" crc="7a91ad37" sha1="10f7633959578b5887a302ea98ad061a9d76ca74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100895dcd34c55b">
+		<description>kc-basic m1 (c)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10784">
+				<rom name="kc-basic m1 (c).z80" size="10784" crc="5a14e5fa" sha1="0895dcd34c55b673ac1b2414095ce2d9d1e46d32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10a1eb1b071d259">
+		<description>kc-basic+ a_2_hs</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10784">
+				<rom name="kc-basic+ a_2_hs.z80" size="10784" crc="f0b31f1b" sha1="a1eb1b071d2598125f3de317dd6b59374100fc0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10fc43b694668fe">
+		<description>kc-basic+ m1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10784">
+				<rom name="kc-basic+ m1.z80" size="10784" crc="ab8fd6e5" sha1="fc43b694668fe2d6bd2b02f0b31cd1722e9b5f42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104c547ac9b022f">
+		<description>KC85-Kassetteninterface (19xx)(-)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="992">
+				<rom name="KC85-Kassetteninterface (19xx)(-)[a2].z80" size="992" crc="89c06eea" sha1="4c547ac9b022f392386dd24db8192566f7bdde37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f226f9dd2c495">
+		<description>kc85_1-load</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="544">
+				<rom name="kc85_1-load.z80" size="544" crc="668bedcc" sha1="f226f9dd2c495e27b6b6ef9a77c1a0cbb9b8733d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10fd6f3dfefd5be">
+		<description>kc85_1-save</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="576">
+				<rom name="kc85_1-save.z80" size="576" crc="602320c1" sha1="fd6f3dfefd5beab45e758a481cf29feeecde1bc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1051c0958327a6d">
+		<description>kc_save</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="576">
+				<rom name="kc_save.z80" size="576" crc="ff42be7b" sha1="51c0958327a6d620bd2bc4bafc9690f3c7e25003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z103a7bb8a5469da">
+		<description>Keyboardtester (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="128">
+				<rom name="Keyboardtester (19xx)(-).z80" size="128" crc="a44ba4d3" sha1="3a7bb8a5469da4b61baacdd85ad0c26d15be3e5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z107f8d6948ea74f">
+		<description>Kings Vally (1988)(Pyramid 1)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16448">
+				<rom name="Kings Vally (1988)(Pyramid 1)[a].z80" size="16448" crc="f4864dcc" sha1="7f8d6948ea74f27f81c3b66d11d2e7be1ed51af7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10034ebc1acc809">
+		<description>kraftfeld</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="11040">
+				<rom name="kraftfeld.z80" size="11040" crc="bd7933b7" sha1="034ebc1acc8094348e86ea9e28ee84ada34f4f0d"/>
 			</dataarea>
 		</part>
 	</software>

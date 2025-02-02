@@ -58,6 +58,18 @@ Pleiads:
 #include "speaker.h"
 
 
+static const char *const pleiads_samples[] =
+{
+	"*pleiads",
+	"fire",
+	nullptr
+};
+
+void phoenix_state::pleiads_fire(uint8_t data)
+{
+	m_samples->start(0, 0);
+}
+
 void phoenix_state::phoenix_memory_map(address_map &map)
 {
 	map(0x0000, 0x3fff).rom();
@@ -483,6 +495,7 @@ void phoenix_state::pleiads(machine_config &config)
 
 	// basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &phoenix_state::pleiads_memory_map);
+	//m_maincpu->out_sod_func().set(FUNC(phoenix_state::pleiads_fire));
 
 	// video hardware
 	m_gfxdecode->set_info(gfx_pleiads);
@@ -502,6 +515,11 @@ void phoenix_state::pleiads(machine_config &config)
 	PLEIADS_SOUND(config, "pleiads_custom").add_route(ALL_OUTPUTS, "mono", 0.40);
 
 	config.device_remove("discrete");
+
+	SAMPLES(config, m_samples);
+	m_samples->set_channels(1);
+	m_samples->set_samples_names(pleiads_samples);
+	m_samples->add_route(ALL_OUTPUTS, "mono", 0.5);
 }
 
 
@@ -546,6 +564,8 @@ void phoenix_state::condor(machine_config &config)
 	// FIXME: Verify clock. This is most likely 11MHz/2
 	Z80(config.replace(), m_maincpu, 11000000/4);    // 2.75 MHz???
 	m_maincpu->set_addrmap(AS_PROGRAM, &phoenix_state::phoenix_memory_map);
+	//Z80(config, m_z80cpu, 11000000/4);    // 2.75 MHz???
+	//m_z80cpu->set_addrmap(AS_PROGRAM, &phoenix_state::phoenix_memory_map);
 }
 
 
