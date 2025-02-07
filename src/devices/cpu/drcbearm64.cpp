@@ -973,15 +973,15 @@ drcbe_arm64::drcbe_arm64(drcuml_state &drcuml, device_t &device, drc_cache &cach
 	// resolve the actual addresses of member functions we need to call
 	m_drcmap_get_value.set(m_map, &drc_map_variables::get_value);
 	if (!m_drcmap_get_value)
-	{
-		m_drcmap_get_value.obj = uintptr_t(&m_map);
-		m_drcmap_get_value.func = reinterpret_cast<uint8_t *>(uintptr_t(&drc_map_variables::static_get_value));
-	}
-	m_resolved_accessors.resize(m_space.size());
+		throw emu_fatalerror("Error resolving map variable get value function!\n");
+	m_memory_accessors.resize(m_space.size());
 	for (int space = 0; m_space.size() > space; ++space)
 	{
 		if (m_space[space])
-			m_resolved_accessors[space].set(*m_space[space]);
+		{
+			m_memory_accessors[space].resolved.set(*m_space[space]);
+			m_memory_accessors[space].specific = m_space[space]->specific_accessors();
+		}
 	}
 }
 
@@ -1096,12 +1096,7 @@ void drcbe_arm64::generate(drcuml_block &block, const instruction *instlist, uin
 	{
 		m_debug_cpu_instruction_hook.set(*m_device.debug(), &device_debug::instruction_hook);
 		if (!m_debug_cpu_instruction_hook)
-		{
-			m_debug_cpu_instruction_hook.obj = uintptr_t(m_device.debug());
-			using debugger_hook_func = void (*)(device_debug *, offs_t);
-			static const auto debugger_inst_hook = [] (device_debug *dbg, offs_t pc) { dbg->instruction_hook(pc); };
-			m_debug_cpu_instruction_hook.func = reinterpret_cast<uint8_t *>(uintptr_t(debugger_hook_func(debugger_inst_hook)));
-		}
+			throw emu_fatalerror("Error resolving debugger instruction hook member function!\n");
 	}
 
 	// tell all of our utility objects that a block is beginning
@@ -1200,7 +1195,7 @@ void drcbe_arm64::op_handle(a64::Assembler &a, const uml::instruction &inst)
 	// register the current pointer for the handle
 	inst.param(0).handle().set_codeptr(drccodeptr(a.code()->baseAddress() + a.offset()));
 
-	// the handle points to prolog code that creates a minimal non-leaf frame
+	// the handle points to prologue code that creates a minimal non-leaf frame
 	a.stp(a64::x29, a64::x30, arm::Mem(a64::sp, -16).pre());
 	a.bind(skip);
 }
@@ -2054,29 +2049,29 @@ void drcbe_arm64::op_read(a64::Assembler &a, const uml::instruction &inst)
 	const parameter &spacesizep = inst.param(2);
 	assert(spacesizep.is_size_space());
 
-	const auto &resolved = m_resolved_accessors[spacesizep.space()];
+	auto const &accessors = m_memory_accessors[spacesizep.space()];
 
 	mov_reg_param(a, 4, REG_PARAM2, addrp);
 
 	if (spacesizep.size() == SIZE_BYTE)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_byte.obj);
-		call_arm_addr(a, resolved.read_byte.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_byte.obj);
+		call_arm_addr(a, accessors.resolved.read_byte.func);
 	}
 	else if (spacesizep.size() == SIZE_WORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_word.obj);
-		call_arm_addr(a, resolved.read_word.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_word.obj);
+		call_arm_addr(a, accessors.resolved.read_word.func);
 	}
 	else if (spacesizep.size() == SIZE_DWORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_dword.obj);
-		call_arm_addr(a, resolved.read_dword.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_dword.obj);
+		call_arm_addr(a, accessors.resolved.read_dword.func);
 	}
 	else if (spacesizep.size() == SIZE_QWORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_qword.obj);
-		call_arm_addr(a, resolved.read_qword.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_qword.obj);
+		call_arm_addr(a, accessors.resolved.read_qword.func);
 	}
 
 	mov_param_reg(a, inst.size(), dstp, REG_PARAM1);
@@ -2094,30 +2089,30 @@ void drcbe_arm64::op_readm(a64::Assembler &a, const uml::instruction &inst)
 	const parameter &spacesizep = inst.param(3);
 	assert(spacesizep.is_size_space());
 
-	const auto &resolved = m_resolved_accessors[spacesizep.space()];
+	auto const &accessors = m_memory_accessors[spacesizep.space()];
 
 	mov_reg_param(a, 4, REG_PARAM2, addrp);
 	mov_reg_param(a, inst.size(), REG_PARAM3, maskp);
 
 	if (spacesizep.size() == SIZE_BYTE)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_byte_masked.obj);
-		call_arm_addr(a, resolved.read_byte_masked.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_byte_masked.obj);
+		call_arm_addr(a, accessors.resolved.read_byte_masked.func);
 	}
 	else if (spacesizep.size() == SIZE_WORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_word_masked.obj);
-		call_arm_addr(a, resolved.read_word_masked.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_word_masked.obj);
+		call_arm_addr(a, accessors.resolved.read_word_masked.func);
 	}
 	else if (spacesizep.size() == SIZE_DWORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_dword_masked.obj);
-		call_arm_addr(a, resolved.read_dword_masked.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_dword_masked.obj);
+		call_arm_addr(a, accessors.resolved.read_dword_masked.func);
 	}
 	else if (spacesizep.size() == SIZE_QWORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_qword_masked.obj);
-		call_arm_addr(a, resolved.read_qword_masked.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_qword_masked.obj);
+		call_arm_addr(a, accessors.resolved.read_qword_masked.func);
 	}
 
 	mov_param_reg(a, inst.size(), dstp, REG_PARAM1);
@@ -2134,30 +2129,30 @@ void drcbe_arm64::op_write(a64::Assembler &a, const uml::instruction &inst)
 	const parameter &spacesizep = inst.param(2);
 	assert(spacesizep.is_size_space());
 
-	const auto &resolved = m_resolved_accessors[spacesizep.space()];
+	auto const &accessors = m_memory_accessors[spacesizep.space()];
 
 	mov_reg_param(a, 4, REG_PARAM2, addrp);
 	mov_reg_param(a, inst.size(), REG_PARAM3, srcp);
 
 	if (spacesizep.size() == SIZE_BYTE)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_byte.obj);
-		call_arm_addr(a, resolved.write_byte.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_byte.obj);
+		call_arm_addr(a, accessors.resolved.write_byte.func);
 	}
 	else if (spacesizep.size() == SIZE_WORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_word.obj);
-		call_arm_addr(a, resolved.write_word.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_word.obj);
+		call_arm_addr(a, accessors.resolved.write_word.func);
 	}
 	else if (spacesizep.size() == SIZE_DWORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_dword.obj);
-		call_arm_addr(a, resolved.write_dword.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_dword.obj);
+		call_arm_addr(a, accessors.resolved.write_dword.func);
 	}
 	else if (spacesizep.size() == SIZE_QWORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_qword.obj);
-		call_arm_addr(a, resolved.write_qword.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_qword.obj);
+		call_arm_addr(a, accessors.resolved.write_qword.func);
 	}
 }
 
@@ -2174,7 +2169,7 @@ void drcbe_arm64::op_writem(a64::Assembler &a, const uml::instruction &inst)
 	assert(spacesizep.is_size_space());
 
 	// set up a call to the write handler
-	const auto &resolved = m_resolved_accessors[spacesizep.space()];
+	auto const &accessors = m_memory_accessors[spacesizep.space()];
 
 	mov_reg_param(a, 4, REG_PARAM2, addrp);
 	mov_reg_param(a, inst.size(), REG_PARAM3, srcp);
@@ -2182,23 +2177,23 @@ void drcbe_arm64::op_writem(a64::Assembler &a, const uml::instruction &inst)
 
 	if (spacesizep.size() == SIZE_BYTE)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_byte_masked.obj);
-		call_arm_addr(a, resolved.write_byte_masked.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_byte_masked.obj);
+		call_arm_addr(a, accessors.resolved.write_byte_masked.func);
 	}
 	else if (spacesizep.size() == SIZE_WORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_word_masked.obj);
-		call_arm_addr(a, resolved.write_word_masked.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_word_masked.obj);
+		call_arm_addr(a, accessors.resolved.write_word_masked.func);
 	}
 	else if (spacesizep.size() == SIZE_DWORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_dword_masked.obj);
-		call_arm_addr(a, resolved.write_dword_masked.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_dword_masked.obj);
+		call_arm_addr(a, accessors.resolved.write_dword_masked.func);
 	}
 	else if (spacesizep.size() == SIZE_QWORD)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_qword_masked.obj);
-		call_arm_addr(a, resolved.write_qword_masked.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_qword_masked.obj);
+		call_arm_addr(a, accessors.resolved.write_qword_masked.func);
 	}
 }
 
@@ -3776,21 +3771,21 @@ void drcbe_arm64::op_fread(a64::Assembler &a, const uml::instruction &inst)
 	assert(spacesizep.is_size_space());
 	assert((1 << spacesizep.size()) == inst.size());
 
-	const auto &resolved = m_resolved_accessors[spacesizep.space()];
+	auto const &accessors = m_memory_accessors[spacesizep.space()];
 
 	mov_reg_param(a, 4, REG_PARAM2, addrp);
 
 	if (inst.size() == 4)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_dword.obj);
-		call_arm_addr(a, resolved.read_dword.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_dword.obj);
+		call_arm_addr(a, accessors.resolved.read_dword.func);
 
 		mov_float_param_int_reg(a, inst.size(), dstp, REG_PARAM1.w());
 	}
 	else if (inst.size() == 8)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.read_qword.obj);
-		call_arm_addr(a, resolved.read_qword.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.read_qword.obj);
+		call_arm_addr(a, accessors.resolved.read_qword.func);
 
 		mov_float_param_int_reg(a, inst.size(), dstp, REG_PARAM1);
 	}
@@ -3808,7 +3803,7 @@ void drcbe_arm64::op_fwrite(a64::Assembler &a, const uml::instruction &inst)
 	assert(spacesizep.is_size_space());
 	assert((1 << spacesizep.size()) == inst.size());
 
-	const auto &resolved = m_resolved_accessors[spacesizep.space()];
+	auto const &accessors = m_memory_accessors[spacesizep.space()];
 
 	mov_reg_param(a, 4, REG_PARAM2, addrp);
 	mov_float_reg_param(a, inst.size(), TEMPF_REG1, srcp);
@@ -3817,13 +3812,13 @@ void drcbe_arm64::op_fwrite(a64::Assembler &a, const uml::instruction &inst)
 
 	if (inst.size() == 4)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_dword.obj);
-		call_arm_addr(a, resolved.write_dword.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_dword.obj);
+		call_arm_addr(a, accessors.resolved.write_dword.func);
 	}
 	else if (inst.size() == 8)
 	{
-		get_imm_relative(a, REG_PARAM1, resolved.write_qword.obj);
-		call_arm_addr(a, resolved.write_qword.func);
+		get_imm_relative(a, REG_PARAM1, accessors.resolved.write_qword.obj);
+		call_arm_addr(a, accessors.resolved.write_qword.func);
 	}
 }
 

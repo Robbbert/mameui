@@ -9,10 +9,7 @@
 /*
 
     TODO:
-    - Problem with DMA: open MAME debugger to see RAM, set LOAD, input a value,
-      and it will write twice. It is because set_input_line is delayed until
-      the CPU finished execute_run after sc_w.
-    - proper layout
+    - add cassette I/O
 
 */
 
@@ -22,17 +19,11 @@
 #include "speaker.h"
 #include "elf2.lh"
 
-#define RUN \
-	BIT(m_special->read(), 0)
-
 #define LOAD \
 	BIT(m_special->read(), 1)
 
 #define MEMORY_PROTECT \
 	BIT(m_special->read(), 2)
-
-#define INPUT \
-	BIT(m_special->read(), 3)
 
 /* Read/Write Handlers */
 
@@ -47,18 +38,6 @@ uint8_t elf2_state::dispon_r()
 uint8_t elf2_state::data_r()
 {
 	return m_data;
-}
-
-void elf2_state::status_w()
-{
-	u8 data = m_special->read();
-	if (data != m_status)
-	{
-		m_text[m_status&7] = 0;
-		m_text[data&7] = 1;
-		m_status = data;
-		output().set_value("led1", BIT(data, 3));
-	}
 }
 
 void elf2_state::data_w(uint8_t data)
@@ -85,8 +64,6 @@ void elf2_state::memory_w(offs_t offset, uint8_t data)
 		/* write data to 7 segment displays */
 		m_led_l->a_w(data & 0x0f);
 		m_led_h->a_w(data >> 4);
-		m_adr_l->a_w(offset & 0x0f);
-		m_adr_h->a_w(offset >> 4);
 	}
 }
 
@@ -108,17 +85,18 @@ void elf2_state::elf2_io(address_map &map)
 
 /* Input Ports */
 
+INPUT_CHANGED_MEMBER(elf2_state::load_w)
+{
+	/* DMAIN is reset while LOAD is off */
+	if (!newval)
+		m_dmain = 0;
+}
+
 INPUT_CHANGED_MEMBER(elf2_state::input_w)
 {
-	// Don't DMA while LOAD is off
-	if (BIT(~m_status, 1))
-		return;
-	// DMA when button released
-	if (newval == 0)
-	{
-		/* assert DMAIN */
-		m_maincpu->set_input_line(COSMAC_INPUT_LINE_DMAIN, ASSERT_LINE);
-	}
+	/* assert DMAIN */
+	if (LOAD && !newval && ~m_sc & 2)
+		m_dmain = 1;
 }
 
 static INPUT_PORTS_START( elf2 )
@@ -152,39 +130,20 @@ static INPUT_PORTS_START( elf2 )
 
 	PORT_START("SPECIAL")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("RUN") PORT_CODE(KEYCODE_R) PORT_TOGGLE
-	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("LOAD") PORT_CODE(KEYCODE_L) PORT_TOGGLE
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("M/P") PORT_CODE(KEYCODE_M) PORT_TOGGLE
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("INPUT") PORT_CODE(KEYCODE_ENTER) PORT_CHAR('^') PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(elf2_state::input_w), 0)
+	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("LOAD") PORT_CODE(KEYCODE_L) PORT_TOGGLE PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(elf2_state::load_w), 0)
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("MP") PORT_CODE(KEYCODE_M) PORT_TOGGLE
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("IN") PORT_CODE(KEYCODE_ENTER) PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(elf2_state::input_w), 0)
 INPUT_PORTS_END
 
 /* CDP1802 Configuration */
-
-int elf2_state::wait_r()
-{
-	status_w();
-	return !LOAD;
-}
-
-int elf2_state::clear_r()
-{
-	return RUN;
-}
-
-int elf2_state::ef4_r()
-{
-	return INPUT;
-}
-
-uint8_t elf2_state::dma_r()
-{
-	return m_data;
-}
 
 void elf2_state::sc_w(uint8_t data)
 {
 	/* DMAIN is reset while SC1 is high */
 	if (data & 2)
-		m_maincpu->set_input_line(COSMAC_INPUT_LINE_DMAIN, CLEAR_LINE);
+		m_dmain = 0;
+
+	m_sc = data;
 }
 
 /* MM74C923 Interface */
@@ -210,7 +169,6 @@ void elf2_state::da_w(int state)
 
 void elf2_state::machine_start()
 {
-	m_text.resolve();
 	address_space &program = m_maincpu->space(AS_PROGRAM);
 
 	/* setup memory banking */
@@ -219,6 +177,8 @@ void elf2_state::machine_start()
 
 	/* register for state saving */
 	save_item(NAME(m_data));
+	save_item(NAME(m_sc));
+	save_item(NAME(m_dmain));
 }
 
 /* Machine Driver */
@@ -243,11 +203,12 @@ void elf2_state::elf2(machine_config &config)
 	CDP1802(config, m_maincpu, XTAL(3'579'545)/2);
 	m_maincpu->set_addrmap(AS_PROGRAM, &elf2_state::elf2_mem);
 	m_maincpu->set_addrmap(AS_IO, &elf2_state::elf2_io);
-	m_maincpu->wait_cb().set(FUNC(elf2_state::wait_r));
-	m_maincpu->clear_cb().set(FUNC(elf2_state::clear_r));
-	m_maincpu->ef4_cb().set(FUNC(elf2_state::ef4_r));
+	m_maincpu->wait_cb().set_ioport("SPECIAL").bit(1).invert();
+	m_maincpu->clear_cb().set_ioport("SPECIAL").bit(0);
+	m_maincpu->dma_in_cb().set([this]() { return m_dmain; });
+	m_maincpu->ef4_cb().set_ioport("SPECIAL").bit(3);
 	m_maincpu->q_cb().set_output("led0");
-	m_maincpu->dma_rd_cb().set(FUNC(elf2_state::dma_r));
+	m_maincpu->dma_rd_cb().set(FUNC(elf2_state::data_r));
 	m_maincpu->dma_wr_cb().set(m_vdc, FUNC(cdp1861_device::dma_w));
 	m_maincpu->sc_cb().set(FUNC(elf2_state::sc_w));
 
@@ -272,8 +233,6 @@ void elf2_state::elf2(machine_config &config)
 
 	DM9368(config, m_led_h).update_cb().set_output("digit0");
 	DM9368(config, m_led_l).update_cb().set_output("digit1");
-	DM9368(config, m_adr_h).update_cb().set_output("digit2");
-	DM9368(config, m_adr_l).update_cb().set_output("digit3");
 
 	SPEAKER(config, "mono").front_center();
 
