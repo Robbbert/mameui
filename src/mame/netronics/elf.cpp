@@ -64,6 +64,8 @@ void elf2_state::memory_w(offs_t offset, uint8_t data)
 		/* write data to 7 segment displays */
 		m_led_l->a_w(data & 0x0f);
 		m_led_h->a_w(data >> 4);
+		m_adr_l->a_w(offset & 0x0f);
+		m_adr_h->a_w(offset >> 4);
 	}
 }
 
@@ -132,10 +134,24 @@ static INPUT_PORTS_START( elf2 )
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("RUN") PORT_CODE(KEYCODE_R) PORT_TOGGLE
 	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("LOAD") PORT_CODE(KEYCODE_L) PORT_TOGGLE PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(elf2_state::load_w), 0)
 	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("MP") PORT_CODE(KEYCODE_M) PORT_TOGGLE
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("IN") PORT_CODE(KEYCODE_ENTER) PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(elf2_state::input_w), 0)
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD ) PORT_NAME("IN") PORT_CODE(KEYCODE_ENTER) PORT_CHAR('^') PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(elf2_state::input_w), 0)
 INPUT_PORTS_END
 
 /* CDP1802 Configuration */
+
+int elf2_state::wait_r()
+{
+	u8 data = m_special->read();
+	if (data != m_status)
+	{
+		m_text[m_status&7] = 0;
+		m_text[data&7] = 1;
+		m_status = data;
+		output().set_value("led1", BIT(data, 3));
+	}
+
+	return !LOAD;
+}
 
 void elf2_state::sc_w(uint8_t data)
 {
@@ -169,6 +185,7 @@ void elf2_state::da_w(int state)
 
 void elf2_state::machine_start()
 {
+	m_text.resolve();
 	address_space &program = m_maincpu->space(AS_PROGRAM);
 
 	/* setup memory banking */
@@ -203,7 +220,7 @@ void elf2_state::elf2(machine_config &config)
 	CDP1802(config, m_maincpu, XTAL(3'579'545)/2);
 	m_maincpu->set_addrmap(AS_PROGRAM, &elf2_state::elf2_mem);
 	m_maincpu->set_addrmap(AS_IO, &elf2_state::elf2_io);
-	m_maincpu->wait_cb().set_ioport("SPECIAL").bit(1).invert();
+	m_maincpu->wait_cb().set(FUNC(elf2_state::wait_r));
 	m_maincpu->clear_cb().set_ioport("SPECIAL").bit(0);
 	m_maincpu->dma_in_cb().set([this]() { return m_dmain; });
 	m_maincpu->ef4_cb().set_ioport("SPECIAL").bit(3);
@@ -233,12 +250,14 @@ void elf2_state::elf2(machine_config &config)
 
 	DM9368(config, m_led_h).update_cb().set_output("digit0");
 	DM9368(config, m_led_l).update_cb().set_output("digit1");
+	DM9368(config, m_adr_h).update_cb().set_output("digit2");
+	DM9368(config, m_adr_l).update_cb().set_output("digit3");
 
 	SPEAKER(config, "mono").front_center();
 
-	CASSETTE(config, m_cassette);
-	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_ENABLED | CASSETTE_SPEAKER_ENABLED);
-	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
+	//CASSETTE(config, m_cassette);
+	//m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_ENABLED | CASSETTE_SPEAKER_ENABLED);
+	//m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 
 	QUICKLOAD(config, "quickload", "bin").set_load_callback(FUNC(elf2_state::quickload_cb));
 
