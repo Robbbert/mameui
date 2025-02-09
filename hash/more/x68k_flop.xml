@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 544 -->
+<!-- Number of items in this list = 566 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -2782,6 +2782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x6845b3cdddd2517">
+		<description>Gekkan Dennou Club (Vol. 044)(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 044)(2).hdm" size="1261568" crc="61dde734" sha1="45b3cdddd2517835749cc6a6bd0c04d43ad80855"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x681005a918130a2">
 		<description>Gekkan Dennou Club (Vol. 044)(2of2)</description>
 		<year>????</year>
@@ -2919,6 +2929,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Gekkan Dennou Club (Vol. 056)(2).hdm" size="1261568" crc="980b9b7b" sha1="869114de8e7eda055a5e5053c078e686144029af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x683ac38ebf7c1ef">
+		<description>Gekkan Dennou Club (Vol. 056)(d1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 056)(d1).hdm" size="1261568" crc="8a697db5" sha1="3ac38ebf7c1efeaf152acea833c78ca3a901ace9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f3eb008a85e04">
+		<description>Gekkan Dennou Club (Vol. 056)(d2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Gekkan Dennou Club (Vol. 056)(d2).hdm" size="1261568" crc="b1e870dc" sha1="f3eb008a85e0488d0330e6e095de99d561ce2659"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3342,13 +3372,203 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="x68ea03d84ab7148">
-		<description>Lam-Mal (1992)(Fairytale)(1)</description>
+	<software name="x68b7edc13421ad9">
+		<description>La Princesse Croissant (Comiket 47 version)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Lam-Mal (1992)(Fairytale)(1).hdm" size="1261568" crc="35be7fdd" sha1="ea03d84ab71489128e09a3e2eb26a86b8faa1ad7"/>
+				<rom name="La Princesse Croissant (Comiket 47 version).hdm" size="1261568" crc="b37f1597" sha1="b7edc13421ad9df57d8cf11b492e187c1817c086"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684054991746e35">
+		<description>La Princesse Croissant (Takeru version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="La Princesse Croissant (Takeru version).hdm" size="1261568" crc="bc4d5af2" sha1="4054991746e350e6cc1eeb4cfbb6e4bd677b70a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x689d46329a19413">
+		<description>Lady Fighter (v1.00)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lady Fighter (v1.00).hdm" size="1261568" crc="6ff2f243" sha1="9d46329a194131cd7ba5ff4bad94c210e084d7fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ea03d84ab7148">
+		<description>Lam-Mal (1992)(Fairytale)(d1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lam-Mal (1992)(Fairytale)(d1).hdm" size="1261568" crc="35be7fdd" sha1="ea03d84ab71489128e09a3e2eb26a86b8faa1ad7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x680ee7f59aee339">
+		<description>Lam-Mal (1992)(Fairytale)(d2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lam-Mal (1992)(Fairytale)(d2).hdm" size="1261568" crc="54558bb2" sha1="0ee7f59aee339906b42c14079dd45d0474e7b56c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6820e606ddf5b37">
+		<description>Lam-Mal (1992)(Fairytale)(d3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lam-Mal (1992)(Fairytale)(d3).hdm" size="1261568" crc="d3b7648e" sha1="20e606ddf5b37bd16cc52578b9e1888a416ea72c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b2b5a2876bf9f">
+		<description>Lam-Mal (1992)(Fairytale)(d4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lam-Mal (1992)(Fairytale)(d4).hdm" size="1261568" crc="659b602d" sha1="b2b5a2876bf9f311852dc1254081e989f77e0b51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68fbe4cb262eeb2">
+		<description>Last Tempest (Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Last Tempest (Disk A).hdm" size="1261568" crc="73e61390" sha1="fbe4cb262eeb288caae3a4051e824e548fc3f359"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686ae7a75943fc1">
+		<description>Last Tempest (Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Last Tempest (Disk B).hdm" size="1261568" crc="2ae551af" sha1="6ae7a75943fc18e52c3838a0978d8f47fe6f4464"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b01e0323362ae">
+		<description>Leshies (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Leshies (19xx)(-).xdf" size="1261568" crc="e514d3e9" sha1="b01e0323362ae57e5d475a85f91b6b4086354201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68e64ee5a5ba728">
+		<description>Level Point v1.1 (199x)(Erenvmvrcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Level Point v1.1 (199x)(Erenvmvrcom).dim" size="1261824" crc="e3328164" sha1="e64ee5a5ba728c8cb4e01e080e1efb80cff953fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68fff0a9a0c4801">
+		<description>Lexus 2 (199x)(SPC Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Lexus 2 (199x)(SPC Soft).dim" size="1261824" crc="7f617448" sha1="fff0a9a0c48012c53f24839a43ed7ca1fd89b81b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6852454d9caa92a">
+		<description>Lexus 2 (boot dsk_type_b_lexus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1392896">
+				<rom name="Lexus 2 (boot dsk_type_b_lexus).dim" size="1392896" crc="2c4f4f36" sha1="52454d9caa92af5dfbf22394be5725169ae12ddd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68ad2eab03f0627">
+		<description>Lightning Soldier (1994)(T.Quartet)(A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lightning Soldier (1994)(T.Quartet)(A).xdf" size="1261568" crc="592843ee" sha1="ad2eab03f06276377be9405f4dde7d644cdf719b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68579e096cbeff6">
+		<description>Lightning Soldier (1994)(T.Quartet)(B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lightning Soldier (1994)(T.Quartet)(B).xdf" size="1261568" crc="5c1039e1" sha1="579e096cbeff6ea84adc9ce0481da5cafeb1b3ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686d37e22643591">
+		<description>Lumps (2001)(TAU Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lumps (2001)(TAU Software).XDF" size="1261568" crc="da25b602" sha1="6d37e2264359183ebe65a4811a40c522312edc22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682cf9b33241f03">
+		<description>Lunatic Fantasy v2.0 (199x)(Studio Light Cross)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Lunatic Fantasy v2.0 (199x)(Studio Light Cross).dim" size="1261824" crc="80a61a8a" sha1="2cf9b33241f03c06653ad46f0f95215fee437734"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b52abac83e15d">
+		<description>Lunatic Fantasy v2.0 (t-eng)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Lunatic Fantasy v2.0 (t-eng).xdf" size="1261568" crc="618b7707" sha1="b52abac83e15d921bd465f7aaaa6017e6d6ba7b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68bf0c733ab0d65">
+		<description>LZD - Lempel-Ziv Data Compressor (v1.11)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="LZD - Lempel-Ziv Data Compressor (v1.11).hdm" size="1261568" crc="1fbf6009" sha1="bf0c733ab0d6507748bf337f167d2a27f0176c9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x684cec083606f09">
+		<description>LZH Archive Extractor (v1.10)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="LZH Archive Extractor (v1.10).hdm" size="1261568" crc="5823c132" sha1="4cec083606f09692fe99710f1422333e198bbe38"/>
 			</dataarea>
 		</part>
 	</software>

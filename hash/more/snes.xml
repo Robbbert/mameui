@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3742 -->
+<!-- Number of items in this list = 3752 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3242,6 +3242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns2aa3c2e950c66">
+		<description>Assault Suits Valken (USA) (Retro-Bit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Assault Suits Valken (USA) (Retro-Bit).sfc" size="2097152" crc="b802fc5e" sha1="2aa3c2e950c66524b7c481faeabc11355085f4ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5fc21e760c4f6">
 		<description>Assault Suits Valken - 008</description>
 		<year>????</year>
@@ -3659,6 +3669,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Battletoads in Battlemaniacs - Easier (U)(2024)(_Q_).sfc" size="1048576" crc="cc1199dc" sha1="e90875be5613d5a65f6b98378b6de7caca6a554f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb392d00f78e04">
+		<description>Battletoads-Double Dragon (USA) (Retro-Bit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Battletoads-Double Dragon (USA) (Retro-Bit).sfc" size="1048576" crc="f7433e03" sha1="b392d00f78e04a35e1c95c1eb5f11bdd0d843efa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6662,6 +6682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9ad96ff157c0c">
+		<description>Der Langrisser T-Chs v1.31 (2015)(Hen, Xuejianbingdao)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Der Langrisser T-Chs v1.31 (2015)(Hen, Xuejianbingdao).sfc" size="4194304" crc="ba4567ca" sha1="9ad96ff157c0cfadaf80f05f21531a249d79aab4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns844324d1a16b3">
 		<description>Der Langrisser T-Eng v1.3.1 (2022)(Near, D)</description>
 		<year>????</year>
@@ -9612,6 +9642,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns6e865968e20c6">
+		<description>Fire Emblem - Seisen no Keifu T-Chs v1.1 (2008)(FIREEMBLEM.NET)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Seisen no Keifu T-Chs v1.1 (2008)(FIREEMBLEM.NET).sfc" size="4194304" crc="58a9a697" sha1="6e865968e20c64114ae1de01b708827884fdae9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns11a21eca2b743">
+		<description>Fire Emblem - Seisen no Keifu T-Cht v1.1 (2008)(FIREEMBLEM.NET)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fire Emblem - Seisen no Keifu T-Cht v1.1 (2008)(FIREEMBLEM.NET).sfc" size="4194304" crc="8ed60773" sha1="11a21eca2b743e4fde2565fabd0fe96279babeee"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns36d5208a8e520">
 		<description>Fire Emblem - Thracia 776 (Japan) [En v0.05 by Shaya] (Incomplete)</description>
 		<year>????</year>
@@ -10259,6 +10309,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Funaki Masakatsu Hybrid Wrestler - Tougi Denshou (Japan) [En v1.0 by Phil].sfc" size="2097152" crc="69911d2d" sha1="b4a58d5efb7f1872354a04624f58cebd9f4bf8ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4a9bc8ba95c1a">
+		<description>Fushigi no Dungeon 2 - Fuurai no Shiren T-Chs v1.0 (2011)(Werther, Phoenix, Kenyo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fushigi no Dungeon 2 - Fuurai no Shiren T-Chs v1.0 (2011)(Werther, Phoenix, Kenyo).sfc" size="4194304" crc="b8d26134" sha1="4a9bc8ba95c1a87db062f7545b24c019b2c31232"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20672,6 +20732,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3b03e6f75637e">
+		<description>Romancing Sa-Ga 3 T-Cht v1.01 (2010)(Werther Lee)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Romancing Sa-Ga 3 T-Cht v1.01 (2010)(Werther Lee).sfc" size="4194304" crc="c9a66742" sha1="3b03e6f75637e117b6800ed01d48b24552323afb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse6a2d433f24aa">
+		<description>Romancing Sa-Ga 3 T-Cht v1.01 (2010)(Werther Lee)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Romancing Sa-Ga 3 T-Cht v1.01 (2010)(Werther Lee)_1.sfc" size="4194304" crc="c8d13bdb" sha1="e6a2d433f24aac35b2bf1ae558eef51d79fd32ef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns651f6a21f8a50">
 		<description>Romancing Sa-Ga T-Eng v1.2 (2016)(DDSTranslation)</description>
 		<year>????</year>
@@ -21209,6 +21289,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Seiken Densetsu 3 (Japan) [En v1.01 by LNF+Neill Corlett+SoM2Freak] [Title Hack v1.0 by Dragonsbrethren] (~Secret of Mana 2).sfc" size="4194304" crc="5f14f4ca" sha1="fd4b7fbefc6c7cd0ea0e3dee01277111d24c6283"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse772f01131193">
+		<description>Seiken Densetsu 3 T-Cht v1.0 (2012)(darklink, vinxu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Seiken Densetsu 3 T-Cht v1.0 (2012)(darklink, vinxu).sfc" size="4194304" crc="86c49fcd" sha1="e772f01131193a2e4d4e24d380d79b308706a274"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35759,6 +35849,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Torneco no Daibouken - Fushigi no Dungeon (Japan) [En v0.99 by Magic Destiny] (~Taloon's Great Adventure - Mystery Dungeon).sfc" size="2097152" crc="96064895" sha1="861cd4ca94774b928deab7458f1e45af1c504159"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc63d87d9e50e7">
+		<description>Treasure Hunter G T-Chs v1.0 (2012)(yiyayiya)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Treasure Hunter G T-Chs v1.0 (2012)(yiyayiya).sfc" size="4194304" crc="829f6663" sha1="c63d87d9e50e7f0cfd5eb9fca5ada5909e8b242f"/>
 			</dataarea>
 		</part>
 	</software>
