@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10 -->
+<!-- Number of items in this list = 20 -->
 <softwarelist name="sgx" description="sgx loose roms">
+	<software name="sgx986238ccd6a50">
+		<description>(sgx)1941 - Counter Attack (Japan) [a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(sgx)1941 - Counter Attack (Japan) [a].pce" size="1048576" crc="d206e241" sha1="986238ccd6a50b36ab41d9e483f1fc08d6dd5e87"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sgx64d4e67305b1d">
 		<description>(sgx)Aldynes (1991)(Hudson)(Jp)[b3]</description>
 		<year>????</year>
@@ -9,6 +19,46 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="(sgx)Aldynes (1991)(Hudson)(Jp)[b3].bin" size="1048576" crc="fa143ea3" sha1="64d4e67305b1daaa803b2a3d52c2e784799719d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sgxc9a856d4f6bb2">
+		<description>(sgx)Axelay 1 Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="(sgx)Axelay 1 Demo by Chris Covell (PD).pce" size="262144" crc="116e5d26" sha1="c9a856d4f6bb28eaeddfe5c90e5de4d0f0ed370e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sgxdac21b37eefc0">
+		<description>(sgx)Axelay SuperGrafx Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="(sgx)Axelay SuperGrafx Demo by Chris Covell (PD).pce" size="131072" crc="c7a54073" sha1="dac21b37eefc00c110aad5674d413efbe100d930"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sgx788937267ed45">
+		<description>(sgx)Battle Ace (J) (SGX) (J-CheatMenu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(sgx)Battle Ace (J) (SGX) (J-CheatMenu).pce" size="524288" crc="27c83cfc" sha1="788937267ed45257dead6988f683d8696862664e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sgx772bf5e20ddc8">
+		<description>(sgx)Dai makai mura (SGX) Debug menu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(sgx)Dai makai mura (SGX) Debug menu.PCE" size="1048576" crc="3334202a" sha1="772bf5e20ddc8089c28a034acf05e64338ed6b84"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22,6 +72,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sgx4f0fbea3b87a2">
+		<description>(sgx)Daimakaimura (J) (SGX) (J-Debug)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(sgx)Daimakaimura (J) (SGX) (J-Debug).pce" size="1048576" crc="d6722c04" sha1="4f0fbea3b87a2a10ec9a3d1e06d43da4cba067ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sgxcd1758e38ea7f">
 		<description>(sgx)Daimakaimura Improvement Hack</description>
 		<year>????</year>
@@ -32,6 +92,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sgxa2b53806cb277">
+		<description>(sgx)Damage Tracker Version 1.00 by DamageX (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="(sgx)Damage Tracker Version 1.00 by DamageX (PD).pce" size="32768" crc="d3975102" sha1="a2b53806cb277bc89cf4079a5d9a96086c8d3c44"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sgxb113fe1ff3e1d">
 		<description>(sgx)LK</description>
 		<year>????</year>
@@ -39,6 +109,36 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524800">
 				<rom name="(sgx)LK.PCE" size="524800" crc="743eb1f3" sha1="b113fe1ff3e1d1644b3e5597b7314505f43e5dde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sgx1d510b0342b9f">
+		<description>(sgx)SGX Demo VPC #2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(sgx)SGX Demo VPC #2.pce" size="524288" crc="c182b8fe" sha1="1d510b0342b9fca23336cb83383bb2f8747a6560"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sgx9afa8df674f42">
+		<description>(sgx)SGX Transparency Demo 1 by Tomaitheous Gun (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(sgx)SGX Transparency Demo 1 by Tomaitheous Gun (PD).pce" size="524288" crc="c1e87dc4" sha1="9afa8df674f429cf2453fdf879ad32041267d791"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sgxed7a919d5d7a9">
+		<description>(sgx)sgx3b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(sgx)sgx3b.pce" size="524288" crc="056d2989" sha1="ed7a919d5d7a9f787d3ebc1ffaf6e9769eff8d82"/>
 			</dataarea>
 		</part>
 	</software>

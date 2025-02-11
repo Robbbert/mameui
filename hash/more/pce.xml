@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 132 -->
+<!-- Number of items in this list = 179 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -502,6 +502,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce3bae42a52eba7">
+		<description>256-Colour Slideshow by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="256-Colour Slideshow by Chris Covell (PD).pce" size="262144" crc="5513bd1a" sha1="3bae42a52eba72e6a5a8daad977250f91a2c5d75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcea62196da3eefa">
+		<description>512-Colour Test by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="512-Colour Test by Chris Covell (PD).pce" size="131072" crc="b1b383ae" sha1="a62196da3eefa36f3dba941743b18a5f164fc71d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcee508569966cc5">
 		<description>Aerial</description>
 		<year>????</year>
@@ -592,6 +612,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce1e8045543de9d">
+		<description>Axelay BG Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Axelay BG Demo by Chris Covell (PD).pce" size="131072" crc="cad51c70" sha1="1e8045543de9d43ac90ef186ac3affdd4a3e5cf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce76f75e9ff360f">
+		<description>Axelay Clouds Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Axelay Clouds Demo by Chris Covell (PD).pce" size="131072" crc="6f340ba9" sha1="76f75e9ff360f088b89c83255ddccda5d31c2951"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcedec2b4b41c879">
+		<description>Axelay FG Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Axelay FG Demo by Chris Covell (PD).pce" size="131072" crc="b536867c" sha1="dec2b4b41c8791dd5d931bc91842a7383bd4b47b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcec1839842038de">
 		<description>Battlot</description>
 		<year>????</year>
@@ -609,6 +659,26 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="be ball (japan).pce" size="262144" crc="e439f299" sha1="14163a792777c246f35a0867d6b145a7cb7df3b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce072c329978f2e">
+		<description>bg2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="bg2.pce" size="524288" crc="7f7d0d8b" sha1="072c329978f2e09996981c774e1ccd2b567dea8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce52b25b5baf8da">
+		<description>bg3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="bg3.pce" size="524288" crc="c243fe0e" sha1="52b25b5baf8da25c22ca5b3b981cd151dea4fda2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -632,6 +702,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pcec9d43e09e539b">
+		<description>blur_effects 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="blur_effects 1.pce" size="524288" crc="23a5c5ca" sha1="c9d43e09e539b6865dfa2b8b7a230aa121e04107"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcea3129000961f1">
+		<description>blur_effects 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="blur_effects 2.pce" size="524288" crc="77c76f0b" sha1="a3129000961f1cee81a9b01245852a1227eb3c35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce4632fd1ce0f69">
+		<description>Bomberman Raster Car Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bomberman Raster Car Demo by Chris Covell (PD).pce" size="131072" crc="61dc2079" sha1="4632fd1ce0f69dc256675eddb57706232a39a336"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce657487b2ee807">
+		<description>Bomberman Raster CDROM Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bomberman Raster CDROM Demo by Chris Covell (PD).pce" size="131072" crc="8173a02b" sha1="657487b2ee8076395c93cb3dff3d1346726a15d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce64732db8cdc7d">
+		<description>Bomberman Raster Grid Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bomberman Raster Grid Demo by Chris Covell (PD).pce" size="131072" crc="1d843f9e" sha1="64732db8cdc7d7ef17af535fda730719b08abff1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce9ca36d0b866ac">
+		<description>Bomberman Raster Strider1 Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bomberman Raster Strider1 Demo by Chris Covell (PD).pce" size="131072" crc="2d7808c4" sha1="9ca36d0b866acadf4477c7b9745e7b72ff0cb173"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcea233ca8309d5f">
+		<description>Bomberman Raster Strider2 Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bomberman Raster Strider2 Demo by Chris Covell (PD).pce" size="131072" crc="ed210c90" sha1="a233ca8309d5fc5bba0d5cd089ef8bd87a3d6d34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce807be91376d53">
+		<description>Bomberman Raster Strider3 Demo by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bomberman Raster Strider3 Demo by Chris Covell (PD).pce" size="131072" crc="85fc9016" sha1="807be91376d5321795a9063649719a48825e0275"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce3ea6168a31576">
 		<description>Bootskell</description>
 		<year>????</year>
@@ -639,6 +789,26 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Bootskell.pce" size="24576" crc="10d45094" sha1="3ea6168a31576d258d8cc3852d4750bc328d0e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce6e01316b47795">
+		<description>BubbleGum Crash (J) [T+Eng_Dave Shadoff&amp;others]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="786944">
+				<rom name="BubbleGum Crash (J) [T+Eng_Dave Shadoff&amp;others].PCE" size="786944" crc="6b0c157a" sha1="6e01316b477950d120a6b86c56750935859b25a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce83ab5db31cd66">
+		<description>BubbleGum Crash (J) [T+Eng_Dave Shadoff&amp;others]_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="BubbleGum Crash (J) [T+Eng_Dave Shadoff&amp;others]_1.pce" size="786432" crc="704b6916" sha1="83ab5db31cd669787bbfaeaaa691a0f59e4d167c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -792,6 +962,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce27ce76fbb7812">
+		<description>Dragon's Curse (U) [h1] [T+Spa100_Pkt]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Dragon's Curse (U) [h1] [T+Spa100_Pkt].pce" size="262144" crc="56e3a6a4" sha1="27ce76fbb78121848ca57c0939c6c197ef19ade0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pceaa60be0b123ae">
+		<description>Dragon's Curse (U) [h1] [T+Spa100_Umb]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Dragon's Curse (U) [h1] [T+Spa100_Umb].pce" size="262144" crc="b262bd62" sha1="aa60be0b123ae42cf925d57c3d0e77a0a817b04b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pceeaeb58cf6aba9">
+		<description>Enshoku (beta) (2005)(TJ Edmister)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="40960">
+				<rom name="Enshoku (beta) (2005)(TJ Edmister).pce" size="40960" crc="e17342f5" sha1="eaeb58cf6aba9bad22f3eccedda869f06413b8aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcea31ac7be0fc1b">
+		<description>Enshoku by TJ Edmister and Mike</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="40960">
+				<rom name="Enshoku by TJ Edmister and Mike.pce" size="40960" crc="6822d85c" sha1="a31ac7be0fc1b7c10f912b342b541dbeea6185a9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce2c1bf3cb5c5c6">
 		<description>Fantasy Zone (PCE Mini)</description>
 		<year>????</year>
@@ -822,6 +1032,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pcee7128dd74a931">
+		<description>Fractal Engine v1.0 by Chris Covell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Fractal Engine v1.0 by Chris Covell.pce" size="131072" crc="e1f84900" sha1="e7128dd74a9316985e7dfed40ae9d0a17b1096a8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pceb370a66340318">
 		<description>Gai Flame T-Eng v0.98 (2022)(Nebulous Translations)</description>
 		<year>????</year>
@@ -829,6 +1049,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="Gai Flame T-Eng v0.98 (2022)(Nebulous Translations).pce" size="393216" crc="581164ce" sha1="b370a6634031834d2030327c0514f18f1cee679d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pceecb10c4c58d42">
+		<description>GAIA NO MONSHO (J) [T+Eng_Mr.D]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262656">
+				<rom name="GAIA NO MONSHO (J) [T+Eng_Mr.D].PCE" size="262656" crc="e8f9cd5b" sha1="ecb10c4c58d425843d0476336493cb49e802345b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -842,6 +1072,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce38dd1bc9968d6">
+		<description>Gomola Speed (J) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Gomola Speed (J) [!].pce" size="393216" crc="9a353afd" sha1="38dd1bc9968d65119bfb638fb197ba45d7784cfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pced186b89d56d07">
+		<description>Gradius (J) [T+Fre_terminus]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262656">
+				<rom name="Gradius (J) [T+Fre_terminus].PCE" size="262656" crc="db5d6200" sha1="d186b89d56d074b908a40f8c86480dac4c1899a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pced72952a3dbafd">
+		<description>Gradius (J) [T+Fre_terminus]_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Gradius (J) [T+Fre_terminus]_1.pce" size="262144" crc="d2309fd3" sha1="d72952a3dbafda82677e16f1bbe65693baf33b4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcef70ceba46596a">
+		<description>Gradius (J) [Tr Fr1.0 Terminus]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Gradius (J) [Tr Fr1.0 Terminus].pce" size="262144" crc="f7d587c2" sha1="f70ceba46596a2462ac2b867039a39963d647841"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce6b41fbaddef7e">
 		<description>Gradius (PCE Mini)</description>
 		<year>????</year>
@@ -852,6 +1122,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce133d3010faac0">
+		<description>Greyscale Mode Test for PCE by by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Greyscale Mode Test for PCE by by Chris Covell (PD).pce" size="262144" crc="25989ada" sha1="133d3010faac0ef04c5eaa4a48b8fab4f5a5bcb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcebefb5eedee299">
+		<description>Gunstar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Gunstar.pce" size="131072" crc="8223a4ab" sha1="befb5eedee299eca99f5d846be859ee09d33b384"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce73dd77b8f2526">
 		<description>Guntus</description>
 		<year>????</year>
@@ -859,6 +1149,26 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Guntus.pce" size="24576" crc="0cf9ec88" sha1="73dd77b8f2526efb26a42b4de95c7559ece7b2d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcee594782b5bdea">
+		<description>Hidden PC-Engine Pics</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Hidden PC-Engine Pics.pce" size="524288" crc="0e040c2a" sha1="e594782b5bdea6d4edc74d60565343265c46d11e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce2e9b5e65c70bd">
+		<description>HiRes Slideshow by Chris Covell (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="HiRes Slideshow by Chris Covell (PD).pce" size="524288" crc="e57ee795" sha1="2e9b5e65c70bd7e1d82f007a6dc938021fd173f6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -912,6 +1222,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pcec5c5eb841b189">
+		<description>Keith Courage in Alpha Zones (U) [T+Gre] [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Keith Courage in Alpha Zones (U) [T+Gre] [a1].pce" size="262144" crc="26edd6ea" sha1="c5c5eb841b18967e16de386f198a80ac79544622"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce468f068f3c466">
+		<description>Keith Courage in Alpha Zones (U) [T+Gre] [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Keith Courage in Alpha Zones (U) [T+Gre] [a2].pce" size="262144" crc="1f72f38d" sha1="468f068f3c4663fd1782a9a7c88ca32b50dc2926"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce8d89ff9518a19">
+		<description>Klax (U) [T+Gre1.1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Klax (U) [T+Gre1.1].pce" size="262144" crc="7713d076" sha1="8d89ff9518a19d758f0adc1d95a970948b9add91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcec98609dd46377">
+		<description>Klax (U) [T-Gre1.0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Klax (U) [T-Gre1.0].pce" size="262144" crc="2820fda5" sha1="c98609dd463770c7b72ed45765f55ebc119eb794"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce1da7d890ff87c">
 		<description>Knight Rider Special (T-Eng v2.0)(2017)(Psyklax)</description>
 		<year>????</year>
@@ -942,6 +1292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pceaae8e2f4fd522">
+		<description>Magical Chase (J)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524800">
+				<rom name="Magical Chase (J).pce" size="524800" crc="1bdf5bf2" sha1="aae8e2f4fd522bcf2000730e7b6cb43503795389"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce99892a7198856">
 		<description>Mai Nurse (2024)(lunoka)</description>
 		<year>????</year>
@@ -952,6 +1312,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pceea111175a79f8">
+		<description>MAISON IKKOKU (J) [T+Eng_Matt&amp;Dave]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524800">
+				<rom name="MAISON IKKOKU (J) [T+Eng_Matt&amp;Dave].PCE" size="524800" crc="b5ed56d8" sha1="ea111175a79f800ac86936f563877713ccc17e28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce47655a5c5445c">
+		<description>Maison Ikkoku (J) [tr en v1.01 2008-04-13 Dave Shadoff]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Maison Ikkoku (J) [tr en v1.01 2008-04-13 Dave Shadoff].pce" size="524288" crc="73c5adf1" sha1="47655a5c5445cc4d69cd32825e84c70ed4a14d26"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce448991d34538c">
 		<description>Makai Hakkenden Shada (T-Eng)(2015)(Shubibiman)</description>
 		<year>????</year>
@@ -959,6 +1339,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Makai Hakkenden Shada (T-Eng)(2015)(Shubibiman).pce" size="262144" crc="017de16d" sha1="448991d34538c40cb8d7738ed1093b86c4dd1cfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce501ddfc81a622">
+		<description>Mario Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mario Demo (PD).pce" size="131072" crc="bd96c142" sha1="501ddfc81a622a8a6f8e641f39d299e08babe584"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1052,6 +1442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce3bfbefd2b77df">
+		<description>parallax9 scrolls</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="parallax9 scrolls.pce" size="524288" crc="98081b50" sha1="3bfbefd2b77df649d67436baebc2a1cad79cb7e6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce5fd5b35c4947a">
 		<description>Pc Genjin (Round Select)</description>
 		<year>????</year>
@@ -1072,6 +1472,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pcea3892eef2e70b">
+		<description>PC-Engine BRAM (Backup RAM) Tool</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="PC-Engine BRAM (Backup RAM) Tool.pce" size="131072" crc="673aa541" sha1="a3892eef2e70bd459bbc901ace82bd18df27715d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcec936809f24d63">
+		<description>PC-Engine Screen Dimension Test Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="PC-Engine Screen Dimension Test Demo.pce" size="131072" crc="5e74eab0" sha1="c936809f24d63ef79fc3f2edc1ddcaab6979080b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcef44b20124fb6c">
+		<description>PC-Engine Split-Resolution Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="PC-Engine Split-Resolution Demo.pce" size="131072" crc="3758e3b3" sha1="f44b20124fb6cc25b7604d83225c2f46ba1798eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce0870276df3a56">
+		<description>pcmplay (Plays back at about 22096 Hz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="pcmplay (Plays back at about 22096 Hz).pce" size="1048576" crc="31935060" sha1="0870276df3a5625124729694d284a7e5d6d3245c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce51c8be58749da">
 		<description>Photograph Boy T-Eng (2023)(LaytonLoztew)</description>
 		<year>????</year>
@@ -1089,6 +1529,36 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="66048">
 				<rom name="Pong! The Hu-Go! Game.pce" size="66048" crc="17254b1a" sha1="05775ad3448616f5ecb9b7c7ed776615cc8439bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce3d4b8c41271eb">
+		<description>Puzzle Boy (J) [T+Eng_kingmike]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262656">
+				<rom name="Puzzle Boy (J) [T+Eng_kingmike].PCE" size="262656" crc="b9b2381e" sha1="3d4b8c41271eb586f099b9caf4e3a0bfed5a9068"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce96e2fd5bbdea9">
+		<description>Puzzle Boy (J) [tr En 1.0 KingMike]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Puzzle Boy (J) [tr En 1.0 KingMike].pce" size="262144" crc="da0e234f" sha1="96e2fd5bbdea922ec0d2a1ed2a9881994d71f232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcea3f45f97eddab">
+		<description>Puzznic (J) [T+Gre_Vag]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262656">
+				<rom name="Puzznic (J) [T+Gre_Vag].pce" size="262656" crc="ca2b2577" sha1="a3f45f97eddab09d2838b39ed432c4c66560a585"/>
 			</dataarea>
 		</part>
 	</software>

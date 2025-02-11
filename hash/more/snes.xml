@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3752 -->
+<!-- Number of items in this list = 3756 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -2583,12 +2583,12 @@
 		</part>
 	</software>
 	<software name="sns4ff7329ce5cb8">
-		<description>Act Raiser (J) [T+Eng_agtp]</description>
+		<description>Actraiser T-Eng (2006)(Aeon Genesis)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Act Raiser (J) [T+Eng_agtp].sfc" size="1048576" crc="5a6eb990" sha1="4ff7329ce5cb8b2b8d93cb303bb5252c090f2978"/>
+				<rom name="Actraiser T-Eng (2006)(Aeon Genesis).sfc" size="1048576" crc="5a6eb990" sha1="4ff7329ce5cb8b2b8d93cb303bb5252c090f2978"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6579,6 +6579,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="Demon's Crest (E).sfc" size="2097664" crc="78d82915" sha1="35f6f1b92bd678ec7e828b3739496cb84ea36bc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7dfcd9c69c5a9">
+		<description>Demon's Crest Retranslation v1.2 (2024)(RyuHayabusa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Demon's Crest Retranslation v1.2 (2024)(RyuHayabusa).sfc" size="2097152" crc="97b9f3d6" sha1="7dfcd9c69c5a945c37a27534f3237a76e99974d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17792,6 +17802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9ad7bea31a3e8">
+		<description>Mortal Kombat 3 New Edition (2025)(B-Zero TV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Mortal Kombat 3 New Edition (2025)(B-Zero TV).sfc" size="8388608" crc="6e9bed4b" sha1="9ad7bea31a3e8c32052dbc20b07b6fa9b343e037"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns1fa8c39e5d904">
 		<description>mortal kombat 3 r21</description>
 		<year>????</year>
@@ -20972,6 +20992,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns8b468b671baf2">
+		<description>Sauna Mario World 2 v1.1 (2025)(pnaha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Sauna Mario World 2 v1.1 (2025)(pnaha).sfc" size="4194304" crc="dc5fef0e" sha1="8b468b671baf2102d59c1dc97b8d8fd8faf0265c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse4f4bbb1e692a">
 		<description>Scooby-Doo (U) [T+Por_Romhack BR]</description>
 		<year>????</year>
@@ -22229,6 +22259,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="SMW Cruel final version by Blackyoshi.sfc" size="3145728" crc="ebad260e" sha1="527d1b7bb0cd9ba514c448990ef61419c791ee4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc34382545d3a7">
+		<description>SMW Friends and Rivalry v1.03 (2025)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="SMW Friends and Rivalry v1.03 (2025)(Bandicoot).sfc" size="4194304" crc="5518f889" sha1="c34382545d3a7010f276b896cdb3ac16a2eac3ed"/>
 			</dataarea>
 		</part>
 	</software>

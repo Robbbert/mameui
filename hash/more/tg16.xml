@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 13 -->
+<!-- Number of items in this list = 26 -->
 <softwarelist name="tg16" description="tg16 loose roms">
 	<software name="tg1a65dca7ff88eb">
 		<description>(tg16)Bloody Wolf (U)</description>
@@ -9,6 +9,26 @@
 		<part name="cart" interface="tg16_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="(tg16)Bloody Wolf (U).pce" size="524288" crc="775f9e7c" sha1="a65dca7ff88eb2d9dc8a9aafbcfaf91110cf7342"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg109d42994a344b">
+		<description>(tg16)Chew Man Fu (U) [T+Spa_lukas]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="(tg16)Chew Man Fu (U) [T+Spa_lukas].PCE" size="262144" crc="cade8275" sha1="09d42994a344bdcdbb1b88d88b832803911b46d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1546f5f08f976a">
+		<description>(tg16)Dragon's Curse (U) [T+Spa100_Umb] (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="(tg16)Dragon's Curse (U) [T+Spa100_Umb] (2).pce" size="262144" crc="c1f3e99e" sha1="546f5f08f976a2649663db69533abb90da03809e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32,6 +52,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="tg178a91737c0cf7">
+		<description>(tg16)Keith Courage in Alpha Zones (U) [T+Fre-beta]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="(tg16)Keith Courage in Alpha Zones (U) [T+Fre-beta].pce" size="262144" crc="62552444" sha1="78a91737c0cf71b3956b52e8db4fb079e715565e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="tg1a955273786db2">
 		<description>(tg16)Neutopia (2)</description>
 		<year>????</year>
@@ -39,6 +69,16 @@
 		<part name="cart" interface="tg16_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="(tg16)Neutopia (2).pce" size="393216" crc="59f50cfe" sha1="a955273786db2b10c99b0b604c2b666eb2a7861a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1bfc90b465f0b8">
+		<description>(tg16)Neutopia (U) [a1] [T+Fre100] (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="(tg16)Neutopia (U) [a1] [T+Fre100] (2).pce" size="393216" crc="6a5a37e2" sha1="bfc90b465f0b8099d2981ca9f858c43d20d1ff88"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52,6 +92,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="tg14b2b28a8b64e5">
+		<description>(tg16)Neutopia (U) [a1] [T+Spa100_Pkt] (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="(tg16)Neutopia (U) [a1] [T+Spa100_Pkt] (2).pce" size="393216" crc="4d783e0f" sha1="4b2b28a8b64e504f0f82fefcdbf68982be7dda44"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="tg16649e91870aeb">
 		<description>(tg16)Neutopia (U) [a1] [T+Spa100_Pkt]</description>
 		<year>????</year>
@@ -62,6 +112,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="tg16fa64991184b6">
+		<description>(tg16)Neutopia (U) [a1][T+Por99_Raptor_Z]{no header}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="(tg16)Neutopia (U) [a1][T+Por99_Raptor_Z]{no header}.pce" size="393216" crc="69305947" sha1="6fa64991184b663c6c437f9839ad35dede831b32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1cc56da99dc7a2">
+		<description>(tg16)Neutopia (U) [h2] [T+Spa100_Pkt] (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="(tg16)Neutopia (U) [h2] [T+Spa100_Pkt] (2).pce" size="393216" crc="2e67eb0b" sha1="cc56da99dc7a23118565121c682b0cde0923ae8a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="tg1d89b6bcbacb23">
 		<description>(tg16)Neutopia (U) [h2] [T+Spa100_Pkt]</description>
 		<year>????</year>
@@ -69,6 +139,36 @@
 		<part name="cart" interface="tg16_cart">
 			<dataarea name="rom" size="393728">
 				<rom name="(tg16)Neutopia (U) [h2] [T+Spa100_Pkt].pce" size="393728" crc="d6d76ea5" sha1="d89b6bcbacb23525173b216a71a148d41f112628"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg18873d66a4d877">
+		<description>(tg16)Neutopia (U) [T+por_CBT]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="393728">
+				<rom name="(tg16)Neutopia (U) [T+por_CBT].PCE" size="393728" crc="08fd2ffc" sha1="8873d66a4d877f5e855f8d1b20cd8fa77cead99f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1f07e2d9f742b1">
+		<description>(tg16)Neutopia (U) [T+Spa_lukas]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="(tg16)Neutopia (U) [T+Spa_lukas].pce" size="393216" crc="593e9b26" sha1="f07e2d9f742b1c0672288715773a544e6689221b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1d3be6079e23c5">
+		<description>(tg16)Neutopia (U) [tr Pt99_CBT]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="(tg16)Neutopia (U) [tr Pt99_CBT].pce" size="393216" crc="f04daa52" sha1="d3be6079e23c5f6787056a717f408a1387d4758b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -99,6 +199,36 @@
 		<part name="cart" interface="tg16_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="(tg16)R-Type Plus (2024)(Justin Gibbins).pce" size="524288" crc="dc118e24" sha1="c00eb0b9743d0976728ad53f0c64ce72e086a4de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg15eb8c844dcd15">
+		<description>(tg16)Samurai Ghost (U) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(tg16)Samurai Ghost (U) [a1].pce" size="524288" crc="9727ea49" sha1="5eb8c844dcd154cbf9addbfb2ea35812c3acf002"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg14c914924e96c2">
+		<description>(tg16)ShockMan (U) [T+Fre]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(tg16)ShockMan (U) [T+Fre].pce" size="524288" crc="bf6922db" sha1="4c914924e96c219770412ddbdfdbf176969024ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1cdcabed858fdb">
+		<description>(tg16)ShockMan (U) [T+Spa_lukas]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(tg16)ShockMan (U) [T+Spa_lukas].PCE" size="524288" crc="8bd9abe9" sha1="cdcabed858fdb85561cb751f9faba988cff5ef8a"/>
 			</dataarea>
 		</part>
 	</software>

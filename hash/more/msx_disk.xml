@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 125 -->
+<!-- Number of items in this list = 126 -->
 <softwarelist name="msx_disk" description="msx_disk loose roms">
 	<software name="msx5d68acb2b56ed">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[tr en][Micom BASIC]</description>
@@ -659,6 +659,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Munchy (19xx)(Tyfoon Software)(Nl).dsk" size="737280" crc="fab6d369" sha1="213ceab87d83310f8017e786a0cd8940a2aa50e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7a851bb58f7fe">
+		<description>mus1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="mus1.dsk" size="737280" crc="5eba5524" sha1="7a851bb58f7fe29140af9b5deb80f6e93b591d1d"/>
 			</dataarea>
 		</part>
 	</software>

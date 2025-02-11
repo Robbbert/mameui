@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 177 -->
+<!-- Number of items in this list = 194 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -1752,6 +1752,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="z10643c30a609354">
+		<description>Labels (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="105">
+				<rom name="Labels (19xx)(-).z80" size="105" crc="ed867e4d" sha1="643c30a609354ccddef6a63dc4350996fa5edb15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10959cfd341f46f">
+		<description>Labyrinth (19xx)(-)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16160">
+				<rom name="Labyrinth (19xx)(-)[a3].z80" size="16160" crc="442148aa" sha1="959cfd341f46f5ff7e92e1ab13490e939e4ef55a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10b776139559e6f">
+		<description>Labyrinth (19xx)(Wolfgang Rafelt)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16160">
+				<rom name="Labyrinth (19xx)(Wolfgang Rafelt)[a2].z80" size="16160" crc="9e005a31" sha1="b776139559e6f4a8850d680a504c4482290205e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10e32bb8fec28df">
+		<description>labyrinth</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3488">
+				<rom name="labyrinth.z80" size="3488" crc="0cca1b45" sha1="e32bb8fec28dfb63689423c93355be4c81d56f9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z106bd8ae9ef8ba7">
+		<description>labyrinth2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="16160">
+				<rom name="labyrinth2.z80" size="16160" crc="40bddf6a" sha1="6bd8ae9ef8ba752c56e3886e46d00d0df099343e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10e465f5b3fb293">
+		<description>Ladder v1.2 (1988)(Frank Herzog)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="28192">
+				<rom name="Ladder v1.2 (1988)(Frank Herzog)[a2].z80" size="28192" crc="b9fd9dd9" sha1="e465f5b3fb293639a86674ae4b4a7598807df317"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10b82f47a169b56">
+		<description>Ladder v1.2 (1988)(Frank Herzog)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="28192">
+				<rom name="Ladder v1.2 (1988)(Frank Herzog)[a3].z80" size="28192" crc="f05233de" sha1="b82f47a169b56ca14ff352e69a1f7a34083992d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z102bc613e08ed2d">
+		<description>Ladder v1.2 (1988)(Frank Herzog)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="28192">
+				<rom name="Ladder v1.2 (1988)(Frank Herzog)[a].z80" size="28192" crc="1e9e8a6f" sha1="2bc613e08ed2d88cea90630dfa7539fb33066626"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ea77641b8acb8">
+		<description>Last Chance, The (1987)(SCI - Dirk Strehle)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="6689">
+				<rom name="Last Chance, The (1987)(SCI - Dirk Strehle)[a2].z80" size="6689" crc="22617603" sha1="ea77641b8acb888fdab8a2564c237070844d3204"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="z105c94a3334d9b6">
 		<description>Last Chance, The (1987)(SCI - Dirk Strehle)[a]</description>
 		<year>????</year>
@@ -1762,6 +1852,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="z10a6b2d3431cabb">
+		<description>Layoutmaker I. (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3648">
+				<rom name="Layoutmaker I. (19xx)(-).z80" size="3648" crc="81dabc96" sha1="a6b2d3431cabbe3a6f9ae020f86dda92e113ecbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1097684a5c4d664">
+		<description>logikanalysator</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3744">
+				<rom name="logikanalysator.z80" size="3744" crc="797325a7" sha1="97684a5c4d6642e694bc31e0f528f3dc9404ae53"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="z10ca9f8f0381c56">
 		<description>Stringfeld_brotast</description>
 		<year>????</year>
@@ -1769,6 +1879,66 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="1568">
 				<rom name="Stringfeld_brotast.z80" size="1568" crc="22de390a" sha1="ca9f8f0381c565e8b299b564edae667cc4754087"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10e8e57c1127f3d">
+		<description>Z1013 Fig-Forth (19xx)(CCsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10016">
+				<rom name="Z1013 Fig-Forth (19xx)(CCsoft).z80" size="10016" crc="57df82be" sha1="e8e57c1127f3d732323dda3905c19d639d19ea20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104a6d5fad3fe8d">
+		<description>z1013_forth</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="10016">
+				<rom name="z1013_forth.z80" size="10016" crc="a3d790ae" sha1="4a6d5fad3fe8d5f1afdd113f652c4453c1267ac4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108dc977e05fd17">
+		<description>zaehlermodul</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="704">
+				<rom name="zaehlermodul.z80" size="704" crc="1b5544ec" sha1="8dc977e05fd1704909cdce89a1a48fb356be7f5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10294600e6121a2">
+		<description>zeicheneditor_32</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="608">
+				<rom name="zeicheneditor_32.z80" size="608" crc="c8f6e935" sha1="294600e6121a2e05528b0bd98fec01fba1c873bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10dc0d5a9576322">
+		<description>ZKM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2848">
+				<rom name="ZKM.z80" size="2848" crc="3b363e12" sha1="dc0d5a9576322969f356db363ed1b4f191191314"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100d7df0f3c7389">
+		<description>zs_konv_c.com</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="153">
+				<rom name="zs_konv_c.com.z80" size="153" crc="96900d7e" sha1="0d7df0f3c7389e3df2c20f14871d56ef74288315"/>
 			</dataarea>
 		</part>
 	</software>

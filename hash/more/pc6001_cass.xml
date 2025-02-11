@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 128 -->
+<!-- Number of items in this list = 133 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -1059,6 +1059,56 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="770">
 				<rom name="Kuroi Uma to Shiroi Uma {m1p2}.p6" size="770" crc="10208380" sha1="5b14b0fc70b201687e8983b54833a97b5b6154b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6093d75f164b4b5">
+		<description>Led Zone (6001)[del 1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="9727">
+				<rom name="Led Zone (6001)[del 1].cas" size="9727" crc="450a4b45" sha1="93d75f164b4b5a0f93d491ac00ea7fa2893a431e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60f42f2de67bd24">
+		<description>Lights Out (BASIC prototype) {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1413">
+				<rom name="Lights Out (BASIC prototype) {m1p1}.cas" size="1413" crc="4d92c3f7" sha1="f42f2de67bd24f4a679092dc8db5606ab7e11a38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p601f33cdcaa640f">
+		<description>Lights Out {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4504">
+				<rom name="Lights Out {m1p1}.cas" size="4504" crc="53319d38" sha1="1f33cdcaa640fbafb9c0e3a91b43393d53c94c20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p600d472ca72dc7d">
+		<description>Lode Runner {m2p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="72130">
+				<rom name="Lode Runner {m2p2}.p6" size="72130" crc="454d46a2" sha1="0d472ca72dc7d2d3dfb41b8d74ff790963d4317d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p606e019c5cb25c9">
+		<description>Youbac! {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3647">
+				<rom name="Youbac! {m1p2}.p6" size="3647" crc="0478904d" sha1="6e019c5cb25c943ccbb386a732e97261ba90d786"/>
 			</dataarea>
 		</part>
 	</software>

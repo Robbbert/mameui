@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 640 -->
+<!-- Number of items in this list = 647 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -642,6 +642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx23aab44125e56">
+		<description>Beep v1.2 (2025)(Breinthee)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Beep v1.2 (2025)(Breinthee).rom" size="753664" crc="c04814ce" sha1="23aab44125e5655ef4dab41ea412d41e9c122805"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx3e219e8205a3a">
 		<description>betiled</description>
 		<year>????</year>
@@ -649,6 +659,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="betiled.rom" size="49152" crc="23b30876" sha1="3e219e8205a3a4867c307601683d96bc53ac4c8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa88d2ab90d54c">
+		<description>Binary Battle (2025)(Haplo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Binary Battle (2025)(Haplo).rom" size="32768" crc="92be4f86" sha1="a88d2ab90d54c6ff33ef925c4bf49fd0ec8117ac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1542,6 +1562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx7a7cc862c5380">
+		<description>Doomlings (2025)(Totta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Doomlings (2025)(Totta).rom" size="262144" crc="90e25aa9" sha1="7a7cc862c53807e97111a2121e545b1f5e05dd85"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx83fce8c3e4843">
 		<description>Doordoor (1987)(Enix)[cr Unicorn]</description>
 		<year>????</year>
@@ -2289,6 +2319,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Grazers v1.2 (2024)(Arturs Grebstelis).rom" size="32768" crc="5670651f" sha1="4a96c5d525a3511fc7fa694f0bc6a506869e1abe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx194703efafe21">
+		<description>Great New World, A (2025)(Phaze101)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Great New World, A (2025)(Phaze101).rom" size="49152" crc="a5759b68" sha1="194703efafe211a3e0b87eb561f610ad1fcda256"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3612,6 +3652,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx2d0a486e4a69f">
+		<description>Molotov EN (2025)(joesg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Molotov EN (2025)(joesg).rom" size="32768" crc="7a1e30ec" sha1="2d0a486e4a69f86d266a92e48ced6d1d7016765f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9239c4769666a">
+		<description>Molotov ES (2025)(joesg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Molotov ES (2025)(joesg).rom" size="32768" crc="fc4d1d90" sha1="9239c4769666a11754a3cf8ba6a976be0bc32d1a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx80a8f2c4b63a9">
 		<description>Monster On The Run v1.0 (2021)(Paolo Borzini)</description>
 		<year>????</year>
@@ -4599,6 +4659,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="ROM_Hunter_Mk2.rom" size="8192" crc="ee80a832" sha1="77b886b3ed4048a099099d6b9b0d4cca3a05dce1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx3d7a982b17c5f">
+		<description>Room 5 v1.2 (2025)(MO5.com)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Room 5 v1.2 (2025)(MO5.com).rom" size="49152" crc="41660ba5" sha1="3d7a982b17c5fa89fb401c1da4beb010117babb7"/>
 			</dataarea>
 		</part>
 	</software>

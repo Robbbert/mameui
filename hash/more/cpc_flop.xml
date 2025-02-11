@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7675 -->
+<!-- Number of items in this list = 7679 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -18612,6 +18612,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc1890ad236a892">
+		<description>Deepspace_CPC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Deepspace_CPC.dsk" size="194816" crc="8de4ad4b" sha1="1890ad236a892c33029f0ffa11ef1a73ae50c9d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc86cdd76239c3b">
+		<description>Deepspace_CPC_160x200</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Deepspace_CPC_160x200.dsk" size="194816" crc="675e71e9" sha1="86cdd76239c3ba7ea096be1393b0e9a22e70af4a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc4547bb34139f5">
 		<description>DeepStrike_XOR</description>
 		<year>????</year>
@@ -28279,6 +28299,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Eliminator_Jupiter.dsk" size="194816" crc="69564d19" sha1="75717a8af1c0bcba1463f9170098aa3cc6df10c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcae9bc63a6cfae">
+		<description>Elite Planet Browser_cpc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Elite Planet Browser_cpc.dsk" size="194816" crc="f0c3e78f" sha1="ae9bc63a6cfae1df2f1d8ea7e30033547a097aa5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44622,6 +44652,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc047d34f5aa1bb">
+		<description>MastermindRK_cpc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="MastermindRK_cpc.dsk" size="194816" crc="4ada6d91" sha1="047d34f5aa1bb7c5664b82f8228bfb8cd1fc7261"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcec1de573e3728">
+		<description>MastermindRK_pcw40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="MastermindRK_pcw40.dsk" size="194816" crc="ca92851c" sha1="ec1de573e37289b29ab69c6319f1427206d54107"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc1b0147ff3c0b2">
 		<description>MastersoftheUniverse</description>
 		<year>????</year>
@@ -47049,16 +47099,6 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="MM11.dsk" size="194816" crc="340e0b7e" sha1="66101d02b9199414e6fdb31eecce769947c54ab9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cpcec1de573e3728">
-		<description>mm_pcw40</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3">
-			<dataarea name="flop" size="194816">
-				<rom name="mm_pcw40.dsk" size="194816" crc="ca92851c" sha1="ec1de573e37289b29ab69c6319f1427206d54107"/>
 			</dataarea>
 		</part>
 	</software>
