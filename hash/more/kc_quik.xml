@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 327 -->
+<!-- Number of items in this list = 343 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -3119,6 +3119,166 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="10880">
 				<rom name="Susi (19xx)(-)[a][4].kcc" size="10880" crc="5f0a8071" sha1="08328df26836b358b9bf96264b570f53c711cbdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8382dec90085e6">
+		<description>Tag (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="Tag (19xx)(-)[4].kcc" size="1152" crc="e7713887" sha1="382dec90085e687162c800806a5bf9149d0f940a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89d645da13ab55">
+		<description>Tape v1.4.6 (1988)(T. Adler)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="Tape v1.4.6 (1988)(T. Adler)[4].kcc" size="1664" crc="1b932598" sha1="9d645da13ab55e43a34d31390547824b7affc8b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc81716f6ddf99e3">
+		<description>Tape-Disk v1.0 (1989)(Stefan Papelka)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2432">
+				<rom name="Tape-Disk v1.0 (1989)(Stefan Papelka)[a2][4].kcc" size="2432" crc="164da8c0" sha1="1716f6ddf99e3bddc4ff0fb5b7bbc3e8a2691419"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc84535d378d7874">
+		<description>Tape-Disk v1.0 (1989)(Stefan Papelka)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2432">
+				<rom name="Tape-Disk v1.0 (1989)(Stefan Papelka)[a][4].kcc" size="2432" crc="10ebe11c" sha1="4535d378d78748719289b27f37d64c10f4c85a59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8324fad029d43c">
+		<description>TAR-Game (1987)(Ellwanger &amp; Schmidt)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="4864">
+				<rom name="TAR-Game (1987)(Ellwanger &amp; Schmidt)[4].kcc" size="4864" crc="7c3f9928" sha1="324fad029d43cd9133545d83e180726f6f575476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8b6d2d4bdaa856">
+		<description>Tennis (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="24192">
+				<rom name="Tennis (19xx)(-)[4].kcc" size="24192" crc="adbaf237" sha1="b6d2d4bdaa856f5b36db6415be1ec0266a44f4ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89a46ac27a0708">
+		<description>Tetris (1989)(-)(en)[cr FB &amp; EN-Soft][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="6400">
+				<rom name="Tetris (1989)(-)(en)[cr FB &amp; EN-Soft][3].kcc" size="6400" crc="ea568b74" sha1="9a46ac27a0708d3e7961b2f26185f05d1316dbbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8dbba1cfd499d6">
+		<description>Tetris (1990)(Kurbelpower Megasoft)(en)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12416">
+				<rom name="Tetris (1990)(Kurbelpower Megasoft)(en)[a2][4].kcc" size="12416" crc="0d469426" sha1="dbba1cfd499d6b4b842c87651b7994f71f2062f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8f6d06b8ba5e0b">
+		<description>Tetris (1990)(Kurbelpower Megasoft)(en)[a][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12416">
+				<rom name="Tetris (1990)(Kurbelpower Megasoft)(en)[a][4].kcc" size="12416" crc="dc74f2d4" sha1="f6d06b8ba5e0bfbc9a673b45800240f504721225"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc81a1934ac7200d">
+		<description>Teufel (19xx)(RJ-Soft)[b][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="14208">
+				<rom name="Teufel (19xx)(RJ-Soft)[b][4].kcc" size="14208" crc="53979d87" sha1="1a1934ac7200dcb896710f35072afcac23d79674"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc89fa5cf35d4f59">
+		<description>Texpro v1.2 (1988)(A. Zerbst)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="7808">
+				<rom name="Texpro v1.2 (1988)(A. Zerbst)[3].kcc" size="7808" crc="cf9a66ea" sha1="9fa5cf35d4f596738c9ac9c859927cb8ec22166b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc88ecf8bb528d56">
+		<description>Textprogramm (19xx)(W. Seibt)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="16000">
+				<rom name="Textprogramm (19xx)(W. Seibt)[3].kcc" size="16000" crc="2a5b2938" sha1="8ecf8bb528d561cd8c5ae6ec8b96ee2bdbd03e12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc829c40b51de1bb">
+		<description>Think About (19xx)(Thomas Wolf)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="11648">
+				<rom name="Think About (19xx)(Thomas Wolf)[4].kcc" size="11648" crc="943a2a0d" sha1="29c40b51de1bba2e9b0889dd4399b591fcb4be06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc86130831cfc840">
+		<description>Traktor (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3200">
+				<rom name="Traktor (19xx)(-)[4].kcc" size="3200" crc="fac7dbfc" sha1="6130831cfc8402d2839260fd3a247dab2c8445ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8a6697bf93e7fa">
+		<description>Turm von Hanoi (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2944">
+				<rom name="Turm von Hanoi (19xx)(-)[4].kcc" size="2944" crc="ce488c99" sha1="a6697bf93e7fa9feae6f6b650dec87372fa5bcd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bc111deac54b4">
+		<description>Turm von Hanoi (19xx)(VEB Robotron Dresten - Wolfgang Maass)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5120">
+				<rom name="Turm von Hanoi (19xx)(VEB Robotron Dresten - Wolfgang Maass)[4].kcc" size="5120" crc="d53417cb" sha1="bc111deac54b4eb64bc69ae361ca15d6ac8bc340"/>
 			</dataarea>
 		</part>
 	</software>

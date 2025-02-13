@@ -2997,7 +2997,7 @@ static void set_speed(running_machine &machine, int speed)
 //============================================================
 //  win_toggle_menubar
 //============================================================
-#if 0
+
 static void win_toggle_menubar(void)
 {
 	LONG width_diff = 0;
@@ -3047,7 +3047,7 @@ static void win_toggle_menubar(void)
 		RedrawWindow(hwnd, NULL, NULL, 0);
 	}
 }
-#endif
+
 
 
 //============================================================
@@ -3373,7 +3373,7 @@ static bool invoke_command(HWND wnd, UINT command)
 			break;
 
 		case ID_FILE_TOGGLEMENUBAR:
-			//win_toggle_menubar();
+			win_toggle_menubar();
 			break;
 
 		case ID_FRAMESKIP_AUTO:
