@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 741 -->
+<!-- Number of items in this list = 767 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -4682,6 +4682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x6803f451c9c5bd0">
+		<description>Hakobune Ni Notte (1991)(Moai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Hakobune Ni Notte (1991)(Moai).dim" size="1261824" crc="b49ef3d0" sha1="03f451c9c5bd0c38e72acbbacb51e3125c4aebcb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x6834b4f16b62ce8">
 		<description>Hard Battle</description>
 		<year>????</year>
@@ -4712,6 +4722,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68f6e118b67988d">
+		<description>Hatchake Ayayo-san III (1991)(Hard)(A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Hatchake Ayayo-san III (1991)(Hard)(A).hdm" size="1261568" crc="eda5a626" sha1="f6e118b67988d2581f2b891cbd6af45a9c483675"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6894ccb68ab5f2c">
+		<description>Hatchake Ayayo-san III (1991)(Hard)(B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Hatchake Ayayo-san III (1991)(Hard)(B).hdm" size="1261568" crc="7e42f7da" sha1="94ccb68ab5f2cc5b3d85d768935b2c1628aef063"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x686d20813ca640b">
 		<description>Hatchake Ayayo-san Pro-68K</description>
 		<year>????</year>
@@ -4719,6 +4749,86 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Hatchake Ayayo-san Pro-68K.hdm" size="1261568" crc="3940dc85" sha1="6d20813ca640bc6aba8e905feb6a67a9fb9cba85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68b3493dd56419c">
+		<description>Hatenkou (1998)(Haiteidoradorazu)(Disk 1 of 2)(Disk 0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Hatenkou (1998)(Haiteidoradorazu)(Disk 1 of 2)(Disk 0).dim" size="1261824" crc="275eeae2" sha1="b3493dd56419c903d80c51024ab982cbad9fe798"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682eccb65317c3b">
+		<description>Hellhound (1997)(Breakthrough)[Full Set]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Hellhound (1997)(Breakthrough)[Full Set].hdm" size="1261568" crc="9166d0d5" sha1="2eccb65317c3b60008669b1b5b072720f91c931e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c49e6ccdbddcf">
+		<description>Hiroshi (19xx)(Rats)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Hiroshi (19xx)(Rats).dim" size="1261824" crc="ee2cba5a" sha1="c49e6ccdbddcf19ae631733054b2321bdb3e6bb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x683b84cecff5ce0">
+		<description>Hiroshi II (1998)(Rats)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Hiroshi II (1998)(Rats).dim" size="1261824" crc="fece3676" sha1="3b84cecff5ce0bf975b4a8763139aa7a239f31a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6825c162e07ce09">
+		<description>Hitomi Zaka (19xx)(Higashikaihotsujuku)(Disk 1 of 2)(Disk A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Hitomi Zaka (19xx)(Higashikaihotsujuku)(Disk 1 of 2)(Disk A).dim" size="1261824" crc="513bb288" sha1="25c162e07ce094ceed000377319fc0f226177f9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c0bc9fc71a7b6">
+		<description>Hitomi Zaka (19xx)(Higashikaihotsujuku)(Disk 2 of 2)(Disk B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Hitomi Zaka (19xx)(Higashikaihotsujuku)(Disk 2 of 2)(Disk B).dim" size="1261824" crc="1763d29b" sha1="c0bc9fc71a7b674fe9aadaa1ed319a475fef6098"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x687f46571c3fa5e">
+		<description>Hoippuru X68K (1995)(Pastel Hope)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Hoippuru X68K (1995)(Pastel Hope).dim" size="1261824" crc="f6fd83b4" sha1="7f46571c3fa5ef81935d46f673e0230c922d15b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x686e151e87d8ca7">
+		<description>Honyaku Helper Zurukamashi (Henshin disk) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Honyaku Helper Zurukamashi (Henshin disk) (2).hdm" size="1261568" crc="ff9f098b" sha1="6e151e87d8ca7ae13b61c737e6564af6918dc708"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4732,6 +4842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68219c93e295f3b">
+		<description>Honyaku Helper Zurukamashi (Jishi Jr disk) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Honyaku Helper Zurukamashi (Jishi Jr disk) (2).hdm" size="1261568" crc="ab5fad1e" sha1="219c93e295f3b16096b270ab2d77db5cae85e0d4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x6841b405672c6fa">
 		<description>Honyaku Helper Zurukamashi (Jishi Jr disk)</description>
 		<year>????</year>
@@ -4739,6 +4859,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Honyaku Helper Zurukamashi (Jishi Jr disk).hdm" size="1261568" crc="82bc46b9" sha1="41b405672c6fa5645b65388514dbdff6ba420e79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68149a3d5d268f5">
+		<description>Honyaku Helper Zurukamashi (Jisho disk) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Honyaku Helper Zurukamashi (Jisho disk) (2).hdm" size="1261568" crc="64376138" sha1="149a3d5d268f5fba7cff65b79aad80545ffe03eb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4772,6 +4902,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68db300865b6354">
+		<description>Houseki Tsukai Jewel Master (199x)(TFS - Nekono Kokoubou)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="Houseki Tsukai Jewel Master (199x)(TFS - Nekono Kokoubou).dim" size="1261824" crc="3627791b" sha1="db300865b6354e6a523607904ffa2622173bb48d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68037c39dd7abcf">
+		<description>Hyper-UD (Sample disk) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Hyper-UD (Sample disk) (2).hdm" size="1261568" crc="4416859f" sha1="037c39dd7abcf2fb6647f428861fa28bb3031db1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68121a8088cc03f">
 		<description>Hyper-UD (Sample disk)</description>
 		<year>????</year>
@@ -4792,13 +4942,123 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="x6850466ba1613f4">
+	<software name="x68469d57917ab75">
+		<description>Hyperword - Hypertext Wapuro Pro-68K (Disk 1) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Hyperword - Hypertext Wapuro Pro-68K (Disk 1) (2).hdm" size="1261568" crc="dd8cc475" sha1="469d57917ab7572c907f0fae3c4081b86e7e343f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6854e8df43624ab">
 		<description>Hyperword - Hypertext Wapuro Pro-68K (Disk 1)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
-				<rom name="Hyperword - Hypertext Wapuro Pro-68K (Disk 1).hdm" size="1261568" crc="7c424670" sha1="50466ba1613f4df0c43f023ea7f5348fc02c9769"/>
+				<rom name="Hyperword - Hypertext Wapuro Pro-68K (Disk 1).hdm" size="1261568" crc="25f93be3" sha1="54e8df43624ab8d807cb882d332fce1b538c5467"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6802047064be4a3">
+		<description>Hyperword - Hypertext Wapuro Pro-68K (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Hyperword - Hypertext Wapuro Pro-68K (Disk 2).hdm" size="1261568" crc="f050c180" sha1="02047064be4a38917c0024059c45b9a0eedf1c74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6842a079db4f1b6">
+		<description>Illusion City (Disk 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Illusion City (Disk 1).hdm" size="1261568" crc="8f6a0781" sha1="42a079db4f1b67aff8230ddf726f2edc0aab50ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68aa0bef98d739a">
+		<description>Illusion City (Disk 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Illusion City (Disk 2).hdm" size="1261568" crc="eec914dc" sha1="aa0bef98d739ac448d94141ee23fb463b479f0de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c6d007d70d452">
+		<description>Illusion City (Disk 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Illusion City (Disk 3).hdm" size="1261568" crc="95023c92" sha1="c6d007d70d4524e77cdcbecd777da90af1fb9842"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688b16c3fc984b7">
+		<description>Illusion City (Disk 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Illusion City (Disk 4).hdm" size="1261568" crc="4aa7a3fe" sha1="8b16c3fc984b768f4de7a7bc6f948f67d5d4b3b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68d67af7543e849">
+		<description>Illusion City (Disk 5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Illusion City (Disk 5).hdm" size="1261568" crc="9a38fa6c" sha1="d67af7543e8495c38cdfb0ddba39acbf11b59bbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688c95b6f07701f">
+		<description>Illusion City (Disk 6)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Illusion City (Disk 6).hdm" size="1261568" crc="054f06dc" sha1="8c95b6f07701f378e2e6c7fde25048b46937137a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6899c836f6e0b65">
+		<description>Illusion City (Disk 7)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Illusion City (Disk 7).hdm" size="1261568" crc="d92437de" sha1="99c836f6e0b65271a43d8c0dc3a75d56dd6749c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68c20ceb0da3f60">
+		<description>Illusion City (User disk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Illusion City (User disk).hdm" size="1261568" crc="1bd02fe7" sha1="c20ceb0da3f608d44948280922426e0127c39272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6881aa8327f11cf">
+		<description>Intro Pro 68K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Intro Pro 68K.hdm" size="1261568" crc="418280a0" sha1="81aa8327f11cfd56038cba52cb9c89e4ba11ab54"/>
 			</dataarea>
 		</part>
 	</software>

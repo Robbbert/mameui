@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 240 -->
+<!-- Number of items in this list = 255 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -2292,6 +2292,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="z108cca0f15ef577">
+		<description>Objektcodeeditor v4.0 (1987)(N. Hildebrandt &amp; U. Gast)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7712">
+				<rom name="Objektcodeeditor v4.0 (1987)(N. Hildebrandt &amp; U. Gast)[a2].z80" size="7712" crc="72d36eee" sha1="8cca0f15ef577ca894500fcaf505ee1c53cbf29a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10fd98fa48e5c52">
+		<description>Objektcodeeditor v4.0 (1987)(N. Hildebrandt &amp; U. Gast)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7712">
+				<rom name="Objektcodeeditor v4.0 (1987)(N. Hildebrandt &amp; U. Gast)[a].z80" size="7712" crc="302bea49" sha1="fd98fa48e5c527a56a64e18a6df4a0af212c5908"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1048c1b0c96e6d8">
+		<description>Objektcodeeditor v4.1 (1987)(N. Hildebrandt &amp; U. Gast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7712">
+				<rom name="Objektcodeeditor v4.1 (1987)(N. Hildebrandt &amp; U. Gast).z80" size="7712" crc="752000dc" sha1="48c1b0c96e6d868272af32ca8a35b7e9ddd795ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10dde0fa18e9da2">
+		<description>Ohne Fleis kein Preis (19xx)(-)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="672">
+				<rom name="Ohne Fleis kein Preis (19xx)(-)[b].z80" size="672" crc="ae7a8c6e" sha1="dde0fa18e9da29eac9d3f78472af00df6897adb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10660fbf71f2e24">
+		<description>ohne_fleiss_k_pr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="672">
+				<rom name="ohne_fleiss_k_pr.z80" size="672" crc="6335d22d" sha1="660fbf71f2e24fbac981541791efa99bee5fe737"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10c1f46944dd1aa">
+		<description>Olidat v2.3 (19xx)(Y24KG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2080">
+				<rom name="Olidat v2.3 (19xx)(Y24KG).z80" size="2080" crc="cb625ff4" sha1="c1f46944dd1aa88f781dda2433f7f07d3399bfa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z107b13d2ca5a4f0">
+		<description>Othello (19xx)(-)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3392">
+				<rom name="Othello (19xx)(-)[a2].z80" size="3392" crc="964871cc" sha1="7b13d2ca5a4f05e8565817aec1b36cf18ba78c5d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="z10ca9f8f0381c56">
 		<description>Stringfeld_brotast</description>
 		<year>????</year>
@@ -2299,6 +2369,86 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="1568">
 				<rom name="Stringfeld_brotast.z80" size="1568" crc="22de390a" sha1="ca9f8f0381c565e8b299b564edae667cc4754087"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10c40f8266419ed">
+		<description>Vampi (1989)(Stinner)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="5152">
+				<rom name="Vampi (1989)(Stinner)[a2].z80" size="5152" crc="3cc44711" sha1="c40f8266419eda59d78d54c9bc6b8d8d50144b09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z106659c9f653c68">
+		<description>Vampi (1989)(Stinner)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="5152">
+				<rom name="Vampi (1989)(Stinner)[a].z80" size="5152" crc="8193ab79" sha1="6659c9f653c6827d3b16392bb3e7b632688d76a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100c917aff2dc65">
+		<description>Vampi (1989)(Stinner)[Joystick]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="5216">
+				<rom name="Vampi (1989)(Stinner)[Joystick].z80" size="5216" crc="66ff6b06" sha1="0c917aff2dc653f68d9c49a35bc164343aeab0c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10326ef3dea27fc">
+		<description>Vampi (19xx)(NH)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3584">
+				<rom name="Vampi (19xx)(NH)[a2].z80" size="3584" crc="e54eb261" sha1="326ef3dea27fc25b13ed9067c1f009e5a1a87442"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1057ed058673fdc">
+		<description>Vampi (19xx)(NH)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3584">
+				<rom name="Vampi (19xx)(NH)[a].z80" size="3584" crc="e22b3dae" sha1="57ed058673fdc2522eef61e918920a13a9c527c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z100db5138a1981c">
+		<description>verschiebepr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1088">
+				<rom name="verschiebepr.z80" size="1088" crc="609b2c47" sha1="0db5138a1981c50150da296bba4d7a66092f8ae8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f5f2d2e77838b">
+		<description>vogeljagd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="3520">
+				<rom name="vogeljagd.z80" size="3520" crc="f127ee0f" sha1="f5f2d2e77838bc21993fa9710ab1f32310183fe3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d6f083257458d">
+		<description>Voice Dice (19xx)(-)[memory dump]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="14432">
+				<rom name="Voice Dice (19xx)(-)[memory dump].z80" size="14432" crc="ed8b28bc" sha1="d6f083257458dd4952ace48f6374d7af5230e6ea"/>
 			</dataarea>
 		</part>
 	</software>

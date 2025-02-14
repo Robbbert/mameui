@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 343 -->
+<!-- Number of items in this list = 350 -->
 <softwarelist name="kc_quik" description="kc_quik loose roms">
 	<software name="kc8c9f5f42b3b63b">
 		<description>3 Spiele (1988)(Holger Knablowski)[3]</description>
@@ -3279,6 +3279,76 @@
 		<part name="quik" interface="kc_quik">
 			<dataarea name="quik" size="5120">
 				<rom name="Turm von Hanoi (19xx)(VEB Robotron Dresten - Wolfgang Maass)[4].kcc" size="5120" crc="d53417cb" sha1="bc111deac54b4eb64bc69ae361ca15d6ac8bc340"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bcd21dc840dd0">
+		<description>U-Jagt v1.2 (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="3328">
+				<rom name="U-Jagt v1.2 (19xx)(-)[3].kcc" size="3328" crc="97639d12" sha1="bcd21dc840dd09b2962223f32ae5fbfd9bb06a74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc801ee28171d1e5">
+		<description>Utopic (1987)(Sven Jungnickel)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="5632">
+				<rom name="Utopic (1987)(Sven Jungnickel)[4].kcc" size="5632" crc="813da631" sha1="01ee28171d1e5611c32bf2f311524db442eb847f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc87dddfef117d0c">
+		<description>V24 Selbsttest (19xx)(-)[3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="896">
+				<rom name="V24 Selbsttest (19xx)(-)[3].kcc" size="896" crc="a2f4fe58" sha1="7dddfef117d0c048a2fde40954225683bc087d09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc819ef09ab30da5">
+		<description>Vegas Spielautomat (1985)(B. Boettner)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="Vegas Spielautomat (1985)(B. Boettner)[4].kcc" size="2176" crc="ecba7073" sha1="19ef09ab30da5e6d28494006f67f65454e85ed58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8ddb1be4755692">
+		<description>Video R Chess-Master (19xx)(-)[a2][4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12928">
+				<rom name="Video R Chess-Master (19xx)(-)[a2][4].kcc" size="12928" crc="b7e03d1a" sha1="ddb1be47556924ccf9ddeb3757732578a49cda96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8d56515f4683ba">
+		<description>Video R Chess-Master (19xx)(-)[a][3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="12928">
+				<rom name="Video R Chess-Master (19xx)(-)[a][3].kcc" size="12928" crc="3d2ce43c" sha1="d56515f4683ba60ac3869d54653edc91d26e602b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kc8bd5da649cb50e">
+		<description>Vier Gewinnt (19xx)(-)[4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kc_quik">
+			<dataarea name="quik" size="9600">
+				<rom name="Vier Gewinnt (19xx)(-)[4].kcc" size="9600" crc="46b9e8ef" sha1="bd5da649cb50ed58755dedd62350fe3064738f58"/>
 			</dataarea>
 		</part>
 	</software>
