@@ -16,6 +16,7 @@ public:
 
 	void control_a_w(uint8_t data);
 	void control_b_w(uint8_t data);
+	void pleiadsgmp_a_w(uint8_t data);
 
 protected:
 	// device-level overrides

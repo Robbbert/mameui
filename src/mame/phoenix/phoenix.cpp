@@ -67,12 +67,13 @@ static const char *const pleiads_samples[] =
 
 void phoenix_state::pleiads_fire(uint8_t data)
 {
-	m_samples->start(0, 0);
+	if (data)
+		m_samples->start(0, 0);
 }
 
 void phoenix_state::phoenix_memory_map(address_map &map)
 {
-	map(0x0000, 0x3fff).rom();
+	map(0x0000, 0x3fff).rom().region("maincpu",0);
 	map(0x4000, 0x4fff).bankr("bank1").w(FUNC(phoenix_state::phoenix_videoram_w)); // 2 pages selected by bit 0 of the video register
 	map(0x5000, 0x53ff).w(FUNC(phoenix_state::phoenix_videoreg_w));
 	map(0x5800, 0x5bff).w(FUNC(phoenix_state::phoenix_scroll_w));
@@ -80,6 +81,12 @@ void phoenix_state::phoenix_memory_map(address_map &map)
 	map(0x6800, 0x6bff).w("cust", FUNC(phoenix_sound_device::control_b_w));
 	map(0x7000, 0x73ff).portr("IN0");                            // IN0 or IN1
 	map(0x7800, 0x7bff).portr("DSW0");                           // DSW
+}
+
+void phoenix_state::pleiadsgmp_memory_map(address_map &map)
+{
+	phoenix_memory_map(map);
+	map(0x6000, 0x63ff).w("cust", FUNC(phoenix_sound_device::pleiadsgmp_a_w));
 }
 
 void phoenix_state::pleiads_memory_map(address_map &map)
@@ -460,12 +467,8 @@ static GFXDECODE_START( gfx_pleiads )
 GFXDECODE_END
 
 
-void phoenix_state::phoenix(machine_config &config)
+void phoenix_state::phoenix_base(machine_config &config)
 {
-	// basic machine hardware
-	I8085A(config, m_maincpu, CPU_CLOCK);  // 2.75 MHz
-	m_maincpu->set_addrmap(AS_PROGRAM, &phoenix_state::phoenix_memory_map);
-
 	// video hardware
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_raw(PIXEL_CLOCK, HTOTAL, HBEND, HBSTART, VTOTAL, VBEND, VBSTART);
@@ -489,13 +492,41 @@ void phoenix_state::phoenix(machine_config &config)
 	DISCRETE(config, "discrete", 120000, phoenix_discrete).add_route(ALL_OUTPUTS, "mono", 0.6);
 }
 
+void phoenix_state::phoenix(machine_config &config)
+{
+	// basic machine hardware
+	I8085A(config, m_maincpu, CPU_CLOCK);  // 2.75 MHz
+	m_maincpu->set_addrmap(AS_PROGRAM, &phoenix_state::phoenix_memory_map);
+
+	phoenix_base(config);
+}
+
+void phoenix_state::pleiadsgmp(machine_config &config)
+{
+	// basic machine hardware
+	phoenix(config);
+	m_maincpu->set_addrmap(AS_PROGRAM, &phoenix_state::pleiadsgmp_memory_map);
+}
+
+void phoenix_state::capitol(machine_config &config)
+{
+	// basic machine hardware
+	phoenix(config);
+	m_maincpu->out_sod_func().set(FUNC(phoenix_state::pleiads_fire));
+
+	SAMPLES(config, m_samples);
+	m_samples->set_channels(1);
+	m_samples->set_samples_names(pleiads_samples);
+	m_samples->add_route(ALL_OUTPUTS, "mono", 0.5);
+}
+
 void phoenix_state::pleiads(machine_config &config)
 {
 	phoenix(config);
 
 	// basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &phoenix_state::pleiads_memory_map);
-	//m_maincpu->out_sod_func().set(FUNC(phoenix_state::pleiads_fire));
+	m_maincpu->out_sod_func().set(FUNC(phoenix_state::pleiads_fire));
 
 	// video hardware
 	m_gfxdecode->set_info(gfx_pleiads);
@@ -558,14 +589,11 @@ void phoenix_state::survival(machine_config &config)
 // Uses a Z80
 void phoenix_state::condor(machine_config &config)
 {
-	phoenix(config);
-
 	// basic machine hardware
 	// FIXME: Verify clock. This is most likely 11MHz/2
-	Z80(config.replace(), m_maincpu, 11000000/4);    // 2.75 MHz???
-	m_maincpu->set_addrmap(AS_PROGRAM, &phoenix_state::phoenix_memory_map);
-	//Z80(config, m_z80cpu, 11000000/4);    // 2.75 MHz???
-	//m_z80cpu->set_addrmap(AS_PROGRAM, &phoenix_state::phoenix_memory_map);
+	Z80(config, m_z80cpu, 11000000/4);    // 2.75 MHz???
+	m_z80cpu->set_addrmap(AS_PROGRAM, &phoenix_state::phoenix_memory_map);
+	phoenix_base(config);
 }
 
 
@@ -1807,13 +1835,13 @@ GAME( 1981, pleiads,    0,       pleiads,  pleiads,  phoenix_state, empty_init, 
 GAME( 1981, pleiadsb2,  pleiads, pleiads,  pleiads,  phoenix_state, empty_init,           ROT90, "bootleg (ESG)",                          "Pleiads (bootleg set 2)",                                    MACHINE_SUPPORTS_SAVE )
 GAME( 1981, pleiadbl,   pleiads, pleiads,  pleiadbl, phoenix_state, empty_init,           ROT90, "bootleg",                                "Pleiads (bootleg set 1)",                                    MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
 GAME( 1981, pleiadce,   pleiads, pleiads,  pleiadce, phoenix_state, empty_init,           ROT90, "Tehkan (Centuri license)",               "Pleiads (Centuri)",                                          MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
-GAME( 1981, pleiadsgmp, pleiads, phoenix,  pleiadce, phoenix_state, empty_init,           ROT90, "bootleg (GMP Games)",                    "Pleiads (GMP Games)",                                        MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
+GAME( 1981, pleiadsgmp, pleiads, pleiadsgmp,  pleiadce, phoenix_state, empty_init,           ROT90, "bootleg (GMP Games)",                    "Pleiads (GMP Games)",                                        MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
 GAME( 1981, pleiadsi,   pleiads, pleiads,  pleiadce, phoenix_state, empty_init,           ROT90, "bootleg (Irecsa)",                       "Pleiads (Irecsa, set 1)",                                    MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
 GAME( 1981, pleiadsia,  pleiads, pleiads,  pleiadce, phoenix_state, empty_init,           ROT90, "bootleg (Irecsa)",                       "Pleiads (Irecsa, set 2)",                                    MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
-GAME( 1981, pleiadsn,   pleiads, phoenix,  pleiadce, phoenix_state, empty_init,           ROT90, "bootleg (Niemer S.A.)",                  "Pleiads (Niemer S.A.)",                                      MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
-GAME( 1981, pleiadss,   pleiads, phoenix,  pleiadce, phoenix_state, empty_init,           ROT90, "bootleg (Famaresa)",                     "Pleiads (Famaresa, Spanish bootleg)",                        MACHINE_SUPPORTS_SAVE ) // colours match PCB (but are ugly)
+GAME( 1981, pleiadsn,   pleiads, capitol,  pleiadce, phoenix_state, empty_init,           ROT90, "bootleg (Niemer S.A.)",                  "Pleiads (Niemer S.A.)",                                      MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
+GAME( 1981, pleiadss,   pleiads, capitol,  pleiadce, phoenix_state, empty_init,           ROT90, "bootleg (Famaresa)",                     "Pleiads (Famaresa, Spanish bootleg)",                        MACHINE_SUPPORTS_SAVE ) // colours match PCB (but are ugly)
 GAME( 1981, cityatta,   pleiads, pleiads,  cityatta, phoenix_state, empty_init,           ROT90, "bootleg (Petaco S.A.)",                  "City Attack (Petaco S.A., bootleg of Pleiads)",              MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE ) // Colors are bad, as seen on the screenshot from https://www.recreativas.org/city-attack-454-petaco
-GAME( 1981, capitol,    pleiads, phoenix,  capitol,  phoenix_state, empty_init,           ROT90, "bootleg? (Universal Video Spiel)",       "Capitol",                                                    MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
+GAME( 1981, capitol,    pleiads, capitol,  capitol,  phoenix_state, empty_init,           ROT90, "bootleg? (Universal Video Spiel)",       "Capitol",                                                    MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
 
   /*** Others ***/
 GAME( 1982, survival,   0,       survival, survival, phoenix_state, empty_init,           ROT90, "Rock-Ola",                               "Survival",                                                   MACHINE_SUPPORTS_SAVE ) // colors match PCB

@@ -494,6 +494,14 @@ DISCRETE_SOUND_START(phoenix_discrete)
 	DISCRETE_OUTPUT(NODE_90, 1)
 DISCRETE_SOUND_END
 
+void phoenix_sound_device::pleiadsgmp_a_w(uint8_t data)
+{
+	m_discrete->write(PHOENIX_EFFECT_2_DATA, data & 0x0f);
+	m_discrete->write(PHOENIX_EFFECT_2_FREQ, (data & 0x30) >> 4);
+	m_channel->update();
+	m_sound_latch_a = data ^ 0x40;
+}
+
 void phoenix_sound_device::control_a_w(uint8_t data)
 {
 	m_discrete->write(PHOENIX_EFFECT_2_DATA, data & 0x0f);

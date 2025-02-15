@@ -329,7 +329,7 @@ inline int pleiads_sound_device::tone23(int samplerate)
 		m_tone3.counter -= m_tone3.max_freq*1/3 + m_tone3.max_freq*2/3 * level / 33768;
 		if( m_tone3.counter <= 0 )
 		{
-			int n = (-m_tone2.counter / samplerate) + 1;
+			int n = (-m_tone3.counter / samplerate) + 1;
 			m_tone3.counter += samplerate;
 			m_tone3.output = (m_tone3.output + n) & 1;
 		}
