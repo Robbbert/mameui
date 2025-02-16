@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 226 -->
+<!-- Number of items in this list = 227 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -2129,6 +2129,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16250380">
 				<rom name="Skyland v2024.5.24.0 (2024-05-24)(Bowman, Evan)(FW)(beta).gba" size="16250380" crc="4cfb40d2" sha1="d9936c4a776ce61ede6241a018683e3efc0fe12b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadf39f500b3d33">
+		<description>SMSAdvance (World) (Pirate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="SMSAdvance (World) (Pirate).gba" size="33554432" crc="3e1705e2" sha1="df39f500b3d33d120933c32a794ee97a75bd54d2"/>
 			</dataarea>
 		</part>
 	</software>

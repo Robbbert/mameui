@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 255 -->
+<!-- Number of items in this list = 266 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -2362,6 +2362,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="z10f5395c551a514">
+		<description>Pilot (1988)(Gerd Schmidt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="20704">
+				<rom name="Pilot (1988)(Gerd Schmidt).z80" size="20704" crc="8917c02b" sha1="f5395c551a5149cb24c7693fbf9fc6bc6cf2693d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1051953fadd3db2">
+		<description>ping-pong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4160">
+				<rom name="ping-pong.z80" size="4160" crc="5f667ae3" sha1="51953fadd3db2e529701abd160e1c41eccee3110"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z109a4acef2805f8">
+		<description>PIO-Test (19xx)(-)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="192">
+				<rom name="PIO-Test (19xx)(-)[b].z80" size="192" crc="eddc8cb5" sha1="9a4acef2805f85575647a3e43c50700be2e1a285"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="z10ca9f8f0381c56">
 		<description>Stringfeld_brotast</description>
 		<year>????</year>
@@ -2369,6 +2399,86 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="1568">
 				<rom name="Stringfeld_brotast.z80" size="1568" crc="22de390a" sha1="ca9f8f0381c565e8b299b564edae667cc4754087"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1036760fb584b2d">
+		<description>U-Boot (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7712">
+				<rom name="U-Boot (19xx)(-).z80" size="7712" crc="b0b4113e" sha1="36760fb584b2dbbc5fe9ebc87a544190cc5750f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10f72eb93547fa4">
+		<description>ufo-angriff</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="928">
+				<rom name="ufo-angriff.z80" size="928" crc="c9ef25b7" sha1="f72eb93547fa4fc185f2cda04b4e3d1593a92769"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10c46d6f8426a3b">
+		<description>uni-copy 4_2+</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4128">
+				<rom name="uni-copy 4_2+.z80" size="4128" crc="6d63d4a7" sha1="c46d6f8426a3b12bbcd893d859cf182266f456a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10213a82f3246ff">
+		<description>Uni-Copy v6.2plus (1990)(B. Wilske)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4128">
+				<rom name="Uni-Copy v6.2plus (1990)(B. Wilske).z80" size="4128" crc="7733b4f2" sha1="213a82f3246ff1fb8cd235389b13abc7f9e049e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10fe74d4c3915ea">
+		<description>UNI-COPY VP2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4128">
+				<rom name="UNI-COPY VP2.z80" size="4128" crc="af533f07" sha1="fe74d4c3915ea84a9b6b7fe0f22f49135534ea9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104a5db6b01ee34">
+		<description>uni-textleser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1664">
+				<rom name="uni-textleser.z80" size="1664" crc="2d37eec8" sha1="4a5db6b01ee34886166cd79a0e8658b73761cb8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ff82f05b4a2cd">
+		<description>univers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2048">
+				<rom name="univers.z80" size="2048" crc="bd99cb33" sha1="ff82f05b4a2cdda873c7cb1715d161fdabd0a3be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1013f99e8caeb25">
+		<description>Universal-Textleser (1988)(Computer Club Leipzig)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1760">
+				<rom name="Universal-Textleser (1988)(Computer Club Leipzig).z80" size="1760" crc="f07b9848" sha1="13f99e8caeb25b023bd3b04744cfb401db3daec3"/>
 			</dataarea>
 		</part>
 	</software>

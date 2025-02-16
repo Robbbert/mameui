@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3756 -->
+<!-- Number of items in this list = 3761 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -34712,6 +34712,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns8130449b2b9a9">
+		<description>Super Uno (J)(1993)(Tomy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Uno (J)(1993)(Tomy).sfc" size="1048576" crc="61441201" sha1="8130449b2b9a9ccf01b9472e17f7ed01fbc49b76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc641590f87ef1">
+		<description>Super Uno T-Eng (2025)(Krokodyl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Super Uno T-Eng (2025)(Krokodyl).sfc" size="1572864" crc="17799616" sha1="c641590f87ef11cf74846c8f7c6067599fa86897"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns2ccfa3ff4e918">
 		<description>Super Wario World (SMW1 Hack)</description>
 		<year>????</year>
@@ -35692,6 +35712,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns4aad2f83fc05e">
+		<description>Tiny Toon Adventures (J)(1992)(Konami)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tiny Toon Adventures (J)(1992)(Konami).sfc" size="1048576" crc="8f0d2c90" sha1="4aad2f83fc05e44baf050cafeff3e35069712305"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsc23562fdfcd33">
 		<description>Tiny Toon Adventures - Buster Busts Loose! (Beta) Train Bugfix by KingMike</description>
 		<year>????</year>
@@ -35722,6 +35752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns04bf92b242ba9">
+		<description>Tiny Toon Adventures - Buster Busts Loose! (U)(1993)(Konami)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tiny Toon Adventures - Buster Busts Loose! (U)(1993)(Konami).sfc" size="1048576" crc="ab48d27a" sha1="04bf92b242ba965c453b6eb13d522afb7db7996b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6ebf76baa5e9f">
 		<description>Tiny Toon Adventures - Wild &amp; Wacky Sports (E) (V1.0) [T+Por_Aniquilador]</description>
 		<year>????</year>
@@ -35729,6 +35769,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Tiny Toon Adventures - Wild &amp; Wacky Sports (E) (V1.0) [T+Por_Aniquilador].sfc" size="1048576" crc="e8298abf" sha1="6ebf76baa5e9fa4d778e8fbeee5f32b5c53e53c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsab513d1417133">
+		<description>Tiny Toon Adventures Buster Busts Loose JP Remix v2 (2025)(bankbank, RetroProf, clymax)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tiny Toon Adventures Buster Busts Loose JP Remix v2 (2025)(bankbank, RetroProf, clymax).sfc" size="1048576" crc="6e42b4e8" sha1="ab513d1417133c0555a36a8a0a23dcd9951a325a"/>
 			</dataarea>
 		</part>
 	</software>

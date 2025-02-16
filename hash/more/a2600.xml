@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5584 -->
+<!-- Number of items in this list = 5979 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -28772,6 +28772,996 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a263cd6fb33c4e4e">
+		<description>F-4 (beta release 3) (2005)(s0c7)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F-4 (beta release 3) (2005)(s0c7).a26" size="4096" crc="5ce3a873" sha1="3cd6fb33c4e4edcf9b07225229c98b860d7c89a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bfa147474cc5a">
+		<description>F-4 - Pirate - Panther - RPS Fight - Multicart</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="F-4 - Pirate - Panther - RPS Fight - Multicart.a26" size="16384" crc="599fa437" sha1="bfa147474cc5a80390554084c3c19cfb300b8929"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26381b1ad95dfa8">
+		<description>F-4 - Pirate - Panther - RPS Fight - Multicart_pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="F-4 - Pirate - Panther - RPS Fight - Multicart_pal.a26" size="16384" crc="3356d4ea" sha1="381b1ad95dfa87161b24d542205cc02bd6fea623"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2692eefd9ede429">
+		<description>F-4 by David Weavil (Multicart) 2006-03-11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="F-4 by David Weavil (Multicart) 2006-03-11.a26" size="8192" crc="e0e0093b" sha1="92eefd9ede4294c7c8798df0e4663454e688b913"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268be75b6c71f9c">
+		<description>F-4 by David Weavil (multicart) 2006-04-16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="F-4 by David Weavil (multicart) 2006-04-16.a26" size="16384" crc="c756fc63" sha1="8be75b6c71f9c79b4e9e6f95c2c5369297711ffa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a5d3dbd88b37f">
+		<description>F-4 by David Weavil (multicart)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="F-4 by David Weavil (multicart).a26" size="16384" crc="867e8b60" sha1="a5d3dbd88b37f35ff4bf9baa9dc0adde17b6edb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266821e9efa7a27">
+		<description>F-4 final (2005)(s0c7)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F-4 final (2005)(s0c7).a26" size="4096" crc="cd5dd5d1" sha1="6821e9efa7a270d3fbb34ce9e98b0043cd6383d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d89426afa88be">
+		<description>F-4 final beta (2005)(s0c7)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F-4 final beta (2005)(s0c7).a26" size="4096" crc="bc350d28" sha1="d89426afa88bef25eb6f61f0af008eb848e896c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26627d5ebeb974b">
+		<description>F-4 multi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="F-4 multi.a26" size="8192" crc="86542330" sha1="627d5ebeb974bbbe5e68531b6b4929858c4d0f67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d3c50a249e9a">
+		<description>F-4 Supercharger Edition (2006) (David Weavil)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F-4 Supercharger Edition (2006) (David Weavil).a26" size="4096" crc="2e366aea" sha1="0d3c50a249e9a6131d83a75e77b71c5fc7e7685a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ed6a6045eb40b">
+		<description>F13thP3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F13thP3.a26" size="4096" crc="5286c8f5" sha1="ed6a6045eb40b6d6db4275c136de9b9e3975aad8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26667965dbab606">
+		<description>F4 (multi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="F4 (multi).a26" size="8192" crc="0c23b184" sha1="667965dbab606c386422b059c049bd28ddd47bef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a15ad2ee828f9">
+		<description>f4 multi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="f4 multi.a26" size="8192" crc="dfc79091" sha1="a15ad2ee828f9c78ad60664ae5188de07d9f9a9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2624285cb3422ba">
+		<description>f4 redux multi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="f4 redux multi.a26" size="16384" crc="7e669462" sha1="24285cb3422ba3b0c416df1be82382ec935028ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a670fe182685f">
+		<description>f4r3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="f4r3.a26" size="4096" crc="54957228" sha1="a670fe182685f28b40d1ad69a53ba650db897c45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d3db019a81a1">
+		<description>f4redux</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="f4redux.a26" size="4096" crc="aa8baf73" sha1="5d3db019a81a18da758b00c28960202d88ec6fd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f572289d552e6">
+		<description>F4_by_s0c7_(BAtari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F4_by_s0c7_(BAtari).bin" size="4096" crc="40490af2" sha1="f572289d552e6ca1830ba358d053dd39927a73b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623a18bbb62975">
+		<description>Face Invaders 2 by Barry Laws Jr. (Astroblast Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Face Invaders 2 by Barry Laws Jr. (Astroblast Hack).a26" size="4096" crc="75fd770f" sha1="23a18bbb62975941b53b73aa1ae09fffb5292bf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7c32ef6e3c17">
+		<description>Face Invaders Deluxe by Barry Laws Jr. (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Face Invaders Deluxe by Barry Laws Jr. (Space Invaders Hack).a26" size="4096" crc="8515b8a9" sha1="a7c32ef6e3c1785840a72f08e1588138340c12d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a05726f7fab2">
+		<description>Fade Out (2004) (Adam Tierney, Christopher Tumber) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fade Out (2004) (Adam Tierney, Christopher Tumber) (Prototype).a26" size="32768" crc="3089dd7c" sha1="4a05726f7fab2fc00809911ec680c604256e2813"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26269d9de50de53">
+		<description>Fade Out 20031110 (Christopher Tumber - Adam Tierney)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fade Out 20031110 (Christopher Tumber - Adam Tierney).a26" size="4096" crc="98d7d5e1" sha1="269d9de50de533b00c640813724d0191407c83ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262626d95ef0b20">
+		<description>Fade Out 20031209 (Christopher Tumber)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fade Out 20031209 (Christopher Tumber).a26" size="8192" crc="a600d0fa" sha1="2626d95ef0b203601867607f4a14062ccfc8369a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260ab18275d1c16">
+		<description>Fading Bitmap (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fading Bitmap (PD).a26" size="4096" crc="0ab348f2" sha1="0ab18275d1c16c7743907bb369ba390d670cf48b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263ff58f49a23a9">
+		<description>Failure - 1 - Dog vs Tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Failure - 1 - Dog vs Tron.a26" size="4096" crc="a9b082ce" sha1="3ff58f49a23a97731cd8be4e224894b30ecc61d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268b9e37d0b14b8">
+		<description>Failure - 2 - Deadly Dogs (no hands or feet)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Failure - 2 - Deadly Dogs (no hands or feet).a26" size="4096" crc="b1022fc0" sha1="8b9e37d0b14b817c56cbb55beec3372d21a485e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f6b4fbee9de83">
+		<description>Failure - 3 - Dog vs Cheese (crashes) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Failure - 3 - Dog vs Cheese (crashes) (PD).a26" size="4096" crc="d7750edb" sha1="f6b4fbee9de835b9625f168087821f8747df9c36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262bbcc1f9ca099">
+		<description>Failure - 4 - Dog vs Cheese Square (Failure - Give up) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Failure - 4 - Dog vs Cheese Square (Failure - Give up) (PD).a26" size="4096" crc="8cb367f7" sha1="2bbcc1f9ca099e01d57c3504a7d6d3e321c204c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2645e86b99a7e91">
+		<description>Fall Down (2004-06-24) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-06-24) (Aaron Curtis).a26" size="4096" crc="926f315e" sha1="45e86b99a7e9169f5ef2a871e0f15851f7a342b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de892555ce142">
+		<description>Fall Down (2004-07-11) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-07-11) (Aaron Curtis).a26" size="4096" crc="9e68d58c" sha1="de892555ce142339bd06f70c4911098e907a7555"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb7bbf5c72485">
+		<description>Fall Down (2004-07-31) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-07-31) (Aaron Curtis).a26" size="4096" crc="2d32f287" sha1="bb7bbf5c724854e08b1f505451d6b9b6c0cb9b87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26346f486b40b2c">
+		<description>Fall Down (2004-08-07) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-08-07) (Aaron Curtis).a26" size="4096" crc="45c65f23" sha1="346f486b40b2cb24d3bae5df99aedea645305f28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650776618dfb6f">
+		<description>Fall Down (2004-08-21) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-08-21) (Aaron Curtis).a26" size="4096" crc="1b97bfdb" sha1="50776618dfb6fe32484c3f429580d64db6cacb82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2638a3122ad46dd">
+		<description>Fall Down (2004-08-26) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-08-26) (Aaron Curtis) (PAL).a26" size="4096" crc="67b6df69" sha1="38a3122ad46dde135dc6cfd90536085b2dc2393c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26949b6b225e07e">
+		<description>Fall Down (2004-09-03) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-09-03) (Aaron Curtis) (PAL).a26" size="4096" crc="1ac1222a" sha1="949b6b225e07e9aa1c9cbb9d6c30c18f043e0620"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a2d43347b68a">
+		<description>Fall Down (2004-09-03) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-09-03) (Aaron Curtis).a26" size="4096" crc="24b43ca2" sha1="4a2d43347b68a31e3b4f162e170992d270c66b3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26270c2d6b5c923">
+		<description>Fall Down (2004-09-07) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-09-07) (Aaron Curtis) (PAL).a26" size="4096" crc="580b939e" sha1="270c2d6b5c92388fece934f12872ad8969fb8582"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c51e549144e84">
+		<description>Fall Down (2004-09-07) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-09-07) (Aaron Curtis).a26" size="4096" crc="50090014" sha1="c51e549144e8430af6a9d0a221856662f2154001"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c7e2d083f9d6">
+		<description>Fall Down (2004-09-11) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-09-11) (Aaron Curtis) (PAL).a26" size="4096" crc="8a49719f" sha1="7c7e2d083f9d6e6ebf80eda0aa05d1f7161ee534"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b18f3771c2969">
+		<description>Fall Down (2004-09-11) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-09-11) (Aaron Curtis).a26" size="4096" crc="b0dda4fb" sha1="b18f3771c296986ecee1fe33314dad4cf352f972"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26218fc84291901">
+		<description>Fall Down (2004-10-01) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-10-01) (Aaron Curtis) (PAL).a26" size="4096" crc="d94f67f8" sha1="218fc84291901345a64a2207da14e992aa6e1ab5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632d1f492f2dea">
+		<description>Fall Down (2004-10-01) (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-10-01) (Aaron Curtis) (PAL60).a26" size="4096" crc="16faab22" sha1="32d1f492f2dea54bd9f79572343e5d26cff08920"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b355fe9d0111f">
+		<description>Fall Down (2004-10-01) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2004-10-01) (Aaron Curtis).a26" size="4096" crc="dfe5a5de" sha1="b355fe9d0111fac1ff6b7c0c7c816a68c5420dff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633096e61e0840">
+		<description>Fall Down (2005-02-05) (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2005-02-05) (Aaron Curtis) (PAL60).a26" size="4096" crc="5a7cd17c" sha1="33096e61e08406bae8bd413672a213535bde470a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26670de4f7e2ccd">
+		<description>Fall Down (2005-02-05) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down (2005-02-05) (Aaron Curtis).a26" size="4096" crc="bc6b00b3" sha1="670de4f7e2ccdbefc4c48c1947997cfd3c5a853f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268d9ad9bf2118e">
+		<description>Fall Down (2005-02-09) (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-02-09) (Aaron Curtis) (PAL60).a26" size="8192" crc="835641b0" sha1="8d9ad9bf2118e10504d798de029d35d1c23b0373"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26977882899f5ea">
+		<description>Fall Down (2005-02-09) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-02-09) (Aaron Curtis).a26" size="8192" crc="df6ebcef" sha1="977882899f5eac18b115ee4d25fca2966e5fc1b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26454e64fdbd661">
+		<description>Fall Down (2005-02-28) (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-02-28) (Aaron Curtis) (PAL60).a26" size="8192" crc="f535956a" sha1="454e64fdbd66160d9fe57cca0c490aae88332c6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c2fa6c5d11c5d">
+		<description>Fall Down (2005-02-28) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-02-28) (Aaron Curtis).a26" size="8192" crc="6682a37d" sha1="c2fa6c5d11c5de9ab4cb4ee528af6563e68322c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b7702034e79a2">
+		<description>Fall Down (2005-03-02) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-03-02) (Aaron Curtis) (PAL).a26" size="8192" crc="bbe08c17" sha1="b7702034e79a2505b6492013b7970e254c748155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2653613a2ddad3a">
+		<description>Fall Down (2005-03-02) (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-03-02) (Aaron Curtis) (PAL60).a26" size="8192" crc="e1a2fb4f" sha1="53613a2ddad3a7086c74d561447d35bda9df3c63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc1c84ccaf70a">
+		<description>Fall Down (2005-04-19) (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-04-19) (Aaron Curtis) (PAL60).a26" size="8192" crc="148c2bd5" sha1="dc1c84ccaf70a58291d14d3c2c08f6b58fe3ec78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269da24240877af">
+		<description>Fall Down (2005-04-19) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-04-19) (Aaron Curtis).a26" size="8192" crc="da334794" sha1="9da24240877af611fea312bc2fd5ae036cbd27b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26637de0bbf720e">
+		<description>Fall Down (2005-04-19) (Z26 Version) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (2005-04-19) (Z26 Version) (Aaron Curtis).a26" size="8192" crc="993b7c42" sha1="637de0bbf720ef28616f220159a874ed32697361"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b9026bd2aed9f">
+		<description>Fall Down (Final Version) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (Final Version) (Aaron Curtis) (PAL).a26" size="8192" crc="0fee3898" sha1="b9026bd2aed9f40ce1d3b6829a1c69d5f4a62903"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad053b923da2b">
+		<description>Fall Down (Final Version) (Aaron Curtis) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (Final Version) (Aaron Curtis) (PAL60).a26" size="8192" crc="1fb77929" sha1="ad053b923da2b3c1ac835c1fc3bb202cc2d9d674"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d0ab679cc477">
+		<description>Fall Down (Final Version) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (Final Version) (Aaron Curtis).a26" size="8192" crc="c808baf4" sha1="1d0ab679cc47782a4f1dfbf449d66cecf2b702d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265b7f478e325b4">
+		<description>Fall Down (final version) (Z26 emu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (final version) (Z26 emu).a26" size="8192" crc="93cce39b" sha1="5b7f478e325b4a2c636e5a89159a1831a9f1301c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eba4fb6ed0375">
+		<description>Fall Down (NTSC) 2005-03-02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (NTSC) 2005-03-02.a26" size="8192" crc="7ae91587" sha1="eba4fb6ed0375012cb403922a8c586ca2232951f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26354f0b5dffc3e">
+		<description>Fall Down (PAL 50) 2005-02-28</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (PAL 50) 2005-02-28.a26" size="8192" crc="2d41f822" sha1="354f0b5dffc3e47538a271b6e91e3d54a03d65a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268524b6f255ad1">
+		<description>Fall Down (PAL 50) 2005-04-19</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down (PAL 50) 2005-04-19.a26" size="8192" crc="21c72b06" sha1="8524b6f255ad15ae3795c0549ca256635e42233a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ed7b7a9e9fc5">
+		<description>Fall Down Hack 20040904 (Edwin Blink) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fall Down Hack 20040904 (Edwin Blink) (PAL).a26" size="4096" crc="44f7c60d" sha1="7ed7b7a9e9fc594d76a719072da13fe47ec962df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d8592fb93cef3">
+		<description>Fall Down Real Final Version (2005) (Aaron Curtis) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down Real Final Version (2005) (Aaron Curtis) (PAL).a26" size="8192" crc="c8b46e96" sha1="d8592fb93cef3cfdd53b16bf5104bc6ebfa75f1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261beed999437c7">
+		<description>Fall Down Real Final Version (2005) (Aaron Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fall Down Real Final Version (2005) (Aaron Curtis).a26" size="8192" crc="c349c11f" sha1="1beed999437c733a42d53a33cf4ff15ce1ab21ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26847c1ed8f371b">
+		<description>falldown (2004-06-30)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="falldown (2004-06-30).a26" size="4096" crc="dd1f7743" sha1="847c1ed8f371ba2c4ed2732528e76b8d64d4c0fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266578df7eba2f0">
+		<description>falldown (2004-08-21) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="falldown (2004-08-21) (PAL).a26" size="4096" crc="1088c1c7" sha1="6578df7eba2f05520bbc77c86a87ed0d9173f017"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d14c6d623a5f2">
+		<description>falldown (2004-08-26) (NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="falldown (2004-08-26) (NTSC).a26" size="4096" crc="6ec94a67" sha1="d14c6d623a5f2a9e4b1af7e259d9bbf49db52f08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c2ca9266681e3">
+		<description>falldown (2005-02-05) (PAL 50Hz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="falldown (2005-02-05) (PAL 50Hz).a26" size="4096" crc="986eaaae" sha1="c2ca9266681e3934cabb3fa8af66a6e78fc76027"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2618bf8acd9c3ef">
+		<description>falldown (2005-02-09) (PAL 50Hz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="falldown (2005-02-09) (PAL 50Hz).a26" size="8192" crc="6dd0a847" sha1="18bf8acd9c3ef21612172a036bdb607f51b9f5d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269597dc9a0934d">
+		<description>falldown (2005-02-15) (NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="falldown (2005-02-15) (NTSC).a26" size="8192" crc="fff2d8ec" sha1="9597dc9a0934d857d015bc47c6f24d16e4ef27ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b10b7c4590cfc">
+		<description>falldown (2005-02-15) (PAL 50Hz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="falldown (2005-02-15) (PAL 50Hz).a26" size="8192" crc="d592ad98" sha1="b10b7c4590cfc1f0bf4a694fd3fafd84b4cd2514"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266bd3e8a401a8b">
+		<description>falldown (2005-02-15) (PAL 60Hz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="falldown (2005-02-15) (PAL 60Hz).a26" size="8192" crc="74ba2b8b" sha1="6bd3e8a401a8b60bc71035c608e229157f4ae376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b6c7370b2f06b">
+		<description>Falldown.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Falldown.bas.a26" size="4096" crc="c3cc755e" sha1="b6c7370b2f06b495bd31395f82fb1f1acaf07b45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262bacfcc869af9">
+		<description>Fallout by Colman Bryant (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fallout by Colman Bryant (PD).a26" size="4096" crc="468b5476" sha1="2bacfcc869af9164329fb1b1dedbd51d672f3370"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d99a403be2741">
+		<description>Fallout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fallout.a26" size="4096" crc="e23bcb45" sha1="d99a403be274134e3d2d1726ca3b938b603cfcc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2603f625b8e084b">
+		<description>Fantastic Voyage Black</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fantastic Voyage Black.a26" size="4096" crc="4fee1292" sha1="03f625b8e084b75c183f66e85c94e04bf99c5767"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f82a521b71c92">
+		<description>Fantastic_Voyage_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fantastic_Voyage_NTSC(Supercharger).a26" size="4096" crc="62ac57a9" sha1="f82a521b71c9259d20f71e272f2ac2381741199d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26faf9683f227da">
+		<description>Fantastic_Voyage_NTSC(Supercharger-Black)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fantastic_Voyage_NTSC(Supercharger-Black).a26" size="4096" crc="721fa14c" sha1="faf9683f227dab0fd82fb914f6fcf7989de319a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b9b896d353b9e">
+		<description>Fantastic_Voyage_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fantastic_Voyage_PAL60(Supercharger).a26" size="4096" crc="118074b2" sha1="b9b896d353b9e0fb39896cc483d9f3a26d5e4c13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265cf05033a004b">
+		<description>Fantastic_Voyage_PAL60(Supercharger-Black)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fantastic_Voyage_PAL60(Supercharger-Black).a26" size="4096" crc="b2fcd68b" sha1="5cf05033a004bd8ebdad022b83916c198a986499"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d34ecab5e057e">
+		<description>Fast Draw 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fast Draw 1.a26" size="4096" crc="2402e3db" sha1="d34ecab5e057eaf609272c40e81920be4648daff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26245a6720a55fd">
+		<description>Fast Draw 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fast Draw 2.a26" size="4096" crc="7ea177f8" sha1="245a6720a55fdd79cb60dea1b2055904de660593"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26664b1d3c86dcd">
+		<description>Fast Eddie (1984) (20th Century Fox) [h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fast Eddie (1984) (20th Century Fox) [h1].a26" size="4096" crc="52fef499" sha1="664b1d3c86dcd3005e7d02f00949a37f16ee437f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c86de2463f0f2">
+		<description>Fast Food (1984) (Telesys) [b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fast Food (1984) (Telesys) [b2].a26" size="4096" crc="e0873e4e" sha1="c86de2463f0f2f174169e1e84ef02f28ebf33960"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ea3c5017e3a21">
+		<description>FASTFOOD fix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="FASTFOOD fix.a26" size="4096" crc="4a1b4f7e" sha1="ea3c5017e3a21e83abde0f4d1e75746b4c83b9ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26007f039f7e502">
+		<description>FastH-R</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="FastH-R.a26" size="4096" crc="3d367cfd" sha1="007f039f7e502661480514491f9bf744fc028e17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e79a3d05aec2f">
+		<description>Fast_Food_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fast_Food_NTSC(Supercharger).a26" size="4096" crc="d92b6c45" sha1="e79a3d05aec2f416479cf6dea57f11fee88d5e8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b48bf14b49583">
+		<description>Fast_Food_PAL60(Supercharger)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fast_Food_PAL60(Supercharger)_2.a26" size="4096" crc="213a7993" sha1="b48bf14b4958362109068e525bc9c289a6817cb5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2622d9971062e50">
+		<description>Fat Albert by David Marli (Fast Food Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fat Albert by David Marli (Fast Food Hack) [a1].a26" size="4096" crc="68d74a9a" sha1="22d9971062e50e41e5eb0570c2bf94d9a61db254"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260ea3dd20a944e">
+		<description>Fat Albert by David Marli (Fast Food Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fat Albert by David Marli (Fast Food Hack).a26" size="4096" crc="0efc7e6e" sha1="0ea3dd20a944eb476ce86445cfc5206fec3637e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26323cf0dc3fad6">
+		<description>Fat Albert fix by David Marli (Fast Food Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fat Albert fix by David Marli (Fast Food Hack).a26" size="4096" crc="c24b3baa" sha1="323cf0dc3fad67e0930228a0ff8203e685c098d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f5d3d031d3b45">
+		<description>Fat Freddie Final (Jr. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Fat Freddie Final (Jr. Pac-Man Hack).a26" size="16384" crc="cf16b3a1" sha1="f5d3d031d3b4540f159ace8a222d2247f5547928"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca1eb1cd12765">
+		<description>Fat Freddie RC1 (Jr. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Fat Freddie RC1 (Jr. Pac-Man Hack).a26" size="16384" crc="cc96dc84" sha1="ca1eb1cd127654700a1ffe5ce095b75dc7443705"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c10de2ec5c4a7">
+		<description>Fat Freddie RC5 (Jr. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Fat Freddie RC5 (Jr. Pac-Man Hack).a26" size="16384" crc="3ac29b68" sha1="c10de2ec5c4a799ed6a3ba20dfee2fce06224085"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2602cffb86f058b">
+		<description>Fat Freddie RC6 (Jr. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Fat Freddie RC6 (Jr. Pac-Man Hack).a26" size="16384" crc="04187f05" sha1="02cffb86f058b4028116278ea89d32eac50dd502"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2686b11d0a276c1">
+		<description>Fatal Run (1992) (Atari) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fatal Run (1992) (Atari) [f1] (NTSC by TJ).a26" size="32768" crc="7169337a" sha1="86b11d0a276c1cc9a777f3cf174577fe863b4298"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261584f7e2604b5">
+		<description>fateddie.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="fateddie.bas.a26" size="4096" crc="1dc8bf20" sha1="1584f7e2604b54ebb220dca60d38fe6442fb402c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263be90b09c6bd5">
+		<description>Fathom (1984) (Imagic) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fathom (1984) (Imagic) (PAL) [a1][!].a26" size="8192" crc="88f4165c" sha1="3be90b09c6bd5f38b0a15bf6401250f6eeeea58b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c78d1efa8728">
+		<description>Fathom (1985) (Imagic) [h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fathom (1985) (Imagic) [h1].a26" size="8192" crc="39e97206" sha1="6c78d1efa872828e758f432a157b83d3a87a1223"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2634b6da12bc02d">
+		<description>FD20061003</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="FD20061003.a26" size="4096" crc="52f5b9cf" sha1="34b6da12bc02d58e61afcd93a9bee8a48293bb46"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26a58c9be4dfe15">
 		<description>FHumanFull_360_17f.bas</description>
 		<year>????</year>
@@ -28812,6 +29802,456 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26fd77fbc898c04">
+		<description>final.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="final.bas.a26" size="4096" crc="49d8cdf1" sha1="fd77fbc898c04fd9704d84457f8367b024ff338d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267392ebf27fcd7">
+		<description>Final_Flight 2007.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Final_Flight 2007.bas.a26" size="4096" crc="e282ca14" sha1="7392ebf27fcd704bbffe8640c4c9640ae3282603"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266bf7d36eeeea5">
+		<description>Find Target (2007) (Robert Mundschau) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Find Target (2007) (Robert Mundschau) (Prototype).a26" size="4096" crc="ea6377c6" sha1="6bf7d36eeeea596a33af0081d91c97cb5b24abcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2646924677e1fd8">
+		<description>Fire Queen (TRON - Deadly Discs Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fire Queen (TRON - Deadly Discs Hack).a26" size="4096" crc="6818f30d" sha1="46924677e1fd81484b30015d63a0121052ba1148"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7e2a58c3816f">
+		<description>fireballs</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="fireballs.a26" size="4096" crc="2fb4fff9" sha1="a7e2a58c3816f75b1bfe328d38ef99b0b223bc9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650e6ba2bf4a43">
+		<description>FireOne 20040706</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="FireOne 20040706.a26" size="8192" crc="c109139e" sha1="50e6ba2bf4a43ed9ce263c64c015c40d1fb9dc6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26965af39767b2c">
+		<description>Fire_Fly(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fire_Fly(Supercharger).a26" size="4096" crc="c6ea260f" sha1="965af39767b2c88cfb53017d06a8205895177232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2618aca24bfdc26">
+		<description>First Damage Bar Code 20040503</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="First Damage Bar Code 20040503.a26" size="4096" crc="8f698d60" sha1="18aca24bfdc26be9b3aa3f4c3b7432ebbece66b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d740d3d59d519">
+		<description>First Damage Bar Code 20040504</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="First Damage Bar Code 20040504.a26" size="4096" crc="a3451689" sha1="d740d3d59d51906f1bdada6afbab18012720432e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633484f4768e71">
+		<description>Fish Revenge (2003) (Snailsoft) (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fish Revenge (2003) (Snailsoft) (Space Invaders Hack).a26" size="4096" crc="ec6518a4" sha1="33484f4768e71bd3ca55ea91d8e7af4fb1b3774a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266df2680a5e7bd">
+		<description>Fishies (20050118)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishies (20050118).a26" size="2048" crc="2a50ff7d" sha1="6df2680a5e7bd552c059a2cf2cf4ed17d63581c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c3e5725cb9a2e">
+		<description>Fishies (20050119) new 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishies (20050119) new 2.a26" size="2048" crc="4df3ff5d" sha1="c3e5725cb9a2e6cef2db423fd0e90bcc2dd21449"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d05977c8a269f">
+		<description>Fishies (20050119) new 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishies (20050119) new 3.a26" size="2048" crc="4fddaa43" sha1="d05977c8a269fa3defd283572213ce8ef692a4be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2670e2a595c1d21">
+		<description>Fishies (20050121) old2 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishies (20050121) old2 (Bob Montgomery).a26" size="2048" crc="cfb1402e" sha1="70e2a595c1d21e84414b0ad4e6e015cca0fcd217"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262fd55256483e2">
+		<description>Fishies (20050125) (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishies (20050125) (Bob Montgomery).a26" size="2048" crc="d40e4a1e" sha1="2fd55256483e2c9ed7a64cec15814224c3d8fba5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b5d312460f50f">
+		<description>Fishies (20050208) (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fishies (20050208) (Bob Montgomery).a26" size="4096" crc="98b15d02" sha1="b5d312460f50fd02f727200ca93e1c4d675324e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26798c1d2d5b171">
+		<description>Fishies (20050219) (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fishies (20050219) (Bob Montgomery).a26" size="8192" crc="44330db3" sha1="798c1d2d5b171097fe30e2657aa17274a3ed6c00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b1b594acaa45f">
+		<description>Fishies 5 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishies 5 (Bob Montgomery).a26" size="2048" crc="3491dc17" sha1="b1b594acaa45fc204ca53b828cdaebf06b39779b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267cf7921496edf">
+		<description>Fishies 6 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fishies 6 (Bob Montgomery).a26" size="4096" crc="263114b8" sha1="7cf7921496edf7118213e8f8ef784f4a6b0df6fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26679e8765306f9">
+		<description>Fishing Derby (1980) (Activision) [o2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fishing Derby (1980) (Activision) [o2].a26" size="4096" crc="604ce356" sha1="679e8765306f94f0a7e976d3d2257741917f30e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f7235f831fe5">
+		<description>Fishing Derby (1981) (Activision) (PAL) [p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishing Derby (1981) (Activision) (PAL) [p1][!].a26" size="2048" crc="4e0e1c67" sha1="1f7235f831fe53f63f5a0342620771891c4c8005"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26acb510d2d854e">
+		<description>Fishing Derby (1981) (Activision) [o3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Fishing Derby (1981) (Activision) [o3].a26" size="8192" crc="ad7070ac" sha1="acb510d2d854e839d974a312687ae8cee26029ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26187e229f453df">
+		<description>Fishing Derby (1982) (Activision) (PAL) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fishing Derby (1982) (Activision) (PAL) [p1][o1].a26" size="4096" crc="c609bd53" sha1="187e229f453df0e3a78fd236eb26550d387eacfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2628cdac1cd02b8">
+		<description>Fishing Derby (1982) (Activision) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Fishing Derby (1982) (Activision) [o1].a26" size="16384" crc="e86025a7" sha1="28cdac1cd02b871c1bf2ebb533be25ec18fa61b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e77c837d07e5b">
+		<description>Fishing Derby (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishing Derby (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="9a59662d" sha1="e77c837d07e5bb1e61fb22e2ff8d898df7346a59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26162852d5d37d4">
+		<description>Fishing Derby (32-in-1) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishing Derby (32-in-1) (Atari) (PAL) [a1][!].a26" size="2048" crc="f5187a3c" sha1="162852d5d37d46daeaf824b710ddf203f9601ac9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260ab0353d27378">
+		<description>Fishing Derby (32-in-1) (Atari) (PAL) [a1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fishing Derby (32-in-1) (Atari) (PAL) [a1][o1].a26" size="4096" crc="b6b860ea" sha1="0ab0353d27378cc206b675a7cc1da8daa2bd69bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26086a20645b688">
+		<description>Fishing Derby (32-in-1) (Atari) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fishing Derby (32-in-1) (Atari) (PAL) [o1].a26" size="4096" crc="1c05ae22" sha1="086a20645b688867d5035442ae7d7e67ac9d811d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265c81795e9b933">
+		<description>Fishing Derby (CCE) [o1] (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fishing Derby (CCE) [o1] (2).a26" size="4096" crc="d6442a2d" sha1="5c81795e9b9332c62a011100ea34fc8e57783412"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261677cc90ced43">
+		<description>Fishing Derby (With Crabs) (Jone Yuan Telephonic Enterprise Co) [p1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fishing Derby (With Crabs) (Jone Yuan Telephonic Enterprise Co) [p1].a26" size="2048" crc="7096f3f9" sha1="1677cc90ced43205e0397e09c30caedc4a71a345"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad32c0132f941">
+		<description>Fishing Derby (With Crabs) (Jone Yuan Telephonic Enterprise Co) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fishing Derby (With Crabs) (Jone Yuan Telephonic Enterprise Co) [p1][o1].a26" size="4096" crc="fc9ddde7" sha1="ad32c0132f94104bf116d1a1ab524fedf1cd8fd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26916aa09537c7e">
+		<description>FishingDerby_1980_Activision_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="FishingDerby_1980_Activision_PAL_Overdump.a26" size="4096" crc="0cace98e" sha1="916aa09537c7ec2e08f3eb366133f815fa2deb36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268cdc4d61583ca">
+		<description>Fisticuffs Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Fisticuffs Hack.a26" size="16384" crc="fa5d452a" sha1="8cdc4d61583ca8580025a9dc82da4a6ebf174128"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bbed576abbfa4">
+		<description>Fisticuffs! (Double Dragon Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Fisticuffs! (Double Dragon Hack) [a1].a26" size="16384" crc="85ed3bf9" sha1="bbed576abbfa4489bfce8506fb986b69f6a93570"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ce954296b774">
+		<description>Flag Capture (1979) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flag Capture (1979) (Atari) [o1].a26" size="4096" crc="68d24bf6" sha1="7ce954296b7742e5fa072723d0d8299fd5726e93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a519d25d60737">
+		<description>Flag Capture (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Flag Capture (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="4609d961" sha1="a519d25d60737605b9b83fc4d1cb7402bfed082d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a89490ec3f2a6">
+		<description>Flag Capture (32-in-1) (Atari) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flag Capture (32-in-1) (Atari) (PAL) [o1].a26" size="4096" crc="3a936cd0" sha1="a89490ec3f2a69ac0cc317cb30d6622a8e5c5f68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26944beca1536ce">
+		<description>Flag Capture (Jone Yuan Telephonic Enterprise Co) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flag Capture (Jone Yuan Telephonic Enterprise Co) [p1][o1].a26" size="4096" crc="69e0a576" sha1="944beca1536ce92a3b6e8d9b92516396926d68c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2679eeedcce1ffe">
+		<description>Flag Capture Black</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Flag Capture Black.a26" size="2048" crc="f6fe3407" sha1="79eeedcce1ffea63891436a62a2fa3300b9d9d54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b8a4b986316d">
+		<description>flank steak 2b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="flank steak 2b.a26" size="4096" crc="3259f451" sha1="9b8a4b986316d6f0a19dbcf4cb191a8db244b635"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267de94e833c83f">
+		<description>flank steak 2c</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="flank steak 2c.a26" size="4096" crc="0adf5f79" sha1="7de94e833c83f2f9f89a6114da0e38ee41444114"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2609bb73385b3b4">
+		<description>flank steak 4a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="flank steak 4a.a26" size="4096" crc="57628024" sha1="09bb73385b3b4490ce86c19e866c1194f452ecc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d8874af3e8e7c">
+		<description>flanksteak2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="flanksteak2.bas.a26" size="4096" crc="c6007726" sha1="d8874af3e8e7c2661378a2cdb297f078691b7948"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267cbb8c166c20c">
+		<description>flanksteak2a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="flanksteak2a.bas.a26" size="4096" crc="a3600d61" sha1="7cbb8c166c20c47f9f79bc78b817799ff31c1199"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608555905609ca">
+		<description>Flap-ping 20050207 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flap-ping 20050207 (PD).a26" size="4096" crc="33bc76bd" sha1="08555905609caf43fe6e16e65a5fb1804e42646c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26811684095c8d8">
 		<description>Flappo Bird (2014-02-08)(TACS Games)</description>
 		<year>????</year>
@@ -28819,6 +30259,26 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Flappo Bird (2014-02-08)(TACS Games).bin" size="4096" crc="503485e6" sha1="811684095c8d8476cc782ee589baeeec29e7d88a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c9675e6a52f43">
+		<description>Flash_Gordon_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flash_Gordon_NTSC(Supercharger).a26" size="4096" crc="9ea896d2" sha1="c9675e6a52f4378e29ad9450103f86ca3eed6499"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad20661ea3733">
+		<description>Flat Rectangle Ball Pinball (Video Pinball Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flat Rectangle Ball Pinball (Video Pinball Hack).a26" size="4096" crc="5a8d3d15" sha1="ad20661ea3733c4e04a4437c92bdabaac7aadad7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28832,6 +30292,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a260c958f54bb56f">
+		<description>Flicker v001 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Flicker v001 (PD).a26" size="2048" crc="3ecb23e0" sha1="0c958f54bb56f56c567baee6bd23fe72b205a856"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26784f2dab1743c">
+		<description>FlickerSort Demo (20-04-2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="FlickerSort Demo (20-04-2002) (MP).a26" size="4096" crc="ec8eb2de" sha1="784f2dab1743ce390b57664bf3e89c13a651fe2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641dc82e5c137c">
+		<description>FlickerSort Demo (20-04-2002) (Updated) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="FlickerSort Demo (20-04-2002) (Updated) (MP).a26" size="4096" crc="a5673280" sha1="41dc82e5c137cea96e439939d7cc97a14c5e6669"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264444a30fe2ed9">
+		<description>Flight of the Bumblebee 20071028</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flight of the Bumblebee 20071028.a26" size="4096" crc="50589122" sha1="4444a30fe2ed9d6541a933250a42012a8833fc5a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26226b3238cd0bf">
 		<description>flipout</description>
 		<year>????</year>
@@ -28839,6 +30339,116 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="flipout.a26" size="4096" crc="29c739b5" sha1="226b3238cd0bffcc4799e495fadd29a3a8d10775"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2669249b359061e">
+		<description>flow (2005-09-18) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="flow (2005-09-18) (Simone Serra).a26" size="4096" crc="a999b59f" sha1="69249b359061e296f6653e0e0097c13adac51fe5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266d3e98ff1dc6f">
+		<description>Flow (2005-09-24) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flow (2005-09-24) (Simone Serra).a26" size="4096" crc="73869c0d" sha1="6d3e98ff1dc6f1cb7c3bd462163785740c770008"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2675b1e117af066">
+		<description>Flow (2005-10-01) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flow (2005-10-01) (Simone Serra).a26" size="4096" crc="3a3f2172" sha1="75b1e117af066a95e3d039861b94cd3f12b0b7f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263e7f69404ce48">
+		<description>Flow (2005-10-09) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flow (2005-10-09) (Simone Serra).a26" size="4096" crc="69ebfb93" sha1="3e7f69404ce4887196cb66f272b930bdc7ccd27c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2677a9479072bca">
+		<description>Flow (2005-10-15) (Simone Serra) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flow (2005-10-15) (Simone Serra) (PD).a26" size="4096" crc="5ba2433c" sha1="77a9479072bca625a01e5630f9070c5bcb685ff7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cffd781485a55">
+		<description>Flow (2005-10-23) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flow (2005-10-23) (Simone Serra).a26" size="4096" crc="c6f763a8" sha1="cffd781485a5516d2599af395b5d99e80c3d1779"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268e7a2328a7308">
+		<description>Flow (2006) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Flow (2006) (Simone Serra).a26" size="4096" crc="27458c18" sha1="8e7a2328a7308baa8547c478f7a20da40707c045"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b6b0a28fb979">
+		<description>Follow The Leader (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Follow The Leader (Jumpman Selected Levels) (PD).a26" size="4096" crc="011497c3" sha1="1b6b0a28fb97999ac68418832f8e2369a5f65e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2606e428df9886a">
+		<description>Font_Demo_Alpha_by_Matt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Font_Demo_Alpha_by_Matt.a26" size="2048" crc="54f810ad" sha1="06e428df9886a82a9a72c0f1d64531f62f0ac2d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26daf0f2ece918d">
+		<description>Fonz (Enduro Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fonz (Enduro Hack).a26" size="4096" crc="95d25c56" sha1="daf0f2ece918da7579631db68fa3638d005c5b72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f5b7eaba4ff4">
+		<description>Fonz 20060827</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fonz 20060827.a26" size="4096" crc="9cc3db54" sha1="4f5b7eaba4ff4d687575bce3020d8fd834eba756"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28852,6 +30462,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26917b03c6e702e">
+		<description>Fonz v3 (Enduro Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fonz v3 (Enduro Hack).a26" size="4096" crc="430d0c87" sha1="917b03c6e702e1bd27511cc4c83a606d1c226d5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4ca20fd75ece">
+		<description>Fonz2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fonz2 (PD).a26" size="4096" crc="3a1cb8ca" sha1="b4ca20fd75ece8e6d2c645089b22624bc7703112"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a266a99252f233d4">
 		<description>fonz20090109</description>
 		<year>????</year>
@@ -28859,6 +30489,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="fonz20090109.bin" size="4096" crc="c70a6520" sha1="6a99252f233d4aea1eb8ec17135eb09ed35eccc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26908d15de88e78">
+		<description>Fonz3 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fonz3 (PD).a26" size="4096" crc="13192639" sha1="908d15de88e78ceedbbbba90b575dffea417bc43"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28872,6 +30512,1796 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a266f056c433879f">
+		<description>Fonztest (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fonztest (PD).a26" size="4096" crc="2b34eeea" sha1="6f056c433879f57605981b55306a4292baa12914"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268c7a39c952fb5">
+		<description>Football (1979) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Football (1979) (Atari) [o1].a26" size="4096" crc="866bbd41" sha1="8c7a39c952fb59c6fc7e3a59e3ae704d7b32cf23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260869a85a1e259">
+		<description>Football (1979) (Jone Yuan Telephonic Enterprise Co) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Football (1979) (Jone Yuan Telephonic Enterprise Co) [p1][o1].a26" size="4096" crc="aa65eebb" sha1="0869a85a1e25961ff4f9b2843adfcec5655bd50e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bd3c477c1e962">
+		<description>Football (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Football (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="e6a734dc" sha1="bd3c477c1e962c2957daad0cf858220710841eb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e11b2a5afab76">
+		<description>Football_32-in-1_Atari_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Football_32-in-1_Atari_PAL_Overdump.a26" size="4096" crc="654df5a3" sha1="e11b2a5afab768f536545d1b50099c189edcb478"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261642b809d0b3a">
+		<description>Forbidden Forest 20080112-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Forbidden Forest 20080112-2.a26" size="4096" crc="05beb030" sha1="1642b809d0b3adacadd31625f16ba4f7d9f106ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ac46a417e1941">
+		<description>Forbidden Forest 20080112</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Forbidden Forest 20080112.a26" size="4096" crc="900d1fc4" sha1="ac46a417e1941b6e6a9b3d4bc8b12135b992573f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d5b9e0514160">
+		<description>Forse rom Microvision BlockBuster20081007</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Forse rom Microvision BlockBuster20081007.bin" size="4096" crc="78dfe7cf" sha1="0d5b9e0514160acdcd56b4ebd0c69407ba1e3bba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260494a8e727a66">
+		<description>Fortitude I Quadraside (Bumper) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fortitude I Quadraside (Bumper) (CT).a26" size="4096" crc="512fed9b" sha1="0494a8e727a66306c8ecd35d849b41c5a50f1b53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f360fa20d0615">
+		<description>Fortitude I Quadraside (Text)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fortitude I Quadraside (Text).a26" size="4096" crc="7e8b6c57" sha1="f360fa20d06156688555e3abbf8b6556cce33ffd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2687f1489db6a2a">
+		<description>Fortress (20-04-2003) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fortress (20-04-2003) (CT).a26" size="4096" crc="c159b7f6" sha1="87f1489db6a2a2161c8612d2fb27f210808fccfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268973e436601ee">
+		<description>Fortress (21-04-2003) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fortress (21-04-2003) (CT).a26" size="4096" crc="f7417c12" sha1="8973e436601ee69e68c23ebb0a29f907256b6806"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262420f32ddcf96">
+		<description>Fortress (Dual Version) (20-04-2003) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fortress (Dual Version) (20-04-2003) (CT).a26" size="4096" crc="5afc4727" sha1="2420f32ddcf963833055fd6bd1b7a0578c96a375"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ee3a7ae78a6e7">
+		<description>Fortress (Smooth Version) (20-04-2003) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fortress (Smooth Version) (20-04-2003) (CT).a26" size="4096" crc="a5af4d95" sha1="ee3a7ae78a6e7cbd0f421ee8025ebe1ef97088f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc7f88ce91d04">
+		<description>Four-Play (2006) (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Four-Play (2006) (Zach Matley).a26" size="16384" crc="34c2c3b0" sha1="dc7f88ce91d04ee5899ab363304c172b791741b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de53ea2e121a9">
+		<description>Four-Play 2005-11-26 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play 2005-11-26 (Zach Matley).a26" size="4096" crc="9868333e" sha1="de53ea2e121a922095ed06195dcc2b66a0ac02af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ffb5fceedf118">
+		<description>Four-Play 2006-01-07 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play 2006-01-07 (Zach Matley).a26" size="4096" crc="c43a414f" sha1="ffb5fceedf11830492d0aa5ad56718277f906a05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ecfee6cd4b5c2">
+		<description>Four-Play 2006-06-10 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Four-Play 2006-06-10 (Zach Matley).a26" size="8192" crc="77df08f0" sha1="ecfee6cd4b5c2eb0dd400d69e22fc6f21eaf7806"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b1ce3185554d8">
+		<description>Four-Play 2006-08-18 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play 2006-08-18 (Zach Matley).a26" size="4096" crc="2bcc0a5d" sha1="b1ce3185554d8af06ca3d6dda62ed11b0eefcf7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263ae253c5d38f9">
+		<description>Four-Play Final Beta (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Four-Play Final Beta (Zach Matley).a26" size="16384" crc="ab721567" sha1="3ae253c5d38f9ef2bd2c6e20f552b30fecf72aaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b62665be2d7be">
+		<description>Four-Play Release Candidate 1 (Zach Matley) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Four-Play Release Candidate 1 (Zach Matley) (PAL60).a26" size="16384" crc="c644ed06" sha1="b62665be2d7bebeb9557971c02ce4184147aa4c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264fa9f3a44c39a">
+		<description>Four-Play Song 20060712 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Song 20060712 (Zach Matley).a26" size="4096" crc="0ded795e" sha1="4fa9f3a44c39a31919f7403348498326a44647f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2646fc9d353984a">
+		<description>Four-Play Song 20060814 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Song 20060814 (Zach Matley).a26" size="4096" crc="c59bcfcd" sha1="46fc9d353984a740cc712f948a8486366fbbd6c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2680fdf51346bf9">
+		<description>Four-Play Song 20060820 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Song 20060820 (Zach Matley).a26" size="4096" crc="0fb6ff4d" sha1="80fdf51346bf9b92c37b944d44f22e5270333b01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26909c269359d53">
+		<description>Four-Play Song 20060821 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Song 20060821 (Zach Matley).a26" size="4096" crc="f40ce4ea" sha1="909c269359d534dd820ec0215ac41b3e6b509ea1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260da03d0b393fb">
+		<description>Four-Play Song 20060824 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Song 20060824 (Zach Matley).a26" size="4096" crc="1ada4688" sha1="0da03d0b393fb7b9b79acca6a39814c9a9bc8744"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a30ad35fefbca">
+		<description>Four-Play Song 20060827 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Song 20060827 (Zach Matley).a26" size="4096" crc="0e88f273" sha1="a30ad35fefbca7bd28de84483e48829ee3c70545"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ecaa9209f1473">
+		<description>Four-Play Song 20060828 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Song 20060828 (Zach Matley).a26" size="4096" crc="56346a99" sha1="ecaa9209f1473d8fdc20c316b6a7a4df30a7da4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632028511e6c48">
+		<description>Four-Play Tunes 20060624 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Tunes 20060624 (Zach Matley).a26" size="4096" crc="bce4ab84" sha1="32028511e6c48e347425097a6167572d5aa66642"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3de5bb98af2a">
+		<description>Four-Play Tunes 20060628 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Tunes 20060628 (Zach Matley).a26" size="4096" crc="e96420ee" sha1="d3de5bb98af2acd2a0c5b51d6b308383277f62ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2628c0c9bb36d08">
+		<description>Four-Play Tunes 20060710 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Tunes 20060710 (Zach Matley).a26" size="4096" crc="4be983c7" sha1="28c0c9bb36d08b360c2368bd31755ccd65542737"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262eecbc2dbf005">
+		<description>Four-Play Tunes 20060919 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Tunes 20060919 (Zach Matley).a26" size="4096" crc="baf22d3d" sha1="2eecbc2dbf005124ad2e7466dcb0da274084da19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264db5f01df5e42">
+		<description>Four-Play Tunes 20060920 (Zach Matley)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Four-Play Tunes 20060920 (Zach Matley).a26" size="4096" crc="93ed5afe" sha1="4db5f01df5e42b2010727b452c98f7e5afb317ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267f608ab7a152b">
+		<description>fourplay_2005-12-11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="fourplay_2005-12-11.a26" size="4096" crc="f8d74e4a" sha1="7f608ab7a152bea747983d62f53e601500585216"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eddd7b7a283b6">
+		<description>fourplay_2006-07-31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="fourplay_2006-07-31.a26" size="16384" crc="fe99657a" sha1="eddd7b7a283b60bd16666b3e266040bec9c6bce4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266cd6b5f571abf">
+		<description>fourplay_2006-08-07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="fourplay_2006-08-07.a26" size="2048" crc="b582cd58" sha1="6cd6b5f571abf044846f1aa3b20693dd8f1fea63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261cd483828d922">
+		<description>Frame Counter 1 (2001) (Jake Patterson) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frame Counter 1 (2001) (Jake Patterson) (PD).a26" size="4096" crc="d60149c2" sha1="1cd483828d922a94b4e9e748dab905b7b62aaa50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268b26f5f7fe404">
+		<description>Frame Counter 2 (2001) (Jake Patterson) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frame Counter 2 (2001) (Jake Patterson) (PD).a26" size="4096" crc="45aedc03" sha1="8b26f5f7fe404ac34f827067a40ff7819e04b191"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c884621be3f4b">
+		<description>Frame Timed Sound Effects (Eckhard Stolberg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frame Timed Sound Effects (Eckhard Stolberg).a26" size="4096" crc="ec260179" sha1="c884621be3f4b504bbd9c247b343397ce239bb26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260bbe084c78a80">
+		<description>Frankenstein's Monster Trainer (Frankenstein's Monster Hack) (2007) (Kurt Howe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frankenstein's Monster Trainer (Frankenstein's Monster Hack) (2007) (Kurt Howe).a26" size="4096" crc="28b3e467" sha1="0bbe084c78a80e6155f8592f39990e06e9dc5c68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2667908444bfc2e">
+		<description>Frankenstein</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frankenstein.a26" size="4096" crc="7d688b73" sha1="67908444bfc2e8cf8fa02b6dc8a4863ed23409c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f2559a4e6f4ce">
+		<description>Fred beta by BAtari (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fred beta by BAtari (PD).a26" size="4096" crc="c967ed02" sha1="f2559a4e6f4ceaf777e40493bdf56aecea201d80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26461b015c1aa50">
+		<description>Fred Quimby's Original Sample Program (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fred Quimby's Original Sample Program (PD).a26" size="4096" crc="ad1ac837" sha1="461b015c1aa50c39d718dd65a9df9622a111a7b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26df4a9ff551ce4">
+		<description>Freddy vs Michael (Halloween Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freddy vs Michael (Halloween Hack).a26" size="4096" crc="8019859b" sha1="df4a9ff551ce4c95f36c1c90316e0de6997ec579"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263bc6919b6003c">
+		<description>Freddy vs Michael New Colours 2006-09-21 (Halloween Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freddy vs Michael New Colours 2006-09-21 (Halloween Hack).a26" size="4096" crc="26dcb1ba" sha1="3bc6919b6003cf4d531384c2dd82797bfa5fad3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263d8577bfc9663">
+		<description>Freeball (beta) by Colman Bryant (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeball (beta) by Colman Bryant (PD).a26" size="4096" crc="a4748f22" sha1="3d8577bfc966344bea1017e1dc5592192490d1f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261003b480bc4e8">
+		<description>Freeball (final) by Colman Bryant (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeball (final) by Colman Bryant (PD).a26" size="4096" crc="e6e9f6b2" sha1="1003b480bc4e833c8ef65eda2808faf173473594"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2668e429f37887e">
+		<description>Freeway (1982) (Activision) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeway (1982) (Activision) [o1].a26" size="4096" crc="6ffc5fee" sha1="68e429f37887efcc2d509943df4589a3467c346f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26131b2b4f9d2e1">
+		<description>Freeway (1983) (Activision) [o2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Freeway (1983) (Activision) [o2].a26" size="16384" crc="cdc8998e" sha1="131b2b4f9d2e1594009989a73235594c3e6f6851"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2637535b791a63c">
+		<description>Freeway (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="8ba61f5e" sha1="37535b791a63c3e35d04ea0d14c0215680d71eda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2648e69087591fe">
+		<description>Freeway (32-in-1) (Atari) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeway (32-in-1) (Atari) (PAL) [o1].a26" size="4096" crc="5aaa53fc" sha1="48e69087591fe54380117f2c2ab74f8d65ffe977"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26292156b1ad05b">
+		<description>Freeway (AKA Rabbits) (PAL) [p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway (AKA Rabbits) (PAL) [p1][!].a26" size="2048" crc="e82e2475" sha1="292156b1ad05bbcb9749ded787801841d6beed0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a3c0a569e673">
+		<description>Freeway (AKA Rabbits) (PAL) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeway (AKA Rabbits) (PAL) [p1][o1].a26" size="4096" crc="90115b79" sha1="4a3c0a569e6735d255cd7df16b3e3428ba01ef7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f6ae684fc098">
+		<description>Freeway (CCE) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeway (CCE) [o1].a26" size="4096" crc="fd1672d3" sha1="6f6ae684fc09806be4ebbfd694bd4880cf28e789"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7ee724f0f8df">
+		<description>Freeway (Dactar) (PAL-M) [p1][o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeway (Dactar) (PAL-M) [p1][o1].a26" size="4096" crc="aba6c22d" sha1="a7ee724f0f8df862e510e4bad6c027dca0e4900d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268a219105194ea">
+		<description>Freeway in BASIC (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeway in BASIC (PD).a26" size="4096" crc="eaab5e55" sha1="8a219105194ea199ea424728fe693c146b9dfc1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262e7da3bcb7f23">
+		<description>Freeway Randomizer - fw1 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw1 (Hack).a26" size="2048" crc="39b88e08" sha1="2e7da3bcb7f230f14df0ebb59cf0f4581fa32ca9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4577820fb64d">
+		<description>Freeway Randomizer - fw10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw10.a26" size="2048" crc="27fdeafd" sha1="b4577820fb64d1b4a15af7a11ad88ad0254d1a68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608e9c884c2efa">
+		<description>Freeway Randomizer - fw100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw100.a26" size="2048" crc="a7d0f591" sha1="08e9c884c2efa919829608d3ca17dd4065055abb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2673fb8c59e3101">
+		<description>Freeway Randomizer - fw11 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw11 (Hack).a26" size="2048" crc="dd8edd69" sha1="73fb8c59e31018fa953be3e941462b9bcd65f89a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262b8efb4f04de5">
+		<description>Freeway Randomizer - fw12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw12.a26" size="2048" crc="d102c3f9" sha1="2b8efb4f04de55ec5e8f0c5b7daf9677f0f47b66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de29031212d8c">
+		<description>Freeway Randomizer - fw13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw13.a26" size="2048" crc="bac1ed01" sha1="de29031212d8c9534e7d2d31f9da8188fe605aec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c587731a67a77">
+		<description>Freeway Randomizer - fw14 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw14 (Hack).a26" size="2048" crc="39df61f2" sha1="c587731a67a7750ce0ee396bad267448dae1ad01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267b897040c5dae">
+		<description>Freeway Randomizer - fw15 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw15 (Hack).a26" size="2048" crc="439d90bb" sha1="7b897040c5dae817d799e6c30a3a439aa57a73a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e0d73bef32d70">
+		<description>Freeway Randomizer - fw16 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw16 (Hack).a26" size="2048" crc="421492a4" sha1="e0d73bef32d700ebb424dc35cd0a9796cb9b2c8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2624ead7317e44d">
+		<description>Freeway Randomizer - fw17</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw17.a26" size="2048" crc="e9196af0" sha1="24ead7317e44da15224983dd4d7448813031f790"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa8b3050ece68">
+		<description>Freeway Randomizer - fw18 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw18 (Hack).a26" size="2048" crc="306cabb5" sha1="aa8b3050ece683ff37fe56ddc12e6177ab95b868"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2639b184dcca635">
+		<description>Freeway Randomizer - fw19 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw19 (Hack).a26" size="2048" crc="19f5ad2d" sha1="39b184dcca635a31a61b434100b8bf13440ed69d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b9a50381ce52">
+		<description>Freeway Randomizer - fw2 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw2 (Hack).a26" size="2048" crc="85c4d769" sha1="9b9a50381ce52e2f1cf076aec279c307249c00e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269dd55773503c2">
+		<description>Freeway Randomizer - fw20 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw20 (Hack).a26" size="2048" crc="272ba3db" sha1="9dd55773503c21edb92156f6902d7d7c6188b1e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b3f729f0c1c2">
+		<description>Freeway Randomizer - fw21 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw21 (Hack).a26" size="2048" crc="5e03adde" sha1="1b3f729f0c1c2dd6ad5c248e82f075a3c6c57975"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2670e8b29070e49">
+		<description>Freeway Randomizer - fw22</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw22.a26" size="2048" crc="d46e40d8" sha1="70e8b29070e49ecac689071ed7f7c63337c122dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266726a2d8ec9e0">
+		<description>Freeway Randomizer - fw23</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw23.a26" size="2048" crc="9ca26318" sha1="6726a2d8ec9e0f3b932b6e61f2fc0ed95ed6bba8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a197957d51c3d">
+		<description>Freeway Randomizer - fw24 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw24 (Hack).a26" size="2048" crc="4b67d248" sha1="a197957d51c3dcb0204759147baff55259b863bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cb5dabbf1dd3e">
+		<description>Freeway Randomizer - fw25 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw25 (Hack).a26" size="2048" crc="2bcd216f" sha1="cb5dabbf1dd3e6f880d9fddb3dce1f171ff98948"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615fc2ee32c711">
+		<description>Freeway Randomizer - fw26 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw26 (Hack).a26" size="2048" crc="b4788d16" sha1="15fc2ee32c7114844f44d316d15dd101ff7acc46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f77b2673d77c">
+		<description>Freeway Randomizer - fw27 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw27 (Hack).a26" size="2048" crc="b0212a97" sha1="8f77b2673d77cb8829c33a3ffbb8e8b3461e4531"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659fa20d5dc748">
+		<description>Freeway Randomizer - fw28 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw28 (Hack).a26" size="2048" crc="7b0f7022" sha1="59fa20d5dc748edabf98b3a3c7f7f067c28d46f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260262d268fb8bb">
+		<description>Freeway Randomizer - fw29 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw29 (Hack).a26" size="2048" crc="bb26a148" sha1="0262d268fb8bb88bf492ec5ad8da747e85a419d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613adf10e4eb61">
+		<description>Freeway Randomizer - fw3 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw3 (Hack).a26" size="2048" crc="a529e710" sha1="13adf10e4eb61606f42053a3240f053a4d9c3f94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266e47e027e7083">
+		<description>Freeway Randomizer - fw30 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw30 (Hack).a26" size="2048" crc="368902d5" sha1="6e47e027e7083a43825b1a58555f4666cacb5d66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626d6a58f00cd9">
+		<description>Freeway Randomizer - fw31 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw31 (Hack).a26" size="2048" crc="aae29412" sha1="26d6a58f00cd98814f7d65352b0b0f9e7048c5d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dabe03047a410">
+		<description>Freeway Randomizer - fw32 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw32 (Hack).a26" size="2048" crc="84ed96c1" sha1="dabe03047a4100aeae334cb9072fa751534eca62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2652fc80a55de1f">
+		<description>Freeway Randomizer - fw33</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw33.a26" size="2048" crc="1c2e1c21" sha1="52fc80a55de1f658ecc200e6ab8bdf115ee58b2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a5577e0f36ff3">
+		<description>Freeway Randomizer - fw34</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw34.a26" size="2048" crc="c3a377f3" sha1="a5577e0f36ff3d308dfdb2443f8bd8aed719ab3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26044412b92c179">
+		<description>Freeway Randomizer - fw35 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw35 (Hack).a26" size="2048" crc="022f31e8" sha1="044412b92c17969e0e776744861287239a8c27af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26667d0e110ad14">
+		<description>Freeway Randomizer - fw36</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw36.a26" size="2048" crc="f991dbd6" sha1="667d0e110ad14cad93823296dbb240ed6441b8b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264c80dd0400295">
+		<description>Freeway Randomizer - fw37 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw37 (Hack).a26" size="2048" crc="deb897ab" sha1="4c80dd0400295b303ce49b05dfe1f52aa283b9d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2630a8fe5b7c83f">
+		<description>Freeway Randomizer - fw38 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw38 (Hack).a26" size="2048" crc="3b0e422a" sha1="30a8fe5b7c83f0f16099aa22f96ea8febca0fd5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26833e2e7cbb783">
+		<description>Freeway Randomizer - fw39 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw39 (Hack).a26" size="2048" crc="6d94615b" sha1="833e2e7cbb783c237517545fb253a977aa252292"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26746346e2762be">
+		<description>Freeway Randomizer - fw4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw4.a26" size="2048" crc="81de4578" sha1="746346e2762bece3984505b15b850601feab1b2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26582738d67365b">
+		<description>Freeway Randomizer - fw40 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw40 (Hack).a26" size="2048" crc="e24c0165" sha1="582738d67365b9bbb6cfba861b3028eeef3c247c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268707ddaece508">
+		<description>Freeway Randomizer - fw41 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw41 (Hack).a26" size="2048" crc="f4297d99" sha1="8707ddaece50839d4c46d1a0107748082adac146"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26712972dea32fb">
+		<description>Freeway Randomizer - fw42</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw42.a26" size="2048" crc="ec8f28c4" sha1="712972dea32fbf4001cf32c36008493e4269e106"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260e5101135a55b">
+		<description>Freeway Randomizer - fw43 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw43 (Hack).a26" size="2048" crc="b6bdae70" sha1="0e5101135a55b3baae76340a2d2072f0b401e75b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0bcbc18d5bfe">
+		<description>Freeway Randomizer - fw44 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw44 (Hack).a26" size="2048" crc="16971b3a" sha1="a0bcbc18d5bfe11dd00e15e6453995b1636bae07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26861d23c09ab1a">
+		<description>Freeway Randomizer - fw45 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw45 (Hack).a26" size="2048" crc="ed40e27f" sha1="861d23c09ab1a1cbe88268ca93483d8f0f2e1248"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad8a7c5b46a8f">
+		<description>Freeway Randomizer - fw46 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw46 (Hack).a26" size="2048" crc="28aea5c0" sha1="ad8a7c5b46a8f366dc694615f986cdb056c39db9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264672c87add5ce">
+		<description>Freeway Randomizer - fw47</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw47.a26" size="2048" crc="80757e22" sha1="4672c87add5ceaa0114ff41632b52a52a36bfe13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265cf3dc1eb51b0">
+		<description>Freeway Randomizer - fw48</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw48.a26" size="2048" crc="c6e067d5" sha1="5cf3dc1eb51b0a62c1dcdfd7ab028b18e8ebf15b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26794476c787ad0">
+		<description>Freeway Randomizer - fw49 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw49 (Hack).a26" size="2048" crc="6a4fa175" sha1="794476c787ad093c9137f22bcd588111e1003c5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626e369436e229">
+		<description>Freeway Randomizer - fw5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw5.a26" size="2048" crc="f6b54869" sha1="26e369436e22976bc81ef88555a492064897f8e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2635805eaea7381">
+		<description>Freeway Randomizer - fw50 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw50 (Hack).a26" size="2048" crc="279b8077" sha1="35805eaea7381f2d03cb42037e96c4f7f4fe320a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263968a6075dd7a">
+		<description>Freeway Randomizer - fw51 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw51 (Hack).a26" size="2048" crc="a4ca5f80" sha1="3968a6075dd7af60c1f5e88af36906b26fc408cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c485777106335">
+		<description>Freeway Randomizer - fw52 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw52 (Hack).a26" size="2048" crc="a80a7960" sha1="c485777106335b9dc19739eb178006a9f90ce88b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b3c95ab5cad4c">
+		<description>Freeway Randomizer - fw53 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw53 (Hack).a26" size="2048" crc="e1859264" sha1="b3c95ab5cad4c844bdb29ac2a93447305ea131e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2620f4de70c8239">
+		<description>Freeway Randomizer - fw54 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw54 (Hack).a26" size="2048" crc="abe63239" sha1="20f4de70c8239ae4f05ab63994c2fde4979a7e6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268d5854ad70ee1">
+		<description>Freeway Randomizer - fw55</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw55.a26" size="2048" crc="488ce727" sha1="8d5854ad70ee1e98fe34590dd123a6f3f0ed703c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261fdcc11d50393">
+		<description>Freeway Randomizer - fw56 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw56 (Hack).a26" size="2048" crc="24791f12" sha1="1fdcc11d503936b9802bb6902d749e646d4d526e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267e98c94da3d3b">
+		<description>Freeway Randomizer - fw57 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw57 (Hack).a26" size="2048" crc="b482f000" sha1="7e98c94da3d3bb301ce79683a642744e6c107b5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268ee90c67aeee5">
+		<description>Freeway Randomizer - fw58 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw58 (Hack).a26" size="2048" crc="a88551e7" sha1="8ee90c67aeee5ad735b5861baa5e423ad250feb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265e3e74b73c246">
+		<description>Freeway Randomizer - fw59 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw59 (Hack).a26" size="2048" crc="4d9d466d" sha1="5e3e74b73c24637733323b3d668b785a2024c618"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260b5b86ba72238">
+		<description>Freeway Randomizer - fw6 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw6 (Hack).a26" size="2048" crc="2205782b" sha1="0b5b86ba7223887cae43c3640f0b0db4337bf4c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a9ccfc6ce65c0">
+		<description>Freeway Randomizer - fw60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw60.a26" size="2048" crc="b69c36b6" sha1="a9ccfc6ce65c0faae104a6ed3172b3587c1f1908"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26709ee144214e9">
+		<description>Freeway Randomizer - fw61</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw61.a26" size="2048" crc="ff98a4ed" sha1="709ee144214e998d2a868291c4c266d774c01216"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2638a9ef1cdca00">
+		<description>Freeway Randomizer - fw62 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw62 (Hack).a26" size="2048" crc="2250ae10" sha1="38a9ef1cdca00f88e2c2f930063657fba5464d34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26800483a200ee2">
+		<description>Freeway Randomizer - fw63 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw63 (Hack).a26" size="2048" crc="f0e7ec3e" sha1="800483a200ee2f5eb318258ac741668af55161d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b953303a6175">
+		<description>Freeway Randomizer - fw64 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw64 (Hack).a26" size="2048" crc="060bacb3" sha1="4b953303a61753f17241bc85b336fd7e7bddeeec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c48bef655229b">
+		<description>Freeway Randomizer - fw65 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw65 (Hack).a26" size="2048" crc="eff86763" sha1="c48bef655229bcfca322234484454ec9f642d90a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b714167958bf9">
+		<description>Freeway Randomizer - fw66</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw66.a26" size="2048" crc="0903c448" sha1="b714167958bf9efead2bd28feb99c101642a240c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d12e27cc2dc93">
+		<description>Freeway Randomizer - fw67 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw67 (Hack).a26" size="2048" crc="23e5e448" sha1="d12e27cc2dc93785637fca31d9b84a9ac38e9aa2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260145e79d62af8">
+		<description>Freeway Randomizer - fw68 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw68 (Hack).a26" size="2048" crc="eaeacab2" sha1="0145e79d62af84e07044564f22b8bbbe58a462ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696c782d3ffaa0">
+		<description>Freeway Randomizer - fw69 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw69 (Hack).a26" size="2048" crc="ea3fc7c8" sha1="96c782d3ffaa06a0de9c9bf24f030ffa2fd654ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260f096d2d9c083">
+		<description>Freeway Randomizer - fw7 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw7 (Hack).a26" size="2048" crc="c7bfc9a8" sha1="0f096d2d9c0832d9eb0523e333414cc0931a13ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ef528b464a5a">
+		<description>Freeway Randomizer - fw70 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw70 (Hack).a26" size="2048" crc="cea0df7a" sha1="7ef528b464a5aaddb47c4a7b28ca7c78d4b04e8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2681e187167af0e">
+		<description>Freeway Randomizer - fw71 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw71 (Hack).a26" size="2048" crc="1647e03d" sha1="81e187167af0e1f3fddecb25d9b6fb4ed5985cc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d8beec881e9dc">
+		<description>Freeway Randomizer - fw72 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw72 (Hack).a26" size="2048" crc="bc13dff1" sha1="d8beec881e9dc8173986100e0e3b8da2b7282268"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266fe126b3280bf">
+		<description>Freeway Randomizer - fw73 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw73 (Hack).a26" size="2048" crc="527421c2" sha1="6fe126b3280bf9508694aa970224878a4ffa0f7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263a57290338513">
+		<description>Freeway Randomizer - fw74 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw74 (Hack).a26" size="2048" crc="ba4e54ca" sha1="3a572903385138906758946973ac2df41947fbda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265c45d8cfae36a">
+		<description>Freeway Randomizer - fw75</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw75.a26" size="2048" crc="c32d3de8" sha1="5c45d8cfae36a1657f2e4703db02a939035b6e3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb7bd37f5acf6">
+		<description>Freeway Randomizer - fw76 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw76 (Hack).a26" size="2048" crc="8414e280" sha1="bb7bd37f5acf63fb66096d2291edd49033272469"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2658566f9085144">
+		<description>Freeway Randomizer - fw77 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw77 (Hack).a26" size="2048" crc="9e1561ec" sha1="58566f90851443242cdc7697b29774c0bfe57e08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269939bedc00bdd">
+		<description>Freeway Randomizer - fw78 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw78 (Hack).a26" size="2048" crc="cf3f6b87" sha1="9939bedc00bddf921280ff8bd63b511c91481896"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4ba1dfab1b03">
+		<description>Freeway Randomizer - fw79</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw79.a26" size="2048" crc="b8c09706" sha1="b4ba1dfab1b0333629806bea998bc527e37e90a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f84667d764ba">
+		<description>Freeway Randomizer - fw8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw8.a26" size="2048" crc="e11b542e" sha1="6f84667d764bab83a2d0284032465b21be0d0b16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a7435a73d787">
+		<description>Freeway Randomizer - fw80 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw80 (Hack).a26" size="2048" crc="b214730d" sha1="9a7435a73d7878d283843af5c547f24682289137"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d987dd42ad35e">
+		<description>Freeway Randomizer - fw81 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw81 (Hack).a26" size="2048" crc="e363c77a" sha1="d987dd42ad35e428d6e6e87ae84293a58b010ac0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4b8a9fd19b69">
+		<description>Freeway Randomizer - fw82 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw82 (Hack).a26" size="2048" crc="d4e7bed1" sha1="b4b8a9fd19b69ac466d7b02222cca4451a565088"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa9c8e87ff191">
+		<description>Freeway Randomizer - fw83 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw83 (Hack).a26" size="2048" crc="1a46848f" sha1="aa9c8e87ff1910e85f5917b03b7c282cd8ee3d8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269d9a185fc5b71">
+		<description>Freeway Randomizer - fw84 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw84 (Hack).a26" size="2048" crc="59011821" sha1="9d9a185fc5b71c915485515a8bb51e6af96f896f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26501b7102893dd">
+		<description>Freeway Randomizer - fw85</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw85.a26" size="2048" crc="823df7ea" sha1="501b7102893ddce13e56b7409737597ce61de067"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688338540e5ba5">
+		<description>Freeway Randomizer - fw86 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw86 (Hack).a26" size="2048" crc="ac7b46b6" sha1="88338540e5ba53f73ec0e0838a88d6656c9695e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a997f4e8452a2">
+		<description>Freeway Randomizer - fw87</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw87.a26" size="2048" crc="723014be" sha1="a997f4e8452a254e5641212c3d60f9fd2833a86e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26769cfddc1fa8d">
+		<description>Freeway Randomizer - fw88 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw88 (Hack).a26" size="2048" crc="81678451" sha1="769cfddc1fa8d005192a9ef4631324279d7ea716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26223fdd7405777">
+		<description>Freeway Randomizer - fw89 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw89 (Hack).a26" size="2048" crc="1aae91b7" sha1="223fdd740577754550c657bf339702a236fafc5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d3c03fe1974c">
+		<description>Freeway Randomizer - fw9 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw9 (Hack).a26" size="2048" crc="9cdce985" sha1="1d3c03fe1974c52a58c0b0343608004e6a8f9d7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266450420b659d0">
+		<description>Freeway Randomizer - fw90</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw90.a26" size="2048" crc="2258d76c" sha1="6450420b659d02fabc60dbf26a658f8b63c63fff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2630bbda3e16a68">
+		<description>Freeway Randomizer - fw91 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw91 (Hack).a26" size="2048" crc="287e5f85" sha1="30bbda3e16a683336876ce9ea4aa36e376c1d92c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f83d8e4d26622">
+		<description>Freeway Randomizer - fw92 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw92 (Hack).a26" size="2048" crc="bd5154a7" sha1="f83d8e4d266220645ea032dc3a29c346bc9ee1e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26224c4c3c88fe8">
+		<description>Freeway Randomizer - fw93 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw93 (Hack).a26" size="2048" crc="21e5214e" sha1="224c4c3c88fe866a4c970c31ec6efd8548381d60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b9f6816efec1">
+		<description>Freeway Randomizer - fw94 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw94 (Hack).a26" size="2048" crc="89e319fe" sha1="9b9f6816efec17bf360235a650492794b9b42bd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263dbc9e03cc853">
+		<description>Freeway Randomizer - fw95 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw95 (Hack).a26" size="2048" crc="a2b14831" sha1="3dbc9e03cc853704f937958c48097d4ade6032e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b98c558be356">
+		<description>Freeway Randomizer - fw96</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw96.a26" size="2048" crc="5e64b982" sha1="9b98c558be356f3507c360fd9c80280aaee482ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2614a9d47499b91">
+		<description>Freeway Randomizer - fw97 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw97 (Hack).a26" size="2048" crc="e5a22dd2" sha1="14a9d47499b915408b67f905b3cde2ecb5ae4229"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263267575a533dd">
+		<description>Freeway Randomizer - fw98</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw98.a26" size="2048" crc="9b73a2ba" sha1="3267575a533ddb60b537b2b372452f7e266a212e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f92bdb3f96acb">
+		<description>Freeway Randomizer - fw99 (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway Randomizer - fw99 (Hack).a26" size="2048" crc="a0140653" sha1="f92bdb3f96acb08185114e950c965f34c20e6159"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c9b7e7f411f5f">
+		<description>Freeway</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Freeway.a26" size="2048" crc="776b5f7a" sha1="c9b7e7f411f5ff85f066e99812aad231de222274"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d285e7e39cff">
+		<description>Freeze (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Freeze (Jumpman Selected Levels) (PD).a26" size="4096" crc="aead0566" sha1="5d285e7e39cffdadb14a076fa85ee088ca40fbf3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2651d9cf211c58b">
+		<description>Frenzy (2007) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frenzy (2007) (Steve Engelhardt).a26" size="4096" crc="84e22994" sha1="51d9cf211c58b29b3acdc9f69cf63997e9c84a6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cc17075cf18d3">
+		<description>Friction02 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Friction02 (PD).a26" size="2048" crc="6780764b" sha1="cc17075cf18d3b2e9d2c09cc7650106ee989554a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260469a8e061db8">
+		<description>Friday the 13th part2 (Final Release) (Texas Chainsaw Massacre Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Friday the 13th part2 (Final Release) (Texas Chainsaw Massacre Hack).a26" size="4096" crc="f383b013" sha1="0469a8e061db8820602a3d77e7c46f9a071664c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd7ebae210117">
+		<description>Friday the 13th part3 (1.5) 2005-12-03 (Texas Chainsaw Massacre Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Friday the 13th part3 (1.5) 2005-12-03 (Texas Chainsaw Massacre Hack).a26" size="4096" crc="4482001e" sha1="dd7ebae210117eafd3f2698e200de53e533f3a50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26305f0cf9025e0">
+		<description>Friday the 13th part3 (2.0) 2005-12-10 (Texas Chainsaw Massacre Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Friday the 13th part3 (2.0) 2005-12-10 (Texas Chainsaw Massacre Hack).a26" size="4096" crc="78656a14" sha1="305f0cf9025e0f7887f4c99de064b7325b8025a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f5852185cec7b">
+		<description>Friday the 13th part3 (Final Release) (Texas Chainsaw Massacre Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Friday the 13th part3 (Final Release) (Texas Chainsaw Massacre Hack).a26" size="4096" crc="7be5eaaa" sha1="f5852185cec7bd447ffb88def9859aba69472a95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f23cb085506fc">
+		<description>friday13-v3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="friday13-v3.a26" size="4096" crc="d62ed57d" sha1="f23cb085506fc5b1ad136e52c7ca346ec86d4e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6eb656103234">
+		<description>Friday13th part3 (1.0) 2005-12-01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Friday13th part3 (1.0) 2005-12-01.a26" size="4096" crc="7bc71bb2" sha1="d6eb6561032341cb9fe8648612b6fe63f1c72b9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bef1c7fb085a9">
+		<description>Frogger (SuperCharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frogger (SuperCharger).a26" size="4096" crc="c07cc907" sha1="bef1c7fb085a95af77c3018bb1b7b9cb75b99cd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2620af9ffd6e3d7">
+		<description>Frogger II - Threedeep! (1985) (Parker Bros) (PAL) [hMF6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Frogger II - Threedeep! (1985) (Parker Bros) (PAL) [hMF6].a26" size="16384" crc="c40b5bc9" sha1="20af9ffd6e3d77f57978ae18e07b8071c29b6dd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626603d42db5d5">
+		<description>Frogger II - Threedeep! (1985) (Parker Bros) [hMF6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Frogger II - Threedeep! (1985) (Parker Bros) [hMF6].a26" size="16384" crc="ed00a0a6" sha1="26603d42db5d5db49897aa10bc69fa8c7eea1979"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26df857785dd2d3">
+		<description>Frogger-PB(Palette_select)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frogger-PB(Palette_select).a26" size="4096" crc="a558a0b7" sha1="df857785dd2d3051a77634863a8e97987e01ae57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b5a143cb04695">
+		<description>Frogs and Flies (Jone Yuan Telephonic Enterprise Co) [p1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frogs and Flies (Jone Yuan Telephonic Enterprise Co) [p1].a26" size="4096" crc="de5380bc" sha1="b5a143cb046953a69f76cb2f903e61350f0de265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e82e6f6a50f15">
+		<description>Front Line Arcade Final (Front Line Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Front Line Arcade Final (Front Line Hack).a26" size="8192" crc="75ac9cd0" sha1="e82e6f6a50f1565e0df97ad277b7c7bea4eac384"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c376504b9ab24">
+		<description>Front Line Arcade wip6 (Front Line Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Front Line Arcade wip6 (Front Line Hack).a26" size="8192" crc="b6870aaa" sha1="c376504b9ab24a88e19f8d2745aaab9fc260f58e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26daf2acebd2022">
+		<description>Frostbite (1984) (Activision) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Frostbite (1984) (Activision) (PAL) [o1].a26" size="16384" crc="0dd6ab9e" sha1="daf2acebd2022f31894f5da1d1732149282eabce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26186d9e8d0505e">
+		<description>Frostbite (1984) (Activision) [b1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frostbite (1984) (Activision) [b1].a26" size="4096" crc="36d1e3ec" sha1="186d9e8d0505e0b489a49573664a112053c230ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268d0f5d60cb8fc">
+		<description>Frostbite (1985) (Activision) (PAL) [o2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Frostbite (1985) (Activision) (PAL) [o2].a26" size="8192" crc="c45e14ee" sha1="8d0f5d60cb8fccd83bcbdbfe61b3cefbddeee7d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268ad03667bbf73">
+		<description>Frostbite (1985) (Activision) (PAL) [p1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frostbite (1985) (Activision) (PAL) [p1][!].a26" size="4096" crc="76588b34" sha1="8ad03667bbf73d3c7760cb82f2c4442f8745483c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633504583a21cc">
+		<description>Frostbite_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frostbite_NTSC(Supercharger).a26" size="4096" crc="474d24e9" sha1="33504583a21ccb3788a237a3effc49836b52589d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d34604d61653">
+		<description>Frostbite_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Frostbite_PAL60(Supercharger).a26" size="4096" crc="6e2137dd" sha1="1d34604d61653ab2600e63490ad0d1055a9781d2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a267c205771ed452">
 		<description>frostbyte+ (2)</description>
 		<year>????</year>
@@ -28882,6 +32312,196 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a263797959e4a323">
+		<description>Fu Kung (z26 -r60 -v1 -f99 -M0 -q FuKung.bin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Fu Kung (z26 -r60 -v1 -f99 -M0 -q FuKung.bin).a26" size="524288" crc="2e54f2ce" sha1="3797959e4a3236b6562ce15af7d96633f6720fc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260302756e67482">
+		<description>Fu Kung 2 (Baby)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung 2 (Baby).a26" size="32768" crc="f5da87c1" sha1="0302756e67482a1fcbab35c264554b2b90ddd807"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262bd579119f4e9">
+		<description>Fu Kung 3 (Baby) (AD)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung 3 (Baby) (AD)_2.a26" size="32768" crc="592a6de7" sha1="2bd579119f4e9ab0c4b1acd5daf96923698a880a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268fbfdf24a701c">
+		<description>Fu Kung! (V0.06a Cuttle Cart Compatible) (15-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.06a Cuttle Cart Compatible) (15-01-2003) (AD).a26" size="32768" crc="ce4489df" sha1="8fbfdf24a701c271b602f3932dc5924b8ab2db50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a7ef0c41c6a6">
+		<description>Fu Kung! (V0.07) (25-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.07) (25-01-2003) (AD).a26" size="32768" crc="9cd1b415" sha1="6a7ef0c41c6a6c14e20363d27be08bfe46ca6447"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d4c234e206755">
+		<description>Fu Kung! (V0.08) (2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.08) (2003) (AD).a26" size="32768" crc="0fc5419c" sha1="d4c234e206755da183b78b2bf8e316ba30111f71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26109b6e679b17a">
+		<description>Fu Kung! (V0.09) (26-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.09) (26-01-2003) (AD).a26" size="32768" crc="916787d4" sha1="109b6e679b17aef547a74ee288db6e716d541f80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260127c2f7a7d3d">
+		<description>Fu Kung! (V0.10) (28-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.10) (28-01-2003) (AD).a26" size="32768" crc="e3d1783e" sha1="0127c2f7a7d3dbcbf41e3a9a902578270649406b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ea902b80080f0">
+		<description>Fu Kung! (V0.11) (28-01-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.11) (28-01-2003) (AD).a26" size="32768" crc="b216b914" sha1="ea902b80080f096b1eb028a6d61381839a53ac16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2676df230ac82e1">
+		<description>Fu Kung! (V0.13) (01-02-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.13) (01-02-2003) (AD).a26" size="32768" crc="704afd82" sha1="76df230ac82e1078fdea1bfb1c121bd7676ae06d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264fa8fc1b694b9">
+		<description>Fu Kung! (V0.14) (01-02-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.14) (01-02-2003) (AD).a26" size="32768" crc="7c4421e9" sha1="4fa8fc1b694b958126fcc6a7a3f530289d9f5b28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cead3a3c01a37">
+		<description>Fu Kung! (V0.15) (Negative Version) (05-02-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.15) (Negative Version) (05-02-2003) (AD).a26" size="32768" crc="f046e5bd" sha1="cead3a3c01a375d156e773b28205bb7d19f612c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f696129c769f4">
+		<description>Fu Kung! (V0.16) (2004) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.16) (2004) (AD).a26" size="32768" crc="3ad70080" sha1="f696129c769f463c8eacc2759ff456f6af76b6b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26778bfd13487c2">
+		<description>Fu Kung! (V0.17) (07-02-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Fu Kung! (V0.17) (07-02-2003) (AD).a26" size="32768" crc="0b131f88" sha1="778bfd13487c25b41a1a44c61374f64d4b69237b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2611d00eaced7dc">
+		<description>Fuji Tower (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Fuji Tower (PD).a26" size="4096" crc="463d5bc4" sha1="11d00eaced7dcf259ac9c007820f3b8bb095babb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f61aa389628b2">
+		<description>Full Screen Bitmap (3-D Green) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Full Screen Bitmap (3-D Green) (AD).a26" size="4096" crc="37201911" sha1="f61aa389628b28b4a12fd9eb5eb606587f7aaf54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2635fb96861181c">
+		<description>Full Screen Bitmap Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Full Screen Bitmap Demo (PD).a26" size="4096" crc="954ef650" sha1="35fb96861181c686b9b7c649d749b9073958d8fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f3bf0cad66e85">
+		<description>Full Screen Bitmap Drawing System (12-02-2003) (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Full Screen Bitmap Drawing System (12-02-2003) (AD).a26" size="4096" crc="3ec1497c" sha1="f3bf0cad66e8516acb5a8bc8c9865c0dcb10c05f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650da91a6c2c58">
+		<description>Full_Court</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Full_Court.a26" size="2048" crc="9fc6ccec" sha1="50da91a6c2c585f270270b4b677d38bd7944382b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26790fd65f3ada4">
 		<description>full_mushroom_field_centipede</description>
 		<year>????</year>
@@ -28889,6 +32509,76 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="full_mushroom_field_centipede.a26" size="8192" crc="dfe899ef" sha1="790fd65f3ada4d90ccace6f5d01eee07dfeab42d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2651f477f37252b">
+		<description>Fun with Numbers (AKA Basic Math) (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Fun with Numbers (AKA Basic Math) (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="6f13c49c" sha1="51f477f37252b5c32469fc1f616c56ed7cad24bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266cf5820ac6bcc">
+		<description>FunwithNumbers_32-in-1_Atari_PAL_Overdump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="FunwithNumbers_32-in-1_Atari_PAL_Overdump.a26" size="4096" crc="f24d6e3a" sha1="6cf5820ac6bcc52a46dbb124daaa821b49b04dd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2632e7ca7d76a0f">
+		<description>futurama final 2 version hack of Oink</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="futurama final 2 version hack of Oink.a26" size="4096" crc="50672277" sha1="32e7ca7d76a0f2a8130ed69b09517beeabaa87d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2680578bb0a9da6">
+		<description>futurama final version hack of Oink</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="futurama final version hack of Oink.a26" size="4096" crc="5c8f462f" sha1="80578bb0a9da697d78c945bbf5055c92a4a20b2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2699cfcfd969cce">
+		<description>F_4 21-08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F_4 21-08.a26" size="4096" crc="bb1e5695" sha1="99cfcfd969cce52546918faaa28d28fee6c729b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266209256dcce45">
+		<description>F_4 8-7-2006</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F_4 8-7-2006.a26" size="4096" crc="179fd721" sha1="6209256dcce459540da5ade5502b820ab72e59ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264757f90056357">
+		<description>F_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="F_4.a26" size="4096" crc="c8fdb4ed" sha1="4757f900563578919dbb28f5a6989c793513840c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39389,6 +43079,266 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="River_Raid__infinite_lives_Hack.a26" size="4096" crc="78082f94" sha1="63b12e34ed0676c69e9c6f05a41562966264b8ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26906944044bd33">
+		<description>rr4rand</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="rr4rand.a26" size="4096" crc="d2d99757" sha1="906944044bd330b23268fa2a8e9b5cd7057879b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c7efa75146047">
+		<description>RRampage 20040414 (Erik Mooney)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="RRampage 20040414 (Erik Mooney).a26" size="8192" crc="32a7fdc8" sha1="c7efa75146047db854efe6955bbc2ec3d2d944d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650ecff922364d">
+		<description>RRpm1_2_3_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RRpm1_2_3_4.a26" size="4096" crc="94c3cad4" sha1="50ecff922364d93cdbf3dbdfefa27496b6b5fbae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2697f11fe960229">
+		<description>rr_pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="rr_pal.bin" size="16384" crc="b128cde0" sha1="97f11fe960229a1c6e96b2ed6f0ab549056b26a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26692ed3f12fc37">
+		<description>RType20070329</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RType20070329.a26" size="4096" crc="14f2748a" sha1="692ed3f12fc3743230d5743c356b94f7b1e64853"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269ec84fac47f40">
+		<description>Rubik's Cube 3D Demo (25-11-2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Rubik's Cube 3D Demo (25-11-2002) (TJ).a26" size="2048" crc="408b1610" sha1="9ec84fac47f400eeb878d3220f85f26f388ecaee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2621c0491605bd0">
+		<description>Rubik's Cube 3D Demo (Final) (08-01-2003) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Rubik's Cube 3D Demo (Final) (08-01-2003) (TJ).a26" size="4096" crc="69bd30a8" sha1="21c0491605bd064bb87cb4687a21a9ba1623fcb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc5895d9454aa">
+		<description>Rubik's Cube Demo (23-12-2002) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Rubik's Cube Demo (23-12-2002) (CT).a26" size="4096" crc="c0925c7e" sha1="bc5895d9454aa4e45094dde031c7fc2756150583"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26847d5e6e55df6">
+		<description>Rubik's Cube Demo 2 (23-12-2002) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Rubik's Cube Demo 2 (23-12-2002) (CT).a26" size="4096" crc="b397523e" sha1="847d5e6e55df66294db35d78f6b28fb4fe387d66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f4e6fdf42064e">
+		<description>Rubik's Cube Demo 3 (24-12-2002) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Rubik's Cube Demo 3 (24-12-2002) (CT).a26" size="4096" crc="04e23d6e" sha1="f4e6fdf42064ea0f43d541c731c34a6041f5b98c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261afabd779d11e">
+		<description>Ruins 2005-09-29 (Duane Alan Hahn)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ruins 2005-09-29 (Duane Alan Hahn).a26" size="4096" crc="7e60b2a4" sha1="1afabd779d11efbeae60b0123cf652771fe37092"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d8c7ea7cc43fa">
+		<description>Ruins 2005-09-30_special_green (Duane Alan Hahn)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ruins 2005-09-30_special_green (Duane Alan Hahn).a26" size="4096" crc="e1162fe3" sha1="d8c7ea7cc43fa9d3f4ede4e88a03e729ac1e6574"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268bf84618f4ced">
+		<description>Ruins 2005-10-01 (Duane Alan Hahn)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ruins 2005-10-01 (Duane Alan Hahn).a26" size="4096" crc="313bc218" sha1="8bf84618f4ced2071ce3896df2e071fcaa4ffbe0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26deeb9900988a7">
+		<description>ruins_2008y_09m_012d_1854t</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ruins_2008y_09m_012d_1854t.a26" size="4096" crc="d62da369" sha1="deeb9900988a70e248e044a520ab0fe50380960b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f4331144caa1">
+		<description>Rumble 2600 by Grimlock (Mario Bros. Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Rumble 2600 by Grimlock (Mario Bros. Hack).a26" size="8192" crc="c079ffc3" sha1="8f4331144caa1dd3ada191122c1c2b2a8d91b317"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cf311b8b20a3f">
+		<description>Run for It Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Run for It Demo (PD).a26" size="16384" crc="4550c2ef" sha1="cf311b8b20a3f1b627333c1e3c76e5fa797e5efa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d9c42c7328d76">
+		<description>RUN Platform Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RUN Platform Demo (PD).a26" size="4096" crc="abfa81ec" sha1="d9c42c7328d76b65e6304e4d5fe3257961bcdf0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3d10a88b50ae">
+		<description>Run! v1.0 (2005) (Broch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Run! v1.0 (2005) (Broch).a26" size="4096" crc="9a52c047" sha1="d3d10a88b50aeac1bc9928c82d4540e7a7534cf9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dbb90aae9d31f">
+		<description>runaway (Jumpman Selected levels)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="runaway (Jumpman Selected levels).a26" size="4096" crc="6e4b197c" sha1="dbb90aae9d31f856f23c651845095e17a54d9eaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2652648a7e69504">
+		<description>Running Man (2004-12-29 fix) (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Running Man (2004-12-29 fix) (Bob Montgomery).a26" size="4096" crc="0f04a123" sha1="52648a7e69504329b76059c93e6fd538b963dc22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb4d52d2bfc8a">
+		<description>Running Man (2004-12-29)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Running Man (2004-12-29).a26" size="4096" crc="e60f86be" sha1="eb4d52d2bfc8a42855e1ea06ef139f559ecdf0cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260ac58ed513096">
+		<description>Running Man (2004-12-30) (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Running Man (2004-12-30) (Bob Montgomery).a26" size="4096" crc="214773b4" sha1="0ac58ed5130962e6ba28ff2e05633d1d45031266"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268d2ed5621a466">
+		<description>Running Man (2005-01-07) (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Running Man (2005-01-07) (Bob Montgomery).a26" size="4096" crc="c6a72254" sha1="8d2ed5621a466e2778d7f85057e90676f3d12ecb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e93402ea240f3">
+		<description>Running Santa (2006) (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Running Santa (2006) (Bob Montgomery).a26" size="16384" crc="7c90b0d5" sha1="e93402ea240f3a4f9082c232bdf6c5f5e4364f4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2637f924030bd0e">
+		<description>runningman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="runningman.bin" size="4096" crc="018a8da6" sha1="37f924030bd0e6f4637daa99c70937da94368300"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ed57909c2fbf9">
+		<description>RY-GAR! v1 (Forest Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RY-GAR! v1 (Forest Hack).a26" size="4096" crc="3c90ccb4" sha1="ed57909c2fbf98c959adaad3cee4ebb8d6aab16d"/>
 			</dataarea>
 		</part>
 	</software>
