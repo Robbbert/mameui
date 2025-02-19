@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 40 -->
+<!-- Number of items in this list = 42 -->
 <softwarelist name="pasopia_cass" description="pasopia_cass loose roms">
 	<software name="pas113043eab3479">
 		<description>2001Nen Uchu no Tabi Part II</description>
@@ -269,6 +269,26 @@
 		<part name="cass" interface="pasopia_cass">
 			<dataarea name="cass" size="2596557">
 				<rom name="lift02.wav" size="2596557" crc="c6ffffe5" sha1="6e6a3eb147ee8304b53ff1b75d46adb4f77755b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasea010f23b9c9e">
+		<description>mieyen01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="226433">
+				<rom name="mieyen01.wav" size="226433" crc="aabd7fdc" sha1="ea010f23b9c9ee58f781cd88c087a2257b8ea76e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas79a353f31264c">
+		<description>mieyen02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="2919056">
+				<rom name="mieyen02.wav" size="2919056" crc="2aaa312c" sha1="79a353f31264cf8856500c82bec749a8b3b09306"/>
 			</dataarea>
 		</part>
 	</software>

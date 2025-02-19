@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 286 -->
+<!-- Number of items in this list = 287 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -1429,6 +1429,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Mickey's Ultimate Challenge (B).sms" size="524288" crc="2b86bcd7" sha1="0b46e31f656fee2ac8d947ca9bb91881d1c72428"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3887408676840">
+		<description>mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mieyen.sms" size="16384" crc="364c06ed" sha1="3887408676840ab18f2dca154470565a7329b280"/>
 			</dataarea>
 		</part>
 	</software>

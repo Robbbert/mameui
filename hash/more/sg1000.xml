@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 47 -->
+<!-- Number of items in this list = 48 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -309,6 +309,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="7058">
 				<rom name="Mazy.sg" size="7058" crc="8f972417" sha1="d261c253a83e020835ac128dbb497d378ebc8329"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1ad731fb929494">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="16384">
+				<rom name="Mieyen.sg" size="16384" crc="3c65bb5a" sha1="ad731fb9294944c6cc987000bcee9f278d1a6999"/>
 			</dataarea>
 		</part>
 	</software>

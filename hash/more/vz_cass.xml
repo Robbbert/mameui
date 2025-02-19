@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 36 -->
+<!-- Number of items in this list = 37 -->
 <softwarelist name="vz_cass" description="vz_cass loose roms">
 	<software name="vt1cb8e8fc30fea4">
 		<description>(demo)2018AD</description>
@@ -239,6 +239,16 @@
 		<part name="cass1" interface="vtech1_cass">
 			<dataarea name="cass" size="2247312">
 				<rom name="Mazy.wav" size="2247312" crc="e9999988" sha1="a0fb051517af29f39559a791cd696e8df9c4e511"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1b8fb63a7adeea">
+		<description>mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="vtech1_cass">
+			<dataarea name="cass" size="2385632">
+				<rom name="mieyen.wav" size="2385632" crc="18f09e5f" sha1="b8fb63a7adeea6d64768d1a598510fd548e601a3"/>
 			</dataarea>
 		</part>
 	</software>

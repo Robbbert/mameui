@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 237 -->
+<!-- Number of items in this list = 238 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
 	<software name="vt1dbb8f6a5ec6f6">
 		<description>3D Pyramids (19xx)(-)</description>
@@ -1659,6 +1659,16 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="464">
 				<rom name="memory.vz" size="464" crc="4fb98826" sha1="dd886ef097e03a59db876bd5402b6736e10c4973"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt130b4f72b66610">
+		<description>mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7452">
+				<rom name="mieyen.vz" size="7452" crc="10a59634" sha1="30b4f72b66610f5be7189db1c0d2cf4bfed5ed95"/>
 			</dataarea>
 		</part>
 	</software>

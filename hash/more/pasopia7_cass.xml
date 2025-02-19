@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 40 -->
+<!-- Number of items in this list = 42 -->
 <softwarelist name="pasopia7_cass" description="pasopia7_cass loose roms">
 	<software name="pa7538562b9c80f0">
 		<description>3D Golf Simulation (19xx)(T&amp;E)</description>
@@ -279,6 +279,26 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="2953680">
 				<rom name="lift02.wav" size="2953680" crc="6df50dfe" sha1="dc8a8f281f6faad04f25b228e8b7de0904fcd4f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7017f8f240f790">
+		<description>mieyen01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213932">
+				<rom name="mieyen01.wav" size="213932" crc="79e9cc23" sha1="017f8f240f7908a5978795422781e18c0fea8639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7805b929cc0c43">
+		<description>mieyen02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3032650">
+				<rom name="mieyen02.wav" size="3032650" crc="dea76ba0" sha1="805b929cc0c438683f0efde97b7558c5f47bd535"/>
 			</dataarea>
 		</part>
 	</software>

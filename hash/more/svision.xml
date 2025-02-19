@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 30 -->
+<!-- Number of items in this list = 31 -->
 <softwarelist name="svision" description="svision loose roms">
 	<software name="sv95ffb4eeaee381">
 		<description>Aerial</description>
@@ -229,6 +229,16 @@
 		<part name="cart" interface="svision_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Mazy.bin" size="16384" crc="0d236cba" sha1="3806f6b6ac4307e9362632f74c7d7280d40028bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sv864821fd9fd11f">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svision_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mieyen.bin" size="16384" crc="c028b984" sha1="864821fd9fd11fd472ad3b53cb44f86b492a4329"/>
 			</dataarea>
 		</part>
 	</software>

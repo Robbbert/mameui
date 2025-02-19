@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 83 -->
+<!-- Number of items in this list = 85 -->
 <softwarelist name="trs80_flop" description="trs80_flop loose roms">
 	<software name="trs31a3f209ecefa">
 		<description>[1]accounts-receivable-data-disk-(drive-1)[40T,DSDD](dup)</description>
@@ -612,6 +612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="trsd96e660a47662">
+		<description>[1]SYSTEM_HTRON_H-tron_trs80</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="8531">
+				<rom name="[1]SYSTEM_HTRON_H-tron_trs80.cas" size="8531" crc="40ae7983" sha1="d96e660a4766294dd48ffd0cd5daf588265d54cf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="trsdf3a085851d8f">
 		<description>[1]T80-FS1</description>
 		<year>????</year>
@@ -639,6 +649,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="224016">
 				<rom name="[1]tdos21b.dmk" size="224016" crc="66b81ea5" sha1="319ea4ad10e70bc4c7ad80a65dd853f4d4feb3b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs68ba794b9beff">
+		<description>[1]tdos21em</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="89600">
+				<rom name="[1]tdos21em.dsk" size="89600" crc="0b38e214" sha1="68ba794b9beff286548abfcac5de300055d56240"/>
 			</dataarea>
 		</part>
 	</software>

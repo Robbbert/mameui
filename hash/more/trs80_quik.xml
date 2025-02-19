@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2 -->
+<!-- Number of items in this list = 8 -->
 <softwarelist name="trs80_quik" description="trs80_quik loose roms">
+	<software name="trs8a5065c690fda">
+		<description>[1]adv05</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="trs80_quik">
+			<dataarea name="quik" size="25733">
+				<rom name="[1]adv05.cmd" size="25733" crc="4e05d20a" sha1="8a5065c690fda28b5f2f48cf7a29467b485b0c71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs75d0536598870">
+		<description>[1]apshai18</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="trs80_quik">
+			<dataarea name="quik" size="14682">
+				<rom name="[1]apshai18.cmd" size="14682" crc="78444f56" sha1="75d05365988708f403bb91e403e316df09dc2f72"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="trsc257910c02835">
 		<description>[1]defuse</description>
 		<year>????</year>
@@ -9,6 +29,46 @@
 		<part name="quik" interface="trs80_quik">
 			<dataarea name="quik" size="4485">
 				<rom name="[1]defuse.cmd" size="4485" crc="8170c4a2" sha1="c257910c02835cb42e3e0f764905174e9b5fe3db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs6414356411a43">
+		<description>[1]Elite Planet Browser_trs80</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="trs80_quik">
+			<dataarea name="quik" size="11980">
+				<rom name="[1]Elite Planet Browser_trs80.cmd" size="11980" crc="607597a6" sha1="6414356411a43ec0d14a11ee037deaf0b02f0c69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs362216239a390">
+		<description>[1]H-tron_trs80</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="trs80_quik">
+			<dataarea name="quik" size="8236">
+				<rom name="[1]H-tron_trs80.cmd" size="8236" crc="e1a5cdba" sha1="362216239a390aac30ab3bc7e8daf183d763875b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs5442ff003cd3b">
+		<description>[1]MastermindRK_trs80</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="trs80_quik">
+			<dataarea name="quik" size="9340">
+				<rom name="[1]MastermindRK_trs80.cmd" size="9340" crc="e50a08f9" sha1="5442ff003cd3b8624c664b9531d454226af1a08c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trsede22cc64c02b">
+		<description>[1]trek14</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="trs80_quik">
+			<dataarea name="quik" size="27803">
+				<rom name="[1]trek14.cmd" size="27803" crc="395ba239" sha1="ede22cc64c02b1592305882bfbf3be05edc18bf5"/>
 			</dataarea>
 		</part>
 	</software>

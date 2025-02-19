@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5979 -->
+<!-- Number of items in this list = 6469 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -32582,6 +32582,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2614c39a0426bac">
+		<description>Galaxian (1985) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Galaxian (1985) (Atari) (PAL) [a1][!].a26" size="8192" crc="e7af7d8e" sha1="14c39a0426bac47a857934fe7c33df7306337e0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a8e22e4327358">
+		<description>Galaxian (1985) (Atari) (PAL) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Galaxian (1985) (Atari) (PAL) [a2].a26" size="8192" crc="98c60e2b" sha1="a8e22e4327358837ac9c5d01f30716eb66e0a354"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26134b9259db852">
 		<description>Galaxian 12-3-82</description>
 		<year>????</year>
@@ -32589,6 +32609,26 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Galaxian 12-3-82.bin" size="8192" crc="888d73ce" sha1="134b9259db8528f4b6caca264f49cde61d539c80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268e708e0067d33">
+		<description>Galaxian by Jess Ragan (Enhanced Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Galaxian by Jess Ragan (Enhanced Graphics).a26" size="8192" crc="dea1a292" sha1="8e708e0067d3302327900fa322aeb8e2df2022d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2645fd3f8618dea">
+		<description>Galaxian Targ</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Galaxian Targ.a26" size="4096" crc="505a990b" sha1="45fd3f8618dea9df79c01076089726bb40ec6a08"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32602,6 +32642,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26bfeac76460455">
+		<description>GalaxianND_Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GalaxianND_Hack.a26" size="8192" crc="74f78389" sha1="bfeac764604550b6417786373e52413cbcefb86a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26655397eb4093c">
+		<description>Galaxian_Invaders_No_Border</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Galaxian_Invaders_No_Border.a26" size="8192" crc="6413d0b9" sha1="655397eb4093c5d54c8c443483c7eda5a3230c63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269cd105a042e0c">
+		<description>Galaxian_Invaders_No_Border__</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Galaxian_Invaders_No_Border__.a26" size="8192" crc="72bd4be0" sha1="9cd105a042e0ca409e46ae7f72b14e5c37b9004a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce89c5d5efd7e">
+		<description>Galaxian_Invaders__hack_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Galaxian_Invaders__hack_.a26" size="8192" crc="04039407" sha1="ce89c5d5efd7e5c8d2e19e6188427e296dbc4d51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265df8c352d1974">
+		<description>Galaxy Demo (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Galaxy Demo (PD) [a1].a26" size="4096" crc="eb67bf8f" sha1="5df8c352d1974dee66431c747f9d8cc21ace89e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2614133160231da">
+		<description>Galaxy Demo (PD) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Galaxy Demo (PD) [a2].a26" size="4096" crc="10f72a4c" sha1="14133160231da29eff93e7bd37480b5768ee9fcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26294194c4a0e52">
+		<description>Galaxy Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Galaxy Demo (PD).a26" size="4096" crc="fb6cda37" sha1="294194c4a0e52251880a88416e9413d8e3d97c1d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26532274f5724af">
 		<description>game1 (2016-09-12)(Lee, Bill)</description>
 		<year>????</year>
@@ -32609,6 +32719,256 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="game1 (2016-09-12)(Lee, Bill).bin" size="8192" crc="27721790" sha1="532274f5724aff2028b673f1c710b66517cfd3d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d472ba912b07d">
+		<description>Gamma_Attack_JoystickHack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Gamma_Attack_JoystickHack.a26" size="2048" crc="efca976d" sha1="d472ba912b07d865762d27acaa3f7a9b522714e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262d4726b859374">
+		<description>Gamma_Attack_JoystickHack_No_Bunny</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Gamma_Attack_JoystickHack_No_Bunny.a26" size="2048" crc="4e45e6f1" sha1="2d4726b85937434c8cc84d25666d0a27309c0129"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d3087841ccaab">
+		<description>Gangster (Ariola) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gangster (Ariola) (PAL) [o1].a26" size="4096" crc="37433fd7" sha1="d3087841ccaab8329c3b47b382401f23c80d45c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260948dac257477">
+		<description>Garden Invaders by Jamcat (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Garden Invaders by Jamcat (Space Invaders Hack).a26" size="4096" crc="34c9e02f" sha1="0948dac257477588d5a2605aa333d0a23013971e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608ce878393863">
+		<description>Gas Gauge Demo (2003) (Joe Grand) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Gas Gauge Demo (2003) (Joe Grand) (PD).a26" size="2048" crc="9a6b7aa6" sha1="08ce878393863bb93c7095f3b55f9ffbcfd454b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262a2cbe9685e24">
+		<description>Gas Gauge Demo - Revisited (2003) (Joe Grand) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Gas Gauge Demo - Revisited (2003) (Joe Grand) (PD).a26" size="2048" crc="046661f1" sha1="2a2cbe9685e24c42bd1c632171bd1dfe3d2de421"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2698a824afa916b">
+		<description>Gas_Hog-NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gas_Hog-NTSC(Supercharger).bin" size="4096" crc="b615ff0a" sha1="98a824afa916b11f31f32e489749ba92ccb48944"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e2ea7eb00afd5">
+		<description>Gas_Hog-PAL(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gas_Hog-PAL(Supercharger).bin" size="4096" crc="e9efa8fe" sha1="e2ea7eb00afd5ae12dcec9cac3e0b5158595c440"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cf2fb3d0a084f">
+		<description>Gas_Hog-PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gas_Hog-PAL60(Supercharger).bin" size="4096" crc="4f9560ca" sha1="cf2fb3d0a084fb2a94b69cb43ac2697af8a68a53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2690ebc6f948427">
+		<description>GBImprov (Ghostbusters Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GBImprov (Ghostbusters Hack).a26" size="8192" crc="8f136efe" sha1="90ebc6f948427352274c3ab01e5b047f85504b2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2642bcd941346bd">
+		<description>Gehirn by wAMMA Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gehirn by wAMMA Demo (PD).a26" size="4096" crc="43e89a6a" sha1="42bcd941346bd7991db34f4541b9de864ab2ee38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26470a02007747a">
+		<description>George (2007) (Chris Read) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="George (2007) (Chris Read) (Prototype).a26" size="8192" crc="a03e62b6" sha1="470a02007747a7a4ea4c9e063e46fec5125b2dfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db4f2b4c0bd57">
+		<description>George 20071204</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="George 20071204.a26" size="8192" crc="6d127c2c" sha1="db4f2b4c0bd570da1330c80a92dda2d5a84f9a19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2662d996f173565">
+		<description>get_dungeon_robo_shill_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="get_dungeon_robo_shill_.bin" size="4096" crc="b7e0af4b" sha1="62d996f17356504b9c419282c6e6f2e6e8ba0e36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d1270118bd828">
+		<description>Ghost (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ghost (PD).a26" size="4096" crc="e864c19f" sha1="d1270118bd8281fdc3cced4799a21c34720f1b0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268b8540f7be7ca">
+		<description>Ghost Manor (1983) (Xonox)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ghost Manor (1983) (Xonox).a26" size="4096" crc="3dd298b8" sha1="8b8540f7be7ca6475d9ec7c7b1ea8f0471c8b1fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e49f6f8352163">
+		<description>Ghost Manor (1985) (Xonox) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ghost Manor (1985) (Xonox) (PAL) [a1][!].a26" size="8192" crc="5b6a81d1" sha1="e49f6f8352163c4d0cd9271265b48ac2da566185"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268d01526a5a425">
+		<description>Ghost Trap (Mouse Trap Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ghost Trap (Mouse Trap Hack).a26" size="4096" crc="d9265ad1" sha1="8d01526a5a42548e8c4d6550aa805522d274806e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2630acbcef983ab">
+		<description>Ghost-in-Jar (Eggomania Hack) (2004) (Susuwatari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ghost-in-Jar (Eggomania Hack) (2004) (Susuwatari).a26" size="4096" crc="fd2d7eb0" sha1="30acbcef983ab9b32d4c3c0a846a06ef4dc8abda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266872860ef1794">
+		<description>Ghostball (Tennis Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Ghostball (Tennis Hack).a26" size="2048" crc="dd6dcfa4" sha1="6872860ef1794b6aeee46b5b3157152cbcac61d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a4663ef29511">
+		<description>Ghostball - Now 10percent Spookier (Tennis Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Ghostball - Now 10percent Spookier (Tennis Hack).a26" size="2048" crc="1db6a960" sha1="9a4663ef295113cca22bfa2e17a351ef7bf19cfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650f2bcb9423b2">
+		<description>Ghostbusters (1986) (Activision) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ghostbusters (1986) (Activision) (PAL) [a1][!].a26" size="8192" crc="2e3ffbbe" sha1="50f2bcb9423b29e3f6a84c07e327ad114f405101"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266c70db6a07ecb">
+		<description>Ghostbusters II (1993) (Salu) [f1] (NTSC by TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ghostbusters II (1993) (Salu) [f1] (NTSC by TJ).a26" size="16384" crc="7040948e" sha1="6c70db6a07ecb2c8bab4780b2e70585400342cfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd6928e69de4e">
+		<description>Ghostbusters II by King Atari (Ghostbusters II Hack) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ghostbusters II by King Atari (Ghostbusters II Hack) (PAL).a26" size="16384" crc="cf4e5eda" sha1="dd6928e69de4ecc0129a3111c8b6cff5c273e3a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c9ff24f73fd22">
+		<description>Ghostbusters II by King Atari (Ghostbusters II Hack) [f1] (NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ghostbusters II by King Atari (Ghostbusters II Hack) [f1] (NTSC).a26" size="16384" crc="3907d959" sha1="c9ff24f73fd22ee13de6a525279de6932c23aa04"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32642,6 +33002,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a264f994cbc999dc">
+		<description>Ghoul (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Ghoul (PD).a26" size="2048" crc="0e2310d4" sha1="4f994cbc999dcc3d99563956e6fcb5072811f72c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec9ca3e04846c">
+		<description>Giantpong 3 (large ball, original size paddles) (Video Olympics Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Giantpong 3 (large ball, original size paddles) (Video Olympics Hack).a26" size="2048" crc="7cfef79d" sha1="ec9ca3e04846ccb8caf41bc07c76980e0e0682fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26635faff0072a1">
+		<description>giantpong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="giantpong.a26" size="2048" crc="eb285afc" sha1="635faff0072a12da7113f9083cf6d40a0bfcdbdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d349744798657">
+		<description>giantpong1 (bottom line, larger ball)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="giantpong1 (bottom line, larger ball).a26" size="2048" crc="87e0eaf9" sha1="d3497447986572f3997221ce544a0588f1ef9b67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261082819c6bf49">
+		<description>giantpong2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="giantpong2.a26" size="2048" crc="dd8a35fd" sha1="1082819c6bf49a3ec6e712899f4f316332e296c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267a4f52f3656a0">
+		<description>giantpong3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="giantpong3.a26" size="2048" crc="535a1240" sha1="7a4f52f3656a0ee4268bce952f5e1cd91ea3af88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f933c68e21e90">
+		<description>giantpong4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="giantpong4.a26" size="2048" crc="afb068cc" sha1="f933c68e21e9073645895d82f7adddacdc355e55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262daf642e18b93">
+		<description>Gigolo(Palette_select)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gigolo(Palette_select).a26" size="4096" crc="e9bd3293" sha1="2daf642e18b93037d269688658cb7e1cc6847ab1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f53f3923f143f">
+		<description>Gilgamesh Tune 20060707 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gilgamesh Tune 20060707 (PD).a26" size="4096" crc="1b416e7b" sha1="f53f3923f143f3bc758cf598a9ce54ab3aa1b74e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2684bee41ef441a">
+		<description>Gilgamesh Tune 20060709 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gilgamesh Tune 20060709 (PD).a26" size="4096" crc="20577f58" sha1="84bee41ef441ab06dcefa93ecd168a9a386589d1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2640e3b80047cbf">
 		<description>Gilgamesh20060703</description>
 		<year>????</year>
@@ -32649,6 +33109,66 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Gilgamesh20060703.a26" size="4096" crc="a7346f8c" sha1="40e3b80047cbf5affefa4a785d4bacff6541240b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db7cf3d905c97">
+		<description>Ginger (Gingerbread Man ) 20070114_2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ginger (Gingerbread Man ) 20070114_2 (PD).a26" size="8192" crc="3b52e45c" sha1="db7cf3d905c97656eb673a2be84d74769a213491"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268541ff16d507a">
+		<description>Ginger (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ginger (PD).a26" size="8192" crc="13cbe407" sha1="8541ff16d507a1877fe708d9552d6d8424d897c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f9dba42247121">
+		<description>Gingerbread Man (WIP) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Gingerbread Man (WIP) (PD).a26" size="8192" crc="ecf057e0" sha1="f9dba422471216ef498db59240a1e86cdd079d7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa83a0dadea5b">
+		<description>Gingerbread Man 20070314_2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Gingerbread Man 20070314_2 (PD).a26" size="8192" crc="44f78db9" sha1="aa83a0dadea5bbf21a4374b4b7b72b7dc770edba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b6d71e6fbc16">
+		<description>Gingerbread Man 20070810 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Gingerbread Man 20070810 (PD).a26" size="8192" crc="15d91b52" sha1="4b6d71e6fbc164114cda239bb08c6781c7f23f3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d519c1b8e6289">
+		<description>Giuseppe 20070526</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Giuseppe 20070526.a26" size="4096" crc="ab3db242" sha1="d519c1b8e6289bca4731cf7bc1894dabdb3c857f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32682,6 +33202,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26f8e0265516099">
+		<description>Globe Trotter Demo (24-03-2003) (Weston) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Globe Trotter Demo (24-03-2003) (Weston) [a1].a26" size="4096" crc="87d01c3d" sha1="f8e0265516099a29eb2c951d034ea0768e92c1ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f321a0373e3b">
+		<description>Globe Trotter Demo (24-03-2003) (Weston)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Globe Trotter Demo (24-03-2003) (Weston).a26" size="4096" crc="01bb255e" sha1="1f321a0373e3b7297ade5b8017c3262c37e0e1ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26327533751a40f">
+		<description>Glutton (Ms. Pac-Man Hack) (2004) (Scott Dayton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Glutton (Ms. Pac-Man Hack) (2004) (Scott Dayton).a26" size="8192" crc="af386620" sha1="327533751a40fe1f28e939205ad5b5c615f76e43"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2602b40c0df4c4d">
 		<description>Gniah (2023-12)(Glafouk)</description>
 		<year>????</year>
@@ -32689,6 +33239,2086 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Gniah (2023-12)(Glafouk).a26" size="4096" crc="b7443cf6" sha1="02b40c0df4c4d4e83b58108672cc2956e09b401b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa51df806afd9">
+		<description>GNUFU Quest - Space (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GNUFU Quest - Space (PD).a26" size="4096" crc="9de55bcc" sha1="aa51df806afd91d640337c6c6660a7f34a4f5c22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615a4f882eb24a">
+		<description>Go 9x9 Board Demo by Zack Matley (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Go 9x9 Board Demo by Zack Matley (PD).a26" size="4096" crc="86c67ff0" sha1="15a4f882eb24a9b85eef23bc3509b513cd49f0b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26090600ce722e8">
+		<description>Go Down (Alex Herbert)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Down (Alex Herbert).a26" size="8192" crc="6b16e7c6" sha1="090600ce722e8ca5596667b2cc29c370b192f671"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f286f2e862ca8">
+		<description>Go Fish! (Real Final Version) (Bob Montgomery) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! (Real Final Version) (Bob Montgomery) (PAL).a26" size="8192" crc="9a08fc7c" sha1="f286f2e862ca8361c67d815afd9d4e7b27094557"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a9bfbe80bcd50">
+		<description>Go Fish! 1k (Bob Montgomery) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Go Fish! 1k (Bob Montgomery) [a1].a26" size="2048" crc="b087e537" sha1="a9bfbe80bcd50d322795e52f3909a0d2b9e81c88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264d1302229a805">
+		<description>Go Fish! 1k (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Go Fish! 1k (Bob Montgomery).a26" size="2048" crc="9ce90265" sha1="4d1302229a805d1550f1c4b56e2838e90a069224"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650b252a03ce1a">
+		<description>Go Fish! 1k-1 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Go Fish! 1k-1 (Bob Montgomery).a26" size="2048" crc="504eb3cf" sha1="50b252a03ce1a1bf7aef10091c1738fca79d46b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f3bf609a49ea">
+		<description>Go Fish! 1k-2 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Go Fish! 1k-2 (Bob Montgomery).a26" size="2048" crc="aafe76ba" sha1="6f3bf609a49ea8eb3cbb67b9e5767ff6a85dad93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263790aeadc9f77">
+		<description>Go Fish! 2005-04-27 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! 2005-04-27 (Bob Montgomery).a26" size="8192" crc="4b6b61af" sha1="3790aeadc9f77a3532c360e6b0dd4343ecb77646"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2695e0a447b4251">
+		<description>Go Fish! 2005-05-05 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! 2005-05-05 (Bob Montgomery).a26" size="8192" crc="66d05768" sha1="95e0a447b4251e0ad7d562085166aa9799640fe2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c3818daa57ddd">
+		<description>Go Fish! 2005-05-06 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! 2005-05-06 (Bob Montgomery).a26" size="8192" crc="5eb40683" sha1="c3818daa57ddd8733969d065ebc2c2bb6ea5509f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266778941a93f18">
+		<description>Go Fish! 2005-05-12 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! 2005-05-12 (Bob Montgomery).a26" size="8192" crc="2915329b" sha1="6778941a93f183a0c46d9159425a634675dc9f80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268604d36707586">
+		<description>Go Fish! 2005-06-01 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! 2005-06-01 (Bob Montgomery).a26" size="8192" crc="d8642d17" sha1="8604d36707586e57d510bb0b8c0ad2e12294c042"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633efab419e245">
+		<description>Go Fish! 2005-06-07 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! 2005-06-07 (Bob Montgomery).a26" size="8192" crc="15372d63" sha1="33efab419e2451f7f0f087babf5fbe676577f29f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269348dfdddac83">
+		<description>Go Fish! Extended 2007-02-20 (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! Extended 2007-02-20 (Bob Montgomery).a26" size="8192" crc="010ce7d6" sha1="9348dfdddac834b8b5bdb6e607f1353dcee04f0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c8094b18ea8d7">
+		<description>Go Fish! SP (Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish! SP (Bob Montgomery).a26" size="8192" crc="b99fc2bf" sha1="c8094b18ea8d7dd0e1824a5fff2c26dd5f99a520"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca8fb63583a8f">
+		<description>Go Fish!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish!.a26" size="8192" crc="577a3634" sha1="ca8fb63583a8fc9b35ca5e37ddfde00af33e8a4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be671a5517c68">
+		<description>Go-B! Fight for the Desert v6a (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Go-B! Fight for the Desert v6a (PD).a26" size="4096" crc="c3c78ba9" sha1="be671a5517c68dec3c3ed2429453065f1b5fda88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26905445fc77e70">
+		<description>gofish 2005-05-31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gofish 2005-05-31.a26" size="8192" crc="b84c5cf2" sha1="905445fc77e709734aea80b70c64495201eab8d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659dbb228a67c1">
+		<description>gofish 2005-06-08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gofish 2005-06-08.a26" size="8192" crc="2eb38a54" sha1="59dbb228a67c18474ae26bf3eb3c19cb44f813e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c368a333d67b6">
+		<description>gofish1k-4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="gofish1k-4.a26" size="2048" crc="2d468e89" sha1="c368a333d67b6a0622f3c5e68d9edcd70bb06135"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262338a5ad27d7a">
+		<description>gofish1k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="gofish1k.a26" size="2048" crc="26e74c48" sha1="2338a5ad27d7aa32bcf3144bc5e758ab745b7c89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616367480233d9">
+		<description>GoFishExtended20070221</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoFishExtended20070221.a26" size="8192" crc="cbff9799" sha1="16367480233d9f9532c76f6cb7810d34cedf5388"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26600d80391eccc">
+		<description>Going Down (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Going Down (Jumpman Selected Levels) (PD).a26" size="4096" crc="9c688dce" sha1="600d80391eccc41a31a40714faed589f74b2308d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2600cd8fe0c6a9b">
+		<description>Golf (1981) (Atari) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Golf (1981) (Atari) [o1].a26" size="4096" crc="6ba24e3d" sha1="00cd8fe0c6a9b0a41491e011d361651643d6a8ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b7e7e81d2bfde">
+		<description>Golf (1982) (Atari) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Golf (1982) (Atari) (PAL) [o1].a26" size="4096" crc="243597ee" sha1="b7e7e81d2bfded7c16075a8e75be6fc816318f9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e728c46f6c160">
+		<description>Golf (32-in-1) (Atari) (PAL) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Golf (32-in-1) (Atari) (PAL) [!].a26" size="2048" crc="b6b24526" sha1="e728c46f6c1608b43a59229fb463f3f87f00e993"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a514b2cffbe7">
+		<description>Golf (32-in-1) (Atari) (PAL) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Golf (32-in-1) (Atari) (PAL) [o1].a26" size="4096" crc="69ae4215" sha1="6a514b2cffbe7f30d92be33d1fb7fa8ef4e74bc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bd689b5c0854a">
+		<description>Goofy Tech Demo old 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Goofy Tech Demo old 1.a26" size="4096" crc="7dccf026" sha1="bd689b5c0854a41351a4b673b2d8ef804c343dda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265539bce996024">
+		<description>Goofy Tech Demo old 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Goofy Tech Demo old 2 (PD).a26" size="4096" crc="517366c0" sha1="5539bce996024a78a910bac1a9a796a1031fd795"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d4a407189c613">
+		<description>Goofy Tech Demo old 3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Goofy Tech Demo old 3.a26" size="4096" crc="1c9c2c49" sha1="d4a407189c61313196bf77b1917455bbcdb3a3d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26334b136388140">
+		<description>Goofy Tech Demo old 4 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Goofy Tech Demo old 4 (PD).a26" size="4096" crc="7e316c36" sha1="334b13638814042c1386b630af0ebf5498d9fefe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f7532af28118">
+		<description>Goofy Tech Demo old 5 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Goofy Tech Demo old 5 (PD).a26" size="4096" crc="2d36ce46" sha1="6f7532af28118c2865a2312162c485f28cfcc722"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623a83f7a635f2">
+		<description>Goofy Tech Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Goofy Tech Demo.a26" size="4096" crc="a22f31c2" sha1="23a83f7a635f2d4af3f7a1c4d1970d3fda6c3ec8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4368249e372a">
+		<description>Gopher_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gopher_NTSC(Supercharger).a26" size="4096" crc="a436d64e" sha1="b4368249e372aae53fdd226833b6d1b168623343"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d8226c4bcbad">
+		<description>Gopher_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gopher_PAL60(Supercharger).a26" size="4096" crc="4cb3dc20" sha1="5d8226c4bcbad63a11884d0e2cc6a6e55daafe15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262be12e193f95b">
+		<description>Gordie 2 aka FREDDIE THE FAT BA$T4RD!!! (Jr. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Gordie 2 aka FREDDIE THE FAT BA$T4RD!!! (Jr. Pac-Man Hack).a26" size="16384" crc="f7d9703a" sha1="2be12e193f95b70856a9fe590c70599d6340a26e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd0625c442921">
+		<description>Gorf(palette_select)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gorf(palette_select).a26" size="4096" crc="7fc01acc" sha1="dd0625c442921cc65d91bbd0f2217837c1ce33b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264ba51e1a80891">
+		<description>Gorfians (Galaxian Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Gorfians (Galaxian Hack).a26" size="8192" crc="3de1e67d" sha1="4ba51e1a808911bb409aeaa658ac1f7894b1a8b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2626d05758d9466">
+		<description>Gorilla Kong (Donkey Kong Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gorilla Kong (Donkey Kong Hack).a26" size="4096" crc="4181cc3f" sha1="26d05758d94662dbf55cc51806de48294cf4e9aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0796384a4763">
+		<description>GoSub (bug) 20070826</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GoSub (bug) 20070826.a26" size="4096" crc="cdc33dda" sha1="a0796384a476395e9ad8a28f4d647be2ce92befd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ddbd18051878a">
+		<description>GoSub (Chris Read) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub (Chris Read) [a1].a26" size="8192" crc="5242770b" sha1="ddbd18051878a19a5eec69a5865408505b739fc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260dc582e75b5f9">
+		<description>GoSub (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GoSub (Chris Read).a26" size="4096" crc="0ab4ce1a" sha1="0dc582e75b5f9414b7c986e3bc54748452780c4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a3fa9e4f4879e">
+		<description>GoSub 010107b (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010107b (Chris Read).a26" size="8192" crc="e66cce3b" sha1="a3fa9e4f4879e3c629fad006e5dd5174c1842195"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2686b9463f0bec6">
+		<description>GoSub 010107c (Chris Read) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010107c (Chris Read) (2).a26" size="8192" crc="ddedcef5" sha1="86b9463f0bec6e7c1680c5d759aadd272ceb1937"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2676cea92fec12a">
+		<description>GoSub 010107c (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010107c (Chris Read).a26" size="8192" crc="960a52b2" sha1="76cea92fec12a1f0b374c6ec5744e1db75a383ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265acba84533d56">
+		<description>GoSub 010207 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010207 (Chris Read).a26" size="8192" crc="f1780211" sha1="5acba84533d5646ac7a9bb03a25e041257314c35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688223ce9453ce">
+		<description>GoSub 010207b (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010207b (Chris Read).a26" size="8192" crc="e9976d8b" sha1="88223ce9453ced1a4b88581ca53eab03ee6811ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d00ea1a54a89">
+		<description>GoSub 010207e (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010207e (Chris Read).a26" size="8192" crc="91fc5717" sha1="0d00ea1a54a896bb6e345f6b866e61686c4922c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a88a0e1016c1">
+		<description>GoSub 010207f (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010207f (Chris Read).a26" size="8192" crc="333671ff" sha1="6a88a0e1016c191624b36479dc074c793f66c167"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265021175a80bb0">
+		<description>GoSub 010307 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010307 (Chris Read).a26" size="8192" crc="b434a86a" sha1="5021175a80bb053a93f31cf835b055d77289bd93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650a9b4297f351">
+		<description>GoSub 010807 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010807 (Chris Read).a26" size="8192" crc="35b10c3f" sha1="50a9b4297f351f0122b047c367026719128c6a18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616cd9f62a5447">
+		<description>GoSub 010907 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 010907 (Chris Read).a26" size="8192" crc="bb2684a1" sha1="16cd9f62a54470ed0bb083c40f9af4601c822cbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b57b0a818b2b1">
+		<description>GoSub 012507 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 012507 (Chris Read).a26" size="8192" crc="d34680e8" sha1="b57b0a818b2b14eefab6aa4378057dff88562ed9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fb2beaeb357be">
+		<description>GoSub 013007 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 013007 (Chris Read).a26" size="8192" crc="05e7693a" sha1="fb2beaeb357bec2b6fcd16fd000b5dbdc40817d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263300870a35235">
+		<description>GoSub 013007a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 013007a (Chris Read).a26" size="8192" crc="0c269739" sha1="3300870a352356569ac1f8c61f0f97b9225baab5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2694876024e4dbc">
+		<description>GoSub 021507 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 021507 (Chris Read).a26" size="8192" crc="36107bc7" sha1="94876024e4dbcf7d504cbf0071fdef370ed767d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616ec87717fea8">
+		<description>GoSub 021807 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 021807 (Chris Read).a26" size="8192" crc="37bd1b0d" sha1="16ec87717fea8ff279349d518a16e183aabe4716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26634e7e49a14ca">
+		<description>GoSub 022607 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 022607 (Chris Read).a26" size="8192" crc="a351a27e" sha1="634e7e49a14ca0d9b7edb6f9cddb7f68a67df579"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264c7c816dd8be5">
+		<description>GoSub 022707a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 022707a (Chris Read).a26" size="8192" crc="ffddbf76" sha1="4c7c816dd8be550bc8a4b5badbb63b259d188ace"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266b45f246cfae0">
+		<description>GoSub 030107 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 030107 (Chris Read).a26" size="8192" crc="6278a34b" sha1="6b45f246cfae06efc47f68369f67081d47cbc583"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d0064e1403a8a">
+		<description>GoSub 030407 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 030407 (Chris Read).a26" size="8192" crc="b9828737" sha1="d0064e1403a8a4f88f567c0ca2db587ce7a593f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265d93734ddb60c">
+		<description>GoSub 030507 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 030507 (Chris Read).a26" size="8192" crc="c7d28d3d" sha1="5d93734ddb60c77cd3315b2d578249243311b4ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ef65d6da8e46">
+		<description>GoSub 030607 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 030607 (Chris Read).a26" size="8192" crc="7823b44d" sha1="2ef65d6da8e469514c3f9a3e69670890fa3a9a98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb78027e3b289">
+		<description>GoSub 030907 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 030907 (Chris Read).a26" size="16384" crc="955a24f4" sha1="bb78027e3b289db19d7390d80c8712f2e692f1a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b03c8616c1b4">
+		<description>GoSub 030907a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 030907a (Chris Read).a26" size="16384" crc="78ceb28c" sha1="9b03c8616c1b442c246ac130124401d725e6b0c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aebfa6dd0c2c6">
+		<description>GoSub 031007level1 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 031007level1 (Chris Read).a26" size="16384" crc="1f89fbf8" sha1="aebfa6dd0c2c6976881c829c4c2b6065dbab5c02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2631f7aca19af67">
+		<description>GoSub 031107a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 031107a (Chris Read).a26" size="16384" crc="3fceb94e" sha1="31f7aca19af679bf6ad91c4992c704391b7e5c5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262212ddcb92c87">
+		<description>GoSub 031207a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 031207a (Chris Read).a26" size="16384" crc="ef1978f1" sha1="2212ddcb92c87e05a966ad25d735a5d52c62aa14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260db576f22e7e3">
+		<description>GoSub 031307a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 031307a (Chris Read).a26" size="16384" crc="0f83e7c0" sha1="0db576f22e7e31c2e068d59f5a8f2d0932e96860"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269966996728963">
+		<description>GoSub 032607 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 032607 (Chris Read).a26" size="16384" crc="de5452cd" sha1="9966996728963db4dc060cc449f60f2d7fa9e34e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260b73c9b6db767">
+		<description>GoSub 032807 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 032807 (Chris Read).a26" size="16384" crc="1317870c" sha1="0b73c9b6db7673063f35d162256f54650b251afd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb3d190d1b936">
+		<description>GoSub 033007 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 033007 (Chris Read).a26" size="16384" crc="c67b3b13" sha1="eb3d190d1b93683887a3e534d05b6b6b07e7fcbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261c2c6e5a0a316">
+		<description>GoSub 033007a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 033007a (Chris Read).a26" size="16384" crc="c85d9d77" sha1="1c2c6e5a0a31654f84cd46593b8ff19face3430d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c3897cd7e4081">
+		<description>GoSub 040507 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 040507 (Chris Read).a26" size="8192" crc="09307192" sha1="c3897cd7e40813eb7d000e0104c278e7b363a03d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2614325c08ebb92">
+		<description>GoSub 040607a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 040607a (Chris Read).a26" size="16384" crc="b6644948" sha1="14325c08ebb922432877d11cdc454c24ae6a0e44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2696cc761efb9a4">
+		<description>GoSub 040907 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 040907 (Chris Read).a26" size="16384" crc="62bd13f9" sha1="96cc761efb9a4fc1575439c0f10acaad66b33a26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b2a37a74da9f">
+		<description>GoSub 041607 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 041607 (Chris Read).a26" size="16384" crc="fad37ae4" sha1="4b2a37a74da9f51489ce8d501e655ee5238a8dec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b1545f93366d2">
+		<description>GoSub 042007 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 042007 (Chris Read).a26" size="16384" crc="bc5bcea8" sha1="b1545f93366d2bc0557b5489d67b17c925bdf5b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265620166a0aa88">
+		<description>GoSub 050307a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 050307a (Chris Read).a26" size="16384" crc="cda74069" sha1="5620166a0aa88c06c9638f7f6d26202b7ce53d35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c3827331c051a">
+		<description>GoSub 050607 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 050607 (Chris Read).a26" size="16384" crc="5c5cbaf9" sha1="c3827331c051a49245a7c654e137a49b622077ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ff8d3c1d35053">
+		<description>GoSub 052007 (Chris Read) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 052007 (Chris Read) (PAL).a26" size="16384" crc="56b714a5" sha1="ff8d3c1d35053aa6002335e7f02e3a559be39c0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc92dcf03670d">
+		<description>GoSub 060707 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 060707 (Chris Read).a26" size="16384" crc="6c9a1522" sha1="dc92dcf03670d9f7448a3405e48162ef5ae2b959"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267803c237344e3">
+		<description>GoSub 060707a (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 060707a (Chris Read).a26" size="16384" crc="3a4caf44" sha1="7803c237344e3fe8292f1d9936236883241d9497"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26507765c3bc441">
+		<description>GoSub 101706</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GoSub 101706.a26" size="4096" crc="2010f935" sha1="507765c3bc441a642ce34da027303463bd9c1149"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e045936b29b7b">
+		<description>GoSub 101906</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GoSub 101906.a26" size="4096" crc="58449019" sha1="e045936b29b7b5a31f377abab7ac41a24e6f7818"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264e3661ed20617">
+		<description>GoSub 120206</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GoSub 120206.a26" size="4096" crc="6576a193" sha1="4e3661ed206177d0e0fe79c7a22211f223020dc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a9d031338381a">
+		<description>GoSub 120206a-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 120206a-2.a26" size="8192" crc="8ead2dfc" sha1="a9d031338381ae9237c4db2983e013890c9d4359"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2678bbf6560545b">
+		<description>GoSub 120206a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 120206a.a26" size="8192" crc="5bc62b1e" sha1="78bbf6560545b646625235d56a042352ec353271"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264ed31997072c4">
+		<description>GoSub 120306 (Chris Read) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 120306 (Chris Read) [a1].a26" size="8192" crc="229d16b9" sha1="4ed31997072c4b6283d00b4f13753259e64253c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d8455cfbbd35">
+		<description>GoSub 120306 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 120306 (Chris Read).a26" size="8192" crc="57d91b52" sha1="0d8455cfbbd356630f5e31698c0cad7e5dfd8fde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26365946c1196d4">
+		<description>GoSub 120406 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 120406 (Chris Read).a26" size="16384" crc="0b3aed8f" sha1="365946c1196d4bc150a33f10515d3db65c1fed1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e926649f7b89e">
+		<description>GoSub 120406b (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 120406b (Chris Read).a26" size="16384" crc="f7602b20" sha1="e926649f7b89e51852c37aaeefc9667984e054e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26337209d3765ae">
+		<description>GoSub 120506a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 120506a.a26" size="16384" crc="b0ded8aa" sha1="337209d3765aeb7344481ae2b09d5c4ea9520cf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26abcd78fb545ad">
+		<description>GoSub 120506d</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 120506d.a26" size="16384" crc="7af04bc4" sha1="abcd78fb545ada9b76a23c5cb53d4bee7ea95506"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26756490a054984">
+		<description>GoSub 120606a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 120606a.a26" size="16384" crc="39929efe" sha1="756490a05498437957ca66de8415eb236ae0d577"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264628f270406fd">
+		<description>GoSub 120906 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 120906 (Chris Read).a26" size="16384" crc="cd3368a6" sha1="4628f270406fde979b0043c741b79f444fca65ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267ab46932276a3">
+		<description>GoSub 121006b (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 121006b (Chris Read).a26" size="16384" crc="1fc9f8a8" sha1="7ab46932276a3c84ae7d8d611bf7e2e5c4af95a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26336b2ce5e04bd">
+		<description>GoSub 121506a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 121506a.a26" size="8192" crc="db0d6c21" sha1="336b2ce5e04bdf08433831463d83620da87fd6da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26747633c197267">
+		<description>GoSub 121606 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 121606 (Chris Read).a26" size="8192" crc="12c2696e" sha1="747633c19726766ec108c64347c83d2342576452"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4a9fa0212fbd">
+		<description>GoSub 121806</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 121806.a26" size="8192" crc="f5c2d3c2" sha1="b4a9fa0212fbdd8dea7f6dc98a9696b00917cd91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264bb185f00f711">
+		<description>GoSub 121806a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 121806a.a26" size="8192" crc="6e6f5ac9" sha1="4bb185f00f7117ec99b8f2ad69cc6c6bf4f6024c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ee0c7ef175b09">
+		<description>GoSub 122006</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 122006.a26" size="8192" crc="17a40f27" sha1="ee0c7ef175b09e49486c2996e93552f2b9c43442"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266b31f92b7ff94">
+		<description>GoSub 122106</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 122106.a26" size="8192" crc="e8a3cc59" sha1="6b31f92b7ff94bf59da8ddf88f377e738b34d5f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c64547e2fe717">
+		<description>GoSub 122106a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 122106a.a26" size="8192" crc="62ae41fa" sha1="c64547e2fe717b073a7b3c0915d25e3bd869939c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e140c8e239aa8">
+		<description>GoSub 122106c</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 122106c.a26" size="8192" crc="2543edee" sha1="e140c8e239aa84da11b1b4db9376a6ac19816c4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2669d6288ebee86">
+		<description>GoSub 122406 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 122406 (Chris Read).a26" size="8192" crc="a87b1248" sha1="69d6288ebee863990796ecc4fcd221e5f84f3856"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2620adb79db488b">
+		<description>GoSub 122606 (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub 122606 (Chris Read).a26" size="8192" crc="85da5d25" sha1="20adb79db488be04a91ba5d73ea1a219e401e846"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26052dd533ee8c6">
+		<description>GoSub 2 110606</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GoSub 2 110606.a26" size="4096" crc="9240d0e4" sha1="052dd533ee8c62c9d6a3a38ce804a7d95f356d9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623962281aa526">
+		<description>GoSub 2 111006</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GoSub 2 111006.a26" size="4096" crc="923cfee7" sha1="23962281aa526e4b49e6f37aa4171f9e54f157b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f6d5a5f9c4e1">
+		<description>GoSub 2 Extra Lives 20071024</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 Extra Lives 20071024.a26" size="16384" crc="daf9c6f3" sha1="1f6d5a5f9c4e167a262d690070e2562699e35551"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f15b023e40a00">
+		<description>GoSub 2 V14 20070817</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V14 20070817.a26" size="16384" crc="a0991a8c" sha1="f15b023e40a00601dc7cefe10cc7e69f5e9da331"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d59a7f2fb0e5">
+		<description>GoSub 2 V33 20070925</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V33 20070925.a26" size="16384" crc="d4917b83" sha1="0d59a7f2fb0e5fc8f3622a507636253f10c30f70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263319c03575788">
+		<description>GoSub 2 V34 20070925</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V34 20070925.a26" size="16384" crc="b8603985" sha1="3319c035757882b709d79ec66641f61f8cf20947"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26116a0b2a93285">
+		<description>GoSub 2 V35b 20070926</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V35b 20070926.a26" size="16384" crc="098c67e5" sha1="116a0b2a9328521d9719c608287ff613870a5e35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264e5d494ce3b8b">
+		<description>GoSub 2 V37 20071016</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V37 20071016.a26" size="16384" crc="a07464fb" sha1="4e5d494ce3b8b232947fc42b0d03a578042ece18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b694b0f433c25">
+		<description>GoSub 2 V39 20071018</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V39 20071018.a26" size="16384" crc="516e6274" sha1="b694b0f433c25923573b8e5489f2f04a9b7910f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2629265be7a3926">
+		<description>GoSub 2 V40 20071018</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V40 20071018.a26" size="16384" crc="3561bd68" sha1="29265be7a3926d86a1d7b9bb2977b0a8465737c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263ef4aebca60a1">
+		<description>GoSub 2 V43 20071028</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V43 20071028.a26" size="16384" crc="47ee471b" sha1="3ef4aebca60a1be187d70236238de14cab27689f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266258f5a825c13">
+		<description>GoSub 2 V44 20071028</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V44 20071028.a26" size="16384" crc="10950ec5" sha1="6258f5a825c139790470fae7da84c6f4243101d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d95800512de37">
+		<description>GoSub 2 V45 20071029</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V45 20071029.a26" size="16384" crc="a13e3b85" sha1="d95800512de37cac152c050459458a9601b2927f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2677773cdf9f46b">
+		<description>GoSub 2 V46 20071102</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V46 20071102.a26" size="16384" crc="7aaa895d" sha1="77773cdf9f46b61c8cbcdeafc2ae2257668f7041"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2645754ceb00269">
+		<description>GoSub 2 V47 20071102</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GoSub 2 V47 20071102.a26" size="16384" crc="76cacb30" sha1="45754ceb00269bbd5aaebbd54aecc4eb9a58096a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265fe9340d36884">
+		<description>GoSub 2 V48 20071104</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GoSub 2 V48 20071104.a26" size="32768" crc="935ee1e3" sha1="5fe9340d368848bfb0da482852b177aec2fbf9b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262457e75ab3b7a">
+		<description>GoSub 2 V51 20071110</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GoSub 2 V51 20071110.a26" size="32768" crc="018da81b" sha1="2457e75ab3b7a4514a9bc174e17898a808f62a87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad9e19b171f1b">
+		<description>GoSub 2 V52 20071112</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GoSub 2 V52 20071112.a26" size="32768" crc="49e35a02" sha1="ad9e19b171f1bbe6969c78b4ea95dfca2deb6efa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ba0ba8250a51c">
+		<description>GoSub 2 V64 20071126</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GoSub 2 V64 20071126.a26" size="32768" crc="c7b466b8" sha1="ba0ba8250a51c8234fe22ae0bb660e4d8b71948b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bcb148e178335">
+		<description>GoSub 2 V67 20071128</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GoSub 2 V67 20071128.a26" size="32768" crc="2f274f92" sha1="bcb148e17833557129714969884cfda0150046df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a634669c02a3b">
+		<description>GoSub 2 V78 20071206</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GoSub 2 V78 20071206.a26" size="32768" crc="25818571" sha1="a634669c02a3b4699f1b9fa72c6dc6c55af2636c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2657bf2078ad350">
+		<description>GoSub 2 V80 20071207</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GoSub 2 V80 20071207.a26" size="32768" crc="72ba6390" sha1="57bf2078ad350767a9aba9acf4ce83dd99f39aa5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26af62e64b947df">
+		<description>GoSub Sonar (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="GoSub Sonar (Chris Read).a26" size="8192" crc="84376eaa" sha1="af62e64b947df9d8fa376c856002f1cee6e5688b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc77c39af051b">
+		<description>gosub010407a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub010407a.bas.a26" size="8192" crc="7b13947d" sha1="bc77c39af051b10919d641a6bcf00b85488dbae4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e758de2749e69">
+		<description>gosub010807a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub010807a.bas.a26" size="8192" crc="5c888100" sha1="e758de2749e6900d2317b66e347c8e2221c8d2dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26471fc2a664147">
+		<description>gosub011607.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub011607.bas.a26" size="8192" crc="b4080192" sha1="471fc2a664147b51fbfe1d1aac5d0d30cd3d3e1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616c78ccc3aaff">
+		<description>gosub013007b.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub013007b.bas.a26" size="8192" crc="db22d37e" sha1="16c78ccc3aaff98875619d6436267e03f0d3b503"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261a97d680ca672">
+		<description>gosub020307.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub020307.bas.a26" size="8192" crc="b58b93c9" sha1="1a97d680ca672b9b62cb0fe4f3f2fcd4388afd46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f9229d7ad417">
+		<description>gosub021307.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub021307.bas.a26" size="8192" crc="74999527" sha1="8f9229d7ad417ed6956953f539980f7b42b0002e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c8010b24ca4f4">
+		<description>gosub041107</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosub041107.a26" size="16384" crc="562f7033" sha1="c8010b24ca4f4ae5ac26be5dc7ba825c6d720910"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2602980a57feee0">
+		<description>gosub042207.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosub042207.bas.a26" size="16384" crc="8f89c379" sha1="02980a57feee03646526adc378b7328fe2b304b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc01fa4b22c30">
+		<description>gosub042407.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosub042407.bas.a26" size="16384" crc="ce51bbbf" sha1="dc01fa4b22c30302c9424d2504fd773594039c43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26afdf788530377">
+		<description>gosub050307.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosub050307.bas.a26" size="16384" crc="11e15b4e" sha1="afdf788530377744241657fa1fd745d41a19e3c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268b4cd323be064">
+		<description>gosub060707pal.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosub060707pal.bas.a26" size="16384" crc="6671bb7e" sha1="8b4cd323be0644e4dbf416cad825642ab125af71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d921fa8967d92">
+		<description>gosub121006.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosub121006.bas.bin" size="16384" crc="dec72aa9" sha1="d921fa8967d92d87b665e52c7f5e9de29b99f163"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2638db86c8faaf5">
+		<description>gosub121106a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosub121106a.bas.bin" size="16384" crc="7fa7a4c2" sha1="38db86c8faaf5abd17f4f880e6b6384bd1e1edba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265bcf7d0dcea72">
+		<description>gosub122406pal.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub122406pal.bas.bin" size="8192" crc="3f7d916f" sha1="5bcf7d0dcea72703a58bd31d57078e530a537433"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2650995cb3820a5">
+		<description>GoSub2 20071106</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="GoSub2 20071106.a26" size="32768" crc="d5a5e360" sha1="50995cb3820a548e10646a375d0819d56b5c6e8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fa134143ca4b7">
+		<description>gosub2endseq.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2endseq.bas.a26" size="8192" crc="18c09edb" sha1="fa134143ca4b7411d9f630945c522e015132f034"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2624b1d948e5102">
+		<description>gosub2ver10.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver10.bas.a26" size="8192" crc="14f07783" sha1="24b1d948e5102dd6514efd9c4856779b406536ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262b63005264146">
+		<description>gosub2ver11.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver11.bas.a26" size="8192" crc="d89a9a15" sha1="2b63005264146bc02fb34eda156ebca3de380584"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cfb9b45e5a98b">
+		<description>gosub2ver13.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver13.bas.a26" size="8192" crc="6eae0e42" sha1="cfb9b45e5a98b63297ace384d8c67b4863eb8fe3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26928552638e83c">
+		<description>gosub2ver4.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver4.bas.a26" size="8192" crc="457cc1d6" sha1="928552638e83c1a49f16f13dd4f14567209e9d83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261607ffbc59ca2">
+		<description>gosub2ver5.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver5.bas.a26" size="8192" crc="b9082206" sha1="1607ffbc59ca23ec6fea83fec54f70d4b586b562"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a2b1b0d8e4938">
+		<description>gosub2ver6.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver6.bas.a26" size="8192" crc="ad3daa75" sha1="a2b1b0d8e4938888308c3d6bf2984376f15787e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266133a0d7c00cd">
+		<description>gosub2ver7.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver7.bas.a26" size="8192" crc="60f840c7" sha1="6133a0d7c00cd68e30a732969ff176fd83a2a1fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2604c21ee7aee34">
+		<description>gosub2ver8.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver8.bas.a26" size="8192" crc="22e93c45" sha1="04c21ee7aee3441ff2af9dd1c820c5862d9b4fd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2676df66a82ca6d">
+		<description>gosub2ver9.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosub2ver9.bas.a26" size="8192" crc="b14c8d67" sha1="76df66a82ca6d1337cbbe8d05a71be4594cc3c04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26142fdf72631ea">
+		<description>gosuba030207.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosuba030207.bas.a26" size="8192" crc="31a173ba" sha1="142fdf72631ea572e58cff752e6900e267593230"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d0391869a1623">
+		<description>gosuba030807.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosuba030807.bas.a26" size="16384" crc="a4a26b74" sha1="d0391869a1623828242aee14ddc53a6c2f708ad8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265cf4b2912ec52">
+		<description>gosubtwo072407.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="gosubtwo072407.bas.a26" size="4096" crc="3ff3254a" sha1="5cf4b2912ec52072e657fbf49c36fe08a52ead98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d817726cc29b9">
+		<description>gosubtwo10.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosubtwo10.bas.a26" size="8192" crc="a36093b0" sha1="d817726cc29b98850703f91db6af02d16490fe96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc41997ba9e05">
+		<description>gosubtwo11.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosubtwo11.bas.a26" size="8192" crc="78a940bb" sha1="bc41997ba9e052596ea79ea35363ac77e435e7af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c1456e4aa136b">
+		<description>gosubtwo12.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosubtwo12.bas.a26" size="8192" crc="d6e21079" sha1="c1456e4aa136bab99fd92f26b5010c92c7fe714f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267fcbcd8ba773f">
+		<description>gosubtwo14c.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo14c.bas.a26" size="16384" crc="27c9e26e" sha1="7fcbcd8ba773feab00cf446751915aac1a5d58f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c920dba53ff58">
+		<description>gosubtwo15.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo15.bas.a26" size="16384" crc="24308e5b" sha1="c920dba53ff58310e3ef95297c9afee4835cf9fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260ed4bd73b9ef3">
+		<description>gosubtwo16.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo16.bas.a26" size="16384" crc="d38607f3" sha1="0ed4bd73b9ef35f428188afa232dfd9adf1258e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2600f135172c1ad">
+		<description>gosubtwo18.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo18.bas.a26" size="16384" crc="41c8f700" sha1="00f135172c1adeacb20bcb787d9125431c7ec454"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aa8bdd2c259f5">
+		<description>gosubtwo18b.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo18b.bas.a26" size="16384" crc="ee9dbcc3" sha1="aa8bdd2c259f51e03b309d8e3818b556b9b87527"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bdbd3185ed1c5">
+		<description>gosubtwo18c.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo18c.bas.a26" size="16384" crc="a6b6418b" sha1="bdbd3185ed1c5d0da6489705fb19c74b02314d7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26abc4bd4d6ac61">
+		<description>gosubtwo19b.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo19b.bas.a26" size="16384" crc="b56d7a7c" sha1="abc4bd4d6ac61632fb82c25de53118d44e06c063"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd0de83ea59f9">
+		<description>gosubtwo20.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo20.bas.a26" size="16384" crc="c60df97b" sha1="dd0de83ea59f914bf2fa58ab68b025032d0cc5e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fda0192077f0e">
+		<description>gosubtwo21.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo21.bas.a26" size="16384" crc="a5d8dd15" sha1="fda0192077f0ec7509b8a374c22d4445464adc5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2699f118f0eebdc">
+		<description>gosubtwo23.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo23.bas.a26" size="16384" crc="2102355c" sha1="99f118f0eebdcf110f44efab59724417983dac37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b7fb5be3cbbbd">
+		<description>gosubtwo24.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo24.bas.a26" size="16384" crc="43b3c028" sha1="b7fb5be3cbbbdfe3968b4835cc4ad6fdba8c3f1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2683b28ff0bfb36">
+		<description>gosubtwo25.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo25.bas.a26" size="16384" crc="b65603b3" sha1="83b28ff0bfb36b057d1b7457335900ee7074c7f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f61c8f34cd761">
+		<description>gosubtwo26.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo26.bas.a26" size="16384" crc="b623e8fc" sha1="f61c8f34cd761cbed41db4026ffc9da08a7720d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262dd0e08cf7b00">
+		<description>gosubtwo27.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo27.bas.a26" size="16384" crc="f478c3ee" sha1="2dd0e08cf7b002b97bd0ee0e72ef5b8dcd4622aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26091c404b2c618">
+		<description>gosubtwo28.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo28.bas.a26" size="16384" crc="6e1b5681" sha1="091c404b2c61840fce6168c53b39233b6a6a3aa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266318a86a2d704">
+		<description>gosubtwo29.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo29.bas.a26" size="16384" crc="97a3a327" sha1="6318a86a2d70498f87e4f15fa14c526377012de2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641f88ec1a5060">
+		<description>gosubtwo3.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="gosubtwo3.bas.a26" size="4096" crc="00de91f2" sha1="41f88ec1a5060ff59055bc052360416cb4010d30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268eb54cb868f9b">
+		<description>gosubtwo31.bas-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo31.bas-2.a26" size="16384" crc="625f13fa" sha1="8eb54cb868f9b356af49375601a0d978fab6533d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264c514f408dd97">
+		<description>gosubtwo31.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo31.bas.a26" size="16384" crc="4bac5eee" sha1="4c514f408dd97954507bab8af92097a0e01fe3b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26441fd51eb11ea">
+		<description>gosubtwo32.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo32.bas.a26" size="16384" crc="a58733be" sha1="441fd51eb11ea54e5484a562bbcfa5da015993fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261ce5b078ece52">
+		<description>gosubtwo38.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="gosubtwo38.bas.a26" size="16384" crc="b2f3b05a" sha1="1ce5b078ece52788210e965156e9615aa3a13e63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e552c17bf7809">
+		<description>gosubtwo5.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="gosubtwo5.bas.a26" size="4096" crc="47ff052a" sha1="e552c17bf7809aab4e3de43669766e587ec1917f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b2f9020e577b5">
+		<description>gosubtwo53.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo53.bas.a26" size="32768" crc="d2cc0f57" sha1="b2f9020e577b5669e34637f06d37404a0d215da8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616083f4cf9433">
+		<description>gosubtwo55.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo55.bas.a26" size="32768" crc="6d67bddc" sha1="16083f4cf943327d9acb5adb6df66d0b8f120f2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266875778a1f995">
+		<description>gosubtwo56.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo56.bas.a26" size="32768" crc="cb539cb7" sha1="6875778a1f995051507a983f9c6695c4c1aa13b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c94e67898cc8b">
+		<description>gosubtwo58.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo58.bas.a26" size="32768" crc="770ae129" sha1="c94e67898cc8b3e5307de1e0c8e73ca4ede1f204"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2660dcefe18feb5">
+		<description>gosubtwo60.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo60.bas.a26" size="32768" crc="4797a43c" sha1="60dcefe18feb5b2986ee1734d76a7751d7bff547"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26679ca4efd52da">
+		<description>gosubtwo62.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo62.bas.a26" size="32768" crc="cddac67d" sha1="679ca4efd52dab8b1c7e21ca6aab882c6c0b0b6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2681f132decdd3b">
+		<description>gosubtwo65.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo65.bas.a26" size="32768" crc="3c00317e" sha1="81f132decdd3bb4fa06500dcb7d51de3b3a027d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633241364f94ed">
+		<description>gosubtwo68.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo68.bas.a26" size="32768" crc="8a07ce53" sha1="33241364f94ed6af2e6b2eab1afd7e77411c8206"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26426f80003835d">
+		<description>gosubtwo70.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo70.bas.a26" size="32768" crc="54fd6490" sha1="426f80003835d38e42beeff3e3a9d054a23c84a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2606311bb9ff2b9">
+		<description>gosubtwo71a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo71a.bas.a26" size="32768" crc="38c25cc5" sha1="06311bb9ff2b9975b1e67f85a33c1fe3a5e55703"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d6a76b9ab5a46">
+		<description>gosubtwo73.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo73.bas.a26" size="32768" crc="fe12cace" sha1="d6a76b9ab5a46828e06a21a2fc370af3fe9d6408"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267f684ecad9401">
+		<description>gosubtwo74.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo74.bas.a26" size="32768" crc="3fa82dc9" sha1="7f684ecad9401eadd7c1e653b4e3ef404e0cff72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26629e0c687fb35">
+		<description>gosubtwo75.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo75.bas.a26" size="32768" crc="7354aed7" sha1="629e0c687fb359fc5fdcba77c2e07562faaac278"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d975953c255f">
+		<description>gosubtwo76.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo76.bas.a26" size="32768" crc="ba405420" sha1="7d975953c255fc49bfb332e355637711b3b5ec5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26383116e95586a">
+		<description>gosubtwo8.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosubtwo8.bas.a26" size="8192" crc="6fb55f5f" sha1="383116e95586a2e60db83147a0f6e8f7372ddab4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2676b595abefbb9">
+		<description>gosubtwo81limit.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo81limit.bas.a26" size="32768" crc="a5191235" sha1="76b595abefbb96596ca4107e78452836409a08b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e16768f67819b">
+		<description>gosubtwo82.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="gosubtwo82.bas.a26" size="32768" crc="33abbc4c" sha1="e16768f67819b903e8c4a24f1bdfa98816bf1c5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2653cf6d097d36c">
+		<description>gosubtwo9.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="gosubtwo9.bas.a26" size="8192" crc="ff08c1db" sha1="53cf6d097d36c61561294233142809bb03a77e96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26184ca601e69a9">
+		<description>Grand Prix (1983) (Activision) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Grand Prix (1983) (Activision) [o1].a26" size="16384" crc="b384056c" sha1="184ca601e69a9a3eca851c25488efda7a77da1db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2678ce5d5c41806">
+		<description>Grand Prix (1984) (Activision) [o2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Grand Prix (1984) (Activision) [o2].a26" size="8192" crc="c7b36ebc" sha1="78ce5d5c41806c49f63e825c9528a146d9d72144"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2682e72e7668cbb">
+		<description>Grand Puzzle I (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grand Puzzle I (Jumpman Selected Levels) (PD).a26" size="4096" crc="0c396e77" sha1="82e72e7668cbb47fe49b21728821b3b878518a1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269301dcd9884a0">
+		<description>Grand Puzzle II (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grand Puzzle II (Jumpman Selected Levels) (PD).a26" size="4096" crc="af12802a" sha1="9301dcd9884a04a66723d21ca59f61cb36e7b8c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641dc7fd7a7539">
+		<description>Grand Puzzle III (Jumpman Selected Levels) (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grand Puzzle III (Jumpman Selected Levels) (PD) [a1].a26" size="4096" crc="42cba4de" sha1="41dc7fd7a7539d226b51806aebd7a219a0ac9c07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e46166a0a5734">
+		<description>Grand Puzzle III (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grand Puzzle III (Jumpman Selected Levels) (PD).a26" size="4096" crc="56ae3640" sha1="e46166a0a573428219aab0fad659b38ef4f92ec3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32709,6 +35339,1526 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Grand_Prix-NTSC(Supercharger).a26" size="4096" crc="07896d33" sha1="ae9188e1f096fc748e40b6904ab2010d34c3bb6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2622e1988e0bc5c">
+		<description>Gravitar (1984) (Atari) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Gravitar (1984) (Atari) [!].a26" size="8192" crc="8dac73be" sha1="22e1988e0bc5c40fe4247055d95b792e3c096380"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fb176c77b700d">
+		<description>Gravitar(PAL60-WIP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Gravitar(PAL60-WIP).a26" size="8192" crc="58e271ae" sha1="fb176c77b700df0a77c9a31f4ac30a3948df166e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b373dd26d7c85">
+		<description>Gravity Ball v015 by Rob Mundschau (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gravity Ball v015 by Rob Mundschau (PD).a26" size="4096" crc="0fe7948f" sha1="b373dd26d7c853519c1b3d4564f55b098fa96905"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2617babfb0e7aaa">
+		<description>Gravity sucks (end_start_time) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gravity sucks (end_start_time) (PD).a26" size="4096" crc="55578b34" sha1="17babfb0e7aaaa4539db12c80920ebbf830d7786"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265dcdecb80e865">
+		<description>Gravity_Ball_v014_by_Rob_Mundschau</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gravity_Ball_v014_by_Rob_Mundschau.a26" size="4096" crc="29c54246" sha1="5dcdecb80e8652aeb1b289e7f7a8095bba2c3f6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261c301e48d5845">
+		<description>Graz 2004 - The Demo (Final) (Simon Quernhorst) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Graz 2004 - The Demo (Final) (Simon Quernhorst) (PAL).a26" size="4096" crc="063f19fd" sha1="1c301e48d584566b2cd0377ff6439b1b0afe06df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c8e9597d7cc12">
+		<description>Greatest American Hero v1.11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Greatest American Hero v1.11.a26" size="8192" crc="5b9b793b" sha1="c8e9597d7cc124e17cbc9b177cc47a5ffcd34f60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26941077b20d713">
+		<description>Greatest American Hero, The v4 by Out of Gas (Superman Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greatest American Hero, The v4 by Out of Gas (Superman Hack).a26" size="4096" crc="fe929b2f" sha1="941077b20d71394ecafd47f8bd93ddf4f2619b3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26096a81f542ff0">
+		<description>Green Bar Text Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Green Bar Text Demo (PD).a26" size="4096" crc="c75f977a" sha1="096a81f542ff09b5e44479c6e1eeb646e5172659"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26551fc443b55f8">
+		<description>Green_Clock_v3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Green_Clock_v3.a26" size="4096" crc="32ed908f" sha1="551fc443b55f83ccfbdc376dc0763537f871ba3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261a0cfc32885f7">
+		<description>green_hell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="green_hell.a26" size="4096" crc="39aed45c" sha1="1a0cfc32885f79ce14ea3dce7cc4c7d977477ca5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d4321670dc825">
+		<description>Greeting Cart (AD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart (AD).a26" size="4096" crc="25e698b5" sha1="d4321670dc825fd62487debd0197b9bb94f762f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262388865b4cc59">
+		<description>Greeting Cart (RSIDDALL) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart (RSIDDALL) (PD).a26" size="4096" crc="2ca1f45a" sha1="2388865b4cc592b13c9f1fb5bece3a5c780586e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2643dac6fb7b800">
+		<description>Greeting Cart 2600 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart 2600 (PD).a26" size="4096" crc="fb72b865" sha1="43dac6fb7b8000052dcd1f075e22542f65cb1fdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d1e5e0ecf922">
+		<description>Greeting Cart Ali Landry Bikini (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Ali Landry Bikini (Snailsoft).a26" size="4096" crc="d0fab32a" sha1="0d1e5e0ecf922b63b5d8d7b0264d6975ec169452"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260da3189d91ae5">
+		<description>Greeting Cart Ali Landry Closeup (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Ali Landry Closeup (Snailsoft).a26" size="4096" crc="4352fdef" sha1="0da3189d91ae5da9d67f5420495741b70a3b6ba9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f5744d0e3771">
+		<description>Greeting Cart Ali Larter (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Ali Larter (Snailsoft).a26" size="4096" crc="f408e78b" sha1="6f5744d0e3771cd294c7a8685aa9d1a83f9ebbf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2674b95529cb2bb">
+		<description>Greeting Cart Alley (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Alley (Snailsoft).a26" size="4096" crc="678b6849" sha1="74b95529cb2bb9af22f4711f0a4a14cf394af8fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d0740974c8dbb">
+		<description>Greeting Cart Amber Lynn (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Amber Lynn (Snailsoft).a26" size="4096" crc="ec0b03a9" sha1="d0740974c8dbb1f3159bf052e4306c303c949f7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fb3dd973dca76">
+		<description>Greeting Cart Amy (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Amy (Snailsoft).a26" size="4096" crc="98bac356" sha1="fb3dd973dca76571e4f829d9c2fde5f58db06d41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26485cd95a3e575">
+		<description>Greeting Cart Amy in Thong (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Amy in Thong (Snailsoft).a26" size="4096" crc="0557545a" sha1="485cd95a3e575ca57e3018b720e89c363be0bcdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c25324117b021">
+		<description>Greeting Cart Amy Miller (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Amy Miller (Snailsoft).a26" size="4096" crc="f43cf1ac" sha1="c25324117b02163fa97d1db78682d6e40b3e2cff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26797d65f1b8161">
+		<description>Greeting Cart Amy Red-Corset-Leather-Boots (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Amy Red-Corset-Leather-Boots (PD).a26" size="4096" crc="962e3269" sha1="797d65f1b816187a8c230bcb7d01917b5827c16e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f770b615c878a">
+		<description>Greeting Cart Ann R (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Ann R (Snailsoft).a26" size="4096" crc="ca99d287" sha1="f770b615c878ae9af406674a928804c933011c2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266cdcf5a43570f">
+		<description>Greeting Cart Anna Kournikova (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Anna Kournikova (PD).a26" size="4096" crc="756b8053" sha1="6cdcf5a43570f2bee98d676c66e6ac11503e3865"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267a1abc1c834c7">
+		<description>Greeting Cart Atari Coin (V1) (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Atari Coin (V1) (Snailsoft).a26" size="4096" crc="07a4c174" sha1="7a1abc1c834c75a531f462c2d3dea4e019e3ca14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2671238b1c96f68">
+		<description>Greeting Cart Atari Coin (V2) (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Atari Coin (V2) (Snailsoft).a26" size="4096" crc="aa23e723" sha1="71238b1c96f68f9904ec333702738dd56039797d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2642882bdefbbbf">
+		<description>Greeting Cart Atari-Troll (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Atari-Troll (PD).a26" size="4096" crc="12c53a7c" sha1="42882bdefbbbf44c2cb8f7abac2b200a5ae07c29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cb6e41d266180">
+		<description>Greeting Cart Autobots (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Autobots (PD).a26" size="4096" crc="7e823287" sha1="cb6e41d2661800442ac05da9826e75257c267673"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269e61b71eae275">
+		<description>Greeting Cart Barb (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Barb (Snailsoft).a26" size="4096" crc="ff50a57a" sha1="9e61b71eae275a9f12dcb50a54276f4a3ec8e6e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bdfbdbb85ba06">
+		<description>Greeting Cart Bardot (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Bardot (PD).a26" size="4096" crc="4eb89f82" sha1="bdfbdbb85ba06708c75d08c7720746d9d1e1af95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26de0e7f8da99ac">
+		<description>Greeting Cart Beth from SCA (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Beth from SCA (PD).a26" size="4096" crc="d492bc19" sha1="de0e7f8da99acb72c5b1715f803e14d9c8801f7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26011ab3e469487">
+		<description>Greeting Cart Betty Davis (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Betty Davis (PD).a26" size="4096" crc="8a46271b" sha1="011ab3e469487c0b1d4a8053642e2e59146d6f50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264912da77b20d3">
+		<description>Greeting Cart Blond on Brunette (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Blond on Brunette (Snailsoft).a26" size="4096" crc="48f3ba01" sha1="4912da77b20d30e39e6fade22eb2108670c16468"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265646c8aba6c67">
+		<description>Greeting Cart Blonds-Brunettes-Redheads-Oh-My (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Blonds-Brunettes-Redheads-Oh-My (PD).a26" size="4096" crc="d11765b2" sha1="5646c8aba6c6705fe809f98ebad74f5e31fed592"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26957744e14ade5">
+		<description>Greeting Cart Blue-Ribbon Award (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Blue-Ribbon Award (PD).a26" size="4096" crc="a7f6cf45" sha1="957744e14ade5a870985b92470f23e34d5c46c17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641d5454f41ff7">
+		<description>Greeting Cart Brooke Burke Blue Bikini (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Brooke Burke Blue Bikini (PD).a26" size="4096" crc="add61332" sha1="41d5454f41ff74255b85c99d95b6bdad5837c42a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2610f8304405069">
+		<description>Greeting Cart Brooke Burke Closeup (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Brooke Burke Closeup (PD).a26" size="4096" crc="dce1362b" sha1="10f83044050698d15a3ead6817d556873fe6ab24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26989a39602f92d">
+		<description>Greeting Cart Brooke Shields (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Brooke Shields (PD).a26" size="4096" crc="8e11f8e0" sha1="989a39602f92de216855f257deb701dd5fed149f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ccecc3f0cd2aa">
+		<description>Greeting Cart Carmon (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Carmon (Snailsoft).a26" size="4096" crc="c2ac4f3f" sha1="ccecc3f0cd2aad3f3562a6749c007f21a74c1e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2618d694fcd69be">
+		<description>Greeting Cart Carry Blowjob (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Carry Blowjob (PD).a26" size="4096" crc="58958135" sha1="18d694fcd69be3b40140e14bd4dc45cf8ac582f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268fc99fb7001f1">
+		<description>Greeting Cart Catherine Zeta-Jones (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Catherine Zeta-Jones (PD).a26" size="4096" crc="44dfa5f2" sha1="8fc99fb7001f15d734aa975a97f8d0f258782275"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2666e1413f21e6b">
+		<description>Greeting Cart Cathy (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Cathy (Snailsoft).a26" size="4096" crc="845be383" sha1="66e1413f21e6bde05cdf3c11611613118e2326cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4dd8cbd541a7">
+		<description>Greeting Cart Chris (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Chris (Snailsoft).a26" size="4096" crc="8e51aace" sha1="b4dd8cbd541a798a1154bd203cd06dcd2e935570"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26605b9f3c83cb9">
+		<description>Greeting Cart Cindy Margolis (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Cindy Margolis (Snailsoft).a26" size="4096" crc="51f76380" sha1="605b9f3c83cb9ef349a06524115e4cfbf234b292"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659da8ef74fe2e">
+		<description>Greeting Cart Decepticon (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Decepticon (PD).a26" size="4096" crc="3dc6ef32" sha1="59da8ef74fe2e579352d379f18ced84b7c4ecab6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c205dbd144c4e">
+		<description>Greeting Cart Gene (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Gene (Snailsoft).a26" size="4096" crc="6af45ca2" sha1="c205dbd144c4ed7bfb13ab4166f6a35c865ec770"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b64a4a8894172">
+		<description>Greeting Cart Goth (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Goth (Snailsoft).a26" size="4096" crc="a3365e9b" sha1="b64a4a8894172b0eb7b0f502ff34182ae19a55fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ddcc7075b732f">
+		<description>Greeting Cart Green Dress (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Green Dress (Snailsoft).a26" size="4096" crc="d06f3280" sha1="ddcc7075b732f657a7ff828fa525e84ff5814409"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265656746429398">
+		<description>Greeting Cart Halle Berry (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Halle Berry (Snailsoft).a26" size="4096" crc="043213fb" sha1="565674642939896b7364fc2c90755e950981831d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267847c232e09a8">
+		<description>Greeting Cart ICC (PD) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart ICC (PD) (PAL).a26" size="4096" crc="247cc774" sha1="7847c232e09a8dc81fc460825620880037e88f0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ddacb0529ad7f">
+		<description>Greeting Cart ICC Interlaced (PD) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart ICC Interlaced (PD) (PAL).a26" size="4096" crc="eae0a734" sha1="ddacb0529ad7feeab03364a3e2caa613daa12583"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2660d02aa300f4b">
+		<description>Greeting Cart ICC Interlaced (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart ICC Interlaced (PD).a26" size="4096" crc="d6245457" sha1="60d02aa300f4ba6dc6c72ccd4546811c3089aaa0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260631c0787f90d">
+		<description>Greeting Cart ICC_NTSC (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart ICC_NTSC (PD).a26" size="4096" crc="83fc73b0" sha1="0631c0787f90d074634653111c82211dc3dc8249"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268a4b7365503d5">
+		<description>Greeting Cart Jenn-L (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Jenn-L (Snailsoft).a26" size="4096" crc="a8fe28c9" sha1="8a4b7365503d5dad17a12f897097f64b985321b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f76508b2be10b">
+		<description>Greeting Cart Jeri Ryan (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Jeri Ryan (Snailsoft).a26" size="4096" crc="f60c4629" sha1="f76508b2be10b5f72567d90a9aeac5eae0149e30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261d90897164f01">
+		<description>Greeting Cart Julia Roberts (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Julia Roberts (PD).a26" size="4096" crc="afed4597" sha1="1d90897164f010ca5cab0ecfd1975e99f0ce5c68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f4423742a0b1e">
+		<description>Greeting Cart Kathy from MadisonWI (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Kathy from MadisonWI (PD).a26" size="4096" crc="e6230e43" sha1="f4423742a0b1e1107b681119a0d9dd804a9f0dd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fc71e83ca93a1">
+		<description>Greeting Cart Kelly Brooke (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Kelly Brooke (Snailsoft).a26" size="4096" crc="7569d4c0" sha1="fc71e83ca93a152b0ab3887fbf0207ac7642b019"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2601925f5f53fdf">
+		<description>Greeting Cart Maria Blowjob (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Maria Blowjob (PD).a26" size="4096" crc="9a511e6d" sha1="01925f5f53fdf7327e2846acece06add54570253"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b785df632389">
+		<description>Greeting Cart Mario and Luigi (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Mario and Luigi (PD).a26" size="4096" crc="ec638f5c" sha1="1b785df632389773031d5f5a7ef8f0e6c1686cd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2644386adf6ee6a">
+		<description>Greeting Cart Moon (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Moon (PD).a26" size="4096" crc="e27fa261" sha1="44386adf6ee6a500ec811487b0a6b3ebbf27d9b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad2fa4589d0a0">
+		<description>Greeting Cart NTSC (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart NTSC (PD).a26" size="4096" crc="b97ca287" sha1="ad2fa4589d0a00796992f4fb52d01ea7992d9fff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268085506700e2d">
+		<description>Greeting Cart Original (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Original (PD).a26" size="4096" crc="32a7e0bf" sha1="8085506700e2d0a0c2bc1a6f982c5eb782e1efa1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263c9814261a292">
+		<description>Greeting Cart Patty from U-MI (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Patty from U-MI (PD).a26" size="4096" crc="ce3a3b45" sha1="3c9814261a292e440cb1f307893c17bc64a1c71c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2633d7c2d6a619a">
+		<description>Greeting Cart RHPS-Lips (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart RHPS-Lips (PD).a26" size="4096" crc="b8a3ca30" sha1="33d7c2d6a619a779aff76154e6d0197434121434"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26416e81ab27253">
+		<description>Greeting Cart Sandra Bullock (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Sandra Bullock (Snailsoft).a26" size="4096" crc="24a6a786" sha1="416e81ab2725300c13f73f25c4ae0f9237bad02a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2689dfb3c30b5c8">
+		<description>Greeting Cart Seymoure (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Seymoure (Snailsoft).a26" size="4096" crc="4df2b5ae" sha1="89dfb3c30b5c8958ea85c01abec206c1c37a611c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264ce1f90feeebc">
+		<description>Greeting Cart Sky Lopez (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Sky Lopez (PD).a26" size="4096" crc="16e0f1dc" sha1="4ce1f90feeebc68f10d00005363a0957648fbedc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262f14fc7c6afdd">
+		<description>Greeting Cart Sue (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Sue (Snailsoft).a26" size="4096" crc="cc219c32" sha1="2f14fc7c6afdd825f89d7479cb1b0bb919bc641a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ebe4c815de8ae">
+		<description>Greeting Cart Tanya (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Tanya (Snailsoft).a26" size="4096" crc="942787ea" sha1="ebe4c815de8ae19925e8b6d1a7b23f86d486cbc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c68141a774ec6">
+		<description>Greeting Cart The Snail (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart The Snail (PD).a26" size="4096" crc="dd160981" sha1="c68141a774ec6022c6bf0bad52d2d7b08d59d2f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b58f30eda782a">
+		<description>Greeting Cart Theressa Blowjob (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Theressa Blowjob (PD).a26" size="4096" crc="e8c319e4" sha1="b58f30eda782a3612619c58a2f7c0ea8a7b10eec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2662e3cf1faf244">
+		<description>Greeting Cart Tweety (Snailsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Tweety (Snailsoft).a26" size="4096" crc="c64762ff" sha1="62e3cf1faf24446165b168a3e088a7e7dd6044a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2685b00d17648dc">
+		<description>Greeting Cart Veil-Dancer SCA (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting Cart Veil-Dancer SCA (PD).a26" size="4096" crc="da2e0bdb" sha1="85b00d17648dce464f45397c566e89c01fe06598"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2607e4c3f20c311">
+		<description>Greeting_Cart_Alicia_Silverstone</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Alicia_Silverstone.a26" size="4096" crc="0f47bd36" sha1="07e4c3f20c3113ba672d0714aab3dc2fd776d1d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0e6ef0b46cbd">
+		<description>Greeting_Cart_Amy_Weber_Jeans-n-Bra</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Amy_Weber_Jeans-n-Bra.a26" size="4096" crc="cf542466" sha1="b0e6ef0b46cbda50603971e005ac996f0bc8d2f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261e2c81813216a">
+		<description>Greeting_Cart_Bagget_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Bagget_by_SnailSoft.a26" size="4096" crc="f5589e3d" sha1="1e2c81813216a120a197fe5bcf8cabd9e1b20df1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2654d88bdb72cb7">
+		<description>Greeting_Cart_Betty_Boop</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Betty_Boop.a26" size="4096" crc="130d1bc0" sha1="54d88bdb72cb7da9403de7fa584f7a81fee2dd20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2675e4611b02dc7">
+		<description>Greeting_Cart_Catherine_Bell_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Catherine_Bell_by_SnailSoft.a26" size="4096" crc="4750c301" sha1="75e4611b02dc734ff4d177c7f00e96ca55b7c687"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265e98d567eb245">
+		<description>Greeting_Cart_Christy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Christy.a26" size="4096" crc="e7255a6d" sha1="5e98d567eb245b4b2f5e016ed24e12cc89264d14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26957a5bfc8c0d3">
+		<description>Greeting_Cart_Darlen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Darlen.a26" size="4096" crc="d3db739f" sha1="957a5bfc8c0d3be9ec905cc985674c75f2308be4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b34943ff55dd8">
+		<description>Greeting_Cart_Garbo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Garbo.a26" size="4096" crc="5c4ee9b7" sha1="b34943ff55dd858729046be6e82161fda19944e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265b2f052ac7ee6">
+		<description>Greeting_Cart_Grace-Kelly</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Grace-Kelly.a26" size="4096" crc="f6ad15fa" sha1="5b2f052ac7ee685891753150306e2691a7eff485"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623af65826d44d">
+		<description>Greeting_Cart_Hellen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Hellen.a26" size="4096" crc="2db98ae2" sha1="23af65826d44d15cb0b5083b72b435409ca235be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e7a0c3314fb96">
+		<description>Greeting_Cart_Hepburn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Hepburn.a26" size="4096" crc="7b9c4a65" sha1="e7a0c3314fb969f875d0334404bd6ac61aef6dfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2693c1ff3ee26c6">
+		<description>Greeting_Cart_Kiebler_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Kiebler_by_SnailSoft.a26" size="4096" crc="df793a13" sha1="93c1ff3ee26c6802126bc3c13da14121b24afaec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264ee8b418e2594">
+		<description>Greeting_Cart_Lisa_from_SCA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Lisa_from_SCA.a26" size="4096" crc="0792ecb5" sha1="4ee8b418e25945d59d3befc5510a46dd1fe2fdbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268956c3040f7c0">
+		<description>Greeting_Cart_Norma_Gene</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Norma_Gene.a26" size="4096" crc="7f4e677e" sha1="8956c3040f7c0d050f64764c936b75534f09cf4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a9c6bbe7a15a">
+		<description>Greeting_Cart_Sung-Lee_by_SnailSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Greeting_Cart_Sung-Lee_by_SnailSoft.a26" size="4096" crc="214619b7" sha1="9a9c6bbe7a15ab9d781f0d78a58d177396f22acf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26844ac491c4922">
+		<description>GREGXM Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GREGXM Demo (PD).a26" size="4096" crc="f79e0aee" sha1="844ac491c4922190b03d75c08003259adc67fc2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e04a929e49541">
+		<description>Grid 20070829</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid 20070829.a26" size="4096" crc="cb8f4033" sha1="e04a929e49541c55b6b44469a244917828c08efc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267e3ae42aa9345">
+		<description>Grid 20070830</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid 20070830.a26" size="4096" crc="7e3128ee" sha1="7e3ae42aa9345ffe949f8b154f4623dd26d8ebda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263f59213c0671e">
+		<description>Grid 20070901</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid 20070901.a26" size="4096" crc="ad683e51" sha1="3f59213c0671e7f9bec00437d9b6cf8a2d6a8739"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b4c18f59871c2">
+		<description>Grid 20070903</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid 20070903.a26" size="4096" crc="88bd6bf4" sha1="b4c18f59871c23ced265b03f411102089a4c5286"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a0c6b762d559">
+		<description>Grid 20070903a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid 20070903a.a26" size="4096" crc="c8be1926" sha1="6a0c6b762d55918fe7b8bb7d868385b58f733fd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26429e799765c37">
+		<description>Grid 20070903b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid 20070903b.a26" size="4096" crc="4b2a6c90" sha1="429e799765c3776f244e0b7a1a59b94d06bb81a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269cf32aef81559">
+		<description>Grid Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid Demo (PD).a26" size="4096" crc="c2a35ce7" sha1="9cf32aef81559b13c45ad56d2d6babd77c405a8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26af68286d8ff5e">
+		<description>Grid Pattern Demo 1 (20-12-2002) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid Pattern Demo 1 (20-12-2002) (CT).a26" size="4096" crc="ff383d34" sha1="af68286d8ff5eabfaeb9abe5fae3447dd7e570e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ed4a11c920cf5">
+		<description>Grid Pattern Demo 2 (20-12-2002) (CT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Grid Pattern Demo 2 (20-12-2002) (CT).a26" size="4096" crc="3a7b9153" sha1="ed4a11c920cf5cef80281f5067e1318930ef7e7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2617f61b0ea3fbc">
+		<description>Group 7 Project 8 - gravity sucks (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Group 7 Project 8 - gravity sucks (PD).a26" size="4096" crc="a47e90c4" sha1="17f61b0ea3fbcebb4cee300a2288d327f3073318"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e21ce284e2331">
+		<description>Group 7 Project 8 - gravity sucks(end_start).bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Group 7 Project 8 - gravity sucks(end_start).bas.a26" size="4096" crc="0f83d7c6" sha1="e21ce284e23311cd74aa5ffaf066d4c58715c548"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ad49471125b6">
+		<description>Group 7 Project 8 - myooze (collision - 2P).bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Group 7 Project 8 - myooze (collision - 2P).bas.a26" size="4096" crc="ad9e6304" sha1="2ad49471125b6d5a0dcffe718b82f7a00d857061"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661622e61a9371">
+		<description>Group 7 Project 8 - myooze (efficiency).bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Group 7 Project 8 - myooze (efficiency).bas.a26" size="4096" crc="e5a14bea" sha1="61622e61a9371cf8cbe353070a80e823a1a9bdfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f47c2b7fd0c4">
+		<description>Group 7 Project 8 - myooze (efficiency_end_start).bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Group 7 Project 8 - myooze (efficiency_end_start).bas.a26" size="4096" crc="ad12c613" sha1="6f47c2b7fd0c4702232381cbe15c3d0377808a2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26593a0341a60fb">
+		<description>Group 7 Project 8 - myooze (one brick ooze - wider).bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Group 7 Project 8 - myooze (one brick ooze - wider).bas.a26" size="4096" crc="e680f0a9" sha1="593a0341a60fbe53951effb0f54057d26f86af09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f5cb645e1a0d8">
+		<description>Group 7 Project 8 - ooze.txt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Group 7 Project 8 - ooze.txt.a26" size="4096" crc="5ff65edc" sha1="f5cb645e1a0d879e9c2a31b6593a871a6d0c4835"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2674f0645986d5e">
+		<description>Grundle vs Rhindle basketball hack050307</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Grundle vs Rhindle basketball hack050307.a26" size="2048" crc="d3877f8f" sha1="74f0645986d5e1a681355eaa80fe3b4e79942b4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2680ee901ad133f">
+		<description>GTA 2600 wip 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GTA 2600 wip 1 (PD).a26" size="4096" crc="56b1e2d1" sha1="80ee901ad133f18739c6e3ec23903c63ae232f6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2606ef2b0706c56">
+		<description>Guillermo's House of Crack (Matt Drake) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Guillermo's House of Crack (Matt Drake) (PD).a26" size="4096" crc="7ce6164d" sha1="06ef2b0706c5657e153eff38221e233bcd40fa7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268e029fbee875a">
+		<description>GuitariHero.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="GuitariHero.bas.a26" size="4096" crc="e28b8705" sha1="8e029fbee875a0d132ffdee2d6b429c904a94c48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b67d00ec30e54">
+		<description>Gun Forest (Forest Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gun Forest (Forest Hack).a26" size="4096" crc="f12fa10e" sha1="b67d00ec30e5424825d5c0ebf6b44a1f14863967"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262f48e52c4b1a8">
+		<description>Gun Test 4 (Eckhard Stolberg) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gun Test 4 (Eckhard Stolberg) (PD).a26" size="4096" crc="c5e73e27" sha1="2f48e52c4b1a8bb777fbff2ea1d4e44117425f74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2663b650ddb1896">
+		<description>Gunfight 2600 - AI (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - AI (MP).a26" size="4096" crc="90ea6dde" sha1="63b650ddb1896b1fbf847158c1af344c931067c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2682cadd63e31eb">
+		<description>Gunfight 2600 - Beta Release! (2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Beta Release! (2003) (MP).a26" size="4096" crc="a026dcc9" sha1="82cadd63e31ebeda680e5eb55f8cbc8d9b4d330c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2653fc61b8884b1">
+		<description>Gunfight 2600 - Cowboy Hair (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Cowboy Hair (2001) (MP).a26" size="4096" crc="d738491b" sha1="53fc61b8884b172df3ec37033cd1db706e4fea37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c0b01b3e24e7d">
+		<description>Gunfight 2600 - Decisions had to be made (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Decisions had to be made (2001) (MP).a26" size="4096" crc="4773a56a" sha1="c0b01b3e24e7dccf385049a5f2b935197cf629f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26436efbfbb4395">
+		<description>Gunfight 2600 - Design thoughts (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Design thoughts (MP).a26" size="4096" crc="a8a98b6d" sha1="436efbfbb4395e25cbae41f7f6862078cca001dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2634763bfadc46a">
+		<description>Gunfight 2600 - Early Play-kernel (2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Early Play-kernel (2003) (MP).a26" size="4096" crc="bf4c18f2" sha1="34763bfadc46a5fecc1a35aa587a3abf8bae38de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263efd98a46c503">
+		<description>Gunfight 2600 - Final Run (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Final Run (MP).a26" size="4096" crc="cdda1e80" sha1="3efd98a46c503582b9b9420b2badf947f801f3ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263b92ad72d951c">
+		<description>Gunfight 2600 - Final Run Part 2 (2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Final Run Part 2 (2003) (MP).a26" size="4096" crc="cd2a15f1" sha1="3b92ad72d951c411dc0ba62303090bc96132ff4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b8434dbdfe4bb">
+		<description>Gunfight 2600 - Fixed Beta Release! (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Fixed Beta Release! (2001) (MP).a26" size="4096" crc="619d7b85" sha1="b8434dbdfe4bbc80c819412c0b888fcb0e8cf3b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ae08b47b5b398">
+		<description>Gunfight 2600 - Flicker Acceptance (2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Flicker Acceptance (2003) (MP).a26" size="4096" crc="2e33afa1" sha1="ae08b47b5b3982a617966eb3b7c927b5446e4b1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e3f5623e76f40">
+		<description>Gunfight 2600 - Improved AI (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Improved AI (MP).a26" size="4096" crc="e8c10c92" sha1="e3f5623e76f402415d0e92d6fd3257db68658875"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2660253fab81242">
+		<description>Gunfight 2600 - It could've been soooo cool, but (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - It could've been soooo cool, but (2001) (MP).a26" size="4096" crc="c366794e" sha1="60253fab81242b823d39143d6aa2a55343ca6204"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bf2c4017a3887">
+		<description>Gunfight 2600 - Limit broken again! (2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Limit broken again! (2002) (MP).a26" size="4096" crc="02c45174" sha1="bf2c4017a3887c5c38a0f8321ba68b347a289d6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269c0744bd937e4">
+		<description>Gunfight 2600 - Little progress (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Little progress (2001) (MP).a26" size="4096" crc="c287b4db" sha1="9c0744bd937e402a492db4f9c2f56e0ec5cb87e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26edeee90c1c911">
+		<description>Gunfight 2600 - Music &amp; Bugfixes 1 (2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Music &amp; Bugfixes 1 (2002) (MP).a26" size="4096" crc="25d7f5bf" sha1="edeee90c1c911ee8c51b712858b7b8ff0424f7ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f2dd46426a4e8">
+		<description>Gunfight 2600 - Music &amp; Bugfixes 2 (2002) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Music &amp; Bugfixes 2 (2002) (MP).a26" size="4096" crc="07bc4739" sha1="f2dd46426a4e89a22818ebc517a52db246e0b834"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266dc26df5e280d">
+		<description>Gunfight 2600 - Not mergeable with Colbert wizardry (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Not mergeable with Colbert wizardry (2001) (MP).a26" size="4096" crc="f786ef00" sha1="6dc26df5e280dde9c53dd513578ba9210cc626be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f012756bd630">
+		<description>Gunfight 2600 - One Limit Reached! (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - One Limit Reached! (2001) (MP).a26" size="4096" crc="0fdbe7c6" sha1="4f012756bd6305a953640f53be8792381f9995c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2677667395e136a">
+		<description>Gunfight 2600 - One Step Forward &amp; Two Steps Back (2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - One Step Forward &amp; Two Steps Back (2003) (MP).a26" size="4096" crc="95851d17" sha1="77667395e136a0b1100bbd92207d0e68a21e4ec7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266ea4cc06fd443">
+		<description>Gunfight 2600 - orig (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - orig (MP).a26" size="4096" crc="c2b4cd45" sha1="6ea4cc06fd4433077a2abc4ae3aa1b17a8f9f8bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261421afef4e689">
+		<description>Gunfight 2600 - Red River (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Red River (MP).a26" size="4096" crc="fb37d30a" sha1="1421afef4e68995777d6591df6d58cb27f38e291"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26219a4d94b613d">
+		<description>Gunfight 2600 - Release Candidate (2002) (MP) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Release Candidate (2002) (MP) (PAL).a26" size="4096" crc="7fe666c1" sha1="219a4d94b613d68a13f4648fea556422bdaaa95b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eda5b614ed52d">
+		<description>Gunfight 2600 - Release Candidate (2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Release Candidate (2003) (MP).a26" size="4096" crc="c401fa6b" sha1="eda5b614ed52dd043c9e98828f8e2b7fe2e626a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e7937a613b529">
+		<description>Gunfight 2600 - Scenarios complete (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Scenarios complete (MP).a26" size="4096" crc="a7ab1ca9" sha1="e7937a613b529d06adecf7115d5a58b4cbf7eefe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26628b7404718bd">
+		<description>Gunfight 2600 - Sonic R Evolution (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Sonic R Evolution (MP).a26" size="4096" crc="250e1f13" sha1="628b7404718bd24f2495affe9b689e05561d0b30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c1727142ce280">
+		<description>Gunfight 2600 - The Final Kernel (MP) [b1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - The Final Kernel (MP) [b1].a26" size="4096" crc="f954e006" sha1="c1727142ce280683b97fbe508e0df2018262d6d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26faaebd24a0be3">
+		<description>Gunfight 2600 - The Final Kernel Part (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - The Final Kernel Part (MP).a26" size="4096" crc="9fe579be" sha1="faaebd24a0be30a7c2655b37cd776418d8311988"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269150dad72bd3b">
+		<description>Gunfight 2600 - The Final Kernel Part 2 (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - The Final Kernel Part 2 (MP).a26" size="4096" crc="45396ba6" sha1="9150dad72bd3baf19d6cedccb88298a557f00497"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bdbaed667bd28">
+		<description>Gunfight 2600 - The Final Kernel Part 3 (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - The Final Kernel Part 3 (MP).a26" size="4096" crc="3ed22ac0" sha1="bdbaed667bd289f47d4e86ea8199511e5885bdd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613932a3abf865">
+		<description>Gunfight 2600 - The Good, The Bad, The Ugly (2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - The Good, The Bad, The Ugly (2003) (MP).a26" size="4096" crc="dde1bbca" sha1="13932a3abf86555fd263571de6c9e6e0818fdd42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26080760b18ccf6">
+		<description>Gunfight 2600 - This time it's your decision! (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - This time it's your decision! (2001) (MP).a26" size="4096" crc="5b2b9ddd" sha1="080760b18ccf6dd7047603e0d53ce662e7df9c9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a744ce71ea818">
+		<description>Gunfight 2600 - Westward Ho! (2003) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Westward Ho! (2003) (MP).a26" size="4096" crc="fd94ed10" sha1="a744ce71ea8189ef29d8a2b589382a5b308660f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2620b15d3212f43">
+		<description>Gunfight 2600 - Worst Nightmare (2001) (MP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight 2600 - Worst Nightmare (2001) (MP).a26" size="4096" crc="bf2eb809" sha1="20b15d3212f430e137c087c52d741f2b75fbddd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261070708366935">
+		<description>gunfight.antispy+</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="gunfight.antispy+.a26" size="4096" crc="dbdb0cc9" sha1="10707083669354ed20db9877364ae8794707a63d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2655d4f6f57bd18">
+		<description>gunfight.antispy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="gunfight.antispy.a26" size="4096" crc="4c49235a" sha1="55d4f6f57bd1834c120e1068eb49652fbf69074a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2639e75ea0a6339">
+		<description>Gunfighter (Jumpman Selected Levels) (PD) (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfighter (Jumpman Selected Levels) (PD) (2).a26" size="4096" crc="30bda5d5" sha1="39e75ea0a63397ec4da0fb2772b1f2bb56857638"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2667c3cfcfe0838">
+		<description>Gyruss (1985) (Parker Bros) [hMF4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Gyruss (1985) (Parker Bros) [hMF4].a26" size="32768" crc="edac4b98" sha1="67c3cfcfe083831f90dbb0043231dc8232a94fa9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ce74ca811d173">
+		<description>Gyruss (PAL, F4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Gyruss (PAL, F4).a26" size="32768" crc="48eb573d" sha1="ce74ca811d17344b3b7c90c6e1a7bfd753998f02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268f751342302ca">
+		<description>h.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="h.bas.a26" size="2048" crc="8b219c13" sha1="8f751342302cad2a9a684eca768d26d4593e7fd1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43079,6 +47229,756 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="River_Raid__infinite_lives_Hack.a26" size="4096" crc="78082f94" sha1="63b12e34ed0676c69e9c6f05a41562966264b8ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f710c8ff6c5d8">
+		<description>roachmotel</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="roachmotel.a26" size="4096" crc="f296dea3" sha1="f710c8ff6c5d8b37623b93694358dedf849bb3ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688d909ace8d60">
+		<description>Road Blaster (Atarius Maximus) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Road Blaster (Atarius Maximus) [a2].a26" size="4096" crc="f3e36be9" sha1="88d909ace8d606812166923e64435bb93360d8f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f45dfcd6db0da">
+		<description>Road Runner (1990) (Atari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Road Runner (1990) (Atari).a26" size="16384" crc="4a69d72d" sha1="f45dfcd6db0dae5458e1c0ae8eeaa75b553cdfec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2635299c3c20458">
+		<description>Road Runner (Manuel Rotschkar) (Trained)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Road Runner (Manuel Rotschkar) (Trained).a26" size="16384" crc="56cf741c" sha1="35299c3c20458d591ab4cd1e7b06c0a615938a45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269e8e660e3b59a">
+		<description>roadblast old</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="roadblast old.a26" size="4096" crc="99d8efe4" sha1="9e8e660e3b59a4b05f1f8140ccce157b2288f68b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659b53110bedef">
+		<description>roadblast.txt-</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="roadblast.txt-.a26" size="4096" crc="7562dd09" sha1="59b53110bedef9627c79cb4e65318acc7539854c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260960bc351f951">
+		<description>roadblast.txt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="roadblast.txt.a26" size="4096" crc="60359f74" sha1="0960bc351f95148eeb7aa0c9104a99ba92a69b27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26695343d0eb7ba">
+		<description>Robin Hood (1985) (Xonox) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Robin Hood (1985) (Xonox) (PAL) [a1][!].a26" size="8192" crc="859eff2b" sha1="695343d0eb7ba0527d56d44b5fa026a3d09a147d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261ca62b442cc3f">
+		<description>Robot City (V0.12) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City (V0.12) (TJ).a26" size="2048" crc="edb26713" sha1="1ca62b442cc3f562c90d6b994155c79d437e9c6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264be77bfbb5c27">
+		<description>Robot City (V0.18) (01-09-2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robot City (V0.18) (01-09-2002) (TJ).a26" size="4096" crc="cb5ea5eb" sha1="4be77bfbb5c271fa86dff1a0c6937ec72b563337"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266fd2beb7fff0d">
+		<description>Robot City (V0.21) (15-09-2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robot City (V0.21) (15-09-2002) (TJ).a26" size="4096" crc="8b3c1b6e" sha1="6fd2beb7fff0d9c04702e52d3e13afdfe2c19fd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2641b59e760c60e">
+		<description>Robot City (V0.23) (13-11-2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robot City (V0.23) (13-11-2002) (TJ).a26" size="4096" crc="514a8b7b" sha1="41b59e760c60e53698d237d96fd29e6a17a7efd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615f9c58c62ea0">
+		<description>Robot City (V0.95) (TJ) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City (V0.95) (TJ) (PAL).a26" size="2048" crc="5f48d304" sha1="15f9c58c62ea0c600dc50b6269d9aa60e4cafdeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d333bee9f820">
+		<description>Robot City (V0.95) (TJ) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City (V0.95) (TJ) (PAL60).a26" size="2048" crc="c3b47cf8" sha1="0d333bee9f82027a86fb7cdd8c5e66d51ed18cdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a59bcd65cf0ee">
+		<description>Robot City (V0.95) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City (V0.95) (TJ).a26" size="2048" crc="9b890b73" sha1="a59bcd65cf0eea2a793e782226e72804634210da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a99e676c41d5a">
+		<description>Robot City (V1.0) (Alpha) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City (V1.0) (Alpha) (TJ).a26" size="2048" crc="b2980be6" sha1="a99e676c41d5ac2c0c4f425057bbcf095fea9af2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2613d1d7e8ed6cf">
+		<description>Robot City (V1.0) (TJ) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City (V1.0) (TJ) (PAL).a26" size="2048" crc="83951f8a" sha1="13d1d7e8ed6cf607b5ef7d7b245b1a1492cd85ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c47f544148dcd">
+		<description>Robot City (V1.0) (TJ) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City (V1.0) (TJ) (PAL60).a26" size="2048" crc="3a2697fa" sha1="c47f544148dcd685e2ca4ee8b5c7e9063710a39a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2608c55b81d2a3c">
+		<description>Robot City (V1.1) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City (V1.1) (TJ).a26" size="2048" crc="a051f7d9" sha1="08c55b81d2a3c0e9a3488882f0ffa9bbc2346c25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a25d0eae7ae4">
+		<description>Robot City 1K (v1.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Robot City 1K (v1.0).a26" size="2048" crc="36fb06df" sha1="9a25d0eae7ae4634f67aa42d44805d6fdca5a2ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f4b806ac77a2">
+		<description>Robot Finds Kitten 2600 (26-04-2003) (Jeremy Penner) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robot Finds Kitten 2600 (26-04-2003) (Jeremy Penner) [a1].a26" size="4096" crc="2c0217d2" sha1="1f4b806ac77a22f55a66fafa1e1738a269c5e8b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262fbada1e5ae2e">
+		<description>Robot Finds Kitten 2600 (26-04-2003) (Jeremy Penner) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robot Finds Kitten 2600 (26-04-2003) (Jeremy Penner) [a2].a26" size="4096" crc="73d7165d" sha1="2fbada1e5ae2ee7928788d04ab96c2e00ae11f1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263e3c5e162f4fe">
+		<description>Robot Finds Kitten 2600 (26-04-2003) (Jeremy Penner)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robot Finds Kitten 2600 (26-04-2003) (Jeremy Penner).a26" size="4096" crc="88b4db18" sha1="3e3c5e162f4fe971b7def531c983256230b54826"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267bd842e67715f">
+		<description>Robot Player Graphic (1996) (J.V. Matthews) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robot Player Graphic (1996) (J.V. Matthews) (PD).a26" size="4096" crc="12de83d4" sha1="7bd842e67715f762d1e2dc0a04895605ae2a2fac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262635365076b86">
+		<description>Robot Tank (1983) (Activision) [h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Robot Tank (1983) (Activision) [h1].a26" size="8192" crc="495818c7" sha1="2635365076b8667ffd78742d07acf46ff001829f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260fb4f5ccde82e">
+		<description>Robot Tank (1984) (Activision) [hMF8] (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Robot Tank (1984) (Activision) [hMF8] (PAL).a26" size="8192" crc="7b45ea72" sha1="0fb4f5ccde82ecbecec319db43d171293cf54f36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268c539af3f3516">
+		<description>Robot Tank (1984) (Activision) [hMF8]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Robot Tank (1984) (Activision) [hMF8].a26" size="8192" crc="578f7f09" sha1="8c539af3f35169187849bdab3df8acdcc288e438"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26396ee54e5bbaa">
+		<description>Robot Tank (1986) (Activision) (PAL) [b1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Robot Tank (1986) (Activision) (PAL) [b1].a26" size="8192" crc="39bed7a5" sha1="396ee54e5bbaa07dd6e1949159260b8835a85860"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ae142dfd082b6">
+		<description>Robot Tank TV 2 Joystick Hack by Thomas Jentzsch (Robot Tank Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Robot Tank TV 2 Joystick Hack by Thomas Jentzsch (Robot Tank Hack).a26" size="8192" crc="19720e39" sha1="ae142dfd082b6336b1eff4426ab4169b7ee6e343"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c0adb44d9f888">
+		<description>Robot Tank WIP 8-26-06 (Robot Tank Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Robot Tank WIP 8-26-06 (Robot Tank Hack).a26" size="8192" crc="a374d56a" sha1="c0adb44d9f888079a1efe1715db1675c855b7a9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f3c5fdf33fbc8">
+		<description>RobotKong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RobotKong.a26" size="4096" crc="d3bced1b" sha1="f3c5fdf33fbc839dcd32f0e236921315b2227014"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b16564610884c">
+		<description>Robotron Demo (2007) (dgob123)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robotron Demo (2007) (dgob123).a26" size="4096" crc="e4c1b7e1" sha1="b16564610884c668cf843e5bb05de9750762019b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c484b86d4bda4">
+		<description>Robots I (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robots I (Jumpman Selected Levels) (PD).a26" size="4096" crc="61ebe6d6" sha1="c484b86d4bda41e7d27a75dead1b1e0388deb2d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265dd95c7f5d431">
+		<description>Robots II (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robots II (Jumpman Selected Levels) (PD).a26" size="4096" crc="96ef5c3c" sha1="5dd95c7f5d4317efcb97e77a034711fff9bdf2ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e9424abdb8360">
+		<description>Robots III (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robots III (Jumpman Selected Levels) (PD).a26" size="4096" crc="4d9af722" sha1="e9424abdb836087e142ca363d097f0e199189a24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ab461cb392b7b">
+		<description>robotsi (Jumpman 2600 example)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="robotsi (Jumpman 2600 example).a26" size="4096" crc="55984a8a" sha1="ab461cb392b7b374cfef3227cb90c5a572f605d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f174c0c5a7ca8">
+		<description>robotsi 2008-02-21</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="robotsi 2008-02-21.a26" size="32768" crc="685698b2" sha1="f174c0c5a7ca8e0e279af3eaf7df75c51d266d01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261f29a674d3f76">
+		<description>robotsi 2008-02-25</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="robotsi 2008-02-25.a26" size="32768" crc="0c600466" sha1="1f29a674d3f763698e09b81fae5c743429894364"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fd2310e6c0412">
+		<description>Rock, The (Sky Skipper Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Rock, The (Sky Skipper Hack).a26" size="4096" crc="860c753a" sha1="fd2310e6c0412c2f021fe70063834e5e6135a4a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c22634ef3c98">
+		<description>rockbull fixed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="rockbull fixed.a26" size="4096" crc="04966841" sha1="7c22634ef3c98e3acfcbcb0a82ecaa163358aee9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a9b366f6d5319">
+		<description>Rocket Command old by BAtari (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Rocket Command old by BAtari (PD).a26" size="2048" crc="c93e75cd" sha1="a9b366f6d53191afd87d883e23203e91cad352f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260fc487a99ed6b">
+		<description>Rocket_Command</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Rocket_Command.a26" size="2048" crc="bfe3f68c" sha1="0fc487a99ed6b4cdc493eb74637295299c6874a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26da65641af0529">
+		<description>RODTVTheSong20060529</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="RODTVTheSong20060529.a26" size="2048" crc="8e6a996a" sha1="da65641af05297fc4014218c98e3ae860dadac3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f9f7edab21f0">
+		<description>ROL Out (20040909) (refill older) (Nukey Shay) (Breakout Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL Out (20040909) (refill older) (Nukey Shay) (Breakout Hack).a26" size="4096" crc="6bb6bd29" sha1="4f9f7edab21f0430e84a2df42565732d9ba4ddef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261a2b0448a615d">
+		<description>ROL Out (20040911) (Nukey Shay) (Breakout Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL Out (20040911) (Nukey Shay) (Breakout Hack).a26" size="4096" crc="8979a2c5" sha1="1a2b0448a615dad396fa083334dd3f68a8ac05c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d45ae65b2a774">
+		<description>ROL Out (20040917) (Nukey Shay) (Breakout Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL Out (20040917) (Nukey Shay) (Breakout Hack).a26" size="4096" crc="4d1ceaf7" sha1="d45ae65b2a774bfcdf263273cf2b4dbe1e7135ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262ca3906cd3156">
+		<description>ROL Out (Nukey Shay) (Breakout Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL Out (Nukey Shay) (Breakout Hack).a26" size="4096" crc="93ffd80f" sha1="2ca3906cd3156d9fa2cb0ba7a035168f590452ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267dbc4663506d3">
+		<description>Rollerball (2007) (Steve Engelhardt) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Rollerball (2007) (Steve Engelhardt) (Prototype).a26" size="8192" crc="d20ec335" sha1="7dbc4663506d335421cf02a7742529dab0db6f5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2673e67de3c70c2">
+		<description>Rollerball 20070322 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Rollerball 20070322 (PD).a26" size="8192" crc="c6268a70" sha1="73e67de3c70c2c823aaf476d62fb2954516c08cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26be60a93ef0b5f">
+		<description>Rollerball 20070323 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Rollerball 20070323 (PD).a26" size="8192" crc="8ca1e647" sha1="be60a93ef0b5f16472d02223e996bceaa2ac1ffd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26047716a9abea7">
+		<description>rollmeov (Jumpman Selected levels)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="rollmeov (Jumpman Selected levels).a26" size="4096" crc="335915de" sha1="047716a9abea7ed07dee626b0abded0b2840d47f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2609e348f194585">
+		<description>RollUp.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RollUp.bas.a26" size="4096" crc="c46b6ad7" sha1="09e348f1945856686367512798e1d28747d1eb76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2612ece620fa772">
+		<description>ROL_out (Breakout Hack) (20040326) (refill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL_out (Breakout Hack) (20040326) (refill).a26" size="4096" crc="61211cbe" sha1="12ece620fa772189aa71b6b76b1c018d4df818cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261fa3808adc898">
+		<description>ROL_out (Breakout Hack) (20040908) (always refill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL_out (Breakout Hack) (20040908) (always refill).a26" size="4096" crc="e29727a0" sha1="1fa3808adc89892b46199e7e78f14c1aeaf36487"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26896ef3631a9f0">
+		<description>ROL_out (Breakout Hack) (20040908) (old)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL_out (Breakout Hack) (20040908) (old).a26" size="4096" crc="7bc486d9" sha1="896ef3631a9f0a9cbdb924645dcf677c2907222c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7036be6aad6a">
+		<description>ROL_out (Breakout Hack) (20040908) (refill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL_out (Breakout Hack) (20040908) (refill).a26" size="4096" crc="68583880" sha1="a7036be6aad6af1d0ad647f1ec46974f85f2f8d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26246f84d7e120f">
+		<description>ROL_out (Breakout Hack) (20040908)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="ROL_out (Breakout Hack) (20040908).a26" size="4096" crc="bc9afc0f" sha1="246f84d7e120f22108d1e0653fe53d1a60824464"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2627559243bd9e0">
+		<description>Roo Ball by Jamcat (Basketball Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Roo Ball by Jamcat (Basketball Hack).a26" size="2048" crc="5482c688" sha1="27559243bd9e0f947c9509e10dace44ce1c18e69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aee415d5429ec">
+		<description>Room_Of_Doom_NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Room_Of_Doom_NTSC(Supercharger).a26" size="4096" crc="ed59893f" sha1="aee415d5429ecc8fd2b91eff94dba346eca7f36d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2623f4113bd743c">
+		<description>Room_Of_Doom_PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Room_Of_Doom_PAL60(Supercharger).a26" size="4096" crc="d59f12a3" sha1="23f4113bd743c21d95eb050758475f8ff9767de2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2694b6e38c96e7c">
+		<description>Roost, The (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Roost, The (Jumpman Selected Levels) (PD).a26" size="4096" crc="1d815b75" sha1="94b6e38c96e7c72c4fd78f52e47bca6cc00dd985"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e352e34cdb589">
+		<description>Rope by cd-w</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Rope by cd-w.a26" size="2048" crc="e83a9ff3" sha1="e352e34cdb589eebc091dcfb6eebfdd0fb5a6eaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2647ab04f28e1fa">
+		<description>Rotating Colors Demo 1 (Junkosoft) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Rotating Colors Demo 1 (Junkosoft) (PD).a26" size="4096" crc="f700b0c5" sha1="47ab04f28e1fa410ba242f92d960783b9eae0deb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26372fe868893dc">
+		<description>Rotating Colors Demo 2 (Junkosoft) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Rotating Colors Demo 2 (Junkosoft) (PD).a26" size="4096" crc="82fb7148" sha1="372fe868893dc7d925034033e1f70219b298d823"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a831b570398ea">
+		<description>Roulette 20070506</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Roulette 20070506.a26" size="4096" crc="ae4d41b5" sha1="a831b570398eacc8ebe8cd65b3e31501a0f55ef5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267bca33f6e2613">
+		<description>roulette050707a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="roulette050707a.bas.a26" size="8192" crc="a3654bdb" sha1="7bca33f6e2613cf0e0486573c5ccec30cfc6463c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263b075619383a3">
+		<description>RPG Engine  20041216 (Paul Slocum) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="RPG Engine  20041216 (Paul Slocum) (PD).a26" size="8192" crc="f69b97be" sha1="3b075619383a3478d1c6ed4c43434aa0e14a8643"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265453ac0b2714b">
+		<description>RPG Engine (12-05-2003) (Paul Slocum) (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RPG Engine (12-05-2003) (Paul Slocum) (PD) [a1].a26" size="4096" crc="942da72d" sha1="5453ac0b2714bc47e11c42ef975838fd27e9e3a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2657f6d633a4e37">
+		<description>RPG Engine (12-05-2003) (Paul Slocum) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RPG Engine (12-05-2003) (Paul Slocum) (PD).a26" size="4096" crc="64e719d8" sha1="57f6d633a4e37093aa7fb613044035cd6e801f5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2643fd50d077980">
+		<description>RPG Engine 20040219 (Paul Slocum) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="RPG Engine 20040219 (Paul Slocum) (PD).a26" size="8192" crc="453d41d8" sha1="43fd50d077980b14079aa682d12115c6fa31b665"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b967038c4831a">
+		<description>RPG Engine 20040221 (Paul Slocum) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="RPG Engine 20040221 (Paul Slocum) (PD).a26" size="8192" crc="b9aae705" sha1="b967038c4831a90279f3cf2d81aa20e1e93ae277"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db8a2862ce2f5">
+		<description>RPG Engine 20040909 (Paul Slocum) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="RPG Engine 20040909 (Paul Slocum) (PD).a26" size="32768" crc="c65bed95" sha1="db8a2862ce2f559f1cc32252fd86fdb3b3402bd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ff9aa7081919a">
+		<description>RPG IN 1-2-3 WITH bB - rpsf NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RPG IN 1-2-3 WITH bB - rpsf NTSC.a26" size="4096" crc="66ffd15f" sha1="ff9aa7081919a0fc3f590b818fc7a767ad70899c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26251b460ad1879">
+		<description>RPG IN 1-2-3 WITH bB- rpsf_pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="RPG IN 1-2-3 WITH bB- rpsf_pal.a26" size="4096" crc="a619fe42" sha1="251b460ad1879254ebcb3c13a4f5898f5c18d4a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268121489e976a7">
+		<description>RPG Kernal (18-04-2003) (Paul Slocum) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="RPG Kernal (18-04-2003) (Paul Slocum) (PD).a26" size="2048" crc="db175974" sha1="8121489e976a78c9dc3460b5fb8efb635b9add84"/>
 			</dataarea>
 		</part>
 	</software>

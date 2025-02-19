@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 62 -->
+<!-- Number of items in this list = 77 -->
 <softwarelist name="trs80_cass" description="trs80_cass loose roms">
 	<software name="trs26c30b3732b10">
 		<description>[1]CLOAD_1000rnd</description>
@@ -39,6 +39,16 @@
 		<part name="cass" interface="trs80_cass">
 			<dataarea name="cass" size="13611">
 				<rom name="[1]CLOAD_ANDROID.CAS" size="13611" crc="16252476" sha1="f5feece6b8c80da001e74a2b7731fa09ad8de183"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trsdb7608ab75628">
+		<description>[1]CLOAD_austax_1982m2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="11163">
+				<rom name="[1]CLOAD_austax_1982m2.cas" size="11163" crc="65f1bd73" sha1="db7608ab75628e0303a1b689470e94450e341cad"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,6 +92,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="trs56dbacb6d341c">
+		<description>[1]CLOAD_concentrationm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="12683">
+				<rom name="[1]CLOAD_concentrationm.cas" size="12683" crc="30dc6c78" sha1="56dbacb6d341cdd6e68909c25b34cb2a21ac5d74"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="trs321a526ace0ab">
 		<description>[1]CLOAD_CostAnalysis</description>
 		<year>????</year>
@@ -99,6 +119,16 @@
 		<part name="cass" interface="trs80_cass">
 			<dataarea name="cass" size="451">
 				<rom name="[1]CLOAD_g_sin.cas" size="451" crc="e1e1b8ad" sha1="f08e29741e42cf9f13ce08c9c4d2dbabe8b2db9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs0583d34b6fab4">
+		<description>[1]CLOAD_hangmanm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="14680">
+				<rom name="[1]CLOAD_hangmanm.cas" size="14680" crc="6a2c746a" sha1="0583d34b6fab45111ad24616464bdec0bce2d8f3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -192,6 +222,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="trsac0aa4e365a79">
+		<description>[1]CLOAD_speed_reading1m</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="14999">
+				<rom name="[1]CLOAD_speed_reading1m.cas" size="14999" crc="7afe4272" sha1="ac0aa4e365a793a5d9e8c4d7e9de7dde69a98c45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trse968b00a0cc65">
+		<description>[1]CLOAD_speed_reading2m</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="14998">
+				<rom name="[1]CLOAD_speed_reading2m.cas" size="14998" crc="1e6a92aa" sha1="e968b00a0cc65061bb85cf68c6d603c43ba57288"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs1d7491b607bfa">
+		<description>[1]CLOAD_speed_reading3m</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="14751">
+				<rom name="[1]CLOAD_speed_reading3m.cas" size="14751" crc="f55c2cbf" sha1="1d7491b607bfaa84663b06347094302ab8d2d9c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs1fc631e5b7026">
+		<description>[1]CLOAD_speed_reading4m</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="14280">
+				<rom name="[1]CLOAD_speed_reading4m.cas" size="14280" crc="3d377c43" sha1="1fc631e5b70264025af6620ef7b196ee6480b1f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="trsd83b064ab7b86">
 		<description>[1]CLOAD_stats</description>
 		<year>????</year>
@@ -202,6 +272,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="trs66a5ae9ebad84">
+		<description>[1]CLOAD_stockmarket</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="9175">
+				<rom name="[1]CLOAD_stockmarket.cas" size="9175" crc="121f750c" sha1="66a5ae9ebad8419865f7c8147c384929b29a2235"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs549ad2d3971e9">
+		<description>[1]CLOAD_stockmarket_game_22inv</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="6849490">
+				<rom name="[1]CLOAD_stockmarket_game_22inv.wav" size="6849490" crc="7bfe03fb" sha1="549ad2d3971e97cafcc56f1d4d492cbf3dc5a774"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="trs195eb58e5b844">
 		<description>[1]CLOAD_SUB</description>
 		<year>????</year>
@@ -209,6 +299,26 @@
 		<part name="cass" interface="trs80_cass">
 			<dataarea name="cass" size="1727">
 				<rom name="[1]CLOAD_SUB.CAS" size="1727" crc="d0c4d834" sha1="195eb58e5b8447a92f1986b7d5b2c6ffed9d7183"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs369da6c77da66">
+		<description>[1]SYSTEM_ADV_adv05</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="26089">
+				<rom name="[1]SYSTEM_ADV_adv05.cas" size="26089" crc="0617fd97" sha1="369da6c77da6678b3ddf7e42ebc6615eff3756b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs9415a4d4250ae">
+		<description>[1]SYSTEM_APSH18_apshai18</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="14995">
+				<rom name="[1]SYSTEM_APSH18_apshai18.cas" size="14995" crc="bfaff8db" sha1="9415a4d4250ae153f3063de1826833e84735b53c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -362,6 +472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="trs10e37dbab7fbd">
+		<description>[1]SYSTEM_EPB_Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="12828">
+				<rom name="[1]SYSTEM_EPB_Elite Planet Browser.cas" size="12828" crc="a9295c76" sha1="10e37dbab7fbd15dff44333199edc34c99a2c6c5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="trsbd2dbf7810a79">
 		<description>[1]SYSTEM_forth (Tiny Forth 2.1)</description>
 		<year>????</year>
@@ -449,6 +569,26 @@
 		<part name="cass" interface="trs80_cass">
 			<dataarea name="cass" size="1895">
 				<rom name="[1]SYSTEM_MUSIC.CAS" size="1895" crc="c2455f64" sha1="1a236fe7b67f7aa617c4038ff214646422f212f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs70063d8b3ff1b">
+		<description>[1]SYSTEM_M_Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="8192">
+				<rom name="[1]SYSTEM_M_Mieyen.cas" size="8192" crc="8871efc7" sha1="70063d8b3ff1bb8a8c8af85d36318d0481df392a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs668d8b76a84e3">
+		<description>[1]SYSTEM_M_Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="1572908">
+				<rom name="[1]SYSTEM_M_Mieyen.WAV" size="1572908" crc="aa15813f" sha1="668d8b76a84e3cbaf5a45bdda2bf4eb22949d25f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -589,6 +729,16 @@
 		<part name="cass" interface="trs80_cass">
 			<dataarea name="cass" size="446">
 				<rom name="[1]SYSTEM_TERM.CAS" size="446" crc="7a76e08c" sha1="0abadffbabe8a3d1f0c6aee285390d5d2c72967b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs067387edae46d">
+		<description>[1]SYSTEM_TREK14_trek14</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trs80_cass">
+			<dataarea name="cass" size="28166">
+				<rom name="[1]SYSTEM_TREK14_trek14.cas" size="28166" crc="2b64b2e6" sha1="067387edae46dece3667fdbfcaa80733c857cb94"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1385 -->
+<!-- Number of items in this list = 1390 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -8812,6 +8812,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0da47b3d97f4c">
+		<description>Oddi The Viking 128K (2010)(Digital Brains)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40224">
+				<rom name="Oddi The Viking 128K (2010)(Digital Brains).tzx" size="40224" crc="095f0aaf" sha1="0da47b3d97f4c0f004e135b9469ee7033befb49b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab90cdbf43c5d">
+		<description>Oddi The Viking 48K (2010)(Digital Brains)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33267">
+				<rom name="Oddi The Viking 48K (2010)(Digital Brains).tzx" size="33267" crc="a9b440bd" sha1="ab90cdbf43c5dab3e14691bacd4e9cd45fb514a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a3f6fd2e1c90">
+		<description>Operation Thunderbolt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138801">
+				<rom name="Operation Thunderbolt.tzx" size="138801" crc="3d45aaa3" sha1="9a3f6fd2e1c90f575cd4e5990b27d18f4011052c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs342cc9ad4e1f9">
 		<description>Orel BK08 demo tape-reklama</description>
 		<year>????</year>
@@ -8819,6 +8849,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="5286032">
 				<rom name="Orel BK08 demo tape-reklama.wav" size="5286032" crc="15016920" sha1="342cc9ad4e1f9d4612297225b8fa1d4c252ecc0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs221c890711592">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10250">
+				<rom name="osotos.tzx" size="10250" crc="3269cf11" sha1="221c89071159269ddd67b68b203d7c384973d556"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee1c5269d52eb">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3297877">
+				<rom name="osotos.wav" size="3297877" crc="19e07619" sha1="ee1c5269d52eb50b58d764f5fe29db836cb333a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs26dc62b56af26">
+		<description>Out Run ZX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="107941">
+				<rom name="Out Run ZX.tzx" size="107941" crc="9d92c3ff" sha1="26dc62b56af26a87938ee4f24ed59ab0adcdd255"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10689,16 +10749,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49343">
 				<rom name="Vectron (19xx)(Firebird Software).tap" size="49343" crc="ec6217eb" sha1="8295f7aad6f51590253c5890a79d8b168081721b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs2e55c8a4301b1">
-		<description>Vega Solaris</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="56228">
-				<rom name="Vega Solaris.tzx" size="56228" crc="9d4750dc" sha1="2e55c8a4301b1faacfff9aba735ec4f3db24aed7"/>
 			</dataarea>
 		</part>
 	</software>

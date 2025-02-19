@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 44 -->
+<!-- Number of items in this list = 45 -->
 <softwarelist name="m5_cart" description="m5_cart loose roms">
 	<software name="m51017b98d9a193f">
 		<description>Aerial</description>
@@ -309,6 +309,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="6830">
 				<rom name="Mazy.rom" size="6830" crc="c04f53c1" sha1="b00a877c65332723c896e57df76059e97d7aec77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m53e2296b2bf9663">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8324">
+				<rom name="Mieyen.rom" size="8324" crc="c725e0d2" sha1="3e2296b2bf9663749c00644579a8074dc8febc0d"/>
 			</dataarea>
 		</part>
 	</software>

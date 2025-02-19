@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 34 -->
+<!-- Number of items in this list = 36 -->
 <softwarelist name="trsm100_cass" description="trsm100_cass loose roms">
 	<software name="trs56cba5ccbe1a7">
 		<description>Aerial(1of2)</description>
@@ -259,6 +259,26 @@
 		<part name="cass" interface="trsm100_cass">
 			<dataarea name="cass" size="4200244">
 				<rom name="Mazy(2of2).wav" size="4200244" crc="6548d73a" sha1="6db56db09bb5d9a95d798bc6420d047a2a95e078"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trsac795b97217d3">
+		<description>mieyen(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="552724">
+				<rom name="mieyen(1of2).wav" size="552724" crc="e54aa303" sha1="ac795b97217d30e11de6883aecdc3be86a42cd86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs21d649287a829">
+		<description>mieyen(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="5065684">
+				<rom name="mieyen(2of2).wav" size="5065684" crc="4f789560" sha1="21d649287a82912710b046b22f9c796d7c0e55b9"/>
 			</dataarea>
 		</part>
 	</software>

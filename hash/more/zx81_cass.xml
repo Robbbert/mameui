@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 881 -->
+<!-- Number of items in this list = 955 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx13e7d1225a731f">
 		<description>10</description>
@@ -129,6 +129,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="473">
 				<rom name="3.P" size="473" crc="e0032615" sha1="d1dd73f7830ffcffde32381e8a743cd7793424eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx196021b34b156f">
+		<description>3D NOUGHT AND CROSSES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4277">
+				<rom name="3D NOUGHT AND CROSSES.P" size="4277" crc="1a08e705" sha1="96021b34b156f9c6cef4645d4ed9fa5630926320"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3282,6 +3292,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx14733ff16d71a6">
+		<description>FARMER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15691">
+				<rom name="FARMER.P" size="15691" crc="beacaabc" sha1="4733ff16d71a61a56a32d610f611896fc6194db2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1874a6d855a4d9">
+		<description>FAST-PRI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1591">
+				<rom name="FAST-PRI.P" size="1591" crc="d0b2bda7" sha1="874a6d855a4d96d59251b8910d903030d79cb11c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1861539aeec33b">
 		<description>FASTSAVE</description>
 		<year>????</year>
@@ -3289,6 +3319,86 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="2222">
 				<rom name="FASTSAVE.P" size="2222" crc="7c9aa72b" sha1="861539aeec33b475cb509e2c4e9fe08d7d01dc90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1bc1f3ad6f2be0">
+		<description>FERRYBOA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5737">
+				<rom name="FERRYBOA.P" size="5737" crc="7f118b5f" sha1="bc1f3ad6f2be05213393cf3393cd6915ed677ebf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1bd20aa7a33cef">
+		<description>FIETSER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2798">
+				<rom name="FIETSER.P" size="2798" crc="6cf4f740" sha1="bd20aa7a33cef28001e6f4232b55900ef45d615d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1cba43640f1162">
+		<description>FILE-TEX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="9256">
+				<rom name="FILE-TEX.P" size="9256" crc="2233b6df" sha1="cba43640f1162186472c0e375f91f2552327f764"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx190064842d8a62">
+		<description>FILTERS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4686">
+				<rom name="FILTERS.P" size="4686" crc="5150aa8f" sha1="90064842d8a6203556e210b621b744508b34eabc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f0b2837e01a32">
+		<description>FINANCE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6425">
+				<rom name="FINANCE.P" size="6425" crc="f6204092" sha1="f0b2837e01a3236ba55d92104a1c8ed370713669"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e75605eca72e2">
+		<description>FINANCIE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4461">
+				<rom name="FINANCIE.P" size="4461" crc="277ec54d" sha1="e75605eca72e2385fc18e67e91d48519638ba808"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx131b8e2284888c">
+		<description>FIVE-TO-</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2330">
+				<rom name="FIVE-TO-.P" size="2330" crc="0b3abb18" sha1="31b8e2284888c9e1dc2a4ef211e8827d40b0e342"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d0f99507a5caa">
+		<description>FL-SCOTS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5269">
+				<rom name="FL-SCOTS.P" size="5269" crc="ff92e9e2" sha1="d0f99507a5caa4a3c0906b355b26b4b2fac92a2d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3312,6 +3422,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1abb9322e8287b">
+		<description>FLATMAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3791">
+				<rom name="FLATMAN.P" size="3791" crc="3c12760f" sha1="abb9322e8287baadd4024bfa4729d22586767771"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx154763f7150e3c">
+		<description>FLIGHT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="13795">
+				<rom name="FLIGHT.P" size="13795" crc="1f0a54e3" sha1="54763f7150e3c0221b59d4dee87a5ba420c41825"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx14cabf9b4fc96b">
 		<description>FLIGHT2</description>
 		<year>????</year>
@@ -3319,6 +3449,26 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="13847">
 				<rom name="FLIGHT2.P" size="13847" crc="ad944b73" sha1="4cabf9b4fc96b8f99d5852b9afe5118f40bc5134"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e9721972e72b4">
+		<description>FLIPFLOP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7872">
+				<rom name="FLIPFLOP.P" size="7872" crc="a037a7df" sha1="e9721972e72b4c72e020c52bfd9e8a1abc7fd32a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1b5344723bdf30">
+		<description>FLIPPERK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6661">
+				<rom name="FLIPPERK.P" size="6661" crc="3106f48e" sha1="b5344723bdf30cf4ab27936e3283190e65945c6f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3342,6 +3492,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx19c7739828ba86">
+		<description>FORMCALC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7388">
+				<rom name="FORMCALC.P" size="7388" crc="4bc6d4a3" sha1="9c7739828ba86de5602d2d02dec8b795c65542c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1542c471212d3d">
+		<description>FORMULA-</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="9053">
+				<rom name="FORMULA-.P" size="9053" crc="87cbafdf" sha1="542c471212d3d57b0e67fc74fe80ea0f27deb594"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ed413f9f0fb5b">
+		<description>FORMULA-_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6686">
+				<rom name="FORMULA-_1.P" size="6686" crc="68ca0361" sha1="ed413f9f0fb5b814ff6a4d39562413f094de9150"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx150a9b3dbd2f74">
+		<description>FORMULA-_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7788">
+				<rom name="FORMULA-_2.P" size="7788" crc="2e5d191a" sha1="50a9b3dbd2f74e8c3b9b79c4c3b85ccf4067fca1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx11eda97b823947">
 		<description>FORMULA1 (2)</description>
 		<year>????</year>
@@ -3362,6 +3552,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1bdaaed6564a59">
+		<description>FORT-KNO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="13982">
+				<rom name="FORT-KNO.P" size="13982" crc="103d53eb" sha1="bdaaed6564a59ab7fa0f1cd026411a225ac46915"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx16786c2b55d1fc">
+		<description>FORTEST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1129">
+				<rom name="FORTEST.P" size="1129" crc="f4765b43" sha1="6786c2b55d1fcdf0638730262541bfb23722445b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e311753fffd31">
+		<description>FORTY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="13904">
+				<rom name="FORTY.P" size="13904" crc="8ad4318e" sha1="e311753fffd3197bd411ff20b128cc6cbadff43f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx187762753b08c5">
 		<description>FORTY_NI</description>
 		<year>????</year>
@@ -3372,6 +3592,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx15c45380ad51d7">
+		<description>FRACTION</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10747">
+				<rom name="FRACTION.P" size="10747" crc="b5e8e763" sha1="5c45380ad51d775e7493cacb375cfe523f5c4a5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx158857bfd10533">
+		<description>FRED</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3857">
+				<rom name="FRED.P" size="3857" crc="de6bc5ab" sha1="58857bfd10533f220dc599e6dd18df0eb772ebf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e70202f637294">
+		<description>FREQ-MEM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3139">
+				<rom name="FREQ-MEM.P" size="3139" crc="4976423b" sha1="e70202f6372946245479bb5966939007e7aad52d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1a7a67d9ad8818">
+		<description>FREQUENC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14715">
+				<rom name="FREQUENC.P" size="14715" crc="f4e1668a" sha1="a7a67d9ad8818060835f2a27f130716c929cf658"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx18662e43b039cc">
+		<description>FREQUENT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4158">
+				<rom name="FREQUENT.P" size="4158" crc="0b07d625" sha1="8662e43b039cc601701da4d01b16dff49a77dd49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1655eddd153e58">
+		<description>FROGGER-</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3944">
+				<rom name="FROGGER-.P" size="3944" crc="780bead2" sha1="655eddd153e58cb7b18d5dcbfd239780847fabac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx153b72d38b4893">
+		<description>FROGGER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10670">
+				<rom name="FROGGER.P" size="10670" crc="1c44bf27" sha1="53b72d38b4893f553e5d608e40927fe0c0848614"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1eda2b49af4591">
 		<description>FROGGER_1</description>
 		<year>????</year>
@@ -3379,6 +3669,36 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="13493">
 				<rom name="FROGGER_1.P" size="13493" crc="20c97353" sha1="eda2b49af45916c1fbbd0bbad83c6e3c7eefd9a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1dc5c2c2f2e04f">
+		<description>FROGGIE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7459">
+				<rom name="FROGGIE.P" size="7459" crc="a36b2a25" sha1="dc5c2c2f2e04ff25845afe4ca5cb7a8d1fadc113"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx10babb991c8e3c">
+		<description>FROGGIE_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7633">
+				<rom name="FROGGIE_1.P" size="7633" crc="7c3ed168" sha1="0babb991c8e3c1480c5e06192d0e547f26b8c1bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx12b38e47efc9cc">
+		<description>FUNGALOI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="9110">
+				<rom name="FUNGALOI.P" size="9110" crc="d2662f46" sha1="2b38e47efc9cc0e02ebc8c51d4631fdea650cf3c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3972,6 +4292,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1f868549c63092">
+		<description>MAANLAND</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4362">
+				<rom name="MAANLAND.P" size="4362" crc="25ecabe9" sha1="f868549c6309227eb9268cf1809fe132e584af45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1b7d7883f92161">
+		<description>MAD-MINE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5489">
+				<rom name="MAD-MINE.P" size="5489" crc="c9f47076" sha1="b7d7883f92161819cb511fe351260acaf13feab5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx113a7d896154b4">
+		<description>MADJUMP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3656">
+				<rom name="MADJUMP.P" size="3656" crc="7bf91fb8" sha1="13a7d896154b401419246c05de1c73eb0659bba8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1fd5df1a954c0f">
 		<description>MADKONG</description>
 		<year>????</year>
@@ -4009,6 +4359,46 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="5144">
 				<rom name="Mad_mine.81.p" size="5144" crc="a073a508" sha1="71b80c1cab1e56e54224cb9458ea54b150b1a32e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1c9bb728113f4d">
+		<description>MAGIC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2296">
+				<rom name="MAGIC.P" size="2296" crc="b156b9c2" sha1="c9bb728113f4d2dc4d04ab1eea25ecade88bf45a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1af0ff0fecaf1c">
+		<description>MAHAGONI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1367">
+				<rom name="MAHAGONI.P" size="1367" crc="c16f350f" sha1="af0ff0fecaf1ce16fbd7a8922fa2a89b2de3fc09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx11557ec05b470e">
+		<description>MAINTENA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="16182">
+				<rom name="MAINTENA.P" size="16182" crc="7f59043a" sha1="1557ec05b470e5c661e798fb12eed1929b8c4f9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1288d5a2824684">
+		<description>MANAGER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4096">
+				<rom name="MANAGER.P" size="4096" crc="edadd4a8" sha1="288d5a28246845094182ccea199341fd4a949826"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4092,6 +4482,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1b8201ef7df0ff">
+		<description>MARKELO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10220">
+				<rom name="MARKELO.P" size="10220" crc="89a2490e" sha1="b8201ef7df0ffd84166274ec122455d1a3df215c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx11cc80bddcc05a">
+		<description>MARSLAND</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2099">
+				<rom name="MARSLAND.P" size="2099" crc="ca1d7eaa" sha1="1cc80bddcc05ad7424198af0a6b48a30872ec0ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1a2db03dd2864d">
+		<description>MARSLAND_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2534">
+				<rom name="MARSLAND_1.P" size="2534" crc="d2587a7f" sha1="a2db03dd2864d21cd0de185a4edd4331a2371196"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1ef544354556d7">
 		<description>MARTIAN (2)</description>
 		<year>????</year>
@@ -4099,6 +4519,56 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="15620">
 				<rom name="MARTIAN (2).P" size="15620" crc="fa4b530d" sha1="ef544354556d7106ecfc2e879f02f5adec831ebb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1fd338ec15390f">
+		<description>MARTIAN-</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="11976">
+				<rom name="MARTIAN-.P" size="11976" crc="95251887" sha1="fd338ec15390fc1ffd41d812693de4bd38fd0971"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1fbc3a7a17bbcb">
+		<description>MARTIAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14415">
+				<rom name="MARTIAN.P" size="14415" crc="d45803f3" sha1="fbc3a7a17bbcb15c6d0e4ffc37c5e8f002514cff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx16cbef9dfd0095">
+		<description>MASTER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15055">
+				<rom name="MASTER.P" size="15055" crc="24cc9d98" sha1="6cbef9dfd0095304342bf2e72dbe86f217c4b969"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1b5400e3da676a">
+		<description>MASTERM-</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6994">
+				<rom name="MASTERM-.P" size="6994" crc="a78c325e" sha1="b5400e3da676adc3637fd4fd8dd429eed88880c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1b815e1d0ddc40">
+		<description>MASTERMI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1489">
+				<rom name="MASTERMI.P" size="1489" crc="d323c8e2" sha1="b815e1d0ddc40b537a5b8e5d2449d9d92b7434e4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4132,6 +4602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1670ab4904a88d">
+		<description>MASTERMI_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5219">
+				<rom name="MASTERMI_1.P" size="5219" crc="618e907f" sha1="670ab4904a88d57bfbdb089f1adb708ce353a63f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx158fcf08663a2e">
 		<description>MATH</description>
 		<year>????</year>
@@ -4139,6 +4619,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="8075">
 				<rom name="MATH.P" size="8075" crc="b02be5f5" sha1="58fcf08663a2e4f5ce463e8d7d85a801fe982728"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1dc4857182f2cb">
+		<description>MATHS (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1526">
+				<rom name="MATHS (2).P" size="1526" crc="8fde935c" sha1="dc4857182f2cbbf7edbcca56712222426fc40cbc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4152,6 +4642,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx12e0abe3516c2a">
+		<description>MAYDAY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2814">
+				<rom name="MAYDAY.P" size="2814" crc="e3c54d96" sha1="2e0abe3516c2a27681a00e1c78dda15f04f13c40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx128b1e8048691e">
+		<description>MAZE (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1940">
+				<rom name="MAZE (2).P" size="1940" crc="a08ca1ce" sha1="28b1e8048691ed1a71311de6177a63cb2199f555"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx170ffe9c0d44a6">
+		<description>MAZE-CHA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2039">
+				<rom name="MAZE-CHA.P" size="2039" crc="fc049bd9" sha1="70ffe9c0d44a6b2d10344aed4e57571caedaa9bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1ffa266fbd372d">
 		<description>MAZE</description>
 		<year>????</year>
@@ -4159,6 +4679,56 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="16168">
 				<rom name="MAZE.P" size="16168" crc="f516c522" sha1="ffa266fbd372d1455309a64e5115b0708b85d5a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1374efebb93582">
+		<description>MAZE2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10566">
+				<rom name="MAZE2.P" size="10566" crc="07c60625" sha1="374efebb935825cf7efd8ccbee8d35ca5730c46d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13e3c36ef114b1">
+		<description>MAZEMAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5910">
+				<rom name="MAZEMAN.P" size="5910" crc="ff5b7ec1" sha1="3e3c36ef114b1a8ed65f76981adb86bd91f377b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1de0c1753364e1">
+		<description>MAZE_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1933">
+				<rom name="MAZE_1.P" size="1933" crc="a0326f09" sha1="de0c1753364e171ddf077198b3814d33da2c91dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ea7924c46b29b">
+		<description>MAZE_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10044">
+				<rom name="MAZE_2.P" size="10044" crc="3b064392" sha1="ea7924c46b29b250cf7a6b545d6e7ca136302cac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13371fe6f4ae07">
+		<description>MAZOGS (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="12898">
+				<rom name="MAZOGS (2).P" size="12898" crc="ccd03383" sha1="3371fe6f4ae07111e80ce913f4b4bce7a485387f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4202,6 +4772,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx11d6b6d53ae713">
+		<description>MC-DRAW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8706">
+				<rom name="MC-DRAW.P" size="8706" crc="516b7b6c" sha1="1d6b6d53ae7130691aae3be669e833278384f042"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e73f8790c215b">
+		<description>MC-HANOI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2286">
+				<rom name="MC-HANOI.P" size="2286" crc="c5eef710" sha1="e73f8790c215be5f905820f6afe8c8e7fcd791c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx14538a1631559d">
+		<description>MCODER-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5829">
+				<rom name="MCODER-2.P" size="5829" crc="94d33cf7" sha1="4538a1631559d7c0cdbe0cff924108190481f2a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e65e0487fd0ba">
+		<description>MCODER-I</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5816">
+				<rom name="MCODER-I.P" size="5816" crc="2c077fae" sha1="e65e0487fd0ba4deb2b961b1163b8837cd9c6d7a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1bd5685689bfa2">
 		<description>MCTT (2)</description>
 		<year>????</year>
@@ -4209,6 +4819,26 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="2829">
 				<rom name="MCTT (2).P" size="2829" crc="a655a6ee" sha1="bd5685689bfa24540e48d153aa1ff445b620e7d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f013d2039e619">
+		<description>MCTT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2836">
+				<rom name="MCTT.P" size="2836" crc="b0d7d32a" sha1="f013d2039e61913099a4421722466f26b454a6ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx17d29c050e186b">
+		<description>MCTT_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8644">
+				<rom name="MCTT_1.P" size="8644" crc="3fc52a70" sha1="7d29c050e186bfd0cd70909ba56500a305a2ca2c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4232,6 +4862,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx11212903d53c34">
+		<description>MEDCALC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2372">
+				<rom name="MEDCALC.P" size="2372" crc="91f935c3" sha1="1212903d53c340ed2693ebb59c9fb4631cb39eb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f8ad0a3eac6ab">
+		<description>MEDITOR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5331">
+				<rom name="MEDITOR.P" size="5331" crc="6cc889f1" sha1="f8ad0a3eac6ab96955e609e93672e5251b68db33"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx159dc8e655669c">
 		<description>mem-test</description>
 		<year>????</year>
@@ -4252,6 +4902,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1f18d99b5403b9">
+		<description>MEMORY (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6327">
+				<rom name="MEMORY (2).P" size="6327" crc="197c5d3e" sha1="f18d99b5403b9fc06443dab5aae1b7fd7763e5f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx12c7a0b7e49f47">
+		<description>MEMORY-T</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1449">
+				<rom name="MEMORY-T.P" size="1449" crc="c9046972" sha1="2c7a0b7e49f4751940c35b48cc3a024a3796d76d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx190e9e9cf3dc65">
 		<description>MEMORY</description>
 		<year>????</year>
@@ -4259,6 +4929,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="2152">
 				<rom name="MEMORY.P" size="2152" crc="32b7b472" sha1="90e9e9cf3dc65763315805c31b8bc628438853a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx12ca04812d4b50">
+		<description>MEMORY_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1808">
+				<rom name="MEMORY_1.P" size="1808" crc="762b94b9" sha1="2ca04812d4b50132c650c96285b8291bc0eeb024"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4272,6 +4952,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx14af34fcd44a68">
+		<description>MENS-ERG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14050">
+				<rom name="MENS-ERG.P" size="14050" crc="c46a4dd9" sha1="4af34fcd44a68ae42f97234758de3c4e78f83989"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx10e4d275c4b528">
+		<description>MENS-ERG_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14402">
+				<rom name="MENS-ERG_1.P" size="14402" crc="e9dce84c" sha1="0e4d275c4b5281774c511420a15eecdd94ed06ff"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx10742764f15a6d">
 		<description>MERCHANT</description>
 		<year>????</year>
@@ -4282,6 +4982,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1a02a3732cd703">
+		<description>METEORS-</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3464">
+				<rom name="METEORS-.P" size="3464" crc="d4068b90" sha1="a02a3732cd7032a5e72c51fb3a84addd87f50332"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx12785d8937ea18">
+		<description>METEORS-_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3484">
+				<rom name="METEORS-_1.P" size="3484" crc="6b7fefc0" sha1="2785d8937ea1823e26e096bad7c0f41bc279d66d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1ce3f0c4309df4">
 		<description>METORS-I</description>
 		<year>????</year>
@@ -4289,6 +5009,26 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="3301">
 				<rom name="METORS-I.P" size="3301" crc="991c9e17" sha1="ce3f0c4309df4e89499d5b56a835b654cd50124a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx10dd70e049794e">
+		<description>METRIC-I</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2247">
+				<rom name="METRIC-I.P" size="2247" crc="70503210" sha1="0dd70e049794ed035b8d34f2519d448267fd57c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1bfa89c5f60783">
+		<description>METRIC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15988">
+				<rom name="METRIC.P" size="15988" crc="4b0cf76f" sha1="bfa89c5f607839a492f8d337a515c1578320d332"/>
 			</dataarea>
 		</part>
 	</software>

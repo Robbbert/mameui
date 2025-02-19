@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 50 -->
+<!-- Number of items in this list = 51 -->
 <softwarelist name="x1_cass" description="x1_cass loose roms">
 	<software name="x1f8854ea363a35e">
 		<description>aerial</description>
@@ -299,6 +299,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="190334">
 				<rom name="Medaka No Kyoudai (1983)(Hudson Soft)(TV Asahi Music)(Masaaki Kikuta).tap" size="190334" crc="b13d5764" sha1="93e76963d08cb9e3011e8692b05f41c753ed093e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x160a465e75c6e16">
+		<description>mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1847120">
+				<rom name="mieyen.wav" size="1847120" crc="96dbc52e" sha1="60a465e75c6e1644bfd52c7a63a33160cc5dafeb"/>
 			</dataarea>
 		</part>
 	</software>
