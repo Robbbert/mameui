@@ -201,6 +201,11 @@ void gamecom_state::handle_input_press(uint16_t mux_data)
 			m_p_ram[SM8521_P0] = (m_p_ram[SM8521_P0] & 0xFC) | ( m_io_in2->read() & 3 );
 			m_p_ram[SM8521_P1] = 0xFF;
 			break;
+		default:
+			// fix for Inufuto games
+			if (((mux_data & 0xff00) != 0xff00) && ((mux_data & 0xff) != 0xff))
+				m_p_ram[SM8521_P1] = 0xFF;
+			break;
 	}
 }
 
