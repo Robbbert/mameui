@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 18 -->
+<!-- Number of items in this list = 19 -->
 <softwarelist name="jr100_cass" description="jr100_cass loose roms">
 	<software name="jr1ca01430fa60ff">
 		<description>AERIAL[mload a=usr($300)]</description>
@@ -139,6 +139,16 @@
 		<part name="cass" interface="jr100_cass">
 			<dataarea name="cass" size="6570620">
 				<rom name="MAZY[mload a=usr($300)].wav" size="6570620" crc="df74a495" sha1="23f28a0b0fd3bfba199823370c19cc82a7475772"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jr16cf3886ca18c2">
+		<description>MIEYEN[mload a=usr($300)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="jr100_cass">
+			<dataarea name="cass" size="6853364">
+				<rom name="MIEYEN[mload a=usr($300).wav" size="6853364" crc="91ab3398" sha1="6cf3886ca18c2d1c02e72b60489c071e542ab9a8"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 29 -->
+<!-- Number of items in this list = 31 -->
 <softwarelist name="ibmpcjr_flop" description="ibmpcjr_flop loose roms">
 	<software name="ibm3788ed7f9e1cf">
 		<description>aerial</description>
@@ -219,6 +219,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="380848">
 				<rom name="lift.d88" size="380848" crc="31a64ab2" sha1="9c6e76b1401eeb9a6c854768b7440a84999b5f8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm34e4318719eb1">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="Mieyen.d88" size="380848" crc="d36adde7" sha1="34e4318719eb128be7a097030517b8d97468f748"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm6c1c45044e011">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="Mieyen.img" size="368640" crc="08dc39e6" sha1="6c1c45044e011df3dc76bef3a84c58ae21c346f4"/>
 			</dataarea>
 		</part>
 	</software>

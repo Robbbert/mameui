@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 59 -->
+<!-- Number of items in this list = 61 -->
 <softwarelist name="fm7_cass" description="fm7_cass loose roms">
 	<software name="fm79548371981ae4">
 		<description>(demo)FM7_YS[run'']</description>
@@ -419,6 +419,26 @@
 		<part name="cass1" interface="fm7_cass">
 			<dataarea name="cass" size="2471926">
 				<rom name="Medaka No Kyoudai (1983)(Hudson Soft)(Masaaki Kikuta)[loadm].t77" size="2471926" crc="cea347c6" sha1="0791bd2a3ffedba73a19cf770de05fe82551c717"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm7a77024f2e6a0b">
+		<description>Mieyen[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="482660">
+				<rom name="Mieyen[loadm'',,R].t77" size="482660" crc="8cc244b2" sha1="a77024f2e6a0b97503f2699ab595fce903d9225a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fm70f14ea09e74a5">
+		<description>Mieyen[loadm'',,R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="fm7_cass">
+			<dataarea name="cass" size="3606353">
+				<rom name="Mieyen[loadm'',,R].wav" size="3606353" crc="1cdd12c7" sha1="0f14ea09e74a50d57a7ccc890860e8583710faec"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 19 -->
+<!-- Number of items in this list = 20 -->
 <softwarelist name="jr100_quik" description="jr100_quik loose roms">
 	<software name="jr182c167845cb05">
 		<description>aerial[a=usr($300)]</description>
@@ -139,6 +139,16 @@
 		<part name="quik" interface="jr100_quik">
 			<dataarea name="quik" size="7896">
 				<rom name="mazy[a=usr($300)].prg" size="7896" crc="d41d9ce6" sha1="124b8c0808cecadae6587016a5a29472f29f42c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jr10320b59681d62">
+		<description>mieyen[A=USR($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jr100_quik">
+			<dataarea name="quik" size="8255">
+				<rom name="mieyen[A=USR($300)].prg" size="8255" crc="58ba87a1" sha1="0320b59681d623fb486d7607083e36a7cc1decb4"/>
 			</dataarea>
 		</part>
 	</software>

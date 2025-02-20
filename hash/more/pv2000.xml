@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 27 -->
+<!-- Number of items in this list = 28 -->
 <softwarelist name="pv2000" description="pv2000 loose roms">
 	<software name="pv2381f7efd9582d">
 		<description>aerial</description>
@@ -219,6 +219,16 @@
 		<part name="cart" interface="pv2000_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="mazy.rom" size="8192" crc="e62deaf8" sha1="ba276a8d404551322faf873ff3bd088b5d28b453"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2e2e595453844e">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mieyen.rom" size="16384" crc="bda4a303" sha1="e2e595453844e4fbd23cf287a1ecd0eaa38b5226"/>
 			</dataarea>
 		</part>
 	</software>

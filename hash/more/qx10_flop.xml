@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 20 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="qx10_flop" description="qx10_flop loose roms">
 	<software name="eqxbb30477091f8e">
 		<description>aerial</description>
@@ -153,12 +153,22 @@
 		</part>
 	</software>
 	<software name="eqx367b62aefec3f">
-		<description>MasterMind[Bdrive]</description>
+		<description>MastermindRK[Bdrive]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop" interface="floppy_5_25">
 			<dataarea name="flop" size="430336">
-				<rom name="MasterMind[Bdrive].dsk" size="430336" crc="76c778b6" sha1="367b62aefec3f4cc1d7797220353c6f551d27f34"/>
+				<rom name="MastermindRK[Bdrive].dsk" size="430336" crc="76c778b6" sha1="367b62aefec3f4cc1d7797220353c6f551d27f34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eqxe18e91aff8de7">
+		<description>mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="mieyen.d88" size="348848" crc="e867d11b" sha1="e18e91aff8de76d8a710f5ed2867bc3131873aaf"/>
 			</dataarea>
 		</part>
 	</software>

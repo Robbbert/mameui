@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 242 -->
+<!-- Number of items in this list = 243 -->
 <softwarelist name="lynx_quik" description="lynx_quik loose roms">
 	<software name="lnx9804fa8b478c3">
 		<description>(demo)Mega Man Plus Demo (199x) (PD)</description>
@@ -1659,6 +1659,16 @@
 		<part name="quik" interface="lynx_quik">
 			<dataarea name="quik" size="15965">
 				<rom name="Mario Plus Demo (199x) (PD).o" size="15965" crc="d7740530" sha1="a94f8c80599c8e467205cc9543f2aab112f76d25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx2369c4fb258c1">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="lynx_quik">
+			<dataarea name="quik" size="15708">
+				<rom name="Mieyen.o" size="15708" crc="614b8bbd" sha1="2369c4fb258c1105dc4e406d236facfffbb356da"/>
 			</dataarea>
 		</part>
 	</software>

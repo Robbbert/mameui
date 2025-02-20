@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 647 -->
+<!-- Number of items in this list = 648 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -3529,6 +3529,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Midnight Building (1983)(Way Limit)[b].rom" size="16384" crc="f7560df0" sha1="5359c905ad063a0faf1c46a8c03b1b9c9a04b3b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb22700dc2a17b">
+		<description>mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="8280">
+				<rom name="mieyen.rom" size="8280" crc="b2b44a0e" sha1="b22700dc2a17b82fa2677808d104a47a0e2ba280"/>
 			</dataarea>
 		</part>
 	</software>

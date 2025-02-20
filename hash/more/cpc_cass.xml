@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 155 -->
+<!-- Number of items in this list = 157 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc7310f187b8440">
 		<description>aerial</description>
@@ -1429,6 +1429,26 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="2675005">
 				<rom name="mazy.wav" size="2675005" crc="01a91a1d" sha1="f951a3f8633f556b3c1de3fb1a766c81f32902a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc522fe317ea3d1">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="10669">
+				<rom name="Mieyen.cdt" size="10669" crc="627674f8" sha1="522fe317ea3d12341d4e31b47d97591f0e625a2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3f334518dd329">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3180122">
+				<rom name="Mieyen.wav" size="3180122" crc="f3ffa9ca" sha1="3f334518dd3291b8ec05b6ac9f5a7deaa98cfbe2"/>
 			</dataarea>
 		</part>
 	</software>

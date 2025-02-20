@@ -1,34 +1,34 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 15 -->
+<!-- Number of items in this list = 16 -->
 <softwarelist name="rx78" description="rx78 loose roms">
 	<software name="rx7a2248efe65cf5">
-		<description>antiair</description>
+		<description>Antiair</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="8192">
-				<rom name="antiair.rom" size="8192" crc="126b98f9" sha1="a2248efe65cf50b25ca9a550d858c1623b5fd022"/>
+				<rom name="Antiair.rom" size="8192" crc="126b98f9" sha1="a2248efe65cf50b25ca9a550d858c1623b5fd022"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="rx75ff6f5fa71085">
-		<description>cacorm</description>
+		<description>Cacorm</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="cacorm.rom" size="16384" crc="5d224a6a" sha1="5ff6f5fa710859b105351aedf46c1b15730544ce"/>
+				<rom name="Cacorm.rom" size="16384" crc="5d224a6a" sha1="5ff6f5fa710859b105351aedf46c1b15730544ce"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="rx779b2134cf65ee">
-		<description>cracky</description>
+		<description>Cracky</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="cracky.rom" size="16384" crc="0830e9b6" sha1="79b2134cf65ee41525d805a38735f46810da985c"/>
+				<rom name="Cracky.rom" size="16384" crc="0830e9b6" sha1="79b2134cf65ee41525d805a38735f46810da985c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -83,12 +83,12 @@
 		</part>
 	</software>
 	<software name="rx71b7aebcb51c2c">
-		<description>guntus</description>
+		<description>Guntus</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="guntus.rom" size="16384" crc="eadeed26" sha1="1b7aebcb51c2c196a9166040bc2deedd4d904ec9"/>
+				<rom name="Guntus.rom" size="16384" crc="eadeed26" sha1="1b7aebcb51c2c196a9166040bc2deedd4d904ec9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -103,32 +103,42 @@
 		</part>
 	</software>
 	<software name="rx73604275b1350c">
-		<description>hopman</description>
+		<description>Hopman</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="hopman.rom" size="16384" crc="1c733346" sha1="3604275b1350c3427e872dfbe013ef0be6889f70"/>
+				<rom name="Hopman.rom" size="16384" crc="1c733346" sha1="3604275b1350c3427e872dfbe013ef0be6889f70"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="rx70f3f46bcfd3ad">
-		<description>Master Mind</description>
+		<description>MastermindRK</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Master Mind.rom" size="16384" crc="873e6e27" sha1="0f3f46bcfd3add82d5cbb2146eed324b597c5239"/>
+				<rom name="MastermindRK.rom" size="16384" crc="873e6e27" sha1="0f3f46bcfd3add82d5cbb2146eed324b597c5239"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx707e4e607ad1a1">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mieyen.rom" size="16384" crc="2d327c94" sha1="07e4e607ad1a1eb0b3e5ee84d0b2f332c0d3153a"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="rx7c412646bf4710">
-		<description>osotos</description>
+		<description>Osotos</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="osotos.rom" size="16384" crc="28d0223e" sha1="c412646bf471038ab0feaf18d12bf0753651c6a9"/>
+				<rom name="Osotos.rom" size="16384" crc="28d0223e" sha1="c412646bf471038ab0feaf18d12bf0753651c6a9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -143,12 +153,12 @@
 		</part>
 	</software>
 	<software name="rx74f61a8b57ab65">
-		<description>yewdow</description>
+		<description>Yewdow</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="yewdow.rom" size="16384" crc="912ff65f" sha1="4f61a8b57ab6512d5318b117acd7783a756c4e6a"/>
+				<rom name="Yewdow.rom" size="16384" crc="912ff65f" sha1="4f61a8b57ab6512d5318b117acd7783a756c4e6a"/>
 			</dataarea>
 		</part>
 	</software>
