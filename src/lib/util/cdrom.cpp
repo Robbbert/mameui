@@ -2673,7 +2673,7 @@ std::error_condition cdrom_file::parse_cue(std::string_view tocfname, toc &outto
 			tlen = get_file_size(outinfo.track[trknum].fname);
 			if (tlen == 0)
 			{
-				osd_printf_error("ERROR: couldn't find bin file [%s]\n", outinfo.track[trknum-1].fname);
+				osd_printf_error("ERROR: couldn't find bin file [%s]\n", outinfo.track[trknum].fname);
 				return std::errc::no_such_file_or_directory;
 			}
 
@@ -2703,7 +2703,7 @@ std::error_condition cdrom_file::parse_cue(std::string_view tocfname, toc &outto
 			tlen = get_file_size(outinfo.track[trknum].fname);
 			if (tlen == 0)
 			{
-				osd_printf_error("ERROR: couldn't find bin file [%s]\n", outinfo.track[trknum-1].fname);
+				osd_printf_error("ERROR: couldn't find bin file [%s]\n", outinfo.track[trknum].fname);
 				return std::errc::no_such_file_or_directory;
 			}
 
