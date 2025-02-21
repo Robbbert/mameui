@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 296 -->
+<!-- Number of items in this list = 331 -->
 <softwarelist name="z1013" description="z1013 loose roms">
 	<software name="z10af8c1a4d74aa3">
 		<description>10k_basic s_ps</description>
@@ -2622,6 +2622,226 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="z10f5f683f6c2ed6">
+		<description>Schach (19xx)(-)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4928">
+				<rom name="Schach (19xx)(-)[a2].z80" size="4928" crc="db910c07" sha1="f5f683f6c2ed6d1d34ce1a5c940bde61b932e3e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z104bc7a2c3d552d">
+		<description>Schach (19xx)(-)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4897">
+				<rom name="Schach (19xx)(-)[a3].z80" size="4897" crc="dd7c7fb9" sha1="4bc7a2c3d552d4b72ca710ad9af53419dea7e0ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d03048514a59e">
+		<description>schach</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4928">
+				<rom name="schach.z80" size="4928" crc="91eec71c" sha1="d03048514a59e3fcb5ab8f57575ae35f736452e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10082f8fcf2261e">
+		<description>Schiessbude (1988)(F. Herzog)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="5393">
+				<rom name="Schiessbude (1988)(F. Herzog)[a].z80" size="5393" crc="bb96c928" sha1="082f8fcf2261e3af4862065a014993e880135420"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z103eb554b14ea12">
+		<description>schiessbude_1_0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="5408">
+				<rom name="schiessbude_1_0.z80" size="5408" crc="1159331b" sha1="3eb554b14ea12a29f3fb63f630bf177d16298e94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108ca4825d19d49">
+		<description>schlange</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1568">
+				<rom name="schlange.z80" size="1568" crc="0a4ff58f" sha1="8ca4825d19d4938ecff096a886ba588662ebc52e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10a9c1fe54a5dc3">
+		<description>SCI-Kassetteninterface (1986)(Software Center Ilmenau)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="864">
+				<rom name="SCI-Kassetteninterface (1986)(Software Center Ilmenau)[a2].z80" size="864" crc="a9e3a2fd" sha1="a9c1fe54a5dc3fd840d2641d8ae9e0b0f64ccf14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10c09d7ebd54f79">
+		<description>SCI-Kassetteninterface (1986)(Software Center Ilmenau)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="848">
+				<rom name="SCI-Kassetteninterface (1986)(Software Center Ilmenau)[a3].z80" size="848" crc="af222485" sha1="c09d7ebd54f798c4c8e446dca589f47ac6a0548c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10337b2b4ef8f30">
+		<description>SCI-Kassetteninterface (1986)(Software Center Ilmenau)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="864">
+				<rom name="SCI-Kassetteninterface (1986)(Software Center Ilmenau)[a].z80" size="864" crc="f066ab4b" sha1="337b2b4ef8f30d09abcc65bbbe146b52c009c708"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10278758ae3d38f">
+		<description>scp f_moni 1_31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8224">
+				<rom name="scp f_moni 1_31.z80" size="8224" crc="34975e7e" sha1="278758ae3d38fc3e5b787747e364b35e6c06eb78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10c8744e886ea51">
+		<description>scp-centronic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8320">
+				<rom name="scp-centronic.z80" size="8320" crc="b08bc600" sha1="c8744e886ea51704652ca7e80d18ba7a881fff70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d954e914fa919">
+		<description>Show ZS (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="320">
+				<rom name="Show ZS (19xx)(-).z80" size="320" crc="e26ba096" sha1="d954e914fa9196757fbc76800d9dd5071d009272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1056c474e9da0f8">
+		<description>simu spectrum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="864">
+				<rom name="simu spectrum.z80" size="864" crc="5f3ba59b" sha1="56c474e9da0f8405b883c56dc8a888f26b7cca09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10fb6713cfec0eb">
+		<description>soft-zaehler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="960">
+				<rom name="soft-zaehler.z80" size="960" crc="eb34307f" sha1="fb6713cfec0eb8215acf3c42b657a8ab968dbea6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1087e7f9fa618a5">
+		<description>Soko-Ban (1989)(Gera-Soft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4800">
+				<rom name="Soko-Ban (1989)(Gera-Soft)[a].z80" size="4800" crc="1e6d8f72" sha1="87e7f9fa618a5c78306a1030b81af0e9da511346"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ed63319c0f317">
+		<description>Speicherservice (19xx)(-)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="384">
+				<rom name="Speicherservice (19xx)(-)[a2].z80" size="384" crc="d975f85e" sha1="ed63319c0f317c6ba51f5a152d4adc8dbc980847"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1021f029784f8da">
+		<description>Speicherservice (19xx)(-)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="416">
+				<rom name="Speicherservice (19xx)(-)[a].z80" size="416" crc="5bac2d64" sha1="21f029784f8da99bb29e83c9000382765153af45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10e065d45e47e7c">
+		<description>speicherservice (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="352">
+				<rom name="speicherservice (2).z80" size="352" crc="e0a400ba" sha1="e065d45e47e7c7722e2ea87e96e17af1d9d76e84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d4b04146fab2e">
+		<description>speicherservice (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="352">
+				<rom name="speicherservice (3).z80" size="352" crc="15a69881" sha1="d4b04146fab2e2f49dd55c1316543d387ad79e11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z109216fc4fd5dbd">
+		<description>Sprache (19xx)(NH)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="897">
+				<rom name="Sprache (19xx)(NH)[a2].z80" size="897" crc="5da39728" sha1="9216fc4fd5dbd7312e9eaf6a75212d50b8109fbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1074eac1fb9e682">
+		<description>sprache</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1088">
+				<rom name="sprache.z80" size="1088" crc="8645f99b" sha1="74eac1fb9e6823a5189350a789d59c1a2044da61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10becad26c57bfd">
+		<description>status i_o-adr 4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="544">
+				<rom name="status i_o-adr 4.z80" size="544" crc="756d4e18" sha1="becad26c57bfd9fb7a32bfa430bed9d3fd5e1baa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="z10ca9f8f0381c56">
 		<description>Stringfeld_brotast</description>
 		<year>????</year>
@@ -2629,6 +2849,136 @@
 		<part name="snap" interface="z1013_snap">
 			<dataarea name="snap" size="1568">
 				<rom name="Stringfeld_brotast.z80" size="1568" crc="22de390a" sha1="ca9f8f0381c565e8b299b564edae667cc4754087"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10ce67e17245f0f">
+		<description>Super Puzzle (19xx)(GERASOFT)[a2][Tetris Clone]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2848">
+				<rom name="Super Puzzle (19xx)(GERASOFT)[a2][Tetris Clone].z80" size="2848" crc="ae813a22" sha1="ce67e17245f0fcf10179861cb56565a280ef8944"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z105df9dbeaf7a59">
+		<description>Super Puzzle (19xx)(GERASOFT)[a][Tetris Clone]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2848">
+				<rom name="Super Puzzle (19xx)(GERASOFT)[a][Tetris Clone].z80" size="2848" crc="14e79c8f" sha1="5df9dbeaf7a59bb7587c1a7b4dbfc61ddf2e64c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z101f561ff8a4847">
+		<description>super-ski</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="4416">
+				<rom name="super-ski.z80" size="4416" crc="2a890691" sha1="1f561ff8a484742f82cef57e3af0768c6eadaa93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z103b86516a9eac9">
+		<description>talk-master 3_0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="288">
+				<rom name="talk-master 3_0.z80" size="288" crc="cab58805" sha1="3b86516a9eac9d580d269bde8c186195e57a996f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1029352d7cd6707">
+		<description>Tapelist-VT (1988)(Joduke-Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1856">
+				<rom name="Tapelist-VT (1988)(Joduke-Software)[a].z80" size="1856" crc="e0c98fcf" sha1="29352d7cd670750ecc048254eeaf15286729acd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10aea6c6de45f3e">
+		<description>tapelist</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1856">
+				<rom name="tapelist.z80" size="1856" crc="d9e96c57" sha1="aea6c6de45f3ee6e94ec7b316cd09fbe626a107a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z1085263287543b2">
+		<description>tedit 9 pc trans</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8736">
+				<rom name="tedit 9 pc trans.z80" size="8736" crc="7a431fbf" sha1="85263287543b20c05d746dc75b59e1c1841c8907"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z108b4462b24c355">
+		<description>tedit_9_0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8736">
+				<rom name="tedit_9_0.z80" size="8736" crc="8b515d61" sha1="8b4462b24c3556155e10c124df5de1b79bef9b51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z107c8f3c439c655">
+		<description>tetris (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="8704">
+				<rom name="tetris (2).z80" size="8704" crc="c8d2523f" sha1="7c8f3c439c6557fdedfc8f2d9f89833ac36b1ce1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10c35c029318ae4">
+		<description>tetris</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="2848">
+				<rom name="tetris.z80" size="2848" crc="ae2a1fb5" sha1="c35c029318ae4a6bc09c416153bcdfe927d9ad58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10d7b4a069da578">
+		<description>TEXED. 6.1 Scf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7968">
+				<rom name="TEXED. 6.1 Scf.Z80" size="7968" crc="cc73bcbf" sha1="d7b4a069da578c91729d8aadcd60a0d94c4983f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z10310979fbf5e4d">
+		<description>Texkon 1 (1989)(Schroeder, L)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="1712">
+				<rom name="Texkon 1 (1989)(Schroeder, L).z80" size="1712" crc="bff3a8b2" sha1="310979fbf5e4d7f07fb28d6542ee1c35ef90ba33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="z109d5fea44d2b80">
+		<description>Text-Editor v2.0 (1988)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="z1013_snap">
+			<dataarea name="snap" size="7968">
+				<rom name="Text-Editor v2.0 (1988)(-).z80" size="7968" crc="2030bcca" sha1="9d5fea44d2b8000344cb33e47f296b75db392993"/>
 			</dataarea>
 		</part>
 	</software>

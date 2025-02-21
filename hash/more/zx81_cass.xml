@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 955 -->
+<!-- Number of items in this list = 1000 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx13e7d1225a731f">
 		<description>10</description>
@@ -3702,6 +3702,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1cb34459a2a82d">
+		<description>GALACTIC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4648">
+				<rom name="GALACTIC.P" size="4648" crc="9145eaab" sha1="cb34459a2a82d6cfc9efd6d9285c0fe13620a8a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1c5324526a6e41">
+		<description>GALAKTIS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2756">
+				<rom name="GALAKTIS.P" size="2756" crc="81e26d05" sha1="c5324526a6e413cbd3a2be4400091cbe1d6ae6b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d688b7c2daece">
+		<description>GALAXIAN (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4173">
+				<rom name="GALAXIAN (2).P" size="4173" crc="a5c29904" sha1="d688b7c2daeced4990b8e495feb5d2e89cb1781c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1811f3186760bb">
 		<description>GALAXIAN</description>
 		<year>????</year>
@@ -3709,6 +3739,36 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="3566">
 				<rom name="GALAXIAN.P" size="3566" crc="ea3e3f6e" sha1="811f3186760bb710ef4cb3e1497b9792bca125f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx15a63e66923108">
+		<description>GALAXIAN_1(run then goto20)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3602">
+				<rom name="GALAXIAN_1(run then goto20).P" size="3602" crc="0c63a7d7" sha1="5a63e669231085945a859a6fadb4cb2510224bc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e187bcc49ef19">
+		<description>GALAXIAN_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3351">
+				<rom name="GALAXIAN_2.P" size="3351" crc="e404461c" sha1="e187bcc49ef1975bc018ea81b28c795a9f3dbb86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1563bdb6101d69">
+		<description>GALAXY (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3841">
+				<rom name="GALAXY (2).P" size="3841" crc="0a10224d" sha1="563bdb6101d6955a9f53ca64d2ef08b7302e5655"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3732,6 +3792,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx173f670363653c">
+		<description>GALAXY_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4603">
+				<rom name="GALAXY_1.P" size="4603" crc="8788b326" sha1="73f670363653c785c10b29d6e4e9146c09ca74cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx150b7149781ed1">
+		<description>GALGJE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3114">
+				<rom name="GALGJE.P" size="3114" crc="a8e43eff" sha1="50b7149781ed1b8b1022a71b792e8dd8ab81454f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx190750dae56627">
+		<description>GAME-TWO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6720">
+				<rom name="GAME-TWO.P" size="6720" crc="eeb941a0" sha1="90750dae5662709a228df0d641ceff3ef728e1dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1cbcc5d71806c3">
+		<description>GAME4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1802">
+				<rom name="GAME4.P" size="1802" crc="6a6f048e" sha1="cbcc5d71806c39ac73f7267c5b4b84645003f3d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx14ebcf209ce58b">
+		<description>GAME5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1765">
+				<rom name="GAME5.P" size="1765" crc="7f6b158b" sha1="4ebcf209ce58b891a0bdead9f19a6df17b10163f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx130d03d509251d">
+		<description>GAME6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1700">
+				<rom name="GAME6.P" size="1700" crc="c25e00e7" sha1="30d03d509251d36e50899f15feffb878cc1be92d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx12da262626f9df">
+		<description>GANYMEDE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="11246">
+				<rom name="GANYMEDE.P" size="11246" crc="887393cd" sha1="2da262626f9dfca0f85862a031d134ec4927f114"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d3544d19c2db5">
+		<description>GAUNTLET (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14562">
+				<rom name="GAUNTLET (2).P" size="14562" crc="34763407" sha1="d3544d19c2db5bee493488be48840aa684c3398b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx195e4cdc75bdf9">
 		<description>gauntlet</description>
 		<year>????</year>
@@ -3752,6 +3892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1c11a78092b665">
+		<description>GAZETTEE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="16258">
+				<rom name="GAZETTEE.P" size="16258" crc="c040c045" sha1="c11a78092b66577386e43ffe7ecd6335465eb6a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1dfb952c5c2699">
 		<description>gdhabits</description>
 		<year>????</year>
@@ -3762,6 +3912,126 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx19cc3ca8fd530b">
+		<description>GEKKENHU</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="12565">
+				<rom name="GEKKENHU.P" size="12565" crc="4a666857" sha1="9cc3ca8fd530b51db712850086104ac7e17c06e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1df8d13cad518d">
+		<description>GELD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4436">
+				<rom name="GELD.P" size="4436" crc="c9158546" sha1="df8d13cad518d4c5556d9dae9249b0c4c0b0bee3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13e9ef6d845c73">
+		<description>GEORGE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3578">
+				<rom name="GEORGE.P" size="3578" crc="ee3df79c" sha1="3e9ef6d845c7372f7465e6fb29f607e46d9d9741"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx133a3caf0866d1">
+		<description>GERMAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="15406">
+				<rom name="GERMAN.P" size="15406" crc="1f93da5a" sha1="33a3caf0866d16c3901ead8ebd7d4742f0e7790d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx174bef529a32b8">
+		<description>GHOST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5358">
+				<rom name="GHOST.P" size="5358" crc="825948c6" sha1="74bef529a32b8b85328e083f7f69231215738fcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1fb5512aa02e26">
+		<description>GHOSTDRI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2103">
+				<rom name="GHOSTDRI.P" size="2103" crc="19c23e67" sha1="fb5512aa02e26d077dfdd12295c9009de39bfe82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1bda1cb33d5595">
+		<description>GHOSTHUN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5329">
+				<rom name="GHOSTHUN.P" size="5329" crc="edf86308" sha1="bda1cb33d559581acd28fd247ef86bd9370bfe54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx192857d45f35d9">
+		<description>GLOOPER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7216">
+				<rom name="GLOOPER.P" size="7216" crc="01c580c7" sha1="92857d45f35d907d92b7f9f0699dfb1c4582335c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1177450c78befa">
+		<description>GLOOPS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="11986">
+				<rom name="GLOOPS.P" size="11986" crc="13c1185e" sha1="177450c78befa5d18509db23184c6ab8908cb4b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1970af4cf24fad">
+		<description>GLOOPS_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="12007">
+				<rom name="GLOOPS_1.P" size="12007" crc="adeb0da1" sha1="970af4cf24fadfd301ae6ab905caf5507348a46b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx121498a738313e">
+		<description>GO-BALL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3420">
+				<rom name="GO-BALL.P" size="3420" crc="20a693ef" sha1="21498a738313ea5ded5ab4568edf6e227a93fbd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx118416734d0c3a">
+		<description>GOBANG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="11142">
+				<rom name="GOBANG.P" size="11142" crc="c0481fa2" sha1="18416734d0c3a0b63c33f88c605e7f574023176e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1ee3494e08bb1c">
 		<description>Gobbleman</description>
 		<year>????</year>
@@ -3769,6 +4039,66 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="3908">
 				<rom name="Gobbleman.P" size="3908" crc="f1484431" sha1="ee3494e08bb1c0d2cf8ccc23ee4117e0f9102249"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1a322a865f3621">
+		<description>GOBBLEMA[run then goto9999]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3832">
+				<rom name="GOBBLEMA[run then goto9999].P" size="3832" crc="600d65c2" sha1="a322a865f3621a2df206c7590b2ac94b45a1c4f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13534afe6ae98f">
+		<description>GOLF</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8696">
+				<rom name="GOLF.P" size="8696" crc="c462b1ae" sha1="3534afe6ae98f6b667d0987687f6bc1f0a2c457e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f0b2ef6a9996b">
+		<description>GOLF_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5385">
+				<rom name="GOLF_1.P" size="5385" crc="ebdbe17c" sha1="f0b2ef6a9996b18b7144d83a503389ffb3ec2873"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx17b2c898076e14">
+		<description>GOLF_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7856">
+				<rom name="GOLF_2.P" size="7856" crc="2450749d" sha1="7b2c898076e1415390e26be180eaaba31bc24e02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f38879085defd">
+		<description>GOTEST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1325">
+				<rom name="GOTEST.P" size="1325" crc="40e72d0e" sha1="f38879085defdcecb1e8aca711080b632a34fa76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1924dec43e7a41">
+		<description>GRABEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7208">
+				<rom name="GRABEN.P" size="7208" crc="897372ab" sha1="924dec43e7a41e610682e5adfc393f8057929fba"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3822,6 +4152,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1aa9ec5213b8f2">
+		<description>GRAND-PR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2179">
+				<rom name="GRAND-PR.P" size="2179" crc="567bb719" sha1="aa9ec5213b8f28caf2d41af28c84087df22bf8c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx107b4b480a2cf5">
+		<description>GRAND-PR_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2320">
+				<rom name="GRAND-PR_1.P" size="2320" crc="db678bdf" sha1="07b4b480a2cf5e3556be91b30a7c7e7795cd3195"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1283f87e4b7e51">
+		<description>GRAND-PR_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14007">
+				<rom name="GRAND-PR_2.P" size="14007" crc="14eacddf" sha1="283f87e4b7e516b50210c059bf3b22a9f202f246"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx146d4faef1ce05">
 		<description>GRAPH (2)</description>
 		<year>????</year>
@@ -3832,6 +4192,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1ba62d92e7d266">
+		<description>GRAPH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1442">
+				<rom name="GRAPH.P" size="1442" crc="0eb09edb" sha1="ba62d92e7d26685e82552b732eb00376bfde6bd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx15b8415e678be3">
+		<description>GRAPHICT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2790">
+				<rom name="GRAPHICT.P" size="2790" crc="ce74e3ce" sha1="5b8415e678be3d5fa4bedf2126100fefd766360c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx110af45b39e8e9">
+		<description>GRAPHROU</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2255">
+				<rom name="GRAPHROU.P" size="2255" crc="7c36d3e8" sha1="10af45b39e8e9f4642d5e58e51eaa06deb4b770e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx16c6ede39ed9ea">
+		<description>GRAPHTOO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2759">
+				<rom name="GRAPHTOO.P" size="2759" crc="5fea6493" sha1="6c6ede39ed9ea9f7fb477a7d642b472650033ad4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1ffce40fd5661a">
 		<description>GRAVITY (2)</description>
 		<year>????</year>
@@ -3839,6 +4239,26 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="GRAVITY (2).P" size="1165" crc="71bb315b" sha1="ffce40fd5661a5ce29a2508c2b319b574e5ac6ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx16ad673383123a">
+		<description>GRAVITY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8023">
+				<rom name="GRAVITY.P" size="8023" crc="91a33ca4" sha1="6ad673383123a9131e25b733129806db953a8192"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx176f48b070868f">
+		<description>GREEK-MC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7716">
+				<rom name="GREEK-MC.P" size="7716" crc="900b615e" sha1="76f48b070868f5f7c0e6e8d877da03a8019b853e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3872,6 +4292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1b9fcc1e9348e7">
+		<description>GULP2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6215">
+				<rom name="GULP2.P" size="6215" crc="b5bbec48" sha1="b9fcc1e9348e7aa94dfc037461938f560281fa6f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx17eca2b68ec295">
 		<description>GULP2_1</description>
 		<year>????</year>
@@ -3889,6 +4319,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="4316">
 				<rom name="GUN.P" size="4316" crc="8f2b92b6" sha1="ab942ae7cc2e0cc42c6effd9314cf19b0d50a496"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx154f336414e17d">
+		<description>GUNFIGHT (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4337">
+				<rom name="GUNFIGHT (2).P" size="4337" crc="dd7af8ad" sha1="54f336414e17db9c07872af15bf6db9647baff79"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3919,6 +4359,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="5313490">
 				<rom name="guntus.wav" size="5313490" crc="19b46415" sha1="111907fe4555539ac773fba3d1c38ce7ba63a446"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1697bfc9255e39">
+		<description>GUZZLERS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6439">
+				<rom name="GUZZLERS.P" size="6439" crc="ade6fd7f" sha1="697bfc9255e399f6d2e1ee60514893df48e7a5a4"/>
 			</dataarea>
 		</part>
 	</software>

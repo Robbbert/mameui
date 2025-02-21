@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1390 -->
+<!-- Number of items in this list = 1398 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -8812,6 +8812,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs62c8a9814c9d2">
+		<description>Narc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="357432">
+				<rom name="Narc.tzx" size="357432" crc="f90a923b" sha1="62c8a9814c9d26d85c3bc9ff4de82c55bf2eb358"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs13599152e6537">
+		<description>Navy Seals - Part 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="137070">
+				<rom name="Navy Seals - Part 1.tzx" size="137070" crc="60d1ba23" sha1="13599152e6537d409219f8de12d86955710ba655"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2139796d2a1af">
+		<description>Navy Seals - Part 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="137073">
+				<rom name="Navy Seals - Part 2.tzx" size="137073" crc="8e6cfce6" sha1="2139796d2a1af5a0ddfa9cd61f60c1d1a34f608e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27bd1d6f2065b">
+		<description>Neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10077">
+				<rom name="Neuras.tzx" size="10077" crc="afef7c8e" sha1="27bd1d6f2065be03245879f036779b857d275283"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2922823bd9f44">
+		<description>New York Warriors</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="110161">
+				<rom name="New York Warriors.tzx" size="110161" crc="532b168d" sha1="2922823bd9f44a0a94f33f00971380e7a7c61d3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbfa1d69d4f8a2">
+		<description>New Zealand Story, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="178175">
+				<rom name="New Zealand Story, The.tzx" size="178175" crc="32ed2b0d" sha1="bfa1d69d4f8a2c1ccf78f1342ab8ee2352fced55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc214ea88a9939">
+		<description>Ninja Hamster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="110124">
+				<rom name="Ninja Hamster.tzx" size="110124" crc="bb77668c" sha1="c214ea88a9939f68c91a8bc1fb08a255f8526f90"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0da47b3d97f4c">
 		<description>Oddi The Viking 128K (2010)(Digital Brains)</description>
 		<year>????</year>
@@ -9529,6 +9599,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44597">
 				<rom name="Stainless Steel.tzx" size="44597" crc="8321c5ea" sha1="a10c373ce69f8d1282568f9cf7daf6b94c13482d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe8fc3c47c6db">
+		<description>Star Raiders II 48K (1987)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29398">
+				<rom name="Star Raiders II 48K (1987)(Electric Dreams).tzx" size="29398" crc="0419cba2" sha1="fe8fc3c47c6dbc38f11d5961f82426cd6b155c57"/>
 			</dataarea>
 		</part>
 	</software>

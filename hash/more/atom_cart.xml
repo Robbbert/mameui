@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="atom_cart" description="atom_cart loose roms">
+	<software name="atmb381242723306">
+		<description>salfaa[SALFAA]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="atom_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="salfaa[SALFAA].rom" size="4096" crc="ef857b25" sha1="b3812427233060972fa01faf3ce381a21576a5ed"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

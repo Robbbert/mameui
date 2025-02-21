@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="atom_flop" description="atom_flop loose roms">
+	<software name="atmcd95b0d5a1db0">
+		<description>DemoDisk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="102400">
+				<rom name="DemoDisk.Dsk" size="102400" crc="7dee50a9" sha1="cd95b0d5a1db05c963ee30c8f85b01e13bf41af7"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

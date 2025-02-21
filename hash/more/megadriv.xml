@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1878 -->
+<!-- Number of items in this list = 1879 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -18049,6 +18049,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Vixen 357 (Japan).bin" size="1310720" crc="3c720fb9" sha1="3d7bdec7a860e0c309a471586d67a4a18c9f3667"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genec2412a5f5386">
+		<description>War Marbles Legacy (World) (v0.1.0) (Beta) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="War Marbles Legacy (World) (v0.1.0) (Beta) (Aftermarket) (Unl).md" size="1048576" crc="b3223d53" sha1="ec2412a5f5386716eeec6b179275dc842e37f411"/>
 			</dataarea>
 		</part>
 	</software>
