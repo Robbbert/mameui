@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 44 -->
+<!-- Number of items in this list = 45 -->
 <softwarelist name="a800" description="a800 loose roms">
 	<software name="a880e50c7fcb2e81">
 		<description>(demo)400-800 salt diagnostic cartridge v1.00</description>
@@ -313,12 +313,12 @@
 		</part>
 	</software>
 	<software name="a8f22daf5e3ef7e5">
-		<description>guntus</description>
+		<description>Gguntus</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="guntus.rom" size="16384" crc="73e579b8" sha1="f22daf5e3ef7e5b2382ceef8dfe7fa93870e3c9c"/>
+				<rom name="Gguntus.rom" size="16384" crc="73e579b8" sha1="f22daf5e3ef7e5b2382ceef8dfe7fa93870e3c9c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -369,6 +369,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="mazy.rom" size="8192" crc="e02a4e5a" sha1="c7f555d3fe8a3e16c0873b05467e1435c4aa1f84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a8f349adca7525b5">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mieyen.rom" size="16384" crc="55e4a016" sha1="f349adca7525b548827159db7b70a8c2c6868c6a"/>
 			</dataarea>
 		</part>
 	</software>

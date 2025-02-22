@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1336 -->
+<!-- Number of items in this list = 1338 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -8752,6 +8752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcf4acd37d913b3">
+		<description>Hunt The Gwumbus (World) (Digital) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Hunt The Gwumbus (World) (Digital) (Aftermarket) (Unl).gb" size="524288" crc="b6c07d92" sha1="f4acd37d913b3793511f169d037dea4a911c7d93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcd2b9ef19df261">
 		<description>I Guardian (PD) [C]</description>
 		<year>????</year>
@@ -11949,6 +11959,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Soccer Boy (1990)(CBS - Sony)(JP)(proto).gb" size="65536" crc="a46f98d1" sha1="22db7c6096f285222aefbfe413efa1d21de59731"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc30253f27b368d">
+		<description>Song of Morus - Gala of Battle (World) (En,Ja) (Digital) (SGB Enhanced) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Song of Morus - Gala of Battle (World) (En,Ja) (Digital) (SGB Enhanced) (Aftermarket) (Unl).gb" size="524288" crc="00a50685" sha1="30253f27b368da259b0dba439774c1b39a140527"/>
 			</dataarea>
 		</part>
 	</software>

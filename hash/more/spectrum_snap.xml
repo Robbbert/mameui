@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 434 -->
+<!-- Number of items in this list = 438 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -149,6 +149,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="38636">
 				<rom name="Adventures of Buratino, The (1993)(Copper Feet)(48k).z80" size="38636" crc="3a0cb189" sha1="54b7e49f2fe2cd76afe3c3077df4ac5201e9c3f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd6bbb1325e4d2">
+		<description>africaseeds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="13440">
+				<rom name="africaseeds.z80" size="13440" crc="be586905" sha1="d6bbb1325e4d2da3700e0f7dc2e71b3b7f608373"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1212,6 +1222,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs75c7ffe79b463">
+		<description>EARTHATT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="6899">
+				<rom name="EARTHATT.Z80" size="6899" crc="6423fd01" sha1="75c7ffe79b46383dedb8fe3b137e54933a9cb2f9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs4f9d77324d5e9">
 		<description>Edd the Duck 48K (1990)(Impulze)</description>
 		<year>????</year>
@@ -1592,6 +1612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsddf1deeb05660">
+		<description>GOLDEN-C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37565">
+				<rom name="GOLDEN-C.Z80" size="37565" crc="769e86b6" sha1="ddf1deeb0566022d00b5cb4aec421a753acc53f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1112b119b65c0">
 		<description>Grand Prix Circuit 128K (1990)(Accolade)</description>
 		<year>????</year>
@@ -1739,6 +1769,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="39066">
 				<rom name="Heartland (1986)(Odin Computer Graphics).z80" size="39066" crc="746a07be" sha1="6362f6a732b2c8a46c04e71223ee00bf7ffbddd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4cbb6f167cb08">
+		<description>HELANGEL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="8705">
+				<rom name="HELANGEL.Z80" size="8705" crc="bbee05a8" sha1="4cbb6f167cb0819368d3b6cacb0c3756415cc5f8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2592,16 +2632,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs6f58c3d943594">
-		<description>Neuras</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="snap" interface="spectrum_snap">
-			<dataarea name="snap" size="3310417">
-				<rom name="Neuras.wav" size="3310417" crc="d26ece34" sha1="6f58c3d943594caf004eb9782fcf2a704c188ca1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs745bc87a4992e">
 		<description>Night Breed (1990)(Ocean)</description>
 		<year>????</year>
@@ -2629,6 +2659,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="38736">
 				<rom name="NISHADE.Z80" size="38736" crc="b3927e5d" sha1="30d26ac06c3f7f70b91b34abbd08c115a9538f88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse22972794db9f">
+		<description>NUCLEAR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36087">
+				<rom name="NUCLEAR.Z80" size="36087" crc="f033152f" sha1="e22972794db9f320640be8f5eaa38f99e7aef80e"/>
 			</dataarea>
 		</part>
 	</software>

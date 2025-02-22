@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3764 -->
+<!-- Number of items in this list = 3765 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -36359,6 +36359,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="untitled easy (SMW1 Hack).sfc" size="1048576" crc="2c39d259" sha1="b81d1f855874ab1dbb93761fcee45398a9551a92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf13d30a341a62">
+		<description>Untitled Racing Game (USA) (Proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Untitled Racing Game (USA) (Proto).sfc" size="524288" crc="deb387c5" sha1="f13d30a341a628f817831fad30ff02223b8c49da"/>
 			</dataarea>
 		</part>
 	</software>

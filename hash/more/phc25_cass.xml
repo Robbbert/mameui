@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 5 -->
 <softwarelist name="phc25_cass" description="phc25_cass loose roms">
 	<software name="phc793cd8a63940b">
 		<description>20-sanyo-phc25-invade_11k8b</description>
@@ -19,6 +19,26 @@
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="971358">
 				<rom name="b.wav" size="971358" crc="d87c03af" sha1="68470472148f981eca698cd82d022c77d7014f52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phce637000e08fa7">
+		<description>CasseBrique (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="23054380">
+				<rom name="CasseBrique (2).wav" size="23054380" crc="9a502616" sha1="e637000e08fa736cfbb2ef9e1a04242332b5adc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc9583c21f808c9">
+		<description>CasseBrique</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="23134252">
+				<rom name="CasseBrique.wav" size="23134252" crc="85c984f6" sha1="9583c21f808c93f30e7f91711df08eb586aafa7b"/>
 			</dataarea>
 		</part>
 	</software>

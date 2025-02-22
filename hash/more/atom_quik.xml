@@ -1,7 +1,317 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 15 -->
+<!-- Number of items in this list = 46 -->
 <softwarelist name="atom_quik" description="atom_quik loose roms">
+	<software name="atmea480fdca4808">
+		<description>SAFEBRK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1230">
+				<rom name="SAFEBRK.ATM" size="1230" crc="7831cd0a" sha1="ea480fdca4808ecb8b50ce8162be61bf4df6aef2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm072d32c956820">
+		<description>SAUCER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="373">
+				<rom name="SAUCER.ATM" size="373" crc="abacbcf3" sha1="072d32c956820421117f6a1f31a3cc553e93c1eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm67a949bcc1ba4">
+		<description>SBATTL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1757">
+				<rom name="SBATTL.ATM" size="1757" crc="5aa336eb" sha1="67a949bcc1ba49d04737548269b59fd5a6d824c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm492ad461d3cc0">
+		<description>SCHIZO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="503">
+				<rom name="SCHIZO.ATM" size="503" crc="734a8d2f" sha1="492ad461d3cc083fe12a96486c49438a36fc593d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmaaf218e6be10a">
+		<description>SCRAMB (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1297">
+				<rom name="SCRAMB (2).ATM" size="1297" crc="a52c4866" sha1="aaf218e6be10a1b5215c84020789b67ae95b6f11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm0488788c4e7b4">
+		<description>SCRAMB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1262">
+				<rom name="SCRAMB.ATM" size="1262" crc="baae7a05" sha1="0488788c4e7b4f9c7ca0925514af0d8a1d3ab6bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atme974b609451bd">
+		<description>SCRDUMP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1863">
+				<rom name="SCRDUMP.ATM" size="1863" crc="5fa9b80b" sha1="e974b609451bd9fbdf67e027c5d5836b1fff5d06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm12f4a85f3ed29">
+		<description>SCREENS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1456">
+				<rom name="SCREENS.ATM" size="1456" crc="cbb21fda" sha1="12f4a85f3ed29ec16ba30fec68a981f0e69c1147"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm8a2d945da35d9">
+		<description>SEARCH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="518">
+				<rom name="SEARCH.ATM" size="518" crc="36f37ca6" sha1="8a2d945da35d9c701a49227734d1a274af4a8e80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atme699cae60ff7b">
+		<description>SHOOTOUT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3562">
+				<rom name="SHOOTOUT.ATM" size="3562" crc="ee1db939" sha1="e699cae60ff7b7c881ee6bc64bf72d1f04afadc0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm8784262059386">
+		<description>SIMON_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="760">
+				<rom name="SIMON_.ATM" size="760" crc="03501250" sha1="8784262059386877a425d1fc61a34619a122f1c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm348b8e872e9c5">
+		<description>SKI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="2062">
+				<rom name="SKI.ATM" size="2062" crc="b1859cd3" sha1="348b8e872e9c5752f5551c1dc5edd87b0bcefeac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm9fa89bec6af5f">
+		<description>SKIING</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3272">
+				<rom name="SKIING.ATM" size="3272" crc="f194776f" sha1="9fa89bec6af5f30e0199c6a5c7c289ae86fc5016"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm3296eea97808a">
+		<description>SKIRUN_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1988">
+				<rom name="SKIRUN_.ATM" size="1988" crc="b6f3b19c" sha1="3296eea97808a3008a3a9b4b285920b785e8aab3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmfee34eee10e1d">
+		<description>SLANGEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4102">
+				<rom name="SLANGEN.ATM" size="4102" crc="9c52f104" sha1="fee34eee10e1dfea782c70aef7a30af59712def2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmdfceffa70b18e">
+		<description>SOCCER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3280">
+				<rom name="SOCCER.ATM" size="3280" crc="22e487b8" sha1="dfceffa70b18e1f595f3d5b405edfa5d18513476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm0f51717d7fac0">
+		<description>SOLIT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="2926">
+				<rom name="SOLIT.ATM" size="2926" crc="b2494c7b" sha1="0f51717d7fac0bf7ce43088e5358acc46f39929e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmecfd8aa128936">
+		<description>SPAFIRE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4745">
+				<rom name="SPAFIRE.ATM" size="4745" crc="c6b7eefe" sha1="ecfd8aa128936bb531a848abe113582e15ad54e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm378ad3f7a71c9">
+		<description>SPBAT_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1736">
+				<rom name="SPBAT_.ATM" size="1736" crc="f457de78" sha1="378ad3f7a71c9e1822e5c60ac159734199802199"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm05c97a83128a9">
+		<description>SPIDERMA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1866">
+				<rom name="SPIDERMA.ATM" size="1866" crc="b028b4d2" sha1="05c97a83128a9c38cfd2096c79b0c3883b52dc72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm3a84c10683071">
+		<description>SPIRAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1629">
+				<rom name="SPIRAL.ATM" size="1629" crc="5d2e3410" sha1="3a84c10683071849cb3aa548a9c6d404b40896ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm74db49f969413">
+		<description>SQUASH_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="971">
+				<rom name="SQUASH_.ATM" size="971" crc="0207940b" sha1="74db49f969413078063c06ffb439ef008c41fdc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmd2c95ed435c1d">
+		<description>STARWAR (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1828">
+				<rom name="STARWAR (2).ATM" size="1828" crc="964c6d15" sha1="d2c95ed435c1d4b9b5d4a8e50c8667d486ed0702"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm73f4bdf14faa9">
+		<description>STARWAR_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4266">
+				<rom name="STARWAR_.ATM" size="4266" crc="ded1c10c" sha1="73f4bdf14faa97c8430dfdeb2cd42da21bc09b6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm5b73f8a784a3e">
+		<description>Steve</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="50927">
+				<rom name="Steve.atm" size="50927" crc="b3077e3f" sha1="5b73f8a784a3ef36923dceb40312782e573bd744"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm168c530a35778">
+		<description>STITCH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4521">
+				<rom name="STITCH.ATM" size="4521" crc="5818c106" sha1="168c530a357782fe2b67753221504c39b810421a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atma36f6a00ce422">
+		<description>STUNT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="2772">
+				<rom name="STUNT.ATM" size="2772" crc="0f3cce75" sha1="a36f6a00ce422e601aa15f4b301cf1c166b23478"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atme639607bae14a">
+		<description>SUBHUNT_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3066">
+				<rom name="SUBHUNT_.ATM" size="3066" crc="b0fe3822" sha1="e639607bae14a9179e6fd4ef6a346832980fa586"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmbda4fee6abbc9">
+		<description>SUMS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1338">
+				<rom name="SUMS.ATM" size="1338" crc="007f3f1f" sha1="bda4fee6abbc9e9baa055a18942a186297eee4b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm3b0e67170ee4c">
+		<description>SURFACE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="918">
+				<rom name="SURFACE.ATM" size="918" crc="ef9fcee7" sha1="3b0e67170ee4cd5c7b6f1cde1b9effc093fd7ccc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm8f5ab1a0b2ce8">
+		<description>SYMPH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1034">
+				<rom name="SYMPH.ATM" size="1034" crc="387651c7" sha1="8f5ab1a0b2ce809431c348fe554177395e78a165"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="atm857d4b765bdea">
 		<description>TABLET[run]</description>
 		<year>????</year>

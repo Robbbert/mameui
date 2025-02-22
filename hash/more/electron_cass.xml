@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 17 -->
+<!-- Number of items in this list = 103 -->
 <softwarelist name="electron_cass" description="electron_cass loose roms">
 	<software name="acod805e3903ad5e">
 		<description>Adventure #4 - Voodoo Castle (1979-84)(Adventure International-Scott Adams)[b][-RUN]</description>
@@ -169,6 +169,866 @@
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="9329">
 				<rom name="Deathstar (1985)(Superior Software)[CHAIN].uef" size="9329" crc="a4f97798" sha1="36e9462ac3e2f6c65f896276ebda54f82dd466b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco2763eb9750610">
+		<description>Electron Invaders[CHAIN][B]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="6950">
+				<rom name="Electron Invaders[CHAIN][B].uef" size="6950" crc="a94b7015" sha1="2763eb975061059a94300946bf0f8863b18f7a94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco52fdfafc0e034">
+		<description>Electron User 1-4 Anagrams (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="711">
+				<rom name="Electron User 1-4 Anagrams (1983)(Electron User)[CHAIN].uef" size="711" crc="13f8b68f" sha1="52fdfafc0e034f74d04abe99d9173d5dff9425b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco29f8e35cbf6d6">
+		<description>Electron User 1-4 Birthday (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="589">
+				<rom name="Electron User 1-4 Birthday (1983)(Electron User)[CHAIN].uef" size="589" crc="9ed61f24" sha1="29f8e35cbf6d6def9f04ab387f9aa5943ff607b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acob553856b9e9df">
+		<description>Electron User 1-4 Bomber (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1356">
+				<rom name="Electron User 1-4 Bomber (1983)(Electron User)[CHAIN].uef" size="1356" crc="0a2455ac" sha1="b553856b9e9dfd79f6bfe86c6ebb5595d17fb053"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoe0e90bcf6f571">
+		<description>Electron User 1-4 Buzzword (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="661">
+				<rom name="Electron User 1-4 Buzzword (1983)(Electron User)[CHAIN].uef" size="661" crc="630c1a3b" sha1="e0e90bcf6f571d52a451fc18967c3d2965311052"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoa9eb298241db4">
+		<description>Electron User 1-4 Candle (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="540">
+				<rom name="Electron User 1-4 Candle (1983)(Electron User)[CHAIN].uef" size="540" crc="d6aa7f83" sha1="a9eb298241db44869a05895e9d1369f37524e40c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco9af6d79f59df0">
+		<description>Electron User 1-4 Casting (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="739">
+				<rom name="Electron User 1-4 Casting (1983)(Electron User)[CHAIN].uef" size="739" crc="b33f3492" sha1="9af6d79f59df0a2bf146aefbe3ccc5ef4c69d297"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco36bb19900b9b6">
+		<description>Electron User 1-4 Combination (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1795">
+				<rom name="Electron User 1-4 Combination (1983)(Electron User)[CHAIN].uef" size="1795" crc="9d7a0515" sha1="36bb19900b9b6a791a10f5aec2e614b0857eaed1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoe7a7dc19c1ccb">
+		<description>Electron User 1-4 Cosmic (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="962">
+				<rom name="Electron User 1-4 Cosmic (1983)(Electron User)[CHAIN].uef" size="962" crc="20aacc1e" sha1="e7a7dc19c1ccb982f219e8df5ea0065538d5f9de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoc32a5d180740d">
+		<description>Electron User 1-4 Counting (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="655">
+				<rom name="Electron User 1-4 Counting (1983)(Electron User)[CHAIN].uef" size="655" crc="4a30621e" sha1="c32a5d180740d3eabc658544fd02ec2aa3453fd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoeaab501882722">
+		<description>Electron User 1-4 Dice (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="693">
+				<rom name="Electron User 1-4 Dice (1983)(Electron User)[CHAIN].uef" size="693" crc="7f70fc67" sha1="eaab501882722ce73b9238912170ae1f6dd3f3ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco63d960cacc81c">
+		<description>Electron User 1-4 Doodlebug (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1611">
+				<rom name="Electron User 1-4 Doodlebug (1983)(Electron User)[CHAIN].uef" size="1611" crc="04f949a0" sha1="63d960cacc81c1d6f13fb3d58c04bfd781fd3b7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco67ee0306eafc2">
+		<description>Electron User 1-4 Duck (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="994">
+				<rom name="Electron User 1-4 Duck (1983)(Electron User)[CHAIN].uef" size="994" crc="a8d5ba67" sha1="67ee0306eafc21da44215b26c48c54745cfb83db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acob780ee40694c6">
+		<description>Electron User 1-4 Euromap (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="3556">
+				<rom name="Electron User 1-4 Euromap (1983)(Electron User)[CHAIN].uef" size="3556" crc="37fe6fa4" sha1="b780ee40694c61a7f8f6eeda66b373ba170f1c53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acob4c365cebe2c7">
+		<description>Electron User 1-4 Firewheel (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="331">
+				<rom name="Electron User 1-4 Firewheel (1983)(Electron User)[CHAIN].uef" size="331" crc="36211699" sha1="b4c365cebe2c70a8141e53392f66d881a5205adb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco8691439107e60">
+		<description>Electron User 1-4 French (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1279">
+				<rom name="Electron User 1-4 French (1983)(Electron User)[CHAIN].uef" size="1279" crc="5dcd0f31" sha1="8691439107e60c072f9a6bdc22a4ee8099461cbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco65cb0fe874fbe">
+		<description>Electron User 1-4 Hangman (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1658">
+				<rom name="Electron User 1-4 Hangman (1983)(Electron User)[CHAIN].uef" size="1658" crc="8fc9a5de" sha1="65cb0fe874fbe738f02522b4cf80e9743efea8c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco74aec6b2bf3cc">
+		<description>Electron User 1-4 Interest (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="762">
+				<rom name="Electron User 1-4 Interest (1983)(Electron User)[CHAIN].uef" size="762" crc="6e487645" sha1="74aec6b2bf3ccb9218c7a463d90c2d11bf1e4b26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco35c343e47c105">
+		<description>Electron User 1-4 Kaldoscope (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1545">
+				<rom name="Electron User 1-4 Kaldoscope (1983)(Electron User)[CHAIN].uef" size="1545" crc="8106e40f" sha1="35c343e47c105a52fef3edfa3ec4687fccff7589"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco1705474285862">
+		<description>Electron User 1-4 Meteors (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="612">
+				<rom name="Electron User 1-4 Meteors (1983)(Electron User)[CHAIN].uef" size="612" crc="cf8abb9a" sha1="1705474285862ffc00f42bcd7a55de743e19662b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco4240f56333f6f">
+		<description>Electron User 1-4 Ring (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="258">
+				<rom name="Electron User 1-4 Ring (1983)(Electron User)[CHAIN].uef" size="258" crc="f6be3d05" sha1="4240f56333f6f9babe52f0a34da63972f9b341d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco4a904b2b9e5d1">
+		<description>Electron User 1-4 Rocket (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="495">
+				<rom name="Electron User 1-4 Rocket (1983)(Electron User)[CHAIN].uef" size="495" crc="50f8a765" sha1="4a904b2b9e5d17b2ebe066521adbb952aca60bf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco236f87df288ac">
+		<description>Electron User 1-4 Simon (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="792">
+				<rom name="Electron User 1-4 Simon (1983)(Electron User)[CHAIN].uef" size="792" crc="77fc8930" sha1="236f87df288ac77715e11d6bff7a277c77c58025"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco90a199460d05f">
+		<description>Electron User 1-4 Squares (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="670">
+				<rom name="Electron User 1-4 Squares (1983)(Electron User)[CHAIN].uef" size="670" crc="17eb47f4" sha1="90a199460d05f861af8402f8a4a5b78400ddb418"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoe32c31722e5de">
+		<description>Electron User 1-4 ThreeDee (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="539">
+				<rom name="Electron User 1-4 ThreeDee (1983)(Electron User)[CHAIN].uef" size="539" crc="b0fb3cd3" sha1="e32c31722e5ded179f85efea8dd98bd2bdae7da6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acobad1d950834ec">
+		<description>Electron User 1-4 Webwave (1983)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="477">
+				<rom name="Electron User 1-4 Webwave (1983)(Electron User)[CHAIN].uef" size="477" crc="5507082f" sha1="bad1d950834ec5ae9a4e3cdf801017b51d881962"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco36587ae69666f">
+		<description>Electron User 1-6 Bat (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="392">
+				<rom name="Electron User 1-6 Bat (19xx)(Electron User)[CHAIN].uef" size="392" crc="376567cb" sha1="36587ae69666f1240cf0b57073bc10b15cfb5d1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco07e64c8e47844">
+		<description>Electron User 1-6 Chargen (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="2386">
+				<rom name="Electron User 1-6 Chargen (19xx)(Electron User)[CHAIN].uef" size="2386" crc="1e2ba1e9" sha1="07e64c8e47844eebc982cdee1b4b068592f01165"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco5973760b84c10">
+		<description>Electron User 1-6 Chicken (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="2047">
+				<rom name="Electron User 1-6 Chicken (19xx)(Electron User)[CHAIN].uef" size="2047" crc="84596755" sha1="5973760b84c108576cff0ba828d7486d8d0179ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco21cb6ff343ad3">
+		<description>Electron User 1-6 Coffee (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="8676">
+				<rom name="Electron User 1-6 Coffee (19xx)(Electron User)[CHAIN].uef" size="8676" crc="26ccc474" sha1="21cb6ff343ad3decd904e3031e9abe439976751e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco4a1bf78da80dd">
+		<description>Electron User 1-6 Copter (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="448">
+				<rom name="Electron User 1-6 Copter (19xx)(Electron User)[CHAIN].uef" size="448" crc="c57c364d" sha1="4a1bf78da80ddf7027c9102c76fee98e8d49d467"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoea63644085718">
+		<description>Electron User 1-6 Counter (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="976">
+				<rom name="Electron User 1-6 Counter (19xx)(Electron User)[CHAIN].uef" size="976" crc="6ed1f0c9" sha1="ea63644085718f3ae43cccdc2fa99decf3e61903"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco041d64b395e3e">
+		<description>Electron User 1-6 Decider (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="589">
+				<rom name="Electron User 1-6 Decider (19xx)(Electron User)[CHAIN].uef" size="589" crc="3c1318e8" sha1="041d64b395e3e6745af10a7d7485c5e4929b62ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco0f1ffeb4c7d29">
+		<description>Electron User 1-6 Draw (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="283">
+				<rom name="Electron User 1-6 Draw (19xx)(Electron User)[CHAIN].uef" size="283" crc="a1e101bd" sha1="0f1ffeb4c7d2953a110029039e9a9b21bf94296a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco56449ec77ac60">
+		<description>Electron User 1-6 Mean (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="501">
+				<rom name="Electron User 1-6 Mean (19xx)(Electron User)[CHAIN].uef" size="501" crc="96a309d4" sha1="56449ec77ac604cb590308fcd704283691db7f32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco90a57a170b37e">
+		<description>Electron User 1-6 Parky (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1489">
+				<rom name="Electron User 1-6 Parky (19xx)(Electron User)[CHAIN].uef" size="1489" crc="43e6b2bf" sha1="90a57a170b37e2de9ca6622aba2ad7fdcda58f07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acod936cd43493e3">
+		<description>Electron User 1-6 Polygon (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1011">
+				<rom name="Electron User 1-6 Polygon (19xx)(Electron User)[CHAIN].uef" size="1011" crc="bd0737eb" sha1="d936cd43493e37b40c2b0e9c0b43ed6af7bedf64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco556ebc5a9d277">
+		<description>Electron User 1-6 Rabbits (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="829">
+				<rom name="Electron User 1-6 Rabbits (19xx)(Electron User)[CHAIN].uef" size="829" crc="aa00f928" sha1="556ebc5a9d27700a8565616d525ae968a42899f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco015b8f4b71ed4">
+		<description>Electron User 1-6 Reaction (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1191">
+				<rom name="Electron User 1-6 Reaction (19xx)(Electron User)[CHAIN].uef" size="1191" crc="b779cdf3" sha1="015b8f4b71ed4ab5136008a4c20411ae1544b08a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco4d34319d612f3">
+		<description>Electron User 1-6 Stone (19xx)(Micropower)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1201">
+				<rom name="Electron User 1-6 Stone (19xx)(Micropower)[CHAIN].uef" size="1201" crc="33a26e69" sha1="4d34319d612f3a59339d1ce02631b7c79d6ed440"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acod0880a9c9ad40">
+		<description>Electron User 1-6 Teaser (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="1742">
+				<rom name="Electron User 1-6 Teaser (19xx)(Electron User)[CHAIN].uef" size="1742" crc="808dc9ac" sha1="d0880a9c9ad407ace4c0398a710c375987f6b60d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco71727a99cd1b9">
+		<description>Electron User 3-5 Header (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="587">
+				<rom name="Electron User 3-5 Header (19xx)(Electron User)[CHAIN].uef" size="587" crc="ddecda4a" sha1="71727a99cd1b9fe12d5669041101ff2004dac30e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco6c27cded06f54">
+		<description>Electron User 3-5 Necromancer (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="5593">
+				<rom name="Electron User 3-5 Necromancer (19xx)(Electron User)[CHAIN].uef" size="5593" crc="fdd6b329" sha1="6c27cded06f54dc6aba5e18554daa021915a6349"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco9f0e5c564f8b5">
+		<description>Electron User 3-5 Peashoot (19xx)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="2933">
+				<rom name="Electron User 3-5 Peashoot (19xx)(Electron User)[CHAIN].uef" size="2933" crc="7b1680b6" sha1="9f0e5c564f8b5d27fd1e9c1cc0b0c1f16577a3ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acofba5056cfee8b">
+		<description>Electron User 8-10 (1990)(Electron User)[December][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="19706">
+				<rom name="Electron User 8-10 (1990)(Electron User)[December][CHAIN].uef" size="19706" crc="318b057d" sha1="fba5056cfee8b6453895b064388628bf7ffc28db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoc1d3c8c279f56">
+		<description>Electron User 8-7 (1990)(Electron User)[September][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="15725">
+				<rom name="Electron User 8-7 (1990)(Electron User)[September][CHAIN].uef" size="15725" crc="95f5ee21" sha1="c1d3c8c279f564858ef6b8658f898a054f197152"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco2ee1a1fba6cdf">
+		<description>Electron User 8-9 (1990)(Electron User)[November][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14008">
+				<rom name="Electron User 8-9 (1990)(Electron User)[November][CHAIN].uef" size="14008" crc="a9eaa00b" sha1="2ee1a1fba6cdf7641e60c13dcf0dddb6c4bc8cde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoad3541fa87158">
+		<description>Electron User 9-1 (1991)(Electron User)[March][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="10029">
+				<rom name="Electron User 9-1 (1991)(Electron User)[March][CHAIN].uef" size="10029" crc="3588df16" sha1="ad3541fa87158edd7a346a940b9fe64007bf4c38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco76a59e937baca">
+		<description>Electron User 9-2 (1991)(Electron User)[April][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="21831">
+				<rom name="Electron User 9-2 (1991)(Electron User)[April][CHAIN].uef" size="21831" crc="1d9bb524" sha1="76a59e937baca676d556ca33e4ab33b12c49c8d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco23b2c661652c6">
+		<description>F-14 Tomcat (1989)(D'N'A')[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="28633">
+				<rom name="F-14 Tomcat (1989)(D'N'A')[CHAIN].uef" size="28633" crc="4d85b37b" sha1="23b2c661652c6f2ee04bfe806a851bc00f628686"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acod40696f9a3654">
+		<description>Fantasia Diamond (198x)(Hewson Consultants)[b][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="15587">
+				<rom name="Fantasia Diamond (198x)(Hewson Consultants)[b][CHAIN].uef" size="15587" crc="b93cd4e2" sha1="d40696f9a36540b34946cc40927c78ca2f3568f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoded4f73d7d8ad">
+		<description>Felix Meets The Evil Weevils (198x)(Micropower)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="11130">
+				<rom name="Felix Meets The Evil Weevils (198x)(Micropower)[CHAIN].uef" size="11130" crc="5839dbc2" sha1="ded4f73d7d8ad837ca8424db326278a824cf9c4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco11f230ab02b86">
+		<description>Frak v0.2 (1986)(Aardvark Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="24355">
+				<rom name="Frak v0.2 (1986)(Aardvark Software)[CHAIN].uef" size="24355" crc="03086535" sha1="11f230ab02b86af619dffc72632e68b61d69d9f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoa134886b3d7d1">
+		<description>Gauntlet (198x)(Micropower)[a][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="11730">
+				<rom name="Gauntlet (198x)(Micropower)[a][CHAIN].uef" size="11730" crc="d2a97104" sha1="a134886b3d7d1756da5178575078d075a882fb82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acob0101493a9553">
+		<description>Guntus[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="17152">
+				<rom name="Guntus[-RUN].uef" size="17152" crc="8e73f778" sha1="b0101493a9553493f318b984e71094ca1a1f8153"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoda4be39d9c2f3">
+		<description>Hopman[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="13271">
+				<rom name="Hopman[-RUN].uef" size="13271" crc="c402e38b" sha1="da4be39d9c2f34610d774f5933fa1b5e4b4f9625"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acodd98b5ecc7e04">
+		<description>Identikit[b][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="4887">
+				<rom name="Identikit[b][CHAIN].uef" size="4887" crc="dbcdd97d" sha1="dd98b5ecc7e0402f4d54ff90d3f348f8ec7adc0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco44ccbeac88b3d">
+		<description>Inu (198x)(MRJ)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="8293">
+				<rom name="Inu (198x)(MRJ)[CHAIN].uef" size="8293" crc="8e878c19" sha1="44ccbeac88b3d9cdbccc9ac721e98eeae843d533"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco0fee148397f89">
+		<description>Jet Set Willy (198x)(Tynesoft)[a2][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="17244">
+				<rom name="Jet Set Willy (198x)(Tynesoft)[a2][CHAIN].uef" size="17244" crc="f8f8b3b8" sha1="0fee148397f8917a8208b63011ca7235e50e8a1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acob1b6145d5ba12">
+		<description>Jet Set Willy (198x)(Tynesoft)[a][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="17242">
+				<rom name="Jet Set Willy (198x)(Tynesoft)[a][CHAIN].uef" size="17242" crc="8d42b9f4" sha1="b1b6145d5ba121f942227e497b85d73e8e537eb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco3b82ad50bd668">
+		<description>Karate Combat (198x)(Superior Software)[a][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14565">
+				<rom name="Karate Combat (198x)(Superior Software)[a][CHAIN].uef" size="14565" crc="34a8d186" sha1="3b82ad50bd6689eadb96092e011d462b326f13a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco45319537db8e8">
+		<description>Killa (198x)(Bit Twidlers)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="10865">
+				<rom name="Killa (198x)(Bit Twidlers)[CHAIN].uef" size="10865" crc="1e332a75" sha1="45319537db8e8105679a7ba40a7734fd3b74dc74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoa3d552b9d8ed3">
+		<description>Lift[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="13575">
+				<rom name="Lift[-RUN].uef" size="13575" crc="1b062e0a" sha1="a3d552b9d8ed3c3be35055ac4542b3c9ae1a518f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco17226c1af3ed1">
+		<description>Mazy[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="9039">
+				<rom name="Mazy[-RUN].uef" size="9039" crc="61be2012" sha1="17226c1af3ed14c71c14ce9bfcebe6375afa7449"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco6ae5567d546e3">
+		<description>Micro Olympics (198x)(Electron User)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="25577">
+				<rom name="Micro Olympics (198x)(Electron User)[CHAIN].uef" size="25577" crc="c943040e" sha1="6ae5567d546e3aabf4220dada1e458e1497a6c5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco0b734b7f59a29">
+		<description>Mieyen[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14476">
+				<rom name="Mieyen[-RUN].uef" size="14476" crc="5f0732d9" sha1="0b734b7f59a293049cf2ba9708c961addb5196e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acobffe2f50f499a">
+		<description>Mr. Wiz (1984)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="6949">
+				<rom name="Mr. Wiz (1984)(Superior Software)[CHAIN].uef" size="6949" crc="58e87c2b" sha1="bffe2f50f499a0ca1e018bd60ed33752df2428f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco114f43b010eaf">
+		<description>Neuras[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="15183">
+				<rom name="Neuras[-RUN].uef" size="15183" crc="d010c113" sha1="114f43b010eaf39b9e02883bd29fa706efb8e1fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco83691b1e4f415">
+		<description>Osotos[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="15606">
+				<rom name="Osotos[-RUN].uef" size="15606" crc="a5431e54" sha1="83691b1e4f415b476ceadcbdbe758dea80de8fcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco16861b9fd7dbc">
+		<description>Overdrive (1984)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="5718">
+				<rom name="Overdrive (1984)(Superior Software)[CHAIN].uef" size="5718" crc="c011a713" sha1="16861b9fd7dbc2c5912a5678fc4dd3e9560ed3ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acocc8466a9b60df">
+		<description>Palace Of Magic (198x)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="15635">
+				<rom name="Palace Of Magic (198x)(Superior Software)[CHAIN].uef" size="15635" crc="c241f5cd" sha1="cc8466a9b60dfe76806d6493dcd5876a13d1ea51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco2ecdba1b5523d">
+		<description>Percy Penguin (1984)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="6097">
+				<rom name="Percy Penguin (1984)(Superior Software)[CHAIN].uef" size="6097" crc="329d0ae3" sha1="2ecdba1b5523d025bd1ac233b861bfee8978938c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco8b2d8ba34d922">
+		<description>Percy Penguin (1984)(Superior Software-Acornsoft)[a][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="6616">
+				<rom name="Percy Penguin (1984)(Superior Software-Acornsoft)[a][CHAIN].uef" size="6616" crc="af51d42b" sha1="8b2d8ba34d922e145d3ee733b4efb35adb1b9762"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoc907b2f272bae">
+		<description>Repton (1985)(Superior Software)[a3][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="17591">
+				<rom name="Repton (1985)(Superior Software)[a3][CHAIN].uef" size="17591" crc="71e38727" sha1="c907b2f272bae1d5952879d63537862ee265af7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acob3bf197a404c0">
+		<description>Repton (1985)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="17054">
+				<rom name="Repton (1985)(Superior Software)[CHAIN].uef" size="17054" crc="0d9bf3c0" sha1="b3bf197a404c088434faba80e284ad3103e2ba37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco3eb02825cbf99">
+		<description>Repton 2 (1985)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="18544">
+				<rom name="Repton 2 (1985)(Superior Software)[CHAIN].uef" size="18544" crc="5db59220" sha1="3eb02825cbf991997248ca53a9e2ed215d73b1cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoa7b347dbad3cc">
+		<description>Ruptus[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="18095">
+				<rom name="Ruptus[-RUN].uef" size="18095" crc="21b7c501" sha1="a7b347dbad3cc9ef88940a341c971cbe98f6513f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoe16c60f315f5f">
+		<description>Smash &amp; Grab (1984)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="9018">
+				<rom name="Smash &amp; Grab (1984)(Superior Software)[CHAIN].uef" size="9018" crc="85940081" sha1="e16c60f315f5fd5b60d05385fda5c8d1989382e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco72079d62e4937">
+		<description>Soccer Supremo - A Football League Managment Simulation (1986)(Qual-soft)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="9061">
+				<rom name="Soccer Supremo - A Football League Managment Simulation (1986)(Qual-soft)[CHAIN].uef" size="9061" crc="6e4fa0e5" sha1="72079d62e49373b0e13c6315e996087376bd4ab9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco167dbb80a2dff">
+		<description>Strykers Run (1986)(Superior Software)[a2][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14188">
+				<rom name="Strykers Run (1986)(Superior Software)[a2][CHAIN].uef" size="14188" crc="477c4a14" sha1="167dbb80a2dff220c4eec7dad34a9cf2b05330f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco92e63361e5c91">
+		<description>Strykers Run (1986)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14186">
+				<rom name="Strykers Run (1986)(Superior Software)[CHAIN].uef" size="14186" crc="b353fc15" sha1="92e63361e5c9192769f3e6eb2b275a8207d53bd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acof1de918d3bc1c">
+		<description>Thrust (1986)(Superior Software)[a2][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="19184">
+				<rom name="Thrust (1986)(Superior Software)[a2][CHAIN].uef" size="19184" crc="bfe12f4e" sha1="f1de918d3bc1c942ed9b3162e8d5f12195d764f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco7908af333fabb">
+		<description>Thrust (1986)(Superior Software)[CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="19189">
+				<rom name="Thrust (1986)(Superior Software)[CHAIN].uef" size="19189" crc="06ab4d26" sha1="7908af333fabb912a46485f79e80565a073fa707"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco65760ee2fca34">
+		<description>WhiteKnight Mk11 (1984)(BBC Soft)[a][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="12860">
+				<rom name="WhiteKnight Mk11 (1984)(BBC Soft)[a][CHAIN].uef" size="12860" crc="59ca8dee" sha1="65760ee2fca342a85fcc6af37ccc0208fe616607"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acof3c8af0b496f9">
+		<description>Yewdow[-RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14520">
+				<rom name="Yewdow[-RUN].uef" size="14520" crc="625af150" sha1="f3c8af0b496f9fbd906ad4cdf609a3ba0e397962"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco2f9d93bf3997a">
+		<description>Yie Ar Kung Fu (198x)(Konami-Imagine)[a][CHAIN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="19037">
+				<rom name="Yie Ar Kung Fu (198x)(Konami-Imagine)[a][CHAIN].uef" size="19037" crc="0da59316" sha1="2f9d93bf3997aafb914b071d4ce549a18476747e"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1398 -->
+<!-- Number of items in this list = 1426 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -889,6 +889,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39906">
 				<rom name="3DC (1987)(Hit Pak).tap" size="39906" crc="9b1f7c10" sha1="651ff4dec08c228f33f2ff780c7b32dfe3736411"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdab7899ff8a41">
+		<description>3DNOUGHT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8460">
+				<rom name="3DNOUGHT.TAP" size="8460" crc="fbbbe651" sha1="dab7899ff8a410e878bf9d36cdee53e717927d93"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2192,6 +2202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs783685a423d87">
+		<description>africans</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10411">
+				<rom name="africans.tap" size="10411" crc="88ab39bf" sha1="783685a423d87c228cd2f7302ce4e9166a53d11b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs02175f6292d35">
 		<description>After Shock (1986)(Interceptor Micros Software)</description>
 		<year>????</year>
@@ -3182,6 +3202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf1fdcac03def0">
+		<description>ALIENS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2768">
+				<rom name="ALIENS.TAP" size="2768" crc="a4286a3a" sha1="f1fdcac03def0e80ce1f2c433bddfd19e3aca5a9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsad904f70292b2">
 		<description>Alky Ollie (1986)(Firecracker Software)</description>
 		<year>????</year>
@@ -4012,6 +4042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs76241aef837f4">
+		<description>APPLECAT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4068">
+				<rom name="APPLECAT.TAP" size="4068" crc="d2c1d5f3" sha1="76241aef837f42db28b2f515cc52969cb88e6a96"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7dc7c156c3f0f">
 		<description>Appleman (1984)(Load 'n' Run)(Sp)</description>
 		<year>????</year>
@@ -4642,6 +4682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsfa725e9c8aedf">
+		<description>ASTAHEAD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4148">
+				<rom name="ASTAHEAD.TAP" size="4148" crc="47d57244" sha1="fa725e9c8aedf022c80e3bb56817f68418ff7fd9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs66762b36a6168">
 		<description>Asterix &amp; The Magic Cauldron (1985)(Melbourne House)</description>
 		<year>????</year>
@@ -4779,6 +4829,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="23087">
 				<rom name="Astrosmash! ZX (2018)(AMCgames).tap" size="23087" crc="b3fc0c89" sha1="078523166b6bab6fb52d77f1526a6e86f058ac61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa517d2cf626eb">
+		<description>ASTRZONE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4605">
+				<rom name="ASTRZONE.TAP" size="4605" crc="fedb86b3" sha1="a517d2cf626eb316a880d4173adde224ed992242"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7612,6 +7672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0618ce1579f4c">
+		<description>Block Buster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6638">
+				<rom name="Block Buster.tzx" size="6638" crc="706f8d16" sha1="0618ce1579f4c208aa97bffb4b1da7d30e4e08de"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf40a0e7334289">
 		<description>Block-Dizzy 48K (1992)(Your Sinclair)</description>
 		<year>????</year>
@@ -8812,6 +8882,206 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbcce8213e176e">
+		<description>Inferno</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8517">
+				<rom name="Inferno.tzx" size="8517" crc="ad53b6c9" sha1="bcce8213e176ea41352106bcb73d251cb93f5124"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2fe8e0727764d">
+		<description>Magic Johnson's Basketball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="88275">
+				<rom name="Magic Johnson's Basketball.tzx" size="88275" crc="3da381c7" sha1="2fe8e0727764db2b95f132edca214137e61f65c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf708488a36073">
+		<description>Mailstrom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48874">
+				<rom name="Mailstrom.tzx" size="48874" crc="69785795" sha1="f708488a36073f16e0284311cfb96068091a84fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e282447aab6a">
+		<description>Manic Miner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33299">
+				<rom name="Manic Miner.tzx" size="33299" crc="3b212860" sha1="2e282447aab6a32e893767aa30d3c067b5bd45af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff143eeda13cc">
+		<description>Marauder</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54167">
+				<rom name="Marauder.tzx" size="54167" crc="9454e33a" sha1="ff143eeda13ccbe13df741df342e5f645ad80d26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd094e6c6106a0">
+		<description>Mario Bros</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55220">
+				<rom name="Mario Bros.tzx" size="55220" crc="a90e2af2" sha1="d094e6c6106a0a835bdcd8e5540a2f2488207130"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc4a5cfef8f2ab">
+		<description>Mask III - Venom Strikes Back</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49244">
+				<rom name="Mask III - Venom Strikes Back.tzx" size="49244" crc="d1dbfd26" sha1="c4a5cfef8f2abb8574384bb525aa39fcb36cf668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs52bdf7b7b03ff">
+		<description>Match Day II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51816">
+				<rom name="Match Day II.tzx" size="51816" crc="2a924355" sha1="52bdf7b7b03ff83e701ad8a13eaf56e86cc3309e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs841c33fa16971">
+		<description>Mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7668">
+				<rom name="Mazy.tzx" size="7668" crc="e47854d9" sha1="841c33fa16971d20d0095713273a383894eb6066"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66592832f86cd">
+		<description>Mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2646105">
+				<rom name="Mazy.wav" size="2646105" crc="d1a8ceb9" sha1="66592832f86cde0075372848e43af9822e2d4d60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa45b21e120973">
+		<description>Mercs</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="191425">
+				<rom name="Mercs.tzx" size="191425" crc="4dea37be" sha1="a45b21e120973333700fd6a9556b013532799e63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5aa3a9e84be9b">
+		<description>Metro-Cross</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52348">
+				<rom name="Metro-Cross.tzx" size="52348" crc="f2723bb7" sha1="5aa3a9e84be9b3cf591d22133362b441eab02ff6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs04dffe755a27e">
+		<description>Miami Cobra GT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56343">
+				<rom name="Miami Cobra GT.tzx" size="56343" crc="9c87f864" sha1="04dffe755a27e251a0687593bd0d212e5db7152e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9321ed8f9a6ea">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9345">
+				<rom name="Mieyen.tzx" size="9345" crc="1c4449f1" sha1="9321ed8f9a6ea800628e9c14224d3beeabb9aca0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f9bce4905861">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3088921">
+				<rom name="Mieyen.wav" size="3088921" crc="b0b5bdbb" sha1="6f9bce4905861ac8e73b2e6a2d2aacd4cd24431c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb4eb6cf66dbe6">
+		<description>Mister Gas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31255">
+				<rom name="Mister Gas.tzx" size="31255" crc="eba6a6ef" sha1="b4eb6cf66dbe63ed46c07db987f238b1c1492a36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbab1199508ea6">
+		<description>Mortadelo Y Filemon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50119">
+				<rom name="Mortadelo Y Filemon.tzx" size="50119" crc="57cd2bda" sha1="bab1199508ea6cd643d2e876f9fdb916713705c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbd1b4c1b2c512">
+		<description>Motorbike Madness</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68553">
+				<rom name="Motorbike Madness.tzx" size="68553" crc="e20e2fd9" sha1="bd1b4c1b2c512eb2606c039423023db365c24a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3773e2905a8dc">
+		<description>MyCopy4.4 Final Version</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4703">
+				<rom name="MyCopy4.4 Final Version.tzx" size="4703" crc="11159ef3" sha1="3773e2905a8dccd5bad67c817445d16b9bc7d0a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseb43e8c725e74">
+		<description>Mystical</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="253060">
+				<rom name="Mystical.tzx" size="253060" crc="a56a76af" sha1="eb43e8c725e748f7d9879872062640c6325d6752"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs62c8a9814c9d2">
 		<description>Narc</description>
 		<year>????</year>
@@ -8849,6 +9119,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="10077">
 				<rom name="Neuras.tzx" size="10077" crc="afef7c8e" sha1="27bd1d6f2065be03245879f036779b857d275283"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f58c3d943594">
+		<description>Neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3310417">
+				<rom name="Neuras.wav" size="3310417" crc="d26ece34" sha1="6f58c3d943594caf004eb9782fcf2a704c188ca1"/>
 			</dataarea>
 		</part>
 	</software>

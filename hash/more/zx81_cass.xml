@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1000 -->
+<!-- Number of items in this list = 1021 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx13e7d1225a731f">
 		<description>10</description>
@@ -4382,6 +4382,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx150251c5c5a5ca">
+		<description>HAMMURAB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6843">
+				<rom name="HAMMURAB.P" size="6843" crc="df9e4e33" sha1="50251c5c5a5ca89b0650843c17eff694a833e9bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d4b998acf5b2a">
+		<description>HANGMAN (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3832">
+				<rom name="HANGMAN (2).P" size="3832" crc="16c16017" sha1="d4b998acf5b2a2d723f349ebcf766010046826cd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1850d39bafc84f">
 		<description>HANGMAN</description>
 		<year>????</year>
@@ -4389,6 +4409,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="3702">
 				<rom name="HANGMAN.P" size="3702" crc="0b140ecf" sha1="850d39bafc84f63a2a8bb2335f6cb96a52c44aeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx110811612121f0">
+		<description>HANGMAN_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="5459">
+				<rom name="HANGMAN_1.P" size="5459" crc="b22d2688" sha1="10811612121f0ef3c0d252e697a9072b3c035911"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4412,6 +4442,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx106887faa2ba4c">
+		<description>HANOI-DE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3628">
+				<rom name="HANOI-DE.P" size="3628" crc="8d90f5a2" sha1="06887faa2ba4c3b0fb62ccd141ceffd337f73329"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1cbe851ef875be">
+		<description>HANOI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="3634">
+				<rom name="HANOI.P" size="3634" crc="40971f59" sha1="cbe851ef875be7107362f9e448d3138b8be895a0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx153cb52a878833">
 		<description>haydn</description>
 		<year>????</year>
@@ -4419,6 +4469,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="1364">
 				<rom name="haydn.p" size="1364" crc="3cdc9e70" sha1="53cb52a87883365284740d3c3f217f3dad80f7fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1e1b0442d1c922">
+		<description>HELI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2091">
+				<rom name="HELI.P" size="2091" crc="c3bdc45e" sha1="e1b0442d1c9225688ed0dec35ad9487b440a6ff4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4452,6 +4512,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx124908ad4f593c">
+		<description>HEXDUMP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1494">
+				<rom name="HEXDUMP.P" size="1494" crc="4fc22d2f" sha1="24908ad4f593c3f06243a58313725989f6df3078"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1f585a84a6a2e6">
+		<description>HEXLOADE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1612">
+				<rom name="HEXLOADE.P" size="1612" crc="7f1d1104" sha1="f585a84a6a2e61354c962040634ada1721bc889f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx147a44c1db0722">
+		<description>HEXLOADE_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1986">
+				<rom name="HEXLOADE_1.P" size="1986" crc="0771c589" sha1="47a44c1db0722cfab22af8180b344b139a1e375b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1817628784ba8d">
+		<description>HEXMONIT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1570">
+				<rom name="HEXMONIT.P" size="1570" crc="d63336fb" sha1="817628784ba8da5db7a8707d966d39d18a8b7294"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1f0f121b3488ca">
 		<description>hexpeekr</description>
 		<year>????</year>
@@ -4459,6 +4559,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="2909">
 				<rom name="hexpeekr.p" size="2909" crc="d086bd98" sha1="f0f121b3488cae31f6a3c1cdbef8a1aabe644e6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d8d2513e47568">
+		<description>HI-RES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4868">
+				<rom name="HI-RES.P" size="4868" crc="d415903f" sha1="d8d2513e4756824a5d55b7b9a78a363dad6b1c30"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4472,6 +4582,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1c4212e678a423">
+		<description>HIRES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="2725">
+				<rom name="HIRES.P" size="2725" crc="ace0ca01" sha1="c4212e678a4235cf15cc27cb16e3c813dd1aed9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx16089bbfa79db9">
+		<description>HISTOGRA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1917">
+				<rom name="HISTOGRA.P" size="1917" crc="3ff6dba2" sha1="6089bbfa79db93787d2b01865349f0c753e878e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1cf54e00af449e">
+		<description>HITCH-HI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="14637">
+				<rom name="HITCH-HI.P" size="14637" crc="916d676c" sha1="cf54e00af449e66c3775dac367d06dc81fc50df1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1ced61c16da81e">
 		<description>HITCH</description>
 		<year>????</year>
@@ -4479,6 +4619,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="14650">
 				<rom name="HITCH.P" size="14650" crc="8da3fabd" sha1="ced61c16da81e95ca6c45e4590097c6591b6dc75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx193073061200ae">
+		<description>HOGER-LA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1366">
+				<rom name="HOGER-LA.P" size="1366" crc="cd249801" sha1="93073061200ae70d878be7889fe585a6c4fd9678"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4502,6 +4652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx12195e78ad950e">
+		<description>HOOFDSTA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4572">
+				<rom name="HOOFDSTA.P" size="4572" crc="e7a8c899" sha1="2195e78ad950e3b08b21844f4098879bb4614d25"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1c1c76a39d70e0">
 		<description>hopman</description>
 		<year>????</year>
@@ -4509,6 +4669,26 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="4010448">
 				<rom name="hopman.wav" size="4010448" crc="e4e40846" sha1="c1c76a39d70e0d8609e66a9c142fbafa295f0054"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1120f179f02be3">
+		<description>HOPPER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="10968">
+				<rom name="HOPPER.P" size="10968" crc="131e3af2" sha1="120f179f02be3fa2c43f8bdf9979c0f70ebc4485"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1622237f7723db">
+		<description>HORSERAC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="1932">
+				<rom name="HORSERAC.P" size="1932" crc="0140f25a" sha1="622237f7723db29b448e30462604fe4c1a1929c1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4539,6 +4719,26 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="2227">
 				<rom name="HURKLE.P" size="2227" crc="638bfd6f" sha1="5521035c4abb87aaa66df7d44477b8e1a7a20f25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ac01a8e3e2945">
+		<description>HYDROCAR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="6136">
+				<rom name="HYDROCAR.P" size="6136" crc="047d4549" sha1="ac01a8e3e294580b4f73548b64f603a4f7ec1adc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx14b53b3f668dca">
+		<description>HYPOTHEE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8220">
+				<rom name="HYPOTHEE.P" size="8220" crc="3f44063f" sha1="4b53b3f668dcaa91cc448002b542ec59604a3b41"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5499,6 +5699,16 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="3500">
 				<rom name="MICROMAU.P" size="3500" crc="f8c21a42" sha1="fd79eee657c48d4cf251e7f708b1f34bc7871dcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1ecd84472b8053">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7746624">
+				<rom name="Mieyen.wav" size="7746624" crc="f3fdfbaf" sha1="ecd84472b80533cae428f428893837fdb830896b"/>
 			</dataarea>
 		</part>
 	</software>
