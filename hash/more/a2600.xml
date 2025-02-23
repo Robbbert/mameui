@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7146 -->
+<!-- Number of items in this list = 7381 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -43272,6 +43272,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26c81bdcb9a2820">
+		<description>J-Pac (Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="J-Pac (Pac-Man Hack).a26" size="4096" crc="323efca0" sha1="c81bdcb9a28200d40b82fefae74a38b4853d87d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26faa57e60cf18e">
+		<description>Jack and the Beanstalk 1.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jack and the Beanstalk 1.bas.a26" size="4096" crc="cd53ea40" sha1="faa57e60cf18e9d5ba5691d5b2d77be349309f81"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26058d0f6c6ba3d">
 		<description>jack10.bas</description>
 		<year>????</year>
@@ -43359,6 +43379,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="jack19.bas.a26" size="16384" crc="67cf1b55" sha1="b2a768ced85da5ca1613dcd036c657ecf6c33627"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d542ce8c3dabc">
+		<description>jack2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jack2.bas.a26" size="4096" crc="924042a6" sha1="d542ce8c3dabc2abe97fff54e091348eccc32c19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44022,6 +44052,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a264604277c4ce19">
+		<description>Jaibreak beta (Pitfall! hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jaibreak beta (Pitfall! hack).a26" size="4096" crc="db3eca2e" sha1="4604277c4ce19a1d8d5e9f26840af258c3775981"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c00124f9e80f4">
+		<description>Jam Demo 1 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jam Demo 1 (PD).a26" size="4096" crc="aff1272f" sha1="c00124f9e80f4fda6b59e213c15e77fd96f13dcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c7ab6ece51bf9">
+		<description>Jam Demo 2 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jam Demo 2 (PD).a26" size="4096" crc="3d9b81fc" sha1="c7ab6ece51bf9db96d3e82bb9036d02934aa4af0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f4472788de446">
+		<description>James Bond 007 (1984) (Parker Bros) [hMF6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="James Bond 007 (1984) (Parker Bros) [hMF6].a26" size="16384" crc="49972380" sha1="f4472788de446da7a73febfa18870cfe5cbb2a1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26452ae17144ae4">
+		<description>Jammed (2003) (XYPE) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jammed (2003) (XYPE) [a1].a26" size="4096" crc="ff3e0e9e" sha1="452ae17144ae4651b2863a46cb014f4278011ac1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bcc5a02c57a55">
+		<description>Jammed (V0.1) (Demo) (2002) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jammed (V0.1) (Demo) (2002) (TJ).a26" size="4096" crc="0b7e969f" sha1="bcc5a02c57a550d591bfb5645b12e6ee0cd69d0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268cf695e43926c">
+		<description>Jammed (V0.2) (Demo) (2003) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jammed (V0.2) (Demo) (2003) (TJ).a26" size="4096" crc="901f4808" sha1="8cf695e43926cf46b5fbe1ac5ac7a2b2d513280a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ea5c827052886">
+		<description>Jammed Demo (1999) (Hozer Video Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jammed Demo (1999) (Hozer Video Games).a26" size="4096" crc="e45bb40f" sha1="ea5c827052886908c0deaa0a03d6f8da8e4f298d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26d26ba79e1d869">
 		<description>jatbend.bas</description>
 		<year>????</year>
@@ -44029,6 +44139,166 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="2048">
 				<rom name="jatbend.bas.a26" size="2048" crc="3cc88446" sha1="d26ba79e1d86911baca7cd95c01569cc200da880"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eccd11565f300">
+		<description>Jawbreaker (1983) (Tigervision) (PAL) [t1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jawbreaker (1983) (Tigervision) (PAL) [t1].a26" size="4096" crc="a3851d61" sha1="eccd11565f3007d38ff4b7be6ecb376bc41254ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260f70ca383254d">
+		<description>Jawbreaker - Infinite Lives Hack_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jawbreaker - Infinite Lives Hack_3.a26" size="4096" crc="f143d4ba" sha1="0f70ca383254dfb6dda72d25a122c496e94f4716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a78bbe0a0b0aa">
+		<description>Jawbreaker Easy (Jawbreaker Hack) (2007) (Scott Dayton)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jawbreaker Easy (Jawbreaker Hack) (2007) (Scott Dayton)_2.a26" size="4096" crc="05c33c04" sha1="a78bbe0a0b0aae250a5b417b36d05dee4c47ef12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268c2b10416af51">
+		<description>Jawbreaker_NTSC(Supercharger)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jawbreaker_NTSC(Supercharger)_2.a26" size="4096" crc="fac365b9" sha1="8c2b10416af5144419dd9a7b829ea2a148c5a746"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26545785998362b">
+		<description>Jawbreaker_PAL60(Supercharger)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jawbreaker_PAL60(Supercharger)_2.a26" size="4096" crc="827987aa" sha1="545785998362b0ad84b8113e38df0f2395cbf715"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb50c52f4fa68">
+		<description>JAWS 3-D The First Interactive Atari Game (Star Wars - The Empire Strikes Back Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="JAWS 3-D The First Interactive Atari Game (Star Wars - The Empire Strikes Back Hack).a26" size="4096" crc="ce62fb61" sha1="bb50c52f4fa689c57f5b2b20e2bf1cb5f6704bc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cbb49776de8b0">
+		<description>Jaws Unleashed 2600 Edition V2.0 (Texas Chainsaw Massacre Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jaws Unleashed 2600 Edition V2.0 (Texas Chainsaw Massacre Hack).a26" size="4096" crc="f8b7bed3" sha1="cbb49776de8b05db8b96b373b32ec81adc202cff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269ada55acc48a2">
+		<description>jaws2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jaws2.a26" size="4096" crc="667615f6" sha1="9ada55acc48a2545ed1fbf132e16558d15147cdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269445ece0980e6">
+		<description>jct3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="jct3.a26" size="16384" crc="80aec7d8" sha1="9445ece0980e67c35a776c9f2f681a237662a589"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265858d511b02cf">
+		<description>JetMan (2007) (Chris Walton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="JetMan (2007) (Chris Walton).a26" size="2048" crc="8067c111" sha1="5858d511b02cf01fecc5c23ff04893ff41d86d90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26af3fabeb110e1">
+		<description>JetMan (Final Version) (2006) (Chris Walton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="JetMan (Final Version) (2006) (Chris Walton).a26" size="2048" crc="c977eac8" sha1="af3fabeb110e1e8fb8fe3c63c9086bbce142b7a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26787134814ee10">
+		<description>jetman 16-08-2007.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jetman 16-08-2007.bas.a26" size="4096" crc="7a1f6d4b" sha1="787134814ee1040fe1b82ed4345a61f614300b59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d11e123dbe93">
+		<description>JetMan v0.1 (2005) PD by Chris Waltman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="JetMan v0.1 (2005) PD by Chris Waltman.a26" size="2048" crc="02903ea5" sha1="7d11e123dbe93800c30cefb6641b60f75c1975ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ca29b6fa75fc9">
+		<description>Jgame (Fred Quimby) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jgame (Fred Quimby) [a1].a26" size="4096" crc="0b6a41c2" sha1="ca29b6fa75fc93365255aeb4b1e69f3ee04b92f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f1eb6583022e4">
+		<description>Jgame (Fred Quimby) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jgame (Fred Quimby) [a2].a26" size="4096" crc="fd030f87" sha1="f1eb6583022e48e9da52114d327193f5a22bbbed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266dc2b681f6939">
+		<description>Jgame (Fred Quimby)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jgame (Fred Quimby).a26" size="4096" crc="28b626fb" sha1="6dc2b681f69399a52b4375be5cbed238eb5a2074"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44042,6 +44312,626 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a260d4dd31566b9e">
+		<description>Jitter (2005-10-16) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jitter (2005-10-16) (Simone Serra).a26" size="4096" crc="39346515" sha1="0d4dd31566b9e2bf7b64efdf8518063025dd92a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b3955a5747dc4">
+		<description>Jitter (2005-10-23) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jitter (2005-10-23) (Simone Serra).a26" size="4096" crc="d4bd6e6f" sha1="b3955a5747dc47c89c7bee9c0dade49d0ebe826a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26188f9f7c07197">
+		<description>Jitter (2007) (Simone Serra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jitter (2007) (Simone Serra).a26" size="4096" crc="b36b7589" sha1="188f9f7c07197035ba7c1f4ac038819ff4196c73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2638173a0ace3fa">
+		<description>JKH Text Scrolling Demo (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="JKH Text Scrolling Demo (PD).a26" size="4096" crc="95269c86" sha1="38173a0ace3fac84e78a47892f52b97e9076110b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2611da96a7b486d">
+		<description>jmandemo2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jmandemo2.a26" size="4096" crc="b063b6d6" sha1="11da96a7b486d31340f884211596d3f0bd34dc0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260d94c1caacb86">
+		<description>John K Harvey's Equalizer (PD) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="John K Harvey's Equalizer (PD) (PAL).a26" size="4096" crc="58ba1620" sha1="0d94c1caacb862d9e0b4c2dda121cd4d74a1cced"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264438f3ef4adbc">
+		<description>John K Harvey's Equalizer (PD) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="John K Harvey's Equalizer (PD) [a1].a26" size="4096" crc="93d713f9" sha1="4438f3ef4adbc6714c275446c9fb6350df86e8ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26efe8b7df15790">
+		<description>John K Harvey's Equalizer (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="John K Harvey's Equalizer (PD).a26" size="4096" crc="2d913ad2" sha1="efe8b7df15790d1bd2c1d313a97eec0f139a4ffb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fb915c1afc174">
+		<description>Joshua Invaders (Space Invaders Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joshua Invaders (Space Invaders Hack).a26" size="4096" crc="7c00e04e" sha1="fb915c1afc1740994502005802ef39f1347ee55d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262647c00f3000e">
+		<description>Journey-Escape(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Journey-Escape(Supercharger).a26" size="4096" crc="268a951b" sha1="2647c00f3000ec8a2fb5b21440c5ed7d7a9d429d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261e3d50bbc207e">
+		<description>Joust (1982) (Atari) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Joust (1982) (Atari) [!].a26" size="8192" crc="1d26932e" sha1="1e3d50bbc207eaab3015770824a08ce9828c2c4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26411e11718ce43">
+		<description>Joust (1983) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Joust (1983) (Atari) (PAL) [a1][!].a26" size="8192" crc="97a9bf3f" sha1="411e11718ce43493faabbb814b1eddb40dfd62e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2652d13fa812bcb">
+		<description>Joust Pong (20030822)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20030822).a26" size="4096" crc="c6b84a80" sha1="52d13fa812bcbb46d17c568c1dd01375c7bfb501"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c9253f573b820">
+		<description>Joust Pong (20030823)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20030823).a26" size="4096" crc="b7926ff6" sha1="c9253f573b820463f58617a1641a11ab699dc6c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd59ac0971a1c">
+		<description>Joust Pong (20030824)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20030824).a26" size="4096" crc="5ae9839f" sha1="dd59ac0971a1c4fbb33ae397fd88fe240c9bd067"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260c509c4fd7a4a">
+		<description>Joust Pong (20030825)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20030825).a26" size="4096" crc="bd4373d4" sha1="0c509c4fd7a4ab0f27b4b6b69f819827ca6daeb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e75f7c5b4d199">
+		<description>Joust Pong (20030830)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20030830).a26" size="4096" crc="45dacd4f" sha1="e75f7c5b4d199f4c069f43927d1304c0bdb4c4f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268fc5b0d43dae8">
+		<description>Joust Pong (20030904)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20030904).a26" size="4096" crc="4199b0ee" sha1="8fc5b0d43dae89116890e998e0e3e0836a34d31d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262cd9e7a2ccedf">
+		<description>Joust Pong (20030908)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20030908).a26" size="4096" crc="c30e71da" sha1="2cd9e7a2ccedf3cd2343986502b4aeb43297311e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269a831c290a083">
+		<description>Joust Pong (20031013)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20031013).a26" size="4096" crc="34c4e138" sha1="9a831c290a083528958eaf9dede30fdc6bf36098"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262bf4f6e76590e">
+		<description>Joust Pong (20040203)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20040203).a26" size="4096" crc="c0bb8df3" sha1="2bf4f6e76590e240ccc8b6bd2d5f165210108f98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26657eeba73f967">
+		<description>Joust Pong (20040227)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20040227).a26" size="4096" crc="a2ebc213" sha1="657eeba73f9673439d4646638e88b42aa3fa6e9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fd24ed61a902e">
+		<description>Joust Pong (20040228)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20040228).a26" size="4096" crc="62dd8bc6" sha1="fd24ed61a902ef410bafe3a3de468b0a9a347857"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688c41359f486f">
+		<description>Joust Pong (20040301)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20040301).a26" size="4096" crc="c45a7c2e" sha1="88c41359f486f89aa42a4264c6d27f23b8d6bdef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26292efa919c558">
+		<description>Joust Pong (20040307)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20040307).a26" size="4096" crc="eaabb91f" sha1="292efa919c55874437535f73dc6cff97eff068d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26110c83fe6aa42">
+		<description>Joust Pong (20040309)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20040309).a26" size="4096" crc="b45c8c35" sha1="110c83fe6aa4209896f2443a8a01cc8e94a860b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0d62a598ed62">
+		<description>Joust Pong (20040310) (Fixed)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20040310) (Fixed).a26" size="4096" crc="b0bf45cb" sha1="b0d62a598ed62bbc729230098f6588f4c20c4669"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c780548e31727">
+		<description>Joust Pong (20040314)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (20040314).a26" size="4096" crc="0c2f567f" sha1="c780548e31727247260d123309dbbef4bbd686db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2642e4a4a9e0b27">
+		<description>Joust Pong (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong (Kirk Israel) (PD).a26" size="4096" crc="1b95865a" sha1="42e4a4a9e0b27d4d0adc277d1d45c19744b1663a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264d7001f7fd168">
+		<description>Joust Pong 20020507 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20020507 (Kirk Israel) (PD).a26" size="4096" crc="6fd481df" sha1="4d7001f7fd1686e4002fc2f2ec0b55af648fb801"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26736a65fa2b821">
+		<description>Joust Pong 20020607 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20020607 (Kirk Israel) (PD).a26" size="4096" crc="7d3001d6" sha1="736a65fa2b821057694086ed3ce088a88e6e87bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261a30bc008580a">
+		<description>Joust Pong 20021407 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20021407 (Kirk Israel) (PD).a26" size="4096" crc="820d2244" sha1="1a30bc008580ac9660d6072fce1869ff291316d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cf4c71166f5ee">
+		<description>Joust Pong 20021609 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20021609 (Kirk Israel) (PD).a26" size="4096" crc="2727081d" sha1="cf4c71166f5ee2eb669280df61ccdb4d1c9117ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f17f82e0ad66e">
+		<description>Joust Pong 20022109 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20022109 (Kirk Israel) (PD).a26" size="4096" crc="7cfa050e" sha1="f17f82e0ad66e6282f2b1a195cd399276816218f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262cf5cc51f386a">
+		<description>Joust Pong 20030827 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030827 (Kirk Israel) (PD).a26" size="4096" crc="9920c71c" sha1="2cf5cc51f386a45a3d682451a57810e2c78da162"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fa3bf6d06bca0">
+		<description>Joust Pong 20030828 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030828 (Kirk Israel) (PD).a26" size="4096" crc="c3f00748" sha1="fa3bf6d06bca0cc3df21506103faa103932afdb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267c5f4bbcd5ebf">
+		<description>Joust Pong 20030829 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030829 (Kirk Israel) (PD).a26" size="4096" crc="a3258602" sha1="7c5f4bbcd5ebfac03c52a7ec14acfbdd65afbe5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26790382ebb9460">
+		<description>Joust Pong 20030831 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030831 (Kirk Israel) (PD).a26" size="4096" crc="c7841fca" sha1="790382ebb94605347b489482f021626e71440b1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26db1bcdf2155d8">
+		<description>Joust Pong 20030907 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030907 (Kirk Israel) (PD).a26" size="4096" crc="ea6fd142" sha1="db1bcdf2155d8d8a222ab258def3c2663125eb27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26560804ab79a84">
+		<description>Joust Pong 20030909 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030909 (Kirk Israel) (PD).a26" size="4096" crc="cb1caf27" sha1="560804ab79a8416a84b2fa5b9dabb5154dff7405"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263806ddd219b1f">
+		<description>Joust Pong 20030910 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030910 (Kirk Israel) (PD).a26" size="4096" crc="5dc843b6" sha1="3806ddd219b1fb1340486abb99e99d0fbf7bd259"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26590976cba3fc4">
+		<description>Joust Pong 20030915 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030915 (Kirk Israel) (PD).a26" size="4096" crc="b764e51c" sha1="590976cba3fc43dcc5ea42eba808b0611a24da6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2628f5864902d5a">
+		<description>Joust Pong 20030916 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030916 (Kirk Israel) (PD).a26" size="4096" crc="f20d2077" sha1="28f5864902d5a1726bcbd18932f790b6909ca294"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263d4ba62055297">
+		<description>Joust Pong 20030921 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20030921 (Kirk Israel) (PD).a26" size="4096" crc="8b87c202" sha1="3d4ba620552973b5db8bc10d924682135562939c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a0e2882195157">
+		<description>Joust Pong 20040205 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040205 (Kirk Israel) (PD).a26" size="4096" crc="519a1d82" sha1="a0e2882195157413b6d2a9c745bacc5f022bd3da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d1e01e5fecebe">
+		<description>Joust Pong 20040212 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040212 (Kirk Israel) (PD).a26" size="4096" crc="d05d2f16" sha1="d1e01e5fecebeec9c7b21d83cede6301c9cb3cff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d9da3202ddd78">
+		<description>Joust Pong 20040215 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040215 (Kirk Israel) (PD).a26" size="4096" crc="6c48b975" sha1="d9da3202ddd78b284ee2121c3852f97ddf09d91c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2668fcdf733fc5b">
+		<description>Joust Pong 20040218 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040218 (Kirk Israel) (PD).a26" size="4096" crc="f5bfc552" sha1="68fcdf733fc5b527688114f362d11d70a33c4244"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d1c5a0c7412f2">
+		<description>Joust Pong 20040222 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040222 (Kirk Israel) (PD).a26" size="4096" crc="87c4e0c9" sha1="d1c5a0c7412f244afe9c4d1b1fbe0b066dc9ac68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26196ec7303e53f">
+		<description>Joust Pong 20040226 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040226 (Kirk Israel) (PD).a26" size="4096" crc="c2565986" sha1="196ec7303e53f9d72b8c9133825068a87ea73b73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263df73d559a682">
+		<description>Joust Pong 20040226 (Paul Slocum)-1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040226 (Paul Slocum)-1.a26" size="4096" crc="a16acc9e" sha1="3df73d559a682a1e5fe35ad946fd6b61cb27a2c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c1180668185d2">
+		<description>Joust Pong 20040226 (Paul Slocum)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040226 (Paul Slocum).a26" size="4096" crc="18795b7f" sha1="c1180668185d2b4fd5e0983d503d133a2176fd8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2625ee35e9b69e5">
+		<description>Joust Pong 20040229 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040229 (Kirk Israel) (PD).a26" size="4096" crc="965bf987" sha1="25ee35e9b69e53569806d8b4be46955cef6eb3bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c0fcdc83645e1">
+		<description>Joust Pong 20040303 adding_speeds (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040303 adding_speeds (Kirk Israel) (PD).a26" size="4096" crc="08597e77" sha1="c0fcdc83645e19c54c619b88104a9fb3310f1751"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e09218cd99d2b">
+		<description>Joust Pong 20040303 copying_speed (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040303 copying_speed (Kirk Israel) (PD).a26" size="4096" crc="0f63a31b" sha1="e09218cd99d2bbee09c655c7bac4fead37f61432"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661b42f5d3f190">
+		<description>Joust Pong 20040308 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040308 (Kirk Israel) (PD).a26" size="4096" crc="d1766d6d" sha1="61b42f5d3f190677d715dd0859d9f63f346be066"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2661fd389486b93">
+		<description>Joust Pong 20040310 (Kirk Israel) (PD) [b1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040310 (Kirk Israel) (PD) [b1].a26" size="4096" crc="225b2013" sha1="61fd389486b93ddabbcc397e45078825e78e90b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fb0a05affd850">
+		<description>Joust Pong 20040311 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040311 (Kirk Israel) (PD).a26" size="4096" crc="58a6e41d" sha1="fb0a05affd8502227e746cf89dc4958a95cd312b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261bdae164622a6">
+		<description>Joust Pong 20040313 (Kirk Israel) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong 20040313 (Kirk Israel) (PD).a26" size="4096" crc="9e343ccb" sha1="1bdae164622a6043eace2a819fb50a378c45ce67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a937b2a79aae9">
+		<description>Joust Pong Flicker Test 20040223 (Paul Slocum)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong Flicker Test 20040223 (Paul Slocum).a26" size="4096" crc="3e06e549" sha1="a937b2a79aae9f487997a9714807d80d78e75483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c0dac4d145eaa">
+		<description>Joust Pong Flicker Test 20040224 (Paul Slocum)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong Flicker Test 20040224 (Paul Slocum).a26" size="4096" crc="fdeb28bb" sha1="c0dac4d145eaab29c8da46acf4d00bf3362b02d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f704616cd12e3">
+		<description>Joust Pong Neo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Joust Pong Neo.a26" size="4096" crc="d0659566" sha1="f704616cd12e3136113232babb2f35c01ee40153"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26f2d34cfc8908b">
 		<description>JoustPong Music (200x)(Israel, Kirk)(NTSC)(PD)</description>
 		<year>????</year>
@@ -44052,6 +44942,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a268f63fe7faf101">
+		<description>joystick demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="joystick demo.a26" size="4096" crc="c6533182" sha1="8f63fe7faf1013b9ad79009c5d0e0b00e5f54a43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2691e2c26be4e49">
+		<description>JPDEM1 (little seven-color paint program) John Payson</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="JPDEM1 (little seven-color paint program) John Payson.a26" size="2048" crc="102c51e7" sha1="91e2c26be4e4998b0a280bbe8c0f37aed2ea002e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e9bcc3242a1ab">
+		<description>Jr. Pac-Man (1985) (Atari) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jr. Pac-Man (1985) (Atari) [a1][!].a26" size="16384" crc="794748fe" sha1="e9bcc3242a1ab21b415ffca894ed6c628a37a2ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267424d9bc75ba5">
+		<description>Jr. Pac-Man - Infinite Lives Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jr. Pac-Man - Infinite Lives Hack.a26" size="16384" crc="3f393fdc" sha1="7424d9bc75ba572f6bfd8ad65b8f2c9a61e105ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268a6e59559f0bc">
+		<description>Jr. Pac-Man Speed Throttle by Nukey Shay (Hack) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jr. Pac-Man Speed Throttle by Nukey Shay (Hack) (PAL).a26" size="16384" crc="f964041f" sha1="8a6e59559f0bcde8149f9207c225d1a73c82356d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268877e99414dc9">
+		<description>Jr. Pac-Man Speed Throttle by Nukey Shay (Hack) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jr. Pac-Man Speed Throttle by Nukey Shay (Hack) [a1].a26" size="16384" crc="4fc0952b" sha1="8877e99414dc9faf03ae7874c8e1b7a2fce013ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bc2331f5b68b9">
+		<description>Jr. Pac-Man Speed Throttle by Nukey Shay (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jr. Pac-Man Speed Throttle by Nukey Shay (Hack).a26" size="16384" crc="ccba5f83" sha1="bc2331f5b68b9e3ea0ef85afafdb3fa06223d370"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a262448b3391e220">
 		<description>jr_pac_m</description>
 		<year>????</year>
@@ -44059,6 +45019,526 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="jr_pac_m.a26" size="16384" crc="6fe11909" sha1="2448b3391e22045b89bbe354d71a0cbf2b7de7e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2688a020cb12e0e">
+		<description>Jsrtrick 20040407 (Christopher Tumber)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jsrtrick 20040407 (Christopher Tumber).a26" size="4096" crc="84596677" sha1="88a020cb12e0ed3ea2cb70e294728e742aaefc47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2668aca42f69133">
+		<description>Jsrtrick 20040407 (Thelbane)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jsrtrick 20040407 (Thelbane).a26" size="4096" crc="972853c7" sha1="68aca42f69133a52ed7d2987b52b9bfd6774a9ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eff41ef13462a">
+		<description>jtest2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jtest2.a26" size="4096" crc="1e5e059b" sha1="eff41ef13462af3bdaacfbdcf1e923238a471645"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e225bc91e4ebb">
+		<description>jturbo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jturbo.a26" size="4096" crc="983aca17" sha1="e225bc91e4ebb9acb2eddf165247f5b221d0f14e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262fbc1c7dd288a">
+		<description>JtzBall (Alpha) (TJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="JtzBall (Alpha) (TJ).a26" size="2048" crc="f3487df6" sha1="2fbc1c7dd288a58d4760fbb04c3904092fc00f21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2630e14f62e1cd4">
+		<description>Jump (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jump (PD).a26" size="4096" crc="c58ddd7e" sha1="30e14f62e1cd4cbe639d5547762ad5c719520b8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d37ab9c8ea573">
+		<description>Jump The Peg 20080123</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jump The Peg 20080123.a26" size="4096" crc="8f099b06" sha1="d37ab9c8ea573e27a0b60c5af040091da3b9cadf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263c06e1d55a0cf">
+		<description>Jumper (2004) (Oliver Achten) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumper (2004) (Oliver Achten) (Prototype).a26" size="4096" crc="b738e270" sha1="3c06e1d55a0cfd9ad88adcc58ea02c8e238c4003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2651a8513c3ac62">
+		<description>Jumper 16k 0.60 (2007) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jumper 16k 0.60 (2007) (Steve Engelhardt).a26" size="16384" crc="056f9ae3" sha1="51a8513c3ac627a1742ed7a38794e1091d85f263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b0ecf58891d2b">
+		<description>Jumper 16k 0.73 (2007) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jumper 16k 0.73 (2007) (Steve Engelhardt).a26" size="16384" crc="7ff63996" sha1="b0ecf58891d2bc7e6cb5ee191be27c18c4883a66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dedb2cb34b3f7">
+		<description>Jumper 16k 99rc1 (2006) (Steve Engelhardt) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jumper 16k 99rc1 (2006) (Steve Engelhardt) [a1].a26" size="16384" crc="bb53db36" sha1="dedb2cb34b3f71f69d0947168f69213da8c45f55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2669febf939bc47">
+		<description>Jumper 16k Colortest (2006) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jumper 16k Colortest (2006) (Steve Engelhardt).a26" size="16384" crc="57314900" sha1="69febf939bc4767227b1c334a89a1dcb5f721db5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266b2554019f916">
+		<description>Jumper 20040128 (Oliver Achten) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumper 20040128 (Oliver Achten) (Prototype).a26" size="4096" crc="b5eb7f02" sha1="6b2554019f916c4474b7f5a861a8943b5b180074"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2643ab8e3823c76">
+		<description>Jumper 4k (Final Version) (2007) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumper 4k (Final Version) (2007) (Steve Engelhardt).a26" size="4096" crc="0553b5f1" sha1="43ab8e3823c76f0f4036667e51beacfa0ee02726"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267fae9e92d1777">
+		<description>Jumper 4k 0.14 (2006) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumper 4k 0.14 (2006) (Steve Engelhardt).a26" size="4096" crc="4a3ea665" sha1="7fae9e92d1777e2de90852ae05a231117bf4a54b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2670878e6487f60">
+		<description>Jumper 4k 0.15 (2007) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumper 4k 0.15 (2007) (Steve Engelhardt).a26" size="4096" crc="684331d8" sha1="70878e6487f602c3cdd0c151ba81cd08f86dbe78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267a51c32d9fbf0">
+		<description>Jumper 4k 0.16 (2008) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumper 4k 0.16 (2008) (Steve Engelhardt).a26" size="4096" crc="a7108e06" sha1="7a51c32d9fbf02c814c7b30305dc4a31c37ca45d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fce884d21a5ca">
+		<description>Jumper 4k 0.18 (2007) (Steve Engelhardt) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumper 4k 0.18 (2007) (Steve Engelhardt) [a1].a26" size="4096" crc="f789382f" sha1="fce884d21a5cac273e573ece9bcf3e8e29ba03bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26741ca8cc24f87">
+		<description>Jumper 8k 0.20 (2006) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k 0.20 (2006) (Steve Engelhardt).a26" size="8192" crc="e7226c66" sha1="741ca8cc24f87469a3721bee2e7acf420ec06150"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2687d3fd5d81f69">
+		<description>Jumper 8k 0.28 (2007) (Steve Engelhardt) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k 0.28 (2007) (Steve Engelhardt) [a1].a26" size="8192" crc="c032bd2b" sha1="87d3fd5d81f6952081eda3bc432661a623ec12db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264b05eae881dfb">
+		<description>Jumper 8k 0.38 (2006) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k 0.38 (2006) (Steve Engelhardt).a26" size="8192" crc="88af760d" sha1="4b05eae881dfb28fa00d9f147f05b49630050324"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659b0ae2ceeb6b">
+		<description>Jumper 8k 0.38 (2008) (Steve Engelhardt) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k 0.38 (2008) (Steve Engelhardt) [a1].a26" size="8192" crc="83b164da" sha1="59b0ae2ceeb6bd2bd8de60101465959b9f324f4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26453aafc682ffe">
+		<description>Jumper 8k 0.41 (2006) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k 0.41 (2006) (Steve Engelhardt).a26" size="8192" crc="d3e25f6b" sha1="453aafc682ffe7c68503857927e6ae744543c830"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266673779c52bea">
+		<description>Jumper 8k 0.41 (2007) (Steve Engelhardt) [a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k 0.41 (2007) (Steve Engelhardt) [a1].a26" size="8192" crc="bc14327e" sha1="6673779c52bea1c1cc2ad9ac85e2009522ca182a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f12ac98a95a93">
+		<description>Jumper 8k 0.41 (2008) (Steve Engelhardt) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k 0.41 (2008) (Steve Engelhardt) [a2].a26" size="8192" crc="be01dcf8" sha1="f12ac98a95a93db3fe2f30d590c2ac3ee8962d47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26258faef8158ca">
+		<description>Jumper 8k 0.55 (2007) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k 0.55 (2007) (Steve Engelhardt).a26" size="8192" crc="4cdcce50" sha1="258faef8158ca6e36abaeb5111a5b136cb79fd32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c23a30d75d327">
+		<description>Jumper 8k Demo (2007) (Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jumper 8k Demo (2007) (Steve Engelhardt).a26" size="8192" crc="ac756ab0" sha1="c23a30d75d327e02e66fa80a550c18d196875f01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26058eccaaff7a7">
+		<description>jumper16k_v0.60_(2006)(Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="jumper16k_v0.60_(2006)(Steve Engelhardt).a26" size="16384" crc="2f36302a" sha1="058eccaaff7a72929a22a94fdafbafeb782dd8d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ba8db586c33eb">
+		<description>jumper16k_v0.74_(2006)(Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="jumper16k_v0.74_(2006)(Steve Engelhardt).a26" size="16384" crc="eeca33c3" sha1="ba8db586c33eb5bd079e0b6b0913028e4860c764"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26628ea46f4d64e">
+		<description>jumper8kDemo new version</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="jumper8kDemo new version.a26" size="8192" crc="5a1a1f84" sha1="628ea46f4d64e0d27ff1877c6227ed3e7aa49244"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bfb34ffd1010a">
+		<description>jumper8k_v0.28_(2006)(Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="jumper8k_v0.28_(2006)(Steve Engelhardt).a26" size="8192" crc="2eff6c15" sha1="bfb34ffd1010a9b6ec022c3bf02f76939fca4236"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2663228129e246a">
+		<description>jumper99rc1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="jumper99rc1.a26" size="16384" crc="4fd56b5f" sha1="63228129e246a369e1e8d0c2c838fad8f167f4b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265cb40ab9875d5">
+		<description>jumper_v0.17_(2006)(Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jumper_v0.17_(2006)(Steve Engelhardt).a26" size="4096" crc="5c6b5dcc" sha1="5cb40ab9875d5ff2aeb98183e1abea73d47da420"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26934c80fcb0e61">
+		<description>jumper_v0.18_(2006)(Steve Engelhardt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jumper_v0.18_(2006)(Steve Engelhardt).a26" size="4096" crc="974a06d4" sha1="934c80fcb0e6156620fc7ffb8c3a1e5de585ff1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2625e1b2cf7300a">
+		<description>Jumping Example (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumping Example (PD).a26" size="4096" crc="e69618d8" sha1="25e1b2cf7300ae53f75d836710550c34b6895d8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a674a62f1db01">
+		<description>jumpingb (Jumpman Selected levels)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jumpingb (Jumpman Selected levels).a26" size="4096" crc="79ac7ce7" sha1="a674a62f1db01ae480e66971ba361bbf0539c865"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d22f9c71e3934">
+		<description>Jumpman 0.05 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman 0.05 (Atarius Maximus).a26" size="4096" crc="8252882b" sha1="d22f9c71e39347bded4ddf4110f039d34f4d369f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267eb0944c32ff9">
+		<description>Jumpman 0.05 beta2 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman 0.05 beta2 (Atarius Maximus).a26" size="4096" crc="f7045d60" sha1="7eb0944c32ff9b915864a762408191c64efecd0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dc11713395f1f">
+		<description>jumpman 0.07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jumpman 0.07.a26" size="4096" crc="fd371186" sha1="dc11713395f1fccd5369eff07fd155c1322349e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264a7fcb52f3f16">
+		<description>Jumpman 0.09 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman 0.09 (Atarius Maximus).a26" size="4096" crc="f01f384e" sha1="4a7fcb52f3f165524874c8e753c3320bac884a24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f3e756bc3f1b9">
+		<description>Jumpman 0.10 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman 0.10 (Atarius Maximus).a26" size="4096" crc="70869fa2" sha1="f3e756bc3f1b90b0683d16a00e07a969755cd420"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268b0d0c51d6da6">
+		<description>Jumpman 0.10 b99 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman 0.10 b99 (Atarius Maximus).a26" size="4096" crc="a473fb53" sha1="8b0d0c51d6da6f9092dca32aa536c642da1b6ed4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a54da5b02dac0">
+		<description>Jumpman Demo (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman Demo (Atarius Maximus).a26" size="4096" crc="b9115bca" sha1="a54da5b02dac06c6eab6d5e264f201d25b520a93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c0b4566501732">
+		<description>Jumpman Demo 2 (Atarius Maximus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman Demo 2 (Atarius Maximus).a26" size="4096" crc="8751e606" sha1="c0b45665017323663b49aef00d069691eebcef25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26437ab34a99022">
+		<description>Jumpman Level 1 20040916 (Manuel Rotschkar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman Level 1 20040916 (Manuel Rotschkar).a26" size="4096" crc="aeee4578" sha1="437ab34a9902243f7b3c504d0c00533a648a22d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2672d2c10f7f780">
+		<description>Jumpman Level 1 20040917 (Manuel Rotschkar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpman Level 1 20040917 (Manuel Rotschkar).a26" size="4096" crc="084f6913" sha1="72d2c10f7f780e66282c92b9cf13ece7643ae6be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26750cdee526e65">
+		<description>Jumpnrun (Jumpman Selected Levels) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jumpnrun (Jumpman Selected Levels) (PD).a26" size="4096" crc="ba2c9b23" sha1="750cdee526e65d3d6a02fbf31e08a7765010a415"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fc51326f8b19f">
+		<description>Jump_Man_PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jump_Man_PAL.a26" size="4096" crc="c55c0ad6" sha1="fc51326f8b19fb97c96b496f7433cd3187acec4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c261d75144f7a">
+		<description>Jungle Hunt (1983) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jungle Hunt (1983) (Atari) (PAL) [a1][!].a26" size="8192" crc="ef6686c8" sha1="c261d75144f7ae90568010ae19025f6be4280f77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26aecaba8b36490">
+		<description>Jungle Hunt (1983) (Atari) (PAL) [a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jungle Hunt (1983) (Atari) (PAL) [a2].a26" size="8192" crc="7c6a10e9" sha1="aecaba8b36490ac113ecaf6b0504e1e8e2fbbf0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e17e265528a59">
+		<description>Jungle Jane (2004) (Snailsoft) (Pitfall! Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jungle Jane (2004) (Snailsoft) (Pitfall! Hack).a26" size="4096" crc="64ea2e6d" sha1="e17e265528a59a2e5810100e71a8f6823c5090f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d79174fc5e77">
+		<description>Jungle King (2005) (Jess Ragan) (Jungle Hunt Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Jungle King (2005) (Jess Ragan) (Jungle Hunt Hack).a26" size="8192" crc="3bae3811" sha1="7d79174fc5e77684d7d8314f0892518747431ce5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44082,6 +45562,136 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26dd1bfbceb958d">
+		<description>junglemonkey10.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey10.bas.a26" size="4096" crc="dd8ddd38" sha1="dd1bfbceb958d6e6ae88989eadb50b83eca9a9cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f56e073249fab">
+		<description>junglemonkey11.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey11.bas.a26" size="4096" crc="a35b50eb" sha1="f56e073249fab87ea7d1cf57f44d026551c6854d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266f817134e7870">
+		<description>junglemonkey11b.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey11b.bas.a26" size="4096" crc="8fa83c76" sha1="6f817134e78707ac70ef69b21fc6f0582f37b3e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269386b69b1a960">
+		<description>junglemonkey2.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey2.bas.a26" size="4096" crc="17ad7fab" sha1="9386b69b1a9606f252d3e2ea5a55747c87b06564"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264adef68aa0fe9">
+		<description>junglemonkey4.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey4.bas.a26" size="4096" crc="3069fb43" sha1="4adef68aa0fe91740e0a40d0b91ef7798f37c58d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26819b51fc8d02a">
+		<description>junglemonkey5.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey5.bas.a26" size="4096" crc="1c3f5079" sha1="819b51fc8d02a4d1f9dd4c4dc37b122644ade387"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263605ce6b907af">
+		<description>junglemonkey7b.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey7b.bas.a26" size="4096" crc="026936c9" sha1="3605ce6b907aff0388d41d533ade8af2ca09ada5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260c7547bd81328">
+		<description>junglemonkey8a.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey8a.bas.a26" size="4096" crc="4f86443f" sha1="0c7547bd81328802fb5061a9d5d0290821dab6ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269700c3ef45ee2">
+		<description>junglemonkey9.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="junglemonkey9.bas.a26" size="4096" crc="eedee53b" sha1="9700c3ef45ee2a16f04176b6845150c748edf05c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26948871dc6a15a">
+		<description>Jungle_Fever-NTSC(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jungle_Fever-NTSC(Supercharger).bin" size="4096" crc="ed5cee2b" sha1="948871dc6a15a747be3abf886a1415a80a86438c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616def77ce3125">
+		<description>Jungle_Fever-PAL60(Supercharger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Jungle_Fever-PAL60(Supercharger).bin" size="4096" crc="21f6449f" sha1="16def77ce31252345d0b1593fe6116e3c8dcb1f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265c42c5d152e47">
+		<description>Junkosoft One Year Demo (1999) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Junkosoft One Year Demo (1999) (PD).a26" size="4096" crc="7ba45024" sha1="5c42c5d152e47ff7fa0d5346eaad29055c2459c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a94670762508">
+		<description>Juno First (2006) (John Payson) (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Juno First (2006) (John Payson) (Prototype).a26" size="4096" crc="27e41d77" sha1="5a94670762508bfd061abcb71e6309b84e54c809"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2620b2afdde0cfb">
 		<description>Juno First scorekernel Chris Walton 2008</description>
 		<year>????</year>
@@ -44089,6 +45699,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Juno First scorekernel Chris Walton 2008.a26" size="4096" crc="dbb6e500" sha1="20b2afdde0cfbefe45d19432c1c16e7f2b3f9ade"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a4d4ca3c1cf24">
+		<description>juno first test music</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="juno first test music.a26" size="4096" crc="42b08847" sha1="a4d4ca3c1cf2483ced9bd7e098fbf90733d47180"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44149,6 +45769,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Juno First Title Screen_fixed Chris Walton 2008.a26" size="8192" crc="9a6ac402" sha1="0dc11b539711830be7c3f420ecbd5c4d54db888a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ad45e1a04fdfc">
+		<description>Juno First v0.12 Chris Walton 2006</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Juno First v0.12 Chris Walton 2006.a26" size="8192" crc="05611859" sha1="ad45e1a04fdfc1c30b33af18b73bed2b2839e17b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44349,6 +45979,356 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="juno_cockpit_test.a26" size="32768" crc="2d0a98ab" sha1="f701ab89f7fa70f762bb06419f8f53caf27772c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e2f2b2c786e3c">
+		<description>Juno_First_BETA10_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA10_NTSC.a26" size="32768" crc="9d151520" sha1="e2f2b2c786e3c60856f837dd9c927dbb92c61411"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26554fbf5d352ab">
+		<description>Juno_First_BETA10_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA10_PAL60.a26" size="32768" crc="668d8cca" sha1="554fbf5d352ab207a1417c612bd3d1f9e9d43ec2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d43c6c1a9285c">
+		<description>Juno_First_BETA2_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA2_NTSC.a26" size="32768" crc="6ed748fa" sha1="d43c6c1a9285c36470cb9c8d3e589c9dd700d47b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b219b388f9327">
+		<description>Juno_First_BETA2_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA2_PAL60.a26" size="32768" crc="415334c0" sha1="b219b388f9327f2c68a1ac5a84d318d425b91003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f2f53deebcdc5">
+		<description>Juno_First_BETA3_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA3_NTSC.a26" size="32768" crc="fd14ecfc" sha1="f2f53deebcdc59301d6fdfa9e3566cbb5f634a8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26922704d0210a3">
+		<description>Juno_First_BETA3_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA3_PAL60.a26" size="32768" crc="381ef0f9" sha1="922704d0210a326fdb18a030ee7b6445cc8c481a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263a118eab511f3">
+		<description>Juno_First_BETA4_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA4_NTSC.a26" size="32768" crc="3e15a27f" sha1="3a118eab511f32fd32d5076d82a96508d03a2be5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b426d81ff8536">
+		<description>Juno_First_BETA4_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA4_PAL60.a26" size="32768" crc="69e7df09" sha1="b426d81ff8536c85b9968a94b1eb5c0acc938a12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265fbc497a7022b">
+		<description>Juno_First_BETA5_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA5_NTSC.a26" size="32768" crc="9eab814b" sha1="5fbc497a7022baf7b6cb9727b3b34185544b623a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e8b17416d2715">
+		<description>Juno_First_BETA5_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA5_PAL60.a26" size="32768" crc="1f902a8d" sha1="e8b17416d27158bf227e6d0bb4f489bb5775d832"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260963d80bd5502">
+		<description>Juno_First_BETA6b_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA6b_NTSC.a26" size="32768" crc="aeeb7c74" sha1="0963d80bd5502004e5b44f173dc9d8d4ee194880"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264ccf64ced868b">
+		<description>Juno_First_BETA6b_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA6b_PAL60.a26" size="32768" crc="9cd0baef" sha1="4ccf64ced868be56cfb9505dac391772253b2257"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2620f90b03e5e19">
+		<description>Juno_First_BETA6c_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA6c_NTSC.a26" size="32768" crc="4708111f" sha1="20f90b03e5e1900d263b1d426ebe7fbcc8803d2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261a4680267cc3b">
+		<description>Juno_First_BETA6c_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA6c_PAL60.a26" size="32768" crc="a1dd7bcc" sha1="1a4680267cc3bc77d78fe6ad02f155ad3a34bf5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26539d2010e0f9a">
+		<description>Juno_First_BETA6_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA6_NTSC.a26" size="32768" crc="9bdf18ce" sha1="539d2010e0f9acc0351925f992361bb8f988b226"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7021dad0dd8b">
+		<description>Juno_First_BETA6_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA6_PAL60.a26" size="32768" crc="a9e4de55" sha1="a7021dad0dd8b0d2ca70f8f513677fef9c26a9da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b670d6fa0a5ff">
+		<description>Juno_First_BETA7_cockpitflash_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA7_cockpitflash_NTSC.a26" size="32768" crc="ca05ad54" sha1="b670d6fa0a5ff4b79cc0f54bb5ed074268032988"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ec08c96f44dc1">
+		<description>Juno_First_BETA7_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA7_NTSC.a26" size="32768" crc="e06b753b" sha1="ec08c96f44dc14d354f1799b301e6339af50806d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a12246ac90e1e">
+		<description>Juno_First_BETA7_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA7_PAL60.a26" size="32768" crc="1c5a337a" sha1="a12246ac90e1eae048b335233646a3ec262ea52d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2683c0a251ec8b9">
+		<description>Juno_First_BETA8B_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA8B_NTSC.a26" size="32768" crc="f3f6557a" sha1="83c0a251ec8b9ac4018caf2419c7b73c411280bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a688bb1728d15">
+		<description>Juno_First_BETA8B_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA8B_PAL60.a26" size="32768" crc="adfb583d" sha1="a688bb1728d15d96781196dbb87be2d368da79e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268c33d58b5fc8e">
+		<description>Juno_First_BETA8_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA8_NTSC.a26" size="32768" crc="73f1325e" sha1="8c33d58b5fc8e684500c0c9c1d8388674f80d2b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d8e65582bcc5c">
+		<description>Juno_First_BETA8_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA8_PAL60.a26" size="32768" crc="2dfc3f19" sha1="d8e65582bcc5c9cc607a0ab72439b8e86b989701"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2640f985a12684f">
+		<description>Juno_First_BETA9_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA9_NTSC.a26" size="32768" crc="6616b141" sha1="40f985a12684fea1bb1af3b23e9366fe881d80e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f76ddb69e30de">
+		<description>Juno_First_BETA9_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA9_PAL60.a26" size="32768" crc="2ce3428c" sha1="f76ddb69e30de83f983768d890c68ef162cac511"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2616c8d7b34c33b">
+		<description>Juno_First_BETA_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA_NTSC.a26" size="32768" crc="3ae3e3d1" sha1="16c8d7b34c33b15debd0ea99b3cc860b60485c57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd282be19bbf3">
+		<description>Juno_First_BETA_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_BETA_PAL60.a26" size="32768" crc="b60bf582" sha1="dd282be19bbf3e3951e092c2fee95af68d6200bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b81ca0e10c38c">
+		<description>Juno_First_cockpit_flash_BETA7_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_cockpit_flash_BETA7_NTSC.a26" size="32768" crc="befad869" sha1="b81ca0e10c38cec26431f1385b8773b82af404be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a40f4ad25471">
+		<description>Juno_First_RC1_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_RC1_NTSC.a26" size="32768" crc="d4821869" sha1="6a40f4ad25471b5d2b7daaec2ec3405665a7569d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264f9285ee74044">
+		<description>Juno_First_RC1_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_RC1_PAL60.a26" size="32768" crc="355df376" sha1="4f9285ee740446f53c06d6e5a68bd8b006894fd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fbc7df2f3ff82">
+		<description>Juno_First_RC2_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_RC2_NTSC.a26" size="32768" crc="31c49b8a" sha1="fbc7df2f3ff823ee4594d676099e4b0fdba0248e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2617ee9ea217423">
+		<description>Juno_First_RC2_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_RC2_PAL60.a26" size="32768" crc="d01b7095" sha1="17ee9ea2174234cfa5d016e1fe1a696e860cf0ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26778487962f83a">
+		<description>Juno_First_RC3_NTSC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_RC3_NTSC.a26" size="32768" crc="a88671b1" sha1="778487962f83a19ecf4f226441311bb3a8a9e88b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b452589019c8c">
+		<description>Juno_First_RC3_PAL60</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno_First_RC3_PAL60.a26" size="32768" crc="49599aae" sha1="b452589019c8c3d7a711600b1046108a9f35cfd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fbbc82dfa6872">
+		<description>jym</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="jym.a26" size="4096" crc="51e126b9" sha1="fbbc82dfa687263b3634ede2107d5643060d3bcb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44852,6 +46832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a264bdd3ecfa32a4">
+		<description>Millipede Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Millipede Hack.a26" size="16384" crc="869777e5" sha1="4bdd3ecfa32a44036a187e45206490d4c2aef2f9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26f9a26f41e1fa1">
 		<description>Miniature Golf 4k hack by Nukey Shay 2009-03-22</description>
 		<year>????</year>
@@ -44889,6 +46879,366 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Miniature Golf High Rez easy.a26" size="4096" crc="c0501edd" sha1="e501fbc87288f115759cd55559e55b7c7f4fa37a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26377406aa39f42">
+		<description>Mr. Do - Infinite Lives Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Mr. Do - Infinite Lives Hack.a26" size="8192" crc="4f26a5d5" sha1="377406aa39f4292fb69816cf3c438992bd664bee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2615a9e2c9fc047">
+		<description>Mr. Do!'s Castle (1986) (Parker Bros) [hMF4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mr. Do!'s Castle (1986) (Parker Bros) [hMF4].a26" size="32768" crc="b1e8a346" sha1="15a9e2c9fc04727f193456fd99037774c70791e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26eb07afaebae83">
+		<description>Mr. Flanksteak Demo (Chris Read)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mr. Flanksteak Demo (Chris Read).a26" size="4096" crc="a54929a1" sha1="eb07afaebae837ae91d28f676700b84c3d676bf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268a638dcf82ed6">
+		<description>Mr. Frog (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mr. Frog (PD).a26" size="4096" crc="410e8b22" sha1="8a638dcf82ed6df0e9f5cfa645061c755b21f243"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a264067bc79a1610">
+		<description>Mr. Frog 012307 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Mr. Frog 012307 (PD).a26" size="8192" crc="868b670a" sha1="4067bc79a1610e14931de342ea778f14ee244462"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7be5744d8a69">
+		<description>Mr. Frog 012407 (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Mr. Frog 012407 (PD).a26" size="8192" crc="f796008a" sha1="a7be5744d8a697107cda0a1ca898610136051cc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e62d4179e4b85">
+		<description>Mr. Munchkin by Feralstorm (Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mr. Munchkin by Feralstorm (Pac-Man Hack).a26" size="4096" crc="2306b4d8" sha1="e62d4179e4b85133750c53feb3dd9b23f40cbd05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2647b39ed1200f5">
+		<description>Mr. Pac-Man - New Start Tune by El Destructo (Ms. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Mr. Pac-Man - New Start Tune by El Destructo (Ms. Pac-Man Hack).a26" size="8192" crc="719fbe14" sha1="47b39ed1200f517f0507f64a943f600211c2ec5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26b5193b84e07d4">
+		<description>Mr. Pac-Man by El Destructo (Ms. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Mr. Pac-Man by El Destructo (Ms. Pac-Man Hack).a26" size="8192" crc="46871e25" sha1="b5193b84e07d4c3896a13cc4df0cb2a7664cf26a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266474fbc4848c0">
+		<description>Mr. Postman - Infinite Lives Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mr. Postman - Infinite Lives Hack.a26" size="4096" crc="daeff88c" sha1="6474fbc4848c00d7a971e08d0c7caa69060538f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c92afe20ae2cb">
+		<description>Mr. Postman - O Carteiro (1985) (CCE) [b1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Mr. Postman - O Carteiro (1985) (CCE) [b1].a26" size="4096" crc="e2b2eb3e" sha1="c92afe20ae2cb9a8085c938e2ae7eec433ea3c20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261fd434a94ebbe">
+		<description>mrflank2a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="mrflank2a.a26" size="4096" crc="4f3e05dd" sha1="1fd434a94ebbed3389c635446cc8a4c0d512163d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26825ffcfe2b518">
+		<description>mrfrog013007.bas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="mrfrog013007.bas.a26" size="8192" crc="5ed924ca" sha1="825ffcfe2b518208e154aa715061b919b7b71273"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2664b988a69959f">
+		<description>MrStrong</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="MrStrong.a26" size="4096" crc="b6722ea0" sha1="64b988a69959fb6038c00b3e352ab725db8275e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a266a35947c71351">
+		<description>MS (BAtari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="MS (BAtari).a26" size="4096" crc="52cb359c" sha1="6a35947c713517997d0a54c0a7880428a80048cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fcbe0a74fff43">
+		<description>Ms. Hack 2005-05-02 (Nukey Shay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ms. Hack 2005-05-02 (Nukey Shay).a26" size="16384" crc="7ed3957b" sha1="fcbe0a74fff438645a6d4ff4913dbdce7ae24953"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269e234fc8fd84e">
+		<description>Ms. Hack 2006-06-21 (Nukey Shay) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ms. Hack 2006-06-21 (Nukey Shay) (PAL).a26" size="16384" crc="85143da8" sha1="9e234fc8fd84eaa8ddeada882705d138d397a18a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e8e397e01be83">
+		<description>Ms. Hack 2006-06-21 (Nukey Shay) (PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ms. Hack 2006-06-21 (Nukey Shay) (PAL60).a26" size="16384" crc="ad6d3ee3" sha1="e8e397e01be837155e951a724e075005caf13ee8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26054eef1320fe8">
+		<description>Ms. Hack 2006-06-21 (Nukey Shay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ms. Hack 2006-06-21 (Nukey Shay).a26" size="16384" crc="39c8a418" sha1="054eef1320fe851c7e0611fde94cb76231940c29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26fed78b6e0da11">
+		<description>Ms. Hack 2006-06-30 (Nukey Shay) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ms. Hack 2006-06-30 (Nukey Shay) (PAL).a26" size="16384" crc="663877de" sha1="fed78b6e0da11eabe0712619deb81c7d6b856137"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a261b145ea2d89cf">
+		<description>Ms. Hack 2006-06-30 (Nukey Shay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ms. Hack 2006-06-30 (Nukey Shay).a26" size="16384" crc="89eda2dd" sha1="1b145ea2d89cf95d92bcf2cdab9d048382272b0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2670bc235552e0f">
+		<description>Ms. Hack Demo (Nukey Shay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Ms. Hack Demo (Nukey Shay).a26" size="16384" crc="004abe36" sha1="70bc235552e0fb06e5923440eb87f321849ea6ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f3c2bf306d078">
+		<description>Ms. Pac-Man (1982) (Atari) [h1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ms. Pac-Man (1982) (Atari) [h1].a26" size="8192" crc="13e6b4e2" sha1="f3c2bf306d078ad61ee7b42276629f6a3e051827"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265a3e48d466667">
+		<description>Ms. Pac-Man (1983) (Atari) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ms. Pac-Man (1983) (Atari) [a1][!].a26" size="8192" crc="03229ce4" sha1="5a3e48d4666676423a199765756f8ed4dee4d877"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dba3fa256c1ab">
+		<description>Ms. Pac-Man (1984) (Atari) (PAL) [a1][!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ms. Pac-Man (1984) (Atari) (PAL) [a1][!].a26" size="8192" crc="cbc01134" sha1="dba3fa256c1ab99566d2cfc2c7daa2908408fbff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a262493d9e1ed9f4">
+		<description>Ms. Pac-Man - Infinite Lives Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ms. Pac-Man - Infinite Lives Hack.a26" size="8192" crc="d362275e" sha1="2493d9e1ed9f484116e8fdb1140dcb149326e672"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2690b1ad7d0f282">
+		<description>Ms. Pac-Man Black (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ms. Pac-Man Black (Hack).a26" size="8192" crc="cbebf755" sha1="90b1ad7d0f2825416f9c69bc79ec6f0f98c3655f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263b56744c5abe9">
+		<description>Ms. Pac-Man SPEED UP (Ms. Pac-Man Hack) (PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ms. Pac-Man SPEED UP (Ms. Pac-Man Hack) (PAL).a26" size="8192" crc="9335df2c" sha1="3b56744c5abe968ec5feea21bc535b9730f2c3d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269cf0c8bc1c5bc">
+		<description>Ms. Pac-Man SPEED UP (Ms. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ms. Pac-Man SPEED UP (Ms. Pac-Man Hack).a26" size="8192" crc="052ea3a9" sha1="9cf0c8bc1c5bca275f4e22e9b00da7dbe752f0ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2669d4d5d3a4fe2">
+		<description>Ms. Suc-Man by Jamcat (Ms. Pac-Man Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Ms. Suc-Man by Jamcat (Ms. Pac-Man Hack).a26" size="8192" crc="b85526cd" sha1="69d4d5d3a4fe2cf764dbdb11c3e6eb352b025d83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26648cefd9f8941">
+		<description>msghost</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="msghost.a26" size="8192" crc="bceb1fbf" sha1="648cefd9f89412cf27206f83e826e059b9ffd190"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26bb1d8d9e9289e">
+		<description>mshackun</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mshackun.a26" size="16384" crc="9b247b65" sha1="bb1d8d9e9289eb7175ce859f38a80409ca029a21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26a7ca04ef207c7">
+		<description>mshackunpal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mshackunpal.a26" size="16384" crc="8934e53b" sha1="a7ca04ef207c74c809346d8c8c229ada04691cbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26f974785306af5">
+		<description>MSPACMAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="MSPACMAN.a26" size="8192" crc="513726e8" sha1="f974785306af5b3ffab43ef346dc4a951837d669"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ba8308b4d1297">
+		<description>Ms_Streaker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ms_Streaker.a26" size="4096" crc="3b3126b8" sha1="ba8308b4d129795f0a8489b945053dc2fafeda48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2603475dad27448">
+		<description>Ms_Streaker_F</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Ms_Streaker_F.a26" size="4096" crc="60d14e8d" sha1="03475dad2744821790f19dbf67ec42f1f06960c3"/>
 			</dataarea>
 		</part>
 	</software>

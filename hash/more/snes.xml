@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3765 -->
+<!-- Number of items in this list = 3766 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -5969,6 +5969,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Crayon Shin-chan - Arashi o Yobu Enji (J)(1993)(Bandai).sfc" size="1572864" crc="36c23f9a" sha1="cc744df5f2e06c5ccaf0578033fc1810ee297cbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns896fdd0872cf9">
+		<description>Cronela's Mansion (World) (Demo) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Cronela's Mansion (World) (Demo) (Aftermarket) (Unl).sfc" size="1048576" crc="2dcdbbbf" sha1="896fdd0872cf98cc10b537f7ebb285350e6c7cd6"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1426 -->
+<!-- Number of items in this list = 1440 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -1159,16 +1159,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="22698">
 				<rom name="Abakus (19xx)(Anwi Pjp Tls)(Ru)[a].tap" size="22698" crc="71162923" sha1="50530c1a4b04434cf9012a19672c5190e07a49d3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsf0d3c44b41657">
-		<description>Abbaye des Morts</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="35533">
-				<rom name="Abbaye des Morts.TZX" size="35533" crc="2bdb3db6" sha1="f0d3c44b41657d46944f3ea1a86d8f35c231c98a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8892,6 +8882,116 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf0d3c44b41657">
+		<description>L'Abbaye des Morts 128K (2014)(Darkhorace)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35533">
+				<rom name="L'Abbaye des Morts 128K (2014)(Darkhorace).tzx" size="35533" crc="2bdb3db6" sha1="f0d3c44b41657d46944f3ea1a86d8f35c231c98a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0dbe31463fb5d">
+		<description>Lamode_1984_programa_computado</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13378">
+				<rom name="Lamode_1984_programa_computado.tzx" size="13378" crc="2cf24932" sha1="0dbe31463fb5ddaddbd6e53ae489b92f32fc22e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs35c33924e58ad">
+		<description>Last Ninja Remix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="233942">
+				<rom name="Last Ninja Remix.tzx" size="233942" crc="c5750bf5" sha1="35c33924e58ad06bb688d0a8fa48d59671720be9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd91a2a75c87c1">
+		<description>LED Storm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="110899">
+				<rom name="LED Storm.tzx" size="110899" crc="8e136a30" sha1="d91a2a75c87c11c3d7e493aed4eee0ec4bf39872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd9810ec825261">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8920">
+				<rom name="Lift.tzx" size="8920" crc="1c765d1c" sha1="d9810ec8252616b4d37d4c3b3bfb7b9f45192dec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs145233c5d7b12">
+		<description>Lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2986973">
+				<rom name="Lift.wav" size="2986973" crc="4a408dfd" sha1="145233c5d7b120302954c9c6b149d189091d64d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf3a7373f5b94f">
+		<description>Light Corridor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="89170">
+				<rom name="Light Corridor.tzx" size="89170" crc="fbae104c" sha1="f3a7373f5b94f00f222b5a8b59221c3cf6666e48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseaddcc1a10702">
+		<description>Line Of Fire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="165833">
+				<rom name="Line Of Fire.tzx" size="165833" crc="a766cf2a" sha1="eaddcc1a107028b8ad07764ff7925994565d68c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc33dd68d7fa38">
+		<description>Loco 48K (1986)(Z Cobra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38882">
+				<rom name="Loco 48K (1986)(Z Cobra).tzx" size="38882" crc="6d87ba0f" sha1="c33dd68d7fa38ea0fd0bfe56c0c8616d44d8f238"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80b0d0d9a94e7">
+		<description>LOGIC3_1 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="61805">
+				<rom name="LOGIC3_1 (19xx)(-).tzx" size="61805" crc="45c97e45" sha1="80b0d0d9a94e7e63fce586781bbc76166e3354f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs818cda2120ead">
+		<description>Lords of Chaos + Expansion Kit 1 (1991)(Blade Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="106004">
+				<rom name="Lords of Chaos + Expansion Kit 1 (1991)(Blade Software).tzx" size="106004" crc="3c5e0cf7" sha1="818cda2120ead73ce28d2d75d8de0e5725af24d3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs2fe8e0727764d">
 		<description>Magic Johnson's Basketball</description>
 		<year>????</year>
@@ -8999,6 +9099,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="52348">
 				<rom name="Metro-Cross.tzx" size="52348" crc="f2723bb7" sha1="5aa3a9e84be9b3cf591d22133362b441eab02ff6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa2decfb90d74c">
+		<description>Miami Cobra GT 48K-128K (1991)(Players Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56483">
+				<rom name="Miami Cobra GT 48K-128K (1991)(Players Software).tzx" size="56483" crc="b7a07ba5" sha1="a2decfb90d74c628291cc428f9bf742145e765df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9439,6 +9549,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="51914">
 				<rom name="RAM.tzx" size="51914" crc="7ac03979" sha1="d19d7a961f1ab6b18ac37a25afe93f441332b749"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4670bd6fdb454">
+		<description>Ramon Rodriguez ES 48K (1986)(Erbe Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51283">
+				<rom name="Ramon Rodriguez ES 48K (1986)(Erbe Software).tzx" size="51283" crc="db7640b7" sha1="4670bd6fdb4545f72c1492e49205cbe7aadb3c3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf899047112899">
+		<description>Rampage 48K (1987)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50614">
+				<rom name="Rampage 48K (1987)(Activision).tzx" size="50614" crc="936b9e1d" sha1="f899047112899a6ed94914bcf99a18f65ae84a74"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12249,6 +12379,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37102">
 				<rom name="Who Said That (1987)(Tynesoft).tap" size="37102" crc="976a539f" sha1="7cc1c9695264d06900d291ef324ab799c6dbc1b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f479cc6743a0">
+		<description>Whopper Chase ES 48K (1987)(Erbe Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49487">
+				<rom name="Whopper Chase ES 48K (1987)(Erbe Software).tzx" size="49487" crc="4da33146" sha1="8f479cc6743a0b6fd9cf8d599999f033a2600d8b"/>
 			</dataarea>
 		</part>
 	</software>
