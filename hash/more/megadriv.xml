@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1879 -->
+<!-- Number of items in this list = 1886 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3132,6 +3132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen4c2dd2697d002">
+		<description>Altered Beast - ReToned v1.16 (2025)(Byros)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Altered Beast - ReToned v1.16 (2025)(Byros).bin" size="524288" crc="40173c07" sha1="4c2dd2697d002c6a0b79bc89a61c8aa7611f9b34"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen21d9a51ad55ac">
 		<description>Amshay (2022)(BankBank)</description>
 		<year>????</year>
@@ -4049,6 +4059,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="5242880">
 				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v1.7 (2024)(Yoni Arousement).bin" size="5242880" crc="6ed2530f" sha1="69a681196a06162e626032f9f9d3eae7268f4858"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf3185dd77cdfd">
+		<description>Bishoujo Super Street Fighter II - Glamor Queen v2.1B (2025)(Yoni Arousement)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.1B (2025)(Yoni Arousement).bin" size="5242880" crc="98dc13aa" sha1="f3185dd77cdfd8ff0eaa8655fe8636288899aef2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9452,6 +9472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen10bdbe6a9f41b">
+		<description>Lemmings - Colour Palette &amp; Level Title Fix v1.6 Final (Euro)(2025)(J. Russell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lemmings - Colour Palette &amp; Level Title Fix v1.6 Final (Euro)(2025)(J. Russell).bin" size="1048576" crc="5af027db" sha1="10bdbe6a9f41bf7a881bc7b6c15e3edb0f9b44bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genfe6533d013100">
 		<description>Lethal Wedding (USA, Japan) (Demo) (Unl)</description>
 		<year>????</year>
@@ -11299,6 +11329,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="PapiCommandoReload-TectoyDemo.bin" size="1572864" crc="d73e6ad5" sha1="851d760cf48eb847bd2c0bdf39d9733facb7944e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8312dcd084800">
+		<description>Pengo Arcade (2024)(125scratch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Pengo Arcade (2024)(125scratch).bin" size="1048576" crc="85bdcd37" sha1="8312dcd084800f5eec99d36bf039a52513b00f37"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16232,6 +16272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen32e0982287b1e">
+		<description>Streets of Rage 3 Project (2021)(gsaurus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3150276">
+				<rom name="Streets of Rage 3 Project (2021)(gsaurus).bin" size="3150276" crc="0b31a6a5" sha1="32e0982287b1ebb8905f5255c13fe3405930689f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7732017b10a28">
 		<description>Streets of Rage 3 Project</description>
 		<year>????</year>
@@ -17692,6 +17742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gend8c3d38d18e3c">
+		<description>Ultimate Chakan v1.2 (2021)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Ultimate Chakan v1.2 (2021)(BillyTime! Games).bin" size="1048576" crc="59dc5466" sha1="d8c3d38d18e3cd8e9c68c0c842d79f6b36cdbb64"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genad2c4f4486cad">
 		<description>Ultimate Gargoyles (2021)(BillyTime! Games)</description>
 		<year>????</year>
@@ -18369,6 +18429,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="WWF Royal Rumble Enhanced Colors + SFX v1.05 (2023)(Byros).bin" size="2097152" crc="d6f4d1ed" sha1="d1748521d498b0145f416a44c970f0736fb4a390"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb95eb31295ada">
+		<description>WWF Royal Rumble Enhanced Colors + SFX v1.06 (2025)(BillyTime! Games, Byros)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="WWF Royal Rumble Enhanced Colors + SFX v1.06 (2025)(BillyTime! Games, Byros).bin" size="2097152" crc="a3822ae3" sha1="b95eb31295ada8aa5de65242dfaf8c639d1cabc8"/>
 			</dataarea>
 		</part>
 	</software>
