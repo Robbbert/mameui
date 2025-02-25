@@ -6088,7 +6088,7 @@ GAME( 1996, hvnsgate,  coh1001l, coh1001l,  zn2p,     atlus_zn_state,   empty_in
 
 // Video System ZN-1 (VS34)
 GAME( 1996, coh1002v,  0,        coh1002v,  zn,       visco_zn_state,   empty_init, ROT0, "Video System Co.",        "Video System ZN-1",                 MACHINE_IS_BIOS_ROOT | MACHINE_SUPPORTS_SAVE )
-GAME( 1996, aerofgts,  coh1002v, coh1002v,  aerofgts, visco_zn_state,   empty_init, ROT270, "McO'River, Inc.",       "Aero Fighters Special (USA)",                              MACHINE_SUPPORTS_SAVE )
+GAME( 1996, aerofgts,  coh1002v, coh1002v,  aerofgts, visco_zn_state,   empty_init, ROT270, "McO'River, Inc.",       "Aero Fighters Special (USA)",                              MACHINE_SUPPORTS_SAVE ) // McO'River = Video System USA
 GAME( 1996, aerofgtst, aerofgts, coh1002v,  aerofgts, visco_zn_state,   empty_init, ROT270, "Video System Co.",      "Aero Fighters Special (Taiwan)",                           MACHINE_SUPPORTS_SAVE )
 GAME( 1996, sncwgltd,  aerofgts, coh1002v,  aerofgts, visco_zn_state,   empty_init, ROT270, "Video System Co.",      "Sonic Wings Limited (Japan)",                              MACHINE_SUPPORTS_SAVE )
 
@@ -6097,7 +6097,7 @@ GAME( 1996, coh1002e,  0,        coh1002e,  znt2p,    raizing_zn_state, empty_in
 GAME( 1997, beastrzr,  coh1002e, coh1002e,  znt2p,    raizing_zn_state, empty_init, ROT0, "Eighting / Raizing",      "Beastorizer (USA, Sep 22 1997)",                           MACHINE_SUPPORTS_SAVE )
 GAME( 1997, beastrzra, beastrzr, coh1002e,  znt2p,    raizing_zn_state, empty_init, ROT0, "Eighting / Raizing",      "Beastorizer (USA, Jun 21 1997)",                           MACHINE_SUPPORTS_SAVE )
 GAME( 1997, bldyroar,  beastrzr, coh1002e,  znt2p,    raizing_zn_state, empty_init, ROT0, "Eighting / Raizing",      "Bloody Roar (Japan, Jun 21 1997)",                         MACHINE_SUPPORTS_SAVE )
-GAME( 1997, beastrzrb, beastrzr, beastrzrb, znt2p,    beastrzrb_state,  empty_init, ROT0, "bootleg",                 "Beastorizer (USA bootleg)",                                MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND )
+GAME( 1997, beastrzrb, beastrzr, beastrzrb, znt2p,    beastrzrb_state,  empty_init, ROT0, "bootleg",                 "Beastorizer (USA bootleg)",                                MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING )
 
 // Eighting / Raizing ZN-1 (PS9805)
 GAME( 1998, bldyror2,  coh1002e, coh1002e,  bldyror2, raizing_zn_state, empty_init, ROT0, "Eighting / Raizing",      "Bloody Roar 2 (World)",                                    MACHINE_SUPPORTS_SAVE )
@@ -6151,7 +6151,7 @@ GAME( 1997, glpracr2l, glpracr2, coh1002ml, glpracr2, glpracr2l_state,  empty_in
 GAME( 1998, doapp,     coh1002m, coh1002m,  zn2p,     tecmo_zn_state,   empty_init, ROT0, "Tecmo",                   "Dead Or Alive ++ (Japan/USA/Export)",                      MACHINE_SUPPORTS_SAVE ) // region set under GAME OPTIONS, then NATION
 GAME( 1998, doappk,    doapp,    coh1002m,  zn2p,     tecmo_zn_state,   empty_init, ROT0, "Tecmo",                   "Dead Or Alive ++ (Korea)",                                 MACHINE_SUPPORTS_SAVE )
 GAME( 1998, cbaj,      coh1002m, cbaj,      zn1p,     cbaj_state,       empty_init, ROT0, "UEP Systems",             "Cool Boarders Arcade Jam (Export)",                        MACHINE_SUPPORTS_SAVE )
-GAME( 1998, cbajbl,    cbaj,     cbaj,      zn1p,     cbaj_state,       empty_init, ROT0, "UEP Systems",             "Cool Boarders Arcade Jam Bootleg (Export)",                MACHINE_SUPPORTS_SAVE )
+GAME( 1998, cbajbl,    cbaj,     cbaj,      zn1p,     cbaj_state,       empty_init, ROT0, "bootleg",                 "Cool Boarders Arcade Jam (Export bootleg)",                MACHINE_SUPPORTS_SAVE )
 GAME( 1998, shngmtkb,  coh1002m, coh1002m,  zn2p,     tecmo_zn_state,   empty_init, ROT0, "Sunsoft / Activision",    "Shanghai Matekibuyuu (Japan)",                             MACHINE_SUPPORTS_SAVE )
 GAME( 1999, tondemo,   coh1002m, coh1002m,  zn1p,     tecmo_zn_state,   empty_init, ROT0, "Tecmo",                   "Tondemo Crisis (Japan)",                                   MACHINE_SUPPORTS_SAVE )
 GAME( 1999, glpracr3,  coh1002m, coh1002m,  glpracr2, tecmo_zn_state,   empty_init, ROT0, "Tecmo",                   "Gallop Racer 3 (Export)",                                  MACHINE_SUPPORTS_SAVE )
