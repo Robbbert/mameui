@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 109 -->
+<!-- Number of items in this list = 110 -->
 <softwarelist name="msx_cass" description="msx_cass loose roms">
 	<software name="msxeadb9d14766b7">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[Micom BASIC][cload]</description>
@@ -859,6 +859,16 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="1276756">
 				<rom name="Matsuda Hiroshi no Character Dancing Part 3 - Character no Kousoku Idou to Gamen no Ichibu Hyouji (1985-03)(Matsuda, Hiroshi)(JP)(Tape 3 of 3)[Micom BASIC][cload].wav" size="1276756" crc="3b4887f5" sha1="1c2267e00eb38f8cf7929ae5409d26029972c8ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx3ce17571a7562">
+		<description>Mieyen[BLOAD'CAS-',R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="8302">
+				<rom name="Mieyen[BLOAD'CAS-',R].cas" size="8302" crc="42a03ea4" sha1="3ce17571a7562df46e9b653318eb18eaf7b59d5a"/>
 			</dataarea>
 		</part>
 	</software>
