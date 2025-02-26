@@ -6,7 +6,7 @@
 #
 ###########################################################################
 
-BARE_VERS := 0.274
+BARE_VERS := 0.275
 LONG_VERS := $(BARE_VERS).0
 
 ###########################################################################
@@ -1687,7 +1687,6 @@ CPPCHECK_PARAMS += -I3rdparty/bx/include
 CPPCHECK_PARAMS += -I$(BUILDDIR)/generated/emu
 CPPCHECK_PARAMS += -I$(BUILDDIR)/generated/emu/layout
 CPPCHECK_PARAMS += -I$(BUILDDIR)/generated/mame/layout
-CPPCHECK_PARAMS += -DX64_WINDOWS_ABI
 CPPCHECK_PARAMS += -DPTR64=1
 CPPCHECK_PARAMS += -DMAME_DEBUG
 CPPCHECK_PARAMS += -DMAME_PROFILER

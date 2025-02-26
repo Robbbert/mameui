@@ -7,7 +7,7 @@
 
 
 #include "cpu/cosmac/cosmac.h"
-#include "imagedev/cassette.h"
+//#include "imagedev/cassette.h"
 #include "imagedev/snapquik.h"
 #include "machine/mm74c922.h"
 #include "video/cdp1861.h"
@@ -32,16 +32,17 @@ public:
 		, m_kb(*this, MM74C923_TAG)
 		, m_led_l(*this, DM9368_L_TAG)
 		, m_led_h(*this, DM9368_H_TAG)
-		, m_adr_l(*this, "adr_l")
-		, m_adr_h(*this, "adr_h")
-		, m_cassette(*this, "cassette")
+		//, m_cassette(*this, "cassette")
 		, m_ram(*this, RAM_TAG)
 		, m_special(*this, "SPECIAL")
+		, m_adr_l(*this, "adr_l")
+		, m_adr_h(*this, "adr_h")
 		, m_text(*this, "text%u", 0U)
 	{ }
 
 	void elf2(machine_config &config);
 
+	DECLARE_INPUT_CHANGED_MEMBER(load_w);
 	DECLARE_INPUT_CHANGED_MEMBER(input_w);
 
 protected:
@@ -53,12 +54,8 @@ private:
 	void data_w(uint8_t data);
 	void memory_w(offs_t offset, uint8_t data);
 	int wait_r();
-	int clear_r();
-	int ef4_r();
-	uint8_t dma_r();
 	void sc_w(uint8_t data);
 	void da_w(int state);
-	void status_w();
 
 	DECLARE_QUICKLOAD_LOAD_MEMBER(quickload_cb);
 	void elf2_io(address_map &map) ATTR_COLD;
@@ -69,15 +66,17 @@ private:
 	required_device<mm74c922_device> m_kb;
 	required_device<dm9368_device> m_led_l;
 	required_device<dm9368_device> m_led_h;
-	required_device<dm9368_device> m_adr_l;
-	required_device<dm9368_device> m_adr_h;
-	required_device<cassette_image_device> m_cassette;
+	//required_device<cassette_image_device> m_cassette;
 	required_device<ram_device> m_ram;
 	required_ioport m_special;
+	required_device<dm9368_device> m_adr_l;
+	required_device<dm9368_device> m_adr_h;
 	output_finder<8> m_text;
 
 	// internal state
 	uint8_t m_data = 0;
+	uint8_t m_sc = 0;
+	uint8_t m_dmain = 0;
 	uint8_t m_status = 8;
 };
 
