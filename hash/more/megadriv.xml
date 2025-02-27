@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1887 -->
+<!-- Number of items in this list = 1888 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4939,6 +4939,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Darius (World) (Genesis Mini, Mega Drive Mini).md" size="4194304" crc="26ca4234" sha1="4841d8f05a73cb7c5f98b710f14ebd72be1a6504"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7dc0a93fe03a8">
+		<description>Darius - Extra Version (USA, Europe) (MSU-MD) (Strictly Limited) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Darius - Extra Version (USA, Europe) (MSU-MD) (Strictly Limited) (Aftermarket) (Unl).md" size="4194304" crc="f21a53f2" sha1="7dc0a93fe03a86d7004288d105ae71817f824eb1"/>
 			</dataarea>
 		</part>
 	</software>

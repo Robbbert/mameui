@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 117 -->
+<!-- Number of items in this list = 118 -->
 <softwarelist name="smc777" description="smc777 loose roms">
 	<software name="smce4f91de7fe532">
 		<description>123</description>
@@ -263,22 +263,22 @@
 		</part>
 	</software>
 	<software name="smc568fb47c6ea1a">
-		<description>Deepspace_SMC777</description>
+		<description>Deepspace</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="609968">
-				<rom name="Deepspace_SMC777.d88" size="609968" crc="3a556ed0" sha1="568fb47c6ea1ace09e60bba4ad2186e14fdcf9a6"/>
+				<rom name="Deepspace.d88" size="609968" crc="3a556ed0" sha1="568fb47c6ea1ace09e60bba4ad2186e14fdcf9a6"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="smcd0169f48bf236">
-		<description>Deepspace_SMC777_CPM</description>
+		<description>Deepspace_CPM</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="609536">
-				<rom name="Deepspace_SMC777_CPM.dsk" size="609536" crc="fd880c61" sha1="d0169f48bf236f5f2328dbdcab4ff517e47af973"/>
+				<rom name="Deepspace_CPM.dsk" size="609536" crc="fd880c61" sha1="d0169f48bf236f5f2328dbdcab4ff517e47af973"/>
 			</dataarea>
 		</part>
 	</software>
@@ -343,12 +343,12 @@
 		</part>
 	</software>
 	<software name="smc617560c9550ff">
-		<description>epb_smc777</description>
+		<description>Elite Planet Browser</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="609968">
-				<rom name="epb_smc777.d88" size="609968" crc="d34f3645" sha1="617560c9550ff4b411ab92603316fb9f5144d45c"/>
+				<rom name="Elite Planet Browser.d88" size="609968" crc="d34f3645" sha1="617560c9550ff4b411ab92603316fb9f5144d45c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -552,6 +552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smc57e1e4340c6c6">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="609968">
+				<rom name="H-tron.d88" size="609968" crc="3ef8bc37" sha1="57e1e4340c6c661d3a60cee1334220cea170cf07"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smc2a8d4d79dfb65">
 		<description>Hanafuda</description>
 		<year>????</year>
@@ -579,16 +589,6 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
 				<rom name="Hopman.1dd" size="305328" crc="775fc17d" sha1="410fdeab1ebac5e04cd857de32af4afc4d1ff05a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smc57e1e4340c6c6">
-		<description>htron_smc777</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3_5">
-			<dataarea name="flop" size="609968">
-				<rom name="htron_smc777.d88" size="609968" crc="3ef8bc37" sha1="57e1e4340c6c661d3a60cee1334220cea170cf07"/>
 			</dataarea>
 		</part>
 	</software>
@@ -772,6 +772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smc5913eef24c5a5">
+		<description>MastermindRK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="609968">
+				<rom name="MastermindRK.d88" size="609968" crc="687e7f64" sha1="5913eef24c5a52d664ae08fb32e42f1d25224e1c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smc67b7328c580e3">
 		<description>Mazy (2)</description>
 		<year>????</year>
@@ -802,6 +812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smc5cd3cd7d9df3b">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="Mieyen.1dd" size="305328" crc="d71a82cf" sha1="5cd3cd7d9df3b1ad86f946a36901dd55556ad3ee"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smc6072a8ba273df">
 		<description>Miner 2049er (1984)(Comptiq)(Big Five Software)(Sony)(Bear's)(Bill Hogue)</description>
 		<year>????</year>
@@ -809,16 +829,6 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
 				<rom name="Miner 2049er (1984)(Comptiq)(Big Five Software)(Sony)(Bear's)(Bill Hogue).1DD" size="305328" crc="ac6176ca" sha1="6072a8ba273dfee3779963a5241d3fc31d077178"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smc5913eef24c5a5">
-		<description>mm_smc777</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3_5">
-			<dataarea name="flop" size="609968">
-				<rom name="mm_smc777.d88" size="609968" crc="687e7f64" sha1="5913eef24c5a52d664ae08fb32e42f1d25224e1c"/>
 			</dataarea>
 		</part>
 	</software>

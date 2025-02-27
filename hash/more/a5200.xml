@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 162 -->
+<!-- Number of items in this list = 164 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a522071e69941a10">
 		<description>(demo)PAM SALT V1.02 (1982) (Atari) [o1]</description>
@@ -679,6 +679,26 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="chicken.bin" size="32768" crc="b2d018b1" sha1="7fef7c5c07b776cc8f06fc46876b83415ff70d1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52a5a9e3d6b1c95">
+		<description>Choplifter! (USA) (Beta 2) (1984-01-13)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Choplifter! (USA) (Beta 2) (1984-01-13).bin" size="16384" crc="bee87e6f" sha1="a5a9e3d6b1c95ccdaef177b60f388a3128b3342d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a526ff20a48be504">
+		<description>Choplifter! (USA) (Beta 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Choplifter! (USA) (Beta 3).bin" size="16384" crc="9209ca2b" sha1="6ff20a48be50486adef0af6762905db8be8a4538"/>
 			</dataarea>
 		</part>
 	</software>

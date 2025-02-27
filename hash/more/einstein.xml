@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3 -->
+<!-- Number of items in this list = 10 -->
 <softwarelist name="einstein" description="einstein loose roms">
+	<software name="ein7c0fdaf69b80b">
+		<description>Deepspace[d1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="Deepspace[d1].dsk" size="215296" crc="4247df53" sha1="7c0fdaf69b80bd31618668157236460a1feca287"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ein1f3089730ded1">
 		<description>DOS_1.4[256]</description>
 		<year>????</year>
@@ -12,6 +22,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ein0db30bc11c229">
+		<description>Elite Planet Browser(80-cols)[d1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="Elite Planet Browser(80-cols)[d1].dsk" size="215296" crc="d34b845c" sha1="0db30bc11c229a2c3ef8ef3c5f065320f756f3b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ein71a053fed300d">
+		<description>Elite Planet Browser[d1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="Elite Planet Browser[d1].dsk" size="215296" crc="16798095" sha1="71a053fed300d2ff10e583c8fc0bfeb0eafaf83d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ein3b837c864ff5d">
 		<description>ELITE-S2</description>
 		<year>????</year>
@@ -19,6 +49,46 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="215296">
 				<rom name="ELITE-S2.DSK" size="215296" crc="fd44a1b4" sha1="3b837c864ff5d7adb9fa295988ea285c227de003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="einba9a05506aa1b">
+		<description>H-Tron(80-cols)[d1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="H-Tron(80-cols)[d1].dsk" size="215296" crc="5f948aab" sha1="ba9a05506aa1bbeccfcc96927636baa4e8084fc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="eine0c7f7c36c36d">
+		<description>H-tron[d1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="H-tron[d1].dsk" size="215296" crc="4e5c9096" sha1="e0c7f7c36c36db0974379b477aaf65cc928e61dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ein33f10cc39b319">
+		<description>MastermindRK(80-cols)[d1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="MastermindRK(80-cols)[d1].dsk" size="215296" crc="41cf7b28" sha1="33f10cc39b3199d0fd74e708c4a5f7538032a9b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="einc08ed5014748e">
+		<description>MastermindRK[d1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="215296">
+				<rom name="MastermindRK[d1].dsk" size="215296" crc="67463c48" sha1="c08ed5014748e82d467025fbe1bd0814b8da693c"/>
 			</dataarea>
 		</part>
 	</software>

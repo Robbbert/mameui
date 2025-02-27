@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1576 -->
+<!-- Number of items in this list = 1593 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -2939,6 +2939,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="18446">
 				<rom name="Alien City, The (1984)(Pirate Software).tap" size="18446" crc="be8cc881" sha1="a1d0b17da746275640be4d1ffdfa45e9f7534559"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc6b681c612c24">
+		<description>Alien Command 16K (1982)(Jega Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17729">
+				<rom name="Alien Command 16K (1982)(Jega Software).tzx" size="17729" crc="c98310b2" sha1="c6b681c612c24cde8feddf36d8269bb5d0999627"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8622,6 +8632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3403e9d3a10e9">
+		<description>Dizzy - Down the Rapids 48K-128K (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52590">
+				<rom name="Dizzy - Down the Rapids 48K-128K (1991)(Codemasters).tzx" size="52590" crc="f57964c8" sha1="3403e9d3a10e9a33ec1c3a660df5b59bef8962ef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs08627dede4b2c">
 		<description>Donkey Kong's Revenge - Part 1</description>
 		<year>????</year>
@@ -9522,6 +9542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse946ad1cb78c6">
+		<description>Jurl 48K (2025)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34524">
+				<rom name="Jurl 48K (2025)(Tonsomo Entertainment).tzx" size="34524" crc="08992836" sha1="e946ad1cb78c692cbbfb4fea844dc8b2fbbeba03"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd1753a3e8ea31">
 		<description>Karnov</description>
 		<year>????</year>
@@ -9769,6 +9799,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="191425">
 				<rom name="Mercs.tzx" size="191425" crc="4dea37be" sha1="a45b21e120973333700fd6a9556b013532799e63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaefdf4e91e330">
+		<description>Metalyx 48K (1987)(Alternative)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37726">
+				<rom name="Metalyx 48K (1987)(Alternative).tzx" size="37726" crc="cfadc6a8" sha1="aefdf4e91e3303c9d2ac58762ba19f4ab666e00a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10972,6 +11012,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbd0b2b2ae966d">
+		<description>TRASHMAN - Crisis Time EN 128K (2020)(PC NONO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48911">
+				<rom name="TRASHMAN - Crisis Time EN 128K (2020)(PC NONO).tap" size="48911" crc="0b6d2b91" sha1="bd0b2b2ae966dfe5ad4390cbad4206ac4492a624"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa318bb1be77ce">
+		<description>TRASHMAN - Crisis Time ES 128K (2020)(PC NONO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48913">
+				<rom name="TRASHMAN - Crisis Time ES 128K (2020)(PC NONO).tap" size="48913" crc="69df80ca" sha1="a318bb1be77ce595781438c19b92fa57d9acc163"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4438d5e33182">
+		<description>Travel Through Time Volume 1 Northern Lights (2021)(Zosya Ent.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="126588">
+				<rom name="Travel Through Time Volume 1 Northern Lights (2021)(Zosya Ent.).tap" size="126588" crc="c792257f" sha1="d4438d5e3318285199fa0fbf1a83ea2c27e61fe6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3472d8105daf4">
+		<description>Traverse (1988)(X Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48306">
+				<rom name="Traverse (1988)(X Software)(Sp).tap" size="48306" crc="4e1e0171" sha1="3472d8105daf44c2813d8025fad47140d779fbfc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsbbe7a5196d696">
 		<description>traxtor-zx</description>
 		<year>????</year>
@@ -10989,6 +11069,96 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="27648">
 				<rom name="traxtor2.tzx" size="27648" crc="4bcf1ed8" sha1="ef086056117acef085ed8c28fb1b33284bb22ff2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc177865c6c9f">
+		<description>Traxx (1983)(Quicksilva Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17142">
+				<rom name="Traxx (1983)(Quicksilva Ltd).tap" size="17142" crc="ff499fb1" sha1="cc177865c6c9fe0cf43b29bbee40e7c8a490d695"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4370d7fb0b1c6">
+		<description>Traz (1989)(Game Busters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49401">
+				<rom name="Traz (1989)(Game Busters).tap" size="49401" crc="f2e55f47" sha1="4370d7fb0b1c6f8625d16966dcf895c007fc9967"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa32a055c40e51">
+		<description>Treasure (1984)(Jeroen Kwast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7917">
+				<rom name="Treasure (1984)(Jeroen Kwast).tap" size="7917" crc="cbc0bb83" sha1="a32a055c40e51acf685e370c4513da37346d1199"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs557743993cde9">
+		<description>Treasure Hunt (1984)(Amba Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63736">
+				<rom name="Treasure Hunt (1984)(Amba Software).tap" size="63736" crc="b82acbdc" sha1="557743993cde94dea776a1406400a7762bee1dab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsedf0d6dd73f6b">
+		<description>Treasure Island (1984)(Sinclair Research Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42389">
+				<rom name="Treasure Island (1984)(Sinclair Research Ltd).tap" size="42389" crc="092a84c1" sha1="edf0d6dd73f6b930d32f1dff09c26a478d4c6309"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc8cc048d0bad2">
+		<description>Treasure Trail (19xx)(J. Therkston - S. Richards)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32750">
+				<rom name="Treasure Trail (19xx)(J. Therkston - S. Richards).tap" size="32750" crc="c3ff8f7e" sha1="c8cc048d0bad29f6463fc7bc48dab72756e9dda0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1204714238178">
+		<description>Treat! (demo) (19xx)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39434">
+				<rom name="Treat! (demo) (19xx)(Firebird Software).tap" size="39434" crc="11b64cf4" sha1="12047142381782bab54527a5aa320b10a13c6ce9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd210bdf8d5222">
+		<description>Tree Eaters (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4678">
+				<rom name="Tree Eaters (19xx)(-).tap" size="4678" crc="aa4dc563" sha1="d210bdf8d522235e156fde434447d8a4bb34efe2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19a759d5f4fc9">
+		<description>Tremor (1986)(Americana Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48661">
+				<rom name="Tremor (1986)(Americana Software Ltd).tap" size="48661" crc="4aebca3e" sha1="19a759d5f4fc98e867267bf9cdeda8a74219cb06"/>
 			</dataarea>
 		</part>
 	</software>

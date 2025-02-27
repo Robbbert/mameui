@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 49 -->
+<!-- Number of items in this list = 51 -->
 <softwarelist name="mz700_cass" description="mz700_cass loose roms">
 	<software name="mz748dba064d098a">
 		<description>(sound)Plusminus-20 (19xx)(-)(de)(PD)</description>
@@ -369,6 +369,26 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="15067380">
 				<rom name="Mazy.wav" size="15067380" crc="0545dfa3" sha1="06d7d9eabfcff1e70fc86bc8881b8552de303c51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7ae69bc8279872">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="6678">
+				<rom name="Mieyen.mzt" size="6678" crc="35e9a003" sha1="ae69bc8279872cd46fe8f2835808634252077f74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz77e433b3ab18eb">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2390266">
+				<rom name="Mieyen.wav" size="2390266" crc="6e2a4a14" sha1="7e433b3ab18eb1512a651a305163d38440765619"/>
 			</dataarea>
 		</part>
 	</software>

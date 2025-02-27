@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 179 -->
+<!-- Number of items in this list = 180 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1379,6 +1379,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Mazy.pce" size="16384" crc="bc6173b9" sha1="b5b5e32ff6399a9cd87fb3b7a44e1249e6b55639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcef17108a7438d1">
+		<description>Mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mieyen.pce" size="32768" crc="2e65a725" sha1="f17108a7438d1f81f4137a632f4420ec050bfb12"/>
 			</dataarea>
 		</part>
 	</software>

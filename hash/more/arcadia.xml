@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 60 -->
+<!-- Number of items in this list = 61 -->
 <softwarelist name="arcadia" description="arcadia loose roms">
 	<software name="arcd520a2fbad0b0">
 		<description>3D Attack</description>
@@ -149,6 +149,16 @@
 		<part name="cart" interface="arcadia_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Combat (198x)(UA Ltd.)[aka Combat Zone].bin" size="8192" crc="82d049d7" sha1="f130cd5e85e801519740ed8c7ac8b4444ce91201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="arc0c6ce7577a121">
+		<description>Crazy Climber (1983)(UA Ltd.)[u][aka Crazy Wall]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="arcadia_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Crazy Climber (1983)(UA Ltd.)[u][aka Crazy Wall].BIN" size="4096" crc="76e773fa" sha1="0c6ce7577a121e7810ec54c5dd180a55dd0ace17"/>
 			</dataarea>
 		</part>
 	</software>
