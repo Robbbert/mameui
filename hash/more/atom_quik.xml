@@ -1,7 +1,77 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 334 -->
+<!-- Number of items in this list = 341 -->
 <softwarelist name="atom_quik" description="atom_quik loose roms">
+	<software name="atmcee61171f952d">
+		<description>028</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1688">
+				<rom name="028.ATM" size="1688" crc="d6953293" sha1="cee61171f952d56bc9f42f618383397d558ef86e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmda04a0b913ad9">
+		<description>069</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="324">
+				<rom name="069.ATM" size="324" crc="a86c5359" sha1="da04a0b913ad95f8e229f6265679567196b656fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmf1cbb19d0bbfc">
+		<description>073</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4704">
+				<rom name="073.ATM" size="4704" crc="fc81b8e9" sha1="f1cbb19d0bbfc684cdd8558d13d7581405fdae7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm490575ab20906">
+		<description>075</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1868">
+				<rom name="075.ATM" size="1868" crc="ecf1335f" sha1="490575ab20906ac60654fa61f27bcb77dad46560"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atma7a7bc5f5fef5">
+		<description>078</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="812">
+				<rom name="078.ATM" size="812" crc="8e778ec2" sha1="a7a7bc5f5fef58bd5854d3a391cc46a688bcbd0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm1a74454efd4c8">
+		<description>079</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="787">
+				<rom name="079.ATM" size="787" crc="a9092e65" sha1="1a74454efd4c8dfdb85d6abbacd00d491a3d465a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm7a5cde3dbe08e">
+		<description>8-7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="483">
+				<rom name="8-7.ATM" size="483" crc="8b12ec74" sha1="7a5cde3dbe08ea8d48adb758b89bf5f8ae141e83"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="atm50c100f653bfc">
 		<description>Acorn Kong</description>
 		<year>????</year>

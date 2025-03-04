@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 227 -->
+<!-- Number of items in this list = 230 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -699,6 +699,26 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Kirby's Nightmare in Dreamland.GBA" size="8388608" crc="5086113b" sha1="a3d14cfde55ec71535e46b45f6a53963fbf09fac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba3702182ed8090">
+		<description>Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)(1).gba" size="33554432" crc="85356bf1" sha1="3702182ed8090d790660c189cea1ca2ca73b9969"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8dc0a293a3ded">
+		<description>Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Klonoa Heroes - Densetsu no Star Medal (Japan) (patched).gba" size="33554432" crc="05e23b9b" sha1="8dc0a293a3ded24f5a07e504d9b35e11c9a73ad3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2239,6 +2259,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Winning Post for Game Boy Advance (Japan) (Rev 1).gba" size="4194304" crc="f6180af5" sha1="0f395a384b9db2415196edc2f911ccc67eb5e038"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9bbdc81383d22">
+		<description>Xeno Crisis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Xeno Crisis.gba" size="33554432" crc="9693aabd" sha1="9bbdc81383d22770bf01a0fd174ff0febc6198c0"/>
 			</dataarea>
 		</part>
 	</software>

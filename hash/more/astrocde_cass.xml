@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 2 -->
+<softwarelist name="astrocde_cass" description="astrocde_cass loose roms">
+	<software name="astd5d343ea730dd">
+		<description>life_[jay_fenton]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass2" interface="astrocde_cass">
+			<dataarea name="cass" size="386528">
+				<rom name="life_[jay_fenton].wav" size="386528" crc="26d75b40" sha1="d5d343ea730dd9b6e383a8f19659cdfd847d6c93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="astfe19813df8167">
+		<description>nuke_the_bastards_[jay_fenton]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass2" interface="astrocde_cass">
+			<dataarea name="cass" size="423053">
+				<rom name="nuke_the_bastards_[jay_fenton].wav" size="423053" crc="6c83908e" sha1="fe19813df8167ec8b8c989ad032715a5549aac3f"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3766 -->
+<!-- Number of items in this list = 3767 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -8059,6 +8059,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="F-Mario (SMW1 Hack).smc" size="2097664" crc="9a48fe27" sha1="4716e9f59df3ef446efe8e01e6ebb7fccaa4d263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf6f8d0b65be0e">
+		<description>Faceball 2000 (USA) [FastROM hack by kandowontu v1.1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Faceball 2000 (USA) [FastROM hack by kandowontu v1.1].sfc" size="524288" crc="ab477484" sha1="f6f8d0b65be0e038853906750bf0886575cf010d"/>
 			</dataarea>
 		</part>
 	</software>

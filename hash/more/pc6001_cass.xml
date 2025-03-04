@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 133 -->
+<!-- Number of items in this list = 149 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -1099,6 +1099,166 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="72130">
 				<rom name="Lode Runner {m2p2}.p6" size="72130" crc="454d46a2" sha1="0d472ca72dc7d2d3dfb41b8d74ff790963d4317d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60083f01abba7f5">
+		<description>Magic {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="6407">
+				<rom name="Magic {m1p2}.p6" size="6407" crc="eb4bcbb3" sha1="083f01abba7f5a0ee230b0284a484333ed26b985"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60906b62d790b32">
+		<description>Mirror Point {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4039">
+				<rom name="Mirror Point {m1p2}.cas" size="4039" crc="5d2d4298" sha1="906b62d790b3274730836e37e3017a5d72fc9150"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60773098d8225b3">
+		<description>Multi-game {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="5448">
+				<rom name="Multi-game {m1p1}.cas" size="5448" crc="13aef731" sha1="773098d8225b3caf094a349d2ba58e249eaf52c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60d443cf9fa218f">
+		<description>Musha Musha {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="370">
+				<rom name="Musha Musha {m1p2}.cas" size="370" crc="19d86b84" sha1="d443cf9fa218fe0d23114c6666b1c9162740566f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60152926cc1b3fe">
+		<description>Nana-chan no Kinjirareta Asobi (6001) {m2p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="8928">
+				<rom name="Nana-chan no Kinjirareta Asobi (6001) {m2p1}.cas" size="8928" crc="7a266047" sha1="152926cc1b3feac1adf8185ff908237e5cf02768"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6092c6ef51e0a47">
+		<description>NEC Trek Demo (F - Sonata) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4997">
+				<rom name="NEC Trek Demo (F - Sonata) {m1p2}.p6" size="4997" crc="188521ad" sha1="92c6ef51e0a47ea32a465a2e14c06e8c902d617b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60e75b2e64af5d9">
+		<description>NEC Trek Demo (G - Sound) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3748">
+				<rom name="NEC Trek Demo (G - Sound) {m1p2}.p6" size="3748" crc="050453f1" sha1="e75b2e64af5d9e41c363221c2cb79d32dbaad088"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6029a0ea58ee931">
+		<description>NEC Trek Demo (H - Marche) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="5789">
+				<rom name="NEC Trek Demo (H - Marche) {m1p2}.p6" size="5789" crc="b1a45b7b" sha1="29a0ea58ee93154e803eb201245604b72d714c66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p609306b8ee8cda4">
+		<description>NEC Trek Demo (I - Intro2) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="6688">
+				<rom name="NEC Trek Demo (I - Intro2) {m1p2}.p6" size="6688" crc="4fd2cd22" sha1="9306b8ee8cda49cc0ba88172e53b60aee5129be8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60f4e923dc22529">
+		<description>NEC Trek Demo (J - Sugar) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4545">
+				<rom name="NEC Trek Demo (J - Sugar) {m1p2}.p6" size="4545" crc="0de3c182" sha1="f4e923dc2252912e6ba1d59796eddd724ebc5b3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6070159f63b6423">
+		<description>NEC Trek Demo (K - Intro3) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="5033">
+				<rom name="NEC Trek Demo (K - Intro3) {m1p2}.p6" size="5033" crc="126aee19" sha1="70159f63b6423995b1c42cddb96d6107f53bcbfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60fa126e9e2ff02">
+		<description>Number Alien (prototype) {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="879">
+				<rom name="Number Alien (prototype) {m1p1}.p6" size="879" crc="270d2cca" sha1="fa126e9e2ff02d8503223ee239c05e7b2bc03fac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60b9f906c328870">
+		<description>Nyuuryoku Hantei {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1095">
+				<rom name="Nyuuryoku Hantei {m1p2}.p6" size="1095" crc="6deaa463" sha1="b9f906c32887012f05e42d0126fd97101ffa8bcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60e5a05bfeb93fa">
+		<description>Obake Yashiki {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="6613">
+				<rom name="Obake Yashiki {m1p2}.p6" size="6613" crc="7f02d16a" sha1="e5a05bfeb93fa79dff1cf41b85bb960e3a06d8c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6054103efa59e71">
+		<description>Ougon no Haka {m2p3}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="39810">
+				<rom name="Ougon no Haka {m2p3}.cas" size="39810" crc="ee70a0d5" sha1="54103efa59e713130072cce178edeb83a5039b61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60664b499acfffd">
+		<description>P6 Circuit {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="2565">
+				<rom name="P6 Circuit {m1p2}.p6" size="2565" crc="a132d578" sha1="664b499acfffdeb2724675e728779debb3c9698b"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 164 -->
+<!-- Number of items in this list = 166 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a522071e69941a10">
 		<description>(demo)PAM SALT V1.02 (1982) (Atari) [o1]</description>
@@ -1219,6 +1219,26 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="pacmanplus(32k)(ghost-eyes).bin" size="32768" crc="44e6121f" sha1="e9a96c9946c5ca398f00a6c7532bb9e08c5b0ab8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a5294796f9bba34d">
+		<description>Pengo (USA) (Beta) (1983-07-27)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Pengo (USA) (Beta) (1983-07-27).bin" size="32768" crc="f085ea1f" sha1="94796f9bba34dad73f9ff4b1d3135fe1357acbe2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52116bb35c3dc3c">
+		<description>Pengo (USA) (Beta) (1983-08-10)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Pengo (USA) (Beta) (1983-08-10).bin" size="32768" crc="d0704419" sha1="116bb35c3dc3cfe23bb737e611c86471751a0c9d"/>
 			</dataarea>
 		</part>
 	</software>
