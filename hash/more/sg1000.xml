@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 48 -->
+<!-- Number of items in this list = 51 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -479,6 +479,36 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="9141">
 				<rom name="Yewdow (2023)(Inufuto).sg" size="9141" crc="5917970d" sha1="0b1dfe9bdf8859a8455ec896093e32e6b4258b26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg19bd8d9c220974">
+		<description>[sg1000m2]Bloktris_103</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="49152">
+				<rom name="[sg1000m2]Bloktris_103.sg" size="49152" crc="ca3c78e2" sha1="9bd8d9c22097411fedd2307ce8f2e74937a08e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg16cff5223dd394">
+		<description>[sg1000m2]Minesweeper_103</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="16384">
+				<rom name="[sg1000m2]Minesweeper_103.sg" size="16384" crc="744e2ed9" sha1="6cff5223dd394ff5d5ff57ff174390e30da153b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg162574399f59be">
+		<description>[sg1000m2]Vexed_115</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]Vexed_115.sg" size="32768" crc="66bff65b" sha1="62574399f59be5c46d2a4822884adb8cc432d9b0"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1338 -->
+<!-- Number of items in this list = 1345 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -9702,6 +9702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc59e7bfe118d43">
+		<description>Maze3d</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Maze3d.gb" size="524288" crc="92afaab5" sha1="59e7bfe118d4337c1d876d9dbdbd354845176998"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbce58a871c2b2ac">
 		<description>MazezaM</description>
 		<year>????</year>
@@ -9729,6 +9739,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="McDonaldland (U) [T+Fre_KS151].gb" size="131072" crc="6b233c24" sha1="158eb474579a86572b58f685c8d9334803647e80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc11ba564b3dd09">
+		<description>Medarot 3 - Kabuto Version (Japan) [T-En by Cash Medal Chameleon v1.0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Medarot 3 - Kabuto Version (Japan) [T-En by Cash Medal Chameleon v1.0].gbc" size="4194304" crc="a744f9c9" sha1="11ba564b3dd09df5838c68d0be765d7cd34117f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc435b8d0a2292c">
+		<description>Medarot 3 - Kuwagata Version (Japan) [T-En by Cash Medal Chameleon v1.0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Medarot 3 - Kuwagata Version (Japan) [T-En by Cash Medal Chameleon v1.0].gbc" size="4194304" crc="bef23a92" sha1="435b8d0a2292c9f32fc9bdc1dab65bcf476948bb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10149,6 +10179,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Mo Jie 3-bu Wanme de Shijie (19xx)(Li Cheng)(TW)[f][p].gbc" size="524288" crc="d827d37e" sha1="b622ec531befa882493a88577f901c5f4bd1d5b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc191738fba56de">
+		<description>Mobile Monsters Telefang - Power Version (Japan) (GB Compatible) [T-En by Kmeisthax &amp; Andwhyisit &amp; Obskyr v159] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mobile Monsters Telefang - Power Version (Japan) (GB Compatible) [T-En by Kmeisthax &amp; Andwhyisit &amp; Obskyr v159] [n].gbc" size="2097152" crc="4c162ac2" sha1="191738fba56de0f728cf84da08bb679a36890491"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2e332edad476a">
+		<description>Mobile Monsters Telefang - Speed Version (Japan) (GB Compatible) [T-En by Kmeisthax &amp; Andwhyisit &amp; Obskyr v159] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mobile Monsters Telefang - Speed Version (Japan) (GB Compatible) [T-En by Kmeisthax &amp; Andwhyisit &amp; Obskyr v159] [n].gbc" size="2097152" crc="05074caa" sha1="2e332edad476a591fcbbbdf0ad60a8e42640e840"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12829,6 +12879,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Vex Block [ROM].gb" size="32768" crc="f233d0ca" sha1="d1f680dd2ad010537e3eecfbf070b93e1299c9ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd19e86cf7bb2e">
+		<description>VexedGB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="VexedGB.gb" size="32768" crc="db9ce1e1" sha1="d19e86cf7bb2e319dee0c4316a2380e37df3e232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2ca27a7592798">
+		<description>VexedGBC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="VexedGBC.gbc" size="32768" crc="272ae3b3" sha1="2ca27a75927989bbb2f58c0839ec4a14d957745f"/>
 			</dataarea>
 		</part>
 	</software>

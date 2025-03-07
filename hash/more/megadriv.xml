@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1888 -->
+<!-- Number of items in this list = 1890 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -11829,6 +11829,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Punisher NG.bin" size="2097152" crc="497a07fe" sha1="3da4cb7f63bc863ca6d5067846c0d596bb727e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc0b0357b06f91">
+		<description>Puyo Puyo (Japan) [T-En by RadioTails v1.0] [En-GB]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Puyo Puyo (Japan) [T-En by RadioTails v1.0] [En-GB].md" size="1048576" crc="a682cd9f" sha1="c0b0357b06f91458552a50e9e0193c7398e0ff91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen48637ea9b34f0">
+		<description>Puyo Puyo (Japan) [T-En by RadioTails v1.0] [En-US]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Puyo Puyo (Japan) [T-En by RadioTails v1.0] [En-US].md" size="1048576" crc="6b5ebd1c" sha1="48637ea9b34f018d200da5cd3b1e878b73d3f713"/>
 			</dataarea>
 		</part>
 	</software>

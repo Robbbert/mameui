@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 85 -->
+<!-- Number of items in this list = 87 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial</description>
@@ -482,6 +482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gg1e4a995cd5d996">
+		<description>Maze3d</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Maze3d.gg" size="524288" crc="c2760884" sha1="1e4a995cd5d9968662d26906d7c2b3072ffd8b2a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gg768688b0908f25">
 		<description>Mazy</description>
 		<year>????</year>
@@ -799,6 +809,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Vexed v1.07 (2023)(Under4Mhz).gg" size="32768" crc="86f38694" sha1="6658517e16288c5a72706197f679f6679d5480a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggdaebc23f09d1f6">
+		<description>VexedGG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="VexedGG.gg" size="32768" crc="3c456bbf" sha1="daebc23f09d1f6bf1a2e3620e3247c58e48b102c"/>
 			</dataarea>
 		</part>
 	</software>

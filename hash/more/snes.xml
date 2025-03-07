@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3767 -->
+<!-- Number of items in this list = 3770 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -30362,6 +30362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns01a08a3f373f9">
+		<description>Super Fire Pro Wrestling Special (Japan) [T-En by BobSchneeder45 &amp; Boogal &amp; iccanobif v1.0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Fire Pro Wrestling Special (Japan) [T-En by BobSchneeder45 &amp; Boogal &amp; iccanobif v1.0].sfc" size="4194304" crc="e540d4a1" sha1="01a08a3f373f9f128b83a83244a9fa38d622dfeb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns32c98c1efc479">
 		<description>Super Fire Pro Wrestling X Premium T-Eng (2005)(Brian)</description>
 		<year>????</year>
@@ -34782,6 +34792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns7ae27951ba786">
+		<description>Super Uno (Japan) [T-En by Krokodyl v1.0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Super Uno (Japan) [T-En by Krokodyl v1.0].sfc" size="1572864" crc="d8018846" sha1="7ae27951ba786375c45ea7b1c8dbaaee73f183fd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsc641590f87ef1">
 		<description>Super Uno T-Eng (2025)(Krokodyl)</description>
 		<year>????</year>
@@ -37009,6 +37029,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="We're Back! A Dinosaur's Story (1993)(Hi-Tech Expressions)(proto).sfc" size="1048576" crc="b3925716" sha1="f918aa709c685e2d278447f712030a8260f1cdc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1927ff794da83">
+		<description>Wedding Peach (Japan) [T-En by Krokodyl v1.0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Wedding Peach (Japan) [T-En by Krokodyl v1.0].sfc" size="1572864" crc="8be6142b" sha1="1927ff794da83aa243cb59ea0772622ca9062f2a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 305 -->
+<!-- Number of items in this list = 309 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -389,6 +389,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Bloktris (2023)(Under4Mhz).sms" size="262144" crc="2d679b72" sha1="df06a63a1451252a0c00400919632c0f3dccd946"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smscda74a2a596fc">
+		<description>BloktrisSMS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="BloktrisSMS.sms" size="262144" crc="7ddd30cb" sha1="cda74a2a596fc5afaf84c74c5b4f54a7b989f87b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1562,6 +1572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms6aa4b40e2ba02">
+		<description>Maze3d</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Maze3d.sms" size="524288" crc="dd940cdf" sha1="6aa4b40e2ba02c25951b35519a7eb50a8643e2e1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms0e1632b4ac51a">
 		<description>Mazy</description>
 		<year>????</year>
@@ -1629,6 +1649,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="miner_1.sms" size="65536" crc="67f67844" sha1="e6744d4e30caa998b4b5533070f0c907025e5989"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc98b157b8fcbf">
+		<description>MinesweeperSMS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MinesweeperSMS.sms" size="32768" crc="27e998e9" sha1="c98b157b8fcbf54c9d51fb80f9c96180db7d5838"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2879,6 +2909,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Vexed v1.07 (2023)(Under4Mhz).sms" size="32768" crc="edfe0729" sha1="a274736c8deabada2424d71ff34e12b48522b35d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsde0059bbd7b11">
+		<description>VexedSMS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="VexedSMS.sms" size="32768" crc="47c39bac" sha1="de0059bbd7b11bb29ca690a1e9e5ed9e0fc89943"/>
 			</dataarea>
 		</part>
 	</software>

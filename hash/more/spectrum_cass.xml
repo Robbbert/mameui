@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1621 -->
+<!-- Number of items in this list = 1659 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -29,6 +29,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1361">
 				<rom name="(demo)Fire4ever.tzx" size="1361" crc="2f412606" sha1="cbe2b12b071de18dda85deb7b76dec57b41b5272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs62d6d4a4f6140">
+		<description>(demo)TOXI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1165">
+				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
 			</dataarea>
 		</part>
 	</software>
@@ -809,6 +819,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49117">
 				<rom name="3D Starstrike (1984)(Realtime Games Software)[a].tap" size="49117" crc="0bb725c9" sha1="b2227bc46b9a9db52536c8d2618a6bbc04893b05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs853e71ecf5b02">
+		<description>3D Starstrike 48K (1984)(Realtime Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49169">
+				<rom name="3D Starstrike 48K (1984)(Realtime Games).tzx" size="49169" crc="65d1d056" sha1="853e71ecf5b021471e82872dc0f835bc2396cfa6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2912,6 +2932,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0ee513a5a8596">
+		<description>Alien Astro Frenzy demo 48K (2021)(Vintage Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26103">
+				<rom name="Alien Astro Frenzy demo 48K (2021)(Vintage Software).tap" size="26103" crc="4a377283" sha1="0ee513a5a8596be2a1426fecc4f24128121074cb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs98c859c027beb">
 		<description>Alien Astro Frenzy demo 48K (2021)(Vintage Software)</description>
 		<year>????</year>
@@ -2919,6 +2949,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="26128">
 				<rom name="Alien Astro Frenzy demo 48K (2021)(Vintage Software).tzx" size="26128" crc="17360674" sha1="98c859c027beb59641d607606d5af7f22b9975be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92cbc14a777c1">
+		<description>Alien Astro Frenzy full 48K (2021)(Vintage Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26103">
+				<rom name="Alien Astro Frenzy full 48K (2021)(Vintage Software).tap" size="26103" crc="69e07d46" sha1="92cbc14a777c1e935ca4fdd2e787a228d0cc684b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs43c25363c7a43">
+		<description>Alien Astro Frenzy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30962">
+				<rom name="Alien Astro Frenzy.tap" size="30962" crc="43092bbb" sha1="43c25363c7a43c6f577619094bf4f2c54a6c0c53"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3732,6 +3782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6c0253c975af7">
+		<description>Angelita - Battle Mocita 48K (2020)(Nekokapi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38495">
+				<rom name="Angelita - Battle Mocita 48K (2020)(Nekokapi).tap" size="38495" crc="634a4281" sha1="6c0253c975af7d78b227815997069db6c474549d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs4271465465481">
 		<description>Angels 128K (2021)(Zosya Ent.)</description>
 		<year>????</year>
@@ -4163,12 +4223,12 @@
 		</part>
 	</software>
 	<software name="zxsb9c4432b17d75">
-		<description>Arc Of Yesod, The (1985)(Odin Computer Graphics)</description>
+		<description>Arc of Yesod, The 48K (1985)(Thor Computer)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37857">
-				<rom name="Arc Of Yesod, The (1985)(Odin Computer Graphics).tap" size="37857" crc="7c8c1e4f" sha1="b9c4432b17d7577322e34f8a39c6d15faabb47a8"/>
+				<rom name="Arc of Yesod, The 48K (1985)(Thor Computer).tap" size="37857" crc="7c8c1e4f" sha1="b9c4432b17d7577322e34f8a39c6d15faabb47a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4792,6 +4852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs299df857400ad">
+		<description>Astro Phobos v1.3 128K (2021)(goliat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38473">
+				<rom name="Astro Phobos v1.3 128K (2021)(goliat).tap" size="38473" crc="fb2ff0e9" sha1="299df857400ad70a97a0664a582149848bdc5fa0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc58d55e39ceb2">
 		<description>Astroball (1992)(Digital Reality)</description>
 		<year>????</year>
@@ -5409,6 +5479,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="20586">
 				<rom name="Aztec 48K (2021)(Rui Martins).tap" size="20586" crc="143faf4b" sha1="34707a6522ad101f3e7f0a51450a6cbcca2eb452"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse5ba625bb6470">
+		<description>Azzurro 8bit Jam v1.1 (2011)(Relevo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39507">
+				<rom name="Azzurro 8bit Jam v1.1 (2011)(Relevo).tap" size="39507" crc="11c55f90" sha1="e5ba625bb6470fa7548e93b474626a4f3e5bfa74"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8562,6 +8642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa25fb1fe54bfd">
+		<description>Death Wish 3 (Erbe - Serie Leyenda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54322">
+				<rom name="Death Wish 3 (Erbe - Serie Leyenda).tzx" size="54322" crc="562a8373" sha1="a25fb1fe54bfd6af5dfb4f342b5f532a521fc990"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3f4d217190bfc">
 		<description>Deathscape</description>
 		<year>????</year>
@@ -9009,6 +9099,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49573">
 				<rom name="Fruit Machine Simulator 2 - Mega Trek.tzx" size="49573" crc="72bd22e7" sha1="d1d8d88ea5c2c0057d10bdf5c3c40ee5b0ad6c22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75d42c29fe33c">
+		<description>Full Throttle (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="86354">
+				<rom name="Full Throttle (2).tzx" size="86354" crc="c2a42298" sha1="75d42c29fe33c3129302e07c68ce4577c8ba401a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs953dc98e489b5">
+		<description>Full Throttle 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44762">
+				<rom name="Full Throttle 2.tzx" size="44762" crc="9a97ae34" sha1="953dc98e489b5ac3fe5060da384fbe959f6b4d68"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9872,6 +9982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb07f4ea77455d">
+		<description>Milk Race</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42979">
+				<rom name="Milk Race.tzx" size="42979" crc="0f7a291e" sha1="b07f4ea77455d616ba8ed853c79d522fe7970b33"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb4eb6cf66dbe6">
 		<description>Mister Gas</description>
 		<year>????</year>
@@ -10202,6 +10322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8d96511a00fe9">
+		<description>Prince Clumsy 48K (1990)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47488">
+				<rom name="Prince Clumsy 48K (1990)(Codemasters).tzx" size="47488" crc="68b19df4" sha1="8d96511a00fe9c9c7d8dc3db83ac735d7b48f92f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs18ac3cfdd438b">
 		<description>Pro Mountain Bike Simulator</description>
 		<year>????</year>
@@ -10319,6 +10449,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="195545">
 				<rom name="Rastan Saga.tzx" size="195545" crc="12886a5f" sha1="962fca8d1645c38a6d2284d37956c7bcfccb5f91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscf6a595319f90">
+		<description>Raw Recruit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45512">
+				<rom name="Raw Recruit.tzx" size="45512" crc="a39f03e4" sha1="cf6a595319f901c03db493ba02af6b1cc733d43c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10519,6 +10659,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="146551">
 				<rom name="Shadow Of The Beast.tzx" size="146551" crc="0d3b7ca2" sha1="1a37d90a7fa50d73e12ceb66ee09cf8302ad7272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2fd880c86786d">
+		<description>Shadowfire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46876">
+				<rom name="Shadowfire.tzx" size="46876" crc="7913229c" sha1="2fd880c86786d3230c8d97a9151e031b2e571209"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10842,6 +10992,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs9f07cb040db52">
+		<description>Super Alien Blast</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26097">
+				<rom name="Super Alien Blast.tap" size="26097" crc="74e2ef50" sha1="9f07cb040db52f43320d22154d2e76e64d0e42e4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsad813faafcd5a">
 		<description>Super Hang-On</description>
 		<year>????</year>
@@ -11012,6 +11172,136 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb921e8f55a21b">
+		<description>Tobruk Tank Trainer (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25445">
+				<rom name="Tobruk Tank Trainer (19xx)(-).tap" size="25445" crc="0f960945" sha1="b921e8f55a21b36e24221f4f4b21e3c9714dc4ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0d23eed53581a">
+		<description>Torens Van Hanoi (19xx)(-)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1306">
+				<rom name="Torens Van Hanoi (19xx)(-)(Unk-Lang).tap" size="1306" crc="c7fa4321" sha1="0d23eed53581a98b48dac8ece0d36b62d3c663b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa666887dac578">
+		<description>Tornado ECR 48K (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47225">
+				<rom name="Tornado ECR 48K (1991)(Codemasters).tap" size="47225" crc="7fe902cb" sha1="a666887dac5783008811ef32047369d2a294ef36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs282951374446f">
+		<description>Torre Embrujada (1986)(Load 'N' Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19634">
+				<rom name="Torre Embrujada (1986)(Load 'N' Run)(Sp).tap" size="19634" crc="7d1bf8ca" sha1="282951374446ff590d6bdfa90bd7abcddbbc7813"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4083d494d3be3">
+		<description>Total Eclipse (1988)(Incentive Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41752">
+				<rom name="Total Eclipse (1988)(Incentive Software Ltd).tap" size="41752" crc="60f2d265" sha1="4083d494d3be3f50298c22d7c9db10fc2d4b2547"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf6f2479ad6f00">
+		<description>Total Eclipse (1988)(Incentive Software Ltd)[cr [Cr][a][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38319">
+				<rom name="Total Eclipse (1988)(Incentive Software Ltd)[cr [Cr][a][Cr].tap" size="38319" crc="132acc2f" sha1="f6f2479ad6f00812832dd5b06fc8f167cdbc1d0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1a295ddd3bf0a">
+		<description>Total Eclipse 2 - The Sphinx Jinx (1991)(Incentive Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35049">
+				<rom name="Total Eclipse 2 - The Sphinx Jinx (1991)(Incentive Software Ltd).tap" size="35049" crc="92a14882" sha1="1a295ddd3bf0a11daf4c996bbf4ddd6dd17bec0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c5f614a812e5">
+		<description>Total Eclipse 2 - The Sphinx Jinx 48K (1991)(Incentive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45514">
+				<rom name="Total Eclipse 2 - The Sphinx Jinx 48K (1991)(Incentive).tap" size="45514" crc="0c02705e" sha1="1c5f614a812e51f20ecd041c02983565bc1291d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7409bb44d7213">
+		<description>Total Eclipse 48K (1988)(Incentive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50769">
+				<rom name="Total Eclipse 48K (1988)(Incentive).tap" size="50769" crc="1e312308" sha1="7409bb44d7213590a1c4e55a9376769d718d5850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d5d4278c9a0e">
+		<description>Tour 91 (1991)(Topo Soft)(es)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="159603">
+				<rom name="Tour 91 (1991)(Topo Soft)(es).tap" size="159603" crc="a27369fc" sha1="5d5d4278c9a0e43d86a2e677dfb4a0cd23f61637"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs913b519de4921">
+		<description>Tour 91 (1991)(Topo Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="162828">
+				<rom name="Tour 91 (1991)(Topo Soft)(Sp).tap" size="162828" crc="f2377d51" sha1="913b519de4921f76438160f82c64923b61e441bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsed86986e33406">
+		<description>Tour De Force (1988)(Gremlin Graphics Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122252">
+				<rom name="Tour De Force (1988)(Gremlin Graphics Software Ltd)(128K).tap" size="122252" crc="281ef6c8" sha1="ed86986e33406846a301e9280c8f4f3fcf8c8591"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3511c714f9381">
+		<description>Tour De Force (1988)(Gremlin Graphics Software Ltd)[a](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="123038">
+				<rom name="Tour De Force (1988)(Gremlin Graphics Software Ltd)[a](128K).tap" size="123038" crc="b84e1f08" sha1="3511c714f938123c7ca2cdf9e21f53d88ef8f0fd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf714fb3ded61f">
 		<description>Tour De Force</description>
 		<year>????</year>
@@ -11019,6 +11309,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="51232">
 				<rom name="Tour De Force.tzx" size="51232" crc="e9920e2b" sha1="f714fb3ded61fc757dc198055f1a410544ffb980"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94d9c2159ba6b">
+		<description>Tourist Trap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31860">
+				<rom name="Tourist Trap.TAP" size="31860" crc="c02e31a7" sha1="94d9c2159ba6b2cf364c8579fbe7ba507bf034a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs71a62e857ddac">
+		<description>Tournament Arkanoid (2022)(Martyn Carrol)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48367">
+				<rom name="Tournament Arkanoid (2022)(Martyn Carrol).tap" size="48367" crc="3790ec49" sha1="71a62e857ddac57d9848d6acca7182fb70895daa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd2826e8afb37b">
+		<description>Towdie (1994)(Ultrasoft)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53509">
+				<rom name="Towdie (1994)(Ultrasoft)(128K).tap" size="53509" crc="ef5ca259" sha1="d2826e8afb37ba8002f1065a95fca6837d9733c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0dfe825510bb0">
+		<description>Tower Of Evil (1984)(Creative Sparks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19634">
+				<rom name="Tower Of Evil (1984)(Creative Sparks).tap" size="19634" crc="66ce2c99" sha1="0dfe825510bb0516165eb4efd06734765c16d400"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94123ea73b3b9">
+		<description>Tower Of Light (1989)(Caris Software)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="151753">
+				<rom name="Tower Of Light (1989)(Caris Software)(128K).tap" size="151753" crc="8d1e3269" sha1="94123ea73b3b9ca7014288da666b3e1d911aa1e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs58ab4cd6d621d">
+		<description>Tower Of Light (1989)(Caris Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85828">
+				<rom name="Tower Of Light (1989)(Caris Software).tap" size="85828" crc="0a9a8131" sha1="58ab4cd6d621da1f94a9c8609382e758da398711"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee29caff6f551">
+		<description>Towers Of Hanoi (1984)(Finsbury Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8281">
+				<rom name="Towers Of Hanoi (1984)(Finsbury Software).tap" size="8281" crc="39f5636b" sha1="ee29caff6f5510266acc987deb92c7134f22fcf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6526fe5efb4da">
+		<description>Toy Bizarre (1985)(Activision Inc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39230">
+				<rom name="Toy Bizarre (1985)(Activision Inc).tap" size="39230" crc="a2078eac" sha1="6526fe5efb4dad7cdeb359e959e622fc21c2ca02"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11749,6 +12119,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="45942">
 				<rom name="Turbo Esprit 48K (1986)(Durell).tap" size="45942" crc="f026a57b" sha1="d7028fe18a6779f55006cae3eddddd0491b81ba1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseea68ce4db624">
+		<description>Turbo Girl (1988)(Dinamic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48800">
+				<rom name="Turbo Girl (1988)(Dinamic Software)(Sp).tap" size="48800" crc="358aaac4" sha1="eea68ce4db624b4a4e7f048fd50eeeb86cd94168"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 648 -->
+<!-- Number of items in this list = 655 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -5712,6 +5712,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx0b849484f80a5">
+		<description>VexedMSX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="VexedMSX.rom" size="32768" crc="12fe1b8a" sha1="0b849484f80a58957a42de52c295e6e5644e9efc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxa2a9d0303cb0b">
 		<description>Video Hustler (1984)(Konami)[o2][RC-706][aka Computer Billiards]</description>
 		<year>????</year>
@@ -6152,6 +6162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx5d0d82c4cc0bc">
+		<description>[2]BloktrisMSX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="[2]BloktrisMSX.rom" size="32768" crc="070e0601" sha1="5d0d82c4cc0bc57365aafe6fd06c8caa5ddb9bb5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx9124e5524a74a">
 		<description>[2]Bouwvak</description>
 		<year>????</year>
@@ -6382,6 +6402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx06d66829c9eb2">
+		<description>[2]MinesweeperMSX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="[2]MinesweeperMSX.rom" size="16384" crc="6aa779ac" sha1="06d66829c9eb29c681140fb592c2957e30c5e760"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx495c89a312667">
 		<description>[2]Nederland</description>
 		<year>????</year>
@@ -6402,6 +6432,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxa13d9bdc76e3a">
+		<description>[2]Prince of Persia</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="[2]Prince of Persia.rom" size="262144" crc="19d8bb03" sha1="a13d9bdc76e3a1da396ad64ea27b97b21d909441"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx9aa28b99b8068">
 		<description>[2]Rekenen</description>
 		<year>????</year>
@@ -6409,6 +6449,26 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="[2]Rekenen.rom" size="16384" crc="9baddd9c" sha1="9aa28b99b8068d1ffe5bc83ac9a2bf57f2e2f108"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx602580357a3cf">
+		<description>[2]Robo Race (2024)(Maximilian Wohrl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="45583">
+				<rom name="[2]Robo Race (2024)(Maximilian Wohrl).rom" size="45583" crc="a3bf7688" sha1="602580357a3cfdf61e84506e58ebb43f11ff08e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx698c599854165">
+		<description>[2]Shiryou Sensen - War of the Dead (Japan) [T-En by Dank Translations Team v1.0] [no save]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="[2]Shiryou Sensen - War of the Dead (Japan) [T-En by Dank Translations Team v1.0] [no save].rom" size="524288" crc="88ce6519" sha1="698c5998541656cb094f885cc7089a6d4a9bf5b4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6469,6 +6529,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="[2]Usas (1987) (Konami) (J) [emoticons patch].rom" size="131072" crc="1ea3c1d4" sha1="5b545569a2d0452b9317490636c08a3221208961"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd7babe8a37bb3">
+		<description>[2]VexedMSX2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="[2]VexedMSX2.rom" size="32768" crc="3011edb2" sha1="d7babe8a37bb3b08f38598d29aa86bf573126329"/>
 			</dataarea>
 		</part>
 	</software>

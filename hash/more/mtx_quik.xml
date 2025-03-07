@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 39 -->
+<!-- Number of items in this list = 41 -->
 <softwarelist name="mtx_quik" description="mtx_quik loose roms">
 	<software name="mtxce513fb6f9d37">
 		<description>3D Tachyon Fighter (1984)(Continental Software)</description>
@@ -192,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mtxcb358aa6107c5">
+		<description>MinesweeperMTX500</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mtx_quik">
+			<dataarea name="quik" size="20996">
+				<rom name="MinesweeperMTX500.run" size="20996" crc="7aec2c8e" sha1="cb358aa6107c540f4b09d5d539375fd4ca6f335d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mtx6641eeebc7c13">
 		<description>Mission Omega</description>
 		<year>????</year>
@@ -379,6 +389,16 @@
 		<part name="quik" interface="mtx_quik">
 			<dataarea name="quik" size="20996">
 				<rom name="Vexed.run" size="20996" crc="174e84a7" sha1="2a0636c08b3ae82f9e41c41d3ddc5cae1f64d8c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe3c5f8e0af9aa">
+		<description>VexedMTX500</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mtx_quik">
+			<dataarea name="quik" size="20996">
+				<rom name="VexedMTX500.run" size="20996" crc="5c54fe34" sha1="e3c5f8e0af9aa6cb6269e2d4993d3124957805b1"/>
 			</dataarea>
 		</part>
 	</software>

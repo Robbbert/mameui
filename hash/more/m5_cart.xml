@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 45 -->
+<!-- Number of items in this list = 48 -->
 <softwarelist name="m5_cart" description="m5_cart loose roms">
 	<software name="m51017b98d9a193f">
 		<description>Aerial</description>
@@ -49,6 +49,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="9554">
 				<rom name="Battlot.rom" size="9554" crc="c013e34c" sha1="70d578a147ed69b23d93d1201afb269b6e28d048"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m50c5fa658202dec">
+		<description>BloktrisM5_103</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="14700">
+				<rom name="BloktrisM5_103.rom" size="14700" crc="3f0ff6df" sha1="0c5fa658202decba0e50705d5fae12bd635cf9c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -322,6 +332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m54e0e310d56f05f">
+		<description>MinesweeperM5_103</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="14871">
+				<rom name="MinesweeperM5_103.rom" size="14871" crc="28536dfb" sha1="4e0e310d56f05fe08ae01e8ebc32d4c080607e02"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m57ad55c1776e24a">
 		<description>Neuras</description>
 		<year>????</year>
@@ -419,6 +439,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="upupballoon.bin" size="8192" crc="1fce24c8" sha1="139ab0c63c82538bc032d2cb9d9eaf858d7c969d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5cd836f7b9d1114">
+		<description>VexedM5_115</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="14290">
+				<rom name="VexedM5_115.rom" size="14290" crc="3fd127d4" sha1="cd836f7b9d1114a4c9ba848dd303902a55765cf4"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 166 -->
+<!-- Number of items in this list = 170 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a522071e69941a10">
 		<description>(demo)PAM SALT V1.02 (1982) (Atari) [o1]</description>
@@ -379,6 +379,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="blaster32_5200.bin" size="32768" crc="266d9324" sha1="84b37092332c5ba7009537bbfe8c5e9ae066ba50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52e71d803fc10d3">
+		<description>BloktrisA52</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="BloktrisA52.a52" size="32768" crc="8ba992e0" sha1="e71d803fc10d38df334d5e4aabed96e4e3a62b2b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1032,6 +1042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a52d317eb92beea4">
+		<description>MinesweeperA52</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MinesweeperA52.a52" size="32768" crc="4792ef17" sha1="d317eb92beea4cd69470b006edaccbae0b96af98"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a52ea00348b23f14">
 		<description>Missile Command 5200 (4482) (PAL) (Proto)</description>
 		<year>????</year>
@@ -1629,6 +1649,26 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Time Runner 52.bin" size="16384" crc="0e80dbb2" sha1="b000ffe9fe1f5cd7d68cf7d2e7fe906b6a0fd668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a521ae88870dd499">
+		<description>Vanguard (USA) (Beta) (1983-02-01)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Vanguard (USA) (Beta) (1983-02-01).bin" size="32768" crc="1cf10560" sha1="1ae88870dd4990b796e89dadccf871c1254e12e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52b95b175ac196a">
+		<description>VexedA52</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="VexedA52.a52" size="32768" crc="21d9fa26" sha1="b95b175ac196a3f3d91cccc0fc969b8a97358502"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7679 -->
+<!-- Number of items in this list = 7682 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -9129,6 +9129,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="blockup.dsk" size="194816" crc="7237ec68" sha1="7080e8392cb6607fdd5e9e41c9f8111909cb11bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3e1603f21054a">
+		<description>BloktrisCPC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="BloktrisCPC.dsk" size="204544" crc="51c6ccd7" sha1="3e1603f21054addcfe0a7916e1e02fb3fbf3ddaa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -46842,6 +46852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc0c2f575f452c5">
+		<description>MinesweeperCPC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="MinesweeperCPC.dsk" size="204544" crc="d50c0fa6" sha1="0c2f575f452c516c7145e802180651a4a2946280"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcdafd9c8b119f1">
 		<description>Mini Columns (PD)</description>
 		<year>????</year>
@@ -73509,6 +73529,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194048">
 				<rom name="Vera_Cruz_Affair__ENGLISH.dsk" size="194048" crc="778b25f2" sha1="6be1de26cc21f3cd4bb29d7221556dfe289dc7ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc3fd71c0b09c1c">
+		<description>VexedCPC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="VexedCPC.dsk" size="204544" crc="327030e3" sha1="3fd71c0b09c1c3b97f82b9aad2c1cf3143858a8d"/>
 			</dataarea>
 		</part>
 	</software>

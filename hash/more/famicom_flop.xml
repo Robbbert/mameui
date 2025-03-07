@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 513 -->
+<!-- Number of items in this list = 514 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -3832,6 +3832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds497d020a13614">
+		<description>ProWres - Famicom Wrestling Association (J) [b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="65516">
+				<rom name="ProWres - Famicom Wrestling Association (J) [b].fds" size="65516" crc="3491df96" sha1="497d020a136143fb9998c45e26339af6e9aecee9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdse2703b0b7bf00">
 		<description>Pulsar no Hikari - Space Wars Simulation (1987)(Soft Pro Int.)</description>
 		<year>????</year>
@@ -3982,6 +3992,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds45562775a083f">
+		<description>Risa no Yousei Densetsu (J)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Risa no Yousei Densetsu (J).fds" size="131016" crc="670be953" sha1="45562775a083f4bc18793b8755ea1d8ca639ba4a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds071390a99e447">
 		<description>Risa no Yousei Densetsu - Risa Tachibana (1988)(Konami)</description>
 		<year>????</year>
@@ -4072,6 +4092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds63a474764200b">
+		<description>Seiken Psychocalibur - Majuu no Mori Densetsu (J)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Seiken Psychocalibur - Majuu no Mori Densetsu (J).fds" size="131016" crc="74843b7f" sha1="63a474764200b6839769acfb5a427520eb8e8ec8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds59ec1d389b1ff">
 		<description>Seiken Psychocalibur - Majuu no Mori Densetsu (Japan)</description>
 		<year>????</year>
@@ -4129,6 +4159,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="65516">
 				<rom name="Smash Ping Pong (1987)(Nintendo).fds" size="65516" crc="d4daaffc" sha1="bf1e5a0e3b017ef3f14b73d29bc296823283aec0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdseab1093eb2ebb">
+		<description>Smash Ping Pong (J) [b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="65516">
+				<rom name="Smash Ping Pong (J) [b].fds" size="65516" crc="383b9ba6" sha1="eab1093eb2ebbe9be172e991fa570b64020acc32"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4209,6 +4249,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Super Lode Runner II (1987)(Irem Corp.).fds" size="131016" crc="40d11036" sha1="e2528d586d99c86e1a72dd390ba6b51ccb9d2a94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds7bb0c7a2df6cd">
+		<description>Super Lode Runner II (J) [b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Super Lode Runner II (J) [b].fds" size="131016" crc="c5175786" sha1="7bb0c7a2df6cdcf9b0386f6206f75cb56db1c59c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4312,6 +4362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds76b58ac7202a8">
+		<description>Super Mario Brothers (J)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="65516">
+				<rom name="Super Mario Brothers (J).fds" size="65516" crc="fb5ff4f7" sha1="76b58ac7202a86f783337340d91d10d8a2c4d0e6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds8a2ea50aa0287">
 		<description>super mario brothers (japan) - castellano v1.0</description>
 		<year>????</year>
@@ -4319,6 +4379,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="65516">
 				<rom name="super mario brothers (japan) - castellano v1.0.fds" size="65516" crc="42d4a7c5" sha1="8a2ea50aa028792f81c5a8d5bd7392e5f5886ee2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds8a1b0d3481dc3">
+		<description>Super Mario Brothers (Japan) [b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="65516">
+				<rom name="Super Mario Brothers (Japan) [b].fds" size="65516" crc="21fcb8b9" sha1="8a1b0d3481dc3795a220efc137d267f81601bdbe"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4632,6 +4702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds6156e9105411c">
+		<description>TwinBee (J)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="65516">
+				<rom name="TwinBee (J).fds" size="65516" crc="8b4d24a7" sha1="6156e9105411cb33597a4b1cad4794a4d3d63b4e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdsa47b173fac54a">
 		<description>TwinBee [1-1f7685a4]</description>
 		<year>????</year>
@@ -4722,6 +4802,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds3c87368d96a5a">
+		<description>Ultraman Club - Chikyuu Dakkan Sakusen (J) (v1.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Ultraman Club - Chikyuu Dakkan Sakusen (J) (v1.0).fds" size="131016" crc="1dce5ca9" sha1="3c87368d96a5a59ebe4c96173eee0e30e6998c77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds199b2aaea7f0f">
+		<description>Ultraman Club - Chikyuu Dakkan Sakusen (J) (v1.1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Ultraman Club - Chikyuu Dakkan Sakusen (J) (v1.1).fds" size="131016" crc="4d8ad1f3" sha1="199b2aaea7f0f49c35e7e62904b4ed7641eb9d19"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds31475b3d5e146">
 		<description>Ultraman Kurabu (1988)(Bandai)</description>
 		<year>????</year>
@@ -4759,6 +4859,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Wakusei Aton Gaiden (Japan) (National Tax Agency Demo).fds" size="131016" crc="94a825fa" sha1="e0f6d627d91cdbe10382a9dfdcb971897995505c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds635bb0cee082a">
+		<description>Warrior of Love - Nicol (Japan) [T-En by BlackPaladin v1.0] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Warrior of Love - Nicol (Japan) [T-En by BlackPaladin v1.0] [n].fds" size="131000" crc="a2322a37" sha1="635bb0cee082a9e169bd1316c344f269476e0759"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4912,6 +5022,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds6a6779db78922">
+		<description>Yume Koujou Doki Doki Panic (J) [b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Yume Koujou Doki Doki Panic (J) [b].fds" size="131016" crc="78e33821" sha1="6a6779db789228539e35567b37e3bd48f72f2a6b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds4f3399489d26c">
 		<description>Yuushi no Monshou (1987)(Humming Bird Soft)[b]</description>
 		<year>????</year>
@@ -4982,6 +5102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds0d77142f51bbe">
+		<description>Zelda no Densetsu - The Hyrule Fantasy (J) (v1.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Zelda no Densetsu - The Hyrule Fantasy (J) (v1.0).fds" size="131016" crc="afbd13c3" sha1="0d77142f51bbedd65294e32289cb838f50247fa4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdsea99efdeeec99">
 		<description>Zelda no Densetsu - The Hyrule Fantasy (Japan)</description>
 		<year>????</year>
@@ -5009,126 +5139,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
 				<rom name="Zelda no Densetsu - The Hyrule Fantasy (v1.1) [2-3025936b].fds" size="131000" crc="c93318ca" sha1="a6a870403c04c523c9dc53b4a68cfe0997d357f6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds497d020a13614">
-		<description>ZZZ_UNK_ProWres - Famicom Wrestling Association (J) [b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="65516">
-				<rom name="ZZZ_UNK_ProWres - Famicom Wrestling Association (J) [b].fds" size="65516" crc="3491df96" sha1="497d020a136143fb9998c45e26339af6e9aecee9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds45562775a083f">
-		<description>ZZZ_UNK_Risa no Yousei Densetsu (J)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="ZZZ_UNK_Risa no Yousei Densetsu (J).fds" size="131016" crc="670be953" sha1="45562775a083f4bc18793b8755ea1d8ca639ba4a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds63a474764200b">
-		<description>ZZZ_UNK_Seiken Psychocalibur - Majuu no Mori Densetsu (J)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="ZZZ_UNK_Seiken Psychocalibur - Majuu no Mori Densetsu (J).fds" size="131016" crc="74843b7f" sha1="63a474764200b6839769acfb5a427520eb8e8ec8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fdseab1093eb2ebb">
-		<description>ZZZ_UNK_Smash Ping Pong (J) [b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="65516">
-				<rom name="ZZZ_UNK_Smash Ping Pong (J) [b].fds" size="65516" crc="383b9ba6" sha1="eab1093eb2ebbe9be172e991fa570b64020acc32"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds7bb0c7a2df6cd">
-		<description>ZZZ_UNK_Super Lode Runner II (J) [b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="ZZZ_UNK_Super Lode Runner II (J) [b].fds" size="131016" crc="c5175786" sha1="7bb0c7a2df6cdcf9b0386f6206f75cb56db1c59c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds76b58ac7202a8">
-		<description>ZZZ_UNK_Super Mario Brothers (J)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="65516">
-				<rom name="ZZZ_UNK_Super Mario Brothers (J).fds" size="65516" crc="fb5ff4f7" sha1="76b58ac7202a86f783337340d91d10d8a2c4d0e6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds8a1b0d3481dc3">
-		<description>ZZZ_UNK_Super Mario Brothers (Japan) [b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="65516">
-				<rom name="ZZZ_UNK_Super Mario Brothers (Japan) [b].fds" size="65516" crc="21fcb8b9" sha1="8a1b0d3481dc3795a220efc137d267f81601bdbe"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds6156e9105411c">
-		<description>ZZZ_UNK_TwinBee (J)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="65516">
-				<rom name="ZZZ_UNK_TwinBee (J).fds" size="65516" crc="8b4d24a7" sha1="6156e9105411cb33597a4b1cad4794a4d3d63b4e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds3c87368d96a5a">
-		<description>ZZZ_UNK_Ultraman Club - Chikyuu Dakkan Sakusen (J) (v1.0)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="ZZZ_UNK_Ultraman Club - Chikyuu Dakkan Sakusen (J) (v1.0).fds" size="131016" crc="1dce5ca9" sha1="3c87368d96a5a59ebe4c96173eee0e30e6998c77"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds199b2aaea7f0f">
-		<description>ZZZ_UNK_Ultraman Club - Chikyuu Dakkan Sakusen (J) (v1.1)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="ZZZ_UNK_Ultraman Club - Chikyuu Dakkan Sakusen (J) (v1.1).fds" size="131016" crc="4d8ad1f3" sha1="199b2aaea7f0f49c35e7e62904b4ed7641eb9d19"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds6a6779db78922">
-		<description>ZZZ_UNK_Yume Koujou Doki Doki Panic (J) [b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="ZZZ_UNK_Yume Koujou Doki Doki Panic (J) [b].fds" size="131016" crc="78e33821" sha1="6a6779db789228539e35567b37e3bd48f72f2a6b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="fds0d77142f51bbe">
-		<description>ZZZ_UNK_Zelda no Densetsu - The Hyrule Fantasy (J) (v1.0)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="131016">
-				<rom name="ZZZ_UNK_Zelda no Densetsu - The Hyrule Fantasy (J) (v1.0).fds" size="131016" crc="afbd13c3" sha1="0d77142f51bbedd65294e32289cb838f50247fa4"/>
 			</dataarea>
 		</part>
 	</software>

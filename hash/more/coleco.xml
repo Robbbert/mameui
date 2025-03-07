@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 622 -->
+<!-- Number of items in this list = 626 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -529,6 +529,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Blockade Runner.rom" size="16384" crc="da29c284" sha1="09fc6bd4cfba5664b45cb89e2daa7e3bc3f50c4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col492a499a32fac">
+		<description>BloktrisCOL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="BloktrisCOL.col" size="32768" crc="d1bc1d23" sha1="492a499a32fac7c0902faf514a4cbbd6f91aa9da"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3242,6 +3252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cola72c681702649">
+		<description>MinesweeperCOL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="MinesweeperCOL.col" size="16384" crc="d92adc95" sha1="a72c68170264966105cb7d309e72173fa8dcb695"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col60e1e1543c509">
 		<description>Mobile Planet Styllus SGM (20XX)(unknown)</description>
 		<year>????</year>
@@ -3989,6 +4009,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Power Lords - Quest for Volcan (1983) (Strongin-Mayem) (Unreleased).rom" size="32768" crc="caa61d8d" sha1="6712b866fa0d2d57fef1ac292b679fe4aeb69b62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col5265f211b73f7">
+		<description>Prince of Persia</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Prince of Persia.col" size="262144" crc="b5498a5d" sha1="5265f211b73f7485d1553c02a4b94ff4f3e84081"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5869,6 +5899,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Vexed v1.07 (2023)(Under4Mhz).rom" size="32768" crc="e2630325" sha1="1cf877db6dc18375ce8c657df1687602cd699002"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colc9c40cf30cc52">
+		<description>VexedCOL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="VexedCOL.col" size="32768" crc="865bae31" sha1="c9c40cf30cc5290bc5a3b792256c3886d1a26b96"/>
 			</dataarea>
 		</part>
 	</software>
