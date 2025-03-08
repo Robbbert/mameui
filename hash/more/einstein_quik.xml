@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="einstein_quik" description="einstein_quik loose roms">
+	<software name="ein94be674252d8a">
+		<description>biggoil</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="einstein_quik">
+			<dataarea name="quik" size="14816">
+				<rom name="biggoil.com" size="14816" crc="c1862782" sha1="94be674252d8a859eb7b87df4149c340ec987437"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

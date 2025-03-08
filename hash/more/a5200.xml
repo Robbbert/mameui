@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 170 -->
+<!-- Number of items in this list = 171 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a522071e69941a10">
 		<description>(demo)PAM SALT V1.02 (1982) (Atari) [o1]</description>
@@ -1419,6 +1419,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Satans Hollow (Conv).bin" size="32768" crc="fdf0f296" sha1="4d4dcbc5ebd57b60ffa8bcf5f7fea7321e01d181"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a520000e5e72bf48">
+		<description>Space Dungeon (USA) (Beta) (1983-03-09)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Space Dungeon (USA) (Beta) (1983-03-09).bin" size="32768" crc="893a6846" sha1="0000e5e72bf48cd2eb7e476f605a56affd1a4606"/>
 			</dataarea>
 		</part>
 	</software>

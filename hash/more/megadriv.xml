@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1890 -->
+<!-- Number of items in this list = 1912 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -962,6 +962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen2dca183ddb798">
+		<description>(E)Jurassic Park (Euro)(1993)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(E)Jurassic Park (Euro)(1993)(Sega).bin" size="2097152" crc="448341f6" sha1="2dca183ddb79805b6300d8fcca1163fce88dd9db"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen90e195d8959b9">
 		<description>(E)Landstalker - The Treasures of King Nole [T+Ita_Gufino2]</description>
 		<year>????</year>
@@ -1289,6 +1299,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3151044">
 				<rom name="(J)Bare Knuckle III Project.bin" size="3151044" crc="5aa71c8b" sha1="170ed36af30a2c5a003f56c5542a7032da935fa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend5d0e2ed4c004">
+		<description>(J)Jurassic Park (Japan)(1993)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(J)Jurassic Park (Japan)(1993)(Sega).bin" size="2097152" crc="ec8e5783" sha1="d5d0e2ed4c00435ec4a343583bb399b07927de21"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4862,6 +4882,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genbf2e8d122f467">
+		<description>Crusader of Centy (USA)(1994)(Atlus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Crusader of Centy (USA)(1994)(Atlus).bin" size="2097152" crc="41858f6f" sha1="bf2e8d122f4670865bedbc305ef991ee5f52d647"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen458ee203a5c1a">
 		<description>CUBICGUY by TmEE 09-2009(demo)</description>
 		<year>????</year>
@@ -4962,16 +4992,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen7533827564cbd">
-		<description>darius ii (enhanced colors)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="darius ii (enhanced colors).md" size="1048576" crc="021faa21" sha1="7533827564cbdc915193b5fd9f0f0f8ad47fe7f6"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen5824936a1a869">
 		<description>darius ii (j) [a1]</description>
 		<year>????</year>
@@ -4979,6 +4999,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="darius ii (j) [a1].md" size="1048576" crc="0140ab58" sha1="5824936a1a8696d8363431f31293d4a1a1d0b69b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen93593e4014e13">
+		<description>darius ii (jpn)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="darius ii (jpn).bin" size="1048576" crc="25dfe62a" sha1="93593e4014e13db90fedc1903a402c6f7d885a2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7533827564cbd">
+		<description>Darius II - Enhanced Colors (2016)(Pyron)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Darius II - Enhanced Colors (2016)(Pyron).bin" size="1048576" crc="021faa21" sha1="7533827564cbdc915193b5fd9f0f0f8ad47fe7f6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8352,6 +8392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen6eb88d7156241">
+		<description>hunting season 3 (unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="593184">
+				<rom name="hunting season 3 (unl).bin" size="593184" crc="b433878c" sha1="6eb88d71562415364c11b8dac1eb6fee24a53b95"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen43bcc8f46b80b">
 		<description>hybrid front, the (T-Chi)</description>
 		<year>????</year>
@@ -8962,6 +9012,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gene7a1f49d362b5">
+		<description>Jurassic Park (USA)(1993)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park (USA)(1993)(Sega).bin" size="2097152" crc="7b31deef" sha1="e7a1f49d362b5c7e13d9c7942d4a83fe003cfbd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genac2097b5f2a30">
+		<description>Jurassic Park (USA, Proto)(1993)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park (USA, Proto)(1993)(Sega).bin" size="2097152" crc="cf890eed" sha1="ac2097b5f2a30787d7ca1ed8ab4eac7f4be77f0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen535c78d91f763">
+		<description>Jurassic Park - Rampage Edition (Euro, USA)(1994)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park - Rampage Edition (Euro, USA)(1994)(Sega).bin" size="2097152" crc="98b4aa1b" sha1="535c78d91f76302a882d69ff40b3d0f030a5b6ae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genab16d2f44ffac">
 		<description>jurassic park - rampage edition (Hack, Spanish)</description>
 		<year>????</year>
@@ -8969,6 +9049,76 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="jurassic park - rampage edition (Hack, Spanish).bin" size="2097152" crc="954efbf2" sha1="ab16d2f44fface1f2bebf161c2bd8320dc693a7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf1f763e087065">
+		<description>Jurassic Park - Rampage Edition (Proto, 19940630)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park - Rampage Edition (Proto, 19940630)(Sega).bin" size="2097152" crc="bff4b396" sha1="f1f763e087065483ed7ff53f95b99bac16bb8484"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7dca5ec144022">
+		<description>Jurassic Park - Rampage Edition (Proto, 19940708)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park - Rampage Edition (Proto, 19940708)(Sega).bin" size="2097152" crc="f4c78bd0" sha1="7dca5ec1440222ce38f085663d0ab6539693feaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb840cc1b00bf2">
+		<description>Jurassic Park - Rampage Edition (Proto, 19940713)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park - Rampage Edition (Proto, 19940713)(Sega).bin" size="2097152" crc="8475a105" sha1="b840cc1b00bf2f7e75320c1395da3dceaa637071"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen534eea52e7c6d">
+		<description>Jurassic Park - Rampage Edition (Proto, 19940714)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park - Rampage Edition (Proto, 19940714)(Sega).bin" size="2097152" crc="9bf0e28d" sha1="534eea52e7c6d8d0fc0a93480c89f89568196d36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb10fae841b410">
+		<description>Jurassic Park - Rampage Edition (Proto, 19940715)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park - Rampage Edition (Proto, 19940715)(Sega).bin" size="2097152" crc="d2202be5" sha1="b10fae841b410525ac83e729983f3e0cda2e7365"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2d817ad10e9b6">
+		<description>Jurassic Park - Rampage Edition (Proto, 19940717)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park - Rampage Edition (Proto, 19940717)(Sega).bin" size="2097152" crc="2eae6140" sha1="2d817ad10e9b6b93b6eee23a76f788a73827bbc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencbb44d5d5da12">
+		<description>Jurassic Park - Rampage Edition (Proto, 19940718)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park - Rampage Edition (Proto, 19940718)(Sega).bin" size="2097152" crc="1a62b826" sha1="cbb44d5d5da1263a4524c747be9afd0aa8547a63"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8993,22 +9143,72 @@
 		</part>
 	</software>
 	<software name="gen1be166689726b">
-		<description>Justice League Task Force</description>
+		<description>Justice League Task Force (World)(1995)(Acclaim)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
-				<rom name="Justice League Task Force.bin" size="3145728" crc="2a60ebe9" sha1="1be166689726b98fc5924028e736fc8007f958ef"/>
+				<rom name="Justice League Task Force (World)(1995)(Acclaim).bin" size="3145728" crc="2a60ebe9" sha1="1be166689726b98fc5924028e736fc8007f958ef"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen0f285d2caec1b">
-		<description>Ka-Ge-Ki - Fists of Steel (USA)</description>
+	<software name="gen9424e8b759609">
+		<description>Ka-Ge-Ki (Japan)(1991)(Hot-B)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Ka-Ge-Ki - Fists of Steel (USA).bin" size="1048576" crc="7978b1e4" sha1="0f285d2caec1bdf8c8d25d3d4777eacab6d03469"/>
+				<rom name="Ka-Ge-Ki (Japan)(1991)(Hot-B).bin" size="1048576" crc="391866a1" sha1="9424e8b759609004748dd6cd4779f917211264ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen0f285d2caec1b">
+		<description>ka-ge-ki - fists of steel (hack, spanish)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="ka-ge-ki - fists of steel (hack, spanish).bin" size="1048576" crc="7978b1e4" sha1="0f285d2caec1bdf8c8d25d3d4777eacab6d03469"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen893b1bae5242f">
+		<description>Ka-Ge-Ki - Fists of Steel (USA)(1991)(Sage's Creation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Ka-Ge-Ki - Fists of Steel (USA)(1991)(Sage's Creation).bin" size="1048576" crc="effc0fa6" sha1="893b1bae5242f25494b6de64a861b1aa1dc6cf14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfa7e07bbab70a">
+		<description>Kawasaki Superbike Challenge (Euro, USA)(1994)(Time Warner Int.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kawasaki Superbike Challenge (Euro, USA)(1994)(Time Warner Int.).bin" size="1048576" crc="631cc8e9" sha1="fa7e07bbab70a7b5c32a0f2713494b2c10ce8e1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena66446d5c3d07">
+		<description>Kawasaki Superbike Challenge (USA, Proto)(1994)(Time Warner Int.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kawasaki Superbike Challenge (USA, Proto)(1994)(Time Warner Int.).bin" size="1048576" crc="55934d1b" sha1="a66446d5c3d07ce211d7198faf4ea3ff6dbfa0b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen28b904000b286">
+		<description>Kid Chameleon (Euro, Korea, USA)(1992)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kid Chameleon (Euro, Korea, USA)(1992)(Sega).bin" size="1048576" crc="ce36e6cc" sha1="28b904000b2863b6760531807760b571f1a5fc1d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9019,6 +9219,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="kid chameleon (Hack, Spanish).bin" size="1048576" crc="4871962f" sha1="29197c61164dfba664e22699d9790f02a34aed61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5595422530e68">
+		<description>Kidou Keisatsu Patlabor - 98-shiki Kidou Seyo! (Japan)(1992)(Ma-Ba)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Kidou Keisatsu Patlabor - 98-shiki Kidou Seyo! (Japan)(1992)(Ma-Ba).bin" size="524288" crc="21a0e749" sha1="5595422530e6891042a4a005d11b79af7f09fe9b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15989,6 +16199,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Spot Goes to Hollywood (R).bin" size="4194304" crc="66254cab" sha1="24d27506f9e4d8de8833f33d8f8e4dd8fbc1bf25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen36c66a1cbf44f">
+		<description>SS Lucifer Man Overboard</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="SS Lucifer Man Overboard.bin" size="1048576" crc="cae0e3a6" sha1="36c66a1cbf44f4019b84538a6bf452c369239bc9"/>
 			</dataarea>
 		</part>
 	</software>

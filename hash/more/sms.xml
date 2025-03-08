@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 309 -->
+<!-- Number of items in this list = 310 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
@@ -1919,6 +1919,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pegged v1.02 (2021)(Under4Mhz).sms" size="32768" crc="ac08cf7e" sha1="cdc064faba261653498152403ba07b8402d224b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms688944fb30d84">
+		<description>Pegged_102</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Pegged_102.sms" size="32768" crc="b860ffb5" sha1="688944fb30d84c995eda6326233fff51a78610c5"/>
 			</dataarea>
 		</part>
 	</software>

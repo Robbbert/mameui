@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7682 -->
+<!-- Number of items in this list = 7684 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -43842,6 +43842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc83860e9db880e">
+		<description>Mahjong_116</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Mahjong_116.dsk" size="204544" crc="f4a1b411" sha1="83860e9db880ed429a37adb6765691a0089f1795"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc388d15e6cb0da">
 		<description>Majestic (AST System - Kill Or Die)</description>
 		<year>????</year>
@@ -53429,6 +53439,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="PeepShow.dsk" size="194816" crc="8408d1df" sha1="a05df80d7d6237650a5a0834749d4b709eb30edc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc09622803bbce6">
+		<description>Pegged_102</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Pegged_102.dsk" size="204544" crc="0f952558" sha1="09622803bbce657bd3f076e728721da9304cecde"/>
 			</dataarea>
 		</part>
 	</software>

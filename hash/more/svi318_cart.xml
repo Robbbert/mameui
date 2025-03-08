@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2 -->
+<!-- Number of items in this list = 7 -->
 <softwarelist name="svi318_cart" description="svi318_cart loose roms">
+	<software name="svi0aa15d7befc28">
+		<description>BloktrisSVI_103</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="29183">
+				<rom name="BloktrisSVI_103.rom" size="29183" crc="4104dc39" sha1="0aa15d7befc286ab53ddc74d37055d6c997cca93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="svi44a73d0e81399">
 		<description>Deepspace_SVI318</description>
 		<year>????</year>
@@ -19,6 +29,46 @@
 		<part name="cart" interface="svi318_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Deepspace_SVI328.rom" size="32768" crc="c71aa999" sha1="ad0c3a57f97d5a5133f7d1713557c2d24182a838"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi57e0d0b07306c">
+		<description>Klondike_104</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="27690">
+				<rom name="Klondike_104.rom" size="27690" crc="1601f69d" sha1="57e0d0b07306cf67d6aec2f178c19835255ca2cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi80afdd97bd837">
+		<description>Mahjong_116</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="22994">
+				<rom name="Mahjong_116.rom" size="22994" crc="6c7e5f9a" sha1="80afdd97bd837e04c929f87a689123642cae9f52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi4422527797429">
+		<description>MinesweeperSVI_103</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="16138">
+				<rom name="MinesweeperSVI_103.rom" size="16138" crc="26822829" sha1="442252779742951e06ff08e8b9a15f5ce480eb78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi58598a70c23fb">
+		<description>VexedSVI_115</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="18306">
+				<rom name="VexedSVI_115.rom" size="18306" crc="7849fc59" sha1="58598a70c23fbd00586d81d2d8f8cef53915c6c2"/>
 			</dataarea>
 		</part>
 	</software>

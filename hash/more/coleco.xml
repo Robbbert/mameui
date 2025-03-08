@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 626 -->
+<!-- Number of items in this list = 628 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -2812,6 +2812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cold25e70e883f5d">
+		<description>Klondike_104</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Klondike_104.col" size="32768" crc="edc43cd0" sha1="d25e70e883f5de018a9db2f8f1384777579f0bef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col9b31dd3a29127">
 		<description>Knight Quest (2013 Nicolas Campion) [WIP]</description>
 		<year>????</year>
@@ -3009,6 +3019,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="M.A.S.H. (1983)(Fox Video Games)(proto).rom" size="16384" crc="fc95b302" sha1="06513b0f49a86784b54dbd8abf8ef8eae934e3c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cole4250ff63e87b">
+		<description>Mahjong_116</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mahjong_116.col" size="32768" crc="119af363" sha1="e4250ff63e87b1e75e33dbd746db4325818fd13e"/>
 			</dataarea>
 		</part>
 	</software>

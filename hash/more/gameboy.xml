@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1345 -->
+<!-- Number of items in this list = 1346 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -10529,6 +10529,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="PaZeek (USA) (Proto).gbc" size="262144" crc="952b0028" sha1="590dc27682dacb8a044b68d76ad3a0548973c390"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc762e9eeca04a4">
+		<description>Pegged_102</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Pegged_102.gb" size="32768" crc="27b2f3a2" sha1="762e9eeca04a4cc92725ada92ed73c06baa500a2"/>
 			</dataarea>
 		</part>
 	</software>

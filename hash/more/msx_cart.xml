@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 655 -->
+<!-- Number of items in this list = 657 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -6262,6 +6262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx2b35ece5a99ad">
+		<description>[2]Klondike_104</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="[2]Klondike_104.rom" size="32768" crc="b1003883" sha1="2b35ece5a99ad9c19c7dfdd21ac13d0bd00ab41e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx751571d21457d">
 		<description>[2]KONAMI-M</description>
 		<year>????</year>
@@ -6289,6 +6299,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="[2]LABYRINTH-fr.rom" size="262144" crc="807e8f36" sha1="d57fc4121d716182a091bb53c666b46c10142668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf7fa508e99838">
+		<description>[2]Mahjong_116</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="[2]Mahjong_116.rom" size="32768" crc="06158880" sha1="f7fa508e9983800f1d0060213f6001609d6be90e"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 51 -->
+<!-- Number of items in this list = 55 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -492,6 +492,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg13655a171b045b">
+		<description>[sg1000m2]Klondike_104</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]Klondike_104.sg" size="32768" crc="9f2720df" sha1="3655a171b045bb462ce59251684e8b43b37903df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg17524486ce0fa3">
+		<description>[sg1000m2]Mahjong_116</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]Mahjong_116.sg" size="32768" crc="d07afa95" sha1="7524486ce0fa3c7a21c5231cce35133ef2f20a57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg177e530652e44e">
+		<description>[sg1000m2]MastermindRK_sc3000</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]MastermindRK_sc3000.sg" size="32768" crc="86a5beb1" sha1="77e530652e44ea3fd1831eeea107adbccbd4c51b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg16cff5223dd394">
 		<description>[sg1000m2]Minesweeper_103</description>
 		<year>????</year>
@@ -499,6 +529,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="16384">
 				<rom name="[sg1000m2]Minesweeper_103.sg" size="16384" crc="744e2ed9" sha1="6cff5223dd394ff5d5ff57ff174390e30da153b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1c524f5f682e3b">
+		<description>[sg1000m2]Pegged_102</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]Pegged_102.sg" size="32768" crc="f6c2547d" sha1="c524f5f682e3b39608f4a04f4a29f80b923dce1b"/>
 			</dataarea>
 		</part>
 	</software>
