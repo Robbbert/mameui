@@ -57,6 +57,7 @@ void pc88va_state::video_start()
 
 void pc88va_state::video_reset()
 {
+	m_gden0 = false;
 	m_text_transpen = 0;
 	m_screen_ctrl_reg = 0;
 	m_color_mode = 0;
@@ -245,6 +246,7 @@ void pc88va_state::draw_sprites(bitmap_rgb32 &bitmap, const rectangle &cliprect)
 			}
 		}
 
+		// TODO: std::function
 		if(md) // 1bpp mode
 		{
 			int fg_col = (tvram[(offs + i + 6) / 2] & 0xf0) >> 4;
@@ -267,11 +269,7 @@ void pc88va_state::draw_sprites(bitmap_rgb32 &bitmap, const rectangle &cliprect)
 					for(int x_s = 0; x_s < 16; x_s++)
 					{
 						int res_x = xp + x_i + x_s;
-						// TODO: MG actually doubles Y size
 						int res_y = (yp + y_i) << m_tsp.spr_mg;
-
-						if (!cliprect.contains(res_x, res_y))
-							continue;
 
 						const u32 data_offset = ((spda + spr_count) & 0xffff) / 2;
 						u8 pen = (bitswap<16>(tvram[data_offset],7,6,5,4,3,2,1,0,15,14,13,12,11,10,9,8) >> (15 - x_s)) & 1;
@@ -279,7 +277,14 @@ void pc88va_state::draw_sprites(bitmap_rgb32 &bitmap, const rectangle &cliprect)
 						pen = pen & 1 ? fg_col : (bc) ? 8 : 0;
 
 						if(pen != 0)
-							bitmap.pix(res_y, res_x) = m_palette->pen(pen + layer_pal_bank);
+						{
+							for (int mg = 0; mg < m_tsp.spr_mg + 1; mg ++)
+							{
+								if (!cliprect.contains(res_x, res_y + mg))
+									continue;
+								bitmap.pix(res_y + mg, res_x) = m_palette->pen(pen + layer_pal_bank);
+							}
+						}
 					}
 
 					spr_count += 2;
@@ -303,16 +308,20 @@ void pc88va_state::draw_sprites(bitmap_rgb32 &bitmap, const rectangle &cliprect)
 						int res_x = xp + x_i + x_s;
 						int res_y = (yp + y_i) << m_tsp.spr_mg;
 
-						if (!cliprect.contains(res_x, res_y))
-							continue;
-
 						const u32 data_offset = ((spda + spr_count) & 0xffff) / 2;
 
 						int pen = (bitswap<16>(tvram[data_offset],7,6,5,4,3,2,1,0,15,14,13,12,11,10,9,8)) >> (12 - (x_s * 4)) & 0xf;
 
 						//if (pen != 0 && pen != m_text_transpen)
 						if (pen != 0)
-							bitmap.pix(res_y, res_x) = m_palette->pen(pen + layer_pal_bank);
+						{
+							for (int mg = 0; mg < m_tsp.spr_mg + 1; mg ++)
+							{
+								if (!cliprect.contains(res_x, res_y + mg))
+									continue;
+								bitmap.pix(res_y + mg, res_x) = m_palette->pen(pen + layer_pal_bank);
+							}
+						}
 					}
 
 					spr_count += 2;
@@ -691,6 +700,10 @@ void pc88va_state::draw_text(bitmap_rgb32 &bitmap, const rectangle &cliprect)
 
 void pc88va_state::draw_graphic_layer(bitmap_rgb32 &bitmap, const rectangle &cliprect, u8 which)
 {
+	// Master graphic enable
+	if (!m_gden0)
+		return;
+
 	// disable graphic B if screen 0 only setting is enabled
 	if (which && !m_ymmd)
 		return;
@@ -704,9 +717,13 @@ void pc88va_state::draw_graphic_layer(bitmap_rgb32 &bitmap, const rectangle &cli
 
 	const u8 gfx_ctrl = (m_gfx_ctrl_reg >> (which * 8)) & 0x13;
 
-	// TODO: xak2 wants independent doubled Y axis on setup menu & Micro Cabin logo
-	// i.e. 200 lines draw on a 400 lines canvas
+	// H320 setting
 	const u32 pixel_size = 0x10000 >> BIT(gfx_ctrl, 4);
+	// xak2/fray/boomer all sets independent doubled Y axis
+	// i.e. 200 lines draw on a 400 lines canvas
+	const int v_sizes[4] = { 400, 408, 200, 204 };
+	const u32 line_size = (0x10000 * v_sizes[m_vw]) / m_screen->visible_area().height();
+	//popmessage("%08x %d %d %d", line_size, m_screen->visible_area().height(), m_vw, BIT(m_screen_ctrl_reg, 7));
 
 	const u8 layer_pal_bank = get_layer_pal_bank(2 + which);
 
@@ -716,6 +733,7 @@ void pc88va_state::draw_graphic_layer(bitmap_rgb32 &bitmap, const rectangle &cli
 		, layer_pal_bank
 	);
 
+//  m_graphic_bitmap[which].fill(m_palette->pen(layer_pal_bank), cliprect);
 	m_graphic_bitmap[which].fill(0, cliprect);
 
 	const int layer_inc = (!is_5bpp) + 1;
@@ -775,6 +793,9 @@ void pc88va_state::draw_graphic_layer(bitmap_rgb32 &bitmap, const rectangle &cli
 			switch(gfx_ctrl & 3)
 			{
 				case 1: draw_packed_gfx_4bpp(m_graphic_bitmap[which], split_cliprect, fsa, dsa, layer_pal_bank, fbw, fbl); break;
+				default:
+					popmessage("pc88va_v.cpp: unhandled %d GFX mode DM = 0", which);
+					break;
 			}
 		}
 		else
@@ -792,15 +813,18 @@ void pc88va_state::draw_graphic_layer(bitmap_rgb32 &bitmap, const rectangle &cli
 						draw_direct_gfx_8bpp(m_graphic_bitmap[which], split_cliprect, fsa, fbw, fbl);
 					break;
 				case 3: draw_direct_gfx_rgb565(m_graphic_bitmap[which], split_cliprect, fsa, fbw, fbl); break;
+				default:
+					popmessage("pc88va_v.cpp: unhandled %d GFX mode DM = 1", which);
+					break;
 			}
 		}
 	}
 
-	// TODO: we eventually need primask_copyrozbitmap_trans here, or a custom copy, depending on what the "transpen" registers really do.
+	// TODO: primask_copyrozbitmap_trans
 	copyrozbitmap_trans(
 		bitmap, cliprect, m_graphic_bitmap[which],
 		0, 0,
-		pixel_size, 0, 0, pixel_size,
+		pixel_size, 0, 0, line_size,
 		false, 0
 	);
 }
@@ -1222,9 +1246,11 @@ void pc88va_state::recompute_parameters()
 
 	visarea.set(0, h_vis_area - 1, 0, v_vis_area - 1);
 
-	// TODO: vertical magnify, bit 7
-	// TODO: actual clock source must be external, assume known PC-88 XTALs, a bit off compared to PC-88 with the values above
-	const int clock_speed = BIT(m_crtc_regs[0x00], 6) ? (31'948'800 / 4) : (28'636'363 / 2);
+	// TODO: vertical global magnify at bit 7
+	// TODO: actual clock source must be external, assume known PC-88 XTALs
+	// TODO: a bit off compared to PC-88 equivalent with the configured values
+	// TODO: famista pukes a 31.2 Hz vertical in 24kHz mode
+	const int clock_speed = !!BIT(m_crtc_regs[0x00], 6) ? (31'948'800 / 4) : (28'636'363 / 2);
 
 	refresh = HZ_TO_ATTOSECONDS(clock_speed) * h_vis_area * v_vis_area;
 
@@ -1487,10 +1513,15 @@ void pc88va_state::screen_ctrl_w(offs_t offset, u16 data, u16 mem_mask)
 
 	COMBINE_DATA(&m_screen_ctrl_reg);
 
-	m_ymmd = bool(BIT(m_screen_ctrl_reg, 11));
-	m_dm = bool(BIT(m_screen_ctrl_reg, 10));
 	//                  YMMD           DM
 	// mightmag 0xb060  (0) screen 0  (0) multiplane
+	m_gden0 = !!(BIT(m_screen_ctrl_reg, 15));
+	m_ymmd = !!(BIT(m_screen_ctrl_reg, 11));
+	m_dm = !!(BIT(m_screen_ctrl_reg, 10));
+
+	m_vw = m_screen_ctrl_reg & 3;
+	if (m_vw & 1)
+		popmessage("pc88va_v.cpp: VW = %d (408/204 lines mode)", m_vw);
 }
 
 u16 pc88va_state::screen_ctrl_r()
