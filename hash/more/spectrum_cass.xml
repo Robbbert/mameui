@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1659 -->
+<!-- Number of items in this list = 1668 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -819,16 +819,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49117">
 				<rom name="3D Starstrike (1984)(Realtime Games Software)[a].tap" size="49117" crc="0bb725c9" sha1="b2227bc46b9a9db52536c8d2618a6bbc04893b05"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs853e71ecf5b02">
-		<description>3D Starstrike 48K (1984)(Realtime Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49169">
-				<rom name="3D Starstrike 48K (1984)(Realtime Games).tzx" size="49169" crc="65d1d056" sha1="853e71ecf5b021471e82872dc0f835bc2396cfa6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2989,16 +2979,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="18446">
 				<rom name="Alien City, The (1984)(Pirate Software).tap" size="18446" crc="be8cc881" sha1="a1d0b17da746275640be4d1ffdfa45e9f7534559"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsc6b681c612c24">
-		<description>Alien Command 16K (1982)(Jega Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="17729">
-				<rom name="Alien Command 16K (1982)(Jega Software).tzx" size="17729" crc="c98310b2" sha1="c6b681c612c24cde8feddf36d8269bb5d0999627"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8052,16 +8032,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs2809e1389ccbc">
-		<description>Bluber 48K (2014)(PixelSoft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="40692">
-				<rom name="Bluber 48K (2014)(PixelSoft).tzx" size="40692" crc="56fdd9e1" sha1="2809e1389ccbc0e1c805a5dbcfbb92a2907b0e20"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsb700695b9ad78">
 		<description>Blue Max (1984)(US Gold)</description>
 		<year>????</year>
@@ -8642,16 +8612,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsa25fb1fe54bfd">
-		<description>Death Wish 3 (Erbe - Serie Leyenda)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="54322">
-				<rom name="Death Wish 3 (Erbe - Serie Leyenda).tzx" size="54322" crc="562a8373" sha1="a25fb1fe54bfd6af5dfb4f342b5f532a521fc990"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs3f4d217190bfc">
 		<description>Deathscape</description>
 		<year>????</year>
@@ -8729,16 +8689,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="175375">
 				<rom name="Desperado.tzx" size="175375" crc="ed3ea7b7" sha1="e7f5ea9098f4c9171dae92dc96ddad1866c3740c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs3403e9d3a10e9">
-		<description>Dizzy - Down the Rapids 48K-128K (1991)(Codemasters)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="52590">
-				<rom name="Dizzy - Down the Rapids 48K-128K (1991)(Codemasters).tzx" size="52590" crc="f57964c8" sha1="3403e9d3a10e9a33ec1c3a660df5b59bef8962ef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9099,26 +9049,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49573">
 				<rom name="Fruit Machine Simulator 2 - Mega Trek.tzx" size="49573" crc="72bd22e7" sha1="d1d8d88ea5c2c0057d10bdf5c3c40ee5b0ad6c22"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs75d42c29fe33c">
-		<description>Full Throttle (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="86354">
-				<rom name="Full Throttle (2).tzx" size="86354" crc="c2a42298" sha1="75d42c29fe33c3129302e07c68ce4577c8ba401a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs953dc98e489b5">
-		<description>Full Throttle 2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="44762">
-				<rom name="Full Throttle 2.tzx" size="44762" crc="9a97ae34" sha1="953dc98e489b5ac3fe5060da384fbe959f6b4d68"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9592,16 +9522,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs7274effc812b2">
-		<description>Inside Outing 48K (1988)(The Edge)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="51504">
-				<rom name="Inside Outing 48K (1988)(The Edge).tzx" size="51504" crc="5e003f41" sha1="7274effc812b25f837198a72145724b3cc088964"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsef89ef78ab75e">
 		<description>Inside Outing</description>
 		<year>????</year>
@@ -9932,16 +9852,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsaefdf4e91e330">
-		<description>Metalyx 48K (1987)(Alternative)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="37726">
-				<rom name="Metalyx 48K (1987)(Alternative).tzx" size="37726" crc="cfadc6a8" sha1="aefdf4e91e3303c9d2ac58762ba19f4ab666e00a"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs5aa3a9e84be9b">
 		<description>Metro-Cross</description>
 		<year>????</year>
@@ -9962,16 +9872,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs9321ed8f9a6ea">
-		<description>Mieyen</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="9345">
-				<rom name="Mieyen.tzx" size="9345" crc="1c4449f1" sha1="9321ed8f9a6ea800628e9c14224d3beeabb9aca0"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs6f9bce4905861">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -9979,16 +9879,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="3088921">
 				<rom name="Mieyen.wav" size="3088921" crc="b0b5bdbb" sha1="6f9bce4905861ac8e73b2e6a2d2aacd4cd24431c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsb07f4ea77455d">
-		<description>Milk Race</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="42979">
-				<rom name="Milk Race.tzx" size="42979" crc="0f7a291e" sha1="b07f4ea77455d616ba8ed853c79d522fe7970b33"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10322,16 +10212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs8d96511a00fe9">
-		<description>Prince Clumsy 48K (1990)(Codemasters)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="47488">
-				<rom name="Prince Clumsy 48K (1990)(Codemasters).tzx" size="47488" crc="68b19df4" sha1="8d96511a00fe9c9c7d8dc3db83ac735d7b48f92f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs18ac3cfdd438b">
 		<description>Pro Mountain Bike Simulator</description>
 		<year>????</year>
@@ -10449,16 +10329,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="195545">
 				<rom name="Rastan Saga.tzx" size="195545" crc="12886a5f" sha1="962fca8d1645c38a6d2284d37956c7bcfccb5f91"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxscf6a595319f90">
-		<description>Raw Recruit</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="45512">
-				<rom name="Raw Recruit.tzx" size="45512" crc="a39f03e4" sha1="cf6a595319f901c03db493ba02af6b1cc733d43c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10659,16 +10529,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="146551">
 				<rom name="Shadow Of The Beast.tzx" size="146551" crc="0d3b7ca2" sha1="1a37d90a7fa50d73e12ceb66ee09cf8302ad7272"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs2fd880c86786d">
-		<description>Shadowfire</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="46876">
-				<rom name="Shadowfire.tzx" size="46876" crc="7913229c" sha1="2fd880c86786d3230c8d97a9151e031b2e571209"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11162,6 +11022,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsebbf367376f28">
+		<description>To The Manor Bourne (1984)(Central Solutions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56735">
+				<rom name="To The Manor Bourne (1984)(Central Solutions).tap" size="56735" crc="94287190" sha1="ebbf367376f28baba7c943e485d86e3543a3e49b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs90970dfd66906">
+		<description>Toad Runner (1986)(Ariolasoft UK Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44042">
+				<rom name="Toad Runner (1986)(Ariolasoft UK Ltd).tap" size="44042" crc="45f79a2f" sha1="90970dfd66906aa7d6dfc34a4a3094acf6cbdfea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07bfe157870f6">
+		<description>Toad Runner 48K (1986)(Ariolasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44113">
+				<rom name="Toad Runner 48K (1986)(Ariolasoft).tap" size="44113" crc="195edb9e" sha1="07bfe157870f6dad61ebe74d14c7a84abe183ddf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa43e43762e3e1">
+		<description>Toady (1983)(Spectrum Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7358">
+				<rom name="Toady (1983)(Spectrum Computing).tap" size="7358" crc="75a664d5" sha1="a43e43762e3e1d11468cee9600ead53c497f972c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50630bd06d527">
+		<description>Tobit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47074">
+				<rom name="Tobit.tap" size="47074" crc="69b7065d" sha1="50630bd06d52719ad8ae6b36a4e0d56924630c35"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse8a884698b8fb">
 		<description>Tobit</description>
 		<year>????</year>
@@ -11172,6 +11082,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3097397322671">
+		<description>Tobor (1982)(Add-On Electronics Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27454">
+				<rom name="Tobor (1982)(Add-On Electronics Ltd).tap" size="27454" crc="e3ee3800" sha1="3097397322671d0f1cf22dfa4e54e3de75373432"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2b1f9438f2705">
+		<description>Tobruk 1942 (1987)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48098">
+				<rom name="Tobruk 1942 (1987)(PSS).tap" size="48098" crc="096c33df" sha1="2b1f9438f27058097f688c120b1f219a98001f2d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb921e8f55a21b">
 		<description>Tobruk Tank Trainer (19xx)(-)</description>
 		<year>????</year>
@@ -11179,6 +11109,176 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="25445">
 				<rom name="Tobruk Tank Trainer (19xx)(-).tap" size="25445" crc="0f960945" sha1="b921e8f55a21b36e24221f4f4b21e3c9714dc4ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs93b8e8c4f0ad3">
+		<description>Toi Acid Game (1989)(Iber Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="215130">
+				<rom name="Toi Acid Game (1989)(Iber Soft)(Sp).tap" size="215130" crc="d0c8137f" sha1="93b8e8c4f0ad32fd0ab26ffd491b0bf46acdf64f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdb34f1b18b84f">
+		<description>Toi Acid Game (1989)(Iber Soft)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40448">
+				<rom name="Toi Acid Game (1989)(Iber Soft)(Sp)[a].tap" size="40448" crc="8cb31d1c" sha1="db34f1b18b84f4c12462d947d9e61ed7dfdea97d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs891a227e4fbbd">
+		<description>Toilet Truble (1985)(Automata UK Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40062">
+				<rom name="Toilet Truble (1985)(Automata UK Ltd).tap" size="40062" crc="35eb3b8b" sha1="891a227e4fbbd643c403451b4c27864378b7830a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs206d10d375e1e">
+		<description>Tokimal_v1.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="104649">
+				<rom name="Tokimal_v1.0.tap" size="104649" crc="40373e06" sha1="206d10d375e1e1bf876cd61155b48353ef3ebd4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc6180dc74a4cd">
+		<description>Tomb Of Dracula, The (1983)(K-Tel Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31717">
+				<rom name="Tomb Of Dracula, The (1983)(K-Tel Productions).tap" size="31717" crc="e63f17fe" sha1="c6180dc74a4cdc27fc6ef85e7e9cf1ed2392044a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs533de7bb36188">
+		<description>Tomb Of Syrinx (1987)(The Power House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48545">
+				<rom name="Tomb Of Syrinx (1987)(The Power House).tap" size="48545" crc="c6767678" sha1="533de7bb36188b59c988d5e80a31499f1c9fd3d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8cb279e9ac6b8">
+		<description>Tomcat (1989)(Players Premier Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40355">
+				<rom name="Tomcat (1989)(Players Premier Software).tap" size="40355" crc="ce421ce5" sha1="8cb279e9ac6b8c9eb0cd4500e29a99d0685a7720"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc88b46b12c5f9">
+		<description>Tommy (1986)(Future Stars)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48422">
+				<rom name="Tommy (1986)(Future Stars)(Sp).tap" size="48422" crc="b4a5b360" sha1="c88b46b12c5f94c0f290cb39070bf86975364cd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1145768564895">
+		<description>Toobin' (1989)(Domark Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53121">
+				<rom name="Toobin' (1989)(Domark Ltd).tap" size="53121" crc="77cc1729" sha1="1145768564895e1a22b99d5293df421e6714ca48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs979113efe779e">
+		<description>Toobin' 128K (1989)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53121">
+				<rom name="Toobin' 128K (1989)(Domark).tap" size="53121" crc="a2acce35" sha1="979113efe779eb44dd70b38f4246496f7f6f6052"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8df02d78ca73e">
+		<description>Toofy's Nutty Nightmare 128K (2020)(Paul Jenkinson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35807">
+				<rom name="Toofy's Nutty Nightmare 128K (2020)(Paul Jenkinson).tap" size="35807" crc="ec5a53fd" sha1="8df02d78ca73e378435b060e5343beb871b78aeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdb61a26296425">
+		<description>Toolman 2 (1987)(SM Indipendant Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42407">
+				<rom name="Toolman 2 (1987)(SM Indipendant Software)(Sp).tap" size="42407" crc="6eaa517d" sha1="db61a262964258fd5489f0c55a7570a88ec3de7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs682b41149ba23">
+		<description>Top Cat (1991)(Hi-Tec Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46592">
+				<rom name="Top Cat (1991)(Hi-Tec Software Ltd).tap" size="46592" crc="8c4912c3" sha1="682b41149ba236727ba7a00501c199e0a3724364"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsccb220a38594b">
+		<description>Top Cat (1991)(Hi-Tec Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46218">
+				<rom name="Top Cat (1991)(Hi-Tec Software Ltd)[a].tap" size="46218" crc="3e723c5e" sha1="ccb220a38594b4f04bee6e385d0ca46ac42ae4d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfd34d8a80d106">
+		<description>Top Fruit Machine, The (1988)(Banzai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42298">
+				<rom name="Top Fruit Machine, The (1988)(Banzai).tap" size="42298" crc="bde3164a" sha1="fd34d8a80d106f2ba344a5913998d0232967bc21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb7cd9ab015e03">
+		<description>Top Fruit Machine, The (1991)(Your Sinclair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42371">
+				<rom name="Top Fruit Machine, The (1991)(Your Sinclair).tap" size="42371" crc="4c4d624d" sha1="b7cd9ab015e03df63d937a043e326d8529b4298b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd5ef70c87c374">
+		<description>TOP1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47734">
+				<rom name="TOP1.tap" size="47734" crc="545c76c0" sha1="d5ef70c87c3747dda11964bda8f551f0d083ca98"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13349,16 +13449,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="18658">
 				<rom name="Viper 3 (1984)(Mastertronic Ltd).tap" size="18658" crc="47fecc59" sha1="54710fba5a44a5a87d2137a39c05766b4b4f7ecb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs8a9f73d72d77a">
-		<description>Viper III 48K (1984)(Mastertronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="18722">
-				<rom name="Viper III 48K (1984)(Mastertronic).tzx" size="18722" crc="6346bccb" sha1="8a9f73d72d77a4ba67251e45a8b12a32384d9e0c"/>
 			</dataarea>
 		</part>
 	</software>

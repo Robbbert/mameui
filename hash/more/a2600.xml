@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8108 -->
+<!-- Number of items in this list = 8109 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -28219,6 +28219,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Enduro (Digivision) (PAL-M) [p1][!].a26" size="4096" crc="eb2799c2" sha1="a9a0dcca0d00ceea51a9d699b987fec3163be52c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260a2fc2f048a99">
+		<description>Enduro (Europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Enduro (Europe).a26" size="4096" crc="fc2d83ac" sha1="0a2fc2f048a9904799df26db1e17ffedad8ff302"/>
 			</dataarea>
 		</part>
 	</software>

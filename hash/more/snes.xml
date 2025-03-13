@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3770 -->
+<!-- Number of items in this list = 3780 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -6089,6 +6089,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1114112">
 				<rom name="Cyborg 009 T-Eng (2004)(Aeon Genesis).sfc" size="1114112" crc="41ebe61b" sha1="56c9c630e987a2081c1f904d8ef1ac06d89576aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6b6ee85cd89fd">
+		<description>D.O.L.L.S. (2025)(Jordan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="D.O.L.L.S. (2025)(Jordan).sfc" size="4194304" crc="53e0b93d" sha1="6b6ee85cd89fdc0014a8102fec6749b056218213"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12512,6 +12522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns23967b9dd586c">
+		<description>Jurassic Park II - The Chaos Continues (U)(1994)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park II - The Chaos Continues (U)(1994)(Ocean).sfc" size="2097152" crc="836ee990" sha1="23967b9dd586c01a8b6e89bb3774c3b3f7bdf3ba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns1d20fb24617d6">
 		<description>Jurassic Park II - The Chaos Continues (USA) (En,Fr,De,It) (Beta)</description>
 		<year>????</year>
@@ -12519,6 +12539,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Jurassic Park II - The Chaos Continues (USA) (En,Fr,De,It) (Beta).sfc" size="2097152" crc="373402cb" sha1="1d20fb24617d6aae008c244b3430b552dac9233d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf75fe5c740546">
+		<description>Jurassic Park II - The Chaos Continues Redux (2025)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jurassic Park II - The Chaos Continues Redux (2025)(BillyTime! Games).sfc" size="2097152" crc="620de6a3" sha1="f75fe5c74054614903264099fa3af63bedab565c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13759,6 +13789,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Lemmings (E) [T+Por_Maluco].sfc" size="1048576" crc="3a123d6e" sha1="d4b83afe836e7c0bcd360eb2495d004f0f94168a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns781c944f1ad76">
+		<description>Lemmings (E)(1992)(Sunsoft - Psygnosis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lemmings (E)(1992)(Sunsoft - Psygnosis).sfc" size="1048576" crc="aebadcef" sha1="781c944f1ad7624af24af24991d8faf570c2f6cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0b281f6d4eb20">
+		<description>Lemmings (J)(1991)(Sunsoft - Psygnosis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lemmings (J)(1991)(Sunsoft - Psygnosis).sfc" size="1048576" crc="13027564" sha1="0b281f6d4eb20b9d35958792968e1ebdb502477d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6df3989e7768a">
+		<description>Lemmings - Colour Palette &amp; Level Title Fix v1.1 FINAL (E)(2025)(J.Russell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lemmings - Colour Palette &amp; Level Title Fix v1.1 FINAL (E)(2025)(J.Russell).sfc" size="1048576" crc="3426d622" sha1="6df3989e7768a563a9b84ef4d87524f429c891c0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16792,6 +16852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns521249ed57c74">
+		<description>Mary Shelley's Frankenstein (U)(1994)(Sony Imagesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mary Shelley's Frankenstein (U)(1994)(Sony Imagesoft).sfc" size="2097152" crc="91415d1e" sha1="521249ed57c74dc85349aa5e2afca587443a7cef"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3cfdf11bdd2e4">
 		<description>Mask, The (E) [T+Fre_Generation IX] (2)</description>
 		<year>????</year>
@@ -19199,6 +19269,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Ossu!! Karate-bu (J)(1994)(Culture Brain).sfc" size="2621440" crc="b4ecd206" sha1="9a99d4ccc6af89744563f4cf429c3ec0b3fbdd62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2ad1195e02d84">
+		<description>Other Castle II v0.9.2 (2023)(bogaa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Other Castle II v0.9.2 (2023)(bogaa).sfc" size="4194304" crc="35b47398" sha1="2ad1195e02d8479bd634891b0e325809de1d00d0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -34252,6 +34332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns322adec252911">
+		<description>Super Morph (E)(1993)(Sony Imagesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Morph (E)(1993)(Sony Imagesoft).sfc" size="1048576" crc="388f6daa" sha1="322adec252911bf7c7a38da7c23ecedb26fd92b3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsde5edc5b3ecef">
 		<description>Super Naxat Open - Spike McFang Golf T-Eng v0.99 (2018)(MrRichard999)</description>
 		<year>????</year>
@@ -35869,6 +35959,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="TLOTEO (SMW1 Hack).sfc" size="2097152" crc="66d2eef0" sha1="4e58c86772371227ad5deb02ce75d3ac102eb6e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8d233097b67cb">
+		<description>TMNT Tournament Fighters - Grandmasters Edition v1.2 (2025)(Allo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="TMNT Tournament Fighters - Grandmasters Edition v1.2 (2025)(Allo).sfc" size="4194304" crc="ce1d413f" sha1="8d233097b67cb39c46fe66bba453ae459673e659"/>
 			</dataarea>
 		</part>
 	</software>

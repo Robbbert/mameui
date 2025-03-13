@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1912 -->
+<!-- Number of items in this list = 1899 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -329,6 +329,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="26782">
 				<rom name="(demo)Ninja Fight.bin" size="26782" crc="78099524" sha1="ada3262ff01f3e392122c20080831ae417bd88fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen88d6499d874dc">
+		<description>(demo)No Way No Way</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(demo)No Way No Way.bin" size="2097152" crc="0658f691" sha1="88d6499d874dcb5721ff58d76fe1b9af811192e3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -962,16 +972,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen2dca183ddb798">
-		<description>(E)Jurassic Park (Euro)(1993)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="(E)Jurassic Park (Euro)(1993)(Sega).bin" size="2097152" crc="448341f6" sha1="2dca183ddb79805b6300d8fcca1163fce88dd9db"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen90e195d8959b9">
 		<description>(E)Landstalker - The Treasures of King Nole [T+Ita_Gufino2]</description>
 		<year>????</year>
@@ -1299,16 +1299,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3151044">
 				<rom name="(J)Bare Knuckle III Project.bin" size="3151044" crc="5aa71c8b" sha1="170ed36af30a2c5a003f56c5542a7032da935fa4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gend5d0e2ed4c004">
-		<description>(J)Jurassic Park (Japan)(1993)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="(J)Jurassic Park (Japan)(1993)(Sega).bin" size="2097152" crc="ec8e5783" sha1="d5d0e2ed4c00435ec4a343583bb399b07927de21"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4882,16 +4872,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="genbf2e8d122f467">
-		<description>Crusader of Centy (USA)(1994)(Atlus)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Crusader of Centy (USA)(1994)(Atlus).bin" size="2097152" crc="41858f6f" sha1="bf2e8d122f4670865bedbc305ef991ee5f52d647"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen458ee203a5c1a">
 		<description>CUBICGUY by TmEE 09-2009(demo)</description>
 		<year>????</year>
@@ -4999,16 +4979,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="darius ii (j) [a1].md" size="1048576" crc="0140ab58" sha1="5824936a1a8696d8363431f31293d4a1a1d0b69b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen93593e4014e13">
-		<description>darius ii (jpn)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="darius ii (jpn).bin" size="1048576" crc="25dfe62a" sha1="93593e4014e13db90fedc1903a402c6f7d885a2f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5939,6 +5909,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fight_for_Vengeance_PD_2022.bin" size="4194304" crc="7db61291" sha1="d241dd7a13d2c69d9a8a0fca11113cc81eb4affd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb5b6c0df76d6b">
+		<description>Final Fight MD v0.8b (2025)(MXRetroDev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fight MD v0.8b (2025)(MXRetroDev).bin" size="4194304" crc="4554ede2" sha1="b5b6c0df76d6b572558693cbe711b76b2f529506"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8392,16 +8372,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen6eb88d7156241">
-		<description>hunting season 3 (unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="593184">
-				<rom name="hunting season 3 (unl).bin" size="593184" crc="b433878c" sha1="6eb88d71562415364c11b8dac1eb6fee24a53b95"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen43bcc8f46b80b">
 		<description>hybrid front, the (T-Chi)</description>
 		<year>????</year>
@@ -9012,36 +8982,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gene7a1f49d362b5">
-		<description>Jurassic Park (USA)(1993)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park (USA)(1993)(Sega).bin" size="2097152" crc="7b31deef" sha1="e7a1f49d362b5c7e13d9c7942d4a83fe003cfbd2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genac2097b5f2a30">
-		<description>Jurassic Park (USA, Proto)(1993)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park (USA, Proto)(1993)(Sega).bin" size="2097152" crc="cf890eed" sha1="ac2097b5f2a30787d7ca1ed8ab4eac7f4be77f0f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen535c78d91f763">
-		<description>Jurassic Park - Rampage Edition (Euro, USA)(1994)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park - Rampage Edition (Euro, USA)(1994)(Sega).bin" size="2097152" crc="98b4aa1b" sha1="535c78d91f76302a882d69ff40b3d0f030a5b6ae"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="genab16d2f44ffac">
 		<description>jurassic park - rampage edition (Hack, Spanish)</description>
 		<year>????</year>
@@ -9049,76 +8989,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="jurassic park - rampage edition (Hack, Spanish).bin" size="2097152" crc="954efbf2" sha1="ab16d2f44fface1f2bebf161c2bd8320dc693a7b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genf1f763e087065">
-		<description>Jurassic Park - Rampage Edition (Proto, 19940630)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park - Rampage Edition (Proto, 19940630)(Sega).bin" size="2097152" crc="bff4b396" sha1="f1f763e087065483ed7ff53f95b99bac16bb8484"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen7dca5ec144022">
-		<description>Jurassic Park - Rampage Edition (Proto, 19940708)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park - Rampage Edition (Proto, 19940708)(Sega).bin" size="2097152" crc="f4c78bd0" sha1="7dca5ec1440222ce38f085663d0ab6539693feaa"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genb840cc1b00bf2">
-		<description>Jurassic Park - Rampage Edition (Proto, 19940713)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park - Rampage Edition (Proto, 19940713)(Sega).bin" size="2097152" crc="8475a105" sha1="b840cc1b00bf2f7e75320c1395da3dceaa637071"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen534eea52e7c6d">
-		<description>Jurassic Park - Rampage Edition (Proto, 19940714)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park - Rampage Edition (Proto, 19940714)(Sega).bin" size="2097152" crc="9bf0e28d" sha1="534eea52e7c6d8d0fc0a93480c89f89568196d36"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genb10fae841b410">
-		<description>Jurassic Park - Rampage Edition (Proto, 19940715)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park - Rampage Edition (Proto, 19940715)(Sega).bin" size="2097152" crc="d2202be5" sha1="b10fae841b410525ac83e729983f3e0cda2e7365"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen2d817ad10e9b6">
-		<description>Jurassic Park - Rampage Edition (Proto, 19940717)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park - Rampage Edition (Proto, 19940717)(Sega).bin" size="2097152" crc="2eae6140" sha1="2d817ad10e9b6b93b6eee23a76f788a73827bbc5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gencbb44d5d5da12">
-		<description>Jurassic Park - Rampage Edition (Proto, 19940718)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Jurassic Park - Rampage Edition (Proto, 19940718)(Sega).bin" size="2097152" crc="1a62b826" sha1="cbb44d5d5da1263a4524c747be9afd0aa8547a63"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9152,16 +9022,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen9424e8b759609">
-		<description>Ka-Ge-Ki (Japan)(1991)(Hot-B)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Ka-Ge-Ki (Japan)(1991)(Hot-B).bin" size="1048576" crc="391866a1" sha1="9424e8b759609004748dd6cd4779f917211264ae"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen0f285d2caec1b">
 		<description>ka-ge-ki - fists of steel (hack, spanish)</description>
 		<year>????</year>
@@ -9172,46 +9032,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen893b1bae5242f">
-		<description>Ka-Ge-Ki - Fists of Steel (USA)(1991)(Sage's Creation)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Ka-Ge-Ki - Fists of Steel (USA)(1991)(Sage's Creation).bin" size="1048576" crc="effc0fa6" sha1="893b1bae5242f25494b6de64a861b1aa1dc6cf14"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genfa7e07bbab70a">
-		<description>Kawasaki Superbike Challenge (Euro, USA)(1994)(Time Warner Int.)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Kawasaki Superbike Challenge (Euro, USA)(1994)(Time Warner Int.).bin" size="1048576" crc="631cc8e9" sha1="fa7e07bbab70a7b5c32a0f2713494b2c10ce8e1e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gena66446d5c3d07">
-		<description>Kawasaki Superbike Challenge (USA, Proto)(1994)(Time Warner Int.)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Kawasaki Superbike Challenge (USA, Proto)(1994)(Time Warner Int.).bin" size="1048576" crc="55934d1b" sha1="a66446d5c3d07ce211d7198faf4ea3ff6dbfa0b9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen28b904000b286">
-		<description>Kid Chameleon (Euro, Korea, USA)(1992)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Kid Chameleon (Euro, Korea, USA)(1992)(Sega).bin" size="1048576" crc="ce36e6cc" sha1="28b904000b2863b6760531807760b571f1a5fc1d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen29197c61164df">
 		<description>kid chameleon (Hack, Spanish)</description>
 		<year>????</year>
@@ -9219,16 +9039,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="kid chameleon (Hack, Spanish).bin" size="1048576" crc="4871962f" sha1="29197c61164dfba664e22699d9790f02a34aed61"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen5595422530e68">
-		<description>Kidou Keisatsu Patlabor - 98-shiki Kidou Seyo! (Japan)(1992)(Ma-Ba)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Kidou Keisatsu Patlabor - 98-shiki Kidou Seyo! (Japan)(1992)(Ma-Ba).bin" size="524288" crc="21a0e749" sha1="5595422530e6891042a4a005d11b79af7f09fe9b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9349,6 +9159,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Labyrinth of Death (Hack, Spanish).bin" size="131072" crc="2b27dbd1" sha1="3b7f6837ee5cd997710b1b4682192ae13eea3ece"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen268dbf81124cb">
+		<description>Ladders Room (2025)(Mabuyama)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Ladders Room (2025)(Mabuyama).bin" size="262144" crc="12dec95b" sha1="268dbf81124cb1e888c1a709df0851e122da7bce"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11203,22 +11023,22 @@
 		</part>
 	</software>
 	<software name="gen23ed9cf43e09d">
-		<description>New Zealand Story (Japan)</description>
+		<description>New zealand story (hack, spanish)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="New Zealand Story (Japan).bin" size="524288" crc="684d738a" sha1="23ed9cf43e09d24f39cb1bbd3ada7d9be803e9df"/>
+				<rom name="New zealand story (hack, spanish).bin" size="524288" crc="684d738a" sha1="23ed9cf43e09d24f39cb1bbd3ada7d9be803e9df"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="gena6ac76ccbcaf2">
-		<description>New Zealand Story Arcade colors-1.0-fabio-</description>
+		<description>New Zealand Story, The - Arcade Colors (2020)(fabio)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="New Zealand Story Arcade colors-1.0-fabio-.md" size="524288" crc="0a35d853" sha1="a6ac76ccbcaf21d30dd082fcf67c5bdbcdb89d6e"/>
+				<rom name="New Zealand Story, The - Arcade Colors (2020)(fabio).bin" size="524288" crc="0a35d853" sha1="a6ac76ccbcaf21d30dd082fcf67c5bdbcdb89d6e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11479,6 +11299,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Panorama Cotton (Japan).bin" size="2621440" crc="135f3568" sha1="7dbb38104b1636b7ec93fe9756b1c5758c8c566b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6ba9e4147a367">
+		<description>Pantufa the Cat - Extended Edition (2020)(VAdaPEGA)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2652230">
+				<rom name="Pantufa the Cat - Extended Edition (2020)(VAdaPEGA).bin" size="2652230" crc="8639aea0" sha1="6ba9e4147a36721106f2c86f5c29f38a11ca910b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11892,6 +11722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen9f859fbd3e660">
+		<description>Pirates! Gold T-Spa (2025)(Wave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Pirates! Gold T-Spa (2025)(Wave).bin" size="1048576" crc="d75948b0" sha1="9f859fbd3e66098ccb6be3bf0df429b39fe79111"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genee2f58ec2cfdc">
 		<description>PONG!RAM</description>
 		<year>????</year>
@@ -12043,22 +11883,22 @@
 		</part>
 	</software>
 	<software name="genc0b0357b06f91">
-		<description>Puyo Puyo (Japan) [T-En by RadioTails v1.0] [En-GB]</description>
+		<description>Puyo Puyo T-Eng UK (2025)(RadioTails)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Puyo Puyo (Japan) [T-En by RadioTails v1.0] [En-GB].md" size="1048576" crc="a682cd9f" sha1="c0b0357b06f91458552a50e9e0193c7398e0ff91"/>
+				<rom name="Puyo Puyo T-Eng UK (2025)(RadioTails).bin" size="1048576" crc="a682cd9f" sha1="c0b0357b06f91458552a50e9e0193c7398e0ff91"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="gen48637ea9b34f0">
-		<description>Puyo Puyo (Japan) [T-En by RadioTails v1.0] [En-US]</description>
+		<description>Puyo Puyo T-Eng US (2025)(RadioTails)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Puyo Puyo (Japan) [T-En by RadioTails v1.0] [En-US].md" size="1048576" crc="6b5ebd1c" sha1="48637ea9b34f018d200da5cd3b1e878b73d3f713"/>
+				<rom name="Puyo Puyo T-Eng US (2025)(RadioTails).bin" size="1048576" crc="6b5ebd1c" sha1="48637ea9b34f018d200da5cd3b1e878b73d3f713"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12109,16 +11949,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Quackshot.bin" size="1310720" crc="1801098b" sha1="7b1bd16fb817cc5e2af238cebe8521aaca8f6195"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen1257b38fd4be3">
-		<description>ragnacenty (C)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="ragnacenty (C).bin" size="2097152" crc="a6dce438" sha1="1257b38fd4be3645be6f9a346e24df686e7b559c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12443,12 +12273,12 @@
 		</part>
 	</software>
 	<software name="gen33c4b8bb0816e">
-		<description>robocop 3 (Hack, Spanish)</description>
+		<description>Robocop 3 T-Spa (2017)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="robocop 3 (Hack, Spanish).bin" size="524288" crc="eecbff56" sha1="33c4b8bb0816ed277a7b665bf6c83f7b625f8592"/>
+				<rom name="Robocop 3 T-Spa (2017)(Wave).bin" size="524288" crc="eecbff56" sha1="33c4b8bb0816ed277a7b665bf6c83f7b625f8592"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12463,12 +12293,12 @@
 		</part>
 	</software>
 	<software name="gen7e0a606398e6b">
-		<description>RoboCop versus The Terminator (USA)</description>
+		<description>Robocop versus The Terminator T-Spa (2017)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="RoboCop versus The Terminator (USA).bin" size="2097152" crc="431feb53" sha1="7e0a606398e6bff30076ca63788c86790255ab9b"/>
+				<rom name="Robocop versus The Terminator T-Spa (2017)(Wave).bin" size="2097152" crc="431feb53" sha1="7e0a606398e6bff30076ca63788c86790255ab9b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12503,12 +12333,12 @@
 		</part>
 	</software>
 	<software name="gen6f4059705adfe">
-		<description>Rocket Knight Adventures (USA)</description>
+		<description>Rocket Knight Adventures T-Spa v1.1 (2018)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Rocket Knight Adventures (USA).bin" size="1048576" crc="4ecd1bd6" sha1="6f4059705adfe3ffe261241e50d5b7ea36f9ea69"/>
+				<rom name="Rocket Knight Adventures T-Spa v1.1 (2018)(Wave).bin" size="1048576" crc="4ecd1bd6" sha1="6f4059705adfe3ffe261241e50d5b7ea36f9ea69"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12563,22 +12393,22 @@
 		</part>
 	</software>
 	<software name="gen40afe4a39dcb1">
-		<description>Rolling Thunder 2 (USA)</description>
+		<description>Rolling Thunder 2 T-Spa (2018)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Rolling Thunder 2 (USA).bin" size="1048576" crc="43588ef3" sha1="40afe4a39dcb159e80b65fffb623ce384c5d4945"/>
+				<rom name="Rolling Thunder 2 T-Spa (2018)(Wave).bin" size="1048576" crc="43588ef3" sha1="40afe4a39dcb159e80b65fffb623ce384c5d4945"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="genb484a4f308c91">
-		<description>rolling thunder 3 (Hack, Spanish)</description>
+		<description>Rolling Thunder 3 T-Spa (2018)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
-				<rom name="rolling thunder 3 (Hack, Spanish).bin" size="1572864" crc="0ad48d02" sha1="b484a4f308c91d1cd21c73a1e6bf8e34497a79c8"/>
+				<rom name="Rolling Thunder 3 T-Spa (2018)(Wave).bin" size="1572864" crc="0ad48d02" sha1="b484a4f308c91d1cd21c73a1e6bf8e34497a79c8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12593,12 +12423,12 @@
 		</part>
 	</software>
 	<software name="gen38ba8d27a6b5b">
-		<description>Rolo to the Rescue (USA, Europe)</description>
+		<description>Rolo to the Rescue T-Spa (2019)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Rolo to the Rescue (USA, Europe).bin" size="524288" crc="0c4584a4" sha1="38ba8d27a6b5ba39ef5bbee609fad4f8dc05af09"/>
+				<rom name="Rolo to the Rescue T-Spa (2019)(Wave).bin" size="524288" crc="0c4584a4" sha1="38ba8d27a6b5ba39ef5bbee609fad4f8dc05af09"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12623,12 +12453,12 @@
 		</part>
 	</software>
 	<software name="gen444a9adaaac1a">
-		<description>s.s. lucifer - man overboard! (Hack, Spanish)</description>
+		<description>S.S. Lucifer - Man Overboard! T-Spa (2019)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="s.s. lucifer - man overboard! (Hack, Spanish).bin" size="1048576" crc="17edbbfe" sha1="444a9adaaac1a449749fc173a2fe2f863ad66121"/>
+				<rom name="S.S. Lucifer - Man Overboard! T-Spa (2019)(Wave).bin" size="1048576" crc="17edbbfe" sha1="444a9adaaac1a449749fc173a2fe2f863ad66121"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12863,22 +12693,22 @@
 		</part>
 	</software>
 	<software name="genc5baf43703a70">
-		<description>Sagaia (USA)</description>
+		<description>Sagaia T-Spa (2018)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Sagaia (USA).bin" size="1048576" crc="29e1fb66" sha1="c5baf43703a706394858c029593356d99a05cca6"/>
+				<rom name="Sagaia T-Spa (2018)(Wave).bin" size="1048576" crc="29e1fb66" sha1="c5baf43703a706394858c029593356d99a05cca6"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="gena1c475af42cbf">
-		<description>Saint Sword (USA)</description>
+		<description>Saint Sword T-Spa (2019)(Wave)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Saint Sword (USA).bin" size="524288" crc="fe603ec4" sha1="a1c475af42cbf6bc2ae7680f8a7d9c14e40b4300"/>
+				<rom name="Saint Sword T-Spa (2019)(Wave).bin" size="524288" crc="fe603ec4" sha1="a1c475af42cbf6bc2ae7680f8a7d9c14e40b4300"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13119,6 +12949,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Shin Samurai Spirits (Unl).bin" size="2097152" crc="279cd5d7" sha1="fd47c0232e9cdfdac05b1f17f723b72d466d5947"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1257b38fd4be3">
+		<description>shin souseiki ragnacenty (T-Chi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="shin souseiki ragnacenty (T-Chi).bin" size="2097152" crc="a6dce438" sha1="1257b38fd4be3645be6f9a346e24df686e7b559c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14512,13 +14352,43 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen5f96ddccff1e9">
+		<description>Sonic 3C (Proto 0408, 19940408, 17.29)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Sonic 3C (Proto 0408, 19940408, 17.29)(Sega).bin" size="4194304" crc="59d23df5" sha1="5f96ddccff1e95d82201687b939973c642a05394"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend6012af0f7856">
+		<description>Sonic 3C (Proto 0517, 19940517, 17.08)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Sonic 3C (Proto 0517, 19940517, 17.08)(Sega).bin" size="4194304" crc="766c4b81" sha1="d6012af0f7856476892982e50b3d512d606dcb96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen89957568386a5">
+		<description>Sonic 3D - Flickies' Island (Euro) - Sonic 3D Blast (USA, Korea)(1996)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Sonic 3D - Flickies' Island (Euro) - Sonic 3D Blast (USA, Korea)(1996)(Sega).bin" size="4194304" crc="44a2ca44" sha1="89957568386a5023d198ac2251ded9dfb2ab65e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen4072d34e119e1">
-		<description>Sonic 3D Blast  - Directors Cut</description>
+		<description>Sonic 3D Blast  - Directors Cut (2017)(GameHut)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4191682">
-				<rom name="Sonic 3D Blast  - Directors Cut.bin" size="4191682" crc="9767e840" sha1="4072d34e119e199131b839d338f1fc38e472203a"/>
+				<rom name="Sonic 3D Blast  - Directors Cut (2017)(GameHut).bin" size="4191682" crc="9767e840" sha1="4072d34e119e199131b839d338f1fc38e472203a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14549,16 +14419,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Sonic 3D Blast Time Attack by fabio (Sonic 3D Blast Hack).bin" size="4194304" crc="9f531e0d" sha1="158f582eed30549eacc4f19c24a194da02a93464"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen89957568386a5">
-		<description>Sonic 3D Blast</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Sonic 3D Blast.bin" size="4194304" crc="44a2ca44" sha1="89957568386a5023d198ac2251ded9dfb2ab65e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15412,6 +15272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen75e9c4705259d">
+		<description>sonic the hedgehog 3 (usa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="sonic the hedgehog 3 (usa).bin" size="2097152" crc="9bc192ce" sha1="75e9c4705259d84112b3e697a6c00a0813d47d71"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen4461ed4a94b93">
 		<description>Sonic the Hedgehog 3 Complete (2013)(Tiddles)</description>
 		<year>????</year>
@@ -16199,16 +16069,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Spot Goes to Hollywood (R).bin" size="4194304" crc="66254cab" sha1="24d27506f9e4d8de8833f33d8f8e4dd8fbc1bf25"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen36c66a1cbf44f">
-		<description>SS Lucifer Man Overboard</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="SS Lucifer Man Overboard.bin" size="1048576" crc="cae0e3a6" sha1="36c66a1cbf44f4019b84538a6bf452c369239bc9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17682,26 +17542,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen7c397fe46acba">
-		<description>tougiou king colossus (english translation)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="tougiou king colossus (english translation).bin" size="1048576" crc="016afd40" sha1="7c397fe46acba156cc428bbe428c6d5cb8121ff4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen5e80cf5f90534">
-		<description>tougiou king colossus (Hack, Spanish)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="tougiou king colossus (Hack, Spanish).bin" size="1048576" crc="a6c9e0b6" sha1="5e80cf5f905343b658d594b0b47a311cb3d1f627"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen27391fbade87d">
 		<description>Tougiou King Colossus (Japan) [En by MIJET v20061030] (Family Friendly Edition)</description>
 		<year>????</year>
@@ -17709,6 +17549,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Tougiou King Colossus (Japan) [En by MIJET v20061030] (Family Friendly Edition).md" size="1048576" crc="f5a08f7e" sha1="27391fbade87dc26552ae2b86e37d8c67d2e5118"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7c397fe46acba">
+		<description>Tougiou King Colossus T-Eng (2006)(Jon Najar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tougiou King Colossus T-Eng (2006)(Jon Najar).bin" size="1048576" crc="016afd40" sha1="7c397fe46acba156cc428bbe428c6d5cb8121ff4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5e80cf5f90534">
+		<description>Tougiou King Colossus T-Spa (2020)(Luceid)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tougiou King Colossus T-Spa (2020)(Luceid).bin" size="1048576" crc="a6c9e0b6" sha1="5e80cf5f905343b658d594b0b47a311cb3d1f627"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18549,6 +18409,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Wonder Boy III - Monster Lair (Japan, Europe).bin" size="524288" crc="968e3afe" sha1="51c0cee6a43dc4592b364eb4b865a0f01b335c23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen87a968f773c7e">
+		<description>Wonder Boy in Monster World (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Wonder Boy in Monster World (2).bin" size="786432" crc="1592f5b0" sha1="87a968f773c7e807e647c0737132457b06b78276"/>
 			</dataarea>
 		</part>
 	</software>

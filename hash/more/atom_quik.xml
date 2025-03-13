@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 341 -->
+<!-- Number of items in this list = 351 -->
 <softwarelist name="atom_quik" description="atom_quik loose roms">
 	<software name="atmcee61171f952d">
 		<description>028</description>
@@ -59,6 +59,106 @@
 		<part name="quik" interface="atom_quik">
 			<dataarea name="quik" size="787">
 				<rom name="079.ATM" size="787" crc="a9092e65" sha1="1a74454efd4c8dfdb85d6abbacd00d491a3d465a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm6a39012d5c783">
+		<description>226</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4202">
+				<rom name="226.ATM" size="4202" crc="daf9e5b7" sha1="6a39012d5c7839b5355aa838d478a442ae13d08a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmf01d4927588e8">
+		<description>24STEPS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1478">
+				<rom name="24STEPS.ATM" size="1478" crc="25a52ca4" sha1="f01d4927588e88c7f349144f4e5fdd56238a8443"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm7b1f516f61198">
+		<description>25COINS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3818">
+				<rom name="25COINS.ATM" size="3818" crc="d9f8b121" sha1="7b1f516f6119862abc7c0906fa7cc347c230434b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm6fe7a01a35918">
+		<description>3-2-1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1481">
+				<rom name="3-2-1.ATM" size="1481" crc="29f11d0e" sha1="6fe7a01a35918ec3e6fcc34fd8b94ba4a0ef417b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmb3d061011602d">
+		<description>3DETCH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="2035">
+				<rom name="3DETCH.ATM" size="2035" crc="4b63b9ae" sha1="b3d061011602df6c949e33bd61f52110658eee18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmf63a9f3329c66">
+		<description>3DMAZE (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4434">
+				<rom name="3DMAZE (2).ATM" size="4434" crc="860ae53f" sha1="f63a9f3329c66a525a5e0d9d5f16706e7760b0eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm23b1b65845e1e">
+		<description>3DMAZE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4157">
+				<rom name="3DMAZE.ATM" size="4157" crc="11bf7664" sha1="23b1b65845e1e83114178c7ab8cc49dea1d30869"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm18c0f58f0c341">
+		<description>3DOXO (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3608">
+				<rom name="3DOXO (2).ATM" size="3608" crc="f475214a" sha1="18c0f58f0c341ddafa7efde949bbeac94e656611"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmdae135d544afd">
+		<description>3DOXO Help</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1317">
+				<rom name="3DOXO Help.ATM" size="1317" crc="77f79b71" sha1="dae135d544afd7ad34c2545f6ff9272f1fe7afc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm3446b50f937c6">
+		<description>3DOXO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3343">
+				<rom name="3DOXO.ATM" size="3343" crc="ec70d1b0" sha1="3446b50f937c62acef7fa81ca7846ec56eaba34e"/>
 			</dataarea>
 		</part>
 	</software>

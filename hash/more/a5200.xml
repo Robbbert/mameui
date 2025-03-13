@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 171 -->
+<!-- Number of items in this list = 172 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a522071e69941a10">
 		<description>(demo)PAM SALT V1.02 (1982) (Atari) [o1]</description>
@@ -959,6 +959,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Jumpong v2 (2004)(James Higgs)(PD).a52" size="32768" crc="04f870a2" sha1="49a669e8acd854d83300c7f33a7c45e645817429"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52fb7cda8932e02">
+		<description>Jungle Hunt (USA) (Beta) (1983-05-02)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Jungle Hunt (USA) (Beta) (1983-05-02).bin" size="32768" crc="f270252c" sha1="fb7cda8932e02213d58272f2dffc70afe78fede2"/>
 			</dataarea>
 		</part>
 	</software>
