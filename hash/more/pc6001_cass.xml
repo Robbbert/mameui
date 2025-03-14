@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 149 -->
+<!-- Number of items in this list = 151 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -1259,6 +1259,26 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="2565">
 				<rom name="P6 Circuit {m1p2}.p6" size="2565" crc="a132d578" sha1="664b499acfffdeb2724675e728779debb3c9698b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60e3aff1ba3faa7">
+		<description>Uchuu Dani no Gyakushuu {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3800">
+				<rom name="Uchuu Dani no Gyakushuu {m1p2}.p6" size="3800" crc="094fef81" sha1="e3aff1ba3faa753c8b3ca736f82d3765c3e10713"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60da9ec94dfdb60">
+		<description>Ute-! {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4171">
+				<rom name="Ute-! {m1p2}.cas" size="4171" crc="946aa4a8" sha1="da9ec94dfdb604f3743b1d1ef4eb246388749047"/>
 			</dataarea>
 		</part>
 	</software>

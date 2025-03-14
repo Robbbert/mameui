@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1668 -->
+<!-- Number of items in this list = 1691 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -6172,6 +6172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse2d8957f11496">
+		<description>BATS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4822">
+				<rom name="BATS.TAP" size="4822" crc="d5ec12a1" sha1="e2d8957f11496ac0df5d9bb72c903ae3e3a534b8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9b956f2d48e3f">
 		<description>Battle Command (1991)(Ocean Software)(128k)</description>
 		<year>????</year>
@@ -6289,6 +6299,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="14747">
 				<rom name="Battle On Hoth (1983)(Your Computer).tap" size="14747" crc="14d7e45f" sha1="68198e87948ad96252cb9a778ba69309d61a23c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs84960bae9ae65">
+		<description>Battle Ships</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11029">
+				<rom name="Battle Ships.TAP" size="11029" crc="8686a45e" sha1="84960bae9ae65f31c4dbb4cf178dea94959fa63b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6619,6 +6639,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49289">
 				<rom name="Bear George (1984)(Cheetasoft Ltd).tap" size="49289" crc="b50271b0" sha1="9b208f2e9be467c8a701dcb20423b15085faccf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3fc4bdd6c8140">
+		<description>Bearded Fantasy EN 48K (2025)(JuanGM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46879">
+				<rom name="Bearded Fantasy EN 48K (2025)(JuanGM).tap" size="46879" crc="457e97f8" sha1="3fc4bdd6c81409e2f981a8dad4b649f9890f9a7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse51de25bf7576">
+		<description>Bearded Fantasy ES 48K (2025)(JuanGM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46902">
+				<rom name="Bearded Fantasy ES 48K (2025)(JuanGM).tap" size="46902" crc="cb177e83" sha1="e51de25bf757693889fbce6aa746b3571f859690"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7219,6 +7259,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="23691">
 				<rom name="Binary Battle 48K (2024)(Haplo).tap" size="23691" crc="b4d1bb45" sha1="eae16011bd4deaf7f7e966d78ee3b5724c4adde1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs10047c6921043">
+		<description>Binary Land v1.7 128K (2020)(Joflof)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46777">
+				<rom name="Binary Land v1.7 128K (2020)(Joflof).tap" size="46777" crc="3f061588" sha1="10047c6921043c4fb9f40d0d3ebcfd858c5fffd0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11012,6 +11062,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2596b68b13915">
+		<description>Tin Tin On The Moon (1989)(Infogrames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40448">
+				<rom name="Tin Tin On The Moon (1989)(Infogrames).tap" size="40448" crc="79ee6fed" sha1="2596b68b13915ba4308b115fdf45c681e4bccc40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse79ccfb6942c7">
+		<description>Tin Tin On The Moon (1989)(Infogrames)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40102">
+				<rom name="Tin Tin On The Moon (1989)(Infogrames)[a].tap" size="40102" crc="1959b7a0" sha1="e79ccfb6942c7bb79b3956b87edbdebd3dec9cad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92ab0f42167ac">
+		<description>Tiny Nightmares 48K ENG (2023)(EJVG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40151">
+				<rom name="Tiny Nightmares 48K ENG (2023)(EJVG).tap" size="40151" crc="01269806" sha1="92ab0f42167ac35276eb6a2555460b66af853ca4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs47fa15ead37f3">
+		<description>Tiny Nightmares 48K ESP (2023)(EJVG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40151">
+				<rom name="Tiny Nightmares 48K ESP (2023)(EJVG).tap" size="40151" crc="c1e3b7ca" sha1="47fa15ead37f3c94a068a123f26f1941b87d40a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5421e1d385e0">
+		<description>Tiny Nightmares EN 48K (2023)(ejvg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40151">
+				<rom name="Tiny Nightmares EN 48K (2023)(ejvg).tap" size="40151" crc="1edd7448" sha1="a5421e1d385e0821477bd5e4c8cb0190b777a97b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs215a07d9ffef5">
+		<description>Tiny Nightmares ES 48K (2023)(ejvg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40151">
+				<rom name="Tiny Nightmares ES 48K (2023)(ejvg).tap" size="40151" crc="12d6c318" sha1="215a07d9ffef598c4ce833b465d515816ef6cbc0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3883c442547fb">
+		<description>Tir Na Nog (1984)(Gargoyle Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46565">
+				<rom name="Tir Na Nog (1984)(Gargoyle Games).tap" size="46565" crc="cc14f80c" sha1="3883c442547fb064b0cc369f23f6721f611be33e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ca8da5c84946">
+		<description>Tir Na Nog (1984)(Gargoyle Games)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36821">
+				<rom name="Tir Na Nog (1984)(Gargoyle Games)[cr [Cr][Cr].tap" size="36821" crc="66fac8ec" sha1="2ca8da5c849469f8659e8b9a5b071d7de4a15861"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs640cd84fe2e99">
+		<description>Tir Na Nog 48K (1984)(Gargoyle Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46565">
+				<rom name="Tir Na Nog 48K (1984)(Gargoyle Games).tap" size="46565" crc="8f5492ed" sha1="640cd84fe2e995ff91d8c342afa48dc772eb91ba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7ae4bc8e12944">
 		<description>Tir Na Nog</description>
 		<year>????</year>
@@ -11019,6 +11159,96 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46857">
 				<rom name="Tir Na Nog.tzx" size="46857" crc="0db1e286" sha1="7ae4bc8e12944e88564455628eed53a80e95583a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3828302a5f106">
+		<description>Tiro De Pichon (1985)(Microhobby Cassette)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15107">
+				<rom name="Tiro De Pichon (1985)(Microhobby Cassette)(Sp).tap" size="15107" crc="73c958fa" sha1="3828302a5f10657ced929d8080c1599aff9ceb11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs87c886d3e0ed4">
+		<description>Titan (1989)(Titus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39044">
+				<rom name="Titan (1989)(Titus).tap" size="39044" crc="4e29342c" sha1="87c886d3e0ed42099e5019b716b01d01a7eac16c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81a81d0d39030">
+		<description>Titanic (1984)(R&amp;R Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41737">
+				<rom name="Titanic (1984)(R&amp;R Software Ltd).tap" size="41737" crc="3eb7b93f" sha1="81a81d0d3903031fad1f2697139b63fa6297283c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf520e58388d6e">
+		<description>Titanic Blinky 48K (1991)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46442">
+				<rom name="Titanic Blinky 48K (1991)(Zeppelin Games).tap" size="46442" crc="dff53244" sha1="f520e58388d6e598a35cac10587f5b64df229792"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2dde3febac8bb">
+		<description>TJ Cavern Capers (2021)(Gaz Marshall)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33902">
+				<rom name="TJ Cavern Capers (2021)(Gaz Marshall).tap" size="33902" crc="2749ecc9" sha1="2dde3febac8bb0fd903b50a63755b159f126da28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs073b916704dac">
+		<description>TJ Cavern Capers (2021)(Gaz Marshall)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27335">
+				<rom name="TJ Cavern Capers (2021)(Gaz Marshall)_1.tap" size="27335" crc="13ef7638" sha1="073b916704dacaa8955adbc803f95dee05a9a350"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs201367927769d">
+		<description>TJ Cavern Capers (2022)(Gaz Marshall)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27335">
+				<rom name="TJ Cavern Capers (2022)(Gaz Marshall).tap" size="27335" crc="7c3e2ab9" sha1="201367927769dc4518ac2ffb2bd4837a6e29fe58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6e04c1acaa942">
+		<description>TM07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2282">
+				<rom name="TM07.TAP" size="2282" crc="1a91f1fc" sha1="6e04c1acaa94205cb72ef075db595fd1972702d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb91c28d28c670">
+		<description>TM09</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4279">
+				<rom name="TM09.TAP" size="4279" crc="a9518267" sha1="b91c28d28c6709f226f008b1ba5b24337c815e5e"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 351 -->
+<!-- Number of items in this list = 355 -->
 <softwarelist name="atom_quik" description="atom_quik loose roms">
 	<software name="atmcee61171f952d">
 		<description>028</description>
@@ -59,6 +59,26 @@
 		<part name="quik" interface="atom_quik">
 			<dataarea name="quik" size="787">
 				<rom name="079.ATM" size="787" crc="a9092e65" sha1="1a74454efd4c8dfdb85d6abbacd00d491a3d465a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmf800cbbb2b706">
+		<description>165</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="4608">
+				<rom name="165.ATM" size="4608" crc="baf1453c" sha1="f800cbbb2b70647a317df75a05bd56bba8e40df5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm89249c6ada822">
+		<description>168</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="1300">
+				<rom name="168.ATM" size="1300" crc="537f2bfc" sha1="89249c6ada822cfc804e006884927f35bb39f85e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2182,6 +2202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="atm905a1abd548a1">
+		<description>Nudger, the</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3183">
+				<rom name="Nudger, the.ATM" size="3183" crc="89219d9c" sha1="905a1abd548a1ea20a7b6392e4401045b2bdb896"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="atm9c6e3bdffc6f3">
 		<description>NUMA</description>
 		<year>????</year>
@@ -3169,6 +3199,16 @@
 		<part name="quik" interface="atom_quik">
 			<dataarea name="quik" size="1338">
 				<rom name="SUMS.ATM" size="1338" crc="007f3f1f" sha1="bda4fee6abbc9e9baa055a18942a186297eee4b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm9d7e6067aaec9">
+		<description>Super Zombie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="2215">
+				<rom name="Super Zombie.ATM" size="2215" crc="ed392c1f" sha1="9d7e6067aaec96debcd9171b47c58f014211c9ed"/>
 			</dataarea>
 		</part>
 	</software>
