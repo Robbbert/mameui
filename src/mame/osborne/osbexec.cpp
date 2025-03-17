@@ -619,8 +619,22 @@ ROM_START( osbexec )
 	ROM_LOAD( "execv12.ud18", 0x0000, 0x2000, CRC(70798c2f) SHA1(2145a72da563bed1d6d455c77e48cc011a5f1153) )    /* Checksum C6B2 */
 ROM_END
 
+ROM_START( jantar )
+	ROM_REGION(0x2000, "maincpu", 0)
+	ROM_LOAD( "odczytany rom jantara.bin", 0x0000, 0x2000, CRC(e9c54f34) SHA1(34922d60e5a6b93043078ed760797d9daee825eb) )
+ROM_END
+
 } // anonymous namespace
 
 
 //    YEAR  NAME     PARENT  COMPAT  MACHINE  INPUT    CLASS          INIT          COMPANY    FULLNAME     FLAGS
 COMP( 1982, osbexec, 0,      0,      osbexec, osbexec, osbexec_state, init_osbexec, "Osborne", "Executive", MACHINE_NOT_WORKING )
+COMP( 1987, jantar,  0,      0,      osbexec, osbexec, osbexec_state, init_osbexec, "Jantar",  "Jantar 0801 v1.3", MACHINE_NOT_WORKING )
+
+/*
+Jantar 0801 is a Polish clone of the Osborne Executive. It will boot Executive disks.
+The keyboard is completely different, being interrupt-driven instead of polled, and
+the matrix is different too. When started, it hangs up waiting for a keypress. This
+part needs to be written.
+*/
+
