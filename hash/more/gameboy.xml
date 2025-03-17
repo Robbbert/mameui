@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1346 -->
+<!-- Number of items in this list = 1357 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -2362,6 +2362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc72dba36e0e859">
+		<description>(demo)Marcador sube y baja (2019-10-18)(Monicapo)(es)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(demo)Marcador sube y baja (2019-10-18)(Monicapo)(es)(proto).gb" size="1048576" crc="faf7388f" sha1="72dba36e0e8591ed3a8a4fd4ef906471691b398a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc7991ae2b2f959">
 		<description>(demo)matrixtrailer</description>
 		<year>????</year>
@@ -4609,6 +4619,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Commando Death (PD).gb" size="32768" crc="cbe00b80" sha1="c27f2fabc169b32f7cc8fb05cef0f821e9d7eb19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc973c1d016e46a">
+		<description>Crate Hunter (demo-playable) (2019-06-03)(Toxworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Crate Hunter (demo-playable) (2019-06-03)(Toxworks).gb" size="1048576" crc="da736348" sha1="973c1d016e46a26f6d55c91f51183fe2d71ec735"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc448a478cfb07f">
+		<description>Crate Hunter (demo-playable) (2019-06-03)(Toxworks)[web rom]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Crate Hunter (demo-playable) (2019-06-03)(Toxworks)[web rom].gb" size="1048576" crc="fc4e9951" sha1="448a478cfb07f8eee53c569e82c5b4b6ffd898f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8552,6 +8582,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc37705e5190e68">
+		<description>Hair or Bones (2023-09-25)(Zani Pixels)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Hair or Bones (2023-09-25)(Zani Pixels).gbc" size="524288" crc="b2f289fa" sha1="37705e5190e680d8b8de6353194dcdaacefb6f54"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc440e8264314a9">
 		<description>Hangman (PD)</description>
 		<year>????</year>
@@ -9362,6 +9402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcbc173e97e0f95">
+		<description>Libbet and the Magic Floor v0.08 (2024-01-02)(Yerrick, Damian)(Zlib)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Libbet and the Magic Floor v0.08 (2024-01-02)(Yerrick, Damian)(Zlib).gb" size="32768" crc="7a9dea01" sha1="bc173e97e0f9509051de84b33b0ce9ee3184e04e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc075b3e29ed14f">
 		<description>libbet01</description>
 		<year>????</year>
@@ -9429,6 +9479,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="libbet07.gb" size="32768" crc="96d18cfa" sha1="9c72848fadc5d10aba617089406c2c3247ae64f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5205d0e0715fe">
+		<description>Lightseeker (demo-playable) (2024-02-17)(Bitmap Soft)(GB)(en-pt)[pt-br]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lightseeker (demo-playable) (2024-02-17)(Bitmap Soft)(GB)(en-pt)[pt-br].gbc" size="1048576" crc="05814003" sha1="5205d0e0715fe93ed71054d67c91c5a84a8771b8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9629,6 +9689,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Mario's Picross (UE) [S][b3].gb" size="262144" crc="d0471d28" sha1="b57f287673568b23a72c28c753c93ead032f9035"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc60dd2c0b35799">
+		<description>Marron Helps a Friend (2023-10-14)(npckc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Marron Helps a Friend (2023-10-14)(npckc).gb" size="1048576" crc="33062383" sha1="60dd2c0b35799e4ce96368f01716e1d8685b4f2b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10522,6 +10592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc71649d4d34b03">
+		<description>Pandora's Blocks (World) (v1.8) (GB Compatible) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Pandora's Blocks (World) (v1.8) (GB Compatible) (Aftermarket) (Unl).gbc" size="262144" crc="a4e1aac6" sha1="71649d4d34b039bf37081ce2c31346f699f6c3b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc590dc27682dac">
 		<description>PaZeek (USA) (Proto)</description>
 		<year>????</year>
@@ -10669,6 +10749,26 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Pocket Music (2002)(Rage Software)(US)(M5)(proto).gbc" size="1048576" crc="c4387812" sha1="ad547a79af864eb56a18e1c2ad4346eb35df41ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc5291a00ac57dc">
+		<description>Pocket Music (USA) (En,Es) (Proto) (2003-03-07)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Pocket Music (USA) (En,Es) (Proto) (2003-03-07).gbc" size="1048576" crc="e6dda84f" sha1="5291a00ac57dcf47e485f33972000682b861bfe8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcb7ecdd51358e2">
+		<description>Pocket Music (World) (Proto) (Riff Sampler Test)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Pocket Music (World) (Proto) (Riff Sampler Test).gbc" size="32768" crc="419d4565" sha1="b7ecdd51358e2794a45b425ada778722f5f000c0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12629,6 +12729,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Tennis (W) [T+Bra_TraduRoms].gb" size="32768" crc="97e945e3" sha1="af9574574a877d5dd96c490c9437c1c70e1cc5f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcdf3093eb22388">
+		<description>Test (demo-playable) (2019-08-29)(Rapha Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Test (demo-playable) (2019-08-29)(Rapha Games).gb" size="1048576" crc="00271752" sha1="df3093eb2238824db2afcdd0c9ea1a8e65d1b813"/>
 			</dataarea>
 		</part>
 	</software>

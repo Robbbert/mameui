@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 230 -->
+<!-- Number of items in this list = 255 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -9,6 +9,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="10968">
 				<rom name="(demo)animdemo.gba" size="10968" crc="76cab00d" sha1="a7ef012a8f8b462cfad660abb9ddd85c58800cf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba96dec7ff1d4e5">
+		<description>(demo)Compofiller Advance (2024-06)(All You Can Execute)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="101336">
+				<rom name="(demo)Compofiller Advance (2024-06)(All You Can Execute).gba" size="101336" crc="11a08037" sha1="96dec7ff1d4e55aaa0ccdb82510940441cf6868c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -112,6 +122,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba0514188ada8b5">
+		<description>(demo)GBA Jam 2022 Invitro (2022-07-30)(pmprog)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="319112">
+				<rom name="(demo)GBA Jam 2022 Invitro (2022-07-30)(pmprog).gba" size="319112" crc="f79403f7" sha1="0514188ada8b5dd77bfed591e465c71fda20ec8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba12846f58c6ee9">
+		<description>(demo)GBA Video ~ Legend of Lofi (2023-04-12)(Cassette Tape Perplexity)(Part 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33488896">
+				<rom name="(demo)GBA Video ~ Legend of Lofi (2023-04-12)(Cassette Tape Perplexity)(Part 1 of 2).gba" size="33488896" crc="c74ba8de" sha1="12846f58c6ee9dcf5ffed7e3fcab48a6055ba1f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad3d5f25ac9ce1">
+		<description>(demo)GBA Video ~ Legend of Lofi (2023-04-12)(Cassette Tape Perplexity)(Part 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33292288">
+				<rom name="(demo)GBA Video ~ Legend of Lofi (2023-04-12)(Cassette Tape Perplexity)(Part 2 of 2).gba" size="33292288" crc="aaeb73a7" sha1="d3d5f25ac9ce14e95ccf1903c54cdaae2e172e08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad0870b666dd5d">
+		<description>(demo)GBA Video ~ Legend of Lofi v2.0 (2024-02-26)(Cassette Tape Perplexity)(Part 5 of 5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33226752">
+				<rom name="(demo)GBA Video ~ Legend of Lofi v2.0 (2024-02-26)(Cassette Tape Perplexity)(Part 5 of 5).gba" size="33226752" crc="12b8c208" sha1="d0870b666dd5dd7fe4072ef2b6f53bbd028350b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2e40a58e8c375">
+		<description>(demo)GBA-NICCC v1.0.0 (2020-11-09)(GValiente)(Zlib)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="9220704">
+				<rom name="(demo)GBA-NICCC v1.0.0 (2020-11-09)(GValiente)(Zlib).gba" size="9220704" crc="a565bccd" sha1="2e40a58e8c375a1f49b1f369c7121db45ce1ebcc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba0621cdeb7f5da">
 		<description>(demo)GBHINA</description>
 		<year>????</year>
@@ -132,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba3d1b0818533ad">
+		<description>(demo)Here be dragons (2017-05-29)(Rodriguez, Simon)(FR)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="37256">
+				<rom name="(demo)Here be dragons (2017-05-29)(Rodriguez, Simon)(FR)(MIT).gba" size="37256" crc="640d4b7b" sha1="3d1b0818533ad78b750328efa2d76424db481118"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba767d714ef3e87">
 		<description>(demo)juanmv94demo</description>
 		<year>????</year>
@@ -139,6 +209,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="5389160">
 				<rom name="(demo)juanmv94demo.gba" size="5389160" crc="36cc5325" sha1="767d714ef3e87cb4d8b8ccac7d9de36552710a73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba1b56ffc49cc40">
+		<description>(demo)Legacy of Goku 2 - World Map Demo (2024-04-17)(Golden PSP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="214912">
+				<rom name="(demo)Legacy of Goku 2 - World Map Demo (2024-04-17)(Golden PSP).gba" size="214912" crc="71b77081" sha1="1b56ffc49cc407d371996b1f471341d1a88318a7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -179,6 +259,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1412132">
 				<rom name="(demo)mode5.gba" size="1412132" crc="256a884c" sha1="bcc1e01cc2d776db2485d9809a47d6e1965a1c49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaeb2b578699b87">
+		<description>(demo)Perfect Angles Advance, A (2023-05-16)(HusYada)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="212896">
+				<rom name="(demo)Perfect Angles Advance, A (2023-05-16)(HusYada)(proto).gba" size="212896" crc="995d4659" sha1="eb2b578699b87bcba314d155a883e272fcec12d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -282,6 +372,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba1e52e2483d9f5">
+		<description>3D Terrain (2001)(Skyworks Technologies)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="3D Terrain (2001)(Skyworks Technologies).gba" size="33554432" crc="7bbe7cd7" sha1="1e52e2483d9f57838ec925edf7d3bbdce504a017"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba20d805839ea7f">
+		<description>Air Combat GBA (2023-06-02)(Guilty_D)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="337628">
+				<rom name="Air Combat GBA (2023-06-02)(Guilty_D).gba" size="337628" crc="2bd1ea82" sha1="20d805839ea7fd1e2fd09d223ba8bb3e96b7bd8d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbac7bc9a1f22748">
 		<description>Airball</description>
 		<year>????</year>
@@ -299,6 +409,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="airhockey.gba" size="524288" crc="12f49031" sha1="cfcd61e0bc1f75232dbe8443ed20462858a52517"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad99db02c1ed57">
+		<description>Anarchaeologist (2022-09-12)(ControlledChaos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5449852">
+				<rom name="Anarchaeologist (2022-09-12)(ControlledChaos).gba" size="5449852" crc="32d23c26" sha1="d99db02c1ed574d3abf4d61dfec730015de691bd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -492,6 +612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba76cf764669631">
+		<description>Dragon Ball - Advanced Arcade (demo-playable) (2023-02-26)(Golden PSP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5255060">
+				<rom name="Dragon Ball - Advanced Arcade (demo-playable) (2023-02-26)(Golden PSP).gba" size="5255060" crc="68f8712c" sha1="76cf764669631cc2e520391cf3f50bf69f398b8a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba58875496c9ab8">
 		<description>Dragon Ball GT - Transformation (2004-04-27)(Atari)(proto)</description>
 		<year>????</year>
@@ -579,6 +709,26 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Duel Masters 3 (Japan) (Rev 1).gba" size="8388608" crc="d2b9cfb6" sha1="05ad843564c663a050e137ae0ec07d09f585c714"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa66c602c93ef0">
+		<description>Enchanted Place (2022-11-01)(VideoGameStoryTime)[GBA Jam 2022]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="169408">
+				<rom name="Enchanted Place (2022-11-01)(VideoGameStoryTime)[GBA Jam 2022].gba" size="169408" crc="c9a385d0" sha1="a66c602c93ef04b1d1a30ed66cf9e347127c417a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaf613a7366dca5">
+		<description>Flipoon Advance (2023-05-16)(HusYada)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="189404">
+				<rom name="Flipoon Advance (2023-05-16)(HusYada)(proto).gba" size="189404" crc="349efbf7" sha1="f613a7366dca5c4881eec7fbfc3907ea47610d4f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -689,6 +839,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="3901312">
 				<rom name="Junction Jive (2024-05)(Solar).gba" size="3901312" crc="0cfcad33" sha1="634e3735ad68686dcac6048e8a2508d9e23c88d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadfc4229db410c">
+		<description>Kankandara no Mori ~ Forest of the Kankandara (2023-08-15)(brave_orakio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="238620">
+				<rom name="Kankandara no Mori ~ Forest of the Kankandara (2023-08-15)(brave_orakio).gba" size="238620" crc="7231fd60" sha1="dfc4229db410cc11649be45896fc1e7bcc31705b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -862,6 +1022,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaf3d6ccedabed9">
+		<description>POCKET CALLIOPE ADV (2020-12-18)(Le Doux, Adam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="14824">
+				<rom name="POCKET CALLIOPE ADV (2020-12-18)(Le Doux, Adam).gba" size="14824" crc="2e4de58b" sha1="f3d6ccedabed9959905483e15f82ada56162b5d0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba4c743011d7f9a">
 		<description>Pokemon Emerald</description>
 		<year>????</year>
@@ -889,6 +1059,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Pokemon Sapphire.GBA" size="16777216" crc="300ffda3" sha1="5e8c4bbd02056a96ec8effeaf206f889c3ff04b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9f7dc4cc51ce7">
+		<description>Pokemon Zero Negative (2023-02-18)(Elvies)[h Pokemon Fire Red]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Pokemon Zero Negative (2023-02-18)(Elvies)[h Pokemon Fire Red].gba" size="16777216" crc="3a4a7475" sha1="9f7dc4cc51ce77d0b18424f89a22d971d172b959"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2152,6 +2332,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbae66a725d96998">
+		<description>Slimelord Siege (2023-10-20)(alexanderzone)[WIP]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4014116">
+				<rom name="Slimelord Siege (2023-10-20)(alexanderzone)[WIP].gba" size="4014116" crc="72a5d4b0" sha1="e66a725d9699856b4b8c0c089cc5c20a053cf226"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2fa863d570657">
+		<description>Slimelord Siege (2023-11-29)(alexanderzone)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3023284">
+				<rom name="Slimelord Siege (2023-11-29)(alexanderzone).gba" size="3023284" crc="6500d64e" sha1="2fa863d5706573c8789f0c3afc86798363cbae0e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbadf39f500b3d33">
 		<description>SMSAdvance (World) (Pirate)</description>
 		<year>????</year>
@@ -2192,6 +2392,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbab999a199f2573">
+		<description>Sterus (demo-playable) (2022-11-10)(ATSxp)(BR)(en-pt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="320840">
+				<rom name="Sterus (demo-playable) (2022-11-10)(ATSxp)(BR)(en-pt).gba" size="320840" crc="0075d503" sha1="b999a199f2573ebb02418e6d8c86138fadb7d45a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaca5ae275beb25">
+		<description>Subterrornean (2022-10-13)(ControlledChaos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="112040">
+				<rom name="Subterrornean (2022-10-13)(ControlledChaos).gba" size="112040" crc="a8abbe93" sha1="ca5ae275beb252c54564c8a16cbe7d3ce114e250"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaa9a90b3e6b3d1">
 		<description>Super Block Jump - Game Boy Advance Edition</description>
 		<year>????</year>
@@ -2219,6 +2439,36 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Tetris Advance.bin" size="4194304" crc="501ea6cd" sha1="62f417d538061353b1dfc4c7c08d6c26a37f398c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbafef8a2f648330">
+		<description>Transience (2021-08-16)(Pineberry Fox)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="271032">
+				<rom name="Transience (2021-08-16)(Pineberry Fox).gba" size="271032" crc="e607dc48" sha1="fef8a2f6483303f32c2ceeae689a5c01ebf7bafe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba706fe5408d9c3">
+		<description>uCity Advance (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1924948">
+				<rom name="uCity Advance (World) (Aftermarket) (Unl).gba" size="1924948" crc="9cc88417" sha1="706fe5408d9c3fde6dfa47c7a483753ffc52005d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba262ae7904b78b">
+		<description>uCity Advance (World) (v1.0.2) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1930492">
+				<rom name="uCity Advance (World) (v1.0.2) (Aftermarket) (Unl).gba" size="1930492" crc="534a0f4d" sha1="262ae7904b78b57ad1bd514b2a46ca5854f70e0c"/>
 			</dataarea>
 		</part>
 	</software>

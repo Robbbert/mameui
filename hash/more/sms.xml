@@ -1,7 +1,47 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 310 -->
+<!-- Number of items in this list = 350 -->
 <softwarelist name="sms" description="sms loose roms">
+	<software name="sms5d3447944b3fc">
+		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan).bin" size="32768" crc="029d04fc" sha1="5d3447944b3fcad2fe61924bf3a93f0af41a70b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa5c1ce263baa4">
+		<description>(demo)Battle Squadron - Main Theme (2024-03-27)(Kagesan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="(demo)Battle Squadron - Main Theme (2024-03-27)(Kagesan).bin" size="32768" crc="83d1f2c0" sha1="a5c1ce263baa40490f11e4d9406455bd391c6a72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsfd79dac6bd58d">
+		<description>(demo)Chunky Disaster (2024-07)(Darklite - Offence)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="507904">
+				<rom name="(demo)Chunky Disaster (2024-07)(Darklite - Offence).bin" size="507904" crc="76565112" sha1="fd79dac6bd58db1615e0905c2ca0f757f50e64e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms14a799d947b16">
+		<description>(demo)Dithering Demo v1.00 (2024-03-27)(Guy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="(demo)Dithering Demo v1.00 (2024-03-27)(Guy).bin" size="32768" crc="76a91983" sha1="14a799d947b1683c551b9d4dae7c0c53493e6773"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsed4754923cdb1">
 		<description>(demo)rambo iii (fm-mod)</description>
 		<year>????</year>
@@ -189,6 +229,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="ALF (F) [translation kr151].sms" size="131072" crc="8faa486c" sha1="25a9c50d842c519a9fc563e31e8ae6cb99ae4e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsef00f10a1b836">
+		<description>Alter Ego v1.04 (2024-03-27)(Kusfo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="98304">
+				<rom name="Alter Ego v1.04 (2024-03-27)(Kusfo).bin" size="98304" crc="b32d09fc" sha1="ef00f10a1b83698da35b52344eed19821c237c6f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -642,6 +692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms32bd664de24ac">
+		<description>Crazy Pinball v31 (2024-03-27)(eruiz00)[SRAM]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Crazy Pinball v31 (2024-03-27)(eruiz00)[SRAM].bin" size="262144" crc="79e2aeb2" sha1="32bd664de24ac4fc8c96416bc0fa3aaa37c3d060"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms73d6f05c66037">
 		<description>datastorm</description>
 		<year>????</year>
@@ -849,6 +909,36 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="felipe em acao (b).sms" size="32768" crc="ccb2cab4" sha1="b7601ff0116490b85c9bd50109db175ce2dd9104"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms07a72276c281a">
+		<description>Find the Wordy Gems v1.0 (2024-03-18)(Z80ASMprogrammer2022)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Find the Wordy Gems v1.0 (2024-03-18)(Z80ASMprogrammer2022).bin" size="32768" crc="74ddb2d1" sha1="07a72276c281a58d261a131553e9061beb3b9f41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa9d1458859e4c">
+		<description>Find the Wordy Gems v1.1 (2024-03-31)(Z80ASMprogrammer2022)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Find the Wordy Gems v1.1 (2024-03-31)(Z80ASMprogrammer2022).bin" size="32768" crc="e7720a11" sha1="a9d1458859e4c7b08f3de79537d2f5e0ce914bbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsfdf74ba470899">
+		<description>Find the Wordy Gems v1.2 (2024-04-02)(Z80ASMprogrammer2022)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Find the Wordy Gems v1.2 (2024-04-02)(Z80ASMprogrammer2022).bin" size="32768" crc="a8eda51d" sha1="fdf74ba470899535f618e5327e51bbb5afcfc991"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1402,6 +1492,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms61f8d72d2ef85">
+		<description>Land On My Base v1.00 (2024-03-28)(willbritton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Land On My Base v1.00 (2024-03-28)(willbritton).bin" size="65536" crc="8b11ad6c" sha1="61f8d72d2ef85edb6099c41eb28a84902d34faa3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsd9f6a025df43a">
+		<description>Land On My Base v1.01 (2024-03-28)(willbritton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Land On My Base v1.01 (2024-03-28)(willbritton).bin" size="65536" crc="f34346a4" sha1="d9f6a025df43a609fd54d9fb17049f800bc6cb0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms9cdfaa2104514">
+		<description>Land On My Base v1.02 (2024-03-30)(willbritton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Land On My Base v1.02 (2024-03-30)(willbritton).bin" size="65536" crc="f0014317" sha1="9cdfaa2104514fa63df77c0bce8e94541112d3f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6ece0257a93bc">
+		<description>Land On My Base v1.03 (2024-04-02)(willbritton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Land On My Base v1.03 (2024-04-02)(willbritton).bin" size="65536" crc="1c09288e" sha1="6ece0257a93bc21eda3d212ca8fbf0a4a68339ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms21094f2c07320">
+		<description>Land On My Base v1.04 (2024-04-04)(willbritton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Land On My Base v1.04 (2024-04-04)(willbritton).bin" size="65536" crc="81cda722" sha1="21094f2c07320fe52c4b72585b26bc72081e1829"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms63d0bcf8c0967">
+		<description>Land On My Base v1.05 (2024-04-04)(willbritton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Land On My Base v1.05 (2024-04-04)(willbritton).bin" size="65536" crc="1004ad18" sha1="63d0bcf8c096773033f502df90c91a65ea7d15df"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms9f0a778d29dbd">
 		<description>Lift</description>
 		<year>????</year>
@@ -1932,6 +2082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsba96052eaf594">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr ca SMS Power! - kusfo][v2.2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr ca SMS Power! - kusfo][v2.2].bin" size="524288" crc="fa67301a" sha1="ba96052eaf594804075b5b83e5e8a053f022ceda"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsbae5db53f4a0b">
 		<description>Phantasy Star (1987)(Sega)(JP)[tr ca SMS Power! - kusfo][v2.4]</description>
 		<year>????</year>
@@ -1949,6 +2109,36 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Phantasy Star (1987)(Sega)(JP)[tr de SMS Power! - Popfan][v2.4].bin" size="524288" crc="9efa8451" sha1="5660cd923bd0ad333f54854d2f952ae97cbee34a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms5b43ec73c105d">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.1].bin" size="524288" crc="e981786e" sha1="5b43ec73c105d61cb7e086af10192112100e189e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse6bcb9da3f954">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.3].bin" size="524288" crc="37bb4e66" sha1="e6bcb9da3f95455f813cb14fc52f75cc4b7f27e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsf2864d7942051">
+		<description>Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.3][literal]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (1987)(Sega)(JP)[tr en SMS Power!][v2.3][literal].bin" size="524288" crc="90e34f13" sha1="f2864d79420512fd8c78c53c349005a589695654"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2282,6 +2472,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsc41801211c432">
+		<description>Raposa do Sol v0.15 (2024-03-27)(tibonev)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Raposa do Sol v0.15 (2024-03-27)(tibonev)(MIT).bin" size="49152" crc="d663d13c" sha1="c41801211c43203483d555a885b56bf4238c1d2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms79c2147820a07">
+		<description>Raposa do Sol v0.17 (2024-04-01)(tibonev)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Raposa do Sol v0.17 (2024-04-01)(tibonev)(MIT).bin" size="49152" crc="0a51255d" sha1="79c2147820a07d56b1aa58e9a8675a0111e992ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms7e9fcf343d771">
+		<description>Raposa do Sol v0.18 (2024-04-08)(tibonev)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Raposa do Sol v0.18 (2024-04-08)(tibonev)(MIT).bin" size="65536" crc="6655d92f" sha1="7e9fcf343d7713152c7ae0ec54c31118e2df7abc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smseea394b8d3029">
+		<description>Raposa do Sol v0.19 (2024-04-22)(tibonev)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Raposa do Sol v0.19 (2024-04-22)(tibonev)(MIT).bin" size="131072" crc="08c31fc2" sha1="eea394b8d30295a51fb9ecff1fb0fda8221af9bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms063ac337b2aa5">
+		<description>Raposa do Sol v0.20 (2024-05-16)(tibonev)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Raposa do Sol v0.20 (2024-05-16)(tibonev)(MIT).bin" size="131072" crc="26d6c74a" sha1="063ac337b2aa58e098cee6d896df53909d2456e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsae852cef94927">
 		<description>Rayman Retro Rumble v1.3 (2022)(Maxim)</description>
 		<year>????</year>
@@ -2289,6 +2529,76 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Rayman Retro Rumble v1.3 (2022)(Maxim).sms" size="524288" crc="932c57d5" sha1="ae852cef94927d876ef95d1099bbc8edb7a71b42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms8e1142d1f8c73">
+		<description>River Strike v0.10 (2024-04-06)(haroldoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="River Strike v0.10 (2024-04-06)(haroldoop).bin" size="32768" crc="941a2e8f" sha1="8e1142d1f8c730787f1c7ff1cec7d556335c566e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6b0e24cfd1be1">
+		<description>River Strike v0.3 (2024-02-07)(haroldoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="River Strike v0.3 (2024-02-07)(haroldoop).bin" size="32768" crc="5aae666c" sha1="6b0e24cfd1be1ae3838144a211dbc22d218bb003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms80150de384984">
+		<description>River Strike v0.4 (2024-02-15)(haroldoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="River Strike v0.4 (2024-02-15)(haroldoop).bin" size="32768" crc="0a0ff059" sha1="80150de384984c3d11bdeddab400f47284370974"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6aa75c72a0082">
+		<description>River Strike v0.5 (2024-02-21)(haroldoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="River Strike v0.5 (2024-02-21)(haroldoop).bin" size="32768" crc="f0bc9bb4" sha1="6aa75c72a0082abe097691e5b0986d1765ae2071"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms1f469423aabc2">
+		<description>River Strike v0.6 (2024-02-24)(haroldoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="River Strike v0.6 (2024-02-24)(haroldoop).bin" size="32768" crc="c872bc5d" sha1="1f469423aabc279c0ee430b42c69c76e36d3baf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3dbbd85d91aad">
+		<description>River Strike v0.7 (2024-02-29)(haroldoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="River Strike v0.7 (2024-02-29)(haroldoop).bin" size="32768" crc="bb950ff4" sha1="3dbbd85d91aadd0745633ea7dfac5fd92052ba93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6687f1fd4a4e7">
+		<description>River Strike v0.8 (2024-04-02)(haroldoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="River Strike v0.8 (2024-04-02)(haroldoop).bin" size="32768" crc="de2ef332" sha1="6687f1fd4a4e7a3b4935c7ea72138e39e52f60cf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2552,6 +2862,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms07df4fd0d5251">
+		<description>Spaghetti Numbers v1.0 (2024-03-27)(Z80ASMprogrammer2022)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Spaghetti Numbers v1.0 (2024-03-27)(Z80ASMprogrammer2022).bin" size="32768" crc="ad911fda" sha1="07df4fd0d5251eafe52e86b3312523cf0de5074d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsed82cfa66008e">
+		<description>Spaghetti Numbers v1.1 (2024-03-30)(Z80ASMprogrammer2022)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Spaghetti Numbers v1.1 (2024-03-30)(Z80ASMprogrammer2022).bin" size="32768" crc="115543e6" sha1="ed82cfa66008e6fc7a6d35e3042c77d71a453ca5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsce50ee73e311d">
+		<description>Spaghetti Numbers v1.2 (2024-04-18)(Z80ASMprogrammer2022)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Spaghetti Numbers v1.2 (2024-04-18)(Z80ASMprogrammer2022).bin" size="32768" crc="ea74d7dc" sha1="ce50ee73e311d16ea96a69ad0a079ea967cd10ee"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsea4214198a53d">
 		<description>Streets of Rage</description>
 		<year>????</year>
@@ -2569,6 +2909,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="573440">
 				<rom name="Stygian Quest (2024)(Naarshakta).sms" size="573440" crc="3ac7a0c4" sha1="8b3b7e9dba31e812d3df48482e464a04f19b95e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3e82c78f928ef">
+		<description>Stygian Quest v1.1 (2024-04-12)(Tornare, Julien)(CC BY-NC-SA 4.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="573440">
+				<rom name="Stygian Quest v1.1 (2024-04-12)(Tornare, Julien)(CC BY-NC-SA 4.0).bin" size="573440" crc="f105e666" sha1="3e82c78f928ef2334a4f2ebd686052de11539e38"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3052,6 +3402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms107989e16dd06">
+		<description>YM2413 Testrom (2024-03-27)(Joppy Furr)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="YM2413 Testrom (2024-03-27)(Joppy Furr)(MIT).bin" size="32768" crc="9d08c137" sha1="107989e16dd06a278cb3484a4d565a2f5c255636"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsc61f4302a6ca6">
 		<description>ys - the vanished omens (fm patch)</description>
 		<year>????</year>
@@ -3089,6 +3449,46 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Zemina Best 88 (KR).sms" size="1048576" crc="3c339d9e" sha1="3bb6be77eb321f5c97948a96878d1a042623c089"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smseb7b558f0ce2c">
+		<description>ZEXALL v0.17 (2021-10-17)(Maxim - Quinn, Eric)(GPLv2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="ZEXALL v0.17 (2021-10-17)(Maxim - Quinn, Eric)(GPLv2).bin" size="65536" crc="8ee793ac" sha1="eb7b558f0ce2c13c5f822b0196094a31cb005444"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smscb08fd2aa1c02">
+		<description>ZEXALL v0.17 (2021-10-17)(Maxim - Quinn, Eric)(GPLv2)[ignore undocumented bits]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="ZEXALL v0.17 (2021-10-17)(Maxim - Quinn, Eric)(GPLv2)[ignore undocumented bits].bin" size="65536" crc="d74347a2" sha1="cb08fd2aa1c02ffa3029c6a1a44f80a058ff66d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms4447fa254fdd5">
+		<description>ZEXALL v0.18 (2021-10-19)(Maxim - Quinn, Eric)(GPLv2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="ZEXALL v0.18 (2021-10-19)(Maxim - Quinn, Eric)(GPLv2).bin" size="65536" crc="51ae75a4" sha1="4447fa254fdd5b71ee205f1f95ebc65a157e383c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsdffc981dcd172">
+		<description>ZEXALL v0.18 (2021-10-19)(Maxim - Quinn, Eric)(GPLv2)[ignore undocumented bits]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="ZEXALL v0.18 (2021-10-19)(Maxim - Quinn, Eric)(GPLv2)[ignore undocumented bits].bin" size="65536" crc="8c945b97" sha1="dffc981dcd172daad4aadb2ad0024f47cc91660e"/>
 			</dataarea>
 		</part>
 	</software>

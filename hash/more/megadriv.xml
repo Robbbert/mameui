@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1899 -->
+<!-- Number of items in this list = 1895 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -329,16 +329,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="26782">
 				<rom name="(demo)Ninja Fight.bin" size="26782" crc="78099524" sha1="ada3262ff01f3e392122c20080831ae417bd88fc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen88d6499d874dc">
-		<description>(demo)No Way No Way</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="(demo)No Way No Way.bin" size="2097152" crc="0658f691" sha1="88d6499d874dcb5721ff58d76fe1b9af811192e3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14352,26 +14342,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen5f96ddccff1e9">
-		<description>Sonic 3C (Proto 0408, 19940408, 17.29)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Sonic 3C (Proto 0408, 19940408, 17.29)(Sega).bin" size="4194304" crc="59d23df5" sha1="5f96ddccff1e95d82201687b939973c642a05394"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gend6012af0f7856">
-		<description>Sonic 3C (Proto 0517, 19940517, 17.08)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Sonic 3C (Proto 0517, 19940517, 17.08)(Sega).bin" size="4194304" crc="766c4b81" sha1="d6012af0f7856476892982e50b3d512d606dcb96"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen89957568386a5">
 		<description>Sonic 3D - Flickies' Island (Euro) - Sonic 3D Blast (USA, Korea)(1996)(Sega)</description>
 		<year>????</year>
@@ -15269,16 +15239,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1513644">
 				<rom name="Sonic the Hedgehog 2Z v0.5 (hack).bin" size="1513644" crc="49db7167" sha1="5aba9828b28b9d197b70acfddfc454ab6c33060d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen75e9c4705259d">
-		<description>sonic the hedgehog 3 (usa)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="sonic the hedgehog 3 (usa).bin" size="2097152" crc="9bc192ce" sha1="75e9c4705259d84112b3e697a6c00a0813d47d71"/>
 			</dataarea>
 		</part>
 	</software>
