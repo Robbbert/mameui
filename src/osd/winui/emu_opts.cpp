@@ -32,7 +32,7 @@ static ui_options emu_ui; // ui.ini
 static windows_options emu_global; // Global 'default' options
 #define UI_FILENAME                           "ini\\ui.ini"
 
-typedef std::string string;
+typedef std::basic_string<char> string;
 
 // char names
 void emu_set_value(windows_options *o, const char* name, float value)
@@ -157,7 +157,7 @@ struct dir_data { string dir_path; int which; };
 static std::map<int, dir_data> dir_map;
 static string emu_path;
 
-string GetIniDir(void)
+string GetIniDir()
 {
 ///	const char *ini_dir;
 //	const char *s;
@@ -169,7 +169,12 @@ string GetIniDir(void)
 //	}
 ///	ini_dir = "ini\0";
 ///	return ini_dir;
-	return emu_path + "ini\0";
+	return emu_path + PATH_SEPARATOR + "ini\0";
+}
+
+string GetEmuPath()
+{
+	return emu_path;
 }
 
 
@@ -350,9 +355,8 @@ void emu_opts_init(bool b)
 	GetModuleFileNameA(nullptr, exe_path, MAX_PATH);
 	emu_path = string(exe_path);
 	std::size_t pos = emu_path.find_last_of("\\");
-	emu_path = emu_path.substr(0,++pos);
-	emu_path.resize(pos);
-	printf("%s\n",emu_path.c_str());
+	emu_path.erase(pos);
+	printf("EmuPath = %s\n",emu_path.c_str());
 
 	dir_map[1] = dir_data { OPTION_PLUGINDATAPATH, 0 };
 	dir_map[2] = dir_data { OPTION_MEDIAPATH, 0 };

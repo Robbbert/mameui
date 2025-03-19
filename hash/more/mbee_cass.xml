@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 42 -->
+<!-- Number of items in this list = 68 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
+	<software name="bee160d521e7ac99">
+		<description>[-]Abecednik</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="120478872">
+				<rom name="[-]Abecednik.wav" size="120478872" crc="b918c4cc" sha1="160d521e7ac993f9301757c347f9b38ed9711851"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beeaeeeb6e8d12d3">
 		<description>[-]Addition of Sine Waves</description>
 		<year>????</year>
@@ -9,6 +19,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="2362252">
 				<rom name="[-]Addition of Sine Waves.wav" size="2362252" crc="73bc5c3b" sha1="aeeeb6e8d12d34bc8c8d2093b0531525512f492d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb15e7ec4a9af9">
+		<description>[-]Beetalker_speech_development_program_v20</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1857188">
+				<rom name="[-]Beetalker_speech_development_program_v20.wav" size="1857188" crc="5a163883" sha1="b15e7ec4a9af90e909004c4a5cdce76a1af1668e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39,6 +59,246 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="5532110">
 				<rom name="[-]Programmable Turtle.wav" size="5532110" crc="a45062a3" sha1="db1fd0bee23e3984e5e0415c0b12e1a4df617df2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed04f75eef820b">
+		<description>[-]Sabre of Sultar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2188604">
+				<rom name="[-]Sabre of Sultar.wav" size="2188604" crc="1823fd74" sha1="d04f75eef820be4895ad96653a6cd89af7453042"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee83ec21a82e709">
+		<description>[-]Sea Dragon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1460580">
+				<rom name="[-]Sea Dragon.wav" size="1460580" crc="1f437bce" sha1="83ec21a82e7094b163c420a080f1cc96de70c9ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee44c278da69453">
+		<description>[-]seadog</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="8997050">
+				<rom name="[-]seadog.wav" size="8997050" crc="d522db1e" sha1="44c278da694536db7d6843867658c13b8904f520"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9bbf34d966c90">
+		<description>[-]shape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="11836892">
+				<rom name="[-]shape.wav" size="11836892" crc="3fde1354" sha1="9bbf34d966c90f73de724cc28d6c07eb46c18657"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef2be4fef1a654">
+		<description>[-]Slalom96k2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="12785190">
+				<rom name="[-]Slalom96k2.wav" size="12785190" crc="da74337e" sha1="f2be4fef1a65414edc50f21dafe5355fb7131119"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefe7f467cb82a7">
+		<description>[-]Slalom96k3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="12294683">
+				<rom name="[-]Slalom96k3.wav" size="12294683" crc="249f45a7" sha1="fe7f467cb82a75edc4e15382e7829a2b137304d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee48543a60cd332">
+		<description>[-]slalome.mwb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="390588">
+				<rom name="[-]slalome.mwb.wav" size="390588" crc="757019ae" sha1="48543a60cd332d2c6ff5249449526f83201070f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee63286cf3ef162">
+		<description>[-]slide</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1483464">
+				<rom name="[-]slide.wav" size="1483464" crc="bd7d29f4" sha1="63286cf3ef1626be300aba82c31d5e5e0528a8e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3a3c0f3d0611e">
+		<description>[-]snake</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1399728">
+				<rom name="[-]snake.wav" size="1399728" crc="7460171d" sha1="3a3c0f3d0611e8cdc7c6827b32dbd81883e3fb70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee1bef44a1169a">
+		<description>[-]solitair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2342480">
+				<rom name="[-]solitair.wav" size="2342480" crc="a91b64d9" sha1="e1bef44a1169aca2ddb2126de63bcebc65392dd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2ac9b08852c6f">
+		<description>[-]solitaire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="660636">
+				<rom name="[-]solitaire.wav" size="660636" crc="8d2f63a6" sha1="2ac9b08852c6f8a79a002c8fbf0a24590c6cef49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee48d3ea42ab805">
+		<description>[-]speed_reading_16k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="7929032">
+				<rom name="[-]speed_reading_16k.wav" size="7929032" crc="38b38539" sha1="48d3ea42ab8052af15c199b019fe0a61ba6d8ed7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee8c1fc7734c91f">
+		<description>[-]speed_reading_32k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="12871180">
+				<rom name="[-]speed_reading_32k.wav" size="12871180" crc="90b27667" sha1="8c1fc7734c91f060c698c03d0fc913db2342ffb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee8aeab2c29c870">
+		<description>[-]Starblock96k3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="12110064">
+				<rom name="[-]Starblock96k3.wav" size="12110064" crc="d6d9ebc0" sha1="8aeab2c29c8708542b7b9e3c985e384bdeb586fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee0ff101ecb047">
+		<description>[-]Stars and Constellations_96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="13695358">
+				<rom name="[-]Stars and Constellations_96k1.wav" size="13695358" crc="db43997a" sha1="e0ff101ecb04791c301aeea22959b206bc592e18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0c6b136fcc7c0">
+		<description>[-]star_shoot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="692502">
+				<rom name="[-]star_shoot.wav" size="692502" crc="a9fca54d" sha1="0c6b136fcc7c0907587ae0756b61753b419b0c7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee8c89b1211e66c">
+		<description>[-]statpack_1.4_16k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5324542">
+				<rom name="[-]statpack_1.4_16k.wav" size="5324542" crc="0b8805a1" sha1="8c89b1211e66cb42105bb4ed042ac75f72a742ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee18113f4c42936">
+		<description>[-]statpack_1.4_32k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="6944564">
+				<rom name="[-]statpack_1.4_32k.wav" size="6944564" crc="125d3454" sha1="18113f4c42936f71500767371b70510c9335b808"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee606b78681acb2">
+		<description>[-]student_busyb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1411834">
+				<rom name="[-]student_busyb.wav" size="1411834" crc="c8174a38" sha1="606b78681acb29a090017e5802163dd9304da34d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee60428edeae5c0">
+		<description>[-]Subterra</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="718564">
+				<rom name="[-]Subterra.wav" size="718564" crc="632c98c4" sha1="60428edeae5c06a66ea9fa37c91e99d6e257202f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee602ee328d4b83">
+		<description>[-]Super Nova</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="891044">
+				<rom name="[-]Super Nova.wav" size="891044" crc="4c2f5373" sha1="602ee328d4b837339e8b8691ee4929cb7048ddee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9891b846f694b">
+		<description>[-]super_disassembler_32k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4534766">
+				<rom name="[-]super_disassembler_32k.wav" size="4534766" crc="2b786dc5" sha1="9891b846f694b21a248579f510c06058fb1dfc31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb1c7b1f8547d0">
+		<description>[-]survival.mwb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="978604">
+				<rom name="[-]survival.mwb.wav" size="978604" crc="736631be" sha1="b1c7b1f8547d056aa4c74c0f7e922026f2c70c69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9c8c43c3fff89">
+		<description>[-]sword_quest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="16137378">
+				<rom name="[-]sword_quest.wav" size="16137378" crc="eef9d838" sha1="9c8c43c3fff89ca71652bdcb9a86a8a973829399"/>
 			</dataarea>
 		</part>
 	</software>

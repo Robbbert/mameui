@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 25 -->
+<!-- Number of items in this list = 27 -->
 <softwarelist name="bbcm_flop" description="bbcm_flop loose roms">
 	<software name="aco5f502b669b83d">
 		<description>240 farmcash</description>
@@ -102,6 +102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="aco4c90920ff8d3a">
+		<description>CPM-65 (2023-10-01)(Given, David)(CH)(en)(BSD-2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="204800">
+				<rom name="CPM-65 (2023-10-01)(Given, David)(CH)(en)(BSD-2)[a].ssd" size="204800" crc="62f3949e" sha1="4c90920ff8d3a93b69876f16e8712d24f6e0ea61"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="aco4e850036c796e">
 		<description>CPM-65 (2024-05-03)(Given, David)(CH)(en)(BSD-2)</description>
 		<year>????</year>
@@ -129,6 +139,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="112128">
 				<rom name="Fantasy Dimension, The (2023-06-06)(Berntsson, Johan).ssd" size="112128" crc="9e1f8539" sha1="8fe6360691e94bc1d6ff1c617313f9f710f43b4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acob1361f3d6ef86">
+		<description>Ghosts of Blackwood Manor, The r13 (2024-03-03)(Vogt, Stefan)[elk]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="166912">
+				<rom name="Ghosts of Blackwood Manor, The r13 (2024-03-03)(Vogt, Stefan)[elk].ssd" size="166912" crc="46f15df9" sha1="b1361f3d6ef861428e23ccf4e5bf202be0e477b5"/>
 			</dataarea>
 		</part>
 	</software>

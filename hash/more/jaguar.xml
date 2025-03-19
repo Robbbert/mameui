@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 141 -->
+<!-- Number of items in this list = 147 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag1516859334668">
 		<description>8biteer</description>
@@ -229,6 +229,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Black_Lamp.j64" size="2097152" crc="b2642228" sha1="afeb4928ce717f4e1e98ee680fd72873006270ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag5c9235e32d556">
+		<description>bootmona</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="bootmona.j64" size="16384" crc="1684ccc6" sha1="5c9235e32d556947743309fded3addfb6d30d285"/>
 			</dataarea>
 		</part>
 	</software>
@@ -962,6 +972,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jagb6d2fd8ffd481">
+		<description>olscroller_k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="olscroller_k.j64" size="32768" crc="b7e1e80e" sha1="b6d2fd8ffd4817c2c2a60245049571a80f8a5021"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag89ee471d051c9">
+		<description>olscroller_m</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="olscroller_m.j64" size="32768" crc="28a3010a" sha1="89ee471d051c9f2ecff6d2c4ac10c3d21bef64cc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jagb97f550f41aa7">
 		<description>Operation_Thunderbolt_(Atari_ST)</description>
 		<year>????</year>
@@ -1102,6 +1132,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag04945a1bd6d1e">
+		<description>raytrace_k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="raytrace_k.j64" size="32768" crc="a60800d0" sha1="04945a1bd6d1e63f763c848e9d1249f12fff5f8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag64e80c5fbc110">
+		<description>raytrace_m</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="raytrace_m.j64" size="32768" crc="395549b6" sha1="64e80c5fbc110d0ac99bd5ec750090acda75cfb6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag98adaa9a79b39">
 		<description>Removers Example 1 (2008)</description>
 		<year>????</year>
@@ -1189,6 +1239,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="rocksoff.j64" size="1048576" crc="d1bc114e" sha1="cdadf1f855ec127d47a04e322f7ecd6b26f8b18b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag9d6d5c0011b3d">
+		<description>rodot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="rodot.j64" size="32768" crc="f7848b70" sha1="9d6d5c0011b3d9731622ac372474e553a7702fb4"/>
 			</dataarea>
 		</part>
 	</software>

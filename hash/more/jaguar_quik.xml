@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 161 -->
+<!-- Number of items in this list = 162 -->
 <softwarelist name="jaguar_quik" description="jaguar_quik loose roms">
 	<software name="jagb5460c28eb636">
 		<description>8biteer</description>
@@ -1589,6 +1589,16 @@
 		<part name="quik" interface="jaguar_quik">
 			<dataarea name="quik" size="573440">
 				<rom name="yakbig($C000).ABS" size="573440" crc="1d7a3399" sha1="5e1fd54163555d89a98396bd91040dfcbf5e4a73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagbd4da627825ea">
+		<description>yarc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="131440">
+				<rom name="yarc.cof" size="131440" crc="72d990af" sha1="bd4da627825ea6af6809a6e53e7adcd3249c1d67"/>
 			</dataarea>
 		</part>
 	</software>

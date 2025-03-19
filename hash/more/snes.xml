@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3780 -->
+<!-- Number of items in this list = 3792 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3893,12 +3893,12 @@
 		</part>
 	</software>
 	<software name="sns3439f1bba593b">
-		<description>Blackthorne T-Por v1.02 (2024)(Dindo, Rod Merida)</description>
+		<description>Blackthorne PT-BR v1.02 (2024)(Dindo, Rod Merida)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Blackthorne T-Por v1.02 (2024)(Dindo, Rod Merida).sfc" size="1048576" crc="03cc4c7d" sha1="3439f1bba593b95a1acb1f3b9edd4e7037741f3b"/>
+				<rom name="Blackthorne PT-BR v1.02 (2024)(Dindo, Rod Merida).sfc" size="1048576" crc="03cc4c7d" sha1="3439f1bba593b95a1acb1f3b9edd4e7037741f3b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4469,6 +4469,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3684480">
 				<rom name="Breath of Fire II Maeson v1.06 (2024)(Maeson).sfc" size="3684480" crc="d7c7b721" sha1="8999e5cd01bae3efc17e8ade25dac99ca592d1fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf9ed76e897dac">
+		<description>Breath of Fire PT-BR v1.1 (2001)(Hexagon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Breath of Fire PT-BR v1.1 (2001)(Hexagon).sfc" size="1572864" crc="08098770" sha1="f9ed76e897dacaa54e8dad0d8e81fc4a8fd593cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5662,6 +5672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf0bdc2ac3e6f9">
+		<description>Clock Tower PT-BR (2012)(Denver)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3276800">
+				<rom name="Clock Tower PT-BR (2012)(Denver).sfc" size="3276800" crc="e7389adb" sha1="f0bdc2ac3e6f9673721e9e27142e3e5e187aff5e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns1e6af06430419">
 		<description>Clock Tower T-Eng v1.01 (2001)(Aeon Genesis)</description>
 		<year>????</year>
@@ -5679,16 +5699,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3277312">
 				<rom name="Clock Tower T-Ita (2004)(Fray83).sfc" size="3277312" crc="ca6f2508" sha1="3eeda3cf176e470cc1d7f0fe226796051903d474"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsf0bdc2ac3e6f9">
-		<description>Clock Tower T-Por (2012)(Denver)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="3276800">
-				<rom name="Clock Tower T-Por (2012)(Denver).sfc" size="3276800" crc="e7389adb" sha1="f0bdc2ac3e6f9673721e9e27142e3e5e187aff5e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6612,6 +6622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns62f0fe1b6cc1e">
+		<description>Demon's Crest PT-BR v1.1 (2001)(Hexagon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Demon's Crest PT-BR v1.1 (2001)(Hexagon).sfc" size="2097152" crc="f8ee6a77" sha1="62f0fe1b6cc1e6eb2fa569321b44f1fbddf786a7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7dfcd9c69c5a9">
 		<description>Demon's Crest Retranslation v1.2 (2024)(RyuHayabusa)</description>
 		<year>????</year>
@@ -6619,6 +6639,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Demon's Crest Retranslation v1.2 (2024)(RyuHayabusa).sfc" size="2097152" crc="97b9f3d6" sha1="7dfcd9c69c5a945c37a27534f3237a76e99974d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsacc4e5a9f4b7c">
+		<description>Demonio Rei PT-BR (2024)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Demonio Rei PT-BR (2024)(Dindo).sfc" size="1572864" crc="b39d5fd8" sha1="acc4e5a9f4b7c2da9967ca0a6fe9edfc497dfee5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7239,6 +7269,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Dragon Ball Z - La Legende Saien (France) [En v20010305 by Ginew] (Incomplete) (~Dragon Ball Z - Super Butouden 2).sfc" size="2097152" crc="54cb175f" sha1="34d4e1d211279f7554e3d0513d2104ef008f5af6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns17a15c4661ba6">
+		<description>Dragon Ball Z - Super Gokuuden - Totsugeki Hen PT-BR (2024)(Nathan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Ball Z - Super Gokuuden - Totsugeki Hen PT-BR (2024)(Nathan).sfc" size="2097152" crc="6e20d7eb" sha1="17a15c4661ba68d0f4479abcf5561d3a4d1988ce"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13802,6 +13842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5a0ccc3b2dd70">
+		<description>Lemmings - Colour Palette &amp; Level Title Fix v1.0 FINAL (U)(2025)(J.Russell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lemmings - Colour Palette &amp; Level Title Fix v1.0 FINAL (U)(2025)(J.Russell).sfc" size="1048576" crc="6e8f33b5" sha1="5a0ccc3b2dd702602a1fe9749156eec541d7b2ac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6df3989e7768a">
 		<description>Lemmings - Colour Palette &amp; Level Title Fix v1.1 FINAL (E)(2025)(J.Russell)</description>
 		<year>????</year>
@@ -13809,6 +13859,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Lemmings - Colour Palette &amp; Level Title Fix v1.1 FINAL (E)(2025)(J.Russell).sfc" size="1048576" crc="3426d622" sha1="6df3989e7768a563a9b84ef4d87524f429c891c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns25ba11723b9c9">
+		<description>Lemmings - Colour Palette &amp; Level Title Fix v1.2 FINAL (E)(2025)(J.Russell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lemmings - Colour Palette &amp; Level Title Fix v1.2 FINAL (E)(2025)(J.Russell).sfc" size="1048576" crc="07a1ab3d" sha1="25ba11723b9c96a12020004e45ce359971b5d491"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17339,6 +17399,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Metal Max Returns.sfc" size="4194304" crc="262b2305" sha1="e4313180e20a8796ef347fb49e78a49a2479c6dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns045e084c81bd8">
+		<description>Metal Slader Glory - Director's Cut (J)(2000)(HAL Laboratory)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Metal Slader Glory - Director's Cut (J)(2000)(HAL Laboratory).sfc" size="3145728" crc="2cab2502" sha1="045e084c81bd84371e16ef770d29c1d11df98be2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd28767b9d35c7">
+		<description>Metal Slader Glory - Director's Cut T-Eng (2025)(FCandChill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Metal Slader Glory - Director's Cut T-Eng (2025)(FCandChill).sfc" size="3145728" crc="2b41a062" sha1="d28767b9d35c7dfbee54f7823d086eb6d8c2cd88"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21092,6 +21172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb064a132b0e37">
+		<description>Sanrio Shanghai (J)(1994)(Character Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Sanrio Shanghai (J)(1994)(Character Soft).sfc" size="524288" crc="4cbb22df" sha1="b064a132b0e37d8b3fa0991e03cb1b006d73c01e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse51a0490b00b0">
 		<description>Sanrio World Smash Ball! T-Eng (1999)(Suicidal Translations)</description>
 		<year>????</year>
@@ -21309,6 +21399,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3670016">
 				<rom name="Secret of Evermore 2 Player Edition by FuSoYa (2).sfc" size="3670016" crc="24f872f2" sha1="55d26a425d2b5e4e8e58d38829c6bc4356fc2fde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns06667b94738ba">
+		<description>Secret of Evermore PT-BR (2023)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Secret of Evermore PT-BR (2023)(Dindo).sfc" size="4194304" crc="c4c266fd" sha1="06667b94738baad6d12d702a1843248fdb082aef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33242,6 +33342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3d36fb16b44a8">
+		<description>Super Mario World PT-BR v2.0 (2022)(bMatSantos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Mario World PT-BR v2.0 (2022)(bMatSantos).sfc" size="1048576" crc="cf28cbdc" sha1="3d36fb16b44a8192d9c6a7c052d8265512ac8eae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa3770aa54dffa">
 		<description>Super Mario World Redrawn With Luigi (SMW1 hack) (2)</description>
 		<year>????</year>
@@ -37412,6 +37522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5808cd6ac303e">
+		<description>X-Kaliber 2097 PT-BR (2024)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="X-Kaliber 2097 PT-BR (2024)(Dindo).sfc" size="2097152" crc="23b9da3f" sha1="5808cd6ac303ec150445f567b014778848e22ede"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0633d830db54f">
 		<description>X-Men - Mutant Apocalypse (U) [T+Por_Cyber]</description>
 		<year>????</year>
@@ -37753,12 +37873,12 @@
 		</part>
 	</software>
 	<software name="snse424ec29289a8">
-		<description>Yu Yu Hakusho 2 - The Fighting Chapter T-Por v1.0 (2024)(Hextinkers)</description>
+		<description>Yu Yu Hakusho 2 - The Fighting Chapter PT-BR v1.0 (2024)(Hextinkers)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Yu Yu Hakusho 2 - The Fighting Chapter T-Por v1.0 (2024)(Hextinkers).sfc" size="2097152" crc="52ac1195" sha1="e424ec29289a8edab0867705ffa372e004ee73cd"/>
+				<rom name="Yu Yu Hakusho 2 - The Fighting Chapter PT-BR v1.0 (2024)(Hextinkers).sfc" size="2097152" crc="52ac1195" sha1="e424ec29289a8edab0867705ffa372e004ee73cd"/>
 			</dataarea>
 		</part>
 	</software>

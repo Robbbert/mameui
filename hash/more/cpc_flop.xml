@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7684 -->
+<!-- Number of items in this list = 7699 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -10982,6 +10982,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpca1a4510c9029d">
+		<description>Bushido Warrior (1988)(Ariolasoft)(Side A)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Bushido Warrior (1988)(Ariolasoft)(Side A)(proto).dsk" size="194816" crc="3243550c" sha1="a1a4510c9029df72e074fec59246aaac705b5561"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc9aa849effc883">
+		<description>Bushido Warrior (1988)(Ariolasoft)(Side B)(proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="195635">
+				<rom name="Bushido Warrior (1988)(Ariolasoft)(Side B)(proto).dsk" size="195635" crc="5d188685" sha1="9aa849effc883a97b24f4333aca6c99f3114096b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc0644273ac7309">
 		<description>Butcher Hill (1988)(Gremlin Graphics Software)</description>
 		<year>????</year>
@@ -15252,6 +15272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcca35e611cb87c">
+		<description>CPC Wars (2023)(Magni, Adrian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="CPC Wars (2023)(Magni, Adrian).dsk" size="194816" crc="7f1d9f96" sha1="ca35e611cb87cb6cafc7ae75e67a15dc509b920a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcdd04b7ad344a3">
 		<description>CPC-Aventure_patch</description>
 		<year>????</year>
@@ -17969,6 +17999,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="204544">
 				<rom name="Dark Fusion (1988)(Gremlin Graphics Software).dsk" size="204544" crc="2b5bbf07" sha1="52275269dda5d237e69bbf5565fe0114c960848e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc48efdc3be30de">
+		<description>Dark Knight, The - Shadow of Madness (2024-07-26)(Mananuk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Dark Knight, The - Shadow of Madness (2024-07-26)(Mananuk).dsk" size="194816" crc="d77b1197" sha1="48efdc3be30de684bc4075234ed3161eb8c9281f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33452,6 +33492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc704b3c48005b7">
+		<description>Ghosts of Blackwood Manor, The r13 (2024-03-03)(Vogt, Stefan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Ghosts of Blackwood Manor, The r13 (2024-03-03)(Vogt, Stefan).dsk" size="194816" crc="8ba4dd23" sha1="704b3c48005b736128b17f177bfd989a12fa1636"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpce99a24a57139d">
 		<description>Ghosts_n_Goblins__CHANY-NPS</description>
 		<year>????</year>
@@ -33799,6 +33849,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="GOCDEMO1.dsk" size="194816" crc="33be7270" sha1="aaf1fd9fb4eaf02f7609cd6cdf0009dab26e1fca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpce9d7b59da1e9b">
+		<description>Gold Maze (2023-12-22)(Retro VynZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Gold Maze (2023-12-22)(Retro VynZ).dsk" size="194816" crc="2bbe3078" sha1="e9d7b59da1e9b9ab3f5303f13f49c1a8c43cef2d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35552,6 +35612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcc0e366d6d6dfb">
+		<description>Head Over Heels</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Head Over Heels.dsk" size="194816" crc="198b7b42" sha1="c0e366d6d6dfbdd3d9af2a3811458eaeac9a03c2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc73e41518228cc">
 		<description>Head over Heels[35]</description>
 		<year>????</year>
@@ -36659,6 +36729,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Hydrofool__CNGSOFT.dsk" size="194816" crc="10682240" sha1="f718240aaf673265c7c3a2558bf5675423ccddc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8879d3f60fef2">
+		<description>Hypernoid Zero v1.2 (2024-03-29)(Bitplane Technomantes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Hypernoid Zero v1.2 (2024-03-29)(Bitplane Technomantes).dsk" size="194816" crc="f62e9e76" sha1="8879d3f60fef231b2b34a6ff8d3e503c58fd5941"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38049,6 +38129,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="JABATO.dsk" size="194816" crc="7b781982" sha1="6a693faa292c6735d3a1896775191621933e00e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc8d50aad2a1ed0">
+		<description>Jack and the Beanstalk (1985-01)(Amstrad Computer User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Jack and the Beanstalk (1985-01)(Amstrad Computer User).dsk" size="194816" crc="71cdd51d" sha1="8d50aad2a1ed0462b398475ab4d444ccde3e25ee"/>
 			</dataarea>
 		</part>
 	</software>
@@ -41632,6 +41722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc6b59f83a1c7d5">
+		<description>Light Grid (2023-05-29)(LuBlu Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Light Grid (2023-05-29)(LuBlu Entertainment).dsk" size="204544" crc="ae15414d" sha1="6b59f83a1c7d56c512d2ad10fa68583ba2214996"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc0871a95a8b7ea">
 		<description>LightCorridor_Shap</description>
 		<year>????</year>
@@ -44369,6 +44469,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Marillon (FP7 - Nupe).dsk" size="194816" crc="e1a6528a" sha1="8bcc2eaa02013b38f3b80603c39ffd48f93f37f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpce9a256d2f87cb">
+		<description>Mario Bros (2023)(JMB - Lunoka - Onevision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Mario Bros (2023)(JMB - Lunoka - Onevision).dsk" size="194816" crc="b4fd078b" sha1="e9a256d2f87cb18835b4c47d6de16c6551d76948"/>
 			</dataarea>
 		</part>
 	</software>
@@ -54012,6 +54122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpce684dae2a26dd">
+		<description>Pick the Star (2023-03-20)(Spedaletti, Marco)(IT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Pick the Star (2023-03-20)(Spedaletti, Marco)(IT).dsk" size="194816" crc="2e8fa022" sha1="e684dae2a26ddadeedab7480673b99164f401c16"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc6d3c645e5c97e">
 		<description>PICK'N-P</description>
 		<year>????</year>
@@ -54249,6 +54369,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Pirates (1987)(Microprose Software)(Side B).dsk" size="194816" crc="e607740a" sha1="8df175ff72a2bae52d00ba0b883841d97a1166d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc310a990de9dca">
+		<description>Pirka (2024-04-15)(Crazy Piri)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="Pirka (2024-04-15)(Crazy Piri).dsk" size="194816" crc="ba60ec01" sha1="310a990de9dca614f3471237c7b22b3cb2b13e1d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -58609,6 +58739,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="PulkoMandy's Music Disc (PulkoTeam).dsk" size="194816" crc="d89d6fad" sha1="cadf321a855efd08633da6c59fe844217e485b02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc1709721ba5ea4">
+		<description>Pulzar (2024-06-03)(Snauts)(LV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Pulzar (2024-06-03)(Snauts)(LV).dsk" size="204544" crc="190cd6c5" sha1="1709721ba5ea4987b7eac9554d8c9fdd4d5a8f41"/>
 			</dataarea>
 		</part>
 	</software>
@@ -71389,6 +71529,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="transloc.dsk" size="194816" crc="166509db" sha1="372e18ca39afb4cd9fdc24efacbca7e975b30b57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcc6eb33e116e61">
+		<description>Transversion (2024-06-04)(Moore, Dave)(GPLv2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Transversion (2024-06-04)(Moore, Dave)(GPLv2).dsk" size="204544" crc="5dfcab05" sha1="c6eb33e116e6145555bf286b114cc8626b25c1d5"/>
 			</dataarea>
 		</part>
 	</software>

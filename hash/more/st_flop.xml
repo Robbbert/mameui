@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 91 -->
+<!-- Number of items in this list = 95 -->
 <softwarelist name="st_flop" description="st_flop loose roms">
+	<software name="st244dbc65ffd388">
+		<description>(demo)Omega Boot (2024-07)(Omega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="(demo)Omega Boot (2024-07)(Omega).st" size="819200" crc="f5455be9" sha1="244dbc65ffd38890fe6e1f3c42f11d6bfa491c14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="st08063140c331bb">
+		<description>(demo)smfxboot (2024-05-11)(SMFX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="(demo)smfxboot (2024-05-11)(SMFX).st" size="819200" crc="468806f7" sha1="08063140c331bbcb82d2123e9e56a11050276d6e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="st2a56c837389d2a">
 		<description>12 Days of Christmas (19xx)(Effect)(Disk 1 of 2)</description>
 		<year>????</year>
@@ -352,6 +372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="st388b4b4242c343">
+		<description>Ghosts of Blackwood Manor, The r13 (2024-03-03)(Puddle Soft)[medium]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="368640">
+				<rom name="Ghosts of Blackwood Manor, The r13 (2024-03-03)(Puddle Soft)[medium].st" size="368640" crc="acd1d447" sha1="388b4b4242c3433a486aeb57e7211b1bfa005f24"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="st05fe17ed8e61bf">
 		<description>High Fidelity Dreams (1992-06-05)(Aura)[a]</description>
 		<year>????</year>
@@ -599,6 +629,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Santas Little Falkiries (2023-12)(Janes OnderGrond).st" size="737280" crc="108d55c6" sha1="74a662c31a7f31bc1dc9c237b2eb4bf066fff410"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="st7dd1a83c9f4864">
+		<description>SHOTGUN (demo-playable) (2024-06-17)(anarcholab)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="SHOTGUN (demo-playable) (2024-06-17)(anarcholab).st" size="737280" crc="c90608d8" sha1="7dd1a83c9f4864b2066d4e40c3e35e6ffe35a787"/>
 			</dataarea>
 		</part>
 	</software>

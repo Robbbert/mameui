@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 355 -->
+<!-- Number of items in this list = 359 -->
 <softwarelist name="atom_quik" description="atom_quik loose roms">
 	<software name="atmcee61171f952d">
 		<description>028</description>
@@ -59,6 +59,46 @@
 		<part name="quik" interface="atom_quik">
 			<dataarea name="quik" size="787">
 				<rom name="079.ATM" size="787" crc="a9092e65" sha1="1a74454efd4c8dfdb85d6abbacd00d491a3d465a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmd4ef7ddefa519">
+		<description>100UP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="837">
+				<rom name="100UP.ATM" size="837" crc="1916ea1f" sha1="d4ef7ddefa51951aca5bbe3025d4e6f04c7df871"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmf2296c97ac39f">
+		<description>11-5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="828">
+				<rom name="11-5.ATM" size="828" crc="759946d8" sha1="f2296c97ac39ffac5a1c2d99a5f49f5550081ef4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm78c9c24f39f47">
+		<description>134</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="3903">
+				<rom name="134.ATM" size="3903" crc="a2c173f5" sha1="78c9c24f39f479f8dff5fd54d7c9d2582b37858c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm6f1437fd3047a">
+		<description>144</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="atom_quik">
+			<dataarea name="quik" size="5654">
+				<rom name="144.ATM" size="5654" crc="673eb54c" sha1="6f1437fd3047afe452116bef5369b6ff7580a4ea"/>
 			</dataarea>
 		</part>
 	</software>

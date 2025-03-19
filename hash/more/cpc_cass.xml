@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 157 -->
+<!-- Number of items in this list = 158 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc7310f187b8440">
 		<description>aerial</description>
@@ -1249,6 +1249,16 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="27775">
 				<rom name="Cross Shoot.cdt" size="27775" crc="d44f37bd" sha1="524612d44034ae5491cf8f2a706d5bac6aae29b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcf06dcdc1d0311">
+		<description>Culto, El (2023-12-03)(Tartessos Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="20659">
+				<rom name="Culto, El (2023-12-03)(Tartessos Games).cdt" size="20659" crc="9d92c982" sha1="f06dcdc1d0311d10bb381250297aece47be322b2"/>
 			</dataarea>
 		</part>
 	</software>

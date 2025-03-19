@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 151 -->
+<!-- Number of items in this list = 163 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -1259,6 +1259,126 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="2565">
 				<rom name="P6 Circuit {m1p2}.p6" size="2565" crc="a132d578" sha1="664b499acfffdeb2724675e728779debb3c9698b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6052090848c51c1">
+		<description>Tiny Golf {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="443">
+				<rom name="Tiny Golf {m1p2}.cas" size="443" crc="4fa3c1e0" sha1="52090848c51c19fabb5f64c3d83df0319b61dcfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6090e2b187f3b04">
+		<description>Tiny Xevious {m2p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="17741">
+				<rom name="Tiny Xevious {m2p2}.cas" size="17741" crc="5e9e2dbf" sha1="90e2b187f3b042ef1883105a34e83fe69a58e38f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6012b3db378c669">
+		<description>Toiyaar (full) {m2p4}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="27053">
+				<rom name="Toiyaar (full) {m2p4}.p6" size="27053" crc="40a31d09" sha1="12b3db378c6698c312a9ba57bfe06ba57f2e660e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60f709758342af9">
+		<description>Toiyaar (loader) {m2p4}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3314">
+				<rom name="Toiyaar (loader) {m2p4}.p6" size="3314" crc="e6fe7ea7" sha1="f709758342af9b990cc8830742d14ac766588cd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60abf3b594c46b6">
+		<description>Toiyaar (main)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="17441">
+				<rom name="Toiyaar (main).p6" size="17441" crc="55204d38" sha1="abf3b594c46b6f2a1478c6511ecfc61349a2244c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60a970d3616ceb4">
+		<description>Toiyaar (pattern 01)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1569">
+				<rom name="Toiyaar (pattern 01).p6" size="1569" crc="7610ebc6" sha1="a970d3616ceb43a22c3e4e6fb376cfd210e08aa0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60f25cb8ae0e480">
+		<description>Toiyaar (pattern 02)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1569">
+				<rom name="Toiyaar (pattern 02).p6" size="1569" crc="e7f21f84" sha1="f25cb8ae0e480c151ceeef755537c9b05764fb7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60e90d87dc42004">
+		<description>Toiyaar (pattern 03)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1569">
+				<rom name="Toiyaar (pattern 03).p6" size="1569" crc="13717ed9" sha1="e90d87dc42004a4261b17ade5c774ea8f04d3453"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6061ab2894ce2a6">
+		<description>Toiyaar (pattern 04)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1569">
+				<rom name="Toiyaar (pattern 04).p6" size="1569" crc="c80be0f5" sha1="61ab2894ce2a647d05f40dc2c0afa34ecba8adec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6098c689d2b5a02">
+		<description>Toriaezu Tinyan da yo! {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="711">
+				<rom name="Toriaezu Tinyan da yo! {m1p1}.cas" size="711" crc="f3bb97e1" sha1="98c689d2b5a02efe382790f61757d6151dea176a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6039798e7f7cb28">
+		<description>Trick Boy {m2p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="25800">
+				<rom name="Trick Boy {m2p2}.cas" size="25800" crc="dfad3c61" sha1="39798e7f7cb2802d977f5124dd053a0d85d4c018"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p601b5c53734f70e">
+		<description>Tsubaki no Metsukeji {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3927">
+				<rom name="Tsubaki no Metsukeji {m1p2}.p6" size="3927" crc="94a6467d" sha1="1b5c53734f70e623e6c1bb36f0a20ef453ca1783"/>
 			</dataarea>
 		</part>
 	</software>

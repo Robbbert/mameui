@@ -54,7 +54,8 @@ typedef struct
 	const char *icon_name;
 } ICONDATA;
 
-typedef std::string string;
+typedef std::basic_string<char> string;
+typedef std::basic_string<wchar_t> wstring;
 
 typedef BOOL (WINAPI *common_file_dialog_proc)(LPOPENFILENAME lpofn);
 BOOL CommonFileDialog(common_file_dialog_proc cfd,char *filename, int filetype);

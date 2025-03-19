@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8108 -->
+<!-- Number of items in this list = 8123 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -6729,6 +6729,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Asymmetric Playfield (Roger Williams).a26" size="4096" crc="7b124f9d" sha1="7c324a227e58108e2740e4d14cf751d75310e6df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a265150fd0558ee2">
+		<description>Asymmetric Playfield Graphics Test (1996-10-13)(Matthews III, John V.)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Asymmetric Playfield Graphics Test (1996-10-13)(Matthews III, John V.)(NTSC)(PD).bin" size="4096" crc="4e8f7b8b" sha1="5150fd0558ee2e1f728cb9c8c6503a02edcef956"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21912,6 +21922,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26453013d66a40e">
+		<description>Coarse Blade v1.1 (2024-04-01)(Magovinna)(NTSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Coarse Blade v1.1 (2024-04-01)(Magovinna)(NTSC).bin" size="16384" crc="0d682185" sha1="453013d66a40e8981f5cca434c96ae7954f867a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a268cdfe898ffd33">
+		<description>Coarse Blade v1.1 (2024-04-01)(Magovinna)(PAL60)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Coarse Blade v1.1 (2024-04-01)(Magovinna)(PAL60).bin" size="16384" crc="7098c7e4" sha1="8cdfe898ffd3319b5b1a66a6b666985d67d95837"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26a869159227408">
 		<description>Coastal Chaos V0.02 (PD)</description>
 		<year>????</year>
@@ -23589,6 +23619,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="coveredinbees.bas.a26" size="4096" crc="dae45c86" sha1="5c9042d2b7eff3ef9af47fc7e8d77c862837abe9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26161342e43e1c3">
+		<description>Cowboy Carl (2024-05-07)(Stuart Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Cowboy Carl (2024-05-07)(Stuart Software).bin" size="4096" crc="efb83ff8" sha1="161342e43e1c3f634c06c382597085bace9826c6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32232,6 +32272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a269751b9262cae6">
+		<description>From Shadow to Light v0.3 (2024-06)(Flush)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="From Shadow to Light v0.3 (2024-06)(Flush).bin" size="32768" crc="6a0c6370" sha1="9751b9262cae6ba700e1e200fc199295d85e4455"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26e82e6f6a50f15">
 		<description>Front Line Arcade Final (Front Line Hack)</description>
 		<year>????</year>
@@ -36482,6 +36532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26300105198be54">
+		<description>Gunfight (2024-05-02)(Blitzer1001)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Gunfight (2024-05-02)(Blitzer1001).bin" size="4096" crc="8633ef20" sha1="300105198be545e12c9eb8891ca72cf79c6327c4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2663b650ddb1896">
 		<description>Gunfight 2600 - AI (MP)</description>
 		<year>????</year>
@@ -40219,6 +40279,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Homsar2 (2007) (Thomas Krug).a26" size="4096" crc="f7793a10" sha1="3a76d51f64a0dd77b5f73d05a1e9c355152f6ae8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a263dccec1c5c176">
+		<description>Horizon Shift 2600 (2024-04-21)(Flump Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Horizon Shift 2600 (2024-04-21)(Flump Studios).bin" size="8192" crc="f8259e2c" sha1="3dccec1c5c176d87164d676e7082f4878772e57d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47022,6 +47092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26d102783ff6f0d">
+		<description>Kobold (2024-05-06)(thatprogrammerperson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Kobold (2024-05-06)(thatprogrammerperson).bin" size="4096" crc="be8dd23b" sha1="d102783ff6f0d4183fed83e7328bb81b809ac959"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26ff75220aeae36">
 		<description>Kookley_Kong</description>
 		<year>????</year>
@@ -50992,6 +51072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26a192ec1d33ea9">
+		<description>Matt (1996-10-13)(Matthews III, John V.)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Matt (1996-10-13)(Matthews III, John V.)(NTSC)(PD).bin" size="4096" crc="3ab6fffc" sha1="a192ec1d33ea97c4dad7a531137ee18ada9392aa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2608fa443af44eb">
 		<description>Matt Demo (PD)</description>
 		<year>????</year>
@@ -52899,6 +52989,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Minesweeper (V.99) (Soren Gust) (PD).a26" size="4096" crc="7c5bdcf2" sha1="1e57986f44c23e75f1183beacaae895b934884ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26941a403b83b68">
+		<description>Mini Dragon Chalice v2 (2024-03-25)(theloon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mini Dragon Chalice v2 (2024-03-25)(theloon).bin" size="32768" crc="496fcd0d" sha1="941a403b83b6801d6c04d482a6a5eb565ca04f0e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -63692,6 +63792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26a141d2417e580">
+		<description>Robbie (1996-10-13)(Matthews III, John V.)(NTSC)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Robbie (1996-10-13)(Matthews III, John V.)(NTSC)(PD).bin" size="4096" crc="c81dde04" sha1="a141d2417e58036921a66a7eecd479fafe98e2bc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26695343d0eb7ba">
 		<description>Robin Hood (1985) (Xonox) (PAL) [a1][!]</description>
 		<year>????</year>
@@ -65102,6 +65212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26787967bd05bfb">
+		<description>Schwubo I (2024-04-27)(thatprogrammerperson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Schwubo I (2024-04-27)(thatprogrammerperson).bin" size="4096" crc="e1115bcb" sha1="787967bd05bfba5b4a0f88b1213dbb29b9328ada"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26548470361a3a2">
 		<description>scobraf6</description>
 		<year>????</year>
@@ -66019,6 +66139,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Shark (Sub Scan Hack).a26" size="4096" crc="24bbbe79" sha1="d14e61e832131013d482315b51db8d8108d89482"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a260f571f007ee52">
+		<description>Sharkstorm (2024-04-13)(theloon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Sharkstorm (2024-04-13)(theloon).bin" size="4096" crc="eb1d2240" sha1="0f571f007ee52712eb0d507a2b86b9172d3ec671"/>
 			</dataarea>
 		</part>
 	</software>
@@ -74222,6 +74352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a267345d437c30ae">
+		<description>Swords (2024-04-28)(thatprogrammerperson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Swords (2024-04-28)(thatprogrammerperson).bin" size="4096" crc="4eb4096c" sha1="7345d437c30ae9c79e3a6655179c3c6987745669"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2647fb1c003e998">
 		<description>SWPODRCR</description>
 		<year>????</year>
@@ -78159,6 +78299,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Tux in Danger (Berzek Hack).a26" size="4096" crc="7bdb3c08" sha1="ee76f077888158bad41abe009bdbc04e0c5e09ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659046a9fd1a06">
+		<description>Twin (2024-06)(All You Can Execute)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Twin (2024-06)(All You Can Execute).bin" size="32768" crc="d833c5c9" sha1="59046a9fd1a0698390e2f2c74092dc99bc093e41"/>
 			</dataarea>
 		</part>
 	</software>

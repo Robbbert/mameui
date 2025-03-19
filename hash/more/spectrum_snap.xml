@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 441 -->
+<!-- Number of items in this list = 442 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -649,6 +649,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="35649">
 				<rom name="Bounces (1986)(Beyond).z80" size="35649" crc="bd312347" sha1="6e4af10a2e1dbfd502b54c028b85b15b31fffef3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs91c1acb856d4b">
+		<description>Break Space 128K (2024)(IAMAI Creation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="54942">
+				<rom name="Break Space 128K (2024)(IAMAI Creation).z80" size="54942" crc="07fa287e" sha1="91c1acb856d4b861b26727891090e79743a9818d"/>
 			</dataarea>
 		</part>
 	</software>
