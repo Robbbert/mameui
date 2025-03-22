@@ -14,6 +14,8 @@
   Nov/Dec 1998 - Mike Haaland
 
 ***************************************************************************/
+// dirwatch doesn't seem to do anything useful, so it's been disconnected 2025-03-22
+//#define DIRWATCH
 
 // standard windows headers
 #include <windows.h>
@@ -52,7 +54,9 @@
 #include "bitmask.h"
 #include "treeview.h"
 #include "splitters.h"
+#ifdef DIRWATCH
 #include "dirwatch.h"
+#endif
 #include "help.h"
 #include "history.h"
 #include "dialogs.h"
@@ -185,7 +189,7 @@ typedef struct tagLVBKIMAGEW
 	(BOOL)SNDMSG((hwnd), LVM_GETBKIMAGE, 0, (LPARAM)(plvbki))
 #endif // ListView_GetBkImage
 
-#define MM_PLAY_GAME (WM_APP + 15000)
+#define MM_PLAY_GAME (WM_APP + 102)
 
 #define JOYGUI_MS 100
 
@@ -235,66 +239,66 @@ struct _play_options
  ***************************************************************************/
 
 static BOOL             Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow);
-static void             Win32UI_exit(void);
+static void             Win32UI_exit();
 
-static BOOL             PumpMessage(void);
+static BOOL             PumpMessage();
 static BOOL             OnIdle(HWND hWnd);
 static void             OnSize(HWND hwnd, UINT state, int width, int height);
 static LRESULT CALLBACK MameWindowProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam);
 
 static void             SetView(int menu_id);
-static void             ResetListView(void);
+static void             ResetListView();
 static void             UpdateGameList(BOOL bUpdateRomAudit, BOOL bUpdateSampleAudit);
-static void             DestroyIcons(void);
-static void             ReloadIcons(void);
-static void             PollGUIJoystick(void);
+static void             DestroyIcons();
+static void             ReloadIcons();
+static void             PollGUIJoystick();
 //static void             PressKey(HWND hwnd,UINT vk);
 static BOOL             MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify);
 static void             KeyboardKeyDown(int syskey, int vk_code, int special);
 static void             KeyboardKeyUp(int syskey, int vk_code, int special);
-static void             KeyboardStateClear(void);
+static void             KeyboardStateClear();
 
-static void             UpdateStatusBar(void);
+static void             UpdateStatusBar();
 //static BOOL             PickerHitTest(HWND hWnd);
 static BOOL             TreeViewNotify(NMHDR *nm);
 
 //static void             ResetBackground(char *szFile);
-static void             LoadBackgroundBitmap(void);
+static void             LoadBackgroundBitmap();
 static void             PaintBackgroundImage(HWND hWnd, HRGN hRgn, int x, int y);
 
 static int              GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_subitem);
 
-static void             DisableSelection(void);
+static void             DisableSelection();
 static void             EnableSelection(int nGame);
 
-static HICON            GetSelectedPickItemIcon(void);
-static void             SetRandomPickItem(void);
+static HICON            GetSelectedPickItemIcon();
+static void             SetRandomPickItem();
 static void             PickColor(COLORREF *cDefault);
 
-static LPTREEFOLDER     GetSelectedFolder(void);
-static HICON            GetSelectedFolderIcon(void);
+static LPTREEFOLDER     GetSelectedFolder();
+static HICON            GetSelectedFolderIcon();
 
 static LRESULT CALLBACK HistoryWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 static LRESULT CALLBACK PictureFrameWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 static LRESULT CALLBACK PictureWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
-static void             MamePlayRecordGame(void);
-static void             MamePlayBackGame(void);
-static void             MamePlayRecordWave(void);
-static void             MamePlayRecordMNG(void);
-static void             MamePlayRecordAVI(void);
-static void             MameLoadState(void);
-static BOOL             GameCheck(void);
-static BOOL             FolderCheck(void);
+static void             MamePlayRecordGame();
+static void             MamePlayBackGame();
+static void             MamePlayRecordWave();
+static void             MamePlayRecordMNG();
+static void             MamePlayRecordAVI();
+static void             MameLoadState();
+static BOOL             GameCheck();
+static BOOL             FolderCheck();
 
-static void             ToggleScreenShot(void);
-static void             ToggleSoftware(void);
-static void             AdjustMetrics(void);
+static void             ToggleScreenShot();
+static void             ToggleSoftware();
+static void             AdjustMetrics();
 
 /* Icon routines */
-static DWORD            GetShellLargeIconSize(void);
-static DWORD            GetShellSmallIconSize(void);
-static void             CreateIcons(void);
+static DWORD            GetShellLargeIconSize();
+static DWORD            GetShellSmallIconSize();
+static void             CreateIcons();
 static int              GetIconForDriver(int nItem);
 static void             AddDriverIcon(int nItem,int default_icon_index);
 
@@ -308,16 +312,16 @@ static BOOL             HandleScreenShotContextMenu( HWND hWnd, WPARAM wParam, L
 static void             GamePicker_OnHeaderContextMenu(POINT pt, int nColumn);
 static void             GamePicker_OnBodyContextMenu(POINT pt);
 
-static void             InitListView(void);
+static void             InitListView();
 /* Re/initialize the ListView header columns */
 static void             ResetColumnDisplay(BOOL first_time);
 
 static void             CopyToolTipText (LPTOOLTIPTEXT lpttt);
 
-static void             ProgressBarShow(void);
-static void             ProgressBarHide(void);
-static void             ResizeProgressBar(void);
-static void             ProgressBarStep(void);
+static void             ProgressBarShow();
+static void             ProgressBarHide();
+static void             ResizeProgressBar();
+static void             ProgressBarStep();
 static void             ProgressBarStepParam(int iGameIndex, int nGameCount);
 
 static HWND             InitProgressBar(HWND hParent);
@@ -329,7 +333,7 @@ static LRESULT          Statusbar_MenuSelect (HWND hwnd, WPARAM wParam, LPARAM l
 static void             UpdateHistory(string software);
 
 
-static void RemoveCurrentGameCustomFolder(void);
+static void RemoveCurrentGameCustomFolder();
 static void RemoveGameCustomFolder(int driver_index);
 
 static void BeginListViewDrag(NM_LISTVIEW *pnmv);
@@ -338,8 +342,8 @@ static void ButtonUpListViewDrag(POINTS p);
 
 static void CalculateBestScreenShotRect(HWND hWnd, RECT *pRect, BOOL restrict_height);
 
-BOOL MouseHasBeenMoved(void);
-static void SwitchFullScreenMode(void);
+BOOL MouseHasBeenMoved();
+static void SwitchFullScreenMode();
 
 static HBRUSH hBrush = NULL;
 //static HBRUSH hBrushDlg = NULL;
@@ -507,10 +511,12 @@ static BOOL bShowTabCtrl   = 1;
 static BOOL bProgressShown = false;
 static BOOL bListReady     = false;
 
-#define	WM_MAME32_FILECHANGED (WM_USER + 0)
-#define	WM_MAME32_AUDITGAME   (WM_USER + 1)
+#define	WM_MAME32_FILECHANGED (WM_APP + 100)
+#define	WM_MAME32_AUDITGAME   (WM_APP + 101)
 
+#ifdef DIRWATCH
 static PDIRWATCHER s_pWatcher;
+#endif
 
 /* use a joystick subsystem in the gui? */
 static const struct OSDJoystick* g_pJoyGUI = NULL;
@@ -644,7 +650,7 @@ typedef struct
 	char        name[40];    // functionality name (optional)
 	input_seq   is;      // the input sequence (the keys pressed)
 	UINT        func_id;        // the identifier
-	input_seq* (*const getiniptr)(void);  // pointer to function to get the value from .ini file
+	input_seq* (*const getiniptr)();  // pointer to function to get the value from .ini file
 } GUISequence;
 
 static const GUISequence GUISequenceControl[]=
@@ -1089,27 +1095,27 @@ int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 }
 
 
-HWND GetMainWindow(void)
+HWND GetMainWindow()
 {
 	return hMain;
 }
 
 
-HWND GetTreeView(void)
+HWND GetTreeView()
 {
 	return hTreeView;
 }
 
 
 // used by messui.cpp
-HIMAGELIST GetLargeImageList(void)
+HIMAGELIST GetLargeImageList()
 {
 	return hLarge;
 }
 
 
 // used by messui.cpp
-HIMAGELIST GetSmallImageList(void)
+HIMAGELIST GetSmallImageList()
 {
 	return hSmall;
 }
@@ -1278,7 +1284,7 @@ void SetNumOptionFolders(int count)
 
 
 /* search */
-const char* GetSearchText(void)
+const char* GetSearchText()
 {
 	return g_SearchText;
 }
@@ -1345,7 +1351,7 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 }
 
 
-void UpdateSoftware(void)
+void UpdateSoftware()
 {
 	/* first time through can't do this stuff */
 	if (hwndList == NULL)
@@ -1586,25 +1592,25 @@ char *ModifyThe(const char *str)
 }
 
 
-HBITMAP GetBackgroundBitmap(void)
+HBITMAP GetBackgroundBitmap()
 {
 	return hBackground;
 }
 
 
-HPALETTE GetBackgroundPalette(void)
+HPALETTE GetBackgroundPalette()
 {
 	return hPALbg;
 }
 
 
-MYBITMAPINFO * GetBackgroundInfo(void)
+MYBITMAPINFO * GetBackgroundInfo()
 {
 	return &bmDesc;
 }
 
 
-int GetMinimumScreenShotWindowWidth(void)
+int GetMinimumScreenShotWindowWidth()
 {
 	BITMAP bmp;
 	GetObject(hMissing_bitmap,sizeof(BITMAP),&bmp);
@@ -1657,7 +1663,7 @@ int GetGameNameIndex(const char *name)
     Internal functions
  ***************************************************************************/
 
-static void SetMainTitle(void)
+static void SetMainTitle()
 {
 	char buffer[100];
 	snprintf(buffer, std::size(buffer), "%s %s", MAMEUINAME, GetVersionString());
@@ -1750,8 +1756,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	if (common_control_version < PACKVERSION(6,0))
 	{
-		char buf[] = MAMEUINAME " needs COMCTL32.DLL version 6.0\n\n"
-					"Unable to proceed.\n\n";
+		char buf[] = MAMEUINAME " needs COMCTL32.DLL version 6.0\n\nUnable to proceed.\n\n";
 
 		win_message_box_utf8(0, buf, MAMEUINAME " Outdated COMCTL32.DLL Error", MB_OK | MB_ICONWARNING);
 		return false;
@@ -1766,12 +1771,15 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 		return false;
 	}
 
+#ifdef DIRWATCH
 	s_pWatcher = DirWatcher_Init(hMain, WM_MAME32_FILECHANGED);
 	if (s_pWatcher)
 	{
-		DirWatcher_Watch(s_pWatcher, 0, dir_get_value(2), true);  // roms
-		DirWatcher_Watch(s_pWatcher, 1, dir_get_value(4), true);  // samples
+		DirWatcher_Watch(s_pWatcher, 0, dir_get_value(2), false);  // roms
+		DirWatcher_Watch(s_pWatcher, 1, dir_get_value(4), false);  // samples
+		DirWatcher_Watch(s_pWatcher, 2, dir_get_value(13), true);  // loose sw
 	}
+#endif
 
 	SetMainTitle();
 	hTabCtrl = GetDlgItem(hMain, IDC_SSTAB);
@@ -2010,7 +2018,14 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 static void Win32UI_exit()
 {
+	printf("Exiting...\n");fflush(stdout);
+
 	MySoftwareListClose(); // messui.cpp
+
+#ifdef DIRWATCH
+	if (s_pWatcher)
+		DirWatcher_Free(s_pWatcher);
+#endif
 
 	if (g_pJoyGUI)
 		g_pJoyGUI->exit();
@@ -2063,6 +2078,8 @@ static void Win32UI_exit()
 	FreeScreenShot();
 
 	HelpExit();
+
+	printf("Successful end of program\n");fflush(stdout);
 }
 
 
@@ -2444,7 +2461,7 @@ static BOOL PumpMessage()
 }
 
 
-static BOOL FolderCheck(void)
+static BOOL FolderCheck()
 {
 	int nGameIndex = 0;
 	int i=0;
@@ -2528,7 +2545,7 @@ static BOOL FolderCheck(void)
 }
 
 
-static BOOL GameCheck(void)
+static BOOL GameCheck()
 {
 	if (game_index == 0)
 		ProgressBarShow();
@@ -3385,7 +3402,7 @@ static int GUI_seq_pressed(const input_seq *seq)
 }
 
 
-static void check_for_GUI_action(void)
+static void check_for_GUI_action()
 {
 	for (int i = 0; i < NUM_GUI_SEQUENCES; i++)
 	{
@@ -3411,7 +3428,7 @@ static void check_for_GUI_action(void)
 }
 
 
-static void KeyboardStateClear(void)
+static void KeyboardStateClear()
 {
 	memset(keyboard_state, 0, sizeof(keyboard_state));
 	printf("keyboard gui state cleared.\n");fflush(stdout);
@@ -3850,7 +3867,7 @@ UINT_PTR CALLBACK CFHookProc(HWND hdlg, UINT uiMsg, WPARAM wParam, LPARAM lParam
 }
 
 
-static void PickFont(void)
+static void PickFont()
 {
 	LOGFONT font;
 	CHOOSEFONT cf;
@@ -3929,7 +3946,7 @@ static void PickColor(COLORREF *cDefault)
 }
 
 
-static void PickCloneColor(void)
+static void PickCloneColor()
 {
 	COLORREF cClonecolor;
 	cClonecolor = GetListCloneColor();
@@ -4398,13 +4415,17 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 			if (bUpdateSoftware)
 				MessUpdateSoftwareList(); // messui.cpp
 
+#ifdef DIRWATCH
 			if (s_pWatcher)
 			{
 				if (bUpdateRoms)
-					DirWatcher_Watch(s_pWatcher, 0, dir_get_value(2), true);
+					DirWatcher_Watch(s_pWatcher, 0, dir_get_value(2), false);
 				if (bUpdateSamples)
-					DirWatcher_Watch(s_pWatcher, 1, dir_get_value(4), true);
+					DirWatcher_Watch(s_pWatcher, 1, dir_get_value(4), false);
+				if (bUpdateSoftware)
+					DirWatcher_Watch(s_pWatcher, 2, dir_get_value(13), true);
 			}
+#endif
 
 			/* update game list */
 			if (bUpdateRoms == true || bUpdateSamples == true)
@@ -5026,7 +5047,7 @@ static void AddDriverIcon(int nItem,int default_icon_index)
 }
 
 
-static void DestroyIcons(void)
+static void DestroyIcons()
 {
 	if (hSmall)
 	{
@@ -5056,7 +5077,7 @@ static void DestroyIcons(void)
 }
 
 
-static void ReloadIcons(void)
+static void ReloadIcons()
 {
 	HICON hIcon;
 	INT i = 0;
@@ -5082,7 +5103,7 @@ static void ReloadIcons(void)
 }
 
 
-static DWORD GetShellLargeIconSize(void)
+static DWORD GetShellLargeIconSize()
 {
 	DWORD  dwSize = 32, dwLength = 512, dwType = REG_SZ;
 	HKEY   hKey;
@@ -5123,7 +5144,7 @@ static DWORD GetShellLargeIconSize(void)
 }
 
 
-static DWORD GetShellSmallIconSize(void)
+static DWORD GetShellSmallIconSize()
 {
 	DWORD dwSize = ICONMAP_WIDTH;
 
@@ -5143,7 +5164,7 @@ static DWORD GetShellSmallIconSize(void)
 
 
 // create iconlist for Listview control
-static void CreateIcons(void)
+static void CreateIcons()
 {
 	DWORD dwSmallIconSize = GetShellSmallIconSize();
 	DWORD dwLargeIconSize = GetShellLargeIconSize();
@@ -5672,7 +5693,7 @@ static void MamePlayRecordGame()
 }
 
 
-void MamePlayGame(void)
+void MamePlayGame()
 {
 	int nGame = Picker_GetSelectedItem(hwndList);
 
@@ -5769,7 +5790,7 @@ static void MamePlayRecordAVI()
 
 
 /* Toggle ScreenShot ON/OFF */
-static void ToggleScreenShot(void)
+static void ToggleScreenShot()
 {
 	UINT val = GetWindowPanes() ^ 8;
 	BOOL show = BIT(val, 3);
@@ -5782,7 +5803,7 @@ static void ToggleScreenShot(void)
 }
 
 
-static void ToggleSoftware(void)
+static void ToggleSoftware()
 {
 	UINT val = GetWindowPanes() ^ 4;
 	BOOL show = BIT(val, 2);
@@ -5795,7 +5816,7 @@ static void ToggleSoftware(void)
 }
 
 
-static void AdjustMetrics(void)
+static void AdjustMetrics()
 {
 	printf("Adjust Metrics\n");fflush(stdout);
 	/* WM_SETTINGCHANGE also */
@@ -6398,7 +6419,7 @@ static LRESULT CALLBACK PictureWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 }
 
 
-static void RemoveCurrentGameCustomFolder(void)
+static void RemoveCurrentGameCustomFolder()
 {
 	int current_game = Picker_GetSelectedItem(hwndList);
 	if (current_game >= 0)
@@ -6577,7 +6598,7 @@ static void ButtonUpListViewDrag(POINTS p)
 }
 
 
-static LPTREEFOLDER GetSelectedFolder(void)
+static LPTREEFOLDER GetSelectedFolder()
 {
 	HTREEITEM htree = TreeView_GetSelection(hTreeView);
 	if(htree)
@@ -6593,7 +6614,7 @@ static LPTREEFOLDER GetSelectedFolder(void)
 
 
 #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
-static HICON GetSelectedFolderIcon(void)
+static HICON GetSelectedFolderIcon()
 {
 	LPTREEFOLDER folder;
 	HTREEITEM htree = TreeView_GetSelection(hTreeView);
@@ -6615,7 +6636,7 @@ static HICON GetSelectedFolderIcon(void)
 
 
 /* Updates all currently displayed Items in the List with the latest Data*/
-void UpdateListView(void)
+void UpdateListView()
 {
 	ResetWhichGamesInFolders();
 	ResetListView();
@@ -6739,7 +6760,7 @@ static void CalculateBestScreenShotRect(HWND hWnd, RECT *pRect, BOOL restrict_he
   know if you've done that, but this was the only way I
   knew to remove the menu dynamically.
 */
-static void SwitchFullScreenMode(void)
+static void SwitchFullScreenMode()
 {
 	LONG lMainStyle=0;
 
@@ -6809,7 +6830,7 @@ static void SwitchFullScreenMode(void)
   way better?
 
 */
-BOOL MouseHasBeenMoved(void)
+BOOL MouseHasBeenMoved()
 {
 	static int mouse_x = -1;
 	static int mouse_y = -1;

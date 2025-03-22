@@ -53,8 +53,8 @@ typedef void (*dialog_itemstoreval)(void *param, int val);
 typedef void (*dialog_itemchangedproc)(dialog_box *dialog, HWND dlgitem, void *changed_param);
 typedef void (*dialog_notification)(dialog_box *dialog, HWND dlgwnd, NMHDR *notification, void *param);
 
-#define SEQWM_SETFOCUS  (WM_APP + 0)
-#define SEQWM_KILLFOCUS (WM_APP + 1)
+#define SEQWM_SETFOCUS  (WM_APP + 200)
+#define SEQWM_KILLFOCUS (WM_APP + 201)
 
 enum
 {
