@@ -430,6 +430,7 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 // If still no good, use global if it was valid. Lastly, default to emu folder.
 // Return variables: first = 1 if need to show loose software; second = path to loose software
 // It's assumed that drvindex points at the game in question (not a parent or global)
+// The first directory in each path is checked for existence.
 static std::pair<int, string> ProcessSWDir(int drvindex)
 {
 	if (drvindex < 0)
@@ -443,26 +444,25 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 	char dir0[2048] = { };
 	char *t0 = 0;
 	printf("ProcessSWDir: A = %s\n",driver_list::driver(drvindex).type.fullname());fflush(stdout);
-	string t = dir_get_value(13);
-	if (!t.empty())
+	string global_swpath = dir_get_value(13);
+	if (!global_swpath.empty())
 	{
-		printf("ProcessSWDir: B=%s\n",t.c_str());fflush(stdout);
-		strcpy(dir0, t.c_str()); // global SW
-		t0 = strtok(dir0, ";");
+		printf("ProcessSWDir: B=%s\n",global_swpath.c_str());fflush(stdout);
+		strcpy(dir0, global_swpath.c_str()); // global SW
+		t0 = strtok(dir0, ";");  // from here dir0 gets chopped up
 		if (t0 && osd::directory::open(t0))  // make sure its valid
 			b_dir = true;
 	}
 
-	// Get the game's software path
+	// Get the system's software path
 	printf("ProcessSWDir: C\n");fflush(stdout);
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex, 0);
 	char dir1[2048] = { };
 	strcpy(dir1, o.value(OPTION_SWPATH));
-	char* t1 = strtok(dir1, ";");
-	printf("ProcessSWDir: D=%s=%s\n",t1,o.value(OPTION_SWPATH));fflush(stdout);
+	char* t1 = strtok(dir1, ";"); // from here dir1 gets chopped up
 	if (t1 && osd::directory::open(t1))  // make sure its valid
-		if (b_dir && (strcmp(t0, t1) != 0))
+		if (b_dir && (global_swpath != o.value(OPTION_SWPATH)))
 			return std::make_pair(1, o.value(OPTION_SWPATH));
 
 	// not specified in driver, try parent if it has one
@@ -483,7 +483,7 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 			if (t1 && osd::directory::open(t1))  // make sure its valid
 			{
 				printf("ProcessSWDir: GB\n");fflush(stdout);
-				if (b_dir && (strcmp(t0, t1) != 0))
+				if (b_dir && (global_swpath != o_p.value(OPTION_SWPATH)))
 				{
 					printf("ProcessSWDir: GC\n");fflush(stdout);
 					emu_set_value(o, OPTION_SWPATH, o_p.value(OPTION_SWPATH));
@@ -508,7 +508,7 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 		strcpy(dir1, o_c.value(OPTION_SWPATH));
 		t1 = strtok(dir1, ";");
 		if (t1 && osd::directory::open(t1))  // make sure its valid
-			if (b_dir && (strcmp(t0, t1) != 0))
+			if (b_dir && (global_swpath != o_c.value(OPTION_SWPATH)))
 			{
 				emu_set_value(o, OPTION_SWPATH, o_c.value(OPTION_SWPATH));
 				save_options(o, OPTIONS_GAME, drvindex);
@@ -519,7 +519,7 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 	// Try the global root
 	printf("ProcessSWDir: J\n");fflush(stdout);
 	if (b_dir)
-		return std::make_pair(0, t);
+		return std::make_pair(0, global_swpath);
 
 	// nothing valid, drop to default emu directory
 	printf("ProcessSWDir: K\n");fflush(stdout);
