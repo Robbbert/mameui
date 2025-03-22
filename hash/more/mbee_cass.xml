@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 68 -->
+<!-- Number of items in this list = 78 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -59,6 +59,106 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="5532110">
 				<rom name="[-]Programmable Turtle.wav" size="5532110" crc="a45062a3" sha1="db1fd0bee23e3984e5e0415c0b12e1a4df617df2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecb65df3be81b7">
+		<description>[-]Reversi_Checkers_Plus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1125652">
+				<rom name="[-]Reversi_Checkers_Plus.wav" size="1125652" crc="300556ec" sha1="cb65df3be81b781e0935b4da5102b1cd5b4abb06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6d7ecadb9ff50">
+		<description>[-]Ricochet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5675566">
+				<rom name="[-]Ricochet.wav" size="5675566" crc="05a5039b" sha1="6d7ecadb9ff507c7975bce19534c3998df1ecb4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee26b7f6290c695">
+		<description>[-]Road96k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1629410">
+				<rom name="[-]Road96k.wav" size="1629410" crc="646f4a95" sha1="26b7f6290c6955d15462962cc2c4b70e0e4122db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef4661133d9e8e">
+		<description>[-]robbie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="892138">
+				<rom name="[-]robbie.wav" size="892138" crc="519c48f3" sha1="f4661133d9e8e0b400e9241677a63c22869ac894"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecb078388c4163">
+		<description>[-]robotfire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="741180">
+				<rom name="[-]robotfire.wav" size="741180" crc="a1d988d6" sha1="cb078388c41630a7f07a57447a126e17d94d5c4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee84b48d459617">
+		<description>[-]robotfire_repaired</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1724224">
+				<rom name="[-]robotfire_repaired.wav" size="1724224" crc="a0d32808" sha1="e84b48d459617250938bfce6a0ed0856fcf2bd06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefcd1389170b8f">
+		<description>[-]robotman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4958026">
+				<rom name="[-]robotman.wav" size="4958026" crc="b02a3531" sha1="fcd1389170b8f368c5b7a8a048bb057cb88925d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea059d33fb199d">
+		<description>[-]Robotman96kb2(exec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="19570819">
+				<rom name="[-]Robotman96kb2(exec).wav" size="19570819" crc="be7fc335" sha1="a059d33fb199d06469eed86dab69ac0c39f19f07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee74826ac38b12f">
+		<description>[-]Robotman96kb4(exec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="19957031">
+				<rom name="[-]Robotman96kb4(exec).wav" size="19957031" crc="c71cf864" sha1="74826ac38b12faacafc21fc99702eb093b8b9e7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee599f13633dc4f">
+		<description>[-]roulet96k4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="14521808">
+				<rom name="[-]roulet96k4.wav" size="14521808" crc="f9548dbc" sha1="599f13633dc4f6be9ec3f413167678007c525233"/>
 			</dataarea>
 		</part>
 	</software>

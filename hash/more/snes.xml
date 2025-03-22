@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3792 -->
+<!-- Number of items in this list = 3790 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -17402,16 +17402,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns045e084c81bd8">
-		<description>Metal Slader Glory - Director's Cut (J)(2000)(HAL Laboratory)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="Metal Slader Glory - Director's Cut (J)(2000)(HAL Laboratory).sfc" size="3145728" crc="2cab2502" sha1="045e084c81bd84371e16ef770d29c1d11df98be2"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsd28767b9d35c7">
 		<description>Metal Slader Glory - Director's Cut T-Eng (2025)(FCandChill)</description>
 		<year>????</year>
@@ -21169,16 +21159,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Samurai Spirits (J)(1994)(Takara).sfc" size="4194304" crc="7d3d39f9" sha1="8e9cf18cca9cd641fcfad36608d3e0d89ba32d0a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsb064a132b0e37">
-		<description>Sanrio Shanghai (J)(1994)(Character Soft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Sanrio Shanghai (J)(1994)(Character Soft).sfc" size="524288" crc="4cbb22df" sha1="b064a132b0e37d8b3fa0991e03cb1b006d73c01e"/>
 			</dataarea>
 		</part>
 	</software>

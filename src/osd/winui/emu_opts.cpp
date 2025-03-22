@@ -205,7 +205,7 @@ static void LoadSettingsFile(windows_options &opts, const char *filename)
 }
 
 // This saves changes to <game>.INI or MAME.INI only
-static void SaveSettingsFile(windows_options &opts, const char *filename)
+static void SaveSettingsFile(windows_options &opts, const char *filename, bool diff)
 {
 	util::core_file::ptr file;
 
@@ -213,7 +213,12 @@ static void SaveSettingsFile(windows_options &opts, const char *filename)
 
 	if (!filerr)
 	{
-		string inistring = opts.output_ini();
+		string inistring;
+		// MAME crashes when slot/media options encountered when using the DIFF option, so currently not used
+//		if (diff)
+//			inistring = opts.output_ini(&emu_global);
+//		else
+			inistring = opts.output_ini();
 		// printf("=====%s=====\n%s\n",filename,inistring.c_str());  // for debugging
 		file->puts(inistring.c_str());
 		file.reset();
@@ -305,7 +310,7 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 
 	if (!fname.empty())
 	{
-		SaveSettingsFile(opts, fname.c_str());
+		SaveSettingsFile(opts, fname.c_str(), 1);
 		return;
 	}
 
@@ -333,7 +338,7 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 	{
 		if (game_num > -1)
 			SetDirectories(opts);
-		SaveSettingsFile(opts, filepath.c_str());
+		SaveSettingsFile(opts, filepath.c_str(), 1);
 //		printf("Settings saved to %s\n",filepath.c_str());
 	}
 //	else
@@ -457,6 +462,7 @@ void ui_save_ini()
 
 void SetDirectories(windows_options &o)
 {
+	emu_set_value(o, OPTION_PLUGINDATAPATH, GetEmuPath());
 	emu_set_value(o, OPTION_MEDIAPATH, dir_get_value(2));
 	emu_set_value(o, OPTION_SAMPLEPATH, dir_get_value(4));
 	emu_set_value(o, OPTION_INIPATH, dir_get_value(7));
@@ -570,7 +576,7 @@ bool DriverHasSoftware(uint32_t drvindex)
 void global_save_ini(void)
 {
 	string fname = GetIniDir() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
-	SaveSettingsFile(emu_global, fname.c_str());
+	SaveSettingsFile(emu_global, fname.c_str(), 0);
 }
 
 bool AreOptionsEqual(windows_options &opts1, windows_options &opts2)

@@ -442,14 +442,13 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 
 	BOOL b_dir = false;
 	char dir0[2048] = { };
-	char *t0 = 0;
 	printf("ProcessSWDir: A = %s\n",driver_list::driver(drvindex).type.fullname());fflush(stdout);
 	string global_swpath = dir_get_value(13);
 	if (!global_swpath.empty())
 	{
 		printf("ProcessSWDir: B=%s\n",global_swpath.c_str());fflush(stdout);
 		strcpy(dir0, global_swpath.c_str()); // global SW
-		t0 = strtok(dir0, ";");  // from here dir0 gets chopped up
+		char* t0 = strtok(dir0, ";");  // from here dir0 gets chopped up
 		if (t0 && osd::directory::open(t0))  // make sure its valid
 			b_dir = true;
 	}

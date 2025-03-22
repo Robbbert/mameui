@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1715 -->
+<!-- Number of items in this list = 1752 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -7252,6 +7252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2c3cafd17ad43">
+		<description>Binary Battle (2024-05-12)(Haplo)(AU)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23691">
+				<rom name="Binary Battle (2024-05-12)(Haplo)(AU).tap" size="23691" crc="718505b1" sha1="2c3cafd17ad43505e044d39450ed5b5fbeefea16"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxseae16011bd4de">
 		<description>Binary Battle 48K (2024)(Haplo)</description>
 		<year>????</year>
@@ -7302,13 +7312,33 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb986614a94093">
+		<description>Bio-Rythms</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="997">
+				<rom name="Bio-Rythms.tap" size="997" crc="3b24dac7" sha1="b986614a94093f07370b76c54790a3b5bd1e97f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1afe2755491c1">
+		<description>Bionic Commando 128K (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="67837">
+				<rom name="Bionic Commando 128K (1988)(Go!).tap" size="67837" crc="3e5173dc" sha1="1afe2755491c178f346de62fb89a974596e6eb5d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3c1b4ad603efd">
-		<description>Bionic Commando (1988)(Go - Capcom)</description>
+		<description>Bionic Commando 48K (1988)(Go!)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="97616">
-				<rom name="Bionic Commando (1988)(Go - Capcom).tap" size="97616" crc="9093dd3d" sha1="3c1b4ad603efd3f1227c1e08d918c8afd3512a6d"/>
+				<rom name="Bionic Commando 48K (1988)(Go!).tap" size="97616" crc="9093dd3d" sha1="3c1b4ad603efd3f1227c1e08d918c8afd3512a6d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7319,6 +7349,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="97418">
 				<rom name="Bionic Commando 48K (1988)(Go!).tzx" size="97418" crc="5c70ce29" sha1="f813fb350ff2e882467968d41867317f485719ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs90c75a9ca32cc">
+		<description>Bionic Commando 48K Alt1 (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="84875">
+				<rom name="Bionic Commando 48K Alt1 (1988)(Go!).tap" size="84875" crc="73470825" sha1="90c75a9ca32ccc0cb6c31eab3e3581027fc8db49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseaa2ffce999be">
+		<description>Bionic Commando 48K Alt2 (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85429">
+				<rom name="Bionic Commando 48K Alt2 (1988)(Go!).tap" size="85429" crc="31c53ab1" sha1="eaa2ffce999be246703629d0b1b58c939df2c475"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2973829317a91">
+		<description>Bionic Commando 48K Alt3 (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45507">
+				<rom name="Bionic Commando 48K Alt3 (1988)(Go!).tap" size="45507" crc="34dcb8c2" sha1="2973829317a914c3d5a49a977a04128c84d4c757"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7902,6 +7962,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd9a9ccb2da7a4">
+		<description>BloktrisZX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33058">
+				<rom name="BloktrisZX.tap" size="33058" crc="5b56b824" sha1="d9a9ccb2da7a4a645b0487b4ee3f2636a0e581d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse051136b2c43f">
+		<description>BloktrisZX128</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33012">
+				<rom name="BloktrisZX128.tap" size="33012" crc="61b96a08" sha1="e051136b2c43f97566dd88835533eb72fde60710"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs28eef66afe5b2">
 		<description>Blond, The - Tuco o trato 128K (2024)(Tom Martin)</description>
 		<year>????</year>
@@ -8112,6 +8192,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4bcea49a71cdb">
+		<description>BMX Freestyle Simulator (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41824">
+				<rom name="BMX Freestyle Simulator (1989)(Codemasters).tap" size="41824" crc="711d4d6a" sha1="4bcea49a71cdb524812527195d6937a96bec6c1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3381a29ed3b61">
+		<description>BMX Kidz (1988)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35290">
+				<rom name="BMX Kidz (1988)(Firebird).tap" size="35290" crc="1f45be33" sha1="3381a29ed3b616891be25052ed8c83d8809cfc06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdd83fc66cadb1">
+		<description>BMX Kidz (1988)(Firebird)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36697">
+				<rom name="BMX Kidz (1988)(Firebird)[a].tap" size="36697" crc="49579c94" sha1="dd83fc66cadb14151c315f44f5bb624a67d05ff6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0d6eefe92dca7">
+		<description>BMX Ninja (1988)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56126">
+				<rom name="BMX Ninja (1988)(Alternative Software).tap" size="56126" crc="9f5756ad" sha1="0d6eefe92dca7568acc980c97fba470a705afa08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba36674e8fd03">
+		<description>BMX Ninja 48K (1988)(Alternative)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57376">
+				<rom name="BMX Ninja 48K (1988)(Alternative).tap" size="57376" crc="64ed0d8b" sha1="ba36674e8fd0369cd2f8ee1151b19df8c3c0cd27"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf3311be193139">
 		<description>BMX Ninja</description>
 		<year>????</year>
@@ -8119,6 +8249,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="57512">
 				<rom name="BMX Ninja.tzx" size="57512" crc="20080b29" sha1="f3311be19313979b12548c7c892e8156300330df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b722603ee9b9">
+		<description>BMX Simulator (1987)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47648">
+				<rom name="BMX Simulator (1987)(Codemasters).tap" size="47648" crc="4cc89ecb" sha1="3b722603ee9b9a3b4525594705651721ed0e665a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11042,6 +11182,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs44f154bf2a86f">
+		<description>Thomas the Tank Engine and Friends (1991)(Alternative Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52297">
+				<rom name="Thomas the Tank Engine and Friends (1991)(Alternative Software Ltd).tap" size="52297" crc="f3ead544" sha1="44f154bf2a86fa3d3994cf768eab4fb218f61cd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1bd49e738c92f">
+		<description>Thor (1988)(Proein Soft Line)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31232">
+				<rom name="Thor (1988)(Proein Soft Line)(Sp).tap" size="31232" crc="621b9d8e" sha1="1bd49e738c92f034eb87303227d61f631833bf97"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7a121a4f4f312">
 		<description>Three Weeks In Paradise</description>
 		<year>????</year>
@@ -11052,6 +11212,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa317021e61b35">
+		<description>Throbbing Headache 48K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20404">
+				<rom name="Throbbing Headache 48K (2025)(KTB Productions).tap" size="20404" crc="51f1295d" sha1="a317021e61b354560350ad198a14322b276d1d44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd69a9cb035eb1">
+		<description>Throbbing Headache DX 128K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34352">
+				<rom name="Throbbing Headache DX 128K (2025)(KTB Productions).tap" size="34352" crc="422ec716" sha1="d69a9cb035eb112aaa9aa2f00a18257e00ddb40c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs892c334ba33ad">
+		<description>Throbbing Headache DX 48K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38601">
+				<rom name="Throbbing Headache DX 48K (2025)(KTB Productions).tap" size="38601" crc="c6d51a67" sha1="892c334ba33ad4a2c4c440d10b1368a31d8644c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3892e9f6e5128">
+		<description>Throbby Heartache 128K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35779">
+				<rom name="Throbby Heartache 128K (2025)(KTB Productions).tap" size="35779" crc="c729cfb9" sha1="3892e9f6e512833cf499bd9489616fd0dce5fba9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa67ad0446fc3c">
+		<description>Throbby Heartache 128K v2 (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36153">
+				<rom name="Throbby Heartache 128K v2 (2025)(KTB Productions).tap" size="36153" crc="9623437a" sha1="a67ad0446fc3c8e6086c77d189ed25217c0ecb19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6c6a923b8c4b3">
+		<description>Throbby Heartache 48K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35626">
+				<rom name="Throbby Heartache 48K (2025)(KTB Productions).tap" size="35626" crc="fa1956ca" sha1="6c6a923b8c4b3ba88ba3cc2531365b1fa9d649ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs697973a6308a1">
+		<description>Throne Of Fire (1987)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48101">
+				<rom name="Throne Of Fire (1987)(Melbourne House).tap" size="48101" crc="da030514" sha1="697973a6308a1d2093bcf57f17cd70b3b90e93be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs76efe37d44506">
+		<description>Thrust (1986)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48736">
+				<rom name="Thrust (1986)(Firebird Software Ltd).tap" size="48736" crc="9b453c42" sha1="76efe37d44506c7f45ed1fee1eb6fc57ee04ea2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs630190bbc7f8a">
+		<description>Thrust 2 (1987)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49438">
+				<rom name="Thrust 2 (1987)(Firebird Software Ltd).tap" size="49438" crc="5f60e844" sha1="630190bbc7f8aea3c43ff4afbd4da78ff69be2a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8dc698f20a57c">
+		<description>Thunder Blade (1988)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="114186">
+				<rom name="Thunder Blade (1988)(U.S. Gold).tap" size="114186" crc="a56877b6" sha1="8dc698f20a57c31e70d61d75012615d4cf68cd4e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9f56e52d0cb01">
 		<description>Thunder Blade</description>
 		<year>????</year>
@@ -11059,6 +11319,116 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="129319">
 				<rom name="Thunder Blade.tzx" size="129319" crc="399a3c8f" sha1="9f56e52d0cb01b9c3328f2e41ef37335188c012e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd76a719ddba49">
+		<description>Thunder Jaws (demo) (1991)(Domark Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44747">
+				<rom name="Thunder Jaws (demo) (1991)(Domark Ltd).tap" size="44747" crc="1317ff5a" sha1="d76a719ddba4907616bbf1b63df726bf9af6dbb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsefc5a54ef53e0">
+		<description>Thunderbirds - Mission 1 (1989)(Grandslam Entertainments Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52409">
+				<rom name="Thunderbirds - Mission 1 (1989)(Grandslam Entertainments Ltd)(128K).tap" size="52409" crc="3caa05c8" sha1="efc5a54ef53e09622f47ef8b62775cf7bd5d0a18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd9e97c8d566fa">
+		<description>Thunderbirds - Mission 2 (1989)(Grandslam Entertainments Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52409">
+				<rom name="Thunderbirds - Mission 2 (1989)(Grandslam Entertainments Ltd)(128K).tap" size="52409" crc="3b8c2a60" sha1="d9e97c8d566fad8ebcf7bab83372a1d05c1857dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7f13558bbcb20">
+		<description>Thunderbirds - Mission 3 (1989)(Grandslam Entertainments Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52409">
+				<rom name="Thunderbirds - Mission 3 (1989)(Grandslam Entertainments Ltd)(128K).tap" size="52409" crc="29c85abe" sha1="7f13558bbcb204bf6c3515b262222807aed9284f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8da85d99c806c">
+		<description>Thunderbirds - Mission 4 (1989)(Grandslam Entertainments Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52409">
+				<rom name="Thunderbirds - Mission 4 (1989)(Grandslam Entertainments Ltd)(128K).tap" size="52409" crc="e4b37237" sha1="8da85d99c806c34025dc9adb0965fb5f39e86fa9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs05a66803c6240">
+		<description>Thunderbirds - Part 1 128K (1989)(Grandslam Entertainments)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52409">
+				<rom name="Thunderbirds - Part 1 128K (1989)(Grandslam Entertainments).tap" size="52409" crc="a914189f" sha1="05a66803c6240a2127e5667e8a5bdc73834b4ae7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs105806c58cc8b">
+		<description>Thunderbirds - Part 2 128K (1989)(Grandslam Entertainments)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52409">
+				<rom name="Thunderbirds - Part 2 128K (1989)(Grandslam Entertainments).tap" size="52409" crc="0869b04e" sha1="105806c58cc8bfbcb2e8a9670fb51ac4a48e1a34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs210184a4e281a">
+		<description>Thunderbirds - Part 3 128K (1989)(Grandslam Entertainments)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52409">
+				<rom name="Thunderbirds - Part 3 128K (1989)(Grandslam Entertainments).tap" size="52409" crc="b156bc82" sha1="210184a4e281ab92fdb1e59fe9d26d96c4e39817"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse722c74dbe9ce">
+		<description>Thunderbirds - Part 4 128K (1989)(Grandslam Entertainments)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52409">
+				<rom name="Thunderbirds - Part 4 128K (1989)(Grandslam Entertainments).tap" size="52409" crc="9aafecf7" sha1="e722c74dbe9ce4970bdd1c9f2bf87c5f5635e21d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs53630e0042c16">
+		<description>Thundercats 48K-128K (1987)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="94147">
+				<rom name="Thundercats 48K-128K (1987)(Elite Systems).tap" size="94147" crc="76e19a9c" sha1="53630e0042c16dcd4419bb3f826d960e99932d9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d234d17d21e8">
+		<description>Thunderhawks (1984)(Lyversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32241">
+				<rom name="Thunderhawks (1984)(Lyversoft).tap" size="32241" crc="325ca7a9" sha1="8d234d17d21e87b3a1d79a0247c7954dcc5dc5f1"/>
 			</dataarea>
 		</part>
 	</software>
