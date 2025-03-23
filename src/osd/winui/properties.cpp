@@ -122,10 +122,6 @@ b) Exit the dialog.
 #include "modules/input/input_module.h"
 #include "modules/monitor/monitor_module.h"
 
-#ifdef _MSC_VER
-#define snprintf _snprintf
-#endif
-
 #include "newuires.h"
 #include "properties.h"
 #include "drivenum.h"
@@ -133,11 +129,9 @@ b) Exit the dialog.
 #include <shlwapi.h>
 #include "corestr.h"
 
-#if defined(__GNUC__)
-/* fix warning: cast does not match function type */
-#undef  PropSheet_GetTabControl
-#define PropSheet_GetTabControl(d) (HWND)(LRESULT)(int)SendMessage((d),PSM_GETTABCONTROL,0,0)
-#endif /* defined(__GNUC__) */
+#ifdef MESS
+#include "messui.h"
+#endif
 
 /***************************************************************
  * Imported function prototypes
@@ -198,6 +192,7 @@ static BOOL DirListReadControl(datamap *map, HWND dialog, HWND control, windows_
 static BOOL DirListPopulateControl(datamap *map, HWND dialog, HWND control, windows_options *o, const char *option_name);
 static BOOL RamPopulateControl(datamap *map, HWND dialog, HWND control, windows_options *o, const char *option_name);
 extern BOOL BrowseForDirectory(HWND hwnd, LPCTSTR pStartDir, TCHAR* pResult);
+bool m_swpath_changed = 0;
 #endif
 
 /**************************************************************
@@ -1331,9 +1326,11 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				break;
 			default:
 #ifdef MESS
-			if (MessPropertiesCommand(hDlg, wNotifyCode, wID, &changed))
-				// To Do: add a hook to MessReadMountedSoftware(drvindex); so the software will update itself when the folder is configured
+				if (MessPropertiesCommand(hDlg, wNotifyCode, wID, &changed))
+				{
+					m_swpath_changed = true;
 					break;
+				}
 #endif
 
 				// use default behavior; try to get the result out of the datamap if
@@ -1414,7 +1411,13 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				// Disable apply button
 				PropSheet_UnChanged(GetParent(hDlg), hDlg);
 				SetWindowLongPtr(hDlg, DWLP_MSGRESULT, PSNRET_NOERROR);
-
+#ifdef MESS
+				if (m_swpath_changed)
+				{
+					MessUpdateSoftwareList();
+					m_swpath_changed = false;
+				}
+#endif
 				return true;
 
 			case PSN_KILLACTIVE:

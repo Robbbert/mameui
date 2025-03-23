@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 514 -->
+<!-- Number of items in this list = 516 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -1382,6 +1382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fdsf260077df3613">
+		<description>Dracula II - The Cursed Seal T-Eng v1.0a (2024)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Dracula II - The Cursed Seal T-Eng v1.0a (2024)(BlackPaladin).fds" size="131000" crc="6cc6feb3" sha1="f260077df3613bf08b9685d8eaec0ba5627002dc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdscacc331819008">
 		<description>Druid - Kyoufu no Tobira (1988)(Jaleco)</description>
 		<year>????</year>
@@ -1409,6 +1419,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
 				<rom name="Druid - Kyoufu no Tobira (T-Eng)(2022)(BlackPaladin).fds" size="131000" crc="1e9dc522" sha1="9a699cac4f3e5610813a863872bbe773abbad0c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds9612c47889f21">
+		<description>Druid - The Gate of Fear T-Eng v1.1 (2024)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Druid - The Gate of Fear T-Eng v1.1 (2024)(BlackPaladin).fds" size="131000" crc="85bd20ba" sha1="9612c47889f21db7ccae8b1c5eb2bb45ea3fa2e2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4863,12 +4883,12 @@
 		</part>
 	</software>
 	<software name="fds635bb0cee082a">
-		<description>Warrior of Love - Nicol (Japan) [T-En by BlackPaladin v1.0] [n]</description>
+		<description>Warrior of Love Nicol T-Eng (2025)(BlackPaladin)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
-				<rom name="Warrior of Love - Nicol (Japan) [T-En by BlackPaladin v1.0] [n].fds" size="131000" crc="a2322a37" sha1="635bb0cee082a9e169bd1316c344f269476e0759"/>
+				<rom name="Warrior of Love Nicol T-Eng (2025)(BlackPaladin).fds" size="131000" crc="a2322a37" sha1="635bb0cee082a9e169bd1316c344f269476e0759"/>
 			</dataarea>
 		</part>
 	</software>

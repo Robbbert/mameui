@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 163 -->
+<!-- Number of items in this list = 166 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -1259,6 +1259,36 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="2565">
 				<rom name="P6 Circuit {m1p2}.p6" size="2565" crc="a132d578" sha1="664b499acfffdeb2724675e728779debb3c9698b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p606a60f0d86a9b2">
+		<description>Shut Up and Just Follow Me {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3466">
+				<rom name="Shut Up and Just Follow Me {m1p1}.cas" size="3466" crc="eaf7b4fd" sha1="6a60f0d86a9b2040475447053c000726a3367f90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60a92967a4b941c">
+		<description>Ston Ball {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4783">
+				<rom name="Ston Ball {m1p1}.cas" size="4783" crc="7f7f2cc9" sha1="a92967a4b941c40a8c9e6a33c87ad9371f3c7daa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p603bd06811a95bc">
+		<description>Super Ball {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="399">
+				<rom name="Super Ball {m1p2}.p6" size="399" crc="0a4552b1" sha1="3bd06811a95bc6ba055793c446bfa59a85437bbd"/>
 			</dataarea>
 		</part>
 	</software>

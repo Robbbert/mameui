@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7699 -->
+<!-- Number of items in this list = 7700 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -68649,6 +68649,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="TakeOff Megademo Intro (BENG - HJT).dsk" size="194816" crc="21ae5271" sha1="615e29d5d1f0b919ed0abe3f7ada2686e0b39039"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc38ef72b61519f">
+		<description>Tale of Ancient Land</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="204544">
+				<rom name="Tale of Ancient Land.dsk" size="204544" crc="ae87f3d0" sha1="38ef72b61519f9c4869c84ad3429f16e6cdaf316"/>
 			</dataarea>
 		</part>
 	</software>

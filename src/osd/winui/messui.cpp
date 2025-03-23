@@ -178,10 +178,10 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem);
 
 static LPCSTR SoftwareTabView_GetTabShortName(int tab);
 static LPCSTR SoftwareTabView_GetTabLongName(int tab);
-static void SoftwareTabView_OnMoveSize(void);
-static void SetupSoftwareTabView(void);
+static void SoftwareTabView_OnMoveSize();
+static void SetupSoftwareTabView();
 
-static void MessRefreshPicker(void);
+static void MessRefreshPicker();
 
 static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
 static BOOL MView_GetOpenItemName(HWND hwndMView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
@@ -304,7 +304,7 @@ static void MView_SetCallbacks(HWND hwndMView, const struct MViewCallbacks *pCal
 }
 
 
-void InitMessPicker(void)
+void InitMessPicker()
 {
 	struct PickerOptions opts;
 
@@ -335,7 +335,7 @@ void InitMessPicker(void)
 			MView_GetOpenItemName,
 			MView_Unmount
 		};
-		MView_SetCallbacks(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW), &s_MViewCallbacks);
+		MView_SetCallbacks(GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW), &s_MViewCallbacks);
 	}
 
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
@@ -357,14 +357,14 @@ void InitMessPicker(void)
 	if (!bShowSoftware)
 		swtab = -1;
 	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWLIST), (swtab == 0) ? SW_SHOW : SW_HIDE);
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW), (swtab == 1) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW), (swtab == 1) ? SW_SHOW : SW_HIDE);
 	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SOFTLIST), (swtab == 2) ? SW_SHOW : SW_HIDE);
 	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWTAB), bShowSoftware ? SW_SHOW : SW_HIDE);
 	CheckMenuItem(GetMenu(GetMainWindow()), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
 }
 
 
-BOOL CreateMessIcons(void)
+BOOL CreateMessIcons()
 {
 	// create the icon index, if we haven't already
 	if (!mess_icon_index)
@@ -560,7 +560,7 @@ static BOOL AddSoftwarePickerDirs(HWND hwndPicker, LPCSTR pszDirectories, LPCSTR
 }
 
 
-void MySoftwareListClose(void)
+void MySoftwareListClose()
 {
 	// free the machine config, if necessary
 	if (s_config)
@@ -839,7 +839,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 	// locate key widgets
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
+	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
 
 	printf("MyFillSoftwareList: Calling SoftwarePicker_Clear\n");fflush(stdout);
 	SoftwareList_Clear(hwndSoftwareList);
@@ -911,7 +911,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 }
 
 
-void MessUpdateSoftwareList(void)
+void MessUpdateSoftwareList()
 {
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	MyFillSoftwareList(Picker_GetSelectedItem(hwndList), true);
@@ -994,9 +994,10 @@ static void MessRemoveImage(int drvindex, const char *pszFilename)
 
 void MessReadMountedSoftware(int drvindex)
 {
-	// First read stuff into device view
-	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
-		MView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
+	// First read stuff into MEDIA view
+	//if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
+	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
+	MView_SetDriver(hwndSoftwareMView, s_config);
 
 	// Now read stuff into picker
 	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==0)
@@ -1004,7 +1005,7 @@ void MessReadMountedSoftware(int drvindex)
 }
 
 
-static void MessRefreshPicker(void)
+static void MessRefreshPicker()
 {
 	HWND hwndSoftware = GetDlgItem(GetMainWindow(), IDC_SWLIST);
 
@@ -1766,10 +1767,10 @@ static LPCSTR SoftwareTabView_GetTabLongName(int tab)
 }
 
 
-void SoftwareTabView_OnSelectionChanged(void)
+void SoftwareTabView_OnSelectionChanged()
 {
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
+	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
 
 	int nTab = TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB));
@@ -1787,7 +1788,7 @@ void SoftwareTabView_OnSelectionChanged(void)
 			ShowWindow(hwndSoftwarePicker, SW_HIDE);
 			ShowWindow(hwndSoftwareMView, SW_SHOW);
 			ShowWindow(hwndSoftwareList, SW_HIDE);
-			MView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
+			MView_Refresh(GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW));
 			break;
 		case 2:
 			ShowWindow(hwndSoftwarePicker, SW_HIDE);
@@ -1798,14 +1799,14 @@ void SoftwareTabView_OnSelectionChanged(void)
 }
 
 
-static void SoftwareTabView_OnMoveSize(void)
+static void SoftwareTabView_OnMoveSize()
 {
 	RECT rMain, rSoftwareTabView, rClient, rTab;
 	BOOL res = 0;
 
 	HWND hwndSoftwareTabView = GetDlgItem(GetMainWindow(), IDC_SWTAB);
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
+	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
 
 	GetWindowRect(hwndSoftwareTabView, &rSoftwareTabView);
@@ -1835,7 +1836,7 @@ static void SoftwareTabView_OnMoveSize(void)
 }
 
 
-static void SetupSoftwareTabView(void)
+static void SetupSoftwareTabView()
 {
 	struct TabViewOptions opts;
 
@@ -2050,7 +2051,7 @@ static LRESULT CALLBACK MView_WndProc(HWND hwndMView, UINT nMessage, WPARAM wPar
 }
 
 
-void MView_RegisterClass(void)
+void MView_RegisterClass()
 {
 	WNDCLASS wc;
 	memset(&wc, 0, sizeof(wc));

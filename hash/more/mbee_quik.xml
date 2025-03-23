@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 327 -->
+<!-- Number of items in this list = 333 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="bee31c8588566b2a">
 		<description>[-](demo)strngart</description>
@@ -209,6 +209,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="1408">
 				<rom name="[-]catch_2.mwb" size="1408" crc="401a8378" sha1="62e6cb4dc1559f9379a88692208f7286e9bb3d55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6f176e952b7db">
+		<description>[-]Celestial Quest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3072">
+				<rom name="[-]Celestial Quest.mwb" size="3072" crc="51b67f39" sha1="6f176e952b7db0724eeadbc686400cb47ac4aea0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -449,6 +459,56 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="7424">
 				<rom name="[-]Nuclear War.mwb" size="7424" crc="f09309cd" sha1="e50a8d263cbe61e7000b90c89039e051bc47b4ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4e5a7bfd2e28c">
+		<description>[-]quadrat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1280">
+				<rom name="[-]quadrat.mwb" size="1280" crc="3989c0ca" sha1="4e5a7bfd2e28cd70dfb0590e6b65e5ac6deda29e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea5ceacfe76e05">
+		<description>[-]quadrat1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1024">
+				<rom name="[-]quadrat1.mwb" size="1024" crc="3c2cd2f5" sha1="a5ceacfe76e05bde550cce426f2a4b9383ac509b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7f0defc90ef52">
+		<description>[-]quadrat2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3328">
+				<rom name="[-]quadrat2.mwb" size="3328" crc="c5c2fb8d" sha1="7f0defc90ef524cb5ee7b0dcf43fe247634072c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee383748b5a3865">
+		<description>[-]quick</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="[-]quick.mwb" size="2176" crc="c2d838e3" sha1="383748b5a386563c01dbeca902d4936aaddfcead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee85d754c8ff47c">
+		<description>[-]quickgen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3712">
+				<rom name="[-]quickgen.mwb" size="3712" crc="8eceaf5e" sha1="85d754c8ff47c4763e1fbf7db89fe9562d7e8e04"/>
 			</dataarea>
 		</part>
 	</software>
