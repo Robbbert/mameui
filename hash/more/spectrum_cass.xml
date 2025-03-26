@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1752 -->
+<!-- Number of items in this list = 1775 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -8922,6 +8922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs50765bdbd1acf">
+		<description>Doom of the Pond, the 128K (2021)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="121742">
+				<rom name="Doom of the Pond, the 128K (2021)(Furillo Productions).tap" size="121742" crc="09a1aac6" sha1="50765bdbd1acfdaa270b32eaa0a82d631a9c3168"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd8b98a4325d30">
 		<description>Double Dragon II</description>
 		<year>????</year>
@@ -9809,6 +9819,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="34524">
 				<rom name="Jurl 48K (2025)(Tonsomo Entertainment).tzx" size="34524" crc="08992836" sha1="e946ad1cb78c692cbbfb4fea844dc8b2fbbeba03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf5bbd4a020153">
+		<description>jurl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34919">
+				<rom name="jurl.tzx" size="34919" crc="f3d9fb3f" sha1="f5bbd4a020153fc6f925d92a3603d909a5e1566e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11172,6 +11192,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd9edda00cc819">
+		<description>Thanatos (1986)(Durell Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49266">
+				<rom name="Thanatos (1986)(Durell Software Ltd)(128K).tap" size="49266" crc="4ce5e54e" sha1="d9edda00cc819da839b75fbda412c1ae8efc3e91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd14299b7485c3">
+		<description>Thanatos 48K (1986)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43309">
+				<rom name="Thanatos 48K (1986)(Durell).tap" size="43309" crc="efe49f3e" sha1="d14299b7485c31ac4f2e7a8741fd049ddaba3fbb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7e6e450baf156">
 		<description>Thanatos</description>
 		<year>????</year>
@@ -11179,6 +11219,196 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49327">
 				<rom name="Thanatos.tzx" size="49327" crc="146981f0" sha1="7e6e450baf156dfcc828e95cfe6fd2eba1165488"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0668221da8bf4">
+		<description>That Sinking Feeling(2017)(Sunteam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34567">
+				<rom name="That Sinking Feeling(2017)(Sunteam).tap" size="34567" crc="e7822c33" sha1="0668221da8bf4ed06478b2165be0784bdb923f8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4dffdd53c6821">
+		<description>That's The Spirit (1985)(The Edge Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48685">
+				<rom name="That's The Spirit (1985)(The Edge Software).tap" size="48685" crc="ca64aed5" sha1="4dffdd53c68213c875ee38c3fc576d60949b5a90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs11de3f4a90681">
+		<description>That's The Spirit (1985)(The Edge Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49355">
+				<rom name="That's The Spirit (1985)(The Edge Software)[a].tap" size="49355" crc="46989936" sha1="11de3f4a90681866bf333acbb3af05228298c3f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6fdefd1d9c962">
+		<description>Theatre Europe (1986)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49761">
+				<rom name="Theatre Europe (1986)(PSS).tap" size="49761" crc="8d97ae2c" sha1="6fdefd1d9c962b79da9ed22656f4741107c0f6c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1e15a0e284da6">
+		<description>Their Finest Hour (1985)(Century Communications)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39561">
+				<rom name="Their Finest Hour (1985)(Century Communications).tap" size="39561" crc="987fc0d8" sha1="1e15a0e284da6c61aac97ea432312c2dcad5b8f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa45c0e4f0a986">
+		<description>Them (1988)(Pirate Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44128">
+				<rom name="Them (1988)(Pirate Software Ltd).tap" size="44128" crc="cd832a0d" sha1="a45c0e4f0a986d406f713e64acb25cd9cf7797c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf06d80fd29846">
+		<description>Therbo (1984)(Arcade Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37683">
+				<rom name="Therbo (1984)(Arcade Software).tap" size="37683" crc="91502dd1" sha1="f06d80fd29846239304b07f072fadf116ee028ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs63f28e3fdf63c">
+		<description>Theseus &amp; The Minotaur (1990)(Zenobi Software)[a][Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32525">
+				<rom name="Theseus &amp; The Minotaur (1990)(Zenobi Software)[a][Part 1 of 2].tap" size="32525" crc="37f563bf" sha1="63f28e3fdf63c0da0adf1da1f5d751e821a65211"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs70e49065f4c50">
+		<description>Theseus &amp; The Minotaur (1990)(Zenobi Software)[a][Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31862">
+				<rom name="Theseus &amp; The Minotaur (1990)(Zenobi Software)[a][Part 2 of 2].tap" size="31862" crc="7a60c7bd" sha1="70e49065f4c502d7252604bd6074284f28013928"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse69a23800b949">
+		<description>Theseus &amp; The Minotaur (1990)(Zenobi Software)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35488">
+				<rom name="Theseus &amp; The Minotaur (1990)(Zenobi Software)[Part 1 of 2].tap" size="35488" crc="1db09f21" sha1="e69a23800b94957b79702dab11a4a8161536ad56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc954ed0a9cca9">
+		<description>Theseus &amp; The Minotaur (1990)(Zenobi Software)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34825">
+				<rom name="Theseus &amp; The Minotaur (1990)(Zenobi Software)[Part 2 of 2].tap" size="34825" crc="ed9a6828" sha1="c954ed0a9cca924e412a74d067729b882a9c2b31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5931eeff25263">
+		<description>They Stole A Million (1986)(Ariolasoft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97239">
+				<rom name="They Stole A Million (1986)(Ariolasoft Ltd).tap" size="97239" crc="096a2b82" sha1="5931eeff2526372c12aa0c1fd93f25cc619bf17f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs32ed2b8b50693">
+		<description>They Stole A Million (1986)(Ariolasoft Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="93119">
+				<rom name="They Stole A Million (1986)(Ariolasoft Ltd)[a].tap" size="93119" crc="b648731e" sha1="32ed2b8b50693631484ad098b166c94342f8c80d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b7746d352ca3">
+		<description>They Stole A Million (1986)(Ariolasoft UK Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="91130">
+				<rom name="They Stole A Million (1986)(Ariolasoft UK Ltd)[a2].tap" size="91130" crc="7245bd03" sha1="3b7746d352ca3e958b31aec08f5df49514cb5851"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d8e2fe6e316f">
+		<description>Thieves School - All in One 128K (2008)(World XXI Soft Inc.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="339068">
+				<rom name="Thieves School - All in One 128K (2008)(World XXI Soft Inc.).tap" size="339068" crc="621a5647" sha1="1d8e2fe6e316fb8039c9ca64108e094093dca110"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfd6a4d03d82fd">
+		<description>Thing 2 - Thing Bounces Back (1987)(Gremlin Graphics Software Ltd )</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40013">
+				<rom name="Thing 2 - Thing Bounces Back (1987)(Gremlin Graphics Software Ltd ).tap" size="40013" crc="01d64548" sha1="fd6a4d03d82fddceac4e9013ec36a32430fd0ccd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs078535d4ebcb9">
+		<description>Thing! (1988)(Players Premier Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28201">
+				<rom name="Thing! (1988)(Players Premier Software).tap" size="28201" crc="5e238fb2" sha1="078535d4ebcb95dbdc42a3aa2f2ce1340b11b917"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3f90db9e2c702">
+		<description>Thingy And The Doodahs (1986)(Americana Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Thingy And The Doodahs (1986)(Americana Software Ltd).tap" size="49343" crc="763466c3" sha1="3f90db9e2c702fee41c207db8ba775a654946557"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse951b2ef127de">
+		<description>Thinker (1985)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32771">
+				<rom name="Thinker (1985)(Atlantis Software Ltd).tap" size="32771" crc="3b09757a" sha1="e951b2ef127de6504c0af07b444d504020cf8ba3"/>
 			</dataarea>
 		</part>
 	</software>

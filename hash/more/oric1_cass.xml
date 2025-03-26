@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 463 -->
+<!-- Number of items in this list = 465 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -1459,6 +1459,16 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="240">
 				<rom name="Fillscreenm by Radoslaw Isaew (19xx) (PD).tap" size="240" crc="a2bba008" sha1="d9947dba10408fac21e07eb8cd2d5aaea575b8db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori26b7c90e5c73d">
+		<description>FILLTHEBOX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="723">
+				<rom name="FILLTHEBOX.tap" size="723" crc="db1cf10a" sha1="26b7c90e5c73dc1dbca6c4402548d3c284489cba"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3919,6 +3929,16 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="1840">
 				<rom name="Snake by Czes Kosniowski (UK) (19xx) (PD).tap" size="1840" crc="77093dd0" sha1="a566f3a88391604736afe8a301112ae877ef6ba2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori9253bac7b3495">
+		<description>SNAKE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="716">
+				<rom name="SNAKE.tap" size="716" crc="beccd9de" sha1="9253bac7b34959b0759e66ceede1103f2a21bf63"/>
 			</dataarea>
 		</part>
 	</software>

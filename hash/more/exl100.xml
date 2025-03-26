@@ -1,14 +1,54 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 5 -->
 <softwarelist name="exl100" description="exl100 loose roms">
-	<software name="exlb2938ed7528bf">
-		<description>sokoban_exl100</description>
+	<software name="exl8b56050400710">
+		<description>Guppy</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="exelvision_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="sokoban_exl100.rom" size="32768" crc="c63243e5" sha1="b2938ed7528bf80805cf2a01823a869d3f76f10d"/>
+				<rom name="Guppy.rom" size="32768" crc="5daacd2e" sha1="8b56050400710ad44b61b1ba102b62b62291b9d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl074db64b5c5c4">
+		<description>Menkar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="exelvision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Menkar.rom" size="32768" crc="3b24caab" sha1="074db64b5c5c4c5222344598d8af96a65232fb71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exlb2938ed7528bf">
+		<description>Sokoban</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="exelvision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Sokoban.rom" size="32768" crc="c63243e5" sha1="b2938ed7528bf80805cf2a01823a869d3f76f10d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl97bd35b9cbcf4">
+		<description>Tennis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="exelvision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Tennis.rom" size="32768" crc="bf26bf3b" sha1="97bd35b9cbcf422c8c1ad0a40a4d08cc1e73b5f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="exl2a4f7eade7988">
+		<description>Wizord</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="exelvision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Wizord.rom" size="32768" crc="e8d7d784" sha1="2a4f7eade798803e9662785106fb3f55a9de9491"/>
 			</dataarea>
 		</part>
 	</software>

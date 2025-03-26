@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3790 -->
+<!-- Number of items in this list = 3791 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -15189,6 +15189,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Majin Tensei II - Spiral Nemesis(V1.4)Monkeyking_.sfc" size="4194304" crc="0fdec71d" sha1="77ddde281a448cd5a09d819d508df39594558b67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns54048324bf80b">
+		<description>Majuu Ou (J)(1995)(KSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Majuu Ou (J)(1995)(KSS).sfc" size="1572864" crc="4737370b" sha1="54048324bf80bd36e372f58a68f1d3f2b5ffe498"/>
 			</dataarea>
 		</part>
 	</software>

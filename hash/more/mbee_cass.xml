@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 78 -->
+<!-- Number of items in this list = 84 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -52,6 +52,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beeb062157bd4b10">
+		<description>[-]Mystery of the Pyramid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="8961640">
+				<rom name="[-]Mystery of the Pyramid.wav" size="8961640" crc="c25d0056" sha1="b062157bd4b10c75058d87005944cd88ef8c6b58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecdf0d6e4a22b5">
+		<description>[-]poetry</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="12837546">
+				<rom name="[-]poetry.wav" size="12837546" crc="f40d4a75" sha1="cdf0d6e4a22b53fa6c8cab26fecd7ab42bf87948"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee7cddaedbf45c">
+		<description>[-]popcorn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="608830">
+				<rom name="[-]popcorn.wav" size="608830" crc="8c4df8d3" sha1="e7cddaedbf45cde9fd99b8cf78d970103c7222cd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beedb1fd0bee23e3">
 		<description>[-]Programmable Turtle</description>
 		<year>????</year>
@@ -59,6 +89,36 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="5532110">
 				<rom name="[-]Programmable Turtle.wav" size="5532110" crc="a45062a3" sha1="db1fd0bee23e3984e5e0415c0b12e1a4df617df2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6a77ca691cc30">
+		<description>[-]programmable_turtle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4991936">
+				<rom name="[-]programmable_turtle.wav" size="4991936" crc="840c5cb9" sha1="6a77ca691cc30ad2d2543eee166274c92803bce1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef327abfeb9bcf">
+		<description>[-]projectile_motion</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="737308">
+				<rom name="[-]projectile_motion.wav" size="737308" crc="d681f0f5" sha1="f327abfeb9bcf19589b66feba1c4af7413f8a2b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3b04d86a4ee4d">
+		<description>[-]prospector</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3360604">
+				<rom name="[-]prospector.wav" size="3360604" crc="5bdbe119" sha1="3b04d86a4ee4de0a9a47c0adc21d9cc7ad1eb98e"/>
 			</dataarea>
 		</part>
 	</software>

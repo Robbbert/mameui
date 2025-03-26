@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 166 -->
+<!-- Number of items in this list = 165 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -192,16 +192,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p60cf89529a77830">
-		<description>Asalt (v1.0)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="153008">
-				<rom name="Asalt (v1.0).d88" size="153008" crc="56b5fd8f" sha1="cf89529a77830b4f2c1bfe8930b12f3df4ac69dd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p60525c2c7d8c156">
 		<description>Asalt (v1.1) {m5p3}</description>
 		<year>????</year>
@@ -209,16 +199,6 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="3854">
 				<rom name="Asalt (v1.1) {m5p3}.p6" size="3854" crc="80d9e3c7" sha1="525c2c7d8c1566ffdae4192a80a03ba6e68bc593"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p604e972be3d6097">
-		<description>Asalt (v1.1)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="153008">
-				<rom name="Asalt (v1.1).d88" size="153008" crc="5649ace5" sha1="4e972be3d60979d1d6c27fb1dc83b623d8157c8b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1262,6 +1242,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p605463f93f00a60">
+		<description>Rakugaki Board {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="2632">
+				<rom name="Rakugaki Board {m1p2}.p6" size="2632" crc="60efccb1" sha1="5463f93f00a60c869babf3b5a402e66ea4b12317"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60afa272bb22ecb">
+		<description>Reflec-shio {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3089">
+				<rom name="Reflec-shio {m1p1}.cas" size="3089" crc="6f4c0559" sha1="afa272bb22ecb64dbdb88020c96e1b3da61094b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60b2a1c577aec07">
+		<description>River Patrol {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1836">
+				<rom name="River Patrol {m1p2}.cas" size="1836" crc="8d338cfa" sha1="b2a1c577aec076d6cd441e909675a79368e0aac2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p604c8e55359cd74">
+		<description>Rotary Petals {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="6004">
+				<rom name="Rotary Petals {m1p2}.p6" size="6004" crc="c029075b" sha1="4c8e55359cd7403629d3084bd5189758ad87b3bc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p606a60f0d86a9b2">
 		<description>Shut Up and Just Follow Me {m1p1}</description>
 		<year>????</year>
@@ -1542,16 +1562,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p6051331cf7464ab">
-		<description>[Utility] Chibi Moji Put</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="153008">
-				<rom name="[Utility] Chibi Moji Put.d88" size="153008" crc="242e66d4" sha1="51331cf7464ab626bbecbacf2b5e91377fd04289"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p60e5e7cb1ba25f7">
 		<description>[Utility] Deka Moji Put (v1.1) (mkII)</description>
 		<year>????</year>
@@ -1619,26 +1629,6 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="6418">
 				<rom name="[Utility] SemiEdit {m5p3}.p6" size="6418" crc="5c63edd2" sha1="b61087e1a5f343f452d5e2b52de14ee2fff6ce29"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p60129f809c9b087">
-		<description>[Utility] SemiEdit</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="153008">
-				<rom name="[Utility] SemiEdit.d88" size="153008" crc="461edabc" sha1="129f809c9b0874fd3e68a9a015b3bc5de5ad41ba"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p60d388499b4a6e1">
-		<description>[Utility] Super Word Test Program {m5f1p2 load swtp.bas}</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="153008">
-				<rom name="[Utility] Super Word Test Program {m5f1p2 load swtp.bas}.d88" size="153008" crc="201de467" sha1="d388499b4a6e1f3caf0b951dac0e38632e8806b4"/>
 			</dataarea>
 		</part>
 	</software>

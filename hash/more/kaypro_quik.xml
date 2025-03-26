@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10 -->
+<!-- Number of items in this list = 11 -->
 <softwarelist name="kaypro_quik" description="kaypro_quik loose roms">
 	<software name="kayf2af3188bdcb6">
 		<description>[A]Backgammon</description>
@@ -49,6 +49,16 @@
 		<part name="quik" interface="kaypro_quik">
 			<dataarea name="quik" size="3328">
 				<rom name="[A]MONI.COM" size="3328" crc="ef784b60" sha1="0ce31328d99dbf582e757c0edef98f11856b9165"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kay5f9d374ddc9f6">
+		<description>[A]PacMan</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="kaypro_quik">
+			<dataarea name="quik" size="36864">
+				<rom name="[A]PacMan.COM" size="36864" crc="6f791ab7" sha1="5f9d374ddc9f642c2258d23e2a92423cfb598d55"/>
 			</dataarea>
 		</part>
 	</software>
