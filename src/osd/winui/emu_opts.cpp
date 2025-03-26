@@ -557,8 +557,10 @@ void SetSelectedSoftware(int driver_index, string opt_name, const char *software
 }
 
 // See if this driver has software support
-bool DriverHasSoftware(uint32_t drvindex)
+bool DriverHasSoftware(int drvindex)
 {
+	if (drvindex < 0)
+		return 0;
 	if (drvindex < driver_list::total())
 	{
 		windows_options o;

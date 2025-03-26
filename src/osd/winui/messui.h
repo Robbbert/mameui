@@ -12,6 +12,7 @@ BOOL MessCommand(HWND hwnd,int, HWND, UINT);
 void MessReadMountedSoftware(int);
 void SoftwareTabView_OnSelectionChanged();
 BOOL CreateMessIcons();
+void ShowHideSoftwareArea();
 void MySoftwareListClose();
 void MView_RegisterClass();
 void MView_Refresh(HWND);

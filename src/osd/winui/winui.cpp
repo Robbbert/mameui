@@ -169,7 +169,6 @@ static BOOL             GameCheck();
 static BOOL             FolderCheck();
 
 static void             ToggleScreenShot();
-static void             ToggleSoftware();
 static void             AdjustMetrics();
 
 /* Icon routines */
@@ -982,6 +981,18 @@ HWND GetTreeView()
 	return hTreeView;
 }
 
+// used by messui.cpp
+HWND GetToolbar()
+{
+	return s_hToolBar;
+}
+
+// used by messui.cpp
+HBITMAP GetBackground()
+{
+	return hBackground;
+}
+
 
 // used by messui.cpp
 HIMAGELIST GetLargeImageList()
@@ -1224,44 +1235,6 @@ static void ResizeTreeAndListViews(BOOL bResizeHidden)
 			nLastWidth += nLeftWindowWidth + SPLITTER_WIDTH;
 		}
 	}
-}
-
-
-void UpdateSoftware()
-{
-	/* first time through can't do this stuff */
-	if (hwndList == NULL)
-		return;
-
-	BOOL bShowSoftware = BIT(GetWindowPanes(), 2);
-	//int  nWidth;
-
-	/* Size the List Control in the Picker */
-	RECT rect;
-	GetClientRect(hMain, &rect);
-
-	if (bShowStatusBar)
-		rect.bottom -= bottomMargin;
-	if (bShowToolBar)
-		rect.top += topMargin;
-
-	CheckMenuItem(GetMenu(hMain), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
-	ToolBar_CheckButton(s_hToolBar, ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
-
-	//int nGame = Picker_GetSelectedItem(hwndList);
-	if (bShowSoftware) // && DriverHasSoftware(nGame))   // not working correctly, look at it later
-	{
-		ShowWindow(GetDlgItem(hMain,IDC_SWTAB),SW_SHOW);
-		SoftwareTabView_OnSelectionChanged();
-	}
-	else
-	{
-		ShowWindow(GetDlgItem(hMain,IDC_SWLIST),SW_HIDE);
-		ShowWindow(GetDlgItem(hMain,IDC_MEDIAVIEW),SW_HIDE);
-		ShowWindow(GetDlgItem(hMain,IDC_SOFTLIST),SW_HIDE);
-		ShowWindow(GetDlgItem(hMain,IDC_SWTAB),SW_HIDE);
-	}
-	ResizeTreeAndListViews(false);
 }
 
 
@@ -1816,7 +1789,7 @@ static BOOL Win32UI_init(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow)
 
 	printf("Win32UI_init: Adjusting..\n");fflush(stdout);
 	AdjustMetrics();
-	//UpdateSoftware();
+	//ShowHideSoftwareArea();   // messui.cpp
 	UpdateScreenShot();
 
 	hAccel = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDA_TAB_KEYS));
@@ -3008,15 +2981,15 @@ static void DisableSelection()
 
 static void EnableSelection(int nGame)
 {
-	printf("EnableSelection: A\n");fflush(stdout);
+	printf("EnableSelection: A = %d = %s\n",nGame,driver_list::driver(nGame).name);fflush(stdout);
 	BOOL has_software = MyFillSoftwareList(nGame, false); // messui.cpp
-	printf("EnableSelection: B\n");fflush(stdout);
+	//printf("EnableSelection: B\n");fflush(stdout);
 
 	TCHAR* t_description = ui_wstring_from_utf8(ConvertAmpersandString(ModifyThe(driver_list::driver(nGame).type.fullname())));
 	if( !t_description )
 		return;
 
-	printf("EnableSelection: C\n");fflush(stdout);
+	//printf("EnableSelection: C\n");fflush(stdout);
 	TCHAR buf[200];
 	_sntprintf(buf, sizeof(buf) / sizeof(buf[0]), g_szPlayGameString, t_description);
 	MENUITEMINFO mmi;
@@ -3028,7 +3001,7 @@ static void EnableSelection(int nGame)
 	HMENU hMenu = GetMenu(hMain);
 	SetMenuItemInfo(hMenu, ID_FILE_PLAY, false, &mmi);
 
-	printf("EnableSelection: D\n");fflush(stdout);
+	//printf("EnableSelection: D\n");fflush(stdout);
 	const char * pText;
 	pText = ModifyThe(driver_list::driver(nGame).type.fullname());
 	SetStatusBarText(0, pText);
@@ -3037,7 +3010,7 @@ static void EnableSelection(int nGame)
 	SetStatusBarText(1, pText);
 
 	// Show number of software_list items in box at bottom right.
-	printf("EnableSelection: E\n");fflush(stdout);
+	//printf("EnableSelection: E\n");fflush(stdout);
 	int items = SoftwareList_GetNumberOfItems();
 	if (items)
 	{
@@ -3049,7 +3022,7 @@ static void EnableSelection(int nGame)
 
 	/* If doing updating game status */
 
-	printf("EnableSelection: F\n");fflush(stdout);
+	//printf("EnableSelection: F\n");fflush(stdout);
 	EnableMenuItem(hMenu, ID_FILE_PLAY, MF_ENABLED);
 	EnableMenuItem(hMenu, ID_FILE_PLAY_RECORD, MF_ENABLED);
 	if (has_software)
@@ -3059,15 +3032,15 @@ static void EnableSelection(int nGame)
 
 	EnableMenuItem(hMenu, ID_GAME_PROPERTIES, MF_ENABLED);
 
-	printf("EnableSelection: G\n");fflush(stdout);
-	if (bProgressShown && bListReady == true)
+	printf("EnableSelection: G = %d = %d\n",bListReady ? 1:0,nGame);
+	if (bListReady)
 		SetDefaultGame(nGame);
 
 	have_selection = true;
 
-	printf("EnableSelection: H\n");fflush(stdout);
+	//printf("EnableSelection: H\n");fflush(stdout);
+	ShowHideSoftwareArea();   // messui.cpp
 	UpdateScreenShot();
-	//UpdateSoftware();   // to fix later
 
 	printf("EnableSelection: Finished\n");fflush(stdout);
 	free(t_description);
@@ -4242,7 +4215,8 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 	case ID_VIEW_SOFTWARE_AREA :
-		ToggleSoftware();
+		SetWindowPanes(GetWindowPanes() ^ 4);
+		ShowHideSoftwareArea();   // messui.cpp
 		break;
 
 	case ID_UPDATE_GAMELIST:
@@ -5659,19 +5633,6 @@ static void ToggleScreenShot()
 	BOOL show = BIT(val, 3);
 	SetWindowPanes(val);
 	UpdateScreenShot();
-
-	/* Redraw list view */
-	if (hBackground && show)
-		InvalidateRect(hwndList, NULL, false);
-}
-
-
-static void ToggleSoftware()
-{
-	UINT val = GetWindowPanes() ^ 4;
-	BOOL show = BIT(val, 2);
-	SetWindowPanes(val);
-	UpdateSoftware();
 
 	/* Redraw list view */
 	if (hBackground && show)

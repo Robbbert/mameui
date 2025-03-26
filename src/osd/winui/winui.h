@@ -62,6 +62,8 @@ BOOL CommonFileDialog(common_file_dialog_proc cfd,char *filename, int filetype);
 
 HWND GetMainWindow();
 HWND GetTreeView();
+HWND GetToolbar();
+HBITMAP GetBackground();
 HIMAGELIST GetLargeImageList();
 HIMAGELIST GetSmallImageList();
 void SetNumOptionFolders(int count);

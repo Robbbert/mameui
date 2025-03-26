@@ -38,6 +38,9 @@
 #define MVIEW_SPACING 21
 #define LOG_SOFTWARE 1
 
+#ifndef ToolBar_CheckButton
+#define ToolBar_CheckButton(hWnd, idButton, fCheck) SendMessage(hWnd, TB_CHECKBUTTON, (WPARAM)idButton, (LPARAM)MAKELONG(fCheck, 0))
+#endif
 
 //============================================================
 //  TYPEDEFS
@@ -268,7 +271,7 @@ static const struct TabViewCallbacks s_softwareTabViewCallbacks =
 	SoftwareTabView_GetTabShortName,	// pfnGetTabShortName
 	SoftwareTabView_GetTabLongName,		// pfnGetTabLongName
 
-	SoftwareTabView_OnSelectionChanged,	// pfnOnSelectionChanged
+	ShowHideSoftwareArea,				// pfnOnSelectionChanged
 	SoftwareTabView_OnMoveSize			// pfnOnMoveSize
 };
 
@@ -352,15 +355,7 @@ void InitMessPicker()
 	SetWindowLong(hwndSoftwareList, GWL_STYLE, GetWindowLong(hwndSoftwareList, GWL_STYLE) | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED);
 	printf("InitMessPicker: Finished\n");fflush(stdout);
 
-	BOOL bShowSoftware = BIT(GetWindowPanes(), 2);
-	int swtab = GetCurrentSoftwareTab();
-	if (!bShowSoftware)
-		swtab = -1;
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWLIST), (swtab == 0) ? SW_SHOW : SW_HIDE);
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW), (swtab == 1) ? SW_SHOW : SW_HIDE);
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SOFTLIST), (swtab == 2) ? SW_SHOW : SW_HIDE);
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWTAB), bShowSoftware ? SW_SHOW : SW_HIDE);
-	CheckMenuItem(GetMenu(GetMainWindow()), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
+	ShowHideSoftwareArea();
 }
 
 
@@ -839,7 +834,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 	// locate key widgets
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
+	//HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
 
 	printf("MyFillSoftwareList: Calling SoftwarePicker_Clear\n");fflush(stdout);
 	SoftwareList_Clear(hwndSoftwareList);
@@ -848,7 +843,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 
 	// set up the device view
 	printf("MyFillSoftwareList: Calling MView_SetDriver\n");fflush(stdout);
-	MView_SetDriver(hwndSoftwareMView, s_config);
+	//MView_SetDriver(hwndSoftwareMView, s_config);   // gets done elsewhere
 
 	// set up the software picker
 	printf("MyFillSoftwareList: Calling SoftwarePicker_SetDriver\n");fflush(stdout);
@@ -1767,35 +1762,49 @@ static LPCSTR SoftwareTabView_GetTabLongName(int tab)
 }
 
 
-void SoftwareTabView_OnSelectionChanged()
+// Bug: after a game hides the area, the next one to unhide will show blanks in the media view
+void ShowHideSoftwareArea()
 {
-	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
-	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
+	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 
-	int nTab = TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB));
+	/* first time through can't do this stuff */
+	if (hwndList == NULL)
+		return;
 
-	switch(nTab)
-	{
-		case 0:
-			ShowWindow(hwndSoftwarePicker, SW_SHOW);
-			ShowWindow(hwndSoftwareMView, SW_HIDE);
-			ShowWindow(hwndSoftwareList, SW_HIDE);
-			//MessRefreshPicker(); // crashes MESSUI at start
-			break;
+	HWND hMain = GetMainWindow();
+	BOOL bShowSoftware = BIT(GetWindowPanes(), 2);
 
-		case 1:
-			ShowWindow(hwndSoftwarePicker, SW_HIDE);
-			ShowWindow(hwndSoftwareMView, SW_SHOW);
-			ShowWindow(hwndSoftwareList, SW_HIDE);
-			MView_Refresh(GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW));
-			break;
-		case 2:
-			ShowWindow(hwndSoftwarePicker, SW_HIDE);
-			ShowWindow(hwndSoftwareMView, SW_HIDE);
-			ShowWindow(hwndSoftwareList, SW_SHOW);
-			break;
-	}
+	/* Redraw list view */
+	if (GetBackground() && bShowSoftware)
+		InvalidateRect(hwndList, NULL, false);
+
+	/* Size the List Control in the Picker */
+	//RECT rect;
+	//GetClientRect(hMain, &rect);
+
+	//if (bShowStatusBar)
+		//rect.bottom -= bottomMargin;
+	//if (bShowToolBar)
+		//rect.top += topMargin;
+
+	CheckMenuItem(GetMenu(hMain), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
+	ToolBar_CheckButton(GetToolbar(), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
+
+	// if system doesn't have software then don't show software area
+	int drvindex = Picker_GetSelectedItem(hwndList);
+	printf("UpdateSoftware: game %d, has software = %d\n",drvindex,DriverHasSoftware(drvindex));
+
+	bool show =bShowSoftware;
+	//bool show =(bShowSoftware && DriverHasSoftware(drvindex)) ? 1 : 0;    // see bug listed above
+	int swtab = GetCurrentSoftwareTab();
+	if (!show)
+		swtab = -1;
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWLIST), (swtab == 0) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW), (swtab == 1) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SOFTLIST), (swtab == 2) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWTAB), show ? SW_SHOW : SW_HIDE);
+	//ResizeTreeAndListViews(false);
+	// Don't try refreshing the selected tab from here - do it in the caller (if needed)
 }
 
 
@@ -2032,8 +2041,7 @@ static LRESULT CALLBACK MView_WndProc(HWND hwndMView, UINT nMessage, WPARAM wPar
 			pEnt = pMViewInfo->pEntries;
 			if (pEnt)
 			{
-				MView_GetColumns(hwndMView, &nStaticPos, &nStaticWidth,
-					&nEditPos, &nEditWidth, &nButtonPos, &nButtonWidth);
+				MView_GetColumns(hwndMView, &nStaticPos, &nStaticWidth, &nEditPos, &nEditWidth, &nButtonPos, &nButtonWidth);
 				while(pEnt->dev)
 				{
 					GetClientRect(pEnt->hwndStatic, &r);
