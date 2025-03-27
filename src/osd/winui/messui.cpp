@@ -428,6 +428,7 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 // The first directory in each path is checked for existence.
 static std::pair<int, string> ProcessSWDir(int drvindex)
 {
+	osd::directory::ptr b;
 	if (drvindex < 0)
 	{
 		string dst;
@@ -444,8 +445,11 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 		printf("ProcessSWDir: B=%s\n",global_swpath.c_str());fflush(stdout);
 		strcpy(dir0, global_swpath.c_str()); // global SW
 		char* t0 = strtok(dir0, ";");  // from here dir0 gets chopped up
-		if (t0 && osd::directory::open(t0))  // make sure its valid
+		b = osd::directory::open(t0);
+		if (t0 && b)  // make sure its valid
 			b_dir = true;
+		if (b)
+			b.reset();
 	}
 
 	// Get the system's software path
@@ -455,9 +459,15 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 	char dir1[2048] = { };
 	strcpy(dir1, o.value(OPTION_SWPATH));
 	char* t1 = strtok(dir1, ";"); // from here dir1 gets chopped up
-	if (t1 && osd::directory::open(t1))  // make sure its valid
+	b = osd::directory::open(t1);
+	if (t1 && b)  // make sure its valid
+	{
+		b.reset();
 		if (b_dir && (global_swpath != o.value(OPTION_SWPATH)))
 			return std::make_pair(1, o.value(OPTION_SWPATH));
+	}
+	if (b)
+		b.reset();
 
 	// not specified in driver, try parent if it has one
 	printf("ProcessSWDir: E\n");fflush(stdout);
@@ -474,8 +484,10 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 			strcpy(dir1, o_p.value(OPTION_SWPATH));
 			t1 = strtok(dir1, ";");
 			printf("ProcessSWDir: GA = %s\n",dir1);fflush(stdout);
-			if (t1 && osd::directory::open(t1))  // make sure its valid
+			b = osd::directory::open(t1);
+			if (t1 && b)  // make sure its valid
 			{
+				b.reset();
 				printf("ProcessSWDir: GB\n");fflush(stdout);
 				if (b_dir && (global_swpath != o_p.value(OPTION_SWPATH)))
 				{
@@ -485,6 +497,8 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 					return std::make_pair(1, o_p.value(OPTION_SWPATH));
 				}
 			}
+			if (b)
+				b.reset();
 		}
 		else
 			nParentIndex = drvindex; // don't pass -1 to compat check
@@ -501,13 +515,19 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 		load_options(o_c, OPTIONS_PARENT, nCloneIndex, 0);
 		strcpy(dir1, o_c.value(OPTION_SWPATH));
 		t1 = strtok(dir1, ";");
-		if (t1 && osd::directory::open(t1))  // make sure its valid
+		b = osd::directory::open(t1);
+		if (t1 && b)  // make sure its valid
+		{
 			if (b_dir && (global_swpath != o_c.value(OPTION_SWPATH)))
 			{
+				b.reset();
 				emu_set_value(o, OPTION_SWPATH, o_c.value(OPTION_SWPATH));
 				save_options(o, OPTIONS_GAME, drvindex);
 				return std::make_pair(1, o_c.value(OPTION_SWPATH));
 			}
+		}
+		if (b)
+			b.reset();
 	}
 
 	// Try the global root
@@ -532,7 +552,8 @@ static BOOL AddSoftwarePickerDirs(HWND hwndPicker, LPCSTR pszDirectories, LPCSTR
 	if (!pszDirectories)
 		return false;
 
-	char s[2048] = { };
+	size_t a = strlen(pszDirectories) + 1;
+	char s[a] = { };
 	string pszNewString;
 	strcpy(s, pszDirectories);
 	LPSTR t1 = strtok(s,";");
@@ -544,9 +565,13 @@ static BOOL AddSoftwarePickerDirs(HWND hwndPicker, LPCSTR pszDirectories, LPCSTR
 		else
 			pszNewString = t1;
 
-		printf("AddSoftwarePickerDirs: newstring %s\n",pszNewString.c_str());fflush(stdout);
-		if (!SoftwarePicker_AddDirectory(hwndPicker, pszNewString.c_str()))
-			return false;
+		osd::directory::ptr b = osd::directory::open(t1);
+		if (b)
+		{
+			printf("AddSoftwarePickerDirs: newstring %s\n",pszNewString.c_str());fflush(stdout);
+			(void)SoftwarePicker_AddDirectory(hwndPicker, pszNewString.c_str());
+			b.reset();
+		}
 
 		printf("AddSoftwarePickerDirs: On to the next\n");fflush(stdout);
 		t1 = strtok (NULL, ";");
@@ -834,16 +859,16 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 	// locate key widgets
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
-	//HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
+	HWND hwndMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
 
-	printf("MyFillSoftwareList: Calling SoftwarePicker_Clear\n");fflush(stdout);
+	printf("MyFillSoftwareList: Calling SoftwareList_Clear\n");fflush(stdout);
 	SoftwareList_Clear(hwndSoftwareList);
 	printf("MyFillSoftwareList: Calling SoftwarePicker_Clear\n");fflush(stdout);
 	SoftwarePicker_Clear(hwndSoftwarePicker);
 
 	// set up the device view
 	printf("MyFillSoftwareList: Calling MView_SetDriver\n");fflush(stdout);
-	//MView_SetDriver(hwndSoftwareMView, s_config);   // gets done elsewhere
+	MView_SetDriver(hwndMView, s_config);
 
 	// set up the software picker
 	printf("MyFillSoftwareList: Calling SoftwarePicker_SetDriver\n");fflush(stdout);
@@ -991,8 +1016,9 @@ void MessReadMountedSoftware(int drvindex)
 {
 	// First read stuff into MEDIA view
 	//if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
-	MView_SetDriver(hwndSoftwareMView, s_config);
+	HWND hwndMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
+	//MView_SetDriver(hwndMView, s_config);
+	MView_Refresh(hwndMView);
 
 	// Now read stuff into picker
 	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==0)
@@ -1274,7 +1300,8 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 
 	/* Get the path to the currently mounted image */
 	string dst = util::zippath_parent(s);
-	if ((!osd::directory::open(dst.c_str())) || (dst.find(':') == string::npos))
+	osd::directory::ptr b = osd::directory::open(dst.c_str());
+	if (!b || (dst.find(':') == string::npos))
 	{
 		// no image loaded, use swpath
 		std::tie(std::ignore, dst) = ProcessSWDir(drvindex);
@@ -1283,6 +1310,8 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 		if (i != string::npos)
 			dst.erase(i);
 	}
+	if (b)
+		b.reset();
 
 	mess_image_type imagetypes[256];
 	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, dev);
@@ -1321,9 +1350,12 @@ static BOOL MView_GetOpenItemName(HWND hwndMView, const machine_config *config, 
 
 	string dst = slmap.find(opt_name)->second;
 
-	if (!osd::directory::open(dst.c_str()))
+	osd::directory::ptr b = osd::directory::open(dst.c_str());
+	if (!b)
 		// Default to emu directory
 		osd_get_full_path(dst, ".");
+	else
+		b.reset();
 
 	mess_image_type imagetypes[256];
 	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, NULL); // just get zip & 7z
@@ -1421,7 +1453,6 @@ static LPCTSTR MView_GetSelectedSoftware(HWND hwndMView, int nDriverIndex, const
 		load_options(o, OPTIONS_GAME, nDriverIndex, 1);
 		printf("MView_GetSelectedSoftware: Got options\n");fflush(stdout);
 		opt_name = dev->instance_name();
-		//const char* temp = o.value(opt_name.c_str());
 		if (o.has_image_option(opt_name))
 			opt_value = o.image_option(opt_name).value().empty() ? "" : o.image_option(opt_name).value();
 		printf("MView_GetSelectedSoftware: == %s : %s\n", opt_name.c_str(), opt_value.c_str());fflush(stdout);
@@ -1762,7 +1793,6 @@ static LPCSTR SoftwareTabView_GetTabLongName(int tab)
 }
 
 
-// Bug: after a game hides the area, the next one to unhide will show blanks in the media view
 void ShowHideSoftwareArea()
 {
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
@@ -1794,8 +1824,8 @@ void ShowHideSoftwareArea()
 	int drvindex = Picker_GetSelectedItem(hwndList);
 	printf("UpdateSoftware: game %d, has software = %d\n",drvindex,DriverHasSoftware(drvindex));
 
-	bool show =bShowSoftware;
-	//bool show =(bShowSoftware && DriverHasSoftware(drvindex)) ? 1 : 0;    // see bug listed above
+	bool show = bShowSoftware;
+	//bool show = (bShowSoftware && DriverHasSoftware(drvindex)) ? 1 : 0;    // see bug listed above
 	int swtab = GetCurrentSoftwareTab();
 	if (!show)
 		swtab = -1;
