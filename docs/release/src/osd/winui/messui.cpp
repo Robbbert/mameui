@@ -38,6 +38,9 @@
 #define MVIEW_SPACING 21
 #define LOG_SOFTWARE 1
 
+#ifndef ToolBar_CheckButton
+#define ToolBar_CheckButton(hWnd, idButton, fCheck) SendMessage(hWnd, TB_CHECKBUTTON, (WPARAM)idButton, (LPARAM)MAKELONG(fCheck, 0))
+#endif
 
 //============================================================
 //  TYPEDEFS
@@ -178,10 +181,10 @@ static void SoftwareList_EnteringItem(HWND hwndSoftwareList, int nItem);
 
 static LPCSTR SoftwareTabView_GetTabShortName(int tab);
 static LPCSTR SoftwareTabView_GetTabLongName(int tab);
-static void SoftwareTabView_OnMoveSize(void);
-static void SetupSoftwareTabView(void);
+static void SoftwareTabView_OnMoveSize();
+static void SetupSoftwareTabView();
 
-static void MessRefreshPicker(void);
+static void MessRefreshPicker();
 
 static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
 static BOOL MView_GetOpenItemName(HWND hwndMView, const machine_config *config, const device_image_interface *dev, LPTSTR pszFilename, UINT nFilenameLength);
@@ -268,7 +271,7 @@ static const struct TabViewCallbacks s_softwareTabViewCallbacks =
 	SoftwareTabView_GetTabShortName,	// pfnGetTabShortName
 	SoftwareTabView_GetTabLongName,		// pfnGetTabLongName
 
-	SoftwareTabView_OnSelectionChanged,	// pfnOnSelectionChanged
+	ShowHideSoftwareArea,				// pfnOnSelectionChanged
 	SoftwareTabView_OnMoveSize			// pfnOnMoveSize
 };
 
@@ -304,7 +307,7 @@ static void MView_SetCallbacks(HWND hwndMView, const struct MViewCallbacks *pCal
 }
 
 
-void InitMessPicker(void)
+void InitMessPicker()
 {
 	struct PickerOptions opts;
 
@@ -335,7 +338,7 @@ void InitMessPicker(void)
 			MView_GetOpenItemName,
 			MView_Unmount
 		};
-		MView_SetCallbacks(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW), &s_MViewCallbacks);
+		MView_SetCallbacks(GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW), &s_MViewCallbacks);
 	}
 
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
@@ -352,19 +355,11 @@ void InitMessPicker(void)
 	SetWindowLong(hwndSoftwareList, GWL_STYLE, GetWindowLong(hwndSoftwareList, GWL_STYLE) | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED);
 	printf("InitMessPicker: Finished\n");fflush(stdout);
 
-	BOOL bShowSoftware = BIT(GetWindowPanes(), 2);
-	int swtab = GetCurrentSoftwareTab();
-	if (!bShowSoftware)
-		swtab = -1;
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWLIST), (swtab == 0) ? SW_SHOW : SW_HIDE);
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW), (swtab == 1) ? SW_SHOW : SW_HIDE);
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SOFTLIST), (swtab == 2) ? SW_SHOW : SW_HIDE);
-	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWTAB), bShowSoftware ? SW_SHOW : SW_HIDE);
-	CheckMenuItem(GetMenu(GetMainWindow()), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
+	ShowHideSoftwareArea();
 }
 
 
-BOOL CreateMessIcons(void)
+BOOL CreateMessIcons()
 {
 	// create the icon index, if we haven't already
 	if (!mess_icon_index)
@@ -428,41 +423,41 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 
 // Rules: if driver's path valid and not same as global, that's ok. Otherwise try parent, then compat.
 // If still no good, use global if it was valid. Lastly, default to emu folder.
-// Some callers regard the defaults as invalid so prepend a character to indicate validity
-static string ProcessSWDir(int drvindex)
+// Return variables: first = 1 if need to show loose software; second = path to loose software
+// It's assumed that drvindex points at the game in question (not a parent or global)
+// The first directory in each path is checked for existence.
+static std::pair<int, string> ProcessSWDir(int drvindex)
 {
 	if (drvindex < 0)
 	{
 		string dst;
 		osd_get_full_path(dst,".");
-		return string("1") + dst;
+		return std::make_pair(0, dst);
 	}
 
 	BOOL b_dir = false;
 	char dir0[2048] = { };
-	char *t0 = 0;
-	printf("ProcessSWDir: A\n");fflush(stdout);
-	string t = dir_get_value(13);
-	if (!t.empty())
+	printf("ProcessSWDir: A = %s\n",driver_list::driver(drvindex).type.fullname());fflush(stdout);
+	string global_swpath = dir_get_value(13);
+	if (!global_swpath.empty())
 	{
-		printf("ProcessSWDir: B=%s\n",t.c_str());fflush(stdout);
-		strcpy(dir0, t.c_str()); // global SW
-		t0 = strtok(dir0, ";");
+		printf("ProcessSWDir: B=%s\n",global_swpath.c_str());fflush(stdout);
+		strcpy(dir0, global_swpath.c_str()); // global SW
+		char* t0 = strtok(dir0, ";");  // from here dir0 gets chopped up
 		if (t0 && osd::directory::open(t0))  // make sure its valid
 			b_dir = true;
 	}
 
-	// Get the game's software path
+	// Get the system's software path
 	printf("ProcessSWDir: C\n");fflush(stdout);
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex, 0);
 	char dir1[2048] = { };
 	strcpy(dir1, o.value(OPTION_SWPATH));
-	char* t1 = strtok(dir1, ";");
-	printf("ProcessSWDir: D=%s=%s\n",t1,o.value(OPTION_SWPATH));fflush(stdout);
+	char* t1 = strtok(dir1, ";"); // from here dir1 gets chopped up
 	if (t1 && osd::directory::open(t1))  // make sure its valid
-		if (b_dir && (strcmp(t0, t1) != 0))
-			return string("1") + o.value(OPTION_SWPATH);
+		if (b_dir && (global_swpath != o.value(OPTION_SWPATH)))
+			return std::make_pair(1, o.value(OPTION_SWPATH));
 
 	// not specified in driver, try parent if it has one
 	printf("ProcessSWDir: E\n");fflush(stdout);
@@ -473,18 +468,21 @@ static string ProcessSWDir(int drvindex)
 		nParentIndex = GetParentIndex(&driver_list::driver(drvindex));
 		if (nParentIndex >= 0)
 		{
+			windows_options o_p;
 			printf("ProcessSWDir: G\n");fflush(stdout);
-			load_options(o, OPTIONS_PARENT, nParentIndex, 0);
-			strcpy(dir1, o.value(OPTION_SWPATH));
+			load_options(o_p, OPTIONS_PARENT, nParentIndex, 0);
+			strcpy(dir1, o_p.value(OPTION_SWPATH));
 			t1 = strtok(dir1, ";");
 			printf("ProcessSWDir: GA = %s\n",dir1);fflush(stdout);
 			if (t1 && osd::directory::open(t1))  // make sure its valid
 			{
 				printf("ProcessSWDir: GB\n");fflush(stdout);
-				if (b_dir && (strcmp(t0, t1) != 0))
+				if (b_dir && (global_swpath != o_p.value(OPTION_SWPATH)))
 				{
 					printf("ProcessSWDir: GC\n");fflush(stdout);
-					return string("1") + o.value(OPTION_SWPATH);
+					emu_set_value(o, OPTION_SWPATH, o_p.value(OPTION_SWPATH));
+					save_options(o, OPTIONS_GAME, drvindex);
+					return std::make_pair(1, o_p.value(OPTION_SWPATH));
 				}
 			}
 		}
@@ -498,26 +496,31 @@ static string ProcessSWDir(int drvindex)
 	printf("ProcessSWDir: HA = %d\n",nCloneIndex);fflush(stdout);
 	if (nCloneIndex >= 0)
 	{
+		windows_options o_c;
 		printf("ProcessSWDir: I\n");fflush(stdout);
-		load_options(o, OPTIONS_PARENT, nCloneIndex, 0);
-		strcpy(dir1, o.value(OPTION_SWPATH));
+		load_options(o_c, OPTIONS_PARENT, nCloneIndex, 0);
+		strcpy(dir1, o_c.value(OPTION_SWPATH));
 		t1 = strtok(dir1, ";");
 		if (t1 && osd::directory::open(t1))  // make sure its valid
-			if (b_dir && (strcmp(t0, t1) != 0))
-				return string("1") + o.value(OPTION_SWPATH);
+			if (b_dir && (global_swpath != o_c.value(OPTION_SWPATH)))
+			{
+				emu_set_value(o, OPTION_SWPATH, o_c.value(OPTION_SWPATH));
+				save_options(o, OPTIONS_GAME, drvindex);
+				return std::make_pair(1, o_c.value(OPTION_SWPATH));
+			}
 	}
 
 	// Try the global root
 	printf("ProcessSWDir: J\n");fflush(stdout);
 	if (b_dir)
-		return string("0") + t;
+		return std::make_pair(0, global_swpath);
 
 	// nothing valid, drop to default emu directory
 	printf("ProcessSWDir: K\n");fflush(stdout);
 	string dst;
 	osd_get_full_path(dst,".");
 	printf("ProcessSWDir: L\n");fflush(stdout);
-	return string("1") + dst;
+	return std::make_pair(0, dst);
 }
 
 
@@ -552,7 +555,7 @@ static BOOL AddSoftwarePickerDirs(HWND hwndPicker, LPCSTR pszDirectories, LPCSTR
 }
 
 
-void MySoftwareListClose(void)
+void MySoftwareListClose()
 {
 	// free the machine config, if necessary
 	if (s_config)
@@ -831,7 +834,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 	// locate key widgets
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
+	//HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
 
 	printf("MyFillSoftwareList: Calling SoftwarePicker_Clear\n");fflush(stdout);
 	SoftwareList_Clear(hwndSoftwareList);
@@ -840,7 +843,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 
 	// set up the device view
 	printf("MyFillSoftwareList: Calling MView_SetDriver\n");fflush(stdout);
-	MView_SetDriver(hwndSoftwareMView, s_config);
+	//MView_SetDriver(hwndSoftwareMView, s_config);   // gets done elsewhere
 
 	// set up the software picker
 	printf("MyFillSoftwareList: Calling SoftwarePicker_SetDriver\n");fflush(stdout);
@@ -851,14 +854,11 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 
 	// set up the Software Files by using swpath (can handle multiple paths)
 	printf("MyFillSoftwareList: Processing SWDir\n");fflush(stdout);
-	string paths = ProcessSWDir(drvindex);
+	int a; string paths;
+	std::tie(a, paths) = ProcessSWDir(drvindex);
 	printf("MyFillSoftwareList: Finished SWDir = %s\n", paths.c_str());fflush(stdout);
-	const char* t1 = paths.c_str();
-	if (t1[0] == '1')
-	{
-		paths.erase(0,1);
+	if (a == 1)
 		AddSoftwarePickerDirs(hwndSoftwarePicker, paths.c_str(), NULL);
-	}
 
 	// set up the Software List
 	printf("MyFillSoftwareList: Calling SoftwarePicker_SetDriver\n");fflush(stdout);
@@ -906,7 +906,7 @@ BOOL MyFillSoftwareList(int drvindex, BOOL bForce)
 }
 
 
-void MessUpdateSoftwareList(void)
+void MessUpdateSoftwareList()
 {
 	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 	MyFillSoftwareList(Picker_GetSelectedItem(hwndList), true);
@@ -989,9 +989,10 @@ static void MessRemoveImage(int drvindex, const char *pszFilename)
 
 void MessReadMountedSoftware(int drvindex)
 {
-	// First read stuff into device view
-	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
-		MView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
+	// First read stuff into MEDIA view
+	//if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==1)
+	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
+	MView_SetDriver(hwndSoftwareMView, s_config);
 
 	// Now read stuff into picker
 	if (TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB))==0)
@@ -999,7 +1000,7 @@ void MessReadMountedSoftware(int drvindex)
 }
 
 
-static void MessRefreshPicker(void)
+static void MessRefreshPicker()
 {
 	HWND hwndSoftware = GetDlgItem(GetMainWindow(), IDC_SWLIST);
 
@@ -1276,12 +1277,11 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 	if ((!osd::directory::open(dst.c_str())) || (dst.find(':') == string::npos))
 	{
 		// no image loaded, use swpath
-		dst = ProcessSWDir(drvindex);
-		dst.erase(0,1);
+		std::tie(std::ignore, dst) = ProcessSWDir(drvindex);
 		/* We only want the first path; throw out the rest */
 		size_t i = dst.find(';');
 		if (i != string::npos)
-			dst = dst.substr(0, i);
+			dst.erase(i);
 	}
 
 	mess_image_type imagetypes[256];
@@ -1372,12 +1372,12 @@ static BOOL MView_GetCreateFileName(HWND hwndMView, const machine_config *config
 	if (drvindex < 0)
 		return false;
 
-	string dst = ProcessSWDir(drvindex);
-	dst.erase(0,1);
+	string dst;  // std::tie can only use existing variables
+	std::tie(std::ignore, dst) = ProcessSWDir(drvindex);
 	/* We only want the first path; throw out the rest */
 	size_t i = dst.find(';');
 	if (i != string::npos)
-		dst = dst.substr(0, i);
+		dst.erase(i);
 
 	TCHAR *t_s = ui_wstring_from_utf8(dst.c_str());
 	mess_image_type imagetypes[256];
@@ -1762,46 +1762,60 @@ static LPCSTR SoftwareTabView_GetTabLongName(int tab)
 }
 
 
-void SoftwareTabView_OnSelectionChanged(void)
+// Bug: after a game hides the area, the next one to unhide will show blanks in the media view
+void ShowHideSoftwareArea()
 {
-	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
-	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
+	HWND hwndList = GetDlgItem(GetMainWindow(), IDC_LIST);
 
-	int nTab = TabView_GetCurrentTab(GetDlgItem(GetMainWindow(), IDC_SWTAB));
+	/* first time through can't do this stuff */
+	if (hwndList == NULL)
+		return;
 
-	switch(nTab)
-	{
-		case 0:
-			ShowWindow(hwndSoftwarePicker, SW_SHOW);
-			ShowWindow(hwndSoftwareMView, SW_HIDE);
-			ShowWindow(hwndSoftwareList, SW_HIDE);
-			//MessRefreshPicker(); // crashes MESSUI at start
-			break;
+	HWND hMain = GetMainWindow();
+	BOOL bShowSoftware = BIT(GetWindowPanes(), 2);
 
-		case 1:
-			ShowWindow(hwndSoftwarePicker, SW_HIDE);
-			ShowWindow(hwndSoftwareMView, SW_SHOW);
-			ShowWindow(hwndSoftwareList, SW_HIDE);
-			MView_Refresh(GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW));
-			break;
-		case 2:
-			ShowWindow(hwndSoftwarePicker, SW_HIDE);
-			ShowWindow(hwndSoftwareMView, SW_HIDE);
-			ShowWindow(hwndSoftwareList, SW_SHOW);
-			break;
-	}
+	/* Redraw list view */
+	if (GetBackground() && bShowSoftware)
+		InvalidateRect(hwndList, NULL, false);
+
+	/* Size the List Control in the Picker */
+	//RECT rect;
+	//GetClientRect(hMain, &rect);
+
+	//if (bShowStatusBar)
+		//rect.bottom -= bottomMargin;
+	//if (bShowToolBar)
+		//rect.top += topMargin;
+
+	CheckMenuItem(GetMenu(hMain), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
+	ToolBar_CheckButton(GetToolbar(), ID_VIEW_SOFTWARE_AREA, bShowSoftware ? MF_CHECKED : MF_UNCHECKED);
+
+	// if system doesn't have software then don't show software area
+	int drvindex = Picker_GetSelectedItem(hwndList);
+	printf("UpdateSoftware: game %d, has software = %d\n",drvindex,DriverHasSoftware(drvindex));
+
+	bool show =bShowSoftware;
+	//bool show =(bShowSoftware && DriverHasSoftware(drvindex)) ? 1 : 0;    // see bug listed above
+	int swtab = GetCurrentSoftwareTab();
+	if (!show)
+		swtab = -1;
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWLIST), (swtab == 0) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW), (swtab == 1) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SOFTLIST), (swtab == 2) ? SW_SHOW : SW_HIDE);
+	ShowWindow(GetDlgItem(GetMainWindow(), IDC_SWTAB), show ? SW_SHOW : SW_HIDE);
+	//ResizeTreeAndListViews(false);
+	// Don't try refreshing the selected tab from here - do it in the caller (if needed)
 }
 
 
-static void SoftwareTabView_OnMoveSize(void)
+static void SoftwareTabView_OnMoveSize()
 {
 	RECT rMain, rSoftwareTabView, rClient, rTab;
 	BOOL res = 0;
 
 	HWND hwndSoftwareTabView = GetDlgItem(GetMainWindow(), IDC_SWTAB);
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
-	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_SWDEVVIEW);
+	HWND hwndSoftwareMView = GetDlgItem(GetMainWindow(), IDC_MEDIAVIEW);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
 
 	GetWindowRect(hwndSoftwareTabView, &rSoftwareTabView);
@@ -1831,7 +1845,7 @@ static void SoftwareTabView_OnMoveSize(void)
 }
 
 
-static void SetupSoftwareTabView(void)
+static void SetupSoftwareTabView()
 {
 	struct TabViewOptions opts;
 
@@ -2027,8 +2041,7 @@ static LRESULT CALLBACK MView_WndProc(HWND hwndMView, UINT nMessage, WPARAM wPar
 			pEnt = pMViewInfo->pEntries;
 			if (pEnt)
 			{
-				MView_GetColumns(hwndMView, &nStaticPos, &nStaticWidth,
-					&nEditPos, &nEditWidth, &nButtonPos, &nButtonWidth);
+				MView_GetColumns(hwndMView, &nStaticPos, &nStaticWidth, &nEditPos, &nEditWidth, &nButtonPos, &nButtonWidth);
 				while(pEnt->dev)
 				{
 					GetClientRect(pEnt->hwndStatic, &r);
@@ -2046,7 +2059,7 @@ static LRESULT CALLBACK MView_WndProc(HWND hwndMView, UINT nMessage, WPARAM wPar
 }
 
 
-void MView_RegisterClass(void)
+void MView_RegisterClass()
 {
 	WNDCLASS wc;
 	memset(&wc, 0, sizeof(wc));

@@ -8,8 +8,8 @@
 typedef struct DirWatcher *PDIRWATCHER;
 
 PDIRWATCHER DirWatcher_Init(HWND hwndTarget, UINT nMessage);
-BOOL DirWatcher_Watch(PDIRWATCHER pWatcher, WORD nIndex, const std::string t, BOOL bWatchSubtrees);
-void DirWatcher_Free(PDIRWATCHER pWatcher);
+void DirWatcher_Watch(PDIRWATCHER, WORD nIndex, std::string, BOOL);
+void DirWatcher_Free(PDIRWATCHER);
 
 #endif
 

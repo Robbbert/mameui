@@ -525,7 +525,7 @@
 #define IDC_SPLITTER3                   2000
 #define IDC_SWTAB                       2001
 #define IDC_SWLIST                      2002
-#define IDC_SWDEVVIEW                   2003
+#define IDC_MEDIAVIEW                   2003
 #define IDC_FILTER_MODIFIED             2006
 #define IDC_RAM_COMBOBOX                2008
 #define IDC_RAM_CAPTION                 2009

@@ -32,7 +32,7 @@ static ui_options emu_ui; // ui.ini
 static windows_options emu_global; // Global 'default' options
 #define UI_FILENAME                           "ini\\ui.ini"
 
-typedef std::string string;
+typedef std::basic_string<char> string;
 
 // char names
 void emu_set_value(windows_options *o, const char* name, float value)
@@ -157,7 +157,7 @@ struct dir_data { string dir_path; int which; };
 static std::map<int, dir_data> dir_map;
 static string emu_path;
 
-string GetIniDir(void)
+string GetIniDir()
 {
 ///	const char *ini_dir;
 //	const char *s;
@@ -169,7 +169,12 @@ string GetIniDir(void)
 //	}
 ///	ini_dir = "ini\0";
 ///	return ini_dir;
-	return emu_path + "ini\0";
+	return emu_path + PATH_SEPARATOR + "ini\0";
+}
+
+string GetEmuPath()
+{
+	return emu_path;
 }
 
 
@@ -200,7 +205,7 @@ static void LoadSettingsFile(windows_options &opts, const char *filename)
 }
 
 // This saves changes to <game>.INI or MAME.INI only
-static void SaveSettingsFile(windows_options &opts, const char *filename)
+static void SaveSettingsFile(windows_options &opts, const char *filename, bool diff)
 {
 	util::core_file::ptr file;
 
@@ -208,7 +213,12 @@ static void SaveSettingsFile(windows_options &opts, const char *filename)
 
 	if (!filerr)
 	{
-		string inistring = opts.output_ini();
+		string inistring;
+		// MAME crashes when slot/media options encountered when using the DIFF option, so currently not used
+//		if (diff)
+//			inistring = opts.output_ini(&emu_global);
+//		else
+			inistring = opts.output_ini();
 		// printf("=====%s=====\n%s\n",filename,inistring.c_str());  // for debugging
 		file->puts(inistring.c_str());
 		file.reset();
@@ -300,7 +310,7 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 
 	if (!fname.empty())
 	{
-		SaveSettingsFile(opts, fname.c_str());
+		SaveSettingsFile(opts, fname.c_str(), 1);
 		return;
 	}
 
@@ -328,7 +338,7 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 	{
 		if (game_num > -1)
 			SetDirectories(opts);
-		SaveSettingsFile(opts, filepath.c_str());
+		SaveSettingsFile(opts, filepath.c_str(), 1);
 //		printf("Settings saved to %s\n",filepath.c_str());
 	}
 //	else
@@ -350,9 +360,8 @@ void emu_opts_init(bool b)
 	GetModuleFileNameA(nullptr, exe_path, MAX_PATH);
 	emu_path = string(exe_path);
 	std::size_t pos = emu_path.find_last_of("\\");
-	emu_path = emu_path.substr(0,++pos);
-	emu_path.resize(pos);
-	printf("%s\n",emu_path.c_str());
+	emu_path.erase(pos);
+	printf("EmuPath = %s\n",emu_path.c_str());
 
 	dir_map[1] = dir_data { OPTION_PLUGINDATAPATH, 0 };
 	dir_map[2] = dir_data { OPTION_MEDIAPATH, 0 };
@@ -453,6 +462,7 @@ void ui_save_ini()
 
 void SetDirectories(windows_options &o)
 {
+	emu_set_value(o, OPTION_PLUGINDATAPATH, GetEmuPath());
 	emu_set_value(o, OPTION_MEDIAPATH, dir_get_value(2));
 	emu_set_value(o, OPTION_SAMPLEPATH, dir_get_value(4));
 	emu_set_value(o, OPTION_INIPATH, dir_get_value(7));
@@ -547,8 +557,10 @@ void SetSelectedSoftware(int driver_index, string opt_name, const char *software
 }
 
 // See if this driver has software support
-bool DriverHasSoftware(uint32_t drvindex)
+bool DriverHasSoftware(int drvindex)
 {
+	if (drvindex < 0)
+		return 0;
 	if (drvindex < driver_list::total())
 	{
 		windows_options o;
@@ -566,7 +578,7 @@ bool DriverHasSoftware(uint32_t drvindex)
 void global_save_ini(void)
 {
 	string fname = GetIniDir() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
-	SaveSettingsFile(emu_global, fname.c_str());
+	SaveSettingsFile(emu_global, fname.c_str(), 0);
 }
 
 bool AreOptionsEqual(windows_options &opts1, windows_options &opts2)

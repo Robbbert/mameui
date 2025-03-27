@@ -1,6 +1,9 @@
 // For licensing and usage information, read docs/release/winui_license.txt
 // MASTER
 //****************************************************************************
+// This all works, detection works etc etc, but what is supposed to happen?
+// In other words, what is the point of all this?
+
 
 // standard windows headers
 #include <windows.h>
@@ -250,12 +253,9 @@ static DWORD WINAPI DirWatcher_ThreadProc(LPVOID lpParameter)
 
 PDIRWATCHER DirWatcher_Init(HWND hwndTarget, UINT nMessage)
 {
+	printf("DirWatcher_Init ..");fflush(stdout);
 	DWORD nThreadID = 0;
 	struct DirWatcher *pWatcher = NULL;
-
-	// This feature does not exist on Win9x
-	if (GetVersion() >= 0x80000000)
-		goto error;
 
 	pWatcher = (DirWatcher *)malloc(sizeof(struct DirWatcher));
 	if (!pWatcher)
@@ -285,9 +285,11 @@ PDIRWATCHER DirWatcher_Init(HWND hwndTarget, UINT nMessage)
 
 	pWatcher->hwndTarget = hwndTarget;
 	pWatcher->nMessage = nMessage;
+	printf("initialised\n");
 	return pWatcher;
 
 error:
+	printf("an error occurred\n");
 	if (pWatcher)
 		DirWatcher_Free(pWatcher);
 	return NULL;
@@ -295,10 +297,13 @@ error:
 
 
 
-BOOL DirWatcher_Watch(PDIRWATCHER pWatcher, WORD nIndex, const std::string pszPathList, BOOL bWatchSubtrees)
+void DirWatcher_Watch(PDIRWATCHER pWatcher, WORD nIndex, std::string pszPathList, BOOL bWatchSubtrees)
 {
 	EnterCriticalSection(&pWatcher->crit);
 
+	size_t a = pszPathList.find(";"); // this might conflict with the code starting at line 215. To be checked.
+	if (a != std::string::npos)
+		pszPathList.erase(a);
 	pWatcher->nIndex = nIndex;
 	pWatcher->pszPathList = pszPathList.c_str();
 	pWatcher->bWatchSubtree = bWatchSubtrees;
@@ -306,7 +311,7 @@ BOOL DirWatcher_Watch(PDIRWATCHER pWatcher, WORD nIndex, const std::string pszPa
 
 	WaitForSingleObject(pWatcher->hResponseEvent, INFINITE);
 	LeaveCriticalSection(&pWatcher->crit);
-	return true;
+	return;
 }
 
 
