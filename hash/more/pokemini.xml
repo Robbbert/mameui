@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 41 -->
+<!-- Number of items in this list = 43 -->
 <softwarelist name="pokemini" description="pokemini loose roms">
 	<software name="pmi0ab8396c43e8f">
 		<description>3Dballtest</description>
@@ -9,6 +9,16 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="9871">
 				<rom name="3Dballtest.min" size="9871" crc="3034ec5b" sha1="0ab8396c43e8f12121d361308265aa5b48043720"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmib18a84b500be7">
+		<description>3Dcubetest(crashes mame)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="9802">
+				<rom name="3Dcubetest(crashes mame).min" size="9802" crc="f1de9320" sha1="b18a84b500be7acd8e1ada148171934eb0af0d1e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -219,6 +229,16 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="19280">
 				<rom name="Pokemon Orange Demo v0.54 (2007) (Wa) (PD).min" size="19280" crc="c81e7bd9" sha1="1665a4f57e1b63f57046e1abeb00fd723fc3e772"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmia15be0d086bc8">
+		<description>pokeporn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="524144">
+				<rom name="pokeporn.min" size="524144" crc="9329bce7" sha1="a15be0d086bc84fecf0f7dd22d184f7c0a211395"/>
 			</dataarea>
 		</part>
 	</software>

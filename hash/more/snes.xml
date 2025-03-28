@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3791 -->
+<!-- Number of items in this list = 3802 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3122,6 +3122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns59e86f0840b7d">
+		<description>Arcana T-Spa v1.2 (2021)(Andre Mena Calavia)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Arcana T-Spa v1.2 (2021)(Andre Mena Calavia).sfc" size="1048576" crc="443036ee" sha1="59e86f0840b7d57204e54ff4cd552306fcff2faf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsce43709614731">
 		<description>Archer MacLean's Dropzone (E) [T+Fre_Generation IX]</description>
 		<year>????</year>
@@ -4472,6 +4482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9e7e13a0bdf61">
+		<description>Breath of Fire II T-Spa v1.2 (2002)(Vegetal Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Breath of Fire II T-Spa v1.2 (2002)(Vegetal Translations).sfc" size="3145728" crc="eaf4cab5" sha1="9e7e13a0bdf61b898e69ec03980ab24beb07b6fe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf9ed76e897dac">
 		<description>Breath of Fire PT-BR v1.1 (2001)(Hexagon)</description>
 		<year>????</year>
@@ -4479,6 +4499,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Breath of Fire PT-BR v1.1 (2001)(Hexagon).sfc" size="1572864" crc="08098770" sha1="f9ed76e897dacaa54e8dad0d8e81fc4a8fd593cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscb0a13db314fe">
+		<description>Breath of Fire T-Ita (2019)(Clomax)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Breath of Fire T-Ita (2019)(Clomax).sfc" size="2097152" crc="b0a85466" sha1="cb0a13db314fe7f09ecb1a6aa8c10b4f096c3cdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse62caeb79ca0d">
+		<description>Breath of Fire T-Spa v1.3 (2003)(Vegetal Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Breath of Fire T-Spa v1.3 (2003)(Vegetal Translations).sfc" size="1572864" crc="4e55a8b8" sha1="e62caeb79ca0d70d1ae317a29e4a1d21f945a0ea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5559,6 +5599,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194816">
 				<rom name="Chrono Trigger Impossible (hack).sfc" size="4194816" crc="3f8494ff" sha1="db327f972c70dea9c0a6a30ead26f80748ffc639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb260de95bde99">
+		<description>Chrono Trigger T-Ita v1.2 (1998)(SadNES cITy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Chrono Trigger T-Ita v1.2 (1998)(SadNES cITy).sfc" size="4194304" crc="1bd38229" sha1="b260de95bde99bb0ba90c8594a1198adc92143c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd2eb364237974">
+		<description>Chrono Trigger T-Spa v1.07 (2020)(Rod Merida)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Chrono Trigger T-Spa v1.07 (2020)(Rod Merida).sfc" size="4194304" crc="e4389fb6" sha1="d2eb364237974fc859abfe1cad56eb4a6eed7aaf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7589,6 +7649,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1049088">
 				<rom name="Dungeon Master # SNES.sfc" size="1049088" crc="507ae5ae" sha1="e5dd35b40c0c475ef8ab7bc89c277be7bd62de5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns65ebbf0860694">
+		<description>E.V.O. - Search for Eden T-Spa v1.2 (2023)(semco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2359296">
+				<rom name="E.V.O. - Search for Eden T-Spa v1.2 (2023)(semco).sfc" size="2359296" crc="891efa16" sha1="65ebbf086069410159a5543091cbe306904bdc80"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10482,6 +10552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsc2a3bebde080c">
+		<description>Ganbare Goemon - Rescate de la Princesa Yuki T-Spa v0.9d (2021)(jackic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Ganbare Goemon - Rescate de la Princesa Yuki T-Spa v0.9d (2021)(jackic).sfc" size="1572864" crc="693aaf47" sha1="c2a3bebde080c967f2cc5359c7b816f4f7b1ec16"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsfb13dde88dd48">
 		<description>Ganbare Goemon - Yuki Hime Kyuushutsu Emaki (J) [T+Eng] DDSTranslation v1.0 [SRAM]</description>
 		<year>????</year>
@@ -10502,6 +10582,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb2ad17425473a">
+		<description>Ganbare Goemon 2 - El Extrano General McGuinness T-Spa v0.99 (2020)(jackic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Ganbare Goemon 2 - El Extrano General McGuinness T-Spa v0.99 (2020)(jackic).sfc" size="4194304" crc="6ec8b33b" sha1="b2ad17425473aa56ab5feef910610e0dd789d880"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6950df7ce8a96">
 		<description>Ganbare Goemon 2 - Kiteretsu Shougun Magginesu (J) [T+Eng] DDSTranslation v2.0</description>
 		<year>????</year>
@@ -10519,6 +10609,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Ganbare Goemon 2 - Kiteretsu Shougun Magginesu (J)(1993(Konami).sfc" size="2097152" crc="ca4c0219" sha1="adcc959f26bed5f53ec4539813224f7ffeea4b9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4e6b3ad07f1bd">
+		<description>Ganbare Goemon 3 - El Mecha Agarre de Jurokube Shishi T-Spa v0.98 (2020)(jackic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Ganbare Goemon 3 - El Mecha Agarre de Jurokube Shishi T-Spa v0.98 (2020)(jackic).sfc" size="4194304" crc="895348bb" sha1="4e6b3ad07f1bdb2f62becb139a849cc684bcbb5c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18802,6 +18902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb56729908756d">
+		<description>Nightmare Busters (E)(Bug Fix v1.1)(2012-2025)(Super Fighter Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Nightmare Busters (E)(Bug Fix v1.1)(2012-2025)(Super Fighter Team).sfc" size="2097152" crc="6614a2ca" sha1="b56729908756da5dec99e91134ada8d923d93a64"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns2ece13bfb233f">
 		<description>Nightmare Busters (E)(Bug Fix)(2012-2024)(Super Fighter Team)</description>
 		<year>????</year>
@@ -18809,6 +18919,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Nightmare Busters (E)(Bug Fix)(2012-2024)(Super Fighter Team).sfc" size="2097152" crc="1cef9982" sha1="2ece13bfb233f1c2ab29a7d3c918afd6ec318c12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns89c312d7992f1">
+		<description>Nightmare Busters (E, Proto)(1995)(Arcade Zone)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Nightmare Busters (E, Proto)(1995)(Arcade Zone).sfc" size="1048576" crc="5327c524" sha1="89c312d7992f1c1fe757e126dd3c3b751d18a8e3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18839,16 +18959,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Nightmare Busters T ALACANT.sfc" size="2097152" crc="2c41775e" sha1="5cf8dc69dd1b4a28a80368085e4d1e3b253eeb65"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns89c312d7992f1">
-		<description>Nightmare_Busters_(E)_[!]_(Unreleased)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Nightmare_Busters_(E)_[!]_(Unreleased).smc" size="1048576" crc="5327c524" sha1="89c312d7992f1c1fe757e126dd3c3b751d18a8e3"/>
 			</dataarea>
 		</part>
 	</software>

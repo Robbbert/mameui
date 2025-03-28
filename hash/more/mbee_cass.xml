@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 84 -->
+<!-- Number of items in this list = 91 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -19,6 +19,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="2362252">
 				<rom name="[-]Addition of Sine Waves.wav" size="2362252" crc="73bc5c3b" sha1="aeeeb6e8d12d34bc8c8d2093b0531525512f492d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3e78015b129fc">
+		<description>[-]Apple Panic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1365980">
+				<rom name="[-]Apple Panic.wav" size="1365980" crc="9607433f" sha1="3e78015b129fcd2baa0d4e3ceb0e774766555c9c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -59,6 +69,66 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="8961640">
 				<rom name="[-]Mystery of the Pyramid.wav" size="8961640" crc="c25d0056" sha1="b062157bd4b10c75058d87005944cd88ef8c6b58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee41d3b9646f797">
+		<description>[-]outhouse</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2444332">
+				<rom name="[-]outhouse.wav" size="2444332" crc="5b7f14ab" sha1="41d3b9646f797a944c3a3dede3c0082c00b31110"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beebe0178b926e8a">
+		<description>[-]PCG Character Designer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1079334">
+				<rom name="[-]PCG Character Designer.wav" size="1079334" crc="909a09b3" sha1="be0178b926e8a4a9708f8b57477d885401c907ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee22a24c952a589">
+		<description>[-]pcgdat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="352826">
+				<rom name="[-]pcgdat.wav" size="352826" crc="479a130b" sha1="22a24c952a589ca5e9c258b039b0fd9d8cd94970"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5531dd8aec7e7">
+		<description>[-]Petals Around the Rose</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1381402">
+				<rom name="[-]Petals Around the Rose.wav" size="1381402" crc="4f31a021" sha1="5531dd8aec7e7ac9c9c4d5f35818765df82bcf3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea67ba07667563">
+		<description>[-]Piano Bee, the</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4485646">
+				<rom name="[-]Piano Bee, the.wav" size="4485646" crc="5865518f" sha1="a67ba07667563b0b89815dea53485e745d5377e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec8287887a471f">
+		<description>[-]Pirate Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1487508">
+				<rom name="[-]Pirate Adventure.wav" size="1487508" crc="c502a901" sha1="c8287887a471f4df9a890753c44160cd909fe45a"/>
 			</dataarea>
 		</part>
 	</software>

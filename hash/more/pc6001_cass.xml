@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 165 -->
+<!-- Number of items in this list = 176 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -1239,6 +1239,116 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="2565">
 				<rom name="P6 Circuit {m1p2}.p6" size="2565" crc="a132d578" sha1="664b499acfffdeb2724675e728779debb3c9698b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6061cd715fa349a">
+		<description>Panzerspitze {m2p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="17475">
+				<rom name="Panzerspitze {m2p2}.p6" size="17475" crc="eabc2c6b" sha1="61cd715fa349af5be1e8eba6c8375323d696defa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p603d4c2c7879426">
+		<description>PC-6001 Note No. 1 (Biorhythm) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="1998">
+				<rom name="PC-6001 Note No. 1 (Biorhythm) {m1p2}.p6" size="1998" crc="c4481df9" sha1="3d4c2c78794268ea15fbb829900b822b401bdd17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60085b6b835eb14">
+		<description>PC-6001 Note No. 1 (Cassette Label Maker) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="2095">
+				<rom name="PC-6001 Note No. 1 (Cassette Label Maker) {m1p2}.p6" size="2095" crc="cc120263" sha1="085b6b835eb14adbb71c19d36bd368b8ba87c4b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60e77cbbb3ca15d">
+		<description>PC-6001 Note No. 1 (Eigo no Fukisoku Doushi Test) {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3577">
+				<rom name="PC-6001 Note No. 1 (Eigo no Fukisoku Doushi Test) {m1p1}.p6" size="3577" crc="94a13573" sha1="e77cbbb3ca15dbbafa79f85db078731b8587e084"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6039fe4a7304f08">
+		<description>PC-6001 Note No. 1 (Space Satan 1) {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3735">
+				<rom name="PC-6001 Note No. 1 (Space Satan 1) {m1p1}.p6" size="3735" crc="527eb7ca" sha1="39fe4a7304f08ab8acfd4a3e3d011441ca80f291"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60c022e00e058cc">
+		<description>PC-6001 Note No. 1 (Tournament-sen Jitsuryoku Hantei) {m1p1}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="2131">
+				<rom name="PC-6001 Note No. 1 (Tournament-sen Jitsuryoku Hantei) {m1p1}.p6" size="2131" crc="093f4ab9" sha1="c022e00e058cc8ba5516109a5fd6c7426acea2f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6013230e4e3e188">
+		<description>pilot2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3655">
+				<rom name="pilot2.p6" size="3655" crc="713fa0ae" sha1="13230e4e3e1886b5f7622bc93ce6ea82df486c24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60d860e9b0d6351">
+		<description>Ponyca 2 Game Series (Galac Convoy) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="5241">
+				<rom name="Ponyca 2 Game Series (Galac Convoy) {m1p2}.p6" size="5241" crc="c37e0349" sha1="d860e9b0d6351272240a009db2ef37ee5ab744b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6088cdc330fb3b8">
+		<description>Ponyca 2 Game Series (Shooting Invaders) {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="4478">
+				<rom name="Ponyca 2 Game Series (Shooting Invaders) {m1p2}.p6" size="4478" crc="24ccf028" sha1="88cdc330fb3b837325b275a6979ee0ad8681904b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p605218c2b520a79">
+		<description>Programming Bug Syntax Delete {m1p2}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="3151">
+				<rom name="Programming Bug Syntax Delete {m1p2}.p6" size="3151" crc="e04d0227" sha1="5218c2b520a797558f01f81e5ee27cbdd249f673"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p602dff557da3e48">
+		<description>Pyramid 2 {m4p3}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart2" interface="pc6001_cass">
+			<dataarea name="cass" size="18752">
+				<rom name="Pyramid 2 {m4p3}.cas" size="18752" crc="dcce31b0" sha1="2dff557da3e489e64a57d2205c5ea940e2062344"/>
 			</dataarea>
 		</part>
 	</software>
