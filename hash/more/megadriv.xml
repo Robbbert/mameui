@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1900 -->
+<!-- Number of items in this list = 1902 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4079,6 +4079,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="5242880">
 				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.1B (2025)(Yoni Arousement)_1.bin" size="5242880" crc="344f0b43" sha1="3f8949411b6723c95be049a0d8c2b454b82ad1ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1413429f19bb6">
+		<description>Bishoujo Super Street Fighter II - Glamor Queen v2.3 (2025)(Yoni Arousement)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.3 (2025)(Yoni Arousement).bin" size="5242880" crc="4af99b83" sha1="1413429f19bb65fd871673804c3450088cfae4e2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10839,6 +10849,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mortal Kombat Arcade Edition Enhanced v2.1 (2024)(Rael G.C.).bin" size="4194304" crc="486979c5" sha1="92583ab71798235e3b0b95f0bb34d0c0558d7410"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen09b4750cd2ab6">
+		<description>Mortal Kombat Arcade Edition Enhanced v2.2 (2025)(Rael G.C.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat Arcade Edition Enhanced v2.2 (2025)(Rael G.C.).bin" size="4194304" crc="e0b10bf3" sha1="09b4750cd2ab66943ff1fae2c4c8c06e80f392cc"/>
 			</dataarea>
 		</part>
 	</software>

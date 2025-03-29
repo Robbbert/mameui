@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 91 -->
+<!-- Number of items in this list = 95 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -69,6 +69,46 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="8961640">
 				<rom name="[-]Mystery of the Pyramid.wav" size="8961640" crc="c25d0056" sha1="b062157bd4b10c75058d87005944cd88ef8c6b58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7c3af32b6d3bc">
+		<description>[-]octhex</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="595590">
+				<rom name="[-]octhex.wav" size="595590" crc="458a5563" sha1="7c3af32b6d3bcf35032f24f1abfaeb87e8389d54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeed43309b3437a">
+		<description>[-]OneArmBandit96k3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="17526333">
+				<rom name="[-]OneArmBandit96k3.wav" size="17526333" crc="2ab05a35" sha1="ed43309b3437a04b2aece10d2e49bbf963b14a36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee8a27b58cafca0">
+		<description>[-]Opener (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="7443820">
+				<rom name="[-]Opener (2).wav" size="7443820" crc="d954e7af" sha1="8a27b58cafca02494650ad686991b2974dabf0e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3ffd95e7a6af1">
+		<description>[-]Opener</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="7475057">
+				<rom name="[-]Opener.wav" size="7475057" crc="da81ea2c" sha1="3ffd95e7a6af1acdb6c23e5565e0bff986ba2c41"/>
 			</dataarea>
 		</part>
 	</software>
