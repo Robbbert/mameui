@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="alphatro_cart" description="alphatro_cart loose roms">
+	<software name="alpfaa3f78ff1555">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="alphatro_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Deepspace.bin" size="16384" crc="c3c70327" sha1="faa3f78ff1555587525cb04af84f4e05059e22f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alp4b41a278bf93e">
+		<description>Elite Planet Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="alphatro_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Elite Planet Browser.bin" size="16384" crc="b4d0c354" sha1="4b41a278bf93e2e01b7ed945b4176384851e5cf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alp9604955c2980a">
+		<description>H-tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="alphatro_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="H-tron.bin" size="16384" crc="af65cf22" sha1="9604955c2980a1eb6b630fb48beb01f3ac6258f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alp0721c425252ab">
+		<description>MastermindRK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="alphatro_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="MastermindRK.bin" size="16384" crc="ce156e6b" sha1="0721c425252ab96c064957606b64af6c656033a1"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

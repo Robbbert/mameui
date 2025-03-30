@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 95 -->
+<!-- Number of items in this list = 99 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -69,6 +69,46 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="8961640">
 				<rom name="[-]Mystery of the Pyramid.wav" size="8961640" crc="c25d0056" sha1="b062157bd4b10c75058d87005944cd88ef8c6b58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb31796905910c">
+		<description>[-]nim (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2402298">
+				<rom name="[-]nim (3).wav" size="2402298" crc="bad12aa2" sha1="b31796905910c8f2401508b2e70d0029845b03d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3ea0dd1a2c8da">
+		<description>[-]nim</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1875890">
+				<rom name="[-]nim.wav" size="1875890" crc="9655074d" sha1="3ea0dd1a2c8da91a01c5e226f57951ec6f644792"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee5d0547d1e2bf">
+		<description>[-]nim96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="10176140">
+				<rom name="[-]nim96k1.wav" size="10176140" crc="3b749b01" sha1="e5d0547d1e2bf487cab0fd5bcfcbc4f296e72587"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0fb4744493ebd">
+		<description>[-]numberguess96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="15509720">
+				<rom name="[-]numberguess96k1.wav" size="15509720" crc="2b07963c" sha1="0fb4744493ebd28641d0824f0583822bd8bb77a3"/>
 			</dataarea>
 		</part>
 	</software>

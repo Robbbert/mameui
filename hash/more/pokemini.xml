@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 43 -->
+<!-- Number of items in this list = 74 -->
 <softwarelist name="pokemini" description="pokemini loose roms">
 	<software name="pmi0ab8396c43e8f">
 		<description>3Dballtest</description>
@@ -13,12 +13,12 @@
 		</part>
 	</software>
 	<software name="pmib18a84b500be7">
-		<description>3Dcubetest(crashes mame)</description>
+		<description>3Dcubetest</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="9802">
-				<rom name="3Dcubetest(crashes mame).min" size="9802" crc="f1de9320" sha1="b18a84b500be7acd8e1ada148171934eb0af0d1e"/>
+				<rom name="3Dcubetest.min" size="9802" crc="f1de9320" sha1="b18a84b500be7acd8e1ada148171934eb0af0d1e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52,13 +52,63 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pmi26a51a691f7f6">
-		<description>eep</description>
+	<software name="pmi1a09d5ed65028">
+		<description>Bounce</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pokemini_cart">
-			<dataarea name="rom" size="9673">
-				<rom name="eep.min" size="9673" crc="99924e6b" sha1="26a51a691f7f6007b65ddbd28017256d7938ede2"/>
+			<dataarea name="rom" size="36400">
+				<rom name="Bounce.min" size="36400" crc="402202b2" sha1="1a09d5ed65028561b066f7a1f74028681b660eeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmif1f7edcea06cf">
+		<description>cortex_053</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="25455">
+				<rom name="cortex_053.min" size="25455" crc="1dbbec7e" sha1="f1f7edcea06cf0fbb80887f66361f8c1a8c43cf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi394921e1296b5">
+		<description>cortex_061</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="28783">
+				<rom name="cortex_061.min" size="28783" crc="78c8465c" sha1="394921e1296b5558bc14ce22f50898c768480586"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi161a2a6c0d34c">
+		<description>cortex_070</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="29359">
+				<rom name="cortex_070.min" size="29359" crc="892b1b54" sha1="161a2a6c0d34c59ac5353f82d5d87fc00d109834"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi4963e63439e99">
+		<description>Deathtrap_10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="19328">
+				<rom name="Deathtrap_10.min" size="19328" crc="1cb52806" sha1="4963e63439e99d8b922e7e546f730584ae997239"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi894fb6f9f3e21">
+		<description>deathtrap_11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="19520">
+				<rom name="deathtrap_11.min" size="19520" crc="5645b12f" sha1="894fb6f9f3e21ef644f62e569789a4f062e82c47"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69,6 +119,36 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="26880">
 				<rom name="elite.min" size="26880" crc="f297f1cd" sha1="22f7ce5159395c840d511217178551fdc6ccd02f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi26a51a691f7f6">
+		<description>Eprom Browser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="9673">
+				<rom name="Eprom Browser.min" size="9673" crc="99924e6b" sha1="26a51a691f7f6007b65ddbd28017256d7938ede2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi46938f0413512">
+		<description>flappybird</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="32176">
+				<rom name="flappybird.min" size="32176" crc="f370b21d" sha1="46938f04135127201e6f10beacd69bf6710d5a18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmid74513ed4b07c">
+		<description>Frank the Fruit Fly_161</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="233448">
+				<rom name="Frank the Fruit Fly_161.min" size="233448" crc="8413b9dd" sha1="d74513ed4b07c1703b5f4e577c338ff2abf3ee25"/>
 			</dataarea>
 		</part>
 	</software>
@@ -89,6 +169,16 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="70046">
 				<rom name="galactix.min" size="70046" crc="4e6305b7" sha1="90fd0d0f8fd8a5d7540e8d324482fb02ac6bec00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi6becf786c3975">
+		<description>GJPG Rhythm Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="34176">
+				<rom name="GJPG Rhythm Demo.min" size="34176" crc="9bb36b84" sha1="6becf786c3975c57dc338add6f7f8b3f85b7bf7d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -172,6 +262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pmi1a11c8abccffc">
+		<description>loopover</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="65600">
+				<rom name="loopover.min" size="65600" crc="fc2a1c6a" sha1="1a11c8abccffccddff2f760e8945bdf2e2af461a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pmi9dfc34364ab09">
 		<description>minicookie</description>
 		<year>????</year>
@@ -179,6 +279,46 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="12544">
 				<rom name="minicookie.min" size="12544" crc="b2a9a1ee" sha1="9dfc34364ab09fe3211a0b7188b214780a17e85e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi4057dd9731344">
+		<description>pacit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="82688">
+				<rom name="pacit.min" size="82688" crc="c9e2b23b" sha1="4057dd97313444d05db4264f57c0917e6b427d6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi4db4568b99007">
+		<description>party_j</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="party_j.min" size="524288" crc="ae2dde60" sha1="4db4568b990077c21320b50dee6a3ceb258809db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmibf31fcc3b834b">
+		<description>pazuru</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="29568">
+				<rom name="pazuru.min" size="29568" crc="08c07ddf" sha1="bf31fcc3b834be3d2deeb8e15b085be5dc87849b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi8728b7e566925">
+		<description>Petals Around the Rose</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="17388">
+				<rom name="Petals Around the Rose.min" size="17388" crc="555d19f0" sha1="8728b7e566925afeaa701fb142c66d484b6d1850"/>
 			</dataarea>
 		</part>
 	</software>
@@ -192,13 +332,63 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pmi26d975fe9e04b">
-		<description>pmsinus</description>
+	<software name="pmi0ef3e3caba555">
+		<description>Pichu Bros. mini English</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="pmsinus.min" size="524288" crc="104a19f7" sha1="26d975fe9e04b4049b86063e64090e09d1cea4a4"/>
+				<rom name="Pichu Bros. mini English.min" size="524288" crc="77b6c5dc" sha1="0ef3e3caba555826ebaee2468c9a11ea48c39788"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmia2e268b3bd4cb">
+		<description>pmtester</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="18640">
+				<rom name="pmtester.min" size="18640" crc="7f3a84d7" sha1="a2e268b3bd4cb2da36033e4af4d5c89cbea9d40c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi4a901507e70e6">
+		<description>pmtester2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="18832">
+				<rom name="pmtester2.min" size="18832" crc="17019b78" sha1="4a901507e70e622eaa991faad0416ddaae7c9f24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi32a24216113e4">
+		<description>pmtester3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="18928">
+				<rom name="pmtester3.min" size="18928" crc="0ef2c449" sha1="32a24216113e406cb813eb4da1063b2e95308ffe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi6d3015646b0f3">
+		<description>pmtester4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="19032">
+				<rom name="pmtester4.min" size="19032" crc="567a42d8" sha1="6d3015646b0f34d8a2cafd17dd60162018858496"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmid2c066c62897b">
+		<description>pmtester5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="13832">
+				<rom name="pmtester5.min" size="13832" crc="7cd914cb" sha1="d2c066c62897b888131304f2ca99c5123d647f2a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -229,6 +419,16 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="19280">
 				<rom name="Pokemon Orange Demo v0.54 (2007) (Wa) (PD).min" size="19280" crc="c81e7bd9" sha1="1665a4f57e1b63f57046e1abeb00fd723fc3e772"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmidccbf7376f07d">
+		<description>pokemonpartytwo15</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="30528">
+				<rom name="pokemonpartytwo15.min" size="30528" crc="61bb6d4c" sha1="dccbf7376f07d1fbecfe0b7d0b0a1389a4360e9d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -312,6 +512,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pmi8e7cbae48ffc2">
+		<description>puz2-e</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="puz2-e.min" size="524288" crc="171403a0" sha1="8e7cbae48ffc2e91baa339cf9fcb4b0983aca6c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmib9c60598a095a">
+		<description>remote_sony</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="10240">
+				<rom name="remote_sony.min" size="10240" crc="1da06c3c" sha1="b9c60598a095a049fcb82762112a5a4f95ced8bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi0d1bfca7d8c56">
+		<description>remote_thomson</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="10256">
+				<rom name="remote_thomson.min" size="10256" crc="6503dcc6" sha1="0d1bfca7d8c56a49995b9ea246708db3c1e6d020"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi46920b43d82c1">
+		<description>rom5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="9922">
+				<rom name="rom5.min" size="9922" crc="d25085ef" sha1="46920b43d82c1cdf52215b51c7cffa1844652d5a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pmi75be9f2b3cb1b">
 		<description>SHizZLE</description>
 		<year>????</year>
@@ -322,13 +562,43 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pmi26d975fe9e04b">
+		<description>Sinus Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Sinus Demo.min" size="524288" crc="104a19f7" sha1="26d975fe9e04b4049b86063e64090e09d1cea4a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmif357875eb5a16">
+		<description>soda-e</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="soda-e.min" size="524288" crc="c0460385" sha1="f357875eb5a16dd7d8f883f1e6a12500c0f391e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi3b87d4d61ba3d">
+		<description>soda-j</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="soda-j.min" size="524288" crc="d55fc4c8" sha1="3b87d4d61ba3db92190b6ffa055f463adea2363c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pmi9a4f9152d0fe3">
-		<description>sokomini (2)</description>
+		<description>sokofun</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="56288">
-				<rom name="sokomini (2).min" size="56288" crc="350f91e9" sha1="9a4f9152d0fe3cc0f32255bab1d2f1edcc4b00b6"/>
+				<rom name="sokofun.min" size="56288" crc="350f91e9" sha1="9a4f9152d0fe3cc0f32255bab1d2f1edcc4b00b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -343,12 +613,12 @@
 		</part>
 	</software>
 	<software name="pmi611045653aa42">
-		<description>sokomini_1</description>
+		<description>sokomini_hwfix</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="25344">
-				<rom name="sokomini_1.min" size="25344" crc="5b6cd1a3" sha1="611045653aa42c35aa78c6592a886ee8cc38a55d"/>
+				<rom name="sokomini_hwfix.min" size="25344" crc="5b6cd1a3" sha1="611045653aa42c35aa78c6592a886ee8cc38a55d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -373,22 +643,22 @@
 		</part>
 	</software>
 	<software name="pmic20fb5ca92558">
-		<description>Sonikku Arîna v1(Jp)</description>
+		<description>Sonikku Arena v1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="20224">
-				<rom name="Sonikku Arîna v1(Jp).min" size="20224" crc="c3fd409a" sha1="c20fb5ca925584b1d84f551aa75cba7c826f2bd9"/>
+				<rom name="Sonikku Arena v1.min" size="20224" crc="c3fd409a" sha1="c20fb5ca925584b1d84f551aa75cba7c826f2bd9"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="pmibfa07aac3a2ab">
-		<description>sprite</description>
+		<description>Sprite Masking Demo</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="sprite.min" size="524288" crc="7a2db37d" sha1="bfa07aac3a2ab4fc14bbd1b8aeffb1c3f0d7a5d7"/>
+				<rom name="Sprite Masking Demo.min" size="524288" crc="7a2db37d" sha1="bfa07aac3a2ab4fc14bbd1b8aeffb1c3f0d7a5d7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -403,12 +673,32 @@
 		</part>
 	</software>
 	<software name="pmi24eb65528fda4">
-		<description>teampokemel</description>
+		<description>Team Pokeme Logo</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="9485">
-				<rom name="teampokemel.min" size="9485" crc="eda0c049" sha1="24eb65528fda4210f0da11390eaff6807eada747"/>
+				<rom name="Team Pokeme Logo.min" size="9485" crc="eda0c049" sha1="24eb65528fda4210f0da11390eaff6807eada747"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi7f2de7dfabc1b">
+		<description>Togepi's Great Adventure (E)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Togepi's Great Adventure (E).min" size="524288" crc="acab99f3" sha1="7f2de7dfabc1b52c916567a33d7bed1d655a5d44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi0f56e0a3e7218">
+		<description>Togepi's Great Adventure (J)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Togepi's Great Adventure (J).min" size="524288" crc="33b3492b" sha1="0f56e0a3e72180b1113b900a6d3e4f8e8f570bb3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -429,6 +719,26 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="32676">
 				<rom name="Uridium.min" size="32676" crc="a75517a6" sha1="79bb166f95350adf8d847f5525f59b3039d2ee73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi2feed40306fa4">
+		<description>Wooloo's Run Away</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="67584">
+				<rom name="Wooloo's Run Away.min" size="67584" crc="5c2fde5f" sha1="2feed40306fa4a253ab206b1e74ef4c407c7fdea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pmi1e4dc752bfffe">
+		<description>Zelda Mini</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pokemini_cart">
+			<dataarea name="rom" size="17995">
+				<rom name="Zelda Mini.min" size="17995" crc="87d86d1c" sha1="1e4dc752bfffeb7fc5a281d20d3b583aca8e7f20"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 432 -->
+<!-- Number of items in this list = 448 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="bee31c8588566b2a">
 		<description>[-](demo)strngart</description>
@@ -462,6 +462,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beeee1441a624904">
+		<description>[-]news</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1280">
+				<rom name="[-]news.mwb" size="1280" crc="318d7924" sha1="ee1441a62490436e7ff9158b9e0ba845f6228759"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3d358fa830059">
+		<description>[-]nim (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2816">
+				<rom name="[-]nim (2).mwb" size="2816" crc="66717a65" sha1="3d358fa830059a0bb903fb01c1fc69b680eb87b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea50dc798ac937">
+		<description>[-]nim</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2816">
+				<rom name="[-]nim.mwb" size="2816" crc="1b97ff93" sha1="a50dc798ac937f786bdae312a41a0418d1aa7aea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5462336654791">
+		<description>[-]nim1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4480">
+				<rom name="[-]nim1.mwb" size="4480" crc="0b275e32" sha1="5462336654791cf83017c874a51b307f19f3d6c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee53ab3112a2db2">
+		<description>[-]nim2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2816">
+				<rom name="[-]nim2.mwb" size="2816" crc="ff95129b" sha1="53ab3112a2db2da2608c7fe24a8d615f1993b6ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec4071994e2c9b">
+		<description>[-]nim_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2816">
+				<rom name="[-]nim_1.mwb" size="2816" crc="6147a8b6" sha1="c4071994e2c9b572ffc93c6207702687631ea626"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef915ea8c1c97f">
+		<description>[-]nominate</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1536">
+				<rom name="[-]nominate.mwb" size="1536" crc="fc7fd259" sha1="f915ea8c1c97fc41904aac8d8a232d91f28f10c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4b2e3b056f017">
+		<description>[-]noname</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="[-]noname.mwb" size="1152" crc="03e01da2" sha1="4b2e3b056f017a7a300276932579bd08ccd90ff7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beebe3f29758469c">
+		<description>[-]nought&amp;x</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="[-]nought&amp;x.mwb" size="12288" crc="08c474fa" sha1="be3f29758469ca8ce6a501112b6184863ce29fdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3f96511f3e968">
+		<description>[-]nswdemo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3200">
+				<rom name="[-]nswdemo.mwb" size="3200" crc="44f4147c" sha1="3f96511f3e9684414f892014f67fbace6666a438"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee888a6b7c75e66">
 		<description>[-]Nuclear Submarine</description>
 		<year>????</year>
@@ -479,6 +579,46 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="7424">
 				<rom name="[-]Nuclear War.mwb" size="7424" crc="f09309cd" sha1="e50a8d263cbe61e7000b90c89039e051bc47b4ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9275b95e14276">
+		<description>[-]Number-Letter Puzzle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3328">
+				<rom name="[-]Number-Letter Puzzle.mwb" size="3328" crc="20762096" sha1="9275b95e1427677b47661b178c7e293869696111"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee231e1bb7848b9">
+		<description>[-]numconv</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2688">
+				<rom name="[-]numconv.mwb" size="2688" crc="499970d4" sha1="231e1bb7848b9fceb6632275a0a796d46e9949d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecdf70d68a2b53">
+		<description>[-]numconv_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2688">
+				<rom name="[-]numconv_1.mwb" size="2688" crc="4dd69e1c" sha1="cdf70d68a2b5389eb7bcf7b74a899370bd7291e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee39b76a184e5c">
+		<description>[-]numguess</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1024">
+				<rom name="[-]numguess.mwb" size="1024" crc="1528934d" sha1="e39b76a184e5cce8d3e2e8152d08a35695f9b98d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3922,6 +4062,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee4b2ce780f2909">
+		<description>[-]Word Nester</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="8832">
+				<rom name="[-]Word Nester.mwb" size="8832" crc="f13963b7" sha1="4b2ce780f290994d78e9cd206b5ef1b55f2c3936"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee2b26d4ce26534">
 		<description>[-]Words Game</description>
 		<year>????</year>
@@ -4279,6 +4429,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="1536">
 				<rom name="[ppc]car.mwb" size="1536" crc="dcd1c318" sha1="9d498f76eedf417be5c326953e41d3b294b80771"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef51e5e447a69f">
+		<description>[ppc]nude</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4352">
+				<rom name="[ppc]nude.mwb" size="4352" crc="5461bae5" sha1="f51e5e447a69f6975779b6a1648dd89dca30f6aa"/>
 			</dataarea>
 		</part>
 	</software>
