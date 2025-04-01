@@ -594,7 +594,9 @@ private:
 
 	// alu and shift operation helpers
 	static bool ones(u64 const value, unsigned const size) noexcept { return (size == 4) ? u32(value) == 0xffffffffU : value == 0xffffffff'ffffffffULL; }
-	void alu_op_param(asmjit::x86::Assembler &a, asmjit::x86::Inst::Id const opcode, asmjit::Operand const &dst, be_parameter const &param, std::function<bool(asmjit::x86::Assembler &a, asmjit::Operand const &dst, be_parameter const &src)> optimize = [](asmjit::x86::Assembler &a, asmjit::Operand dst, be_parameter const &src) { return false; });
+	template <typename T>
+	void alu_op_param(asmjit::x86::Assembler &a, asmjit::x86::Inst::Id const opcode, asmjit::Operand const &dst, be_parameter const &param, T &&optimize);
+	void alu_op_param(asmjit::x86::Assembler &a, asmjit::x86::Inst::Id const opcode, asmjit::Operand const &dst, be_parameter const &param) { alu_op_param(a, opcode, dst, param, [] (asmjit::x86::Assembler &a, asmjit::Operand dst, be_parameter const &src) { return false; }); }
 	void shift_op_param(asmjit::x86::Assembler &a, asmjit::x86::Inst::Id const opcode, size_t opsize, asmjit::Operand const &dst, be_parameter const &param, u8 update_flags);
 
 	// parameter helpers
@@ -1401,7 +1403,8 @@ void drcbe_x64::get_info(drcbe_info &info) const noexcept
 			break;
 }
 
-void drcbe_x64::alu_op_param(Assembler &a, Inst::Id const opcode, Operand const &dst, be_parameter const &param, std::function<bool(Assembler &a, Operand const &dst, be_parameter const &src)> optimize)
+template <typename T>
+void drcbe_x64::alu_op_param(Assembler &a, Inst::Id const opcode, Operand const &dst, be_parameter const &param, T &&optimize)
 {
 	bool const is64 = dst.x86RmSize() == 8;
 
@@ -1430,11 +1433,15 @@ void drcbe_x64::alu_op_param(Assembler &a, Inst::Id const opcode, Operand const 
 			a.emit(opcode, dst, tmp);
 		}
 		else if (opcode != Inst::kIdTest)
+		{
 			// most instructions are register,memory
 			a.emit(opcode, dst, MABS(param.memory()));
+		}
 		else
+		{
 			// test instruction requires memory,register
 			a.emit(opcode, MABS(param.memory()), dst);
+		}
 	}
 	else if (param.is_int_register())
 	{
@@ -1572,7 +1579,14 @@ void drcbe_x64::shift_op_param(Assembler &a, Inst::Id const opcode, size_t opsiz
 			a.clc(); // throw away carry since it'll never be used
 
 		if (update_flags & (FLAG_S | FLAG_Z))
-			calculate_status_flags(a, opsize, dst, FLAG_S | FLAG_Z);
+		{
+			if (update_flags & FLAG_C)
+				calculate_status_flags(a, opsize, dst, FLAG_S | FLAG_Z);
+			else if (dst.isMem())
+				a.test(dst.as<Mem>(), util::make_bitmask<uint64_t>(opsize * 8));
+			else
+				a.test(dst.as<Gp>(), dst.as<Gp>());
+		}
 	}
 	else if (update_flags || carryin)
 	{
@@ -1621,7 +1635,14 @@ void drcbe_x64::shift_op_param(Assembler &a, Inst::Id const opcode, size_t opsiz
 			a.bind(end);
 
 		if (update_flags & (FLAG_S | FLAG_Z))
-			calculate_status_flags(a, opsize, dst, FLAG_S | FLAG_Z); // calculate status flags but preserve carry
+		{
+			if (update_flags & FLAG_C)
+				calculate_status_flags(a, opsize, dst, FLAG_S | FLAG_Z);
+			else if (dst.isMem())
+				a.test(dst.as<Mem>(), util::make_bitmask<uint64_t>(opsize * 8));
+			else
+				a.test(dst.as<Gp>(), dst.as<Gp>());
+		}
 	}
 	else
 	{
@@ -3813,9 +3834,10 @@ void drcbe_x64::op_roland(Assembler &a, const instruction &inst)
 	be_parameter srcp(*this, inst.param(1), PTYPE_MRI);
 	be_parameter shiftp(*this, inst.param(2), PTYPE_MRI);
 	be_parameter maskp(*this, inst.param(3), PTYPE_MRI);
+	const unsigned bits = inst.size() * 8;
 
 	// pick a target register
-	Gp dstreg = dstp.select_register((inst.size() == 4) ? Gp(eax) : Gp(rax), shiftp, maskp);
+	Gp dstreg = dstp.select_register((inst.size() == 4) ? Gp(eax) : Gp(rax), maskp);
 
 	if (maskp.is_immediate_value(0))
 	{
@@ -3823,7 +3845,6 @@ void drcbe_x64::op_roland(Assembler &a, const instruction &inst)
 	}
 	else if (shiftp.is_immediate() && (srcp.is_immediate() || maskp.is_immediate()))
 	{
-		const unsigned bits = inst.size() * 8;
 		const unsigned shift = shiftp.immediate() & (bits - 1);
 		const uint64_t sizemask = util::make_bitmask<uint64_t>(bits);
 		if (srcp.is_immediate())
@@ -3915,10 +3936,19 @@ void drcbe_x64::op_roland(Assembler &a, const instruction &inst)
 	}
 	else
 	{
-		mov_reg_param(a, dstreg, srcp);
-		shift_op_param(a, Inst::kIdRol, inst.size(), dstreg, shiftp, 0);
+		if (shiftp.is_immediate())
+		{
+			mov_reg_param(a, dstreg, srcp);
+			a.rol(dstreg, shiftp.immediate() & (bits - 1));
+		}
+		else
+		{
+			mov_reg_param(a, ecx, shiftp); // must happen before loading dstreg as shift and dst may be the same register
+			mov_reg_param(a, dstreg, srcp);
+			a.rol(dstreg, cl);
+		}
 		alu_op_param(a, Inst::kIdAnd, dstreg, maskp,
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// all-one cases
 				if (ones(src.immediate(), inst.size()))
@@ -4250,7 +4280,7 @@ void drcbe_x64::op_add(Assembler &a, const instruction &inst)
 	{
 		// dstp == src1p in memory
 		alu_op_param(a, Inst::kIdAdd, MABS(dstp.memory(), inst.size()), src2p,          // add   [dstp],src2p
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize zero case
 				return (!inst.flags() && !src.immediate());
@@ -4282,7 +4312,7 @@ void drcbe_x64::op_add(Assembler &a, const instruction &inst)
 
 		mov_reg_param(a, dstreg, src1p);                                                // mov   dstreg,src1p
 		alu_op_param(a, Inst::kIdAdd, dstreg, src2p,                                    // add   dstreg,src2p
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize zero case
 				return (!inst.flags() && !src.immediate() && (inst.size() != 4));
@@ -4348,7 +4378,7 @@ void drcbe_x64::op_sub(Assembler &a, const instruction &inst)
 	{
 		// dstp == src1p in memory
 		alu_op_param(a, Inst::kIdSub, MABS(dstp.memory(), inst.size()), src2p,          // sub   [dstp],src2p
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize zero case
 				return (!inst.flags() && !src.immediate());
@@ -4371,7 +4401,7 @@ void drcbe_x64::op_sub(Assembler &a, const instruction &inst)
 
 		mov_reg_param(a, dstreg, src1p);                                                // mov   dstreg,src1p
 		alu_op_param(a, Inst::kIdSub, dstreg, src2p,                                    // sub   dstreg,src2p
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize zero case
 				return (!inst.flags() && !src.immediate() && (inst.size() != 4));
@@ -4979,7 +5009,7 @@ void drcbe_x64::op_test(Assembler &a, const instruction &inst)
 
 		mov_reg_param(a, src1reg, src1p);
 		alu_op_param(a, Inst::kIdTest, src1reg, src2p,
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize all-one cases
 				if (ones(src.immediate(), inst.size()))
@@ -5015,7 +5045,7 @@ void drcbe_x64::op_or(Assembler &a, const instruction &inst)
 	{
 		// dstp == src1p in memory
 		alu_op_param(a, Inst::kIdOr, MABS(dstp.memory(), inst.size()), src2p,           // or    [dstp],src2p
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize all-zero and all-one cases
 				if (!inst.flags() && ones(src.immediate(), inst.size()))
@@ -5039,7 +5069,7 @@ void drcbe_x64::op_or(Assembler &a, const instruction &inst)
 
 		mov_reg_param(a, dstreg, src1p);                                                // mov   dstreg,src1p
 		alu_op_param(a, Inst::kIdOr, dstreg, src2p,                                     // or    dstreg,src2p
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize all-zero and all-one cases
 				if (!inst.flags() && ones(src.immediate(), inst.size()))
@@ -5093,7 +5123,7 @@ void drcbe_x64::op_xor(Assembler &a, const instruction &inst)
 	{
 		// dstp == src1p in memory
 		alu_op_param(a, Inst::kIdXor, MABS(dstp.memory(), inst.size()), src2p,          // xor   [dstp],src2p
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize all-zero and all-one cases
 				if (!inst.flags() && ones(src.immediate(), inst.size()))
@@ -5113,7 +5143,7 @@ void drcbe_x64::op_xor(Assembler &a, const instruction &inst)
 		Gp const dst = Gp::fromTypeAndId((inst.size() == 4) ? RegType::kX86_Gpd : RegType::kX86_Gpq, dstp.ireg());
 
 		alu_op_param(a, Inst::kIdXor, dst, src2p,
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize all-zero and all-one cases
 				if (!inst.flags() && ones(src.immediate(), inst.size()))
@@ -5146,7 +5176,7 @@ void drcbe_x64::op_xor(Assembler &a, const instruction &inst)
 
 		mov_reg_param(a, dstreg, src1p);
 		alu_op_param(a, Inst::kIdXor, dstreg, src2p,
-			[inst](Assembler &a, Operand const &dst, be_parameter const &src)
+			[inst] (Assembler &a, Operand const &dst, be_parameter const &src)
 			{
 				// optimize all-zero and all-one cases
 				if (!inst.flags() && ones(src.immediate(), inst.size()))
