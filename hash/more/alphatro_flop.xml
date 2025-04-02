@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 37 -->
+<!-- Number of items in this list = 36 -->
 <softwarelist name="alphatro_flop" description="alphatro_flop loose roms">
 	<software name="alp355c4ad4abb6d">
 		<description>[P2]KISS</description>
@@ -339,16 +339,6 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="124515">
 				<rom name="[pc]ROYCPM.IMD" size="124515" crc="bba8216d" sha1="c6e642d744f0b2d9170e598564842e18e60bb3e3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="alpe69cc39d9a622">
-		<description>[pc]roycpm</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="128877">
-				<rom name="[pc]roycpm.td0" size="128877" crc="bf47c534" sha1="e69cc39d9a6229c5e5a2055e8950d085b34e607d"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 448 -->
+<!-- Number of items in this list = 472 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="bee31c8588566b2a">
 		<description>[-](demo)strngart</description>
@@ -452,6 +452,146 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee91d0695daa302">
+		<description>[-]mugwmp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3200">
+				<rom name="[-]mugwmp.mwb" size="3200" crc="77ac1d5f" sha1="91d0695daa302ea4833e80ec284bdd540e05ccac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2f42f8ddbc17b">
+		<description>[-]mugwmp_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5888">
+				<rom name="[-]mugwmp_1.mwb" size="5888" crc="c35d8409" sha1="2f42f8ddbc17b4140da481337c4af1e35a1a44cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee992321255f027">
+		<description>[-]mugwump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5888">
+				<rom name="[-]mugwump.mwb" size="5888" crc="5707999b" sha1="992321255f0277dca028732f81d89f7e058a78ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea06a57ad9c395">
+		<description>[-]multi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2816">
+				<rom name="[-]multi.mwb" size="2816" crc="ca31f155" sha1="a06a57ad9c395bc8f9fbf0defbeaf8b93fcbc64d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee47c5017f1781c">
+		<description>[-]multirom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1040">
+				<rom name="[-]multirom.bee" size="1040" crc="3d686b29" sha1="47c5017f1781cf015fa03ef77898e649c2f02470"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb68a23e515ec1">
+		<description>[-]multirom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3024">
+				<rom name="[-]multirom.mwb" size="3024" crc="246ae111" sha1="b68a23e515ec1ba788fc06cd197b96e7ab9372b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee631ae794faf6">
+		<description>[-]munch-j</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="[-]munch-j.mwb" size="2176" crc="1929b815" sha1="e631ae794faf66e5d87b8ee3b68e11384fe96a21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed764dbf11963e">
+		<description>[-]munch</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="[-]munch.mwb" size="3968" crc="d20cc1ab" sha1="d764dbf11963ecb3242469b12c137d001427d11a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9fa370ed692d5">
+		<description>[-]muncher</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3840">
+				<rom name="[-]muncher.mwb" size="3840" crc="392d6578" sha1="9fa370ed692d526691a40a847b35990bc41838cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee54062a542e83c">
+		<description>[-]munch_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3712">
+				<rom name="[-]munch_1.mwb" size="3712" crc="9b9c3995" sha1="54062a542e83ce7cc136334e502c8402d67655e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb7939e672c661">
+		<description>[-]munch_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="[-]munch_2.mwb" size="2176" crc="912a062f" sha1="b7939e672c661da9aeced1cbd9f902aa67f67cf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee73c765d358211">
+		<description>[-]munch_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="[-]munch_3.mwb" size="3968" crc="7d5cf551" sha1="73c765d358211d47c9ace461427258f62ae545f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee8550cee2cb330">
+		<description>[-]munch_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3840">
+				<rom name="[-]munch_4.mwb" size="3840" crc="5774559b" sha1="8550cee2cb330b44c56a56911a2889dd3c13c41c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec23a690c61125">
+		<description>[-]museum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="16128">
+				<rom name="[-]museum.mwb" size="16128" crc="e05f7f81" sha1="c23a690c611250436dbf8b712da32d564233474a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beef8eeba55fe702">
 		<description>[-]Music Maker</description>
 		<year>????</year>
@@ -459,6 +599,106 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="1280">
 				<rom name="[-]Music Maker.mwb" size="1280" crc="c4b021f6" sha1="f8eeba55fe70234e55535fc74277450e5e24ec19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec8148af050434">
+		<description>[-]music</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1024">
+				<rom name="[-]music.mwb" size="1024" crc="bedbd079" sha1="c8148af05043457af75090062221532869f3e08b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6d608b85ed894">
+		<description>[-]musicb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="7404">
+				<rom name="[-]musicb.bin" size="7404" crc="19ade06a" sha1="6d608b85ed894ad1c13ecaa2b33eb62933da16c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea0bee3184da64">
+		<description>[-]musicdsk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2560">
+				<rom name="[-]musicdsk.mwb" size="2560" crc="19435b5b" sha1="a0bee3184da64a34ed38180c7dee9490edfce893"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeab2f3e529068a">
+		<description>[-]music_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2560">
+				<rom name="[-]music_1.mwb" size="2560" crc="6e1716db" sha1="ab2f3e529068a41ca60df6464d94d73fa6b2ed78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6d0e0ae390fa5">
+		<description>[-]music_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2432">
+				<rom name="[-]music_2.mwb" size="2432" crc="0df3f457" sha1="6d0e0ae390fa5a17e3a91ce816a9fc3fa4d853c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beebd37683c61074">
+		<description>[-]music_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1792">
+				<rom name="[-]music_4.mwb" size="1792" crc="9448d8e0" sha1="bd37683c61074176f679bef0fbca14b098d4e8be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beece54d35ffeda5">
+		<description>[-]muskey</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="768">
+				<rom name="[-]muskey.mwb" size="768" crc="7cb9a5f1" sha1="ce54d35ffeda5af28272dfb718daa22f69b06c3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee43a787bd7520e">
+		<description>[-]muzak-1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1280">
+				<rom name="[-]muzak-1.mwb" size="1280" crc="2bb5944a" sha1="43a787bd7520e5ecbd6006a8e48b1eec1840886c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeff85f0ad24e3b">
+		<description>[-]muzak-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="512">
+				<rom name="[-]muzak-2.mwb" size="512" crc="0f908082" sha1="ff85f0ad24e3b731b909c12c4be1ee8241f12dc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef0083805a7ead">
+		<description>[-]muzak-3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="768">
+				<rom name="[-]muzak-3.mwb" size="768" crc="2660cfe7" sha1="f0083805a7ead45e04a8912f421308589df56e5c"/>
 			</dataarea>
 		</part>
 	</software>

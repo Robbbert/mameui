@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 74 -->
+<!-- Number of items in this list = 71 -->
 <softwarelist name="pokemini" description="pokemini loose roms">
 	<software name="pmi0ab8396c43e8f">
 		<description>3Dballtest</description>
@@ -292,16 +292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pmi4db4568b99007">
-		<description>party_j</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pokemini_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="party_j.min" size="524288" crc="ae2dde60" sha1="4db4568b990077c21320b50dee6a3ceb258809db"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="pmibf31fcc3b834b">
 		<description>pazuru</description>
 		<year>????</year>
@@ -582,16 +572,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pmi3b87d4d61ba3d">
-		<description>soda-j</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pokemini_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="soda-j.min" size="524288" crc="d55fc4c8" sha1="3b87d4d61ba3db92190b6ffa055f463adea2363c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="pmi9a4f9152d0fe3">
 		<description>sokofun</description>
 		<year>????</year>
@@ -689,16 +669,6 @@
 		<part name="cart" interface="pokemini_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Togepi's Great Adventure (E).min" size="524288" crc="acab99f3" sha1="7f2de7dfabc1b52c916567a33d7bed1d655a5d44"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pmi0f56e0a3e7218">
-		<description>Togepi's Great Adventure (J)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pokemini_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Togepi's Great Adventure (J).min" size="524288" crc="33b3492b" sha1="0f56e0a3e72180b1113b900a6d3e4f8e8f570bb3"/>
 			</dataarea>
 		</part>
 	</software>

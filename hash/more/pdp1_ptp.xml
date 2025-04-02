@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5 -->
+<!-- Number of items in this list = 3 -->
 <softwarelist name="pdp1_ptp" description="pdp1_ptp loose roms">
 	<software name="pdpcce26b20c8a01">
 		<description>minskytron</description>
@@ -22,16 +22,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pdpe0ca646127444">
-		<description>munching</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="ptp" interface="pdp1_ptp">
-			<dataarea name="ptap" size="54">
-				<rom name="munching.rim" size="54" crc="f0c4436e" sha1="e0ca64612744470107ee3c4fb761a6c2ada96854"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="pdp3741c8439ed66">
 		<description>Spacewar! (1962-02)(Tech Model Railroad Club)</description>
 		<year>????</year>
@@ -39,16 +29,6 @@
 		<part name="ptp" interface="pdp1_ptp">
 			<dataarea name="ptap" size="15057">
 				<rom name="Spacewar! (1962-02)(Tech Model Railroad Club).rim" size="15057" crc="2e2b9940" sha1="3741c8439ed6686b1861a346b2ab1c87553403cb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pdp7ab31f3330362">
-		<description>spacewar</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="ptp" interface="pdp1_ptp">
-			<dataarea name="ptap" size="15116">
-				<rom name="spacewar.rim" size="15116" crc="dd16c4c9" sha1="7ab31f3330362b993097ed0d57ad0d6e83c17c6d"/>
 			</dataarea>
 		</part>
 	</software>

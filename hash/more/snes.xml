@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3802 -->
+<!-- Number of items in this list = 3809 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -6162,6 +6162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns422f2d1090ad7">
+		<description>Cyber Knight T-Eng v1.01 (2023)(Aeon Genesis, mteam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Cyber Knight T-Eng v1.01 (2023)(Aeon Genesis, mteam).sfc" size="1048576" crc="110925ae" sha1="422f2d1090ad7464ed5b569cc2cd4293a56f7cc4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns56c9c630e987a">
 		<description>Cyborg 009 T-Eng (2004)(Aeon Genesis)</description>
 		<year>????</year>
@@ -8572,6 +8582,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb53e968b6a136">
+		<description>Final Fantasy II T-Ita v0.99 (2005)(Brisma)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Final Fantasy II T-Ita v0.99 (2005)(Brisma).sfc" size="1048576" crc="ff77c4a6" sha1="b53e968b6a13668489dc40414fc80c03c91680f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns39a2a0b63a9f6">
+		<description>Final Fantasy II T-Spa (2023)(Rod Merida)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Final Fantasy II T-Spa (2023)(Rod Merida).sfc" size="1048576" crc="48797b1d" sha1="39a2a0b63a9f6eab166c255499e0f6bc878eb7e9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3be6a907869f4">
 		<description>Final Fantasy III (3)</description>
 		<year>????</year>
@@ -8822,6 +8852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snscc1293ef96c46">
+		<description>Final Fantasy III T-Ita v2.1 (2002)(SadNES cITy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fantasy III T-Ita v2.1 (2002)(SadNES cITy).sfc" size="4194304" crc="f35bdfe4" sha1="cc1293ef96c460fa6006d087cb0f6bcdefa29a9f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse58339f844273">
 		<description>Final Fantasy III v1.0 (U) [Final Fantasy III AI script mover]</description>
 		<year>????</year>
@@ -8869,16 +8909,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Final Fantasy III v1.1 (U) [tr Fr3.01WIP11_terminus].sfc" size="4194304" crc="d4a8495e" sha1="1d26f7979dcc345bf4829122bea081fea1894fbf"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snscc1293ef96c46">
-		<description>Final Fantasy III v1.1 (U) [tr It2.0finale_SadNes]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Final Fantasy III v1.1 (U) [tr It2.0finale_SadNes].sfc" size="4194304" crc="f35bdfe4" sha1="cc1293ef96c460fa6006d087cb0f6bcdefa29a9f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9209,6 +9239,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Final Fantasy VI Reimagined (2024)(DrakeyC).sfc" size="4194304" crc="60aff03d" sha1="28e6deec9532f72009f8a2c1d6e282d452db9614"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd80773906a285">
+		<description>Final Fantasy VI v1.15 rtm (2023)(Rod Merida)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Final Fantasy VI v1.15 rtm (2023)(Rod Merida).sfc" size="3145728" crc="2e73143c" sha1="d80773906a285444a40894df077ac1c730cc5a14"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13942,6 +13982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns101c6b2769af8">
+		<description>Lemmings (USA) [Color hack by J. Russell v1.0]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Lemmings (USA) [Color hack by J. Russell v1.0].sfc" size="1048576" crc="eea31071" sha1="101c6b2769af806608e2eef4473deacbbc7718a8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5a0ccc3b2dd70">
 		<description>Lemmings - Colour Palette &amp; Level Title Fix v1.0 FINAL (U)(2025)(J.Russell)</description>
 		<year>????</year>
@@ -15289,16 +15339,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Majin Tensei II - Spiral Nemesis(V1.4)Monkeyking_.sfc" size="4194304" crc="0fdec71d" sha1="77ddde281a448cd5a09d819d508df39594558b67"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns54048324bf80b">
-		<description>Majuu Ou (J)(1995)(KSS)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="Majuu Ou (J)(1995)(KSS).sfc" size="1572864" crc="4737370b" sha1="54048324bf80bd36e372f58a68f1d3f2b5ffe498"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18349,6 +18389,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Muscle Bomber - The Body Explosion (J)(1994)(Capcom).sfc" size="3145728" crc="a6e028c2" sha1="d96fb72a5abc0a35ffc6ae862643d0cd0461ac1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns38484ef2a8b30">
+		<description>Muscle Bomber - The Body Explosion - Arcade Colors v1.1 (2025)(Wu Shan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Muscle Bomber - The Body Explosion - Arcade Colors v1.1 (2025)(Wu Shan).sfc" size="3145728" crc="2d7e9ed0" sha1="38484ef2a8b30dc5ca7bf936e335ef8e86c741ad"/>
 			</dataarea>
 		</part>
 	</software>
@@ -34582,6 +34632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb4a04bbd1109e">
+		<description>Super Ninji Land Reawakened (2025)(Idunno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Super Ninji Land Reawakened (2025)(Idunno).sfc" size="3145728" crc="4de50cf1" sha1="b4a04bbd1109ea1e042f66f9cbeac6f985f4c2f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns28636a879fb16">
 		<description>Super Nobunaga no Yabou - Zenkoku Ban (J)(1993)(Koei)</description>
 		<year>????</year>
@@ -35669,6 +35729,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Tale of Elementia.sfc" size="4194304" crc="003cc4d8" sha1="2ee6318d003b63d094acfe9dfdedfed5bd3e72e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc9e266fedf7f6">
+		<description>Tales of Phantasia T-Spa (2005)(Traducciones Magno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Tales of Phantasia T-Spa (2005)(Traducciones Magno).sfc" size="6291456" crc="5bcc6373" sha1="c9e266fedf7f6076930b7b60c9231e43293a55bb"/>
 			</dataarea>
 		</part>
 	</software>

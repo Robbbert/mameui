@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 99 -->
+<!-- Number of items in this list = 103 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -62,6 +62,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee0557e55a0195b">
+		<description>[-]multirom_monitor_b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1050056">
+				<rom name="[-]multirom_monitor_b.wav" size="1050056" crc="4e0f9926" sha1="0557e55a0195bb33584ae062bfd1529f1164f887"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee11f71dcc84d7a">
+		<description>[-]museum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1498772">
+				<rom name="[-]museum.wav" size="1498772" crc="50939348" sha1="11f71dcc84d7aa5e810d9f5bfdf362c6b79b43d7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beeb062157bd4b10">
 		<description>[-]Mystery of the Pyramid</description>
 		<year>????</year>
@@ -69,6 +89,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="8961640">
 				<rom name="[-]Mystery of the Pyramid.wav" size="8961640" crc="c25d0056" sha1="b062157bd4b10c75058d87005944cd88ef8c6b58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee8304c6fa2560a">
+		<description>[-]mytek_monitor_32k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="836712">
+				<rom name="[-]mytek_monitor_32k.wav" size="836712" crc="53a49345" sha1="8304c6fa2560ac1450ec42f5ed7bf1264ceb37db"/>
 			</dataarea>
 		</part>
 	</software>
@@ -989,6 +1019,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="14652">
 				<rom name="[ic]Vexed.tap" size="14652" crc="2a4619b7" sha1="1774ef7939aa7eac438d0016009840bb2086f8ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6718e1dd38d92">
+		<description>[ppc]music_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4608">
+				<rom name="[ppc]music_5.mwb" size="4608" crc="ff273d70" sha1="6718e1dd38d92a22355fc54408c8ed82bd163040"/>
 			</dataarea>
 		</part>
 	</software>
