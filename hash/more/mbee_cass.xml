@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 103 -->
+<!-- Number of items in this list = 102 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -1019,16 +1019,6 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="14652">
 				<rom name="[ic]Vexed.tap" size="14652" crc="2a4619b7" sha1="1774ef7939aa7eac438d0016009840bb2086f8ad"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="bee6718e1dd38d92">
-		<description>[ppc]music_5</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="mbee_cass">
-			<dataarea name="cass" size="4608">
-				<rom name="[ppc]music_5.mwb" size="4608" crc="ff273d70" sha1="6718e1dd38d92a22355fc54408c8ed82bd163040"/>
 			</dataarea>
 		</part>
 	</software>

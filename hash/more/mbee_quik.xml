@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 472 -->
+<!-- Number of items in this list = 473 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="bee31c8588566b2a">
 		<description>[-](demo)strngart</description>
@@ -4669,6 +4669,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="1536">
 				<rom name="[ppc]car.mwb" size="1536" crc="dcd1c318" sha1="9d498f76eedf417be5c326953e41d3b294b80771"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6718e1dd38d92">
+		<description>[ppc]music_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4608">
+				<rom name="[ppc]music_5.mwb" size="4608" crc="ff273d70" sha1="6718e1dd38d92a22355fc54408c8ed82bd163040"/>
 			</dataarea>
 		</part>
 	</software>

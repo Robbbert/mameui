@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="c128_cass" description="c128_cass loose roms">
+	<software name="c124c6705eeb8984">
+		<description>Programmi per Commodore 128 (19xx)(Jackson)(it)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="2446284">
+				<rom name="Programmi per Commodore 128 (19xx)(Jackson)(it).tap" size="2446284" crc="c2e6b114" sha1="4c6705eeb89840804e642e9abf51203c1f5d9438"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="c64_cass" description="c64_cass loose roms">
+	<software name="c6410b594e468ee7">
+		<description>10th Frame</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="559117">
+				<rom name="10th Frame.tap" size="559117" crc="8a0a50ac" sha1="10b594e468ee7b4542c2972e149cf09995abd910"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

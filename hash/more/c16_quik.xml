@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="c16_quik" description="c16_quik loose roms">
+	<software name="c165c5896a8a7806">
+		<description>007</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8937">
+				<rom name="007.prg" size="8937" crc="d1151fea" sha1="5c5896a8a78062354b21437b651731f611fcb56a"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="c64_cart" description="c64_cart loose roms">
+	<software name="c648c166cd6d6573">
+		<description>10th Frame</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="10th Frame.crt" size="65728" crc="57cc5f6e" sha1="8c166cd6d6573a545197fffce77b7cbb6fe5538f"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
