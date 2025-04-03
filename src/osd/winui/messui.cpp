@@ -457,17 +457,22 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex, 0);
 	char dir1[2048] = { };
-	strcpy(dir1, o.value(OPTION_SWPATH));
-	char* t1 = strtok(dir1, ";"); // from here dir1 gets chopped up
-	b = osd::directory::open(t1);
-	if (t1 && b)  // make sure its valid
+	char* t1;
+	string local_swpath = o.value(OPTION_SWPATH);
+	if (!local_swpath.empty())
 	{
-		b.reset();
-		if (b_dir && (global_swpath != o.value(OPTION_SWPATH)))
-			return std::make_pair(1, o.value(OPTION_SWPATH));
+		strcpy(dir1, local_swpath.c_str());
+		t1 = strtok(dir1, ";"); // from here dir1 gets chopped up
+		b = osd::directory::open(t1);
+		if (t1 && b)  // make sure its valid
+		{
+			b.reset();
+			if (b_dir && (global_swpath != local_swpath))
+				return std::make_pair(1, local_swpath);
+		}
+		if (b)
+			b.reset();
 	}
-	if (b)
-		b.reset();
 
 	// not specified in driver, try parent if it has one
 	printf("ProcessSWDir: E\n");fflush(stdout);
@@ -481,24 +486,28 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 			windows_options o_p;
 			printf("ProcessSWDir: G\n");fflush(stdout);
 			load_options(o_p, OPTIONS_PARENT, nParentIndex, 0);
-			strcpy(dir1, o_p.value(OPTION_SWPATH));
-			t1 = strtok(dir1, ";");
-			printf("ProcessSWDir: GA = %s\n",dir1);fflush(stdout);
-			b = osd::directory::open(t1);
-			if (t1 && b)  // make sure its valid
+			local_swpath = o_p.value(OPTION_SWPATH);
+			if (!local_swpath.empty())
 			{
-				b.reset();
-				printf("ProcessSWDir: GB\n");fflush(stdout);
-				if (b_dir && (global_swpath != o_p.value(OPTION_SWPATH)))
+				strcpy(dir1, local_swpath.c_str());
+				t1 = strtok(dir1, ";");
+				printf("ProcessSWDir: GA = %s\n",dir1);fflush(stdout);
+				b = osd::directory::open(t1);
+				if (t1 && b)  // make sure its valid
 				{
-					printf("ProcessSWDir: GC\n");fflush(stdout);
-					emu_set_value(o, OPTION_SWPATH, o_p.value(OPTION_SWPATH));
-					save_options(o, OPTIONS_GAME, drvindex);
-					return std::make_pair(1, o_p.value(OPTION_SWPATH));
+					b.reset();
+					printf("ProcessSWDir: GB\n");fflush(stdout);
+					if (b_dir && (global_swpath != local_swpath))
+					{
+						printf("ProcessSWDir: GC\n");fflush(stdout);
+						emu_set_value(o, OPTION_SWPATH, local_swpath);
+						save_options(o, OPTIONS_GAME, drvindex);
+						return std::make_pair(1, local_swpath);
+					}
 				}
+				if (b)
+					b.reset();
 			}
-			if (b)
-				b.reset();
 		}
 		else
 			nParentIndex = drvindex; // don't pass -1 to compat check
@@ -513,21 +522,25 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 		windows_options o_c;
 		printf("ProcessSWDir: I\n");fflush(stdout);
 		load_options(o_c, OPTIONS_PARENT, nCloneIndex, 0);
-		strcpy(dir1, o_c.value(OPTION_SWPATH));
-		t1 = strtok(dir1, ";");
-		b = osd::directory::open(t1);
-		if (t1 && b)  // make sure its valid
+		local_swpath = o_c.value(OPTION_SWPATH);
+		if (!local_swpath.empty())
 		{
-			if (b_dir && (global_swpath != o_c.value(OPTION_SWPATH)))
+			strcpy(dir1, local_swpath.c_str());
+			t1 = strtok(dir1, ";");
+			b = osd::directory::open(t1);
+			if (t1 && b)  // make sure its valid
 			{
-				b.reset();
-				emu_set_value(o, OPTION_SWPATH, o_c.value(OPTION_SWPATH));
-				save_options(o, OPTIONS_GAME, drvindex);
-				return std::make_pair(1, o_c.value(OPTION_SWPATH));
+				if (b_dir && (global_swpath != local_swpath))
+				{
+					b.reset();
+					emu_set_value(o, OPTION_SWPATH, local_swpath);
+					save_options(o, OPTIONS_GAME, drvindex);
+					return std::make_pair(1, local_swpath);
+				}
 			}
+			if (b)
+				b.reset();
 		}
-		if (b)
-			b.reset();
 	}
 
 	// Try the global root
@@ -537,10 +550,9 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 
 	// nothing valid, drop to default emu directory
 	printf("ProcessSWDir: K\n");fflush(stdout);
-	string dst;
-	osd_get_full_path(dst,".");
+	osd_get_full_path(local_swpath,".");
 	printf("ProcessSWDir: L\n");fflush(stdout);
-	return std::make_pair(0, dst);
+	return std::make_pair(0, local_swpath);
 }
 
 
