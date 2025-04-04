@@ -65,11 +65,11 @@ void ResetGameDefaults(void);
 void ResetAllGameOptions(void);
 windows_options &MameUIGlobal(void);
 void SetSystemName(windows_options &, OPTIONS_TYPE, int);
-bool AreOptionsEqual(windows_options &opts1, windows_options &opts2);
+//bool AreOptionsEqual(windows_options &opts1, windows_options &opts2);  // not used any more 2025-04-04
 void OptionsCopy(windows_options &source, windows_options &dest);
 void SetDirectories(windows_options &opts);
 void load_options(windows_options &, OPTIONS_TYPE, int, bool);
-void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num);
+void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex);
 
 
 #endif

@@ -15,7 +15,6 @@
 #define MESS
 
 #define MAMENAME "MAME"
-#define MUI_INI_FILENAME "MAMEUI.ini"
 
 #ifdef PTR64
 #define MAMEUINAME MAMENAME "UI64"

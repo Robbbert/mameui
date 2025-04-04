@@ -63,7 +63,7 @@ static void ColumnDecodeStringWithCount(string ss, int *value, int count);
     Internal defines
  ***************************************************************************/
 
-#define GAMEINFO_INI_FILENAME                    MAMENAME "_g.ini"
+static string gameinfo_ini_filename, mui_ini_filename;
 
 
 /***************************************************************************
@@ -140,10 +140,12 @@ string GetGameName(uint32_t driver_index)
 void OptionsInit()
 {
 	// set up global options
-	printf("OptionsInit: About to load %s\n",MUI_INI_FILENAME);fflush(stdout);
-	settings.load_file(MUI_INI_FILENAME);                    // parse MAMEUI.ini
-	printf("OptionsInit: About to load %s\n",GAMEINFO_INI_FILENAME);fflush(stdout);
-	game_opts.load_file(GAMEINFO_INI_FILENAME);             // parse MAME_g.ini
+	gameinfo_ini_filename = GetEmuPath() + PATH_SEPARATOR + "MAME_g.ini";
+	mui_ini_filename = GetEmuPath() + PATH_SEPARATOR + "MAMEUI.ini";
+	printf("OptionsInit: About to load %s\n",mui_ini_filename.c_str());fflush(stdout);
+	settings.load_file(mui_ini_filename.c_str());                    // parse MAMEUI.ini
+	printf("OptionsInit: About to load %s\n",gameinfo_ini_filename.c_str());fflush(stdout);
+	game_opts.load_file(gameinfo_ini_filename.c_str());             // parse MAME_g.ini
 	printf("OptionsInit: Finished\n");fflush(stdout);
 	return;
 }
@@ -151,7 +153,7 @@ void OptionsInit()
 // Restore ui settings to factory
 void ResetGUI(void)
 {
-	settings.reset_and_save(MUI_INI_FILENAME);
+	settings.reset_and_save(mui_ini_filename.c_str());
 }
 
 const char * GetImageTabLongName(int tab_index)
@@ -1563,13 +1565,13 @@ void mui_save_ini(void)
 {
 	// Add the folder flag to settings.
 	AddFolderFlags();
-	settings.save_file(MUI_INI_FILENAME);
+	settings.save_file(mui_ini_filename.c_str());
 }
 
 void SaveGameListOptions(void)
 {
 	// Save GameInfo.ini - game options.
-	game_opts.save_file(GAMEINFO_INI_FILENAME);
+	game_opts.save_file(gameinfo_ini_filename.c_str());
 }
 
 const char * GetVersionString(void)

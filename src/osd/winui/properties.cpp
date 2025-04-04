@@ -205,7 +205,8 @@ bool m_swpath_changed = 0;
 #define MAX_SCREENS 4
 #endif
 
-windows_options m_OrigOpts, m_DefaultOpts, m_CurrentOpts;
+//windows_options m_OrigOpts, m_DefaultOpts, m_CurrentOpts;
+windows_options m_CurrentOpts;
 static datamap *properties_datamap;
 
 static int  g_nGame            = 0;
@@ -491,14 +492,14 @@ void InitDefaultPropertyPage(HINSTANCE hInst, HWND hWnd)
 
 	/* Get default options to populate property sheets */
 	load_options(m_CurrentOpts, OPTIONS_GLOBAL, g_nGame, 0);
-	load_options(m_OrigOpts, OPTIONS_GLOBAL, g_nGame, 0);
-	load_options(m_DefaultOpts, OPTIONS_GLOBAL, -2, 0);
+//	load_options(m_OrigOpts, OPTIONS_GLOBAL, g_nGame, 0);
+//	load_options(m_DefaultOpts, OPTIONS_GLOBAL, -2, 0);
 
 	g_nPropertyMode = OPTIONS_GLOBAL;
 	BuildDataMap();
 
 	PROPSHEETHEADER pshead;
-	ZeroMemory(&pshead, sizeof(pshead));
+	SecureZeroMemory(&pshead, sizeof(pshead));
 
 	PROPSHEETPAGE   *pspage;
 	pspage = CreatePropSheetPages(hInst, true, -1, &pshead.nPages, false);
@@ -543,16 +544,16 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 
 	// Initialize the options
 	windows_options dummy;
-	OptionsCopy(dummy,m_DefaultOpts);
-	OptionsCopy(dummy,m_OrigOpts);
+//	OptionsCopy(dummy,m_DefaultOpts);
+//	OptionsCopy(dummy,m_OrigOpts);
 	OptionsCopy(dummy,m_CurrentOpts);
 
 	load_options(m_CurrentOpts, opt_type, game_num, 1);
-	load_options(m_OrigOpts, opt_type, game_num, 1);
-	if (game_num == GLOBAL_OPTIONS)
-		load_options(m_DefaultOpts, OPTIONS_GLOBAL, -2, 0); // base opts is the backup for global
-	else
-		load_options(m_DefaultOpts, OPTIONS_GLOBAL, -1, 0); // global is the backup for games
+//	load_options(m_OrigOpts, opt_type, game_num, 1);
+//	if (game_num == GLOBAL_OPTIONS)
+//		load_options(m_DefaultOpts, OPTIONS_GLOBAL, -2, 0); // base opts is the backup for global
+//	else
+//		load_options(m_DefaultOpts, OPTIONS_GLOBAL, -1, 0); // global is the backup for games
 
 	// Copy icon to use for the property pages
 	g_hIcon = CopyIcon(hIcon);
@@ -1085,7 +1086,7 @@ HWND hWnd;
 /* Handle all options property pages */
 INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
 {
-	BOOL g_bUseDefaults = false; //, g_bReset = false;
+//	BOOL g_bUseDefaults = false; //, g_bReset = false;
 
 	switch (Msg)
 	{
@@ -1097,14 +1098,14 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 
 		UpdateProperties(hDlg, properties_datamap, m_CurrentOpts);
 
-		g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
+//		g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
 //		g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
 
 		// Default button doesn't exist on Default settings
-		if (g_nGame == GLOBAL_OPTIONS)
-			ShowWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), SW_HIDE);
-		else
-			EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
+//		if (g_nGame == GLOBAL_OPTIONS)
+//			ShowWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), SW_HIDE);
+//		else
+//			EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
 
 		// Setup Reset button
 //		EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
@@ -1115,7 +1116,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 	case WM_HSCROLL:
 		/* slider changed */
 		HANDLE_WM_HSCROLL(hDlg, wParam, lParam, OptOnHScroll);
-		EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), true);
+//		EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), true);
 
 		// Enable Apply button
 		PropSheet_Changed(GetParent(hDlg), hDlg);
@@ -1263,7 +1264,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 //				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
 //				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 //				break;
-
+#if 0
 			case IDC_USE_DEFAULT:
 				// DEFAULT Button - Only do it if mouse-clicked
 				if (wNotifyCode != BN_CLICKED)
@@ -1288,7 +1289,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 //						PropSheet_UnChanged(GetParent(hDlg), hDlg);
 //				}
 				break;
-
+#endif
 				// MSH 20070813 - Update all related controls
 			case IDC_SCREENSELECT:
 				{
@@ -1356,9 +1357,9 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				UpdateOptions(hDlg, properties_datamap, m_CurrentOpts);
 				// enable the apply button
 				PropSheet_Changed(GetParent(hDlg), hDlg);
-				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
+//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
 //				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
+//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
 //				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 			}
 		}
@@ -1376,9 +1377,9 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			case PSN_SETACTIVE:
 				/* Initialize the controls. */
 				UpdateProperties(hDlg, properties_datamap, m_CurrentOpts);
-				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
+//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
 //				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
+//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
 //				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 				break;
 
@@ -1395,14 +1396,14 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				// Read the datamap
 				UpdateOptions(hDlg, properties_datamap, m_CurrentOpts);
 				// The current options become the original options.
-				UpdateOptions(hDlg, properties_datamap, m_OrigOpts);
+//				UpdateOptions(hDlg, properties_datamap, m_OrigOpts);
 
 				// Repopulate the controls?  WTF?  We just read them, they should be fine.
 				UpdateProperties(hDlg, properties_datamap, m_CurrentOpts);
 
-				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
+//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
 //				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
+//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
 //				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 
 				// Save the current options
@@ -1424,9 +1425,9 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				/* Save Changes to the options here. */
 				UpdateOptions(hDlg, properties_datamap, m_CurrentOpts);
 				// Determine button states.
-				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
+//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
 //				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
+//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
 //				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 
 				ResetDataMap(hDlg);
@@ -3149,6 +3150,8 @@ static void InitializeLanguageUI(HWND hWnd)
 		int english = -1;
 		int count = 0;
 		string t1 = dir_get_value(12);
+		if (t1.empty())
+			return;
 		const char* t2 = t1.c_str();
 		osd::directory::ptr directory = osd::directory::open(t2);
 

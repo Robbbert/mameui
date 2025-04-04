@@ -30,7 +30,6 @@
 static emu_options mameopts; // core options
 static ui_options emu_ui; // ui.ini
 static windows_options emu_global; // Global 'default' options
-#define UI_FILENAME                           "ini\\ui.ini"
 
 typedef std::basic_string<char> string;
 
@@ -159,31 +158,59 @@ static string emu_path;
 
 string GetIniDir()
 {
-///	const char *ini_dir;
-//	const char *s;
+	//string global_ini = emu_global.value(OPTION_INIPATH);printf("GetIniDir = %s\n",global_ini.c_str());
+	string global_ini = dir_get_value(7);printf("GetIniDir = %s\n",global_ini.c_str());
+	if (global_ini.empty())
+		return GetEmuPath() + PATH_SEPARATOR + "ini";
 
-//	ini_dir = global.value(OPTION_INIPATH);
-//	while((s = strchr(ini_dir, ';')) != NULL)
-//	{
-//		ini_dir = s + 1;
-//	}
-///	ini_dir = "ini\0";
-///	return ini_dir;
-	return emu_path + PATH_SEPARATOR + "ini\0";
+	char dir0[global_ini.length()+2] = { };
+	strcpy(dir0, global_ini.c_str());
+	char* t0 = strtok(dir0, ";");
+	osd::directory::ptr b = osd::directory::open(t0);
+	if (t0 && b)
+	{ }
+	else
+		return GetEmuPath() + PATH_SEPARATOR + "ini";
+	// see if relative or absolute path
+	global_ini = t0;
+	bool is_absolute = false;
+	if ((global_ini.length() > 4) && (std::isalpha(global_ini[0])) && (global_ini[1] == ':') && (global_ini[2] == '\\'))
+		is_absolute = true;
+	if ((global_ini.length() > 4) && (global_ini[0] == '\\') && (global_ini[1] == '\\'))
+		is_absolute = true;
+	if (is_absolute)
+		return global_ini;
+	else
+		return GetEmuPath() + PATH_SEPARATOR + global_ini;
 }
 
 string GetEmuPath()
 {
+	if (emu_path.empty())
+	{
+		char exe_path[MAX_PATH];
+		GetModuleFileNameA(nullptr, exe_path, MAX_PATH);
+		emu_path = string(exe_path);
+		std::size_t pos = emu_path.find_last_of("\\");
+		emu_path.erase(pos);
+		printf("GetEmuPath = %s\n",emu_path.c_str());
+	}
+
 	return emu_path;
 }
 
+string GetUiPath()
+{
+	string t = GetIniDir();printf("GetUiPath = %s\n",t.c_str());
+	return GetIniDir() + PATH_SEPARATOR + "ui.ini";
+}
 
 // load mewui settings
-static void LoadSettingsFile(ui_options &opts, const char *filename)
+static void LoadSettingsFile(ui_options &opts, string filename)
 {
 	util::core_file::ptr file;
 
-	std::error_condition filerr = util::core_file::open(filename, OPEN_FLAG_READ, file);
+	std::error_condition filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_READ, file);
 	if (!filerr)
 	{
 		opts.parse_ini_file(*file, OPTION_PRIORITY_CMDLINE, true, true);
@@ -194,6 +221,7 @@ static void LoadSettingsFile(ui_options &opts, const char *filename)
 // load a game ini
 static void LoadSettingsFile(windows_options &opts, const char *filename)
 {
+	printf("LoadSettingsFile = %s\n",filename);fflush(stdout);
 	util::core_file::ptr file;
 
 	std::error_condition filerr = util::core_file::open(filename, OPEN_FLAG_READ, file);
@@ -226,14 +254,14 @@ static void SaveSettingsFile(windows_options &opts, const char *filename, bool d
 }
 
 /*  get options, based on passed in game number. */
-void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num, bool set_system_name)
+void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex, bool set_system_name)
 {
 	const game_driver *driver = NULL;
-	if (game_num > -1)
-		driver = &driver_list::driver(game_num);
+	if (drvindex > -1)
+		driver = &driver_list::driver(drvindex);
 
 	// Try base ini first
-	string fname = string(emulator_info::get_configname()).append(".ini");
+	string fname = GetEmuPath().append(PATH_SEPARATOR).append(emulator_info::get_configname()).append(".ini");
 	LoadSettingsFile(opts, fname.c_str());
 
 	if (opt_type == OPTIONS_SOURCE)
@@ -265,30 +293,29 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num, bo
 		return;
 	}
 
-	if (game_num > -2)
+	if (drvindex < 0)
 	{
 		// Now try global ini
-		fname = GetIniDir() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
+		fname = GetEmuPath() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
 		LoadSettingsFile(opts, fname.c_str());
-
-		if (game_num > -1)
+	}
+	else
+	{
+		// Lastly, gamename.ini
+		if (driver)
 		{
-			// Lastly, gamename.ini
-			if (driver)
-			{
-				fname = GetIniDir() + PATH_SEPARATOR + string(driver->name).append(".ini");
-				if (set_system_name)
-					opts.set_value(OPTION_SYSTEMNAME, driver->name, OPTION_PRIORITY_CMDLINE);
-				LoadSettingsFile(opts, fname.c_str());
-			}
+			fname = GetIniDir() + PATH_SEPARATOR + string(driver->name).append(".ini");
+			if (set_system_name)
+				opts.set_value(OPTION_SYSTEMNAME, driver->name, OPTION_PRIORITY_CMDLINE);
+			LoadSettingsFile(opts, fname.c_str());
 		}
 	}
-	if (game_num > -1)
+	if (drvindex > -1)
 		SetDirectories(opts);
 }
 
 /* Save ini file based on game_number. */
-void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
+void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex)
 {
 	const game_driver *driver = NULL;
 	string fname, filepath;
@@ -314,9 +341,9 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 		return;
 	}
 
-	if (game_num >= 0)
+	if (drvindex >= 0)
 	{
-		driver = &driver_list::driver(game_num);
+		driver = &driver_list::driver(drvindex);
 		if (driver)
 		{
 			fname.assign(driver->name);
@@ -324,19 +351,16 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 				filepath = GetIniDir() + PATH_SEPARATOR + "source" + PATH_SEPARATOR + string(core_filename_extract_base(driver->type.source(), true)) + ".ini";
 		}
 	}
-	else
-	if (game_num == -1)
-		fname = string(emulator_info::get_configname());
 
 	if (!fname.empty() && filepath.empty())
 		filepath = GetIniDir().append(PATH_SEPARATOR).append(fname.c_str()).append(".ini");
 
-	if (game_num == -2)
-		filepath = string(emulator_info::get_configname()).append(".ini");
+	if (drvindex < 0)
+		filepath = GetEmuPath().append(PATH_SEPARATOR).append(emulator_info::get_configname()).append(".ini");
 
 	if (!filepath.empty())
 	{
-		if (game_num > -1)
+		if (drvindex >= 0)
 			SetDirectories(opts);
 		SaveSettingsFile(opts, filepath.c_str(), 1);
 //		printf("Settings saved to %s\n",filepath.c_str());
@@ -347,21 +371,15 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num)
 
 void emu_opts_init(bool b)
 {
-	printf("emuOptsInit: About to load %s\n",UI_FILENAME);fflush(stdout);
-	LoadSettingsFile(emu_ui, UI_FILENAME);                // parse UI.INI
 	printf("emuOptsInit: About to load Global Options\n");fflush(stdout);
 	load_options(emu_global, OPTIONS_GLOBAL, -1, 0);   // parse MAME.INI
+	string t = GetUiPath();
+	printf("emuOptsInit: About to load %s\n",t.c_str());fflush(stdout);
+	LoadSettingsFile(emu_ui, GetUiPath());                // parse UI.INI
 	printf("emuOptsInit: Finished\n");fflush(stdout);
 
 	if (b)
 		return;
-
-	char exe_path[MAX_PATH];
-	GetModuleFileNameA(nullptr, exe_path, MAX_PATH);
-	emu_path = string(exe_path);
-	std::size_t pos = emu_path.find_last_of("\\");
-	emu_path.erase(pos);
-	printf("EmuPath = %s\n",emu_path.c_str());
 
 	dir_map[1] = dir_data { OPTION_PLUGINDATAPATH, 0 };
 	dir_map[2] = dir_data { OPTION_MEDIAPATH, 0 };
@@ -441,11 +459,11 @@ string dir_get_value(int dir_index)
 }
 
 // This saves changes to UI.INI only
-static void SaveSettingsFile(ui_options &opts, const char *filename)
+static void SaveSettingsFile(ui_options &opts, string filename)
 {
 	util::core_file::ptr file;
 
-	std::error_condition filerr = util::core_file::open(filename, OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
+	std::error_condition filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
 
 	if (!filerr)
 	{
@@ -457,7 +475,7 @@ static void SaveSettingsFile(ui_options &opts, const char *filename)
 
 void ui_save_ini()
 {
-	SaveSettingsFile(emu_ui, UI_FILENAME);
+	SaveSettingsFile(emu_ui, GetUiPath());
 }
 
 void SetDirectories(windows_options &o)
@@ -577,10 +595,10 @@ bool DriverHasSoftware(int drvindex)
 
 void global_save_ini(void)
 {
-	string fname = GetIniDir() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
+	string fname = GetEmuPath() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
 	SaveSettingsFile(emu_global, fname.c_str(), 0);
 }
-
+#if 0
 bool AreOptionsEqual(windows_options &opts1, windows_options &opts2)
 {
 	for (auto &curentry : opts1.entries())
@@ -601,7 +619,7 @@ bool AreOptionsEqual(windows_options &opts1, windows_options &opts2)
 	}
 	return true;
 }
-
+#endif
 void OptionsCopy(windows_options &source, windows_options &dest)
 {
 	for (auto &dest_entry : source.entries())

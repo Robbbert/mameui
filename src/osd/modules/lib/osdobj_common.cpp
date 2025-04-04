@@ -71,7 +71,7 @@ const options_entry osd_options::s_option_entries[] =
 	{ nullptr,                                   nullptr,          core_options::option_type::HEADER,    "OSD VIDEO OPTIONS" },
 	{ OSDOPTION_VIDEO,                           OSDOPTVAL_AUTO,   core_options::option_type::STRING,    "video output method: " },
 	{ OSDOPTION_NUMSCREENS "(1-4)",              "1",              core_options::option_type::INTEGER,   "number of output screens/windows to create; usually, you want just one" },
-	{ OSDOPTION_WINDOW ";w",                     "0",              core_options::option_type::BOOLEAN,   "enable window mode; otherwise, full screen mode is assumed" },
+	{ OSDOPTION_WINDOW ";w",                     "1",              core_options::option_type::BOOLEAN,   "enable window mode; otherwise, full screen mode is assumed" }, //messui
 	{ OSDOPTION_MAXIMIZE ";max",                 "1",              core_options::option_type::BOOLEAN,   "default to maximized windows" },
 	{ OSDOPTION_WAITVSYNC ";vs",                 "0",              core_options::option_type::BOOLEAN,   "enable waiting for the start of VBLANK before flipping screens (reduces tearing effects)" },
 	{ OSDOPTION_SYNCREFRESH ";srf",              "0",              core_options::option_type::BOOLEAN,   "enable using the start of VBLANK for throttling instead of the game time" },
