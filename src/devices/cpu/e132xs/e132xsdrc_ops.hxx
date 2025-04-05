@@ -2808,7 +2808,6 @@ void hyperstone_device::generate_ldxx1(drcuml_block &block, compiler_state &comp
 
 				case 2: // LDW.IOD/A
 					UML_MOV(block, I7, mem(&m_core->clock_cycles_1));
-					UML_ROLAND(block, I0, I0, 21, 0x7ffc);
 					UML_CALLH(block, *m_io_read32);
 
 					if (SrcGlobal)
@@ -2830,11 +2829,10 @@ void hyperstone_device::generate_ldxx1(drcuml_block &block, compiler_state &comp
 
 				case 3: // LDD.IOD/A
 					UML_MOV(block, I7, mem(&m_core->clock_cycles_2));
-					UML_ROLAND(block, I0, I0, 21, 0x7ffc);
 					UML_CALLH(block, *m_io_read32);
 					generate_set_register(block, compiler, desc, SrcGlobal, src_code, uml::I1, uml::I2, true);
 
-					UML_ADD(block, I0, I0, 4);
+					UML_ADD(block, I0, I0, 1 << 13);
 					UML_CALLH(block, *m_io_read32);
 					generate_set_register(block, compiler, desc, SrcGlobal, srcf_code, uml::I1, uml::I3, true);
 
@@ -3035,9 +3033,11 @@ void hyperstone_device::generate_stxx1(drcuml_block &block, compiler_state &comp
 			if (sub_type == 0)
 			{
 				const int no_exception = compiler.next_label();
-				UML_SEXT(block, I0, I1, SIZE_BYTE);
-				UML_CMP(block, I0, I1);
-				UML_JMPc(block, uml::COND_E, no_exception);
+				//UML_SEXT(block, I0, I1, SIZE_BYTE);
+				//UML_CMP(block, I0, I1);
+				//UML_JMPc(block, uml::COND_E, no_exception);
+				UML_TEST(block, I1, 0xffffff00);
+				UML_JMPc(block, uml::COND_Z, no_exception);
 				generate_raise_exception(block, compiler, desc, TRAPNO_RANGE_ERROR);
 				UML_LABEL(block, no_exception);
 			}
@@ -3051,9 +3051,11 @@ void hyperstone_device::generate_stxx1(drcuml_block &block, compiler_state &comp
 			if (extra_s & 1)
 			{
 				const int no_exception = compiler.next_label();
-				UML_SEXT(block, I0, I1, SIZE_WORD);
-				UML_CMP(block, I0, I1);
-				UML_JMPc(block, uml::COND_E, no_exception);
+				//UML_SEXT(block, I0, I1, SIZE_WORD);
+				//UML_CMP(block, I0, I1);
+				//UML_JMPc(block, uml::COND_E, no_exception);
+				UML_TEST(block, I1, 0xffff0000);
+				UML_JMPc(block, uml::COND_Z, no_exception);
 				generate_raise_exception(block, compiler, desc, TRAPNO_RANGE_ERROR);
 				UML_LABEL(block, no_exception);
 			}
@@ -3090,12 +3092,10 @@ void hyperstone_device::generate_stxx1(drcuml_block &block, compiler_state &comp
 					break;
 				case 2: // STW.IOD/A
 					UML_MOV(block, I7, mem(&m_core->clock_cycles_1));
-					UML_ROLAND(block, I0, I0, 21, 0x7ffc);
 					UML_CALLH(block, *m_io_write32);
 					break;
 				case 3: // STD.IOD/A
 					UML_MOV(block, I7, mem(&m_core->clock_cycles_2));
-					UML_ROLAND(block, I0, I0, 21, 0x7ffc);
 					UML_CALLH(block, *m_io_write32);
 
 					if (SrcGlobal)
@@ -3112,7 +3112,7 @@ void hyperstone_device::generate_stxx1(drcuml_block &block, compiler_state &comp
 						UML_LOAD(block, I1, (void *)m_core->local_regs, I3, SIZE_DWORD, SCALE_x4);
 					}
 
-					UML_ADD(block, I0, I0, 4);
+					UML_ADD(block, I0, I0, 1 << 13);
 					UML_CALLH(block, *m_io_write32);
 					break;
 			}
@@ -3172,9 +3172,11 @@ void hyperstone_device::generate_stxx2(drcuml_block &block, compiler_state &comp
 			if (sub_type == 0)
 			{
 				const int no_exception = compiler.next_label();
-				UML_SEXT(block, I0, I1, SIZE_BYTE);
-				UML_CMP(block, I0, I1);
-				UML_JMPc(block, uml::COND_E, no_exception);
+				//UML_SEXT(block, I0, I1, SIZE_BYTE);
+				//UML_CMP(block, I0, I1);
+				//UML_JMPc(block, uml::COND_E, no_exception);
+				UML_TEST(block, I1, 0xffffff00);
+				UML_JMPc(block, uml::COND_Z, no_exception);
 				generate_raise_exception(block, compiler, desc, TRAPNO_RANGE_ERROR);
 				UML_LABEL(block, no_exception);
 			}
@@ -3195,9 +3197,11 @@ void hyperstone_device::generate_stxx2(drcuml_block &block, compiler_state &comp
 			if (extra_s & 1)
 			{
 				const int no_exception = compiler.next_label();
-				UML_SEXT(block, I0, I1, SIZE_WORD);
-				UML_CMP(block, I0, I1);
-				UML_JMPc(block, uml::COND_E, no_exception);
+				//UML_SEXT(block, I0, I1, SIZE_WORD);
+				//UML_CMP(block, I0, I1);
+				//UML_JMPc(block, uml::COND_E, no_exception);
+				UML_TEST(block, I1, 0xffff0000);
+				UML_JMPc(block, uml::COND_Z, no_exception);
 				generate_raise_exception(block, compiler, desc, TRAPNO_RANGE_ERROR);
 				UML_LABEL(block, no_exception);
 			}
