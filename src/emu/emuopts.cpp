@@ -52,7 +52,7 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_CROSSHAIRPATH,                              "crosshair", core_options::option_type::MULTIPATH,  "path to crosshair files" },
 	{ OPTION_PLUGINSPATH,                                "plugins",   core_options::option_type::MULTIPATH,  "path to plugin files" },
 	{ OPTION_LANGUAGEPATH,                               "language",  core_options::option_type::MULTIPATH,  "path to UI translation files" },
-	{ OPTION_SWPATH,                                     "data",      core_options::option_type::MULTIPATH,  "path to loose software" },  // MESSUI
+	{ OPTION_SWPATH,                                     "sw",        core_options::option_type::MULTIPATH,  "path to loose software" },  // MESSUI
 
 	// output directory options
 	{ nullptr,                                           nullptr,     core_options::option_type::HEADER,     "CORE OUTPUT DIRECTORY OPTIONS" },

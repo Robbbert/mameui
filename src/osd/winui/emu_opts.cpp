@@ -29,7 +29,7 @@
 
 static emu_options mameopts; // core options
 static ui_options emu_ui; // ui.ini
-static windows_options emu_global; // Global 'default' options
+static windows_options emu_global; // Global 'default' options from emuopts.cpp - not mame.ini
 
 typedef std::basic_string<char> string;
 
@@ -257,21 +257,16 @@ static void SaveSettingsFile(windows_options &opts, const char *filename, bool d
 void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex, bool set_system_name)
 {
 	const game_driver *driver = NULL;
-	if (drvindex > -1)
-		driver = &driver_list::driver(drvindex);
+	driver = &driver_list::driver(drvindex);
 
 	// Try base ini first
 	string fname = GetEmuPath().append(PATH_SEPARATOR).append(emulator_info::get_configname()).append(".ini");
 	LoadSettingsFile(opts, fname.c_str());
 
-	if (opt_type == OPTIONS_SOURCE)
-	{
-		fname = GetIniDir() + PATH_SEPARATOR + "source" + PATH_SEPARATOR + string(core_filename_extract_base(driver->type.source(), true)) + ".ini";
-		LoadSettingsFile(opts, fname.c_str());
-		return;
-	}
-
 	fname.clear();
+	if (opt_type == OPTIONS_SOURCE)
+		fname = GetIniDir() + PATH_SEPARATOR + "source" + PATH_SEPARATOR + string(core_filename_extract_base(driver->type.source(), true)) + ".ini";
+	else
 	if (opt_type == OPTIONS_ARCADE)
 		fname = GetIniDir() + PATH_SEPARATOR + "arcade.ini";
 	else
@@ -293,13 +288,14 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex, bo
 		return;
 	}
 
-	if (drvindex < 0)
-	{
-		// Now try global ini
-		fname = GetEmuPath() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
-		LoadSettingsFile(opts, fname.c_str());
-	}
-	else
+//	if (opt_type == OPTIONS_GLOBAL)
+//	{
+//		// Now try global ini
+//		fname = GetEmuPath() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
+//		LoadSettingsFile(opts, fname.c_str());
+//	}
+//	else
+	if ((opt_type == OPTIONS_GAME) && (drvindex > -1))
 	{
 		// Lastly, gamename.ini
 		if (driver)
@@ -309,15 +305,13 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex, bo
 				opts.set_value(OPTION_SYSTEMNAME, driver->name, OPTION_PRIORITY_CMDLINE);
 			LoadSettingsFile(opts, fname.c_str());
 		}
-	}
-	if (drvindex > -1)
 		SetDirectories(opts);
+	}
 }
 
 /* Save ini file based on game_number. */
 void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex)
 {
-	const game_driver *driver = NULL;
 	string fname, filepath;
 
 	if (opt_type == OPTIONS_ARCADE)
@@ -343,6 +337,7 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex)
 
 	if (drvindex >= 0)
 	{
+		const game_driver *driver = NULL;
 		driver = &driver_list::driver(drvindex);
 		if (driver)
 		{
@@ -355,7 +350,7 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex)
 	if (!fname.empty() && filepath.empty())
 		filepath = GetIniDir().append(PATH_SEPARATOR).append(fname.c_str()).append(".ini");
 
-	if (drvindex < 0)
+	if (opt_type == OPTIONS_GLOBAL)
 		filepath = GetEmuPath().append(PATH_SEPARATOR).append(emulator_info::get_configname()).append(".ini");
 
 	if (!filepath.empty())
@@ -543,16 +538,16 @@ void SetSkipWarnings(BOOL val)
 	ui_set_value(emu_ui, OPTION_SKIP_WARNINGS, c);
 }
 
-void SetSelectedSoftware(int driver_index, string opt_name, const char *software)
+void SetSelectedSoftware(int drvindex, string opt_name, const char *software)
 {
 	if (opt_name.empty())
 	{
 		// Software List Item, we write to SOFTWARENAME to ensure all parts of a multipart set are loaded
 		windows_options o;
 		printf("About to write %s to OPTION_SOFTWARENAME\n",software);fflush(stdout);
-		load_options(o, OPTIONS_GAME, driver_index, 1);
+		load_options(o, OPTIONS_GAME, drvindex, 1);
 		o.set_value(OPTION_SOFTWARENAME, software, OPTION_PRIORITY_CMDLINE);
-		save_options(o, OPTIONS_GAME, driver_index);
+		save_options(o, OPTIONS_GAME, drvindex);
 	}
 	else
 	{
@@ -562,15 +557,15 @@ void SetSelectedSoftware(int driver_index, string opt_name, const char *software
 			opt_name += "1";
 		const char *s = opt_name.c_str();
 
-		printf("SetSelectedSoftware(): slot=%s driver=%s software='%s'\n", s, driver_list::driver(driver_index).name, software);
+		printf("SetSelectedSoftware(): slot=%s driver=%s software='%s'\n", s, driver_list::driver(drvindex).name, software);
 
 		printf("About to load %s into slot %s\n",software,s);fflush(stdout);
 		windows_options o;
-		load_options(o, OPTIONS_GAME, driver_index, 1);
+		load_options(o, OPTIONS_GAME, drvindex, 1);
 		o.set_value(s, software, OPTION_PRIORITY_CMDLINE);
 		//o.image_option(opt_name).specify(software);
 		printf("Done\n");;fflush(stdout);
-		save_options(o, OPTIONS_GAME, driver_index);
+		save_options(o, OPTIONS_GAME, drvindex);
 	}
 }
 
@@ -646,9 +641,9 @@ static void ResetToDefaults(windows_options &opts, int priority)
 	OptionsCopy(dummy, opts);
 }
 
-void ResetGameOptions(int driver_index)
+void ResetGameOptions(int drvindex)
 {
-	//save_options(NULL, OPTIONS_GAME, driver_index);
+	//save_options(NULL, OPTIONS_GAME, drvindex);
 }
 
 void ResetGameDefaults(void)
