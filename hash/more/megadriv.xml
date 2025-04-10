@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1902 -->
+<!-- Number of items in this list = 1904 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -12092,6 +12092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genbc90aef530a15">
+		<description>Retro Games Hunters (World) (v0.17b) (Demo) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2228224">
+				<rom name="Retro Games Hunters (World) (v0.17b) (Demo) (Aftermarket) (Unl).md" size="2228224" crc="73cc29c9" sha1="bc90aef530a15ece8b776067e4c5b62521a1ae8e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7d9889979bf59">
 		<description>revenge of shinobi (hack, spanish)</description>
 		<year>????</year>
@@ -12819,6 +12829,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Scooby-Doo Mystery (USA).bin" size="2097152" crc="abcbb646" sha1="e32a6d8d053cb5c7a71f1c0b974c0d86ee010c23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3c0a9e914c686">
+		<description>Scream Mr. Jack (World) (Retro Platform Jam 1) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Scream Mr. Jack (World) (Retro Platform Jam 1) (Aftermarket) (Unl).md" size="262144" crc="708e615d" sha1="3c0a9e914c686ca2c2f35c70628f7bb830546f71"/>
 			</dataarea>
 		</part>
 	</software>

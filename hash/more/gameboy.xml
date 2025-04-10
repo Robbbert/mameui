@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1357 -->
+<!-- Number of items in this list = 1361 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -3002,6 +3002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbc1a822317e4dab">
+		<description>Baby T-Rex (World) (ModRetro Chromatic) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Baby T-Rex (World) (ModRetro Chromatic) (Aftermarket) (Unl).gb" size="262144" crc="46a001c0" sha1="1a822317e4dab9dd6b02ebb96065e42f01d0dfb4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc36abdb778aa41">
 		<description>Backgammon (Europe) (En,Fr,De,Es) (GB Compatible) [b]</description>
 		<year>????</year>
@@ -3849,6 +3859,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Channel 49 - First Strike (Freedom GB Contest 2001) (PD) [C].gbc" size="65536" crc="d0fd44c4" sha1="df931143b7b6e92243f50e469bb4b9d8312bdbc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc805a1aaa4f15f">
+		<description>Chantey (World) (ModRetro Chromatic) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Chantey (World) (ModRetro Chromatic) (Aftermarket) (Unl).gb" size="4194304" crc="4e3060c6" sha1="805a1aaa4f15f6a79a893facb3e14ac3b32a9eef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11552,6 +11572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcaa9adb6192b11">
+		<description>Rod Land (World) (Retro-Bit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Rod Land (World) (Retro-Bit).gb" size="65536" crc="a5f649f8" sha1="aa9adb6192b117f395db8ed75117cda7ac703122"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbcb23d2768814e9">
 		<description>Rolan's Curse (U) [T+Spa_lukas]</description>
 		<year>????</year>
@@ -12919,6 +12949,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Trap &amp; Turn [ROM].gb" size="32768" crc="6df51429" sha1="0ab19a880f75df1c42b2190a3a1ad4819e3edafc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf60a2323075d7">
+		<description>Traumatarium Penitent (World) (Rev 2) (ModRetro Chromatic) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Traumatarium Penitent (World) (Rev 2) (ModRetro Chromatic) (Aftermarket) (Unl).gb" size="4194304" crc="20647c74" sha1="f60a2323075d77f4538ab2f386567bd99b114d49"/>
 			</dataarea>
 		</part>
 	</software>

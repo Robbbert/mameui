@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 55 -->
+<!-- Number of items in this list = 59 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -182,6 +182,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg13469e7c7900c7">
+		<description>Cross Bomber (2023)(Fabrizio Caruso)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Cross Bomber (2023)(Fabrizio Caruso).sg" size="32768" crc="c44b95f7" sha1="3469e7c7900c71580d3545302cf675a560ebb246"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg131140e3490667">
+		<description>Cross TREX (2024)(Fabrizio Caruso)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Cross TREX (2024)(Fabrizio Caruso).sg" size="32768" crc="6211e354" sha1="31140e349066706ab3b77dacb194a4f06fc6ef36"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg134618e1b6d16a">
 		<description>Deepspace_SC3000</description>
 		<year>????</year>
@@ -313,22 +333,22 @@
 		</part>
 	</software>
 	<software name="sg1ad731fb929494">
-		<description>Mieyen</description>
+		<description>Mieyen (2025)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="16384">
-				<rom name="Mieyen.sg" size="16384" crc="3c65bb5a" sha1="ad731fb9294944c6cc987000bcee9f278d1a6999"/>
+				<rom name="Mieyen (2025)(Inufuto).sg" size="16384" crc="3c65bb5a" sha1="ad731fb9294944c6cc987000bcee9f278d1a6999"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="sg16476bc0fc1608">
-		<description>Monaco GP # SG-1000</description>
+		<description>Monaco GP_SG-1000</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="40960">
-				<rom name="Monaco GP # SG-1000.SG" size="40960" crc="72542786" sha1="6476bc0fc1608dd69a1ae62617ea4719bc7eaa50"/>
+				<rom name="Monaco GP_SG-1000.SG" size="40960" crc="72542786" sha1="6476bc0fc1608dd69a1ae62617ea4719bc7eaa50"/>
 			</dataarea>
 		</part>
 	</software>
@@ -442,6 +462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg16f861fa045129">
+		<description>Ultimate Dungeon Escape (2025)(tibone, Cyrus, Revo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Ultimate Dungeon Escape (2025)(tibone, Cyrus, Revo).sg" size="32768" crc="73515934" sha1="6f861fa0451299a7fcb414b31eafa4ddb76f9a58"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg1aff1f34dab6f9">
 		<description>Vexed v1.03 (2020)(Under4Mhz)</description>
 		<year>????</year>
@@ -469,6 +499,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32706">
 				<rom name="Whack 'Em Smack 'Em Byrons (2024)(Jess Creations).sg" size="32706" crc="a444660d" sha1="0c73a67a13bd9cb4872d1f4146514167ee246bbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1342b32c48b7ea">
+		<description>Yawi v0.9.3 (2025)(dark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="49152">
+				<rom name="Yawi v0.9.3 (2025)(dark).sg" size="49152" crc="a1cc62dd" sha1="342b32c48b7ead73e3020fd874e9af87289e3c8e"/>
 			</dataarea>
 		</part>
 	</software>

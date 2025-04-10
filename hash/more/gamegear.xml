@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 87 -->
+<!-- Number of items in this list = 89 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial</description>
@@ -49,6 +49,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Ascend.gg" size="16384" crc="0765a5f1" sha1="fb897c2502210befb131c75695c9d4bbf9426f37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg70f911386d4836">
+		<description>Ayrton Senna's Super Monaco GP II (Japan) (Rev 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Ayrton Senna's Super Monaco GP II (Japan) (Rev 1).gg" size="262144" crc="7687ce09" sha1="70f911386d48362669e7d0076a53aaa2f91140c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -649,6 +659,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pegged v1.02 (2023)(Under4Mhz).gg" size="32768" crc="a3e06e7a" sha1="d01b356706b5d281d858d41aee8c5cfcd4dbb08e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggd596edb302dc3d">
+		<description>Pete Sampras Tennis (USA)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Pete Sampras Tennis (USA).gg" size="262144" crc="c597ba5d" sha1="d596edb302dc3d603e818847bdc9bba6972ee86d"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 172 -->
+<!-- Number of items in this list = 177 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a522071e69941a10">
 		<description>(demo)PAM SALT V1.02 (1982) (Atari) [o1]</description>
@@ -1002,6 +1002,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a527fa41b2f52794">
+		<description>Last Starfighter, The (USA) (Proto) (1984-05-08)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Last Starfighter, The (USA) (Proto) (1984-05-08).a52" size="16384" crc="037157f9" sha1="7fa41b2f527945005cce93f511f74023876836bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a524046f60602254">
+		<description>Last Starfighter, The (USA) (Proto) (1984-05-21)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Last Starfighter, The (USA) (Proto) (1984-05-21).a52" size="16384" crc="83517703" sha1="4046f60602254a7d86d2a6efd1a330455eaec119"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a52b23084866e1ed">
 		<description>lift</description>
 		<year>????</year>
@@ -1412,6 +1432,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a529b21ac7fec8d5">
+		<description>RealSports Basketball (USA) (Proto) (1983-12-16)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="RealSports Basketball (USA) (Proto) (1983-12-16).a52" size="32768" crc="dd217276" sha1="9b21ac7fec8d556585c6970231318ef1f501b2b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a5297d7c587cbc92">
 		<description>ruptus</description>
 		<year>????</year>
@@ -1669,6 +1699,26 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Time Runner 52.bin" size="16384" crc="0e80dbb2" sha1="b000ffe9fe1f5cd7d68cf7d2e7fe906b6a0fd668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a528fe2d3f338770">
+		<description>Track and Field (USA) (Proto) (1984-04-18)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Track and Field (USA) (Proto) (1984-04-18).a52" size="16384" crc="ee587f6e" sha1="8fe2d3f3387705caf6ca45b094dd450d3a9c5d22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a529dfbb5d8b7750">
+		<description>Track and Field (USA) (Proto) (1984-05-10)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Track and Field (USA) (Proto) (1984-05-10).a52" size="16384" crc="0ba22ece" sha1="9dfbb5d8b77504c66ce3ac4382daf79820393dd8"/>
 			</dataarea>
 		</part>
 	</software>

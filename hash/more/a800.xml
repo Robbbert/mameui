@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 51 -->
+<!-- Number of items in this list = 53 -->
 <softwarelist name="a800" description="a800 loose roms">
 	<software name="a8080e50c7fcb2e8">
 		<description>(demo)400-800 salt diagnostic cartridge v1.00</description>
@@ -342,6 +342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a80aa54b46b90d3f">
+		<description>Galaxian (USA)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Galaxian (USA).bin" size="8192" crc="d60027be" sha1="aa54b46b90d3f5d639dcb63f0e629803dbd369e2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a80f22daf5e3ef7e">
 		<description>Guntus</description>
 		<year>????</year>
@@ -509,6 +519,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Yewdow.rom" size="16384" crc="f0de9642" sha1="e2f0df1d4fff1a312f804720d99475dabfedacd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a80c97a60f9efa68">
+		<description>Zone Ranger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Zone Ranger.rom" size="16384" crc="8f1e72e7" sha1="c97a60f9efa686ee43ce324afa05bf5716a54668"/>
 			</dataarea>
 		</part>
 	</software>

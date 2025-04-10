@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 350 -->
+<!-- Number of items in this list = 364 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -192,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smse2b58b5ec2f73">
+		<description>Alex Kidd In Miracle World - Extended Edition v1.3 Final (2024)(Adrian Gauna)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Alex Kidd In Miracle World - Extended Edition v1.3 Final (2024)(Adrian Gauna).sms" size="524288" crc="1ae81c0b" sha1="e2b58b5ec2f73e19bb0aa2f008ab5a3f6d81ee98"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms6027676380af2">
 		<description>Alex Kidd in Radaxian Rumble_102e</description>
 		<year>????</year>
@@ -249,6 +259,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Antiair.sms" size="16384" crc="e49dfb4e" sha1="c79426c8541c4226fd7be2ef1a0df4b3b7e96a52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms7b9ad22b5c7e5">
+		<description>Ants for Master System (2025)(JoppyFurr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="196608">
+				<rom name="Ants for Master System (2025)(JoppyFurr).sms" size="196608" crc="c8688be0" sha1="7b9ad22b5c7e5d7cd2681a46585e8170f504e059"/>
 			</dataarea>
 		</part>
 	</software>
@@ -592,6 +612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsfd8c0a8bb769b">
+		<description>Castle of Illusion Starring Mickey Mouse T-Spa v2.0 (2021)(Wave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Castle of Illusion Starring Mickey Mouse T-Spa v2.0 (2021)(Wave).sms" size="262144" crc="33bd74e1" sha1="fd8c0a8bb769beea057225b0cfc24d74218755aa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smscdb4caa0ee036">
 		<description>cavacava</description>
 		<year>????</year>
@@ -849,6 +879,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="EDUSOFT_HAX2.sms" size="262144" crc="9cc4ae7c" sha1="c1dab46c2f1b71cefba67045f04ec561e348ad21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa059e96c9fb5d">
+		<description>Eggie Chuck v0.4 (2025)(willbritton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Eggie Chuck v0.4 (2025)(willbritton).sms" size="65536" crc="00727462" sha1="a059e96c9fb5de713cb9a973b333fe987e3ae35f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1422,6 +1462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms3cc965dcda706">
+		<description>Iron Man (2025)(old_pirate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="507904">
+				<rom name="Iron Man (2025)(old_pirate).sms" size="507904" crc="d2f3fed6" sha1="3cc965dcda7064616005770765c6cfd3645c0a1f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smse45af0feef391">
 		<description>James Bond 007 - The Duel (E) [T+Por_URBANO SLV]</description>
 		<year>????</year>
@@ -1439,6 +1489,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="jetpac.sms" size="65536" crc="7598cd63" sha1="c9b499ca43f0fdca2149a6e9afc379184f44de08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms78f0dd30fd7f7">
+		<description>Jumping Jackson v0.2 (2025)(slogra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="180224">
+				<rom name="Jumping Jackson v0.2 (2025)(slogra).sms" size="180224" crc="4d970e83" sha1="78f0dd30fd7f7a392780de0cf137431c218ee641"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1619,6 +1679,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="lucifer.sms" size="32768" crc="b1a03abd" sha1="0bce455d372726b45f5f8beb4559af7efcacfbb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms1d2dd3fafc3ad">
+		<description>Lunar Skirmish v56 (2025)(MikGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Lunar Skirmish v56 (2025)(MikGames).sms" size="393216" crc="5819d92f" sha1="1d2dd3fafc3ad270efdf7cdf6b17c30785caeb22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsde7592898d2b3">
+		<description>Lunar Skirmish v57 (2025)(MikGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="409600">
+				<rom name="Lunar Skirmish v57 (2025)(MikGames).sms" size="409600" crc="22a75492" sha1="de7592898d2b3303c2f5019dcb42983fae5dda8f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1892,6 +1972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms1930f10ad49a4">
+		<description>Ms. Pac-Man Classic v1.02 (2024)(xfixium)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="81920">
+				<rom name="Ms. Pac-Man Classic v1.02 (2024)(xfixium).sms" size="81920" crc="a70051a0" sha1="1930f10ad49a45308ec926a5f673e0fb2c8fb26c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms8876e8f16b09b">
 		<description>Music Station (V.1.6)</description>
 		<year>????</year>
@@ -2009,6 +2099,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="OutRun (Color Hack)(2023)(Slogra).sms" size="262208" crc="0fc1cf7a" sha1="6a29d47fb81904f838aa767680b12c425c2e7d86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smscbabd0938fc9a">
+		<description>Pac-Man v0.95 (2025)(LackofTrack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Pac-Man v0.95 (2025)(LackofTrack).sms" size="49152" crc="188bbd11" sha1="cbabd0938fc9a333ad37c146f6003552ba19909f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3222,6 +3322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsc7b90da0080a6">
+		<description>Ultimate Dungeon Escape v0.9 (2025)(tibone, Cyrus, Revo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Ultimate Dungeon Escape v0.9 (2025)(tibone, Cyrus, Revo).sms" size="32768" crc="c75b7e8b" sha1="c7b90da0080a6a90b0c4c7efb96b9d7f93cd9538"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsc36a4b33a7093">
 		<description>VDPTEST 2008-02-22</description>
 		<year>????</year>
@@ -3352,6 +3462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms5977de1fb6f65">
+		<description>Where Is It - XMAS 2024 Edition (2024)(Ricco59)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="81920">
+				<rom name="Where Is It - XMAS 2024 Edition (2024)(Ricco59).sms" size="81920" crc="76109046" sha1="5977de1fb6f65b18bca30552ec4d505eafb78310"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms9ec29fd9c5537">
 		<description>WingWarriors</description>
 		<year>????</year>
@@ -3409,6 +3529,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="YM2413 Testrom (2024-03-27)(Joppy Furr)(MIT).bin" size="32768" crc="9d08c137" sha1="107989e16dd06a278cb3484a4d565a2f5c255636"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms83f614b14764b">
+		<description>Yokai Ninja v1.01 (2025)(Ichigo Bankai, RushJet1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Yokai Ninja v1.01 (2025)(Ichigo Bankai, RushJet1).sms" size="262144" crc="3ecfd62b" sha1="83f614b14764be1dbbc0aa65f04d2b3ee6e6c285"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms69c75f980e91d">
+		<description>Yokai Ninja v1.02 (2025)(Ichigo Bankai, RushJet1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Yokai Ninja v1.02 (2025)(Ichigo Bankai, RushJet1).sms" size="262144" crc="f69f4004" sha1="69c75f980e91d726e1a757ed6967d03ba0909d7d"/>
 			</dataarea>
 		</part>
 	</software>
