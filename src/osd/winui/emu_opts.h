@@ -21,8 +21,8 @@ typedef enum {
 	OPTIONS_ARCADE,
 	// Local types
 	OPTIONS_SOURCE,
-	OPTIONS_GPARENT,
-	OPTIONS_PARENT,
+	OPTIONS_GPARENT, // not used
+	OPTIONS_PARENT, // not used
 	OPTIONS_GAME,
 	// EOF marker
 	OPTIONS_MAX

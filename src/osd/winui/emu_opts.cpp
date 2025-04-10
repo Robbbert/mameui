@@ -201,8 +201,7 @@ string GetEmuPath()
 
 string GetUiPath()
 {
-	string t = GetIniDir();printf("GetUiPath = %s\n",t.c_str());
-	return GetIniDir() + PATH_SEPARATOR + "ui.ini";
+	return GetEmuPath() + PATH_SEPARATOR + "ui.ini";
 }
 
 // load mewui settings
@@ -288,13 +287,6 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex, bo
 		return;
 	}
 
-//	if (opt_type == OPTIONS_GLOBAL)
-//	{
-//		// Now try global ini
-//		fname = GetEmuPath() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
-//		LoadSettingsFile(opts, fname.c_str());
-//	}
-//	else
 	if ((opt_type == OPTIONS_GAME) && (drvindex > -1))
 	{
 		// Lastly, gamename.ini
@@ -313,6 +305,8 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex, bo
 void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex)
 {
 	string fname, filepath;
+	fname.clear();
+	filepath.clear();
 
 	if (opt_type == OPTIONS_ARCADE)
 		fname = GetIniDir() + PATH_SEPARATOR + "arcade.ini";
@@ -454,11 +448,24 @@ string dir_get_value(int dir_index)
 }
 
 // This saves changes to UI.INI only
-static void SaveSettingsFile(ui_options &opts, string filename)
+static void SaveSettingsFile(ui_options &opts)
 {
 	util::core_file::ptr file;
 
+	// Save .\ui.ini
+	string filename = GetUiPath();
 	std::error_condition filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
+
+	if (!filerr)
+	{
+		string inistring = opts.output_ini();
+		file->puts(inistring.c_str());
+		file.reset();
+	}
+
+	// Save backup to ini\ui.ini
+	filename = GetIniDir() + PATH_SEPARATOR + "ui.ini";
+	filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
 
 	if (!filerr)
 	{
@@ -468,9 +475,10 @@ static void SaveSettingsFile(ui_options &opts, string filename)
 	}
 }
 
+// called from winui.cpp
 void ui_save_ini()
 {
-	SaveSettingsFile(emu_ui, GetUiPath());
+	SaveSettingsFile(emu_ui);
 }
 
 void SetDirectories(windows_options &o)
@@ -557,15 +565,17 @@ void SetSelectedSoftware(int drvindex, string opt_name, const char *software)
 			opt_name += "1";
 		const char *s = opt_name.c_str();
 
-		printf("SetSelectedSoftware(): slot=%s driver=%s software='%s'\n", s, driver_list::driver(drvindex).name, software);
+		printf("SetSelectedSoftware: slot=%s driver=%s software='%s'\n", s, driver_list::driver(drvindex).name, software);
 
-		printf("About to load %s into slot %s\n",software,s);fflush(stdout);
+		printf("SetSelectedSoftware: About to load %s into slot %s\n",software,s);fflush(stdout);
 		windows_options o;
 		load_options(o, OPTIONS_GAME, drvindex, 1);
+		//string swpath0 = o.value(OPTION_SWPATH);
 		o.set_value(s, software, OPTION_PRIORITY_CMDLINE);
 		//o.image_option(opt_name).specify(software);
-		printf("Done\n");;fflush(stdout);
 		save_options(o, OPTIONS_GAME, drvindex);
+		//string swpath1 = o.value(OPTION_SWPATH);
+		//printf("SetSelectedSoftware: Done = %s = %s\n",swpath0.c_str(),swpath1.c_str());fflush(stdout);
 	}
 }
 
@@ -588,9 +598,14 @@ bool DriverHasSoftware(int drvindex)
 	return 0;
 }
 
-void global_save_ini(void)
+// called from winui.cpp
+void global_save_ini()
 {
+	// Save .\mame.ini
 	string fname = GetEmuPath() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
+	SaveSettingsFile(emu_global, fname.c_str(), 0);
+	// Backup to ini\mame.ini
+	fname = GetIniDir() + PATH_SEPARATOR + string(emulator_info::get_configname()).append(".ini");
 	SaveSettingsFile(emu_global, fname.c_str(), 0);
 }
 #if 0

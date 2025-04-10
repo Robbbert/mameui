@@ -126,8 +126,11 @@ void mame_options::parse_one_ini(emu_options &options, const char *basename, int
 
 	// open the file; if we fail, that's ok
 	std::string pp = options.ini_path();
-	if (priority == OPTION_PRIORITY_SUBCMD)
+	if (priority == OPTION_PRIORITY_SUBCMD) // MAMEUI force first read of mame.ini to be at emulator root
+	{
 		pp = ".\0";
+		priority = OPTION_PRIORITY_NORMAL; // anything lower than this should be ok too
+	}
 	emu_file file(pp, OPEN_FLAG_READ);
 	pp.append("\\").append(basename);
 	osd_printf_verbose("Attempting load of %s.ini\n", pp.c_str());

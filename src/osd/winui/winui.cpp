@@ -3570,9 +3570,9 @@ static void ResetListView()
 	if (have_selection == false)
 		no_selection = true;
 
-	int current_game = Picker_GetSelectedItem(hwndList);
-	if (current_game < 0)
-		current_game = 0;
+	int drvindex = Picker_GetSelectedItem(hwndList);
+	if (drvindex < 0)
+		drvindex = 0;
 
 	SetWindowRedraw(hwndList,false);
 
@@ -3616,7 +3616,7 @@ static void ResetListView()
 		if (no_selection)
 			Picker_SetSelectedPick(hwndList, 0);
 		else
-			Picker_SetSelectedItem(hwndList, current_game);
+			Picker_SetSelectedItem(hwndList, drvindex);
 	}
 
 	/*RS Instead of the Arrange Call that was here previously on all Views
@@ -3811,7 +3811,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	LPTREEFOLDER folder;
 	char* utf8_szFile;
 	BOOL res = 0;
-	int current_game = Picker_GetSelectedItem(hwndList);
+	int drvindex = Picker_GetSelectedItem(hwndList);
 
 	switch (id)
 	{
@@ -4017,9 +4017,9 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 	case ID_GAME_AUDIT:
 		InitGameAudit(0);
-		if (current_game >= 0)
+		if (drvindex >= 0)
 		{
-			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, current_game, AUDIT_PAGE);
+			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, drvindex, AUDIT_PAGE);
 		}
 		/* Just in case the toggle MMX on/off */
 		UpdateStatusBar();
@@ -4028,8 +4028,8 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	/* ListView Context Menu */
 	case ID_CONTEXT_ADD_CUSTOM:
 	{
-		if (current_game >= 0)
-			DialogBoxParam(GetModuleHandle(NULL),MAKEINTRESOURCE(IDD_CUSTOM_FILE), hMain, AddCustomFileDialogProc, current_game);
+		if (drvindex >= 0)
+			DialogBoxParam(GetModuleHandle(NULL),MAKEINTRESOURCE(IDD_CUSTOM_FILE), hMain, AddCustomFileDialogProc, drvindex);
 		SetFocus(hwndList);
 		break;
 	}
@@ -4160,8 +4160,8 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 	case ID_GAME_PROPERTIES:
-		if (current_game >= 0)
-			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, current_game, PROPERTIES_PAGE);
+		if (drvindex >= 0)
+			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, drvindex, PROPERTIES_PAGE);
 		UpdateStatusBar();
 		break;
 
@@ -4182,9 +4182,9 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 	case ID_FOLDER_SOURCEPROPERTIES:
 	{
-		if (current_game < 0)
+		if (drvindex < 0)
 			return true;
-		InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_SOURCE, -1, current_game);
+		InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_SOURCE, -1, drvindex);
 		UpdateStatusBar();
 		SetFocus(hwndList);
 		return true;
@@ -4195,10 +4195,10 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	}
 
 	case ID_FOLDER_VECTORPROPERTIES:
-		if (current_game >= 0)
+		if (drvindex >= 0)
 		{
 			folder = GetFolderByID( FOLDER_VECTOR );
-			InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_VECTOR, folder->m_nFolderId, current_game);
+			InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_VECTOR, folder->m_nFolderId, drvindex);
 		}
 		/* Just in case the toggle MMX on/off */
 		UpdateStatusBar();
@@ -4564,10 +4564,10 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 	case ID_CONTEXT_RESET_PLAYSTATS:
-		if (current_game < 0)
+		if (drvindex < 0)
 			break;
-		ResetPlayTime(current_game);
-		ResetPlayCount(current_game);
+		ResetPlayTime(drvindex);
+		ResetPlayCount(drvindex);
 		res = ListView_RedrawItems(hwndList, GetSelectedPick(), GetSelectedPick());
 		break;
 
@@ -6003,8 +6003,8 @@ void InitTreeContextMenu(HMENU hTreeMenu)
 
 void InitBodyContextMenu(HMENU hBodyContextMenu)
 {
-	int current_game = Picker_GetSelectedItem(hwndList);
-	if (current_game < 0)
+	int drvindex = Picker_GetSelectedItem(hwndList);
+	if (drvindex < 0)
 		return;
 
 	TCHAR tmp[256];
@@ -6018,7 +6018,7 @@ void InitBodyContextMenu(HMENU hBodyContextMenu)
 		return;
 	}
 
-	_sntprintf(tmp,std::size(tmp),TEXT("Properties for %s"), ui_wstring_from_utf8(GetDriverFilename(current_game) ));
+	_sntprintf(tmp,std::size(tmp),TEXT("Properties for %s"), ui_wstring_from_utf8(GetDriverFilename(drvindex) ));
 	mii.fMask = MIIM_TYPE | MIIM_ID;
 	mii.fType = MFT_STRING;
 	mii.dwTypeData = tmp;
@@ -6028,7 +6028,7 @@ void InitBodyContextMenu(HMENU hBodyContextMenu)
 	// menu in resources has one default item
 	// so overwrite this one
 	SetMenuItemInfo(hBodyContextMenu,ID_FOLDER_SOURCEPROPERTIES,false,&mii);
-	EnableMenuItem(hBodyContextMenu, ID_FOLDER_VECTORPROPERTIES, DriverIsVector(current_game) ? MF_ENABLED : MF_GRAYED);
+	EnableMenuItem(hBodyContextMenu, ID_FOLDER_VECTORPROPERTIES, DriverIsVector(drvindex) ? MF_ENABLED : MF_GRAYED);
 }
 
 
@@ -6245,9 +6245,9 @@ static LRESULT CALLBACK PictureWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 
 static void RemoveCurrentGameCustomFolder()
 {
-	int current_game = Picker_GetSelectedItem(hwndList);
-	if (current_game >= 0)
-		RemoveGameCustomFolder(current_game);
+	int drvindex = Picker_GetSelectedItem(hwndList);
+	if (drvindex >= 0)
+		RemoveGameCustomFolder(drvindex);
 }
 
 

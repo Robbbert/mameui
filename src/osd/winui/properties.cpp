@@ -205,7 +205,6 @@ bool m_swpath_changed = 0;
 #define MAX_SCREENS 4
 #endif
 
-//windows_options m_OrigOpts, m_DefaultOpts, m_CurrentOpts;
 windows_options m_CurrentOpts;
 static datamap *properties_datamap;
 
@@ -485,15 +484,11 @@ void InitDefaultPropertyPage(HINSTANCE hInst, HWND hWnd)
 {
 	// clear globals
 	g_nGame = GLOBAL_OPTIONS;
-//	windows_options dummy;
-//	OptionsCopy(dummy,m_DefaultOpts);
-//	OptionsCopy(dummy,m_OrigOpts);
-//	OptionsCopy(dummy,m_CurrentOpts);
+	windows_options dummy;
+	OptionsCopy(dummy,m_CurrentOpts);
 
 	/* Get default options to populate property sheets */
 	load_options(m_CurrentOpts, OPTIONS_GLOBAL, g_nGame, 0);
-//	load_options(m_OrigOpts, OPTIONS_GLOBAL, g_nGame, 0);
-//	load_options(m_DefaultOpts, OPTIONS_GLOBAL, -2, 0);
 
 	g_nPropertyMode = OPTIONS_GLOBAL;
 	BuildDataMap();
@@ -529,12 +524,12 @@ void InitDefaultPropertyPage(HINSTANCE hInst, HWND hWnd)
 }
 
 /* Initialize the property pages for anything but the Default option set */
-void InitPropertyPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYPE opt_type, int folder_id, int game_num)
+void InitPropertyPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYPE opt_type, int folder_id, int drvindex)
 {
-	InitPropertyPageToPage(hInst, hWnd, hIcon, opt_type, folder_id, game_num, PROPERTIES_PAGE);
+	InitPropertyPageToPage(hInst, hWnd, hIcon, opt_type, folder_id, drvindex, PROPERTIES_PAGE);
 }
 
-void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYPE opt_type, int folder_id, int game_num, int start_page )
+void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYPE opt_type, int folder_id, int drvindex, int start_page )
 {
 	if (highlight_brush == NULL)
 		highlight_brush = CreateSolidBrush(HIGHLIGHT_COLOR);
@@ -544,22 +539,15 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 
 	// Initialize the options
 	windows_options dummy;
-//	OptionsCopy(dummy,m_DefaultOpts);
-//	OptionsCopy(dummy,m_OrigOpts);
 	OptionsCopy(dummy,m_CurrentOpts);
 
-	load_options(m_CurrentOpts, opt_type, game_num, 1);
-//	load_options(m_OrigOpts, opt_type, game_num, 1);
-//	if (game_num == GLOBAL_OPTIONS)
-//		load_options(m_DefaultOpts, OPTIONS_GLOBAL, -2, 0); // base opts is the backup for global
-//	else
-//		load_options(m_DefaultOpts, OPTIONS_GLOBAL, -1, 0); // global is the backup for games
+	load_options(m_CurrentOpts, opt_type, drvindex, 1);
 
 	// Copy icon to use for the property pages
 	g_hIcon = CopyIcon(hIcon);
 
 	// These MUST be valid, they are used as indicies
-	g_nGame = game_num;
+	g_nGame = drvindex;
 	g_nFolder = folder_id;
 
 	// Keep track of OPTIONS_TYPE that was passed in.
@@ -576,8 +564,8 @@ void InitPropertyPageToPage(HINSTANCE hInst, HWND hWnd, HICON hIcon, OPTIONS_TYP
 	PROPSHEETPAGE *pspage;
 	if( OPTIONS_GAME == opt_type )
 	{
-		InitGameAudit(game_num);
-		pspage = CreatePropSheetPages(hInst, false, game_num, &pshead.nPages, true);
+		InitGameAudit(drvindex);
+		pspage = CreatePropSheetPages(hInst, false, drvindex, &pshead.nPages, true);
 	}
 	else
 		pspage = CreatePropSheetPages(hInst, false, -1, &pshead.nPages, false);
@@ -1098,25 +1086,13 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 
 		UpdateProperties(hDlg, properties_datamap, m_CurrentOpts);
 
-//		g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
-//		g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-
-		// Default button doesn't exist on Default settings
-//		if (g_nGame == GLOBAL_OPTIONS)
-//			ShowWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), SW_HIDE);
-//		else
-//			EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
-
-		// Setup Reset button
-//		EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 		ShowWindow(hDlg, SW_SHOW);
-//		PropSheet_Changed(GetParent(hDlg), hDlg);
+		PropSheet_Changed(GetParent(hDlg), hDlg);
 		return 1;
 
 	case WM_HSCROLL:
 		/* slider changed */
 		HANDLE_WM_HSCROLL(hDlg, wParam, lParam, OptOnHScroll);
-//		EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), true);
 
 		// Enable Apply button
 		PropSheet_Changed(GetParent(hDlg), hDlg);
@@ -1247,49 +1223,6 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				changed = ResetPlugins(hDlg);
 				break;
 
-//			case IDC_PROP_RESET:
-				// RESET Button - Only do it if mouse-clicked
-//				if (wNotifyCode != BN_CLICKED)
-//					break;
-
-				// Change settings in property sheets back to original
-//				UpdateProperties(hDlg, properties_datamap, m_OrigOpts);
-				// The original options become the current options.
-//				UpdateOptions(hDlg, properties_datamap, m_CurrentOpts);
-
-//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
-//				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-				// Turn off Apply
-//				PropSheet_UnChanged(GetParent(hDlg), hDlg);
-//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
-//				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
-//				break;
-#if 0
-			case IDC_USE_DEFAULT:
-				// DEFAULT Button - Only do it if mouse-clicked
-				if (wNotifyCode != BN_CLICKED)
-					break;
-
-				// Change settings to be the same as mame.ini
-				UpdateProperties(hDlg, properties_datamap, m_DefaultOpts);
-				// The original options become the current options.
-				UpdateOptions(hDlg, properties_datamap, m_CurrentOpts);
-
-				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
-//				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-				// Enable/Disable the Reset to Defaults button
-				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
-//				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
-				// Tell the dialog to enable/disable the apply button.
-//				if (g_nGame != GLOBAL_OPTIONS)
-//				{
-//					if (g_bReset)
-						PropSheet_Changed(GetParent(hDlg), hDlg);
-//					else
-//						PropSheet_UnChanged(GetParent(hDlg), hDlg);
-//				}
-				break;
-#endif
 				// MSH 20070813 - Update all related controls
 			case IDC_SCREENSELECT:
 				{
@@ -1325,6 +1258,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				*************************************  */
 				}
 				break;
+
 			default:
 #ifdef MESS
 				if (MessPropertiesCommand(hDlg, wNotifyCode, wID, &changed))
@@ -1334,8 +1268,7 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				}
 #endif
 
-				// use default behavior; try to get the result out of the datamap if
-				// appropriate
+				// use default behavior; try to get the result out of the datamap if appropriate
 				GetClassName(hWndCtrl, szClass, std::size(szClass));
 				if (!_tcscmp(szClass, WC_COMBOBOX))
 				{
@@ -1351,16 +1284,12 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 				break;
 			}
 
-			if (changed == true)
+			if (changed)
 			{
 				// make sure everything's copied over, to determine what's changed
 				UpdateOptions(hDlg, properties_datamap, m_CurrentOpts);
 				// enable the apply button
 				PropSheet_Changed(GetParent(hDlg), hDlg);
-//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
-//				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
-//				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 			}
 		}
 		break;
@@ -1377,10 +1306,6 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			case PSN_SETACTIVE:
 				/* Initialize the controls. */
 				UpdateProperties(hDlg, properties_datamap, m_CurrentOpts);
-//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
-//				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
-//				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 				break;
 
 			case PSN_APPLY:
@@ -1395,16 +1320,9 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 
 				// Read the datamap
 				UpdateOptions(hDlg, properties_datamap, m_CurrentOpts);
-				// The current options become the original options.
-//				UpdateOptions(hDlg, properties_datamap, m_OrigOpts);
 
 				// Repopulate the controls?  WTF?  We just read them, they should be fine.
 				UpdateProperties(hDlg, properties_datamap, m_CurrentOpts);
-
-//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
-//				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
-//				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 
 				// Save the current options
 				save_options(m_CurrentOpts, g_nPropertyMode, g_nGame);
@@ -1424,25 +1342,10 @@ INT_PTR CALLBACK GameOptionsProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPar
 			case PSN_KILLACTIVE:
 				/* Save Changes to the options here. */
 				UpdateOptions(hDlg, properties_datamap, m_CurrentOpts);
-				// Determine button states.
-//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
-//				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
-//				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
 
 				ResetDataMap(hDlg);
 				SetWindowLongPtr(hDlg, DWLP_MSGRESULT, false);
 				return 1;
-
-//			case PSN_RESET:
-				// Reset to the original values. Disregard changes
-				//m_CurrentOpts = m_OrigOpts;
-//				g_bUseDefaults = AreOptionsEqual(m_CurrentOpts, m_DefaultOpts) ? false : true;
-//				g_bReset = AreOptionsEqual(m_CurrentOpts, m_OrigOpts) ? false : true;
-//				EnableWindow(GetDlgItem(hDlg, IDC_USE_DEFAULT), g_bUseDefaults);
-//				EnableWindow(GetDlgItem(hDlg, IDC_PROP_RESET), g_bReset);
-//				SetWindowLongPtr(hDlg, DWLP_MSGRESULT, false);
-//				break;
 
 			case PSN_HELP:
 				// User wants help for this property page
@@ -3071,7 +2974,7 @@ static void InitializeBIOSUI(HWND hwnd)
 			ComboBox_SetItemData( hCtrl, i++, "");
 			return;
 		}
-		if (g_nGame == LOCAL_OPTIONS) //Folder Options: This is the only place that LOCAL_OPTIONS is used.
+		//if (g_nGame == LOCAL_OPTIONS) //Folder Options: This is the only place that LOCAL_OPTIONS is used.
 		{
 			gamedrv = &driver_list::driver(g_nFolderGame);
 			if (DriverHasOptionalBIOS(g_nFolderGame) == false)
