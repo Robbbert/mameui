@@ -386,11 +386,14 @@ char * ConvertToWindowsNewlines(const char *source)
  * This assumes their is a pathname passed to the function
  * like src\drivers\blah.c
  */
-const char * GetDriverFilename(uint32_t nIndex)
+const char * GetDriverFilename(int drvindex)
 {
 	static char tmp[2048] = { };
-	string driver = string(core_filename_extract_base(driver_list::driver(nIndex).type.source()));
-	strcpy(tmp, driver.c_str());
+	if (drvindex >= 0)
+	{
+		string driver = string(core_filename_extract_base(driver_list::driver(drvindex).type.source()));
+		strcpy(tmp, driver.c_str());
+	}
 	return tmp;
 }
 
@@ -417,7 +420,7 @@ int numberOfSpeakers(const machine_config *config)
 	return iter.count();
 }
 
-static void SetDriversInfo(void)
+static void SetDriversInfo()
 {
 	uint32_t cache;
 	uint32_t total = driver_list::total();
@@ -465,7 +468,7 @@ static void SetDriversInfo(void)
 	}
 }
 
-static void InitDriversInfo(void)
+static void InitDriversInfo()
 {
 	printf("InitDriversInfo: A\n");fflush(stdout);
 	int num_speakers;
@@ -555,7 +558,7 @@ static void InitDriversInfo(void)
 	printf("InitDriversInfo: Finished\n");fflush(stdout);
 }
 
-static int InitDriversCache(void)
+static int InitDriversCache()
 {
 	printf("InitDriversCache: A\n");fflush(stdout);
 	if (RequiredDriverCache())
@@ -598,7 +601,7 @@ static int InitDriversCache(void)
 	return 0;
 }
 
-static struct DriversInfo* GetDriversInfo(uint32_t driver_index)
+static struct DriversInfo* GetDriversInfo(int drvindex)
 {
 	if (bFirst)
 	{
@@ -611,100 +614,154 @@ static struct DriversInfo* GetDriversInfo(uint32_t driver_index)
 		InitDriversCache();
 	}
 
-	return &drivers_info[driver_index];
+	return &drivers_info[drvindex];
 }
 
-BOOL DriverIsClone(uint32_t driver_index)
+BOOL DriverIsClone(int drvindex)
 {
-	 return GetDriversInfo(driver_index)->isClone;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->isClone;
 }
 
-BOOL DriverIsBroken(uint32_t driver_index)
+BOOL DriverIsBroken(int drvindex)
 {
-	return GetDriversInfo(driver_index)->isBroken;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->isBroken;
 }
 
-BOOL DriverIsHarddisk(uint32_t driver_index)
+BOOL DriverIsHarddisk(int drvindex)
 {
-	return GetDriversInfo(driver_index)->isHarddisk;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->isHarddisk;
 }
 
-BOOL DriverIsBios(uint32_t driver_index)
+BOOL DriverIsBios(int drvindex)
 {
-	return BIT(GetDriverCacheLower(driver_index), 9);
+	if (drvindex < 0)
+		return 0;
+	else
+		return BIT(GetDriverCacheLower(drvindex), 9);
 }
 
-BOOL DriverIsMechanical(uint32_t driver_index)
+BOOL DriverIsMechanical(int drvindex)
 {
-	return BIT(GetDriverCacheLower(driver_index), 14);
+	if (drvindex < 0)
+		return 0;
+	else
+		return BIT(GetDriverCacheLower(drvindex), 14);
 }
 
-BOOL DriverIsArcade(uint32_t driver_index)
+BOOL DriverIsArcade(int drvindex)
 {
-	return ((GetDriverCacheLower(driver_index) & 3) == 0) ? true: false;  //TYPE_ARCADE
+	if (drvindex < 0)
+		return 0;
+	else
+		return ((GetDriverCacheLower(drvindex) & 3) == 0) ? true: false;  //TYPE_ARCADE
 }
 
-BOOL DriverHasOptionalBIOS(uint32_t driver_index)
+BOOL DriverHasOptionalBIOS(int drvindex)
 {
-	return GetDriversInfo(driver_index)->hasOptionalBIOS;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->hasOptionalBIOS;
 }
 
-BOOL DriverIsStereo(uint32_t driver_index)
+BOOL DriverIsStereo(int drvindex)
 {
-	return GetDriversInfo(driver_index)->isStereo;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->isStereo;
 }
 
-int DriverNumScreens(uint32_t driver_index)
+int DriverNumScreens(int drvindex)
 {
-	return GetDriversInfo(driver_index)->screenCount;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->screenCount;
 }
 
-BOOL DriverIsVector(uint32_t driver_index)
+BOOL DriverIsVector(int drvindex)
 {
-	return GetDriversInfo(driver_index)->isVector;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->isVector;
 }
 
-BOOL DriverUsesRoms(uint32_t driver_index)
+BOOL DriverUsesRoms(int drvindex)
 {
-	return GetDriversInfo(driver_index)->usesRoms;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->usesRoms;
 }
 
-BOOL DriverUsesSamples(uint32_t driver_index)
+BOOL DriverUsesSamples(int drvindex)
 {
-	return GetDriversInfo(driver_index)->usesSamples;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->usesSamples;
 }
 
-BOOL DriverUsesTrackball(uint32_t driver_index)
+BOOL DriverUsesTrackball(int drvindex)
 {
-	return GetDriversInfo(driver_index)->usesTrackball;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->usesTrackball;
 }
 
-BOOL DriverUsesLightGun(uint32_t driver_index)
+BOOL DriverUsesLightGun(int drvindex)
 {
-	return GetDriversInfo(driver_index)->usesLightGun;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->usesLightGun;
 }
 
-BOOL DriverUsesMouse(uint32_t driver_index)
+BOOL DriverUsesMouse(int drvindex)
 {
-	return GetDriversInfo(driver_index)->usesMouse;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->usesMouse;
 }
 
-BOOL DriverSupportsSaveState(uint32_t driver_index)
+BOOL DriverSupportsSaveState(int drvindex)
 {
-	return GetDriversInfo(driver_index)->supportsSaveState;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->supportsSaveState;
 }
 
-BOOL DriverIsVertical(uint32_t driver_index)
+BOOL DriverIsVertical(int drvindex)
 {
-	return GetDriversInfo(driver_index)->isVertical;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->isVertical;
 }
 
-BOOL DriverHasRam(uint32_t driver_index)
+BOOL DriverHasRam(int drvindex)
 {
-	return GetDriversInfo(driver_index)->hasRam;
+	if (drvindex < 0)
+		return 0;
+	else
+		return GetDriversInfo(drvindex)->hasRam;
 }
 
-void FlushFileCaches(void)
+void FlushFileCaches()
 {
 	util::archive_file::cache_clear();
 }
@@ -718,7 +775,7 @@ BOOL StringIsSuffixedBy(const char *s, const char *suffix)
     Win32 wrappers
  ***************************************************************************/
 
-BOOL SafeIsAppThemed(void)
+BOOL SafeIsAppThemed()
 {
 	BOOL bResult = false;
 	BOOL (WINAPI *pfnIsAppThemed)(void);

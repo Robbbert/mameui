@@ -30,7 +30,7 @@ typedef struct
 {
 	BOOL bOnDefaultPage;
 //	BOOL (*pfnFilterProc)(const machine_config *drv, const game_driver *gamedrv);
-	BOOL (*pfnFilterProc)(uint32_t driver_index);
+	BOOL (*pfnFilterProc)(int drvindex);
 	DWORD dwDlgID;
 	DLGPROC pfnDlgProc;
 } PROPERTYSHEETINFO;

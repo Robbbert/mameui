@@ -26,9 +26,9 @@
 #include "properties.h"
 
 
-static BOOL FilterAvailable(uint32_t driver_index)
+static BOOL FilterAvailable(int drvindex)
 {
-	return !DriverUsesRoms(driver_index) || IsAuditResultYes(GetRomAuditResults(driver_index));
+	return !DriverUsesRoms(drvindex) || IsAuditResultYes(GetRomAuditResults(drvindex));
 }
 
 #ifdef MESS
@@ -184,7 +184,7 @@ extern const PROPERTYSHEETINFO g_propSheets[] =
 	{ TRUE,  NULL,                   IDD_PROP_SHADER,        GameOptionsProc },
 	{ TRUE,  NULL,                   IDD_PROP_SNAP,          GameOptionsProc },
 #ifdef MESS
-	{ FALSE, NULL,                   IDD_PROP_SOFTWARE,      GameMessOptionsProc },
+	{ FALSE, DriverHasSoftware,      IDD_PROP_SOFTWARE,      GameMessOptionsProc },
 	{ FALSE, DriverHasRam,           IDD_PROP_CONFIGURATION, GameMessOptionsProc }, // PropSheetFilter_Config not needed
 #endif
 	{ TRUE,  DriverIsVector,         IDD_PROP_VECTOR,        GameOptionsProc },     // PropSheetFilter_Vector not needed

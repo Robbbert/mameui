@@ -146,12 +146,12 @@ void get_system_warnings(std::ostream &buf, running_machine &machine, machine_fl
 			buf << '\n';
 		buf << _("This system was never completed. It may exhibit strange behavior or missing elements that are not bugs in the emulation.\n");
 	}
-	if (flags & ::machine_flags::NO_SOUND_HW)
-	{
-		if (buf.tellp() > start_position)
-			buf << '\n';
-		buf << _("This system has no sound hardware, MAME will produce no sounds, this is expected behavior.\n");
-	}
+//	if (flags & ::machine_flags::NO_SOUND_HW)
+//	{
+//		if (buf.tellp() > start_position)
+//			buf << '\n';
+//		buf << _("This system has no sound hardware, MAME will produce no sounds, this is expected behavior.\n");
+//	}
 
 	// these are more severe warnings
 	if (flags & ::machine_flags::MECHANICAL)

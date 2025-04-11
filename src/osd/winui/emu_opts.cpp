@@ -40,20 +40,20 @@ void emu_set_value(windows_options *o, const char* name, float value)
 	ss << value;
 	string svalue(ss.str());
 	string sname = string(name);
-	o->set_value(sname, svalue, OPTION_PRIORITY_CMDLINE);
+	o->set_value(sname, svalue, OPTION_PRIORITY_HIGH);
 }
 
 void emu_set_value(windows_options *o, const char* name, int value)
 {
 	string svalue = std::to_string(value);
 	string sname = string(name);
-	o->set_value(sname, svalue, OPTION_PRIORITY_CMDLINE);
+	o->set_value(sname, svalue, OPTION_PRIORITY_HIGH);
 }
 
 void emu_set_value(windows_options *o, const char* name, string value)
 {
 	string sname = string(name);
-	o->set_value(sname, value, OPTION_PRIORITY_CMDLINE);
+	o->set_value(sname, value, OPTION_PRIORITY_HIGH);
 }
 
 // string names
@@ -62,18 +62,18 @@ void emu_set_value(windows_options *o, string name, float value)
 	std::ostringstream ss;
 	ss << value;
 	string svalue(ss.str());
-	o->set_value(name, svalue, OPTION_PRIORITY_CMDLINE);
+	o->set_value(name, svalue, OPTION_PRIORITY_HIGH);
 }
 
 void emu_set_value(windows_options *o, string name, int value)
 {
 	string svalue = std::to_string(value);
-	o->set_value(name, svalue, OPTION_PRIORITY_CMDLINE);
+	o->set_value(name, svalue, OPTION_PRIORITY_HIGH);
 }
 
 void emu_set_value(windows_options *o, string name, string value)
 {
-	o->set_value(name, value, OPTION_PRIORITY_CMDLINE);
+	o->set_value(name, value, OPTION_PRIORITY_HIGH);
 }
 
 // char names
@@ -83,20 +83,20 @@ void emu_set_value(windows_options &o, const char* name, float value)
 	ss << value;
 	string svalue(ss.str());
 	string sname = string(name);
-	o.set_value(sname, svalue, OPTION_PRIORITY_CMDLINE);
+	o.set_value(sname, svalue, OPTION_PRIORITY_HIGH);
 }
 
 void emu_set_value(windows_options &o, const char* name, int value)
 {
 	string svalue = std::to_string(value);
 	string sname = string(name);
-	o.set_value(sname, svalue, OPTION_PRIORITY_CMDLINE);
+	o.set_value(sname, svalue, OPTION_PRIORITY_HIGH);
 }
 
 void emu_set_value(windows_options &o, const char* name, string value)
 {
 	string sname = string(name);
-	o.set_value(sname, value, OPTION_PRIORITY_CMDLINE);
+	o.set_value(sname, value, OPTION_PRIORITY_HIGH);
 }
 
 // string names
@@ -105,23 +105,23 @@ void emu_set_value(windows_options &o, string name, float value)
 	std::ostringstream ss;
 	ss << value;
 	string svalue(ss.str());
-	o.set_value(name, svalue, OPTION_PRIORITY_CMDLINE);
+	o.set_value(name, svalue, OPTION_PRIORITY_HIGH);
 }
 
 void emu_set_value(windows_options &o, string name, int value)
 {
 	string svalue = std::to_string(value);
-	o.set_value(name, svalue, OPTION_PRIORITY_CMDLINE);
+	o.set_value(name, svalue, OPTION_PRIORITY_HIGH);
 }
 
 void emu_set_value(windows_options &o, string name, string value)
 {
-	o.set_value(name, value, OPTION_PRIORITY_CMDLINE);
+	o.set_value(name, value, OPTION_PRIORITY_HIGH);
 }
 
 void ui_set_value(ui_options &o, string name, string value)
 {
-	o.set_value(name, value, OPTION_PRIORITY_CMDLINE);
+	o.set_value(name, value, OPTION_PRIORITY_HIGH);
 }
 
 string emu_get_value(windows_options *o, string name)
@@ -212,7 +212,7 @@ static void LoadSettingsFile(ui_options &opts, string filename)
 	std::error_condition filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_READ, file);
 	if (!filerr)
 	{
-		opts.parse_ini_file(*file, OPTION_PRIORITY_CMDLINE, true, true);
+		opts.parse_ini_file(*file, OPTION_PRIORITY_HIGH, true, true);
 		file.reset();
 	}
 }
@@ -226,7 +226,7 @@ static void LoadSettingsFile(windows_options &opts, const char *filename)
 	std::error_condition filerr = util::core_file::open(filename, OPEN_FLAG_READ, file);
 	if (!filerr)
 	{
-		opts.parse_ini_file(*file, OPTION_PRIORITY_CMDLINE, true, true);
+		opts.parse_ini_file(*file, OPTION_PRIORITY_HIGH, true, true);
 		file.reset();
 	}
 }
@@ -294,7 +294,7 @@ void load_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex, bo
 		{
 			fname = GetIniDir() + PATH_SEPARATOR + string(driver->name).append(".ini");
 			if (set_system_name)
-				opts.set_value(OPTION_SYSTEMNAME, driver->name, OPTION_PRIORITY_CMDLINE);
+				opts.set_value(OPTION_SYSTEMNAME, driver->name, OPTION_PRIORITY_HIGH);
 			LoadSettingsFile(opts, fname.c_str());
 		}
 		SetDirectories(opts);
@@ -554,7 +554,7 @@ void SetSelectedSoftware(int drvindex, string opt_name, const char *software)
 		windows_options o;
 		printf("About to write %s to OPTION_SOFTWARENAME\n",software);fflush(stdout);
 		load_options(o, OPTIONS_GAME, drvindex, 1);
-		o.set_value(OPTION_SOFTWARENAME, software, OPTION_PRIORITY_CMDLINE);
+		o.set_value(OPTION_SOFTWARENAME, software, OPTION_PRIORITY_HIGH);
 		save_options(o, OPTIONS_GAME, drvindex);
 	}
 	else
@@ -571,7 +571,7 @@ void SetSelectedSoftware(int drvindex, string opt_name, const char *software)
 		windows_options o;
 		load_options(o, OPTIONS_GAME, drvindex, 1);
 		//string swpath0 = o.value(OPTION_SWPATH);
-		o.set_value(s, software, OPTION_PRIORITY_CMDLINE);
+		o.set_value(s, software, OPTION_PRIORITY_HIGH);
 		//o.image_option(opt_name).specify(software);
 		save_options(o, OPTIONS_GAME, drvindex);
 		//string swpath1 = o.value(OPTION_SWPATH);
@@ -580,11 +580,9 @@ void SetSelectedSoftware(int drvindex, string opt_name, const char *software)
 }
 
 // See if this driver has software support
-bool DriverHasSoftware(int drvindex)
+BOOL DriverHasSoftware(int drvindex)
 {
-	if (drvindex < 0)
-		return 0;
-	if (drvindex < driver_list::total())
+	if ((drvindex >= 0) && (drvindex < driver_list::total()))
 	{
 		windows_options o;
 		load_options(o, OPTIONS_GAME, drvindex, 1);
@@ -664,7 +662,7 @@ void ResetGameOptions(int drvindex)
 void ResetGameDefaults(void)
 {
 	// Walk the global settings and reset everything to defaults;
-	ResetToDefaults(emu_global, OPTION_PRIORITY_CMDLINE);
+	ResetToDefaults(emu_global, OPTION_PRIORITY_HIGH);
 	save_options(emu_global, OPTIONS_GLOBAL, GLOBAL_OPTIONS);
 }
 

@@ -74,97 +74,97 @@ enum
 // (that's how many options we have after MAX_TAB_TYPES)
 #define TAB_SUBTRACT 3
 
-void OptionsInit(void);
+void OptionsInit();
 
 #define OPTIONS_TYPE_GLOBAL -1
 #define OPTIONS_TYPE_FOLDER -2
 
-void LoadFolderFlags(void);
+void LoadFolderFlags();
 
 // Start interface to directories.h
 
-const string GetManualsDir(void);
+const string GetManualsDir();
 void SetManualsDir(const char* path);
 
-const string GetVideoDir(void);
+const string GetVideoDir();
 void SetVideoDir(const char *path);
 
 // End interface to directories.h
 
-void mui_save_ini(void);
-void SaveGameListOptions(void);
+void mui_save_ini();
+void SaveGameListOptions();
 
-void ResetGUI(void);
+void ResetGUI();
 
 
 const char * GetImageTabLongName(int tab_index);
 const char * GetImageTabShortName(int tab_index);
 
 void SetViewMode(int val);
-int  GetViewMode(void);
+int  GetViewMode();
 
 void SetGameCheck(BOOL game_check);
-BOOL GetGameCheck(void);
+BOOL GetGameCheck();
 
 void SetEnableIndent(bool value);
 bool GetEnableIndent();
 
 void SetJoyGUI(BOOL use_joygui);
-BOOL GetJoyGUI(void);
+BOOL GetJoyGUI();
 
 void SetKeyGUI(BOOL use_keygui);
-BOOL GetKeyGUI(void);
+BOOL GetKeyGUI();
 
 void SetCycleScreenshot(int cycle_screenshot);
-int GetCycleScreenshot(void);
+int GetCycleScreenshot();
 
 void SetStretchScreenShotLarger(BOOL stretch);
-BOOL GetStretchScreenShotLarger(void);
+BOOL GetStretchScreenShotLarger();
 
 void SetScreenshotBorderSize(int size);
-int GetScreenshotBorderSize(void);
+int GetScreenshotBorderSize();
 
 void SetScreenshotBorderColor(COLORREF uColor);
-COLORREF GetScreenshotBorderColor(void);
+COLORREF GetScreenshotBorderColor();
 
 void SetFilterInherit(BOOL inherit);
-BOOL GetFilterInherit(void);
+BOOL GetFilterInherit();
 
 void SetOffsetClones(BOOL offset);
-BOOL GetOffsetClones(void);
+BOOL GetOffsetClones();
 
 void SetSavedFolderID(UINT val);
-UINT GetSavedFolderID(void);
+UINT GetSavedFolderID();
 
 void SetOverrideRedX(BOOL val);
-BOOL GetOverrideRedX(void);
+BOOL GetOverrideRedX();
 
 BOOL GetShowFolder(int folder);
 void SetShowFolder(int folder,BOOL show);
 
 void SetShowStatusBar(BOOL val);
-BOOL GetShowStatusBar(void);
+BOOL GetShowStatusBar();
 
 void SetShowToolBar(BOOL val);
-BOOL GetShowToolBar(void);
+BOOL GetShowToolBar();
 
 void SetShowTabCtrl(BOOL val);
-BOOL GetShowTabCtrl(void);
+BOOL GetShowTabCtrl();
 
 void SetCurrentTab(int val);
-int GetCurrentTab(void);
+int GetCurrentTab();
 
 void SetDefaultGame(int val);
-uint32_t GetDefaultGame(void);
+uint32_t GetDefaultGame();
 
 void SetWindowArea(const AREA *area);
 void GetWindowArea(AREA *area);
 
 void SetWindowState(UINT state);
-UINT GetWindowState(void);
+UINT GetWindowState();
 
 void SetWindowPanes(int val);
-UINT GetWindowPanes(void);
+UINT GetWindowPanes();
 
 void SetColumnWidths(int widths[]);
 void GetColumnWidths(int widths[]);
@@ -187,12 +187,12 @@ void GetListFont(LOGFONT *font);
 DWORD GetFolderFlags(int folder_index);
 
 void SetListFontColor(COLORREF uColor);
-COLORREF GetListFontColor(void);
+COLORREF GetListFontColor();
 
 void SetListCloneColor(COLORREF uColor);
-COLORREF GetListCloneColor(void);
+COLORREF GetListCloneColor();
 
-int GetHistoryTab(void);
+int GetHistoryTab();
 void SetHistoryTab(int tab,BOOL show);
 
 int GetShowTab(int tab);
@@ -200,71 +200,71 @@ void SetShowTab(int tab,BOOL show);
 BOOL AllowedToSetShowTab(int tab,BOOL show);
 
 void SetSortColumn(int column);
-int  GetSortColumn(void);
+int  GetSortColumn();
 
 void SetSortReverse(BOOL reverse);
-BOOL GetSortReverse(void);
+BOOL GetSortReverse();
 
-const string GetBgDir(void);
+const string GetBgDir();
 void SetBgDir(const char *path);
 
-int GetRomAuditResults(uint32_t driver_index);
-void SetRomAuditResults(uint32_t driver_index, int audit_results);
+int GetRomAuditResults(int);
+void SetRomAuditResults(int, int audit_results);
 
-int GetSampleAuditResults(uint32_t driver_index);
-void SetSampleAuditResults(uint32_t driver_index, int audit_results);
+int GetSampleAuditResults(int);
+void SetSampleAuditResults(int, int audit_results);
 
-void IncrementPlayCount(uint32_t driver_index);
-uint32_t GetPlayCount(uint32_t driver_index);
-void ResetPlayCount(int driver_index);
+void IncrementPlayCount(int);
+uint32_t GetPlayCount(int);
+void ResetPlayCount(int);
 
-void IncrementPlayTime(uint32_t driver_index, uint32_t playtime);
-uint32_t GetPlayTime(uint32_t driver_index);
-void GetTextPlayTime(uint32_t driver_index, char *buf);
-void ResetPlayTime(int driver_index);
+void IncrementPlayTime(int, uint32_t playtime);
+uint32_t GetPlayTime(int);
+void GetTextPlayTime(int, char *buf);
+void ResetPlayTime(int);
 
-const char * GetVersionString(void);
+const char * GetVersionString();
 
 
 
 
 // Keyboard control of ui
-input_seq* Get_ui_key_up(void);
-input_seq* Get_ui_key_down(void);
-input_seq* Get_ui_key_left(void);
-input_seq* Get_ui_key_right(void);
-input_seq* Get_ui_key_start(void);
-input_seq* Get_ui_key_pgup(void);
-input_seq* Get_ui_key_pgdwn(void);
-input_seq* Get_ui_key_home(void);
-input_seq* Get_ui_key_end(void);
-input_seq* Get_ui_key_ss_change(void);
-input_seq* Get_ui_key_history_up(void);
-input_seq* Get_ui_key_history_down(void);
+input_seq* Get_ui_key_up();
+input_seq* Get_ui_key_down();
+input_seq* Get_ui_key_left();
+input_seq* Get_ui_key_right();
+input_seq* Get_ui_key_start();
+input_seq* Get_ui_key_pgup();
+input_seq* Get_ui_key_pgdwn();
+input_seq* Get_ui_key_home();
+input_seq* Get_ui_key_end();
+input_seq* Get_ui_key_ss_change();
+input_seq* Get_ui_key_history_up();
+input_seq* Get_ui_key_history_down();
 
-input_seq* Get_ui_key_context_filters(void);
-input_seq* Get_ui_key_select_random(void);
-input_seq* Get_ui_key_game_audit(void);
-input_seq* Get_ui_key_game_properties(void);
-input_seq* Get_ui_key_help_contents(void);
-input_seq* Get_ui_key_update_gamelist(void);
-input_seq* Get_ui_key_view_folders(void);
-input_seq* Get_ui_key_view_fullscreen(void);
-input_seq* Get_ui_key_view_pagetab(void);
-input_seq* Get_ui_key_view_picture_area(void);
-input_seq* Get_ui_key_view_software_area(void);
-input_seq* Get_ui_key_view_status(void);
-input_seq* Get_ui_key_view_toolbars(void);
+input_seq* Get_ui_key_context_filters();
+input_seq* Get_ui_key_select_random();
+input_seq* Get_ui_key_game_audit();
+input_seq* Get_ui_key_game_properties();
+input_seq* Get_ui_key_help_contents();
+input_seq* Get_ui_key_update_gamelist();
+input_seq* Get_ui_key_view_folders();
+input_seq* Get_ui_key_view_fullscreen();
+input_seq* Get_ui_key_view_pagetab();
+input_seq* Get_ui_key_view_picture_area();
+input_seq* Get_ui_key_view_software_area();
+input_seq* Get_ui_key_view_status();
+input_seq* Get_ui_key_view_toolbars();
 
-input_seq* Get_ui_key_view_tab_cabinet(void);
-input_seq* Get_ui_key_view_tab_cpanel(void);
-input_seq* Get_ui_key_view_tab_flyer(void);
-input_seq* Get_ui_key_view_tab_history(void);
-input_seq* Get_ui_key_view_tab_marquee(void);
-input_seq* Get_ui_key_view_tab_screenshot(void);
-input_seq* Get_ui_key_view_tab_title(void);
-input_seq* Get_ui_key_view_tab_pcb(void);
-input_seq* Get_ui_key_quit(void);
+input_seq* Get_ui_key_view_tab_cabinet();
+input_seq* Get_ui_key_view_tab_cpanel();
+input_seq* Get_ui_key_view_tab_flyer();
+input_seq* Get_ui_key_view_tab_history();
+input_seq* Get_ui_key_view_tab_marquee();
+input_seq* Get_ui_key_view_tab_screenshot();
+input_seq* Get_ui_key_view_tab_title();
+input_seq* Get_ui_key_view_tab_pcb();
+input_seq* Get_ui_key_quit();
 
 
 int GetUIJoyUp(int joycodeIndex);
@@ -306,26 +306,26 @@ void SetUIJoyHistoryDown(int joycodeIndex, int val);
 int GetUIJoyExec(int joycodeIndex);
 void SetUIJoyExec(int joycodeIndex, int val);
 
-const string GetExecCommand(void);
+const string GetExecCommand();
 void SetExecCommand(char *cmd);
 
-int GetExecWait(void);
+int GetExecWait();
 void SetExecWait(int wait);
 
-BOOL GetHideMouseOnStartup(void);
+BOOL GetHideMouseOnStartup();
 void SetHideMouseOnStartup(BOOL hide);
 
-BOOL GetRunFullScreen(void);
+BOOL GetRunFullScreen();
 void SetRunFullScreen(BOOL fullScreen);
 
-uint32_t GetDriverCacheLower(uint32_t driver_index);
-uint32_t GetDriverCacheUpper(uint32_t driver_index);
-void SetDriverCache(uint32_t driver_index, uint32_t val);
-BOOL RequiredDriverCache(void);
-void ForceRebuild(void);
-BOOL DriverIsModified(uint32_t driver_index);
-BOOL DriverIsImperfect(uint32_t driver_index);
-string GetGameName(uint32_t driver_index);
+uint32_t GetDriverCacheLower(int);
+uint32_t GetDriverCacheUpper(int);
+void SetDriverCache(int, uint32_t val);
+BOOL RequiredDriverCache();
+void ForceRebuild();
+BOOL DriverIsModified(int);
+BOOL DriverIsImperfect(int);
+string GetGameName(int);
 
 // from optionsms.h (MESSUI)
 
@@ -353,9 +353,9 @@ void GetSWColumnOrder(int order[]);
 void SetSWColumnShown(int shown[]);
 void GetSWColumnShown(int shown[]);
 void SetSWSortColumn(int column);
-int  GetSWSortColumn(void);
+int  GetSWSortColumn();
 void SetSWSortReverse(BOOL reverse);
-BOOL GetSWSortReverse(void);
+BOOL GetSWSortReverse();
 
 void SetSLColumnWidths(int widths[]);
 void GetSLColumnWidths(int widths[]);
@@ -364,13 +364,13 @@ void GetSLColumnOrder(int order[]);
 void SetSLColumnShown(int shown[]);
 void GetSLColumnShown(int shown[]);
 void SetSLSortColumn(int column);
-int  GetSLSortColumn(void);
+int  GetSLSortColumn();
 void SetSLSortReverse(BOOL reverse);
-BOOL GetSLSortReverse(void);
+BOOL GetSLSortReverse();
 
 
 void SetCurrentSoftwareTab(int val);
-int GetCurrentSoftwareTab(void);
+int GetCurrentSoftwareTab();
 
 
 #endif
