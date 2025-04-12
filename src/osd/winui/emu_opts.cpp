@@ -122,6 +122,7 @@ void emu_set_value(windows_options &o, string name, string value)
 void ui_set_value(ui_options &o, string name, string value)
 {
 	o.set_value(name, value, OPTION_PRIORITY_HIGH);
+	ui_save_ini();
 }
 
 string emu_get_value(windows_options *o, string name)
@@ -425,7 +426,10 @@ void dir_set_value(int dir_index, string value)
 			if (which)
 				ui_set_value(emu_ui, sname, value);
 			else
+			{
 				emu_set_value(emu_global, sname, value);
+				global_save_ini();
+			}
 		}
 	}
 }
@@ -507,7 +511,7 @@ void SetDirectories(windows_options &o)
 }
 
 // For dialogs.cpp
-const char* GetSnapName(void)
+const char* GetSnapName()
 {
 	return emu_global.value(OPTION_SNAPNAME);
 }
@@ -520,22 +524,22 @@ void SetSnapName(const char* value)
 }
 
 // For winui.cpp
-const string GetLanguageUI(void)
+const string GetLanguageUI()
 {
 	return emu_global.value(OPTION_LANGUAGE);
 }
 
-bool GetEnablePlugins(void)
+bool GetEnablePlugins()
 {
 	return emu_global.bool_value(OPTION_PLUGINS);
 }
 
-const string GetPlugins(void)
+const string GetPlugins()
 {
 	return emu_global.value(OPTION_PLUGIN);
 }
 
-bool GetSkipWarnings(void)
+bool GetSkipWarnings()
 {
 	return emu_ui.bool_value(OPTION_SKIP_WARNINGS);
 }
@@ -659,7 +663,7 @@ void ResetGameOptions(int drvindex)
 	//save_options(NULL, OPTIONS_GAME, drvindex);
 }
 
-void ResetGameDefaults(void)
+void ResetGameDefaults()
 {
 	// Walk the global settings and reset everything to defaults;
 	ResetToDefaults(emu_global, OPTION_PRIORITY_HIGH);
@@ -670,13 +674,13 @@ void ResetGameDefaults(void)
  * Reset all game, vector and source options to defaults.
  * No reason to reboot if this is done.
  */
-void ResetAllGameOptions(void)
+void ResetAllGameOptions()
 {
 	for (int i = 0; i < driver_list::total(); i++)
 		ResetGameOptions(i);
 }
 
-windows_options & MameUIGlobal(void)
+windows_options & MameUIGlobal()
 {
 	return emu_global;
 }
