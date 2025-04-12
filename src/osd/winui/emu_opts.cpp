@@ -360,8 +360,6 @@ void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex)
 
 void emu_opts_init(bool b)
 {
-	printf("emuOptsInit: About to load Global Options\n");fflush(stdout);
-	load_options(emu_global, OPTIONS_GLOBAL, -1, 0);   // parse MAME.INI
 	string t = GetUiPath();
 	printf("emuOptsInit: About to load %s\n",t.c_str());fflush(stdout);
 	LoadSettingsFile(emu_ui, GetUiPath());                // parse UI.INI
@@ -370,6 +368,8 @@ void emu_opts_init(bool b)
 	if (b)
 		return;
 
+	printf("emuOptsInit: About to load Global Options\n");fflush(stdout);
+	load_options(emu_global, OPTIONS_GLOBAL, -1, 0);   // parse MAME.INI
 	dir_map[1] = dir_data { OPTION_PLUGINDATAPATH, 0 };
 	dir_map[2] = dir_data { OPTION_MEDIAPATH, 0 };
 	dir_map[3] = dir_data { OPTION_HASHPATH, 0 };

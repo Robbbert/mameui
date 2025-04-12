@@ -175,8 +175,7 @@ static BOOL DirInfo_Modified(tDirInfo *pInfo, int nType)
 	return pInfo[nType].m_Path->m_bModified;
 }
 
-#define DirInfo_NumDir(pInfo, path) \
-	((pInfo)[(path)].m_Path->m_NumDirectories)
+#define DirInfo_NumDir(pInfo, path) ((pInfo)[(path)].m_Path->m_NumDirectories)
 
 /* lop off trailing backslash if it exists */
 static TCHAR * FixSlash(TCHAR *s)

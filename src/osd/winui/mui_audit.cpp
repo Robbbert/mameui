@@ -104,9 +104,9 @@ void AuditDialog(HWND hParent, int choice)
 		MessageBox(GetMainWindow(),TEXT("Unable to Load Riched32.dll"),TEXT("Error"), MB_OK | MB_ICONERROR);
 }
 
-void InitGameAudit(int gameIndex)
+void InitGameAudit(int drvindex)
 {
-	rom_index = gameIndex;
+	rom_index = drvindex;
 }
 
 const char * GetAuditString(int audit_result)

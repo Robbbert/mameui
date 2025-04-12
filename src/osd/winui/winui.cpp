@@ -2458,8 +2458,8 @@ static BOOL OnIdle(HWND hWnd)
 	// NPW 17-Jun-2003 - Commenting this out because it is redundant
 	// and it causes the game to reset back to the original game after an F5
 	// refresh
-	//driver_index = GetGameNameIndex(GetDefaultGame());
-	//SetSelectedPickItem(driver_index);
+	//drvindex = GetGameNameIndex(GetDefaultGame());
+	//SetSelectedPickItem(drvindex);
 
 	// in case it's not found, get it back
 	const char *pDescription;
@@ -3601,7 +3601,7 @@ static void ResetListView()
 			lvi.iIndent = 0;
 
 			if (GetEnableIndent())
-				if (GetParentFound(i) && DriverIsClone(i))
+				if ((GetParentFound(i) || !GetOffsetClones()) && DriverIsClone(i))
 					lvi.iIndent = 1;
 
 			res = ListView_InsertItem(hwndList, &lvi);
@@ -4016,7 +4016,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 	case ID_GAME_AUDIT:
-		InitGameAudit(0);
+		InitGameAudit(drvindex);
 		if (drvindex >= 0)
 		{
 			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, drvindex, AUDIT_PAGE);
@@ -4142,7 +4142,6 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		SetFocus(hwndList);
 		return true;
 
-	/* View Menu -  MESSUI: not used any more 2014-01-26 */
 	case ID_VIEW_LINEUPICONS:
 		if( codeNotify == false)
 			ResetListView();
