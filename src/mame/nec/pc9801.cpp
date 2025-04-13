@@ -5,7 +5,6 @@
     PC-9801 (c) 1981 NEC
 
     TODO:
-    - proper 8251 uart hook-up on keyboard;
     - text scrolling, μPD52611 (cfr. clipping in edge & arcus2, madoum* too?);
     - Abnormal 90 Hz refresh rate adjust for normal display mode (15KHz).
       Should really be 61.xx instead, understand how CRTC really switches clock;
@@ -80,8 +79,14 @@
     - "Invalid Command Byte 13" for bitmap upd7220 at POST (?)
     - "SYSTEM SHUTDOWN" after BIOS sets up the SDIP values;
 
+    TODO (PC-9801FS):
+    - RAM check detects more RAM than what's really installed (and saves previous detection in MEMSW);
+    - Crashes with Japanese error for "HDD failure" when mounted with IDE BIOS,
+      incompatible with 512 bps or IDE itself?
+
     TODO (PC-9801BX2)
-    - "SYSTEM SHUTDOWN" at POST, a soft reset fixes it?
+    - "SYSTEM SHUTDOWN" at POST, SDIP related, soft reset to bypass;
+    - Accesses $8f0-$8f2 PMC area, shared with 98NOTE machines;
     - A non-fatal "MEMORY ERROR" is always thrown no matter the RAM size afterwards, related?
     - unemulated conventional or EMS RAM bank, definitely should have one given the odd minimum RAM
       size;
@@ -457,11 +462,22 @@ void pc9801_state::fdc_2dd_ctrl_w(uint8_t data)
 	m_fdc_2dd->subdevice<floppy_connector>("1")->get_device()->mon_w(data & 8 ? CLEAR_LINE : ASSERT_LINE);
 }
 
+u8 pc9801vm_state::ide_ctrl_hack_r()
+{
+	if (!machine().side_effects_disabled())
+	{
+		// HACK: RS IDE driver will try to do 512 to 256 byte sector translations
+		// MEMSW has no setting for this, is it concealed?
+		// SDIP based machines don't need this (they will default to 512 bps, shadowed from
+		// gaiji $ac403 bit 6).
+		address_space &ram = m_maincpu->space(AS_PROGRAM);
+		ram.write_byte(0x457, ram.read_byte(0x457) | 0xc0);
+	}
+	return m_ide_sel;
+}
+
 u8 pc9801vm_state::ide_ctrl_r()
 {
-	address_space &ram = m_maincpu->space(AS_PROGRAM);
-	// this makes the ide driver not do 512 to 256 byte sector translation, the 9821 looks for bit 6 of offset 0xac403 of the kanji ram to set this, the rs unknown
-	ram.write_byte(0x457, ram.read_byte(0x457) | 0xc0);
 	return m_ide_sel;
 }
 
@@ -1224,7 +1240,7 @@ void pc9801vm_state::pc9801rs_io(address_map &map)
 {
 //  map.unmap_value_high();
 	pc9801ux_io(map);
-	map(0x0430, 0x0433).rw(FUNC(pc9801vm_state::ide_ctrl_r), FUNC(pc9801vm_state::ide_ctrl_w)).umask16(0x00ff);
+	map(0x0430, 0x0433).rw(FUNC(pc9801vm_state::ide_ctrl_hack_r), FUNC(pc9801vm_state::ide_ctrl_w)).umask16(0x00ff);
 	map(0x0640, 0x064f).rw(FUNC(pc9801vm_state::ide_cs0_r), FUNC(pc9801vm_state::ide_cs0_w));
 	map(0x0740, 0x074f).rw(FUNC(pc9801vm_state::ide_cs1_r), FUNC(pc9801vm_state::ide_cs1_w));
 	map(0x1e8c, 0x1e8f).noprw(); // temp
@@ -1259,6 +1275,7 @@ void pc9801us_state::sdip_bank_w(offs_t offset, u8 data)
 void pc9801us_state::pc9801us_io(address_map &map)
 {
 	pc9801rs_io(map);
+	map(0x0430, 0x0433).rw(FUNC(pc9801us_state::ide_ctrl_r), FUNC(pc9801us_state::ide_ctrl_w)).umask16(0x00ff);
 	map(0x841e, 0x841e).rw(FUNC(pc9801us_state::sdip_r<0x0>), FUNC(pc9801us_state::sdip_w<0x0>));
 	map(0x851e, 0x851e).rw(FUNC(pc9801us_state::sdip_r<0x1>), FUNC(pc9801us_state::sdip_w<0x1>));
 	map(0x861e, 0x861e).rw(FUNC(pc9801us_state::sdip_r<0x2>), FUNC(pc9801us_state::sdip_w<0x2>));
@@ -2245,15 +2262,15 @@ TIMER_DEVICE_CALLBACK_MEMBER( pc9801_state::mouse_irq_cb )
 
 void pc9801_atapi_devices(device_slot_interface &device)
 {
-	device.option_add("pc9801_cd", PC9801_CD);
+	device.option_add("pc98_cd", PC98_CD);
 }
 
-void pc9801_state::pc9801_keyboard(machine_config &config)
+void pc9801_state::config_keyboard(machine_config &config)
 {
 	I8251(config, m_sio_kbd, 0);
-	m_sio_kbd->txd_handler().set("keyb", FUNC(pc9801_kbd_device::input_txd));
-	m_sio_kbd->dtr_handler().set("keyb", FUNC(pc9801_kbd_device::input_rty));
-	m_sio_kbd->rts_handler().set("keyb", FUNC(pc9801_kbd_device::input_kbde));
+	m_sio_kbd->txd_handler().set("keyb", FUNC(pc98_kbd_device::input_txd));
+	m_sio_kbd->dtr_handler().set("keyb", FUNC(pc98_kbd_device::input_rty));
+	m_sio_kbd->rts_handler().set("keyb", FUNC(pc98_kbd_device::input_kbde));
 	m_sio_kbd->write_cts(0);
 	m_sio_kbd->write_dsr(0);
 	m_sio_kbd->rxrdy_handler().set(m_pic1, FUNC(pic8259_device::ir1_w));
@@ -2262,7 +2279,7 @@ void pc9801_state::pc9801_keyboard(machine_config &config)
 	kbd_clock.signal_handler().set(m_sio_kbd, FUNC(i8251_device::write_rxc));
 	kbd_clock.signal_handler().append(m_sio_kbd, FUNC(i8251_device::write_txc));
 
-	PC9801_KBD(config, m_keyb, 0);
+	PC98_KBD(config, m_keyb, 0);
 	m_keyb->rxd_callback().set("sio_kbd", FUNC(i8251_device::write_rxd));
 }
 
@@ -2358,9 +2375,9 @@ void pc9801vm_state::pc9801_ide(machine_config &config)
 	SPEAKER(config, "rheadphone").front_right();
 	ATA_INTERFACE(config, m_ide[0]).options(ata_devices, "hdd", nullptr, false);
 	m_ide[0]->irq_handler().set("ideirq", FUNC(input_merger_device::in_w<0>));
-	ATA_INTERFACE(config, m_ide[1]).options(pc9801_atapi_devices, "pc9801_cd", nullptr, false);
+	ATA_INTERFACE(config, m_ide[1]).options(pc9801_atapi_devices, "pc98_cd", nullptr, false);
 	m_ide[1]->irq_handler().set("ideirq", FUNC(input_merger_device::in_w<1>));
-	m_ide[1]->slot(0).set_option_machine_config("pc9801_cd", cdrom_headphones);
+	m_ide[1]->slot(0).set_option_machine_config("pc98_cd", cdrom_headphones);
 
 	INPUT_MERGER_ANY_HIGH(config, "ideirq").output_handler().set("pic8259_slave", FUNC(pic8259_device::ir1_w));
 
@@ -2426,13 +2443,13 @@ void pc9801_state::pc9801_common(machine_config &config)
 	// TODO: other ports
 	m_ppi_prn->in_pb_callback().set(FUNC(pc9801_state::ppi_prn_portb_r));
 
-	pc9801_keyboard(config);
+	config_keyboard(config);
 	pc9801_mouse(config);
 	pc9801_cbus(config);
 
 	pc9801_serial(config);
 
-	PC9801_MEMSW(config, m_memsw, 0);
+	PC98_MEMSW(config, m_memsw, 0);
 
 	UPD765A(config, m_fdc_2hd, 8'000'000, true, true);
 	m_fdc_2hd->intrq_wr_callback().set(m_pic2, FUNC(pic8259_device::ir3_w));
@@ -2615,14 +2632,15 @@ void pc9801us_state::pc9801us(machine_config &config)
 	config_floppy_35hd(config);
 }
 
-void pc9801vm_state::pc9801fs(machine_config &config)
+void pc9801us_state::pc9801fs(machine_config &config)
 {
 	pc9801rs(config);
 	const XTAL xtal = XTAL(20'000'000); // ~20 MHz
 	I386SX(config.replace(), m_maincpu, xtal);
-	m_maincpu->set_addrmap(AS_PROGRAM, &pc9801vm_state::pc9801rs_map);
-	m_maincpu->set_addrmap(AS_IO, &pc9801vm_state::pc9801rs_io);
+	m_maincpu->set_addrmap(AS_PROGRAM, &pc9801us_state::pc9801rs_map);
+	m_maincpu->set_addrmap(AS_IO, &pc9801us_state::pc9801us_io);
 	m_maincpu->set_irq_acknowledge_callback("pic8259_master", FUNC(pic8259_device::inta_cb));
+
 
 	// optional 3'5 floppies x2
 	config_floppy_525hd(config);
@@ -2976,6 +2994,7 @@ ROM_START( pc9801bx2 )
 	ROM_LOAD( "pc98bank7.bin",  0x38000, 0x08000, BAD_DUMP CRC(1bd6537b) SHA1(ff9ee1c976a12b87851635ce8991ac4ad607675b) )
 
 	ROM_REGION16_LE( 0x30000, "ipl", ROMREGION_ERASEFF )
+	// 0x1a000: setup mode
 	ROM_COPY( "biosrom", 0x20000, 0x10000, 0x8000 ) // ITF ROM
 	ROM_COPY( "biosrom", 0x28000, 0x18000, 0x8000 ) // BIOS ROM
 	ROM_COPY( "biosrom", 0x30000, 0x20000, 0x8000 )
@@ -3180,7 +3199,7 @@ COMP( 1990, pc9801dx,   0,        0, pc9801dx,  pc9801rs, pc9801vm_state, init_p
 // UF/UR/US class (i386SX + SDIP, optional high-reso according to BIOS? Derivatives of UX)
 COMP( 1992, pc9801us,   0,        0, pc9801us,  pc9801rs, pc9801us_state, init_pc9801_kanji,   "NEC",   "PC-9801US",                     MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
 // FS class (i386SX + ?)
-COMP( 1992, pc9801fs,   0,        0, pc9801fs,  pc9801rs, pc9801vm_state, init_pc9801_kanji,   "NEC",   "PC-9801FS",                     MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
+COMP( 1992, pc9801fs,   0,        0, pc9801fs,  pc9801rs, pc9801us_state, init_pc9801_kanji,   "NEC",   "PC-9801FS",                     MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
 // FA class (i486SX)
 // ...
 // BX class (official nickname "98 FELLOW", last releases prior to 9821 line)
