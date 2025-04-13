@@ -2,43 +2,47 @@
 // copyright-holders:Angelo Salese,Carl
 /**************************************************************************************************
 
-    NEC PC-9821
+NEC PC-9821
 
-    follow-up to PC-9801 for the consumer market
+follow-up to PC-9801 for the consumer market
 
-    TODO (PC-9821):
-    - non-fatal "cache error" at POST for all machines listed here;
-    - undumped IDE ROM, kludged to work;
-    - further state machine breakdowns;
+TODO (PC-9821):
+- non-fatal "cache error" at POST for all machines listed here;
+- undumped IDE ROM, kludged to work;
+- further state machine breakdowns;
 
-    TODO (PC-9821As):
-    - unimplemented SDIP specific access;
-    - "SYSTEM SHUTDOWN" while accessing above;
-    - Update: it never goes into above after I changed default m_dma_access_ctrl to 0xfe?
+TODO (PC-9821Ap2):
+- Lack of key repeat makes it unable to enter SETUP mode normally.
+  bp 0xf8a32,1,{esi|=40;g} to simulate holding HELP key at power-on/reset;
 
-    TODO (PC-9821Cx3):
-    - "MICON ERROR" at POST, we currently return a ready state in remote control register
-      to bypass it, is it expected behaviour?
-    - Hangs normally with "Set the SDIP" message, on soft reset tries to r/w I/Os
-      $b00-$b03, kanji RAM $a9 and $f0 (mostly bit 5, built-in 27 inches HDD check?) then keeps
-      looping;
-    - 0xfa2c8 contains ITF test routines, to access it's supposedly CTRL+CAPS+KANA,
-      which currently doesn't work. It also never returns a valid processor or CPU clock,
-      is it a debug side-effect or supposed to be read somehow?
-    - Expects 0xc0000-0xdffff to be r/w at PC=0x104e8, currently failing for inner C-Bus mappings.
-      Is PCI supposed to overlay the C-Bus section?
-    - Eventually jump off the weeds by taking an invalid irq in timer test;
-    - Reportedly should display a CanBe logo at POST (always blue with white fg?),
-      at least pc9821cx3 ROM has some VRAM data in first half of BIOS ROM.
-      Where this is mapped is currently unknown;
+TODO (PC-9821As):
+- unimplemented SDIP specific access;
+- "SYSTEM SHUTDOWN" while accessing above;
+- Update: it never goes into above after I changed default m_dma_access_ctrl to 0xfe?
 
-    TODO (PC-9821Xa16/PC-9821Ra20/PC-9821Ra266/PC-9821Ra333):
-    - "MICON ERROR" at POST (processor microcode detection fails, basically down to a more
-      involved bankswitch with Pentium based machines);
+TODO (PC-9821Cx3):
+- "MICON ERROR" at POST, we currently return a ready state in remote control register
+	to bypass it, is it expected behaviour?
+- Hangs normally with "Set the SDIP" message, on soft reset tries to r/w I/Os
+	$b00-$b03, kanji RAM $a9 and $f0 (mostly bit 5, built-in 27 inches HDD check?) then keeps
+	looping;
+- 0xfa2c8 contains ITF test routines, to access it's supposedly CTRL+CAPS+KANA,
+	which currently doesn't work. It also never returns a valid processor or CPU clock,
+	is it a debug side-effect or supposed to be read somehow?
+- Expects 0xc0000-0xdffff to be r/w at PC=0x104e8, currently failing for inner C-Bus mappings.
+	Is PCI supposed to overlay the C-Bus section?
+- Eventually jump off the weeds by taking an invalid irq in timer test;
+- Reportedly should display a CanBe logo at POST (always blue with white fg?),
+	at least pc9821cx3 ROM has some VRAM data in first half of BIOS ROM.
+	Where this is mapped is currently unknown;
 
-    TODO: (PC-9821Nr15/PC-9821Nr166)
-    - Tests conventional RAM then keeps polling $03c4 (should be base VGA regs read);
-    - Skipping that will eventually die with a "MEMORY ERROR" (never reads extended memory);
+TODO (PC-9821Xa16/PC-9821Ra20/PC-9821Ra266/PC-9821Ra333):
+- "MICON ERROR" at POST (processor microcode detection fails, basically down to a more
+	involved bankswitch with Pentium based machines);
+
+TODO: (PC-9821Nr15/PC-9821Nr166)
+- Tests conventional RAM then keeps polling $03c4 (should be base VGA regs read);
+- Skipping that will eventually die with a "MEMORY ERROR" (never reads extended memory);
 
 **************************************************************************************************/
 
@@ -435,8 +439,10 @@ void pc9821_state::pc9821_map(address_map &map)
 
 void pc9821_state::pc9821_io(address_map &map)
 {
+	// later SW expects unmapped C-Bus accesses to return high for proper card detection
+	// cfr. entax, amarankh, freebsd21
+	map.unmap_value_high();
 	pc9801bx2_io(map);
-//  map.unmap_value_high(); // TODO: a read to somewhere makes this to fail at POST
 	map(0x0000, 0x001f).rw(m_dmac, FUNC(am9517a_device::read), FUNC(am9517a_device::write)).umask32(0xff00ff00);
 	map(0x0000, 0x001f).lr8(NAME([this] (offs_t o) { return BIT(o, 1) ? 0xff : pic_r(o); })).umask32(0x00ff00ff);
 	map(0x0000, 0x001f).w(FUNC(pc9821_state::pic_w)).umask32(0x00ff00ff);  // i8259 PIC (bit 3 ON slave / master) / i8237 DMA
@@ -544,13 +550,49 @@ void pc9821_mate_a_state::ext_sdip_address_w(offs_t offset, uint8_t data)
 	m_ext_sdip_addr = data;
 }
 
+void pc9821_mate_a_state::itf_43d_bank_w(offs_t offset, uint8_t data)
+{
+	// assume overlay disabled on writes to $43d
+	m_bios_view.disable();
+	pc9801vm_state::itf_43d_bank_w(offset, data);
+}
+
+void pc9821_mate_a_state::cbus_43f_bank_w(offs_t offset, uint8_t data)
+{
+	if ((data & 0xf8) == 0xe0)
+	{
+		logerror("C-Bus overlay set %02x\n", data);
+		m_bios_view.select(data & 0x7);
+		return;
+	}
+
+	// Exit setup mode disarms overlay with a 0xe8 write
+	// (or writes are >> 1 and undocumented mem is wrong?)
+	if ((data & 0xf8) == 0xe8)
+	{
+		logerror("C-Bus overlay disable (%02x)\n", data);
+		m_bios_view.disable();
+		return;
+	}
+
+	pc9801vm_state::cbus_43f_bank_w(offset, data);
+}
+
+void pc9821_mate_a_state::pc9821as_map(address_map &map)
+{
+	pc9821_map(map);
+	map(0x000f8000, 0x000fffff).view(m_bios_view);
+	// TODO: remaining settings
+	m_bios_view[6](0x000f8000, 0x000fffff).rom().region("biosrom", 0x18000);
+}
+
 void pc9821_mate_a_state::pc9821as_io(address_map &map)
 {
 	pc9821_io(map);
 	map(0x0468, 0x0468).rw(FUNC(pc9821_mate_a_state::ext_sdip_data_r), FUNC(pc9821_mate_a_state::ext_sdip_data_w));
 	map(0x046a, 0x046a).w(FUNC(pc9821_mate_a_state::ext_sdip_access_w));
 	map(0x046c, 0x046c).w(FUNC(pc9821_mate_a_state::ext_sdip_address_w));
-	// TODO: specific MATE A local bus (location?)
+	// TODO: specific MATE A local bus (overlays just like C-Bus?)
 }
 
 /*
@@ -811,7 +853,7 @@ void pc9821_mate_a_state::pc9821as(machine_config &config)
 	pc9821(config);
 	const XTAL xtal = XTAL(33'000'000);
 	I486(config.replace(), m_maincpu, xtal); // i486dx
-	m_maincpu->set_addrmap(AS_PROGRAM, &pc9821_mate_a_state::pc9821_map);
+	m_maincpu->set_addrmap(AS_PROGRAM, &pc9821_mate_a_state::pc9821as_map);
 	m_maincpu->set_addrmap(AS_IO, &pc9821_mate_a_state::pc9821as_io);
 	m_maincpu->set_irq_acknowledge_callback("pic8259_master", FUNC(pic8259_device::inta_cb));
 
@@ -826,7 +868,7 @@ void pc9821_mate_a_state::pc9821ap2(machine_config &config)
 	pc9821(config);
 	const XTAL xtal = XTAL(66'000'000);
 	I486(config.replace(), m_maincpu, xtal); // i486dx2
-	m_maincpu->set_addrmap(AS_PROGRAM, &pc9821_mate_a_state::pc9821_map);
+	m_maincpu->set_addrmap(AS_PROGRAM, &pc9821_mate_a_state::pc9821as_map);
 	m_maincpu->set_addrmap(AS_IO, &pc9821_mate_a_state::pc9821_io);
 	m_maincpu->set_irq_acknowledge_callback("pic8259_master", FUNC(pic8259_device::inta_cb));
 
@@ -1214,8 +1256,10 @@ ROM_START( pc9821cx3 )
 	// 0x1fda8 (?) - 0x2458f: monitor GFXs
 	// 0x24590 - 0x36xxx: more CanBe mascot GFX animations
 	// 0x3c000: NEC & CanBe logo GFXs
-	ROM_COPY( "biosrom", 0x68000, 0x00000, 0x18000 )
-	ROM_COPY( "biosrom", 0x30000, 0x18000, 0x18000 )
+	// 0x40000: IDE BIOS (NEC D3766 / Caviar CP30344 / WDC AC2340H)
+	// 0x42000: setup menu
+	ROM_COPY( "biosrom", 0x78000, 0x10000, 0x08000 ) // ITF
+	ROM_COPY( "biosrom", 0x60000, 0x18000, 0x18000 ) // BIOS, probably wrong (reset vector at 0x67ff0)
 
 	// "microcode" memory dump, probably identical to above but shuffled
 	// left for consultation
