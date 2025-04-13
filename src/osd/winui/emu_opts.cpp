@@ -631,6 +631,68 @@ bool AreOptionsEqual(windows_options &opts1, windows_options &opts2)
 	}
 	return true;
 }
+// Todo: merge this and the above to make a proper diff that doesn't crash
+std::string diff_ini(const core_options *diff) const
+{
+	// INI files are complete, so always start with a blank buffer
+	std::ostringstream buffer;
+	buffer.imbue(std::locale::classic());
+
+	int num_valid_headers = 0;
+	int unadorned_index = 0;
+	const char *last_header = nullptr;
+	std::string overridden_value;
+
+	// loop over all items
+	for (auto &curentry : m_entries)
+	{
+		if (curentry->type() == option_type::HEADER)
+		{
+			// header: record description
+			last_header = curentry->description();
+		}
+		else
+		{
+			const std::string &name(curentry->name());
+			const char *value(curentry->value_unsubstituted());
+
+			// check if it's unadorned
+			bool is_unadorned = false;
+			if (name == core_options::unadorned(unadorned_index))
+			{
+				unadorned_index++;
+				is_unadorned = true;
+			}
+
+			// output entries for all non-command items (items with value)
+			if (value)
+			{
+				// look up counterpart in diff, if diff is specified
+				if (!diff || strcmp(value, diff->get_entry(name.c_str())->value_unsubstituted()))
+				{
+					// output header, if we have one
+					if (last_header)
+					{
+						if (num_valid_headers++)
+							buffer << '\n';
+						util::stream_format(buffer, "#\n# %s\n#\n", last_header);
+						last_header = nullptr;
+					}
+
+					// and finally output the data, skip if unadorned
+					if (!is_unadorned)
+					{
+						if (strchr(value, ' '))
+							util::stream_format(buffer, "%-25s \"%s\"\n", name, value);
+						else
+							util::stream_format(buffer, "%-25s %s\n", name, value);
+					}
+				}
+			}
+		}
+	}
+	return buffer.str();
+}
 #endif
 void OptionsCopy(windows_options &source, windows_options &dest)
 {

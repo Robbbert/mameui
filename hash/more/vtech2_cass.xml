@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8 -->
+<!-- Number of items in this list = 9 -->
 <softwarelist name="vtech2_cass" description="vtech2_cass loose roms">
 	<software name="vt2a76efebe534a6">
 		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)</description>
@@ -59,6 +59,16 @@
 		<part name="cass1" interface="vtech2_cass">
 			<dataarea name="cass" size="8652">
 				<rom name="H-tron.cas" size="8652" crc="fbb41f8b" sha1="f4e81f32908713870a2b092c1073e24cb5f8be52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt23e3925ccb5a9d">
+		<description>htron_laser500</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="vtech2_cass">
+			<dataarea name="cass" size="10790956">
+				<rom name="htron_laser500.wav" size="10790956" crc="3b04cdc1" sha1="3e3925ccb5a9dbf29438d98977846eff62e1b2c6"/>
 			</dataarea>
 		</part>
 	</software>
