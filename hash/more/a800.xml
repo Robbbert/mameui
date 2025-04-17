@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 53 -->
+<!-- Number of items in this list = 52 -->
 <softwarelist name="a800" description="a800 loose roms">
 	<software name="a8080e50c7fcb2e8">
 		<description>(demo)400-800 salt diagnostic cartridge v1.00</description>
@@ -339,16 +339,6 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Educational system master cartridge.rom" size="8192" crc="18cc7c94" sha1="9fd7936767b0a193da9b01e27dac78e68b5f52b6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a80aa54b46b90d3f">
-		<description>Galaxian (USA)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a8bit_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Galaxian (USA).bin" size="8192" crc="d60027be" sha1="aa54b46b90d3f5d639dcb63f0e629803dbd369e2"/>
 			</dataarea>
 		</part>
 	</software>

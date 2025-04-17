@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 52 -->
 <softwarelist name="c16_quik" description="c16_quik loose roms">
 	<software name="c165c5896a8a7806">
 		<description>007</description>
@@ -9,6 +9,516 @@
 		<part name="quik" interface="c16_quik">
 			<dataarea name="quik" size="8937">
 				<rom name="007.prg" size="8937" crc="d1151fea" sha1="5c5896a8a78062354b21437b651731f611fcb56a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167c0a6e1cb2c13">
+		<description>1000_miles</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6203">
+				<rom name="1000_miles.prg" size="6203" crc="f0a350fe" sha1="7c0a6e1cb2c131f8ba543185341f78960055f289"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f9f722c051032">
+		<description>1000_miles_instructions</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="3678">
+				<rom name="1000_miles_instructions.prg" size="3678" crc="ec6d46e7" sha1="f9f722c051032197a6d41aab0c1d502d526442d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e6b500206d78f">
+		<description>15ner_Puzzle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="1849">
+				<rom name="15ner_Puzzle.prg" size="1849" crc="d5b8cc13" sha1="e6b500206d78f696a75a80c5a1116fb67c58d765"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163d8f448d4ebb3">
+		<description>15_Puzzle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2823">
+				<rom name="15_Puzzle.prg" size="2823" crc="0850972b" sha1="3d8f448d4ebb3f8217ded02f1fe64c5bf1ef1711"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161e02e933edfcf">
+		<description>17_Und_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6585">
+				<rom name="17_Und_4.prg" size="6585" crc="dc4ff452" sha1="1e02e933edfcfc87d42f9a6be5f18dddf98166c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f8b66f53ca72d">
+		<description>2D_Maze</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="1704">
+				<rom name="2D_Maze.prg" size="1704" crc="07320e49" sha1="f8b66f53ca72d74cd6aacd341161be061b9cde6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16410f78bde498f">
+		<description>3D_Construction_Kit_Demogame</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="32080">
+				<rom name="3D_Construction_Kit_Demogame.prg" size="32080" crc="36cfe7cc" sha1="410f78bde498f26351047164a1f7469f21e360bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ba2a98398d536">
+		<description>3D_Ghost_Chase</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="9878">
+				<rom name="3D_Ghost_Chase.prg" size="9878" crc="cdca3275" sha1="ba2a98398d5365835a1285e023bf971de66ba55e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163176c8e603124">
+		<description>3D_Glooper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10241">
+				<rom name="3D_Glooper.prg" size="10241" crc="735c463e" sha1="3176c8e603124859007e0a5736d0e04d71887187"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1612029f24a84ba">
+		<description>3D_Grandmaster_Chess[SYS14227]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="16386">
+				<rom name="3D_Grandmaster_Chess[SYS14227].prg" size="16386" crc="191194d2" sha1="12029f24a84ba8d74cbf6dedf4490fa75ef8da39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16820ff25005999">
+		<description>3D_Irrgarten</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="9979">
+				<rom name="3D_Irrgarten.prg" size="9979" crc="b6fd8c6e" sha1="820ff2500599978ee67d7e3210e68d4bcdd3146a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c67d6e0cf1281">
+		<description>3D_Pool</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="13120">
+				<rom name="3D_Pool.prg" size="13120" crc="c573a478" sha1="c67d6e0cf12813b33082657fcf17f2aa007606dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a3061ee41bdde">
+		<description>3D_Quasars</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="3D_Quasars.prg" size="12289" crc="063f6698" sha1="a3061ee41bdde52d6232507d7b6bab76bac8cbf5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1613a7a00d126b3">
+		<description>3D_Sakk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="28544">
+				<rom name="3D_Sakk.prg" size="28544" crc="ab7ee1dc" sha1="13a7a00d126b32e1b015fec06ae6763c6906b9c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ece45a229ade7">
+		<description>3D_Time_Trek[SYS4096]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="3D_Time_Trek[SYS4096].prg" size="12290" crc="be70aa4c" sha1="ece45a229ade75fd054b4a32b84536a592eb200e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16eb99d252d0140">
+		<description>3_Of_A_Kind</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2935">
+				<rom name="3_Of_A_Kind.prg" size="2935" crc="5a645c97" sha1="eb99d252d014009987ed35770c1f7f66a713451b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e9225b2d27fc8">
+		<description>7_Up_Spot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="39875">
+				<rom name="7_Up_Spot.prg" size="39875" crc="432246ad" sha1="e9225b2d27fc81a299602dedf8fcdc7baaeb70cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16fc72a2e924626">
+		<description>Jabba_Otthona</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12025">
+				<rom name="Jabba_Otthona.prg" size="12025" crc="0780fa85" sha1="fc72a2e9246263d94ee91b2637625d2992b2f315"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1675302a8594797">
+		<description>Jackblack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4483">
+				<rom name="Jackblack.prg" size="4483" crc="177afdf5" sha1="75302a8594797e594191217a7151efe636caa8a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16dff18e37e3d95">
+		<description>Jack_Attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="25040">
+				<rom name="Jack_Attack.prg" size="25040" crc="9618d1ac" sha1="dff18e37e3d951fd0fc2a7e03fa43feef72652d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16229ac828b20e8">
+		<description>Jailbreak</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Jailbreak.prg" size="12290" crc="1dfd1002" sha1="229ac828b20e8d2f9f60c8f5cfa04afa8211c248"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ac8914f3db0d5">
+		<description>Jailbreak_HJD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8708">
+				<rom name="Jailbreak_HJD.prg" size="8708" crc="68bd5f0c" sha1="ac8914f3db0d5c9a24898c4c80a5efcbc139b9ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1604104d7bd0db8">
+		<description>Japanese_War</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="37889">
+				<rom name="Japanese_War.prg" size="37889" crc="eec5976b" sha1="04104d7bd0db8cab2474ae330c388a5696516975"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161a924055062b9">
+		<description>Japan_Sea</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="20076">
+				<rom name="Japan_Sea.prg" size="20076" crc="4afbf73a" sha1="1a924055062b93b2afbe9449be4aa66422ed3c20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1645100eb131de1">
+		<description>Jatek_Turmix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="35241">
+				<rom name="Jatek_Turmix.prg" size="35241" crc="12c14b3e" sha1="45100eb131de1227ce9101e7163c6be00a6418a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166f722356b20a7">
+		<description>Jerry_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12057">
+				<rom name="Jerry_1.prg" size="12057" crc="3708543f" sha1="6f722356b20a73eda5ae849397e0ea208608128c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161a0dc2ac8f3e5">
+		<description>Jerry_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12625">
+				<rom name="Jerry_2.prg" size="12625" crc="0adc244b" sha1="1a0dc2ac8f3e59ad4faea30dc35792f1026f3f3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d803d8eaf506a">
+		<description>Jesus_Law</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2868">
+				<rom name="Jesus_Law.prg" size="2868" crc="b708382e" sha1="d803d8eaf506aefd38f277db2c7657f67dd6ecc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166fbae6e5dc548">
+		<description>Jesus_Said</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2405">
+				<rom name="Jesus_Said.prg" size="2405" crc="7977ae4b" sha1="6fbae6e5dc548078ffa78e7e0eb075508f5502fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1606366c1cdf356">
+		<description>Jetbrix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12303">
+				<rom name="Jetbrix.prg" size="12303" crc="b298a8ed" sha1="06366c1cdf35635af50947ccf5e1809a01d6d0db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16924ee8c964914">
+		<description>Jetbrix_(italian_hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8480">
+				<rom name="Jetbrix_(italian_hack).prg" size="8480" crc="174326a0" sha1="924ee8c9649145399faf745c0362f724b8a6f700"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bbd106eeb207a">
+		<description>Jet_Set_Willy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Jet_Set_Willy.prg" size="12289" crc="0b81225a" sha1="bbd106eeb207a64bd04be12a02b135225f6a44bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16485ea947ef2ed">
+		<description>jet_set_willy2_v1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11066">
+				<rom name="jet_set_willy2_v1.prg" size="11066" crc="528b5385" sha1="485ea947ef2ed53768e097236cddfecf0e230048"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c71aa0bbf86f8">
+		<description>jet_set_willy2_v2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10850">
+				<rom name="jet_set_willy2_v2.prg" size="10850" crc="5520376c" sha1="c71aa0bbf86f8ff5dcfec615e600b5a72e7fdbd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d140ae06f54c4">
+		<description>jet_set_willy2_v3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10409">
+				<rom name="jet_set_willy2_v3.prg" size="10409" crc="03f46de6" sha1="d140ae06f54c4f2126f4a1dd471c7dfefc9ff5d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16004f7b7de2650">
+		<description>jet_set_willy2_v4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11114">
+				<rom name="jet_set_willy2_v4.prg" size="11114" crc="a70b42c1" sha1="004f7b7de2650d209965fa95410d5490edfce7f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164d417edaf96a6">
+		<description>Joe_And_Sheriff</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7177">
+				<rom name="Joe_And_Sheriff.prg" size="7177" crc="1dce22ae" sha1="4d417edaf96a626b7dff78bf6ed1744ca103021f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1673b677303e56e">
+		<description>Joe_Blade_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Joe_Blade_2.prg" size="12289" crc="515d38b3" sha1="73b677303e56e3f8a65b36bf49c2c0438b69047e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16eb8040d203493">
+		<description>John_90</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7189">
+				<rom name="John_90.prg" size="7189" crc="989cc53e" sha1="eb8040d2034934fd0c566549880450818c24fd8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16dd4f24c900e15">
+		<description>Joker_Poker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="9982">
+				<rom name="Joker_Poker.prg" size="9982" crc="c0e46724" sha1="dd4f24c900e15f84dc21024fde25100da4869543"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169a0fbddf63175">
+		<description>Jumbo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10182">
+				<rom name="Jumbo.prg" size="10182" crc="30675b8a" sha1="9a0fbddf6317525935fbd5264b581093afeab90e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a213d240a4654">
+		<description>Jumping_Bobby</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11786">
+				<rom name="Jumping_Bobby.prg" size="11786" crc="df744f07" sha1="a213d240a4654006bb5ee8ae6d1487944ba5b780"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bbec6f72cd795">
+		<description>Jumping_Joe</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10862">
+				<rom name="Jumping_Joe.prg" size="10862" crc="30dd0806" sha1="bbec6f72cd79588b80f6064ad740ff934a7be17a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162cb42a19bfe92">
+		<description>Jump_Jet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="21583">
+				<rom name="Jump_Jet.prg" size="21583" crc="026d807d" sha1="2cb42a19bfe92c1109f3be343712271908e27cab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162ea2ec9cf4341">
+		<description>Jump_Jet[SYS25344]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="28673">
+				<rom name="Jump_Jet[SYS25344].prg" size="28673" crc="2b896c01" sha1="2ea2ec9cf4341676b137773c2a9f3adbeb9e390d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16626b091475f71">
+		<description>Jump_Man</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2792">
+				<rom name="Jump_Man.prg" size="2792" crc="4fe24cd4" sha1="626b091475f715ee9f5b15065bb47c48b224f628"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f0a914a8d5d9a">
+		<description>Junior_Maths</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10194">
+				<rom name="Junior_Maths.prg" size="10194" crc="03e33aa5" sha1="f0a914a8d5d9a5400091dd7f7af677ef4c23a82f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ba360535614ee">
+		<description>surround</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2690">
+				<rom name="surround.prg" size="2690" crc="3415dcdf" sha1="ba360535614ee7a9583af2a6689c902cd8f6003a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c93b897090b9f">
+		<description>Terror News 32 (2024-01)(Methabolix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="54931">
+				<rom name="Terror News 32 (2024-01)(Methabolix).prg" size="54931" crc="79febc19" sha1="c93b897090b9f09dd7a7e570e14309f73b45bb3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d1edb2cec9524">
+		<description>tricky_dices</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8240">
+				<rom name="tricky_dices.prg" size="8240" crc="429dcd48" sha1="d1edb2cec95244c4b851573643d0b535f92e88d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160541d71f02cc4">
+		<description>Xshoot_c16_32k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="20449">
+				<rom name="Xshoot_c16_32k.prg" size="20449" crc="52112976" sha1="0541d71f02cc43bb1148cdfdfccff3544f40e496"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 3 -->
+<softwarelist name="vic1001_cart" description="vic1001_cart loose roms">
+	<software name="vicc4e695ed97a28">
+		<description>apple panic (creative)(1982)(vi-ap-c)(ju)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="vic1001_cart">
+			<dataarea name="blk5" size="8192">
+				<rom name="apple panic (creative)(1982)(vi-ap-c)(ju).a0" size="8192" crc="55cdfa8d" sha1="c4e695ed97a287f2932da4b9961f43569f0fe5f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vic52a0ac6733f6f">
+		<description>quikman-8k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="vic1001_cart">
+			<dataarea name="blk5" size="8192">
+				<rom name="quikman-8k.a0" size="8192" crc="3add56e0" sha1="52a0ac6733f6fc261b2aa4a8c48ecc911999e4bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vic3c1b6c2068d03">
+		<description>sargon ii chess (commodore)(1982)(vic-1919)(ju)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="vic1001_cart">
+			<dataarea name="blk5" size="8192">
+				<rom name="sargon ii chess (commodore)(1982)(vic-1919)(ju).a0" size="8192" crc="cd1ca8ec" sha1="3c1b6c2068d036aee40dbc31f075d0b789a503aa"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

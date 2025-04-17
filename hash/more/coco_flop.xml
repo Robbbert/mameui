@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 185 -->
+<!-- Number of items in this list = 186 -->
 <softwarelist name="coco_flop" description="coco_flop loose roms">
 	<software name="coce2238f4876cf6">
 		<description>(demo)Rotag (2024-02)(Desire)(CoCo 3)</description>
@@ -1849,6 +1849,16 @@
 		<part name="flop0" interface="floppy_5_25">
 			<dataarea name="flop" size="161280">
 				<rom name="ZENIX.DSK" size="161280" crc="80029564" sha1="f6f2b7936c73cb9cfb4d72d59d14ee876b88b846"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocce7ab46840923">
+		<description>[coco3]Poker Squares</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop0" interface="floppy_5_25">
+			<dataarea name="flop" size="161280">
+				<rom name="[coco3]Poker Squares.DSK" size="161280" crc="8c96a46e" sha1="ce7ab46840923477a8a5b0f02cc947a040a9c752"/>
 			</dataarea>
 		</part>
 	</software>

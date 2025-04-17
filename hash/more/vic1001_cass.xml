@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 7 -->
+<softwarelist name="vic1001_cass" description="vic1001_cass loose roms">
+	<software name="vice28730acc4737">
+		<description>Antiair[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="525507">
+				<rom name="Antiair[SYS7168].tap" size="525507" crc="c9cf65a4" sha1="e28730acc4737448e99b2ebe7321c5906d21eddb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vic43b5cc1393d3a">
+		<description>Cacorm[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="632387">
+				<rom name="Cacorm[SYS7168].tap" size="632387" crc="8b6461dd" sha1="43b5cc1393d3a9ed32439e9bfdc40b3f435214be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vic2fa968c2034e0">
+		<description>Cracky[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="535827">
+				<rom name="Cracky[SYS7168].tap" size="535827" crc="cbd7548f" sha1="2fa968c2034e0717ebc72c44e79300303301b1f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vic2e7a3a44b0828">
+		<description>Hopman[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="548747">
+				<rom name="Hopman[SYS7168].tap" size="548747" crc="8ea9b082" sha1="2e7a3a44b08283cdf22ca7a68c8e41000d2413ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vicfe32837ebe736">
+		<description>Mieyen[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="553947">
+				<rom name="Mieyen[SYS7168].tap" size="553947" crc="b1022174" sha1="fe32837ebe7361ec089a86a66de20dfc86c6536e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vic982a9d6200f87">
+		<description>Osotos[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="632267">
+				<rom name="Osotos[SYS7168].tap" size="632267" crc="ed7cd071" sha1="982a9d6200f8722eab110ddf80bff7018013e474"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vic82020e7edccfe">
+		<description>Yewdow[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="603867">
+				<rom name="Yewdow[SYS7168].tap" size="603867" crc="a75c0a4f" sha1="82020e7edccfe3ce0244c3d0b6c0c1502438c516"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1904 -->
+<!-- Number of items in this list = 1905 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -1129,6 +1129,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="(E)sonic spinball (prototype -1993-09-17).bin" size="1048576" crc="c203c557" sha1="1b17e659f8a18656c36b8e26cc997c0d8312761b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen677e1fbf2f6f9">
+		<description>(E)Story of Thor, The (Euro, French)(1995)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="(E)Story of Thor, The (Euro, French)(1995)(Sega).bin" size="3145728" crc="b97cca1c" sha1="677e1fbf2f6f90dd5a016f3bd5f305547249205a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2619,16 +2629,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(U)zero the kamikaze squirrel (hack, spanish).bin" size="2097152" crc="c1eae5e7" sha1="16115f324a20bfd5427100893dad074eeb769d14"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gend6d9733a619ba">
-		<description>(U)Zero Tolerance</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="(U)Zero Tolerance.bin" size="2097152" crc="23f603f5" sha1="d6d9733a619ba6be0dd76591d8dec621e4fdc17e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5729,16 +5729,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Exile (U) [T+Swe_Cyndeline].bin" size="1048576" crc="53774e55" sha1="a0e7bb3c4832c9dd715be13036dd4a4985dab7fd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen22301d6366eac">
-		<description>Eyra the Crow Maiden (2021)(2nd Dimension)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2083840">
-				<rom name="Eyra the Crow Maiden (2021)(2nd Dimension).bin" size="2083840" crc="d48289e3" sha1="22301d6366eac1b89234e59605d40d5e9e6559b5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9502,16 +9492,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen677e1fbf2f6f9">
-		<description>legende de thor, la (france)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="legende de thor, la (france).md" size="3145728" crc="b97cca1c" sha1="677e1fbf2f6f90dd5a016f3bd5f305547249205a"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen639357013fe57">
 		<description>Lego Pirates of the Caribbean (Unl)(2014)(BMB)</description>
 		<year>????</year>
@@ -11422,6 +11402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen8a1eae3319d4a">
+		<description>Peacock King 2 - Castle of Illusion T-Eng + Gameplay Upgrade v2.4 (2025)(Nani16Bit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Peacock King 2 - Castle of Illusion T-Eng + Gameplay Upgrade v2.4 (2025)(Nani16Bit).bin" size="524288" crc="52d67a90" sha1="8a1eae3319d4a79a6b2dadd6103804d2d9b5e0a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen8312dcd084800">
 		<description>Pengo Arcade (2024)(125scratch)</description>
 		<year>????</year>
@@ -11792,13 +11782,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gend82433375801f">
+	<software name="gen72c376d82f251">
 		<description>Prince of Persia - Remastered Edition (2022)(Linkuei)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1323702">
+				<rom name="Prince of Persia - Remastered Edition (2022)(Linkuei).bin" size="1323702" crc="d97467a1" sha1="72c376d82f25168e53b807fb3e7b58d3bf33b994"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend82433375801f">
+		<description>Prince of Persia - Remastered Edition v1.3 (2022)(Linkuei)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Prince of Persia - Remastered Edition (2022)(Linkuei).bin" size="2097152" crc="897f3fe8" sha1="d82433375801f084df74028b55a34d7d6c9804bf"/>
+				<rom name="Prince of Persia - Remastered Edition v1.3 (2022)(Linkuei).bin" size="2097152" crc="897f3fe8" sha1="d82433375801f084df74028b55a34d7d6c9804bf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11962,6 +11962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genb72ecfbc39610">
+		<description>QuackShot con Donald Duck T-Spa v1.2 (2025)(Wave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="QuackShot con Donald Duck T-Spa v1.2 (2025)(Wave).bin" size="1310720" crc="ab656ef4" sha1="b72ecfbc396104a9310cfbd63c57047d699e7020"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen1b1421f57669e">
 		<description>quackshot starring donald duck ~ quackshot - guruzia ou no hihou (world) (rev01) [a1][c][!]</description>
 		<year>????</year>
@@ -11999,6 +12009,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Raiden Densetsu ~ Raiden Trad (Japan, USA).bin" size="1048576" crc="eee74b65" sha1="acc91f80521a042790d73086519f1e61551d2e71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen88e178d39ad02">
+		<description>Raiden Trad - Enhanced Version v1.01 (2017)(fusaru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Raiden Trad - Enhanced Version v1.01 (2017)(fusaru).bin" size="2097152" crc="a516393a" sha1="88e178d39ad02fcdeab818e27a73a0813f86b307"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12969,6 +12989,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Shadow of the Beast II (USA, Europe).bin" size="1048576" crc="03b05238" sha1="bf748cd62e02229fcf56656160ffa49c28486120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen38116f593c086">
+		<description>Shaolin Carcara (Rev 1)(2020-22)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2359296">
+				<rom name="Shaolin Carcara (Rev 1)(2020-22)(Manganga Team).bin" size="2359296" crc="7bd5e34f" sha1="38116f593c086f653b991f05c7e3f3deb569587f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18852,16 +18882,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen49336f51e047e">
-		<description>Zero Wing (USA) (Retro-bit)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Zero Wing (USA) (Retro-bit).bin" size="1048576" crc="d525babb" sha1="49336f51e047e58aeb079845760732d09e06047c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen923e33c533e26">
 		<description>Zero Wing(F)</description>
 		<year>????</year>
@@ -18869,16 +18889,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Zero Wing(F).bin" size="1048576" crc="237759c4" sha1="923e33c533e263a75cd6f1e24ac81d2f05c60151"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen62bc26db0df31">
-		<description>Zombies Ate My Neighbors (World) (Limited Run Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Zombies Ate My Neighbors (World) (Limited Run Games).md" size="1048576" crc="583db890" sha1="62bc26db0df31eab4938aa86162be2c55aeb6970"/>
 			</dataarea>
 		</part>
 	</software>

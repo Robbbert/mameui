@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3820 -->
+<!-- Number of items in this list = 3819 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -11452,16 +11452,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsf417a523e79ff">
-		<description>Harukanaru Augusta 3 (1995)(T&amp;E Soft)(Japan)(Rev 1)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Harukanaru Augusta 3 (1995)(T&amp;E Soft)(Japan)(Rev 1).sfc" size="2097152" crc="c1281f9b" sha1="f417a523e79ff0d6fc36fe8940011705fc3b346a"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsbf48df954cf38">
 		<description>Haunt, the (SMW1 Hack) (2)</description>
 		<year>????</year>
@@ -19892,16 +19882,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns7c84674ce5bed">
-		<description>Pebble Beach no Hatou New - Tournament Edition (1996)(T&amp;E Soft)(Japan)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Pebble Beach no Hatou New - Tournament Edition (1996)(T&amp;E Soft)(Japan).sfc" size="2097152" crc="0b6fb2f8" sha1="7c84674ce5bed9de224c07d0d99d19c92a39e942"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns1f40d34754950">
 		<description>perfect_flydisable (SMW1 Hack)</description>
 		<year>????</year>
@@ -21039,6 +21019,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Rockman 7 - Shukumei no Taiketsu! (J) (Sample).sfc" size="2097152" crc="ee05a1af" sha1="1702bd66db2860ff2c399af34d62fc1ba59b32bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2e01103df7292">
+		<description>Rockman 7 - Shukumei no Taiketsu! T-Cht v20250406 (2025)(NOKOH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Rockman 7 - Shukumei no Taiketsu! T-Cht v20250406 (2025)(NOKOH).sfc" size="3145728" crc="c1928f06" sha1="2e01103df72927c38822ca7b94233bbe058440cb"/>
 			</dataarea>
 		</part>
 	</software>

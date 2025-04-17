@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 2 -->
 <softwarelist name="c64_cass" description="c64_cass loose roms">
 	<software name="c6410b594e468ee7">
 		<description>10th Frame</description>
@@ -9,6 +9,16 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="559117">
 				<rom name="10th Frame.tap" size="559117" crc="8a0a50ac" sha1="10b594e468ee7b4542c2972e149cf09995abd910"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ecaf21a318249">
+		<description>Yewdow[SYS4096]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="570187">
+				<rom name="Yewdow[SYS4096].tap" size="570187" crc="c8697b10" sha1="ecaf21a318249375682c2e3afd887d603013d805"/>
 			</dataarea>
 		</part>
 	</software>

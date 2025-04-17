@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 767 -->
+<!-- Number of items in this list = 776 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -229,6 +229,36 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Bari Bari Attack 4 Boom Off (19xx).XDF" size="1261568" crc="d857f3a5" sha1="3ba6dbbe752014b7c624387c6fcb99e158658d43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688883952236886">
+		<description>baruusa no fukushuu (1991)(zain soft)(disk 1 of 3)(disk a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="baruusa no fukushuu (1991)(zain soft)(disk 1 of 3)(disk a).dim" size="1261824" crc="620c407d" sha1="88839522368865d98e8e836ed047c1300c997137"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6807307d6df8a0a">
+		<description>baruusa no fukushuu (1991)(zain soft)(disk 2 of 3)(disk b)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="baruusa no fukushuu (1991)(zain soft)(disk 2 of 3)(disk b).dim" size="1261824" crc="d2ae19ad" sha1="07307d6df8a0ad7e53d76b80481552582540eff7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6886e30ff1f51d6">
+		<description>baruusa no fukushuu (1991)(zain soft)(disk 3 of 3)(opening)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="baruusa no fukushuu (1991)(zain soft)(disk 3 of 3)(opening).dim" size="1261824" crc="d56358dc" sha1="86e30ff1f51d69e5b19f231cc577180cb117a523"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5082,6 +5112,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x68c89731c50d990">
+		<description>jane (1990)(system house oh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="jane (1990)(system house oh).dim" size="1261824" crc="11665467" sha1="c89731c50d9905d44cad5c0056ac3cfd6f380b6f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68d99141998f4f7">
 		<description>Japan 2136 Nihon Gokei (1990)(Login)</description>
 		<year>????</year>
@@ -6272,6 +6312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x681e14aef379b6d">
+		<description>nicoll (1990)(system house oh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="nicoll (1990)(system house oh).dim" size="1261824" crc="8400f85c" sha1="1e14aef379b6d10e5b4308b12b43b6cd4edc5037"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x68b2b1596018a49">
 		<description>Ninin Battle (1990)(Takeru)</description>
 		<year>????</year>
@@ -6469,6 +6519,46 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Push Bon!.hdm" size="1261568" crc="fa66a537" sha1="c0b134359272c94528d13e01090854e9e090078d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x688fbd12f1fbdc4">
+		<description>quintia road (1991)(great)(disk 1 of 4)(disk a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="quintia road (1991)(great)(disk 1 of 4)(disk a).dim" size="1261824" crc="531d638d" sha1="8fbd12f1fbdc42cb1f09b13eafa66736f185e0af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x682c2355f241e1d">
+		<description>quintia road (1991)(great)(disk 2 of 4)(disk b)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="quintia road (1991)(great)(disk 2 of 4)(disk b).dim" size="1261824" crc="a2090654" sha1="2c2355f241e1dea1955b87a7cecf1424d2988dbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x687ea365ad8691a">
+		<description>quintia road (1991)(great)(disk 3 of 4)(disk c)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="quintia road (1991)(great)(disk 3 of 4)(disk c).dim" size="1261824" crc="c51474fa" sha1="7ea365ad8691a22980953fbc1b64f9c2cdb7dd1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x687932a782c4425">
+		<description>quintia road (1991)(great)(disk 4 of 4)(disk d)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261824">
+				<rom name="quintia road (1991)(great)(disk 4 of 4)(disk d).dim" size="1261824" crc="831f83ec" sha1="7932a782c44258752106a63c29bf2d96bc2cc5f9"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 102 -->
+<!-- Number of items in this list = 109 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -59,6 +59,66 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="117460632">
 				<rom name="[-]GuitarTuner-98,Klavir-99.wav" size="117460632" crc="5623750a" sha1="c00623d4545d456d69bf91e298adb2cd954682eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea818de6aae158">
+		<description>[-]monopoly_readme</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3579238">
+				<rom name="[-]monopoly_readme.wav" size="3579238" crc="e375e71c" sha1="a818de6aae1583466c146da2fadee68c468cab5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef9c172456b098">
+		<description>[-]monopoly_readme_ver2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3843980">
+				<rom name="[-]monopoly_readme_ver2.wav" size="3843980" crc="98a00fac" sha1="f9c172456b0989d4c342c6cd6c64b1d1ab5ec6eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeede7cbe50106e">
+		<description>[-]monopoly_ver2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="15876044">
+				<rom name="[-]monopoly_ver2.wav" size="15876044" crc="c87c3474" sha1="ede7cbe50106eb587d8e32786b8e4481032d155c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0f0a80c358443">
+		<description>[-]Moon Lander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="594132">
+				<rom name="[-]Moon Lander.wav" size="594132" crc="dacf3854" sha1="0f0a80c358443011d395ee43247d0eba5ac49b5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb5a2920312077">
+		<description>[-]morse_code_tutorial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="6204948">
+				<rom name="[-]morse_code_tutorial.wav" size="6204948" crc="2d21f3a9" sha1="b5a292031207704eab264c5d12b0e7488c3b527f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee43272c7db6c59">
+		<description>[-]Motorbike Trials</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="334092">
+				<rom name="[-]Motorbike Trials.wav" size="334092" crc="be01ec82" sha1="43272c7db6c5935e389250aae8b6530e36a09496"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1009,6 +1069,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="2709446">
 				<rom name="[-]yahtze2.wav" size="2709446" crc="212b4fb1" sha1="24b020dfffcd855c0c40f9ae3eb145beecc3f49a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5ed03a2b70aa4">
+		<description>[ic]Moon Jumper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="922108">
+				<rom name="[ic]Moon Jumper.wav" size="922108" crc="6f7e3fb0" sha1="5ed03a2b70aa43f10826b90a615051b9b9239f13"/>
 			</dataarea>
 		</part>
 	</software>

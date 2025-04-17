@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 473 -->
+<!-- Number of items in this list = 491 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="bee31c8588566b2a">
 		<description>[-](demo)strngart</description>
@@ -392,6 +392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beeabcd33d30e086">
+		<description>[-]Four Cycle Engine</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="6528">
+				<rom name="[-]Four Cycle Engine.mwb" size="6528" crc="8734a221" sha1="abcd33d30e0862ffaafb12748d9a07c9fe32e895"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beebe9783b4a3bd8">
 		<description>[-]Galactic Fighter</description>
 		<year>????</year>
@@ -442,6 +452,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee107cb51bcc9ab">
+		<description>[-]Milkshake</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="7552">
+				<rom name="[-]Milkshake.mwb" size="7552" crc="bbc78e33" sha1="107cb51bcc9ab0dbbbc7963475e52905cbdc56b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2da7ff52d8204">
+		<description>[-]Missile War Joystick Converter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1664">
+				<rom name="[-]Missile War Joystick Converter.mwb" size="1664" crc="3250e0ed" sha1="2da7ff52d82042d615a8d8128e6f4006f3de2e48"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee839163103c2f9">
 		<description>[-]Mixed Mathematics</description>
 		<year>????</year>
@@ -449,6 +479,126 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="4608">
 				<rom name="[-]Mixed Mathematics.mwb" size="4608" crc="7e121a4b" sha1="839163103c2f9dbfcf434cdfe76cd73767c8b719"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb549d261795dd">
+		<description>[-]Monopoly Help</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4608">
+				<rom name="[-]Monopoly Help.bin" size="4608" crc="2f184436" sha1="b549d261795dd4c7a3b3a9ed9648bf14c327e8f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee19e6f446a0126">
+		<description>[-]monopoly</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="21419">
+				<rom name="[-]monopoly.bin" size="21419" crc="e0ece9bd" sha1="19e6f446a0126b25e0bd53ea1ad10bb4feafc22d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee76fe96c6e5f9f">
+		<description>[-]monopoly</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="16512">
+				<rom name="[-]monopoly.mwb" size="16512" crc="d627426a" sha1="76fe96c6e5f9f06ec5a21d26ee4b077174752caa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee8aa8850451214">
+		<description>[-]Moon Mountain</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4096">
+				<rom name="[-]Moon Mountain.mwb" size="4096" crc="69cbc3f6" sha1="8aa88504512141eb1f98b071af93e97dfb429297"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3b3111a872337">
+		<description>[-]morscode</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="6016">
+				<rom name="[-]morscode.mwb" size="6016" crc="c93672bf" sha1="3b3111a872337ca784f9bb3de77c459040e061df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3ab395e6c3422">
+		<description>[-]morse</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4224">
+				<rom name="[-]morse.mwb" size="4224" crc="44931a1d" sha1="3ab395e6c34222a8fcda2439c8514ca12f1f2175"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee79b3c53301cd9">
+		<description>[-]morsekey</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="896">
+				<rom name="[-]morsekey.mwb" size="896" crc="84118b13" sha1="79b3c53301cd96f763ed5537c1278be9ddd5f7fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee52df2a13a9c4f">
+		<description>[-]morse_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5888">
+				<rom name="[-]morse_1.mwb" size="5888" crc="eb64ec92" sha1="52df2a13a9c4f5c1a046aff389d343c0b229635c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee024ae517f49fc">
+		<description>[-]morse_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3456">
+				<rom name="[-]morse_2.mwb" size="3456" crc="6348d3fd" sha1="024ae517f49fcf17ce590ed9c2c95ab15da7ae10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee91d882245b60c">
+		<description>[-]morse_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5248">
+				<rom name="[-]morse_3.mwb" size="5248" crc="b934d9df" sha1="91d882245b60cef38ff6ca6d3009b8592291cd11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefcc1062551bc7">
+		<description>[-]Motorbike Trials</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2944">
+				<rom name="[-]Motorbike Trials.mwb" size="2944" crc="ee25c18a" sha1="fcc1062551bc7c85fbbe779ff45072a512034e70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefe57680ce53e7">
+		<description>[-]motor_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="[-]motor_1.mwb" size="2176" crc="b61f8617" sha1="fe57680ce53e791a619f1dc1dfd1a4b2648101ac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4572,6 +4722,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee01a089daae051">
+		<description>[ic]Dungeons and Dragons Monsters</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="10752">
+				<rom name="[ic]Dungeons and Dragons Monsters.mwb" size="10752" crc="95bd3c7e" sha1="01a089daae0511d027eb6b0d413abd56eb2ef3fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beebbae176e4c2c7">
+		<description>[ic]modelair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5632">
+				<rom name="[ic]modelair.mwb" size="5632" crc="41e93ade" sha1="bbae176e4c2c726830a4c2acc0783f5682071339"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beed959089e74ddc">
 		<description>[ic]reversi2</description>
 		<year>????</year>
@@ -4669,6 +4839,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="1536">
 				<rom name="[ppc]car.mwb" size="1536" crc="dcd1c318" sha1="9d498f76eedf417be5c326953e41d3b294b80771"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee1c420903d5989">
+		<description>[ppc]mount</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="384">
+				<rom name="[ppc]mount.mwb" size="384" crc="bb05ebaf" sha1="1c420903d59898b928177d59b92c238b49dbb360"/>
 			</dataarea>
 		</part>
 	</software>
