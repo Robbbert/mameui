@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 18 -->
+<!-- Number of items in this list = 33 -->
 <softwarelist name="mz80_cass" description="mz80_cass loose roms">
 	<software name="mz82e6696b7f0143">
 		<description>(bas)clock</description>
@@ -169,6 +169,156 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="4198064">
 				<rom name="numbertron_mz80.WAV" size="4198064" crc="f5b1e710" sha1="ad1b4a374d120c619922ef689b2f46bfdf83bb22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8211a26ac8fbb8">
+		<description>RACE(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1482946">
+				<rom name="RACE(MC).wav" size="1482946" crc="8e635047" sha1="211a26ac8fbb8f6503af18e8713b79c9b370509f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8668b38e7fed99">
+		<description>RALLEY(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2511566">
+				<rom name="RALLEY(MC).wav" size="2511566" crc="042ab4b4" sha1="668b38e7fed9998218341e336e856cab96181864"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz839d31c5e06128">
+		<description>SCRAMBLE(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2007260">
+				<rom name="SCRAMBLE(MC).wav" size="2007260" crc="35a8dbd3" sha1="39d31c5e06128ac942632f20a1fa84b5c02a83b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz855e4ca98c174a">
+		<description>SPACE DEFENDER(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2660786">
+				<rom name="SPACE DEFENDER(MC).wav" size="2660786" crc="fff5b8ed" sha1="55e4ca98c174aa751b925660b4379cd0243db062"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8e030a861ff002">
+		<description>SPACE DRIVE(SCRAMBLE)(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1681438">
+				<rom name="SPACE DRIVE(SCRAMBLE)(MC).wav" size="1681438" crc="1873e130" sha1="e030a861ff0022f4dfd9c3836d9ffc526b54017d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz85d4c4a75fb1a1">
+		<description>SPACE INVADER2 (NO INTRO)(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3551050">
+				<rom name="SPACE INVADER2 (NO INTRO)(MC).wav" size="3551050" crc="a02e0535" sha1="5d4c4a75fb1a187a889621cbad6c530af5f5017f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8508d67548964a">
+		<description>SPACE INVADER2(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3695002">
+				<rom name="SPACE INVADER2(MC).wav" size="3695002" crc="8975dba9" sha1="508d67548964a4a1625f5cab7de29746d95a7678"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz878d93f2936b44">
+		<description>SPACE RUINER(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4515874">
+				<rom name="SPACE RUINER(MC).wav" size="4515874" crc="b64fb4f1" sha1="78d93f2936b44b0b02ab5ef9c62281231d9704f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz84afdcf2ee2243">
+		<description>STAR WARS(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1294212">
+				<rom name="STAR WARS(MC).wav" size="1294212" crc="db40e3a7" sha1="4afdcf2ee22434b3a7372075e29495b26e1fecce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8036db2675acd1">
+		<description>SUPERTARG(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4289204">
+				<rom name="SUPERTARG(MC).wav" size="4289204" crc="c2d3fa97" sha1="036db2675acd19ea1f8c0ba9f039b5fb3751e86c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz826696415ad087">
+		<description>SURVIVE(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4632824">
+				<rom name="SURVIVE(MC).wav" size="4632824" crc="da26c9ef" sha1="26696415ad0878da0c06b3671a85ffddb060c448"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8d5a241b69af43">
+		<description>TANKWAR(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3949876">
+				<rom name="TANKWAR(MC).wav" size="3949876" crc="9abca843" sha1="d5a241b69af4389c794f61c1efc4caa29d4befa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8fa56608ffdd83">
+		<description>TOMAHAWK(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="6033848">
+				<rom name="TOMAHAWK(MC).wav" size="6033848" crc="2ffdb5d7" sha1="fa56608ffdd830db6c71af7ea155a9eed53eea38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8f2a8cddc70745">
+		<description>TOWERING(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3733080">
+				<rom name="TOWERING(MC).wav" size="3733080" crc="b2de8d97" sha1="f2a8cddc70745c74490c9c5efab0fd15a7bdc644"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz867b2d0b3b8beb">
+		<description>TRAP(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1522040">
+				<rom name="TRAP(MC).wav" size="1522040" crc="80ef45e8" sha1="67b2d0b3b8bebaab322462bc8a1b696fd9771047"/>
 			</dataarea>
 		</part>
 	</software>
