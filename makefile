@@ -141,9 +141,14 @@ MAKEPARAMS := -R
 #
 
 ifeq ($(OS),Windows_NT)
+OSARCH := $(shell wmic OS get OSArchitecture)
 OS := windows
 GENIEOS := windows
+ifneq ($(findstring ARM 64-bit,$(OSARCH)),)
+PLATFORM := arm64
+else
 PLATFORM := x86
+endif
 else
 UNAME := $(shell uname -mps)
 UNAME_M := $(shell uname -m)
@@ -230,12 +235,28 @@ $(error Unable to detect OS from uname -a: $(UNAME))
 endif
 endif
 
-MINGW:=
+ifdef MSYSTEM
+MINGW := $(MINGW_PREFIX)
+ifeq ($(MSYSTEM),MINGW32)
+	MINGW32 := $(MINGW_PREFIX)
+endif
+ifeq ($(MSYSTEM),MINGW64)
+	MINGW64 := $(MINGW_PREFIX)
+endif
+ifeq ($(MSYSTEM),CLANGARM64)
+	MINGW64 := $(MINGW_PREFIX)
+endif
+ifndef TOOLCHAIN
+	TOOLCHAIN := $(MINGW_PREFIX)/bin/
+endif
+else # MSYSTEM
+MINGW :=
 ifdef MINGW64
 	MINGW := $(MINGW64)
-else
+else # MINGW64
 	MINGW := $(MINGW32)
-endif
+endif # MINGW64
+endif # MSYSTEM
 
 #-------------------------------------------------
 # specify core target: mame, ldplayer
