@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 52 -->
+<!-- Number of items in this list = 82 -->
 <softwarelist name="c16_quik" description="c16_quik loose roms">
 	<software name="c165c5896a8a7806">
 		<description>007</description>
@@ -179,6 +179,306 @@
 		<part name="quik" interface="c16_quik">
 			<dataarea name="quik" size="39875">
 				<rom name="7_Up_Spot.prg" size="39875" crc="432246ad" sha1="e9225b2d27fc81a299602dedf8fcdc7baaeb70cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e6846507bca16">
+		<description>Ian_Bothams_Test_Match</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12178">
+				<rom name="Ian_Bothams_Test_Match.prg" size="12178" crc="1d8d8348" sha1="e6846507bca1639acc6d733bbf32296d2657ba5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1686946c09f1a39">
+		<description>Ice_Cream</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10463">
+				<rom name="Ice_Cream.prg" size="10463" crc="d625db36" sha1="86946c09f1a3932a13b1ae5cf8c8fae3cafe7c40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1693f25810616f3">
+		<description>Icicle_Works</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="30977">
+				<rom name="Icicle_Works.prg" size="30977" crc="d71055ff" sha1="93f25810616f3792e17657249c9b9f5d6b840fa3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1674580e4ba98e2">
+		<description>Icicle_Works_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="40036">
+				<rom name="Icicle_Works_3.prg" size="40036" crc="f2ceca22" sha1="74580e4ba98e2feca12c91b6ad5b0fde14da832f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167d51ef348edc5">
+		<description>Icicle_Works_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="40193">
+				<rom name="Icicle_Works_4.prg" size="40193" crc="69d84797" sha1="7d51ef348edc5769de8d0908d756997e35f0beeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164402f94afba9b">
+		<description>Icicle_Works_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="23986">
+				<rom name="Icicle_Works_5.prg" size="23986" crc="77bc7799" sha1="4402f94afba9becce481d74bc0f1946209ed5c2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1665a50b5a399b5">
+		<description>Icicle_Works_6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="26690">
+				<rom name="Icicle_Works_6.prg" size="26690" crc="ac965304" sha1="65a50b5a399b5e73ca09ea0a5f36bdf5b6386c17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165425b8d9f6164">
+		<description>Icicle_Works_Editor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="29731">
+				<rom name="Icicle_Works_Editor.prg" size="29731" crc="9105a71d" sha1="5425b8d9f6164b7c5aab780b8afeaf0a17e3badf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169bfb9667bc054">
+		<description>Icicle_Works_PCS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="40767">
+				<rom name="Icicle_Works_PCS.prg" size="40767" crc="97352e5e" sha1="9bfb9667bc0540e759f47c620718429a42b3bc3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1636e9416d0b066">
+		<description>Idolabirintus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="50117">
+				<rom name="Idolabirintus.prg" size="50117" crc="64f43ff4" sha1="36e9416d0b066fd21328661a33b9d7346a623868"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16828590ae3d323">
+		<description>Idoregesz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="39141">
+				<rom name="Idoregesz.prg" size="39141" crc="73269557" sha1="828590ae3d3231d9dc15ad0902161bc7d21f3235"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169e9334db51d03">
+		<description>Idoutazo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12801">
+				<rom name="Idoutazo.prg" size="12801" crc="4df66250" sha1="9e9334db51d039ee0eeeffb7a695b14d38499060"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16aebafa7f24bb5">
+		<description>Ikari_Warriors</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="13520">
+				<rom name="Ikari_Warriors.prg" size="13520" crc="635b998c" sha1="aebafa7f24bb5babbb18874bfa41d3e0c25e49aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168cd07c2c901ca">
+		<description>Imbiss</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11286">
+				<rom name="Imbiss.prg" size="11286" crc="a8015623" sha1="8cd07c2c901ca4eeac150ea8477bcd5272469010"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16397ad26b31432">
+		<description>indoor sports 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="24320">
+				<rom name="indoor sports 2.prg" size="24320" crc="1a94e482" sha1="397ad26b314320d2ee7dad0a819245ce599a5eef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a8c9c9a234781">
+		<description>indoor sports</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27585">
+				<rom name="indoor sports.prg" size="27585" crc="80b3363e" sha1="a8c9c9a23478151bab3bbaaff458698be2b25d58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e74cc8c9edeb9">
+		<description>Indoor_Soccer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="13520">
+				<rom name="Indoor_Soccer.prg" size="13520" crc="1dbefc8c" sha1="e74cc8c9edeb9f71ac58a96391f21f2d5a36f074"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d13d70d6f1c91">
+		<description>Indoor_Soccer_(Head)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="16365">
+				<rom name="Indoor_Soccer_(Head).prg" size="16365" crc="8063ea67" sha1="d13d70d6f1c91fb1ec14e4703af132baa7d56dcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166923d90395a70">
+		<description>Inspector</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4785">
+				<rom name="Inspector.prg" size="4785" crc="ef387ebc" sha1="6923d90395a70481fe0d8fc6cf37d2bed32de902"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1616107821d8428">
+		<description>Interceptor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7556">
+				<rom name="Interceptor.prg" size="7556" crc="56db82c4" sha1="16107821d8428c4d4065070ef7620edc87db9aa7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16368dc1c81ae97">
+		<description>Into_The_Deep</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="9830">
+				<rom name="Into_The_Deep.prg" size="9830" crc="60838134" sha1="368dc1c81ae97cf5854d5652c23f48fe73c0c45b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a9c1704cafda8">
+		<description>Into_The_Eagles_Nest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="41286">
+				<rom name="Into_The_Eagles_Nest.prg" size="41286" crc="75e2c439" sha1="a9c1704cafda88e242469b64ed2f28b2563736bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b4ba0a615c107">
+		<description>Invaders_(Livewire)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11684">
+				<rom name="Invaders_(Livewire).prg" size="11684" crc="df543462" sha1="b4ba0a615c107127340e9f29c5352d5303374e88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c082225a61521">
+		<description>Invaders_Of_Space</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5757">
+				<rom name="Invaders_Of_Space.prg" size="5757" crc="270b8fc5" sha1="c082225a61521b61517772b3af9bc71acb0a4d64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161e06e316a1885">
+		<description>Invasion</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5218">
+				<rom name="Invasion.prg" size="5218" crc="32f5e621" sha1="1e06e316a1885d46db56dedc8227d676167cbf23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168d1bfa637ee99">
+		<description>Invincible</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="44754">
+				<rom name="Invincible.prg" size="44754" crc="6df6fb5a" sha1="8d1bfa637ee99cfc89124256fd4970bec62a4dd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1625daf0242e881">
+		<description>Invincible_+</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="31171">
+				<rom name="Invincible_+.prg" size="31171" crc="c118ae4a" sha1="25daf0242e8810e4f2d06557a02a43023fd216a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16622f06de34687">
+		<description>Irrgarten</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="9873">
+				<rom name="Irrgarten.prg" size="9873" crc="c1e34091" sha1="622f06de34687d9b62459a099a59e68cd73142b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1604156b19f96da">
+		<description>It_Rained_Through_The_Roof</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="1987">
+				<rom name="It_Rained_Through_The_Roof.prg" size="1987" crc="ab289b84" sha1="04156b19f96da8ec0d44b660bff21df312f5cb98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160f568e57e839c">
+		<description>Ivan_Ivanovics</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="19645">
+				<rom name="Ivan_Ivanovics.prg" size="19645" crc="5a97f974" sha1="0f568e57e839cdff1640174541ec87ad932d60a7"/>
 			</dataarea>
 		</part>
 	</software>

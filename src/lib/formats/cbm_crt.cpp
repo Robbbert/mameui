@@ -53,7 +53,7 @@
 //  MACROS/CONSTANTS
 //**************************************************************************
 
-#define LOG 0
+#define LOG 1
 
 
 #define CRT_SIGNATURE       "C64 CARTRIDGE   "

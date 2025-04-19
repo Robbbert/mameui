@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 35 -->
 <softwarelist name="c64_cart" description="c64_cart loose roms">
 	<software name="c648c166cd6d6573">
 		<description>10th Frame</description>
@@ -9,6 +9,346 @@
 		<part name="cart" interface="c64_cart">
 			<dataarea name="roml" size="65728">
 				<rom name="10th Frame.crt" size="65728" crc="57cc5f6e" sha1="8c166cd6d6573a545197fffce77b7cbb6fe5538f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640b5ff7694e9a9">
+		<description>X-Force</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="X-Force.crt" size="90352" crc="1d9fb7cd" sha1="0b5ff7694e9a97d179da18105014559dfbbf4033"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64011c93c2d82e5">
+		<description>Xeno</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Xeno.crt" size="65728" crc="1a4727eb" sha1="011c93c2d82e541fc636bec24f4dd37e11087d0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64039f4442b1d59">
+		<description>Xerons (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Xerons (J1).crt" size="65728" crc="1aec114d" sha1="039f4442b1d5957ab6401e09cceba28ad88c8e75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640647a1d14de23">
+		<description>Xevious (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Xevious (J1).crt" size="82144" crc="65dbf2aa" sha1="0647a1d14de23607a06d9e5d8d014ccb9f074c89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64154f2d03f1de8">
+		<description>XOR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="XOR.crt" size="65728" crc="a2145dc4" sha1="154f2d03f1de8284040f7ce56da2b4a2ae1c3f19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641e460eca7632e">
+		<description>Xpiose</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Xpiose.crt" size="65728" crc="f97945d9" sha1="1e460eca7632e7b88d73e352c42d05c955a8845c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d4f23e72d4ace">
+		<description>Xybots</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Xybots.crt" size="82144" crc="596f0f9a" sha1="d4f23e72d4aceaf0278e69a2fdf4d52a66eb77ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64be0e5b63480e7">
+		<description>Yie Ar Kung-Fu II (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="Yie Ar Kung-Fu II (J1).crt" size="90352" crc="cdda2365" sha1="be0e5b63480e755b7f2b805c0f022888cafb3d53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642e6760d1cf1a4">
+		<description>Yie Ar Kung-Fu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="Yie Ar Kung-Fu.crt" size="90352" crc="ec621b92" sha1="2e6760d1cf1a4b77c1c302b12db622472f121347"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c0cd19b91d55c">
+		<description>Yogi Bear and Friends in the Greed Monster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Yogi Bear and Friends in the Greed Monster.crt" size="82144" crc="14f171bb" sha1="c0cd19b91d55c62b3972f29748fbee231dfd973f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641d31ae11e70f6">
+		<description>Yogi Bear</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Yogi Bear.crt" size="82144" crc="c107b572" sha1="1d31ae11e70f6351b41dac94e2dbb02d0e9c805f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64407fa8e8c99a4">
+		<description>Yogi's Great Escape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Yogi's Great Escape.crt" size="82144" crc="f5a1f1f1" sha1="407fa8e8c99a45261e81ac76aa060dfe8c21e115"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6483fabebccbea1">
+		<description>You Have to Win the Game</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="You Have to Win the Game.crt" size="65728" crc="ce5f540a" sha1="83fabebccbea1e1d5b0883b721932dd61298a9b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649db67ec943252">
+		<description>Z</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Z.crt" size="65728" crc="d7d346bd" sha1="9db67ec943252064b9a403842f8bb885a35f78f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ca9321e7bf4e8">
+		<description>Zaga Mission</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zaga Mission.crt" size="65728" crc="cfd6b21d" sha1="ca9321e7bf4e85a1eabf7ad3c85111cd072b05c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64123aa02f74df4">
+		<description>Zalaga (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zalaga (J1).crt" size="65728" crc="3e06e4f9" sha1="123aa02f74df485fbd949baab01da5b688d8614a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b94f8200c2c22">
+		<description>Zamzara</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zamzara.crt" size="82144" crc="52514a76" sha1="b94f8200c2c22b882398a11a7bb82eebfeca7b7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c4f6a382d5dc9">
+		<description>Zarjaz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="Zarjaz.crt" size="90352" crc="fc62052b" sha1="c4f6a382d5dc9ebfca28235a1a53d490d7201b8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64cf126a1accb09">
+		<description>Zaxxon (Synsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zaxxon (Synsoft).crt" size="82144" crc="1f783d6c" sha1="cf126a1accb09dafcdd587d4691bcf87b12f0eef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e70a3680a120d">
+		<description>Zenji (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zenji (J1).crt" size="82144" crc="662a63bf" sha1="e70a3680a120d4598da0c21f59f50fcb566c7bde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6447013b5716cb6">
+		<description>Zeppelin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zeppelin.crt" size="82144" crc="097690e7" sha1="47013b5716cb6d403409af756f523cea1c87b266"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c643278c46fe0dcd">
+		<description>Zeta-7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zeta-7.crt" size="65728" crc="168e827b" sha1="3278c46fe0dcd1ced57efbaeba50f9f2889c8047"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641c845d541dafd">
+		<description>Zig Zag</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zig Zag.crt" size="82144" crc="6167e0ac" sha1="1c845d541dafdcc94fef0b9d476f08c1090f5136"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644a03e0d0476d9">
+		<description>Zim Sala Bim</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zim Sala Bim.crt" size="65728" crc="58a4ac49" sha1="4a03e0d0476d94a2a0d2026cc8863dcf220b3e57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64007e4ea3d0b6a">
+		<description>Zodiac</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zodiac.crt" size="65728" crc="14046e52" sha1="007e4ea3d0b6a29f532537e30956d81b84e383bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64fcd37c8b3acc8">
+		<description>Zoids</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zoids.crt" size="82144" crc="831b2e02" sha1="fcd37c8b3acc82cf96c545f42d5ab7ecbef6a1a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ace98e4f27c96">
+		<description>Zolyx</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zolyx.crt" size="82144" crc="79f82737" sha1="ace98e4f27c9645768d404875d10d2b7e84be2a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6484e756d072c66">
+		<description>Zoom!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zoom!.crt" size="65728" crc="7d70c8e7" sha1="84e756d072c66de535b8eae950ae575b6a2f7fb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6487ac9e96906e9">
+		<description>Zorro (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zorro (J1).crt" size="65728" crc="3da584fa" sha1="87ac9e96906e945e547842e6e39f22bdbfa54936"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c4df81f05143e">
+		<description>Zybex</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zybex.crt" size="82144" crc="6595d323" sha1="c4df81f05143e1b384d64cd1823ff0a637bffc7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644d9aa0abe2535">
+		<description>Zynaps</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zynaps.crt" size="82144" crc="f1a6ce7a" sha1="4d9aa0abe253516ce5780e5f40d2cacbe848273b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64edacce35f29a5">
+		<description>Zyron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zyron.crt" size="65728" crc="e39a4bd8" sha1="edacce35f29a580e36c5b0e88b63d2053d380124"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6411ab3e475a54c">
+		<description>Zyrons Escape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Zyrons Escape.crt" size="65728" crc="c5f9e9c6" sha1="11ab3e475a54c0568638c65945d98f010f7d679b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649d1902f85e024">
+		<description>Zzzz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Zzzz.crt" size="82144" crc="ccee592b" sha1="9d1902f85e0249d157a4c31be9c7c09e35ec23c7"/>
 			</dataarea>
 		</part>
 	</software>

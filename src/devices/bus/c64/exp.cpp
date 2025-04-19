@@ -204,8 +204,8 @@ std::pair<std::error_condition, std::string> c64_expansion_slot_device::call_loa
 			}
 		}
 
-		if ((m_card->m_roml_size & (m_card->m_roml_size - 1)) || (m_card->m_romh_size & (m_card->m_romh_size - 1)))
-			return std::make_pair(image_error::INVALIDLENGTH, "ROM size must be power of 2");
+		//if ((m_card->m_roml_size & (m_card->m_roml_size - 1)) || (m_card->m_romh_size & (m_card->m_romh_size - 1)))
+			//return std::make_pair(image_error::INVALIDLENGTH, "ROM size must be power of 2");
 	}
 
 	return std::make_pair(err, std::string());
