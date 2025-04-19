@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 239 -->
+<!-- Number of items in this list = 238 -->
 <softwarelist name="vectrex" description="vectrex loose roms">
 	<software name="vec59bac071532fb">
 		<description>(demo)0ldsk00l (2002)(Manu)(PD)</description>
@@ -119,16 +119,6 @@
 		<part name="cart" interface="vectrex_cart">
 			<dataarea name="rom" size="127">
 				<rom name="(demo)Nelson Mandala (2024-07)(Rift).bin" size="127" crc="236c6019" sha1="ed88230457b4b18da7d924864863a9f1608c457c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="vec91b0cb5ce4cf2">
-		<description>(demo)Performance VX (Revival Studios)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="vectrex_cart">
-			<dataarea name="rom" size="9323">
-				<rom name="(demo)Performance VX (Revival Studios).bin" size="9323" crc="675631e7" sha1="91b0cb5ce4cf25878144aee6516c01742890bcb1"/>
 			</dataarea>
 		</part>
 	</software>

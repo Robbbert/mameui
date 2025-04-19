@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 39 -->
+<!-- Number of items in this list = 41 -->
 <softwarelist name="mz2200_cass" description="mz2200_cass loose roms">
 	<software name="m2230f3f8c7b34f9">
 		<description>Aerial_BW</description>
@@ -289,6 +289,26 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1272270">
 				<rom name="Mazy_mz2000.wav" size="1272270" crc="b6d82072" sha1="4f1a56f55dcd64385253c30a888d9b87228a4325"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m227fa2c39fffabf">
+		<description>mieyen_mz2000</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1207472">
+				<rom name="mieyen_mz2000.wav" size="1207472" crc="cf7a289d" sha1="7fa2c39fffabff1f204405f1329cb9bc2c9b44a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m2272544d671e8bb">
+		<description>mieyen_mz2000_mono</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1129643">
+				<rom name="mieyen_mz2000_mono.wav" size="1129643" crc="dfc4e87d" sha1="72544d671e8bbac46a7e92161019dfe8331383ad"/>
 			</dataarea>
 		</part>
 	</software>

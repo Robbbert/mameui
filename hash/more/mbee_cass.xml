@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 148 -->
+<!-- Number of items in this list = 163 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -59,6 +59,126 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="117460632">
 				<rom name="[-]GuitarTuner-98,Klavir-99.wav" size="117460632" crc="5623750a" sha1="c00623d4545d456d69bf91e298adb2cd954682eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6409e6804a710">
+		<description>[-]LCG(have to type something)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5513125">
+				<rom name="[-]LCG(have to type something).wav" size="5513125" crc="f0a77604" sha1="6409e6804a710149a5b8b45e859a890d9209da57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee1ac4545ed15cf">
+		<description>[-]letter_slide</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1505850">
+				<rom name="[-]letter_slide.wav" size="1505850" crc="18591444" sha1="1ac4545ed15cf142bad949637baa5fb04332eb23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec86a3dda58b93">
+		<description>[-]Loader96k2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3047967">
+				<rom name="[-]Loader96k2.wav" size="3047967" crc="865f94e1" sha1="c86a3dda58b9339100cde5add83a1e2b0f221cdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeccefa4b3ef1d5">
+		<description>[-]loanre</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1802902">
+				<rom name="[-]loanre.wav" size="1802902" crc="0d5dde4a" sha1="ccefa4b3ef1d545e88defee094f96172ca1d907a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee71b6b4aafcc3f">
+		<description>[-]loanre96k2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="10620826">
+				<rom name="[-]loanre96k2.wav" size="10620826" crc="43217458" sha1="71b6b4aafcc3f6167aa5a58e422d08d591501a65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefcc755e1c7606">
+		<description>[-]lob</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2600290">
+				<rom name="[-]lob.wav" size="2600290" crc="d0219042" sha1="fcc755e1c760627d312ccf028f09da5316374d39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee99f58c610775e">
+		<description>[-]Lost Island</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2606956">
+				<rom name="[-]Lost Island.wav" size="2606956" crc="9d1ee8bc" sha1="99f58c610775ec2453c1e163f0891fe83b426578"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6fca4591da523">
+		<description>[-]lotto</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="575316">
+				<rom name="[-]lotto.wav" size="575316" crc="7718529e" sha1="6fca4591da52383fb99b89c82e26edcee3e1bfbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeaf84a07367e19">
+		<description>[-]LottoDraw96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4782820">
+				<rom name="[-]LottoDraw96k1.wav" size="4782820" crc="e755aa1e" sha1="af84a07367e1913ef41b4013c196c7b1302c115a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee557391e615cfd">
+		<description>[-]LottoDraw96k2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1489554">
+				<rom name="[-]LottoDraw96k2.wav" size="1489554" crc="c4c11160" sha1="557391e615cfd75e2451a19a3924e8d635677354"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee246dbc7cb9231">
+		<description>[-]lunar_lander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="756814">
+				<rom name="[-]lunar_lander.wav" size="756814" crc="74e21cfa" sha1="246dbc7cb923147188fd67ccbaa1ddd1f6b456b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee63d28462c04a7">
+		<description>[-]luner_lander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="847586">
+				<rom name="[-]luner_lander.wav" size="847586" crc="03cc93fd" sha1="63d28462c04a767ab30a503425d8d390a33d3bd4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1409,6 +1529,36 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="2709446">
 				<rom name="[-]yahtze2.wav" size="2709446" crc="212b4fb1" sha1="24b020dfffcd855c0c40f9ae3eb145beecc3f49a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee534d4be0de4ed">
+		<description>[ic]Kilopede</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="695772">
+				<rom name="[ic]Kilopede.wav" size="695772" crc="1aa0543b" sha1="534d4be0de4ed9b2b08249ea64350c6f7584d453"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea4db0f61c3c2e">
+		<description>[ic]kilopede96k2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="8033645">
+				<rom name="[ic]kilopede96k2.wav" size="8033645" crc="2d9f0417" sha1="a4db0f61c3c2e060b6e8e1d022fca28b5e6f6482"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee555f16e96e386">
+		<description>[ic]kilopede_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1702340">
+				<rom name="[ic]kilopede_2.wav" size="1702340" crc="215fceca" sha1="555f16e96e38659ae7d2ada9fc5682ea9e60960b"/>
 			</dataarea>
 		</part>
 	</software>

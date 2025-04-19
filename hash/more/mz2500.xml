@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 20 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="mz2500" description="mz2500 loose roms">
 	<software name="m25f698e890fc2ae">
 		<description>Aerial_mz2500</description>
@@ -159,6 +159,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="697008">
 				<rom name="Mazy_mz2500.d88" size="697008" crc="32ce2797" sha1="ce77f320bfe655c5d37b74621431d90ec15cc0de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m255024fa2350394">
+		<description>Mieyen_mz2500</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="697008">
+				<rom name="Mieyen_mz2500.d88" size="697008" crc="394df53c" sha1="5024fa235039435701f75263384217a5d816e15c"/>
 			</dataarea>
 		</part>
 	</software>

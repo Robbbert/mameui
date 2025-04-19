@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 33 -->
+<!-- Number of items in this list = 65 -->
 <softwarelist name="mz80_cass" description="mz80_cass loose roms">
 	<software name="mz82e6696b7f0143">
 		<description>(bas)clock</description>
@@ -42,6 +42,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mz83e258e246959d">
+		<description>ADVANCE-GUARD(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="5429890">
+				<rom name="ADVANCE-GUARD(MC).wav" size="5429890" crc="2dd8eb55" sha1="3e258e246959dc6eca561380a427c80497863ba3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz83ef320b23810d">
+		<description>ANDROMEDA(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1391722">
+				<rom name="ANDROMEDA(MC).wav" size="1391722" crc="59a97cad" sha1="3ef320b23810d1c248209a01ed6b8ae604ea5558"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mz8003299f328fa3">
 		<description>BASIC OM-1000</description>
 		<year>????</year>
@@ -69,6 +89,26 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="12400">
 				<rom name="basic sa-5510.mzf" size="12400" crc="82522f6f" sha1="7f42b0db86af823c5e17244ef3268bcf8aabf690"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz88b955970f19c3">
+		<description>BLOCK KUZUSHI(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1534702">
+				<rom name="BLOCK KUZUSHI(MC).wav" size="1534702" crc="68ca4289" sha1="8b955970f19c352dccf111de96b59a563bd4bae6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz83bf2b25f1d758">
+		<description>BUGFIRE-NEW(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2757278">
+				<rom name="BUGFIRE-NEW(MC).wav" size="2757278" crc="48b8a8e0" sha1="3bf2b25f1d758fb4123fe59769bb0e35b9d6268f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -102,6 +142,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mz8a06feb738f419">
+		<description>COSMIC CRUISER2(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3612246">
+				<rom name="COSMIC CRUISER2(MC).wav" size="3612246" crc="6ef8e383" sha1="a06feb738f4190855c81153abe8111ae1db3c61a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8343ab1f14c1a6">
+		<description>CRAZY-CLIMBER (1of2)(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="6790628">
+				<rom name="CRAZY-CLIMBER (1of2)(MC).wav" size="6790628" crc="2a16d3f9" sha1="343ab1f14c1a6703cf54060352121c1716f3db12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz813ce8239a3a79">
+		<description>CRAZY-CLIMBER (2of2)(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1816122">
+				<rom name="CRAZY-CLIMBER (2of2)(MC).wav" size="1816122" crc="ac62692f" sha1="13ce8239a3a79a6ed06aadf0955f6c290e0f3ea5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mz8a13d5e28a6559">
 		<description>Cross Snake_mz</description>
 		<year>????</year>
@@ -119,6 +189,36 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="9069377">
 				<rom name="Cross Snake_mz.wav" size="9069377" crc="19e3bf1b" sha1="c07303b2afa64b56ac295c41c387a31a12b41fab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz807d63f06f4423">
+		<description>CRYSTALL(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4787">
+				<rom name="CRYSTALL(MC).m12" size="4787" crc="eca8d449" sha1="07d63f06f442383b25cabce86c1e530cfdd419c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8ce6060614c3fb">
+		<description>CRYSTALL(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="912898">
+				<rom name="CRYSTALL(MC).wav" size="912898" crc="1eb5d7e2" sha1="ce6060614c3fb134677bfc35a6ebdfc0ff5848f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz80d71f396eadb6">
+		<description>DEFENDER(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3445430">
+				<rom name="DEFENDER(MC).wav" size="3445430" crc="d531fe7d" sha1="0d71f396eadb6df18189f128ae796b1ef5568937"/>
 			</dataarea>
 		</part>
 	</software>
@@ -152,6 +252,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mz84dc583ab61735">
+		<description>ELEKTRONIC(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="300016">
+				<rom name="ELEKTRONIC(MC).wav" size="300016" crc="9df17af0" sha1="4dc583ab61735a68b0c7e08c2cf9069ed33b08eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz83693122f88d62">
+		<description>FORTRESS(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1170384">
+				<rom name="FORTRESS(MC).wav" size="1170384" crc="1523b373" sha1="3693122f88d62afd4f734f8e45b4089604ba7da0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8e29a536103f27">
+		<description>GOMOKU(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="692526">
+				<rom name="GOMOKU(MC).wav" size="692526" crc="91e5a03f" sha1="e29a536103f27b766fc15f5918dd514e2245ab9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8c655196460ad4">
+		<description>JINTORI(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1161202">
+				<rom name="JINTORI(MC).wav" size="1161202" crc="09e08513" sha1="c655196460ad4be4069bac09bb72e4336149c251"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8c211b88f4a17e">
+		<description>LASER COMMAND(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4265094">
+				<rom name="LASER COMMAND(MC).wav" size="4265094" crc="36cf6c8e" sha1="c211b88f4a17eaa1639288f0536b9de682f720ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8a75323347c56f">
+		<description>LUNAR LANDING(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1251606">
+				<rom name="LUNAR LANDING(MC).wav" size="1251606" crc="6959ad91" sha1="a75323347c56f24ec51ec4c1be841710f4e72273"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz801809965d7513">
+		<description>MAZEMAN(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3272376">
+				<rom name="MAZEMAN(MC).wav" size="3272376" crc="71a1edcb" sha1="01809965d7513230557c20b80dd1d4f4a96eac70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz897d32c4cdc741">
+		<description>MICROPEDE(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2717276">
+				<rom name="MICROPEDE(MC).wav" size="2717276" crc="627aa7f3" sha1="97d32c4cdc7411972d8ba54de5f03e8628dfd4c1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mz8c83858e36f3fa">
 		<description>minotaur</description>
 		<year>????</year>
@@ -162,6 +342,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mz83beb0d2d619ef">
+		<description>MONACO-GP(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2674396">
+				<rom name="MONACO-GP(MC).wav" size="2674396" crc="0e6ad140" sha1="3beb0d2d619ef27a8256bc266aa451abf64d1c7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8d8df7b8c4d668">
+		<description>MUNCHIES(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2333532">
+				<rom name="MUNCHIES(MC).wav" size="2333532" crc="8648f243" sha1="d8df7b8c4d668116b7bd241d2ada5adf6ae38e7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8c73328d24df8c">
+		<description>NEPTUN(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3718732">
+				<rom name="NEPTUN(MC).wav" size="3718732" crc="711f801b" sha1="c73328d24df8cdce25b7a536bef96f2daa25ff37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz82c51d08c93294">
+		<description>NSC-RALLY(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4556306">
+				<rom name="NSC-RALLY(MC).wav" size="4556306" crc="2c2b5083" sha1="2c51d08c9329404fbfd8f4a8f8e4972546752bec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mz8ad1b4a374d120">
 		<description>numbertron_mz80</description>
 		<year>????</year>
@@ -169,6 +389,26 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="4198064">
 				<rom name="numbertron_mz80.WAV" size="4198064" crc="f5b1e710" sha1="ad1b4a374d120c619922ef689b2f46bfdf83bb22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz86f8b34ea23a91">
+		<description>PACMAN1(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3945342">
+				<rom name="PACMAN1(MC).wav" size="3945342" crc="022aef3c" sha1="6f8b34ea23a913b0fff45de77fe44fa43f320465"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8f5665d204231b">
+		<description>PHOENIX(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="5019766">
+				<rom name="PHOENIX(MC).wav" size="5019766" crc="64e2deb6" sha1="f5665d204231b5bcb91891ea1f2c99e6db9b3710"/>
 			</dataarea>
 		</part>
 	</software>
@@ -189,6 +429,26 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="2511566">
 				<rom name="RALLEY(MC).wav" size="2511566" crc="042ab4b4" sha1="668b38e7fed9998218341e336e856cab96181864"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8e64ad56fcedca">
+		<description>RANGER SPECIAL (PACMAN)(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="3668502">
+				<rom name="RANGER SPECIAL (PACMAN)(MC).wav" size="3668502" crc="31c46c0b" sha1="e64ad56fcedca4ace2fcb7a46e3c75ce4c5b884b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8a0843a21bdfb6">
+		<description>SARGONCHESS(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2585454">
+				<rom name="SARGONCHESS(MC).wav" size="2585454" crc="84ff3146" sha1="a0843a21bdfb6aff9a17eef8016da5b0512f56ba"/>
 			</dataarea>
 		</part>
 	</software>
@@ -322,6 +582,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mz8b99e0aa9d8f75">
+		<description>UFO CAVES(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="8677430">
+				<rom name="UFO CAVES(MC).wav" size="8677430" crc="f0cd8117" sha1="b99e0aa9d8f7597d8c9e19433dd22af5f0bf0373"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz80c1dba4b430ae">
+		<description>UFO HUNTER(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4276406">
+				<rom name="UFO HUNTER(MC).wav" size="4276406" crc="4a1cbb83" sha1="0c1dba4b430aeb552cb0c78adad045d0cb01cf47"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mz802bb0fa43fda3">
 		<description>ufo</description>
 		<year>????</year>
@@ -329,6 +609,46 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="23681">
 				<rom name="ufo.mzf" size="23681" crc="e8c5ad6f" sha1="02bb0fa43fda3cae92f815cbfcf8077557bc022f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8a66f2b8e44595">
+		<description>VETRELEC(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="627930">
+				<rom name="VETRELEC(MC).wav" size="627930" crc="241086d9" sha1="a66f2b8e4459530eaadcb0547841447a65608447"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8e544bd10187dc">
+		<description>WILHELM TELL(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1394514">
+				<rom name="WILHELM TELL(MC).wav" size="1394514" crc="0f5858e9" sha1="e544bd10187dcdb49a6f739b6888f732a2215ab2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8200c4f40d4234">
+		<description>ZARDOS(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="9152754">
+				<rom name="ZARDOS(MC).wav" size="9152754" crc="3794837f" sha1="200c4f40d42342bb1996c43ed517be0b64cd2069"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz8e5476a0bdbecd">
+		<description>ZEROID(MC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4307632">
+				<rom name="ZEROID(MC).wav" size="4307632" crc="c74758b0" sha1="e5476a0bdbecd3ee4abd1fa0c1bcc0e5773da781"/>
 			</dataarea>
 		</part>
 	</software>
