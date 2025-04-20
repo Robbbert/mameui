@@ -479,7 +479,7 @@ void pc9821_state::pc9821_io(address_map &map)
 	map(0x00c8, 0x00cb).m(m_fdc_2hd, FUNC(upd765a_device::map)).umask32(0x00ff00ff);
 //  map(0x00cc, 0x00cc).rw(FUNC(pc9821_state::fdc_2hd_ctrl_r), FUNC(pc9821_state::fdc_2hd_ctrl_w));
 	//  map(0x00d8, 0x00df) AMD98 (sound?) board
-//	map(0x00f0, 0x00ff).rw(FUNC(pc9821_state::a20_ctrl_r), FUNC(pc9821_state::a20_ctrl_w)).umask32(0x00ff00ff);
+//  map(0x00f0, 0x00ff).rw(FUNC(pc9821_state::a20_ctrl_r), FUNC(pc9821_state::a20_ctrl_w)).umask32(0x00ff00ff);
 //  map(0x0188, 0x018f).rw(FUNC(pc9821_state::pc9801_opn_r), FUNC(pc9821_state::pc9801_opn_w)); //ym2203 opn / <undefined>
 //  map(0x018c, 0x018f) YM2203 OPN extended ports / <undefined>
 //  map(0x0430, 0x0433).rw(FUNC(pc9821_state::ide_ctrl_r), FUNC(pc9821_state::ide_ctrl_w)).umask32(0x00ff00ff);
@@ -694,12 +694,34 @@ static INPUT_PORTS_START( pc9821 )
 	PORT_START("DSW1")
 	PORT_BIT( 0xff, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_CUSTOM_DEVICE_MEMBER("sdip", FUNC(pc98_sdip_device::dsw1_r))
 
+	// HACK: should read from SDIP dsw2_r
+	// will break pc9821 for parity check, cfr. dump notes
 	PORT_START("DSW2")
-	PORT_BIT( 0x7f, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_CUSTOM_DEVICE_MEMBER("sdip", FUNC(pc98_sdip_device::dsw2_r))
-	// HACK: PC-9821 defaults to 5 MHz, which isn't ideal in several cases without -debug
+	PORT_DIPNAME( 0x01, 0x00, "DSW2" )
+	PORT_DIPSETTING(    0x01, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x02, 0x02, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x02, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x04, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x04, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x08, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x08, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x10, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x10, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x20, 0x20, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x20, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x40, 0x40, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x40, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 	PORT_DIPNAME( 0x80, 0x80, "GDC clock" )
 	PORT_DIPSETTING(    0x80, "2.5 MHz" )
 	PORT_DIPSETTING(    0x00, "5 MHz" )
+	// PORT_BIT( 0xff, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_CUSTOM_DEVICE_MEMBER("sdip", FUNC(pc98_sdip_device::dsw2_r))
 
 	PORT_START("DSW3")
 	PORT_BIT( 0x23, IP_ACTIVE_LOW, IPT_CUSTOM ) //PORT_CUSTOM_DEVICE_MEMBER("sdip", FUNC(pc98_sdip_device::dsw3_r))
@@ -878,37 +900,6 @@ void pc9821_mate_x_state::pc9821xa16(machine_config &config)
 	m_maincpu->set_irq_acknowledge_callback("pic8259_master", FUNC(pic8259_device::inta_cb));
 }
 
-void pc9821_valuestar_state::pc9821v13(machine_config &config)
-{
-	pc9821(config);
-	const double xtal = 133000000;
-	PENTIUM(config.replace(), m_maincpu, xtal); // Pentium Pro, 256kB cache RAM
-	m_maincpu->set_addrmap(AS_PROGRAM, &pc9821_valuestar_state::pc9821_map);
-	m_maincpu->set_addrmap(AS_IO, &pc9821_valuestar_state::pc9821_io);
-	m_maincpu->set_irq_acknowledge_callback("pic8259_master", FUNC(pic8259_device::inta_cb));
-
-	// VLSI Supercore594 (Wildcat) / Intel 430FX (Triton) PCI 2.0
-	// PCI slot x 1
-	// GD5440
-	// built-in 3.5 floppy x 1
-	// file bay with built-in CD-Rom (4x, 6x, 8x depending on sub-model type)
-	// HDD with pre-installed software (850MB, 1.2GB, 1.6GB)
-	// minimum RAM: 16MB
-	// maximum RAM: 128MB
-	// C-Bus x 2
-	// PC-9801-120 pre-installed (fax/modem 28'000 bps) or PC-9801-121 (ISDN)
-}
-
-void pc9821_valuestar_state::pc9821v20(machine_config &config)
-{
-	pc9821(config);
-	const double xtal = 200000000;
-	PENTIUM(config.replace(), m_maincpu, xtal); // Pentium Pro
-	m_maincpu->set_addrmap(AS_PROGRAM, &pc9821_valuestar_state::pc9821_map);
-	m_maincpu->set_addrmap(AS_IO, &pc9821_valuestar_state::pc9821_io);
-	m_maincpu->set_irq_acknowledge_callback("pic8259_master", FUNC(pic8259_device::inta_cb));
-}
-
 void pc9821_mate_r_state::pc9821ra20(machine_config &config)
 {
 	pc9821(config);
@@ -1058,7 +1049,7 @@ void pc9821_note_lavie_state::pc9821nw150(machine_config &config)
 /*
 98MATE A - 80486SX 25
 
-(note: might be a different model!)
+TODO: should access SDIP from $00f6, most likely a partial A Mate dump instead
 */
 
 ROM_START( pc9821 )
@@ -1355,43 +1346,23 @@ ROM_END
 
 /*
 98MATE VALUESTAR - Pentium based
+
+Both bad dumps, requires separate PCI-based driver anyway.
 */
 
-ROM_START( pc9821v13 )
-	ROM_REGION16_LE( 0x30000, "ipl", ROMREGION_ERASEFF )
-	// "ROM SUM ERROR"
-	ROM_LOAD( "itf.rom",      0x10000, 0x08000, BAD_DUMP CRC(dd4c7bb8) SHA1(cf3aa193df2722899066246bccbed03f2e79a74a) )
-//  ROM_LOAD( "itf_v20.rom",  0x10000, 0x08000, BAD_DUMP CRC(10e52302) SHA1(f95b8648e3f5a23e507a9fbda8ab2e317d8e5151) )
-	ROM_LOAD( "bios_v13.rom", 0x18000, 0x18000, BAD_DUMP CRC(0a682b93) SHA1(76a7360502fa0296ea93b4c537174610a834d367) )
+//ROM_START( pc9821v13 )
+//  "ROM SUM ERROR"
+//	ROM_LOAD( "itf.rom",      0x10000, 0x08000, BAD_DUMP CRC(dd4c7bb8) SHA1(cf3aa193df2722899066246bccbed03f2e79a74a) )
+//	ROM_LOAD( "bios_v13.rom", 0x18000, 0x18000, BAD_DUMP CRC(0a682b93) SHA1(76a7360502fa0296ea93b4c537174610a834d367) )
 
-	ROM_REGION( 0x80000, "chargen", 0 )
-	ROM_LOAD( "font_v13.rom",   0x00000, 0x46800, BAD_DUMP CRC(c9a77d8f) SHA1(deb8563712eb2a634a157289838b95098ba0c7f2) )
-
-	LOAD_KANJI_ROMS
-	LOAD_IDE_ROM
-
-	// TODO: factory HDDs
-ROM_END
-
-/*
-98MATE VALUESTAR - Pentium based
-*/
-
-ROM_START( pc9821v20 )
-	ROM_REGION16_LE( 0x30000, "ipl", ROMREGION_ERASEFF )
-	// Doesn't boot, not an ITF ROM!
-	ROM_LOAD( "itf.rom",      0x10000, 0x08000, BAD_DUMP CRC(dd4c7bb8) SHA1(cf3aa193df2722899066246bccbed03f2e79a74a) )
+//ROM_START( pc9821v20 )
+//	ROM_REGION16_LE( 0x30000, "ipl", ROMREGION_ERASEFF )
+// 	"ROM SUM ERROR"
+//	ROM_LOAD( "itf.rom",      0x10000, 0x08000, BAD_DUMP CRC(dd4c7bb8) SHA1(cf3aa193df2722899066246bccbed03f2e79a74a) )
+//  Not an ITF ROM
 //  ROM_LOAD( "itf_v20.rom",  0x10000, 0x08000, CRC(10e52302) SHA1(f95b8648e3f5a23e507a9fbda8ab2e317d8e5151) )
-	ROM_LOAD( "bios_v20.rom", 0x18000, 0x18000, BAD_DUMP CRC(d5d1f13b) SHA1(bf44b5f4e138e036f1b848d6616fbd41b5549764) )
+//	ROM_LOAD( "bios_v20.rom", 0x18000, 0x18000, BAD_DUMP CRC(d5d1f13b) SHA1(bf44b5f4e138e036f1b848d6616fbd41b5549764) )
 
-	ROM_REGION( 0x80000, "chargen", 0 )
-	ROM_LOAD( "font_v20.rom", 0x00000, 0x046800, BAD_DUMP CRC(6244c4c0) SHA1(9513cac321e89b4edb067b30e9ecb1adae7e7be7) )
-
-	LOAD_KANJI_ROMS
-	LOAD_IDE_ROM
-
-	// TODO: factory HDDs
-ROM_END
 
 /*
 PC-9821Nr15
@@ -1512,8 +1483,8 @@ COMP( 1994, pc9821xs,    0,           0, pc9821xs,     pc9821,   pc9821_mate_x_s
 COMP( 1996, pc9821xa16,  pc9821xs,    0, pc9821xa16,   pc9821,   pc9821_mate_x_state, init_pc9801_kanji,   "NEC",   "PC-9821Xa16 (98MATE X)",        MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
 
 // 98MATE VALUESTAR (Pentium, comes with Windows 95 and several programs pre-installed)
-COMP( 1998, pc9821v13,   0,           0, pc9821v13,    pc9821,   pc9821_valuestar_state, init_pc9801_kanji,   "NEC",   "PC-9821V13 (98MATE VALUESTAR)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
-COMP( 1998, pc9821v20,   pc9821v13,   0, pc9821v20,    pc9821,   pc9821_valuestar_state, init_pc9801_kanji,   "NEC",   "PC-9821V20 (98MATE VALUESTAR)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
+//COMP( 1998, pc9821v13,   0,           0, pc9821v13,    pc9821,   pc9821_valuestar_state, init_pc9801_kanji,   "NEC",   "PC-9821V13 (98MATE VALUESTAR)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
+//COMP( 1998, pc9821v20,   pc9821v13,   0, pc9821v20,    pc9821,   pc9821_valuestar_state, init_pc9801_kanji,   "NEC",   "PC-9821V20 (98MATE VALUESTAR)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
 
 // 98MATE R (Pentium Pro, otherwise same as 98MATE X?)
 COMP( 1996, pc9821ra20,  0,            0, pc9821ra20,  pc9821,   pc9821_mate_r_state, init_pc9801_kanji,   "NEC",   "PC-9821Ra20 (98MATE R)",        MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND )
