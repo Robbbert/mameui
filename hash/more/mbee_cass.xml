@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 163 -->
+<!-- Number of items in this list = 164 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -59,6 +59,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="117460632">
 				<rom name="[-]GuitarTuner-98,Klavir-99.wav" size="117460632" crc="5623750a" sha1="c00623d4545d456d69bf91e298adb2cd954682eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2b5fc829764d4">
+		<description>[-]kungfu.mwb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1080420">
+				<rom name="[-]kungfu.mwb.wav" size="1080420" crc="e079bd00" sha1="2b5fc829764d40de2e1da544e01ef4c11e25218c"/>
 			</dataarea>
 		</part>
 	</software>

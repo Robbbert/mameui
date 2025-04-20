@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 689 -->
+<!-- Number of items in this list = 706 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="bee31c8588566b2a">
 		<description>[-](demo)strngart</description>
@@ -459,6 +459,146 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="1536">
 				<rom name="[-]Jump Vectors.mwb" size="1536" crc="822b632b" sha1="a79a0c8a74691e519bce354d4afb2af1dabc0cfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5907cb747d436">
+		<description>[-]kaleid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2560">
+				<rom name="[-]kaleid.mwb" size="2560" crc="82f8717f" sha1="5907cb747d4360f368335671d07d7e69375fb8b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee685dbc54da0f">
+		<description>[-]kaleido</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1536">
+				<rom name="[-]kaleido.mwb" size="1536" crc="8eb871d2" sha1="e685dbc54da0fd40d6a344a5d31973f6a6d663a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4e227fc12c047">
+		<description>[-]karate</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1408">
+				<rom name="[-]karate.mwb" size="1408" crc="b57f0f8b" sha1="4e227fc12c047dd16be3ade78f8b8006d381d1e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6cc76e58f74ca">
+		<description>[-]KEPLER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="12800">
+				<rom name="[-]KEPLER.MWB" size="12800" crc="4c0865a5" sha1="6cc76e58f74ca884d043d15aec226fb78a478d1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee935427b93971b">
+		<description>[-]KEYPAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="10240">
+				<rom name="[-]KEYPAN.MWB" size="10240" crc="2fc9852f" sha1="935427b93971b12436cb9df2a4f74a20cba9e06f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4cc65e209afae">
+		<description>[-]king</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3200">
+				<rom name="[-]king.mwb" size="3200" crc="c7f029c7" sha1="4cc65e209afae262184fcb114e8b23796e45d955"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7fd515bebeff8">
+		<description>[-]kings</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="15104">
+				<rom name="[-]kings.mwb" size="15104" crc="6283a4d8" sha1="7fd515bebeff8b579964ef4cf95bf48b700746b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec414836f2ff03">
+		<description>[-]kingtut</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="14224">
+				<rom name="[-]kingtut.bee" size="14224" crc="0617a4bb" sha1="c414836f2ff036fb439bb4370da21abcfae99d28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0693d40e33a18">
+		<description>[-]knaves</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3200">
+				<rom name="[-]knaves.mwb" size="3200" crc="1ba845df" sha1="0693d40e33a183e886789fcaa1736b0a0a08e1eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeab91283c35e8c">
+		<description>[-]knghtour</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3456">
+				<rom name="[-]knghtour.mwb" size="3456" crc="69f0ea94" sha1="ab91283c35e8c9786b73bafa24b7ae1a3c4a5e87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beedaed2b6de262a">
+		<description>[-]knight</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2304">
+				<rom name="[-]knight.mwb" size="2304" crc="672270cf" sha1="daed2b6de262ae6d0212bd9afb9f1d78d383d7ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2b5d9b4f4a71e">
+		<description>[-]knight_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2560">
+				<rom name="[-]knight_1.mwb" size="2560" crc="9946c316" sha1="2b5d9b4f4a71e56252f8c5a715a316d73d5b450e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee96ebc6587995f">
+		<description>[-]kwikey</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4480">
+				<rom name="[-]kwikey.mwb" size="4480" crc="e3f85d73" sha1="96ebc6587995f17307b25f9a75db5bfec27f527e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed5d7ebd58c39c">
+		<description>[-]kword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2560">
+				<rom name="[-]kword.mwb" size="2560" crc="0de019bb" sha1="d5d7ebd58c39c3d39f5723e2949eb1c05b9425a1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6602,6 +6742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beef8a6b57068f9a">
+		<description>[ic]kaleidsc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="[ic]kaleidsc.mwb" size="1152" crc="949f4712" sha1="f8a6b57068f9a695af7ec7e783babc723032a154"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beec9576cc3430cf">
 		<description>[ic]KILOPEDE</description>
 		<year>????</year>
@@ -6619,6 +6769,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="7680">
 				<rom name="[ic]KILOPEDE.COM" size="7680" crc="7e532f88" sha1="624afd197499e28909dc5dcfdc1189edb4b82cfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee066d94b23d900">
+		<description>[ic]kings2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="21248">
+				<rom name="[ic]kings2.mwb" size="21248" crc="89eda5b9" sha1="066d94b23d90026bfbc18184982990fb213bb769"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6819,6 +6979,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="1536">
 				<rom name="[ppc]car.mwb" size="1536" crc="dcd1c318" sha1="9d498f76eedf417be5c326953e41d3b294b80771"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeffa681968cd9c">
+		<description>[ppc]knife</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1024">
+				<rom name="[ppc]knife.mwb" size="1024" crc="babd7a3d" sha1="ffa681968cd9c15cf07e1dad01cda1ae9d1f14df"/>
 			</dataarea>
 		</part>
 	</software>

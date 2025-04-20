@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 82 -->
+<!-- Number of items in this list = 125 -->
 <softwarelist name="c16_quik" description="c16_quik loose roms">
 	<software name="c165c5896a8a7806">
 		<description>007</description>
@@ -179,6 +179,436 @@
 		<part name="quik" interface="c16_quik">
 			<dataarea name="quik" size="39875">
 				<rom name="7_Up_Spot.prg" size="39875" crc="432246ad" sha1="e9225b2d27fc81a299602dedf8fcdc7baaeb70cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164387837987d00">
+		<description>Hajotorott</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="30571">
+				<rom name="Hajotorott.prg" size="30571" crc="13147358" sha1="4387837987d00cfa2996ceae0a5075fb35b74b16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16da7661088827a">
+		<description>Halallabirinthus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="22209">
+				<rom name="Halallabirinthus.prg" size="22209" crc="3c1893ed" sha1="da7661088827af7aa9a32cdba11420df3d0d9813"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ca5e9ab465a8a">
+		<description>Halallabirinthus_II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="23247">
+				<rom name="Halallabirinthus_II.prg" size="23247" crc="ef6ba546" sha1="ca5e9ab465a8af5e98c04d626d3341be932fb813"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164299415293d74">
+		<description>Halalos_Utveszto</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8199">
+				<rom name="Halalos_Utveszto.prg" size="8199" crc="50562208" sha1="4299415293d74ec40e1aa39d6d77336b6b5cc699"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160ede4699ba7fa">
+		<description>Halalos_Utveszto_II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="9910">
+				<rom name="Halalos_Utveszto_II.prg" size="9910" crc="a0f10e2a" sha1="0ede4699ba7fafac0f592cd6612e826f4b0611f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160c8bf5e9f9eb3">
+		<description>Hamster_Willy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="15043">
+				<rom name="Hamster_Willy.prg" size="15043" crc="15e1b049" sha1="0c8bf5e9f9eb3105ac87f8c05aea7c0b0fb0e56b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16339ab18ee5ac4">
+		<description>Hangman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2008">
+				<rom name="Hangman.prg" size="2008" crc="cb9375c4" sha1="339ab18ee5ac4cac4ba780d0eca5ec75fc9d8bb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1688643170bfaf2">
+		<description>Harbour_Attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Harbour_Attack.prg" size="12290" crc="67ff8e74" sha1="88643170bfaf2d060ca845a0191dc84ec1b400e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169569474af8a36">
+		<description>Harc_Az_Eletert</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="33427">
+				<rom name="Harc_Az_Eletert.prg" size="33427" crc="ce877f56" sha1="9569474af8a36e9f3b9b686590f2b0c3ebf925a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16cc4234b3707b9">
+		<description>Harvey_Headbanger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12320">
+				<rom name="Harvey_Headbanger.prg" size="12320" crc="e40fd12b" sha1="cc4234b3707b9f135efe7911c142ab3e100ef807"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1664f65de7d8e43">
+		<description>Head_Over_Heels</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="37947">
+				<rom name="Head_Over_Heels.prg" size="37947" crc="92594d33" sha1="64f65de7d8e43f3a61045898ccf29790acda264b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168fc2d7dfce6a8">
+		<description>Head_Over_Heels_Trained</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="48081">
+				<rom name="Head_Over_Heels_Trained.prg" size="48081" crc="29685fa6" sha1="8fc2d7dfce6a8d7c90bf498c8832a387829ddb0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166374e33d07f97">
+		<description>Heil_Sperma</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="22543">
+				<rom name="Heil_Sperma.prg" size="22543" crc="14e25901" sha1="6374e33d07f97e3833ee21e5637eb215936e528f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a8a6cbd2ff9c9">
+		<description>Helicopters</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="28421">
+				<rom name="Helicopters.prg" size="28421" crc="60a2e74e" sha1="a8a6cbd2ff9c93789a069ac6222787801b494a3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16255191eeb3423">
+		<description>Helicopters_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27116">
+				<rom name="Helicopters_2.prg" size="27116" crc="83a36008" sha1="255191eeb342302599cf1537cb798999ca245e3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b8271068bd9fc">
+		<description>Heli_Scramble</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Heli_Scramble.prg" size="12289" crc="2fb95a94" sha1="b8271068bd9fcb92d0bc24a48c4f78c71271e429"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168faef4bc5fb64">
+		<description>Hexaeder</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27040">
+				<rom name="Hexaeder.prg" size="27040" crc="38973611" sha1="8faef4bc5fb64a3db8b12990d2316479b2108ca4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a149c45520a66">
+		<description>Hexahedrons</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7574">
+				<rom name="Hexahedrons.prg" size="7574" crc="7111301b" sha1="a149c45520a665d8ad66c303aec1df9bacd33703"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b2af1a9925aa9">
+		<description>Hidra</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8911">
+				<rom name="Hidra.prg" size="8911" crc="8a08bc67" sha1="b2af1a9925aa9d637e3ed61d9c04b2ccad0bad74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16322cf45e41bf3">
+		<description>High_Flyer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7539">
+				<rom name="High_Flyer.prg" size="7539" crc="7b6b0327" sha1="322cf45e41bf315bdd2fc2c8629a3e3b1f6266ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f0594aba8b077">
+		<description>Himalayan_Odyssey_+4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="17799">
+				<rom name="Himalayan_Odyssey_+4.prg" size="17799" crc="5781888f" sha1="f0594aba8b07788d368ebeb7947f14c25808924e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f31571bb11175">
+		<description>Hobbit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="43361">
+				<rom name="Hobbit.prg" size="43361" crc="c67dfc47" sha1="f31571bb11175e2b8c4ffd48f00f213d8a7fcc7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169e54e48193aec">
+		<description>Hoover_Boover</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="21334">
+				<rom name="Hoover_Boover.prg" size="21334" crc="e016a067" sha1="9e54e48193aecd38250d2ec7a7450f48595a98c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1679e4b3adca69a">
+		<description>Hopp_It</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Hopp_It.prg" size="12289" crc="a7d7e8f3" sha1="79e4b3adca69a3696c991b7afed8d078b49cb79c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163fe139619800b">
+		<description>Hostage</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4208">
+				<rom name="Hostage.prg" size="4208" crc="9c4f2bb1" sha1="3fe139619800b3874a203a9ff0aa8c386390ee9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160ca070a8c97eb">
+		<description>Hos_Lovag_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="16678">
+				<rom name="Hos_Lovag_A.prg" size="16678" crc="ae1c21df" sha1="0ca070a8c97eb1df9ddbfbf5599fd9bafcf387b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bd89a53d74b62">
+		<description>Hotel</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27727">
+				<rom name="Hotel.prg" size="27727" crc="28238e46" sha1="bd89a53d74b621aa53422037b93923245282df76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161f18c9c1283be">
+		<description>House_Of_7_Gables</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="20999">
+				<rom name="House_Of_7_Gables.prg" size="20999" crc="5156e96d" sha1="1f18c9c1283be5493d831b7d74bbf5887e0b7232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164d3fa93173955">
+		<description>HP_Isabell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="24040">
+				<rom name="HP_Isabell.prg" size="24040" crc="fd3a33e7" sha1="4d3fa93173955a2f0446da91d9dd9bc3baa67064"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164c95325334f7c">
+		<description>HP_Lorence</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="25190">
+				<rom name="HP_Lorence.prg" size="25190" crc="3c4c6530" sha1="4c95325334f7ccb734639a04017393977c5993d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160e883d1a84988">
+		<description>HP_Stephanie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="25993">
+				<rom name="HP_Stephanie.prg" size="25993" crc="10a50fce" sha1="0e883d1a8498881f95cb4a5cca904b3e0fde7ff9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167b7fb8766fdb4">
+		<description>Hubschrauber</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10517">
+				<rom name="Hubschrauber.prg" size="10517" crc="1babe974" sha1="7b7fb8766fdb4c5cff5bc555edd0e9d443a8e7f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16eae15afc1ca86">
+		<description>Hulk_C16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11173">
+				<rom name="Hulk_C16.prg" size="11173" crc="a7a07cad" sha1="eae15afc1ca86fe1f66b0be448f1a0883bc77f80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167d9032360b441">
+		<description>Humor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7942">
+				<rom name="Humor.prg" size="7942" crc="513a2746" sha1="7d9032360b44172b97f24bd872d4c0de01165251"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c1fb0b8684645">
+		<description>Hungaroring</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="39427">
+				<rom name="Hungaroring.prg" size="39427" crc="68dc558f" sha1="c1fb0b8684645d6ca556a893e57ee4e16eda4242"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160aab7e6c15357">
+		<description>Hunter_(HJD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5124">
+				<rom name="Hunter_(HJD).prg" size="5124" crc="97fbe52b" sha1="0aab7e6c15357953a2118dd5b37de27038be5651"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1640c99d02496de">
+		<description>Hunter_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2455">
+				<rom name="Hunter_2.prg" size="2455" crc="ba4fa6c3" sha1="40c99d02496de9d00a9054dce16c8f7928dfec57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16899951b18d9e9">
+		<description>Hurkel</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2224">
+				<rom name="Hurkel.prg" size="2224" crc="6f6749db" sha1="899951b18d9e9945e0791fe60f9ada4d82c6b7cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b9612dffc09eb">
+		<description>Hustler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Hustler.prg" size="12288" crc="3ad0ed2a" sha1="b9612dffc09eb98a96ee67816157909141b75761"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161c8cc3bf65b6a">
+		<description>Hypa-ball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="17017">
+				<rom name="Hypa-ball.prg" size="17017" crc="06065c44" sha1="1c8cc3bf65b6ae19277912a775e542b37b3b70a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16be50ada1ad422">
+		<description>Hyper_Space</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="24578">
+				<rom name="Hyper_Space.prg" size="24578" crc="74701ad5" sha1="be50ada1ad4224733342e64eeb22dfc6da5688e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16af41d01b7c63d">
+		<description>Hyper_Sports_Plus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11878">
+				<rom name="Hyper_Sports_Plus.prg" size="11878" crc="792f59a8" sha1="af41d01b7c63d1b67e4a77144ea4484b20d62a7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1614fc05960fc3d">
+		<description>Hypnotic_Caves</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="29537">
+				<rom name="Hypnotic_Caves.prg" size="29537" crc="f29eda5f" sha1="14fc05960fc3ddf9fdd9a26829ecc84910858b6b"/>
 			</dataarea>
 		</part>
 	</software>

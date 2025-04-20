@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 36 -->
+<!-- Number of items in this list = 41 -->
 <softwarelist name="sol20_cass" description="sol20_cass loose roms">
 	<software name="sol3772534869151">
 		<description>(demo)Train[XE]</description>
@@ -9,6 +9,16 @@
 		<part name="cass1" interface="sol20_cass">
 			<dataarea name="cass" size="898092">
 				<rom name="(demo)Train[XE].WAV" size="898092" crc="2165d974" sha1="377253486915125193c8cf3ba3c642cc25cf1bee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sol52eb5e4036201">
+		<description>2 programs in 1 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="sol20_cass">
+			<dataarea name="cass" size="25383">
+				<rom name="2 programs in 1 (19xx)(-).svt" size="25383" crc="d2e097e3" sha1="52eb5e4036201c8bcb7eea656cd1d4b42d80d58b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -292,6 +302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="solfc6cd419b45b7">
+		<description>Space Games (19xx)(Creative Computing Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="sol20_cass">
+			<dataarea name="cass" size="47421">
+				<rom name="Space Games (19xx)(Creative Computing Software).svt" size="47421" crc="4f1b8108" sha1="fc6cd419b45b7c1f88a16dba0df12d901edc5753"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="soldc7c68acf3286">
 		<description>SpaceRaiders[XE]</description>
 		<year>????</year>
@@ -309,6 +329,26 @@
 		<part name="cass1" interface="sol20_cass">
 			<dataarea name="cass" size="2246700">
 				<rom name="Stomp[XE].WAV" size="2246700" crc="350a991c" sha1="8ae85a8cef26355fee37ca0726d93adfe255a480"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sol54c8ca1542d9e">
+		<description>Strategy Games (19xx)(Creative Computing Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="sol20_cass">
+			<dataarea name="cass" size="67400">
+				<rom name="Strategy Games (19xx)(Creative Computing Software).svt" size="67400" crc="54d95385" sha1="54c8ca1542d9ec7cd711866bae3ceb3645735508"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sol230a8e72996f6">
+		<description>Strategy Games (19xx)(Creative Computing Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="sol20_cass">
+			<dataarea name="cass" size="67359">
+				<rom name="Strategy Games (19xx)(Creative Computing Software)[a].svt" size="67359" crc="3f7a6908" sha1="230a8e72996f625959c77cd8350a9f7de087db80"/>
 			</dataarea>
 		</part>
 	</software>
@@ -359,6 +399,16 @@
 		<part name="cass1" interface="sol20_cass">
 			<dataarea name="cass" size="6885420">
 				<rom name="Trek80[XE].WAV" size="6885420" crc="65711dbb" sha1="4a444417f9a8e5675009d5a03b391769eb7c1cbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sol8b2fe34ae28ec">
+		<description>ZING[XE then press DEL]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="sol20_cass">
+			<dataarea name="cass" size="1493036">
+				<rom name="ZING[XE then press DEL].WAV" size="1493036" crc="fd3b12aa" sha1="8b2fe34ae28ec3f30c10b8b2a11be8dffd324dc9"/>
 			</dataarea>
 		</part>
 	</software>

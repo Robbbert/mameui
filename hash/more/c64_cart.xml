@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 35 -->
+<!-- Number of items in this list = 79 -->
 <softwarelist name="c64_cart" description="c64_cart loose roms">
 	<software name="c648c166cd6d6573">
 		<description>10th Frame</description>
@@ -9,6 +9,446 @@
 		<part name="cart" interface="c64_cart">
 			<dataarea name="roml" size="65728">
 				<rom name="10th Frame.crt" size="65728" crc="57cc5f6e" sha1="8c166cd6d6573a545197fffce77b7cbb6fe5538f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c41a961863fe1">
+		<description>Wacky Darts</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Wacky Darts.crt" size="82144" crc="705eb7e3" sha1="c41a961863fe1bffb51826fab06d4b35abfe7c6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642a103bda78955">
+		<description>War Cars Construction Set</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="War Cars Construction Set.crt" size="65728" crc="ec587417" sha1="2a103bda7895548a3fbe909f90d582448c04ea31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642087e6533eab4">
+		<description>War Machine (Players)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="War Machine (Players).crt" size="82144" crc="abb3d692" sha1="2087e6533eab4f2ebd06a90d85fed325c54ac15d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64745c65ecd8295">
+		<description>War Play (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="War Play (J1).crt" size="65728" crc="3b1e254d" sha1="745c65ecd829533acd8e7276cef115f4988a92e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64812ed70515b12">
+		<description>Warflame RX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="Warflame RX.crt" size="90352" crc="b53a47a3" sha1="812ed70515b12de5841e956375c2ebdeb4f2c094"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c645136c3c3c3f5a">
+		<description>WarGames</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="WarGames.crt" size="65728" crc="cee639fb" sha1="5136c3c3c3f5aafa565e64b16ced87a9de78c621"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c8b3ab7c27019">
+		<description>Warhawk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Warhawk.crt" size="82144" crc="5247d006" sha1="c8b3ab7c2701955278a2952309249a6244d3a165"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e41a7645fb481">
+		<description>Warlock - The Avenger (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Warlock - The Avenger (J1).crt" size="65728" crc="ccbc666b" sha1="e41a7645fb4818fe9b126b31ace87f4007f0b872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64777a4a4718322">
+		<description>Warpzone Remix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Warpzone Remix.crt" size="65728" crc="86627750" sha1="777a4a4718322eb1ad35e313a1f8dfb9e145179e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642ccdde2e56267">
+		<description>Warriors of Zypar, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Warriors of Zypar, The.crt" size="65728" crc="b82dcefe" sha1="2ccdde2e5626772ecf547e05cf981b5d271b484b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f63b645b41148">
+		<description>Waterline</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Waterline.crt" size="65728" crc="899e57fd" sha1="f63b645b41148da7a3ba09d562f1663b9accc25a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c62ea598a7eaa">
+		<description>Waterpolo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Waterpolo.crt" size="65728" crc="3a295a59" sha1="c62ea598a7eaa295135692a124065415055cfb11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64845603228d9df">
+		<description>Wavy Navy (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Wavy Navy (J1).crt" size="65728" crc="73eab361" sha1="845603228d9df13428dcb72c52c82641d6e104ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c643d3c95b2b3865">
+		<description>Way of the Exploding Fist, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="Way of the Exploding Fist, The.crt" size="90352" crc="a0bc97a8" sha1="3d3c95b2b3865828b28bfeb96cdbfca96745aaea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64918c049fed416">
+		<description>Weatherwar II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Weatherwar II.crt" size="65728" crc="b77d5bb0" sha1="918c049fed416618fd8d3d0a421b55ad21828944"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644d31551e2cc0d">
+		<description>Web Dimension (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Web Dimension (J1).crt" size="65728" crc="f225f126" sha1="4d31551e2cc0df2a725b97f36476f4e7bdd43c28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6427389e34b589c">
+		<description>Werewolves of London</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Werewolves of London.crt" size="82144" crc="511f066e" sha1="27389e34b589c3385944d28c880a11350b9edbb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e351c9bae1c65">
+		<description>West Bank</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="West Bank.crt" size="82144" crc="c8586944" sha1="e351c9bae1c6512dd1ff5b28c5d55ad5158960ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6420cfaaad9a451">
+		<description>Wheelin Wallie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Wheelin Wallie.crt" size="65728" crc="bb76296d" sha1="20cfaaad9a4519991a4a9951c95fd68cd8d8af54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ad1545f5b3dd0">
+		<description>Where's My Bones</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Where's My Bones.crt" size="65728" crc="4618a768" sha1="ad1545f5b3dd02fbf27ff8d26f13ce8e2fc6a61c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6429a0064fc851b">
+		<description>White Viper (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="White Viper (J1).crt" size="65728" crc="018d2621" sha1="29a0064fc851b65325431d31c3fa44de458d10f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64634f055c73d64">
+		<description>Who Dares Wins (Alligata)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Who Dares Wins (Alligata).crt" size="65728" crc="725ceef0" sha1="634f055c73d64344a63065b1a30a8d314feebbbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64fea2f16d51acd">
+		<description>Who Dares Wins (dk'tronics) (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Who Dares Wins (dk'tronics) (J1).crt" size="65728" crc="d6828b87" sha1="fea2f16d51acddbb012d30f93b8548bcf644c514"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6452e3251bdc84a">
+		<description>Who Dares Wins II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Who Dares Wins II.crt" size="82144" crc="1ebb6a51" sha1="52e3251bdc84a0a72e979d0b424b3680b46a800f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644501f1a44c001">
+		<description>Wild West Seymour</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Wild West Seymour.crt" size="65728" crc="6d5943ff" sha1="4501f1a44c00166b33a3e18a90961a830d49ec39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e060a18a84ae0">
+		<description>William Wobbler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="William Wobbler.crt" size="65728" crc="2c7af524" sha1="e060a18a84ae0508da973f27e0302681bd722d6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6455536bd7bffa5">
+		<description>Willow Pattern Adventure, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Willow Pattern Adventure, The.crt" size="82144" crc="88349816" sha1="55536bd7bffa59c4019f6035d7852fbd0c32814e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a100f7fe33213">
+		<description>Witch's Cauldron, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Witch's Cauldron, The.crt" size="65728" crc="275f3369" sha1="a100f7fe332131c0c105718c47344c0cb8ee6779"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c647489fbf44e5aa">
+		<description>WitchSwitch</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="WitchSwitch.crt" size="82144" crc="a309d486" sha1="7489fbf44e5aa12a1da5cb660ab0fd14b7c55edd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c645c5d5dccb4c14">
+		<description>Wiz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Wiz.crt" size="65728" crc="c29081f4" sha1="5c5d5dccb4c149924ed3cdadbdd9019b8f28bdbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6484700bc251f51">
+		<description>Wizard Plus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Wizard Plus.crt" size="65728" crc="caec640b" sha1="84700bc251f51ec1e4d66812d796097b5083d8ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6438e2d06003977">
+		<description>Wizard Willy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Wizard Willy.crt" size="82144" crc="072cf99e" sha1="38e2d06003977d7f9dec26a36bfb11e647f92e68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642eab1ebe36f77">
+		<description>Wizard's Lair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Wizard's Lair.crt" size="82144" crc="0a8b2e2f" sha1="2eab1ebe36f773ef0ca8bb65543f563be0902e4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64af2bb4eff8b22">
+		<description>Wizardry</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Wizardry.crt" size="65728" crc="b7983926" sha1="af2bb4eff8b228901347453131c0405bbb185dfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b4eb8f2845595">
+		<description>Wizball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="Wizball.crt" size="90352" crc="1e49d957" sha1="b4eb8f2845595a280b570f5140348b8e1f2dfb23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640be878a339b74">
+		<description>Wolfling v1.4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Wolfling v1.4.crt" size="65728" crc="71e55562" sha1="0be878a339b74a40d8ab87d1418d7001ea7a48d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b9bd92c19888f">
+		<description>Wombles, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Wombles, The.crt" size="65728" crc="5b3be51d" sha1="b9bd92c19888f77b80e9c045926a908e1248b83f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a86e4fbb465bc">
+		<description>Wonderboy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Wonderboy.crt" size="82144" crc="699e542a" sha1="a86e4fbb465bcbfbaee96799ef75745145379af4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64417f27d76f296">
+		<description>Woolly Jumper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="Woolly Jumper.crt" size="90352" crc="78a20312" sha1="417f27d76f2965d3ce3509da1264a8b20812f95c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c87cb86c3bea0">
+		<description>World Championship Boxing Manager</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="World Championship Boxing Manager.crt" size="65728" crc="c74ff61c" sha1="c87cb86c3bea03290a5d3aa8ee39fc2dc50041ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f648bcab0c063">
+		<description>World Soccer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="World Soccer.crt" size="82144" crc="7fb46b4d" sha1="f648bcab0c063bd907801f9e7474ae4bff7fcc85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b8becb7b2d6fc">
+		<description>Worm in Paradise, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Worm in Paradise, The.crt" size="65728" crc="30f0abff" sha1="b8becb7b2d6fc341f0e5e7cbdc03a1a8dd7f54ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640d0c9449cc97d">
+		<description>Worron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Worron.crt" size="65728" crc="87095176" sha1="0d0c9449cc97d6dc080ac3e43a1aa17d4910e68d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6477c91fd2e2042">
+		<description>Wu Lung</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Wu Lung.crt" size="82144" crc="1b818d2d" sha1="77c91fd2e2042c5c07cee626bfc8da7d945d8546"/>
 			</dataarea>
 		</part>
 	</software>
