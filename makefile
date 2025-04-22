@@ -151,8 +151,8 @@ PLATFORM := x86
 else ifeq ($(MSYSTEM),CLANGARM64)
 PLATFORM := arm64
 else # MSYSTEM
-OSARCH := $(shell wmic OS get OSArchitecture)
-ifneq ($(findstring ARM 64-bit,$(OSARCH)),)
+OSARCH := $(shell reg query "HKLM\System\CurrentControlSet\Control\Session Manager\Environment" /v PROCESSOR_ARCHITECTURE)
+ifneq ($(findstring ARM64,$(OSARCH)),)
 PLATFORM := arm64
 else # OSARCH
 PLATFORM := x86
@@ -166,13 +166,17 @@ UNAME_P := $(shell uname -p)
 GENIEOS := linux
 PLATFORM := unknown
 
-ifneq ($(filter x86_64,$(UNAME_P)),)
+ifneq ($(filter %86,$(UNAME_M)),)
 PLATFORM := x86
 else ifneq ($(filter %86,$(UNAME_P)),)
 PLATFORM := x86
 endif
 
-ifneq ($(filter alpha,$(UNAME_M)),)
+ifneq ($(filter x86_64,$(UNAME_M)),)
+PLATFORM := x86
+else ifneq ($(filter x86_64,$(UNAME_P)),)
+PLATFORM := x86
+else ifneq ($(filter alpha,$(UNAME_M)),)
 PLATFORM := alpha
 else ifneq ($(filter alpha,$(UNAME_P)),)
 PLATFORM := alpha
