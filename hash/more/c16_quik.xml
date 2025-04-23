@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 125 -->
+<!-- Number of items in this list = 172 -->
 <softwarelist name="c16_quik" description="c16_quik loose roms">
 	<software name="c165c5896a8a7806">
 		<description>007</description>
@@ -179,6 +179,476 @@
 		<part name="quik" interface="c16_quik">
 			<dataarea name="quik" size="39875">
 				<rom name="7_Up_Spot.prg" size="39875" crc="432246ad" sha1="e9225b2d27fc81a299602dedf8fcdc7baaeb70cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16cf9147bb25deb">
+		<description>G-man_Editor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27773">
+				<rom name="G-man_Editor.prg" size="27773" crc="bac04c0e" sha1="cf9147bb25deb7b34dd287bc650139caf779afc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a392f12fe793b">
+		<description>G-man_G2800[SYS10240]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="G-man_G2800[SYS10240].prg" size="12288" crc="6b0ac3dd" sha1="a392f12fe793b007e1c0f1e36510de44f303974c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16981f4e77095d6">
+		<description>G-man_Trained</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10437">
+				<rom name="G-man_Trained.prg" size="10437" crc="2c441b36" sha1="981f4e77095d6d38ae673d66bd0873c1f4d0673d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163617453d680f7">
+		<description>Gaertner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6376">
+				<rom name="Gaertner.prg" size="6376" crc="06513f0b" sha1="3617453d680f7375bd829d02dac4abe4427429fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d888bc823dc01">
+		<description>Galaxians</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Galaxians.prg" size="12288" crc="725de0e1" sha1="d888bc823dc01dcdae2796c0be775af8bb26c13d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169696def6b9162">
+		<description>Galaxis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4658">
+				<rom name="Galaxis.prg" size="4658" crc="d22f5d6e" sha1="9696def6b916281989367acd63a6910ec00f592d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165167c6a6a6f62">
+		<description>Gamebox_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="28649">
+				<rom name="Gamebox_1.prg" size="28649" crc="e41c5108" sha1="5167c6a6a6f627a664d0d92e86bd7c8247b5fc93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16de42dfe1d9fff">
+		<description>Game_Forth</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Game_Forth.prg" size="12290" crc="ad6c8b52" sha1="de42dfe1d9fff8e9fc6d6dc2dc7652ada0eaef57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162d4d8e97d6f2c">
+		<description>Game_Preview</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7583">
+				<rom name="Game_Preview.prg" size="7583" crc="d668b508" sha1="2d4d8e97d6f2c9ca088e71b35dc27559f77478bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16016592cc3b818">
+		<description>Ganymede</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="3384">
+				<rom name="Ganymede.prg" size="3384" crc="435d0421" sha1="016592cc3b818b801f26a35d00e09ec7c11276f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169b480ab11ea80">
+		<description>Gary_in_Action</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="1549">
+				<rom name="Gary_in_Action.prg" size="1549" crc="2473b8a6" sha1="9b480ab11ea804467f2d22b4d9c2d37d59bf49f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b2992abc7b82f">
+		<description>Geisterjaeger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="26527">
+				<rom name="Geisterjaeger.prg" size="26527" crc="a579eb73" sha1="b2992abc7b82f6363107c5643421c8a227daa90a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160554b2c29e843">
+		<description>Gempa</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="20632">
+				<rom name="Gempa.prg" size="20632" crc="b7a18c54" sha1="0554b2c29e843c877bdc524c4e8260b9b98c019d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1673e47a8ceac76">
+		<description>Gengszter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="20992">
+				<rom name="Gengszter.prg" size="20992" crc="44e77b2a" sha1="73e47a8ceac768644877f0661f6afa7395515e0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160f3267c9fb6a5">
+		<description>Ghost_Town_English_Sys15027</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Ghost_Town_English_Sys15027.prg" size="12290" crc="8e0faf97" sha1="0f3267c9fb6a58603ca7523981dd8696f7584247"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b2fb03297b59b">
+		<description>Ghost_Town_German_Sys15027</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Ghost_Town_German_Sys15027.prg" size="12289" crc="70aa64c3" sha1="b2fb03297b59bb4046d039e1f1f9f1e53c6bacc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165a446dc0fddaa">
+		<description>Giana_Sister</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="20444">
+				<rom name="Giana_Sister.prg" size="20444" crc="a7e90cb4" sha1="5a446dc0fddaafcd22771f0db4cfd3f82b3713d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ee11eaca94f0b">
+		<description>Gnasher</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Gnasher.prg" size="12290" crc="b12684b0" sha1="ee11eaca94f0b408f8c4cb7b7ba7b76c7f133dc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a83363ab1083c">
+		<description>Godzilla</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="42527">
+				<rom name="Godzilla.prg" size="42527" crc="bfbfeda9" sha1="a83363ab1083c0c83711e0a5acb944d22730a9e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16baad78cfe54a4">
+		<description>Golden</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="28672">
+				<rom name="Golden.prg" size="28672" crc="4599e3c4" sha1="baad78cfe54a49ccd6813593342863c8e1775c4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1663bb0f0f2af06">
+		<description>Golden_Baton_+4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27615">
+				<rom name="Golden_Baton_+4.prg" size="27615" crc="14943785" sha1="63bb0f0f2af06a2748696f317b34060b8b900e37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ea5f11700ad66">
+		<description>Golden_Baton_C16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12293">
+				<rom name="Golden_Baton_C16.prg" size="12293" crc="049e51ed" sha1="ea5f11700ad66971cd67cb9a791de8cea19d6531"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1670ada7a4d569c">
+		<description>Golden_II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="28672">
+				<rom name="Golden_II.prg" size="28672" crc="2fa5e12e" sha1="70ada7a4d569c24681235c070402cd29b9746de7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163c800d97ee3b4">
+		<description>Goldfieber</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="9669">
+				<rom name="Goldfieber.prg" size="9669" crc="1e90347f" sha1="3c800d97ee3b48a04d763840c7fa0a6bc9684991"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c34c610af466f">
+		<description>Goldrausch</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10221">
+				<rom name="Goldrausch.prg" size="10221" crc="d1381ad9" sha1="c34c610af466fbf16565028f9495b3b16c0e0cc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162ae67cba6fc61">
+		<description>golf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5536">
+				<rom name="golf.prg" size="5536" crc="385ed91e" sha1="2ae67cba6fc61695465c8e62d1d865f06fb0385f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16deab15b47f868">
+		<description>Golf_16k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Golf_16k.prg" size="12289" crc="3fd3f6b5" sha1="deab15b47f8684be3eef8f1b22f0340c326bff54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16456201a0e438c">
+		<description>Golf_Royal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="39760">
+				<rom name="Golf_Royal.prg" size="39760" crc="b65037c8" sha1="456201a0e438c3c8ac22a1dc677cf7434e44d356"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1615721d3bc7cef">
+		<description>Gordon_Saga</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27942">
+				<rom name="Gordon_Saga.prg" size="27942" crc="269a7541" sha1="15721d3bc7cefe9491a2d29d49f5c25ee80fb488"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16eafb89b71da56">
+		<description>Grabstein_Dorf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5377">
+				<rom name="Grabstein_Dorf.prg" size="5377" crc="31ec89d9" sha1="eafb89b71da568bab6dc8beff5d0f09fd084ea0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f01c6414492f0">
+		<description>Grandmaster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Grandmaster.prg" size="12290" crc="3c182dd7" sha1="f01c6414492f01427b165754080edb9860d62d55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164b9e737e37e43">
+		<description>Graphic_Twister</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4245">
+				<rom name="Graphic_Twister.prg" size="4245" crc="d990c5af" sha1="4b9e737e37e43f87d08edefc2733649e8753ef9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e2b1b7e22fe19">
+		<description>Gremlins</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="50053">
+				<rom name="Gremlins.prg" size="50053" crc="65272dbe" sha1="e2b1b7e22fe1906204b7696403848f8e7c45389b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167669baeb64bdd">
+		<description>Grid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="16523">
+				<rom name="Grid.prg" size="16523" crc="0bd438ec" sha1="7669baeb64bdd24e725389399d7572829ec4f01c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165d8dd824709c8">
+		<description>Gridrunner_C64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="13089">
+				<rom name="Gridrunner_C64.prg" size="13089" crc="9e655776" sha1="5d8dd824709c8cfa1686f7f75ca3ce352092a6c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16318b68a14e75f">
+		<description>Grungy_Towers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4991">
+				<rom name="Grungy_Towers.prg" size="4991" crc="860731d3" sha1="318b68a14e75f01a06839e5a50d5cf7a9ce035f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1623f29f9e285c4">
+		<description>Gullwing_Falcon[Sys8192]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Gullwing_Falcon[Sys8192].prg" size="12288" crc="63c99458" sha1="23f29f9e285c4aba8490e743c8212947d0eb896d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169f31c4bf2a33b">
+		<description>Gullwing_Falcon_(unprotected)[Sys8192]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Gullwing_Falcon_(unprotected)[Sys8192].prg" size="12289" crc="19d2d80c" sha1="9f31c4bf2a33b1ec7e8bffc619ea6c826759ca45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166bcb70a581f57">
+		<description>Gunlaw</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Gunlaw.prg" size="12289" crc="320616cc" sha1="6bcb70a581f57410a8e41d405e53974acf398d9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1646f284242f4f6">
+		<description>Gunner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5911">
+				<rom name="Gunner.prg" size="5911" crc="db4c55a0" sha1="46f284242f4f6793fff08564d16b730f6b0714de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167096842e160c6">
+		<description>Gunslinger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Gunslinger.prg" size="12288" crc="5aae4b93" sha1="7096842e160c6d777bd11fb8951cf550367beef5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160490aad65b00d">
+		<description>Gusztav_Motorozik[Sys5376]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Gusztav_Motorozik[Sys5376].prg" size="12288" crc="dfa9357f" sha1="0490aad65b00dc50b6335b858143a2d769c54a14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d85db2aafd95c">
+		<description>Guzzler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12324">
+				<rom name="Guzzler.prg" size="12324" crc="71371ac5" sha1="d85db2aafd95c2de86ac1513ee96795e6e3e0830"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168cf165ca1cc05">
+		<description>Guzzler_+</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8326">
+				<rom name="Guzzler_+.prg" size="8326" crc="70eedf3b" sha1="8cf165ca1cc059f3e26bda7a9871a5101cbe3547"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169def9c688d261">
+		<description>Gwnn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12320">
+				<rom name="Gwnn.prg" size="12320" crc="c9271aaf" sha1="9def9c688d261cfdcf79c407b9343406c069d1c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160b95581fa63d7">
+		<description>Gwnn_(Challenger_MK_II_Anco_unreleased)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Gwnn_(Challenger_MK_II_Anco_unreleased).prg" size="12289" crc="60a8428c" sha1="0b95581fa63d7d3d302766c49660e6bf4fc16889"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1667578bbc4cd28">
+		<description>Gyemantbanyasz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10241">
+				<rom name="Gyemantbanyasz.prg" size="10241" crc="2c7792bd" sha1="67578bbc4cd28449977ce6d8022dabb6f7efcda9"/>
 			</dataarea>
 		</part>
 	</software>

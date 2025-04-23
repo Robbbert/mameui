@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 164 -->
+<!-- Number of items in this list = 167 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -52,6 +52,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee8a37d2021bfa6">
+		<description>[-]Galatic Jailbreak</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1272612">
+				<rom name="[-]Galatic Jailbreak.wav" size="1272612" crc="b747023d" sha1="8a37d2021bfa60768bb5edd6f39072310ae1f720"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beec00623d4545d4">
 		<description>[-]GuitarTuner-98,Klavir-99</description>
 		<year>????</year>
@@ -59,6 +69,26 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="117460632">
 				<rom name="[-]GuitarTuner-98,Klavir-99.wav" size="117460632" crc="5623750a" sha1="c00623d4545d456d69bf91e298adb2cd954682eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6628f44ce0c62">
+		<description>[-]Jani 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="109322392">
+				<rom name="[-]Jani 1.wav" size="109322392" crc="59b93400" sha1="6628f44ce0c62cbfde0066236d5df282d78b235a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee53a0df4b21cbc">
+		<description>[-]jeksil.mwb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1985060">
+				<rom name="[-]jeksil.mwb.wav" size="1985060" crc="c6b7adff" sha1="53a0df4b21cbc16077cf22f1768277325f55428a"/>
 			</dataarea>
 		</part>
 	</software>

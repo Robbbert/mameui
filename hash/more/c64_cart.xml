@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 79 -->
+<!-- Number of items in this list = 104 -->
 <softwarelist name="c64_cart" description="c64_cart loose roms">
 	<software name="c648c166cd6d6573">
 		<description>10th Frame</description>
@@ -9,6 +9,256 @@
 		<part name="cart" interface="c64_cart">
 			<dataarea name="roml" size="65728">
 				<rom name="10th Frame.crt" size="65728" crc="57cc5f6e" sha1="8c166cd6d6573a545197fffce77b7cbb6fe5538f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c648d12034675808">
+		<description>Uchi Mata (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Uchi Mata (J1).crt" size="82144" crc="e86f22d1" sha1="8d120346758085bf5515e2d9ef257429b4c1bec5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64aa42147db5362">
+		<description>Ugh!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Ugh!.crt" size="65728" crc="01bf9ce0" sha1="aa42147db5362d2e5e393bb1f40880b0cfb307e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64816804395529f">
+		<description>Underwurlde</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Underwurlde.crt" size="65728" crc="34b6585f" sha1="816804395529f5a09a123d88fe63e8a7438dc29c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6487c0693092396">
+		<description>Urban Upstart</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Urban Upstart.crt" size="82144" crc="8ac18e2d" sha1="87c069309239668243ca01d0b4371714dd9f5989"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642fddaab869572">
+		<description>Uridium+</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Uridium+.crt" size="82144" crc="332f48a2" sha1="2fddaab869572afcd6f4f30a1650426d534d1bce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a1c5482c8fe3b">
+		<description>Uridium</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Uridium.crt" size="82144" crc="7e5d9b2c" sha1="a1c5482c8fe3bc9a1e9c8f249dffdfbf059aa7f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64dd3e22e88c46f">
+		<description>UWOL - Quest for Money</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="UWOL - Quest for Money.crt" size="90352" crc="0ee0cf8c" sha1="dd3e22e88c46ffa111cba1af5e76e833d824553e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649d8db0543bf76">
+		<description>V (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="V (J1).crt" size="82144" crc="c2ad2a8a" sha1="9d8db0543bf76cc1ac8595614f96e4417caf5b9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a4be065b11ef2">
+		<description>Valkyrie 17</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Valkyrie 17.crt" size="65728" crc="e19c93ee" sha1="a4be065b11ef2ef80aaf5c306a6819527f79aaa5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64bcf3231b811a6">
+		<description>Vampire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Vampire.crt" size="65728" crc="a5ad43bc" sha1="bcf3231b811a6881cc2238eb7dc01cee86502ffb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6403cea192aaac3">
+		<description>Vegas Jackpot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Vegas Jackpot.crt" size="65728" crc="4a03b40f" sha1="03cea192aaac32c492bb6fb91917e1c5b6a54c47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646b4298dff75d2">
+		<description>Velocipede II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Velocipede II.crt" size="65728" crc="3133d518" sha1="6b4298dff75d22d7ba7b6ad3977b1bd7d9bd6b72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c643d941b75be65a">
+		<description>Velocipede</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Velocipede.crt" size="65728" crc="a254fea3" sha1="3d941b75be65a9a3acc80eedfb89589e532ba2ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6439f0b40f91865">
+		<description>Venom Strikes Back</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Venom Strikes Back.crt" size="82144" crc="1c36f42d" sha1="39f0b40f91865cc0754f074e817e2d3e97680083"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d72135794aa4e">
+		<description>Venom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Venom.crt" size="65728" crc="11326dba" sha1="d72135794aa4e7032c188b76378e627071ddc9e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64eea3b6460445e">
+		<description>Vice Squad, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="90352">
+				<rom name="Vice Squad, The.crt" size="90352" crc="c0f2d58c" sha1="eea3b6460445e1742027b9720f6325721eee4fb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64bc5c260732de2">
+		<description>Video Card Arcade</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Video Card Arcade.crt" size="82144" crc="4e693bfe" sha1="bc5c260732de2ba6400ca6ac52bf79c1db8c5369"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6412417922a907c">
+		<description>Video Meanies (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Video Meanies (J1).crt" size="65728" crc="69fe5925" sha1="12417922a907c805c016b47a954d3389f2c4e601"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6432826bb80cc5f">
+		<description>Vindicators</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Vindicators.crt" size="82144" crc="77985d79" sha1="32826bb80cc5feedc5e475e070b0d6ab6e0b8f5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e0effdff13d82">
+		<description>Vioris</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Vioris.crt" size="65728" crc="ff852339" sha1="e0effdff13d8247801e407923f2b527297a08a8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c645858e251ed8d6">
+		<description>Vixen (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Vixen (J1).crt" size="82144" crc="ff583594" sha1="5858e251ed8d694dfb8d08a00e104361a1d0791f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64cfca34353107f">
+		<description>Voidrunner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Voidrunner.crt" size="65728" crc="3bd16ec1" sha1="cfca34353107fce486d73f659fe2b790f4f8e70d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6486d26bdc8c7fb">
+		<description>Volfied</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="82144">
+				<rom name="Volfied.crt" size="82144" crc="7953d3c7" sha1="86d26bdc8c7fb1df305020cda9534ef2eeed019e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646805e8227123a">
+		<description>Vortex Raider (J1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Vortex Raider (J1).crt" size="65728" crc="37109e57" sha1="6805e8227123ac3536913c7424a55d560ebe17be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64cb336e1cea22b">
+		<description>Vultures</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="c64_cart">
+			<dataarea name="roml" size="65728">
+				<rom name="Vultures.crt" size="65728" crc="531922bf" sha1="cb336e1cea22b646662e683b3cbc86b8b5d3ba23"/>
 			</dataarea>
 		</part>
 	</software>

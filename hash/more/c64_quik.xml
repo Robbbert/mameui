@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="c64_quik" description="c64_quik loose roms">
 	<software name="c645a76c659226dc">
 		<description>! 14 (19xx)(Shazam!)</description>
@@ -19,6 +19,196 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="36048">
 				<rom name="10th Frame.t64" size="36048" crc="81fa26d6" sha1="8983bc53e6c98a6b3e2a2520526f184486190ddf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6400c26e03e088e">
+		<description>ultra_smash</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="7464">
+				<rom name="ultra_smash.t64" size="7464" crc="0ea1659e" sha1="00c26e03e088ef95894d14fa6369b8865aed32a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64314a8573e665d">
+		<description>UNO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="7796">
+				<rom name="UNO.P00" size="7796" crc="24581527" sha1="314a8573e665df8d667bb3141a6b23466185d8e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64903f036ace70f">
+		<description>VELNRSLR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="11078">
+				<rom name="VELNRSLR.P00" size="11078" crc="95e47720" sha1="903f036ace70f606dd5cd154482f0ed99c2e3538"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d4ea81e91d4c6">
+		<description>VERMEER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="43004">
+				<rom name="VERMEER.P00" size="43004" crc="e1f77421" sha1="d4ea81e91d4c61f30282b428d1e8e72f89134ac5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64755adb5433542">
+		<description>VIPER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4714">
+				<rom name="VIPER.P00" size="4714" crc="a0fdc6bb" sha1="755adb54335429eef5f3b259a9fb77de10f6499b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a91d6ce111d08">
+		<description>VLNRSNST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="11413">
+				<rom name="VLNRSNST.P00" size="11413" crc="100ffd10" sha1="a91d6ce111d083b7891158881a09b6f1c46ae872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64933e5ca10dab0">
+		<description>WERNER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="17735">
+				<rom name="WERNER.P00" size="17735" crc="a80f2223" sha1="933e5ca10dab033539f0bdca79438af5a219c7de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6458d11de7281ed">
+		<description>XIPHODS2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="44543">
+				<rom name="XIPHODS2.P00" size="44543" crc="87c52d1b" sha1="58d11de7281edcc4af82abbb3cf22eebeb7f6d89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6421121075ee866">
+		<description>YAHTZEE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="11536">
+				<rom name="YAHTZEE.P00" size="11536" crc="9a185d7a" sha1="21121075ee8666cd0fb82b0bed25770cc4a26c2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64714dae5c9c7cf">
+		<description>Yardies, The 01 (19xx)(The Yardies)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4358">
+				<rom name="Yardies, The 01 (19xx)(The Yardies).prg" size="4358" crc="a204e9b8" sha1="714dae5c9c7cf2ea6d3164bf3797f312b710fa31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64826f8489a63a0">
+		<description>Yardies, The 02 (19xx)(The Yardies)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5465">
+				<rom name="Yardies, The 02 (19xx)(The Yardies).prg" size="5465" crc="d06a725a" sha1="826f8489a63a0350d5edba008f7754428125707b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6413b03c1a71f83">
+		<description>Z-Circle 01 (19xx)(Z-Circle)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5559">
+				<rom name="Z-Circle 01 (19xx)(Z-Circle).prg" size="5559" crc="5ee73d5b" sha1="13b03c1a71f83135667939de58a9aaa970442c79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e1967942340f5">
+		<description>Z45 04 (19xx)(Zone 45)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4683">
+				<rom name="Z45 04 (19xx)(Zone 45).prg" size="4683" crc="b990643f" sha1="e1967942340f5923adc6f664281d9ceb7532af28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64cb0ba65aa83e2">
+		<description>ZACHRANNY CLUN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="32512">
+				<rom name="ZACHRANNY CLUN.PRG" size="32512" crc="13f7d0d3" sha1="cb0ba65aa83e267c7cb92f7f71079ab20eeb72b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d220959fa8e98">
+		<description>Zaints 01 (19xx)(Zaints)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="2554">
+				<rom name="Zaints 01 (19xx)(Zaints).prg" size="2554" crc="294beab8" sha1="d220959fa8e98cdcffa864fcea318266e7b3b7aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64bc6884655c485">
+		<description>ZETA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="50808">
+				<rom name="ZETA.P00" size="50808" crc="2d567a13" sha1="bc6884655c4859e6f115482a800d1d7a861d346e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6421a7b8049028d">
+		<description>ZORRO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="31637">
+				<rom name="ZORRO.PRG" size="31637" crc="c5cb49bf" sha1="21a7b8049028d98dcb3fddd5ffc95efb81f14a37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6410422b5ef42ad">
+		<description>ZUB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="33452">
+				<rom name="ZUB.prg" size="33452" crc="7514c82c" sha1="10422b5ef42adb99059caeab193b6100b6eedb71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e41be4e0bbdb8">
+		<description>ZUUL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="32707">
+				<rom name="ZUUL.P00" size="32707" crc="fbc827ab" sha1="e41be4e0bbdb828a0631e4a5917e69dfc40c47ad"/>
 			</dataarea>
 		</part>
 	</software>
