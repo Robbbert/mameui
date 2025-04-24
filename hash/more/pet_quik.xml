@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 2 -->
+<softwarelist name="pet_quik" description="pet_quik loose roms">
+	<software name="petb34b21f282822">
+		<description>dkj_PET</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="pet_quik">
+			<dataarea name="quik" size="7333">
+				<rom name="dkj_PET.prg" size="7333" crc="19b1fc05" sha1="b34b21f2828222c79b88bb3154893c268b840280"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="petbc0e5737ee488">
+		<description>slimed pet 2001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="pet_quik">
+			<dataarea name="quik" size="6194">
+				<rom name="slimed pet 2001.prg" size="6194" crc="6ab9daae" sha1="bc0e5737ee488ec9bbe37b448002052fcb3f27c9"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

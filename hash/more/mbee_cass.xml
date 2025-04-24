@@ -1,7 +1,47 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 167 -->
+<!-- Number of items in this list = 171 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
+	<software name="beecc926282972bb">
+		<description>insane</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3904816">
+				<rom name="insane.wav" size="3904816" crc="222b1585" sha1="cc926282972bb826616ff3bd20cf5ae3372e9c8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2d9593bbb7042">
+		<description>institut.bee</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1532740">
+				<rom name="institut.bee.wav" size="1532740" crc="d790fde6" sha1="2d9593bbb70429ca10155c5c5ea5fa5c58ff6b86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4f788283dbb6e">
+		<description>invoice_master</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2287866">
+				<rom name="invoice_master.wav" size="2287866" crc="4d84eab3" sha1="4f788283dbb6efdd14449bfd6cd5cf565f024998"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4ed6442673bd9">
+		<description>invoice_master_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2243032">
+				<rom name="invoice_master_1.wav" size="2243032" crc="8b6c8653" sha1="4ed6442673bd9bbc1474924322baed5f5e9fdd51"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
 		<year>????</year>

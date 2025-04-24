@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2050 -->
+<!-- Number of items in this list = 2084 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -29,6 +29,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1361">
 				<rom name="(demo)Fire4ever.tzx" size="1361" crc="2f412606" sha1="cbe2b12b071de18dda85deb7b76dec57b41b5272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2d8df86e1b096">
+		<description>(demo)Stop Reset</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6765">
+				<rom name="(demo)Stop Reset.TAP" size="6765" crc="ec83f2e9" sha1="2d8df86e1b096e062162099e46ee240047507c20"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11132,6 +11142,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs17c11c0ce0060">
+		<description>Steel Eagle (1990)(Players Premier Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52632">
+				<rom name="Steel Eagle (1990)(Players Premier Software).tap" size="52632" crc="0d55bee6" sha1="17c11c0ce00607cb3d22db983540855dc57c069a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd0dbc8c3d31a4">
+		<description>Steelyard Blues, The (1987)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34778">
+				<rom name="Steelyard Blues, The (1987)(Tynesoft).tap" size="34778" crc="8db99e64" sha1="d0dbc8c3d31a4ed1133551449d67f75aa5ccff49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf8d2e3a9c9ca4">
+		<description>Steg (1992)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51271">
+				<rom name="Steg (1992)(Codemasters).tap" size="51271" crc="15a4d49e" sha1="f8d2e3a9c9ca4492d288c84976999e34e965c8a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs94de7ca35614c">
 		<description>Stensontron</description>
 		<year>????</year>
@@ -11142,6 +11182,116 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbe8b0bf3b69a5">
+		<description>Stercore</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24174">
+				<rom name="Stercore.tap" size="24174" crc="8b8a630b" sha1="be8b0bf3b69a5926e980770202579235ed98350a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs00e377cde7f59">
+		<description>Steve Davies Snooker (1984)(CDS Microsystems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22534">
+				<rom name="Steve Davies Snooker (1984)(CDS Microsystems).tap" size="22534" crc="58fa44ad" sha1="00e377cde7f5943b5b1e8e2e1984f71db51c05de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe7912e35269b">
+		<description>Stifflip &amp; Co (1987)(Palace)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57057">
+				<rom name="Stifflip &amp; Co (1987)(Palace)[Part 2 of 2].tap" size="57057" crc="dabdc4db" sha1="be7912e35269baa8b536b83cd997317d5261c2ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs63810fa3083ca">
+		<description>Stifflip &amp; Co - Part1 (1987)(Palace Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57055">
+				<rom name="Stifflip &amp; Co - Part1 (1987)(Palace Software).tap" size="57055" crc="44e563c0" sha1="63810fa3083cac57209231cd696f2308c6199a3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs95965494758da">
+		<description>Stifflip And Co (1987)(Palace Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56817">
+				<rom name="Stifflip And Co (1987)(Palace Software).tap" size="56817" crc="f5798ea4" sha1="95965494758dae91bf201f643061c3b8738efb56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef93617dcc9e1">
+		<description>Stifflip And Co - Part 2 (1987)(Palace Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56790">
+				<rom name="Stifflip And Co - Part 2 (1987)(Palace Software)(Sp).tap" size="56790" crc="15936e89" sha1="ef93617dcc9e174119f2b3ecc63489c04f05ee77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs536d4ad94ac54">
+		<description>Stifflip and Co. - part1 EN (1987)(Palace Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56817">
+				<rom name="Stifflip and Co. - part1 EN (1987)(Palace Software).tap" size="56817" crc="c5a6eb1c" sha1="536d4ad94ac54b99932486248dba8d14b93672db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa893c8bbb6e31">
+		<description>Stifflip and Co. - part1 ES (1987)(Palace Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56790">
+				<rom name="Stifflip and Co. - part1 ES (1987)(Palace Software).tap" size="56790" crc="53bc50dd" sha1="a893c8bbb6e3106d1a25ec6f8cb3b1c8289c74bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs63170a444cf77">
+		<description>Stimpo Disassembler v3.0, The (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15059">
+				<rom name="Stimpo Disassembler v3.0, The (19xx)(-).tap" size="15059" crc="10476421" sha1="63170a444cf779cd468257350200515a531e674d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7903537cc36ec">
+		<description>Stir Crazy Featuring Bobo (1990)(Infogrames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="82334">
+				<rom name="Stir Crazy Featuring Bobo (1990)(Infogrames).tap" size="82334" crc="221bc38b" sha1="7903537cc36ecc9b8f42fc9a579f3a50c39bb709"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99a26d8b9ca39">
+		<description>Stock Market (1983)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46772">
+				<rom name="Stock Market (1983)(CCS).tap" size="46772" crc="f437f8a7" sha1="99a26d8b9ca39083a4b8c9e6a5a60a289509ec4f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse91d87361f0cb">
 		<description>Stocks (19xx)(-)</description>
 		<year>????</year>
@@ -11149,6 +11299,196 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="16825">
 				<rom name="Stocks (19xx)(-).tap" size="16825" crc="043ebd83" sha1="e91d87361f0cb56c3fc139b844d74f3b5b3ca886"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs169ca057fdade">
+		<description>Stomp 48K (1985)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9669">
+				<rom name="Stomp 48K (1985)(DK'Tronics).tap" size="9669" crc="52926196" sha1="169ca057fdade30735deebe3054c07e7652c0ddd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd69355eb1c963">
+		<description>Stomping Stan (1983)(Britannia Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35390">
+				<rom name="Stomping Stan (1983)(Britannia Software Ltd).tap" size="35390" crc="fd2b9254" sha1="d69355eb1c96385d2a5b011c9da36bdf53fe1a2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31788f2e6455e">
+		<description>Stonkers (1983)(Imagine Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47132">
+				<rom name="Stonkers (1983)(Imagine Software Ltd).tap" size="47132" crc="0fff441f" sha1="31788f2e6455eb71d49ffe1d30dac74d065a4e19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ef87d388505c">
+		<description>Stonkers (1983)(Imagine Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47089">
+				<rom name="Stonkers (1983)(Imagine Software Ltd)[a].tap" size="47089" crc="343192ba" sha1="3ef87d388505c21e059fad76bfdea001de3da712"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff379db6ac1f7">
+		<description>Stonkers 48K (1983)(Imagine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47132">
+				<rom name="Stonkers 48K (1983)(Imagine).tap" size="47132" crc="8e2bfa6f" sha1="ff379db6ac1f7686fdb173ad656d861a31adb607"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs04bb3bdeb96cb">
+		<description>Stop Ball (1988)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42855">
+				<rom name="Stop Ball (1988)(Mastertronic Ltd).tap" size="42855" crc="a461acfc" sha1="04bb3bdeb96cb351de59ff744727b4d216a8893d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd3f84be6fccca">
+		<description>Stop The Express (1983)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22521">
+				<rom name="Stop The Express (1983)(Psion).tap" size="22521" crc="413eeba8" sha1="d3f84be6fccca2ca017f307bd3f01266e68bb6f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd6f6b53ac10c">
+		<description>Stop Virus (2021)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41987">
+				<rom name="Stop Virus (2021)(PC NONO Games).tap" size="41987" crc="2dd657f9" sha1="cd6f6b53ac10cc391bfb91999343510e872e2c36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ff3455e9c960">
+		<description>Stop Virus (Axel F bgm) (2021)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41520">
+				<rom name="Stop Virus (Axel F bgm) (2021)(PC NONO Games).tap" size="41520" crc="c746e35d" sha1="3ff3455e9c960f02aa1780179cc60460effeede9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2310c703a5775">
+		<description>Storm (1986)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42829">
+				<rom name="Storm (1986)(Mastertronic Ltd).tap" size="42829" crc="896474e8" sha1="2310c703a57756cb4d10b2b965e49fea7ed31e70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f8a0a8d8af80">
+		<description>Storm Over Valhalla - Epilogue EN (2023)(Sequentia Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25905">
+				<rom name="Storm Over Valhalla - Epilogue EN (2023)(Sequentia Soft).tap" size="25905" crc="c6ff8fdb" sha1="8f8a0a8d8af8070b7d119d464d5bb16db549f256"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs57e9466199a7e">
+		<description>Storm Over Valhalla - Epilogue ES (2023)(Sequentia Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26127">
+				<rom name="Storm Over Valhalla - Epilogue ES (2023)(Sequentia Soft).tap" size="26127" crc="994943ed" sha1="57e9466199a7e75f90767b1ad92b02439c5de5ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa08216f3d0b5e">
+		<description>Storm Over Valhalla 48K (2023)(Sequentia Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64600">
+				<rom name="Storm Over Valhalla 48K (2023)(Sequentia Soft).tap" size="64600" crc="bc4731e6" sha1="a08216f3d0b5e72642f0fd4680824e5aef3b346b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs536e672e18efb">
+		<description>Stormbringer (1987)(Mastertronic Added Dimension)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="102898">
+				<rom name="Stormbringer (1987)(Mastertronic Added Dimension)(128K).tap" size="102898" crc="8819d367" sha1="536e672e18efbb4c49902367991067b031e93148"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf966017f94b5">
+		<description>Stormbringer (1987)(Mastertronic)[Magic Knight 4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47711">
+				<rom name="Stormbringer (1987)(Mastertronic)[Magic Knight 4].tap" size="47711" crc="aac48813" sha1="af966017f94b5fd013259866243d009436cb8b84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc4860cfdc82ff">
+		<description>Stormlord 128K (1989)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46266">
+				<rom name="Stormlord 128K (1989)(Hewson Consultants).tap" size="46266" crc="c91e464f" sha1="c4860cfdc82ffa72a75f5666db7d44ad3610fbc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs577088ce37fb8">
+		<description>Stormlord 48K (1989)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46265">
+				<rom name="Stormlord 48K (1989)(Hewson Consultants).tap" size="46265" crc="6bef026d" sha1="577088ce37fb8d21b86fe6ae4d8b333771e3481b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6cf2de51a2e84">
+		<description>Stormlord II - Deliverance (1990)(Hewson Consultants Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="135597">
+				<rom name="Stormlord II - Deliverance (1990)(Hewson Consultants Ltd)[a].tap" size="135597" crc="46a876a9" sha1="6cf2de51a2e84f15fbe4f5d6cd3a63ec02d7e697"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs755a087c3bfec">
+		<description>Stormlord II - Deliverance (1990)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128474">
+				<rom name="Stormlord II - Deliverance (1990)(Hewson Consultants).tap" size="128474" crc="2e4e34c6" sha1="755a087c3bfec70df522767bf1e499f0758dacd6"/>
 			</dataarea>
 		</part>
 	</software>
