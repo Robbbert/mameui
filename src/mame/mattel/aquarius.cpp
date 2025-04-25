@@ -456,7 +456,7 @@ void aquarius_state::aquarius(machine_config &config)
 	m_printer->set_option_device_input_defaults("printer", DEVICE_INPUT_DEFAULTS_NAME(printer));
 
 	AQUARIUS_CARTRIDGE_SLOT(config, m_exp, 7.15909_MHz_XTAL / 2, aquarius_cartridge_devices, "mini");
-	//m_exp->set_option_machine_config("mini", cfg_ram16);
+	m_exp->set_option_machine_config("mini", cfg_ram16);
 	m_exp->irq_handler().set_inputline(m_maincpu, INPUT_LINE_IRQ0);
 	m_exp->nmi_handler().set_inputline(m_maincpu, INPUT_LINE_NMI);
 

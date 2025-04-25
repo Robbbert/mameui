@@ -1148,7 +1148,8 @@ void device_image_interface::update_names()
 	}
 
 	m_canonical_instance_name = util::string_format("%s%d", inst_name, index + 1);
-	if (count > 1)
+//	if (count > 1)   // now treat cass and cass1 as the same thing (cass) - MESSUI 2025-04-26
+	if (index)
 	{
 		m_instance_name = m_canonical_instance_name;
 		m_brief_instance_name = util::string_format("%s%d", brief_name, index + 1);
