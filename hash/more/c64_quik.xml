@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 21 -->
+<!-- Number of items in this list = 40 -->
 <softwarelist name="c64_quik" description="c64_quik loose roms">
 	<software name="c645a76c659226dc">
 		<description>! 14 (19xx)(Shazam!)</description>
@@ -19,6 +19,26 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="36048">
 				<rom name="10th Frame.t64" size="36048" crc="81fa26d6" sha1="8983bc53e6c98a6b3e2a2520526f184486190ddf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640cb0ffa9840a4">
+		<description>Cross_shoot_c64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="49905">
+				<rom name="Cross_shoot_c64.prg" size="49905" crc="f3c7150a" sha1="0cb0ffa9840a4afe5fd2c2fb53361245aa427d79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d62389cc345e1">
+		<description>Cross_shoot_c64_exomized</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="10735">
+				<rom name="Cross_shoot_c64_exomized.prg" size="10735" crc="efb39b6d" sha1="d62389cc345e1b8c1f01f1c10183eceea00a4d04"/>
 			</dataarea>
 		</part>
 	</software>
@@ -92,6 +112,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c6461357b047370e">
+		<description>X-Ray Software 01 (19xx)(X-Ray Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6364">
+				<rom name="X-Ray Software 01 (19xx)(X-Ray Software).prg" size="6364" crc="585353fa" sha1="61357b047370ebbc0ff71715714cee369dbd1e4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d4c44766c3c5b">
+		<description>xavier.binary_zone</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="41300">
+				<rom name="xavier.binary_zone.prg" size="41300" crc="f6012044" sha1="d4c44766c3c5b4a85becd502c1928ee240a09db6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6457ec5a4db7931">
+		<description>xdresnbrucelee08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5568">
+				<rom name="xdresnbrucelee08.prg" size="5568" crc="f7a36827" sha1="57ec5a4db79319d6271261c74f9a735a9daf5f5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b57af06036852">
+		<description>XDS 07 (19xx)(Xades Society)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="2923">
+				<rom name="XDS 07 (19xx)(Xades Society)(DE).prg" size="2923" crc="6df7494d" sha1="b57af0603685281cb3aca2a69ab65fcff841f133"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f117c096acff3">
+		<description>Xeno</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="18743">
+				<rom name="Xeno.t64" size="18743" crc="5c0ced90" sha1="f117c096acff309c94bcdd2c90113e1a7caa2b7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c647be956e1471cc">
+		<description>XERONS (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6002">
+				<rom name="XERONS (2).prg" size="6002" crc="4c54eaba" sha1="7be956e1471cc8fe5ebcd477e85d3aee0c9ec3e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64fd974e0f4066d">
+		<description>xerons</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="10667">
+				<rom name="xerons.prg" size="10667" crc="345ef95a" sha1="fd974e0f4066ddbd23db5ae366ad206b9fb4ad9d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c6458d11de7281ed">
 		<description>XIPHODS2</description>
 		<year>????</year>
@@ -99,6 +189,56 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="44543">
 				<rom name="XIPHODS2.P00" size="44543" crc="87c52d1b" sha1="58d11de7281edcc4af82abbb3cf22eebeb7f6d89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6407520dd1ff7f0">
+		<description>XR 72 (19xx)(X-Rated)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="7157">
+				<rom name="XR 72 (19xx)(X-Rated)(DE).prg" size="7157" crc="554f156c" sha1="07520dd1ff7f0d4bd01b504bbb9f306bd7635bc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640b716ca38078f">
+		<description>XTC 52 (19xx)(Extacy)(NL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6881">
+				<rom name="XTC 52 (19xx)(Extacy)(NL).prg" size="6881" crc="8a8c7cbe" sha1="0b716ca38078f078706ffa36a37d67ef30a7a4f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649625a836059ae">
+		<description>XTC 53 (19xx)(Extacy)(NL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5258">
+				<rom name="XTC 53 (19xx)(Extacy)(NL).prg" size="5258" crc="88aa2c64" sha1="9625a836059ae6c035500bcd1cd95e4a5380cc29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f583c3ce310da">
+		<description>XTR 09 (19xx)(Extreme)(DE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="9246">
+				<rom name="XTR 09 (19xx)(Extreme)(DE).prg" size="9246" crc="c340b2d9" sha1="f583c3ce310da31162b969f2e84707bcef7b46cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642b1658250c400">
+		<description>xyron.fix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5504">
+				<rom name="xyron.fix.prg" size="5504" crc="1e5a22a6" sha1="2b1658250c4007524903b8ec132e0ef10943105a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -129,6 +269,16 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="5465">
 				<rom name="Yardies, The 02 (19xx)(The Yardies).prg" size="5465" crc="d06a725a" sha1="826f8489a63a0350d5edba008f7754428125707b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d9011ccc231c0">
+		<description>Young Ones</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="47718">
+				<rom name="Young Ones.t64" size="47718" crc="98d117ca" sha1="d9011ccc231c060731a8722c6e67da5bfbce2e44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -172,6 +322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c643a9be269320ea">
+		<description>Zaxxon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="20889">
+				<rom name="Zaxxon.t64" size="20889" crc="6b62b64b" sha1="3a9be269320ea670cb83e2fcc662072ffe9f8df8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c64bc6884655c485">
 		<description>ZETA</description>
 		<year>????</year>
@@ -182,6 +342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c6410e29e6a73198">
+		<description>Zim Sala Bim</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="34254">
+				<rom name="Zim Sala Bim.t64" size="34254" crc="ddcb0314" sha1="10e29e6a73198670a92602a703b75609cfc7b08e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c6421a7b8049028d">
 		<description>ZORRO</description>
 		<year>????</year>
@@ -189,6 +359,16 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="31637">
 				<rom name="ZORRO.PRG" size="31637" crc="c5cb49bf" sha1="21a7b8049028d98dcb3fddd5ffc95efb81f14a37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641c3c0ef7d85a5">
+		<description>Zorro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="38610">
+				<rom name="Zorro.t64" size="38610" crc="4537f8ca" sha1="1c3c0ef7d85a5952c19522c86955a942b513a4e3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -209,6 +389,16 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="32707">
 				<rom name="ZUUL.P00" size="32707" crc="fbc827ab" sha1="e41be4e0bbdb828a0631e4a5917e69dfc40c47ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644b794211abb7f">
+		<description>Zyto</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="23780">
+				<rom name="Zyto.t64" size="23780" crc="fcc895d1" sha1="4b794211abb7f90342636aef29cb23acdf241e8e"/>
 			</dataarea>
 		</part>
 	</software>

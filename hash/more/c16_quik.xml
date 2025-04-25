@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 172 -->
+<!-- Number of items in this list = 229 -->
 <softwarelist name="c16_quik" description="c16_quik loose roms">
 	<software name="c165c5896a8a7806">
 		<description>007</description>
@@ -179,6 +179,576 @@
 		<part name="quik" interface="c16_quik">
 			<dataarea name="quik" size="39875">
 				<rom name="7_Up_Spot.prg" size="39875" crc="432246ad" sha1="e9225b2d27fc81a299602dedf8fcdc7baaeb70cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f402d2ecc169d">
+		<description>Eye_Of_Kadath</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="31443">
+				<rom name="Eye_Of_Kadath.prg" size="31443" crc="036fff3a" sha1="f402d2ecc169dd3dd2817a8b5f0071fe0ae6458f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160ce4ab2b51f89">
+		<description>F1_Simulator_B[Sys14989]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12033">
+				<rom name="F1_Simulator_B[Sys14989].prg" size="12033" crc="548d373e" sha1="0ce4ab2b51f8906efe707cb54aa36ceb030b8e21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1617f894029c606">
+		<description>F1_Simulator_C[Sys14989]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="F1_Simulator_C[Sys14989].prg" size="12288" crc="e044f450" sha1="17f894029c6061d8a174f21adbd17555ff695b22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16fa1a21675249e">
+		<description>F1_Simulator_D[Sys14989]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="F1_Simulator_D[Sys14989].prg" size="12289" crc="b7ebb99d" sha1="fa1a21675249e45af2c50628f2ab06ded5cd6424"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1665d65d5205d04">
+		<description>F1_Simulator_E[Sys14989]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="F1_Simulator_E[Sys14989].prg" size="12288" crc="5b0f817a" sha1="65d65d5205d04ce4fa923d41a12f73ad61ccce7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e163407c5cdc9">
+		<description>F1_Simulator_F[Sys14989]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="F1_Simulator_F[Sys14989].prg" size="12288" crc="76406b64" sha1="e163407c5cdc9be41c38b4d5432c01de189e3e0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b557357bbc816">
+		<description>Famous_People</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="18657">
+				<rom name="Famous_People.prg" size="18657" crc="96790a24" sha1="b557357bbc816e144bd6d7213cad2c60caf7111a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16991c8acbbff45">
+		<description>Fancy World</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="30423">
+				<rom name="Fancy World.PRG" size="30423" crc="fbd8de28" sha1="991c8acbbff45920930b0c0c8d1b93baebc875dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165af4de1e4afa1">
+		<description>Fantil</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Fantil.prg" size="12290" crc="2d529c1c" sha1="5af4de1e4afa1ef103327f434de27b2944208cb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162e8c8f3eff087">
+		<description>Farbquadrat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5029">
+				<rom name="Farbquadrat.prg" size="5029" crc="865d2d79" sha1="2e8c8f3eff087d6a11916f72e244be08181bb14e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1664494d053c7bc">
+		<description>Fast_Food</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="43023">
+				<rom name="Fast_Food.prg" size="43023" crc="822e56a9" sha1="64494d053c7bc8c8611c35db4c3c2fcd743c4a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a268739ed4a11">
+		<description>Feasibility_Experiment</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12090">
+				<rom name="Feasibility_Experiment.prg" size="12090" crc="3a4726a7" sha1="a268739ed4a11618f446439b7529bf78f36f82fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d0ad5c71acee8">
+		<description>Feasibility_Experiment_+4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="33603">
+				<rom name="Feasibility_Experiment_+4.prg" size="33603" crc="8ccb0ed9" sha1="d0ad5c71acee89cb18ca316014691fb63fab8095"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c8666df5b8d8d">
+		<description>Fekete_Pontocska</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6654">
+				<rom name="Fekete_Pontocska.prg" size="6654" crc="cf367aff" sha1="c8666df5b8d8d46653d410a1500682b6a2d437fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166a8a6792cb54a">
+		<description>Felkaru_Bandita</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="3528">
+				<rom name="Felkaru_Bandita.prg" size="3528" crc="bf9fbce2" sha1="6a8a6792cb54a5a0e178dac3f9de3635ac75e168"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b191246e55140">
+		<description>Ferrox_Lander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="26014">
+				<rom name="Ferrox_Lander.prg" size="26014" crc="fc8f4f19" sha1="b191246e551400d7ad1fa41799d823fed8530ab5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a2119f4f4d4a8">
+		<description>Feuerwehr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="9620">
+				<rom name="Feuerwehr.prg" size="9620" crc="9d786907" sha1="a2119f4f4d4a8560b8f5257ecae93f8d46bdf5c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e17bba7039f7c">
+		<description>Finders_Keepers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="16000">
+				<rom name="Finders_Keepers.prg" size="16000" crc="2ede8121" sha1="e17bba7039f7c2d49cf31a8d824e5e37ef4adaee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b7adcd7b78ad8">
+		<description>Finders_Keepers_+4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="26431">
+				<rom name="Finders_Keepers_+4.prg" size="26431" crc="cdcd08f0" sha1="b7adcd7b78ad8b8b47069a9ffcd009e0fa33f97f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164aa0ad6b4ce43">
+		<description>Fingers_Malone[Sys5792]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Fingers_Malone[Sys5792].prg" size="12289" crc="a9bde604" sha1="4aa0ad6b4ce434acbc62f0eaa6d75f078f475259"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f4d5027b7e46c">
+		<description>Firelab</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6154">
+				<rom name="Firelab.prg" size="6154" crc="9bb95669" sha1="f4d5027b7e46c773e0378477a7fd9d55bc7adfd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162a31c6a757b4f">
+		<description>Fire_Ant[Sys6915]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Fire_Ant[Sys6915].prg" size="12289" crc="cb93bfc8" sha1="2a31c6a757b4fc8ef15c782d60341b082f571c59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a044946a61e6d">
+		<description>Fire_Galaxy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12091">
+				<rom name="Fire_Galaxy.prg" size="12091" crc="8454e91b" sha1="a044946a61e6d9968b748045ec70c44287ab8436"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d986255068358">
+		<description>Firm_Base_+</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="26378">
+				<rom name="Firm_Base_+.prg" size="26378" crc="920e5634" sha1="d986255068358aa891eccdb872169fc870f7399d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1608e9ede7e690c">
+		<description>Firm_Base_Sid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="23651">
+				<rom name="Firm_Base_Sid.prg" size="23651" crc="f37ea36c" sha1="08e9ede7e690c58d0cffae1390da56dfd4e667c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16238c4ff8331bd">
+		<description>Fishery</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12091">
+				<rom name="Fishery.prg" size="12091" crc="9d99e88d" sha1="238c4ff8331bdea34bba8c85610021509316110e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f77d7c5c22e8e">
+		<description>Flaschbier</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12931">
+				<rom name="Flaschbier.prg" size="12931" crc="f4215d1f" sha1="f77d7c5c22e8e7271ccfa2fd13edbc8ad3f0cb38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16949a3da90b888">
+		<description>Flaschen_Hannes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10036">
+				<rom name="Flaschen_Hannes.prg" size="10036" crc="53fbdefa" sha1="949a3da90b8881e13e57b743602d6908094b3c4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a600920ec96f8">
+		<description>Flash_Ball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Flash_Ball.prg" size="12290" crc="23683871" sha1="a600920ec96f872578a16b1c39c0d28ae16d790f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b37a2cc51417b">
+		<description>Flash_Bier</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4103">
+				<rom name="Flash_Bier.prg" size="4103" crc="9281fd00" sha1="b37a2cc51417b3dc7d499eb44f452ad692e94431"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f08ebe7bb71e7">
+		<description>Flash_Gordon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="44853">
+				<rom name="Flash_Gordon.prg" size="44853" crc="5b5c9339" sha1="f08ebe7bb71e76a2db1ed4e29e158af5e2bf3def"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163664a79ac4483">
+		<description>Flight_Zero-one-five</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6005">
+				<rom name="Flight_Zero-one-five.prg" size="6005" crc="9a17ceb9" sha1="3664a79ac4483633238f745a06958cbbe9655566"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16cc6a91d997016">
+		<description>Flipper_Environment_Editor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27237">
+				<rom name="Flipper_Environment_Editor.prg" size="27237" crc="303ffe2e" sha1="cc6a91d997016e6e3f4b6f5059193ea75ca01856"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1684add92d58eb7">
+		<description>Flopp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8870">
+				<rom name="Flopp.prg" size="8870" crc="5731b107" sha1="84add92d58eb7200bbcae2b83a44b15be4bbb403"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1612d13207c8588">
+		<description>Flottenmanoever</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7502">
+				<rom name="Flottenmanoever.prg" size="7502" crc="00855e73" sha1="12d13207c8588ebffbc51851eac607967709e497"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16580134c248782">
+		<description>Flower</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5385">
+				<rom name="Flower.prg" size="5385" crc="4f38863b" sha1="580134c2487829ff47b63a0e0dbc282dad48ad36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160760a2dc097f4">
+		<description>Footballer_Of_The_Year_+4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="35444">
+				<rom name="Footballer_Of_The_Year_+4.prg" size="35444" crc="f216a9d2" sha1="0760a2dc097f4bf8de8e642293552e5ac3295881"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161b12074251eb3">
+		<description>Forma_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4432">
+				<rom name="Forma_1.prg" size="4432" crc="d459d609" sha1="1b12074251eb382e8fa238fbf09cd189879b27e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166c1ef4192d527">
+		<description>Formula_1_Simulator</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10160">
+				<rom name="Formula_1_Simulator.prg" size="10160" crc="0a739b6d" sha1="6c1ef4192d5276b9551d0a573a0d895aad9710d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b9d843a7d95c7">
+		<description>Fortress_Underground</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12445">
+				<rom name="Fortress_Underground.prg" size="12445" crc="78c76313" sha1="b9d843a7d95c717857405cdae16bcc304063ae79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1610f17518508ac">
+		<description>Frankenstein</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="14929">
+				<rom name="Frankenstein.prg" size="14929" crc="e4b14c06" sha1="10f17518508ace53a6a2b30ca11b63b6d9af3ca7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167d95bc2cc879d">
+		<description>Freddy_Hardest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="41130">
+				<rom name="Freddy_Hardest.prg" size="41130" crc="67d43214" sha1="7d95bc2cc879d926dee61f5f330d83a5bc4a659e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169c94be179b880">
+		<description>Freek_Out[SYS10752]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Freek_Out[SYS10752].prg" size="12288" crc="4d2d87bf" sha1="9c94be179b880adddce65bce4d97de3a275dcd3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1656413c7ced230">
+		<description>Frenesis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10800">
+				<rom name="Frenesis.prg" size="10800" crc="e009c31c" sha1="56413c7ced23047ee0daa46afc2d55b4748a311d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c1b5d0faaa39b">
+		<description>Fric</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4116">
+				<rom name="Fric.prg" size="4116" crc="13c4ad50" sha1="c1b5d0faaa39b329ef0bba123b84191907f0beef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16cc77f29514ac8">
+		<description>Frogger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7764">
+				<rom name="Frogger.prg" size="7764" crc="61aecaad" sha1="cc77f29514ac83991152297bf4f2a7701a95fb0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1689945ffbfd21c">
+		<description>Frogger_(Color_Graphic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8173">
+				<rom name="Frogger_(Color_Graphic).prg" size="8173" crc="624880c2" sha1="89945ffbfd21c90d75ea1c4ba2903a594ca934d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16fb4934a4911cf">
+		<description>Froggy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5946">
+				<rom name="Froggy.prg" size="5946" crc="63887ba2" sha1="fb4934a4911cf9501c27658efc791ad5882f4f9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168015d5c75fd8f">
+		<description>Frog_Jump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4209">
+				<rom name="Frog_Jump.prg" size="4209" crc="fc4de529" sha1="8015d5c75fd8f9afa7a8b92f9861d77343f12ef4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166d5f40ca5f99a">
+		<description>Frog_Race</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="1786">
+				<rom name="Frog_Race.prg" size="1786" crc="77139031" sha1="6d5f40ca5f99ab0746d389949a57aaeeb396b685"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1680c19c1644fe8">
+		<description>Fruit_Game</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5613">
+				<rom name="Fruit_Game.prg" size="5613" crc="176faf77" sha1="80c19c1644fe846eefd06bd8a56ae56c7e11b96d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f8a6f609a5372">
+		<description>Fruit_Machine</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10513">
+				<rom name="Fruit_Machine.prg" size="10513" crc="ebbe2f7a" sha1="f8a6f609a5372021bd044d4190bb99c85ae1d3ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161a33b39edda10">
+		<description>Fury(badgfx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5969">
+				<rom name="Fury(badgfx).prg" size="5969" crc="6513411a" sha1="1a33b39edda1064142193138c18808852affc1ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169b17640e51ca2">
+		<description>Fussball-manager_V2.0_+4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="37390">
+				<rom name="Fussball-manager_V2.0_+4.prg" size="37390" crc="d47a837f" sha1="9b17640e51ca21e6c3716e577bd7bb7992922320"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a795b352a2b84">
+		<description>Future_Knight_(hack_TTL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="16160">
+				<rom name="Future_Knight_(hack_TTL).prg" size="16160" crc="66bcb18a" sha1="a795b352a2b84e9bd08b16282c414eee77845872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ad98281b9072f">
+		<description>Future_Shock_(hack_clouseau)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11381">
+				<rom name="Future_Shock_(hack_clouseau).prg" size="11381" crc="a2977af3" sha1="ad98281b9072fff9a0dbe1145c0b9fddc9a60e25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161adc5949aa37d">
+		<description>Future_War</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11580">
+				<rom name="Future_War.prg" size="11580" crc="46e12201" sha1="1adc5949aa37da153de1ea7fa22cb18115dbc3f9"/>
 			</dataarea>
 		</part>
 	</software>

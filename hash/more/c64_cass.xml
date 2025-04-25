@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2 -->
+<!-- Number of items in this list = 23 -->
 <softwarelist name="c64_cass" description="c64_cass loose roms">
 	<software name="c6410b594e468ee7">
 		<description>10th Frame</description>
@@ -12,6 +12,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c64651cd6e4a0e50">
+		<description>X-Force (Final Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="433245">
+				<rom name="X-Force (Final Version).tap" size="433245" crc="3030ec8e" sha1="651cd6e4a0e502675965515fb62b640e23fabb22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ba9d5f1c618cc">
+		<description>Xeno</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="356683">
+				<rom name="Xeno.tap" size="356683" crc="c163e364" sha1="ba9d5f1c618cc0996165fe0cab4d2704f2b1ccc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64049decfe35208">
+		<description>Xerons</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="450902">
+				<rom name="Xerons.tap" size="450902" crc="8d10725d" sha1="049decfe35208916aacf39b7f86b366d8ab10050"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649f9c201f58e3a">
+		<description>Xevious</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="481514">
+				<rom name="Xevious.tap" size="481514" crc="170180a4" sha1="9f9c201f58e3a62aac0cda3f3761a844eebfe65d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6423aab0c0123fc">
+		<description>XOR [no1541]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="354774">
+				<rom name="XOR [no1541].tap" size="354774" crc="89dd0566" sha1="23aab0c0123fcfe4893934c6f2041d6bd5b22484"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c11a28fa7a984">
+		<description>Xybots (Version a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="614844">
+				<rom name="Xybots (Version a).tap" size="614844" crc="9742a737" sha1="c11a28fa7a9841ba6c7d12cdf2d337d4460adeb6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c64ecaf21a318249">
 		<description>Yewdow[SYS4096]</description>
 		<year>????</year>
@@ -19,6 +79,156 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="570187">
 				<rom name="Yewdow[SYS4096].tap" size="570187" crc="c8697b10" sha1="ecaf21a318249375682c2e3afd887d603013d805"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c647d88c0b888794">
+		<description>Yie Ar Kung-Fu (Imagine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="644180">
+				<rom name="Yie Ar Kung-Fu (Imagine).tap" size="644180" crc="87080748" sha1="7d88c0b8887941902845bf46052c6f80a4c42a3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649057361f9e89c">
+		<description>Yogi Bear (Version 2a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="865016">
+				<rom name="Yogi Bear (Version 2a).tap" size="865016" crc="4f6e1583" sha1="9057361f9e89c725f4f8270c855b2215e3948323"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64da3be0f699826">
+		<description>Yogi Bear and Friends in the Greed Monster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="827446">
+				<rom name="Yogi Bear and Friends in the Greed Monster.tap" size="827446" crc="f467927b" sha1="da3be0f699826a2f7198947d97c5c93778ac79c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c648a228f1c5a0c7">
+		<description>Yogi's Great Escape (Version 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="664250">
+				<rom name="Yogi's Great Escape (Version 1).tap" size="664250" crc="0b87e982" sha1="8a228f1c5a0c73a6591f3bb02b302e9dbb9ec0cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64bd966db9f2d90">
+		<description>Z (Rino Marketing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="521341">
+				<rom name="Z (Rino Marketing).tap" size="521341" crc="4a88924e" sha1="bd966db9f2d909a77ba58556acecba617f0ac3a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640ece9b5149f08">
+		<description>Zalaga</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="234900">
+				<rom name="Zalaga.tap" size="234900" crc="c911ca99" sha1="0ece9b5149f08fc53809332f07be5518e010e476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ba2a8463393e8">
+		<description>Zeppelin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="1225341">
+				<rom name="Zeppelin.tap" size="1225341" crc="650968f2" sha1="ba2a8463393e8f14de52a8e77cc82979f67f4b1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64711cbc4aecd6f">
+		<description>Zig Zag</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="645471">
+				<rom name="Zig Zag.tap" size="645471" crc="5c9e195b" sha1="711cbc4aecd6f88bcc78c3d162443dcfbb5ef47f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c2aeca70c5247">
+		<description>Zoids (Version 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="580150">
+				<rom name="Zoids (Version 3).tap" size="580150" crc="2b6190b2" sha1="c2aeca70c524777574a2bd5388de02faccb7014f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644b27d9d68c6e6">
+		<description>Zolyx</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="277796">
+				<rom name="Zolyx.tap" size="277796" crc="ac95135f" sha1="4b27d9d68c6e6237950b2f23b28b26043112c7f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64cd80515e6a4dc">
+		<description>Zybex</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="901544">
+				<rom name="Zybex.tap" size="901544" crc="e5cc55a7" sha1="cd80515e6a4dceaec5289ade1fb788ae7633a02d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64bc1a578d07911">
+		<description>Zynaps (Version 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="532122">
+				<rom name="Zynaps (Version 1).tap" size="532122" crc="7ea3818a" sha1="bc1a578d079115f0daaa2791075d524531c4df53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641590281b54c8e">
+		<description>Zyron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="578196">
+				<rom name="Zyron.tap" size="578196" crc="ddc2c6e3" sha1="1590281b54c8e435f9fdb5e040da8f7bae3a3c81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649601a16e565e1">
+		<description>Zyrons Escape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="494088">
+				<rom name="Zyrons Escape.tap" size="494088" crc="92cd9fa0" sha1="9601a16e565e12b084f90b7f1a483018d079de95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e45c3d0fe2455">
+		<description>Zzzz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="886074">
+				<rom name="Zzzz.tap" size="886074" crc="7061a6a2" sha1="e45c3d0fe2455a12de5d5edd12b7494efe8ddec2"/>
 			</dataarea>
 		</part>
 	</software>
