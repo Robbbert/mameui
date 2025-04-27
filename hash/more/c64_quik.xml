@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 40 -->
+<!-- Number of items in this list = 62 -->
 <softwarelist name="c64_quik" description="c64_quik loose roms">
 	<software name="c645a76c659226dc">
 		<description>! 14 (19xx)(Shazam!)</description>
@@ -102,6 +102,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c64fdd2dee02eccc">
+		<description>WarlockMillennium</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="25517">
+				<rom name="WarlockMillennium.prg" size="25517" crc="1b42c19f" sha1="fdd2dee02eccc6a41569dc9be1b81b37910db054"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6450252bf302fbc">
+		<description>Warriors of Zypar, The (1984)(Synapse Software)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="47201">
+				<rom name="Warriors of Zypar, The (1984)(Synapse Software)[a3].t64" size="47201" crc="df1b4852" sha1="50252bf302fbc745ac0e42e9c72dae439732a21c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c647564baabd6189">
+		<description>WASTELAND_EDITR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5994">
+				<rom name="WASTELAND_EDITR.prg" size="5994" crc="06d65c3d" sha1="7564baabd61899146e5e83d1eb78b6a044b9f42b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ff82d27e83446">
+		<description>WCC 01 (19xx)(Who Cares Crew)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4794">
+				<rom name="WCC 01 (19xx)(Who Cares Crew).prg" size="4794" crc="4d857b28" sha1="ff82d27e8344619d61dfbc79dfd1e4a72f9693eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ef89b1b9426bb">
+		<description>WCC 02 (19xx)(Who Cares Crew)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5011">
+				<rom name="WCC 02 (19xx)(Who Cares Crew).prg" size="5011" crc="0ba69940" sha1="ef89b1b9426bb59690d2ea3c79bc49aabd9c063c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c64933e5ca10dab0">
 		<description>WERNER</description>
 		<year>????</year>
@@ -109,6 +159,176 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="17735">
 				<rom name="WERNER.P00" size="17735" crc="a80f2223" sha1="933e5ca10dab033539f0bdca79438af5a219c7de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f2454c9308fcb">
+		<description>WET PAINT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4572">
+				<rom name="WET PAINT.PRG" size="4572" crc="0c87eb50" sha1="f2454c9308fcbfcf92c4f0ae1d5d758e93d2a13c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644ea2f2357af45">
+		<description>Wheel of Fortune - Fortuna Kolem Sie Toczy (1993)(Vermes)[cr CHR][f PSI]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="35328">
+				<rom name="Wheel of Fortune - Fortuna Kolem Sie Toczy (1993)(Vermes)[cr CHR][f PSI].prg" size="35328" crc="07be5b2e" sha1="4ea2f2357af451d8ecd90853ef6a0ccb7f60f3b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6497c0343f4e47f">
+		<description>whirlybird_compute</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="2345">
+				<rom name="whirlybird_compute.t64" size="2345" crc="1d0b1923" sha1="97c0343f4e47ff32da624becca8930e5f9546f85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640fecc445c9c5a">
+		<description>White Viper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="31531">
+				<rom name="White Viper.t64" size="31531" crc="4bd6435b" sha1="0fecc445c9c5a82ba460f6dbd3bc3ccee3cdfa58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f44dfc7e61cf8">
+		<description>WHODARES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4737">
+				<rom name="WHODARES.T64" size="4737" crc="8653f7a7" sha1="f44dfc7e61cf8e34f9e5228cb986c74a227625a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6415a302e4ad5bc">
+		<description>WIDOWSREVENGE_mhi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6452">
+				<rom name="WIDOWSREVENGE_mhi.prg" size="6452" crc="7648a68c" sha1="15a302e4ad5bc6e9cbf4daa7be1351aadf749b3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6471e1dfe42f475">
+		<description>Wizards 01 (19xx)(Wizards)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4611">
+				<rom name="Wizards 01 (19xx)(Wizards).prg" size="4611" crc="f9b5adc2" sha1="71e1dfe42f47536544c98add0a140c81ca50c332"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b69c3ec99e182">
+		<description>Wonderboy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="40614">
+				<rom name="Wonderboy.prg" size="40614" crc="225dbbf4" sha1="b69c3ec99e182adb1184450d707eccde80908427"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d06c038d65b49">
+		<description>Wonderland 01 (19xx)(Wonderland)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="3823">
+				<rom name="Wonderland 01 (19xx)(Wonderland).prg" size="3823" crc="ee344a3b" sha1="d06c038d65b494f25866eea01afe20b808bbce00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6481afdc9b2d5dc">
+		<description>WORLD_CUP_FOOTBALL_MANAGER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="28938">
+				<rom name="WORLD_CUP_FOOTBALL_MANAGER.T64" size="28938" crc="834c226e" sha1="81afdc9b2d5dc84aa844551418a36b001788c5a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6416e1684a39ce6">
+		<description>WORM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="48059">
+				<rom name="WORM.PRG" size="48059" crc="70ad1030" sha1="16e1684a39ce6170bf1ce91b46c286d240dd0797"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64edac74aa42490">
+		<description>WOT 06 (19xx)(Warriors Of Time)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="3596">
+				<rom name="WOT 06 (19xx)(Warriors Of Time).prg" size="3596" crc="76121cd1" sha1="edac74aa42490e2c719c9cbc18cfcc7bc6bf87d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6424a7c9e8e08e9">
+		<description>WOW 54 (19xx)(Warriors Of The Wasteland)(BE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="3057">
+				<rom name="WOW 54 (19xx)(Warriors Of The Wasteland)(BE).prg" size="3057" crc="b71af3c6" sha1="24a7c9e8e08e96c13626585d224066ae17d1986f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6482f7fe8d85f80">
+		<description>WOW 55 (19xx)(Warriors Of The Wasteland)(BE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="9625">
+				<rom name="WOW 55 (19xx)(Warriors Of The Wasteland)(BE).prg" size="9625" crc="0e91f5b5" sha1="82f7fe8d85f80702e66e394d17daa96f35132138"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c647885ca70b5637">
+		<description>WOW 56 (19xx)(Warriors Of The Wasteland)(BE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6141">
+				<rom name="WOW 56 (19xx)(Warriors Of The Wasteland)(BE).prg" size="6141" crc="561bb881" sha1="7885ca70b56379c016058e8f8d9fb82a41d8afc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64975c0bf0c5a6d">
+		<description>WRS 01 (19xx)(The Warriors)(NL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="3017">
+				<rom name="WRS 01 (19xx)(The Warriors)(NL).prg" size="3017" crc="2787ba8e" sha1="975c0bf0c5a6d84383e2c4e5ee4387a56848ee65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64cd9cd1b39f899">
+		<description>WRS 02 (19xx)(The Warriors)(NL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="3206">
+				<rom name="WRS 02 (19xx)(The Warriors)(NL).prg" size="3206" crc="5bb5c22c" sha1="cd9cd1b39f899ecacd7468afdd596119010bfe07"/>
 			</dataarea>
 		</part>
 	</software>

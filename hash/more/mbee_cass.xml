@@ -1,47 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 171 -->
+<!-- Number of items in this list = 179 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
-	<software name="beecc926282972bb">
-		<description>insane</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="mbee_cass">
-			<dataarea name="cass" size="3904816">
-				<rom name="insane.wav" size="3904816" crc="222b1585" sha1="cc926282972bb826616ff3bd20cf5ae3372e9c8e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="bee2d9593bbb7042">
-		<description>institut.bee</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="mbee_cass">
-			<dataarea name="cass" size="1532740">
-				<rom name="institut.bee.wav" size="1532740" crc="d790fde6" sha1="2d9593bbb70429ca10155c5c5ea5fa5c58ff6b86"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="bee4f788283dbb6e">
-		<description>invoice_master</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="mbee_cass">
-			<dataarea name="cass" size="2287866">
-				<rom name="invoice_master.wav" size="2287866" crc="4d84eab3" sha1="4f788283dbb6efdd14449bfd6cd5cf565f024998"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="bee4ed6442673bd9">
-		<description>invoice_master_1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="mbee_cass">
-			<dataarea name="cass" size="2243032">
-				<rom name="invoice_master_1.wav" size="2243032" crc="8b6c8653" sha1="4ed6442673bd9bbc1474924322baed5f5e9fdd51"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
 		<year>????</year>
@@ -109,6 +69,96 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="117460632">
 				<rom name="[-]GuitarTuner-98,Klavir-99.wav" size="117460632" crc="5623750a" sha1="c00623d4545d456d69bf91e298adb2cd954682eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6bb132b75549b">
+		<description>[-]hangman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="760988">
+				<rom name="[-]hangman.wav" size="760988" crc="2fe23b9c" sha1="6bb132b75549b54f8db422c3a23f8f281fdd6f15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeadc785fbc85e2">
+		<description>[-]hanoi96k2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="17640391">
+				<rom name="[-]hanoi96k2.wav" size="17640391" crc="6ceb9dae" sha1="adc785fbc85e206281f3424be135fb189867082f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefd12f4e593b88">
+		<description>[-]hit_the_hurkle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="698534">
+				<rom name="[-]hit_the_hurkle.wav" size="698534" crc="a6f64d89" sha1="fd12f4e593b88e1a929d6249b0ea1fd9e37375e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7342e8f47acf3">
+		<description>[-]hrace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2362048">
+				<rom name="[-]hrace.wav" size="2362048" crc="3e492ce1" sha1="7342e8f47acf38c80f7e4bdbc069ea6b026eb5b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee999ddf93d3e7c">
+		<description>[-]hustle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3562">
+				<rom name="[-]hustle.tap" size="3562" crc="f5f4b9c8" sha1="999ddf93d3e7c95f3e663c93a67ddde3277a528d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecc926282972bb">
+		<description>[-]insane</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3904816">
+				<rom name="[-]insane.wav" size="3904816" crc="222b1585" sha1="cc926282972bb826616ff3bd20cf5ae3372e9c8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2d9593bbb7042">
+		<description>[-]institut.bee</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1532740">
+				<rom name="[-]institut.bee.wav" size="1532740" crc="d790fde6" sha1="2d9593bbb70429ca10155c5c5ea5fa5c58ff6b86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4f788283dbb6e">
+		<description>[-]invoice_master</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2287866">
+				<rom name="[-]invoice_master.wav" size="2287866" crc="4d84eab3" sha1="4f788283dbb6efdd14449bfd6cd5cf565f024998"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4ed6442673bd9">
+		<description>[-]invoice_master_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2243032">
+				<rom name="[-]invoice_master_1.wav" size="2243032" crc="8b6c8653" sha1="4ed6442673bd9bbc1474924322baed5f5e9fdd51"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1392,6 +1442,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beec86973e94e328">
+		<description>[-]Towers of Hanoi (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2864410">
+				<rom name="[-]Towers of Hanoi (2).wav" size="2864410" crc="7380361e" sha1="c86973e94e328ab3f7fcf9b81422fa8f830cb1f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9082ed40e0fbe">
+		<description>[-]Towers of Hanoi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4308344">
+				<rom name="[-]Towers of Hanoi.wav" size="4308344" crc="816483dc" sha1="9082ed40e0fbe46f2ae45f55ba76478a568e6670"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee962a089057a96">
 		<description>[-]towers</description>
 		<year>????</year>
@@ -1609,6 +1679,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="2709446">
 				<rom name="[-]yahtze2.wav" size="2709446" crc="212b4fb1" sha1="24b020dfffcd855c0c40f9ae3eb145beecc3f49a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0110aa0532fa4">
+		<description>[ic]High Mountain</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1724932">
+				<rom name="[ic]High Mountain.wav" size="1724932" crc="5b79745f" sha1="0110aa0532fa4eccd37ab862c901d0a30b094f02"/>
 			</dataarea>
 		</part>
 	</software>

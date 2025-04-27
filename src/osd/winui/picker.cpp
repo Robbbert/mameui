@@ -795,13 +795,12 @@ void Picker_Sort(HWND hwndPicker)
 int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 {
 	//struct PickerInfo *pPickerInfo;
-	int nLow = 0, nMid = 0;
+	//pPickerInfo = GetPickerInfo(hwndPicker);
+	int nLow = 0, nMid = 0, nCompareResult = 0;
 	struct CompareProcParams params;
-	int nCompareResult = 0;
 	LVITEM lvi;
 	BOOL res = 0;
-
-	//pPickerInfo = GetPickerInfo(hwndPicker);
+	printf("Picker_InsertItemSorted: nParam = %d\n",nParam);
 
 	int nHigh = ListView_GetItemCount(hwndPicker);
 
@@ -816,6 +815,8 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		lvi.mask = LVIF_PARAM;
 		lvi.iItem = nMid;
 		res = ListView_GetItem(hwndPicker, &lvi);
+		if (res == FALSE)
+			return -1;
 		nCompareResult = Picker_CompareProc(nParam, lvi.lParam, (LPARAM) &params);
 
 		if (nCompareResult > 0)
@@ -829,7 +830,6 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		}
 	}
 
-	res++;
 	memset(&lvi, 0, sizeof(lvi));
 	lvi.mask     = LVIF_IMAGE | LVIF_TEXT | LVIF_PARAM;
 	lvi.iItem    = nLow;

@@ -327,7 +327,6 @@ void InitMessPicker()
 	SetWindowLong(hwndSoftware, GWL_STYLE, GetWindowLong(hwndSoftware, GWL_STYLE) | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED);
 
 	printf("InitMessPicker: D\n");fflush(stdout);
-	SetupSoftwareTabView();
 
 	{
 		static const struct MViewCallbacks s_MViewCallbacks =
@@ -356,6 +355,7 @@ void InitMessPicker()
 	SetWindowLong(hwndSoftwareList, GWL_STYLE, GetWindowLong(hwndSoftwareList, GWL_STYLE) | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED);
 	printf("InitMessPicker: Finished\n");fflush(stdout);
 
+	SetupSoftwareTabView();
 	ShowHideSoftwareArea();
 }
 
@@ -1076,8 +1076,8 @@ static void MessRefreshPicker()
 			if (i < 0) // not there
 			{
 				// add already loaded software to picker, but not if its already there
-//				SoftwarePicker_AddFile(hwndSoftware, s, 1);    // this adds the 'extra' loaded software item into the list - we don't need to see this
-				i = SoftwarePicker_LookupIndex(hwndSoftware, s); // refresh pointer
+				//SoftwarePicker_AddFile(hwndSoftware, s, 1);    // this adds the 'extra' loaded software item into the list - we don't need to see this
+				//i = SoftwarePicker_LookupIndex(hwndSoftware, s); // refresh pointer
 			}
 			if (i >= 0) // is there
 			{
@@ -1579,36 +1579,32 @@ static void SoftwarePicker_EnteringItem(HWND hwndSoftwarePicker, int nItem)
 
 static int SoftwareList_GetItemImage(HWND hwndPicker, int nItem)
 {
-#if 0
+//#if 0
 	HWND hwndGamePicker = GetDlgItem(GetMainWindow(), IDC_LIST);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
 	int drvindex = Picker_GetSelectedItem(hwndGamePicker);
 	if (drvindex < 0)
 		return -1;
 
-	iodevice_t nType = SoftwareList_GetImageType(hwndSoftwareList, nItem);
+	string nType = SoftwareList_GetImageType(hwndSoftwareList, nItem);
 	int nIcon = GetMessIcon(drvindex, nType);
+
 	if (!nIcon)
 	{
-		switch(nType)
+		if (nType == "unkn")
+			nIcon = FindIconIndex(IDI_WIN_REDX);
+		else
 		{
-			case IO_UNKNOWN:
-				nIcon = FindIconIndex(IDI_WIN_REDX);
-				break;
-
-			default:
-				const char *icon_name = lookupdevice(nType)->icon_name;
-				if (!icon_name)
-					icon_name = device_image_interface::device_typename(nType);
-				nIcon = FindIconIndexByName(icon_name);
-				if (nIcon < 0)
-					nIcon = FindIconIndex(IDI_WIN_UNKNOWN);
-				break;
+			INT resource = lookupdevice(nType)->resource;
+			nIcon = FindIconIndex(resource);
+			if (nIcon < 0)
+				nIcon = FindIconIndex(IDI_WIN_UNKNOWN);
 		}
 	}
+	printf("SoftwareList_GetItemImage: Icon = %d\n",nIcon);
 	return nIcon;
-#endif
-	return 0;
+//#endif
+//	return 0;
 }
 
 

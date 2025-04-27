@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 364 -->
+<!-- Number of items in this list = 373 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -892,6 +892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms592098eff4a99">
+		<description>Eggie Chuck v0.6 (2025)(willbritton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Eggie Chuck v0.6 (2025)(willbritton).sms" size="65536" crc="ed2b4602" sha1="592098eff4a9941f2d29abcb9b244f2e27aff2ce"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms7320db867d51e">
 		<description>Electronic Dreams v.77 (2023)(MikGames)</description>
 		<year>????</year>
@@ -983,32 +993,42 @@
 		</part>
 	</software>
 	<software name="sms28af0d81b2aea">
-		<description>Frontier Force (Alpha Demo V0.1.1)(2024)(badcomputer0)</description>
+		<description>Frontier Force (Alpha Demo V0.1.1)(2024)(badcomputer)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="Frontier Force (Alpha Demo V0.1.1)(2024)(badcomputer0).sms" size="262144" crc="9e01f15d" sha1="28af0d81b2aeae49971f7c4d355296b5a04cf5f7"/>
+				<rom name="Frontier Force (Alpha Demo V0.1.1)(2024)(badcomputer).sms" size="262144" crc="9e01f15d" sha1="28af0d81b2aeae49971f7c4d355296b5a04cf5f7"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="sms518364a8f2ae6">
-		<description>Frontier Force (Alpha Demo V0.1.2.2)(2024)(badcomputer0)</description>
+		<description>Frontier Force (Alpha Demo V0.1.2.2)(2024)(badcomputer)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="Frontier Force (Alpha Demo V0.1.2.2)(2024)(badcomputer0).sms" size="262144" crc="aba14731" sha1="518364a8f2ae62b47ecd65c3bd7e4661d3046020"/>
+				<rom name="Frontier Force (Alpha Demo V0.1.2.2)(2024)(badcomputer).sms" size="262144" crc="aba14731" sha1="518364a8f2ae62b47ecd65c3bd7e4661d3046020"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="smseb347f7a60126">
-		<description>Frontier Force (Alpha Demo v0.1.2.3)(2024)(helpcomputer0)</description>
+		<description>Frontier Force (Alpha Demo v0.1.2.3)(2024)(badcomputer)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="Frontier Force (Alpha Demo v0.1.2.3)(2024)(helpcomputer0).sms" size="262144" crc="def51eb0" sha1="eb347f7a601267bacd50c241ef339019e33bb334"/>
+				<rom name="Frontier Force (Alpha Demo v0.1.2.3)(2024)(badcomputer).sms" size="262144" crc="def51eb0" sha1="eb347f7a601267bacd50c241ef339019e33bb334"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms55f2ee7fa1a9a">
+		<description>Frontier Force v1.1 (2025)(Badcomputer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Frontier Force v1.1 (2025)(Badcomputer).sms" size="524288" crc="fd09f46d" sha1="55f2ee7fa1a9aaf336d421e9df5b4eed1c63e39b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1502,6 +1522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms2dec31c9f1c1e">
+		<description>Jumping Jackson v0.5 (2025)(slogra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="212992">
+				<rom name="Jumping Jackson v0.5 (2025)(slogra).sms" size="212992" crc="e2f4ef89" sha1="2dec31c9f1c1e8ea73241dfe3d9dbd69025e265a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms1383d9099f0ec">
 		<description>Klondike Solitaire (2021)(Under4Mhz)</description>
 		<year>????</year>
@@ -1699,6 +1729,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="409600">
 				<rom name="Lunar Skirmish v57 (2025)(MikGames).sms" size="409600" crc="22a75492" sha1="de7592898d2b3303c2f5019dcb42983fae5dda8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsab8feea331202">
+		<description>Lunar Skirmish v58 (2025)(MikGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="409600">
+				<rom name="Lunar Skirmish v58 (2025)(MikGames).sms" size="409600" crc="75293d25" sha1="ab8feea33120233c0257f7ba7c13b2554648489e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2392,6 +2432,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms27cad0bb8d228">
+		<description>Phantasy Star T-Eng v2.5 (Japan)(2025)(SMS Power!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star T-Eng v2.5 (Japan)(2025)(SMS Power!).sms" size="524288" crc="98d2b825" sha1="27cad0bb8d22834eb19f0dffeb714c2339a49dd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsf6702ce073692">
+		<description>Phantasy Star T-Por v2.5 (Japan)(2025)(SMS Power!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star T-Por v2.5 (Japan)(2025)(SMS Power!).sms" size="524288" crc="0c8a42b3" sha1="f6702ce073692133613edaddea986666cc8e07f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2b70ff6c329fb">
+		<description>Phantasy Star T-Spa v2.5 (Japan)(2025)(SMS Power!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star T-Spa v2.5 (Japan)(2025)(SMS Power!).sms" size="524288" crc="14cdc932" sha1="2b70ff6c329fba4236308a09515a1bebaa2281a9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsd3d1a3e187724">
 		<description>Picross (V1.01)</description>
 		<year>????</year>
@@ -2939,6 +3009,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Sonic_The_Hedgehog_Enhanced1.31_FM1.02.sms" size="262144" crc="850b9554" sha1="e8ffd6eed181dc2e19f1871cc0b063bf41eace93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3e0924c283d55">
+		<description>Sonik Gem Dash (2024)(BriG78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Sonik Gem Dash (2024)(BriG78).sms" size="32768" crc="b2f9e6f3" sha1="3e0924c283d554a9872cc8a741272ec3d4492971"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3549,6 +3629,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Yokai Ninja v1.02 (2025)(Ichigo Bankai, RushJet1).sms" size="262144" crc="f69f4004" sha1="69c75f980e91d726e1a757ed6967d03ba0909d7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse633ddf4256f3">
+		<description>Yokai Ninja v1.04c (2025)(Ichigo Bankai, RushJet1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Yokai Ninja v1.04c (2025)(Ichigo Bankai, RushJet1).sms" size="262144" crc="9bdd1d3f" sha1="e633ddf4256f317922633d1811d20e6eaff88988"/>
 			</dataarea>
 		</part>
 	</software>

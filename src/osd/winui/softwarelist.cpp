@@ -56,7 +56,6 @@ static int software_numberofitems = 0;
 static software_list_info *GetSoftwareListInfo(HWND hwndPicker)
 {
 	HANDLE h = GetProp(hwndPicker, software_list_property_name);
-	//assert(h);
 	return (software_list_info *) h;
 }
 
@@ -107,13 +106,14 @@ int SoftwareList_LookupIndex(HWND hwndPicker, LPCSTR pszFilename)
 }
 
 
-#if 0
+//#if 0
 // not used, swlist items don't have icons
-iodevice_//t SoftwareList_GetImageType(HWND hwndPicker, int nIndex)
+string SoftwareList_GetImageType(HWND hwndPicker, int nIndex)
 {
-	return IO_UNKNOWN;
+	printf("SoftwareList_GetImageType: Index = %d\n",nIndex);
+	return "cass";
 }
-#endif
+//#endif
 
 
 void SoftwareList_SetDriver(HWND hwndPicker, const software_config *config)
@@ -125,19 +125,19 @@ void SoftwareList_SetDriver(HWND hwndPicker, const software_config *config)
 }
 
 
-BOOL SoftwareList_AddFile(HWND hwndPicker, string pszName, string pszListname, string pszDescription, string pszPublisher, string pszYear, string pszUsage, string pszDevice)
+BOOL SoftwareList_AddFile(HWND hwndPicker, string pszName, string pszListname, string pszDescription,
+			string pszPublisher, string pszYear, string pszUsage, string pszDevice)
 {
 	Picker_ResetIdle(hwndPicker);
 
 	software_list_info *pPickerInfo;
 	file_info **ppNewIndex;
 	file_info *pInfo;
-	int nIndex;
 
 	pPickerInfo = GetSoftwareListInfo(hwndPicker);
 
 	// create the FileInfo structure
-	int nSize = sizeof(file_info);
+	int nIndex, nSize = sizeof(file_info);
 	pInfo = (file_info *) malloc(nSize);
 	if (!pInfo)
 		goto error;
@@ -155,13 +155,15 @@ BOOL SoftwareList_AddFile(HWND hwndPicker, string pszName, string pszListname, s
 
 	ppNewIndex = (file_info**)malloc((pPickerInfo->file_index_length + 1) * sizeof(*pPickerInfo->file_index));
 	memcpy(ppNewIndex,pPickerInfo->file_index,pPickerInfo->file_index_length * sizeof(*pPickerInfo->file_index));
-	if (pPickerInfo->file_index) free(pPickerInfo->file_index);
+	if (pPickerInfo->file_index)
+		free(pPickerInfo->file_index);
 	if (!ppNewIndex)
 		goto error;
 
 	nIndex = pPickerInfo->file_index_length++;
 	pPickerInfo->file_index = ppNewIndex;
 	pPickerInfo->file_index[nIndex] = pInfo;
+	printf("SoftwareList_AddFile: items = %d\n",software_numberofitems);
 
 	// Actually insert the item into the picker
 	Picker_InsertItemSorted(hwndPicker, nIndex);
@@ -193,8 +195,7 @@ void SoftwareList_Clear(HWND hwndPicker)
 
 	pPickerInfo = GetSoftwareListInfo(hwndPicker);
 	SoftwareList_InternalClear(pPickerInfo);
-	BOOL res = ListView_DeleteAllItems(hwndPicker);
-	res++;
+	(void)ListView_DeleteAllItems(hwndPicker);
 }
 
 
@@ -311,12 +312,12 @@ BOOL SetupSoftwareList(HWND hwndPicker, const struct PickerOptions *pOptions)
 	l = (LONG_PTR) SoftwareList_WndProc;
 	l = SetWindowLongPtr(hwndPicker, GWLP_WNDPROC, l);
 	pPickerInfo->old_window_proc = (WNDPROC) l;
-	return true;
+	return TRUE;
 
 error:
 	if (pPickerInfo)
 		free(pPickerInfo);
-	return false;
+	return FALSE;
 }
 
 int SoftwareList_GetNumberOfItems()

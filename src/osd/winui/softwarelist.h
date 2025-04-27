@@ -12,7 +12,7 @@
 LPCSTR SoftwareList_LookupFullname(HWND hwndPicker, int nIndex); // returns list:file, eg adam_cart:adamlnk2
 LPCSTR SoftwareList_LookupDevice(HWND hwndPicker, int nIndex); // returns the media slot in which the software is to be mounted
 int SoftwareList_LookupIndex(HWND hwndPicker, LPCSTR pszFilename);
-//iodevice_/t SoftwareList_GetImageType(HWND hwndPicker, int nIndex); // not used, swlist items don't have icons
+string SoftwareList_GetImageType(HWND hwndPicker, int nIndex); // not used, swlist items don't have icons
 BOOL SoftwareList_AddFile(HWND hwndPicker, string pszName, string pszListname, string pszDescription, string pszPublisher, string pszYear, string pszUsage, string pszDevice);
 void SoftwareList_Clear(HWND hwndPicker);
 void SoftwareList_SetDriver(HWND hwndPicker, const software_config *config);

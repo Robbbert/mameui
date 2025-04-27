@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 23 -->
+<!-- Number of items in this list = 51 -->
 <softwarelist name="c64_cass" description="c64_cass loose roms">
 	<software name="c6410b594e468ee7">
 		<description>10th Frame</description>
@@ -9,6 +9,286 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="559117">
 				<rom name="10th Frame.tap" size="559117" crc="8a0a50ac" sha1="10b594e468ee7b4542c2972e149cf09995abd910"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646a5784aac6666">
+		<description>Wacky Darts</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="647081">
+				<rom name="Wacky Darts.tap" size="647081" crc="f74f6598" sha1="6a5784aac6666783255a0854f133bc8e037d6393"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c643c2ed7a2f0c63">
+		<description>War Cars Construction Set</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="638880">
+				<rom name="War Cars Construction Set.tap" size="638880" crc="65f9b7ab" sha1="3c2ed7a2f0c63f7ca9d5df82c32b34bc04559d2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c6318b8542220">
+		<description>War Machine (Players)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="473414">
+				<rom name="War Machine (Players).tap" size="473414" crc="f847b9c2" sha1="c6318b854222068e44d0eeed91066657f7b17868"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c648b89b6a685100">
+		<description>War Play</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="371570">
+				<rom name="War Play.tap" size="371570" crc="754577c3" sha1="8b89b6a6851005921d594aa88968331ecfb20ac6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64dbec68634b3a5">
+		<description>Warhawk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="686575">
+				<rom name="Warhawk.tap" size="686575" crc="d8383232" sha1="dbec68634b3a5c3606ff8573104ff1cdfa7c7602"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d2be3129c8f06">
+		<description>Warlock - The Avenger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="458685">
+				<rom name="Warlock - The Avenger.tap" size="458685" crc="9b8ff6fc" sha1="d2be3129c8f0653c96de7f73486124a59deb7992"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64752edbce72c1f">
+		<description>Waterpolo (10 Great Games 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="639131">
+				<rom name="Waterpolo (10 Great Games 2).tap" size="639131" crc="6dbb1149" sha1="752edbce72c1f2347b85c624bc9aff0883560773"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641adf947fbaeab">
+		<description>Werewolves of London</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="620518">
+				<rom name="Werewolves of London.tap" size="620518" crc="8d19efec" sha1="1adf947fbaeabe4bacb2f9069c0fe205fb02d52c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644cd5598c8a6ef">
+		<description>West Bank</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="560725">
+				<rom name="West Bank.tap" size="560725" crc="3de0b948" sha1="4cd5598c8a6ef693c1b5b4251b848336093bcc5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6429c2e08af92b3">
+		<description>Wheelin Wallie (Version 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="2304828">
+				<rom name="Wheelin Wallie (Version 1).tap" size="2304828" crc="c7f2ce5f" sha1="29c2e08af92b36cda01c37ed96db3648a57002b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d746c460f29d5">
+		<description>Where's My Bones</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="509568">
+				<rom name="Where's My Bones.tap" size="509568" crc="94631551" sha1="d746c460f29d5392db754e6483eff79596430eb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649111ae09f9256">
+		<description>Who Dares Wins (Alligata)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="891076">
+				<rom name="Who Dares Wins (Alligata).tap" size="891076" crc="65d662a5" sha1="9111ae09f925652aea775c2b4f0a0d69b3588029"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649f4de7c3ef309">
+		<description>Who Dares Wins (dk'tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="390729">
+				<rom name="Who Dares Wins (dk'tronics).tap" size="390729" crc="ae49c9a3" sha1="9f4de7c3ef30904e0404c600ff01bf942556d2ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c647b1670dfbc65f">
+		<description>Who Dares Wins II (Pack of Aces)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="471506">
+				<rom name="Who Dares Wins II (Pack of Aces).tap" size="471506" crc="e14949d1" sha1="7b1670dfbc65fc1cc5a1838af4cf4e4efad50aa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6413c0f8d388a62">
+		<description>Wild West Seymour</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="757730">
+				<rom name="Wild West Seymour.tap" size="757730" crc="a5197606" sha1="13c0f8d388a62965b9fa69315f5010def6479299"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64384b0eb5becf9">
+		<description>William Wobbler (Wizard Developments)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="558948">
+				<rom name="William Wobbler (Wizard Developments).tap" size="558948" crc="82f5c186" sha1="384b0eb5becf9767b6bd34c1507f0507bb66abc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64165b43f16db0a">
+		<description>Willow Pattern Adventure The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="652844">
+				<rom name="Willow Pattern Adventure The.tap" size="652844" crc="f918469c" sha1="165b43f16db0af0b78268e9bfd021e09f8dac36a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f316d45291a25">
+		<description>Witch's Cauldron, The (Mikro-Gen Version a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="482408">
+				<rom name="Witch's Cauldron, The (Mikro-Gen Version a).tap" size="482408" crc="edcfccc5" sha1="f316d45291a254c2e672918321cb315bce90fd3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d3d47ad4bbae6">
+		<description>WitchSwitch</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="492432">
+				<rom name="WitchSwitch.tap" size="492432" crc="267195bb" sha1="d3d47ad4bbae6a5f8509abda9b7d2026d82165c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64307cf6be8a3fa">
+		<description>Wizard's Lair (Version 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="551914">
+				<rom name="Wizard's Lair (Version 1).tap" size="551914" crc="13d5e685" sha1="307cf6be8a3fac98e1f584a01a274fabc6818aa0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64530bf3e1474f4">
+		<description>Wizardry (Version 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="1510746">
+				<rom name="Wizardry (Version 1).tap" size="1510746" crc="2805883c" sha1="530bf3e1474f45ebe007ed55c5b767f79a3f3be4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ad510eeb4c444">
+		<description>Wolfling v1.4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="322818">
+				<rom name="Wolfling v1.4.tap" size="322818" crc="9ffeeb51" sha1="ad510eeb4c444f0a6f5adc54acda047dcaacdb07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a1974a790953a">
+		<description>Wombles, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="563662">
+				<rom name="Wombles, The.tap" size="563662" crc="f0a23c49" sha1="a1974a790953a185c916665addaad04297a29c8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6489cc845bc73e6">
+		<description>Wonderboy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="613444">
+				<rom name="Wonderboy.tap" size="613444" crc="af85dae4" sha1="89cc845bc73e656db2d1537df5a41b778a09c862"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ab952a667acb0">
+		<description>Woolly Jumper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="469178">
+				<rom name="Woolly Jumper.tap" size="469178" crc="9722d320" sha1="ab952a667acb0ff2347ee5abd50d332b8c26e85f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64dd7ba139a442b">
+		<description>World Championship Boxing Manager</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="537610">
+				<rom name="World Championship Boxing Manager.tap" size="537610" crc="af61875c" sha1="dd7ba139a442b0b566f07d7a27754e5cdc57c4d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64578dc8d53ac53">
+		<description>World Soccer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="947953">
+				<rom name="World Soccer.tap" size="947953" crc="8bb329d0" sha1="578dc8d53ac538ede184dd971fa6001385ac7840"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6495b30a7ed55be">
+		<description>Worm in Paradise, The (Level 9 Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="484769">
+				<rom name="Worm in Paradise, The (Level 9 Computing).tap" size="484769" crc="b7c45d8f" sha1="95b30a7ed55be342ad1e0ff7e682b50170355516"/>
 			</dataarea>
 		</part>
 	</software>

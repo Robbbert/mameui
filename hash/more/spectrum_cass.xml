@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2084 -->
+<!-- Number of items in this list = 2100 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -11132,6 +11132,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse9ab5964241eb">
+		<description>Star Wreck (1987)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41007">
+				<rom name="Star Wreck (1987)(Alternative Software).tap" size="41007" crc="ca64c93c" sha1="e9ab5964241eb57840329aa84408144689598f47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse7d48e0165d21">
+		<description>Starbike (1984)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27566">
+				<rom name="Starbike (1984)(The Edge).tap" size="27566" crc="ccbebc99" sha1="e7d48e0165d21a36a71fed767d46865fda886280"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdd05bcf715770">
+		<description>Starblitz (1984)(Softek Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17704">
+				<rom name="Starblitz (1984)(Softek Software).tap" size="17704" crc="b0e447b2" sha1="dd05bcf715770fd6c4d1b9a94501af65263d03de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5786512a6453a">
+		<description>Starbyte (1987)(Mr. Chip Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52958">
+				<rom name="Starbyte (1987)(Mr. Chip Software)(Sp).tap" size="52958" crc="fdd89ace" sha1="5786512a6453a220ead2f3e985b2703bd5591c94"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs242b6e224a7ec">
 		<description>Starfox</description>
 		<year>????</year>
@@ -11139,6 +11179,106 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="55332">
 				<rom name="Starfox.tzx" size="55332" crc="3b2828bf" sha1="242b6e224a7ec131666ad4cfbb55dfd0bf477cda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7c8b6bb832fc">
+		<description>Starglider (1985)(Rainbird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45221">
+				<rom name="Starglider (1985)(Rainbird Software).tap" size="45221" crc="c1818f92" sha1="a7c8b6bb832fc94f1b1470668ce10c2d3cd125f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9dbe83ae37401">
+		<description>Starglider 2 - The Egrons Strike Back 128K (1989)(Rainbird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="95040">
+				<rom name="Starglider 2 - The Egrons Strike Back 128K (1989)(Rainbird).tap" size="95040" crc="667e1ddf" sha1="9dbe83ae3740149fd54ef9c54242cf3510842057"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1401800b0cb61">
+		<description>Starglider 48K (1986)(Rainbird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49104">
+				<rom name="Starglider 48K (1986)(Rainbird).tap" size="49104" crc="48258fa3" sha1="1401800b0cb61937c5f04545acf0bc470285f526"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs15660c246543e">
+		<description>Starquake (1985)(Bubblebus Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48551">
+				<rom name="Starquake (1985)(Bubblebus Software).tap" size="48551" crc="33a3c339" sha1="15660c246543eeca0b66d87e992071d61b8b0501"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs966b3608e4404">
+		<description>Stars - Gumi 2 (2022)(kas29)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41242">
+				<rom name="Stars - Gumi 2 (2022)(kas29).tap" size="41242" crc="64e2c5f5" sha1="966b3608e44043421849ef08b8f5ca7b0372a253"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1ec2657a813e1">
+		<description>Stars Stripes And Mr Bush (1989)(Ceri Williams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30831">
+				<rom name="Stars Stripes And Mr Bush (1989)(Ceri Williams).tap" size="30831" crc="5e648506" sha1="1ec2657a813e1c2420ae064ea74787b3a8ff99aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5828dd84629b9">
+		<description>Starshim (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2341">
+				<rom name="Starshim (19xx)(-).tap" size="2341" crc="f80c78a4" sha1="5828dd84629b9a4208afcd5ee5ed71cd9e9794b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs117b9611808af">
+		<description>Starship Enterprise (1983)(Silversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34666">
+				<rom name="Starship Enterprise (1983)(Silversoft).tap" size="34666" crc="bfa7f0ea" sha1="117b9611808af03abedbaff37b802dc1a112610f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0b438aa8d1507">
+		<description>Starwash (1991)(Ricardo Villalba Martinez)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31392">
+				<rom name="Starwash (1991)(Ricardo Villalba Martinez)(Unk-Lang).tap" size="31392" crc="8e79e43d" sha1="0b438aa8d15075f12779e933b987b93edd7b1111"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8c7c53a95bd32">
+		<description>Stay Kool (1984)(Bug-Byte Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49210">
+				<rom name="Stay Kool (1984)(Bug-Byte Software Ltd).tap" size="49210" crc="d94f4b23" sha1="8c7c53a95bd3255b82456ae54ca1f8e7a89d9d09"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17569,6 +17709,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="26198">
 				<rom name="Weird Science Megademo 1.tap" size="26198" crc="c3ff4880" sha1="e471a705849ca3ee232f6c427938f685d4366476"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae0511e21eaca">
+		<description>Welcome to Chump Town P1 128K (2025)(KTB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44211">
+				<rom name="Welcome to Chump Town P1 128K (2025)(KTB).tap" size="44211" crc="518fd21c" sha1="ae0511e21eaca5969047c9837e0807610b02660f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs788fd8bc3b97e">
+		<description>Welcome to Chump Town P1 48K (2025)(KTB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43755">
+				<rom name="Welcome to Chump Town P1 48K (2025)(KTB).tap" size="43755" crc="89e50d15" sha1="788fd8bc3b97e1530cb2e7afec25091118925eb2"/>
 			</dataarea>
 		</part>
 	</software>
