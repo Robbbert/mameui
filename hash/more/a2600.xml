@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8123 -->
+<!-- Number of items in this list = 8124 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -17129,6 +17129,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Breakout (BAtari).a26" size="4096" crc="a9a31089" sha1="eef515ff1109b074e5693f2243109a7787d916e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c5267246f9a6d">
+		<description>Breakout (Europe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="2048">
+				<rom name="Breakout (Europe).a26" size="2048" crc="ae897e53" sha1="c5267246f9a6dab498594d938d8907717a9db90e"/>
 			</dataarea>
 		</part>
 	</software>

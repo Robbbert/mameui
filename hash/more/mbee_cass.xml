@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 179 -->
+<!-- Number of items in this list = 193 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
@@ -52,6 +52,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee56229f212414f">
+		<description>[-]Ewigkeit Dungeon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="763796">
+				<rom name="[-]Ewigkeit Dungeon.wav" size="763796" crc="a9aceb4e" sha1="56229f212414f01d973892c7ecd21897dc69ff4d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee8a37d2021bfa6">
 		<description>[-]Galatic Jailbreak</description>
 		<year>????</year>
@@ -59,6 +69,86 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="1272612">
 				<rom name="[-]Galatic Jailbreak.wav" size="1272612" crc="b747023d" sha1="8a37d2021bfa60768bb5edd6f39072310ae1f720"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed120373abe38f">
+		<description>[-]Galaxy Invasion Plus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1063172">
+				<rom name="[-]Galaxy Invasion Plus.wav" size="1063172" crc="93dfaf67" sha1="d120373abe38f3c93d3a5757060f667f40f04bd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9ceb3810abcd0">
+		<description>[-]Galaxy Invasion</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="10629">
+				<rom name="[-]Galaxy Invasion.tap" size="10629" crc="5287a3b4" sha1="9ceb3810abcd0832b3ca865d46e1205f68207ccf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed82a14bf8f7c1">
+		<description>[-]geograbee</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="7466580">
+				<rom name="[-]geograbee.wav" size="7466580" crc="b23105df" sha1="d82a14bf8f7c1c9aa2f2fdbe448143414a2bb073"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beedddc88780b17e">
+		<description>[-]Ghost Muncher</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="774884">
+				<rom name="[-]Ghost Muncher.wav" size="774884" crc="5abfd39b" sha1="dddc88780b17ebc4e4e0fdec2b38b519611ae893"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2290476d514fc">
+		<description>[-]Ghost Muncher96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="9327838">
+				<rom name="[-]Ghost Muncher96k1.wav" size="9327838" crc="8b9612aa" sha1="2290476d514fc59f84694912755a9d10815173ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed966950652c6b">
+		<description>[-]grafix</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2382754">
+				<rom name="[-]grafix.wav" size="2382754" crc="47717405" sha1="d966950652c6bb3df876c6486f30a85a091a8f27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee61cab09bd3ccf">
+		<description>[-]grapher</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="899502">
+				<rom name="[-]grapher.wav" size="899502" crc="7c31f808" sha1="61cab09bd3ccf5194a41e2c2aeb6f34fdbb4cee3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeac3bb95764c71">
+		<description>[-]GraphicsPainter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4268587">
+				<rom name="[-]GraphicsPainter.wav" size="4268587" crc="a2cf9f55" sha1="ac3bb95764c71eb063917c64162d53acc0a413ab"/>
 			</dataarea>
 		</part>
 	</software>
@@ -552,6 +642,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beecb5fae0703ed2">
+		<description>[-]Microgolf Match Play</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1012572">
+				<rom name="[-]Microgolf Match Play.wav" size="1012572" crc="041c9785" sha1="cb5fae0703ed22121ad2640ee25eb2d4794b9e21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0516096ce4587">
+		<description>[-]Microgolf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="797676">
+				<rom name="[-]Microgolf.wav" size="797676" crc="e10c04a0" sha1="0516096ce45877792e769a739623cd9fc8f62fc0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beef4c61f12b501d">
 		<description>[-]MicroSpaceInvaders96k2</description>
 		<year>????</year>
@@ -629,6 +739,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="15876044">
 				<rom name="[-]monopoly_ver2.wav" size="15876044" crc="c87c3474" sha1="ede7cbe50106eb587d8e32786b8e4481032d155c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5b443bcd4f8c0">
+		<description>[-]Moon Lander With Graphics</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="9576628">
+				<rom name="[-]Moon Lander With Graphics.wav" size="9576628" crc="4613ed20" sha1="5b443bcd4f8c0b1c546761c9520b0a964ed6db44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -729,6 +849,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="10176140">
 				<rom name="[-]nim96k1.wav" size="10176140" crc="3b749b01" sha1="e5d0547d1e2bf487cab0fd5bcfcbc4f296e72587"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee06a0bf730ecd8">
+		<description>[-]Number Guessing</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2616674">
+				<rom name="[-]Number Guessing.wav" size="2616674" crc="af43fdf7" sha1="06a0bf730ecd8a79805e86374d0cb4747a378e28"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1299,6 +1429,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="3976832">
 				<rom name="[-]Tape Doctor.wav" size="3976832" crc="3178b57f" sha1="a3520ba7cc87167823832baea3e7cc6f242f6a81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee974d3ab5502e2">
+		<description>[-]Target Golf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="515020">
+				<rom name="[-]Target Golf.wav" size="515020" crc="79e080ab" sha1="974d3ab5502e235a5d74bc2574e3b46d085b4666"/>
 			</dataarea>
 		</part>
 	</software>

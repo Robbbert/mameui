@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 373 -->
+<!-- Number of items in this list = 376 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1492,6 +1492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms4ed8b9c3cdd3a">
+		<description>Iron Man (Alt)(2025)(old_pirate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="507904">
+				<rom name="Iron Man (Alt)(2025)(old_pirate).sms" size="507904" crc="2b8ae15d" sha1="4ed8b9c3cdd3ab1ebeb869b64311a28e44d6abe7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smse45af0feef391">
 		<description>James Bond 007 - The Duel (E) [T+Por_URBANO SLV]</description>
 		<year>????</year>
@@ -1739,6 +1749,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="409600">
 				<rom name="Lunar Skirmish v58 (2025)(MikGames).sms" size="409600" crc="75293d25" sha1="ab8feea33120233c0257f7ba7c13b2554648489e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0e37a736e4d33">
+		<description>Lunar Skirmish v63 (2025)(MikGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="425984">
+				<rom name="Lunar Skirmish v63 (2025)(MikGames).sms" size="425984" crc="08577d0c" sha1="0e37a736e4d3300b48ae44d1097793b3efb6dc7c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3109,6 +3129,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="573440">
 				<rom name="Stygian Quest v1.2 (2024)(Naarshakta).sms" size="573440" crc="b6c9a3c5" sha1="0245ecd6b2e0464cc3bafc0e001e78a0f1170c1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse1285aa06dda1">
+		<description>Stygian Quest v1.9 (2025)(Danara Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="655360">
+				<rom name="Stygian Quest v1.9 (2025)(Danara Games).sms" size="655360" crc="c0f7bcb7" sha1="e1285aa06dda1f4334db616cb6fa127e34898c0b"/>
 			</dataarea>
 		</part>
 	</software>

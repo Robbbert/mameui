@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2100 -->
+<!-- Number of items in this list = 2124 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -8432,6 +8432,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsed29c8b3cf874">
+		<description>Boulder Dash III 48K (1986)(American Action AB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30673">
+				<rom name="Boulder Dash III 48K (1986)(American Action AB).tzx" size="30673" crc="03241af1" sha1="ed29c8b3cf8745ae5bfae38a4037f95124414074"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfdb3c5e1954e8">
 		<description>Brainache</description>
 		<year>????</year>
@@ -9922,6 +9932,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2d58109390aee">
+		<description>Joe Blade 48K-128K (1987)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50920">
+				<rom name="Joe Blade 48K-128K (1987)(Players Premier).tzx" size="50920" crc="13e39446" sha1="2d58109390aeef4bc2687272bed5e8970003a7e3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse946ad1cb78c6">
 		<description>Jurl 48K (2025)(Tonsomo Entertainment)</description>
 		<year>????</year>
@@ -10249,6 +10269,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="68553">
 				<rom name="Motorbike Madness.tzx" size="68553" crc="e20e2fd9" sha1="bd1b4c1b2c512eb2606c039423023db365c24a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8aec8d3620a54">
+		<description>Ms. Pac-Man 48K (1984)(Atarisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48010">
+				<rom name="Ms. Pac-Man 48K (1984)(Atarisoft).tzx" size="48010" crc="14cd83cd" sha1="8aec8d3620a544272bf11759b65b5b653d59d6d8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11102,6 +11132,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsfd90457e6fe7c">
+		<description>Star Bowls (1991)(Zigurat Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47077">
+				<rom name="Star Bowls (1991)(Zigurat Software).tap" size="47077" crc="10eb1995" sha1="fd90457e6fe7ce8e9e83e969d34e063be2e06b9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4e8af526b1094">
+		<description>Star Crystal, The (1986)(Edward Beck)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45623">
+				<rom name="Star Crystal, The (1986)(Edward Beck).tap" size="45623" crc="b897739b" sha1="4e8af526b10947ca4b4e9fb34cc6564246b90379"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67f376db2ab46">
+		<description>Star Dragon (1990)(Proxima Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39733">
+				<rom name="Star Dragon (1990)(Proxima Software).tap" size="39733" crc="f64ab2a7" sha1="67f376db2ab467c0c99527e119d65f89cca5d719"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs176205ab9bcf7">
+		<description>Star Fly, The (1987)(TRC Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30118">
+				<rom name="Star Fly, The (1987)(TRC Software).tap" size="30118" crc="5acc94e7" sha1="176205ab9bcf7dc5c9e12dde375e17ad7406a68a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc76f22ca90938">
+		<description>Star Paws (19xx)(Software Projects)[Corrupt]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42496">
+				<rom name="Star Paws (19xx)(Software Projects)[Corrupt].tap" size="42496" crc="1815a0ff" sha1="c76f22ca9093825345cbaf413c6814af57e5e4d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6fc817e1cb8f1">
+		<description>Star Pilot (1987)(Silverbird Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51599">
+				<rom name="Star Pilot (1987)(Silverbird Software Ltd)(128K).tap" size="51599" crc="c9e54459" sha1="6fc817e1cb8f1d04b3c481bf87c4b4cdede470e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs872589a0cf5f1">
+		<description>Star Raiders II 48K (1987)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31226">
+				<rom name="Star Raiders II 48K (1987)(Electric Dreams).tap" size="31226" crc="eb1263d1" sha1="872589a0cf5f113c578b25a2508bff71ebcfa8dd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfe8fc3c47c6db">
 		<description>Star Raiders II 48K (1987)(Electric Dreams)</description>
 		<year>????</year>
@@ -11109,6 +11209,146 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="29398">
 				<rom name="Star Raiders II 48K (1987)(Electric Dreams).tzx" size="29398" crc="0419cba2" sha1="fe8fc3c47c6dbc38f11d5961f82426cd6b155c57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa12fb8a6ab0ea">
+		<description>Star Reporter (1987)(Haggisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28806">
+				<rom name="Star Reporter (1987)(Haggisoft).tap" size="28806" crc="58de3518" sha1="a12fb8a6ab0ea73a8cc33544d14a798f7c616d14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4045aa6e0e641">
+		<description>Star Runner (1987)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="Star Runner (1987)(Codemasters).tap" size="56277" crc="fbde3432" sha1="4045aa6e0e641da72f69ad0922bdbff0d95448ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse6f6d84bda4cd">
+		<description>Star Searcher (1984)(Scorpio Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24644">
+				<rom name="Star Searcher (1984)(Scorpio Software).tap" size="24644" crc="c9f1b387" sha1="e6f6d84bda4cd0a8cd57e9f6da0bde5f63e1c55d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2fdc8657d6e62">
+		<description>Star Soccer (1983)(Watson Software Services)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17134">
+				<rom name="Star Soccer (1983)(Watson Software Services).tap" size="17134" crc="d15037f2" sha1="2fdc8657d6e62c50154913460896130005fc6155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0145da966ca71">
+		<description>Star Swallow (1987)(TRC Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42714">
+				<rom name="Star Swallow (1987)(TRC Software).tap" size="42714" crc="87a801df" sha1="0145da966ca71536ad86bcf7e36da5758e4c3f4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0971f55c7cd0b">
+		<description>Star Trek - The Computer Program (19xx)(Jonathan Nixon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39412">
+				<rom name="Star Trek - The Computer Program (19xx)(Jonathan Nixon).tap" size="39412" crc="956c70dc" sha1="0971f55c7cd0b1bf1e2d1caa6be94b55c5311152"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs38a2b38fa4635">
+		<description>Star Trek 3000 (1983)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22419">
+				<rom name="Star Trek 3000 (1983)(DK'Tronics).tap" size="22419" crc="dde0ac28" sha1="38a2b38fa4635450f38aaebf12ef49f2d9d21b60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs211ba8a91a9d5">
+		<description>Star Trek 3000 (1983)(DK'Tronics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22341">
+				<rom name="Star Trek 3000 (1983)(DK'Tronics)[a].tap" size="22341" crc="6c3ef2b0" sha1="211ba8a91a9d57be25e1fac5e7a3ad02180638c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e9b0ad574070">
+		<description>Star Warrior (1982)(Visions Software Factory)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16565">
+				<rom name="Star Warrior (1982)(Visions Software Factory).tap" size="16565" crc="e0880a50" sha1="9e9b0ad57407066674121d6cf34bc6feb88123c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96c191f30d8d4">
+		<description>Star Warrior v2.0 48K (2021)(Cronosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40690">
+				<rom name="Star Warrior v2.0 48K (2021)(Cronosoft).tap" size="40690" crc="b8921b6f" sha1="96c191f30d8d4db64ca12b93e6a484ff8b9ca52d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7606669199a63">
+		<description>Star Wars (1987)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49302">
+				<rom name="Star Wars (1987)(Domark).tap" size="49302" crc="e08f9922" sha1="7606669199a6344e0929e753e946fcd1539026ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa79f0f6bf2080">
+		<description>Star Wars 2 - The Empire Strikes Back (1988)(Domark Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="Star Wars 2 - The Empire Strikes Back (1988)(Domark Ltd).tap" size="56277" crc="23058315" sha1="a79f0f6bf20809d2296e598819a3da1576c53ddd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3dd20fbdc2d9e">
+		<description>Star Wars 2 - The Empire Strikes Back (1988)(Domark Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56320">
+				<rom name="Star Wars 2 - The Empire Strikes Back (1988)(Domark Ltd)[a].tap" size="56320" crc="959d55c0" sha1="3dd20fbdc2d9e0d4ccfb457bb6d0206ed211073b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsea879e06ff315">
+		<description>Star Wars Droids (1988)(Mastertronic Added Dimension)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40659">
+				<rom name="Star Wars Droids (1988)(Mastertronic Added Dimension).tap" size="40659" crc="6e6acfe4" sha1="ea879e06ff3150b97baddbfb4d70bcf0627a7a07"/>
 			</dataarea>
 		</part>
 	</software>

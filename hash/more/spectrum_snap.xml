@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 442 -->
+<!-- Number of items in this list = 443 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -2159,6 +2159,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="39777">
 				<rom name="Joe Blade 2 (1988)(Players Premier).z80" size="39777" crc="382b3651" sha1="9ed3c2b4d76661c8f477186ad0c9ba9c6f4d7a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs171f479fae7e1">
+		<description>Joe Blade 2 48K (1988)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39752">
+				<rom name="Joe Blade 2 48K (1988)(Players Premier).z80" size="39752" crc="ff057d8e" sha1="171f479fae7e1af210887886d62925deadfbd229"/>
 			</dataarea>
 		</part>
 	</software>
