@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 255 -->
+<!-- Number of items in this list = 256 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -1799,6 +1799,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Samsara Naga 1x2 (Japan) (Rev 1).gba" size="8388608" crc="a79872fe" sha1="2c0ecc0fe283dd1f912c5ca24d1272795109398f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba750a5db8a7d96">
+		<description>Shantae Advance - Risky Revolution (World) (Limited Run Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Shantae Advance - Risky Revolution (World) (Limited Run Games).gba" size="33554432" crc="3ef54827" sha1="750a5db8a7d9608f647f377d4095e14240275803"/>
 			</dataarea>
 		</part>
 	</software>

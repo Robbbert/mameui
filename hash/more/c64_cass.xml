@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 51 -->
+<!-- Number of items in this list = 63 -->
 <softwarelist name="c64_cass" description="c64_cass loose roms">
 	<software name="c6410b594e468ee7">
 		<description>10th Frame</description>
@@ -9,6 +9,126 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="559117">
 				<rom name="10th Frame.tap" size="559117" crc="8a0a50ac" sha1="10b594e468ee7b4542c2972e149cf09995abd910"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642cfdee2deb949">
+		<description>Valkyrie 17</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="487060">
+				<rom name="Valkyrie 17.tap" size="487060" crc="8eb888e5" sha1="2cfdee2deb9492736099959293d72063801165e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64eedbb1dbf9414">
+		<description>Vampire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="670930">
+				<rom name="Vampire.tap" size="670930" crc="6d377c37" sha1="eedbb1dbf9414526c0fc9c2e0cdc0d1bccb8e218"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642463f0da6c1d2">
+		<description>Vegas Jackpot (Version 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="196731">
+				<rom name="Vegas Jackpot (Version 1).tap" size="196731" crc="952e63b0" sha1="2463f0da6c1d2be34d482d574c91653ec677bf3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641105bf2a5ad5a">
+		<description>Velocipede II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="510313">
+				<rom name="Velocipede II.tap" size="510313" crc="8b4b4392" sha1="1105bf2a5ad5a3429730f9ff5a70cc9e147f56f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642845ad4e06752">
+		<description>Velocipede</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="414074">
+				<rom name="Velocipede.tap" size="414074" crc="4de34efd" sha1="2845ad4e067527e2a5dcdcefd91ab6b27c925e58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c647afa0f17618e9">
+		<description>Venom Strikes Back (Version a)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="615361">
+				<rom name="Venom Strikes Back (Version a).tap" size="615361" crc="6eab4bd9" sha1="7afa0f17618e9fec0179af7727a9885e28086830"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6405b3c9c1c3d71">
+		<description>Venom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="501530">
+				<rom name="Venom.tap" size="501530" crc="248eae54" sha1="05b3c9c1c3d716a9e8268d73b498cb8e94e64710"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c648461ccf642b24">
+		<description>Vice Squad, The</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="478922">
+				<rom name="Vice Squad, The.tap" size="478922" crc="b8cd030d" sha1="8461ccf642b24c26e011f9e357f3f28c1f0a5248"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a09c9199d38b6">
+		<description>Video Card Arcade</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="229536">
+				<rom name="Video Card Arcade.tap" size="229536" crc="21a3a280" sha1="a09c9199d38b65d5d31863667517ecb0046a41d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64bb9562b9f7c3b">
+		<description>Video Meanies</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="561807">
+				<rom name="Video Meanies.tap" size="561807" crc="8502d23f" sha1="bb9562b9f7c3b8d304b474247640725dade0709d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64de28a6038212e">
+		<description>Vindicators</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="577768">
+				<rom name="Vindicators.tap" size="577768" crc="68339551" sha1="de28a6038212eab3eef57e03c7416638685e07ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6451b9112f28424">
+		<description>Vioris (Commodore Format Power Pack 37)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="152454">
+				<rom name="Vioris (Commodore Format Power Pack 37).tap" size="152454" crc="b2acd592" sha1="51b9112f284242cc1bd28d306c532fa5aacca873"/>
 			</dataarea>
 		</part>
 	</software>

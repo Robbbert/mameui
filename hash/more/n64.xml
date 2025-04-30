@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 164 -->
+<!-- Number of items in this list = 165 -->
 <softwarelist name="n64" description="n64 loose roms">
 	<software name="n64bbc390954c605">
 		<description>(demo)2 Blokes &amp; An Armchair - Nintendo 64 Remix (199x)(Tesko)(PD)[h]</description>
@@ -1599,6 +1599,16 @@
 		<part name="cart" interface="n64_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Wave Race 64 (JP) (v1.1) - CARROT.bin.z64" size="8388608" crc="54d190a8" sha1="4b6cd84b40dd2f4fbe55c6e10f298f33f9184a9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n64d65bbd1eb8e9f">
+		<description>Wave Race 64 - Kawasaki Jet Ski (Japan) (Rev 2) (Shindou Edition) [T-En by Zoinkity v1.2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="8202240">
+				<rom name="Wave Race 64 - Kawasaki Jet Ski (Japan) (Rev 2) (Shindou Edition) [T-En by Zoinkity v1.2].z64" size="8202240" crc="80697fc3" sha1="d65bbd1eb8e9f5ec23fec2465a9b4eaeae7cf249"/>
 			</dataarea>
 		</part>
 	</software>

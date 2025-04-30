@@ -1,7 +1,127 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 193 -->
+<!-- Number of items in this list = 207 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
+	<software name="bee988897452e628">
+		<description>finance_manager</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4198856">
+				<rom name="finance_manager.wav" size="4198856" crc="70f4877a" sha1="988897452e62822ba18595a5c45f5238c7bc4153"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee72e34a843741e">
+		<description>flying.bee</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1283964">
+				<rom name="flying.bee.wav" size="1283964" crc="72905ce2" sha1="72e34a843741ee82254cb510721bd32834ed3637"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee14b1333d29325">
+		<description>FMAT16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="287364">
+				<rom name="FMAT16.WAV" size="287364" crc="4693928b" sha1="14b1333d29325e9097d0a1abd82c2742199659bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5b3d6c1d859ef">
+		<description>FMAT32</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="287364">
+				<rom name="FMAT32.WAV" size="287364" crc="dcd1d45d" sha1="5b3d6c1d859efd34fab5364b590c66ba1491ea85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef8cbed14a36fe">
+		<description>four (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3266024">
+				<rom name="four (2).wav" size="3266024" crc="c494dbd2" sha1="f8cbed14a36fe11cf473d3aeccfc153cf84b5cf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec78d63064a5a8">
+		<description>four</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2200368">
+				<rom name="four.wav" size="2200368" crc="d9e2539b" sha1="c78d63064a5a880fe1057f867ee990c3f16a44f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee1542bd2e930f3">
+		<description>Four96k3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="13179860">
+				<rom name="Four96k3.wav" size="13179860" crc="0bc0d752" sha1="1542bd2e930f36c8ff4cf6f7dc48300b5ae94da1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed52f70924b6aa">
+		<description>fraction_race</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2378598">
+				<rom name="fraction_race.wav" size="2378598" crc="85bcbd6e" sha1="d52f70924b6aa9378f08d5a969ae9da666dbe376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee1cb2a3f4d0d29">
+		<description>frank.mwb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1792780">
+				<rom name="frank.mwb.wav" size="1792780" crc="bc33a13f" sha1="1cb2a3f4d0d29bf833654ee6834ef46a87e93b14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefe7c626527863">
+		<description>FrenchPhrases96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3437104">
+				<rom name="FrenchPhrases96k1.wav" size="3437104" crc="c467e6be" sha1="fe7c62652786396aa6e656619c5da8870ca66829"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3ec48b34c07ab">
+		<description>FrenchVocab</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="10375545">
+				<rom name="FrenchVocab.wav" size="10375545" crc="8b701b86" sha1="3ec48b34c07ab513256467a40b1fc155a3695c70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecb433abcb6197">
+		<description>Frogger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1242956">
+				<rom name="Frogger.wav" size="1242956" crc="acbce652" sha1="cb433abcb6197e4c5fd223a6dac9af522833093c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
 		<year>????</year>
@@ -1819,6 +1939,26 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="2709446">
 				<rom name="[-]yahtze2.wav" size="2709446" crc="212b4fb1" sha1="24b020dfffcd855c0c40f9ae3eb145beecc3f49a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee86f179fe0a017">
+		<description>[ic]fgcol1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="193555">
+				<rom name="[ic]fgcol1.wav" size="193555" crc="f4578bc4" sha1="86f179fe0a0173041182a8d9ed55422783ed861b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee47eb82ee95fb0">
+		<description>[ic]fg_colour_log-standard</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="62876">
+				<rom name="[ic]fg_colour_log-standard.wav" size="62876" crc="07ca7972" sha1="47eb82ee95fb01feda33927179db1d0920c88763"/>
 			</dataarea>
 		</part>
 	</software>
