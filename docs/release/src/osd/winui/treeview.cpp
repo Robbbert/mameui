@@ -105,8 +105,8 @@ static LPCFILTER_ITEM g_lpFilterList;
     private function prototypes
  ***************************************************************************/
 
-extern BOOL InitFolders(void);
-static BOOL CreateTreeIcons(void);
+extern BOOL InitFolders();
+static BOOL CreateTreeIcons();
 static void TreeCtrlOnPaint(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 static const char *ParseManufacturer(const char *s, int *pParsedChars );
 static const char *TrimManufacturer(const char *s);
@@ -114,8 +114,8 @@ static BOOL AddFolder(LPTREEFOLDER lpFolder);
 static LPTREEFOLDER NewFolder(const char *lpTitle, UINT nFolderId, int nParent, UINT nIconId, DWORD dwFlags);
 static void DeleteFolder(LPTREEFOLDER lpFolder);
 static LRESULT CALLBACK TreeWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-static int InitExtraFolders(void);
-static void FreeExtraFolders(void);
+static int InitExtraFolders();
+static void FreeExtraFolders();
 static void SetExtraIcons(char *name, int *id);
 static BOOL TryAddExtraFolderAndChildren(int parent_index);
 static BOOL TrySaveExtraFolder(LPTREEFOLDER lpFolder);
@@ -174,7 +174,7 @@ static int ci_strncmp (const char *s1, const char *s2, int n)
 
 
 /* De-allocate all folder memory */
-void FreeFolders(void)
+void FreeFolders()
 {
 	if (treeFolders)
 	{
@@ -197,7 +197,7 @@ void FreeFolders(void)
 }
 
 /* Reset folder filters */
-void ResetFilters(void)
+void ResetFilters()
 {
 	if (treeFolders)
 		for (int i = 0; i < (int)numFolders; i++)
@@ -223,17 +223,17 @@ void SetCurrentFolder(LPTREEFOLDER lpFolder)
 	nCurrentFolder = (lpCurrentFolder) ? lpCurrentFolder->m_nFolderId : 0;
 }
 
-LPTREEFOLDER GetCurrentFolder(void)
+LPTREEFOLDER GetCurrentFolder()
 {
 	return lpCurrentFolder;
 }
 
-UINT GetCurrentFolderID(void)
+UINT GetCurrentFolderID()
 {
 	return nCurrentFolder;
 }
 
-int GetNumFolders(void)
+int GetNumFolders()
 {
 	return numFolders;
 }
@@ -269,7 +269,7 @@ int FindGame(LPTREEFOLDER lpFolder, int nGame)
 }
 
 // Called to re-associate games with folders
-void ResetWhichGamesInFolders(void)
+void ResetWhichGamesInFolders()
 {
 	int nGames = driver_list::total();
 
@@ -391,7 +391,7 @@ BOOL GetParentFound(int nGame) // not used
 	return false;
 }
 
-LPCFILTER_ITEM GetFilterList(void)
+LPCFILTER_ITEM GetFilterList()
 {
 	return g_lpFilterList;
 }
@@ -687,6 +687,9 @@ static const char *ParseManufacturer(const char *s, int *pParsedChars )
 }
 
 /* Analyze Manufacturer Names for typical patterns, that don't distinguish between companies (e.g. Co., Ltd., Inc., etc. */
+#ifdef __GNUC__
+#pragma GCC diagnostic ignored "-Wstringop-truncation"
+#endif
 static const char *TrimManufacturer(const char *s)
 {
 	//Also remove Country specific suffixes (e.g. Japan, Italy, America, USA, ...)
@@ -878,6 +881,9 @@ static const char *TrimManufacturer(const char *s)
 		return s;
 	return strTemp2;
 }
+#ifdef __GNUC__
+#pragma GCC diagnostic warning "-Wstringop-truncation"
+#endif
 
 void CreateBIOSFolders(int parent_index)
 {
@@ -1455,7 +1461,7 @@ void CreateFPSFolders(int parent_index)
 #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 
 // adds these folders to the treeview
-void ResetTreeViewFolders(void)
+void ResetTreeViewFolders()
 {
 	HWND hTreeView = GetTreeView();
 
@@ -1664,7 +1670,7 @@ static void DeleteFolder(LPTREEFOLDER lpFolder)
 }
 
 /* Can be called to re-initialize the array of treeFolders */
-BOOL InitFolders(void)
+BOOL InitFolders()
 {
 	int i = 0;
 	DWORD dwFolderFlags;
@@ -2006,7 +2012,7 @@ LPTREEFOLDER GetFolderByName(int nParentId, const char *pszFolderName)
 	return NULL;
 }
 
-static int InitExtraFolders(void)
+static int InitExtraFolders()
 {
 	struct stat     stat_buffer;
 	struct _finddata_t files;
@@ -2015,6 +2021,7 @@ static int InitExtraFolders(void)
 	char            buf[2048];
 	char            curdir[MAX_PATH];
 	const std::string    t = dir_get_value(24);
+	const std::string  emu_path = GetEmuPath();
 	const char *dir = t.c_str();
 	memset(ExtraFolderData, 0, (MAX_EXTRA_FOLDERS * MAX_EXTRA_SUBFOLDERS)* sizeof(LPEXFOLDERDATA));
 
@@ -2037,91 +2044,92 @@ static int InitExtraFolders(void)
 	intptr_t hLong = 0L;
 
 	if ( (hLong = _findfirst("*.ini", &files)) == -1L )
-		return 0;
-
-	do
+	{ }
+	else
 	{
-		if ((files.attrib & _A_SUBDIR) == 0)
+		do
 		{
-			FILE *fp;
-
-			fp = fopen(files.name, "r");
-			if (fp != NULL)
+			if ((files.attrib & _A_SUBDIR) == 0)
 			{
-				int icon[2] = { 0, 0 };
-				char *p, *name;
-
-				while (fgets(buf, 256, fp))
+				FILE *fp;
+				fp = fopen(files.name, "r");
+				if (fp != NULL)
 				{
-					if (buf[0] == '[')
+					int icon[2] = { 0, 0 };
+					char *p, *name;
+					while (fgets(buf, 256, fp))
 					{
-						p = strchr(buf, ']');
-						if (p == NULL)
-							continue;
-
-						*p = '\0';
-						name = &buf[1];
-						if (!strcmp(name, "FOLDER_SETTINGS"))
+						if (buf[0] == '[')
 						{
-							while (fgets(buf, 256, fp))
-							{
-								name = strtok(buf, " =\r\n");
-								if (name == NULL)
-									break;
+							p = strchr(buf, ']');
+							if (p == NULL)
+								continue;
 
-								if (!strcmp(name, "RootFolderIcon"))
+							*p = '\0';
+							name = &buf[1];
+							if (!strcmp(name, "FOLDER_SETTINGS"))
+							{
+								while (fgets(buf, 256, fp))
 								{
-									name = strtok(NULL, " =\r\n");
-									if (name != NULL)
-										SetExtraIcons(name, &icon[0]);
+									name = strtok(buf, " =\r\n");
+									if (name == NULL)
+										break;
+
+									if (!strcmp(name, "RootFolderIcon"))
+									{
+										name = strtok(NULL, " =\r\n");
+										if (name != NULL)
+											SetExtraIcons(name, &icon[0]);
+									}
+									if (!strcmp(name, "SubFolderIcon"))
+									{
+										name = strtok(NULL, " =\r\n");
+										if (name != NULL)
+											SetExtraIcons(name, &icon[1]);
+									}
 								}
-								if (!strcmp(name, "SubFolderIcon"))
-								{
-									name = strtok(NULL, " =\r\n");
-									if (name != NULL)
-										SetExtraIcons(name, &icon[1]);
-								}
+								break;
 							}
-							break;
+						}
+					}
+					fclose(fp);
+
+					strcpy(buf, files.name);
+					ext = strrchr(buf, '.');
+
+					if (ext && *(ext + 1) && (core_stricmp(ext + 1, "ini")==0))
+					{
+						ExtraFolderData[count] =(EXFOLDERDATA*) malloc(sizeof(EXFOLDERDATA));
+						if (ExtraFolderData[count])
+						{
+							*ext = '\0';
+
+							memset(ExtraFolderData[count], 0, sizeof(EXFOLDERDATA));
+
+							strncpy(ExtraFolderData[count]->m_szTitle, buf, 63);
+							ExtraFolderData[count]->m_nFolderId   = next_folder_id++;
+							ExtraFolderData[count]->m_nParent     = -1;
+							ExtraFolderData[count]->m_dwFlags     = F_CUSTOM;
+							ExtraFolderData[count]->m_nIconId     = icon[0] ? -icon[0] : IDI_FOLDER;
+							ExtraFolderData[count]->m_nSubIconId  = icon[1] ? -icon[1] : IDI_FOLDER;
+							//printf("extra folder with icon %i, subicon %i\n",
+							//ExtraFolderData[count]->m_nIconId,
+							//ExtraFolderData[count]->m_nSubIconId);
+							count++;
 						}
 					}
 				}
-				fclose(fp);
-
-				strcpy(buf, files.name);
-				ext = strrchr(buf, '.');
-
-				if (ext && *(ext + 1) && (core_stricmp(ext + 1, "ini")==0))
-				{
-					ExtraFolderData[count] =(EXFOLDERDATA*) malloc(sizeof(EXFOLDERDATA));
-					if (ExtraFolderData[count])
-					{
-						*ext = '\0';
-
-						memset(ExtraFolderData[count], 0, sizeof(EXFOLDERDATA));
-
-						strncpy(ExtraFolderData[count]->m_szTitle, buf, 63);
-						ExtraFolderData[count]->m_nFolderId   = next_folder_id++;
-						ExtraFolderData[count]->m_nParent     = -1;
-						ExtraFolderData[count]->m_dwFlags     = F_CUSTOM;
-						ExtraFolderData[count]->m_nIconId     = icon[0] ? -icon[0] : IDI_FOLDER;
-						ExtraFolderData[count]->m_nSubIconId  = icon[1] ? -icon[1] : IDI_FOLDER;
-						//printf("extra folder with icon %i, subicon %i\n",
-						//ExtraFolderData[count]->m_nIconId,
-						//ExtraFolderData[count]->m_nSubIconId);
-						count++;
-					}
-				}
 			}
-		}
-	} while( _findnext(hLong, &files) == 0);
-
-	chdir(curdir);
+		} while( _findnext(hLong, &files) == 0);
 	_findclose(hLong);
+	}
+
+	if (chdir(emu_path.c_str()) < 0)
+		chdir(curdir);
 	return count;
 }
 
-void FreeExtraFolders(void)
+void FreeExtraFolders()
 {
 	int i;
 
@@ -2497,7 +2505,7 @@ BOOL TrySaveExtraFolder(LPTREEFOLDER lpFolder)
 	return !error;
 }
 
-HIMAGELIST GetTreeViewIconList(void)
+HIMAGELIST GetTreeViewIconList()
 {
 	return hTreeSmall;
 }

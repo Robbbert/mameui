@@ -957,7 +957,7 @@ void core_options::parse_ini_file(util::core_file &inifile, int priority, bool i
 			}
 			continue;
 		}
-
+		//printf("%s = %s\n",optionname,optiondata);
 		// set the new data
 		do_set_value(*curentry, trim_spaces_and_quotes(optiondata), priority, error_stream, condition, true);
 	}

@@ -228,7 +228,7 @@
 #define IDC_SLEEP                       1022
 #define IDC_GAMMA                       1023
 #define IDC_BRIGHTCORRECT               1024
-#define IDC_USE_DEFAULT                 1025
+//#define IDC_USE_DEFAULT                 1025
 #define IDC_CONTRAST                    1026
 #define IDC_SAMPLERATE                  1027
 #define IDC_NUMSCREENS                  1028
@@ -290,7 +290,7 @@
 #define IDC_AUTOFRAMESKIP               1097
 #define IDC_TREE                        1098
 #define IDC_WINDOWED                    1099
-#define IDC_PROP_RESET                  1101
+//#define IDC_PROP_RESET                  1101
 #define IDC_SPLITTER                    1102
 #define IDC_SPLITTER2                   1103
 #define IDC_DIVIDER                     1104

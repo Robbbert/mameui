@@ -21,8 +21,8 @@ typedef enum {
 	OPTIONS_ARCADE,
 	// Local types
 	OPTIONS_SOURCE,
-	OPTIONS_GPARENT,
-	OPTIONS_PARENT,
+	OPTIONS_GPARENT, // do not use
+	OPTIONS_PARENT, // do not use
 	OPTIONS_GAME,
 	// EOF marker
 	OPTIONS_MAX
@@ -59,17 +59,17 @@ bool GetSkipWarnings();
 void SetSkipWarnings(BOOL);
 const std::string GetPlugins();
 void SetSelectedSoftware(int driver_index, std::string opt_name, const char *software);
-void global_save_ini(void);
-bool DriverHasSoftware(int drvindex);
-void ResetGameDefaults(void);
-void ResetAllGameOptions(void);
-windows_options &MameUIGlobal(void);
+void global_save_ini();
+BOOL DriverHasSoftware(int drvindex);
+void ResetGameDefaults();
+void ResetAllGameOptions();
+windows_options &MameUIGlobal();
 void SetSystemName(windows_options &, OPTIONS_TYPE, int);
-bool AreOptionsEqual(windows_options &opts1, windows_options &opts2);
+//bool AreOptionsEqual(windows_options &opts1, windows_options &opts2);  // not used any more 2025-04-04
 void OptionsCopy(windows_options &source, windows_options &dest);
 void SetDirectories(windows_options &opts);
 void load_options(windows_options &, OPTIONS_TYPE, int, bool);
-void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int game_num);
+void save_options(windows_options &opts, OPTIONS_TYPE opt_type, int drvindex);
 
 
 #endif

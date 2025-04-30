@@ -12,6 +12,7 @@
 #include <wingdi.h>
 #include <winuser.h>
 #include <tchar.h>
+#include <io.h>
 
 // MAME/MAMEOS/MAMEUI/MESS headers
 #include "winui.h"
@@ -326,7 +327,6 @@ void InitMessPicker()
 	SetWindowLong(hwndSoftware, GWL_STYLE, GetWindowLong(hwndSoftware, GWL_STYLE) | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED);
 
 	printf("InitMessPicker: D\n");fflush(stdout);
-	SetupSoftwareTabView();
 
 	{
 		static const struct MViewCallbacks s_MViewCallbacks =
@@ -355,6 +355,7 @@ void InitMessPicker()
 	SetWindowLong(hwndSoftwareList, GWL_STYLE, GetWindowLong(hwndSoftwareList, GWL_STYLE) | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED);
 	printf("InitMessPicker: Finished\n");fflush(stdout);
 
+	SetupSoftwareTabView();
 	ShowHideSoftwareArea();
 }
 
@@ -428,9 +429,10 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 // The first directory in each path is checked for existence.
 static std::pair<int, string> ProcessSWDir(int drvindex)
 {
-	osd::directory::ptr b;
+	bool folder_exist = false;
 	if (drvindex < 0)
 	{
+		printf("ProcessSWDir: should not be here: %d\n",drvindex);
 		string dst;
 		osd_get_full_path(dst,".");
 		return std::make_pair(0, dst);
@@ -438,67 +440,78 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 
 	BOOL b_dir = false;
 	char dir0[2048] = { };
-	printf("ProcessSWDir: A = %s\n",driver_list::driver(drvindex).type.fullname());fflush(stdout);
 	string global_swpath = dir_get_value(13);
+	printf("ProcessSWDir: A: Driver = %s; Global swpath = %s\n",driver_list::driver(drvindex).type.fullname(),global_swpath.c_str());fflush(stdout);
 	if (!global_swpath.empty())
 	{
-		printf("ProcessSWDir: B=%s\n",global_swpath.c_str());fflush(stdout);
 		strcpy(dir0, global_swpath.c_str()); // global SW
+		printf("ProcessSWDir: B: First global path = %s\n",dir0);fflush(stdout);
 		char* t0 = strtok(dir0, ";");  // from here dir0 gets chopped up
-		b = osd::directory::open(t0);
-		if (t0 && b)  // make sure its valid
+		folder_exist = (_access(t0,6) == 0) ? true : false;
+		if (t0 && folder_exist)  // make sure its valid
 			b_dir = true;
-		if (b)
-			b.reset();
 	}
 
 	// Get the system's software path
-	printf("ProcessSWDir: C\n");fflush(stdout);
+	printf("ProcessSWDir: C: Global path is %s\n",b_dir ? "valid" : "invalid");fflush(stdout);
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex, 0);
 	char dir1[2048] = { };
-	strcpy(dir1, o.value(OPTION_SWPATH));
-	char* t1 = strtok(dir1, ";"); // from here dir1 gets chopped up
-	b = osd::directory::open(t1);
-	if (t1 && b)  // make sure its valid
+	char* t1;
+	string local_swpath = o.value(OPTION_SWPATH);
+	printf("ProcessSWDir: D: local path = %s\n",local_swpath.c_str());fflush(stdout);
+	if (!local_swpath.empty())
 	{
-		b.reset();
-		if (b_dir && (global_swpath != o.value(OPTION_SWPATH)))
-			return std::make_pair(1, o.value(OPTION_SWPATH));
+		strcpy(dir1, local_swpath.c_str());
+		t1 = strtok(dir1, ";"); // from here dir1 gets chopped up
+		folder_exist = (_access(t1,6) == 0) ? true : false;
+		if (t1 && folder_exist)  // make sure its valid
+		{
+			// if global is valid then local path must be different from global,
+			//  otherwise it tries to pull up everything, usable or not.
+			if (b_dir && (global_swpath != local_swpath))
+				return std::make_pair(1, local_swpath);
+			else
+			if (!b_dir) // if global is invalid just use local and deal with the consequences
+				return std::make_pair(1, local_swpath);
+		}
 	}
-	if (b)
-		b.reset();
 
-	// not specified in driver, try parent if it has one
-	printf("ProcessSWDir: E\n");fflush(stdout);
-	int nParentIndex = drvindex;
+	// Now, at this point global is valid, but local either hasn't been specifically set or it's invalid
+	// Or, both global and local are invalid
+	// Firstly, try parent if it has one
+	printf("ProcessSWDir: E: See if it has a parent\n");fflush(stdout);
+	int nParentIndex = drvindex; // for compat test below
 	if (DriverIsClone(drvindex))
 	{
-		printf("ProcessSWDir: F\n");fflush(stdout);
+		printf("ProcessSWDir: F: Yes it does\n");fflush(stdout);
 		nParentIndex = GetParentIndex(&driver_list::driver(drvindex));
 		if (nParentIndex >= 0)
 		{
 			windows_options o_p;
-			printf("ProcessSWDir: G\n");fflush(stdout);
-			load_options(o_p, OPTIONS_PARENT, nParentIndex, 0);
-			strcpy(dir1, o_p.value(OPTION_SWPATH));
-			t1 = strtok(dir1, ";");
-			printf("ProcessSWDir: GA = %s\n",dir1);fflush(stdout);
-			b = osd::directory::open(t1);
-			if (t1 && b)  // make sure its valid
+			printf("ProcessSWDir: G: Parent is %s\n",driver_list::driver(nParentIndex).type.fullname());fflush(stdout);
+			load_options(o_p, OPTIONS_GAME, nParentIndex, 0);
+			local_swpath = o_p.value(OPTION_SWPATH);
+			if (!local_swpath.empty())
 			{
-				b.reset();
-				printf("ProcessSWDir: GB\n");fflush(stdout);
-				if (b_dir && (global_swpath != o_p.value(OPTION_SWPATH)))
+				strcpy(dir1, local_swpath.c_str());
+				t1 = strtok(dir1, ";");
+				printf("ProcessSWDir: GA: parent path = %s\n",dir1);fflush(stdout);
+				folder_exist = (_access(t1,6) == 0) ? true : false;
+				if (t1 && folder_exist)  // make sure its valid
 				{
-					printf("ProcessSWDir: GC\n");fflush(stdout);
-					emu_set_value(o, OPTION_SWPATH, o_p.value(OPTION_SWPATH));
-					save_options(o, OPTIONS_GAME, drvindex);
-					return std::make_pair(1, o_p.value(OPTION_SWPATH));
+					printf("ProcessSWDir: GB\n");fflush(stdout);
+					// if global is valid then local path must be different from global,
+					//  otherwise it tries to pull up everything, usable or not.
+					if (b_dir && (global_swpath != local_swpath))
+					{
+						printf("ProcessSWDir: GC: local path will now become %s\n",local_swpath.c_str());fflush(stdout);
+						emu_set_value(o, OPTION_SWPATH, local_swpath);
+						save_options(o, OPTIONS_GAME, drvindex);
+						return std::make_pair(1, local_swpath);
+					}
 				}
 			}
-			if (b)
-				b.reset();
 		}
 		else
 			nParentIndex = drvindex; // don't pass -1 to compat check
@@ -511,23 +524,25 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 	if (nCloneIndex >= 0)
 	{
 		windows_options o_c;
-		printf("ProcessSWDir: I\n");fflush(stdout);
-		load_options(o_c, OPTIONS_PARENT, nCloneIndex, 0);
-		strcpy(dir1, o_c.value(OPTION_SWPATH));
-		t1 = strtok(dir1, ";");
-		b = osd::directory::open(t1);
-		if (t1 && b)  // make sure its valid
+		printf("ProcessSWDir: I: compat is %s\n",driver_list::driver(nParentIndex).type.fullname());fflush(stdout);
+		load_options(o_c, OPTIONS_GAME, nCloneIndex, 0);
+		local_swpath = o_c.value(OPTION_SWPATH);
+		if (!local_swpath.empty())
 		{
-			if (b_dir && (global_swpath != o_c.value(OPTION_SWPATH)))
+			strcpy(dir1, local_swpath.c_str());
+			t1 = strtok(dir1, ";");
+			folder_exist = (_access(t1,6) == 0) ? true : false;
+			if (t1 && folder_exist)  // make sure its valid
 			{
-				b.reset();
-				emu_set_value(o, OPTION_SWPATH, o_c.value(OPTION_SWPATH));
-				save_options(o, OPTIONS_GAME, drvindex);
-				return std::make_pair(1, o_c.value(OPTION_SWPATH));
+				if (b_dir && (global_swpath != local_swpath))
+				{
+					printf("ProcessSWDir: IA: local path will now become %s\n",local_swpath.c_str());fflush(stdout);
+					emu_set_value(o, OPTION_SWPATH, local_swpath);
+					save_options(o, OPTIONS_GAME, drvindex);
+					return std::make_pair(1, local_swpath);
+				}
 			}
 		}
-		if (b)
-			b.reset();
 	}
 
 	// Try the global root
@@ -537,10 +552,9 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 
 	// nothing valid, drop to default emu directory
 	printf("ProcessSWDir: K\n");fflush(stdout);
-	string dst;
-	osd_get_full_path(dst,".");
+	osd_get_full_path(local_swpath,".");
 	printf("ProcessSWDir: L\n");fflush(stdout);
-	return std::make_pair(0, dst);
+	return std::make_pair(0, local_swpath);
 }
 
 
@@ -565,12 +579,11 @@ static BOOL AddSoftwarePickerDirs(HWND hwndPicker, LPCSTR pszDirectories, LPCSTR
 		else
 			pszNewString = t1;
 
-		osd::directory::ptr b = osd::directory::open(t1);
-		if (b)
+		bool folder_exist = (_access(t1,6) == 0) ? true : false;
+		if (folder_exist)
 		{
 			printf("AddSoftwarePickerDirs: newstring %s\n",pszNewString.c_str());fflush(stdout);
 			(void)SoftwarePicker_AddDirectory(hwndPicker, pszNewString.c_str());
-			b.reset();
 		}
 
 		printf("AddSoftwarePickerDirs: On to the next\n");fflush(stdout);
@@ -681,7 +694,12 @@ void MView_Refresh(HWND hwndMView)
 	TCHAR szBuffer[MAX_PATH];
 
 	pMViewInfo = GetMViewInfo(hwndMView);
-	printf("MView_Refresh: %s\n", driver_list::driver(pMViewInfo->config->driver_index).name);fflush(stdout);
+	// test
+	//windows_options o;
+	//load_options(o, OPTIONS_GAME, pMViewInfo->config->driver_index, 0);
+	//string swpath = o.value(OPTION_SWPATH);
+
+	//printf("MView_Refresh: %s = %s\n", driver_list::driver(pMViewInfo->config->driver_index).name,swpath.c_str());fflush(stdout);
 
 	if (pMViewInfo->slots)
 	{
@@ -1058,8 +1076,8 @@ static void MessRefreshPicker()
 			if (i < 0) // not there
 			{
 				// add already loaded software to picker, but not if its already there
-//				SoftwarePicker_AddFile(hwndSoftware, s, 1);    // this adds the 'extra' loaded software item into the list - we don't need to see this
-				i = SoftwarePicker_LookupIndex(hwndSoftware, s); // refresh pointer
+				//SoftwarePicker_AddFile(hwndSoftware, s, 1);    // this adds the 'extra' loaded software item into the list - we don't need to see this
+				//i = SoftwarePicker_LookupIndex(hwndSoftware, s); // refresh pointer
 			}
 			if (i >= 0) // is there
 			{
@@ -1300,8 +1318,8 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 
 	/* Get the path to the currently mounted image */
 	string dst = util::zippath_parent(s);
-	osd::directory::ptr b = osd::directory::open(dst.c_str());
-	if (!b || (dst.find(':') == string::npos))
+	bool folder_exist = (_access(dst.c_str(),6) == 0) ? true : false;
+	if (!folder_exist || (dst.find(':') == string::npos))
 	{
 		// no image loaded, use swpath
 		std::tie(std::ignore, dst) = ProcessSWDir(drvindex);
@@ -1310,8 +1328,6 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 		if (i != string::npos)
 			dst.erase(i);
 	}
-	if (b)
-		b.reset();
 
 	mess_image_type imagetypes[256];
 	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, dev);
@@ -1350,12 +1366,10 @@ static BOOL MView_GetOpenItemName(HWND hwndMView, const machine_config *config, 
 
 	string dst = slmap.find(opt_name)->second;
 
-	osd::directory::ptr b = osd::directory::open(dst.c_str());
-	if (!b)
+	bool folder_exist = (_access(dst.c_str(),6) == 0) ? true : false;
+	if (!folder_exist)
 		// Default to emu directory
 		osd_get_full_path(dst, ".");
-	else
-		b.reset();
 
 	mess_image_type imagetypes[256];
 	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, NULL); // just get zip & 7z
@@ -1565,36 +1579,32 @@ static void SoftwarePicker_EnteringItem(HWND hwndSoftwarePicker, int nItem)
 
 static int SoftwareList_GetItemImage(HWND hwndPicker, int nItem)
 {
-#if 0
+//#if 0
 	HWND hwndGamePicker = GetDlgItem(GetMainWindow(), IDC_LIST);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
 	int drvindex = Picker_GetSelectedItem(hwndGamePicker);
 	if (drvindex < 0)
 		return -1;
 
-	iodevice_t nType = SoftwareList_GetImageType(hwndSoftwareList, nItem);
+	string nType = SoftwareList_GetImageType(hwndSoftwareList, nItem);
 	int nIcon = GetMessIcon(drvindex, nType);
+
 	if (!nIcon)
 	{
-		switch(nType)
+		if (nType == "unkn")
+			nIcon = FindIconIndex(IDI_WIN_REDX);
+		else
 		{
-			case IO_UNKNOWN:
-				nIcon = FindIconIndex(IDI_WIN_REDX);
-				break;
-
-			default:
-				const char *icon_name = lookupdevice(nType)->icon_name;
-				if (!icon_name)
-					icon_name = device_image_interface::device_typename(nType);
-				nIcon = FindIconIndexByName(icon_name);
-				if (nIcon < 0)
-					nIcon = FindIconIndex(IDI_WIN_UNKNOWN);
-				break;
+			INT resource = lookupdevice(nType)->resource;
+			nIcon = FindIconIndex(resource);
+			if (nIcon < 0)
+				nIcon = FindIconIndex(IDI_WIN_UNKNOWN);
 		}
 	}
+	printf("SoftwareList_GetItemImage: Icon = %d\n",nIcon);
 	return nIcon;
-#endif
-	return 0;
+//#endif
+//	return 0;
 }
 
 

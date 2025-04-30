@@ -834,27 +834,27 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	const char* name = driver_list::driver(nGameIndex).name;
 
 	// set some startup options
-	global_opts.set_value(OPTION_PLUGINDATAPATH, GetEmuPath(), OPTION_PRIORITY_CMDLINE);
-	global_opts.set_value(OPTION_LANGUAGE, GetLanguageUI(), OPTION_PRIORITY_CMDLINE);
-	global_opts.set_value(OPTION_PLUGINS, GetEnablePlugins(), OPTION_PRIORITY_CMDLINE);
-	global_opts.set_value(OPTION_PLUGIN, GetPlugins(), OPTION_PRIORITY_CMDLINE);
-	global_opts.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_CMDLINE);
+	global_opts.set_value(OPTION_PLUGINDATAPATH, GetEmuPath(), OPTION_PRIORITY_HIGH);
+	global_opts.set_value(OPTION_LANGUAGE, GetLanguageUI(), OPTION_PRIORITY_HIGH);
+	global_opts.set_value(OPTION_PLUGINS, GetEnablePlugins(), OPTION_PRIORITY_HIGH);
+	global_opts.set_value(OPTION_PLUGIN, GetPlugins(), OPTION_PRIORITY_HIGH);
+	global_opts.set_value(OPTION_SYSTEMNAME, name, OPTION_PRIORITY_HIGH);
 
 	// set any specified play options
 	if (playopts_apply == 0x57)
 	{
 		if (playopts->record)
-			global_opts.set_value(OPTION_RECORD, playopts->record, OPTION_PRIORITY_CMDLINE);
+			global_opts.set_value(OPTION_RECORD, playopts->record, OPTION_PRIORITY_HIGH);
 		if (playopts->playback)
-			global_opts.set_value(OPTION_PLAYBACK, playopts->playback, OPTION_PRIORITY_CMDLINE);
+			global_opts.set_value(OPTION_PLAYBACK, playopts->playback, OPTION_PRIORITY_HIGH);
 		if (playopts->state)
-			global_opts.set_value(OPTION_STATE, playopts->state, OPTION_PRIORITY_CMDLINE);
+			global_opts.set_value(OPTION_STATE, playopts->state, OPTION_PRIORITY_HIGH);
 		if (playopts->wavwrite)
-			global_opts.set_value(OPTION_WAVWRITE, playopts->wavwrite, OPTION_PRIORITY_CMDLINE);
+			global_opts.set_value(OPTION_WAVWRITE, playopts->wavwrite, OPTION_PRIORITY_HIGH);
 		if (playopts->mngwrite)
-			global_opts.set_value(OPTION_MNGWRITE, playopts->mngwrite, OPTION_PRIORITY_CMDLINE);
+			global_opts.set_value(OPTION_MNGWRITE, playopts->mngwrite, OPTION_PRIORITY_HIGH);
 		if (playopts->aviwrite)
-			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_CMDLINE);
+			global_opts.set_value(OPTION_AVIWRITE, playopts->aviwrite, OPTION_PRIORITY_HIGH);
 	}
 
 	// redirect messages to our handler
@@ -905,17 +905,17 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 		windows_options o;
 		load_options(o, OPTIONS_GAME, nGameIndex, 0);
 		if (playopts->record)
-			o.set_value(OPTION_RECORD, "", OPTION_PRIORITY_CMDLINE);
+			o.set_value(OPTION_RECORD, "", OPTION_PRIORITY_HIGH);
 		if (playopts->playback)
-			o.set_value(OPTION_PLAYBACK, "", OPTION_PRIORITY_CMDLINE);
+			o.set_value(OPTION_PLAYBACK, "", OPTION_PRIORITY_HIGH);
 		if (playopts->state)
-			o.set_value(OPTION_STATE, "", OPTION_PRIORITY_CMDLINE);
+			o.set_value(OPTION_STATE, "", OPTION_PRIORITY_HIGH);
 		if (playopts->wavwrite)
-			o.set_value(OPTION_WAVWRITE, "", OPTION_PRIORITY_CMDLINE);
+			o.set_value(OPTION_WAVWRITE, "", OPTION_PRIORITY_HIGH);
 		if (playopts->mngwrite)
-			o.set_value(OPTION_MNGWRITE, "", OPTION_PRIORITY_CMDLINE);
+			o.set_value(OPTION_MNGWRITE, "", OPTION_PRIORITY_HIGH);
 		if (playopts->aviwrite)
-			o.set_value(OPTION_AVIWRITE, "", OPTION_PRIORITY_CMDLINE);
+			o.set_value(OPTION_AVIWRITE, "", OPTION_PRIORITY_HIGH);
 		// apply the above to the ini file
 		save_options(o, OPTIONS_GAME, nGameIndex);
 	}
@@ -2170,8 +2170,8 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 
 	case WM_MAME32_FILECHANGED:
 		{
-			int (*pfnGetAuditResults)(uint32_t driver_index) = NULL;
-			void (*pfnSetAuditResults)(uint32_t driver_index, int audit_results) = NULL;
+			int (*pfnGetAuditResults)(int driver_index) = NULL;
+			void (*pfnSetAuditResults)(int driver_index, int audit_results) = NULL;
 
 			switch(HIWORD(wParam))
 			{
@@ -2458,8 +2458,8 @@ static BOOL OnIdle(HWND hWnd)
 	// NPW 17-Jun-2003 - Commenting this out because it is redundant
 	// and it causes the game to reset back to the original game after an F5
 	// refresh
-	//driver_index = GetGameNameIndex(GetDefaultGame());
-	//SetSelectedPickItem(driver_index);
+	//drvindex = GetGameNameIndex(GetDefaultGame());
+	//SetSelectedPickItem(drvindex);
 
 	// in case it's not found, get it back
 	const char *pDescription;
@@ -3570,9 +3570,9 @@ static void ResetListView()
 	if (have_selection == false)
 		no_selection = true;
 
-	int current_game = Picker_GetSelectedItem(hwndList);
-	if (current_game < 0)
-		current_game = 0;
+	int drvindex = Picker_GetSelectedItem(hwndList);
+	if (drvindex < 0)
+		drvindex = 0;
 
 	SetWindowRedraw(hwndList,false);
 
@@ -3601,7 +3601,7 @@ static void ResetListView()
 			lvi.iIndent = 0;
 
 			if (GetEnableIndent())
-				if (GetParentFound(i) && DriverIsClone(i))
+				if ((GetParentFound(i) || !GetOffsetClones()) && DriverIsClone(i))
 					lvi.iIndent = 1;
 
 			res = ListView_InsertItem(hwndList, &lvi);
@@ -3616,7 +3616,7 @@ static void ResetListView()
 		if (no_selection)
 			Picker_SetSelectedPick(hwndList, 0);
 		else
-			Picker_SetSelectedItem(hwndList, current_game);
+			Picker_SetSelectedItem(hwndList, drvindex);
 	}
 
 	/*RS Instead of the Arrange Call that was here previously on all Views
@@ -3811,7 +3811,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	LPTREEFOLDER folder;
 	char* utf8_szFile;
 	BOOL res = 0;
-	int current_game = Picker_GetSelectedItem(hwndList);
+	int drvindex = Picker_GetSelectedItem(hwndList);
 
 	switch (id)
 	{
@@ -4016,10 +4016,10 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 	case ID_GAME_AUDIT:
-		InitGameAudit(0);
-		if (current_game >= 0)
+		InitGameAudit(drvindex);
+		if (drvindex >= 0)
 		{
-			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, current_game, AUDIT_PAGE);
+			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, drvindex, AUDIT_PAGE);
 		}
 		/* Just in case the toggle MMX on/off */
 		UpdateStatusBar();
@@ -4028,8 +4028,8 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	/* ListView Context Menu */
 	case ID_CONTEXT_ADD_CUSTOM:
 	{
-		if (current_game >= 0)
-			DialogBoxParam(GetModuleHandle(NULL),MAKEINTRESOURCE(IDD_CUSTOM_FILE), hMain, AddCustomFileDialogProc, current_game);
+		if (drvindex >= 0)
+			DialogBoxParam(GetModuleHandle(NULL),MAKEINTRESOURCE(IDD_CUSTOM_FILE), hMain, AddCustomFileDialogProc, drvindex);
 		SetFocus(hwndList);
 		break;
 	}
@@ -4142,7 +4142,6 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		SetFocus(hwndList);
 		return true;
 
-	/* View Menu -  MESSUI: not used any more 2014-01-26 */
 	case ID_VIEW_LINEUPICONS:
 		if( codeNotify == false)
 			ResetListView();
@@ -4160,8 +4159,8 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 	case ID_GAME_PROPERTIES:
-		if (current_game >= 0)
-			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, current_game, PROPERTIES_PAGE);
+		if (drvindex >= 0)
+			InitPropertyPageToPage(hInst, hwnd, GetSelectedPickItemIcon(), OPTIONS_GAME, -1, drvindex, PROPERTIES_PAGE);
 		UpdateStatusBar();
 		break;
 
@@ -4182,9 +4181,9 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 	case ID_FOLDER_SOURCEPROPERTIES:
 	{
-		if (current_game < 0)
+		if (drvindex < 0)
 			return true;
-		InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_SOURCE, -1, current_game);
+		InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_SOURCE, -1, drvindex);
 		UpdateStatusBar();
 		SetFocus(hwndList);
 		return true;
@@ -4195,10 +4194,10 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	}
 
 	case ID_FOLDER_VECTORPROPERTIES:
-		if (current_game >= 0)
+		if (drvindex >= 0)
 		{
 			folder = GetFolderByID( FOLDER_VECTOR );
-			InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_VECTOR, folder->m_nFolderId, current_game);
+			InitPropertyPage(hInst, hwnd, GetSelectedFolderIcon(), OPTIONS_VECTOR, folder->m_nFolderId, drvindex);
 		}
 		/* Just in case the toggle MMX on/off */
 		UpdateStatusBar();
@@ -4564,10 +4563,10 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		break;
 
 	case ID_CONTEXT_RESET_PLAYSTATS:
-		if (current_game < 0)
+		if (drvindex < 0)
 			break;
-		ResetPlayTime(current_game);
-		ResetPlayCount(current_game);
+		ResetPlayTime(drvindex);
+		ResetPlayCount(drvindex);
 		res = ListView_RedrawItems(hwndList, GetSelectedPick(), GetSelectedPick());
 		break;
 
@@ -6003,8 +6002,8 @@ void InitTreeContextMenu(HMENU hTreeMenu)
 
 void InitBodyContextMenu(HMENU hBodyContextMenu)
 {
-	int current_game = Picker_GetSelectedItem(hwndList);
-	if (current_game < 0)
+	int drvindex = Picker_GetSelectedItem(hwndList);
+	if (drvindex < 0)
 		return;
 
 	TCHAR tmp[256];
@@ -6018,7 +6017,7 @@ void InitBodyContextMenu(HMENU hBodyContextMenu)
 		return;
 	}
 
-	_sntprintf(tmp,std::size(tmp),TEXT("Properties for %s"), ui_wstring_from_utf8(GetDriverFilename(current_game) ));
+	_sntprintf(tmp,std::size(tmp),TEXT("Properties for %s"), ui_wstring_from_utf8(GetDriverFilename(drvindex) ));
 	mii.fMask = MIIM_TYPE | MIIM_ID;
 	mii.fType = MFT_STRING;
 	mii.dwTypeData = tmp;
@@ -6028,7 +6027,7 @@ void InitBodyContextMenu(HMENU hBodyContextMenu)
 	// menu in resources has one default item
 	// so overwrite this one
 	SetMenuItemInfo(hBodyContextMenu,ID_FOLDER_SOURCEPROPERTIES,false,&mii);
-	EnableMenuItem(hBodyContextMenu, ID_FOLDER_VECTORPROPERTIES, DriverIsVector(current_game) ? MF_ENABLED : MF_GRAYED);
+	EnableMenuItem(hBodyContextMenu, ID_FOLDER_VECTORPROPERTIES, DriverIsVector(drvindex) ? MF_ENABLED : MF_GRAYED);
 }
 
 
@@ -6245,9 +6244,9 @@ static LRESULT CALLBACK PictureWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 
 static void RemoveCurrentGameCustomFolder()
 {
-	int current_game = Picker_GetSelectedItem(hwndList);
-	if (current_game >= 0)
-		RemoveGameCustomFolder(current_game);
+	int drvindex = Picker_GetSelectedItem(hwndList);
+	if (drvindex >= 0)
+		RemoveGameCustomFolder(drvindex);
 }
 
 

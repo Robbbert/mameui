@@ -317,7 +317,6 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 			SetJoyGUI(Button_GetCheck(GetDlgItem(hDlg, IDC_JOY_GUI)));
 			SetKeyGUI(Button_GetCheck(GetDlgItem(hDlg, IDC_KEY_GUI)));
 			SetSkipWarnings(Button_GetCheck(GetDlgItem(hDlg, IDC_UI_SKIP_WARNINGS)));
-			SetOverrideRedX(Button_GetCheck(GetDlgItem(hDlg, IDC_OVERRIDE_REDX)));
 			SetHideMouseOnStartup(Button_GetCheck(GetDlgItem(hDlg,IDC_HIDE_MOUSE)));
 
 			if( Button_GetCheck(GetDlgItem(hDlg,IDC_RESET_PLAYSTATS ) ) )
@@ -326,17 +325,20 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 				ResetPlayTime( -1 );
 				bRedrawList = true;
 			}
+
 			value = SendDlgItemMessage(hDlg,IDC_CYCLETIMESEC, TBM_GETPOS, 0, 0);
 			if( GetCycleScreenshot() != value )
 			{
 				SetCycleScreenshot(value);
 			}
+
 			value = SendDlgItemMessage(hDlg,IDC_SCREENSHOT_BORDERSIZE, TBM_GETPOS, 0, 0);
 			if( GetScreenshotBorderSize() != value )
 			{
 				SetScreenshotBorderSize(value);
 				UpdateScreenShot();
 			}
+
 			value = SendDlgItemMessage(hDlg,IDC_HIGH_PRIORITY, TBM_GETPOS, 0, 0);
 			checked = Button_GetCheck(GetDlgItem(hDlg,IDC_STRETCH_SCREENSHOT_LARGER));
 			if (checked != GetStretchScreenShotLarger())
@@ -344,6 +346,15 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 				SetStretchScreenShotLarger(checked);
 				UpdateScreenShot();
 			}
+
+			checked = Button_GetCheck(GetDlgItem(hDlg,IDC_OVERRIDE_REDX));
+			if (checked != GetOverrideRedX())
+			{
+				SetOverrideRedX(checked);
+				// LineUpIcons does just a ResetListView(), which is what we want here
+				PostMessage(GetMainWindow(),WM_COMMAND, MAKEWPARAM(ID_VIEW_LINEUPICONS, false),(LPARAM)NULL);
+			}
+
 			checked = Button_GetCheck(GetDlgItem(hDlg,IDC_FILTER_INHERIT));
 			if (checked != GetFilterInherit())
 			{
@@ -351,6 +362,7 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 				// LineUpIcons does just a ResetListView(), which is what we want here
 				PostMessage(GetMainWindow(),WM_COMMAND, MAKEWPARAM(ID_VIEW_LINEUPICONS, false),(LPARAM)NULL);
 			}
+
 			checked = Button_GetCheck(GetDlgItem(hDlg,IDC_NOOFFSET_CLONES));
 			if (checked != GetOffsetClones())
 			{
@@ -358,6 +370,7 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 				// LineUpIcons does just a ResetListView(), which is what we want here
 				PostMessage(GetMainWindow(),WM_COMMAND, MAKEWPARAM(ID_VIEW_LINEUPICONS, false),(LPARAM)NULL);
 			}
+
 			nCurSelection = ComboBox_GetCurSel(GetDlgItem(hDlg,IDC_SNAPNAME));
 			if (nCurSelection != CB_ERR)
 			{
