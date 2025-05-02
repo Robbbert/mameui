@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 63 -->
+<!-- Number of items in this list = 71 -->
 <softwarelist name="c64_cass" description="c64_cass loose roms">
 	<software name="c6410b594e468ee7">
 		<description>10th Frame</description>
@@ -9,6 +9,46 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="559117">
 				<rom name="10th Frame.tap" size="559117" crc="8a0a50ac" sha1="10b594e468ee7b4542c2972e149cf09995abd910"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64bd2bbdaf49f14">
+		<description>Ugh! (Softek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="903783">
+				<rom name="Ugh! (Softek).tap" size="903783" crc="f7e7cd9b" sha1="bd2bbdaf49f141d335b76ec9298186caef22907f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646cd33bbb70a6e">
+		<description>Underwurlde</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="788973">
+				<rom name="Underwurlde.tap" size="788973" crc="a01170dd" sha1="6cd33bbb70a6ed3feda7b28ef4226fc7a34fac9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6403c0a0c775fb5">
+		<description>Uridium (Version 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="444526">
+				<rom name="Uridium (Version 1).tap" size="444526" crc="ccaf8923" sha1="03c0a0c775fb5e2a4cffbd865205f04d4824b27a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b1feb49ce558f">
+		<description>UWOL - Quest for Money</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="293340">
+				<rom name="UWOL - Quest for Money.tap" size="293340" crc="ab4e85a4" sha1="b1feb49ce558f45adcff25165b8c4d24095ff9c7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -129,6 +169,46 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="152454">
 				<rom name="Vioris (Commodore Format Power Pack 37).tap" size="152454" crc="b2acd592" sha1="51b9112f284242cc1bd28d306c532fa5aacca873"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640198950aa7f21">
+		<description>Vixen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="508166">
+				<rom name="Vixen.tap" size="508166" crc="c862a7fe" sha1="0198950aa7f21fa04ea7dccb7547d45470ffcab8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6457bbc268878f0">
+		<description>Voidrunner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="203416">
+				<rom name="Voidrunner.tap" size="203416" crc="16b31a02" sha1="57bbc268878f0fa02f0132912ce05e04241ba468"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642606c39f0aad6">
+		<description>Vortex Raider</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="1074261">
+				<rom name="Vortex Raider.tap" size="1074261" crc="d6b5fa11" sha1="2606c39f0aad6769620eb09b74de39705a3e0f61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6412a85d6366523">
+		<description>Vultures</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="338782">
+				<rom name="Vultures.tap" size="338782" crc="f079b9f9" sha1="12a85d636652385838b5825b9d99b13784783328"/>
 			</dataarea>
 		</part>
 	</software>

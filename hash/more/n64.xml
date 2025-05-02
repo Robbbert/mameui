@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 165 -->
+<!-- Number of items in this list = 166 -->
 <softwarelist name="n64" description="n64 loose roms">
 	<software name="n64bbc390954c605">
 		<description>(demo)2 Blokes &amp; An Armchair - Nintendo 64 Remix (199x)(Tesko)(PD)[h]</description>
@@ -1579,6 +1579,16 @@
 		<part name="cart" interface="n64_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="Turok 2 - Seeds of Evil.bin.z64" size="33554432" crc="57f1fbf5" sha1="a86af6c2ac9f6d837181f07c0a27f7ee59e7df68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n646639891fe5feb">
+		<description>Voidblade (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="9364480">
+				<rom name="Voidblade (World) (Aftermarket) (Unl).z64" size="9364480" crc="99f29203" sha1="6639891fe5febe16b2bc2fbff50fdc8d23d4868c"/>
 			</dataarea>
 		</part>
 	</software>

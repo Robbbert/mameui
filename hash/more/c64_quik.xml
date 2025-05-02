@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 62 -->
+<!-- Number of items in this list = 99 -->
 <softwarelist name="c64_quik" description="c64_quik loose roms">
 	<software name="c645a76c659226dc">
 		<description>! 14 (19xx)(Shazam!)</description>
@@ -42,6 +42,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c64ab0719f8dfd73">
+		<description>U5 05 (19xx)(Unit 5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5989">
+				<rom name="U5 05 (19xx)(Unit 5).prg" size="5989" crc="7847827d" sha1="ab0719f8dfd7389a93e173f1b0e56bbab231ceb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6454c0a6921b470">
+		<description>U5 06 (19xx)(Unit 5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5306">
+				<rom name="U5 06 (19xx)(Unit 5).prg" size="5306" crc="817fb9b7" sha1="54c0a6921b4707d9c0744939da3022217aea6d42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b3326963ed629">
+		<description>U5 07 (19xx)(Unit 5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5660">
+				<rom name="U5 07 (19xx)(Unit 5).prg" size="5660" crc="94eb2e40" sha1="b3326963ed629f510fd977112b0ab427affde8ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ca8e54db0768f">
+		<description>U5 08 (19xx)(Unit 5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6039">
+				<rom name="U5 08 (19xx)(Unit 5).prg" size="6039" crc="44c05dcc" sha1="ca8e54db0768f6586616ecd60ae43f0b6e79d4c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a11203682247c">
+		<description>U5 09 (19xx)(Unit 5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4524">
+				<rom name="U5 09 (19xx)(Unit 5).prg" size="4524" crc="c1bda5af" sha1="a11203682247c81d7fe2faee26490c57c9f993df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649031b2a4a9f98">
+		<description>UCD 02 (19xx)(United Crackers Division)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="2530">
+				<rom name="UCD 02 (19xx)(United Crackers Division).prg" size="2530" crc="c83012a7" sha1="9031b2a4a9f98d1df3924e9c642fede5ac53b989"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a2d6fbd1e801b">
+		<description>UFO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="1410">
+				<rom name="UFO.prg" size="1410" crc="c1a99b2d" sha1="a2d6fbd1e801b6018ef55d36af468c2a3792700a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6445c2e92cd1dac">
+		<description>UIP 01 (19xx)(United International Pirates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="2414">
+				<rom name="UIP 01 (19xx)(United International Pirates).prg" size="2414" crc="771bee13" sha1="45c2e92cd1dacb3f2531eb38297650166ad31bcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b726db01c1b11">
+		<description>UIP 02 (19xx)(United International Pirates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="1761">
+				<rom name="UIP 02 (19xx)(United International Pirates).prg" size="1761" crc="bd0a5c37" sha1="b726db01c1b1152523a1b115758cd02365a60bdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6424d63de74c4b2">
+		<description>ULTRA MONOPOLE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="31360">
+				<rom name="ULTRA MONOPOLE.PRG" size="31360" crc="e91ec82e" sha1="24d63de74c4b28afd6b198a3a78795ceb833db41"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c6400c26e03e088e">
 		<description>ultra_smash</description>
 		<year>????</year>
@@ -49,6 +149,96 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="7464">
 				<rom name="ultra_smash.t64" size="7464" crc="0ea1659e" sha1="00c26e03e088ef95894d14fa6369b8865aed32a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f29b317de9ef9">
+		<description>UNDERWURLDE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="34058">
+				<rom name="UNDERWURLDE.PRG" size="34058" crc="f46a43a4" sha1="f29b317de9ef9724ca206e02d3db21fec0d24f63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644b38c9110b9b9">
+		<description>under_the_ground_afl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="37760">
+				<rom name="under_the_ground_afl.prg" size="37760" crc="af676214" sha1="4b38c9110b9b9a27b5fd7387bb28c3b39a968a3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f18221f0e845b">
+		<description>Unicess 39 (19xx)(Unicess)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6494">
+				<rom name="Unicess 39 (19xx)(Unicess).prg" size="6494" crc="c5bfefb4" sha1="f18221f0e845b3743793fca8ec94df7addd8c059"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64094ece106c21e">
+		<description>Unicess 40 (19xx)(Unicess)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="1788">
+				<rom name="Unicess 40 (19xx)(Unicess).prg" size="1788" crc="e2d46e3f" sha1="094ece106c21e5830ec1704a15ac795108536ab8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f855eee121a61">
+		<description>Unicess 41 (19xx)(Unicess)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6354">
+				<rom name="Unicess 41 (19xx)(Unicess).prg" size="6354" crc="90287cb6" sha1="f855eee121a61b5e20bd4f53c1f1235bd00578dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c3ef0f1f0c45c">
+		<description>Unicess 42 (19xx)(Unicess)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5112">
+				<rom name="Unicess 42 (19xx)(Unicess).prg" size="5112" crc="a3c3b156" sha1="c3ef0f1f0c45c10dd42002dc5a2fb3acdfe3707b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e755968ea82cc">
+		<description>Unknown 01 (19xx)(Unknown)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6354">
+				<rom name="Unknown 01 (19xx)(Unknown).prg" size="6354" crc="d12c7a26" sha1="e755968ea82cc3935578dc33fa2f37b37667cd01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641bbec0e2d43de">
+		<description>Unknown 02 (19xx)(Unknown)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="2301">
+				<rom name="Unknown 02 (19xx)(Unknown).prg" size="2301" crc="4f2f7a18" sha1="1bbec0e2d43def1ed53ac8e2656cb9680d4e41fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64af12132880f30">
+		<description>Unknown 03 (19xx)(Unknown)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4509">
+				<rom name="Unknown 03 (19xx)(Unknown).prg" size="4509" crc="12a4405a" sha1="af12132880f3001172a007ecfcfbb084839bc3cc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -62,6 +252,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c64f0ab1c0d84732">
+		<description>USA 01 (19xx)(United Softcrack Association)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5720">
+				<rom name="USA 01 (19xx)(United Softcrack Association).prg" size="5720" crc="5b51e8ad" sha1="f0ab1c0d847321079f977a60a2b26db36b597a94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646de9ffda0a2d4">
+		<description>Uuno_Turhapuro.Amersoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="32881">
+				<rom name="Uuno_Turhapuro.Amersoft.prg" size="32881" crc="d245c4ba" sha1="6de9ffda0a2d43435d53a5a74d2693589004a80c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64766cce24d509f">
+		<description>UV KSC I(cable)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="15584">
+				<rom name="UV KSC I(cable).prg" size="15584" crc="eb74d95d" sha1="766cce24d509f455d5e781188c1c1e377d636195"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64eef416613c614">
+		<description>V8 Music (1985-12-31)(Commandos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6904">
+				<rom name="V8 Music (1985-12-31)(Commandos).prg" size="6904" crc="09d5aa78" sha1="eef416613c614a4f2ce7a228621a454d97d6718b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64019c258d073b5">
+		<description>VANOCNI SEZNAM !</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="22156">
+				<rom name="VANOCNI SEZNAM !.PRG" size="22156" crc="7e599a97" sha1="019c258d073b5d114d1ee6f3d76749f55b99f601"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c64903f036ace70f">
 		<description>VELNRSLR</description>
 		<year>????</year>
@@ -69,6 +309,16 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="11078">
 				<rom name="VELNRSLR.P00" size="11078" crc="95e47720" sha1="903f036ace70f606dd5cd154482f0ed99c2e3538"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64cc8d304eeea03">
+		<description>verkeers_rally</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="43980">
+				<rom name="verkeers_rally.prg" size="43980" crc="c161addc" sha1="cc8d304eeea0334759be42082f7491a04026025b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,6 +332,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c647f586c1700ae5">
+		<description>Vermin-Man + Seppl Crackings Team 01 (19xx)(Vermin-Man + Seppl Crackings Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="1373">
+				<rom name="Vermin-Man + Seppl Crackings Team 01 (19xx)(Vermin-Man + Seppl Crackings Team).prg" size="1373" crc="37320360" sha1="7f586c1700ae57c6dc6c067d0f31c0ef661aa9f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f60eccd08d435">
+		<description>Vexed115</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="19571">
+				<rom name="Vexed115.prg" size="19571" crc="7d46a412" sha1="f60eccd08d43565bb11c4966957148911fa52bc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644a8da48702c65">
+		<description>Victory 02 (19xx)(Victory)(NL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5243">
+				<rom name="Victory 02 (19xx)(Victory)(NL).prg" size="5243" crc="230e004b" sha1="4a8da48702c65ee3b5f25fecf2de9ec9c6bf264f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6458f8837bf5e24">
+		<description>vietnam</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="42368">
+				<rom name="vietnam.prg" size="42368" crc="3989a4ab" sha1="58f8837bf5e24519e819ed60673b8ea30eeda15e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b37404629b697">
+		<description>Vikings 01 (19xx)(Vikings)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="3127">
+				<rom name="Vikings 01 (19xx)(Vikings).prg" size="3127" crc="d9c1d685" sha1="b37404629b697f80543218bac444ef96ed25b7f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6434d593e538870">
+		<description>VILLA MARTINI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="9452">
+				<rom name="VILLA MARTINI.prg" size="9452" crc="c2932b49" sha1="34d593e538870279774ba1d8ddfd7a92eaa5af4d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c64755adb5433542">
 		<description>VIPER</description>
 		<year>????</year>
@@ -92,6 +402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c64029e2e9ac1cdb">
+		<description>VLD 01 (19xx)(Vlaardingen Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="6518">
+				<rom name="VLD 01 (19xx)(Vlaardingen Productions).prg" size="6518" crc="ee07ec53" sha1="029e2e9ac1cdb4956ad38e1f23e023c71746deaf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c64a91d6ce111d08">
 		<description>VLNRSNST</description>
 		<year>????</year>
@@ -99,6 +419,56 @@
 		<part name="quik" interface="c64_quik">
 			<dataarea name="quik" size="11413">
 				<rom name="VLNRSNST.P00" size="11413" crc="100ffd10" sha1="a91d6ce111d083b7891158881a09b6f1c46ae872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6433fce99faab22">
+		<description>VRM 01 (19xx)(Vermin-Man)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="771">
+				<rom name="VRM 01 (19xx)(Vermin-Man).prg" size="771" crc="26117182" sha1="33fce99faab2228b1b5ba8733f805f8df35bd2b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64436da423c2d1e">
+		<description>VSN 45 (19xx)(Vision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="3249">
+				<rom name="VSN 45 (19xx)(Vision).prg" size="3249" crc="201d01ed" sha1="436da423c2d1e466140329731679a638682b75a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64901c02df3fd61">
+		<description>VST 37 (19xx)(Varsity)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="5136">
+				<rom name="VST 37 (19xx)(Varsity).prg" size="5136" crc="03faca52" sha1="901c02df3fd6192ce22b13a97c6d5d1e82e99081"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c643b5835fad728d">
+		<description>VST 38 (19xx)(Varsity)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="4453">
+				<rom name="VST 38 (19xx)(Varsity).prg" size="4453" crc="35eecb15" sha1="3b5835fad728d985e98a4af17c8c8e44ca02b41c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6451ab5a0ef06b8">
+		<description>Vuelo (1985)(Load 'n' Run)(es)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c64_quik">
+			<dataarea name="quik" size="38785">
+				<rom name="Vuelo (1985)(Load 'n' Run)(es).prg" size="38785" crc="6d5d5eda" sha1="51ab5a0ef06b83955d338f1b11c1c06925dd7227"/>
 			</dataarea>
 		</part>
 	</software>
