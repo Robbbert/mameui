@@ -7,7 +7,7 @@
 ###########################################################################
 
 BARE_VERS := 0.277
-LONG_VERS := $(BARE_VERS).0
+LONG_VERS := $(BARE_VERS).x
 
 ###########################################################################
 #################   BEGIN USER-CONFIGURABLE OPTIONS   #####################
@@ -35,6 +35,7 @@ LONG_VERS := $(BARE_VERS).0
 # NO_USE_MIDI = 1
 # NO_USE_PORTAUDIO = 1
 # NO_USE_PULSEAUDIO = 1
+# NO_USE_PIPEWIRE = 1
 # USE_TAPTUN = 1
 # USE_PCAP = 1
 # USE_QTDEBUG = 1
@@ -733,6 +734,10 @@ endif
 
 ifdef NO_USE_PULSEAUDIO
 PARAMS += --NO_USE_PULSEAUDIO='$(NO_USE_PULSEAUDIO)'
+endif
+
+ifdef NO_USE_PIPEWIRE
+PARAMS += --NO_USE_PIPEWIRE='$(NO_USE_PIPEWIRE)'
 endif
 
 ifdef USE_QTDEBUG

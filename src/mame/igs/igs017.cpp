@@ -27,7 +27,7 @@ Year + Game                                    PCB        CPU    Sound          
 98  Manguan Caishen (V110C)                    NO-0266    68000  M6295           IGS031 IGS025 IGS026  Battery
 99  Tarzan (V107)                              NO-0228?   Z180   U6295           IGS031 IGS025 IGS029  Battery
 99  Tarzan (V109C)                             NO-0248-1  Z180   U6295           IGS031 IGS025         Battery
-00  Chaoji Da manguan 2 - Jiaqiang Ban (V100C) NO-0271    68000  K668            IGS031 IGS025         Battery
+00  Chaoji Da Manguan 2 - Jiaqiang Ban (V100C) NO-0271    68000  K668            IGS031 IGS025         Battery
 00? Jungle King (V103A)                        NO-0230-1  Z180   U6295           IGS031 IGS025 (N9)    Battery
 00? Super Tarzan (V100I)                       NO-0230-1  Z180   K668            IGS031 IGS025         Battery
 00? Happy Skill (V611IT)                       NO-0281    Z180   K668            IGS031 IGS025         Battery
@@ -38,10 +38,11 @@ Year + Game                                    PCB        CPU    Sound          
                                                                          not present in another set *
 To Do:
 
-- Protection emulation in some games, instead of patching the roms.
-- NVRAM.
+- Protection emulation in some games, instead of patching the ROMs.
+- Do iqblocka and clones, genius6 and clones, tjsb support NVRAM?
 - mgcs: Finish IGS029 protection simulation.
 - jking302us: IGS025 and IGS029 protection simulation.
+- sdmg2: different protection that kicks in after several dozens of hands
 
 Notes:
 
@@ -88,6 +89,7 @@ Notes:
 #include "cpu/m68000/m68000.h"
 #include "cpu/z180/z180.h"
 #include "machine/i8255.h"
+#include "machine/nvram.h"
 #include "machine/ticket.h"
 #include "machine/timer.h"
 #include "sound/okim6295.h"
@@ -698,7 +700,8 @@ public:
 	void init_mgdh() ATTR_COLD;
 	void init_mgdha() ATTR_COLD;
 	void init_sdmg2() ATTR_COLD;
-	void init_sdmg2a() ATTR_COLD;
+	void init_sdmg2754ca() ATTR_COLD;
+	void init_sdmg2754cb() ATTR_COLD;
 	void init_sdmg2p() ATTR_COLD;
 	void init_slqz2() ATTR_COLD;
 	void init_spkrform() ATTR_COLD;
@@ -897,6 +900,7 @@ private:
 	void cpoker2_io(address_map &map) ATTR_COLD;
 	void cpoker2_map(address_map &map) ATTR_COLD;
 	void cpoker2_mux_map(address_map &map) ATTR_COLD;
+	void happyskl_map(address_map &map) ATTR_COLD;
 	void happyskl_io(address_map &map) ATTR_COLD;
 	void happyskl_mux_map(address_map &map) ATTR_COLD;
 	void iqblocka_io(address_map &map) ATTR_COLD;
@@ -1533,7 +1537,7 @@ void igs017_state::init_cpoker2()
 
 // sdmg2
 
-void igs017_state::init_sdmg2()
+void igs017_state::init_sdmg2754ca()
 {
 	const int rom_size = memregion("maincpu")->bytes();
 	u16 * const rom = (u16 *)memregion("maincpu")->base();
@@ -1584,7 +1588,7 @@ void igs017_state::init_sdmg2()
 }
 
 //
-void igs017_state::init_sdmg2a()
+void igs017_state::init_sdmg2754cb()
 {
 	const int rom_size = memregion("maincpu")->bytes();
 	u16 * const rom = (u16 *)memregion("maincpu")->base();
@@ -1629,6 +1633,37 @@ void igs017_state::init_sdmg2a()
 		{
 			x ^= 0x1000;
 		}
+
+		rom[i] = x;
+	}
+}
+
+void igs017_state::init_sdmg2()
+{
+	const int rom_size = memregion("maincpu")->bytes();
+	u16 * const rom = (u16 *)memregion("maincpu")->base();
+
+	for (int i = 0; i < rom_size / 2; i++)
+	{
+		u16 x = rom[i];
+
+		// bit 0 xor layer
+		if (i & 0x20 / 2)
+			if (i & 0x02 / 2)
+				x ^= 0x0001;
+
+		if (!(i & 0x4000 / 2))
+			if (!(i & 0x300 / 2))
+				x ^= 0x0001;
+
+		// bit 9 xor layer
+		if (!(i & 0x20000 / 2))
+			if (i & 0x400 / 2)
+				x ^= 0x0200;
+
+		// bit 12 xor layer
+		if (i & 0x20000 / 2)
+			x ^= 0x1000;
 
 		rom[i] = x;
 	}
@@ -2112,7 +2147,7 @@ void igs017_state::igs_fixed_data_mux_map(address_map &map)
 void igs017_state::iqblocka_map(address_map &map)
 {
 	map(0x00000, 0x0dfff).rom();
-	map(0x0e000, 0x0efff).ram();
+	map(0x0e000, 0x0efff).ram().share("nvram");
 	map(0x0f000, 0x0ffff).ram();
 	map(0x10000, 0x3ffff).rom();
 }
@@ -2250,6 +2285,13 @@ void igs017_state::starzan_mux_map(address_map &map)
 
 
 // happyksl
+
+void igs017_state::happyskl_map(address_map &map)
+{
+	map(0x00000, 0x0dfff).rom();
+	map(0x0e000, 0x0ffff).ram().share("nvram");
+	map(0x10000, 0x3ffff).rom();
+}
 
 void igs017_state::happyskl_io(address_map &map)
 {
@@ -2591,7 +2633,7 @@ u8 igs017_state::mgcs_keys_joy_r()
 void igs017_state::mgcs_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x300000, 0x303fff).ram();
+	map(0x300000, 0x303fff).ram().share("nvram");
 
 	map(0x49c000, 0x49c001).nopr().w(m_igs_mux, FUNC(igs_mux_device::address_w)).umask16(0x00ff); // clr.w dummy read
 	map(0x49c002, 0x49c003).rw(m_igs_mux, FUNC(igs_mux_device::data_r), FUNC(igs_mux_device::data_w)).umask16(0x00ff);
@@ -2615,7 +2657,7 @@ void igs017_state::mgcs_mux_map(address_map &map)
 void igs017_state::mgcsa_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x100000, 0x103fff).ram();
+	map(0x100000, 0x103fff).ram().share("nvram");
 
 	map(0x49c000, 0x49c001).nopr().w(m_igs_mux, FUNC(igs_mux_device::address_w)).umask16(0x00ff); // clr.w dummy read
 	map(0x49c002, 0x49c003).rw(m_igs_mux, FUNC(igs_mux_device::data_r), FUNC(igs_mux_device::data_w)).umask16(0x00ff);
@@ -2629,7 +2671,7 @@ void igs017_state::mgcsa_map(address_map &map)
 void igs017_state::mgcsb_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x300000, 0x303fff).ram();
+	map(0x300000, 0x303fff).ram().share("nvram");
 
 	map(0x49c000, 0x49c001).nopr().w(m_igs_mux, FUNC(igs_mux_device::address_w)).umask16(0x00ff); // clr.w dummy read
 	map(0x49c002, 0x49c003).rw(m_igs_mux, FUNC(igs_mux_device::data_r), FUNC(igs_mux_device::data_w)).umask16(0x00ff);
@@ -2661,7 +2703,7 @@ void igs017_state::sdmg2_map(address_map &map)
 	map(0x002007, 0x002007).w(m_igs_incdec, FUNC(igs_incdec_device::inc_w));
 	map(0x00200b, 0x00200b).r(m_igs_incdec, FUNC(igs_incdec_device::result_r));
 
-	map(0x1f0000, 0x1fffff).ram();
+	map(0x1f0000, 0x1fffff).ram().share("nvram");
 
 	map(0x200000, 0x20ffff).rw(m_igs017_igs031, FUNC(igs017_igs031_device::read), FUNC(igs017_igs031_device::write)).umask16(0x00ff);
 
@@ -2703,7 +2745,7 @@ void igs017_state::sdmg2_mux_map(address_map &map)
 void igs017_state::mgdh_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x600000, 0x603fff).ram();
+	map(0x600000, 0x603fff).ram().share("nvram");
 
 	map(0x876000, 0x876001).nopr().w(m_igs_mux, FUNC(igs_mux_device::address_w)).umask16(0x00ff); // clr.w dummy read
 	map(0x876002, 0x876003).rw(m_igs_mux, FUNC(igs_mux_device::data_r), FUNC(igs_mux_device::data_w)).umask16(0x00ff);
@@ -2752,7 +2794,7 @@ void igs017_state::sdmg2p_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
 
-	map(0x100000, 0x103fff).ram();
+	map(0x100000, 0x103fff).ram().share("nvram");
 
 	map(0x38d000, 0x38d001).nopr().w(m_igs_mux, FUNC(igs_mux_device::address_w)).umask16(0x00ff); // clr.w dummy read
 	map(0x38d002, 0x38d003).rw(m_igs_mux, FUNC(igs_mux_device::data_r), FUNC(igs_mux_device::data_w)).umask16(0x00ff);
@@ -2847,7 +2889,7 @@ void igs017_state::lhzb2_map(address_map &map)
 
 	map(0x100000, 0x103fff).ram().share("igs022:sharedprotram"); // Shared with protection device
 
-	map(0x500000, 0x503fff).ram();
+	map(0x500000, 0x503fff).ram().share("nvram");
 
 	map(0x910000, 0x910001).nopr().w(m_igs_mux, FUNC(igs_mux_device::address_w)).umask16(0x00ff); // clr.w dummy read
 	map(0x910002, 0x910003).rw(m_igs_mux, FUNC(igs_mux_device::data_r), FUNC(igs_mux_device::data_w)).umask16(0x00ff);
@@ -2980,7 +3022,7 @@ void igs017_state::lhzb2a_map(address_map &map)
 	map(0x003207, 0x003207).w(m_igs_incdec, FUNC(igs_incdec_device::inc_w));
 	map(0x00320b, 0x00320b).r(m_igs_incdec, FUNC(igs_incdec_device::result_r));
 
-	map(0x500000, 0x503fff).ram();
+	map(0x500000, 0x503fff).ram().share("nvram");
 //  map(0x910000, 0x910003) accesses appear to be from leftover code where the final checks were disabled
 
 	map(0xb00000, 0xb0ffff).rw(m_igs017_igs031, FUNC(igs017_igs031_device::read), FUNC(igs017_igs031_device::write)).umask16(0x00ff);
@@ -3006,7 +3048,7 @@ void igs017_state::lhzb2a_mux_map(address_map &map)
 void igs017_state::slqz2_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x100000, 0x103fff).ram();
+	map(0x100000, 0x103fff).ram().share("nvram");
 
 	map(0x300000, 0x303fff).ram().share("igs022:sharedprotram"); // Shared with protection device
 
@@ -3053,7 +3095,7 @@ void igs017_state::slqz2_mux_map(address_map &map)
 void igs017_state::jking302us_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x100000, 0x103fff).ram();
+	map(0x100000, 0x103fff).ram().share("nvram"); // TODO: verify once it works
 
 	map(0x638000, 0x638001).nopr().w(m_igs_mux, FUNC(igs_mux_device::address_w)).umask16(0x00ff); // clr.w dummy read
 	map(0x638002, 0x638003).rw(m_igs_mux, FUNC(igs_mux_device::data_r), FUNC(igs_mux_device::data_w)).umask16(0x00ff);
@@ -4367,6 +4409,8 @@ void igs017_state::iqblocka(machine_config &config)
 	m_maincpu->set_addrmap(AS_IO, &igs017_state::iqblocka_io);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::iqblocka_interrupt), "screen", 0, 1);
 
+	// NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
+
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::iqblocka_mux_map);
 
@@ -4424,6 +4468,8 @@ void igs017_state::tarzan(machine_config &config)
 	m_maincpu->set_addrmap(AS_OPCODES, &igs017_state::decrypted_opcodes_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::iqblocka_interrupt), "screen", 0, 1);
 
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
+
 	// I/O
 	m_igs_mux->set_addrmap(0, &igs017_state::tarzan_mux_map);
 
@@ -4457,6 +4503,8 @@ void igs017_state::starzan(machine_config &config)
 	m_maincpu->set_addrmap(AS_OPCODES, &igs017_state::decrypted_opcodes_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::iqblocka_interrupt), "screen", 0, 1);
 
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
+
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::starzan_mux_map);
 
@@ -4486,10 +4534,12 @@ void igs017_state::happyskl(machine_config &config)
 	base_machine_oki(config, 16_MHz_XTAL / 16);
 
 	HD64180RP(config, m_maincpu, 16_MHz_XTAL);
-	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::iqblocka_map);
+	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::happyskl_map);
 	m_maincpu->set_addrmap(AS_IO, &igs017_state::happyskl_io);
 	m_maincpu->set_addrmap(AS_OPCODES, &igs017_state::decrypted_opcodes_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::iqblocka_interrupt), "screen", 0, 1);
+
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::happyskl_mux_map);
@@ -4515,6 +4565,8 @@ void igs017_state::cpoker2(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::cpoker2_map);
 	m_maincpu->set_addrmap(AS_IO, &igs017_state::cpoker2_io);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::iqblocka_interrupt), "screen", 0, 1);
+
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::cpoker2_mux_map);
@@ -4577,6 +4629,8 @@ void igs017_state::spkrform(machine_config &config)
 	m_maincpu->set_addrmap(AS_IO, &igs017_state::spkrform_io);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::iqblocka_interrupt), "screen", 0, 1);
 
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
+
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::spkrform_mux_map);
 
@@ -4616,6 +4670,8 @@ void igs017_state::mgcs(machine_config &config)
 	M68000(config, m_maincpu, 22_MHz_XTAL / 2);
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::mgcs_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::mgcs_interrupt), "screen", 0, 1);
+
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::mgcs_mux_map);
@@ -4660,6 +4716,8 @@ void igs017_state::lhzb2(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::lhzb2_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::mgcs_interrupt), "screen", 0, 1);
 
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
+
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::lhzb2_mux_map);
 
@@ -4694,6 +4752,8 @@ void igs017_state::lhzb2a(machine_config &config)
 	M68000(config, m_maincpu, 22_MHz_XTAL / 2);
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::lhzb2a_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::mgcs_interrupt), "screen", 0, 1);
+
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
 	MCFG_MACHINE_RESET_OVERRIDE(igs017_state, lhzb2a)
 
@@ -4732,6 +4792,8 @@ void igs017_state::slqz2(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::slqz2_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::mgcs_interrupt), "screen", 0, 1);
 
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
+
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::slqz2_mux_map);
 
@@ -4760,6 +4822,8 @@ void igs017_state::sdmg2(machine_config &config)
 	M68000(config, m_maincpu, 22_MHz_XTAL / 2);
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::sdmg2_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::mgcs_interrupt), "screen", 0, 1);
+
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::sdmg2_mux_map);
@@ -4796,6 +4860,8 @@ void igs017_state::mgdha(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::mgdh_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::mgdh_interrupt), "screen", 0, 1);
 
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
+
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::mgdha_mux_map);
 
@@ -4822,6 +4888,8 @@ void igs017_state::sdmg2p(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::sdmg2p_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::mgcs_interrupt), "screen", 0, 1);
 
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
+
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::sdmg2p_mux_map);
 
@@ -4841,6 +4909,8 @@ void igs017_state::jking302us(machine_config &config)
 	M68000(config, m_maincpu, 22_MHz_XTAL / 2);
 	m_maincpu->set_addrmap(AS_PROGRAM, &igs017_state::jking302us_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(igs017_state::mgdh_interrupt), "screen", 0, 1);
+
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
 	// i/o
 	m_igs_mux->set_addrmap(0, &igs017_state::jking302us_mux_map);
@@ -5284,9 +5354,9 @@ Notes:
 
 ***************************************************************************/
 
-ROM_START( sdmg2 )
+ROM_START( sdmg2754ca )
 	ROM_REGION( 0x80000, "maincpu", 0 )
-	ROM_LOAD16_WORD_SWAP( "p0900.u25", 0x00000, 0x80000,CRC(43366f51) SHA1(48dd965dceff7de15b43c2140226a8b17a792dbc) )
+	ROM_LOAD16_WORD_SWAP( "p0900.u25", 0x00000, 0x80000, CRC(43366f51) SHA1(48dd965dceff7de15b43c2140226a8b17a792dbc) )
 
 	ROM_REGION( 0x280000, "igs017_igs031:sprites", 0 )
 	ROM_LOAD( "m0901.u5", 0x000000, 0x200000, CRC(9699db24) SHA1(50fc2f173c20b48d10595f01f1e9545f1b13a61b) ) // FIXED BITS (xxxxxxxx0xxxxxxx)
@@ -5299,9 +5369,9 @@ ROM_START( sdmg2 )
 	ROM_LOAD( "s0903.u15", 0x00000, 0x80000, CRC(ae5a441c) SHA1(923774ef73ab0f70e0db1738a4292dcbd70d2384) )
 ROM_END
 
-ROM_START( sdmg2a ) // supposedly earlier / easier, but reports same version as the other set
+ROM_START( sdmg2754cb ) // supposedly earlier / easier, but reports same version as sdmg2754ca
 	ROM_REGION( 0x80000, "maincpu", 0 )
-	ROM_LOAD16_WORD_SWAP( "p0900.u25", 0x00000, 0x80000,CRC(1afc95d8) SHA1(924e198437359beec2abe6ee42a985f63d70b7e3) ) // SLDH
+	ROM_LOAD16_WORD_SWAP( "p0900.u25", 0x00000, 0x80000, CRC(1afc95d8) SHA1(924e198437359beec2abe6ee42a985f63d70b7e3) ) // SLDH
 
 	ROM_REGION( 0x280000, "igs017_igs031:sprites", 0 )
 	ROM_LOAD( "m0901.u5", 0x000000, 0x200000, CRC(9699db24) SHA1(50fc2f173c20b48d10595f01f1e9545f1b13a61b) ) // FIXED BITS (xxxxxxxx0xxxxxxx)
@@ -5312,6 +5382,21 @@ ROM_START( sdmg2a ) // supposedly earlier / easier, but reports same version as 
 
 	ROM_REGION( 0x80000, "oki", 0 )
 	ROM_LOAD( "s0903.u15", 0x00000, 0x80000, CRC(ae5a441c) SHA1(923774ef73ab0f70e0db1738a4292dcbd70d2384) )
+ROM_END
+
+ROM_START( sdmg2 ) // C5220P001 PCB
+	ROM_REGION( 0x80000, "maincpu", 0 )
+	ROM_LOAD16_WORD_SWAP( "rom.u16", 0x00000, 0x80000, CRC(362800e8) SHA1(00d93002272b1f3171ca84e67822eb31f760191f) )
+
+	ROM_REGION( 0x280000, "igs017_igs031:sprites", 0 )
+	ROM_LOAD( "m0205.u6", 0x000000, 0x200000, BAD_DUMP CRC(9699db24) SHA1(50fc2f173c20b48d10595f01f1e9545f1b13a61b) ) // ROM didn't read correctly, taken from other sets
+	ROM_LOAD( "rom.u5",   0x200000, 0x080000, CRC(3298b13b) SHA1(13b21ddeed368b7f4fea1408c8fc511244342faf) ) // FIXED BITS (xxxxxxxx0xxxxxxx)
+
+	ROM_REGION( 0x20000, "igs017_igs031:tilemaps", 0 )
+	ROM_LOAD( "text.u7", 0x000000, 0x020000, CRC(cb34cbc0) SHA1(ceedbdda085fd1acc9a575502bdf7cf998f54f05) )
+
+	ROM_REGION( 0x80000, "oki", 0 )
+	ROM_LOAD( "s0206.u3", 0x00000, 0x80000, CRC(ae5a441c) SHA1(923774ef73ab0f70e0db1738a4292dcbd70d2384) )
 ROM_END
 
 /***************************************************************************
@@ -6140,8 +6225,9 @@ GAME ( 1996,  iqblocka,    iqblock,  iqblocka,   iqblocka,    igs017_state, init
 GAME ( 1997,  iqblockf,    iqblock,  iqblockf,   iqblockf,    igs017_state, init_iqblocka,   ROT0, "IGS", "IQ Block (V113FR, gambling)",                                        0 )
 GAME ( 1997,  mgdh,        0,        mgdh,       mgdh,        igs017_state, init_mgdh,       ROT0, "IGS", "Manguan Daheng (Taiwan, V125T1)",                                    MACHINE_IMPERFECT_COLORS | MACHINE_UNEMULATED_PROTECTION) // 滿貫大亨, wrong colors in betting screen, game id check (patched out)
 GAME ( 1997,  mgdha,       mgdh,     mgdha,      mgdh,        igs017_state, init_mgdha,      ROT0, "IGS", "Manguan Daheng (Taiwan, V123T1)",                                    0 ) // 滿貫大亨
-GAME ( 1997,  sdmg2,       0,        sdmg2,      sdmg2,       igs017_state, init_sdmg2,      ROT0, "IGS", "Chaoji Da Manguan II (China, V754C, set 1)",                         0 ) // 超級大滿貫II
-GAME ( 1997,  sdmg2a,      sdmg2,    sdmg2,      sdmg2,       igs017_state, init_sdmg2a,     ROT0, "IGS", "Chaoji Da Manguan II (China, V754C, set 2)",                         0 ) // 超級大滿貫II
+GAME ( 1997,  sdmg2,       0,        sdmg2,      sdmg2,       igs017_state, init_sdmg2,      ROT0, "IGS", "Chaoji Da Manguan II (China, V765C)",                                MACHINE_UNEMULATED_PROTECTION | MACHINE_NOT_WORKING ) // 超級大滿貫II
+GAME ( 1997,  sdmg2754ca,  sdmg2,    sdmg2,      sdmg2,       igs017_state, init_sdmg2754ca, ROT0, "IGS", "Chaoji Da Manguan II (China, V754C, set 1)",                         0 ) // 超級大滿貫II
+GAME ( 1997,  sdmg2754cb,  sdmg2,    sdmg2,      sdmg2,       igs017_state, init_sdmg2754cb, ROT0, "IGS", "Chaoji Da Manguan II (China, V754C, set 2)",                         0 ) // 超級大滿貫II
 GAME ( 1997,  tjsb,        0,        tjsb,       tjsb,        igs017_state, init_tjsb,       ROT0, "IGS", "Tian Jiang Shen Bing (China, V137C)",                                MACHINE_UNEMULATED_PROTECTION ) // 天將神兵, fails the bonus round protection check (if enabled via DSW), see e.g. demo mode
 GAME ( 1998,  genius6,     0,        genius6,    genius6,     igs017_state, init_iqblocka,   ROT0, "IGS", "Genius 6 (V110F)",                                                   0 ) // shows Chinese text in puzzle game
 GAME ( 1997,  genius6a,    genius6,  genius6,    genius6,     igs017_state, init_iqblocka,   ROT0, "IGS", "Genius 6 (V133F)",                                                   0 ) // clone because it has older copyright year
