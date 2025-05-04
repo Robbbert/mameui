@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 657 -->
+<!-- Number of items in this list = 661 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1329,6 +1329,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Crawlers v1.1 (2023)(Pixel Phenix).rom" size="49152" crc="5a8c2b68" sha1="39de6e4cccfa304fea8d163fd5881c65a1b91b5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxadd2000147fb9">
+		<description>Crawlers v1.2.2 (2024)(Pixel Phenix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Crawlers v1.2.2 (2024)(Pixel Phenix).rom" size="49152" crc="c21b0f77" sha1="add2000147fb93f28d59d5932dabd7614c84f539"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4062,6 +4072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx5ccc7d2a90c8f">
+		<description>Obake-Chan (2025)(Meichnpp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Obake-Chan (2025)(Meichnpp).rom" size="753664" crc="f077d5c9" sha1="5ccc7d2a90c8fbf16cb6d12693aa2300e97216a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx00a3b5b11d19c">
 		<description>Oceano (2015)(EgoTrip)</description>
 		<year>????</year>
@@ -4419,6 +4439,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Pon Pon v1.51 (2022)(Hiromasa Tanaka).rom" size="16384" crc="6a176438" sha1="c3881ca081d87adca9aa679aa29d3e2089d1caaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe04141f0ed49c">
+		<description>Poppie (2025)(Meichnpp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Poppie (2025)(Meichnpp).rom" size="753664" crc="33c9e1b0" sha1="e04141f0ed49c0a7501a4a895be8ffa5c2ee71a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5059,6 +5089,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Spellbound (2023)(Mastropiero).rom" size="32768" crc="4883feee" sha1="56aac1c639e773e130c5851ac70de022e2ad6ebe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx85cd48df69b9a">
+		<description>Spellbound (2023)(Mastropiero)[Bugfix Revision]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Spellbound (2023)(Mastropiero)[Bugfix Revision].rom" size="32768" crc="e9f7fa8f" sha1="85cd48df69b9a3046036683a309f20f5cddce6e3"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 180 -->
+<!-- Number of items in this list = 182 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1772,6 +1772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce099cc034af590">
+		<description>Xevious - Fardraut Densetsu T-Chs v1.0 (2025)(Feiyue Wujin Ankong)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Xevious - Fardraut Densetsu T-Chs v1.0 (2025)(Feiyue Wujin Ankong).pce" size="262144" crc="dcd579cf" sha1="099cc034af590f249fce61526b2bbdcc3609103c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce925bb57964fdf">
 		<description>Xshoot_PCE_SWAPPED</description>
 		<year>????</year>
@@ -1799,6 +1809,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="youkai douchuuki (japan).pce" size="262144" crc="f131b706" sha1="f96913628138605374f2acc493c5c59dc635018a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce6c229dc9515ce">
+		<description>Zero 4 Champ (Japan) (v1.5) (T-En by Supper v1.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="688128">
+				<rom name="Zero 4 Champ (Japan) (v1.5) (T-En by Supper v1.0).pce" size="688128" crc="de8da942" sha1="6c229dc9515cec5c93ad4ab93b74efcb20e655c8"/>
 			</dataarea>
 		</part>
 	</software>

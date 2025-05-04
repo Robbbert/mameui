@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3823 -->
+<!-- Number of items in this list = 3826 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -12072,6 +12072,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns95e2666edee75">
+		<description>Illusion of Gaia (USA) [T-En by GaiaLabs v1.30] [Relocalized] [Enhanced title] [Region lock removed]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Illusion of Gaia (USA) [T-En by GaiaLabs v1.30] [Relocalized] [Enhanced title] [Region lock removed].sfc" size="4194304" crc="ad48ea33" sha1="95e2666edee75f73810f5a60234a1b92650e6da3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse748d352ea243">
+		<description>Illusion of Gaia (USA) [T-En by GaiaLabs v1.30] [Relocalized] [Enhanced title]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Illusion of Gaia (USA) [T-En by GaiaLabs v1.30] [Relocalized] [Enhanced title].sfc" size="4194304" crc="d4937c51" sha1="e748d352ea2431c2fd67cadbbc2a66cdf11da0a6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6e69b087f25cc">
 		<description>Illusion of Gaia - 003 V1.0</description>
 		<year>????</year>
@@ -19589,6 +19609,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="OTLmario.sfc" size="2097152" crc="f627ebf3" sha1="db187b811268af6f3ed703b78c47dd8c5b09c371"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4430715f69233">
+		<description>Otogirisou (Japan) [T-En by ButThouMust v1.1] honorifics off</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Otogirisou (Japan) [T-En by ButThouMust v1.1] honorifics off.sfc" size="1572864" crc="fa48be53" sha1="4430715f69233794becc90a33b942801f5e80704"/>
 			</dataarea>
 		</part>
 	</software>

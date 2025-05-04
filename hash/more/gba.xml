@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 258 -->
+<!-- Number of items in this list = 261 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -772,6 +772,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbac0b40728edbfa">
+		<description>Grim Adventures of Billy &amp; Mandy, The (USA) (Beta) (2006-08-15)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Grim Adventures of Billy &amp; Mandy, The (USA) (Beta) (2006-08-15).gba" size="8388608" crc="67a51c79" sha1="c0b40728edbfab7d1989b7943aa40f83f1611a7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba66a1475b8733c">
+		<description>Guru Logichamp (Japan) [T-En by Normmatt] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5571076">
+				<rom name="Guru Logichamp (Japan) [T-En by Normmatt] [i].gba" size="5571076" crc="db6fd3da" sha1="66a1475b8733c51605277bebeccecb9ba8bfdb52"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba255432a07d0ea">
 		<description>hamutaro4-a84e</description>
 		<year>????</year>
@@ -879,6 +899,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="Klonoa Heroes - Densetsu no Star Medal (Japan) (patched).gba" size="33554432" crc="05e23b9b" sha1="8dc0a293a3ded24f5a07e504d9b35e11c9a73ad3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba566d9249f707d">
+		<description>Kururin Paradise (Japan) [T-En by Dimedime v1.1.1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Kururin Paradise (Japan) [T-En by Dimedime v1.1.1].gba" size="8388608" crc="79023342" sha1="566d9249f707dd0de1ce8ba99c8d37e15fde7e48"/>
 			</dataarea>
 		</part>
 	</software>

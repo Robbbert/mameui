@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1939 -->
+<!-- Number of items in this list = 1940 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5539,6 +5539,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2359296">
 				<rom name="Dyna Brothers 2 (J) [!].bin" size="2359296" crc="d9a431e3" sha1="680a3e0bae9fd6eed972040681afb323b3fd3190"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9895eeae7e56f">
+		<description>Dyna Brothers 2 (Japan) [T-En by cyberbob61 v0.1] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dyna Brothers 2 (Japan) [T-En by cyberbob61 v0.1] [i].md" size="2097152" crc="93ae7314" sha1="9895eeae7e56fad659fedaf7d68b4bb3d9e3cc8f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11493,12 +11503,12 @@
 		</part>
 	</software>
 	<software name="genbdfa78fbcf0b0">
-		<description>P-47 II MD - The Freedom Star (2025)(City Connection)</description>
+		<description>P-47 II - The Freedom Star (World) (City Connection)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="P-47 II MD - The Freedom Star (2025)(City Connection).md" size="1048576" crc="fe9b4c7f" sha1="bdfa78fbcf0b0cd6a4740a92a2640d95cb074551"/>
+				<rom name="P-47 II - The Freedom Star (World) (City Connection).md" size="1048576" crc="fe9b4c7f" sha1="bdfa78fbcf0b0cd6a4740a92a2640d95cb074551"/>
 			</dataarea>
 		</part>
 	</software>
