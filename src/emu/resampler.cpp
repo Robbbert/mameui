@@ -231,7 +231,7 @@ u32 audio_resampler_hq::compute_gcd(u32 fs, u32 ft)
 
 u32 audio_resampler_hq::history_size() const
 {
-	return m_order_per_lane;
+	return m_order_per_lane + m_skip + 1;
 }
 
 void audio_resampler_hq::apply(const emu::detail::output_buffer_flat<sample_t> &src, std::vector<sample_t> &dest, u64 dest_sample, u32 srcc, float gain, u32 samples) const
@@ -382,7 +382,7 @@ audio_resampler_lofi::audio_resampler_lofi(u32 fs, u32 ft)
 
 u32 audio_resampler_lofi::history_size() const
 {
-	return 5 * m_source_divide;
+	return 5 * m_source_divide + m_fs / m_ft + 1;
 }
 
 void audio_resampler_lofi::apply(const emu::detail::output_buffer_flat<sample_t> &src, std::vector<sample_t> &dest, u64 dest_sample, u32 srcc, float gain, u32 samples) const
@@ -417,7 +417,7 @@ void audio_resampler_lofi::apply(const emu::detail::output_buffer_flat<sample_t>
 
 	sample_t *d = dest.data();
 	for(u32 sample = 0; sample != samples; sample++) {
-		*d++ = gain * (- s0 * interpolation_table[0][0x1000-phase] + s1 * interpolation_table[1][0x1000-phase] + s2 * interpolation_table[1][phase] - s3 * interpolation_table[0][phase]);
+		*d++ += gain * (- s0 * interpolation_table[0][0x1000-phase] + s1 * interpolation_table[1][0x1000-phase] + s2 * interpolation_table[1][phase] - s3 * interpolation_table[0][phase]);
 
 		phase += m_step;
 		if(phase & 0x1000) {
