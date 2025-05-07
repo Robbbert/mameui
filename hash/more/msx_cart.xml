@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 661 -->
+<!-- Number of items in this list = 668 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -552,6 +552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx8c48e356f42a5">
+		<description>Bakerman v2.0 (2023)(GameCast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Bakerman v2.0 (2023)(GameCast).rom" size="753664" crc="7a46a9d5" sha1="8c48e356f42a53de42b96f2eca6334207441c674"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx1f883cbbc6e54">
 		<description>Balloon Pop EX (2022)(Chien Loco)</description>
 		<year>????</year>
@@ -649,6 +659,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="753664">
 				<rom name="Beep v1.2 (2025)(Breinthee).rom" size="753664" crc="c04814ce" sha1="23aab44125e5655ef4dab41ea412d41e9c122805"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb24dfb9658a6b">
+		<description>Beep v1.5 (2025)(Breinthee)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Beep v1.5 (2025)(Breinthee).rom" size="32768" crc="edf6e3ae" sha1="b24dfb9658a6b7236c2ed20f0c76d573e4c34a5c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1089,6 +1109,26 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Castle Excellent(F).rom" size="32768" crc="ae6800a0" sha1="cb35e8c3a0a3e92281810d5b0eb886fbb1e461cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx902d109e4ff45">
+		<description>Castle Tomb (2009)(AG Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Castle Tomb (2009)(AG Software).rom" size="16384" crc="811d91c1" sha1="902d109e4ff452471b11936039a472cbee81a902"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx808586a05add3">
+		<description>Castle Tomb v2.0 (2023)(GameCast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Castle Tomb v2.0 (2023)(GameCast).rom" size="753664" crc="d8fa61e4" sha1="808586a05add32bb28d5b768d7f65045917b6778"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5532,6 +5572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxf595eaffd1fb1">
+		<description>Titan UFO v1.1 (2024)(GameCast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Titan UFO v1.1 (2024)(GameCast).rom" size="753664" crc="7a092d6e" sha1="f595eaffd1fb128b99d2779c8b4326f236ce790c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx174437bfb20e2">
 		<description>Top Roller (1984)(Jaleco)</description>
 		<year>????</year>
@@ -5619,6 +5669,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Tragaperras - MSxNAKE (2005) [3185].rom" size="131072" crc="97640807" sha1="4d985a970fe70c79d4ff885caec17355cf3e7b6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1f65694992632">
+		<description>Trapox (2022)(GameCast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Trapox (2022)(GameCast).rom" size="753664" crc="4446a3ff" sha1="1f65694992632b23047ecb0c6c99979b6e02a60d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5859,6 +5919,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="WashMan v1.5 - GAMECAST Entertainment (2022)[KonamiSCC].rom" size="65536" crc="3ba49b63" sha1="c363d1f966ea205e7a6deb4e114d05f99f49a143"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx109ab867f7f80">
+		<description>Washman v3.4 (2022)(GameCast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Washman v3.4 (2022)(GameCast).rom" size="753664" crc="0ec0a759" sha1="109ab867f7f80e756db0bcf378542caf54bdadb7"/>
 			</dataarea>
 		</part>
 	</software>

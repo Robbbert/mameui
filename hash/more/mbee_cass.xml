@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 236 -->
+<!-- Number of items in this list = 258 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
+	<software name="bee5f77b519a2abb">
+		<description>(NE)digitalker_300b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1851232">
+				<rom name="(NE)digitalker_300b.wav" size="1851232" crc="942d9e8c" sha1="5f77b519a2abbf1629f7fd86d5d80478e233ff06"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee160d521e7ac99">
 		<description>[-]Abecednik</description>
 		<year>????</year>
@@ -49,6 +59,196 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="3367500">
 				<rom name="[-]chase+.wav" size="3367500" crc="1ac3b6d6" sha1="f19bbac10c3e8bfb0c835a6408c96e86b9d6bb6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee062a82a42bc2b">
+		<description>[-]dataman_300b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4885668">
+				<rom name="[-]dataman_300b.wav" size="4885668" crc="569ea6d4" sha1="062a82a42bc2bca369f4307255185074f2b4bc01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee13d50de7bbdb8">
+		<description>[-]datbas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5768560">
+				<rom name="[-]datbas.wav" size="5768560" crc="a5f07b42" sha1="13d50de7bbdb8610c7c83299e0a23abfc032f211"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0803caf9e122e">
+		<description>[-]Defense Command</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="14550">
+				<rom name="[-]Defense Command.tap" size="14550" crc="2691fbed" sha1="0803caf9e122eb0d0f2fbb5689fa734303e5d6c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3b475dc254495">
+		<description>[-]Defense Command</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1346004">
+				<rom name="[-]Defense Command.wav" size="1346004" crc="5534574a" sha1="3b475dc25449594421a28780530837e2b2bafd70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefffc9fa7dda7f">
+		<description>[-]demkey</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="10820144">
+				<rom name="[-]demkey.wav" size="10820144" crc="4bdc2448" sha1="fffc9fa7dda7f8d68c734a515bbdc887f9c2933c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee79a8842d1f444">
+		<description>[-]demo1_96k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="26339457">
+				<rom name="[-]demo1_96k.wav" size="26339457" crc="cae4c599" sha1="79a8842d1f4444e3c95ef6e0b9e12287ed478498"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee23f0ade83f80e">
+		<description>[-]depth_charge</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1903986">
+				<rom name="[-]depth_charge.wav" size="1903986" crc="883fcc49" sha1="23f0ade83f80eba8b0cbc7be61cee910a13de1d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0958440a4dabd">
+		<description>[-]destroyer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3460376">
+				<rom name="[-]destroyer.wav" size="3460376" crc="4dcfcf58" sha1="0958440a4dabd30de03c11d540f5d96fc16ff1c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2329a232aa452">
+		<description>[-]Disassembler(exec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="8548615">
+				<rom name="[-]Disassembler(exec).wav" size="8548615" crc="3e71ae6d" sha1="2329a232aa45231dbc15ca84a02efd68219fd85c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee6be7e43cb2fc">
+		<description>[-]disassembler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2640370">
+				<rom name="[-]disassembler.wav" size="2640370" crc="8d010246" sha1="e6be7e43cb2fc4462c098c8df417b38a1a891fa9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4061c9e0dace6">
+		<description>[-]dodgem</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="902922">
+				<rom name="[-]dodgem.wav" size="902922" crc="7d432280" sha1="4061c9e0dace654a6e23b583633bbbdd09277645"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0a391c3ad8573">
+		<description>[-]Dodgem96k1 (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5973483">
+				<rom name="[-]Dodgem96k1 (2).wav" size="5973483" crc="dfff723b" sha1="0a391c3ad8573fa93a99a493144ba7f3f6f91483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef4b0369649fb7">
+		<description>[-]dodgem96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5520961">
+				<rom name="[-]dodgem96k1.wav" size="5520961" crc="3191d90e" sha1="f4b0369649fb7ebbb95665e5820519e4c1014518"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0938fb67773bb">
+		<description>[-]Dodgem96k2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5976044">
+				<rom name="[-]Dodgem96k2.wav" size="5976044" crc="659e62ef" sha1="0938fb67773bbe79707262ac73cb0e74bae06db4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beedfd941761dea4">
+		<description>[-]donut (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="12959">
+				<rom name="[-]donut (2).tap" size="12959" crc="e83ba7d7" sha1="dfd941761dea40f72521bbe4e3e43413360c6b65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3b6b829586b3a">
+		<description>[-]donut</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="13066">
+				<rom name="[-]donut.tap" size="13066" crc="2d779261" sha1="3b6b829586b3aaec042bd4917e1211c133145d2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5ca1023739703">
+		<description>[-]donut</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1215412">
+				<rom name="[-]donut.wav" size="1215412" crc="6a11bbd5" sha1="5ca10237397032b036483b3705d676cb3b432120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeddbb1d0208a92">
+		<description>[-]dumpha (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1184494">
+				<rom name="[-]dumpha (2).wav" size="1184494" crc="15543ac7" sha1="ddbb1d0208a9244f20d9e7e0f5dc8d2a16ccd0c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6b95b806a6143">
+		<description>[-]dumpha</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="893366">
+				<rom name="[-]dumpha.wav" size="893366" crc="d0875609" sha1="6b95b806a61431f9835d8ee19ec9bf895262f64b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1792,6 +1992,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beeea84d347c2c8a">
+		<description>[-]Sword Quest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2064172">
+				<rom name="[-]Sword Quest.wav" size="2064172" crc="f7dee054" sha1="ea84d347c2c8a4257295b3fc5a9fbc5a2573e949"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee9c8c43c3fff89">
 		<description>[-]sword_quest</description>
 		<year>????</year>
@@ -2359,6 +2569,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="14652">
 				<rom name="[ic]Vexed.tap" size="14652" crc="2a4619b7" sha1="1774ef7939aa7eac438d0016009840bb2086f8ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee4a7198ed467db">
+		<description>[ppc]Swamp of Evil</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1046452">
+				<rom name="[ppc]Swamp of Evil.wav" size="1046452" crc="8393e950" sha1="4a7198ed467db745dad82f7401b28c01f1a3378d"/>
 			</dataarea>
 		</part>
 	</software>

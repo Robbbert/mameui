@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3826 -->
+<!-- Number of items in this list = 3827 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3719,6 +3719,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="BeginContestEntry (SMW1 Hack).sfc" size="2097152" crc="59b42c23" sha1="8ba10da419c6141aa94942fabf02b370101b82aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns05a71b38a66f2">
+		<description>Benkei Gaiden - Suna no Shou (J)(1992)(Sunsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Benkei Gaiden - Suna no Shou (J)(1992)(Sunsoft).sfc" size="1572864" crc="2743017d" sha1="05a71b38a66f285564ec8447ff4877db74387860"/>
 			</dataarea>
 		</part>
 	</software>

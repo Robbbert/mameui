@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 446 -->
+<!-- Number of items in this list = 473 -->
 <softwarelist name="c16_quik" description="c16_quik loose roms">
 	<software name="c165c5896a8a7806">
 		<description>007</description>
@@ -179,6 +179,276 @@
 		<part name="quik" interface="c16_quik">
 			<dataarea name="quik" size="39875">
 				<rom name="7_Up_Spot.prg" size="39875" crc="432246ad" sha1="e9225b2d27fc81a299602dedf8fcdc7baaeb70cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161523c0be6c359">
+		<description>Boomby_Adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="23833">
+				<rom name="Boomby_Adventure.prg" size="23833" crc="cc5d1030" sha1="1523c0be6c359defe834303c8a20d9d01457c646"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ae1f6bd3845d9">
+		<description>Booty[Sys4120]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Booty[Sys4120].prg" size="12289" crc="8868829e" sha1="ae1f6bd3845d9300c0bb8af5f7e26bf1c88eaf31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169ed7fd47b9680">
+		<description>Bosszuvagy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="31223">
+				<rom name="Bosszuvagy.prg" size="31223" crc="b7564d61" sha1="9ed7fd47b9680608796cc80153e5f94f15418e44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ca00adf78222d">
+		<description>Boulder_Dash</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="17153">
+				<rom name="Boulder_Dash.prg" size="17153" crc="dbdeef8b" sha1="ca00adf78222d9dc35202ce9508c602d3ffbc21d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169ee9f2b99c5a1">
+		<description>Boulder_Dash_+</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12501">
+				<rom name="Boulder_Dash_+.prg" size="12501" crc="ea75ce34" sha1="9ee9f2b99c5a1ad37437c103e3e3c481a51091da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1613530bd30b242">
+		<description>Boulder_Dash_13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="15895">
+				<rom name="Boulder_Dash_13.prg" size="15895" crc="379fa9b7" sha1="13530bd30b2423389585b0b2ec6c33743cfffb2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e1c57474fdf34">
+		<description>Boulder_Dash_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27393">
+				<rom name="Boulder_Dash_2.prg" size="27393" crc="f741e4cf" sha1="e1c57474fdf342b0abf4c1cd49da278022e7bda3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166e936f2147aff">
+		<description>Boulder_Dash_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="14550">
+				<rom name="Boulder_Dash_3.prg" size="14550" crc="5493e5f6" sha1="6e936f2147aff0a3b9416046158bcec0c7a73c69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162c8bda8df3666">
+		<description>Boulder_Dash_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="16642">
+				<rom name="Boulder_Dash_4.prg" size="16642" crc="45182b34" sha1="2c8bda8df3666e8399dba843efc2f486c54768b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1649b3db9507281">
+		<description>Boulder_Dash_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="15446">
+				<rom name="Boulder_Dash_5.prg" size="15446" crc="226bf8d7" sha1="49b3db9507281e4e17e70e87a53006e50f37d291"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1660530336e7409">
+		<description>Boulder_Dash_6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="15645">
+				<rom name="Boulder_Dash_6.prg" size="15645" crc="40d68cf7" sha1="60530336e74095c0e097b2a7f4dc45b841c6eb1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16704a618356c15">
+		<description>Bounce_Out</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2106">
+				<rom name="Bounce_Out.prg" size="2106" crc="bddbc761" sha1="704a618356c15b642f843312e86cdc45bf84525c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16aa7bd9e48fd8c">
+		<description>Bounty_Hunter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="23225">
+				<rom name="Bounty_Hunter.prg" size="23225" crc="4f1946bc" sha1="aa7bd9e48fd8cbb0ed717b4ef8e7ac8008282d65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169932cca1b1548">
+		<description>Bowling</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="4599">
+				<rom name="Bowling.prg" size="4599" crc="f22f625d" sha1="9932cca1b154815137e9fce610c4bcfa8ee31d60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1643b69968eb492">
+		<description>bowling_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8277">
+				<rom name="bowling_1.prg" size="8277" crc="9d4ab31c" sha1="43b69968eb49261ad4640c90d6a9a3a153c24d74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166aeeee207207b">
+		<description>Brainfade</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="35471">
+				<rom name="Brainfade.prg" size="35471" crc="800517e2" sha1="6aeeee207207b97ee5455527a36b99d5e69ce515"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b7f36bcd9a691">
+		<description>Braintron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="28702">
+				<rom name="Braintron.prg" size="28702" crc="b1b4a547" sha1="b7f36bcd9a691f8d1476bde91cc8fa453a16e553"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d24a2131b0d7f">
+		<description>Breakin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="3461">
+				<rom name="Breakin.prg" size="3461" crc="37e5106f" sha1="d24a2131b0d7f05c74200fff7bb7145a7c44457c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168f083919e63c2">
+		<description>Breakout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="14594">
+				<rom name="Breakout.prg" size="14594" crc="bbdf3efb" sha1="8f083919e63c2ab08ce994ac91d1f5178997c361"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1663d9758c69ddf">
+		<description>Break_Out</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="2490">
+				<rom name="Break_Out.prg" size="2490" crc="670791b2" sha1="63d9758c69ddf41c6083c31a06fd83a736feffa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164d14e6188cf23">
+		<description>Breki</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="7910">
+				<rom name="Breki.prg" size="7910" crc="659fe240" sha1="4d14e6188cf23180d31b2fbb062df16152921ad2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f05f311eb699b">
+		<description>Brians_Soccer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="32782">
+				<rom name="Brians_Soccer.prg" size="32782" crc="8fb867b9" sha1="f05f311eb699b39b84703d97cc9968c112d73d91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161734f40b25b7f">
+		<description>Bridge_Head</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="27910">
+				<rom name="Bridge_Head.prg" size="27910" crc="fa08b5d7" sha1="1734f40b25b7fc531bd11d157a8022b8e43e04da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167d3e3475d5e08">
+		<description>Brisk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="3432">
+				<rom name="Brisk.prg" size="3432" crc="74fee772" sha1="7d3e3475d5e08326b64af7dbc6a166c84a17ecfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16eabdb7381ee9c">
+		<description>Britt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Britt.prg" size="12289" crc="f188dba9" sha1="eabdb7381ee9c06782fa1f86935712d015a932fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c5b0c93169ef2">
+		<description>Bubble_Trouble</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8800">
+				<rom name="Bubble_Trouble.prg" size="8800" crc="fab98064" sha1="c5b0c93169ef2d86a3063cdb10bd4f1acf0a3a3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16fbd093eedffeb">
+		<description>Buckaroo_Banzai</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12266">
+				<rom name="Buckaroo_Banzai.prg" size="12266" crc="19dfdcac" sha1="fbd093eedffeb90f2dcc94a914dbe8fc5e2fe9e4"/>
 			</dataarea>
 		</part>
 	</software>
