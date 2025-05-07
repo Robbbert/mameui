@@ -304,9 +304,11 @@ function osdmodulesbuild()
 		}
 	end
 
-	err = os.execute(pkgconfigcmd() .. " --exists libpipewire-0.3")
-	if not err then
-		_OPTIONS["NO_USE_PIPEWIRE"] = "1"
+	if _OPTIONS["NO_USE_PIPEWIRE"]=="0" then
+		err = os.execute(pkgconfigcmd() .. " --exists libpipewire-0.3")
+		if not err then
+			_OPTIONS["NO_USE_PIPEWIRE"] = "1"
+		end
 	end
 
 	if _OPTIONS["NO_USE_PIPEWIRE"]=="1" then
@@ -318,7 +320,6 @@ function osdmodulesbuild()
 			backtick(pkgconfigcmd() .. " --cflags libpipewire-0.3"),
 		}
 	end
-
 
 	if _OPTIONS["NO_USE_MIDI"]=="1" then
 		defines {
