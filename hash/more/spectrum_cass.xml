@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2266 -->
+<!-- Number of items in this list = 2301 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -8432,16 +8432,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsed29c8b3cf874">
-		<description>Boulder Dash III 48K (1986)(American Action AB)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="30673">
-				<rom name="Boulder Dash III 48K (1986)(American Action AB).tzx" size="30673" crc="03241af1" sha1="ed29c8b3cf8745ae5bfae38a4037f95124414074"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsfdb3c5e1954e8">
 		<description>Brainache</description>
 		<year>????</year>
@@ -9932,16 +9922,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs2d58109390aee">
-		<description>Joe Blade 48K-128K (1987)(Players Premier)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="50920">
-				<rom name="Joe Blade 48K-128K (1987)(Players Premier).tzx" size="50920" crc="13e39446" sha1="2d58109390aeef4bc2687272bed5e8970003a7e3"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxse946ad1cb78c6">
 		<description>Jurl 48K (2025)(Tonsomo Entertainment)</description>
 		<year>????</year>
@@ -10272,16 +10252,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs8aec8d3620a54">
-		<description>Ms. Pac-Man 48K (1984)(Atarisoft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="48010">
-				<rom name="Ms. Pac-Man 48K (1984)(Atarisoft).tzx" size="48010" crc="14cd83cd" sha1="8aec8d3620a544272bf11759b65b5b653d59d6d8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs3773e2905a8dc">
 		<description>MyCopy4.4 Final Version</description>
 		<year>????</year>
@@ -10409,26 +10379,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44030">
 				<rom name="Olli &amp; Lissa - The Ghost Of Shilmoore Castle 48K (1986)(Firebird Software).tzx" size="44030" crc="5744c537" sha1="a46b16e31a2d8457e8e9f3d56c868057ac65738b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs12f8354b9db43">
-		<description>Olli &amp; Lissa II - Halloween 48K (1987)(Silverbird Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49561">
-				<rom name="Olli &amp; Lissa II - Halloween 48K (1987)(Silverbird Software).tzx" size="49561" crc="e86842b4" sha1="12f8354b9db4342f8d986c6d264411b159ded03f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs876216b322501">
-		<description>Olli &amp; Lissa III - The Candlelight Adventure 48K (1989)(Cartoon Time)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49880">
-				<rom name="Olli &amp; Lissa III - The Candlelight Adventure 48K (1989)(Cartoon Time).tzx" size="49880" crc="652a1e34" sha1="876216b3225011450fc0a9c96291f06ffc6f05a3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10759,16 +10709,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="79998">
 				<rom name="Robin Hood.tzx" size="79998" crc="c77294f6" sha1="0687b2c2c59087a9a4aba129777f6dffcd7fcdb2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxse5a3d294e0fc1">
-		<description>RoboCop 2 128K (1990)(Ocean)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="124552">
-				<rom name="RoboCop 2 128K (1990)(Ocean).tzx" size="124552" crc="8391a4ae" sha1="e5a3d294e0fc198c8697553b7462d8354e2ac72d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11139,6 +11079,416 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15486">
 				<rom name="sp3.tzx" size="15486" crc="444335ba" sha1="5f4f27bca840389e055e245c1d7d26677faa0a2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs70b8a398086ec">
+		<description>Space Attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26099">
+				<rom name="Space Attack.tap" size="26099" crc="dbb36166" sha1="70b8a398086ecaa081a9291f022e3d01ce0ee246"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscdaefc1ced175">
+		<description>Space Bros 128K (2025)(Molisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="105431">
+				<rom name="Space Bros 128K (2025)(Molisoft).tap" size="105431" crc="d3e75351" sha1="cdaefc1ced1754a3038f5b64a8ad0418507f4263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs88577c954ff93">
+		<description>Space Crusade (1992)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="70110">
+				<rom name="Space Crusade (1992)(Gremlin Graphics).tap" size="70110" crc="a46b2859" sha1="88577c954ff93255eeb50c7f056622c2d22b1c41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf39cc6a2d7c9">
+		<description>Space Harrier II (1990)(Grandslam Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="150016">
+				<rom name="Space Harrier II (1990)(Grandslam Entertainment).tap" size="150016" crc="f17cd03f" sha1="af39cc6a2d7c9ea2a61e7dfe4220a9416502e243"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31e293eac801c">
+		<description>Space Harrier II (1990)(Grandslam Entertainment)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="149856">
+				<rom name="Space Harrier II (1990)(Grandslam Entertainment)[a].tap" size="149856" crc="69d5d562" sha1="31e293eac801c45ce792c445361333dda88e5f62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs76844e7781353">
+		<description>Space Harrier II (demo) (1990)(Grandslam Entertainments Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37404">
+				<rom name="Space Harrier II (demo) (1990)(Grandslam Entertainments Ltd).tap" size="37404" crc="f8cb4256" sha1="76844e77813535772458b62dfa49f92c51ee71d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1599fc7c8f162">
+		<description>Space Hunter (1986)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47772">
+				<rom name="Space Hunter (1986)(Mastertronic Ltd).tap" size="47772" crc="88844ce0" sha1="1599fc7c8f162bafbcdcd2d3174fcc928417e940"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs18c9d7a58fe37">
+		<description>Space Intruders (1982)(Quicksilva Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6645">
+				<rom name="Space Intruders (1982)(Quicksilva Ltd).tap" size="6645" crc="5e4fd610" sha1="18c9d7a58fe37b8616dcce05376070776b2905a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd6cd52804f7a5">
+		<description>Space Intruders (1982)(Quicksilva Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6559">
+				<rom name="Space Intruders (1982)(Quicksilva Ltd)[a2].tap" size="6559" crc="d254de83" sha1="d6cd52804f7a5ca5869f72c126defd265a463080"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs908dbc1242f17">
+		<description>Space Intruders (1982)(Quicksilva)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6594">
+				<rom name="Space Intruders (1982)(Quicksilva)[a].tap" size="6594" crc="0fbeaa12" sha1="908dbc1242f178c0cc41cf79da1224d560fee36d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc081e2da0c6d5">
+		<description>Space Invaders (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10644">
+				<rom name="Space Invaders (19xx)(-)(De).tap" size="10644" crc="3cb90ad4" sha1="c081e2da0c6d57babf3ef16d44a101a00abd2cb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs691f98a6fcc69">
+		<description>Space Island (1983)(Terminal Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28357">
+				<rom name="Space Island (1983)(Terminal Software).tap" size="28357" crc="ac6f3286" sha1="691f98a6fcc693e65ab95256dbb368dd3b968eba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs29bce7e1990da">
+		<description>Space Jack (1984)(The Power House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32751">
+				<rom name="Space Jack (1984)(The Power House).tap" size="32751" crc="233b3354" sha1="29bce7e1990da7820dcee210a43afa6d7e772820"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3169aa57ad94d">
+		<description>Space Journey (2020)(Roman Cikryt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46896">
+				<rom name="Space Journey (2020)(Roman Cikryt).tap" size="46896" crc="b55f0534" sha1="3169aa57ad94ddf4a05f6e27821b4502b31a7410"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs886bc1184b811">
+		<description>Space Landing (1989)(Gambrinus Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8177">
+				<rom name="Space Landing (1989)(Gambrinus Software).tap" size="8177" crc="c7135292" sha1="886bc1184b8112f6abe445b1563ac2f4eb0984a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf5204daa9182">
+		<description>Space Mines (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3124">
+				<rom name="Space Mines (19xx)(-).tap" size="3124" crc="0f550f3c" sha1="af5204daa9182665052da1a30a61b8374bfb47de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs55dcae4ac0fb6">
+		<description>Space Panic (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6413">
+				<rom name="Space Panic (19xx)(-).tap" size="6413" crc="b4ded533" sha1="55dcae4ac0fb689333ea4ad3f919a2ed1ce906aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfbceea2d875e1">
+		<description>Space Panic (19xx)(Kevin J. Bezant)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6945">
+				<rom name="Space Panic (19xx)(Kevin J. Bezant).tap" size="6945" crc="7012eca6" sha1="fbceea2d875e14450967e70a347c7916e2253f18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4bdccb7d6c750">
+		<description>Space Professor (1984)(Front Runner)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15197">
+				<rom name="Space Professor (1984)(Front Runner).tap" size="15197" crc="3a4d9d66" sha1="4bdccb7d6c750ce5a7997097e61d32304d44af21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs239103e610d43">
+		<description>Space Quest (19xx)(Ralf Juengling)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5212">
+				<rom name="Space Quest (19xx)(Ralf Juengling).tap" size="5212" crc="996a66b6" sha1="239103e610d43b067bd17f48b1fc6d91666950b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe99a00b36685">
+		<description>Space Racing Next v1.2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="88616">
+				<rom name="Space Racing Next v1.2.tap" size="88616" crc="5e8f9a49" sha1="be99a00b3668557c7792055b7d6a3164aca2b01b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs60e97ee782efd">
+		<description>Space Racing v1.2 128K (2021)(Voxel Tower)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="88616">
+				<rom name="Space Racing v1.2 128K (2021)(Voxel Tower).tap" size="88616" crc="64e0ef40" sha1="60e97ee782efdfabb447b2bee8d75f4ce613d7b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a18c5462fe88">
+		<description>Space Raiders (1982)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14915">
+				<rom name="Space Raiders (1982)(Psion).tap" size="14915" crc="79ef7dce" sha1="0a18c5462fe88445e9e2348351ed65df76bf7b46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs122a4363728db">
+		<description>Space Raiders (1982)(Psion)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14954">
+				<rom name="Space Raiders (1982)(Psion)[a].tap" size="14954" crc="b702cad7" sha1="122a4363728db5ff8dcc6f0bc446e96d4daaeb84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs781c2fb9b20f9">
+		<description>Space Raiders (1982)(Sinclair Research Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14980">
+				<rom name="Space Raiders (1982)(Sinclair Research Ltd).tap" size="14980" crc="b8a39abe" sha1="781c2fb9b20f9718e35ed049bf78f463c9747d68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs403cb13b4c3ea">
+		<description>Space Shuttle - A Journey Into Space (1984)(Activision Inc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28672">
+				<rom name="Space Shuttle - A Journey Into Space (1984)(Activision Inc).tap" size="28672" crc="8df9245f" sha1="403cb13b4c3ea57ef32916ae8df2a13a900e39aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd6f5a17d2f20e">
+		<description>Space Shuttle - A Journey into Space (1984)(Activision Inc)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28553">
+				<rom name="Space Shuttle - A Journey into Space (1984)(Activision Inc)[a2].tap" size="28553" crc="700461bf" sha1="d6f5a17d2f20e8fe1755bf8d2a6ad2110af02927"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e1d97b26f79a">
+		<description>Space Shuttle - A Journey Into Space (1984)(Activision Inc)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28449">
+				<rom name="Space Shuttle - A Journey Into Space (1984)(Activision Inc)[a].tap" size="28449" crc="adc9d256" sha1="8e1d97b26f79a3b03009521573b559e23779bd3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27df2203c4c2b">
+		<description>Space Station Zebra (1983)(Beyond)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30554">
+				<rom name="Space Station Zebra (1983)(Beyond).tap" size="30554" crc="8d8b5506" sha1="27df2203c4c2ba55007347343bb31992edd7c6a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80f86c2ea89a5">
+		<description>Space Thunder (2021)(Isaiasdiaz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47073">
+				<rom name="Space Thunder (2021)(Isaiasdiaz).tap" size="47073" crc="a11f0963" sha1="80f86c2ea89a5252bb3e1c9e63e2fd86b46bdae8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse3f71f6a1611b">
+		<description>Space Thunder DX 128K (2024)(Isaias Diaz Toledano)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59848">
+				<rom name="Space Thunder DX 128K (2024)(Isaias Diaz Toledano).tap" size="59848" crc="11f8fe6c" sha1="e3f71f6a1611b60e78d9bf8ae3eac32617a91e97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf2629e7bdb74a">
+		<description>Space Voyage (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2315">
+				<rom name="Space Voyage (19xx)(-).tap" size="2315" crc="c8027388" sha1="f2629e7bdb74ab487e9ac4d3c06efe61f098ff29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc48578c21dcbd">
+		<description>Space Warp (1984)(A.C.E. Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17760">
+				<rom name="Space Warp (1984)(A.C.E. Software).tap" size="17760" crc="0f134cf4" sha1="c48578c21dcbd3cc8dc117dedc69add744e434cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5586df32b8281">
+		<description>Space Worm (1989)(Psychaedelic Hedgehog Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47609">
+				<rom name="Space Worm (1989)(Psychaedelic Hedgehog Software).tap" size="47609" crc="4f64026a" sha1="5586df32b82813f50d2f3f9b89d9b712cbf85cc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1da8b4e21c263">
+		<description>Spaceman Bob (19xx)(Alchemist Research)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16934">
+				<rom name="Spaceman Bob (19xx)(Alchemist Research).tap" size="16934" crc="5081edd9" sha1="1da8b4e21c2633c39f8bb60343b21304da4121d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa667281cba154">
+		<description>Spaceway (19xx)(Decibel)(Nl)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50178">
+				<rom name="Spaceway (19xx)(Decibel)(Nl)[a].TAP" size="50178" crc="752d947a" sha1="a667281cba154123c7dad3029531949fbe5ce2a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs86e725ec8869f">
+		<description>SPACMAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3425">
+				<rom name="SPACMAN.TAP" size="3425" crc="ecf756c5" sha1="86e725ec8869f081c2baf6f22b65d05bc9dfbc3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb914652f420be">
+		<description>Spaghetti Western (1990)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34582">
+				<rom name="Spaghetti Western (1990)(Zeppelin Games).tap" size="34582" crc="a148ae6a" sha1="b914652f420be0e9f40b82944c31c89f441a90f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44279bb96f40d">
+		<description>Spanner (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39697">
+				<rom name="Spanner (19xx)(-)(De).tap" size="39697" crc="4617ffee" sha1="44279bb96f40dfce2ac84b8d41faf32823eea601"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc8bd224f04bc1">
+		<description>Spawn Of Evil (1983)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15872">
+				<rom name="Spawn Of Evil (1983)(DK'Tronics).tap" size="15872" crc="b7322df7" sha1="c8bd224f04bc1bd973e81b6d7b3c08f1ac9087ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5fee89a2d7c11">
+		<description>Spawn Of Evil (1983)(DK'Tronics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15431">
+				<rom name="Spawn Of Evil (1983)(DK'Tronics)[a].tap" size="15431" crc="cdba2852" sha1="5fee89a2d7c11b858975b67366284e43ec8a4ee3"/>
 			</dataarea>
 		</part>
 	</software>

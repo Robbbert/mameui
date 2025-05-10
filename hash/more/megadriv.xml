@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1940 -->
+<!-- Number of items in this list = 1941 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -17169,6 +17169,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Superman (USA).bin" size="1048576" crc="5d538528" sha1="5466ef9ef45dac76d5eb3966e317131774987c5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3b8cf83a84ee3">
+		<description>SuperPowerKick_3_6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="917504">
+				<rom name="SuperPowerKick_3_6.bin" size="917504" crc="c912389f" sha1="3b8cf83a84ee3b22fc87a7d1cb97db1a788d0b15"/>
 			</dataarea>
 		</part>
 	</software>

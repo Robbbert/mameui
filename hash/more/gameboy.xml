@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1361 -->
+<!-- Number of items in this list = 1363 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -9842,6 +9842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbcda50e70026d81">
+		<description>Medarot 3 - Kabuto Version (Japan) [T-En by Cash Medal Chameleon v20250507]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Medarot 3 - Kabuto Version (Japan) [T-En by Cash Medal Chameleon v20250507].gbc" size="4194304" crc="0da462b0" sha1="da50e70026d81c76ec7f04e0c5df85f2078fa975"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbc435b8d0a2292c">
 		<description>Medarot 3 - Kuwagata Version (Japan) [T-En by Cash Medal Chameleon v1.0]</description>
 		<year>????</year>
@@ -9849,6 +9859,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Medarot 3 - Kuwagata Version (Japan) [T-En by Cash Medal Chameleon v1.0].gbc" size="4194304" crc="bef23a92" sha1="435b8d0a2292c9f32fc9bdc1dab65bcf476948bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4f74be9e8877e">
+		<description>Medarot 3 - Kuwagata Version (Japan) [T-En by Cash Medal Chameleon v20250507]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Medarot 3 - Kuwagata Version (Japan) [T-En by Cash Medal Chameleon v20250507].gbc" size="4194304" crc="a3d7e70b" sha1="4f74be9e8877ee8c0d11c884e89cc2d3c1e22ef5"/>
 			</dataarea>
 		</part>
 	</software>

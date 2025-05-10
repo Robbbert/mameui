@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 668 -->
+<!-- Number of items in this list = 667 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1109,16 +1109,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Castle Excellent(F).rom" size="32768" crc="ae6800a0" sha1="cb35e8c3a0a3e92281810d5b0eb886fbb1e461cc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msx902d109e4ff45">
-		<description>Castle Tomb (2009)(AG Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Castle Tomb (2009)(AG Software).rom" size="16384" crc="811d91c1" sha1="902d109e4ff452471b11936039a472cbee81a902"/>
 			</dataarea>
 		</part>
 	</software>

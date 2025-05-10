@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 261 -->
+<!-- Number of items in this list = 262 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -2609,6 +2609,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="126768">
 				<rom name="Yahtzee.gba" size="126768" crc="62480fa9" sha1="9df2e1fdf35df00527ae54bd67beee7cf74fd264"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadcc2bef53c577">
+		<description>Zero One SP (Japan) [T-En by Tracey Trace] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="32507120">
+				<rom name="Zero One SP (Japan) [T-En by Tracey Trace] [i].gba" size="32507120" crc="626b4658" sha1="dcc2bef53c577c19ae46784922f1c7b2b74b590c"/>
 			</dataarea>
 		</part>
 	</software>

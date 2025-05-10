@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3827 -->
+<!-- Number of items in this list = 3822 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3719,16 +3719,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="BeginContestEntry (SMW1 Hack).sfc" size="2097152" crc="59b42c23" sha1="8ba10da419c6141aa94942fabf02b370101b82aa"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns05a71b38a66f2">
-		<description>Benkei Gaiden - Suna no Shou (J)(1992)(Sunsoft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="Benkei Gaiden - Suna no Shou (J)(1992)(Sunsoft).sfc" size="1572864" crc="2743017d" sha1="05a71b38a66f285564ec8447ff4877db74387860"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8202,16 +8192,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns6328822d95f64">
-		<description>Eyra the Crow Maiden (2022-23)(Second Dimension)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Eyra the Crow Maiden (2022-23)(Second Dimension).sfc" size="2097152" crc="891c5bad" sha1="6328822d95f64e6cbf129d5e7b1ae4610c332805"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns9c1ff2e7abfbb">
 		<description>F-Mario (SMW1 Hack) (2)</description>
 		<year>????</year>
@@ -10359,16 +10339,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Forgotten_Island (SMW1 Hack).sfc" size="2097152" crc="fece6709" sha1="9b7aac44382a1741ba2bfeeb09e0105a1cdbff14"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsd0865f699598c">
-		<description>Fork Parker's Crunch Out (2018)(Mega Cat Studios)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Fork Parker's Crunch Out (2018)(Mega Cat Studios).sfc" size="2097152" crc="1ccccc6e" sha1="d0865f699598c438cde2cd54d5fb8971888e0c99"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12562,16 +12532,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snse9e87b1459d63">
-		<description>Jim Power The Lost Dimension (USA) (Unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Jim Power The Lost Dimension (USA) (Unl).sfc" size="1048576" crc="929d8d10" sha1="e9e87b1459d63a78fb4865685835dc0ca8c74a53"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsc4c873c0c1dc9">
 		<description>Joe &amp; Mac (U) [h1C]</description>
 		<year>????</year>
@@ -14532,16 +14492,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsb25eb4071a63d">
-		<description>Little Medusa (USA) (Aftermarket) (Unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Little Medusa (USA) (Aftermarket) (Unl).sfc" size="2097152" crc="6aaaf617" sha1="b25eb4071a63da1cdf373491db8875e2009007ce"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsa4fd4324f36f7">
 		<description>Live A Live (Japan) [En v2.0Deluxe by Aeon Genesis]</description>
 		<year>????</year>
@@ -15369,6 +15319,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1049088">
 				<rom name="Magical Quest Starring Mickey Mouse, The (U) [T+Por_fox].sfc" size="1049088" crc="f39e5799" sha1="325d9dd825131d9b40fb84eb5c99b8ec93ee9be2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0936113b21f6b">
+		<description>Magical Quest Starring Mickey Mouse, The (USA) [FastROM hack by bogaa v0.2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Magical Quest Starring Mickey Mouse, The (USA) [FastROM hack by bogaa v0.2].sfc" size="1048576" crc="bde87211" sha1="0936113b21f6b03427a690cd9dd654832396dd25"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20009,16 +19969,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Pilotwings (U) [T+Rus_IfritZ].sfc" size="524288" crc="f8482b3f" sha1="818c9c18faa44c07ff3dfd4e41ac4f83445bb013"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns3021aa8ba80e5">
-		<description>Pinkie (USA) (Aftermarket) (Unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Pinkie (USA) (Aftermarket) (Unl).sfc" size="1048576" crc="5dd1ccd1" sha1="3021aa8ba80e56632550e62137d19b1611550b42"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29912,16 +29862,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsdfd2856dcf975">
-		<description>Socks the Cat Rocks the Hill (Unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Socks the Cat Rocks the Hill (Unl).smc" size="1048576" crc="cac6521f" sha1="dfd2856dcf975aed784546d1b452eb3fec3f3a90"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns771877605a646">
 		<description>Socks the Cat Rocks the Hill (USA) (Unl) [deSplash]</description>
 		<year>????</year>
@@ -37589,6 +37529,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="We're Back! A Dinosaur's Story (1993)(Hi-Tech Expressions)(proto).sfc" size="1048576" crc="b3925716" sha1="f918aa709c685e2d278447f712030a8260f1cdc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse7db3f58c4019">
+		<description>Wedding Peach (Japan) [T-En by Chaotic Translations v0.9] [i]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Wedding Peach (Japan) [T-En by Chaotic Translations v0.9] [i].sfc" size="1048576" crc="0aad3cdb" sha1="e7db3f58c4019120653e1f69cf2eea7ba3f9ec4f"/>
 			</dataarea>
 		</part>
 	</software>

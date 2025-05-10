@@ -799,8 +799,7 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 	int nLow = 0, nMid = 0, nCompareResult = 0;
 	struct CompareProcParams params;
 	LVITEM lvi;
-	BOOL res = 0;
-	printf("Picker_InsertItemSorted: nParam = %d\n",nParam);
+	//printf("Picker_InsertItemSorted: nParam = %d\n",nParam);
 
 	int nHigh = ListView_GetItemCount(hwndPicker);
 
@@ -814,7 +813,7 @@ int Picker_InsertItemSorted(HWND hwndPicker, int nParam)
 		memset(&lvi, 0, sizeof(lvi));
 		lvi.mask = LVIF_PARAM;
 		lvi.iItem = nMid;
-		res = ListView_GetItem(hwndPicker, &lvi);
+		BOOL res = ListView_GetItem(hwndPicker, &lvi);
 		if (res == FALSE)
 			return -1;
 		nCompareResult = Picker_CompareProc(nParam, lvi.lParam, (LPARAM) &params);
