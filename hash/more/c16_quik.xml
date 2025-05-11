@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 519 -->
+<!-- Number of items in this list = 550 -->
 <softwarelist name="c16_quik" description="c16_quik loose roms">
 	<software name="c165c5896a8a7806">
 		<description>007</description>
@@ -179,6 +179,316 @@
 		<part name="quik" interface="c16_quik">
 			<dataarea name="quik" size="39875">
 				<rom name="7_Up_Spot.prg" size="39875" crc="432246ad" sha1="e9225b2d27fc81a299602dedf8fcdc7baaeb70cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1642520d424eda9">
+		<description>Amoba_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="28560">
+				<rom name="Amoba_2.prg" size="28560" crc="437330ae" sha1="42520d424eda98f5488fea65fb45518eac659c6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f154ee1b1ce3a">
+		<description>Amoba_Novotrade</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6145">
+				<rom name="Amoba_Novotrade.prg" size="6145" crc="677accda" sha1="f154ee1b1ce3a3d15a5112f5c15fadd992abd22c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c4cf80e8909aa">
+		<description>Apollo_Mission[SYS15150]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="Apollo_Mission[SYS15150].prg" size="12288" crc="7b6663a7" sha1="c4cf80e8909aa86cda9e538533b4b63b09820d1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a4c31b2a3e6cb">
+		<description>Arcanoid_MM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="18388">
+				<rom name="Arcanoid_MM.prg" size="18388" crc="4b89f0b9" sha1="a4c31b2a3e6cbc5827151808abf0a64305010835"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161962fb7ca91ab">
+		<description>Archanoid_2_Sky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="18678">
+				<rom name="Archanoid_2_Sky.prg" size="18678" crc="660cf5df" sha1="1962fb7ca91ab0516b8c9587863cdeff0cf7fd2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1683a9f30c2d486">
+		<description>Archanoid_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="19504">
+				<rom name="Archanoid_3.prg" size="19504" crc="b1e7c75d" sha1="83a9f30c2d486625b02344888b948f3f0ddd94a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1660c7d97b929f8">
+		<description>Archivum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="47798">
+				<rom name="Archivum.prg" size="47798" crc="42aa99ab" sha1="60c7d97b929f83521c60ec17d0a26b330809f935"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165035ee2abf90d">
+		<description>Arena_3000[Sys9708]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Arena_3000[Sys9708].prg" size="12289" crc="3f72ae5b" sha1="5035ee2abf90da78d0d6d1c28c131e27be7e4a1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1633b32ec1ca879">
+		<description>Armee_Panzer[Sys9610]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Armee_Panzer[Sys9610].prg" size="12289" crc="0d269e64" sha1="33b32ec1ca879a3e9d66b0fe84ab2219af62e82a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163fd779081c20f">
+		<description>Armor_Gsb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Armor_Gsb.prg" size="12289" crc="08e1c308" sha1="3fd779081c20fced3de7d970c650929e731b63c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168e6a3bf8507ab">
+		<description>Aromo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11809">
+				<rom name="Aromo.prg" size="11809" crc="e0edf4a4" sha1="8e6a3bf8507abf03c21a08963e67e66641a85b74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f9e5334d1a3c7">
+		<description>Arrow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6975">
+				<rom name="Arrow.prg" size="6975" crc="e67e9e78" sha1="f9e5334d1a3c7254eb011677d234f3720e408d88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1657e39bdae14ed">
+		<description>Arrow_Of_Death_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="30507">
+				<rom name="Arrow_Of_Death_1.prg" size="30507" crc="7967b148" sha1="57e39bdae14ed49bcef070ef965505cfef06fee5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16961319c6a2f0d">
+		<description>Arrow_Of_Death_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="33869">
+				<rom name="Arrow_Of_Death_2.prg" size="33869" crc="9aa3cf5d" sha1="961319c6a2f0dcffd87468b94eab860d1d18b925"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1678aa1581cc3ef">
+		<description>Arthur_Noid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="11360">
+				<rom name="Arthur_Noid.prg" size="11360" crc="55e9405d" sha1="78aa1581cc3ef35e4ace09ed64fc7ff1e448e2d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bcc6539f9d951">
+		<description>Arthur_Noid_98</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12727">
+				<rom name="Arthur_Noid_98.prg" size="12727" crc="6db9d872" sha1="bcc6539f9d9512d2d3cbeac2e7ed9da8ceaa48a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168642aa6373c40">
+		<description>Arthur_Noid_Pro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="13129">
+				<rom name="Arthur_Noid_Pro.prg" size="13129" crc="eed1bc80" sha1="8642aa6373c40866fe51043dd0b27f9c876b6ddc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bb2b7a6e68ee4">
+		<description>Assault</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="8332">
+				<rom name="Assault.prg" size="8332" crc="09eda205" sha1="bb2b7a6e68ee4a28d3c80219c7c86d088104524b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162c2bc97b41f56">
+		<description>Asteroid_Belt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12290">
+				<rom name="Asteroid_Belt.prg" size="12290" crc="385ee724" sha1="2c2bc97b41f5623e4b98c8381477b0fbd2ffcb35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1690f62a96aea42">
+		<description>Astro_Plumber</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="12289">
+				<rom name="Astro_Plumber.prg" size="12289" crc="2e1af2de" sha1="90f62a96aea42e997197d6af983d11c110e39166"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169bfc4c8cba4f1">
+		<description>Atari_Golf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="5620">
+				<rom name="Atari_Golf.prg" size="5620" crc="1a3c69a0" sha1="9bfc4c8cba4f19f80b9232bb994f2ff58c2982d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1639ec2058aa94e">
+		<description>ATA_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="15648">
+				<rom name="ATA_2.prg" size="15648" crc="39052583" sha1="39ec2058aa94e413e0688756651c8bb0eed203c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16486f36aca2872">
+		<description>Atlantic_Patrol</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="6565">
+				<rom name="Atlantic_Patrol.prg" size="6565" crc="d3ecc952" sha1="486f36aca287234e4a561f16567215dc60c86bbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1636669b76169e1">
+		<description>Atlantis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="14433">
+				<rom name="Atlantis.prg" size="14433" crc="1db0a55c" sha1="36669b76169e15289b64dd027f1db61afef26b9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162128905426c20">
+		<description>Auf_Wiedersehen_Monty</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="14624">
+				<rom name="Auf_Wiedersehen_Monty.prg" size="14624" crc="1df02cf8" sha1="2128905426c20b6a2acd3ac04218fae146778442"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165da5af72d8a77">
+		<description>Auriga_(hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="10146">
+				<rom name="Auriga_(hack).prg" size="10146" crc="c25c872a" sha1="5da5af72d8a775c0752711582812e716935b9388"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c27f25b818df9">
+		<description>Ausweichmanoewer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="3490">
+				<rom name="Ausweichmanoewer.prg" size="3490" crc="6e745958" sha1="c27f25b818df9d83fe3cfe3eaedfbc0400bcc44d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163ecb37211b703">
+		<description>Autozone_II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="16420">
+				<rom name="Autozone_II.prg" size="16420" crc="39f585f0" sha1="3ecb37211b703354f90e9cbc36aa75e88150f6ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1638c0dc3e5fa22">
+		<description>Autozone_III</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="13863">
+				<rom name="Autozone_III.prg" size="13863" crc="c4ab6b57" sha1="38c0dc3e5fa226eee767e55b6e3ad76a37c17257"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16eb6440cfdb7f5">
+		<description>Awari</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="3704">
+				<rom name="Awari.prg" size="3704" crc="615bf66c" sha1="eb6440cfdb7f5366d7bef2d5c1dd7b202baf434a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1650c37f346f0eb">
+		<description>Aztec_Tomb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="c16_quik">
+			<dataarea name="quik" size="25906">
+				<rom name="Aztec_Tomb.prg" size="25906" crc="dd405442" sha1="50c37f346f0ebd2db1582e992e1690549b572c12"/>
 			</dataarea>
 		</part>
 	</software>
