@@ -1,8 +1,19 @@
 // license:BSD-3-Clause
 // copyright-holders:
+/**************************************************************************************************
 
-/*
 Paint 'N Puzzle Super (or Super Paint 'N Puzzle)
+
+TODO:
+- coin stuck (cfr. service mode counting up), makes input test non-functional;
+- device for RS-232 touchscreen;
+- complete I/O;
+- NVRAM;
+- sound (missing from board?);
+- Is "RGB O/P" connector just for touchscreen control?
+
+===================================================================================================
+
 VIDEO PUZZLE V1.0 PCB
 (C) 1994 Green Concepts International
 
@@ -19,18 +30,24 @@ W86C450 UART
 1.8432 MHz XTAL (near UART)
 Card connector
 Ticket connector
-*/
+RGB O/P connector
+
+**************************************************************************************************/
 
 #include "emu.h"
 
+#include "bus/rs232/rs232.h"
 #include "cpu/i86/i286.h"
 #include "machine/ins8250.h"
 #include "machine/pic8259.h"
 #include "machine/pit8253.h"
+#include "machine/microtch.h"
 #include "video/mc6845.h"
 #include "video/ramdac.h"
+#include "sound/dac.h"
 
 #include "screen.h"
+#include "speaker.h"
 
 
 namespace {
@@ -61,18 +78,38 @@ private:
 	required_device<palette_device> m_palette;
 
 	virtual void machine_start() override ATTR_COLD;
+	virtual void machine_reset() override ATTR_COLD;
 
 	uint32_t screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
 
 	void program_map(address_map &map) ATTR_COLD;
 	void io_map(address_map &map) ATTR_COLD;
 	void ramdac_map(address_map &map) ATTR_COLD;
+
+	void nmi(int s) { if(BIT(m_port304, 0)) m_maincpu->set_input_line(INPUT_LINE_NMI, s); }
+	u8 m_port304;
 };
 
 
 uint32_t pntnpuzls_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(rgb_t::black(), cliprect);
+	const int pitch = 320;
+
+	for(int y = cliprect.min_y; y <= cliprect.max_y; y++)
+	{
+		const u16 y_bank = (y & 0xf) * 0x2000;
+		for(int x = cliprect.min_x; x <= cliprect.max_x; x+=2)
+		{
+			const u16 gfx_data = m_vram[(x + (y >> 3) * pitch + y_bank) / 2];
+
+			for(int xi = 0; xi < 2; xi++)
+			{
+				const u8 color = (gfx_data >> (xi * 8)) & 0xff;
+				bitmap.pix(y, x + xi) = m_palette->pen(color);
+			}
+		}
+	}
 
 	return 0;
 }
@@ -89,13 +126,19 @@ void pntnpuzls_state::program_map(address_map &map)
 
 void pntnpuzls_state::io_map(address_map &map)
 {
+	map(0x0300, 0x0301).portr("IN0");
+	map(0x0302, 0x0303).portr("IN1");
+	map(0x0304, 0x0305).lw8(NAME([this] (u8 data){ m_port304 = data; })).umask16(0x00ff);
 	map(0x0308, 0x0308).lw8(
 		NAME([this] (offs_t offset, u8 data) {
 			// TODO: may view select on bits 7-3
-			logerror("$308 %02x\n", data);
+			if ((data & 0x18) != 0x18)
+				logerror("$308 %02x\n", data);
 			m_font_bank->set_entry(data & 7);
 		})
 	);
+	map(0x030c, 0x030d).portr("IN2");
+	map(0x030e, 0x030f).w("dac", FUNC(dac_8bit_r2r_device::write));
 
 	map(0x0310, 0x0310).rw(m_crtc, FUNC(mc6845_device::status_r), FUNC(mc6845_device::address_w));
 	map(0x0312, 0x0312).rw(m_crtc, FUNC(mc6845_device::register_r), FUNC(mc6845_device::register_w));
@@ -112,24 +155,62 @@ void pntnpuzls_state::io_map(address_map &map)
 // no DIP switches on PCB
 static INPUT_PORTS_START( pntnpuzls )
 	PORT_START("IN0")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_SERVICE( 0x01, IP_ACTIVE_LOW )
+	PORT_DIPNAME( 0x02, 0x02, "IN0" )
+	PORT_DIPSETTING(    0x02, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x04, 0x04, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x04, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_BUTTON11 ) PORT_NAME("Tan")
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_BUTTON10 ) PORT_NAME("Brown")
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON9 ) PORT_NAME("Light Green")
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON8 ) PORT_NAME("Light Blue")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_BUTTON7 ) PORT_NAME("Pink")
 
 	PORT_START("IN1")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_COIN1 ) PORT_IMPULSE(1) PORT_WRITE_LINE_DEVICE_MEMBER("pic", FUNC(pic8259_device::ir2_w))
+	PORT_DIPNAME( 0x02, 0x02, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x02, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x04, 0x04, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x04, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_BUTTON6 ) PORT_NAME("Red")
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_BUTTON5 ) PORT_NAME("Blue")
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON4 ) PORT_NAME("Green")
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_NAME("Yellow")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_NAME("White")
+
+	// TODO: to card and ticket connectors
+	PORT_START("IN2")
+	PORT_DIPNAME( 0x01, 0x01, "IN2" )
+	PORT_DIPSETTING(    0x01, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x02, 0x02, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x02, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x04, 0x04, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x04, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x08, 0x08, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x08, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x10, 0x10, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x10, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x20, 0x20, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x20, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x40, 0x40, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x40, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+
+	PORT_START("COIN")
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_COIN2 ) PORT_IMPULSE(1) PORT_WRITE_LINE_DEVICE_MEMBER("pic", FUNC(pic8259_device::ir3_w))
 
 	// TODO: touchscreen
 INPUT_PORTS_END
@@ -139,9 +220,13 @@ void pntnpuzls_state::machine_start()
 	m_font_bank->configure_entries(0, 8, m_font->base(), 0x10000);
 }
 
+void pntnpuzls_state::machine_reset()
+{
+	m_port304 = 0;
+}
+
 void pntnpuzls_state::ramdac_map(address_map &map)
 {
-	// TODO: writes to upper bits 7-6 but decodes better as 666
 	map(0x000, 0x2ff).rw(m_ramdac, FUNC(ramdac_device::ramdac_pal_r), FUNC(ramdac_device::ramdac_rgb666_w));
 }
 
@@ -157,33 +242,38 @@ void pntnpuzls_state::pntnpuzls(machine_config &config)
 	pic.out_int_callback().set_inputline(m_maincpu, 0);
 
 	pit8254_device &pit(PIT8254(config, "pit"));
-	pit.set_clk<0>(XTAL(3'579'545)); // clocks?
-	pit.out_handler<0>().set("pic", FUNC(pic8259_device::ir2_w));
-	pit.set_clk<1>(XTAL(3'579'545));
-	pit.set_clk<2>(XTAL(3'579'545));
-
+	pit.set_clk<0>(XTAL(27'500'000)); // clocks?
+	pit.set_clk<1>(XTAL(27'500'000));
+	pit.set_clk<2>(XTAL(27'500'000));
+	pit.out_handler<2>().set(FUNC(pntnpuzls_state::nmi));
 
 	ins8250_device &uart(INS8250(config, "uart", 1.8432_MHz_XTAL));
+	uart.out_tx_callback().set("microtouch", FUNC(microtouch_device::rx));
 	uart.out_int_callback().set("pic", FUNC(pic8259_device::ir4_w));
 
-	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER)); // TODO: everything
+	MICROTOUCH(config, "microtouch", 9600).stx().set("uart", FUNC(ins8250_uart_device::rx_w));
+
+	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_refresh_hz(60);
-	screen.set_vblank_time(ATTOSECONDS_IN_USEC(0));
-	screen.set_size(512, 256);
-	screen.set_visarea_full();
+	// TODO: convert to set_raw. Affects out_vsync timing (currently at vline=203).
+	screen.set_vblank_time(ATTOSECONDS_IN_USEC(2500));
+	screen.set_size(320, 200);
 	screen.set_screen_update(FUNC(pntnpuzls_state::screen_update));
 
-	PALETTE(config, "palette").set_entries(0x100); // TODO
+	PALETTE(config, "palette").set_entries(0x100);
 
+	// HM86171-80
 	RAMDAC(config, m_ramdac, 0, "palette");
 	m_ramdac->set_addrmap(0, &pntnpuzls_state::ramdac_map);
 
-	mc6845_device &crtc(MC6845(config, "crtc", 27'500'000 / 30)); // clock / divider not verified
+	mc6845_device &crtc(MC6845(config, "crtc", 27'500'000 / 32)); // clock / divider not verified
 	crtc.set_char_width(8);
 	crtc.set_show_border_area(false);
 	crtc.set_screen("screen");
+	crtc.out_vsync_callback().set("pic", FUNC(pic8259_device::ir0_w));
 
-	// TODO: sound? missing chip at u11?
+	SPEAKER(config, "speaker").front_center();
+	DAC_8BIT_R2R(config, "dac").add_route(ALL_OUTPUTS, "speaker", 0.5);
 }
 
 ROM_START( pntnpuzls )
@@ -199,4 +289,4 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1994, pntnpuzls, 0, pntnpuzls, pntnpuzls, pntnpuzls_state, empty_init, ROT90, "Century Vending / Green Concepts International", "Paint 'N Puzzle Super", MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
+GAME( 1994, pntnpuzls, 0, pntnpuzls, pntnpuzls, pntnpuzls_state, empty_init, ROT90, "Century Vending / Green Concepts International", "Paint 'N Puzzle Super", MACHINE_NOT_WORKING )
