@@ -76,6 +76,7 @@ ToDo:
 #include "imagedev/snapquik.h"
 #include "machine/terminal.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 #include "ravens.lh"
 
@@ -384,7 +385,11 @@ void ravens2_state::ravens2(machine_config &config)
 	m_terminal->set_keyboard_callback(FUNC(ravens2_state::kbd_put));
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(ravens2_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(ravens2_state::quickload_cb));
+	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
+	snapshot.set_load_callback(FUNC(ravens2_state::quickload_cb));
+	snapshot.set_interface("ravens_quik");
+	SOFTWARE_LIST(config, "ravens_quik").set_original("ravens");
 
 	SPEAKER(config, "mono").front_center();
 

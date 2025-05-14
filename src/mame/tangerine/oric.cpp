@@ -821,6 +821,7 @@ void oric_state::oric_common(machine_config &config)
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("oric1_cass");
 	SOFTWARE_LIST(config, "oric1_cass").set_original("oric1_cass");
+	SOFTWARE_LIST(config, "flop_list").set_original("oric1_flop");
 
 	/* via */
 	MOS6522(config, m_via, 12_MHz_XTAL / 12);

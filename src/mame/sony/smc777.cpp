@@ -1180,7 +1180,11 @@ void smc777_state::smc777(machine_config &config)
 	FLOPPY_CONNECTOR(config, m_floppy[1], smc777_floppies, "ssdd", floppy_image_device::default_mfm_floppy_formats);
 
 	SOFTWARE_LIST(config, "flop_list").set_original("smc777");
-	QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)).set_load_callback(FUNC(smc777_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)).set_load_callback(FUNC(smc777_state::quickload_cb));
+	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)));
+	snapshot.set_load_callback(FUNC(smc777_state::quickload_cb));
+	snapshot.set_interface("smc777_quik");
+	SOFTWARE_LIST(config, "smc777_quik").set_original("smc777_quik");
 
 	SPEAKER(config, "mono").front_center();
 

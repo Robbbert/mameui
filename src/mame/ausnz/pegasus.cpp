@@ -528,6 +528,8 @@ void pegasus_state::pegasus(machine_config &config)
 	CASSETTE(config, m_cass);
 	m_cass->set_default_state(CASSETTE_STOPPED|CASSETTE_MOTOR_ENABLED);
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cass->set_interface("pegasus_cass");
+	SOFTWARE_LIST(config, "pegasus_cass").set_original("pegasus_cass");
 
 	/* Software lists */
 	SOFTWARE_LIST(config, "cart_list").set_original("pegasus_cart");

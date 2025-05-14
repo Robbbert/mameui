@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
 <!-- Number of items in this list = 5 -->
-<softwarelist name="poly88_quik" description="poly88_quik loose roms">
+<softwarelist name="poly88_snap" description="poly88_snap loose roms">
 	<software name="polfd6b162dc2ca8">
 		<description>BASIC</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="quik" interface="poly88_quik">
-			<dataarea name="quik" size="12392">
+		<part name="snap" interface="poly88_snap">
+			<dataarea name="snap" size="12392">
 				<rom name="BASIC.IMG" size="12392" crc="cc5a2b9b" sha1="fd6b162dc2ca80110dc0629b8b0c52d14c96d94f"/>
 			</dataarea>
 		</part>
@@ -16,8 +16,8 @@
 		<description>FORTH</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="quik" interface="poly88_quik">
-			<dataarea name="quik" size="15521">
+		<part name="snap" interface="poly88_snap">
+			<dataarea name="snap" size="15521">
 				<rom name="FORTH.IMG" size="15521" crc="957a9f98" sha1="63b1a86e842923c5dfaed4328b9a2fc379853df4"/>
 			</dataarea>
 		</part>
@@ -26,8 +26,8 @@
 		<description>Poly88 BASIC-1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="quik" interface="poly88_quik">
-			<dataarea name="quik" size="12392">
+		<part name="snap" interface="poly88_snap">
+			<dataarea name="snap" size="12392">
 				<rom name="Poly88 BASIC-1.IMG" size="12392" crc="60f93d38" sha1="48dee5d13aa95d35f242141e9a02a58ae277d1fe"/>
 			</dataarea>
 		</part>
@@ -36,8 +36,8 @@
 		<description>STARTRK1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="quik" interface="poly88_quik">
-			<dataarea name="quik" size="6650">
+		<part name="snap" interface="poly88_snap">
+			<dataarea name="snap" size="6650">
 				<rom name="STARTRK1.IMG" size="6650" crc="b0ee87ab" sha1="c003bdd6dc2be6dbc279f3c8a7870b712e4d03c8"/>
 			</dataarea>
 		</part>
@@ -46,8 +46,8 @@
 		<description>STARTRK2</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
-		<part name="quik" interface="poly88_quik">
-			<dataarea name="quik" size="7090">
+		<part name="snap" interface="poly88_snap">
+			<dataarea name="snap" size="7090">
 				<rom name="STARTRK2.IMG" size="7090" crc="19fafdcd" sha1="ee93b3fbba7ba066a5216a24c5b481d36d7227d9"/>
 			</dataarea>
 		</part>

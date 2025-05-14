@@ -117,6 +117,7 @@ TODO:
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 #include "formats/primoptp.h"
 
@@ -276,13 +277,19 @@ void primo_state::primoa32(machine_config &config)
 
 	/* snapshot/quickload */
 	SNAPSHOT(config, "snapshot", "pss").set_load_callback(FUNC(primo_state::snapshot_cb));
-	QUICKLOAD(config, "quickload", "pp").set_load_callback(FUNC(primo_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "pp").set_load_callback(FUNC(primo_state::quickload_cb));
+	quickload_image_device &quikload(QUICKLOAD(config, "quickload", "pp"));
+	quikload.set_load_callback(FUNC(primo_state::quickload_cb));
+	quikload.set_interface("primo_quik");
+	SOFTWARE_LIST(config, "primo_quik").set_original("primo_quik");
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_formats(primo_ptp_format);
 	m_cassette->set_create_opts(&primo_cassette_options);
 	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cassette->set_interface("primo_cass");
+	SOFTWARE_LIST(config, "primo_cass").set_original("primo_cass");
 
 	/* floppy from serial bus */
 	cbm_iec_slot_device::add(config, m_iec, nullptr);

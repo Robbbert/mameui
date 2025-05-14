@@ -33,6 +33,7 @@ Philips P2000 1 Memory map
 
 #include "screen.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 
 /* port i/o functions */
@@ -282,6 +283,7 @@ void p2000m_state::p2000m(machine_config &config)
 
 	/* the mini cassette driver */
 	MDCR(config, m_mdcr, 0);
+	SOFTWARE_LIST(config, "cass_list").set_original("p2000_cass");
 	/* internal ram */
 	RAM(config, m_ram).set_default_size("16K").set_extra_options("16K,32K,48K,64K,80K,102K");
 }

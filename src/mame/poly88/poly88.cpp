@@ -57,6 +57,7 @@ at least some models of the Poly-88 are known to have used.)
 #include "cpu/i8085/i8085.h"
 #include "imagedev/cassette.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 
 void poly88_state::s100_mem(address_map &map)
@@ -163,7 +164,12 @@ void poly88_state::poly88(machine_config &config)
 	m_brg->output_cb().set(FUNC(poly88_state::cassette_clock_w));
 
 	/* snapshot */
-	SNAPSHOT(config, "snapshot", "img", attotime::from_seconds(2)).set_load_callback(FUNC(poly88_state::snapshot_cb));
+	//SNAPSHOT(config, "snapshot", "img", attotime::from_seconds(2)).set_load_callback(FUNC(poly88_state::snapshot_cb));
+	snapshot_image_device &snapshot(SNAPSHOT(config, "snapshot", "img"));
+	snapshot.set_delay(attotime::from_seconds(2));
+	snapshot.set_load_callback(FUNC(poly88_state::snapshot_cb));
+	snapshot.set_interface("poly88_snap");
+	SOFTWARE_LIST(config, "poly88_snap").set_original("poly88_snap");
 
 	S100_BUS(config, m_s100, 16.5888_MHz_XTAL / 9);
 	m_s100->vi2().set(FUNC(poly88_state::vi2_w));

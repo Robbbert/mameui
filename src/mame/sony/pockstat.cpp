@@ -38,6 +38,7 @@
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 #define LOG_UNKNOWN (1U << 1)
 #define LOG_FTLB    (1U << 2)
@@ -1009,6 +1010,7 @@ void pockstat_state::pockstat(machine_config &config)
 	m_cart->set_width(GENERIC_ROM32_WIDTH);
 	m_cart->set_endian(ENDIANNESS_LITTLE);
 	m_cart->set_device_load(FUNC(pockstat_state::flash_load));
+	SOFTWARE_LIST(config, "cart_list").set_original("pockstat");
 }
 
 /* ROM definition */

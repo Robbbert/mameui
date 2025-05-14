@@ -15,6 +15,7 @@
 #include "machine/74259.h"
 #include "machine/mc68681.h"
 #include "machine/wd_fdc.h"
+#include "softlist_dev.h"
 
 
 namespace {
@@ -142,6 +143,8 @@ void slicer_state::slicer(machine_config &config)
 	m_sasi->set_output_latch(sasi_data_out);
 	INPUT_BUFFER(config, "sasi_data_in");
 	INPUT_BUFFER(config, "sasi_ctrl_in");
+
+	SOFTWARE_LIST(config, "flop_list").set_original("slicer");
 }
 
 ROM_START( slicer )

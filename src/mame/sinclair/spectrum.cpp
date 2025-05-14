@@ -775,7 +775,11 @@ void spectrum_state::spectrum_common(machine_config &config)
 	m_exp->fb_r_handler().set(FUNC(spectrum_state::floating_bus_r));
 
 	/* devices */
-	SNAPSHOT(config, "snapshot", "ach,frz,plusd,prg,sem,sit,sna,snp,snx,sp,z80,zx").set_load_callback(FUNC(spectrum_state::snapshot_cb));
+	//SNAPSHOT(config, "snapshot", "ach,frz,plusd,prg,sem,sit,sna,snp,snx,sp,z80,zx").set_load_callback(FUNC(spectrum_state::snapshot_cb));
+	snapshot_image_device &snapshot(SNAPSHOT(config, "snapshot", "ach,frz,plusd,prg,sem,sit,sna,snp,snx,sp,z80,zx"));
+	snapshot.set_load_callback(FUNC(spectrum_state::snapshot_cb));
+	snapshot.set_interface("spectrum_snap");
+
 	QUICKLOAD(config, "quickload", "raw,scr", attotime::from_seconds(2)).set_load_callback(FUNC(spectrum_state::quickload_cb)); // The delay prevents the screen from being cleared by the RAM test at boot
 
 	CASSETTE(config, m_cassette);
@@ -785,6 +789,7 @@ void spectrum_state::spectrum_common(machine_config &config)
 	m_cassette->set_interface("spectrum_cass");
 
 	SOFTWARE_LIST(config, "cass_list").set_original("spectrum_cass");
+	SOFTWARE_LIST(config, "spectrum_snap").set_original("spectrum_snap");
 }
 
 void spectrum_state::spectrum(machine_config &config)

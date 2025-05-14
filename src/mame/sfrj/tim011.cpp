@@ -20,6 +20,7 @@
 
 #include "emupal.h"
 #include "screen.h"
+#include "softlist_dev.h"
 
 namespace {
 
@@ -193,6 +194,8 @@ void tim011_state::tim011(machine_config &config)
 
 	TIM011_EXPANSION_SLOT(config, m_exp, tim011_exp_devices, nullptr);
 	m_exp->set_io_space(m_maincpu, AS_IO);
+
+	SOFTWARE_LIST(config, "flop_list").set_original("tim011");
 }
 
 /* ROM definition */

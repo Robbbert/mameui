@@ -1745,6 +1745,7 @@ void pc6001_state::pc6001(machine_config &config)
 //  m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 //  m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	GENERIC_CARTSLOT(config, m_cas_hack, generic_plain_slot, "pc6001_cass", "cas,p6");
+	SOFTWARE_LIST(config, "cart_list").set_original("pc6001_cass");
 
 	SPEAKER(config, "mono").front_center();
 	AY8910(config, m_ay, PC6001_MAIN_CLOCK/4);

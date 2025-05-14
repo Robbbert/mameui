@@ -44,6 +44,7 @@
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 
 namespace {
@@ -845,6 +846,8 @@ void pasopia7_state::p7_base(machine_config &config)
 	CASSETTE(config, m_cass);
 	m_cass->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cass->set_interface("pasopia7_cass");
+	SOFTWARE_LIST(config, "pasopia7_cass").set_original("pasopia7_cass");
 
 	PASOPIA_PAC2(config, m_pac2, pac2_default_devices, nullptr);
 }

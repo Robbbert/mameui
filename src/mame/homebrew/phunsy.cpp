@@ -37,6 +37,7 @@ Rom banking (in U bank):
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 #define VERBOSE 1
 #include "logmacro.h"
@@ -368,7 +369,11 @@ void phunsy_state::phunsy(machine_config &config)
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "bin", attotime::from_seconds(2)).set_load_callback(FUNC(phunsy_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "bin", attotime::from_seconds(2)).set_load_callback(FUNC(phunsy_state::quickload_cb));
+	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "bin", attotime::from_seconds(2)));
+	snapshot.set_load_callback(FUNC(phunsy_state::quickload_cb));
+	snapshot.set_interface("phunsy_quik");
+	SOFTWARE_LIST(config, "phunsy_quik").set_original("phunsy");
 }
 
 
