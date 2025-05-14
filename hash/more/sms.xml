@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 383 -->
+<!-- Number of items in this list = 384 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2189,6 +2189,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="OutRun (Color Hack)(2023)(Slogra).sms" size="262208" crc="0fc1cf7a" sha1="6a29d47fb81904f838aa767680b12c425c2e7d86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsf2fa62d111432">
+		<description>Pac-Man (2025)(Lack of Track)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Pac-Man (2025)(Lack of Track).sms" size="32768" crc="3ee36f82" sha1="f2fa62d11143265e96fcd1de381a03f71aa4249c"/>
 			</dataarea>
 		</part>
 	</software>

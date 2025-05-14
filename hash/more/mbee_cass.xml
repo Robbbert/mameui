@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 284 -->
+<!-- Number of items in this list = 294 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee5f77b519a2abb">
 		<description>(NE)digitalker_300b</description>
@@ -152,6 +152,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beeedb8bf4ddff01">
+		<description>[-]chase_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1493336">
+				<rom name="[-]chase_1.wav" size="1493336" crc="1b95845c" sha1="edb8bf4ddff0175501c7c9bf895ba34c55745266"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9fd8cf7469c0c">
+		<description>[-]chess</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4785404">
+				<rom name="[-]chess.wav" size="4785404" crc="9f19a8b2" sha1="9fd8cf7469c0ca2111755db6bdb78737a4d1bc54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee33e268a2d661">
+		<description>[-]chess96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="29241739">
+				<rom name="[-]chess96k1.wav" size="29241739" crc="375ee001" sha1="e33e268a2d6617e5b713c82edd8447fcfd51c8b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee776bf2874f8b">
+		<description>[-]chess96k2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="10103651">
+				<rom name="[-]chess96k2.wav" size="10103651" crc="db74d655" sha1="e776bf2874f8bc27de6b62f10d4356df0c96cf67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee992198800861">
+		<description>[-]Chess96k3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="10038543">
+				<rom name="[-]Chess96k3.wav" size="10038543" crc="e466a09a" sha1="e9921988008618c2663488e3a577f36bb38c06ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beeb310a3f9d6ed8">
 		<description>[-]chomp</description>
 		<year>????</year>
@@ -162,6 +212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee10a6e53671ef8">
+		<description>[-]chopper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="10991784">
+				<rom name="[-]chopper.wav" size="10991784" crc="9fd4a60c" sha1="10a6e53671ef898e726385e64ef7119cc2a48007"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beef71121f08186c">
 		<description>[-]chopper96k1</description>
 		<year>????</year>
@@ -169,6 +229,46 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="12285002">
 				<rom name="[-]chopper96k1.wav" size="12285002" crc="a8786917" sha1="f71121f08186c445a175873f484ad40a6609afc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee670b5781e6335">
+		<description>[-]clock1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1278321">
+				<rom name="[-]clock1.wav" size="1278321" crc="c9e31f4c" sha1="670b5781e63352c2824e803470ded03fca0e7773"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee82d3d9635d601">
+		<description>[-]clock2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2172340">
+				<rom name="[-]clock2.wav" size="2172340" crc="20259812" sha1="82d3d9635d6019d47d6f8f21735b4588c4e44529"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee54004325460b9">
+		<description>[-]clock3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1628134">
+				<rom name="[-]clock3.wav" size="1628134" crc="1ef037d4" sha1="54004325460b90c8015c77d5ff84e40eb87b3dfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0d71453ff8833">
+		<description>[-]clone</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2485850">
+				<rom name="[-]clone.wav" size="2485850" crc="5f558f91" sha1="0d71453ff88330412a39a06d0217941ae1871808"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3822 -->
+<!-- Number of items in this list = 3829 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7212,13 +7212,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snse99d7750a9257">
-		<description>Douchebag Edition</description>
+	<software name="sns09847567edd0b">
+		<description>Double Dragon V - The Shadow Falls (E)(1994)(Tradewest)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Douchebag Edition.sfc" size="4194304" crc="fa90a735" sha1="e99d7750a925791e16653e6d405c15817131c56a"/>
+			<dataarea name="rom" size="2097152">
+				<rom name="Double Dragon V - The Shadow Falls (E)(1994)(Tradewest).sfc" size="2097152" crc="e80f6b65" sha1="09847567edd0b09c6f401d830107a60e26ac8fb5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsdb7514bee2236">
+		<description>Double Dragon V - The Shadow Falls (U)(1994)(Tradewest)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Double Dragon V - The Shadow Falls (U)(1994)(Tradewest).sfc" size="3145728" crc="98a96ae8" sha1="db7514bee2236e8d0339d00d51a5baf392ccbeff"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14662,6 +14672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb18c0c5f9c82b">
+		<description>Lost Vikings, The - Ragnarok Edition (2025)(Ragnarok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Lost Vikings, The - Ragnarok Edition (2025)(Ragnarok).sfc" size="2097152" crc="10adc197" sha1="b18c0c5f9c82b0a892c57980223f912277126ecd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa3713a128d04f">
 		<description>Lost World Journey DEMO (SMW1 Hack)</description>
 		<year>????</year>
@@ -15323,12 +15343,12 @@
 		</part>
 	</software>
 	<software name="sns0936113b21f6b">
-		<description>Magical Quest Starring Mickey Mouse, The (USA) [FastROM hack by bogaa v0.2]</description>
+		<description>Magical Quest Starring Mickey Mouse, The - FastROM Fix v0.2 (2025)(bogaa)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Magical Quest Starring Mickey Mouse, The (USA) [FastROM hack by bogaa v0.2].sfc" size="1048576" crc="bde87211" sha1="0936113b21f6b03427a690cd9dd654832396dd25"/>
+				<rom name="Magical Quest Starring Mickey Mouse, The - FastROM Fix v0.2 (2025)(bogaa).sfc" size="1048576" crc="bde87211" sha1="0936113b21f6b03427a690cd9dd654832396dd25"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16359,6 +16379,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="Mario Wednesday (SMW1 hack).sfc" size="2097664" crc="f675415e" sha1="fcc5fa66ebaf194ae9e27a255f09aa98360b6e68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse99d7750a9257">
+		<description>Mario World - Douchebag Edition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mario World - Douchebag Edition.sfc" size="4194304" crc="fa90a735" sha1="e99d7750a925791e16653e6d405c15817131c56a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18892,6 +18922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb2b21665c03ad">
+		<description>New Super Mario Land v1.5 (2019)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="New Super Mario Land v1.5 (2019).sfc" size="2097152" crc="2b50f2af" sha1="b2b21665c03ad8af092cc55b2b9df10b47e8a1cd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf7560e09d2b34">
 		<description>NEW Super Mario World (SMW1 Hack)</description>
 		<year>????</year>
@@ -19599,6 +19639,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Otogirisou T-Eng (2024)(Translated.Games).sfc" size="4194304" crc="650112ca" sha1="82a7d81144c27759ad7d7c4e85a70e22c8d90271"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7eb316f373ba1">
+		<description>Otogirisou T-Eng v1.1 (2025)(ButThouMust)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Otogirisou T-Eng v1.1 (2025)(ButThouMust).sfc" size="1572864" crc="33c8391d" sha1="7eb316f373ba1521e31be4b32583363591070846"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30922,6 +30972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns353b3651db044">
+		<description>Super Ghouls'n Ghosts (E)(1992)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Ghouls'n Ghosts (E)(1992)(Capcom).sfc" size="1048576" crc="a00bc05e" sha1="353b3651db0447d5fcfa46d705ef61bbbd6afaf8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf67a14a897305">
 		<description>Super Gussun Oyoyo 2 (Japan) [En v1.0 by RPGOne]</description>
 		<year>????</year>
@@ -36009,6 +36069,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Teenage Mutant Ninja Turtles IV - Turtles in time.sfc" size="1048576" crc="0598c5f4" sha1="5f0450d0b99074fc8a93fd712736e96be278b938"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns64ea73d73ced4">
+		<description>Teenage Queen (2018)(Alekmaul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Teenage Queen (2018)(Alekmaul).sfc" size="1048576" crc="00e4c4e6" sha1="64ea73d73ced4b7327f68b487b440d3ebb45ca32"/>
 			</dataarea>
 		</part>
 	</software>

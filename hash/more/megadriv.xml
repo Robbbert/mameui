@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1941 -->
+<!-- Number of items in this list = 1942 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5879,6 +5879,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="fantasia (u) (rev00) [!].md" size="524288" crc="34e04627" sha1="e1d84357eb8dfb972f22e80b8d26a0b66167f69e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2593a7ffc1c37">
+		<description>Farming Simulator - 16-Bit Edition v1.2 (2025)(GIANTS Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1835008">
+				<rom name="Farming Simulator - 16-Bit Edition v1.2 (2025)(GIANTS Software).bin" size="1835008" crc="ef5736a0" sha1="2593a7ffc1c3792289b9cc02794f3d74179fa53c"/>
 			</dataarea>
 		</part>
 	</software>
