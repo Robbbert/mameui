@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 294 -->
+<!-- Number of items in this list = 297 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee5f77b519a2abb">
 		<description>(NE)digitalker_300b</description>
@@ -139,6 +139,26 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="1857188">
 				<rom name="[-]Beetalker_speech_development_program_v20.wav" size="1857188" crc="5a163883" sha1="b15e7ec4a9af90e909004c4a5cdce76a1af1668e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3bf4d88a8e9a4">
+		<description>[-]calender</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1342214">
+				<rom name="[-]calender.wav" size="1342214" crc="c1dc763e" sha1="3bf4d88a8e9a4e1c4e8f85e9ad9682ad46b44969"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec594c00218f0a">
+		<description>[-]caves_adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="6326146">
+				<rom name="[-]caves_adventure.wav" size="6326146" crc="5047cecb" sha1="c594c00218f0a94e46d909522ca041312aeefaac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2769,6 +2789,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="2709446">
 				<rom name="[-]yahtze2.wav" size="2709446" crc="212b4fb1" sha1="24b020dfffcd855c0c40f9ae3eb145beecc3f49a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2a9ad18595b44">
+		<description>[ic]catter.mwb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="322740">
+				<rom name="[ic]catter.mwb.wav" size="322740" crc="6455d9f3" sha1="2a9ad18595b44c9f8e74765d71e822ad67ce9d68"/>
 			</dataarea>
 		</part>
 	</software>
