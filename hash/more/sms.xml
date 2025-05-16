@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 386 -->
+<!-- Number of items in this list = 387 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -609,6 +609,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Castle Escape (2023)(IrataHack).sms" size="65536" crc="41d70425" sha1="f3448f8265274af7529679bf4e3c57edc135a738"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms7c3e7f8eea24a">
+		<description>Castle Escape v2.0 (2025)(IrataHack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Castle Escape v2.0 (2025)(IrataHack).sms" size="65536" crc="c8e4298d" sha1="7c3e7f8eea24ad6fb244d835bae95f8c4ae5e1f4"/>
 			</dataarea>
 		</part>
 	</software>

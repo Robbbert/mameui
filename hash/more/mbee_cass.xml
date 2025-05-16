@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 297 -->
+<!-- Number of items in this list = 303 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee5f77b519a2abb">
 		<description>(NE)digitalker_300b</description>
@@ -139,6 +139,66 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="1857188">
 				<rom name="[-]Beetalker_speech_development_program_v20.wav" size="1857188" crc="5a163883" sha1="b15e7ec4a9af90e909004c4a5cdce76a1af1668e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beebcaba917b3108">
+		<description>[-]bouncer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="601762">
+				<rom name="[-]bouncer.wav" size="601762" crc="1037c96c" sha1="bcaba917b31080072a69d0708dd797b75d64b6c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee229af5e0582ba">
+		<description>[-]box</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="989956">
+				<rom name="[-]box.wav" size="989956" crc="a8ae01f6" sha1="229af5e0582bab97d9a5950efb60777d2c27316d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beedfd50957f7507">
+		<description>[-]BRICKBALL (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="401764">
+				<rom name="[-]BRICKBALL (2).wav" size="401764" crc="5d5cd64e" sha1="dfd50957f750733382501e145a5c64a4571abce7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee140a5812466e">
+		<description>[-]brickout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="288860">
+				<rom name="[-]brickout.wav" size="288860" crc="ad07625c" sha1="e140a5812466eeb9fcf1d66aeb9958328238c322"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3c0a75e7eabcc">
+		<description>[-]briney</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="944724">
+				<rom name="[-]briney.wav" size="944724" crc="5b6faa48" sha1="3c0a75e7eabccbe97d814e1ed6f58945e596e9b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea53d87403deac">
+		<description>[-]bunyip</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2539108">
+				<rom name="[-]bunyip.wav" size="2539108" crc="4b8d78c6" sha1="a53d87403deacf0966df381298be83ab2fdf248c"/>
 			</dataarea>
 		</part>
 	</software>
