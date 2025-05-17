@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1942 -->
+<!-- Number of items in this list = 1943 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -10599,6 +10599,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Metal Sonic Hyperdrive (V4.2) (Hack By Darkon).bin" size="1048576" crc="195219e0" sha1="25080255c86af08db67ebdcb4c3cbf91f3aa8533"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8f64f5f89ef63">
+		<description>MetalGear-TTE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="MetalGear-TTE.md" size="1572864" crc="9f6a5f55" sha1="8f64f5f89ef631cf9308c823e06fb48e835d4268"/>
 			</dataarea>
 		</part>
 	</software>

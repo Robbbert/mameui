@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3838 -->
+<!-- Number of items in this list = 3847 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -1922,6 +1922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns53f9bb5c4eb40">
+		<description>101 Dalmatas (U)(1998)(Twin Eagles Group)(badgfx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="101 Dalmatas (U)(1998)(Twin Eagles Group)(badgfx).sfc" size="1048576" crc="dee0cd43" sha1="53f9bb5c4eb408896600d7787a0d0b24d02247a2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse560b653f2514">
 		<description>101 Dalmatas(badgfx)</description>
 		<year>????</year>
@@ -2819,6 +2829,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Aladdin (BR).sfc" size="1310720" crc="13f2663d" sha1="d158cd4a5b46c1ef090a555ac764682558224622"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1de9a68980cac">
+		<description>Aladdin 2000 (U)(2000)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Aladdin 2000 (U)(2000)(DVS Electronic).sfc" size="2097152" crc="a818cfd5" sha1="1de9a68980cac63346e3cda14a5aa0d6cea8b739"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4949,6 +4969,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Buck Rogers - TAG Beta (+headerfix, for PowerPak etc.).sfc" size="1048576" crc="d6990514" sha1="d991fdc0008413247b3bdff4cd2ec4e94694124a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb90bffd1f9ee4">
+		<description>Bug's Life, A (U)(2000)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bug's Life, A (U)(2000)(DVS Electronic).sfc" size="2097152" crc="1683518d" sha1="b90bffd1f9ee459f3df57545916fb66e23de8a4d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10282,6 +10312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns55d618e6b3a64">
+		<description>Flubber (U)(1998)(Twin Eagles Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Flubber (U)(1998)(Twin Eagles Group).sfc" size="1048576" crc="19d276b5" sha1="55d618e6b3a648533d25d5a81d0881b6db90f2da"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns47659318b6535">
 		<description>FLUBBER</description>
 		<year>????</year>
@@ -11679,6 +11719,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Herakles no Eikou 3 - Kamigami no Tinmoku (J) [T+Eng_dqtranslations].sfc" size="2097152" crc="9c2700d5" sha1="dd048966414eab9d66383291b4f1898bb2359f69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns464f6fe19409e">
+		<description>Hercules (U)(1999)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Hercules (U)(1999)(DVS Electronic).sfc" size="2097152" crc="aa9504c4" sha1="464f6fe19409e2721374ed1aea8bc59eda59ce7a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17099,6 +17149,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Mario_In_Yoshi_Heaven_2 (SMW1 Hack).sfc" size="2097152" crc="0b6799d6" sha1="54e0ce39c99f34a3bedc54a5daf82cdc6fd317ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns446a285dae305">
+		<description>Marvel Super Heroes vs. Street Fighter (U)(1999)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Marvel Super Heroes vs. Street Fighter (U)(1999)(DVS Electronic).sfc" size="2097152" crc="05f60d4a" sha1="446a285dae305ce0a6a752805b4d648ce10bfabd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30352,6 +30412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns46c7604737c2a">
+		<description>Street Fighter EX Plus Alpha (U)(1997)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Street Fighter EX Plus Alpha (U)(1997)(DVS Electronic).sfc" size="2097152" crc="bf3fa644" sha1="46c7604737c2a16d0cc85d96df431487e4ddb79f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7ddcb96e0d9fe">
 		<description>Street Fighter II (U)(1992)(Capcom)</description>
 		<year>????</year>
@@ -36032,6 +36102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns174c93531ee86">
+		<description>Tarzan (U)(2000)(Twin Eagles Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Tarzan (U)(2000)(Twin Eagles Group).sfc" size="2097152" crc="be969bfc" sha1="174c93531ee86bf3943c9d0e29a03d65c60c74e5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsdb9cf449cac1a">
 		<description>Tarzan - Lord of the Jungle (Proto) [Bugs Fixed]</description>
 		<year>????</year>
@@ -37999,6 +38079,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="X-Men - Mutant Apocalypse (U) [T+Por_Cyber].sfc" size="2097152" crc="84e98f45" sha1="0633d830db54fa6175d844f7e2f82191a63b8a33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns58909736b9c56">
+		<description>X-Men vs. Street Fighter (U)(1998)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="X-Men vs. Street Fighter (U)(1998)(DVS Electronic).sfc" size="2097152" crc="7eedf7da" sha1="58909736b9c56933c2a8f5cae5c99cf6e3774b75"/>
 			</dataarea>
 		</part>
 	</software>
