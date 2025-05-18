@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3847 -->
+<!-- Number of items in this list = 3854 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3532,6 +3532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9442b414b5238">
+		<description>Bananas de Pijamas (U)(Unl)(1998)(Twin Eagles Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Bananas de Pijamas (U)(Unl)(1998)(Twin Eagles Group).sfc" size="1048576" crc="4260d94e" sha1="9442b414b5238f207b2d02bc7ee0ff83541dbc16"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns247115a0a9ec9">
 		<description>Barkley Shut Up and Jam! (U)(1994)(Accolade)</description>
 		<year>????</year>
@@ -6949,6 +6959,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="dieforwin (SMW1 Hack).sfc" size="2097152" crc="c7d96664" sha1="0ded8acadc49cc7e34d6a107a8db8f9185607da8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd00689883bbf5">
+		<description>Digimon Adventure (U)(Unl)(1999)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Digimon Adventure (U)(Unl)(1999)(DVS Electronic).sfc" size="2097152" crc="aea5e0ba" sha1="d00689883bbf5504996490088250a479647f94a3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20312,6 +20332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9fe9e5be59654">
+		<description>Pocket Monster (U)(Unl)(1999)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pocket Monster (U)(Unl)(1999)(DVS Electronic).sfc" size="2097152" crc="53a72516" sha1="9fe9e5be596548576698c4c038343976db1f31d9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6f56ae4f76229">
 		<description>Pocket Monsters (Unl)</description>
 		<year>????</year>
@@ -20389,6 +20419,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Pokemon Darkness Demo 3.1 by MadLexou (SMW1 Hack).sfc" size="4194304" crc="fa548f5e" sha1="5b1ef6c0156a6f4e89e5d60d6d028c90d2196fc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9f5d1f64aa012">
+		<description>Pokemon Gold &amp; Silver (U)(Unl)(1999)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pokemon Gold &amp; Silver (U)(Unl)(1999).sfc" size="2097152" crc="e6bafeee" sha1="9f5d1f64aa012f33f85f87a69f5d07f86dc2295c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb9825faf488c2">
+		<description>Pokemon Stadium (U)(Unl)(1999)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pokemon Stadium (U)(Unl)(1999)(DVS Electronic).sfc" size="2097152" crc="a8142249" sha1="b9825faf488c2106d46c45ba10b0402a04cd1e4c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30092,6 +30142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns98bb9afaa2a70">
+		<description>Sonic The Hedgehog (U)(Unl)(1996)(Twin Eagles Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sonic The Hedgehog (U)(Unl)(1996)(Twin Eagles Group).sfc" size="1048576" crc="07136575" sha1="98bb9afaa2a70a64d5bd797b5cf9328aeea88f61"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns007145a08ac75">
 		<description>Sonic the Hedgehog</description>
 		<year>????</year>
@@ -30259,6 +30319,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="SP_Mario_World_3W_p (SMW1 Hack).sfc" size="4194304" crc="14adb45c" sha1="6b1b876a06b8ee91df6734a9f189f2d378ad53c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbbf8b45cc2661">
+		<description>Squirrel (U)(Unl)(1996)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Squirrel (U)(Unl)(1996)(DVS Electronic).sfc" size="2097152" crc="82ae070b" sha1="bbf8b45cc26613a626ac67b8abb6dd88b8b7954f"/>
 			</dataarea>
 		</part>
 	</software>

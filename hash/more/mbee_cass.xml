@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 324 -->
+<!-- Number of items in this list = 332 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee5f77b519a2abb">
 		<description>(NE)digitalker_300b</description>
@@ -22,6 +22,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee25cac7bdd6015">
+		<description>[-]adder</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1126760">
+				<rom name="[-]adder.wav" size="1126760" crc="b9e72cde" sha1="25cac7bdd6015e3f13313765e1fefd4f4d124a90"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beeaeeeb6e8d12d3">
 		<description>[-]Addition of Sine Waves</description>
 		<year>????</year>
@@ -32,6 +42,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee92d9a0e5d0631">
+		<description>[-]Alien Cresta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="8395">
+				<rom name="[-]Alien Cresta.tap" size="8395" crc="6f140315" sha1="92d9a0e5d0631af1d3f5846ed3f6356aa7e45f3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee73503c44f71c6">
+		<description>[-]Alien Cresta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="802164">
+				<rom name="[-]Alien Cresta.wav" size="802164" crc="43b3678e" sha1="73503c44f71c68940289477aedc100e68bbae33f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee41799f195e1de">
+		<description>[-]AlienCreature</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5141074">
+				<rom name="[-]AlienCreature.wav" size="5141074" crc="d1c16e84" sha1="41799f195e1de9b5701755058f9bd905d90266c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee3e78015b129fc">
 		<description>[-]Apple Panic</description>
 		<year>????</year>
@@ -39,6 +79,46 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="1365980">
 				<rom name="[-]Apple Panic.wav" size="1365980" crc="9607433f" sha1="3e78015b129fcd2baa0d4e3ceb0e774766555c9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee094bce09771d3">
+		<description>[-]ast+ (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1066796">
+				<rom name="[-]ast+ (2).wav" size="1066796" crc="2b87897b" sha1="094bce09771d3be4141da3994ab1f5ebdba576b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee8e9380ce57c47">
+		<description>[-]ast+ (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="7511690">
+				<rom name="[-]ast+ (3).wav" size="7511690" crc="b34735ef" sha1="8e9380ce57c474345bcabe6dd7bedecde510e7da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5f44c3c695b15">
+		<description>[-]asteroid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2871836">
+				<rom name="[-]asteroid.wav" size="2871836" crc="51415908" sha1="5f44c3c695b15493bb6245fc62c4d0fa51b15b59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7f7ed4ba1dc8a">
+		<description>[-]aussibee_part1_16k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3699420">
+				<rom name="[-]aussibee_part1_16k.wav" size="3699420" crc="75dee249" sha1="7f7ed4ba1dc8a34126b3bcc43ab34a3291bd915a"/>
 			</dataarea>
 		</part>
 	</software>
