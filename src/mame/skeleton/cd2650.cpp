@@ -60,6 +60,7 @@ TODO
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 
 namespace {
@@ -324,7 +325,11 @@ void cd2650_state::cd2650(machine_config &config)
 	PALETTE(config, "palette", palette_device::MONOCHROME);
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(cd2650_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(cd2650_state::quickload_cb));
+	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
+	snapshot.set_load_callback(FUNC(cd2650_state::quickload_cb));
+	snapshot.set_interface("cd2650_quik");
+	SOFTWARE_LIST(config, "cd2650_quik").set_original("cd2650");
 
 	/* Sound */
 	SPEAKER(config, "mono").front_center();

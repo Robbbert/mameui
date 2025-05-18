@@ -765,7 +765,10 @@ void atom_state::atom(machine_config &config)
 	FLOPPY_CONNECTOR(config, m_floppies[0], atom_floppies, "525sssd", atom_state::floppy_formats).enable_sound(true);
 	FLOPPY_CONNECTOR(config, m_floppies[1], atom_floppies, "525sssd", atom_state::floppy_formats).enable_sound(true);
 
-	QUICKLOAD(config, "quickload", "atm", attotime::from_seconds(2)).set_load_callback(FUNC(atom_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "atm", attotime::from_seconds(2)).set_load_callback(FUNC(atom_state::quickload_cb));
+	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "atm", attotime::from_seconds(2)));
+	snapshot.set_load_callback(FUNC(atom_state::quickload_cb));
+	snapshot.set_interface("atom_quik");
 
 	/* utility rom slot */
 	GENERIC_CARTSLOT(config, "cartslot", generic_linear_slot, "atom_cart", "bin,rom").set_device_load(FUNC(atom_state::cart_load));
@@ -777,6 +780,7 @@ void atom_state::atom(machine_config &config)
 	SOFTWARE_LIST(config, "rom_list").set_original("atom_rom");
 	SOFTWARE_LIST(config, "cass_list").set_original("atom_cass");
 	SOFTWARE_LIST(config, "flop_list").set_original("atom_flop");
+	SOFTWARE_LIST(config, "atom_quik").set_original("atom_quik");
 }
 
 /*-------------------------------------------------

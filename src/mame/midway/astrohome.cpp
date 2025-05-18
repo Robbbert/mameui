@@ -232,6 +232,7 @@ void astrocde_home_state::astrocde(machine_config &config)
 
 	/* Software lists */
 	SOFTWARE_LIST(config, "cart_list").set_original("astrocde");
+	SOFTWARE_LIST(config, "astrocade_cass").set_original("astrocde_cass");
 }
 
 

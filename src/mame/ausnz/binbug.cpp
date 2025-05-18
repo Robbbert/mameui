@@ -50,6 +50,7 @@
 #include "bus/s100/s100.h"
 #include "bus/s100/dg640.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 
 namespace {
@@ -258,7 +259,11 @@ void binbug_state::binbug(machine_config &config)
 	RS232_PORT(config, m_rs232, default_rs232_devices, "keyboard").set_option_device_input_defaults("keyboard", DEVICE_INPUT_DEFAULTS_NAME(keyboard));
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(binbug_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(binbug_state::quickload_cb));
+	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
+	snapshot.set_load_callback(FUNC(binbug_state::quickload_cb));
+	snapshot.set_interface("binbug_quik");
+	SOFTWARE_LIST(config, "binbug_quik").set_original("binbug");
 
 	S100_BUS(config, m_s100, 0);
 	S100_SLOT(config, "s100:1", binbug_s100_devices, "dg640");

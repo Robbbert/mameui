@@ -659,6 +659,7 @@ void excali64_state::excali64(machine_config &config)
 	m_centronics->set_output_latch(cent_data_out);
 
 	SOFTWARE_LIST(config, "flop_list").set_original("excalibur64");
+	SOFTWARE_LIST(config, "cass_list").set_original("excalibur64_cass");
 }
 
 /* ROM definition */

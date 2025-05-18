@@ -996,6 +996,7 @@ void einstein_state::einstein(machine_config &config)
 	quickload_image_device &quickload(QUICKLOAD(config, "quickload", "com", attotime::from_seconds(2)));
 	quickload.set_load_callback(FUNC(einstein_state::quickload_cb));
 	quickload.set_interface("einstein_quik");
+	SOFTWARE_LIST(config, "einstein_quik").set_original("einstein_quik");
 }
 
 void einstein_state::einst256(machine_config &config)

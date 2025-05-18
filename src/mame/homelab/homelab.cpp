@@ -46,6 +46,7 @@ MB7051 - fuse programmed prom.
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 namespace {
 
@@ -962,7 +963,11 @@ void homelab3_state::homelab3(machine_config &config)
 	CASSETTE(config, m_cass);
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
 
-	QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)).set_load_callback(FUNC(homelab3_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)).set_load_callback(FUNC(homelab3_state::quickload_cb));
+	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)));
+	snapshot.set_load_callback(FUNC(homelab3_state::quickload_cb));
+	snapshot.set_interface("homelab_quik");
+	SOFTWARE_LIST(config, "homelab_quik").set_original("homelab");
 }
 
 void homelab3_state::brailab4(machine_config &config)

@@ -565,6 +565,7 @@ void coco12_state::coco(machine_config &config)
 	SOFTWARE_LIST(config, "coco_cart_list").set_original("coco_cart").set_filter("COCO");
 	SOFTWARE_LIST(config, "coco_flop_list").set_original("coco_flop").set_filter("COCO");
 	SOFTWARE_LIST(config, "dragon_cart_list").set_compatible("dragon_cart");
+	SOFTWARE_LIST(config, "cass_list").set_original("coco_cass");
 
 	// virtual hard disks
 	COCO_VHD(config, m_vhd_0, 0, m_maincpu);

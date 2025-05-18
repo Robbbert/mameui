@@ -58,6 +58,7 @@ Official test program from pages 4 to 8 of the operator's manual:
 #include "sound/beep.h"
 
 #include "speaker.h"
+#include "softlist_dev.h"
 
 #include "formats/h8_cas.h"
 
@@ -442,6 +443,7 @@ void h8_state::h8(machine_config &config)
 	m_cass->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_ENABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cass->set_interface("h8_cass");
+	SOFTWARE_LIST(config, "h8_cass").set_original("h8");
 
 	TIMER(config, "kansas_w").configure_periodic(FUNC(h8_state::kansas_w), attotime::from_hz(4800));
 	TIMER(config, "kansas_r").configure_periodic(FUNC(h8_state::kansas_r), attotime::from_hz(40000));

@@ -931,7 +931,11 @@ void plus4_state::plus4(machine_config &config)
 	m_exp->cd_wr_callback().set(FUNC(plus4_state::write));
 	m_exp->aec_wr_callback().set_inputline(m_maincpu, INPUT_LINE_HALT);
 
-	QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY).set_load_callback(FUNC(plus4_state::quickload_c16));
+	//QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY).set_load_callback(FUNC(plus4_state::quickload_c16));
+	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY));
+	snapshot.set_load_callback(FUNC(plus4_state::quickload_c16));
+	snapshot.set_interface("c16_quik");
+	SOFTWARE_LIST(config, "c16_quik").set_original("c16_quik");
 
 	// internal ram
 	RAM(config, m_ram).set_default_size("64K");

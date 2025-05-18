@@ -879,6 +879,7 @@ void exelv_state::exl100(machine_config &config)
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
 
 	SOFTWARE_LIST(config, "cart_list").set_original("exl100");
+	SOFTWARE_LIST(config, "cass_list").set_original("exl100_cass");
 }
 
 void exelv_state::exeltel(machine_config &config)
