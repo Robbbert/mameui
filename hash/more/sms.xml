@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 387 -->
+<!-- Number of items in this list = 394 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -92,6 +92,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms619bfabbbf285">
+		<description>3, 4 MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="3, 4 MSX2SMS Hack.sms" size="49152" crc="77957994" sha1="619bfabbbf2852fdc91950383226643f021349f7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms775806aca22b9">
 		<description>340 Sonic The Hedgehog (USA, Europe)</description>
 		<year>????</year>
@@ -102,6 +112,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms38e8ab6269db9">
+		<description>3D Deathchase (Alpha) MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="3D Deathchase (Alpha) MSX2SMS Hack.sms" size="32768" crc="3fe23aa5" sha1="38e8ab6269db92549e1dcd37b12bb60684b03af4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smscddf95f79c63f">
 		<description>412 Virtua Fighter Animation (Brazil)</description>
 		<year>????</year>
@@ -109,6 +129,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="412 Virtua Fighter Animation (Brazil).sms" size="1048576" crc="796859b8" sha1="cddf95f79c63fd087eae729e4a0784327a1e68d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse1564c9775c1c">
+		<description>A.E. (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="A.E. (TW).sms" size="32768" crc="dd44ddc1" sha1="e1564c9775c1c0a5d5ac2278233ccf745bcab6e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms38da7fe2dd95b">
+		<description>A.E. MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="A.E. MSX2SMS Hack.sms" size="32768" crc="57c5091a" sha1="38da7fe2dd95b7745eedefb095d18bd6080c5cef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -129,6 +169,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="acalvo_1.sms" size="65536" crc="b3440203" sha1="3ba79c93e54d85f0bfea64113f05bae873c88434"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms75ef1c9ce8861">
+		<description>Ace Gun MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Ace Gun MSX2SMS Hack.sms" size="49152" crc="942a82bd" sha1="75ef1c9ce88616858903ad43a4307068c0a5082b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -242,6 +292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms9055872ec4273">
+		<description>Alpha Roid MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Alpha Roid MSX2SMS Hack.sms" size="49152" crc="5b986c72" sha1="9055872ec4273336950cf2db1bf4c3be7ae8a989"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsef00f10a1b836">
 		<description>Alter Ego v1.04 (2024-03-27)(Kusfo)</description>
 		<year>????</year>
@@ -319,6 +379,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Astro Warrior &amp; Pit Pot [Proto].sms" size="131072" crc="3da7f1ce" sha1="4ec137df976a14130beeb835122f73823b4c949b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse2c40bfc105a3">
+		<description>Athletic Land [Hi-Com] (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Athletic Land [Hi-Com] (KR).sms" size="32768" crc="beed8522" sha1="e2c40bfc105a3381e13b8736adffc71766a12008"/>
 			</dataarea>
 		</part>
 	</software>

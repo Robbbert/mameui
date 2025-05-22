@@ -1,7 +1,47 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7 -->
+<!-- Number of items in this list = 15 -->
 <softwarelist name="mbee_flop" description="mbee_flop loose roms">
+	<software name="beec0f1aee814c30">
+		<description>[128kp]Arcade Games Vol1 (19xx)(HoneySoft)(corrupted)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="215296">
+				<rom name="[128kp]Arcade Games Vol1 (19xx)(HoneySoft)(corrupted).dsk" size="215296" crc="42097929" sha1="c0f1aee814c306d334015bd0c0c654125c009b42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeed169bb2e6079">
+		<description>[128kp]Pegged_100(2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="860416">
+				<rom name="[128kp]Pegged_100(2).dsk" size="860416" crc="40acbe8b" sha1="ed169bb2e6079cf3d504c04074a07d21c57699cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecb38b9fb6470d">
+		<description>[128kp]Pegged_100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="860416">
+				<rom name="[128kp]Pegged_100.dsk" size="860416" crc="7f775ed8" sha1="cb38b9fb6470d4559c4594d50c274aa321095b49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beedef1e6d089df9">
+		<description>[128kp]Pitman_100</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="860416">
+				<rom name="[128kp]Pitman_100.dsk" size="860416" crc="be33fc40" sha1="def1e6d089df9b08cd4aac09843796ee1fc7d97a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beef1ec30946b5d1">
 		<description>[128kp]Vexed</description>
 		<year>????</year>
@@ -19,6 +59,46 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="860416">
 				<rom name="[128kp]VexedBEE_115.dsk" size="860416" crc="d55437fd" sha1="835078e1a118adf93ee8e3bb34f81ab942102e3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7ffb29b34db17">
+		<description>[128k](NB)peter_broughton_v2.2p_2of2_ds84</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="860416">
+				<rom name="[128k](NB)peter_broughton_v2.2p_2of2_ds84.dsk" size="860416" crc="648093dd" sha1="7ffb29b34db17ba6d51ece130302c6edeee7aedb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea8909e472d6aa">
+		<description>[128k](NB)pjb2-ds84</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="860416">
+				<rom name="[128k](NB)pjb2-ds84.dsk" size="860416" crc="a8f393e6" sha1="a8909e472d6aac0616255308d94709221f1300af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee5c26c13317d6">
+		<description>[128k]microbee_pilot_ss80</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="430336">
+				<rom name="[128k]microbee_pilot_ss80.dsk" size="430336" crc="f9c6ce60" sha1="e5c26c13317d6a76999e873d465df6343a1334e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee621180d6cd0f9">
+		<description>[56k]honeysoft_colour_sampler_vol_1_t03</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="215296">
+				<rom name="[56k]honeysoft_colour_sampler_vol_1_t03.dsk" size="215296" crc="c0c4a0d1" sha1="621180d6cd0f9e07841a949b0a9aa3fb125f5a23"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,74 +1,64 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1268 -->
+<!-- Number of items in this list = 1298 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="bee6276016527b2e">
-		<description>(cannotquit)ADV01</description>
+		<description>[-](cannotquit)ADV01</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="15744">
-				<rom name="(cannotquit)ADV01.COM" size="15744" crc="dc725d0f" sha1="6276016527b2e2fc8c670231f3ce9e4b5e11cf8e"/>
+				<rom name="[-](cannotquit)ADV01.COM" size="15744" crc="dc725d0f" sha1="6276016527b2e2fc8c670231f3ce9e4b5e11cf8e"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="bee300ad811b143d">
-		<description>(cannotquit)ADV03</description>
+		<description>[-](cannotquit)ADV03</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="15616">
-				<rom name="(cannotquit)ADV03.COM" size="15616" crc="79fd8a0e" sha1="300ad811b143db634fae384df76f7669ebafb8e2"/>
+				<rom name="[-](cannotquit)ADV03.COM" size="15616" crc="79fd8a0e" sha1="300ad811b143db634fae384df76f7669ebafb8e2"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="beeedba19351e57a">
-		<description>(nw1)bugduel</description>
+	<software name="beec670f30303e3a">
+		<description>[-](demo)3d</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="4162">
-				<rom name="(nw1)bugduel.bin" size="4162" crc="68711a4f" sha1="edba19351e57a8f293ab415f7c37c8b0cb07e344"/>
+			<dataarea name="quik" size="512">
+				<rom name="[-](demo)3d.mwb" size="512" crc="e4cda29d" sha1="c670f30303e3ae9e0b1ba35d8ff41374946aa24c"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="bee5c5d45c57bb8c">
-		<description>(sound-only)austf1</description>
+	<software name="bee94a988864af21">
+		<description>[-](demo)April Fool Pattern (173MS)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="640">
-				<rom name="(sound-only)austf1.mwb" size="640" crc="b4324a2f" sha1="5c5d45c57bb8c084109118f2f0584cc13c1c9d56"/>
+			<dataarea name="quik" size="539">
+				<rom name="[-](demo)April Fool Pattern (173MS).BIN" size="539" crc="90742a0d" sha1="94a988864af2175822d2c97323c065bb567b6761"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="beef93fa93366905">
-		<description>(sound-only)austf2</description>
+	<software name="bee500094d65e02c">
+		<description>[-](demo)K-9 (176MS)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="640">
-				<rom name="(sound-only)austf2.mwb" size="640" crc="077b2502" sha1="f93fa9336690565a376cf9a9e04abd4b408cc209"/>
+			<dataarea name="quik" size="1457">
+				<rom name="[-](demo)K-9 (176MS).BIN" size="1457" crc="58a20c8a" sha1="500094d65e02c15c493ede94c40817e50c02da77"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="bee44890fcd41882">
-		<description>(sound-only)babyelef</description>
+	<software name="beed9bda18aa86fb">
+		<description>[-](demo)Random Numbers (175MS)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="384">
-				<rom name="(sound-only)babyelef.mwb" size="384" crc="04fe95b4" sha1="44890fcd418823de623c5af2abc20242515e78ab"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="bee0c76761957618">
-		<description>(sound-only)beatles</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="768">
-				<rom name="(sound-only)beatles.mwb" size="768" crc="c4a66ebd" sha1="0c767619576181f205036db720488f12c4109c27"/>
+			<dataarea name="quik" size="409">
+				<rom name="[-](demo)Random Numbers (175MS).BIN" size="409" crc="7eab294e" sha1="d9bda18aa86fb4a122327682aec581d1408c4426"/>
 			</dataarea>
 		</part>
 	</software>
@@ -89,6 +79,206 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="384">
 				<rom name="[-](demo)threed.mwb" size="384" crc="7d183b70" sha1="81fce1021212085f900907e9b1c36bbec7a01f5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3d5e39b7671fd">
+		<description>[-](NJ)Box Chumper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1792">
+				<rom name="[-](NJ)Box Chumper.mwb" size="1792" crc="2cea9205" sha1="3d5e39b7671fd3d76735f6d1055a5c803aba7e5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeabb98cb03ac3d">
+		<description>[-](NJ)Brickout</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2176">
+				<rom name="[-](NJ)Brickout.mwb" size="2176" crc="b65ee723" sha1="abb98cb03ac3d7bd58d5f1e8feda8372b4bab2c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee661a1672d611e">
+		<description>[-](NJ)Bricky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1536">
+				<rom name="[-](NJ)Bricky.mwb" size="1536" crc="933d2149" sha1="661a1672d611e5c2a517ea01b8e519dabca4cdbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee74970bfe0e05d">
+		<description>[-](NJ)Survivor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5760">
+				<rom name="[-](NJ)Survivor.BEE" size="5760" crc="57dd0f29" sha1="74970bfe0e05dcf75ccaf0eb2d9799e169df726f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee2ccc888b15554">
+		<description>[-](NJ,demo)beemove</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1792">
+				<rom name="[-](NJ,demo)beemove.mwb" size="1792" crc="c8e12fc6" sha1="2ccc888b155544c8c7f814175296c5060043978b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5c5d45c57bb8c">
+		<description>[-](sound-only)austf1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="640">
+				<rom name="[-](sound-only)austf1.mwb" size="640" crc="b4324a2f" sha1="5c5d45c57bb8c084109118f2f0584cc13c1c9d56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef93fa93366905">
+		<description>[-](sound-only)austf2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="640">
+				<rom name="[-](sound-only)austf2.mwb" size="640" crc="077b2502" sha1="f93fa9336690565a376cf9a9e04abd4b408cc209"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee44890fcd41882">
+		<description>[-](sound-only)babyelef</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="384">
+				<rom name="[-](sound-only)babyelef.mwb" size="384" crc="04fe95b4" sha1="44890fcd418823de623c5af2abc20242515e78ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0c76761957618">
+		<description>[-](sound-only)beatles</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="768">
+				<rom name="[-](sound-only)beatles.mwb" size="768" crc="c4a66ebd" sha1="0c767619576181f205036db720488f12c4109c27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee18279735f9645">
+		<description>[-]20tunes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="12288">
+				<rom name="[-]20tunes.mwb" size="12288" crc="796a9889" sha1="18279735f9645e6dd4cad09e6f485c5a0ee5d5b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee716a407fb7acd">
+		<description>[-]238-star</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="13056">
+				<rom name="[-]238-star.mwb" size="13056" crc="83eebd97" sha1="716a407fb7acd4bd348e33bf85bdea6749f70889"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee27f130d5a7217">
+		<description>[-]3-dim</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1536">
+				<rom name="[-]3-dim.mwb" size="1536" crc="4ba7af98" sha1="27f130d5a7217c2302797dbe05ff63b66f670de1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee02404b224bfa">
+		<description>[-]3D Noughts and Crosses</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5376">
+				<rom name="[-]3D Noughts and Crosses.mwb" size="5376" crc="b1f7ad9d" sha1="e02404b224bfa8e11e19e98353f01960b55601ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed7c13794f846c">
+		<description>[-]3D Noughts and Crosses_</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="9984">
+				<rom name="[-]3D Noughts and Crosses_.MWB" size="9984" crc="e2fbad12" sha1="d7c13794f846cfb0a6c4e98e1e5ffee6d3dadbab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefc4932d134b9e">
+		<description>[-]3D Surface Plotter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1589">
+				<rom name="[-]3D Surface Plotter.bin" size="1589" crc="4f103483" sha1="fc4932d134b9ea9382c84c5194a3e622f920efb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee06e71a9d4493e">
+		<description>[-]3d-mb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="896">
+				<rom name="[-]3d-mb.mwb" size="896" crc="795f356e" sha1="06e71a9d4493ec0e8f0148f95cb45dfab3b9122e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecddff6e36302e">
+		<description>[-]3d-plot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1337">
+				<rom name="[-]3d-plot.bin" size="1337" crc="1f5ffc81" sha1="cddff6e36302eee0201d8fecda13c4a6e4e02c7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee36f038bfcb5d0">
+		<description>[-]3DMAZE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="10240">
+				<rom name="[-]3DMAZE.MWB" size="10240" crc="722f63ad" sha1="36f038bfcb5d0045a1b33b6584b0b849e0d0672e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb1ed8aaee68b6">
+		<description>[-]5games (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="8704">
+				<rom name="[-]5games (2).mwb" size="8704" crc="5b53fbe8" sha1="b1ed8aaee68b6a0696034859fea1f41f24c26c8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee1397e1760f1f2">
+		<description>[-]5games</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="8704">
+				<rom name="[-]5games.mwb" size="8704" crc="0adb779d" sha1="1397e1760f1f218475132eda4ad8887b6c067f83"/>
 			</dataarea>
 		</part>
 	</software>
@@ -839,6 +1029,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="11520">
 				<rom name="[-]baseball_1.mwb" size="11520" crc="35cbac1e" sha1="57b745f5bdda89d486f719e86df64c0fc67e9095"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee2aeeb4eb3648">
+		<description>[-]Basic Sphere (231MS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1152">
+				<rom name="[-]Basic Sphere (231MS).BIN" size="1152" crc="55497aaf" sha1="e2aeeb4eb36487d3d00dcfd8e820d664bfdb958b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1669,6 +1869,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="4608">
 				<rom name="[-]bug-duel.mwb" size="4608" crc="07de6643" sha1="035077f18c413e12579d0bb3384a66256e96103f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeedba19351e57a">
+		<description>[-]bugduel</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4162">
+				<rom name="[-]bugduel.bin" size="4162" crc="68711a4f" sha1="edba19351e57a8f293ab415f7c37c8b0cb07e344"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4579,6 +4789,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="3840">
 				<rom name="[-]gearing.mwb" size="3840" crc="d9644e93" sha1="b660f24dc03decb2bc08194766d5c679c3fd74fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeaadd0f8f17875">
+		<description>[-]Geoff's Morse Machine (232MS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1280">
+				<rom name="[-]Geoff's Morse Machine (232MS).BIN" size="1280" crc="c997da7c" sha1="aadd0f8f17875db72c8e3a2ee2b48e9a17f93d3f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10222,6 +10442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beef1e16664d33de">
+		<description>[-]Spider Graphics (230MS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="981">
+				<rom name="[-]Spider Graphics (230MS).BIN" size="981" crc="9fb140c2" sha1="f1e16664d33de51642f9f006539aeed2c19c9d68"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee8097119ea87da">
 		<description>[-]spiral</description>
 		<year>????</year>
@@ -11922,6 +12152,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee226f4cefe55d5">
+		<description>[ic](NJ)GROOBL-C</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3200">
+				<rom name="[ic](NJ)GROOBL-C.MWB" size="3200" crc="0bd67522" sha1="226f4cefe55d56f90c86b4a2301a666de0e247b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7f7b7fa99b439">
+		<description>[ic](NJ)JOYSTICK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="15744">
+				<rom name="[ic](NJ)JOYSTICK.MWB" size="15744" crc="3c99302f" sha1="7f7b7fa99b43980cbf5ace957370706c830e83ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee62ce06a814d71">
+		<description>[ic]2d-0-x</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="8192">
+				<rom name="[ic]2d-0-x.mwb" size="8192" crc="a8e36be3" sha1="62ce06a814d7148ab04ae5fb2bf34f39f58a8341"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beebc53099d5991c">
+		<description>[ic]3d-0-x</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="10112">
+				<rom name="[ic]3d-0-x.mwb" size="10112" crc="a930efb6" sha1="bc53099d5991cb9c0b7f15ca78d19b06aa905531"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee565f7966eb144">
+		<description>[ic]4d-0-x</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="9088">
+				<rom name="[ic]4d-0-x.mwb" size="9088" crc="bafd22fb" sha1="565f7966eb1440681119334e5eede33be7221705"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beed23301b961810">
 		<description>[ic]bigdump</description>
 		<year>????</year>
@@ -12382,6 +12662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beee0f61c27cf42b">
+		<description>[ic]readprom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="210">
+				<rom name="[ic]readprom.mwb" size="210" crc="8206a035" sha1="e0f61c27cf42bbd3b7f1a7bac2e1d9fdc7c0354b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beed959089e74ddc">
 		<description>[ic]reversi2</description>
 		<year>????</year>
@@ -12579,6 +12869,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="5888">
 				<rom name="[ppc]doodles.mwb" size="5888" crc="84187c4a" sha1="e3df67f89ccf906cc22ab29e1f34d92dbad13c32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee632efcee2ec86">
+		<description>[ppc]Draw Local Countries (212MS)(2085 end)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="15264">
+				<rom name="[ppc]Draw Local Countries (212MS)(2085 end).BIN" size="15264" crc="83ec39d2" sha1="632efcee2ec864eff6d7f1a0ed2e3bf4a1d0612c"/>
 			</dataarea>
 		</part>
 	</software>

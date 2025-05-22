@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 182 -->
+<!-- Number of items in this list = 183 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1729,6 +1729,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="253952">
 				<rom name="TurboGrafx-16 Phantasy Star - WHAT (2004)(damage_X).pce" size="253952" crc="b032ec5e" sha1="c8b9bc226d39c88d4c856c5a3c3bdef0cb228571"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce2ffa50dbb5921">
+		<description>Uwol Quest for Money v1.1 (2018)(Alekmaul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Uwol Quest for Money v1.1 (2018)(Alekmaul).pce" size="262144" crc="59421adc" sha1="2ffa50dbb592141aad3aa44088de0a7efe5f5f48"/>
 			</dataarea>
 		</part>
 	</software>

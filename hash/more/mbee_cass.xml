@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 332 -->
+<!-- Number of items in this list = 350 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee5f77b519a2abb">
 		<description>(NE)digitalker_300b</description>
@@ -9,6 +9,26 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="1851232">
 				<rom name="(NE)digitalker_300b.wav" size="1851232" crc="942d9e8c" sha1="5f77b519a2abbf1629f7fd86d5d80478e233ff06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee10ce6b05de6c8">
+		<description>[-](NJ)armoredPatrol</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1377244">
+				<rom name="[-](NJ)armoredPatrol.wav" size="1377244" crc="25ef9ede" sha1="10ce6b05de6c8e5ffefbffac908d753e5aa8216c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef8946ba5dc2ef">
+		<description>[-](NJ)attackForce</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1445092">
+				<rom name="[-](NJ)attackForce.wav" size="1445092" crc="020ed2c8" sha1="f8946ba5dc2ef0e110aa56be39174a927bc7bef5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1523,12 +1543,12 @@
 		</part>
 	</software>
 	<software name="bee6628f44ce0c62">
-		<description>[-]Jani 1</description>
+		<description>[-]Jani1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="109322392">
-				<rom name="[-]Jani 1.wav" size="109322392" crc="59b93400" sha1="6628f44ce0c62cbfde0066236d5df282d78b235a"/>
+				<rom name="[-]Jani1.wav" size="109322392" crc="59b93400" sha1="6628f44ce0c62cbfde0066236d5df282d78b235a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1759,6 +1779,136 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="3336158">
 				<rom name="[-]maths_race.wav" size="3336158" crc="c7c10aab" sha1="9fd9f2c1f49557bffd39038a2de2a5f016ae2307"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeecea559d1ad8c">
+		<description>[-]MC1 (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="20809063">
+				<rom name="[-]MC1 (3).wav" size="20809063" crc="2088f455" sha1="ecea559d1ad8c56ff5283f95779757c899a8c288"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9569fd0761d69">
+		<description>[-]MC2 (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="20779292">
+				<rom name="[-]MC2 (2).wav" size="20779292" crc="727bbca7" sha1="9569fd0761d6943cbf65b9d563a3bbeb48b2115f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee31c4d87e52935">
+		<description>[-]mc2 (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="20651563">
+				<rom name="[-]mc2 (3).wav" size="20651563" crc="8702660b" sha1="31c4d87e5293559b0f3a9392dea254681052bf1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee11960c464358d">
+		<description>[-]MC3 (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="19045894">
+				<rom name="[-]MC3 (3).wav" size="19045894" crc="35d11ba7" sha1="11960c464358d36d51de63527c3f5925dd26dbbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5b05e3609471d">
+		<description>[-]MC4 (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="18866052">
+				<rom name="[-]MC4 (2).wav" size="18866052" crc="40e9b928" sha1="5b05e3609471d2f2e2cb9d96c8cf4bc465f5c28e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee1db9fa170ae80">
+		<description>[-]mc4 (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="18162214">
+				<rom name="[-]mc4 (3).wav" size="18162214" crc="72aeb982" sha1="1db9fa170ae804a751bcf501b367671f77f74e10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee01a97cbf4db71">
+		<description>[-]mc4 (4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="17954861">
+				<rom name="[-]mc4 (4).wav" size="17954861" crc="cdf249a3" sha1="01a97cbf4db71b5d85ad618d33be2b0982acc86e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee610426d9e1d59">
+		<description>[-]mc6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="17444375">
+				<rom name="[-]mc6.wav" size="17444375" crc="263fab14" sha1="610426d9e1d597337b7c0ed7fc4c4098136aa445"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5744cc51dd298">
+		<description>[-]mc7 (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="20594175">
+				<rom name="[-]mc7 (2).wav" size="20594175" crc="68ea2d6c" sha1="5744cc51dd298eb733fc829795126e242f867b35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefd1028634fb34">
+		<description>[-]mc7 (3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="19979777">
+				<rom name="[-]mc7 (3).wav" size="19979777" crc="43af666d" sha1="fd1028634fb3492eefabb6e34a800d25f7c9e724"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee011ab68217e00">
+		<description>[-]mc7 (4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="20664796">
+				<rom name="[-]mc7 (4).wav" size="20664796" crc="3a2a6927" sha1="011ab68217e00013c4c0c2ae853a335968b6cafc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec608d7e978b56">
+		<description>[-]mc8 (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="17281630">
+				<rom name="[-]mc8 (2).wav" size="17281630" crc="913da6f9" sha1="c608d7e978b5614e9a89a4b4945c4d5d173ab5ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef31aa3d942b0b">
+		<description>[-]MC8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="17698534">
+				<rom name="[-]MC8.wav" size="17698534" crc="f5299a6a" sha1="f31aa3d942b0bb2009c98fb75f04fb67d4e2e46a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2992,6 +3142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beef76b39edc51ce">
+		<description>[-]ugankar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="126011032">
+				<rom name="[-]ugankar.wav" size="126011032" crc="5bc60df7" sha1="f76b39edc51ce827438ab9abfcb31b253c5fbbb5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee31db6d1dc34f3">
 		<description>[-]UnamedsksideB96k1</description>
 		<year>????</year>
@@ -3302,6 +3462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beec7b94c58539b3">
+		<description>[ic]readprom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3065876">
+				<rom name="[ic]readprom.wav" size="3065876" crc="79eb51ee" sha1="c7b94c58539b3d992482f30b492d8355f2016864"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee1774ef7939aa7">
 		<description>[ic]Vexed</description>
 		<year>????</year>
@@ -3309,6 +3479,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="14652">
 				<rom name="[ic]Vexed.tap" size="14652" crc="2a4619b7" sha1="1774ef7939aa7eac438d0016009840bb2086f8ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee3591190dd2d61">
+		<description>[ppc]ppctest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1369332">
+				<rom name="[ppc]ppctest.wav" size="1369332" crc="7d73048f" sha1="3591190dd2d61ea83a31f5a8a209eba93ae492ce"/>
 			</dataarea>
 		</part>
 	</software>

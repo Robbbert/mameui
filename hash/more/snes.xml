@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3854 -->
+<!-- Number of items in this list = 3846 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -2623,12 +2623,12 @@
 		</part>
 	</software>
 	<software name="snsc83ac26c3954b">
-		<description>Addams Family, The (U, Alt)(1992)(Ocean)</description>
+		<description>Addams Family, The (U, NSS Arcade)(1992)(Ocean)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Addams Family, The (U, Alt)(1992)(Ocean).sfc" size="1048576" crc="6f563adf" sha1="c83ac26c3954baebe6b3810c88b33fa53d6b5ddf"/>
+				<rom name="Addams Family, The (U, NSS Arcade)(1992)(Ocean).sfc" size="1048576" crc="6f563adf" sha1="c83ac26c3954baebe6b3810c88b33fa53d6b5ddf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2832,16 +2832,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns1de9a68980cac">
-		<description>Aladdin 2000 (U)(2000)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Aladdin 2000 (U)(2000)(DVS Electronic).sfc" size="2097152" crc="a818cfd5" sha1="1de9a68980cac63346e3cda14a5aa0d6cea8b739"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns60ed9f6f84144">
 		<description>Albert Odyssey T-Eng (2018)(Peter Lemon)</description>
 		<year>????</year>
@@ -2933,12 +2923,12 @@
 		</part>
 	</software>
 	<software name="sns832e1b86c13fd">
-		<description>Alien 3 (U, Alt)(1993)(Ljn - Probe)</description>
+		<description>Alien 3 (U, Rev 1)(1993)(Ljn - Probe)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Alien 3 (U, Alt)(1993)(Ljn - Probe).sfc" size="1048576" crc="9cce2eb7" sha1="832e1b86c13fdd0c24480e4c72eec5d94edc4f82"/>
+				<rom name="Alien 3 (U, Rev 1)(1993)(Ljn - Probe).sfc" size="1048576" crc="9cce2eb7" sha1="832e1b86c13fdd0c24480e4c72eec5d94edc4f82"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3532,13 +3522,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns9442b414b5238">
-		<description>Bananas de Pijamas (U)(Unl)(1998)(Twin Eagles Group)</description>
+	<software name="sns801776c4651db">
+		<description>Barbie - Super Model (U)(1993)(Hi Tech Expressions)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Bananas de Pijamas (U)(Unl)(1998)(Twin Eagles Group).sfc" size="1048576" crc="4260d94e" sha1="9442b414b5238f207b2d02bc7ee0ff83541dbc16"/>
+				<rom name="Barbie - Super Model (U)(1993)(Hi Tech Expressions).sfc" size="1048576" crc="3b73610e" sha1="801776c4651db49fc0cb1fdbaf0a2ca8741d87c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns56c8e97e843f9">
+		<description>Barbie - Vacation Adventure (USA, Proto)(1994)(Hi Tech Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Barbie - Vacation Adventure (USA, Proto)(1994)(Hi Tech Entertainment).sfc" size="1048576" crc="d1a90ab4" sha1="56c8e97e843f9b36e35221a795b054d306c82cd1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4979,16 +4979,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Buck Rogers - TAG Beta (+headerfix, for PowerPak etc.).sfc" size="1048576" crc="d6990514" sha1="d991fdc0008413247b3bdff4cd2ec4e94694124a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsb90bffd1f9ee4">
-		<description>Bug's Life, A (U)(2000)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Bug's Life, A (U)(2000)(DVS Electronic).sfc" size="2097152" crc="1683518d" sha1="b90bffd1f9ee459f3df57545916fb66e23de8a4d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6962,16 +6952,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsd00689883bbf5">
-		<description>Digimon Adventure (U)(Unl)(1999)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Digimon Adventure (U)(Unl)(1999)(DVS Electronic).sfc" size="2097152" crc="aea5e0ba" sha1="d00689883bbf5504996490088250a479647f94a3"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns7b9c1407f56d5">
 		<description>Dinomar adventure of a SMWCentral user by Dinomar [Dinomar-Yidi version] (SMW1 Hack)</description>
 		<year>????</year>
@@ -7269,16 +7249,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Dottie Flowers (2023)(Goldlocke).sfc" size="1048576" crc="14172273" sha1="7896b2eb89eb385378ad96b94e14411f637b9908"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns09847567edd0b">
-		<description>Double Dragon V - The Shadow Falls (E)(1994)(Tradewest)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Double Dragon V - The Shadow Falls (E)(1994)(Tradewest).sfc" size="2097152" crc="e80f6b65" sha1="09847567edd0b09c6f401d830107a60e26ac8fb5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7972,6 +7942,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns179f0e82e84bb">
+		<description>Emerald Dragon T-Eng v1.2 (2014)(Translation Corporation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Emerald Dragon T-Eng v1.2 (2014)(Translation Corporation).sfc" size="3145728" crc="3dfe67d6" sha1="179f0e82e84bb78333cc330b53b9bbb21fa441fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns270486f8f1282">
+		<description>Emerald Dragon T-Spa v1.1 (2023)(semco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Emerald Dragon T-Spa v1.1 (2023)(semco).sfc" size="3145728" crc="c0c313a3" sha1="270486f8f1282615ab4d9f3c6a6855c80de6f447"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns48f833166b27e">
+		<description>Emerald Dragon T-Spa v1.2 (2024)(semco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Emerald Dragon T-Spa v1.2 (2024)(semco).sfc" size="3145728" crc="64edf4fc" sha1="48f833166b27ed8b8b01d68721447bf93a49b108"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb9ba938b6c3ce">
 		<description>ENERGY Alternia 4.4 (SMW1 Hack)</description>
 		<year>????</year>
@@ -8449,6 +8449,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="FI Beta 3 (SMW1 Hack).sfc" size="2097152" crc="b7f3e43d" sha1="a5c8f03ad861834d9e1531475bff63098d9828c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns322adb46b7600">
+		<description>FIFA - Road to World Cup 98 (E, A8FP)(1998)(Electronic Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="FIFA - Road to World Cup 98 (E, A8FP)(1998)(Electronic Arts).sfc" size="2097152" crc="0cc77af7" sha1="322adb46b7600b0c5512a416a83b4ca43ef30894"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9342,16 +9352,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsc448afe49f5ec">
-		<description>Final Fight (E)(1990-91)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Final Fight (E)(1990-91)(Capcom).sfc" size="1048576" crc="a4437629" sha1="c448afe49f5ec5e94430ad25069f43ba28838859"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsaff09cc7504dd">
 		<description>Final Fight (J) [T+Chi_madcell]</description>
 		<year>????</year>
@@ -9359,16 +9359,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Final Fight (J) [T+Chi_madcell].sfc" size="1310720" crc="016f594b" sha1="aff09cc7504dd4f1c7ee88198a988fc39859f8a9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns3185d06725e27">
-		<description>Final Fight 2 (E)(1993)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1310720">
-				<rom name="Final Fight 2 (E)(1993)(Capcom).sfc" size="1310720" crc="7b94ca96" sha1="3185d06725e27de8e7c703cf4b8e5b5b17b03c7f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9409,16 +9399,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Final Fight 2.sfc" size="1310720" crc="53d143d7" sha1="8c374ca1e6fab41dca6ec153767030b4e9e99534"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns30cc3abb60f60">
-		<description>Final Fight 3 (E)(1995)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="Final Fight 3 (E)(1995)(Capcom).sfc" size="3145728" crc="aa58a166" sha1="30cc3abb60f6037918017725139f4a3074800b64"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11742,16 +11722,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns464f6fe19409e">
-		<description>Hercules (U)(1999)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Hercules (U)(1999)(DVS Electronic).sfc" size="2097152" crc="aa9504c4" sha1="464f6fe19409e2721374ed1aea8bc59eda59ce7a"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns5fe58127a822a">
 		<description>here (SMW1 Hack)</description>
 		<year>????</year>
@@ -11829,6 +11799,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="High Flyin' Remix 2 - The Mushroom Kingdom 2worlds demo (SMW Hack).sfc" size="4194304" crc="88474d79" sha1="b034412c9e3efbf5cd306d5b6926cbad4f4f28ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd94ccff3737c9">
+		<description>Hilda (2016)(Orochii and EN-i)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Hilda (2016)(Orochii and EN-i).sfc" size="262144" crc="169dda02" sha1="d94ccff3737c914bf49b13c3da642468306a0e43"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12332,6 +12312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns38d068da17bc9">
+		<description>Incognity - A rover story (2021)(cand)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Incognity - A rover story (2021)(cand).sfc" size="524288" crc="7e809b1a" sha1="38d068da17bc9f32e6a1fa017932d476f8cd8eba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns59a9dc3ff0f48">
 		<description>Insane World</description>
 		<year>????</year>
@@ -12649,6 +12639,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Jikkyou Powerful Pro Yakyuu 2 (Japan) (Rev A).sfc" size="2621440" crc="ee0c54b5" sha1="51d854f885125e831399e6bdbc3ff6fc726a120f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns916bf6e3e7b88">
+		<description>Jim Power - The Lost Dimension in 3D (World) (Aftermarket) (Enhanced) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Jim Power - The Lost Dimension in 3D (World) (Aftermarket) (Enhanced) (Unl).sfc" size="2097152" crc="d2a2aea0" sha1="916bf6e3e7b884a91802d9238f469776e986c791"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14609,6 +14609,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524800">
 				<rom name="Little Magic T-Eng v1.00B (2001)(Aeon Genesis).sfc" size="524800" crc="b73ec805" sha1="0ad4da6caab100a772ffd9c362b74852a7dcb6e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns731d5f7e2f6fa">
+		<description>Little Medusa (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Little Medusa (World) (Aftermarket) (Unl).sfc" size="2097152" crc="cc295189" sha1="731d5f7e2f6fa554e0c56290715b2c0bfdfbbd87"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17172,16 +17182,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns446a285dae305">
-		<description>Marvel Super Heroes vs. Street Fighter (U)(1999)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Marvel Super Heroes vs. Street Fighter (U)(1999)(DVS Electronic).sfc" size="2097152" crc="05f60d4a" sha1="446a285dae305ce0a6a752805b4d648ce10bfabd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns2de590dbea500">
 		<description>Marvel Superheroes - War of the gems(S)</description>
 		<year>????</year>
@@ -18312,16 +18312,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns520ed61aa390f">
-		<description>Mortal Kombat 3 (E)(1995)(Williams)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Mortal Kombat 3 (E)(1995)(Williams).sfc" size="4194304" crc="ca3ceb0a" sha1="520ed61aa390f447d71a6a16582464e9888381d2"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns9ad7bea31a3e8">
 		<description>Mortal Kombat 3 New Edition (2025)(B-Zero TV)</description>
 		<year>????</year>
@@ -19062,16 +19052,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsb2b21665c03ad">
-		<description>New Super Mario Land v1.5 (2019)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="New Super Mario Land v1.5 (2019).sfc" size="2097152" crc="2b50f2af" sha1="b2b21665c03ad8af092cc55b2b9df10b47e8a1cd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsf7560e09d2b34">
 		<description>NEW Super Mario World (SMW1 Hack)</description>
 		<year>????</year>
@@ -19622,6 +19602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb4135515d1759">
+		<description>Omega Brazil '97 (U)(Unl)(1997)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Omega Brazil '97 (U)(Unl)(1997).sfc" size="1310720" crc="53f41be4" sha1="b4135515d1759bb225537ef8338adbfb9fceb3c2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6b493c690fabd">
 		<description>On the Ball [Proto]</description>
 		<year>????</year>
@@ -20162,6 +20152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns6e6eb5051b0ed">
+		<description>Pinkie (world) (aftermarket) (unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Pinkie (world) (aftermarket) (unl).sfc" size="1048576" crc="d2aa58d3" sha1="6e6eb5051b0edcd245e2279ed926d81e6f498471"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0bb5a7e474446">
 		<description>pipe demo 1 by mikeyk (SMW1 Hack)</description>
 		<year>????</year>
@@ -20332,16 +20332,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns9fe9e5be59654">
-		<description>Pocket Monster (U)(Unl)(1999)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Pocket Monster (U)(Unl)(1999)(DVS Electronic).sfc" size="2097152" crc="53a72516" sha1="9fe9e5be596548576698c4c038343976db1f31d9"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns6f56ae4f76229">
 		<description>Pocket Monsters (Unl)</description>
 		<year>????</year>
@@ -20419,26 +20409,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Pokemon Darkness Demo 3.1 by MadLexou (SMW1 Hack).sfc" size="4194304" crc="fa548f5e" sha1="5b1ef6c0156a6f4e89e5d60d6d028c90d2196fc1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns9f5d1f64aa012">
-		<description>Pokemon Gold &amp; Silver (U)(Unl)(1999)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Pokemon Gold &amp; Silver (U)(Unl)(1999).sfc" size="2097152" crc="e6bafeee" sha1="9f5d1f64aa012f33f85f87a69f5d07f86dc2295c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsb9825faf488c2">
-		<description>Pokemon Stadium (U)(Unl)(1999)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Pokemon Stadium (U)(Unl)(1999)(DVS Electronic).sfc" size="2097152" crc="a8142249" sha1="b9825faf488c2106d46c45ba10b0402a04cd1e4c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30322,16 +30292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsbbf8b45cc2661">
-		<description>Squirrel (U)(Unl)(1996)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Squirrel (U)(Unl)(1996)(DVS Electronic).sfc" size="2097152" crc="82ae070b" sha1="bbf8b45cc26613a626ac67b8abb6dd88b8b7954f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns2468a34a5f09d">
 		<description>squishgoombafix (SMW1 Hack)</description>
 		<year>????</year>
@@ -30479,16 +30439,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Strawberry (SMW1 Hack).sfc" size="2097152" crc="476a3858" sha1="55b2468932ff3204f7b657efd90a11973be19c52"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns46c7604737c2a">
-		<description>Street Fighter EX Plus Alpha (U)(1997)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Street Fighter EX Plus Alpha (U)(1997)(DVS Electronic).sfc" size="2097152" crc="bf3fa644" sha1="46c7604737c2a16d0cc85d96df431487e4ddb79f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30733,12 +30683,12 @@
 		</part>
 	</software>
 	<software name="snsa789c63ca0f47">
-		<description>Super Big 2 (C)</description>
+		<description>Super Big 2 (China) (Unl)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2162688">
-				<rom name="Super Big 2 (C).sfc" size="2162688" crc="f33c710d" sha1="a789c63ca0f4723c2224e890f7d367f23cebc0ff"/>
+				<rom name="Super Big 2 (China) (Unl).sfc" size="2162688" crc="f33c710d" sha1="a789c63ca0f4723c2224e890f7d367f23cebc0ff"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31189,16 +31139,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Ghouls 'n Ghosts Restoration Hack (2023)(SCD).sfc" size="2097152" crc="acaed88a" sha1="a22aabecf7b1b0c052521f5a23344ea329b8e1c4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns353b3651db044">
-		<description>Super Ghouls'n Ghosts (E)(1992)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Super Ghouls'n Ghosts (E)(1992)(Capcom).sfc" size="1048576" crc="a00bc05e" sha1="353b3651db0447d5fcfa46d705ef61bbbd6afaf8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36942,16 +36882,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsee419f3a567e1">
-		<description>Ultimate Mortal Kombat 3 (E)(1996)(Williams)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="Ultimate Mortal Kombat 3 (E)(1996)(Williams).sfc" size="4194304" crc="1c4c54d2" sha1="ee419f3a567e1f0d88d568df641d1af16d4db148"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsc91c82a5663ae">
 		<description>Ultra Baseball 2 - Jitsumei Ban (J) [T+Eng_VX]</description>
 		<year>????</year>
@@ -38149,16 +38079,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="X-Men - Mutant Apocalypse (U) [T+Por_Cyber].sfc" size="2097152" crc="84e98f45" sha1="0633d830db54fa6175d844f7e2f82191a63b8a33"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns58909736b9c56">
-		<description>X-Men vs. Street Fighter (U)(1998)(DVS Electronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="X-Men vs. Street Fighter (U)(1998)(DVS Electronic).sfc" size="2097152" crc="7eedf7da" sha1="58909736b9c56933c2a8f5cae5c99cf6e3774b75"/>
 			</dataarea>
 		</part>
 	</software>

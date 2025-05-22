@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 59 -->
+<!-- Number of items in this list = 68 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -323,12 +323,22 @@
 		</part>
 	</software>
 	<software name="sg1d261c253a83e0">
-		<description>Mazy</description>
+		<description>Mazy (2022)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="7058">
-				<rom name="Mazy.sg" size="7058" crc="8f972417" sha1="d261c253a83e020835ac128dbb497d378ebc8329"/>
+				<rom name="Mazy (2022)(Inufuto).sg" size="7058" crc="8f972417" sha1="d261c253a83e020835ac128dbb497d378ebc8329"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1ba93c19195ffc">
+		<description>Mazy 2 (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="16384">
+				<rom name="Mazy 2 (2025)(Inufuto).sg" size="16384" crc="ad494ba4" sha1="ba93c19195ffc364e97350521fe802b0d22bf662"/>
 			</dataarea>
 		</part>
 	</software>
@@ -412,6 +422,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg19458f50dfc2b1">
+		<description>Pooyan (KR - SiRioKD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Pooyan (KR - SiRioKD).sg" size="32768" crc="0bc16417" sha1="9458f50dfc2b182e18cef21ffa54be5a497d5f9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1cd87e62f48f86">
+		<description>Pooyan</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Pooyan.sg" size="32768" crc="a71c959d" sha1="cd87e62f48f8670db7e0e928f0cf5376fa0c766a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg15ccb666ee0d1a">
 		<description>Ruptus</description>
 		<year>????</year>
@@ -459,6 +489,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Snake v1.04 (2021)(Under4Mhz).sg" size="32768" crc="b9ab9d0c" sha1="fa80ee9927d21729188e20b46e0cccfd363d8b84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1e3d4c0f7f0050">
+		<description>Super Drinker (MSX2SG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Super Drinker (MSX2SG).sg" size="32768" crc="f3253944" sha1="e3d4c0f7f0050241718304cf40b363c7e20c5831"/>
 			</dataarea>
 		</part>
 	</software>
@@ -522,6 +562,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg125ded7847f6e0">
+		<description>[sc3000]Cabbage Patch Kids</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sc3000]Cabbage Patch Kids.sg" size="32768" crc="6904c354" sha1="25ded7847f6e096ee40d86c523435260bb1c1073"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1ce9ba35cafa94">
+		<description>[sg1000m2]Bee &amp; Flower (MSX2SG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]Bee &amp; Flower (MSX2SG).sg" size="32768" crc="7635bea5" sha1="ce9ba35cafa940f247af84922d4eedfcd3c2c994"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg19bd8d9c220974">
 		<description>[sg1000m2]Bloktris_103</description>
 		<year>????</year>
@@ -529,6 +589,26 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="49152">
 				<rom name="[sg1000m2]Bloktris_103.sg" size="49152" crc="ca3c78e2" sha1="9bd8d9c22097411fedd2307ce8f2e74937a08e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg13cfbe060b0c54">
+		<description>[sg1000m2]Circus Charlie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]Circus Charlie.sg" size="32768" crc="e2a1c0ff" sha1="3cfbe060b0c54c091597b5d373edc7e12e97db82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg19a1a7786aaf87">
+		<description>[sg1000m2]Comic Bakery</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]Comic Bakery.sg" size="32768" crc="c6b2adfd" sha1="9a1a7786aaf87068455ea674e687032db7cc4211"/>
 			</dataarea>
 		</part>
 	</software>
@@ -589,6 +669,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="[sg1000m2]Vexed_115.sg" size="32768" crc="66bff65b" sha1="62574399f59be5c46d2a4822884adb8cc432d9b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg134306834e3936">
+		<description>[sg1000m2]Yellow Submarine</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="[sg1000m2]Yellow Submarine.sg" size="32768" crc="f25667ad" sha1="34306834e3936ebf0aa1c807974a043d95b5dab0"/>
 			</dataarea>
 		</part>
 	</software>

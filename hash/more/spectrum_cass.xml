@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2452 -->
+<!-- Number of items in this list = 2474 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10912,6 +10912,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3cacd675055dd">
+		<description>Sherlock (1984)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56104">
+				<rom name="Sherlock (1984)(Melbourne House).tap" size="56104" crc="73043c82" sha1="3cacd675055ddc8b009e894e44f8b33d24cb821c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd7c9dda44702a">
+		<description>Sherlock Holmes The Lamberley Mystery - Part 1 (1990)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40651">
+				<rom name="Sherlock Holmes The Lamberley Mystery - Part 1 (1990)(Zenobi Software).tap" size="40651" crc="4bf6a12a" sha1="d7c9dda44702a9af6f160a14e0004a82b14ffdb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc1afcc78e33b9">
+		<description>Sherlock Holmes The Lamberley Mystery - Part 2 (1990)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40651">
+				<rom name="Sherlock Holmes The Lamberley Mystery - Part 2 (1990)(Zenobi Software).tap" size="40651" crc="0a357062" sha1="c1afcc78e33b95ae3c4e4783d9a2e6e2694be75e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs60bb6b159ed0b">
+		<description>Sherlock Holmes The Lamberley Mystery - Part 3 (1990)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40651">
+				<rom name="Sherlock Holmes The Lamberley Mystery - Part 3 (1990)(Zenobi Software).tap" size="40651" crc="574df280" sha1="60bb6b159ed0b27b4c23c08689c47afcec913c65"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs00d286110cd34">
 		<description>Sherlock</description>
 		<year>????</year>
@@ -10932,6 +10972,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf2a6f2da28d9c">
+		<description>Sherwood (1992)(DSA Computer Graphics)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43435">
+				<rom name="Sherwood (1992)(DSA Computer Graphics)(Unk-Lang).tap" size="43435" crc="562b48da" sha1="f2a6f2da28d9cad0c62035ba3cfdfec89d499887"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs13d6c388037a1">
+		<description>Shinobi (1989)(Mastertronic Plus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="231589">
+				<rom name="Shinobi (1989)(Mastertronic Plus).tap" size="231589" crc="195feaad" sha1="13d6c388037a1e3175208e84b4f66f92bdf67ee0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3aa8a15ac59b6">
+		<description>Shinobi (1989)(Virgin Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="245361">
+				<rom name="Shinobi (1989)(Virgin Games Ltd).tap" size="245361" crc="2e4087c9" sha1="3aa8a15ac59b6d4843315c98d232911aa7ee0e23"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs97ed23d692ec6">
 		<description>Shinobi</description>
 		<year>????</year>
@@ -10942,6 +11012,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbe201ee58654a">
+		<description>Ships (1984)(J. Cichorski)(Pl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13545">
+				<rom name="Ships (1984)(J. Cichorski)(Pl).tap" size="13545" crc="9baed0b1" sha1="be201ee58654aa3a3899e727e9c1562ba2e57089"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe759178df2be">
+		<description>Shockway Rider (1987)(Faster Than Light)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49339">
+				<rom name="Shockway Rider (1987)(Faster Than Light).tap" size="49339" crc="8a4ed061" sha1="be759178df2be50d9dcc2a06565ce6da93794896"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs88f07733df225">
 		<description>Shockway Rider</description>
 		<year>????</year>
@@ -10949,6 +11039,136 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49960">
 				<rom name="Shockway Rider.tzx" size="49960" crc="1470eae7" sha1="88f07733df2255a0305cdcbe2341e64a4e2fec92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs04dc539f9358d">
+		<description>Shoot-Out 128K (1989)(Martech Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41276">
+				<rom name="Shoot-Out 128K (1989)(Martech Games).tap" size="41276" crc="731942be" sha1="04dc539f9358d873d57a1fbecb076dc4434a5ee6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ed48a35715ac">
+		<description>Short Circuit (1986)(High Tech Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6815">
+				<rom name="Short Circuit (1986)(High Tech Soft).tap" size="6815" crc="72fd0c65" sha1="3ed48a35715acfddf5c058d82f237aa053ca8a26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs20df783345d03">
+		<description>Short Circuit - Part 1 (1987)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44994">
+				<rom name="Short Circuit - Part 1 (1987)(Ocean Software Ltd).tap" size="44994" crc="19008124" sha1="20df783345d03a699ace598fec413b45a6e36529"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0e0e4082872e4">
+		<description>Short Circuit - Part 2 (1987)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44962">
+				<rom name="Short Circuit - Part 2 (1987)(Ocean Software Ltd).tap" size="44962" crc="100f3549" sha1="0e0e4082872e45bba023f5bb64c6747e5424749f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs85dd64eb46baa">
+		<description>Short's Fuse 48K (1986)(Dollarsoft - Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48034">
+				<rom name="Short's Fuse 48K (1986)(Dollarsoft - Firebird).tap" size="48034" crc="89954443" sha1="85dd64eb46baaa36b25e7d7da42c7399eb475713"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs973cc37f52312">
+		<description>Shot (1989)(Jacek Michalak Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19786">
+				<rom name="Shot (1989)(Jacek Michalak Software).tap" size="19786" crc="385f078e" sha1="973cc37f5231248c32dae67bf3a3ad54151af674"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs442d3da721beb">
+		<description>Shove Off (1990)(Jonathan Cauldwell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28019">
+				<rom name="Shove Off (1990)(Jonathan Cauldwell).tap" size="28019" crc="509655f6" sha1="442d3da721beb74b8c2163eb3ab6275122efe128"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e4b7cf01449c">
+		<description>Shovel Adventure ZX 1.2 (2021)(Pat Morita Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="62841">
+				<rom name="Shovel Adventure ZX 1.2 (2021)(Pat Morita Team).tap" size="62841" crc="75d4a6ee" sha1="9e4b7cf01449c34d588a89d8bceff6520301e9fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb755cdefb8c01">
+		<description>Shovel Duck II - A Minor Panic!  48K (2024)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44856">
+				<rom name="Shovel Duck II - A Minor Panic!  48K (2024)(KTB Productions).tap" size="44856" crc="f44c9317" sha1="b755cdefb8c0173fa57c9c41fdbfbe552e334c3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6afa9a4723a02">
+		<description>Shovel Duck II - A Mousive Panic! 48K (2024)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43232">
+				<rom name="Shovel Duck II - A Mousive Panic! 48K (2024)(KTB Productions).tap" size="43232" crc="fbcc3a8c" sha1="6afa9a4723a023639076b765f6540ba0ab3419ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs345e9339f7330">
+		<description>Shovel Duck II - Dig Duck 48K (2024)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49516">
+				<rom name="Shovel Duck II - Dig Duck 48K (2024)(KTB Productions).tap" size="49516" crc="88ad0612" sha1="345e9339f7330d041105ead93a6122b6bb5191fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa8f68996b7e0">
+		<description>Shurk (1991)(Jaime Tejedor Gomez)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14204">
+				<rom name="Shurk (1991)(Jaime Tejedor Gomez)(Sp).tap" size="14204" crc="639eec44" sha1="aa8f68996b7e042a3a5d2a7808f2e043d4478933"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ea7003ca9d6b">
+		<description>Shuttle Shock (1984)(Software Super Savers Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40964">
+				<rom name="Shuttle Shock (1984)(Software Super Savers Ltd).tap" size="40964" crc="1d1e3e98" sha1="9ea7003ca9d6b8061e661b0aa0db64c130a64419"/>
 			</dataarea>
 		</part>
 	</software>

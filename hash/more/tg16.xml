@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 26 -->
+<!-- Number of items in this list = 27 -->
 <softwarelist name="tg16" description="tg16 loose roms">
 	<software name="tg1a65dca7ff88eb">
 		<description>(tg16)Bloody Wolf (U)</description>
@@ -259,6 +259,16 @@
 		<part name="cart" interface="tg16_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="(tg16)Vigilante (U) [T+Por100] [b2].pce" size="393216" crc="cf9a1c2b" sha1="9990be16d5fc374c7c0595430caa7fa170a595de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1bf5ce8a71d752">
+		<description>Taito Chase H.Q. - Noise Fix (Hack)(2022)(Justin Gibbins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Taito Chase H.Q. - Noise Fix (Hack)(2022)(Justin Gibbins).pce" size="393216" crc="947740bc" sha1="bf5ce8a71d752fce2c642c6f222cca6ac5c2e0b0"/>
 			</dataarea>
 		</part>
 	</software>

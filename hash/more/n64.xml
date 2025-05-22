@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 166 -->
+<!-- Number of items in this list = 168 -->
 <softwarelist name="n64" description="n64 loose roms">
 	<software name="n64bbc390954c605">
 		<description>(demo)2 Blokes &amp; An Armchair - Nintendo 64 Remix (199x)(Tesko)(PD)[h]</description>
@@ -979,6 +979,26 @@
 		<part name="cart" interface="n64_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Frogger 2 (U) (Alpha) [o2].z64" size="8388608" crc="ded56725" sha1="b9a92eb9a1fed20a429fe50944717f3d031d8973"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n642cb703708494d">
+		<description>Getter Love!! - Panda Love Unit (Japan) [T-En by ozidual v1.03.1] [debug menu controls] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="12582912">
+				<rom name="Getter Love!! - Panda Love Unit (Japan) [T-En by ozidual v1.03.1] [debug menu controls] [n].z64" size="12582912" crc="b4971ec8" sha1="2cb703708494d5602edfea3c3e77252b8cc72f69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n640f3c8e5e01180">
+		<description>Getter Love!! - Panda Love Unit (Japan) [T-En by ozidual v1.03.1] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="12582912">
+				<rom name="Getter Love!! - Panda Love Unit (Japan) [T-En by ozidual v1.03.1] [n].z64" size="12582912" crc="6b2e6548" sha1="0f3c8e5e011800f88f7dcdb11f18b45ff64f30ba"/>
 			</dataarea>
 		</part>
 	</software>
