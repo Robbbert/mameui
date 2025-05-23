@@ -260,10 +260,10 @@ void binbug_state::binbug(machine_config &config)
 
 	/* quickload */
 	//QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(binbug_state::quickload_cb));
-	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
-	snapshot.set_load_callback(FUNC(binbug_state::quickload_cb));
-	snapshot.set_interface("binbug_quik");
-	SOFTWARE_LIST(config, "binbug_quik").set_original("binbug");
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
+	quik.set_load_callback(FUNC(binbug_state::quickload_cb));
+	quik.set_interface("binbug_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("binbug");
 
 	S100_BUS(config, m_s100, 0);
 	S100_SLOT(config, "s100:1", binbug_s100_devices, "dg640");

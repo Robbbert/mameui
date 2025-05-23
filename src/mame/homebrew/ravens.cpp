@@ -362,7 +362,11 @@ void ravens_state::ravens(machine_config &config)
 	config.set_default_layout(layout_ravens);
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(ravens_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(ravens_state::quickload_cb));
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
+	quik.set_load_callback(FUNC(ravens_state::quickload_cb));
+	quik.set_interface("ravens_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("ravens");
 
 	SPEAKER(config, "mono").front_center();
 
@@ -386,10 +390,10 @@ void ravens2_state::ravens2(machine_config &config)
 
 	/* quickload */
 	//QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(ravens2_state::quickload_cb));
-	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
-	snapshot.set_load_callback(FUNC(ravens2_state::quickload_cb));
-	snapshot.set_interface("ravens_quik");
-	SOFTWARE_LIST(config, "ravens_quik").set_original("ravens");
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
+	quik.set_load_callback(FUNC(ravens2_state::quickload_cb));
+	quik.set_interface("ravens_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("ravens");
 
 	SPEAKER(config, "mono").front_center();
 

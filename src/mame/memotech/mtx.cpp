@@ -372,8 +372,17 @@ void mtx_state::mtx512(machine_config &config)
 	output_latch_device &cent_data_out(OUTPUT_LATCH(config, "cent_data_out"));
 	m_centronics->set_output_latch(cent_data_out);
 
-	SNAPSHOT(config, "snapshot", "mtx", attotime::from_seconds(1)).set_load_callback(FUNC(mtx_state::snapshot_cb));
-	QUICKLOAD(config, "quickload", "run", attotime::from_seconds(1)).set_load_callback(FUNC(mtx_state::quickload_cb));
+	//SNAPSHOT(config, "snapshot", "mtx", attotime::from_seconds(1)).set_load_callback(FUNC(mtx_state::snapshot_cb));
+	snapshot_image_device &snapshot(SNAPSHOT(config, "snapshot", "mtx", attotime::from_seconds(1)));
+	snapshot.set_load_callback(FUNC(mtx_state::snapshot_cb));
+	snapshot.set_interface("mtx_snap");
+	SOFTWARE_LIST(config, "mtx_snap").set_original("mtx_snap");
+
+	//QUICKLOAD(config, "quickload", "run", attotime::from_seconds(1)).set_load_callback(FUNC(mtx_state::quickload_cb));
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "run", attotime::from_seconds(1)));
+	quik.set_load_callback(FUNC(mtx_state::quickload_cb));
+	quik.set_interface("mtx_quik");
+	SOFTWARE_LIST(config, "mtx_quik").set_original("mtx_quik");
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);

@@ -32,6 +32,7 @@
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+#include "softlist_dev.h"
 
 
 namespace {
@@ -662,6 +663,8 @@ void multi8_state::multi8(machine_config &config)
 	CASSETTE(config, m_cass);
 	m_cass->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_ENABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cass->set_interface("multi8_cass");
+	SOFTWARE_LIST(config, "cass_list").set_original("multi8");
 
 	I8251(config, m_uart, 0); // for cassette
 	m_uart->txd_handler().set([this] (bool state) { m_cassbit = state; });

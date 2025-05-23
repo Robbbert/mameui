@@ -934,7 +934,11 @@ void homelab2_state::homelab2(machine_config &config)
 	CASSETTE(config, m_cass);
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
 
-	QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)).set_load_callback(FUNC(homelab2_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)).set_load_callback(FUNC(homelab2_state::quickload_cb));
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)));
+	quik.set_load_callback(FUNC(homelab2_state::quickload_cb));
+	quik.set_interface("homelab_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("homelab");
 }
 
 void homelab3_state::homelab3(machine_config &config)
@@ -964,10 +968,10 @@ void homelab3_state::homelab3(machine_config &config)
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
 
 	//QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)).set_load_callback(FUNC(homelab3_state::quickload_cb));
-	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)));
-	snapshot.set_load_callback(FUNC(homelab3_state::quickload_cb));
-	snapshot.set_interface("homelab_quik");
-	SOFTWARE_LIST(config, "homelab_quik").set_original("homelab");
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "htp", attotime::from_seconds(2)));
+	quik.set_load_callback(FUNC(homelab3_state::quickload_cb));
+	quik.set_interface("homelab_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("homelab");
 }
 
 void homelab3_state::brailab4(machine_config &config)

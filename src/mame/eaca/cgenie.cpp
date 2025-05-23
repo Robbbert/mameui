@@ -471,6 +471,7 @@ void cgenie_state::cgenie(machine_config &config)
 	m_cassette->set_interface("cgenie_cass");
 
 	SOFTWARE_LIST(config, "cass_list").set_original("cgenie_cass");
+	SOFTWARE_LIST(config, "flop_list").set_original("cgenie_flop");
 
 	// serial port
 	rs232_port_device &rs232(RS232_PORT(config, "rs232", default_rs232_devices, nullptr));

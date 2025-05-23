@@ -97,7 +97,7 @@ void cgenie_fdc_device::device_add_mconfig(machine_config &config)
 	FLOPPY_CONNECTOR(config, "wd2793:2", cgenie_floppies, nullptr, cgenie_fdc_device::floppy_formats);
 	FLOPPY_CONNECTOR(config, "wd2793:3", cgenie_floppies, nullptr, cgenie_fdc_device::floppy_formats);
 
-	SOFTWARE_LIST(config, "floppy_list").set_original("cgenie_flop");
+//  SOFTWARE_LIST(config, "floppy_list").set_original("cgenie_flop");
 
 	GENERIC_SOCKET(config, "socket", generic_plain_slot, "cgenie_flop_rom", "bin,rom").set_device_load(FUNC(cgenie_fdc_device::socket_load));
 

@@ -1837,7 +1837,11 @@ void jaguar_state::jaguar(machine_config &config)
 	DAC_16BIT_R2R_TWOS_COMPLEMENT(config, m_rdac, 0).add_route(ALL_OUTPUTS, "speaker", 1.0, 1); // unknown DAC
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "abs,bin,cof,jag,prg,rom", attotime::from_seconds(1)).set_load_callback(FUNC(jaguar_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "abs,bin,cof,jag,prg,rom", attotime::from_seconds(1)).set_load_callback(FUNC(jaguar_state::quickload_cb));
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "abs,bin,cof,jag,prg,rom", attotime::from_seconds(1)));
+	quik.set_load_callback(FUNC(jaguar_state::quickload_cb));
+	quik.set_interface("jaguar_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("jaguar_quik");
 
 	/* cartridge */
 	generic_cartslot_device &cartslot(GENERIC_CARTSLOT(config, "cartslot", generic_plain_slot, "jaguar_cart", "j64"));

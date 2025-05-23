@@ -887,14 +887,14 @@ void vic20_state::vic20(machine_config &config, const char* softlist_filter)
 	m_user->pm_handler().set(m_via1, FUNC(via6522_device::write_cb2));
 
 	//QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY).set_load_callback(FUNC(vic20_state::quickload_vc20));
-	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY));
-	snapshot.set_load_callback(FUNC(vic20_state::quickload_vc20));
-	snapshot.set_interface("vic1001_quik");
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY));
+	quik.set_load_callback(FUNC(vic20_state::quickload_vc20));
+	quik.set_interface("vic1001_quik");
 
 	SOFTWARE_LIST(config, "cart_list").set_original("vic1001_cart").set_filter(softlist_filter);
 	SOFTWARE_LIST(config, "cass_list").set_original("vic1001_cass").set_filter(softlist_filter);
 	SOFTWARE_LIST(config, "flop_list").set_original("vic1001_flop").set_filter(softlist_filter);
-	SOFTWARE_LIST(config, "vic1001_quik").set_original("vic1001_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("vic1001_quik");
 
 	RAM(config, m_ram);
 	m_ram->set_default_size("5K");

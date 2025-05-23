@@ -877,6 +877,7 @@ void exelv_state::exl100(machine_config &config)
 	CASSETTE(config, m_cass, 0);
 	m_cass->set_default_state(CASSETTE_STOPPED | CASSETTE_SPEAKER_ENABLED | CASSETTE_MOTOR_ENABLED);
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cass->set_interface("exelvision_cass");
 
 	SOFTWARE_LIST(config, "cart_list").set_original("exl100");
 	SOFTWARE_LIST(config, "cass_list").set_original("exl100_cass");

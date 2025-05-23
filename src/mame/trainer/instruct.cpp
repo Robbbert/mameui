@@ -53,6 +53,7 @@ ToDO:
 #include "imagedev/snapquik.h"
 #include "speaker.h"
 #include "video/pwm.h"
+#include "softlist_dev.h"
 
 #include "instruct.lh"
 
@@ -426,7 +427,11 @@ void instruct_state::instruct(machine_config &config)
 	m_display->set_segmask(0xff, 0xff);
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(instruct_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)).set_load_callback(FUNC(instruct_state::quickload_cb));
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "pgm", attotime::from_seconds(1)));
+	quik.set_load_callback(FUNC(instruct_state::quickload_cb));
+	quik.set_interface("instruct_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("instruct");
 
 	SPEAKER(config, "mono").front_center();
 

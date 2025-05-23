@@ -1370,6 +1370,8 @@ void kc85_state::kc85(machine_config &config)
 	CASSETTE(config, m_cassette);
 	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cassette->set_interface("trsm100_cass");
+	SOFTWARE_LIST(config, "cass_list").set_original("trsm100_cass");
 
 	/* option ROM cartridge */
 	GENERIC_CARTSLOT(config, m_opt_cart, generic_linear_slot, "trsm100_cart", "bin,rom");
@@ -1421,6 +1423,8 @@ void pc8201_state::pc8201(machine_config &config)
 	CASSETTE(config, m_cassette);
 	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cassette->set_interface("trsm100_cass");
+	SOFTWARE_LIST(config, "cass_list").set_original("trsm100_cass");
 
 	/* option ROM cartridge */
 	GENERIC_CARTSLOT(config, m_opt_cart, generic_linear_slot, "pc8201_cart", "bin,rom");
@@ -1479,6 +1483,8 @@ void trsm100_state::trsm100(machine_config &config)
 	CASSETTE(config, m_cassette);
 	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cassette->set_interface("trsm100_cass");
+	SOFTWARE_LIST(config, "cass_list").set_original("trsm100_cass");
 
 //  MCFG_MC14412_ADD(MC14412_TAG, XTAL(1'000'000))
 
@@ -1551,13 +1557,13 @@ void tandy200_state::tandy200(machine_config &config)
 	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("trsm100_cass");
+	SOFTWARE_LIST(config, "cass_list").set_original("trsm100_cass");
 
 	/* option ROM cartridge */
 	GENERIC_CARTSLOT(config, m_opt_cart, generic_linear_slot, "tandy200_cart", "bin,rom");
 
 	/* software lists */
 	SOFTWARE_LIST(config, "cart_list").set_original("tandy200");
-	SOFTWARE_LIST(config, "trsm100_cass").set_original("trsm100_cass");
 
 	/* internal ram */
 	RAM(config, m_ram).set_default_size("24K").set_extra_options("48K,72K");

@@ -118,7 +118,11 @@ void kc85_exp(device_slot_interface &device)
 void kc_state::kc85_slots(machine_config &config)
 {
 	/* devices */
-	QUICKLOAD(config, "quickload", "kcc", attotime::from_seconds(2)).set_load_callback(FUNC(kc_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "kcc", attotime::from_seconds(2)).set_load_callback(FUNC(kc_state::quickload_cb));
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "kcc", attotime::from_seconds(2)));
+	quik.set_load_callback(FUNC(kc_state::quickload_cb));
+	quik.set_interface("kc_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("kc_quik");
 
 	CASSETTE(config, m_cassette);
 	m_cassette->set_formats(kc_cassette_formats);

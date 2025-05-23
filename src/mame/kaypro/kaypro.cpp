@@ -244,7 +244,11 @@ void kayproii_state::kayproii(machine_config &config)
 	BEEP(config, m_beep, 950).add_route(ALL_OUTPUTS, "mono", 1.00); /* piezo-device needs to be measured */
 
 	/* devices */
-	QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)).set_load_callback(FUNC(kayproii_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)).set_load_callback(FUNC(kayproii_state::quickload_cb));
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)));
+	quik.set_load_callback(FUNC(kayproii_state::quickload_cb));
+	quik.set_interface("kaypro_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("kaypro_quik");
 
 	kaypro_10_keyboard_device &kbd(KAYPRO_10_KEYBOARD(config, "kbd"));
 	kbd.rxd_cb().set("sio", FUNC(z80sio_device::rxb_w));
@@ -338,7 +342,11 @@ void kaypro84_state::kaypro484(machine_config &config)
 	m_crtc->set_char_width(8);
 	m_crtc->set_update_row_callback(FUNC(kaypro84_state::kaypro484_update_row));
 
-	QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)).set_load_callback(FUNC(kaypro84_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)).set_load_callback(FUNC(kaypro84_state::quickload_cb));
+	quickload_image_device &quik(QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)));
+	quik.set_load_callback(FUNC(kaypro84_state::quickload_cb));
+	quik.set_interface("kaypro_quik");
+	SOFTWARE_LIST(config, "quik_list").set_original("kaypro_quik");
 
 	kaypro_10_keyboard_device &kbd(KAYPRO_10_KEYBOARD(config, "kbd"));
 	kbd.rxd_cb().set("sio_1", FUNC(z80sio_device::rxb_w));

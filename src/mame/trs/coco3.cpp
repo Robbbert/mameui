@@ -292,6 +292,7 @@ void coco3_state::coco3(machine_config &config)
 	CASSETTE(config, m_cassette);
 	m_cassette->set_formats(coco_cassette_formats);
 	m_cassette->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_DISABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cassette->set_interface("coco_cass");
 
 	rs232_port_device &rs232(RS232_PORT(config, RS232_TAG, default_rs232_devices, "rs_printer"));
 	rs232.dcd_handler().set(m_pia_1, FUNC(pia6821_device::ca1_w));
