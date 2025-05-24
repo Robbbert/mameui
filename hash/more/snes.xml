@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3864 -->
+<!-- Number of items in this list = 3862 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -1812,16 +1812,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns1edc9088dc695">
-		<description>(E)Space Invaders - The Original Game (A)(1997)(Nintendo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="(E)Space Invaders - The Original Game (A)(1997)(Nintendo).sfc" size="262144" crc="6b62625a" sha1="1edc9088dc695c31a396b914c1c921c77a740068"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns49aafbcb58460">
 		<description>(E)Super Conflict (E) [T+Fre_Generation IX] (2)</description>
 		<year>????</year>
@@ -2792,26 +2782,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns8f4ba3bdfe097">
-		<description>Aguri Suzuki F-1 Super Driving (E)(1993)(Altron)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Aguri Suzuki F-1 Super Driving (E)(1993)(Altron).sfc" size="1048576" crc="c8382f39" sha1="8f4ba3bdfe097e24235ee7db56e92ede09cc0e07"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsa27884a951868">
-		<description>Aguri Suzuki F-1 Super Driving (J)(1992)(LOZC G. Amusements)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Aguri Suzuki F-1 Super Driving (J)(1992)(LOZC G. Amusements).sfc" size="1048576" crc="75bdc895" sha1="a27884a9518688e55e6e740f70f71e571b492c5d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsc3389e8c836f4">
 		<description>Aim for the Ace! T-Eng v1.3 (2017)(RPGONE)</description>
 		<year>????</year>
@@ -3009,16 +2979,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Alien Cat 2 fix.sfc" size="1048576" crc="3b1931e4" sha1="788f46eeb7a4613690548651257c29d0814f9267"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns2beffd4d63ff4">
-		<description>Alien vs. Predator (E)(1993)(Activision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Alien vs. Predator (E)(1993)(Activision).sfc" size="1048576" crc="a31d1f58" sha1="2beffd4d63ff4a868660c21c69650d9456908745"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3782,6 +3742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3e73bd7965eee">
+		<description>Bebe's Kids (U)(1994)(Motown Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Bebe's Kids (U)(1994)(Motown Software).sfc" size="1048576" crc="bda2e412" sha1="3e73bd7965eee7ddd40bd60ae51ecbca8d85de0f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns8ba10da419c61">
 		<description>BeginContestEntry (SMW1 Hack)</description>
 		<year>????</year>
@@ -4342,6 +4312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns1cbe6c3fd218c">
+		<description>Boxing Legends of the Ring (U)(1993)(Electro Brain)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Boxing Legends of the Ring (U)(1993)(Electro Brain).sfc" size="1048576" crc="c0b632c0" sha1="1cbe6c3fd218c7fbd434d9951bbd9cc8eee049d2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5e45937b12710">
 		<description>Boy's Soccer Team 5 T-Eng (20xx)</description>
 		<year>????</year>
@@ -4369,16 +4349,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Brain Lord (U)(1994)(Enix).sfc" size="1572864" crc="ac443d87" sha1="1398a08d66980f8a9f73e0ae20ed5c518b3859e8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns618eea2886004">
-		<description>Bram Stoker's Dracula (U)(1993)(Sony Imagesoft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Bram Stoker's Dracula (U)(1993)(Sony Imagesoft).sfc" size="1048576" crc="5cece690" sha1="618eea2886004652fa707daf56d8ad04c3c17094"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5322,6 +5292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns64231fb74196a">
+		<description>Captain Tsubasa IV - Professional Rivals T-Eng v0.9(2024)(Joe Shway)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Captain Tsubasa IV - Professional Rivals T-Eng v0.9(2024)(Joe Shway).sfc" size="1572864" crc="ee000bb3" sha1="64231fb74196a997e62f4b3392cae2f12009fdd7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns60fe28c5992aa">
 		<description>Caramel Cave (SMW1 Hack)</description>
 		<year>????</year>
@@ -5432,16 +5412,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns573b316e5b08f">
-		<description>Champions - World Class Soccer (U)(1993)(Acclaim Ent.)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Champions - World Class Soccer (U)(1993)(Acclaim Ent.).sfc" size="1048576" crc="bcd59d08" sha1="573b316e5b08f47dc0c8e339e2dc3101c4f74afc"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns1c293c8a95741">
 		<description>Chaos Chronicles Demo (C3 Edition) (SMW1 Hack)</description>
 		<year>????</year>
@@ -5529,6 +5499,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Chatting Parodius Live! T-Eng (2023)(advancedpillow).sfc" size="3145728" crc="4e1d8586" sha1="850a6a514f07b1e6bb45aded8c90dea8c8cd43fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns12b8e3a04cbac">
+		<description>Chavez II (U, Es)(1994)(American Softworks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chavez II (U, Es)(1994)(American Softworks).sfc" size="1048576" crc="86981887" sha1="12b8e3a04cbac7de8181a5ebb8546489a5df0937"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7972,16 +7952,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns44c845ef4e75a">
-		<description>Elite Soccer (U)(1994)(Rage Software - GameTek)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Elite Soccer (U)(1994)(Rage Software - GameTek).sfc" size="1048576" crc="62abaee1" sha1="44c845ef4e75ab1881f3ddc89976dff9d23c018f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns75ef2ada1e7df">
 		<description>Elnard (J)(1993)(Enix)</description>
 		<year>????</year>
@@ -8019,6 +7989,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Emerald Dragon (J) [T+Eng1.1_Translation Corporation].smc" size="3145728" crc="6ad33dc6" sha1="5e4b0012b62d3af9f9f57ba5143b4cac6b184b00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscefb12a296cac">
+		<description>Emerald Dragon (J)(1995)(Media Works)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Emerald Dragon (J)(1995)(Media Works).sfc" size="2097152" crc="9d0f5f98" sha1="cefb12a296cac19778e6c8ae5ae712fdccacba3a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10962,6 +10942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns0fa4153a771d7">
+		<description>George Foreman's KO Boxing (U, Rev 1)(1992)(Acclaim Ent. - Beam Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="George Foreman's KO Boxing (U, Rev 1)(1992)(Acclaim Ent. - Beam Software).sfc" size="1048576" crc="15194fc9" sha1="0fa4153a771d780e5cdccf8cef7d98c837171c6b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsdd2938f50f3af">
 		<description>Ghost Chaser Densei - Brightness Fix (2023)(Mister Man)</description>
 		<year>????</year>
@@ -11372,6 +11362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns29c3fb9c23097">
+		<description>GunForce - Battle Fire Engulfed Terror Island (U)(1992)(Irem)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="GunForce - Battle Fire Engulfed Terror Island (U)(1992)(Irem).sfc" size="524288" crc="6f5c5dc0" sha1="29c3fb9c230972735961bc328903d07df20c87b7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsc94218d095c35">
 		<description>GYE's hard level collection easy (SMW1 Hack)</description>
 		<year>????</year>
@@ -11679,16 +11679,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="HDMA Gradient Expansion Patch v1.0 by Roy (SMA Hack).sfc" size="2097152" crc="dde7426a" sha1="9b9beef096d8b1e56cbe278c2c54c772d3d88f4f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns7f8f4af47b9b1">
-		<description>Head-On Soccer (U)(1995)(U.S. Gold)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Head-On Soccer (U)(1995)(U.S. Gold).sfc" size="2097152" crc="60dc3634" sha1="7f8f4af47b9b15966a6a4083a41bf3c68391a555"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12412,26 +12402,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsf08be42140cad">
-		<description>Indiana Jones' Greatest Adventures (E)(1994)(JVC - LucasArts)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Indiana Jones' Greatest Adventures (E)(1994)(JVC - LucasArts).sfc" size="2097152" crc="fa4560c3" sha1="f08be42140cad072529d4ddf5472beb447228e00"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns0bf1c7c10988e">
-		<description>Indiana Jones' Greatest Adventures (J)(1994)(JVC - LucasArts)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Indiana Jones' Greatest Adventures (J)(1994)(JVC - LucasArts).sfc" size="2097152" crc="079b9996" sha1="0bf1c7c10988ee1d7c6ea40e6e55b2aefbb28ecb"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns59a9dc3ff0f48">
 		<description>Insane World</description>
 		<year>????</year>
@@ -12669,16 +12639,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="J League Super Soccer (J)(1994)(Hudson Soft).sfc" size="1572864" crc="1d20cac2" sha1="c6a42f7240ef8898bfedfe0f938f9d86cfdaaee5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns030e314cba8fa">
-		<description>J.R.R. Tolkien's The Lord of the Rings - Volume One (U)(1993)(Interplay)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="J.R.R. Tolkien's The Lord of the Rings - Volume One (U)(1993)(Interplay).sfc" size="1048576" crc="cd2150c8" sha1="030e314cba8faae4081f8056521126916e5e0ada"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13899,16 +13859,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="layer3 (SMW1 Hack).sfc" size="1048576" crc="a4963830" sha1="2ec939f38031cb28017a023b36553e2cc844cd69"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsbc544f9859907">
-		<description>Legend (E)(1993)(Arcade Zone)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Legend (E)(1993)(Arcade Zone).sfc" size="1048576" crc="0cac572f" sha1="bc544f98599073edc8bf61da3c8762e350310f3c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18052,6 +18002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns0d31e2650b5e1">
+		<description>Mighty Max (U)(1994)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mighty Max (U)(1994)(Ocean).sfc" size="1048576" crc="6fc3c105" sha1="0d31e2650b5e1f9331f36810f3ae5561b9581511"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5e8579a473865">
 		<description>Militia (J)(1993)(Namco)</description>
 		<year>????</year>
@@ -18379,6 +18339,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Moltov Mario World (SMW1 Hack).sfc" size="2097152" crc="5cb913ed" sha1="7bb9d2e6c400143cd066f4f127fb520778a4bce6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbeddd101739f5">
+		<description>Monopoly (U, Rev 1)(1992)(Sculptured Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Monopoly (U, Rev 1)(1992)(Sculptured Software).sfc" size="524288" crc="88d54085" sha1="beddd101739f5e1a6e3abd1542cccd341e6e5263"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns09acbe02def31">
+		<description>Monopoly Game 2, The (J, Rev 1)(1995)(Tomy - Ape)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Monopoly Game 2, The (J, Rev 1)(1995)(Tomy - Ape).sfc" size="1572864" crc="848c1979" sha1="09acbe02def31842d1209d736de60d346432cdcb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20062,6 +20042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsbbfbc9a781e5d">
+		<description>Packy &amp; Marlon (U)(1994)(Raya Systems - WaveQuest)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Packy &amp; Marlon (U)(1994)(Raya Systems - WaveQuest).sfc" size="1048576" crc="bab26e9c" sha1="bbfbc9a781e5dda63cafee9b1c3047db3ee3a182"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns70337cd6ef8a3">
 		<description>pagemaster_prototype_[!]</description>
 		<year>????</year>
@@ -21039,16 +21029,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Red's Christmas Party (SMW1 hack).sfc" size="2097152" crc="8279ff6d" sha1="7e039fee3c2bb700a498f18cccf6fbfae303584a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns28753ef9f0af1">
-		<description>Redline F-1 Racer (U)(1993)(Absolute Entertainment)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Redline F-1 Racer (U)(1993)(Absolute Entertainment).sfc" size="1048576" crc="e5faadd2" sha1="28753ef9f0af186de192f851edc835bdecfe4064"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30842,6 +30822,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf9f0493ca8aca">
+		<description>Super Battleship (U)(1993)(Mindscape)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Super Battleship (U)(1993)(Mindscape).sfc" size="524288" crc="6fcea1a1" sha1="f9f0493ca8aca56859af57a2a501258f3350f3bd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa789c63ca0f47">
 		<description>Super Big 2 (China) (Unl)</description>
 		<year>????</year>
@@ -31299,16 +31289,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Ghouls 'n Ghosts Restoration Hack (2023)(SCD).sfc" size="2097152" crc="acaed88a" sha1="a22aabecf7b1b0c052521f5a23344ea329b8e1c4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns85451595f125d">
-		<description>Super Goal! 2 (U)(1993)(Jaleco)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Super Goal! 2 (U)(1993)(Jaleco).sfc" size="524288" crc="c5829306" sha1="85451595f125dcbe6009b9e83a150308ed9a0750"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37932,6 +37912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsa41f878dfb852">
+		<description>Wayne's World (E)(1993)(THQ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Wayne's World (E)(1993)(THQ).sfc" size="1048576" crc="94eae7e4" sha1="a41f878dfb852724e0cabe6ed4cff73cb81aabb9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf918aa709c685">
 		<description>We're Back! A Dinosaur's Story (1993)(Hi-Tech Expressions)(proto)</description>
 		<year>????</year>
@@ -38139,16 +38129,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="World Heroes (J)(1993)(Sunsoft).sfc" size="2097152" crc="1ff42561" sha1="138b9d359a5eebac2de609eaadf96987c49672df"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns8e870c7273a82">
-		<description>World League Soccer (U)(1991)(Mindscape - Anco Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="World League Soccer (U)(1991)(Mindscape - Anco Software).sfc" size="524288" crc="591cbb2d" sha1="8e870c7273a825854272e0d1b276aa7e0d9fad41"/>
 			</dataarea>
 		</part>
 	</software>
