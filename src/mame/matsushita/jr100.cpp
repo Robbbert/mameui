@@ -410,7 +410,7 @@ void jr100_state::jr100(machine_config &config)
 	SOFTWARE_LIST(config, "cass_list").set_original("jr100_cass");
 
 	/* quickload */
-	QUICKLOAD(config, "quickload", "prg", attotime::from_seconds(2)).set_load_callback(FUNC(jr100_state::quickload_cb));
+	//QUICKLOAD(config, "quickload", "prg", attotime::from_seconds(2)).set_load_callback(FUNC(jr100_state::quickload_cb));
 	quickload_image_device &quik(QUICKLOAD(config, "quickload", "prg", attotime::from_seconds(2)));
 	quik.set_load_callback(FUNC(jr100_state::quickload_cb));
 	quik.set_interface("jr100_quik");
