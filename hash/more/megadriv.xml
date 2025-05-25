@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1949 -->
+<!-- Number of items in this list = 1952 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4549,6 +4549,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Chakan(FR).bin" size="1048576" crc="19c339c1" sha1="58e097d35a044be2635c3613dc22ab9f483c4fc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6b3ea889e8f71">
+		<description>Charnego Force II T-Spa (2022)(Charnego Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Charnego Force II T-Spa (2022)(Charnego Translations).bin" size="2097152" crc="2b25992e" sha1="6b3ea889e8f710b6d094f83a1578c7818ebc1266"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9289,6 +9299,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="688758">
 				<rom name="Knuckles the Echidna in Sonic the Hedgehog Rev 00.bin" size="688758" crc="ff81a474" sha1="a2417f1b92b9b07230589c33b6e76d476a123bbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene3a2f204947d2">
+		<description>Kombate Morta T-Spa (2000)(Charnego Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kombate Morta T-Spa (2000)(Charnego Translations).md" size="2097152" crc="0b5647b1" sha1="e3a2f204947d299e716babd7c8e24b9d67012161"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17599,6 +17619,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Tazmania NG.bin" size="524288" crc="bca57367" sha1="1d9b8aa644998411757ff5ddfff69d9c6161108e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen449f41289e718">
+		<description>Tecmo Atleti T-Spa v2.0 (2025)(Charnego Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Tecmo Atleti T-Spa v2.0 (2025)(Charnego Translations).bin" size="1048576" crc="1d6c8e33" sha1="449f41289e718abb73e959cc5594f955931c1806"/>
 			</dataarea>
 		</part>
 	</software>

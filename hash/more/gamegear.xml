@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 89 -->
+<!-- Number of items in this list = 90 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial</description>
@@ -319,6 +319,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="GG Aleste 3 (Japan) (En) (Aleste Collection).gg" size="1048576" crc="717fd9e3" sha1="b2948f2498d3095aebdb5fe4a62590c12c8ea846"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg2dc25793fc1a57">
+		<description>GG Aleste 3 - Sound Channel 3 fix (2020)(M2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="GG Aleste 3 - Sound Channel 3 fix (2020)(M2).gg" size="1048576" crc="53d0cacc" sha1="2dc25793fc1a5760a982f689c0df119c8f169a80"/>
 			</dataarea>
 		</part>
 	</software>

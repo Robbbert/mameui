@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 183 -->
+<!-- Number of items in this list = 184 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1639,6 +1639,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262656">
 				<rom name="Space Invaders.pce" size="262656" crc="90249060" sha1="40060d3eb0e21b2423a0c9afc081027adcc66cf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce8ad7fa05b14d0">
+		<description>Special Criminal Investigation - Noise Fix (2022)(Justin Gibbins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Special Criminal Investigation - Noise Fix (2022)(Justin Gibbins).pce" size="524288" crc="54e4c79b" sha1="8ad7fa05b14d00918d5c45564f6399ed3e030953"/>
 			</dataarea>
 		</part>
 	</software>
