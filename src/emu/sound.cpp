@@ -38,7 +38,7 @@
 #define LOG_OSD_STREAMS (1U << 3)
 #define LOG_ORDER       (1U << 4)
 
-#define VERBOSE LOG_OSD_INFO
+#define VERBOSE 0
 
 #include "logmacro.h"
 
@@ -209,7 +209,7 @@ template<typename S> void emu::detail::output_buffer_flat<S>::resample(u32 previ
 		return;
 
 	auto si = [](attotime time, u32 rate) -> s64 {
-		return time.m_seconds * rate + muldiv64(time.m_attoseconds, rate, ATTOSECONDS_PER_SECOND);
+		return time.m_seconds * rate + muldivu_64(time.m_attoseconds, rate, ATTOSECONDS_PER_SECOND);
 	};
 
 	auto cv = [](u32 source_rate, u32 dest_rate, s64 time) -> std::pair<s64, double> {
@@ -514,7 +514,7 @@ void sound_stream::init()
 u64 sound_stream::get_current_sample_index() const
 {
 	attotime now = m_device.machine().time();
-	return now.m_seconds * m_sample_rate + muldiv64(now.m_attoseconds, m_sample_rate, ATTOSECONDS_PER_SECOND);
+	return now.m_seconds * m_sample_rate + muldivu_64(now.m_attoseconds, m_sample_rate, ATTOSECONDS_PER_SECOND);
 }
 
 void sound_stream::update()
@@ -643,7 +643,7 @@ attotime sound_stream::sample_to_time(u64 index) const
 {
 	attotime res = attotime::zero;
 	res.m_seconds = index / m_sample_rate;
-	res.m_attoseconds = muldiv64u(index % m_sample_rate, ATTOSECONDS_PER_SECOND, m_sample_rate);
+	res.m_attoseconds = muldivupu_64(index % m_sample_rate, ATTOSECONDS_PER_SECOND, m_sample_rate);
 	return res;
 }
 
@@ -865,8 +865,11 @@ void sound_manager::after_devices_init()
 
 	m_effects_done = false;
 
-	m_effects_thread = std::make_unique<std::thread>(
-													 [this]{ run_effects(); });
+	if(m_nosound_mode)
+		m_effects_thread = nullptr;
+	else
+		m_effects_thread = std::make_unique<std::thread>(
+														 [this]{ run_effects(); });
 }
 
 
@@ -892,8 +895,8 @@ void sound_manager::input_get(int id, sound_stream &stream)
 			source_start_pos = dest_start_pos;
 			source_end_pos = dest_end_pos;
 		} else {
-			source_start_pos = muldiv64(dest_start_pos, istream.m_rate, machine().sample_rate());
-			source_end_pos = muldiv64(dest_end_pos, istream.m_rate, machine().sample_rate());
+			source_start_pos = muldivu_64(dest_start_pos, istream.m_rate, machine().sample_rate());
+			source_end_pos = muldivu_64(dest_end_pos, istream.m_rate, machine().sample_rate());
 		}
 
 		if(istream.m_buffer.write_sample() < source_end_pos) {
@@ -952,7 +955,7 @@ void sound_manager::run_effects()
 
 		std::unique_lock<std::mutex> lock(m_effects_mutex);
 
-		// Copy the data to the effects threads, expanding as need
+		// Copy the data to the effects threads, expanding as needed
 		// when -speed is in use
 		double sf = machine().video().speed_factor();
 		if(sf == 1000) {
@@ -976,9 +979,9 @@ void sound_manager::run_effects()
 				int channels = si.m_buffer.channels();
 				auto &eb = si.m_effects_buffer;
 				eb.prepare_space(source_samples / sf + 1);
-				int source_sample_index;
-				int dest_index;
-				double m_phase;
+				int source_sample_index = 0;
+				int dest_index = 0;
+				double m_phase = si.m_speed_phase;
 				for(int channel = 0; channel != channels; channel ++) {
 					const sample_t *src = si.m_buffer.ptrs(channel, 0);
 					m_phase = si.m_speed_phase;
@@ -1023,8 +1026,8 @@ void sound_manager::run_effects()
 			u32 source_samples = m_speakers[step.m_device_index].m_effects.back().m_buffer.available_samples();
 
 			if(ostream.m_resampler) {
-				u64 start_sync = muldiv64(eb.sync_sample(), ostream.m_rate, machine().sample_rate());
-				u64 end_sync = muldiv64(eb.sync_sample() + source_samples, ostream.m_rate, machine().sample_rate());
+				u64 start_sync = muldivu_64(eb.sync_sample(), ostream.m_rate, machine().sample_rate());
+				u64 end_sync = muldivu_64(eb.sync_sample() + source_samples, ostream.m_rate, machine().sample_rate());
 				ostream.m_samples = end_sync - start_sync;
 				switch(step.m_mode) {
 				case mixing_step::COPY: {
@@ -1710,9 +1713,11 @@ template<bool is_output, typename S> void sound_manager::apply_osd_changes(std::
 	for(S &stream : streams) {
 		u32 sidx;
 		for(sidx = 0; sidx != m_osd_info.m_streams.size() && m_osd_info.m_streams[sidx].m_id != stream.m_id; sidx++);
-		// If the stream has been lost, continue.  It will be cleared in update_osd_streams.
-		if(sidx == m_osd_info.m_streams.size())
+		// If the stream has been lost, mark it lost and continue.  It will be cleared in update_osd_streams.
+		if(sidx == m_osd_info.m_streams.size()) {
+			stream.m_id = 0;
 			continue;
+		}
 
 		// Check if the target and/or the volumes changed
 		bool node_changed = stream.m_node != m_osd_info.m_streams[sidx].m_node;
@@ -1850,7 +1855,7 @@ void sound_manager::osd_information_update()
 	// split stream case.
 	if(machine().osd().sound_split_streams_per_source()) {
 		apply_osd_changes<false, osd_input_stream >(m_osd_input_streams );
-		apply_osd_changes<false, osd_output_stream>(m_osd_output_streams);
+		apply_osd_changes<true,  osd_output_stream>(m_osd_output_streams);
 	}
 }
 
@@ -1954,7 +1959,7 @@ std::vector<u32> sound_manager::find_channel_mapping(const std::array<double, 3>
 		return result;
 	double best_dist = -1;
 	for(u32 port = 0; port != node->m_port_positions.size(); port++)
-		if(node->m_port_positions[port][0] || node->m_port_positions[port][1] || node->m_port_positions[port][2]) {
+		if(sound_io_device::mapping_allowed(node->m_port_positions[port])) {
 			double dx = position[0] - node->m_port_positions[port][0];
 			double dy = position[1] - node->m_port_positions[port][1];
 			double dz = position[2] - node->m_port_positions[port][2];
@@ -2437,6 +2442,9 @@ void sound_manager::mapping_update()
 {
 	// fffffffe means the config is not loaded yet, so too early
 	// ffffffff means the config is loaded but the defaults are not setup yet
+	if(m_nosound_mode)
+		return;
+
 	if(m_osd_info.m_generation == 0xfffffffe)
 		return;
 	if(m_osd_info.m_generation == 0xffffffff)
@@ -2547,7 +2555,7 @@ void sound_manager::mapping_update()
 
 u64 sound_manager::rate_and_time_to_index(attotime time, u32 sample_rate) const
 {
-	return time.m_seconds * sample_rate + muldiv64(time.m_attoseconds, sample_rate,  ATTOSECONDS_PER_SECOND);
+	return time.m_seconds * sample_rate + muldivu_64(time.m_attoseconds, sample_rate,  ATTOSECONDS_PER_SECOND);
 }
 
 void sound_manager::update(s32)
