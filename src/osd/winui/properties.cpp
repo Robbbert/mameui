@@ -269,7 +269,8 @@ const DUALCOMBOSTR m_cb_Sound[] =
 	{ TEXT("Auto"),                  "auto"    },
 	{ TEXT("DirectSound"),           "dsound"  },
 	{ TEXT("PortAudio"),             "portaudio" },
-	{ TEXT("XAudio2 (Win10 only)"),  "xaudio2" },     // win10 only
+	{ TEXT("Wasapi"),                "wasapi" },
+	{ TEXT("XAudio2 (Win10+ only)"), "xaudio2" },
 };
 #define NUMSOUND (sizeof(m_cb_Sound) / sizeof(m_cb_Sound[0]))
 
