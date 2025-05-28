@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 453 -->
+<!-- Number of items in this list = 472 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2462,6 +2462,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsf455b79d1afd7">
+		<description>Magical Tree (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Magical Tree (KR).sms" size="32768" crc="4a79cf51" sha1="f455b79d1afd7bd0fefcf1c9835eec63898b5560"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb95eceb21a016">
+		<description>Magical Tree MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Magical Tree MSX2SMS Hack.sms" size="32768" crc="1a82bff4" sha1="b95eceb21a016a8a1b215e1d3f021ff210753c14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms90cdc8bc26cb8">
+		<description>Magnet MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="40960">
+				<rom name="Magnet MSX2SMS Hack.sms" size="40960" crc="496106d7" sha1="90cdc8bc26cb808fb85cb887ccdaaf964a5a0dae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms90f7e3b00d540">
 		<description>Mahjong Solitaire (2021)(Under4Mhz)</description>
 		<year>????</year>
@@ -2509,6 +2539,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="main_1.sms" size="32768" crc="4b590c5f" sha1="d59203d9cfb9daa676f1181e23fe89c57dd8905a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms4b95e09d0de29">
+		<description>Mappy (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mappy (KR).sms" size="32768" crc="56d492f8" sha1="4b95e09d0de29ed6fbdcc80e2e256f716778fa21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa54ccd090b526">
+		<description>Mappy (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mappy (TW).sms" size="32768" crc="c82fce8f" sha1="a54ccd090b526cbb10c5646542f0c4eaab43d70f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2562,6 +2612,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms06a58f6ca91d7">
+		<description>MayQ Buster MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="MayQ Buster MSX2SMS Hack.sms" size="49152" crc="7acfa333" sha1="06a58f6ca91d773294c081ec602cba870d66156b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb0c6943fb1f2e">
+		<description>MayQ Keeper MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="MayQ Keeper MSX2SMS Hack.sms" size="49152" crc="294b92c2" sha1="b0c6943fb1f2e8a239d312f786a48464bf1d5baa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms6aa4b40e2ba02">
 		<description>Maze3d</description>
 		<year>????</year>
@@ -2573,12 +2643,42 @@
 		</part>
 	</software>
 	<software name="sms0e1632b4ac51a">
-		<description>Mazy</description>
+		<description>Mazy (2022)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="10992">
-				<rom name="Mazy.sms" size="10992" crc="cb5c20fd" sha1="0e1632b4ac51abe98fe8ffa93a2f8f70a39d44a1"/>
+				<rom name="Mazy (2022)(Inufuto).sms" size="10992" crc="cb5c20fd" sha1="0e1632b4ac51abe98fe8ffa93a2f8f70a39d44a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms566a2307ee3fd">
+		<description>Mazy (2022)(Inufuto)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mazy (2022)(Inufuto)_1.sms" size="16384" crc="79fdf88c" sha1="566a2307ee3fded75de80d560cd81439ba758b48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms8c08cb8970128">
+		<description>Mazy 2 (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mazy 2 (2025)(Inufuto).sms" size="16384" crc="d55761d1" sha1="8c08cb89701285d4d19f22e4add6f096cde58f8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb73fe4a15658a">
+		<description>Megaro Polis SOS (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Megaro Polis SOS (TW).sms" size="32768" crc="8a7b9ac3" sha1="b73fe4a15658afcb31ee6ba5b9ef4ad0a023e53a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2593,12 +2693,12 @@
 		</part>
 	</software>
 	<software name="sms3887408676840">
-		<description>mieyen</description>
+		<description>Mieyen (2025)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="mieyen.sms" size="16384" crc="364c06ed" sha1="3887408676840ab18f2dca154470565a7329b280"/>
+				<rom name="Mieyen (2025)(Inufuto).sms" size="16384" crc="364c06ed" sha1="3887408676840ab18f2dca154470565a7329b280"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2652,6 +2752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms71d58f5c68704">
+		<description>Mini Golf (KR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mini Golf (KR).sms" size="32768" crc="e8f81c4a" sha1="71d58f5c687045f0257e348d4a74a0759a64ff4b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsb92e7a947734e">
 		<description>MiniMSX (2021)(MikGames)</description>
 		<year>????</year>
@@ -2659,6 +2769,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="MiniMSX (2021)(MikGames).sms" size="131072" crc="eb6c0944" sha1="b92e7a947734ed20efc1d2a8fbcc8983d24639c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms8c9dbef5ae545">
+		<description>Mint MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mint MSX2SMS Hack.sms" size="32768" crc="c8383b0c" sha1="8c9dbef5ae545c76e8ee5f930777271cf3f8f454"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2679,6 +2799,36 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="mmaster_1.sms" size="65536" crc="e2f0fc48" sha1="8796ec6e8cd75ea1fd4a5f98a5e1138dfa130892"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsbf637d6680971">
+		<description>Moai no Hibou [Aaronix] (TW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Moai no Hibou [Aaronix] (TW).sms" size="49152" crc="39db8c2f" sha1="bf637d668097130858eda97c2ed0a06d246ae031"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse087f7d600da7">
+		<description>Mobile Suit Gundam MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Mobile Suit Gundam MSX2SMS Hack.sms" size="49152" crc="f47eaf84" sha1="e087f7d600da73313737177c87e7c2337b7eb3cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc46da6dda6b58">
+		<description>Momomaru VS Aomaru MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32528">
+				<rom name="Momomaru VS Aomaru MSX2SMS Hack.sms" size="32528" crc="0cb08c61" sha1="c46da6dda6b58f30ed897edc4aa72bee6b545486"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2762,13 +2912,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms8be917d4f4073">
+		<description>Nazo No Ninja Momomaru Kun MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Nazo No Ninja Momomaru Kun MSX2SMS Hack.sms" size="49152" crc="20a560c9" sha1="8be917d4f407313f1aaee815dea44a48e939e3a9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms56289737252cf">
-		<description>Neuras</description>
+		<description>Neuras (2021)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="12920">
-				<rom name="Neuras.sms" size="12920" crc="9b229f4d" sha1="56289737252cf47f2503d5b26e9505d56909aae7"/>
+				<rom name="Neuras (2021)(Inufuto).sms" size="12920" crc="9b229f4d" sha1="56289737252cf47f2503d5b26e9505d56909aae7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2822,6 +2982,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsafa4dc6028236">
+		<description>No MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="No MSX2SMS Hack.sms" size="49152" crc="0904264e" sha1="afa4dc60282360ff49076d07f86ca398318b7e86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms9e12f1973ac91">
+		<description>O MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="O MSX2SMS Hack.sms" size="49152" crc="c62cf42e" sha1="9e12f1973ac91eb1d15e48cd272aa150ffbf6568"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms0d6c27af48bd4">
 		<description>Omikuji (1998)(Maechiko)(PD)</description>
 		<year>????</year>
@@ -2832,13 +3012,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms7b971b412f973">
+		<description>Oregon MSX2SMS Hack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Oregon MSX2SMS Hack.sms" size="49152" crc="8f22fbe1" sha1="7b971b412f9730b8f9a9462fabfe9a45554de7b0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms23c4d46c72285">
-		<description>Osotos</description>
+		<description>Osotos (2024)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Osotos.sms" size="16384" crc="b8569995" sha1="23c4d46c722852f6b639009b8129648df1c50fe1"/>
+				<rom name="Osotos (2024)(Inufuto).sms" size="16384" crc="b8569995" sha1="23c4d46c722852f6b639009b8129648df1c50fe1"/>
 			</dataarea>
 		</part>
 	</software>

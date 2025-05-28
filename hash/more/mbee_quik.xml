@@ -162,6 +162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee5e79fa86e7758">
+		<description>[-](NJ)Grooble Grab</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2432">
+				<rom name="[-](NJ)Grooble Grab.mwb" size="2432" crc="ba1748ec" sha1="5e79fa86e7758c1fe8bd369843cd8317f7f80631"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee74970bfe0e05d">
 		<description>[-](NJ)Survivor</description>
 		<year>????</year>
@@ -4812,23 +4822,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="bee5e79fa86e7758">
-		<description>[-]groobl-j</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="2432">
-				<rom name="[-]groobl-j.mwb" size="2432" crc="ba1748ec" sha1="5e79fa86e7758c1fe8bd369843cd8317f7f80631"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="beec80583be31630">
-		<description>[-]grooble</description>
+		<description>[-]Grooble Grab</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="2688">
-				<rom name="[-]grooble.mwb" size="2688" crc="b7e54ed6" sha1="c80583be31630a364e544512336571c33cfb7522"/>
+				<rom name="[-]Grooble Grab.mwb" size="2688" crc="b7e54ed6" sha1="c80583be31630a364e544512336571c33cfb7522"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4959,16 +4959,6 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="11008">
 				<rom name="[-]hangman1.mwb" size="11008" crc="104fe315" sha1="bd5e1b1696df91eb848023e5b4398491e63b2575"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="beef80bcf18d3ba3">
-		<description>[-]hangman2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="19456">
-				<rom name="[-]hangman2.mwb" size="19456" crc="097d3b01" sha1="f80bcf18d3ba3b3a30e9b9fda4e6b42797796b06"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5293,12 +5283,12 @@
 		</part>
 	</software>
 	<software name="beecafc703f9acf7">
-		<description>[-]imposfig</description>
+		<description>[-]Impossible Figure</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="640">
-				<rom name="[-]imposfig.mwb" size="640" crc="ed5ae2ce" sha1="cafc703f9acf70b1b665c8b6aa9a6dc1afc8215e"/>
+				<rom name="[-]Impossible Figure.mwb" size="640" crc="ed5ae2ce" sha1="cafc703f9acf70b1b665c8b6aa9a6dc1afc8215e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12509,6 +12499,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="2176">
 				<rom name="[ic]guess3.mwb" size="2176" crc="9f24ffa9" sha1="d62995f1dd462dc15285fdf88214f34a02129dca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef80bcf18d3ba3">
+		<description>[ic]hangman2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="19456">
+				<rom name="[ic]hangman2.mwb" size="19456" crc="097d3b01" sha1="f80bcf18d3ba3b3a30e9b9fda4e6b42797796b06"/>
 			</dataarea>
 		</part>
 	</software>
