@@ -1082,10 +1082,14 @@ void sound_manager::run_effects()
 		for(auto &si : m_speakers)
 			si.m_effects.back().m_buffer.sync();
 
+		machine().osd().sound_begin_update();
+
 		// Send the result to the osd
 		for(auto &stream : m_osd_output_streams)
 			if(stream.m_samples)
 				machine().osd().sound_stream_sink_update(stream.m_id, stream.m_buffer.data(), stream.m_samples);
+
+		machine().osd().sound_end_update();
 
 		dlock.lock();
 	}
@@ -2520,7 +2524,7 @@ void sound_manager::mapping_update()
 			for(const auto &m : m_microphones) {
 				LOG_OUTPUT_FUNC("  %s:\n", m.m_dev.tag());
 				for(const auto &ms : m.m_input_mixing_steps) {
-					static const char *const modes[5] = { "clear", "copy", "copy+vol", "add", "add+vol" };
+					static const char *const modes[5] = { "clear", "copy", "add" };
 					LOG_OUTPUT_FUNC("  - %s osd %u:%u -> device %u:%u level %g\n", modes[ms.m_mode], ms.m_osd_index, ms.m_osd_channel, ms.m_device_index, ms.m_device_channel, ms.m_linear_volume);
 				}
 			}
@@ -2541,7 +2545,7 @@ void sound_manager::mapping_update()
 			}
 			LOG_OUTPUT_FUNC("Output mixing steps:\n");
 			for(const auto &ms : m_output_mixing_steps) {
-				static const char *const modes[5] = { "clear", "copy", "copy+vol", "add", "add+vol" };
+				static const char *const modes[5] = { "clear", "copy", "add" };
 				LOG_OUTPUT_FUNC("- %s device %u:%u -> osd %u:%u level %g\n", modes[ms.m_mode], ms.m_device_index, ms.m_device_channel, ms.m_osd_index, ms.m_osd_channel, ms.m_linear_volume);
 			}
 		}
