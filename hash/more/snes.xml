@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3866 -->
+<!-- Number of items in this list = 3868 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -5179,6 +5179,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Cancion del Angel, La T-Spa v1.3 (2023)(semco).sfc" size="4194304" crc="95e367a1" sha1="1b032cffb6775a17c57c6e8055dda23ed897d894"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf4d77083dc874">
+		<description>Cannondale Cup (U)(1993)(Radical Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Cannondale Cup (U)(1993)(Radical Entertainment).sfc" size="1572864" crc="b95fe0a0" sha1="f4d77083dc87467612eda2ae251c6a9bb9500911"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13369,6 +13379,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Killer Instinct.sfc" size="4194304" crc="a07c46cd" sha1="876956a5141d772da5ad0251f93be347610eef92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf83e5e4fb11ee">
+		<description>King Arthur &amp; The Knights of Justice (U)(1994)(Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="King Arthur &amp; The Knights of Justice (U)(1994)(Enix).sfc" size="2621440" crc="615a183b" sha1="f83e5e4fb11ee4b07a896a37fdff3d37edb680c6"/>
 			</dataarea>
 		</part>
 	</software>

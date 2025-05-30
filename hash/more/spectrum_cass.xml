@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2578 -->
+<!-- Number of items in this list = 2608 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10782,6 +10782,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs1b95f5e54d171">
+		<description>Sam Boon - A Case of Murder 128K (2023)(Taskmaster Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="84818">
+				<rom name="Sam Boon - A Case of Murder 128K (2023)(Taskmaster Software).tap" size="84818" crc="74af3999" sha1="1b95f5e54d171586db4d85c7d53d43bfb9120d1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0e58254b489c5">
+		<description>Sam Boon - The Dragnet Case 128K (2023)(Taskmaster Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80368">
+				<rom name="Sam Boon - The Dragnet Case 128K (2023)(Taskmaster Software).tap" size="80368" crc="5198feda" sha1="0e58254b489c546e3249cd1682ddeef0c2ae6240"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4c10103cddd85">
+		<description>Sam Mallard EN v1.2 (2016-21)(Ersh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40161">
+				<rom name="Sam Mallard EN v1.2 (2016-21)(Ersh).tap" size="40161" crc="dd71d04f" sha1="4c10103cddd857bec429f89916d27789b0d4f8b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ef40ebbfbb00">
+		<description>Sam Mallard ES v1.2 (2016-21)(Ersh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40825">
+				<rom name="Sam Mallard ES v1.2 (2016-21)(Ersh).tap" size="40825" crc="1f33d48e" sha1="2ef40ebbfbb00f4140af1538ffa61e1245c67518"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfdefd33c8e81e">
+		<description>Sam Slade - Robo-Hunter 48K (2022)(Monsterbytes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37981">
+				<rom name="Sam Slade - Robo-Hunter 48K (2022)(Monsterbytes).tap" size="37981" crc="d5815f2f" sha1="fdefd33c8e81ef83cd023fe26f3290e2b8071a01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs41540299c418f">
+		<description>Sam Stoat Safe Breaker (1985)(Gremlin Graphics Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48545">
+				<rom name="Sam Stoat Safe Breaker (1985)(Gremlin Graphics Software Ltd).tap" size="48545" crc="05b03ec7" sha1="41540299c418f286ed2dc6331f44444c0efdfc81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd7f075c8182af">
+		<description>Samantha Fox Strip Poker (1986)(Martech Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48286">
+				<rom name="Samantha Fox Strip Poker (1986)(Martech Games Ltd).tap" size="48286" crc="06ac3b93" sha1="d7f075c8182af8091daa058c3ebf2cf0ada91688"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f6f65526b99c">
+		<description>Samantha Fox Strip Poker 2 (19xx)(Mark Alexander + Adam Haylett)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20245">
+				<rom name="Samantha Fox Strip Poker 2 (19xx)(Mark Alexander + Adam Haylett).tap" size="20245" crc="4a7e39d7" sha1="6f6f65526b99c131a11a49781573d656fd0f8b15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs05b2bfd59ed4a">
+		<description>Samurai (1986)(CRL Group PLC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29292">
+				<rom name="Samurai (1986)(CRL Group PLC).tap" size="29292" crc="d9f4f8db" sha1="05b2bfd59ed4aa0e4ed0dca18e4517caedcb0b59"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc5e63ee0d4c6f">
 		<description>Samurai Warrior - The Battles Of Usaji Yojimbo</description>
 		<year>????</year>
@@ -10789,6 +10879,136 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="56138">
 				<rom name="Samurai Warrior - The Battles Of Usaji Yojimbo.tzx" size="56138" crc="0acc8d55" sha1="c5e63ee0d4c6f600265624d789404d2a9d2fb0bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb814453ed73e1">
+		<description>Samurai Warrior - Usagi Yojimbo 128k (1988)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53473">
+				<rom name="Samurai Warrior - Usagi Yojimbo 128k (1988)(Firebird).tap" size="53473" crc="989e9ffd" sha1="b814453ed73e1375cd5d7d7fa71bb1b036a5d4ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs85b92c1bd1dd5">
+		<description>Santa (1983)(Artic Computing Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20473">
+				<rom name="Santa (1983)(Artic Computing Ltd).tap" size="20473" crc="8018f421" sha1="85b92c1bd1dd5a5d96ad1ac580e67de43faf5795"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs022bc53e2c281">
+		<description>Santa's Christmas Capers (1991)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47687">
+				<rom name="Santa's Christmas Capers (1991)(Zeppelin Games).tap" size="47687" crc="5430dcc6" sha1="022bc53e2c281869bd4c3a4061f19ceb80bc8378"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e1814bc29d57">
+		<description>Santa's Search (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8973">
+				<rom name="Santa's Search (19xx)(-).tap" size="8973" crc="6fe5418b" sha1="9e1814bc29d574544ac07f702597561fd7edc063"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe4889aa4a768">
+		<description>Santos' Christmas Adventure 48K-AY (2017)(Dave Hughes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43228">
+				<rom name="Santos' Christmas Adventure 48K-AY (2017)(Dave Hughes).tap" size="43228" crc="24437e43" sha1="fe4889aa4a768bb7619ad6f42cbce0144373c504"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5fddb9921bf33">
+		<description>Sanxion - The Spectrum Remix (1989)(Thalamus Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48009">
+				<rom name="Sanxion - The Spectrum Remix (1989)(Thalamus Ltd)(128K).tap" size="48009" crc="0cb4ad4d" sha1="5fddb9921bf332fd174c94870d4000fde43d7a70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81cb0fab061cf">
+		<description>Sanxion - The Spectrum Remix (1989)(Thalamus Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22397">
+				<rom name="Sanxion - The Spectrum Remix (1989)(Thalamus Ltd).tap" size="22397" crc="ebdf44ea" sha1="81cb0fab061cf2d91953473c9e79f50e0002ed52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7799f383008d9">
+		<description>Sanxion - The Spectrum Remix 128K (2023)(Thalamus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48009">
+				<rom name="Sanxion - The Spectrum Remix 128K (2023)(Thalamus).tap" size="48009" crc="992b0d50" sha1="7799f383008d93143a63549a38f7d7ac759cc120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse2450ecc1b91e">
+		<description>Sapper (1996)(Sergey Shaporov)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19761">
+				<rom name="Sapper (1996)(Sergey Shaporov)(Ru).tap" size="19761" crc="0b376035" sha1="e2450ecc1b91e4d4c2f9bd9633fb017b4e562607"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50dcf2d9f706a">
+		<description>Sapphire Di Maximus (1985)(Zanza Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48128">
+				<rom name="Sapphire Di Maximus (1985)(Zanza Software)(Sp).tap" size="48128" crc="91beeb9d" sha1="50dcf2d9f706a400b987d5842e1af9d52174d355"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7157880d32577">
+		<description>Sapphire Di Maximus (1985)(Zanza Software)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48057">
+				<rom name="Sapphire Di Maximus (1985)(Zanza Software)(Sp)[a].tap" size="48057" crc="c9a62d82" sha1="7157880d32577035cb474fa8186096b03a967b1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs775abb835506d">
+		<description>Saracen (1987)(American Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41178">
+				<rom name="Saracen (1987)(American Software).tap" size="41178" crc="9f6a0848" sha1="775abb835506d2d449e55f11e1faf81ea3bf6023"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1294fef855994">
+		<description>Sarlmoor (1985)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40554">
+				<rom name="Sarlmoor (1985)(Atlantis Software).tap" size="40554" crc="e6299975" sha1="1294fef855994876f4f8920bcabdb4e661b2396c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10802,6 +11022,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse05b9234ce4f1">
+		<description>Satan - Part 1 48K (1990)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48395">
+				<rom name="Satan - Part 1 48K (1990)(Dinamic Software).tap" size="48395" crc="2098b208" sha1="e05b9234ce4f1496aae9d85c81151d11abe5ade6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1dc7f15ff0734">
+		<description>Satan - Part 2 48K (1990)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47945">
+				<rom name="Satan - Part 2 48K (1990)(Dinamic Software).tap" size="47945" crc="b6586a99" sha1="1dc7f15ff0734ba1b18e82158c64c24b3c3e418d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscb64c09f3a55a">
+		<description>Satcom (1987)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46308">
+				<rom name="Satcom (1987)(Atlantis Software Ltd).tap" size="46308" crc="d54de9e7" sha1="cb64c09f3a55aa3a7a444f71e47f3a6b18243369"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs4c418a33bc10b">
 		<description>Satochin</description>
 		<year>????</year>
@@ -10809,6 +11059,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49076">
 				<rom name="Satochin.tzx" size="49076" crc="2bfe7167" sha1="4c418a33bc10b400cbf3642ff68522914742c410"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9d7d843eb1563">
+		<description>Savage (1988)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33559">
+				<rom name="Savage (1988)(Firebird Software Ltd).tap" size="33559" crc="65d60f84" sha1="9d7d843eb1563ed224bbfbcff26775a8cae13269"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c9bde79a0203">
+		<description>Savage Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18951">
+				<rom name="Savage Demo.TAP" size="18951" crc="548200d6" sha1="0c9bde79a0203e318d556d8fffd30929f42c8288"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8788ab3e143c4">
+		<description>Savage Island Pt 1  (1987)(Adventure International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40298">
+				<rom name="Savage Island Pt 1  (1987)(Adventure International).tap" size="40298" crc="7a39415c" sha1="8788ab3e143c4e6256b80bca1cf506ae8f362495"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3db9a892f51da">
+		<description>Savage Island Pt 2  (1987)(Adventure International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40298">
+				<rom name="Savage Island Pt 2  (1987)(Adventure International).tap" size="40298" crc="77b5afe3" sha1="3db9a892f51daee4c07207414ce5d4170c9f162a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs10bf160eb2043">
+		<description>Savage Princess 2 128K (2023)(Bitmap Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48393">
+				<rom name="Savage Princess 2 128K (2023)(Bitmap Soft).tap" size="48393" crc="d3e5e547" sha1="10bf160eb204359381b72c1796a3d865ede158a1"/>
 			</dataarea>
 		</part>
 	</software>
