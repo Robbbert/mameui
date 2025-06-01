@@ -253,14 +253,14 @@ void osd_common_t::register_options()
 #endif
 	REGISTER_MODULE(m_mod_man, RENDERER_NONE);
 
+#ifndef NO_USE_PORTAUDIO
+	REGISTER_MODULE(m_mod_man, SOUND_PORTAUDIO);
+#endif
 	REGISTER_MODULE(m_mod_man, SOUND_DSOUND);
 	REGISTER_MODULE(m_mod_man, SOUND_XAUDIO2);
 	REGISTER_MODULE(m_mod_man, SOUND_COREAUDIO);
 	REGISTER_MODULE(m_mod_man, SOUND_JS);
 	REGISTER_MODULE(m_mod_man, SOUND_SDL);
-#ifndef NO_USE_PORTAUDIO
-	REGISTER_MODULE(m_mod_man, SOUND_PORTAUDIO);
-#endif
 #ifndef NO_USE_PULSEAUDIO
 	REGISTER_MODULE(m_mod_man, SOUND_PULSEAUDIO);
 #endif
