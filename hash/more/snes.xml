@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3868 -->
+<!-- Number of items in this list = 3876 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -1832,6 +1832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsbe560f0a8de05">
+		<description>(E)Super Mario All-Stars + Super Mario World (E)(1993)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="(E)Super Mario All-Stars + Super Mario World (E)(1993)(Nintendo).sfc" size="2621440" crc="303205d8" sha1="be560f0a8de05e432b34be768198ef3defb13cb6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns082adac9e38f8">
 		<description>(E)Super Metroid (E)(1994)(Nintendo)</description>
 		<year>????</year>
@@ -3579,6 +3589,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="Bastard!! - Dark God of Destruction T-Eng 'Easy Spells' (2017)(DeJap Translations, Docrow).sfc" size="2097664" crc="564504cf" sha1="f43fb1980d9adc7c5ab07688139ea37092e0cd4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7be714835ec00">
+		<description>Batman (U, Proto)(199x)(Software Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Batman (U, Proto)(199x)(Software Creations).sfc" size="524288" crc="8862e31d" sha1="7be714835ec0094aac9fa7952024bd49efed8af3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13212,6 +13232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsce85268a9b4ec">
+		<description>Keeping SNES Alive! (2020)(Dr. Ludos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Keeping SNES Alive! (2020)(Dr. Ludos).sfc" size="262144" crc="2ed0f383" sha1="ce85268a9b4ec06d53c7772529705506084f2e8c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snseac1c693fb936">
 		<description>Kenny's adventure (SMW1 hack) (2)</description>
 		<year>????</year>
@@ -13799,6 +13829,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Last Bible III T-Spa v1.2 (2023)(semco).sfc" size="4194304" crc="70cd69d9" sha1="f3b71189cfbb1a70146c7799c74d33aa3933f003"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc5cacfdbed312">
+		<description>Last Super, The (2020)(Dr. Ludos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Last Super, The (2020)(Dr. Ludos).sfc" size="262144" crc="49a36518" sha1="c5cacfdbed312acdc9d408dc2060b5b967428633"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19259,6 +19299,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="NHLPA Hockey 93 (U, Rev 1)(1992)(Electronic Arts).sfc" size="524288" crc="525c5cd5" sha1="e23a3b49fff711c8cbc1e0064b96d3a48a0f9312"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5d1f9010eb3e3">
+		<description>Nickelodeon GUTS (U)(1994)(Viacom New Media)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Nickelodeon GUTS (U)(1994)(Viacom New Media).sfc" size="1572864" crc="233fec8c" sha1="5d1f9010eb3e393ad57f31ec35ef75803a00e657"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35513,12 +35563,12 @@
 		</part>
 	</software>
 	<software name="sns5f0ddc911e9c1">
-		<description>Super Star Wars - The Empire Strikes Back (Europe) (Rev 1)</description>
+		<description>Super Star Wars - The Empire Strikes Back (E, Rev 1)(1993)(JVC - LucasArts)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
-				<rom name="Super Star Wars - The Empire Strikes Back (Europe) (Rev 1).sfc" size="1572864" crc="d308aa3e" sha1="5f0ddc911e9c10597c28ffb3a07b66caf2c0645d"/>
+				<rom name="Super Star Wars - The Empire Strikes Back (E, Rev 1)(1993)(JVC - LucasArts).sfc" size="1572864" crc="d308aa3e" sha1="5f0ddc911e9c10597c28ffb3a07b66caf2c0645d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36422,13 +36472,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns64ea73d73ced4">
-		<description>Teenage Queen (2018)(Alekmaul)</description>
+	<software name="sns86419187d2de8">
+		<description>Teenage Queen v1.4 (E)(2018)(Alekmaul)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Teenage Queen (2018)(Alekmaul).sfc" size="1048576" crc="00e4c4e6" sha1="64ea73d73ced4b7327f68b487b440d3ebb45ca32"/>
+				<rom name="Teenage Queen v1.4 (E)(2018)(Alekmaul).sfc" size="1048576" crc="60b9ef27" sha1="86419187d2de835fa8682ec969a38bfa9fef8136"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns64ea73d73ced4">
+		<description>Teenage Queen v1.4 (U)(2018)(Alekmaul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Teenage Queen v1.4 (U)(2018)(Alekmaul).sfc" size="1048576" crc="00e4c4e6" sha1="64ea73d73ced4b7327f68b487b440d3ebb45ca32"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36772,6 +36832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsa81156c6cce16">
+		<description>Titanic (U)(Unl)(199x)(Twin Eagles Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Titanic (U)(Unl)(199x)(Twin Eagles Group).sfc" size="2097152" crc="529de215" sha1="a81156c6cce16be28a1a2dcadf480cc99c2a67a8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns67ba1e5eaf94c">
 		<description>title</description>
 		<year>????</year>
@@ -36949,6 +37019,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Torneco no Daibouken - Fushigi no Dungeon T-Eng v0.99 (2004-2025)(Magic Destiny, motke).sfc" size="2097152" crc="eeafb152" sha1="de068f7eaf9136a2325a75ca7018b8d10501acab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsedca64165caa0">
+		<description>Torneko no Daibouken - Fushigi no Dungeon T-Eng v0.99 (2004-2025)(Magic Destiny, motke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Torneko no Daibouken - Fushigi no Dungeon T-Eng v0.99 (2004-2025)(Magic Destiny, motke).sfc" size="2097152" crc="a2946cd0" sha1="edca64165caa043e3244f46e94843bfdb4ad83ff"/>
 			</dataarea>
 		</part>
 	</software>

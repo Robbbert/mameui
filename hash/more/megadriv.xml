@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1953 -->
+<!-- Number of items in this list = 1954 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4129,6 +4129,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="5242880">
 				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9 (2025)(Yoni Arousement).bin" size="5242880" crc="99dce0db" sha1="cc0e5ee4bcca9e9dfaad3729fc25c0657e4b732d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen579b0d6933ac2">
+		<description>Bishoujo Super Street Fighter II - Glamor Queen v2.9A (2025)(Yoni Arousement)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9A (2025)(Yoni Arousement).bin" size="5242880" crc="ccd8889f" sha1="579b0d6933ac2d8f5acb8bc0beec8b61482778f1"/>
 			</dataarea>
 		</part>
 	</software>
