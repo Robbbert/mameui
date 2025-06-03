@@ -204,12 +204,47 @@ public:
 	virtual void stream_sink_update(uint32_t stream_id, int16_t const *buffer, int samples_this_frame) override;
 
 private:
+	bool set_property_listener(AudioDeviceID device, AudioObjectPropertyElement element, AudioObjectPropertyScope scope);
+	bool clear_property_listener(AudioDeviceID device, AudioObjectPropertyElement element, AudioObjectPropertyScope scope);
+	void set_device_listeners();
+	void clear_device_listeners();
+
+	OSStatus property_changed(
+		AudioObjectID inObjectID,
+		UInt32 inNumberAddresses,
+		const AudioObjectPropertyAddress inAddresses[])
+	{
+		for (int i = 0; i < inNumberAddresses; i++)
+		{
+			osd_printf_verbose("CoreAudio: property %c%c%c%c changed\n",
+				inAddresses[i].mSelector>>24,
+				(inAddresses[i].mSelector>>16) & 0xff,
+				(inAddresses[i].mSelector>>8) & 0xff,
+				(inAddresses[i].mSelector>>0) & 0xff);
+
+			m_need_generation_bump = true;
+		}
+
+		return noErr;
+	}
+
+	static OSStatus property_callback(
+		AudioObjectID inObjectID,
+		UInt32 inNumberAddresses,
+		const AudioObjectPropertyAddress inAddresses[],
+		void *inClientData)
+	{
+		return ((sound_coreaudio *)inClientData)->property_changed(inObjectID, inNumberAddresses, inAddresses);
+	}
+
 	class coreaudio_stream
 	{
 	public:
-		coreaudio_stream(int input_channels) :
+		coreaudio_stream(sound_coreaudio *parent, int input_channels) :
 			m_input_buffer(input_channels),
+			m_parent(parent),
 			m_graph(nullptr),
+			m_is_source(false),
 			m_node_count(0),
 			m_channels(input_channels),
 			m_sample_rate(0),
@@ -315,8 +350,21 @@ private:
 			UInt32 number_frames,
 			AudioBufferList *data);
 
+		OSStatus is_alive(
+			AudioObjectID inObjectID,
+			UInt32 inNumberAddresses,
+			const AudioObjectPropertyAddress inAddresses[]);
+
+		static OSStatus is_alive_callback(
+			AudioObjectID inObjectID,
+			UInt32 inNumberAddresses,
+			const AudioObjectPropertyAddress inAddresses[],
+			void *inClientData);
+
+		sound_coreaudio *m_parent;
 		AudioDeviceID m_id;
 		AUGraph m_graph;
+		bool m_is_source;
 		unsigned m_node_count;
 		node_detail m_node_details[EFFECT_COUNT_MAX + 2];
 
@@ -340,9 +388,9 @@ private:
 		AudioDeviceID m_id;
 		std::shared_ptr<coreaudio_stream> m_stream;
 
-		coreaudio_stream_info(int channels)
+		coreaudio_stream_info(sound_coreaudio *parent, int channels)
 		{
-			m_stream = std::make_shared<coreaudio_stream>(channels);
+			m_stream = std::make_shared<coreaudio_stream>(parent, channels);
 		}
 	};
 
@@ -380,6 +428,7 @@ private:
 	std::map<AudioDeviceID, coreaudio_device> m_device_list;
 	std::map<uint32_t, coreaudio_stream_info> m_stream_list;
 	std::mutex m_stream_list_mutex;
+	bool m_need_generation_bump;
 };
 
 int sound_coreaudio::init(osd_interface &osd, const osd_options &options)
@@ -389,10 +438,21 @@ int sound_coreaudio::init(osd_interface &osd, const osd_options &options)
 
 	// build the list of available CoreAudio devices
 	build_device_list();
+	m_need_generation_bump = false;
+
+	// set up notifications
+	if (!set_property_listener(kAudioObjectSystemObject, kAudioHardwarePropertyDevices, kAudioObjectPropertyScopeGlobal))
+		return -1;
+	if (!set_property_listener(kAudioObjectSystemObject, kAudioHardwarePropertyDefaultInputDevice, kAudioObjectPropertyScopeGlobal))
+		return -1;
+	if (!set_property_listener(kAudioObjectSystemObject, kAudioHardwarePropertyDefaultOutputDevice, kAudioObjectPropertyScopeGlobal))
+		return -1;
 
 	m_deviceinfo.m_generation = 1;
 	m_deviceinfo.m_default_sink = get_default_sink();
 	m_deviceinfo.m_default_source = get_default_source();
+
+	set_device_listeners();
 
 	// Show the defaults
 	auto default_sink = m_device_list.find(get_default_sink());
@@ -414,7 +474,12 @@ void sound_coreaudio::exit()
 {
 	osd_printf_verbose("CoreAudio: Shutting down\n");
 
+	clear_property_listener(kAudioObjectSystemObject, kAudioHardwarePropertyDevices, kAudioObjectPropertyScopeGlobal);
+	clear_property_listener(kAudioObjectSystemObject, kAudioHardwarePropertyDefaultInputDevice, kAudioObjectPropertyScopeGlobal);
+	clear_property_listener(kAudioObjectSystemObject, kAudioHardwarePropertyDefaultOutputDevice, kAudioObjectPropertyScopeGlobal);
+
 	std::lock_guard<std::mutex> list_guard(m_stream_list_mutex);
+	clear_device_listeners();
 	for (const auto &[key, stream] : m_stream_list)
 	{
 		stream.m_stream->close();
@@ -441,22 +506,26 @@ void sound_coreaudio::rebuild_stream_info()
 
 uint32_t sound_coreaudio::get_generation()
 {
+	if (m_need_generation_bump)
+	{
+		clear_device_listeners();
+
+		std::lock_guard<std::mutex> list_guard(m_stream_list_mutex);
+		m_deviceinfo.m_default_sink = get_default_sink();
+		m_deviceinfo.m_default_source = get_default_source();
+		build_device_list();
+		m_deviceinfo.m_generation++;
+
+		set_device_listeners();
+
+		m_need_generation_bump = false;
+	}
+
 	return m_deviceinfo.m_generation;
 }
 
 osd::audio_info sound_coreaudio::get_information()
 {
-	// Check if the default devices have changed
-	const auto default_sink = get_default_sink();
-	const auto default_source = get_default_source();
-	if (default_sink != m_deviceinfo.m_default_sink ||
-		default_source != m_deviceinfo.m_default_source)
-	{
-		m_deviceinfo.m_default_sink = default_sink;
-		m_deviceinfo.m_default_source = default_source;
-		m_deviceinfo.m_generation++;
-	}
-
 	return m_deviceinfo;
 }
 
@@ -467,7 +536,7 @@ uint32_t sound_coreaudio::stream_sink_open(uint32_t node, std::string name, uint
 	{
 		if (our_device->second.m_sinks > 0)
 		{
-			struct coreaudio_stream_info stream(1);
+			struct coreaudio_stream_info stream(this, 1);
 
 			if (!stream.m_stream->create_sink_stream(our_device->second, name.c_str(), rate, m_audio_latency))
 			{
@@ -500,7 +569,7 @@ uint32_t sound_coreaudio::stream_source_open(uint32_t node, std::string name, ui
 
 		if (sources > 0)
 		{
-			struct coreaudio_stream_info stream(sources);
+			struct coreaudio_stream_info stream(this, sources);
 
 			if (!stream.m_stream->create_source_stream(our_device->second, name.c_str(), rate, m_audio_latency))
 			{
@@ -559,6 +628,72 @@ void sound_coreaudio::stream_close(uint32_t id)
 		our_stream->second.m_stream->close();
 		m_stream_list.erase(our_stream);
 		rebuild_stream_info();
+	}
+}
+
+bool sound_coreaudio::set_property_listener(AudioDeviceID device, AudioObjectPropertyElement element, AudioObjectPropertyScope scope)
+{
+	AudioObjectPropertyAddress const property_addr = {
+		element,
+		scope,
+		PROPERTY_ELEMENT_MASTER};
+
+	OSStatus err = AudioObjectAddPropertyListener(
+		device,
+		&property_addr,
+		this->property_callback,
+		this);
+	if (noErr != err)
+	{
+		osd_printf_error("CoreAudio: Could not set device %d callback %08x (%ld)\n", device, element, (long)err);
+		return false;
+	}
+
+	return true;
+}
+
+bool sound_coreaudio::clear_property_listener(AudioDeviceID device, AudioObjectPropertyElement element, AudioObjectPropertyScope scope)
+{
+	AudioObjectPropertyAddress const property_addr = {
+		element,
+		scope,
+		PROPERTY_ELEMENT_MASTER};
+
+	OSStatus err = AudioObjectRemovePropertyListener(
+		device,
+		&property_addr,
+		this->property_callback,
+		this);
+	if (noErr != err)
+	{
+		osd_printf_error("CoreAudio: Could not remove device %d callback %08x (%ld)\n", device, element, (long)err);
+		return false;
+	}
+
+	return true;
+}
+
+void sound_coreaudio::set_device_listeners()
+{
+	for (const auto &[key, device] : m_device_list)
+	{
+		const AudioObjectPropertyScope scope = (device.m_sinks > 0) ? kAudioDevicePropertyScopeOutput : kAudioDevicePropertyScopeInput;
+
+		set_property_listener(device.m_id, kAudioDevicePropertyPreferredChannelLayout, scope);
+		set_property_listener(device.m_id, kAudioDevicePropertyStreamConfiguration, scope);
+		set_property_listener(device.m_id, kAudioDevicePropertyNominalSampleRate, scope);
+	}
+}
+
+void sound_coreaudio::clear_device_listeners()
+{
+	for (const auto &[key, device] : m_device_list)
+	{
+		const AudioObjectPropertyScope scope = (device.m_sinks > 0) ? kAudioDevicePropertyScopeOutput : kAudioDevicePropertyScopeInput;
+
+		clear_property_listener(device.m_id, kAudioDevicePropertyPreferredChannelLayout, scope);
+		clear_property_listener(device.m_id, kAudioDevicePropertyStreamConfiguration, scope);
+		clear_property_listener(device.m_id, kAudioDevicePropertyNominalSampleRate, scope);
 	}
 }
 
@@ -950,13 +1085,14 @@ void sound_coreaudio::build_device_list()
 				{
 					const auto &chDesc = chanLayout->mChannelDescriptions[desc];
 
-					osd_printf_verbose("\t\t\tdesc %d: flags %d label %x coords (%f %f %f)\n",
-										desc,
-										chDesc.mChannelFlags,
-										chDesc.mChannelLabel,
-										chDesc.mCoordinates[0],
-										chDesc.mCoordinates[1],
-										chDesc.mCoordinates[2]);
+					osd_printf_verbose("\t\t\tch %d: flags %d label %s (%d) coords (%f %f %f)\n",
+									   desc,
+									   chDesc.mChannelFlags,
+									   node.m_port_names[desc].c_str(),
+									   chDesc.mChannelLabel,
+									   chDesc.mCoordinates[0],
+									   chDesc.mCoordinates[1],
+									   chDesc.mCoordinates[2]);
 				}
 			}
 			free((void *)chanLayout);
@@ -1130,12 +1266,12 @@ return_error:
 bool sound_coreaudio::coreaudio_stream::create_source_graph(struct coreaudio_device &device)
 {
 	OSStatus err;
-	UInt32 packet_size = 512;	// larger than 512 samples/packet causes errors with some devices
+	UInt32 packet_size = 512;   // larger than 512 samples/packet causes errors with some devices
 	AURenderCallbackStruct const renderer = { this->source_render_callback, this };
 	AudioObjectPropertyAddress const packet_size_addr = {
 		kAudioDevicePropertyBufferFrameSize,
 		kAudioDevicePropertyScopeInput,
-		1};
+		1 };
 	AudioStreamBasicDescription format, out_format;
 
 	memset(&format, 0, sizeof(AudioStreamBasicDescription));
@@ -1270,6 +1406,7 @@ bool sound_coreaudio::coreaudio_stream::add_device_output(struct coreaudio_devic
 			(long)err);
 		goto remove_node_and_return_error;
 	}
+
 	m_node_count++;
 	return true;
 
@@ -1512,6 +1649,7 @@ int sound_coreaudio::coreaudio_stream::create_sink_stream(struct coreaudio_devic
 	m_channels = device.m_channels;
 	m_sample_rate = sample_rate;
 	m_id = device.m_id;
+	m_is_source = false;
 
 	// Create the output graph
 	osd_printf_verbose("CoreAudio: Start create_sink_stream for %s (%d Hz, %d channels)\n", name, sample_rate, m_channels);
@@ -1594,6 +1732,7 @@ int sound_coreaudio::coreaudio_stream::create_source_stream(struct coreaudio_dev
 	m_audio_latency = latency;
 	m_sample_rate = sample_rate;
 	m_id = device.m_id;
+	m_is_source = true;
 
 	// Create the input graph
 	osd_printf_verbose("CoreAudio: Start create_source_stream for %s (%d Hz, %d channels)\n", name, sample_rate, m_channels);

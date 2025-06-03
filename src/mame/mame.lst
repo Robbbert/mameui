@@ -18705,12 +18705,16 @@ footbpow12
 footbpow14
 radikalb
 radikalba
+radikalbp
 speedup
 speedup10
 speedup12
 surfplnt
+surfplnt10
+surfplnt12
 surfplnt20
 surfplnt30
+surfplnt31
 surfplnt40
 
 @source:gaelco/gaelcof3.cpp
@@ -18731,8 +18735,15 @@ tuningrc
 glass
 glass10
 glass10a
+glass10b
+glass10c
+glass10d
+glassa
+glassat
 glasskr
+glasskra
 glassp
+ssplash
 
 @source:gaelco/goldart.cpp
 goldart
@@ -35970,6 +35981,9 @@ ob8
 @source:oberheim/xpander.cpp
 xpander
 
+@source:olivetti/celint2k.cpp
+celint2kss
+
 @source:olivetti/m20.cpp
 m20
 m40
@@ -36910,6 +36924,9 @@ ms4144
 so30h
 so4saw2
 zito4dps
+
+@source:pc/play4texash.cpp
+play4texash
 
 @source:pc/poisk1.cpp
 poisk1
