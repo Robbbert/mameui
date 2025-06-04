@@ -18709,6 +18709,9 @@ radikalbp
 speedup
 speedup10
 speedup12
+speedup20
+speedup20a
+speedup21
 surfplnt
 surfplnt10
 surfplnt12
@@ -18762,6 +18765,7 @@ lotoplay
 lotoplaya
 lotoplayb
 lotoplayc
+lotoplayp
 
 @source:gaelco/mastboy.cpp
 mastboy
@@ -18806,6 +18810,9 @@ roldfrog
 roldfroga
 splash
 splash10
+splash12
+splashkr
+splashna
 ringball
 
 @source:gaelco/splash_ms.cpp
@@ -42918,6 +42925,9 @@ dmndhrt
 dmndhrtn
 honeybee
 
+@source:skeleton/clownmgc.cpp
+clownmgc
+
 @source:skeleton/clxvme186.cpp
 clxvme186
 
@@ -46504,6 +46514,7 @@ imgame
 jak_bj
 jak_prr
 jak_spmm
+jak_tpir
 myac220
 smartfp
 smartfpf
@@ -46603,6 +46614,8 @@ jak_diso
 jak_sbdd
 jak_spdmo
 jak_spdmoa
+jak_thom
+jak_thomp
 jak_wpt
 sstarkar
 
@@ -46692,16 +46705,22 @@ icanguit
 icanpian
 
 @source:tvgames/spg2xx_jakks.cpp
+jak_1vs
+jak_5thg
+jak_avtr
 jak_batm
 jak_cind
 jak_ctah
 jak_dond
 jak_dpma
 jak_dwa
+jak_dwmn
+jak_dwmno
 jak_gdg
 jak_hm1m
 jak_hmbb
 jak_hsm
+jak_jpdy
 jak_marv
 jak_mk
 jak_mpaco
@@ -46723,6 +46742,8 @@ jak_spdv
 jak_supm
 jak_wall
 jak_wof2
+jak_xmen
+jak_xmenp
 
 @source:tvgames/spg2xx_jakks_gkr.cpp
 jak_capc
@@ -46734,8 +46755,6 @@ jak_dora
 jak_dorr
 jak_dpr
 jak_dprs
-jak_dwmn
-jak_dwmno
 jak_fan4
 jak_just
 jak_mpac
@@ -46749,7 +46768,6 @@ jak_spdm
 jak_swot
 jak_wof
 jak_wwe
-jak_xmenp
 
 @source:tvgames/spg2xx_jakks_sharp.cpp
 jsc_dora
