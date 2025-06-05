@@ -7352,6 +7352,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee64289c9afb6ec">
+		<description>[-]Munch_6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5120">
+				<rom name="[-]Munch_6.mwb" size="5120" crc="8267d4c6" sha1="64289c9afb6ecd87e6c042ff15c10d200d66e374"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beef7724aaffbbab">
+		<description>[-]Munch_7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3840">
+				<rom name="[-]Munch_7.mwb" size="3840" crc="0a35b924" sha1="f7724aaffbbabdb2ab83b1923333acfbf93ef1ad"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee0e72c19762d10">
 		<description>[-]Museum Mystery</description>
 		<year>????</year>
@@ -7832,26 +7852,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="bee64289c9afb6ec">
-		<description>[-]pacman</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="5120">
-				<rom name="[-]pacman.mwb" size="5120" crc="8267d4c6" sha1="64289c9afb6ecd87e6c042ff15c10d200d66e374"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="beef7724aaffbbab">
-		<description>[-]pacman_3</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="3840">
-				<rom name="[-]pacman_3.mwb" size="3840" crc="0a35b924" sha1="f7724aaffbbabdb2ab83b1923333acfbf93ef1ad"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="bee52efcd59daec0">
 		<description>[-]pakman</description>
 		<year>????</year>
@@ -8192,16 +8192,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="bee6b4223cc96d34">
-		<description>[-]Pick the Shape</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="4608">
-				<rom name="[-]Pick the Shape.MWB" size="4608" crc="1ff2a9b8" sha1="6b4223cc96d341760668620a0b9615f1483bcb28"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="bee959df5d80bf47">
 		<description>[-]pie10</description>
 		<year>????</year>
@@ -8459,26 +8449,6 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="5376">
 				<rom name="[-]pokerma.mwb" size="5376" crc="5560582f" sha1="edfb366c4058b1e135f16d78a586e70a019b86ad"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="bee761549a5d7339">
-		<description>[-]pokermcn</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="12544">
-				<rom name="[-]pokermcn.mwb" size="12544" crc="5203825c" sha1="761549a5d733975847a84599d4f429cef00e38cf"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="bee6aac4782437c0">
-		<description>[-]pokerrgb</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="12544">
-				<rom name="[-]pokerrgb.mwb" size="12544" crc="87273a10" sha1="6aac4782437c04e0a1ad7246a2d9033923bf02f5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12629,6 +12599,36 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="8320">
 				<rom name="[ic]MUNCH.BEE" size="8320" crc="1a4d8a99" sha1="68c785fa5f704260a1ab1d9383f0bdc6cbb629bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6b4223cc96d34">
+		<description>[ic]Pick the Shape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4608">
+				<rom name="[ic]Pick the Shape.MWB" size="4608" crc="1ff2a9b8" sha1="6b4223cc96d341760668620a0b9615f1483bcb28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee761549a5d7339">
+		<description>[ic]pokermcn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="12544">
+				<rom name="[ic]pokermcn.mwb" size="12544" crc="5203825c" sha1="761549a5d733975847a84599d4f429cef00e38cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6aac4782437c0">
+		<description>[ic]pokerrgb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="12544">
+				<rom name="[ic]pokerrgb.mwb" size="12544" crc="87273a10" sha1="6aac4782437c04e0a1ad7246a2d9033923bf02f5"/>
 			</dataarea>
 		</part>
 	</software>

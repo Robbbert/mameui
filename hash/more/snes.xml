@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3876 -->
+<!-- Number of items in this list = 3881 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -2282,6 +2282,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns888b813827865">
+		<description>46 Okunen Monogatari - Harukanaru Eden e T-Chs v1.01 (2025)(aGuGu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="46 Okunen Monogatari - Harukanaru Eden e T-Chs v1.01 (2025)(aGuGu).sfc" size="2097152" crc="7c984801" sha1="888b8138278659974d5f9c2f72f27add387950e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns550279c8ad62a">
+		<description>46 Okunen Monogatari - Harukanaru Eden e T-Cht v1.01 (2025)(aGuGu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="46 Okunen Monogatari - Harukanaru Eden e T-Cht v1.01 (2025)(aGuGu).sfc" size="2097152" crc="5265768a" sha1="550279c8ad62a21c8201d87b860e5040f7f05dba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsfe8c30496ec24">
 		<description>469MUNCHERS (SMW1 Hack)</description>
 		<year>????</year>
@@ -3739,6 +3759,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Battletoads In Battlemaniacs (BR).sfc" size="1048576" crc="92e076ee" sha1="77f0afd9a54490bfb0f3b7986960912b2067cd4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns26d8297d8b9b0">
+		<description>Battletoads in Battlemaniacs (E)(1993)(Tradewest - Rare)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Battletoads in Battlemaniacs (E)(1993)(Tradewest - Rare).sfc" size="1048576" crc="bbf1cf8d" sha1="26d8297d8b9b09a61125fe9906ad1c2a7c38ac11"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7773,12 +7803,12 @@
 		</part>
 	</software>
 	<software name="sns038bac2a85d32">
-		<description>Duel, The - Test Drive II (U)(1992)(Ballistic)</description>
+		<description>Duel, The - Test Drive II (U)(1992)(Distinctive Software - Accolade)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Duel, The - Test Drive II (U)(1992)(Ballistic).sfc" size="1048576" crc="1cc662cd" sha1="038bac2a85d323c6e1950344d6bbc86c6173e293"/>
+				<rom name="Duel, The - Test Drive II (U)(1992)(Distinctive Software - Accolade).sfc" size="1048576" crc="1cc662cd" sha1="038bac2a85d323c6e1950344d6bbc86c6173e293"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22019,6 +22049,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Secret of Evermore PT-BR (2023)(Dindo).sfc" size="4194304" crc="c4c266fd" sha1="06667b94738baad6d12d702a1843248fdb082aef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa8b211ce7a921">
+		<description>Secret of Evermore T-Chs v1.01 (2025)(aGuGu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Secret of Evermore T-Chs v1.01 (2025)(aGuGu).sfc" size="4194304" crc="94a99e3b" sha1="a8b211ce7a921a602d7b24d4fd6084c6170883ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1ce5d1c8d597e">
+		<description>Secret of Evermore T-Cht v1.01 (2025)(aGuGu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Secret of Evermore T-Cht v1.01 (2025)(aGuGu).sfc" size="4194304" crc="5c293311" sha1="1ce5d1c8d597e58a856eeaa7498808d31d81266b"/>
 			</dataarea>
 		</part>
 	</software>
