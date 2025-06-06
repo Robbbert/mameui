@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3881 -->
+<!-- Number of items in this list = 3884 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -8452,6 +8452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snse23ac138dfbbf">
+		<description>Fatal Fury (E)(1993)(SNK - Takara)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Fatal Fury (E)(1993)(SNK - Takara).sfc" size="1572864" crc="589ce983" sha1="e23ac138dfbbf5274ca02b35df350bca5d7729d9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6406997354912">
 		<description>Fatal Fury (U)(1993)(Takara)</description>
 		<year>????</year>
@@ -8459,6 +8469,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Fatal Fury (U)(1993)(Takara).sfc" size="1572864" crc="c67257d0" sha1="64069973549122fec281a957b2993f31058e3462"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa9613887cb01a">
+		<description>Fatal Fury 2 (E)(1994)(SNK - Takara)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Fatal Fury 2 (E)(1994)(SNK - Takara).sfc" size="2621440" crc="304b2610" sha1="a9613887cb01a5abae7fedfca9a629c087c064c4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8559,6 +8579,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="FIFA - Road to World Cup 98 (E, A8FP)(1998)(Electronic Arts).sfc" size="2097152" crc="0cc77af7" sha1="322adb46b7600b0c5512a416a83b4ca43ef30894"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb184c03ac65b2">
+		<description>FIFA Soccer '96 (E)(1995)(Electronic Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="FIFA Soccer '96 (E)(1995)(Electronic Arts).sfc" size="1572864" crc="8faf17e5" sha1="b184c03ac65b21ea99d72933383d7a87f2f10c1f"/>
 			</dataarea>
 		</part>
 	</software>

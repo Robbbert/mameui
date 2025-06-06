@@ -8702,16 +8702,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="beed420ad89e78d4">
-		<description>[-]race</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="7808">
-				<rom name="[-]race.mwb" size="7808" crc="488a5a13" sha1="d420ad89e78d419cb7c9567bb361273367ee9819"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="bee8664e41510140">
 		<description>[-]racer</description>
 		<year>????</year>
@@ -9132,26 +9122,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="bee016482419b601">
-		<description>[-]ROULET</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="3968">
-				<rom name="[-]ROULET.MWB" size="3968" crc="7a0fc81a" sha1="016482419b601db453a7fb65d07667bf5811b05d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="bee779403a957e15">
-		<description>[-]Roulette</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="3991">
-				<rom name="[-]Roulette.BIN" size="3991" crc="33987fd0" sha1="779403a957e15d68d048d31a5254a35f3ec16d98"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="bee2a459f46f087c">
 		<description>[-]rpm</description>
 		<year>????</year>
@@ -9159,16 +9129,6 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="1024">
 				<rom name="[-]rpm.mwb" size="1024" crc="98b8d2e3" sha1="2a459f46f087c3098ed1e98f9097a7c44ec44805"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="beedfe4896e770df">
-		<description>[-]rpm_1</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="quik" interface="mbee_quik">
-			<dataarea name="quik" size="1280">
-				<rom name="[-]rpm_1.mwb" size="1280" crc="61a9ae10" sha1="dfe4896e770df7bd90a4f4a270b5ee0951df5a76"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9202,6 +9162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee779403a957e15">
+		<description>[-]Russian Roulette</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3991">
+				<rom name="[-]Russian Roulette.BIN" size="3991" crc="33987fd0" sha1="779403a957e15d68d048d31a5254a35f3ec16d98"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee19669df194159">
 		<description>[-]Russian Roulette</description>
 		<year>????</year>
@@ -9219,6 +9189,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="3968">
 				<rom name="[-]Russian Roulette_1.mwb" size="3968" crc="fda7f883" sha1="e48a6876a8ab049e76d8e72a8372c813122e2214"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee016482419b601">
+		<description>[-]Russian Roulette_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3968">
+				<rom name="[-]Russian Roulette_2.MWB" size="3968" crc="7a0fc81a" sha1="016482419b601db453a7fb65d07667bf5811b05d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12632,6 +12612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beed420ad89e78d4">
+		<description>[ic]race</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="7808">
+				<rom name="[ic]race.mwb" size="7808" crc="488a5a13" sha1="d420ad89e78d419cb7c9567bb361273367ee9819"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beee0f61c27cf42b">
 		<description>[ic]readprom</description>
 		<year>????</year>
@@ -12679,6 +12669,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="6912">
 				<rom name="[ic]robotman.bee" size="6912" crc="2f62ac4f" sha1="4bc9552bc1ea39964381fac5ae625a00109170c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beedfe4896e770df">
+		<description>[ic]rpm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="1280">
+				<rom name="[ic]rpm.mwb" size="1280" crc="61a9ae10" sha1="dfe4896e770df7bd90a4f4a270b5ee0951df5a76"/>
 			</dataarea>
 		</part>
 	</software>
