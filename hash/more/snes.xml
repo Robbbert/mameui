@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3884 -->
+<!-- Number of items in this list = 3886 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7922,6 +7922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns56840e992021d">
+		<description>Earthworm Jim (E)(1994)(Playmates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Earthworm Jim (E)(1994)(Playmates).sfc" size="3145728" crc="84ab251b" sha1="56840e992021dda27d230430de39293c6660ff6c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3b666f44ea757">
 		<description>Earthworm Jim (U)(1994)(Playmates)</description>
 		<year>????</year>
@@ -10099,6 +10109,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="6291456">
 				<rom name="Fire Emblem - Thracia 776 T-Eng v1.08 (2021)(Cirosan, Miacis).sfc" size="6291456" crc="2039d71b" sha1="7db4211d827c26d3ae938c6bb383d9427beedb75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns92e4ef0afb645">
+		<description>Fire Emblem - Thracia 776 T-Ita v1.0.0 (2024)(EnDavio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Fire Emblem - Thracia 776 T-Ita v1.0.0 (2024)(EnDavio).sfc" size="6291456" crc="3f2a7a82" sha1="92e4ef0afb6450c5cd7d224242d2809e63e0fa3d"/>
 			</dataarea>
 		</part>
 	</software>
