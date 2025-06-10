@@ -14,6 +14,10 @@ TODO:
 - Only supports single channel samples!
 - Maybe this should be part of the presentation layer (artwork etc.)
   with samples specified in .lay files instead of in drivers?
+- Unless it's an infinitely looping sample, start_raw() is not compatible
+  with savestates. Save state right after start_raw(), load state later,
+  and the sample won't be playing.
+- No need for set_volume, can just use set_output_gain, but it's harmless.
 
 ***************************************************************************/
 
@@ -51,7 +55,6 @@ samples_device::samples_device(const machine_config &mconfig, const char *tag, d
 samples_device::samples_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
 	: device_t(mconfig, type, tag, owner, clock)
 	, device_sound_interface(mconfig, *this)
-	, m_samples_start_cb(*this)
 	, m_channels(0)
 	, m_names(nullptr)
 {
@@ -234,14 +237,17 @@ void samples_device::device_start()
 	m_channel.resize(m_channels);
 	for (int channel = 0; channel < m_channels; channel++)
 	{
+		// placeholder, changed to sample SR at start()
+		const uint32_t rate = machine().sample_rate();
+
 		// initialize channel
 		channel_t &chan = m_channel[channel];
-		chan.stream = stream_alloc(0, 1, machine().sample_rate());
+		chan.stream = stream_alloc(0, 1, rate);
 		chan.source = nullptr;
 		chan.source_num = -1;
 		chan.pos = 0.0;
-		chan.basefreq = machine().sample_rate();
-		chan.curfreq = machine().sample_rate();
+		chan.basefreq = rate;
+		chan.curfreq = rate;
 		chan.loop = false;
 		chan.paused = false;
 
@@ -254,12 +260,6 @@ void samples_device::device_start()
 		save_item(NAME(chan.loop), channel);
 		save_item(NAME(chan.paused), channel);
 	}
-
-	// initialize any custom handlers
-	m_samples_start_cb.resolve();
-
-	if (!m_samples_start_cb.isnull())
-		m_samples_start_cb();
 }
 
 
