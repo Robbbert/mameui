@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1954 -->
+<!-- Number of items in this list = 1957 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6092,6 +6092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen5cf8f97cac3de">
+		<description>Final Fight MD v0.83b (2025)(MXRetroDev - CFX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Final Fight MD v0.83b (2025)(MXRetroDev - CFX).bin" size="4063232" crc="cde690d4" sha1="5cf8f97cac3def7d1a5c197a1df75805141b43f4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb5b6c0df76d6b">
 		<description>Final Fight MD v0.8b (2025)(MXRetroDev)</description>
 		<year>????</year>
@@ -11759,6 +11769,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="PapiCommandoReload-TectoyDemo.bin" size="1572864" crc="d73e6ad5" sha1="851d760cf48eb847bd2c0bdf39d9733facb7944e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9cef7e8d281dc">
+		<description>Patlabor Mobile Police T-Eng (2025)(Barbarian_Moham)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="569568">
+				<rom name="Patlabor Mobile Police T-Eng (2025)(Barbarian_Moham).bin" size="569568" crc="58ab4dad" sha1="9cef7e8d281dc8824271aa19e86feb555a3030bf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18619,6 +18639,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Valis III(F).bin" size="1048576" crc="b2d47ae8" sha1="d53ad0b1d2c6ed19d5a4d560e6260ff6efe0c890"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen10129be0fa7af">
+		<description>Valis Refined (2025)(Eldritch Penumbra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Valis Refined (2025)(Eldritch Penumbra).bin" size="1048576" crc="5a171555" sha1="10129be0fa7af7f9e302be8d630a5ae6f3fed34b"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 506 -->
+<!-- Number of items in this list = 507 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -4739,6 +4739,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Whack 'Em Smack 'Em Byrons Remarked (2025)(ArugulaZ).sms" size="49152" crc="aa77d825" sha1="a7219d8caa8df066322e9761e563ac0049159b8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms55a38ae3561f8">
+		<description>Whack 'Em Smack 'Em Byrons Remarked RC1 (2025)(ArugulaZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Whack 'Em Smack 'Em Byrons Remarked RC1 (2025)(ArugulaZ).sms" size="131072" crc="3bd2d27a" sha1="55a38ae3561f8535752e69c02181125d0de1dee4"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 468 -->
+<!-- Number of items in this list = 469 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -3529,6 +3529,16 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="1038">
 				<rom name="Proton Defence.tap" size="1038" crc="338aadba" sha1="71b8a2631fc2741b6fa62281a2be07ff65455955"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oriaaa2829d8bf25">
+		<description>PUCKMAN by chris (alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="1078">
+				<rom name="PUCKMAN by chris (alpha).tap" size="1078" crc="0045c952" sha1="aaa2829d8bf25272b08d32147018e7d0e4d90df4"/>
 			</dataarea>
 		</part>
 	</software>
