@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3886 -->
+<!-- Number of items in this list = 3887 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -5059,6 +5059,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Buck Rogers - TAG Beta (+headerfix, for PowerPak etc.).sfc" size="1048576" crc="d6990514" sha1="d991fdc0008413247b3bdff4cd2ec4e94694124a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns92a968195cbab">
+		<description>Bugs Bunny - Rabbit Rampage (E)(1993)(Sunsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Bugs Bunny - Rabbit Rampage (E)(1993)(Sunsoft).sfc" size="1572864" crc="91b3db54" sha1="92a968195cbabd09f8dc114035f9e959858ad3c2"/>
 			</dataarea>
 		</part>
 	</software>

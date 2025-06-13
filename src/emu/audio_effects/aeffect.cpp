@@ -11,8 +11,8 @@
 const char *const audio_effect::effect_names[COUNT] = {
 	"Filters",
 	"Compressor",
-	"Reverb",
-	"Equalizer"
+	"Reverb (n/a)",
+	"Equaliser"
 };
 
 audio_effect *audio_effect::create(int type, u32 sample_rate, audio_effect *def)
