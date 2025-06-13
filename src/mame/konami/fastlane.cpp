@@ -36,7 +36,7 @@ public:
 	fastlane_state(const machine_config &mconfig, device_type type, const char *tag) :
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this,"maincpu"),
-		m_k007121_regs(*this, "k007121_regs"),
+		m_rowscroll(*this, "rowscroll"),
 		m_videoram(*this, "videoram%u", 1U),
 		m_spriteram(*this, "spriteram"),
 		m_prgbank(*this, "prgbank"),
@@ -56,14 +56,13 @@ private:
 	required_device<cpu_device> m_maincpu;
 
 	// memory pointers
-	required_shared_ptr<uint8_t> m_k007121_regs;
+	required_shared_ptr<uint8_t> m_rowscroll;
 	required_shared_ptr_array<uint8_t, 2> m_videoram;
 	required_shared_ptr<uint8_t> m_spriteram;
 	required_memory_bank m_prgbank;
 
 	// video-related
 	tilemap_t *m_layer[2];
-	rectangle m_clip[2];
 
 	// devices
 	required_device_array<k007232_device, 2> m_k007232;
@@ -71,16 +70,22 @@ private:
 	required_device<screen_device> m_screen;
 	required_device<palette_device> m_palette;
 
-	void k007121_registers_w(offs_t offset, uint8_t data);
-	void bankswitch_w(uint8_t data);
+	void palette(palette_device &palette) const;
+
+	template <uint8_t Which> TILE_GET_INFO_MEMBER(get_tile_info);
 	template <uint8_t Which> void vram_w(offs_t offset, uint8_t data);
+	void flipscreen_w(int state) { machine().tilemap().set_flip_all(state ? (TILEMAP_FLIPY | TILEMAP_FLIPX) : 0); }
+	void dirtytiles() { machine().tilemap().mark_all_dirty(); }
+
+	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
+
+	TIMER_DEVICE_CALLBACK_MEMBER(interrupt);
+	void bankswitch_w(uint8_t data);
+
 	template <uint8_t Which> uint8_t k007232_r(offs_t offset);
 	template <uint8_t Which> void k007232_w(offs_t offset, uint8_t data);
-	template <uint8_t Which> TILE_GET_INFO_MEMBER(get_tile_info);
-	void palette(palette_device &palette) const;
-	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
-	TIMER_DEVICE_CALLBACK_MEMBER(interrupt);
 	template <uint8_t Which> void volume_callback(uint8_t data);
+
 	void prg_map(address_map &map) ATTR_COLD;
 };
 
@@ -148,14 +153,8 @@ void fastlane_state::video_start()
 	m_layer[1] = &machine().tilemap().create(*m_k007121, tilemap_get_info_delegate(*this, FUNC(fastlane_state::get_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 8, 32, 32);
 
 	m_layer[0]->set_scroll_rows(32);
-
-	m_clip[0] = m_screen->visible_area();
-	m_clip[0].min_x += 40;
-
-	m_clip[1] = m_screen->visible_area();
-	m_clip[1].max_x = 39;
-	m_clip[1].min_x = 0;
 }
+
 
 /***************************************************************************
 
@@ -179,21 +178,38 @@ void fastlane_state::vram_w(offs_t offset, uint8_t data)
 
 uint32_t fastlane_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	rectangle finalclip0 = m_clip[0], finalclip1 = m_clip[1];
+	// compute clipping
+	rectangle clip[2];
+	clip[0] = clip[1] = screen.visible_area();
 
-	finalclip0 &= cliprect;
-	finalclip1 &= cliprect;
+	if (m_k007121->flipscreen())
+	{
+		clip[0].max_x -= 40;
+		clip[1].min_x = clip[1].max_x - 39;
+	}
+	else
+	{
+		clip[0].min_x += 40;
+		clip[1].max_x = 39;
+	}
+
+	clip[0] &= cliprect;
+	clip[1] &= cliprect;
 
 	// set scroll registers
-	int xoffs = m_k007121->ctrlram_r(0);
+	int scrollx = m_k007121->ctrlram_r(0);
+	int scrolly = m_k007121->ctrlram_r(2);
+
 	for (int i = 0; i < 32; i++)
-		m_layer[0]->set_scrollx(i, m_k007121_regs[0x20 + i] + xoffs - 40);
+		m_layer[0]->set_scrollx(i, m_rowscroll[i] + scrollx - 40);
 
-	m_layer[0]->set_scrolly(0, m_k007121->ctrlram_r(2));
+	m_layer[0]->set_scrolly(0, scrolly);
 
-	m_layer[0]->draw(screen, bitmap, finalclip0, 0, 0);
-	m_k007121->sprites_draw(bitmap, cliprect, 0, 40, 0, screen.priority(), (uint32_t)-1);
-	m_layer[1]->draw(screen, bitmap, finalclip1, 0, 0);
+	// draw the graphics
+	m_layer[0]->draw(screen, bitmap, clip[0], 0, 0);
+	m_k007121->sprites_draw(bitmap, cliprect, 0, m_k007121->flipscreen() ? 16 : 40, 0, screen.priority(), (uint32_t)-1);
+	m_layer[1]->draw(screen, bitmap, clip[1], 0, 0);
+
 	return 0;
 }
 
@@ -211,14 +227,6 @@ TIMER_DEVICE_CALLBACK_MEMBER(fastlane_state::interrupt)
 		m_maincpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
 }
 
-
-void fastlane_state::k007121_registers_w(offs_t offset, uint8_t data)
-{
-	if (offset < 8)
-		m_k007121->ctrl_w(offset, data);
-	else    // scroll registers
-		m_k007121_regs[offset] = data;
-}
 
 void fastlane_state::bankswitch_w(uint8_t data)
 {
@@ -251,7 +259,8 @@ void fastlane_state::k007232_w(offs_t offset, uint8_t data)
 
 void fastlane_state::prg_map(address_map &map)
 {
-	map(0x0000, 0x005f).ram().w(FUNC(fastlane_state::k007121_registers_w)).share(m_k007121_regs);
+	map(0x0000, 0x0007).w(m_k007121, FUNC(k007121_device::ctrl_w));
+	map(0x0020, 0x005f).ram().share(m_rowscroll);
 	map(0x0800, 0x0800).portr("DSW3");
 	map(0x0801, 0x0801).portr("P2");
 	map(0x0802, 0x0802).portr("P1");
@@ -374,6 +383,8 @@ void fastlane_state::fastlane(machine_config &config)
 	PALETTE(config, m_palette, FUNC(fastlane_state::palette)).set_format(palette_device::xBGR_555, 1024*16, 0x400);
 
 	K007121(config, m_k007121, 0, m_palette, gfx_fastlane);
+	m_k007121->set_flipscreen_cb().set(FUNC(fastlane_state::flipscreen_w));
+	m_k007121->set_dirtytiles_cb(FUNC(fastlane_state::dirtytiles));
 
 	K051733(config, "k051733", 0);
 
@@ -419,4 +430,4 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1987, fastlane, 0, fastlane, fastlane, fastlane_state, empty_init, ROT90, "Konami", "Fast Lane", MACHINE_NO_COCKTAIL | MACHINE_SUPPORTS_SAVE )
+GAME( 1987, fastlane, 0, fastlane, fastlane, fastlane_state, empty_init, ROT90, "Konami", "Fast Lane", MACHINE_SUPPORTS_SAVE )

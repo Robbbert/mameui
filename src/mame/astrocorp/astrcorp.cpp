@@ -50,6 +50,8 @@ Year + Game                PCB ID                    CPU                Video   
 14  Magic Bomb (BR.71A)    P1                        ASTRO V102PX-014?  ASTRO V07      ASTRO ROHS BA21C00009 JF13022              Encrypted
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Note: ASTRO F01 is a QuickLogic pASIC 3 FPGA (die-marked as QL3161A/1999).
+
 - astoneag, magibomb, winbingo, etc.: to initialize EEPROM (and self test in some games), keep keyout (W) pressed during boot.
   Needs ticket (or reserve switch) and hopper lines to be 0 though (disconnected?).
 - magibomb: sets with a "game count" option, when set to "yes", display the number of games played by the current player.
@@ -79,7 +81,7 @@ TODO:
 - monkeyl and clones: need RE of the CPU code, inputs and layout. After reset it initializes.
 - speedmst,a,b: needs verifying of inputs, outputs and layout.
 - cptshark: needs verifying of inputs and layout
-- wwitch, lwitch: need  RE of the CPU code, inputs, outputs. Currently start but then freeze.
+- wwitch, lwitch: need  RE of the CPU code, inputs, outputs. Currently start but then freeze with clean NVRAM. Soft reset and they work.
 - hapfarm,a: needs verifying of inputs, outputs and layout.
 - zulu: needs verifying of inputs, outputs and layout.
 
@@ -2948,7 +2950,7 @@ ROM_START( wwitch )
 	ROM_LOAD( "93c46.u13", 0x00, 0x80, CRC(663f14cd) SHA1(8a675a4e270d86d3a350e7ddbeb3f9d958798bd1) )
 
 	ROM_REGION16_LE( 0x02, "astro_cpucode", 0 )
-	ROM_LOAD( "wwitch_cpucode.key", 0x00, 0x02, NO_DUMP )
+	ROM_LOAD( "wwitch_cpucode.key", 0x00, 0x02, NO_DUMP ) // never checked?
 ROM_END
 
 ROM_START( lwitch )
@@ -2968,7 +2970,7 @@ ROM_START( lwitch )
 	ROM_LOAD( "93c46.u13", 0x00, 0x80, CRC(dffedf0e) SHA1(45f52366003e7a3d0ef72dbac17cda8737f6b8e2) )
 
 	ROM_REGION16_LE( 0x02, "astro_cpucode", 0 )
-	ROM_LOAD( "lwitch_cpucode.key", 0x00, 0x02, NO_DUMP )
+	ROM_LOAD( "lwitch_cpucode.key", 0x00, 0x02, CRC(e7b6936c) SHA1(12a09319d9754bc0d05f35c9b61cf48136fb1233) )
 ROM_END
 
 /***************************************************************************

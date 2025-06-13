@@ -147,6 +147,8 @@ k007121_device::k007121_device(const machine_config &mconfig, const char *tag, d
 	, device_gfx_interface(mconfig, *this)
 	, m_flipscreen(false)
 	, m_spriteram(nullptr)
+	, m_flipscreen_cb(*this)
+	, m_dirtytiles_cb(*this)
 {
 }
 
@@ -156,10 +158,13 @@ k007121_device::k007121_device(const machine_config &mconfig, const char *tag, d
 
 void k007121_device::device_start()
 {
+	m_dirtytiles_cb.resolve();
+
 	save_item(NAME(m_ctrlram));
 	save_item(NAME(m_flipscreen));
 	save_item(NAME(m_sprites_buffer));
 
+	memset(m_ctrlram, 0, sizeof(m_ctrlram));
 	memset(m_sprites_buffer, 0, sizeof(m_sprites_buffer));
 }
 
@@ -169,10 +174,8 @@ void k007121_device::device_start()
 
 void k007121_device::device_reset()
 {
-	m_flipscreen = false;
-
 	for (int i = 0; i < 8; i++)
-		m_ctrlram[i] = 0;
+		ctrl_w(i, 0);
 }
 
 
@@ -192,21 +195,15 @@ void k007121_device::ctrl_w(offs_t offset, uint8_t data)
 {
 	assert(offset < 8);
 
-	switch (offset)
+	// associated tilemap(s) should be marked dirty if any of these registers changed
+	static const uint8_t dirtymask[8] = { 0x00, 0x00, 0x00, 0x01, 0xff, 0xff, 0x30, 0x00 };
+	if ((data ^ m_ctrlram[offset]) & dirtymask[offset] && !m_dirtytiles_cb.isnull())
+		m_dirtytiles_cb();
+
+	if (offset == 7)
 	{
-	case 3:
-		// tile high bit change
-		if ((m_ctrlram[offset] & 0x1) != (data & 0x1))
-			machine().tilemap().mark_all_dirty();
-		break;
-	case 6:
-		// palette bank change
-		if ((m_ctrlram[offset] & 0x30) != (data & 0x30))
-			machine().tilemap().mark_all_dirty();
-		break;
-	case 7:
 		m_flipscreen = BIT(data, 3);
-		break;
+		m_flipscreen_cb(BIT(data, 3));
 	}
 
 	m_ctrlram[offset] = data;
@@ -298,6 +295,7 @@ void k007121_device::sprites_draw(bitmap_ind16 &bitmap, const rectangle &cliprec
 
 		if (attr & 0x01) sx -= 256;
 		if (sy >= 240) sy -= 256;
+		sx += global_x_offset;
 
 		number += ((sprite_bank & 0x3) << 8) + ((attr & 0xc0) << 4);
 		number = number << 2;
@@ -361,7 +359,7 @@ void k007121_device::sprites_draw(bitmap_ind16 &bitmap, const rectangle &cliprec
 				{
 					flipx = xflip;
 					flipy = yflip;
-					destx = global_x_offset + sx + x * 8;
+					destx = sx + x * 8;
 					desty = sy + y * 8;
 				}
 
