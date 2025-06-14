@@ -147,6 +147,7 @@ Notes:
 #include "cpu/m6809/hd6309.h"
 #include "cpu/m6809/m6809.h"
 #include "machine/gen_latch.h"
+#include "machine/watchdog.h"
 #include "sound/ymopm.h"
 #include "video/bufsprite.h"
 
@@ -277,15 +278,13 @@ TILE_GET_INFO_MEMBER(contra_state::get_tile_info)
 	int bit1 = (ctrl_5 >> 2) & 0x03;
 	int bit2 = (ctrl_5 >> 4) & 0x03;
 	int bit3 = (ctrl_5 >> 6) & 0x03;
-	int bank = ((attr & 0x80) >> 7) |
-			((attr >> (bit0 + 2)) & 0x02) |
-			((attr >> (bit1 + 1)) & 0x04) |
-			((attr >> (bit2    )) & 0x08) |
-			((attr >> (bit3 - 1)) & 0x10) |
-			((ctrl_3 & 0x01) << 5);
+	int bank = ((attr >> (bit0 + 3)) & 0x01) |
+			((attr >> (bit1 + 2)) & 0x02) |
+			((attr >> (bit2 + 1)) & 0x04) |
+			((attr >> (bit3 + 0)) & 0x08);
 	int mask = (ctrl_4 & 0xf0) >> 4;
-
-	bank = (bank & ~(mask << 1)) | ((ctrl_4 & mask) << 1);
+	bank = (bank & ~mask) | (ctrl_4 & mask);
+	bank = ((attr & 0x80) >> 7) | (bank << 1) | ((ctrl_3 & 0x01) << 5);
 
 	tileinfo.set(0,
 			m_vram[Which][tile_index] + bank * 256,
@@ -303,11 +302,11 @@ TILE_GET_INFO_MEMBER(contra_state::get_tx_tile_info)
 	int bit1 = (ctrl_5 >> 2) & 0x03;
 	int bit2 = (ctrl_5 >> 4) & 0x03;
 	int bit3 = (ctrl_5 >> 6) & 0x03;
-	int bank = ((attr & 0x80) >> 7) |
-			((attr >> (bit0 + 2)) & 0x02) |
-			((attr >> (bit1 + 1)) & 0x04) |
-			((attr >> (bit2    )) & 0x08) |
-			((attr >> (bit3 - 1)) & 0x10);
+	int bank = ((attr >> (bit0 + 3)) & 0x01) |
+			((attr >> (bit1 + 2)) & 0x02) |
+			((attr >> (bit2 + 1)) & 0x04) |
+			((attr >> (bit3 + 0)) & 0x08);
+	bank = ((attr & 0x80) >> 7) | (bank << 1);
 
 	tileinfo.set(0,
 			m_vram[2][tile_index] + bank * 256,
@@ -456,6 +455,7 @@ void contra_state::coin_counter_w(uint8_t data)
 
 void contra_state::main_map(address_map &map)
 {
+	map.unmap_value_high();
 	map(0x0000, 0x0007).w(m_k007121[0], FUNC(k007121_device::ctrl_w));
 	map(0x0008, 0x000f).rw("k007452", FUNC(k007452_device::read), FUNC(k007452_device::write));
 	map(0x0010, 0x0010).portr("SYSTEM");
@@ -469,7 +469,7 @@ void contra_state::main_map(address_map &map)
 	map(0x0018, 0x0018).w(FUNC(contra_state::coin_counter_w));
 	map(0x001a, 0x001a).w(FUNC(contra_state::sh_irqtrigger_w));
 	map(0x001c, 0x001c).w("soundlatch", FUNC(generic_latch_8_device::write));
-	map(0x001e, 0x001e).nopw(); // ?
+	map(0x001e, 0x001e).rw("watchdog", FUNC(watchdog_timer_device::reset_r), FUNC(watchdog_timer_device::reset_w));
 	map(0x0060, 0x0067).w(m_k007121[1], FUNC(k007121_device::ctrl_w));
 
 	map(0x0c00, 0x0cff).ram().w(m_palette, FUNC(palette_device::write_indirect)).share("palette");
@@ -494,6 +494,7 @@ void contra_state::main_map(address_map &map)
 
 void contra_state::sound_map(address_map &map)
 {
+	map.unmap_value_high();
 	map(0x0000, 0x0000).r("soundlatch", FUNC(generic_latch_8_device::read));
 	map(0x2000, 0x2001).rw("ymsnd", FUNC(ym2151_device::read), FUNC(ym2151_device::write));
 	map(0x4000, 0x4000).w(FUNC(contra_state::sirq_clear_w)); // read triggers irq reset and latch read (in the hardware only).
@@ -602,11 +603,13 @@ void contra_state::contra(machine_config &config)
 
 	config.set_maximum_quantum(attotime::from_hz(6000)); // enough for the sound CPU to read all commands
 
+	WATCHDOG_TIMER(config, "watchdog").set_time(attotime::from_msec(310)); // measured
+
 	KONAMI_007452_MATH(config, "k007452");
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_raw(24_MHz_XTAL / 3, 512, 0, 280, 264, 16, 240); // not verified
+	m_screen->set_raw(24_MHz_XTAL / 3, 512, 0, 280, 264, 16, 240);
 	m_screen->set_screen_update(FUNC(contra_state::screen_update));
 	m_screen->set_palette(m_palette);
 	m_screen->screen_vblank().set(m_k007121[0], FUNC(k007121_device::sprites_buffer));

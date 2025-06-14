@@ -122,15 +122,13 @@ TILE_GET_INFO_MEMBER(fastlane_state::get_tile_info)
 	int bit1 = (ctrl_5 >> 2) & 0x03;
 	int bit2 = (ctrl_5 >> 4) & 0x03;
 	int bit3 = (ctrl_5 >> 6) & 0x03;
-	int bank = ((attr & 0x80) >> 7) |
-			((attr >> (bit0 + 2)) & 0x02) |
-			((attr >> (bit1 + 1)) & 0x04) |
-			((attr >> (bit2    )) & 0x08) |
-			((attr >> (bit3 - 1)) & 0x10) |
-			((ctrl_3 & 0x01) << 5);
+	int bank = ((attr >> (bit0 + 3)) & 0x01) |
+			((attr >> (bit1 + 2)) & 0x02) |
+			((attr >> (bit2 + 1)) & 0x04) |
+			((attr >> (bit3 + 0)) & 0x08);
 	int mask = (ctrl_4 & 0xf0) >> 4;
-
-	bank = (bank & ~(mask << 1)) | ((ctrl_4 & mask) << 1);
+	bank = (bank & ~mask) | (ctrl_4 & mask);
+	bank = ((attr & 0x80) >> 7) | (bank << 1) | ((ctrl_3 & 0x01) << 5);
 
 	tileinfo.set(0,
 			code + bank * 256,
@@ -375,7 +373,7 @@ void fastlane_state::fastlane(machine_config &config)
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_raw(24_MHz_XTAL / 3, 512, 0, 280, 264, 16, 240); // not verified
+	m_screen->set_raw(24_MHz_XTAL / 3, 512, 0, 280, 264, 16, 240);
 	m_screen->set_screen_update(FUNC(fastlane_state::screen_update));
 	m_screen->set_palette(m_palette);
 	m_screen->screen_vblank().set(m_k007121, FUNC(k007121_device::sprites_buffer));
