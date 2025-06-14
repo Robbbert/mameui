@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3887 -->
+<!-- Number of items in this list = 3891 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -10429,6 +10429,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="FlashBack (E) [T+Spa_DeepQuasar].sfc" size="2097664" crc="5ae51bf7" sha1="b71ad5890ff8db6ac6e9124ecf0ad43301d93a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7b989ee15428d">
+		<description>Flashback (E)(1993)(U.S. Gold - Delphine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Flashback (E)(1993)(U.S. Gold - Delphine Software).sfc" size="2097152" crc="a0525b9c" sha1="7b989ee15428d6683d43f9ac12de6f75b5b41ffc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21222,6 +21232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns0c90942ef6ab2">
+		<description>Return of Double Dragon - Crime Syndicate (J)(h8v4fullfix-11120953)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Return of Double Dragon - Crime Syndicate (J)(h8v4fullfix-11120953).sfc" size="1048576" crc="9bb7e57f" sha1="0c90942ef6ab246be6b3c4701153b16e45b1f16f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsaf1e5ab82b15e">
 		<description>Return of Double Dragon - FastROM Fix v2.0 (2023)(kandowontu)</description>
 		<year>????</year>
@@ -21252,13 +21272,33 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns0c90942ef6ab2">
-		<description>Return of Double Dragon - Сrime syndicate (J)(h8v4fullfix-11120953)</description>
+	<software name="sns6176c667280e0">
+		<description>Return of Double Dragon - Rise of Evil h10v3-22081235 (2010)(SENSOR&amp;SATAN&amp;SAN)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Return of Double Dragon - Сrime syndicate (J)(h8v4fullfix-11120953).sfc" size="1048576" crc="9bb7e57f" sha1="0c90942ef6ab246be6b3c4701153b16e45b1f16f"/>
+				<rom name="Return of Double Dragon - Rise of Evil h10v3-22081235 (2010)(SENSOR&amp;SATAN&amp;SAN).sfc" size="1048576" crc="b63adfe0" sha1="6176c667280e05a7fc1d9b80bb8660a4207cb410"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns011d84caa4d9f">
+		<description>Return of Double Dragon - Threat from the East h6v2-0808096 (2009)(SENSOR&amp;KV&amp;SATAN)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Return of Double Dragon - Threat from the East h6v2-0808096 (2009)(SENSOR&amp;KV&amp;SATAN).sfc" size="1048576" crc="c7676648" sha1="011d84caa4d9f758264379d5ea88a98d5bd774ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd4783c8788726">
+		<description>Return of Double Dragon - Threat from the East h7hard-1909096 (2009)(SENSOR&amp;KV&amp;SATAN)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Return of Double Dragon - Threat from the East h7hard-1909096 (2009)(SENSOR&amp;KV&amp;SATAN).sfc" size="1048576" crc="56192693" sha1="d4783c8788726c8b128911ea225e2b9312576761"/>
 			</dataarea>
 		</part>
 	</software>
