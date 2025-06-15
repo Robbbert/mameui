@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3891 -->
+<!-- Number of items in this list = 3892 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -17832,6 +17832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns434b5885bbbb3">
+		<description>Men in Black (U)(Unl)(1998)(Twin Eagles Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Men in Black (U)(Unl)(1998)(Twin Eagles Group).sfc" size="1048576" crc="cb5301b8" sha1="434b5885bbbb3d782113a607b045618f7abdc622"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsc669a0b336ab7">
 		<description>Mercenaries (SMW1 Hack)</description>
 		<year>????</year>
@@ -18059,16 +18069,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="mfg world (SMW1 Hack).smc" size="1048576" crc="35e7d4a7" sha1="5cf863729a7925f630bf6fd463ed24b634f27575"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns434b5885bbbb3">
-		<description>MIB - Men in Black</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="MIB - Men in Black.sfc" size="1048576" crc="cb5301b8" sha1="434b5885bbbb3d782113a607b045618f7abdc622"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20583,12 +20583,12 @@
 		</part>
 	</software>
 	<software name="sns814afffc310fc">
-		<description>Plashback T-Spa (20xx)(Charnego Translations)</description>
+		<description>Plashback T-Spa (2000)(Charnego Translations)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Plashback T-Spa (20xx)(Charnego Translations).sfc" size="2097152" crc="e3df9d04" sha1="814afffc310fcd80c563d71798d036acbc425737"/>
+				<rom name="Plashback T-Spa (2000)(Charnego Translations).sfc" size="2097152" crc="e3df9d04" sha1="814afffc310fcd80c563d71798d036acbc425737"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21243,12 +21243,12 @@
 		</part>
 	</software>
 	<software name="snsaf1e5ab82b15e">
-		<description>Return of Double Dragon - FastROM Fix v2.0 (2023)(kandowontu)</description>
+		<description>Return of Double Dragon - FastROM v2.0 (2023)(kandowontu)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Return of Double Dragon - FastROM Fix v2.0 (2023)(kandowontu).sfc" size="1048576" crc="088a7511" sha1="af1e5ab82b15e146307575132234db1192b69984"/>
+				<rom name="Return of Double Dragon - FastROM v2.0 (2023)(kandowontu).sfc" size="1048576" crc="088a7511" sha1="af1e5ab82b15e146307575132234db1192b69984"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30689,6 +30689,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194272">
 				<rom name="Steve the happy happiest hack (Earthbound Hack).sfc" size="4194272" crc="f5064238" sha1="6a52bf5b22d76b9946e73f18f9e146ce65fb0bd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9180140bef126">
+		<description>Steven Seagal Is The Final Option (U, Proto)(1994)(TecMagik)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Steven Seagal Is The Final Option (U, Proto)(1994)(TecMagik).sfc" size="2097152" crc="59e83aaf" sha1="9180140bef126ebde6c0151aece37405d76f3660"/>
 			</dataarea>
 		</part>
 	</software>
