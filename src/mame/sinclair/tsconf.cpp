@@ -36,10 +36,10 @@ TODO:
 #include "emu.h"
 #include "tsconf.h"
 
+#include "bus/spectrum/ay/slot.h"
 #include "bus/rs232/rs232.h"
 #include "bus/spectrum/zxbus/bus.h"
 #include "cpu/z80/z80.h"
-#include "sound/ay8910.h"
 #include "speaker.h"
 
 
@@ -107,9 +107,8 @@ void tsconf_state::tsconf_io(address_map &map)
 	map(0x8ff7, 0x8ff7).select(0x7000).w(FUNC(tsconf_state::tsconf_port_f7_w)); // 3:bff7 5:dff7 6:eff7
 	map(0xbff7, 0xbff7).r(FUNC(tsconf_state::tsconf_port_f7_r));
 	map(0x00fb, 0x00fb).mirror(0xff00).w(m_dac, FUNC(dac_byte_interface::data_w));
-	map(0x80fd, 0x80fd).mirror(0x3f00).lw8(NAME([this](u8 data) { return m_ay[m_ay_selected]->data_w(data); }));
-	map(0xc0fd, 0xc0fd).mirror(0x3f00).lr8(NAME([this]() { return m_ay[m_ay_selected]->data_r(); }))
-		.w(FUNC(tsconf_state::tsconf_ay_address_w));
+	map(0x80fd, 0x80fd).mirror(0x3f00).w("ay_slot", FUNC(ay_slot_device::data_w));
+	map(0xc0fd, 0xc0fd).mirror(0x3f00).rw("ay_slot", FUNC(ay_slot_device::data_r), FUNC(ay_slot_device::address_w));
 }
 
 void tsconf_state::tsconf_switch(address_map &map)
@@ -191,7 +190,6 @@ void tsconf_state::machine_start()
 	save_item(NAME(m_zctl_cs));
 	save_item(NAME(m_port_f7_ext));
 	save_item(NAME(m_gfx_y_frame_offset));
-	save_item(NAME(m_ay_selected));
 }
 
 void tsconf_state::machine_reset()
@@ -232,7 +230,6 @@ void tsconf_state::machine_reset()
 
 	m_zctl_cs = 1;
 	m_zctl_di = 0xff;
-	m_ay_selected = 0;
 
 	m_sprites_cache.clear();
 	tsconf_update_bank0();
@@ -240,6 +237,10 @@ void tsconf_state::machine_reset()
 
 	m_keyboard->write(0xff);
 	while (m_keyboard->read() != 0) { /* invalidate buffer */ }
+
+	u16 const *const cram_init = &memregion("cram_init")->as_u16();
+	for (auto i = 0; i < 0x100; i++)
+		cram_write16(i << 1, cram_init[i]); // init color RAM
 }
 
 void tsconf_state::device_post_load()
@@ -264,11 +265,6 @@ INPUT_PORTS_START( tsconf )
 	PORT_BIT(0x01, IP_ACTIVE_LOW, IPT_BUTTON4) PORT_NAME("Left mouse button") PORT_CODE(MOUSECODE_BUTTON1)
 	PORT_BIT(0x02, IP_ACTIVE_LOW, IPT_BUTTON5) PORT_NAME("Right mouse button") PORT_CODE(MOUSECODE_BUTTON2)
 	PORT_BIT(0x04, IP_ACTIVE_LOW, IPT_BUTTON6) PORT_NAME("Middle mouse button") PORT_CODE(MOUSECODE_BUTTON3)
-
-	PORT_START("MOD_AY")
-	PORT_CONFNAME(0x01, 0x00, "AY MOD")
-	PORT_CONFSETTING(0x00, "Single")
-	PORT_CONFSETTING(0x01, "TurboSound")
 INPUT_PORTS_END
 
 void tsconf_state::tsconf(machine_config &config)
@@ -302,7 +298,7 @@ void tsconf_state::tsconf(machine_config &config)
 	ZXBUS_SLOT(config, "zxbus1", 0, "zxbus", zxbus_cards, nullptr);
 	//ZXBUS_SLOT(config, "zxbus2", 0, "zxbus", zxbus_cards, nullptr);
 
-	m_ram->set_default_size("4096K");
+	m_ram->set_default_size("4096K").set_default_value(0x00); // must be random but 0x00 behaves better than 0xff in tested software
 
 	GLUKRS(config, m_glukrs);
 
@@ -317,13 +313,7 @@ void tsconf_state::tsconf(machine_config &config)
 	BETA_DISK(config, m_beta, 0);
 	SPEAKER(config, "speakers", 2).front();
 
-	config.device_remove("ay8912");
-	YM2149(config, m_ay[0], 14_MHz_XTAL / 8)
-		.add_route(0, "speakers", 0.50, 0)
-		.add_route(1, "speakers", 0.25, 0)
-		.add_route(1, "speakers", 0.25, 1)
-		.add_route(2, "speakers", 0.50, 1);
-	YM2149(config, m_ay[1], 14_MHz_XTAL / 8)
+	AY_SLOT(config.replace(), "ay_slot", 14_MHz_XTAL / 8, default_ay_slot_devices, "ay_ym2149")
 		.add_route(0, "speakers", 0.50, 0)
 		.add_route(1, "speakers", 0.25, 0)
 		.add_route(1, "speakers", 0.25, 1)
@@ -355,6 +345,9 @@ ROM_START(tsconf)
 
 	ROM_SYSTEM_BIOS(1, "v2407", "Update 24.07.28")
 	ROMX_LOAD("ts-bios.240728.rom", 0, 0x10000, CRC(19f8ad7b) SHA1(9cee82d4a6212686358a50b0fd5a2981b3323ab6), ROM_BIOS(1))
+
+	ROM_REGION(0x200, "cram_init", ROMREGION_ERASEFF)
+	ROM_LOAD( "cram-init.bin", 0, 0x200, CRC(8b96ffb7) SHA1(4dbd22f4312251e922911a01526cbfba77a122fc))
 ROM_END
 
 //    YEAR  NAME    PARENT      COMPAT  MACHINE     INPUT       CLASS           INIT        COMPANY             FULLNAME                            FLAGS
