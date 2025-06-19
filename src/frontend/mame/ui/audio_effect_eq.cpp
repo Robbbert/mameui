@@ -30,7 +30,7 @@ menu_audio_effect_eq::menu_audio_effect_eq(mame_ui_manager &mui, render_containe
 	m_entry = entry;
 	m_effect = static_cast<audio_effect_eq *>(effect);
 	set_heading(util::string_format("%s #%u", chain == 0xffff ? _("Default") : machine().sound().effect_chain_tag(chain), entry+1));
-	set_process_flags(PROCESS_LR_REPEAT | PROCESS_LR_ALWAYS);
+	set_process_flags(PROCESS_LR_REPEAT);
 }
 
 menu_audio_effect_eq::~menu_audio_effect_eq()
@@ -75,6 +75,17 @@ bool menu_audio_effect_eq::handle(event const *ev)
 	u32 entry = (uintptr_t(ev->itemref)) & 0xffff;
 
 	switch(ev->iptkey) {
+	case IPT_UI_SELECT: {
+		if(uintptr_t(ev->itemref) == RESET_ALL) {
+			m_effect->reset_all();
+			if(m_chain == 0xffff)
+				machine().sound().default_effect_changed(m_entry);
+			reset(reset_options::REMEMBER_REF);
+			return true;
+		}
+		break;
+	}
+
 	case IPT_UI_LEFT: {
 		switch(entry) {
 		case MODE:
@@ -341,6 +352,7 @@ void menu_audio_effect_eq::populate()
 		item_append(_("High band Q"), format_q(m_effect->q(4)), flag_q(4), (void *)uintptr_t(Q | (4 << 16)));
 	item_append(_("High band dB"), format_db(m_effect->db(4)), flag_db(4), (void *)uintptr_t(DB | (4 << 16)));
 	item_append(menu_item_type::SEPARATOR);
+	item_append(_("Reset All"), 0, (void *)RESET_ALL);
 }
 
 void menu_audio_effect_eq::recompute_metrics(uint32_t width, uint32_t height, float aspect)
