@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 516 -->
+<!-- Number of items in this list = 519 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -2142,6 +2142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fdsb88f958ddbb1a">
+		<description>Gokuraku Yuugi - Game Tengoku (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Gokuraku Yuugi - Game Tengoku (Japan).fds" size="131000" crc="42fc78ae" sha1="b88f958ddbb1ae3932d86fd112349e802241fb93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fds7db5fa55f94e8">
 		<description>Golf (1984)(Nintendo)</description>
 		<year>????</year>
@@ -3122,6 +3132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds4905cbf4c25dd">
+		<description>Marchen Veil T-Eng (2025)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Marchen Veil T-Eng (2025)(BlackPaladin).fds" size="131000" crc="51ec9018" sha1="4905cbf4c25ddbec5de23a3249b8eb4a55218b8a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdsa2ee0ff860c33">
 		<description>Meikyuu Jiin Dababa (1987)(Konami)</description>
 		<year>????</year>
@@ -3819,6 +3839,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="65516">
 				<rom name="Pinball (1983)(Nintendo).fds" size="65516" crc="5218d0a8" sha1="e18a7ecf7141abc7bac630f7b820cdca9eee857a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdsa2d8fbab8c896">
+		<description>Playtime Paradise T-Eng (2024)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Playtime Paradise T-Eng (2024)(BlackPaladin).fds" size="131000" crc="59ad90ad" sha1="a2d8fbab8c896842d5a8bf74bc395217525388a5"/>
 			</dataarea>
 		</part>
 	</software>

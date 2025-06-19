@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3892 -->
+<!-- Number of items in this list = 3896 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7482,6 +7482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb31dbe5033501">
+		<description>Dragon Ball Z - Final Bout (U)(Unl)(1998)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dragon Ball Z - Final Bout (U)(Unl)(1998)(DVS Electronic).sfc" size="2097152" crc="4d027796" sha1="b31dbe50335018a8deff79dec0a6b8d1ef546888"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3e268078684d3">
 		<description>Dragon Ball Z - Hyper Dimension (Japan) [En v1.0]</description>
 		<year>????</year>
@@ -11049,6 +11059,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194816">
 				<rom name="Genso Suikoden no Keifu (hack).sfc" size="4194816" crc="129059ac" sha1="bd64c39d2bc821509bff336946e01637340029da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4a51f315ed908">
+		<description>Getsumen no Anubis - Anubis of the Moon's Surface T-Chs v1.0 (2025)(CLARK.H)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Getsumen no Anubis - Anubis of the Moon's Surface T-Chs v1.0 (2025)(CLARK.H).sfc" size="4194304" crc="779b5bc5" sha1="4a51f315ed9083449ac97fe7716b8cccca8b96f5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14892,6 +14912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf15380a22ff34">
+		<description>Lobo (U, Proto)(1995)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Lobo (U, Proto)(1995)(Ocean).sfc" size="3145728" crc="9ac64a34" sha1="f15380a22ff34bb33a7bcb0c5a552be98b7a0aed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5a185dee0cb22">
 		<description>Lodoss-tou Senki (Japan) [En v0.90 by LNF] (Incomplete) (~Record of Lodoss War)</description>
 		<year>????</year>
@@ -18589,6 +18619,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Mortal Kombat II.sfc" size="3145728" crc="889a56bf" sha1="5d5be3090327be72f61553b156920fd0d5a17f06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2dad3c72a5106">
+		<description>Mortal Kombat Mythologies - Gold 2000 (U)(Unl)(2000)(DVS Electronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Mortal Kombat Mythologies - Gold 2000 (U)(Unl)(2000)(DVS Electronic).sfc" size="2621440" crc="de672099" sha1="2dad3c72a51063e7037fd452af5ec0e50f2d18c6"/>
 			</dataarea>
 		</part>
 	</software>
