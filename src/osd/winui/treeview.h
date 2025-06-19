@@ -58,8 +58,8 @@ void CreateDumpingFolders(int parent_index);
 
 /***************************************************************************/
 
-#define MAX_EXTRA_FOLDERS 256
-#define MAX_EXTRA_SUBFOLDERS 256
+#define MAX_EXTRA_FOLDERS 512
+#define MAX_EXTRA_SUBFOLDERS 512
 
 /* TreeView structures */
 enum

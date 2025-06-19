@@ -11,7 +11,7 @@
 const char *const audio_effect::effect_names[COUNT] = {
 	"Filters",
 	"Compressor",
-	"Reverb (n/a)",
+	"Reverb",
 	"Equaliser"
 };
 
