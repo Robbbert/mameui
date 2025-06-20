@@ -31,7 +31,9 @@ menu_audio_effect_eq::menu_audio_effect_eq(mame_ui_manager &mui, render_containe
 	m_chain = chain;
 	m_entry = entry;
 	m_effect = static_cast<audio_effect_eq *>(effect);
-	set_heading(util::string_format("%s #%u", chain == 0xffff ? _("Default") : machine().sound().effect_chain_tag(chain), entry+1));
+	set_heading(util::string_format("%s (%s)",
+			_(audio_effect::effect_names[audio_effect::EQ]),
+			chain == 0xffff ? _("Default") : machine().sound().effect_chain_tag(chain)));
 	set_process_flags(PROCESS_LR_REPEAT);
 }
 
@@ -117,23 +119,23 @@ u32 menu_audio_effect_eq::increment_f(u32 band, bool alt_pressed, bool ctrl_pres
 
 float menu_audio_effect_eq::change_q(u32 band, bool inc, bool alt_pressed, bool ctrl_pressed, bool shift_pressed)
 {
-	int incval = alt_pressed ? 10000 : ctrl_pressed ? 100 : shift_pressed ? 1 : 10;
+	float incval = alt_pressed ? 10000 : ctrl_pressed ? 1 : shift_pressed ? 0.01f : 0.1f;
 	if(!inc)
 		incval = -incval;
 
 	float q = m_effect->q(band);
-	q = (int(q * 100.0f + 0.5f) + incval) / 100.0f;
+	q = roundf((q + incval) * 100.0f) / 100.0f;
 	return std::clamp(q, 0.1f, 10.0f);
 }
 
 float menu_audio_effect_eq::change_db(u32 band, bool inc, bool alt_pressed, bool ctrl_pressed, bool shift_pressed)
 {
-	int incval = alt_pressed ? 10000 : ctrl_pressed ? 60 : shift_pressed ? 1 : 10;
+	float incval = alt_pressed ? 10000 : ctrl_pressed ? 6 : shift_pressed ? 0.1f : 1;
 	if(!inc)
 		incval = -incval;
 
 	float db = m_effect->db(band);
-	db = (int(db * 10.0f + ((db < 0.0f) ? -0.5f : 0.5f)) + incval) / 10.0f;
+	db = roundf((db + incval) * 10.0f) / 10.0f;
 	return std::clamp(db, -12.0f, 12.0f);
 }
 
@@ -373,7 +375,7 @@ u32 menu_audio_effect_eq::flag_q(u32 band) const
 	u32 flag = 0;
 	if(!m_effect->isset_q(band))
 		flag |= FLAG_INVERT;
-	u32 q = m_effect->q(band) * 100.0f + 0.5f;
+	u32 q = roundf(m_effect->q(band) * 100.0f);
 	if(q > 10)
 		flag |= FLAG_LEFT_ARROW;
 	if(q < 1000)
@@ -386,7 +388,7 @@ u32 menu_audio_effect_eq::flag_db(u32 band) const
 	u32 flag = 0;
 	if(!m_effect->isset_db(band))
 		flag |= FLAG_INVERT;
-	s32 db = m_effect->db(band) * 10.0f + 0.5f;
+	s32 db = roundf(m_effect->db(band) * 10.0f);
 	if(db > -120)
 		flag |= FLAG_LEFT_ARROW;
 	if(db < 120)
@@ -396,8 +398,7 @@ u32 menu_audio_effect_eq::flag_db(u32 band) const
 
 void menu_audio_effect_eq::populate()
 {
-	item_append(_(audio_effect::effect_names[audio_effect::EQ]), FLAG_UI_HEADING | FLAG_DISABLE, nullptr);
-	item_append(_("Mode"), m_effect->mode() ? _("5-Band EQ") : _("Bypass"), flag_mode(), (void *)MODE);
+	item_append(_("Mode"), m_effect->mode() ? _("Active") : _("Bypass"), flag_mode(), (void *)MODE);
 
 	item_append(_("Low Band"), FLAG_UI_HEADING | FLAG_DISABLE, nullptr);
 	item_append(_("Mode"), m_effect->low_shelf() ? _("Shelf") : _("Peak"), flag_low_shelf(), (void *)uintptr_t(SHELF | (0 << 16)));

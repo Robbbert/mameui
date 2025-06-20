@@ -23,7 +23,9 @@ menu_audio_effect_compressor::menu_audio_effect_compressor(mame_ui_manager &mui,
 	m_chain = chain;
 	m_entry = entry;
 	m_effect = static_cast<audio_effect_compressor *>(effect);
-	set_heading(util::string_format("%s #%u", chain == 0xffff ? _("Default") : machine().sound().effect_chain_tag(chain), entry+1));
+	set_heading(util::string_format("%s (%s)",
+			_(audio_effect::effect_names[audio_effect::COMPRESSOR]),
+			chain == 0xffff ? _("Default") : machine().sound().effect_chain_tag(chain)));
 	set_process_flags(PROCESS_LR_REPEAT);
 }
 
@@ -344,16 +346,6 @@ bool menu_audio_effect_compressor::handle(event const *ev)
 	return false;
 }
 
-std::string menu_audio_effect_compressor::format_nodec(float val)
-{
-	return util::string_format("%.0f", val);
-}
-
-std::string menu_audio_effect_compressor::format_1dec(float val)
-{
-	return util::string_format("%.1f", val);
-}
-
 std::string menu_audio_effect_compressor::format_2dec(float val)
 {
 	return util::string_format("%.2f", val);
@@ -362,6 +354,16 @@ std::string menu_audio_effect_compressor::format_2dec(float val)
 std::string menu_audio_effect_compressor::format_db(float val)
 {
 	return util::string_format("%g dB", val);
+}
+
+std::string menu_audio_effect_compressor::format_ms(float val)
+{
+	return util::string_format("%.0f ms", val);
+}
+
+std::string menu_audio_effect_compressor::format_ratio(float val)
+{
+	return util::string_format("%g:1", val);
 }
 
 u32 menu_audio_effect_compressor::flag_mode() const
@@ -390,16 +392,16 @@ u32 menu_audio_effect_compressor::flag_lim(float value, float min, float max, bo
 
 void menu_audio_effect_compressor::populate()
 {
-	item_append(_(audio_effect::effect_names[audio_effect::COMPRESSOR]), FLAG_UI_HEADING | FLAG_DISABLE, nullptr);
 	item_append(_("Mode"), m_effect->mode() ? _("Active") : _("Bypass"), flag_mode(), (void *)MODE);
-	item_append(_("Attack"), format_nodec(m_effect->attack()), flag_lim(m_effect->attack(), 0, 300, m_effect->isset_attack()), (void *)ATTACK);
-	item_append(_("Release"), format_nodec(m_effect->release()), flag_lim(m_effect->release(), 0, 3000, m_effect->isset_release()), (void *)RELEASE);
-	item_append(_("Ratio"), format_1dec(m_effect->ratio()), flag_lim(m_effect->ratio(), 1, 20, m_effect->isset_ratio()), (void *)RATIO);
-
+	item_append(_("Threshold"), format_db(m_effect->threshold()), flag_lim(m_effect->threshold(), -60, 6, m_effect->isset_threshold()), (void *)THRESHOLD);
+	item_append(_("Ratio"), format_ratio(m_effect->ratio()), flag_lim(m_effect->ratio(), 1, 20, m_effect->isset_ratio()), (void *)RATIO);
+	item_append(_("Attack"), format_ms(m_effect->attack()), flag_lim(m_effect->attack(), 0, 300, m_effect->isset_attack()), (void *)ATTACK);
+	item_append(_("Release"), format_ms(m_effect->release()), flag_lim(m_effect->release(), 0, 3000, m_effect->isset_release()), (void *)RELEASE);
 	item_append(_("Input gain"), format_db(m_effect->input_gain()), flag_lim(m_effect->input_gain(), -12, 24, m_effect->isset_input_gain()), (void *)INPUT_GAIN);
 	item_append(_("Output gain"), format_db(m_effect->output_gain()), flag_lim(m_effect->output_gain(), -12, 24, m_effect->isset_output_gain()), (void *)OUTPUT_GAIN);
+
+	item_append(menu_item_type::SEPARATOR);
 	item_append(_("Convexity"), format_2dec(m_effect->convexity()), flag_lim(m_effect->convexity(), -2, 2, m_effect->isset_convexity()), (void *)CONVEXITY);
-	item_append(_("Threshold"), format_nodec(m_effect->threshold()), flag_lim(m_effect->threshold(), -60, 6, m_effect->isset_threshold()), (void *)THRESHOLD);
 	item_append(_("Channel link"), format_2dec(m_effect->channel_link()), flag_lim(m_effect->channel_link(), 0, 1, m_effect->isset_channel_link()), (void *)CHANNEL_LINK);
 	item_append(_("Feedback"), format_2dec(m_effect->feedback()), flag_lim(m_effect->feedback(), 0, 1, m_effect->isset_feedback()), (void *)FEEDBACK);
 	item_append(_("Inertia"), format_2dec(m_effect->inertia()), flag_lim(m_effect->inertia(), -1, 0.3, m_effect->isset_inertia()), (void *)INERTIA);
