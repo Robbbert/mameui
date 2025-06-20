@@ -45,6 +45,8 @@ u32 menu_audio_effect_filter::decrement_f(u32 f, bool alt_pressed, bool ctrl_pre
 		incval = 50;
 	else if(f <= 1000)
 		incval = 100;
+	else if(f <= 2500)
+		incval = 250;
 	else if(f <= 5000)
 		incval = 500;
 	else
@@ -76,8 +78,10 @@ u32 menu_audio_effect_filter::increment_f(u32 f, bool alt_pressed, bool ctrl_pre
 	u32 incval;
 	if(f >= 5000)
 		incval = 1000;
-	else if(f >= 1000)
+	else if(f >= 2500)
 		incval = 500;
+	else if(f >= 1000)
+		incval = 250;
 	else if(f >= 500)
 		incval = 100;
 	else if(f >= 100)
@@ -101,25 +105,25 @@ u32 menu_audio_effect_filter::increment_f(u32 f, bool alt_pressed, bool ctrl_pre
 	return (f > max) ? max : f;
 }
 
-float menu_audio_effect_filter::decrement_q(float q, bool alt_pressed, bool ctrl_pressed)
+float menu_audio_effect_filter::decrement_q(float q, bool alt_pressed, bool ctrl_pressed, bool shift_pressed)
 {
 	const float min = 0.1f;
 	if(alt_pressed)
 		return min;
 
-	int incval = ctrl_pressed ? -10 : -1;
-	q = (int(q * 10.0f + 0.5) + incval) / 10.0f;
+	int incval = ctrl_pressed ? -100 : shift_pressed ? -1 : -10;
+	q = (int(q * 100.0f + 0.5f) + incval) / 100.0f;
 	return (q < min) ? min : q;
 }
 
-float menu_audio_effect_filter::increment_q(float q, bool alt_pressed, bool ctrl_pressed)
+float menu_audio_effect_filter::increment_q(float q, bool alt_pressed, bool ctrl_pressed, bool shift_pressed)
 {
 	const float max = 10.0f;
 	if(alt_pressed)
 		return max;
 
-	int incval = ctrl_pressed ? 10 : 1;
-	q = (int(q * 10.0f + 0.5) + incval) / 10.0f;
+	int incval = ctrl_pressed ? 100 : shift_pressed ? 1 : 10;
+	q = (int(q * 100.0f + 0.5f) + incval) / 100.0f;
 	return (q > max) ? max : q;
 }
 
@@ -163,7 +167,7 @@ bool menu_audio_effect_filter::handle(event const *ev)
 		}
 
 		case Q | HP: {
-			float q = decrement_q(m_effect->qh(), alt_pressed, ctrl_pressed);
+			float q = decrement_q(m_effect->qh(), alt_pressed, ctrl_pressed, shift_pressed);
 			m_effect->set_qh(q);
 			if(m_chain == 0xffff)
 				machine().sound().default_effect_changed(m_entry);
@@ -188,7 +192,7 @@ bool menu_audio_effect_filter::handle(event const *ev)
 		}
 
 		case Q | LP: {
-			float q = decrement_q(m_effect->ql(), alt_pressed, ctrl_pressed);
+			float q = decrement_q(m_effect->ql(), alt_pressed, ctrl_pressed, shift_pressed);
 			m_effect->set_ql(q);
 			if(m_chain == 0xffff)
 				machine().sound().default_effect_changed(m_entry);
@@ -218,7 +222,7 @@ bool menu_audio_effect_filter::handle(event const *ev)
 		}
 
 		case Q | HP: {
-			float q = increment_q(m_effect->qh(), alt_pressed, ctrl_pressed);
+			float q = increment_q(m_effect->qh(), alt_pressed, ctrl_pressed, shift_pressed);
 			m_effect->set_qh(q);
 			if(m_chain == 0xffff)
 				machine().sound().default_effect_changed(m_entry);
@@ -243,7 +247,7 @@ bool menu_audio_effect_filter::handle(event const *ev)
 		}
 
 		case Q | LP: {
-			float q = increment_q(m_effect->ql(), alt_pressed, ctrl_pressed);
+			float q = increment_q(m_effect->ql(), alt_pressed, ctrl_pressed, shift_pressed);
 			m_effect->set_ql(q);
 			if(m_chain == 0xffff)
 				machine().sound().default_effect_changed(m_entry);
@@ -306,17 +310,17 @@ bool menu_audio_effect_filter::handle(event const *ev)
 
 std::string menu_audio_effect_filter::format_fh(u32 f)
 {
-	return (f <= FH_MIN) ? _("DC removal") : util::string_format("%dHz", f);
+	return (f <= FH_MIN) ? _("DC removal") : util::string_format("%d Hz", f);
 }
 
 std::string menu_audio_effect_filter::format_fl(u32 f)
 {
-	return util::string_format("%dHz", f);
+	return util::string_format("%d Hz", f);
 }
 
 std::string menu_audio_effect_filter::format_q(float q)
 {
-	return util::string_format("%.1f", q);
+	return util::string_format("%.2f", q);
 }
 
 u32 menu_audio_effect_filter::flag_highpass_active() const
@@ -349,10 +353,10 @@ u32 menu_audio_effect_filter::flag_qh() const
 	u32 flag = 0;
 	if(!m_effect->isset_qh())
 		flag |= FLAG_INVERT;
-	float q = m_effect->qh();
-	if(q > 0.1f)
+	u32 q = m_effect->qh() * 100.0f + 0.5f;
+	if(q > 10)
 		flag |= FLAG_LEFT_ARROW;
-	if(q < 10.0f)
+	if(q < 1000)
 		flag |= FLAG_RIGHT_ARROW;
 	return flag;
 }
@@ -387,24 +391,25 @@ u32 menu_audio_effect_filter::flag_ql() const
 	u32 flag = 0;
 	if(!m_effect->isset_ql())
 		flag |= FLAG_INVERT;
-	float q = m_effect->ql();
-	if(q > 0.1f)
+	u32 q = m_effect->ql() * 100.0f + 0.5f;
+	if(q > 10)
 		flag |= FLAG_LEFT_ARROW;
-	if(q < 10.0f)
+	if(q < 1000)
 		flag |= FLAG_RIGHT_ARROW;
 	return flag;
 }
 
 void menu_audio_effect_filter::populate()
 {
-	item_append(_(audio_effect::effect_names[audio_effect::FILTER]), FLAG_UI_HEADING | FLAG_DISABLE, nullptr);
-	item_append(_("Highpass"), m_effect->highpass_active() ? _("Active") : _("Bypass"), flag_highpass_active(), (void *)(ACTIVE | HP));
-	item_append(_("Highpass cutoff"), format_fh(m_effect->fh()), flag_fh(), (void *)(F | HP));
-	item_append(_("Highpass Q"), format_q(m_effect->qh()), flag_qh(), (void *)(Q | HP));
+	item_append(_("High-pass Filter"), FLAG_UI_HEADING | FLAG_DISABLE, nullptr);
+	item_append(_("Mode"), m_effect->highpass_active() ? _("Active") : _("Bypass"), flag_highpass_active(), (void *)(ACTIVE | HP));
+	item_append(_("Cutoff frequency"), format_fh(m_effect->fh()), flag_fh(), (void *)(F | HP));
+	item_append(_("Q factor"), format_q(m_effect->qh()), flag_qh(), (void *)(Q | HP));
 
-	item_append(_("Lowpass"), m_effect->lowpass_active() ? _("Active") : _("Bypass"), flag_lowpass_active(), (void *)(ACTIVE | LP));
-	item_append(_("Lowpass cutoff"), format_fl(m_effect->fl()), flag_fl(), (void *)(F | LP));
-	item_append(_("Lowpass Q"), format_q(m_effect->ql()), flag_ql(), (void *)(Q | LP));
+	item_append(_("Low-pass Filter"), FLAG_UI_HEADING | FLAG_DISABLE, nullptr);
+	item_append(_("Mode"), m_effect->lowpass_active() ? _("Active") : _("Bypass"), flag_lowpass_active(), (void *)(ACTIVE | LP));
+	item_append(_("Cutoff frequency"), format_fl(m_effect->fl()), flag_fl(), (void *)(F | LP));
+	item_append(_("Q factor"), format_q(m_effect->ql()), flag_ql(), (void *)(Q | LP));
 
 	item_append(menu_item_type::SEPARATOR);
 	item_append(_("Reset All"), 0, (void *)RESET_ALL);
