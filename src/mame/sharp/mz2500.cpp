@@ -16,24 +16,6 @@ TODO:
 - Implement backward compatibility with MZ-2000/MZ-80B;
 - Implement expansion box unit;
 
-TODO per-game/program specific (move to mz2500_flop):
-- Dust Box vol. 1-3: they die with text garbage, might be bad dumps;
-- Dust Box vol. 4: window effect transition is bugged;
-- Dust Box vol. n: three items returns "purple" text, presumably HW failures (DFJustin: joystick
-"digital", mouse "not installed", HDD "not installed");
-- LayDock: hangs at title screen due of a PIT bug (timer irq dies for whatever reason);
-- Moon Child: needs mixed 3+3bpp tvram supported, kludged for now (not a real test case);
-- Moon Child: window masking doesn't mask bottom part of the screen?
-- Moon Child: appears to be a network / system link game, obviously doesn't work with current MAME framework;
-- Marchen Veil I: doesn't load if you try to run it directly, it does if you load another game first (for example Mappy) then do a soft reset;
-- Mugen no Shinzou II - The Prince of Darkness: dies on IPLPRO loading, presumably a wd17xx core bug;
-- Multiplan: random hangs/crashes after you set the RTC, sometimes it loads properly;
-- Murder Club: has lots of CG artifacts, FDC issue?
-- Orrbit 3: floppy issue makes it to throw a game over as soon as you start a game;
-- Penguin Kun Wars: has a bug with window effects ("Push space or trigger" msg on the bottom"), needs investigation;
-- Sound Gal Music Editor: wants a "master disk", that apparently isn't available;
-- Yukar K2 (normal version): moans about something, DFJustin: "please put the system disk back to normal", disk write-protected?
-
 **************************************************************************************************/
 
 #include "emu.h"
@@ -1230,13 +1212,14 @@ void mz2500_state::bank_window_map(address_map &map)
 	// 0x3a
 	map(0x74000, 0x75fff).r(FUNC(mz2500_state::dict_rom_r));
 	// 0x3b
-//	map(0x76000, 0x77fff).noprw();
+//  map(0x76000, 0x77fff).noprw();
 	// 0x3c-0x3f
 	map(0x78000, 0x7ffff).rom().region("phone", 0);
 }
 
 void mz2500_state::z80_io(address_map &map)
 {
+	map.unmap_value_high();
 //  map(0x60, 0x63).mirror(0xff00).w(FUNC(mz2500_state::w3100a_w));
 //  map(0x63, 0x63).mirror(0xff00).r(FUNC(mz2500_state::w3100a_r));
 //  map(0x98, 0x99) Y8950 ADPCM, from MZ-1E35 expansion unit
@@ -1260,6 +1243,8 @@ void mz2500_state::z80_io(address_map &map)
 	map(0xc7, 0xc7).mirror(0xff00).w(FUNC(mz2500_state::irq_data_w));
 	map(0xc8, 0xc9).mirror(0xff00).rw("ym", FUNC(ym2203_device::read), FUNC(ym2203_device::write));
 //  map(0xca, 0xca).mirror(0xff00).rw(FUNC(mz2500_state::voice_r), FUNC(mz2500_state::voice_w));
+	// MZ-1E26
+	map(0xca, 0xca).mirror(0xff00).lr8(NAME([] () { return 0x30; }));
 	map(0xcc, 0xcc).select(0xff00).rw(FUNC(mz2500_state::rp5c15_8_r), FUNC(mz2500_state::rp5c15_8_w));
 	map(0xce, 0xce).mirror(0xff00).w(FUNC(mz2500_state::dictionary_bank_w));
 	map(0xcf, 0xcf).mirror(0xff00).w(FUNC(mz2500_state::kanji_bank_w));
@@ -1274,7 +1259,7 @@ void mz2500_state::z80_io(address_map &map)
 	map(0xf0, 0xf3).mirror(0xff00).w(FUNC(mz2500_state::timer_w));
 	map(0xf4, 0xf7).mirror(0xff00).r(FUNC(mz2500_state::crtc_hvblank_r)).w(FUNC(mz2500_state::tv_crtc_w));
 //  map(0xf8, 0xf9).?(0xff00).rw(FUNC(mz2500_state::extrom_r), FUNC(mz2500_state::extrom_w));
-//	map(0xfe, 0xff).mirror(0xff00) printer
+//  map(0xfe, 0xff).mirror(0xff00) printer
 }
 
 
@@ -1295,6 +1280,8 @@ TIMER_CALLBACK_MEMBER(mz2500_state::ipl_timer_reset_cb)
 }
 
 static INPUT_PORTS_START( mz2500 )
+	// section 8 of schematics
+	// CN1 switches 8-9
 	PORT_START("FRONT_PANEL")
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(mz2500_state::boot_reset_cb), 0) PORT_NAME("Boot Reset")
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CHANGED_MEMBER(DEVICE_SELF, FUNC(mz2500_state::ipl_reset_cb), 0) PORT_NAME("IPL Reset")
@@ -1467,25 +1454,25 @@ void mz2500_state::reset_banks(u8 type)
 	}
 }
 
-static const gfx_layout mz2500_pcg_layout_1bpp =
+static const gfx_layout pcg_layout_1bpp =
 {
 	8, 8,
 	0x100,
 	1,
 	{ 0 },
-	{ 0, 1, 2, 3, 4, 5, 6, 7 },
-	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8 },
+	{ STEP8(0, 1) },
+	{ STEP8(0, 8) },
 	8 * 8
 };
 
-static const gfx_layout mz2500_pcg_layout_3bpp =
+static const gfx_layout pcg_layout_3bpp =
 {
 	8, 8,
 	0x100,
 	3,
 	{ 0x1800*8, 0x1000*8, 0x800*8 },
-	{ 0, 1, 2, 3, 4, 5, 6, 7 },
-	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8 },
+	{ STEP8(0, 1) },
+	{ STEP8(0, 8) },
 	8 * 8
 };
 
@@ -1503,9 +1490,8 @@ void mz2500_state::machine_start()
 	save_pointer(NAME(m_pcg_ram), 0x2000);
 	save_pointer(NAME(m_emm_ram), 0x100000);
 
-	/* TODO: gfx[4] crashes as per now */
-	m_gfxdecode->set_gfx(3, std::make_unique<gfx_element>(m_palette, mz2500_pcg_layout_1bpp, m_pcg_ram.get(), 0, 0x10, 0));
-	m_gfxdecode->set_gfx(4, std::make_unique<gfx_element>(m_palette, mz2500_pcg_layout_3bpp, m_pcg_ram.get(), 0, 4, 0));
+	m_gfxdecode->set_gfx(3, std::make_unique<gfx_element>(m_palette, pcg_layout_1bpp, m_pcg_ram.get(), 0, 0x10, 0));
+	m_gfxdecode->set_gfx(4, std::make_unique<gfx_element>(m_palette, pcg_layout_3bpp, m_pcg_ram.get(), 0, 4, 0));
 
 	std::fill(std::begin(m_cgram), std::end(m_cgram), 0x00);
 	std::fill(std::begin(m_irq_pending), std::end(m_irq_pending), 0);
@@ -1528,54 +1514,54 @@ void mz2500_state::machine_reset()
 
 	m_ipl_reset_timer->adjust(attotime::never);
 
-	m_beeper->set_state(0);
+	m_dac1bit->level_w(0);
 
 //  m_monitor_type = ioport("DSW1")->read() & 0x40 ? 1 : 0;
 
 	joystick_w(0x3f); // LS273 reset
 }
 
-static const gfx_layout mz2500_cg_layout =
+static const gfx_layout kanji_cg_layout =
 {
-	8, 8,       /* 8 x 8 graphics */
-	RGN_FRAC(1,1),      /* 512 codes */
-	1,      /* 1 bit per pixel */
-	{ 0 },      /* no bitplanes */
-	{ 0, 1, 2, 3, 4, 5, 6, 7 },
-	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8 },
-	8 * 8       /* code takes 8 times 8 bits */
+	8, 8,
+	RGN_FRAC(1,1),
+	1,
+	{ 0 },
+	{ STEP8(0, 1) },
+	{ STEP8(0, 8) },
+	8 * 8
 };
 
 /* gfx1 is mostly 16x16, but there are some 8x8 characters */
-static const gfx_layout mz2500_8_layout =
+static const gfx_layout kanji_8_layout =
 {
-	8, 8,       /* 8 x 8 graphics */
-	1920,       /* 1920 codes */
-	1,      /* 1 bit per pixel */
-	{ 0 },      /* no bitplanes */
-	{ 0, 1, 2, 3, 4, 5, 6, 7 },
-	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8 },
-	8 * 8       /* code takes 8 times 8 bits */
+	8, 8,
+	1920,
+	1,
+	{ 0 },
+	{ STEP8(0, 1) },
+	{ STEP8(0, 8) },
+	8 * 8
 };
 
-static const gfx_layout mz2500_16_layout =
+static const gfx_layout kanji_16_layout =
 {
-	16, 16,     /* 16 x 16 graphics */
-	RGN_FRAC(1,1),      /* 8192 codes */
-	1,      /* 1 bit per pixel */
-	{ 0 },      /* no bitplanes */
-	{ 0, 1, 2, 3, 4, 5, 6, 7, 128, 129, 130, 131, 132, 133, 134, 135 },
-	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8, 8*8, 9*8, 10*8, 11*8, 12*8, 13*8, 14*8, 15*8 },
-	16 * 16     /* code takes 16 times 16 bits */
+	16, 16,
+	RGN_FRAC(1,1),
+	1,
+	{ 0 },
+	{ STEP8(0, 1), STEP8(128, 1) },
+	{ STEP16(0, 8) },
+	16 * 16
 };
 
 /* these are just for viewer sake, actually they aren't used in drawing routines */
 static GFXDECODE_START( gfx_mz2500 )
-	GFXDECODE_ENTRY("kanji", 0, mz2500_cg_layout, 0, 256)
-	GFXDECODE_ENTRY("kanji", 0x4400, mz2500_8_layout, 0, 256)
-	GFXDECODE_ENTRY("kanji", 0, mz2500_16_layout, 0, 256)
-//  GFXDECODE_ENTRY("pcg", 0, mz2500_pcg_layout_1bpp, 0, 0x10)
-//  GFXDECODE_ENTRY("pcg", 0, mz2500_pcg_layout_3bpp, 0, 4)
+	GFXDECODE_ENTRY("kanji", 0, kanji_cg_layout, 0, 256)
+	GFXDECODE_ENTRY("kanji", 0x4400, kanji_8_layout, 0, 256)
+	GFXDECODE_ENTRY("kanji", 0, kanji_16_layout, 0, 256)
+//  GFXDECODE_ENTRY("pcg", 0, pcg_layout_1bpp, 0, 0x10)
+//  GFXDECODE_ENTRY("pcg", 0, pcg_layout_3bpp, 0, 4)
 GFXDECODE_END
 
 INTERRUPT_GEN_MEMBER(mz2500_state::vblank_cb)
@@ -1661,7 +1647,7 @@ void mz2500_state::ppi_portc_w(u8 data)
 
 	m_old_portc = data;
 
-	m_beeper->set_state(data & 0x04);
+	m_dac1bit->level_w(BIT(data, 2));
 
 	m_screen_enable = data & 1;
 
@@ -1856,7 +1842,7 @@ void mz2500_state::mz2500(machine_config &config)
 	ym.add_route(2, "mono", 0.50);
 	ym.add_route(3, "mono", 0.50);
 
-	BEEP(config, m_beeper, 4096).add_route(ALL_OUTPUTS,"mono",0.50);
+	SPEAKER_SOUND(config, m_dac1bit).add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 
