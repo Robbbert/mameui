@@ -11,14 +11,7 @@ Notes:
 - Schematics show a palette/work RAM bank selector, but this doesn't seem
   to be used?
 
-- Devastators: has player-trench collision detection issues, player isn't
-  supposed to go through them.
-
 - Devastators: sprite zooming for the planes in level 2 is particularly bad.
-
-- Devastators: title screen white backdrop is always supposed to flicker,
-  it currently does that only from second/fourth attract cycles (supposed to
-  always flicker from PCB video);
 
 - HTOTAL is actually 384 (/4 divider for pixel clock, 64 HBLANK clocks),
   but gfx hardware emulation doesn't play along nicely
@@ -930,8 +923,8 @@ GAME( 1988, mainevto,  mainevt,  mainevt,  mainevt,     mainevt_state,  empty_in
 GAME( 1988, mainevt2p, mainevt,  mainevt,  mainev2p,    mainevt_state,  empty_init, ROT0,  "Konami", "The Main Event (2 Players ver. X)",     MACHINE_SUPPORTS_SAVE )
 GAME( 1988, ringohja,  mainevt,  mainevt,  mainev2p,    mainevt_state,  empty_init, ROT0,  "Konami", "Ring no Ohja (Japan 2 Players ver. N)", MACHINE_SUPPORTS_SAVE )
 
-GAME( 1988, devstors,  0,        devstors, devstors,    devstors_state, empty_init, ROT90, "Konami", "Devastators (ver. Z)",                  MACHINE_SUPPORTS_SAVE | MACHINE_UNEMULATED_PROTECTION )
-GAME( 1988, devstorsx, devstors, devstors, devstors_ct, devstors_state, empty_init, ROT90, "Konami", "Devastators (ver. X)",                  MACHINE_SUPPORTS_SAVE | MACHINE_UNEMULATED_PROTECTION )
-GAME( 1988, devstorsv, devstors, devstors, devstors,    devstors_state, empty_init, ROT90, "Konami", "Devastators (ver. V)",                  MACHINE_SUPPORTS_SAVE | MACHINE_UNEMULATED_PROTECTION )
-GAME( 1988, devstors2, devstors, devstors, devstors_ct, devstors_state, empty_init, ROT90, "Konami", "Devastators (ver. 2)",                  MACHINE_SUPPORTS_SAVE | MACHINE_UNEMULATED_PROTECTION )
-GAME( 1988, garuka,    devstors, devstors, devstors_ct, devstors_state, empty_init, ROT90, "Konami", "Garuka (Japan ver. W)",                 MACHINE_SUPPORTS_SAVE | MACHINE_UNEMULATED_PROTECTION )
+GAME( 1988, devstors,  0,        devstors, devstors,    devstors_state, empty_init, ROT90, "Konami", "Devastators (ver. Z)",                  MACHINE_SUPPORTS_SAVE )
+GAME( 1988, devstorsx, devstors, devstors, devstors_ct, devstors_state, empty_init, ROT90, "Konami", "Devastators (ver. X)",                  MACHINE_SUPPORTS_SAVE )
+GAME( 1988, devstorsv, devstors, devstors, devstors,    devstors_state, empty_init, ROT90, "Konami", "Devastators (ver. V)",                  MACHINE_SUPPORTS_SAVE )
+GAME( 1988, devstors2, devstors, devstors, devstors_ct, devstors_state, empty_init, ROT90, "Konami", "Devastators (ver. 2)",                  MACHINE_SUPPORTS_SAVE )
+GAME( 1988, garuka,    devstors, devstors, devstors_ct, devstors_state, empty_init, ROT90, "Konami", "Garuka (Japan ver. W)",                 MACHINE_SUPPORTS_SAVE )
