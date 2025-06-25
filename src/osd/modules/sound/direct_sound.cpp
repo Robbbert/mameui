@@ -219,6 +219,34 @@ public:
 
 	// sound_module
 	virtual void stream_sink_update(uint32_t, int16_t const *buffer, int samples_this_frame) override;
+	virtual uint32_t get_generation() override { return 1; }
+	virtual audio_info get_information() override
+	{
+		osd::audio_info result;
+		result.m_generation = 1;
+		result.m_default_sink = 1;
+		result.m_default_source = 0;
+		result.m_nodes.resize(1);
+		result.m_nodes[0].m_name = "-";
+		result.m_nodes[0].m_display_name = "fallthrough";
+		result.m_nodes[0].m_id = 1;
+		result.m_nodes[0].m_rate.m_default_rate = 0; // Magic value meaning "use configured sample rate"
+		result.m_nodes[0].m_rate.m_min_rate = 0;
+		result.m_nodes[0].m_rate.m_max_rate = 0;
+		result.m_nodes[0].m_sinks = 2;
+		result.m_nodes[0].m_sources = 0;
+		result.m_nodes[0].m_port_names.emplace_back("L");
+		result.m_nodes[0].m_port_names.emplace_back("R");
+		result.m_nodes[0].m_port_positions.emplace_back(osd::channel_position::FL());
+		result.m_nodes[0].m_port_positions.emplace_back(osd::channel_position::FR());
+		result.m_streams.resize(1);
+		result.m_streams[0].m_id = 1;
+		result.m_streams[0].m_node = 1;
+		return result;
+	}
+
+	virtual uint32_t stream_sink_open(uint32_t node, std::string name, uint32_t rate) override { return 1; }
+	virtual void stream_close(uint32_t id) override { }
 
 private:
 	HRESULT         dsound_init();
