@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1950 -->
+<!-- Number of items in this list = 1953 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -8602,6 +8602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen9f591e3c9ff04">
+		<description>Inkventure (2025)(Ratalaika Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1049096">
+				<rom name="Inkventure (2025)(Ratalaika Games).bin" size="1049096" crc="f3d352ae" sha1="9f591e3c9ff04f66fc1b158d03764c351febce63"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf936c2d56c53d">
 		<description>Insane Pain (2022)(Blast Process Games)</description>
 		<year>????</year>
@@ -16382,6 +16392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genecd9dc5b87124">
+		<description>sovietborgs-demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2752512">
+				<rom name="sovietborgs-demo.bin" size="2752512" crc="e11938d4" sha1="ecd9dc5b87124ad9fe134b80a23062c5fa811608"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen64089a2382e14">
 		<description>Space Flies Attack (2021)(Timber Studio)</description>
 		<year>????</year>
@@ -19369,6 +19389,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="zoop (usa).bin" size="524288" crc="a899befa" sha1="e6669f16902caf35337de60027ed2013deed0d40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen66dbefd21cadf">
+		<description>ZPF (2025)(Mega Cat Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="ZPF (2025)(Mega Cat Studios).bin" size="4194304" crc="cd657892" sha1="66dbefd21cadf79c7ad5a1591a4deb37b468c5ef"/>
 			</dataarea>
 		</part>
 	</software>
