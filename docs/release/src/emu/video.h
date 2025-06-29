@@ -55,12 +55,12 @@ public:
 	bool fastforward() const { return m_fastforward; }
 
 	// setters
-	void set_speed_factor(int speed) { m_speed = speed; } // MESSUI
 	void set_frameskip(int frameskip);
 	void set_throttled(bool throttled) { m_throttled = throttled; }
 	void set_throttle_rate(float throttle_rate) { m_throttle_rate = throttle_rate; }
 	void set_fastforward(bool ffwd) { m_fastforward = ffwd; }
 	void set_output_changed() { m_output_changed = true; }
+	void set_speed_factor(int speed) { m_speed = speed; }
 
 	// misc
 	void toggle_record_movie(movie_recording::format format);

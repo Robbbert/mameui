@@ -489,6 +489,7 @@ void SetDirectories(windows_options &o)
 {
 	emu_set_value(o, OPTION_PLUGINDATAPATH, GetEmuPath());
 	emu_set_value(o, OPTION_MEDIAPATH, dir_get_value(2));
+	emu_set_value(o, OPTION_HASHPATH, dir_get_value(3));
 	emu_set_value(o, OPTION_SAMPLEPATH, dir_get_value(4));
 	emu_set_value(o, OPTION_INIPATH, dir_get_value(7));
 	emu_set_value(o, OPTION_CFG_DIRECTORY, dir_get_value(14));
@@ -504,7 +505,6 @@ void SetDirectories(windows_options &o)
 	emu_set_value(o, OPTION_DIFF_DIRECTORY, dir_get_value(19));
 	emu_set_value(o, OPTION_SNAPNAME, emu_get_value(emu_global, OPTION_SNAPNAME));
 	emu_set_value(o, OPTION_DEBUG, "0");
-	emu_set_value(o, OPTION_SPEAKER_REPORT, "0");
 	emu_set_value(o, OPTION_VERBOSE, "0");
 	emu_set_value(o, OPTION_LOG, "0");
 	emu_set_value(o, OPTION_OSLOG, "0");

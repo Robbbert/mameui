@@ -163,7 +163,7 @@ BOOL SoftwareList_AddFile(HWND hwndPicker, string pszName, string pszListname, s
 	nIndex = pPickerInfo->file_index_length++;
 	pPickerInfo->file_index = ppNewIndex;
 	pPickerInfo->file_index[nIndex] = pInfo;
-	printf("SoftwareList_AddFile: items = %d\n",software_numberofitems);
+	//printf("SoftwareList_AddFile: items = %d\n",software_numberofitems);
 
 	// Actually insert the item into the picker
 	Picker_InsertItemSorted(hwndPicker, nIndex);

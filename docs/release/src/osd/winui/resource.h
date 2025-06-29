@@ -430,8 +430,6 @@
 #define IDC_SPLASH                      1266
 #define IDC_HLSL_ON                     1279
 #define IDC_SNAPBURNIN                  1280
-#define IDC_PORTAUDIO_LATENCY           1281
-#define IDC_PORTAUDIO_LATENCY_DISP      1282
 #define IDC_GLSLPOW                     1300
 #define IDC_GLSLTEXTURE                 1301
 #define IDC_GLSLVBO                     1302
