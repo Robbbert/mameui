@@ -28,8 +28,6 @@ public:
 	virtual ~menu_audio_mixer() override;
 
 protected:
-	virtual void recompute_metrics(uint32_t width, uint32_t height, float aspect) override;
-	virtual void custom_render(uint32_t flags, void *selectedref, float top, float bottom, float x, float y, float x2, float y2) override;
 	virtual void menu_activated() override;
 	virtual void menu_deactivated() override;
 
@@ -57,15 +55,12 @@ private:
 	uint32_t m_reset_item;
 	std::vector<select_entry> m_selections;
 
-	std::string m_add_full_prompt;
-	std::string m_add_channel_prompt;
-
 	virtual void populate() override;
 	virtual bool handle(event const *ev) override;
 
 	bool add_full(select_entry &current_selection);
 	bool add_channel(select_entry &current_selection);
-	bool delete_route(uint32_t cursel_index, select_entry &current_selection);
+	bool remove_route(uint32_t cursel_index, select_entry &current_selection);
 	bool set_prev_guest_channel(select_entry &current_selection);
 	bool set_next_guest_channel(select_entry &current_selection);
 	bool set_prev_node(select_entry &current_selection);

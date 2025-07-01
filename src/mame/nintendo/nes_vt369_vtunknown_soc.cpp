@@ -21,10 +21,7 @@ DEFINE_DEVICE_TYPE(VT369_SOC_INTROM_VIBESSWAP,vt369_soc_introm_vibesswap_device,
 
 // uncertain
 DEFINE_DEVICE_TYPE(VT3XX_SOC, vt3xx_soc_base_device,          "vt3xx_unknown_soc_cy", "VT3xx series System on a Chip (CY)")
-DEFINE_DEVICE_TYPE(VT3XX_SOC_UNK_BT, vt3xx_soc_unk_bt_device, "vt3xx_unknown_soc_bt", "VT3xx series System on a Chip (BT)")
-
 DEFINE_DEVICE_TYPE(VT3XX_SOC_UNK_DG, vt3xx_soc_unk_dg_device, "vt3xx_unknown_soc_dg", "VT3xx series System on a Chip (DG)")
-DEFINE_DEVICE_TYPE(VT3XX_SOC_UNK_FA, vt3xx_soc_unk_fa_device, "vt3xx_unknown_soc_fa", "VT3xx series System on a Chip (Family Pocket)")
 
 
 vt3xx_soc_base_device::vt3xx_soc_base_device(const machine_config& mconfig, const char* tag, device_t* owner, u32 clock) :
@@ -41,11 +38,6 @@ vt3xx_soc_base_device::vt3xx_soc_base_device(const machine_config& mconfig, devi
 	m_vt369adpcm(*this, "vt369adpcm"),
 	m_leftdac(*this, "leftdac"),
 	m_rightdac(*this, "rightdac")
-{
-}
-
-vt3xx_soc_unk_bt_device::vt3xx_soc_unk_bt_device(const machine_config& mconfig, const char* tag, device_t* owner, u32 clock) :
-	vt3xx_soc_base_device(mconfig, VT3XX_SOC_UNK_BT, tag, owner, clock)
 {
 }
 
@@ -85,11 +77,6 @@ vt3xx_soc_unk_dg_device::vt3xx_soc_unk_dg_device(const machine_config& mconfig, 
 {
 }
 
-vt3xx_soc_unk_fa_device::vt3xx_soc_unk_fa_device(const machine_config& mconfig, const char* tag, device_t* owner, u32 clock) :
-	vt3xx_soc_unk_dg_device(mconfig, VT3XX_SOC_UNK_FA, tag, owner, clock)
-{
-}
-
 /***********************************************************************************************************************************************************/
 /* VT369? */
 /***********************************************************************************************************************************************************/
@@ -119,7 +106,7 @@ void vt3xx_soc_base_device::device_add_mconfig(machine_config& config)
 
 }
 
-void vt3xx_soc_base_device::vt369_soundcpu_control_w(offs_t offset, u8 data)
+void vt3xx_soc_base_device::vt369_soundcpu_control_w(u8 data)
 {
 	logerror("%s: write to sound cpu control reg (reset etc.) %02x\n", machine().describe_context(), data);
 
@@ -556,7 +543,7 @@ void vt3xx_soc_base_device::vt369_sound_external_map(address_map &map)
 }
 
 
-void vt3xx_soc_base_device::vt369_411c_bank6000_enable_w(offs_t offset, u8 data)
+void vt3xx_soc_base_device::vt369_411c_bank6000_enable_w(u8 data)
 {
 	if (m_bank6000_enable != data)
 	{
@@ -567,7 +554,7 @@ void vt3xx_soc_base_device::vt369_411c_bank6000_enable_w(offs_t offset, u8 data)
 	m_bank6000_enable = data;
 }
 
-void vt3xx_soc_base_device::vt369_411d_w(offs_t offset, u8 data)
+void vt3xx_soc_base_device::vt369_411d_w(u8 data)
 {
 	// controls chram access and mapper emulation modes in later models
 	// also written by rtvgc300 and rtvgc300fz (with the same value as 411e)
@@ -577,14 +564,14 @@ void vt3xx_soc_base_device::vt369_411d_w(offs_t offset, u8 data)
 	update_banks();
 }
 
-void vt3xx_soc_base_device::vt369_411e_w(offs_t offset, u8 data)
+void vt3xx_soc_base_device::vt369_411e_w(u8 data)
 {
 	logerror("%s: vt369_411e_w (%02x) (external bankswitch + more?)\n", machine().describe_context(), data);
 	m_411e_write_cb(data);
 }
 
 
-void vt3xx_soc_base_device::vt369_4112_bank6000_select_w(offs_t offset, u8 data)
+void vt3xx_soc_base_device::vt369_4112_bank6000_select_w(u8 data)
 {
 	logerror("%s: set bank at 0x6000 to %02x\n", machine().describe_context(), data);
 	m_bank6000 = data;
@@ -829,11 +816,37 @@ void vt369_soc_introm_altswap_device::device_start()
 	m_encryption_allowed = true;
 }
 
+void vt369_soc_introm_vibesswap_device::device_add_mconfig(machine_config& config)
+{
+	vt369_soc_introm_noswap_device::device_add_mconfig(config);
+
+	m_maincpu->set_addrmap(AS_PROGRAM, &vt369_soc_introm_vibesswap_device::nes_vt_vibes_map);
+}
+
 void vt369_soc_introm_vibesswap_device::device_start()
 {
 	vt3xx_soc_base_device::device_start();
 	downcast<rp2a03_core_swap_op_d5_d6 &>(*m_maincpu).set_which_crypt(2);
 	m_encryption_allowed = true;
+}
+
+void vt369_soc_introm_vibesswap_device::vibes_411c_w(u8 data)
+{
+	if (m_encryption_allowed)
+	{
+		if (data == 0x05)
+			downcast<rp2a03_core_swap_op_d5_d6&>(*m_maincpu).set_encryption_state(false);
+		else if (data == 0x07)
+			downcast<rp2a03_core_swap_op_d5_d6&>(*m_maincpu).set_encryption_state(true);
+		else
+			logerror("%s: vibes_411c_w %02x (unknown)\n", machine().describe_context(), data);
+	}
+}
+
+void vt369_soc_introm_vibesswap_device::nes_vt_vibes_map(address_map &map)
+{
+	vt3xx_soc_base_device::vt369_map(map);
+	map(0x411c, 0x411c).w(FUNC(vt369_soc_introm_vibesswap_device::vibes_411c_w));
 }
 
 /***********************************************************************************************************************************************************/
@@ -857,59 +870,4 @@ void vt3xx_soc_unk_dg_device::nes_vt_dg_map(address_map &map)
 {
 	vt3xx_soc_base_device::vt369_map(map);
 	map(0x411c, 0x411c).w(FUNC(vt3xx_soc_unk_dg_device::vt03_411c_w));
-}
-
-/***********************************************************************************************************************************************************/
-/* 'BT' specifics (base = '4K') */
-/***********************************************************************************************************************************************************/
-
-void vt3xx_soc_unk_bt_device::device_add_mconfig(machine_config& config)
-{
-	vt3xx_soc_base_device::device_add_mconfig(config);
-	m_maincpu->set_addrmap(AS_PROGRAM, &vt3xx_soc_unk_bt_device::nes_vt_bt_map);
-}
-
-void vt3xx_soc_unk_bt_device::nes_vt_bt_map(address_map &map)
-{
-	vt3xx_soc_base_device::vt369_map(map);
-	map(0x412c, 0x412c).w(FUNC(vt3xx_soc_unk_bt_device::vt03_412c_extbank_w));
-}
-
-void vt3xx_soc_unk_bt_device::vt03_412c_extbank_w(u8 data)
-{
-	m_upper_write_412c_callback(data);
-}
-
-/***********************************************************************************************************************************************************/
-/* 'FA' specifics (base = 'DG') */ // used by fapocket
-/***********************************************************************************************************************************************************/
-
-void vt3xx_soc_unk_fa_device::device_add_mconfig(machine_config& config)
-{
-	vt3xx_soc_base_device::device_add_mconfig(config);
-	m_maincpu->set_addrmap(AS_PROGRAM, &vt3xx_soc_unk_fa_device::nes_vt_fa_map);
-}
-
-u8 vt3xx_soc_unk_fa_device::vtfa_412c_r()
-{
-	return m_upper_read_412c_callback();
-}
-
-void vt3xx_soc_unk_fa_device::vtfa_412c_extbank_w(u8 data)
-{
-	m_upper_write_412c_callback(data);
-
-}
-
-void vt3xx_soc_unk_fa_device::vtfp_4242_w(u8 data)
-{
-	logerror("vtfp_4242_w %02x\n", data);
-	m_4242 = data;
-}
-
-void vt3xx_soc_unk_fa_device::nes_vt_fa_map(address_map &map)
-{
-	vt3xx_soc_base_device::vt369_map(map);
-	map(0x412c, 0x412c).r(FUNC(vt3xx_soc_unk_fa_device::vtfa_412c_r)).w(FUNC(vt3xx_soc_unk_fa_device::vtfa_412c_extbank_w));
-	map(0x4242, 0x4242).w(FUNC(vt3xx_soc_unk_fa_device::vtfp_4242_w));
 }
