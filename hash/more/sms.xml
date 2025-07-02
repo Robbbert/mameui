@@ -2013,12 +2013,12 @@
 		</part>
 	</software>
 	<software name="sms641ae3eb1cb47">
-		<description>Hoshi wo Sagasite... T-Eng (2009)(filler, SSTranslations)</description>
+		<description>Hoshi wo Sagasite T-Eng (2009)(filler, SSTranslations)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="Hoshi wo Sagasite... T-Eng (2009)(filler, SSTranslations).sms" size="262144" crc="b5ce862f" sha1="641ae3eb1cb476359a0a0ade2f45437d47e24361"/>
+				<rom name="Hoshi wo Sagasite T-Eng (2009)(filler, SSTranslations).sms" size="262144" crc="b5ce862f" sha1="641ae3eb1cb476359a0a0ade2f45437d47e24361"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2849,6 +2849,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="81920">
 				<rom name="Monaco Master v2.9.2 (2023)(Louis The SEGA Nerd).sms" size="81920" crc="355330b6" sha1="4af5c6b9bbbe9c053a75efe3368693ed964fd917"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsf8157965f5590">
+		<description>Monica e a Sereia do Rio v1.02 (2024)(chirinea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Monica e a Sereia do Rio v1.02 (2024)(chirinea).sms" size="131072" crc="398fb8a4" sha1="f8157965f559030558d9a317ea572a6edbc97c67"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4379,16 +4389,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Super Monaco GP [Proto 2] (US).sms" size="262144" crc="3753cc95" sha1="2469d356ef51b9e2c953e51c00427824db8e0b31"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsf8157965f5590">
-		<description>Super Monica e a Sereia do Rio v1.02 (2024)(chirinea)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Super Monica e a Sereia do Rio v1.02 (2024)(chirinea).sms" size="131072" crc="398fb8a4" sha1="f8157965f559030558d9a317ea572a6edbc97c67"/>
 			</dataarea>
 		</part>
 	</software>

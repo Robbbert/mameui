@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1953 -->
+<!-- Number of items in this list = 1954 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -12199,6 +12199,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="457064">
 				<rom name="pringles the game (2009)(future drive).bin" size="457064" crc="a397bc66" sha1="4b17adbe5619e555c2f822b8db34178ec0ae788c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena560a473ad546">
+		<description>Prisonela MD (2025)(Two Black Cats)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Prisonela MD (2025)(Two Black Cats).bin" size="1048576" crc="58fe6ea8" sha1="a560a473ad546e253e8a954e3d61ac0a3c053a7e"/>
 			</dataarea>
 		</part>
 	</software>
