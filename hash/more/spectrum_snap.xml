@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 443 -->
+<!-- Number of items in this list = 444 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -2863,12 +2863,12 @@
 		</part>
 	</software>
 	<software name="zxs477fd56187e84">
-		<description>Popeye (1985)(DK'Tronics)</description>
+		<description>Popeye 48K (1985)(DKTronics)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="30572">
-				<rom name="Popeye (1985)(DK'Tronics).z80" size="30572" crc="8582b9b7" sha1="477fd56187e8410eb10d31bc3994f2b3087f94a6"/>
+				<rom name="Popeye 48K (1985)(DKTronics).z80" size="30572" crc="8582b9b7" sha1="477fd56187e8410eb10d31bc3994f2b3087f94a6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2889,6 +2889,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="35217">
 				<rom name="Poseidon - Planet Eleven 48K (1990)(Hi-Tec).z80" size="35217" crc="73a2cdf2" sha1="b932a72a49ad3fce933688715ffe0bee45c90497"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7a2b38450e58e">
+		<description>Post Mortem ES 48K (1988)(Iber Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39261">
+				<rom name="Post Mortem ES 48K (1988)(Iber Soft).z80" size="39261" crc="fbdeb9b7" sha1="7a2b38450e58e20e4c6a239c18f176cb1cb64a66"/>
 			</dataarea>
 		</part>
 	</software>

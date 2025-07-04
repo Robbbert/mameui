@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1954 -->
+<!-- Number of items in this list = 1955 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -9669,6 +9669,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Langrisser II T-Eng (2011)(Jon Najar).bin" size="2097152" crc="e8f28522" sha1="fe43c51314ed902c65ce967f3b181dcefad2d59c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene13660b6021c8">
+		<description>Last Defense 2 (2025)(AAR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2475500">
+				<rom name="Last Defense 2 (2025)(AAR).bin" size="2475500" crc="f04aff53" sha1="e13660b6021c8aff01bd7216d69bbe608554db83"/>
 			</dataarea>
 		</part>
 	</software>
