@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3153 -->
+<!-- Number of items in this list = 3181 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10542,6 +10542,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd085bd02543d7">
+		<description>PMD85MON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5949">
+				<rom name="PMD85MON.TAP" size="5949" crc="0f77ade1" sha1="d085bd02543d76e966ad4f05b1d3c01983d288e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs40eaa2a0d03a8">
+		<description>Pneumatic Hammers (1987)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27795">
+				<rom name="Pneumatic Hammers (1987)(Firebird).tap" size="27795" crc="b770397f" sha1="40eaa2a0d03a8fe5e5e24abb0b71f3dc86ff149b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc300b58306060">
+		<description>Podder (1986)(Central Solutions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39164">
+				<rom name="Podder (1986)(Central Solutions).tap" size="39164" crc="61951e45" sha1="c300b5830606081c4b1d47edce23a1ce85e5089e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc77bbd749937c">
+		<description>Podmorska Bitka (19xx)(-)(UNK-LANG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32178">
+				<rom name="Podmorska Bitka (19xx)(-)(UNK-LANG).tap" size="32178" crc="90dd21c2" sha1="c77bbd749937c2728cf2cbc61d136036af5fcc8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27d1a91174257">
+		<description>Podraz 5 (19xx)(Falcon Soft)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18427">
+				<rom name="Podraz 5 (19xx)(Falcon Soft)(Cz).tap" size="18427" crc="7dd139a2" sha1="27d1a9117425735c1272479e17927f79d72714ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse8da82cf2cbd7">
+		<description>podraz3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48408">
+				<rom name="podraz3.tap" size="48408" crc="c377127d" sha1="e8da82cf2cbd7a7cc094a6e16836e593662a95e4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs6c0af273ecbd4">
 		<description>podraz32</description>
 		<year>????</year>
@@ -10549,6 +10609,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="22077">
 				<rom name="podraz32.tzx" size="22077" crc="abf16120" sha1="6c0af273ecbd481856ba5e3de30b837b233ecb2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d6b612c2ae78">
+		<description>PODRAZ_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23819">
+				<rom name="PODRAZ_4.TAP" size="23819" crc="2453a5af" sha1="5d6b612c2ae789725c9abd65c07919ac7aee4ff7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10562,6 +10632,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8daa404135852">
+		<description>Pogo (1983)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49237">
+				<rom name="Pogo (1983)(Ocean Software Ltd).tap" size="49237" crc="eecdc229" sha1="8daa40413585221621289da09def571b03590890"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc011155adf5be">
+		<description>Pogostick Olympics (1988)(Silverbird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45110">
+				<rom name="Pogostick Olympics (1988)(Silverbird Software Ltd).tap" size="45110" crc="a6531043" sha1="c011155adf5becce79d607108172b3c690f68ea8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44893d68b486a">
+		<description>Poker (1983)(J.R. Hollingbery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15607">
+				<rom name="Poker (1983)(J.R. Hollingbery).tap" size="15607" crc="7fab3a17" sha1="44893d68b486a32c5b604c809c954b2df4e0c8c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d32487d86a95">
+		<description>Poker (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8466">
+				<rom name="Poker (19xx)(-).tap" size="8466" crc="752ddcdd" sha1="6d32487d86a95e7ab5384584987df24377eb5e12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0ddefbdb0e58a">
+		<description>Poker Club, The (1985)(George Calvere)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37769">
+				<rom name="Poker Club, The (1985)(George Calvere).tap" size="37769" crc="ad81154d" sha1="0ddefbdb0e58a48099daf6bd03da8cd96ff821f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs49c575acfe074">
+		<description>Poker Dice Simulator (1989)(Frozen Ice)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15517">
+				<rom name="Poker Dice Simulator (1989)(Frozen Ice).tap" size="15517" crc="733fe003" sha1="49c575acfe074f772d447815590e189b48ea2987"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs55797b4aa6919">
 		<description>Pokes (19xx)(-)</description>
 		<year>????</year>
@@ -10569,6 +10699,156 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="71439">
 				<rom name="Pokes (19xx)(-).tzx" size="71439" crc="edc3cb00" sha1="55797b4aa691901f33bfd906479412a181cfa94d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2997443d20ce4">
+		<description>Poklad</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13181">
+				<rom name="Poklad.TAP" size="13181" crc="7d41a84d" sha1="2997443d20ce4ec34f88247125fed695882744a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf2576ed16753b">
+		<description>poklad2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48408">
+				<rom name="poklad2.tap" size="48408" crc="7c80b7ef" sha1="f2576ed16753ba56fd99ba4cdc973ac7fefc1841"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd470787d53c5d">
+		<description>Pole Position (1983)(Atarisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47760">
+				<rom name="Pole Position (1983)(Atarisoft).tap" size="47760" crc="fc80c755" sha1="d470787d53c5d998a8fd33e2301c91e20e03297b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb621a44e0f1e1">
+		<description>Pole Position (1983)(Atarisoft)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39124">
+				<rom name="Pole Position (1983)(Atarisoft)[a2].tap" size="39124" crc="e3bc4054" sha1="b621a44e0f1e1311b1212465ee470c91134c88a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs21b2feb8e74f2">
+		<description>Pole Position (1983)(Atarisoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49306">
+				<rom name="Pole Position (1983)(Atarisoft)[a].tap" size="49306" crc="18b12ec6" sha1="21b2feb8e74f2eb5fbe9740ce09d1f775e0d77f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe805fc1e2d2c">
+		<description>Pole Position 48K (1984)(C&amp;VG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11325">
+				<rom name="Pole Position 48K (1984)(C&amp;VG).tap" size="11325" crc="049b1e06" sha1="fe805fc1e2d2ca11ae8a8b3db764fb9ebe23a671"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56951bf608d80">
+		<description>Poli Diaz Boxeo (1990)(Opera Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49084">
+				<rom name="Poli Diaz Boxeo (1990)(Opera Soft)(Sp).tap" size="49084" crc="6435f573" sha1="56951bf608d8025dace196f8870c6f8d34cb92d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96d8a1e4cfd04">
+		<description>Poltergeist (1986)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26646">
+				<rom name="Poltergeist (1986)(Firebird Software Ltd).tap" size="26646" crc="8eea4fde" sha1="96d8a1e4cfd04064d3bfed80378e3c0971b801f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b2751bca404f">
+		<description>Ponlas En Raya (1984)(Load 'n' Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32575">
+				<rom name="Ponlas En Raya (1984)(Load 'n' Run)(Sp).tap" size="32575" crc="0b6609fe" sha1="7b2751bca404f8f6fdc73c07e701c9d9be2a259c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9eea8b757f393">
+		<description>Pontoon (1983)(K. Berry)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13751">
+				<rom name="Pontoon (1983)(K. Berry).tap" size="13751" crc="bd168a8f" sha1="9eea8b757f39331ac1eb7f1ae0846cff5b8b8509"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8589f3103238e">
+		<description>Pontoon (1983)(Micro Mart)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47408">
+				<rom name="Pontoon (1983)(Micro Mart).tap" size="47408" crc="c755259d" sha1="8589f3103238eb295c2b9abda733426eec47e4b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs073db699e5834">
+		<description>Pontoon (1983)(Peter Beckett)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8109">
+				<rom name="Pontoon (1983)(Peter Beckett).tap" size="8109" crc="d812bd83" sha1="073db699e58348d85c5ab61b630873d1a5a3f681"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc63463fc2c57e">
+		<description>Pontoon (1984)(James Hutchby)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8846">
+				<rom name="Pontoon (1984)(James Hutchby).tap" size="8846" crc="69751fe9" sha1="c63463fc2c57e297b904447f808fedd9cc631748"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdd443a723f57e">
+		<description>Pontoon (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20968">
+				<rom name="Pontoon (19xx)(-).tap" size="20968" crc="a52e3aca" sha1="dd443a723f57ecd0b56ba7ecc9322793b7c69244"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs72ecc0aed4c0d">
+		<description>PONTOON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11863">
+				<rom name="PONTOON.TAP" size="11863" crc="10550a4c" sha1="72ecc0aed4c0d35c7d1a9495d0744847b40304bf"/>
 			</dataarea>
 		</part>
 	</software>

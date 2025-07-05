@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3896 -->
+<!-- Number of items in this list = 3897 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -9629,6 +9629,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Fire Emblem - 009 V1.03.sfc" size="3145728" crc="d142d4a5" sha1="24fd3393ed750633253383929f5f5da90676186a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3f6ff1e07c25a">
+		<description>Fire Emblem - Genealogy of the Holy War T-Eng v1.01 (2025)(Miacis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Fire Emblem - Genealogy of the Holy War T-Eng v1.01 (2025)(Miacis).sfc" size="8388608" crc="0fba1e19" sha1="3f6ff1e07c25a94cb4182901e14b2a5af10457b1"/>
 			</dataarea>
 		</part>
 	</software>
