@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1955 -->
+<!-- Number of items in this list = 1956 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5023,12 +5023,12 @@
 		</part>
 	</software>
 	<software name="gen4daee533808f8">
-		<description>Daikoukai Jidai II (J)</description>
+		<description>Daikoukai Jidai II T-Chi v1.9c (2011)(Ken_Tse)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Daikoukai Jidai II (J).bin" size="2097152" crc="a3ca9b9e" sha1="4daee533808f8de360908eee8c8d4a7ed2c0d817"/>
+				<rom name="Daikoukai Jidai II T-Chi v1.9c (2011)(Ken_Tse).bin" size="2097152" crc="a3ca9b9e" sha1="4daee533808f8de360908eee8c8d4a7ed2c0d817"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5539,6 +5539,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="duke nukem 3d (Hack, Spanish).bin" size="4194304" crc="74a8b676" sha1="dda069b0deecf36c66941edfc887422952d6d46f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genca4899067aaef">
+		<description>Dune - Razor Missions (2024)(Razor)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dune - Razor Missions (2024)(Razor).bin" size="2097152" crc="3a07a904" sha1="ca4899067aaef2dd889b12fa6254e79b3bd438d4"/>
 			</dataarea>
 		</part>
 	</software>
