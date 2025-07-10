@@ -545,6 +545,8 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 		buffer.append("The sound emulation isn't 100% accurate.\n");
 
 	if (BIT(cache, 7))
+		buffer.append("Save state supported.\n");
+	else
 		buffer.append("Save state not supported.\n");
 
 	if (BIT(cache, 14))

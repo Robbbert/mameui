@@ -488,7 +488,7 @@ static void InitDriversInfo()
 		auto const parent_idx(have_parent ? driver_list::find(gamedrv->parent) : -1);
 		gameinfo->isClone = ( !have_parent || (0 > parent_idx) || BIT(GetDriverCacheLower(parent_idx),9)) ? false : true;
 		gameinfo->isBroken = (cache & 0x4040) ? true : false;  // (MACHINE_NOT_WORKING | MACHINE_MECHANICAL)
-		gameinfo->supportsSaveState = BIT(cache, 7) ^ 1;  //MACHINE_SUPPORTS_SAVE
+		gameinfo->supportsSaveState = BIT(cache, 7);  //MACHINE_SUPPORTS_SAVE
 		gameinfo->isHarddisk = false;
 		gameinfo->isVertical = BIT(cache, 2);  //ORIENTATION_SWAP_XY
 
@@ -581,7 +581,7 @@ static int InitDriversCache()
 		cache_upper = GetDriverCacheUpper(ndriver);
 
 		gameinfo->isBroken          =  (cache_lower & 0x4040) ? true : false; //MACHINE_NOT_WORKING | MACHINE_MECHANICAL
-		gameinfo->supportsSaveState =  BIT(cache_lower, 7) ? false : true;  //MACHINE_SUPPORTS_SAVE
+		gameinfo->supportsSaveState =  BIT(cache_lower, 7) ? true : false;  //MACHINE_SUPPORTS_SAVE
 		gameinfo->isVertical        =  BIT(cache_lower, 2) ? true : false;  //ORIENTATION_XY
 		gameinfo->screenCount       =   cache_upper & DRIVER_CACHE_SCREEN;
 		gameinfo->isClone           = ((cache_upper & DRIVER_CACHE_CLONE)     != 0);
