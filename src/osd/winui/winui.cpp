@@ -745,11 +745,7 @@ public:
 		const char* buffer = s.c_str();
 		if (channel == OSD_OUTPUT_CHANNEL_VERBOSE)
 		{
-//			FILE *pFile;
-//			pFile = fopen("verbose.log", "a");
-//			fputs(buffer, pFile);
-//			fflush(pFile);
-//			fclose (pFile);
+			//printf("%s",buffer);
 			return;
 		}
 
@@ -860,10 +856,10 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	// redirect messages to our handler
 	mameui_output_error winerror;
 	printf("********** STARTING %s **********\n", name);fflush(stdout);
-	osd_output::push(&winerror);
-	osd_printf_verbose("********** STARTING %s **********\n", name);
-	osd_printf_info("********** STARTING %s **********\n", name);
-	osd_output::pop(&winerror);
+//	osd_output::push(&winerror);
+//	osd_printf_verbose("********** STARTING %s **********\n", name);
+//	osd_printf_info("********** STARTING %s **********\n", name);
+//	osd_output::pop(&winerror);
 	// Mame will parse all the needed .ini files.
 
 	// hide mameui
@@ -888,7 +884,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	time_t start = 0, end = 0;
 	time(&start);
 	manager->execute();
-	osd_printf_info("********** FINISHED %s **********\n", name);
+//	osd_printf_info("********** FINISHED %s **********\n", name);
 	// turn off message redirect
 	osd_output::pop(&winerror);
 	delete manager;
