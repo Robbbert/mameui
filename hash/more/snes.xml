@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3897 -->
+<!-- Number of items in this list = 3898 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -4119,6 +4119,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Boing's Untitled Demo (SMW1 Hack).smc" size="2097152" crc="6f55aacf" sha1="ee6b28382cd7ccfd9be9e6f7b6383884860f91de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa667dfad61243">
+		<description>Bokujou Monogatari T-Chs v2.0 (2009)(TGB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bokujou Monogatari T-Chs v2.0 (2009)(TGB).sfc" size="2097152" crc="2da5d261" sha1="a667dfad61243f1de97f2510817b0366adebfb84"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,14 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 2 -->
 <softwarelist name="ibmpcjx_flop" description="ibmpcjx_flop loose roms">
-	<software name="ibmeceae781a294c">
-		<description>Polar Star III (1984)(Carry Lab)(SPS)(Zero Soft)(Hiroshi Hasegawa)(Hiroto Sasaki)(K. Yamamoto)</description>
+	<software name="ibm2b601c60056d4">
+		<description>E:\\0</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="209024">
-				<rom name="Polar Star III (1984)(Carry Lab)(SPS)(Zero Soft)(Hiroshi Hasegawa)(Hiroto Sasaki)(K. Yamamoto).D88" size="209024" crc="d48aaf5a" sha1="eceae781a294cc38e69b2a7060148184ebe6b125"/>
+			<dataarea name="flop" size="432254">
+				<rom name="E:\\0.ico" size="432254" crc="c54a0bb8" sha1="2b601c60056d42c3f5df8f954af9dcfcd2a920d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm4a8936b2455af">
+		<description>E:\\autorun</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="51">
+				<rom name="E:\\autorun.inf" size="51" crc="aba7921a" sha1="4a8936b2455afa7e852ac708d925dbe64ea5f8de"/>
 			</dataarea>
 		</part>
 	</software>

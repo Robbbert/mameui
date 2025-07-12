@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3242 -->
+<!-- Number of items in this list = 3313 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseafe9fc2d293b">
+		<description>-Power Drift (1989)(Activision Inc)[cr [Cr Kamilsoft][t Kamilsoft](128K)[Cr Kamilsoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="61651">
+				<rom name="-Power Drift (1989)(Activision Inc)[cr [Cr Kamilsoft][t Kamilsoft](128K)[Cr Kamilsoft].tap" size="61651" crc="35b231b5" sha1="eafe9fc2d293b43b0a41964cad199fe81ce37fd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs713fb1668ebea">
+		<description>-Robocop 1 (1989)(Ocean Software Ltd)[cr [Cr Torasoft][t Ostrava](128K)[Cr Torasoft]]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="100990">
+				<rom name="-Robocop 1 (1989)(Ocean Software Ltd)[cr [Cr Torasoft][t Ostrava](128K)[Cr Torasoft]].tap" size="100990" crc="bb287389" sha1="713fb1668ebea3e24c13e0bd2db3fa03f5e903c2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10522,6 +10542,416 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd8dd4d418d480">
+		<description>Pi Balled (1984)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46358">
+				<rom name="Pi Balled (1984)(Automata UK).tap" size="46358" crc="ce8e8740" sha1="d8dd4d418d48052fd32dc2b3066f581c301f0177"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46dfa1777b904">
+		<description>Pi Eyed (1984)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37712">
+				<rom name="Pi Eyed (1984)(Automata UK).tap" size="37712" crc="efe6fd2c" sha1="46dfa1777b904e645e5a289189790011591193be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8cfc0782e3b91">
+		<description>Pi In 'Ere (1984)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48640">
+				<rom name="Pi In 'Ere (1984)(Automata UK).tap" size="48640" crc="df29645f" sha1="8cfc0782e3b91bbe6c163caeec9c2985c78e56bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2a72f03f6d0c8">
+		<description>Pi In 'Ere (1984)(Automata UK)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48235">
+				<rom name="Pi In 'Ere (1984)(Automata UK)[a].tap" size="48235" crc="77491d26" sha1="2a72f03f6d0c85d2e45b898bc961ba17920304f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1413a4fab67bf">
+		<description>Pi In The Sky (1985)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37981">
+				<rom name="Pi In The Sky (1985)(Automata UK).tap" size="37981" crc="271111f8" sha1="1413a4fab67bf7baa96658a98d5346c8936ac429"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb3e8a5e65afbf">
+		<description>Pi There (1985)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49147">
+				<rom name="Pi There (1985)(Automata UK).tap" size="49147" crc="d938c90d" sha1="b3e8a5e65afbfb029ad65006130ba8f2a40ad6a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs154f03a2f2a8a">
+		<description>Pi-Dentity 128K (2020)(Sebastian Braunert)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="70659">
+				<rom name="Pi-Dentity 128K (2020)(Sebastian Braunert).tap" size="70659" crc="b6aed3dd" sha1="154f03a2f2a8ab0781a44ad4a13f768a6fe3d6ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ad30d657469d">
+		<description>Pi-Dentity 48K (2020)(Sebastian Braunert)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43464">
+				<rom name="Pi-Dentity 48K (2020)(Sebastian Braunert).tap" size="43464" crc="ecdc9c1c" sha1="9ad30d657469d6d3e3577e01099450f45985152e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc6f6283494e35">
+		<description>Pi-R Squared (1987)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Pi-R Squared (1987)(Automata UK).tap" size="49343" crc="850e2009" sha1="c6f6283494e354382bb6b6ef28ec54a1fc7b34c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc6f0ee853380d">
+		<description>Pi-R Squared (demo) (1987)(Mind Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41500">
+				<rom name="Pi-R Squared (demo) (1987)(Mind Games).tap" size="41500" crc="f8edbe41" sha1="c6f0ee853380d22eecacc3ee851a77e68b5435c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa519726ae71e1">
+		<description>Pictionary (1989)(Domark Ltd)(Tape 1 Side 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="181351">
+				<rom name="Pictionary (1989)(Domark Ltd)(Tape 1 Side 1).tap" size="181351" crc="0c499077" sha1="a519726ae71e1d99bb89028d30f4da28e34a33fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee01fdbfadfe4">
+		<description>Picture Of Innocence (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47661">
+				<rom name="Picture Of Innocence (19xx)(-).tap" size="47661" crc="c98f593e" sha1="ee01fdbfadfe41a3ab3dcd1b4eed535d2e531e18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3eea399e249bc">
+		<description>PIKASM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22466">
+				<rom name="PIKASM.tap" size="22466" crc="accf5906" sha1="3eea399e249bc3b8a2cc149476519be3891295ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b518f6e2881f">
+		<description>Pillars 128K (2021)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19619">
+				<rom name="Pillars 128K (2021)(Under4Mhz).tap" size="19619" crc="8a6dd7c2" sha1="3b518f6e2881fd9700c673a8304e4b74949de804"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd1e04ebf6c7b7">
+		<description>Pilot (19xx)(Hewson Consultants Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1423">
+				<rom name="Pilot (19xx)(Hewson Consultants Ltd).tap" size="1423" crc="9dddb1da" sha1="d1e04ebf6c7b754061baa7f265f2d1c207fa939d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa8219822288c4">
+		<description>Pilot Attack v1.1 (2017)(TFW8b)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30930">
+				<rom name="Pilot Attack v1.1 (2017)(TFW8b).tap" size="30930" crc="8e0f7278" sha1="a8219822288c46caaaba2bb0fb5d8bf276b5b48b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsefd1e7e628ad6">
+		<description>Pimania (1982)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42163">
+				<rom name="Pimania (1982)(Automata UK).tap" size="42163" crc="39379fd0" sha1="efd1e7e628ad60fec925e09df7ffc78653fad3cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs528fc2276939f">
+		<description>Pimans Cocktail Cabinet, The (1985)(Automata UK Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42818">
+				<rom name="Pimans Cocktail Cabinet, The (1985)(Automata UK Ltd).tap" size="42818" crc="0d64c7c4" sha1="528fc2276939f29990d47f031ce58d3a34e38e89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d62459187d71">
+		<description>Pimeval Man (1985)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47446">
+				<rom name="Pimeval Man (1985)(Automata UK).tap" size="47446" crc="852dddf4" sha1="8d62459187d713a3a95059831bd410e79f07581f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50ec5100f4a35">
+		<description>Pinball (1983)(Sagittarian Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16356">
+				<rom name="Pinball (1983)(Sagittarian Software).tap" size="16356" crc="b2fe2a92" sha1="50ec5100f4a35c5cfcdf91e92f151c36777b88ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbfff84019b841">
+		<description>Pinball Power (1989)(Mastertronic Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52836">
+				<rom name="Pinball Power (1989)(Mastertronic Software Ltd).tap" size="52836" crc="018f2184" sha1="bfff84019b84164da9a9f4544dff10964a4c3ebb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0ebdf82a0c351">
+		<description>Ping Pong (1986)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48180">
+				<rom name="Ping Pong (1986)(Imagine Software).tap" size="48180" crc="1dcf28ec" sha1="0ebdf82a0c35195158b920ed047b2c609b6dfe1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0ddb97c027b03">
+		<description>Pingo (1984)(Profisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23795">
+				<rom name="Pingo (1984)(Profisoft).tap" size="23795" crc="82ac82ac" sha1="0ddb97c027b030867d15bbf88c0befdc6292d485"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs882fdb954692c">
+		<description>Pingo (1984)(Profisoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16366">
+				<rom name="Pingo (1984)(Profisoft)[a].tap" size="16366" crc="d5671028" sha1="882fdb954692c72019b3a3dda4cce10810af4228"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48e8e22bdb401">
+		<description>Pingpong (1996)(C.Jahn &amp; Andy Schraepel)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3625">
+				<rom name="Pingpong (1996)(C.Jahn &amp; Andy Schraepel)(De).tap" size="3625" crc="27e03681" sha1="48e8e22bdb4013d307c5cb5b6fbcb3bd0e12010a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6129b2bb45be0">
+		<description>Pink Panther (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="89454">
+				<rom name="Pink Panther (1988)(Gremlin Graphics).tap" size="89454" crc="93b42f80" sha1="6129b2bb45be0a73da0192483c6d6213f9513d90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9f3fdc64a78fd">
+		<description>Pink Pills 128 K - no timer last (2021)(Sebastian Braunert)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56284">
+				<rom name="Pink Pills 128 K - no timer last (2021)(Sebastian Braunert).tap" size="56284" crc="330b371c" sha1="9f3fdc64a78fd8be8d33cf2723ecd3ba6e8c061c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs64d1c18e548bb">
+		<description>Pink Pills 128 K - timer last (2021)(Sebastian Braunert)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55882">
+				<rom name="Pink Pills 128 K - timer last (2021)(Sebastian Braunert).tap" size="55882" crc="a88fe5f4" sha1="64d1c18e548bb0dc82512d0a915e01fbdbdb8156"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d39fa7c123ce">
+		<description>Pioneer (1984)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52911">
+				<rom name="Pioneer (1984)(Atlantis Software Ltd).tap" size="52911" crc="f4148e94" sha1="5d39fa7c123ce41ca975e55c55a491d202f63779"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf6f661330a2c5">
+		<description>Pipe Line (1992)(Dominic Morris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12951">
+				<rom name="Pipe Line (1992)(Dominic Morris).tap" size="12951" crc="4f6bcfca" sha1="f6f661330a2c521d6add53d3b5f45bacef5bfb88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e0af2311cf9c">
+		<description>Pipe Mania (1990)(Empire Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31132">
+				<rom name="Pipe Mania (1990)(Empire Software).tap" size="31132" crc="eed3227c" sha1="9e0af2311cf9c0e9027aa3015fa464476a532077"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7bb88a72c685f">
+		<description>Pipe Mania (1990)(Empire Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33317">
+				<rom name="Pipe Mania (1990)(Empire Software)[a].tap" size="33317" crc="2695e1b5" sha1="7bb88a72c685fbbdcadcd751bf0e365a31cb747e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse4b4ddde31da7">
+		<description>Pipe Mania (demo) (1990)(Empire Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29989">
+				<rom name="Pipe Mania (demo) (1990)(Empire Software).tap" size="29989" crc="93b2b624" sha1="e4b4ddde31da7888943cbc9ef6df2d4f2c9fe362"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsac4fcc19fb7e9">
+		<description>Pipeline (1985)(Viper Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12073">
+				<rom name="Pipeline (1985)(Viper Software).tap" size="12073" crc="3acd1b20" sha1="ac4fcc19fb7e976f33ca31b01f6f13bae2e1100c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2b1efc77ffc7f">
+		<description>Pippo (1986)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42493">
+				<rom name="Pippo (1986)(Mastertronic Ltd).tap" size="42493" crc="187b1f2a" sha1="2b1efc77ffc7f5deede03e7aafceddd1a02a5d11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf850af8d1b15e">
+		<description>Pippo 48K (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42906">
+				<rom name="Pippo 48K (1986)(Mastertronic).tap" size="42906" crc="bf464d08" sha1="f850af8d1b15eb52c9316fd0aaffc6eaed699b16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs28536e9756c61">
+		<description>Piramide (19xx)(David Bradley)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12615">
+				<rom name="Piramide (19xx)(David Bradley)(Sp).tap" size="12615" crc="3cf8985d" sha1="28536e9756c6176c0baf9ccd102e4122b0a57021"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs398044036d6ca">
+		<description>Pirate Captain Creed EN 48K (2023)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44764">
+				<rom name="Pirate Captain Creed EN 48K (2023)(Furillo Productions).tap" size="44764" crc="58a61ae6" sha1="398044036d6ca05fed5d81150fd81adf916d8927"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs025f93c9fd717">
+		<description>Pirate Captain Creed ES 48K (2023)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44740">
+				<rom name="Pirate Captain Creed ES 48K (2023)(Furillo Productions).tap" size="44740" crc="00f568ca" sha1="025f93c9fd717999f47087f2bbd3d71b76c07b9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsec35b53f62c59">
+		<description>Pirate Captain Creed JP 48K (2023)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44553">
+				<rom name="Pirate Captain Creed JP 48K (2023)(Furillo Productions).tap" size="44553" crc="736f88d8" sha1="ec35b53f62c59583b6fd8bbaaeccb0eff3de5ac8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscdb2b66927f6d">
+		<description>Piso Zero (1991)(Zigurat Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49914">
+				<rom name="Piso Zero (1991)(Zigurat Software)(Sp).tap" size="49914" crc="02d79a47" sha1="cdb2b66927f6d6d8f84fbfbd9ead36771fabf4d7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs02e803773ea6a">
 		<description>Pitman (2021)(Under4Mhz)</description>
 		<year>????</year>
@@ -10529,6 +10959,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="20266">
 				<rom name="Pitman (2021)(Under4Mhz).tap" size="20266" crc="8295e93d" sha1="02e803773ea6aa18f6526746ac4890d00397cac4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4e73ecd857f76">
+		<description>Pitman Seven (1983)(Visions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35475">
+				<rom name="Pitman Seven (1983)(Visions).tap" size="35475" crc="4663001d" sha1="4e73ecd857f76bd02fa2f283ab80e49e62aadd22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc9b97c7cad126">
+		<description>Pixerama (1985)(Load 'n' Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5317">
+				<rom name="Pixerama (1985)(Load 'n' Run)(Sp).tap" size="5317" crc="60b54017" sha1="c9b97c7cad126f6729f5fe5c0905a38a1a0985b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs41f6f59820713">
+		<description>Pixy The Microdot 2 (1989)(Soft Corn)[cr TFF Team]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38912">
+				<rom name="Pixy The Microdot 2 (1989)(Soft Corn)[cr TFF Team].tap" size="38912" crc="dd851668" sha1="41f6f5982071349ddf263bbbaf110791b9aeb65e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66db0ec8cdc57">
+		<description>Pixy The Microdot 2 (1989)(Soft Corn)[cr TFF Team][a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38646">
+				<rom name="Pixy The Microdot 2 (1989)(Soft Corn)[cr TFF Team][a].tap" size="38646" crc="72f1dc84" sha1="66db0ec8cdc57cac789a74dcf6397dd8886ec817"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7f1537e30c86c">
+		<description>Pizza Bar (1983)(Redwood Designs)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40634">
+				<rom name="Pizza Bar (1983)(Redwood Designs)[a].tap" size="40634" crc="0f96b4f0" sha1="7f1537e30c86c4b9a726a57640fe4c27b3cd9147"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18999,16 +19479,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="5212">
 				<rom name="Space Quest (19xx)(Ralf Juengling).tap" size="5212" crc="996a66b6" sha1="239103e610d43b067bd17f48b1fc6d91666950b9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs586ef8dacf63b">
-		<description>Space Racer 48K-128K (1988)(Loriciels)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49907">
-				<rom name="Space Racer 48K-128K (1988)(Loriciels).tzx" size="49907" crc="b5354073" sha1="586ef8dacf63b07fc9a15ce6b66ab082b0e6d085"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29372,6 +29842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5858c3dfde8a0">
+		<description>_-Thanatos (1986)(Erbe Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50435">
+				<rom name="_-Thanatos (1986)(Erbe Software)(Sp).tap" size="50435" crc="e66d3d35" sha1="5858c3dfde8a0bed440949c205321a7e17db77dd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs690054e8ca757">
 		<description>_AntiISDA_Warrior-</description>
 		<year>????</year>
@@ -29769,6 +30249,116 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="35070">
 				<rom name="_Orion.tzx" size="35070" crc="7d66bdf0" sha1="4fde5309751ae7727c0eb933f3b47859a82c0155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5bb6f295d0f35">
+		<description>_Pick Pocket (1983)(Gemini Marketing Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14952">
+				<rom name="_Pick Pocket (1983)(Gemini Marketing Ltd).tap" size="14952" crc="7b912e3a" sha1="5bb6f295d0f35bf0459c3a136d887a6678e92796"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46afb30588806">
+		<description>_Piggy (1985)(Argus Press Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15644">
+				<rom name="_Piggy (1985)(Argus Press Software Ltd).tap" size="15644" crc="00185e19" sha1="46afb30588806d475d8f40a56b96f258ecbb1a0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs994c8f7173609">
+		<description>_PILOT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7518">
+				<rom name="_PILOT.TAP" size="7518" crc="a24a5df1" sha1="994c8f717360994cb78f12af4321c92d973541b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5e18c12d95295">
+		<description>_Pinball (1983)(Sagittarian Softdware)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16187">
+				<rom name="_Pinball (1983)(Sagittarian Softdware)[a].tap" size="16187" crc="7ce30fa8" sha1="5e18c12d95295b35036a26afae9c8c93cf0b7db5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7de9b01847e67">
+		<description>_Pinball 16K (1983)(Sagittarian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16187">
+				<rom name="_Pinball 16K (1983)(Sagittarian).tap" size="16187" crc="26267d3e" sha1="7de9b01847e67997e6991dd1fa4d96d430499e5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4127fa599c995">
+		<description>_Piromania (1984)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28160">
+				<rom name="_Piromania (1984)(Automata UK).tap" size="28160" crc="d4e61cbb" sha1="4127fa599c995542e5afa9bad71b817774c5712f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba8d4177cb813">
+		<description>_Piromania (1984)(Automata UK)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27897">
+				<rom name="_Piromania (1984)(Automata UK)[a].tap" size="27897" crc="02f8f835" sha1="ba8d4177cb8136e06771789f25ca23b618eddcfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf3510a921314">
+		<description>_Pit Fighter (1991)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="148615">
+				<rom name="_Pit Fighter (1991)(Domark).tap" size="148615" crc="21a45230" sha1="bf3510a9213146626cd22aa5ed74e3e247f1601d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9f2ba889eb5ba">
+		<description>_Pitfall II - The Lost Caverns (1984)(Activision Inc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27168">
+				<rom name="_Pitfall II - The Lost Caverns (1984)(Activision Inc).tap" size="27168" crc="c34c7017" sha1="9f2ba889eb5ba7d94c0537301a46a7f45c3c7fae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ac982122be8e">
+		<description>_Pitfall II - The Lost Caverns (1984)(Activision Inc)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27294">
+				<rom name="_Pitfall II - The Lost Caverns (1984)(Activision Inc)[a].tap" size="27294" crc="9acc04e1" sha1="5ac982122be8e473bfbbd55d1a03e170aa536b22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse23eac899d9fc">
+		<description>_Pizza Bar (1983)(Redwood Designs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41757">
+				<rom name="_Pizza Bar (1983)(Redwood Designs).tap" size="41757" crc="98adafb9" sha1="e23eac899d9fcdae6022ef057e1b5e423614e468"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32342,6 +32932,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsea6b2a9de36d0">
+		<description>_Tron (1983)(Werner Spahl)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1742">
+				<rom name="_Tron (1983)(Werner Spahl)(De).tap" size="1742" crc="3829baef" sha1="ea6b2a9de36d0f4561710b1107e3e6b9bb13e94e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6ebf3a222b2c6">
+		<description>_troon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22709">
+				<rom name="_troon.tap" size="22709" crc="ec58e450" sha1="6ebf3a222b2c6804f713063077c98b06989f3262"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3c6f04050d1f0">
 		<description>_Trouble Brewin</description>
 		<year>????</year>
@@ -32349,6 +32959,106 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46240">
 				<rom name="_Trouble Brewin.TAP" size="46240" crc="19c6677d" sha1="3c6f04050d1f07567e8c1d333291f69036df1674"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b7cd5949274a">
+		<description>_TRRAIDER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23552">
+				<rom name="_TRRAIDER.tap" size="23552" crc="69bbf494" sha1="6b7cd5949274a55a64b553d1bc7bf142b68b431b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3a9659c48cb7d">
+		<description>_Trudnaya Doroga (1989)(Blacksoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32935">
+				<rom name="_Trudnaya Doroga (1989)(Blacksoft).tap" size="32935" crc="97db1612" sha1="3a9659c48cb7d1fcd8954e44824b5e60ed51d79f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd88ee5bf37cc">
+		<description>_Trudnaya Doroga</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32935">
+				<rom name="_Trudnaya Doroga.tap" size="32935" crc="26dc24fd" sha1="cd88ee5bf37ccd36a7340e65b6bce310b673e4a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs68028aaae8265">
+		<description>_Tube, The (1987)(Quicksilva Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48597">
+				<rom name="_Tube, The (1987)(Quicksilva Ltd).tap" size="48597" crc="ffd62a03" sha1="68028aaae8265c9f7c02431487e442d3f4e6a419"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d573097edff4">
+		<description>_Tujad (1986)(Ariolasoft UK Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47344">
+				<rom name="_Tujad (1986)(Ariolasoft UK Ltd).tap" size="47344" crc="34bfefef" sha1="8d573097edff4086566b9c5cc60f02722839dd8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66d589b20010e">
+		<description>_Turbo Esprit (1986)(Durell Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45902">
+				<rom name="_Turbo Esprit (1986)(Durell Software Ltd).tap" size="45902" crc="70e5cf61" sha1="66d589b20010e0b0f3e2933be6b2f1e550df8fd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1943019b86384">
+		<description>_Turbo Out Run</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="370772">
+				<rom name="_Turbo Out Run.tzx" size="370772" crc="0c8ef53f" sha1="1943019b86384e34d2af1e862f6c57e27bd4db1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7838ac632b140">
+		<description>_Turbo Outrun (1990)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="370522">
+				<rom name="_Turbo Outrun (1990)(US Gold).tap" size="370522" crc="80a6916d" sha1="7838ac632b140baf80cc5abda7089c56fb335d15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9820af6dba435">
+		<description>_Turrican II (demo) (1991)(Rainbow Arts)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54955">
+				<rom name="_Turrican II (demo) (1991)(Rainbow Arts)[a].tap" size="54955" crc="b91ce582" sha1="9820af6dba43563e0598cee2065896589d8be378"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d7642cd16e5c">
+		<description>_Twin World (1990)(Ubi Soft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="481538">
+				<rom name="_Twin World (1990)(Ubi Soft Ltd).tap" size="481538" crc="3ea063b8" sha1="6d7642cd16e5cf8e879f904a7805bd4456696411"/>
 			</dataarea>
 		</part>
 	</software>
