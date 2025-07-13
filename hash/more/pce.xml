@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 184 -->
+<!-- Number of items in this list = 185 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -23,22 +23,22 @@
 		</part>
 	</software>
 	<software name="pce331caf356617b">
-		<description>(demo)bg2 Tomaitheous '06</description>
+		<description>(demo)bg2 Tomaitheous 06</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524800">
-				<rom name="(demo)bg2 Tomaitheous '06.pce" size="524800" crc="6df833d6" sha1="331caf356617b18a9b8fdea08554be3929d8ec68"/>
+				<rom name="(demo)bg2 Tomaitheous 06.pce" size="524800" crc="6df833d6" sha1="331caf356617b18a9b8fdea08554be3929d8ec68"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="pcecfc43ad6f9900">
-		<description>(demo)bg3 Tomaitheous '06 (2)</description>
+		<description>(demo)bg3 Tomaitheous 06</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524800">
-				<rom name="(demo)bg3 Tomaitheous '06 (2).pce" size="524800" crc="d0c6c053" sha1="cfc43ad6f990084a52654dda6a710c5ca4f3c9b9"/>
+				<rom name="(demo)bg3 Tomaitheous 06.pce" size="524800" crc="d0c6c053" sha1="cfc43ad6f990084a52654dda6a710c5ca4f3c9b9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -942,6 +942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce9d19fa4dae320">
+		<description>Dead Moon - Tsuki Sekai no Akumu (J) [T-BR] (T-Lhotian G-Romhack BR)(2001)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Dead Moon - Tsuki Sekai no Akumu (J) [T-BR] (T-Lhotian G-Romhack BR)(2001).pce" size="524288" crc="38d643ae" sha1="9d19fa4dae320510b2ece763c86b2b17a6c339f4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcef27990efe3d32">
 		<description>Dinoforce (J)</description>
 		<year>????</year>
@@ -1423,12 +1433,12 @@
 		</part>
 	</software>
 	<software name="pce29bca6afcf1d7">
-		<description>Off the Wall [Proto 1] (2)</description>
+		<description>Off the Wall [Proto 1]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524800">
-				<rom name="Off the Wall [Proto 1] (2).pce" size="524800" crc="40f04a7c" sha1="29bca6afcf1d7555723cbd774a6e46f48ff1f67b"/>
+				<rom name="Off the Wall [Proto 1].pce" size="524800" crc="40f04a7c" sha1="29bca6afcf1d7555723cbd774a6e46f48ff1f67b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1573,12 +1583,12 @@
 		</part>
 	</software>
 	<software name="pce72de2eeb01fe6">
-		<description>r-type (unfinished hack) (2).sgx</description>
+		<description>r-type (unfinished hack)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="r-type (unfinished hack) (2).sgx.pce" size="524288" crc="cdc9bb74" sha1="72de2eeb01fe6fc24841e9e019d16655cb418e42"/>
+				<rom name="r-type (unfinished hack).pce" size="524288" crc="cdc9bb74" sha1="72de2eeb01fe6fc24841e9e019d16655cb418e42"/>
 			</dataarea>
 		</part>
 	</software>
