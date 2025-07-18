@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 507 -->
+<!-- Number of items in this list = 512 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2152,6 +2152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsfcb3ab2ece748">
+		<description>jurl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="jurl.sms" size="32768" crc="347fb7ab" sha1="fcb3ab2ece748e1f49c5efdd35a5c7f016a9f9cf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms6bba1bc5448a7">
 		<description>Jyankyo MSX2SMS Hack</description>
 		<year>????</year>
@@ -2459,6 +2469,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="425984">
 				<rom name="Lunar Skirmish v63 (2025)(MikGames).sms" size="425984" crc="08577d0c" sha1="0e37a736e4d3300b48ae44d1097793b3efb6dc7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms308d70543a2e3">
+		<description>Lunar Skirmish v64 (2025)(MikGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="425984">
+				<rom name="Lunar Skirmish v64 (2025)(MikGames).sms" size="425984" crc="461a369a" sha1="308d70543a2e3a9fbaedb05ceda529b279e3550a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4192,6 +4212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms8414068f32a3c">
+		<description>Stella in Adventure World (2024-25)(TSP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Stella in Adventure World (2024-25)(TSP).sms" size="524288" crc="2efda49b" sha1="8414068f32a3cbb9825098e600bf0d23edf391cd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms41eba2db0eaf4">
 		<description>Streets of Rage (Europe, Brazil) Saude Infinita</description>
 		<year>????</year>
@@ -4532,6 +4562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsfcd29b8ffc47c">
+		<description>Time Soldiers Pro (2023)(BcnAbel76)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Time Soldiers Pro (2023)(BcnAbel76).sms" size="262144" crc="1558b8c6" sha1="fcd29b8ffc47c403a4203139af056431f22ecae1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms45e3f5915a84e">
 		<description>Toss Coin MSX2SMS Hack</description>
 		<year>????</year>
@@ -4739,6 +4779,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Whack 'Em Smack 'Em Byrons Remarked (2025)(ArugulaZ).sms" size="49152" crc="aa77d825" sha1="a7219d8caa8df066322e9761e563ac0049159b8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6e61b6e39c9d8">
+		<description>Whack 'Em Smack 'Em Byrons Remarked (2025)(ArugulaZ)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Whack 'Em Smack 'Em Byrons Remarked (2025)(ArugulaZ)_1.sms" size="131072" crc="be34ae87" sha1="6e61b6e39c9d84ace1ad1bf9498f768ab2c0fb65"/>
 			</dataarea>
 		</part>
 	</software>
