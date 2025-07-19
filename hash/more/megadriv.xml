@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1957 -->
+<!-- Number of items in this list = 1958 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -11759,6 +11759,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="PapiCommandoReload-TectoyDemo.bin" size="1572864" crc="d73e6ad5" sha1="851d760cf48eb847bd2c0bdf39d9733facb7944e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene5d62667397bb">
+		<description>Paprium Minigame (2020)(WaterMelon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Paprium Minigame (2020)(WaterMelon).bin" size="524288" crc="57b0ffa4" sha1="e5d62667397bb344cae8c86fcbfbd9c56234b541"/>
 			</dataarea>
 		</part>
 	</software>
