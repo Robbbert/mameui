@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="kim1_cass" description="kim1_cass loose roms">
+	<software name="kimd36958b5b7944">
+		<description>lunar[01]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="kim1_cass">
+			<dataarea name="cass" size="227">
+				<rom name="lunar[01].kim" size="227" crc="86760745" sha1="d36958b5b794430b125e14e15175cc2f451300f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kim33dfd5fae3451">
+		<description>music1[01]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="kim1_cass">
+			<dataarea name="cass" size="165">
+				<rom name="music1[01].kim" size="165" crc="054f0a35" sha1="33dfd5fae34516f7fdc9af93a0ca51d390edbf76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kim702eee02d6d5d">
+		<description>music2[01]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="kim1_cass">
+			<dataarea name="cass" size="123">
+				<rom name="music2[01].kim" size="123" crc="5e6f2bd0" sha1="702eee02d6d5d1afd27c880a7744772727021665"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="kim11eaad2230067">
+		<description>musicbox[01]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="kim1_cass">
+			<dataarea name="cass" size="149">
+				<rom name="musicbox[01].kim" size="149" crc="b9f0ff9d" sha1="11eaad2230067c700fc93f74dc00a7f0035658c3"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

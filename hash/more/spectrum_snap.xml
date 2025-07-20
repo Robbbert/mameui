@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 444 -->
+<!-- Number of items in this list = 445 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -2959,6 +2959,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="11155">
 				<rom name="PSSST.Z80" size="11155" crc="f8b00adb" sha1="b0805cb1d6d90306bc2e197714aa2b84be853baa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d0dc3f5db1c4">
+		<description>Psytraxx 48K (1984)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="44693">
+				<rom name="Psytraxx 48K (1984)(The Edge).z80" size="44693" crc="362277ef" sha1="6d0dc3f5db1c499130ed4519c29ed1c3d947360b"/>
 			</dataarea>
 		</part>
 	</software>

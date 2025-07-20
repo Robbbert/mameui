@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1958 -->
+<!-- Number of items in this list = 1960 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6099,6 +6099,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="final zone -- fz senki axis (Hack, Spanish).bin" size="524288" crc="d0294acb" sha1="c2d64d68fdb2ba2b1d78de1e0cdfe972506e070c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc20da144165a0">
+		<description>FinalFightMD_087b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3932160">
+				<rom name="FinalFightMD_087b.bin" size="3932160" crc="6f5be1bc" sha1="c20da144165a029a0c90637a9da609f4be5c3664"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17942,13 +17952,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen3c8a2a3324b75">
-		<description>Thunderbolt II (Unl) [f1]</description>
+	<software name="gen3a661e32849d9">
+		<description>Thunderbolt II (1995-2019)(Piko Interactive)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Thunderbolt II (Unl) [f1].bin" size="524288" crc="a2ef16de" sha1="3c8a2a3324b7560d6e62e650bafc34a55af858ae"/>
+				<rom name="Thunderbolt II (1995-2019)(Piko Interactive).bin" size="524288" crc="ace388b3" sha1="3a661e32849d9a4162d01679cd4d2c03a799e4b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3c8a2a3324b75">
+		<description>Thunderbolt II (Prototype, Alt)(Unl)(1995)(Sun Green)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Thunderbolt II (Prototype, Alt)(Unl)(1995)(Sun Green).bin" size="524288" crc="a2ef16de" sha1="3c8a2a3324b7560d6e62e650bafc34a55af858ae"/>
 			</dataarea>
 		</part>
 	</software>

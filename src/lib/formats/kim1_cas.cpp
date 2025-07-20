@@ -93,6 +93,8 @@ static int kim1_handle_kim(int16_t *buffer, const uint8_t *casdata)
 	size = get_u16le( &casdata[6] );
 	file_id = casdata[8];
 
+	printf("KIM-1 tape info: File number = %2X, Start = %4X, Size = %4X\n",file_id,address,size);fflush(stdout);
+
 	data_pos = 9;
 	sample_count = 0;
 	checksum = casdata[4] + casdata[5];
