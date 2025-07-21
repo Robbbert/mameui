@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3489 -->
+<!-- Number of items in this list = 3528 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs53a4438466846">
+		<description>-Panama Joe (1984)(Sinclair Research Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16190">
+				<rom name="-Panama Joe (1984)(Sinclair Research Ltd)[cr [Cr][Cr].tap" size="16190" crc="ecd4368b" sha1="53a44384668460b47d867fbce07368a3a630f16c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs53ed416275c20">
+		<description>-Paperboy 2 (1992)(Mindscape International Inc)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33768">
+				<rom name="-Paperboy 2 (1992)(Mindscape International Inc)[cr [Cr][Cr].tap" size="33768" crc="976be956" sha1="53ed416275c20237f64824aaed85250cbb4068c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11122,6 +11142,176 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4a4d8cdc46656">
+		<description>Pad Painter (1984)(Green Fish Software Enterprise)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39730">
+				<rom name="Pad Painter (1984)(Green Fish Software Enterprise).tap" size="39730" crc="cbcd116b" sha1="4a4d8cdc46656b0136ac7efb080e0cf7a658e41e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e19f5dc95cc7">
+		<description>Page's Castle Quest 48K-AY (2014)(T.D.F. micro-visions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36810">
+				<rom name="Page's Castle Quest 48K-AY (2014)(T.D.F. micro-visions).tzx" size="36810" crc="9aefb680" sha1="3e19f5dc95cc7fe3f5f2b870737d12c52c1520e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe40af200d019">
+		<description>PaintBall-2048 - 1 Player (2019)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45736">
+				<rom name="PaintBall-2048 - 1 Player (2019)(PC NONO Games).tap" size="45736" crc="f256bac3" sha1="be40af200d0199b7934da170df50d318961c80ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc32676b31083f">
+		<description>PaintBall-2048 - 2 Players (2019)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46282">
+				<rom name="PaintBall-2048 - 2 Players (2019)(PC NONO Games).tap" size="46282" crc="4478a7d8" sha1="c32676b31083f8c38691e84dd9e04a4473a8bdb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs57de157936443">
+		<description>Painter Man 128K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34210">
+				<rom name="Painter Man 128K (2025)(KTB Productions).tap" size="34210" crc="b4035e5d" sha1="57de1579364431949004e6f8a1e08df5b8f96390"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs02dbe51da5d9a">
+		<description>Painter Man 48K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38468">
+				<rom name="Painter Man 48K (2025)(KTB Productions).tap" size="38468" crc="e4e45cf8" sha1="02dbe51da5d9ade6d026ddf85f227bfcf435abe0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs62dbce8921b18">
+		<description>Pakacuda (1983)(Rabbit Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15372">
+				<rom name="Pakacuda (1983)(Rabbit Software).tap" size="15372" crc="789f0e0b" sha1="62dbce8921b182a635a19d52c80cc38918858d65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs222c002046ef9">
+		<description>Paletojones 48K (2021)(Mananuk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44486">
+				<rom name="Paletojones 48K (2021)(Mananuk).tap" size="44486" crc="9c9ec285" sha1="222c002046ef9e807620242360285be29c272cc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92cfeb65ac9a6">
+		<description>paletojonesEnglish</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41476">
+				<rom name="paletojonesEnglish.tap" size="41476" crc="ad013c6c" sha1="92cfeb65ac9a63ce0ea322885c3704d25e853c02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa749553f01fde">
+		<description>PaletoJonesSpanish</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41498">
+				<rom name="PaletoJonesSpanish.tap" size="41498" crc="b2be31f3" sha1="a749553f01fde00341af291f0da0066d3c146024"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs840886ef7fb84">
+		<description>Panama Joe 48K (1984)(Parker Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13432">
+				<rom name="Panama Joe 48K (1984)(Parker Software).tap" size="13432" crc="ab75b7ef" sha1="840886ef7fb84542d0c0e2314a3e34590ede0630"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7c086fa7b7d47">
+		<description>Pandora (1986)(M.Borkowski)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49304">
+				<rom name="Pandora (1986)(M.Borkowski)(Unk-Lang).tap" size="49304" crc="9b07b57d" sha1="7c086fa7b7d47677fae862420ee953a1535f48af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs685c1dc7f0ffa">
+		<description>Pang (1990)(Ocean Software Ltd)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="100331">
+				<rom name="Pang (1990)(Ocean Software Ltd)(128k).tap" size="100331" crc="4aa787a5" sha1="685c1dc7f0ffaf5056dd65443a23fe8e1d3a594f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0836bb15e0f1c">
+		<description>Pang (1990)(Ocean Software Ltd)[a](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="100245">
+				<rom name="Pang (1990)(Ocean Software Ltd)[a](128K).tap" size="100245" crc="4c683991" sha1="0836bb15e0f1c9f33960cffbd1430e0ccb91fb3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5f9ce19933bb8">
+		<description>Pang (1990)(Ocean Software Ltd)[t Double M](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="102305">
+				<rom name="Pang (1990)(Ocean Software Ltd)[t Double M](128K).tap" size="102305" crc="6a95610b" sha1="5f9ce19933bb8a93687227958220f1d86ed66dd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc23efa23af0a5">
+		<description>Pang (demo) (1990)(Ocean Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32243">
+				<rom name="Pang (demo) (1990)(Ocean Software Ltd)(128K).tap" size="32243" crc="988d22a4" sha1="c23efa23af0a584187e073df18c29a76fbeb1f96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8be0ffc9f9e97">
+		<description>Pang 128K (1990)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="100344">
+				<rom name="Pang 128K (1990)(Ocean).tap" size="100344" crc="06ce4e01" sha1="8be0ffc9f9e976894c54255e99a8b3f2d16dd9f9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5705e4d909cd4">
 		<description>Pang</description>
 		<year>????</year>
@@ -11129,6 +11319,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="104369">
 				<rom name="Pang.tzx" size="104369" crc="ebd8fd7a" sha1="5705e4d909cd4ecd71b3621374fe6c125180b1d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd01d5d0b0dcb">
+		<description>Panico En El Express (1984)(Hipocrates Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50639">
+				<rom name="Panico En El Express (1984)(Hipocrates Software)(Sp).tap" size="50639" crc="d2445994" sha1="cd01d5d0b0dcb862d79b099bfba0f467f9d6a9bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7dc412bd8acb9">
+		<description>Panther (1989)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34605">
+				<rom name="Panther (1989)(Mastertronic).tap" size="34605" crc="d323cb33" sha1="7dc412bd8acb9344d74d0d453d0c2b64237ea0bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse5fb8ae0e4f59">
+		<description>Panzerschlacht (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12857">
+				<rom name="Panzerschlacht (19xx)(-)(De).tap" size="12857" crc="2e6818ef" sha1="e5fb8ae0e4f59b17c28e1cdc214330ecc67bc0ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3581f79f2c35d">
+		<description>Paperboy (1986)(Elite Systems Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44046">
+				<rom name="Paperboy (1986)(Elite Systems Ltd).tap" size="44046" crc="f25111b5" sha1="3581f79f2c35daee80684be0fa09c18ecea51b8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs130275afc646f">
+		<description>Paperboy (1986)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51430">
+				<rom name="Paperboy (1986)(Elite Systems).tap" size="51430" crc="ac1c032c" sha1="130275afc646fa2e52913b0378d82804fa26dde1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75534d48db01b">
+		<description>Papyrus 48K (2020)(F.J. Urbaneja)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29120">
+				<rom name="Papyrus 48K (2020)(F.J. Urbaneja).tap" size="29120" crc="f85af5a2" sha1="75534d48db01bde83adef5858dd53382d4d00ca8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31682,6 +31932,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsaf440f0252924">
+		<description>_Painter (19xx)(A &amp; F Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32256">
+				<rom name="_Painter (19xx)(A &amp; F Software).tap" size="32256" crc="f915de89" sha1="af440f0252924329e42eb22ec45aa0477467116f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseca7ad48637f6">
+		<description>_Painter (19xx)(A &amp; F Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31833">
+				<rom name="_Painter (19xx)(A &amp; F Software)[a].tap" size="31833" crc="08ae2406" sha1="eca7ad48637f66f13573ea1ad9ef8f6e7768978e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs11ac27099a109">
+		<description>_Pandemonia (1983)(CRL Group PLC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27321">
+				<rom name="_Pandemonia (1983)(CRL Group PLC).tap" size="27321" crc="7fb45a64" sha1="11ac27099a1096a0375518c6c3527d74ca881c2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4e286047f4ba8">
+		<description>_Panic (1983)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39184">
+				<rom name="_Panic (1983)(PSS).tap" size="39184" crc="f7c9afba" sha1="4e286047f4ba8bbd19dc0e5ad7b43e6bcaec971b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse667de77c0719">
+		<description>_Panzadrome (1985)(Ariolasoft UK Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48705">
+				<rom name="_Panzadrome (1985)(Ariolasoft UK Ltd).tap" size="48705" crc="b4f86cfa" sha1="e667de77c0719edfed44b480024c887443f30572"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7ed1956d06c2b">
 		<description>_Parap Shock (1989)(MicroHobby)(Sp)</description>
 		<year>????</year>
@@ -34832,6 +35132,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc64e1de1b46f2">
+		<description>_War Of The Roses, The (1991)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33822">
+				<rom name="_War Of The Roses, The (1991)(CCS).tap" size="33822" crc="5ef2ba34" sha1="c64e1de1b46f2b511dc3932bfcd75c1742fc20ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9c09551ba9798">
+		<description>_War Of The Worlds, The (1984)(CRL Group PLC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80571">
+				<rom name="_War Of The Worlds, The (1984)(CRL Group PLC).tap" size="80571" crc="c7d148c6" sha1="9c09551ba9798d16019f6ab8c2baed65cc6a2688"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf4251d0cbd371">
+		<description>_War Of The Worlds, The (1984)(CRL Group PLC)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="67222">
+				<rom name="_War Of The Worlds, The (1984)(CRL Group PLC)[a].tap" size="67222" crc="03b182f4" sha1="f4251d0cbd37133143f55eb052675e9e624d9a0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d0ca6ccb7c4a">
+		<description>_War Of The Worlds, The - Ending (1984)(CRL Group PLC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14378">
+				<rom name="_War Of The Worlds, The - Ending (1984)(CRL Group PLC).tap" size="14378" crc="5e48f84d" sha1="5d0ca6ccb7c4afcdcba3556bb4e8c5b9d41eb9af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs54e979ce94a6e">
+		<description>_Warlock (1988)(The Edge Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42376">
+				<rom name="_Warlock (1988)(The Edge Software).tap" size="42376" crc="615f6cb1" sha1="54e979ce94a6e1af882482cd503ce6aacb734c25"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs91f280cb914e9">
 		<description>_WARLOCK</description>
 		<year>????</year>
@@ -34839,6 +35189,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="7742">
 				<rom name="_WARLOCK.TAP" size="7742" crc="1ca1e360" sha1="91f280cb914e9d8a1a444d9cc8e81384b7647eca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba0e583f55dd2">
+		<description>_warlord</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31117">
+				<rom name="_warlord.tap" size="31117" crc="bf8b9c92" sha1="ba0e583f55dd295b71bd53932044a315d94ac6e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3f5c0720cfe66">
+		<description>_Warlords (1985)(Interceptor Micros Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48351">
+				<rom name="_Warlords (1985)(Interceptor Micros Software).tap" size="48351" crc="ecd2a2f4" sha1="3f5c0720cfe6611ad2fa1560d744f5f266405423"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0cc1b5d1d4668">
+		<description>_Warp Factor 6 (1986)(Wildest Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49651">
+				<rom name="_Warp Factor 6 (1986)(Wildest Dreams).tap" size="49651" crc="630b8ddf" sha1="0cc1b5d1d46689c4536fac0f1ca59e47d2a0aa17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a6f0da8c2e48">
+		<description>_Way Of The Exploding Fist 2 - The Legend Continues (1986)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47714">
+				<rom name="_Way Of The Exploding Fist 2 - The Legend Continues (1986)(Melbourne House).tap" size="47714" crc="9c210ed3" sha1="9a6f0da8c2e4820b77dc4f1310762826f01e40c4"/>
 			</dataarea>
 		</part>
 	</software>
