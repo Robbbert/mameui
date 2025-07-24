@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1960 -->
+<!-- Number of items in this list = 1963 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3292,6 +3292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen8ae5884fe9cd3">
+		<description>Assault Suit Leynos Re-Localization T-Eng (2025)(GoodLuckTrying)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Assault Suit Leynos Re-Localization T-Eng (2025)(GoodLuckTrying).bin" size="1048576" crc="9c14a66b" sha1="8ae5884fe9cd312e5fa502baf1db03eea3a4d534"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend3df6fd8949e4">
 		<description>astafm 2008-07-08</description>
 		<year>????</year>
@@ -6072,6 +6082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genc20da144165a0">
+		<description>Final Fight MD v0.87b (2025)(MXRetroDev - CFX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3932160">
+				<rom name="Final Fight MD v0.87b (2025)(MXRetroDev - CFX).bin" size="3932160" crc="6f5be1bc" sha1="c20da144165a029a0c90637a9da609f4be5c3664"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb5b6c0df76d6b">
 		<description>Final Fight MD v0.8b (2025)(MXRetroDev)</description>
 		<year>????</year>
@@ -6099,16 +6119,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="final zone -- fz senki axis (Hack, Spanish).bin" size="524288" crc="d0294acb" sha1="c2d64d68fdb2ba2b1d78de1e0cdfe972506e070c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genc20da144165a0">
-		<description>FinalFightMD_087b</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3932160">
-				<rom name="FinalFightMD_087b.bin" size="3932160" crc="6f5be1bc" sha1="c20da144165a029a0c90637a9da609f4be5c3664"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12582,6 +12592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen6fd8a6cf4bf2e">
+		<description>Revenge of Shinobi Restoration, The (2025)(SCD, Psyklax)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Revenge of Shinobi Restoration, The (2025)(SCD, Psyklax).bin" size="524288" crc="5beba755" sha1="6fd8a6cf4bf2e6d1eb49cfe4f52568fe711b4c3e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gene1c8011ff878c">
 		<description>revolution x (usa, europe)</description>
 		<year>????</year>
@@ -16109,6 +16129,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4174998">
 				<rom name="Sonic3KnucklesBatlleRace.bin" size="4174998" crc="e23dd7c2" sha1="c8852175919990b5917b72c20d51ce24c3f4ae89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen691894261033c">
+		<description>Sonic3ParamountPromoCart</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Sonic3ParamountPromoCart.md" size="4194304" crc="f9881aae" sha1="691894261033cef1936a2ad9ef594e30241c7e0b"/>
 			</dataarea>
 		</part>
 	</software>
