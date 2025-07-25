@@ -347,7 +347,7 @@ void macbug_state::macbug(machine_config &config)
 	m_maincpu->q_cb().set(FUNC(macbug_state::q_w));
 
 	// video hardware
-	MC6847_NTSC(config, m_crtc, XTAL(3'579'545)); // unknown if PAL or NTSC
+	MC6847(config, m_crtc, XTAL(3'579'545)); // unknown if PAL or NTSC
 	m_crtc->set_screen("screen");
 	m_crtc->input_callback().set(FUNC(macbug_state::videoram_r));
 	// not using any graphic modes

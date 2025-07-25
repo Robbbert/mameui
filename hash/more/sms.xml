@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 523 -->
+<!-- Number of items in this list = 525 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -4619,6 +4619,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Tank Battalion (KR).sms" size="24576" crc="42d911f3" sha1="53bac13aab7ed6b83effa2e79f81e19a4efcea58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms63ce88319571b">
+		<description>Tank Battle v0.02d (2023)(Revo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Tank Battle v0.02d (2023)(Revo).sms" size="49152" crc="7f3e8931" sha1="63ce88319571b99e4335fbf9d9bd6445a9235edc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms0531335910825">
+		<description>Tanques (Brazil)(2009)(Tec Toy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Tanques (Brazil)(2009)(Tec Toy).sms" size="49152" crc="b67f24da" sha1="0531335910825b2fb5fb378bbb86014e56f62e6c"/>
 			</dataarea>
 		</part>
 	</software>

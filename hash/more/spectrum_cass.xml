@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3555 -->
+<!-- Number of items in this list = 3586 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d044eebd2b70">
+		<description>-Overlander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42893">
+				<rom name="-Overlander.tap" size="42893" crc="2880ac00" sha1="6d044eebd2b70e458a6ccc293be88f5dfb43cbac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11112,6 +11122,116 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs75d932a65a0ca">
+		<description>Osten (1984)(JC Jumbo Data)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6911">
+				<rom name="Osten (1984)(JC Jumbo Data)(Unk-Lang).tap" size="6911" crc="ca5bda37" sha1="75d932a65a0ca964db0184fca716fa25c142a830"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs913af7ff34ca8">
+		<description>Ostron (1983)(Softek Software International Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15730">
+				<rom name="Ostron (1983)(Softek Software International Ltd).tap" size="15730" crc="a907adbd" sha1="913af7ff34ca8c4b7d9058d7365027bd568e7d26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs23b1146e8fc8f">
+		<description>Osvajanje Zvezda (19xx)(-)(Yu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2733">
+				<rom name="Osvajanje Zvezda (19xx)(-)(Yu).tap" size="2733" crc="e2bb820c" sha1="23b1146e8fc8fe46eb681dda114ec17c1210627b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs69b45b8555015">
+		<description>OTAN Alerta! + Warzone (1985)(Juegos &amp; Estrategia)(Sp)(Tape 1 of 1 Side 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40084">
+				<rom name="OTAN Alerta! + Warzone (1985)(Juegos &amp; Estrategia)(Sp)(Tape 1 of 1 Side 1).tap" size="40084" crc="b5a37c73" sha1="69b45b8555015df5a7cb26ae901a34ead9ab8d3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e4a4f934a76b">
+		<description>OTAN Alerta! + Warzone (1985)(Juegos &amp; Estrategia)(Sp)(Tape 1 of 1 Side 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37605">
+				<rom name="OTAN Alerta! + Warzone (1985)(Juegos &amp; Estrategia)(Sp)(Tape 1 of 1 Side 2).tap" size="37605" crc="9ffaf75c" sha1="7e4a4f934a76bfff56641c93c9f3c40a516fc27a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6346458bc0de8">
+		<description>Othello (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3919">
+				<rom name="Othello (19xx)(-)(De).tap" size="3919" crc="f16bf179" sha1="6346458bc0de8dc00e4348fcdee2e16573382168"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2d057128ea2b3">
+		<description>Othello (19xx)(ERE Informatique)(Fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9344">
+				<rom name="Othello (19xx)(ERE Informatique)(Fr).tap" size="9344" crc="2a714343" sha1="2d057128ea2b3dcf398d27b2930e572c3569fb8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5dad65cbff1d">
+		<description>Out Cast (1987)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Out Cast (1987)(CRL Group).tap" size="49343" crc="f8f3e530" sha1="a5dad65cbff1dd55b06e1f9fdb85714157dc2676"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf6f628823c6df">
+		<description>Out For The Count (1989)(Dynamite Designs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34940">
+				<rom name="Out For The Count (1989)(Dynamite Designs).tap" size="34940" crc="5e6fafa3" sha1="f6f628823c6dfd31bc0d76fc0d70afe85dbea99c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba16719f878b9">
+		<description>Out Of The Shadows (1984)(Mizar Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41561">
+				<rom name="Out Of The Shadows (1984)(Mizar Computing).tap" size="41561" crc="d51a1039" sha1="ba16719f878b90573bd40cc0712136d2feb57212"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa2027220caef3">
+		<description>Out Of This World (1987)(Ariolasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49664">
+				<rom name="Out Of This World (1987)(Ariolasoft).tap" size="49664" crc="11275e76" sha1="a2027220caef3506c7f2861fa32cfe41b132e693"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs26dc62b56af26">
 		<description>Out Run ZX</description>
 		<year>????</year>
@@ -11122,6 +11242,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb545c829994c5">
+		<description>Outlet - The Spectrum Drive Magazine! No.78 (1994)(Chezron Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="267848">
+				<rom name="Outlet - The Spectrum Drive Magazine! No.78 (1994)(Chezron Software).tap" size="267848" crc="f7c79377" sha1="b545c829994c579bc09fa5c82b9c5b6745a5cb0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2267f582294c7">
+		<description>Outrun (1987)(US Gold)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="107826">
+				<rom name="Outrun (1987)(US Gold)[a2].tap" size="107826" crc="efbfff53" sha1="2267f582294c7640896d623b8e726bb33ddcd23a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbb9fc769ee19f">
+		<description>Outrun (1987)(US Gold)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128458">
+				<rom name="Outrun (1987)(US Gold)[a].tap" size="128458" crc="1c4dde6b" sha1="bb9fc769ee19ff2e69d8c6593e2f7fe96b002d77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e02483cb2cdd">
+		<description>Overlander (1988)(Elite Systems Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58270">
+				<rom name="Overlander (1988)(Elite Systems Ltd)(128K).tap" size="58270" crc="f0e79999" sha1="7e02483cb2cdde96f20d62401454c1078386ff22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73e7b518d3836">
+		<description>Overlander (1988)(Elite Systems Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48376">
+				<rom name="Overlander (1988)(Elite Systems Ltd).tap" size="48376" crc="420c81a2" sha1="73e7b518d38363c48d4d2bca0fe8acf78bab20d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81f595e929828">
+		<description>Overload (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4984">
+				<rom name="Overload (19xx)(-).tap" size="4984" crc="d59590e3" sha1="81f595e9298287e753c56e5ed52ef950b1c803e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a9534cd727e2">
+		<description>Overlord (1985)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47352">
+				<rom name="Overlord (1985)(CCS).tap" size="47352" crc="a2aff211" sha1="9a9534cd727e20982e3d078677b73a19dfd11042"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3913016c87a51">
+		<description>Overlords (1985)(M.C. Lothlorien)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29272">
+				<rom name="Overlords (1985)(M.C. Lothlorien).tap" size="29272" crc="439e7854" sha1="3913016c87a51d7be1a5f049d6850517ddcb58ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b849f3bdaa56">
+		<description>OVERSCAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8570">
+				<rom name="OVERSCAN.TAP" size="8570" crc="a7783d1b" sha1="3b849f3bdaa5640f0f24ee5a05fafd302aa65e29"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa498996c25395">
 		<description>P-47 - The Freedom Fighter (1990)(Firebird)[t]</description>
 		<year>????</year>
@@ -11129,6 +11339,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="81345">
 				<rom name="P-47 - The Freedom Fighter (1990)(Firebird)[t].tap" size="81345" crc="795654d0" sha1="a498996c25395afd3ef411fefbdafd3afc3c545e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs88491cab92d70">
+		<description>P-47 The Feedom Fighter 128K (Hack)(1990-2022)(SGT - Slider, Goodboy, Tiboh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="119134">
+				<rom name="P-47 The Feedom Fighter 128K (Hack)(1990-2022)(SGT - Slider, Goodboy, Tiboh).tap" size="119134" crc="9ec5769f" sha1="88491cab92d70e7f07656b6e581c5fd1b4dbcba4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c16360ce6408">
+		<description>P-47 Thunderbolt 48K-128K (1990)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="81239">
+				<rom name="P-47 Thunderbolt 48K-128K (1990)(Firebird Software).tap" size="81239" crc="3d1ffa84" sha1="2c16360ce640848dda9838cfd03b7425e5fe3c53"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32122,6 +32352,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa04fea64e5c1e">
+		<description>_Othello (1983)(CDS Micro Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15198">
+				<rom name="_Othello (1983)(CDS Micro Systems).tap" size="15198" crc="1ae4cb5e" sha1="a04fea64e5c1e661778567671bf974e5c697c703"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs594a70c7539e9">
+		<description>_Outrun Europa (1991)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="300496">
+				<rom name="_Outrun Europa (1991)(US Gold).tap" size="300496" crc="3240887e" sha1="594a70c7539e98594183eec49b92fa1d828b9614"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99e680d1b370c">
+		<description>_Overkill (1988)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45061">
+				<rom name="_Overkill (1988)(Atlantis Software Ltd).tap" size="45061" crc="d542e418" sha1="99e680d1b370cbb8600d6e9c06ed643b090ad878"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsaf440f0252924">
 		<description>_Painter (19xx)(A &amp; F Software)</description>
 		<year>????</year>
@@ -35519,6 +35779,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="38400">
 				<rom name="_Wulfan The Barbarian (1987)(Mastertronic Ltd)[a].tap" size="38400" crc="7c88e42b" sha1="42239e037556395d5bed34f24496e26791822fd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee84e530e2439">
+		<description>_Xarq (1988)(Electric Dreams Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47686">
+				<rom name="_Xarq (1988)(Electric Dreams Software).tap" size="47686" crc="02f9fcd6" sha1="ee84e530e2439c3ad3f956d9c82fced4b90e2bb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs83a023b223a04">
+		<description>_Xcel (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52140">
+				<rom name="_Xcel (1985)(Mastertronic).tap" size="52140" crc="8a3dc181" sha1="83a023b223a04f7d49a482add6b1deb2724c5ba8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs17d25df48c2be">
+		<description>_Xenon (1988)(Melbourne House)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="61742">
+				<rom name="_Xenon (1988)(Melbourne House)[a2].tap" size="61742" crc="422cf29e" sha1="17d25df48c2be3da1dc731e4892d5787992a8897"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75031a5b99d37">
+		<description>_Xevious (1987)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27099">
+				<rom name="_Xevious (1987)(US Gold).tap" size="27099" crc="f00115a2" sha1="75031a5b99d37aca60d53d46cdc707ce29b16357"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75e73879ea66a">
+		<description>_Xiv Beogradska Gimnazika (1984)(Pandovisia)(UNK-LANG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49080">
+				<rom name="_Xiv Beogradska Gimnazika (1984)(Pandovisia)(UNK-LANG).tap" size="49080" crc="2fdf7a98" sha1="75e73879ea66aa2079c1c1948e145470f23c1312"/>
 			</dataarea>
 		</part>
 	</software>

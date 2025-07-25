@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 445 -->
+<!-- Number of items in this list = 446 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -2779,6 +2779,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="31692">
 				<rom name="Out Run (1988)(U.S. Gold)[128K].z80" size="31692" crc="7cc211cf" sha1="1642e834884b2a1ec83b6d9c09ac1f688a746f43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2342cbd5e964d">
+		<description>P-47 Thunderbolt 128K (1990)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="72894">
+				<rom name="P-47 Thunderbolt 128K (1990)(Firebird Software).z80" size="72894" crc="9efaf7fc" sha1="2342cbd5e964d4b917224a941621516fce5b9316"/>
 			</dataarea>
 		</part>
 	</software>
