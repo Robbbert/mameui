@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3586 -->
+<!-- Number of items in this list = 3615 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -11052,6 +11052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7ebdd39787fb5">
+		<description>O-Puzz Attack 48K (2018)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29543">
+				<rom name="O-Puzz Attack 48K (2018)(Oblo).tap" size="29543" crc="ebadd8c9" sha1="7ebdd39787fb54e882da8168a38210bd78c2b2c8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0da47b3d97f4c">
 		<description>Oddi The Viking 128K (2010)(Digital Brains)</description>
 		<year>????</year>
@@ -11092,6 +11102,116 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsba0c35f08c601">
+		<description>Opposition (1984)(Pulsonic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16224">
+				<rom name="Opposition (1984)(Pulsonic).tap" size="16224" crc="792d3b5a" sha1="ba0c35f08c6019b0ccd603fe6698019a65d469ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa1f8b31df543e">
+		<description>Oracle's Cave, The (1984)(Doric Computer Services)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46570">
+				<rom name="Oracle's Cave, The (1984)(Doric Computer Services).tap" size="46570" crc="d36ed74b" sha1="a1f8b31df543ef4198046e066fde0d1bf3bdcb53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs52365fc4bd6da">
+		<description>Oracle's Cave, The (1984)(Doric Computer Services)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46713">
+				<rom name="Oracle's Cave, The (1984)(Doric Computer Services)[a].tap" size="46713" crc="b0369ceb" sha1="52365fc4bd6da28878879e12694d9cca6746504b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs60a36b2b804ab">
+		<description>Orb (1982)(Impact Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27455">
+				<rom name="Orb (1982)(Impact Software).tap" size="27455" crc="ff897c63" sha1="60a36b2b804ab3f765fdb2fd774368ea6f592d17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1df03ec2cef5f">
+		<description>Orb Quest (19xx)(Paul &amp; Timothy Stitt)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63083">
+				<rom name="Orb Quest (19xx)(Paul &amp; Timothy Stitt)(128K).tap" size="63083" crc="63799a03" sha1="1df03ec2cef5f0a19ec2623b90f75a78caacfcd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf1907e846348a">
+		<description>Orbix The Terrorball (1986)(Streetwise)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49383">
+				<rom name="Orbix The Terrorball (1986)(Streetwise).tap" size="49383" crc="20294e4a" sha1="f1907e846348a87e51233321f8a4c57148a584c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdca07dc33254a">
+		<description>Orc Attack (1984)(Creative Sparks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31064">
+				<rom name="Orc Attack (1984)(Creative Sparks).tap" size="31064" crc="fc33f9b6" sha1="dca07dc33254a6fac6033ee3428715b96a15b333"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9b2b732013c4d">
+		<description>Orc Attack (1984)(Creative Sparks)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31092">
+				<rom name="Orc Attack (1984)(Creative Sparks)[a].tap" size="31092" crc="2624f2d8" sha1="9b2b732013c4d429096221fc7a7e7481d8b971aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs41ec5b55c99e5">
+		<description>Orc Island (1984)(Double Play Adventures)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43052">
+				<rom name="Orc Island (1984)(Double Play Adventures).tap" size="43052" crc="323c4f2d" sha1="41ec5b55c99e59e6f47c7ae297db75a74edf9503"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe5091ee765af">
+		<description>Orc Slayer (1984)(Gamma Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38322">
+				<rom name="Orc Slayer (1984)(Gamma Software).tap" size="38322" crc="750960f0" sha1="fe5091ee765af93b9ca788ca30f3efd730afe2bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbb6288b9775f1">
+		<description>Order of Sleeping Dragon, The (2019)(Evgeniya Zapolnova)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125004">
+				<rom name="Order of Sleeping Dragon, The (2019)(Evgeniya Zapolnova).tap" size="125004" crc="5652c985" sha1="bb6288b9775f1f19ddf6b0326136a41b19e34d04"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs342cc9ad4e1f9">
 		<description>Orel BK08 demo tape-reklama</description>
 		<year>????</year>
@@ -11099,6 +11219,106 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="5286032">
 				<rom name="Orel BK08 demo tape-reklama.wav" size="5286032" crc="15016920" sha1="342cc9ad4e1f9d4612297225b8fa1d4c252ecc0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs553298f4b97ab">
+		<description>Organic Matter (2021)(Chentzilla)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38849">
+				<rom name="Organic Matter (2021)(Chentzilla).tap" size="38849" crc="c4798ebb" sha1="553298f4b97ab2b85ef2e377c12f910f23299717"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9728c4e6d6937">
+		<description>Orient Gardens (19xx)(-)(It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43008">
+				<rom name="Orient Gardens (19xx)(-)(It).tap" size="43008" crc="6c7dd550" sha1="9728c4e6d693747d58adda035115f1e387ea6102"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf942175291edd">
+		<description>Orient Gardens (19xx)(-)(It)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42928">
+				<rom name="Orient Gardens (19xx)(-)(It)[a].tap" size="42928" crc="ba6bfe78" sha1="f942175291edd5a9c1691193fe888e2365295db7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5df54f8d09041">
+		<description>Oriental Games 128K (1990)(Micro Style)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138887">
+				<rom name="Oriental Games 128K (1990)(Micro Style).tap" size="138887" crc="4e03b386" sha1="5df54f8d0904118d35c55702d15abbc1b8909d36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd17c06be22c8">
+		<description>Orion (1983)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25718">
+				<rom name="Orion (1983)(Software Projects).tap" size="25718" crc="03a6e8f9" sha1="cd17c06be22c8ab7c0427d440f28f3fcf70adf3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ad00da516878">
+		<description>Orion (19xx)(Proxima Software)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26305">
+				<rom name="Orion (19xx)(Proxima Software)(Cz).tap" size="26305" crc="b58e74d9" sha1="2ad00da516878a7348beeccac31b2b9d34863848"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9027d1dbfd08c">
+		<description>Orm And Cheep - Narrow Squekes (1985)(Macmillan Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39207">
+				<rom name="Orm And Cheep - Narrow Squekes (1985)(Macmillan Software Ltd).tap" size="39207" crc="1a76a3fc" sha1="9027d1dbfd08c1a1ee42141102d33de3f3a040ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9bb2d4bbe1a86">
+		<description>Orm And Cheep - The Birthday Party (1985)(Macmillan Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39019">
+				<rom name="Orm And Cheep - The Birthday Party (1985)(Macmillan Software Ltd).tap" size="39019" crc="be4e7f48" sha1="9bb2d4bbe1a8652c126fedfdea406dcc43d9a3d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0256529eaf6bd">
+		<description>Orvol Voon EN v1.2 128K (2024)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35826">
+				<rom name="Orvol Voon EN v1.2 128K (2024)(The Mojon Twins).tap" size="35826" crc="cbec5308" sha1="0256529eaf6bdf5cd1c367d189ed8abc2f66171f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf29a1b7d122a6">
+		<description>Orvol Voon ES v1.2 128K (2024)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35816">
+				<rom name="Orvol Voon ES v1.2 128K (2024)(The Mojon Twins).tap" size="35816" crc="1c6aa3db" sha1="f29a1b7d122a64357a1a72cb549e3852acac60d2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11343,12 +11563,12 @@
 		</part>
 	</software>
 	<software name="zxs88491cab92d70">
-		<description>P-47 The Feedom Fighter 128K (Hack)(1990-2022)(SGT - Slider, Goodboy, Tiboh)</description>
+		<description>P-47 The Freedom Fighter 128K (Hack)(1990-2022)(SGT - Slider, Goodboy, Tiboh)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="119134">
-				<rom name="P-47 The Feedom Fighter 128K (Hack)(1990-2022)(SGT - Slider, Goodboy, Tiboh).tap" size="119134" crc="9ec5769f" sha1="88491cab92d70e7f07656b6e581c5fd1b4dbcba4"/>
+				<rom name="P-47 The Freedom Fighter 128K (Hack)(1990-2022)(SGT - Slider, Goodboy, Tiboh).tap" size="119134" crc="9ec5769f" sha1="88491cab92d70e7f07656b6e581c5fd1b4dbcba4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30992,16 +31212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsa5f553d354e15">
-		<description>Yenght - La Fuente de la Juventud (1984)(Dinamic Software)(Sp)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="45958">
-				<rom name="Yenght - La Fuente de la Juventud (1984)(Dinamic Software)(Sp).tap" size="45958" crc="36df229a" sha1="a5f553d354e15775e7365b7f3b85b45fd31d80a7"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs5d5c538e6a5b0">
 		<description>Yes Prime Minister (1987)(Mosaic Publishing Ltd)</description>
 		<year>????</year>
@@ -32339,6 +32549,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="112766">
 				<rom name="_Ninja Warriors, The.tzx" size="112766" crc="af303a6d" sha1="6f532f012a60501669448edea5e59773b857ff86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse568d77fa6cd3">
+		<description>_Orbiter (1982)(Silversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9346">
+				<rom name="_Orbiter (1982)(Silversoft).tap" size="9346" crc="78bb57c3" sha1="e568d77fa6cd3bebd4f594139556dffd3e5a8b15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2171246d6cb3e">
+		<description>_Orbix The Terrorball (1986)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49290">
+				<rom name="_Orbix The Terrorball (1986)(Domark).tap" size="49290" crc="92c1ece5" sha1="2171246d6cb3e6ab1af91879bc236a23ceda436c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsad315c75ba857">
+		<description>_Oriental Games (1990)(Micro Style)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="134774">
+				<rom name="_Oriental Games (1990)(Micro Style).tap" size="134774" crc="b4bb1499" sha1="ad315c75ba857aae7ac5141d1e8e90540da1054c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7ec09cdc8aea2">
+		<description>_Oriental Hero (1987)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49115">
+				<rom name="_Oriental Hero (1987)(Firebird Software Ltd).tap" size="49115" crc="992cacda" sha1="7ec09cdc8aea209d7bde0f552abd71d988aa976b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35842,6 +36092,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs91142c88f07c6">
+		<description>_Yacht Race (1985)(Hill MacGibbon)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49061">
+				<rom name="_Yacht Race (1985)(Hill MacGibbon)[a].tap" size="49061" crc="9498ce3c" sha1="91142c88f07c6378a19b7eaefb424fdb16aec8b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5f553d354e15">
+		<description>_Yenght - La Fuente de la Juventud ES 48K (1984)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45958">
+				<rom name="_Yenght - La Fuente de la Juventud ES 48K (1984)(Dinamic Software).tap" size="45958" crc="36df229a" sha1="a5f553d354e15775e7365b7f3b85b45fd31d80a7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs031b4d0e463ed">
 		<description>_Yie Ar Kung-Fu 48K (1985)(Imagine)</description>
 		<year>????</year>
@@ -35849,6 +36119,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="50571">
 				<rom name="_Yie Ar Kung-Fu 48K (1985)(Imagine).tzx" size="50571" crc="1ee835a1" sha1="031b4d0e463ed375379014cad234bf268a13847e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb361d7b11b8ce">
+		<description>_Yomp (1983)(Virgin Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17018">
+				<rom name="_Yomp (1983)(Virgin Games Ltd).tap" size="17018" crc="207481c3" sha1="b361d7b11b8ced4a3592ac237e24f38c67a358fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs64b819c909386">
+		<description>_Young Ones, The (1986)(Orpheus Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48315">
+				<rom name="_Young Ones, The (1986)(Orpheus Ltd).tap" size="48315" crc="172bb426" sha1="64b819c909386bde9bfffb7bd4f57f38d63be4ba"/>
 			</dataarea>
 		</part>
 	</software>
