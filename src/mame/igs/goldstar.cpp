@@ -591,7 +591,6 @@ private:
 	void mcu_portc_w(uint8_t data);
 
 	uint8_t nvram_r(offs_t offset);
-	void nvram_w(offs_t offset, uint8_t data);
 
 	void magodds_palette(palette_device &palette) const ATTR_COLD;
 	uint32_t screen_update_bingowng(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
@@ -606,8 +605,7 @@ private:
 private:
 	optional_device<ds2401_device> m_fl7w4_id;
 	optional_device<m68705p_device> m_mcu;
-	optional_device<nvram_device> m_nvram;
-	std::unique_ptr<uint8_t[]> m_nvram8;
+	optional_shared_ptr<uint8_t> m_nvram;
 
 	uint8_t m_nmi_enable = 0U;
 	uint8_t m_vidreg = 0U;
@@ -753,8 +751,6 @@ void wingco_state::machine_start()
 {
 	goldstar_state::machine_start();
 	m_tile_bank = 0;
-	m_nvram8 = std::make_unique<uint8_t[]>(0x800);
-	m_nvram->set_base(m_nvram8.get(),0x800);
 
 	save_item(NAME(m_nmi_enable));
 	save_item(NAME(m_vidreg));
@@ -1629,14 +1625,14 @@ void wingco_state::mcu_portc_w(uint8_t data)
 
 uint8_t wingco_state::nvram_r(offs_t offset)
 {
-	uint8_t ret = m_nvram8[offset];
+	uint8_t ret = m_nvram[offset];
 
-	if(offset == 0x7ff)
+	if (offset == 0x7ff)
 		ret = 0;
 
-	if(offset == 0x7fd)
+	if (offset == 0x7fd)
 	{
-		switch(m_nvram8[0x7fd])
+		switch (m_nvram[0x7fd])
 		{
 			case 0x01: ret = 0x08; break;
 			case 0x04: ret = 0x02; break;
@@ -1646,11 +1642,6 @@ uint8_t wingco_state::nvram_r(offs_t offset)
 	}
 
 	return ret;
-}
-
-void wingco_state::nvram_w(offs_t offset, uint8_t data)
-{
-	m_nvram8[offset] = data;
 }
 
 
@@ -2571,7 +2562,7 @@ void wingco_state::lucky8_map(address_map &map)
 void wingco_state::luckybar_map(address_map &map)
 {
 	lucky8_map(map);
-	map(0x8000, 0x87ff).rw(FUNC(wingco_state::nvram_r), FUNC(wingco_state::nvram_w));
+	map(0x8000, 0x87ff).ram().r(FUNC(wingco_state::nvram_r)).share(m_nvram);
 }
 
 void wingco_state::lucky8p_map(address_map &map)
@@ -20053,6 +20044,19 @@ ROM_START( cmast97i )  // D9503 DYNA
 	ROM_LOAD( "82s135.c9", 0x100, 0x100, CRC(191ebb09) SHA1(6a2a10baa3efec0ced95f8a43eabdf9988c7cdc7) )
 ROM_END
 
+ROM_START( jpknight )  // D9503 DYNA
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD16_WORD( "jpk_11d.f10", 0x00000, 0x10000, CRC(78412601) SHA1(a2e2801ccfd767afbd915caa55bdfecf7138192e) )
+
+	ROM_REGION( 0x80000, "gfx", ROMREGION_ERASE00 )
+	ROM_LOAD( "jpk_1d.d9", 0x00000, 0x40000, CRC(620d041a) SHA1(b146acac5ddc163a78685b4cc2837422c7799206) )
+	ROM_RELOAD(            0x40000, 0x40000 )
+
+	ROM_REGION( 0x200, "proms", 0 ) // not dumped yet
+	ROM_LOAD( "82s135.c8",  0x000, 0x100, BAD_DUMP CRC(4b715969) SHA1(9429dc8698f4ff9195e5e975e62546b7b7e2f856) )
+	ROM_LOAD( "82s135.c9",  0x100, 0x100, BAD_DUMP CRC(85883486) SHA1(adcee60f6fc1e8a75c529951df9e5e1ee277e131) )
+ROM_END
+
 /*
   DYNA D9106C PCB:
   -Zilog Z0840006.
@@ -24280,6 +24284,7 @@ GAME(  1991, eldoraddoc, eldoradd, eldoradd, cmast91,  cmaster_state,  empty_ini
 GAME(  1996, cmast97,    0,        cmast97,  cmv801,   cmast97_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 1)",             MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING ) // fix prom decode / palette
 GAME(  1996, cmast97a,   cmast97,  cmast97,  cmv801,   cmast97_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 2)",             MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING ) // fix prom decode / palette
 GAME(  1996, cmast97i,   cmast97,  cmast97,  cmv801,   cmast97_state,  empty_init,     ROT0, "Dyna",              "Cheri Mondo '97 (V1.4I)",                     MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING ) // fix prom decode / palette
+GAME(  1997, jpknight,   0,        cmast97,  cmv801,   cmast97_state,  empty_init,     ROT0, "Dyna / R-Stone",    "Jackpot Knight (V1.1)",                       MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING ) // fix prom decode / palette, check inputs
 GAME(  1999, cmast99,    0,        cm,       cmast99,  cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master '99 (V9B.00)",                  MACHINE_NOT_WORKING )
 GAME(  1999, cmast99b,   cmast99,  cm,       cmast99,  cmaster_state,  init_cmv4,      ROT0, "bootleg",           "Cherry Master '99 (V9B.00 bootleg / hack)",   MACHINE_NOT_WORKING )
 GAME(  1993, aplan,      0,        cm,       cmast99,  cmaster_state,  init_cmv4,      ROT0, "WeaShing H.K.",     "A-Plan",                                      MACHINE_NOT_WORKING )
