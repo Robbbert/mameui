@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 446 -->
+<!-- Number of items in this list = 447 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -9,6 +9,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="43905">
 				<rom name="100 - Stolnik (1995)(Power Of Sound).z80" size="43905" crc="8de30bdc" sha1="963e92cfefc020c9030cad917939006d553461e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d474326976ac">
+		<description>1942 48K (1986)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35448">
+				<rom name="1942 48K (1986)(Elite Systems).z80" size="35448" crc="82b77807" sha1="5d474326976acbcd8e199b1dca34ac69974e9275"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3898 -->
+<!-- Number of items in this list = 3903 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -14309,6 +14309,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Legend of Zelda, The - A Link to the Past Redux v10.2.3 (2024)(ShadowOne333).sfc" size="2097152" crc="b0b544c1" sha1="93f6cd779202fccef016d19c5d74c10836048540"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2fec808ba02d1">
+		<description>Legend of Zelda, The - A Link to the Past T-Chs v1.1 (2020)(Dark_Link, hlken)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Legend of Zelda, The - A Link to the Past T-Chs v1.1 (2020)(Dark_Link, hlken).sfc" size="2097152" crc="c1d16a61" sha1="2fec808ba02d1673ff37da7efc33715c89f4086c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31892,6 +31902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5fa6b369bce55">
+		<description>Super Mario All-Stars + Super Mario World T-Cht (2025)(NOKOH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Mario All-Stars + Super Mario World T-Cht (2025)(NOKOH).sfc" size="4194304" crc="438960ae" sha1="5fa6b369bce55055b600e46612a400021e7c0db6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa2d8ca0bb2ee5">
 		<description>Super Mario and the missing Mushroom Coins Demo 1 (SMW1 Hack)</description>
 		<year>????</year>
@@ -32129,6 +32149,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Super Mario Challenge (SMW1 Hack).sfc" size="1048576" crc="385fe479" sha1="603f6c6a34380baf3676d1050ecd41f5184d7090"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb0d18f390a17e">
+		<description>Super Mario Collection T-Cht v1.1 (2025)(NOKOH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Mario Collection T-Cht v1.1 (2025)(NOKOH).sfc" size="4194304" crc="761f5b75" sha1="b0d18f390a17e6eb8b8ac2feada9828e4a4b0b18"/>
 			</dataarea>
 		</part>
 	</software>
@@ -34329,6 +34359,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="super mario world startime - the 2nd adventure (SMW1 hack).sfc" size="2097664" crc="646ae120" sha1="8957d3c5542f09d3c4368f39e87c37c956d6b3c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd86ce49026483">
+		<description>Super Mario World T-Cht (2025)(NOKOH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Super Mario World T-Cht (2025)(NOKOH).sfc" size="786432" crc="dc68b8cb" sha1="d86ce4902648392c6dc38f1a35b736e9ce98e692"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36769,6 +36809,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145723">
 				<rom name="Tenchi Muyou! Game Hen (J) [tr Pt 0.5b_Evil Darkness].sfc" size="3145723" crc="8d0dee2f" sha1="17d413c37c34c47ee9364a509a186ab00648f9cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6cdbcf0b8f174">
+		<description>Tenchi Souzou T-Chs (2020)(Necrosaro, hlken)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Tenchi Souzou T-Chs (2020)(Necrosaro, hlken).sfc" size="4194304" crc="629953e2" sha1="6cdbcf0b8f17452ef37cb0e3aed1333fa63470b9"/>
 			</dataarea>
 		</part>
 	</software>

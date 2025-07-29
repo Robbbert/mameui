@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 68 -->
+<!-- Number of items in this list = 69 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -489,6 +489,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Snake v1.04 (2021)(Under4Mhz).sg" size="32768" crc="b9ab9d0c" sha1="fa80ee9927d21729188e20b46e0cccfd363d8b84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg13d705d4ee51fe">
+		<description>Solar Fox II (2025)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="40960">
+				<rom name="Solar Fox II (2025)(Jess Creations).sg" size="40960" crc="2ce5cf6f" sha1="3d705d4ee51fe3a38ef3f021d076ee47e92beb27"/>
 			</dataarea>
 		</part>
 	</software>

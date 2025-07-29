@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3615 -->
+<!-- Number of items in this list = 3621 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -36149,6 +36149,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="2848">
 				<rom name="_ZAGBLAST.TAP" size="2848" crc="4a13b248" sha1="d764ee7ebdfc39d5d65b09d82ea7ebaf191d1ce2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3aed377efc196">
+		<description>_Zaxxon (1985)(US Gold Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49887">
+				<rom name="_Zaxxon (1985)(US Gold Ltd).tap" size="49887" crc="82e3fa3f" sha1="3aed377efc19654604a31c9dd868264933b45ea6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9548b0a97b51f">
+		<description>_Zaxxon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50176">
+				<rom name="_Zaxxon.tap" size="50176" crc="4e52a51d" sha1="9548b0a97b51f8c404d3d8418127aca1c552e257"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3227dc2351e05">
+		<description>_Zegar (19xx)(Janusz Gajewicz)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45236">
+				<rom name="_Zegar (19xx)(Janusz Gajewicz)(Unk-Lang).tap" size="45236" crc="cb5b9d67" sha1="3227dc2351e05019d70be2a9c39c3a9ff76574eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcc15e1629e22">
+		<description>_Zenji (1984)(Activision Inc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23232">
+				<rom name="_Zenji (1984)(Activision Inc).tap" size="23232" crc="62e604e5" sha1="bcc15e1629e2260175ec9a5172191f72d8496276"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs884973133d14f">
+		<description>_ZX Wordle 48K (2022)(Adam Ainsworth)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30945">
+				<rom name="_ZX Wordle 48K (2022)(Adam Ainsworth).tap" size="30945" crc="cab302a6" sha1="884973133d14f9f70fe484ac9c8492873094e57f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs528281ca43e72">
+		<description>_Zynaps (1987)(Hewson Consultants Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37404">
+				<rom name="_Zynaps (1987)(Hewson Consultants Ltd)[a].tap" size="37404" crc="8a92b4f9" sha1="528281ca43e722837b31b0f7789ef2f6965d0dc2"/>
 			</dataarea>
 		</part>
 	</software>
