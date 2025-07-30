@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3621 -->
+<!-- Number of items in this list = 3698 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsccc06bf73714b">
+		<description>-Operation Hormuz (1989)(Again Again)[cr [Cr](128K)[Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37852">
+				<rom name="-Operation Hormuz (1989)(Again Again)[cr [Cr](128K)[Cr].tap" size="37852" crc="eeb74d57" sha1="ccc06bf73714b0417ac5413d5467f03ae0e8a628"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse1f6a9f72d27b">
+		<description>-Operation Wolf (1988)(Ocean Software Ltd)[cr [Cr Wixet](128K)[Cr Wixet]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="98370">
+				<rom name="-Operation Wolf (1988)(Ocean Software Ltd)[cr [Cr Wixet](128K)[Cr Wixet].tap" size="98370" crc="f7ae7362" sha1="e1f6a9f72d27b9e74aa25bf650e362f28d3482b8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1579,6 +1599,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="26015">
 				<rom name="3D-Functionen Und Grabber (1985)(Claus Jahn)(De).tap" size="26015" crc="a3aca6b2" sha1="017fd42eabc5596f952843484e07323b164184b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb87a38c3227c4">
+		<description>3D-Tanx 16K (1982)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15014">
+				<rom name="3D-Tanx 16K (1982)(DK'Tronics).tzx" size="15014" crc="57c95634" sha1="b87a38c3227c4eb183e609c8bf939d7a016953cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11052,6 +11082,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbbcb38a850a0a">
+		<description>O Purgatorio de Virgilio 2.0 - Capitulo 1 PT (2023)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45538">
+				<rom name="O Purgatorio de Virgilio 2.0 - Capitulo 1 PT (2023)(Amaweks).tap" size="45538" crc="e61963ba" sha1="bbcb38a850a0ae53f1b57fa4104edac5bd939689"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd252f9f636464">
+		<description>O Purgatorio de Virgilio 2.0 - Capitulo 2 PT (2023)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46473">
+				<rom name="O Purgatorio de Virgilio 2.0 - Capitulo 2 PT (2023)(Amaweks).tap" size="46473" crc="5d26605e" sha1="d252f9f636464b94b2c560091b7ccf271a5aa96d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7ebdd39787fb5">
 		<description>O-Puzz Attack 48K (2018)(Oblo)</description>
 		<year>????</year>
@@ -11059,6 +11109,116 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="29543">
 				<rom name="O-Puzz Attack 48K (2018)(Oblo).tap" size="29543" crc="ebadd8c9" sha1="7ebdd39787fb54e882da8168a38210bd78c2b2c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf22196e256ceb">
+		<description>Oberon 69 ES 48K (1990)(G.LL. Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55449">
+				<rom name="Oberon 69 ES 48K (1990)(G.LL. Software).tap" size="55449" crc="76f14935" sha1="f22196e256cebfd7d7d40d1fe5c37b3f66a8e51b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1605e4cb731d9">
+		<description>Oca (1989)(Zafiro Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42408">
+				<rom name="Oca (1989)(Zafiro Software)(Sp).tap" size="42408" crc="d2af9734" sha1="1605e4cb731d92b9cb193c50ca23dd762eada9cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscbc1ef950789a">
+		<description>Ocean Conqueror (1987)(Rack-It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48553">
+				<rom name="Ocean Conqueror (1987)(Rack-It).tap" size="48553" crc="d0a15a8d" sha1="cbc1ef950789a23bc52d6c6404cea81dc0104501"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2440515c4a463">
+		<description>Ocean Dancer (19xx)(King Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32266">
+				<rom name="Ocean Dancer (19xx)(King Software).tap" size="32266" crc="e4141e91" sha1="2440515c4a463583f5ce118e30ecfd5f56b1b1d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7f66d0e25c2d1">
+		<description>Oceano (2015)(EgoTrip)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24434">
+				<rom name="Oceano (2015)(EgoTrip).tap" size="24434" crc="1ef0dccd" sha1="7f66d0e25c2d1288c5ac760e2246de6f27d1e576"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs519b7d2343677">
+		<description>Octagon Squad, The (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47388">
+				<rom name="Octagon Squad, The (1986)(Mastertronic).tap" size="47388" crc="dc616dc5" sha1="519b7d2343677ba26cc847b8005d53357e13047f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5671a8e151f55">
+		<description>Octan (1987)(Silverbird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48552">
+				<rom name="Octan (1987)(Silverbird Software Ltd).tap" size="48552" crc="d5cd3516" sha1="5671a8e151f55bd09d9790797ac13e1b4583e073"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ff0c658323e9">
+		<description>Octan (1987)(Silverbird Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48640">
+				<rom name="Octan (1987)(Silverbird Software Ltd)[a].tap" size="48640" crc="be30af2f" sha1="3ff0c658323e9140c5a78666ec8c05322742a66f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscda9fe6731213">
+		<description>Octopussy (1992)(Bytepack)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40165">
+				<rom name="Octopussy (1992)(Bytepack)(Cz).tap" size="40165" crc="3f1c787f" sha1="cda9fe67312133e1a332599bafa2ff05125dcd36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46a933dcfe595">
+		<description>Odd Ball (1987)(The Power House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34358">
+				<rom name="Odd Ball (1987)(The Power House).tap" size="34358" crc="0c51d351" sha1="46a933dcfe59590836718447a3916857d745e756"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f23a5ed5309a">
+		<description>Odd Job Eddie (1985)(Strobe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63934">
+				<rom name="Odd Job Eddie (1985)(Strobe).tap" size="63934" crc="258b9281" sha1="1f23a5ed5309accd617bad9b7f7c526e91bb9288"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11082,6 +11242,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2ef6a871c9132">
+		<description>Odyssey I (1984)(Perfection Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11632">
+				<rom name="Odyssey I (1984)(Perfection Software).tap" size="11632" crc="c87409f6" sha1="2ef6a871c913268d48b3372a3d15b3cfa5f63c6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96b5527a53a2a">
+		<description>Official Father Christmas, The (1989)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43745">
+				<rom name="Official Father Christmas, The (1989)(Alternative Software).tap" size="43745" crc="4a874155" sha1="96b5527a53a2ade254ca762412afa276b829309a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs890ae948463e5">
+		<description>Oh Mummy (1984)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11384">
+				<rom name="Oh Mummy (1984)(Psion).tap" size="11384" crc="575531e4" sha1="890ae948463e588e6b38c6ae9b15880d58418844"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01c232fc8d0a3">
+		<description>Oh Mummy - Remake ES v1.02 48K (2020-22)(Fitosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47036">
+				<rom name="Oh Mummy - Remake ES v1.02 48K (2020-22)(Fitosoft).tap" size="47036" crc="56a6f797" sha1="01c232fc8d0a31f676548d6b2358c938f3e3baac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs13946b2fcbbd0">
+		<description>Oink! (1987)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68139">
+				<rom name="Oink! (1987)(CRL Group).tap" size="68139" crc="936566ac" sha1="13946b2fcbbd088755b1682749f03a9da1a05f37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5795b02065598">
+		<description>OiX (1984)(Jaroslaw Cichocki)(Pl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19290">
+				<rom name="OiX (1984)(Jaroslaw Cichocki)(Pl).tap" size="19290" crc="ff0fe05f" sha1="5795b020655983cd3ba8363f9107728ba515e865"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs68dbc04001316">
+		<description>Ole Toro (1985)(Dinamic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37793">
+				<rom name="Ole Toro (1985)(Dinamic)(Sp).tap" size="37793" crc="6d03c836" sha1="68dbc04001316eeeefa5477b78ee271bb2f6bd54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs83773207f9980">
+		<description>Oligopoli (1983)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37478">
+				<rom name="Oligopoli (1983)(CCS).tap" size="37478" crc="0f637fc1" sha1="83773207f9980294f9708c630113497e1145a5b9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa46b16e31a2d8">
 		<description>Olli &amp; Lissa - The Ghost Of Shilmoore Castle 48K (1986)(Firebird Software)</description>
 		<year>????</year>
@@ -11092,6 +11332,386 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs48e36870010f0">
+		<description>Olli &amp; Lissa 3 (1989)(Cartoon Time)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44893">
+				<rom name="Olli &amp; Lissa 3 (1989)(Cartoon Time).tap" size="44893" crc="c5703df4" sha1="48e36870010f09a8a4207588ff183a4a8b502c57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ca2a304933ba">
+		<description>Olli &amp; Lissa II - Halloween (1987)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39562">
+				<rom name="Olli &amp; Lissa II - Halloween (1987)(Firebird).tap" size="39562" crc="95902c27" sha1="2ca2a304933ba94fdafcbe08d052db6247a502cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs368ae0e6396f7">
+		<description>Olli &amp; Lissa III - The Candlelight Adventure (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44914">
+				<rom name="Olli &amp; Lissa III - The Candlelight Adventure (1989)(Codemasters).tap" size="44914" crc="8b7145af" sha1="368ae0e6396f7b29e36bac602d15b67f171f7cc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4537778e4af7b">
+		<description>Olympics (1984)(Matthew Bradshaw)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="79271">
+				<rom name="Olympics (1984)(Matthew Bradshaw).tap" size="79271" crc="e8927ca4" sha1="4537778e4af7b7d726e99b52e30768c9fa6222d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2acc71d8786ec">
+		<description>Olympimania (1984)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45209">
+				<rom name="Olympimania (1984)(Automata UK).tap" size="45209" crc="0edf5b58" sha1="2acc71d8786ecb75f5e3869e6370c14084bab0a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98f7a90a033d4">
+		<description>Olypiad '86 (1986)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43436">
+				<rom name="Olypiad '86 (1986)(Atlantis Software Ltd).tap" size="43436" crc="35e87c82" sha1="98f7a90a033d47da832cd543b58e3e9715be1b55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb0fc714bf36a0">
+		<description>Omega 1 (1987)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49261">
+				<rom name="Omega 1 (1987)(Mastertronic Ltd).tap" size="49261" crc="88d71791" sha1="b0fc714bf36a0819aa469289f15369c78b96569c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45309aa0750f8">
+		<description>Omega 1 (1987)(Mastertronic Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49261">
+				<rom name="Omega 1 (1987)(Mastertronic Ltd)[a].tap" size="49261" crc="9a06c5e0" sha1="45309aa0750f8987c6eded106203c9bf5f9d7e69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd8d8d34cfcf09">
+		<description>Omega Zone, The (1991)(Peter Curtis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47039">
+				<rom name="Omega Zone, The (1991)(Peter Curtis).tap" size="47039" crc="6da3964e" sha1="d8d8d34cfcf09a2067f0677cc50d2a1b950d650b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs390184098c982">
+		<description>Omelettes for Breakfast 128K (2017)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35499">
+				<rom name="Omelettes for Breakfast 128K (2017)(Gabriele Amore).tap" size="35499" crc="d1706d0b" sha1="390184098c982e0e323c648bf6ff42a0d11a2e90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs282dcbc9b36d4">
+		<description>Ometron (1983)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49225">
+				<rom name="Ometron (1983)(Software Projects).tap" size="49225" crc="f8a34bed" sha1="282dcbc9b36d418d13d7743704350336a513e849"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd59e51a6402a6">
+		<description>On the 'Oche (1984)(Artic Computing Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24588">
+				<rom name="On the 'Oche (1984)(Artic Computing Ltd).tap" size="24588" crc="424f630f" sha1="d59e51a6402a69e2eb0d50736aa7bd7b0f4f99a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7d5915659680">
+		<description>On The Bench (1988)(Cult)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42655">
+				<rom name="On The Bench (1988)(Cult).tap" size="42655" crc="7fce35fa" sha1="f7d5915659680b12166dbf5fdc5d59ea54c61496"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e8bf6774319f">
+		<description>On The Oche (1984)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31653">
+				<rom name="On The Oche (1984)(Artic Computing).tap" size="31653" crc="4dff44ef" sha1="2e8bf6774319faa54ee56309a62711656b77f40d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb5caddcc3f19d">
+		<description>On The Run (1985)(Design Design Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43520">
+				<rom name="On The Run (1985)(Design Design Software).tap" size="43520" crc="89934d78" sha1="b5caddcc3f19db79c64584d0d115f549fcdf6949"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ea44430eef1a">
+		<description>On The Run (1985)(Design Design Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43512">
+				<rom name="On The Run (1985)(Design Design Software)[a].tap" size="43512" crc="16e4572a" sha1="3ea44430eef1a6fdcbffa9e49787de4edaf17544"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs87699237edd93">
+		<description>One For The Road (1986)(IJK Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21098">
+				<rom name="One For The Road (1986)(IJK Software).tap" size="21098" crc="817162c3" sha1="87699237edd93799b79599721600a0d1525a3a2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f95aaba085df">
+		<description>One For The Road (1986)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21504">
+				<rom name="One For The Road (1986)(Tynesoft).tap" size="21504" crc="ec16be52" sha1="8f95aaba085df2b1395262e5705d0a3941178ed7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d97fdfa4a09a">
+		<description>One Man and His Droid (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24838">
+				<rom name="One Man and His Droid (1985)(Mastertronic).tap" size="24838" crc="08f27554" sha1="5d97fdfa4a09a2bbb32debb5125af1d2a72ea03b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa2abdf7f5bf8">
+		<description>One Man And His Droid 2  (2001)(Clive Brooker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33989">
+				<rom name="One Man And His Droid 2  (2001)(Clive Brooker).tap" size="33989" crc="df34bf05" sha1="aa2abdf7f5bf89ba96c814dd374bfe5fa7ce4211"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa3b21a1010533">
+		<description>One Man and His Droid 48K (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24838">
+				<rom name="One Man and His Droid 48K (1985)(Mastertronic).tap" size="24838" crc="ed9d067f" sha1="a3b21a10105334947a27d6b1e2fd15f8cb4971eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf8aa1812f07f">
+		<description>One On One (1983)(Electronic Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42651">
+				<rom name="One On One (1983)(Electronic Arts).tap" size="42651" crc="802a09c4" sha1="bf8aa1812f07fc5d625a94f87bc61310876b4825"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs118446b2895cd">
+		<description>Oops (1988)(The Big Apple Entertainment Company)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27130">
+				<rom name="Oops (1988)(The Big Apple Entertainment Company).tap" size="27130" crc="140044c2" sha1="118446b2895cd8a9019fc0c8c0c62b19bbd81696"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5a852ec4820a1">
+		<description>OPCODMRZ</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6047">
+				<rom name="OPCODMRZ.TAP" size="6047" crc="08853dde" sha1="5a852ec4820a1f1ecd9423bfff81400ca24d629e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs865ef1b2cf92b">
+		<description>Open Door, The (1988)(Tartan Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41508">
+				<rom name="Open Door, The (1988)(Tartan Software).tap" size="41508" crc="f8802748" sha1="865ef1b2cf92b769462f53866c2ddc7dd3d2bb7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3dbd2b19bb569">
+		<description>Operation - Labyrinth Fall (2018)(Ross Adkin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36787">
+				<rom name="Operation - Labyrinth Fall (2018)(Ross Adkin).tap" size="36787" crc="22169ded" sha1="3dbd2b19bb569e2f78f39694f13bb9d9e43e4601"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c066e5ba4a66">
+		<description>Operation - Labyrinth Fall 128K (2018)(Bumfun Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36715">
+				<rom name="Operation - Labyrinth Fall 128K (2018)(Bumfun Software).tap" size="36715" crc="06e1d80f" sha1="3c066e5ba4a6645fe062e72369219337cb088d47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd7f21e37b9a08">
+		<description>Operation Colossus (19xx)(Omega Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40711">
+				<rom name="Operation Colossus (19xx)(Omega Software Ltd).tap" size="40711" crc="84edcb1b" sha1="d7f21e37b9a08d6c59ad9f730f334496d611e8df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs25828cf290405">
+		<description>Operation Gunship 128K (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52455">
+				<rom name="Operation Gunship 128K (1989)(Codemasters).tap" size="52455" crc="ee1f687d" sha1="25828cf29040525df653e19def41b4adedd3aa2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsac2cfe1acfbd1">
+		<description>Operation Hanoi (1990)(Players Premier Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56583">
+				<rom name="Operation Hanoi (1990)(Players Premier Software).tap" size="56583" crc="79550666" sha1="ac2cfe1acfbd1a0b2280b46cee7c740da552dec8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse82672c078851">
+		<description>Operation Hormuz (1989)(Again Again)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49042">
+				<rom name="Operation Hormuz (1989)(Again Again)(128K).tap" size="49042" crc="9e7e5107" sha1="e82672c0788511c0b5fd85e6eb4325b4f0b17c91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs88943c159af68">
+		<description>Operation Hormuz (1989)(Again Again)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46767">
+				<rom name="Operation Hormuz (1989)(Again Again).tap" size="46767" crc="a1114200" sha1="88943c159af68c8aa4dd9da895aeac0af7c757f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf216249040db1">
+		<description>Operation Moo 128K (2025)(JuanGM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68081">
+				<rom name="Operation Moo 128K (2025)(JuanGM).tap" size="68081" crc="0115f64b" sha1="f216249040db1d20157c08755c5c021893563660"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse1c5ee9170621">
+		<description>Operation Moo 128K (2025)(JuanGM)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68142">
+				<rom name="Operation Moo 128K (2025)(JuanGM)_2.tap" size="68142" crc="04bb8296" sha1="e1c5ee917062103d4199f45964aaedf0a29cb798"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3220c99a5768a">
+		<description>Operation Moo v1.0 128K (2025)(JuanGM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68118">
+				<rom name="Operation Moo v1.0 128K (2025)(JuanGM).tap" size="68118" crc="0f85873a" sha1="3220c99a5768a649c196b52587a01da33dc36ce1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs352f1b545a51c">
+		<description>Operation Moo v1.1 128K (2025)(JuanGM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68117">
+				<rom name="Operation Moo v1.1 128K (2025)(JuanGM).tap" size="68117" crc="dc8bdde4" sha1="352f1b545a51c1a3f5cba1241299c52ca179b9cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46a84d60a0fb7">
+		<description>Operation Thunderbolt (1989)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="134512">
+				<rom name="Operation Thunderbolt (1989)(Ocean Software Ltd).tap" size="134512" crc="f75b3628" sha1="46a84d60a0fb7b267dc097b22b50ba48fe066de8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsacd6bc32c4a11">
+		<description>Operation Thunderbolt 128K (1990)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138426">
+				<rom name="Operation Thunderbolt 128K (1990)(Ocean).tap" size="138426" crc="16257514" sha1="acd6bc32c4a11375cfce13c4f047ec7e4cfc5a23"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9a3f6fd2e1c90">
 		<description>Operation Thunderbolt</description>
 		<year>????</year>
@@ -11099,6 +11719,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="138801">
 				<rom name="Operation Thunderbolt.tzx" size="138801" crc="3d45aaa3" sha1="9a3f6fd2e1c90f575cd4e5990b27d18f4011052c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8cd35bd43336e">
+		<description>Operation Turtle (1984)(Pocket Money Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48300">
+				<rom name="Operation Turtle (1984)(Pocket Money Software).tap" size="48300" crc="e0a5744d" sha1="8cd35bd43336ea136142c8dbab4bce818b0771db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb7dbb484fa7a1">
+		<description>Operation Wolf (1988)(Ocean Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="131450">
+				<rom name="Operation Wolf (1988)(Ocean Software Ltd)(128K).tap" size="131450" crc="0869dfb8" sha1="b7dbb484fa7a1215671496d8fac7f21988b4bbfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs664a55cedb78e">
+		<description>Operation Wolf (1988)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="131168">
+				<rom name="Operation Wolf (1988)(Ocean Software Ltd).tap" size="131168" crc="03daa7e0" sha1="664a55cedb78e6c3798d4cb184117709a26739e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb23d11758c853">
+		<description>Operation Wolf (1988)(Ocean Software)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="127101">
+				<rom name="Operation Wolf (1988)(Ocean Software)[t].tap" size="127101" crc="58f9eadd" sha1="b23d11758c8530ba6c83911091092fbfbbe184ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32152,6 +32812,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs35ac40ff03936">
+		<description>_21 Erotic (1995)(JardaSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10336">
+				<rom name="_21 Erotic (1995)(JardaSoft).tap" size="10336" crc="80cb68c0" sha1="35ac40ff03936f18f1aa7044d4d7b98d77e30155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0797c2c93e594">
+		<description>_51 (1983)(Th Dargel)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6822">
+				<rom name="_51 (1983)(Th Dargel)(De).tap" size="6822" crc="0c8de8b8" sha1="0797c2c93e594057f7a076056b6c9162e07c9091"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa355546b97e90">
+		<description>_64 Zeichen (1986)(ZX-Computing)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="652">
+				<rom name="_64 Zeichen (1986)(ZX-Computing)(De).tap" size="652" crc="900d90f6" sha1="a355546b97e90c092356f0a7cf80f0346787ea11"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs690054e8ca757">
 		<description>_AntiISDA_Warrior-</description>
 		<year>????</year>
@@ -32549,6 +33239,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="112766">
 				<rom name="_Ninja Warriors, The.tzx" size="112766" crc="af303a6d" sha1="6f532f012a60501669448edea5e59773b857ff86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs08c837f86ae09">
+		<description>_Odyssey 1 (1984)(Perfection Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11729">
+				<rom name="_Odyssey 1 (1984)(Perfection Software)[a].tap" size="11729" crc="95e5f0d9" sha1="08c837f86ae09f9d4fdcd1465b15ab1d38f5081c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5e7345769c6f5">
+		<description>_Odyssey Of Hope, The (1984)(Martech Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48899">
+				<rom name="_Odyssey Of Hope, The (1984)(Martech Games Ltd).tap" size="48899" crc="5250da76" sha1="5e7345769c6f555952b73dcbe3c9da1bc7b68ab6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9563b573f9250">
+		<description>_Olympic Challenge (1984)(Century City Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47943">
+				<rom name="_Olympic Challenge (1984)(Century City Software).tap" size="47943" crc="29677717" sha1="9563b573f925075ae80c315b3817f5417acb5278"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsffbc60c331c93">
+		<description>_Olympicon (1984)(Microtechnica)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42044">
+				<rom name="_Olympicon (1984)(Microtechnica)[a].tap" size="42044" crc="05c847b1" sha1="ffbc60c331c93699b3163f1518a43a475ac9ce5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs513f9598ae859">
+		<description>_Omni Copy 2 (1985)(Omnisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5789">
+				<rom name="_Omni Copy 2 (1985)(Omnisoft).tap" size="5789" crc="444370ed" sha1="513f9598ae859d54691a4a4a8ac129a7035a612b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse2d3f44183f40">
+		<description>_Operaciones Especiales</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46318">
+				<rom name="_Operaciones Especiales.tap" size="46318" crc="5c086904" sha1="e2d3f44183f40026adae94127e66bcad6759e1da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsca8d294e3f278">
+		<description>_Operation Gunship (1990)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48454">
+				<rom name="_Operation Gunship (1990)(Codemasters).tap" size="48454" crc="aefedd17" sha1="ca8d294e3f278f519c7b3241d4da0af414295ee8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c674360dff19">
+		<description>_Operation Hormuz (1989)(Again Again)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41646">
+				<rom name="_Operation Hormuz (1989)(Again Again)[a].tap" size="41646" crc="0f2bdb0c" sha1="2c674360dff19c1d2c0a7048846fc1f7865b18e2"/>
 			</dataarea>
 		</part>
 	</software>
