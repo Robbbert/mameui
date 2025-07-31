@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 525 -->
+<!-- Number of items in this list = 529 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2242,6 +2242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms5901dfa43bc66">
+		<description>Kenseiden T-Por v1.4 (2020)(PO.B.R.E.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Kenseiden T-Por v1.4 (2020)(PO.B.R.E.).sms" size="262144" crc="495a613c" sha1="5901dfa43bc6690b91665bc3bea4c31554bb76a5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsda401103f816d">
 		<description>King &amp; Balloon (TW)</description>
 		<year>????</year>
@@ -2669,6 +2679,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Master of Darkness (Europe) [tr It1.0_Michele Di Somma].sms" size="262144" crc="8e565270" sha1="9354e82fe63bed8549c87ab0fe8e0149a2609969"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb3c25f1894442">
+		<description>Master of Darkness - Mestre das Trevas T-Por (2017)(PO.B.R.E.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Master of Darkness - Mestre das Trevas T-Por (2017)(PO.B.R.E.).sms" size="262144" crc="30703780" sha1="b3c25f1894442fb4ef99372e313957b32b108e2d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5239,6 +5259,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Zillion (UE) (V1.1) [T+Por_POBRE].sms" size="131072" crc="fc2e8cfa" sha1="52546f67e2549386678aec46b645af8026eb6f9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms50f515810fbcb">
+		<description>Zillion II - The Tri Formation T-Por v1.1 (2009-2020)(PO.B.R.E.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Zillion II - The Tri Formation T-Por v1.1 (2009-2020)(PO.B.R.E.).sms" size="131072" crc="70846349" sha1="50f515810fbcb1e1a3ce26aff1d81507a8e25c3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2073759f2d8ee">
+		<description>Zillion T-Por v1.2 (2008-2020)(PO.B.R.E.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Zillion T-Por v1.2 (2008-2020)(PO.B.R.E.).sms" size="131072" crc="ce74ab80" sha1="2073759f2d8eec91775bb79f719157c3d04a5cd2"/>
 			</dataarea>
 		</part>
 	</software>

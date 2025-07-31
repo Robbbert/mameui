@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1964 -->
+<!-- Number of items in this list = 1967 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3379,6 +3379,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Atomic Robo-Kid (USA).bin" size="524288" crc="ce250d1b" sha1="b0b3b9735bb46a37a17500b8d9dcd046345a569b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend2d90baecdf68">
+		<description>Atomic Robo-Kid PT-BR v1.11 (2019)(Antigeno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Atomic Robo-Kid PT-BR v1.11 (2019)(Antigeno).bin" size="524288" crc="c0cbbca8" sha1="d2d90baecdf685df6a80f2896cff4d740b1f00b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2a7a4b16f4d0c">
+		<description>Atomic Runner  PT-BR v1.05 (2019)(Antigeno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Atomic Runner  PT-BR v1.05 (2019)(Antigeno).md" size="1048576" crc="458c12f6" sha1="2a7a4b16f4d0cc4682025d8375087587f5c1ffa8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8679,6 +8699,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Insector X (USA).bin" size="524288" crc="0a96a725" sha1="7e6a946cf0df9880ca0a283356a3d0bdae2b0089"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3e715ee73e930">
+		<description>Insector X PT-BR v1.15 (2017)(Antigeno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Insector X PT-BR v1.15 (2017)(Antigeno).bin" size="524288" crc="3c366f22" sha1="3e715ee73e930901613b60e587e94b307dc81f25"/>
 			</dataarea>
 		</part>
 	</software>
