@@ -269,7 +269,7 @@ public:
 				t = (info.emulation_flags() & device_t::flags::NOT_WORKING) ? 0x0040 : 0;
 				m_cache |= t;
 				// BIT 7 = SUPPORTS_SAVE
-				t = (info.emulation_flags() & device_t::flags::SAVE_UNSUPPORTED) ? 0x0080 : 0;
+				t = (info.emulation_flags() & device_t::flags::SAVE_UNSUPPORTED) ? 0 : 0x0080;
 				m_cache |= t;
 				// BIT 8 = NO_COCKTAIL
 				t = (info.machine_flags() & machine_flags::NO_COCKTAIL) ? 0x0100 : 0;

@@ -298,7 +298,7 @@ static bool create_index(const char* datsdir, std::ifstream &fp, int filenum)
 		}
 	}
 	// check contents
-//	if (filenum == 6)
+//	if (filenum == 4)
 //		for (auto const &it : mymap[filenum])
 //			printf("%s = %X\n", it.first.c_str(), int(it.second));
 	return true;
@@ -375,7 +375,7 @@ static std::string load_datafile_text(std::ifstream &fp, std::string keycode, in
 		// read text until buffer is full or end of entry is encountered
 		while (std::getline(fp, file_line))
 		{
-			//if (filenum == 6) ("*******2: %s\n",file_line.c_str());
+			//if (filenum == 4) printf("*******2: %s\n",file_line.c_str());
 			if (file_line == "- CONTRIBUTE -")
 				break;
 
@@ -545,6 +545,8 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 		buffer.append("The sound emulation isn't 100% accurate.\n");
 
 	if (BIT(cache, 7))
+		buffer.append("Save state supported.\n");
+	else
 		buffer.append("Save state not supported.\n");
 
 	if (BIT(cache, 14))
@@ -757,7 +759,7 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 		if (g != -1)
 			drv = &driver_list::driver(g);
 
-		buffer.append("\nORIGINAL:\n");
+		buffer.append("\nPARENT:\n");
 		buffer.append(drv->type.fullname());
 		buffer.append("\n\nCLONES:\n");
 

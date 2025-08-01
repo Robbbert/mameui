@@ -745,11 +745,7 @@ public:
 		const char* buffer = s.c_str();
 		if (channel == OSD_OUTPUT_CHANNEL_VERBOSE)
 		{
-//			FILE *pFile;
-//			pFile = fopen("verbose.log", "a");
-//			fputs(buffer, pFile);
-//			fflush(pFile);
-//			fclose (pFile);
+			//printf("%s",buffer);
 			return;
 		}
 
@@ -860,10 +856,10 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	// redirect messages to our handler
 	mameui_output_error winerror;
 	printf("********** STARTING %s **********\n", name);fflush(stdout);
-	osd_output::push(&winerror);
-	osd_printf_verbose("********** STARTING %s **********\n", name);
-	osd_printf_info("********** STARTING %s **********\n", name);
-	osd_output::pop(&winerror);
+//	osd_output::push(&winerror);
+//	osd_printf_verbose("********** STARTING %s **********\n", name);
+//	osd_printf_info("********** STARTING %s **********\n", name);
+//	osd_output::pop(&winerror);
 	// Mame will parse all the needed .ini files.
 
 	// hide mameui
@@ -888,7 +884,7 @@ static DWORD RunMAME(int nGameIndex, const play_options *playopts)
 	time_t start = 0, end = 0;
 	time(&start);
 	manager->execute();
-	osd_printf_info("********** FINISHED %s **********\n", name);
+//	osd_printf_info("********** FINISHED %s **********\n", name);
 	// turn off message redirect
 	osd_output::pop(&winerror);
 	delete manager;
@@ -4770,7 +4766,7 @@ static void GamePicker_EnteringItem(HWND hwndPicker, int nItem)
 	MessReadMountedSoftware(nItem); // messui.cpp
 
 	// decide if it is valid to load a savestate
-	EnableMenuItem(GetMenu(hMain), ID_FILE_LOADSTATE, (driver_list::driver(nItem).flags & MACHINE_SUPPORTS_SAVE) ? MFS_ENABLED : MFS_GRAYED);
+	EnableMenuItem(GetMenu(hMain), ID_FILE_LOADSTATE, BIT(GetDriverCacheLower(nItem), 7) ? MFS_ENABLED : MFS_GRAYED);
 }
 
 
