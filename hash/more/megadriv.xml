@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1967 -->
+<!-- Number of items in this list = 1971 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5669,6 +5669,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Earnest Evans T-Spa v2.0 (2022)(Wave).bin" size="1048576" crc="926ce1be" sha1="6ec3d7a027d90667672269fbb51dfad876b76412"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8b54d7bcf8454">
+		<description>Earthion Early Prototype</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="655360">
+				<rom name="Earthion Early Prototype.md" size="655360" crc="27423e6c" sha1="8b54d7bcf84540bf8ba933becb69cebc54ccb09f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13562,6 +13572,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genb7a14ad5f3b24">
+		<description>Shining Force - Kamigami no Isan T-Chs (2013)(zymgundam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shining Force - Kamigami no Isan T-Chs (2013)(zymgundam).bin" size="2097152" crc="6aec9557" sha1="b7a14ad5f3b24e30cd4495075eff05d9184a4ff6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3823adaf0fe7f">
+		<description>Shining Force - Kamigami no Isan T-Cht (20xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shining Force - Kamigami no Isan T-Cht (20xx).bin" size="2097152" crc="6ee8cbda" sha1="3823adaf0fe7f792045dd63e86cfad2f73b222c1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb06503900a787">
 		<description>shining force 2 (C)</description>
 		<year>????</year>
@@ -13679,6 +13709,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Shining Force PT-BR (2012)(Lobo-FF).bin" size="3145728" crc="50934dbc" sha1="cafc1ab9c1bf41a94e80b2ef1445feda7bbdab77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen03f98c770f4d1">
+		<description>Shining in the Darkness T-Cht (20xx)(WINSEN, Xiaoguihun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shining in the Darkness T-Cht (20xx)(WINSEN, Xiaoguihun).bin" size="2097152" crc="ea770243" sha1="03f98c770f4d1bee7368c4f83c6f73454f483948"/>
 			</dataarea>
 		</part>
 	</software>

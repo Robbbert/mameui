@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 262 -->
+<!-- Number of items in this list = 263 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -1809,6 +1809,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8378312">
 				<rom name="Rayman 3 (2002-11-29)(Ubi Soft)(US)(M3)(proto).bin" size="8378312" crc="4549f9b3" sha1="b5d299663bf1ac4a50ced1a572dcef5d31d807f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5231a3997e1fd">
+		<description>Rhythm Heaven Advance (Japan) [T-En by ShaffySwitcher v1.0] [n]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Rhythm Heaven Advance (Japan) [T-En by ShaffySwitcher v1.0] [n].gba" size="16777216" crc="56007d5b" sha1="5231a3997e1fdd59c10fb1b10ce1fddb9befd7f2"/>
 			</dataarea>
 		</part>
 	</software>

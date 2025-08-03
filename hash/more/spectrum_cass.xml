@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3698 -->
+<!-- Number of items in this list = 3734 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs24335bd23d899">
+		<description>-North &amp; South (1991)(Infogrames)[cr [Cr Pokestudio](128K)[Cr Pokestudio]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="109065">
+				<rom name="-North &amp; South (1991)(Infogrames)[cr [Cr Pokestudio](128K)[Cr Pokestudio].tap" size="109065" crc="d9a46675" sha1="24335bd23d899a3edc0e8503b7a8bc0f0f9fc760"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11079,6 +11089,336 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="110124">
 				<rom name="Ninja Hamster.tzx" size="110124" crc="bb77668c" sha1="c214ea88a9939f68c91a8bc1fb08a255f8526f90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsce48b9be10767">
+		<description>NO 1 (19xx)(Bug-Byte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40256">
+				<rom name="NO 1 (19xx)(Bug-Byte Software).tap" size="40256" crc="13d69064" sha1="ce48b9be10767381e72926bcdcf6f70f0aac7021"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3cee51e158a3b">
+		<description>Noah (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38519">
+				<rom name="Noah (19xx)(-).tap" size="38519" crc="367950b8" sha1="3cee51e158a3b47e6cf7a4ad803a629893899338"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs11baad09f7afd">
+		<description>Nobreak! (1986)(Flemming R Pedersen)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13829">
+				<rom name="Nobreak! (1986)(Flemming R Pedersen)(Unk-Lang).tap" size="13829" crc="4b5f011a" sha1="11baad09f7afd0b9a2c95880eb4f540c01ba4220"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee04b200586dd">
+		<description>Nodes Of Yesod (1985)(Odin Computer Graphics)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="76905">
+				<rom name="Nodes Of Yesod (1985)(Odin Computer Graphics)(128k).tap" size="76905" crc="1c251259" sha1="ee04b200586dd3eb0be6304f627d840f49a00ab3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsefbbd17478a4e">
+		<description>Nodes Of Yesod (1986)(Odin Computer Graphics Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36898">
+				<rom name="Nodes Of Yesod (1986)(Odin Computer Graphics Ltd).tap" size="36898" crc="1b5fe585" sha1="efbbd17478a4e271f4778a6acdc008c6cebb018d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd2af460313aae">
+		<description>Nodes of Yesod 128K (1985)(Odin Computer Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83920">
+				<rom name="Nodes of Yesod 128K (1985)(Odin Computer Graphics).tap" size="83920" crc="dea25751" sha1="d2af460313aaeee962753dd23c41206fa8e042b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs092ad508a7ce4">
+		<description>Nonamed (1986)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44337">
+				<rom name="Nonamed (1986)(Dinamic Software).tap" size="44337" crc="c7667104" sha1="092ad508a7ce4903b664a8ccee29c9feeeed09d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs031c5093485c5">
+		<description>Nonamed 48K (1987)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44233">
+				<rom name="Nonamed 48K (1987)(Dinamic Software).tap" size="44233" crc="dc3f2124" sha1="031c5093485c5e2570327252e27e1cb446df9262"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98e13058c4b5b">
+		<description>Nonterraqueous 2 - Soul Of A Robot (1985)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46080">
+				<rom name="Nonterraqueous 2 - Soul Of A Robot (1985)(Mastertronic Ltd).tap" size="46080" crc="d158108d" sha1="98e13058c4b5bc082244f5df94ddf8faa7f506b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs39fca708706e3">
+		<description>Nonterraqueous 2 - Soul of a Robot (1985)(Mastertronic Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46078">
+				<rom name="Nonterraqueous 2 - Soul of a Robot (1985)(Mastertronic Ltd)[a2].tap" size="46078" crc="b93f9e67" sha1="39fca708706e302ca205eb27f8b94662a8a19bcf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs941e30fc43cc8">
+		<description>Nonterraqueous 2 - Soul of a Robot (1985)(Mastertronic Ltd)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46192">
+				<rom name="Nonterraqueous 2 - Soul of a Robot (1985)(Mastertronic Ltd)[a3].tap" size="46192" crc="4093006d" sha1="941e30fc43cc80ba2a2e28e684572f2a6f805f72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs512421e8a2dd2">
+		<description>Nonterraqueous 2 - Soul Of A Robot (1985)(Mastertronic Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46061">
+				<rom name="Nonterraqueous 2 - Soul Of A Robot (1985)(Mastertronic Ltd)[a].tap" size="46061" crc="015a74a3" sha1="512421e8a2dd281bf2fc981b36401c3f97e1e1ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs233dce2bfc96c">
+		<description>Nonterraqueous 48K (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48487">
+				<rom name="Nonterraqueous 48K (1985)(Mastertronic).tap" size="48487" crc="658f720a" sha1="233dce2bfc96c18be50643de22033aa24352d644"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfb4669c6a2798">
+		<description>North &amp; South (demo) (1991)(Infogrames)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56767">
+				<rom name="North &amp; South (demo) (1991)(Infogrames)(128K).tap" size="56767" crc="7ebd39e3" sha1="fb4669c6a2798b5f35149553daa0095dfd69cb60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs84d659e32f9c3">
+		<description>North American Indians (1983)(Calpac Educational Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6895">
+				<rom name="North American Indians (1983)(Calpac Educational Software).tap" size="6895" crc="0816c13b" sha1="84d659e32f9c379b8f5515d0388c2fe30eec856d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a2a8f58e6e17">
+		<description>Northstar (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49231">
+				<rom name="Northstar (1988)(Gremlin Graphics).tap" size="49231" crc="3354d065" sha1="8a2a8f58e6e17de98672fb65f51763f9947eeaa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse029a4667d2f4">
+		<description>Northstar (1988)(Gremlin Graphics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49369">
+				<rom name="Northstar (1988)(Gremlin Graphics)[a].tap" size="49369" crc="61d487db" sha1="e029a4667d2f4961997a6fbf49814eb24317c0b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa4d73818987ea">
+		<description>Northstar (1988)(Gremlin Graphics)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50812">
+				<rom name="Northstar (1988)(Gremlin Graphics)[t].tap" size="50812" crc="feffb802" sha1="a4d73818987eaec27286a2ce8e9483ac25c4791d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6e59f919a77f2">
+		<description>Nosferatu The Vampyre (1986)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56251">
+				<rom name="Nosferatu The Vampyre (1986)(Alternative Software).tap" size="56251" crc="c27fdc62" sha1="6e59f919a77f29d1b149aef35485cd982293b37c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs74ff6ef30026f">
+		<description>Nosy (2020)(Javier Fopiani)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43998">
+				<rom name="Nosy (2020)(Javier Fopiani).tap" size="43998" crc="efb0331a" sha1="74ff6ef30026f5f1625e2b0568240cd37ac4898a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2375412611d6b">
+		<description>Nothing v1.0 128K (2021)(Gogin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46605">
+				<rom name="Nothing v1.0 128K (2021)(Gogin).tap" size="46605" crc="11d0b7e2" sha1="2375412611d6b517729b450f0f09cc08206b7cb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs20fe31ad42dbe">
+		<description>Nowotnik Puzzle, The (1983)(Phipps Associates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8312">
+				<rom name="Nowotnik Puzzle, The (1983)(Phipps Associates).tap" size="8312" crc="01fffebf" sha1="20fe31ad42dbec7b58cd3d5b23f5736b39b5be84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4aa0001fc89ee">
+		<description>Nth Zone (1985)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28416">
+				<rom name="Nth Zone (1985)(Automata UK).tap" size="28416" crc="97905e85" sha1="4aa0001fc89eed5aa0581489c536e90a5c9a6e01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6eaa5c1a7141e">
+		<description>Nuclear Bowls (1986)(Zigurat Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49570">
+				<rom name="Nuclear Bowls (1986)(Zigurat Software).tap" size="49570" crc="8a383a82" sha1="6eaa5c1a7141ecf55c5521193d6285b480f5acc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse192e58b59f48">
+		<description>Nuclear Countdown (1987)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35336">
+				<rom name="Nuclear Countdown (1987)(Atlantis Software Ltd).tap" size="35336" crc="75568462" sha1="e192e58b59f48b21aa6092e5b0cd9f90b109d3d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse754b6cff74f1">
+		<description>Nudgeeit (1985)(Automata UK Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30862">
+				<rom name="Nudgeeit (1985)(Automata UK Ltd).tap" size="30862" crc="8e08fc21" sha1="e754b6cff74f150c369d64fd41c7b358ad77587c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c0a10ba21da6">
+		<description>Number Bases (1984)(Scisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9862">
+				<rom name="Number Bases (1984)(Scisoft).tap" size="9862" crc="d50f236a" sha1="3c0a10ba21da6ec252ed18992d8b9e4c2c51e194"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4b2dd53a4b02e">
+		<description>Number Fun (1982)(Griffin Software)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14646">
+				<rom name="Number Fun (1982)(Griffin Software)[Part 1 of 2].tap" size="14646" crc="20987fb8" sha1="4b2dd53a4b02eda60969f38dfaa19670db89151c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs12d0f25f3d76d">
+		<description>Number Fun (1982)(Griffin Software)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14529">
+				<rom name="Number Fun (1982)(Griffin Software)[Part 2 of 2].tap" size="14529" crc="fb21aaf5" sha1="12d0f25f3d76d275a6c745ac578cc94caf233be2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07d5fb864775e">
+		<description>Number Painter (1984)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16897">
+				<rom name="Number Painter (1984)(Psion).tap" size="16897" crc="04584867" sha1="07d5fb864775ead853c446d9877d7e9e73aa5c73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75872c467d15c">
+		<description>Nutty Gnome (19xx)(Nigel Hicken)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26565">
+				<rom name="Nutty Gnome (19xx)(Nigel Hicken).tap" size="26565" crc="dc3de9ca" sha1="75872c467d15cf74f31f36636be39f133411234d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs43100002e9d18">
+		<description>Nythyhel - Part 1 (19xx)(The Guild)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33563">
+				<rom name="Nythyhel - Part 1 (19xx)(The Guild).tap" size="33563" crc="245ff847" sha1="43100002e9d18ce680e1b19a04e12823826100cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19b5a072f01ea">
+		<description>Nythyhel - Part 2 (19xx)(The Guild)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33015">
+				<rom name="Nythyhel - Part 2 (19xx)(The Guild).tap" size="33015" crc="bb1c737c" sha1="19b5a072f01eab18cf4ba57d05105821c843b37e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33239,6 +33579,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="112766">
 				<rom name="_Ninja Warriors, The.tzx" size="112766" crc="af303a6d" sha1="6f532f012a60501669448edea5e59773b857ff86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs28be726c00063">
+		<description>_North &amp; South (1991)(Infogrames)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="162037">
+				<rom name="_North &amp; South (1991)(Infogrames)(128k).tap" size="162037" crc="f5fc50da" sha1="28be726c00063239f4ce4ab7b19fe793f709f843"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab18e9b43697d">
+		<description>_Nuclear Attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31716">
+				<rom name="_Nuclear Attack.TAP" size="31716" crc="1df6b922" sha1="ab18e9b43697db726f765fd080c174c796fb8c4e"/>
 			</dataarea>
 		</part>
 	</software>

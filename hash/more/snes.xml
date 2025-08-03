@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3907 -->
+<!-- Number of items in this list = 3916 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3099,16 +3099,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="AmbianceOW (SMW1 Hack).sfc" size="1048576" crc="66ee407a" sha1="ebe0334a8774d3bdb0ebbf6661ec6db4f2974963"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns433eca629c17f">
-		<description>Angel_Poon</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Angel_Poon.sfc" size="2097152" crc="966573a8" sha1="433eca629c17fc2d24b1298ece74d21f4557825c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9272,6 +9262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns554619b61ddca">
+		<description>Final Fantasy V (1998)(RPGe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Final Fantasy V (1998)(RPGe).smc" size="2621440" crc="1988c0b1" sha1="554619b61ddcacb747c39d5af7be5d867a6f0c56"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns877eca985bfab">
 		<description>Final Fantasy V (J) [T+Chi(Simp)_Boco]</description>
 		<year>????</year>
@@ -10732,6 +10732,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns489a81c44853f">
+		<description>Front Mission - Gun Hazard (CHT_Ver_1.01)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Front Mission - Gun Hazard (CHT_Ver_1.01).smc" size="4194304" crc="be34fe7a" sha1="489a81c44853fbf0f425d297efbde563a5b24356"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns765e5367f081c">
 		<description>Front Mission - Gun Hazard T-Eng (2004)(Aeon Genesis)</description>
 		<year>????</year>
@@ -11269,6 +11279,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Go Go Ackman 3 T-Eng (2020)(Reld).sfc" size="2097152" crc="43c27291" sha1="4e1343d91f45ba1d5b02fe0efc24eddc174ec330"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscf2b4d0981348">
+		<description>Go Go Ackman CHT V1.01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Go Go Ackman CHT V1.01.sfc" size="1310720" crc="8cd0822e" sha1="cf2b4d09813483f3a2554f50ca0aab94a8515511"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13392,6 +13412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns433eca629c17f">
+		<description>Kawa no Nushizuri</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kawa no Nushizuri.sfc" size="2097152" crc="966573a8" sha1="433eca629c17fc2d24b1298ece74d21f4557825c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsce85268a9b4ec">
 		<description>Keeping SNES Alive! (2020)(Dr. Ludos)</description>
 		<year>????</year>
@@ -14919,6 +14949,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Live A Live T-Spa v1.6 (2022)(Max1323).sfc" size="2621440" crc="7a92a82a" sha1="a8f691c52841bffe5faf35bbfbbd30a38d4a86e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns30ac0ec531054">
+		<description>Live a Live[CHT][V1.00]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621952">
+				<rom name="Live a Live[CHT][V1.00].smc" size="2621952" crc="a3154f48" sha1="30ac0ec5310540fba883860ae902035600dabee4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17639,6 +17679,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mega Man &amp; Bass T-Eng v1.1 (2002-2023)(Aeon Genesis, Blade133bo).sfc" size="4194304" crc="bb319f69" sha1="7ade242db58989b56a16706c30ef778249657259"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb89d24bdc9e5e">
+		<description>Mega Man 7 Restoration v1.2 (2025)(SCD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Mega Man 7 Restoration v1.2 (2025)(SCD).sfc" size="3145728" crc="f7ecba9d" sha1="b89d24bdc9e5ec24804cacbc644c01714be9a6fa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30682,6 +30732,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snse781991d44433">
+		<description>SPC7110 Check Program V2.2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="SPC7110 Check Program V2.2.smc" size="5242880" crc="57e5939b" sha1="e781991d44433070bfbef79c9756ba574cd5d820"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns26202a15e022b">
 		<description>spctest (2023)(HB)</description>
 		<year>????</year>
@@ -31932,6 +31992,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns018753c9ee14a">
+		<description>Super Mario All-Stars + Super Mario World (USA)[20250730_NOKOH]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Mario All-Stars + Super Mario World (USA)[20250730_NOKOH].sfc" size="4194304" crc="6df9c4a9" sha1="018753c9ee14a3f4d1abeced823d77e0b9a9aeb3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5fa6b369bce55">
 		<description>Super Mario All-Stars + Super Mario World T-Cht (2025)(NOKOH)</description>
 		<year>????</year>
@@ -32179,6 +32249,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Super Mario Challenge (SMW1 Hack).sfc" size="1048576" crc="385fe479" sha1="603f6c6a34380baf3676d1050ecd41f5184d7090"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns76a2d9bcebcba">
+		<description>Super Mario Collection (J) (V1.1)[20250730_NOKOH]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Mario Collection (J) (V1.1)[20250730_NOKOH].sfc" size="4194304" crc="a5968c31" sha1="76a2d9bcebcba97fe1aa20f2ec82664284da5ab6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33619,6 +33699,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="super mario world - skill up mario (smw1 hack).sfc" size="2097664" crc="ea25fc21" sha1="20f4d73f09114430dd635951f47de193d08a3ff9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbdde96f16f364">
+		<description>Super Mario World - Super Mario Bros. 4 (Japan)[20250729_NOKOH]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Super Mario World - Super Mario Bros. 4 (Japan)[20250729_NOKOH].sfc" size="786432" crc="53941b31" sha1="bdde96f16f36457816c3f2ff29c13f75b750d626"/>
 			</dataarea>
 		</part>
 	</software>

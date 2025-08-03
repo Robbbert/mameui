@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 519 -->
+<!-- Number of items in this list = 524 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -1179,6 +1179,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Deep Dungeon - Madou Senki (J) [b].fds" size="131016" crc="3d723613" sha1="c928916262940b298e806ea350e5defec2f44ec9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds2068fdabdbbfc">
+		<description>Deep Dungeon - The Heretic War T-Eng (2006)(KingMike's Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="Deep Dungeon - The Heretic War T-Eng (2006)(KingMike's Translations).fds" size="131016" crc="29f8cf56" sha1="2068fdabdbbfcec1d59d2aa61985872ef294d49e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds77fb4d5c510c7">
+		<description>Deep Dungeon II - The Hero's Crest T-Eng (2010)(KingMike's Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Deep Dungeon II - The Hero's Crest T-Eng (2010)(KingMike's Translations).fds" size="131000" crc="d4eca4d4" sha1="77fb4d5c510c7b3b0b7d7b0fd6c954999a71810c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4112,6 +4132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="fds1c8ba6fb88de7">
+		<description>SD Gundam World - Gachapon Soldier - Scramble Wars T-Eng v1.01 (2018)(MrRichard999)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131016">
+				<rom name="SD Gundam World - Gachapon Soldier - Scramble Wars T-Eng v1.01 (2018)(MrRichard999).fds" size="131016" crc="1cac22d0" sha1="1c8ba6fb88de7abaefddc6ccfd079b977aaca03b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="fdsd275eb9935e07">
 		<description>Section-Z (1987)(Capcom)</description>
 		<year>????</year>
@@ -4829,6 +4859,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
 				<rom name="Ultraman - Kaijuu Teikoku no Gyakushuu (Japan).fds" size="131016" crc="2ab0c9bd" sha1="746d38d3b5ee23272fbe17cca031cf8d72a79820"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdsbd42652b91aab">
+		<description>Ultraman - Wrath of the Kaiju Empire T-Eng (2025)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Ultraman - Wrath of the Kaiju Empire T-Eng (2025)(BlackPaladin).fds" size="131000" crc="9b9f0120" sha1="bd42652b91aab5a2386d48759ce773819cea4eed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds4be787d5fa993">
+		<description>Ultraman 2 - Sally Forth, Science Patrol T-Eng (2025)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Ultraman 2 - Sally Forth, Science Patrol T-Eng (2025)(BlackPaladin).fds" size="131000" crc="12d4da55" sha1="4be787d5fa993332fd3ced570319defb1402f77c"/>
 			</dataarea>
 		</part>
 	</software>
