@@ -937,6 +937,7 @@ mac512k
 mac512ke
 macclasc
 macplus
+macplusj
 macse
 macsefd
 unitron
@@ -1533,6 +1534,7 @@ monkeyl
 monkeyl_a11
 monkeyl_a12
 monkeyl_aa13b
+monkeyl_aa20a
 monkeyl_aa21b
 monkeyl_aa21c
 monkeyl_en20b
@@ -18355,6 +18357,7 @@ feagv10
 feagv11
 feagv4
 feagv4a
+feagv4b
 feagv5
 feagv7
 feagv7a
@@ -19775,6 +19778,7 @@ f2pbball
 f3in1
 fingbowl
 fxmcr165
+fxmcr165a
 ginv
 ginv1000
 ginv2000
@@ -20830,6 +20834,7 @@ slqz3
 tct2p
 tripslot
 tshs
+tshs101
 tswxp
 xypdk
 zhongguo
@@ -25479,6 +25484,7 @@ yieartf
 
 @source:konami/tutankhm.cpp
 tutankhm
+tutankhmb
 tutankhms
 
 @source:konami/twin16.cpp
@@ -31185,6 +31191,10 @@ goldnpkg
 goldnpkh
 goldnpkr
 goodluck
+gp_jpn22
+gp_ped42_90
+gp_ped42_95
+gp_turbo
 icproul
 jkrbonus
 jokercar
@@ -34313,6 +34323,7 @@ rallyxa
 rallyxeg
 rallyxm
 rallyxmr
+rallyxtd
 savanna
 tactcian
 tactcian2
@@ -37418,6 +37429,7 @@ paragon
 playboy
 rapidfip
 rollston
+rollstonv17
 saturn2
 skatebll
 skflight
@@ -40329,19 +40341,13 @@ srssf2mb
 ssf2mdb
 twinktmb
 
-@source:sega/megadriv_rad.cpp
+@source:sega/megadriv_firecore.cpp
 atgame40
-banmrid
 dcat16
-dgunl3227
-dgunl3227a
+mahg156
 matet
 mateta
-mahg156
 mdhh100
-mdtvp1j
-mdtvp2j
-mdtvp3j
 msi_sf2
 mygalag
 mygalaga
@@ -40349,7 +40355,15 @@ mympac
 mypac
 mypaca
 mysinv
-ra145
+reactmd
+sarc110
+sarc110a
+
+@source:sega/megadriv_rad.cpp
+banmrid
+mdtvp1j
+mdtvp2j
+mdtvp3j
 rad_gen1
 rad_gen2
 rad_md1
@@ -40363,16 +40377,22 @@ rad_sonic
 rad_sonicuk
 rad_ssoc
 
+@source:sega/megadriv_unksoc.cpp
+dgunl3227
+dgunl3227a
+ra145
+
 @source:sega/megadriv_sunmix.cpp
 sbubsm
 topshoot
 
-@source:sega/megadriv_sunplus_hybrid.cpp
-reactmd
-
-@source:sega/megadriv_vt_hybrid.cpp
-sarc110
-sarc110a
+@source:sega/megadriv_ybox.cpp
+jingling
+jzth
+puckpkmn
+puckpkmnb
+shuifeng
+songjang
 
 @source:sega/megaplay.cpp
 megaplay
@@ -40926,12 +40946,6 @@ zombrvn
 zombrvne
 zombrvno
 zunou
-
-@source:sega/puckpkmn.cpp
-jingling
-jzth
-puckpkmn
-puckpkmnb
 
 @source:sega/saturn.cpp
 hisaturn
@@ -43849,6 +43863,9 @@ yizhix
 
 @source:skeleton/xbase09.cpp
 xbase09
+
+@source:skeleton/xinyun.cpp
+hongmxy
 
 @source:skeleton/xor100.cpp
 xor100
