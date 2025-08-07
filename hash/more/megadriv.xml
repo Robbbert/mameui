@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1971 -->
+<!-- Number of items in this list = 1974 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -10302,6 +10302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gend89c75ccaea48">
+		<description>Mai Nurse v1.02 (2024-25)(lunoka)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mai Nurse v1.02 (2024-25)(lunoka).bin" size="262144" crc="fc7c2995" sha1="d89c75ccaea48cc89d724f4e0184b5d248e83c0e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genaee3ff64691a2">
 		<description>Mallet Legend</description>
 		<year>????</year>
@@ -10369,6 +10379,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="MC68000_BUS_ERROR.bin" size="1048576" crc="9210fcb8" sha1="53ad1707aaf1eef7715f0de2e8346bb341256d0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2eb1978740c0b">
+		<description>McDonald's Treasure Land Adventure Restoration (2025)(SCD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="McDonald's Treasure Land Adventure Restoration (2025)(SCD).bin" size="1048576" crc="28398d66" sha1="2eb1978740c0b63fc35020d8af83fa36cc70260f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12679,6 +12699,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Rick Dangerous 2 v1.1 - FrameCounterFix (2018)(PortableDev).bin" size="1310720" crc="cc8de65e" sha1="4c15532cf8f57a15f203662ce14fbc2a41fd570b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena4b3a01daab98">
+		<description>Rick Dangerous DX (2025)(Z-Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Rick Dangerous DX (2025)(Z-Team).bin" size="1572864" crc="f28df099" sha1="a4b3a01daab989858c8ca2b38af1e240588be42a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3734 -->
+<!-- Number of items in this list = 3772 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs78f993630566c">
+		<description>-Ninja Spirit (1990)(Activision Inc)[cr Pentacle][t Pentacle](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="77932">
+				<rom name="-Ninja Spirit (1990)(Activision Inc)[cr Pentacle][t Pentacle](128K).tap" size="77932" crc="7be35efa" sha1="78f993630566ce4257b5e3d549d9be023aa6956c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11082,6 +11092,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0561967eda6d3">
+		<description>nimm (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4180">
+				<rom name="nimm (19xx)(-).tap" size="4180" crc="227a87c9" sha1="0561967eda6d3a65a9096694f4209c0556cbd9d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1358fb3d6d846">
+		<description>Ninja (19xx)(Mastertronic Added Dimension)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49268">
+				<rom name="Ninja (19xx)(Mastertronic Added Dimension).tap" size="49268" crc="888787fc" sha1="1358fb3d6d84669bfc13c5ddd07e9c1050096cd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67c8b58aba050">
+		<description>Ninja Commando (1989)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40448">
+				<rom name="Ninja Commando (1989)(Zeppelin Games).tap" size="40448" crc="8dcf7181" sha1="67c8b58aba050323d372ea9295686ef0d2d82345"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseed0eabc0309b">
+		<description>Ninja Commando (1989)(Zeppelin Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40413">
+				<rom name="Ninja Commando (1989)(Zeppelin Games)[a].tap" size="40413" crc="a0f6c90b" sha1="eed0eabc0309b1f7554b5ac44a86dd8f8e0b8f36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb85cb4e16704b">
+		<description>Ninja Commando 48K (1989)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40413">
+				<rom name="Ninja Commando 48K (1989)(Zeppelin Games).tap" size="40413" crc="60e678a2" sha1="b85cb4e16704b85323ae07e6d5d7620d032aaac5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7ebe929ae0cad">
+		<description>Ninja Gardening-Simulator (2019)(Andrew Bunker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45008">
+				<rom name="Ninja Gardening-Simulator (2019)(Andrew Bunker).tap" size="45008" crc="80d96a46" sha1="7ebe929ae0cadd0d5dce2f1970d20652605492ae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc214ea88a9939">
 		<description>Ninja Hamster</description>
 		<year>????</year>
@@ -11089,6 +11159,156 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="110124">
 				<rom name="Ninja Hamster.tzx" size="110124" crc="bb77668c" sha1="c214ea88a9939f68c91a8bc1fb08a255f8526f90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaff2d00ba65f6">
+		<description>Ninja Massacre (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59148">
+				<rom name="Ninja Massacre (1989)(Codemasters).tap" size="59148" crc="2b28000a" sha1="aff2d00ba65f6e758ce44ed0eddadb89979a96a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b38428e19c67">
+		<description>Ninja Master, The (1986)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Ninja Master, The (1986)(Firebird).tap" size="49343" crc="e10ae5c5" sha1="3b38428e19c67f8ee8ea87b6589e476d30ebefb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfd3971af43831">
+		<description>Ninja Poison - Part 1 (2021)(TokuSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45684">
+				<rom name="Ninja Poison - Part 1 (2021)(TokuSoft).tap" size="45684" crc="2cd6d37d" sha1="fd3971af4383146a57c6ef66134381f762c7db55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f99e4f06b1b9">
+		<description>Ninja Poison - Part 2 (2021)(TokuSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48076">
+				<rom name="Ninja Poison - Part 2 (2021)(TokuSoft).tap" size="48076" crc="e4cce9b9" sha1="8f99e4f06b1b9ac80ccab6429f3c6ce5a11d4823"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsccc5d05adf3e6">
+		<description>Ninja Scooter Simulator (1988)(Firebird Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31232">
+				<rom name="Ninja Scooter Simulator (1988)(Firebird Software Ltd)[a].tap" size="31232" crc="e3c2b7f1" sha1="ccc5d05adf3e60923529ae1c15921e58a1db89e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdca90d1decafe">
+		<description>Ninja Scooter Simulator 48K (1987)(Sysoft)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46884">
+				<rom name="Ninja Scooter Simulator 48K (1987)(Sysoft)_1.tap" size="46884" crc="f9173adb" sha1="dca90d1decafe9d1f1468c3732364850e0485fe6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbde22eba11ff8">
+		<description>Ninja Spirit (19xx)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="113048">
+				<rom name="Ninja Spirit (19xx)(Activision).tap" size="113048" crc="19b240f6" sha1="bde22eba11ff88d7c941d0811aa15143ba921d65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6adad16aa241d">
+		<description>Ninja twins Going to Zedeaks 128K (2014)(SAM Style)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19337">
+				<rom name="Ninja twins Going to Zedeaks 128K (2014)(SAM Style).tap" size="19337" crc="91a6dbd8" sha1="6adad16aa241dd249689136bc10892f592572bf1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7662b87530b8a">
+		<description>Ninjakul 2 The Last Ninja (2019)(Pat Morita Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="102791">
+				<rom name="Ninjakul 2 The Last Ninja (2019)(Pat Morita Team).tap" size="102791" crc="beccf8b7" sha1="7662b87530b8a46d8213d70430cd81319e474f56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb5effaedbe92d">
+		<description>Ninjakul in the AUIC Temple (2018)(Pat Morita Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60380">
+				<rom name="Ninjakul in the AUIC Temple (2018)(Pat Morita Team).tap" size="60380" crc="787a7dbe" sha1="b5effaedbe92d1541b07517436b4c2b9e09fe0f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c6d8a078a880">
+		<description>Nixy and the Seeds of Doom 128K (2019)(Bubblesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48635">
+				<rom name="Nixy and the Seeds of Doom 128K (2019)(Bubblesoft).tap" size="48635" crc="3649c61d" sha1="1c6d8a078a88044fcb5ddf628c05fbc8fbd0c31e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs26e4cc0ee838e">
+		<description>Nixy the Glade Sprite 128K (2018)(Bubblesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52957">
+				<rom name="Nixy the Glade Sprite 128K (2018)(Bubblesoft).tap" size="52957" crc="63257fff" sha1="26e4cc0ee838e34603f72fa1f16895b883d6acde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs14bdf496a0a78">
+		<description>NL-BCS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3574">
+				<rom name="NL-BCS.TAP" size="3574" crc="31637552" sha1="14bdf496a0a78a129e1a7d8257e139b844127daa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9beb9be6eba4e">
+		<description>NL-HARD3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2082">
+				<rom name="NL-HARD3.TAP" size="2082" crc="2bfe6478" sha1="9beb9be6eba4eab1abb9bc9e20c7a217b6590df0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48fbae7f1d3c6">
+		<description>NL-TC30</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5642">
+				<rom name="NL-TC30.TAP" size="5642" crc="f97bf25a" sha1="48fbae7f1d3c6b2f0e3d629cf065eea3353cdbd5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17972,6 +18192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4799c83aa9301">
+		<description>Robin of the Wood 48K (1985)(Odin Computer Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49725">
+				<rom name="Robin of the Wood 48K (1985)(Odin Computer Graphics).tzx" size="49725" crc="b81a2909" sha1="4799c83aa9301937cb0b85e4309597e038eec668"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd56163b70cd94">
 		<description>Robocop (1989)(Ocean Software Ltd)[a]</description>
 		<year>????</year>
@@ -23002,6 +23232,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa8abb54168f5e">
+		<description>Speccies</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44264">
+				<rom name="Speccies.tzx" size="44264" crc="7c388864" sha1="a8abb54168f5e97390aca3d20ad2d14a7ad18edf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd593e67320741">
+		<description>Speccies2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15706">
+				<rom name="Speccies2.tzx" size="15706" crc="153f93a0" sha1="d593e6732074157a10891e0192033d9f26b4c76f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse51246d4eda35">
 		<description>Speccy Bros 48K (2012)(Climacus)</description>
 		<year>????</year>
@@ -23749,6 +23999,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42943">
 				<rom name="SQIJ'D 128K (2018)(Monument Microgames).tap" size="42943" crc="494495e8" sha1="5bb3dd577645550d6c9d477d4dada5f8aebbced6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs850622ec7a093">
+		<description>Sqij2018</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46048">
+				<rom name="Sqij2018.tzx" size="46048" crc="a17bf181" sha1="850622ec7a093d68284a4269bffd5e5e7c7b56a9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -27152,6 +27412,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs54108410abbb1">
+		<description>Three Weeks in Paradise 128K (1986)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="88220">
+				<rom name="Three Weeks in Paradise 128K (1986)(Mikro-Gen).tzx" size="88220" crc="71a5ebfe" sha1="54108410abbb12180abc8782dfdec222d47d25ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse70e034411c6e">
+		<description>Three Weeks in Paradise 48K (1986)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49638">
+				<rom name="Three Weeks in Paradise 48K (1986)(Mikro-Gen).tzx" size="49638" crc="81b2b340" sha1="e70e034411c6ec0f93fec18be19aa5f24bf55624"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7a121a4f4f312">
 		<description>Three Weeks In Paradise</description>
 		<year>????</year>
@@ -29742,6 +30022,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc567c5965c8a3">
+		<description>Vallation</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41179">
+				<rom name="Vallation.tap" size="41179" crc="e67312ca" sha1="c567c5965c8a3d9d482d131356f7cc03623d9882"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd70ee8941bb5d">
+		<description>Vallation</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41207">
+				<rom name="Vallation.tzx" size="41207" crc="4869ba37" sha1="d70ee8941bb5dfeca9663d74e952b7814615a190"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0dcefdd808b87">
+		<description>Vallation128 (final)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68513">
+				<rom name="Vallation128 (final).tap" size="68513" crc="a30a4662" sha1="0dcefdd808b87be1841fbe0c297541f3a7066a80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs13d7f0368b150">
+		<description>Vallation128 (final)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68565">
+				<rom name="Vallation128 (final).tzx" size="68565" crc="2e4b612b" sha1="13d7f0368b1507cd3ccf26a37fe8daf2754becdd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9c966370e3732">
 		<description>Valley, The (1982)(ASP Software Ltd)</description>
 		<year>????</year>
@@ -30019,6 +30339,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="89412">
 				<rom name="Viaje al Centro de la Tierra (1989)(Topo Soft)(Sp)[cr [Cr California](128K)[Cr California].tap" size="89412" crc="a2d10073" sha1="dde4ccfb33af16733eab61c550ec564cd652ef2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs258cbcc3a5b21">
+		<description>Viaje al Centro de la Tierra - Version Extendida ES 48K-128K (2008)(Topo Siglo XXI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="89772">
+				<rom name="Viaje al Centro de la Tierra - Version Extendida ES 48K-128K (2008)(Topo Siglo XXI).tap" size="89772" crc="306f4184" sha1="258cbcc3a5b213938f22736ca367849268dd6576"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse22c4fe55d3c7">
+		<description>Viaje al Centro de la Tierra - Version Extendida ES 48K-128K (2008)(Topo Siglo XXI)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="196541">
+				<rom name="Viaje al Centro de la Tierra - Version Extendida ES 48K-128K (2008)(Topo Siglo XXI)_1.tap" size="196541" crc="83c5cd5b" sha1="e22c4fe55d3c790ced32102980a781b9cf2b9c0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs51f1fb2757a9d">
+		<description>Viaje al Centro de la Tierra ES 48K (1989)(Topo Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125681">
+				<rom name="Viaje al Centro de la Tierra ES 48K (1989)(Topo Soft).tap" size="125681" crc="dbc5e51b" sha1="51f1fb2757a9d0e1ba85dfccb32275c1fb0641d5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31779,6 +32129,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46572">
 				<rom name="Wulfpack (1988)(Blue Ribbon Software).tap" size="46572" crc="5b356787" sha1="dfa5356c5dbaeb6cd528d236570b1c1e1d77cdbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs939ea21061f98">
+		<description>WURM 16K (2025)(Animated ALex)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3673">
+				<rom name="WURM 16K (2025)(Animated ALex).tap" size="3673" crc="77ff3283" sha1="939ea21061f98774e68ff921f37ee10773248275"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33569,6 +33929,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46831">
 				<rom name="_Match Point.tzx" size="46831" crc="a865be98" sha1="12dd8e630f7b5b839f02b2ecbac33233ba7c3850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6a7fbaff0e0e7">
+		<description>_Ninja Hamster 48K (1987)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="101270">
+				<rom name="_Ninja Hamster 48K (1987)(CRL Group).tap" size="101270" crc="badc0aec" sha1="6a7fbaff0e0e714327618dd9489a45e902e23d38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae313a71ef2de">
+		<description>_Ninja Warriors, The (1989)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="112645">
+				<rom name="_Ninja Warriors, The (1989)(Virgin Games).tap" size="112645" crc="c25aab25" sha1="ae313a71ef2de475c88305fe0f863423aecebd6b"/>
 			</dataarea>
 		</part>
 	</software>
