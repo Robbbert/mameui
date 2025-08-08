@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3772 -->
+<!-- Number of items in this list = 3794 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -11032,6 +11032,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc37c05a5c93b4">
+		<description>National Flags</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17896">
+				<rom name="National Flags.tap" size="17896" crc="f074617a" sha1="c37c05a5c93b412884cc6c06ef2ad0d22c842ffb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs13599152e6537">
 		<description>Navy Seals - Part 1</description>
 		<year>????</year>
@@ -11089,6 +11099,206 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="178175">
 				<rom name="New Zealand Story, The.tzx" size="178175" crc="32ed2b0d" sha1="bfa1d69d4f8a2c1ccf78f1342ab8ee2352fced55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7a9d8d5d8ece0">
+		<description>Nexus (1986)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52452">
+				<rom name="Nexus (1986)(Ocean Software).tap" size="52452" crc="0266e565" sha1="7a9d8d5d8ece058578443981c19a4679e0f83887"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb1e4738f67846">
+		<description>Nicotine Nightmare (1985)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48342">
+				<rom name="Nicotine Nightmare (1985)(Atlantis Software).tap" size="48342" crc="787279f5" sha1="b1e4738f67846e70c325e1693898958d53ae31ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs90d79833b414c">
+		<description>Nigel Mansell's World Championship (1992)(Gremlin Graphics)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="224506">
+				<rom name="Nigel Mansell's World Championship (1992)(Gremlin Graphics)(128k).tap" size="224506" crc="0114c8d4" sha1="90d79833b414c171ffbf97ea506a3ce801a55cc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsedef5af597850">
+		<description>Nigel Mansell's World Championship (1993)(Gremlin Graphics)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="224111">
+				<rom name="Nigel Mansell's World Championship (1993)(Gremlin Graphics)(128K).tap" size="224111" crc="36ee68e4" sha1="edef5af5978501f24fe35343792ace65f226d5bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa8783606fa68">
+		<description>Night Breed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="188397">
+				<rom name="Night Breed.tap" size="188397" crc="d85291d2" sha1="aa8783606fa68e93d3cd5315cf20d85e9521d828"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0fcce1eb01ad1">
+		<description>Night Flight 1 (1982)(Hewson Consultants Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8133">
+				<rom name="Night Flight 1 (1982)(Hewson Consultants Ltd).tap" size="8133" crc="c7e1393c" sha1="0fcce1eb01ad1fceef48261654e27c448dd1edff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs17532591030cf">
+		<description>Night Flite 2 (1983)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8803">
+				<rom name="Night Flite 2 (1983)(Hewson Consultants).tap" size="8803" crc="8b77226e" sha1="17532591030cfa266a43d87942edd7cdf4496147"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbeb0bf54515c8">
+		<description>Night Hunter (1990)(Ubi Soft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="329560">
+				<rom name="Night Hunter (1990)(Ubi Soft Ltd).tap" size="329560" crc="3b323111" sha1="beb0bf54515c8272e0189831c0402b3549e65a23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscb6ecd2eda5d2">
+		<description>Night Raider (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48000">
+				<rom name="Night Raider (1988)(Gremlin Graphics).tap" size="48000" crc="85912d3e" sha1="cb6ecd2eda5d213d1cdecd97399aaa2ef6616fbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbebb4fe6b41bd">
+		<description>Night Run (19xx)(Sinclair User)[cr [Cr Tigers Claw][Cr Tigers Claw]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31125">
+				<rom name="Night Run (19xx)(Sinclair User)[cr [Cr Tigers Claw][Cr Tigers Claw].tap" size="31125" crc="591a6b98" sha1="bebb4fe6b41bd620815c1a7d0fc9e48fc5873b51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5bd942807fb57">
+		<description>Night Shift (1991)(US Gold)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="124188">
+				<rom name="Night Shift (1991)(US Gold)(128k).tap" size="124188" crc="b8c56c38" sha1="5bd942807fb57819df4b0213de7dbc65aa7cb09a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsda7f5e61ac248">
+		<description>Night Shift (demo) (1991)(US Gold Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37499">
+				<rom name="Night Shift (demo) (1991)(US Gold Ltd).tap" size="37499" crc="4942f2d7" sha1="da7f5e61ac2481d0ea197e0ebf51fc6e03cca588"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs530e23ec25a56">
+		<description>Night Sky, The (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30215">
+				<rom name="Night Sky, The (19xx)(-).tap" size="30215" crc="7dbc4c45" sha1="530e23ec25a5673ef92a97fe04c7c2d655c7599a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c2fcff4729b5">
+		<description>Night Stalker ZX (2018)(AMCgames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34047">
+				<rom name="Night Stalker ZX (2018)(AMCgames).tap" size="34047" crc="6c112118" sha1="1c2fcff4729b5c0592048b79ee288f82814d101b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs87b6ee310ab7d">
+		<description>Nightbreed (1990)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="188548">
+				<rom name="Nightbreed (1990)(Ocean Software Ltd).tap" size="188548" crc="089924ae" sha1="87b6ee310ab7da46467c00528dbd6a211fcf2307"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1381a1936089a">
+		<description>Nightmare (1986)(K'Soft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25280">
+				<rom name="Nightmare (1986)(K'Soft Ltd).tap" size="25280" crc="1e512243" sha1="1381a1936089acefb676d4d283a946bb9da16b2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs70885b6a26987">
+		<description>Nightmare on Halloween 48K (2013)(Radastan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39246">
+				<rom name="Nightmare on Halloween 48K (2013)(Radastan).tap" size="39246" crc="06b32e79" sha1="70885b6a26987b67db66e87600e6df09b6a65d54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs61ec385410e75">
+		<description>Nightmare Rally</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44940">
+				<rom name="Nightmare Rally.tap" size="44940" crc="8b65102b" sha1="61ec385410e75ca9d5e5a162aeef1b1be8572b37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs84ad511b18aef">
+		<description>Niko and the Magic Orb 128K (2024)(BTCO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52571">
+				<rom name="Niko and the Magic Orb 128K (2024)(BTCO).tap" size="52571" crc="0080e61f" sha1="84ad511b18aefbc9202166290d9394a924cb8d08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc332ef083087b">
+		<description>Niko and the Magic Orb 48K (2024)(BTCO)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52316">
+				<rom name="Niko and the Magic Orb 48K (2024)(BTCO).tap" size="52316" crc="d922530b" sha1="c332ef083087b001efd740f3ec71d03ac270610c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -27109,6 +27319,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="24510">
 				<rom name="Tetris 2 (1990)(Fuxoft).tap" size="24510" crc="eb9220fd" sha1="d85a2767c9006877513cfd7a10538977e183f19d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f82f06e76d8a">
+		<description>Tetris CE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47734">
+				<rom name="Tetris CE.tap" size="47734" crc="ab0b3de2" sha1="8f82f06e76d8a8bf6fabe1363bcfe57281d7e900"/>
 			</dataarea>
 		</part>
 	</software>

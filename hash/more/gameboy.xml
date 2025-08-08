@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1363 -->
+<!-- Number of items in this list = 1382 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -13119,6 +13119,196 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="2097216">
 				<rom name="Wai Xing Tanxian Zhi Xingqiu Dazhan (19xx)(Sintax)(TW)[p].gbx" size="2097216" crc="083c583b" sha1="58bd186f4c8a0b968054a18783cdae4462d7db10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc9d09419d04069">
+		<description>waixing_01</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="waixing_01.gbc" size="4194304" crc="dccd5c5c" sha1="9d09419d040692b4dadec0cb1399098d0a3dc0a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8144bfb76ad35">
+		<description>waixing_02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="waixing_02.gbc" size="4194304" crc="b9cf45b3" sha1="8144bfb76ad35168adcec98ae91cc404921f8869"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc4446c44028a0d">
+		<description>waixing_03</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="waixing_03.gbc" size="2097152" crc="45d1ff56" sha1="4446c44028a0d4a6fe504b347a15f0401f853ee3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc97ba204eabcfb">
+		<description>waixing_04</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="waixing_04.gbc" size="2097152" crc="baa9437a" sha1="97ba204eabcfb9c1c344a03fd04f255c311c8161"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccd7fb87402e4c">
+		<description>waixing_05</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_05.gbc" size="1048576" crc="5ff4f1fc" sha1="cd7fb87402e4cd95745915f521ad942deb45795d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc067fdaa0ed7a0">
+		<description>waixing_06</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="waixing_06.gbc" size="2097152" crc="8907ad00" sha1="067fdaa0ed7a01db9c4847900ece1f5069389b36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccdce340247cd2">
+		<description>waixing_07</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_07.gbc" size="1048576" crc="d01323a6" sha1="cdce340247cd27bd184ddcdf4585400569e2c024"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd9b46812ffbd2">
+		<description>waixing_08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_08.gbc" size="1048576" crc="288a7a2f" sha1="d9b46812ffbd217a4c6fd8310738d76ead50c2e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcc9595415a1c09">
+		<description>waixing_09</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_09.gbc" size="1048576" crc="2d4753b3" sha1="c9595415a1c098f32f4a9cc9acd0fe445dc229cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcd1d70831b94d9">
+		<description>waixing_10</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="waixing_10.gbc" size="2097152" crc="d4f4ce79" sha1="d1d70831b94d9b8b485ec6695f07bd92ec0b7e69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbccb7dc7465e64f">
+		<description>waixing_11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_11.gbc" size="1048576" crc="0ba8bb72" sha1="cb7dc7465e64f563b857804021a69fb7656b67df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc2bde63814adc9">
+		<description>waixing_12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="waixing_12.gbc" size="2097152" crc="f84d726c" sha1="2bde63814adc90b8149663461706e59aa757e3c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc8069e0b449019">
+		<description>waixing_13</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_13.gbc" size="1048576" crc="66887380" sha1="8069e0b44901906dbb8cf5fc8a448a77f0b7ab33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc64c7fa12c71bc">
+		<description>waixing_14</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_14.gbc" size="1048576" crc="c13653c5" sha1="64c7fa12c71bcb79e3a04970f8a82bc58b8fff04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc64192c3e0de61">
+		<description>waixing_15</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="waixing_15.gbc" size="2097152" crc="65855423" sha1="64192c3e0de61b7d7688b0fb920b4cf7d88e24e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcca6d1cd4c3271">
+		<description>waixing_16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_16.gbc" size="1048576" crc="c5b957c5" sha1="ca6d1cd4c32717ea0cfc4a7ab8bcef16dd9cef3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc27b87499ce82c">
+		<description>waixing_17</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="waixing_17.gbc" size="2097152" crc="8bccdb54" sha1="27b87499ce82c886bcebb065bd95688abd0111ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbca61a98ed7999a">
+		<description>waixing_18</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="waixing_18.gbc" size="2097152" crc="126a0d1d" sha1="a61a98ed7999ab1f5f7138c2c36d305518589804"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbc349d493fab50b">
+		<description>waixing_19</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="waixing_19.gbc" size="1048576" crc="ab6b8d07" sha1="349d493fab50be5016731f83b92c4e853b61c1d9"/>
 			</dataarea>
 		</part>
 	</software>
