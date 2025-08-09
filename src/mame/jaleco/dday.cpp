@@ -6,8 +6,9 @@ D-DAY   (c)Jaleco 1984
 
 TODO:
 - unused upper sprite color bank;
-- improve sound comms, sometimes BGM becomes silent;
-- identify protection chip;
+- improve sound comms, sometimes BGM becomes silent, very hard to repro;
+- insert coin sound volume cuts;
+- emulate protection properly (with a m54824p_device)
 
 --------------------------------------------------------------------------------
 Is it 1984 or 1987 game ?
@@ -173,8 +174,8 @@ private:
 TILE_GET_INFO_MEMBER(dday_state::get_tile_info_bg)
 {
 	u8 attr = m_bgvram[tile_index + 0x400];
-	int code = m_bgvram[tile_index] + ((attr & 0x08) << 5);
-	int color = (attr & 0x7);
+	u16 code = m_bgvram[tile_index] + ((attr & 0x08) << 5);
+	u8 color = (attr & 0x7);
 	color |= (attr & 0x40) >> 3;
 
 	tileinfo.category = BIT(attr, 7);
@@ -214,7 +215,7 @@ void dday_state::draw_sprites(bitmap_ind16 &bitmap, const rectangle &cliprect)
 		u8 flags = m_spriteram[i + 2];
 		u8 y = 256 - m_spriteram[i + 0] - 8;
 		u16 code = m_spriteram[i + 1];
-		u8 x = m_spriteram[i + 3] - 16;
+		u8 x = m_spriteram[i + 3] - 8;
 		u8 xflip = (flags & 0x80) >> 7;
 		u8 yflip = (code & 0x80) >> 7;
 		u8 color = flags & 0xf;
@@ -235,17 +236,26 @@ void dday_state::draw_foreground(screen_device &screen, bitmap_ind16 &bitmap, co
 {
 	m_fg_tilemap->draw(screen, bitmap, cliprect, 0, 0);
 
-	rectangle opaque_rect(cliprect.min_x, cliprect.min_x + 16, cliprect.min_y, cliprect.max_y);
+	const rectangle &visarea = screen.visible_area();
+	rectangle opaque_rect = cliprect;
+
+	// top opaque part
+	opaque_rect.min_x = visarea.min_x;
+	opaque_rect.max_x = visarea.min_x + 16;
+	opaque_rect &= cliprect;
 	m_fg_tilemap->draw(screen, bitmap, opaque_rect, TILEMAP_DRAW_OPAQUE, 0);
 
-	opaque_rect.min_x = cliprect.max_x - 16;
-	opaque_rect.max_x = cliprect.max_x;
+	// bottom opaque part
+	opaque_rect.min_x = visarea.max_x - 16;
+	opaque_rect.max_x = visarea.max_x;
+	opaque_rect &= cliprect;
 	m_fg_tilemap->draw(screen, bitmap, opaque_rect, TILEMAP_DRAW_OPAQUE, 0);
 }
 
 u32 dday_state::screen_update_dday(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(0x100, cliprect);
+
 	m_bg_tilemap->draw(screen, bitmap, cliprect, TILEMAP_DRAW_CATEGORY(1) | TILEMAP_DRAW_OPAQUE, 0);
 	draw_sprites(bitmap, cliprect);
 	m_bg_tilemap->draw(screen, bitmap, cliprect, TILEMAP_DRAW_CATEGORY(0), 0);
@@ -259,35 +269,40 @@ u32 dday_state::screen_update_dday(screen_device &screen, bitmap_ind16 &bitmap, 
     Protection device
 
     24 pin IC with scratched surface (like Exerion's "ICX"), not an MCU.
-    Die has label "4828A"; could this be Mitsubishi M54828P (frequency counter with 5-digit segment display)?
+    Die has label "4828A".
+
+    It's a Mitsubishi M54828P (M54824P family).
+    A frequency counter with 5-digit FLT display driver.
+
+	It writes to S1-S4, and reads digit segments (two of b/c/e/g?)
 
     Pinout:
 
-     1 - vcc
-     2 - ?
-     3 - I/O (input)
-     4 - I/O (input)
-     5 - I/O (input)
-     6 - I/O (input)
-     7 - vcc
-     8 - xtal
-     9 - ?
-    10 - gnd
-    11 - ?
-    12 - ?
-    13 - I/O (input)
-    14 - ?
-    15 - I/O (input)
-    16 - ?
-    17 - ?
-    18 - I/O (input)
-    19 - ?
-    20 - ?
-    21 - I/O (input)
-    22 - ?
-    23 - ?
-    24 - ?
+     1 - Vcc
+     2 - fc - count input
+     3 - S4 \
+     4 - S3  \ preset selection
+     5 - S2  /
+     6 - S1 /
+     7 - brightness control
+     8 - X-IN  \ osc circuit
+     9 - X-OUT /
+    10 - GND
+    11 - TEST
+    12 - seg A
 
+    13 - seg B
+    14 - digit 1
+    15 - seg C
+    16 - digit 2
+    17 - seg D
+    18 - seg E
+    19 - digit 3
+    20 - seg F
+    21 - digit 4
+    22 - seg G
+    23 - digit 5
+    24 - seg DP
 */
 
 static const u8 prot_data[0x10] =
@@ -319,7 +334,7 @@ void dday_state::char_bank_w(u8 data)
 void dday_state::bgvram_w(offs_t offset, u8 data)
 {
 	if (!offset)
-		m_bg_tilemap->set_scrollx(0, data + 8);
+		m_bg_tilemap->set_scrollx(0, data);
 
 	m_bgvram[offset] = data;
 	m_bg_tilemap->mark_tile_dirty(offset & 0x3ff);
@@ -369,7 +384,7 @@ void dday_state::sound_irq_w(u8 data)
 {
 	// 7474 to audiocpu irq? (pulse is too short for direct assert/clear)
 	if (!BIT(data, 0) && m_sound_irq_clock)
-			m_audiocpu->set_input_line(0, HOLD_LINE);
+		m_audiocpu->set_input_line(0, HOLD_LINE);
 	m_sound_irq_clock = BIT(data, 0);
 }
 
@@ -594,8 +609,6 @@ void dday_state::dday(machine_config &config)
 	Z80(config, m_audiocpu, 12_MHz_XTAL / 4);
 	m_audiocpu->set_addrmap(AS_PROGRAM, &dday_state::sound_map);
 
-	config.set_maximum_quantum(attotime::from_hz(6000));
-
 	I8257(config, m_dma, 12_MHz_XTAL / 4);
 	m_dma->out_hrq_cb().set_inputline(m_maincpu, Z80_INPUT_LINE_BUSRQ);
 	m_dma->in_memr_cb().set(FUNC(dday_state::dma_mem_r));
@@ -603,6 +616,8 @@ void dday_state::dday(machine_config &config)
 	m_dma->in_ior_cb<1>().set(FUNC(dday_state::dma_r));
 	m_dma->out_iow_cb<0>().set(FUNC(dday_state::dma_w));
 	m_dma->set_reverse_rw_mode(true);
+
+	config.set_maximum_quantum(attotime::from_hz(60000)); // for I8257
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
@@ -732,5 +747,5 @@ void dday_state::init_dday()
 } // anonymous namespace
 
 
-GAME( 1984, ddayjlc,  0,    dday, dday, dday_state, init_dday, ROT90, "Jaleco", "D-Day (Jaleco, set 1)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1984, ddayjlca, dday, dday, dday, dday_state, init_dday, ROT90, "Jaleco", "D-Day (Jaleco, set 2)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1984, ddayjlc,  0,       dday, dday, dday_state, init_dday, ROT90, "Jaleco", "D-Day (Jaleco, set 1)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1984, ddayjlca, ddayjlc, dday, dday, dday_state, init_dday, ROT90, "Jaleco", "D-Day (Jaleco, set 2)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
