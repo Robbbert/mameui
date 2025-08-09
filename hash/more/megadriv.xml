@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1974 -->
+<!-- Number of items in this list = 1975 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -12709,6 +12709,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Rick Dangerous DX (2025)(Z-Team).bin" size="1572864" crc="f28df099" sha1="a4b3a01daab989858c8ca2b38af1e240588be42a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb158463c83832">
+		<description>Rick Dangerous DX (2025)(Z-Team)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Rick Dangerous DX (2025)(Z-Team)_1.bin" size="1572864" crc="12e804a4" sha1="b158463c83832950cf69b0c0c3ed83abd6ec641d"/>
 			</dataarea>
 		</part>
 	</software>

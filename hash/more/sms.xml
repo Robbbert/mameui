@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 529 -->
+<!-- Number of items in this list = 535 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -879,6 +879,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Castle Escape v2.0 (2025)(IrataHack).sms" size="65536" crc="c8e4298d" sha1="7c3e7f8eea24ad6fb244d835bae95f8c4ae5e1f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms99e4aa1fcf43d">
+		<description>Castle of Illusion Starring Mickey Mouse T-Ita v0.99 (2005)(darq)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Castle of Illusion Starring Mickey Mouse T-Ita v0.99 (2005)(darq).sms" size="262144" crc="56a3aefc" sha1="99e4aa1fcf43dd19ed2d52789673150b99af711d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1779,6 +1789,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="Goblin Kart Rescue v1.0.3 (2024)(raphnet).sms" size="393216" crc="db7b9954" sha1="7f17436cd6adc54181fb090c69600ba2b77340c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms79211ca5cca98">
+		<description>Goblin Kart Rescue v1.0.7 (2024)(raphnet)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Goblin Kart Rescue v1.0.7 (2024)(raphnet).sms" size="393216" crc="bb1b448f" sha1="79211ca5cca98bf360b9491a9c8935b1587eaccd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3192,6 +3212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms8a94981369cc1">
+		<description>Pac-Man Master Museum v2.00 (2025)(Lack of Track)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Pac-Man Master Museum v2.00 (2025)(Lack of Track).sms" size="131072" crc="11e7b76f" sha1="8a94981369cc1eacf918aa1f3e48e0543b9d0ab3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smscbabd0938fc9a">
 		<description>Pac-Man v0.95 (2025)(LackofTrack)</description>
 		<year>????</year>
@@ -4122,6 +4152,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsab399c8791068">
+		<description>SKBN v1.4 (2021)(raphnet)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="SKBN v1.4 (2021)(raphnet).sms" size="131072" crc="2ea2517a" sha1="ab399c8791068d3125f04ba3076b747b84f8d3f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms417fad8cacc4f">
+		<description>SKBN v2.0 (2022)(raphnet)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="SKBN v2.0 (2022)(raphnet).sms" size="524288" crc="0bacfde4" sha1="417fad8cacc4fec0b1665f6d473b2d29e7456eb2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms2cf9b86c8233f">
 		<description>Sky Jaguar (TW)</description>
 		<year>????</year>
@@ -4289,6 +4339,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Space Tonbow v1.1 (2024)(SteelFinger Studios).sms" size="131072" crc="4c3d2616" sha1="10e0c10dc9494ae466ee1f0db4e9c6c8c65952f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsec6e209118c84">
+		<description>Space Tonbow v1.1.1 (2024-25)(SteelFinger Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Space Tonbow v1.1.1 (2024-25)(SteelFinger Studios).sms" size="131072" crc="d847b8c0" sha1="ec6e209118c846f23d856ba6a8b0cdff8514799c"/>
 			</dataarea>
 		</part>
 	</software>
