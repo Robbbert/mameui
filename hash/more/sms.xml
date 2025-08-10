@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 535 -->
+<!-- Number of items in this list = 536 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -3219,6 +3219,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Pac-Man Master Museum v2.00 (2025)(Lack of Track).sms" size="131072" crc="11e7b76f" sha1="8a94981369cc1eacf918aa1f3e48e0543b9d0ab3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb136c0d6302c1">
+		<description>Pac-Man Master Museum v2.10 (2025)(Lack of Track)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Pac-Man Master Museum v2.10 (2025)(Lack of Track).sms" size="131072" crc="e4057636" sha1="b136c0d6302c102b2f65a858d9600458b1f191fb"/>
 			</dataarea>
 		</part>
 	</software>

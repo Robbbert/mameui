@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3821 -->
+<!-- Number of items in this list = 3845 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs03927f1d659b5">
+		<description>-Navy Seals - Part 1 (1991)(Ocean Software Ltd)[cr [Cr Matasoft][t +4  Matasoft](128K)[Cr Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="87121">
+				<rom name="-Navy Seals - Part 1 (1991)(Ocean Software Ltd)[cr [Cr Matasoft][t +4  Matasoft](128K)[Cr Matasoft].tap" size="87121" crc="22e6b4b5" sha1="03927f1d659b56ef584ee673d08ffa3ab6421e61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfc57169767438">
+		<description>-Navy Seals - Part 2 (1991)(Ocean Software Ltd)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="86087">
+				<rom name="-Navy Seals - Part 2 (1991)(Ocean Software Ltd)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft].tap" size="86087" crc="96ac4778" sha1="fc57169767438622739cc2cb961a3c0c40b927ba"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11022,6 +11042,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4408228bd386a">
+		<description>N&amp;C (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10655">
+				<rom name="N&amp;C (19xx)(-).tap" size="10655" crc="1799c9b5" sha1="4408228bd386a21054a13296d28c24d5f041f813"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc663d2e701291">
+		<description>N.O.M.A.D. (1985)(Ocean Software)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47230">
+				<rom name="N.O.M.A.D. (1985)(Ocean Software)[t].tap" size="47230" crc="bcbb9963" sha1="c663d2e7012911bf38c6933141064faf05ae6abf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs119f1a93a47d0">
+		<description>Naciones Del Mundo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36461">
+				<rom name="Naciones Del Mundo.tap" size="36461" crc="cdb5fb92" sha1="119f1a93a47d0cba68c00fc3d165b543e62c0a0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf6300a9245900">
+		<description>Nanako Descends to Hell 128K (2009)(Ubhres Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55992">
+				<rom name="Nanako Descends to Hell 128K (2009)(Ubhres Productions).tap" size="55992" crc="8b88287c" sha1="f6300a92459009300450fb61c4429715104e2d8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27a9f524f6be8">
+		<description>Narc (1990)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="356350">
+				<rom name="Narc (1990)(Ocean Software).tap" size="356350" crc="3c9ccc9c" sha1="27a9f524f6be8b31263286ec6b5e16135c689c84"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs62c8a9814c9d2">
 		<description>Narc</description>
 		<year>????</year>
@@ -11029,6 +11099,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="357432">
 				<rom name="Narc.tzx" size="357432" crc="f90a923b" sha1="62c8a9814c9d26d85c3bc9ff4de82c55bf2eb358"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdbb4582be44f3">
+		<description>National Flags (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46026">
+				<rom name="National Flags (2).tap" size="46026" crc="bc5ed49b" sha1="dbb4582be44f32f8fd5c85aedee536eec3ce53c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11042,6 +11122,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse604700075cc3">
+		<description>National, The (1988)(D&amp;H Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43014">
+				<rom name="National, The (1988)(D&amp;H Games).tap" size="43014" crc="9c751740" sha1="e604700075cc3c29b42471f5de74445c58cba7ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d0dcf3429ead">
+		<description>Nauka Jazdy (1986)(Komputer)(Pl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41587">
+				<rom name="Nauka Jazdy (1986)(Komputer)(Pl).tap" size="41587" crc="77da0c41" sha1="8d0dcf3429eadc53929aa37f22f95342024457c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ea54926a7dc2">
+		<description>Navy Moves - Part 1 (1988)(Dinamic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47071">
+				<rom name="Navy Moves - Part 1 (1988)(Dinamic Software)(Sp).tap" size="47071" crc="dab1dde2" sha1="9ea54926a7dc2889ab9821b48089e11b6c3f4ffe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc52e484d60eda">
+		<description>Navy Moves - Part 2 (1988)(Dinamic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46525">
+				<rom name="Navy Moves - Part 2 (1988)(Dinamic Software)(Sp).tap" size="46525" crc="ba1720d9" sha1="c52e484d60edac4c94ccbd7424c41fe35938ba93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse1e24e2ce3ef5">
+		<description>Navy Moves ES - Part 1 (1988)(Dinamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47056">
+				<rom name="Navy Moves ES - Part 1 (1988)(Dinamic).tap" size="47056" crc="b5090163" sha1="e1e24e2ce3ef50a19ad856420f9167e3d9c28251"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80568f05388ae">
+		<description>Navy Moves ES - Part 2 (1988)(Dinamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46510">
+				<rom name="Navy Moves ES - Part 2 (1988)(Dinamic).tap" size="46510" crc="c89abc9d" sha1="80568f05388ae5dd563f5b29e1896548f33fa55f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5f6291454a5a8">
+		<description>Navy SEALs - Part 1 128K (1991)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="136806">
+				<rom name="Navy SEALs - Part 1 128K (1991)(Ocean).tap" size="136806" crc="01b1a341" sha1="5f6291454a5a8fef0556693ba293813c70f5f26f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs13599152e6537">
 		<description>Navy Seals - Part 1</description>
 		<year>????</year>
@@ -11052,6 +11202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4d8ff5ad1dc88">
+		<description>Navy SEALs - Part 2 128K (1991)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="136805">
+				<rom name="Navy SEALs - Part 2 128K (1991)(Ocean).tap" size="136805" crc="6b7f3a21" sha1="4d8ff5ad1dc88219305d1a806d36fe045b0304bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs2139796d2a1af">
 		<description>Navy Seals - Part 2</description>
 		<year>????</year>
@@ -11059,6 +11219,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="137073">
 				<rom name="Navy Seals - Part 2.tzx" size="137073" crc="8e6cfce6" sha1="2139796d2a1af5a0ddfa9cd61f60c1d1a34f608e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc0c1ea675b7e7">
+		<description>NAZWADNI</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4971">
+				<rom name="NAZWADNI.tap" size="4971" crc="2c25ce4d" sha1="c0c1ea675b7e7dca54dcc52c8beab1fe26ca2035"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs21f972697cba9">
+		<description>Neadeital 128K (2020)(Heavy Spectrum Limited)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="69024">
+				<rom name="Neadeital 128K (2020)(Heavy Spectrum Limited).tap" size="69024" crc="ca053eda" sha1="21f972697cba9568d0526f3905e59169e48fd7d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3cc829b46ac34">
+		<description>Nebulus (1987)(Hewson Consultants Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29683">
+				<rom name="Nebulus (1987)(Hewson Consultants Ltd).tap" size="29683" crc="a8fe95c4" sha1="3cc829b46ac344128fcd694b9e8cbfc6327beb8a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12009,6 +12199,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="30862">
 				<rom name="Nudgeeit (1985)(Automata UK Ltd).tap" size="30862" crc="8e08fc21" sha1="e754b6cff74f150c369d64fd41c7b358ad77587c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde06165ba7ca0">
+		<description>Numb Cars</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43428">
+				<rom name="Numb Cars.tap" size="43428" crc="3a7bc8ba" sha1="de06165ba7ca099ab3e93c48fa6d66ada833c0f5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21522,6 +21722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd4faedcf3132e">
+		<description>Shovel Duck_n30sd-20231212-v01.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46210">
+				<rom name="Shovel Duck_n30sd-20231212-v01.1.tap" size="46210" crc="befa63c4" sha1="d4faedcf3132e4e996e1ce898925d55457909e5e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsaa8f68996b7e0">
 		<description>Shurk (1991)(Jaime Tejedor Gomez)(Sp)</description>
 		<year>????</year>
@@ -29302,6 +29512,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd70c0b100bbda">
+		<description>Travel Unlimited 48K-128K (2025)(Manu &amp; Kit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64464">
+				<rom name="Travel Unlimited 48K-128K (2025)(Manu &amp; Kit).tap" size="64464" crc="4d5a3183" sha1="d70c0b100bbda1be53f5499db7fcf31cae4aa561"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3472d8105daf4">
 		<description>Traverse (1988)(X Software)(Sp)</description>
 		<year>????</year>
@@ -34379,6 +34599,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46831">
 				<rom name="_Match Point.tzx" size="46831" crc="a865be98" sha1="12dd8e630f7b5b839f02b2ecbac33233ba7c3850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07d89a1c4ee01">
+		<description>_Na Balkanu Nista Novo (1989)(Samir Ribic &amp; Zeljko Juric)(Bz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42833">
+				<rom name="_Na Balkanu Nista Novo (1989)(Samir Ribic &amp; Zeljko Juric)(Bz).tap" size="42833" crc="8dbd2148" sha1="07d89a1c4ee015c53eb58d154ff4ca0fe9185698"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae5dc7b8bd818">
+		<description>_Nebula (1984)(Red Shift Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43737">
+				<rom name="_Nebula (1984)(Red Shift Ltd).tap" size="43737" crc="ef4ebd71" sha1="ae5dc7b8bd81891b96b6066ba8090389a2ccadd9"/>
 			</dataarea>
 		</part>
 	</software>
