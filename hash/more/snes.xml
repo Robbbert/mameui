@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3916 -->
+<!-- Number of items in this list = 3923 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -13902,6 +13902,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns827f6e0534e23">
+		<description>Kyuuyaku Megami Tensei (J)(1995)(Atlus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kyuuyaku Megami Tensei (J)(1995)(Atlus).sfc" size="2097152" crc="c8d286c9" sha1="827f6e0534e2317e3348ce76bd47bec8691b3563"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3baabc92d5788">
+		<description>Kyuuyaku Megami Tensei PT-BR (2025)(Razuea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2359296">
+				<rom name="Kyuuyaku Megami Tensei PT-BR (2025)(Razuea).sfc" size="2359296" crc="75033317" sha1="3baabc92d5788ed1777b3ff78171e62d343a5eb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4511d09b9e55a">
+		<description>Kyuuyaku Megami Tensei T-Eng v1.1 (2014)(DDSTranslation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2359296">
+				<rom name="Kyuuyaku Megami Tensei T-Eng v1.1 (2014)(DDSTranslation).sfc" size="2359296" crc="119523a6" sha1="4511d09b9e55a148a9aae8b081ff7caca0ae1c4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf7876b4da8f70">
+		<description>Kyuuyaku Megami Tensei T-Spa v0.98 (2020)(jackic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Kyuuyaku Megami Tensei T-Spa v0.98 (2020)(jackic).sfc" size="4194304" crc="1d20ce88" sha1="f7876b4da8f701031c7b168dbd0eecf04894e51a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsbc0b934849839">
 		<description>K_STA (SMW1 Hack)</description>
 		<year>????</year>
@@ -20909,6 +20949,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Pretty Soldier Sailor Moon - Another Story T-Eng v2.08 (2021)(Bishoujo Senshi Translations).sfc" size="4194304" crc="003b74f1" sha1="62ebea3b172084fbd6fcf5460b98847898e5d66d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns26ceb7c7b9698">
+		<description>Pretty Soldier Sailor Moon - Another Story T-Spa (2025)(Max1323)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Pretty Soldier Sailor Moon - Another Story T-Spa (2025)(Max1323).sfc" size="4194304" crc="9d273e64" sha1="26ceb7c7b969896be3ce3f7bd0496154c2982f46"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33712,6 +33762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns76955946bb5c6">
+		<description>Super Mario World - The 4 Magic Wands EN v1.0.2 (2025)(Green Jerry)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Mario World - The 4 Magic Wands EN v1.0.2 (2025)(Green Jerry).sfc" size="2097152" crc="95d9672e" sha1="76955946bb5c6d485770ad4b2d33b734d66a17a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns4cb657eee0e1e">
 		<description>Super Mario World - The Final Journey (demo1) (SMW1 Hack)</description>
 		<year>????</year>
@@ -35529,6 +35589,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Super Morph (E) [T+Fre_Generation IX].sfc" size="1048576" crc="37652997" sha1="2023d7283727cc44ca952d1fbdbeaa689541b5b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf267af1dfbb8b">
+		<description>Super Mundo Mario - As 4 Varinhas Magicas PT V1.0.2 (2025)(Green Jerry)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Mundo Mario - As 4 Varinhas Magicas PT V1.0.2 (2025)(Green Jerry).sfc" size="2097152" crc="921ad698" sha1="f267af1dfbb8bbd4b2914179951d6d25ddd92bae"/>
 			</dataarea>
 		</part>
 	</software>

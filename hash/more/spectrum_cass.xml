@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3845 -->
+<!-- Number of items in this list = 3868 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse25dcb8c848c1">
+		<description>-Mystical (1991)(Infogrames)[cr [Cr][t +2](128K)[Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80294">
+				<rom name="-Mystical (1991)(Infogrames)[cr [Cr][t +2](128K)[Cr].tap" size="80294" crc="88b2d3c3" sha1="e25dcb8c848c1ca9061edb3f3e034c981719a1f0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1782,6 +1792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs262689904c1e0">
+		<description>750cc Grand Prix 48K-128K (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="82455">
+				<rom name="750cc Grand Prix 48K-128K (1991)(Codemasters).tzx" size="82455" crc="fca523fa" sha1="262689904c1e0bf03037869aae969dcc67b3c63a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs37f136a799f52">
 		<description>8 Channels 48K (2011)(Mister Beep)</description>
 		<year>????</year>
@@ -1849,6 +1869,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="29113">
 				<rom name="99y (1986)(UK Lead).tap" size="29113" crc="6d0cfd7a" sha1="51cc8adac630ded14eec3b50e439d8fa28fddd53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs582563626f646">
+		<description>A-10 Thunderbolt 48K-128K (1995)(Gadget Software Unlimited)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48034">
+				<rom name="A-10 Thunderbolt 48K-128K (1995)(Gadget Software Unlimited).tap" size="48034" crc="d2d4da4a" sha1="582563626f646270f0ae82b11963648e15103223"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11022,6 +11052,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs609983f42230e">
+		<description>Mutua - Fantastic Voyage (19xx)(Quicksilva)(It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35328">
+				<rom name="Mutua - Fantastic Voyage (19xx)(Quicksilva)(It).tap" size="35328" crc="8b422dd6" sha1="609983f42230ebaf057b144a5f1bedfea4ab36e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse084eefdf5819">
+		<description>Mutua - Fantastic Voyage (19xx)(Quicksilva)(It)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34909">
+				<rom name="Mutua - Fantastic Voyage (19xx)(Quicksilva)(It)[a].tap" size="34909" crc="dba09c04" sha1="e084eefdf5819959db0cbe624520edf3862684a0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3773e2905a8dc">
 		<description>MyCopy4.4 Final Version</description>
 		<year>????</year>
@@ -11032,6 +11082,156 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs14696761a5a6a">
+		<description>Mysterie Van Arendarvon Castle, Het (1985)(Addison Wesley Productions)(Nl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24528">
+				<rom name="Mysterie Van Arendarvon Castle, Het (1985)(Addison Wesley Productions)(Nl).tap" size="24528" crc="bfff894f" sha1="14696761a5a6a454566ffd0873803afb4656b47d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab94f9ccba692">
+		<description>Mysterious Adventures No 02 - The Arrow Of Death - Part 1 (1983)(Channel 8 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47091">
+				<rom name="Mysterious Adventures No 02 - The Arrow Of Death - Part 1 (1983)(Channel 8 Software).tap" size="47091" crc="82b229db" sha1="ab94f9ccba692baffb92e645ac5ab50972753356"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6cd7914fb7472">
+		<description>Mysterious Adventures No 03 - The Arrow Of Death - Part 2 (1983)(Channel 8 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47091">
+				<rom name="Mysterious Adventures No 03 - The Arrow Of Death - Part 2 (1983)(Channel 8 Software).tap" size="47091" crc="c7eb3a88" sha1="6cd7914fb74729df8c184135e7982621f36ac014"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsafaef2388664f">
+		<description>Mysterious Adventures No 04 - Escape From Pulsar 7 (1983)(Channel 8 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47117">
+				<rom name="Mysterious Adventures No 04 - Escape From Pulsar 7 (1983)(Channel 8 Software).tap" size="47117" crc="bfcf5bc2" sha1="afaef2388664faf064afd1342345ee173c7e1188"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse71b049d7b75d">
+		<description>Mysterious Adventures No 07 - The Circus (1983)(Channel 8 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32116">
+				<rom name="Mysterious Adventures No 07 - The Circus (1983)(Channel 8 Software).tap" size="32116" crc="3f6fff41" sha1="e71b049d7b75d6b4b1795c90020560d1849b8344"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd73471d1e9d64">
+		<description>Mysterious Adventures No 08 - The Wizard Of Akyrz (1983)(Channel 8 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37426">
+				<rom name="Mysterious Adventures No 08 - The Wizard Of Akyrz (1983)(Channel 8 Software).tap" size="37426" crc="5857daf6" sha1="d73471d1e9d64f179cec45f5ca3c4703c04998f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs992044d5bca01">
+		<description>Mysterious Adventures No 09 - Perseus And Andromeda (1983)(Channel 8 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35466">
+				<rom name="Mysterious Adventures No 09 - Perseus And Andromeda (1983)(Channel 8 Software).tap" size="35466" crc="955cd1ea" sha1="992044d5bca0154352854dcd7dda8d7110aff732"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf0969974f0d7f">
+		<description>Mysterious Adventures No 11 - Waxworks (1983)(Channel 8 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36812">
+				<rom name="Mysterious Adventures No 11 - Waxworks (1983)(Channel 8 Software).tap" size="36812" crc="b1390b4c" sha1="f0969974f0d7f271579b86a8f941c99a8839bd51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs93922ab7f3a9e">
+		<description>Mystery Of Arkham Manor, The (1987)(Melbourne House)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="Mystery Of Arkham Manor, The (1987)(Melbourne House)[Part 1 of 2].tap" size="56277" crc="6bf7a6ea" sha1="93922ab7f3a9e4c806fb2197f5686d2e6e7a98b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b8c3e05722a8">
+		<description>Mystery of Arkham Manor, The - Part2 48K (1987)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Mystery of Arkham Manor, The - Part2 48K (1987)(Melbourne House).tap" size="49343" crc="85b9867c" sha1="6b8c3e05722a8d03f2133b684725d1089ab704b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb5d42076fc587">
+		<description>Mystery of Markham Manor, The 128K (2022)(Taskmaster Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="113688">
+				<rom name="Mystery of Markham Manor, The 128K (2022)(Taskmaster Software).tap" size="113688" crc="763a7416" sha1="b5d42076fc5870d822c682bc3d1be2ea52bbeee8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs52e4ed5e5a873">
+		<description>Mystery of Markham Manor, The 48K (2022)(Taskmaster Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44391">
+				<rom name="Mystery of Markham Manor, The 48K (2022)(Taskmaster Software).tap" size="44391" crc="cbd1d7da" sha1="52e4ed5e5a87316123a6d71dc93248ed67c0181c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf65cecbd1898a">
+		<description>Mystery of the Indus Valley (19xx)(Alternative Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35395">
+				<rom name="Mystery of the Indus Valley (19xx)(Alternative Software Ltd).tap" size="35395" crc="7053782b" sha1="f65cecbd1898add6a808cf9ec21f916991fc0719"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs376833199fee3">
+		<description>Mystery of the Nile, The 48K (1987)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50370">
+				<rom name="Mystery of the Nile, The 48K (1987)(Firebird).tap" size="50370" crc="3dad4b2a" sha1="376833199fee3eda76702718079b95c07f28c983"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef9601675fe32">
+		<description>Mystical (demo) (1991)(Infogrames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48830">
+				<rom name="Mystical (demo) (1991)(Infogrames).tap" size="48830" crc="9912b254" sha1="ef9601675fe32c62123f47381f0d3290120ad973"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxseb43e8c725e74">
 		<description>Mystical</description>
 		<year>????</year>
@@ -11039,6 +11239,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="253060">
 				<rom name="Mystical.tzx" size="253060" crc="a56a76af" sha1="eb43e8c725e748f7d9879872062640c6325d6752"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4c8e44ded6a7c">
+		<description>Myth - History In The Making (1989)(System 3 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="194414">
+				<rom name="Myth - History In The Making (1989)(System 3 Software).tap" size="194414" crc="bc8f2fe4" sha1="4c8e44ded6a7cb09cfeffa58ecb14b5544ec57a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e1550a25c442">
+		<description>Myth - History In The Making (1989)(System 3 Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="194560">
+				<rom name="Myth - History In The Making (1989)(System 3 Software)[a].tap" size="194560" crc="5c1c67a4" sha1="2e1550a25c4428850e60dc376ac4e641a3aef900"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5849fd2d323ba">
+		<description>Mythos (1990)(Operasoft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42840">
+				<rom name="Mythos (1990)(Operasoft)(Sp).tap" size="42840" crc="08b1bffc" sha1="5849fd2d323baef64b7bac911742369972f32fbd"/>
 			</dataarea>
 		</part>
 	</software>
