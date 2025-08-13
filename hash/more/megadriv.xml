@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1975 -->
+<!-- Number of items in this list = 1977 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -7002,6 +7002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gend2fdabd8f2e0b">
+		<description>Great Circus Mystery Starring Mickey &amp; Minnie, The - Widescreen v1.1 (2025)(bankbank)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Great Circus Mystery Starring Mickey &amp; Minnie, The - Widescreen v1.1 (2025)(bankbank).bin" size="2097152" crc="0334113f" sha1="d2fdabd8f2e0b4c781617bd3c6aaa8598de1d2bf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen526afcce5746c">
 		<description>Greendog - The Beached Surfer Dude! (USA, Europe)</description>
 		<year>????</year>
@@ -12719,6 +12729,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Rick Dangerous DX (2025)(Z-Team)_1.bin" size="1572864" crc="12e804a4" sha1="b158463c83832950cf69b0c0c3ed83abd6ec641d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genec69c4bfbaf33">
+		<description>Rick Dangerous DX v1.2 (2025)(Z-Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Rick Dangerous DX v1.2 (2025)(Z-Team).bin" size="1572864" crc="98f62ee5" sha1="ec69c4bfbaf3325d9bbdaac0e5da7d470c31bdb2"/>
 			</dataarea>
 		</part>
 	</software>

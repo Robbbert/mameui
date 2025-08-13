@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3868 -->
+<!-- Number of items in this list = 3912 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs12d2b81b8274c">
+		<description>-Addams Family (1991)(Ocean Software Ltd)[cr [Cr Matasoft][t +4 Matasoft](128K)[Cr Matasoft]]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97490">
+				<rom name="-Addams Family (1991)(Ocean Software Ltd)[cr [Cr Matasoft][t +4 Matasoft](128K)[Cr Matasoft]].tap" size="97490" crc="e21269e1" sha1="12d2b81b8274c9233d0f4e9782ec0bb7fb937478"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs045673ae7a4af">
+		<description>-African Trail Simulator (1990)(Positive Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32528">
+				<rom name="-African Trail Simulator (1990)(Positive Soft).tap" size="32528" crc="01019470" sha1="045673ae7a4af6ae2db320e618f0ec6f4363d5fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs91602bf001b88">
+		<description>-Mutant Fortress (1989)(Players Premier Software)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42494">
+				<rom name="-Mutant Fortress (1989)(Players Premier Software)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft].tap" size="42494" crc="1b6d7a8e" sha1="91602bf001b88738db7b0b14ba69f5628e71eaf7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2272,6 +2302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs902f3d40c739a">
+		<description>Action Biker 48K (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63742">
+				<rom name="Action Biker 48K (1985)(Mastertronic).tap" size="63742" crc="1a62419a" sha1="902f3d40c739ae699529638f44598af4de68c10f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs238d3ed8a8d25">
 		<description>Action Farce II - Special Crash Edition (1989)(Crash)</description>
 		<year>????</year>
@@ -2299,6 +2339,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41472">
 				<rom name="Action Fighter (1989)(Firebird)[a2].tap" size="41472" crc="272ecf5c" sha1="b54b6d76771941f208a8d7baa37b72461eec73cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94101e973a841">
+		<description>Action Fighter 48K-128K (1989)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55740">
+				<rom name="Action Fighter 48K-128K (1989)(Firebird Software).tap" size="55740" crc="5eedf02c" sha1="94101e973a841016066b44c29d9b67d9159f5e5b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3033,22 +3083,22 @@
 		</part>
 	</software>
 	<software name="zxs8dc85b95fcd55">
-		<description>After The War (1989)(Dinamic)(Sp)[Part 1 of 2]</description>
+		<description>After the War - Part 1 ES 48K (1989)(Dinamic Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47283">
-				<rom name="After The War (1989)(Dinamic)(Sp)[Part 1 of 2].tap" size="47283" crc="74ef00c2" sha1="8dc85b95fcd55f1b0576804f00db7eebe7aab679"/>
+				<rom name="After the War - Part 1 ES 48K (1989)(Dinamic Software).tap" size="47283" crc="74ef00c2" sha1="8dc85b95fcd55f1b0576804f00db7eebe7aab679"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxs904674fd41e70">
-		<description>After the War - Part 2 ES (1989)(Dinamic)</description>
+		<description>After the War - Part 2 ES 48K (1989)(Dinamic Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47483">
-				<rom name="After the War - Part 2 ES (1989)(Dinamic).tap" size="47483" crc="d36c48ad" sha1="904674fd41e7000ddadd98d194dac13469e96c1f"/>
+				<rom name="After the War - Part 2 ES 48K (1989)(Dinamic Software).tap" size="47483" crc="d36c48ad" sha1="904674fd41e7000ddadd98d194dac13469e96c1f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3269,6 +3319,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8490">
 				<rom name="Ah Diddums (1983)(Imagine Software).tap" size="8490" crc="e5b88c3b" sha1="d5dfdcce69db2d46600a15a58f29f8c0f9b55a6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c5225aaed2fe">
+		<description>Ah Diddums 16K (1983)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9046">
+				<rom name="Ah Diddums 16K (1983)(Imagine Software).tap" size="9046" crc="b67d4be0" sha1="3c5225aaed2fe1bb643f3ba84fad8227472d0649"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11049,6 +11109,256 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="68553">
 				<rom name="Motorbike Madness.tzx" size="68553" crc="e20e2fd9" sha1="bd1b4c1b2c512eb2606c039423023db365c24a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse6b896783ef7b">
+		<description>Mushroom Soup 128K (2024)(Ottersoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45637">
+				<rom name="Mushroom Soup 128K (2024)(Ottersoft).tap" size="45637" crc="15f8aba6" sha1="e6b896783ef7b12dda3ab3eed0c6dc31e350cfa1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs68986071af677">
+		<description>Mushroom Soup 128K (2024)(Ottersoft)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45638">
+				<rom name="Mushroom Soup 128K (2024)(Ottersoft)_1.tap" size="45638" crc="8c755a93" sha1="68986071af67723f3594c8325312fa38c1c00937"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse28e28f278e32">
+		<description>Mushroom Soup v1.2 128K (2024-25)(Ottersoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46862">
+				<rom name="Mushroom Soup v1.2 128K (2024-25)(Ottersoft).tap" size="46862" crc="74f2a5ba" sha1="e28e28f278e324c6cd7343b5c2f6b8468bb0d2c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6544908509607">
+		<description>Mushroom Soup v1.2 48K (2024-25)(Ottersoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38834">
+				<rom name="Mushroom Soup v1.2 48K (2024-25)(Ottersoft).tap" size="38834" crc="d75be282" sha1="6544908509607afa54c18816c638dbdc4c75ab1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs84f0508c9c799">
+		<description>Music (19xx)(Rose Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15043">
+				<rom name="Music (19xx)(Rose Software).tap" size="15043" crc="f2c5b7f0" sha1="84f0508c9c799c4b597c2d9a86d6984d892fe2c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs08d5c07e645cd">
+		<description>Music Composer (1982)(MiCROL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5584">
+				<rom name="Music Composer (1982)(MiCROL).tap" size="5584" crc="9d3e03bf" sha1="08d5c07e645cd68a18b6434e0a2ccdac92c4293e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba009b92da418">
+		<description>Music Maker (1983)(Bellflower Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24970">
+				<rom name="Music Maker (1983)(Bellflower Software).tap" size="24970" crc="b417c1ff" sha1="ba009b92da418392ab3e5c1269c52a75b9a23710"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs303ea2685adaa">
+		<description>Music Typewriter 1 (1984)(Romantic Robot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19819">
+				<rom name="Music Typewriter 1 (1984)(Romantic Robot).tap" size="19819" crc="5d90387c" sha1="303ea2685adaab9bee8bbfb9aa55bfa676e6023a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd6f6e86ecbdf7">
+		<description>Music Typewriter 2 (1985)(Romantic Robot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29595">
+				<rom name="Music Typewriter 2 (1985)(Romantic Robot).tap" size="29595" crc="9264238f" sha1="d6f6e86ecbdf747d38b8158ab0f21de23ab16ad4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd52e098ef9ed6">
+		<description>Music-computer v1 (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3542">
+				<rom name="Music-computer v1 (19xx)(-)(De).tap" size="3542" crc="9710fdea" sha1="d52e098ef9ed6698ce630f67033603d2679d8df1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs65c0942d0f625">
+		<description>Music-computer v2 (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11887">
+				<rom name="Music-computer v2 (19xx)(-)(De).tap" size="11887" crc="82c83ee7" sha1="65c0942d0f6251c8ed87597d0553c574141b9c39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb5c7157c729ac">
+		<description>Musical Explosion (1990)(The Nightman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="130731">
+				<rom name="Musical Explosion (1990)(The Nightman).tap" size="130731" crc="5c3faa7e" sha1="b5c7157c729ac369ea385c6501ec94f82d269905"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbc8e7eb956610">
+		<description>Musicrema (19xx)(Garry Rowland)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4641">
+				<rom name="Musicrema (19xx)(Garry Rowland).tap" size="4641" crc="2b5f17dd" sha1="bc8e7eb956610655d912a0f2027ecdd426728408"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa672c25873933">
+		<description>Musicsynth (19xx)(Your Sinclair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33969">
+				<rom name="Musicsynth (19xx)(Your Sinclair).tap" size="33969" crc="39876dbe" sha1="a672c25873933ab05ca58727d656f4274b84c7bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb6c0b3996311e">
+		<description>Mutan Zone (1989)(Opera Soft)(Sp)[a][Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45045">
+				<rom name="Mutan Zone (1989)(Opera Soft)(Sp)[a][Part 2 of 2].tap" size="45045" crc="58817b85" sha1="b6c0b3996311e5dc18f07433446e67141e943078"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc22efef585110">
+		<description>Mutan Zone (1989)(Opera Soft)(Sp)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48329">
+				<rom name="Mutan Zone (1989)(Opera Soft)(Sp)[Part 1 of 2].tap" size="48329" crc="78ce9681" sha1="c22efef585110295c37a1935587c9cf6b2ae23f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45a79ca600035">
+		<description>Mutan Zone (1989)(Opera Soft)(Sp)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48329">
+				<rom name="Mutan Zone (1989)(Opera Soft)(Sp)[Part 2 of 2].tap" size="48329" crc="77eb99f9" sha1="45a79ca60003560b647adf67f221090d3b83f8d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf1c1f6326b52e">
+		<description>Mutan Zone - Part 1 ES 48K-128K (1989)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48536">
+				<rom name="Mutan Zone - Part 1 ES 48K-128K (1989)(Opera Soft).tap" size="48536" crc="9be066fe" sha1="f1c1f6326b52e96a6fb99ecf4a7eb5a62b2110a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8b48d4590e386">
+		<description>Mutan Zone - Part 2 ES 48K-128K (1989)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48536">
+				<rom name="Mutan Zone - Part 2 ES 48K-128K (1989)(Opera Soft).tap" size="48536" crc="7ad2689e" sha1="8b48d4590e386fcca0a5d11218c8697d9385ed1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa8ce485462cc">
+		<description>Mutant Arachnid (1984)(Sinclair Programs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4732">
+				<rom name="Mutant Arachnid (1984)(Sinclair Programs).tap" size="4732" crc="6ab378fe" sha1="aa8ce485462cc7cca66e5b8d50f5a2f389939a4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse57862c8f8c1c">
+		<description>Mutant Fortress 128K (1989)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="77979">
+				<rom name="Mutant Fortress 128K (1989)(Players Premier).tap" size="77979" crc="f82b3bcc" sha1="e57862c8f8c1c8143485b874667e065544b83a8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc12f8b192044a">
+		<description>Mutant Monty (1984)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32799">
+				<rom name="Mutant Monty (1984)(Artic Computing).tap" size="32799" crc="eea7c4ab" sha1="c12f8b192044a72a35bce970912ae35796a0eb3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3a7516a1b3b0e">
+		<description>Mutant Mushrooms 128K (2024)(The Death Squad)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47778">
+				<rom name="Mutant Mushrooms 128K (2024)(The Death Squad).tap" size="47778" crc="eed300c9" sha1="3a7516a1b3b0e55be1ecf726d52e6a8a2c2bdce8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1361a11600ff3">
+		<description>Mutants (1987)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83776">
+				<rom name="Mutants (1987)(Ocean Software Ltd).tap" size="83776" crc="1611da8f" sha1="1361a11600ff325fa19203fca896e3ffbc7dc4ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5fe8f1bae4f72">
+		<description>Mutations (1986)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17294">
+				<rom name="Mutations (1986)(Tynesoft).tap" size="17294" crc="f14a08ee" sha1="5fe8f1bae4f72214d9c586fc07cfaf80370c9c32"/>
 			</dataarea>
 		</part>
 	</software>
@@ -34442,6 +34752,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs14a461c5d9992">
+		<description>_A.T.F. (1988)(Digital Integration)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40487">
+				<rom name="_A.T.F. (1988)(Digital Integration).tap" size="40487" crc="25a474cd" sha1="14a461c5d9992ecd50c60713e18d42c257eab81a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae505c3e407e9">
+		<description>_Abakus (19xx)(Anwi Pjp Tls)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29271">
+				<rom name="_Abakus (19xx)(Anwi Pjp Tls)(Ru).tap" size="29271" crc="96690ea7" sha1="ae505c3e407e9ede9cbfc24803d8e3c94c3463fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa6949f72e962a">
+		<description>_Abc Draw (19xx)(arh Zivotic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1422">
+				<rom name="_Abc Draw (19xx)(arh Zivotic).tap" size="1422" crc="4ff009ac" sha1="a6949f72e962a97bae2495f11945aa7450f62621"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee606c0651543">
+		<description>_ACE (1986)(Cascade Games Ltd)[Lenslok]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39023">
+				<rom name="_ACE (1986)(Cascade Games Ltd)[Lenslok].tap" size="39023" crc="2276446d" sha1="ee606c065154367e77b9649fb2ab62b953f78c7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs38fba184ac85e">
+		<description>_ACE 48K (1986)(Cascade Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46187">
+				<rom name="_ACE 48K (1986)(Cascade Games).tap" size="46187" crc="8568a584" sha1="38fba184ac85e749776275907f567217333d9f53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs83b37bccbe119">
+		<description>_Action Fighter (1989)(Firebird)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40997">
+				<rom name="_Action Fighter (1989)(Firebird)[a].tap" size="40997" crc="c114b4f7" sha1="83b37bccbe119e2ae82af714b12951c860e7fb33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7fae50ddeac56">
+		<description>_Aftermath (1988)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48348">
+				<rom name="_Aftermath (1988)(Alternative Software).tap" size="48348" crc="c65abdb0" sha1="7fae50ddeac569bccd42f74e48dae237a24b45e4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs690054e8ca757">
 		<description>_AntiISDA_Warrior-</description>
 		<year>????</year>
@@ -34829,6 +35209,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46831">
 				<rom name="_Match Point.tzx" size="46831" crc="a865be98" sha1="12dd8e630f7b5b839f02b2ecbac33233ba7c3850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45bd4ded51470">
+		<description>_Music Studio, The (1989)(MS Cid)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9425">
+				<rom name="_Music Studio, The (1989)(MS Cid).tap" size="9425" crc="7c8575e7" sha1="45bd4ded51470c761a873ccb29725d6ea645039c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5dd85a5c67a13">
+		<description>_Musicfile (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18337">
+				<rom name="_Musicfile (19xx)(-).tap" size="18337" crc="fc18863c" sha1="5dd85a5c67a131749a78e076b6ab929ddb710799"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1ce1fc38bf9cd">
+		<description>_Muster Fill (19xx)(Thomas Bertoldo)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2190">
+				<rom name="_Muster Fill (19xx)(Thomas Bertoldo)(De).tap" size="2190" crc="a2b815d3" sha1="1ce1fc38bf9cd48c85ec660a6288094c4e26afe2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs094179ac9a6fd">
+		<description>_Mutant - The Quest (1984)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47979">
+				<rom name="_Mutant - The Quest (1984)(Zenobi Software).tap" size="47979" crc="071b4d0f" sha1="094179ac9a6fd0d0ac467c3343fe83804b74b697"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs02b34dc07315a">
+		<description>_Mystic Tower, The (1983)(Aardvark Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14126">
+				<rom name="_Mystic Tower, The (1983)(Aardvark Software).tap" size="14126" crc="097042f9" sha1="02b34dc07315abeee3d9ca94e2c5cdd51b3e518a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaed99ccf4d6a5">
+		<description>_Mystic Tower, The (1983)(Aardwark Software)[Speech]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14126">
+				<rom name="_Mystic Tower, The (1983)(Aardwark Software)[Speech].tap" size="14126" crc="a1ac71dd" sha1="aed99ccf4d6a55ee305b428324ebd072046db773"/>
 			</dataarea>
 		</part>
 	</software>
