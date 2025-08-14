@@ -409,6 +409,7 @@ public:
 	void nfm(machine_config &config) ATTR_COLD;
 	void super7(machine_config &config) ATTR_COLD;
 
+	void init_alienatt() ATTR_COLD;
 	void init_animalhs() ATTR_COLD;
 	void init_chthree() ATTR_COLD;
 	void init_cll() ATTR_COLD;
@@ -561,6 +562,8 @@ public:
 	void init_lucky8m() ATTR_COLD;
 	void init_lucky8n() ATTR_COLD;
 	void init_lucky8p() ATTR_COLD;
+	void init_lucky8r() ATTR_COLD;
+	void init_lucky8s() ATTR_COLD;
 	void init_magoddsc() ATTR_COLD;
 	void init_luckylad() ATTR_COLD;
 	void init_nd8lines() ATTR_COLD;
@@ -15670,7 +15673,121 @@ ROM_START( lucky8q )
 
 	ROM_REGION( 0x20, "unkprom2", 0 )
 	ROM_LOAD( "g13", 0x0000, 0x0020, CRC(6df3f972) SHA1(0096a7f7452b70cac6c0752cb62e24b643015b5c) )
+ROM_END
 
+/*
+  lucky 8 lines
+  protected sets
+
+  The program checks often some nvram registers expecting to be left shifted each time
+  they are accessed, but no piece of code (even inside the interrupts) is doing this task.
+
+  for now, we patched the protection scheme.
+
+  lucky8r, has an additional "Turbo" feature.
+  lucky8s, has two new features: "Fever" (betting 16 credits), and "Bingo" (betting 32 credits).
+
+  Both enhacements need to be checked.
+
+*/
+ROM_START( lucky8r )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "16_289.bin", 0x0000, 0x8000, CRC(44196d20) SHA1(cb1378dee3cddb9a75d65269c61510705babdfb6) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "5",  0x00000, 0x8000, CRC(59026af3) SHA1(3d7f7e78968ca26275635aeaa0e994468a3da575) )
+	ROM_LOAD( "6",  0x08000, 0x8000, CRC(67a073c1) SHA1(36194d57d0dc0601fa1fdf2e6806f11b2ea6da36) )
+	ROM_LOAD( "7",  0x10000, 0x8000, CRC(c415b9d0) SHA1(fd558fe8a116c33bbd712a639224d041447a45c1) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "1",  0x0000, 0x2000, CRC(29d6f197) SHA1(1542ca457594f6b7fe8f28f7d78023edd7021bc8) )
+	ROM_LOAD( "2",  0x2000, 0x2000, CRC(5f812e65) SHA1(70d9ea82f9337936bf21f82b6961768d436f3a6f) )
+	ROM_LOAD( "3",  0x4000, 0x2000, CRC(898b9ed5) SHA1(11b7d1cfcf425d00d086c74e0dbcb72068dda9fe) )
+	ROM_LOAD( "4",  0x6000, 0x2000, CRC(4f7cfb35) SHA1(0617cf4419be00d9bacc78724089cb8af4104d68) )
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "d12",   0x0000, 0x0100, CRC(23e81049) SHA1(78071dae70fad870e972d944642fb3a2374be5e4) )
+	ROM_LOAD( "prom4", 0x0100, 0x0100, CRC(526cf9d3) SHA1(eb779d70f2507d0f26d225ac8f5de8f2243599ca) )
+
+	ROM_REGION( 0x20, "proms2", 0 )
+	ROM_LOAD( "d13", 0x0000, 0x0020, CRC(c6b41352) SHA1(d7c3b5aa32e4e456c9432a13bede1db6d62eb270) )
+
+	ROM_REGION( 0x100, "unkprom", 0 )
+	ROM_LOAD( "g14", 0x0000, 0x0100, CRC(bd48de71) SHA1(e4fa1e774af1499bc568be5b2deabb859d8c8172) )
+
+	ROM_REGION( 0x20, "unkprom2", 0 )
+	ROM_LOAD( "g13", 0x0000, 0x0020, CRC(6df3f972) SHA1(0096a7f7452b70cac6c0752cb62e24b643015b5c) )
+ROM_END
+
+// Same protection scheme than lucky8r. See above.
+ROM_START( lucky8s )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "890.bin", 0x0000, 0x8000, CRC(0cb24215) SHA1(21bcad456c49c67e530b5555620db1e80df27d40) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "5",  0x00000, 0x8000, CRC(59026af3) SHA1(3d7f7e78968ca26275635aeaa0e994468a3da575) )
+	ROM_LOAD( "6",  0x08000, 0x8000, CRC(67a073c1) SHA1(36194d57d0dc0601fa1fdf2e6806f11b2ea6da36) )
+	ROM_LOAD( "7",  0x10000, 0x8000, CRC(c415b9d0) SHA1(fd558fe8a116c33bbd712a639224d041447a45c1) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "1",  0x0000, 0x2000, CRC(29d6f197) SHA1(1542ca457594f6b7fe8f28f7d78023edd7021bc8) )
+	ROM_LOAD( "2",  0x2000, 0x2000, CRC(5f812e65) SHA1(70d9ea82f9337936bf21f82b6961768d436f3a6f) )
+	ROM_LOAD( "3",  0x4000, 0x2000, CRC(898b9ed5) SHA1(11b7d1cfcf425d00d086c74e0dbcb72068dda9fe) )
+	ROM_LOAD( "4",  0x6000, 0x2000, CRC(4f7cfb35) SHA1(0617cf4419be00d9bacc78724089cb8af4104d68) )
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "d12",   0x0000, 0x0100, CRC(23e81049) SHA1(78071dae70fad870e972d944642fb3a2374be5e4) )
+	ROM_LOAD( "prom4", 0x0100, 0x0100, CRC(526cf9d3) SHA1(eb779d70f2507d0f26d225ac8f5de8f2243599ca) )
+
+	ROM_REGION( 0x20, "proms2", 0 )
+	ROM_LOAD( "d13", 0x0000, 0x0020, CRC(c6b41352) SHA1(d7c3b5aa32e4e456c9432a13bede1db6d62eb270) )
+
+	ROM_REGION( 0x100, "unkprom", 0 )
+	ROM_LOAD( "g14", 0x0000, 0x0100, CRC(bd48de71) SHA1(e4fa1e774af1499bc568be5b2deabb859d8c8172) )
+
+	ROM_REGION( 0x20, "unkprom2", 0 )
+	ROM_LOAD( "g13", 0x0000, 0x0020, CRC(6df3f972) SHA1(0096a7f7452b70cac6c0752cb62e24b643015b5c) )
+ROM_END
+
+
+/*
+
+  Lucky 8 Lines with Tetris front game.
+
+  Runs on W-4 hardware with a daughterboard with program,
+  a C8051F310 (8051) MCU, a 16l8 PLD, and a 4 DIP switches bank.
+
+*/
+ROM_START( lucky8tet )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "w4-tet-p097-9_sub-pcb.u7", 0x00000, 0x10000, CRC(779db23e) SHA1(8a629d0e0bd57268e3b2a89bf1e5ed0d664f13c8) )
+
+	ROM_REGION( 0x2000, "mcu", 0 )  // C8051F310 binary
+	ROM_LOAD( "mcu.bin", 0x0000, 0x054a, CRC(bc70cd9d) SHA1(2edd27b0bb2e846778aacaadd843186097a049a1) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "w45.bin",  0x00000, 0x8000, CRC(9af48a18) SHA1(ca2cc5cb184ee7c849c68bdbb61d1f78d3af6f63) )
+	ROM_LOAD( "w46.bin",  0x08000, 0x8000, CRC(63d851ec) SHA1(feaceada081f32d4161f1e04b10f32584ddf0f3d) )
+	ROM_LOAD( "w47.bin",  0x10000, 0x8000, CRC(f285300a) SHA1(875c19cc50fc870ddd50f731d9bee8b11d15a8d3) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "1",  0x0000, 0x2000, CRC(29d6f197) SHA1(1542ca457594f6b7fe8f28f7d78023edd7021bc8) )
+	ROM_LOAD( "2",  0x2000, 0x2000, CRC(5f812e65) SHA1(70d9ea82f9337936bf21f82b6961768d436f3a6f) )
+	ROM_LOAD( "3",  0x4000, 0x2000, CRC(898b9ed5) SHA1(11b7d1cfcf425d00d086c74e0dbcb72068dda9fe) )
+	ROM_LOAD( "4",  0x6000, 0x2000, CRC(4f7cfb35) SHA1(0617cf4419be00d9bacc78724089cb8af4104d68) )
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "d12",   0x0000, 0x0100, CRC(23e81049) SHA1(78071dae70fad870e972d944642fb3a2374be5e4) )
+	ROM_LOAD( "prom4", 0x0100, 0x0100, CRC(526cf9d3) SHA1(eb779d70f2507d0f26d225ac8f5de8f2243599ca) )
+
+	ROM_REGION( 0x20, "proms2", 0 )
+	ROM_LOAD( "d13", 0x0000, 0x0020, CRC(c6b41352) SHA1(d7c3b5aa32e4e456c9432a13bede1db6d62eb270) )
+
+	ROM_REGION( 0x100, "unkprom", 0 )
+	ROM_LOAD( "g14", 0x0000, 0x0100, CRC(bd48de71) SHA1(e4fa1e774af1499bc568be5b2deabb859d8c8172) )
+
+	ROM_REGION( 0x20, "unkprom2", 0 )
+	ROM_LOAD( "g13", 0x0000, 0x0020, CRC(6df3f972) SHA1(0096a7f7452b70cac6c0752cb62e24b643015b5c) )
 ROM_END
 
 
@@ -21560,6 +21677,32 @@ ROM_START( cmtetriskr )
 ROM_END
 
 
+ROM_START( alienatt )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "27512.bin", 0x00000, 0x10000, CRC(c2ddc454) SHA1(dcd98f7b49982328e38d30cdf1ce9e0e992998f6) ) // on sub board
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "7.u16", 0x00000, 0x8000, CRC(83438662) SHA1(0fa1b3ff5a9530147e7803223c519a1ab5d9d61e) )
+	ROM_LOAD( "6.u11", 0x08000, 0x8000, CRC(70119d48) SHA1(e9f80c2e1d1855c741b008fa4f3a80362ef10ba1) )
+	ROM_LOAD( "5.u4",  0x10000, 0x8000, CRC(293569a1) SHA1(9af143e27518921cd178af9bed42054c3ae76dd5) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "4.u15", 0x0000, 0x2000, CRC(77f75764) SHA1(86cfde4c94354eb7adf93f4400053a58c5823b58) )
+	ROM_LOAD( "3.u10", 0x2000, 0x2000, CRC(e917cf87) SHA1(cb7881bd59d9497cce1bb14237d16a1001fb2200) )
+	ROM_LOAD( "2.u14", 0x4000, 0x2000, CRC(0976ef6f) SHA1(379901829f9e25a6b48ccc42867cff26ea167ec8) )
+	ROM_LOAD( "1.u9",  0x6000, 0x2000, CRC(e562458f) SHA1(678794f968407e31527b10d69c4b4618e5c20517) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_LOAD( "8.u53", 0x00000, 0x10000, CRC(c5d1c9ac) SHA1(87d1a2e0b6e1198941efa8130cc2e2c14361ef07) )
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u43", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
 /********************** Flaming 7, from Cyberdyne Systems, Inc. ***********************
 
   Flaming 7.
@@ -23374,6 +23517,35 @@ void wingco_state::init_lucky8p()
 	}
 }
 
+void wingco_state::init_lucky8r()
+{
+	uint8_t *rom = memregion("maincpu")->base();
+	
+	// bypass protection
+	rom[0x4340] = 0x20;
+	rom[0x4364] = 0x08;
+	rom[0x4385] = 0x02;
+	rom[0x43a6] = 0x80;
+	rom[0x454e] = 0x00;
+	rom[0x4567] = 0x00;
+	rom[0x431f] = 0x28;  // skip checksum;
+}
+
+void wingco_state::init_lucky8s()
+{
+	uint8_t *rom = memregion("maincpu")->base();
+	
+	// bypass protection
+	rom[0x4772] = 0x08;
+	rom[0x47a8] = 0x02;
+	rom[0x47db] = 0x20;
+	rom[0x480e] = 0x80;
+	rom[0x4a99] = 0x00;
+	rom[0x4ab0] = 0x00;
+	rom[0x473f] = 0x28;  // skip checksum;
+}
+
+
 void wingco_state::init_nd8lines()
 {
 	uint8_t *rom = memregion("maincpu")->base();
@@ -24156,6 +24328,14 @@ void cmaster_state::init_super7()
 	m_palette->update();
 }
 
+void cmaster_state::init_alienatt()
+{
+	uint8_t *rom = memregion("maincpu")->base();
+
+	for (int a = 0; a < 0xc000; a++)
+		rom[a] = bitswap<8>(rom[a] ^ 0x59, 3, 1, 5, 0, 6, 7, 4, 2);
+}
+
 void cmaster_state::init_animalhs()
 {
 	uint8_t *rom = memregion("maincpu")->base();
@@ -24221,6 +24401,7 @@ void cmaster_state::init_cmezspina()
 
 	init_cmv4();
 }
+
 
 } // anonymous namespace
 
@@ -24310,6 +24491,7 @@ GAMEL( 1991, cmv4zg,     cmv4,     cmv4zg,   cmv4,     cmaster_state,  empty_ini
 GAMEL( 1991, cmv4zga,    cmv4,     cmv4zg,   cmv4,     cmaster_state,  empty_init,     ROT0, "hack",              "Cherry Bonus III (Ziogas V4.1 hack, set 2)",  MACHINE_NOT_WORKING, layout_cmv4 ) // needs correct I/O, maybe slightly protected
 GAMEL( 199?, hamhouse,   cmaster,  cm,       cmaster,  cmaster_state,  init_hamhouse,  ROT0, "bootleg",           "Hamburger House",                             MACHINE_NOT_WORKING, layout_cmaster ) // needs correct I/O
 GAMEL( 199?, hamhouse9,  cmaster,  cm,       cmaster,  cmaster_state,  init_hamhouse9, ROT0, "bootleg",           "Hamburger House 9",                           MACHINE_NOT_WORKING, layout_cmaster ) // needs correct I/O
+GAMEL( 199?, alienatt,   cmaster,  cm,       cmaster,  cmaster_state,  init_alienatt,  ROT0, "bootleg",           "Allien Attack",                               MACHINE_NOT_WORKING, layout_cmaster ) // needs correct I/O
 
 GAMEL( 1991, tonypok,    0,        cm,       tonypok,  cmaster_state,  init_tonypok,   ROT0, "Corsica",           "Poker Master (Tony-Poker V3.A, hack?)",       0 ,                layout_tonypok )
 GAME(  1998, jkrmast,    0,        jkrmast,  jkrmast,  cmaster_state,  init_jkrmast,   ROT0, "Pick-A-Party USA",  "Joker Master 2000 Special Edition (V515)",    MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_COLORS | MACHINE_NOT_WORKING ) // needs correct FG colors and controls
@@ -24360,6 +24542,8 @@ GAMEL( 1989, lucky8n,    lucky8,   lucky8f,  lucky8,   wingco_state,   init_luck
 GAMEL( 1988, lucky8o,    lucky8,   lucky8,   lucky8,   wingco_state,   empty_init,     ROT0, "Yamate",            "New Lucky 8 Lines (set 14, W-4, Yamate)",                  0,                     layout_lucky8 )    // 2 control sets...
 GAMEL( 1988, lucky8p,    lucky8,   lucky8p,  lucky8,   wingco_state,   init_lucky8p,   ROT0, "bootleg (Cleco)",   "New Lucky 8 Lines (set 15, W-4, Cleco bootleg)",           MACHINE_IMPERFECT_GRAPHICS, layout_lucky8 ) // 2 control sets, missing GFX on title screen (wrong GFX ROMs)
 GAMEL( 1988, lucky8q,    lucky8,   lucky8,   lucky8,   wingco_state,   empty_init,     ROT0, "Wing Co., Ltd.",    "New Lucky 8 Lines (set 16, W-4)",                          0,                     layout_lucky8 )
+GAMEL( 1987, lucky8r,    lucky8,   lucky8,   lucky8,   wingco_state,   init_lucky8r,   ROT0, "TQ System",         "New Lucky 8 Lines (set 17, W-4, turbo, protected)",        0,                     layout_lucky8 )    // shift left registers protection
+GAMEL( 1988, lucky8s,    lucky8,   lucky8,   lucky8,   wingco_state,   init_lucky8s,   ROT0, "Wing Co., Ltd.",    "New Lucky 8 Lines (set 18, W-4, bingo/fever, protected)",  0,                     layout_lucky8 )    // shift left registers protection
 GAMEL( 198?, ns8lines,   0,        lucky8,   lucky8b,  wingco_state,   empty_init,     ROT0, "<unknown>",         "New Lucky 8 Lines / New Super 8 Lines (W-4)",              0,                     layout_lucky8p1 )  // only 1 control set...
 GAMEL( 1985, ns8linesa,  ns8lines, lucky8,   lucky8b,  wingco_state,   empty_init,     ROT0, "Yamate (bootleg)",  "New Lucky 8 Lines / New Super 8 Lines (W-4, Lucky97 HW)",  0,                     layout_lucky8p1 )  // only 1 control set...
 GAMEL( 198?, ns8linew,   ns8lines, lucky8,   ns8linew, wingco_state,   empty_init,     ROT0, "<unknown>",         "New Lucky 8 Lines / New Super 8 Lines (F-5, Witch Bonus)", 0,                     layout_lucky8 )    // 2 control sets...
@@ -24534,6 +24718,7 @@ GAMEL( 198?, cmtetrisd,  cmtetris, cm,        cmtetris, cmaster_state,  init_cmt
 GAMEL( 1997, crazybon,   0,        crazybon,  crazybon, cmaster_state,  empty_init,     ROT0, "bootleg (Crazy Co.)",     "Crazy Bonus 2002 (Ver. 1, set 1)",                                         MACHINE_IMPERFECT_COLORS,                       layout_crazybon ) // Windows ME desktop... but not found the way to switch it.
 GAMEL( 1997, crazybona,  crazybon, crazybon,  crazybon, cmaster_state,  empty_init,     ROT0, "bootleg (Crazy Co.)",     "Crazy Bonus 2002 (Ver. 1, set 2)",                                         MACHINE_IMPERFECT_COLORS,                       layout_crazybon )
 GAMEL( 1997, crazybonb,  crazybon, crazybonb, pkrmast,  cmaster_state,  init_crazybonb, ROT0, "bootleg (TV Games)",      "Crazy Bonus 2002 (Ver. 1, set 3)",                                         MACHINE_NOT_WORKING | MACHINE_IMPERFECT_COLORS, layout_crazybon ) // F.B. & POKER 94, VER.1 in NVRAM, decryption seems ok, possibly needs proper memory map
+GAMEL( 1988, lucky8tet,  lucky8,   lucky8,    lucky8,   wingco_state,   empty_init,     ROT0, "bootleg",                 "Tetris + New Lucky 8 Lines (W-4 + W4BET-VID sub board with MCU)",          MACHINE_NOT_WORKING,                            layout_lucky8 )
 
 /* other possible stealth sets:
  - cmv4a    ---> see the 1fxx zone. put a bp in 1f9f to see the loop.

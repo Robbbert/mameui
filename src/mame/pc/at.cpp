@@ -361,25 +361,30 @@ void at_state::ficpio_io(address_map &map)
 
 void megapc_state::init_megapc()
 {
-	uint8_t* ROM = memregion("bios")->base();
-	ROM[0x19145] = 0x45;  // hack to fix keyboard.  To be removed when the keyboard controller from the MegaPC is dumped
-	ROM[0x1fea0] = 0x20;  // to correct checksum
+//	uint8_t* ROM = memregion("bios")->base();
+//	ROM[0x19145] = 0x45;
+	// To be removed when the keyboard controller from the MegaPC is dumped
+//	ROM[0x1fea0] = 0x20;  // to correct checksum
 }
 
 void megapc_state::init_megapcpl()
 {
-	uint8_t* ROM = memregion("bios")->base();
-	ROM[0x187b1] = 0x55;  // hack to fix keyboard.  To be removed when the keyboard controller from the MegaPC is dumped
-	ROM[0x1fea0] = 0x20;  // to correct checksum
+//	uint8_t* ROM = memregion("bios")->base();
+//	ROM[0x187b1] = 0x55;
+	// To be removed when the keyboard controller from the MegaPC is dumped
+//	ROM[0x1fea0] = 0x20;  // to correct checksum
 }
 
+// TODO: verify and remove this hack
 void at_vrom_fix_state::init_megapcpla()
 {
 	uint8_t* ROM = memregion("bios")->base();
 
 	init_at_common(0xa0000);
 
-	ROM[0x33c2a] = 0x45;  // hack to fix keyboard.  To be removed when the keyboard controller from the MegaPC is dumped
+	// HACK: keyboard checks
+	ROM[0x33c2a] = 0x45;
+	// To be removed when the keyboard controller from the MegaPC is dumped
 	ROM[0x3af37] = 0x45;
 	ROM[0x3cf1b] = 0x54;  // this will allow the keyboard to work during the POST memory test
 	ROM[0x3fffe] = 0x1c;
@@ -413,10 +418,12 @@ void megapc_state::wd7600_hold(int state)
 
 void megapc_state::megapc_map(address_map &map)
 {
+	map.unmap_value_high();
 }
 
 void megapc_state::megapcpl_map(address_map &map)
 {
+	map.unmap_value_high();
 }
 
 void megapc_state::megapc_io(address_map &map)
@@ -721,6 +728,7 @@ void at_state::pc40iii(machine_config &config)
 	subdevice<isa16_slot_device>("isa1")->set_default_option("vga"); // should be onboard Paradise VGA, see ROM declarations
 }
 
+// TODO: move to own driver
 void megapc_state::megapc(machine_config &config)
 {
 	i386sx_device &maincpu(I386SX(config, m_maincpu, 50_MHz_XTAL / 2));
@@ -730,7 +738,6 @@ void megapc_state::megapc(machine_config &config)
 
 	WD7600(config, m_wd7600, 50_MHz_XTAL / 2);
 	m_wd7600->set_cputag(m_maincpu);
-	m_wd7600->set_isatag("isa");
 	m_wd7600->set_ramtag(m_ram);
 	m_wd7600->set_biostag("bios");
 	m_wd7600->set_keybctag("keybc");
@@ -770,24 +777,29 @@ void megapc_state::megapc(machine_config &config)
 	m_isabus->drq6_callback().set(m_wd7600, FUNC(wd7600_device::dreq6_w));
 	m_isabus->drq7_callback().set(m_wd7600, FUNC(wd7600_device::dreq7_w));
 
-	ISA16_SLOT(config, "board1", 0, "isabus", pc_isa16_cards, "fdcsmc", true); // FIXME: determine ISA bus clock
+	// FIXME: determine ISA bus clock
+	ISA16_SLOT(config, "board1", 0, "isabus", pc_isa16_cards, "fdcsmc", true);
 	ISA16_SLOT(config, "board2", 0, "isabus", pc_isa16_cards, "comat", true);
 	ISA16_SLOT(config, "board3", 0, "isabus", pc_isa16_cards, "ide", true);
 	ISA16_SLOT(config, "board4", 0, "isabus", pc_isa16_cards, "lpt", true);
-	ISA16_SLOT(config, "board5", 0, "isabus", pc_isa16_cards, "vga", true);
+	// WD90C11A-LR
+	ISA16_SLOT(config, "board5", 0, "isabus", pc_isa16_cards, "wd90c11_lr", true);
 	// ISA cards
 	ISA16_SLOT(config, "isa1", 0, "isabus", pc_isa16_cards, nullptr, false);
 
-	at_keyboard_controller_device &keybc(AT_KEYBOARD_CONTROLLER(config, "keybc", 12_MHz_XTAL));
+	ps2_keyboard_controller_device &keybc(PS2_KEYBOARD_CONTROLLER(config, "keybc", 12_MHz_XTAL));
 	keybc.hot_res().set("wd7600", FUNC(wd7600_device::kbrst_w));
 	keybc.gate_a20().set("wd7600", FUNC(wd7600_device::gatea20_w));
 	keybc.kbd_irq().set("wd7600", FUNC(wd7600_device::irq01_w));
 	keybc.kbd_clk().set("kbd", FUNC(pc_kbdc_device::clock_write_from_mb));
 	keybc.kbd_data().set("kbd", FUNC(pc_kbdc_device::data_write_from_mb));
 
-	pc_kbdc_device &pc_kbdc(PC_KBDC(config, "kbd", pc_at_keyboards, STR_KBD_MICROSOFT_NATURAL));
-	pc_kbdc.out_clock_cb().set("keybc", FUNC(at_keyboard_controller_device::kbd_clk_w));
-	pc_kbdc.out_data_cb().set("keybc", FUNC(at_keyboard_controller_device::kbd_data_w));
+	// NOTE: wants an IBM keyboard
+	pc_kbdc_device &pc_kbdc(PC_KBDC(config, "kbd", pc_at_keyboards, STR_KBD_IBM_PC_AT_84));
+	pc_kbdc.out_clock_cb().set("keybc", FUNC(ps2_keyboard_controller_device::kbd_clk_w));
+	pc_kbdc.out_data_cb().set("keybc", FUNC(ps2_keyboard_controller_device::kbd_data_w));
+
+	// TODO: mouse port
 
 	/* internal ram */
 	RAM(config, m_ram).set_default_size("4M").set_extra_options("1M,2M,8M,15M,16M");
@@ -1421,7 +1433,6 @@ ROM_END
 
 // Amstrad MegaPC
 ROM_START( megapc )
-	ROM_REGION(0x40000, "isa", ROMREGION_ERASEFF)
 	ROM_REGION(0x20000, "bios", 0)
 	ROM_LOAD16_BYTE( "41651-bios lo.u18",  0x00000, 0x10000, CRC(1e9bd3b7) SHA1(14fd39ec12df7fae99ccdb0484ee097d93bf8d95))
 	ROM_LOAD16_BYTE( "211253-bios hi.u19", 0x00001, 0x10000, CRC(6acb573f) SHA1(376d483db2bd1c775d46424e1176b24779591525))
@@ -1429,7 +1440,6 @@ ROM_END
 
 // Amstrad MegaPC Plus
 ROM_START( megapcpl )
-	ROM_REGION(0x40000, "isa", ROMREGION_ERASEFF)
 	ROM_REGION(0x20000, "bios", 0)
 	ROM_LOAD16_BYTE( "41652.u18",  0x00000, 0x10000, CRC(6f5b9a1c) SHA1(cae981a35a01234fcec99a96cb38075d7bf23474))
 	ROM_LOAD16_BYTE( "486slc.u19", 0x00001, 0x10000, CRC(6fb7e3e9) SHA1(c439cb5a0d83176ceb2a3555e295dc1f84d85103))
