@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3923 -->
+<!-- Number of items in this list = 3922 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -13899,16 +13899,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Kyle Petty's No Fear Racing.sfc" size="3145728" crc="04770db1" sha1="e65ea3229a3aa9f655abe315174d376f434cc7e7"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns827f6e0534e23">
-		<description>Kyuuyaku Megami Tensei (J)(1995)(Atlus)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Kyuuyaku Megami Tensei (J)(1995)(Atlus).sfc" size="2097152" crc="c8d286c9" sha1="827f6e0534e2317e3348ce76bd47bec8691b3563"/>
 			</dataarea>
 		</part>
 	</software>

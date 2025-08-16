@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 628 -->
+<!-- Number of items in this list = 629 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -3759,6 +3759,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="One on One Basketball (1984) (Micro Fun).rom" size="24576" crc="17c77c3a" sha1="71689ef2af8351bbe70b66dbb89cd252f276e6cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col8c21a95358241">
+		<description>Operation Hibernation beta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Operation Hibernation beta.rom" size="32768" crc="040b7f4d" sha1="8c21a953582413f63a73650f8faee84fc6573011"/>
 			</dataarea>
 		</part>
 	</software>

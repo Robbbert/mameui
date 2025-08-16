@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 536 -->
+<!-- Number of items in this list = 535 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -4159,16 +4159,6 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Skazka v2.0 (2022)(SteveProXNA).sms" size="262144" crc="47ab1630" sha1="76bf9f87577a99847dd94552627814bbfa5d6c2d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="smsab399c8791068">
-		<description>SKBN v1.4 (2021)(raphnet)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="SKBN v1.4 (2021)(raphnet).sms" size="131072" crc="2ea2517a" sha1="ab399c8791068d3125f04ba3076b747b84f8d3f9"/>
 			</dataarea>
 		</part>
 	</software>

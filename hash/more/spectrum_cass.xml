@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3912 -->
+<!-- Number of items in this list = 3941 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -79,6 +79,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="32528">
 				<rom name="-African Trail Simulator (1990)(Positive Soft).tap" size="32528" crc="01019470" sha1="045673ae7a4af6ae2db320e618f0ec6f4363d5fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcbcec66c4278">
+		<description>-Mugsy (1984)(Melbourne House)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45217">
+				<rom name="-Mugsy (1984)(Melbourne House)[cr [Cr][Cr].tap" size="45217" crc="67e17162" sha1="bcbcec66c4278ff642339dd3aeb0aec36ebaaa6c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3332,6 +3342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs287ae6489b94f">
+		<description>Air Defence (1984)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45306">
+				<rom name="Air Defence (1984)(CCS).tap" size="45306" crc="706ab2db" sha1="287ae6489b94f725c57ee7dfecd95fb537c34322"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs4c5d87153e098">
 		<description>Air Fire (19xx)(Rebit Soft Bank)(Sp)</description>
 		<year>????</year>
@@ -3602,6 +3622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs1d44b37926d9e">
+		<description>Alcatrazz Harry 48K (1984)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46805">
+				<rom name="Alcatrazz Harry 48K (1984)(Mastertronic).tzx" size="46805" crc="4963bc0d" sha1="1d44b37926d9e9ee8652fea632e29002df1f634e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs245331e8872ff">
 		<description>Alchemist (1983)(Imagine Software)</description>
 		<year>????</year>
@@ -3679,6 +3709,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47603">
 				<rom name="Ali Bebe (1985)(Dinamic)(Sp).tap" size="47603" crc="a5cd872d" sha1="464985d58766af7d843b4264ce743f7340d36934"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd8e2cfdce421f">
+		<description>Ali-Bebe ES 48K (1985)(Future Stars)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47631">
+				<rom name="Ali-Bebe ES 48K (1985)(Future Stars).tzx" size="47631" crc="c4194730" sha1="d8e2cfdce421f9aed998c9f09fabd3c5cbedcc42"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3892,6 +3932,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6ed5c332ca90e">
+		<description>Alien IT 48K (1988)(DJS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37645">
+				<rom name="Alien IT 48K (1988)(DJS).tzx" size="37645" crc="a78f4cb6" sha1="6ed5c332ca90eef6994506a5e81b4fcc97c89ce7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs4187a54d1a02f">
 		<description>Alien Kill (1984)(Mastertronic)</description>
 		<year>????</year>
@@ -3989,6 +4039,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="121577">
 				<rom name="Alien Syndrome.tap" size="121577" crc="436c4990" sha1="ae725971decd8dbebe849a7614d32f20659680ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6297a0326294f">
+		<description>Alien T-Eng 48K (2025)(Obsolet.gr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40420">
+				<rom name="Alien T-Eng 48K (2025)(Obsolet.gr).tzx" size="40420" crc="99de322e" sha1="6297a0326294fbe50229e6768bf4d2bfce42a159"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11109,6 +11169,246 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="68553">
 				<rom name="Motorbike Madness.tzx" size="68553" crc="e20e2fd9" sha1="bd1b4c1b2c512eb2606c039423023db365c24a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7998b09f34d2c">
+		<description>Mucroid Run (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28021">
+				<rom name="Mucroid Run (19xx)(-).tap" size="28021" crc="d8a072e0" sha1="7998b09f34d2c48bd94a07a3df48985362582bbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbb9683bf98cbf">
+		<description>Muggins The Spaceman (1987)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27471">
+				<rom name="Muggins The Spaceman (1987)(Firebird Software Ltd).tap" size="27471" crc="ade2bd95" sha1="bb9683bf98cbfd5f887511bc406b2b81d1b314c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsea9cd9ca6c0e9">
+		<description>Mugsy (1984)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48206">
+				<rom name="Mugsy (1984)(Melbourne House).tap" size="48206" crc="565de0fd" sha1="ea9cd9ca6c0e939c05f47e08d010135cc56f8250"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfc355f095a9be">
+		<description>Mugsy (1984)(Melbourne House)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48206">
+				<rom name="Mugsy (1984)(Melbourne House)[a].tap" size="48206" crc="e197a526" sha1="fc355f095a9be452348c15aadb7402b9d2bce436"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66a132ca66115">
+		<description>Mugsy's Revenge (1984)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47587">
+				<rom name="Mugsy's Revenge (1984)(Melbourne House).tap" size="47587" crc="3800bc3b" sha1="66a132ca6611541772bf2c0500969029c3be702b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs662b36a32046e">
+		<description>Mugsy's Revenge (1984)(Melbourne House)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48099">
+				<rom name="Mugsy's Revenge (1984)(Melbourne House)[a].tap" size="48099" crc="be3166f1" sha1="662b36a32046e36fbe2ca070100ca18329b94ec1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56ca38fd78136">
+		<description>Multi Basic (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2296">
+				<rom name="Multi Basic (19xx)(-)(De).tap" size="2296" crc="5603b541" sha1="56ca38fd7813648629ee1bda117a0248d768f2fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbc0ea22fdd32d">
+		<description>Multi File (1984)(CNS)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20447">
+				<rom name="Multi File (1984)(CNS)(De).tap" size="20447" crc="b398ea7a" sha1="bc0ea22fdd32d11ec5d38879398fdd315999209e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ad3549ec02c1">
+		<description>Multi Prog (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2476">
+				<rom name="Multi Prog (19xx)(-).tap" size="2476" crc="761f7fdf" sha1="2ad3549ec02c1efe6c200c25ca6cf9191eb0cd39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e64985d05915">
+		<description>Multiface Three In One (1988)(Crash)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2918">
+				<rom name="Multiface Three In One (1988)(Crash).tap" size="2918" crc="9d928e01" sha1="8e64985d05915974b23fefcdff64510266ddb285"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd02369bf1df45">
+		<description>Muncher (1982)(Silversoft)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7340">
+				<rom name="Muncher (1982)(Silversoft)[a2].tap" size="7340" crc="917d4af9" sha1="d02369bf1df457cc969da26279878bc85995d3cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse650e9a3c64eb">
+		<description>Muncher (1982)(Silversoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8165">
+				<rom name="Muncher (1982)(Silversoft)[a].tap" size="8165" crc="5c5b731b" sha1="e650e9a3c64ebeea8c1b15d2f488c4e4f511f07c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ce650d14c1c3">
+		<description>Muncher (1989)(Gremlin Graphics Softwre Ltd)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72031">
+				<rom name="Muncher (1989)(Gremlin Graphics Softwre Ltd)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft].tap" size="72031" crc="ed1e54ce" sha1="2ce650d14c1c35868f18986629d93f83a371bbba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2179808ee91de">
+		<description>Muncher Compo, The (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20288">
+				<rom name="Muncher Compo, The (1988)(Gremlin Graphics).tap" size="20288" crc="7fb2da3f" sha1="2179808ee91defe22ccc5ac52ed95762ac061dff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd16c93b006606">
+		<description>Muncher Compo, The (1988)(Gremlin Graphics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20283">
+				<rom name="Muncher Compo, The (1988)(Gremlin Graphics)[a].tap" size="20283" crc="9de84c86" sha1="d16c93b00660687d8c0a095804fe42eb55579c5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3587625077b8c">
+		<description>Muncher! 16K (1982)(Silversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8192">
+				<rom name="Muncher! 16K (1982)(Silversoft).tap" size="8192" crc="3e72dda7" sha1="3587625077b8c2af87ccf84399f7e6e22ee001c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd2c8adab8fc3d">
+		<description>Muncher, The (1989)(Gremlin Graphics Softwre Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="120973">
+				<rom name="Muncher, The (1989)(Gremlin Graphics Softwre Ltd)(128K).tap" size="120973" crc="16db8cd7" sha1="d2c8adab8fc3d9803ab51399a31071f90678ad80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs88c227239995f">
+		<description>Munsters, The (1989)(Again Again)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="78848">
+				<rom name="Munsters, The (1989)(Again Again).tap" size="78848" crc="e12e896e" sha1="88c227239995fb09cee379918ffeacbdffdf4729"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs25ba61863c54c">
+		<description>Munsters, The (1989)(Again Again)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="78341">
+				<rom name="Munsters, The (1989)(Again Again)[a].tap" size="78341" crc="37451ece" sha1="25ba61863c54ce7a34f9f0078d3bb932ab9b0cae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c4e30c68e714">
+		<description>Murder (1983)(Rabbit Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36672">
+				<rom name="Murder (1983)(Rabbit Software).tap" size="36672" crc="4baa1a7c" sha1="0c4e30c68e71473e4e060ce2e4460393a0d5f6bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0b3c1f5cfdb3a">
+		<description>Murder, The (19xx)(William Bell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25813">
+				<rom name="Murder, The (19xx)(William Bell).tap" size="25813" crc="ed7cda1e" sha1="0b3c1f5cfdb3a563272240d73089769112266bf5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd2ad4f31ed9ba">
+		<description>Murphy's Murder Hunt (1985)(Bodkin Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Murphy's Murder Hunt (1985)(Bodkin Software).tap" size="49343" crc="92599c61" sha1="d2ad4f31ed9bac05800d2aaa94763786e4980ef7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1637bb47dfe6d">
+		<description>Mushroom Alley (1984)(Mogul Communications)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39913">
+				<rom name="Mushroom Alley (1984)(Mogul Communications).tap" size="39913" crc="a100af12" sha1="1637bb47dfe6d1cefeaf3c9f91f473f0b93ec780"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4362fe4ff9ebe">
+		<description>Mushroom Mania (1988)(Arcadia Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21106">
+				<rom name="Mushroom Mania (1988)(Arcadia Software).tap" size="21106" crc="75cf1446" sha1="4362fe4ff9ebe4ceab3e1f0b4ec1b72b38eea372"/>
 			</dataarea>
 		</part>
 	</software>
@@ -24422,26 +24722,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsa8abb54168f5e">
-		<description>Speccies</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="44264">
-				<rom name="Speccies.tzx" size="44264" crc="7c388864" sha1="a8abb54168f5e97390aca3d20ad2d14a7ad18edf"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsd593e67320741">
-		<description>Speccies2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="15706">
-				<rom name="Speccies2.tzx" size="15706" crc="153f93a0" sha1="d593e6732074157a10891e0192033d9f26b4c76f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxse51246d4eda35">
 		<description>Speccy Bros 48K (2012)(Climacus)</description>
 		<year>????</year>
@@ -25189,16 +25469,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42943">
 				<rom name="SQIJ'D 128K (2018)(Monument Microgames).tap" size="42943" crc="494495e8" sha1="5bb3dd577645550d6c9d477d4dada5f8aebbced6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs850622ec7a093">
-		<description>Sqij2018</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="46048">
-				<rom name="Sqij2018.tzx" size="46048" crc="a17bf181" sha1="850622ec7a093d68284a4269bffd5e5e7c7b56a9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31232,46 +31502,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsc567c5965c8a3">
-		<description>Vallation</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="41179">
-				<rom name="Vallation.tap" size="41179" crc="e67312ca" sha1="c567c5965c8a3d9d482d131356f7cc03623d9882"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsd70ee8941bb5d">
-		<description>Vallation</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="41207">
-				<rom name="Vallation.tzx" size="41207" crc="4869ba37" sha1="d70ee8941bb5dfeca9663d74e952b7814615a190"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs0dcefdd808b87">
-		<description>Vallation128 (final)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="68513">
-				<rom name="Vallation128 (final).tap" size="68513" crc="a30a4662" sha1="0dcefdd808b87be1841fbe0c297541f3a7066a80"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs13d7f0368b150">
-		<description>Vallation128 (final)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="68565">
-				<rom name="Vallation128 (final).tzx" size="68565" crc="2e4b612b" sha1="13d7f0368b1507cd3ccf26a37fe8daf2754becdd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs9c966370e3732">
 		<description>Valley, The (1982)(ASP Software Ltd)</description>
 		<year>????</year>
@@ -34822,6 +35052,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs750b448ec6567">
+		<description>_AIR_RAID</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7696">
+				<rom name="_AIR_RAID.TAP" size="7696" crc="91200b1c" sha1="750b448ec65679abe8d482cb6e23a3362456e246"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs515f14f6d0332">
+		<description>_Aliquids Simplex (1984)(Your Computer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9202">
+				<rom name="_Aliquids Simplex (1984)(Your Computer).tap" size="9202" crc="2a891352" sha1="515f14f6d0332d00a7f976c2bc104b5d0e353e3d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs690054e8ca757">
 		<description>_AntiISDA_Warrior-</description>
 		<year>????</year>
@@ -35209,6 +35459,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46831">
 				<rom name="_Match Point.tzx" size="46831" crc="a865be98" sha1="12dd8e630f7b5b839f02b2ecbac33233ba7c3850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf4a0df9717499">
+		<description>_Multivariate Regression (1983)(University Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5465">
+				<rom name="_Multivariate Regression (1983)(University Software).tap" size="5465" crc="37a50f4f" sha1="f4a0df97174999bce76e7c5b778c4f8430b1a7cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6689d293fd3d7">
+		<description>_Mummy! Mummy! (1984)(M.C. Lothlorien)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16449">
+				<rom name="_Mummy! Mummy! (1984)(M.C. Lothlorien).tap" size="16449" crc="3924e38b" sha1="6689d293fd3d7541a7021246551c7249d8becf20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs17dd1ea10a481">
+		<description>_Murder At The Manor (1983)(Gemtime)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48148">
+				<rom name="_Murder At The Manor (1983)(Gemtime).tap" size="48148" crc="ec08cfdf" sha1="17dd1ea10a481218201a512ca1b061af1ba1728f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs21a03aad851f9">
+		<description>_Murray Mouse Super Cop (1992)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32045">
+				<rom name="_Murray Mouse Super Cop (1992)(Codemasters).tap" size="32045" crc="67637ddf" sha1="21a03aad851f914ace91d9eb78d4cd2606a0b0ba"/>
 			</dataarea>
 		</part>
 	</software>

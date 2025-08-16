@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1977 -->
+<!-- Number of items in this list = 1987 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -2662,6 +2662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen7857c797245b5">
+		<description>16 Zhang Mahjong (Taiwan)(Unl)(1992)(Sun Green)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="16 Zhang Mahjong (Taiwan)(Unl)(1992)(Sun Green).bin" size="1048576" crc="36407c82" sha1="7857c797245b52641a3d1d4512089bccb0ed5359"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gena2e730d74d184">
 		<description>16tilesdemo</description>
 		<year>????</year>
@@ -2932,6 +2942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf6e5bba7254f7">
+		<description>Adventurous Boy - Mao Xian Xiao Zi (Taiwan)(Unl)(1998)(Gamtec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Adventurous Boy - Mao Xian Xiao Zi (Taiwan)(Unl)(1998)(Gamtec).bin" size="524288" crc="d4403913" sha1="f6e5bba7254f7f73a007f234f1001ddcb0b62484"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen8410a84a5d059">
 		<description>after burner II (Hack, Spanish)</description>
 		<year>????</year>
@@ -2979,6 +2999,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2384052">
 				<rom name="Aladdin - Final Cut (USA).bin" size="2384052" crc="dd66b3fa" sha1="7398bd6dc7aed3f1d819f70360593fe50491dac8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genaa9f686045fe8">
+		<description>Alex Kidd - Cheongong Maseong (Korea)(1990)(Samsung)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Alex Kidd - Cheongong Maseong (Korea)(1990)(Samsung).bin" size="262144" crc="5b0678fb" sha1="aa9f686045fe83ee5f86640e5a711f80cad16b1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen0bd83099edd39">
+		<description>Alex Kidd - Tenkuu Majou (Japan)(1989)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Alex Kidd - Tenkuu Majou (Japan)(1989)(Sega).bin" size="262144" crc="8a5ed856" sha1="0bd83099edd3938a0f127ed399cb01046e36ac32"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13512,6 +13552,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf45aa22ccffbd">
+		<description>Sezon Ohoty - Open Season (Russia)(Unl)(200x)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Sezon Ohoty - Open Season (Russia)(Unl)(200x).bin" size="1048576" crc="06eb2472" sha1="f45aa22ccffbdc631c9b4b0106e682ae180befec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6eb88d7156241">
+		<description>Sezon Ohoty 3 - Hunting Season 3 (Russia)(Unl)(200x)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="593184">
+				<rom name="Sezon Ohoty 3 - Hunting Season 3 (Russia)(Unl)(200x).bin" size="593184" crc="b433878c" sha1="6eb88d71562415364c11b8dac1eb6fee24a53b95"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen38f8dde711c65">
 		<description>Shadow Blasters (USA)</description>
 		<year>????</year>
@@ -13819,6 +13879,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Shinobi III - Return of the Ninja Master PT-BR (1999)(CBT).bin" size="1048576" crc="0df26c36" sha1="011dd3623dc7161fe1a1cec827c64f0e31eb05cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen78f481140c53b">
+		<description>Shrek (Russia)(Unl)(200x)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Shrek (Russia)(Unl)(200x).bin" size="1048576" crc="561e84b9" sha1="78f481140c53b480c0c50abe4756b67564a41a15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1f3c162b33ad1">
+		<description>Shrek 2 (Russia)(Unl)(200x)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Shrek 2 (Russia)(Unl)(200x).bin" size="1048576" crc="0ccd3651" sha1="1f3c162b33ad1969000d660a2066e9f0c54a107f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19409,6 +19489,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Xiaomei and the Flame Dragon's Fist (J)(2023)(Pixel Co.).bin" size="4194304" crc="d7dd3791" sha1="79e3f129b1b3d09ebdce9fe210ff01160cffec7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen4a7494d860114">
+		<description>Xin Qi Gai Wang Zi (Taiwan)(Unl)(1996)(C&amp;E Inc.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Xin Qi Gai Wang Zi (Taiwan)(Unl)(1996)(C&amp;E Inc.).bin" size="4194304" crc="dd2f38b5" sha1="4a7494d8601149f43ba7e3595a0b2340cde2e9ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen75f8003a63888">
+		<description>Xin Qi Gai Wang Zi (Taiwan, Alt)(Unl)(1996)(C&amp;E Inc.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Xin Qi Gai Wang Zi (Taiwan, Alt)(Unl)(1996)(C&amp;E Inc.).bin" size="4194304" crc="da5a4bfe" sha1="75f8003a6388814c1880347882b244549da62158"/>
 			</dataarea>
 		</part>
 	</software>
