@@ -9,7 +9,10 @@ IBM PS/2 Model 30 (PS/55 5510Z) + Japanese Sega Mega Drive (TMSS MD1 VA3 or VA4)
 References:
 - https://www.retrodev.com/blastem/trac/wiki/TeradriveHardwareNotes
 - https://plutiedev.com/cartridge-slot
+- https://plutiedev.com/vdp-registers
+- https://segaretro.org/Sega_Mega_Drive/VDP_general_usage
 - https://plutiedev.com/mirror/teradrive-hardware-info
+- https://segaretro.org/Sega_Mega_Drive/Technical_specifications
 - https://github.com/RetroSwimAU/TeradriveCode
 - https://www.youtube.com/watch?v=yjg3gmTo4WA
 
@@ -21,11 +24,12 @@ NOTES (MD side):
 - 128 KiB of VDP RAM (vs. 64)
 - 68k can switch between native 7.67 MHz or 10 MHz
 - has discrete YM3438 in place of YM2612
+- focus 3 is the current default for MD side
 
 TODO:
 - keyboard issues on Sega menu (hold arrow and press enter to go to floppy loading);
 - "TIMER FAIL" when exiting from setup menu (keyboard?);
-- RAM size always gets detected as 2560K;
+- RAM size always gets detected as 2560K even when it's not (from chipset?);
 - Quadtel EMM driver fails recognizing WD76C10 chipset with j4.0 driver disk;
 - Cannot HDD format with floppy insthdd.bat, cannot boot from HDD (needs floppy first).
   Attached disk is a WDL-330PS with no geometry info available;
@@ -35,15 +39,20 @@ TODO:
 
 #include "emu.h"
 
+#include "bus/generic/slot.h"
+#include "bus/generic/carts.h"
+
 #include "bus/isa/isa_cards.h"
 #include "bus/pc_kbd/keyboards.h"
 #include "bus/pc_kbd/pc_kbdc.h"
 #include "cpu/i86/i286.h"
 //#include "cpu/i386/i386.h"
+#include "cpu/m68000/m68000.h"
 #include "machine/at.h"
 #include "machine/ram.h"
 #include "machine/wd7600.h"
 
+#include "screen.h"
 #include "softlist_dev.h"
 #include "speaker.h"
 
@@ -61,6 +70,11 @@ public:
 	isa16_ibm_79f2661(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	template <typename T> void set_romdisk_tag(T &&tag) { m_romdisk.set_tag(std::forward<T>(tag)); }
+	auto tmss_bank_callback() { return m_tmss_bank_cb.bind(); }
+	auto reg_1163_read_callback() { return m_reg_1163_read_cb.bind(); }
+	auto reg_1163_write_callback() { return m_reg_1163_write_cb.bind(); }
+	auto reg_1164_callback() { return m_reg_1164_cb.bind(); }
+	auto system_in_callback() { return m_system_in_cb.bind(); }
 
 protected:
 	virtual void device_start() override ATTR_COLD;
@@ -79,6 +93,12 @@ private:
 	u8 m_reg_1163 = 0;
 	u8 m_reg_1164 = 0;
 	u16 m_68k_address = 0;
+
+	devcb_write8 m_tmss_bank_cb;
+	devcb_read8 m_reg_1163_read_cb;
+	devcb_write8 m_reg_1163_write_cb;
+	devcb_write8 m_reg_1164_cb;
+	devcb_read8 m_system_in_cb;
 };
 
 DEFINE_DEVICE_TYPE(ISA16_IBM_79F2661, isa16_ibm_79f2661, "isa16_ibm_79f2661", "ISA16 IBM 79F2661 \"bus switch\"")
@@ -88,6 +108,11 @@ isa16_ibm_79f2661::isa16_ibm_79f2661(const machine_config &mconfig, const char *
 	, device_isa16_card_interface(mconfig, *this)
 	, m_romdisk(*this, finder_base::DUMMY_TAG)
 	, m_rom_window_bank(*this, "rom_window_bank")
+	, m_tmss_bank_cb(*this)
+	, m_reg_1163_read_cb(*this, 0)
+	, m_reg_1163_write_cb(*this)
+	, m_reg_1164_cb(*this)
+	, m_system_in_cb(*this, 0)
 {
 }
 
@@ -104,6 +129,8 @@ void isa16_ibm_79f2661::device_reset()
 	m_reg_1163 = 0;
 	m_reg_1164 = 0;
 	m_68k_address = 0;
+	m_reg_1163_write_cb(0);
+	m_reg_1164_cb(0);
 	remap(AS_PROGRAM, 0, 0xfffff);
 	remap(AS_IO, 0, 0xffff);
 }
@@ -123,13 +150,13 @@ void isa16_ibm_79f2661::remap(int space_id, offs_t start, offs_t end)
 }
 
 // +$1160 base
-//	map(0x1160, 0x1160) romdisk bank * 0x2000, r/w
-//	map(0x1161, 0x1161) <undefined>?
-//	map(0x1162, 0x1162) romdisk segment start in ISA space (val & 0x1e | 0xc0)
-//	map(0x1163, 0x1163) comms and misc handshake bits, partially reflected on 68k $ae0001 register
-//	map(0x1164, 0x1164) boot control
-//	map(0x1165, 0x1165) switches/bus timeout/TMSS unlock (r/o)
-//	map(0x1166, 0x1167) 68k address space select & 0xffffe * 0x2000, r/w
+//  map(0x1160, 0x1160) romdisk bank * 0x2000, r/w
+//  map(0x1161, 0x1161) <undefined>?
+//  map(0x1162, 0x1162) romdisk segment start in ISA space (val & 0x1e | 0xc0)
+//  map(0x1163, 0x1163) comms and misc handshake bits, partially reflected on 68k $ae0001 register
+//  map(0x1164, 0x1164) boot control
+//  map(0x1165, 0x1165) switches/bus timeout/TMSS unlock (r/o)
+//  map(0x1166, 0x1167) 68k address space select & 0xffffe * 0x2000, r/w
 void isa16_ibm_79f2661::io_map(address_map &map)
 {
 	map(0x00, 0x00).lrw8(
@@ -140,6 +167,7 @@ void isa16_ibm_79f2661::io_map(address_map &map)
 			m_rom_bank = data;
 			m_rom_window_bank->set_entry(m_rom_bank);
 			remap(AS_PROGRAM, 0, 0xfffff);
+			m_tmss_bank_cb(data);
 		})
 	);
 	map(0x01, 0x01).lr8(
@@ -158,20 +186,39 @@ void isa16_ibm_79f2661::io_map(address_map &map)
 			remap(AS_PROGRAM, 0, 0xfffff);
 		})
 	);
+/*
+ * xx-- ---- 68k $ae0001 bits 3-2 (writes from this side)
+ * --xx ---- 68k $ae0001 bits 1-0 (reads from this side)
+ * ---- xx-- <unknown>
+ * ---- --x- Enable 286 ISA memory window (and disables TMSS from 68k)
+ * ---- ---x Enable auxiliary TMSS ROM (on 68k space?)
+ */
 	map(0x03, 0x03).lrw8(
 		NAME([this] (offs_t offset) {
-			return m_reg_1163;
+			return (m_reg_1163 & 0xcf) | (m_reg_1163_read_cb() & 0x30);
 		}),
 		NAME([this] (offs_t offset, u8 data) {
 			m_reg_1163 = data;
+			m_reg_1163_write_cb(data);
 		})
 	);
+/*
+ * x--- ---- handshake bit? Clearable by 68k, not by 286
+ * -x-- ---- Set on TMSS failure
+ * --x- ---- <unknown>
+ * ---x ---- <unknown>, if 1 then $1165 returns a stream of bytes
+ * ---- x--- dual boot bit
+ * ---- -x-- video switch
+ * ---- --x- (0) Teradrive HW at 68k $0 (1) cart space at $0
+ * ---- ---x (0) 68k assert RESET/286 clear HALT (1) 68k clear RESET/286 assert HALT
+ */
 	map(0x04, 0x04).lrw8(
 		NAME([this] (offs_t offset) {
 			return m_reg_1164;
 		}),
 		NAME([this] (offs_t offset, u8 data) {
 			m_reg_1164 = data;
+			m_reg_1164_cb(data);
 		})
 	);
 /*
@@ -182,8 +229,8 @@ void isa16_ibm_79f2661::io_map(address_map &map)
  * ---- ---x MD/PC switch (0) MD boot (1) PC boot
  */
 	map(0x05, 0x05).lr8(
-		NAME([] (offs_t offset) {
-			return 1 | 4;
+		NAME([this] (offs_t offset) {
+			return m_system_in_cb() & 5;
 		})
 	);
 	map(0x06, 0x07).lrw16(
@@ -210,6 +257,12 @@ public:
 		, m_ram(*this, RAM_TAG)
 		, m_isabus(*this, "isabus")
 		, m_speaker(*this, "speaker")
+		, m_system_in(*this, "SYSTEM_IN")
+		, m_md68kcpu(*this, "md68kcpu")
+		, m_mdscreen(*this, "mdscreen")
+		, m_tmss_bank(*this, "tmss_bank")
+		, m_tmss_view(*this, "tmss_view")
+		, m_md_cart(*this, "md_cart")
 	{ }
 
 	void teradrive(machine_config &config);
@@ -217,9 +270,12 @@ public:
 
 protected:
 	void machine_start() override ATTR_COLD;
+	void machine_reset() override ATTR_COLD;
 
 	void x86_io(address_map &map) ATTR_COLD;
 	void x86_map(address_map &map) ATTR_COLD;
+
+	void md_68k_map(address_map &map) ATTR_COLD;
 private:
 	required_device<i80286_cpu_device> m_x86cpu;
 	required_device<wd7600_device> m_chipset;
@@ -254,21 +310,32 @@ private:
 
 	u16 m_heartbeat = 0;
 
+	// bus switch semantics
+	required_ioport m_system_in;
+
 	static void romdisk_config(device_t *device);
+
+	void tmss_bank_w(u8 data);
+	u8 reg_1163_r();
+	void reg_1163_w(u8 data);
+	void reg_1164_w(u8 data);
+	u8 system_in_r();
+
+	// MD side
+	required_device<m68000_device> m_md68kcpu;
+//  required_device<z80_device> m_mdz80cpu;
+	required_device<screen_device> m_mdscreen;
+	required_memory_bank m_tmss_bank;
+	memory_view m_tmss_view;
+	required_device<generic_slot_device> m_md_cart;
+
+	// TODO: main PC screen can also swap the VGA with this
+	// (roughly #5801 and #11343 league)
+	u32 md_screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
+
+	u8 m_isa_address_bank = 0;
+	u8 m_68k_hs = 0;
 };
-
-void teradrive_state::at_softlists(machine_config &config)
-{
-	SOFTWARE_LIST(config, "pc_disk_list").set_original("ibm5150");
-	SOFTWARE_LIST(config, "at_disk_list").set_original("ibm5170");
-//  SOFTWARE_LIST(config, "at_cdrom_list").set_original("ibm5170_cdrom");
-	SOFTWARE_LIST(config, "at_hdd_list").set_original("ibm5170_hdd");
-	SOFTWARE_LIST(config, "midi_disk_list").set_compatible("midi_flop");
-//  SOFTWARE_LIST(config, "photocd_list").set_compatible("photo_cd");
-
-//  TODO: MD portion
-//  TODO: Teradrive SW list
-}
 
 void teradrive_state::x86_map(address_map &map)
 {
@@ -290,46 +357,180 @@ void teradrive_state::x86_io(address_map &map)
 	);
 }
 
-//void teradrive_state::md_68k_map(address_map &map)
-//{
-//	map(0x000000, 0x7fffff).view(m_cart_view);
+/*
+ *
+ * MD specifics
+ *
+ */
+
+u32 teradrive_state::md_screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
+{
+	// m_mdvdp->screen_update(...);
+	return 0;
+}
+
+
+void teradrive_state::md_68k_map(address_map &map)
+{
+	map.unmap_value_high();
+//  map(0x000000, 0x7fffff).view(m_cart_view);
 	// when /CART pin is low
-//	m_cart_view[0](0x000000, 0x3fffff).m(m_cart, FUNC(...::cart_map));
-//	m_cart_view[0](0x000000, 0x003fff).view(m_tmss_view);
-//	m_tmss_view[0](0x000000, 0x003fff).rom().region("tmss", 0);
-//	m_cart_view[0](0x400000, 0x7fffff).m(m_exp, FUNC(...::expansion_map));
+//  m_cart_view[0](0x000000, 0x3fffff).m(m_cart, FUNC(...::cart_map));
+//  m_cart_view[0](0x000000, 0x003fff).view(m_tmss_view);
+//  m_tmss_view[0](0x000000, 0x003fff).rom().region("tmss", 0);
+//  m_cart_view[0](0x400000, 0x7fffff).m(m_exp, FUNC(...::expansion_map));
 
 	// /CART high (matters for MCD SRAM at very least)
-//	m_cart_view[1](0x000000, 0x3fffff).m(m_exp, FUNC(...::expansion_map));
-//	m_cart_view[1](0x400000, 0x7fffff).m(m_cart, FUNC(...::cart_map));
-//	m_cart_view[1](0x400000, 0x403fff).view(m_tmss_view);
-//	m_tmss_view[0](0x400000, 0x403fff).rom().region("tmss", 0);
+//  m_cart_view[1](0x000000, 0x3fffff).m(m_exp, FUNC(...::expansion_map));
+//  m_cart_view[1](0x400000, 0x7fffff).m(m_cart, FUNC(...::cart_map));
+//  m_cart_view[1](0x400000, 0x403fff).view(m_tmss_view);
+//  m_tmss_view[0](0x400000, 0x403fff).rom().region("tmss", 0);
 
-//	map(0x800000, 0x9fffff) unmapped or 32X
-//	map(0xa00000, 0xa07eff).mirror(0x8000) Z80 address space
-//	map(0xa07f00, 0xa07fff).mirror(0x8000) Z80 VDP space (freezes machine if accessed from 68k)
-//	map(0xa10000, 0xa100ff) I/O
-//	map(0xa11000, 0xa110ff) memory mode register
-//	map(0xa11100, 0xa111ff) Z80 BUSREQ/BUSACK
-//	map(0xa11200, 0xa112ff) Z80 RESET
-//	map(0xa11300, 0xa113ff) <open bus>
+	map(0x000000, 0x3fffff).r(m_md_cart, FUNC(generic_slot_device::read_rom));
+	map(0x000000, 0x000fff).view(m_tmss_view);
+	m_tmss_view[0](0x000000, 0x000fff).bankr(m_tmss_bank);
 
-//	map(0xa11400, 0xa1dfff) <unmapped> (no DTACK generation, freezes machine without additional HW)
-//	map(0xa12000, 0xa120ff).m(m_exp, FUNC(...::fdc_map));
-//	map(0xa13000, 0xa130ff).m(m_cart, FUNC(...::time_map));
-//	map(0xa14000, 0xa14003) TMSS lock
-//	map(0xa15100, 0xa153ff) 32X registers if present, <unmapped> otherwise
-//	map(0xae0000, 0xae0003) Teradrive bus switch registers
-	// TODO: verify requiring swapped endianness
-//	map(0xaf0000, 0xafffff).m(m_isabus, FUNC(isa16_device::io16_swap_r), FUNC(isa16_device::io16_swap_w));
+//  map(0x800000, 0x9fffff) unmapped or 32X
+//  map(0xa00000, 0xa07eff).mirror(0x8000) Z80 address space
+//  map(0xa07f00, 0xa07fff).mirror(0x8000) Z80 VDP space (freezes machine if accessed from 68k)
+//  map(0xa10000, 0xa100ff) I/O
+//  map(0xa11000, 0xa110ff) memory mode register
+//  map(0xa11100, 0xa111ff) Z80 BUSREQ/BUSACK
+//  map(0xa11200, 0xa112ff) Z80 RESET
+//  map(0xa11300, 0xa113ff) <open bus>
+
+//  map(0xa11400, 0xa1dfff) <unmapped> (no DTACK generation, freezes machine without additional HW)
+//  map(0xa12000, 0xa120ff).m(m_exp, FUNC(...::fdc_map));
+//  map(0xa13000, 0xa130ff).m(m_cart, FUNC(...::time_map));
+//  map(0xa14000, 0xa14003) TMSS lock
+//  map(0xa15100, 0xa153ff) 32X registers if present, <unmapped> otherwise
+//  map(0xae0000, 0xae0003) Teradrive bus switch registers
+	map(0xae0001, 0xae0001).lrw8(
+		NAME([this] (offs_t offset) {
+			return m_68k_hs;
+		}),
+		NAME([this] (offs_t offset, u8 data) {
+			m_68k_hs = (data & 0xf3) | (m_68k_hs & 0x0c);
+		})
+	);
+	map(0xae0003, 0xae0003).lrw8(
+		NAME([this] (offs_t offset) {
+			return m_isa_address_bank;
+		}),
+		NAME([this] (offs_t offset, u8 data) {
+			m_isa_address_bank = data;
+		})
+	);
+	map(0xaf0000, 0xafffff).rw(m_isabus, FUNC(isa16_device::io16_swap_r), FUNC(isa16_device::io16_swap_w));
 	// NOTE: actually bank selectable from $ae0003 in 1 MiB units
-//	map(0xb00000, 0xbfffff).m(m_isabus, FUNC(isa16_device::mem16_swap_r), FUNC(isa16_device::mem16_swap_w));
-//	map(0xc00000, 0xdfffff) VDP and PSG (with mirrors and holes)
-//	map(0xe00000, 0xffffff) Work RAM (with mirrors)
-//}
+	// pzlcnst loads from here (i.e. RAM)
+	// TODO: verify requiring swapped endianness
+	map(0xb00000, 0xbfffff).lrw16(
+		NAME([this] (offs_t offset, u16 mem_mask) {
+			return m_isabus->mem16_swap_r(offset | (m_isa_address_bank * 0x80000), mem_mask);
+		}),
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			m_isabus->mem16_swap_w(offset | (m_isa_address_bank * 0x80000), data, mem_mask);
+		})
+	);
+//  map(0xc00000, 0xdfffff) VDP and PSG (with mirrors and holes)
+	map(0xc00005, 0xc00005).lr8(NAME([this] (offs_t offset) {
+		return m_mdscreen->vblank() << 3;
+	}));
+	map(0xe00000, 0xe0ffff).mirror(0x1f0000).ram(); // Work RAM, usually accessed at $ff0000
+}
+
+
+
+/*
+ *
+ * Bus Switch interface
+ *
+ */
+
+void teradrive_state::tmss_bank_w(u8 data)
+{
+	// NOTE: half the granularity than 286 version, and the lower portion of it
+	m_tmss_bank->set_entry((data * 2) + 1);
+}
+
+u8 teradrive_state::reg_1163_r()
+{
+	return (m_68k_hs & 3) << 4;
+}
+
+void teradrive_state::reg_1163_w(u8 data)
+{
+	m_68k_hs &= ~0x0c;
+	m_68k_hs = (data & 0xc0) >> 4;
+}
+
+void teradrive_state::reg_1164_w(u8 data)
+{
+	if (BIT(data, 0))
+	{
+		m_x86cpu->set_input_line(INPUT_LINE_HALT, ASSERT_LINE);
+		m_md68kcpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
+	}
+	else
+	{
+		m_x86cpu->set_input_line(INPUT_LINE_HALT, CLEAR_LINE);
+		m_md68kcpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
+	}
+
+	if (BIT(data, 1))
+	{
+		m_tmss_view.disable();
+	}
+	else
+	{
+		m_tmss_view.select(0);
+	}
+}
+
+u8 teradrive_state::system_in_r()
+{
+	return m_system_in->read();
+}
+
+void teradrive_state::romdisk_config(device_t *device)
+{
+	auto *state = device->subdevice<teradrive_state>(":");
+	isa16_ibm_79f2661 &bus_switch = *downcast<isa16_ibm_79f2661 *>(device);
+	bus_switch.set_romdisk_tag("romdisk");
+	bus_switch.tmss_bank_callback().set(*state, FUNC(teradrive_state::tmss_bank_w));
+	bus_switch.reg_1163_read_callback().set(*state, FUNC(teradrive_state::reg_1163_r));
+	bus_switch.reg_1163_write_callback().set(*state, FUNC(teradrive_state::reg_1163_w));
+	bus_switch.reg_1164_callback().set(*state, FUNC(teradrive_state::reg_1164_w));
+	// TODO: using set_ioport doesn't work, will try to map from bus_switch device anyway
+//  bus_switch.system_in_callback().set_ioport("SYSTEM_IN");
+	bus_switch.system_in_callback().set(*state, FUNC(teradrive_state::system_in_r));
+}
+
+/*
+ *
+ * Machine generics
+ *
+ */
+
+static INPUT_PORTS_START( teradrive )
+	PORT_START("SYSTEM_IN")
+	PORT_DIPNAME( 0x01, 0x01, "Boot mode" )
+	PORT_DIPSETTING(    0x00, "MD boot" )
+	PORT_DIPSETTING(    0x01, "PC boot" )
+	PORT_DIPNAME( 0x04, 0x04, "Video mode" )
+	PORT_DIPSETTING(    0x00, "Video" ) // composite?
+	PORT_DIPSETTING(    0x04, "RGB" )
+INPUT_PORTS_END
 
 void teradrive_state::machine_start()
 {
+	m_tmss_bank->configure_entries(0, 0x200, memregion("tmss")->base(), 0x1000);
+}
+
+void teradrive_state::machine_reset()
+{
+	m_68k_hs = 0;
 }
 
 void teradrive_isa_cards(device_slot_interface &device)
@@ -337,12 +538,19 @@ void teradrive_isa_cards(device_slot_interface &device)
 	device.option_add_internal("bus_switch", ISA16_IBM_79F2661);
 }
 
-void teradrive_state::romdisk_config(device_t *device)
+void teradrive_state::at_softlists(machine_config &config)
 {
-	isa16_ibm_79f2661 &bus_switch = *downcast<isa16_ibm_79f2661 *>(device);
-	bus_switch.set_romdisk_tag("romdisk");
-}
+	SOFTWARE_LIST(config, "pc_disk_list").set_original("ibm5150");
+	SOFTWARE_LIST(config, "at_disk_list").set_original("ibm5170");
+//  SOFTWARE_LIST(config, "at_cdrom_list").set_original("ibm5170_cdrom");
+	SOFTWARE_LIST(config, "at_hdd_list").set_original("ibm5170_hdd");
+	SOFTWARE_LIST(config, "midi_disk_list").set_compatible("midi_flop");
+//  SOFTWARE_LIST(config, "photocd_list").set_compatible("photo_cd");
 
+//  TODO: MD portion
+	SOFTWARE_LIST(config, "cart_list").set_original("megadriv").set_filter("NTSC-J");
+//  TODO: Teradrive SW list
+}
 
 void teradrive_state::teradrive(machine_config &config)
 {
@@ -406,11 +614,15 @@ void teradrive_state::teradrive(machine_config &config)
 	pc_kbdc.out_clock_cb().set("keybc", FUNC(ps2_keyboard_controller_device::kbd_clk_w));
 	pc_kbdc.out_data_cb().set("keybc", FUNC(ps2_keyboard_controller_device::kbd_data_w));
 
+	pc_kbdc_device &aux_con(PC_KBDC(config, "aux", ps2_mice, STR_HLE_PS2_MOUSE));
+	aux_con.out_clock_cb().set("keybc", FUNC(ps2_keyboard_controller_device::aux_clk_w));
+	aux_con.out_data_cb().set("keybc", FUNC(ps2_keyboard_controller_device::aux_data_w));
+
 	// FIXME: determine ISA bus clock, unverified configuration
 	// WD76C20
-	ISA16_SLOT(config, "board1", 0, "isabus", pc_isa16_cards, "fdcsmc", true);
+	ISA16_SLOT(config, "board1", 0, "isabus", pc_isa16_cards, "fdc_smc", true);
 	ISA16_SLOT(config, "board2", 0, "isabus", pc_isa16_cards, "comat", true);
-	// TODO: should be ST-506 option, not IDE
+	// TODO: should be ESDI built-in interface on riser with IBM WDL-330PS 3.5" HDD, not IDE
 	ISA16_SLOT(config, "board3", 0, "isabus", pc_isa16_cards, "side116", true);
 	ISA16_SLOT(config, "board4", 0, "isabus", pc_isa16_cards, "lpt", true);
 	// TODO: really WD90C10
@@ -419,12 +631,30 @@ void teradrive_state::teradrive(machine_config &config)
 	ISA16_SLOT(config, "isa1",   0, "isabus", pc_isa16_cards, nullptr, false);
 
 	// 2.5MB is the max allowed by the BIOS (even if WD chipset can do more)
-	RAM(config, RAM_TAG).set_default_size("1664K").set_extra_options("640K,2688K");
+	// TODO: pcdos5v garbles font loading with 1664K, which should be the actual default
+	RAM(config, RAM_TAG).set_default_size("2688K").set_extra_options("640K,1664K");
 
 	SPEAKER(config, "mono").front_center();
 	SPEAKER_SOUND(config, "speaker").add_route(ALL_OUTPUTS, "mono", 0.50);
 
 	at_softlists(config);
+
+	// MD section (NTSC)
+	constexpr XTAL md_master_xtal(53.693175_MHz_XTAL);
+
+	M68000(config, m_md68kcpu, md_master_xtal / 7);
+	m_md68kcpu->set_addrmap(AS_PROGRAM, &teradrive_state::md_68k_map);
+
+	SCREEN(config, m_mdscreen, SCREEN_TYPE_RASTER);
+	// NOTE: PAL is 423x312
+	m_mdscreen->set_raw(md_master_xtal / 8, 427, 0, 320, 262, 0, 224);
+	m_mdscreen->set_screen_update(FUNC(teradrive_state::md_screen_update));
+
+	// TODO: vestigial
+	GENERIC_CARTSLOT(config, m_md_cart, generic_plain_slot, "megadriv_cart");
+	m_md_cart->set_width(GENERIC_ROM16_WIDTH);
+	// TODO: generic_cartslot has issues with softlisted endianness (use loose for now)
+	m_md_cart->set_endian(ENDIANNESS_BIG);
 }
 
 ROM_START( teradrive )
@@ -433,14 +663,13 @@ ROM_START( teradrive )
 
 	ROM_REGION16_LE(0x200000, "board6:romdisk", ROMREGION_ERASEFF)
 	// contains bootable PC-DOS 3.x + a MENU.EXE
+	// 1ST AND 2ND HALF IDENTICAL
 	ROM_LOAD( "tru-27c800.bin", 0x00000, 0x100000,  CRC(c2fe9c9e) SHA1(06ec0461dab425f41fb5c3892d9beaa8fa53bbf1))
 
 	// MD 68k initial boot code, "TERA286 INITIALIZE" in header
 	// shows Sega logo + TMSS "produced by" + 1990 copyright at bottom if loaded thru megadrij
-	// + non-canonical accesses in $a***** range
-	// TODO: it's actually in romdisk space at $43000, remove me
-	ROM_REGION16_BE(0x4000, "tmss", ROMREGION_ERASEFF)
-	ROM_LOAD( "tera_tmss.bin", 0x0000,  0x1000, CRC(424a9d11) SHA1(1c470a9a8d0b211c5feea1c1c2376aa1f7934b16) )
+	ROM_REGION16_BE(0x200000, "tmss", ROMREGION_ERASEFF)
+	ROM_COPY("board6:romdisk", 0x00000, 0x0000, 0x200000 )
 ROM_END
 
 ROM_START( teradrive3 )
@@ -453,11 +682,15 @@ ROM_START( teradrive3 )
 
 	ROM_REGION16_LE(0x200000, "board6:romdisk", ROMREGION_ERASEFF)
 	// contains bootable PC-DOS 3.x + a MENU.EXE
+	// 1ST AND 2ND HALF IDENTICAL
 	ROM_LOAD( "tru-27c800.bin", 0x00000, 0x100000,  CRC(c2fe9c9e) SHA1(06ec0461dab425f41fb5c3892d9beaa8fa53bbf1))
+
+	ROM_REGION16_BE(0x200000, "tmss", ROMREGION_ERASEFF)
+	ROM_COPY("board6:romdisk", 0x00000, 0x0000, 0x200000 )
 ROM_END
 
 
 } // anonymous namespace
 
-COMP( 1991, teradrive,  0,         0,       teradrive, 0, teradrive_state, empty_init, "Sega / International Business Machines", "Teradrive (Japan, Model 2)", MACHINE_NOT_WORKING )
-COMP( 1991, teradrive3, teradrive, 0,       teradrive, 0, teradrive_state, empty_init, "Sega / International Business Machines", "Teradrive (Japan, Model 3)", MACHINE_NOT_WORKING )
+COMP( 1991, teradrive,  0,         0,       teradrive, teradrive, teradrive_state, empty_init, "Sega / International Business Machines", "Teradrive (Japan, Model 2)", MACHINE_NOT_WORKING )
+COMP( 1991, teradrive3, teradrive, 0,       teradrive, teradrive, teradrive_state, empty_init, "Sega / International Business Machines", "Teradrive (Japan, Model 3)", MACHINE_NOT_WORKING )
